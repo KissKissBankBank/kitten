@@ -1,0 +1,17 @@
+/// Return a schema for lists with the specified item type.
+///
+/// @group 0200_schema
+///
+/// @parameter {Map} $items - item type
+///
+/// @return {Map}
+///
+/// @example scss - Usage
+///   k_list-schema(string-schema());
+///   // Will return a schema expecting a list of string items.
+@function k_list-schema($items) {
+  @return (
+    type:  'list',
+    items: $items
+  )
+}

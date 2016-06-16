@@ -1,0 +1,15 @@
+/// Return a schema for string values.
+///
+/// @group 0200_schema
+///
+/// @return {Map}
+///
+///
+/// @example scss - Usage
+///   k_string-schema();
+///   // Will return a schema expecting a string.
+@function k_string-schema() {
+  @return (
+    type: 'string'
+  );
+}
