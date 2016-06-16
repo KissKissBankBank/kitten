@@ -1,1 +1,7 @@
+// Import the main validation function.
 @import 'kitten/schema/validate';
+
+// Import predefined schema helpers.
+@import 'kitten/schema/number';
+@import 'kitten/schema/string';
+@import 'kitten/schema/list';
