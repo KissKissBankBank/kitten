@@ -3,7 +3,7 @@
 /// @group 0100_helpers
 ///
 /// @example scss - Usage
-///   one-of(null, 1, 'x')
+///   k_one-of(null, 1, 'x')
 ///   // 1
 @function k_one-of($values...) {
   @each $value in $values {
@@ -22,7 +22,7 @@
 /// @return {Boolean}
 ///
 /// @example scss - Usage
-///   and(true, false, true)
+///   k_all(true, false, true)
 ///   // false
 @function k_all($values...) {
   @each $value in $values {
