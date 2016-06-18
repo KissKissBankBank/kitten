@@ -1,0 +1,70 @@
+/// The schema used to validate typography objects.
+///
+/// @group 0500_typography_components
+///
+/// @type Map
+$k-typography-schema: (
+  type: 'map',
+
+  properties: (
+    root: (
+      type: 'number',
+      unit: px,
+    ),
+    font-size: (
+      type: 'number',
+      unit: rem
+    ),
+    font-weight: (
+      type: 'number',
+      unit: none
+    ),
+    line-height: (
+      type: 'number',
+      unit: rem
+    ),
+    typeface: (
+      type: 'map',
+
+      additional-properties: (
+        type: 'map',
+
+        properties: (
+          family: (
+            type: 'string'
+          )
+        ),
+
+        required: (
+          'family'
+        )
+      )
+    ),
+    body-copy: (
+      type: 'map',
+
+      properties: (
+        family: (
+          type: 'string',
+        ),
+        color: (
+          type: 'color'
+        )
+      ),
+
+      required: (
+        'family',
+        'color'
+      )
+    )
+  ),
+
+  required: (
+    'root',
+    'font-size',
+    'font-weight',
+    'line-height',
+    'typeface',
+    'body-copy'
+  )
+);
