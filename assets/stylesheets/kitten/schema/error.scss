@@ -41,7 +41,7 @@
 /// @parameter {String|List} $unit - expected unit
 ///
 /// @example scss - Usage
-///   k_unit-error('module', 'margin.top', ('px', 'rem'));
+///   k_unit-error('module', 'margin.top', (px, rem));
 ///   // Will throw '[module]: margin.top should be one of px, rem'
 @function k_unit-error($module, $path, $unit) {
   @if type-of($unit) == 'string' {

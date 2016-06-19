@@ -10,10 +10,10 @@
 ///   k_number-schema();
 ///   // Will return a schema accepting any number.
 ///
-///   k_number-schema($unit: 'none');
+///   k_number-schema($unit: none);
 ///   // Will return a schema accepting only unitless numbers.
 ///
-///   k_number-schema($unit: ('em', 'rem'));
+///   k_number-schema($unit: (em, rem));
 ///   // Will return a schema accepting only numbers in ems or rems.
 @function k_number-schema($unit: null) {
   @if $unit != null {
