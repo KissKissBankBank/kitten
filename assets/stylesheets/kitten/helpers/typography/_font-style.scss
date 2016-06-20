@@ -47,10 +47,10 @@
       )
     );
 
-  @include apply-if-set($font-style, color,          'color');
-  @include apply-if-set($font-style, font-size,      'font-size');
-  @include apply-if-set($font-style, font-style,     'font-style');
-  @include apply-if-set($font-style, font-weight,    'font-weight');
-  @include apply-if-set($font-style, letter-spacing, 'letter-spacing');
-  @include apply-if-set($font-style, text-transform, 'text-transform');
+  @include k-apply-if-set($font-style, color,          'color');
+  @include k-apply-if-set($font-style, font-size,      'font-size');
+  @include k-apply-if-set($font-style, font-style,     'font-style');
+  @include k-apply-if-set($font-style, font-weight,    'font-weight');
+  @include k-apply-if-set($font-style, letter-spacing, 'letter-spacing');
+  @include k-apply-if-set($font-style, text-transform, 'text-transform');
 }

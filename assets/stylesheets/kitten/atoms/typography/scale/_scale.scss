@@ -136,7 +136,7 @@
   $styles:     map-get($scale, 'styles');
 
   @each $style-name, $style in $styles {
-    $step:   default(map-get($style, 'step'), 0);
+    $step:   k-default(map-get($style, 'step'), 0);
 
     .#{$style-name} {
       @include k-typographyFontFamily($typography, $style);
