@@ -12,10 +12,7 @@ $k-typography-scale-schema: (
   properties: (
     typography: $k-typography-schema,
 
-    multiplier: (
-      type: 'number',
-      unit: none
-    ),
+    multiplier: k-number-schema($unit: none),
 
     styles: (
       type: 'map',
@@ -26,13 +23,8 @@ $k-typography-scale-schema: (
           type: 'map',
 
           properties: (
-            family: (
-              type: 'string'
-            ),
-            step: (
-              type: 'number',
-              unit: none
-            ),
+            family: k-string-schema(),
+            step:   k-number-schema($unit: none),
           ),
 
           required: (
