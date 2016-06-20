@@ -3,9 +3,9 @@
 /// @group 0100_helpers
 ///
 /// @example scss - Usage
-///   k_one-of(null, 1, 'x')
+///   k-one-of(null, 1, 'x')
 ///   // 1
-@function k_one-of($values...) {
+@function k-one-of($values...) {
   @each $value in $values {
     @if $value != null {
       @return $value;
@@ -22,9 +22,9 @@
 /// @return {Boolean}
 ///
 /// @example scss - Usage
-///   k_all(true, false, true)
+///   k-all(true, false, true)
 ///   // false
-@function k_all($values...) {
+@function k-all($values...) {
   @each $value in $values {
     @if not $value {
       @return false;

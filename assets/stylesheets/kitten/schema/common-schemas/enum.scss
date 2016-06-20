@@ -7,9 +7,9 @@
 /// @return {Map}
 ///
 /// @example scss - Usage
-///   k_enum-schema('foo', 'bar', 'baz');
+///   k-enum-schema('foo', 'bar', 'baz');
 ///   // Will return a schema expecting one of these three strings.
-@function k_enum-schema($values...) {
+@function k-enum-schema($values...) {
   @return (
     type: 'string',
     enum: $values

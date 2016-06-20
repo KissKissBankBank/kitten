@@ -8,9 +8,9 @@
 /// @return {String}
 ///
 /// @example scss - Usage
-///   k_module-error('module', 'something went wrong');
+///   k-module-error('module', 'something went wrong');
 ///   // Will return '[module]: something went wrong'
-@function k_module-error($module, $message) {
+@function k-module-error($module, $message) {
   @return "[#{$module}]: #{$message}";
 }
 
@@ -23,10 +23,10 @@
 /// @parameter {String} $message - error message
 ///
 /// @example scss - Usage
-///   k_schema-error('module', 'margin.top', 'is not a number');
+///   k-schema-error('module', 'margin.top', 'is not a number');
 ///   // Will throw '[module]: margin.top is not a number'
-@function k_schema-error($module, $path, $message) {
-  @error k_module-error(
+@function k-schema-error($module, $path, $message) {
+  @error k-module-error(
     $module,
     "#{$path} #{$message}"
   );
@@ -41,25 +41,25 @@
 /// @parameter {String|List} $unit - expected unit
 ///
 /// @example scss - Usage
-///   k_unit-error('module', 'margin.top', (px, rem));
+///   k-unit-error('module', 'margin.top', (px, rem));
 ///   // Will throw '[module]: margin.top should be one of px, rem'
-@function k_unit-error($module, $path, $unit) {
+@function k-unit-error($module, $path, $unit) {
   @if type-of($unit) == 'string' {
     @if $unit == none {
-      @return k_schema-error(
+      @return k-schema-error(
         $module, $path,
         'should be a unitless number'
       );
     }
     @else {
-      @return k_schema-error(
+      @return k-schema-error(
         $module, $path,
         "should be defined in #{$unit}"
       );
     }
   }
   @elseif type-of($unit) == 'list' {
-    @return k_schema-error(
+    @return k-schema-error(
       $module, $path,
       "should be one of #{$unit}"
     );

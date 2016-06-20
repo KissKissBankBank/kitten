@@ -6,9 +6,9 @@
 ///
 ///
 /// @example scss - Usage
-///   k_string-schema();
+///   k-string-schema();
 ///   // Will return a schema expecting a string.
-@function k_string-schema() {
+@function k-string-schema() {
   @return (
     type: 'string'
   );

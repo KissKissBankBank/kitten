@@ -7,9 +7,9 @@
 /// @return {Map}
 ///
 /// @example scss - Usage
-///   k_list-schema(string-schema());
+///   k-list-schema(string-schema());
 ///   // Will return a schema expecting a list of string items.
-@function k_list-schema($items) {
+@function k-list-schema($items) {
   @return (
     type:  'list',
     items: $items

@@ -3,7 +3,7 @@
 /// @group 0200_schema
 ///
 /// @return {Map}
-@function k_color-schema() {
+@function k-color-schema() {
   @return (
     type: 'color'
   );
