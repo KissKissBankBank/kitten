@@ -1,8 +1,8 @@
 @import 'kitten/schema';
-@import 'kitten/atoms/typography/scale-schema';
 @import 'kitten/helpers/typography/font-family';
 @import 'kitten/helpers/typography/font-size';
 @import 'kitten/helpers/typography/font-style';
+@import 'kitten/atoms/typography/scale-schema';
 
 /// Setup a typographic scale.
 ///
@@ -20,7 +20,7 @@
 ///
 /// @group 0500_typography_components
 ///
-/// @parameter {Map} $scale - a typograhic scale specification
+/// @parameter {Map} $scale - a typographic scale specification
 ///
 /// @example scss - Usage
 ///   $typography: (
@@ -127,7 +127,7 @@
   $valid:
     k-validate(
       $scale, $k-typography-scale-schema,
-      'k-typographicScale', '$scale'
+      'k-typographyScale', '$scale'
     );
 
   $typography: map-get($scale, 'typography');
@@ -144,4 +144,3 @@
     }
   }
 }
-
