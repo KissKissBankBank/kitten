@@ -18,9 +18,7 @@
 ///   );
 ///
 ///   margin-top: k-typography-distance($typography, 3);
-///
-/// @example css - CSS output
-///   margin-top: 4.5rem;
+///   // 4.5rem
 @function k-typography-distance($typography, $distance) {
   $valid:
     k-all(
