@@ -1,8 +1,6 @@
-// @import 'helpers/apply';
-// @import 'helpers/logic';
-@import 'schema';
-@import 'components/typography/typography-schema';
-@import 'components/typography/font-style-schema';
+@import 'kitten/schema';
+@import 'kitten/atoms/typography/typography-schema';
+@import 'kitten/atoms/typography/font-style-schema';
 
 /// Apply a set of font styles.
 ///

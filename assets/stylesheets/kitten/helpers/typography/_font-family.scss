@@ -1,8 +1,7 @@
-@import 'helpers/logic';
-@import 'schema';
-@import 'helpers/components/typography/typography-schema';
-@import 'helpers/components/typography/typeface-for-schema';
-@import 'helpers/components/typography/typeface-for';
+@import 'kitten/schema';
+@import 'kitten/helpers/typography/typography-schema';
+@import 'kitten/helpers/typography/typeface-for-schema';
+@import 'kitten/helpers/typography/typeface-for';
 
 /// Set the font family for an element.
 ///

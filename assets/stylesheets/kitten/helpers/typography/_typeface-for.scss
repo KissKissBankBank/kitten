@@ -1,7 +1,6 @@
-@import 'schema';
-@import 'helpers/logic';
-@import 'helpers/components/typography/typography-schema';
-@import 'helpers/components/typography/typeface-for-schema';
+@import 'kitten/schema';
+@import 'kitten/helpers/typography/typography-schema';
+@import 'kitten/helpers/typography/typeface-for-schema';
 
 /// Fetch the typeface information for a specific element.
 ///

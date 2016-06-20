@@ -1,7 +1,6 @@
-@import 'schema';
-// @import 'helpers/default';
-@import 'helpers/components/typography/typography-schema';
-@import 'helpers/components/typography/vertical-margin-schema';
+@import 'kitten/schema';
+@import 'kitten/helpers/typography/typography-schema';
+@import 'kitten/helpers/typography/vertical-margin-schema';
 
 /// Apply vertical margins that are multiples of the base line height.
 ///

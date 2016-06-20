@@ -1,9 +1,8 @@
-// @import 'helpers/default';
-@import 'schema';
-@import 'components/typography/scale-schema';
-@import 'helpers/components/typography/font-family';
-@import 'helpers/components/typography/font-size';
-@import 'helpers/components/typography/font-style';
+@import 'kitten/schema';
+@import 'kitten/atoms/typography/scale-schema';
+@import 'kitten/helpers/typography/font-family';
+@import 'kitten/helpers/typography/font-size';
+@import 'kitten/helpers/typography/font-style';
 
 /// Setup a typographic scale.
 ///
