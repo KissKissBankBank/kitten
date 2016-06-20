@@ -3,5 +3,7 @@
 
 // Import predefined schema helpers.
 @import 'kitten/schema/common-schemas/number';
+@import 'kitten/schema/common-schemas/color';
 @import 'kitten/schema/common-schemas/string';
+@import 'kitten/schema/common-schemas/enum';
 @import 'kitten/schema/common-schemas/list';

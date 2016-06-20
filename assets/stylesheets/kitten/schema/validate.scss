@@ -171,7 +171,7 @@
 /// @parameter {String} $path   - validated variable name, for error reporting
 ///
 /// @return {Boolean}
-@function validate-enum($value, $schema, $module, $path) {
+@function k_validate-enum($value, $schema, $module, $path) {
   $expected-values: map-get($schema, 'enum');
 
   @if $expected-values != null {
@@ -193,13 +193,13 @@
 /// @parameter {Any} $value - a value
 ///
 /// @return {String}
-@function unit-or-none($value) {
+@function k_unit-or-none($value) {
   $unit: unit($value);
 
   @if $unit == '' {
     @return none;
   }
   @else {
-    @return $unit;
+    @return unquote($unit);
   }
 }

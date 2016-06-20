@@ -1,0 +1,17 @@
+/// Return a schema for a simple string enumeration.
+///
+/// The list of possible values is provided in the variable argument list.
+///
+/// @group 0200_schema
+///
+/// @return {Map}
+///
+/// @example scss - Usage
+///   k_enum-schema('foo', 'bar', 'baz');
+///   // Will return a schema expecting one of these three strings.
+@function k_enum-schema($values...) {
+  @return (
+    type: 'string',
+    enum: $values
+  )
+}
