@@ -1,0 +1,19 @@
+/// Vertical margin schema.
+///
+/// @group 0400_typography_helpers
+///
+/// @type Map
+$k-vertical-margin-schema: (
+  type: 'map',
+
+  properties: (
+    top: (
+      type: 'number',
+      unit: 'none'
+    ),
+    bottom: (
+      type: 'number',
+      unit: 'none'
+    )
+  )
+);

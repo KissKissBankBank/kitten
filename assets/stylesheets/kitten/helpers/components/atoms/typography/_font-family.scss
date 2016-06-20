@@ -1,0 +1,56 @@
+@import 'helpers/logic';
+@import 'schema';
+@import 'helpers/components/typography/typography-schema';
+@import 'helpers/components/typography/typeface-for-schema';
+@import 'helpers/components/typography/typeface-for';
+
+/// Set the font family for an element.
+///
+/// Given an element definition, this mixin will fetch the typeface
+/// data from global typography settings, and set the `font-family` CSS
+/// rule.
+///
+/// @group 0400_typography_helpers
+///
+/// @parameter {Map} $typography - a typography object
+/// @parameter {Map} $element    - a map with a `family` property
+///
+/// @see k-typographyTypefaceFor
+///
+/// @example scss - Usage
+///   $typography: (
+///     typeface: (
+///       lato: (
+///         family: '"lato", sans-serif'
+///       )
+///     ),
+///     ...
+///   );
+///
+///   $element(
+///     family: 'lato',
+///     ...
+///   );
+///
+///   @include k-typographyFontFamily($typography, $element);
+///
+/// @example css - CSS output
+///   font-family: "lato", sans-serif;
+@mixin k-typographyFontFamily($typography, $element) {
+  $valid:
+    k-all(
+      k-validate(
+        $typography, $k-typography-schema,
+        'k-typographyFontFamily', '$typography'
+      ),
+      k-validate(
+        $element, $k-with-font-family-schema,
+        'k-typographyFontFamily', '$element'
+      )
+    );
+
+  $typeface: k-typographyTypefaceFor($typography, $element);
+  $family:   map-get($typeface, 'family');
+
+  font-family: unquote($family);
+}

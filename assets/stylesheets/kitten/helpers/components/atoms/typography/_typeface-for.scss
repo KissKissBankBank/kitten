@@ -1,0 +1,61 @@
+@import 'schema';
+@import 'helpers/logic';
+@import 'helpers/components/typography/typography-schema';
+@import 'helpers/components/typography/typeface-for-schema';
+
+/// Fetch the typeface information for a specific element.
+///
+/// All typeface data is stored in a single location in a typography object.
+/// This helper function will get the requested typeface key from `$element`,
+/// and look for its definition in `$typography`.
+///
+/// @group 0400_typography_helpers
+///
+/// @parameter {Map} $typography - a typography object
+/// @parameter {Map} $element    - a map with a `family` property
+///
+/// @return {Map}
+///
+/// @example scss - Usage
+///   $typography: (
+///     typeface: (
+///       lato: (
+///         family: '"lato", sans-serif'
+///       )
+///     ),
+///     ...
+///   );
+///
+///   $element(
+///     family: 'lato',
+///     ...
+///   );
+///
+///   k-typography-typeface-for($typography, $element);
+///   // (family: '"lato", sans-serif)
+@function k-typography-typeface-for($typography, $element) {
+  $valid:
+    k-all(
+      k-validate(
+        $typography, $k-typography-schema,
+        'k-typography-typeface-for', '$typography'
+      ),
+      k-validate(
+        $element, $k-with-font-family-schema,
+        'k-typography-typeface-for', '$element'
+      )
+    );
+
+
+  $typeface-name: map-get-deep($element, ('family'));
+  $typeface:      map-get-deep($typography, ('typeface', $typeface-name));
+
+  @if $typeface == null {
+    @error module-error(
+      'k-typography-typeface-for',
+      "cannot find a font family named '#{$typeface-name}'"
+    );
+  }
+
+  @return $typeface;
+}

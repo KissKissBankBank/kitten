@@ -1,0 +1,52 @@
+@import 'helpers/components/typography/typography-schema';
+@import 'helpers/components/typography/font-style-schema';
+
+/// The schema used to validate typographic scale definitions.
+///
+/// @group 0500_typography_components
+///
+/// @type Map
+$k-typography-scale-schema: (
+  type: 'map',
+
+  properties: (
+    typography: $k-typography-schema,
+
+    multiplier: (
+      type: 'number',
+      unit: none
+    ),
+
+    styles: (
+      type: 'map',
+
+      additional-properties: map-merge(
+        $k-font-style-schema,
+        (
+          type: 'map',
+
+          properties: (
+            family: (
+              type: 'string'
+            ),
+            step: (
+              type: 'number',
+              unit: none
+            ),
+          ),
+
+          required: (
+            'family',
+            'step'
+          )
+        )
+      )
+    )
+  ),
+
+  required: (
+    'typography',
+    'multiplier',
+    'styles'
+  )
+);

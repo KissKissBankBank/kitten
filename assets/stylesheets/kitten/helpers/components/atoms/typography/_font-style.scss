@@ -1,0 +1,56 @@
+// @import 'helpers/apply';
+// @import 'helpers/logic';
+@import 'schema';
+@import 'components/typography/typography-schema';
+@import 'components/typography/font-style-schema';
+
+/// Apply a set of font styles.
+///
+/// Each style defined in the `$font-style` map will be set in the output
+/// CSS. This mixin will specifically look for one of the following styles:
+/// - `color`
+/// - `font-style`
+/// - `font-weight`
+/// - `letter-spacing`
+/// - `text-transform`
+///
+/// @group 0400_typography_helpers
+///
+/// @parameter {Map} $typography - a typography object
+/// @parameter {Map} $font-style - a map with font styles
+///
+/// @example scss - Usage
+///   $typography: (
+///      ...
+///   );
+///
+///   $bold-italic: (
+///     font-style:  'italic';
+///     font-weight: 700
+///   );
+///
+///   @include k-FontStyle($typography, $font-style);
+///
+/// @example css - CSS output
+///   font-style:  'italic';
+///   font-weight: 700;
+@mixin k-FontStyle($typography, $font-style) {
+  $valid:
+    k-all(
+      k-validate(
+        $typography, $k-typography-schema,
+        'typography_FontStyle', '$typography'
+      ),
+      k-validate(
+        $font-style, $k-font-style-schema,
+        'typography_FontStyle', '$font-style'
+      )
+    );
+
+  @include apply-if-set($font-style, color,          'color');
+  @include apply-if-set($font-style, font-size,      'font-size');
+  @include apply-if-set($font-style, font-style,     'font-style');
+  @include apply-if-set($font-style, font-weight,    'font-weight');
+  @include apply-if-set($font-style, letter-spacing, 'letter-spacing');
+  @include apply-if-set($font-style, text-transform, 'text-transform');
+}

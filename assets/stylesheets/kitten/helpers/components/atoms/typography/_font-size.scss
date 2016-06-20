@@ -1,0 +1,61 @@
+@import 'schema';
+@import 'helpers/logic';
+@import 'helpers/components/typography/typography-schema';
+
+/// Apply a font size and line height computed using a modular scale.
+///
+/// Font size will be computed directly using the modular scale, and line
+/// height will be set to the closest multiple of the base line height
+/// above the computed font size.
+///
+/// @group 0400_typography_helpers
+///
+/// @parameter {Map}    $typography - a typography object
+/// @parameter {Number} $multiplier - the modular scale base ratio
+/// @parameter {Number} $step       - the modular scale step to compute
+///
+/// @example scss - Usage
+///   $typography: (
+///     font-size:   1rem,
+///     line-height: 1.5rem,
+///     ...
+///   );
+///
+///   @include k-typographyFontSize($typography, 1.618, 3);
+///
+/// @example css - CSS output
+///   font-size:   4.236rem;
+///   line-height: 4.5rem;
+@mixin k-typographyFontSize($typography, $multiplier, $step) {
+  $valid:
+    k-all(
+      k-validate(
+        $typography, $k-typography-schema,
+        'k-typographyFontSize', '$typography'
+      ),
+      k-validate(
+        $multiplier, k-number-schema($unit: 'none'),
+        'k-typographyFontSize', '$multiplier'
+      ),
+      k-validate(
+        $step, k-number-schema($unit: 'none'),
+        'k-typographyFontSize', '$step'
+      )
+    );
+
+  // The starting font size applied to the body element.
+  $base-font-size: map-get($typography, 'font-size');
+
+  // The base line height.
+  $base-line-height: map-get($typography, 'line-height');
+
+  // Given the requested step on our modular scale, compute font size.
+  $font-size: modular-scale($step, $base-font-size, $multiplier);
+
+  // Line height should be the closest multiple of the base line height.
+  $line-height: ceil($font-size / $base-line-height) * $base-line-height;
+
+  // Apply font size and line height.
+  font-size:   $font-size;
+  line-height: $line-height;
+}
