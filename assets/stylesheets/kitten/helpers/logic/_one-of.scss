@@ -14,22 +14,3 @@
 
   @return null;
 }
-
-/// Check if all arguments are true.
-///
-/// @group 0100_helpers
-///
-/// @return {Boolean}
-///
-/// @example scss - Usage
-///   k-all(true, false, true)
-///   // false
-@function k-all($values...) {
-  @each $value in $values {
-    @if not $value {
-      @return false;
-    }
-  }
-
-  @return true;
-}
