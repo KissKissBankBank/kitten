@@ -1,0 +1,43 @@
+/// Font style schema.
+///
+/// @group 0400_typography_helpers
+///
+/// @type Map
+$k-font-style-schema: (
+  type: 'map',
+
+  properties: (
+    color: (
+      type: 'color'
+    ),
+    font-size: (
+      type: 'number'
+    ),
+    font-style: (
+      type: 'string',
+      enum: (
+        'normal',
+        'italic',
+        'oblique',
+        'initial',
+        'inherit'
+      )
+    ),
+    font-weight: (
+      type: 'number',
+      unit: 'none'
+    ),
+    letter-spacing: (
+      type: 'number'
+    ),
+    text-transform: (
+      type: 'string',
+      enum: (
+        'none',
+        'lowercase',
+        'uppercase',
+        'capitalize'
+      )
+    )
+  )
+);
