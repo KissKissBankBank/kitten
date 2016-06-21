@@ -75,7 +75,7 @@
 ///     )
 ///   );
 ///
-///   @include k-typographyScale($typographic-scale);
+///   @include k-TypographyScale($typographic-scale);
 ///
 /// @example css - CSS output
 ///   .heading1 {
@@ -123,7 +123,7 @@
 ///     color:       #444;
 ///     font-weight: 300;
 ///   }
-@mixin k-typographyScale($scale) {
+@mixin k-TypographyScale($scale) {
   $valid:
     k-validate(
       $scale, $k-typography-scale-schema,
