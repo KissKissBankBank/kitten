@@ -6,24 +6,19 @@ require 'kitten/version'
 Gem::Specification.new do |spec|
   spec.name          = "kitten"
   spec.version       = Kitten::VERSION
-  spec.authors       = ["Fanny Cheung"]
-  spec.email         = ["fanny@ynote.hk"]
+  spec.authors       = ["KissKissBankBank"]
+  spec.email         = ["dev@kisskissbankbank.com"]
+  spec.summary       = "Components library for Sass"
+  spec.description   = "kitten is a components library for Sass.
+                        It provides mixins to create flexible components based
+                        on your own brand elements."
+  spec.homepage      = "https://github.com/KissKissBankBank/kitten"
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  # kitten needs Sass maps datatype
+  spec.add_runtime_dependency 'sass', '>= 3.3.0'
 
-  spec.add_runtime_dependency 'sass', '>= 3.2.12'
-
-  spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
-  spec.bindir        = "exe"
-  spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
+  spec.files         = Dir['{lib,assets}/**/*', 'Rakefile', 'README.md']
   spec.require_paths = ["lib"]
 
-  if spec.respond_to?(:metadata)
-    spec.metadata['allowed_push_host'] = "TODO: Set to 'http://mygemserver.com' to prevent pushes to rubygems.org, or delete to allow pushes to any server."
-  end
-
-  spec.add_development_dependency "bundler", "~> 1.8"
-  spec.add_development_dependency "rake", "~> 10.0"
+  spec.metadata['allowed_push_host'] = "https://gemfury.com"
 end
