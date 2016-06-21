@@ -7,13 +7,7 @@ $k-vertical-margin-schema: (
   type: 'map',
 
   properties: (
-    top: (
-      type: 'number',
-      unit: 'none'
-    ),
-    bottom: (
-      type: 'number',
-      unit: 'none'
-    )
+    top:    k-number-schema($unit: none),
+    bottom: k-number-schema($unit: none)
   )
 );

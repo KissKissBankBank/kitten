@@ -7,22 +7,11 @@ $k-typography-schema: (
   type: 'map',
 
   properties: (
-    root: (
-      type: 'number',
-      unit: px,
-    ),
-    font-size: (
-      type: 'number',
-      unit: rem
-    ),
-    font-weight: (
-      type: 'number',
-      unit: none
-    ),
-    line-height: (
-      type: 'number',
-      unit: rem
-    ),
+    root:        k-number-schema($unit: px),
+    font-size:   k-number-schema($unit: rem),
+    font-weight: k-number-schema($unit: none),
+    line-height: k-number-schema($unit: rem),
+
     typeface: (
       type: 'map',
 
@@ -30,9 +19,7 @@ $k-typography-schema: (
         type: 'map',
 
         properties: (
-          family: (
-            type: 'string'
-          )
+          family: k-string-schema(),
         ),
 
         required: (
@@ -44,12 +31,8 @@ $k-typography-schema: (
       type: 'map',
 
       properties: (
-        family: (
-          type: 'string',
-        ),
-        color: (
-          type: 'color'
-        )
+        family: k-string-schema(),
+        color:  k-color-schema()
       ),
 
       required: (

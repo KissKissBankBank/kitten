@@ -7,37 +7,24 @@ $k-font-style-schema: (
   type: 'map',
 
   properties: (
-    color: (
-      type: 'color'
+    color:          k-color-schema(),
+    font-size:      k-number-schema(),
+    font-weight:    k-number-schema($unit: none),
+    letter-spacing: k-number-schema(),
+
+    font-style: k-enum-schema(
+      'normal',
+      'italic',
+      'oblique',
+      'initial',
+      'inherit'
     ),
-    font-size: (
-      type: 'number'
-    ),
-    font-style: (
-      type: 'string',
-      enum: (
-        'normal',
-        'italic',
-        'oblique',
-        'initial',
-        'inherit'
-      )
-    ),
-    font-weight: (
-      type: 'number',
-      unit: 'none'
-    ),
-    letter-spacing: (
-      type: 'number'
-    ),
-    text-transform: (
-      type: 'string',
-      enum: (
-        'none',
-        'lowercase',
-        'uppercase',
-        'capitalize'
-      )
+
+    text-transform: k-enum-schema(
+      'none',
+      'lowercase',
+      'uppercase',
+      'capitalize'
     )
   )
 );
