@@ -7,6 +7,10 @@ module Kitten
       configure_sass
     end
 
+    def gem_path
+      @gem_path ||= File.expand_path '..', File.dirname(__FILE__)
+    end
+
     def assets_path
       @assets_path ||= File.join gem_path, 'assets'
     end

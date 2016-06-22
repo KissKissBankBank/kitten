@@ -13,7 +13,14 @@ Gem::Specification.new do |spec|
   spec.description   = %q{TODO: Write a longer description or delete this line.}
   spec.homepage      = "TODO: Put your gem's website or public repo URL here."
 
-  spec.add_runtime_dependency 'sass', '>= 3.2.12'
+  # This is a Rails engine, so, yeah.
+  spec.add_dependency 'rails'
+
+  # Dummy app database
+  spec.add_dependency 'sqlite3'
+
+  # Sass dependencies
+  spec.add_runtime_dependency 'sass', '>= 3.3.0'
   spec.add_runtime_dependency 'sassy-maps', '~>0.3.2'
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
