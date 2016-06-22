@@ -49,7 +49,7 @@
       )
     );
 
-  $typeface: k-typographyTypefaceFor($typography, $element);
+  $typeface: k-typography-typeface-for($typography, $element);
   $family:   map-get($typeface, 'family');
 
   font-family: unquote($family);

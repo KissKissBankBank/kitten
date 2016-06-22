@@ -28,12 +28,12 @@
 ///     font-weight: 700
 ///   );
 ///
-///   @include k-FontStyle($typography, $font-style);
+///   @include k-typography-FontStyle($typography, $font-style);
 ///
 /// @example css - CSS output
 ///   font-style:  'italic';
 ///   font-weight: 700;
-@mixin k-FontStyle($typography, $font-style) {
+@mixin k-typographyFontStyle($typography, $font-style) {
   $valid:
     k-all(
       k-validate(

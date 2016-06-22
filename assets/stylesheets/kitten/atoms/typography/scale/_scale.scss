@@ -2,7 +2,7 @@
 @import 'kitten/helpers/typography/font-family';
 @import 'kitten/helpers/typography/font-size';
 @import 'kitten/helpers/typography/font-style';
-@import 'kitten/atoms/typography/scale-schema';
+@import 'kitten/atoms/typography/scale/scale-schema';
 
 /// Setup a typographic scale.
 ///
@@ -127,7 +127,7 @@
   $valid:
     k-validate(
       $scale, $k-typography-scale-schema,
-      'k-typographyScale', '$scale'
+      'k-TypographyScale', '$scale'
     );
 
   $typography: map-get($scale, 'typography');
