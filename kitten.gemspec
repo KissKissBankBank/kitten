@@ -14,6 +14,7 @@ Gem::Specification.new do |spec|
   spec.homepage      = "TODO: Put your gem's website or public repo URL here."
 
   spec.add_runtime_dependency 'sass', '>= 3.2.12'
+  spec.add_runtime_dependency 'sassy-maps', '~>0.3.2'
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   spec.bindir        = "exe"
