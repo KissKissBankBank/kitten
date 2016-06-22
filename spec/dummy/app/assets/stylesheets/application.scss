@@ -15,6 +15,7 @@
  */
 @import 'kitten';
 @import 'kitten/atoms/typography/scale/scale';
+@import 'kitten/atoms/typography/body-copy/body-copy';
 
 $typography: (
   root: 16px,
@@ -80,3 +81,4 @@ $typographic-scale: (
 );
 
 @include k-TypographyScale($typographic-scale);
+@include k-TypographyBodyCopy($typography);
