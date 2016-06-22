@@ -1,0 +1,17 @@
+/// Use the @error directive for >= Sass 3.4 to throw an error
+/// and simulate it for Sass 3.3 and below
+///
+/// @group 0100_helpers
+///
+/// @return {Boolean}
+///
+/// @example scss - Usage
+///   k-log('Oops! Something went wrong!');
+///   // Will throw 'Oops! Something went wrong!'
+@function k-log($message) {
+  @if feature-exists('at-error') != true {
+    @warn $message;
+  } @else {
+    @error $message;
+  }
+}

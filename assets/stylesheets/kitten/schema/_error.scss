@@ -26,10 +26,12 @@
 ///   k-schema-error('module', 'margin.top', 'is not a number');
 ///   // Will throw '[module]: margin.top is not a number'
 @function k-schema-error($module, $path, $message) {
-  @error k-module-error(
+  $error-message: k-module-error(
     $module,
     "#{$path} #{$message}"
   );
+
+  @if k-log($error-message) {}
 }
 
 /// Raise a invalid unit error for a specific module and path.

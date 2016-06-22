@@ -51,10 +51,12 @@
   $typeface:      map-get-deep($typography, ('typeface', $typeface-name));
 
   @if $typeface == null {
-    @error k-module-error(
+    $error-message: k-module-error(
       'k-typography-typeface-for',
       "cannot find a font family named '#{$typeface-name}'"
     );
+
+    @if k-log($error-message) {}
   }
 
   @return $typeface;
