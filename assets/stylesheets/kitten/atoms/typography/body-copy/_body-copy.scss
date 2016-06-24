@@ -101,7 +101,7 @@
     &.withGrid {
       $gradient: linear-gradient(to bottom, #0ff 0, rgba(255, 255, 255, 0) 1px);
 
-      @include background-image($gradient);
+      background-image: $gradient;
 
       background-repeat: repeat-y;
       background-size:   100% $base-line-height;
