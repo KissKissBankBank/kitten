@@ -21,7 +21,7 @@ Gem::Specification.new do |spec|
 
   # Sass dependencies
   spec.add_runtime_dependency 'sass', '>= 3.3.0'
-  spec.add_runtime_dependency 'sassy-maps', '~>0.3.2'
+  spec.add_runtime_dependency 'sassy-maps', '~>0.4.0'
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   spec.bindir        = "exe"

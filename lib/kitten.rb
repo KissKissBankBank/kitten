@@ -1,5 +1,6 @@
-require "kitten/version"
-require "kitten/engine"
+require 'kitten/version'
+require 'kitten/engine'
+require 'sassy-maps'
 
 module Kitten
   class << self
