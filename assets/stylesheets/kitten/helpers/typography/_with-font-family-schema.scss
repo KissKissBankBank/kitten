@@ -1,3 +1,5 @@
+@import 'kitten/schema';
+
 /// Schema for elements with font settings.
 ///
 /// Used to validate any element declaration that references a predeclared
@@ -10,9 +12,7 @@ $k-with-font-family-schema: (
   type: 'map',
 
   properties: (
-    family: (
-      type: 'string'
-    )
+    family: k-string-schema()
   ),
 
   required: (
