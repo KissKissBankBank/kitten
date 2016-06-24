@@ -46,7 +46,6 @@
       )
     );
 
-
   $typeface-name: map-get-deep($element, ('family'));
   $typeface:      map-get-deep($typography, ('typeface', $typeface-name));
 
