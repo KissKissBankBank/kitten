@@ -16,12 +16,13 @@ Gem::Specification.new do |spec|
   # This is a Rails engine, so, yeah.
   spec.add_dependency 'rails'
 
-  # Dummy app database
+  # Dummy app database.
   spec.add_dependency 'sqlite3'
 
-  # Sass dependencies
-  spec.add_runtime_dependency 'sass', '>= 3.3.0'
-  spec.add_runtime_dependency 'sassy-maps', '~>0.4.0'
+  # Sass dependencies.
+  spec.add_runtime_dependency 'sass',                       '>= 3.3.0'
+  spec.add_runtime_dependency 'sassy-maps',                 '~>0.4.0'
+  spec.add_runtime_dependency 'rails-assets-modular-scale', '~>2.1.0'
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   spec.bindir        = "exe"

@@ -1,7 +1,7 @@
 @import 'kitten/schema';
 @import 'kitten/helpers/logic';
 @import 'kitten/helpers/typography/typography-schema';
-@import 'vendor/modular-scale/modular-scale';
+@import 'modular-scale';
 
 /// Apply a font size and line height computed using a modular scale.
 ///
