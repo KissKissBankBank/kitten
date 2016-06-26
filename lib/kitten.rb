@@ -3,6 +3,7 @@ require 'kitten/engine'
 require 'sassy-maps'
 require 'rails-assets-modular-scale'
 
+# Engine configuration.
 module Kitten
   class << self
     def load
