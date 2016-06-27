@@ -5,12 +5,15 @@ module Kitten
   class Engine < ::Rails::Engine
     isolate_namespace Kitten
 
+    # Add kitten stylesheets paths to app assets paths.
     initializer :append_kitten_paths do |app|
       %w(stylesheets).each do |directory|
         app.config.assets.paths << root.join('assets', directory).to_s
       end
     end
 
+    # Merge kitten /public directory to app /public directory at runtime.
+    # We use the /public directory to host SassDoc.
     initializer :static_assets do |app|
       if Rails.application.config.serve_static_assets
         app.middleware.insert_before(::ActionDispatch::Static,
