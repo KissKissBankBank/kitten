@@ -32,7 +32,16 @@ Include the component your want to use in your application:
 
 ## Development
 
+#### Style guide
+
 Check out the [style guide documentation](../../wiki/Style-guide) to start creating new components!
+
+#### Installation
+
+```sh
+$ bundle      # install gem dependencies
+$ npm install # install node dependencies
+```
 
 #### Specs and code-style checker
 
