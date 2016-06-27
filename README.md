@@ -32,4 +32,31 @@ Include the component your want to use in your application:
 
 ## Development
 
+#### Style guide
+
 Check out the [style guide documentation](../../wiki/Style-guide) to start creating new components!
+
+#### Installation
+
+```sh
+$ bundle      # install gem dependencies
+$ npm install # install node dependencies
+```
+
+#### Specs and code-style checker
+
+Launch:
+```sh
+$ bundle exec rake
+```
+
+#### Generate SassDoc
+
+We use [SassDoc](http://sassdoc.com/) to generate documentation from our components comments.
+
+Generate the documentation:
+```sh
+$ bundle exec rake sassdoc
+```
+
+The documentation is accessible on development environment: `/kitten/sassdoc`.
