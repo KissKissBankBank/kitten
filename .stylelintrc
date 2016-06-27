@@ -1,0 +1,23 @@
+{
+  "plugins": [
+    "stylelint-scss"
+  ],
+  "rules": {
+    "block-no-empty": true,
+    "block-opening-brace-space-before": "always",
+    "color-no-invalid-hex": true,
+    "declaration-colon-space-before": "never",
+    "indentation": 2,
+    "selector-no-id": true,
+    "scss/at-function-pattern": [ "k-[-a-z]+", {
+      "message": "Expected @function name to match the following syxtax
+      `@function k-function-name`",
+      "severity": "warning"
+    } ],
+    "scss/at-mixin-pattern": [ "k-[a-zA-Z]", {
+      "message": "Expected @mixin name to match the following syxtax `@mixin
+      k-[M|m]ixinName`",
+      "severity": "warning"
+    } ]
+  }
+}

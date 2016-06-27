@@ -33,7 +33,9 @@
     "#{$path} #{$message}"
   );
 
+  // stylelint-disable block-no-empty
   @if k-log($error-message) {}
+  // stylelint-enable
 }
 
 /// Raise a invalid unit error for a specific module and path.
