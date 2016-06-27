@@ -1,10 +1,17 @@
-require "kitten/version"
-require "kitten/engine"
+require 'kitten/version'
+require 'kitten/engine'
+require 'sassy-maps'
+require 'rails-assets-modular-scale'
 
+# Engine configuration.
 module Kitten
   class << self
     def load
       configure_sass
+    end
+
+    def gem_path
+      @gem_path ||= File.expand_path '..', File.dirname(__FILE__)
     end
 
     def assets_path

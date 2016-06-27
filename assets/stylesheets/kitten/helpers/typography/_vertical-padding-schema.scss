@@ -1,0 +1,15 @@
+@import 'kitten/schema';
+
+/// Vertical padding schema.
+///
+/// @group 0400_typography_helpers
+///
+/// @type Map
+$k-vertical-padding-schema: (
+  type: 'map',
+
+  properties: (
+    top:    k-number-schema($unit: none),
+    bottom: k-number-schema($unit: none)
+  )
+);

@@ -1,0 +1,55 @@
+@import 'kitten/schema';
+
+/// The schema used to validate typography objects.
+///
+/// @group 0500_typography_components
+///
+/// @type Map
+$k-typography-schema: (
+  type: 'map',
+
+  properties: (
+    root:        k-number-schema($unit: px),
+    font-size:   k-number-schema($unit: rem),
+    font-weight: k-number-schema($unit: none),
+    line-height: k-number-schema($unit: rem),
+
+    typeface: (
+      type: 'map',
+
+      additional-properties: (
+        type: 'map',
+
+        properties: (
+          family: k-string-schema(),
+        ),
+
+        required: (
+          'family'
+        )
+      )
+    ),
+    body-copy: (
+      type: 'map',
+
+      properties: (
+        family: k-string-schema(),
+        color:  k-color-schema()
+      ),
+
+      required: (
+        'family',
+        'color'
+      )
+    )
+  ),
+
+  required: (
+    'root',
+    'font-size',
+    'font-weight',
+    'line-height',
+    'typeface',
+    'body-copy'
+  )
+);

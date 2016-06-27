@@ -1,0 +1,56 @@
+@import 'kitten/schema';
+@import 'kitten/helpers/logic';
+@import 'kitten/helpers/typography/typography-schema';
+@import 'kitten/helpers/typography/vertical-padding-schema';
+
+/// Apply vertical paddings that are multiples of the base line height.
+///
+/// A top and bottom padding can be defined, as numbers without any unit.
+/// When not specified, each padding will be set to zero.
+///
+/// @group 0400_typography_helpers
+///
+/// @parameter {Map} $typography - a typography object
+/// @parameter {Map} $padding    - a map with a top and/or bottom attributes
+///
+/// @example scss - Usage
+///   $typography: (
+///     line-height: 1.5rem,
+///     ...
+///   );
+///
+///   $paddings: (
+///     top:    1,
+///     bottom: 2
+///   );
+///
+///   @include k-typographyVerticalPadding($typography, $paddings);
+///
+/// @example css - CSS output
+///   padding-top:    1.5rem;
+///   padding-bottom: 3rem;
+@mixin k-typographyVerticalPadding($typography, $paddings) {
+  $valid:
+    k-all(
+      k-validate(
+        $typography, $k-typography-schema,
+        'k-typographyPadding', '$typography'
+      ),
+      k-validate(
+        $padding, $k-vertical-padding-schema,
+        'k-typographyPadding', '$distance'
+      )
+    );
+
+  // The base line height.
+  $base-line-height: map-get($typography, 'line-height');
+
+  // Get top padding or set to 0.
+  $top-padding: k-default(map-get($paddings, 'top'), 0);
+
+  // Get bottom padding or set to 0.
+  $bottom-padding: k-default(map-get($paddings, 'bottom'), 0);
+
+  padding-top:    $top-padding    * $base-line-height;
+  padding-bottom: $bottom-padding * $base-line-height;
+}

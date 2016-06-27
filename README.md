@@ -25,12 +25,11 @@ Import `kitten` in your main Sass file:
 @import 'kitten';
 ```
 
-Include the component your want to use on your application:
+Include the component your want to use in your application:
 ```sass
 @include k-MyComponent;
 ```
 
 ## Development
 
-Check out the [style guide documentation](../../wiki/Style-guide) to start creating a new component!
-
+Check out the [style guide documentation](../../wiki/Style-guide) to start creating new components!

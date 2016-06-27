@@ -1,0 +1,29 @@
+AllCops:
+  Exclude:
+    - 'db/migrate/*.rb'
+    - 'db/schema.rb'
+
+Metrics/MethodLength:
+  Max: 15
+
+Style/MultilineOperationIndentation:
+  Enabled: false
+
+Style/SpaceBeforeFirstArg:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Exclude:
+    - 'app/concepts/**/*.rb'
+    - 'app/policies/**/*.rb'
+
+Style/BracesAroundHashParameters:
+  Exclude:
+    - 'spec/factories/**/*.rb'
+
+Style/IndentHash:
+    Exclude:
+    - 'spec/factories/**/*.rb'
+
+Style/LambdaCall:
+  Enabled: false

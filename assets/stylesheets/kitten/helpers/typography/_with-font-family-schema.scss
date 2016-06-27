@@ -1,0 +1,21 @@
+@import 'kitten/schema';
+
+/// Schema for elements with font settings.
+///
+/// Used to validate any element declaration that references a predeclared
+/// font family by name.
+///
+/// @group 0400_typography_helpers
+///
+/// @type Map
+$k-with-font-family-schema: (
+  type: 'map',
+
+  properties: (
+    family: k-string-schema()
+  ),
+
+  required: (
+    'family'
+  )
+);

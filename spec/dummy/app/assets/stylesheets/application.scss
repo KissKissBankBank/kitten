@@ -1,0 +1,72 @@
+@import 'kitten';
+@import 'kitten/atoms/typography/scale/scale';
+@import 'kitten/atoms/typography/body-copy/body-copy';
+
+$typography: (
+  root:        16px,
+  font-size:   1rem,
+  font-weight: 100,
+  line-height: 1.5rem,
+
+  typeface: (
+    lato: (
+      family: '"lato", sans-serif'
+    )
+  ),
+
+  body-copy: (
+    family: 'lato',
+    color: #333
+  )
+);
+
+$typographic-scale: (
+  typography: $typography,
+  multiplier: $golden,
+
+  styles: (
+    heading1: (
+      family: 'lato',
+      step:   3,
+
+      color:  #444,
+      font-weight: 700,
+    ),
+
+    heading2: (
+      family: 'lato',
+      step:   2,
+
+      color:  #444,
+      font-weight: 700,
+    ),
+
+    heading3: (
+      family: 'lato',
+      step:   1,
+
+      color:  #444,
+      font-weight: 500,
+    ),
+
+    heading4: (
+      family: 'lato',
+      step:   0,
+
+      color:  #aaa,
+      font-weight:    300,
+      text-transform: uppercase
+    ),
+
+    paragraph: (
+      family: 'lato',
+      step:   0,
+
+      color:  #999,
+      font-weight: 300,
+    )
+  )
+);
+
+@include k-TypographyScale($typographic-scale);
+@include k-TypographyBodyCopy($typography);

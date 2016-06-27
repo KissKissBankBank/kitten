@@ -1,0 +1,110 @@
+@import 'kitten/schema';
+@import 'kitten/helpers/typography/typography-schema';
+@import 'kitten/helpers/typography/font-family';
+@import 'kitten/helpers/typography/font-style';
+
+/// Setup default text settings for body copy, with support for vertical rhythm.
+///
+/// This is one of the few mixins that will apply global styles to existing
+/// elements when invoked. Its purpose is to set proper defaults on the
+/// `html` and `body` elements, which will in turn allow to build a sound
+/// typographic scale, and components that follow the vertical rythm.
+///
+/// The mixin will set a root font size on the `html` element, and set
+/// a font size and a line height in rems on the `body` element. Most
+/// vertical measures found in other components will be multiples of this
+/// font size or line height.
+///
+/// A helper class named `withGrid` is added for the body element. Enabling
+/// this class will display the baseline grid.
+///
+/// @group 0500_typography_components
+///
+/// @parameter {Map} $typography - a typography object
+///
+/// @example scss - Usage
+///   $typography: (
+///     root: 18px,
+///
+///     font-size:   1rem,
+///     font-weight: 300,
+///     line-height: 1.5rem,
+///
+///     typeface: (
+///       lato: (
+///         family: '"lato", sans-serif'
+///       )
+///     ),
+///
+///     body-copy: (
+///       family: 'lato',
+///       color:  #444
+///     )
+///   );
+///
+///   @include k-TypographyBodyCopy($typography);
+///
+/// @example css - CSS output
+///   html {
+///     font-size: 18px;
+///   }
+///
+///   body {
+///     font-size:   1rem;
+///     font-weight: 300;
+///     line-height: 1.5rem;
+///
+///     font-family: "lato", sans-serif;
+///     color:       #444;
+///   }
+///
+///   body.withGrid {
+///     ...;
+///   }
+@mixin k-TypographyBodyCopy($typography) {
+  $valid:
+    k-validate(
+      $typography, $k-typography-schema,
+      'k-TypographyBodyCopy', '$typography'
+    );
+
+  // The root font size applied to the HTML document.
+  $root: map-get($typography, 'root');
+
+  // The starting font size applied to the body element.
+  $base-font-size: map-get($typography, 'font-size');
+
+  // The starting font weight applied to the body element.
+  $base-font-weight: map-get($typography, 'font-weight');
+
+  // The base line height.
+  $base-line-height: map-get($typography, 'line-height');
+
+  // Start by resetting the document font size to the requested value.
+  html {
+    font-size: $root;
+  }
+
+  // Set sensible defaults on the body element.
+  body {
+    // Assume we want to use the body copy font family by default.
+    $body-copy: map-get($typography, 'body-copy');
+
+    font-size:   $base-font-size;
+    font-weight: $base-font-weight;
+    line-height: $base-line-height;
+
+    @include k-typographyFontFamily($typography, $body-copy);
+    @include k-typographyFontStyle($typography, $body-copy);
+
+    // Apply this class on the body element to display the baseline grid.
+    &.withGrid {
+      $gradient: linear-gradient(to bottom, #0ff 0, rgba(255, 255, 255, 0) 1px);
+
+      background-image: $gradient;
+
+      background-repeat: repeat-y;
+      background-size:   100% $base-line-height;
+    }
+  }
+}

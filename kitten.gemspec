@@ -1,29 +1,44 @@
-# coding: utf-8
-lib = File.expand_path('../lib', __FILE__)
-$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+$LOAD_PATH.push File.expand_path('../lib', __FILE__)
+
 require 'kitten/version'
 
-Gem::Specification.new do |spec|
-  spec.name          = "kitten"
-  spec.version       = Kitten::VERSION
-  spec.authors       = ["Fanny Cheung"]
-  spec.email         = ["fanny@ynote.hk"]
+Gem::Specification.new do |s|
+  s.name        = 'kitten'
+  s.version     = Kitten::VERSION
+  s.authors     = ['KissKissBankBank']
+  s.email       = ['dev@kisskissbankbank.com']
+  s.homepage    = 'https://github.com/KissKissBankBank/kitten'
+  s.summary     = "Components library for Sass"
+  s.description = "kitten is a components library for Sass.
+                   It provides mixins to create flexible components
+                   based on your own brand elements."
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  s.files         = Dir['{lib,assets}/**/*', 'Rakefile', 'README.md']
+  s.require_paths = ['lib']
 
-  spec.add_runtime_dependency 'sass', '>= 3.2.12'
+  s.metadata['allowed_push_host'] = 'https://gemfury.com'
 
-  spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
-  spec.bindir        = "exe"
-  spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
-  spec.require_paths = ["lib"]
+  # This is a Rails engine, so, yeah.
+  s.add_dependency 'rails'
 
-  if spec.respond_to?(:metadata)
-    spec.metadata['allowed_push_host'] = "TODO: Set to 'http://mygemserver.com' to prevent pushes to rubygems.org, or delete to allow pushes to any server."
-  end
+  # Sass dependencies.
+  s.add_runtime_dependency 'sass',                       '>= 3.3.0'
+  s.add_runtime_dependency 'sassy-maps',                 '~>0.4.0'
+  s.add_runtime_dependency 'rails-assets-modular-scale', '~>2.1.0'
 
-  spec.add_development_dependency "bundler", "~> 1.8"
-  spec.add_development_dependency "rake", "~> 10.0"
+  s.add_development_dependency 'bundler', '~> 1.8'
+  s.add_development_dependency 'rake',    '~> 10.0'
+  s.add_development_dependency 'gemfury'
+
+  s.add_development_dependency 'better_errors'
+  s.add_development_dependency 'binding_of_caller'
+  s.add_development_dependency 'pry'
+
+  s.add_development_dependency 'rspec-rails'
+  s.add_development_dependency 'rspec-collection_matchers'
+  s.add_development_dependency 'factory_girl_rails'
+
+  s.add_development_dependency 'slim'
+
+  s.add_development_dependency 'sqlite3'
 end

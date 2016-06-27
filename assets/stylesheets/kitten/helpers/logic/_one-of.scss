@@ -1,0 +1,16 @@
+/// Return the first non-null value, given a variable list of parameters.
+///
+/// @group 0100_helpers
+///
+/// @example scss - Usage
+///   k-one-of(null, 1, 'x')
+///   // 1
+@function k-one-of($values...) {
+  @each $value in $values {
+    @if $value != null {
+      @return $value;
+    }
+  }
+
+  @return null;
+}
