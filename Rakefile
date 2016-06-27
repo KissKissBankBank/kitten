@@ -22,5 +22,5 @@ task default: :spec
 desc 'Generate kitten SassDoc'
 task :sassdoc do
   puts 'Generating kitten SassDoc...'
-  `sassdoc -d public/sassdoc assets/stylesheets`
+  `npm run sassdoc`
 end
