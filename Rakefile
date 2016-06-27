@@ -19,8 +19,8 @@ require 'rake/testtask'
 
 task default: :spec
 
-desc 'Generate kitten sassdoc'
+desc 'Generate kitten SassDoc'
 task :sassdoc do
-  puts 'Generating kitten sassdoc...'
+  puts 'Generating kitten SassDoc...'
   `sassdoc -d public/sassdoc assets/stylesheets`
 end
