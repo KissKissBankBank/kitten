@@ -5,11 +5,13 @@ require 'kitten/version'
 Gem::Specification.new do |s|
   s.name        = 'kitten'
   s.version     = Kitten::VERSION
-  s.authors     = ['Fanny Cheung']
-  s.email       = ['fanny@ynote.hk']
+  s.authors     = ['KissKissBankBank']
+  s.email       = ['dev@kisskissbankbank.com']
   s.homepage    = 'https://github.com/KissKissBankBank/kitten'
-  s.summary     = ''
-  s.description = s.summary
+  s.summary     = "Components library for Sass"
+  s.description = "kitten is a components library for Sass.
+                   It provides mixins to create flexible components
+                   based on your own brand elements."
 
   s.files         = Dir['{lib,assets}/**/*', 'Rakefile', 'README.md']
   s.require_paths = ['lib']
