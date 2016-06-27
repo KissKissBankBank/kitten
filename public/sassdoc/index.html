@@ -1,0 +1,841 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>SassDoc</title><link rel="stylesheet" href="assets/css/main.css"><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,500,700" rel="stylesheet" type="text/css"><meta name="viewport" content="width=device-width"><meta content="IE=edge, chrome=1" http-equiv="X-UA-Compatible"><!-- Open Graph tags --><meta property="og:title" content="SassDoc - SassDoc"><meta property="og:type" content="website"><meta property="og:description" content="Release the docs!"><!-- Thanks to Sass-lang.com for the icons --><link href="assets/images/favicon.png" rel="shortcut icon"></head><body><aside class="sidebar" role="nav"><div class="sidebar__header"><h1 class="sidebar__title">SassDoc</h1></div><div class="sidebar__body"><button type="button" class="btn-toggle js-btn-toggle" data-alt="Open all">Close all</button><p class="sidebar__item sidebar__item--heading" data-slug="0100_helpers"><a href="#0100_helpers">0100_helpers</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="0100_helpers-function"><a href="#0100_helpers-function">functions</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="0100_helpers" data-name="k-all" data-type="function"><a href="#0100_helpers-function-k-all">k-all</a></li><li class="sidebar__item sassdoc__item" data-group="0100_helpers" data-name="k-default" data-type="function"><a href="#0100_helpers-function-k-default">k-default</a></li><li class="sidebar__item sassdoc__item" data-group="0100_helpers" data-name="k-one-of" data-type="function"><a href="#0100_helpers-function-k-one-of">k-one-of</a></li><li class="sidebar__item sassdoc__item" data-group="0100_helpers" data-name="k-log" data-type="function"><a href="#0100_helpers-function-k-log">k-log</a></li></ul><p class="sidebar__item sidebar__item--sub-heading" data-slug="0100_helpers-mixin"><a href="#0100_helpers-mixin">mixins</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="0100_helpers" data-name="k-apply-if-set" data-type="mixin"><a href="#0100_helpers-mixin-k-apply-if-set">k-apply-if-set</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="0200_schema"><a href="#0200_schema">0200_schema</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="0200_schema-function"><a href="#0200_schema-function">functions</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="0200_schema" data-name="k-module-error" data-type="function"><a href="#0200_schema-function-k-module-error">k-module-error</a></li><li class="sidebar__item sassdoc__item" data-group="0200_schema" data-name="k-schema-error" data-type="function"><a href="#0200_schema-function-k-schema-error">k-schema-error</a></li><li class="sidebar__item sassdoc__item" data-group="0200_schema" data-name="k-unit-error" data-type="function"><a href="#0200_schema-function-k-unit-error">k-unit-error</a></li><li class="sidebar__item sassdoc__item" data-group="0200_schema" data-name="k-validate" data-type="function"><a href="#0200_schema-function-k-validate">k-validate</a></li><li class="sidebar__item sassdoc__item" data-group="0200_schema" data-name="k-validate-enum" data-type="function"><a href="#0200_schema-function-k-validate-enum">k-validate-enum</a></li><li class="sidebar__item sassdoc__item" data-group="0200_schema" data-name="k-unit-or-none" data-type="function"><a href="#0200_schema-function-k-unit-or-none">k-unit-or-none</a></li><li class="sidebar__item sassdoc__item" data-group="0200_schema" data-name="k-color-schema" data-type="function"><a href="#0200_schema-function-k-color-schema">k-color-schema</a></li><li class="sidebar__item sassdoc__item" data-group="0200_schema" data-name="k-enum-schema" data-type="function"><a href="#0200_schema-function-k-enum-schema">k-enum-schema</a></li><li class="sidebar__item sassdoc__item" data-group="0200_schema" data-name="k-list-schema" data-type="function"><a href="#0200_schema-function-k-list-schema">k-list-schema</a></li><li class="sidebar__item sassdoc__item" data-group="0200_schema" data-name="k-number-schema" data-type="function"><a href="#0200_schema-function-k-number-schema">k-number-schema</a></li><li class="sidebar__item sassdoc__item" data-group="0200_schema" data-name="k-string-schema" data-type="function"><a href="#0200_schema-function-k-string-schema">k-string-schema</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="0400_typography_helpers"><a href="#0400_typography_helpers">0400_typography_helpers</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="0400_typography_helpers-function"><a href="#0400_typography_helpers-function">functions</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="0400_typography_helpers" data-name="k-typography-distance" data-type="function"><a href="#0400_typography_helpers-function-k-typography-distance">k-typography-distance</a></li><li class="sidebar__item sassdoc__item" data-group="0400_typography_helpers" data-name="k-typography-typeface-for" data-type="function"><a href="#0400_typography_helpers-function-k-typography-typeface-for">k-typography-typeface-for</a></li></ul><p class="sidebar__item sidebar__item--sub-heading" data-slug="0400_typography_helpers-mixin"><a href="#0400_typography_helpers-mixin">mixins</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="0400_typography_helpers" data-name="k-typographyFontFamily" data-type="mixin"><a href="#0400_typography_helpers-mixin-k-typographyFontFamily">k-typographyFontFamily</a></li><li class="sidebar__item sassdoc__item" data-group="0400_typography_helpers" data-name="k-typographyFontSize" data-type="mixin"><a href="#0400_typography_helpers-mixin-k-typographyFontSize">k-typographyFontSize</a></li><li class="sidebar__item sassdoc__item" data-group="0400_typography_helpers" data-name="k-typographyFontStyle" data-type="mixin"><a href="#0400_typography_helpers-mixin-k-typographyFontStyle">k-typographyFontStyle</a></li><li class="sidebar__item sassdoc__item" data-group="0400_typography_helpers" data-name="k-typographyVerticalMargin" data-type="mixin"><a href="#0400_typography_helpers-mixin-k-typographyVerticalMargin">k-typographyVerticalMargin</a></li><li class="sidebar__item sassdoc__item" data-group="0400_typography_helpers" data-name="k-typographyVerticalPadding" data-type="mixin"><a href="#0400_typography_helpers-mixin-k-typographyVerticalPadding">k-typographyVerticalPadding</a></li></ul><p class="sidebar__item sidebar__item--sub-heading" data-slug="0400_typography_helpers-variable"><a href="#0400_typography_helpers-variable">variables</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="0400_typography_helpers" data-name="k-font-style-schema" data-type="variable"><a href="#0400_typography_helpers-variable-k-font-style-schema">k-font-style-schema</a></li><li class="sidebar__item sassdoc__item" data-group="0400_typography_helpers" data-name="k-vertical-margin-schema" data-type="variable"><a href="#0400_typography_helpers-variable-k-vertical-margin-schema">k-vertical-margin-schema</a></li><li class="sidebar__item sassdoc__item" data-group="0400_typography_helpers" data-name="k-vertical-padding-schema" data-type="variable"><a href="#0400_typography_helpers-variable-k-vertical-padding-schema">k-vertical-padding-schema</a></li><li class="sidebar__item sassdoc__item" data-group="0400_typography_helpers" data-name="k-with-font-family-schema" data-type="variable"><a href="#0400_typography_helpers-variable-k-with-font-family-schema">k-with-font-family-schema</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="0500_typography_components"><a href="#0500_typography_components">0500_typography_components</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="0500_typography_components-mixin"><a href="#0500_typography_components-mixin">mixins</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="0500_typography_components" data-name="k-TypographyBodyCopy" data-type="mixin"><a href="#0500_typography_components-mixin-k-TypographyBodyCopy">k-TypographyBodyCopy</a></li><li class="sidebar__item sassdoc__item" data-group="0500_typography_components" data-name="k-TypographyScale" data-type="mixin"><a href="#0500_typography_components-mixin-k-TypographyScale">k-TypographyScale</a></li></ul><p class="sidebar__item sidebar__item--sub-heading" data-slug="0500_typography_components-variable"><a href="#0500_typography_components-variable">variables</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="0500_typography_components" data-name="k-typography-scale-schema" data-type="variable"><a href="#0500_typography_components-variable-k-typography-scale-schema">k-typography-scale-schema</a></li><li class="sidebar__item sassdoc__item" data-group="0500_typography_components" data-name="k-typography-schema" data-type="variable"><a href="#0500_typography_components-variable-k-typography-schema">k-typography-schema</a></li></ul></div></div></aside><article class="main" role="main"><header class="header" role="banner"><div class="container"><div class="sassdoc__searchbar searchbar"><label for="js-search-input" class="visually-hidden">Search</label><div class="searchbar__form" id="js-search"><input name="search" type="search" class="searchbar__field" autocomplete="off" autofocus id="js-search-input" placeholder="Search"><ul class="searchbar__suggestions" id="js-search-suggestions"></ul></div></div></div></header><section class="main__section"><h1 class="main__heading" id="0100_helpers"><div class="container">0100_helpers</div></h1><section class="main__sub-section" id="0100_helpers-function"><h2 class="main__heading--secondary"><div class="container">functions</div></h2><section class="main__item container item" id="0100_helpers-function-k-all"><h3 class="item__heading"><a class="item__name" href="#function-k-all">k-all</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function k-all() { 
+  @each $value in $values {
+    @if not $value {
+      @return false;
+    }
+  }
+
+  @return true;
+ }" data-collapsed="@function k-all() { ... }"><code>@function k-all() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Check if all arguments are true.</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Returns</h3><div class="item__description item__description--inline"><code>Boolean</code></div><h3 class="item__sub-heading">Example</h3><div class="item__example example"><div class="example__description"><p>Usage</p></div><pre class="example__code language-scss"><code>k-all(true, false, true)
+// false</code></pre></div><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[function]</span> <a href="#0400_typography_helpers-function-k-typography-distance"><code>k-typography-distance</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#0400_typography_helpers-mixin-k-typographyFontFamily"><code>k-typographyFontFamily</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#0400_typography_helpers-mixin-k-typographyFontSize"><code>k-typographyFontSize</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#0400_typography_helpers-mixin-k-typographyFontStyle"><code>k-typographyFontStyle</code></a></li><li><span class="item__cross-type">[function]</span> <a href="#0400_typography_helpers-function-k-typography-typeface-for"><code>k-typography-typeface-for</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#0400_typography_helpers-mixin-k-typographyVerticalMargin"><code>k-typographyVerticalMargin</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#0400_typography_helpers-mixin-k-typographyVerticalPadding"><code>k-typographyVerticalPadding</code></a></li></ul></section><section class="main__item container item" id="0100_helpers-function-k-default"><h3 class="item__heading"><a class="item__name" href="#function-k-default">k-default</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function k-default($value, $default) { 
+  @return if($value, $value, $default);
+ }" data-collapsed="@function k-default($value, $default) { ... }"><code>@function k-default($value, $default) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Return a default value if some value is not defined.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$value</code></th><td data-label="desc"><p>a value</p></td><td data-label="type"><code>Any</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$default</code></th><td data-label="desc"><p>the default value to use if <code>$value</code> is <code>null</code></p></td><td data-label="type"><code>Any</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><div class="example__description"><p>Usage</p></div><pre class="example__code language-scss"><code>k-default($margin, 10px)</code></pre></div><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#0400_typography_helpers-mixin-k-typographyVerticalMargin"><code>k-typographyVerticalMargin</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#0400_typography_helpers-mixin-k-typographyVerticalPadding"><code>k-typographyVerticalPadding</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#0500_typography_components-mixin-k-TypographyScale"><code>k-TypographyScale</code></a></li></ul></section><section class="main__item container item" id="0100_helpers-function-k-one-of"><h3 class="item__heading"><a class="item__name" href="#function-k-one-of">k-one-of</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function k-one-of() { 
+  @each $value in $values {
+    @if $value != null {
+      @return $value;
+    }
+  }
+
+  @return null;
+ }" data-collapsed="@function k-one-of() { ... }"><code>@function k-one-of() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Return the first non-null value, given a variable list of parameters.</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><div class="example__description"><p>Usage</p></div><pre class="example__code language-scss"><code>k-one-of(null, 1, &#39;x&#39;)
+// 1</code></pre></div><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[function]</span> <a href="#0200_schema-function-k-validate"><code>k-validate</code></a></li></ul></section><section class="main__item container item" id="0100_helpers-function-k-log"><h3 class="item__heading"><a class="item__name" href="#function-k-log">k-log</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function k-log() { 
+  @if not feature-exists(&#39;at-error&#39;) {
+    @warn $message;
+  } @else {
+    @error $message;
+  }
+ }" data-collapsed="@function k-log() { ... }"><code>@function k-log() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Use the @error directive for &gt;= Sass 3.4 to throw an error and simulate it for Sass 3.3 and below</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Returns</h3><div class="item__description item__description--inline"><code>Boolean</code></div><h3 class="item__sub-heading">Example</h3><div class="item__example example"><div class="example__description"><p>Usage</p></div><pre class="example__code language-scss"><code>k-log(&#39;Oops! Something went wrong!&#39;);
+// Will throw &#39;Oops! Something went wrong!&#39;</code></pre></div><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[function]</span> <a href="#0200_schema-function-k-schema-error"><code>k-schema-error</code></a></li><li><span class="item__cross-type">[function]</span> <a href="#0400_typography_helpers-function-k-typography-typeface-for"><code>k-typography-typeface-for</code></a></li></ul></section></section><section class="main__sub-section" id="0100_helpers-mixin"><h2 class="main__heading--secondary"><div class="container">mixins</div></h2><section class="main__item container item" id="0100_helpers-mixin-k-apply-if-set"><h3 class="item__heading"><a class="item__name" href="#mixin-k-apply-if-set">k-apply-if-set</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin k-apply-if-set($values, $rule, $key) { 
+  @if map-get($values, $key) {
+    #{$rule}: map-get($values, $key);
+  }
+ }" data-collapsed="@mixin k-apply-if-set($values, $rule, $key) { ... }"><code>@mixin k-apply-if-set($values, $rule, $key) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Set a CSS rule, but only if the key is defined in the values map.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$values</code></th><td data-label="desc"><p>a Sass map</p></td><td data-label="type"><code>Map</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$rule</code></th><td data-label="desc"><p>the CSS rule to set if <code>$key</code> is provided</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$key</code></th><td data-label="desc"><p>the key to look for in <code>$values</code></p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><div class="example__description"><p>Usage</p></div><pre class="example__code language-scss"><code>$font-style: (
+  letter-spacing: 0.05rem,
+  text-transform: uppercase
+);
+
+@include k-apply-if-set($font-style, font-weight,    &#39;font-weight&#39;);
+@include k-apply-if-set($font-style, letter-spacing, &#39;letter-spacing&#39;);
+@include k-apply-if-set($font-style, text-transform, &#39;text-transform&#39;);</code></pre></div><div class="item__example example"><div class="example__description"><p>CSS output</p></div><pre class="example__code language-css"><code>letter-spacing: 0.05rem;
+text-transform: uppercase;</code></pre></div><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#0400_typography_helpers-mixin-k-typographyFontStyle"><code>k-typographyFontStyle</code></a></li></ul></section></section></section><section class="main__section"><h1 class="main__heading" id="0200_schema"><div class="container">0200_schema</div></h1><section class="main__sub-section" id="0200_schema-function"><h2 class="main__heading--secondary"><div class="container">functions</div></h2><section class="main__item container item" id="0200_schema-function-k-module-error"><h3 class="item__heading"><a class="item__name" href="#function-k-module-error">k-module-error</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function k-module-error($module, $message) { 
+  @return &quot;[#{$module}]: #{$message}&quot;;
+ }" data-collapsed="@function k-module-error($module, $message) { ... }"><code>@function k-module-error($module, $message) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Build an error message prefixed by a module or mixin name.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$module</code></th><td data-label="desc"><p>module name</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$message</code></th><td data-label="desc"><p>error message</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr></tbody></table><h3 class="item__sub-heading">Returns</h3><div class="item__description item__description--inline"><code>String</code></div><h3 class="item__sub-heading">Example</h3><div class="item__example example"><div class="example__description"><p>Usage</p></div><pre class="example__code language-scss"><code>k-module-error(&#39;module&#39;, &#39;something went wrong&#39;);
+// Will return &#39;[module]: something went wrong&#39;</code></pre></div><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[function]</span> <a href="#0200_schema-function-k-schema-error"><code>k-schema-error</code></a></li><li><span class="item__cross-type">[function]</span> <a href="#0400_typography_helpers-function-k-typography-typeface-for"><code>k-typography-typeface-for</code></a></li></ul></section><section class="main__item container item" id="0200_schema-function-k-schema-error"><h3 class="item__heading"><a class="item__name" href="#function-k-schema-error">k-schema-error</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function k-schema-error($module, $path, $message) { 
+  $error-message: k-module-error(
+    $module,
+    &quot;#{$path} #{$message}&quot;
+  );
+
+  @if k-log($error-message) {}
+ }" data-collapsed="@function k-schema-error($module, $path, $message) { ... }"><code>@function k-schema-error($module, $path, $message) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Raise an error message for a specific module and path.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$module</code></th><td data-label="desc"><p>module name</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$path</code></th><td data-label="desc"><p>path to invalid attribute</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$message</code></th><td data-label="desc"><p>error message</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><div class="example__description"><p>Usage</p></div><pre class="example__code language-scss"><code>k-schema-error(&#39;module&#39;, &#39;margin.top&#39;, &#39;is not a number&#39;);
+// Will throw &#39;[module]: margin.top is not a number&#39;</code></pre></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#0200_schema-function-k-module-error"><code>k-module-error</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#0100_helpers-function-k-log"><code>k-log</code></a></li></ul><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[function]</span> <a href="#0200_schema-function-k-unit-error"><code>k-unit-error</code></a></li><li><span class="item__cross-type">[function]</span> <a href="#0200_schema-function-k-validate"><code>k-validate</code></a></li><li><span class="item__cross-type">[function]</span> <a href="#0200_schema-function-k-validate-enum"><code>k-validate-enum</code></a></li></ul></section><section class="main__item container item" id="0200_schema-function-k-unit-error"><h3 class="item__heading"><a class="item__name" href="#function-k-unit-error">k-unit-error</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function k-unit-error($module, $path, $unit) { 
+  @if type-of($unit) == &#39;string&#39; {
+    @if $unit == none {
+      @return k-schema-error(
+        $module, $path,
+        &#39;should be a unitless number&#39;
+      );
+    }
+    @else {
+      @return k-schema-error(
+        $module, $path,
+        &quot;should be defined in #{$unit}&quot;
+      );
+    }
+  }
+  @elseif type-of($unit) == &#39;list&#39; {
+    @return k-schema-error(
+      $module, $path,
+      &quot;should be one of #{$unit}&quot;
+    );
+  }
+ }" data-collapsed="@function k-unit-error($module, $path, $unit) { ... }"><code>@function k-unit-error($module, $path, $unit) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Raise a invalid unit error for a specific module and path.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$module</code></th><td data-label="desc"><p>module name</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$path</code></th><td data-label="desc"><p>path to invalid attribute</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$unit</code></th><td data-label="desc"><p>expected unit</p></td><td data-label="type"><code>String</code> or <code>List</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><div class="example__description"><p>Usage</p></div><pre class="example__code language-scss"><code>k-unit-error(&#39;module&#39;, &#39;margin.top&#39;, (px, rem));
+// Will throw &#39;[module]: margin.top should be one of px, rem&#39;</code></pre></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#0200_schema-function-k-schema-error"><code>k-schema-error</code></a></li></ul><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[function]</span> <a href="#0200_schema-function-k-validate"><code>k-validate</code></a></li></ul></section><section class="main__item container item" id="0200_schema-function-k-validate"><h3 class="item__heading"><a class="item__name" href="#function-k-validate">k-validate</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function k-validate($value, $schema, $module, $path) { 
+  // Start by checking what type we expect for the current value.
+  $value-type:    type-of($value);
+  $expected-type: map-get($schema, &#39;type&#39;);
+
+  @if $expected-type == &#39;number&#39; {
+    @if $value-type != &#39;number&#39; {
+      @return k-schema-error(
+        $module, $path,
+        &#39;should be a Number&#39;
+      );
+    }
+
+    // Should the number have a specific unit?
+    $value-unit: map-get($schema, &#39;unit&#39;);
+    @if $value-unit != null {
+      // A single string may be specified for brevity.
+      @if type-of($value-unit) == &#39;string&#39; {
+        @if k-unit-or-none($value) != $value-unit {
+          @return k-unit-error($module, $path, $value-unit);
+        }
+      }
+      @elseif type-of($value-unit) == &#39;list&#39; {
+        @if index($value-unit, k-unit-or-none($value)) == null {
+          @return k-unit-error($module, $path, $value-unit);
+        }
+      }
+    }
+
+    @return k-validate-enum($value, $schema, $module, $path);
+  }
+  @elseif $expected-type == &#39;string&#39; {
+    @if $value-type != &#39;string&#39; {
+      @return k-schema-error(
+        $module, $path,
+        &#39;should be a String&#39;
+      );
+    }
+
+    @return k-validate-enum($value, $schema, $module, $path);
+  }
+  @elseif $expected-type == &#39;color&#39; {
+    @if $value-type != &#39;color&#39; {
+      @return k-schema-error(
+        $module, $path,
+        &#39;should be a Color&#39;
+      );
+    }
+
+    @return k-validate-enum($value, $schema, $module, $path);
+  }
+  @elseif $expected-type == &#39;boolean&#39; {
+    @if $value-type != &#39;boolean&#39; {
+      @return k-schema-error(
+        $module, $path,
+        &#39;should be a Boolean&#39;
+      );
+    }
+
+    @return k-validate-enum($value, $schema, $module, $path);
+  }
+  @elseif $expected-type == &#39;list&#39; {
+    @if $value-type != &#39;list&#39; {
+      @return k-schema-error(
+        $module, $path,
+        &#39;should be a List&#39;
+      );
+    }
+
+    // Is there a schema defined for list items?
+    $item-schema: map-get($schema, &#39;items&#39;);
+    @if $item-schema {
+      @for $i from 1 through length($value) {
+        $p-value: nth($value, $i);
+        $p-path:  &quot;#{$path}[#{$i}]&quot;;
+
+        @if not k-validate($p-value, $item-schema, $module, $p-path) {
+          @return false;
+        }
+      }
+    }
+
+    @return true;
+  }
+  @elseif $expected-type == &#39;map&#39; {
+    @if $value-type != &#39;map&#39; {
+      @return k-schema-error(
+        $module, $path,
+        &#39;should be a Map&#39;
+      );
+    }
+
+    // Do we have specific schemas for certain properties?
+    $map-properties: map-get($schema, &#39;properties&#39;);
+    @if $map-properties != null {
+      @each $p-name, $p-schema in $map-properties {
+        $p-value: map-get($value, $p-name);
+        $p-path:  &quot;#{$path}.#{$p-name}&quot;;
+
+        @if $p-value != null {
+          @if not k-validate($p-value, $p-schema, $module, $p-path) {
+            @return false;
+          }
+        }
+      }
+    }
+
+    // Are there any required properties?
+    $required-properties: map-get($schema, &#39;required&#39;);
+    @if $required-properties != null {
+      @each $p-name in $required-properties {
+        $p-value: map-get($value, $p-name);
+        $p-path:  &quot;#{$path}.#{$p-name}&quot;;
+
+        @if $p-value == null {
+          @return k-schema-error(
+            $module, $p-path,
+            &#39;is required&#39;
+          );
+        }
+      }
+    }
+
+    // Are there any additional properties? Additional properties are not listed
+    // exhaustively, and must all validate against a single schema.
+    $additional-properties: map-get($schema, &#39;additional-properties&#39;);
+    @if $additional-properties != null {
+      @each $p-name, $p-value in $value {
+        // Do not validate the property if it is already a regular property.
+        @if not map-has-key(k-one-of($map-properties, ()), $p-name) {
+          $p-path: &quot;#{$path}.#{$p-name}&quot;;
+
+          @if not k-validate($p-value, $additional-properties, $module, $p-path) {
+            @return false;
+          }
+        }
+      }
+    }
+
+    @return true;
+  }
+
+  // If we end up here, something went wrong.
+  // Assume the result should be false.
+  @return k-schema-error(
+    $module, $path,
+    &#39;is invalid&#39;
+  );
+ }" data-collapsed="@function k-validate($value, $schema, $module, $path) { ... }"><code>@function k-validate($value, $schema, $module, $path) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Validate a value against a schema defined as a Sass map.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$value</code></th><td data-label="desc"><p>any value</p></td><td data-label="type"><code>Any</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$schema</code></th><td data-label="desc"><p>a Sass schema</p></td><td data-label="type"><code>Map</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$module</code></th><td data-label="desc"><p>name of caller module, for error reporting</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$path</code></th><td data-label="desc"><p>validated variable name, for error reporting</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr></tbody></table><h3 class="item__sub-heading">Returns</h3><div class="item__description item__description--inline"><code>Boolean</code></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#0200_schema-function-k-schema-error"><code>k-schema-error</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#0200_schema-function-k-unit-or-none"><code>k-unit-or-none</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#0200_schema-function-k-unit-error"><code>k-unit-error</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#0200_schema-function-k-validate-enum"><code>k-validate-enum</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#0100_helpers-function-k-one-of"><code>k-one-of</code></a></li></ul><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[function]</span> <a href="#0400_typography_helpers-function-k-typography-distance"><code>k-typography-distance</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#0400_typography_helpers-mixin-k-typographyFontFamily"><code>k-typographyFontFamily</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#0400_typography_helpers-mixin-k-typographyFontSize"><code>k-typographyFontSize</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#0400_typography_helpers-mixin-k-typographyFontStyle"><code>k-typographyFontStyle</code></a></li><li><span class="item__cross-type">[function]</span> <a href="#0400_typography_helpers-function-k-typography-typeface-for"><code>k-typography-typeface-for</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#0400_typography_helpers-mixin-k-typographyVerticalMargin"><code>k-typographyVerticalMargin</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#0400_typography_helpers-mixin-k-typographyVerticalPadding"><code>k-typographyVerticalPadding</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#0500_typography_components-mixin-k-TypographyBodyCopy"><code>k-TypographyBodyCopy</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#0500_typography_components-mixin-k-TypographyScale"><code>k-TypographyScale</code></a></li></ul></section><section class="main__item container item" id="0200_schema-function-k-validate-enum"><h3 class="item__heading"><a class="item__name" href="#function-k-validate-enum">k-validate-enum</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function k-validate-enum($value, $schema, $module, $path) { 
+  $expected-values: map-get($schema, &#39;enum&#39;);
+
+  @if $expected-values != null {
+    @if index($expected-values, $value) == null {
+      @return k-schema-error(
+        $module, $path,
+        &quot;should be a one of #{$expected-values}&quot;
+      );
+    }
+  }
+
+  @return true;
+ }" data-collapsed="@function k-validate-enum($value, $schema, $module, $path) { ... }"><code>@function k-validate-enum($value, $schema, $module, $path) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Validate if a value belongs to an enumeration.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$value</code></th><td data-label="desc"><p>any value</p></td><td data-label="type"><code>Any</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$schema</code></th><td data-label="desc"><p>a Sass schema with an enumeration clause</p></td><td data-label="type"><code>Map</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$module</code></th><td data-label="desc"><p>name of caller module, for error reporting</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$path</code></th><td data-label="desc"><p>validated variable name, for error reporting</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr></tbody></table><h3 class="item__sub-heading">Returns</h3><div class="item__description item__description--inline"><code>Boolean</code></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#0200_schema-function-k-schema-error"><code>k-schema-error</code></a></li></ul><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[function]</span> <a href="#0200_schema-function-k-validate"><code>k-validate</code></a></li></ul></section><section class="main__item container item" id="0200_schema-function-k-unit-or-none"><h3 class="item__heading"><a class="item__name" href="#function-k-unit-or-none">k-unit-or-none</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function k-unit-or-none($value) { 
+  $unit: unit($value);
+
+  @if $unit == &#39;&#39; {
+    @return none;
+  }
+  @else {
+    @return unquote($unit);
+  }
+ }" data-collapsed="@function k-unit-or-none($value) { ... }"><code>@function k-unit-or-none($value) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Get the value or a unit, or return none if not defined.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$value</code></th><td data-label="desc"><p>a value</p></td><td data-label="type"><code>Any</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr></tbody></table><h3 class="item__sub-heading">Returns</h3><div class="item__description item__description--inline"><code>String</code></div><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[function]</span> <a href="#0200_schema-function-k-validate"><code>k-validate</code></a></li></ul></section><section class="main__item container item" id="0200_schema-function-k-color-schema"><h3 class="item__heading"><a class="item__name" href="#function-k-color-schema">k-color-schema</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function k-color-schema() { 
+  @return (
+    type: &#39;color&#39;
+  );
+ }" data-collapsed="@function k-color-schema() { ... }"><code>@function k-color-schema() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Return a schema for a color value.</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Returns</h3><div class="item__description item__description--inline"><code>Map</code></div></section><section class="main__item container item" id="0200_schema-function-k-enum-schema"><h3 class="item__heading"><a class="item__name" href="#function-k-enum-schema">k-enum-schema</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function k-enum-schema() { 
+  @return (
+    type: &#39;string&#39;,
+    enum: $values
+  )
+ }" data-collapsed="@function k-enum-schema() { ... }"><code>@function k-enum-schema() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Return a schema for a simple string enumeration.</p><p>The list of possible values is provided in the variable argument list.</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Returns</h3><div class="item__description item__description--inline"><code>Map</code></div><h3 class="item__sub-heading">Example</h3><div class="item__example example"><div class="example__description"><p>Usage</p></div><pre class="example__code language-scss"><code>k-enum-schema(&#39;foo&#39;, &#39;bar&#39;, &#39;baz&#39;);
+// Will return a schema expecting one of these three strings.</code></pre></div></section><section class="main__item container item" id="0200_schema-function-k-list-schema"><h3 class="item__heading"><a class="item__name" href="#function-k-list-schema">k-list-schema</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function k-list-schema($items) { 
+  @return (
+    type:  &#39;list&#39;,
+    items: $items
+  )
+ }" data-collapsed="@function k-list-schema($items) { ... }"><code>@function k-list-schema($items) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Return a schema for lists with the specified item type.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$items</code></th><td data-label="desc"><p>item type</p></td><td data-label="type"><code>Map</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr></tbody></table><h3 class="item__sub-heading">Returns</h3><div class="item__description item__description--inline"><code>Map</code></div><h3 class="item__sub-heading">Example</h3><div class="item__example example"><div class="example__description"><p>Usage</p></div><pre class="example__code language-scss"><code>k-list-schema(string-schema());
+// Will return a schema expecting a list of string items.</code></pre></div></section><section class="main__item container item" id="0200_schema-function-k-number-schema"><h3 class="item__heading"><a class="item__name" href="#function-k-number-schema">k-number-schema</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function k-number-schema($unit: null) { 
+  @if $unit != null {
+    @return (
+      type: &#39;number&#39;,
+      unit: $unit
+    );
+  }
+  @else {
+    @return (
+      type: &#39;number&#39;
+    );
+  }
+ }" data-collapsed="@function k-number-schema($unit: null) { ... }"><code>@function k-number-schema($unit: null) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Return a schema expecting a number, optionally with a unit constraint.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$unit</code></th><td data-label="desc"><p>a unit</p></td><td data-label="type"><code>String</code> or <code>List</code></td><td data-label="default"><code>null</code></td></tr></tbody></table><h3 class="item__sub-heading">Returns</h3><div class="item__description item__description--inline"><code>Map</code></div><h3 class="item__sub-heading">Example</h3><div class="item__example example"><div class="example__description"><p>Usage</p></div><pre class="example__code language-scss"><code>k-number-schema();
+// Will return a schema accepting any number.
+
+k-number-schema($unit: none);
+// Will return a schema accepting only unitless numbers.
+
+k-number-schema($unit: (em, rem));
+// Will return a schema accepting only numbers in ems or rems.</code></pre></div><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[function]</span> <a href="#0400_typography_helpers-function-k-typography-distance"><code>k-typography-distance</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#0400_typography_helpers-mixin-k-typographyFontSize"><code>k-typographyFontSize</code></a></li></ul></section><section class="main__item container item" id="0200_schema-function-k-string-schema"><h3 class="item__heading"><a class="item__name" href="#function-k-string-schema">k-string-schema</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function k-string-schema() { 
+  @return (
+    type: &#39;string&#39;
+  );
+ }" data-collapsed="@function k-string-schema() { ... }"><code>@function k-string-schema() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Return a schema for string values.</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Returns</h3><div class="item__description item__description--inline"><code>Map</code></div><h3 class="item__sub-heading">Example</h3><div class="item__example example"><div class="example__description"><p>Usage</p></div><pre class="example__code language-scss"><code>k-string-schema();
+// Will return a schema expecting a string.</code></pre></div></section></section></section><section class="main__section"><h1 class="main__heading" id="0400_typography_helpers"><div class="container">0400_typography_helpers</div></h1><section class="main__sub-section" id="0400_typography_helpers-function"><h2 class="main__heading--secondary"><div class="container">functions</div></h2><section class="main__item container item" id="0400_typography_helpers-function-k-typography-distance"><h3 class="item__heading"><a class="item__name" href="#function-k-typography-distance">k-typography-distance</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function k-typography-distance($typography, $distance) { 
+  $valid:
+    k-all(
+      k-validate(
+        $typography, $k-typography-schema,
+        &#39;k-typography-distance&#39;, &#39;$typography&#39;
+      ),
+      k-validate(
+        $distance, k-number-schema($unit: none),
+        &#39;k-typography-distance&#39;, &#39;$distance&#39;
+      )
+    );
+
+  $base-line-height: map-get($typography, &#39;line-height&#39;);
+
+  @return $base-line-height * $distance;
+ }" data-collapsed="@function k-typography-distance($typography, $distance) { ... }"><code>@function k-typography-distance($typography, $distance) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Compute a multiple of the base line height.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$typography</code></th><td data-label="desc"><p>a typography object</p></td><td data-label="type"><code>Map</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$distance</code></th><td data-label="desc"><p>a unitless number</p></td><td data-label="type"><code>Number</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr></tbody></table><h3 class="item__sub-heading">Returns</h3><div class="item__description item__description--inline"><code>Number</code></div><h3 class="item__sub-heading">Example</h3><div class="item__example example"><div class="example__description"><p>Usage</p></div><pre class="example__code language-scss"><code>$typography: (
+  line-height: 1.5rem,
+  ...
+);
+
+margin-top: k-typography-distance($typography, 3);
+// 4.5rem</code></pre></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#0100_helpers-function-k-all"><code>k-all</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#0200_schema-function-k-validate"><code>k-validate</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#0200_schema-function-k-number-schema"><code>k-number-schema</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#0500_typography_components-variable-k-typography-schema"><code>k-typography-schema</code></a></li></ul></section><section class="main__item container item" id="0400_typography_helpers-function-k-typography-typeface-for"><h3 class="item__heading"><a class="item__name" href="#function-k-typography-typeface-for">k-typography-typeface-for</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function k-typography-typeface-for($typography, $element) { 
+  $valid:
+    k-all(
+      k-validate(
+        $typography, $k-typography-schema,
+        &#39;k-typography-typeface-for&#39;, &#39;$typography&#39;
+      ),
+      k-validate(
+        $element, $k-with-font-family-schema,
+        &#39;k-typography-typeface-for&#39;, &#39;$element&#39;
+      )
+    );
+
+  $typeface-name: map-get-deep($element, (&#39;family&#39;));
+  $typeface:      map-get-deep($typography, (&#39;typeface&#39;, $typeface-name));
+
+  @if $typeface == null {
+    $error-message: k-module-error(
+      &#39;k-typography-typeface-for&#39;,
+      &quot;cannot find a font family named &#39;#{$typeface-name}&#39;&quot;
+    );
+
+    @if k-log($error-message) {}
+  }
+
+  @return $typeface;
+ }" data-collapsed="@function k-typography-typeface-for($typography, $element) { ... }"><code>@function k-typography-typeface-for($typography, $element) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Fetch the typeface information for a specific element.</p><p>All typeface data is stored in a single location in a typography object. This helper function will get the requested typeface key from <code>$element</code>, and look for its definition in <code>$typography</code>.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$typography</code></th><td data-label="desc"><p>a typography object</p></td><td data-label="type"><code>Map</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$element</code></th><td data-label="desc"><p>a map with a <code>family</code> property</p></td><td data-label="type"><code>Map</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr></tbody></table><h3 class="item__sub-heading">Returns</h3><div class="item__description item__description--inline"><code>Map</code></div><h3 class="item__sub-heading">Example</h3><div class="item__example example"><div class="example__description"><p>Usage</p></div><pre class="example__code language-scss"><code>$typography: (
+  typeface: (
+    lato: (
+      family: &#39;&quot;lato&quot;, sans-serif&#39;
+    )
+  ),
+  ...
+);
+
+$element(
+  family: &#39;lato&#39;,
+  ...
+);
+
+k-typography-typeface-for($typography, $element);
+// (family: &#39;&quot;lato&quot;, sans-serif)</code></pre></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#0100_helpers-function-k-all"><code>k-all</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#0200_schema-function-k-validate"><code>k-validate</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#0200_schema-function-k-module-error"><code>k-module-error</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#0100_helpers-function-k-log"><code>k-log</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#0500_typography_components-variable-k-typography-schema"><code>k-typography-schema</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#0400_typography_helpers-variable-k-with-font-family-schema"><code>k-with-font-family-schema</code></a></li></ul><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#0400_typography_helpers-mixin-k-typographyFontFamily"><code>k-typographyFontFamily</code></a></li></ul></section></section><section class="main__sub-section" id="0400_typography_helpers-mixin"><h2 class="main__heading--secondary"><div class="container">mixins</div></h2><section class="main__item container item" id="0400_typography_helpers-mixin-k-typographyFontFamily"><h3 class="item__heading"><a class="item__name" href="#mixin-k-typographyFontFamily">k-typographyFontFamily</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin k-typographyFontFamily($typography, $element) { 
+  $valid:
+    k-all(
+      k-validate(
+        $typography, $k-typography-schema,
+        &#39;k-typographyFontFamily&#39;, &#39;$typography&#39;
+      ),
+      k-validate(
+        $element, $k-with-font-family-schema,
+        &#39;k-typographyFontFamily&#39;, &#39;$element&#39;
+      )
+    );
+
+  $typeface: k-typography-typeface-for($typography, $element);
+  $family:   map-get($typeface, &#39;family&#39;);
+
+  font-family: unquote($family);
+ }" data-collapsed="@mixin k-typographyFontFamily($typography, $element) { ... }"><code>@mixin k-typographyFontFamily($typography, $element) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Set the font family for an element.</p><p>Given an element definition, this mixin will fetch the typeface data from global typography settings, and set the <code>font-family</code> CSS rule.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$typography</code></th><td data-label="desc"><p>a typography object</p></td><td data-label="type"><code>Map</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$element</code></th><td data-label="desc"><p>a map with a <code>family</code> property</p></td><td data-label="type"><code>Map</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><div class="example__description"><p>Usage</p></div><pre class="example__code language-scss"><code>$typography: (
+  typeface: (
+    lato: (
+      family: &#39;&quot;lato&quot;, sans-serif&#39;
+    )
+  ),
+  ...
+);
+
+$element(
+  family: &#39;lato&#39;,
+  ...
+);
+
+@include k-typographyFontFamily($typography, $element);</code></pre></div><div class="item__example example"><div class="example__description"><p>CSS output</p></div><pre class="example__code language-css"><code>font-family: &quot;lato&quot;, sans-serif;</code></pre></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#0100_helpers-function-k-all"><code>k-all</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#0200_schema-function-k-validate"><code>k-validate</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#0400_typography_helpers-function-k-typography-typeface-for"><code>k-typography-typeface-for</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#0500_typography_components-variable-k-typography-schema"><code>k-typography-schema</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#0400_typography_helpers-variable-k-with-font-family-schema"><code>k-with-font-family-schema</code></a></li></ul><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#0500_typography_components-mixin-k-TypographyBodyCopy"><code>k-TypographyBodyCopy</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#0500_typography_components-mixin-k-TypographyScale"><code>k-TypographyScale</code></a></li></ul><h3 class="item__sub-heading">See</h3><ul class="list-unstyled"><li><span class="item__cross-type">[function]</span> <a href="#function-k-typography-typeface-for"><code>k-typography-typeface-for</code></a></li></ul></section><section class="main__item container item" id="0400_typography_helpers-mixin-k-typographyFontSize"><h3 class="item__heading"><a class="item__name" href="#mixin-k-typographyFontSize">k-typographyFontSize</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin k-typographyFontSize($typography, $multiplier, $step) { 
+  $valid:
+    k-all(
+      k-validate(
+        $typography, $k-typography-schema,
+        &#39;k-typographyFontSize&#39;, &#39;$typography&#39;
+      ),
+      k-validate(
+        $multiplier, k-number-schema($unit: none),
+        &#39;k-typographyFontSize&#39;, &#39;$multiplier&#39;
+      ),
+      k-validate(
+        $step, k-number-schema($unit: none),
+        &#39;k-typographyFontSize&#39;, &#39;$step&#39;
+      )
+    );
+
+  // The starting font size applied to the body element.
+  $base-font-size: map-get($typography, &#39;font-size&#39;);
+
+  // The base line height.
+  $base-line-height: map-get($typography, &#39;line-height&#39;);
+
+  // Given the requested step on our modular scale, compute font size.
+  $font-size: ms($step,  $base-font-size, $multiplier);
+
+  // Line height should be the closest multiple of the base line height.
+  $line-height: ceil($font-size / $base-line-height) * $base-line-height;
+
+  // Apply font size and line height.
+  font-size:   $font-size;
+  line-height: $line-height;
+ }" data-collapsed="@mixin k-typographyFontSize($typography, $multiplier, $step) { ... }"><code>@mixin k-typographyFontSize($typography, $multiplier, $step) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Apply a font size and line height computed using a modular scale.</p><p>Font size will be computed directly using the modular scale, and line height will be set to the closest multiple of the base line height above the computed font size.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$typography</code></th><td data-label="desc"><p>a typography object</p></td><td data-label="type"><code>Map</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$multiplier</code></th><td data-label="desc"><p>the modular scale base ratio</p></td><td data-label="type"><code>Number</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$step</code></th><td data-label="desc"><p>the modular scale step to compute</p></td><td data-label="type"><code>Number</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><div class="example__description"><p>Usage</p></div><pre class="example__code language-scss"><code>$typography: (
+  font-size:   1rem,
+  line-height: 1.5rem,
+  ...
+);
+
+@include k-typographyFontSize($typography, 1.618, 3);</code></pre></div><div class="item__example example"><div class="example__description"><p>CSS output</p></div><pre class="example__code language-css"><code>font-size:   4.236rem;
+line-height: 4.5rem;</code></pre></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#0100_helpers-function-k-all"><code>k-all</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#0200_schema-function-k-validate"><code>k-validate</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#0200_schema-function-k-number-schema"><code>k-number-schema</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#0500_typography_components-variable-k-typography-schema"><code>k-typography-schema</code></a></li></ul><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#0500_typography_components-mixin-k-TypographyScale"><code>k-TypographyScale</code></a></li></ul></section><section class="main__item container item" id="0400_typography_helpers-mixin-k-typographyFontStyle"><h3 class="item__heading"><a class="item__name" href="#mixin-k-typographyFontStyle">k-typographyFontStyle</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin k-typographyFontStyle($typography, $font-style) { 
+  $valid:
+    k-all(
+      k-validate(
+        $typography, $k-typography-schema,
+        &#39;typography_FontStyle&#39;, &#39;$typography&#39;
+      ),
+      k-validate(
+        $font-style, $k-font-style-schema,
+        &#39;typography_FontStyle&#39;, &#39;$font-style&#39;
+      )
+    );
+
+  @include k-apply-if-set($font-style, color,          &#39;color&#39;);
+  @include k-apply-if-set($font-style, font-size,      &#39;font-size&#39;);
+  @include k-apply-if-set($font-style, font-style,     &#39;font-style&#39;);
+  @include k-apply-if-set($font-style, font-weight,    &#39;font-weight&#39;);
+  @include k-apply-if-set($font-style, letter-spacing, &#39;letter-spacing&#39;);
+  @include k-apply-if-set($font-style, text-transform, &#39;text-transform&#39;);
+ }" data-collapsed="@mixin k-typographyFontStyle($typography, $font-style) { ... }"><code>@mixin k-typographyFontStyle($typography, $font-style) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Apply a set of font styles.</p><p>Each style defined in the <code>$font-style</code> map will be set in the output CSS. This mixin will specifically look for one of the following styles:</p><ul><li><code>color</code></li><li><code>font-style</code></li><li><code>font-weight</code></li><li><code>letter-spacing</code></li><li><code>text-transform</code></li></ul></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$typography</code></th><td data-label="desc"><p>a typography object</p></td><td data-label="type"><code>Map</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$font-style</code></th><td data-label="desc"><p>a map with font styles</p></td><td data-label="type"><code>Map</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><div class="example__description"><p>Usage</p></div><pre class="example__code language-scss"><code>$typography: (
+   ...
+);
+
+$bold-italic: (
+  font-style:  &#39;italic&#39;;
+  font-weight: 700
+);
+
+@include k-typography-FontStyle($typography, $font-style);</code></pre></div><div class="item__example example"><div class="example__description"><p>CSS output</p></div><pre class="example__code language-css"><code>font-style:  &#39;italic&#39;;
+font-weight: 700;</code></pre></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#0100_helpers-mixin-k-apply-if-set"><code>k-apply-if-set</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#0100_helpers-function-k-all"><code>k-all</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#0200_schema-function-k-validate"><code>k-validate</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#0500_typography_components-variable-k-typography-schema"><code>k-typography-schema</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#0400_typography_helpers-variable-k-font-style-schema"><code>k-font-style-schema</code></a></li></ul><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#0500_typography_components-mixin-k-TypographyBodyCopy"><code>k-TypographyBodyCopy</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#0500_typography_components-mixin-k-TypographyScale"><code>k-TypographyScale</code></a></li></ul></section><section class="main__item container item" id="0400_typography_helpers-mixin-k-typographyVerticalMargin"><h3 class="item__heading"><a class="item__name" href="#mixin-k-typographyVerticalMargin">k-typographyVerticalMargin</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin k-typographyVerticalMargin($typography, $margins) { 
+  $valid:
+    k-all(
+      k-validate(
+        $typography, $k-typography-schema,
+        &#39;k-typographyVerticalMargin&#39;, &#39;$typography&#39;
+      ),
+      k-validate(
+        $margins, $k-vertical-margin-schema,
+        &#39;k-typographyVerticalMargin&#39;, &#39;$margin&#39;
+      )
+    );
+
+  // The base line height.
+  $base-line-height: map-get($typography, &#39;line-height&#39;);
+
+  // Get top margin or set to 0.
+  $top-margin: k-default(map-get($margins, &#39;top&#39;), 0);
+
+  // Get bottom margin or set to 0.
+  $bottom-margin: k-default(map-get($margins, &#39;bottom&#39;), 0);
+
+  margin-top:    $top-margin    * $base-line-height;
+  margin-bottom: $bottom-margin * $base-line-height;
+ }" data-collapsed="@mixin k-typographyVerticalMargin($typography, $margins) { ... }"><code>@mixin k-typographyVerticalMargin($typography, $margins) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Apply vertical margins that are multiples of the base line height.</p><p>A top and a bottom margin can be defined, as numbers without any unit. When not specified, each margin will be set to zero.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$typography</code></th><td data-label="desc"><p>a typography object</p></td><td data-label="type"><code>Map</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$margins</code></th><td data-label="desc"><p>a map with a top and/or bottom attributes</p></td><td data-label="type"><code>Map</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><div class="example__description"><p>Usage</p></div><pre class="example__code language-scss"><code>$typography: (
+  line-height: 1.5rem,
+  ...
+);
+
+$margins: (
+  top:    1,
+  bottom: 2
+);
+
+@include k-typographyVerticalMargin($typography, $margins);</code></pre></div><div class="item__example example"><div class="example__description"><p>CSS output</p></div><pre class="example__code language-css"><code>margin-top:    1.5rem;
+margin-bottom: 3rem;</code></pre></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#0100_helpers-function-k-all"><code>k-all</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#0200_schema-function-k-validate"><code>k-validate</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#0100_helpers-function-k-default"><code>k-default</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#0500_typography_components-variable-k-typography-schema"><code>k-typography-schema</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#0400_typography_helpers-variable-k-vertical-margin-schema"><code>k-vertical-margin-schema</code></a></li></ul></section><section class="main__item container item" id="0400_typography_helpers-mixin-k-typographyVerticalPadding"><h3 class="item__heading"><a class="item__name" href="#mixin-k-typographyVerticalPadding">k-typographyVerticalPadding</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin k-typographyVerticalPadding($typography, $padding) { 
+  $valid:
+    k-all(
+      k-validate(
+        $typography, $k-typography-schema,
+        &#39;k-typographyPadding&#39;, &#39;$typography&#39;
+      ),
+      k-validate(
+        $padding, $k-vertical-padding-schema,
+        &#39;k-typographyPadding&#39;, &#39;$distance&#39;
+      )
+    );
+
+  // The base line height.
+  $base-line-height: map-get($typography, &#39;line-height&#39;);
+
+  // Get top padding or set to 0.
+  $top-padding: k-default(map-get($paddings, &#39;top&#39;), 0);
+
+  // Get bottom padding or set to 0.
+  $bottom-padding: k-default(map-get($paddings, &#39;bottom&#39;), 0);
+
+  padding-top:    $top-padding    * $base-line-height;
+  padding-bottom: $bottom-padding * $base-line-height;
+ }" data-collapsed="@mixin k-typographyVerticalPadding($typography, $padding) { ... }"><code>@mixin k-typographyVerticalPadding($typography, $padding) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Apply vertical paddings that are multiples of the base line height.</p><p>A top and bottom padding can be defined, as numbers without any unit. When not specified, each padding will be set to zero.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$typography</code></th><td data-label="desc"><p>a typography object</p></td><td data-label="type"><code>Map</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$padding</code></th><td data-label="desc"><p>a map with a top and/or bottom attributes</p></td><td data-label="type"><code>Map</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><div class="example__description"><p>Usage</p></div><pre class="example__code language-scss"><code>$typography: (
+  line-height: 1.5rem,
+  ...
+);
+
+$paddings: (
+  top:    1,
+  bottom: 2
+);
+
+@include k-typographyVerticalPadding($typography, $paddings);</code></pre></div><div class="item__example example"><div class="example__description"><p>CSS output</p></div><pre class="example__code language-css"><code>padding-top:    1.5rem;
+padding-bottom: 3rem;</code></pre></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#0100_helpers-function-k-all"><code>k-all</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#0200_schema-function-k-validate"><code>k-validate</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#0100_helpers-function-k-default"><code>k-default</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#0500_typography_components-variable-k-typography-schema"><code>k-typography-schema</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#0400_typography_helpers-variable-k-vertical-padding-schema"><code>k-vertical-padding-schema</code></a></li></ul></section></section><section class="main__sub-section" id="0400_typography_helpers-variable"><h2 class="main__heading--secondary"><div class="container">variables</div></h2><section class="main__item container item" id="0400_typography_helpers-variable-k-font-style-schema"><h3 class="item__heading"><a class="item__name" href="#variable-k-font-style-schema">k-font-style-schema</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$k-font-style-schema: (
+  type: &#39;map&#39;,
+
+  properties: (
+    color:          k-color-schema(),
+    font-size:      k-number-schema(),
+    font-weight:    k-number-schema($unit: none),
+    letter-spacing: k-number-schema(),
+
+    font-style: k-enum-schema(
+      &#39;normal&#39;,
+      &#39;italic&#39;,
+      &#39;oblique&#39;,
+      &#39;initial&#39;,
+      &#39;inherit&#39;
+    ),
+
+    text-transform: k-enum-schema(
+      &#39;none&#39;,
+      &#39;lowercase&#39;,
+      &#39;uppercase&#39;,
+      &#39;capitalize&#39;
+    )
+  )
+);</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Font style schema.</p></div><h3 class="item__sub-heading">Type</h3><p><code>Map</code></p><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#0400_typography_helpers-mixin-k-typographyFontStyle"><code>k-typographyFontStyle</code></a></li></ul></section><section class="main__item container item" id="0400_typography_helpers-variable-k-vertical-margin-schema"><h3 class="item__heading"><a class="item__name" href="#variable-k-vertical-margin-schema">k-vertical-margin-schema</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$k-vertical-margin-schema: (
+  type: &#39;map&#39;,
+
+  properties: (
+    top:    k-number-schema($unit: none),
+    bottom: k-number-schema($unit: none)
+  )
+);</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Vertical margin schema.</p></div><h3 class="item__sub-heading">Type</h3><p><code>Map</code></p><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#0400_typography_helpers-mixin-k-typographyVerticalMargin"><code>k-typographyVerticalMargin</code></a></li></ul></section><section class="main__item container item" id="0400_typography_helpers-variable-k-vertical-padding-schema"><h3 class="item__heading"><a class="item__name" href="#variable-k-vertical-padding-schema">k-vertical-padding-schema</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$k-vertical-padding-schema: (
+  type: &#39;map&#39;,
+
+  properties: (
+    top:    k-number-schema($unit: none),
+    bottom: k-number-schema($unit: none)
+  )
+);</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Vertical padding schema.</p></div><h3 class="item__sub-heading">Type</h3><p><code>Map</code></p><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#0400_typography_helpers-mixin-k-typographyVerticalPadding"><code>k-typographyVerticalPadding</code></a></li></ul></section><section class="main__item container item" id="0400_typography_helpers-variable-k-with-font-family-schema"><h3 class="item__heading"><a class="item__name" href="#variable-k-with-font-family-schema">k-with-font-family-schema</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$k-with-font-family-schema: (
+  type: &#39;map&#39;,
+
+  properties: (
+    family: k-string-schema()
+  ),
+
+  required: (
+    &#39;family&#39;
+  )
+);</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Schema for elements with font settings.</p><p>Used to validate any element declaration that references a predeclared font family by name.</p></div><h3 class="item__sub-heading">Type</h3><p><code>Map</code></p><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#0400_typography_helpers-mixin-k-typographyFontFamily"><code>k-typographyFontFamily</code></a></li><li><span class="item__cross-type">[function]</span> <a href="#0400_typography_helpers-function-k-typography-typeface-for"><code>k-typography-typeface-for</code></a></li></ul></section></section></section><section class="main__section"><h1 class="main__heading" id="0500_typography_components"><div class="container">0500_typography_components</div></h1><section class="main__sub-section" id="0500_typography_components-mixin"><h2 class="main__heading--secondary"><div class="container">mixins</div></h2><section class="main__item container item" id="0500_typography_components-mixin-k-TypographyBodyCopy"><h3 class="item__heading"><a class="item__name" href="#mixin-k-TypographyBodyCopy">k-TypographyBodyCopy</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin k-TypographyBodyCopy($typography) { 
+  $valid:
+    k-validate(
+      $typography, $k-typography-schema,
+      &#39;k-TypographyBodyCopy&#39;, &#39;$typography&#39;
+    );
+
+  // The root font size applied to the HTML document.
+  $root: map-get($typography, &#39;root&#39;);
+
+  // The starting font size applied to the body element.
+  $base-font-size: map-get($typography, &#39;font-size&#39;);
+
+  // The starting font weight applied to the body element.
+  $base-font-weight: map-get($typography, &#39;font-weight&#39;);
+
+  // The base line height.
+  $base-line-height: map-get($typography, &#39;line-height&#39;);
+
+  // Start by resetting the document font size to the requested value.
+  html {
+    font-size: $root;
+  }
+
+  // Set sensible defaults on the body element.
+  body {
+    // Assume we want to use the body copy font family by default.
+    $body-copy: map-get($typography, &#39;body-copy&#39;);
+
+    font-size:   $base-font-size;
+    font-weight: $base-font-weight;
+    line-height: $base-line-height;
+
+    @include k-typographyFontFamily($typography, $body-copy);
+    @include k-typographyFontStyle($typography, $body-copy);
+
+    // Apply this class on the body element to display the baseline grid.
+    &amp;.withGrid {
+      $gradient: linear-gradient(to bottom, #0ff 0, rgba(255, 255, 255, 0) 1px);
+
+      background-image: $gradient;
+
+      background-repeat: repeat-y;
+      background-size:   100% $base-line-height;
+    }
+  }
+ }" data-collapsed="@mixin k-TypographyBodyCopy($typography) { ... }"><code>@mixin k-TypographyBodyCopy($typography) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Setup default text settings for body copy, with support for vertical rhythm.</p><p>This is one of the few mixins that will apply global styles to existing elements when invoked. Its purpose is to set proper defaults on the <code>html</code> and <code>body</code> elements, which will in turn allow to build a sound typographic scale, and components that follow the vertical rythm.</p><p>The mixin will set a root font size on the <code>html</code> element, and set a font size and a line height in rems on the <code>body</code> element. Most vertical measures found in other components will be multiples of this font size or line height.</p><p>A helper class named <code>withGrid</code> is added for the body element. Enabling this class will display the baseline grid.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$typography</code></th><td data-label="desc"><p>a typography object</p></td><td data-label="type"><code>Map</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><div class="example__description"><p>Usage</p></div><pre class="example__code language-scss"><code>$typography: (
+  root: 18px,
+
+  font-size:   1rem,
+  font-weight: 300,
+  line-height: 1.5rem,
+
+  typeface: (
+    lato: (
+      family: &#39;&quot;lato&quot;, sans-serif&#39;
+    )
+  ),
+
+  body-copy: (
+    family: &#39;lato&#39;,
+    color:  #444
+  )
+);
+
+@include k-TypographyBodyCopy($typography);</code></pre></div><div class="item__example example"><div class="example__description"><p>CSS output</p></div><pre class="example__code language-css"><code>html {
+  font-size: 18px;
+}
+
+body {
+  font-size:   1rem;
+  font-weight: 300;
+  line-height: 1.5rem;
+
+  font-family: &quot;lato&quot;, sans-serif;
+  color:       #444;
+}
+
+body.withGrid {
+  ...;
+}</code></pre></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#0400_typography_helpers-mixin-k-typographyFontFamily"><code>k-typographyFontFamily</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#0400_typography_helpers-mixin-k-typographyFontStyle"><code>k-typographyFontStyle</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#0200_schema-function-k-validate"><code>k-validate</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#0500_typography_components-variable-k-typography-schema"><code>k-typography-schema</code></a></li></ul></section><section class="main__item container item" id="0500_typography_components-mixin-k-TypographyScale"><h3 class="item__heading"><a class="item__name" href="#mixin-k-TypographyScale">k-TypographyScale</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin k-TypographyScale($scale) { 
+  $valid:
+    k-validate(
+      $scale, $k-typography-scale-schema,
+      &#39;k-TypographyScale&#39;, &#39;$scale&#39;
+    );
+
+  $typography: map-get($scale, &#39;typography&#39;);
+  $multiplier: map-get($scale, &#39;multiplier&#39;);
+  $styles:     map-get($scale, &#39;styles&#39;);
+
+  @each $style-name, $style in $styles {
+    $step:   k-default(map-get($style, &#39;step&#39;), 0);
+
+    .#{$style-name} {
+      @include k-typographyFontFamily($typography, $style);
+      @include k-typographyFontSize($typography, $multiplier, $step);
+      @include k-typographyFontStyle($typography, $style);
+    }
+  }
+ }" data-collapsed="@mixin k-TypographyScale($scale) { ... }"><code>@mixin k-TypographyScale($scale) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Setup a typographic scale.</p><p>This mixin will setup a typographic scale, with fonts sizes computed automatically using a modular scale.</p><p>Font sizes and margins must be declared as unitless multipliers. Everything is then derived from the base font size and line height.</p><p>The generated scale is not overly opinionated: all font sizes must be on the modular scale, but it is possible to create more than one style per font size. Besides, the style classes themselves are named by the caller, and never tied specifically to <code>h*</code> tags. Only one class is generated by font style.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$scale</code></th><td data-label="desc"><p>a typographic scale specification</p></td><td data-label="type"><code>Map</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><div class="example__description"><p>Usage</p></div><pre class="example__code language-scss"><code>$typography: (
+   ...
+);
+
+$typographic-scale: (
+  typography: $typography,
+  multiplier: $golden,
+
+  styles: (
+    heading1: (
+      family: &#39;lato&#39;,
+      step:   3,
+
+      color:  #444,
+      font-weight: 700,
+    ),
+
+    heading2: (
+      family: &#39;lato&#39;,
+      step:   2,
+
+      color:  #444,
+      font-weight: 700,
+    ),
+
+    heading3: (
+      family: &#39;lato&#39;,
+      step:   1,
+
+      color:  #444,
+      font-weight: 500,
+    ),
+
+    heading4: (
+      family: &#39;lato&#39;,
+      step:   0,
+
+      color:  #aaa,
+      font-weight:    300,
+      text-transform: uppercase
+    ),
+
+    paragraph: (
+      family: &#39;lato&#39;,
+      step:   0,
+
+      color:  $body-copy-color,
+      font-weight: 300,
+    )
+  )
+);
+
+@include k-TypographyScale($typographic-scale);</code></pre></div><div class="item__example example"><div class="example__description"><p>CSS output</p></div><pre class="example__code language-css"><code>.heading1 {
+  font-family: &quot;lato&quot;, sans-serif;
+  font-size:   4.2358rem;
+  line-height: 4.5rem;
+
+  color:       #444;
+  font-weight: 700;
+}
+
+.heading2 {
+  font-family: &quot;lato&quot;, sans-serif;
+  font-size:   2.61792rem;
+  line-height: 3rem;
+
+  color:       #444;
+  font-weight: 700;
+}
+
+.heading3 {
+  font-family: &quot;lato&quot;, sans-serif;
+  font-size:   1.618rem;
+  line-height: 3rem;
+
+  color:       #444;
+  font-weight: 500;
+}
+
+.heading4 {
+  font-family: &quot;lato&quot;, sans-serif;
+  font-size:   1rem;
+  line-height: 1.5rem;
+
+  color:          #aaa;
+  font-weight:    300;
+  text-transform: uppercase;
+}
+
+.paragraph {
+  font-family: &quot;lato&quot;, sans-serif;
+  font-size:   1rem;
+  line-height: 1.5rem;
+
+  color:       #444;
+  font-weight: 300;
+}</code></pre></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#0400_typography_helpers-mixin-k-typographyFontFamily"><code>k-typographyFontFamily</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#0400_typography_helpers-mixin-k-typographyFontSize"><code>k-typographyFontSize</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#0400_typography_helpers-mixin-k-typographyFontStyle"><code>k-typographyFontStyle</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#0200_schema-function-k-validate"><code>k-validate</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#0100_helpers-function-k-default"><code>k-default</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#0500_typography_components-variable-k-typography-scale-schema"><code>k-typography-scale-schema</code></a></li></ul></section></section><section class="main__sub-section" id="0500_typography_components-variable"><h2 class="main__heading--secondary"><div class="container">variables</div></h2><section class="main__item container item" id="0500_typography_components-variable-k-typography-scale-schema"><h3 class="item__heading"><a class="item__name" href="#variable-k-typography-scale-schema">k-typography-scale-schema</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$k-typography-scale-schema: (
+  type: &#39;map&#39;,
+
+  properties: (
+    typography: $k-typography-schema,
+
+    multiplier: k-number-schema($unit: none),
+
+    styles: (
+      type: &#39;map&#39;,
+
+      additional-properties: map-merge(
+        $k-font-style-schema,
+        (
+          type: &#39;map&#39;,
+
+          properties: (
+            family: k-string-schema(),
+            step:   k-number-schema($unit: none),
+          ),
+
+          required: (
+            &#39;family&#39;,
+            &#39;step&#39;
+          )
+        )
+      )
+    )
+  ),
+
+  required: (
+    &#39;typography&#39;,
+    &#39;multiplier&#39;,
+    &#39;styles&#39;
+  )
+);</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>The schema used to validate typographic scale definitions.</p></div><h3 class="item__sub-heading">Type</h3><p><code>Map</code></p><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#0500_typography_components-mixin-k-TypographyScale"><code>k-TypographyScale</code></a></li></ul></section><section class="main__item container item" id="0500_typography_components-variable-k-typography-schema"><h3 class="item__heading"><a class="item__name" href="#variable-k-typography-schema">k-typography-schema</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$k-typography-schema: (
+  type: &#39;map&#39;,
+
+  properties: (
+    root:        k-number-schema($unit: px),
+    font-size:   k-number-schema($unit: rem),
+    font-weight: k-number-schema($unit: none),
+    line-height: k-number-schema($unit: rem),
+
+    typeface: (
+      type: &#39;map&#39;,
+
+      additional-properties: (
+        type: &#39;map&#39;,
+
+        properties: (
+          family: k-string-schema(),
+        ),
+
+        required: (
+          &#39;family&#39;
+        )
+      )
+    ),
+    body-copy: (
+      type: &#39;map&#39;,
+
+      properties: (
+        family: k-string-schema(),
+        color:  k-color-schema()
+      ),
+
+      required: (
+        &#39;family&#39;,
+        &#39;color&#39;
+      )
+    )
+  ),
+
+  required: (
+    &#39;root&#39;,
+    &#39;font-size&#39;,
+    &#39;font-weight&#39;,
+    &#39;line-height&#39;,
+    &#39;typeface&#39;,
+    &#39;body-copy&#39;
+  )
+);</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>The schema used to validate typography objects.</p></div><h3 class="item__sub-heading">Type</h3><p><code>Map</code></p><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[function]</span> <a href="#0400_typography_helpers-function-k-typography-distance"><code>k-typography-distance</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#0400_typography_helpers-mixin-k-typographyFontFamily"><code>k-typographyFontFamily</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#0400_typography_helpers-mixin-k-typographyFontSize"><code>k-typographyFontSize</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#0400_typography_helpers-mixin-k-typographyFontStyle"><code>k-typographyFontStyle</code></a></li><li><span class="item__cross-type">[function]</span> <a href="#0400_typography_helpers-function-k-typography-typeface-for"><code>k-typography-typeface-for</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#0400_typography_helpers-mixin-k-typographyVerticalMargin"><code>k-typographyVerticalMargin</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#0400_typography_helpers-mixin-k-typographyVerticalPadding"><code>k-typographyVerticalPadding</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#0500_typography_components-mixin-k-TypographyBodyCopy"><code>k-TypographyBodyCopy</code></a></li></ul></section></section></section><footer class="footer" role="contentinfo"><div class="container"><div class="footer__project-info project-info"><!-- Name and URL --><span class="project-info__name">SassDoc</span><!-- Version --><!-- License --></div><a class="footer__watermark" href="http://sassdoc.com"><img src="assets/images/logo_light_inline.svg" alt="SassDoc Logo"></a></div></footer></article><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script><script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')</script><script src="assets/js/main.min.js"></script></body></html>

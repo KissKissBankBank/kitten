@@ -18,3 +18,9 @@ Bundler::GemHelper.install_tasks
 require 'rake/testtask'
 
 task default: :spec
+
+desc 'Generate kitten sassdoc'
+task :sassdoc do
+  puts 'Generating kitten sassdoc...'
+  `sassdoc -d public/sassdoc assets/stylesheets`
+end

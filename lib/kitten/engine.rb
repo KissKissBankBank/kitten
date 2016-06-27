@@ -11,6 +11,14 @@ module Kitten
       end
     end
 
+    initializer :static_assets do |app|
+      if Rails.application.config.serve_static_assets
+        app.middleware.insert_before(::ActionDispatch::Static,
+                                     ::ActionDispatch::Static,
+                                     "#{root}/public")
+      end
+    end
+
     config.generators do |g|
       g.test_framework      :rspec,        fixture: false
       g.fixture_replacement :factory_girl, dir:     'spec/factories'
