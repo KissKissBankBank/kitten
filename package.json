@@ -1,0 +1,20 @@
+{
+  "name": "kitten",
+  "version": "0.1.0",
+  "description": "Components library for Sass",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KissKissBankBank/kitten.git"
+  },
+  "keywords": [
+    "sass",
+    "scss",
+    "components",
+    "kitten"
+  ],
+  "author": "KissKissBankBank",
+  "homepage": "https://github.com/KissKissBankBank/kitten#readme",
+  "devDependencies": {
+    "sassdoc": "^2.1.20"
+  }
+}
