@@ -4,6 +4,12 @@
 
 ![Kittens](http://i.imgur.com/EbGhfDH.gif)
 
+
+## Dependencies
+
+- Ruby 2.2.1
+- Node > 0.12 (for stylelint)
+
 ## Installation
 
 ### For Ruby on Rails
