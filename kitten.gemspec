@@ -25,6 +25,8 @@ Gem::Specification.new do |s|
   # Sass dependencies.
   s.add_runtime_dependency 'sass',                       '>= 3.3.0'
   s.add_runtime_dependency 'sassy-maps',                 '~>0.4.0'
+
+  # Sass assets. Be sure to add them in the Gemfile and README.
   s.add_runtime_dependency 'rails-assets-modular-scale', '~>2.1.0'
 
   s.add_development_dependency 'bundler', '~> 1.8'

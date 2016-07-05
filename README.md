@@ -18,6 +18,11 @@ Add this line to your application's Gemfile:
 
 ```ruby
 gem 'kitten'
+
+# SASS extensions for kitten
+source 'https://rails-assets.org' do
+  gem 'rails-assets-modular-scale'
+end
 ```
 
 And then execute:
@@ -54,7 +59,7 @@ $ npm install # install node dependencies
 #### Style checker
 
 ```sh
-$ npm run --silent stylelint
+$ npm run stylelint
 ```
 
 #### Ruby specs
