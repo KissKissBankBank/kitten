@@ -33,7 +33,7 @@
     "#{$path} #{$message}"
   );
 
-  @if k-log($error-message) {}
+  $error-message: k-log($error-message);
 }
 
 /// Raise a invalid unit error for a specific module and path.

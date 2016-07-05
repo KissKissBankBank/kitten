@@ -4,6 +4,12 @@
 
 ![Kittens](http://i.imgur.com/EbGhfDH.gif)
 
+
+## Dependencies
+
+- Ruby 2.2.1
+- Node > 0.12 (for stylelint)
+
 ## Installation
 
 ### For Ruby on Rails
@@ -12,7 +18,13 @@ Add this line to your application's Gemfile:
 
 ```ruby
 gem 'kitten'
+
+# SASS extensions for kitten
+source 'https://rails-assets.org' do
+  gem 'rails-assets-modular-scale'
+end
 ```
+
 And then execute:
 
     $ bundle
@@ -26,6 +38,7 @@ Import `kitten` in your main Sass file:
 ```
 
 Include the component your want to use in your application:
+
 ```sass
 @include k-MyComponent;
 ```
@@ -43,9 +56,14 @@ $ bundle      # install gem dependencies
 $ npm install # install node dependencies
 ```
 
-#### Specs and code-style checker
+#### Style checker
 
-Launch:
+```sh
+$ npm run stylelint
+```
+
+#### Ruby specs
+
 ```sh
 $ bundle exec rake
 ```
@@ -55,6 +73,7 @@ $ bundle exec rake
 We use [SassDoc](http://sassdoc.com/) to generate documentation from our components comments.
 
 Generate the documentation:
+
 ```sh
 $ bundle exec rake sassdoc
 ```
