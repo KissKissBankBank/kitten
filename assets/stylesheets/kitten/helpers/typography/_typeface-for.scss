@@ -56,9 +56,7 @@
       "cannot find a font family named '#{$typeface-name}'"
     );
 
-    // stylelint-disable block-no-empty
-    @if k-log($error-message) {}
-    // stylelint-enable
+    $error-message: k-log($error-message);
   }
 
   @return $typeface;
