@@ -13,7 +13,7 @@
 /// @return {Boolean}
 @function k-validate($value, $schema, $module, $path: 'root') {
   // Start by checking what type we expect for the current value.
-  $value-type:    type-of($value);
+  $value-type: type-of($value);
   $expected-type: map-get($schema, 'type');
 
   @if $expected-type == 'number' {
@@ -85,7 +85,7 @@
     @if $item-schema {
       @for $i from 1 through length($value) {
         $p-value: nth($value, $i);
-        $p-path:  "#{$path}[#{$i}]";
+        $p-path: "#{$path}[#{$i}]";
 
         @if not k-validate($p-value, $item-schema, $module, $p-path) {
           @return false;
@@ -108,7 +108,7 @@
     @if $map-properties != null {
       @each $p-name, $p-schema in $map-properties {
         $p-value: map-get($value, $p-name);
-        $p-path:  "#{$path}.#{$p-name}";
+        $p-path: "#{$path}.#{$p-name}";
 
         @if $p-value != null {
           @if not k-validate($p-value, $p-schema, $module, $p-path) {
@@ -123,7 +123,7 @@
     @if $required-properties != null {
       @each $p-name in $required-properties {
         $p-value: map-get($value, $p-name);
-        $p-path:  "#{$path}.#{$p-name}";
+        $p-path: "#{$path}.#{$p-name}";
 
         @if $p-value == null {
           @return k-schema-error(

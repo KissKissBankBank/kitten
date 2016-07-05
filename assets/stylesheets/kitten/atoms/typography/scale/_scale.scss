@@ -126,16 +126,18 @@
 @mixin k-TypographyScale($scale) {
   $valid:
     k-validate(
-      $scale, $k-typography-scale-schema,
-      'k-TypographyScale', '$scale'
+      $scale,
+      $k-typography-scale-schema,
+      'k-TypographyScale',
+      '$scale'
     );
 
   $typography: map-get($scale, 'typography');
   $multiplier: map-get($scale, 'multiplier');
-  $styles:     map-get($scale, 'styles');
+  $styles: map-get($scale, 'styles');
 
   @each $style-name, $style in $styles {
-    $step:   k-default(map-get($style, 'step'), 0);
+    $step: k-default(map-get($style, 'step'), 0);
 
     .#{$style-name} {
       @include k-typographyFontFamily($typography, $style);

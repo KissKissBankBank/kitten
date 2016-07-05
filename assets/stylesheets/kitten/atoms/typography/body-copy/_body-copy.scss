@@ -64,8 +64,10 @@
 @mixin k-TypographyBodyCopy($typography) {
   $valid:
     k-validate(
-      $typography, $k-typography-schema,
-      'k-TypographyBodyCopy', '$typography'
+      $typography,
+      $k-typography-schema,
+      'k-TypographyBodyCopy',
+      '$typography'
     );
 
   // The root font size applied to the HTML document.
@@ -90,7 +92,7 @@
     // Assume we want to use the body copy font family by default.
     $body-copy: map-get($typography, 'body-copy');
 
-    font-size:   $base-font-size;
+    font-size: $base-font-size;
     font-weight: $base-font-weight;
     line-height: $base-line-height;
 
@@ -104,7 +106,7 @@
       background-image: $gradient;
 
       background-repeat: repeat-y;
-      background-size:   100% $base-line-height;
+      background-size: 100% $base-line-height;
     }
   }
 }

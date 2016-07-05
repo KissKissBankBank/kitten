@@ -51,6 +51,6 @@
   // Get bottom padding or set to 0.
   $bottom-padding: k-default(map-get($paddings, 'bottom'), 0);
 
-  padding-top:    $top-padding    * $base-line-height;
+  padding-top: $top-padding * $base-line-height;
   padding-bottom: $bottom-padding * $base-line-height;
 }

@@ -48,7 +48,7 @@
     );
 
   $typeface-name: map-get-deep($element, ('family'));
-  $typeface:      map-get-deep($typography, ('typeface', $typeface-name));
+  $typeface: map-get-deep($typography, ('typeface', $typeface-name));
 
   @if $typeface == null {
     $error-message: k-module-error(

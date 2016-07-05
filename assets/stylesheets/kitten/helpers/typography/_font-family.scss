@@ -50,7 +50,7 @@
     );
 
   $typeface: k-typography-typeface-for($typography, $element);
-  $family:   map-get($typeface, 'family');
+  $family: map-get($typeface, 'family');
 
   font-family: unquote($family);
 }
