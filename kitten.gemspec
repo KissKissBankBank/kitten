@@ -19,7 +19,8 @@ Gem::Specification.new do |s|
   s.metadata['allowed_push_host'] = 'https://gemfury.com'
 
   # This is a Rails engine, so, yeah.
-  s.add_dependency 'rails'
+  # < 5.0.0 because it has not been tested there yet.
+  s.add_dependency 'rails', '< 5.0.0'
 
   # Sass dependencies.
   s.add_runtime_dependency 'sass',                       '>= 3.3.0'
