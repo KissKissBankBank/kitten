@@ -29,6 +29,7 @@
     "no-missing-eof-newline": true,
     "number-leading-zero": "never",
     "number-no-trailing-zeros": true,
+    "property-case": "lower",
     "selector-max-specificity": "0,3,0",
     "selector-no-id": true,
     "unit-case": "lower",
