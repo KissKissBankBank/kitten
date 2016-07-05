@@ -19,6 +19,7 @@ Add this line to your application's Gemfile:
 ```ruby
 gem 'kitten'
 ```
+
 And then execute:
 
     $ bundle
@@ -32,6 +33,7 @@ Import `kitten` in your main Sass file:
 ```
 
 Include the component your want to use in your application:
+
 ```sass
 @include k-MyComponent;
 ```
@@ -49,9 +51,14 @@ $ bundle      # install gem dependencies
 $ npm install # install node dependencies
 ```
 
-#### Specs and code-style checker
+#### Style checker
 
-Launch:
+```sh
+$ npm run stylelint
+```
+
+#### Ruby specs
+
 ```sh
 $ bundle exec rake
 ```
@@ -61,6 +68,7 @@ $ bundle exec rake
 We use [SassDoc](http://sassdoc.com/) to generate documentation from our components comments.
 
 Generate the documentation:
+
 ```sh
 $ bundle exec rake sassdoc
 ```
