@@ -20,14 +20,18 @@ Gem::Specification.new do |s|
 
   # This is a Rails engine, so, yeah.
   # < 5.0.0 because it has not been tested there yet.
-  s.add_dependency 'rails', '< 5.0.0'
+  s.add_dependency 'rails', ['> 3.0.0', '< 5.0.0']
 
   # Sass dependencies.
-  s.add_runtime_dependency 'sass',                       '>= 3.3.0'
-  s.add_runtime_dependency 'sassy-maps',                 '~>0.4.0'
+
+  # >= 3.3.0 for Sass maps support
+  s.add_runtime_dependency 'sass', '>= 3.3.0'
+
+  s.add_runtime_dependency 'sass-rails'
+  s.add_runtime_dependency 'sassy-maps', '~> 0.4.0'
 
   # Sass assets. Be sure to add them in the Gemfile and README.
-  s.add_runtime_dependency 'rails-assets-modular-scale', '~>2.1.0'
+  s.add_runtime_dependency 'rails-assets-modular-scale', '~> 2.1.0'
 
   s.add_development_dependency 'bundler', '~> 1.8'
   s.add_development_dependency 'rake',    '~> 10.0'

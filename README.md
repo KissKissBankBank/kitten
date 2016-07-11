@@ -7,7 +7,7 @@
 
 ## Dependencies
 
-- Ruby 2.2.1
+- Ruby 2.2.4
 - Node > 0.12 (for stylelint)
 
 ## Installation
