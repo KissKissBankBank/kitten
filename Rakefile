@@ -34,10 +34,6 @@ task kitten_release: [:sassdoc, :build] do
   sh 'git add lib/kitten/version.rb CHANGELOG.md public/sassdoc/index.html'
   sh "git commit -m v#{Kitten::VERSION}"
   sh "git tag v#{Kitten::VERSION}"
-  sh 'git push origin development'
-  sh 'git checkout master'
-  sh 'git fetch'
-  sh 'git rebase origin/development'
   sh 'git push origin master'
   sh 'git push origin --tags'
   puts
