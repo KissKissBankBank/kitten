@@ -28,7 +28,7 @@
 ///     font-weight: 700
 ///   );
 ///
-///   @include k-typography-FontStyle($typography, $font-style);
+///   @include k-typographyFontStyle($typography, $font-style);
 ///
 /// @example css - CSS output
 ///   font-style:  'italic';
@@ -46,10 +46,12 @@
       )
     );
 
-  @include k-apply-if-set($font-style, color,          'color');
-  @include k-apply-if-set($font-style, font-size,      'font-size');
-  @include k-apply-if-set($font-style, font-style,     'font-style');
-  @include k-apply-if-set($font-style, font-weight,    'font-weight');
-  @include k-apply-if-set($font-style, letter-spacing, 'letter-spacing');
-  @include k-apply-if-set($font-style, text-transform, 'text-transform');
+  @include k-apply-if-set($font-style, color,           'color');
+  @include k-apply-if-set($font-style, font-size,       'font-size');
+  @include k-apply-if-set($font-style, font-style,      'font-style');
+  @include k-apply-if-set($font-style, font-weight,     'font-weight');
+  @include k-apply-if-set($font-style, letter-spacing,  'letter-spacing');
+  @include k-apply-if-set($font-style, text-transform,  'text-transform');
+  @include k-apply-if-set($font-style, text-decoration, 'text-decoration');
+  @include k-apply-if-set($font-style, text-align,      'text-align');
 }
