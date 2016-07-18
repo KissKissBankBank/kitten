@@ -1,0 +1,22 @@
+// Your atom should be in kitten/atoms/your-atom-type/_atom-name.scss
+
+@import 'kitten/schema';
+@import 'kitten/atoms/your-atom-type/your-atom-schema';
+
+/// you can describe your atom here for sassdoc.
+///
+/// @group add your atom to a group matching its type.
+///        cf. http://sassdoc.com/annotations/#group
+///
+/// @parameter cf. http://sassdoc.com/annotations/#parameter
+///
+/// @example scss - usage
+///   your scss example.
+///
+/// @example css - css output
+///   the css output of your mixin.
+@mixin k-YourAtomName {
+  .k-YourAtomName {
+
+  }
+}

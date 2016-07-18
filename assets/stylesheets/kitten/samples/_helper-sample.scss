@@ -1,0 +1,21 @@
+// Your helper should be in kitten/helpers/your-helper-type/_helper-name.scss
+
+@import 'kitten/schema';
+
+// Import your helper dependencies.
+
+/// you can describe your helper here for sassdoc.
+///
+/// @group add your helper to a group matching its type.
+///        cf. http://sassdoc.com/annotations/#group
+///
+/// @parameter cf. http://sassdoc.com/annotations/#parameter
+///
+/// @example scss - usage
+///   your scss example.
+///
+/// @example css - css output
+///   the css output of your mixin.
+@mixin k-yourHelperName {
+
+}
