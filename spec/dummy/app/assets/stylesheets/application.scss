@@ -1,6 +1,7 @@
 @import 'kitten';
 @import 'kitten/atoms/typography/scale/scale';
 @import 'kitten/atoms/typography/body-copy/body-copy';
+@import 'kitten/atoms/buttons/button';
 
 $typography: (
   root:        16px,
@@ -65,11 +66,38 @@ $typographic-scale: (
   )
 );
 
-      color:  #999,
-      font-weight: 300,
+$button: (
+  typography: $typography,
+  multiplier: $major-second,
+  font: (
+    family: 'source-sans',
+    font-weight: 600,
+    letter-spacing: 1px,
+    text-transform: uppercase,
+    text-decoration: none,
+    text-align: center
+  ),
+  colors: (
+    base: (
+      color: #333,
+      background-color: #fff,
+      border-color: #d8d8d8
+    ),
+    hover: (
+      color: #fff,
+      background-color: #333
+    ),
+    active: (
+      color: #fff,
+      background-color: #151515
+    ),
+    disabled: (
+      color: #fff,
+      background-color: #d8d8d8
     )
   )
 );
 
 @include k-TypographyScale($typographic-scale);
 @include k-TypographyBodyCopy($typography);
+@include k-Button($button);
