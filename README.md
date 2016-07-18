@@ -8,6 +8,7 @@
 ## Dependencies
 
 - Ruby 2.2.4
+- Bundler (`gem install bundler`)
 - Node > 0.12 (for stylelint)
 
 ## Installation
