@@ -77,6 +77,8 @@ Generate the documentation:
 
 ```sh
 $ bundle exec rake sassdoc
+# OR
+$ npm run sassdoc
 ```
 
 The documentation is accessible on development environment: `/kitten/sassdoc`.
