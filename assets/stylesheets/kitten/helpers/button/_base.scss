@@ -1,0 +1,129 @@
+@import 'kitten/schema';
+@import 'kitten/helpers/button/border';
+
+/// Apply button basic display.
+///
+/// This mixin will apply pseudo-classes on the parent class that is calling it:
+///   - `:active`
+///   - `:hover`
+///   - `:focus`
+///   - `:disabled`
+///
+/// When `border-color` is not defined, `transparent` is used by default.
+///
+/// @group 0610_buttons_helpers
+///
+/// @parameter {Map} $button - a button specification
+///
+/// @example scss - Usage
+///   $button: (
+///     colors: (
+///       base: (
+///         color: #333,
+///         background-color: #fff,
+///         border-color: #d8d8d8
+///       ),
+///       hover: (
+///         color: #fff,
+///         background-color: #333,
+///       ),
+///       active: (
+///         color: #fff
+///         background-color: #151515
+///       ),
+///       disabled: (
+///         color: #fff,
+///         background-color: #d8d8d8
+///       ),
+///     ),
+///     ...
+///   )
+///
+///   .k-MyButton {
+///     @include buttonBase($button);
+///   }
+///
+/// @example css - CSS output
+///   .k-MyButton {
+///     display: inline-block;
+///     border: 1px solid #d8d8d8;
+///
+///     background-color: #fff;
+///     color: #333;
+///     cursor: pointer;
+///     letter-spacing: 1px;
+///     text-transform: uppercase;
+///     text-decoration: none;
+///     text-align: center;
+///  }
+///
+///   .k-MyButton:active {
+///     border: 1px solid transparent;
+///     background-color: #151515;
+///     color: #fff;
+///   }
+///
+///   .k-MyButton:hover, .k-MyButton:focus {
+///     border: 1px solid transparent;
+///     background-color: #333;
+///     color: #fff;
+///   }
+///
+///   .k-MyButton:disabled {
+///     border: 1px solid transparent;
+///     background-color: #d8d8d8;
+///     color: #fff;
+///   }
+@mixin k-buttonBase($button) {
+  $colors: map-get($button, 'colors');
+
+  // base colors
+  $base-color: map-get-deep($colors, ('base', 'color'));
+  $base-border-color: map-get-deep($colors, ('base', 'border-color'));
+  $base-background-color: map-get-deep($colors, ('base', 'background-color'));
+
+  // hover and focus colors
+  $hover-color: map-get-deep($colors, ('hover', 'color'));
+  $hover-border-color: map-get-deep($colors, ('hover', 'border-color'));
+  $hover-background-color: map-get-deep($colors, ('hover', 'background-color'));
+
+  // active colors
+  $active-color: map-get-deep($colors, ('active', 'color'));
+  $active-border-color: map-get-deep($colors, ('active', 'border-color'));
+  $active-background-color: map-get-deep($colors, ('active', 'background-color'));
+
+  // disabled colors
+  $disabled-color: map-get-deep($colors, ('disabled', 'color'));
+  $disabled-border-color: map-get-deep($colors, ('disabled', 'border-color'));
+  $disabled-background-color: map-get-deep($colors, ('disabled', 'background-color'));
+
+  @include k-buttonBorder($base-border-color);
+
+  display: inline-block;
+
+  background-color: $base-background-color;
+  color: $base-color;
+  cursor: pointer;
+  outline: 0;
+
+  &:active {
+    @include k-buttonBorder($active-border-color);
+
+    background-color: $active-background-color;
+    color: $active-color;
+  }
+
+  &:hover, &:focus {
+    @include k-buttonBorder($hover-border-color);
+
+    background-color: $hover-background-color;
+    color: $hover-color;
+  }
+
+  &:disabled {
+    @include k-buttonBorder($disabled-border-color);
+
+    background-color: $disabled-background-color;
+    color: $disabled-color;
+  }
+}

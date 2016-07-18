@@ -1,0 +1,49 @@
+@import 'kitten/schema';
+@import 'kitten/helpers/typography/typography-schema';
+@import 'kitten/helpers/typography/font-style-schema';
+@import 'kitten/helpers/typography/with-font-family-schema';
+@import 'kitten/helpers/button/colors-schema';
+
+/// The schema used to validate typographic scale definitions.
+///
+/// @group 0300_typography_components
+///
+/// @type Map
+$k-button-schema: (
+  type: 'map',
+
+  properties: (
+    typography: $k-typography-schema,
+    multiplier: k-number-schema($unit: none),
+
+    font: map-merge(
+      $k-with-font-family-schema,
+      $k-font-style-schema
+    ),
+
+    colors: (
+      type: 'map',
+
+      properties: (
+        base: $k-button-colors-schema,
+        hover: $k-button-colors-schema,
+        active: $k-button-colors-schema,
+        disabled: $k-button-colors-schema
+      ),
+
+      required: (
+        'base',
+        'hover',
+        'active',
+        'disabled'
+      )
+    )
+  ),
+
+  required: (
+    'typography',
+    'multiplier',
+    'font',
+    'colors'
+  )
+);
