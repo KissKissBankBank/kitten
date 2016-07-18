@@ -3,18 +3,18 @@
 @import 'kitten/schema';
 @import 'kitten/atoms/your-atom-type/your-atom-schema';
 
-/// you can describe your atom here for sassdoc.
+/// Describe your atom here for SassDoc.
 ///
-/// @group add your atom to a group matching its type.
+/// @group 0000_group_name_matching_your_atom_type
 ///        cf. http://sassdoc.com/annotations/#group
 ///
 /// @parameter cf. http://sassdoc.com/annotations/#parameter
 ///
 /// @example scss - usage
-///   your scss example.
+///   @include k-YourAtomName;
 ///
 /// @example css - css output
-///   the css output of your mixin.
+///   .k-YourAtomName { color: red; }
 @mixin k-YourAtomName {
   .k-YourAtomName {
 
