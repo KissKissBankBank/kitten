@@ -8,7 +8,9 @@
 /// @group 0000_group_name_matching_your_helper_type
 ///        cf. http://sassdoc.com/annotations/#group
 ///
-/// @parameter cf. http://sassdoc.com/annotations/#parameter
+/// @parameter {your-param-type} $your-param-name [optional default value] -
+///            your parameter description.
+///            cf. http://sassdoc.com/annotations/#parameter
 ///
 /// @example scss - usage
 ///   .foo { @include k-yourHelperName; }
