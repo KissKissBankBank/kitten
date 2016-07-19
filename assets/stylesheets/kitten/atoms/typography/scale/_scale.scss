@@ -139,7 +139,7 @@
   @each $style-name, $style in $styles {
     $step: k-default(map-get($style, 'step'), 0);
 
-    .#{$style-name} {
+    .k-#{$style-name} {
       @include k-typographyFontFamily($typography, $style);
       @include k-typographyFontSize($typography, $multiplier, $step);
       @include k-typographyFontStyle($typography, $style);
