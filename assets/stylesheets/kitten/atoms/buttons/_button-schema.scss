@@ -27,6 +27,7 @@ $k-button-schema: (
       properties: (
         base: $k-button-colors-schema,
         hover: $k-button-colors-schema,
+        focus: $k-button-colors-schema,
         active: $k-button-colors-schema,
         disabled: $k-button-colors-schema
       ),
