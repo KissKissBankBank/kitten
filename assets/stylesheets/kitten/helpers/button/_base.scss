@@ -9,6 +9,9 @@
 ///   - `:focus`
 ///   - `:disabled`
 ///
+/// The `:focus` pseudo-class is optionnal. If it is not defined, the `:hover`
+/// styles will be applied to `:focus` pseudo-class.
+///
 /// When `border-color` is not defined, `transparent` is used by default.
 ///
 /// @group 0610_buttons_helpers
@@ -53,15 +56,21 @@
 ///     cursor: pointer;
 ///  }
 ///
-///   .k-MyButton:active {
+///   .k-MyButton:hover {
 ///     border: 1px solid transparent;
-///     background-color: #151515;
+///     background-color: #333;
 ///     color: #fff;
 ///   }
 ///
-///   .k-MyButton:hover, .k-MyButton:focus {
+///   .k-MyButton:focus {
 ///     border: 1px solid transparent;
 ///     background-color: #333;
+///     color: #fff;
+///   }
+///
+///   .k-MyButton:active {
+///     border: 1px solid transparent;
+///     background-color: #151515;
 ///     color: #fff;
 ///   }
 ///
@@ -78,7 +87,7 @@
   $base-border-color: map-get-deep($colors, ('base', 'border-color'));
   $base-background-color: map-get-deep($colors, ('base', 'background-color'));
 
-  // hover and focus colors
+  // hover  colors
   $hover-color: map-get-deep($colors, ('hover', 'color'));
   $hover-border-color: map-get-deep($colors, ('hover', 'border-color'));
   $hover-background-color: map-get-deep($colors, ('hover', 'background-color'));
@@ -93,6 +102,11 @@
   $disabled-border-color: map-get-deep($colors, ('disabled', 'border-color'));
   $disabled-background-color: map-get-deep($colors, ('disabled', 'background-color'));
 
+  // focus  colors (optional)
+  $focus-color: map-get-deep($colors, ('focus', 'color'));
+  $focus-border-color: map-get-deep($colors, ('focus', 'border-color'));
+  $focus-background-color: map-get-deep($colors, ('focus', 'background-color'));
+
   @include k-buttonBorder($base-border-color);
 
   display: inline-block;
@@ -102,6 +116,13 @@
   cursor: pointer;
   outline: 0;
 
+  &:hover {
+    @include k-buttonBorder($hover-border-color);
+
+    background-color: $hover-background-color;
+    color: $hover-color;
+  }
+
   &:active {
     @include k-buttonBorder($active-border-color);
 
@@ -109,11 +130,19 @@
     color: $active-color;
   }
 
-  &:hover, &:focus {
-    @include k-buttonBorder($hover-border-color);
+  &:focus {
+    @if $focus-color {
+      @include k-buttonBorder($focus-border-color);
 
-    background-color: $hover-background-color;
-    color: $hover-color;
+      background-color: $focus-background-color;
+      color: $focus-color;
+    }
+    @else {
+      @include k-buttonBorder($hover-border-color);
+
+      baczground-color: $hover-background-color;
+      color: $hover-color;
+    }
   }
 
   &:disabled {
