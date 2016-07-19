@@ -12,6 +12,9 @@
 /// - `font-weight`
 /// - `letter-spacing`
 /// - `text-transform`
+/// - `font-size`
+/// - `text-decoration`
+/// - `text-align`
 ///
 /// @group 0310_typography_helpers
 ///
@@ -24,7 +27,7 @@
 ///   );
 ///
 ///   $bold-italic: (
-///     font-style:  'italic';
+///     font-style:  'italic',
 ///     font-weight: 700
 ///   );
 ///
