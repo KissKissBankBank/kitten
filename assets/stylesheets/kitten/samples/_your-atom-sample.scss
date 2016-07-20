@@ -1,0 +1,24 @@
+// Your atom should be in kitten/atoms/your-atom-type/_atom-name.scss
+
+@import 'kitten/schema';
+@import 'kitten/atoms/your-atom-type/your-atom-schema';
+
+/// Describe your atom here for SassDoc.
+///
+/// @group 0000_group_name_matching_your_atom_type
+///        cf. http://sassdoc.com/annotations/#group
+///
+/// @parameter {your-param-type} $your-param-name [optional default value] -
+///            your parameter description.
+///            cf. http://sassdoc.com/annotations/#parameter
+///
+/// @example scss - usage
+///   @include k-YourAtomName;
+///
+/// @example css - css output
+///   .k-YourAtomName { color: red; }
+@mixin k-YourAtomName {
+  .k-YourAtomName {
+
+  }
+}
