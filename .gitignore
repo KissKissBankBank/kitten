@@ -11,3 +11,4 @@ spec/dummy/db
 spec/dummy/.sass-cache
 *.gem
 /node_modules
+.sass-cache

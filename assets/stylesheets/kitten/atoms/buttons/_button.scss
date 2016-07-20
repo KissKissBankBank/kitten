@@ -1,0 +1,100 @@
+@import 'kitten/schema';
+@import 'kitten/atoms/buttons/button-schema';
+@import 'kitten/helpers/button/base';
+@import 'kitten/helpers/typography/font-size';
+@import 'kitten/helpers/typography/font-family';
+@import 'kitten/helpers/typography/font-style';
+
+// Button element default settings.
+$k-button-min-width: 160px;
+$k-button-line-height: 2.5;
+
+// The button element has a radius of 1.25rem (
+//   20px (designed border-radius) / 16px (base font-size)
+// ). The horizontal paddings are computed using this radius.
+$k-button-radius: 1.25em;
+
+// Button font-size is computed using a modular scale and a defined step of this
+// scale.
+$k-button-step: -2;
+
+/// Setup a button element.
+///
+/// This mixin will setup an element to look like a button.
+///
+/// Vertical paddings depend on the vertical-rhythm and horizontal padding and
+/// horizontal paddings depends on the font-size.
+///
+/// @group 0600_buttons_components
+///
+/// @parameter {Map} $button - a button specification
+///
+/// @example scss - Usage
+///   $typography: (
+///      ...
+///   );
+///
+///   $button: (
+///     typography: $typography,
+///     multiplier: $major-second,
+///
+///     font: (
+///       family: 'source-sans',
+///       font-weight: 600,
+///       letter-spacing: 1px,
+///       text-transform: uppercase,
+///       text-decoration: none,
+///       text-align: center
+///     ),
+///
+///     colors: (
+///       base: (
+///         color: #333,
+///         background-color: #fff,
+///         border-color: #d8d8d8
+///       ),
+///       hover: (
+///         color: #fff,
+///         background-color: #333,
+///         border-color: none
+///       ),
+///       active: (
+///         color: #fff,
+///         background-color: #151515
+///       ),
+///       disabled: (
+///         color: #fff,
+///         background-color: #d8d8d8
+///       )
+///     )
+///   )
+
+@mixin k-Button($button) {
+  $valid: k-validate(
+    $button,
+    $k-button-schema,
+    'k-Button',
+    '$button'
+  );
+
+  .k-Button {
+    $typography: map-get($button, 'typography');
+    $multiplier: map-get($button, 'multiplier');
+    $font:       map-get($button, 'font');
+
+    @include k-buttonBase($button);
+    @include k-typographyFontSize(
+      $typography,
+      $multiplier,
+      $k-button-step,
+      $k-button-line-height
+    );
+    @include k-typographyFontFamily($typography, $font);
+    @include k-typographyFontStyle($typography, $font);
+
+    padding: 0 $k-button-radius * 2;
+    border-radius: $k-button-radius;
+    min-width: $k-button-min-width;
+  }
+}
+

@@ -1,72 +1,107 @@
 @import 'kitten';
 @import 'kitten/atoms/typography/scale/scale';
 @import 'kitten/atoms/typography/body-copy/body-copy';
+@import 'kitten/atoms/buttons/button';
 
 $typography: (
   root:        16px,
   font-size:   1rem,
-  font-weight: 100,
+  font-weight: 400,
   line-height: 1.5rem,
 
   typeface: (
-    lato: (
-      family: '"lato", sans-serif'
+    source-sans: (
+      family: '"Source Sans Pro", Helvetica, Arial, sans-serif'
+    ),
+    source-sans-semi-bold: (
+      family: '"Source Sans Pro", Helvetica, Arial, sans-serif'
     )
   ),
 
   body-copy: (
-    family: 'lato',
+    family: 'source-sans',
     color: #333
   )
 );
 
 $typographic-scale: (
   typography: $typography,
-  multiplier: $golden,
+  multiplier: $major-second,
 
   styles: (
-    heading1: (
-      family: 'lato',
-      step:   3,
+    ParagraphXl: (
+      family: 'source-sans',
+      step: 2,
 
-      color:  #444,
-      font-weight: 700,
+      font-weight: 400
     ),
 
-    heading2: (
-      family: 'lato',
-      step:   2,
+    ParagraphLg: (
+      family: 'source-sans',
+      step: 1,
 
-      color:  #444,
-      font-weight: 700,
+      font-weight: 400
     ),
 
-    heading3: (
-      family: 'lato',
-      step:   1,
+    ParagraphMd: (
+      family: 'source-sans',
+      step: 0,
 
-      color:  #444,
-      font-weight: 500,
+      font-weight: 400
     ),
 
-    heading4: (
-      family: 'lato',
-      step:   0,
+    ParagraphSm: (
+      family: 'source-sans',
+      step: -1,
 
-      color:  #aaa,
-      font-weight:    300,
-      text-transform: uppercase
+      font-weight: 400
     ),
 
-    paragraph: (
-      family: 'lato',
-      step:   0,
+    ParagraphXs: (
+      family: 'source-sans',
+      step: -2,
 
-      color:  #999,
-      font-weight: 300,
+      font-weight: 400
+    )
+  )
+);
+
+$button: (
+  typography: $typography,
+  multiplier: $major-second,
+  font: (
+    family: 'source-sans',
+    font-weight: 600,
+    letter-spacing: 1px,
+    text-transform: uppercase,
+    text-decoration: none,
+    text-align: center
+  ),
+  colors: (
+    base: (
+      color: #333,
+      background-color: #fff,
+      border-color: #d8d8d8
+    ),
+    hover: (
+      color: #fff,
+      background-color: #333
+    ),
+    focus: (
+      color: #fff,
+      background-color: #ddd,
+    ),
+    active: (
+      color: #fff,
+      background-color: #151515
+    ),
+    disabled: (
+      color: #fff,
+      background-color: #d8d8d8
     )
   )
 );
 
 @include k-TypographyScale($typographic-scale);
 @include k-TypographyBodyCopy($typography);
+@include k-Button($button);

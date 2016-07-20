@@ -1,0 +1,32 @@
+@import 'kitten/schema';
+
+$k-button-border-width: 1px;
+
+/// Set a border of 1px on a button.
+///
+/// Given a border color, this mixin will use the passed color to set the
+/// `border` CSS rule. If the color is not `null`, it will use the color passed
+/// as parameter. Otherwise, it will use `transparent`.
+///
+/// @group 0610_buttons_helpers
+///
+/// @parameter {Color} $border-color [transparent] - button border color
+///
+/// @example scss - Usage
+///   @include k-buttonBorder(#ccc);
+///
+/// @example css - CSS output
+///    border: 1px solid #ccc;
+@mixin k-buttonBorder($border-color) {
+  @if $border-color {
+     $valid: k-validate(
+       $border-color, k-color-schema(),
+       'k-buttonBorder', '$border-color'
+     );
+
+    border: 1px solid $border-color;
+  }
+  @else {
+    border: 1px solid transparent;
+  }
+}

@@ -1,0 +1,21 @@
+@import 'kitten/schema';
+
+/// Button colors schema.
+///
+/// @group 0610_buttons_helpers
+///
+/// @type Map
+$k-button-colors-schema: (
+  type: 'map',
+
+  properties: (
+    color: k-color-schema(),
+    background-color: k-color-schema(),
+    border-color: k-color-schema()
+  ),
+
+  required: (
+    'color',
+    'background-color'
+  )
+);
