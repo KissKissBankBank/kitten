@@ -1,0 +1,80 @@
+@import 'kitten/schema';
+@import 'kitten/atoms/buttons/button-schema';
+@import 'kitten/helpers/button/base';
+@import 'kitten/helpers/button/size';
+
+/// TODO: Documentation…
+
+@mixin k-ButtonIcon($button-icon, $icon) {
+  /// TODO: Validations…
+
+  $button-size: map-get-deep($button-icon, ('size', 'default'));
+  $button-size-tiny: map-get-deep($button-icon, ('size', 'tiny'));
+  $button-size-big: map-get-deep($button-icon, ('size', 'big'));
+
+  $icon-width: map-get($icon, 'width');
+  $icon-height: map-get($icon, 'height');
+
+  // Get data for SVG.
+  $colors: map-get($button-icon, 'colors');
+  $base-color: map-get-deep($colors, ('base', 'color'));
+  $hover-color: map-get-deep($colors, ('hover', 'color'));
+  $active-color: map-get-deep($colors, ('active', 'color'));
+  $disabled-color: map-get-deep($colors, ('disabled', 'color'));
+  $focus-color: map-get-deep($colors, ('focus', 'color'));
+
+  // SVG element default settings.
+  $k-icon-width: ($icon-width / 16px) * 1rem;
+  $k-icon-height: ($icon-height / 16px) * 1rem;
+
+  .k-ButtonIcon {
+    @include k-buttonBase($button-icon);
+    @include k-buttonSize($button-size, $k-icon-width, $k-icon-height);
+
+    &:hover {
+      .k-ButtonIcon__svg {
+        fill: $hover-color;
+      }
+    }
+
+    &:focus {
+      .k-ButtonIcon__svg {
+        @if $focus-color {
+          fill: $focus-color;
+        }
+        @else {
+          fill: $hover-color;
+        }
+      }
+    }
+
+    &:active {
+      .k-ButtonIcon__svg {
+        fill: $active-color;
+      }
+    }
+
+    &:disabled {
+      .k-ButtonIcon__svg {
+        fill: $disabled-color;
+      }
+    }
+  }
+
+  .k-ButtonIcon--tiny {
+    @include k-buttonSize($button-size-tiny, $k-icon-width, $k-icon-height);
+  }
+
+  .k-ButtonIcon--big {
+    @include k-buttonSize($button-size-big, $k-icon-width, $k-icon-height);
+  }
+
+  .k-ButtonIcon__svg {
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: $k-icon-width;
+    height: $k-icon-height;
+    fill: $base-color;
+  }
+}
