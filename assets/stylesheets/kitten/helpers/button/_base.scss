@@ -140,7 +140,7 @@
     @else {
       @include k-buttonBorder($hover-border-color);
 
-      baczground-color: $hover-background-color;
+      background-color: $hover-background-color;
       color: $hover-color;
     }
   }
