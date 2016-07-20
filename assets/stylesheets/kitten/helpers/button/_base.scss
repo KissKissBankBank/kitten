@@ -102,10 +102,15 @@
   $disabled-border-color: map-get-deep($colors, ('disabled', 'border-color'));
   $disabled-background-color: map-get-deep($colors, ('disabled', 'background-color'));
 
-  // focus  colors (optional)
+  // focus colors (optional)
   $focus-color: map-get-deep($colors, ('focus', 'color'));
   $focus-border-color: map-get-deep($colors, ('focus', 'border-color'));
   $focus-background-color: map-get-deep($colors, ('focus', 'background-color'));
+
+  // state 'is-selected' colors (optional)
+  $is-selected-color: map-get-deep($colors, ('is-selected', 'color'));
+  $is-selected-border-color: map-get-deep($colors, ('is-selected', 'border-color'));
+  $is-selected-background-color: map-get-deep($colors, ('is-selected', 'background-color'));
 
   @include k-buttonBorder($base-border-color);
 
@@ -152,5 +157,12 @@
     background-color: $disabled-background-color;
     color: $disabled-color;
     cursor: not-allowed;
+  }
+
+  &.is-selected {
+    @include k-buttonBorder($is-selected-border-color);
+
+    background-color: $is-selected-background-color;
+    color: $is-selected-color;
   }
 }

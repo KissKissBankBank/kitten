@@ -22,6 +22,7 @@
   $active-color: map-get-deep($colors, ('active', 'color'));
   $disabled-color: map-get-deep($colors, ('disabled', 'color'));
   $focus-color: map-get-deep($colors, ('focus', 'color'));
+  $is-selected-color: map-get-deep($colors, ('is-selected', 'color'));
 
   // SVG element default settings.
   $k-icon-width: ($icon-width / 16px) * 1rem;
@@ -57,6 +58,12 @@
     &:disabled {
       .k-ButtonIcon__svg {
         fill: $disabled-color;
+      }
+    }
+
+    &.is-selected {
+      .k-ButtonIcon__svg {
+        fill: $is-selected-color;
       }
     }
   }
