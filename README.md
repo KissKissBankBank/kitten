@@ -82,3 +82,22 @@ $ npm run sassdoc
 ```
 
 The documentation is accessible on development environment: `/kitten/sassdoc`.
+
+## Release
+
+To release a new version:
+- Update the version in `lib/kitten/version.rb`.
+- Update the `CHANGELOG.md` with your new features and fixes.
+- Run this command:
+```
+bundle exec rake kitten_release
+```
+
+This last command will:
+- generate the gem package;
+- generate the SassDoc;
+- commit `lib/kitten/version.rb`, `CHANGELOG.md` and `public/sassdoc/index.html`;
+- tag the version;
+- push to Github.
+
+Then, you can upload the new `pkg/kitten-*.gem` to Gemfury.
