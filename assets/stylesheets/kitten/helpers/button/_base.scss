@@ -123,13 +123,6 @@
     color: $hover-color;
   }
 
-  &:active {
-    @include k-buttonBorder($active-border-color);
-
-    background-color: $active-background-color;
-    color: $active-color;
-  }
-
   &:focus {
     @if $focus-color {
       @include k-buttonBorder($focus-border-color);
@@ -143,6 +136,13 @@
       background-color: $hover-background-color;
       color: $hover-color;
     }
+  }
+
+  &:active {
+    @include k-buttonBorder($active-border-color);
+
+    background-color: $active-background-color;
+    color: $active-color;
   }
 
   &:disabled {
