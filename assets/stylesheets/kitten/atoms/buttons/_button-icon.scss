@@ -1,9 +1,61 @@
 @import 'kitten/schema';
 @import 'kitten/atoms/buttons/button-schema';
 @import 'kitten/helpers/button/base';
-@import 'kitten/helpers/button/size';
+@import 'kitten/helpers/button/rounded';
 
-/// TODO: Documentation…
+/// Setup a button icon element.
+///
+/// This mixin will setup an element to look like a button with a picto inside.
+///
+/// Paddings depend on the size of button and the size of picto.
+/// It is calculate automaticaly with this 2 values.
+///
+/// This button autorize 3 versions (tiny, default, big) with the same size
+/// of picto.
+///
+/// @group 0600_buttons_components
+///
+/// @parameter {Map} $button-icon - a button icon specification
+///            {Map} $icon - a icon specification
+///
+/// @example scss - Usage
+///
+///   $button-icon: (
+///     size: (
+///       tiny: 30px,
+///       default: 40px,
+///       big: 50px
+///     ),
+///     colors: (
+///       base: (
+///         color: #333,
+///         background-color: #fff,
+///         border-color: #d8d8d8
+///       ),
+///       hover: (
+///         color: #fff,
+///         background-color: #333,
+///         border-color: none
+///       ),
+///       active: (
+///         color: #fff,
+///         background-color: #151515
+///       ),
+///       disabled: (
+///         color: #fff,
+///         background-color: #d8d8d8
+///       ),
+///       is-selected: (
+///         color: #fff,
+///         background-color: #333
+///       )
+///     )
+///   )
+///
+///   $icon: (
+///     width: 14px,
+///     height: 12px
+///   )
 
 @mixin k-ButtonIcon($button-icon, $icon) {
   /// TODO: Validations…
@@ -30,7 +82,7 @@
 
   .k-ButtonIcon {
     @include k-buttonBase($button-icon);
-    @include k-buttonSize($button-size, $k-icon-width, $k-icon-height);
+    @include k-buttonRounded($button-size, $k-icon-width, $k-icon-height);
 
     &:hover {
       .k-ButtonIcon__svg {
@@ -69,11 +121,11 @@
   }
 
   .k-ButtonIcon--tiny {
-    @include k-buttonSize($button-size-tiny, $k-icon-width, $k-icon-height);
+    @include k-buttonRounded($button-size-tiny, $k-icon-width, $k-icon-height);
   }
 
   .k-ButtonIcon--big {
-    @include k-buttonSize($button-size-big, $k-icon-width, $k-icon-height);
+    @include k-buttonRounded($button-size-big, $k-icon-width, $k-icon-height);
   }
 
   .k-ButtonIcon__svg {
