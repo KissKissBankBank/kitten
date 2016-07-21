@@ -7,9 +7,9 @@
 ///
 /// @group 0610_buttons_helpers
 ///
-/// @parameter {Size} $button-size - button size
-///            {Size} $icon-width - icon width
-///            {Size} $icon-height - icon height
+/// @parameter {Number} $button-size - button size
+///            {Number} $icon-width - icon width
+///            {Number} $icon-height - icon height
 ///
 /// @example scss - Usage
 ///   @include k-buttonRounded(40px, 14px, 12px);
