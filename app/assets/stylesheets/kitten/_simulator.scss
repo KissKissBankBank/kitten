@@ -1,0 +1,5 @@
+@import 'kitten/molecules/simulators/simulator-result';
+@import 'kitten/organisms/simulators/loan-simulator';
+
+@include k-LoanSimulator;
+@include k-SimulatorResult;
