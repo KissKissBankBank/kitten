@@ -1,8 +1,10 @@
 @import 'kitten/atoms/typography/scale/scale';
 @import 'kitten/atoms/typography/body-copy/body-copy';
 
+$root-font-size: 16px !global;
+
 $typography: (
-  root:        16px,
+  root:        $root-font-size,
   font-size:   1rem,
   font-weight: 400,
   line-height: 1.5rem,

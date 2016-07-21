@@ -77,8 +77,8 @@
   $is-selected-color: map-get-deep($colors, ('is-selected', 'color'));
 
   // SVG element default settings.
-  $k-icon-width: ($icon-width / 16px) * 1rem;
-  $k-icon-height: ($icon-height / 16px) * 1rem;
+  $k-icon-width: k-px-to-rem($icon-width);
+  $k-icon-height: k-px-to-rem($icon-height);
 
   .k-ButtonIcon {
     @include k-buttonBase($button-icon);
