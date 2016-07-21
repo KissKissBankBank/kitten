@@ -1,5 +1,6 @@
 @import 'kitten/schema';
 @import 'kitten/helpers/button/border';
+@import 'kitten/helpers/button/browser-fixes';
 
 /// Apply button basic display.
 ///
@@ -112,6 +113,7 @@
   $is-selected-border-color: map-get-deep($colors, ('is-selected', 'border-color'));
   $is-selected-background-color: map-get-deep($colors, ('is-selected', 'background-color'));
 
+  @include k-buttonBrowserFixes();
   @include k-buttonBorder($base-border-color);
 
   display: inline-block;
@@ -121,12 +123,6 @@
   color: $base-color;
   cursor: pointer;
   outline: 0;
-
-  // Fix extra spacing in Firefox.
-  &::-moz-focus-inner {
-    padding: 0;
-    border: 0;
-  }
 
   &:hover {
     @include k-buttonBorder($hover-border-color);
