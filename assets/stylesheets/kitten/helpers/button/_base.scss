@@ -110,6 +110,7 @@
   @include k-buttonBorder($base-border-color);
 
   display: inline-block;
+  box-sizing: border-box;
 
   background-color: $base-background-color;
   color: $base-color;

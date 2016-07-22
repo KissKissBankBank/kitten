@@ -2,9 +2,12 @@
 @import 'kitten/atoms/typography/scale/scale';
 @import 'kitten/atoms/typography/body-copy/body-copy';
 @import 'kitten/atoms/buttons/button';
+@import 'kitten/atoms/buttons/button-image';
+
+$root-font-size: 16px !global;
 
 $typography: (
-  root:        16px,
+  root:        $root-font-size,
   font-size:   1rem,
   font-weight: 400,
   line-height: 1.5rem,
@@ -102,6 +105,26 @@ $button: (
   )
 );
 
+$button-image: (
+  size: (
+    tiny: 30px,
+    default: 40px,
+    big: 50px
+  ),
+  colors: (
+    base: (
+      border-color: #d8d8d8
+    ),
+    hover: (
+      border-color: #333
+    ),
+    active: (
+      border-color: #151515
+    )
+  )
+);
+
 @include k-TypographyScale($typographic-scale);
 @include k-TypographyBodyCopy($typography);
 @include k-Button($button);
+@include k-ButtonImage($button-image);
