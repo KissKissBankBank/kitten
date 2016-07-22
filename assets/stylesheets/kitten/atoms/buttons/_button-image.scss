@@ -1,10 +1,11 @@
 @import 'kitten/helpers/button/base';
+@import 'kitten/helpers/button/rounded';
 
 /// Setup a button image element.
 ///
 /// This mixin will setup an element to look like a button with a image.
 ///
-/// This button autorize 3 versions (tiny, default, big).
+/// You can use 3 versions of this button: tiny, default and big.
 ///
 /// @group 0600_buttons_components
 ///
@@ -38,36 +39,20 @@
   $button-size-tiny: map-get-deep($button-image, ('size', 'tiny'));
   $button-size-big: map-get-deep($button-image, ('size', 'big'));
 
-  // TODO: Create helper mixin k-buttonRoundedImage()
-  $k-button-size: k-px-to-rem($button-size);
-  $k-border-radius-size: $k-button-size / 2;
-
   .k-ButtonImage {
     @include k-buttonBase($button-image);
+    @include k-buttonRoundedImage($button-size);
 
     overflow: hidden;
     padding: 0;
-    width: $k-button-size;
-    height: $k-button-size;
-    border-radius: $k-border-radius-size;
   }
 
   .k-ButtonImage--tiny {
-    $k-button-size-tiny: k-px-to-rem($button-size-tiny);
-    $k-border-radius-size-tiny: $k-button-size-tiny / 2;
-
-    width: $k-button-size-tiny;
-    height: $k-button-size-tiny;
-    border-radius: $k-border-radius-size-tiny;
+    @include k-buttonRoundedImage($button-size-tiny);
   }
 
   .k-ButtonImage--big {
-    $k-button-size-big: k-px-to-rem($button-size-big);
-    $k-border-radius-size-big: $k-button-size-big / 2;
-
-    width: $k-button-size-big;
-    height: $k-button-size-big;
-    border-radius: $k-border-radius-size-big;
+    @include k-buttonRoundedImage($button-size-big);
   }
 
   .k-ButtonImage__img {

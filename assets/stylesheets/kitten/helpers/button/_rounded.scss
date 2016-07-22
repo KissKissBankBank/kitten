@@ -1,0 +1,31 @@
+@import 'kitten/schema';
+
+/// Set width/height and border-radius for get a rounded button.
+///
+/// Given a size of button, this mixin will calculate
+/// automaticaly the width/height and the border-radius.
+///
+/// @group 0610_buttons_helpers
+///
+/// @parameter {Number} $button-size - button size
+///
+/// @example scss - Usage
+///   @include k-buttonRoundedImage(40px);
+///
+/// @example css - CSS output
+///    padding: 0.875rem 0.8125rem;
+///    border-radius: 1.25rem;
+
+@mixin k-buttonRoundedImage($button-size) {
+  /// TODO: Validations…
+
+  // Button element default settings.
+  $k-button-size: k-px-to-rem($button-size);
+
+  // The button element is rounded. So the radius is the button size / 2.
+  $k-button-radius: $k-button-size / 2;
+
+  width: $k-button-size;
+  height: $k-button-size;
+  border-radius: $k-button-radius;
+}
