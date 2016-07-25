@@ -68,6 +68,7 @@ $k-button-step: -2;
 ///       )
 ///     )
 ///   )
+///   @include k-Button($button)
 
 @mixin k-Button($button) {
   $valid: k-validate(
@@ -80,7 +81,7 @@ $k-button-step: -2;
   .k-Button {
     $typography: map-get($button, 'typography');
     $multiplier: map-get($button, 'multiplier');
-    $font:       map-get($button, 'font');
+    $font: map-get($button, 'font');
 
     @include k-buttonBase($button);
     @include k-typographyFontSize(

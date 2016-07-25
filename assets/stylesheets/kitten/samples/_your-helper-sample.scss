@@ -16,7 +16,7 @@
 ///   .foo { @include k-yourHelperName; }
 ///
 /// @example css - css output
-///   .foo { border: 1px solid #eee; }
+///   .foo { border: 1px solid red; }
 @mixin k-yourHelperName {
-
+  border: 1px solid red;
 }
