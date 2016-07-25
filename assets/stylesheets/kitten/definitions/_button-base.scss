@@ -32,7 +32,7 @@
       @error '(#{$keys}) is required (#{$module}).';
     }
 
-    @if not type-of($value) == $type {
+    @if type-of($value) != $type {
       @error '(#{$keys}: #{$value}) is not valid (#{$module}).';
     }
   }
@@ -43,7 +43,7 @@
     $value: map-get-deep($button-map, $keys);
 
     @if $value {
-      @if not type-of($value) == $type {
+      @if type-of($value) != $type {
         @error '(#{$keys}: #{$value}) is not valid (#{$module}).';
       }
     }
