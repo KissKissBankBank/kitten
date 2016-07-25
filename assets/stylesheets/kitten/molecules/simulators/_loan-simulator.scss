@@ -13,7 +13,8 @@
 ///     <div class="k-LoanSimulator__error">Oh no!</div>
 ///   </div>
 @mixin k-LoanSimulator {
-  .k-LoanSimulator {
+  .k-LoanSimulator__label {
+    margin: 1em 0;
   }
 
   .k-LoanSimulator__error {

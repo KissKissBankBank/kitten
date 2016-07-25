@@ -1,13 +1,26 @@
 /// Label
 ///
+/// A clickable form label, used in forms, usually over an input.
+///
 /// @group 0000_form
 ///
 /// @example scss - usage
 ///
 ///   @include k-Label;
+///
+/// @example html
+///
+///   <label class="k-Label" for="age">Age</label>
+///   <input id="age" name="age" />
+///
+///   <span class="k-Label">Gender</span>
+///   <label><input type="radio" name="sex" value="m" /> Male</label>
+///   <label><input type="radio" name="sex" value="f" /> Female</label>
+///   <label><input type="radio" name="sex" value="n" /> Non-binary</label>
+
 @mixin k-Label {
   .k-Label {
-    display: block; // so that it can be used on <label>
+    display: block;
     margin: 1em 0;
 
     font-weight: bold;
