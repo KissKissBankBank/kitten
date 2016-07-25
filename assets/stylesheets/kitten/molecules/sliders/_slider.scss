@@ -31,7 +31,7 @@
     // a click anywhere on the slider should move it around
     cursor: pointer;
 
-    .is-grabbing {
+    &.is-grabbing {
       // cursor defined here in rather than on the handle, in case the cursor
       // moves further than the handle
       cursor: -webkit-grabbing;
