@@ -1,0 +1,16 @@
+/// TODO: comments
+
+@function k-button-border-definition($border-color, $module) {
+  $type: 'color';
+
+  @if $border-color {
+    @if type-of($border-color) != $type {
+      @error '(border-color: #{$border-color}) is not valid (#{$module}).';
+    }
+  }
+  @else {
+    $border-color: transparent; // Default value.
+  }
+
+  @return $border-color;
+}
