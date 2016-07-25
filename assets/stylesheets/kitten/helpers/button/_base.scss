@@ -100,7 +100,9 @@
   // disabled colors
   $disabled-color: map-get-deep($colors, ('disabled', 'color'));
   $disabled-border-color: map-get-deep($colors, ('disabled', 'border-color'));
-  $disabled-background-color: map-get-deep($colors, ('disabled', 'background-color'));
+  $disabled-background-color: map-get-deep(
+    $colors, ('disabled', 'background-color')
+  );
 
   // focus  colors (optional)
   $focus-color: map-get-deep($colors, ('focus', 'color'));
