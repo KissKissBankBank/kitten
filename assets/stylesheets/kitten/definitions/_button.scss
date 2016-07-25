@@ -1,0 +1,55 @@
+/// TODO: comments
+
+@function k-button-base-definition($button-map, $module) {
+  $type: 'map';
+
+  $required:
+    (keys: ('colors', 'base', 'color'), type: 'color')
+    (keys: ('colors', 'base', 'background-color'), type: 'color')
+    (keys: ('colors', 'hover', 'color'), type: 'color')
+    (keys: ('colors', 'hover', 'background-color'), type: 'color')
+    (keys: ('colors', 'active', 'color'), type: 'color')
+    (keys: ('colors', 'active', 'background-color'), type: 'color')
+    (keys: ('colors', 'disabled', 'color'), type: 'color')
+    (keys: ('colors', 'disabled', 'background-color'), type: 'color');
+
+  $optional:
+    (keys: ('colors', 'base', 'border-color'), type: 'color')
+    (keys: ('colors', 'hover', 'border-color'), type: 'color')
+    (keys: ('colors', 'active', 'border-color'), type: 'color')
+    (keys: ('colors', 'disabled', 'border-color'), type: 'color');
+
+  @if type-of($button-map) != $type {
+    @error 'Invalid type of #{$module}. It should be a #{$type}’.';
+  }
+
+  @each $map in $required {
+    $keys: map-get($map, 'keys');
+    $type: map-get($map, 'type');
+    $value: map-get-deep($button-map, $keys);
+
+    @if not $value {
+      @error '(#{$keys}) is required (#{$module}).';
+    }
+
+    @if not type-of($value) == $type {
+      @error '(#{$keys}: #{$value}) is not valid (#{$module}).';
+    }
+  }
+
+  @each $map in $optional {
+    $keys: map-get($map, 'keys');
+    $type: map-get($map, 'type');
+    $value: map-get-deep($button-map, $keys);
+
+    @if $value {
+      @if not type-of($value) == $type {
+        @error '(#{$keys}: #{$value}) is not valid (#{$module}).';
+      }
+    }
+  }
+
+  // TODO: default values ?
+
+  @return $button-map;
+}
