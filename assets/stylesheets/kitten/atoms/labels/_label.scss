@@ -1,0 +1,16 @@
+/// Label
+///
+/// @group 0000_form
+///
+/// @example scss - usage
+///
+///   @include k-Label;
+@mixin k-Label {
+  .k-Label {
+    display: block; // so that it can be used on <label>
+    margin: 1em 0;
+
+    font-weight: bold;
+    cursor: pointer;
+  }
+}

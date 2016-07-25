@@ -1,0 +1,44 @@
+/// SimulatorResult
+///
+/// @group 0000_form
+///
+/// @example scss - usage
+///
+///   @include k-SimulatorResult;
+///
+/// @example html
+///
+///   <div class="k-SimulatorResult">
+///     …
+///     <div class="k-SimulatorResult__item">
+///       3 months
+///     </div>
+///     <div class="k-SimulatorResult__item">
+///       4%
+///     </div>
+///     <div class="k-SimulatorResult__item SimulatorResult__item--last">
+///       $1
+///     </div>
+///   </div>
+@mixin k-SimulatorResult {
+  .k-SimulatorResult {
+    display: flex;
+    margin: 1em 0;
+
+    border-top: 1px solid purple;
+    border-bottom: 1px solid purple;
+
+    text-align: center;
+  }
+
+  .k-SimulatorResult__item {
+    flex: 1;
+    padding: 1em;
+    border-right: 1px solid purple;
+    background: rgba(179, 0, 162, 0.04);
+  }
+
+  .k-SimulatorResult__item--last {
+    border-right: none;
+  }
+}

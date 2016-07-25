@@ -1,0 +1,105 @@
+/// Slider
+///
+/// @group 0000_form
+///
+///                       ,--> handle icon
+/// ===================[  •  ]----------------------------
+///       `--> progress     `--> handle          `--> ramp
+///
+///
+/// In JavaScript you should move the progress's `width` and the handle's `left`
+/// from 0 to 100%.
+///
+/// @example scss - usage
+///
+///   @include k-Slider;
+///
+/// @example html
+///
+///   <div class="k-Slider">
+///     <div class="k-Slider__ramp">
+///       <div class="k-Slider__progress"></div>
+///       <div class="k-Slider__handle">
+///         <svg class="k-Slider__handle__icon"></svg>
+///       </div>
+///     </div>
+///   </div>
+@mixin k-Slider {
+  .k-Slider {
+    padding: 1.5em;
+
+    // a click anywhere on the slider should move it around
+    cursor: pointer;
+
+    .is-grabbing {
+      // cursor defined here in rather than on the handle, in case the cursor
+      // moves further than the handle
+      cursor: -webkit-grabbing;
+      cursor: grabbing;
+    }
+  }
+
+  .k-Slider__ramp {
+    position: relative;
+    height: .2em;
+
+    background: lightgrey;
+  }
+
+  .k-Slider__progress {
+    width: 0; // moved by JS from 0 to 100%
+    height: 100%;
+
+    border-radius: 2px;
+    background: purple;
+
+    transition: width .2s;
+
+    .k-Slider.is-grabbing & {
+      // when we are moving by hand, do not slow the "width" movement
+      transition: none;
+    }
+  }
+
+  .k-Slider__handle {
+    // to align the icon in its center
+    align-items: center;
+    justify-content: center;
+    display: flex;
+
+    position: absolute;
+    left: 0; // moved by JS from 0 to 100%
+    height: 2em;
+    width: 2em;
+    margin-top: -1.3em;
+    margin-left: -1em;
+
+    outline: 0; // hide default outline to make our hand-made focus style
+    border: 1px solid #eee;
+    border-radius: 50%;
+    background: white;
+    box-shadow: 0 .1em .3em rgba(0, 0, 0, .2);
+
+    cursor: -webkit-grab;
+    cursor: grab;
+    transition: left .2s,
+                box-shadow .2s;
+
+    &:focus {
+      box-shadow: 0 0 1em rgba(0, 0, 0, .9);
+    }
+
+    .k-Slider.is-grabbing & {
+      cursor: inherit;
+
+      // when we are moving by hand, do not slow the "left" movement
+      transition: box-shadow .2s;
+    }
+  }
+
+  .k-Slider__handle__icon {
+    width: .6em;
+
+    fill: #aaa;
+  }
+}

@@ -1,0 +1,51 @@
+/// TextInputWithUnit
+///
+/// @group 0000_form
+///
+/// @example scss - usage
+///
+///   @include k-TextInputWithUnit;
+///
+/// @example html
+///
+///   <div class="k-TextInputWithUnit">
+///     <input class="k-TextInputWithUnit__input" />
+///     <div class="k-TextInputWithUnit__unit">$</div>
+///   </div>
+@mixin k-TextInputWithUnit {
+  .k-TextInputWithUnit {
+    display: flex;
+    border: 1px solid #ddd;
+    border-radius: .3em;
+
+    &.is-error {
+      border-color: red;
+    }
+  }
+
+  .k-TextInputWithUnit__input {
+    flex: 1;
+    padding: 1em 2em;
+
+    border: 0;
+    background: transparent;
+
+    font-size: .9em;
+
+    // remove spinners on number inputs
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      margin: 0;
+      -webkit-appearance: none;
+    }
+  }
+
+  .k-TextInputWithUnit__unit {
+    padding: 1em 1.5em;
+    border-left: 1px solid #ddd;
+
+    .k-TextInputWithUnit.is-error & {
+      border-color: red;
+    }
+  }
+}
