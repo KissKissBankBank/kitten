@@ -56,7 +56,7 @@
     transition: width .2s;
 
     .k-Slider.is-grabbing & {
-      // when we are moving by hand, do not slow the "width" movement
+      // when we are moving by hand, do not slow down the "width" movement
       transition: none;
     }
   }
@@ -92,7 +92,7 @@
     .k-Slider.is-grabbing & {
       cursor: inherit;
 
-      // when we are moving by hand, do not slow the "left" movement
+      // when we are moving by hand, do not slow down the "left" movement
       transition: box-shadow .2s;
     }
   }
