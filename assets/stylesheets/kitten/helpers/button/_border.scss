@@ -19,10 +19,10 @@ $k-button-border-width: 1px;
 ///    border: 1px solid #ccc;
 @mixin k-buttonBorder($border-color) {
   @if $border-color {
-     $valid: k-validate(
-       $border-color, k-color-schema(),
-       'k-buttonBorder', '$border-color'
-     );
+    $valid: k-validate(
+      $border-color, k-color-schema(),
+      'k-buttonBorder', '$border-color'
+    );
 
     border: $k-button-border-width solid $border-color;
   }

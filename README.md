@@ -1,6 +1,8 @@
 # kitten
 
-`kitten` is a components library for Sass. It provides mixins to create flexible components based on your own brand elements (colors, fonts, typographic scale, etc.).
+`kitten` is a components library for Sass. It provides mixins to create
+flexible components based on your own brand elements
+(colors, fonts, typographic scale, etc.).
 
 ![Kittens](http://i.imgur.com/EbGhfDH.gif)
 
@@ -10,6 +12,7 @@
 - Ruby 2.2.4
 - Bundler (`gem install bundler`)
 - Node > 0.12 (for stylelint)
+
 
 ## Installation
 
@@ -30,6 +33,7 @@ And then execute:
 
     $ bundle
 
+
 ## Usage
 
 Import `kitten` in your main Sass file:
@@ -44,11 +48,13 @@ Include the component your want to use in your application:
 @include k-MyComponent;
 ```
 
+
 ## Development
 
 #### Style guide
 
-Check out the [style guide documentation](../../wiki/Style-guide) to start creating new components!
+Check out the [style guide documentation](../../wiki/Style-guide)
+to start creating new components!
 
 #### Installation
 
@@ -71,7 +77,8 @@ $ bundle exec rake
 
 #### Generate SassDoc
 
-We use [SassDoc](http://sassdoc.com/) to generate documentation from our components comments.
+We use [SassDoc](http://sassdoc.com/) to generate documentation from our
+components comments.
 
 Generate the documentation:
 
@@ -82,3 +89,24 @@ $ npm run sassdoc
 ```
 
 The documentation is accessible on development environment: `/kitten/sassdoc`.
+
+
+## Release
+
+To release a new version:
+- Update the version in `lib/kitten/version.rb`.
+- Update the `CHANGELOG.md` with your new features and fixes.
+- Run this command:
+```
+bundle exec rake kitten_release
+```
+
+This last command will:
+- generate the gem package;
+- generate the SassDoc;
+- commit `lib/kitten/version.rb`, `CHANGELOG.md` and
+  `public/sassdoc/index.html`;
+- tag the version;
+- push to Github.
+
+Then, you can upload the new `pkg/kitten-*.gem` build to Gemfury.
