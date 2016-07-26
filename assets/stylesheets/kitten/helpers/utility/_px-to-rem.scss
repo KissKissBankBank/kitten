@@ -1,12 +1,12 @@
 /// Convert px value to rem value.
 ///
-/// This function need `$root-font-size` to work.
+/// This function depends on the global variable `$root-font-size`.
 ///
 /// @group 0100_helpers
 ///
 /// @parameter {Number} $px - a px value
 ///
-/// @return {Number} : 1.42rem
+/// @return {Number} 1.42rem
 ///
 /// @example scss - Usage
 ///   k-px-to-rem(20px);
