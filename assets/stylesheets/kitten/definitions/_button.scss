@@ -30,3 +30,9 @@
     background-color: k-color-definition(map-get($color, 'background-color'), $required: true)
   );
 }
+
+@function k-button-border-definition($border-color) {
+  $border-color: transparent !default; // Default value.
+
+  @return k-color-definition($border-color, $required: true);
+}

@@ -1,4 +1,4 @@
-@import 'kitten/definitions/button-border';
+@import 'kitten/definitions/button';
 
 $k-button-border-width: 1px;
 
@@ -18,7 +18,8 @@ $k-button-border-width: 1px;
 /// @example css - CSS output
 ///    border: 1px solid #ccc;
 @mixin k-buttonBorder($border-color) {
-  $border-color: k-button-border-definition($border-color, '[k-buttonBase: $border-color]');
+  $k-module: '[k-buttonBorder: $border-color]' !global;
+  $border-color: k-button-border-definition($border-color);
 
   border: $k-button-border-width solid $border-color;
 }
