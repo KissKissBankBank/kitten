@@ -1,55 +1,32 @@
+@import 'common/*';
+
 /// TODO: comments
 
-@function k-button-base-definition($button-map, $module) {
-  $type: 'map';
+@function k-button-base-definition($button-map) {
+  @return (
+    typography: map-get($button-map, 'typography'),
+    multiplier: map-get($button-map, 'multiplier'),
+    font: map-get($button-map, 'font'),
+    colors: k-button-colors-definition(map-get($button-map, 'colors'))
+  );
+}
 
-  $required:
-    (keys: ('colors', 'base', 'color'), type: 'color')
-    (keys: ('colors', 'base', 'background-color'), type: 'color')
-    (keys: ('colors', 'hover', 'color'), type: 'color')
-    (keys: ('colors', 'hover', 'background-color'), type: 'color')
-    (keys: ('colors', 'active', 'color'), type: 'color')
-    (keys: ('colors', 'active', 'background-color'), type: 'color')
-    (keys: ('colors', 'disabled', 'color'), type: 'color')
-    (keys: ('colors', 'disabled', 'background-color'), type: 'color');
+@function k-button-colors-definition($colors) {
+  @return (
+    base: k-button-color-definition(map-get($colors, 'base'), $required: true),
+    hover: k-button-color-definition(map-get($colors, 'hover'), $required: true),
+    active: k-button-color-definition(map-get($colors, 'active'), $required: true),
+    disabled: k-button-color-definition(map-get($colors, 'disabled'), $required: true),
+    focus: k-button-color-definition(map-get($colors, 'focus'), $required: false),
+  );
+}
 
-  $optional:
-    (keys: ('colors', 'base', 'border-color'), type: 'color')
-    (keys: ('colors', 'hover', 'border-color'), type: 'color')
-    (keys: ('colors', 'active', 'border-color'), type: 'color')
-    (keys: ('colors', 'disabled', 'border-color'), type: 'color');
+@function k-button-color-definition($color, $required: false) {
+  $error-required: k-required($color, $required);
 
-  @if type-of($button-map) != $type {
-    @error 'Invalid type of #{$module}. It should be a #{$type}’.';
-  }
-
-  @each $map in $required {
-    $keys: map-get($map, 'keys');
-    $type: map-get($map, 'type');
-    $value: map-get-deep($button-map, $keys);
-
-    @if not $value {
-      @error '(#{$keys}) is required (#{$module}).';
-    }
-
-    @if type-of($value) != $type {
-      @error '(#{$keys}: #{$value}) is not valid (#{$module}).';
-    }
-  }
-
-  @each $map in $optional {
-    $keys: map-get($map, 'keys');
-    $type: map-get($map, 'type');
-    $value: map-get-deep($button-map, $keys);
-
-    @if $value {
-      @if type-of($value) != $type {
-        @error '(#{$keys}: #{$value}) is not valid (#{$module}).';
-      }
-    }
-  }
-
-  // TODO: default values ?
-
-  @return $button-map;
+  @return (
+    color: k-color-definition(map-get($color, 'color'), $required: true),
+    border-color: k-color-definition(map-get($color, 'border-color'), $required: false),
+    background-color: k-color-definition(map-get($color, 'background-color'), $required: true)
+  );
 }

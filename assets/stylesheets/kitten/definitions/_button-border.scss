@@ -5,7 +5,8 @@
 
   @if $border-color {
     @if type-of($border-color) != $type {
-      @error '(border-color: #{$border-color}) is not valid (#{$module}).';
+      $error-message: k-log('(border-color: #{$border-color})
+                             is not valid (#{$module}).');
     }
   }
   @else {

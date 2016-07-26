@@ -1,0 +1,14 @@
+/// TODO: comments
+
+@function k-color-definition($value, $required: false) {
+  $error-required: k-required($value, $required);
+
+  @if $value {
+    @if type-of($value) != 'color' {
+      $error-message: k-log('(#{$value}) is not valid a
+                             valid color (#{$k-module}).');
+    }
+  }
+
+  @return $value;
+}

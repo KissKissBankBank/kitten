@@ -80,7 +80,8 @@
 ///     color: #fff;
 ///   }
 @mixin k-buttonBase($button) {
-  $button: k-button-base-definition($button, '[k-buttonBase: $button]');
+  $k-module: '[k-buttonBase: $button]' !global;
+  $button: k-button-base-definition($button);
 
   $colors: map-get($button, 'colors');
 

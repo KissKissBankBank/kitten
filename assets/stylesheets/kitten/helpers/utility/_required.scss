@@ -1,0 +1,11 @@
+/// TODO: comments
+
+@function k-required($value, $required: false) {
+  @if $required {
+    @if not $value {
+      $error-message: k-log('(#{$value}) is required (#{$k-module}).');
+    }
+  }
+
+  @return $value;
+}
