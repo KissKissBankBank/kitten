@@ -1,4 +1,5 @@
 @import 'kitten/atoms/buttons/button';
+@import 'kitten/atoms/buttons/button-icon';
 
 $button: (
   typography: $typography,
@@ -21,6 +22,10 @@ $button: (
       color: #fff,
       background-color: #333
     ),
+    focus: (
+      color: #fff,
+      background-color: #ddd,
+    ),
     active: (
       color: #fff,
       background-color: #151515
@@ -32,4 +37,39 @@ $button: (
   )
 );
 
+$button-icon: (
+  size: (
+    tiny: 30px,
+    default: 40px,
+    big: 50px
+  ),
+  colors: (
+    base: (
+      background-color: #fff,
+      border-color: #d8d8d8
+    ),
+    hover: (
+      border-color: #333
+    ),
+    active: (
+      color: #fff,
+      background-color: #333
+    ),
+    disabled: (
+      color: #fff,
+      background-color: #d8d8d8
+    ),
+    is-selected: (
+      color: #fff,
+      background-color: #333
+    )
+  )
+);
+
+$icon: (
+  width: 14px,
+  height: 12px
+);
+
 @include k-Button($button);
+@include k-ButtonIcon($button-icon, $icon);
