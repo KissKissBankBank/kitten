@@ -1,5 +1,114 @@
 <div class="k-LoanSimulator">
-  Part of simulator here.
-  <div class="k-LoanSimulator__error">This is an error!</div>
-  Another part of simulator here.
+  <div>
+    <label class="k-Label k-LoanSimulator__label" for="amount">I need</label>
+  </div>
+  <div class="k-TextInputWithUnit">
+    <input type="number"
+           class="k-TextInputWithUnit__input"
+           id="amount"
+           min="200"
+           max="10000"
+           size="5"
+           placeholder="Between $200 and $10,000" />
+    <span class="k-TextInputWithUnit__unit">$</span>
+  </div>
+  <div class="k-SimulatorResult">
+    <div class="k-SimulatorResult__item">
+      <div>1 month</div>
+      <div>Duration</div>
+    </div>
+    <div class="k-SimulatorResult__item k-SimulatorResult__item--last">
+      <div>$0.10</div>
+      <div>Our commission</div>
+    </div>
+  </div>
+  <div class="k-LabelWithInfo">
+    <label class="k-Label k-LabelWithInfo__label k-LoanSimulator__label">
+      I can give
+    </label>
+    <div class="k-LabelWithInfo__info is-active">$8.57/month</div>
+  </div>
+  <div class="k-Slider">
+    <div class="k-Slider__ramp">
+      <div class="k-Slider__progress"></div>
+      <div class="k-Slider__handle"
+           role="slider"
+           tabindex="0"
+           aria-valuemin="36"
+           aria-valuemax="1"
+           aria-valuenow="28">
+        <svg width="32"
+             height="32"
+             viewBox="0 0 100 100"
+             class="k-Slider__handle__icon"
+             xmlns="http://www.w3.org/2000/svg">
+          <path d="M0  0 v100 h20 v-100 z" />
+          <path d="M40 0 v100 h20 v-100 z" />
+          <path d="M80 0 v100 h20 v-100 z" />
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="k-LoanSimulator">
+  <div>
+    <label class="k-Label k-LoanSimulator__label" for="amount2">I need</label>
+  </div>
+  <div class="k-TextInputWithUnit is-error">
+    <input type="number"
+           class="k-TextInputWithUnit__input"
+           id="amount2"
+           min="200"
+           max="10000"
+           size="5"
+           value="999"
+           placeholder="Between $200 and $10,000" />
+    <span class="k-TextInputWithUnit__unit">$</span>
+  </div>
+  <p class="k-LoanSimulator__error">Oh no, there is an error!</p>
+  <div class="k-SimulatorResult">
+    <div class="k-SimulatorResult__item">
+      <div>28 months</div>
+      <div>Duration</div>
+    </div>
+    <div class="k-SimulatorResult__item">
+      <div>28 months</div>
+      <div>Duration</div>
+    </div>
+    <div class="k-SimulatorResult__item k-SimulatorResult__item--last">
+      <div>$14.40</div>
+      <div>Our commission</div>
+    </div>
+  </div>
+  <div class="k-LabelWithInfo">
+    <label class="k-Label k-LabelWithInfo__label k-LoanSimulator__label">
+      I can give
+    </label>
+    <div class="k-LabelWithInfo__info is-active">$8.57/month</div>
+  </div>
+  <div class="k-Slider">
+    <div class="k-Slider__ramp">
+      <div class="k-Slider__progress" style="width: 25%"></div>
+      <div class="k-Slider__handle"
+           role="slider"
+           tabindex="0"
+           aria-valuemin="36"
+           aria-valuemax="1"
+           aria-valuenow="28"
+           style="left: 25%">
+        <svg width="32"
+             height="32"
+             viewBox="0 0 100 100"
+             class="k-Slider__handle__icon"
+             xmlns="http://www.w3.org/2000/svg">
+          <path d="M0  0 v100 h20 v-100 z" />
+          <path d="M40 0 v100 h20 v-100 z" />
+          <path d="M80 0 v100 h20 v-100 z" />
+        </svg>
+      </div>
+    </div>
+  </div>
 </div>
