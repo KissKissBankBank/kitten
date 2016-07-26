@@ -3,11 +3,13 @@
 @import 'kitten/atoms/typography/body-copy/body-copy';
 @import 'kitten/atoms/buttons/button';
 @import 'kitten/atoms/form/label';
-@import 'kitten/molecules/inputs/text-input-with-unit';
+
 @import 'kitten/molecules/form/label-with-info';
-@import 'kitten/molecules/simulators/loan-simulator';
+@import 'kitten/molecules/form/slider';
+@import 'kitten/molecules/form/text-input-with-unit';
 @import 'kitten/molecules/simulators/simulator-result';
-@import 'kitten/molecules/sliders/slider';
+
+@import 'kitten/organisms/simulators/loan-simulator';
 
 $typography: (
   root:        16px,
