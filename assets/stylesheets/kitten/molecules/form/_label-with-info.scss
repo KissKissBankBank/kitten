@@ -1,0 +1,36 @@
+/// Label With Info
+///
+/// @group 0000_form
+///
+/// @example scss - usage
+///
+///   @include k-LabelWithInfo;
+///
+/// @example html
+///
+///   <div class="k-LabelWithInfo">
+///     <label class="k-LabelWithInfo__label">Age</label>
+///     <div class="k-LabelWithInfo__info">Your current age</div>
+///   </div>
+@mixin k-LabelWithInfo {
+  .k-LabelWithInfo {
+    display: flex;
+    align-items: center;
+  }
+
+  .k-LabelWithInfo__label {
+    flex: 1;
+  }
+
+  .k-LabelWithInfo__info {
+    transition: color .25s;
+
+    &.is-inactive {
+      color: #ddd;
+    }
+
+    &.is-active {
+      color: purple;
+    }
+  }
+}

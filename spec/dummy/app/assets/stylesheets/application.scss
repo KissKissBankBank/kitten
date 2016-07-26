@@ -2,6 +2,14 @@
 @import 'kitten/atoms/typography/scale';
 @import 'kitten/atoms/typography/body-copy';
 @import 'kitten/atoms/buttons/button';
+@import 'kitten/atoms/form/label';
+
+@import 'kitten/molecules/form/label-with-info';
+@import 'kitten/molecules/form/slider';
+@import 'kitten/molecules/form/text-input-with-unit';
+@import 'kitten/molecules/simulators/simulator-result';
+
+@import 'kitten/organisms/simulators/loan-simulator';
 
 $typography: (
   root:        16px,
@@ -105,3 +113,9 @@ $button: (
 @include k-TypographyScale($typographic-scale);
 @include k-TypographyBodyCopy($typography);
 @include k-Button($button);
+@include k-Label;
+@include k-TextInputWithUnit;
+@include k-LabelWithInfo;
+@include k-LoanSimulator;
+@include k-SimulatorResult;
+@include k-Slider;

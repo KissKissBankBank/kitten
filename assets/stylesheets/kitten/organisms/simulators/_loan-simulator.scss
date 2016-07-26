@@ -1,0 +1,23 @@
+/// LoanSimulator
+///
+/// @group 0000_simulators
+///
+/// @example scss - usage
+///
+///   @include k-LoanSimulator;
+///
+/// @example html
+///
+///   <div class="k-LoanSimulator">
+///     …
+///     <p class="k-LoanSimulator__error">Oh no!</p>
+///   </div>
+@mixin k-LoanSimulator {
+  .k-LoanSimulator__label {
+    margin: 1em 0;
+  }
+
+  .k-LoanSimulator__error {
+    color: red;
+  }
+}
