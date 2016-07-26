@@ -1,0 +1,48 @@
+doctype 5
+
+html
+  head
+    title Kitten style guide
+
+    = stylesheet_link_tag 'kitten/application',                                \
+        'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600'
+    = csrf_meta_tags
+
+  body
+    div.k-StyleguideContainer
+      nav.k-StyleguideMenu
+        a.k-StyleguideMenu__title menu
+        div.k-u-clearfix
+        h5.k-StyleguideMenu__sectionTitle
+          | Branding
+        ul
+          li.k-StyleguideMenu__section
+            a Colors
+          li.k-StyleguideMenu__section
+            a Typography
+          li.k-StyleguideMenu__section
+            a Icons
+
+        h5.k-StyleguideMenu__sectionTitle
+          | Components
+        ul
+          li.k-StyleguideMenu__section
+            a Buttons
+            ul
+              li.k-StyleguideMenu__sectionItem
+                a Primary button
+              li.k-StyleguideMenu__sectionItem
+                a Icon button
+              li.k-StyleguideMenu__sectionItem
+                a Button icon and word
+          li.k-StyleguideMenu__section
+            a Form
+
+      div.k-StyleguideContent
+        section
+          header.k-StyleguideTitle
+            | ComponentsKissCo
+          div.k-StyleguideTitle__breadcrumb
+            | Buttons
+        section.k-StyleguideSection
+          = yield
