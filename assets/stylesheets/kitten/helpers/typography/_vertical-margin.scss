@@ -1,8 +1,3 @@
-@import 'kitten/schema';
-@import 'kitten/helpers/logic';
-@import 'kitten/helpers/typography/typography-schema';
-@import 'kitten/helpers/typography/vertical-margin-schema';
-
 /// Apply vertical margins that are multiples of the base line height.
 ///
 /// A top and a bottom margin can be defined, as numbers without any unit.
