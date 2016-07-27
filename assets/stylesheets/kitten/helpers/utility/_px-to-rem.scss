@@ -1,6 +1,6 @@
 /// Convert px value to rem value.
 ///
-/// This function depends on the global variable `$root-font-size`.
+/// This function depends on the global variable `$k-root-font-size`.
 ///
 /// @group 0100_helpers
 ///
@@ -13,5 +13,5 @@
 ///   // 1.25rem
 
 @function k-px-to-rem($px) {
-  @return ($px / $root-font-size) * 1rem;
+  @return ($px / $k-root-font-size) * 1rem;
 }
