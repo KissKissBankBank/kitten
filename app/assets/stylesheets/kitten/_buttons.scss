@@ -1,5 +1,6 @@
 @import 'kitten/atoms/buttons/button';
 @import 'kitten/atoms/buttons/button-icon';
+@import 'kitten/atoms/buttons/button-image';
 
 $button: (
   typography: $typography,
@@ -71,5 +72,25 @@ $icon: (
   height: 12px
 );
 
+$button-image: (
+  size: (
+    tiny: 30px,
+    default: 40px,
+    big: 50px
+  ),
+  colors: (
+    base: (
+      border-color: #d8d8d8
+    ),
+    hover: (
+      border-color: #333
+    ),
+    active: (
+      border-color: #151515
+    )
+  )
+);
+
 @include k-Button($button);
 @include k-ButtonIcon($button-icon, $icon);
+@include k-ButtonImage($button-image);
