@@ -1,10 +1,3 @@
-@import 'kitten/schema';
-@import 'kitten/atoms/buttons/button-schema';
-@import 'kitten/helpers/button/base';
-@import 'kitten/helpers/typography/font-size';
-@import 'kitten/helpers/typography/font-family';
-@import 'kitten/helpers/typography/font-style';
-
 // Button element default settings.
 $k-button-min-width: 160px;
 $k-button-line-height: 2.5;
