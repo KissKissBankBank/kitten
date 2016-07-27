@@ -1,13 +1,16 @@
 @import 'kitten/schema';
 @import 'kitten/helpers/button/border';
+@import 'kitten/helpers/button/browser-fixes';
 
 /// Apply button basic display.
 ///
-/// This mixin will apply pseudo-classes on the parent class that is calling it:
-///   - `:active`
+/// This mixin will apply pseudo-classes and state classes on the parent class
+/// that is calling it:
 ///   - `:hover`
 ///   - `:focus`
-///   - `:disabled`
+///   - `:active`
+///   - `:disabled` (optionnal)
+///   - `.is-selected` (optionnal)
 ///
 /// The `:focus` pseudo-class is optionnal. If it is not defined, the `:hover`
 /// styles will be applied to `:focus` pseudo-class.
@@ -31,12 +34,16 @@
 ///         background-color: #333,
 ///       ),
 ///       active: (
-///         color: #fff
+///         color: #fff,
 ///         background-color: #151515
 ///       ),
 ///       disabled: (
 ///         color: #fff,
 ///         background-color: #d8d8d8
+///       ),
+///       is-selected: (
+///         color: #fff,
+///         background-color: #151515
 ///       ),
 ///     ),
 ///     ...
@@ -79,6 +86,12 @@
 ///     background-color: #d8d8d8;
 ///     color: #fff;
 ///   }
+///
+///   .k-MyButton.is-selected {
+///     border: 1px solid transparent;
+///     background-color: #151515;
+///     color: #fff;
+///   }
 @mixin k-buttonBase($button) {
   $colors: map-get($button, 'colors');
 
@@ -100,13 +113,21 @@
   // disabled colors
   $disabled-color: map-get-deep($colors, ('disabled', 'color'));
   $disabled-border-color: map-get-deep($colors, ('disabled', 'border-color'));
-  $disabled-background-color: map-get-deep($colors, ('disabled', 'background-color'));
+  $disabled-background-color: map-get-deep(
+    $colors, ('disabled', 'background-color')
+  );
 
-  // focus  colors (optional)
+  // focus colors (optional)
   $focus-color: map-get-deep($colors, ('focus', 'color'));
   $focus-border-color: map-get-deep($colors, ('focus', 'border-color'));
   $focus-background-color: map-get-deep($colors, ('focus', 'background-color'));
 
+  // state 'is-selected' colors (optional)
+  $is-selected-color: map-get-deep($colors, ('is-selected', 'color'));
+  $is-selected-border-color: map-get-deep($colors, ('is-selected', 'border-color'));
+  $is-selected-background-color: map-get-deep($colors, ('is-selected', 'background-color'));
+
+  @include k-buttonBrowserFixes();
   @include k-buttonBorder($base-border-color);
 
   display: inline-block;
@@ -125,7 +146,7 @@
   }
 
   &:focus {
-    @if $focus-color {
+    @if map-has-key($colors, 'focus') {
       @include k-buttonBorder($focus-border-color);
 
       background-color: $focus-background-color;
@@ -152,5 +173,14 @@
     background-color: $disabled-background-color;
     color: $disabled-color;
     cursor: not-allowed;
+  }
+
+  @if map-has-key($colors, 'is-selected') {
+    &.is-selected {
+      @include k-buttonBorder($is-selected-border-color);
+
+      background-color: $is-selected-background-color;
+      color: $is-selected-color;
+    }
   }
 }

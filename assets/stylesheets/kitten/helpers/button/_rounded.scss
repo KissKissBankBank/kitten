@@ -1,31 +1,36 @@
 @import 'kitten/schema';
 
-/// Set width/height and border-radius to get a rounded button.
+/// Set paddings and border-radius for get a rounded button.
 ///
-/// Given a size of button, this mixin will compute
-/// automatically the width/height and the border-radius.
+/// Given a size of button and a size of picto, this mixin will calculate
+/// automaticaly the paddings and the border-radius.
 ///
 /// @group 0610_buttons_helpers
 ///
 /// @parameter {Number} $button-size - button size
+/// @parameter {Number} $icon-width  - icon width
+/// @parameter {Number} $icon-height - icon height
 ///
 /// @example scss - Usage
-///   @include k-buttonRoundedImage(40px);
+///   @include k-buttonRounded(40px, 14px, 12px);
 ///
 /// @example css - CSS output
 ///    padding: 0.875rem 0.8125rem;
 ///    border-radius: 1.25rem;
 
-@mixin k-buttonRoundedImage($button-size) {
+@mixin k-buttonRounded($button-size, $icon-width, $icon-height) {
   /// TODO: Validations…
 
   // Button element default settings.
   $k-button-size: k-px-to-rem($button-size);
 
+  // Calculate padding around svg picto.
+  $k-button-padding-x: ($k-button-size - $icon-width) / 2;
+  $k-button-padding-y: ($k-button-size - $icon-height) / 2;
+
   // The button element is rounded. So the radius is the button size / 2.
   $k-button-radius: $k-button-size / 2;
 
-  width: $k-button-size;
-  height: $k-button-size;
+  padding: $k-button-padding-y $k-button-padding-x;
   border-radius: $k-button-radius;
 }
