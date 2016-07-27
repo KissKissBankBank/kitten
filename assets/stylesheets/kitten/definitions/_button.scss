@@ -6,8 +6,19 @@
   @return (
     typography: map-get($button-map, 'typography'),
     multiplier: map-get($button-map, 'multiplier'),
-    font: map-get($button-map, 'font'),
+    font: k-button-font-definition(map-get($button-map, 'font')),
     colors: k-button-colors-definition(map-get($button-map, 'colors'))
+  );
+}
+
+@function k-button-font-definition($font) {
+  @return (
+    family: k-string-definition(map-get($font, 'family'), $required: true),
+    font-weight: k-number-definition(map-get($font, 'font-weight'), $unit: none),
+    letter-spacing: k-number-definition(map-get($font, 'letter-spacing')),
+    text-transform: k-string-definition(map-get($font, 'text-transform')),
+    text-decoration: k-string-definition(map-get($font, 'text-decoration')),
+    text-align: k-string-definition(map-get($font, 'text-align'))
   );
 }
 

@@ -1,5 +1,3 @@
-@import 'kitten/schema';
-@import 'kitten/atoms/buttons/button-schema';
 @import 'kitten/helpers/button/base';
 @import 'kitten/helpers/typography/font-size';
 @import 'kitten/helpers/typography/font-family';
@@ -70,18 +68,14 @@ $k-button-step: -2;
 ///   )
 
 @mixin k-Button($button) {
-  $valid: k-validate(
-    $button,
-    $k-button-schema,
-    'k-Button',
-    '$button'
-  );
+
+  // Validations…
+  $k-module: '[k-Button: $button]' !global;
+  $typography: map-get($button, 'typography');
+  $multiplier: map-get($button, 'multiplier');
+  $font: map-get($button, 'font');
 
   .k-Button {
-    $typography: map-get($button, 'typography');
-    $multiplier: map-get($button, 'multiplier');
-    $font:       map-get($button, 'font');
-
     @include k-buttonBase($button);
     @include k-typographyFontSize(
       $typography,
@@ -97,4 +91,3 @@ $k-button-step: -2;
     min-width: $k-button-min-width;
   }
 }
-
