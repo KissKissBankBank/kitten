@@ -36,6 +36,7 @@
   $handle-size: 2rem;
   $spacing: 1.25rem;
   $transition-speed: .2s;
+  $handle-icon-size: .6rem;
 
   .k-Slider {
     padding: $spacing;
@@ -110,7 +111,7 @@
   }
 
   .k-Slider__handle__icon {
-    width: .6rem;
+    width: $handle-icon-size;
 
     fill: $handle-color;
   }
