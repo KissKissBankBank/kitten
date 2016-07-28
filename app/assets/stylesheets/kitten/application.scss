@@ -1,5 +1,16 @@
 //= require kitten/normalize
 
+$k-fonts: (
+  source-sans: (
+    family: '"Source Sans Pro", Helvetica, Arial, sans-serif',
+    weight: 400
+  ),
+  source-sans-semi-bold: (
+    family: '"Source Sans Pro", Helvetica, Arial, sans-serif',
+    weight: 600
+  )
+);
+
 @import 'kitten';
 @import 'typography';
 @import 'buttons';
