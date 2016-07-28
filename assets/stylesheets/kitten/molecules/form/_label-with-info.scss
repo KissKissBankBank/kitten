@@ -1,5 +1,7 @@
 /// Label With Info
 ///
+/// Helps add information to the right of a label, usually over an input.
+///
 /// @group 0000_form
 ///
 /// @example scss - usage
@@ -12,7 +14,12 @@
 ///     <label class="k-LabelWithInfo__label">Age</label>
 ///     <div class="k-LabelWithInfo__info">Your current age</div>
 ///   </div>
-@mixin k-LabelWithInfo {
+///   <input />
+@mixin k-LabelWithInfo($label-with-info) {
+  $colors: map-get($label-with-info, 'colors');
+  $active-color: map-get($colors, 'active');
+  $inactive-color: map-get($colors, 'inactive');
+
   .k-LabelWithInfo {
     display: flex;
     align-items: center;
@@ -26,11 +33,11 @@
     transition: color .25s;
 
     &.is-inactive {
-      color: #ddd;
+      color: $inactive-color;
     }
 
     &.is-active {
-      color: purple;
+      color: $active-color;
     }
   }
 }

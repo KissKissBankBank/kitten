@@ -42,6 +42,21 @@ Import `kitten` in your main Sass file:
 @import 'kitten';
 ```
 
+Define your font families:
+
+```sass
+$k-fonts: (
+  source-sans: (
+    family: ("Source Sans Pro", Helvetica, Arial, sans-serif),
+    weight: 400
+  ),
+  source-sans-semi-bold: (
+    family: ("Source Sans Pro", Helvetica, Arial, sans-serif),
+    weight: 600
+  )
+);
+```
+
 Include the component your want to use in your application:
 
 ```sass

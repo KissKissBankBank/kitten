@@ -3,7 +3,30 @@
 @import 'kitten/molecules/form/slider';
 @import 'kitten/molecules/form/text-input-with-unit';
 
-@include k-Label;
-@include k-LabelWithInfo;
-@include k-Slider;
-@include k-TextInputWithUnit;
+$label: (
+  font: source-sans-semi-bold
+);
+
+$label-with-info: (
+  colors: (
+    active: purple,
+    inactive: #aaa
+  )
+);
+
+$slider: (
+  color: purple
+);
+
+$text-input-with-unit: (
+  font: source-sans,
+  colors: (
+    border: #ddd,
+    error: red
+  )
+);
+
+@include k-Label($label);
+@include k-LabelWithInfo($label-with-info);
+@include k-Slider($slider);
+@include k-TextInputWithUnit($text-input-with-unit);
