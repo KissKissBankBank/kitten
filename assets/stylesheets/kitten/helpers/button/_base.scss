@@ -93,6 +93,7 @@
 ///     color: #fff;
 ///   }
 @mixin k-buttonBase($button) {
+  // Validations
   $button: k-button-base-definition($button);
 
   $colors: map-get($button, 'colors');
@@ -177,10 +178,12 @@
     cursor: not-allowed;
   }
 
-  &.is-selected {
-    @include k-buttonBorder($is-selected-border-color);
+  @if map-has-key($colors, 'is-selected') {
+    &.is-selected {
+      @include k-buttonBorder($is-selected-border-color);
 
-    background-color: $is-selected-background-color;
-    color: $is-selected-color;
+      background-color: $is-selected-background-color;
+      color: $is-selected-color;
+    }
   }
 }
