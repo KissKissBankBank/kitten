@@ -6,7 +6,7 @@
   $transform: map-get($font, transform);
   $letter-spacing: map-get($font, letter-spacing);
 
-  font-family: unquote($family);
+  font-family: $family;
   @if $weight {
     font-weight: $weight;
   }
