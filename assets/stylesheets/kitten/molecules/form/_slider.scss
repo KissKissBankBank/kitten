@@ -28,7 +28,7 @@
 ///     </div>
 ///   </div>
 @mixin k-Slider($slider) {
-  $progress-color: map-get($slider, color);
+  $progress-color: map-get($slider, 'color');
   $ramp-color: #eee;
   $handle-color: #aaa;
 

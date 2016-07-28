@@ -27,10 +27,10 @@
 ///     </div>
 ///   </div>
 @mixin k-SimulatorResult($simulator-result) {
-  $colors: map-get($simulator-result, colors);
-  $border-color: map-get($colors, border);
-  $background-color: map-get($colors, background);
-  $text-color: map-get($colors, text);
+  $colors: map-get($simulator-result, 'colors');
+  $border-color: map-get($colors, 'border');
+  $background-color: map-get($colors, 'background');
+  $text-color: map-get($colors, 'text');
 
   .k-SimulatorResult {
     display: flex;

@@ -22,7 +22,7 @@
 ///   <label><input type="radio" name="sex" value="n" /> Non-binary</label>
 
 @mixin k-Label($label) {
-  $font: map-get($label, font);
+  $font: map-get($label, 'font');
 
   .k-Label {
     display: block;

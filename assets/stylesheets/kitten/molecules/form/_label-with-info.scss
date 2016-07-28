@@ -16,9 +16,9 @@
 ///   </div>
 ///   <input />
 @mixin k-LabelWithInfo($label-with-info) {
-  $colors: map-get($label-with-info, colors);
-  $active-color: map-get($colors, active);
-  $inactive-color: map-get($colors, inactive);
+  $colors: map-get($label-with-info, 'colors');
+  $active-color: map-get($colors, 'active');
+  $inactive-color: map-get($colors, 'inactive');
 
   .k-LabelWithInfo {
     display: flex;

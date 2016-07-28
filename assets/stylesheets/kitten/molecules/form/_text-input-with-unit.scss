@@ -21,10 +21,10 @@
 ///     <span class="k-TextInputWithUnit__unit">$</span>
 ///   </div>
 @mixin k-TextInputWithUnit($text-input-with-unit) {
-  $font: map-get($text-input-with-unit, font);
-  $colors: map-get($text-input-with-unit, colors);
-  $error-color: map-get($colors, error);
-  $border-color: map-get($colors, border);
+  $font: map-get($text-input-with-unit, 'font');
+  $colors: map-get($text-input-with-unit, 'colors');
+  $error-color: map-get($colors, 'error');
+  $border-color: map-get($colors, 'border');
 
   .k-TextInputWithUnit {
     display: flex;
