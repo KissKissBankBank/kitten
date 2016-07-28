@@ -1,0 +1,5 @@
+@import 'kitten/atoms/navs';
+
+$horizontal-nav: ();
+
+@include k-HorizontalNav($horizontal-nav);

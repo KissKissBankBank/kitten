@@ -1,0 +1,40 @@
+/// TODO: comments
+
+@mixin k-HorizontalNav($nav) {
+
+  .k-HorizontalNav {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .k-HorizontalNav__item {
+    color: #333;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 25px 20px 24px;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    outline: none;
+    cursor: pointer;
+    display: block;
+
+    &:hover,
+    &:focus {
+      color: #4a84ff;
+    }
+
+    &:focus,
+    &:active {
+      color: #4a84ff;
+      border-color: #4a84ff;
+    }
+
+    &.is-selected {
+      color: #333;
+      border-color: #333;
+    }
+  }
+}
