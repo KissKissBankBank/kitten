@@ -5,26 +5,46 @@
     typography: map-fetch($button-map, 'typography'),
     multiplier: map-fetch($button-map, 'multiplier'),
     font: map-fetch($button-map, 'font'),
-    colors: k-button-colors-definition(map-fetch($button-map, 'colors', $required: true))
+    colors: k-button-colors-definition(
+      map-fetch($button-map, 'colors', $required: true)
+    )
   );
 }
 
 @function k-button-colors-definition($colors) {
   @return (
-    base: k-button-color-definition(map-fetch($colors, 'base', $required: true)),
-    hover: k-button-color-definition(map-fetch($colors, 'hover', $required: true)),
-    active: k-button-color-definition(map-fetch($colors, 'active', $required: true)),
-    disabled: k-button-color-definition(map-fetch($colors, 'disabled')),
-    focus: k-button-color-definition(map-fetch($colors, 'focus')),
-    is-selected: k-button-color-definition(map-fetch($colors, 'is-selected'))
+    base: k-button-color-definition(
+      map-fetch($colors, 'base', $required: true)
+    ),
+    hover: k-button-color-definition(
+      map-fetch($colors, 'hover', $required: true)
+    ),
+    active: k-button-color-definition(
+      map-fetch($colors, 'active', $required: true)
+    ),
+    disabled: k-button-color-definition(
+      map-fetch($colors, 'disabled')
+    ),
+    focus: k-button-color-definition(
+      map-fetch($colors, 'focus')
+    ),
+    is-selected: k-button-color-definition(
+      map-fetch($colors, 'is-selected')
+    )
   );
 }
 
 @function k-button-color-definition($color) {
   @return (
-    color: k-color-definition(map-fetch($color, 'color', $required: true)),
-    border-color: k-color-definition(map-fetch($color, 'border-color')),
-    background-color: k-color-definition(map-fetch($color, 'background-color', $required: true))
+    color: k-color-definition(
+      map-fetch($color, 'color', $required: true)
+    ),
+    border-color: k-color-definition(
+      map-fetch($color, 'border-color')
+    ),
+    background-color: k-color-definition(
+      map-fetch($color, 'background-color', $required: true)
+    )
   );
 }
 
