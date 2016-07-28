@@ -4,9 +4,6 @@
 
 @function k-button-base-definition($button-map) {
   @return (
-    typography: map-fetch($button-map, 'typography'),
-    multiplier: map-fetch($button-map, 'multiplier'),
-    font: map-fetch($button-map, 'font'),
     colors: k-button-colors-definition(
       map-fetch($button-map, 'colors', $required: true)
     )
