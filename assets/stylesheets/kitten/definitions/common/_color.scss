@@ -1,8 +1,6 @@
 /// TODO: comments
 
-@function k-color-definition($value, $required: false) {
-  $error-required: k-required($value, $required);
-
+@function k-color-definition($value) {
   @if $value {
     @if type-of($value) != 'color' {
       $error-message: k-log(

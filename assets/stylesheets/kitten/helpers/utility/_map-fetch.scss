@@ -1,0 +1,10 @@
+/// TODO: comments
+
+@function map-fetch($map, $key, $required: false) {
+  @if type-of($map) != 'map' {
+    @return $map;
+  }
+
+  $value: map-get($map, $key);
+  @return k-required($value, $key, $required);
+}

@@ -1,8 +1,6 @@
 /// TODO: comments
 
-@function k-string-definition($value, $required: false) {
-  $error-required: k-required($value, $required);
-
+@function k-string-definition($value) {
   @if $value {
     @if type-of($value) != 'string' {
       $error-message: k-log(

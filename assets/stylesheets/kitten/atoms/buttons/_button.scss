@@ -66,6 +66,7 @@ $k-button-step: -2;
 ///       )
 ///     )
 ///   )
+///   @include k-Button($button)
 
 @mixin k-Button($button) {
 

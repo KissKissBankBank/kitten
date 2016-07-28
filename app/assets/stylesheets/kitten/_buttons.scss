@@ -1,0 +1,113 @@
+@import 'kitten/atoms/buttons/button';
+@import 'kitten/atoms/buttons/button-icon';
+@import 'kitten/atoms/buttons/button-image';
+
+$button: (
+  typography: $typography,
+  multiplier: $major-second,
+  font: (
+    family: 'source-sans',
+    font-weight: 600,
+    letter-spacing: 1px,
+    text-transform: uppercase,
+    text-decoration: none,
+    text-align: center
+  ),
+  colors: (
+    base: (
+      color: #333,
+      background-color: #fff,
+      border-color: #d8d8d8
+    ),
+    hover: (
+      color: #fff,
+      background-color: #333
+    ),
+    focus: (
+      color: #fff,
+      background-color: #ddd,
+    ),
+    active: (
+      color: #fff,
+      background-color: #151515
+    ),
+    disabled: (
+      color: #fff,
+      background-color: #d8d8d8
+    )
+  )
+);
+
+// TODO: move size value directly in mixin
+$button-icon: (
+  size: (
+    tiny: 30px,
+    default: 40px,
+    big: 50px
+  ),
+  colors: (
+    base: (
+      color: #333,
+      background-color: #fff,
+      border-color: #d8d8d8
+    ),
+    hover: (
+      color: #333,
+      background-color: #fff,
+      border-color: #333
+    ),
+    focus: (
+      color: #333,
+      background-color: #fff,
+      border-color: #333
+    ),
+    active: (
+      color: #fff,
+      background-color: #333
+    ),
+    disabled: (
+      color: #fff,
+      background-color: #d8d8d8
+    ),
+    is-selected: (
+      color: #fff,
+      background-color: #333
+    )
+  )
+);
+
+// TODO: move value directly in mixin
+$icon: (
+  width: 14px,
+  height: 12px
+);
+
+// TODO: move size value directly in mixin
+$button-image: (
+  size: (
+    tiny: 30px,
+    default: 40px,
+    big: 50px
+  ),
+  colors: (
+    base: (
+      color: #333,
+      background-color: #fff,
+      border-color: #d8d8d8
+    ),
+    hover: (
+      color: #333,
+      background-color: #fff,
+      border-color: #333
+    ),
+    active: (
+      color: #333,
+      background-color: #fff,
+      border-color: #151515
+    )
+  )
+);
+
+@include k-Button($button);
+@include k-ButtonIcon($button-icon, $icon);
+@include k-ButtonImage($button-image);

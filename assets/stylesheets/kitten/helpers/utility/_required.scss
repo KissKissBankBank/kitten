@@ -1,9 +1,9 @@
 /// TODO: comments
 
-@function k-required($value, $required: false) {
+@function k-required($value, $key, $required: false) {
   @if $required {
     @if not $value {
-      $error-message: k-log('(#{$value}) is required (#{$k-module}).');
+      $error-message: k-log('(#{$key}) is required (#{$k-module}).');
     }
   }
 

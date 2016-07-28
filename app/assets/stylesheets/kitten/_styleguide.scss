@@ -1,0 +1,127 @@
+$blue: #4a84ff;
+$sapphire: #2250b2;
+$light-navy: #13459e;
+$light-grey-1: #fbfbfb;
+$light-grey-2: #eee;
+
+.k-StyleguideContainer {
+  background-color: $light-grey-1;
+}
+
+.k-StyleguideContent {
+  padding-left: 15rem;
+}
+
+// Header
+.k-StyleguideTitle {
+  padding-left: 1rem;
+
+  background-color: $blue;
+  color: white;
+  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 4rem;
+}
+
+.k-StyleguideTitle__breadcrumb {
+  padding-left: 1rem;
+  border: 1px solid $light-grey-2;
+
+  color: #333;
+  font-size: 0.875rem;
+  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 2.4rem;
+  text-transform: uppercase;
+}
+
+// Menu
+.k-StyleguideMenu {
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 15rem;
+  height: 100%;
+  z-index: 2;
+
+  background-color: $sapphire;
+  color: white;
+
+  transition: 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+
+  ul { margin: 0; padding: 0; }
+}
+
+.k-StyleguideMenu__title {
+  float: right;
+  padding-right: 1rem;
+
+  font-size: 0.75rem;
+  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  letter-spacing: 1px;
+  line-height: 4rem;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.k-StyleguideMenu__sectionTitle {
+  padding-left: 1rem;
+  border-bottom: 1px solid $light-navy;
+
+  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 3.2rem;
+}
+
+.k-StyleguideMenu__section {
+  border-bottom: 1px solid $light-navy;
+
+  list-style: none;
+
+  font-size: 0.75rem;
+  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  letter-spacing: 1px;
+  line-height: 3.6rem;
+  text-transform: uppercase;
+
+  & > a {
+    display: inline-block;
+    padding-left: 1rem;
+  }
+}
+
+.k-StyleguideMenu__sectionItem {
+  border-bottom: 1px solid $light-navy;
+
+  list-style: none;
+
+  font-size: 0.75rem;
+  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+  line-height: 2.75rem;
+  text-transform: none;
+
+  & > a {
+    display: inline-block;
+    padding-left: 1rem;
+  }
+}
+
+// Section
+.k-StyleguideSection {
+  padding: 3.25em 8em;
+}
+
+// Utilities
+.k-u-clearfix:after {
+  content: " ";
+  display: table;
+  clear: both;
+}

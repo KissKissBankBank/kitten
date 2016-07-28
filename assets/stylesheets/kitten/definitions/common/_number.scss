@@ -1,8 +1,6 @@
 /// TODO: comments
 
-@function k-number-definition($value, $unit: none, $required: false) {
-  $error-required: k-required($value, $required);
-
+@function k-number-definition($value, $unit: none) {
   @if $value {
     @if type-of($value) != 'number' {
       $error-message: k-log(

@@ -1,0 +1,12 @@
+/// TODO: comments
+
+@function k-font-definition($font) {
+  @return (
+    family: k-string-definition(map-fetch($font, 'family', $required: true)),
+    font-weight: k-number-definition(map-fetch($font, 'font-weight'), $unit: none),
+    letter-spacing: k-number-definition(map-fetch($font, 'letter-spacing')),
+    text-transform: k-string-definition(map-fetch($font, 'text-transform')),
+    text-decoration: k-string-definition(map-fetch($font, 'text-decoration')),
+    text-align: k-string-definition(map-fetch($font, 'text-align'))
+  );
+}

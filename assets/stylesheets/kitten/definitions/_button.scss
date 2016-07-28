@@ -1,49 +1,36 @@
-@import 'common/*';
-
 /// TODO: comments
 
 @function k-button-base-definition($button-map) {
   @return (
-    typography: map-get($button-map, 'typography'),
-    multiplier: map-get($button-map, 'multiplier'),
-    font: k-button-font-definition(map-get($button-map, 'font')),
-    colors: k-button-colors-definition(map-get($button-map, 'colors'))
-  );
-}
-
-@function k-button-font-definition($font) {
-  @return (
-    family: k-string-definition(map-get($font, 'family'), $required: true),
-    font-weight: k-number-definition(map-get($font, 'font-weight'), $unit: none),
-    letter-spacing: k-number-definition(map-get($font, 'letter-spacing')),
-    text-transform: k-string-definition(map-get($font, 'text-transform')),
-    text-decoration: k-string-definition(map-get($font, 'text-decoration')),
-    text-align: k-string-definition(map-get($font, 'text-align'))
+    typography: map-fetch($button-map, 'typography'),
+    multiplier: map-fetch($button-map, 'multiplier'),
+    font: map-fetch($button-map, 'font'),
+    colors: k-button-colors-definition(map-fetch($button-map, 'colors', $required: true))
   );
 }
 
 @function k-button-colors-definition($colors) {
   @return (
-    base: k-button-color-definition(map-get($colors, 'base'), $required: true),
-    hover: k-button-color-definition(map-get($colors, 'hover'), $required: true),
-    active: k-button-color-definition(map-get($colors, 'active'), $required: true),
-    disabled: k-button-color-definition(map-get($colors, 'disabled'), $required: true),
-    focus: k-button-color-definition(map-get($colors, 'focus'), $required: false),
+    base: k-button-color-definition(map-fetch($colors, 'base', $required: true)),
+    hover: k-button-color-definition(map-fetch($colors, 'hover', $required: true)),
+    active: k-button-color-definition(map-fetch($colors, 'active', $required: true)),
+    disabled: k-button-color-definition(map-fetch($colors, 'disabled')),
+    focus: k-button-color-definition(map-fetch($colors, 'focus')),
+    is-selected: k-button-color-definition(map-fetch($colors, 'is-selected'))
   );
 }
 
-@function k-button-color-definition($color, $required: false) {
-  $error-required: k-required($color, $required);
-
+@function k-button-color-definition($color) {
   @return (
-    color: k-color-definition(map-get($color, 'color'), $required: true),
-    border-color: k-color-definition(map-get($color, 'border-color'), $required: false),
-    background-color: k-color-definition(map-get($color, 'background-color'), $required: true)
+    color: k-color-definition(map-fetch($color, 'color', $required: true)),
+    border-color: k-color-definition(map-fetch($color, 'border-color')),
+    background-color: k-color-definition(map-fetch($color, 'background-color', $required: true))
   );
 }
 
 @function k-button-border-definition($border-color) {
   $border-color: transparent !default; // Default value.
+  $border-color: k-required($border-color, 'border-color', $required: true);
 
-  @return k-color-definition($border-color, $required: true);
+  @return k-color-definition($border-color);
 }
