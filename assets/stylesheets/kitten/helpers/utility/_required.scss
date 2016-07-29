@@ -1,10 +1,23 @@
-/// TODO: comments
+/// If the value of key is required, show error message.
+///
+/// @group 0100_helpers
+///
+/// @parameter {string} $value
+/// @parameter {string} $key - Use to show which key is required
+/// @parameter {boolean} $required
+///
+/// @return {value} 1.42rem
+///
+/// @example scss - Usage
+///   k-required(20px, 'font-size', true);
+///   // 20px
+///
+///   k-required('', 'font-size', true);
+///   // "font-size" is required "k-Button: $button"
 
 @function k-required($value, $key, $required: false) {
-  @if $required {
-    @if not $value {
-      $error-message: k-log('"#{$key}" is required "#{$k-module}".');
-    }
+  @if $required and not $value {
+    $error-message: k-log('"#{$key}" is required "#{$k-module}".');
   }
 
   @return $value;
