@@ -38,13 +38,7 @@ $button: (
   )
 );
 
-// TODO: move size value directly in mixin
 $button-icon: (
-  size: (
-    tiny: 30px,
-    default: 40px,
-    big: 50px
-  ),
   colors: (
     base: (
       color: #333,
@@ -76,19 +70,7 @@ $button-icon: (
   )
 );
 
-// TODO: move value directly in mixin
-$icon: (
-  width: 14px,
-  height: 12px
-);
-
-// TODO: move size value directly in mixin
 $button-image: (
-  size: (
-    tiny: 30px,
-    default: 40px,
-    big: 50px
-  ),
   colors: (
     base: (
       color: #333,
@@ -109,5 +91,5 @@ $button-image: (
 );
 
 @include k-Button($button);
-@include k-ButtonIcon($button-icon, $icon);
+@include k-ButtonIcon($button-icon);
 @include k-ButtonImage($button-image);

@@ -11,11 +11,6 @@
 /// @example scss - Usage
 ///
 ///   $button-image: (
-///     size: (
-///       tiny: 30px,
-///       default: 40px,
-///       big: 50px
-///     ),
 ///     colors: (
 ///       base: (
 ///         border-color: #d8d8d8
@@ -32,9 +27,9 @@
 @mixin k-ButtonImage($button-image) {
   @include k-with-module('k-ButtonImage: $button-image') {
 
-    $button-size: map-get-deep($button-image, ('size', 'default'));
-    $button-size-tiny: map-get-deep($button-image, ('size', 'tiny'));
-    $button-size-big: map-get-deep($button-image, ('size', 'big'));
+    $button-size: 40px;
+    $button-size-tiny: 30px;
+    $button-size-big: 50px;
 
     .k-ButtonImage {
       @include k-buttonBase($button-image);

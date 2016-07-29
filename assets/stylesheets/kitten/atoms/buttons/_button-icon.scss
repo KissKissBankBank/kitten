@@ -15,11 +15,6 @@
 /// @example scss - Usage
 ///
 ///   $button-icon: (
-///     size: (
-///       tiny: 30px,
-///       default: 40px,
-///       big: 50px
-///     ),
 ///     colors: (
 ///       base: (
 ///         color: #333,
@@ -51,15 +46,15 @@
 ///     height: 12px
 ///   )
 
-@mixin k-ButtonIcon($button-icon, $icon) {
+@mixin k-ButtonIcon($button-icon) {
   @include k-with-module('k-ButtonIcon: $button-icon') {
 
-    $button-size: map-get-deep($button-icon, ('size', 'default'));
-    $button-size-tiny: map-get-deep($button-icon, ('size', 'tiny'));
-    $button-size-big: map-get-deep($button-icon, ('size', 'big'));
+    $button-size: 40px;
+    $button-size-tiny: 30px;
+    $button-size-big: 50px;
 
-    $icon-width: map-get($icon, 'width');
-    $icon-height: map-get($icon, 'height');
+    $icon-width: 14px;
+    $icon-height: 12px;
 
     // Get data for SVG.
     $colors: map-get($button-icon, 'colors');
