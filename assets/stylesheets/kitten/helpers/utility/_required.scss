@@ -17,7 +17,7 @@
 
 @function k-required($value, $key, $required: false) {
   @if $required and not $value {
-    $error-message: k-log('"#{$key}" is required "#{$k-module}".');
+    $error-message: k-log('"#{$key}" is required in "#{$k-module}".');
   }
 
   @return $value;

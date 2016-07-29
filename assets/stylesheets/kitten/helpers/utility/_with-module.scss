@@ -1,0 +1,18 @@
+/// This mixin defined the variable $k-module and reset after content.
+///
+/// @group 0100_helpers
+///
+/// @parameter {string} $module
+///
+/// @example scss - Usage
+///   k-with-module('k-Button: $button') {
+///     .k-Button {
+///       color: #000;
+///     }
+///   };
+
+@mixin k-with-module($module) {
+  $k-module: $module !global;
+  @content;
+  $k-module: null !global;
+}
