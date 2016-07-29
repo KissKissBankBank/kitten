@@ -1,49 +1,102 @@
-/// TODO: comments
+/// HorizontalNav
+///
+/// A horizontal navigation, used in header.
+///
+/// @group 0700_navs_components
+///
+/// @parameter {Map} $button - a button specification
+///
+/// @example scss - usage
+///
+///   $nav: (
+///     typography: $typography,
+///     font: (
+///       family: 'source-sans',
+///       font-weight: 600,
+///       letter-spacing: 1px,
+///       text-transform: uppercase,
+///       text-decoration: none,
+///       text-align: center
+///     ),
+///     colors: (
+///       base: (
+///         background-color: #fff,
+///         border-color: #eee,
+///         color: #333,
+///       ),
+///       hover: (
+///         color: #4a84ff,
+///       ),
+///       focus: (
+///         border-color: #4a84ff,
+///         color: #4a84ff,
+///       ),
+///       active: (
+///         border-color: #4a84ff,
+///         color: #4a84ff,
+///       ),
+///       is-selected: (
+///         color: #333,
+///         border-color: #333,
+///       )
+///     )
+///   );
+///
+///   @include k-HorizontalNav($nav);
+///
+/// @example html
+///
+///   <ul class="k-HorizontalNav" role="menubar">
+///     <li role="menuitem">
+///       <a class="k-HorizontalNav__item" href="#">
+///         Nav link 1
+///       </a>
+///     </li>
+///     <li role="menuitem">
+///       <a class="k-HorizontalNav__item is-selected" href="#">
+///         Nav link 2 (selected)
+///       </a>
+///     </li>
+///   </ul>
 
 @mixin k-HorizontalNav($nav) {
+
+  $typography: map-get($nav, 'typography');
+  $multiplier: map-get($nav, 'multiplier');
+  $font: map-get($nav, 'font');
+  $line-height: map-get($typography, 'line-height');
+  $colors: map-get($nav, 'colors');
+
+  $base-color: map-get-deep($colors, ('base', 'color'));
+  $base-border-color: map-get-deep($colors, ('base', 'border-color'));
+  $base-background-color: map-get-deep($colors, ('base', 'background-color'));
+  $hover-color: map-get-deep($colors, ('hover', 'color'));
+  $focus-color: map-get-deep($colors, ('focus', 'color'));
+  $focus-border-color: map-get-deep($colors, ('focus', 'border-color'));
+  $is-selected-color: map-get-deep($colors, ('is-selected', 'color'));
+  $is-selected-border-color: map-get-deep($colors, ('is-selected', 'border-color'));
+
+  $padding-left-right: k-px-to-rem(20px);
 
   .k-HorizontalNav {
     display: flex;
     list-style-type: none;
-    padding: 0;
     margin: 0;
+    padding: 0;
   }
 
   .k-HorizontalNav__item {
-    $typography: map-get($nav, 'typography');
-    $multiplier: map-get($nav, 'multiplier');
-    $font: map-get($nav, 'font');
-
-    $line-height: map-get-deep($nav, ('typography', 'line-height'));
-
-    @include k-typographyFontSize(
-      $typography,
-      $multiplier,
-      0,
-      $line-height
-    );
+    @include k-typographyFontSize($typography, $multiplier, 0, $line-height);
     @include k-typographyFontFamily($typography, $font);
     @include k-typographyFontStyle($typography, $font);
 
-    $colors: map-get($nav, 'colors');
-
-    // Variables
-    $base-color: map-get-deep($colors, ('base', 'color'));
-    $base-border-color: map-get-deep($colors, ('base', 'border-color'));
-    $base-background-color: map-get-deep($colors, ('base', 'background-color'));
-    $hover-color: map-get-deep($colors, ('hover', 'color'));
-    $focus-color: map-get-deep($colors, ('focus', 'color'));
-    $focus-border-color: map-get-deep($colors, ('focus', 'border-color'));
-    $is-selected-color: map-get-deep($colors, ('is-selected', 'color'));
-    $is-selected-border-color: map-get-deep($colors, ('is-selected', 'border-color'));
-
-    color: $base-color;
-    padding: 0 20px;
     background-color: $base-background-color;
     border-bottom: 1px solid $base-border-color;
-    outline: none;
+    color: $base-color;
     cursor: pointer;
     display: block;
+    padding: 0 $padding-left-right;
+    outline: none;
     transition: color .2s, border-color .2s;
 
     &:hover {
@@ -52,13 +105,13 @@
 
     &:focus,
     &:active {
-      color: $focus-color;
       border-color: $focus-border-color;
+      color: $focus-color;
     }
 
     &.is-selected {
-      color: $is-selected-color;
       border-color: $is-selected-border-color;
+      color: $is-selected-color;
     }
   }
 }

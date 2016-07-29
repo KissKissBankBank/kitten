@@ -1,7 +1,7 @@
 @import 'kitten/atoms/navs';
 
 $typography: map-merge($typography, (
-  font-size:   k-px-to-rem(12px),
+  font-size: k-px-to-rem(12px),
   line-height: k-px-to-rem(64px)
 ));
 
@@ -14,24 +14,24 @@ $horizontal-nav: (
     letter-spacing: 1px,
     text-transform: uppercase,
     text-decoration: none,
-    text-align: center
+    text-align: center,
   ),
   colors: (
     base: (
-      color: #333,
       background-color: #fff,
-      border-color: #eee
+      border-color: #eee,
+      color: #333,
     ),
     hover: (
-      color: #4a84ff
+      color: #4a84ff,
     ),
     focus: (
-      color: #4a84ff,
       border-color: #4a84ff,
+      color: #4a84ff,
     ),
     active: (
-      color: #4a84ff,
       border-color: #4a84ff,
+      color: #4a84ff,
     ),
     is-selected: (
       color: #333,
