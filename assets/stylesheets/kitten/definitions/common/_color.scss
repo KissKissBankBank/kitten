@@ -1,9 +1,17 @@
-/// TODO: comments
+/// Validate a color.
+///
+/// @group 0200_definitions
+///
+/// @return {color}
+///
+/// @example scss - Usage
+///   k-color-definition(10px)
+///   // "10px" is not a valid color in "k-Button: $button"
 
 @function k-color-definition($value) {
   @if $value and type-of($value) != 'color' {
     $error-message: k-log(
-      '"#{$value}" is not valid a valid color "#{$k-module}".'
+      '"#{$value}" is not valid a valid color in "#{$k-module}".'
     );
   }
 

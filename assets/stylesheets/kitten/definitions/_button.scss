@@ -1,6 +1,23 @@
-@import 'common/*';
-
-/// TODO: comments
+/// Define and validate a button.
+///
+/// @group 0200_definitions
+///
+/// @return {map}
+///
+/// @example scss - Usage
+///
+///   $button: (
+///     colors: (
+///       base: (
+///         color: red,
+///         border-color: red,
+///         background-color: red
+///       ),
+///       …
+///     )
+///   );
+///
+///   $button: k-button-base-definition($button);
 
 @function k-button-base-definition($button-map) {
   @return (

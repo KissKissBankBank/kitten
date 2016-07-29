@@ -1,5 +1,3 @@
-@import 'kitten/definitions/button';
-
 /// Set a border of 1px on a button.
 ///
 /// Given a border color, this mixin will use the passed color to set the
@@ -18,8 +16,6 @@
 
 @mixin k-buttonBorder($border-color) {
   $k-button-border-width: 1px;
-
-  $k-module: 'k-buttonBorder: $border-color' !global;
   $border-color: k-button-border-definition($border-color);
 
   border: $k-button-border-width solid $border-color;

@@ -17,7 +17,13 @@
 ///    border-radius: 1.25rem;
 
 @mixin k-buttonRounded($button-size, $icon-width, $icon-height) {
-  /// TODO: Validations…
+  // Validations
+  $button-size: k-required($button-size, 'button-size', $required: true);
+  $icon-width: k-required($icon-width, 'icon-width', $required: true);
+  $icon-height: k-required($icon-height, 'icon-height', $required: true);
+  $button-size: k-number-definition($button-size, 'px');
+  $icon-width: k-number-definition($icon-width);
+  $icon-height: k-number-definition($icon-height);
 
   // Button element default settings.
   $k-button-size: k-px-to-rem($button-size);
