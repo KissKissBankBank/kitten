@@ -1,6 +1,17 @@
-/// TODO: comments
+/// This mixin get the value in a map and check if it is required.
+///
+/// @group 0100_helpers
+///
+/// @return {string}
+///
+/// @example scss - Usage
+///   k-map-fetch((foo: 'bar'), 'foo', true);
+///   // 'bar'
+///
+///   k-map-fetch((foo: 'bar'), 'test', true);
+///   // 'test' is required
 
-@function map-fetch($map, $key, $required: false) {
+@function k-map-fetch($map, $key, $required: false) {
   @if type-of($map) != 'map' {
     @return $map;
   }

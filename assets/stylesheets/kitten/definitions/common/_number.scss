@@ -4,16 +4,14 @@
   @if $value {
     @if type-of($value) != 'number' {
       $error-message: k-log(
-        '(#{$value}) is not a valid number (#{$k-module}).'
+        '"#{$value}" is not a valid number "#{$k-module}".'
       );
     }
 
-    @if $unit != none {
-      @if unit($value) != $unit {
-        $error-message: k-log(
-          '(#{$value}) has not a valid unit (#{$k-module}).'
-        );
-      }
+    @if $unit != none and unit($value) != $unit {
+      $error-message: k-log(
+        '"#{$value}" has not a valid unit "#{$k-module}".'
+      );
     }
   }
 

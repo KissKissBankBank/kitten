@@ -11,7 +11,8 @@
 ///   @include k-buttonRoundedImage(40px);
 ///
 /// @example css - CSS output
-///    padding: 0.875rem 0.8125rem;
+///    width: 2.5rem;
+///    height: 2.5rem;
 ///    border-radius: 1.25rem;
 
 @mixin k-buttonRoundedImage($button-size) {

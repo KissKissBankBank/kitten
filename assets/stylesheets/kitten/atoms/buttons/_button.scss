@@ -71,7 +71,7 @@ $k-button-step: -2;
 @mixin k-Button($button) {
 
   // Validations…
-  $k-module: '[k-Button: $button]' !global;
+  $k-module: 'k-Button: $button' !global;
   $typography: map-get($button, 'typography');
   $multiplier: map-get($button, 'multiplier');
   $font: map-get($button, 'font');

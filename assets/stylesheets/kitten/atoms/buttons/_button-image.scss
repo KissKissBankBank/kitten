@@ -34,7 +34,7 @@
 
 @mixin k-ButtonImage($button-image) {
   /// TODO: Validations…
-  $k-module: '[k-ButtonImage: $button-image]' !global;
+  $k-module: 'k-ButtonImage: $button-image' !global;
 
   $button-size: map-get-deep($button-image, ('size', 'default'));
   $button-size-tiny: map-get-deep($button-image, ('size', 'tiny'));

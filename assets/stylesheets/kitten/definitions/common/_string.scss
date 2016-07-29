@@ -1,12 +1,10 @@
 /// TODO: comments
 
 @function k-string-definition($value) {
-  @if $value {
-    @if type-of($value) != 'string' {
-      $error-message: k-log(
-        '(#{$value}) is not a valid string (#{$k-module}).'
-      );
-    }
+  @if $value and type-of($value) != 'string' {
+    $error-message: k-log(
+      '"#{$value}" is not a valid string "#{$k-module}".'
+    );
   }
 
   @return $value;
