@@ -56,6 +56,10 @@
     $icon-width: 14px;
     $icon-height: 12px;
 
+    // SVG element default settings.
+    $k-icon-width: k-px-to-rem($icon-width);
+    $k-icon-height: k-px-to-rem($icon-height);
+
     // Get data for SVG.
     $colors: map-get($button-icon, 'colors');
     $base-color: map-get-deep($colors, ('base', 'color'));
@@ -64,10 +68,6 @@
     $disabled-color: map-get-deep($colors, ('disabled', 'color'));
     $focus-color: map-get-deep($colors, ('focus', 'color'));
     $is-selected-color: map-get-deep($colors, ('is-selected', 'color'));
-
-    // SVG element default settings.
-    $k-icon-width: k-px-to-rem($icon-width);
-    $k-icon-height: k-px-to-rem($icon-height);
 
     .k-ButtonIcon {
       @include k-buttonBase($button-icon);
