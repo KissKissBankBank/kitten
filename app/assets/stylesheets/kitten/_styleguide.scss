@@ -25,11 +25,11 @@ $light-grey-2: #eee;
 }
 
 .k-StyleguideTitle__breadcrumb {
-  padding-left: 1rem;
-  border: 1px solid $light-grey-2;
+  margin: 4rem 0 0 8rem;
+  border-bottom: 1px solid $light-grey-2;
 
   color: #333;
-  font-size: 0.875rem;
+  font-size: 1.5rem;
   font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
   font-weight: 400;
   letter-spacing: 1px;
@@ -117,6 +117,63 @@ $light-grey-2: #eee;
 // Section
 .k-StyleguideSection {
   padding: 3.25em 8em;
+}
+
+.k-StyleguideSection__allSection {
+  margin: 2rem 0 0 8rem;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.k-StyleguideSection__allSection--vertical {
+  margin: 2rem 0 0 8rem;
+
+  flex-direction: column;
+}
+
+// Section Buttons
+.k-StyleguideSection__allContainer {
+  padding-right: 3rem;
+  text-align: center;
+}
+
+.k-StyleguideSection__allTitle {
+  margin: 4rem 0 0 8rem;
+
+  color: #333;
+  font-size: 1.2rem;
+  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.k-StyleguideSection__allItem {
+  color: #4a84ff;
+  font-size: 0.75rem;
+  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+}
+
+.k-StyleguideSection__allItem--margin {
+  padding-right: 2rem;
+}
+
+.k-StyleguideSection__allDescription {
+  margin-right: 6rem;
+  font-size: 1.25rem;
+  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 1.4;
+  width: 40%;
+}
+
+.k-StyleguideSection__allBloc {
+  margin-top: 1.5rem;
+  background-color: #4a84ff;
+  width: 470px;
+  height: 272px;
 }
 
 // Utilities
