@@ -76,7 +76,7 @@
   $is-selected-color: map-get-deep($colors, ('is-selected', 'color'));
   $is-selected-border-color: map-get-deep($colors, ('is-selected', 'border-color'));
 
-  $padding-left-right: k-px-to-rem(20px);
+  $padding: k-px-to-rem(20px);
 
   .k-HorizontalNav {
     display: flex;
@@ -95,7 +95,7 @@
     color: $base-color;
     cursor: pointer;
     display: block;
-    padding: 0 $padding-left-right;
+    padding: $padding;
     outline: none;
     transition: color .2s, border-color .2s;
 
