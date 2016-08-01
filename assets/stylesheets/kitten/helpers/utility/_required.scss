@@ -1,4 +1,5 @@
-/// If the value of key is required, show error message.
+/// Returns the value for a given key. If the value is empty or null,
+/// it will throw an error during compilation.
 ///
 /// @group 0100_helpers
 ///
@@ -15,9 +16,9 @@
 ///   k-required('', 'font-size');
 ///   // "font-size" is required "k-Button: $button"
 
-@function k-required($value, $key) {
+@function k-required($value, $name) {
   @if not $value {
-    $error-message: k-log('"#{$key}" is required in "#{$k-module}".');
+    $error-message: k-log('"#{$name}" is required in "#{$k-module}".');
   }
 
   @return $value;
