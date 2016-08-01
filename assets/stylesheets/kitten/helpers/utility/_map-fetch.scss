@@ -13,10 +13,6 @@
 ///   // "test" is required in "k-module".
 
 @function k-map-fetch($map, $key) {
-  @if type-of($map) != 'map' {
-    @return $map;
-  }
-
   $value: map-get($map, $key);
   @return k-required($value, $key);
 }
