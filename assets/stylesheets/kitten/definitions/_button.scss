@@ -22,7 +22,7 @@
 @function k-button-base-definition($button-map) {
   @return (
     colors: k-button-colors-definition(
-      k-map-fetch($button-map, 'colors', $required: true)
+      k-map-fetch($button-map, 'colors')
     )
   );
 }
@@ -30,43 +30,47 @@
 @function k-button-colors-definition($colors) {
   @return (
     base: k-button-color-definition(
-      k-map-fetch($colors, 'base', $required: true)
+      k-map-fetch($colors, 'base')
     ),
     hover: k-button-color-definition(
-      k-map-fetch($colors, 'hover', $required: true)
+      k-map-fetch($colors, 'hover')
     ),
     active: k-button-color-definition(
-      k-map-fetch($colors, 'active', $required: true)
+      k-map-fetch($colors, 'active')
     ),
     disabled: k-button-color-definition(
-      k-map-fetch($colors, 'disabled')
+      map-get($colors, 'disabled')
     ),
     focus: k-button-color-definition(
-      k-map-fetch($colors, 'focus')
+      map-get($colors, 'focus')
     ),
     is-selected: k-button-color-definition(
-      k-map-fetch($colors, 'is-selected')
+      map-get($colors, 'is-selected')
     )
   );
 }
 
 @function k-button-color-definition($color) {
+  @if not $color {
+    @return $color;
+  }
+
   @return (
     color: k-color-definition(
-      k-map-fetch($color, 'color', $required: true)
+      k-map-fetch($color, 'color')
     ),
     border-color: k-color-definition(
-      k-map-fetch($color, 'border-color')
+      map-get($color, 'border-color')
     ),
     background-color: k-color-definition(
-      k-map-fetch($color, 'background-color', $required: true)
+      k-map-fetch($color, 'background-color')
     )
   );
 }
 
 @function k-button-border-definition($border-color) {
   $border-color: transparent !default; // Default value.
-  $border-color: k-required($border-color, 'border-color', $required: true);
+  $border-color: k-required($border-color, 'border-color');
 
   @return k-color-definition($border-color);
 }

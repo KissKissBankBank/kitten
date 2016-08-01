@@ -11,7 +11,7 @@
 @function k-color-definition($value) {
   @if $value and type-of($value) != 'color' {
     $error-message: k-log(
-      '"#{$value}" is not valid a valid color in "#{$k-module}".'
+      '"#{$value}" is not a valid color in "#{$k-module}".'
     );
   }
 

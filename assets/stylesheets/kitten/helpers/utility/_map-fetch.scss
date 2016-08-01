@@ -5,17 +5,17 @@
 /// @return {string}
 ///
 /// @example scss - Usage
-///   k-map-fetch((foo: 'bar'), 'foo', true);
+///   k-map-fetch((foo: 'bar'), 'foo');
 ///   // 'bar'
 ///
-///   k-map-fetch((foo: 'bar'), 'test', true);
+///   k-map-fetch((foo: 'bar'), 'test');
 ///   // 'test' is required
 
-@function k-map-fetch($map, $key, $required: false) {
+@function k-map-fetch($map, $key) {
   @if type-of($map) != 'map' {
     @return $map;
   }
 
   $value: map-get($map, $key);
-  @return k-required($value, $key, $required);
+  @return k-required($value, $key);
 }

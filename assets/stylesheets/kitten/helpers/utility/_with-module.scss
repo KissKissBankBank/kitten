@@ -5,7 +5,7 @@
 /// @parameter {string} $module
 ///
 /// @example scss - Usage
-///   k-with-module('k-Button: $button') {
+///   @include k-with-module('k-Button: $button') {
 ///     .k-Button {
 ///       color: #000;
 ///     }

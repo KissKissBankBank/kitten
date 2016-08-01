@@ -9,14 +9,14 @@
 /// @return {value} 1.42rem
 ///
 /// @example scss - Usage
-///   k-required(20px, 'font-size', true);
+///   k-required(20px, 'font-size');
 ///   // 20px
 ///
-///   k-required('', 'font-size', true);
+///   k-required('', 'font-size');
 ///   // "font-size" is required "k-Button: $button"
 
-@function k-required($value, $key, $required: false) {
-  @if $required and not $value {
+@function k-required($value, $key) {
+  @if not $value {
     $error-message: k-log('"#{$key}" is required in "#{$k-module}".');
   }
 

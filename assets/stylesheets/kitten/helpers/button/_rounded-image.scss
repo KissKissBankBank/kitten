@@ -17,7 +17,7 @@
 
 @mixin k-buttonRoundedImage($button-size) {
   // Validations
-  $button-size: k-required($button-size, 'button-size', $required: true);
+  $button-size: k-required($button-size, 'button-size');
   $button-size: k-number-definition($button-size, 'px');
 
   // Button element default settings.
