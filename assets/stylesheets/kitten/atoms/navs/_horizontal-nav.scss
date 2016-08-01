@@ -60,58 +60,72 @@
 ///   </ul>
 
 @mixin k-HorizontalNav($nav) {
+  @include k-with-module('k-HorizontalNav: $nav') {
 
-  $typography: map-get($nav, 'typography');
-  $multiplier: map-get($nav, 'multiplier');
-  $font: map-get($nav, 'font');
-  $line-height: map-get($typography, 'line-height');
-  $colors: map-get($nav, 'colors');
+    $typography: map-get($nav, 'typography');
+    $multiplier: map-get($nav, 'multiplier');
+    $font: map-get($nav, 'font');
+    $line-height: map-get($typography, 'line-height');
 
-  $base-color: map-get-deep($colors, ('base', 'color'));
-  $base-border-color: map-get-deep($colors, ('base', 'border-color'));
-  $base-background-color: map-get-deep($colors, ('base', 'background-color'));
-  $hover-color: map-get-deep($colors, ('hover', 'color'));
-  $focus-color: map-get-deep($colors, ('focus', 'color'));
-  $focus-border-color: map-get-deep($colors, ('focus', 'border-color'));
-  $is-selected-color: map-get-deep($colors, ('is-selected', 'color'));
-  $is-selected-border-color: map-get-deep($colors, ('is-selected', 'border-color'));
+    $colors: k-map-fetch($nav, 'colors');
 
-  $padding: k-px-to-rem(20px);
+    // base colors
+    $base: k-colors-definition(k-map-fetch($colors, 'base'));
+    $base-color: map-get($base, 'color');
+    $base-border-color: map-get($base, 'border-color');
+    $base-background-color: map-get($base, 'background-color');
 
-  .k-HorizontalNav {
-    display: flex;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
+    // hover colors
+    $hover-color: k-color-definition(k-map-fetch($colors, ('hover', 'color')));
 
-  .k-HorizontalNav__item {
-    @include k-typographyFontSize($typography, $multiplier, 0, $line-height);
-    @include k-typographyFontFamily($typography, $font);
-    @include k-typographyFontStyle($typography, $font);
+    // focus colors
+    $focus-color: k-color-definition(k-map-fetch($colors, ('focus', 'color')));
+    $focus-border-color: k-color-definition(
+      k-map-fetch($colors, ('focus', 'border-color')));
 
-    background-color: $base-background-color;
-    border-bottom: 1px solid $base-border-color;
-    color: $base-color;
-    cursor: pointer;
-    display: block;
-    padding: $padding;
-    outline: none;
-    transition: color .2s, border-color .2s;
+    // state 'is-selected' colors (optional)
+    $is-selected-color: k-color-definition(
+      k-map-fetch($colors, ('is-selected', 'color')));
+    $is-selected-border-color: k-color-definition(
+      k-map-fetch($colors, ('is-selected', 'border-color')));
 
-    &:hover {
-      color: $hover-color;
+    $padding: k-px-to-rem(20px);
+
+    .k-HorizontalNav {
+      display: flex;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
     }
 
-    &:focus,
-    &:active {
-      border-color: $focus-border-color;
-      color: $focus-color;
-    }
+    .k-HorizontalNav__item {
+      @include k-typographyFontSize($typography, $multiplier, 0, $line-height);
+      @include k-typographyFontFamily($typography, $font);
+      @include k-typographyFontStyle($typography, $font);
 
-    &.is-selected {
-      border-color: $is-selected-border-color;
-      color: $is-selected-color;
+      background-color: $base-background-color;
+      border-bottom: 1px solid $base-border-color;
+      color: $base-color;
+      cursor: pointer;
+      display: block;
+      padding: $padding;
+      outline: none;
+      transition: color .2s, border-color .2s;
+
+      &:hover {
+        color: $hover-color;
+      }
+
+      &:focus,
+      &:active {
+        border-color: $focus-border-color;
+        color: $focus-color;
+      }
+
+      &.is-selected {
+        border-color: $is-selected-border-color;
+        color: $is-selected-color;
+      }
     }
   }
 }

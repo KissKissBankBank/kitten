@@ -1,4 +1,4 @@
-/// Define and validate colors of button.
+/// Define and validate colors (color, border-color, background-color).
 ///
 /// @group 0200_definitions
 ///
@@ -12,9 +12,9 @@
 ///     background-color: red
 ///   );
 ///
-///   $colors: k-button-colors-definition($colors);
+///   $colors: k-colors-definition($colors);
 
-@function k-button-colors-definition($colors) {
+@function k-colors-definition($colors) {
   @if not $colors {
     @return ();
   }

@@ -13,6 +13,6 @@
 ///   // "test" is required in "k-module".
 
 @function k-map-fetch($map, $key) {
-  $value: map-get($map, $key);
+  $value: map-get-deep($map, $key);
   @return k-required($value, $key);
 }
