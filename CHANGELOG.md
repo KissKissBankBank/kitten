@@ -4,6 +4,17 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [v0.3.0] - 2016-08-01
+New features:
+- Add new component: `loan-simulator` organism.
+- Add new validation system.
+- Add styleguide routing, controllers and views.
+- Update @import strategy.
+- Add npm module configuration.
+
+Fix:
+- Remove [Slim](http://slim-lang.com/) templating.
+
 ## [v0.2.0] - 2016-07-20
 
 New features:
