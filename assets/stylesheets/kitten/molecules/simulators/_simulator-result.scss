@@ -4,7 +4,13 @@
 ///
 /// @example scss - usage
 ///
-///   @include k-SimulatorResult;
+///   $simulator-result: (
+///     colors: (
+///       border: red,
+///       background: pink
+///     )
+///   );
+///   @include k-SimulatorResult($simulator-result);
 ///
 /// @example html
 ///
@@ -16,17 +22,21 @@
 ///     <div class="k-SimulatorResult__item">
 ///       4%
 ///     </div>
-///     <div class="k-SimulatorResult__item k-SimulatorResult__item--last">
+///     <div class="k-SimulatorResult__item is-last">
 ///       $1
 ///     </div>
 ///   </div>
-@mixin k-SimulatorResult {
+@mixin k-SimulatorResult($simulator-result) {
+  $colors: map-get($simulator-result, 'colors');
+  $border-color: map-get($colors, 'border');
+  $background-color: map-get($colors, 'background');
+  $text-color: map-get($colors, 'text');
+
   .k-SimulatorResult {
     display: flex;
-    margin: 1em 0;
 
-    border-top: 1px solid purple;
-    border-bottom: 1px solid purple;
+    border-top: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
 
     text-align: center;
   }
@@ -34,11 +44,12 @@
   .k-SimulatorResult__item {
     flex: 1;
     padding: 1em;
-    border-right: 1px solid purple;
-    background: rgba(179, 0, 162, 0.04);
-  }
+    border-right: 1px solid $border-color;
+    background: $background-color;
+    color: $text-color;
 
-  .k-SimulatorResult__item--last {
-    border-right: none;
+    &.is-last {
+      border-right: none;
+    }
   }
 }

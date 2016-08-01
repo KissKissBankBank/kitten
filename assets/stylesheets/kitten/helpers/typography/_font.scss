@@ -1,0 +1,19 @@
+/// Apply a font from the global list of available fonts
+@mixin k-font($font-name) {
+  $font: map-get($k-fonts, $font-name);
+  $family: map-get($font, 'family');
+  $weight: map-get($font, 'weight');
+  $transform: map-get($font, 'transform');
+  $letter-spacing: map-get($font, 'letter-spacing');
+
+  font-family: $family;
+  @if $weight {
+    font-weight: $weight;
+  }
+  @if $transform {
+    text-transform: $transform;
+  }
+  @if $letter-spacing {
+    letter-spacing: $letter-spacing;
+  }
+}

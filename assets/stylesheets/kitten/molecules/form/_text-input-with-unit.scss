@@ -1,10 +1,18 @@
-/// TextInputWithUnit
+/// Text input with unit
 ///
 /// @group 0000_form
 ///
 /// @example scss - usage
 ///
-///   @include k-TextInputWithUnit;
+///   $text-input-with-unit: (
+///     font: sans-serif,
+///     colors: (
+///       border: blue,
+///       error: red
+///     )
+///   )
+///
+///   @include k-TextInputWithUnit($text-input-with-unit);
 ///
 /// @example html
 ///
@@ -12,25 +20,30 @@
 ///     <input class="k-TextInputWithUnit__input" />
 ///     <span class="k-TextInputWithUnit__unit">$</span>
 ///   </div>
-@mixin k-TextInputWithUnit {
+@mixin k-TextInputWithUnit($text-input-with-unit) {
+  $font: map-get($text-input-with-unit, 'font');
+  $colors: map-get($text-input-with-unit, 'colors');
+  $error-color: map-get($colors, 'error');
+  $border-color: map-get($colors, 'border');
+
   .k-TextInputWithUnit {
     display: flex;
-    border: 1px solid #ddd;
+    border: 1px solid $border-color;
     border-radius: .3em;
 
     &.is-error {
-      border-color: red;
+      border-color: $error-color;
     }
   }
 
   .k-TextInputWithUnit__input {
     flex: 1;
-    padding: 1em 2em;
+    padding: 1em 2em; // ems to adapt to text size
 
     border: 0;
     background: transparent;
 
-    font-size: .9em;
+    @include k-font($font);
 
     // remove spinners on number inputs
     &::-webkit-inner-spin-button,
@@ -42,10 +55,12 @@
 
   .k-TextInputWithUnit__unit {
     padding: 1em 1.5em;
-    border-left: 1px solid #ddd;
+    border-left: 1px solid $border-color;
+
+    @include k-font($font);
 
     .k-TextInputWithUnit.is-error & {
-      border-color: red;
+      border-color: $error-color;
     }
   }
 }
