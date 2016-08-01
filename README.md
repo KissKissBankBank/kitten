@@ -192,7 +192,7 @@ The documentation is accessible on development environment: `/kitten/sassdoc`.
 ## Release
 
 To release a new version:
-- Update the version in `lib/kitten/version.rb`.
+- Update the version in `lib/kitten/version.rb` and `package.json`.
 - Update the `CHANGELOG.md` with your new features and fixes.
 - Run this command:
 ```
