@@ -16,7 +16,7 @@ flexible components based on your own brand elements
 
 ## Installation
 
-### For Ruby on Rails
+### Ruby on Rails
 
 Add this line to your application's Gemfile:
 
@@ -33,6 +33,90 @@ And then execute:
 
     $ bundle
 
+### Npm
+
+Install the dependency:
+```
+npm install kitten --save-dev
+```
+
+`kitten` module exposes load paths that Sass needs to resolve correcly
+`@import`:
+```js
+var kitten = require('kitten');
+
+// => {
+//   loadPath: …,
+//   dependenciesPaths: {
+//     sassyMaps: …,
+//     modularscale: …
+//   }
+// }
+```
+
+#### Grunt
+
+Once the module has been installed, if you use
+[grunt-contrib-sass](https://github.com/gruntjs/grunt-contrib-sass), you can add
+`kitten` and its dependencies to Sass load paths:
+
+```js
+var path = require('path');
+var kitten = require('kitten');
+
+grunt.initConfig({
+  sass: {
+    css: {
+      files: {
+        // your files
+      }
+    }
+  },
+  options: {
+    loadPath: [
+      kitten.loadPath,
+      kitten.dependenciesPaths.sassyMaps,
+      kitten.dependenciesPaths.modularscale
+    ]
+  }
+}
+```
+
+#### Webpack
+
+Once the module has beed installed, you can configure the `sass-loader` in your
+`webpack.config.js`:
+
+```js
+var kitten = require('kitten');
+
+var config = {
+  entry: …,
+  output: …,
+  module: {
+    loaders: [
+      {
+        test: /\.css$/,
+        loaders: ['css'],
+      },
+      {
+        test: /\.scss$/,
+        loaders: ['css', 'sass']
+      }
+    ]
+  },
+  sassLoader: {
+    includePaths: [
+      kitten.loadPath,
+      kitten.dependenciesPaths.sassyMaps,
+      kitten.dependenciesPaths.modularscale
+    ]
+  }
+}
+```
+
+You can find more documentation on [how to use webpack for
+stylesheets](http://webpack.github.io/docs/stylesheets.html).
 
 ## Usage
 
@@ -74,8 +158,8 @@ to start creating new components!
 #### Installation
 
 ```sh
-$ bundle      # install gem dependencies
-$ npm install # install node dependencies
+$ bundle                 # install gem dependencies
+$ npm install --only=dev # install node dependencies
 ```
 
 #### Style checker
@@ -104,7 +188,6 @@ $ npm run sassdoc
 ```
 
 The documentation is accessible on development environment: `/kitten/sassdoc`.
-
 
 ## Release
 
