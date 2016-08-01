@@ -1,4 +1,5 @@
-/// This mixin get the value in a map and check if it is required.
+/// This mixin returns a value from a given map for the given key.
+/// If the key cannot be found, it will throw an error during compilation.
 ///
 /// @group 0100_helpers
 ///
@@ -9,7 +10,7 @@
 ///   // 'bar'
 ///
 ///   k-map-fetch((foo: 'bar'), 'test');
-///   // 'test' is required
+///   // "test" is required in "k-module".
 
 @function k-map-fetch($map, $key) {
   @if type-of($map) != 'map' {
