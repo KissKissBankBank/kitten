@@ -1,4 +1,4 @@
-/// Define and validate a button.
+/// Define and validate colors of button.
 ///
 /// @group 0200_definitions
 ///
@@ -6,71 +6,22 @@
 ///
 /// @example scss - Usage
 ///
-///   $button: (
-///     colors: (
-///       base: (
-///         color: red,
-///         border-color: red,
-///         background-color: red
-///       ),
-///       …
-///     )
+///   $colors: (
+///     color: red,
+///     border-color: red,
+///     background-color: red
 ///   );
 ///
-///   $button: k-button-base-definition($button);
-
-@function k-button-base-definition($button-map) {
-  @return (
-    colors: k-button-colors-definition(
-      k-map-fetch($button-map, 'colors')
-    )
-  );
-}
+///   $colors: k-button-colors-definition($colors);
 
 @function k-button-colors-definition($colors) {
-  @return (
-    base: k-button-color-definition(
-      k-map-fetch($colors, 'base')
-    ),
-    hover: k-button-color-definition(
-      k-map-fetch($colors, 'hover')
-    ),
-    active: k-button-color-definition(
-      k-map-fetch($colors, 'active')
-    ),
-    disabled: k-button-color-definition(
-      map-get($colors, 'disabled')
-    ),
-    focus: k-button-color-definition(
-      map-get($colors, 'focus')
-    ),
-    is-selected: k-button-color-definition(
-      map-get($colors, 'is-selected')
-    )
-  );
-}
-
-@function k-button-color-definition($color) {
-  @if not $color {
-    @return $color;
+  @if not $colors {
+    @return ();
   }
 
   @return (
-    color: k-color-definition(
-      k-map-fetch($color, 'color')
-    ),
-    border-color: k-color-definition(
-      map-get($color, 'border-color')
-    ),
-    background-color: k-color-definition(
-      k-map-fetch($color, 'background-color')
-    )
+    color: k-color-definition(k-map-fetch($colors, 'color')),
+    border-color: k-color-definition(map-get($colors, 'border-color')),
+    background-color: k-color-definition(k-map-fetch($colors, 'background-color'))
   );
-}
-
-@function k-button-border-definition($border-color) {
-  $border-color: transparent !default; // Default value.
-  $border-color: k-required($border-color, 'border-color');
-
-  @return k-color-definition($border-color);
 }
