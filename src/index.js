@@ -2,7 +2,11 @@ var path = require('path');
 var kittenRootPath = path.resolve(__dirname, '..');
 
 module.exports = {
-  rootPath: kittenRootPath,
+  loadPath: path.join(
+    kittenRootPath,
+    'assets',
+    'stylesheets'
+  ),
   dependenciesPaths: {
     sassyMaps: path.join(
       kittenRootPath,
