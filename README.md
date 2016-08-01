@@ -56,7 +56,7 @@ var kitten = require('kitten');
 
 #### Grunt
 
-Once the module have been installed, if you use
+Once the module has been installed, if you use
 [grunt-contrib-sass](https://github.com/gruntjs/grunt-contrib-sass), you can add
 `kitten` and its dependencies to Sass load paths:
 
@@ -84,7 +84,7 @@ grunt.initConfig({
 
 #### Webpack
 
-Once the module have beed installed, you can configure the `sass-loader` in your
+Once the module has beed installed, you can configure the `sass-loader` in your
 `webpack.config.js`:
 
 ```js
