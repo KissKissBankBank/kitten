@@ -104,8 +104,8 @@
       color: $base-color;
       cursor: pointer;
       display: block;
-      padding: $padding;
       outline: none;
+      padding: $padding;
       transition: color .2s, border-color .2s;
 
       &:hover {
