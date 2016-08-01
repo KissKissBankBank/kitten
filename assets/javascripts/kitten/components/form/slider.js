@@ -123,7 +123,7 @@ window.Slider = React.createClass({
     const value = this.valueInBounds(to)
 
     this.props.onChange(value)
-    if (!this.props.grabbing)
+    if (!this.state.grabbing)
       this.props.onChangeEnd()
   },
 
@@ -151,7 +151,7 @@ window.Slider = React.createClass({
   render: function() {
     const trackStyles = { width: this.percentage() },
           thumbStyles = { left: this.percentage() },
-          grabbingClass = this.props.grabbing ? "is-grabbing" : null
+          grabbingClass = this.state.grabbing ? "is-grabbing" : null
 
     if (this.props.name)
       var input = <input type="hidden"
