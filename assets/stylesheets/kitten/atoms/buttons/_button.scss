@@ -54,17 +54,17 @@
   @include k-with-module('k-Button: $button') {
 
     // Button element default settings.
-    $k-button-min-width: 160px;
-    $k-button-line-height: 2.5;
+    $button-min-width: 160px;
+    $button-line-height: 2.5;
 
     // The button element has a radius of 1.25rem (
     //   20px (designed border-radius) / 16px (base font-size)
     // ). The horizontal paddings are computed using this radius.
-    $k-button-radius: 1.25em;
+    $button-radius: 1.25em;
 
     // Button font-size is computed using a modular scale and a defined step of this
     // scale.
-    $k-button-step: -2;
+    $button-step: -2;
 
     $typography: map-get($button, 'typography');
     $multiplier: map-get($button, 'multiplier');
@@ -75,15 +75,15 @@
       @include k-typographyFontSize(
         $typography,
         $multiplier,
-        $k-button-step,
-        $k-button-line-height
+        $button-step,
+        $button-line-height
       );
       @include k-typographyFontFamily($typography, $font);
       @include k-typographyFontStyle($typography, $font);
 
-      padding: 0 $k-button-radius * 2;
-      border-radius: $k-button-radius;
-      min-width: $k-button-min-width;
+      padding: 0 $button-radius * 2;
+      border-radius: $button-radius;
+      min-width: $button-min-width;
     }
   }
 }
