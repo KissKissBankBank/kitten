@@ -39,17 +39,20 @@ $button: (
 );
 
 $button-icon: (
-  size: (
-    tiny: 30px,
-    default: 40px,
-    big: 50px
-  ),
   colors: (
     base: (
+      color: #333,
       background-color: #fff,
       border-color: #d8d8d8
     ),
     hover: (
+      color: #333,
+      background-color: #fff,
+      border-color: #333
+    ),
+    focus: (
+      color: #333,
+      background-color: #fff,
       border-color: #333
     ),
     active: (
@@ -67,30 +70,26 @@ $button-icon: (
   )
 );
 
-$icon: (
-  width: 14px,
-  height: 12px
-);
-
 $button-image: (
-  size: (
-    tiny: 30px,
-    default: 40px,
-    big: 50px
-  ),
   colors: (
     base: (
+      color: #333,
+      background-color: #fff,
       border-color: #d8d8d8
     ),
     hover: (
+      color: #333,
+      background-color: #fff,
       border-color: #333
     ),
     active: (
+      color: #333,
+      background-color: #fff,
       border-color: #151515
     )
   )
 );
 
 @include k-Button($button);
-@include k-ButtonIcon($button-icon, $icon);
+@include k-ButtonIcon($button-icon);
 @include k-ButtonImage($button-image);

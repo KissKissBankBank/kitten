@@ -1,6 +1,12 @@
-/// TODO: Documentation…
+/// Some specific properties to fix rendenring differences between browsers 
+/// for the button element.
+///
+/// @group 0610_buttons_helpers
+///
+/// @example scss - Usage
+///   @include k-buttonBrowserFixes;
 
-@mixin k-buttonBrowserFixes() {
+@mixin k-buttonBrowserFixes {
 
   // Firefox : fix extra spacing in Firefox.
   &::-moz-focus-inner {

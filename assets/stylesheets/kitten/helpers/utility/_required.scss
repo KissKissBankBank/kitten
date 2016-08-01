@@ -1,0 +1,25 @@
+/// Returns the value for a given key. If the value is empty or null,
+/// it will throw an error during compilation.
+///
+/// @group 0100_helpers
+///
+/// @parameter {string} $value
+/// @parameter {string} $key - Use to show which key is required
+/// @parameter {boolean} $required
+///
+/// @return {value} 1.42rem
+///
+/// @example scss - Usage
+///   k-required(20px, 'font-size');
+///   // 20px
+///
+///   k-required('', 'font-size');
+///   // "font-size" is required "k-Button: $button"
+
+@function k-required($value, $name) {
+  @if not $value {
+    $error-message: k-log('"#{$name}" is required in "#{$k-module}".');
+  }
+
+  @return $value;
+}
