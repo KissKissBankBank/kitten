@@ -8,6 +8,11 @@
       'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' %>
 <%= csrf_meta_tags %>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.0/react.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.0/react-dom.min.js"></script>
+<%= javascript_include_tag 'kitten/application', type: 'text/babel' %>
+
 </head>
 <body>
 
