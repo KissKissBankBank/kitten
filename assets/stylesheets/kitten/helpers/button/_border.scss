@@ -1,5 +1,3 @@
-$k-button-border-width: 1px;
-
 /// Set a border of 1px on a button.
 ///
 /// Given a border color, this mixin will use the passed color to set the
@@ -15,16 +13,12 @@ $k-button-border-width: 1px;
 ///
 /// @example css - CSS output
 ///    border: 1px solid #ccc;
-@mixin k-buttonBorder($border-color) {
-  @if $border-color {
-    $valid: k-validate(
-      $border-color, k-color-schema(),
-      'k-buttonBorder', '$border-color'
-    );
 
-    border: $k-button-border-width solid $border-color;
-  }
-  @else {
-    border: $k-button-border-width solid transparent;
-  }
+@mixin k-buttonBorder($border-color) {
+  $button-border-width: 1px;
+
+  $border-color: transparent !default; // Default value.
+  $border-color: k-color-definition($border-color);
+
+  border: $button-border-width solid $border-color;
 }

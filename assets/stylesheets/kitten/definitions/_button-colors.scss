@@ -1,0 +1,27 @@
+/// Define and validate colors of button.
+///
+/// @group 0200_definitions
+///
+/// @return {map}
+///
+/// @example scss - Usage
+///
+///   $colors: (
+///     color: red,
+///     border-color: red,
+///     background-color: red
+///   );
+///
+///   $colors: k-button-colors-definition($colors);
+
+@function k-button-colors-definition($colors) {
+  @if not $colors {
+    @return ();
+  }
+
+  @return (
+    color: k-color-definition(k-map-fetch($colors, 'color')),
+    border-color: k-color-definition(map-get($colors, 'border-color')),
+    background-color: k-color-definition(k-map-fetch($colors, 'background-color'))
+  );
+}
