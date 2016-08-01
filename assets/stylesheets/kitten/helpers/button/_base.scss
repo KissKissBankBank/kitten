@@ -94,8 +94,8 @@
   // base colors
   $base: k-button-colors-definition(k-map-fetch($colors, 'base'));
   $base-color: map-get($base, 'color');
-  $base-border-color: map-get-deep($base, 'border-color');
-  $base-background-color: map-get-deep($base, 'background-color');
+  $base-border-color: map-get($base, 'border-color');
+  $base-background-color: map-get($base, 'background-color');
 
   // hover colors
   $hover: k-button-colors-definition(k-map-fetch($colors, 'hover'));
