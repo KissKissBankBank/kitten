@@ -4,7 +4,7 @@ window.SimulatorResult = React.createClass({
                          ? this.props.durationSymbol
                          : this.props.durationSymbolPlural
     return (
-      <div className="k-SimulatorResult">
+      <div className={classes("k-SimulatorResult", this.props.className)}>
         <div className="k-SimulatorResult__item">
           <div>
             {this.props.duration}

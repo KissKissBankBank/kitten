@@ -176,7 +176,8 @@ window.LoanSimulator = React.createClass({
 
     if (showResult) {
       var resultTag = (
-        <SimulatorResult duration={this.duration()}
+        <SimulatorResult className="k-LoanSimulator__result"
+                         duration={this.duration()}
                          durationSymbol={this.props.durationSymbol}
                          durationSymbolPlural={this.props.durationSymbolPlural}
                          durationText={this.props.durationText}
