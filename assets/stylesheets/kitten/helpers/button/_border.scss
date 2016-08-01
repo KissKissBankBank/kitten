@@ -15,8 +15,8 @@
 ///    border: 1px solid #ccc;
 
 @mixin k-buttonBorder($border-color) {
-  $k-button-border-width: 1px;
+  $button-border-width: 1px;
   $border-color: k-button-border-definition($border-color);
 
-  border: $k-button-border-width solid $border-color;
+  border: $button-border-width solid $border-color;
 }
