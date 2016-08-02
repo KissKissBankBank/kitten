@@ -2,10 +2,10 @@
 ///
 /// @group form
 ///
-///                       ,--> handle icon
-/// ===================[  •  ]----------------------------
-///       `--> progress     `--> handle          `--> ramp
-///
+/// @ignore                       ,--> handle icon
+/// @ignore
+/// @ignore ===================[  •  ]----------------------------
+/// @ignore      `--> progress     `--> handle          `--> ramp
 ///
 /// In JavaScript you should move the progress's `width` and the handle's `left`
 /// from 0 to 100%.
