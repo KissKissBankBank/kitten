@@ -119,26 +119,20 @@ $light-grey-2: #eee;
   padding: 3.25em 8em;
 }
 
-.k-StyleguideSection__allSection {
+.k-StyleguideSection__section {
   margin: 2rem 0 0 8rem;
 
   display: flex;
   flex-direction: row;
 }
 
-.k-StyleguideSection__allSection--vertical {
+.k-StyleguideSection__section--vertical {
   margin: 2rem 0 0 8rem;
 
   flex-direction: column;
 }
 
-// Section Buttons
-.k-StyleguideSection__allContainer {
-  padding-right: 3rem;
-  text-align: center;
-}
-
-.k-StyleguideSection__allTitle {
+.k-StyleguideSection__title {
   margin: 4rem 0 0 8rem;
 
   color: #333;
@@ -148,18 +142,24 @@ $light-grey-2: #eee;
   letter-spacing: 1px;
 }
 
-.k-StyleguideSection__allItem {
+// Section Example
+.k-StyleguideExample {
+  padding-right: 3rem;
+  text-align: center;
+}
+
+.k-StyleguideExample__title {
   color: #4a84ff;
   font-size: 0.75rem;
   font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
   font-weight: 600;
 }
 
-.k-StyleguideSection__allItem--margin {
+.k-StyleguideExample__title--margin {
   padding-right: 2rem;
 }
 
-.k-StyleguideSection__allDescription {
+.k-StyleguideExample__description {
   margin-right: 6rem;
   font-size: 1.25rem;
   font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
@@ -169,7 +169,7 @@ $light-grey-2: #eee;
   width: 40%;
 }
 
-.k-StyleguideSection__allBloc {
+.k-StyleguideExample__bloc {
   margin-top: 1.5rem;
   background-color: #4a84ff;
   width: 470px;
