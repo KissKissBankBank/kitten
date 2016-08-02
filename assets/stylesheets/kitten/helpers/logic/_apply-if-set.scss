@@ -1,6 +1,6 @@
 /// Set a CSS rule, but only if the key is defined in the values map.
 ///
-/// @group 0100_helpers
+/// @group helpers_logic
 ///
 /// @parameter {Map}    $values - a Sass map
 /// @parameter {String} $rule   - the CSS rule to set if `$key` is provided
