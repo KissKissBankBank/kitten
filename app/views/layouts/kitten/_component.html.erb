@@ -1,18 +1,18 @@
-<div class="k-StyleguideSection__allTitle"><%= title %></div>
+<div class="k-StyleguideSection__title"><%= title %></div>
 
 <% if defined?(examples_display) && examples_display == :vertical %>
-  <% classname = 'k-StyleguideSection__allSection--vertical' %>
+  <% classname = 'k-StyleguideSection__section--vertical' %>
 <% else %>
-  <% classname = 'k-StyleguideSection__allSection' %>
+  <% classname = 'k-StyleguideSection__section' %>
 <% end %>
 
 <section class="<%= classname %>">
   <%= render template: "kitten/#{component}" %>
 </section>
 
-<section class="k-StyleguideSection__allSection">
-  <div class="k-StyleguideSection__allDescription">
+<section class="k-StyleguideSection__section">
+  <div class="k-StyleguideExample__description">
     <p><%= description%></p>
   </div>
-  <div class="k-StyleguideSection__allBloc"></div>
+  <div class="k-StyleguideExample__bloc"></div>
 </section>
