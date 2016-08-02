@@ -160,7 +160,7 @@
 
 /// Validate if a value belongs to an enumeration.
 ///
-/// @group 0200_schema
+/// @group schema
 ///
 /// @parameter {Any}    $value  - any value
 /// @parameter {Map}    $schema - a Sass schema with an enumeration clause
@@ -185,7 +185,7 @@
 
 /// Get the value or a unit, or return none if not defined.
 ///
-/// @group 0200_schema
+/// @group schema
 ///
 /// @parameter {Any} $value - a value
 ///

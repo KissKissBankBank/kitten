@@ -16,7 +16,7 @@
 
 /// Raise an error message for a specific module and path.
 ///
-/// @group 0200_schema
+/// @group schema
 ///
 /// @parameter {String} $module  - module name
 /// @parameter {String} $path    - path to invalid attribute
@@ -36,7 +36,7 @@
 
 /// Raise a invalid unit error for a specific module and path.
 ///
-/// @group 0200_schema
+/// @group schema
 ///
 /// @parameter {String} $module    - module name
 /// @parameter {String} $path      - path to invalid attribute
