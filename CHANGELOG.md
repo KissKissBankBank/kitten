@@ -3,6 +3,8 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
+Minor updates:
+- Update `@group` property in SassDoc comments.
 
 ## [v0.3.0] - 2016-08-01
 New features:
