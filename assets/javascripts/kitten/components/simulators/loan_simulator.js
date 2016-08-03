@@ -132,15 +132,10 @@ window.LoanSimulator = React.createClass({
     if (!this.state.amount)
       return this.props.amountEmptyError
 
-    if (!this.isNumber(this.state.amount)
+    if (!isNumber(this.state.amount)
         || this.state.amount < this.props.amountMin
         || this.state.amount > this.props.amountMax)
       return this.props.amountOutOfBoundsError
-  },
-
-  isNumber: function(number) {
-    const float = parseFloat(number)
-    return (!isNaN(float) && float + '' == number + '')
   },
 
   installmentMin: function() {
