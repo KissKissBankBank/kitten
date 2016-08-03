@@ -40,11 +40,6 @@
 ///       )
 ///     )
 ///   )
-///
-///   $icon: (
-///     width: 14px,
-///     height: 12px
-///   )
 
 @mixin k-ButtonIcon($button-icon) {
   @include k-with-module('k-ButtonIcon: $button-icon') {

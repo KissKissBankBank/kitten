@@ -105,9 +105,9 @@
 
   // active colors
   $active: k-button-colors-definition(k-map-fetch($colors, 'active'));
-  $active-color: map-get($colors, 'color');
-  $active-border-color: map-get($colors, 'border-color');
-  $active-background-color: map-get($colors, 'background-color');
+  $active-color: map-get($active, 'color');
+  $active-border-color: map-get($active, 'border-color');
+  $active-background-color: map-get($active, 'background-color');
 
   // disabled colors (optional)
   $disabled: k-button-colors-definition(map-get($colors, 'disabled'));

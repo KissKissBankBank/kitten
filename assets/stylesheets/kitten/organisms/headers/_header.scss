@@ -1,0 +1,32 @@
+.k-Header {
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.is-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9;
+  }
+}
+
+.k-Header__items {
+  align-self: flex-start;
+  display: flex;
+  align-items: center; // Vertical align.
+}
+
+.k-Header__items__right {
+  margin-left: auto;
+  display: flex;
+  align-items: center; // Vertical align.
+}
+
+.k-Header__item {
+  margin: 0 10px;
+}
