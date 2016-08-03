@@ -1,32 +1,63 @@
-.k-Header {
-  background-color: #fff;
-  border-bottom: 1px solid #eee;
+/// Header
+///
+/// @group headers
+///
+/// @example scss - usage
+///
+///   @include k-Header;
+///
+/// @example html
+///
+///   <header class="k-Header">
+///     <div class="k-Header__items">
+///       <div class="k-Header__item">
+///         …
+///       </div>
+///     </div>
+///
+///     <div class="k-Header__items__right">
+///       <div class="k-Header__item">
+///         …
+///       </div>
+///     </div>
+///   </div>
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+@mixin k-Header() {
+  $background-color: #fff;
+  $border-color: #eee;
 
-  &.is-fixed {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 9;
+  // TODO: adapt with grid.
+  $gutter: 20px;
+
+  .k-Header {
+    background-color: $background-color;
+    border-bottom: 1px solid $border-color;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.is-fixed {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 10;
+    }
   }
-}
 
-.k-Header__items {
-  align-self: flex-start;
-  display: flex;
-  align-items: center; // Vertical align.
-}
+  .k-Header__items {
+    display: flex;
+    align-items: center;
+    align-self: flex-start;
+  }
 
-.k-Header__items__right {
-  margin-left: auto;
-  display: flex;
-  align-items: center; // Vertical align.
-}
+  .k-Header__items--end {
+    align-self: auto;
+    margin-left: auto;
+  }
 
-.k-Header__item {
-  margin: 0 10px;
+  .k-Header__item {
+    padding: 0 $gutter / 2;
+  }
 }
