@@ -1,5 +1,5 @@
-/// This mixin returns a value from a given map for the given key.
-/// If the key cannot be found, it will throw an error during compilation.
+/// This mixin returns a value from a given map for the given key(s).
+/// If the value cannot be found, it will throw an error during compilation.
 ///
 /// @group helpers_utility
 ///
@@ -13,6 +13,6 @@
 ///   // "test" is required in "k-module".
 
 @function k-map-fetch($map, $key) {
-  $value: map-get($map, $key);
+  $value: map-get-deep($map, $key);
   @return k-required($value, $key);
 }
