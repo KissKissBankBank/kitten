@@ -51,7 +51,7 @@ window.Slider = React.createClass({
   },
 
   handleKeyDown: function(e) {
-    // Make bigger steps when alt or shift key is beeing held
+    // Make bigger steps when alt or shift key is being held
     const { min, max } = this.props
 
     // make larger steps if alt or shift is entered,
