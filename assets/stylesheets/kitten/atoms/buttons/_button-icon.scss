@@ -49,8 +49,8 @@
     $button-size-big: 50px;
 
     // SVG element default settings.
-    $icon-width: k-px-to-rem(14px);
-    $icon-height: k-px-to-rem(12px);
+    $icon-width: k-px-to-rem(10px);
+    $icon-height: k-px-to-rem(10px);
 
     // Get data for SVG.
     $colors: map-get($button-icon, 'colors');
