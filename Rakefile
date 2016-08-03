@@ -31,7 +31,8 @@ desc "Generate documentation, commit, create tag v#{Kitten::VERSION}, " \
      'build and push (make sure you update version.rb and Changelog.md ' \
      'beforehand)'
 task kitten_release: [:sassdoc, :build] do
-  sh 'git add lib/kitten/version.rb CHANGELOG.md public/sassdoc/index.html'
+  sh 'git add lib/kitten/version.rb CHANGELOG.md public/sassdoc/index.html ' \
+     'package.json'
   sh "git commit -m v#{Kitten::VERSION}"
   sh "git tag v#{Kitten::VERSION}"
   sh 'git push origin master'

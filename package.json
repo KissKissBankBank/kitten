@@ -1,7 +1,11 @@
 {
   "name": "kitten",
-  "version": "0.1.0",
+  "version": "0.3.0",
   "description": "Components library for Sass",
+  "main": "src/index.js",
+  "publishConfig": {
+    "registry": "https://npm.fury.io/bob"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/KissKissBankBank/kitten.git"
@@ -18,6 +22,11 @@
     "sassdoc": "^2.1.20",
     "stylelint": "^6.7.1",
     "stylelint-scss": "^1.2.0"
+  },
+  "dependencies": {
+    "node-sass": "^3.8.0",
+    "modularscale-sass": "^2.1.1",
+    "sassy-maps": "at-import/Sassy-Maps#v0.4.0"
   },
   "scripts": {
     "sassdoc": "sassdoc -d public/sassdoc assets/stylesheets",
