@@ -128,7 +128,7 @@ window.Slider = React.createClass({
   },
 
   valueInBounds: function(value) {
-    let { min, max, step } = this.props
+    const { min, max, step } = this.props
 
     if (value === null)
       return min < max ? min : max
