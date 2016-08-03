@@ -21,7 +21,8 @@
 ///     <span class="k-TextInputWithUnit__unit">$</span>
 ///   </div>
 @mixin k-TextInputWithUnit($text-input-with-unit) {
-  $font: map-get($text-input-with-unit, 'font');
+  $input-font: map-get($text-input-with-unit, 'input-font');
+  $unit-font: map-get($text-input-with-unit, 'unit-font');
   $colors: map-get($text-input-with-unit, 'colors');
   $error-color: map-get($colors, 'error');
   $border-color: map-get($colors, 'border');
@@ -43,7 +44,7 @@
     border: 0;
     background: transparent;
 
-    @include k-font($font);
+    @include k-font($input-font);
 
     // remove spinners on number inputs
     &::-webkit-inner-spin-button,
@@ -57,7 +58,7 @@
     padding: 1em 1.5em;
     border-left: 1px solid $border-color;
 
-    @include k-font($font);
+    @include k-font($unit-font);
 
     .k-TextInputWithUnit.is-error & {
       border-color: $error-color;

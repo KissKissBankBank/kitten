@@ -9,17 +9,18 @@ $label: (
 
 $label-with-info: (
   colors: (
-    active: purple,
+    active: black,
     inactive: #aaa
   )
 );
 
 $slider: (
-  color: purple
+  color: black
 );
 
 $text-input-with-unit: (
-  font: source-sans,
+  input-font: source-sans,
+  unit-font: source-sans-semi-bold,
   colors: (
     border: #ddd,
     error: red
