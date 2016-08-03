@@ -27,9 +27,10 @@
 @mixin k-ButtonImage($button-image) {
   @include k-with-module('k-ButtonImage: $button-image') {
 
-    $button-size: 40px;
-    $button-size-tiny: 30px;
-    $button-size-big: 50px;
+    // Add 2px for the border.
+    $button-size: 42px;
+    $button-size-tiny: 32px;
+    $button-size-big: 52px;
 
     .k-ButtonImage {
       @include k-buttonBase($button-image);
@@ -56,6 +57,5 @@
       width: 100%;
       height: 100%;
     }
-
   }
 }
