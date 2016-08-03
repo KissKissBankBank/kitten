@@ -105,8 +105,8 @@ window.Slider = React.createClass({
 
     const { min, max } = this.props
     const coordinate = e.touches ? e.touches[0].clientX : e.clientX
-    const track = this.refs.track.getBoundingClientRect()
-    const ratio = (coordinate - track.left) / track.width
+    const trackPosition = this.refs.track.getBoundingClientRect()
+    const ratio = (coordinate - trackPosition.left) / trackPosition.width
     const value = Math.round(ratio * (max - min) + min)
 
     this.move(value)
