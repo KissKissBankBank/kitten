@@ -174,17 +174,25 @@ window.LoanSimulator = React.createClass({
       var infoClass = "is-inactive"
     }
 
+    const durationSymbol = this.duration() === 1
+                         ? this.props.durationSymbol
+                         : this.props.durationSymbolPlural
+
     if (showResult) {
-      var resultTag = (
-        <SimulatorResult className="k-LoanSimulator__result"
-                         duration={this.duration()}
-                         durationSymbol={this.props.durationSymbol}
-                         durationSymbolPlural={this.props.durationSymbolPlural}
-                         durationText={this.props.durationText}
-                         fee={this.toCurrency(this.feeCents())}
-                         feeSymbol={this.props.currencySymbol}
-                         feeText={this.props.feeText} />
-      )
+      const results = [
+        {
+          label: this.props.durationText,
+          value: this.duration() + ' ' + durationSymbol
+        },
+        {
+          label: this.props.feeText,
+          value: this.toCurrency(this.feeCents())
+                 + ' '
+                 + this.props.currencySymbol
+        }
+      ]
+      var resultTag = <SimulatorResult className="k-LoanSimulator__result"
+                                       results={results} />
     }
 
     return (

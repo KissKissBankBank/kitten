@@ -1,26 +1,27 @@
+// Columns of simulator results.
+//
+// Accepts an array of results:
+//     [{ label: 'Foo', value: 42 }, { label: 'Bar', value: 0 }]
 window.SimulatorResult = React.createClass({
   render: function() {
-    const durationSymbol = this.props.duration === 1
-                         ? this.props.durationSymbol
-                         : this.props.durationSymbolPlural
+    const { results } = this.props
+    const contents = results.map(function(result, index) {
+      var valueClass = (index == results.length - 1) ? "is-last" : null
+      return (
+        <div className={classes("k-SimulatorResult__item", valueClass)}>
+          <div className="k-SimulatorResult__item__label">
+            {result.label}
+          </div>
+          <div className="k-SimulatorResult__item__value">
+            {result.value}
+          </div>
+        </div>
+      )
+    })
+
     return (
       <div className={classes("k-SimulatorResult", this.props.className)}>
-        <div className="k-SimulatorResult__item">
-          <div>
-            {this.props.duration}
-            {' '}
-            <sup>{durationSymbol}</sup>
-          </div>
-          <div>{this.props.durationText}</div>
-        </div>
-        <div className="k-SimulatorResult__item is-last">
-          <div>
-            {this.props.fee}
-            {' '}
-            <sup>{this.props.feeSymbol}</sup>
-          </div>
-          <div>{this.props.feeText}</div>
-        </div>
+        {contents}
       </div>
     )
   }
