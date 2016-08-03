@@ -149,8 +149,9 @@ window.Slider = React.createClass({
   },
 
   render: function() {
-    const trackStyles = { width: this.percentage() },
-          thumbStyles = { left: this.percentage() },
+    const percentage = this.percentage(),
+          trackStyles = { width: percentage },
+          thumbStyles = { left: percentage },
           grabbingClass = this.state.grabbing ? "is-grabbing" : null
 
     if (this.props.name)

@@ -13,7 +13,7 @@ window.SimulatorResult = React.createClass({
           </div>
           <div>{this.props.durationText}</div>
         </div>
-        <div className="k-SimulatorResult__item k-SimulatorResult__item--last">
+        <div className="k-SimulatorResult__item is-last">
           <div>
             {this.props.fee}
             {' '}
