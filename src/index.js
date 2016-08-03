@@ -1,24 +1,15 @@
 var path = require('path');
-var kittenRootPath = path.resolve(__dirname, '..');
 
 module.exports = {
-  loadPath: path.join(
-    kittenRootPath,
-    'assets',
-    'stylesheets'
-  ),
-  dependenciesPaths: {
-    sassyMaps: path.join(
-      kittenRootPath,
-      'node_modules',
-      'sassy-maps',
-      'sass'
-    ),
-    modularscale: path.join(
-      kittenRootPath,
-      'node_modules',
-      'modularscale-sass',
-      'stylesheets'
-    )
+  loadPaths: function() {
+    var kittenPath = require.resolve('kitten');
+    var sassyMapsPath = require.resolve('sassy-maps');
+    var modularscalePath = require.resolve('modularscale-sass');
+
+    return [
+      path.join(kittenPath, '..', '..', 'assets', 'stylesheets'),
+      path.join(sassyMapsPath, '..'),
+      path.join(modularscalePath, '..')
+    ];
   }
 };
