@@ -33,13 +33,12 @@
   $handle-color: #aaa;
 
   $ramp-height: .25rem;
-  $handle-size: 2rem;
-  $spacing: 1rem;
+  $handle-size: 2.5rem;
   $transition-speed: .2s;
   $handle-icon-size: .6rem;
 
   .k-Slider {
-    padding: $spacing;
+    padding: ($handle-size / 2);
 
     // a click anywhere on the slider should move it around
     cursor: pointer;
@@ -63,7 +62,7 @@
       position: absolute;
       top: 0;
       display: block;
-      width: $spacing;
+      width: ($handle-size / 2);
       height: 100%;
       content: '';
     }
@@ -96,7 +95,7 @@
     z-index: 1; // go over ramp's :after
     position: absolute;
     left: 0; // moved by JS from 0 to 100%
-    top: -$spacing;
+    top: -($handle-size / 2);
 
     // to align the icon in its center
     align-items: center;
