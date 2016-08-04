@@ -1,4 +1,4 @@
-@import 'kitten/molecules/navs/horizontal-nav';
+@import 'kitten/molecules/navigations/horizontal-nav';
 
 $typography: map-merge($typography, (
   font-size: k-px-to-rem(12px),
