@@ -6,6 +6,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 Minor updates:
 - Update `@group` property in SassDoc comments.
 
+New features:
+- Update npm exports.
+
 ## [v0.3.0] - 2016-08-01
 New features:
 - Add new component: `loan-simulator` organism.

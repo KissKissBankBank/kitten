@@ -26,7 +26,7 @@
   "dependencies": {
     "node-sass": "^3.8.0",
     "modularscale-sass": "^2.1.1",
-    "sassy-maps": "at-import/Sassy-Maps#v0.4.0"
+    "sassy-maps": "^0.4.2"
   },
   "scripts": {
     "sassdoc": "sassdoc -d public/sassdoc assets/stylesheets",
