@@ -25,13 +25,16 @@
 @mixin k-Header() {
   $background-color: #fff;
   $border-color: #eee;
+  $border-width: 1px;
 
   // TODO: adapt with grid.
   $gutter: 20px;
 
   .k-Header {
     background-color: $background-color;
-    border-bottom: 1px solid $border-color;
+    border-bottom: $border-width solid $border-color;
+    position: relative;
+    box-sizing: border-box;
 
     &.is-fixed {
       position: fixed;
@@ -40,6 +43,7 @@
       z-index: 10;
 
       width: 100%;
+      height: k-px-to-rem(65px);
     }
   }
 
