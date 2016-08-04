@@ -30,8 +30,6 @@ var sassLoadPaths = kitten
                         normalizePath
                       ]);
 
-console.log(sassLoadPaths);
-
 var config = {
   entry: {
     // Sources are expected to live in $app_root/webpack
@@ -65,6 +63,7 @@ var config = {
     }),
     new ExtractTextPlugin(cssFilename, { allChunks: true })
   ],
+
   module: {
     loaders: [
       {
@@ -77,6 +76,7 @@ var config = {
       }
     ]
   },
+
   sassLoader: {
     includePaths: sassLoadPaths
   }
