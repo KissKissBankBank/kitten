@@ -51,6 +51,9 @@
 ///     ...;
 ///   }
 @mixin k-TypographyBodyCopy($body-copy) {
+  $font: k-map-fetch($body-copy, 'family');
+  $color: k-map-fetch($body-copy, 'color');
+
   // The root font size applied to the HTML document.
   $root: k-map-fetch($k-typography, 'root');
 
@@ -74,9 +77,9 @@
     font-size: $base-font-size;
     font-weight: $base-font-weight;
     line-height: $base-line-height;
+    color: $color;
 
-    @include k-typographyFontFamily($body-copy);
-    @include k-typographyFontStyle($body-copy);
+    @include k-font($font);
 
     // Apply this class on the body element to display the baseline grid.
     &.withGrid {

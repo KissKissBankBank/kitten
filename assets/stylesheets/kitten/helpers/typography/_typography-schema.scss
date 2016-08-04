@@ -11,22 +11,6 @@ $k-typography-schema: (
     font-size:   k-number-schema($unit: rem),
     font-weight: k-number-schema($unit: none),
     line-height: k-number-schema($unit: rem),
-
-    typeface: (
-      type: 'map',
-
-      additional-properties: (
-        type: 'map',
-
-        properties: (
-          family: k-string-schema(),
-        ),
-
-        required: (
-          'family'
-        )
-      )
-    )
   ),
 
   required: (

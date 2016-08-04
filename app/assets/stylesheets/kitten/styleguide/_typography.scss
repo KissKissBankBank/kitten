@@ -4,17 +4,7 @@ $k-typography: (
   font-size: 1rem,
   font-weight: 400,
   line-height: 1.5rem,
-  scale-multiplier: $major-second,
-
-  // TODO: remove some day
-  typeface: (
-    source-sans: (
-      family: '"Source Sans Pro", Helvetica, Arial, sans-serif'
-    ),
-    source-sans-semi-bold: (
-      family: '"Source Sans Pro", Helvetica, Arial, sans-serif'
-    )
-  )
+  scale-multiplier: $major-second
 );
 
 $body-copy: (

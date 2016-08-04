@@ -15,17 +15,7 @@
 ///   );
 ///
 ///   $button: (
-///     multiplier: $major-second,
-///
-///     font: (
-///       family: 'source-sans',
-///       font-weight: 600,
-///       letter-spacing: 1px,
-///       text-transform: uppercase,
-///       text-decoration: none,
-///       text-align: center
-///     ),
-///
+///     font: 'source-sans',
 ///     colors: (
 ///       base: (
 ///         color: #333,
@@ -65,18 +55,20 @@
     // scale.
     $button-step: -2;
 
-    $multiplier: map-get($button, 'multiplier');
-    $font: map-get($button, 'font');
+    $font: k-map-fetch($button, 'font');
 
     .k-Button {
       @include k-buttonBase($button);
       @include k-typographyFontSize($button-step, $button-line-height);
-      @include k-typographyFontFamily($font);
-      @include k-typographyFontStyle($font);
+      @include k-font($font);
 
       padding: 0 $button-radius * 2;
       border-radius: $button-radius;
       min-width: $button-min-width;
+
+      text-transform: uppercase;
+      text-decoration: none;
+      text-align: center;
     }
   }
 }

@@ -10,20 +10,17 @@ $k-typography-scale-schema: (
     styles: (
       type: 'map',
 
-      additional-properties: map-merge(
-        $k-font-style-schema,
-        (
-          type: 'map',
+      additional-properties: (
+        type: 'map',
 
-          properties: (
-            family: k-string-schema(),
-            step:   k-number-schema($unit: none),
-          ),
+        properties: (
+          family: k-string-schema(),
+          step:   k-number-schema($unit: none),
+        ),
 
-          required: (
-            'family',
-            'step'
-          )
+        required: (
+          'family',
+          'step'
         )
       )
     )

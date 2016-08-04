@@ -116,26 +116,28 @@
 ///     font-weight: 300;
 ///   }
 @mixin k-TypographyScale($scale) {
-  $valid:
-    k-validate(
-      $scale,
-      $k-typography-scale-schema,
-      'k-TypographyScale',
-      '$scale'
+  @include k-with-module('k-TypographyScale: $scale') {
+    $valid:
+      k-validate(
+        $scale,
+        $k-typography-scale-schema,
+        'k-TypographyScale',
+        '$scale'
+      );
+
+    $styles: map-get($scale, 'styles');
+    $multiplier: k-number-definition(
+      k-map-fetch($k-typography, 'scale-multiplier')
     );
 
-  $styles: map-get($scale, 'styles');
-  $multiplier: k-number-definition(
-    k-map-fetch($k-typography, 'scale-multiplier')
-  );
+    @each $style-name, $style in $styles {
+      $step: k-default(map-get($style, 'step'), 0);
+      $font: k-map-fetch($style, 'family');
 
-  @each $style-name, $style in $styles {
-    $step: k-default(map-get($style, 'step'), 0);
-
-    .k-#{$style-name} {
-      @include k-typographyFontFamily($style);
-      @include k-typographyFontSize($step);
-      @include k-typographyFontStyle($style);
+      .k-#{$style-name} {
+        @include k-font($font);
+        @include k-typographyFontSize($step);
+      }
     }
   }
 }
