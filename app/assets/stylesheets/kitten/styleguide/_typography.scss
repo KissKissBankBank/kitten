@@ -18,14 +18,12 @@ $typography: (
     source-sans-semi-bold: (
       family: '"Source Sans Pro", Helvetica, Arial, sans-serif'
     )
-  ),
-
-  // TODO: remove some day
-  body-copy: (
-    family: 'source-sans',
-    font-smooth: subpixel-antialiased,
-    color: #333
   )
+);
+
+$body-copy: (
+  family: 'source-sans',
+  color: #333
 );
 
 $typographic-scale: (
@@ -68,6 +66,4 @@ $typographic-scale: (
 );
 
 @include k-TypographyScale($typographic-scale);
-
-// TODO: do not pass $typography
-@include k-TypographyBodyCopy($typography);
+@include k-TypographyBodyCopy($body-copy);

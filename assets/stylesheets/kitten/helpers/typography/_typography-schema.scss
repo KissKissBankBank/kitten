@@ -26,19 +26,6 @@ $k-typography-schema: (
           'family'
         )
       )
-    ),
-    body-copy: (
-      type: 'map',
-
-      properties: (
-        family: k-string-schema(),
-        color:  k-color-schema()
-      ),
-
-      required: (
-        'family',
-        'color'
-      )
     )
   ),
 
@@ -47,7 +34,6 @@ $k-typography-schema: (
     'font-size',
     'font-weight',
     'line-height',
-    'typeface',
-    'body-copy'
+    'typeface'
   )
 );
