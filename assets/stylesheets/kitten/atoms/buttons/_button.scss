@@ -74,7 +74,7 @@
       @include k-buttonBase($button);
       @include k-typographyFontSize($button-step, $button-line-height);
       @include k-typographyFontFamily($typography, $font);
-      @include k-typographyFontStyle($typography, $font);
+      @include k-typographyFontStyle($font);
 
       padding: 0 $button-radius * 2;
       border-radius: $button-radius;

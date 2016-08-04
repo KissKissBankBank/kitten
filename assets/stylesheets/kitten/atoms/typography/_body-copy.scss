@@ -15,10 +15,10 @@
 ///
 /// @group typography
 ///
-/// @parameter {Map} $typography - a typography object
+/// @parameter {Map} body-copy - family and color map
 ///
 /// @example scss - Usage
-///   $typography: (
+///   $k-typography: (
 ///     root: 18px,
 ///
 ///     font-size:   1rem,
@@ -52,16 +52,16 @@
 ///   }
 @mixin k-TypographyBodyCopy($body-copy) {
   // The root font size applied to the HTML document.
-  $root: k-map-fetch($typography, 'root');
+  $root: k-map-fetch($k-typography, 'root');
 
   // The starting font size applied to the body element.
-  $base-font-size: k-map-fetch($typography, 'font-size');
+  $base-font-size: k-map-fetch($k-typography, 'font-size');
 
   // The starting font weight applied to the body element.
-  $base-font-weight: k-map-fetch($typography, 'font-weight');
+  $base-font-weight: k-map-fetch($k-typography, 'font-weight');
 
   // The base line height.
-  $base-line-height: k-map-fetch($typography, 'line-height');
+  $base-line-height: k-map-fetch($k-typography, 'line-height');
 
   // Start by resetting the document font size to the requested value.
   html {
@@ -75,8 +75,8 @@
     font-weight: $base-font-weight;
     line-height: $base-line-height;
 
-    @include k-typographyFontFamily($typography, $body-copy);
-    @include k-typographyFontStyle($typography, $body-copy);
+    @include k-typographyFontFamily($k-typography, $body-copy);
+    @include k-typographyFontStyle($body-copy);
 
     // Apply this class on the body element to display the baseline grid.
     &.withGrid {

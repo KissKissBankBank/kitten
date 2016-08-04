@@ -1,9 +1,8 @@
 // TODO: remove in favor of map-get($k-typography, 'root')
 $k-root-font-size: 16px !global;
 
-// TODO: rename to k-typography
 // TODO: use k-typography-definition
-$typography: (
+$k-typography: (
   root: $k-root-font-size,
   font-size: 1rem,
   font-weight: 400,

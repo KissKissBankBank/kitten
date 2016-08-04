@@ -93,9 +93,9 @@
     }
 
     .k-HorizontalNav__item {
-      @include k-typographyFontSize($typography, $multiplier, 0, $line-height);
+      @include k-typographyFontSize(0, $line-height);
       @include k-typographyFontFamily($typography, $font);
-      @include k-typographyFontStyle($typography, $font);
+      @include k-typographyFontStyle($font);
 
       background-color: $base-background-color;
       border-bottom: 1px solid $base-border-color;

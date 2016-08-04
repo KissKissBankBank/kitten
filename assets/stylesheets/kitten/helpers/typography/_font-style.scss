@@ -13,31 +13,24 @@
 ///
 /// @group typography
 ///
-/// @parameter {Map} $typography - a typography object
 /// @parameter {Map} $font-style - a map with font styles
 ///
 /// @example scss - Usage
-///   $typography: (
-///      ...
-///   );
 ///
-///   $bold-italic: (
+///   $font-style: (
 ///     font-style:  'italic',
 ///     font-weight: 700
 ///   );
 ///
-///   @include k-typographyFontStyle($typography, $font-style);
+///   @include k-typographyFontStyle($font-style);
 ///
 /// @example css - CSS output
+///
 ///   font-style:  'italic';
 ///   font-weight: 700;
-@mixin k-typographyFontStyle($typography, $font-style) {
+@mixin k-typographyFontStyle($font-style) {
   $valid:
     k-all(
-      k-validate(
-        $typography, $k-typography-schema,
-        'typography_FontStyle', '$typography'
-      ),
       k-validate(
         $font-style, $k-font-style-schema,
         'typography_FontStyle', '$font-style'

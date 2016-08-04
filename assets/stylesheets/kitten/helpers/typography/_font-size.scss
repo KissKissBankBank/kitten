@@ -7,13 +7,11 @@
 ///
 /// @group typography
 ///
-/// @parameter {Map}    $typography         - a typography object
-/// @parameter {Number} $multiplier         - the modular scale base ratio
 /// @parameter {Number} $step               - the modular scale step to compute
 /// @parameter {Number} $line-height [null] - the line-height
 ///
 /// @example scss - Usage
-///   $typography: (
+///   $k-typography: (
 ///     font-size:   1rem,
 ///     line-height: 1.5rem,
 ///     scale-multiplier: 1.618
@@ -27,14 +25,10 @@
 ///   line-height: 4.5rem;
 @mixin k-typographyFontSize($step, $line-height: null) {
   // Modular scale multiplier
-  $multiplier: k-map-fetch($typography, 'scale-multiplier');
+  $multiplier: k-map-fetch($k-typography, 'scale-multiplier');
 
   $valid:
     k-all(
-      k-validate(
-        $typography, $k-typography-schema,
-        'k-typographyFontSize', '$typography'
-      ),
       k-validate(
         $multiplier, k-number-schema($unit: none),
         'k-typographyFontSize', '$multiplier'
@@ -46,10 +40,10 @@
     );
 
   // The starting font size applied to the body element.
-  $base-font-size: map-get($typography, 'font-size');
+  $base-font-size: k-map-fetch($k-typography, 'font-size');
 
   // The base line height.
-  $base-line-height: map-get($typography, 'line-height');
+  $base-line-height: k-map-fetch($k-typography, 'line-height');
 
   // Given the requested step on our modular scale, compute font size.
   $font-size: ms($step, $base-font-size, $multiplier);

@@ -17,7 +17,7 @@
 /// @parameter {Map} $scale - a typographic scale specification
 ///
 /// @example scss - Usage
-///   $typography: (
+///   $k-typography: (
 ///      scale-multiplier: 1.42,
 ///      ...
 ///   );
@@ -126,16 +126,16 @@
 
   $styles: map-get($scale, 'styles');
   $multiplier: k-number-definition(
-    k-map-fetch($typography, 'scale-multiplier')
+    k-map-fetch($k-typography, 'scale-multiplier')
   );
 
   @each $style-name, $style in $styles {
     $step: k-default(map-get($style, 'step'), 0);
 
     .k-#{$style-name} {
-      @include k-typographyFontFamily($typography, $style);
+      @include k-typographyFontFamily($k-typography, $style);
       @include k-typographyFontSize($step);
-      @include k-typographyFontStyle($typography, $style);
+      @include k-typographyFontStyle($style);
     }
   }
 }
