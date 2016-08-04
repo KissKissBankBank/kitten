@@ -154,10 +154,7 @@ window.LoanSimulator = React.createClass({
 
   render: function() {
     const { label } = this.props
-    const { installmentAmount } = this.state
-
-    const { dragged, touched } = this.state
-    const resultCents = null
+    const { installmentAmount, dragged, touched } = this.state
     const error = this.error()
     const showResult = !error && touched
 
