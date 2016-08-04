@@ -32,14 +32,13 @@
   $ramp-color: #eee;
   $handle-color: #aaa;
 
-  $ramp-height: .25rem;
-  $handle-size: 2rem;
-  $spacing: 1.25rem;
+  $ramp-height: .2rem;
+  $handle-size: 2.5rem;
   $transition-speed: .2s;
   $handle-icon-size: .6rem;
 
   .k-Slider {
-    padding: $spacing;
+    padding: ($handle-size / 2);
 
     // a click anywhere on the slider should move it around
     cursor: pointer;
@@ -57,6 +56,25 @@
     height: $ramp-height;
 
     background: $ramp-color;
+
+    &:before,
+    &:after {
+      position: absolute;
+      top: 0;
+      display: block;
+      width: ($handle-size / 2);
+      height: 100%;
+      content: '';
+    }
+
+    &:before {
+      left: -($handle-size / 2);
+      background: $progress-color;
+    }
+    &:after {
+      right: -($handle-size / 2);
+      background: $ramp-color;
+    }
   }
 
   .k-Slider__progress {
@@ -74,8 +92,10 @@
   }
 
   .k-Slider__handle {
+    z-index: 1; // go over ramp's :after
     position: absolute;
     left: 0; // moved by JS from 0 to 100%
+    top: -($handle-size / 2);
 
     // to align the icon in its center
     align-items: center;
@@ -84,7 +104,6 @@
 
     height: $handle-size;
     width: $handle-size;
-    margin-top: -$spacing;
     margin-left: -($handle-size / 2);
 
     outline: 0; // hide default outline in favor of our hand-made focus style

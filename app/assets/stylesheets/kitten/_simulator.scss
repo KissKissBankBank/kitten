@@ -3,10 +3,12 @@
 
 $simulator-result: (
   colors: (
-    border: purple,
-    background: rgba(purple, .03),
-    text: purple
-  )
+    border: black,
+    background: whitesmoke,
+    text: black
+  ),
+  label-font: source-sans-uppercase,
+  value-font: source-sans-semi-bold,
 );
 
 @include k-LoanSimulator;

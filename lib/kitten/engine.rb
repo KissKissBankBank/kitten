@@ -8,8 +8,8 @@ module Kitten
     # Add kitten stylesheets paths to app assets paths.
     initializer :append_kitten_paths do |app|
 
-      # kitten stylesheets
-      %w(stylesheets).each do |directory|
+      # kitten assets
+      %w(stylesheets javascripts).each do |directory|
         app.config.assets.paths << root.join('assets', directory).to_s
       end
 
