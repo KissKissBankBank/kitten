@@ -18,7 +18,6 @@ $light-grey-2: #eee;
 
   background-color: $blue;
   color: white;
-  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
   font-size: 1.2rem;
   font-weight: 300;
   line-height: 4rem;
@@ -30,7 +29,6 @@ $light-grey-2: #eee;
 
   color: #333;
   font-size: 1.5rem;
-  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
   font-weight: 400;
   letter-spacing: 1px;
   line-height: 2.4rem;
@@ -60,7 +58,6 @@ $light-grey-2: #eee;
   padding-right: 1rem;
 
   font-size: 0.75rem;
-  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
   font-weight: 300;
   letter-spacing: 1px;
   line-height: 4rem;
@@ -72,7 +69,6 @@ $light-grey-2: #eee;
   padding-left: 1rem;
   border-bottom: 1px solid $light-navy;
 
-  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
   font-size: 1.25rem;
   font-weight: 400;
   line-height: 3.2rem;
@@ -102,7 +98,6 @@ $light-grey-2: #eee;
   list-style: none;
 
   font-size: 0.75rem;
-  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
   font-weight: 600;
   letter-spacing: 1px;
   line-height: 2.75rem;
@@ -137,7 +132,6 @@ $light-grey-2: #eee;
 
   color: #333;
   font-size: 1.2rem;
-  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
   font-weight: 600;
   letter-spacing: 1px;
 }
@@ -149,9 +143,8 @@ $light-grey-2: #eee;
 }
 
 .k-StyleguideExample__title {
-  color: #4a84ff;
+  color: $blue;
   font-size: 0.75rem;
-  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
   font-weight: 600;
 }
 
@@ -162,7 +155,6 @@ $light-grey-2: #eee;
 .k-StyleguideExample__description {
   margin-right: 6rem;
   font-size: 1.25rem;
-  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
   font-weight: 400;
   letter-spacing: 1px;
   line-height: 1.4;
@@ -171,7 +163,7 @@ $light-grey-2: #eee;
 
 .k-StyleguideExample__bloc {
   margin-top: 1.5rem;
-  background-color: #4a84ff;
+  background-color: $blue;
   width: 470px;
   height: 272px;
 }
