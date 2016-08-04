@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Kitten style guide JEEEEKLREKELRK</title>
+
+<%= stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' %>
+<%= stylesheet_link_tag *webpack_asset_paths('application', extension: 'css') %>
+<%= csrf_meta_tags %>
+
+</head>
+<body>
+
+<div class="k-StyleguideContainer">
+  <nav class="k-StyleguideMenu">
+    <a class="k-StyleguideMenu__title">menu</a>
+
+    <div class="k-u-clearfix"></div>
+
+    <h5 class="k-StyleguideMenu__sectionTitle">Branding</h5>
+
+    <ul>
+      <li class="k-StyleguideMenu__section">
+        <a>Colors</a>
+      </li>
+      <li class="k-StyleguideMenu__section">
+        <a>Typography</a>
+      </li>
+      <li class="k-StyleguideMenu__section">
+        <a>Icons</a>
+      </li>
+    </ul>
+
+    <h5 class="k-StyleguideMenu__sectionTitle">Components</h5>
+
+    <ul>
+      <li class="k-StyleguideMenu__section">
+        <a>Buttons</a>
+        <ul>
+          <li class="k-StyleguideMenu__sectionItem">
+            <a>Primary button</a>
+          </li>
+          <li class="k-StyleguideMenu__sectionItem">
+            <a>Icon button and word</a>
+          </li>
+          <li class="k-StyleguideMenu__section">
+            <a>Form</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="k-StyleguideContent">
+    <section>
+      <header class="k-StyleguideTitle">ComponentsKissCo</header>
+
+      <div class="k-StyleguideTitle__breadcrumb">Buttons</div>
+    </section>
+    <section class="k-StyleguideSection">
+      <%= yield %>
+    </section>
+  </div>
+</div>
+
+</body>
+</html>
