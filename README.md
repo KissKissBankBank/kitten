@@ -189,11 +189,22 @@ $ npm run sassdoc
 
 The documentation is accessible on development environment: `/kitten/sassdoc`.
 
+## Contributing
+
+- Create a PR with a clear title.
+- Tag it with the right label (`Work in progress`, `Needs reviews`, etc.).
+
+For admin collaborators, before merging the PR:
+- Add the PR to the related milestone.
+- Update the CHANGELOG.md under the section `[unreleased]`.
+- Use `Squash and merge` option to merge the PR.
+
 ## Release
 
 To release a new version:
 - Update the version in `lib/kitten/version.rb` and `package.json`.
 - Update the `CHANGELOG.md` with your new features and fixes.
+
 - Run this command:
 ```
 bundle exec rake kitten_release
@@ -207,4 +218,9 @@ This last command will:
 - tag the version;
 - push to Github.
 
+### Gem
 Then, you can upload the new `pkg/kitten-*.gem` build to Gemfury.
+
+### Node module
+**Configure your `.npmrc` to set our private registry on Gemfury to be able to
+push a new version of `kitten` node module.**
