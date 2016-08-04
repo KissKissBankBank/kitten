@@ -8,6 +8,11 @@ $k-fonts: (
   source-sans-semi-bold: (
     family: ("Source Sans Pro", Helvetica, Arial, sans-serif),
     weight: 600
+  ),
+  source-sans-uppercase: (
+    family: ("Source Sans Pro", Helvetica, Arial, sans-serif),
+    weight: 400,
+    transform: uppercase
   )
 );
 

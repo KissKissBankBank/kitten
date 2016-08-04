@@ -6,7 +6,9 @@ $simulator-result: (
     border: black,
     background: whitesmoke,
     text: black
-  )
+  ),
+  label-font: source-sans-uppercase,
+  value-font: source-sans-semi-bold,
 );
 
 @include k-LoanSimulator;
