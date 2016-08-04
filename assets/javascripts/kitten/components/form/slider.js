@@ -160,7 +160,7 @@ window.Slider = React.createClass({
                          value={this.props.value ? this.props.value : ""} />
 
     return (
-      <div className={classes("k-Slider", grabbingClass)}
+      <div className={classNames("k-Slider", grabbingClass)}
            onClick={this.handleClick}>
         <div className="k-Slider__ramp"
              ref="track">

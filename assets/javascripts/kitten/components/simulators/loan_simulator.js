@@ -203,7 +203,7 @@ window.LoanSimulator = React.createClass({
               {this.props.amountLabel}
             </label>
           </div>
-          <div className={classes('k-TextInputWithUnit', errorClass)}>
+          <div className={classNames('k-TextInputWithUnit', errorClass)}>
             <input ref="amount"
                    className="k-TextInputWithUnit__input"
                    id="amount"
@@ -230,7 +230,7 @@ window.LoanSimulator = React.createClass({
                  onClick={this.handleInstallmentLabelClick}>
             {this.props.installmentLabel}
           </label>
-          <div className={classes('k-LabelWithInfo__info', infoClass)}>
+          <div className={classNames('k-LabelWithInfo__info', infoClass)}>
             {installmentString}
             {' '}
             {this.props.currencySymbol}

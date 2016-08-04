@@ -8,7 +8,7 @@ window.SimulatorResult = React.createClass({
     const contents = results.map(function(result, index) {
       var valueClass = (index == results.length - 1) ? "is-last" : null
       return (
-        <div className={classes("k-SimulatorResult__item", valueClass)}>
+        <div className={classNames("k-SimulatorResult__item", valueClass)}>
           <div className="k-SimulatorResult__item__label">
             {result.label}
           </div>
@@ -20,7 +20,7 @@ window.SimulatorResult = React.createClass({
     })
 
     return (
-      <div className={classes("k-SimulatorResult", this.props.className)}>
+      <div className={classNames("k-SimulatorResult", this.props.className)}>
         {contents}
       </div>
     )

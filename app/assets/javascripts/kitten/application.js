@@ -1,4 +1,3 @@
-//= require kitten/helpers/dom/classes
 //= require kitten/helpers/events/keyboard
 //= require kitten/helpers/numbers/is_number
 //= require kitten/components/form/slider
