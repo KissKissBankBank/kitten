@@ -1,11 +1,15 @@
+// TODO: remove in favor of map-get($k-typography, 'root')
 $k-root-font-size: 16px !global;
 
+// TODO: rename to k-typography
+// TODO: use k-typography-definition
 $typography: (
   root:        $k-root-font-size,
   font-size:   1rem,
   font-weight: 400,
   line-height: 1.5rem,
 
+  // TODO: remove some day
   typeface: (
     source-sans: (
       family: '"Source Sans Pro", Helvetica, Arial, sans-serif'
@@ -15,6 +19,7 @@ $typography: (
     )
   ),
 
+  // TODO: remove some day
   body-copy: (
     family: 'source-sans',
     font-smooth: subpixel-antialiased,
@@ -22,8 +27,12 @@ $typography: (
   )
 );
 
+// TODO: rename to k-typographic-scale
+// TODO: use k-typographic-scale definition, because this is is a global
 $typographic-scale: (
+  // TODO: remove some day
   typography: $typography,
+
   multiplier: $major-second,
 
   styles: (
@@ -65,4 +74,6 @@ $typographic-scale: (
 );
 
 @include k-TypographyScale($typographic-scale);
+
+// TODO: do not pass $typography
 @include k-TypographyBodyCopy($typography);
