@@ -16,11 +16,8 @@
 ///   $typography: (
 ///     font-size:   1rem,
 ///     line-height: 1.5rem,
+///     scale-multiplier: 1.618
 ///     ...
-///   );
-///
-///   $typographic-scale: (
-///     multiplier: 1.618
 ///   );
 ///
 ///   @include k-typographyFontSize(3);
@@ -30,7 +27,7 @@
 ///   line-height: 4.5rem;
 @mixin k-typographyFontSize($step, $line-height: null) {
   // Modular scale multiplier
-  $multiplier: k-map-fetch($typographic-scale, 'multiplier');
+  $multiplier: k-map-fetch($typography, 'scale-multiplier');
 
   $valid:
     k-all(

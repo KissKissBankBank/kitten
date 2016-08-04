@@ -18,13 +18,11 @@
 ///
 /// @example scss - Usage
 ///   $typography: (
+///      scale-multiplier: 1.42,
 ///      ...
 ///   );
 ///
 ///   $typographic-scale: (
-///     typography: $typography,
-///     multiplier: $major-second,
-///
 ///     styles: (
 ///       heading1: (
 ///         family: 'lato',
@@ -126,9 +124,10 @@
       '$scale'
     );
 
-  $typography: map-get($scale, 'typography');
-  $multiplier: map-get($scale, 'multiplier');
   $styles: map-get($scale, 'styles');
+  $multiplier: k-number-definition(
+    k-map-fetch($typography, 'scale-multiplier')
+  );
 
   @each $style-name, $style in $styles {
     $step: k-default(map-get($style, 'step'), 0);

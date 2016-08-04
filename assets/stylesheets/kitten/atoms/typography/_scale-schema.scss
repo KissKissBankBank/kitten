@@ -7,10 +7,6 @@ $k-typography-scale-schema: (
   type: 'map',
 
   properties: (
-    typography: $k-typography-schema,
-
-    multiplier: k-number-schema($unit: none),
-
     styles: (
       type: 'map',
 
@@ -34,8 +30,6 @@ $k-typography-scale-schema: (
   ),
 
   required: (
-    'typography',
-    'multiplier',
     'styles'
   )
 );

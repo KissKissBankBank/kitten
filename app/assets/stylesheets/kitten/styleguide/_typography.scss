@@ -4,10 +4,11 @@ $k-root-font-size: 16px !global;
 // TODO: rename to k-typography
 // TODO: use k-typography-definition
 $typography: (
-  root:        $k-root-font-size,
-  font-size:   1rem,
+  root: $k-root-font-size,
+  font-size: 1rem,
   font-weight: 400,
   line-height: 1.5rem,
+  scale-multiplier: $major-second,
 
   // TODO: remove some day
   typeface: (
@@ -27,14 +28,7 @@ $typography: (
   )
 );
 
-// TODO: rename to k-typographic-scale
-// TODO: use k-typographic-scale definition, because this is is a global
 $typographic-scale: (
-  // TODO: remove some day
-  typography: $typography,
-
-  multiplier: $major-second,
-
   styles: (
     ParagraphXl: (
       family: 'source-sans',
