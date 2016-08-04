@@ -161,17 +161,19 @@ window.LoanSimulator = React.createClass({
     const error = this.error()
     const showResult = !error && touched
 
+    let errorClass, errorTag, installmentString, infoClass, resultTag
+
     if (error) {
-      var errorClass = "is-error"
-      var errorTag = <p className="k-LoanSimulator__error">{error}</p>
+      errorClass = "is-error"
+      errorTag = <p className="k-LoanSimulator__error">{error}</p>
     }
 
     if (!error && dragged && installmentAmount) {
-      var installmentString = this.toCurrency(installmentAmount * 100)
-      var infoClass = "is-active"
+      installmentString = this.toCurrency(installmentAmount * 100)
+      infoClass = "is-active"
     } else {
-      var installmentString = "--"
-      var infoClass = "is-inactive"
+      installmentString = "--"
+      infoClass = "is-inactive"
     }
 
     const durationSymbol = this.duration() === 1
@@ -191,8 +193,8 @@ window.LoanSimulator = React.createClass({
                  + this.props.currencySymbol
         }
       ]
-      var resultTag = <SimulatorResult className="k-LoanSimulator__result"
-                                       results={results} />
+      resultTag = <SimulatorResult className="k-LoanSimulator__result"
+                                   results={results} />
     }
 
     return (
