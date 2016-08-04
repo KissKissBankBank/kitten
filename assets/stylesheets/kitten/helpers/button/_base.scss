@@ -92,37 +92,37 @@
   $colors: k-map-fetch($button, 'colors');
 
   // base colors
-  $base: k-button-colors-definition(k-map-fetch($colors, 'base'));
+  $base: k-colors-definition(k-map-fetch($colors, 'base'));
   $base-color: map-get($base, 'color');
   $base-border-color: map-get($base, 'border-color');
   $base-background-color: map-get($base, 'background-color');
 
   // hover colors
-  $hover: k-button-colors-definition(k-map-fetch($colors, 'hover'));
+  $hover: k-colors-definition(k-map-fetch($colors, 'hover'));
   $hover-color: map-get($hover, 'color');
   $hover-border-color: map-get($hover, 'border-color');
   $hover-background-color: map-get($hover, 'background-color');
 
   // active colors
-  $active: k-button-colors-definition(k-map-fetch($colors, 'active'));
-  $active-color: map-get($colors, 'color');
-  $active-border-color: map-get($colors, 'border-color');
-  $active-background-color: map-get($colors, 'background-color');
+  $active: k-colors-definition(k-map-fetch($colors, 'active'));
+  $active-color: map-get($active, 'color');
+  $active-border-color: map-get($active, 'border-color');
+  $active-background-color: map-get($active, 'background-color');
 
   // disabled colors (optional)
-  $disabled: k-button-colors-definition(map-get($colors, 'disabled'));
+  $disabled: k-colors-definition(map-get($colors, 'disabled'));
   $disabled-color: map-get($disabled, 'color');
   $disabled-border-color: map-get($disabled, 'border-color');
   $disabled-background-color: map-get($disabled, 'background-color');
 
   // focus colors (optional)
-  $focus: k-button-colors-definition(map-get($colors, 'focus'));
+  $focus: k-colors-definition(map-get($colors, 'focus'));
   $focus-color: map-get($focus, 'color');
   $focus-border-color: map-get($focus, 'border-color');
   $focus-background-color: map-get($focus, 'background-color');
 
   // state 'is-selected' colors (optional)
-  $is-selected: k-button-colors-definition(map-get($colors, 'is-selected'));
+  $is-selected: k-colors-definition(map-get($colors, 'is-selected'));
   $is-selected-color: map-get($is-selected, 'color');
   $is-selected-border-color: map-get($is-selected, 'border-color');
   $is-selected-background-color: map-get($is-selected, 'background-color');
