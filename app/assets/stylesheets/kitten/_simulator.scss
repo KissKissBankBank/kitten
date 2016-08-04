@@ -1,15 +1,14 @@
 @import 'kitten/molecules/simulators/simulator-result';
 @import 'kitten/organisms/simulators/loan-simulator';
 
-$simulator-result: (
+@include k-LoanSimulator;
+
+@include k-SimulatorResult((
   colors: (
-    border: black,
-    background: whitesmoke,
-    text: black
+    border: #eee,
+    background: #fbfbfb,
+    text: #333
   ),
   label-font: source-sans-uppercase,
   value-font: source-sans-semi-bold,
-);
-
-@include k-LoanSimulator;
-@include k-SimulatorResult($simulator-result);
+));

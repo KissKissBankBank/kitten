@@ -3,31 +3,36 @@
 @import 'kitten/molecules/form/slider';
 @import 'kitten/molecules/form/text-input-with-unit';
 
-$label: (
+@include k-Label((
   font: source-sans-semi-bold
-);
+));
 
-$label-with-info: (
+@include k-LabelWithInfo((
   colors: (
     active: black,
     inactive: #aaa
   )
-);
+));
 
-$slider: (
-  color: black
-);
+@include k-Slider((
+  colors: (
+    progress: #333,
+    progress-disabled: #d8d8d8,
+    ramp: #eee,
+    handle: #fff,
+    handle-disabled: #d8d8d8,
+    icon: #d8d8d8,
+    icon-disabled: #fff,
+    border: #eee,
+  )
+));
 
-$text-input-with-unit: (
+@include k-TextInputWithUnit((
   input-font: source-sans,
   unit-font: source-sans-semi-bold,
   colors: (
-    border: #ddd,
-    error: red
+    border: #d8d8d8,
+    error: #ff4146,
+    focus: #4a84ff
   )
-);
-
-@include k-Label($label);
-@include k-LabelWithInfo($label-with-info);
-@include k-Slider($slider);
-@include k-TextInputWithUnit($text-input-with-unit);
+));

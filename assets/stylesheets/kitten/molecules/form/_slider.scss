@@ -12,10 +12,18 @@
 ///
 /// @example scss - usage
 ///
-///   $slider: (
-///     color: red
-///   );
-///   @include k-Slider($slider);
+///   @include k-Slider((
+///     colors: (
+///       progress: red,
+///       progress-disabled: darkgrey,
+///       ramp: grey,
+///       handle: white,
+///       handle-disabled: grey,
+///       icon: grey,
+///       icon-disabled: white,
+///       border: grey,
+///     )
+///   ));
 ///
 /// @example html
 ///
@@ -23,115 +31,163 @@
 ///     <div class="k-Slider__ramp">
 ///       <div class="k-Slider__progress"></div>
 ///       <div class="k-Slider__handle">
-///         <svg class="k-Slider__handle__icon"></svg>
+///         <svg class="k-Slider__handleIcon"></svg>
 ///       </div>
 ///     </div>
 ///   </div>
 @mixin k-Slider($slider) {
-  $progress-color: map-get($slider, 'color');
-  $ramp-color: #eee;
-  $handle-color: #aaa;
+  @include k-with-module('k-Slider: $slider') {
+    $colors: k-map-fetch($slider, 'colors');
 
-  $ramp-height: .2rem;
-  $handle-size: 2.5rem;
-  $transition-speed: .2s;
-  $handle-icon-size: .6rem;
+    $progress-color: k-color-definition(
+      k-map-fetch($colors, 'progress')
+    );
+    $progress-disabled-color: k-color-definition(
+      k-map-fetch($colors, 'progress-disabled')
+    );
+    $ramp-color: k-color-definition(
+      k-map-fetch($colors, 'ramp')
+    );
+    $handle-color: k-color-definition(
+      k-map-fetch($colors, 'handle')
+    );
+    $handle-disabled-color: k-color-definition(
+      k-map-fetch($colors, 'handle-disabled')
+    );
+    $icon-color: k-color-definition(
+      k-map-fetch($colors, 'icon')
+    );
+    $icon-disabled-color: k-color-definition(
+      k-map-fetch($colors, 'icon-disabled')
+    );
+    $border-color: k-color-definition(
+      k-map-fetch($colors, 'border')
+    );
 
-  .k-Slider {
-    padding: ($handle-size / 2);
+    $ramp-height: .2rem;
+    $handle-size: 2.5rem;
+    $transition-speed: .2s;
+    $handle-icon-size: .6rem;
 
-    // a click anywhere on the slider should move it around
-    cursor: pointer;
+    .k-Slider {
+      padding: ($handle-size / 2);
 
-    &.is-grabbing {
-      // cursor defined here in rather than on the handle, in case the cursor
-      // moves further than the handle
-      cursor: -webkit-grabbing;
-      cursor: grabbing;
+      // a click anywhere on the slider should move it around
+      cursor: pointer;
+
+      &.is-grabbing {
+        // cursor defined here in rather than on the handle, in case the cursor
+        // moves further than the handle
+        cursor: -webkit-grabbing;
+        cursor: grabbing;
+      }
+
+      &.is-disabled {
+        cursor: not-allowed;
+      }
     }
-  }
 
-  .k-Slider__ramp {
-    position: relative;
-    height: $ramp-height;
+    .k-Slider__ramp {
+      position: relative;
+      height: $ramp-height;
 
-    background: $ramp-color;
-
-    &:before,
-    &:after {
-      position: absolute;
-      top: 0;
-      display: block;
-      width: ($handle-size / 2);
-      height: 100%;
-      content: '';
-    }
-
-    &:before {
-      left: -($handle-size / 2);
-      background: $progress-color;
-    }
-    &:after {
-      right: -($handle-size / 2);
       background: $ramp-color;
-    }
-  }
 
-  .k-Slider__progress {
-    width: 0; // moved by JS from 0 to 100%
-    height: 100%;
+      &:before,
+      &:after {
+        position: absolute;
+        top: 0;
+        display: block;
+        width: ($handle-size / 2);
+        height: 100%;
+        content: '';
+      }
 
-    background: $progress-color;
+      &:before {
+        left: -($handle-size / 2);
+        background: $progress-color;
 
-    transition: width $transition-speed;
+        .k-Slider.is-disabled & {
+          background: $progress-disabled-color;
+        }
+      }
 
-    .k-Slider.is-grabbing & {
-      // when we are moving by hand, do not slow down the "width" movement
-      transition: none;
-    }
-  }
-
-  .k-Slider__handle {
-    z-index: 1; // go over ramp's :after
-    position: absolute;
-    left: 0; // moved by JS from 0 to 100%
-    top: -($handle-size / 2);
-
-    // to align the icon in its center
-    align-items: center;
-    justify-content: center;
-    display: flex;
-
-    height: $handle-size;
-    width: $handle-size;
-    margin-left: -($handle-size / 2);
-
-    outline: 0; // hide default outline in favor of our hand-made focus style
-    border: 1px solid #eee;
-    border-radius: 50%;
-    background: white;
-    box-shadow: 0 .1rem .2rem rgba(0, 0, 0, .2);
-
-    cursor: -webkit-grab;
-    cursor: grab;
-    transition: left $transition-speed,
-                box-shadow $transition-speed;
-
-    &:focus {
-      box-shadow: 0 .1rem .7rem rgba(0, 0, 0, .7);
+      &:after {
+        right: -($handle-size / 2);
+        background: $ramp-color;
+      }
     }
 
-    .k-Slider.is-grabbing & {
-      cursor: inherit;
+    .k-Slider__progress {
+      width: 0; // moved by JS from 0 to 100%
+      height: 100%;
 
-      // when we are moving by hand, do not slow down the "left" movement
-      transition: box-shadow $transition-speed;
+      background: $progress-color;
+
+      transition: width $transition-speed;
+
+      .k-Slider.is-grabbing & {
+        // when we are moving by hand, do not slow down the "width" movement
+        transition: none;
+      }
+
+      .k-Slider.is-disabled & {
+        background: $progress-disabled-color;
+      }
     }
-  }
 
-  .k-Slider__handle__icon {
-    width: $handle-icon-size;
+    .k-Slider__handle {
+      z-index: 1; // go over ramp's :after
+      position: absolute;
+      left: 0; // moved by JS from 0 to 100%
+      top: -($handle-size / 2);
 
-    fill: $handle-color;
+      // to align the icon in its center
+      align-items: center;
+      justify-content: center;
+      display: flex;
+
+      height: $handle-size;
+      width: $handle-size;
+      margin-left: -($handle-size / 2);
+
+      outline: 0; // hide default outline in favor of our hand-made focus style
+      border: 1px solid $border-color;
+      border-radius: 50%;
+      background: white;
+      box-shadow: 0 .1rem .2rem rgba(0, 0, 0, .2);
+
+      cursor: -webkit-grab;
+      cursor: grab;
+      transition: left $transition-speed,
+                  box-shadow $transition-speed;
+
+      &:focus {
+        box-shadow: 0 .1rem .7rem rgba(0, 0, 0, .7);
+      }
+
+      .k-Slider.is-grabbing & {
+        cursor: inherit;
+
+        // when we are moving by hand, do not slow down the "left" movement
+        transition: box-shadow $transition-speed;
+      }
+
+      .k-Slider.is-disabled & {
+        background: $handle-disabled-color;
+        border: none;
+        cursor: inherit;
+      }
+    }
+
+    .k-Slider__handleIcon {
+      width: $handle-icon-size;
+
+      fill: $icon-color;
+
+      .k-Slider.is-disabled & {
+        fill: $icon-disabled-color;
+      }
+    }
   }
 }

@@ -25,42 +25,44 @@
 ///     </div>
 ///   </div>
 @mixin k-SimulatorResult($simulator-result) {
-  $colors: map-get($simulator-result, 'colors');
-  $border-color: map-get($colors, 'border');
-  $background-color: map-get($colors, 'background');
-  $text-color: map-get($colors, 'text');
+  @include k-with-module("k-SimulatorResult: $simulator-result") {
+    $colors: k-map-fetch($simulator-result, 'colors');
+    $border-color: k-map-fetch($colors, 'border');
+    $background-color: k-map-fetch($colors, 'background');
+    $text-color: k-map-fetch($colors, 'text');
 
-  $label-font: map-get($simulator-result, 'label-font');
-  $value-font: map-get($simulator-result, 'value-font');
+    $label-font: k-map-fetch($simulator-result, 'label-font');
+    $value-font: k-map-fetch($simulator-result, 'value-font');
 
-  .k-SimulatorResult {
-    display: flex;
+    .k-SimulatorResult {
+      display: flex;
 
-    border-top: 1px solid $border-color;
-    border-bottom: 1px solid $border-color;
+      border-top: 1px solid $border-color;
+      border-bottom: 1px solid $border-color;
 
-    text-align: center;
-  }
-
-  .k-SimulatorResult__item {
-    flex: 1;
-    padding: 1em;
-    border-right: 1px solid $border-color;
-    background: $background-color;
-    color: $text-color;
-
-    &.is-last {
-      border-right: none;
+      text-align: center;
     }
-  }
 
-  .k-SimulatorResult__item__label {
-    @include k-font($label-font);
-    @include k-fontSize(-2);
-  }
+    .k-SimulatorResult__item {
+      flex: 1;
+      padding: 1em;
+      border-right: 1px solid $border-color;
+      background: $background-color;
+      color: $text-color;
 
-  .k-SimulatorResult__item__value {
-    @include k-font($value-font);
-    @include k-fontSize(1);
+      &.is-last {
+        border-right: none;
+      }
+    }
+
+    .k-SimulatorResult__item__label {
+      @include k-font($label-font);
+      @include k-fontSize(-2);
+    }
+
+    .k-SimulatorResult__item__value {
+      @include k-font($value-font);
+      @include k-fontSize(1);
+    }
   }
 }

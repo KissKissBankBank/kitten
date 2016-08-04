@@ -1,20 +1,25 @@
-<%= example do %>
+<%= example "default number input" do %>
   <p class="k-TextInputWithUnit">
-    <input class="k-TextInputWithUnit__input" value="42.12" type="number" />
+    <input class="k-TextInputWithUnit__input"
+           placeholder="42"
+           type="number" />
     <span class="k-TextInputWithUnit__unit">$</span>
   </p>
 <% end %>
 
-<%= example do %>
-  <p class="k-TextInputWithUnit">
-    <input class="k-TextInputWithUnit__input" type="number" />
-    <span class="k-TextInputWithUnit__unit">years old</span>
+<%= example "error input" do %>
+  <p class="k-TextInputWithUnit is-error">
+    <input class="k-TextInputWithUnit__input"
+           type="text"
+           value="Wrong"
+           placeholder="…" />
+    <span class="k-TextInputWithUnit__unit">$</span>
   </p>
 <% end %>
 
-<%= example do %>
-  <p class="k-TextInputWithUnit is-error">
-    <input class="k-TextInputWithUnit__input" value="wrong" />
-    <span class="k-TextInputWithUnit__unit">€</span>
+<%= example "large number input" do %>
+  <p class="k-TextInputWithUnit k-TextInputWithUnit--large">
+    <input class="k-TextInputWithUnit__input" type="number" placeholder="42" />
+    <span class="k-TextInputWithUnit__unit">$</span>
   </p>
 <% end %>

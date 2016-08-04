@@ -202,7 +202,9 @@ window.LoanSimulator = React.createClass({
               {this.props.amountLabel}
             </label>
           </div>
-          <div className={classNames('k-TextInputWithUnit', errorClass)}>
+          <div className={classNames('k-TextInputWithUnit',
+                                     'k-TextInputWithUnit--large',
+                                     errorClass)}>
             <input ref="amount"
                    className="k-TextInputWithUnit__input"
                    id="amount"

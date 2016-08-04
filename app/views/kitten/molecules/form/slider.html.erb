@@ -3,7 +3,7 @@
     <div class="k-Slider__ramp">
       <div class="k-Slider__progress" style="width: 0"></div>
       <div class="k-Slider__handle" tabindex="0" style="left: 0">
-        <svg class="k-Slider__handle__icon" viewBox="0 0 100 100">
+        <svg class="k-Slider__handleIcon" viewBox="0 0 100 100">
           <path d="M0 0 v100 h20 v-100 z" />
           <path d="M40 0 v100 h20 v-100 z" />
           <path d="M80 0 v100 h20 v-100 z" />
@@ -18,7 +18,7 @@
     <div class="k-Slider__ramp">
       <div class="k-Slider__progress" style="width: 25%" id="progress"></div>
       <div class="k-Slider__handle" tabindex="0" style="left: 25%" id="handle">
-        <svg class="k-Slider__handle__icon" viewBox="0 0 100 100">
+        <svg class="k-Slider__handleIcon" viewBox="0 0 100 100">
           <path d="M0 0 v100 h20 v-100 z" />
           <path d="M40 0 v100 h20 v-100 z" />
           <path d="M80 0 v100 h20 v-100 z" />
@@ -28,12 +28,12 @@
   </div>
 <% end %>
 
-<%= example do %>
-  <div class="k-Slider">
+<%= example "disabled" do %>
+  <div class="k-Slider is-disabled">
     <div class="k-Slider__ramp">
-      <div class="k-Slider__progress" style="width: 100%"></div>
-      <div class="k-Slider__handle" tabindex="0" style="left: 100%">
-        <svg class="k-Slider__handle__icon" viewBox="0 0 100 100">
+      <div class="k-Slider__progress" style="width: 50%"></div>
+      <div class="k-Slider__handle" style="left: 50%">
+        <svg class="k-Slider__handleIcon" viewBox="0 0 100 100">
           <path d="M0 0 v100 h20 v-100 z" />
           <path d="M40 0 v100 h20 v-100 z" />
           <path d="M80 0 v100 h20 v-100 z" />

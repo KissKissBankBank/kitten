@@ -5,10 +5,12 @@
 /// @example scss - usage
 ///
 ///   $text-input-with-unit: (
-///     font: sans-serif,
+///     input-font: sans-serif,
+///     input-font: sans-serif-bold,
 ///     colors: (
 ///       border: blue,
-///       error: red
+///       error: red,
+///       focus: blue
 ///     )
 ///   )
 ///
@@ -16,53 +18,103 @@
 ///
 /// @example html
 ///
-///   <div class="k-TextInputWithUnit">
+///   <div class="k-TextInputWithUnit k-TextInputWithUnit--large">
 ///     <input class="k-TextInputWithUnit__input" />
 ///     <span class="k-TextInputWithUnit__unit">$</span>
 ///   </div>
 @mixin k-TextInputWithUnit($text-input-with-unit) {
-  $input-font: map-get($text-input-with-unit, 'input-font');
-  $unit-font: map-get($text-input-with-unit, 'unit-font');
-  $colors: map-get($text-input-with-unit, 'colors');
-  $error-color: map-get($colors, 'error');
-  $border-color: map-get($colors, 'border');
+  @include k-with-module('k-TextInputWithUnit: $text-input-with-unit') {
+    $input-font: k-map-fetch($text-input-with-unit, 'input-font');
+    $unit-font: k-map-fetch($text-input-with-unit, 'unit-font');
 
-  .k-TextInputWithUnit {
-    display: flex;
-    border: 1px solid $border-color;
-    border-radius: .3em;
+    $colors: k-map-fetch($text-input-with-unit, 'colors');
+    $border-color: k-color-definition(k-map-fetch($colors, 'border'));
+    $error-color: k-color-definition(k-map-fetch($colors, 'error'));
+    $focus-color: k-color-definition(k-map-fetch($colors, 'focus'));
 
-    &.is-error {
-      border-color: $error-color;
+    $default-height: k-px-to-rem(40px);
+    $large-height: k-px-to-rem(50px);
+
+    $default-unit-width: 3rem;
+    $large-unit-width: 4rem;
+
+    $transition-speed: .25s;
+
+    // container
+    .k-TextInputWithUnit {
+      position: relative; // to place an absolute unit
+
+      box-sizing: border-box;
+      height: $default-height;
+
+      border-radius: .25em;
+
     }
-  }
 
-  .k-TextInputWithUnit__input {
-    flex: 1;
-    padding: 1em 2em; // ems to adapt to text size
-
-    border: 0;
-    background: transparent;
-
-    @include k-font($input-font);
-
-    // remove spinners on number inputs
-    &::-webkit-inner-spin-button,
-    &::-webkit-outer-spin-button {
-      margin: 0;
-      -webkit-appearance: none;
+    .k-TextInputWithUnit--large {
+      height: $large-height;
     }
-  }
 
-  .k-TextInputWithUnit__unit {
-    padding: 1em 1.5em;
-    border-left: 1px solid $border-color;
+    // input
+    .k-TextInputWithUnit__input {
+      box-sizing: border-box;
+      height: 100%;
+      width: 100%;
+      padding: 0 $default-unit-width 0 1rem;
 
-    @include k-font($unit-font);
-    @include k-fontSize(1);
+      background: transparent;
+      border: 1px solid $border-color;
+      border-radius: .25em;
+      outline: none; // since we introduce our own focus styles
 
-    .k-TextInputWithUnit.is-error & {
-      border-color: $error-color;
+      @include k-font($input-font);
+
+      transition: all $transition-speed;
+
+      .k-TextInputWithUnit.is-error & {
+        color: $error-color;
+        border-color: $error-color;
+      }
+
+      &:focus {
+        // we need to repeat is-error to override the stronger is-error style
+        &,
+        .k-TextInputWithUnit.is-error & {
+          border-color: $focus-color;
+          color: inherit;
+
+          // this technique helps us style an adjacent element on focus
+          & + .k-TextInputWithUnit__unit {
+            border-color: $focus-color;
+          }
+        }
+      }
+
+      @include k-formRemoveNumberSpinner;
+    }
+
+    // unit
+    .k-TextInputWithUnit__unit {
+      position: absolute;
+      box-sizing: border-box;
+      height: 100%;
+      top: 0;
+      right: 0;
+      padding: .4rem .85rem;
+      border-left: 1px solid $border-color;
+
+      @include k-font($unit-font);
+      @include k-fontSize(1);
+
+      transition: all $transition-speed;
+
+      .k-TextInputWithUnit.is-error & {
+        border-color: $error-color;
+      }
+
+      .k-TextInputWithUnit--large & {
+        padding: .7rem 1.3rem;
+      }
     }
   }
 }
