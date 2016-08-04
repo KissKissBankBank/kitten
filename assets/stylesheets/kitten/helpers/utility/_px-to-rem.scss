@@ -1,7 +1,5 @@
 /// Convert px value to rem value.
 ///
-/// This function need `$k-root-font-size` to work.
-///
 /// @group helpers_utility
 ///
 /// @parameter {Number} $px - a px value
@@ -13,5 +11,6 @@
 ///   // 1.25rem
 
 @function k-px-to-rem($px) {
-  @return ($px / $k-root-font-size) * 1rem;
+  $root-font-size: map-get($k-typography, 'root');
+  @return ($px / $root-font-size) * 1rem;
 }
