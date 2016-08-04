@@ -98,11 +98,11 @@ window.LoanSimulator = React.createClass({
   },
 
   // on slider click or on grab end
-  handleInstallmentChangeEnd: function(value) {
+  handleInstallmentChangeEnd: function() {
     this.setState({ touched: true })
   },
 
-  handleInstallmentLabelClick: function(value) {
+  handleInstallmentLabelClick: function() {
     this.refs.slider.focus()
   },
 
