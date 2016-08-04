@@ -12,13 +12,11 @@
       </button>
     </div>
 
-    <div class="k-Header__item">
-      <p>
-        <a style="border:1px solid #eee;padding:13px 68px;
-          color:#eee;text-transform:uppercase;text-decoration:none;"
-          href="#">LOGO</a>
-      </p>
-    </div>
+    <p class="k-Header__item">
+      <a style="border:1px solid #eee;padding:10px 70px;
+        color:#eee;text-transform:uppercase;text-decoration:none;"
+        href="#">LOGO</a>
+    </p>
 
     <nav class="k-Header__item">
       <ul class="k-HorizontalNav" role="menubar">
@@ -39,7 +37,7 @@
         </li>
         <li role="menuitem">
           <a class="k-HorizontalNav__item is-selected" href="#">
-            Nav link 4 (selected)
+            Nav link 4
           </a>
         </li>
       </ul>
@@ -65,6 +63,6 @@
 </header>
 
 <p>
-  <a onClick="document.getElementById('header').className += ' is-fixed'"
-    href="#">show to top</a>
+  <a onclick="document.getElementById('header').className += ' is-fixed';this.remove();"
+    href="#">See fixed version</a>
 </p>
