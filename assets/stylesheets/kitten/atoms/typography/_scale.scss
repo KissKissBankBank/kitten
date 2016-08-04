@@ -135,7 +135,7 @@
 
     .k-#{$style-name} {
       @include k-typographyFontFamily($typography, $style);
-      @include k-typographyFontSize($typography, $multiplier, $step);
+      @include k-typographyFontSize($step);
       @include k-typographyFontStyle($typography, $style);
     }
   }
