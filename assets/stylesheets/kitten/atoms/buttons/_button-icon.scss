@@ -48,7 +48,7 @@
     // 2px for border.
     $button-size: 40px - 2px;
     $button-size-tiny: 30px - 2px;
-    $button-size-big: 50px - 2px;;
+    $button-size-big: 50px - 2px;
 
     // SVG element default settings.
     $icon-width: k-px-to-rem(17px);
@@ -73,6 +73,10 @@
         .k-ButtonIcon__svg {
           fill: $hover-color;
         }
+
+        .k-ButtonIcon__svg__stroke {
+          stroke: $hover-color;
+        }
       }
 
       &:focus {
@@ -84,11 +88,24 @@
             fill: $hover-color;
           }
         }
+
+        .k-ButtonIcon__svg__stroke {
+          @if $focus-color {
+            stroke: $focus-color;
+          }
+          @else {
+            stroke: $hover-color;
+          }
+        }
       }
 
       &:active {
         .k-ButtonIcon__svg {
           fill: $active-color;
+        }
+
+        .k-ButtonIcon__svg__stroke {
+          stroke: $active-color;
         }
       }
 
@@ -96,11 +113,19 @@
         .k-ButtonIcon__svg {
           fill: $disabled-color;
         }
+
+        .k-ButtonIcon__svg__stroke {
+          stroke: $disabled-color;
+        }
       }
 
       &.is-selected {
         .k-ButtonIcon__svg {
           fill: $is-selected-color;
+        }
+
+        .k-ButtonIcon__svg__stroke {
+          stroke: $is-selected-color;
         }
       }
     }
