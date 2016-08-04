@@ -5,11 +5,10 @@
 ///
 /// @group typography
 ///
-/// @parameter {Map} $typography - a typography object
 /// @parameter {Map} $margins    - a map with a top and/or bottom attributes
 ///
 /// @example scss - Usage
-///   $typography: (
+///   $k-typography: (
 ///     line-height: 1.5rem,
 ///     ...
 ///   );
@@ -19,18 +18,14 @@
 ///     bottom: 2
 ///   );
 ///
-///   @include k-typographyVerticalMargin($typography, $margins);
+///   @include k-typographyVerticalMargin($margins);
 ///
 /// @example css - CSS output
 ///   margin-top:    1.5rem;
 ///   margin-bottom: 3rem;
-@mixin k-typographyVerticalMargin($typography, $margins) {
+@mixin k-typographyVerticalMargin($margins) {
   $valid:
     k-all(
-      k-validate(
-        $typography, $k-typography-schema,
-        'k-typographyVerticalMargin', '$typography'
-      ),
       k-validate(
         $margins, $k-vertical-margin-schema,
         'k-typographyVerticalMargin', '$margin'
@@ -38,7 +33,7 @@
     );
 
   // The base line height.
-  $base-line-height: map-get($typography, 'line-height');
+  $base-line-height: map-get($k-typography, 'line-height');
 
   // Get top margin or set to 0.
   $top-margin: k-default(map-get($margins, 'top'), 0);

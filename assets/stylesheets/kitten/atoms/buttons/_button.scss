@@ -10,12 +10,11 @@
 /// @parameter {Map} $button - a button specification
 ///
 /// @example scss - Usage
-///   $typography: (
+///   $k-typography: (
 ///      ...
 ///   );
 ///
 ///   $button: (
-///     typography: $typography,
 ///     multiplier: $major-second,
 ///
 ///     font: (
@@ -66,14 +65,13 @@
     // scale.
     $button-step: -2;
 
-    $typography: map-get($button, 'typography');
     $multiplier: map-get($button, 'multiplier');
     $font: map-get($button, 'font');
 
     .k-Button {
       @include k-buttonBase($button);
       @include k-typographyFontSize($button-step, $button-line-height);
-      @include k-typographyFontFamily($typography, $font);
+      @include k-typographyFontFamily($font);
       @include k-typographyFontStyle($font);
 
       padding: 0 $button-radius * 2;

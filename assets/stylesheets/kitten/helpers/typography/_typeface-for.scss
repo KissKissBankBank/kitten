@@ -2,17 +2,16 @@
 ///
 /// All typeface data is stored in a single location in a typography object.
 /// This helper function will get the requested typeface key from `$element`,
-/// and look for its definition in `$typography`.
+/// and look for its definition in `$k-typography`.
 ///
 /// @group typography
 ///
-/// @parameter {Map} $typography - a typography object
 /// @parameter {Map} $element    - a map with a `family` property
 ///
 /// @return {Map}
 ///
 /// @example scss - Usage
-///   $typography: (
+///   $k-typography: (
 ///     typeface: (
 ///       lato: (
 ///         family: '"lato", sans-serif'
@@ -26,15 +25,11 @@
 ///     ...
 ///   );
 ///
-///   k-typography-typeface-for($typography, $element);
+///   k-typography-typeface-for($element);
 ///   // (family: '"lato", sans-serif)
-@function k-typography-typeface-for($typography, $element) {
+@function k-typography-typeface-for($element) {
   $valid:
     k-all(
-      k-validate(
-        $typography, $k-typography-schema,
-        'k-typography-typeface-for', '$typography'
-      ),
       k-validate(
         $element, $k-with-font-family-schema,
         'k-typography-typeface-for', '$element'
@@ -42,7 +37,7 @@
     );
 
   $typeface-name: map-get-deep($element, ('family'));
-  $typeface: map-get-deep($typography, ('typeface', $typeface-name));
+  $typeface: map-get-deep($k-typography, ('typeface', $typeface-name));
 
   @if $typeface == null {
     $error-message: k-module-error(

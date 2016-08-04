@@ -19,13 +19,11 @@ $horizontal-nav-colors: (
 ) !default;
 
 // Horizontal nav variables
-$typography: map-merge($k-typography, (
-  font-size: k-px-to-rem(12px),
-  line-height: k-px-to-rem(16px)
-));
-
 $horizontal-nav: (
-  typography: $typography,
+  typography: map-merge($k-typography, (
+    font-size: k-px-to-rem(12px),
+    line-height: k-px-to-rem(16px)
+  )),
   multiplier: $major-second,
   font: (
     family: 'source-sans',

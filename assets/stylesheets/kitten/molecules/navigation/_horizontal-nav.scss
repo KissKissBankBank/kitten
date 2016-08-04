@@ -7,7 +7,6 @@
 /// @example scss - usage
 ///
 ///   $nav: (
-///     typography: $typography,
 ///     font: (
 ///       family: 'source-sans',
 ///       font-weight: 600,
@@ -56,10 +55,8 @@
 @mixin k-HorizontalNav($nav) {
   @include k-with-module('k-HorizontalNav: $nav') {
 
-    $typography: map-get($nav, 'typography');
     $multiplier: map-get($nav, 'multiplier');
     $font: map-get($nav, 'font');
-    $line-height: map-get($typography, 'line-height');
 
     $colors: k-map-fetch($nav, 'colors');
 
@@ -93,8 +90,8 @@
     }
 
     .k-HorizontalNav__item {
-      @include k-typographyFontSize(0, $line-height);
-      @include k-typographyFontFamily($typography, $font);
+      @include k-typographyFontSize(0);
+      @include k-typographyFontFamily($font);
       @include k-typographyFontStyle($font);
 
       background-color: $base-background-color;

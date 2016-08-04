@@ -75,7 +75,7 @@
     font-weight: $base-font-weight;
     line-height: $base-line-height;
 
-    @include k-typographyFontFamily($k-typography, $body-copy);
+    @include k-typographyFontFamily($body-copy);
     @include k-typographyFontStyle($body-copy);
 
     // Apply this class on the body element to display the baseline grid.
