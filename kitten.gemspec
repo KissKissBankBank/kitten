@@ -42,8 +42,6 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'pry'
 
   s.add_development_dependency 'rspec-rails'
-  s.add_development_dependency 'rspec-collection_matchers'
-  s.add_development_dependency 'factory_girl_rails'
 
   s.add_development_dependency 'sqlite3'
 end
