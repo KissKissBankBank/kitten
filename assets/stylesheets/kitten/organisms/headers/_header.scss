@@ -59,6 +59,7 @@
     display: flex;
     align-items: center;
     align-self: flex-start;
+    min-height: k-px-to-rem(65px);
   }
 
   .k-Header__items--end {
@@ -69,4 +70,11 @@
   .k-Header__item {
     padding: 0 $gutter / 2;
   }
+
+  .k-Header__item--hide {
+    @media (max-width: 992px) {
+      display: none;
+    }
+  }
+
 }
