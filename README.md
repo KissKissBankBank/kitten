@@ -54,17 +54,16 @@ Install the dependency:
 npm install kitten --save-dev
 ```
 
-`kitten` module exposes load paths that Sass needs to resolve correcly
-`@import`:
+`kitten` module exposes an array of load paths that Sass needs to resolve
+correcly `@import`:
 ```js
 var kitten = require('kitten');
 
 // => {
-//   loadPath: …,
-//   dependenciesPaths: {
-//     sassyMaps: …,
-//     modularscale: …
-//   }
+//   loadPaths: [
+//     …,
+//     …
+//   ]
 // }
 ```
 
