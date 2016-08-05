@@ -36,19 +36,18 @@ And then execute:
 ### Npm
 
 As the `kitten` module is on a [private registry on Gemfury](https://gemfury.com/help/npm-registry),
-you have to setup your npm configuration to be able to install all npm dependencies:
+you have to setup your npm configuration aka your `.npmrc` to be able to
+install all npm dependencies.
 
+Set your default registry in your `.npmrc`:
 ```
 npm config set registry https://npm-proxy.fury.io/bob/
 ```
 
-This command will set your default registry in your `.npmrc`.
-
+Set your authentication token in your `.npmrc`:
 ```
 npm login
 ```
-
-This command will set your authentication token in your `.npmrc`.
 
 Install the dependency:
 ```
@@ -238,21 +237,19 @@ This last command will:
 Then, you can upload the new `pkg/kitten-*.gem` build to Gemfury.
 
 ### Node module
-Configure your `.npmrc` to [set our private registry on
-Gemfury](https://gemfury.com/help/npm-registry) to be able to
-push a new version of `kitten` node module:
+As the `kitten` module is on a [private registry on Gemfury](https://gemfury.com/help/npm-registry),
+you have to setup your npm configuration aka your `.npmrc` to be able to publish
+a new version of the `kitten` node module.
 
+Set your default registry in your `.npmrc`:
 ```
 npm config set registry https://npm.fury.io/bob/
 ```
 
-This command will set your default registry in your `.npmrc`.
-
+Set your authentication token in your `.npmrc`:
 ```
 npm login
 ```
-
-This command will set your authentication token in your `.npmrc`.
 
 Then, you can publish the new module:
 ```
