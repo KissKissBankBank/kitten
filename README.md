@@ -35,6 +35,21 @@ And then execute:
 
 ### Npm
 
+As the `kitten` module is on a [private registry on Gemfury](https://gemfury.com/help/npm-registry),
+you have to setup your npm configuration to be able to install all npm dependencies:
+
+```
+npm config set registry https://npm-proxy.fury.io/bob/
+```
+
+This command will set your default registry in your `.npmrc`.
+
+```
+npm login
+```
+
+This command will set your authentication token in your `.npmrc`.
+
 Install the dependency:
 ```
 npm install kitten --save-dev
