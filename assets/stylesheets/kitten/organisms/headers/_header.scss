@@ -26,8 +26,6 @@
   $background-color: #fff;
   $border-color: #eee;
   $border-width: 1px;
-
-  // TODO: adapt with grid.
   $gutter: 20px;
 
   .k-Header {
@@ -43,7 +41,6 @@
       z-index: 10;
 
       width: 100%;
-      height: k-px-to-rem(65px);
     }
   }
 
@@ -59,7 +56,6 @@
     display: flex;
     align-items: center;
     align-self: flex-start;
-    min-height: k-px-to-rem(65px);
   }
 
   .k-Header__items--end {
@@ -71,10 +67,14 @@
     padding: 0 $gutter / 2;
   }
 
+  .k-Header__nav {
+    position: relative;
+    top: 1px;
+  }
+
   .k-Header__item--hide {
-    @media (max-width: 992px) {
+    @include tablet {
       display: none;
     }
   }
-
 }
