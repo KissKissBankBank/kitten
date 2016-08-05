@@ -1,0 +1,16 @@
+// Default colors
+$simulator-result-colors: (
+  border: black,
+  background: whitesmoke,
+  text: black
+) !default;
+
+// Simulator variables
+$simulator-result: (
+  colors: $simulator-result-colors,
+  label-font: source-sans-uppercase,
+  value-font: source-sans-semi-bold,
+);
+
+@include k-LoanSimulator;
+@include k-SimulatorResult($simulator-result);
