@@ -1,0 +1,59 @@
+/// TapBar
+
+@mixin k-TapBar($tapbar) {
+  $font: map-get($tapbar, 'font');
+
+  .k-TapBar {
+    background: #333;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    &.is-fixed {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      z-index: 10;
+    }
+  }
+
+  .k-TapBar__item {
+    @include k-font($font);
+
+    background-color: #333;
+    color: #FFF;
+    cursor: pointer;
+    display: block;
+    outline: none;
+    padding: 0 k-px-to-rem(40px) k-px-to-rem(3px);
+    transition: color .2s, border-color .2s;
+    font-size: k-px-to-rem(10px);
+    line-height: 1;
+    text-decoration: none;
+
+    &:before {
+      content: '';
+      display: block;
+      margin: k-px-to-rem(6px) auto;
+      width: 25px;
+      height: 25px;
+      box-sizing: border-box;
+      border: 1px solid #fff;
+      border-radius: 25px;
+      transition: background-color .2s;
+    }
+
+    &:hover,
+    &:active,
+    &:focus,
+    &.is-selected {
+      &:before {
+        background-color: #fff;
+      }
+    }
+  }
+}
