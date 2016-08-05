@@ -222,5 +222,23 @@ This last command will:
 Then, you can upload the new `pkg/kitten-*.gem` build to Gemfury.
 
 ### Node module
-**Configure your `.npmrc` to set our private registry on Gemfury to be able to
-push a new version of `kitten` node module.**
+Configure your `.npmrc` to [set our private registry on
+Gemfury](https://gemfury.com/help/npm-registry) to be able to
+push a new version of `kitten` node module:
+
+```
+npm config set registry https://npm.fury.io/bob/
+```
+
+This command will set your default registry in your `.npmrc`.
+
+```
+npm login
+```
+
+This command will set your authentication token in your `.npmrc`.
+
+Then, you can publish the new module:
+```
+npm publish
+```
