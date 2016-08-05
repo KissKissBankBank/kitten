@@ -9,9 +9,9 @@
 ///     };
 ///   }
 
-$mobile-max-width: k-px-to-rem(480px);
-$tablet-max-width: k-px-to-rem(768px);
-$desktop-max-width: k-px-to-rem(1200px);
+$mobile-max-width: 480px;
+$tablet-max-width: 768px;
+$desktop-max-width: 1200px;
 
 @mixin desktop-hd {
   @media (min-width: $desktop-max-width) {
