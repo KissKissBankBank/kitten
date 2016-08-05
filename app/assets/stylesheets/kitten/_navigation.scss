@@ -38,7 +38,7 @@ $horizontal-nav: (
 );
 
 $tapbar: (
-  font: source-sans-semi-bold-uppercase
+  font: source-sans-uppercase
 );
 
 @include k-HorizontalNav($horizontal-nav);
