@@ -15,9 +15,11 @@ module Kitten
   # Configuration variables and defaults.
   class Configuration
     attr_accessor :styleguide_stylesheet_path
+    attr_accessor :webpack
 
     def initialize
       self.styleguide_stylesheet_path = 'kitten/styleguide/defaults/application'
+      self.webpack = false
     end
   end
 end

@@ -12,11 +12,12 @@ spec/dummy/.sass-cache
 *.gem
 /node_modules
 .sass-cache
-app
+app/controllers
+app/helpers
+app/views
 config
 lib
 spec
-vendor/assets/stylesheets/kitten
 Gemfile
 .rubocop.yml
 .ruby-version
