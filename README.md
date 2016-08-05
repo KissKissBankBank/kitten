@@ -206,12 +206,13 @@ The documentation is accessible on development environment: `/kitten/sassdoc`.
 
 ## Contributing
 
-- Create a PR with a clear title.
+- Create a PR with a clear title in English.
 - Tag it with the right label (`Work in progress`, `Needs reviews`, etc.).
+- Update the CHANGELOG.md under the section `[unreleased]` when the PR is ready
+  for reviewing.
 
 For admin collaborators, before merging the PR:
 - Add the PR to the related milestone.
-- Update the CHANGELOG.md under the section `[unreleased]`.
 - Use `Squash and merge` option to merge the PR.
 
 ## Release
