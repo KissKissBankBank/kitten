@@ -25,33 +25,34 @@
     <div class="k-u-clearfix"></div>
 
     <ul>
-      <li class="k-StyleguideMenu__section">
-        <a href="#branding" class="k-StyleguideMenu__sectionTitle is-opened">Branding</a>
-        <ul class="k-StyleguideMenu__sectionList is-opened">
-          <li class="k-StyleguideMenu__sectionItem">
+      <li class="k-StyleguideMenu__list">
+        <a href="#branding" class="k-StyleguideMenu__listItem is-opened">Branding</a>
+
+        <ul class="k-StyleguideMenu__subList is-opened">
+          <li class="k-StyleguideMenu__subListItem">
             <a href="#colors">colors</a>
           </li>
-          <li class="k-StyleguideMenu__sectionItem">
+          <li class="k-StyleguideMenu__subListItem">
             <a href="#typography">typography</a>
           </li>
-          <li class="k-StyleguideMenu__sectionItem">
-            <a href="#icones">icones</a>
+          <li class="k-StyleguideMenu__subListItem">
+            <a href="#icons">icons</a>
           </li>
         </ul>
       </li>
     </ul>
 
     <ul>
-      <li class="k-StyleguideMenu__section">
-        <a href="#atoms" class="k-StyleguideMenu__sectionTitle is-opened">Atoms</a>
-        <ul class="k-StyleguideMenu__sectionList is-opened">
-          <li class="k-StyleguideMenu__sectionItem">
+      <li class="k-StyleguideMenu__list">
+        <a href="#atoms" class="k-StyleguideMenu__listItem is-opened">Atoms</a>
+        <ul class="k-StyleguideMenu__subList is-opened">
+          <li class="k-StyleguideMenu__subListItem">
             <a href="#buttons">buttons</a>
           </li>
-          <li class="k-StyleguideMenu__sectionItem">
+          <li class="k-StyleguideMenu__subListItem">
             <a href="#form">form</a>
           </li>
-          <li class="k-StyleguideMenu__sectionItem">
+          <li class="k-StyleguideMenu__subListItem">
             <a href="#typography">typography</a>
           </li>
         </ul>
@@ -59,16 +60,16 @@
     </ul>
 
     <ul>
-      <li class="k-StyleguideMenu__section">
-        <a href="#molecules" class="k-StyleguideMenu__sectionTitle is-opened">Molécules</a>
-        <ul class="k-StyleguideMenu__sectionList is-opened">
-          <li class="k-StyleguideMenu__sectionItem">
+      <li class="k-StyleguideMenu__list">
+        <a href="#molecules" class="k-StyleguideMenu__listItem is-opened">Molécules</a>
+        <ul class="k-StyleguideMenu__subList is-opened">
+          <li class="k-StyleguideMenu__subListItem">
             <a href="#form">form</a>
           </li>
-          <li class="k-StyleguideMenu__sectionItem">
+          <li class="k-StyleguideMenu__subListItem">
             <a href="#navigation">navigation</a>
           </li>
-          <li class="k-StyleguideMenu__sectionItem">
+          <li class="k-StyleguideMenu__subListItem">
             <a href="#simulators">simulators</a>
           </li>
         </ul>
@@ -76,10 +77,10 @@
     </ul>
 
     <ul>
-      <li class="k-StyleguideMenu__section">
-        <a href="#organismes" class="k-StyleguideMenu__sectionTitle is-opened">Organismes</a>
-        <ul class="k-StyleguideMenu__sectionList is-opened">
-          <li class="k-StyleguideMenu__sectionItem">
+      <li class="k-StyleguideMenu__list">
+        <a href="#organismes" class="k-StyleguideMenu__listItem is-opened">Organismes</a>
+        <ul class="k-StyleguideMenu__subList is-opened">
+          <li class="k-StyleguideMenu__subListItem">
             <a href="#loan-simulators">loan-simulators</a>
           </li>
         </ul>
@@ -98,6 +99,8 @@
 
 <%= javascript_include_tag 'kitten/noframework.waypoints.min.js' %>
 <%= javascript_include_tag 'kitten/waypoint.js' %>
+<%= javascript_include_tag 'kitten/navigation.js' %>
+
 
 </body>
 </html>
