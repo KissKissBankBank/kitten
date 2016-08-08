@@ -1,0 +1,19 @@
+@include k-ButtonImage((
+  colors: (
+    base: (
+      color: #333,
+      background-color: #fff,
+      border-color: #d8d8d8
+    ),
+    hover: (
+      color: #333,
+      background-color: #fff,
+      border-color: #333
+    ),
+    active: (
+      color: #333,
+      background-color: #fff,
+      border-color: #151515
+    )
+  )
+));

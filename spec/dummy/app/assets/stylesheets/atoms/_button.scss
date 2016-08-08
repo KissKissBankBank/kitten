@@ -1,0 +1,35 @@
+@include k-Button((
+  typography: $typography,
+  multiplier: $major-second,
+  font: (
+    family: 'source-sans',
+    font-weight: 600,
+    letter-spacing: 1px,
+    text-transform: uppercase,
+    text-decoration: none,
+    text-align: center
+  ),
+  colors: (
+    base: (
+      color: #333,
+      background-color: #fff,
+      border-color: #d8d8d8
+    ),
+    hover: (
+      color: #fff,
+      background-color: #333
+    ),
+    focus: (
+      color: #fff,
+      background-color: #ddd,
+    ),
+    active: (
+      color: #fff,
+      background-color: #151515
+    ),
+    disabled: (
+      color: #fff,
+      background-color: #d8d8d8
+    )
+  )
+));
