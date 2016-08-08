@@ -1,0 +1,123 @@
+/// A tap bar navigation, used in mobile and tablet versions.
+///
+/// @group navigation
+///
+/// @parameter {Map} $tapbar - a tapbar specification
+///
+/// @example scss - usage
+///
+///   $tapbar: (
+///     font: source-sans-uppercase,
+///     font-size: 10px,
+///     background-color: #333,
+///     color: #fff,
+///     z-index: 10
+///   );
+///
+///   @include k-TapBar($tapbar);
+///
+/// @example html
+///
+///   <ul id="topbar" class="k-TapBar">
+///     <li>
+///       <a class="k-TapBar__item k-TapBar__itemFirst is-selected" href="#">
+///         Link selected
+///       </a>
+///     </li>
+///     <li>
+///       <a class="k-TapBar__item" href="#">
+///         Link
+///       </a>
+///     </li>
+///     …
+///   </ul>
+
+@mixin k-TapBar($tapbar) {
+  @include k-with-module('k-TapBar: $tapbar') {
+
+    // Variables & Validations
+    $font: k-map-fetch($tapbar, 'font');
+    $font-step: k-number-definition(
+      k-map-fetch($tapbar, 'font-step'), $unit: none);
+    $color: k-color-definition(
+      k-map-fetch($tapbar, 'color'));
+    $background-color: k-color-definition(
+      k-map-fetch($tapbar, 'background-color'));
+
+    $line-height: 1;
+    $round-size: k-px-to-rem(25px);
+    $z-index: k-number-definition(map-get($tapbar, 'z-index'));
+
+    .k-TapBar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      list-style-type: none;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      background: $background-color;
+
+      &.is-fixed {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        z-index: $z-index;
+      }
+    }
+
+    .k-TapBar__item {
+      @include k-font($font);
+      @include k-fontSize($font-step, $line-height);
+      letter-spacing: k-px-to-rem(0.8px);
+      text-decoration: none;
+      color: $color;
+
+      background-color: $background-color;
+      cursor: pointer;
+      display: block;
+      outline: none;
+      padding: 0 k-px-to-rem(40px) k-px-to-rem(14px);
+      position: relative;
+
+      &:before {
+        border: 1px solid $color;
+        border-radius: $round-size / 2;
+        box-sizing: border-box;
+
+        content: '';
+        display: block;
+        margin: k-px-to-rem(6px) auto;
+        width: $round-size;
+        height: $round-size;
+
+        transition: background-color .2s;
+      }
+
+      &:hover,
+      &:active,
+      &:focus,
+      &.is-selected {
+        &:before {
+          background-color: $color;
+        }
+      }
+    }
+
+    .k-TapBar__text {
+      position: absolute;
+      left: 0;
+      text-align: center;
+      width: 100%;
+    }
+
+    // TODO: replace by mixin.
+    @media (max-width: 480px) {
+      .k-TapBar__item {
+        padding-left: k-px-to-rem(30px);
+        padding-right: k-px-to-rem(30px);
+      }
+    }
+  }
+}

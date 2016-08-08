@@ -1,4 +1,5 @@
 @import 'kitten/molecules/navigation/horizontal-nav';
+@import 'kitten/molecules/navigation/tap-bar';
 
 $typography: map-merge($typography, (
   font-size: k-px-to-rem(12px),
@@ -36,4 +37,13 @@ $horizontal-nav: (
   )
 );
 
+$tapbar: (
+  font: source-sans-uppercase,
+  font-step: -4,
+  background-color: #333,
+  color: #fff,
+  z-index: 10
+);
+
 @include k-HorizontalNav($horizontal-nav);
+@include k-TapBar($tapbar);
