@@ -56,10 +56,10 @@
 @mixin k-HorizontalNav($nav) {
   @include k-with-module('k-HorizontalNav: $nav') {
 
-    $typography: map-get($nav, 'typography');
-    $multiplier: map-get($nav, 'multiplier');
     $font: map-get($nav, 'font');
-    $line-height: map-get($typography, 'line-height');
+    $font-size: k-number-definition(
+      k-map-fetch($nav, 'font-size'), $unit: px);
+    $line-height: k-map-fetch($nav, 'line-height');
 
     $colors: k-map-fetch($nav, 'colors');
 
@@ -94,9 +94,10 @@
     }
 
     .k-HorizontalNav__item {
-      @include k-typographyFontSize($typography, $multiplier, 0, $line-height);
-      @include k-typographyFontFamily($typography, $font);
-      @include k-typographyFontStyle($typography, $font);
+      @include k-font($font);
+      font-size: k-px-to-rem($font-size);
+      line-height: k-px-to-rem($line-height);
+      text-decoration: none;
 
       background-color: $base-background-color;
       border-bottom: $border-width solid $base-border-color;

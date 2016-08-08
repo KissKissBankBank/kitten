@@ -1,21 +1,9 @@
 @import 'kitten/molecules/navs/horizontal-nav';
 
-$typography: map-merge($typography, (
-  font-size: k-px-to-rem(12px),
-  line-height: k-px-to-rem(24px)
-));
-
 $horizontal-nav: (
-  typography: $typography,
-  multiplier: $major-second,
-  font: (
-    family: 'source-sans',
-    font-weight: 600,
-    letter-spacing: 1px,
-    text-transform: uppercase,
-    text-decoration: none,
-    text-align: center,
-  ),
+  font: source-sans-semi-bold-uppercase,
+  font-size: 12px,
+  line-height: 24px,
   colors: (
     base: (
       background-color: #fff,
