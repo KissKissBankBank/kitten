@@ -78,7 +78,8 @@
       cursor: pointer;
       display: block;
       outline: none;
-      padding: 0 k-px-to-rem(40px) k-px-to-rem(3px);
+      padding: 0 k-px-to-rem(40px) k-px-to-rem(14px);
+      position: relative;
 
       &:before {
         border: 1px solid $color;
@@ -104,19 +105,18 @@
       }
     }
 
+    .k-TapBar__text {
+      position: absolute;
+      left: 0;
+      text-align: center;
+      width: 100%;
+    }
+
     // TODO: replace by mixin.
     @media (max-width: 480px) {
       .k-TapBar__item {
-        padding-left: k-px-to-rem(25px);
-        padding-right: k-px-to-rem(25px);
-      }
-
-      .k-TapBar__itemFirst {
-        padding-left: k-px-to-rem(10px);
-      }
-
-      .k-TapBar__itemLast {
-        padding-right: k-px-to-rem(10px);
+        padding-left: k-px-to-rem(30px);
+        padding-right: k-px-to-rem(30px);
       }
     }
   }
