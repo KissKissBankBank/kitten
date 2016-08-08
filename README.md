@@ -35,19 +35,19 @@ And then execute:
 
 ### Npm
 
-As the `kitten` module is on a [private registry on Gemfury](https://gemfury.com/help/npm-registry),		
-you have to setup your npm configuration aka your `.npmrc` to be able to		
-install all npm dependencies.		
+As the `kitten` module is on a [private registry on Gemfury](https://gemfury.com/help/npm-registry),
+you have to setup your npm configuration aka your `.npmrc` to be able to
+install all npm dependencies.
 
-Set your default registry in your `.npmrc`:		
-```		
-npm config set registry https://npm-proxy.fury.io/bob/		
-```		
+Set your default registry in your `.npmrc`:
+```
+npm config set registry https://npm-proxy.fury.io/bob/
+```
 
-Set your authentication token in your `.npmrc`:		
-```		
-npm login		
-```		
+Set your authentication token in your `.npmrc`:
+```
+npm login
+```
 
 Install the dependency:
 ```
@@ -201,16 +201,16 @@ $ npm run sassdoc
 
 The documentation is accessible on development environment: `/kitten/sassdoc`.
 
-## Contributing		
+## Contributing
 
-- Create a PR with a clear title in English.		
-- Tag it with the right label (`Work in progress`, `Needs reviews`, etc.).		
-- Update the CHANGELOG.md under the section `[unreleased]` when the PR is ready		
-  for reviewing.		
+- Create a PR with a clear title in English.
+- Tag it with the right label (`Work in progress`, `Needs reviews`, etc.).
+- Update the CHANGELOG.md under the section `[unreleased]` when the PR is ready
+  for reviewing.
 
-For admin collaborators, before merging the PR:		
-- Add the PR to the related milestone.		
-- Use `Squash and merge` option to merge the PR.		
+For admin collaborators, before merging the PR:
+- Add the PR to the related milestone.
+- Use `Squash and merge` option to merge the PR.
 
 ## Release
 
@@ -235,22 +235,22 @@ This last command will:
 
 Then, you can upload the new `pkg/kitten-*.gem` build to Gemfury.
 
-### Node module		
-As the `kitten` module is on a [private registry on Gemfury](https://gemfury.com/help/npm-registry),		
-you have to setup your npm configuration aka your `.npmrc` to be able to publish		
-a new version of the `kitten` node module.		
+### Node module
+As the `kitten` module is on a [private registry on Gemfury](https://gemfury.com/help/npm-registry),
+you have to setup your npm configuration aka your `.npmrc` to be able to publish
+a new version of the `kitten` node module.
 
-Set your default registry in your `.npmrc`:		
-```		
-npm config set registry https://npm.fury.io/bob/		
-```		
+Set your default registry in your `.npmrc`:
+```
+npm config set registry https://npm.fury.io/bob/
+```
 
-Set your authentication token in your `.npmrc`:		
-```		
-npm login		
-```		
+Set your authentication token in your `.npmrc`:
+```
+npm login
+```
 
-Then, you can publish the new module:		
-```		
-npm publish		
+Then, you can publish the new module:
+```
+npm publish
 ```
