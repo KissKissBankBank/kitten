@@ -1,24 +1,3 @@
-// Default colors
-$horizontal-nav-colors: (
-  base: (
-    background-color: #fff,
-    border-color: #eee,
-    color: #333,
-  ),
-  hover: (
-    color: #4a84ff,
-  ),
-  focus: (
-    border-color: #4a84ff,
-    color: #4a84ff,
-  ),
-  is-selected: (
-    color: #333,
-    border-color: #333,
-  )
-) !default;
-
-// Horizontal nav variables
 $typography: map-merge($typography, (
   font-size: k-px-to-rem(12px),
   line-height: k-px-to-rem(16px)
@@ -35,7 +14,24 @@ $horizontal-nav: (
     text-decoration: none,
     text-align: center,
   ),
-  colors: $horizontal-nav-colors
+  colors: (
+    base: (
+      background-color: #fff,
+      border-color: #eee,
+      color: #333,
+    ),
+    hover: (
+      color: #4a84ff,
+    ),
+    focus: (
+      border-color: #4a84ff,
+      color: #4a84ff,
+    ),
+    is-selected: (
+      color: #333,
+      border-color: #333,
+    )
+  )
 );
 
 @include k-HorizontalNav($horizontal-nav);
