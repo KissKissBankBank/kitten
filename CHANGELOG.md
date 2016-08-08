@@ -3,6 +3,10 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
+New features:
+- Enable configuration on styleguide stylesheet path.
+- Add webpack to manage `kitten` scss assets in dummy app.
+- Define default colors on every component in the styleguide.
 
 ## [v0.4.0] - 2016-08-04
 Minor updates:

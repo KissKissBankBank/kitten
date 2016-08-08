@@ -1,5 +1,3 @@
-//= require kitten/normalize
-
 $k-fonts: (
   source-sans: (
     family: ("Source Sans Pro", Helvetica, Arial, sans-serif),
@@ -14,12 +12,4 @@ $k-fonts: (
     weight: 400,
     transform: uppercase
   )
-);
-
-@import 'kitten';
-@import 'typography';
-@import 'buttons';
-@import 'styleguide';
-@import 'form';
-@import 'simulator';
-@import 'navigation';
+) !default;
