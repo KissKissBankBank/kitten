@@ -37,13 +37,14 @@
 
     // Variables & Validations
     $font: k-map-fetch($tapbar, 'font');
-    $font-size: k-number-definition(
-      k-map-fetch($tapbar, 'font-size'), $unit: px);
+    $font-step: k-number-definition(
+      k-map-fetch($tapbar, 'font-step'), $unit: none);
     $color: k-color-definition(
       k-map-fetch($tapbar, 'color'));
     $background-color: k-color-definition(
       k-map-fetch($tapbar, 'background-color'));
 
+    $line-height: 1;
     $round-size: k-px-to-rem(25px);
     $z-index: k-number-definition(map-get($tapbar, 'z-index'));
 
@@ -68,8 +69,7 @@
 
     .k-TapBar__item {
       @include k-font($font);
-      font-size: k-px-to-rem($font-size);
-      line-height: 1;
+      @include k-fontSize($font-step, $line-height);
       letter-spacing: k-px-to-rem(0.8px);
       text-decoration: none;
       color: $color;
