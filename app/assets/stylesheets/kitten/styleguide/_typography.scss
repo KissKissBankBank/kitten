@@ -6,12 +6,7 @@ $k-typography: k-typography-definition((
   scale-multiplier: $major-second
 ));
 
-$body-copy: (
-  family: 'source-sans',
-  color: #333
-);
-
-$typographic-scale: (
+@include k-TypographyScale((
   styles: (
     ParagraphXl: (
       family: 'source-sans',
@@ -48,7 +43,9 @@ $typographic-scale: (
       font-weight: 400
     )
   )
-);
+));
 
-@include k-TypographyScale($typographic-scale);
-@include k-TypographyBodyCopy($body-copy);
+@include k-TypographyBodyCopy((
+  family: 'source-sans',
+  color: #333
+));
