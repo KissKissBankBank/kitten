@@ -135,13 +135,13 @@ stylesheets](http://webpack.github.io/docs/stylesheets.html).
 
 Import `kitten` in your main Sass file:
 
-```sass
+```scss
 @import 'kitten';
 ```
 
 Define your font families:
 
-```sass
+```scss
 $k-fonts: (
   source-sans: (
     family: ("Source Sans Pro", Helvetica, Arial, sans-serif),
@@ -154,9 +154,21 @@ $k-fonts: (
 );
 ```
 
+Define your typography settings:
+
+```scss
+$k-typography: (
+  root: 16px,
+  font-size: 1rem,
+  font-weight: 400,
+  line-height: 1.5rem,
+  scale-multiplier: $major-second
+);
+```
+
 Include the component your want to use in your application:
 
-```sass
+```scss
 @include k-MyComponent;
 ```
 

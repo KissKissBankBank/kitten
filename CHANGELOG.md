@@ -4,8 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 Breaking changes:
-- Requires a global $k-typography instead of passing typography styles in
-  mixins.
+- Requires a global `$k-typography: k-typography-definition((…))` instead of
+  passing typography styles in mixins.
 
 New features:
 - Enable configuration on styleguide stylesheet path.
