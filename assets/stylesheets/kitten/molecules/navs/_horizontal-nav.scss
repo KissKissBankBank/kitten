@@ -56,7 +56,7 @@
 @mixin k-HorizontalNav($nav) {
   @include k-with-module('k-HorizontalNav: $nav') {
 
-    $font: map-get($nav, 'font');
+    $font: k-map-fetch($nav, 'font');
     $font-size: k-number-definition(
       k-map-fetch($nav, 'font-size'), $unit: px);
     $line-height: k-map-fetch($nav, 'line-height');
@@ -77,7 +77,7 @@
     $focus-border-color: k-color-definition(
       k-map-fetch($colors, ('focus', 'border-color')));
 
-    // state 'is-selected' colors (optional)
+    // state 'is-selected' colors
     $is-selected-color: k-color-definition(
       k-map-fetch($colors, ('is-selected', 'color')));
     $is-selected-border-color: k-color-definition(

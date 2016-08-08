@@ -52,10 +52,11 @@
 
 @mixin k-Button($button) {
   @include k-with-module('k-Button: $button') {
+    $border-size: 1px;
 
-    // Button element default settings (2px for border).
-    $button-min-width: k-px-to-rem(160px - 2px);
-    $button-line-height: k-px-to-rem(40px - 2px);
+    // Button element default settings.
+    $button-min-width: k-px-to-rem(160px - ($border-size * 2));
+    $button-line-height: k-px-to-rem(40px - ($border-size * 2));
 
     // The button element has a radius of 1.25rem (
     //   20px (designed border-radius) / 16px (base font-size)

@@ -44,11 +44,11 @@
 
 @mixin k-ButtonIcon($button-icon) {
   @include k-with-module('k-ButtonIcon: $button-icon') {
+    $border-size: 1px;
 
-    // 2px for border.
-    $button-size: 40px - 2px;
-    $button-size-tiny: 30px - 2px;
-    $button-size-big: 50px - 2px;
+    $button-size: 40px - ($border-size * 2);
+    $button-size-tiny: 30px - ($border-size * 2);
+    $button-size-big: 50px - ($border-size * 2);
 
     // SVG element default settings.
     $icon-width: k-px-to-rem(17px);
