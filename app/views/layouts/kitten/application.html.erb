@@ -6,6 +6,7 @@
 
 <%= stylesheet_link_tag 'kitten/application',
       'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' %>
+
 <%= csrf_meta_tags %>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
@@ -23,38 +24,69 @@
 
     <div class="k-u-clearfix"></div>
 
-    <h5 class="k-StyleguideMenu__sectionTitle">Branding</h5>
-
     <ul>
-      <li class="k-StyleguideMenu__section">
-        <a>Colors</a>
-      </li>
-      <li class="k-StyleguideMenu__section">
-        <a>Typography</a>
-      </li>
-      <li class="k-StyleguideMenu__section">
-        <a>Icons</a>
-      </li>
-    </ul>
+      <li class="k-StyleguideMenu__list">
+        <a href="#branding" class="k-StyleguideMenu__listItem is-opened">Branding</a>
 
-    <h5 class="k-StyleguideMenu__sectionTitle">Components</h5>
-
-    <ul>
-      <li class="k-StyleguideMenu__section">
-        <a>Buttons</a>
-        <ul>
-          <li class="k-StyleguideMenu__sectionItem">
-            <a>Primary button</a>
+        <ul class="k-StyleguideMenu__subList is-opened">
+          <li class="k-StyleguideMenu__subListItem">
+            <a href="#colors">colors</a>
           </li>
-          <li class="k-StyleguideMenu__sectionItem">
-            <a>Icon button and word</a>
+          <li class="k-StyleguideMenu__subListItem">
+            <a href="#typography">typography</a>
           </li>
-          <li class="k-StyleguideMenu__section">
-            <a>Form</a>
+          <li class="k-StyleguideMenu__subListItem">
+            <a href="#icons">icons</a>
           </li>
         </ul>
       </li>
     </ul>
+
+    <ul>
+      <li class="k-StyleguideMenu__list">
+        <a href="#atoms" class="k-StyleguideMenu__listItem is-opened">Atoms</a>
+        <ul class="k-StyleguideMenu__subList is-opened">
+          <li class="k-StyleguideMenu__subListItem">
+            <a href="#buttons">buttons</a>
+          </li>
+          <li class="k-StyleguideMenu__subListItem">
+            <a href="#form">form</a>
+          </li>
+          <li class="k-StyleguideMenu__subListItem">
+            <a href="#typography">typography</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <ul>
+      <li class="k-StyleguideMenu__list">
+        <a href="#molecules" class="k-StyleguideMenu__listItem is-opened">Molécules</a>
+        <ul class="k-StyleguideMenu__subList is-opened">
+          <li class="k-StyleguideMenu__subListItem">
+            <a href="#form">form</a>
+          </li>
+          <li class="k-StyleguideMenu__subListItem">
+            <a href="#navigation">navigation</a>
+          </li>
+          <li class="k-StyleguideMenu__subListItem">
+            <a href="#simulators">simulators</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <ul>
+      <li class="k-StyleguideMenu__list">
+        <a href="#organisms" class="k-StyleguideMenu__listItem is-opened">Organisms</a>
+        <ul class="k-StyleguideMenu__subList is-opened">
+          <li class="k-StyleguideMenu__subListItem">
+            <a href="#loan-simulators">loan-simulators</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
   </nav>
 
   <div class="k-StyleguideContent">
@@ -64,6 +96,10 @@
     </section>
   </div>
 </div>
+
+<%= javascript_include_tag 'kitten/noframework.waypoints.min.js' %>
+<%= javascript_include_tag 'kitten/waypoint.js' %>
+<%= javascript_include_tag 'kitten/navigation.js' %>
 
 </body>
 </html>

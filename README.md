@@ -233,6 +233,7 @@ This last command will:
 - push to Github.
 
 ### Gem
+
 Then, you can upload the new `pkg/kitten-*.gem` build to Gemfury.
 
 ### Node module
