@@ -1,9 +1,9 @@
-@import 'kitten/molecules/navs/horizontal-nav';
+@import 'kitten/molecules/navigation/horizontal-nav';
 
 $horizontal-nav: (
   font: source-sans-semi-bold-uppercase,
-  font-size: 12px,
-  line-height: 24px,
+  font-step: -2,
+  line-height: 2,
   colors: (
     base: (
       background-color: #fff,
