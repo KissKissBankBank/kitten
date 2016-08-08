@@ -71,10 +71,22 @@
   .k-Header__nav {
     position: relative;
     top: $border-width;
+
+    @include k-media-sm {
+      display: none;
+    }
+
+    @include k-media-xs {
+      display: none;
+    }
   }
 
-  .k-Header__item--hide {
-    @include tablet {
+  .k-Header__signup {
+    @include k-media-sm {
+      display: none;
+    }
+
+    @include k-media-xs {
       display: none;
     }
   }
