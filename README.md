@@ -64,6 +64,7 @@ var kitten = require('kitten');
 //     …,
 //     …
 //   ]
+// }
 ```
 
 #### Grunt
