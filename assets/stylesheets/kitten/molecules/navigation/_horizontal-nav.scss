@@ -7,15 +7,9 @@
 /// @example scss - usage
 ///
 ///   $nav: (
-///     typography: $typography,
-///     font: (
-///       family: 'source-sans',
-///       font-weight: 600,
-///       letter-spacing: 1px,
-///       text-transform: uppercase,
-///       text-decoration: none,
-///       text-align: center
-///     ),
+///     font: source-sans-semi-bold-uppercase,
+///     font-step: -2,
+///     line-height: 2,
 ///     colors: (
 ///       base: (
 ///         background-color: #fff,
@@ -96,8 +90,6 @@
     .k-HorizontalNav__item {
       @include k-font($font);
       @include k-fontSize($font-step, $line-height);
-      // font-size: k-px-to-rem($font-size);
-      // line-height: k-px-to-rem($line-height);
       text-align: center;
       text-decoration: none;
 

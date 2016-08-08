@@ -18,19 +18,17 @@ $light-grey-2: #eee;
 
   background-color: $blue;
   color: white;
-  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
   font-size: 1.2rem;
   font-weight: 300;
   line-height: 4rem;
 }
 
 .k-StyleguideTitle__breadcrumb {
-  padding-left: 1rem;
-  border: 1px solid $light-grey-2;
+  margin: 4rem 0 0 8rem;
+  border-bottom: 1px solid $light-grey-2;
 
   color: #333;
-  font-size: 0.875rem;
-  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+  font-size: 1.5rem;
   font-weight: 400;
   letter-spacing: 1px;
   line-height: 2.4rem;
@@ -60,7 +58,6 @@ $light-grey-2: #eee;
   padding-right: 1rem;
 
   font-size: 0.75rem;
-  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
   font-weight: 300;
   letter-spacing: 1px;
   line-height: 4rem;
@@ -72,7 +69,6 @@ $light-grey-2: #eee;
   padding-left: 1rem;
   border-bottom: 1px solid $light-navy;
 
-  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
   font-size: 1.25rem;
   font-weight: 400;
   line-height: 3.2rem;
@@ -102,7 +98,6 @@ $light-grey-2: #eee;
   list-style: none;
 
   font-size: 0.75rem;
-  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
   font-weight: 600;
   letter-spacing: 1px;
   line-height: 2.75rem;
@@ -117,6 +112,60 @@ $light-grey-2: #eee;
 // Section
 .k-StyleguideSection {
   padding: 3.25em 8em;
+}
+
+.k-StyleguideSection__example {
+  margin: 2rem 0 0 8rem;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.k-StyleguideSection__example--vertical {
+  margin: 2rem 0 0 8rem;
+
+  flex-direction: column;
+}
+
+.k-StyleguideSection__title {
+  margin: 4rem 0 0 8rem;
+
+  color: #333;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+// Section Example
+.k-StyleguideExample {
+  padding-right: 3rem;
+  text-align: center;
+}
+
+.k-StyleguideExample__title {
+  color: $blue;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.k-StyleguideExample__title--margin {
+  padding-right: 2rem;
+}
+
+.k-StyleguideExample__description {
+  margin-right: 6rem;
+  font-size: 1.25rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 1.4;
+  width: 40%;
+}
+
+.k-StyleguideExample__bloc {
+  margin-top: 1.5rem;
+  background-color: $blue;
+  width: 470px;
+  height: 272px;
 }
 
 // Utilities

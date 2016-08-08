@@ -1,0 +1,20 @@
+<%= example do %>
+  <p class="k-TextInputWithUnit">
+    <input class="k-TextInputWithUnit__input" value="42.12" type="number" />
+    <span class="k-TextInputWithUnit__unit">$</span>
+  </p>
+<% end %>
+
+<%= example do %>
+  <p class="k-TextInputWithUnit">
+    <input class="k-TextInputWithUnit__input" type="number" />
+    <span class="k-TextInputWithUnit__unit">years old</span>
+  </p>
+<% end %>
+
+<%= example do %>
+  <p class="k-TextInputWithUnit is-error">
+    <input class="k-TextInputWithUnit__input" value="wrong" />
+    <span class="k-TextInputWithUnit__unit">€</span>
+  </p>
+<% end %>

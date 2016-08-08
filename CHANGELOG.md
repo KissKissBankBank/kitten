@@ -3,8 +3,17 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
+
+## [v0.4.0] - 2016-08-04
 Minor updates:
 - Update `@group` property in SassDoc comments.
+- Update npm module exposed variables: it now returns an array of `loadPaths`
+  instead of a function.
+
+New features:
+- Add new component: `horizontal-nav` molecule.
+- Add javascript on `loan-simulator` organism with React.
+- Add new css structure on styleguide.
 
 ## [v0.3.0] - 2016-08-01
 New features:

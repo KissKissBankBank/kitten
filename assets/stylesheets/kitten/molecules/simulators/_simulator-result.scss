@@ -15,15 +15,13 @@
 /// @example html
 ///
 ///   <div class="k-SimulatorResult">
-///     …
 ///     <div class="k-SimulatorResult__item">
-///       3 months
-///     </div>
-///     <div class="k-SimulatorResult__item">
-///       4%
+///       <div class="k-SimulatorResult__item__label">duration</div>
+///       <div class="k-SimulatorResult__item__value">3 months</div>
 ///     </div>
 ///     <div class="k-SimulatorResult__item is-last">
-///       $1
+///       <div class="k-SimulatorResult__item__label">cost</div>
+///       <div class="k-SimulatorResult__item__value">99$</div>
 ///     </div>
 ///   </div>
 @mixin k-SimulatorResult($simulator-result) {
@@ -31,6 +29,9 @@
   $border-color: map-get($colors, 'border');
   $background-color: map-get($colors, 'background');
   $text-color: map-get($colors, 'text');
+
+  $label-font: map-get($simulator-result, 'label-font');
+  $value-font: map-get($simulator-result, 'value-font');
 
   .k-SimulatorResult {
     display: flex;
@@ -51,5 +52,15 @@
     &.is-last {
       border-right: none;
     }
+  }
+
+  .k-SimulatorResult__item__label {
+    @include k-font($label-font);
+    @include k-fontSize(-2);
+  }
+
+  .k-SimulatorResult__item__value {
+    @include k-font($value-font);
+    @include k-fontSize(1);
   }
 }
