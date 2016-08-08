@@ -35,23 +35,35 @@ And then execute:
 
 ### Npm
 
+As the `kitten` module is on a [private registry on Gemfury](https://gemfury.com/help/npm-registry),		
+you have to setup your npm configuration aka your `.npmrc` to be able to		
+install all npm dependencies.		
+
+Set your default registry in your `.npmrc`:		
+```		
+npm config set registry https://npm-proxy.fury.io/bob/		
+```		
+
+Set your authentication token in your `.npmrc`:		
+```		
+npm login		
+```		
+
 Install the dependency:
 ```
 npm install kitten --save-dev
 ```
 
-`kitten` module exposes load paths that Sass needs to resolve correcly
-`@import`:
+`kitten` module exposes an array of load paths that Sass needs to resolve
+correcly `@import`:
 ```js
 var kitten = require('kitten');
 
 // => {
-//   loadPath: …,
-//   dependenciesPaths: {
-//     sassyMaps: …,
-//     modularscale: …
-//   }
-// }
+//   loadPaths: [
+//     …,
+//     …
+//   ]
 ```
 
 #### Grunt
@@ -189,11 +201,23 @@ $ npm run sassdoc
 
 The documentation is accessible on development environment: `/kitten/sassdoc`.
 
+## Contributing		
+
+- Create a PR with a clear title in English.		
+- Tag it with the right label (`Work in progress`, `Needs reviews`, etc.).		
+- Update the CHANGELOG.md under the section `[unreleased]` when the PR is ready		
+  for reviewing.		
+
+For admin collaborators, before merging the PR:		
+- Add the PR to the related milestone.		
+- Use `Squash and merge` option to merge the PR.		
+
 ## Release
 
 To release a new version:
 - Update the version in `lib/kitten/version.rb` and `package.json`.
 - Update the `CHANGELOG.md` with your new features and fixes.
+
 - Run this command:
 ```
 bundle exec rake kitten_release
@@ -207,4 +231,26 @@ This last command will:
 - tag the version;
 - push to Github.
 
+### Gem
+
 Then, you can upload the new `pkg/kitten-*.gem` build to Gemfury.
+
+### Node module		
+As the `kitten` module is on a [private registry on Gemfury](https://gemfury.com/help/npm-registry),		
+you have to setup your npm configuration aka your `.npmrc` to be able to publish		
+a new version of the `kitten` node module.		
+
+Set your default registry in your `.npmrc`:		
+```		
+npm config set registry https://npm.fury.io/bob/		
+```		
+
+Set your authentication token in your `.npmrc`:		
+```		
+npm login		
+```		
+
+Then, you can publish the new module:		
+```		
+npm publish		
+```
