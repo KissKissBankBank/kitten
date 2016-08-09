@@ -60,7 +60,7 @@ window.LoanSimulator = React.createClass({
       durationSymbolPlural: 'months',
 
       feeText: 'Fee',
-      feeForDuration: function() { return 0 },
+      feeForDuration: function() { return 0.1 },
 
       currencySymbol: '$',
       locale: 'en',
