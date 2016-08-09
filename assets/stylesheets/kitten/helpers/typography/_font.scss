@@ -2,7 +2,7 @@
 ///
 /// @group typography
 @mixin k-font($font-name) {
-  $font: map-get($k-fonts, $font-name);
+  $font: k-map-fetch($k-fonts, $font-name);
   $family: map-get($font, 'family');
   $weight: map-get($font, 'weight');
   $transform: map-get($font, 'transform');
