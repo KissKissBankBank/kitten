@@ -42,8 +42,18 @@ $typography: (
 
 @import 'kitten';
 
+// ------
 // Atoms
+// ------
+
+// Buttons
 @import 'atoms/buttons/button';
 @import 'atoms/buttons/button-icon';
 @import 'atoms/buttons/button-image';
+
+// Form
 @import 'atoms/form/label';
+
+// Typography
+@import 'atoms/typography/body-copy';
+@import 'atoms/typography/scale';
