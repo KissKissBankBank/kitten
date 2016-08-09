@@ -33,7 +33,7 @@
     );
 
   // The base line height.
-  $base-line-height: map-get($k-typography, 'line-height');
+  $base-line-height: k-map-fetch($k-typography, 'line-height');
 
   // Get top margin or set to 0.
   $top-margin: k-default(map-get($margins, 'top'), 0);
