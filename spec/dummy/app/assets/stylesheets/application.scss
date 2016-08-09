@@ -1,3 +1,5 @@
+@import 'kitten';
+
 $k-fonts: (
   source-sans: (
     family: ("source sans pro", helvetica, arial, sans-serif),
@@ -39,8 +41,49 @@ $typography: (
   )
 );
 
+// TODO: Check where this variable is use. And change it to a global variable
+// if necessary.
+$typographic-scale: (
+  typography: $typography,
+  multiplier: $major-second,
 
-@import 'kitten';
+  styles: (
+    ParagraphXl: (
+      family: 'source-sans',
+      step: 2,
+
+      font-weight: 400
+    ),
+
+    ParagraphLg: (
+      family: 'source-sans',
+      step: 1,
+
+      font-weight: 400
+    ),
+
+    ParagraphMd: (
+      family: 'source-sans',
+      step: 0,
+
+      font-weight: 400
+    ),
+
+    ParagraphSm: (
+      family: 'source-sans',
+      step: -1,
+
+      font-weight: 400
+    ),
+
+    ParagraphXs: (
+      family: 'source-sans',
+      step: -2,
+
+      font-weight: 400
+    )
+  )
+);
 
 // ------
 // Atoms
