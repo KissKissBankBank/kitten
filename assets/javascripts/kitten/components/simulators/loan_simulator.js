@@ -47,7 +47,7 @@ window.LoanSimulator = React.createClass({
       initialAmount: null,
 
       amountEmptyError: 'Amount cannot be empty',
-      amountOutOfBoundsError: 'Amount should be lower',
+      amountOutOfBoundsError: 'Amount is either too big or too small',
 
       installmentLabel: 'Reimbursing',
       installmentName: 'installment',
@@ -164,7 +164,7 @@ window.LoanSimulator = React.createClass({
 
     if (error) {
       errorClass = "is-error"
-      errorTag = <p className="k-LoanSimulator__error">{error}</p>
+      errorTag = <p className="k-LoanSimulator__amount__error">{error}</p>
     }
 
     if (!error && dragged && installmentAmount) {
@@ -198,12 +198,10 @@ window.LoanSimulator = React.createClass({
 
     return (
       <div className="k-LoanSimulator">
-        <div>
-          <div>
-            <label className="k-Label k-LoanSimulator__label" htmlFor="amount">
-              {this.props.amountLabel}
-            </label>
-          </div>
+        <div className="k-LoanSimulator__amount">
+          <label className="k-Label k-LoanSimulator__label" htmlFor="amount">
+            {this.props.amountLabel}
+          </label>
           <div className={classNames('k-TextInputWithUnit',
                                      'k-TextInputWithUnit--large',
                                      errorClass)}>
@@ -226,29 +224,31 @@ window.LoanSimulator = React.createClass({
           {errorTag}
         </div>
         {resultTag}
-        <div className="k-LabelWithInfo">
-          <label className="k-Label
-                            k-LabelWithInfo__label
-                            k-LoanSimulator__label"
-                 onClick={this.handleInstallmentLabelClick}>
-            {this.props.installmentLabel}
-          </label>
-          <div className={classNames('k-LabelWithInfo__info', infoClass)}>
-            {installmentString}
-            {' '}
-            {this.props.currencySymbol}
-            /
-            {this.props.durationSymbol}
+        <div className="k-LoanSimulator__reimbursing">
+          <div className="k-LabelWithInfo">
+            <label className="k-Label
+                              k-LabelWithInfo__label
+                              k-LoanSimulator__label"
+                   onClick={this.handleInstallmentLabelClick}>
+              {this.props.installmentLabel}
+            </label>
+            <div className={classNames('k-LabelWithInfo__info', infoClass)}>
+              {installmentString}
+              {' '}
+              {this.props.currencySymbol}
+              /
+              {this.props.durationSymbol}
+            </div>
           </div>
+          <Slider ref="slider"
+                  step={this.props.installmentStep}
+                  min={this.installmentMin()}
+                  max={this.installmentMax()}
+                  name={this.props.installmentName}
+                  value={this.state.installmentAmount}
+                  onChange={this.handleInstallmentChange}
+                  onChangeEnd={this.handleInstallmentChangeEnd} />
         </div>
-        <Slider ref="slider"
-                step={this.props.installmentStep}
-                min={this.installmentMin()}
-                max={this.installmentMax()}
-                name={this.props.installmentName}
-                value={this.state.installmentAmount}
-                onChange={this.handleInstallmentChange}
-                onChangeEnd={this.handleInstallmentChangeEnd} />
       </div>
     )
   }
