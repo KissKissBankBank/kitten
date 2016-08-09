@@ -78,7 +78,7 @@
       cursor: pointer;
       display: block;
       outline: none;
-      padding: 0 k-px-to-rem(40px) k-px-to-rem(14px);
+      padding: k-px-to-rem(6px) k-px-to-rem(40px) k-px-to-rem(14px);
       position: relative;
 
       &:before {
@@ -88,7 +88,7 @@
 
         content: '';
         display: block;
-        margin: k-px-to-rem(6px) auto;
+        margin: 0 auto k-px-to-rem(5px);
         width: $round-size;
         height: $round-size;
 
@@ -105,19 +105,16 @@
       }
     }
 
+    .k-TapBar__item--thinGutters {
+      padding-left: k-px-to-rem(30px);
+      padding-right: k-px-to-rem(30px);
+    }
+
     .k-TapBar__text {
       position: absolute;
       left: 0;
       text-align: center;
       width: 100%;
-    }
-
-    // TODO: replace by mixin.
-    @media (max-width: 480px) {
-      .k-TapBar__item {
-        padding-left: k-px-to-rem(30px);
-        padding-right: k-px-to-rem(30px);
-      }
     }
   }
 }
