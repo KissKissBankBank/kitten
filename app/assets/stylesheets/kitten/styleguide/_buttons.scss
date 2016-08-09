@@ -73,16 +73,7 @@ $button-image-colors: (
 
 // Buttons variables
 $button: (
-  typography: $typography,
-  multiplier: $major-second,
-  font: (
-    family: 'source-sans',
-    font-weight: 600,
-    letter-spacing: 1px,
-    text-transform: uppercase,
-    text-decoration: none,
-    text-align: center
-  ),
+  font: 'source-sans-semi-bold-uppercase',
   colors: $button-colors
 );
 

@@ -15,29 +15,23 @@
 ///
 /// @group typography
 ///
-/// @parameter {Map} $typography - a typography object
+/// @parameter {Map} body-copy - family and color map
 ///
 /// @example scss - Usage
-///   $typography: (
+///   $k-typography: (
 ///     root: 18px,
 ///
 ///     font-size:   1rem,
 ///     font-weight: 300,
 ///     line-height: 1.5rem,
-///
-///     typeface: (
-///       lato: (
-///         family: '"lato", sans-serif'
-///       )
-///     ),
-///
-///     body-copy: (
-///       family: 'lato',
-///       color:  #444
-///     )
 ///   );
 ///
-///   @include k-TypographyBodyCopy($typography);
+///   $body-copy: (
+///     family: 'lato',
+///     color:  #444
+///   );
+///
+///   @include k-TypographyBodyCopy($body-copy);
 ///
 /// @example css - CSS output
 ///   html {
@@ -56,26 +50,21 @@
 ///   body.withGrid {
 ///     ...;
 ///   }
-@mixin k-TypographyBodyCopy($typography) {
-  $valid:
-    k-validate(
-      $typography,
-      $k-typography-schema,
-      'k-TypographyBodyCopy',
-      '$typography'
-    );
+@mixin k-TypographyBodyCopy($body-copy) {
+  $font: k-map-fetch($body-copy, 'family');
+  $color: k-map-fetch($body-copy, 'color');
 
   // The root font size applied to the HTML document.
-  $root: map-get($typography, 'root');
+  $root: k-map-fetch($k-typography, 'root');
 
   // The starting font size applied to the body element.
-  $base-font-size: map-get($typography, 'font-size');
+  $base-font-size: k-map-fetch($k-typography, 'font-size');
 
   // The starting font weight applied to the body element.
-  $base-font-weight: map-get($typography, 'font-weight');
+  $base-font-weight: k-map-fetch($k-typography, 'font-weight');
 
   // The base line height.
-  $base-line-height: map-get($typography, 'line-height');
+  $base-line-height: k-map-fetch($k-typography, 'line-height');
 
   // Start by resetting the document font size to the requested value.
   html {
@@ -85,14 +74,12 @@
   // Set sensible defaults on the body element.
   body {
     // Assume we want to use the body copy font family by default.
-    $body-copy: map-get($typography, 'body-copy');
-
     font-size: $base-font-size;
     font-weight: $base-font-weight;
     line-height: $base-line-height;
+    color: $color;
 
-    @include k-typographyFontFamily($typography, $body-copy);
-    @include k-typographyFontStyle($typography, $body-copy);
+    @include k-font($font);
 
     // Apply this class on the body element to display the baseline grid.
     &.withGrid {

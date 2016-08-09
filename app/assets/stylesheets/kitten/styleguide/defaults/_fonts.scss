@@ -11,5 +11,19 @@ $k-fonts: (
     family: ("Source Sans Pro", Helvetica, Arial, sans-serif),
     weight: 400,
     transform: uppercase
+  ),
+  source-sans-semi-bold-uppercase: (
+    family: ("Source Sans Pro", Helvetica, Arial, sans-serif),
+    weight: 600,
+    letter-spacing: 1px,
+    transform: uppercase
   )
 ) !default;
+
+$k-typography: k-typography-definition((
+  root: 16px,
+  font-size: 1rem,
+  font-weight: 400,
+  line-height: 1.5rem,
+  scale-multiplier: $major-second
+));
