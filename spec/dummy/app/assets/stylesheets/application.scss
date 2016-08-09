@@ -62,4 +62,12 @@ $typography: (
 // ----------
 // Molecules
 // ----------
+
+// Form
+@import 'molecules/form/label-with-info';
+@import 'molecules/form/slider';
+@import 'molecules/form/text-input-with-unit';
+
+// Navigation
 @import 'molecules/navigation/horizontal-nav';
+

@@ -1,3 +1,5 @@
+@import 'kitten/molecules/form/text-input-with-unit';
+
 @include k-TextInputWithUnit((
   input-font: source-sans,
   unit-font: source-sans-semi-bold,
