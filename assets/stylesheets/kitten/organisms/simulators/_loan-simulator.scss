@@ -20,6 +20,7 @@
 ///     </div>
 ///     <div class="k-LoanSimulator__result">…</div>
 ///     <div class="k-LoanSimulator__reimbursing">…</div>
+///     <div class="k-LoanSimulator__actions">…</div>
 ///   </div>
 @mixin k-LoanSimulator($loan-simulator) {
   @include k-with-module('k-LoanSimulator: $loan-simulator') {
@@ -41,6 +42,11 @@
     .k-LoanSimulator__amount,
     .k-LoanSimulator__reimbursing {
       margin: 0 k-px-to-rem(50px);
+    }
+
+    .k-LoanSimulator__actions {
+      margin: 2rem 0;
+      text-align: center;
     }
   }
 }

@@ -36,6 +36,8 @@ window.LoanSimulator = React.createClass({
 
     currencySymbol: React.PropTypes.string,
     locale: React.PropTypes.string,
+
+    actionLabel: React.PropTypes.string,
   },
 
   getDefaultProps: function() {
@@ -64,6 +66,8 @@ window.LoanSimulator = React.createClass({
 
       currencySymbol: '$',
       locale: 'en',
+
+      actionLabel: 'OK',
     }
   },
 
@@ -248,6 +252,9 @@ window.LoanSimulator = React.createClass({
                   value={this.state.installmentAmount}
                   onChange={this.handleInstallmentChange}
                   onChangeEnd={this.handleInstallmentChangeEnd} />
+        </div>
+        <div className="k-LoanSimulator__actions">
+          <button className="k-Button">{this.props.actionLabel}</button>
         </div>
       </div>
     )
