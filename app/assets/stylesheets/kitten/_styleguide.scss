@@ -102,13 +102,15 @@ $light-grey-2: #eee;
   display: none;
 
   &.is-opened {
-    background-color: $light-navy;
     display: block;
   }
 }
 
 .k-StyleguideMenu__subListItem {
+  position: relative;
   border-bottom: 1px solid $light-navy;
+  padding-left: 2rem;
+  display: block;
 
   list-style: none;
 
@@ -117,12 +119,60 @@ $light-grey-2: #eee;
   letter-spacing: 1px;
   line-height: 3.6rem;
   text-transform: uppercase;
+  color: inherit;
+  text-decoration: none;
 
-  & > a {
-    display: inline-block;
-    padding-left: 2rem;
-    color: inherit;
-    text-decoration: none;
+  &:after {
+    position: absolute;
+    content: "\022C1";
+    right: 1.8em;
+  }
+
+  &.is-opened {
+    background-color: $light-navy;
+
+    &:after {
+      content: "\022C0";
+    }
+  }
+
+  &:hover,
+  &:focus,
+  &.is-selected {
+    background-color: $light-navy;
+  }
+}
+
+.k-StyleguideMenu__subSubList {
+  display: none;
+
+  &.is-opened {
+    display: block;
+  }
+}
+
+.k-StyleguideMenu__subSubListItem {
+  border-bottom: 1px solid $light-navy;
+  display: block;
+  padding-left: 3rem;
+
+  list-style: none;
+
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  line-height: 3.6rem;
+  color: inherit;
+  text-decoration: none;
+
+  &:hover,
+  &:focus,
+  &.is-selected {
+    background-color: $light-navy;
+  }
+
+  &.is-opened {
+    background-color: $light-navy;
   }
 }
 
