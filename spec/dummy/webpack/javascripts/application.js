@@ -1,1 +1,1 @@
-require('../stylesheets/dummy-styleguide.scss');
+require('../stylesheets/dummy-style.scss');

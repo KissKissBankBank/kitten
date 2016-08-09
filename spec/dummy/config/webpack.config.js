@@ -19,10 +19,14 @@ var cssFilename = production ? 'webpack-style-[chunkhash].css' : 'webpack-style.
 
 
 // Sass load paths
-var dummyStylesheetsPaths = path.resolve(__dirname, '../webpack/stylesheets');
+var webpackStylesheetsPaths = path.resolve(__dirname, '../webpack/stylesheets');
+var appStylesheetsPaths = path.resolve(__dirname, '../app/assets/stylesheets');
 var sassLoadPaths = kitten
                       .loadPaths
-                      .concat(dummyStylesheetsPaths);
+                      .concat([
+                        webpackStylesheetsPaths,
+                        appStylesheetsPaths
+                      ]);
 
 var config = {
   entry: {
