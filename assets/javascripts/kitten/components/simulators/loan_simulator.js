@@ -51,6 +51,7 @@ window.LoanSimulator = React.createClass({
 
       installmentLabel: 'Reimbursing',
       installmentName: 'installment',
+      installmentStep: 1,
 
       durationText: 'Duration',
       durationMin: 1,
@@ -157,6 +158,7 @@ window.LoanSimulator = React.createClass({
     const { installmentAmount, dragged, touched } = this.state
     const error = this.error()
     const showResult = !error && touched
+    const duration = this.duration()
 
     let errorClass, errorTag, installmentString, infoClass, resultTag
 
@@ -173,7 +175,7 @@ window.LoanSimulator = React.createClass({
       infoClass = "is-inactive"
     }
 
-    const durationSymbol = this.duration() === 1
+    const durationSymbol = duration === 1
                          ? this.props.durationSymbol
                          : this.props.durationSymbolPlural
 
@@ -181,7 +183,7 @@ window.LoanSimulator = React.createClass({
       const results = [
         {
           label: this.props.durationText,
-          value: this.duration() + ' ' + durationSymbol
+          value: duration + ' ' + durationSymbol
         },
         {
           label: this.props.feeText,
