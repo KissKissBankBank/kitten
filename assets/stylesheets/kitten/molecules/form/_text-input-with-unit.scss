@@ -59,7 +59,7 @@
     border-left: 1px solid $border-color;
 
     @include k-font($unit-font);
-    @include k-fontSize(1);
+    @include k-typographyFontSize(1);
 
     .k-TextInputWithUnit.is-error & {
       border-color: $error-color;

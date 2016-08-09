@@ -7,15 +7,7 @@
 /// @example scss - usage
 ///
 ///   $nav: (
-///     typography: $typography,
-///     font: (
-///       family: 'source-sans',
-///       font-weight: 600,
-///       letter-spacing: 1px,
-///       text-transform: uppercase,
-///       text-decoration: none,
-///       text-align: center
-///     ),
+///     font: 'source-sans',
 ///     colors: (
 ///       base: (
 ///         background-color: #fff,
@@ -56,10 +48,8 @@
 @mixin k-HorizontalNav($nav) {
   @include k-with-module('k-HorizontalNav: $nav') {
 
-    $typography: map-get($nav, 'typography');
     $multiplier: map-get($nav, 'multiplier');
     $font: map-get($nav, 'font');
-    $line-height: map-get($typography, 'line-height');
 
     $colors: k-map-fetch($nav, 'colors');
 
@@ -93,9 +83,8 @@
     }
 
     .k-HorizontalNav__item {
-      @include k-typographyFontSize($typography, $multiplier, 0, $line-height);
-      @include k-typographyFontFamily($typography, $font);
-      @include k-typographyFontStyle($typography, $font);
+      @include k-typographyFontSize(0);
+      @include k-font($font);
 
       background-color: $base-background-color;
       border-bottom: 1px solid $base-border-color;
@@ -105,6 +94,9 @@
       outline: none;
       padding: $padding;
       transition: color .2s, border-color .2s;
+
+      text-decoration: none;
+      text-align: center;
 
       &:hover {
         color: $hover-color;
