@@ -155,7 +155,7 @@
       border: 1px solid $border-color;
       border-radius: 50%;
       background: white;
-      box-shadow: 0 .1rem .2rem rgba(0, 0, 0, .2);
+      box-shadow: 0 k-px-to-rem(2px) k-px-to-rem(4px) 0 rgba(0, 0, 0, .08);
 
       cursor: -webkit-grab;
       cursor: grab;
