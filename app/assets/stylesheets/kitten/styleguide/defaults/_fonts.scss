@@ -27,11 +27,3 @@ $k-typography: k-typography-definition((
   line-height: 1.5rem,
   scale-multiplier: $major-second
 ));
-
-@import 'kitten';
-@import 'typography';
-@import 'buttons';
-@import 'styleguide';
-@import 'form';
-@import 'simulator';
-@import 'navigation';
