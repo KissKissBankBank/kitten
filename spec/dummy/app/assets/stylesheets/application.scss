@@ -2,88 +2,33 @@
 
 $k-fonts: (
   source-sans: (
-    family: ("source sans pro", helvetica, arial, sans-serif),
+    family: ("Source Sans Pro", Helvetica, Arial, sans-serif),
     weight: 400
   ),
   source-sans-semi-bold: (
-    family: ("source sans pro", helvetica, arial, sans-serif),
+    family: ("Source Sans Pro", Helvetica, Arial, sans-serif),
     weight: 600
   ),
   source-sans-uppercase: (
-    family: ("source sans pro", helvetica, arial, sans-serif),
+    family: ("Source Sans Pro", Helvetica, Arial, sans-serif),
     weight: 400,
+    transform: uppercase
+  ),
+  source-sans-semi-bold-uppercase: (
+    family: ("Source Sans Pro", Helvetica, Arial, sans-serif),
+    weight: 600,
+    letter-spacing: 1px,
     transform: uppercase
   )
 );
 
-// TODO: Will be updated by https://github.com/KissKissBankBank/kitten/pull/41
-$k-root-font-size: 16px !global;
-
-$typography: (
-  root:        $k-root-font-size,
-  font-size:   1rem,
+$k-typography: k-typography-definition((
+  root: 16px,
+  font-size: 1rem,
   font-weight: 400,
   line-height: 1.5rem,
-
-  typeface: (
-    source-sans: (
-      family: '"Source Sans Pro", Helvetica, Arial, sans-serif'
-    ),
-    source-sans-semi-bold: (
-      family: '"Source Sans Pro", Helvetica, Arial, sans-serif'
-    )
-  ),
-
-  body-copy: (
-    family: 'source-sans',
-    font-smooth: subpixel-antialiased,
-    color: #333
-  )
-);
-
-// TODO: Check where this variable is use. And change it to a global variable
-// if necessary.
-$typographic-scale: (
-  typography: $typography,
-  multiplier: $major-second,
-
-  styles: (
-    ParagraphXl: (
-      family: 'source-sans',
-      step: 2,
-
-      font-weight: 400
-    ),
-
-    ParagraphLg: (
-      family: 'source-sans',
-      step: 1,
-
-      font-weight: 400
-    ),
-
-    ParagraphMd: (
-      family: 'source-sans',
-      step: 0,
-
-      font-weight: 400
-    ),
-
-    ParagraphSm: (
-      family: 'source-sans',
-      step: -1,
-
-      font-weight: 400
-    ),
-
-    ParagraphXs: (
-      family: 'source-sans',
-      step: -2,
-
-      font-weight: 400
-    )
-  )
-);
+  scale-multiplier: $major-second
+));
 
 // ------
 // Atoms
