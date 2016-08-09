@@ -1,4 +1,29 @@
-<ul id="topbar" class="k-TapBar">
+<ul id="tapbar" class="k-TapBar">
+  <li>
+    <a class="k-TapBar__item is-selected" href="#">
+      <span class="k-TapBar__text">Link selected</span>
+    </a>
+  </li>
+  <li>
+    <a class="k-TapBar__item" href="#">
+      <span class="k-TapBar__text">Link</span>
+    </a>
+  </li>
+  <li>
+    <a class="k-TapBar__item" href="#">
+      <span class="k-TapBar__text">Link</span>
+    </a>
+  </li>
+</ul>
+
+<p>
+  <a onclick="document.getElementById('tapbar').className += ' is-fixed';this.remove();"
+    href="#">See fixed version</a>
+</p>
+
+<h4>Tap bar (thin gutters)</h4>
+
+<ul id="tapbar2" class="k-TapBar">
   <li>
     <a class="k-TapBar__item k-TapBar__item--thinGutters is-selected" href="#">
       <span class="k-TapBar__text">Link selected</span>
@@ -22,6 +47,6 @@
 </ul>
 
 <p>
-  <a onclick="document.getElementById('topbar').className += ' is-fixed';this.remove();"
+  <a onclick="document.getElementById('tapbar2').className += ' is-fixed';this.remove();"
     href="#">See fixed version</a>
 </p>
