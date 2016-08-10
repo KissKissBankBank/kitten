@@ -92,11 +92,7 @@ grunt.initConfig({
     }
   },
   options: {
-    loadPath: [
-      kitten.loadPath,
-      kitten.dependenciesPaths.sassyMaps,
-      kitten.dependenciesPaths.modularscale
-    ]
+    loadPath: kitten.loadPaths
   }
 }
 ```
@@ -125,11 +121,7 @@ var config = {
     ]
   },
   sassLoader: {
-    includePaths: [
-      kitten.loadPath,
-      kitten.dependenciesPaths.sassyMaps,
-      kitten.dependenciesPaths.modularscale
-    ]
+    includePaths: kitten.loadPaths
   }
 }
 ```
@@ -178,18 +170,26 @@ Include the component your want to use in your application:
 @include k-MyComponent;
 ```
 
+### Ruby on Rails
+
+`kitten` provides a styleguide interface. This feature is only available if you
+are using the gem with Ruby on Rails.
+
+Check out the [documentation](../../wiki/Styleguide) to setup the styleguide directly in
+your application and with your own brand elements.
 
 ## Development
 
 ### Components
 
-Check out the [style guide documentation](../../wiki/Style-guide)
-to start creating new components!
+Check out the [guidelines](../../wiki/Contribution-guidelines) to start
+creating new components!
 
 ### Installation
 
 Make sure you have Npm access to Gemfury (see higher), then:
 
+Then, run:
 ```sh
 $ bundle                 # install gem dependencies
 $ npm install --only=dev # install node dependencies
