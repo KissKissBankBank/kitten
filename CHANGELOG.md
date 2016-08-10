@@ -15,6 +15,7 @@ New features:
 - Add webpack to manage `kitten` scss assets in dummy app.
 - Add new component: `header` organism.
 - /kitten/playground route in the styleguide to test your styles in development
+- Access components directly by removing the `#` in the stylguide in URL
 
 ## [v0.4.0] - 2016-08-04
 Minor updates:
