@@ -7,7 +7,8 @@ module Kitten
       nil
     end
 
-    def render_group(group, title:)
+    def render_group(group, title: nil)
+      title ||= group.split('/').last.capitalize
       add_menu_group(group, title)
       concat content_tag(:h2,
                          class: "k-StyleguideTitle__breadcrumb",
@@ -19,10 +20,11 @@ module Kitten
                          title: nil,
                          description: nil,
                          examples_display: :horizontal)
+      title ||= component.split('/').last.capitalize
       add_menu_component(component, title)
       render 'layouts/kitten/component',
              component: component,
-             title: title || component.split('/').last.capitalize,
+             title: title,
              description: description,
              examples_display: examples_display
     end
