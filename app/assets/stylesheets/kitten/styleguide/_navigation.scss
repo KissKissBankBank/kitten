@@ -1,21 +1,27 @@
-@import 'kitten/molecules/navigation/horizontal-nav';
-
-$typography: map-merge($typography, (
-  font-size: k-px-to-rem(12px),
-  line-height: k-px-to-rem(16px)
-));
-
-$horizontal-nav: (
-  typography: $typography,
-  multiplier: $major-second,
-  font: (
-    family: 'source-sans',
-    font-weight: 600,
-    letter-spacing: 1px,
-    text-transform: uppercase,
-    text-decoration: none,
-    text-align: center,
+// Default colors
+$horizontal-nav-colors: (
+  base: (
+    background-color: #fff,
+    border-color: #eee,
+    color: #333,
   ),
+  hover: (
+    color: #4a84ff,
+  ),
+  focus: (
+    border-color: #4a84ff,
+    color: #4a84ff,
+  ),
+  is-selected: (
+    color: #333,
+    border-color: #333,
+  )
+) !default;
+
+// Horizontal nav variables
+$horizontal-nav: (
+  multiplier: $major-second,
+  font: 'source-sans-semi-bold',
   colors: (
     base: (
       background-color: #fff,

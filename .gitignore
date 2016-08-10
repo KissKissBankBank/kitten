@@ -10,6 +10,6 @@ spec/dummy/tmp/
 spec/dummy/db
 spec/dummy/.sass-cache
 *.gem
-/node_modules
 .sass-cache
 npm-debug.log
+node_modules/
