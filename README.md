@@ -185,8 +185,6 @@ creating new components!
 
 Make sure you have Npm access to Gemfury (see higher), then:
 
-Check if your [npm configuration](#npm) is set up correctly.
-
 Then, run:
 ```sh
 $ bundle                 # install gem dependencies
