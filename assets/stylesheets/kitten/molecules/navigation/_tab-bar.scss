@@ -2,7 +2,7 @@
 ///
 /// @group navigation
 ///
-/// @parameter {Map} $tapbar - a tapbar specification
+/// @parameter {Map} $tabbar - a tabbar specification
 ///
 /// @example scss - usage
 ///
@@ -11,6 +11,7 @@
 ///     font-size: 10px,
 ///     background-color: #333,
 ///     color: #fff,
+///     color-current: #fff,
 ///     z-index: 10
 ///   ));
 ///
@@ -30,21 +31,25 @@
 ///     …
 ///   </ul>
 
-@mixin k-TabBar($tapbar) {
-  @include k-with-module('k-TabBar: $tapbar') {
+@mixin k-TabBar($tabbar) {
+  @include k-with-module('k-TabBar: $tabbar') {
 
     // Variables & Validations
-    $font: k-map-fetch($tapbar, 'font');
+    $font: k-map-fetch($tabbar, 'font');
     $font-step: k-number-definition(
-      k-map-fetch($tapbar, 'font-step'), $unit: none);
-    $color: k-color-definition(
-      k-map-fetch($tapbar, 'color'));
-    $background-color: k-color-definition(
-      k-map-fetch($tapbar, 'background-color'));
+      k-map-fetch($tabbar, 'font-step'), $unit: none);
+    $line-height: k-number-definition(k-map-fetch($tabbar, 'line-height'));
 
-    $line-height: 1;
+    $color: k-color-definition(
+      k-map-fetch($tabbar, 'color'));
+    $color-current: k-color-definition(
+      k-map-fetch($tabbar, 'color-current'));
+    $background-color: k-color-definition(
+      k-map-fetch($tabbar, 'background-color'));
+
     $round-size: k-px-to-rem(25px);
-    $z-index: k-number-definition(map-get($tapbar, 'z-index'));
+    $z-index: k-number-definition(map-get($tabbar, 'z-index'));
+    $border-width: 1px;
 
     .k-TabBar {
       display: flex;
@@ -70,49 +75,36 @@
       @include k-typographyFontSize($font-step, $line-height);
       letter-spacing: k-px-to-rem(0.8px);
       text-decoration: none;
-      color: $color;
+
 
       background-color: $background-color;
       cursor: pointer;
       display: block;
       outline: none;
-      padding: k-px-to-rem(6px) k-px-to-rem(40px) k-px-to-rem(14px);
+      padding: k-px-to-rem(11px) k-px-to-rem(18px);
       position: relative;
+      border-top: $border-width solid $background-color;
+      transition: color .2s, border-color .2s;
 
-      &:before {
-        border: 1px solid $color;
-        border-radius: $round-size / 2;
-        box-sizing: border-box;
-
-        content: '';
-        display: block;
-        margin: 0 auto k-px-to-rem(5px);
-        width: $round-size;
-        height: $round-size;
-
-        transition: background-color .2s;
+      &:visited {
+        color: $color;
       }
 
-      &:hover,
-      &:active,
+      &:hover {
+        color: $color-current;
+      }
+
       &:focus,
+      &:active,
       &.is-selected {
-        &:before {
-          background-color: $color;
-        }
+        border-color: $color-current;
+        color: $color-current;
       }
     }
 
     .k-TabBar__item--thinGutters {
-      padding-left: k-px-to-rem(30px);
-      padding-right: k-px-to-rem(30px);
-    }
-
-    .k-TabBar__text {
-      position: absolute;
-      left: 0;
-      text-align: center;
-      width: 100%;
+      padding-left: k-px-to-rem(6px);
+      padding-right: k-px-to-rem(6px);
     }
   }
 }
