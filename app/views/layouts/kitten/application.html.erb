@@ -4,8 +4,9 @@
 
 <title>Kitten style guide</title>
 
-<%= styleguide_stylesheet_tag %>
-<%= stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' %>
+<%= app_stylesheet_tag %>
+<%= stylesheet_link_tag 'kitten/application',
+      'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' %>
 
 <%= csrf_meta_tags %>
 
@@ -62,7 +63,6 @@
 <%= javascript_include_tag 'kitten/jquery-3.1.0.min.js' %>
 <%#= javascript_include_tag 'kitten/waypoint.js' %>
 <%= javascript_include_tag 'kitten/dropdown.js' %>
-
 
 </body>
 </html>

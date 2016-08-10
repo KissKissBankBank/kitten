@@ -1,0 +1,8 @@
+@import 'kitten/molecules/form/label-with-info';
+
+@include k-LabelWithInfo((
+  colors: (
+    active: black,
+    inactive: #aaa
+  )
+));

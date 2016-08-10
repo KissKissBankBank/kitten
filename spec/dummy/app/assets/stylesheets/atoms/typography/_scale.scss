@@ -1,3 +1,5 @@
+@import 'kitten/atoms/typography/scale';
+
 @include k-TypographyScale((
   styles: (
     ParagraphXl: (
@@ -25,9 +27,4 @@
       step: -2
     )
   )
-));
-
-@include k-TypographyBodyCopy((
-  family: 'source-sans',
-  color: #333
 ));
