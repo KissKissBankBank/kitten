@@ -33,6 +33,10 @@ And then execute:
 
     $ bundle
 
+To configure the engine you can add an initializer. Check out
+`spec/dummy/config/initializers/kitten.rb` for an example.
+
+
 ### Npm
 
 As the `kitten` and `sassy-map` modules are on a
