@@ -35,7 +35,8 @@ And then execute:
 
 ### Npm
 
-As the `kitten` module is on a [private registry on Gemfury](https://gemfury.com/help/npm-registry),
+As the `kitten` and `sassy-map` modules are on a
+[private registry on Gemfury](https://gemfury.com/help/npm-registry),
 you have to setup your npm configuration aka your `.npmrc` to be able to
 install all npm dependencies.
 
@@ -44,7 +45,8 @@ Set your default registry in your `.npmrc`:
 npm config set registry https://npm-proxy.fury.io/bob/
 ```
 
-Set your authentication token in your `.npmrc`:
+Set your authentication token in your `.npmrc` by providing your Gemfury
+username and password:
 ```
 npm login
 ```
@@ -135,13 +137,13 @@ stylesheets](http://webpack.github.io/docs/stylesheets.html).
 
 Import `kitten` in your main Sass file:
 
-```sass
+```scss
 @import 'kitten';
 ```
 
 Define your font families:
 
-```sass
+```scss
 $k-fonts: (
   source-sans: (
     family: ("Source Sans Pro", Helvetica, Arial, sans-serif),
@@ -154,37 +156,67 @@ $k-fonts: (
 );
 ```
 
+Define your typography settings:
+
+```scss
+$k-typography: (
+  root: 16px,
+  font-size: 1rem,
+  font-weight: 400,
+  line-height: 1.5rem,
+  scale-multiplier: $major-second
+);
+```
+
 Include the component your want to use in your application:
 
-```sass
+```scss
 @include k-MyComponent;
 ```
 
 
 ## Development
 
-#### Style guide
+### Components
 
 Check out the [style guide documentation](../../wiki/Style-guide)
 to start creating new components!
 
-#### Installation
+### Installation
+
+Make sure you have Npm access to Gemfury (see higher), then:
 
 ```sh
 $ bundle                 # install gem dependencies
 $ npm install --only=dev # install node dependencies
 ```
 
-#### Style checker
+### Style checker
 
 ```sh
 $ npm run stylelint
 ```
 
-#### Ruby specs
+### Ruby specs
 
 ```sh
 $ bundle exec rake
+```
+
+### Style Guide
+
+Inside the `spec/dummy` folder, make sure you have Npm access to Gemfury
+(see higher), then:
+
+```sh
+$ bundle
+$ npm install --only=dev
+```
+
+Then to run the server:
+
+```sh
+$ foreman start
 ```
 
 #### Generate SassDoc
@@ -233,6 +265,7 @@ This last command will:
 - push to Github.
 
 ### Gem
+
 Then, you can upload the new `pkg/kitten-*.gem` build to Gemfury.
 
 ### Node module

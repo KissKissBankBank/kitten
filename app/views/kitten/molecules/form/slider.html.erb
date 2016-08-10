@@ -16,8 +16,13 @@
 <%= example do %>
   <div class="k-Slider">
     <div class="k-Slider__ramp">
-      <div class="k-Slider__progress" style="width: 25%" id="progress"></div>
-      <div class="k-Slider__handle" tabindex="0" style="left: 25%" id="handle">
+      <div class="k-Slider__progress"
+           style="width: 25%"
+           id="slider-progress"></div>
+      <div class="k-Slider__handle"
+           tabindex="0"
+           style="left: 25%"
+           id="slider-handle">
         <svg class="k-Slider__handleIcon" viewBox="0 0 100 100">
           <path d="M0 0 v100 h20 v-100 z" />
           <path d="M40 0 v100 h20 v-100 z" />
@@ -26,6 +31,13 @@
       </div>
     </div>
   </div>
+  <script>
+    setInterval(function() {
+      var percentage = Math.random() * 100 + '%'
+      document.getElementById('progress').style.width = percentage
+      document.getElementById('handle').style.left = percentage
+    }, 2000)
+  </script>
 <% end %>
 
 <%= example "disabled" do %>
@@ -42,11 +54,3 @@
     </div>
   </div>
 <% end %>
-
-<script>
-setInterval(function() {
-  var percentage = Math.random() * 100 + '%'
-  document.getElementById('progress').style.width = percentage
-  document.getElementById('handle').style.left = percentage
-}, 2000)
-</script>

@@ -4,13 +4,12 @@
 ///
 /// @example scss - usage
 ///
-///   $simulator-result: (
+///   @include k-SimulatorResult((
 ///     colors: (
 ///       border: red,
 ///       background: pink
 ///     )
-///   );
-///   @include k-SimulatorResult($simulator-result);
+///   ));
 ///
 /// @example html
 ///
@@ -57,12 +56,12 @@
 
     .k-SimulatorResult__item__label {
       @include k-font($label-font);
-      @include k-fontSize(-2);
+      @include k-typographyFontSize(-2);
     }
 
     .k-SimulatorResult__item__value {
       @include k-font($value-font);
-      @include k-fontSize(1);
+      @include k-typographyFontSize(1);
     }
   }
 }

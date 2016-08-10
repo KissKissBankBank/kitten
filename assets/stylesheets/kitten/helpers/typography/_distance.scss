@@ -2,33 +2,28 @@
 ///
 /// @group typography
 ///
-/// @parameter {Map}    $typography - a typography object
-/// @parameter {Number} $distance   - a unitless number
+/// @parameter {Number} $distance - a unitless number
 ///
 /// @return {Number}
 ///
 /// @example scss - Usage
-///   $typography: (
+///   $k-typography: (
 ///     line-height: 1.5rem,
 ///     ...
 ///   );
 ///
-///   margin-top: k-typography-distance($typography, 3);
+///   margin-top: k-typography-distance(3);
 ///   // 4.5rem
-@function k-typography-distance($typography, $distance) {
+@function k-typography-distance($distance) {
   $valid:
     k-all(
-      k-validate(
-        $typography, $k-typography-schema,
-        'k-typography-distance', '$typography'
-      ),
       k-validate(
         $distance, k-number-schema($unit: none),
         'k-typography-distance', '$distance'
       )
     );
 
-  $base-line-height: map-get($typography, 'line-height');
+  $base-line-height: k-map-fetch($k-typography, 'line-height');
 
   @return $base-line-height * $distance;
 }

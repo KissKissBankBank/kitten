@@ -1,0 +1,18 @@
+{
+  "name": "webpack-rails-example",
+  "version": "0.0.1",
+  "license": "MIT",
+  "dependencies": {
+    "extract-text-webpack-plugin": "^1.0.1",
+    "stats-webpack-plugin": "^0.2.1",
+    "webpack": "^1.9.11",
+    "webpack-dev-server": "^1.9.0"
+  },
+  "devDependencies": {
+    "css-loader": "^0.23.1",
+    "kitten": "file:../../../kitten",
+    "node-sass": "^3.8.0",
+    "sass-loader": "^4.0.0",
+    "style-loader": "^0.13.1"
+  }
+}

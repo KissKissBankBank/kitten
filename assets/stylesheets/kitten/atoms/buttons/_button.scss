@@ -10,23 +10,8 @@
 /// @parameter {Map} $button - a button specification
 ///
 /// @example scss - Usage
-///   $typography: (
-///      ...
-///   );
-///
 ///   $button: (
-///     typography: $typography,
-///     multiplier: $major-second,
-///
-///     font: (
-///       family: 'source-sans',
-///       font-weight: 600,
-///       letter-spacing: 1px,
-///       text-transform: uppercase,
-///       text-decoration: none,
-///       text-align: center
-///     ),
-///
+///     font: 'source-sans',
 ///     colors: (
 ///       base: (
 ///         color: #333,
@@ -66,24 +51,19 @@
     // scale.
     $button-step: -2;
 
-    $typography: map-get($button, 'typography');
-    $multiplier: map-get($button, 'multiplier');
-    $font: map-get($button, 'font');
+    $font: k-map-fetch($button, 'font');
 
     .k-Button {
       @include k-buttonBase($button);
-      @include k-typographyFontSize(
-        $typography,
-        $multiplier,
-        $button-step,
-        $button-line-height
-      );
-      @include k-typographyFontFamily($typography, $font);
-      @include k-typographyFontStyle($typography, $font);
+      @include k-typographyFontSize($button-step, $button-line-height);
+      @include k-font($font);
 
       padding: 0 $button-radius * 2;
       border-radius: $button-radius;
       min-width: $button-min-width;
+
+      text-decoration: none;
+      text-align: center;
     }
   }
 }

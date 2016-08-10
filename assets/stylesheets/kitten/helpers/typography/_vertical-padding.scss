@@ -5,11 +5,10 @@
 ///
 /// @group typography
 ///
-/// @parameter {Map} $typography - a typography object
 /// @parameter {Map} $padding    - a map with a top and/or bottom attributes
 ///
 /// @example scss - Usage
-///   $typography: (
+///   $k-typography: (
 ///     line-height: 1.5rem,
 ///     ...
 ///   );
@@ -19,18 +18,14 @@
 ///     bottom: 2
 ///   );
 ///
-///   @include k-typographyVerticalPadding($typography, $paddings);
+///   @include k-typographyVerticalPadding($paddings);
 ///
 /// @example css - CSS output
 ///   padding-top:    1.5rem;
 ///   padding-bottom: 3rem;
-@mixin k-typographyVerticalPadding($typography, $paddings) {
+@mixin k-typographyVerticalPadding($paddings) {
   $valid:
     k-all(
-      k-validate(
-        $typography, $k-typography-schema,
-        'k-typographyPadding', '$typography'
-      ),
       k-validate(
         $padding, $k-vertical-padding-schema,
         'k-typographyPadding', '$distance'
@@ -38,7 +33,7 @@
     );
 
   // The base line height.
-  $base-line-height: map-get($typography, 'line-height');
+  $base-line-height: k-map-fetch($k-typography, 'line-height');
 
   // Get top padding or set to 0.
   $top-padding: k-default(map-get($paddings, 'top'), 0);

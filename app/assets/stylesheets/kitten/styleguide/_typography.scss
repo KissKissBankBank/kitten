@@ -1,0 +1,33 @@
+@include k-TypographyScale((
+  styles: (
+    ParagraphXl: (
+      family: 'source-sans',
+      step: 2
+    ),
+
+    ParagraphLg: (
+      family: 'source-sans',
+      step: 1
+    ),
+
+    ParagraphMd: (
+      family: 'source-sans',
+      step: 0
+    ),
+
+    ParagraphSm: (
+      family: 'source-sans',
+      step: -1
+    ),
+
+    ParagraphXs: (
+      family: 'source-sans',
+      step: -2
+    )
+  )
+));
+
+@include k-TypographyBodyCopy((
+  family: 'source-sans',
+  color: #333
+));
