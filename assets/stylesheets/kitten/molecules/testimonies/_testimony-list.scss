@@ -1,0 +1,12 @@
+@mixin k-TestimonyList {
+  @include k-with-module('k-TestimonyList') {
+    .k-TestimonyList {
+      display: flex;
+      justify-content: center;
+    }
+
+    .k-TestimonyList__item {
+      flex: 0;
+    }
+  }
+}
