@@ -6,11 +6,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 Breaking changes:
 - Requires a global `$k-typography: k-typography-definition((…))` instead of
   passing typography styles in mixins.
+- Move all styleguide stylesheets into dummy app for testing.
+- Remove components from `kitten` import.
 
 New features:
 - Enable configuration on styleguide stylesheet path.
 - Add webpack to manage `kitten` scss assets in dummy app.
-- Define default colors on every component in the styleguide.
 
 ## [v0.4.0] - 2016-08-04
 Minor updates:
