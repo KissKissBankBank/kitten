@@ -210,8 +210,14 @@ Inside the `spec/dummy` folder, make sure you have Npm access to Gemfury
 
 ```sh
 $ bundle
-$ npm install --only=dev
+$ npm install
 ```
+
+The `kitten` node module can be tested iteratively without having to
+continually rebuild. We use `npm-link` to create symlinks from the package
+folder to `node_modules/kitten`.
+This is automatically executed every time you run `npm install`.
+
 
 Then to run the server:
 
