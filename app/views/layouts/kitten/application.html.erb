@@ -4,8 +4,10 @@
 
 <title>Kitten style guide</title>
 
+<%= app_stylesheet_tag %>
 <%= stylesheet_link_tag 'kitten/application',
       'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' %>
+
 <%= csrf_meta_tags %>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
@@ -23,47 +25,44 @@
 
     <div class="k-u-clearfix"></div>
 
-    <h5 class="k-StyleguideMenu__sectionTitle">Branding</h5>
-
     <ul>
-      <li class="k-StyleguideMenu__section">
-        <a>Colors</a>
-      </li>
-      <li class="k-StyleguideMenu__section">
-        <a>Typography</a>
-      </li>
-      <li class="k-StyleguideMenu__section">
-        <a>Icons</a>
-      </li>
-    </ul>
-
-    <h5 class="k-StyleguideMenu__sectionTitle">Components</h5>
-
-    <ul>
-      <li class="k-StyleguideMenu__section">
-        <a>Buttons</a>
-        <ul>
-          <li class="k-StyleguideMenu__sectionItem">
-            <a>Primary button</a>
-          </li>
-          <li class="k-StyleguideMenu__sectionItem">
-            <a>Icon button and word</a>
-          </li>
-          <li class="k-StyleguideMenu__section">
-            <a>Form</a>
-          </li>
-        </ul>
-      </li>
+      <% @menu_types.each do |type_id:, type_title:, groups:| %>
+        <li class="k-StyleguideMenu__list">
+          <a href="#<%= type_id %>"
+             class="k-StyleguideMenu__listItem"><%= type_title %></a>
+          <ul class="k-StyleguideMenu__subList">
+            <% groups.each do |group_id:, group_title:, components:| %>
+              <li>
+                <a href="#<%= group_id %>"
+                   class="k-StyleguideMenu__subListItem"><%= group_title %></a>
+                <ul class="k-StyleguideMenu__subSubList">
+                  <% components.each do |component_id:, component_title:| %>
+                    <li>
+                      <a class="k-StyleguideMenu__subSubListItem"
+                         href="#<%= component_id %>"><%= component_title %></a>
+                    </li>
+                  <% end %>
+                </ul>
+              </li>
+            <% end %>
+          </ul>
+        </li>
+      <% end %>
     </ul>
   </nav>
 
   <div class="k-StyleguideContent">
     <section>
-      <header class="k-StyleguideTitle">ComponentsKissCo</header>
+      <!-- <header class="k-StyleguideTitle">ComponentsKissCo</header> -->
       <%= yield %>
     </section>
   </div>
 </div>
+
+<%#= javascript_include_tag 'kitten/noframework.waypoints.min.js' %>
+<%= javascript_include_tag 'kitten/jquery-3.1.0.min.js' %>
+<%#= javascript_include_tag 'kitten/waypoint.js' %>
+<%= javascript_include_tag 'kitten/dropdown.js' %>
 
 </body>
 </html>

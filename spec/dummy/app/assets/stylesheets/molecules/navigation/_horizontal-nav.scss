@@ -1,0 +1,25 @@
+@import 'kitten/molecules/navigation/horizontal-nav';
+
+@include k-HorizontalNav((
+  font: source-sans-semi-bold-uppercase,
+  font-step: -2,
+  line-height: 2,
+  colors: (
+    base: (
+      background-color: #fff,
+      border-color: #eee,
+      color: #333,
+    ),
+    hover: (
+      color: #4a84ff,
+    ),
+    focus: (
+      border-color: #4a84ff,
+      color: #4a84ff,
+    ),
+    is-selected: (
+      color: #333,
+      border-color: #333,
+    )
+  )
+));

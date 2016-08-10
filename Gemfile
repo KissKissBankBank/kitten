@@ -10,3 +10,10 @@ source 'https://rails-assets.org' do
 end
 
 gem 'rubocop', require: false
+
+# Front assets management for dummy app
+gem 'webpack-rails', '~> 0.9.8'
+
+# Webpack-dev-server and rails server management
+# through a Procfile
+gem 'foreman'

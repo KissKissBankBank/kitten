@@ -1,8 +1,15 @@
-<%= render 'kitten/groups/atoms/buttons' %>
-<%= render 'kitten/groups/atoms/form' %>
+<%= render_type 'atoms', title: 'Atoms' do %>
+  <%= render_group 'atoms/buttons', title: 'Buttons' %>
+  <%= render_group 'atoms/form', title: 'Form' %>
+<% end %>
 
-<%= render 'kitten/groups/molecules/form' %>
-<%= render 'kitten/groups/molecules/simulators' %>
+<%= render_type 'molecules', title: 'Molecules' do %>
+  <%= render_group 'molecules/form', title: 'Form' %>
+  <%= render_group 'molecules/navigation', title: 'Navigation' %>
+  <%= render_group 'molecules/simulators', title: 'Simulators' %>
+<% end %>
 
-<%= render 'kitten/groups/organisms/simulators' %>
-<%= render 'kitten/groups/organisms/headers' %>
+<%= render_type 'organisms', title: 'Organisms' do %>
+  <%= render_group 'organisms/simulators', title: 'Simulators' %>
+  <%= render_group 'organisms/headers', title: 'Headers' %>
+<% end %>

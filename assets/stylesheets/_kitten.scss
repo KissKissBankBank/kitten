@@ -1,10 +1,8 @@
+$k-module: null;
+
 @import 'sassy-maps';
 @import 'modular-scale';
 
 @import 'kitten/schema';
 @import 'kitten/definitions';
 @import 'kitten/helpers';
-
-@import 'kitten/atoms';
-@import 'kitten/molecules';
-@import 'kitten/organisms';

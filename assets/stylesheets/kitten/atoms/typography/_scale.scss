@@ -17,14 +17,12 @@
 /// @parameter {Map} $scale - a typographic scale specification
 ///
 /// @example scss - Usage
-///   $typography: (
+///   $k-typography: (
+///      scale-multiplier: 1.42,
 ///      ...
 ///   );
 ///
 ///   $typographic-scale: (
-///     typography: $typography,
-///     multiplier: $major-second,
-///
 ///     styles: (
 ///       heading1: (
 ///         family: 'lato',
@@ -118,25 +116,22 @@
 ///     font-weight: 300;
 ///   }
 @mixin k-TypographyScale($scale) {
-  $valid:
-    k-validate(
-      $scale,
-      $k-typography-scale-schema,
-      'k-TypographyScale',
-      '$scale'
+  @include k-with-module('k-TypographyScale: $scale') {
+    $styles: k-map-fetch($scale, 'styles');
+    $multiplier: k-number-definition(
+      k-map-fetch($k-typography, 'scale-multiplier')
     );
 
-  $typography: map-get($scale, 'typography');
-  $multiplier: map-get($scale, 'multiplier');
-  $styles: map-get($scale, 'styles');
+    @each $style-name, $style in $styles {
+      $font: k-map-fetch($style, 'family');
+      $step: k-default(
+        k-number-definition(map-get($style, 'step'), $unit: none),
+      0);
 
-  @each $style-name, $style in $styles {
-    $step: k-default(map-get($style, 'step'), 0);
-
-    .k-#{$style-name} {
-      @include k-typographyFontFamily($typography, $style);
-      @include k-typographyFontSize($typography, $multiplier, $step);
-      @include k-typographyFontStyle($typography, $style);
+      .k-#{$style-name} {
+        @include k-font($font);
+        @include k-typographyFontSize($step);
+      }
     }
   }
 }

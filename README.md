@@ -33,9 +33,14 @@ And then execute:
 
     $ bundle
 
+To configure the engine you can add an initializer. Check out
+`spec/dummy/config/initializers/kitten.rb` for an example.
+
+
 ### Npm
 
-As the `kitten` module is on a [private registry on Gemfury](https://gemfury.com/help/npm-registry),
+As the `kitten` and `sassy-map` modules are on a
+[private registry on Gemfury](https://gemfury.com/help/npm-registry),
 you have to setup your npm configuration aka your `.npmrc` to be able to
 install all npm dependencies.
 
@@ -44,7 +49,8 @@ Set your default registry in your `.npmrc`:
 npm config set registry https://npm-proxy.fury.io/bob/
 ```
 
-Set your authentication token in your `.npmrc`:
+Set your authentication token in your `.npmrc` by providing your Gemfury
+username and password:
 ```
 npm login
 ```
@@ -86,11 +92,7 @@ grunt.initConfig({
     }
   },
   options: {
-    loadPath: [
-      kitten.loadPath,
-      kitten.dependenciesPaths.sassyMaps,
-      kitten.dependenciesPaths.modularscale
-    ]
+    loadPath: kitten.loadPaths
   }
 }
 ```
@@ -119,11 +121,7 @@ var config = {
     ]
   },
   sassLoader: {
-    includePaths: [
-      kitten.loadPath,
-      kitten.dependenciesPaths.sassyMaps,
-      kitten.dependenciesPaths.modularscale
-    ]
+    includePaths: kitten.loadPaths
   }
 }
 ```
@@ -135,13 +133,13 @@ stylesheets](http://webpack.github.io/docs/stylesheets.html).
 
 Import `kitten` in your main Sass file:
 
-```sass
+```scss
 @import 'kitten';
 ```
 
 Define your font families:
 
-```sass
+```scss
 $k-fonts: (
   source-sans: (
     family: ("Source Sans Pro", Helvetica, Arial, sans-serif),
@@ -154,37 +152,81 @@ $k-fonts: (
 );
 ```
 
+Define your typography settings:
+
+```scss
+$k-typography: (
+  root: 16px,
+  font-size: 1rem,
+  font-weight: 400,
+  line-height: 1.5rem,
+  scale-multiplier: $major-second
+);
+```
+
 Include the component your want to use in your application:
 
-```sass
+```scss
 @include k-MyComponent;
 ```
 
+### Ruby on Rails
+
+`kitten` provides a styleguide interface. This feature is only available if you
+are using the gem with Ruby on Rails.
+
+Check out the [documentation](../../wiki/Styleguide) to setup the styleguide directly in
+your application and with your own brand elements.
 
 ## Development
 
-#### Style guide
+### Components
 
-Check out the [style guide documentation](../../wiki/Style-guide)
-to start creating new components!
+Check out the [guidelines](../../wiki/Contribution-guidelines) to start
+creating new components!
 
-#### Installation
+### Installation
 
+Make sure you have Npm access to Gemfury (see higher), then:
+
+Then, run:
 ```sh
 $ bundle                 # install gem dependencies
 $ npm install --only=dev # install node dependencies
 ```
 
-#### Style checker
+### Style checker
 
 ```sh
 $ npm run stylelint
 ```
 
-#### Ruby specs
+### Ruby specs
 
 ```sh
 $ bundle exec rake
+```
+
+### Style Guide
+
+Inside the `spec/dummy` folder, make sure you have Npm access to Gemfury
+(see higher), then:
+
+```sh
+$ bundle
+$ npm install
+```
+
+The `kitten` node module can be tested iteratively without having to
+continually rebuild. We use `npm-link` to create symlinks from the package
+folder to `node_modules/kitten`.
+This is automatically executed every time you run `npm install`.
+
+
+Then to run the server:
+
+```sh
+$ foreman start
 ```
 
 #### Generate SassDoc
@@ -233,6 +275,7 @@ This last command will:
 - push to Github.
 
 ### Gem
+
 Then, you can upload the new `pkg/kitten-*.gem` build to Gemfury.
 
 ### Node module

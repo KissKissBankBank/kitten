@@ -1,5 +1,6 @@
 require 'kitten/version'
 require 'kitten/engine'
+require 'kitten/configuration'
 require 'sass-rails'
 require 'sassy-maps'
 require 'rails-assets-modular-scale'

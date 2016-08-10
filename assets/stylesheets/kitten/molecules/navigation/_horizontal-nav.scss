@@ -88,8 +88,8 @@
     }
 
     .k-HorizontalNav__item {
+      @include k-typographyFontSize($font-step, $line-height);
       @include k-font($font);
-      @include k-fontSize($font-step, $line-height);
       text-align: center;
       text-decoration: none;
 
@@ -101,6 +101,9 @@
       outline: none;
       padding: $padding;
       transition: color .2s, border-color .2s;
+
+      text-decoration: none;
+      text-align: center;
 
       &:hover {
         color: $hover-color;
