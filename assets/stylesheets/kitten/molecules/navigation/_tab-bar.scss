@@ -1,0 +1,118 @@
+/// A tap bar navigation, used in mobile and tablet versions.
+///
+/// @group navigation
+///
+/// @parameter {Map} $tapbar - a tapbar specification
+///
+/// @example scss - usage
+///
+///   @include k-TabBar((
+///     font: source-sans-uppercase,
+///     font-size: 10px,
+///     background-color: #333,
+///     color: #fff,
+///     z-index: 10
+///   ));
+///
+/// @example html
+///
+///   <ul class="k-TabBar">
+///     <li>
+///       <a class="k-TabBar__item k-TabBar__itemFirst is-selected" href="#">
+///         Link selected
+///       </a>
+///     </li>
+///     <li>
+///       <a class="k-TabBar__item" href="#">
+///         Link
+///       </a>
+///     </li>
+///     …
+///   </ul>
+
+@mixin k-TabBar($tapbar) {
+  @include k-with-module('k-TabBar: $tapbar') {
+
+    // Variables & Validations
+    $font: k-map-fetch($tapbar, 'font');
+    $font-step: k-number-definition(
+      k-map-fetch($tapbar, 'font-step'), $unit: none);
+    $color: k-color-definition(
+      k-map-fetch($tapbar, 'color'));
+    $background-color: k-color-definition(
+      k-map-fetch($tapbar, 'background-color'));
+
+    $line-height: 1;
+    $round-size: k-px-to-rem(25px);
+    $z-index: k-number-definition(map-get($tapbar, 'z-index'));
+
+    .k-TabBar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      list-style-type: none;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      background: $background-color;
+
+      &.is-fixed {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        z-index: $z-index;
+      }
+    }
+
+    .k-TabBar__item {
+      @include k-font($font);
+      @include k-typographyFontSize($font-step, $line-height);
+      letter-spacing: k-px-to-rem(0.8px);
+      text-decoration: none;
+      color: $color;
+
+      background-color: $background-color;
+      cursor: pointer;
+      display: block;
+      outline: none;
+      padding: k-px-to-rem(6px) k-px-to-rem(40px) k-px-to-rem(14px);
+      position: relative;
+
+      &:before {
+        border: 1px solid $color;
+        border-radius: $round-size / 2;
+        box-sizing: border-box;
+
+        content: '';
+        display: block;
+        margin: 0 auto k-px-to-rem(5px);
+        width: $round-size;
+        height: $round-size;
+
+        transition: background-color .2s;
+      }
+
+      &:hover,
+      &:active,
+      &:focus,
+      &.is-selected {
+        &:before {
+          background-color: $color;
+        }
+      }
+    }
+
+    .k-TabBar__item--thinGutters {
+      padding-left: k-px-to-rem(30px);
+      padding-right: k-px-to-rem(30px);
+    }
+
+    .k-TabBar__text {
+      position: absolute;
+      left: 0;
+      text-align: center;
+      width: 100%;
+    }
+  }
+}

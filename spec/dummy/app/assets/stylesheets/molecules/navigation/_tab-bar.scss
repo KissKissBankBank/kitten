@@ -1,0 +1,9 @@
+@import 'kitten/molecules/navigation/tab-bar';
+
+@include k-TabBar((
+  font: source-sans-uppercase,
+  font-step: -4,
+  background-color: #333,
+  color: #fff,
+  z-index: 10
+));

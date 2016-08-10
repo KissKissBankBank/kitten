@@ -1,9 +1,8 @@
 @import 'kitten/molecules/navigation/horizontal-nav';
 
-// Horizontal nav variables
-$horizontal-nav: (
-  multiplier: $major-second,
-  font: 'source-sans-semi-bold',
+@include k-HorizontalNav((
+  font: source-sans-semi-bold-uppercase,
+  font-step: -2,
   colors: (
     base: (
       background-color: #fff,
@@ -22,6 +21,4 @@ $horizontal-nav: (
       border-color: #333,
     )
   )
-);
-
-@include k-HorizontalNav($horizontal-nav);
+));
