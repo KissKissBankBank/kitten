@@ -66,7 +66,7 @@
     }
 
     .k-TabBar__item {
-      @include k-font($font);
+      @include k-typographyFont($font);
       @include k-typographyFontSize($font-step, $line-height);
       letter-spacing: k-px-to-rem(0.8px);
       text-decoration: none;

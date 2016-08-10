@@ -79,7 +79,7 @@
     line-height: $base-line-height;
     color: $color;
 
-    @include k-font($font);
+    @include k-typographyFont($font);
 
     // Apply this class on the body element to display the baseline grid.
     &.withGrid {

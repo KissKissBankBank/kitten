@@ -37,15 +37,16 @@
 
 @mixin k-Button($button) {
   @include k-with-module('k-Button: $button') {
+    $border-size: 1px;
 
     // Button element default settings.
-    $button-min-width: 160px;
-    $button-line-height: 2.5;
+    $button-min-width: k-px-to-rem(160px - ($border-size * 2));
+    $button-line-height: k-px-to-rem(40px - ($border-size * 2));
 
     // The button element has a radius of 1.25rem (
     //   20px (designed border-radius) / 16px (base font-size)
     // ). The horizontal paddings are computed using this radius.
-    $button-radius: 1.25em;
+    $button-radius: 1.25rem;
 
     // Button font-size is computed using a modular scale and a defined step of this
     // scale.
@@ -56,7 +57,7 @@
     .k-Button {
       @include k-buttonBase($button);
       @include k-typographyFontSize($button-step, $button-line-height);
-      @include k-font($font);
+      @include k-typographyFont($font);
 
       padding: 0 $button-radius * 2;
       border-radius: $button-radius;

@@ -46,7 +46,6 @@ $k-typography: k-typography-definition((
 @import 'atoms/typography/body-copy';
 @import 'atoms/typography/scale';
 
-
 // ----------
 // Molecules
 // ----------
@@ -66,6 +65,9 @@ $k-typography: k-typography-definition((
 // ----------
 // Organisms
 // ----------
+
+// Headers
+@import 'organisms/headers/header';
 
 // Simulators
 @import 'organisms/simulators/loan-simulator';

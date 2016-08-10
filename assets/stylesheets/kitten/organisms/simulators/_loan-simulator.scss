@@ -4,24 +4,49 @@
 ///
 /// @example scss - usage
 ///
-///   @include k-LoanSimulator;
+///   @include k-LoanSimulator((
+///     colors: (
+///       error: red
+///     )
+///   ));
 ///
 /// @example html
 ///
 ///   <div class="k-LoanSimulator">
-///     …
-///     <p class="k-LoanSimulator__error">Oh no!</p>
+///     <div class="k-LoanSimulator__amount">
+///       <div class="k-LoanSimulator__label">Amount</div>
+///       …
+///       <div class="k-LoanSimulator__amount__error">…</div>
+///     </div>
+///     <div class="k-LoanSimulator__result">…</div>
+///     <div class="k-LoanSimulator__reimbursing">…</div>
+///     <div class="k-LoanSimulator__actions">…</div>
 ///   </div>
-@mixin k-LoanSimulator {
-  .k-LoanSimulator__label {
-    margin: 1em 0;
-  }
+@mixin k-LoanSimulator($loan-simulator) {
+  @include k-with-module('k-LoanSimulator: $loan-simulator') {
+    $colors: k-map-fetch($loan-simulator, 'colors');
+    $error-color: k-color-definition(k-map-fetch($colors, 'error'));
 
-  .k-LoanSimulator__error {
-    color: red;
-  }
+    .k-LoanSimulator__label {
+      margin: 1em 0;
+    }
 
-  .k-LoanSimulator__result {
-    margin: 1em 0;
+    .k-LoanSimulator__amount__error {
+      color: red;
+    }
+
+    .k-LoanSimulator__result {
+      margin: 1em 0;
+    }
+
+    .k-LoanSimulator__amount,
+    .k-LoanSimulator__reimbursing {
+      margin: 0 k-px-to-rem(50px);
+    }
+
+    .k-LoanSimulator__actions {
+      margin: 2rem 0;
+      text-align: center;
+    }
   }
 }
