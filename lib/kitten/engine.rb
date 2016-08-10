@@ -13,6 +13,13 @@ module Kitten
         app.config.assets.paths << root.join('assets', directory).to_s
       end
 
+      Rails.application.config.assets.precompile += %w(
+        kitten/jquery-3.1.0.min.js
+        kitten/noframework.waypoints.min.js
+        kitten/waypoint.js
+        kitten/dropdown.js
+      )
+
       # normalize stylesheet (used only on the styleguide)
       app.config.assets.paths << Rails.root.join('vendor', 'stylesheets').to_s
     end
