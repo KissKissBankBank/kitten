@@ -19,45 +19,49 @@
 </head>
 <body>
 
-<div class="k-StyleguideContainer">
-  <nav class="k-StyleguideMenu">
-    <a class="k-StyleguideMenu__title">menu</a>
+<% if @menu_types %>
+  <div class="k-StyleguideContainer">
+    <nav class="k-StyleguideMenu">
+      <a class="k-StyleguideMenu__title">menu</a>
 
-    <div class="k-u-clearfix"></div>
+      <div class="k-u-clearfix"></div>
 
-    <ul>
-      <% @menu_types.each do |type_id:, type_title:, groups:| %>
-        <li class="k-StyleguideMenu__list">
-          <a href="#<%= type_id %>"
-             class="k-StyleguideMenu__listItem"><%= type_title %></a>
-          <ul class="k-StyleguideMenu__subList">
-            <% groups.each do |group_id:, group_title:, components:| %>
-              <li>
-                <a href="#<%= group_id %>"
-                   class="k-StyleguideMenu__subListItem"><%= group_title %></a>
-                <ul class="k-StyleguideMenu__subSubList">
-                  <% components.each do |component_id:, component_title:| %>
-                    <li>
-                      <a class="k-StyleguideMenu__subSubListItem"
-                         href="#<%= component_id %>"><%= component_title %></a>
-                    </li>
-                  <% end %>
-                </ul>
-              </li>
-            <% end %>
-          </ul>
-        </li>
-      <% end %>
-    </ul>
-  </nav>
+      <ul>
+        <% @menu_types.each do |type_id:, type_title:, groups:| %>
+          <li class="k-StyleguideMenu__list">
+            <a href="#<%= type_id %>"
+               class="k-StyleguideMenu__listItem"><%= type_title %></a>
+            <ul class="k-StyleguideMenu__subList">
+              <% groups.each do |group_id:, group_title:, components:| %>
+                <li>
+                  <a href="#<%= group_id %>"
+                     class="k-StyleguideMenu__subListItem"><%= group_title %></a>
+                  <ul class="k-StyleguideMenu__subSubList">
+                    <% components.each do |component_id:, component_title:| %>
+                      <li>
+                        <a class="k-StyleguideMenu__subSubListItem"
+                           href="#<%= component_id %>"><%= component_title %></a>
+                      </li>
+                    <% end %>
+                  </ul>
+                </li>
+              <% end %>
+            </ul>
+          </li>
+        <% end %>
+      </ul>
+    </nav>
 
-  <div class="k-StyleguideContent">
-    <section>
-      <!-- <header class="k-StyleguideTitle">ComponentsKissCo</header> -->
-      <%= yield %>
-    </section>
+    <div class="k-StyleguideContent">
+      <section>
+        <!-- <header class="k-StyleguideTitle">ComponentsKissCo</header> -->
+        <%= yield %>
+      </section>
+    </div>
   </div>
-</div>
+<% else %>
+  <%= yield %>
+<% end %>
 
 <%#= javascript_include_tag 'kitten/noframework.waypoints.min.js' %>
 <%= javascript_include_tag 'kitten/jquery-3.1.0.min.js' %>
