@@ -1,3 +1,5 @@
+@import 'kitten/normalize';
+
 $blue: #4a84ff;
 $sapphire: #2250b2;
 $light-navy: #13459e;
@@ -65,47 +67,114 @@ $light-grey-2: #eee;
   text-transform: uppercase;
 }
 
-.k-StyleguideMenu__sectionTitle {
-  padding-left: 1rem;
+.k-StyleguideMenu__list {
   border-bottom: 1px solid $light-navy;
-
-  font-size: 1.25rem;
-  font-weight: 400;
-  line-height: 3.2rem;
-}
-
-.k-StyleguideMenu__section {
-  border-bottom: 1px solid $light-navy;
-
-  list-style: none;
-
-  font-size: 0.75rem;
-  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
-  font-weight: 300;
-  letter-spacing: 1px;
-  line-height: 3.6rem;
-  text-transform: uppercase;
 
   & > a {
-    display: inline-block;
-    padding-left: 1rem;
+    color: inherit;
+    text-decoration: none;
+    font-weight: 300;
   }
 }
 
-.k-StyleguideMenu__sectionItem {
+.k-StyleguideMenu__listItem {
+  position: relative;
+  padding: 1.5rem 0 .75rem 1rem;
+  display: block;
+
+  font-size: 1.25rem;
+  line-height: 3.2rem;
+
+  &:after {
+    position: absolute;
+    content: "\022C1";
+    right: 1em;
+  }
+
+  &.is-opened {
+    background-color: $light-navy;
+
+    &:after {
+      content: "\022C0";
+    }
+  }
+}
+
+.k-StyleguideMenu__subList {
+  display: none;
+
+  &.is-opened {
+    display: block;
+  }
+}
+
+.k-StyleguideMenu__subListItem {
+  position: relative;
   border-bottom: 1px solid $light-navy;
+  padding-left: 2rem;
+  display: block;
 
   list-style: none;
 
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 1px;
-  line-height: 2.75rem;
-  text-transform: none;
+  line-height: 3.6rem;
+  text-transform: uppercase;
+  color: inherit;
+  text-decoration: none;
 
-  & > a {
-    display: inline-block;
-    padding-left: 1rem;
+  &:after {
+    position: absolute;
+    content: "\022C1";
+    right: 1.8em;
+  }
+
+  &.is-opened {
+    background-color: $light-navy;
+
+    &:after {
+      content: "\022C0";
+    }
+  }
+
+  &:hover,
+  &:focus,
+  &.is-selected {
+    background-color: $light-navy;
+  }
+}
+
+.k-StyleguideMenu__subSubList {
+  display: none;
+
+  &.is-opened {
+    display: block;
+  }
+}
+
+.k-StyleguideMenu__subSubListItem {
+  border-bottom: 1px solid $light-navy;
+  display: block;
+  padding-left: 3rem;
+
+  list-style: none;
+
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  line-height: 3.6rem;
+  color: inherit;
+  text-decoration: none;
+
+  &:hover,
+  &:focus,
+  &.is-selected {
+    background-color: $light-navy;
+  }
+
+  &.is-opened {
+    background-color: $light-navy;
   }
 }
 
@@ -119,6 +188,12 @@ $light-grey-2: #eee;
 
   display: flex;
   flex-direction: row;
+}
+
+@media (max-width: 1100px) {
+  .k-StyleguideSection__example {
+    display: block;
+  }
 }
 
 .k-StyleguideSection__example--vertical {
@@ -161,11 +236,24 @@ $light-grey-2: #eee;
   width: 40%;
 }
 
+@media (max-width: 1100px) {
+  .k-StyleguideExample__description {
+    width: 90%;
+    padding-right: 6em;
+  }
+}
+
 .k-StyleguideExample__bloc {
   margin-top: 1.5rem;
   background-color: $blue;
   width: 470px;
   height: 272px;
+}
+
+@media (max-width: 1100px) {
+  .k-StyleguideExample__bloc {
+    width: 90%;
+  }
 }
 
 // Utilities

@@ -10,9 +10,12 @@
   },
   "devDependencies": {
     "css-loader": "^0.23.1",
-    "kitten": "file:../../../kitten",
+    "kitten": "0.4.0",
     "node-sass": "^3.8.0",
     "sass-loader": "^4.0.0",
     "style-loader": "^0.13.1"
+  },
+  "scripts": {
+    "preinstall": "./bin/npm-link"
   }
 }

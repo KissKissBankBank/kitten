@@ -1,0 +1,33 @@
+@import 'kitten/atoms/buttons/button-icon';
+
+@include k-ButtonIcon((
+  colors: (
+    base: (
+      color: #333,
+      background-color: #fff,
+      border-color: #d8d8d8
+    ),
+    hover: (
+      color: #333,
+      background-color: #fff,
+      border-color: #333
+    ),
+    focus: (
+      color: #333,
+      background-color: #fff,
+      border-color: #333
+    ),
+    active: (
+      color: #fff,
+      background-color: #333
+    ),
+    disabled: (
+      color: #fff,
+      background-color: #d8d8d8
+    ),
+    is-selected: (
+      color: #fff,
+      background-color: #333
+    )
+  )
+));
