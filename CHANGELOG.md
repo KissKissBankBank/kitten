@@ -8,10 +8,12 @@ Breaking changes:
   passing typography styles in mixins.
 - Move all styleguide stylesheets into dummy app for testing.
 - Remove components from `kitten` import.
+- Change some styles for `k-ButtonImage` and `k-ButtonIcon`.
 
 New features:
 - Enable configuration on styleguide stylesheet path.
 - Add webpack to manage `kitten` scss assets in dummy app.
+- Add new component: `header` organism.
 
 ## [v0.4.0] - 2016-08-04
 Minor updates:

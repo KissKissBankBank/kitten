@@ -1,6 +1,7 @@
 /// Setup a button icon element.
 ///
-/// This mixin will setup an element to look like a button with a picto inside.
+/// This mixin will setup an element to look like a button
+/// with a picto inside.
 ///
 /// Paddings depend on the size of button and the size of picto.
 /// It is calculate automaticaly with this 2 values.
@@ -40,22 +41,20 @@
 ///       )
 ///     )
 ///   )
-///
-///   $icon: (
-///     width: 14px,
-///     height: 12px
-///   )
 
 @mixin k-ButtonIcon($button-icon) {
   @include k-with-module('k-ButtonIcon: $button-icon') {
+    $border-size: 1px;
 
-    $button-size: 40px;
-    $button-size-tiny: 30px;
-    $button-size-big: 50px;
+    $button-size: 40px - ($border-size * 2);
+    $button-size-tiny: 30px - ($border-size * 2);
+    $button-size-big: 50px - ($border-size * 2);
 
     // SVG element default settings.
-    $icon-width: k-px-to-rem(14px);
-    $icon-height: k-px-to-rem(12px);
+    $icon-width: k-px-to-rem(17px);
+    $icon-height: k-px-to-rem(17px);
+    $icon-width-tiny: k-px-to-rem(10px);
+    $icon-height-tiny: k-px-to-rem(10px);
 
     // Get data for SVG.
     $colors: map-get($button-icon, 'colors');
@@ -74,6 +73,10 @@
         .k-ButtonIcon__svg {
           fill: $hover-color;
         }
+
+        .k-ButtonIcon__svg__stroke {
+          stroke: $hover-color;
+        }
       }
 
       &:focus {
@@ -85,11 +88,24 @@
             fill: $hover-color;
           }
         }
+
+        .k-ButtonIcon__svg__stroke {
+          @if $focus-color {
+            stroke: $focus-color;
+          }
+          @else {
+            stroke: $hover-color;
+          }
+        }
       }
 
       &:active {
         .k-ButtonIcon__svg {
           fill: $active-color;
+        }
+
+        .k-ButtonIcon__svg__stroke {
+          stroke: $active-color;
         }
       }
 
@@ -97,21 +113,21 @@
         .k-ButtonIcon__svg {
           fill: $disabled-color;
         }
+
+        .k-ButtonIcon__svg__stroke {
+          stroke: $disabled-color;
+        }
       }
 
       &.is-selected {
         .k-ButtonIcon__svg {
           fill: $is-selected-color;
         }
+
+        .k-ButtonIcon__svg__stroke {
+          stroke: $is-selected-color;
+        }
       }
-    }
-
-    .k-ButtonIcon--tiny {
-      @include k-buttonRounded($button-size-tiny, $icon-width, $icon-height);
-    }
-
-    .k-ButtonIcon--big {
-      @include k-buttonRounded($button-size-big, $icon-width, $icon-height);
     }
 
     .k-ButtonIcon__svg {
@@ -121,6 +137,21 @@
       width: $icon-width;
       height: $icon-height;
       fill: $base-color;
+    }
+
+    .k-ButtonIcon--tiny {
+      @include k-buttonRounded($button-size-tiny,
+        $icon-width-tiny, $icon-height-tiny);
+
+      .k-ButtonIcon__svg {
+        width: $icon-width-tiny;
+        height: $icon-height-tiny;
+      }
+    }
+
+    .k-ButtonIcon--big {
+      @include k-buttonRounded($button-size-big,
+        $icon-width, $icon-height);
     }
   }
 }
