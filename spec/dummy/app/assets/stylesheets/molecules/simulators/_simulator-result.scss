@@ -2,10 +2,10 @@
 
 @include k-SimulatorResult((
   colors: (
-    border: black,
-    background: whitesmoke,
-    text: black
+    border: #eee,
+    background: #fbfbfb,
+    text: #333
   ),
   label-font: source-sans-uppercase,
-  value-font: source-sans-semi-bold
+  value-font: source-sans-semi-bold,
 ));

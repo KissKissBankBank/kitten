@@ -36,6 +36,8 @@ window.LoanSimulator = React.createClass({
 
     currencySymbol: React.PropTypes.string,
     locale: React.PropTypes.string,
+
+    actionLabel: React.PropTypes.string,
   },
 
   getDefaultProps: function() {
@@ -47,10 +49,11 @@ window.LoanSimulator = React.createClass({
       initialAmount: null,
 
       amountEmptyError: 'Amount cannot be empty',
-      amountOutOfBoundsError: 'Amount should be lower',
+      amountOutOfBoundsError: 'Amount is either too big or too small',
 
       installmentLabel: 'Reimbursing',
       installmentName: 'installment',
+      installmentStep: 1,
 
       durationText: 'Duration',
       durationMin: 1,
@@ -59,10 +62,12 @@ window.LoanSimulator = React.createClass({
       durationSymbolPlural: 'months',
 
       feeText: 'Fee',
-      feeForDuration: function() { return 0 },
+      feeForDuration: function() { return 0.1 },
 
       currencySymbol: '$',
       locale: 'en',
+
+      actionLabel: 'OK',
     }
   },
 
@@ -157,12 +162,13 @@ window.LoanSimulator = React.createClass({
     const { installmentAmount, dragged, touched } = this.state
     const error = this.error()
     const showResult = !error && touched
+    const duration = this.duration()
 
     let errorClass, errorTag, installmentString, infoClass, resultTag
 
     if (error) {
       errorClass = "is-error"
-      errorTag = <p className="k-LoanSimulator__error">{error}</p>
+      errorTag = <p className="k-LoanSimulator__amount__error">{error}</p>
     }
 
     if (!error && dragged && installmentAmount) {
@@ -173,7 +179,7 @@ window.LoanSimulator = React.createClass({
       infoClass = "is-inactive"
     }
 
-    const durationSymbol = this.duration() === 1
+    const durationSymbol = duration === 1
                          ? this.props.durationSymbol
                          : this.props.durationSymbolPlural
 
@@ -181,7 +187,7 @@ window.LoanSimulator = React.createClass({
       const results = [
         {
           label: this.props.durationText,
-          value: this.duration() + ' ' + durationSymbol
+          value: duration + ' ' + durationSymbol
         },
         {
           label: this.props.feeText,
@@ -196,13 +202,13 @@ window.LoanSimulator = React.createClass({
 
     return (
       <div className="k-LoanSimulator">
-        <div>
-          <div>
-            <label className="k-Label k-LoanSimulator__label" htmlFor="amount">
-              {this.props.amountLabel}
-            </label>
-          </div>
-          <div className={classNames('k-TextInputWithUnit', errorClass)}>
+        <div className="k-LoanSimulator__amount">
+          <label className="k-Label k-LoanSimulator__label" htmlFor="amount">
+            {this.props.amountLabel}
+          </label>
+          <div className={classNames('k-TextInputWithUnit',
+                                     'k-TextInputWithUnit--large',
+                                     errorClass)}>
             <input ref="amount"
                    className="k-TextInputWithUnit__input"
                    id="amount"
@@ -222,29 +228,34 @@ window.LoanSimulator = React.createClass({
           {errorTag}
         </div>
         {resultTag}
-        <div className="k-LabelWithInfo">
-          <label className="k-Label
-                            k-LabelWithInfo__label
-                            k-LoanSimulator__label"
-                 onClick={this.handleInstallmentLabelClick}>
-            {this.props.installmentLabel}
-          </label>
-          <div className={classNames('k-LabelWithInfo__info', infoClass)}>
-            {installmentString}
-            {' '}
-            {this.props.currencySymbol}
-            /
-            {this.props.durationSymbol}
+        <div className="k-LoanSimulator__reimbursing">
+          <div className="k-LabelWithInfo">
+            <label className="k-Label
+                              k-LabelWithInfo__label
+                              k-LoanSimulator__label"
+                   onClick={this.handleInstallmentLabelClick}>
+              {this.props.installmentLabel}
+            </label>
+            <div className={classNames('k-LabelWithInfo__info', infoClass)}>
+              {installmentString}
+              {' '}
+              {this.props.currencySymbol}
+              /
+              {this.props.durationSymbol}
+            </div>
           </div>
+          <Slider ref="slider"
+                  step={this.props.installmentStep}
+                  min={this.installmentMin()}
+                  max={this.installmentMax()}
+                  name={this.props.installmentName}
+                  value={this.state.installmentAmount}
+                  onChange={this.handleInstallmentChange}
+                  onChangeEnd={this.handleInstallmentChangeEnd} />
         </div>
-        <Slider ref="slider"
-                step={this.props.installmentStep}
-                min={this.installmentMin()}
-                max={this.installmentMax()}
-                name={this.props.installmentName}
-                value={this.state.installmentAmount}
-                onChange={this.handleInstallmentChange}
-                onChangeEnd={this.handleInstallmentChangeEnd} />
+        <div className="k-LoanSimulator__actions">
+          <button className="k-Button">{this.props.actionLabel}</button>
+        </div>
       </div>
     )
   }

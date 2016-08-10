@@ -178,7 +178,7 @@ window.Slider = React.createClass({
                onKeyDown={this.handleKeyDown}
                onMouseDown={this.handleStart}
                onClick={this.handleClick}>
-            <GrabberIcon className="k-Slider__handle__icon" />
+            <GrabberIcon className="k-Slider__handleIcon" />
           </div>
         </div>
         {input}
