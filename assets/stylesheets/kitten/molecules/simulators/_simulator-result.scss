@@ -55,12 +55,12 @@
     }
 
     .k-SimulatorResult__item__label {
-      @include k-font($label-font);
+      @include k-typographyFont($label-font);
       @include k-typographyFontSize(-2);
     }
 
     .k-SimulatorResult__item__value {
-      @include k-font($value-font);
+      @include k-typographyFont($value-font);
       @include k-typographyFontSize(1);
     }
   }

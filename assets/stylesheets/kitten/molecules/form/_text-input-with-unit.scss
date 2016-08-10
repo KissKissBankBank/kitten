@@ -4,7 +4,7 @@
 ///
 /// @example scss - usage
 ///
-///   $text-input-with-unit: (
+///   @include k-TextInputWithUnit((
 ///     input-font: sans-serif,
 ///     input-font: sans-serif-bold,
 ///     colors: (
@@ -12,9 +12,7 @@
 ///       error: red,
 ///       focus: blue
 ///     )
-///   )
-///
-///   @include k-TextInputWithUnit($text-input-with-unit);
+///   ));
 ///
 /// @example html
 ///
@@ -67,7 +65,7 @@
       border-radius: .25em;
       outline: none; // since we introduce our own focus styles
 
-      @include k-font($input-font);
+      @include k-typographyFont($input-font);
 
       transition: all $transition-speed;
 
@@ -103,7 +101,7 @@
       padding: .5rem .85rem;
       border-left: 1px solid $border-color;
 
-      @include k-font($unit-font);
+      @include k-typographyFont($unit-font);
       @include k-typographyFontSize(1);
 
       transition: all $transition-speed;

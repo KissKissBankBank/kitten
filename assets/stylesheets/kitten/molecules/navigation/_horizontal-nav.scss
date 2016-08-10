@@ -6,7 +6,7 @@
 ///
 /// @example scss - usage
 ///
-///   $nav: (
+///   @include k-HorizontalNav((
 ///     font: 'source-sans',
 ///     colors: (
 ///       base: (
@@ -26,9 +26,7 @@
 ///         border-color: #333,
 ///       )
 ///     )
-///   );
-///
-///   @include k-HorizontalNav($nav);
+///   ));
 ///
 /// @example html
 ///
@@ -47,9 +45,8 @@
 
 @mixin k-HorizontalNav($nav) {
   @include k-with-module('k-HorizontalNav: $nav') {
-
-    $multiplier: map-get($nav, 'multiplier');
-    $font: map-get($nav, 'font');
+    $multiplier: k-map-fetch($nav, 'multiplier');
+    $font: k-map-fetch($nav, 'font');
 
     $colors: k-map-fetch($nav, 'colors');
 
@@ -84,7 +81,7 @@
 
     .k-HorizontalNav__item {
       @include k-typographyFontSize(0);
-      @include k-font($font);
+      @include k-typographyFont($font);
 
       background-color: $base-background-color;
       border-bottom: 1px solid $base-border-color;

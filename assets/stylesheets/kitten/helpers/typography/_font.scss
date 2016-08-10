@@ -1,7 +1,7 @@
 /// Apply a font from the global list of available fonts
 ///
 /// @group typography
-@mixin k-font($font-name) {
+@mixin k-typographyFont($font-name) {
   $font: k-map-fetch($k-fonts, $font-name);
   $family: map-get($font, 'family');
   $weight: map-get($font, 'weight');
