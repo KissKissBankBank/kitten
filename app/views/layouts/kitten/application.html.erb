@@ -25,115 +25,34 @@
     <div class="k-u-clearfix"></div>
 
     <ul>
-      <li class="k-StyleguideMenu__list">
-        <a href="#branding" class="k-StyleguideMenu__listItem">Branding</a>
-
-        <ul class="k-StyleguideMenu__subList">
-          <li>
-            <a href="#colors" class="k-StyleguideMenu__subListItem">colors</a>
-          </li>
-          <li>
-            <a href="#typography" class="k-StyleguideMenu__subListItem">typography</a>
-          </li>
-          <li>
-            <a href="#icons" class="k-StyleguideMenu__subListItem">icons</a>
-          </li>
-        </ul>
-      </li>
+      <% @menu_types.each do |type_id:, type_title:, groups:| %>
+        <li class="k-StyleguideMenu__list">
+          <a href="#<%= type_id %>"
+             class="k-StyleguideMenu__listItem"><%= type_title %></a>
+          <ul class="k-StyleguideMenu__subList">
+            <% groups.each do |group_id:, group_title:, components:| %>
+              <li>
+                <a href="#<%= group_id %>"
+                   class="k-StyleguideMenu__subListItem"><%= group_title %></a>
+                <ul class="k-StyleguideMenu__subSubList">
+                  <% components.each do |component_id:, component_title:| %>
+                    <li>
+                      <a class="k-StyleguideMenu__subSubListItem"
+                         href="#<%= component_id %>"><%= component_title %></a>
+                    </li>
+                  <% end %>
+                </ul>
+              </li>
+            <% end %>
+          </ul>
+        </li>
+      <% end %>
     </ul>
-
-    <ul>
-      <li class="k-StyleguideMenu__list">
-        <a href="#atoms" class="k-StyleguideMenu__listItem">Atoms</a>
-        <ul class="k-StyleguideMenu__subList">
-          <li>
-            <a href="#buttons" class="k-StyleguideMenu__subListItem">buttons</a>
-            <ul class="k-StyleguideMenu__subSubList">
-              <li>
-                <a href="#primary-buttons" class="k-StyleguideMenu__subSubListItem">Primary buttons</a>
-              </li>
-              <li>
-                <a href="#icon-buttons" class="k-StyleguideMenu__subSubListItem">Icon buttons</a>
-              </li>
-              <li>
-                <a href="#image-buttons" class="k-StyleguideMenu__subSubListItem">Image buttons</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="#form" class="k-StyleguideMenu__subListItem">form</a>
-            <ul class="k-StyleguideMenu__subSubList">
-              <li>
-                <a href="#label" class="k-StyleguideMenu__subSubListItem">Label</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="#typography" class="k-StyleguideMenu__subListItem">typography</a>
-          </li>
-        </ul>
-      </li>
-    </ul>
-
-    <ul>
-      <li class="k-StyleguideMenu__list">
-        <a href="#molecules" class="k-StyleguideMenu__listItem">Molecules</a>
-        <ul class="k-StyleguideMenu__subList">
-          <li>
-            <a href="#form" class="k-StyleguideMenu__subListItem">form</a>
-            <ul class="k-StyleguideMenu__subSubList">
-              <li>
-                <a href="#label-with-info" class="k-StyleguideMenu__subSubListItem">Label with info</a>
-              </li>
-              <li>
-                <a href="#label-input-with-unit" class="k-StyleguideMenu__subSubListItem">Label input with unit</a>
-              </li>
-              <li>
-                <a href="#slider" class="k-StyleguideMenu__subSubListItem">Slider</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="#navigation" class="k-StyleguideMenu__subListItem">navigation</a>
-            <ul class="k-StyleguideMenu__subSubList">
-              <li>
-                <a href="#horizontal-nav" class="k-StyleguideMenu__subSubListItem">Horizontal nav</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="#simulators" class="k-StyleguideMenu__subListItem">simulators</a>
-            <ul class="k-StyleguideMenu__subSubList">
-              <li>
-                <a href="#simulators-result" class="k-StyleguideMenu__subSubListItem">Simulators result</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-    </ul>
-
-    <ul>
-      <li class="k-StyleguideMenu__list">
-        <a href="#organisms" class="k-StyleguideMenu__listItem">Organisms</a>
-        <ul class="k-StyleguideMenu__subList">
-          <li>
-            <a href="#simulators" class="k-StyleguideMenu__subListItem">simulators</a>
-            <ul class="k-StyleguideMenu__subSubList">
-              <li>
-                <a href="#loan-simulator" class="k-StyleguideMenu__subSubListItem">Loan simulator</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-    </ul>
-
   </nav>
 
   <div class="k-StyleguideContent">
     <section>
-      <header class="k-StyleguideTitle">ComponentsKissCo</header>
+      <!-- <header class="k-StyleguideTitle">ComponentsKissCo</header> -->
       <%= yield %>
     </section>
   </div>
