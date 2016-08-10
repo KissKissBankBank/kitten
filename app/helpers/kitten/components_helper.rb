@@ -16,13 +16,13 @@ module Kitten
     end
 
     def render_component(component,
-                         title:,
-                         description:,
+                         title: nil,
+                         description: nil,
                          examples_display: :horizontal)
       add_menu_component(component, title)
       render 'layouts/kitten/component',
              component: component,
-             title: title,
+             title: title || component.split('/').last.capitalize,
              description: description,
              examples_display: examples_display
     end
