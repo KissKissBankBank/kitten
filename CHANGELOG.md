@@ -17,6 +17,7 @@ New features:
 - Add new component: `testimonies` molecule
 - /kitten/playground route in the styleguide to test your styles in development
 - Access components directly by removing the `#` in the styleguide in URL
+- Add new component: `tabbar` molecule.
 
 ## [v0.4.0] - 2016-08-04
 Minor updates:
