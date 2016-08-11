@@ -21,8 +21,9 @@
 @mixin k-Testimony($testimony) {
   @include k-with-module('k-Testimony: $testimony') {
     $font: k-map-fetch($testimony, 'font');
-    $colors: k-map-fetch($testimony, 'colors');
-    $text-color: k-color-definition(k-map-fetch($colors, 'text'));
+    $text-color: k-color-definition(
+      k-map-fetch($testimony, ('colors', 'text'))
+    );
 
     .k-Testimony {
       padding: 0 1rem;
