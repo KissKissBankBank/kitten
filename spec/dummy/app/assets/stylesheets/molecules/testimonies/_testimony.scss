@@ -1,0 +1,8 @@
+@import "kitten/molecules/testimonies/testimony";
+
+@include k-Testimony((
+  font: 'source-sans',
+  colors: (
+    text: #999,
+  ),
+));

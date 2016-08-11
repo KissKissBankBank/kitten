@@ -214,13 +214,13 @@ $light-grey-2: #eee;
 // Section Example
 .k-StyleguideExample {
   padding-right: 3rem;
-  text-align: center;
 }
 
 .k-StyleguideExample__title {
   color: $blue;
   font-size: 0.75rem;
   font-weight: 600;
+  text-align: center;
 }
 
 .k-StyleguideExample__title--margin {

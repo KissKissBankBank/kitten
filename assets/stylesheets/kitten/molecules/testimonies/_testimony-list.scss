@@ -1,0 +1,27 @@
+/// A list of testimonies
+///
+/// @group testimonies
+///
+/// @example scss - usage
+///
+///   @include k-TestimonyList;
+///
+/// @example html
+///
+///   <ul class="k-TestimonyList">
+///     <div class="k-Testimony">…</div>
+///     <div class="k-Testimony">…</div>
+///     <div class="k-Testimony">…</div>
+///   </div>
+@mixin k-TestimonyList {
+  @include k-with-module('k-TestimonyList') {
+    .k-TestimonyList {
+      display: flex;
+      justify-content: center;
+    }
+
+    .k-TestimonyList__item {
+      flex: 1;
+    }
+  }
+}

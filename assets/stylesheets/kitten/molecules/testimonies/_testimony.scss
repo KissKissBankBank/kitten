@@ -1,0 +1,50 @@
+/// A testimony
+///
+/// @group testimonies
+///
+/// @example scss - usage
+///
+///   @include k-Testimony((
+///     font: 'source-sans',
+///     colors: (
+///       text: grey,
+///     ),
+///   ));
+///
+/// @example html
+///
+///   <div class="k-Testimony">
+///     <div class="k-Testimony__title">…</div>
+///     <img class="k-Testimony__image" alt="…" src="…" />
+///     <blockquote class="k-Testimony__text">…</blockquote>
+///   </div>
+@mixin k-Testimony($testimony) {
+  @include k-with-module('k-Testimony: $testimony') {
+    $font: k-map-fetch($testimony, 'font');
+    $text-color: k-color-definition(
+      k-map-fetch($testimony, ('colors', 'text'))
+    );
+
+    .k-Testimony {
+      padding: 0 1rem;
+      text-align: center;
+      @include k-typographyFont($font);
+    }
+
+    .k-Testimony__title {
+      margin-bottom: 1rem;
+      @include k-typographyFontSize(2);
+    }
+
+    .k-Testimony__image {
+      margin-bottom: 1rem;
+      border-radius: 50%;
+    }
+
+    .k-Testimony__text {
+      margin: 0; // overrides <blockquote>, <p>, etc.
+      color: $text-color;
+      @include k-typographyFontSize(-1);
+    }
+  }
+}
