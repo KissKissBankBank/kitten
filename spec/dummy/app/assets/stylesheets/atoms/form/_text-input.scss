@@ -1,0 +1,8 @@
+@import 'kitten/atoms/form/text-input';
+
+@include k-TextInput((
+  font: 'source-sans',
+  font-size: -2,
+  border-color: #d8d8d8,
+  color: #333,
+));
