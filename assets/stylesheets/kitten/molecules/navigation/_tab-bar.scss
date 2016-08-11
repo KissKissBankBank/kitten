@@ -76,26 +76,25 @@
       letter-spacing: k-px-to-rem(0.8px);
       text-decoration: none;
 
-
+      padding: k-px-to-rem(11px) k-px-to-rem(18px);
+      display: block;
+      position: relative;
+      outline: none;
+      border-top: $border-width solid $background-color;
       background-color: $background-color;
       cursor: pointer;
-      display: block;
-      outline: none;
-      padding: k-px-to-rem(11px) k-px-to-rem(18px);
-      position: relative;
-      border-top: $border-width solid $background-color;
       transition: color .2s, border-color .2s;
 
       &:visited {
         color: $color;
       }
 
-      &:hover {
+      &:hover,
+      &:active,
+      &:focus {
         color: $color-current;
       }
 
-      &:focus,
-      &:active,
       &.is-selected {
         border-color: $color-current;
         color: $color-current;
