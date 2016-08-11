@@ -1,0 +1,86 @@
+/// We could be heroes
+///
+/// @group heroes
+///
+/// @example scss - usage
+///
+///   @include k-Hero((
+///     font: 'source-sans',
+///   ));
+///
+/// @example html
+///
+///  <div class="k-Hero">
+///    <div class="k-Hero__container">
+///      <div class="k-Hero__text">
+///        <h1 class="k-Hero__text__title">Wool balls</h1>
+///        <h2 class="k-Hero__text__subtitle">Infinite fun.</h2>
+///        <h2 class="k-Hero__text__subtitle">Until you have to roll them back.</h2>
+///      </div>
+///      <div class="k-Hero__action">
+///        <img src="https://placekitten.com/g/300/400" alt="" />
+///      </div>
+///    </div>
+///  </div>
+
+@mixin k-Hero($hero) {
+  @include k-with-module('k-Hero') {
+    $font: k-map-fetch($hero, 'font');
+
+    $two-columns-breakpoint: 60em; // TODO use grid variable
+
+    .k-Hero {
+      padding: 1rem;
+    }
+
+    .k-Hero__container {
+      margin: 0 auto;
+      max-width: 1000px; // TODO use grid variable
+
+      @media (min-width: $two-columns-breakpoint) {
+        display: flex;
+      }
+
+      align-items: center;
+    }
+
+    .k-Hero__text {
+      flex: 1;
+
+      @media (max-width: $two-columns-breakpoint) {
+        text-align: center;
+      }
+    }
+    .k-Hero__action {
+      padding-top: 3rem;
+
+      @media (min-width: $two-columns-breakpoint) {
+        width: 26rem; // TODO use grid variable
+      }
+    }
+
+    .k-Hero__text__title {
+      margin: 0;
+      @include k-typographyFontSize(10);
+      @include k-typographyFont($font);
+    }
+
+    .k-Hero__text__subtitle {
+      margin: .5rem 0;
+      @include k-typographyFontSize(2);
+      @include k-typographyFont($font);
+    }
+
+    .k-Hero--onDark {
+      // Apps will want to override the background with a color and an image.
+      background: darkgrey;
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      color: #fff;
+      a {
+        color: inherit;
+      }
+    }
+  }
+}
