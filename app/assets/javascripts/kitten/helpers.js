@@ -1,21 +1,19 @@
-// Helper for toggle a class on click.
+// Helper to toggle a class on click.
 //
 // Usage:
 //    <div class='foo'>…</div>
 //    <a data-toggle-element='.foo'
 //       data-toggle-class='bar' …>…</a>
 //
-// Result:
+// Result after clicking:
 //    <div class='foo bar'>…</div>
 
-$('[data-toggle-class]').each(function () {
+$(document).on('click', '[data-toggle-class]', function () {
 
-  $(this).on('click', function () {
-    var klass = $(this).data('toggle-class');
-    var element = $(this).data('toggle-element');
+  var klass = $(this).data('toggle-class');
+  var element = $(this).data('toggle-element');
 
-    $(element).toggleClass(klass);
+  $(element).toggleClass(klass);
 
-    return false;
-  });
+  return false;
 });
