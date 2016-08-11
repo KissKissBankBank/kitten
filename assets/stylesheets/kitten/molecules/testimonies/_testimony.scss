@@ -42,7 +42,7 @@
     .k-Testimony__text {
       margin: 0; // override <blockquote>
       color: $text-color;
-      @include k-typographyFontSize(0);
+      @include k-typographyFontSize(-1);
     }
   }
 }
