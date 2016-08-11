@@ -18,6 +18,7 @@ module Kitten
         kitten/noframework.waypoints.min.js
         kitten/waypoint.js
         kitten/dropdown.js
+        kitten/helpers.js
       )
 
       # normalize stylesheet (used only on the styleguide)
