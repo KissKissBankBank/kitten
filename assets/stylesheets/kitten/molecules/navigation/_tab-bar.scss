@@ -1,0 +1,105 @@
+/// A tab bar navigation, used in mobile and tablet versions.
+///
+/// @group navigation
+///
+/// @parameter {Map} $tabbar - a tabbar specification
+///
+/// @example scss - usage
+///
+///   @include k-TabBar((
+///     font: source-sans-uppercase,
+///     font-size: 10px,
+///     background-color: #333,
+///     color: #fff,
+///     color-current: #fff,
+///     z-index: 10
+///   ));
+///
+/// @example html
+///
+///   <ul class="k-TabBar">
+///     <li>
+///       <a class="k-TabBar__item is-selected" href="#">
+///         Link selected
+///       </a>
+///     </li>
+///     <li>
+///       <a class="k-TabBar__item" href="#">
+///         Link
+///       </a>
+///     </li>
+///     …
+///   </ul>
+
+@mixin k-TabBar($tabbar) {
+  @include k-with-module('k-TabBar: $tabbar') {
+
+    // Variables & Validations
+    $font: k-map-fetch($tabbar, 'font');
+    $font-step: k-number-definition(
+      k-map-fetch($tabbar, 'font-step'), $unit: none);
+    $line-height: k-number-definition(k-map-fetch($tabbar, 'line-height'));
+
+    $color: k-color-definition(
+      k-map-fetch($tabbar, 'color'));
+    $color-current: k-color-definition(
+      k-map-fetch($tabbar, 'color-current'));
+    $background-color: k-color-definition(
+      k-map-fetch($tabbar, 'background-color'));
+
+    $round-size: k-px-to-rem(25px);
+    $z-index: k-number-definition(map-get($tabbar, 'z-index'));
+    $border-width: 1px;
+
+    .k-TabBar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      list-style-type: none;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      background: $background-color;
+
+      &.is-fixed {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        z-index: $z-index;
+      }
+    }
+
+    .k-TabBar__item {
+      @include k-typographyFont($font);
+      @include k-typographyFontSize($font-step, $line-height);
+      letter-spacing: k-px-to-rem(0.8px);
+      text-decoration: none;
+
+      padding: k-px-to-rem(11px) k-px-to-rem(18px);
+      display: block;
+      position: relative;
+      outline: none;
+      border-top: $border-width solid $background-color;
+      background-color: $background-color;
+      cursor: pointer;
+      color: $color;
+      transition: color .2s, border-color .2s;
+
+      &:hover,
+      &:focus {
+        color: $color-current;
+      }
+
+      &.is-selected {
+        border-color: $color-current;
+        color: $color-current;
+      }
+    }
+
+    .k-TabBar__item--thinGutters {
+      padding-left: k-px-to-rem(6px);
+      padding-right: k-px-to-rem(6px);
+    }
+  }
+}

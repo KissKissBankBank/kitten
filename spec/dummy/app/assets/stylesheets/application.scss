@@ -57,6 +57,7 @@ $k-typography: k-typography-definition((
 
 // Navigation
 @import 'molecules/navigation/horizontal-nav';
+@import 'molecules/navigation/tab-bar';
 
 // Simulators
 @import 'molecules/simulators/simulator-result';
