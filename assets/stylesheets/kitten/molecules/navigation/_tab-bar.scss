@@ -86,10 +86,6 @@
       color: $color;
       transition: color .2s, border-color .2s;
 
-      &:visited {
-        color: $color;
-      }
-
       &:hover,
       &:focus {
         color: $color-current;
