@@ -1,4 +1,6 @@
-<h3 id="<%= component %>" class="k-StyleguideSection__title"><%= title %></h3>
+<h3 id="<%= component %>" class="k-StyleguideSection__title">
+  <%= title %>
+</h3>
 
 <% if defined?(examples_display) && examples_display == :vertical %>
   <% classname = 'k-StyleguideSection__example--vertical' %>
@@ -10,9 +12,11 @@
   <%= render template: "kitten/#{component}" %>
 </section>
 
-<section class="k-StyleguideSection__example">
-  <div class="k-StyleguideExample__description">
-    <p><%= description %></p>
-  </div>
-  <div class="k-StyleguideExample__bloc"></div>
-</section>
+<% if description.present? %>
+  <section class="k-StyleguideSection__example">
+    <div class="k-StyleguideExample__description">
+      <p><%= description %></p>
+    </div>
+    <!-- <div class="k-StyleguideExample__bloc"></div> -->
+  </section>
+<% end %>
