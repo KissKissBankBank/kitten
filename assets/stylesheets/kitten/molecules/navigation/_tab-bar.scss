@@ -83,6 +83,7 @@
       border-top: $border-width solid $background-color;
       background-color: $background-color;
       cursor: pointer;
+      color: $color;
       transition: color .2s, border-color .2s;
 
       &:visited {
@@ -90,7 +91,6 @@
       }
 
       &:hover,
-      &:active,
       &:focus {
         color: $color-current;
       }
