@@ -81,6 +81,12 @@
     }
   }
 
+  .k-Header__search {
+    @include k-media-xs {
+      display: none;
+    }
+  }
+
   .k-Header__signup {
     @include k-media-sm {
       display: none;
