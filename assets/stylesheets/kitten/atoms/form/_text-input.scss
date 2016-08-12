@@ -37,7 +37,7 @@
     box-sizing: border-box;
     border: 1px solid $border-color;
     border-radius: 4px;
-    width: 160px;
+    width: 100%;
     padding: k-px-to-rem(11px) k-px-to-rem(15px) k-px-to-rem(12px);
     color: $color;
     transition: color .2s, border-color .2s;
