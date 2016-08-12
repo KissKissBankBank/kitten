@@ -4,7 +4,16 @@
 ///
 /// @group form
 ///
-/// TODO: add usage and description.
+/// @parameter {Map} $input - a input specification
+///
+/// @example scss - Usage
+///
+///   @include k-TextInput((
+///     font: 'source-sans',
+///     font-size: -2,
+///     border-color: #d8d8d8,
+///     color: #333,
+///   ));
 
 @mixin k-TextInput($input) {
 
@@ -22,10 +31,11 @@
     border: 1px solid $border-color;
     border-radius: 4px;
     min-width: 160px;
-    padding: k-px-to-rem(12px) k-px-to-rem(15px) k-px-to-rem(11px);
+    padding: k-px-to-rem(11px) k-px-to-rem(15px) k-px-to-rem(12px);
     color: $color;
     transition: color .2s, border-color .2s;
 
+    // TODO: validate focus with product's team.
     &:focus {
       outline: none;
       border-color: $color;
