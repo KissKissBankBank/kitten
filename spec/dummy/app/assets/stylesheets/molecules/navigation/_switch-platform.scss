@@ -1,0 +1,8 @@
+@import 'kitten/molecules/navigation/switch-platform';
+
+@include k-SwitchPlatform((
+  background-color: #fbfbfb,
+  border-color: #eee,
+  background-color-hover: #f8f8f8,
+  border-color-hover: #333,
+));
