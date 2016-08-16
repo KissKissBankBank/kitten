@@ -1,11 +1,11 @@
-<h3 id="<%= component %>" class="k-StyleguideSection__title">
+<h3 id="<%= component %>" class="karl-Section__title">
   <%= title %>
 </h3>
 
 <% if defined?(examples_display) && examples_display == :vertical %>
-  <% classname = 'k-StyleguideSection__example--vertical' %>
+  <% classname = 'karl-Section__example--vertical' %>
 <% else %>
-  <% classname = 'k-StyleguideSection__example' %>
+  <% classname = 'karl-Section__example' %>
 <% end %>
 
 <section class="<%= classname %>">
@@ -13,10 +13,10 @@
 </section>
 
 <% if description.present? %>
-  <section class="k-StyleguideSection__example">
-    <div class="k-StyleguideExample__description">
+  <section class="karl-Section__example">
+    <div class="karl-Example__description">
       <p><%= description %></p>
     </div>
-    <!-- <div class="k-StyleguideExample__bloc"></div> -->
+    <!-- <div class="karl-Example__bloc"></div> -->
   </section>
 <% end %>
