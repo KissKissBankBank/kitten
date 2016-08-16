@@ -13,9 +13,9 @@
 ///  <div class="k-Hero">
 ///    <div class="k-Hero__container">
 ///      <div class="k-Hero__text">
-///        <h1 class="k-Hero__text__title">Wool balls</h1>
-///        <h2 class="k-Hero__text__subtitle">Infinite fun.</h2>
-///        <h2 class="k-Hero__text__subtitle">Until you have to roll them back.</h2>
+///        <h1 class="k-Hero__title">Wool balls</h1>
+///        <h2 class="k-Hero__subtitle">Infinite fun.</h2>
+///        <h2 class="k-Hero__subtitle">Until you have to roll them back.</h2>
 ///      </div>
 ///      <div class="k-Hero__action">
 ///        <img src="https://placekitten.com/g/300/400" alt="" />
@@ -31,6 +31,10 @@
 
     .k-Hero {
       padding: 1rem;
+
+      // Apps will want to override with a custom background image and color
+      background-size: cover;
+      background-repeat: no-repeat;
     }
 
     .k-Hero__container {
@@ -59,25 +63,24 @@
       }
     }
 
-    .k-Hero__text__title {
+    .k-Hero__title {
       margin: 0;
       @include k-typographyFontSize(10);
       @include k-typographyFont($font);
     }
 
-    .k-Hero__text__subtitle {
+    .k-Hero__subtitle {
       margin: .5rem 0;
       @include k-typographyFontSize(2);
       @include k-typographyFont($font);
     }
 
     .k-Hero--onDark {
-      // Apps will want to override the background with a color and an image.
+      // Apps will want to override the background color and image
       background: darkgrey;
-      background-size: cover;
-      background-repeat: no-repeat;
 
       color: #fff;
+
       a {
         color: inherit;
       }
