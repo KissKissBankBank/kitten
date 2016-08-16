@@ -1,4 +1,4 @@
-/// A vertical navigation to switch platform.
+/// A vertical navigation to platform switch.
 ///
 /// @group navigation
 ///
@@ -6,7 +6,7 @@
 ///
 /// @example scss - usage
 ///
-///   @include k-SwitchPlatform((
+///   @include k-PlatformSwitch((
 ///     background-color: #fbfbfb,
 ///     border-color: #eee,
 ///     background-color-hover: #f8f8f8,
@@ -15,24 +15,24 @@
 ///
 /// @example html
 ///
-///   <ul class="k-SwitchPlatform">
+///   <ul class="k-PlatformSwitch">
 ///     <li>
-///       <a class="k-SwitchPlatform__item" href="#">
-///         <div class="k-SwitchPlatform__element">
+///       <a class="k-PlatformSwitch__item" href="#">
+///         <div class="k-PlatformSwitch__element">
 ///           …
 ///         </div>
 ///
-///         <div class="k-SwitchPlatform__element
-///                     k-SwitchPlatform__element--pull-end
-///                     k-SwitchPlatform__element--animate">
+///         <div class="k-PlatformSwitch__element
+///                     k-PlatformSwitch__element--pull-end
+///                     k-PlatformSwitch__element--animate">
 ///           …
 ///         </div>
 ///       </a>
 ///     </li>
 ///   </ul>
 
-@mixin k-SwitchPlatform($nav) {
-  @include k-with-module('k-SwitchPlatform') {
+@mixin k-PlatformSwitch($nav) {
+  @include k-with-module('k-PlatformSwitch') {
 
     $background-color: k-color-definition(
       k-map-fetch($nav, ('background-color')));
@@ -43,7 +43,7 @@
     $border-color-hover: k-color-definition(
       k-map-fetch($nav, ('border-color-hover')));
 
-    .k-SwitchPlatform {
+    .k-PlatformSwitch {
       display: block;
       margin: 0 auto;
       border-top: 1px solid $border-color;
@@ -51,7 +51,7 @@
       list-style: none;
     }
 
-    .k-SwitchPlatform__item {
+    .k-PlatformSwitch__item {
       display: flex;
       align-items: center;
       align-self: flex-start;
@@ -70,23 +70,23 @@
         border-right-color: $border-color-hover;
         background-color: $background-color-hover;
 
-        .k-SwitchPlatform__element--animate {
+        .k-PlatformSwitch__element--animate {
           left: 5px;
         }
       }
     }
 
-    .k-SwitchPlatform__element {
+    .k-PlatformSwitch__element {
       margin: 0 k-px-to-rem(10px);
       display: flex;
     }
 
-    .k-SwitchPlatform__element--pull-end {
+    .k-PlatformSwitch__element--pull-end {
       align-self: auto;
       margin-left: auto;
     }
 
-    .k-SwitchPlatform__element--animate {
+    .k-PlatformSwitch__element--animate {
       position: relative;
       left: 0;
       transition: left .2s;
