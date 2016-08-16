@@ -1,7 +1,9 @@
 window.ExternalRichLink = (props) => {
+  const linkClassName = classNames('k-ExternalRichLink', props.className)
+
   return(
-    <a className="k-ExternalRichLink k-SwitchPlatform__item" href={ props.href }>
-      <div className="k-ExternalRichLink__element k-SwitchPlatform__element">
+    <a className={ linkClassName } href={ props.href }>
+      <div className="k-ExternalRichLink__element">
         { props.children }
       </div>
 
@@ -21,9 +23,5 @@ window.ExternalRichLink = (props) => {
 
 ExternalRichLink.defaultProps = {
   href: '#',
-  children: (<span style={ {border: '1px solid #d8d8d8',
-                            padding: '9px 70px',
-                            color: '#d8d8d8',
-                            textTransform: 'uppercase',
-                            textDecoration: 'none'} } href="#">LOGO</span>)
+  children: <img src="https://placeholdit.imgix.net/~text?txt=LOGO&w=180&h=44" alt="LOGO" />
 }
