@@ -50,6 +50,9 @@ $k-typography: k-typography-definition((
 // Molecules
 // ----------
 
+// Cards
+@import 'molecules/cards/card';
+
 // Form
 @import 'molecules/form/label-with-info';
 @import 'molecules/form/slider';

@@ -19,6 +19,7 @@ New features:
 - Access components directly by removing the `#` in the styleguide in URL
 - Add new component: `tabbar` molecule.
 - Add new component: `hero` molecule.
+- Add new component: `card` molecule.
 
 ## [v0.4.0] - 2016-08-04
 Minor updates:
