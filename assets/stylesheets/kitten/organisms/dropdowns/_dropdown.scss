@@ -1,0 +1,35 @@
+/// Basic styles to display a dropdown.
+///
+/// @group dropdowns
+///
+/// @example scss - usage
+///   @include k-Dropdown;
+///
+/// @example html
+///   <div class="k-Dropdown">
+///     <button class="k-Dropdown__button">My dropdown</button>
+///     <nav class="k-Dropdown__content">
+///       <ul>
+///         <li><a href="#">Link 1</a></li>
+///         <li><a href="#">Link 2</a></li>
+///         <li><a href="#">Link 3</a></li>
+///       </ul>
+///     </nav>
+///   </div>
+@mixin k-Dropdown {
+  .k-Dropdown {
+    position: relative;
+  }
+
+  .k-Dropdown.is-expanded {
+    .k-Dropdown__content {
+      display: block;
+    }
+  }
+
+  .k-Dropdown__content {
+    display: none;
+    position: absolute;
+    left: 0;
+  }
+}
