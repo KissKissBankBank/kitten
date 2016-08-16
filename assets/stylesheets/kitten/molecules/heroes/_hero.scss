@@ -31,6 +31,10 @@
 
     .k-Hero {
       padding: 1rem;
+
+      // Apps will want to override with a custom background image and color
+      background-size: cover;
+      background-repeat: no-repeat;
     }
 
     .k-Hero__container {
@@ -72,10 +76,8 @@
     }
 
     .k-Hero--onDark {
-      // Apps will want to override the background with a color and an image.
+      // Apps will want to override the background color and image
       background: darkgrey;
-      background-size: cover;
-      background-repeat: no-repeat;
 
       color: #fff;
 
