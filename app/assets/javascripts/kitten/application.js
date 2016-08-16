@@ -5,3 +5,5 @@
 //= require kitten/components/simulators/loan_simulator
 //= require kitten/components/simulators/simulator_result
 //= require kitten/components/links/external-rich-link
+//= require kitten/components/dropdowns/dropdown_button
+//= require kitten/components/dropdowns/dropdown
