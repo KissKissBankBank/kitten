@@ -18,13 +18,13 @@
 ///   <ul class="k-PlatformSwitch">
 ///     <li>
 ///       <a class="k-PlatformSwitch__item" href="#">
-///         <div class="k-PlatformSwitch__element">
+///         <div class="k-PlatformSwitch__item__element">
 ///           …
 ///         </div>
 ///
-///         <div class="k-PlatformSwitch__element
-///                     k-PlatformSwitch__element--pull-end
-///                     k-PlatformSwitch__element--animate">
+///         <div class="k-PlatformSwitch__item__element
+///                     k-PlatformSwitch__item__element--pull-end
+///                     k-PlatformSwitch__item__element--animate">
 ///           …
 ///         </div>
 ///       </a>
@@ -70,23 +70,23 @@
         border-right-color: $border-color-hover;
         background-color: $background-color-hover;
 
-        .k-PlatformSwitch__element--animate {
+        .k-PlatformSwitch__item__element--animate {
           left: 5px;
         }
       }
     }
 
-    .k-PlatformSwitch__element {
+    .k-PlatformSwitch__item__element {
       margin: 0 k-px-to-rem(10px);
       display: flex;
     }
 
-    .k-PlatformSwitch__element--pull-end {
+    .k-PlatformSwitch__item__element--pull-end {
       align-self: auto;
       margin-left: auto;
     }
 
-    .k-PlatformSwitch__element--animate {
+    .k-PlatformSwitch__item__element--animate {
       position: relative;
       left: 0;
       transition: left .2s;
