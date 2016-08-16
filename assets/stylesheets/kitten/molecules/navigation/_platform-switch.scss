@@ -35,13 +35,13 @@
   @include k-with-module('k-PlatformSwitch') {
 
     $background-color: k-color-definition(
-      k-map-fetch($nav, ('background-color')));
+      k-map-fetch($nav, ('colors', 'background')));
     $border-color: k-color-definition(
-      k-map-fetch($nav, ('border-color')));
+      k-map-fetch($nav, ('colors', 'border')));
     $background-color-hover: k-color-definition(
-      k-map-fetch($nav, ('background-color-hover')));
+      k-map-fetch($nav, ('colors', 'background-hover')));
     $border-color-hover: k-color-definition(
-      k-map-fetch($nav, ('border-color-hover')));
+      k-map-fetch($nav, ('colors', 'border-hover')));
 
     .k-PlatformSwitch {
       display: block;
