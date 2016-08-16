@@ -69,10 +69,6 @@
         outline: none;
         border-right-color: $border-color-hover;
         background-color: $background-color-hover;
-
-        .k-PlatformSwitch__item__element--animate {
-          left: 5px;
-        }
       }
     }
 
@@ -91,6 +87,11 @@
       position: relative;
       left: 0;
       transition: left .2s;
+
+      .k-PlatformSwitch__item:focus &,
+      .k-PlatformSwitch__item:hover & {
+        left: 5px;
+      }
     }
   }
 }
