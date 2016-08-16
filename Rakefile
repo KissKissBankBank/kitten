@@ -17,9 +17,11 @@ load 'rails/tasks/engine.rake'
 # Bundler
 Bundler::GemHelper.install_tasks
 
-require 'rake/testtask'
-
-task default: :spec
+desc 'Playground file'
+file 'app/views/layouts/kitten/playground.html.erb' \
+  => 'app/views/layouts/kitten/playground.html.erb.example' do |task|
+  cp task.prerequisites.first, task.name
+end
 
 desc 'Generate kitten SassDoc'
 task :sassdoc do
@@ -41,3 +43,6 @@ task kitten_release: [:sassdoc, :build] do
   puts "Done! You can now upload pkg/kitten-#{Kitten::VERSION}.gem to Gemfury"
 end
 
+task default: ['app/views/layouts/kitten/playground.html.erb',
+               :spec,
+               :sassdoc]
