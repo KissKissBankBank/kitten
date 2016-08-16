@@ -6,16 +6,16 @@ $light-navy: #13459e;
 $light-grey-1: #fbfbfb;
 $light-grey-2: #eee;
 
-.k-StyleguideContainer {
+.karl-Container {
   background-color: $light-grey-1;
 }
 
-.k-StyleguideContent {
+.karl-Content {
   padding-left: 15rem;
 }
 
 // Header
-.k-StyleguideTitle {
+.karl-Title {
   padding-left: 1rem;
 
   background-color: $blue;
@@ -25,7 +25,7 @@ $light-grey-2: #eee;
   line-height: 4rem;
 }
 
-.k-StyleguideTitle__breadcrumb {
+.karl-Title__breadcrumb {
   margin: 4rem 0 0 8rem;
   border-bottom: 1px solid $light-grey-2;
 
@@ -38,7 +38,7 @@ $light-grey-2: #eee;
 }
 
 // Menu
-.k-StyleguideMenu {
+.karl-Menu {
   overflow: auto;
   position: fixed;
   top: 0;
@@ -55,7 +55,7 @@ $light-grey-2: #eee;
   ul { margin: 0; padding: 0; }
 }
 
-.k-StyleguideMenu__title {
+.karl-Menu__title {
   float: right;
   padding-right: 1rem;
 
@@ -67,7 +67,7 @@ $light-grey-2: #eee;
   text-transform: uppercase;
 }
 
-.k-StyleguideMenu__list {
+.karl-Menu__list {
   border-bottom: 1px solid $light-navy;
 
   & > a {
@@ -77,7 +77,7 @@ $light-grey-2: #eee;
   }
 }
 
-.k-StyleguideMenu__listItem {
+.karl-Menu__listItem {
   position: relative;
   padding: 1.5rem 0 .75rem 1rem;
   display: block;
@@ -100,7 +100,7 @@ $light-grey-2: #eee;
   }
 }
 
-.k-StyleguideMenu__subList {
+.karl-Menu__subList {
   display: none;
 
   &.is-opened {
@@ -108,7 +108,7 @@ $light-grey-2: #eee;
   }
 }
 
-.k-StyleguideMenu__subListItem {
+.karl-Menu__subListItem {
   position: relative;
   border-bottom: 1px solid $light-navy;
   padding-left: 2rem;
@@ -145,7 +145,7 @@ $light-grey-2: #eee;
   }
 }
 
-.k-StyleguideMenu__subSubList {
+.karl-Menu__subSubList {
   display: none;
 
   &.is-opened {
@@ -153,7 +153,7 @@ $light-grey-2: #eee;
   }
 }
 
-.k-StyleguideMenu__subSubListItem {
+.karl-Menu__subSubListItem {
   border-bottom: 1px solid $light-navy;
   display: block;
   padding-left: 3rem;
@@ -179,11 +179,11 @@ $light-grey-2: #eee;
 }
 
 // Section
-.k-StyleguideSection {
+.karl-Section {
   padding: 3.25em 8em;
 }
 
-.k-StyleguideSection__example {
+.karl-Section__example {
   margin: 2rem 0 0 8rem;
 
   display: flex;
@@ -191,18 +191,18 @@ $light-grey-2: #eee;
 }
 
 @media (max-width: 1100px) {
-  .k-StyleguideSection__example {
+  .karl-Section__example {
     display: block;
   }
 }
 
-.k-StyleguideSection__example--vertical {
+.karl-Section__example--vertical {
   margin: 2rem 0 0 8rem;
 
   flex-direction: column;
 }
 
-.k-StyleguideSection__title {
+.karl-Section__title {
   margin: 4rem 0 0 8rem;
 
   color: #333;
@@ -212,22 +212,22 @@ $light-grey-2: #eee;
 }
 
 // Section Example
-.k-StyleguideExample {
+.karl-Example {
   padding-right: 3rem;
 }
 
-.k-StyleguideExample__title {
+.karl-Example__title {
   color: $blue;
   font-size: 0.75rem;
   font-weight: 600;
   text-align: center;
 }
 
-.k-StyleguideExample__title--margin {
+.karl-Example__title--margin {
   padding-right: 2rem;
 }
 
-.k-StyleguideExample__description {
+.karl-Example__description {
   margin-right: 6rem;
   font-size: 1.25rem;
   font-weight: 400;
@@ -237,13 +237,13 @@ $light-grey-2: #eee;
 }
 
 @media (max-width: 1100px) {
-  .k-StyleguideExample__description {
+  .karl-Example__description {
     width: 90%;
     padding-right: 6em;
   }
 }
 
-.k-StyleguideExample__bloc {
+.karl-Example__bloc {
   margin-top: 1.5rem;
   background-color: $blue;
   width: 470px;
@@ -251,7 +251,7 @@ $light-grey-2: #eee;
 }
 
 @media (max-width: 1100px) {
-  .k-StyleguideExample__bloc {
+  .karl-Example__bloc {
     width: 90%;
   }
 }

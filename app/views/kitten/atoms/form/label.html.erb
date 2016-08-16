@@ -1,13 +1,13 @@
-<%= example do %>
-  <label class="k-Label k-StyleguideExample__title" for="age">A label</label>
+<%= example "on label" do %>
+  <label class="k-Label" for="age">A label</label>
   <input id="age" name="age" />
 <% end %>
 
-<%= example do %>
-  <span class="k-Label k-StyleguideExample__title" onclick="document.getElementById('m').focus()">
+<%= example "on span" do %>
+  <span class="k-Label" onclick="document.getElementById('m').focus()">
     Another label
   </span>
-  <label class="k-StyleguideExample__title--margin"><input type="radio" name="sex" value="m" id="m" /> Male</label>
-  <label class="k-StyleguideExample__title--margin"><input type="radio" name="sex" value="f" /> Female</label>
+  <label><input type="radio" name="sex" value="m" id="m" /> Male</label>
+  <label><input type="radio" name="sex" value="f" /> Female</label>
   <label><input type="radio" name="sex" value="n" /> Non-binary</label>
 <% end %>

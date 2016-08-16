@@ -20,26 +20,26 @@
 <body>
 
 <% if @menu_types %>
-  <div class="k-StyleguideContainer">
-    <nav class="k-StyleguideMenu">
-      <a class="k-StyleguideMenu__title">menu</a>
+  <div class="karl-Container">
+    <nav class="karl-Menu">
+      <a class="karl-Menu__title">menu</a>
 
       <div class="k-u-clearfix"></div>
 
       <ul>
         <% @menu_types.each do |type_id:, type_title:, groups:| %>
-          <li class="k-StyleguideMenu__list">
+          <li class="karl-Menu__list">
             <a href="#<%= type_id %>"
-               class="k-StyleguideMenu__listItem"><%= type_title %></a>
-            <ul class="k-StyleguideMenu__subList">
+               class="karl-Menu__listItem"><%= type_title %></a>
+            <ul class="karl-Menu__subList">
               <% groups.each do |group_id:, group_title:, components:| %>
                 <li>
                   <a href="#<%= group_id %>"
-                     class="k-StyleguideMenu__subListItem"><%= group_title %></a>
-                  <ul class="k-StyleguideMenu__subSubList">
+                     class="karl-Menu__subListItem"><%= group_title %></a>
+                  <ul class="karl-Menu__subSubList">
                     <% components.each do |component_id:, component_title:| %>
                       <li>
-                        <a class="k-StyleguideMenu__subSubListItem"
+                        <a class="karl-Menu__subSubListItem"
                            href="#<%= component_id %>"><%= component_title %></a>
                       </li>
                     <% end %>
@@ -52,9 +52,9 @@
       </ul>
     </nav>
 
-    <div class="k-StyleguideContent">
+    <div class="karl-Content">
       <section>
-        <!-- <header class="k-StyleguideTitle">ComponentsKissCo</header> -->
+        <!-- <header class="karl-Title">ComponentsKissCo</header> -->
         <%= yield %>
       </section>
     </div>
