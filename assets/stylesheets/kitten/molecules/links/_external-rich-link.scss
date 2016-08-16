@@ -29,17 +29,11 @@
     align-self: flex-start;
 
     text-decoration: none;
-
-    &:focus,
-    &:hover {
-      .k-ExternalRichLink__element--animate {
-        left: 5px;
-      }
-    }
   }
 
   .k-ExternalRichLink__element {
     display: flex;
+    margin: 0 k-px-to-rem(10px);
   }
 
   .k-ExternalRichLink__element--pull-end {
@@ -51,5 +45,10 @@
     position: relative;
     left: 0;
     transition: left .2s;
+
+    .k-ExternalRichLink:focus &,
+    .k-ExternalRichLink:hover & {
+      left: 5px;
+    }
   }
 }
