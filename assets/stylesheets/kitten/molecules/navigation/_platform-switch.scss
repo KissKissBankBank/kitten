@@ -1,0 +1,95 @@
+/// A vertical navigation to platform switch.
+///
+/// @group navigation
+///
+/// @parameter {Map} $nav - a nav specification
+///
+/// @example scss - usage
+///
+///   @include k-PlatformSwitch((
+///     background-color: #fbfbfb,
+///     border-color: #eee,
+///     background-color-hover: #f8f8f8,
+///     border-color-hover: ##333,
+///   ));
+///
+/// @example html
+///
+///   <ul class="k-PlatformSwitch">
+///     <li>
+///       <a class="k-PlatformSwitch__item" href="#">
+///         <div class="k-PlatformSwitch__element">
+///           …
+///         </div>
+///
+///         <div class="k-PlatformSwitch__element
+///                     k-PlatformSwitch__element--pull-end
+///                     k-PlatformSwitch__element--animate">
+///           …
+///         </div>
+///       </a>
+///     </li>
+///   </ul>
+
+@mixin k-PlatformSwitch($nav) {
+  @include k-with-module('k-PlatformSwitch') {
+
+    $background-color: k-color-definition(
+      k-map-fetch($nav, ('background-color')));
+    $border-color: k-color-definition(
+      k-map-fetch($nav, ('border-color')));
+    $background-color-hover: k-color-definition(
+      k-map-fetch($nav, ('background-color-hover')));
+    $border-color-hover: k-color-definition(
+      k-map-fetch($nav, ('border-color-hover')));
+
+    .k-PlatformSwitch {
+      display: block;
+      margin: 0 auto;
+      border-top: 1px solid $border-color;
+      padding: 0;
+      list-style: none;
+    }
+
+    .k-PlatformSwitch__item {
+      display: flex;
+      align-items: center;
+      align-self: flex-start;
+
+      margin: 0;
+      border: 1px solid $border-color;
+      border-top: none;
+      padding: k-px-to-rem(5px) k-px-to-rem(10px);
+      background: $background-color;
+      text-decoration: none;
+      transition: background-color .2s, border-color .2s;
+
+      &:focus,
+      &:hover {
+        outline: none;
+        border-right-color: $border-color-hover;
+        background-color: $background-color-hover;
+
+        .k-PlatformSwitch__element--animate {
+          left: 5px;
+        }
+      }
+    }
+
+    .k-PlatformSwitch__element {
+      margin: 0 k-px-to-rem(10px);
+      display: flex;
+    }
+
+    .k-PlatformSwitch__element--pull-end {
+      align-self: auto;
+      margin-left: auto;
+    }
+
+    .k-PlatformSwitch__element--animate {
+      position: relative;
+      left: 0;
+      transition: left .2s;
+    }
+  }
+}
