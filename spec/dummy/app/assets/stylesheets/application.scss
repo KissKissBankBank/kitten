@@ -58,6 +58,7 @@ $k-typography: k-typography-definition((
 // Navigation
 @import 'molecules/navigation/horizontal-nav';
 @import 'molecules/navigation/tab-bar';
+@import 'molecules/navigation/platform-switch';
 
 // Simulators
 @import 'molecules/simulators/simulator-result';
@@ -65,6 +66,9 @@ $k-typography: k-typography-definition((
 // Testimonies
 @import 'molecules/testimonies/testimony';
 @import 'molecules/testimonies/testimony-list';
+
+// Links
+@import 'molecules/links/external-rich-link';
 
 // ----------
 // Organisms
@@ -75,3 +79,6 @@ $k-typography: k-typography-definition((
 
 // Simulators
 @import 'organisms/simulators/loan-simulator';
+
+// Dropdowns
+@import 'organisms/dropdowns/dropdown';
