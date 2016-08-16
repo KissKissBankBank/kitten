@@ -46,8 +46,8 @@
     .k-PlatformSwitch {
       display: block;
       margin: 0 auto;
-      border-top: 1px solid $border-color;
       padding: 0;
+      border-top: 1px solid $border-color;
       list-style: none;
     }
 
@@ -57,9 +57,9 @@
       align-self: flex-start;
 
       margin: 0;
+      padding: k-px-to-rem(5px) k-px-to-rem(10px);
       border: 1px solid $border-color;
       border-top: none;
-      padding: k-px-to-rem(5px) k-px-to-rem(10px);
       background: $background-color;
       text-decoration: none;
       transition: background-color .2s, border-color .2s;
