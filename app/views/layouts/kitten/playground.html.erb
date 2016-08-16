@@ -1,1 +1,209 @@
 <!-- Paste your components here then visit /kitten/playground to try them -->
+
+<div id="toto" style="height: 50px;"></div>
+<div id="pouet"></div>
+
+<script type="text/babel">
+  const svg = (<svg className="k-ButtonIcon__svg" viewBox="0 0 10 7" xmlns="http://www.w3.org/2000/svg">
+    <path d="M5 6.243L3.586 4.828 7.828.586 9.243 2z"/>
+    <path d="M5 6.243L.757 2 2.172.586l4.242 4.242z"/>
+  </svg>)
+
+  // test dropdown list
+  ReactDOM.render(
+    React.createElement(Dropdown, {
+      label: 'k-PlatformSwitch',
+      triggerButton: {
+        className: 'k-ButtonIcon k-ButtonIcon--tiny',
+        contentElement: {
+          expanded: svg,
+          collapsed: svg
+        }
+      },
+      dropdownList: {
+        className: 'k-PlatformSwitch',
+        items: [
+          <ExternalRichLink className="k-PlatformSwitch__item"></ExternalRichLink>,
+          <ExternalRichLink className="k-PlatformSwitch__item"></ExternalRichLink>,
+          <ExternalRichLink className="k-PlatformSwitch__item">
+            <img src="https://placekitten.com/g/153/153" alt="Kawai kitten!" />
+          </ExternalRichLink>
+        ]
+      }
+    }),
+    document.getElementById('toto')
+  )
+
+  // test dropdown list
+  ReactDOM.render(
+    React.createElement(Dropdown, {
+      dropdownList: {
+        className: 'k-userMenu',
+        items: [
+          <a className="k-userMenu__item" href="#">un</a>,
+          <a className="k-userMenu__item" href="#">deux</a>,
+          <a className="k-userMenu__item" href="#">trois</a>
+        ]
+      }
+    }),
+    document.getElementById('pouet')
+  )
+
+</script>
+<%#<header id="header" class="k-Header is-fixed" role="banner">%>
+
+  <%#<div class="k-Header__grid">%>
+
+      <%#<div class="k-Dropdown k-Header__item" style="position: relative;">%>
+
+        <%#<button class="k-Dropdown__button k-ButtonIcon k-ButtonIcon--tiny">%>
+          <%#<svg class="k-ButtonIcon__svg" viewBox="0 0 10 7"%>
+            <%#xmlns="http://www.w3.org/2000/svg">%>
+            <%#<path d="M5 6.243L3.586 4.828 7.828.586 9.243 2z"/>%>
+            <%#<path d="M5 6.243L.757 2 2.172.586l4.242 4.242z"/>%>
+          <%#</svg>%>
+        <%#</button>%>
+
+        <%#<nav class="k-Dropdown__content" style="position: absolute;">%>
+          <%#<ul class="k-SwitchPlatform">%>
+            <%#<li>%>
+              <%#<a class="k-SwitchPlatform__item" href="#">%>
+
+                <%#<div class="k-SwitchPlatform__element">%>
+                  <%#<span style="border:1px solid #d8d8d8;padding:9px 70px;%>
+                    <%#color:#d8d8d8;text-transform:uppercase;text-decoration:none;"%>
+                    <%#href="#">LOGO</span>%>
+                <%#</div>%>
+
+                <%#<div class="k-SwitchPlatform__element%>
+                            <%#k-SwitchPlatform__element--pull-end%>
+                            <%#k-SwitchPlatform__element--animate">%>
+                  <%#<span class="k-ButtonIcon k-ButtonIcon--tiny">%>
+                    <%#<svg class="k-ButtonIcon__svg" viewBox="0 0 10 10"%>
+                      <%#xmlns="http://www.w3.org/2000/svg">%>
+                      <%#<g>%>
+                        <%#<path d="M7.828,5L6.414,6.413L2.172,2.172l1.414-1.415L7.828,5z"/>%>
+                        <%#<path d="M7.828,5L3.586,9.243L2.172,7.827l4.242-4.241L7.828,5z"/>%>
+                      <%#</g>%>
+                    <%#</svg>%>
+                  <%#</span>%>
+                <%#</div>%>
+
+              <%#</a>%>
+            <%#</li>%>
+
+            <%#<li>%>
+              <%#<a class="k-SwitchPlatform__item" href="#">%>
+
+                <%#<div class="k-SwitchPlatform__element">%>
+                  <%#<span style="border:1px solid #d8d8d8;padding:9px 70px;%>
+                    <%#color:#d8d8d8;text-transform:uppercase;text-decoration:none;"%>
+                    <%#href="#">LOGO</span>%>
+                <%#</div>%>
+
+                <%#<div class="k-SwitchPlatform__element%>
+                            <%#k-SwitchPlatform__element--pull-end%>
+                            <%#k-SwitchPlatform__element--animate">%>
+                  <%#<span class="k-ButtonIcon k-ButtonIcon--tiny">%>
+                    <%#<svg class="k-ButtonIcon__svg" viewBox="0 0 10 10"%>
+                      <%#xmlns="http://www.w3.org/2000/svg">%>
+                      <%#<g>%>
+                        <%#<path d="M7.828,5L6.414,6.413L2.172,2.172l1.414-1.415L7.828,5z"/>%>
+                        <%#<path d="M7.828,5L3.586,9.243L2.172,7.827l4.242-4.241L7.828,5z"/>%>
+                      <%#</g>%>
+                    <%#</svg>%>
+                  <%#</span>%>
+                <%#</div>%>
+
+              <%#</a>%>
+            <%#</li>%>
+
+            <%#<li>%>
+              <%#<a class="k-SwitchPlatform__item" href="#">%>
+
+                <%#<div class="k-SwitchPlatform__element">%>
+                  <%#<span style="border:1px solid #d8d8d8;padding:9px 70px;%>
+                    <%#color:#d8d8d8;text-transform:uppercase;text-decoration:none;"%>
+                    <%#href="#">LOGO</span>%>
+                <%#</div>%>
+
+                <%#<div class="k-SwitchPlatform__element%>
+                            <%#k-SwitchPlatform__element--pull-end%>
+                            <%#k-SwitchPlatform__element--animate">%>
+                  <%#<span class="k-ButtonIcon k-ButtonIcon--tiny">%>
+                    <%#<svg class="k-ButtonIcon__svg" viewBox="0 0 10 10"%>
+                      <%#xmlns="http://www.w3.org/2000/svg">%>
+                      <%#<g>%>
+                        <%#<path d="M7.828,5L6.414,6.413L2.172,2.172l1.414-1.415L7.828,5z"/>%>
+                        <%#<path d="M7.828,5L3.586,9.243L2.172,7.827l4.242-4.241L7.828,5z"/>%>
+                      <%#</g>%>
+                    <%#</svg>%>
+                  <%#</span>%>
+                <%#</div>%>
+
+              <%#</a>%>
+            <%#</li>%>
+          <%#</ul>%>
+        <%#</nav>%>
+      <%#</div>%>
+
+      <%#<p class="k-Header__item">%>
+        <%#<a style="border:1px solid #eee;padding:9px 70px;%>
+          <%#color:#eee;text-transform:uppercase;text-decoration:none;" href="#">LOGO</a>%>
+      <%#</p>%>
+
+      <%#<nav class="k-Header__item k-Header__nav">%>
+        <%#<ul class="k-HorizontalNav" role="menubar">%>
+          <%#<li role="menuitem">%>
+            <%#<a class="k-HorizontalNav__item" href="#">%>
+              <%#Nav link 1%>
+            <%#</a>%>
+          <%#</li>%>
+          <%#<li role="menuitem">%>
+            <%#<a class="k-HorizontalNav__item" href="#">%>
+              <%#Nav link 2%>
+            <%#</a>%>
+          <%#</li>%>
+          <%#<li role="menuitem">%>
+            <%#<a class="k-HorizontalNav__item" href="#">%>
+              <%#Nav link 3%>
+            <%#</a>%>
+          <%#</li>%>
+          <%#<li role="menuitem">%>
+            <%#<a class="k-HorizontalNav__item is-selected" href="#">%>
+              <%#Nav link 4%>
+            <%#</a>%>
+          <%#</li>%>
+        <%#</ul>%>
+      <%#</nav>%>
+
+    <%#</div>%>
+
+    <%#<div class="k-Header__items k-Header__items--end">%>
+
+      <%#<div class="k-Header__item">%>
+        <%#<button class="k-ButtonIcon">%>
+          <%#<svg class="k-ButtonIcon__svg" viewBox="0 0 17 17" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">%>
+            <%#<defs>%>
+              <%#<circle id="a" cx="7" cy="7" r="7"></circle>%>
+              <%#<mask id="b" width="14" height="14" x="0" y="0" fill="#fff">%>
+                <%#<use xlink:href="#a"></use>%>
+              <%#</mask>%>
+            <%#</defs>%>
+            <%#<g fill="none" fill-rule="evenodd" transform="rotate(-45 7.396 6.836)">%>
+              <%#<use class="k-ButtonIcon__svg__stroke" stroke="#333" stroke-width="2" mask="url(#b)" xlink:href="#a"></use>%>
+              <%#<path class="k-ButtonIcon__svg" d="M6 14h2v5H6z"></path>%>
+            <%#</g>%>
+          <%#</svg>%>
+        <%#</button>%>
+      <%#</div>%>
+
+      <%#<div class="k-Header__item k-Header__signup">%>
+        <%#<a class="k-Button" href="#">S'identifier</a>%>
+      <%#</div>%>
+
+    <%#</div>%>
+
+  <%#</div>%>
+
+<%#</header>%>
