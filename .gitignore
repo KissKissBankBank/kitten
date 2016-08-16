@@ -13,3 +13,6 @@ spec/dummy/.sass-cache
 .sass-cache
 npm-debug.log
 node_modules/
+
+# Changes are ignored so that you can play in it.
+app/views/layouts/kitten/playground.html.erb

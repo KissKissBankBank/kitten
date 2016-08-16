@@ -2,7 +2,7 @@ module Kitten
   module ComponentsHelper
     def render_type(type, title:)
       add_menu_type(type, title)
-      concat content_tag(:h1, class:"k-StyleguideTitle", id: type) { title }
+      concat content_tag(:h1, class:"karl-Title", id: type) { title }
       yield
       nil
     end
@@ -11,7 +11,7 @@ module Kitten
       title ||= group.split('/').last.capitalize
       add_menu_group(group, title)
       concat content_tag(:h2,
-                         class: "k-StyleguideTitle__breadcrumb",
+                         class: "karl-Title__breadcrumb",
                          id: group) { title }
       render "kitten/groups/#{group}"
     end
@@ -30,9 +30,9 @@ module Kitten
     end
 
     def example(title = nil)
-      content_tag(:div, class: "k-StyleguideExample") do
+      content_tag(:div, class: "karl-Example") do
         if title
-          concat content_tag(:p, title, class: "k-StyleguideExample__title")
+          concat content_tag(:p, title, class: "karl-Example__title")
         end
 
         yield
