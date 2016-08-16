@@ -20,6 +20,7 @@ New features:
 - Add new component: `tabbar` molecule.
 - Add new component: `platform-switch` molecule.
 - Ignore playground changes in git (requires to type `rake` in development)
+- Add new component: `hero` molecule.
 
 ## [v0.4.0] - 2016-08-04
 Minor updates:

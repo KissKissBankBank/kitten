@@ -55,6 +55,9 @@ $k-typography: k-typography-definition((
 @import 'molecules/form/slider';
 @import 'molecules/form/text-input-with-unit';
 
+// Hero
+@import 'molecules/heroes/hero';
+
 // Navigation
 @import 'molecules/navigation/horizontal-nav';
 @import 'molecules/navigation/tab-bar';

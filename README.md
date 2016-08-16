@@ -199,7 +199,7 @@ $ rake
 ### Style checker
 
 ```sh
-$ npm run stylelint
+$ npm run --silent stylelint
 ```
 
 ### Ruby specs
