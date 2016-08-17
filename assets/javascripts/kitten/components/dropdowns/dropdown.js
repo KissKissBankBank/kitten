@@ -1,9 +1,14 @@
 window.Dropdown = React.createClass({
+  // Lifecycle
   getDefaultProps: function() {
     return {
       // This prop is used to position the dropdown in absolute in relation with
       // a reference element (self or its parent).
-      positionnedWith: 'self', // 'self' | 'parent'
+      // If you use `parent` or <DOMNode>, make sure that this element has the
+      // property `position` set in its css.
+      // As using DOMNode is anti-pattern, you should avoid it when it is
+      // possible.
+      positionnedWith: 'self', // 'self' | 'parent' | <DOMNode>
 
       // This prop is used to fetch the right height of the reference element
       // for the dropdown position.
@@ -14,6 +19,7 @@ window.Dropdown = React.createClass({
       buttonContentOnCollapsed: 'Expand me',
 
       // Dropdown list settings
+      handleResize: false,
       dropdownList: []
     }
   },
@@ -23,20 +29,46 @@ window.Dropdown = React.createClass({
     }
   },
   componentDidMount: function() {
-    let referenceElement = this.getReferenceElement()
-    let referenceElementHeight = kitten.elements.getComputedHeight(
-      referenceElement,
-      this.props.positionnedWithBorder
-    )
+    this.updateReferenceElementHeightState()
 
-    this.setState({ parentHeight: referenceElementHeight })
+    if (this.props.handleResize) {
+      window.addEventListener('resize', this.onResize);
+    }
   },
+  componentWillUnmount: function() {
+    if (this.props.handleResize) {
+      window.removeEventListener('resize', this.onResize);
+    }
+  },
+
+  // Component methods
   getReferenceElement: function() {
+    if (typeof(this.props.positionnedWith) == 'object') {
+      return this.props.positionnedWith
+    }
+
     if (this.props.positionnedWith == 'parent') {
       return this.refs.dropdown.parentNode
     }
 
     return this.refs.dropdown
+  },
+  getReferenceElementHeight: function() {
+    let referenceElement = this.getReferenceElement()
+
+    return kitten.elements.getComputedHeight(
+      referenceElement,
+      this.props.positionnedWithBorder
+    )
+  },
+  updateReferenceElementHeightState: function() {
+    let referenceElementHeight = this.getReferenceElementHeight()
+    this.setState({ parentHeight: referenceElementHeight })
+  },
+
+  // Component listener callbacks
+  onResize: function(event) {
+    this.updateReferenceElementHeightState()
   },
   onButtonClicked: function(event) {
     event.stopPropagation()
@@ -46,6 +78,8 @@ window.Dropdown = React.createClass({
       isExpanded: !this.state.isExpanded
     })
   },
+
+  // Rendering
   renderListItem: function(item) {
     return(
       <li role="menuitem">
