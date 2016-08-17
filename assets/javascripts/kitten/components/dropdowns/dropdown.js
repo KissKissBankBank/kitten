@@ -29,7 +29,7 @@ window.Dropdown = React.createClass({
       this.props.positionnedWithBorder
     )
 
-    this.setState({ parentHeight: referenceElementHeight });
+    this.setState({ parentHeight: referenceElementHeight })
   },
   getReferenceElement: function() {
     if (this.props.positionnedWith == 'parent') {
@@ -37,6 +37,14 @@ window.Dropdown = React.createClass({
     }
 
     return ReactDOM.findDOMNode(this)
+  },
+  onButtonClicked: function(event) {
+    event.stopPropagation()
+    event.preventDefault()
+
+    this.setState({
+      isExpanded: !this.state.isExpanded
+    })
   },
   renderListItem: function(item) {
     return(
@@ -61,14 +69,6 @@ window.Dropdown = React.createClass({
     }
 
     return this.props.buttonContentOnCollapsed
-  },
-  onButtonClicked: function(event) {
-    event.stopPropagation()
-    event.preventDefault()
-
-    this.setState({
-      isExpanded: !this.state.isExpanded
-    })
   },
   render: function() {
     let dropdownClass = {}

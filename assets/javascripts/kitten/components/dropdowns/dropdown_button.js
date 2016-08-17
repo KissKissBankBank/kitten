@@ -14,6 +14,6 @@ window.DropdownButton = function(props) {
 }
 
 DropdownButton.defaultProps = {
-  children: 'Dropdown button',
+  children: 'Toggle button',
   onClick: () => {}
 }
