@@ -33,10 +33,10 @@ window.Dropdown = React.createClass({
   },
   getReferenceElement: function() {
     if (this.props.positionnedWith == 'parent') {
-      return ReactDOM.findDOMNode(this).parentNode
+      return this.refs.dropdown.parentNode
     }
 
-    return ReactDOM.findDOMNode(this)
+    return this.refs.dropdown
   },
   onButtonClicked: function(event) {
     event.stopPropagation()
@@ -87,7 +87,7 @@ window.Dropdown = React.createClass({
     let style = { top: this.state.parentHeight }
 
     return(
-      <div className={ dropdownClassName }>
+      <div ref="dropdown" className={ dropdownClassName }>
         <DropdownButton className={ this.props.buttonClassName }
                         id={ this.props.label }
                         isExpanded={ this.state.isExpanded }
