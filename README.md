@@ -36,6 +36,12 @@ And then execute:
 To configure the engine you can add an initializer. Check out
 `spec/dummy/config/initializers/kitten.rb` for an example.
 
+To install routes for the style guide and sassdoc, add to your `routes.rb`:
+
+```ruby
+mount Kitten::Engine, at: '/kitten' if Rails.env.development?
+```
+
 
 ### Npm
 
