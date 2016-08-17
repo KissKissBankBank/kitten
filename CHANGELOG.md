@@ -23,6 +23,9 @@ New features:
 - Add new component: `hero` molecule.
 - Add new component: `card` molecule.
 
+Fix:
+- Loan Simulator does not show Infinty durations when pressing enter.
+
 ## [v0.4.0] - 2016-08-04
 Minor updates:
 - Update `@group` property in SassDoc comments.
