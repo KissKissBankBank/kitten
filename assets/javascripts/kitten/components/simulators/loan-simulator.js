@@ -249,6 +249,7 @@ window.LoanSimulator = React.createClass({
                   step={this.props.installmentStep}
                   min={this.installmentMin()}
                   max={this.installmentMax()}
+                  power={0.6}
                   name={this.props.installmentName}
                   value={this.state.installmentAmount}
                   onChange={this.handleInstallmentChange}
