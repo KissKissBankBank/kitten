@@ -23,5 +23,5 @@ window.ExternalRichLink = (props) => {
 
 ExternalRichLink.defaultProps = {
   href: '#',
-  children: <img src="https://placeholdit.imgix.net/~text?txt=LOGO&w=180&h=44" alt="LOGO" />
+  children: 'I am a rich link!'
 }
