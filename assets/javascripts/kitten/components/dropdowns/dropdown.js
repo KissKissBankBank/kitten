@@ -18,9 +18,11 @@ window.Dropdown = React.createClass({
       buttonContentOnExpanded: 'Close me',
       buttonContentOnCollapsed: 'Expand me',
 
+      // This prop is used to update the reference element height when a
+      // javascript event is triggered on the window object.
+      refreshEvents: [], // eg. ['resize']
+
       // Dropdown list settings
-      handleResize: false,
-      handleCustomEvents: [],
       dropdownList: []
     }
   },
@@ -32,23 +34,15 @@ window.Dropdown = React.createClass({
   componentDidMount: function() {
     this.updateReferenceElementHeightState()
 
-    if (this.props.handleResize) {
-      window.addEventListener('resize', this.handleDropdownPosition);
-    }
-
-    if (this.props.handleCustomEvents.length) {
-      this.props.handleCustomEvents.forEach((ev) => {
+    if (this.props.refreshEvents.length) {
+      this.props.refreshEvents.forEach((ev) => {
         window.addEventListener(ev, this.handleDropdownPosition);
       })
     }
   },
   componentWillUnmount: function() {
-    if (this.props.handleResize) {
-      window.removeEventListener('resize', this.handleDropdownPosition);
-    }
-
-    if (this.props.handleCustomEvents.length) {
-      this.props.handleCustomEvents.forEach((ev) => {
+    if (this.props.refreshEvents.length) {
+      this.props.refreshEvents.forEach((ev) => {
         window.removeEventListener(ev, this.handleDropdownPosition);
       })
     }
