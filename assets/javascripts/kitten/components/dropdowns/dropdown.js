@@ -20,6 +20,7 @@ window.Dropdown = React.createClass({
 
       // Dropdown list settings
       handleResize: false,
+      handleCustomEvents: [],
       dropdownList: []
     }
   },
@@ -32,12 +33,24 @@ window.Dropdown = React.createClass({
     this.updateReferenceElementHeightState()
 
     if (this.props.handleResize) {
-      window.addEventListener('resize', this.onResize);
+      window.addEventListener('resize', this.handleDropdownPosition);
+    }
+
+    if (this.props.handleCustomEvents.length) {
+      this.props.handleCustomEvents.forEach((ev) => {
+        window.addEventListener(ev, this.handleDropdownPosition);
+      })
     }
   },
   componentWillUnmount: function() {
     if (this.props.handleResize) {
-      window.removeEventListener('resize', this.onResize);
+      window.removeEventListener('resize', this.handleDropdownPosition);
+    }
+
+    if (this.props.handleCustomEvents.length) {
+      this.props.handleCustomEvents.forEach((ev) => {
+        window.removeEventListener(ev, this.handleDropdownPosition);
+      })
     }
   },
 
@@ -67,7 +80,7 @@ window.Dropdown = React.createClass({
   },
 
   // Component listener callbacks
-  onResize: function(event) {
+  handleDropdownPosition: function(event) {
     this.updateReferenceElementHeightState()
   },
   onButtonClicked: function(event) {
