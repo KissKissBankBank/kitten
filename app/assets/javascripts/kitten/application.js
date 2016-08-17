@@ -1,5 +1,6 @@
 //= require kitten/helpers/events/keyboard
 //= require kitten/helpers/numbers/is-number
+//= require kitten/helpers/elements/get-computed-height
 //= require kitten/components/form/slider
 //= require kitten/components/icons/grabber-icon
 //= require kitten/components/simulators/loan-simulator

@@ -1,3 +1,15 @@
 @import 'kitten/organisms/dropdowns/dropdown';
 
 @include k-Dropdown;
+
+.karl-Dropdown--platformSwitch {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  position: relative;
+  padding-left: 10px;
+
+  border-top: 1px #d8d8d8 solid;
+  border-bottom: 1px #d8d8d8 solid;
+  background: white;
+}

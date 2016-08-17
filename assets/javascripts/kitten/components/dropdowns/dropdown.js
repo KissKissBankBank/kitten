@@ -1,6 +1,13 @@
 window.Dropdown = React.createClass({
   getDefaultProps: function() {
     return {
+      // This prop is used to position the dropdown in absolute in relation with
+      // a reference element (self or its parent).
+      positionnedWith: 'self', // 'self' | 'parent'
+
+      // This prop is used to fetch the right height of the reference element
+      // for the dropdown position.
+      positionnedWithBorder: false,
       triggerButton: {
         contentElement: {
           expanded: 'Close me',
@@ -18,9 +25,20 @@ window.Dropdown = React.createClass({
     }
   },
   componentDidMount: function() {
-    // TODO: manage onResize.
-    const parentSize = ReactDOM.findDOMNode(this).parentNode.getBoundingClientRect()
-    this.setState({ parentHeight: parentSize.height });
+    let referenceElement = this.getReferenceElement()
+    let referenceElementHeight = kitten.elements.getComputedHeight(
+      referenceElement,
+      this.props.positionnedWithBorder
+    )
+
+    this.setState({ parentHeight: referenceElementHeight });
+  },
+  getReferenceElement: function() {
+    if (this.props.positionnedWith == 'parent') {
+      return ReactDOM.findDOMNode(this).parentNode
+    }
+
+    return ReactDOM.findDOMNode(this)
   },
   renderListItem: function(item) {
     return(
@@ -55,10 +73,16 @@ window.Dropdown = React.createClass({
     });
   },
   render: function() {
-    const dropdownStyle = this.state.isExpanded ? 'is-expanded' : ''
+    let dropdownClass = {}
+
+    if (this.state.isExpanded) dropdownClass['is-expanded'] = true
+    if (this.props.positionnedWith == 'self') {
+      dropdownClass['k-Dropdown--asReference'] = true
+    }
+
     const dropdownClassName = classNames(
       'k-Dropdown',
-      dropdownStyle,
+      dropdownClass,
       this.props.className
     );
 

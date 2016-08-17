@@ -17,19 +17,18 @@
 ///     </nav>
 ///   </div>
 @mixin k-Dropdown {
-  .k-Dropdown {
+  .k-Dropdown--asReference {
     position: relative;
   }
 
-  .k-Dropdown.is-expanded {
-    .k-Dropdown__content {
-      display: block;
-    }
-  }
-
   .k-Dropdown__content {
-    display: none;
     position: absolute;
     left: 0;
+    top: 0;
+    display: none;
+
+    .k-Dropdown.is-expanded & {
+      display: block;
+    }
   }
 }
