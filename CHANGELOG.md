@@ -9,6 +9,8 @@ Breaking changes:
 - Move all styleguide stylesheets into dummy app for testing.
 - Remove components from `kitten` import.
 - Change some styles for `k-ButtonImage` and `k-ButtonIcon`.
+- If you are serving the engine in your routes make sure you add
+  `if Rails.env.development?` if you don't want to serve it in production.
 
 New features:
 - Enable configuration on styleguide stylesheet path.
