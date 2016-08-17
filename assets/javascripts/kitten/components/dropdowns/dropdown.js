@@ -68,7 +68,7 @@ window.Dropdown = React.createClass({
 
     this.setState({
       isExpanded: !this.state.isExpanded
-    });
+    })
   },
   render: function() {
     let dropdownClass = {}
@@ -82,7 +82,7 @@ window.Dropdown = React.createClass({
       'k-Dropdown',
       dropdownClass,
       this.props.className
-    );
+    )
 
     let style = { top: this.state.parentHeight }
 
