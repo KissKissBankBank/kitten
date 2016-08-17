@@ -7,16 +7,14 @@ window.Dropdown = React.createClass({
 
       // This prop is used to fetch the right height of the reference element
       // for the dropdown position.
-      positionnedWithBorder: false,
-      triggerButton: {
-        contentElement: {
-          expanded: 'Close me',
-          collapsed: 'Expand me'
-        }
-      },
-      dropdownList: {
-        items: []
-      }
+      positionnedWithBorder: true,
+
+      // Button settings
+      buttonContentOnExpanded: 'Close me',
+      buttonContentOnCollapsed: 'Expand me',
+
+      // Dropdown list settings
+      dropdownList: []
     }
   },
   getInitialState: function() {
@@ -48,21 +46,21 @@ window.Dropdown = React.createClass({
     )
   },
   renderList: function() {
-    const items = this.props.dropdownList.items.map((item) => this.renderListItem(item))
+    const items = this.props.dropdownList.map((item) => this.renderListItem(item))
     const defaultItem = ('No choice')
 
     return(
-      <ul className={ this.props.dropdownList.className } role="menubar">
+      <ul className={ this.props.dropdownListClassName } role="menubar">
         { items.length ? items : defaultItem }
       </ul>
     )
   },
   renderButtonContentElement: function() {
     if (this.state.isExpanded) {
-      return this.props.triggerButton.contentElement.expanded
+      return this.props.buttonContentOnExpanded
     }
 
-    return this.props.triggerButton.contentElement.collapsed
+    return this.props.buttonContentOnCollapsed
   },
   onButtonClicked: function(event) {
     event.stopPropagation()
@@ -90,7 +88,7 @@ window.Dropdown = React.createClass({
 
     return(
       <div className={ dropdownClassName }>
-        <DropdownButton className={ this.props.triggerButton.className }
+        <DropdownButton className={ this.props.buttonClassName }
                         id={ this.props.label }
                         isExpanded={ this.state.isExpanded }
                         onClick={ this.onButtonClicked.bind(this) }>
