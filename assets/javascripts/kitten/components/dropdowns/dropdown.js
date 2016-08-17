@@ -4,13 +4,13 @@ window.Dropdown = React.createClass({
     return {
       // This prop is used to position the dropdown in absolute in relation with
       // a reference element (self or its parent).
-      // If you use `parent` or <DOMNode>, make sure that this element has the
-      // property `position` set in its css.
+      // If you use "parent" or <DOMNode>, make sure that this element has the
+      // "position" property set in its css.
       // As using DOMNode is anti-pattern, you should avoid it when it is
       // possible.
       positionnedWith: 'self', // 'self' | 'parent' | <DOMNode>
 
-      // This prop is used to fetch the right height of the reference element
+      // This prop is used to fetch the correct height of the reference element
       // for the dropdown position.
       positionnedWithBorder: true,
 
