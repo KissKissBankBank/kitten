@@ -2,7 +2,7 @@ window.Dropdown = React.createClass({
   // Lifecycle
   getDefaultProps: function() {
     return {
-      // This prop is used to position the dropdown in absolute in relation with
+      // This prop is used to position the dropdown absolutely in relation with
       // a reference element (self or its parent).
       // If you use "parent" or <DOMNode>, make sure that this element has the
       // "position" property set in its css.
@@ -77,7 +77,7 @@ window.Dropdown = React.createClass({
   handleDropdownPosition: function(event) {
     this.updateReferenceElementHeightState()
   },
-  onButtonClicked: function(event) {
+  handleButtonClick: function(event) {
     event.stopPropagation()
     event.preventDefault()
 
@@ -112,11 +112,9 @@ window.Dropdown = React.createClass({
     return this.props.buttonContentOnCollapsed
   },
   render: function() {
-    let dropdownClass = {}
-
-    if (this.state.isExpanded) dropdownClass['is-expanded'] = true
-    if (this.props.positionnedWith == 'self') {
-      dropdownClass['k-Dropdown--asReference'] = true
+    const dropdownClass = {
+      'is-expanded': this.state.isExpanded,
+      'k-Dropdown--asReference': this.props.positionnedWith == 'self',
     }
 
     const dropdownClassName = classNames(
@@ -130,16 +128,16 @@ window.Dropdown = React.createClass({
     return(
       <div ref="dropdown" className={ dropdownClassName }>
         <DropdownButton className={ this.props.buttonClassName }
-                        id={ this.props.label }
+                        id={ this.props.buttonId }
                         isExpanded={ this.state.isExpanded }
-                        onClick={ this.onButtonClicked.bind(this) }>
+                        onClick={ this.handleButtonClick.bind(this) }>
           { this.renderButtonContentElement() }
         </DropdownButton>
         <nav className="k-Dropdown__content"
              style={ style }
              role="navigation"
              aria-hidden="true"
-             aria-labelledby={ this.props.label }>
+             aria-labelledby={ this.props.buttonId }>
           { this.renderList() }
         </nav>
       </div>
