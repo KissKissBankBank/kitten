@@ -8,10 +8,10 @@ Gem::Specification.new do |s|
   s.authors     = ['KissKissBankBank']
   s.email       = ['dev@kisskissbankbank.com']
   s.homepage    = 'https://github.com/KissKissBankBank/kitten'
-  s.summary     = "Components library for Sass"
-  s.description = "kitten is a components library for Sass.
-                   It provides mixins to create flexible components
-                   based on your own brand elements."
+  s.summary     = 'Components library for Sass'
+  s.description = 'kitten is a components library for Sass. ' \
+                   'It provides mixins to create flexible components ' \
+                   'based on your own brand elements.'
 
   s.files         = Dir['{lib,assets}/**/*', 'Rakefile', 'README.md']
   s.require_paths = ['lib']
@@ -21,6 +21,8 @@ Gem::Specification.new do |s|
   # This is a Rails engine.
   # < 5.0.0 because it has not been tested there yet.
   s.add_dependency 'railties', ['> 3.0.0', '< 5.0.0']
+
+  s.add_dependency 'webpack-rails', '~> 0.9.8'
 
   s.add_development_dependency 'bundler', '~> 1.8'
   s.add_development_dependency 'rake',    '~> 10.0'

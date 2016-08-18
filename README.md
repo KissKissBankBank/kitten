@@ -12,6 +12,7 @@ flexible components based on your own brand elements
 - Ruby 2.2.4
 - Bundler (`gem install bundler`)
 - Node > 0.12 (for stylelint)
+- Webpack
 
 
 ## Installation
@@ -36,6 +37,9 @@ To install routes for the style guide and sassdoc, add to your `routes.rb`:
 ```ruby
 mount Kitten::Engine, at: '/kitten' if Rails.env.development?
 ```
+
+Assets are served via Webpack, so you need to use webpack to compile or serve
+the CSS.
 
 
 ### Npm
