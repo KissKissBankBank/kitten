@@ -3,6 +3,8 @@
 @include k-TextInput((
   font: 'source-sans',
   font-size: -2,
-  border-color: #d8d8d8,
-  color: #333,
+  colors: (
+    base: #333,
+    border: #d8d8d8,
+  ),
 ));

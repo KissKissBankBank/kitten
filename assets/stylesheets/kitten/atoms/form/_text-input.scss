@@ -11,8 +11,10 @@
 ///   @include k-TextInput((
 ///     font: 'source-sans',
 ///     font-size: -2,
-///     border-color: #d8d8d8,
-///     color: #333,
+///     colors: (
+///       base: #333,
+///       border: #d8d8d8,
+///     ),
 ///   ));
 ///
 /// @example html
@@ -27,8 +29,8 @@
   $font: k-string-definition(k-map-fetch($input, 'font'));
   $font-size: k-number-definition(
     k-map-fetch($input, 'font-size'), $unit: none);
-  $border-color: k-color-definition(k-map-fetch($input, 'border-color'));
-  $color: k-color-definition(k-map-fetch($input, 'color'));
+  $border-color: k-color-definition(k-map-fetch($input, ('colors', 'border')));
+  $color: k-color-definition(k-map-fetch($input, ('colors', 'base')));
 
   .k-TextInput {
     @include k-typographyFont($font);
