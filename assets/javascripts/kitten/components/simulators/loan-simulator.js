@@ -52,7 +52,6 @@ window.LoanSimulator = React.createClass({
 
       installmentLabel: 'Reimbursing',
       installmentName: 'installment',
-      installmentStep: 1,
 
       durationText: 'Duration',
       durationMin: 1,
@@ -144,8 +143,8 @@ window.LoanSimulator = React.createClass({
   },
 
   installmentMin: function() {
-    const { installmentStep, durationMax } = this.props
-    const value = this.state.amount / durationMax
+    const installmentStep = this.installmentStep()
+    const value = this.state.amount / this.props.durationMax
     const min = Math.ceil(value / installmentStep) * installmentStep
     if (min > this.state.amount * 1)
       return this.state.amount
