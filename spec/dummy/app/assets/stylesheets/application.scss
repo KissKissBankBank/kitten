@@ -51,6 +51,9 @@ $k-typography: k-typography-definition((
 // Molecules
 // ----------
 
+// Buttons
+@import 'molecules/buttons/button-image-with-text';
+
 // Cards
 @import 'molecules/cards/card';
 
