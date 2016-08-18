@@ -36,6 +36,12 @@ And then execute:
 To configure the engine you can add an initializer. Check out
 `spec/dummy/config/initializers/kitten.rb` for an example.
 
+To install routes for the style guide and sassdoc, add to your `routes.rb`:
+
+```ruby
+mount Kitten::Engine, at: '/kitten' if Rails.env.development?
+```
+
 
 ### Npm
 
@@ -193,12 +199,13 @@ Then, run:
 ```sh
 $ bundle                 # install gem dependencies
 $ npm install --only=dev # install node dependencies
+$ rake
 ```
 
 ### Style checker
 
 ```sh
-$ npm run stylelint
+$ npm run --silent stylelint
 ```
 
 ### Ruby specs
@@ -228,6 +235,11 @@ Then to run the server:
 ```sh
 $ foreman start
 ```
+
+### Ngrok
+
+To serve the styleguide without the webpack dev-server, deactivate webpack in
+`spec/dummy/config/initializers/kitten.rb` so that Sprockets can serve it.
 
 #### Generate SassDoc
 

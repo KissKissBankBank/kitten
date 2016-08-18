@@ -1,16 +1,18 @@
 <%= render_type 'atoms', title: 'Atoms' do %>
-  <%= render_group 'atoms/buttons', title: 'Buttons' %>
-  <%= render_group 'atoms/form', title: 'Form' %>
+  <%= render_group 'atoms/buttons' %>
+  <%= render_group 'atoms/form' %>
 <% end %>
 
 <%= render_type 'molecules', title: 'Molecules' do %>
-  <%= render_group 'molecules/form', title: 'Form' %>
-  <%= render_group 'molecules/navigation', title: 'Navigation' %>
-  <%= render_group 'molecules/simulators', title: 'Simulators' %>
+  <%= render_group 'molecules/cards' %>
+  <%= render_group 'molecules/form' %>
+  <%= render_group 'molecules/heroes' %>
+  <%= render_group 'molecules/navigation' %>
+  <%= render_group 'molecules/simulators' %>
   <%= render_group 'molecules/testimonies' %>
 <% end %>
 
 <%= render_type 'organisms', title: 'Organisms' do %>
-  <%= render_group 'organisms/simulators', title: 'Simulators' %>
-  <%= render_group 'organisms/headers', title: 'Headers' %>
+  <%= render_group 'organisms/simulators' %>
+  <%= render_group 'organisms/headers' %>
 <% end %>

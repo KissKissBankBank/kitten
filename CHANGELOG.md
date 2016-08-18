@@ -9,6 +9,8 @@ Breaking changes:
 - Move all styleguide stylesheets into dummy app for testing.
 - Remove components from `kitten` import.
 - Change some styles for `k-ButtonImage` and `k-ButtonIcon`.
+- If you are serving the engine in your routes make sure you add
+  `if Rails.env.development?` if you don't want to serve it in production.
 
 New features:
 - Enable configuration on styleguide stylesheet path.
@@ -20,6 +22,13 @@ New features:
 - Add new component: `tabbar` molecule.
 - Add new component: `text-input` atom.
 - Add new component: `search-input` molecule.
+- Add new component: `platform-switch` molecule.
+- Ignore playground changes in git (requires to type `rake` in development)
+- Add new component: `hero` molecule.
+- Add new component: `card` molecule.
+
+Fix:
+- Loan Simulator does not show Infinty durations when pressing enter.
 
 ## [v0.4.0] - 2016-08-04
 Minor updates:
