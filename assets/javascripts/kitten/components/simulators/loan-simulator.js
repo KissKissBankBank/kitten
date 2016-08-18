@@ -23,7 +23,6 @@ window.LoanSimulator = React.createClass({
 
     installmentLabel: React.PropTypes.string,
     installmentName: React.PropTypes.string,
-    installmentStep: React.PropTypes.number,
 
     durationText: React.PropTypes.string,
     durationMin: React.PropTypes.number,
@@ -53,7 +52,6 @@ window.LoanSimulator = React.createClass({
 
       installmentLabel: 'Reimbursing',
       installmentName: 'installment',
-      installmentStep: 1,
 
       durationText: 'Duration',
       durationMin: 1,
@@ -81,7 +79,7 @@ window.LoanSimulator = React.createClass({
   },
 
   handleFocus: function(e) {
-    this.setState({ touched: false, installmentAmount: 0 })
+    this.setState({ touched: false, installmentAmount: null })
   },
 
   handleAmountChange: function(e) {
@@ -117,11 +115,11 @@ window.LoanSimulator = React.createClass({
   },
 
   feeCents: function() {
-    if (!this.state.amount)
+    if (!this.state.amount || !this.state.installmentAmount)
       return null
 
     const cents = this.state.amount * 100
-    return Math.round(cents * this.props.feeForDuration(this.state.duration))
+    return Math.round(cents * this.props.feeForDuration(this.duration()))
   },
 
   toCurrency: function(cents) {
@@ -145,8 +143,8 @@ window.LoanSimulator = React.createClass({
   },
 
   installmentMin: function() {
-    const { installmentStep, durationMax } = this.props
-    const value = this.state.amount / durationMax
+    const installmentStep = this.installmentStep()
+    const value = this.state.amount / this.props.durationMax
     const min = Math.ceil(value / installmentStep) * installmentStep
     if (min > this.state.amount * 1)
       return this.state.amount
@@ -156,6 +154,14 @@ window.LoanSimulator = React.createClass({
 
   installmentMax: function() {
     return this.state.amount * 1
+  },
+
+  installmentStep: function() {
+    if (this.state.installmentAmount > 1000)
+      return 100
+    if (this.state.installmentAmount > 200)
+      return 10
+    return 1
   },
 
   render: function() {
@@ -246,9 +252,10 @@ window.LoanSimulator = React.createClass({
             </div>
           </div>
           <Slider ref="slider"
-                  step={this.props.installmentStep}
+                  step={this.installmentStep()}
                   min={this.installmentMin()}
                   max={this.installmentMax()}
+                  power={2}
                   name={this.props.installmentName}
                   value={this.state.installmentAmount}
                   onChange={this.handleInstallmentChange}

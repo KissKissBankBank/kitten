@@ -13,6 +13,10 @@ window.Slider = React.createClass({
     // Space between each possible value when updated by keyboard (e.g. 1)
     step: React.PropTypes.number,
 
+    // Change the distribution of values in the slider by applying a different
+    // power. Defaults to 1 for a normal distribution.
+    power: React.PropTypes.number,
+
     // Input name, if needed (e.g. "amount")
     name: React.PropTypes.string,
 
@@ -34,6 +38,7 @@ window.Slider = React.createClass({
       min: 0,
       max: 100,
       step: 1,
+      power: 1,
       onChange: function() {},
       onChangeEnd: function() {},
     }
@@ -107,14 +112,40 @@ window.Slider = React.createClass({
     const coordinate = e.touches ? e.touches[0].clientX : e.clientX
     const trackPosition = this.refs.track.getBoundingClientRect()
     const ratio = (coordinate - trackPosition.left) / trackPosition.width
-    const value = Math.round(ratio * (max - min) + min)
+    const powerRatio = this.computePowerRatio(ratio)
+    const value = Math.round(powerRatio * (max - min) + min)
 
     this.move(value)
   },
 
+  // Turns a normal ratio (between 0 and 1) into a ratio with a different
+  // distribution based on the power.
+  //
+  // Example:
+  //   computePowerRatio(0) # => 0
+  //   computePowerRatio(0.5) # => 0.76534543
+  //   computePowerRatio(1) # => 1
+  computePowerRatio: function(ratio) {
+    return ratio < 0 ? 0 : Math.pow(ratio, this.props.power)
+  },
+
+  // Inverse of computePowerRatio. Turns a powered ratio (between 0 and 1) into
+  // the ratio where we should place the slider.
+  //
+  // Example:
+  //   computeRatio(0) # => 0
+  //   computeRatio(0.76534543) # => 0.5
+  //   computeRatio(1) # => 1
+  computeRatio: function(powerRatio) {
+    return Math.pow(powerRatio, 1 / this.props.power)
+  },
+
   percentage: function() {
     const { min, max, value } = this.props
-    const ratio = (value - min) / (max - min)
+    if (value === null)
+      return '0%'
+    const powerRatio = (value - min) / (max - min)
+    const ratio = this.computeRatio(powerRatio)
     const boundRatio = ratio > 1 ? 1 : (ratio < 0 ? 0 : ratio)
     return boundRatio * 100 + '%'
   },
