@@ -3,9 +3,11 @@
 @include k-UserMenu((
   font: 'source-sans-semi-bold',
   font-step: -2,
-  color: #333,
-  background-color: #fbfbfb,
-  border-color: #eee,
-  background-color-hover: #f8f8f8,
-  border-color-hover: #333,
+  colors: (
+    base: #333,
+    background: #fbfbfb,
+    border: #eee,
+    background-hover: #f8f8f8,
+    border-hover: #333,
+  ),
 ));

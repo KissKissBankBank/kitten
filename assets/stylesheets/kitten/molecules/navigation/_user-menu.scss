@@ -9,11 +9,13 @@
 ///   @include k-UserMenu((
 ///     font: 'source-sans-semi-bold',
 ///     font-step: -2,
-///     color: #333,
-///     background-color: #fbfbfb,
-///     border-color: #eee,
-///     background-color-hover: #f8f8f8,
-///     border-color-hover: #333,
+///     colors: (
+///       base: #333,
+///       background: #fbfbfb,
+///       border: #eee,
+///       background-hover: #f8f8f8,
+///       border-hover: #333,
+///     ),
 ///   ));
 ///
 /// @example html
@@ -39,15 +41,15 @@
     $font-step: k-number-definition(
       k-map-fetch($menu, 'font-step'), $unit: none);
     $color: k-color-definition(
-      k-map-fetch($menu, ('color')));
+      k-map-fetch($menu, ('colors', 'base')));
     $background-color: k-color-definition(
-      k-map-fetch($menu, ('background-color')));
+      k-map-fetch($menu, ('colors', 'background')));
     $border-color: k-color-definition(
-      k-map-fetch($menu, ('border-color')));
+      k-map-fetch($menu, ('colors', 'border')));
     $background-color-hover: k-color-definition(
-      k-map-fetch($menu, ('background-color-hover')));
+      k-map-fetch($menu, ('colors', 'background-hover')));
     $border-color-hover: k-color-definition(
-      k-map-fetch($menu, ('border-color-hover')));
+      k-map-fetch($menu, ('colors', 'border-hover')));
 
     .k-UserMenu {
       list-style-type: none;
