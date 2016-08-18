@@ -1,0 +1,9 @@
+@import "kitten/molecules/heroes/hero";
+
+@include k-Hero((
+  font: 'source-sans',
+));
+
+.karl-Hero--catBackground {
+  background-image: url("https://placekitten.com/900/900");
+}

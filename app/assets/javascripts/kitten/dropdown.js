@@ -1,13 +1,13 @@
-var openItems = $('.k-StyleguideMenu__listItem').each(function(key, element){
+var openItems = $('.karl-Menu__listItem').each(function(key, element){
   $(element).on("click", function(){
     $(element).toggleClass("is-opened");
-    $(element).siblings(".k-StyleguideMenu__subList").toggleClass('is-opened');
+    $(element).siblings(".karl-Menu__subList").toggleClass('is-opened');
   })
 });
 
-var openSubItems = $('.k-StyleguideMenu__subListItem').each(function(key, element){
+var openSubItems = $('.karl-Menu__subListItem').each(function(key, element){
   $(element).on("click", function(){
     $(element).toggleClass("is-opened");
-    $(element).siblings(".k-StyleguideMenu__subSubList").toggleClass('is-opened');
+    $(element).siblings(".karl-Menu__subSubList").toggleClass('is-opened');
   })
 });

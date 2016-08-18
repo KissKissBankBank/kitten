@@ -112,7 +112,8 @@ window.LoanSimulator = React.createClass({
   },
 
   duration: function() {
-    return Math.ceil(this.state.amount / this.state.installmentAmount)
+    if (this.state.installmentAmount)
+      return Math.ceil(this.state.amount / this.state.installmentAmount)
   },
 
   feeCents: function() {
@@ -161,8 +162,8 @@ window.LoanSimulator = React.createClass({
     const { label } = this.props
     const { installmentAmount, dragged, touched } = this.state
     const error = this.error()
-    const showResult = !error && touched
     const duration = this.duration()
+    const showResult = !error && touched && duration
 
     let errorClass, errorTag, installmentString, infoClass, resultTag
 
