@@ -1,4 +1,10 @@
+// Compiled by webpack, not by Sprockets.
+
+// Kitten library
 @import 'kitten';
+
+// Style guide
+@import 'kitten/karl';
 
 $k-fonts: (
   source-sans: (

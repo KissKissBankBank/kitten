@@ -15,10 +15,5 @@ module Kitten
   # Configuration variables and defaults.
   class Configuration
     attr_accessor :app_stylesheet_path
-    attr_accessor :webpack
-
-    def initialize
-      self.webpack = false
-    end
   end
 end

@@ -236,11 +236,6 @@ Then to run the server:
 $ foreman start
 ```
 
-### Ngrok
-
-To serve the styleguide without the webpack dev-server, deactivate webpack in
-`spec/dummy/config/initializers/kitten.rb` so that Sprockets can serve it.
-
 #### Generate SassDoc
 
 We use [SassDoc](http://sassdoc.com/) to generate documentation from our
