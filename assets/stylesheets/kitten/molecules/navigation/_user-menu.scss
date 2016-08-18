@@ -1,0 +1,86 @@
+/// A user menu.
+///
+/// @group navigation
+///
+/// @parameter {Map} $menu - a menu specification
+///
+/// @example scss - usage
+///
+///   @include k-UserMenu((
+///     font: 'source-sans-semi-bold',
+///     font-step: -2,
+///     colors: (
+///       base: #333,
+///       background: #fbfbfb,
+///       border: #eee,
+///       background-hover: #f8f8f8,
+///       border-hover: #333,
+///     ),
+///   ));
+///
+/// @example html
+///
+///   <ul class="k-UserMenu">
+///     <li>
+///       <a class="k-UserMenu__item" href="#">
+///         Item
+///       </a>
+///     </li>
+///     <li>
+///       <a class="k-UserMenu__item k-UserMenu__separation" href="#">
+///         Item
+///       </a>
+///     </li>
+///     …
+///   </ul>
+
+@mixin k-UserMenu($menu) {
+  @include k-with-module('k-UserMenu: $menu') {
+
+    $font: k-map-fetch($menu, 'font');
+    $font-step: k-number-definition(
+      k-map-fetch($menu, 'font-step'), $unit: none);
+    $color: k-color-definition(
+      k-map-fetch($menu, ('colors', 'base')));
+    $background-color: k-color-definition(
+      k-map-fetch($menu, ('colors', 'background')));
+    $border-color: k-color-definition(
+      k-map-fetch($menu, ('colors', 'border')));
+    $background-color-hover: k-color-definition(
+      k-map-fetch($menu, ('colors', 'background-hover')));
+    $border-color-hover: k-color-definition(
+      k-map-fetch($menu, ('colors', 'border-hover')));
+
+    .k-UserMenu {
+      list-style-type: none;
+      border: 1px solid #eee;
+      border-left: none;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    .k-UserMenu__item {
+      @include k-typographyFont($font);
+      @include k-typographyFontSize($font-step, 1);
+      text-decoration: none;
+
+      display: block;
+      border-left: 1px solid $border-color;
+      background: $background-color;
+      padding: k-px-to-rem(15px) k-px-to-rem(20px);
+      color: $color;
+      transition: background-color .2s, border-color .2s;
+
+      &:hover,
+      &:focus {
+        background-color: $background-color-hover;
+        border-left-color: $border-color-hover;
+      }
+    }
+
+    .k-UserMenu__separation {
+      border-top: 1px solid $border-color;
+    }
+  }
+}
