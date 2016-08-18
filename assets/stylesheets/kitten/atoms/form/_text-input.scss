@@ -44,7 +44,6 @@
     color: $color;
     transition: color .2s, border-color .2s;
 
-    // TODO: validate focus with product's team.
     &:focus {
       outline: none;
       border-color: $color;
