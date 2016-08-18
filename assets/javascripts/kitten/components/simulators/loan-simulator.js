@@ -79,7 +79,7 @@ window.LoanSimulator = React.createClass({
   },
 
   handleFocus: function(e) {
-    this.setState({ touched: false, installmentAmount: 0 })
+    this.setState({ touched: false, installmentAmount: null })
   },
 
   handleAmountChange: function(e) {

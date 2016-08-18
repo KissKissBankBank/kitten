@@ -142,6 +142,8 @@ window.Slider = React.createClass({
 
   percentage: function() {
     const { min, max, value } = this.props
+    if (value === null)
+      return '0%'
     const powerRatio = (value - min) / (max - min)
     const ratio = this.computeRatio(powerRatio)
     const boundRatio = ratio > 1 ? 1 : (ratio < 0 ? 0 : ratio)
