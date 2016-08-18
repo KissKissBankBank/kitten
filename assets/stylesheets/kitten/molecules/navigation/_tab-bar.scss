@@ -75,6 +75,7 @@
       @include k-typographyFontSize($font-step, $line-height);
       letter-spacing: k-px-to-rem(0.8px);
       text-decoration: none;
+      text-align: center;
 
       padding: k-px-to-rem(11px) k-px-to-rem(18px);
       display: block;

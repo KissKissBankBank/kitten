@@ -59,12 +59,14 @@
     align-items: center;
   }
 
-  .k-Header__items--end {
+  .k-Header__items--pull-end {
     align-self: auto;
     margin-left: auto;
   }
 
   .k-Header__item {
+    display: flex;
+    margin: 0;
     padding: 0 $gutter / 2;
   }
 
@@ -76,6 +78,12 @@
       display: none;
     }
 
+    @include k-media-xs {
+      display: none;
+    }
+  }
+
+  .k-Header__search {
     @include k-media-xs {
       display: none;
     }

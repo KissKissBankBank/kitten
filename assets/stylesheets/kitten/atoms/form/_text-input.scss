@@ -1,0 +1,52 @@
+/// Text input
+///
+/// A simple text input.
+///
+/// @group form
+///
+/// @parameter {Map} $input - a input specification
+///
+/// @example scss - Usage
+///
+///   @include k-TextInput((
+///     font: 'source-sans',
+///     font-size: -2,
+///     colors: (
+///       base: #333,
+///       border: #d8d8d8,
+///     ),
+///   ));
+///
+/// @example html
+///
+///   <input class="k-TextInput"
+///          type="text"
+///          name="foobar"
+///          placeholder="Foobar" />
+
+@mixin k-TextInput($input) {
+
+  $font: k-string-definition(k-map-fetch($input, 'font'));
+  $font-size: k-number-definition(
+    k-map-fetch($input, 'font-size'), $unit: none);
+  $border-color: k-color-definition(k-map-fetch($input, ('colors', 'border')));
+  $color: k-color-definition(k-map-fetch($input, ('colors', 'base')));
+
+  .k-TextInput {
+    @include k-typographyFont($font);
+    @include k-typographyFontSize($font-size, 1);
+
+    box-sizing: border-box;
+    border: 1px solid $border-color;
+    border-radius: 4px;
+    width: 100%;
+    padding: k-px-to-rem(11px) k-px-to-rem(15px) k-px-to-rem(12px);
+    color: $color;
+    transition: color .2s, border-color .2s;
+
+    &:focus {
+      outline: none;
+      border-color: $color;
+    }
+  }
+}

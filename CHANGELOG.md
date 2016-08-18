@@ -21,6 +21,8 @@ New features:
 - Access components directly by removing the `#` in the styleguide in URL
 - Add new component: `tabbar` molecule.
 - Add new component: `user-menu` molecule.
+- Add new component: `text-input` atom.
+- Add new component: `search-input` molecule.
 - Add new component: `platform-switch` molecule.
 - Ignore playground changes in git (requires to type `rake` in development)
 - Add new component: `hero` molecule.

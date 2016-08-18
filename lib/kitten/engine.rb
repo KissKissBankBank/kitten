@@ -9,7 +9,7 @@ module Kitten
     initializer :append_kitten_paths do |app|
 
       # kitten assets
-      %w(stylesheets javascripts).each do |directory|
+      %w(stylesheets javascripts images).each do |directory|
         app.config.assets.paths << root.join('assets', directory).to_s
       end
 
