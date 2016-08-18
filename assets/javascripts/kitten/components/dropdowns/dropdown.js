@@ -14,6 +14,8 @@ window.Dropdown = React.createClass({
       // for the dropdown position.
       positionnedWithBorder: true,
 
+      positionnedTo: 'left', // 'left' | 'right'
+
       // Button settings
       buttonContentOnExpanded: 'Close me',
       buttonContentOnCollapsed: 'Expand me',
@@ -86,6 +88,17 @@ window.Dropdown = React.createClass({
     })
   },
 
+  getPosition: function() {
+    let positionStyles = { top: this.state.parentHeight }
+
+    if (this.props.positionnedTo == 'right')
+      positionStyles = Object.assign(positionStyles, { right: 0 })
+    else
+      positionStyles = Object.assign(positionStyles, { left: 0 })
+
+    return positionStyles
+  },
+
   // Rendering
   renderListItem: function(item) {
     return(
@@ -123,7 +136,7 @@ window.Dropdown = React.createClass({
       this.props.className
     )
 
-    let style = { top: this.state.parentHeight }
+    let style = this.getPosition()
 
     return(
       <div ref="dropdown" className={ dropdownClassName }>

@@ -51,3 +51,42 @@
     )
   </script>
 <% end %>
+
+<%= example 'User menu dropdown (positionned to right of the parent)' do %>
+
+  <div id="k-UserMenuDropdown" class="karl-Dropdown--platformSwitch"></div>
+
+  <script type="text/babel">
+    const svg = (<svg className="k-ButtonIcon__svg" viewBox="0 0 10 7" xmlns="http://www.w3.org/2000/svg">
+      <path d="M5 6.243L3.586 4.828 7.828.586 9.243 2z"/>
+      <path d="M5 6.243L.757 2 2.172.586l4.242 4.242z"/>
+    </svg>)
+
+    ReactDOM.render(
+      React.createElement(Dropdown, {
+        positionnedWith: 'parent',
+        positionnedWithBorder: false,
+        positionnedTo: 'right',
+
+        buttonId: 'k-PlatformSwitch',
+        buttonClassName: 'k-ButtonIcon k-ButtonIcon--tiny',
+        buttonContentOnExpanded: svg,
+        buttonContentOnCollapsed: svg,
+
+        dropdownListClassName: 'k-PlatformSwitch',
+        dropdownList: [
+          <ExternalRichLink className="k-PlatformSwitch__item">
+            <img src="https://placeholdit.imgix.net/~text?txt=LOGO&amp;w=180&amp;h=44" alt="LOGO" />
+          </ExternalRichLink>,
+          <ExternalRichLink className="k-PlatformSwitch__item">
+            <img src="https://placeholdit.imgix.net/~text?txt=LOGO&amp;w=180&amp;h=44" alt="LOGO" />
+          </ExternalRichLink>,
+          <ExternalRichLink className="k-PlatformSwitch__item">
+            <img src="https://placeholdit.imgix.net/~text?txt=LOGO&amp;w=180&amp;h=44" alt="LOGO" />
+          </ExternalRichLink>
+        ]
+      }),
+      document.getElementById('k-UserMenuDropdown')
+    )
+  </script>
+<% end %>

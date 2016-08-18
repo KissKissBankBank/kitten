@@ -26,7 +26,8 @@
   $background-color: #fff;
   $border-color: #eee;
   $border-width: 1px;
-  $gutter: 20px;
+  $gutter: k-px-to-rem(20px);
+  $half-gutter: $gutter / 2;
   $max-width: 1420px;
   $z-index: 10;
 
@@ -67,7 +68,15 @@
   .k-Header__item {
     display: flex;
     margin: 0;
-    padding: 0 $gutter / 2;
+    padding: 0 $half-gutter;
+
+    @include k-media-sm {
+      margin: $half-gutter 0;
+    }
+
+    @include k-media-xs {
+      margin: $half-gutter 0;
+    }
   }
 
   .k-Header__nav {
