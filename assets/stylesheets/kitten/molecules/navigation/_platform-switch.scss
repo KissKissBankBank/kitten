@@ -52,16 +52,11 @@
     }
 
     .k-PlatformSwitch__item {
-      display: flex;
-      align-items: center;
-      align-self: flex-start;
-
       margin: 0;
       padding: k-px-to-rem(5px) k-px-to-rem(10px);
       border: 1px solid $border-color;
       border-top: none;
       background: $background-color;
-      text-decoration: none;
       transition: background-color .2s, border-color .2s;
 
       &:focus,
@@ -69,28 +64,6 @@
         outline: none;
         border-right-color: $border-color-hover;
         background-color: $background-color-hover;
-      }
-    }
-
-    .k-PlatformSwitch__item__element {
-      margin: 0 k-px-to-rem(10px);
-      display: flex;
-    }
-
-    .k-PlatformSwitch__item__element--pull-end {
-      align-self: auto;
-      margin-left: auto;
-    }
-
-    // Class for animate element (move left to right slightly)
-    .k-PlatformSwitch__item__element--animate {
-      position: relative;
-      left: 0;
-      transition: left .2s;
-
-      .k-PlatformSwitch__item:focus &,
-      .k-PlatformSwitch__item:hover & {
-        left: 5px;
       }
     }
   }
