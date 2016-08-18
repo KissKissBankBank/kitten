@@ -5,13 +5,14 @@ module Kitten
   class Engine < ::Rails::Engine
     isolate_namespace Kitten
 
-    # Add kitten stylesheets paths to app assets paths.
+    # Add asset paths to the app.
     initializer :append_kitten_paths do |app|
 
-      # kitten assets
-      %w(stylesheets javascripts images).each do |directory|
-        app.config.assets.paths << root.join('assets', directory).to_s
-      end
+      # Kitten assets
+      app.config.assets.paths += [
+        root.join('assets', 'images').to_s,
+        root.join('assets', 'javascripts').to_s,
+      ]
 
       Rails.application.config.assets.precompile += %w(
         kitten/jquery-3.1.0.min.js
@@ -20,9 +21,6 @@ module Kitten
         kitten/dropdown.js
         kitten/karl.js
       )
-
-      # normalize stylesheet (used only on the styleguide)
-      app.config.assets.paths << Rails.root.join('vendor', 'stylesheets').to_s
     end
 
     # Merge kitten /public directory to app /public directory at runtime.

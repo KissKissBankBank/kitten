@@ -12,6 +12,7 @@ flexible components based on your own brand elements
 - Ruby 2.2.4
 - Bundler (`gem install bundler`)
 - Node > 0.12 (for stylelint)
+- Webpack
 
 
 ## Installation
@@ -22,11 +23,6 @@ Add this line to your application's Gemfile:
 
 ```ruby
 gem 'kitten'
-
-# SASS extensions for kitten
-source 'https://rails-assets.org' do
-  gem 'rails-assets-modular-scale'
-end
 ```
 
 And then execute:
@@ -41,6 +37,9 @@ To install routes for the style guide and sassdoc, add to your `routes.rb`:
 ```ruby
 mount Kitten::Engine, at: '/kitten' if Rails.env.development?
 ```
+
+Assets are served via Webpack, so you need to use webpack to compile or serve
+the CSS.
 
 
 ### Npm
@@ -235,11 +234,6 @@ Then to run the server:
 ```sh
 $ foreman start
 ```
-
-### Ngrok
-
-To serve the styleguide without the webpack dev-server, deactivate webpack in
-`spec/dummy/config/initializers/kitten.rb` so that Sprockets can serve it.
 
 #### Generate SassDoc
 
