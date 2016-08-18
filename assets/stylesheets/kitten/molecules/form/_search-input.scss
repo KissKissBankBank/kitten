@@ -1,0 +1,55 @@
+/// Search input with icon.
+///
+/// @group form
+///
+/// @example scss - usage
+///
+///   @include k-SearchInput;
+///
+/// @example html
+///
+///   <form class="k-SearchInput">
+///     <input class="k-TextInput k-SearchInput__input"
+///            type="text"
+///            name="foobar"
+///            placeholder="Foobar" />
+///     <input class="k-SearchInput__submit"
+///            type="submit"
+///            name="foobar_submit"
+///            value="Search" />
+///   </form>
+
+@mixin k-SearchInput {
+
+  $icon-path: 'icons/magnifying.svg';
+  $icon-size: k-px-to-rem(17px);
+
+  .k-SearchInput {
+    position: relative;
+    display: inline-block;
+  }
+
+  .k-SearchInput__input {
+    width: k-px-to-rem(160px);
+    padding-right: k-px-to-rem(37px);
+  }
+
+  .k-SearchInput__submit {
+    position: absolute;
+    top: k-px-to-rem(12px);
+    right: k-px-to-rem(12px);
+
+    display: block;
+    width: $icon-size;
+    height: $icon-size;
+
+    background: transparent url($icon-path) no-repeat;
+
+    font: 0/0;
+    line-height: 1;
+    color: transparent;
+    text-shadow: none;
+    border: none;
+    cursor: pointer;
+  }
+}

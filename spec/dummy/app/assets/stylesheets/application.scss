@@ -41,6 +41,7 @@ $k-typography: k-typography-definition((
 
 // Form
 @import 'atoms/form/label';
+@import 'atoms/form/text-input';
 
 // Typography
 @import 'atoms/typography/body-copy';
@@ -57,6 +58,7 @@ $k-typography: k-typography-definition((
 @import 'molecules/form/label-with-info';
 @import 'molecules/form/slider';
 @import 'molecules/form/text-input-with-unit';
+@import 'molecules/form/search-input';
 
 // Hero
 @import 'molecules/heroes/hero';

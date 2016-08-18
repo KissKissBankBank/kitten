@@ -139,6 +139,10 @@
       fill: $base-color;
     }
 
+    .k-ButtonIcon__svg__stroke {
+      stroke: $base-color;
+    }
+
     .k-ButtonIcon--tiny {
       @include k-buttonRounded($button-size-tiny,
         $icon-width-tiny, $icon-height-tiny);
