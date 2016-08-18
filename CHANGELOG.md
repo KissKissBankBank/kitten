@@ -27,6 +27,7 @@ New features:
 - Ignore playground changes in git (requires to type `rake` in development)
 - Add new component: `hero` molecule.
 - Add new component: `card` molecule.
+- Add susy library to handle grid sizes
 
 Fix:
 - Loan Simulator does not show Infinty durations when pressing enter.
