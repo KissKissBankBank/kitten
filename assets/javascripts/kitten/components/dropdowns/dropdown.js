@@ -14,6 +14,7 @@ window.Dropdown = React.createClass({
       // for the dropdown position.
       positionnedWithBorder: true,
 
+      // This prop is used to fix the dropdown on left or right.
       positionnedTo: 'left', // 'left' | 'right'
 
       // Button settings
@@ -83,6 +84,7 @@ window.Dropdown = React.createClass({
     event.stopPropagation()
     event.preventDefault()
 
+    this.updateReferenceElementHeightState()
     this.setState({
       isExpanded: !this.state.isExpanded
     })
@@ -136,7 +138,7 @@ window.Dropdown = React.createClass({
       this.props.className
     )
 
-    let style = this.getPosition()
+    const style = this.getPosition()
 
     return(
       <div ref="dropdown" className={ dropdownClassName }>
