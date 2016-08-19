@@ -15,5 +15,9 @@ module Kitten
   # Configuration variables and defaults.
   class Configuration
     attr_accessor :app_stylesheet_path
+
+    def initialize
+      self.app_stylesheet_path = 'application'
+    end
   end
 end
