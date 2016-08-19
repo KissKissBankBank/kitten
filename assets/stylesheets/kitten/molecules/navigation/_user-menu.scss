@@ -63,27 +63,27 @@
       &:after,
       &:before {
         position: absolute;
-      	bottom: 100%;
-      	left: 50%;
+        bottom: 100%;
+        left: 50%;
         content: " ";
         width: 0;
         height: 0;
-      	border: solid transparent;
-      	pointer-events: none;
+        border: solid transparent;
+        pointer-events: none;
       }
 
       &:after {
-      	border-color: rgba(255, 255, 255, 0);
-      	border-bottom-color: $background-color;
-      	border-width: 5px;
-      	margin-left: -5px;
+        border-color: rgba(255, 255, 255, 0);
+        border-bottom-color: $background-color;
+        border-width: 5px;
+        margin-left: -5px;
       }
 
       &:before {
-      	border-color: rgba(255, 255, 255, 0);
-      	border-bottom-color: $border-color;
-      	border-width: 6px;
-      	margin-left: -6px;
+        border-color: rgba(255, 255, 255, 0);
+        border-bottom-color: $border-color;
+        border-width: 6px;
+        margin-left: -6px;
       }
     }
 
