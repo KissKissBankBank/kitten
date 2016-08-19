@@ -25,7 +25,7 @@ var sassLoadPaths = kitten
                       .loadPaths
                       .concat([
                         webpackStylesheetsPaths,
-                        appStylesheetsPaths
+                        appStylesheetsPaths,
                       ]);
 
 // Modules resolving paths
@@ -62,7 +62,7 @@ var config = {
       modules: false,
       assets: true,
     }),
-    new ExtractTextPlugin(cssFilename, { allChunks: true })
+    new ExtractTextPlugin(cssFilename, { allChunks: true }),
   ],
 
   module: {
@@ -71,13 +71,13 @@ var config = {
       { test: /\.svg$/, loaders: ['file?name=images/[name].[ext]'] },
       {
         test: /\.scss$/,
-        loader: ExtractTextPlugin.extract('css-loader!sass-loader')
-      }
-    ]
+        loader: ExtractTextPlugin.extract('css-loader!sass-loader'),
+      },
+    ],
   },
 
   sassLoader: {
-    includePaths: sassLoadPaths
+    includePaths: sassLoadPaths,
   }
 };
 
@@ -86,7 +86,7 @@ if (production) {
     new webpack.NoErrorsPlugin(),
     new webpack.optimize.UglifyJsPlugin({
       compressor: { warnings: false },
-      sourceMap: false
+      sourceMap: false,
     }),
     new webpack.DefinePlugin({
       'process.env': { NODE_ENV: JSON.stringify('production') }
