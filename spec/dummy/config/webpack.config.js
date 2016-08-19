@@ -28,10 +28,13 @@ var sassLoadPaths = kitten
                         appStylesheetsPaths
                       ]);
 
+// Modules resolving paths
+var resolvingPaths = kitten.loadPaths.concat(path.join(__dirname, '..', 'webpack'));
+
 var config = {
   entry: {
     // Sources are expected to live in $app_root/webpack
-    'application': './webpack/javascripts/application.js'
+    'application': './webpack/javascripts/application.js',
   },
 
   output: {
@@ -42,11 +45,11 @@ var config = {
     path: path.join(__dirname, '..', 'public', 'webpack'),
     publicPath: '/webpack/',
 
-    filename: jsFilenames
+    filename: jsFilenames,
   },
 
   resolve: {
-    root: path.join(__dirname, '..', 'webpack')
+    root: resolvingPaths,
   },
 
   plugins: [
@@ -57,17 +60,15 @@ var config = {
       source: false,
       chunks: false,
       modules: false,
-      assets: true
+      assets: true,
     }),
     new ExtractTextPlugin(cssFilename, { allChunks: true })
   ],
 
   module: {
     loaders: [
-      {
-        test: /\.css$/,
-        loaders: ['css'],
-      },
+      { test: /\.css$/, loaders: ['css'] },
+      { test: /\.svg$/, loaders: ['file?name=images/[name].[ext]'] },
       {
         test: /\.scss$/,
         loader: ExtractTextPlugin.extract('css-loader!sass-loader')
