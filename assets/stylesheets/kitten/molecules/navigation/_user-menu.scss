@@ -52,24 +52,53 @@
       k-map-fetch($menu, ('colors', 'border-hover')));
 
     .k-UserMenu {
-      list-style-type: none;
-      border: 1px solid $border-color;
-      border-left: none;
+      position: relative;
       width: 100%;
       margin: 0;
       padding: 0;
+      border: 1px solid $border-color;
+      border-left: none;
+      list-style-type: none;
+
+      &:after,
+      &:before {
+        position: absolute;
+      	bottom: 100%;
+      	left: 50%;
+        content: " ";
+        width: 0;
+        height: 0;
+      	border: solid transparent;
+      	pointer-events: none;
+      }
+
+      &:after {
+      	border-color: rgba(255, 255, 255, 0);
+      	border-bottom-color: $background-color;
+      	border-width: 5px;
+      	margin-left: -5px;
+      }
+
+      &:before {
+      	border-color: rgba(255, 255, 255, 0);
+      	border-bottom-color: $border-color;
+      	border-width: 6px;
+      	margin-left: -6px;
+      }
     }
 
     .k-UserMenu__item {
+      display: block;
+      padding: k-px-to-rem(15px) k-px-to-rem(20px);
+      outline: none;
+      border-left: 1px solid $border-color;
+      background: $background-color;
+
       @include k-typographyFont($font);
       @include k-typographyFontSize($font-step, 1);
       text-decoration: none;
-
-      display: block;
-      border-left: 1px solid $border-color;
-      background: $background-color;
-      padding: k-px-to-rem(15px) k-px-to-rem(20px);
       color: $color;
+
       transition: background-color .2s, border-color .2s;
 
       &:hover,
