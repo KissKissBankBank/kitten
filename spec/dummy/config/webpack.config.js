@@ -68,7 +68,7 @@ var config = {
   module: {
     loaders: [
       { test: /\.css$/, loaders: ['css'] },
-      { test: /\.(svg|png|jpe?g)$/, loaders: ['file?name=images/[name].[ext]?[hash]'] },
+      { test: /\.(svg|png|jpe?g)$/, loaders: ['file?name=images/[name]-[hash].[ext]'] },
       {
         test: /\.scss$/,
         loader: ExtractTextPlugin.extract('css-loader!sass-loader'),
