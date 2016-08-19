@@ -1,4 +1,4 @@
-<%= example 'Default dropdown (positionned with itself)' do %>
+<%= example 'Default dropdown (positioned with itself)' do %>
   <div id="default-dropdown"></div>
   <script type="text/babel">
     ReactDOM.render(
@@ -16,7 +16,7 @@
   </script>
 <% end %>
 
-<%= example 'Platform switch dropdown (positionned with parent)' do %>
+<%= example 'Platform switch dropdown (positioned with parent)' do %>
   <div id="k-PlatformSwitchDropdown" class="karl-Dropdown--platformSwitch"></div>
   <script type="text/babel">
     const svg = (<svg className="k-ButtonIcon__svg" viewBox="0 0 10 7" xmlns="http://www.w3.org/2000/svg">
@@ -26,8 +26,8 @@
 
     ReactDOM.render(
       React.createElement(Dropdown, {
-        positionnedWith: 'parent',
-        positionnedWithBorder: false,
+        positionedWith: 'parent',
+        positionedWithBorder: false,
 
         buttonId: 'k-PlatformSwitch',
         buttonClassName: 'k-ButtonIcon k-ButtonIcon--tiny',
@@ -52,7 +52,7 @@
   </script>
 <% end %>
 
-<%= example 'User menu dropdown (positionned to right of the parent)' do %>
+<%= example 'User menu dropdown (positioned to right of the parent)' do %>
 
   <div id="k-UserMenuDropdown" class="karl-Dropdown--platformSwitch"></div>
 
@@ -67,9 +67,10 @@
 
     ReactDOM.render(
       React.createElement(Dropdown, {
-        positionnedWith: 'parent',
-        positionnedWithBorder: false,
-        positionnedTo: 'right',
+        positionedWith: 'parent',
+        positionedWithBorder: false,
+        positionedTo: 'right',
+        positionedTo: 'right',
 
         buttonId: 'k-UserMenu',
         buttonClassName: 'k-ButtonImageWithText',

@@ -8,14 +8,14 @@ window.Dropdown = React.createClass({
       // "position" property set in its css.
       // As using DOMNode is anti-pattern, you should avoid it when it is
       // possible.
-      positionnedWith: 'self', // 'self' | 'parent' | <DOMNode>
+      positionedWith: 'self', // 'self' | 'parent' | <DOMNode>
 
       // This prop is used to fetch the correct height of the reference element
       // for the dropdown position.
-      positionnedWithBorder: true,
+      positionedWithBorder: true,
 
       // This prop is used to fix the dropdown on left or right.
-      positionnedTo: 'left', // 'left' | 'right'
+      positionedTo: 'left', // 'left' | 'right'
 
       // Button settings
       buttonContentOnExpanded: 'Close me',
@@ -53,11 +53,11 @@ window.Dropdown = React.createClass({
 
   // Component methods
   getReferenceElement: function() {
-    if (typeof(this.props.positionnedWith) == 'object') {
-      return this.props.positionnedWith
+    if (typeof(this.props.positionedWith) == 'object') {
+      return this.props.positionedWith
     }
 
-    if (this.props.positionnedWith == 'parent') {
+    if (this.props.positionedWith == 'parent') {
       return this.refs.dropdown.parentNode
     }
 
@@ -68,7 +68,7 @@ window.Dropdown = React.createClass({
 
     return kitten.elements.getComputedHeight(
       referenceElement,
-      this.props.positionnedWithBorder
+      this.props.positionedWithBorder
     )
   },
   updateReferenceElementHeightState: function() {
@@ -93,7 +93,7 @@ window.Dropdown = React.createClass({
   getPosition: function() {
     let positionStyles = { top: this.state.parentHeight }
 
-    if (this.props.positionnedTo == 'right')
+    if (this.props.positionedTo == 'right')
       positionStyles = Object.assign(positionStyles, { right: 0 })
     else
       positionStyles = Object.assign(positionStyles, { left: 0 })
@@ -129,7 +129,7 @@ window.Dropdown = React.createClass({
   render: function() {
     const dropdownClass = {
       'is-expanded': this.state.isExpanded,
-      'k-Dropdown--asReference': this.props.positionnedWith == 'self',
+      'k-Dropdown--asReference': this.props.positionedWith == 'self',
     }
 
     const dropdownClassName = classNames(
