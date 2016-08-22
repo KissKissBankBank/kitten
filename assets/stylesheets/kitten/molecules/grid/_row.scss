@@ -66,6 +66,7 @@
 
     .k-Row__content {
       @include container(70rem); // TODO use global
+
       .k-Row--padded & {
         padding: 2rem 0;
       }
