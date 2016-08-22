@@ -1,0 +1,47 @@
+/// Grid duo
+///
+/// Two vertically aligned-columns.
+///
+///     +-GridDuo------------------------+
+///     |+-GridDuo__col-+                |
+///     ||              |+-GridDuo__col-+|
+///     ||              ||              ||
+///     ||              ||              ||
+///     ||              |+--------------+|
+///     |+--------------+                |
+///     +--------------------------------+
+///
+/// @group grid
+///
+/// @example scss - usage
+///
+///     @include k-GridDuo;
+///
+/// @example html
+///
+///     <div class="k-GridDuo">
+///       <div class="k-GridDuo__col">
+///         …
+///       </div>
+///       <div class="k-GridDuo__col">
+///         …
+///       </div>
+///     </div>
+
+@mixin k-GridDuo {
+  .k-GridDuo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .k-GridDuo__col {
+    flex: 1;
+
+    &:first-of-type {
+      margin-right: (gutter() / 2);
+    }
+    &:last-of-type {
+      margin-left: (gutter() / 2);
+    }
+  }
+}

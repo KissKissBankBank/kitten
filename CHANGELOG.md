@@ -31,6 +31,7 @@ New features:
 - Add Susy library to handle grid sizes.
 - Add new component: `row` molecule.
 - Add image assets management in dummy webpack configuration.
+- Add new component: `grid-duo` molecule.
 
 Fix:
 - Loan Simulator does not show Infinty durations when pressing enter.
