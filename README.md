@@ -180,6 +180,18 @@ Include the component your want to use in your application:
 `kitten` provides a styleguide interface. This feature is only available if you
 are using the gem with Ruby on Rails.
 
+The styleguide css is served by webpack through
+[webpack-rails](https://github.com/mipearson/webpack-rails). By default, the
+`webpack_asset_paths` helper is called with the entry point `application`.
+
+If you want to use another webpack entry point for the styleguide css, you have
+to configure it with an initializer `config/initializers/kitten.rb`:
+```rb
+Kitten.configure do |config|
+  config.app_stylesheet_path = 'my_custom_entry_point'
+end
+```
+
 Check out the [documentation](../../wiki/Styleguide) to setup the styleguide directly in
 your application and with your own brand elements.
 

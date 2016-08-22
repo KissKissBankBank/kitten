@@ -25,13 +25,16 @@ var sassLoadPaths = kitten
                       .loadPaths
                       .concat([
                         webpackStylesheetsPaths,
-                        appStylesheetsPaths
+                        appStylesheetsPaths,
                       ]);
+
+// Modules resolving paths
+var resolvingPaths = kitten.loadPaths.concat(path.join(__dirname, '..', 'webpack'));
 
 var config = {
   entry: {
     // Sources are expected to live in $app_root/webpack
-    'application': './webpack/javascripts/application.js'
+    'application': './webpack/javascripts/application.js',
   },
 
   output: {
@@ -42,11 +45,11 @@ var config = {
     path: path.join(__dirname, '..', 'public', 'webpack'),
     publicPath: '/webpack/',
 
-    filename: jsFilenames
+    filename: jsFilenames,
   },
 
   resolve: {
-    root: path.join(__dirname, '..', 'webpack')
+    root: resolvingPaths,
   },
 
   plugins: [
@@ -57,26 +60,24 @@ var config = {
       source: false,
       chunks: false,
       modules: false,
-      assets: true
+      assets: true,
     }),
-    new ExtractTextPlugin(cssFilename, { allChunks: true })
+    new ExtractTextPlugin(cssFilename, { allChunks: true }),
   ],
 
   module: {
     loaders: [
-      {
-        test: /\.css$/,
-        loaders: ['css'],
-      },
+      { test: /\.css$/, loaders: ['css'] },
+      { test: /\.(svg|png|jpe?g)$/, loaders: ['file?name=images/[name]-[hash].[ext]'] },
       {
         test: /\.scss$/,
-        loader: ExtractTextPlugin.extract('css-loader!sass-loader')
-      }
-    ]
+        loader: ExtractTextPlugin.extract('css-loader!sass-loader'),
+      },
+    ],
   },
 
   sassLoader: {
-    includePaths: sassLoadPaths
+    includePaths: sassLoadPaths,
   }
 };
 
@@ -85,7 +86,7 @@ if (production) {
     new webpack.NoErrorsPlugin(),
     new webpack.optimize.UglifyJsPlugin({
       compressor: { warnings: false },
-      sourceMap: false
+      sourceMap: false,
     }),
     new webpack.DefinePlugin({
       'process.env': { NODE_ENV: JSON.stringify('production') }

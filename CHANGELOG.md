@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 Breaking changes:
+- Requires applications to use webpack to compile assets.
 - Requires a global `$k-typography: k-typography-definition((…))` instead of
   passing typography styles in mixins.
 - Move all styleguide stylesheets into dummy app for testing.
@@ -29,6 +30,7 @@ New features:
 - Add new component: `card` molecule.
 - Add susy library to handle grid sizes
 - Add new component: `row` molecule.
+- Add image assets management in dummy webpack configuration.
 
 Fix:
 - Loan Simulator does not show Infinty durations when pressing enter.
