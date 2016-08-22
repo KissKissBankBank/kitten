@@ -14,10 +14,11 @@ module Kitten
 
   # Configuration variables and defaults.
   class Configuration
-    attr_accessor :app_stylesheet_path
+    attr_accessor :webpack_entry_point
+    attr_accessor :asset_host
 
     def initialize
-      self.app_stylesheet_path = 'application'
+      self.webpack_entry_point = 'application'
     end
   end
 end
