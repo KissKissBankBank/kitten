@@ -21,6 +21,7 @@
 ///      </div>
 ///    </div>
 ///
+///    <div class="k-Row k-Row--padded">…</div>
 ///    <div class="k-Row k-Row--centered">…</div>
 ///    <div class="k-Row k-Row--light">…</div>
 ///    <div class="k-Row k-Row--dark">…</div>
@@ -65,7 +66,9 @@
 
     .k-Row__content {
       @include container(70rem); // TODO use global
-      padding: 2rem 0;
+      .k-Row--padded & {
+        padding: 2rem 0;
+      }
     }
   }
 }
