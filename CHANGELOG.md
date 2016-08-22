@@ -28,7 +28,7 @@ New features:
 - Ignore playground changes in git (requires to type `rake` in development)
 - Add new component: `hero` molecule.
 - Add new component: `card` molecule.
-- Add susy library to handle grid sizes
+- Add susy library to handle grid sizes.
 - Add new component: `row` molecule.
 - Add image assets management in dummy webpack configuration.
 
