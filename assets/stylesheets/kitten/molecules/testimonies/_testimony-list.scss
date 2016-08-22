@@ -21,7 +21,9 @@
     }
 
     .k-TestimonyList__item {
-      flex: 1;
+      width: span(3 of 12);
+      margin-left: (gutter() / 2);
+      margin-right: (gutter() / 2);
     }
   }
 }
