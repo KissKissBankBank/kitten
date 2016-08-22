@@ -184,11 +184,20 @@ The styleguide css is served by webpack through
 [webpack-rails](https://github.com/mipearson/webpack-rails). By default, the
 `webpack_asset_paths` helper is called with the entry point `application`.
 
-If you want to use another webpack entry point for the styleguide css, you have
-to configure it with an initializer `config/initializers/kitten.rb`:
+#### Configuration
+
+`kitten` provides some configuration options that can be defined in
+`config/initializers/kitten.rb`:
+- `webpack_entry_point`: if defined, it will be passed as webpack entry point to
+the `webpack_asset_paths` helper;
+
+- `asset_host`: if defined, it will prepend a custom host to the asset path in
+production (eg. if you need to serve your assets through a CDN).
+
 ```rb
 Kitten.configure do |config|
-  config.app_stylesheet_path = 'my_custom_entry_point'
+  config.webpack_entry_point = 'my_custom_entry_point'
+  config.asset_host = 'https://my_custom_asset_host'
 end
 ```
 
