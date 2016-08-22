@@ -5,7 +5,7 @@ module Kitten
       # outputs a relative path when we are on production.
       # As we serve assets through Cloudfront CDN, we need to append the CDN URL
       # in the stylesheet asset paths.
-      host = served_by_asset_host? ? "#{Kitten.configuration.asset_host}" : ''
+      host = served_by_asset_host? ? Kitten.configuration.asset_host : ''
 
       paths = webpack_asset_paths(entry_point, extension: 'css').map do |path|
         "#{host}#{path}"
