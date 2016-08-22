@@ -3,6 +3,8 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
+
+## [v0.5.0] - 2016-08-22
 Breaking changes:
 - Requires applications to use webpack to compile assets.
 - Requires a global `$k-typography: k-typography-definition((…))` instead of
@@ -14,7 +16,7 @@ Breaking changes:
   `if Rails.env.development?` if you don't want to serve it in production.
 
 New features:
-- Enable configuration on styleguide stylesheet path.
+- Add gem configuration options.
 - Add webpack to manage `kitten` scss assets in dummy app.
 - Add new component: `header` organism
 - Add new component: `testimonies` molecule
@@ -31,6 +33,7 @@ New features:
 - Add Susy library to handle grid sizes.
 - Add new component: `row` molecule.
 - Add image assets management in dummy webpack configuration.
+- Add webpack asset path helper.
 
 Fix:
 - Loan Simulator does not show Infinty durations when pressing enter.
