@@ -27,7 +27,7 @@
   @include k-with-module('k-Hero') {
     $font: k-map-fetch($hero, 'font');
 
-    $container-width: 80rem; // TODO: use global
+    $container-width: 70rem; // TODO: use global
     $two-columns-breakpoint: 60em;
 
     .k-Hero {
