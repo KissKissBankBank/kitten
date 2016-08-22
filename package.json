@@ -21,7 +21,8 @@
   "devDependencies": {
     "sassdoc": "^2.1.20",
     "stylelint": "^6.7.1",
-    "stylelint-scss": "^1.2.0"
+    "stylelint-scss": "^1.2.0",
+    "susy": "^2.2.12"
   },
   "dependencies": {
     "node-sass": "^3.8.0",

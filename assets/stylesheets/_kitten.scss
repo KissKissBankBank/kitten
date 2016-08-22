@@ -2,6 +2,7 @@ $k-module: null;
 
 @import 'sassy-maps';
 @import 'modular-scale';
+@import '~susy/sass/susy';
 
 @import 'kitten/schema';
 @import 'kitten/definitions';

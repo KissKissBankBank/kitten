@@ -66,6 +66,9 @@ $k-typography: k-typography-definition((
 @import 'molecules/form/text-input-with-unit';
 @import 'molecules/form/search-input';
 
+// Grid
+@import 'molecules/grid/row';
+
 // Hero
 @import 'molecules/heroes/hero';
 
