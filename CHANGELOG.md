@@ -28,6 +28,7 @@ New features:
 - Add new component: `hero` molecule.
 - Add new component: `card` molecule.
 - Add susy library to handle grid sizes
+- Add new component: `row` molecule.
 
 Fix:
 - Loan Simulator does not show Infinty durations when pressing enter.
