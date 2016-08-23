@@ -3,10 +3,14 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
+
+## [v0.6.1] - 2016-08-23
+
 Fixes:
 - Move JavaScript imports for the styleguide to the dummy app
 
 ## [v0.6.0] - 2016-08-23
+
 New features:
 - Add new component: `grid-duo` molecule.
 - Add new text/align utility.
@@ -18,6 +22,7 @@ Fixes:
 - Remove `npm link kitten`.
 
 ## [v0.5.0] - 2016-08-22
+
 Breaking changes:
 - Requires applications to use webpack to compile assets.
 - Requires a global `$k-typography: k-typography-definition((…))` instead of
@@ -52,6 +57,7 @@ Fix:
 - Loan Simulator does not show Infinty durations when pressing enter.
 
 ## [v0.4.0] - 2016-08-04
+
 Minor updates:
 - Update `@group` property in SassDoc comments.
 - Update npm module exposed variables: it now returns an array of `loadPaths`
@@ -63,6 +69,7 @@ New features:
 - Add new css structure on styleguide.
 
 ## [v0.3.0] - 2016-08-01
+
 New features:
 - Add new component: `loan-simulator` organism.
 - Add new validation system.
