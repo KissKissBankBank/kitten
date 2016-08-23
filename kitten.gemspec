@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
                    'It provides mixins to create flexible components ' \
                    'based on your own brand elements.'
 
-  s.files         = Dir['{lib,assets}/**/*', 'Rakefile', 'README.md']
+  s.files         = Dir['{app,assets,lib}/**/*', 'Rakefile', 'README.md']
   s.require_paths = ['lib']
 
   s.metadata['allowed_push_host'] = 'https://gemfury.com'
