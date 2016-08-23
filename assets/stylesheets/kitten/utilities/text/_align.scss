@@ -1,0 +1,16 @@
+/// Text alignment utilities.
+///
+/// @group text
+///
+/// @example scss - Usage
+///
+///     @include k-utilities-align;
+///
+/// @example html
+///
+///     <div class="k-u-centerered">…</div>
+@mixin k-utilities-align {
+  .k-u-centerered {
+    text-align: center;
+  }
+}
