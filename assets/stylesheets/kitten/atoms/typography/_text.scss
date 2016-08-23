@@ -1,3 +1,14 @@
+/// Text helpers
+///
+/// @group typography
+///
+/// @example scss - Usage
+///
+///     @include k-Text;
+///
+/// @example html
+///
+///     <div class="k-Text--center"></div>
 @mixin k-Text {
   .k-Text--center {
     text-align: center;
