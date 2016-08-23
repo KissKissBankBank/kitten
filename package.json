@@ -18,13 +18,13 @@
   "devDependencies": {
     "sassdoc": "^2.1.20",
     "stylelint": "^6.7.1",
-    "stylelint-scss": "^1.2.0",
-    "susy": "^2.2.12"
+    "stylelint-scss": "^1.2.0"
   },
   "dependencies": {
     "node-sass": "^3.8.0",
     "modularscale-sass": "^2.1.1",
-    "sassy-maps": "^0.4.2"
+    "sassy-maps": "^0.4.2",
+    "susy": "^2.2.12"
   },
   "scripts": {
     "sassdoc": "sassdoc -d public/sassdoc assets/stylesheets",
