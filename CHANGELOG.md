@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [v0.6.2] - 2016-08-23
+
 Fixes:
 - Add config, public and vendor folders in gem package.
 
