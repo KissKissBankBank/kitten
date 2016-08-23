@@ -35,6 +35,7 @@ New features:
 - Add image assets management in dummy webpack configuration.
 - Add webpack asset path helper.
 - Add new component: `grid-duo` molecule.
+- Add new text/align utility.
 
 Fix:
 - Loan Simulator does not show Infinty durations when pressing enter.
