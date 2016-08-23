@@ -4,10 +4,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+Fixes:
+- Add config, public and vendor folders in gem package.
+
 ## [v0.6.1] - 2016-08-23
 
 Fixes:
-- Move JavaScript imports for the styleguide to the dummy app
+- Move JavaScript imports for the styleguide to the dummy app.
 
 ## [v0.6.0] - 2016-08-23
 
