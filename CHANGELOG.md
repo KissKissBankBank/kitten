@@ -4,6 +4,17 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [v0.6.0] - 2016-08-23
+New features:
+- Add new component: `grid-duo` molecule.
+- Add new text/align utility.
+
+Fixes:
+- Add susy as regular dependency in npm module.
+- Add app folder to gem package.
+- Remove `publishConfig` attribute in `package.json`.
+- Remove `npm link kitten`.
+
 ## [v0.5.0] - 2016-08-22
 Breaking changes:
 - Requires applications to use webpack to compile assets.
@@ -34,8 +45,6 @@ New features:
 - Add new component: `row` molecule.
 - Add image assets management in dummy webpack configuration.
 - Add webpack asset path helper.
-- Add new component: `grid-duo` molecule.
-- Add new text/align utility.
 
 Fix:
 - Loan Simulator does not show Infinty durations when pressing enter.
