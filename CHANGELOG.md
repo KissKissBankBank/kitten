@@ -3,6 +3,8 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
+Fixes:
+- Move JavaScript imports for the styleguide to the dummy app
 
 ## [v0.6.0] - 2016-08-23
 New features:
