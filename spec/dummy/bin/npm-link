@@ -2,6 +2,5 @@
 
 cd ../..
 npm link
-npm link kitten
 cd spec/dummy
 npm link kitten
