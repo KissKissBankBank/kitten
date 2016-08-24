@@ -1,0 +1,46 @@
+/// ButtonWithBadge
+///
+/// @group buttons
+///
+/// @example scss - usage
+///
+///   @include k-ButtonWithBadge;
+///
+/// @example html
+///
+///   <button class="k-ButtonWithBadge">
+///     <span class="k-ButtonImage">
+///       <img class="k-ButtonImage__img"
+///            src="https://placekitten.com/g/40/40"
+///            width="40"
+///            height="40"
+///            alt="" />
+///     </span>
+///
+///     <span class="k-ButtonWithBadge__badge k-Badge">42</span>
+///   </button>
+
+@mixin k-ButtonWithBadge {
+  .k-ButtonWithBadge {
+    position: relative;
+    padding: 0;
+
+    outline: none;
+    border: none;
+    background: none;
+
+    cursor: pointer;
+  }
+
+  .k-ButtonWithBadge__badge {
+    position: absolute;
+    top: -8px;
+    left: 60%;
+
+    // FIXME: position absolute change padding…
+    padding-top: k-px-to-rem(4px);
+    padding-bottom: k-px-to-rem(4px);
+
+    border: 2px solid white;
+  }
+}

@@ -66,6 +66,9 @@ $k-typography: k-typography-definition((
 // Molecules
 // ----------
 
+// Buttons
+@import 'molecules/buttons/button-with-badge';
+
 // Cards
 @import 'molecules/cards/card';
 
