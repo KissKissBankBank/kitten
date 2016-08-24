@@ -8,7 +8,7 @@ New features:
 - Add new component: `button-image-with-text` molecule.
 
 Fixes:
-- Calculate position of `k-UserMenu` in `header` organism.
+- Computes position of `k-UserMenu` in `header` organism.
 
 ## [v0.6.2] - 2016-08-23
 
