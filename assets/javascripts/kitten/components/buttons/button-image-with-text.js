@@ -30,9 +30,9 @@ window.ButtonImageWithText = React.createClass({
       <button className={ buttonClassName }
               aria-haspopup="true"
               aria-expanded={ isExpanded }
+              title={ title }
               { ...rest }>
-        <span ref="buttonImage" className="k-ButtonImage"
-              title={ title }>
+        <span ref="buttonImage" className="k-ButtonImage">
           <img className="k-ButtonImage__img"
                src={ srcImg }
                width={ widthImg }
