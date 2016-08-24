@@ -38,6 +38,7 @@
 
   .k-ButtonImageWithText__text {
     margin: k-px-to-rem(10px);
+    text-align: left;
 
     @include k-typographyFontSize(-1, 1);
     @include k-typographyFont('source-sans-semi-bold');

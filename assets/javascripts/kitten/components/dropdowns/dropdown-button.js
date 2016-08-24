@@ -1,18 +1,29 @@
-window.DropdownButton = function(props) {
-  const { className, isExpanded, ...rest } = props
-  const buttonClassName = classNames('k-Dropdown__button', props.className)
+window.DropdownButton = React.createClass({
+  propTypes: {
+    children: React.PropTypes.string,
+    onClick: React.PropTypes.func,
+    isExpanded: React.PropTypes.bool
+  },
 
-  return(
-    <button
-      className={ buttonClassName }
-      aria-haspopup="true"
-      aria-expanded={ props.isExpanded }
-      { ...rest }>
-    </button>
-  );
-}
+  getDefaultProps: function() {
+    return {
+      children: 'Toggle button',
+      onClick: () => {},
+      isExpanded: false
+    }
+  },
 
-DropdownButton.defaultProps = {
-  children: 'Toggle button',
-  onClick: () => {}
-}
+  render: function() {
+    const { className, isExpanded, ...rest } = this.props
+    const buttonClassName = classNames('k-Dropdown__button', this.props.className)
+
+    return(
+      <button ref="dropdownButton"
+              className={ buttonClassName }
+              aria-haspopup="true"
+              aria-expanded={ this.props.isExpanded }
+              { ...rest }>
+      </button>
+    )
+  }
+})

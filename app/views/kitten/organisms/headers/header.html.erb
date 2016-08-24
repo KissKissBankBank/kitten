@@ -308,15 +308,19 @@
         positionedWith: document.getElementById('header-logged'),
         positionedWithBorder: false,
         positionedTo: 'right',
-        positionedRelativeTo: 'k-ButtonImage',
 
         buttonId: 'k-UserMenu',
-        buttonClassName: 'k-ButtonImageWithText',
-        buttonContentOnExpanded: button,
-        buttonContentOnCollapsed: button,
+        buttonTemplate: 'ButtonImageWithText',
+        srcImg: 'https://placekitten.com/g/100/100',
+        widthImg: 100,
+        heightImg: 100,
+        altImg: 'Alt Firstname',
+        text: 'Fooezaeazeaz',
+        title: 'Profil',
 
         refreshEvents: ['resize', 'karl:element#header:classToggled'],
         dropdownListClassName: 'k-UserMenu',
+        dropdownListArrow: true,
         dropdownList: [
           <li><a className="k-UserMenu__item" href="#">Mon profil</a></li>,
           <li><a className="k-UserMenu__item" href="#">Mes projets</a></li>,

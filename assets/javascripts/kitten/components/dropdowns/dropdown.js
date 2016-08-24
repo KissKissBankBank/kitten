@@ -1,4 +1,15 @@
 window.Dropdown = React.createClass({
+  propTypes: {
+    positionedWith: React.PropTypes.string,
+    positionedWithBorder: React.PropTypes.bool,
+    positionedTo: React.PropTypes.string,
+    buttonTemplate: React.PropTypes.string,
+    buttonContentOnExpanded: React.PropTypes.string,
+    buttonContentOnCollapsed: React.PropTypes.string,
+    refreshEvents: React.PropTypes.array,
+    dropdownListArrow: React.PropTypes.bool,
+    dropdownList: React.PropTypes.array,
+  },
   // Lifecycle
   getDefaultProps: function() {
     return {
@@ -17,6 +28,10 @@ window.Dropdown = React.createClass({
       // This prop is used to fix the dropdown on left or right.
       positionedTo: 'left', // 'left' | 'right'
 
+      // This prop is used to render with component 'ButtonImageWithText'
+      // or 'DropdownButton'
+      buttonTemplate: 'DropdownButton',
+
       // Button settings
       buttonContentOnExpanded: 'Close me',
       buttonContentOnCollapsed: 'Expand me',
@@ -26,6 +41,7 @@ window.Dropdown = React.createClass({
       refreshEvents: [], // eg. ['resize']
 
       // Dropdown list settings
+      dropdownListArrow: false,
       dropdownList: []
     }
   },
@@ -76,6 +92,38 @@ window.Dropdown = React.createClass({
     this.setState({ parentHeight: referenceElementHeight })
   },
 
+  // Elements
+  getDropdownParent: function() {
+    return this.refs.dropdown ? this.refs.dropdown.parentNode : false
+  },
+  getDropdownContent: function() {
+    return this.refs.dropdownContent ? this.refs.dropdownContent : false
+  },
+  getButtonImage: function() {
+    if (!this.refs.buttonImageWithText) return
+    return this.refs.buttonImageWithText.refs.buttonImage
+  },
+
+  // Size of elements
+  getDropdownParentWidth: function() {
+    if (!this.getDropdownParent()) return
+    return this.getDropdownParent().getBoundingClientRect().width
+  },
+  getButtonImageHalfWidth: function() {
+    if (!this.getButtonImage()) return
+    return this.getButtonImage().getBoundingClientRect().width / 2
+  },
+  getDropdownContentHalfWidth: function() {
+    if (!this.getDropdownContent()) return
+    return this.getDropdownContent().getBoundingClientRect().width / 2
+  },
+  getDropdownParentPaddingLeft: function() {
+    if (!this.getDropdownParent()) return
+
+    const styles = window.getComputedStyle(this.getDropdownParent())
+    return parseInt(styles.getPropertyValue('padding-left'))
+  },
+
   // Component listener callbacks
   handleDropdownPosition: function(event) {
     this.updateReferenceElementHeightState()
@@ -90,15 +138,34 @@ window.Dropdown = React.createClass({
     })
   },
 
-  getPosition: function() {
-    let positionStyles = { top: this.state.parentHeight }
+  getContentPosition: function() {
+    const positionStyles = { top: this.state.parentHeight }
+    let verticalPosition = { left: 0 }
 
-    if (this.props.positionedTo == 'right')
-      positionStyles = Object.assign(positionStyles, { right: 0 })
-    else
-      positionStyles = Object.assign(positionStyles, { left: 0 })
+    if (this.props.positionedTo == 'right') {
+      verticalPosition = { right: 0 }
+    }
 
-    return positionStyles
+    if (this.props.buttonTemplate == 'ButtonImageWithText') {
+      let right = 0
+
+      right = this.getDropdownParentWidth()
+              - this.getButtonImageHalfWidth()
+              - this.getDropdownContentHalfWidth()
+              - this.getDropdownParentPaddingLeft()
+      right = right < 0 ? 0 : right
+
+      verticalPosition = { right: right + 'px' }
+    }
+
+    return Object.assign(positionStyles, verticalPosition)
+  },
+  getArrowPosition: function() {
+    const right = this.getDropdownParentWidth()
+                  - this.getButtonImageHalfWidth()
+                  - this.getDropdownParentPaddingLeft()
+
+    return { right: right + 'px' }
   },
 
   // Rendering
@@ -126,6 +193,50 @@ window.Dropdown = React.createClass({
 
     return this.props.buttonContentOnCollapsed
   },
+  renderDropdownButton: function() {
+    return (
+      <DropdownButton ref="dropdownButton"
+                      className={ this.props.buttonClassName }
+                      id={ this.props.buttonId }
+                      isExpanded={ this.state.isExpanded }
+                      onClick={ this.handleButtonClick.bind(this) }>
+        { this.renderButtonContentElement() }
+      </DropdownButton>
+    )
+  },
+  renderButtonImageWithText: function() {
+    return (
+      <ButtonImageWithText ref="buttonImageWithText"
+                           className={ this.props.buttonClassName }
+                           id={ this.props.buttonId }
+                           isExpanded={ this.state.isExpanded }
+                           onClick={ this.handleButtonClick.bind(this) }
+                           srcImg={ this.props.srcImg }
+                           widthImg={ this.props.widthImg }
+                           heightImg={ this.props.heightImg }
+                           altImg={ this.props.altImg }
+                           text={ this.props.text }
+                           title={ this.props.title }>
+      </ButtonImageWithText>
+    )
+  },
+  renderArrow: function(positionArrow: false) {
+    if (!this.props.dropdownListArrow)
+      return
+
+    let style = { right: "50%" }
+
+    if (positionArrow) {
+      style = this.getArrowPosition()
+    }
+
+    return (
+      <span ref="arrow"
+            className="k-UserMenu__arrow"
+            style={ style }>
+      </span>
+    )
+  },
   render: function() {
     const dropdownClass = {
       'is-expanded': this.state.isExpanded,
@@ -138,22 +249,26 @@ window.Dropdown = React.createClass({
       this.props.className
     )
 
-    const style = this.getPosition()
+    const style = this.getContentPosition()
+    const positionArrow = parseInt(style.right) == 0
+
+    let renderButton = this.renderDropdownButton()
+
+    if (this.props.buttonTemplate == 'ButtonImageWithText') {
+      renderButton = this.renderButtonImageWithText()
+    }
 
     return(
       <div ref="dropdown" className={ dropdownClassName }>
-        <DropdownButton className={ this.props.buttonClassName }
-                        id={ this.props.buttonId }
-                        isExpanded={ this.state.isExpanded }
-                        onClick={ this.handleButtonClick.bind(this) }>
-          { this.renderButtonContentElement() }
-        </DropdownButton>
-        <nav className="k-Dropdown__content"
+        { renderButton }
+        <nav ref="dropdownContent"
+             className="k-Dropdown__content"
              style={ style }
              role="navigation"
              aria-hidden="true"
              aria-labelledby={ this.props.buttonId }>
           { this.renderList() }
+          { this.renderArrow(positionArrow) }
         </nav>
       </div>
     );

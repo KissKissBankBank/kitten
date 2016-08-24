@@ -99,7 +99,8 @@
     }
   }
 
-  .k-Header__signup {
+  .k-Header__signup,
+  .k-Header__logged {
     @include k-media-sm {
       display: none;
     }
