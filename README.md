@@ -308,13 +308,13 @@ This last command will:
 
 ### Gemfury
 
-Then, you can upload the new `pkg/kitten-*.gem` build to Gemfury.
-
-### Node module
-
 As the `kitten` module is on a [private registry on
 Gemfury](https://gemfury.com/help/npm-registry), you have to make sure you have
 publication rights on the Gemfury repository, then:
+
+You can upload the new `pkg/kitten-*.gem` build to Gemfury.
+
+And:
 
 ```
 npm publish
