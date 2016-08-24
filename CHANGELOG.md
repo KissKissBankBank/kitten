@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+New features:
+- Grid overlay on the style guide when pressing ctrl-g
+
 ## [v0.6.2] - 2016-08-23
 
 Fixes:

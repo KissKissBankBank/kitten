@@ -1,5 +1,13 @@
 $k-module: null;
 
+// Default grid configuration
+$susy: (
+  columns: 12,
+  container: 1420px,
+  gutter-position: split,
+  gutters: 20px/96px,
+) !default;
+
 @import 'sassy-maps';
 @import 'modular-scale';
 @import '~susy/sass/susy';
