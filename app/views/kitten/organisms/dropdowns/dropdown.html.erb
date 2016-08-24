@@ -58,12 +58,15 @@
 
   <script type="text/babel">
     const button = ([
-        <span className="k-ButtonImage" title="Profil">
-          <img className="k-ButtonImage__img" src="https://placekitten.com/40/40" />
-        </span>,
-        <p className="k-ButtonImageWithText__text">Firstname</p>
-      ]
-    )
+      <span className="k-ButtonImage" title="Profil">
+        <img className="k-ButtonImage__img"
+             src="https://placekitten.com/g/40/40"
+             width="40"
+             height="40"
+             alt="" />
+      </span>,
+      <p className="k-ButtonImageWithText__text">Firstname</p>
+    ])
 
     ReactDOM.render(
       React.createElement(Dropdown, {
