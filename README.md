@@ -12,6 +12,7 @@ flexible components based on your own brand elements
 - Ruby 2.2.4
 - Bundler (`gem install bundler`)
 - Node > 0.12 (for stylelint)
+- Webpack
 
 
 ## Installation
@@ -22,11 +23,6 @@ Add this line to your application's Gemfile:
 
 ```ruby
 gem 'kitten'
-
-# SASS extensions for kitten
-source 'https://rails-assets.org' do
-  gem 'rails-assets-modular-scale'
-end
 ```
 
 And then execute:
@@ -41,6 +37,9 @@ To install routes for the style guide and sassdoc, add to your `routes.rb`:
 ```ruby
 mount Kitten::Engine, at: '/kitten' if Rails.env.development?
 ```
+
+Assets are served via Webpack, so you need to use webpack to compile or serve
+the CSS.
 
 
 ### Npm
@@ -181,6 +180,27 @@ Include the component your want to use in your application:
 `kitten` provides a styleguide interface. This feature is only available if you
 are using the gem with Ruby on Rails.
 
+The styleguide css is served by webpack through
+[webpack-rails](https://github.com/mipearson/webpack-rails). By default, the
+`webpack_asset_paths` helper is called with the entry point `application`.
+
+#### Configuration
+
+`kitten` provides some configuration options that can be defined in
+`config/initializers/kitten.rb`:
+- `webpack_entry_point`: if defined, it will be passed as webpack entry point to
+the `webpack_asset_paths` helper;
+
+- `asset_host`: if defined, it will prepend a custom host to the asset path in
+production (eg. if you need to serve your assets through a CDN).
+
+```rb
+Kitten.configure do |config|
+  config.webpack_entry_point = 'my_custom_entry_point'
+  config.asset_host = 'https://my_custom_asset_host'
+end
+```
+
 Check out the [documentation](../../wiki/Styleguide) to setup the styleguide directly in
 your application and with your own brand elements.
 
@@ -235,11 +255,6 @@ Then to run the server:
 ```sh
 $ foreman start
 ```
-
-### Ngrok
-
-To serve the styleguide without the webpack dev-server, deactivate webpack in
-`spec/dummy/config/initializers/kitten.rb` so that Sprockets can serve it.
 
 #### Generate SassDoc
 

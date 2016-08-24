@@ -3,7 +3,33 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
+
+## [v0.6.2] - 2016-08-23
+
+Fixes:
+- Add config, public and vendor folders in gem package.
+
+## [v0.6.1] - 2016-08-23
+
+Fixes:
+- Move JavaScript imports for the styleguide to the dummy app.
+
+## [v0.6.0] - 2016-08-23
+
+New features:
+- Add new component: `grid-duo` molecule.
+- Add new text/align utility.
+
+Fixes:
+- Add susy as regular dependency in npm module.
+- Add app folder to gem package.
+- Remove `publishConfig` attribute in `package.json`.
+- Remove `npm link kitten`.
+
+## [v0.5.0] - 2016-08-22
+
 Breaking changes:
+- Requires applications to use webpack to compile assets.
 - Requires a global `$k-typography: k-typography-definition((…))` instead of
   passing typography styles in mixins.
 - Move all styleguide stylesheets into dummy app for testing.
@@ -13,7 +39,7 @@ Breaking changes:
   `if Rails.env.development?` if you don't want to serve it in production.
 
 New features:
-- Enable configuration on styleguide stylesheet path.
+- Add gem configuration options.
 - Add webpack to manage `kitten` scss assets in dummy app.
 - Add new component: `header` organism
 - Add new component: `testimonies` molecule
@@ -28,11 +54,16 @@ New features:
 - Add new component: `hero` molecule.
 - Add new component: `card` molecule.
 - Add new component: `button-image-with-text` molecule.
+- Add Susy library to handle grid sizes.
+- Add new component: `row` molecule.
+- Add image assets management in dummy webpack configuration.
+- Add webpack asset path helper.
 
 Fix:
 - Loan Simulator does not show Infinty durations when pressing enter.
 
 ## [v0.4.0] - 2016-08-04
+
 Minor updates:
 - Update `@group` property in SassDoc comments.
 - Update npm module exposed variables: it now returns an array of `loadPaths`
@@ -44,6 +75,7 @@ New features:
 - Add new css structure on styleguide.
 
 ## [v0.3.0] - 2016-08-01
+
 New features:
 - Add new component: `loan-simulator` organism.
 - Add new validation system.

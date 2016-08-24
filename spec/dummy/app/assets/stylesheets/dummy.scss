@@ -1,4 +1,10 @@
+// Compiled by webpack, not by Sprockets.
+
+// Kitten library
 @import 'kitten';
+
+// Style guide
+@import 'kitten/karl';
 
 $k-fonts: (
   source-sans: (
@@ -29,6 +35,12 @@ $k-typography: k-typography-definition((
   line-height: 1.5rem,
   scale-multiplier: $major-second
 ));
+
+// ---------
+// Utilities
+// ---------
+
+@import 'utilities/text/align';
 
 // ------
 // Atoms
@@ -62,6 +74,10 @@ $k-typography: k-typography-definition((
 @import 'molecules/form/slider';
 @import 'molecules/form/text-input-with-unit';
 @import 'molecules/form/search-input';
+
+// Grid
+@import 'molecules/grid/grid-duo';
+@import 'molecules/grid/row';
 
 // Hero
 @import 'molecules/heroes/hero';

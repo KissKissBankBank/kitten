@@ -6,6 +6,7 @@ var getLoadPaths = function() {
 
   return [
     path.join(kittenPath, '..', '..', 'assets/stylesheets'),
+    path.join(kittenPath, '..', '..', 'assets/images'),
     path.join(kittenPath, '..', '..', 'app/assets/stylesheets'),
     path.join(kittenPath, '..', '..', 'vendor/assets/stylesheets'),
     path.join(sassyMapsPath, '..'),

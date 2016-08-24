@@ -4,9 +4,8 @@
 
 <title>Kitten style guide</title>
 
-<%= app_stylesheet_tag %>
-<%= stylesheet_link_tag 'kitten/application',
-      'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' %>
+<%= webpack_stylesheet_tags(Kitten.configuration.webpack_entry_point) %>
+<%= stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' %>
 
 <%= csrf_meta_tags %>
 
@@ -14,7 +13,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.0/react.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.0/react-dom.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/classnames/2.2.5/index.min.js"></script>
-<%= javascript_include_tag 'kitten/application', type: 'text/babel' %>
+
+<%# JavaScript included in head because of the style guide's script tags %>
+<%= javascript_include_tag 'dummy', type: 'text/babel' %>
 
 </head>
 <body>

@@ -21,7 +21,7 @@
 
 @mixin k-SearchInput {
 
-  $icon-path: 'icons/magnifying.svg';
+  $icon-path: '~icons/magnifying.svg';
   $icon-size: k-px-to-rem(17px);
 
   .k-SearchInput {
