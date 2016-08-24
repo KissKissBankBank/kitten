@@ -4,6 +4,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+New features:
+- Add new component: `button-image-with-text` molecule.
+
+Fixes:
+- Calculate position of `k-UserMenu` in `header` organism.
+
 ## [v0.6.2] - 2016-08-23
 
 Fixes:
@@ -53,7 +59,6 @@ New features:
 - Ignore playground changes in git (requires to type `rake` in development)
 - Add new component: `hero` molecule.
 - Add new component: `card` molecule.
-- Add new component: `button-image-with-text` molecule.
 - Add Susy library to handle grid sizes.
 - Add new component: `row` molecule.
 - Add image assets management in dummy webpack configuration.
