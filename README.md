@@ -275,21 +275,21 @@ The documentation is accessible on development environment: `/kitten/sassdoc`.
 
 - Create a PR with a clear title in English.
 - Tag it with the right label (`Work in progress`, `Needs reviews`, etc.).
-- Update the CHANGELOG.md under the section `[unreleased]` when the PR is ready
-  for reviewing.
+- Don't forget to update the `CHANGELOG.md` under the `[unreleased]` section
 
 For admin collaborators, before merging the PR:
 
-- Add the PR to the related milestone.
+- Add the PR to the "Next release" milestone.
 - Use `Squash and merge` option to merge the PR.
 
 ## Release
 
 To release a new version:
 
+- Pull `master`
 - Update the version in `lib/kitten/version.rb`.
 - Update the version in `package.json`.
-- Update the `CHANGELOG.md` with your new features and fixes.
+- Update the version in `CHANGELOG.md` and add a new `[unreleased]` section.
 
 - Run this command:
 
@@ -319,3 +319,8 @@ And:
 ```
 npm publish
 ```
+
+### Github
+
+You can now rename the "Next release" milestone to "Release vX.X.X" and close
+it. Finally, make sure you create a new milestone called "Next release".
