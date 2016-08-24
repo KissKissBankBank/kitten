@@ -51,12 +51,12 @@ $k-typography: k-typography-definition((
 @import 'atoms/buttons/button-icon';
 @import 'atoms/buttons/button-image';
 
-// Helpers
-@import 'atoms/badge';
-
 // Form
 @import 'atoms/form/label';
 @import 'atoms/form/text-input';
+
+// Notifications
+@import 'atoms/notifications/badge';
 
 // Typography
 @import 'atoms/typography/body-copy';
