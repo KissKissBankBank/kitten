@@ -23,23 +23,23 @@ window.ButtonImageWithText = React.createClass({
             srcImg, widthImg, heightImg, altImg,
             ...rest } = this.props
 
-    const buttonClassName = classNames('k-ButtonImageWithText', this.props.className)
-    const textClassName = classNames('k-ButtonImageWithText__text', this.props.classNameText)
+    const buttonClassName = classNames('k-ButtonImageWithText', className)
+    const textClassName = classNames('k-ButtonImageWithText__text', classNameText)
 
     return(
       <button className={ buttonClassName }
               aria-haspopup="true"
-              aria-expanded={ this.props.isExpanded }
+              aria-expanded={ isExpanded }
               { ...rest }>
         <span ref="buttonImage" className="k-ButtonImage"
-              title={ this.props.title }>
+              title={ title }>
           <img className="k-ButtonImage__img"
-               src={ this.props.srcImg }
-               width={ this.props.widthImg }
-               height={ this.props.heightImg }
-               alt={ this.props.altImg } />
+               src={ srcImg }
+               width={ widthImg }
+               height={ heightImg }
+               alt={ altImg } />
         </span>
-        <p className={ textClassName }>{ this.props.text }</p>
+        <p className={ textClassName }>{ text }</p>
       </button>
     )
   }

@@ -66,12 +66,12 @@
 
     .k-UserMenu__arrow {
       position: absolute;
-      top: -(k-px-to-rem($arrow-size - $border-size));
+      top: -($arrow-size - $border-size);
       right: 50%;
 
       display: block;
       width: 0;
-      height: k-px-to-rem($arrow-size);
+      height: $arrow-size;
 
       &:after,
       &:before {

@@ -147,12 +147,10 @@ window.Dropdown = React.createClass({
     }
 
     if (this.props.buttonTemplate == 'ButtonImageWithText') {
-      let right = 0
-
-      right = this.getDropdownParentWidth()
-              - this.getButtonImageHalfWidth()
-              - this.getDropdownContentHalfWidth()
-              - this.getDropdownParentPaddingLeft()
+      let right = this.getDropdownParentWidth()
+                  - this.getButtonImageHalfWidth()
+                  - this.getDropdownContentHalfWidth()
+                  - this.getDropdownParentPaddingLeft()
       right = right < 0 ? 0 : right
 
       verticalPosition = { right: right + 'px' }
@@ -216,8 +214,7 @@ window.Dropdown = React.createClass({
                            heightImg={ this.props.heightImg }
                            altImg={ this.props.altImg }
                            text={ this.props.text }
-                           title={ this.props.title }>
-      </ButtonImageWithText>
+                           title={ this.props.title } />
     )
   },
   renderArrow: function(positionArrow: false) {
