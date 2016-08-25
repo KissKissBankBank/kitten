@@ -5,7 +5,7 @@ $susy: (
   columns: 12,
   container: 1420px,
   gutter-position: split,
-  gutters: 20px/96px,
+  gutters: 20/((1420-13*20)/12),
 ) !default;
 
 @import 'sassy-maps';

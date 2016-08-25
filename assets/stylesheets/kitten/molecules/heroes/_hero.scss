@@ -27,19 +27,18 @@
   @include k-with-module('k-Hero') {
     $font: k-map-fetch($hero, 'font');
 
-    $container-width: 70rem; // TODO: use global
     $two-columns-breakpoint: 60em;
 
     .k-Hero {
-      padding: 1rem;
-
       // Apps will want to override with a custom background image and color
       background-size: cover;
       background-repeat: no-repeat;
     }
 
     .k-Hero__container {
-      @include container($container-width);
+      @include container;
+      box-sizing: border-box;
+      padding: 0 gutter();
 
       @media (min-width: $two-columns-breakpoint) {
         display: flex;
@@ -50,12 +49,14 @@
 
     .k-Hero__text {
       flex: 1;
+      margin: 0 gutter();
 
       @media (max-width: $two-columns-breakpoint) {
         text-align: center;
       }
     }
     .k-Hero__action {
+      margin: 0 gutter();
       padding-top: 3rem;
 
       @media (min-width: $two-columns-breakpoint) {
