@@ -55,6 +55,9 @@ $k-typography: k-typography-definition((
 @import 'atoms/form/label';
 @import 'atoms/form/text-input';
 
+// Notifications
+@import 'atoms/notifications/badge';
+
 // Typography
 @import 'atoms/typography/body-copy';
 @import 'atoms/typography/scale';
@@ -62,6 +65,9 @@ $k-typography: k-typography-definition((
 // ----------
 // Molecules
 // ----------
+
+// Buttons
+@import 'molecules/buttons/button-with-badge';
 
 // Cards
 @import 'molecules/cards/card';
