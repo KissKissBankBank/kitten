@@ -38,10 +38,10 @@
     flex: 1;
 
     &:first-of-type {
-      margin-right: (gutter() / 2);
+      margin-right: gutter();
     }
     &:last-of-type {
-      margin-left: (gutter() / 2);
+      margin-left: gutter();
     }
   }
 }
