@@ -12,6 +12,21 @@ window.kitten.elements = (function(elements) {
     return element.clientHeight
   }
 
+  // Return element computed width.
+  elements.getComputedWidth = function(element) {
+    if (!element) return
+
+    return element.getBoundingClientRect().width
+  }
+
+  // Return value of property's style for element.
+  elements.getComputeStyle = function(element, property) {
+    if (!element) return
+
+    const styles = window.getComputedStyle(element)
+    return styles.getPropertyValue(property)
+  }
+
   return elements
 
 })(window.kitten.elements || {})

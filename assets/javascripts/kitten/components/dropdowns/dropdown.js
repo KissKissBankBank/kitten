@@ -94,10 +94,10 @@ window.Dropdown = React.createClass({
 
   // Elements
   getDropdownParent: function() {
-    return this.refs.dropdown ? this.refs.dropdown.parentNode : false
+    return this.refs.dropdown ? this.refs.dropdown.parentNode : null
   },
   getDropdownContent: function() {
-    return this.refs.dropdownContent ? this.refs.dropdownContent : false
+    return this.refs.dropdownContent ? this.refs.dropdownContent : null
   },
   getButtonImage: function() {
     if (!this.refs.buttonImageWithText) return
@@ -106,22 +106,18 @@ window.Dropdown = React.createClass({
 
   // Size of elements
   getDropdownParentWidth: function() {
-    if (!this.getDropdownParent()) return
-    return this.getDropdownParent().getBoundingClientRect().width
+    return kitten.elements.getComputedWidth(this.getDropdownParent())
   },
   getButtonImageHalfWidth: function() {
-    if (!this.getButtonImage()) return
-    return this.getButtonImage().getBoundingClientRect().width / 2
+    return kitten.elements.getComputedWidth(this.getButtonImage()) / 2
   },
   getDropdownContentHalfWidth: function() {
-    if (!this.getDropdownContent()) return
-    return this.getDropdownContent().getBoundingClientRect().width / 2
+    return kitten.elements.getComputedWidth(this.getDropdownContent()) / 2
   },
   getDropdownParentPaddingLeft: function() {
-    if (!this.getDropdownParent()) return
-
-    const styles = window.getComputedStyle(this.getDropdownParent())
-    return parseInt(styles.getPropertyValue('padding-left'))
+    return parseInt(
+      kitten.elements.getComputeStyle(this.getDropdownParent(), 'padding-left')
+    )
   },
 
   // Component listener callbacks
