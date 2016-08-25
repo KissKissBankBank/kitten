@@ -275,25 +275,30 @@ The documentation is accessible on development environment: `/kitten/sassdoc`.
 
 - Create a PR with a clear title in English.
 - Tag it with the right label (`Work in progress`, `Needs reviews`, etc.).
-- Update the CHANGELOG.md under the section `[unreleased]` when the PR is ready
-  for reviewing.
+- Don't forget to update the `CHANGELOG.md` under the `[unreleased]` section
 
 For admin collaborators, before merging the PR:
-- Add the PR to the related milestone.
+
+- Add the PR to the "Next release" milestone.
 - Use `Squash and merge` option to merge the PR.
 
 ## Release
 
 To release a new version:
-- Update the version in `lib/kitten/version.rb` and `package.json`.
-- Update the `CHANGELOG.md` with your new features and fixes.
+
+- Pull `master`
+- Update the version in `lib/kitten/version.rb`.
+- Update the version in `package.json`.
+- Update the version in `CHANGELOG.md` and add a new `[unreleased]` section.
 
 - Run this command:
-```
-bundle exec rake kitten_release
+
+```sh
+$ bundle exec rake kitten_release
 ```
 
 This last command will:
+
 - generate the gem package;
 - generate the SassDoc;
 - commit `lib/kitten/version.rb`, `CHANGELOG.md` and
@@ -301,26 +306,21 @@ This last command will:
 - tag the version;
 - push to Github.
 
-### Gem
+### Gemfury
 
-Then, you can upload the new `pkg/kitten-*.gem` build to Gemfury.
+As the `kitten` module is on a [private registry on
+Gemfury](https://gemfury.com/help/npm-registry), you have to make sure you have
+publication rights on the Gemfury repository, then:
 
-### Node module
-As the `kitten` module is on a [private registry on Gemfury](https://gemfury.com/help/npm-registry),
-you have to setup your npm configuration aka your `.npmrc` to be able to publish
-a new version of the `kitten` node module.
+You can upload the new `pkg/kitten-*.gem` build to Gemfury.
 
-Set your default registry in your `.npmrc`:
-```
-npm config set registry https://npm.fury.io/bob/
-```
+And:
 
-Set your authentication token in your `.npmrc`:
-```
-npm login
-```
-
-Then, you can publish the new module:
 ```
 npm publish
 ```
+
+### Github
+
+You can now rename the "Next release" milestone to "Release vX.X.X" and close
+it. Finally, make sure you create a new milestone called "Next release".
