@@ -2,7 +2,7 @@ window.Dropdown = React.createClass({
   propTypes: {
     positionedWith: React.PropTypes.string,
     positionedWithBorder: React.PropTypes.bool,
-    positionedTo: React.PropTypes.string,
+    positionedOn: React.PropTypes.string,
     buttonTemplate: React.PropTypes.string,
     buttonContentOnExpanded: React.PropTypes.string,
     buttonContentOnCollapsed: React.PropTypes.string,
@@ -26,7 +26,7 @@ window.Dropdown = React.createClass({
       positionedWithBorder: true,
 
       // This prop is used to fix the dropdown on left or right.
-      positionedTo: 'left', // 'left' | 'right'
+      positionedOn: 'left', // 'left' | 'right'
 
       // This prop is used to render with component 'ButtonImageWithText'
       // or 'DropdownButton'
@@ -138,7 +138,7 @@ window.Dropdown = React.createClass({
     const positionStyles = { top: this.state.parentHeight }
     let verticalPosition = { left: 0 }
 
-    if (this.props.positionedTo == 'right') {
+    if (this.props.positionedOn == 'right') {
       verticalPosition = { right: 0 }
     }
 

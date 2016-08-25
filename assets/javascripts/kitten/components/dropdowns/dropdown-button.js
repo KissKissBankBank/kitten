@@ -1,18 +1,4 @@
 window.DropdownButton = React.createClass({
-  propTypes: {
-    children: React.PropTypes.string,
-    onClick: React.PropTypes.func,
-    isExpanded: React.PropTypes.bool,
-  },
-
-  getDefaultProps: function() {
-    return {
-      children: 'Toggle button',
-      onClick: () => {},
-      isExpanded: false,
-    }
-  },
-
   render: function() {
     const { className, isExpanded, ...rest } = this.props
     const buttonClassName = classNames('k-Dropdown__button', className)
@@ -27,3 +13,15 @@ window.DropdownButton = React.createClass({
     )
   }
 })
+
+DropdownButton.propTypes = {
+  children: React.PropTypes.string,
+  onClick: React.PropTypes.func,
+  isExpanded: React.PropTypes.bool,
+}
+
+DropdownButton.defaultProps = {
+  children: 'Toggle button',
+  onClick: () => {},
+  isExpanded: false,
+}
