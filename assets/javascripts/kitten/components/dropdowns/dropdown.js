@@ -136,10 +136,10 @@ window.Dropdown = React.createClass({
 
   getContentPosition: function() {
     const positionStyles = { top: this.state.parentHeight }
-    let verticalPosition = { left: 0 }
+    let horizontalPosition = { left: 0 }
 
     if (this.props.positionedOn == 'right') {
-      verticalPosition = { right: 0 }
+      horizontalPosition = { right: 0 }
     }
 
     if (this.props.buttonTemplate == 'ButtonImageWithText') {
@@ -149,10 +149,10 @@ window.Dropdown = React.createClass({
                   - this.getDropdownParentPaddingLeft()
       right = right < 0 ? 0 : right
 
-      verticalPosition = { right: right + 'px' }
+      horizontalPosition = { right: right + 'px' }
     }
 
-    return Object.assign(positionStyles, verticalPosition)
+    return Object.assign(positionStyles, horizontalPosition)
   },
   getArrowPosition: function() {
     const right = this.getDropdownParentWidth()
