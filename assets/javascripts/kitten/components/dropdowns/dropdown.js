@@ -214,19 +214,16 @@ window.Dropdown = React.createClass({
     )
   },
   renderArrow: function(positionArrow: false) {
-    if (!this.props.dropdownListArrow)
-      return
+    if (!this.props.dropdownListArrow) return
 
-    let style = { right: "50%" }
-
-    if (positionArrow) {
-      style = this.getArrowPosition()
-    }
+    const positionDefault = { position: 'absolute', top: 0 }
+    const right = positionArrow ? this.getArrowPosition() : { right: '50%' }
+    const style = Object.assign(positionDefault, right)
 
     return (
       <span ref="arrow"
-            className="k-UserMenu__arrow"
             style={ style }>
+        { this.props.dropdownListArrow }
       </span>
     )
   },

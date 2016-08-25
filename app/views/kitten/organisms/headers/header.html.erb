@@ -293,9 +293,9 @@
       }),
       document.getElementById('k-Header__platformSwitchDropdown__example')
     )
-  </script>
 
-  <script type="text/babel">
+    const arrow = (<span className="k-UserMenu__arrow" />)
+
     ReactDOM.render(
       React.createElement(Dropdown, {
         positionedWith: document.getElementById('header-logged'),
@@ -308,12 +308,12 @@
         widthImg: 100,
         heightImg: 100,
         altImg: 'Alt Firstname',
-        text: 'Firstname',
+        text: 'F',
         title: 'Profil',
 
         refreshEvents: ['resize', 'karl:element#header:classToggled'],
         dropdownListClassName: 'k-UserMenu',
-        dropdownListArrow: true,
+        dropdownListArrow: arrow,
         dropdownList: [
           <a className="k-UserMenu__item" href="#">Mon profil</a>,
           <a className="k-UserMenu__item" href="#">Mes projets</a>,
