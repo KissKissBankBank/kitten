@@ -21,6 +21,8 @@
 ///   </button>
 
 @mixin k-ButtonWithBadge {
+  $position: -8px;
+
   .k-ButtonWithBadge {
     position: relative;
     padding: 0;
@@ -34,13 +36,34 @@
 
   .k-ButtonWithBadge__badge {
     position: absolute;
-    top: -8px;
-    left: 60%;
+    top: $position;
+    right: $position;
 
     // FIXME: position absolute change padding…
     padding-top: k-px-to-rem(4px);
     padding-bottom: k-px-to-rem(4px);
 
     border: 2px solid white;
+  }
+
+  .k-ButtonWithBadge__badge--topLeft {
+    top: $position;
+    right: auto;
+    bottom: auto;
+    left: $position;
+  }
+
+  .k-ButtonWithBadge__badge--bottomRight {
+    top: auto;
+    right: $position;
+    bottom: $position;
+    left: auto;
+  }
+
+  .k-ButtonWithBadge__badge--bottomLeft {
+    top: auto;
+    right: auto;
+    bottom: $position;
+    left: $position;
   }
 }
