@@ -1,18 +1,24 @@
-window.DropdownButton = function(props) {
+window.DropdownButton = function (props) {
   const { className, isExpanded, ...rest } = props
-  const buttonClassName = classNames('k-Dropdown__button', props.className)
+  const buttonClassName = classNames('k-Dropdown__button', className)
 
   return(
-    <button
-      className={ buttonClassName }
-      aria-haspopup="true"
-      aria-expanded={ props.isExpanded }
-      { ...rest }>
+    <button className={ buttonClassName }
+            aria-haspopup="true"
+            aria-expanded={ isExpanded }
+            { ...rest }>
     </button>
-  );
+  )
+}
+
+DropdownButton.propTypes = {
+  children: React.PropTypes.string,
+  onClick: React.PropTypes.func,
+  isExpanded: React.PropTypes.bool,
 }
 
 DropdownButton.defaultProps = {
   children: 'Toggle button',
-  onClick: () => {}
+  onClick: () => {},
+  isExpanded: false,
 }

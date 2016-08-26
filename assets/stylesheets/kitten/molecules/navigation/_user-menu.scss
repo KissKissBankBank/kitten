@@ -51,25 +51,67 @@
     $border-color-hover: k-color-definition(
       k-map-fetch($menu, ('colors', 'border-hover')));
 
+    $arrow-size: 8px;
+    $border-size: 1px;
+
     .k-UserMenu {
-      list-style-type: none;
-      border: 1px solid #eee;
-      border-left: none;
+      position: relative;
       width: 100%;
       margin: 0;
       padding: 0;
+      border: $border-size solid $border-color;
+      border-left: none;
+      list-style-type: none;
+    }
+
+    .k-UserMenu__arrow {
+      position: absolute;
+      top: -($arrow-size - $border-size);
+      right: 50%;
+
+      display: block;
+      width: 0;
+      height: $arrow-size;
+
+      &:after,
+      &:before {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        content: " ";
+        width: 0;
+        height: 0;
+        border: solid transparent;
+        pointer-events: none;
+      }
+
+      &:after {
+        border-color: rgba(255, 255, 255, 0);
+        border-bottom-color: $background-color;
+        border-width: $arrow-size - 3;
+        margin-left: -($arrow-size - 3);
+      }
+
+      &:before {
+        border-color: rgba(255, 255, 255, 0);
+        border-bottom-color: $border-color;
+        border-width: $arrow-size - 2;
+        margin-left: -($arrow-size - 2);
+      }
     }
 
     .k-UserMenu__item {
+      display: block;
+      padding: k-px-to-rem(15px) k-px-to-rem(20px);
+      outline: none;
+      border-left: $border-size solid $border-color;
+      background: $background-color;
+
       @include k-typographyFont($font);
       @include k-typographyFontSize($font-step, 1);
       text-decoration: none;
-
-      display: block;
-      border-left: 1px solid $border-color;
-      background: $background-color;
-      padding: k-px-to-rem(15px) k-px-to-rem(20px);
       color: $color;
+
       transition: background-color .2s, border-color .2s;
 
       &:hover,
@@ -80,7 +122,7 @@
     }
 
     .k-UserMenu__separation {
-      border-top: 1px solid $border-color;
+      border-top: $border-size solid $border-color;
     }
   }
 }

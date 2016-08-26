@@ -78,8 +78,8 @@
 
     ReactDOM.render(
       React.createElement(Dropdown, {
-        positionnedWith: document.getElementById('header'),
-        positionnedWithBorder: false,
+        positionedWith: document.getElementById('header'),
+        positionedWithBorder: false,
 
         buttonId: 'k-PlatformSwitch',
         buttonClassName: 'k-ButtonIcon k-ButtonIcon--tiny',
@@ -189,4 +189,144 @@
        href="#">Toggle fixed version</a>
   </p>
 
+<% end %>
+
+<%= example 'Header when logged' do %>
+
+  <header id="header-logged" class="k-Header" role="banner">
+
+    <div class="k-Header__grid">
+
+      <div class="k-Header__items">
+
+        <div class="k-Header__item" id="k-Header__platformSwitchDropdown__example">
+        </div>
+
+        <p class="k-Header__item">
+          <img src="https://placeholdit.imgix.net/~text?txt=LOGO&amp;w=180&amp;h=40"
+               alt="LOGO" />
+        </p>
+
+        <nav class="k-Header__item k-Header__nav">
+          <ul class="k-HorizontalNav" role="menubar">
+            <li role="menuitem">
+              <a class="k-HorizontalNav__item" href="#">
+                Nav link 1
+              </a>
+            </li>
+            <li role="menuitem">
+              <a class="k-HorizontalNav__item" href="#">
+                Nav link 2
+              </a>
+            </li>
+            <li role="menuitem">
+              <a class="k-HorizontalNav__item" href="#">
+                Nav link 3
+              </a>
+            </li>
+            <li role="menuitem">
+              <a class="k-HorizontalNav__item is-selected" href="#">
+                Nav link 4
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+      </div>
+
+      <div class="k-Header__items k-Header__items--pull-end">
+
+        <div class="k-Header__item">
+          <button class="k-ButtonIcon">
+            <svg class="k-ButtonIcon__svg" viewBox="-0.7 -0.7 18 18"
+              xmlns="http://www.w3.org/2000/svg">
+              <circle cx="7" cy="7" r="7" stroke-width="1.1"
+                class="k-ButtonIcon__svg__stroke" fill="none" />
+              <path d="M13 11 L17 15 L15.5 16.5 L11.5 12.7z" />
+            </svg>
+          </button>
+        </div>
+
+        <div id="k-UserMenuDropdownLogged" class="k-Header__item"></div>
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <p>
+    <a data-toggle-element="#header-logged"
+       data-toggle-class="is-fixed"
+       href="#">Toggle fixed version</a>
+  </p>
+
+  <script type="text/babel">
+    const svg = (<svg className="k-ButtonIcon__svg" viewBox="0 0 10 7" xmlns="http://www.w3.org/2000/svg">
+      <path d="M5 6.243L3.586 4.828 7.828.586 9.243 2z"/>
+      <path d="M5 6.243L.757 2 2.172.586l4.242 4.242z"/>
+    </svg>)
+
+    ReactDOM.render(
+      React.createElement(Dropdown, {
+        positionedWith: document.getElementById('header-logged'),
+        positionedWithBorder: false,
+
+        buttonId: 'k-PlatformSwitch',
+        buttonClassName: 'k-ButtonIcon k-ButtonIcon--tiny',
+        buttonContentOnExpanded: svg,
+        buttonContentOnCollapsed: svg,
+
+        refreshEvents: ['resize', 'karl:element#header:classToggled'],
+        dropdownListClassName: 'k-PlatformSwitch',
+        dropdownList: [
+          <ExternalRichLink className="k-PlatformSwitch__item">
+            <img src="https://placeholdit.imgix.net/~text?txt=LOGO&amp;w=180&amp;h=44" alt="LOGO" />
+          </ExternalRichLink>,
+          <ExternalRichLink className="k-PlatformSwitch__item">
+            <img src="https://placeholdit.imgix.net/~text?txt=LOGO&amp;w=180&amp;h=44" alt="LOGO" />
+          </ExternalRichLink>,
+          <ExternalRichLink className="k-PlatformSwitch__item">
+            <img src="https://placeholdit.imgix.net/~text?txt=LOGO&amp;w=180&amp;h=44" alt="LOGO" />
+          </ExternalRichLink>
+        ]
+      }),
+      document.getElementById('k-Header__platformSwitchDropdown__example')
+    )
+
+    const arrow = (<span className="k-UserMenu__arrow" />)
+
+    ReactDOM.render(
+      React.createElement(Dropdown, {
+        positionedWith: document.getElementById('header-logged'),
+        positionedWithBorder: false,
+        positionedOn: 'right',
+
+        buttonId: 'k-UserMenu',
+        buttonTemplate: 'ButtonImageWithText',
+        srcImg: 'https://placekitten.com/g/100/100',
+        widthImg: 100,
+        heightImg: 100,
+        altImg: 'Alt Firstname',
+        text: 'F',
+        title: 'Profil',
+
+        refreshEvents: ['resize', 'karl:element#header:classToggled'],
+        dropdownListClassName: 'k-UserMenu',
+        dropdownListArrow: arrow,
+        dropdownList: [
+          <a className="k-UserMenu__item" href="#">Mon profil</a>,
+          <a className="k-UserMenu__item" href="#">Mes projets</a>,
+          <a className="k-UserMenu__item" href="#">Mes contributions</a>,
+          <a className="k-UserMenu__item" href="#">Mes messages</a>,
+          <a className="k-UserMenu__item k-UserMenu__separation" href="#">
+            Profil
+          </a>,
+          <a className="k-UserMenu__item" href="#">Réglages</a>,
+          <a className="k-UserMenu__item" href="#">Déconnexion</a>
+        ]
+      }),
+      document.getElementById('k-UserMenuDropdownLogged')
+    )
+  </script>
 <% end %>
