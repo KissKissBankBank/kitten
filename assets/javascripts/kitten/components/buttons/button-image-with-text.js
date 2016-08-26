@@ -1,4 +1,23 @@
 window.ButtonImageWithText = React.createClass({
+  propTypes: {
+    children: React.PropTypes.string,
+    onClick: React.PropTypes.func,
+    isExpanded: React.PropTypes.bool,
+    text: React.PropTypes.string,
+    title: React.PropTypes.string,
+    srcImg: React.PropTypes.string,
+    widthImg: React.PropTypes.number,
+    heightImg: React.PropTypes.number,
+    altImg: React.PropTypes.string,
+  },
+  // Lifecycle
+  getDefaultProps: function() {
+    return {
+      children: 'Toggle button',
+      onClick: () => {},
+    }
+  },
+
   render: function() {
     const { className, isExpanded, text, title, classNameText,
             srcImg, widthImg, heightImg, altImg,
@@ -25,20 +44,3 @@ window.ButtonImageWithText = React.createClass({
     )
   }
 })
-
-ButtonImageWithText.propTypes = {
-  children: React.PropTypes.string,
-  onClick: React.PropTypes.func,
-  isExpanded: React.PropTypes.bool,
-  text: React.PropTypes.string,
-  title: React.PropTypes.string,
-  srcImg: React.PropTypes.string,
-  widthImg: React.PropTypes.number,
-  heightImg: React.PropTypes.number,
-  altImg: React.PropTypes.string
-}
-
-ButtonImageWithText.defaultProps = {
-  children: 'Toggle button',
-  onClick: () => {}
-}
