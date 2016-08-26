@@ -20,7 +20,7 @@ window.kitten.elements = (function(elements) {
   }
 
   // Return value of property's style for element.
-  elements.getComputeStyle = function(element, property) {
+  elements.getComputedStyle = function(element, property) {
     if (!element) return
 
     const styles = window.getComputedStyle(element)

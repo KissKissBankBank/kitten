@@ -114,9 +114,12 @@ window.Dropdown = React.createClass({
   getDropdownContentHalfWidth: function() {
     return kitten.elements.getComputedWidth(this.getDropdownContent()) / 2
   },
-  getDropdownParentPaddingLeft: function() {
+  getDropdownParentPadding: function($alignment: 'left') {
     return parseInt(
-      kitten.elements.getComputeStyle(this.getDropdownParent(), 'padding-left')
+      kitten.elements.getComputedStyle(
+        this.getDropdownParent(),
+        'padding-' + $alignment
+      )
     )
   },
 
@@ -143,23 +146,32 @@ window.Dropdown = React.createClass({
     }
 
     if (this.props.buttonTemplate == 'ButtonImageWithText') {
-      let right = this.getDropdownParentWidth()
+      let space = this.getDropdownParentWidth()
                   - this.getButtonImageHalfWidth()
                   - this.getDropdownContentHalfWidth()
-                  - this.getDropdownParentPaddingLeft()
-      right = right < 0 ? 0 : right
+                  - this.getDropdownParentPadding(this.props.positionedOn)
+      space = space < 0 ? 0 : space
 
-      horizontalPosition = { right: right + 'px' }
+      if (this.props.positionedOn == 'right') {
+        horizontalPosition = { right: space + 'px' }
+      } else {
+        horizontalPosition = { left: space + 'px' }
+      }
+
     }
 
     return Object.assign(positionStyles, horizontalPosition)
   },
   getArrowPosition: function() {
-    const right = this.getDropdownParentWidth()
+    const space = this.getDropdownParentWidth()
                   - this.getButtonImageHalfWidth()
-                  - this.getDropdownParentPaddingLeft()
+                  - this.getDropdownParentPadding(this.props.positionedOn)
 
-    return { right: right + 'px' }
+    if (this.props.positionedOn == 'right') {
+      return { right: space + 'px' }
+    }
+
+    return { left: space + 'px' }
   },
 
   // Rendering
