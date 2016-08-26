@@ -229,8 +229,8 @@ window.Dropdown = React.createClass({
     if (!this.props.dropdownListArrow) return
 
     const positionDefault = { position: 'absolute', top: 0 }
-    const right = positionArrow ? this.getArrowPosition() : { right: '50%' }
-    const style = Object.assign(positionDefault, right)
+    const position = positionArrow ? this.getArrowPosition() : { right: '50%' }
+    const style = Object.assign(positionDefault, position)
 
     return (
       <span ref="arrow"
@@ -252,7 +252,8 @@ window.Dropdown = React.createClass({
     )
 
     const style = this.getContentPosition()
-    const positionArrow = parseInt(style.right) == 0
+    const positionArrow = parseInt(style.right) == 0 ||
+                          parseInt(style.left) == 0
 
     let renderButton = this.renderDropdownButton()
 
