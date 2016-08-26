@@ -1,18 +1,15 @@
-window.DropdownButton = React.createClass({
-  render: function() {
-    const { className, isExpanded, ...rest } = this.props
-    const buttonClassName = classNames('k-Dropdown__button', className)
+window.DropdownButton = function (props) {
+  const { className, isExpanded, ...rest } = props
+  const buttonClassName = classNames('k-Dropdown__button', className)
 
-    return(
-      <button ref="dropdownButton"
-              className={ buttonClassName }
-              aria-haspopup="true"
-              aria-expanded={ isExpanded }
-              { ...rest }>
-      </button>
-    )
-  }
-})
+  return(
+    <button className={ buttonClassName }
+            aria-haspopup="true"
+            aria-expanded={ isExpanded }
+            { ...rest }>
+    </button>
+  )
+}
 
 DropdownButton.propTypes = {
   children: React.PropTypes.string,
