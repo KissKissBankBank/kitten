@@ -11,3 +11,8 @@ var openSubItems = $('.karl-Menu__subListItem').each(function(key, element){
     $(element).siblings(".karl-Menu__subSubList").toggleClass('is-opened');
   })
 });
+
+$('.karl-Menu__subSubListItem').click(function(){
+  $('.is-selected').removeClass('is-selected');
+  $(this).addClass('is-selected');
+});

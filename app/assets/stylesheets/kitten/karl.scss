@@ -139,8 +139,7 @@ $light-grey-2: #eee;
   }
 
   &:hover,
-  &:focus,
-  &.is-selected {
+  &:focus {
     background-color: $light-navy;
   }
 }
@@ -169,10 +168,7 @@ $light-grey-2: #eee;
 
   &:hover,
   &:focus,
-  &.is-selected {
-    background-color: $light-navy;
-  }
-
+  &.is-selected,
   &.is-opened {
     background-color: $light-navy;
   }
