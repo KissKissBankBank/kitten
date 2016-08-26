@@ -138,6 +138,8 @@
   cursor: pointer;
   outline: 0;
 
+  transition: background-color .2s, color .2s, border-color .2s;
+
   &:hover {
     @include k-buttonBorder($hover-border-color);
 

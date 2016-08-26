@@ -68,66 +68,6 @@
     .k-ButtonIcon {
       @include k-buttonBase($button-icon);
       @include k-buttonRounded($button-size, $icon-width, $icon-height);
-
-      &:hover {
-        .k-ButtonIcon__svg {
-          fill: $hover-color;
-        }
-
-        .k-ButtonIcon__svg__stroke {
-          stroke: $hover-color;
-        }
-      }
-
-      &:focus {
-        .k-ButtonIcon__svg {
-          @if $focus-color {
-            fill: $focus-color;
-          }
-          @else {
-            fill: $hover-color;
-          }
-        }
-
-        .k-ButtonIcon__svg__stroke {
-          @if $focus-color {
-            stroke: $focus-color;
-          }
-          @else {
-            stroke: $hover-color;
-          }
-        }
-      }
-
-      &:active {
-        .k-ButtonIcon__svg {
-          fill: $active-color;
-        }
-
-        .k-ButtonIcon__svg__stroke {
-          stroke: $active-color;
-        }
-      }
-
-      &:disabled {
-        .k-ButtonIcon__svg {
-          fill: $disabled-color;
-        }
-
-        .k-ButtonIcon__svg__stroke {
-          stroke: $disabled-color;
-        }
-      }
-
-      &.is-selected {
-        .k-ButtonIcon__svg {
-          fill: $is-selected-color;
-        }
-
-        .k-ButtonIcon__svg__stroke {
-          stroke: $is-selected-color;
-        }
-      }
     }
 
     .k-ButtonIcon__svg {
@@ -137,10 +77,62 @@
       width: $icon-width;
       height: $icon-height;
       fill: $base-color;
+      transition: fill .2s;
+
+      .k-ButtonIcon:hover & {
+        fill: $hover-color;
+      }
+
+      .k-ButtonIcon:focus & {
+        @if $focus-color {
+          fill: $focus-color;
+        }
+        @else {
+          fill: $hover-color;
+        }
+      }
+
+      .k-ButtonIcon:active & {
+        fill: $active-color;
+      }
+
+      .k-ButtonIcon:disabled & {
+        fill: $disabled-color;
+      }
+
+      .k-ButtonIcon.is-selected & {
+        fill: $is-selected-color;
+      }
     }
 
     .k-ButtonIcon__svg__stroke {
       stroke: $base-color;
+      transition: stroke .2s;
+
+      .k-ButtonIcon:hover & {
+        stroke: $hover-color;
+      }
+
+      .k-ButtonIcon:focus & {
+        @if $focus-color {
+          stroke: $focus-color;
+        }
+        @else {
+          stroke: $hover-color;
+        }
+      }
+
+      .k-ButtonIcon:active & {
+        stroke: $active-color;
+      }
+
+      .k-ButtonIcon:disabled & {
+        stroke: $disabled-color;
+      }
+
+      .k-ButtonIcon.is-selected & {
+        stroke: $is-selected-color;
+      }
     }
 
     .k-ButtonIcon--tiny {
@@ -156,6 +148,16 @@
     .k-ButtonIcon--big {
       @include k-buttonRounded($button-size-big,
         $icon-width, $icon-height);
+    }
+
+    .k-ButtonIcon__heart {
+      $heart-size: k-px-to-rem(14px);
+      @include k-buttonRounded($button-size, $heart-size, $heart-size);
+
+      .k-ButtonIcon__svg {
+        width: $heart-size;
+        height: $heart-size;
+      }
     }
   }
 }

@@ -47,5 +47,16 @@
 
     @include k-typographyFontSize(-1, 1);
     @include k-typographyFont('source-sans-semi-bold');
+
+    .k-ButtonImageWithText:hover &,
+    &:hover {
+      color: #4a84ff;
+    }
+
+    .k-ButtonImageWithText:active &,
+    &:active {
+      color: #4a84ff;
+      text-decoration: underline;
+    }
   }
 }

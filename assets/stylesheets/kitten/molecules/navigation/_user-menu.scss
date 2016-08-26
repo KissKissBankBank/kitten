@@ -48,8 +48,8 @@
       k-map-fetch($menu, ('colors', 'border')));
     $background-color-hover: k-color-definition(
       k-map-fetch($menu, ('colors', 'background-hover')));
-    $border-color-hover: k-color-definition(
-      k-map-fetch($menu, ('colors', 'border-hover')));
+    $border-color-active: k-color-definition(
+      k-map-fetch($menu, ('colors', 'border-active')));
 
     $arrow-size: 8px;
     $border-size: 1px;
@@ -114,10 +114,17 @@
 
       transition: background-color .2s, border-color .2s;
 
-      &:hover,
+      &:hover {
+        background-color: $background-color-hover;
+      }
+
       &:focus {
         background-color: $background-color-hover;
-        border-left-color: $border-color-hover;
+        border-left-color: $border-color-active;
+      }
+
+      &.is-selected {
+        border-left-color: $border-color-active;
       }
     }
 

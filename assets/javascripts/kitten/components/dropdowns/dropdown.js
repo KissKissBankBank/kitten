@@ -36,6 +36,8 @@ window.Dropdown = React.createClass({
       buttonContentOnExpanded: 'Close me',
       buttonContentOnCollapsed: 'Expand me',
 
+      spaceAroundGrid: 0,
+
       // This prop is used to update the reference element height when a
       // javascript event is triggered on the window object.
       refreshEvents: [], // eg. ['resize']
@@ -150,6 +152,7 @@ window.Dropdown = React.createClass({
                   - this.getButtonImageHalfWidth()
                   - this.getDropdownContentHalfWidth()
                   - this.getDropdownParentPadding(this.props.positionedOn)
+                  + this.props.spaceAroundGrid
       space = space < 0 ? 0 : space
 
       if (this.props.positionedOn == 'right') {
@@ -166,6 +169,7 @@ window.Dropdown = React.createClass({
     const space = this.getDropdownParentWidth()
                   - this.getButtonImageHalfWidth()
                   - this.getDropdownParentPadding(this.props.positionedOn)
+                  + this.props.spaceAroundGrid
 
     if (this.props.positionedOn == 'right') {
       return { right: space + 'px' }

@@ -40,11 +40,12 @@
       k-map-fetch($nav, ('colors', 'border')));
     $background-color-hover: k-color-definition(
       k-map-fetch($nav, ('colors', 'background-hover')));
-    $border-color-hover: k-color-definition(
-      k-map-fetch($nav, ('colors', 'border-hover')));
+    $border-color-active: k-color-definition(
+      k-map-fetch($nav, ('colors', 'border-active')));
 
     .k-PlatformSwitch {
       display: block;
+      min-width: k-px-to-rem(300px);
       margin: 0 auto;
       padding: 0;
       border-top: 1px solid $border-color;
@@ -62,8 +63,11 @@
       &:focus,
       &:hover {
         outline: none;
-        border-right-color: $border-color-hover;
         background-color: $background-color-hover;
+      }
+
+      &:active {
+        border-right-color: $border-color-active;
       }
     }
   }

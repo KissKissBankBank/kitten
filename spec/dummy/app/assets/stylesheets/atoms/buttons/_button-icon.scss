@@ -5,29 +5,25 @@
     base: (
       color: #333,
       background-color: #fff,
-      border-color: #d8d8d8
+      border-color: #d8d8d8,
     ),
     hover: (
-      color: #333,
+      color: #4a84ff,
       background-color: #fff,
-      border-color: #333
+      border-color: #4a84ff,
     ),
     focus: (
-      color: #333,
+      color: #4a84ff,
       background-color: #fff,
-      border-color: #333
+      border-color: #4a84ff,
     ),
     active: (
       color: #fff,
-      background-color: #333
+      background-color: #4a84ff,
     ),
     disabled: (
       color: #fff,
-      background-color: #d8d8d8
-    ),
-    is-selected: (
-      color: #fff,
-      background-color: #333
+      background-color: #d8d8d8,
     )
   )
 ));
