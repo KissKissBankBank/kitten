@@ -4,7 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-New features:
+New features
+- Grid overlay on the style guide when pressing ctrl+g.
+- Add new component: `badge` atom.
+- Add new component: `button-with-badge` molecule.
 - Add new component: `button-image-with-text` molecule.
 
 Fixes:
