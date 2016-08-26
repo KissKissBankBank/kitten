@@ -1,4 +1,4 @@
-window.DropdownButton = function (props) {
+const DropdownButton = (props) => {
   const { className, isExpanded, ...rest } = props
   const buttonClassName = classNames('k-Dropdown__button', className)
 
@@ -22,3 +22,5 @@ DropdownButton.defaultProps = {
   onClick: () => {},
   isExpanded: false,
 }
+
+export default DropdownButton
