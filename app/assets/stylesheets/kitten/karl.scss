@@ -144,7 +144,7 @@ $light-grey-2: #eee;
   }
 }
 
-.karl-Menu__subSubList {
+.karl-Menu__subSecondList {
   display: none;
 
   &.is-opened {
@@ -152,7 +152,7 @@ $light-grey-2: #eee;
   }
 }
 
-.karl-Menu__subSubListItem {
+.karl-Menu__subSecondListItem {
   border-bottom: 1px solid $light-navy;
   display: block;
   padding-left: 3rem;

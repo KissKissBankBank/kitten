@@ -8,11 +8,11 @@ var openItems = $('.karl-Menu__listItem').each(function(key, element){
 var openSubItems = $('.karl-Menu__subListItem').each(function(key, element){
   $(element).on("click", function(){
     $(element).toggleClass("is-opened");
-    $(element).siblings(".karl-Menu__subSubList").toggleClass('is-opened');
+    $(element).siblings(".karl-Menu__subSecondList").toggleClass('is-opened');
   })
 });
 
-$('.karl-Menu__subSubListItem').click(function(){
+$('.karl-Menu__subSecondListItem').click(function(){
   $('.is-selected').removeClass('is-selected');
   $(this).addClass('is-selected');
 });
