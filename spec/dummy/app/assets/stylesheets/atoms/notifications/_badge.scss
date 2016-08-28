@@ -1,0 +1,8 @@
+@import 'kitten/atoms/notifications/badge';
+
+@include k-Badge((
+  colors: (
+    base: #fff,
+    background: #4a84ff,
+  )
+));

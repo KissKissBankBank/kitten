@@ -6,6 +6,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 New features:
 - Grid overlay on the style guide when pressing ctrl+g.
+- Add new component: `badge` atom.
+- Add new component: `button-with-badge` molecule.
+- Add new component: `button-image-with-text` molecule.
+
+Fixes:
+- Computes position of `k-UserMenu` in `header` organism.
 
 ## [v0.6.2] - 2016-08-23
 

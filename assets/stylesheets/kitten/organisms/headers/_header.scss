@@ -26,7 +26,7 @@
   $background-color: #fff;
   $border-color: #eee;
   $border-width: 1px;
-  $item-spacing: 10px;
+  $item-spacing: k-px-to-rem(10px);
   $z-index: 10;
 
   .k-Header {
@@ -46,13 +46,14 @@
   }
 
   .k-Header__grid {
-    @include container;
-    box-sizing: border-box;
-    padding: 0 gutter();
-
+    position: relative;
     display: flex;
     align-items: center;
     align-self: flex-start;
+
+    @include container;
+    box-sizing: border-box;
+    padding: 0 gutter();
   }
 
   .k-Header__items {
@@ -69,6 +70,14 @@
     display: flex;
     margin: 0;
     padding: 0 $item-spacing;
+
+    @include k-media-sm {
+      margin: $item-spacing 0;
+    }
+
+    @include k-media-xs {
+      margin: $item-spacing 0;
+    }
   }
 
   .k-Header__nav {
@@ -90,7 +99,8 @@
     }
   }
 
-  .k-Header__signup {
+  .k-Header__signup,
+  .k-Header__logged {
     @include k-media-sm {
       display: none;
     }

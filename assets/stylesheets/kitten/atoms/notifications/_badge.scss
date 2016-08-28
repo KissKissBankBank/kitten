@@ -1,0 +1,34 @@
+/// Badge
+///
+/// @group notifications
+///
+/// @example scss - usage
+///
+///   @include k-Badge((
+///     colors: (
+///       base: #fff,
+///       background: #4a84ff,
+///     )
+///   ));
+///
+/// @example html
+///
+///   <span class="k-Badge">42</span>
+
+@mixin k-Badge($badge) {
+  @include k-with-module('k-Badge: $badge') {
+    $color: k-color-definition(
+      k-map-fetch($badge, ('colors', 'base')));
+    $background-color: k-color-definition(
+      k-map-fetch($badge, ('colors', 'background')));
+
+    .k-Badge {
+      padding: k-px-to-rem(2px) k-px-to-rem(6px);
+      background: $background-color;
+      border-radius: k-px-to-rem(10px);
+      color: $color;
+      @include k-typographyFont('source-sans');
+      @include k-typographyFontSize(-4, 1);
+    }
+  }
+}
