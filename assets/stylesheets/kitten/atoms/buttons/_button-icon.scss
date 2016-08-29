@@ -159,5 +159,15 @@
         height: $heart-size;
       }
     }
+
+    .k-ButtonIcon__signup {
+      $signup-size: k-px-to-rem(18px);
+      @include k-buttonRounded($button-size, $signup-size, $signup-size);
+
+      .k-ButtonIcon__svg {
+        width: $signup-size;
+        height: $signup-size;
+      }
+    }
   }
 }

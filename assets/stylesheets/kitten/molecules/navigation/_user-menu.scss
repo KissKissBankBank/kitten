@@ -51,7 +51,7 @@
     $border-color-active: k-color-definition(
       k-map-fetch($menu, ('colors', 'border-active')));
 
-    $arrow-size: 8px;
+    $arrow-size: 9px;
     $border-size: 1px;
 
     .k-UserMenu {
@@ -62,6 +62,10 @@
       border: $border-size solid $border-color;
       border-left: none;
       list-style-type: none;
+
+      @include k-media-xs {
+        border-right: none;
+      }
     }
 
     .k-UserMenu__arrow {
@@ -98,6 +102,10 @@
         border-width: $arrow-size - 2;
         margin-left: -($arrow-size - 2);
       }
+
+      &.is-hover:after {
+        border-bottom-color: $background-color-hover;
+      }
     }
 
     .k-UserMenu__item {
@@ -125,6 +133,10 @@
 
       &.is-selected {
         border-left-color: $border-color-active;
+      }
+
+      @include k-media-xs {
+        border-left: none;
       }
     }
 

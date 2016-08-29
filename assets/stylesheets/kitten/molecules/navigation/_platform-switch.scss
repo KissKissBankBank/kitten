@@ -69,6 +69,11 @@
       &:active {
         border-right-color: $border-color-active;
       }
+
+      @include k-media-xs {
+        border-left: none;
+        border-right: none;
+      }
     }
   }
 }
