@@ -21,6 +21,14 @@
     position: relative;
   }
 
+  .k-Dropdown__button--rotationOnExpanded {
+    transition: transform .2s;
+
+    .k-Dropdown.is-expanded & {
+      transform: rotate(-180deg);
+    }
+  }
+
   .k-Dropdown__content {
     position: absolute;
     top: 0;
