@@ -48,6 +48,8 @@
       k-map-fetch($menu, ('colors', 'border')));
     $background-color-hover: k-color-definition(
       k-map-fetch($menu, ('colors', 'background-hover')));
+    $color-active: k-color-definition(
+      k-map-fetch($menu, ('colors', 'color-active')));
     $border-color-active: k-color-definition(
       k-map-fetch($menu, ('colors', 'border-active')));
 
@@ -120,7 +122,7 @@
       text-decoration: none;
       color: $color;
 
-      transition: background-color .2s, border-color .2s;
+      transition: color .2s, background-color .2s, border-color .2s;
 
       &:hover {
         background-color: $background-color-hover;
@@ -129,10 +131,12 @@
       &:focus {
         background-color: $background-color-hover;
         border-left-color: $border-color-active;
+        color: $color-active;
       }
 
       &.is-selected {
         border-left-color: $border-color-active;
+        color: $color-active;
       }
 
       @include k-media-xs {
