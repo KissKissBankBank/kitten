@@ -3,8 +3,7 @@ module Kitten
     # Structure inspired by react-rails helper.
     def react_component_container(name, props = {}, &block)
       # TODO: handle prerender on server-side.
-      content = nil
-      content = capture(&block) if block.present?
+      content = block.present? ? capture(&block) : nil
 
       html_options = {
         data: {
@@ -22,8 +21,7 @@ module Kitten
       opts = opts.merge(options)
 
       # TODO: handle prerender on server-side.
-      content = nil
-      content = capture(&block) if block.present?
+      content = block.present? ? capture(&block) : nil
 
       html_options = {
         data: {
