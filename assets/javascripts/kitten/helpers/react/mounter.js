@@ -3,21 +3,33 @@
 //
 // Example:
 //   html
-//     <div data-react-class="MyReactComponent"
+//     <div data-react-type="MyReactComponent"
 //          data-react-props="{&quot;my-prop-name&quot;:&quot;my-prop-value&quot;}">
 //     </div>
 //
 //   js
 //     ReactMounter.mountComponents();
 
-const ReactMounter = {
-  reactClassAttr: 'data-react-class',
-  propsAttr: 'data-react-props',
+import ReactDOM from 'react-dom'
+import ReactDataAttributes from 'kitten/helpers/react/data-attributes'
+import ReactElementHelper from 'kitten/helpers/react/element-helper'
 
+const ReactMounter = {
   findDOMNodes() {
-    const selector = '[' + this.reactClassAttr + ']'
+    const selector = '[' + ReactDataAttributes.selector + ']'
 
     return document.querySelectorAll(selector)
+  },
+
+  createReactElement(node, availableComponents) {
+    const elementType = ReactElementHelper.getElementType(node)
+    const options = ReactElementHelper.getElementOptions(node)
+
+    return ReactElementHelper.createElement(
+      elementType,
+      availableComponents,
+      options
+    )
   },
 
   mountComponents(availableComponents) {
@@ -27,18 +39,9 @@ const ReactMounter = {
 
     for (let i = 0; i < nodes.length; i++) {
       let node = nodes[i]
-      let reactClass = node.getAttribute(this.reactClassAttr)
-      let constructor = availableComponents[reactClass]
-      let jsonProps = node.getAttribute(this.propsAttr)
-      let props = jsonProps && JSON.parse(jsonProps)
+      let reactElement = this.createReactElement(node, availableComponents)
 
-      if (typeof(constructor) === 'undefined') {
-        let message = 'Cannot find component: `' + reactClass + '`'
-        let error = new Error(message + '. Make sure your component is globally available to render.')
-        throw error
-      } else {
-        ReactDOM.render(React.createElement(constructor, props), node);
-      }
+      ReactDOM.render(reactElement, node);
     }
   }
 }

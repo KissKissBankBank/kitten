@@ -49,6 +49,10 @@ const common = {
     root: resolvingPaths.concat(path.resolve(__dirname, '../node_modules')),
   },
 
+  resolveLoader: {
+    root: path.resolve(__dirname, '../node_modules')
+  },
+
   plugins: [
     // must match config.webpack.manifest_filename
     new StatsPlugin('manifest.json', {

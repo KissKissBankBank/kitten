@@ -1,7 +1,5 @@
 require('../stylesheets/dummy-style.scss');
 
-import ReactDOM from 'react-dom'
-import React from 'react'
 import ReactMounter from 'kitten/helpers/react/mounter'
 
 import Dropdown from 'kitten/components/dropdowns/dropdown'
@@ -13,13 +11,13 @@ import SimulatorResult from 'kitten/components/simulators/simulator-result'
 import LoanSimulator from 'kitten/components/simulators/loan-simulator'
 
 const availableComponents = {
-  Dropdown: Dropdown,
-  DropdownButton: DropdownButton,
-  ExternalRichLink: ExternalRichLink,
-  GrabberIcon: GrabberIcon,
-  Slider: Slider,
-  SimulatorResult: SimulatorResult,
-  LoanSimulator: LoanSimulator
+  Dropdown,
+  DropdownButton,
+  ExternalRichLink,
+  GrabberIcon,
+  Slider,
+  SimulatorResult,
+  LoanSimulator
 }
 
 ReactMounter.mountComponents(availableComponents)
