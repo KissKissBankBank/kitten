@@ -74,7 +74,7 @@ const ReactElementHelper = {
 
       // We have to assign a unique key to ReactElement children.
       // cf. https://facebook.github.io/react/docs/multiple-components.html#dynamic-children
-      options['props']['key'] = options.reactClass + i
+      options['props']['key'] = i + 1
 
       let reactElement = this.createElement(
         elementType,
