@@ -1,37 +1,42 @@
 module Kitten
+  # Structure inspired by react-rails helper.
   module ReactHelper
-    # Structure inspired by react-rails helper.
     def react_component_container(name, props = {}, &block)
-      # TODO: handle prerender on server-side.
-      content = block.present? ? capture(&block) : nil
-
       html_options = {
         data: {
           kitten_react: true,
-          kitten_react_type: name,
-          kitten_react_props: (props.is_a?(String) ? props : props.to_json)
         }
       }
 
-      content_tag(:div, content, html_options)
+      react_component_wrapper(name, props, html_options, &block)
     end
 
-    def react_component_child(name, props = {}, options = {}, &block)
-      opts = { parent_prop: 'children '}
-      opts = opts.merge(options)
-
-      # TODO: handle prerender on server-side.
-      content = block.present? ? capture(&block) : nil
+    def react_component_child(name, props = {}, mount_options = {}, &block)
+      default_mount_options = { parent_prop: 'children '}
+      options = default_mount_options.merge(mount_options)
 
       html_options = {
         data: {
-          kitten_react_type: name,
-          kitten_react_props: (props.is_a?(String) ? props : props.to_json),
-          kitten_react_mount_options: opts.to_json
+          kitten_react_mount_options: options.to_json
         }
       }
 
-      content_tag(:div, content, html_options)
+      react_component_wrapper(name, props, html_options, &block)
+    end
+
+    def react_component_wrapper(name, props = {}, html_options = {}, &block)
+      # TODO: handle prerender on server-side.
+      content = block.present? ? capture(&block) : nil
+
+      default_html_options = {
+        data: {
+          kitten_react_type: name,
+          kitten_react_props: (props.is_a?(String) ? props : props.to_json),
+        }
+      }
+      options = default_html_options.deep_merge(html_options)
+
+      content_tag(:div, content, options)
     end
   end
 end
