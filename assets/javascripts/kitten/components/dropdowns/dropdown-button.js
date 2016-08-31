@@ -1,14 +1,18 @@
-const DropdownButton = (props) => {
-  const { className, isExpanded, ...rest } = props
-  const buttonClassName = classNames('k-Dropdown__button', className)
+import React from 'react'
 
-  return(
-    <button className={ buttonClassName }
-            aria-haspopup="true"
-            aria-expanded={ isExpanded }
-            { ...rest }>
-    </button>
-  )
+class DropdownButton extends React.Component {
+  render() {
+    const { className, isExpanded, ...rest } = this.props
+    const buttonClassName = classNames('k-Dropdown__button', className)
+
+    return(
+      <button className={ buttonClassName }
+              aria-haspopup="true"
+              aria-expanded={ isExpanded }
+              { ...rest }>
+      </button>
+    )
+  }
 }
 
 DropdownButton.propTypes = {

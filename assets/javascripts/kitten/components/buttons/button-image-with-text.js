@@ -1,24 +1,7 @@
-window.ButtonImageWithText = React.createClass({
-  propTypes: {
-    children: React.PropTypes.string,
-    onClick: React.PropTypes.func,
-    isExpanded: React.PropTypes.bool,
-    text: React.PropTypes.string,
-    title: React.PropTypes.string,
-    srcImg: React.PropTypes.string,
-    widthImg: React.PropTypes.number,
-    heightImg: React.PropTypes.number,
-    altImg: React.PropTypes.string,
-  },
-  // Lifecycle
-  getDefaultProps: function() {
-    return {
-      children: 'Toggle button',
-      onClick: () => {},
-    }
-  },
+import React from 'react'
 
-  render: function() {
+class ButtonImageWithText extends React.Component {
+  render() {
     const { className, isExpanded, text, title, classNameText,
             srcImg, widthImg, heightImg, altImg,
             ...rest } = this.props
@@ -43,4 +26,23 @@ window.ButtonImageWithText = React.createClass({
       </button>
     )
   }
-})
+}
+
+ButtonImageWithText.propTypes =  {
+  children: React.PropTypes.string,
+  onClick: React.PropTypes.func,
+  isExpanded: React.PropTypes.bool,
+  text: React.PropTypes.string,
+  title: React.PropTypes.string,
+  srcImg: React.PropTypes.string,
+  widthImg: React.PropTypes.number,
+  heightImg: React.PropTypes.number,
+  altImg: React.PropTypes.string,
+}
+
+ButtonImageWithText.defaultProps = {
+  children: 'Toggle button',
+  onClick: () => {},
+}
+
+export default ButtonImageWithText

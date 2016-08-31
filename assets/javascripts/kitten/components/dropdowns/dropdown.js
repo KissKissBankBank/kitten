@@ -1,4 +1,6 @@
 import React from 'react'
+import DropdownButton from 'kitten/components/dropdowns/dropdown-button'
+import ButtonImageWithText from 'kitten/components/buttons/button-image-with-text'
 
 class Dropdown extends React.Component {
   constructor(props) {
@@ -253,7 +255,7 @@ class Dropdown extends React.Component {
   }
 }
 
-Dropdown.propTypes {
+Dropdown.propTypes = {
   positionedWith: React.PropTypes.string,
   positionedWithBorder: React.PropTypes.bool,
   positionedOn: React.PropTypes.string,
