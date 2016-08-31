@@ -1,3 +1,13 @@
+/**
+ * This module is a helper to create ReactElement against a DOM element with
+ * specific data-attributes. These latter ones are listed in
+ * `kitten/helpers/react/data-attributes`.
+ *
+ * @module 'kitten/helpers/react/element-helper'
+ *
+ * @see module:kitten/helpers/react/data-attributes
+ */
+
 import React from 'react'
 import DOMHelper from 'kitten/helpers/react/dom-helper'
 import ReactDataAttributes from 'kitten/helpers/react/data-attributes'
@@ -7,8 +17,8 @@ const ReactElementHelper = {
    * Returns the constructor that will be used by React.createElement.
    *
    * @param {string} elementType
-   * @param {object} availableComponents - an object with available React
-   *   components
+   * @param {object}         availableComponents - list of available ReactComponents.
+   * @param {ReactComponent} availableComponents.ReactComponentName
    * @param {boolean} isDomElement
    */
   getConstructor(elementType, availableComponents, isDomElement) {
@@ -31,7 +41,7 @@ const ReactElementHelper = {
    * @param {DOMNode} node - a node with specific data-attributes.
    */
   getElementType(node) {
-    return node.getAttribute(ReactDataAttributes.componentName)
+    return node.getAttribute(ReactDataAttributes.elementType)
   },
 
   /**
@@ -41,7 +51,7 @@ const ReactElementHelper = {
    */
   getElementOptions(node) {
     // Props
-    const jsonProps = node.getAttribute(ReactDataAttributes.componentProps)
+    const jsonProps = node.getAttribute(ReactDataAttributes.elementProps)
     const props = jsonProps && JSON.parse(jsonProps)
 
     // Children
@@ -92,12 +102,15 @@ const ReactElementHelper = {
    * Returns a ReactElement.
    *
    * @param {string} elementType
-   * @param {object} availableComponents - an object with available React
-   *   components
-   * @param {object} options - An object with these optional keys:
-   *   - props {object}
-   *   - childNodes {array}
-   *   - isDomElement {boolean}
+   * @param {object}         availableComponents - list of available ReactComponents.
+   * @param {ReactComponent} availableComponents.ReactComponentName
+   *
+   * @param {object}  options - a list of options to create the ReactElement.
+   * @param {object}  options.props - a list of the ReactElement props.
+   * @param {array}   options.childNodes - a list of childnodes that stand for
+   *                                       children or nested ReactElements.
+   * @param {boolean} options.isDomElement - explicits if the ReactElement
+   *                                         describe a DOM element.
    */
   createElement(elementType, availableComponents, options) {
     let { props, childNodes, isDomElement } = options
