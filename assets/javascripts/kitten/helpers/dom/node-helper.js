@@ -7,6 +7,9 @@
 const domNodeHelper = {
   /**
    * Returns an array of DOM nodes without text nodes.
+   * As the DOM api `childNodes` returns all child elements including invisible
+   * carriage return character, sometimes, we need to filter this method return
+   * and only fetch child DOM nodes.
    *
    * @param {DOMNode} node - the node of which you want to fetch child nodes.
    */

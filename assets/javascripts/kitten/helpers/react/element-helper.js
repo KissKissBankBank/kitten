@@ -68,6 +68,39 @@ const ReactElementHelper = {
   },
 
   /**
+   * Returns children of a ReactElement that will be rendered with its children
+   * ReactElements.
+   *
+   * @param {object} nestedReactElements
+   */
+  getChildren(nestedReactElements) {
+    if (!nestedReactElements.children) return null
+
+    return nestedReactElements.children
+  },
+
+  /**
+   * Returns props of a ReactElement that will be rendered with props that
+   * contains a list of ReactElements.
+   *
+   * @param {object} props
+   * @param {object} nestedReactElements
+   */
+  updatePropsWithNestedElements(props, nestedReactElements) {
+    const propsNames = Object.keys(nestedReactElements)
+                           .filter(this.isNotChildrenProp)
+
+    if (!propsNames.length) return props
+
+    const propsWithNestedElements = propsNames.reduce((memo, prop) => {
+      memo[prop] = nestedReactElements[prop]
+      return memo
+    }, {})
+
+    return Object.assign(props, propsWithNestedElements)
+  },
+
+  /**
    * Returns an array of ReactElements depending on a DOM nodes list.
    *
    * @param {array} nodesList - an array of DOM nodes with specific
@@ -75,16 +108,19 @@ const ReactElementHelper = {
    */
   createReactElementsList(nodesList, availableComponents) {
     let nodesListLength = nodesList.length
-    let reactElements = []
+    let reactElements = {}
 
     for (let i = 0; i < nodesListLength; i++) {
       let node = nodesList[i]
       let elementType = this.getElementType(node)
       let options = this.getElementOptions(node)
+      let parentProp = options.parentProp
 
-      // We have to assign a unique key to ReactElement children.
-      // cf. https://facebook.github.io/react/docs/multiple-components.html#dynamic-children
-      options['props']['key'] = i + 1
+      if (parentProp == 'children') {
+        // We have to assign a unique key to ReactElement children.
+        // cf. https://facebook.github.io/react/docs/multiple-components.html#dynamic-children
+        options['props']['key'] = i + 1
+      }
 
       let reactElement = this.createElement(
         elementType,
@@ -92,10 +128,26 @@ const ReactElementHelper = {
         options
       )
 
-      reactElements.push(reactElement)
+      let propList = reactElements[parentProp]
+
+      if (propList) {
+        reactElements[parentProp].push(reactElement)
+      } else {
+        reactElements[parentProp] = [reactElement]
+      }
     }
 
     return reactElements
+  },
+
+  /**
+   * Returns if a prop is not props.children
+   *
+   * @param {string} prop
+   */
+  isNotChildrenProp(prop) {
+    if (prop != 'children') return true
+    return false
   },
 
   /**
@@ -113,16 +165,26 @@ const ReactElementHelper = {
    *                                         describe a DOM element.
    */
   createElement(elementType, availableComponents, options) {
-    let { props, childNodes, isDomElement } = options
+    let { props, childNodes, ...mountOptions } = options
     let constructor = this.getConstructor(
         elementType,
         availableComponents,
-        isDomElement)
+        mountOptions.isDomElement)
     let children
 
+    // Create nested or children ReactElements lists
     if (childNodes.length) {
-      children = this.createReactElementsList(childNodes, availableComponents)
+      const nestedReactElements = this.createReactElementsList(
+        childNodes,
+        availableComponents
+      )
+
+      props = this.updatePropsWithNestedElements(props, nestedReactElements)
+      children = this.getChildren(nestedReactElements)
     }
+
+    // Append text nodes
+    if (mountOptions.text) children = mountOptions.text
 
     return React.createElement(constructor, props, children)
   }
