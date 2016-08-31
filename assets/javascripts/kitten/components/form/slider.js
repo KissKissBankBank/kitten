@@ -1,4 +1,5 @@
 import React from 'react'
+import domEvents from 'kitten/helpers/dom/events'
 
 // Slider input to choose an integer value between two bounds
 class Slider extends React.Component {
@@ -31,15 +32,15 @@ class Slider extends React.Component {
       step *= -1
 
     switch (e.keyCode) {
-      case keyboard.right:
-      case keyboard.up:
+      case domEvents.keyboard.right:
+      case domEvents.keyboard.up:
         return this.move(this.props.value + step)
-      case keyboard.left:
-      case keyboard.down:
+      case domEvents.keyboard.left:
+      case domEvents.keyboard.down:
         return this.move(this.props.value - step)
-      case keyboard.home:
+      case domEvents.keyboard.home:
         return this.move(min)
-      case keyboard.end:
+      case domEvents.keyboard.end:
         return this.move(max)
     }
   }

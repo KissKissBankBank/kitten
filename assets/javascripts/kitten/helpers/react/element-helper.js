@@ -9,8 +9,8 @@
  */
 
 import React from 'react'
-import DOMHelper from 'kitten/helpers/react/dom-helper'
-import ReactDataAttributes from 'kitten/helpers/react/data-attributes'
+import domNodeHelper from 'kitten/helpers/dom/node-helper'
+import reactDataAttributes from 'kitten/helpers/react/data-attributes'
 
 const ReactElementHelper = {
   /**
@@ -41,7 +41,7 @@ const ReactElementHelper = {
    * @param {DOMNode} node - a node with specific data-attributes.
    */
   getElementType(node) {
-    return node.getAttribute(ReactDataAttributes.elementType)
+    return node.getAttribute(reactDataAttributes.elementType)
   },
 
   /**
@@ -51,14 +51,14 @@ const ReactElementHelper = {
    */
   getElementOptions(node) {
     // Props
-    const jsonProps = node.getAttribute(ReactDataAttributes.elementProps)
+    const jsonProps = node.getAttribute(reactDataAttributes.elementProps)
     const props = jsonProps && JSON.parse(jsonProps)
 
     // Children
-    const childNodes = DOMHelper.getChildNodes(node)
+    const childNodes = domNodeHelper.getChildNodes(node)
 
     // Mount options
-    const jsonMountOptions = node.getAttribute(ReactDataAttributes.componentMountOptions)
+    const jsonMountOptions = node.getAttribute(reactDataAttributes.componentMountOptions)
     const mountOptions = jsonMountOptions && JSON.parse(jsonMountOptions)
 
     let options = { props, childNodes }

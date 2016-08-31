@@ -30,11 +30,11 @@
  *  @module 'kitten/helpers/react/data-attributes'
  */
 
-const ReactDataAttributes = {
+const reactDataAttributes = {
   selector: 'data-kitten-react',
   elementType: 'data-kitten-react-type',
   elementProps: 'data-kitten-react-props',
   componentMountOptions: 'data-kitten-react-mount-options',
 }
 
-export default ReactDataAttributes
+export default reactDataAttributes

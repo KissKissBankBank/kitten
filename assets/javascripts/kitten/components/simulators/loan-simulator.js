@@ -1,4 +1,5 @@
 import React from 'react'
+import numberUtils from 'kitten/helpers/utils/number'
 
 // TODO description
 // TODO animations: https://facebook.github.io/react/docs/animation.html
@@ -73,7 +74,7 @@ class LoanSimulator extends React.Component {
     if (!this.state.amount)
       return this.props.amountEmptyError
 
-    if (!isNumber(this.state.amount)
+    if (!numberUtils.isNumber(this.state.amount)
         || this.state.amount < this.props.amountMin
         || this.state.amount > this.props.amountMax)
       return this.props.amountOutOfBoundsError

@@ -7,7 +7,7 @@
  *
  * @see module:kitten/helpers/react/data-attributes
  * @see module:kitten/helpers/react/element-helper
- * @see module:kitten/helpers/react/dom-helper
+ * @see module:kitten/helpers/dom/node-helper
  *
  * @example
  * // html
@@ -23,8 +23,8 @@
  */
 
 import ReactDOM from 'react-dom'
-import ReactDataAttributes from 'kitten/helpers/react/data-attributes'
-import ReactElementHelper from 'kitten/helpers/react/element-helper'
+import reactDataAttributes from 'kitten/helpers/react/data-attributes'
+import reactElementHelper from 'kitten/helpers/react/element-helper'
 
 const ReactMounter = {
   /**
@@ -32,7 +32,7 @@ const ReactMounter = {
    * These nodes are DOM element containers used to render ReactElements.
    */
   findDOMNodes() {
-    const selector = '[' + ReactDataAttributes.selector + ']'
+    const selector = '[' + reactDataAttributes.selector + ']'
 
     return document.querySelectorAll(selector)
   },
@@ -45,10 +45,10 @@ const ReactMounter = {
    * @param {ReactComponent} availableComponents.ReactComponentName
    */
   createReactElement(node, availableComponents) {
-    const elementType = ReactElementHelper.getElementType(node)
-    const options = ReactElementHelper.getElementOptions(node)
+    const elementType = reactElementHelper.getElementType(node)
+    const options = reactElementHelper.getElementOptions(node)
 
-    return ReactElementHelper.createElement(
+    return reactElementHelper.createElement(
       elementType,
       availableComponents,
       options

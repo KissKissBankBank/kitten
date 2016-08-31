@@ -1,6 +1,7 @@
 import React from 'react'
 import DropdownButton from 'kitten/components/dropdowns/dropdown-button'
 import ButtonImageWithText from 'kitten/components/buttons/button-image-with-text'
+import domElementHelper from 'kitten/helpers/dom/element-helper'
 
 class Dropdown extends React.Component {
   constructor(props) {
@@ -46,7 +47,7 @@ class Dropdown extends React.Component {
   getReferenceElementHeight() {
     let referenceElement = this.getReferenceElement()
 
-    return kitten.elements.getComputedHeight(
+    return domElementHelper.getComputedHeight(
       referenceElement,
       this.props.positionedWithBorder
     )
@@ -73,17 +74,17 @@ class Dropdown extends React.Component {
   // Elements size
 
   getDropdownParentWidth() {
-    return kitten.elements.getComputedWidth(this.getDropdownParent())
+    return domElementHelper.getComputedWidth(this.getDropdownParent())
   }
   getButtonImageHalfWidth() {
-    return kitten.elements.getComputedWidth(this.getButtonImage()) / 2
+    return domElementHelper.getComputedWidth(this.getButtonImage()) / 2
   }
   getDropdownContentHalfWidth() {
-    return kitten.elements.getComputedWidth(this.getDropdownContent()) / 2
+    return domElementHelper.getComputedWidth(this.getDropdownContent()) / 2
   }
   getDropdownParentPadding(alignment: 'left') {
     return parseInt(
-      kitten.elements.getComputedStyle(
+      domElementHelper.getComputedStyle(
         this.getDropdownParent(),
         'padding-' + alignment
       )

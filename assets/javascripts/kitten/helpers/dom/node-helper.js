@@ -1,10 +1,10 @@
 /**
  * This module is a helper to fetch DOM elements.
  *
- * @module 'kitten/helpers/react/dom-helper'
+ * @module 'kitten/helpers/dom/node-helper'
  */
 
-const DOMHelper = {
+const domNodeHelper = {
   /**
    * Returns an array of DOM nodes without text nodes.
    *
@@ -27,4 +27,4 @@ const DOMHelper = {
   },
 }
 
-export default DOMHelper
+export default domNodeHelper
