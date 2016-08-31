@@ -107,8 +107,8 @@ const ReactElementHelper = {
    *
    * @param {object}  options - a list of options to create the ReactElement.
    * @param {object}  options.props - a list of the ReactElement props.
-   * @param {array}   options.childNodes - a list of childnodes that stand for
-   *                                       children or nested ReactElements.
+   * @param {array}   options.childNodes - a list of childnodes that will be
+   *                                       rendered as children or nested ReactElements.
    * @param {boolean} options.isDomElement - explicits if the ReactElement
    *                                         describe a DOM element.
    */

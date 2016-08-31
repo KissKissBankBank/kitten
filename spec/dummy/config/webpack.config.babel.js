@@ -65,6 +65,8 @@ const commonConfig = {
       modules: false,
       assets: true,
     }),
+
+    // Loaders matches scss files to be extracted with this plugin.
     new ExtractTextPlugin(cssFilename, { allChunks: true }),
   ],
 
