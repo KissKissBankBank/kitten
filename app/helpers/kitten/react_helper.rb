@@ -12,7 +12,7 @@ module Kitten
     end
 
     def react_component_child(name, props = {}, mount_options = {}, &block)
-      default_mount_options = { parent_prop: 'children '}
+      default_mount_options = { parentProp: 'children '}
       options = default_mount_options.merge(mount_options)
 
       html_options = {
