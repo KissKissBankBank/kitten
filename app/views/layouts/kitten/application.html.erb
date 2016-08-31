@@ -4,7 +4,7 @@
 
 <title>Kitten style guide</title>
 
-<%= webpack_assets_tags(Kitten.configuration.webpack_entry_point, 'css') %>
+<%= webpack_css_tags(Kitten.configuration.webpack_entry_point) %>
 <%= stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' %>
 
 <%= csrf_meta_tags %>
@@ -88,7 +88,7 @@
 <%= javascript_include_tag 'kitten/dropdown.js' %>
 <%= javascript_include_tag 'kitten/karl.js' %>
 
-<%= webpack_assets_tags(Kitten.configuration.webpack_entry_point, 'js') %>
+<%= webpack_js_tags(Kitten.configuration.webpack_entry_point) %>
 
 </body>
 </html>
