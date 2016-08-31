@@ -147,16 +147,16 @@ class Dropdown extends React.Component {
 
   // Rendering
 
-  renderListItem(item) {
+  renderListItem(item, i) {
     return(
-      <li role="menuitem">
+      <li key={ i } role="menuitem">
         { item }
       </li>
     )
   }
 
   renderList() {
-    const items = this.props.dropdownList.map((item) => this.renderListItem(item))
+    const items = this.props.dropdownList.map(this.renderListItem)
     const defaultItem = ('No choice')
 
     return(
