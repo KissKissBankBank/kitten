@@ -1,62 +1,64 @@
-const path = require('path');
-const StatsPlugin = require('stats-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const kitten = require('kitten');
-const merge = require('webpack-merge');
+// Basic node modules
+import path from 'path'
+
+// Node modules specific to webpack
+
+// This plugin is used to generate the manifest that will be used to match the
+// last generated asset files.
+import StatsPlugin from 'stats-webpack-plugin'
+
+// This plugin is used to extract the css in a separate file.
+import ExtractTextPlugin from 'extract-text-webpack-plugin'
+
+// This plugin is used to deep-merge correctly webpack configuration objects.
+import merge from 'webpack-merge'
+
+// Environment configuration
 import developmentConfig from './webpack/development'
 import productionConfig from './webpack/production'
 
-// set NODE_ENV=production on the environment to add asset fingerprints
+// Resolving paths: these paths help webpack to know where to find modules,
+// assets and loaders it needs for the assets compilation.
+import RESOLVE_PATHS from './webpack/resolve-paths'
+
+// On the dummy, this variable is not useful. It is meant to be an example for
+// implementation on your production application.
 const production = process.env.NODE_ENV === 'production';
 
 // Static assets filenames
 const jsFilenames = production ? '[name]-[chunkhash].js' : '[name].js';
 const cssFilename = production ? 'webpack-style-[chunkhash].css' : 'webpack-style.css';
 
-// Sass load paths
-const webpackStylesheetsPaths = path.resolve(__dirname, '../webpack/stylesheets');
-const appStylesheetsPaths = path.resolve(__dirname, '../app/assets/stylesheets');
-const sassLoadPaths = kitten
-                      .scssPaths
-                      .concat([
-                        webpackStylesheetsPaths,
-                        appStylesheetsPaths,
-                      ]);
-
-// Modules resolving paths
-const resolvingPaths = kitten.jsPaths
-                       .concat(kitten.imagesPaths)
-                       .concat(path.join(__dirname, '..', 'webpack'));
-
-const common = {
+const commonConfig = {
   entry: {
     // Sources are expected to live in $app_root/webpack
     'dummy': './webpack/javascripts/dummy.js',
   },
 
   output: {
-    // Build assets directly in to public/webpack/, let webpack know
-    // that all webpacked assets start with webpack/
-
-    // must match config.webpack.output_dir
+    // By default, with webpack-rails, assets are build in to public/webpack/.
+    // This path must match config.webpack.output_dir.
     path: path.join(__dirname, '..', 'public', 'webpack'),
-    publicPath: '/webpack/',
 
+    publicPath: '/webpack/',
     filename: jsFilenames,
   },
 
   resolve: {
-    root: resolvingPaths.concat(path.resolve(__dirname, '../node_modules')),
+    root: RESOLVE_PATHS.MODULES,
   },
 
   resolveLoader: {
-    root: path.resolve(__dirname, '../node_modules')
+    root: RESOLVE_PATHS.LOADERS
   },
 
   plugins: [
-    // must match config.webpack.manifest_filename
+    // The generated manifest is used by webpack-rails to know which are the last
+    // generated asset files.
+    // Its name must match config.webpack.manifest_filename
     new StatsPlugin('manifest.json', {
-      // We only need assetsByChunkName
+      // We only need assetsByChunkName; other information are useless for
+      // webpack-rails.
       chunkModules: false,
       source: false,
       chunks: false,
@@ -69,14 +71,17 @@ const common = {
   module: {
     loaders: [
       { test: /\.css$/, loaders: ['css'] },
-      { test: /\.(svg|png|jpe?g)$/, loaders: ['file?name=images/[name]-[hash].[ext]'] },
+      {
+        test: /\.(svg|png|jpe?g)$/,
+        loaders: ['file?name=images/[name]-[hash].[ext]']
+      },
       {
         test: /\.scss$/,
         loader: ExtractTextPlugin.extract('css-loader!sass-loader'),
       },
       {
         test: /\.jsx?$/,
-        include: kitten.jsPaths.concat(path.resolve(__dirname, '../webpack/javascripts')),
+        include: RESOLVE_PATHS.JS,
         loader: 'babel',
         query: {
           // We passed the absolute path of all presets to prevent modules
@@ -92,16 +97,16 @@ const common = {
   },
 
   sassLoader: {
-    includePaths: sassLoadPaths,
+    includePaths: RESOLVE_PATHS.SASS,
   }
 };
 
 let config;
 
 if (production) {
-  config = merge(common, productionConfig)
+  config = merge(commonConfig, productionConfig)
 } else {
-  config = merge(common, developmentConfig)
+  config = merge(commonConfig, developmentConfig)
 }
 
 module.exports = config;
