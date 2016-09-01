@@ -1,18 +1,22 @@
-var openItems = $('.karl-Menu__listItem').each(function(key, element){
-  $(element).on("click", function(){
-    $(element).toggleClass("is-opened");
-    $(element).siblings(".karl-Menu__subList").toggleClass('is-opened');
-  })
-});
+var subItems = $("[data-karl-menu] a")
 
-var openSubItems = $('.karl-Menu__subListItem').each(function(key, element){
-  $(element).on("click", function(){
-    $(element).toggleClass("is-opened");
-    $(element).siblings(".karl-Menu__subSecondList").toggleClass('is-opened');
-  })
-});
+$(document).ready(function(){
+  subItems.each(function(){
+    // Parents
+    if ($(this).next('ul').find('li').length > 0) {
+      $(this).addClass('with-arrow');
 
-$('.karl-Menu__subSecondListItem').click(function(){
-  $('.is-selected').removeClass('is-selected');
-  $(this).addClass('is-selected');
+      $(this).on("click", function(){
+        $(this).toggleClass("is-opened");
+        $(this).siblings("ul").toggleClass('is-opened');
+      });
+    }
+    // Child
+    else {
+      $(this).on("click", function(){
+        $('.is-selected').removeClass('is-selected');
+        $(this).addClass('is-selected');
+      });
+    }
+  });
 });
