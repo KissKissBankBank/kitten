@@ -11,6 +11,8 @@
 import React from 'react'
 import domNodeHelper from 'kitten/helpers/dom/node-helper'
 import reactDataAttributes from 'kitten/helpers/react/data-attributes'
+import objectUtils from 'kitten/helpers/utils/object'
+import assignUtils from 'kitten/helpers/utils/assign'
 
 const ReactElementHelper = {
   /**
@@ -80,8 +82,8 @@ const ReactElementHelper = {
   },
 
   /**
-   * Returns props of a ReactElement that will be rendered with props that
-   * contains a list of ReactElements.
+   * Returns props of a ReactElement. This latter can be rendered with some
+   * props that contains a list of ReactElements.
    *
    * @param {object} props
    * @param {object} nestedReactElements
@@ -92,10 +94,10 @@ const ReactElementHelper = {
 
     if (!propsNames.length) return props
 
-    const propsWithNestedElements = propsNames.reduce((memo, prop) => {
-      memo[prop] = nestedReactElements[prop]
-      return memo
-    }, {})
+    const propsWithNestedElements = objectUtils.pick(
+      propsNames,
+      nestedReactElements
+    )
 
     return Object.assign(props, propsWithNestedElements)
   },
@@ -129,19 +131,12 @@ const ReactElementHelper = {
       )
 
       let propContent = reactElements[parentProp]
+      let newPropContent = assignUtils.singleValueOrToArray(
+        propContent,
+        reactElement
+      )
 
-      // TODO: extract to a helper method
-      if (Array.isArray(propContent)) {
-        reactElements[parentProp].push(reactElement)
-      } else if (propContent) {
-        // Fill the prop content with an new array if there is more than one item.
-        let firstElement = propContent
-
-        reactElements[parentProp] = [propContent, reactElement]
-      } else {
-        // Fill the prop content with an single item if the is only one item.
-        reactElements[parentProp] = reactElement
-      }
+      reactElements[parentProp] = newPropContent
     }
 
     return reactElements
