@@ -130,8 +130,11 @@ const ReactElementHelper = {
 
       let propContent = reactElements[parentProp]
 
-      if (propContent) {
-        // Fill the prop content with an array if there is more than one item.
+      // TODO: extract to a helper method
+      if (Array.isArray(propContent)) {
+        reactElements[parentProp].push(reactElement)
+      } else if (propContent) {
+        // Fill the prop content with an new array if there is more than one item.
         let firstElement = propContent
 
         reactElements[parentProp] = [propContent, reactElement]
