@@ -103,7 +103,9 @@ const ReactElementHelper = {
   },
 
   /**
-   * Returns an array of ReactElements depending on a DOM nodes list.
+   * Returns an object of ReactElements depending on a DOM nodes list.
+   * Each key of this object matches a prop name and can be used to fill props
+   * or children of a parent ReactElement.
    *
    * @param {array} nodesList - an array of DOM nodes with specific
    *   data-attributes
