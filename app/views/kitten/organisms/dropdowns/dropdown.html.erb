@@ -1,98 +1,154 @@
-<%= example 'Default dropdown (positioned with itself)' do %>
-  <div id="default-dropdown"></div>
-  <script type="text/babel">
-    ReactDOM.render(
-      React.createElement(Dropdown, {
+<%= example 'Default dropdown (positionned with itself)' do %>
+  <%= react_component_container('Dropdown', {
         buttonClassName: 'karl-Dropdown--default__button',
-        dropdownListClassName: 'karl-Dropdown--default',
-        dropdownList: [
-          <a href="#" className="karl-Dropdown--default__item">Cute</a>,
-          <a href="#" className="karl-Dropdown--default__item">and lovely</a>,
-          <a href="#" className="karl-Dropdown--default__item">kitten</a>
-        ]
-      }),
-      document.getElementById('default-dropdown')
-    )
-  </script>
+        dropdownListClassName: 'karl-Dropdown--default'
+      }) do %>
+      <%= react_component_child('a', {
+            className: 'karl-Dropdown--default__item',
+          },
+          {
+            text: 'Cute',
+            parentProp: 'dropdownList',
+            isDomElement: true
+          }
+      ) %>
+      <%= react_component_child('a', {
+            className: 'karl-Dropdown--default__item',
+          },
+          {
+            text: 'And lovely',
+            parentProp: 'dropdownList',
+            isDomElement: true
+          }
+      ) %>
+      <%= react_component_child('a', {
+            className: 'karl-Dropdown--default__item',
+          },
+          {
+            text: 'Kitten',
+            parentProp: 'dropdownList',
+            isDomElement: true
+          }
+      ) %>
+  <% end %>
 <% end %>
 
 <%= example 'Platform switch dropdown (positioned with parent)' do %>
-  <div id="k-PlatformSwitchDropdown" class="karl-Dropdown--platformSwitch"></div>
-  <script type="text/babel">
-    const svg = (<svg className="k-ButtonIcon__svg" viewBox="0 0 10 7" xmlns="http://www.w3.org/2000/svg">
-      <path d="M5 6.243L3.586 4.828 7.828.586 9.243 2z"/>
-      <path d="M5 6.243L.757 2 2.172.586l4.242 4.242z"/>
-    </svg>)
-
-    ReactDOM.render(
-      React.createElement(Dropdown, {
-        positionedWith: 'parent',
-        positionedWithBorder: false,
+  <%= react_component_container('Dropdown', {
+        positionnedWith: 'parent',
+        positionnedWithBorder: false,
 
         buttonId: 'k-PlatformSwitch',
         buttonClassName: 'k-ButtonIcon k-ButtonIcon--tiny',
-        buttonContentOnExpanded: svg,
-        buttonContentOnCollapsed: svg,
 
         dropdownListClassName: 'k-PlatformSwitch',
-        dropdownList: [
-          <ExternalRichLink className="k-PlatformSwitch__item">
-            <img src="https://placeholdit.imgix.net/~text?txt=LOGO&amp;w=180&amp;h=44" alt="LOGO" />
-          </ExternalRichLink>,
-          <ExternalRichLink className="k-PlatformSwitch__item">
-            <img src="https://placeholdit.imgix.net/~text?txt=LOGO&amp;w=180&amp;h=44" alt="LOGO" />
-          </ExternalRichLink>,
-          <ExternalRichLink className="k-PlatformSwitch__item">
-            <img src="https://placeholdit.imgix.net/~text?txt=LOGO&amp;w=180&amp;h=44" alt="LOGO" />
-          </ExternalRichLink>
-        ]
-      }),
-      document.getElementById('k-PlatformSwitchDropdown')
-    )
-  </script>
+    }
+  ) do %>
+
+    <%= react_component_child('svg', {
+         className: 'k-ButtonIcon__svg',
+         viewBox: '0 0 10 7',
+         xmlns: 'http://www.w3.org/2000/svg'
+        },
+        {
+          parentProp: 'buttonContentOnExpanded',
+          isDomElement: true
+        }
+    ) do %>
+      <%= react_component_child('path',
+         {
+           d: 'M5 6.243L3.586 4.828 7.828.586 9.243 2z'
+         },
+         {
+           isDomElement: true
+         }
+      ) %>
+      <%= react_component_child('path',
+         {
+           d: 'M5 6.243L.757 2 2.172.586l4.242 4.242z'
+         },
+         {
+           isDomElement: true
+         }
+      ) %>
+    <% end %>
+
+    <%= react_component_child('svg', {
+         className: 'k-ButtonIcon__svg',
+         viewBox: '0 0 10 7',
+         xmlns: 'http://www.w3.org/2000/svg'
+        },
+        {
+          parentProp: 'buttonContentOnCollapsed',
+          isDomElement: true
+        }
+    ) do %>
+      <%= react_component_child('path',
+         {
+           d: 'M5 6.243L3.586 4.828 7.828.586 9.243 2z'
+         },
+         {
+           isDomElement: true
+         }
+      ) %>
+      <%= react_component_child('path',
+         {
+           d: 'M5 6.243L.757 2 2.172.586l4.242 4.242z'
+         },
+         {
+           isDomElement: true
+         }
+      ) %>
+    <% end %>
+
+    <%= react_component_child('ExternalRichLink', {
+          className: 'k-PlatformSwitch__item'
+        },
+        {
+          parentProp: 'dropdownList'
+        }
+    ) do %>
+      <%= react_component_child('img', {
+          src: 'https://placeholdit.imgix.net/~text?txt=LOGO&amp;w=180&amp;h=44',
+          alt: 'LOGO'
+        },
+        {
+          isDomElement: true
+        }
+      ) %>
+    <% end %>
+    <%= react_component_child('ExternalRichLink', {
+          className: 'k-PlatformSwitch__item'
+        },
+        {
+          parentProp: 'dropdownList'
+        }
+    ) do %>
+      <%= react_component_child('img', {
+          src: 'https://placeholdit.imgix.net/~text?txt=LOGO&amp;w=180&amp;h=44',
+          alt: 'LOGO'
+        },
+        {
+          isDomElement: true
+        }
+      ) %>
+    <% end %>
+    <%= react_component_child('ExternalRichLink', {
+          className: 'k-PlatformSwitch__item'
+        },
+        {
+          parentProp: 'dropdownList'
+        }
+    ) do %>
+      <%= react_component_child('img', {
+          src: 'https://placeholdit.imgix.net/~text?txt=LOGO&amp;w=180&amp;h=44',
+          alt: 'LOGO'
+        },
+        {
+          isDomElement: true
+        }
+      ) %>
+    <% end %>
+  <% end %>
 <% end %>
 
-<%= example 'User menu dropdown (positioned to right of the parent)' do %>
-
-  <div id="k-UserMenuDropdown" class="karl-Dropdown--platformSwitch"></div>
-
-  <script type="text/babel">
-    const button = ([
-      <span className="k-ButtonImage" title="Profil">
-        <img className="k-ButtonImage__img"
-             src="https://placekitten.com/g/40/40"
-             width="40"
-             height="40"
-             alt="" />
-      </span>,
-      <p className="k-ButtonImageWithText__text">Firstname</p>
-    ])
-
-    ReactDOM.render(
-      React.createElement(Dropdown, {
-        positionedWith: 'parent',
-        positionedWithBorder: false,
-        positionedOn: 'right',
-
-        buttonId: 'k-UserMenu',
-        buttonClassName: 'k-ButtonImageWithText',
-        buttonContentOnExpanded: button,
-        buttonContentOnCollapsed: button,
-
-        dropdownListClassName: 'k-UserMenu',
-        dropdownList: [
-          <a className="k-UserMenu__item" href="#">Mon profil</a>,
-          <a className="k-UserMenu__item" href="#">Mes projets</a>,
-          <a className="k-UserMenu__item" href="#">Mes contributions</a>,
-          <a className="k-UserMenu__item" href="#">Mes messages</a>,
-          <a className="k-UserMenu__item k-UserMenu__separation" href="#">
-            Profil
-          </a>,
-          <a className="k-UserMenu__item" href="#">Réglages</a>,
-          <a className="k-UserMenu__item" href="#">Déconnexion</a>
-        ]
-      }),
-      document.getElementById('k-UserMenuDropdown')
-    )
-  </script>
-<% end %>
