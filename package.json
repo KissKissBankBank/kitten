@@ -21,8 +21,9 @@
     "stylelint-scss": "^1.2.0"
   },
   "dependencies": {
-    "node-sass": "^3.8.0",
+    "classnames": "^2.2.5",
     "modularscale-sass": "^2.1.1",
+    "node-sass": "^3.8.0",
     "sassy-maps": "^0.4.2",
     "susy": "^2.2.12"
   },
