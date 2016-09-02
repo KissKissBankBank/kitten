@@ -1,3 +1,6 @@
+import React from 'react'
+import classNames from 'classnames'
+
 const ExternalRichLink = (props) => {
   const linkClassName = classNames('k-ExternalRichLink', props.className)
 

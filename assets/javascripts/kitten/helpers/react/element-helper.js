@@ -128,12 +128,16 @@ const ReactElementHelper = {
         options
       )
 
-      let propList = reactElements[parentProp]
+      let propContent = reactElements[parentProp]
 
-      if (propList) {
-        reactElements[parentProp].push(reactElement)
+      if (propContent) {
+        // Fill the prop content with an array if there is more than one item.
+        let firstElement = propContent
+
+        reactElements[parentProp] = [propContent, reactElement]
       } else {
-        reactElements[parentProp] = [reactElement]
+        // Fill the prop content with an single item if the is only one item.
+        reactElements[parentProp] = reactElement
       }
     }
 

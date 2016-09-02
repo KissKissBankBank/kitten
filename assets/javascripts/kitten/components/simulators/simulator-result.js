@@ -1,3 +1,6 @@
+import React from 'react'
+import classNames from 'classnames'
+
 // Columns of simulator results.
 //
 // Accepts an array of results:

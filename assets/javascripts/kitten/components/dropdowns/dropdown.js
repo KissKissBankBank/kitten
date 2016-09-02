@@ -1,4 +1,5 @@
 import React from 'react'
+import classNames from 'classnames'
 import DropdownButton from 'kitten/components/dropdowns/dropdown-button'
 import ButtonImageWithText from 'kitten/components/buttons/button-image-with-text'
 import domElementHelper from 'kitten/helpers/dom/element-helper'
@@ -261,8 +262,6 @@ Dropdown.propTypes = {
   positionedWithBorder: React.PropTypes.bool,
   positionedOn: React.PropTypes.string,
   buttonTemplate: React.PropTypes.string,
-  buttonContentOnExpanded: React.PropTypes.string,
-  buttonContentOnCollapsed: React.PropTypes.string,
   refreshEvents: React.PropTypes.array,
   dropdownListArrow: React.PropTypes.bool,
   dropdownList: React.PropTypes.array,
