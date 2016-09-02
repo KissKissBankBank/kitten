@@ -32,7 +32,7 @@ window.ButtonImageWithTextAndBadge = React.createClass({
     }
 
     return(
-      <button className={ buttonClassName }
+      <span className={ buttonClassName }
               aria-haspopup="true"
               aria-expanded={ isExpanded }
               title={ title }
@@ -50,7 +50,7 @@ window.ButtonImageWithTextAndBadge = React.createClass({
           </span>
         </span>
         <p className={ textClassName }>{ text }</p>
-      </button>
+      </span>
     )
   }
 })
