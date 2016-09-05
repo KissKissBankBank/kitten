@@ -4,7 +4,7 @@
 
 <title>Kitten style guide</title>
 
-<%= webpack_stylesheet_tags(Kitten.configuration.webpack_entry_point) %>
+<%= webpack_css_tags(Kitten.configuration.webpack_entry_point) %>
 <%= stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' %>
 
 <%= csrf_meta_tags %>
@@ -15,6 +15,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/classnames/2.2.5/index.min.js"></script>
 
 <%# JavaScript included in head because of the style guide's script tags %>
+
 <%= javascript_include_tag 'dummy', type: 'text/babel' %>
 
 </head>
@@ -86,6 +87,8 @@
 <%#= javascript_include_tag 'kitten/waypoint.js' %>
 <%= javascript_include_tag 'kitten/dropdown.js' %>
 <%= javascript_include_tag 'kitten/karl.js' %>
+
+<%= webpack_js_tags(Kitten.configuration.webpack_entry_point) %>
 
 </body>
 </html>
