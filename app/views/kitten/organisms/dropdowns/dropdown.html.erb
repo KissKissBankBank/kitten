@@ -152,3 +152,138 @@
   <% end %>
 <% end %>
 
+<%= example 'User menu dropdown (positioned to right of the parent)' do %>
+  <%= react_component_container('Dropdown', {
+        positionnedWith: 'parent',
+        positionnedWithBorder: false,
+        positionedOn: 'right',
+
+        buttonId: 'k-UserMenu',
+        buttonClassName: 'k-ButtonImageWithText',
+
+        dropdownListClassName: 'k-UserMenu',
+    }
+  ) do %>
+    <%= react_component_child('span', {
+         className: 'k-ButtonImage',
+         title: 'Profil',
+        },
+        {
+          parentProp: 'buttonContentOnExpanded',
+          isDomElement: true
+        }
+    ) do %>
+      <%= react_component_child('img',
+         {
+           className: 'k-ButtonImage__img',
+           src: 'https://placekitten.com/g/40/40',
+           width: '40',
+           height: '40',
+           alt: ''
+         },
+         {
+           isDomElement: true
+         }
+      ) %>
+    <% end %>
+    <%= react_component_child('span', {
+         className: 'k-ButtonImage',
+         title: 'Profil',
+        },
+        {
+          parentProp: 'buttonContentOnCollapsed',
+          isDomElement: true
+        }
+    ) do %>
+      <%= react_component_child('img',
+        {
+          className: 'k-ButtonImage__img',
+          src: 'https://placekitten.com/g/40/40',
+          width: '40',
+          height: '40',
+          alt: ''
+        },
+        {
+          isDomElement: true,
+        }
+      ) %>
+    <% end %>
+    <%= react_component_child('a',
+        {
+          className: 'k-UserMenu__item',
+          href: '#'
+        },
+        {
+          isDomElement: true,
+          parentProp: 'dropdownList',
+          text: 'Mon profil'
+        }
+    ) %>
+    <%= react_component_child('a',
+        {
+          className: 'k-UserMenu__item',
+          href: '#'
+        },
+        {
+          isDomElement: true,
+          parentProp: 'dropdownList',
+          text: 'Mes projets'
+        }
+    ) %>
+    <%= react_component_child('a',
+        {
+          className: 'k-UserMenu__item',
+          href: '#'
+        },
+        {
+          isDomElement: true,
+          parentProp: 'dropdownList',
+          text: 'Mes contributions'
+        }
+    ) %>
+    <%= react_component_child('a',
+        {
+          className: 'k-UserMenu__item',
+          href: '#'
+        },
+        {
+          isDomElement: true,
+          parentProp: 'dropdownList',
+          text: 'Mes messages'
+        }
+    ) %>
+    <%= react_component_child('a',
+        {
+          className: 'k-UserMenu__item  k-UserMenu__separation',
+          href: '#'
+        },
+        {
+          isDomElement: true,
+          parentProp: 'dropdownList',
+          text: 'Profil'
+        }
+    ) %>
+    <%= react_component_child('a',
+        {
+          className: 'k-UserMenu__item',
+          href: '#'
+        },
+        {
+          isDomElement: true,
+          parentProp: 'dropdownList',
+          text: 'Réglages'
+        }
+    ) %>
+    <%= react_component_child('a',
+        {
+          className: 'k-UserMenu__item',
+          href: '#'
+        },
+        {
+          isDomElement: true,
+          parentProp: 'dropdownList',
+          text: 'Déconnexion'
+        }
+    ) %>
+  <% end %>
+<% end %>
