@@ -1,5 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
+import GrabberIcon from 'kitten/components/icons/grabber-icon'
 import domEvents from 'kitten/helpers/dom/events'
 
 // Slider input to choose an integer value between two bounds

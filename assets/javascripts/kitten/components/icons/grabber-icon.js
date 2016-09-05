@@ -1,4 +1,5 @@
 import React from 'react'
+import ReactDOM from 'react-dom'
 
 class GrabberIcon extends React.Component {
   componentDidMount() {

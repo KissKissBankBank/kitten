@@ -1,11 +1,11 @@
 import React from 'react'
 import classNames from 'classnames'
+import Slider from 'kitten/components/form/slider'
 import numberUtils from 'kitten/helpers/utils/number'
 
 // TODO description
 // TODO animations: https://facebook.github.io/react/docs/animation.html
 class LoanSimulator extends React.Component {
-
   constructor(props) {
     super(props)
 
@@ -273,3 +273,5 @@ LoanSimulator.defaultProps = {
 
   actionLabel: 'OK',
 }
+
+export default LoanSimulator
