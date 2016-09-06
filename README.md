@@ -212,14 +212,39 @@ creating new components!
 
 ### Installation
 
-Make sure you have Npm access to Gemfury (see higher), then:
+Make sure Npm has access to Gemfury (see higher), then:
 
 Then, run:
+
 ```sh
 $ bundle                 # install gem dependencies
 $ npm install --only=dev # install node dependencies
 $ rake
 ```
+
+### Dummy style guide
+
+To launch the style guide on the dummy app:
+
+```sh
+$ cd spec/dummy
+$ bundle
+$ npm install
+$ bin/rails s
+```
+
+Then visit http://localhost:3000
+
+To share the dummy app with production settings (to share via ngrok for
+example), you can compile the assets and serve a production server:
+
+```sh
+$ bin/rake assets:precompile
+$ node_modules/webpack/bin/webpack.js --config config/webpack.config.js
+$ RAILS_ENV=production bin/rails s
+```
+
+To cleanup the compiled files, run `rm -fr public/assets/`.
 
 ### Style checker
 
