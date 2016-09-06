@@ -12,6 +12,7 @@ New features:
 
 Fixes:
 - Computes position of `k-UserMenu` in `header` organism.
+- Simpler "production" setup for the dummy app.
 
 ## [v0.6.2] - 2016-08-23
 
