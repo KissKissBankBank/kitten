@@ -37,9 +37,10 @@ window.ButtonImageWithTextAndBadge = React.createClass({
 
     const textClassName = classNames('k-ButtonImageWithText__text',
                                      classNameText)
-    const buttonClassName = notifications > 0 ?
-                            classNames('k-ButtonWithBadge', buttonClassName) :
-                            classNames('k-ButtonImageWithText', className)
+    let buttonClassName = classNames('k-ButtonImageWithText', className)
+    if (notifications > 0)
+      buttonClassName = classNames('k-ButtonWithBadge', buttonClassName)
+
     return(
       <span className={ buttonClassName }
               aria-haspopup="true"
