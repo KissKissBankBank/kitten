@@ -65,6 +65,8 @@
     $focus-color: map-get-deep($colors, ('focus', 'color'));
     $is-selected-color: map-get-deep($colors, ('is-selected', 'color'));
 
+    $transition-speed: .2s;
+
     .k-ButtonIcon {
       @include k-buttonBase($button-icon);
       @include k-buttonRounded($button-size, $icon-width, $icon-height);
@@ -77,7 +79,7 @@
       width: $icon-width;
       height: $icon-height;
       fill: $base-color;
-      transition: fill .2s;
+      transition: fill $transition-speed;
 
       .k-ButtonIcon:hover & {
         fill: $hover-color;
@@ -107,7 +109,7 @@
 
     .k-ButtonIcon__svg__stroke {
       stroke: $base-color;
-      transition: stroke .2s;
+      transition: stroke $transition-speed;
 
       .k-ButtonIcon:hover & {
         stroke: $hover-color;
