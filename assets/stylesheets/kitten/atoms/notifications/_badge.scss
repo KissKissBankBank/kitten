@@ -31,7 +31,7 @@
       @include k-typographyFontSize(-4, 1);
     }
 
-    .k-Badge__spaceAround {
+    .k-Badge--spaced {
       margin: 0 k-px-to-rem(5px);
     }
   }
