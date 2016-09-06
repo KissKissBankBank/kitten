@@ -1,3 +1,4 @@
+// TODO: description
 window.ButtonImageWithTextAndBadge = React.createClass({
   propTypes: {
     children: React.PropTypes.string,
@@ -11,7 +12,7 @@ window.ButtonImageWithTextAndBadge = React.createClass({
     altImg: React.PropTypes.string,
     notifications: React.PropTypes.number,
   },
-  // Lifecycle
+
   getDefaultProps: function() {
     return {
       children: 'Toggle button',
@@ -20,17 +21,25 @@ window.ButtonImageWithTextAndBadge = React.createClass({
   },
 
   render: function() {
-    const { className, isExpanded, text, title, classNameText,
-            srcImg, widthImg, heightImg, altImg, notifications,
-            ...rest } = this.props
+    const {
+      className,
+      isExpanded,
+      text,
+      title,
+      classNameText,
+      srcImg,
+      widthImg,
+      heightImg,
+      altImg,
+      notifications,
+      ...rest
+    } = this.props
 
-    let buttonClassName = classNames('k-ButtonImageWithText', className)
-    let textClassName = classNames('k-ButtonImageWithText__text', classNameText)
-
-    if (notifications > 0) {
-      buttonClassName = classNames('k-ButtonWithBadge', buttonClassName)
-    }
-
+    const textClassName = classNames('k-ButtonImageWithText__text',
+                                     classNameText)
+    const buttonClassName = notifications > 0 ?
+                            classNames('k-ButtonWithBadge', buttonClassName) :
+                            classNames('k-ButtonImageWithText', className)
     return(
       <span className={ buttonClassName }
               aria-haspopup="true"
@@ -54,15 +63,3 @@ window.ButtonImageWithTextAndBadge = React.createClass({
     )
   }
 })
-
-// <button class="k-ButtonWithBadge">
-//       <span class="k-ButtonImage k-ButtonImage--tiny">
-//         <img class="k-ButtonImage__img"
-//              src="https://placekitten.com/g/40/40"
-//              width="40"
-//              height="40"
-//              alt="" />
-//       </span>
-//
-//       <span class="k-ButtonWithBadge__badge k-Badge">4</span>
-//     </button>
