@@ -93,6 +93,9 @@
 
       background: $ramp-color;
 
+      // We use before and after as a fill-in for the ramp, so that the ramp
+      // can still appear to fill 100% of the available space but without the
+      // handle going over the left and right sides.
       &:before,
       &:after {
         position: absolute;
