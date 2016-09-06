@@ -1,4 +1,7 @@
-window.ExternalRichLink = (props) => {
+import React from 'react'
+import classNames from 'classnames'
+
+const ExternalRichLink = (props) => {
   const linkClassName = classNames('k-ExternalRichLink', props.className)
 
   return(
@@ -25,5 +28,7 @@ window.ExternalRichLink = (props) => {
 
 ExternalRichLink.defaultProps = {
   href: '#',
-  children: 'I am a rich link!'
+  children: 'I am a rich link!',
 }
+
+export default ExternalRichLink
