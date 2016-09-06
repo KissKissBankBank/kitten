@@ -171,5 +171,9 @@
         height: $signup-size;
       }
     }
+
+    .k-ButtonIcon--withoutHover {
+      pointer-events: none;
+    }
   }
 }
