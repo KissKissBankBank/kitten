@@ -167,7 +167,7 @@
 
       &:focus,
       .k-Slider.is-grabbing & {
-        box-shadow: 0 .1rem .7rem rgba($handle-color, .7);
+        box-shadow: 0 0 k-px-to-rem(10px) 0 $handle-color;
       }
 
       .k-Slider.is-grabbing & {
