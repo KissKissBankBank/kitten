@@ -22,7 +22,7 @@ Gem::Specification.new do |s|
   # < 5.0.0 because it has not been tested there yet.
   s.add_dependency 'railties', ['> 3.0.0', '< 5.0.0']
 
-  s.add_dependency 'webpack-rails', '~> 0.9.8'
+  s.add_dependency 'react_on_rails', '~> 6.1.0'
 
   s.add_development_dependency 'bundler', '~> 1.8'
   s.add_development_dependency 'rake',    '~> 10.0'

@@ -2,7 +2,7 @@ require 'kitten/version'
 require 'kitten/engine'
 require 'kitten/configuration'
 
-require 'webpack-rails'
+require 'react_on_rails'
 
 module Kitten
 end
