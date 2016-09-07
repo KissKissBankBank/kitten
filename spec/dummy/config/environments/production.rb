@@ -8,7 +8,7 @@ Dummy::Application.configure do
   config.active_support.deprecation                = :notify
   config.active_record.dump_schema_after_migration = false
 
-  config.serve_static_files = ENV['RAILS_SERVE_STATIC_FILES'].present?
+  config.serve_static_files = true
 
   config.assets.js_compressor = :uglifier
   config.assets.compile       = false

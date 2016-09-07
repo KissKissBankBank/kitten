@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+Breaking changes:
+- Loan Slider requires new props since it does not show fees anymore.
+
 New features:
 - Grid overlay on the style guide when pressing ctrl+g.
 - Add new component: `badge` atom.
@@ -12,6 +15,7 @@ New features:
 
 Fixes:
 - Computes position of `k-UserMenu` in `header` organism.
+- Simpler "production" setup for the dummy app.
 
 ## [v0.6.2] - 2016-08-23
 
