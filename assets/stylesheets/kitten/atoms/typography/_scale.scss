@@ -127,10 +127,17 @@
       $step: k-default(
         k-number-definition(map-get($style, 'step'), $unit: none),
       0);
+      $line-height: k-number-definition(map-get($style, 'line-height'), $unit: none);
 
       .k-#{$style-name} {
         @include k-typographyFont($font);
-        @include k-typographyFontSize($step);
+
+        @if $line-height {
+          @include k-typographyFontSize($step, $line-height);
+        }
+        @else {
+          @include k-typographyFontSize($step);
+        }
       }
     }
   }

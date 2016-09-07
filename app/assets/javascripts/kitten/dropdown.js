@@ -1,10 +1,8 @@
-var subItems = $("[data-karl-menu] a")
-
 $(document).ready(function(){
+  var subItems = $("[data-karl-menu] a")
   subItems.each(function(){
     // Parents
     if ($(this).next('ul').find('li').length > 0) {
-      $(this).addClass('with-arrow');
 
       $(this).on("click", function(){
         $(this).toggleClass("is-opened");

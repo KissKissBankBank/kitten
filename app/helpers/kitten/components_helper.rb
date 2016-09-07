@@ -1,6 +1,7 @@
 module Kitten
   module ComponentsHelper
-    def render_type(type, title:)
+    def render_type(type, title: nil)
+      title ||= type.split('/').last.capitalize
       add_menu_type(type, title)
       concat content_tag(:h1, class:"karl-Title", id: type) { title }
       yield
