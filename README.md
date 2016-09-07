@@ -230,7 +230,7 @@ To launch the style guide on the dummy app:
 $ cd spec/dummy
 $ bundle
 $ npm install
-$ bin/rails s
+$ foreman start
 ```
 
 Then visit http://localhost:3000
