@@ -5,7 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 Breaking changes:
-- Loan Slider requires new props since it does not show fees anymore
+- Loan Slider requires new props since it does not show fees anymore.
 
 New features:
 - Grid overlay on the style guide when pressing ctrl+g.
