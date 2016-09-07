@@ -173,6 +173,7 @@ window.LoanSimulator = React.createClass({
     const error = this.error()
     const duration = this.duration()
     const showResult = !error && touched && duration
+    const sliderIsActive = !error && dragged && installmentAmount
 
     let errorClass, errorTag, tooltipClass, tooltipText
 
@@ -181,7 +182,7 @@ window.LoanSimulator = React.createClass({
       errorTag = <p className="k-LoanSimulator__amount__error">{error}</p>
     }
 
-    if (!error && dragged && installmentAmount) {
+    if (sliderIsActive) {
       const durationSymbol = duration === 1
                            ? this.props.durationSymbol
                            : this.props.durationSymbolPlural
