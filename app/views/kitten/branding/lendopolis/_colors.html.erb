@@ -1,0 +1,114 @@
+<% colors = [
+  [
+    {
+      name: 'Primary 1',
+      hexa: '#C98C1F',
+      rgba: 'rgba(201, 140, 31, 1)',
+    },
+    {
+      name: 'Primary 2',
+      hexa: '#BA7D10',
+      rgba: 'rgba(186, 125, 16, 1)',
+    },
+    {
+      name: 'Primary 3',
+      hexa: '#AB6E01',
+      rgba: 'rgba(171, 110, 1, 1)',
+    },
+    {
+      name: 'Primary 4',
+      hexa: '#EFDDBC',
+      rgba: 'rgba(239, 221, 188, 1)',
+    },
+  ],
+  [
+    {
+      name: 'Secondary 1',
+      hexa: '#24515A',
+      rgba: 'rgba(36, 81, 90, 1)',
+    },
+    {
+      name: 'Secondary 2',
+      hexa: '#15424B',
+      rgba: 'rgba(21, 66, 75, 1)',
+    },
+    {
+      name: 'Secondary 3',
+      hexa: '#06333C',
+      rgba: 'rgba(6, 51, 60, 1)',
+    },
+    {
+      name: 'Secondary 4',
+      hexa: '#BCC8CA',
+      rgba: 'rgba(188, 200, 202, 1)',
+    },
+  ],
+  [
+    {
+      name: 'Third 1',
+      hexa: '#798A2C',
+      rgba: 'rgba(121, 138, 44, 1)',
+    },
+    {
+      name: 'Third 2',
+      hexa: '#6A7B1D',
+      rgba: 'rgba(106, 123, 29, 1)',
+    },
+    {
+      name: 'Third 3',
+      hexa: '#5B6C0E',
+      rgba: 'rgba(91, 108, 14, 1)',
+    },
+    {
+      name: 'Third 4',
+      hexa: '#D6DBBF',
+      rgba: 'rgba(214, 219, 191, 1)',
+    },
+  ],
+  [
+    {
+      name: 'DarkBlue',
+      hexa: '#0E1F29',
+      rgba: 'rgba(14, 31, 41, 1)',
+    },
+    {
+      name: 'White',
+      hexa: '#FFFFFF',
+      rgba: 'rgba(255, 255, 255, 1)',
+    },
+  ],
+  [
+    {
+      name: 'Background1',
+      hexa: '#B0E7FD',
+      rgba: 'rgba(176, 231, 253, 1)',
+    },
+  ]
+] %>
+
+
+<%= example do %>
+
+  <div class="karl-Colors">
+    <% colors.each do |type_color| %>
+      <div class="karl-Colors__content">
+
+        <% type_color.each do |color| %>
+          <div class="karl-Colors__card karl-Colors__cardBackground"
+               style="background-color: <%= color[:hexa] %>">
+            <div class="karl-Colors__cardDescription">
+              <p class="karl-Colors__cardParagraph k-ParagraphXsSemiBold"><%= color[:name] %></p>
+              <p class="karl-Colors__cardParagraph k-ParagraphXs"><%= color[:hexa] %></p>
+              <p class="karl-Colors__cardParagraph k-ParagraphXs"><%= color[:rgba] %></p>
+            </div>
+          </div>
+        <% end %>
+
+      </div>
+    <% end %>
+
+  </div>
+
+  <div class="k-u-clearfix"></div>
+
+<% end %>
