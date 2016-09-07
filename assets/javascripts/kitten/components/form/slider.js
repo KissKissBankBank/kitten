@@ -192,31 +192,31 @@ window.Slider = React.createClass({
     let input
     if (this.props.name)
       input = <input type="hidden"
-                     name={this.props.name}
-                     value={this.props.value ? this.props.value : ""} />
+                     name={ this.props.name }
+                     value={ this.props.value ? this.props.value : "" } />
 
     return (
-      <div className={classNames("k-Slider", grabbingClass)}
-           onClick={this.handleClick}>
+      <div className={ classNames("k-Slider", grabbingClass) }
+           onClick={ this.handleClick }>
         <div className="k-Slider__ramp"
              ref="track">
           <div className="k-Slider__progress"
-               style={trackStyles}></div>
+               style={ trackStyles }></div>
           <div className="k-Slider__handle"
                ref="thumb"
-               style={thumbStyles}
+               style={ thumbStyles }
                role="slider"
                tabIndex="0"
-               aria-valuemin={this.props.min}
-               aria-valuemax={this.props.max}
-               aria-valuenow={this.props.value}
-               onKeyDown={this.handleKeyDown}
-               onMouseDown={this.handleStart}
-               onClick={this.handleClick}>
+               aria-valuemin={ this.props.min }
+               aria-valuemax={ this.props.max }
+               aria-valuenow={ this.props.value }
+               onKeyDown={ this.handleKeyDown }
+               onMouseDown={ this.handleStart }
+               onClick={ this.handleClick }>
             <GrabberIcon className="k-Slider__handleIcon" />
           </div>
         </div>
-        {input}
+        { input }
       </div>
     )
   }
