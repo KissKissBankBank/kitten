@@ -93,6 +93,9 @@
 
       background: $ramp-color;
 
+      // We use before and after as a fill-in for the ramp, so that the ramp
+      // can still appear to fill 100% of the available space but without the
+      // handle going over the left and right sides.
       &:before,
       &:after {
         position: absolute;
@@ -154,7 +157,7 @@
       outline: 0; // hide default outline in favor of our hand-made focus style
       border: 1px solid $border-color;
       border-radius: 50%;
-      background: white;
+      background: $handle-color;
       box-shadow: 0 k-px-to-rem(2px) k-px-to-rem(4px) 0 rgba(0, 0, 0, .08);
 
       cursor: -webkit-grab;
@@ -162,8 +165,9 @@
       transition: left $transition-speed,
                   box-shadow $transition-speed;
 
-      &:focus {
-        box-shadow: 0 .1rem .7rem rgba(0, 0, 0, .7);
+      &:focus,
+      .k-Slider.is-grabbing & {
+        box-shadow: 0 0 k-px-to-rem(10px) 0 $handle-color;
       }
 
       .k-Slider.is-grabbing & {
