@@ -94,7 +94,7 @@
     position: relative;
     top: $border-width;
 
-    padding: 0 gutter();
+    padding: 0 $item-spacing;
 
     @include k-media-sm {
       display: none;
