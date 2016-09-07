@@ -285,7 +285,9 @@ $light-grey-2: #eee;
 
 .karl-OverGrid__row {
   @include container;
+  box-sizing: border-box;
   padding: 0 gutter();
+
   height: 100%;
   outline: 1px dotted rgba(0, 0, 0, .2);
 }

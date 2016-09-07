@@ -27,14 +27,12 @@
   $border-color: #eee;
   $border-width: 1px;
 
-  $gutter: k-px-to-rem(15px);
-  $half-gutter: $gutter / 2;
-  $grid-gutter: k-px-to-rem(20px) - $half-gutter;
-
+  // TODO: manage xs breakpoint with susy?
   $gutter-xs: k-px-to-rem(10px);
   $half-gutter-xs: $gutter-xs / 2;
   $grid-gutter-xs: k-px-to-rem(15px) - $half-gutter-xs;
 
+  $item-spacing: k-px-to-rem(10px);
   $z-index: 10;
 
   .k-Header {
@@ -55,12 +53,13 @@
 
   .k-Header__grid {
     @include container;
+    box-sizing: border-box;
     position: relative;
     display: flex;
     align-items: center;
     align-self: flex-start;
+    padding: 0 gutter();
     margin: 0 auto;
-    padding: 0 $grid-gutter;
 
     @include k-media-xs {
       padding: 0 $grid-gutter-xs;
@@ -80,15 +79,14 @@
   .k-Header__item {
     display: flex;
     margin: 0;
-    padding: 0 $half-gutter;
+    padding: 0 $item-spacing;
 
     @include k-media-sm {
-      margin: k-px-to-rem(12px) 0;
+      margin: $item-spacing 0;
     }
 
     @include k-media-xs {
-      margin: k-px-to-rem(12px) 0;
-      padding: 0 $half-gutter-xs;
+      margin: $item-spacing 0;
     }
   }
 
@@ -96,7 +94,7 @@
     position: relative;
     top: $border-width;
 
-    padding: 0 $grid-gutter;
+    padding: 0 gutter();
 
     @include k-media-sm {
       display: none;

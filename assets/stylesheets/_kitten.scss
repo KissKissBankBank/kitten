@@ -1,11 +1,15 @@
 $k-module: null;
 
 // Default grid configuration
+$columns: 12;
+$container: 1420px;
+$gutter-width: 20px;
+$column-width: ($container - ($columns - 1) * $gutter-width) / $columns;
 $susy: (
-  columns: 12,
-  container: 1420px,
+  columns: $columns,
+  container: $container,
   gutter-position: split,
-  gutters: 20px/96px,
+  gutters: $gutter-width/$column-width,
 ) !default;
 
 @import 'sassy-maps';
