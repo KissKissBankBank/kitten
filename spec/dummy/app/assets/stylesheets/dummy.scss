@@ -7,6 +7,10 @@
 @import 'kitten/karl';
 
 $k-fonts: (
+  source-sans-light: (
+    family: ("Source Sans Pro", Helvetica, Arial, sans-serif),
+    weight: 300
+  ),
   source-sans: (
     family: ("Source Sans Pro", Helvetica, Arial, sans-serif),
     weight: 400
@@ -25,6 +29,10 @@ $k-fonts: (
     weight: 600,
     letter-spacing: 1px,
     transform: uppercase
+  ),
+  dosis: (
+    family: ("Dosis", Helvetica, Arial, sans-serif),
+    weight: 400
   )
 );
 
