@@ -27,14 +27,6 @@ $light-grey-3: #eeeeee; //border branding card
 }
 
 .karl-Title {
-  // padding-left: 1rem;
-
-  // background-color: $blue;
-  // color: white;
-  // font-size: 1.2rem;
-  // font-weight: 300;
-  // line-height: 4rem;
-
   padding-top: 4rem;
   margin-left: 8rem;
   margin-right: 8rem;
@@ -137,6 +129,7 @@ $light-grey-3: #eeeeee; //border branding card
       }
     }
   }
+
   &:hover,
   &:focus {
     background-color: $light-navy;
@@ -266,7 +259,6 @@ $light-grey-3: #eeeeee; //border branding card
 }
 
 // Section
-
 .karl-Section {
   padding: 3.25em 8em;
 }
@@ -344,18 +336,14 @@ $light-grey-3: #eeeeee; //border branding card
   }
 }
 
-
 // Utilities
-
 .k-u-clearfix:after {
   content: " ";
   display: table;
   clear: both;
 }
 
-
 // Overlay grid
-
 .karl-OverGrid {
   position: fixed;
   top: 0;
