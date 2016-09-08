@@ -1,4 +1,15 @@
 window.Dropdown = React.createClass({
+  propTypes: {
+    positionedWith: React.PropTypes.string,
+    positionedWithBorder: React.PropTypes.bool,
+    positionedOn: React.PropTypes.string,
+    buttonTemplate: React.PropTypes.string,
+    buttonContentOnExpanded: React.PropTypes.string,
+    buttonContentOnCollapsed: React.PropTypes.string,
+    refreshEvents: React.PropTypes.array,
+    dropdownListArrow: React.PropTypes.bool,
+    dropdownList: React.PropTypes.array,
+  },
   // Lifecycle
   getDefaultProps: function() {
     return {
@@ -8,11 +19,18 @@ window.Dropdown = React.createClass({
       // "position" property set in its css.
       // As using DOMNode is anti-pattern, you should avoid it when it is
       // possible.
-      positionnedWith: 'self', // 'self' | 'parent' | <DOMNode>
+      positionedWith: 'self', // 'self' | 'parent' | <DOMNode>
 
       // This prop is used to fetch the correct height of the reference element
       // for the dropdown position.
-      positionnedWithBorder: true,
+      positionedWithBorder: true,
+
+      // This prop is used to fix the dropdown on left or right.
+      positionedOn: 'left', // 'left' | 'right'
+
+      // This prop is used to render with component 'ButtonImageWithText'
+      // or 'DropdownButton'
+      buttonTemplate: 'DropdownButton',
 
       // Button settings
       buttonContentOnExpanded: 'Close me',
@@ -23,6 +41,7 @@ window.Dropdown = React.createClass({
       refreshEvents: [], // eg. ['resize']
 
       // Dropdown list settings
+      dropdownListArrow: false,
       dropdownList: []
     }
   },
@@ -50,11 +69,11 @@ window.Dropdown = React.createClass({
 
   // Component methods
   getReferenceElement: function() {
-    if (typeof(this.props.positionnedWith) == 'object') {
-      return this.props.positionnedWith
+    if (typeof(this.props.positionedWith) == 'object') {
+      return this.props.positionedWith
     }
 
-    if (this.props.positionnedWith == 'parent') {
+    if (this.props.positionedWith == 'parent') {
       return this.refs.dropdown.parentNode
     }
 
@@ -65,12 +84,43 @@ window.Dropdown = React.createClass({
 
     return kitten.elements.getComputedHeight(
       referenceElement,
-      this.props.positionnedWithBorder
+      this.props.positionedWithBorder
     )
   },
   updateReferenceElementHeightState: function() {
     let referenceElementHeight = this.getReferenceElementHeight()
     this.setState({ parentHeight: referenceElementHeight })
+  },
+
+  // Elements
+  getDropdownParent: function() {
+    return this.refs.dropdown ? this.refs.dropdown.parentNode : null
+  },
+  getDropdownContent: function() {
+    return this.refs.dropdownContent ? this.refs.dropdownContent : null
+  },
+  getButtonImage: function() {
+    if (!this.refs.buttonImageWithText) return
+    return this.refs.buttonImageWithText.refs.buttonImage
+  },
+
+  // Size of elements
+  getDropdownParentWidth: function() {
+    return kitten.elements.getComputedWidth(this.getDropdownParent())
+  },
+  getButtonImageHalfWidth: function() {
+    return kitten.elements.getComputedWidth(this.getButtonImage()) / 2
+  },
+  getDropdownContentHalfWidth: function() {
+    return kitten.elements.getComputedWidth(this.getDropdownContent()) / 2
+  },
+  getDropdownParentPadding: function($alignment: 'left') {
+    return parseInt(
+      kitten.elements.getComputedStyle(
+        this.getDropdownParent(),
+        'padding-' + $alignment
+      )
+    )
   },
 
   // Component listener callbacks
@@ -81,9 +131,47 @@ window.Dropdown = React.createClass({
     event.stopPropagation()
     event.preventDefault()
 
+    this.updateReferenceElementHeightState()
     this.setState({
       isExpanded: !this.state.isExpanded
     })
+  },
+
+  getContentPosition: function() {
+    const positionStyles = { top: this.state.parentHeight }
+    let horizontalPosition = { left: 0 }
+
+    if (this.props.positionedOn == 'right') {
+      horizontalPosition = { right: 0 }
+    }
+
+    if (this.props.buttonTemplate == 'ButtonImageWithText') {
+      let space = this.getDropdownParentWidth()
+                  - this.getButtonImageHalfWidth()
+                  - this.getDropdownContentHalfWidth()
+                  - this.getDropdownParentPadding(this.props.positionedOn)
+      space = space < 0 ? 0 : space
+
+      if (this.props.positionedOn == 'right') {
+        horizontalPosition = { right: space + 'px' }
+      } else {
+        horizontalPosition = { left: space + 'px' }
+      }
+
+    }
+
+    return Object.assign(positionStyles, horizontalPosition)
+  },
+  getArrowPosition: function() {
+    const space = this.getDropdownParentWidth()
+                  - this.getButtonImageHalfWidth()
+                  - this.getDropdownParentPadding(this.props.positionedOn)
+
+    if (this.props.positionedOn == 'right') {
+      return { right: space + 'px' }
+    }
+
+    return { left: space + 'px' }
   },
 
   // Rendering
@@ -111,10 +199,50 @@ window.Dropdown = React.createClass({
 
     return this.props.buttonContentOnCollapsed
   },
+  renderDropdownButton: function() {
+    return (
+      <DropdownButton ref="dropdownButton"
+                      className={ this.props.buttonClassName }
+                      id={ this.props.buttonId }
+                      isExpanded={ this.state.isExpanded }
+                      onClick={ this.handleButtonClick.bind(this) }>
+        { this.renderButtonContentElement() }
+      </DropdownButton>
+    )
+  },
+  renderButtonImageWithText: function() {
+    return (
+      <ButtonImageWithText ref="buttonImageWithText"
+                           className={ this.props.buttonClassName }
+                           id={ this.props.buttonId }
+                           isExpanded={ this.state.isExpanded }
+                           onClick={ this.handleButtonClick.bind(this) }
+                           srcImg={ this.props.srcImg }
+                           widthImg={ this.props.widthImg }
+                           heightImg={ this.props.heightImg }
+                           altImg={ this.props.altImg }
+                           text={ this.props.text }
+                           title={ this.props.title } />
+    )
+  },
+  renderArrow: function(positionArrow: false) {
+    if (!this.props.dropdownListArrow) return
+
+    const positionDefault = { position: 'absolute', top: 0 }
+    const position = positionArrow ? this.getArrowPosition() : { right: '50%' }
+    const style = Object.assign(positionDefault, position)
+
+    return (
+      <span ref="arrow"
+            style={ style }>
+        { this.props.dropdownListArrow }
+      </span>
+    )
+  },
   render: function() {
     const dropdownClass = {
       'is-expanded': this.state.isExpanded,
-      'k-Dropdown--asReference': this.props.positionnedWith == 'self',
+      'k-Dropdown--asReference': this.props.positionedWith == 'self',
     }
 
     const dropdownClassName = classNames(
@@ -123,22 +251,27 @@ window.Dropdown = React.createClass({
       this.props.className
     )
 
-    let style = { top: this.state.parentHeight }
+    const style = this.getContentPosition()
+    const positionArrow = parseInt(style.right) == 0 ||
+                          parseInt(style.left) == 0
+
+    let renderButton = this.renderDropdownButton()
+
+    if (this.props.buttonTemplate == 'ButtonImageWithText') {
+      renderButton = this.renderButtonImageWithText()
+    }
 
     return(
       <div ref="dropdown" className={ dropdownClassName }>
-        <DropdownButton className={ this.props.buttonClassName }
-                        id={ this.props.buttonId }
-                        isExpanded={ this.state.isExpanded }
-                        onClick={ this.handleButtonClick.bind(this) }>
-          { this.renderButtonContentElement() }
-        </DropdownButton>
-        <nav className="k-Dropdown__content"
+        { renderButton }
+        <nav ref="dropdownContent"
+             className="k-Dropdown__content"
              style={ style }
              role="navigation"
              aria-hidden="true"
              aria-labelledby={ this.props.buttonId }>
           { this.renderList() }
+          { this.renderArrow(positionArrow) }
         </nav>
       </div>
     );

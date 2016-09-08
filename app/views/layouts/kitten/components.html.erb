@@ -5,17 +5,18 @@
 <% end %>
 
 <%= render_type 'molecules' do %>
-  <%#= render_group 'components/molecules/cards' %>
-  <%#= render_group 'components/molecules/form' %>
+  <%= render_group 'components/molecules/buttons' %>
+  <%= render_group 'components/molecules/cards' %>
+  <%= render_group 'components/molecules/form' %>
   <%= render_group 'components/molecules/grid' %>
   <%= render_group 'components/molecules/heroes' %>
   <%= render_group 'components/molecules/navigation' %>
   <%= render_group 'components/molecules/simulators' %>
   <%= render_group 'components/molecules/testimonies' %>
   <%= render_group 'components/molecules/links' %>
-<% end %>
 
 <%= render_type 'atoms' do %>
   <%= render_group 'components/atoms/buttons' %>
-  <%#= render_group 'components/atoms/form' %>
+  <%= render_group 'components/atoms/form' %>
+  <%= render_group 'components/atoms/notifications' %>
 <% end %>

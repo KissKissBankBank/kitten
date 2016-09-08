@@ -21,14 +21,13 @@ window.Slider = React.createClass({
     name: React.PropTypes.string,
 
     // Callback when the value changes (clicked or while dragging)
-    // passes the current value as an argument
+    // passes the current value and percentage as an argument
     //
     // You should use the given value and pass it back to the Slider props
     // to re-render the Slider value at the correct position.
     onChange: React.PropTypes.func,
 
-    // Callback when the value has changed (clicked or dragging ended)
-    // passes the current value as an argument
+    // Callback when the value has changed (clicked or dragging ended).
     onChangeEnd: React.PropTypes.func,
   },
 
@@ -141,7 +140,11 @@ window.Slider = React.createClass({
   },
 
   percentage: function() {
-    const { min, max, value } = this.props
+    return this.percentageForValue(this.props.value)
+  },
+
+  percentageForValue: function(value) {
+    const { min, max } = this.props
     if (value === null)
       return '0%'
     const powerRatio = (value - min) / (max - min)
@@ -153,7 +156,8 @@ window.Slider = React.createClass({
   move: function(to) {
     const value = this.valueInBounds(to)
 
-    this.props.onChange(value)
+    this.props.onChange(value, this.percentageForValue(value))
+
     if (!this.state.grabbing)
       this.props.onChangeEnd()
   },
@@ -188,31 +192,31 @@ window.Slider = React.createClass({
     let input
     if (this.props.name)
       input = <input type="hidden"
-                     name={this.props.name}
-                     value={this.props.value ? this.props.value : ""} />
+                     name={ this.props.name }
+                     value={ this.props.value ? this.props.value : "" } />
 
     return (
-      <div className={classNames("k-Slider", grabbingClass)}
-           onClick={this.handleClick}>
+      <div className={ classNames("k-Slider", grabbingClass) }
+           onClick={ this.handleClick }>
         <div className="k-Slider__ramp"
              ref="track">
           <div className="k-Slider__progress"
-               style={trackStyles}></div>
+               style={ trackStyles }></div>
           <div className="k-Slider__handle"
                ref="thumb"
-               style={thumbStyles}
+               style={ thumbStyles }
                role="slider"
                tabIndex="0"
-               aria-valuemin={this.props.min}
-               aria-valuemax={this.props.max}
-               aria-valuenow={this.props.value}
-               onKeyDown={this.handleKeyDown}
-               onMouseDown={this.handleStart}
-               onClick={this.handleClick}>
+               aria-valuemin={ this.props.min }
+               aria-valuemax={ this.props.max }
+               aria-valuenow={ this.props.value }
+               onKeyDown={ this.handleKeyDown }
+               onMouseDown={ this.handleStart }
+               onClick={ this.handleClick }>
             <GrabberIcon className="k-Slider__handleIcon" />
           </div>
         </div>
-        {input}
+        { input }
       </div>
     )
   }

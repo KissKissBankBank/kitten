@@ -63,6 +63,9 @@ $k-typography: k-typography-definition((
 @import 'atoms/form/label';
 @import 'atoms/form/text-input';
 
+// Notifications
+@import 'atoms/notifications/badge';
+
 // Typography
 @import 'atoms/typography/body-copy';
 @import 'atoms/typography/scale';
@@ -71,14 +74,19 @@ $k-typography: k-typography-definition((
 // Molecules
 // ----------
 
+// Buttons
+@import 'molecules/buttons/button-image-with-text';
+@import 'molecules/buttons/button-with-badge';
+
 // Cards
 @import 'molecules/cards/card';
 
 // Form
 @import 'molecules/form/label-with-info';
+@import 'molecules/form/search-input';
+@import 'molecules/form/slider-tooltip';
 @import 'molecules/form/slider';
 @import 'molecules/form/text-input-with-unit';
-@import 'molecules/form/search-input';
 
 // Grid
 @import 'molecules/grid/grid-duo';

@@ -65,10 +65,13 @@
     }
 
     .k-Row__content {
-      @include container(70rem); // TODO use global
+      @include container;
+      box-sizing: border-box;
+      padding: 0 gutter() * 2;
 
       .k-Row--padded & {
-        padding: 2rem 0;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
       }
     }
   }

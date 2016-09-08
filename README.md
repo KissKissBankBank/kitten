@@ -50,18 +50,21 @@ you have to setup your npm configuration aka your `.npmrc` to be able to
 install all npm dependencies.
 
 Set your default registry in your `.npmrc`:
-```
+
+```sh
 npm config set registry https://npm-proxy.fury.io/bob/
 ```
 
 Set your authentication token in your `.npmrc` by providing your Gemfury
 username and password:
-```
+
+```sh
 npm login
 ```
 
 Install the dependency:
-```
+
+```sh
 npm install kitten --save-dev
 ```
 
@@ -142,37 +145,33 @@ Import `kitten` in your main Sass file:
 @import 'kitten';
 ```
 
-Define your font families:
+Define your font families and typography settings:
 
 ```scss
 $k-fonts: (
   source-sans: (
     family: ("Source Sans Pro", Helvetica, Arial, sans-serif),
-    weight: 400
+    weight: 400,
   ),
-  source-sans-semi-bold: (
-    family: ("Source Sans Pro", Helvetica, Arial, sans-serif),
-    weight: 600
-  )
 );
-```
 
-Define your typography settings:
-
-```scss
-$k-typography: (
+$k-typography: k-typography-definition((
   root: 16px,
   font-size: 1rem,
   font-weight: 400,
   line-height: 1.5rem,
-  scale-multiplier: $major-second
-);
+  scale-multiplier: $major-second,
+));
 ```
 
 Include the component your want to use in your application:
 
 ```scss
-@include k-MyComponent;
+@import 'kitten/atoms/buttons/button';
+@include k-Button((
+  font: 'source-sans',
+  …
+));
 ```
 
 ### Ruby on Rails
@@ -213,14 +212,39 @@ creating new components!
 
 ### Installation
 
-Make sure you have Npm access to Gemfury (see higher), then:
+Make sure Npm has access to Gemfury (see higher), then:
 
 Then, run:
+
 ```sh
 $ bundle                 # install gem dependencies
 $ npm install --only=dev # install node dependencies
 $ rake
 ```
+
+### Dummy style guide
+
+To launch the style guide on the dummy app:
+
+```sh
+$ cd spec/dummy
+$ bundle
+$ npm install
+$ foreman start
+```
+
+Then visit http://localhost:3000
+
+To share the dummy app with production settings (to share via ngrok for
+example), you can compile the assets and serve a production server:
+
+```sh
+$ bin/rake assets:precompile
+$ node_modules/webpack/bin/webpack.js --config config/webpack.config.js
+$ RAILS_ENV=production bin/rails s
+```
+
+To cleanup the compiled files, run `rm -fr public/assets/`.
 
 ### Style checker
 

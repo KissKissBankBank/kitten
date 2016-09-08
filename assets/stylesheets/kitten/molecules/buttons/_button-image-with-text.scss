@@ -1,0 +1,51 @@
+/// Button image with text
+///
+/// @group buttons
+///
+/// @example scss - usage
+///
+///   @include k-ButtonImageWithText;
+///
+/// @example html
+///
+///   <button class="k-ButtonImageWithText">
+///     <span class="k-ButtonImage">
+///       <img class="k-ButtonImage__img"
+///            src="…"
+///            width="…"
+///            height="…"
+///            alt="…" />
+///     </span>
+///
+///     <p class="k-ButtonImageWithText__text">Firstname</p>
+///   </button>
+
+@mixin k-ButtonImageWithText {
+
+  .k-ButtonImageWithText {
+    display: flex;
+    align-items: center;
+    align-self: flex-start;
+
+    padding: 0;
+
+    // Overrides default values of <button>
+    outline: none;
+    border: none;
+    background: none;
+
+    cursor: pointer;
+  }
+
+  .k-ButtonImageWithText--vertical {
+    flex-direction: column;
+  }
+
+  .k-ButtonImageWithText__text {
+    margin: k-px-to-rem(10px);
+    text-align: left;
+
+    @include k-typographyFontSize(-1, 1);
+    @include k-typographyFont('source-sans-semi-bold');
+  }
+}
