@@ -4,7 +4,7 @@
 //= require kitten/components/buttons/button-image-with-text-and-badge
 //= require kitten/components/dropdowns/dropdown-button
 //= require kitten/components/dropdowns/dropdown
-//= require kitten/components/form/slider-with-tooltip
+//= require kitten/components/form/slider-tooltip
 //= require kitten/components/form/slider
 //= require kitten/components/icons/grabber-icon
 //= require kitten/components/links/external-rich-link

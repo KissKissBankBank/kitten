@@ -23,7 +23,6 @@
 ///     <div class="k-SliderTooltip__tooltip">
 ///       Drag the handle
 ///     </div>
-///     <div class="k-Slider">…</div>
 ///   </div>
 @mixin k-SliderTooltip($slider-tooltip) {
   @include k-with-module('k-SliderTooltip: $slider-tooltip') {

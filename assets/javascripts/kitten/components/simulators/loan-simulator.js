@@ -243,20 +243,19 @@ window.LoanSimulator = React.createClass({
                  onClick={this.handleInstallmentLabelClick}>
             {this.props.installmentLabel}
           </label>
-          <SliderWithTooltip ref="slider"
-                             tooltipClass={tooltipClass}
-                             step={this.installmentStep()}
-                             min={this.installmentMin()}
-                             max={this.installmentMax()}
-                             power={2}
-                             name={this.props.installmentName}
-                             value={this.state.installmentAmount}
-                             percentage={this.state.installmentPercentage}
-                             onChange={this.handleInstallmentChange}
-                             onChangeEnd={this.handleInstallmentChangeEnd}>
+          <SliderTooltip className={tooltipClass}
+                         percentage={this.state.installmentPercentage}>
             {tooltipText}
-          </SliderWithTooltip>
-
+          </SliderTooltip>
+          <Slider ref="slider"
+                  step={this.installmentStep()}
+                  min={this.installmentMin()}
+                  max={this.installmentMax()}
+                  power={2}
+                  name={this.props.installmentName}
+                  value={this.state.installmentAmount}
+                  onChange={this.handleInstallmentChange}
+                  onChangeEnd={this.handleInstallmentChangeEnd} />
         </div>
         <div className="k-LoanSimulator__actions">
           <button className="k-Button">{this.props.actionLabel}</button>
