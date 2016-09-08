@@ -4,8 +4,7 @@
 
 <title>Kitten style guide</title>
 
-<%#= webpack_stylesheet_tags(Kitten.configuration.webpack_entry_point) %>
-<link rel="stylesheet" href="/webpack/webpack-style.css" charset="utf-8">
+<%= webpack_stylesheet_tags(Kitten.configuration.webpack_entry_point) %>
 <%= stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' %>
 <%= stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Dosis' %>
 
