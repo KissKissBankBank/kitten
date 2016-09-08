@@ -1,8 +1,8 @@
 @import 'kitten/normalize';
 
 $blue: #4a84ff;
-$sapphire: #2250b2;
-$light-navy: #13459e;
+$sapphire: #3b75f0;
+$light-navy: #2c66e1;
 $light-grey-1: #fbfbfb;
 $light-grey-2: #d8d8d8;
 $light-grey-3: #eeeeee; //border branding card
@@ -16,7 +16,8 @@ $light-grey-3: #eeeeee; //border branding card
 }
 
 // Header
-.karl-Title {
+
+.karl-Title__header {
   padding-left: 1rem;
 
   background-color: $blue;
@@ -26,9 +27,32 @@ $light-grey-3: #eeeeee; //border branding card
   line-height: 4rem;
 }
 
+.karl-Title {
+  // padding-left: 1rem;
+
+  // background-color: $blue;
+  // color: white;
+  // font-size: 1.2rem;
+  // font-weight: 300;
+  // line-height: 4rem;
+
+  padding-top: 4rem;
+  margin-left: 8rem;
+  margin-right: 8rem;
+  border-bottom: 3px solid $light-grey-2;
+
+  color: #333;
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  line-height: 2.4rem;
+  text-transform: capitalize;
+}
+
 .karl-Title__breadcrumb {
   padding-top: 4rem;
   margin-left: 8rem;
+  margin-right: 8rem;
   border-bottom: 2px solid $light-grey-2;
 
   color: #333;
@@ -60,18 +84,16 @@ $light-grey-3: #eeeeee; //border branding card
 .karl-Menu__title {
   float: right;
   padding-right: 1rem;
-  margin-top: 1rem;
+  margin-top: 1.3rem;
 
   font-size: .75rem;
   font-weight: 300;
   letter-spacing: 1px;
-  // line-height: 4rem;
   text-align: right;
   text-transform: uppercase;
 }
 
 .karl-Menu__list {
-
   & > a {
     color: inherit;
     text-decoration: none;
@@ -105,7 +127,6 @@ $light-grey-3: #eeeeee; //border branding card
     &:after {
       position: absolute;
       content: "\022C1";
-      // content: url("icons/arrow-bottom.svg");
       right: 1.8em;
     }
 
@@ -114,7 +135,6 @@ $light-grey-3: #eeeeee; //border branding card
 
       &:after {
         content: "\022C0";
-        // content: url("icons/arrow-top.svg");
       }
     }
   }
@@ -143,7 +163,6 @@ $light-grey-3: #eeeeee; //border branding card
     &:after {
       position: absolute;
       content: "\022C1";
-      // content: url("icons/arrow-bottom.svg");
       right: 1.8em;
     }
 
@@ -152,8 +171,6 @@ $light-grey-3: #eeeeee; //border branding card
 
       &:after {
         content: "\022C0";
-        //content: url("icons/arrow-top.svg");
-
       }
     }
   }
@@ -203,23 +220,23 @@ $light-grey-3: #eeeeee; //border branding card
 .karl-Colors__card {
   float: left;
   width: 180px;
-  margin: 10px 73px 40px 0;
+  margin: .6rem 4.5rem 2.5rem 0;
 }
 
 .karl-Colors__cardBackground {
-  padding-top: 130px;
+  padding-top: 8rem;
   background-color: $light-navy;
   border: solid 1px $light-grey-3;
 }
 
 .karl-Colors__cardDescription {
-  padding: 2px 10px;
+  padding: .12rem .6rem;
   border: solid 1px $light-grey-3;
   background-color: white;
 }
 
 .karl-Colors__cardParagraph {
-  margin: 2px 0;
+  margin: .12rem 0;
 }
 
 // Branding/Fonts
@@ -233,12 +250,11 @@ $light-grey-3: #eeeeee; //border branding card
   height: 120px;
   border: solid 1px $light-grey-3;
   background-color: white;
-  margin: 10px 73px 40px 0;
+  margin: .6rem 4.5rem 2.5rem 0;
 }
 
 .karl-Fonts__cardDescription {
   text-align: center;
-
 }
 
 .karl-Fonts__cardTitle {
@@ -256,7 +272,7 @@ $light-grey-3: #eeeeee; //border branding card
 }
 
 .karl-Section__example {
-  margin: 2rem 0 0 8rem;
+  margin: 2rem 8rem 0 8rem;
 
   display: flex;
   flex-direction: row;
@@ -269,7 +285,7 @@ $light-grey-3: #eeeeee; //border branding card
 }
 
 .karl-Section__example--vertical {
-  margin: 2rem 0 0 8rem;
+  margin: 2rem 8rem 0 8rem;
 
   flex-direction: column;
 }

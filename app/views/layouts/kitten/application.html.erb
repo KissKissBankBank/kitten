@@ -25,7 +25,6 @@
 <% if @menu_types || controller_name == "branding" %>
   <div class="karl-Container">
     <nav class="karl-Menu">
-      <!-- <%= @menu_types.inspect %> -->
       <a class="karl-Menu__title">menu</a>
 
       <div class="k-u-clearfix"></div>
@@ -38,7 +37,7 @@
             <li><a href="#kisskissfonts" class="karl-Menu__subListItem">Fonts</a></li>
           </ul>
         </li>
-        <li class="karl-Menu__list"><%= link_to "hellomerci", '#hellomerci',class: "karl-Menu__listItem with-arrow #{'is-opened' if params[:theme] == 'hellomerci'}" %>
+        <li class="karl-Menu__list"><%= link_to "hellomerci", '#hellomerci', class: "karl-Menu__listItem with-arrow #{'is-opened' if params[:theme] == 'hellomerci'}" %>
           <ul class="karl-Menu__subList">
             <li><a href="#hellomercicolors" class="karl-Menu__subListItem">Colors</a></li>
             <li><a href="#hellomercifonts" class="karl-Menu__subListItem">Fonts</a></li>
@@ -83,7 +82,7 @@
 
     <div class="karl-Content">
       <section>
-        <header class="karl-Title">Styleguide KissKiss&Co</header>
+        <header class="karl-Title__header">Styleguide <strong>KissKiss&Co</strong></header>
         <%= yield %>
       </section>
     </div>
