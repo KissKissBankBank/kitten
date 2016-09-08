@@ -19,11 +19,16 @@
 ///
 /// @example html
 ///
-///   <div class="k-SliderTooltip">
-///     <div class="k-SliderTooltip__tooltip">
-///       Drag the handle
-///     </div>
-///   </div>
+///    <div class="k-SliderTooltip">
+///      <div class="k-SliderTooltip__tip">
+///        <div class="k-SliderTooltip__tip__content">
+///          Drag me
+///        </div>
+///      </div>
+///      <div class="k-SliderTooltip__arrow">
+///        <div class="k-SliderTooltip__arrow__content"></div>
+///      </div>
+///    </div>
 @mixin k-SliderTooltip($slider-tooltip) {
   @include k-with-module('k-SliderTooltip: $slider-tooltip') {
     $colors: k-map-fetch($slider-tooltip, 'colors');
