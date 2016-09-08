@@ -10,7 +10,7 @@ window.ExternalRichLink = (props) => {
       <div className="k-ExternalRichLink__element
                       k-ExternalRichLink__element--pull-end
                       k-ExternalRichLink__element--animate">
-        <span className="k-ButtonIcon k-ButtonIcon--tiny">
+        <span className="k-ButtonIcon k-ButtonIcon--tiny k-ButtonIcon--withoutHover">
           <svg className="k-ButtonIcon__svg"
                viewBox="0 0 10 10"
                xmlns="http://www.w3.org/2000/svg">

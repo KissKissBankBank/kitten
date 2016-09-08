@@ -48,10 +48,12 @@
       k-map-fetch($menu, ('colors', 'border')));
     $background-color-hover: k-color-definition(
       k-map-fetch($menu, ('colors', 'background-hover')));
-    $border-color-hover: k-color-definition(
-      k-map-fetch($menu, ('colors', 'border-hover')));
+    $color-active: k-color-definition(
+      k-map-fetch($menu, ('colors', 'color-active')));
+    $border-color-active: k-color-definition(
+      k-map-fetch($menu, ('colors', 'border-active')));
 
-    $arrow-size: 8px;
+    $arrow-size: 9px;
     $border-size: 1px;
 
     .k-UserMenu {
@@ -62,6 +64,10 @@
       border: $border-size solid $border-color;
       border-left: none;
       list-style-type: none;
+
+      @include k-media-xs {
+        border-right: none;
+      }
     }
 
     .k-UserMenu__arrow {
@@ -98,6 +104,10 @@
         border-width: $arrow-size - 2;
         margin-left: -($arrow-size - 2);
       }
+
+      &.is-hover:after {
+        border-bottom-color: $background-color-hover;
+      }
     }
 
     .k-UserMenu__item {
@@ -112,12 +122,25 @@
       text-decoration: none;
       color: $color;
 
-      transition: background-color .2s, border-color .2s;
+      transition: color .2s, background-color .2s, border-color .2s;
 
-      &:hover,
+      &:hover {
+        background-color: $background-color-hover;
+      }
+
       &:focus {
         background-color: $background-color-hover;
-        border-left-color: $border-color-hover;
+        border-left-color: $border-color-active;
+        color: $color-active;
+      }
+
+      &.is-selected {
+        border-left-color: $border-color-active;
+        color: $color-active;
+      }
+
+      @include k-media-xs {
+        border-left: none;
       }
     }
 

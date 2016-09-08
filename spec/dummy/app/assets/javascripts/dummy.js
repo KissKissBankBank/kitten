@@ -1,7 +1,7 @@
 //= require kitten/helpers/events/keyboard
 //= require kitten/helpers/elements/get-computed
 //= require kitten/helpers/numbers/is-number
-//= require kitten/components/buttons/button-image-with-text
+//= require kitten/components/buttons/button-image-with-text-and-badge
 //= require kitten/components/dropdowns/dropdown-button
 //= require kitten/components/dropdowns/dropdown
 //= require kitten/components/form/slider-with-tooltip
