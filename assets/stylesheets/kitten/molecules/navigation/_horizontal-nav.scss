@@ -106,7 +106,6 @@
         color: $hover-color;
       }
 
-      &:focus,
       &:active {
         border-color: $focus-border-color;
         color: $focus-color;
@@ -115,6 +114,10 @@
       &.is-selected {
         border-color: $is-selected-border-color;
         color: $is-selected-color;
+      }
+
+      &:focus {
+        color: $hover-color;
       }
     }
   }
