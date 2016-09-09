@@ -9,9 +9,10 @@ Breaking changes:
 
 New features:
 - Grid overlay on the style guide when pressing ctrl+g.
-- Add new component: `badge` atom.
-- Add new component: `button-with-badge` molecule.
-- Add new component: `button-image-with-text` molecule.
+- Add new Badge atom.
+- Add new ButtonWithBadge molecule.
+- Add new ButtonImageWithText molecule.
+- Add new SliderTooltip molecule.
 
 Fixes:
 - Computes position of `k-UserMenu` in `header` organism.
