@@ -26,6 +26,12 @@
   $background-color: #fff;
   $border-color: #eee;
   $border-width: 1px;
+
+  // TODO: manage xs breakpoint with susy?
+  $gutter-xs: k-px-to-rem(10px);
+  $half-gutter-xs: $gutter-xs / 2;
+  $grid-gutter-xs: k-px-to-rem(15px) - $half-gutter-xs;
+
   $item-spacing: k-px-to-rem(10px);
   $z-index: 10;
 
@@ -46,14 +52,18 @@
   }
 
   .k-Header__grid {
+    @include container;
+    box-sizing: border-box;
     position: relative;
     display: flex;
     align-items: center;
     align-self: flex-start;
-
-    @include container;
-    box-sizing: border-box;
     padding: 0 gutter();
+    margin: 0 auto;
+
+    @include k-media-xs {
+      padding: 0 $grid-gutter-xs;
+    }
   }
 
   .k-Header__items {
@@ -84,6 +94,8 @@
     position: relative;
     top: $border-width;
 
+    padding: 0 $item-spacing;
+
     @include k-media-sm {
       display: none;
     }
@@ -101,12 +113,16 @@
 
   .k-Header__signup,
   .k-Header__logged {
-    @include k-media-sm {
-      display: none;
-    }
-
     @include k-media-xs {
       display: none;
+    }
+  }
+
+  .k-Header__signupIcon {
+    display: none;
+
+    @include k-media-xs {
+      display: block;;
     }
   }
 }

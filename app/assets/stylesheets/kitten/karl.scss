@@ -118,7 +118,7 @@ $light-grey-3: #eeeeee; //border branding card
     &:after {
       position: absolute;
       content: "\022C1";
-      right: 1.8em;
+      right: 1em;
     }
 
     &.is-opened {
@@ -173,7 +173,6 @@ $light-grey-3: #eeeeee; //border branding card
   }
 }
 
-.karl-Menu__subList,
 .karl-Menu__subSecondList {
   display: none;
 

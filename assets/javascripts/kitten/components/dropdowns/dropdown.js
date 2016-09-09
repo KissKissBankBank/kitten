@@ -28,13 +28,18 @@ window.Dropdown = React.createClass({
       // This prop is used to fix the dropdown on left or right.
       positionedOn: 'left', // 'left' | 'right'
 
-      // This prop is used to render with component 'ButtonImageWithText'
+      // This prop is used to render with component 'ButtonImageWithTextAndBadger'
       // or 'DropdownButton'
       buttonTemplate: 'DropdownButton',
 
       // Button settings
       buttonContentOnExpanded: 'Close me',
       buttonContentOnCollapsed: 'Expand me',
+
+      spaceAroundGrid: 0,
+
+      // Value of notifications to show badge.
+      notifications: 0,
 
       // This prop is used to update the reference element height when a
       // javascript event is triggered on the window object.
@@ -100,8 +105,8 @@ window.Dropdown = React.createClass({
     return this.refs.dropdownContent ? this.refs.dropdownContent : null
   },
   getButtonImage: function() {
-    if (!this.refs.buttonImageWithText) return
-    return this.refs.buttonImageWithText.refs.buttonImage
+    if (!this.refs.ButtonImageWithTextAndBadge) return
+    return this.refs.ButtonImageWithTextAndBadge.refs.buttonImage
   },
 
   // Size of elements
@@ -145,11 +150,12 @@ window.Dropdown = React.createClass({
       horizontalPosition = { right: 0 }
     }
 
-    if (this.props.buttonTemplate == 'ButtonImageWithText') {
+    if (this.props.buttonTemplate == 'ButtonImageWithTextAndBadge') {
       let space = this.getDropdownParentWidth()
                   - this.getButtonImageHalfWidth()
                   - this.getDropdownContentHalfWidth()
                   - this.getDropdownParentPadding(this.props.positionedOn)
+                  + this.props.spaceAroundGrid
       space = space < 0 ? 0 : space
 
       if (this.props.positionedOn == 'right') {
@@ -157,7 +163,6 @@ window.Dropdown = React.createClass({
       } else {
         horizontalPosition = { left: space + 'px' }
       }
-
     }
 
     return Object.assign(positionStyles, horizontalPosition)
@@ -166,6 +171,7 @@ window.Dropdown = React.createClass({
     const space = this.getDropdownParentWidth()
                   - this.getButtonImageHalfWidth()
                   - this.getDropdownParentPadding(this.props.positionedOn)
+                  + this.props.spaceAroundGrid
 
     if (this.props.positionedOn == 'right') {
       return { right: space + 'px' }
@@ -210,19 +216,21 @@ window.Dropdown = React.createClass({
       </DropdownButton>
     )
   },
-  renderButtonImageWithText: function() {
+  renderButtonImageWithTextAndBadge: function() {
     return (
-      <ButtonImageWithText ref="buttonImageWithText"
-                           className={ this.props.buttonClassName }
-                           id={ this.props.buttonId }
-                           isExpanded={ this.state.isExpanded }
-                           onClick={ this.handleButtonClick.bind(this) }
-                           srcImg={ this.props.srcImg }
-                           widthImg={ this.props.widthImg }
-                           heightImg={ this.props.heightImg }
-                           altImg={ this.props.altImg }
-                           text={ this.props.text }
-                           title={ this.props.title } />
+      <ButtonImageWithTextAndBadge
+        ref="ButtonImageWithTextAndBadge"
+        className={ this.props.buttonClassName }
+        id={ this.props.buttonId }
+        isExpanded={ this.state.isExpanded }
+        onClick={ this.handleButtonClick.bind(this) }
+        srcImg={ this.props.srcImg }
+        widthImg={ this.props.widthImg }
+        heightImg={ this.props.heightImg }
+        altImg={ this.props.altImg }
+        text={ this.props.text }
+        title={ this.props.title }
+        notifications= { this.props.notifications } />
     )
   },
   renderArrow: function(positionArrow: false) {
@@ -257,8 +265,8 @@ window.Dropdown = React.createClass({
 
     let renderButton = this.renderDropdownButton()
 
-    if (this.props.buttonTemplate == 'ButtonImageWithText') {
-      renderButton = this.renderButtonImageWithText()
+    if (this.props.buttonTemplate == 'ButtonImageWithTextAndBadge') {
+      renderButton = this.renderButtonImageWithTextAndBadge()
     }
 
     return(

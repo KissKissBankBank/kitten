@@ -1,19 +1,23 @@
-$(document).ready(function(){
-  var subItems = $("[data-karl-menu] a")
-  subItems.each(function(){
-    // Parents
-    if ($(this).next('ul').find('li').length > 0) {
+var subItems = $("[data-karl-menu] a")
 
-      $(this).on("click", function(){
-        $(this).toggleClass("is-opened");
-        $(this).siblings("ul").toggleClass('is-opened');
+$(document).ready(function(){
+  subItems.each(function(){
+    var $handle  = $(this)
+
+    // Parents
+    if ($handle.next('ul').find('li').length > 0) {
+      $handle.addClass('with-arrow');
+
+      $handle.on("click", function(){
+        $handle.toggleClass("is-opened");
+        $handle.siblings("ul").toggleClass('is-opened');
       });
     }
     // Child
     else {
-      $(this).on("click", function(){
+      $handle.on("click", function(){
         $('.is-selected').removeClass('is-selected');
-        $(this).addClass('is-selected');
+        $handle.addClass('is-selected');
       });
     }
   });

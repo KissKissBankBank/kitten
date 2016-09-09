@@ -127,6 +127,8 @@
   $is-selected-border-color: map-get($is-selected, 'border-color');
   $is-selected-background-color: map-get($is-selected, 'background-color');
 
+  $transition-speed: .2s;
+
   @include k-buttonBrowserFixes;
   @include k-buttonBorder($base-border-color);
 
@@ -137,6 +139,10 @@
   color: $base-color;
   cursor: pointer;
   outline: 0;
+
+  transition: background-color $transition-speed,
+              color $transition-speed,
+              border-color $transition-speed;
 
   &:hover {
     @include k-buttonBorder($hover-border-color);

@@ -21,17 +21,32 @@
     position: relative;
   }
 
+  .k-Dropdown__button--rotationOnExpanded {
+    transition: transform .2s;
+
+    .k-Dropdown.is-expanded & {
+      transform: rotate(-180deg);
+    }
+  }
+
   .k-Dropdown__content {
     position: absolute;
     top: 0;
     z-index: 20;
     min-width: k-px-to-rem(200px);
+    margin-top: -10px;
+
+    @include k-media-xs {
+      min-width: auto;
+      width: 100%;
+    }
 
     visibility: hidden;
     opacity: 0;
-    transition: visibility .2s, opacity .2s;
+    transition: margin .2s, visibility .2s, opacity .2s;
 
     .k-Dropdown.is-expanded & {
+      margin-top: 0;
       visibility: visible;
       opacity: 1;
     }
@@ -39,34 +54,5 @@
 
   .k-Dropdown__content--large {
     min-width: k-px-to-rem(300px);
-  }
-
-  .k-Dropdown__arrow {
-    position: absolute;
-    right: 50%;
-    bottom: 100%;
-
-    &:after,
-    &:before {
-      content: " ";
-      width: 0;
-      height: 0;
-      border: solid transparent;
-      pointer-events: none;
-    }
-
-    &:after {
-      border-color: rgba(255, 255, 255, 0);
-      border-bottom-color: red;
-      border-width: 5px;
-      margin-left: -5px;
-    }
-
-    &:before {
-      border-color: rgba(255, 255, 255, 0);
-      border-bottom-color: red;
-      border-width: 6px;
-      margin-left: -6px;
-    }
   }
 }

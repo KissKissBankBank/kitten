@@ -87,13 +87,17 @@ window.Slider = React.createClass({
     e.preventDefault()
 
     document.addEventListener('mousemove', this.handleMove)
+    document.addEventListener('touchmove', this.handleMove)
     document.addEventListener('mouseup', this.handleEnd)
+    document.addEventListener('touchend', this.handleEnd)
     this.setState({ grabbing: true })
   },
 
   handleEnd: function(e) {
     document.removeEventListener('mousemove', this.handleMove)
+    document.removeEventListener('dragover', this.handleMove)
     document.removeEventListener('mouseup', this.handleEnd)
+    document.removeEventListener('touchend', this.handleEnd)
     this.setState({ grabbing: false })
     this.props.onChangeEnd()
   },
@@ -212,6 +216,7 @@ window.Slider = React.createClass({
                aria-valuenow={ this.props.value }
                onKeyDown={ this.handleKeyDown }
                onMouseDown={ this.handleStart }
+               onTouchStart={ this.handleStart }
                onClick={ this.handleClick }>
             <GrabberIcon className="k-Slider__handleIcon" />
           </div>
