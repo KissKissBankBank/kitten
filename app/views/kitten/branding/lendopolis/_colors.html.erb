@@ -91,11 +91,13 @@
 
   <div class="karl-Colors">
     <% colors.each do |type_color| %>
-      <div class="karl-Colors__content">
+      <div class="karl-CardGrid">
 
         <% type_color.each do |color| %>
-          <div class="karl-Colors__card karl-Colors__cardBackground"
+          <div class="karl-Card" >
+            <div class="karl-Colors__cardBackground"
                style="background-color: <%= color[:hexa] %>">
+            </div>
             <div class="karl-Colors__cardDescription">
               <p class="karl-Colors__cardParagraph k-ParagraphXsSemiBold"><%= color[:name] %></p>
               <p class="karl-Colors__cardParagraph k-ParagraphXs"><%= color[:hexa] %></p>

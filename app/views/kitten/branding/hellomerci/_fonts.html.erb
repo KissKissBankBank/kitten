@@ -14,9 +14,9 @@
 <%= example do %>
   <div class="karl-Fonts">
     <% fonts.each do |type_font| %>
-      <div class="karl-Fonts__content">
+      <div class="karl-CardGrid">
         <% type_font.each do |font| %>
-          <div class="karl-Fonts__card">
+          <div class="karl-Fonts__card karl-Card">
             <div class="karl-Fonts__cardDescription">
               <p class="karl-Fonts__cardTitle" style="font-weight: <%= font[:weight] %>">Aa Zz</p>
               <p class="karl-Fonts__cardParagraph k-ParagraphXs"><%= font[:description] %></p>
