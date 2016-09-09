@@ -30,7 +30,7 @@
 
       <div class="k-u-clearfix"></div>
 
-      <ul>
+      <ul data-karl-menu>
         <% @menu_types.each do |type_id:, type_title:, groups:| %>
           <li class="karl-Menu__list">
             <a href="#<%= type_id %>"
@@ -40,10 +40,10 @@
                 <li>
                   <a href="#<%= group_id %>"
                      class="karl-Menu__subListItem"><%= group_title %></a>
-                  <ul class="karl-Menu__subSubList">
+                  <ul class="karl-Menu__subSecondList">
                     <% components.each do |component_id:, component_title:| %>
                       <li>
-                        <a class="karl-Menu__subSubListItem"
+                        <a class="karl-Menu__subSecondListItem"
                            href="#<%= component_id %>"><%= component_title %></a>
                       </li>
                     <% end %>
