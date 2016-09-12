@@ -27,8 +27,8 @@ window.Slider = React.createClass({
     // to re-render the Slider value at the correct position.
     onChange: React.PropTypes.func,
 
-    // Callback when the value has changed (clicked or dragging ended).
-    onChangeEnd: React.PropTypes.func,
+    // Callback when we click, touch or focus
+    onAction: React.PropTypes.func,
   },
 
   getDefaultProps: function() {
@@ -39,7 +39,7 @@ window.Slider = React.createClass({
       step: 1,
       power: 1,
       onChange: function() {},
-      onChangeEnd: function() {},
+      onAction: function() {},
     }
   },
 
@@ -83,6 +83,7 @@ window.Slider = React.createClass({
   },
 
   handleStart: function(e) {
+    this.props.onAction(e)
     e.stopPropagation()
     e.preventDefault()
 
@@ -99,10 +100,10 @@ window.Slider = React.createClass({
     document.removeEventListener('mouseup', this.handleEnd)
     document.removeEventListener('touchend', this.handleEnd)
     this.setState({ grabbing: false })
-    this.props.onChangeEnd()
   },
 
   handleClick: function(e) {
+    this.props.onAction(e)
     this.setState({ grabbing: false })
     this.handleMove(e)
   },
@@ -161,9 +162,6 @@ window.Slider = React.createClass({
     const value = this.valueInBounds(to)
 
     this.props.onChange(value, this.percentageForValue(value))
-
-    if (!this.state.grabbing)
-      this.props.onChangeEnd()
   },
 
   valueInBounds: function(value) {
@@ -217,7 +215,8 @@ window.Slider = React.createClass({
                onKeyDown={ this.handleKeyDown }
                onMouseDown={ this.handleStart }
                onTouchStart={ this.handleStart }
-               onClick={ this.handleClick }>
+               onClick={ this.handleClick }
+               onFocus={ this.props.onAction }>
             <GrabberIcon className="k-Slider__handleIcon" />
           </div>
         </div>

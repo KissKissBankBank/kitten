@@ -115,8 +115,7 @@ window.LoanSimulator = React.createClass({
     })
   },
 
-  // on slider click or on grab end
-  handleInstallmentChangeEnd: function() {
+  handleInstallmentAction: function() {
     this.setState({ touched: true })
   },
 
@@ -259,7 +258,7 @@ window.LoanSimulator = React.createClass({
                   name={this.props.installmentName}
                   value={this.state.installmentAmount}
                   onChange={this.handleInstallmentChange}
-                  onChangeEnd={this.handleInstallmentChangeEnd} />
+                  onAction={this.handleInstallmentAction} />
         </div>
         <div className="k-LoanSimulator__actions">
           <button className="k-Button">{this.props.actionLabel}</button>
