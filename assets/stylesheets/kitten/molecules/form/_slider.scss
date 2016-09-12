@@ -85,6 +85,9 @@
       &.is-disabled {
         cursor: not-allowed;
       }
+
+      // Remove webkit highlight color on tap
+      -webkit-tap-highlight-color:rgba(0,0,0,0);
     }
 
     .k-Slider__ramp {
