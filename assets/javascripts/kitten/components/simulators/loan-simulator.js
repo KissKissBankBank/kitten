@@ -139,6 +139,10 @@ window.LoanSimulator = React.createClass({
     if (!this.state.touched)
       return null
 
+    return this.amountError()
+  },
+
+  amountError: function() {
     if (!this.state.amount)
       return this.props.amountEmptyError
 
@@ -172,11 +176,16 @@ window.LoanSimulator = React.createClass({
 
   render: function() {
     const { label } = this.props
-    const { installmentAmount, dragged, touched } = this.state
+    const { dragged, touched } = this.state
     const error = this.error()
+    const amountError = this.amountError()
     const duration = this.duration()
     const showResult = !error && touched && duration
-    const sliderIsActive = !error && dragged && installmentAmount
+    const installmentMin = !amountError ? this.installmentMin() : 0
+    const installmentMax = !amountError ? this.installmentMax() : 0
+    const installmentAmount = !amountError ? this.state.installmentAmount : 0
+    const installmentPercentage = !amountError ? this.state.installmentPercentage : 0
+    const sliderIsActive = !amountError && dragged && installmentAmount
 
     let errorClass, errorTag, tooltipClass, tooltipText
 
@@ -247,16 +256,16 @@ window.LoanSimulator = React.createClass({
             {this.props.installmentLabel}
           </label>
           <SliderTooltip className={tooltipClass}
-                         percentage={this.state.installmentPercentage}>
+                         percentage={installmentPercentage}>
             {tooltipText}
           </SliderTooltip>
           <Slider ref="slider"
                   step={this.installmentStep()}
-                  min={this.installmentMin()}
-                  max={this.installmentMax()}
+                  min={installmentMin}
+                  max={installmentMax}
                   power={2}
                   name={this.props.installmentName}
-                  value={this.state.installmentAmount}
+                  value={installmentAmount}
                   onChange={this.handleInstallmentChange}
                   onAction={this.handleInstallmentAction} />
         </div>
