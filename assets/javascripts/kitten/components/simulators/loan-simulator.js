@@ -38,6 +38,9 @@ window.LoanSimulator = React.createClass({
     // Currency
     currencySymbol: React.PropTypes.string,
 
+    // Installment
+    installmentSymbol: React.PropTypes.string,
+
     // Locale to format amounts correctly
     locale: React.PropTypes.string,
 
@@ -65,6 +68,7 @@ window.LoanSimulator = React.createClass({
       durationSymbolPlural: 'months',
 
       currencySymbol: '$',
+      installmentSymbol: '$/month',
       locale: 'en',
 
       actionLabel: 'OK',
@@ -189,7 +193,7 @@ window.LoanSimulator = React.createClass({
 
       const installmentText = `
         ${this.toCurrency(installmentAmount * 100)}
-        ${this.props.currencySymbol}/${this.props.durationSymbol}
+        ${this.props.installmentSymbol}
       `
       const durationText = `
         ${this.props.durationText}
@@ -199,8 +203,8 @@ window.LoanSimulator = React.createClass({
 
       tooltipClass = null
       tooltipText = [
-        <div>{installmentText}</div>,
-        <div>{durationText}</div>
+        <div className="k-LoanSimulator__installment">{installmentText}</div>,
+        <div className="k-LoanSimulator__duration">{durationText}</div>
       ]
     } else {
       tooltipClass = 'is-inactive'
