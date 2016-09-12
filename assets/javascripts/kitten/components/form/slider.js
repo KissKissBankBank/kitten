@@ -96,7 +96,7 @@ window.Slider = React.createClass({
 
   handleEnd: function(e) {
     document.removeEventListener('mousemove', this.handleMove)
-    document.removeEventListener('dragover', this.handleMove)
+    document.removeEventListener('touchmove', this.handleMove)
     document.removeEventListener('mouseup', this.handleEnd)
     document.removeEventListener('touchend', this.handleEnd)
     this.setState({ grabbing: false })
