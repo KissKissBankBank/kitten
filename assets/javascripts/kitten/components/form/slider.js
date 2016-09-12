@@ -189,13 +189,13 @@ window.Slider = React.createClass({
     const percentage = this.percentage(),
           trackStyles = { width: percentage },
           thumbStyles = { left: percentage },
-          grabbingClass = this.state.grabbing ? "is-grabbing" : null
+          grabbingClass = this.state.grabbing ? 'is-grabbing' : null
 
     let input
     if (this.props.name)
       input = <input type="hidden"
                      name={ this.props.name }
-                     value={ this.props.value ? this.props.value : "" } />
+                     value={ this.props.value ? this.props.value : '' } />
 
     return (
       <div className={ classNames("k-Slider", grabbingClass) }
