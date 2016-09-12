@@ -18,7 +18,7 @@ module Kitten
         return render status: :not_found, plain: 'Impossible component'
       end
 
-      render template: "kitten/#{type}/#{group}/#{name}",
+      render template: "kitten/components/#{type}/#{group}/#{name}",
              layout: 'kitten/application'
     end
   end
