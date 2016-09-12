@@ -244,7 +244,7 @@ $ node_modules/webpack/bin/webpack.js --config config/webpack.config.js
 $ RAILS_ENV=production bin/rails s
 ```
 
-To cleanup the compiled files, run `rm -fr public/assets/`.
+To cleanup the compiled files, run `rm -fr public`.
 
 ### Style checker
 

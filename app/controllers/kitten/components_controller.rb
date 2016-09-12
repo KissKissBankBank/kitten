@@ -1,12 +1,11 @@
 module Kitten
   class ComponentsController < Kitten::ApplicationController
-    TYPES = %w(atoms molecules organisms)
-    GROUPS_MATCH = /\A[a-z-]+\Z/
-    NAMES_MATCH = /\A[a-z-]+\Z/
+    TYPES = %w(atoms molecules organisms).freeze
+    NAME_MATCH = /\A[a-z-]+\Z/.freeze
 
     def index
-      render template: "layouts/kitten/components",
-             layout: "kitten/application"
+      render template: 'layouts/kitten/components',
+             layout: 'kitten/application'
     end
 
     def show
@@ -15,12 +14,12 @@ module Kitten
       name = params[:name]
 
       # Protect from people accessing other templates
-      raise "Unavailable type #{type.inspect}" unless TYPES.include?(type)
-      raise "Unavailable group #{group.inspect}" unless group =~ GROUPS_MATCH
-      raise "Unavailable name #{group.inspect}" unless name =~ NAMES_MATCH
+      unless TYPES.include?(type) && group =~ NAME_MATCH && name =~ NAME_MATCH
+        return render status: :not_found, plain: 'Impossible component'
+      end
 
-      render template: "kitten/#{type}/#{group}/#{name}",
-             layout: "kitten/application"
+      render template: "kitten/components/#{type}/#{group}/#{name}",
+             layout: 'kitten/application'
     end
   end
 end
