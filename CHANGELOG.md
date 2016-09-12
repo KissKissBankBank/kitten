@@ -13,6 +13,7 @@ New features:
 - Add new ButtonWithBadge molecule.
 - Add new ButtonImageWithText molecule.
 - Add new SliderTooltip molecule.
+- Add pages that serve as full-page previews for tests in the style guide.
 
 Fixes:
 - Computes position of `k-UserMenu` in `header` organism.
