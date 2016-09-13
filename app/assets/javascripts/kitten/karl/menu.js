@@ -1,7 +1,19 @@
 window.karl = (function(karl) {
+  var $menu = $(".karl-Menu");
+
   karl.initMenu = function() {
     $('[data-menu]').click(function(){
-      $('.karl-Container').toggleClass('menu-isOpened');
+      // Simulate menu closing on XS media query with a `is-clicked` class.
+      if ($menu.hasClass('is-opened') && $menu.hasClass('is-clicked')) {
+        $menu.removeClass('is-clicked');
+      } else {
+        $menu.toggleClass('is-opened');
+        $menu.removeClass('is-clicked');
+      }
+    });
+
+    $('.karl-Menu__link').click(function(){
+      $menu.addClass('is-clicked');
     })
   }
 
@@ -34,3 +46,5 @@ $(document).ready(function(){
     }
   });
 });
+
+

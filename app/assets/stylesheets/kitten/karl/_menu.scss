@@ -1,43 +1,86 @@
+$menu-padding-right: 1rem;
+$header-title-margin: 2rem;
+
+// We need a fixed with to position correctly '.karl-Menu__header__title'
+$menu-width: 12rem;
 
 // Menu Dropdown
 .karl-Menu {
-  height: 0;
-  overflow: hidden;
-  opacity: 0;
   position: fixed;
+  left: 0;
+  z-index: 3;
+  width: auto;
 
-  .karl-Container.menu-isOpened & {
+  // TODO manage transition
+  //transition: width 0.5s, background-color 0.5;
+
+  &.is-opened {
+    background-color: $sapphire;
+    width: $menu-width;
     height: 100%;
-    width: span(2);
-    opacity: 1;
-    top: $header-height;
+
+    @include k-media-xs {
+      width: 100%;
+    }
+  }
+
+  // This class simulates closing on the menu only on XS media query.
+  &.is-clicked {
+    @include k-media-xs {
+      width: auto;
+      height: auto;
+      background-color: transparent;
+    }
   }
 
   ul { margin: 0; padding: 0; }
 }
 
-.karl-MenuBackground {
-  background-color: $sapphire;
-  width: span(1);
-  height: 0;
-  opacity: 0;
-  overflow: hidden;
-  margin-top: $header-height;
-  transition: width .5s;
+.karl-Menu__header {
+  position: relative;
+}
 
-  .karl-Container.menu-isOpened & {
-    width: span(2);
-    height: auto;
-    opacity: 1;
-    background-color: $sapphire;
+.karl-Menu__header__title {
+  margin-top: 0;
+  margin-bottom: 0;
+  position: absolute;
+  top: 0;
+  width: $menu-width;
+  right: -$menu-width - $header-title-margin;
+
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: $header-height;
+
+}
+
+.karl-Menu__content {
+  display: none;
+  clear: both;
+
+  .karl-Menu.is-opened & {
+    display: block;
+    top: 0;
+    bottom: 0;
+  }
+
+  // This class simulates closing on the menu only on XS media query.
+  .karl-Menu.is-clicked & {
+    @include k-media-xs {
+      display: none;
+    }
   }
 }
 
 .karl-Menu__title {
   float: right;
-  padding-right: 1rem;
-  margin-top: .8rem;
   position: relative;
+  height: $header-height;
+  display: block;
+  line-height: $header-height;
+  margin-left: 2rem;
+  padding-right: $menu-padding-right;
 
   color: white;
   font-size: .75rem;
@@ -46,16 +89,22 @@
   text-align: right;
   text-transform: uppercase;
   text-decoration: none;
+  cursor: pointer;
 
-  &:after {
+  &:before {
     content: url($arrowRight-path);
     position: absolute;
-    right: 5em;
+    left: -1em;
   }
 
-  .karl-Container.menu-isOpened & {
-    &:after {
-    content: url($arrowLeft-path);
+  .karl-Menu.is-opened & {
+    &:before {
+      content: url($arrowLeft-path);
+    }
+  }
+  .karl-Menu.is-opened.is-clicked &:before {
+    @include k-media-xs {
+      content: url($arrowRight-path);
     }
   }
 }
@@ -85,6 +134,7 @@
   border-bottom: 1px solid $light-navy;
   padding: 1.5rem 0 .75rem 1rem;
   display: block;
+  padding-right: $menu-padding-right;
 
   font-size: .75rem;
   text-transform: uppercase;
@@ -94,7 +144,7 @@
     &:after {
       position: absolute;
       content: url($arrowBottom-path);
-      right: 1.8em;
+      right: $menu-padding-right;
     }
 
     &.is-opened {
@@ -112,26 +162,30 @@
   }
 }
 
-.karl-Menu__subListItem {
-  position: relative;
+.karl-Menu__link {
   border-bottom: 1px solid $light-navy;
-  padding-left: 2rem;
   display: block;
-
-  list-style: none;
 
   font-size: 0.75rem;
   font-weight: 400;
   letter-spacing: 1px;
   line-height: 3.2rem;
-  color: white;
+
+  list-style: none;
   text-decoration: none;
+}
+
+.karl-Menu__subListItem {
+  position: relative;
+  padding-left: 2rem;
+
+  color: white;
 
   &.with-arrow {
     &:after {
       position: absolute;
       content: url($arrowBottom-path);
-      right: 1.8em;
+      right: $menu-padding-right;
     }
 
     &.is-opened {
@@ -159,18 +213,9 @@
 }
 
 .karl-Menu__subSecondListItem {
-  border-bottom: 1px solid $light-navy;
-  display: block;
   padding-left: 3rem;
 
-  list-style: none;
-
-  font-size: 0.75rem;
-  font-weight: 400;
-  letter-spacing: 1px;
-  line-height: 3.2rem;
   color: #cadbfd;
-  text-decoration: none;
 
   &:hover,
   &:focus,
