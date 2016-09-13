@@ -6,7 +6,9 @@
 <title>Kitten style guide</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<%= webpack_stylesheet_tags(Kitten.configuration.webpack_entry_point) %>
+<%= env_stylesheet_link_tag(static: 'application_static',
+                            hot: 'application_non_webpack',
+                            media: 'all') %>
 <%= stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' %>
 <%= stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Dosis' %>
 
