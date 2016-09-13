@@ -2,7 +2,7 @@ $menu-padding-right: 1rem;
 $header-title-margin: 2rem;
 
 // We need a fixed with to position correctly '.karl-Menu__header__title'
-$menu-width: 12rem;
+$menu-width: 14rem;
 
 // Menu Dropdown
 .karl-Menu {
@@ -19,9 +19,7 @@ $menu-width: 12rem;
     width: $menu-width;
     height: 100%;
 
-    @include k-media-xs {
-      width: 100%;
-    }
+    @include k-media-xs { width: 100%; }
   }
 
   // This class simulates closing on the menu only on XS media query.
@@ -52,7 +50,6 @@ $menu-width: 12rem;
   font-size: 1.2rem;
   font-weight: 300;
   line-height: $header-height;
-
 }
 
 .karl-Menu__content {
@@ -67,9 +64,7 @@ $menu-width: 12rem;
 
   // This class simulates closing on the menu only on XS media query.
   .karl-Menu.is-clicked & {
-    @include k-media-xs {
-      display: none;
-    }
+    @include k-media-xs { display: none; }
   }
 }
 
@@ -102,6 +97,7 @@ $menu-width: 12rem;
       content: url($arrowLeft-path);
     }
   }
+
   .karl-Menu.is-opened.is-clicked &:before {
     @include k-media-xs {
       content: url($arrowRight-path);

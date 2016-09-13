@@ -1,8 +1,8 @@
 window.karl = (function(karl) {
-  var $menu = $(".karl-Menu");
+  var $menu = $('.karl-Menu')
 
   karl.initMenu = function() {
-    $('[data-menu]').click(function(){
+    $('[data-menu]').click(function() {
       // Simulate menu closing on XS media query with a `is-clicked` class.
       if ($menu.hasClass('is-opened') && $menu.hasClass('is-clicked')) {
         $menu.removeClass('is-clicked');
