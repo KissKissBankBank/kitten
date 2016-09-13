@@ -12,6 +12,7 @@
   display: flex;
   @include container;
   box-sizing: border-box;
+  padding: 0 gutter() * 2;
 }
 
 .karl-Header__content {
