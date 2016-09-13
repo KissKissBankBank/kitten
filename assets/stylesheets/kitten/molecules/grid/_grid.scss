@@ -51,8 +51,7 @@
   }
 }
 
-// .k-Grid__col-1 to .k-Grid__col-12 helpers
-
+// Helper classes for col-1 to col-12, as well as offsets
 @mixin _k-GridCols($media, $min-width) {
   $number-of-columns: k-map-fetch($k-grid, 'columns');
 
@@ -60,15 +59,14 @@
     @include k-grid-colBase;
   }
 
+  // Columns
+
   @for $columns from 1 through $number-of-columns {
     // For the smallest width, do not add breakpoint suffix (@xxs)
     @if $min-width == null {
       .k-Grid__col--#{$columns} {
         @include k-grid-colSize($columns);
         @extend %k-col-#{$media};
-      }
-      .k-Grid__col--offset-#{$columns} {
-        @include k-grid-offset($columns);
       }
     }
 
@@ -78,6 +76,21 @@
         @include k-grid-colSize($columns);
         @extend %k-col-#{$media};
       }
+    }
+  }
+
+  // Offsets
+
+  @for $columns from 0 through $number-of-columns {
+    // For the smallest width, do not add breakpoint suffix (@xxs)
+    @if $min-width == null {
+      .k-Grid__col--offset-#{$columns} {
+        @include k-grid-offset($columns);
+      }
+    }
+
+    // For all other widths, add breakpoint suffixes (@s, @m, @l, …)
+    @if $min-width {
       .k-Grid__col--offset-#{$columns}\@#{$media} {
         @include k-grid-offset($columns);
       }
