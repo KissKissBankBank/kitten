@@ -1,0 +1,153 @@
+$arrowBottom-path: '~icons/arrow-bottom.svg';
+$arrowTop-path: '~icons/arrow-top.svg';
+
+// Menu Dropdown
+.karl-Menu {
+  display: block;
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 15rem;
+  height: 100%;
+  z-index: 2;
+
+  background-color: $sapphire;
+  color: white;
+
+  transition: 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+
+  ul { margin: 0; padding: 0; }
+}
+
+.karl-Menu__title {
+  float: right;
+  padding-right: 1rem;
+  margin-top: 1.3rem;
+
+  font-size: .75rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.karl-Menu__list {
+  & > a {
+    color: inherit;
+    text-decoration: none;
+    font-weight: 400;
+  }
+}
+
+.karl-Menu__listTitle {
+  position: relative;
+  border-bottom: 1px solid $light-navy;
+  padding: 3.125rem 0 1rem 1rem;
+  display: block;
+
+  font-size: 1.25rem;
+  font-weight: 300;
+  text-decoration: none;
+  color: inherit;
+}
+
+.karl-Menu__listItem {
+  position: relative;
+  border-bottom: 1px solid $light-navy;
+  padding: 1.5rem 0 .75rem 1rem;
+  display: block;
+
+  font-size: .75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  &.with-arrow {
+    &:after {
+      position: absolute;
+      content: url($arrowBottom-path);
+      right: 1.8em;
+    }
+
+    &.is-opened {
+      background-color: $light-navy;
+
+      &:after {
+        content: url($arrowTop-path);
+      }
+    }
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $light-navy;
+  }
+}
+
+.karl-Menu__subListItem {
+  position: relative;
+  border-bottom: 1px solid $light-navy;
+  padding-left: 2rem;
+  display: block;
+
+  list-style: none;
+
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 3.2rem;
+  color: inherit;
+  text-decoration: none;
+
+  &.with-arrow {
+    &:after {
+      position: absolute;
+      content: url($arrowBottom-path);
+      right: 1.8em;
+    }
+
+    &.is-opened {
+      background-color: $light-navy;
+
+      &:after {
+        content: url($arrowTop-path);
+      }
+    }
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $light-navy;
+  }
+}
+
+.karl-Menu__subList,
+.karl-Menu__subSecondList {
+  display: none;
+
+  &.is-opened {
+    display: block;
+  }
+}
+
+.karl-Menu__subSecondListItem {
+  border-bottom: 1px solid $light-navy;
+  display: block;
+  padding-left: 3rem;
+
+  list-style: none;
+
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 3.2rem;
+  color: #cadbfd;
+  text-decoration: none;
+
+  &:hover,
+  &:focus,
+  &.is-selected,
+  &.is-opened {
+    background-color: $light-navy;
+  }
+}

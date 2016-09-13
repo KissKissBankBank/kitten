@@ -1,0 +1,39 @@
+// Branding/Colors
+
+.karl-Colors__chart {
+  width: span(8);
+  margin: 0 auto;
+}
+
+.karl-Colors__cardBackground {
+  padding-top: 8rem;
+  background-color: $light-navy;
+}
+
+.karl-Colors__cardDescription {
+  padding: .12rem .6rem;
+  border-top: solid 1px $light-grey-3;
+}
+
+.karl-Colors__cardParagraph {
+  margin: .12rem 0;
+}
+
+// Branding/Fonts
+
+.karl-Fonts__card {
+  height: 120px;
+}
+
+.karl-Fonts__cardDescription {
+  text-align: center;
+}
+
+.karl-Fonts__cardTitle {
+  font-size: 1.125rem;
+  font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
+}
+
+.karl-Fonts__cardParagraph {
+  font-size: .75rem;
+}

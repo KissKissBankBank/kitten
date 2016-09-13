@@ -13,11 +13,13 @@ New features:
 - Add new ButtonWithBadge molecule.
 - Add new ButtonImageWithText molecule.
 - Add new SliderTooltip molecule.
+- Add branding section on styleguide.
 - Add pages that serve as full-page previews for tests in the style guide.
 
 Fixes:
 - Computes position of `k-UserMenu` in `header` organism.
 - Simpler "production" setup for the dummy app.
+- Small updates on the styleguide.
 
 ## [v0.6.2] - 2016-08-23
 

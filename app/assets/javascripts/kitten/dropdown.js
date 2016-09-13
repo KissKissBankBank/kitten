@@ -12,9 +12,9 @@ $(document).ready(function(){
         $handle.toggleClass("is-opened");
         $handle.siblings("ul").toggleClass('is-opened');
       });
-    }
+
     // Child
-    else {
+    } else {
       $handle.on("click", function(){
         $('.is-selected').removeClass('is-selected');
         $handle.addClass('is-selected');
