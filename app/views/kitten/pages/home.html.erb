@@ -1,0 +1,248 @@
+<%= render template: 'kitten/pages/header' %>
+
+<style>
+  body { background: white; }
+</style>
+
+<div class="k-Hero k-Hero--onDark" style="background: #4a84ff">
+  <div class="k-Hero__container">
+    <div class="k-Hero__text">
+      <!-- TODO <h1 class="k-Hero__title">Petits pêts entre amis</h1> -->
+      <h1 class="k-Hero__title">Petits prêts entre amis</h1>
+      <p class="k-Hero__subtitle">Vos amis vous avancent de l’argent.</p>
+      <p class="k-Hero__subtitle">Vous les remboursez sans intérêt et sans prise de tête grâce à hellomerci.</p>
+    </div>
+    <div class="k-Hero__action">
+      <div class="k-Card k-Card--light">
+        <div id="loan-simulator"></div>
+        <script type="text/babel">
+          ReactDOM.render(
+            React.createElement(LoanSimulator,
+              { amountLabel: 'J’ai besoin de',
+                amountPlaceholder: 'Entre 200 € et 10 000 €',
+                amountMin: 200,
+                amountMax: 10000,
+                initialAmount: 400,
+
+                amountEmptyError: 'Veuillez renseigner un montant',
+                amountOutOfBoundsError:
+                  'Veuillez renseigner un montant compris entre 200 et 10 000 €',
+
+                installmentLabel: 'Je rembourse',
+
+                sliderPlaceholder: 'Glisser pour sélectionner',
+
+                durationText: 'pendant',
+                durationMin: 1,
+                durationMax: 36,
+                durationSymbol: 'mois',
+                durationSymbolPlural: 'mois',
+
+                currencySymbol: '€',
+                locale: 'fr',
+
+                actionLabel: 'C’est parti !'
+              }),
+            document.getElementById('loan-simulator')
+          )
+        </script>
+      </div>
+      <p>
+        &nbsp;
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="k-Row k-Row--padded k-Row--light k-Row--lightBottomBorder k-Row--centered">
+  <div class="k-Row__content">
+
+    <div class="k-TestimonyList">
+      <div class="k-TestimonyList__item k-Testimony">
+        <h2 class="k-Testimony__title">Empruntez à taux 0%</h2>
+        <img class="k-Testimony__image"
+             alt="Cute kitten"
+             src="https://placehold.it/150x150/4a84ff/fff"
+             width="150"
+             height="150" />
+        <blockquote class="k-Testimony__text">
+          &laquo;&nbsp;Quel bonheur d’emprunter à taux 0&nbsp;% à des gens qui nous veulent du bien.&nbsp;&raquo;
+        </blockquote>
+      </div>
+      <div class="k-TestimonyList__item k-Testimony">
+        <h2 class="k-Testimony__title">En deux minutes</h2>
+        <img class="k-Testimony__image"
+             alt="Cute kitten"
+             src="https://placehold.it/150x150/4a84ff/fff"
+             width="150"
+             height="150" />
+        <blockquote class="k-Testimony__text">
+          &laquo;&nbsp;Grâce à hellomerci, j’ai rassemblé l’argent dont j’avais besoin en quelques minutes.&nbsp;&raquo;
+        </blockquote>
+      </div>
+      <div class="k-TestimonyList__item k-Testimony">
+        <h2 class="k-Testimony__title">En toute intimité</h2>
+        <img class="k-Testimony__image"
+             alt="Cute kitten"
+             src="https://placehold.it/150x150/4a84ff/fff"
+             width="150"
+             height="150" />
+        <blockquote class="k-Testimony__text">
+          &laquo;&nbsp;Super rassurant de pouvoir emprunter à ses amis sans voir à le crier sur tous les toits.&nbsp;&raquo;
+        </blockquote>
+      </div>
+      <div class="k-TestimonyList__item k-Testimony">
+        <h2 class="k-Testimony__title">Et en toute sécurité</h2>
+        <img class="k-Testimony__image"
+             alt="Cute kitten"
+             src="https://placehold.it/150x150/4a84ff/fff"
+             width="150"
+             height="150" />
+        <blockquote class="k-Testimony__text">
+          &laquo;&nbsp;C’est bien de savoir que toutes les données collectées sont cryptées et sécurisées.&nbsp;&raquo;
+        </blockquote>
+      </div>
+    </div>
+
+    <p>
+      <button class="k-Button">C’est parti&nbsp;!</button>
+    </p>
+
+  </div>
+</div>
+
+<div class="k-Row k-Row--padded k-Row--lightBottomBorder">
+  <div class="k-Row__content k-GridDuo">
+    <div class="k-GridDuo__col k-u-centered">
+      <img alt="Cute kitten"
+           src="https://placehold.it/400x300/4a84ff/fff"
+           width="400"
+           height="300" />
+    </div>
+    <div class="k-GridDuo__col">
+      <h2>J’emprunte à mes amis</h2>
+      <p>
+        C’est simple et rapide. J’emprunte à mes proches en quelques clics.
+        hellomerci rassemble l’argent pour moi et le transfère
+        directement sur mon compte bancaire.
+      </p>
+      <p>
+        <button class="k-Button">En savoir plus</button>
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="k-Row k-Row--padded k-Row--light k-Row--lightBottomBorder">
+  <div class="k-Row__content k-GridDuo">
+    <div class="k-GridDuo__col">
+      <h2>Je rembourse mes amis</h2>
+      <p>
+        C’est garanti et pratique. hellomerci prélève automatiquement mon
+        compte pour rembourser mes prêteurs.
+      </p>
+      <p>
+        <button class="k-Button">En savoir plus</button>
+      </p>
+    </div>
+    <div class="k-GridDuo__col k-u-centered">
+      <img alt="Cute kitten"
+           src="https://placehold.it/300x360/4a84ff/fff"
+           width="300"
+           height="360" />
+    </div>
+  </div>
+</div>
+
+<div class="k-Row k-Row--padded k-Row--centered">
+  <div class="k-Row__content">
+    <p>
+      <img alt="La Banque Postale"
+           src="https://placehold.it/100x100/4a84ff/fff"
+           width="100"
+           height="100" />
+    </p>
+    <p>
+      Même La Banque Postale recommande hellomerci
+      <img alt="☺"
+           src="https://placehold.it/21x21/4a84ff/fff"
+           width="21"
+           height="21" />
+    </p>
+  </div>
+</div>
+
+<div class="k-Row k-Row--padded k-Row--dark k-Row--centered">
+  <div class="k-Row__content">
+    <p>
+      hellomerci présente aussi des projets d’intérêt collectif
+      quand ils sont soutenus par nos partenaires.
+    </p>
+    <p>
+      <button class="k-Button">Voir les collectes publiques</button>
+      <button class="k-Button">Voir la liste de nos partenaires</button>
+    </p>
+  </div>
+</div>
+
+<div class="k-Row k-Row--padded k-Row--light k-Row--lightBottomBorder k-Row--centered">
+  <div class="k-Row__content">
+    <h2>La presse parle d'hellomerci&nbsp;: voilà une bonne nouvelle&nbsp;!</h2>
+
+    <div class="k-TestimonyList">
+      <div class="k-TestimonyList__item k-Testimony">
+        <blockquote class="k-Testimony__text">
+          &laquo;&nbsp;En 48 heures, le projet a recueilli
+          10&nbsp;000&nbsp;€&nbsp;&raquo;
+        </blockquote>
+        <img alt="Cute kitten"
+             src="https://placehold.it/80x30/4a84ff/fff"
+             width="80"
+             height="30" />
+      </div>
+      <div class="k-TestimonyList__item k-Testimony">
+        <blockquote class="k-Testimony__text">
+          &laquo;&nbsp;Un archet, un permis ou un magasin&nbsp;: le
+          crowdfunding entre dans la vie quotidienne.&nbsp;&raquo;
+        </blockquote>
+        <img alt="Cute kitten"
+             src="https://placehold.it/90x30/4a84ff/fff"
+             width="90"
+             height="30" />
+      </div>
+      <div class="k-TestimonyList__item k-Testimony">
+        <blockquote class="k-Testimony__text">
+          &laquo;&nbsp;Certains clients nous rapellent qu’ils ont participé
+          au lancement du magasin&nbsp;!&nbsp;&raquo;
+        </blockquote>
+        <img alt="Cute kitten"
+             src="https://placehold.it/70x30/4a84ff/fff"
+             width="70"
+             height="30" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="k-Row k-Row--padded k-Row--lightBottomBorder">
+  <div class="k-Row__content">
+    <p>Inscrivez-vous à notre Newsletter</p>
+    <p>
+      Suivez nous
+      <img src="https://placehold.it/35x35/4a84ff/fff" width="35" height="35" />
+      <img src="https://placehold.it/35x35/4a84ff/fff" width="35" height="35" />
+      <img src="https://placehold.it/35x35/4a84ff/fff" width="35" height="35" />
+    </p>
+  </div>
+</div>
+
+<div class="k-Row k-Row--padded k-Row--light">
+  <div class="k-Row__content">
+    <p>
+      <img src="https://placehold.it/100x100/4a84ff/fff" width="100" height="100" />
+    </p>
+    <p>
+      Plateforme de pêts entre particuliers de 200 à 10&nbsp;000&nbsp;€.
+    </p>
+  </div>
+</div>
