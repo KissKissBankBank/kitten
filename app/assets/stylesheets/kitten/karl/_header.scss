@@ -4,7 +4,7 @@
   background-color: $blue;
 }
 
-.karl-Row {
+.karl-row {
   max-width: container();
   margin: 0 auto;
 }
@@ -22,7 +22,7 @@
 
 .karl-Title__breadcrumb {
   width: span(8);
-  margin: 0 auto;
+  margin: 0 auto 2.5rem;
 
   padding-top: 4rem;
   border-bottom: 2px solid $light-grey-2;
