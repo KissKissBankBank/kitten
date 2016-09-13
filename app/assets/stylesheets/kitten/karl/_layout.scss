@@ -5,6 +5,7 @@
 
 .karl-Main__container {
   @include container;
+  position: relative;
   display: flex;
   box-sizing: border-box;
 }

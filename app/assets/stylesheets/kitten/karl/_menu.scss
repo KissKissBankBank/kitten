@@ -1,7 +1,3 @@
-$arrowBottom-path: '~icons/arrow-bottom.svg';
-$arrowTop-path:    '~icons/arrow-top.svg';
-$arrowRight-path:  '~icons/arrow-right.svg';
-$arrowLeft-path:   '~icons/arrow-left.svg';
 
 // Menu Dropdown
 .karl-Menu {
@@ -12,6 +8,7 @@ $arrowLeft-path:   '~icons/arrow-left.svg';
 
   .karl-Container.menu-isOpened & {
     height: 100%;
+    width: span(2);
     opacity: 1;
     top: $header-height;
   }
@@ -20,7 +17,7 @@ $arrowLeft-path:   '~icons/arrow-left.svg';
 }
 
 .karl-MenuBackground {
-  background-color: $light-navy;
+  background-color: $sapphire;
   width: span(1);
   height: 0;
   opacity: 0;
@@ -32,14 +29,14 @@ $arrowLeft-path:   '~icons/arrow-left.svg';
     width: span(2);
     height: auto;
     opacity: 1;
-    background-color: $light-navy;
+    background-color: $sapphire;
   }
 }
 
 .karl-Menu__title {
   float: right;
   padding-right: 1rem;
-  margin-top: 1.3rem;
+  margin-top: .8rem;
   position: relative;
 
   color: white;
@@ -51,19 +48,21 @@ $arrowLeft-path:   '~icons/arrow-left.svg';
   text-decoration: none;
 
   &:after {
-    content: url($arrowLeft-path);
+    content: url($arrowRight-path);
     position: absolute;
     right: 5em;
   }
 
-  &.menu-closed {
-    content: url($arrowRight-path);
+  .karl-Container.menu-isOpened & {
+    &:after {
+    content: url($arrowLeft-path);
+    }
   }
 }
 
 .karl-Menu__list {
   & > a {
-    color: inherit;
+    color: white;
     text-decoration: none;
     font-weight: 400;
   }
@@ -78,7 +77,7 @@ $arrowLeft-path:   '~icons/arrow-left.svg';
   font-size: 1.25rem;
   font-weight: 300;
   text-decoration: none;
-  color: inherit;
+  color: white;
 }
 
 .karl-Menu__listItem {
@@ -125,7 +124,7 @@ $arrowLeft-path:   '~icons/arrow-left.svg';
   font-weight: 400;
   letter-spacing: 1px;
   line-height: 3.2rem;
-  color: inherit;
+  color: white;
   text-decoration: none;
 
   &.with-arrow {

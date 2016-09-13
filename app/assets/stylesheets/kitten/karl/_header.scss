@@ -30,25 +30,28 @@
 
   .karl-Container.menu-isOpened & {
     width: span(2);
-    background-color: $light-navy;
+    background-color: $sapphire;
   }
 }
 
 .karl-Header__title {
   width: span(12);
-  margin-top: 0;
-  margin-bottom: 0;
+  margin: 0 0 0 2rem;
 
   color: white;
   font-size: 1.2rem;
   font-weight: 300;
-  line-height: 4rem;
+  line-height: 3rem;
+}
+
+.karl-Title {
+  margin-top: 5rem;
 }
 
 .karl-Title__breadcrumb {
   margin-bottom: 2.5rem;
 
-  padding-top: 4rem;
+  padding-top: 3rem;
   border-bottom: 2px solid $light-grey-2;
 
   color: #333;
