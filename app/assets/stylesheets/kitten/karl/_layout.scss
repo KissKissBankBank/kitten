@@ -1,8 +1,16 @@
-.karl-Container {
+.karl-Main {
   background-color: $light-grey-1;
 }
 
-.karl-Content {
+.karl-Main__container {
+  @include container;
+  position: relative;
+  display: flex;
+  box-sizing: border-box;
+}
+
+.karl-Main__content {
+  width: span(8);
   margin: 0 auto;
 }
 
