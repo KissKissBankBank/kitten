@@ -178,14 +178,14 @@ window.LoanSimulator = React.createClass({
     const { label } = this.props
     const { dragged, touched } = this.state
     const error = this.error()
-    const amountError = this.amountError()
+    const amountValid = !this.amountError()
     const duration = this.duration()
     const showResult = !error && touched && duration
-    const installmentMin = !amountError ? this.installmentMin() : 0
-    const installmentMax = !amountError ? this.installmentMax() : 0
-    const installmentAmount = !amountError ? this.state.installmentAmount : 0
-    const installmentPercentage = !amountError ? this.state.installmentPercentage : 0
-    const sliderIsActive = !amountError && dragged && installmentAmount
+    const installmentMin = amountValid ? this.installmentMin() : 0
+    const installmentMax = amountValid ? this.installmentMax() : 0
+    const installmentAmount = amountValid ? this.state.installmentAmount : 0
+    const installmentPercentage = amountValid ? this.state.installmentPercentage : 0
+    const sliderIsActive = amountValid && dragged && installmentAmount
 
     let errorClass, errorTag, tooltipClass, tooltipText
 
