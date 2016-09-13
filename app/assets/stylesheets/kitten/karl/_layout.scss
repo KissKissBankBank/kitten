@@ -25,20 +25,27 @@
   z-index: 99999;
 }
 
-.karl-OverGrid__row {
+.karl-OverGrid__container {
   @include container;
   box-sizing: border-box;
-  padding: 0 gutter();
-
+  padding: 0 gutter() * 2;
   height: 100%;
-  outline: 1px dotted rgba(0, 0, 0, .2);
+  outline: 1px dotted rgba(black, .2);
+}
+
+.karl-OverGrid__row {
+  height: 100%;
+  @include k-grid;
 }
 
 .karl-OverGrid__col {
-  @include span(1);
   height: 100%;
-  min-height: 3rem;
-  background: rgba(0, 0, 0, .1);
+  @include k-grid-col(1);
+}
+
+.karl-OverGrid__inner {
+  height: 100%;
+  background: rgba(black, .1);
 }
 
 
