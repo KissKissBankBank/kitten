@@ -1,9 +1,23 @@
-.karl-Container {
+
+.karl-Main {
   background-color: $light-grey-1;
 }
 
-.karl-Content {
-  margin: 0 auto;
+.karl-Main__container {
+  @include container;
+  display: flex;
+  box-sizing: border-box;
+}
+
+.karl-Main__content {
+  width: span(8);
+  margin-left: span(1) + gutter();
+  margin-right: span(2) + gutter() * 2;
+
+  .karl-Container.menu-isOpened & {
+    margin-right: span(1) + gutter();
+  }
+
 }
 
 // Utilities

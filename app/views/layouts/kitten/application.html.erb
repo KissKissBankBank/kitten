@@ -25,74 +25,85 @@
 <body>
 
 <% if @menu_types || controller_name == "branding" %>
-  <div class="karl-Container">
-    <nav class="karl-Menu">
-      <a class="karl-Menu__title">menu</a>
+  <div class="karl-Container menu-isOpened">
+    <div class="karl-Header">
+      <header class="karl-Header__container">
+        <div class="karl-Header__menuOpener">
+          <%= link_to("menu", "#", data: { menu: 'true' } ) %>
+        </div>
+        <div class="karl-Header__content">
+          <h3 class="karl-Header__title">Styleguide <strong>KissKiss&amp;Co</strong></h3>
+        </div>
+      </header>
+    </div>
 
-      <div class="k-u-clearfix"></div>
+    <div class="karl-Main">
+      <div class="karl-Main__container">
+        <nav class="karl-Menu">
+          <a href="#" class="karl-Menu__title">menu</a>
+          <%#= link_to "menu", class: "karl-Menu__title" %>
 
-      <%= link_to "Branding", branding_path, class: "karl-Menu__listTitle" %>
-      <% if controller_name == "branding" %>
-        <ul data-karl-menu >
-          <li class="karl-Menu__list"><%= link_to "KissKissBankBank", branding_path(anchor: "kisskiss/colors"), class: "karl-Menu__listItem with-arrow #{'is-opened' if params[:theme] == 'branding/kisskissbankbank'}" %>
-            <ul class="karl-Menu__subList <%= 'is-opened' if params[:theme] == 'kisskissbankbank' %>">
-              <li><%= link_to "Colors", branding_path(anchor: "kisskiss/colors"), class: "karl-Menu__subListItem" %></li>
-              <li><%= link_to "Fonts", branding_path(anchor: "kisskiss/fonts"), class: "karl-Menu__subListItem" %></li>
-            </ul>
-          </li>
-          <li class="karl-Menu__list"><%= link_to "hellomerci", branding_path(anchor: "hellomerci/colors"), class: "karl-Menu__listItem with-arrow #{'is-opened' if params[:theme] == 'hellomerci'}" %>
-            <ul class="karl-Menu__subList">
-              <li><%= link_to "Colors", branding_path(anchor: "hellomerci/colors"), class: "karl-Menu__subListItem" %></li>
-              <li><%= link_to "Fonts", branding_path(anchor: "hellomerci/fonts"), class: "karl-Menu__subListItem" %></li>
-            </ul>
-          </li>
-          <li class="karl-Menu__list"><%= link_to "LENDOPOLIS", branding_path(anchor: "lendopolis/colors"), class: "karl-Menu__listItem with-arrow #{'is-opened' if params[:theme] == 'lendopolis'}" %>
-            <ul class="karl-Menu__subList">
-              <li><%= link_to "Colors", branding_path(anchor: "lendopolis/colors"), class: "karl-Menu__subListItem" %></li>
-              <li><%= link_to "Fonts", branding_path(anchor: "lendopolis/fonts"), class:"karl-Menu__subListItem" %></li>
-            </ul>
-          </li>
-        </ul>
-      <% end %>
+          <div class="k-u-clearfix"></div>
 
-      <%= link_to "Components", components_path, class: "karl-Menu__listTitle" %>
-      <% if @menu_types %>
-        <ul data-karl-menu>
-          <% @menu_types.each do |type_id:, type_title:, groups:| %>
-            <li class="karl-Menu__list">
-              <a href="#<%= type_id %>"
-                 class="karl-Menu__listItem <%= "with-arrow" if groups.any? %>"><%= type_title %></a>
-              <ul class="karl-Menu__subList">
-                <% groups.each do |group_id:, group_title:, components:| %>
-                  <li>
-                    <a href="#<%= group_id %>"
-                       class="karl-Menu__subListItem <%= "with-arrow" if components.any? %>"><%= group_title %></a>
-                    <ul class="karl-Menu__subSecondList">
-                      <% components.each do |component_id:, component_title:| %>
-                        <li>
-                          <a class="karl-Menu__subSecondListItem"
-                             href="#<%= component_id %>"><%= component_title %></a>
-                        </li>
-                      <% end %>
-                    </ul>
-                  </li>
-                <% end %>
-              </ul>
-            </li>
+          <%= link_to "Branding", branding_path, class: "karl-Menu__listTitle" %>
+          <% if controller_name == "branding" %>
+            <ul data-karl-menu >
+              <li class="karl-Menu__list"><%= link_to "KissKissBankBank", branding_path(anchor: "kisskiss/colors"), class: "karl-Menu__listItem with-arrow #{'is-opened' if params[:theme] == 'branding/kisskissbankbank'}" %>
+                <ul class="karl-Menu__subList <%= 'is-opened' if params[:theme] == 'kisskissbankbank' %>">
+                  <li><%= link_to "Colors", branding_path(anchor: "kisskiss/colors"), class: "karl-Menu__subListItem" %></li>
+                  <li><%= link_to "Fonts", branding_path(anchor: "kisskiss/fonts"), class: "karl-Menu__subListItem" %></li>
+                </ul>
+              </li>
+              <li class="karl-Menu__list"><%= link_to "hellomerci", branding_path(anchor: "hellomerci/colors"), class: "karl-Menu__listItem with-arrow #{'is-opened' if params[:theme] == 'hellomerci'}" %>
+                <ul class="karl-Menu__subList">
+                  <li><%= link_to "Colors", branding_path(anchor: "hellomerci/colors"), class: "karl-Menu__subListItem" %></li>
+                  <li><%= link_to "Fonts", branding_path(anchor: "hellomerci/fonts"), class: "karl-Menu__subListItem" %></li>
+                </ul>
+              </li>
+              <li class="karl-Menu__list"><%= link_to "LENDOPOLIS", branding_path(anchor: "lendopolis/colors"), class: "karl-Menu__listItem with-arrow #{'is-opened' if params[:theme] == 'lendopolis'}" %>
+                <ul class="karl-Menu__subList">
+                  <li><%= link_to "Colors", branding_path(anchor: "lendopolis/colors"), class: "karl-Menu__subListItem" %></li>
+                  <li><%= link_to "Fonts", branding_path(anchor: "lendopolis/fonts"), class:"karl-Menu__subListItem" %></li>
+                </ul>
+              </li>
+            </ul>
           <% end %>
-        </ul>
-      <% end %>
-    </nav>
 
-    <div class="karl-Content">
-      <section>
-        <header class="karl-Header">
-          <div class="karl-Row">
-            <h3 class="karl-Header__title">Styleguide <strong>KissKiss&amp;Co</strong></h3>
-          </div>
-        </header>
-        <%= yield %>
-      </section>
+          <%= link_to "Components", components_path, class: "karl-Menu__listTitle" %>
+          <% if @menu_types %>
+            <ul data-karl-menu>
+              <% @menu_types.each do |type_id:, type_title:, groups:| %>
+                <li class="karl-Menu__list">
+                  <a href="#<%= type_id %>"
+                     class="karl-Menu__listItem <%= "with-arrow" if groups.any? %>"><%= type_title %></a>
+                  <ul class="karl-Menu__subList">
+                    <% groups.each do |group_id:, group_title:, components:| %>
+                      <li>
+                        <a href="#<%= group_id %>"
+                           class="karl-Menu__subListItem <%= "with-arrow" if components.any? %>"><%= group_title %></a>
+                        <ul class="karl-Menu__subSecondList">
+                          <% components.each do |component_id:, component_title:| %>
+                            <li>
+                              <a class="karl-Menu__subSecondListItem"
+                                 href="#<%= component_id %>"><%= component_title %></a>
+                            </li>
+                          <% end %>
+                        </ul>
+                      </li>
+                    <% end %>
+                  </ul>
+                </li>
+              <% end %>
+            </ul>
+          <% end %>
+        </nav>
+        <div class="karl-MenuBackground">
+        </div>
+        <section class="karl-Main__content">
+          <%= yield %>
+        </section>
+      </div>
+
     </div>
   </div>
 <% else %>

@@ -1,3 +1,4 @@
+// Gestion de la dropdown list
 var subItems = $("[data-karl-menu] a")
 
 $(document).ready(function(){

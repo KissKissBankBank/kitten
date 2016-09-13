@@ -2,11 +2,36 @@
 
 .karl-Header {
   background-color: $blue;
+  height: $header-height;
+  width: 100%;
+  position: fixed;
+  z-index: 2;
 }
 
-.karl-row {
-  max-width: container();
-  margin: 0 auto;
+.karl-Header__container {
+  display: flex;
+  @include container;
+  box-sizing: border-box;
+}
+
+.karl-Header__content {
+  width: span(11);
+
+  .karl-Container.menu-isOpened & {
+    width: span(10);
+  }
+}
+
+.karl-Header__menuOpener {
+  width: span(1);
+  height: $header-height;
+
+  transition: width .5s;
+
+  .karl-Container.menu-isOpened & {
+    width: span(2);
+    background-color: $light-navy;
+  }
 }
 
 .karl-Header__title {
@@ -21,8 +46,7 @@
 }
 
 .karl-Title__breadcrumb {
-  width: span(8);
-  margin: 0 auto 2.5rem;
+  margin-bottom: 2.5rem;
 
   padding-top: 4rem;
   border-bottom: 2px solid $light-grey-2;

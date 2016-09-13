@@ -5,11 +5,9 @@
 }
 
 .karl-Section__example {
-  width: span(8);
-  margin: 0 auto;
-
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 
 @media (max-width: 1100px) {
@@ -19,14 +17,10 @@
 }
 
 .karl-Section__example--vertical {
-  margin: 2rem 8rem 0 8rem;
-
   flex-direction: column;
 }
 
 .karl-Section__title {
-  margin: 4rem 0 0 8rem;
-
   color: #333;
   font-size: 1.2rem;
   font-weight: 600;
