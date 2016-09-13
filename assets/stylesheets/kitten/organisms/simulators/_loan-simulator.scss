@@ -52,11 +52,12 @@
     }
 
     .k-LoanSimulator__installment {
-      font-size: 16px;
+      @include k-typographyFontSize(0);
       font-weight: bold;
     }
+
     .k-LoanSimulator__duration {
-      font-size: 12px;
+      @include k-typographyFontSize(-2);
     }
   }
 }
