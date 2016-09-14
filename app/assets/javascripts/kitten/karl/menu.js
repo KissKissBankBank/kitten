@@ -46,4 +46,3 @@ window.karl = (function(karl) {
 
   return karl
 })(window.karl || {})
-

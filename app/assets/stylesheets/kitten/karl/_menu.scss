@@ -139,6 +139,7 @@ $menu-width: 14rem;
 .karl-Menu__listItem {
   position: relative;
   display: block;
+  padding-right: $menu-padding-right;
 
   padding: 1.5rem 0 .75rem 1rem;
   padding-right: $menu-padding-right;
@@ -182,6 +183,7 @@ $menu-width: 14rem;
   font-weight: 400;
   letter-spacing: 1px;
   line-height: 3.2rem;
+
   text-decoration: none;
 }
 

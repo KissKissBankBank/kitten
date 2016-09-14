@@ -18,6 +18,11 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.0/react-dom.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/classnames/2.2.5/index.min.js"></script>
 
+<!-- React Select dependencies -->
+<script src="https://unpkg.com/react-input-autosize/dist/react-input-autosize.js"></script>
+<script src="https://unpkg.com/react-select/dist/react-select.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/react-select/dist/react-select.css">
+
 <%# JavaScript included in head because of the style guide's script tags %>
 <%= javascript_include_tag 'dummy', type: 'text/babel' %>
 
@@ -69,6 +74,7 @@
               <ul class="karl-Menu__subList">
                 <% groups.each do |group_id:, group_title:, components:| %>
                   <li>
+
                     <a href="#<%= group_id %>" class="karl-Menu__subListItem karl-Menu__link" data-karl-menu-link
                        <%= "with-arrow" if components.any? %>"><%= group_title %></a>
                     <ul class="karl-Menu__subSecondList karl-Menu__link" data-karl-menu-link>
@@ -107,19 +113,45 @@
 <% end %>
 
 <div class="karl-OverGrid" style="display: none" data-display-shortcut="g">
-  <div class="karl-OverGrid__row">
-    <div class="karl-OverGrid__col"></div>
-    <div class="karl-OverGrid__col"></div>
-    <div class="karl-OverGrid__col"></div>
-    <div class="karl-OverGrid__col"></div>
-    <div class="karl-OverGrid__col"></div>
-    <div class="karl-OverGrid__col"></div>
-    <div class="karl-OverGrid__col"></div>
-    <div class="karl-OverGrid__col"></div>
-    <div class="karl-OverGrid__col"></div>
-    <div class="karl-OverGrid__col"></div>
-    <div class="karl-OverGrid__col"></div>
-    <div class="karl-OverGrid__col"></div>
+  <div class="karl-OverGrid__container">
+    <div class="karl-OverGrid__row">
+      <div class="karl-OverGrid__col">
+        <div class="karl-OverGrid__inner"></div>
+      </div>
+      <div class="karl-OverGrid__col">
+        <div class="karl-OverGrid__inner"></div>
+      </div>
+      <div class="karl-OverGrid__col">
+        <div class="karl-OverGrid__inner"></div>
+      </div>
+      <div class="karl-OverGrid__col">
+        <div class="karl-OverGrid__inner"></div>
+      </div>
+      <div class="karl-OverGrid__col">
+        <div class="karl-OverGrid__inner"></div>
+      </div>
+      <div class="karl-OverGrid__col">
+        <div class="karl-OverGrid__inner"></div>
+      </div>
+      <div class="karl-OverGrid__col">
+        <div class="karl-OverGrid__inner"></div>
+      </div>
+      <div class="karl-OverGrid__col">
+        <div class="karl-OverGrid__inner"></div>
+      </div>
+      <div class="karl-OverGrid__col">
+        <div class="karl-OverGrid__inner"></div>
+      </div>
+      <div class="karl-OverGrid__col">
+        <div class="karl-OverGrid__inner"></div>
+      </div>
+      <div class="karl-OverGrid__col">
+        <div class="karl-OverGrid__inner"></div>
+      </div>
+      <div class="karl-OverGrid__col">
+        <div class="karl-OverGrid__inner"></div>
+      </div>
+    </div>
   </div>
 </div>
 

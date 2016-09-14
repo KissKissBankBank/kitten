@@ -38,6 +38,9 @@ window.LoanSimulator = React.createClass({
     // Currency
     currencySymbol: React.PropTypes.string,
 
+    // Installment
+    installmentSymbol: React.PropTypes.string,
+
     // Locale to format amounts correctly
     locale: React.PropTypes.string,
 
@@ -65,6 +68,7 @@ window.LoanSimulator = React.createClass({
       durationSymbolPlural: 'months',
 
       currencySymbol: '$',
+      installmentSymbol: '$/month',
       locale: 'en',
 
       actionLabel: 'OK',
@@ -111,8 +115,7 @@ window.LoanSimulator = React.createClass({
     })
   },
 
-  // on slider click or on grab end
-  handleInstallmentChangeEnd: function() {
+  handleInstallmentAction: function() {
     this.setState({ touched: true })
   },
 
@@ -136,6 +139,10 @@ window.LoanSimulator = React.createClass({
     if (!this.state.touched)
       return null
 
+    return this.amountError()
+  },
+
+  amountError: function() {
     if (!this.state.amount)
       return this.props.amountEmptyError
 
@@ -169,11 +176,16 @@ window.LoanSimulator = React.createClass({
 
   render: function() {
     const { label } = this.props
-    const { installmentAmount, dragged, touched } = this.state
+    const { dragged, touched } = this.state
     const error = this.error()
+    const amountValid = !this.amountError()
     const duration = this.duration()
     const showResult = !error && touched && duration
-    const sliderIsActive = !error && dragged && installmentAmount
+    const installmentMin = amountValid ? this.installmentMin() : 0
+    const installmentMax = amountValid ? this.installmentMax() : 0
+    const installmentAmount = amountValid ? this.state.installmentAmount : 0
+    const installmentPercentage = amountValid ? this.state.installmentPercentage : 0
+    const sliderIsActive = amountValid && dragged && installmentAmount
 
     let errorClass, errorTag, tooltipClass, tooltipText
 
@@ -189,7 +201,7 @@ window.LoanSimulator = React.createClass({
 
       const installmentText = `
         ${this.toCurrency(installmentAmount * 100)}
-        ${this.props.currencySymbol}/${this.props.durationSymbol}
+        ${this.props.installmentSymbol}
       `
       const durationText = `
         ${this.props.durationText}
@@ -199,8 +211,8 @@ window.LoanSimulator = React.createClass({
 
       tooltipClass = null
       tooltipText = [
-        <div>{installmentText}</div>,
-        <div>{durationText}</div>
+        <div className="k-LoanSimulator__installment">{installmentText}</div>,
+        <div className="k-LoanSimulator__duration">{durationText}</div>
       ]
     } else {
       tooltipClass = 'is-inactive'
@@ -244,18 +256,18 @@ window.LoanSimulator = React.createClass({
             {this.props.installmentLabel}
           </label>
           <SliderTooltip className={tooltipClass}
-                         percentage={this.state.installmentPercentage}>
+                         percentage={installmentPercentage}>
             {tooltipText}
           </SliderTooltip>
           <Slider ref="slider"
                   step={this.installmentStep()}
-                  min={this.installmentMin()}
-                  max={this.installmentMax()}
+                  min={installmentMin}
+                  max={installmentMax}
                   power={2}
                   name={this.props.installmentName}
-                  value={this.state.installmentAmount}
+                  value={installmentAmount}
                   onChange={this.handleInstallmentChange}
-                  onChangeEnd={this.handleInstallmentChangeEnd} />
+                  onAction={this.handleInstallmentAction} />
         </div>
         <div className="k-LoanSimulator__actions">
           <button className="k-Button">{this.props.actionLabel}</button>
