@@ -50,7 +50,7 @@
 
     // menu options
     $select-menu-zindex:                1000;
-    $select-menu-max-height:            200px;
+    $select-menu-max-height:            280px;
 
     $select-option-color:               $select-text-color;
     $select-option-bg:                  #fbfbfb;
@@ -361,11 +361,9 @@
       border-top-color: $select-arrow-color-hover;
     }
 
-
     //
     // Select Menu
     // ------------------------------
-
 
     // wrapper around the menu
 
@@ -390,7 +388,6 @@
       z-index: $select-menu-zindex;
       -webkit-overflow-scrolling: touch;
     }
-
 
     // wrapper
 
@@ -441,7 +438,6 @@
       display: block;
       padding: $select-padding-vertical $select-padding-horizontal;
     }
-
 
     //
     // Multi-Select
@@ -547,6 +543,7 @@
   }
   /* stylelint-enable */
 
+  //
   // Animation
   // ------------------------------
 
