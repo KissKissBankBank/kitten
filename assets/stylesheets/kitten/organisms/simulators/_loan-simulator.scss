@@ -18,6 +18,8 @@
 ///       …
 ///       <div class="k-LoanSimulator__amount__error">…</div>
 ///     </div>
+///     <div class="k-LoanSimulator__installment">3 $/month</div>
+///     <div class="k-LoanSimulator__duration">for 4 months</div>
 ///     <div class="k-LoanSimulator__result">…</div>
 ///     <div class="k-LoanSimulator__reimbursing">…</div>
 ///     <div class="k-LoanSimulator__actions">…</div>
@@ -47,6 +49,15 @@
     .k-LoanSimulator__actions {
       margin: 2rem 0;
       text-align: center;
+    }
+
+    .k-LoanSimulator__installment {
+      @include k-typographyFontSize(0);
+      font-weight: bold;
+    }
+
+    .k-LoanSimulator__duration {
+      @include k-typographyFontSize(-2);
     }
   }
 }
