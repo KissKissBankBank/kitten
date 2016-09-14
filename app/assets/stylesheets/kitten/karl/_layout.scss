@@ -4,6 +4,9 @@
 
 .karl-Main__container {
   @include container;
+  box-sizing: border-box;
+  padding: 0 gutter() * 2;
+
   position: relative;
   display: flex;
   box-sizing: border-box;
@@ -15,6 +18,7 @@
 }
 
 // Utilities
+
 .k-u-clearfix:after {
   content: " ";
   display: table;
@@ -22,6 +26,7 @@
 }
 
 // Overlay grid
+
 .karl-OverGrid {
   position: fixed;
   top: 0;
@@ -31,18 +36,37 @@
   z-index: 99999;
 }
 
-.karl-OverGrid__row {
+.karl-OverGrid__container {
   @include container;
   box-sizing: border-box;
-  padding: 0 gutter();
+  padding: 0 gutter() * 2;
 
   height: 100%;
-  outline: 1px dotted rgba(0, 0, 0, .2);
+  outline: 1px dotted rgba(black, .2);
+}
+
+.karl-OverGrid__row {
+  height: 100%;
+  @include k-grid;
 }
 
 .karl-OverGrid__col {
-  @include span(1);
   height: 100%;
-  min-height: 3rem;
-  background: rgba(0, 0, 0, .1);
+  @include k-grid-col(1);
+}
+
+.karl-OverGrid__inner {
+  height: 100%;
+  background: rgba(black, .1);
+}
+
+
+// Represent the grid visually
+
+.karl-GridBox {
+  min-height: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid white;
+  border-radius: 2px;
+  background: #4a84ff;
 }

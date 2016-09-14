@@ -1,0 +1,50 @@
+// Media queries
+
+$k-media-queries: (
+  xxs: (
+    min-width: null,
+    max-width: 479px,
+  ),
+  xs: (
+    min-width: 480px,
+    max-width: 639px,
+  ),
+  s: (
+    min-width: 640px,
+    max-width: 767px,
+  ),
+  m: (
+    min-width: 768px,
+    max-width: 1079px,
+  ),
+  l: (
+    min-width: 1080px,
+    max-width: 1439px,
+  ),
+  xl: (
+    min-width: 1440px,
+    max-width: null,
+  ),
+) !default;
+
+// Grid
+
+$k-grid: (
+  columns: 12,
+  container: 1420px,
+  gutter-width: 20px,
+) !default;
+
+// Susy
+
+$columns: map-get($k-grid, 'columns');
+$container: map-get($k-grid, 'container');
+$gutter-width: map-get($k-grid, 'gutter-width');
+$column-width: ($container - ($columns - 1) * $gutter-width) / $columns;
+
+$susy: (
+  columns: $columns,
+  container: $container,
+  gutter-position: split,
+  gutters: $gutter-width/$column-width,
+) !default;

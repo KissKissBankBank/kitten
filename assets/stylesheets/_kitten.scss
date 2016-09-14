@@ -1,21 +1,12 @@
 $k-module: null;
 
-// Default grid configuration
-$columns: 12;
-$container: 1420px;
-$gutter-width: 20px;
-$column-width: ($container - ($columns - 1) * $gutter-width) / $columns;
-$susy: (
-  columns: $columns,
-  container: $container,
-  gutter-position: split,
-  gutters: $gutter-width/$column-width,
-) !default;
-
 @import 'sassy-maps';
 @import 'modular-scale';
-@import '~susy/sass/susy';
 
 @import 'kitten/schema';
 @import 'kitten/definitions';
 @import 'kitten/helpers';
+
+@import 'kitten/default-config';
+
+@import '~susy/sass/susy';
