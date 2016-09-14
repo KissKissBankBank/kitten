@@ -11,65 +11,65 @@
   // ------------------------------
 
   // control options
-  $select-input-bg:                   #fff !default;
-  $select-input-bg-disabled:          #f9f9f9 !default;
-  $select-input-border-color:         #ccc !default;
-  $select-input-border-radius:        4px !default;
-  $select-input-border-focus:         #08c !default; // blue
-  $select-input-border-width:         1px !default;
-  $select-input-height:               36px !default;
-  $select-input-internal-height:      ($select-input-height - ($select-input-border-width * 2)) !default;
-  $select-input-placeholder:          #aaa !default;
-  $select-text-color:                 #333 !default;
-  $select-link-hover-color:           $select-input-border-focus !default;
+  $select-input-bg:                   #fff;
+  $select-input-bg-disabled:          #f9f9f9;
+  $select-input-border-color:         #d8d8d8;
+  $select-input-border-radius:        4px;
+  $select-input-border-focus:         #4a84ff;
+  $select-input-border-width:         1px;
+  $select-input-height:               40px;
+  $select-input-internal-height:      ($select-input-height - ($select-input-border-width * 2));
+  $select-input-placeholder:          #b8b8b8;
+  $select-text-color:                 #333;
+  $select-link-hover-color:           $select-input-border-focus;
 
-  $select-padding-vertical:           8px !default;
-  $select-padding-horizontal:         10px !default;
+  $select-padding-vertical:           10px;
+  $select-padding-horizontal:         15px;
 
   // menu options
-  $select-menu-zindex:                1000 !default;
-  $select-menu-max-height:            200px !default;
+  $select-menu-zindex:                1000;
+  $select-menu-max-height:            200px;
 
-  $select-option-color:               lighten($select-text-color, 20%) !default;
-  $select-option-bg:                  $select-input-bg !default;
-  $select-option-focused-color:       $select-text-color !default;
-  $select-option-focused-bg:          #f2f9fc !default; // pale blue
-  $select-option-selected-color:      $select-text-color !default;
-  $select-option-selected-bg:         #f5faff !default; // lightest blue
-  $select-option-disabled-color:      lighten($select-text-color, 60%) !default;
+  $select-option-color:               $select-text-color;
+  $select-option-bg:                  #fbfbfb;
+  $select-option-focused-color:       $select-text-color;
+  $select-option-focused-bg:          #eee;
+  $select-option-selected-color:      #333;
+  $select-option-selected-bg:         #d8d8d8;
+  $select-option-disabled-color:      lighten($select-text-color, 60%);
 
-  $select-noresults-color:            lighten($select-text-color, 40%) !default;
+  $select-noresults-color:            lighten($select-text-color, 40%);
 
   // clear "x" button
-  $select-clear-size:                 floor(($select-input-height / 2)) !default;
-  $select-clear-color:                #999 !default;
-  $select-clear-hover-color:          #D0021B !default; // red
-  $select-clear-width:                ($select-input-internal-height / 2) !default;
+  $select-clear-size:                 floor(($select-input-height / 2));
+  $select-clear-color:                #999;
+  $select-clear-hover-color:          #D0021B; // red
+  $select-clear-width:                ($select-input-internal-height / 2);
 
   // arrow indicator
-  $select-arrow-color:                #999 !default;
-  $select-arrow-color-hover:          #666 !default;
-  $select-arrow-width:                5px !default;
+  $select-arrow-color:                #333;
+  $select-arrow-color-hover:          #333;
+  $select-arrow-width:                5px;
 
   // loading indicator
-  $select-loading-size:               16px !default;
-  $select-loading-color:              $select-text-color !default;
-  $select-loading-color-bg:           $select-input-border-color !default;
+  $select-loading-size:               16px;
+  $select-loading-color:              $select-text-color;
+  $select-loading-color-bg:           $select-input-border-color;
 
   // multi-select item
-  $select-item-border-radius:         2px !default;
-  $select-item-gutter:                5px !default;
-  $select-item-padding-vertical:      2px !default;
-  $select-item-padding-horizontal:    5px !default;
-  $select-item-font-size:             .9em !default;
-  $select-item-color:                 #08c !default; // pale blue
-  $select-item-bg:                    #f2f9fc !default;
-  $select-item-border-color:          darken($select-item-bg, 10%) !default;
-  $select-item-hover-color:           darken($select-item-color, 5%) !default; // pale blue
-  $select-item-hover-bg:              darken($select-item-bg, 5%) !default;
-  $select-item-disabled-color:        #333 !default;
-  $select-item-disabled-bg:           #fcfcfc !default;
-  $select-item-disabled-border-color: darken($select-item-disabled-bg, 10%) !default;
+  $select-item-border-radius:         2px;
+  $select-item-gutter:                5px;
+  $select-item-padding-vertical:      2px;
+  $select-item-padding-horizontal:    5px;
+  $select-item-font-size:             .9em;
+  $select-item-color:                 #333;
+  $select-item-bg:                    #d8d8d8;
+  $select-item-border-color:          darken($select-item-bg, 10%);
+  $select-item-hover-color:           darken($select-item-color, 5%);
+  $select-item-hover-bg:              darken($select-item-bg, 5%);
+  $select-item-disabled-color:        #333;
+  $select-item-disabled-bg:           #fcfcfc;
+  $select-item-disabled-border-color: darken($select-item-disabled-bg, 10%);
 
   .k-Select {
     .Select {

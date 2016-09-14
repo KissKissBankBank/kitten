@@ -1,5 +1,5 @@
-<%= example do %>
-  <div id="select" class="k-Select"></div>
+<%= example "select" do %>
+  <div class="k-Select" id="select"></div>
   <script type="text/babel">
     ReactDOM.render(
       React.createElement(Select, {
@@ -19,6 +19,31 @@
         value: 'fr',
       }),
       document.getElementById('select'),
+    )
+  </script>
+<% end %>
+
+<%= example "select with placeholder" do %>
+  <div class="k-Select" id="select2"></div>
+  <script type="text/babel">
+    ReactDOM.render(
+      React.createElement(Select, {
+        name: 'locale',
+        options: [
+          { value: 'en', label: 'English' },
+          { value: 'fr', label: 'Français' },
+          { value: 'it', label: 'Italiano' },
+          { value: 'nl', label: 'Nederlands' },
+          { value: 'es', label: 'Español' },
+          { value: 'de', label: 'Deutsch' },
+        ],
+        clearable: false,
+        searchable: false,
+        multi: false,
+        placeholder: 'Language…',
+        value: null,
+      }),
+      document.getElementById('select2'),
     )
   </script>
 <% end %>
