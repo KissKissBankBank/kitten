@@ -9,15 +9,19 @@ $menu-width: 14rem;
   position: fixed;
   left: 0;
   z-index: 3;
+
   width: auto;
 
   // TODO manage transition
   //transition: width 0.5s, background-color 0.5;
 
   &.is-opened {
-    background-color: $sapphire;
     width: $menu-width;
     height: 100%;
+
+    background-color: $sapphire;
+
+    overflow: scroll;
 
     @include k-media-xs { width: 100%; }
   }
@@ -27,6 +31,7 @@ $menu-width: 14rem;
     @include k-media-xs {
       width: auto;
       height: auto;
+
       background-color: transparent;
     }
   }
@@ -39,10 +44,11 @@ $menu-width: 14rem;
 }
 
 .karl-Menu__header__title {
-  margin-top: 0;
-  margin-bottom: 0;
   position: absolute;
   top: 0;
+
+  margin-top: 0;
+  margin-bottom: 0;
   width: $menu-width;
   right: -$menu-width - $header-title-margin;
 
@@ -69,11 +75,11 @@ $menu-width: 14rem;
 }
 
 .karl-Menu__title {
-  float: right;
-  position: relative;
-  height: $header-height;
   display: block;
-  line-height: $header-height;
+  position: relative;
+
+  float: right;
+  height: $header-height;
   margin-left: 2rem;
   padding-right: $menu-padding-right;
 
@@ -84,12 +90,15 @@ $menu-width: 14rem;
   text-align: right;
   text-transform: uppercase;
   text-decoration: none;
+  line-height: $header-height;
+
   cursor: pointer;
 
   &:before {
-    content: url($arrowRight-path);
     position: absolute;
     left: -1em;
+
+    content: url($arrowRight-path);
   }
 
   .karl-Menu.is-opened & {
@@ -114,10 +123,12 @@ $menu-width: 14rem;
 }
 
 .karl-Menu__listTitle {
-  position: relative;
-  border-bottom: 1px solid $light-navy;
-  padding: 3.125rem 0 1rem 1rem;
   display: block;
+  position: relative;
+
+  padding: 3.125rem 0 1rem 1rem;
+
+  border-bottom: 1px solid $light-navy;
 
   font-size: 1.25rem;
   font-weight: 300;
@@ -127,10 +138,12 @@ $menu-width: 14rem;
 
 .karl-Menu__listItem {
   position: relative;
-  border-bottom: 1px solid $light-navy;
-  padding: 1.5rem 0 .75rem 1rem;
   display: block;
+
+  padding: 1.5rem 0 .75rem 1rem;
   padding-right: $menu-padding-right;
+
+  border-bottom: 1px solid $light-navy;
 
   font-size: .75rem;
   text-transform: uppercase;
@@ -139,8 +152,9 @@ $menu-width: 14rem;
   &.with-arrow {
     &:after {
       position: absolute;
-      content: url($arrowBottom-path);
       right: $menu-padding-right;
+
+      content: url($arrowBottom-path);
     }
 
     &.is-opened {
@@ -159,20 +173,21 @@ $menu-width: 14rem;
 }
 
 .karl-Menu__link {
-  border-bottom: 1px solid $light-navy;
   display: block;
+
+  border-bottom: 1px solid $light-navy;
+  list-style: none;
 
   font-size: 0.75rem;
   font-weight: 400;
   letter-spacing: 1px;
   line-height: 3.2rem;
-
-  list-style: none;
   text-decoration: none;
 }
 
 .karl-Menu__subListItem {
   position: relative;
+
   padding-left: 2rem;
 
   color: white;
@@ -180,8 +195,9 @@ $menu-width: 14rem;
   &.with-arrow {
     &:after {
       position: absolute;
-      content: url($arrowBottom-path);
       right: $menu-padding-right;
+
+      content: url($arrowBottom-path);
     }
 
     &.is-opened {

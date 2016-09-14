@@ -1,15 +1,18 @@
 // Header
 
 .karl-Header {
-  background-color: $blue;
-  height: $header-height;
-  width: 100%;
   position: fixed;
   z-index: 2;
+
+  height: $header-height;
+  width: 100%;
+
+  background-color: $blue;
 }
 
 .karl-Header__container {
   display: flex;
+
   @include container;
   box-sizing: border-box;
 }
@@ -24,8 +27,8 @@
 
 .karl-Title__breadcrumb {
   margin-bottom: 2.5rem;
-
   padding-top: 3rem;
+
   border-bottom: 2px solid $light-grey-2;
 
   color: #333;
