@@ -1,77 +1,97 @@
-/**
- * React Select
- * ============
- * Created by Jed Watson and Joss Mackison for KeystoneJS, http://www.keystonejs.com/
- * https://twitter.com/jedwatson https://twitter.com/jossmackison https://twitter.com/keystonejs
- * MIT License: https://github.com/JedWatson/react-select
-*/
-
+// React Select styles
+// https://github.com/JedWatson/react-select
+//
+// These are React Select's slightly-modified default SCSS styles, namespaced
+// inside a k-Select style.
+//
+// @example scss:
+//
+//   @import k-Select;
+//
+// @example html:
+//   <div class="k-Select">
+//     <div class="Select-control">…</div>
+//   </div>
+//
+//
 @mixin k-Select {
-  // Variables
-  // ------------------------------
-
-  // control options
-  $select-input-bg:                   #fff;
-  $select-input-bg-disabled:          #f9f9f9;
-  $select-input-border-color:         #d8d8d8;
-  $select-input-border-radius:        4px;
-  $select-input-border-focus:         #4a84ff;
-  $select-input-border-width:         1px;
-  $select-input-height:               40px;
-  $select-input-internal-height:      ($select-input-height - ($select-input-border-width * 2));
-  $select-input-placeholder:          #b8b8b8;
-  $select-text-color:                 #333;
-  $select-link-hover-color:           $select-input-border-focus;
-
-  $select-padding-vertical:           10px;
-  $select-padding-horizontal:         15px;
-
-  // menu options
-  $select-menu-zindex:                1000;
-  $select-menu-max-height:            200px;
-
-  $select-option-color:               $select-text-color;
-  $select-option-bg:                  #fbfbfb;
-  $select-option-focused-color:       $select-text-color;
-  $select-option-focused-bg:          #eee;
-  $select-option-selected-color:      #333;
-  $select-option-selected-bg:         #d8d8d8;
-  $select-option-disabled-color:      lighten($select-text-color, 60%);
-
-  $select-noresults-color:            lighten($select-text-color, 40%);
-
-  // clear "x" button
-  $select-clear-size:                 floor(($select-input-height / 2));
-  $select-clear-color:                #999;
-  $select-clear-hover-color:          #D0021B; // red
-  $select-clear-width:                ($select-input-internal-height / 2);
-
-  // arrow indicator
-  $select-arrow-color:                #333;
-  $select-arrow-color-hover:          #333;
-  $select-arrow-width:                5px;
-
-  // loading indicator
-  $select-loading-size:               16px;
-  $select-loading-color:              $select-text-color;
-  $select-loading-color-bg:           $select-input-border-color;
-
-  // multi-select item
-  $select-item-border-radius:         2px;
-  $select-item-gutter:                5px;
-  $select-item-padding-vertical:      2px;
-  $select-item-padding-horizontal:    5px;
-  $select-item-font-size:             .9em;
-  $select-item-color:                 #333;
-  $select-item-bg:                    #d8d8d8;
-  $select-item-border-color:          darken($select-item-bg, 10%);
-  $select-item-hover-color:           darken($select-item-color, 5%);
-  $select-item-hover-bg:              darken($select-item-bg, 5%);
-  $select-item-disabled-color:        #333;
-  $select-item-disabled-bg:           #fcfcfc;
-  $select-item-disabled-border-color: darken($select-item-disabled-bg, 10%);
-
   .k-Select {
+    /**
+     * React Select
+     * ============
+     * Created by Jed Watson and Joss Mackison for KeystoneJS,
+     * http://www.keystonejs.com/
+     * https://twitter.com/jedwatson
+     * https://twitter.com/jossmackison
+     * https://twitter.com/keystonejs
+     * MIT License: https://github.com/JedWatson/react-select
+    */
+
+    // Variables
+    // ------------------------------
+
+    // control options
+    $select-input-bg:                   #fff;
+    $select-input-bg-disabled:          #f9f9f9;
+    $select-input-border-color:         #d8d8d8;
+    $select-input-border-radius:        4px;
+    $select-input-border-focus:         #4a84ff;
+    $select-input-border-width:         1px;
+    $select-input-height:               40px;
+    $select-input-internal-height:
+      ($select-input-height - ($select-input-border-width * 2));
+    $select-input-placeholder:          #b8b8b8;
+    $select-text-color:                 #333;
+    $select-link-hover-color:           $select-input-border-focus;
+
+    $select-padding-vertical:           10px;
+    $select-padding-horizontal:         15px;
+
+    // menu options
+    $select-menu-zindex:                1000;
+    $select-menu-max-height:            200px;
+
+    $select-option-color:               $select-text-color;
+    $select-option-bg:                  #fbfbfb;
+    $select-option-focused-color:       $select-text-color;
+    $select-option-focused-bg:          #eee;
+    $select-option-selected-color:      #333;
+    $select-option-selected-bg:         #d8d8d8;
+    $select-option-disabled-color:      lighten($select-text-color, 60%);
+
+    $select-noresults-color:            lighten($select-text-color, 40%);
+
+    // clear "x" button
+    $select-clear-size:                 floor(($select-input-height / 2));
+    $select-clear-color:                #999;
+    $select-clear-hover-color:          #D0021B; // red
+    $select-clear-width:                ($select-input-internal-height / 2);
+
+    // arrow indicator
+    $select-arrow-color:                #333;
+    $select-arrow-color-hover:          #333;
+    $select-arrow-width:                5px;
+
+    // loading indicator
+    $select-loading-size:               16px;
+    $select-loading-color:              $select-text-color;
+    $select-loading-color-bg:           $select-input-border-color;
+
+    // multi-select item
+    $select-item-border-radius:         2px;
+    $select-item-gutter:                5px;
+    $select-item-padding-vertical:      2px;
+    $select-item-padding-horizontal:    5px;
+    $select-item-font-size:             .9em;
+    $select-item-color:                 #333;
+    $select-item-bg:                    #d8d8d8;
+    $select-item-border-color:          darken($select-item-bg, 10%);
+    $select-item-hover-color:           darken($select-item-color, 5%);
+    $select-item-hover-bg:              darken($select-item-bg, 5%);
+    $select-item-disabled-color:        #333;
+    $select-item-disabled-bg:           #fcfcfc;
+    $select-item-disabled-border-color: darken($select-item-disabled-bg, 10%);
+
     .Select {
       position: relative;
 
@@ -100,7 +120,10 @@
 
     .Select-control {
       background-color: $select-input-bg;
-      border-color: lighten($select-input-border-color, 5%) $select-input-border-color darken($select-input-border-color, 10%);
+      border-color:
+        lighten($select-input-border-color, 5%)
+        $select-input-border-color
+        darken($select-input-border-color, 10%);
       border-radius: $select-input-border-radius;
       border: $select-input-border-width solid $select-input-border-color;
       color: $select-text-color;
@@ -134,7 +157,10 @@
       border-bottom-left-radius: 0;
 
       background: $select-input-bg;
-      border-color: darken($select-input-border-color, 10%) $select-input-border-color lighten($select-input-border-color, 5%);
+      border-color:
+        darken($select-input-border-color, 10%)
+        $select-input-border-color
+        lighten($select-input-border-color, 5%);
 
       // flip the arrow so its pointing up when the menu is open
       > .Select-arrow {
@@ -150,8 +176,13 @@
     }
 
     .is-focused:not(.is-open) > .Select-control {
-      border-color: $select-input-border-focus lighten($select-input-border-focus, 5%) lighten($select-input-border-focus, 5%);
-      box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 5px -1px fade($select-input-border-focus,50%);
+      border-color:
+        $select-input-border-focus
+        lighten($select-input-border-focus, 5%)
+        lighten($select-input-border-focus, 5%);
+      box-shadow:
+        inset 0 1px 2px rgba(0, 0, 0, 0.1),
+        0 0 5px -1px fade($select-input-border-focus,50%);
     }
 
     // placeholder
@@ -210,12 +241,13 @@
         display: inline-block;
         font-family: inherit;
         font-size: inherit;
-        // height: $select-input-internal-height;
         margin: 0;
         outline: none;
-        // padding: 0;
-        line-height: 14px;  /* For IE 8 compatibility */
-        padding: (($select-input-internal-height - 14) / 2 - 2) 0 (($select-input-internal-height - 14) / 2 + 2);  /* For IE 8 compatibility */
+        line-height: 14px; // For IE 8 compatibility
+        padding:
+          (($select-input-internal-height - 14) / 2 - 2)
+          0
+          (($select-input-internal-height - 14) / 2 + 2); // IE 8 compatibility
         -webkit-appearance: none;
 
         .is-focused & {
@@ -312,7 +344,10 @@
     .Select-arrow {
       border-color: $select-arrow-color transparent transparent;
       border-style: solid;
-      border-width: $select-arrow-width $select-arrow-width ($select-arrow-width / 2);
+      border-width:
+        $select-arrow-width
+        $select-arrow-width
+        ($select-arrow-width / 2);
       display: inline-block;
       height: 0;
       width: 0;
@@ -331,10 +366,11 @@
     // wrapper around the menu
 
     .Select-menu-outer {
-      // Unfortunately, having both border-radius and allows scrolling using overflow defined on the same
-      // element forces the browser to repaint on scroll.  However, if these definitions are split into an
-      // outer and an inner element, the browser is able to optimize the scrolling behavior and does not
-      // have to repaint on scroll.
+      // Unfortunately, having both border-radius and allows scrolling using
+      // overflow defined on the same element forces the browser to repaint on
+      // scroll.  However, if these definitions are split into an outer and an
+      // inner element, the browser is able to optimize the scrolling behavior
+      // and does not have to repaint on scroll.
       border-bottom-right-radius: $select-input-border-radius;
       border-bottom-left-radius: $select-input-border-radius;
       background-color: $select-input-bg;
@@ -392,7 +428,6 @@
 
     }
 
-
     // no results
 
     .Select-noresults {
@@ -402,125 +437,11 @@
       display: block;
       padding: $select-padding-vertical $select-padding-horizontal;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-    //
-    // Select Menu
-    // ------------------------------
-
-
-    // wrapper around the menu
-
-    .Select-menu-outer {
-      // Unfortunately, having both border-radius and allows scrolling using overflow defined on the same
-      // element forces the browser to repaint on scroll.  However, if these definitions are split into an
-      // outer and an inner element, the browser is able to optimize the scrolling behavior and does not
-      // have to repaint on scroll.
-      border-bottom-right-radius: $select-input-border-radius;
-      border-bottom-left-radius: $select-input-border-radius;
-      background-color: $select-input-bg;
-      border: 1px solid $select-input-border-color;
-      border-top-color: mix($select-input-bg, $select-input-border-color, 50%);
-      box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
-      box-sizing: border-box;
-      margin-top: -1px;
-      max-height: $select-menu-max-height;
-      position: absolute;
-      top: 100%;
-      width: 100%;
-      z-index: $select-menu-zindex;
-      -webkit-overflow-scrolling: touch;
-    }
-
-
-    // wrapper
-
-    .Select-menu {
-      max-height: ($select-menu-max-height - 2px);
-      overflow-y: auto;
-    }
-
-
-    // options
-
-    .Select-option {
-      box-sizing: border-box;
-      background-color: $select-option-bg;
-      color: $select-option-color;
-      cursor: pointer;
-      display: block;
-      padding: $select-padding-vertical $select-padding-horizontal;
-
-      &:last-child {
-        border-bottom-right-radius: $select-input-border-radius;
-        border-bottom-left-radius: $select-input-border-radius;
-      }
-
-      &.is-selected {
-        background-color: $select-option-selected-bg;
-        color: $select-option-selected-color;
-      }
-
-      &.is-focused {
-        background-color: $select-option-focused-bg;
-        color: $select-option-focused-color;
-      }
-
-      &.is-disabled {
-        color: $select-option-disabled-color;
-        cursor: default;
-      }
-
-    }
-
-
-    // no results
-
-    .Select-noresults {
-      box-sizing: border-box;
-      color: $select-noresults-color;
-      cursor: default;
-      display: block;
-      padding: $select-padding-vertical $select-padding-horizontal;
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     //
     // Multi-Select
     // ------------------------------
-
 
     // Base
 
@@ -584,7 +505,10 @@
         border-right: 1px solid $select-item-border-color;
 
         // move the baseline up by 1px
-        padding: ($select-item-padding-vertical - 1) $select-item-padding-horizontal ($select-item-padding-vertical + 1);
+        padding:
+          ($select-item-padding-vertical - 1)
+          $select-item-padding-horizontal
+          ($select-item-padding-vertical + 1);
 
         &:hover,
         &:focus {
@@ -640,5 +564,4 @@
   @keyframes k-Select-animation-spin {
     to { transform: rotate(1turn); }
   }
-
 }
