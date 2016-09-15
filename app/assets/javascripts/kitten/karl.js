@@ -2,7 +2,7 @@
 //= require kitten/karl/display-shortcut
 //= require kitten/karl/menu
 
-$(document).ready(function(){
+$(document).ready(function() {
   window.karl.initToggleClassListener()
   window.karl.displayShortcut()
   window.karl.initMenu()
