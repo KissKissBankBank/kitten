@@ -31,12 +31,29 @@
 // Our overrides to React Select's default styles
 @mixin _k-Select-Overrides($select) {
   $colors: k-map-fetch($select, 'colors');
+  $arrow-zone-width: 30px;
+  $select-input-border-width: 1px;
 
   .Select-arrow-zone {
-    width: 30px;
+    width: $arrow-zone-width;
     padding-right: 0;
 
     border-left: 1px solid k-map-fetch($colors, 'input-border');
+  }
+
+  // When the select is open, hide the arrow-zone's bottom border
+  .Select-menu-outer {
+    &:before {
+      position: absolute;
+      top: -$select-input-border-width;
+      right: 0;
+
+      width: $arrow-zone-width - $select-input-border-width;
+      height: $select-input-border-width;
+
+      content: "";
+      background: k-map-fetch($colors, 'option-bg');
+    }
   }
 
   .Select.is-focused:not(.is-open) .Select-arrow-zone {
