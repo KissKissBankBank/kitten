@@ -1,25 +1,25 @@
-// Select styles
-// https://github.com/JedWatson/react-select
-//
-// These are React Select's slightly-modified default SCSS styles, namespaced
-// inside a k-Select style.
-//
-// @example scss:
-//
-//   @import k-Select((
-//     colors: (
-//       input-border: #d8d8d8,
-//       input-border-focus: #4a84ff,
-//       option-bg: #fbfbfb,
-//     ),
-//   ));
-//
-// @example html:
-//   <div class="k-Select">
-//     <div class="Select-control">…</div>
-//   </div>
-//
-//
+/// Select styles
+/// @source https://github.com/JedWatson/react-select
+///
+/// These are React Select's slightly-modified default SCSS styles, namespaced
+/// inside a k-Select style.
+///
+/// @example scss:
+///
+///   @import k-Select((
+///     colors: (
+///       input-border: #d8d8d8,
+///       input-border-focus: #4a84ff,
+///       option-bg: #fbfbfb,
+///     ),
+///   ));
+///
+/// @example html:
+///   <div class="k-Select">
+///     <div class="Select-control">…</div>
+///   </div>
+///
+///
 @mixin k-Select($select) {
   .k-Select {
     @include _k-Select-ReactSelect($select);
