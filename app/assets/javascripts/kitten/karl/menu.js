@@ -1,6 +1,6 @@
 window.karl = (function(karl) {
   var $menu = $('[data-karl-menu]')
-  var subItems = $("[data-karl-menu-list] a")
+  var subItems = $('[data-karl-menu-list] a')
 
   karl.initMenu = function() {
 
