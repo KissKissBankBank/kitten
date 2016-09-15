@@ -160,6 +160,10 @@
   </div>
 </div>
 
+<%= env_javascript_include_tag(hot: ['http://localhost:3500/dummy-bundle.js']) %>
+<%= env_javascript_include_tag(static: 'application_static',
+                               hot: 'application_non_webpack') %>
+
 <%#= javascript_include_tag 'kitten/noframework.waypoints.min.js' %>
 <%= javascript_include_tag 'kitten/jquery-3.1.0.min.js' %>
 <%#= javascript_include_tag 'kitten/waypoint.js' %>

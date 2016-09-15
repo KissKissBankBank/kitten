@@ -23,6 +23,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'railties', ['> 3.0.0', '< 5.0.0']
 
   s.add_dependency 'react_on_rails', '~> 6.1.0'
+  s.add_dependency 'mini_racer'
 
   s.add_development_dependency 'bundler', '~> 1.8'
   s.add_development_dependency 'rake',    '~> 10.0'
