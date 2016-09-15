@@ -39,6 +39,14 @@
     padding-right: 0;
 
     border-left: 1px solid k-map-fetch($colors, 'input-border');
+
+    background-image: url('~icons/arrow-bottom-black.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .Select-arrow {
+    display: none;
   }
 
   .Select-menu-outer {
@@ -64,6 +72,7 @@
 
   .Select.is-open .Select-arrow-zone {
     background-color: k-map-fetch($colors, 'option-bg');
+    background-image: url('~icons/arrow-top-black.svg');
   }
 }
 
