@@ -28,6 +28,7 @@
   );
 
   .k-Select {
+    @include k-typographyFontSize(-1);
     @include _k-Select-ReactSelect($select, $options);
     @include _k-Select-Overrides($select, $options);
   }
@@ -170,7 +171,7 @@
   $select-item-gutter: 5px;
   $select-item-padding-vertical: 2px;
   $select-item-padding-horizontal: 5px;
-  $select-item-font-size: .9em;
+  $select-item-font-size: 1em;
   $select-item-color: #333;
   $select-item-bg: #d8d8d8;
   $select-item-border-color: darken($select-item-bg, 10%);
