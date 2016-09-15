@@ -8,6 +8,7 @@
 ///
 ///   @import k-Select((
 ///     colors: (
+///       input-bg: #fff,
 ///       input-border: #d8d8d8,
 ///       input-border-focus: #4a84ff,
 ///       option-bg: #fbfbfb,
@@ -20,19 +21,35 @@
 ///   </div>
 ///
 @mixin k-Select($select) {
+  $options: (
+    arrow-zone-width: 30px,
+    select-input-border-radius: 4px,
+    select-input-border-width: 1px,
+  );
+
   .k-Select {
-    @include _k-Select-ReactSelect($select);
-    @include _k-Select-Overrides($select);
+    @include _k-Select-ReactSelect($select, $options);
+    @include _k-Select-Overrides($select, $options);
   }
 
   @include _k-Select-ReactSelectAnimations;
 }
 
 // Our overrides to React Select's default styles
-@mixin _k-Select-Overrides($select) {
+@mixin _k-Select-Overrides($select, $options) {
   $colors: k-map-fetch($select, 'colors');
-  $arrow-zone-width: 30px;
-  $select-input-border-width: 1px;
+  $select-input-bg: k-map-fetch($colors, 'input-bg');
+  $arrow-zone-width: k-map-fetch($options, 'arrow-zone-width');
+  $select-input-border-radius: k-map-fetch($options,
+                                           'select-input-border-radius');
+  $select-input-border-width: k-map-fetch($options,
+                                          'select-input-border-width');
+
+  .Select-menu {
+    // Fix that the background on the options goes over the radius
+    border-bottom-right-radius: $select-input-border-radius;
+    border-bottom-left-radius: $select-input-border-radius;
+  }
 
   .Select-arrow-zone {
     width: $arrow-zone-width;
@@ -40,6 +57,7 @@
 
     border-left: 1px solid k-map-fetch($colors, 'input-border');
 
+    background-color: $select-input-bg;
     background-image: url('~icons/arrow-bottom-black.svg');
     background-repeat: no-repeat;
     background-position: center;
@@ -83,7 +101,7 @@
 // - removed mixins
 // - merged all SCSS files into one file
 // - applied our code-style
-@mixin _k-Select-ReactSelect($select) {
+@mixin _k-Select-ReactSelect($select, $options) {
   $colors: k-map-fetch($select, 'colors');
 
   /**
@@ -99,12 +117,14 @@
   // ------------------------------
 
   // control options
-  $select-input-bg: #fff;
+  $select-input-bg: k-map-fetch($colors, 'input-bg');
   $select-input-bg-disabled: #d8d8d8;
   $select-input-border-color: k-map-fetch($colors, 'input-border');
-  $select-input-border-radius: 4px;
+  $select-input-border-radius: k-map-fetch($options,
+                                           'select-input-border-radius');
   $select-input-border-focus: k-map-fetch($colors, 'input-border-focus');
-  $select-input-border-width: 1px;
+  $select-input-border-width: k-map-fetch($options,
+                                          'select-input-border-width');
   $select-input-height: 40px;
   $select-input-internal-height:
     ($select-input-height - ($select-input-border-width * 2));
