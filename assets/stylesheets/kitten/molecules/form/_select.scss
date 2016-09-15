@@ -41,8 +41,10 @@
     border-left: 1px solid k-map-fetch($colors, 'input-border');
   }
 
-  // When the select is open, hide the arrow-zone's bottom border
   .Select-menu-outer {
+    border-top-color: k-map-fetch($colors, 'input-border');
+
+    // When the select is open, hide the arrow-zone's bottom border
     &:before {
       position: absolute;
       top: -$select-input-border-width;
