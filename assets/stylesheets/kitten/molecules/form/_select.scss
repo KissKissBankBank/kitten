@@ -14,28 +14,29 @@
 //   </div>
 //
 //
-@mixin k-Select {
-  // TODO use map of colors
-  $select-input-border-color: #d8d8d8;
-  $select-input-border-focus: #4a84ff;
-
+@mixin k-Select($select) {
   .k-Select {
-    @include _k-Select-ReactSelect;
-
-    .Select-arrow-zone {
-      border-left: 1px solid $select-input-border-color;
-
-      // override .Select-arrow-zone styles
-      width: 30px;
-      padding-right: 0;
-    }
-
-    .Select.is-focused:not(.is-open) .Select-arrow-zone {
-      border-left-color: $select-input-border-focus;
-    }
+    @include _k-Select-ReactSelect($select);
+    @include _k-Select-Overrides($select);
   }
 
   @include _k-Select-ReactSelectAnimations;
+}
+
+// Our overrides to React Select's default styles
+@mixin _k-Select-Overrides($select) {
+  $colors: k-map-fetch($select, 'colors');
+
+  .Select-arrow-zone {
+    width: 30px;
+    padding-right: 0;
+
+    border-left: 1px solid k-map-fetch($colors, 'input-border');
+  }
+
+  .Select.is-focused:not(.is-open) .Select-arrow-zone {
+    border-left-color: k-map-fetch($colors, 'input-border-focus');
+  }
 }
 
 // React Select's default styles
@@ -45,7 +46,9 @@
 // - removed mixins
 // - merged all SCSS files into one file
 // - applied our code-style
-@mixin _k-Select-ReactSelect {
+@mixin _k-Select-ReactSelect($select) {
+  $colors: k-map-fetch($select, 'colors');
+
   /**
    * React Select
    * ============
@@ -61,68 +64,66 @@
   // ------------------------------
 
   // control options
-  /* stylelint-disable declaration-colon-space-after */
-  $select-input-bg:                   #fff;
-  $select-input-bg-disabled:          #d8d8d8;
-  $select-input-border-color:         #d8d8d8;
-  $select-input-border-radius:        4px;
-  $select-input-border-focus:         #4a84ff;
-  $select-input-border-width:         1px;
-  $select-input-height:               40px;
+  $select-input-bg: #fff;
+  $select-input-bg-disabled: #d8d8d8;
+  $select-input-border-color: k-map-fetch($colors, 'input-border');
+  $select-input-border-radius: 4px;
+  $select-input-border-focus: k-map-fetch($colors, 'input-border-focus');
+  $select-input-border-width: 1px;
+  $select-input-height: 40px;
   $select-input-internal-height:
     ($select-input-height - ($select-input-border-width * 2));
-  $select-input-placeholder:          #b8b8b8;
-  $select-text-color:                 #333;
-  $select-link-hover-color:           $select-input-border-focus;
+  $select-input-placeholder: #b8b8b8;
+  $select-text-color: #333;
+  $select-link-hover-color: $select-input-border-focus;
 
-  $select-padding-vertical:           10px;
-  $select-padding-horizontal:         15px;
+  $select-padding-vertical: 10px;
+  $select-padding-horizontal: 15px;
 
   // menu options
-  $select-menu-zindex:                1000;
-  $select-menu-max-height:            280px;
+  $select-menu-zindex: 1000;
+  $select-menu-max-height: 280px;
 
-  $select-option-color:               $select-text-color;
-  $select-option-bg:                  #fbfbfb;
-  $select-option-focused-color:       $select-text-color;
-  $select-option-focused-bg:          #eee;
-  $select-option-selected-color:      #333;
-  $select-option-selected-bg:         #d8d8d8;
-  $select-option-disabled-color:      lighten($select-text-color, 60%);
+  $select-option-color: $select-text-color;
+  $select-option-bg: #fbfbfb;
+  $select-option-focused-color: $select-text-color;
+  $select-option-focused-bg: #eee;
+  $select-option-selected-color: #333;
+  $select-option-selected-bg: #d8d8d8;
+  $select-option-disabled-color: lighten($select-text-color, 60%);
 
-  $select-noresults-color:            lighten($select-text-color, 40%);
+  $select-noresults-color: lighten($select-text-color, 40%);
 
   // clear "x" button
-  $select-clear-size:                 floor(($select-input-height / 2));
-  $select-clear-color:                #999;
-  $select-clear-hover-color:          #d0021b;
-  $select-clear-width:                ($select-input-internal-height / 2);
+  $select-clear-size: floor(($select-input-height / 2));
+  $select-clear-color: #999;
+  $select-clear-hover-color: #d0021b;
+  $select-clear-width: ($select-input-internal-height / 2);
 
   // arrow indicator
-  $select-arrow-color:                #333;
-  $select-arrow-color-hover:          #333;
-  $select-arrow-width:                5px;
+  $select-arrow-color: #333;
+  $select-arrow-color-hover: #333;
+  $select-arrow-width: 5px;
 
   // loading indicator
-  $select-loading-size:               16px;
-  $select-loading-color:              $select-text-color;
-  $select-loading-color-bg:           $select-input-border-color;
+  $select-loading-size: 16px;
+  $select-loading-color: $select-text-color;
+  $select-loading-color-bg: $select-input-border-color;
 
   // multi-select item
-  $select-item-border-radius:         2px;
-  $select-item-gutter:                5px;
-  $select-item-padding-vertical:      2px;
-  $select-item-padding-horizontal:    5px;
-  $select-item-font-size:             .9em;
-  $select-item-color:                 #333;
-  $select-item-bg:                    #d8d8d8;
-  $select-item-border-color:          darken($select-item-bg, 10%);
-  $select-item-hover-color:           darken($select-item-color, 5%);
-  $select-item-hover-bg:              darken($select-item-bg, 5%);
-  $select-item-disabled-color:        #333;
-  $select-item-disabled-bg:           #fcfcfc;
+  $select-item-border-radius: 2px;
+  $select-item-gutter: 5px;
+  $select-item-padding-vertical: 2px;
+  $select-item-padding-horizontal: 5px;
+  $select-item-font-size: .9em;
+  $select-item-color: #333;
+  $select-item-bg: #d8d8d8;
+  $select-item-border-color: darken($select-item-bg, 10%);
+  $select-item-hover-color: darken($select-item-color, 5%);
+  $select-item-hover-bg: darken($select-item-bg, 5%);
+  $select-item-disabled-color: #333;
+  $select-item-disabled-bg: #fcfcfc;
   $select-item-disabled-border-color: darken($select-item-disabled-bg, 10%);
-  /* stylelint-enable */
 
   /* stylelint-disable selector-max-specificity */
   /* stylelint-disable no-descending-specificity */

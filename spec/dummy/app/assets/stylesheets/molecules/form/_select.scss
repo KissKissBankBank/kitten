@@ -1,3 +1,8 @@
 @import 'kitten/molecules/form/select';
 
-@include k-Select;
+@include k-Select((
+  colors: (
+    input-border: #d8d8d8,
+    input-border-focus: #4a84ff,
+  ),
+));
