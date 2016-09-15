@@ -15,8 +15,24 @@
 //
 //
 @mixin k-Select {
+  // TODO use map of colors
+  $select-input-border-color: #d8d8d8;
+  $select-input-border-focus: #4a84ff;
+
   .k-Select {
     @include _k-Select-ReactSelect;
+
+    .Select-arrow-zone {
+      border-left: 1px solid $select-input-border-color;
+
+      // override .Select-arrow-zone styles
+      width: 30px;
+      padding-right: 0;
+    }
+
+    .Select.is-focused:not(.is-open) .Select-arrow-zone {
+      border-left-color: $select-input-border-focus;
+    }
   }
 
   @include _k-Select-ReactSelectAnimations;
