@@ -6,7 +6,13 @@
 //
 // @example scss:
 //
-//   @import k-Select;
+//   @import k-Select((
+//     colors: (
+//       input-border: #d8d8d8,
+//       input-border-focus: #4a84ff,
+//       option-bg: #fbfbfb,
+//     ),
+//   ));
 //
 // @example html:
 //   <div class="k-Select">
@@ -37,6 +43,10 @@
   .Select.is-focused:not(.is-open) .Select-arrow-zone {
     border-left-color: k-map-fetch($colors, 'input-border-focus');
   }
+
+  .Select.is-open .Select-arrow-zone {
+    background-color: k-map-fetch($colors, 'option-bg');
+  }
 }
 
 // React Select's default styles
@@ -53,10 +63,8 @@
    * React Select
    * ============
    * Created by Jed Watson and Joss Mackison for KeystoneJS,
-   * http://www.keystonejs.com/
-   * https://twitter.com/jedwatson
-   * https://twitter.com/jossmackison
-   * https://twitter.com/keystonejs
+   * http://www.keystonejs.com/ https://twitter.com/jedwatson
+   * https://twitter.com/jossmackison https://twitter.com/keystonejs
    * MIT License: https://github.com/JedWatson/react-select
   */
 
@@ -85,7 +93,7 @@
   $select-menu-max-height: 280px;
 
   $select-option-color: $select-text-color;
-  $select-option-bg: #fbfbfb;
+  $select-option-bg: k-map-fetch($colors, 'option-bg');
   $select-option-focused-color: $select-text-color;
   $select-option-focused-bg: #eee;
   $select-option-selected-color: #333;
