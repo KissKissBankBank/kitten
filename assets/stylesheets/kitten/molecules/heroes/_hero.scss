@@ -36,9 +36,7 @@
     }
 
     .k-Hero__container {
-      @include container;
-      box-sizing: border-box;
-      padding: 0 gutter();
+      @include k-container;
 
       @media (min-width: $two-columns-breakpoint) {
         display: flex;

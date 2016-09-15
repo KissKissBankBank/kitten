@@ -3,13 +3,10 @@
 }
 
 .karl-Main__container {
-  @include container;
-  box-sizing: border-box;
-  padding: 0 gutter() * 2;
+  @include k-container;
 
   position: relative;
   display: flex;
-  box-sizing: border-box;
 }
 
 .karl-Main__content {
@@ -37,9 +34,7 @@
 }
 
 .karl-OverGrid__container {
-  @include container;
-  box-sizing: border-box;
-  padding: 0 gutter() * 2;
+  @include k-container;
 
   height: 100%;
   outline: 1px dotted rgba(black, .2);
