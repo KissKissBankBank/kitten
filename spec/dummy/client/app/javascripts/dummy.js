@@ -23,8 +23,12 @@ import SimulatorResult from 'kitten/components/simulators/simulator-result'
 import LoanSimulator from 'kitten/components/simulators/loan-simulator'
 
 // Karl composed components
+
 import { KarlImageExternalRichLink,
          KarlSvgExternalRichLink } from 'kitten/karl/links/external-rich-link'
+import { KarlSimpleDropdown,
+         KarlPlatformSwitch,
+         KarlUserMenuDropdown } from 'kitten/karl/dropdowns/dropdown'
 
 ReactOnRails.register({
   ButtonImageWithText,
@@ -36,5 +40,8 @@ ReactOnRails.register({
   SimulatorResult,
   LoanSimulator,
   KarlImageExternalRichLink,
-  KarlSvgExternalRichLink
+  KarlSvgExternalRichLink,
+  KarlSimpleDropdown,
+  KarlPlatformSwitch,
+  KarlUserMenuDropdown,
 })
