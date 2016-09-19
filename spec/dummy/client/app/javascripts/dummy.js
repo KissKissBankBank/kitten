@@ -29,6 +29,9 @@ import { KarlImageExternalRichLink,
 import { KarlSimpleDropdown,
          KarlPlatformSwitch,
          KarlUserMenuDropdown } from 'kitten/karl/organisms/dropdown'
+import { KarlUnloggedHeaderPlatformSwitch,
+         KarlLoggedHeaderPlatformSwitch,
+         KarlLoggedHeaderUserMenu } from 'kitten/karl/organisms/header'
 
 ReactOnRails.register({
   ButtonImageWithText,
@@ -44,4 +47,7 @@ ReactOnRails.register({
   KarlSimpleDropdown,
   KarlPlatformSwitch,
   KarlUserMenuDropdown,
+  KarlUnloggedHeaderPlatformSwitch,
+  KarlLoggedHeaderPlatformSwitch,
+  KarlLoggedHeaderUserMenu,
 })
