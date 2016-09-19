@@ -3,7 +3,7 @@ require('../stylesheets/dummy-style.scss');
 import ReactOnRails from 'react-on-rails';
 
 // Buttons
-import ButtonImageWithText from 'kitten/components/buttons/button-image-with-text'
+import ButtonImageWithTextAndBadge from 'kitten/components/buttons/button-image-with-text-and-badge'
 
 // Dropdowns
 import Dropdown from 'kitten/components/dropdowns/dropdown'
@@ -35,7 +35,7 @@ import { KarlUnloggedHeaderPlatformSwitch,
 import { KarlLoanSimulator } from 'kitten/karl/organisms/loan-simulator'
 
 ReactOnRails.register({
-  ButtonImageWithText,
+  ButtonImageWithTextAndBadge,
   Dropdown,
   DropdownButton,
   Slider,

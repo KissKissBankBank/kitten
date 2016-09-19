@@ -1,7 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 import DropdownButton from 'kitten/components/dropdowns/dropdown-button'
-import ButtonImageWithText from 'kitten/components/buttons/button-image-with-text'
+import ButtonImageWithTextAndBadge from 'kitten/components/buttons/button-image-with-text-and-badge'
 import domElementHelper from 'kitten/helpers/dom/element-helper'
 
 class Dropdown extends React.Component {

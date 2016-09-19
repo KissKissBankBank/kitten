@@ -1,26 +1,7 @@
-// TODO: description
-window.ButtonImageWithTextAndBadge = React.createClass({
-  propTypes: {
-    children: React.PropTypes.string,
-    onClick: React.PropTypes.func,
-    isExpanded: React.PropTypes.bool,
-    text: React.PropTypes.string,
-    title: React.PropTypes.string,
-    srcImg: React.PropTypes.string,
-    widthImg: React.PropTypes.number,
-    heightImg: React.PropTypes.number,
-    altImg: React.PropTypes.string,
-    notifications: React.PropTypes.number,
-  },
+import React from 'react'
 
-  getDefaultProps: function() {
-    return {
-      children: 'Toggle button',
-      onClick: () => {},
-    }
-  },
-
-  render: function() {
+class ButtonImageWithTextAndBadge extends React.Component {
+  render() {
     const {
       className,
       isExpanded,
@@ -63,4 +44,22 @@ window.ButtonImageWithTextAndBadge = React.createClass({
       </span>
     )
   }
-})
+}
+
+ButtonImageWithTextAndBadge.propTypes = {
+  children: React.PropTypes.string,
+  onClick: React.PropTypes.func,
+  isExpanded: React.PropTypes.bool,
+  text: React.PropTypes.string,
+  title: React.PropTypes.string,
+  srcImg: React.PropTypes.string,
+  widthImg: React.PropTypes.number,
+  heightImg: React.PropTypes.number,
+  altImg: React.PropTypes.string,
+  notifications: React.PropTypes.number,
+}
+
+ButtonImageWithTextAndBadge.defaultProps = {
+  children: 'Toggle button',
+  onClick: () => {},
+}
