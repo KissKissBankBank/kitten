@@ -1,3 +1,10 @@
+/**
+ * This is the webpack configuration used by the web-dev-server in
+ * `spec/dummy/client/bin/assets-hot-server.js`.
+ * The compiled assets are served from memory at the relative path specified in
+ * `publicPath`.
+ */
+
 // Import basic node modules.
 import path from 'path'
 

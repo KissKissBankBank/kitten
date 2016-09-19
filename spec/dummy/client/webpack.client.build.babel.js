@@ -1,3 +1,9 @@
+/**
+ * This is the webpack configuration to build assets.
+ * It compiles entry assets in the Rails application folder
+ * `app/assets/webpack`.
+ */
+
 // Import basic node modules.
 import path from 'path'
 
