@@ -38,6 +38,7 @@ const unloggedPlatformSwitchProps = Object.assign(
   platformSwitchProps
 )
 const KarlUnloggedHeaderPlatformSwitch = defaultProps(Dropdown, unloggedPlatformSwitchProps)
+
 // Logged header dropdowns
 const loggedPlatformSwitchProps = Object.assign(
   { positionedWith: document.getElementById('header-logged') },
@@ -51,7 +52,7 @@ const loggedHeaderUserMenuProps = {
   positionedOn: 'right',
 
   buttonId: 'k-UserMenu',
-  buttonTemplate: 'ButtonImageWithText',
+  buttonTemplate: 'ButtonImageWithTextAndBadge',
   srcImg: 'https://placekitten.com/g/100/100',
   widthImg: 100,
   heightImg: 100,
@@ -61,7 +62,7 @@ const loggedHeaderUserMenuProps = {
 
   refreshEvents: ['resize', 'karl:element#header:classToggled'],
   dropdownListClassName: 'k-UserMenu',
-  dropdownListArrow: <span className="k-UserMenu__arrow" />,
+  dropdownListArrow: (<span className="k-UserMenu__arrow" />),
   dropdownList: [
     <a className="k-UserMenu__item" href="#">Mon profil</a>,
     <a className="k-UserMenu__item" href="#">Mes projets</a>,

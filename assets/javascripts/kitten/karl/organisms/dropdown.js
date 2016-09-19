@@ -23,7 +23,7 @@ const karlPlatformSwitchButtonContent = (<svg className="k-ButtonIcon__svg" view
 </svg>)
 
 const karlPlatformSwitchProps = {
-  positionedWith: 'parent',
+  positionedWith: document.getElementById('k-PlatformSwitchDropdown'),
   positionedWithBorder: false,
 
   buttonId: 'k-PlatformSwitch',
@@ -48,28 +48,22 @@ const karlPlatformSwitchProps = {
 const KarlPlatformSwitch = defaultProps(Dropdown, karlPlatformSwitchProps)
 
 // KarlUserMenuDropdown
-const karlUserMenuDropdownButton = ([
-  <span className="k-ButtonImage" title="Profil">
-    <img className="k-ButtonImage__img"
-         src="https://placekitten.com/g/40/40"
-         width="40"
-         height="40"
-         alt="" />
-  </span>,
-  <p className="k-ButtonImageWithText__text">Firstname</p>
-])
-
 const karlUserMenuDropdownProps = {
-  positionedWith: 'parent',
+  positionedWith: document.getElementById('k-UserMenuDropdown'),
   positionedWithBorder: false,
   positionedOn: 'right',
 
   buttonId: 'k-UserMenu',
-  buttonClassName: 'k-ButtonImageWithText',
-  buttonContentOnExpanded: karlUserMenuDropdownButton,
-  buttonContentOnCollapsed: karlUserMenuDropdownButton,
+  buttonTemplate: 'ButtonImageWithTextAndBadge',
+  srcImg: 'https://placekitten.com/g/100/100',
+  widthImg: 100,
+  heightImg: 100,
+  altImg: 'Alt Firstname',
+  text: 'F',
+  title: 'Profil',
 
   dropdownListClassName: 'k-UserMenu',
+  dropdownListArrow: (<span className="k-UserMenu__arrow" />),
   dropdownList: [
     <a className="k-UserMenu__item" href="#">Mon profil</a>,
     <a className="k-UserMenu__item" href="#">Mes projets</a>,

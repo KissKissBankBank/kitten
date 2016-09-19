@@ -1,4 +1,5 @@
 import React from 'react'
+import classNames from 'classnames'
 
 class ButtonImageWithTextAndBadge extends React.Component {
   render() {
@@ -63,3 +64,5 @@ ButtonImageWithTextAndBadge.defaultProps = {
   children: 'Toggle button',
   onClick: () => {},
 }
+
+export default ButtonImageWithTextAndBadge

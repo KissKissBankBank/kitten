@@ -36,6 +36,7 @@ class Dropdown extends React.Component {
       return this.props.positionedWith
     }
 
+    // TODO: remove props.positionedWith
     if (this.props.positionedWith == 'parent') {
       return this.refs.dropdown.parentNode
     }
@@ -66,8 +67,8 @@ class Dropdown extends React.Component {
     return this.refs.dropdownContent ? this.refs.dropdownContent : null
   }
   getButtonImage() {
-    if (!this.refs.buttonImageWithText) return
-    return this.refs.buttonImageWithText.refs.buttonImage
+    if (!this.refs.buttonImageWithTextAndBadge) return
+    return this.refs.buttonImageWithTextAndBadge.refs.buttonImage
   }
 
   // Elements size
@@ -186,10 +187,10 @@ class Dropdown extends React.Component {
     )
   }
 
-  renderButtonImageWithText() {
+  renderButtonImageWithTextAndBadge() {
     return (
       <ButtonImageWithTextAndBadge
-        ref="ButtonImageWithTextAndBadge"
+        ref="buttonImageWithTextAndBadge"
         className={ this.props.buttonClassName }
         id={ this.props.buttonId }
         isExpanded={ this.state.isExpanded }
@@ -259,12 +260,10 @@ class Dropdown extends React.Component {
 }
 
 Dropdown.propTypes = {
-  positionedWith: React.PropTypes.string,
   positionedWithBorder: React.PropTypes.bool,
   positionedOn: React.PropTypes.string,
   buttonTemplate: React.PropTypes.string,
   refreshEvents: React.PropTypes.array,
-  dropdownListArrow: React.PropTypes.bool,
   dropdownList: React.PropTypes.array,
 }
 
@@ -284,7 +283,7 @@ Dropdown.defaultProps = {
   // This prop is used to fix the dropdown on left or right.
   positionedOn: 'left', // 'left' | 'right'
 
-  // This prop is used to render with component 'ButtonImageWithText'
+  // This prop is used to render with component 'ButtonImageWithTextAndBadger'
   // or 'DropdownButton'
   buttonTemplate: 'DropdownButton',
 
@@ -292,13 +291,18 @@ Dropdown.defaultProps = {
   buttonContentOnExpanded: 'Close me',
   buttonContentOnCollapsed: 'Expand me',
 
+  spaceAroundGrid: 0,
+
+  // Value of notifications to show badge.
+  notifications: 0,
+
   // This prop is used to update the reference element height when a
   // javascript event is triggered on the window object.
   refreshEvents: [], // eg. ['resize']
 
   // Dropdown list settings
   dropdownListArrow: false,
-  dropdownList: []
+  dropdownList: [],
 }
 
 export default Dropdown
