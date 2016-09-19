@@ -33,6 +33,8 @@ import { KarlUnloggedHeaderPlatformSwitch,
          KarlLoggedHeaderPlatformSwitch,
          KarlLoggedHeaderUserMenu } from 'kitten/karl/organisms/header'
 import { KarlLoanSimulator } from 'kitten/karl/organisms/loan-simulator'
+import { KarlSimpleSelect,
+         KarlPlaceholderSelect } from 'kitten/karl/molecules/select'
 
 ReactOnRails.register({
   ButtonImageWithTextAndBadge,
@@ -52,4 +54,6 @@ ReactOnRails.register({
   KarlLoggedHeaderPlatformSwitch,
   KarlLoggedHeaderUserMenu,
   KarlLoanSimulator,
+  KarlSimpleSelect,
+  KarlPlaceholderSelect,
 })

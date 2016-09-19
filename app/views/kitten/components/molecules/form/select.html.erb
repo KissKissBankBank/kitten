@@ -1,57 +1,11 @@
 <%= example "select without a placeholder value" do %>
-  <div class="k-Select" id="select"></div>
-  <script type="text/babel">
-    ReactDOM.render(
-      React.createElement(Select, {
-        name: 'locale',
-        options: [
-          { value: 'en', label: 'English' },
-          { value: 'fr', label: 'Français' },
-          { value: 'es', label: 'Español' },
-        ],
-        clearable: false,
-        searchable: false,
-        placeholder: false,
-        multi: false,
-        value: 'fr',
-      }),
-      document.getElementById('select'),
-    )
-  </script>
+  <div class="k-Select" id="select">
+    <%= react_component('KarlSimpleSelect') %>
+  </div>
 <% end %>
 
 <%= example "select with a placeholder value" do %>
-  <div class="k-Select" id="select2"></div>
-  <script type="text/babel">
-    ReactDOM.render(
-      React.createElement(Select, {
-        name: 'locale',
-        options: [
-          { value: 'de', label: 'Deutsch' },
-          { value: 'en', label: 'English' },
-          { value: 'es', label: 'Español' },
-          { value: 'fr', label: 'Français' },
-          { value: 'it', label: 'Italiano' },
-          { value: 'nl', label: 'Nederlands' },
-          { value: 'sv', label: 'Svenska' },
-          { value: 'no', label: 'Norsk' },
-          { value: 'is', label: 'Íslenska' },
-          { value: 'ca', label: 'Català' },
-          { value: 'ki', label: 'Gĩkũyũ' },
-          { value: 'se', label: 'Davvisámegiella' },
-          { value: 'av', label: 'авар мацӀ' },
-          { value: 'yi', label: 'ייִדיש' },
-          { value: 'bh', label: 'भोजपुरी' },
-          { value: 'hi', label: 'हिन्दी' },
-          { value: 'cr', label: 'ᓀᐦᐃᔭᐍᐏᐣ' },
-        ],
-        clearable: false,
-        searchable: false,
-        multi: false,
-        placeholder: 'Language…',
-        value: null,
-      }),
-      document.getElementById('select2'),
-    )
-  </script>
+  <div class="k-Select" id="select2">
+    <%= react_component('KarlPlaceholderSelect') %>
+  </div>
 <% end %>
