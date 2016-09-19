@@ -1,6 +1,6 @@
 /**
  * This is the webpack configuration used by the web-dev-server in
- * `spec/dummy/client/bin/assets-hot-server.js`.
+ * `spec/dummy/client/bin/webpack-dev-server.js`.
  * The compiled assets are served from memory at the relative path specified in
  * `publicPath`.
  */

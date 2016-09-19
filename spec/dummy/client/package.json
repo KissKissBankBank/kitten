@@ -9,7 +9,7 @@
     "preinstall": "../bin/npm-link",
     "build:dev:client": "webpack -w --config webpack.client.build.babel.js",
     "build:client": "webpack --config webpack.client.build.babel.js",
-    "hot-assets": "babel-node bin/assets-hot-server.js"
+    "hot-assets": "babel-node bin/webpack-dev-server.js"
   },
   "cacheDirectories": [
     "node_modules",
