@@ -1,6 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 import Slider from 'kitten/components/form/slider'
+import SliderTooltip from 'kitten/components/form/slider-tooltip'
 import numberUtils from 'kitten/helpers/utils/number'
 
 // TODO description
@@ -24,7 +25,7 @@ class LoanSimulator extends React.Component {
       installmentAmount: null,
       installmentPercentage: null,
     })
-  },
+  }
 
   handleAmountChange(e) {
     this.setState({ amount: e.target.value })
@@ -46,7 +47,7 @@ class LoanSimulator extends React.Component {
       installmentPercentage: percentage,
       dragged: true
     })
-  },
+  }
 
   handleInstallmentAction() {
     this.setState({ touched: true })
@@ -73,9 +74,9 @@ class LoanSimulator extends React.Component {
       return null
 
     return this.amountError()
-  },
+  }
 
-  amountError: function() {
+  amountError() {
     if (!this.state.amount)
       return this.props.amountEmptyError
 
@@ -173,9 +174,9 @@ class LoanSimulator extends React.Component {
                    max={this.props.amountMax}
                    size="5"
                    defaultValue={this.props.initialAmount}
-                   onFocus={this.handleFocus}
-                   onChange={this.handleAmountChange}
-                   onKeyDown={this.handleAmountKeyDown}
+                   onFocus={this.handleFocus.bind(this)}
+                   onChange={this.handleAmountChange.bind(this)}
+                   onKeyDown={this.handleAmountKeyDown.bind(this)}
                    placeholder={this.props.amountPlaceholder} />
             <span className="k-TextInputWithUnit__unit">
               {this.props.currencySymbol}
@@ -185,7 +186,7 @@ class LoanSimulator extends React.Component {
         </div>
         <div className="k-LoanSimulator__reimbursing">
           <label className="k-Label k-LoanSimulator__label"
-                 onClick={this.handleInstallmentLabelClick}>
+                 onClick={this.handleInstallmentLabelClick.bind(this)}>
             {this.props.installmentLabel}
           </label>
           <SliderTooltip className={tooltipClass}
@@ -199,8 +200,8 @@ class LoanSimulator extends React.Component {
                   power={2}
                   name={this.props.installmentName}
                   value={installmentAmount}
-                  onChange={this.handleInstallmentChange}
-                  onAction={this.handleInstallmentAction} />
+                  onChange={this.handleInstallmentChange.bind(this)}
+                  onAction={this.handleInstallmentAction.bind(this)} />
         </div>
         <div className="k-LoanSimulator__actions">
           <button className="k-Button">{this.props.actionLabel}</button>

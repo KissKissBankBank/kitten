@@ -1,4 +1,7 @@
-window.SliderTooltip = ({ className, percentage, children }) =>
+import React from 'react'
+import classNames from 'classnames'
+
+const SliderTooltip = ({ className, percentage, children }) =>
   <div className={ classNames('k-SliderTooltip', className) }>
     <div className="k-SliderTooltip__tip">
       <div className="k-SliderTooltip__tip__content"
@@ -11,3 +14,5 @@ window.SliderTooltip = ({ className, percentage, children }) =>
            style={ { left: percentage } }></div>
     </div>
   </div>
+
+export default SliderTooltip

@@ -32,6 +32,7 @@ import { KarlSimpleDropdown,
 import { KarlUnloggedHeaderPlatformSwitch,
          KarlLoggedHeaderPlatformSwitch,
          KarlLoggedHeaderUserMenu } from 'kitten/karl/organisms/header'
+import { KarlLoanSimulator } from 'kitten/karl/organisms/loan-simulator'
 
 ReactOnRails.register({
   ButtonImageWithText,
@@ -50,4 +51,5 @@ ReactOnRails.register({
   KarlUnloggedHeaderPlatformSwitch,
   KarlLoggedHeaderPlatformSwitch,
   KarlLoggedHeaderUserMenu,
+  KarlLoanSimulator,
 })
