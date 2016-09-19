@@ -145,8 +145,8 @@ class LoanSimulator extends React.Component {
 
       tooltipClass = null
       tooltipText = [
-        <div className="k-LoanSimulator__installment">{installmentText}</div>,
-        <div className="k-LoanSimulator__duration">{durationText}</div>
+        <div key="1" className="k-LoanSimulator__installment">{installmentText}</div>,
+        <div key="2" className="k-LoanSimulator__duration">{durationText}</div>
       ]
     } else {
       tooltipClass = 'is-inactive'

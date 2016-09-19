@@ -11,6 +11,12 @@ class Slider extends React.Component {
     this.state = {
       grabbing: false,
     }
+
+    this.handleMove = this.handleMove.bind(this)
+    this.handleStart = this.handleStart.bind(this)
+    this.handleEnd = this.handleEnd.bind(this)
+    this.handleClick = this.handleClick.bind(this)
+    this.handleKeyDown = this.handleKeyDown.bind(this)
   }
 
   // Allow other components to focus
@@ -51,10 +57,10 @@ class Slider extends React.Component {
     e.stopPropagation()
     e.preventDefault()
 
-    document.addEventListener('mousemove', this.handleMove.bind(this))
-    document.addEventListener('touchmove', this.handleMove.bind(this))
-    document.addEventListener('mouseup', this.handleEnd.bind(this))
-    document.addEventListener('touchend', this.handleEnd.bind(this))
+    document.addEventListener('mousemove', this.handleMove)
+    document.addEventListener('touchmove', this.handleMove)
+    document.addEventListener('mouseup', this.handleEnd)
+    document.addEventListener('touchend', this.handleEnd)
     this.setState({ grabbing: true })
   }
 
@@ -163,7 +169,7 @@ class Slider extends React.Component {
 
     return (
       <div className={ classNames("k-Slider", grabbingClass) }
-           onClick={ this.handleClick.bind(this) }>
+           onClick={ this.handleClick }>
         <div className="k-Slider__ramp"
              ref="track">
           <div className="k-Slider__progress"
@@ -176,10 +182,10 @@ class Slider extends React.Component {
                aria-valuemin={ this.props.min }
                aria-valuemax={ this.props.max }
                aria-valuenow={ this.props.value }
-               onKeyDown={ this.handleKeyDown.bind(this) }
-               onMouseDown={ this.handleStart.bind(this) }
-               onTouchStart={ this.handleStart.bind(this) }
-               onClick={ this.handleClick.bind(this) }
+               onKeyDown={ this.handleKeyDown }
+               onMouseDown={ this.handleStart }
+               onTouchStart={ this.handleStart }
+               onClick={ this.handleClick }
                onFocus={ this.props.onAction.bind(this) }>
             <GrabberIcon className="k-Slider__handleIcon" />
           </div>

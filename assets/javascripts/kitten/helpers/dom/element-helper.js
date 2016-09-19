@@ -37,7 +37,7 @@ const domElementHelper = {
   getComputedStyle(element, property) {
     if (!element) return
 
-    const styles = this.getComputedStyle(element)
+    const styles = window.getComputedStyle(element)
     return styles.getPropertyValue(property)
   }
 }
