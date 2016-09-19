@@ -25,10 +25,10 @@ import LoanSimulator from 'kitten/components/simulators/loan-simulator'
 // Karl composed components
 
 import { KarlImageExternalRichLink,
-         KarlSvgExternalRichLink } from 'kitten/karl/links/external-rich-link'
+         KarlSvgExternalRichLink } from 'kitten/karl/molecules/external-rich-link'
 import { KarlSimpleDropdown,
          KarlPlatformSwitch,
-         KarlUserMenuDropdown } from 'kitten/karl/dropdowns/dropdown'
+         KarlUserMenuDropdown } from 'kitten/karl/organisms/dropdown'
 
 ReactOnRails.register({
   ButtonImageWithText,
