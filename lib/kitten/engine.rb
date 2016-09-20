@@ -33,15 +33,6 @@ module Kitten
       end
     end
 
-    # ReactOnRails helpers are not automatically loaded.
-    # We should include them explicitely.
-    # cf. https://github.com/shakacode/react_on_rails/issues/385
-    initializer :include_react_on_rails_helpers do
-      ActiveSupport.on_load(:action_view) do
-        include ::ReactOnRailsHelper
-      end
-    end
-
     config.generators do |g|
       g.test_framework      :rspec,        fixture: false
       g.fixture_replacement :factory_girl, dir:     'spec/factories'
