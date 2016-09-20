@@ -17,6 +17,14 @@ class LoanSimulator extends React.Component {
       dragged: false,
       touched: false,
     }
+
+    this.handleFocus = this.handleFocus.bind(this)
+    this.handleAmountChange = this.handleAmountChange.bind(this)
+    this.handleAmountKeyDown = this.handleAmountKeyDown.bind(this)
+    this.handleInstallmentLabelClick = this.handleInstallmentLabelClick
+                                           .bind(this)
+    this.handleInstallmentChange = this.handleInstallmentChange.bind(this)
+    this.handleInstallmentAction = this.handleInstallmentAction.bind(this)
   }
 
   handleFocus(e) {
@@ -174,9 +182,9 @@ class LoanSimulator extends React.Component {
                    max={this.props.amountMax}
                    size="5"
                    defaultValue={this.props.initialAmount}
-                   onFocus={this.handleFocus.bind(this)}
-                   onChange={this.handleAmountChange.bind(this)}
-                   onKeyDown={this.handleAmountKeyDown.bind(this)}
+                   onFocus={ this.handleFocus }
+                   onChange={ this.handleAmountChange }
+                   onKeyDown={ this.handleAmountKeyDown }
                    placeholder={this.props.amountPlaceholder} />
             <span className="k-TextInputWithUnit__unit">
               {this.props.currencySymbol}
@@ -186,7 +194,7 @@ class LoanSimulator extends React.Component {
         </div>
         <div className="k-LoanSimulator__reimbursing">
           <label className="k-Label k-LoanSimulator__label"
-                 onClick={this.handleInstallmentLabelClick.bind(this)}>
+                 onClick={ this.handleInstallmentLabelClick }>
             {this.props.installmentLabel}
           </label>
           <SliderTooltip className={tooltipClass}
@@ -200,8 +208,8 @@ class LoanSimulator extends React.Component {
                   power={2}
                   name={this.props.installmentName}
                   value={installmentAmount}
-                  onChange={this.handleInstallmentChange.bind(this)}
-                  onAction={this.handleInstallmentAction.bind(this)} />
+                  onChange={ this.handleInstallmentChange }
+                  onAction={ this.handleInstallmentAction } />
         </div>
         <div className="k-LoanSimulator__actions">
           <button className="k-Button">{this.props.actionLabel}</button>

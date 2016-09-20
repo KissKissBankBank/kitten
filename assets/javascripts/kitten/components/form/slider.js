@@ -17,6 +17,7 @@ class Slider extends React.Component {
     this.handleEnd = this.handleEnd.bind(this)
     this.handleClick = this.handleClick.bind(this)
     this.handleKeyDown = this.handleKeyDown.bind(this)
+    this.handleAction = this.props.onAction.bind(this)
   }
 
   // Allow other components to focus
@@ -64,7 +65,7 @@ class Slider extends React.Component {
     this.setState({ grabbing: true })
   }
 
-  handleEnd(e) {
+  handleEnd() {
     document.removeEventListener('mousemove', this.handleMove)
     document.removeEventListener('touchmove', this.handleMove)
     document.removeEventListener('mouseup', this.handleEnd)
@@ -186,7 +187,7 @@ class Slider extends React.Component {
                onMouseDown={ this.handleStart }
                onTouchStart={ this.handleStart }
                onClick={ this.handleClick }
-               onFocus={ this.props.onAction.bind(this) }>
+               onFocus={ this.handleAction }>
             <GrabberIcon className="k-Slider__handleIcon" />
           </div>
         </div>
