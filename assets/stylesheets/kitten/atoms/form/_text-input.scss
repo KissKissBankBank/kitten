@@ -50,7 +50,6 @@
     k-map-fetch($input, 'font-size'), $unit: none);
 
   // Base
-
   $color: k-color-definition(
     k-map-fetch($input, ('colors', 'base', 'color')));
   $border: k-color-definition(
@@ -59,12 +58,10 @@
     k-map-fetch($input, ('colors', 'base', 'background')));
 
     // Focus
-
   $border-focus: k-color-definition(
     k-map-fetch($input, ('colors', 'focus', 'border')));
 
   // Disabled
-
   $color-disabled: k-color-definition(
     k-map-fetch($input, ('colors', 'disabled', 'color')));
   $border-disabled: k-color-definition(
@@ -73,19 +70,19 @@
     k-map-fetch($input, ('colors', 'disabled', 'background')));
 
   // Is-valid
-
   $color-is-valid: k-color-definition(
     k-map-fetch($input, ('colors', 'is-valid', 'color')));
   $border-is-valid: k-color-definition(
     k-map-fetch($input, ('colors', 'is-valid', 'border')));
 
   // Is-error
-
   $color-is-error: k-color-definition(
     k-map-fetch($input, ('colors', 'is-error', 'color')));
   $border-is-error: k-color-definition(
     k-map-fetch($input, ('colors', 'is-error', 'border')));
 
+  // Border radius Text - input
+  $border-text-input: k-px-to-rem(4px);
 
   .k-TextInput {
     @include k-typographyFont($font);
@@ -93,7 +90,7 @@
 
     box-sizing: border-box;
     border: 1px solid $border;
-    border-radius: 4px;
+    border-radius: $border-text-input;
     background: $background;
 
     width: k-px-to-rem(400px);
@@ -107,16 +104,16 @@
     }
 
     &:disabled {
-      color: $color-disabled;
       border-color: $border-disabled;
       background-color: $background-disabled;
+      color: $color-disabled;
 
       cursor: not-allowed;
     }
 
     &.is-valid {
-      color: $color-is-valid;
       border-color: $border-is-valid;
+      color: $color-is-valid;
       &:focus {
         border-color: $border-focus;
         color: $color;
@@ -124,8 +121,8 @@
     }
 
     &.is-error {
-      color: $color-is-error;
       border-color: $border-is-error;
+      color: $color-is-error;
       &:focus {
         border-color: $border-focus;
         color: $color;
