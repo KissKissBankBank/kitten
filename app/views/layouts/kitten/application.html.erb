@@ -147,7 +147,9 @@
   </div>
 </div>
 
-<%= env_javascript_include_tag(hot: ['http://localhost:3500/dummy-bundle.js']) %>
+<%= env_javascript_include_tag(hot: [
+  "http://localhost:3500/#{Kitten.configuration.webpack_output_bundle}.js"]
+) %>
 <%= env_javascript_include_tag(static: 'application_static',
                                hot: 'application_non_webpack') %>
 
