@@ -42,7 +42,7 @@ const baseConfig = {
     loaders: [
       {
         test: /\.(svg|png|jpe?g)$/,
-        loaders: ['file?name=images/[name].[ext]']
+        loaders: ['file?name=images/[name].[ext]'],
       },
       {
         test: /\.jsx?$/,
@@ -54,7 +54,7 @@ const baseConfig = {
             'babel-preset-es2015',
             'babel-preset-react',
             'babel-preset-stage-0',
-            'babel-preset-stage-2'
+            'babel-preset-stage-2',
           ].map(require.resolve)
         }
       },
