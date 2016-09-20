@@ -69,7 +69,8 @@
     width: k-px-to-rem(86px);
 
     background-color: $background;
-    border-radius: $border-text-input;
+    border-top-right-radius: $border-text-input;
+    border-bottom-right-radius: $border-text-input;
     border: none;
 
     text-transform: uppercase;
