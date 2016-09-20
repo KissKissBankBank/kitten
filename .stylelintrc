@@ -25,7 +25,6 @@
     "no-descending-specificity": true,
     "no-eol-whitespace": true,
     "no-extra-semicolons": true,
-    "no-indistinguishable-colors": true,
     "no-missing-eof-newline": true,
     "number-leading-zero": "never",
     "number-no-trailing-zeros": true,

@@ -14,6 +14,7 @@ New features:
 - Add new ButtonImageWithText molecule.
 - Add new SliderTooltip molecule.
 - Add new Grid molecule.
+- Add new Select molecule.
 - Add branding section on styleguide.
 - Add pages that serve as full-page previews for tests in the style guide.
 

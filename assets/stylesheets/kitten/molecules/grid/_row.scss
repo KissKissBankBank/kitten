@@ -65,9 +65,7 @@
     }
 
     .k-Row__content {
-      @include container;
-      box-sizing: border-box;
-      padding: 0 gutter() * 2;
+      @include k-container;
 
       .k-Row--padded & {
         padding-top: 2rem;
