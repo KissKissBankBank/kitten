@@ -1,8 +1,4 @@
 # Shown below are the defaults for configuration
-ActiveSupport.on_load(:action_view) do
-  include ReactOnRailsHelper
-end
-
 ReactOnRails.configure do |config|
   # Client bundles are configured in application.js
 
