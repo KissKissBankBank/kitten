@@ -43,15 +43,17 @@
   .k-TextInputWithInfo__label {
     @include k-typographyFont($font-label);
     @include k-typographyFontSize($font-size-label);
+
     display: block;
     padding-bottom: k-px-to-rem(10px);
-    color: $color-label;
 
+    color: $color-label;
   }
 
   .k-TextInputWithInfo__error {
     @include k-typographyFont($font-error);
     @include k-typographyFontSize($font-size-error);
+
     color: $color-error;
   }
 
