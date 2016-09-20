@@ -5,12 +5,23 @@
 /// @example scss - usage
 ///
 ///   @include k-TextInputWithUnit((
-///     input-font: sans-serif,
-///     input-font: sans-serif-bold,
+///     input-font: 'source-sans',
+///     unit-font: 'source-sans-semi-bold',
+///     border-color: #d8d8d8,
+///     color: #333;
 ///     colors: (
-///       border: blue,
-///       error: red,
-///       focus: blue
+///       unit: (
+///         color: #4a84ff,
+///       ),
+///       is-valid: (
+///         color: #70c050,
+///       ),
+///       is-error: (
+///         color: #ff4146,
+///       ),
+///       inactive: (
+///         color: #fff,
+///       )
 ///     )
 ///   ));
 ///
@@ -20,99 +31,97 @@
 ///     <input class="k-TextInputWithUnit__input" />
 ///     <span class="k-TextInputWithUnit__unit">$</span>
 ///   </div>
-@mixin k-TextInputWithUnit($text-input-with-unit) {
-  @include k-with-module('k-TextInputWithUnit: $text-input-with-unit') {
-    $input-font: k-map-fetch($text-input-with-unit, 'input-font');
-    $unit-font: k-map-fetch($text-input-with-unit, 'unit-font');
 
-    $colors: k-map-fetch($text-input-with-unit, 'colors');
-    $border-color: k-color-definition(k-map-fetch($colors, 'border'));
-    $error-color: k-color-definition(k-map-fetch($colors, 'error'));
-    $focus-color: k-color-definition(k-map-fetch($colors, 'focus'));
+@mixin k-TextInputWithUnit($input) {
+  $input-font: k-string-definition(k-map-fetch($input, 'input-font'));
+  $unit-font: k-string-definition(k-map-fetch($input, 'unit-font'));
+  $border-color: k-color-definition(k-map-fetch($input, 'border-color'));
+  $color: k-color-definition(k-map-fetch($input, 'color'));
 
-    $default-height: k-px-to-rem(40px);
-    $large-height: k-px-to-rem(50px);
+  // Border
+  $unit-color: k-color-definition(
+    k-map-fetch($input, ('colors', 'unit', 'color')));
 
-    $default-unit-width: 3rem;
-    $large-unit-width: 4rem;
+  // Valid
+  $unit-color-is-valid: k-color-definition(
+    k-map-fetch($input, ('colors', 'is-valid', 'color')));
 
-    $transition-speed: .25s;
+  // Error
+  $unit-color-is-error: k-color-definition(
+    k-map-fetch($input, ('colors', 'is-error', 'color')));
 
-    // container
-    .k-TextInputWithUnit {
-      position: relative; // to place an absolute unit
+  // Inactive
+  $unit-color-inactive: k-color-definition(
+    k-map-fetch($input, ('colors', 'inactive', 'color')));
 
-      box-sizing: border-box;
-      height: $default-height;
+  // Border radius Text - input
+  $border-text-input: k-px-to-rem(4px);
 
-      border-radius: .25em;
+  // Transition
+  $transition-speed: .2s;
 
+  .k-TextInputWithUnit {
+    display: inline-flex;
+    position: relative; // to place an absolute unit
+
+    box-sizing: border-box;
+  }
+
+  // Input
+  .k-TextInputWithUnit__input {
+    box-sizing: border-box;
+    padding-right: k-px-to-rem(50px);
+    outline: none; // since we introduce our own focus styles
+
+    transition: all $transition-speed;
+
+    @include k-typographyFont($input-font);
+    @include k-formRemoveNumberSpinner;
+
+    &:focus ~ .k-TextInputWithUnit__unit {
+      border: 1px solid $unit-color;
+      color: $color;
+    }
+  }
+
+  // Unit
+  .k-TextInputWithUnit__unit {
+    position: absolute;
+    right: 0;
+
+    box-sizing: border-box;
+    height: 100%;
+    width: k-px-to-rem(50px);
+    padding: k-px-to-rem(11px) k-px-to-rem(18px);
+
+    border-top-right-radius: $border-text-input;
+    border-bottom-right-radius: $border-text-input;
+    border: 1px solid $border-color;
+
+    color: $color;
+
+    transition: all $transition-speed;
+
+    @include k-typographyFont($unit-font);
+    @include k-typographyFontSize(1);
+
+    &.tiny {
+      padding: k-px-to-rem(7px) k-px-to-rem(18px);
     }
 
-    .k-TextInputWithUnit--large {
-      height: $large-height;
+    &.is-valid {
+      border: 1px solid $unit-color-is-valid;
+      color: $unit-color-is-valid;
     }
 
-    // input
-    .k-TextInputWithUnit__input {
-      box-sizing: border-box;
-      height: 100%;
-      width: 100%;
-      padding: 0 $default-unit-width 0 1rem;
-
-      background: transparent;
-      border: 1px solid $border-color;
-      border-radius: .25em;
-      outline: none; // since we introduce our own focus styles
-
-      @include k-typographyFont($input-font);
-
-      transition: all $transition-speed;
-
-      .k-TextInputWithUnit.is-error & {
-        color: $error-color;
-        border-color: $error-color;
-      }
-
-      &:focus {
-        // we need to repeat is-error to override the stronger is-error style
-        &,
-        .k-TextInputWithUnit.is-error & {
-          border-color: $focus-color;
-          color: inherit;
-
-          // this technique helps us style an adjacent element on focus
-          & + .k-TextInputWithUnit__unit {
-            border-color: $focus-color;
-          }
-        }
-      }
-
-      @include k-formRemoveNumberSpinner;
+    &.is-error {
+      border: 1px solid $unit-color-is-error;
+      color: $unit-color-is-error;
     }
 
-    // unit
-    .k-TextInputWithUnit__unit {
-      position: absolute;
-      box-sizing: border-box;
-      height: 100%;
-      top: 0;
-      right: 0;
-      padding: .5rem .85rem;
-      border-left: 1px solid $border-color;
-
-      @include k-typographyFont($unit-font);
-      @include k-typographyFontSize(1);
-
-      transition: all $transition-speed;
-
-      .k-TextInputWithUnit.is-error & {
-        border-color: $error-color;
-      }
-
-      .k-TextInputWithUnit--large & {
-        padding: .7rem 1.3rem;
-      }
+    &.inactive {
+      border-left: 1px solid $unit-color-inactive;
+      color: $unit-color-inactive;
     }
   }
 }

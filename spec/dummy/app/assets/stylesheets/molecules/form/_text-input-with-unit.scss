@@ -1,11 +1,23 @@
 @import 'kitten/molecules/form/text-input-with-unit';
 
 @include k-TextInputWithUnit((
-  input-font: source-sans,
-  unit-font: source-sans-semi-bold,
+  input-font: 'source-sans',
+  unit-font: 'source-sans-semi-bold',
+  border-color: #d8d8d8,
+  color: #333,
   colors: (
-    border: #d8d8d8,
-    error: #ff4146,
-    focus: #4a84ff
+    unit: (
+      color: #4a84ff,
+    ),
+    is-valid: (
+      color: #70c050,
+    ),
+    is-error: (
+      color: #ff4146,
+    ),
+    inactive: (
+      color: #fff,
+    )
   )
 ));
+
