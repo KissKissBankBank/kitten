@@ -2,6 +2,7 @@ import React from 'react'
 import classNames from 'classnames'
 import GrabberIcon from 'kitten/components/icons/grabber-icon'
 import domEvents from 'kitten/helpers/dom/events'
+import domElementHelper from 'kitten/helpers/dom/element-helper'
 
 // Slider input to choose an integer value between two bounds
 class Slider extends React.Component {
@@ -58,18 +59,24 @@ class Slider extends React.Component {
     e.stopPropagation()
     e.preventDefault()
 
-    document.addEventListener('mousemove', this.handleMove)
-    document.addEventListener('touchmove', this.handleMove)
-    document.addEventListener('mouseup', this.handleEnd)
-    document.addEventListener('touchend', this.handleEnd)
+    if (domElementHelper.canUseDom()) {
+      document.addEventListener('mousemove', this.handleMove)
+      document.addEventListener('touchmove', this.handleMove)
+      document.addEventListener('mouseup', this.handleEnd)
+      document.addEventListener('touchend', this.handleEnd)
+    }
+
     this.setState({ grabbing: true })
   }
 
   handleEnd() {
-    document.removeEventListener('mousemove', this.handleMove)
-    document.removeEventListener('touchmove', this.handleMove)
-    document.removeEventListener('mouseup', this.handleEnd)
-    document.removeEventListener('touchend', this.handleEnd)
+    if (domElementHelper.canUseDom()) {
+      document.removeEventListener('mousemove', this.handleMove)
+      document.removeEventListener('touchmove', this.handleMove)
+      document.removeEventListener('mouseup', this.handleEnd)
+      document.removeEventListener('touchend', this.handleEnd)
+    }
+
     this.setState({ grabbing: false })
   }
 
