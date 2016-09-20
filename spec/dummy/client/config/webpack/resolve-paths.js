@@ -22,9 +22,9 @@ const resolvingPaths = kitten.jsPaths
                        .concat(nodeModulesPath)
                        .concat(kitten.imagesPaths)
 
-const RESOLVE_PATHS = {
-  SASS: sassLoadPaths,
-  MODULES: resolvingPaths,
+const resolve_paths = {
+  sass: sassLoadPaths,
+  modules: resolvingPaths,
 }
 
-export default RESOLVE_PATHS
+export default resolve_paths

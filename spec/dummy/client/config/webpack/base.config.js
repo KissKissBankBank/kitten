@@ -2,7 +2,7 @@ import path from 'path'
 
 // Resolving paths: these paths help webpack to know where to find modules,
 // assets and loaders it needs for the assets compilation.
-import RESOLVE_PATHS from './resolve-paths'
+import resolve_paths from './resolve-paths'
 
 // Webpack plugin
 import webpack from 'webpack'
@@ -23,11 +23,11 @@ const baseConfig = {
   },
 
   resolve: {
-    root: RESOLVE_PATHS.MODULES,
+    root: resolve_paths.modules,
   },
 
   resolveLoader: {
-    root: RESOLVE_PATHS.MODULES,
+    root: resolve_paths.modules,
   },
 
   plugins: [
@@ -61,7 +61,7 @@ const baseConfig = {
     ],
   },
   sassLoader: {
-    includePaths: RESOLVE_PATHS.SASS,
+    includePaths: resolve_paths.sass,
   }
 };
 
