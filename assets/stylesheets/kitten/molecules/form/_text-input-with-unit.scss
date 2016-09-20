@@ -61,7 +61,7 @@
   $transition-speed: .2s;
 
   .k-TextInputWithUnit {
-    display: inline-flex;
+    display: flex;
     position: relative; // to place an absolute unit
 
     box-sizing: border-box;
