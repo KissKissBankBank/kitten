@@ -10,9 +10,7 @@
 
 .karl-Header__container {
   display: flex;
-  @include container;
-  box-sizing: border-box;
-  padding: 0 gutter() * 2;
+  @include k-container;
 }
 
 .karl-Header__content {
