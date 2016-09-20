@@ -3,7 +3,7 @@ import React from 'react'
 import LoanSimulator from 'kitten/components/simulators/loan-simulator'
 
 const nbsp = String.fromCharCode(160)
-const loanSimulatorProps = {
+const KarlLoanSimulator = defaultProps(LoanSimulator, {
   amountLabel: 'J’ai besoin de',
   amountPlaceholder: `Entre 200${nbsp}€ et 10${nbsp}000${nbsp}€`,
   amountMin: 200,
@@ -29,8 +29,6 @@ const loanSimulatorProps = {
   locale: 'fr',
 
   actionLabel: `C’est parti${nbsp}!`,
-}
-
-const KarlLoanSimulator = defaultProps(LoanSimulator, loanSimulatorProps)
+})
 
 export { KarlLoanSimulator }
