@@ -24,7 +24,7 @@ const karlPlatformSwitchButtonContent = (<svg
 </svg>)
 
 const KarlPlatformSwitch = defaultProps(Dropdown, {
-  positionedWith: document.getElementById('k-PlatformSwitchDropdown'),
+  positionedWith: () => document.getElementById('k-PlatformSwitchDropdown'),
   positionedWithBorder: false,
 
   buttonId: 'k-PlatformSwitch',
@@ -51,7 +51,7 @@ const KarlPlatformSwitch = defaultProps(Dropdown, {
 
 // KarlUserMenuDropdown
 const KarlUserMenuDropdown = defaultProps(Dropdown, {
-  positionedWith: document.getElementById('k-UserMenuDropdown'),
+  positionedWith: () => document.getElementById('k-UserMenuDropdown'),
   positionedWithBorder: false,
   positionedOn: 'right',
 
