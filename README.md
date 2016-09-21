@@ -1,8 +1,11 @@
 # kitten
 
-`kitten` is a components library for Sass. It provides mixins to create
-flexible components based on your own brand elements
-(colors, fonts, typographic scale, etc.).
+`kitten` is a components library based on Sass and React. It provides mixins to
+create flexible components based on your own brand elements (colors, fonts,
+typographic scale, etc.).
+
+It is a npm module coupled with a Rails engine that provides a integrated
+styleguide.
 
 ![Kittens](http://i.imgur.com/EbGhfDH.gif)
 
@@ -27,9 +30,6 @@ flexible components based on your own brand elements
 - [Release](#release)
 
 ## Installation
-
-`kitten` is a npm module coupled with a Rails engine that provides a integrated
-styleguide.
 
 You can choose to use the npm module only or with the Rails engine.
 
