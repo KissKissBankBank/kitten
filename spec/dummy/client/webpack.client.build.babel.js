@@ -23,10 +23,6 @@ import ExtractTextPlugin from 'extract-text-webpack-plugin'
 // Import common webpack config.
 import baseConfig from './config/webpack/base.config'
 
-// Resolving paths: these paths help webpack to know where to find modules,
-// assets and loaders it needs for the assets compilation.
-import RESOLVE_PATHS from './config/webpack/resolve-paths'
-
 // On the dummy, this variable is not useful. It is meant to be an example for
 // implementation on your production application.
 const production = process.env.NODE_ENV === 'production';
@@ -53,9 +49,6 @@ const buildConfig = {
       },
     ]
   },
-  sassLoader: {
-    includePaths: RESOLVE_PATHS.SASS,
-  }
 }
 
 // Enable devtools if the build is intended to be used on development
