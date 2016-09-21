@@ -1,4 +1,4 @@
-# require react_on_rails dependencies
+# Require react_on_rails dependencies
 require 'execjs'
 require 'react_on_rails'
 
