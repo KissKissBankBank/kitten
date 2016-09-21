@@ -5,19 +5,9 @@
   unit-font: 'source-sans-semi-bold',
   border-color: #d8d8d8,
   color: #333,
-  colors: (
-    unit: (
-      color: #4a84ff,
-    ),
-    is-valid: (
-      color: #70c050,
-    ),
-    is-error: (
-      color: #ff4146,
-    ),
-    inactive: (
-      color: #fff,
-    )
-  )
+  unit-color: #4a84ff,
+  unit-colors-is-valid: #70c050,
+  unit-colors-is-error: #ff4146,
+  unit-colors-is-inactive: #fff,
 ));
 

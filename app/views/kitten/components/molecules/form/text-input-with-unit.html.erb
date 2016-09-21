@@ -1,4 +1,4 @@
-<%= example "1. Text input - Default" do %>
+<%= example "Text input - Default" do %>
   <div class="k-TextInputWithUnit">
     <input class="k-TextInput k-TextInputWithUnit__input"
            placeholder="Lorem ipsum dolor sit amet"
@@ -8,17 +8,17 @@
   </div>
 <% end %>
 
-<%= example "1. Text input with unit - Small" do %>
+<%= example "Text input with unit - Small" do %>
   <div class="k-TextInputWithUnit">
-    <input class="k-TextInput k-TextInputWithUnit__input k-TextInput--tiny"
+    <input class="k-TextInput k-TextInput--tiny k-TextInputWithUnit__input"
            placeholder="Lorem ipsum dolor sit amet"
            type="number" />
 
-    <span class="k-TextInputWithUnit__unit tiny">€</span>
+    <span class="k-TextInputWithUnit__unit k-TextInputWithUnit__unit--tiny">€</span>
   </div>
 <% end %>
 
-<%= example "2. Text input with unit - Text" do %>
+<%= example "Text input with unit - Text" do %>
   <div class="k-TextInputWithUnit">
     <input class="k-TextInput k-TextInputWithUnit__input"
            placeholder="Lorem ipsum dolor sit amet"
@@ -28,7 +28,7 @@
   </div>
 <% end %>
 
-<%= example "3. Text input with unit - Valid" do %>
+<%= example "Text input with unit - Valid" do %>
   <div class="k-TextInputWithUnit">
     <input class="k-TextInput is-valid k-TextInputWithUnit__input"
            placeholder="Lorem ipsum dolor sit amet"
@@ -38,7 +38,7 @@
   </div>
 <% end %>
 
-<%= example "4. Text input with unit - Error" do %>
+<%= example "Text input with unit - Error" do %>
   <div class="k-TextInputWithUnit">
     <input class="k-TextInput is-error k-TextInputWithUnit__input"
            placeholder="Lorem ipsum dolor sit amet"
@@ -48,13 +48,25 @@
   </div>
 <% end %>
 
-<%= example "5. Text input with unit - Inactive" do %>
+<%= example "Text input with unit - Inactive" do %>
   <div class="k-TextInputWithUnit">
     <input class="k-TextInput k-TextInputWithUnit__input"
            placeholder="Lorem ipsum dolor sit amet"
            disabled=""
            type="number" />
 
-    <span class="k-TextInputWithUnit__unit inactive">€</span>
+    <span class="k-TextInputWithUnit__unit is-inactive">€</span>
   </div>
 <% end %>
+
+<%= example "Text input with unit with info - Error" do %>
+  <div class="k-TextInputWithUnit">
+    <input class="k-TextInput is-error k-TextInputWithUnit__input"
+           placeholder="Lorem ipsum dolor sit amet"
+           type="number" />
+
+    <span class="k-TextInputWithUnit__unit is-error">€</span>
+  </div>
+  <p class="k-TextInputWithInfo__error">Cum sociis natoque penatibus et magnis</p>
+<% end %>
+

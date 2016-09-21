@@ -9,28 +9,18 @@
 ///     unit-font: 'source-sans-semi-bold',
 ///     border-color: #d8d8d8,
 ///     color: #333;
-///     colors: (
-///       unit: (
-///         color: #4a84ff,
-///       ),
-///       is-valid: (
-///         color: #70c050,
-///       ),
-///       is-error: (
-///         color: #ff4146,
-///       ),
-///       inactive: (
-///         color: #fff,
-///       )
-///     )
+///     unit-color: #4a84ff,
+///     unit-colors-is-valid: #70c050,
+///     unit-colors-is-error: #ff4146,
+///     unit-colors-is-inactive: #fff,
 ///   ));
 ///
 /// @example html
 ///
 /// <div class="k-TextInputWithUnit">
 ///   <input class="k-TextInput k-TextInputWithUnit__input"
-///           placeholder="Lorem ipsum dolor sit amet"
-///           type="number" />
+///          placeholder="Lorem ipsum dolor sit amet"
+///          type="number" />
 ///
 ///   <span class="k-TextInputWithUnit__unit">€</span>
 /// </div>
@@ -42,20 +32,19 @@
   $color: k-color-definition(k-map-fetch($input, 'color'));
 
   // Border
-  $unit-color: k-color-definition(
-    k-map-fetch($input, ('colors', 'unit', 'color')));
+  $unit-color: k-color-definition(k-map-fetch($input, 'unit-color'));
 
   // Valid
   $unit-color-is-valid: k-color-definition(
-    k-map-fetch($input, ('colors', 'is-valid', 'color')));
+    k-map-fetch($input, 'unit-colors-is-valid'));
 
   // Error
   $unit-color-is-error: k-color-definition(
-    k-map-fetch($input, ('colors', 'is-error', 'color')));
+    k-map-fetch($input, 'unit-colors-is-error'));
 
   // Inactive
-  $unit-color-inactive: k-color-definition(
-    k-map-fetch($input, ('colors', 'inactive', 'color')));
+  $unit-color-is-inactive: k-color-definition(
+    k-map-fetch($input, 'unit-colors-is-inactive'));
 
   // Border radius Text - input
   $border-text-input: k-px-to-rem(4px);
@@ -107,23 +96,23 @@
     @include k-typographyFont($unit-font);
     @include k-typographyFontSize(1);
 
-    &.tiny {
-      padding: k-px-to-rem(7px) k-px-to-rem(18px);
-    }
-
     &.is-valid {
-      border: 1px solid $unit-color-is-valid;
+      border-color: $unit-color-is-valid;
       color: $unit-color-is-valid;
     }
 
     &.is-error {
-      border: 1px solid $unit-color-is-error;
+      border-color: $unit-color-is-error;
       color: $unit-color-is-error;
     }
 
-    &.inactive {
-      border-left: 1px solid $unit-color-inactive;
-      color: $unit-color-inactive;
+    &.is-inactive {
+      border-color-left: $unit-color-is-inactive;
+      color: $unit-color-is-inactive;
     }
+  }
+
+  .k-TextInputWithUnit__unit--tiny {
+    padding: k-px-to-rem(7px) k-px-to-rem(18px);
   }
 }
