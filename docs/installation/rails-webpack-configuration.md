@@ -92,5 +92,51 @@ and jsx files;
 You can check the file in `spec/dummy/client/package.json` to have the
 exhaustive list.
 
-# Build configuration
+## Build configuration
+
+Configure webpack so it can fetch your assets files as entries and output the
+files in the directory you want:
+
+```js
+const config = {
+  entry: {
+    application: [
+      // Fetch files to create the output bundle.
+      // The path is relative to the present configuration file.
+      './app/javascripts/application',
+    ]
+  },
+  output: {
+    // Output bundles in `app/assets/webpack` directory.
+    path: path.join(__dirname, 'app', 'assets','webpack'),
+    filename: '[name]-bundle.js',
+  },
+}
+```
+
+Make sure to declare explicitly the resolve directories for modules and loaders
+with an absolute path. This prevents webpack from failing to load required
+dependencies.
+
+```js
+import path from 'path'
+import kitten from 'kitten'
+
+const nodeModulesPath = path.resolve(__dirname, '../../node_modules')
+
+const config = {
+  …,
+  resolve: {
+    // Enable webpack to require kitten files. Enforce `node_modules` directory
+    // absolute path.
+    root: nodeModulesPath.concat(kitten.jsPaths).concat(kitten.imagesPaths)
+  },
+  resolveLoader: {
+    // Add `node_modules` directory absolute path to make sure webpack can use
+    // loaders in every file it requires.
+    root: nodeModulesPath
+  },
+}
+```
+
 
