@@ -254,15 +254,6 @@ To release a new version:
 $ bundle exec rake kitten_release
 ```
 
-This last command will:
-
-- generate the gem package;
-- generate the SassDoc;
-- commit `lib/kitten/version.rb`, `CHANGELOG.md` and
-  `public/sassdoc/index.html`;
-- tag the version;
-- push to Github.
-
 ### Gemfury
 
 As the `kitten` module is on a [private registry on
