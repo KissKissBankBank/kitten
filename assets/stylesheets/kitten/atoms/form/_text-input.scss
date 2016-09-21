@@ -48,6 +48,7 @@
   $font: k-string-definition(k-map-fetch($input, 'font'));
   $font-size: k-number-definition(
     k-map-fetch($input, 'font-size'), $unit: none);
+  $line-height: 1.3;
 
   // Base
   $color: k-color-definition(
@@ -57,7 +58,7 @@
   $background: k-color-definition(
     k-map-fetch($input, ('colors', 'base', 'background')));
 
-    // Focus
+  // Focus
   $border-focus: k-color-definition(
     k-map-fetch($input, ('colors', 'focus', 'border')));
 
@@ -86,7 +87,7 @@
 
   .k-TextInput {
     @include k-typographyFont($font);
-    @include k-typographyFontSize($font-size, 1.3);
+    @include k-typographyFontSize($font-size, $line-height);
 
     box-sizing: border-box;
     border: 1px solid $border;
@@ -114,6 +115,7 @@
     &.is-valid {
       border-color: $border-is-valid;
       color: $color-is-valid;
+
       &:focus {
         border-color: $border-focus;
         color: $color;
@@ -123,6 +125,7 @@
     &.is-error {
       border-color: $border-is-error;
       color: $color-is-error;
+
       &:focus {
         border-color: $border-focus;
         color: $color;
