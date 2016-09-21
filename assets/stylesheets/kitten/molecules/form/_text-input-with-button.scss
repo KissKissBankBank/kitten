@@ -10,29 +10,21 @@
 ///   font: 'source-sans-semi-bold',
 ///   font-size: -4,
 ///   color: #fff,
-///   colors: (
-///     button: (
-///       background: #4a84ff,
-///     ),
-///     is-valid: (
-///       background: #70c050,
-///     ),
-///     is-error: (
-///       background: #ff4146,
-///     )
-///   )
+///   button-background: #4a84ff,
+///   button-background-is-valid: #70c050,
+///   button-background-is-error: #ff4146,
 /// ));
 ///
 /// <form role="button">
 ///   <div class="k-TextInputWithButton">
 ///     <input class="k-TextInput k-TextInputWithButton__input"
-///             type="text"
-///             name=""
-///             placeholder="Lorem ipsum dolor sit amet" />
+///            type="text"
+///            name=""
+///            placeholder="Lorem ipsum dolor sit amet" />
 ///
 ///     <input class="k-TextInputWithButton__submit"
-///             type="submit"
-///             value="Button" />
+///            type="submit"
+///            value="Button" />
 ///   </div>
 /// </form>
 
@@ -43,16 +35,16 @@
   $color: k-color-definition(k-map-fetch($input, 'color'));
 
   // Button
-  $background: k-color-definition(
-    k-map-fetch($input, ('colors', 'button', 'background')));
+  $button-background: k-color-definition(
+    k-map-fetch($input, 'button-background'));
 
   // Valid
-  $background-is-valid: k-color-definition(
-    k-map-fetch($input, ('colors', 'is-valid', 'background')));
+  $button-background-is-valid: k-color-definition(
+    k-map-fetch($input, 'button-background-is-valid'));
 
   // Error
-  $background-is-error: k-color-definition(
-    k-map-fetch($input, ('colors', 'is-error', 'background')));
+  $button-background-is-error: k-color-definition(
+    k-map-fetch($input, 'button-background-is-error'));
 
   // Border radius Text - input
   $border-text-input: k-px-to-rem(4px);
@@ -63,14 +55,14 @@
   }
 
   .k-TextInputWithButton__input {
-    padding-right: k-px-to-rem(86px);
     outline: none; // since we introduce our own focus styles
-    &:focus ~ .k-TextInputWithButton__submit {
-      background-color: $background;
+
+    &:focus ~ .k-TextInputWithButton__button {
+      background-color: $button-background;
     }
   }
 
-  .k-TextInputWithButton__submit {
+  .k-TextInputWithButton__button {
     @include k-typographyFont($font);
     @include k-typographyFontSize($font-size);
 
@@ -80,7 +72,7 @@
     height: 100%;
     width: k-px-to-rem(86px);
 
-    background-color: $background;
+    background-color: $button-background;
     border-top-right-radius: $border-text-input;
     border-bottom-right-radius: $border-text-input;
     border: none;
@@ -92,11 +84,11 @@
     cursor: pointer;
 
     &.is-valid {
-      background-color: $background-is-valid;
+      background-color: $button-background-is-valid;
     }
 
     &.is-error {
-      background-color: $background-is-error;
+      background-color: $button-background-is-error;
     }
   }
 }

@@ -1,12 +1,11 @@
-<%= example "1. Text input with button" do %>
+<%= example "Text input with button" do %>
   <form role="button">
     <div class="k-TextInputWithButton">
       <input class="k-TextInput k-TextInputWithButton__input"
-               type="text"
-               name=""
-               placeholder="Lorem ipsum dolor sit amet" />
+             type="text"
+             placeholder="Lorem ipsum dolor sit amet" />
 
-      <input class="k-TextInputWithButton__submit"
+      <input class="k-TextInputWithButton__button"
              type="submit"
              value="Button" />
     </div>
@@ -14,62 +13,75 @@
 <% end %>
 
 
-<%= example "1. Text input with button - Small" do %>
+<%= example "Text input with button - Small" do %>
   <form role="button">
     <div class="k-TextInputWithButton">
-      <input class="k-TextInput k-TextInputWithButton__input k-TextInput--tiny"
-               type="text"
-               name=""
-               placeholder="Item" />
+      <input class="k-TextInput k-TextInput--tiny k-TextInputWithButton__input"
+             type="text"
+             placeholder="Item" />
 
-      <input class="k-TextInputWithButton__submit"
-              type="submit"
-              value="Button" />
+      <input class="k-TextInputWithButton__button"
+             type="submit"
+             value="Button" />
     </div>
   </form>
 <% end %>
 
-<%= example "2. Text input with button - Text" do %>
+<%= example "Text input with button - Text" do %>
   <form role="button">
     <div class="k-TextInputWithButton">
       <input class="k-TextInput k-TextInputWithButton__input"
-              type="text"
-              name=""
-              placeholder="Lorem ipsum dolor sit amet" />
+             type="text"
+             placeholder="Lorem ipsum dolor sit amet" />
 
-      <input class="k-TextInputWithButton__submit"
-              type="submit"
-              value="Button" />
+      <input class="k-TextInputWithButton__button"
+             type="submit"
+             value="Button" />
     </div>
   </form>
 <% end %>
 
-<%= example "3. Text input with button - Valid" do %>
+<%= example "Text input with button - Valid" do %>
   <form role="button">
     <div class="k-TextInputWithButton">
       <input class="k-TextInput is-valid k-TextInputWithButton__input"
-               type="text"
-               name=""
-               placeholder="Lorem ipsum dolor sit amet" />
+             type="text"
+             placeholder="Lorem ipsum dolor sit amet" />
 
-      <input class="k-TextInputWithButton__submit is-valid"
-              type="submit"
-              value="Button" />
+      <input class="k-TextInputWithButton__button is-valid"
+             type="submit"
+             value="Button" />
     </div>
   </form>
 <% end %>
 
-<%= example "4. Text input with button - Error" do %>
+<%= example "Text input with button - Error" do %>
   <form role="button">
     <div class="k-TextInputWithButton">
       <input class="k-TextInput is-error k-TextInputWithButton__input"
-               type="text"
-               name=""
-               placeholder="Lorem ipsum dolor sit amet" />
+             type="text"
+             placeholder="Lorem ipsum dolor sit amet" />
 
-      <input class="k-TextInputWithButton__submit is-error"
-              type="submit"
-              value="Button" />
+      <input class="k-TextInputWithButton__button is-error"
+             type="submit"
+             value="Button" />
     </div>
   </form>
+<% end %>
+
+<%= example "Text input with button with info - Error" do %>
+  <div class="k-TextInputWithButtonInfo">
+    <form role="button">
+      <div class="k-TextInputWithButton">
+        <input class="k-TextInput is-error k-TextInputWithButton__input"
+               type="text"
+               placeholder="Lorem ipsum dolor sit amet" />
+
+        <input class="k-TextInputWithButton__button is-error"
+               type="submit"
+               value="Button" />
+      </div>
+    </form>
+    <p class="k-TextInputWithInfo__error">Cum sociis natoque penatibus et magnis</p>
+  </div>
 <% end %>

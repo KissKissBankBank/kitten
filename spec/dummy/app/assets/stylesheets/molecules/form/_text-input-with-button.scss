@@ -4,15 +4,7 @@
   font: 'source-sans-semi-bold',
   font-size: -4,
   color: #fff,
-  colors: (
-    button: (
-      background: #4a84ff,
-    ),
-    is-valid: (
-      background: #70c050,
-    ),
-    is-error: (
-      background: #ff4146,
-    )
-  )
+  button-background: #4a84ff,
+  button-background-is-valid: #70c050,
+  button-background-is-error: #ff4146,
 ));
