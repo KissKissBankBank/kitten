@@ -1,19 +1,18 @@
-<%= example "1. Text input with label" do %>
+<%= example "Text input with label with info" do %>
   <div class="k-TextInputWithInfo">
-    <label class="k-TextInputWithInfo__label">Nom du label</label>
-    <input class="k-TextInput"
-            type="text"
-            name=""
-            placeholder="Lorem ipsum dolor sit amet" />
+    <label for="input" class="k-TextInputWithInfo__label">Nom du label</label>
+    <input id="input"
+           class="k-TextInput"
+           type="text"
+           placeholder="Lorem ipsum dolor sit amet" />
   </div>
 <% end %>
 
-<%= example "5. Text input - Error" do %>
+<%= example "Text input with info - Error" do %>
   <div class="k-TextInputWithInfo">
     <input class="k-TextInput is-error"
-             type="text"
-             name=""
-             placeholder="Lorem ipsum dolor sit amet" />
+           type="text"
+           placeholder="Lorem ipsum dolor sit amet" />
     <p class="k-TextInputWithInfo__error">Cum sociis natoque penatibus et magnis</p>
   </div>
 <% end %>
