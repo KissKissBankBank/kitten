@@ -70,7 +70,6 @@
   // Input
   .k-TextInputWithUnit__input {
     box-sizing: border-box;
-    padding-right: k-px-to-rem(50px);
     outline: none; // since we introduce our own focus styles
 
     transition: all $transition-speed;
