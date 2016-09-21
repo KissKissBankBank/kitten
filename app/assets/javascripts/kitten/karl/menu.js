@@ -23,7 +23,7 @@ window.karl   = (function(karl) {
     })
 
     // Manage menu list dropdowns
-    $items.each(function(){
+    $items.each(function() {
 
       var $handle = $(this)
 
