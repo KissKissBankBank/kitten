@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+
 /**
  * This is the webpack configuration used by the web-dev-server in
  * `spec/dummy/client/bin/webpack-dev-server.js`.
@@ -53,6 +55,8 @@ const developmentConfig = {
 
 const config = merge(baseConfig, developmentConfig)
 
-console.log('Webpack HOT dev build for Rails'); // eslint-disable-line no-console
+console.log('Webpack HOT dev build for Rails');
 
 module.exports = config
+
+/* eslint-enable no-console */

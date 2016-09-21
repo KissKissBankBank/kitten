@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+
 /**
  * This is the webpack configuration to build assets.
  * It compiles entry assets in the Rails application folder
@@ -59,14 +61,14 @@ const buildConfig = {
 // Enable devtools if the build is intended to be used on development
 // environment.
 if (production) {
-  console.log('Webpack production build for Rails'); // eslint-disable-line no-console
+  console.log('Webpack production build for Rails');
 } else {
-  console.log('Webpack dev build for Rails'); // eslint-disable-line no-console
+  console.log('Webpack dev build for Rails');
   buildConfig.devtool = 'eval-source-map';
 }
 
 const config = merge(baseConfig, buildConfig)
 
-console.log('Webpack build for Rails'); // eslint-disable-line no-console
-
 module.exports = config
+
+/* eslint-enable no-console */
