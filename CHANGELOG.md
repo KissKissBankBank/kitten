@@ -17,6 +17,7 @@ New features:
 - Add new Select molecule.
 - Add branding section on styleguide.
 - Add pages that serve as full-page previews for tests in the style guide.
+- Add new Text-input
 
 Fixes:
 - Computes position of `k-UserMenu` in `header` organism.
