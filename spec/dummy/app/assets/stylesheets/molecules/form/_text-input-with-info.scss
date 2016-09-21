@@ -1,0 +1,14 @@
+@import 'kitten/molecules/form/text-input-with-info';
+
+@include k-TextInputWithInfo((
+  label: (
+    font: 'source-sans-semi-bold',
+    font-size: -2,
+    color: #333,
+  ),
+  error: (
+    font: 'source-sans',
+    font-size: -3,
+    color: #ff4146,
+  )
+));
