@@ -27,7 +27,7 @@ const baseConfig = {
   },
 
   resolveLoader: {
-    root: resolve_paths.modules,
+    root: path.resolve(__dirname, '../../node_modules'),
   },
 
   plugins: [
