@@ -14,33 +14,24 @@ flexible components based on your own brand elements
 - Node > 0.12 (for stylelint)
 - Webpack
 
+## Table of content
+- [Installation](#installation)
+  - [Npm](#npm)
+  - [Rails engine](#rails-engine)
+- [Usage](#usage)
+  - [CSS components](#css-components)
+  - [React components](#react-components)
+  - [Rails engine](#rails-engine-1)
+- [Development](#development)
+- [Contributing](#contributing)
+- [Release](#release)
 
 ## Installation
 
-### Ruby on Rails
+`kitten` is a npm module coupled with a Rails engine that provides a integrated
+styleguide.
 
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'kitten'
-```
-
-And then execute:
-
-    $ bundle
-
-To configure the engine you can add an initializer. Check out
-`spec/dummy/config/initializers/kitten.rb` for an example.
-
-To install routes for the style guide and sassdoc, add to your `routes.rb`:
-
-```ruby
-mount Kitten::Engine, at: '/kitten' if Rails.env.development?
-```
-
-Assets are served via Webpack, so you need to use webpack to compile or serve
-the CSS.
-
+You can choose to use the npm module only or with the Rails engine.
 
 ### Npm
 
@@ -68,77 +59,35 @@ Install the dependency:
 npm install kitten --save-dev
 ```
 
-`kitten` module exposes an array of load paths that Sass needs to resolve
-correcly `@import`:
-```js
-var kitten = require('kitten');
+### Rails engine
 
-// => {
-//   loadPaths: [
-//     …,
-//     …
-//   ]
-// }
+Add this line to your application's Gemfile:
+
+```ruby
+gem 'kitten'
 ```
 
-#### Grunt
+Then execute:
 
-Once the module has been installed, if you use
-[grunt-contrib-sass](https://github.com/gruntjs/grunt-contrib-sass), you can add
-`kitten` and its dependencies to Sass load paths:
+    $ bundle
 
-```js
-var path = require('path');
-var kitten = require('kitten');
+Install routes for the style guide and sassdoc, add to your `routes.rb`:
 
-grunt.initConfig({
-  sass: {
-    css: {
-      files: {
-        // your files
-      }
-    }
-  },
-  options: {
-    loadPath: kitten.loadPaths
-  }
-}
+```ruby
+mount Kitten::Engine, at: '/kitten' if Rails.env.development?
 ```
 
-#### Webpack
+`kitten` Rails engine is designed to serve assets with
+[Webpack](webpack.github.io) through
+[React on Rails ](https://github.com/shakacode/react_on_rails).
 
-Once the module has beed installed, you can configure the `sass-loader` in your
-`webpack.config.js`:
-
-```js
-var kitten = require('kitten');
-
-var config = {
-  entry: …,
-  output: …,
-  module: {
-    loaders: [
-      {
-        test: /\.css$/,
-        loaders: ['css'],
-      },
-      {
-        test: /\.scss$/,
-        loaders: ['css', 'sass']
-      }
-    ]
-  },
-  sassLoader: {
-    includePaths: kitten.loadPaths
-  }
-}
-```
-
-You can find more documentation on [how to use webpack for
-stylesheets](http://webpack.github.io/docs/stylesheets.html).
+**In order to serve the styleguide**, you have to setup your application
+with Webpack following [React on
+Rails implementation](https://github.com/shakacode/react-webpack-rails-tutorial).
 
 ## Usage
 
+### CSS components
 Import `kitten` in your main Sass file:
 
 ```scss
@@ -174,34 +123,43 @@ Include the component your want to use in your application:
 ));
 ```
 
-### Ruby on Rails
+### React components
 
-`kitten` provides a styleguide interface. This feature is only available if you
-are using the gem with Ruby on Rails.
+You can render React components directly in your js bundle:
+```js
+const yourLoanSimulatorProps = {}
 
-The styleguide css is served by webpack through
-[webpack-rails](https://github.com/mipearson/webpack-rails). By default, the
-`webpack_asset_paths` helper is called with the entry point `application`.
+ReactDOM.render(
+  React.createElement(LoanSimulator, yourLoanSimulatorProps),
+  document.getElementById('loan-simulator')
+)
+```
+
+Or, use [React on
+Rails](https://github.com/shakacode/react_on_rails#including-your-react-component-in-your-rails-views)
+view helper in your `.erb` file:
+```ruby
+<%= react_component('LoanSimulator', props: @your_loan_simulator_props) %>
+```
+
+### Rails engine
+
+`kitten` provides a styleguide interface through a Rails engine. This feature is
+only available if you are using the gem with Ruby on Rails.
 
 #### Configuration
 
-`kitten` provides some configuration options that can be defined in
-`config/initializers/kitten.rb`:
-- `webpack_entry_point`: if defined, it will be passed as webpack entry point to
-the `webpack_asset_paths` helper;
-
-- `asset_host`: if defined, it will prepend a custom host to the asset path in
-production (eg. if you need to serve your assets through a CDN).
-
 ```rb
 Kitten.configure do |config|
-  config.webpack_entry_point = 'my_custom_entry_point'
-  config.asset_host = 'https://my_custom_asset_host'
+  config.webpack_output_bundle = 'your-custom-bundle'
 end
 ```
 
-Check out the [documentation](../../wiki/Styleguide) to setup the styleguide directly in
-your application and with your own brand elements.
+`kitten` provides some configuration options that can be defined in
+`config/initializers/kitten.rb`:
+
+- **webpack_output_bundle**: This option is used to pass an output bundle name
+  for hot reloading. By default, it is set to `application-bundle`.
 
 ## Development
 
@@ -230,7 +188,7 @@ To launch the style guide on the dummy app:
 $ cd spec/dummy
 $ bundle
 $ npm install
-$ foreman start
+$ foreman start -f Procfile.hot
 ```
 
 Then visit http://localhost:3000
@@ -239,12 +197,9 @@ To share the dummy app with production settings (to share via ngrok for
 example), you can compile the assets and serve a production server:
 
 ```sh
-$ bin/rake assets:precompile
-$ node_modules/webpack/bin/webpack.js --config config/webpack.config.js
-$ RAILS_ENV=production bin/rails s
+$ bin/rake staging:assets:precompile
+$ REACT_ON_RAILS_ENV= rails s -b 0.0.0.0
 ```
-
-To cleanup the compiled files, run `rm -fr public`.
 
 ### Style checker
 
@@ -258,29 +213,7 @@ $ npm run --silent stylelint
 $ bundle exec rake
 ```
 
-### Style Guide
-
-Inside the `spec/dummy` folder, make sure you have Npm access to Gemfury
-(see higher), then:
-
-```sh
-$ bundle
-$ npm install
-```
-
-The `kitten` node module can be tested iteratively without having to
-continually rebuild. We use `npm-link` to create symlinks from the package
-folder to `node_modules/kitten`.
-This is automatically executed every time you run `npm install`.
-
-
-Then to run the server:
-
-```sh
-$ foreman start
-```
-
-#### Generate SassDoc
+### SassDoc
 
 We use [SassDoc](http://sassdoc.com/) to generate documentation from our
 components comments.
