@@ -23,6 +23,18 @@
 ///   )
 /// ));
 ///
+/// <form role="button">
+///   <div class="k-TextInputWithButton">
+///     <input class="k-TextInput k-TextInputWithButton__input"
+///             type="text"
+///             name=""
+///             placeholder="Lorem ipsum dolor sit amet" />
+///
+///     <input class="k-TextInputWithButton__submit"
+///             type="submit"
+///             value="Button" />
+///   </div>
+/// </form>
 
 @mixin k-TextInputWithButton($input) {
 

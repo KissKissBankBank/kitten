@@ -27,10 +27,13 @@
 ///
 /// @example html
 ///
-///   <div class="k-TextInputWithUnit k-TextInputWithUnit--large">
-///     <input class="k-TextInputWithUnit__input" />
-///     <span class="k-TextInputWithUnit__unit">$</span>
-///   </div>
+/// <div class="k-TextInputWithUnit">
+///   <input class="k-TextInput k-TextInputWithUnit__input"
+///           placeholder="Lorem ipsum dolor sit amet"
+///           type="number" />
+///
+///   <span class="k-TextInputWithUnit__unit">€</span>
+/// </div>
 
 @mixin k-TextInputWithUnit($input) {
   $input-font: k-string-definition(k-map-fetch($input, 'input-font'));

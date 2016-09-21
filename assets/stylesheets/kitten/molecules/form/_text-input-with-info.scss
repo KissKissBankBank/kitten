@@ -21,6 +21,13 @@
 ///  )
 /// ));
 ///
+/// <div class="k-TextInputWithInfo">
+///   <label class="k-TextInputWithInfo__label">Nom du label</label>
+///   <input class="k-TextInput"
+///           type="text"
+///           name=""
+///           placeholder="Lorem ipsum dolor sit amet" />
+/// </div>
 
 @mixin k-TextInputWithInfo($input) {
 
