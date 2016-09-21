@@ -1,12 +1,17 @@
 # Rails webpack configuration
 
-If you choose to use kitten Rails engine, you will have to setup your
+If you choose to use `kitten` Rails engine, you will have to setup your
 application with [React on Rails](https://github.com/shakacode/react_on_rails)
 and [webpack](https://webpack.github.io/).
 
+If you are familiar with React on Rails, you can use your own workflow and skip
+the following installation. You simply have to:
+- add `kitten` sass paths in your SASS path loader;
+- add `kitten` javascript modules in your webpack resolving paths.
+
 React on Rails proposes a simple implementation of webpack into the existing
 Rails sprockets system:
-- Webpack generates some javascript and CSS bundles.
+- Webpack generates javascript and CSS bundles.
 - Then, these latters are included in the asset pipeline.
 
 This way, the responsability of fingerprinting (on production environment) is
@@ -16,8 +21,10 @@ assets compilation.
 ## Table of content
 
 - [Files architecture](#files-architecture)
-- Webpack dependencies
-- Webpack configuration
+- [Webpack dependencies](#webpack-dependencies)
+- Build configuration
+- Web-dev server
+- React server-side rendering build
 
 ## Files architecture
 
@@ -71,3 +78,19 @@ Rails](https://github.com/shakacode/react_on_rails/blob/master/docs/additional-r
    project root.
 
 You can find an example of all these files in `spec/dummy`.
+
+## Webpack dependencies
+
+The `client/package.json` lists all dependencies that webpack compilation needs.
+These modules can be categorized as follow:
+- **babel modules**: Babel loader and presets to parse es6 files;
+- **webpack loaders**: loaders that enables webpack to require styles, images
+and jsx files;
+- **webpack plugins**: modules that enables webpack to process files others that
+  javascript files.
+
+You can check the file in `spec/dummy/client/package.json` to have the
+exhaustive list.
+
+# Build configuration
+
