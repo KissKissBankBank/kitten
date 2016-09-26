@@ -1,17 +1,91 @@
-<%= example "button" do %>
-  <button class="k-Button">
-    button
-  </button>
-<% end %>
+<div class="k-Button--column">
+  <%= example "button - default" do %>
+    <button class="k-Button">
+      button
+    </button>
+  <% end %>
 
-<%= example "long button" do %>
+  <%= example "button outline - Focus" do %>
+    <button class="k-Button k-Button--focus">
+      button
+    </button>
+  <% end %>
+
+  <%= example "button outline - Hover" do %>
+    <button class="k-Button k-Button--hover">
+      button
+    </button>
+  <% end %>
+
+  <%= example "button outline - Press" do %>
+    <button class="k-Button k-Button--active">
+      button
+    </button>
+  <% end %>
+</div>
+
+<div class="k-Button--column">
+  <%= example "button outline - default" do %>
+    <button class="k-Button k-Button--light">
+      button
+    </button>
+  <% end %>
+
+  <%= example "button outline - Focus" do %>
+    <button class="k-Button k-Button--light k-Button--light--focus">
+      button
+    </button>
+  <% end %>
+
+  <%= example "button outline - Hover" do %>
+    <button class="k-Button k-Button--light k-Button--light--hover">
+      button
+    </button>
+  <% end %>
+
+  <%= example "button outline - Press" do %>
+    <button class="k-Button k-Button--light--active k-Button--light">
+      button
+    </button>
+  <% end %>
+
+</div>
+
+<div class="k-Button--column">
+  <%= example "button with many words" do %>
+    <button class="k-Button k-Button--light">
+      button with many words
+    </button>
+  <% end %>
+
+  <%= example "big button" do %>
+    <button class="k-Button k-Button--light k-Button--big">
+      big button
+    </button>
+  <% end %>
+
+  <%= example "big button" do %>
+    <button class="k-Button k-Button--light k-Button--big">
+      big button with many words
+    </button>
+  <% end %>
+
+  <%= example "button - Inactive" do %>
+    <button class="k-Button" disabled="">
+      button
+    </button>
+  <% end %>
+
+</div>
+<!--
+<%#= example "long button" do %>
   <button class="k-Button">
     button with many words
   </button>
-<% end %>
+<%# end %>
 
-<%= example "disable" do %>
+<%#= example "disable" do %>
   <button class="k-Button" disabled="disabled">
     button
   </button>
-<% end %>
+<%# end %> -->

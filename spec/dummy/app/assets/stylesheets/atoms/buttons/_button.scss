@@ -4,17 +4,29 @@
   font: 'source-sans-semi-bold-uppercase',
   colors: (
     base: (
-      color: #333,
-      background-color: #fff,
-      border-color: #d8d8d8
-    ),
-    hover: (
       color: #fff,
       background-color: #4a84ff,
+    ),
+    light: (
+      color: #333,
+      background-color: #fff,
+      border-color: #d8d8d8,
     ),
     focus: (
       color: #fff,
-      background-color: #4a84ff,
+      background-color: #3b75f0,
+      light: (
+        color: #fff,
+        background-color: #4a84ff,
+      ),
+    ),
+    hover: (
+      color: #fff,
+      background-color: #3b75f0,
+      light: (
+        color: #fff,
+        background-color: #4a84ff,
+      ),
     ),
     active: (
       color: #fff,
