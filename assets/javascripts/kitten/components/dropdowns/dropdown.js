@@ -56,11 +56,16 @@ window.Dropdown = React.createClass({
     }
   },
   componentDidMount: function() {
+    const dropdown = this
     this.updateReferenceElementHeightState()
+
+    window.addEventListener('closeDropdowns:click', function() {
+      dropdown.setState({ isExpanded: false })
+    })
 
     if (this.props.refreshEvents.length) {
       this.props.refreshEvents.forEach((ev) => {
-        window.addEventListener(ev, this.handleDropdownPosition);
+        window.addEventListener(ev, this.handleDropdownPosition)
       })
     }
   },
@@ -70,6 +75,8 @@ window.Dropdown = React.createClass({
         window.removeEventListener(ev, this.handleDropdownPosition);
       })
     }
+
+    window.removeEventListener('closeDropdowns:click')
   },
 
   // Component methods
@@ -135,6 +142,8 @@ window.Dropdown = React.createClass({
   handleButtonClick: function(event) {
     event.stopPropagation()
     event.preventDefault()
+
+    window.dispatchEvent(new Event('closeDropdowns:click'))
 
     this.updateReferenceElementHeightState()
     this.setState({
