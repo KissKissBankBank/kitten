@@ -143,12 +143,27 @@ window.Dropdown = React.createClass({
     event.stopPropagation()
     event.preventDefault()
 
-    window.dispatchEvent(new Event('closeDropdowns:click'))
-
+    this.eventCloseDropdowns(event)
     this.updateReferenceElementHeightState()
     this.setState({
       isExpanded: !this.state.isExpanded
     })
+  },
+  eventCloseDropdowns: function(event) {
+    if (document.createEvent) {
+      event = document.createEvent('MouseEvent')
+      event.initMouseEvent('closeDropdowns:click', true, true, window, 0, 0, 0,
+        0, 0, false, false, false, false, 0, null)
+    }
+    else {
+      event = new MouseEvent('closeDropdowns:click', {
+        'view': window,
+        'bubbles': true,
+        'cancelable': true
+      })
+    }
+
+    window.dispatchEvent(event)
   },
 
   getContentPosition: function() {
