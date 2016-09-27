@@ -59,7 +59,7 @@ window.Dropdown = React.createClass({
     const dropdown = this
     this.updateReferenceElementHeightState()
 
-    window.addEventListener('closeDropdowns:click', function() {
+    window.addEventListener('dropdown:opening:triggered', function() {
       dropdown.setState({ isExpanded: false })
     })
 
@@ -76,7 +76,7 @@ window.Dropdown = React.createClass({
       })
     }
 
-    window.removeEventListener('closeDropdowns:click')
+    window.removeEventListener('dropdown:opening:triggered')
   },
 
   // Component methods
@@ -143,15 +143,15 @@ window.Dropdown = React.createClass({
     event.stopPropagation()
     event.preventDefault()
 
-    this.eventCloseDropdowns()
+    this.dispatchDropdownOpeningTriggeredEvent()
     this.updateReferenceElementHeightState()
     this.setState({
       isExpanded: !this.state.isExpanded
     })
   },
-  eventCloseDropdowns: function() {
+  dispatchDropdownOpeningTriggeredEvent: function() {
     const evt = document.createEvent('HTMLEvents')
-    evt.initEvent('closeDropdowns:click', true, false)
+    evt.initEvent('dropdown:opening:triggered', true, false)
     window.dispatchEvent(evt)
   },
 
