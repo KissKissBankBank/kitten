@@ -8,45 +8,133 @@
 ///
 /// @example scss - Usage
 ///
-///   @include k-TextInput((
-///     font: 'source-sans',
-///     font-size: -2,
-///     colors: (
-///       base: #333,
-///       border: #d8d8d8,
-///     ),
-///   ));
+///  @include k-TextInput((
+///    font: 'source-sans',
+///    font-size: -2,
+///    colors: (
+///      base: (
+///        color: #333,
+///        border: #d8d8d8,
+///        background: #fff,
+///      ),
+///      focus: (
+///        border: #4a84ff,
+///      ),
+///      disabled: (
+///        color: #fff,
+///        border: #d8d8d8,
+///        background: #d8d8d8,
+///      ),
+///      is-valid: (
+///        color: #70c050,
+///        border: #70c050,
+///      ),
+///      is-error: (
+///        color: #ff4146,
+///        border: #ff4146,
+///      )
+///    )
+///  ));
 ///
 /// @example html
 ///
-///   <input class="k-TextInput"
-///          type="text"
-///          name="foobar"
-///          placeholder="Foobar" />
+/// <input class="k-TextInput"
+///         type="text"
+///         name=""
+///         placeholder="Lorem ipsum dolor sit amet" />
 
 @mixin k-TextInput($input) {
 
   $font: k-string-definition(k-map-fetch($input, 'font'));
   $font-size: k-number-definition(
     k-map-fetch($input, 'font-size'), $unit: none);
-  $border-color: k-color-definition(k-map-fetch($input, ('colors', 'border')));
-  $color: k-color-definition(k-map-fetch($input, ('colors', 'base')));
+  $line-height: 1.3;
+
+  // Base
+  $color: k-color-definition(
+    k-map-fetch($input, ('colors', 'base', 'color')));
+  $border: k-color-definition(
+    k-map-fetch($input, ('colors', 'base', 'border')));
+  $background: k-color-definition(
+    k-map-fetch($input, ('colors', 'base', 'background')));
+
+  // Focus
+  $border-focus: k-color-definition(
+    k-map-fetch($input, ('colors', 'focus', 'border')));
+
+  // Disabled
+  $color-disabled: k-color-definition(
+    k-map-fetch($input, ('colors', 'disabled', 'color')));
+  $border-disabled: k-color-definition(
+    k-map-fetch($input, ('colors', 'disabled', 'border')));
+  $background-disabled: k-color-definition(
+    k-map-fetch($input, ('colors', 'disabled', 'background')));
+
+  // Is-valid
+  $color-is-valid: k-color-definition(
+    k-map-fetch($input, ('colors', 'is-valid', 'color')));
+  $border-is-valid: k-color-definition(
+    k-map-fetch($input, ('colors', 'is-valid', 'border')));
+
+  // Is-error
+  $color-is-error: k-color-definition(
+    k-map-fetch($input, ('colors', 'is-error', 'color')));
+  $border-is-error: k-color-definition(
+    k-map-fetch($input, ('colors', 'is-error', 'border')));
+
+  // Border radius Text - input
+  $border-text-input: k-px-to-rem(4px);
 
   .k-TextInput {
     @include k-typographyFont($font);
-    @include k-typographyFontSize($font-size, 1);
+    @include k-typographyFontSize($font-size, $line-height);
 
     box-sizing: border-box;
-    border: 1px solid $border-color;
-    border-radius: 4px;
+    border: 1px solid $border;
+    border-radius: $border-text-input;
+    background: $background;
+
     width: 100%;
-    padding: k-px-to-rem(11px) k-px-to-rem(15px) k-px-to-rem(12px);
+    padding: k-px-to-rem(16px) k-px-to-rem(15px);
     color: $color;
     transition: color .2s, border-color .2s;
 
     &:focus {
       outline: none;
-      border-color: $color;
+      border-color: $border-focus;
     }
+
+    &:disabled {
+      border-color: $border-disabled;
+      background-color: $background-disabled;
+      color: $color-disabled;
+
+      cursor: not-allowed;
+    }
+
+    &.is-valid {
+      border-color: $border-is-valid;
+      color: $color-is-valid;
+
+      &:focus {
+        border-color: $border-focus;
+        color: $color;
+      }
+    }
+
+    &.is-error {
+      border-color: $border-is-error;
+      color: $color-is-error;
+
+      &:focus {
+        border-color: $border-focus;
+        color: $color;
+      }
+    }
+  }
+
+  .k-TextInput--tiny {
+    padding-top: k-px-to-rem(11px);
+    padding-bottom: k-px-to-rem(11px);
   }
 }
