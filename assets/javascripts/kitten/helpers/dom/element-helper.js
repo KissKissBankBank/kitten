@@ -39,7 +39,15 @@ const domElementHelper = {
 
     const styles = window.getComputedStyle(element)
     return styles.getPropertyValue(property)
-  }
+  },
+
+  /**
+   * Return if DOM API can be used.
+   */
+  canUseDom() {
+    return !!(typeof window !== 'undefined' &&
+              window.document && window.document.createElement)
+  },
 }
 
 export default domElementHelper

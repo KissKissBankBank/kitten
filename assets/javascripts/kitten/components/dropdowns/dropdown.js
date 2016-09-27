@@ -41,7 +41,7 @@ class Dropdown extends React.Component {
 
   getReferenceElement() {
     if (typeof(this.props.positionedWith) == 'object') {
-      return this.props.positionedWith
+      return this.props.positionedWith()
     }
 
     // TODO: remove props.positionedWith
@@ -233,7 +233,7 @@ class Dropdown extends React.Component {
   render() {
     const dropdownClass = {
       'is-expanded': this.state.isExpanded,
-      'k-Dropdown--asReference': this.props.positionedWith == 'self',
+      'k-Dropdown--asReference': this.props.positionedWith() == 'self',
     }
 
     const dropdownClassName = classNames(
@@ -279,12 +279,12 @@ Dropdown.propTypes = {
 
 Dropdown.defaultProps = {
   // This prop is used to position the dropdown absolutely in relation with
-  // a reference element (self or its parent).
-  // If you use "parent" or <DOMNode>, make sure that this element has the
-  // "position" property set in its css.
+  // a reference element.
+  // If you use <DOMNode>, make sure that this element has the "position"
+  // property set in its css.
   // As using DOMNode is anti-pattern, you should avoid it when it is
   // possible.
-  positionedWith: 'self', // 'self' | 'parent' | <DOMNode>
+  positionedWith: () => 'self', // 'self' | <DOMNode>
 
   // This prop is used to fetch the correct height of the reference element
   // for the dropdown position.
