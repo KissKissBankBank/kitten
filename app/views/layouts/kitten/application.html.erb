@@ -12,6 +12,10 @@
 <%= stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' %>
 <%= stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Dosis' %>
 
+<%= env_javascript_include_tag(hot: [
+  "http://localhost:3500/#{Kitten.configuration.webpack_output_bundle}.js"]
+) %>
+
 <%= csrf_meta_tags %>
 
 </head>
@@ -176,9 +180,6 @@
   </div>
 </div>
 
-<%= env_javascript_include_tag(hot: [
-  "http://localhost:3500/#{Kitten.configuration.webpack_output_bundle}.js"]
-) %>
 <%= env_javascript_include_tag(static: 'application_static',
                                hot: 'application_non_webpack') %>
 
