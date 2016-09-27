@@ -44,12 +44,13 @@
 }
 
 .karl-Example__description {
+  width: 40%;
   margin-right: 6rem;
+
   font-size: 1.25rem;
   font-weight: 400;
   letter-spacing: 1px;
   line-height: 1.4;
-  width: 40%;
 }
 
 @media (max-width: 1100px) {
@@ -61,9 +62,10 @@
 
 .karl-Example__bloc {
   margin-top: 1.5rem;
-  background-color: $blue;
   width: 470px;
   height: 272px;
+
+  background-color: $blue;
 }
 
 @media (max-width: 1100px) {
