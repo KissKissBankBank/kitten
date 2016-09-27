@@ -1,0 +1,10 @@
+# Procfile for development with hot reloading of JavaScript and CSS
+
+# Server
+rails: REACT_ON_RAILS_ENV=HOT rails s -p 3000 -b 0.0.0.0
+
+# Run the hot reload server for client development
+hot-assets: HOT_RAILS_PORT=3500 npm run hot-assets
+
+# Keep the JS fresh for server rendering. Remove if not server rendering
+# rails-server-assets: npm run build:dev:server

@@ -6,25 +6,17 @@
 <title>Kitten style guide</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<%= webpack_stylesheet_tags(Kitten.configuration.webpack_entry_point) %>
+<%= env_stylesheet_link_tag(static: 'application_static',
+                            hot: 'application_non_webpack',
+                            media: 'all') %>
 <%= stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' %>
 <%= stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Dosis' %>
 
+<%= env_javascript_include_tag(hot: [
+  "http://localhost:3500/#{Kitten.configuration.webpack_output_bundle}.js"]
+) %>
+
 <%= csrf_meta_tags %>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.13.0/polyfill.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pubsub-js/1.5.3/pubsub.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.0/react.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.0/react-dom.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/classnames/2.2.5/index.min.js"></script>
-
-<!-- React Select dependencies -->
-<script src="https://unpkg.com/react-input-autosize/dist/react-input-autosize.js"></script>
-<script src="https://unpkg.com/react-select/dist/react-select.js"></script>
-
-<%# JavaScript included in head because of the style guide's script tags %>
-<%= javascript_include_tag 'dummy', type: 'text/babel' %>
 
 </head>
 <body>
@@ -187,6 +179,9 @@
     </div>
   </div>
 </div>
+
+<%= env_javascript_include_tag(static: 'application_static',
+                               hot: 'application_non_webpack') %>
 
 <%#= javascript_include_tag 'kitten/noframework.waypoints.min.js' %>
 <%= javascript_include_tag 'kitten/jquery-3.1.0.min.js' %>
