@@ -12,6 +12,7 @@ import DropdownButton from 'kitten/components/dropdowns/dropdown-button'
 // Form
 import Slider from 'kitten/components/form/slider'
 import Select from 'react-select'
+import SelectWithState from 'kitten/components/form/select-with-state'
 
 // Icons
 import GrabberIcon from 'kitten/components/icons/grabber-icon'
@@ -41,6 +42,7 @@ ReactOnRails.register({
   DropdownButton,
   Slider,
   Select,
+  SelectWithState,
   GrabberIcon,
   ExternalRichLink,
   SimulatorResult,
