@@ -40,7 +40,7 @@ const platformSwitchProps = {
 
 // Unlogged header dropdown
 const unloggedPlatformSwitchProps = Object.assign(
-  { positionedWith: () => { return document.getElementById('header') } },
+  { positionedWith: () => { document.getElementById('header') } },
   platformSwitchProps
 )
 const KarlUnloggedHeaderPlatformSwitch = defaultProps(
@@ -50,7 +50,7 @@ const KarlUnloggedHeaderPlatformSwitch = defaultProps(
 
 // Logged header dropdowns
 const loggedPlatformSwitchProps = Object.assign(
-  { positionedWith: () => { return document.getElementById('header-logged') } },
+  { positionedWith: () => { document.getElementById('header-logged') } },
   platformSwitchProps
 )
 const KarlLoggedHeaderPlatformSwitch = defaultProps(
@@ -59,7 +59,7 @@ const KarlLoggedHeaderPlatformSwitch = defaultProps(
 )
 
 const KarlLoggedHeaderUserMenu = defaultProps(Dropdown, {
-  positionedWith: () => { return document.getElementById('header-logged') },
+  positionedWith: () => { document.getElementById('header-logged') },
   positionedWithBorder: false,
   positionedOn: 'right',
 

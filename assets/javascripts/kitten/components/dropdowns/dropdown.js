@@ -269,7 +269,7 @@ Dropdown.defaultProps = {
   // property set in its css.
   // As using DOMNode is anti-pattern, you should avoid it when it is
   // possible.
-  positionedWith: function() { return 'self' }, // 'self' | <DOMNode>
+  positionedWith: () => 'self', // 'self' | <DOMNode>
 
   // This prop is used to fetch the correct height of the reference element
   // for the dropdown position.
