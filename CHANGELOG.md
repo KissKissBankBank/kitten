@@ -6,6 +6,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 Breaking changes:
 - Loan Slider requires new props since it does not show fees anymore.
+- Use [Webpack](https://webpack.github.io/) to build js and css assets in dummy.
+- Use [React on Rails](https://github.com/shakacode/react_on_rails) to manage
+  React components (client and server sides) in dummy.
+- Migrate all js into es6 classes or modules.
 
 New features:
 - Grid overlay on the style guide when pressing ctrl+g.
