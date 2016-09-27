@@ -8,6 +8,7 @@ const KarlLoanSimulator = defaultProps(LoanSimulator, {
   amountPlaceholder: `Entre 200${nbsp}€ et 10${nbsp}000${nbsp}€`,
   amountMin: 200,
   amountMax: 10000,
+  amountName: 'amount',
   initialAmount: null,
 
   amountEmptyError: 'Veuillez renseigner un montant',
@@ -15,6 +16,7 @@ const KarlLoanSimulator = defaultProps(LoanSimulator, {
                            200 et 10${nbsp}000${nbsp}€`,
 
   installmentLabel: 'Je rembourse',
+  installmentName: 'installment',
 
   sliderPlaceholder: 'Glisser pour sélectionner',
 
