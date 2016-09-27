@@ -139,4 +139,47 @@ const config = {
 }
 ```
 
+Add the following loaders and plugins to load and parse correctly files
+different from simple js files:
 
+```js
+const config = {
+  …,
+  plugins: [
+    // Loaders matches scss files to be extracted with this plugin.
+    new ExtractTextPlugin(cssFilename, { allChunks: true }),
+
+    // Search for equal or similar files and deduplicate them in the output.
+    new webpack.optimize.DedupePlugin(),
+  ],
+  module: {
+    loaders: [
+      {
+        test: /\.(svg|png|jpe?g)$/,
+        loaders: ['file?name=images/[name].[ext]'],
+      },
+      {
+        test: /\.jsx?$/,
+        loader: 'babel',
+        query: {
+          // We passed the absolute path of all presets to prevent modules
+          // resolving issues.
+          presets: [
+            'babel-preset-es2015',
+            'babel-preset-react',
+            'babel-preset-stage-0',
+            'babel-preset-stage-2',
+          ].map(require.resolve)
+        }
+      },
+      {
+        test: /\.scss$/,
+        loader: ExtractTextPlugin.extract('css-loader!sass-loader'),
+      },
+    ],
+  },
+  sassLoader: {
+    includePaths: resolve_paths.sass,
+  }
+}
+```
