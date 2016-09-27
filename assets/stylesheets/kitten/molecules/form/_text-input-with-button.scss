@@ -1,0 +1,94 @@
+/// Text input with button
+///
+/// @group form
+///
+/// @parameter {Map} $input - a input specification
+///
+/// @example scss - Usage
+///
+/// @include k-TextInputWithButton((
+///   font: 'source-sans-semi-bold',
+///   font-size: -4,
+///   color: #fff,
+///   button-background: #4a84ff,
+///   button-background-is-valid: #70c050,
+///   button-background-is-error: #ff4146,
+/// ));
+///
+/// <form role="button">
+///   <div class="k-TextInputWithButton">
+///     <input class="k-TextInput k-TextInputWithButton__input"
+///            type="text"
+///            name=""
+///            placeholder="Lorem ipsum dolor sit amet" />
+///
+///     <input class="k-TextInputWithButton__button"
+///            type="submit"
+///            value="Button" />
+///   </div>
+/// </form>
+
+@mixin k-TextInputWithButton($input) {
+
+  $font: k-string-definition(k-map-fetch($input, 'font'));
+  $font-size: k-number-definition(k-map-fetch($input, 'font-size'));
+  $color: k-color-definition(k-map-fetch($input, 'color'));
+
+  // Button
+  $button-background: k-color-definition(
+    k-map-fetch($input, 'button-background'));
+
+  // Valid
+  $button-background-is-valid: k-color-definition(
+    k-map-fetch($input, 'button-background-is-valid'));
+
+  // Error
+  $button-background-is-error: k-color-definition(
+    k-map-fetch($input, 'button-background-is-error'));
+
+  // Border radius Text - input
+  $border-text-input: k-px-to-rem(4px);
+
+  .k-TextInputWithButton {
+    display: flex;
+    position: relative;
+  }
+
+  .k-TextInputWithButton__input {
+    outline: none; // since we introduce our own focus styles
+
+    &:focus ~ .k-TextInputWithButton__button {
+      background-color: $button-background;
+    }
+  }
+
+  .k-TextInputWithButton__button {
+    @include k-typographyFont($font);
+    @include k-typographyFontSize($font-size);
+
+    position: absolute;
+    right: 0;
+
+    height: 100%;
+    width: k-px-to-rem(86px);
+
+    background-color: $button-background;
+    border-top-right-radius: $border-text-input;
+    border-bottom-right-radius: $border-text-input;
+    border: none;
+
+    text-transform: uppercase;
+    letter-spacing: k-px-to-rem(1px);
+    color: $color;
+
+    cursor: pointer;
+
+    &.is-valid {
+      background-color: $button-background-is-valid;
+    }
+
+    &.is-error {
+      background-color: $button-background-is-error;
+    }
+  }
+}

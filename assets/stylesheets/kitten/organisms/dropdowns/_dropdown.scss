@@ -17,6 +17,11 @@
 ///     </nav>
 ///   </div>
 @mixin k-Dropdown {
+
+  .k-Dropdown {
+    display: flex;
+  }
+
   .k-Dropdown--asReference {
     position: relative;
   }

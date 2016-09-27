@@ -5,12 +5,8 @@
       If required, the text input presents “a placeholder” which is an example
       of the data or more information about what is being asked.' %>
 
-<%= render_component 'components/molecules/form/text-input-with-unit',
-      title: 'Text input with unit',
-      description: 'Text input with unit is used to enter a number that requires
-      a unit. It works like the Text input.' %>
-
-<%= render_component 'components/molecules/form/select' %>
+<%= render_component 'components/molecules/form/select',
+      examples_display: :vertical %>
 
 <%= render_component 'components/molecules/form/slider',
       description: 'The slider is used to select a value in a range. It is only
@@ -20,5 +16,16 @@
       examples_display: :vertical %>
 
 <%= render_component 'components/molecules/form/search-input',
-      title: 'Search input',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation' %>
+      title: 'Search input' %>
+
+<%= render_component 'components/molecules/form/text-input-with-button',
+      title: 'Text input with button',
+      examples_display: :vertical %>
+
+<%= render_component 'components/molecules/form/text-input-with-info',
+      title: 'Text input with info',
+      examples_display: :vertical %>
+
+<%= render_component 'components/molecules/form/text-input-with-unit',
+      title: 'Text input with unit',
+      examples_display: :vertical %>
