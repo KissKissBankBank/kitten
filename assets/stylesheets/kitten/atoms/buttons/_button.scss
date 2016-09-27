@@ -136,23 +136,6 @@
 
       text-decoration: none;
       text-align: center;
-      //color: $color;
-
-      &:focus {
-        outline: none;
-        color: $color-focus;
-        background-color: $background-focus;
-      }
-
-      &:hover {
-        color: $color-hover;
-        background-color: $background-hover;
-      }
-
-      &:active {
-        color: $color-active;
-        background-color: $background-active;
-      }
 
       &:disabled {
         color: $color-disabled;
@@ -160,17 +143,20 @@
       }
     }
 
-    .k-Button--focus {
+    .k-Button--focus,
+    .k-Button:focus {
       color: $color-focus;
       background-color: $background-focus;
     }
 
-    .k-Button--hover {
+    .k-Button--hover,
+    .k-Button:hover {
       color: $color-hover;
       background-color: $background-hover;
     }
 
-    .k-Button--active {
+    .k-Button--active,
+    .k-Button:active {
       color: $color-active;
       background-color: $background-active;
     }
@@ -179,29 +165,22 @@
       color: $color-light;
       background-color: $background-light;
       border-color: $border-light;
-
-      &:focus {
-        color: $color-focus;
-        background-color: $background-focus-light;
-      }
-
-      &:hover {
-        color: $color-hover;
-        background-color: $background-hover-light;
-      }
     }
 
-    .k-Button--light--focus {
+    .k-Button--light--focus,
+    .k-Button--light:focus {
       color: $color-focus-light;
       background-color: $background-focus-light;
     }
 
-    .k-Button--light--hover {
+    .k-Button--light--hover,
+    .k-Button--light:hover {
       color: $color-hover-light;
       background-color: $background-hover-light;
     }
 
-    .k-Button--light--active {
+    .k-Button--light--active,
+    .k-Button--light:active {
       color: $color-active;
       background-color: $background-active;
     }
