@@ -81,9 +81,8 @@ mount Kitten::Engine, at: '/kitten' if Rails.env.development?
 [Webpack](webpack.github.io) through
 [React on Rails ](https://github.com/shakacode/react_on_rails).
 
-**In order to serve the styleguide**, you have to setup your application
-with Webpack following [React on
-Rails implementation](https://github.com/shakacode/react-webpack-rails-tutorial).
+**For more detailed instructions**, see [Rails webpack
+configuration](docs/installation/rails-webpack-configuration.md).
 
 ## Usage
 
