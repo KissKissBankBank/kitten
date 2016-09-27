@@ -22,9 +22,9 @@ assets compilation.
 
 - [Files architecture](#files-architecture)
 - [Webpack dependencies](#webpack-dependencies)
-- Build configuration
-- Web-dev server
-- React server-side rendering build
+- [Build configuration](#build-configuration)
+- [Web-dev server](#web-dev-server)
+- [React server-side rendering build](#react-server-side-rendering-build)
 
 ## Files architecture
 
@@ -183,3 +183,24 @@ const config = {
   }
 }
 ```
+
+## Web-dev server
+
+Webpack has a feature called Hot Module Replacement (HMR) that helps replace old
+modules with the newer ones without reloading the browser.
+
+On development environment, you can use it and setup a web-dev server to do it.
+
+As the updates are done only through the output js bundle, we need another webpack
+configuration to manage it (no separate css file anymore).
+
+You can check these files in the dummy app:
+- the web-dev server:
+  [spec/dummy/client/bin/webpack-dev-server.js](spec/dummy/client/bin/webpack-dev-server.js)
+- the webapck config for hot reloading:
+  [spec/dummy/client/webpack.client.dev.babel.js](spec/dummy/client/webpack.client.dev.babel.js)
+
+## React server-side rendering build
+
+For the moment, there is no need to create a specific build for React components
+server-side rendering.
