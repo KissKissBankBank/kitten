@@ -1,11 +1,12 @@
+// Simulator that lets users select an amount and an installment, to start
+// simulating a loan.
+
 import React from 'react'
 import classNames from 'classnames'
 import Slider from 'kitten/components/form/slider'
 import SliderTooltip from 'kitten/components/form/slider-tooltip'
 import numberUtils from 'kitten/helpers/utils/number'
 
-// TODO description
-// TODO animations: https://facebook.github.io/react/docs/animation.html
 class LoanSimulator extends React.Component {
   constructor(props) {
     super(props)
@@ -133,7 +134,7 @@ class LoanSimulator extends React.Component {
 
     if (error) {
       errorClass = "is-error"
-      errorTag = <p className="k-LoanSimulator__amount__error">{error}</p>
+      errorTag = <p className="k-LoanSimulator__amount__error">{ error }</p>
     }
 
     if (sliderIsActive) {
@@ -153,8 +154,12 @@ class LoanSimulator extends React.Component {
 
       tooltipClass = null
       tooltipText = [
-        <div key="1" className="k-LoanSimulator__installment">{installmentText}</div>,
-        <div key="2" className="k-LoanSimulator__duration">{durationText}</div>
+        <div key="1" className="k-LoanSimulator__installment">
+         { installmentText }
+        </div>,
+        <div key="2" className="k-LoanSimulator__duration">
+          { durationText }
+        </div>
       ]
     } else {
       tooltipClass = 'is-inactive'
@@ -168,25 +173,26 @@ class LoanSimulator extends React.Component {
     return (
       <div className="k-LoanSimulator">
         <div className="k-LoanSimulator__amount">
-          <label className="k-Label k-LoanSimulator__label" htmlFor="amount">
-            {this.props.amountLabel}
+          <label className="k-Label k-LoanSimulator__label"
+                 htmlFor="loan-simulator-amount">
+            { this.props.amountLabel }
           </label>
-          <div className={classNames('k-TextInputWithUnit',
-                                     errorClass)}>
+          <div className={ classNames('k-TextInputWithUnit', errorClass) }>
             <input ref="amount"
                    className="k-TextInput k-TextInputWithUnit__input"
-                   id="amount"
+                   id="loan-simulator-amount"
+                   name={ this.props.amountName }
                    type="number"
-                   min={this.props.amountMin}
-                   max={this.props.amountMax}
+                   min={ this.props.amountMin }
+                   max={ this.props.amountMax }
                    size="5"
-                   defaultValue={this.props.initialAmount}
+                   defaultValue={ this.props.initialAmount }
                    onFocus={ this.handleFocus }
                    onChange={ this.handleAmountChange }
                    onKeyDown={ this.handleAmountKeyDown }
-                   placeholder={this.props.amountPlaceholder} />
+                   placeholder={ this.props.amountPlaceholder } />
             <span className="k-TextInputWithUnit__unit">
-              {this.props.currencySymbol}
+              { this.props.currencySymbol }
             </span>
           </div>
           {errorTag}
@@ -194,24 +200,24 @@ class LoanSimulator extends React.Component {
         <div className="k-LoanSimulator__reimbursing">
           <label className="k-Label k-LoanSimulator__label"
                  onClick={ this.handleInstallmentLabelClick }>
-            {this.props.installmentLabel}
+            { this.props.installmentLabel }
           </label>
-          <SliderTooltip className={tooltipClass}
-                         percentage={installmentPercentage}>
-            {tooltipText}
+          <SliderTooltip className={ tooltipClass }
+                         percentage={ installmentPercentage }>
+            { tooltipText }
           </SliderTooltip>
           <Slider ref="slider"
-                  step={this.installmentStep()}
-                  min={installmentMin}
-                  max={installmentMax}
-                  power={2}
-                  name={this.props.installmentName}
-                  value={installmentAmount}
+                  step={ this.installmentStep() }
+                  min={ installmentMin }
+                  max={ installmentMax }
+                  power={ 2 }
+                  name={ this.props.installmentName }
+                  value={ installmentAmount }
                   onChange={ this.handleInstallmentChange }
                   onAction={ this.handleInstallmentAction } />
         </div>
         <div className="k-LoanSimulator__actions">
-          <button className="k-Button">{this.props.actionLabel}</button>
+          <button className="k-Button">{ this.props.actionLabel }</button>
         </div>
       </div>
     )
@@ -221,6 +227,12 @@ class LoanSimulator extends React.Component {
 LoanSimulator.propTypes = {
   // Label for amount input
   amountLabel: React.PropTypes.string,
+
+  // Name attribute for the amount input (if needed)
+  amountName: React.PropTypes.string,
+
+  // Name attribute for the hidden installment input (if needed)
+  installmentName: React.PropTypes.string,
 
   // Placeholder for amount input
   amountPlaceholder: React.PropTypes.string,
