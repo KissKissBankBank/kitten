@@ -188,7 +188,7 @@ To launch the style guide on the dummy app:
 $ cd spec/dummy
 $ bundle
 $ npm install
-$ foreman start -f Procfile.hot
+$ foreman start
 ```
 
 Then visit http://localhost:3000
