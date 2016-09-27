@@ -4,7 +4,7 @@
 create flexible components based on your own brand elements (colors, fonts,
 typographic scale, etc.).
 
-It is a npm module coupled with a Rails engine that provides a integrated
+It is an npm module coupled with a Rails engine that provides an integrated
 styleguide.
 
 ![Kittens](http://i.imgur.com/EbGhfDH.gif)
@@ -77,9 +77,9 @@ Install routes for the style guide and sassdoc, add to your `routes.rb`:
 mount Kitten::Engine, at: '/kitten' if Rails.env.development?
 ```
 
-`kitten` Rails engine is designed to serve assets with
+`kitten`'s' Rails engine is designed to serve assets with
 [Webpack](webpack.github.io) through
-[React on Rails ](https://github.com/shakacode/react_on_rails).
+[React on Rails](https://github.com/shakacode/react_on_rails).
 
 **For more detailed instructions**, see [Rails webpack
 configuration](docs/installation/rails-webpack-configuration.md).
@@ -137,7 +137,7 @@ ReactDOM.render(
 Or, use [React on
 Rails](https://github.com/shakacode/react_on_rails#including-your-react-component-in-your-rails-views)
 view helper in your `.erb` file:
-```ruby
+```erb
 <%= react_component('LoanSimulator', props: @your_loan_simulator_props) %>
 ```
 
