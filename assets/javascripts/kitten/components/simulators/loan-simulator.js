@@ -177,9 +177,7 @@ class LoanSimulator extends React.Component {
                  htmlFor="loan-simulator-amount">
             { this.props.amountLabel }
           </label>
-          <div className={ classNames('k-TextInputWithUnit',
-                                     'k-TextInputWithUnit--large',
-                                     errorClass) }>
+          <div className={ classNames('k-TextInputWithUnit', errorClass) }>
             <input ref="amount"
                    className="k-TextInput k-TextInputWithUnit__input"
                    id="loan-simulator-amount"
