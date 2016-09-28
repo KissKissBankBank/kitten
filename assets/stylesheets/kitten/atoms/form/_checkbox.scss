@@ -6,8 +6,6 @@
 ///
 ///   @include k-Checkbox((
 ///     font: 'source-sans-semi-bold',
-///     font-size: -2,
-///     line-height: 1,
 ///     colors: (
 ///       background: #fff,
 ///       background-checked: #4a84ff,
@@ -28,10 +26,8 @@
 
     // Font
     $font: k-string-definition(k-map-fetch($input, 'font'));
-    $font-size: k-number-definition(
-      k-map-fetch($input, 'font-size'), $unit: none);
-    $line-height: k-number-definition(
-      k-map-fetch($input, 'line-height'), $unit: none);
+    $font-size: -2;
+    $line-height: 1;
 
     // Colors
     $background-color: k-color-definition(
