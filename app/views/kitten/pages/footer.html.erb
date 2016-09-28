@@ -3,96 +3,96 @@
 
     <div class="k-Footer">
 
-      <div class="k-Footer__navContainer">
-        <div class="k-Footer__app">
-          <p>
-            <!-- TODO use correct logo with "®" -->
-            <img src="https://assets1.hellomerci.com/assets/logos/hellomerci-e9bb3f885b0b2041a250b87fdb4b4caf.svg"
-                 width="99"
-                 height="39"
-                 alt="hellomerci" />
-          </p>
-          <p>
-            Plateforme de pêts entre particuliers de 200 à 10&nbsp;000&nbsp;€.
-          </p>
-        </div>
-        <div class="k-Footer__nav">
-          <div class="k-Grid">
-            <div class="k-Grid__col--4">
-              <ul class="k-LinkList">
-                <li><a class="k-LinkList__link" href="#">Emprunter</a></li>
-                <li><a class="k-LinkList__link" href="#">Comment ça marche&nbsp;?</a></li>
-                <li><a class="k-LinkList__link" href="#">CGU</a></li>
-              </ul>
-            </div>
-            <div class="k-Grid__col--4">
-              <ul class="k-LinkList">
-                <li><a class="k-LinkList__link" href="#">Collectes publiques</a></li>
-                <li><a class="k-LinkList__link" href="#">Sélection de projets</a></li>
-                <li><a class="k-LinkList__link" href="#">La méthode</a></li>
-                <li><a class="k-LinkList__link" href="#">Nos statistiques</a></li>
-              </ul>
-            </div>
-            <div class="k-Grid__col--4">
-              <ul class="k-LinkList">
-                <li><a class="k-LinkList__link" href="#">Presse</a></li>
-                <li><a class="k-LinkList__link" href="#">Contact</a></li>
-                <li><a class="k-LinkList__link" href="#">Forum</a></li>
-                <li><a class="k-LinkList__link" href="#">L'équipe</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="k-Footer__actions">
-          <%= react_component('SelectWithState', props: {
-                name: 'locale',
-                value: 'fr',
-                options: [
-                  { value: 'en', label: 'English' },
-                  { value: 'fr', label: 'Français' },
-                ],
-              }) %>
-        </div>
-      </div>
-      <div class="k-Footer__logosContainer">
-        <div class="k-Footer__logo">
-
-          <div class="k-Footer__logo__img">
-            <!-- TODO utiliser SVG -->
-            <img src="https://assets1.hellomerci.com/assets/logos/autorite_francaise-2624106a99325103754e803f5f59c457.png"
-                 alt="Logo autorités françaises"
-                 width="56"
-                 height="56" />
-          </div>
-          <div class="k-Footer__logo__text">
-            hellomerci est une plateforme de financement participatif régulée par les autorités françaises.<br />
-            Immatriculation&nbsp;: 14007218.
-          </div>
-
-        </div>
-        <div class="k-Footer__logo">
-
-          <div class="k-Footer__logo__img">
-            <!-- TODO utiliser bon SVG ingenico GROUP -->
-            <img src="https://d3v4jsc54141g1.cloudfront.net/assets/footer-logo-ingenico-1a09c400b4e8fb39e2898f176e397b4a.png"
-                 alt="Logo Ingenico"
-                 width="80"
-                 height="42" />
-          </div>
-          <div class="k-Footer__logo__text">
-            KissKissBankBank Technologies est agent de l'institution financière
-            <a href="https://www.nbb.be/fr/supervision-financiere/controle-prudentiel/domaines-de-controle/etablissements-de-paiement-et-9">
-              Ingenico Financial Solutions NV/SA
-            </a>.<br />
-            Paiements sécurisés avec Ingenico Payment Services.
-          </div>
-
-        </div>
-        <div class="k-Footer__copyright">
-          © <%= Time.zone.now.year %> KissKissBankBank &amp; Co
-        </div>
+      <div class="k-Footer__app">
+        <p>
+          <!-- TODO use correct logo with "®" -->
+          <img src="https://assets1.hellomerci.com/assets/logos/hellomerci-e9bb3f885b0b2041a250b87fdb4b4caf.svg"
+               width="99"
+               height="39"
+               alt="hellomerci" />
+        </p>
+        <p>
+          Plateforme de pêts entre particuliers de 200 à 10&nbsp;000&nbsp;€.
+        </p>
       </div>
 
+      <div class="k-Footer__nav">
+        <div class="k-Grid">
+          <div class="k-Grid__col--4">
+            <ul class="k-LinkList">
+              <li><a class="k-LinkList__link" href="#">Emprunter</a></li>
+              <li><a class="k-LinkList__link" href="#">Comment ça marche&nbsp;?</a></li>
+              <li><a class="k-LinkList__link" href="#">CGU</a></li>
+            </ul>
+          </div>
+          <div class="k-Grid__col--4">
+            <ul class="k-LinkList">
+              <li><a class="k-LinkList__link" href="#">Collectes publiques</a></li>
+              <li><a class="k-LinkList__link" href="#">Sélection de projets</a></li>
+              <li><a class="k-LinkList__link" href="#">La méthode</a></li>
+              <li><a class="k-LinkList__link" href="#">Nos statistiques</a></li>
+            </ul>
+          </div>
+          <div class="k-Grid__col--4">
+            <ul class="k-LinkList">
+              <li><a class="k-LinkList__link" href="#">Presse</a></li>
+              <li><a class="k-LinkList__link" href="#">Contact</a></li>
+              <li><a class="k-LinkList__link" href="#">Forum</a></li>
+              <li><a class="k-LinkList__link" href="#">L'équipe</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="k-Footer__actions">
+        <%= react_component('SelectWithState', props: {
+              name: 'locale',
+              value: 'fr',
+              options: [
+                { value: 'en', label: 'English' },
+                { value: 'fr', label: 'Français' },
+              ],
+            }) %>
+      </div>
+
+      <div class="k-Footer__logos">
+        <div class="k-Footer__logos__list">
+          <div class="k-Footer__logo">
+            <div class="k-Footer__logo__img">
+              <!-- TODO utiliser SVG -->
+              <img src="https://assets1.hellomerci.com/assets/logos/autorite_francaise-2624106a99325103754e803f5f59c457.png"
+                   alt="Logo autorités françaises"
+                   width="56"
+                   height="56" />
+            </div>
+            <div class="k-Footer__logo__text">
+              hellomerci est une plateforme de financement participatif régulée par les autorités françaises.<br />
+              Immatriculation&nbsp;: 14007218.
+            </div>
+
+          </div>
+          <div class="k-Footer__logo">
+
+            <div class="k-Footer__logo__img">
+              <!-- TODO utiliser bon SVG ingenico GROUP -->
+              <img src="https://d3v4jsc54141g1.cloudfront.net/assets/footer-logo-ingenico-1a09c400b4e8fb39e2898f176e397b4a.png"
+                   alt="Logo Ingenico"
+                   width="80"
+                   height="42" />
+            </div>
+            <div class="k-Footer__logo__text">
+              KissKissBankBank Technologies est agent de l'institution financière
+              <a href="https://www.nbb.be/fr/supervision-financiere/controle-prudentiel/domaines-de-controle/etablissements-de-paiement-et-9">
+                Ingenico Financial Solutions NV/SA
+              </a>.<br />
+              Paiements sécurisés avec Ingenico Payment Services.
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="k-Footer__copyright">
+        © <%= Time.zone.now.year %> KissKissBankBank &amp; Co
+      </div>
     </div>
 
   </div>
