@@ -17,27 +17,25 @@
 ///
 ///   $button-icon: (
 ///     colors: (
-///       base: (
+///       light: (
 ///         color: #333,
 ///         background-color: #fff,
-///         border-color: #d8d8d8
+///         border-color: #d8d8d8,
 ///       ),
-///       hover: (
-///         color: #fff,
-///         background-color: #333,
-///         border-color: none
+///       focus-light: (
+///         color: #4a84ff,
+///         background-color: #fff,
+///         border-color: #cadbfd,
 ///       ),
-///       active: (
-///         color: #fff,
-///         background-color: #151515
+///       hover-light: (
+///         color: #4a84ff,
+///         background-color: #fff,
+///         border-color: #cadbfd,
 ///       ),
-///       disabled: (
+///       active-light: (
 ///         color: #fff,
-///         background-color: #d8d8d8
-///       ),
-///       is-selected: (
-///         color: #fff,
-///         background-color: #333
+///         background-color: #2c66e1,
+///         border-color: #2c66e1,
 ///       )
 ///     )
 ///   )
@@ -46,24 +44,46 @@
   @include k-with-module('k-ButtonIcon: $button-icon') {
     $border-size: 1px;
 
-    $button-size: 40px - ($border-size * 2);
-    $button-size-tiny: 30px - ($border-size * 2);
+    $button-size-medium: 40px - ($border-size * 2);
+    $button-size: 30px - ($border-size * 2);
     $button-size-big: 50px - ($border-size * 2);
 
     // SVG element default settings.
-    $icon-width: k-px-to-rem(17px);
-    $icon-height: k-px-to-rem(17px);
-    $icon-width-tiny: k-px-to-rem(10px);
-    $icon-height-tiny: k-px-to-rem(10px);
+    $icon-width: k-px-to-rem(12px);
+    $icon-height: k-px-to-rem(14px);
 
     // Get data for SVG.
-    $colors: map-get($button-icon, 'colors');
-    $base-color: map-get-deep($colors, ('base', 'color'));
-    $hover-color: map-get-deep($colors, ('hover', 'color'));
-    $active-color: map-get-deep($colors, ('active', 'color'));
-    $disabled-color: map-get-deep($colors, ('disabled', 'color'));
-    $focus-color: map-get-deep($colors, ('focus', 'color'));
-    $is-selected-color: map-get-deep($colors, ('is-selected', 'color'));
+
+    // light
+    $light-color: map-get-deep($button-icon, ('colors', 'light', 'color'));
+    $light-background-color: map-get-deep(
+      $button-icon, ('colors', 'light', 'background-color'));
+    $light-border-color: map-get-deep(
+      $button-icon, ('colors', 'light', 'border-color'));
+
+    // focus ligth
+    $focus-light-color: map-get-deep(
+      $button-icon, ('colors', 'focus-light', 'color'));
+    $focus-light-background-color: map-get-deep(
+      $button-icon, ('colors', 'focus-light', 'background-color'));
+    $focus-light-border-color: map-get-deep(
+      $button-icon, ('colors', 'focus-light', 'border-color'));
+
+    // hover light
+    $hover-light-color: map-get-deep(
+      $button-icon, ('colors', 'hover-light', 'color'));
+    $hover-light-background-color: map-get-deep(
+      $button-icon, ('colors', 'hover-light', 'background-color'));
+    $hover-light-border-color: map-get-deep(
+      $button-icon, ('colors', 'hover-light', 'border-color'));
+
+    // active light
+    $active-light-color: map-get-deep(
+      $button-icon, ('colors', 'active-light', 'color'));
+    $active-light-background-color: map-get-deep(
+      $button-icon, ('colors', 'active-light', 'background-color'));
+    $active-light-border-color: map-get-deep(
+      $button-icon, ('colors', 'active-light', 'border-color'));
 
     $transition-speed: .2s;
 
@@ -72,78 +92,102 @@
       @include k-buttonRounded($button-size, $icon-width, $icon-height);
     }
 
-    .k-ButtonIcon__svg {
+    .k-ButtonIcon__svg,
+    .k-ButtonIcon--light__svg {
       display: block;
       margin: 0;
       padding: 0;
       width: $icon-width;
       height: $icon-height;
-      fill: $base-color;
       transition: fill $transition-speed;
+    }
+
+    .k-ButtonIcon--light {
+      fill: $light-color;
+      background-color: $light-background-color;
+      border-color: $light-border-color;
+
+      &:hover {
+        @include k-buttonBorder($hover-light-border-color);
+
+        background-color: $hover-light-background-color;
+        color: $hover-light-color;
+      }
+
+      &:focus {
+        @if map-has-key($button-icon, 'focus-light') {
+          @include k-buttonBorder($focus-light-border-color);
+
+          background-color: $focus-light-background-color;
+          color: $focus-light-color;
+        }
+        @else {
+          @include k-buttonBorder($hover-light-border-color);
+
+          background-color: $hover-light-background-color;
+          color: $hover-light-color;
+        }
+      }
+
+      &:active {
+        @include k-buttonBorder($active-light-border-color);
+
+        background-color: $active-light-background-color;
+        color: $active-light-color;
+      }
+    }
+
+    .k-ButtonIcon--light__svg {
+      transition: fill $transition-speed;
+      fill: $light-color;
 
       .k-ButtonIcon:hover & {
-        fill: $hover-color;
+        fill: $hover-light-color;
       }
 
       .k-ButtonIcon:focus & {
-        @if $focus-color {
-          fill: $focus-color;
+        @if $focus-light-color {
+          fill: $focus-light-color;
         }
         @else {
-          fill: $hover-color;
+          fill: $hover-light-color;
         }
       }
 
       .k-ButtonIcon:active & {
-        fill: $active-color;
-      }
-
-      .k-ButtonIcon:disabled & {
-        fill: $disabled-color;
-      }
-
-      .k-ButtonIcon.is-selected & {
-        fill: $is-selected-color;
+        fill: $active-light-color;
       }
     }
 
-    .k-ButtonIcon__svg__stroke {
-      stroke: $base-color;
+    .k-ButtonIcon--light__svg__stroke {
+      stroke: $light-color;
       transition: stroke $transition-speed;
 
       .k-ButtonIcon:hover & {
-        stroke: $hover-color;
+        stroke: $hover-light-color;
       }
 
       .k-ButtonIcon:focus & {
-        @if $focus-color {
-          stroke: $focus-color;
+        @if $focus-light-color {
+          stroke: $focus-light-color;
         }
         @else {
-          stroke: $hover-color;
+          stroke: $hover-light-color;
         }
       }
 
       .k-ButtonIcon:active & {
-        stroke: $active-color;
-      }
-
-      .k-ButtonIcon:disabled & {
-        stroke: $disabled-color;
-      }
-
-      .k-ButtonIcon.is-selected & {
-        stroke: $is-selected-color;
+        stroke: $active-light-color;
       }
     }
 
-    .k-ButtonIcon--tiny {
-      @include k-buttonRounded($button-size-tiny,
-        $icon-width-tiny, $icon-height-tiny);
+    .k-ButtonIcon--medium {
+      @include k-buttonRounded($button-size-medium,
+        $icon-width, $icon-height);
 
       .k-ButtonIcon__svg {
-        width: $icon-width-tiny;
-        height: $icon-height-tiny;
+        width: $icon-width;
+        height: $icon-height;
       }
     }
 
