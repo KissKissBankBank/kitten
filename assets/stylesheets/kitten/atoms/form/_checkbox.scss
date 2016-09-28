@@ -45,6 +45,7 @@
 
     $checkbox-size: k-px-to-rem(20px);
     $border-radius: k-px-to-rem(4px);
+    $icon: '~icons/checked.svg';
 
     .k-Checkbox {
       @include k-typographyFont($font);
@@ -87,10 +88,9 @@
       }
     }
 
-    .k-Checkbox__input
+    .k-Checkbox__input:checked + .k-Checkbox__label {
       &:before {
-        background: $background-color-checked url('~icons/checked.svg')
-          no-repeat center center;
+        background: $background-color-checked url($icon) no-repeat center center;
         border-color: $border-color-hover;
       }
     }
