@@ -61,7 +61,7 @@
 
     $font: k-string-definition(k-map-fetch($button, 'font'));
 
-    // Light
+    // light
     $light-color: k-color-definition(
       k-map-fetch($button, ('colors', 'light', 'color')));
     $light-background-color: k-color-definition(
@@ -69,7 +69,7 @@
     $light-border-color: k-color-definition(
       k-map-fetch($button, ('colors', 'light', 'border-color')));
 
-    // Focus
+    // focus light
     $focus-light-color: k-color-definition(
       k-map-fetch($button, ('colors', 'focus-light', 'color')));
     $focus-light-background-color: k-color-definition(
@@ -77,7 +77,7 @@
     $focus-light-border-color: k-color-definition(
       k-map-fetch($button, ('colors', 'focus-light', 'border-color')));
 
-    // Hover
+    // hover light
     $hover-light-color: k-color-definition(
       k-map-fetch($button, ('colors', 'hover-light', 'color')));
     $hover-light-background-color: k-color-definition(
@@ -85,7 +85,7 @@
     $hover-light-border-color: k-color-definition(
       k-map-fetch($button, ('colors', 'hover-light', 'border-color')));
 
-    // Active
+    // active light
     $active-light-color: k-color-definition(
       k-map-fetch($button, ('colors', 'active-light', 'color')));
     $active-light-background-color: k-color-definition(
