@@ -38,6 +38,8 @@
       k-map-fetch($input, ('colors', 'background')));
     $background-color-checked: k-color-definition(
       k-map-fetch($input, ('colors', 'background-checked')));
+    $background-color-disabled: k-color-definition(
+      k-map-fetch($input, ('colors', 'background-disabled')));
     $border-color: k-color-definition(
       k-map-fetch($input, ('colors', 'border')));
     $border-color-hover: k-color-definition(
@@ -79,19 +81,24 @@
 
         transition: border-color .2s, background-color .2s;
       }
-    }
 
-    .k-Checkbox__label:hover,
-    .k-Checkbox__input:focus + .k-Checkbox__label {
-      &:before {
+      &:hover:before,
+      .k-Checkbox__input:focus + &:before {
         border-color: $border-color-hover;
       }
-    }
 
-    .k-Checkbox__input:checked + .k-Checkbox__label {
-      &:before {
+      .k-Checkbox__input:checked + &:before {
         background: $background-color-checked url($icon) no-repeat center center;
         border-color: $border-color-hover;
+      }
+
+      .k-Checkbox__input:disabled + & {
+        cursor: not-allowed;
+
+        &:before {
+          background: $background-color-disabled;
+          border-color: $background-color-disabled;
+        }
       }
     }
 
