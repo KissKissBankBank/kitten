@@ -13,38 +13,25 @@
 ///   @include k-Button((
 ///     font: 'source-sans-semi-bold-uppercase',
 ///      colors: (
-///        base: (
-///          color: #fff,
-///          background-color: #4a84ff,
-///        ),
 ///        light: (
 ///          color: #333,
 ///          background-color: #fff,
-///          border-color: #d8d8d8,
+///          border: #d8d8d8,
 ///        ),
-///        focus: (
+///        focus-light: (
 ///          color: #fff,
-///          background-color: #3b75f0,
-///          light: (
-///            color: #fff,
-///            background-color: #4a84ff,
-///          )
+///          background-color: #4a84ff,
+///          border-color: transparent,
 ///        ),
-///        hover: (
+///        hover-light: (
 ///          color: #fff,
-///          background-color: #3b75f0,
-///          light: (
-///            color: #fff,
-///            background-color: #4a84ff,
-///          )
+///          background-color: #4a84ff,
+///          border-color: transparent,
 ///        ),
-///        active: (
+///        active-light: (
 ///          color: #fff,
-///          background-color: #2c66e1,
-///        ),
-///        disabled: (
-///          color: #fff,
-///          background-color: #d8d8d8,
+///          background-color: #4a84ff,
+///          border-color: transparent,
 ///        )
 ///      )
 ///   ));
@@ -74,51 +61,37 @@
 
     $font: k-string-definition(k-map-fetch($button, 'font'));
 
-    // Base
-    $color: k-color-definition(
-      k-map-fetch($button, ('colors', 'base', 'color')));
-    $background: k-color-definition(
-      k-map-fetch($button, ('colors', 'base', 'background-color')));
-
     // Light
-    $color-light: k-color-definition(
+    $light-color: k-color-definition(
       k-map-fetch($button, ('colors', 'light', 'color')));
-    $background-light: k-color-definition(
+    $light-background-color: k-color-definition(
       k-map-fetch($button, ('colors', 'light', 'background-color')));
-    $border-light: k-color-definition(
+    $light-border-color: k-color-definition(
       k-map-fetch($button, ('colors', 'light', 'border-color')));
 
     // Focus
-    $color-focus: k-color-definition(
-      k-map-fetch($button, ('colors', 'focus', 'color')));
-    $background-focus: k-color-definition(
-      k-map-fetch($button, ('colors', 'focus', 'background-color')));
-    $color-focus-light: k-color-definition(
-      k-map-fetch($button, ('colors', 'focus', 'light', 'color')));
-    $background-focus-light: k-color-definition(
-      k-map-fetch($button, ('colors', 'focus', 'light', 'background-color')));
+    $focus-light-color: k-color-definition(
+      k-map-fetch($button, ('colors', 'focus-light', 'color')));
+    $focus-light-background-color: k-color-definition(
+      k-map-fetch($button, ('colors', 'focus-light', 'background-color')));
+    $focus-light-border-color: k-color-definition(
+      k-map-fetch($button, ('colors', 'focus-light', 'border-color')));
 
     // Hover
-    $color-hover: k-color-definition(
-      k-map-fetch($button, ('colors', 'hover', 'color')));
-    $background-hover: k-color-definition(
-      k-map-fetch($button, ('colors', 'hover', 'background-color')));
-    $color-hover-light: k-color-definition(
-      k-map-fetch($button, ('colors', 'hover', 'light', 'color')));
-    $background-hover-light: k-color-definition(
-      k-map-fetch($button, ('colors', 'hover', 'light', 'background-color')));
+    $hover-light-color: k-color-definition(
+      k-map-fetch($button, ('colors', 'hover-light', 'color')));
+    $hover-light-background-color: k-color-definition(
+      k-map-fetch($button, ('colors', 'hover-light', 'background-color')));
+    $hover-light-border-color: k-color-definition(
+      k-map-fetch($button, ('colors', 'hover-light', 'border-color')));
 
     // Active
-    $color-active: k-color-definition(
-      k-map-fetch($button, ('colors', 'active', 'color')));
-    $background-active: k-color-definition(
-      k-map-fetch($button, ('colors', 'active', 'background-color')));
-
-    // Disabled
-    $color-disabled: k-color-definition(
-      k-map-fetch($button, ('colors', 'disabled', 'color')));
-    $background-disabled: k-color-definition(
-      k-map-fetch($button, ('colors', 'disabled', 'background-color')));
+    $active-light-color: k-color-definition(
+      k-map-fetch($button, ('colors', 'active-light', 'color')));
+    $active-light-background-color: k-color-definition(
+      k-map-fetch($button, ('colors', 'active-light', 'background-color')));
+    $active-light-border-color: k-color-definition(
+      k-map-fetch($button, ('colors', 'active-light', 'border-color')));
 
     .k-Button--column {
       justify-content: space-between;
@@ -136,53 +109,30 @@
 
       text-decoration: none;
       text-align: center;
-
-      &:disabled {
-        color: $color-disabled;
-        background-color: $background-disabled;
-      }
-    }
-
-    .k-Button--focus,
-    .k-Button:focus {
-      color: $color-focus;
-      background-color: $background-focus;
-    }
-
-    .k-Button--hover,
-    .k-Button:hover {
-      color: $color-hover;
-      background-color: $background-hover;
-    }
-
-    .k-Button--active,
-    .k-Button:active {
-      color: $color-active;
-      background-color: $background-active;
     }
 
     .k-Button--light {
-      color: $color-light;
-      background-color: $background-light;
-      border-color: $border-light;
-    }
+      color: $light-color;
+      background-color: $light-background-color;
+      border-color: $light-border-color;
 
-    .k-Button--light--focus,
-    .k-Button--light:focus {
-      color: $color-focus-light;
-      background-color: $background-focus-light;
-    }
+      &:focus {
+        color: $focus-light-color;
+        background-color: $focus-light-background-color;
+        border-color: $focus-light-border-color;
+      }
 
-    .k-Button--light--hover,
-    .k-Button--light:hover {
-      color: $color-hover-light;
-      background-color: $background-hover-light;
-    }
+      &:hover {
+        color: $hover-light-color;
+        background-color: $hover-light-background-color;
+        border-color: $hover-light-border-color;
+      }
 
-    .k-Button--light--active,
-    .k-Button--light:active {
-      color: $color-active;
-      background-color: $background-active;
+      &:active {
+        color: $active-light-color;
+        background-color: $active-light-background-color;
+        border-color: $active-light-border-color;
+      }
     }
 
     .k-Button--big {
