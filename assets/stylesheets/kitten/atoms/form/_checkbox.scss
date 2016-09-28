@@ -20,7 +20,7 @@
 ///
 ///   <div class="k-Checkbox">
 ///     <input id="input" type="checkbox" class="k-Checkbox__input" />
-///     <label for="input" class="k-Checkbox__label">Filtre</label>
+///     <label for="input" class="k-Checkbox__label">I agree</label>
 ///   </div>
 
 @mixin k-Checkbox($input) {
@@ -57,7 +57,7 @@
       align-items: center;
       align-self: flex-start;
 
-      margin: 10px;
+      margin: k-px-to-rem(10px);
     }
 
     .k-Checkbox__label {
