@@ -85,7 +85,7 @@
       }
 
       .k-Checkbox__input:checked:focus + &:before {
-        border-color: $border-color;
+        box-shadow: 0 0 k-px-to-rem(3px) $background-color-checked;
       }
 
       .k-Checkbox__input:checked + &:before {
@@ -94,6 +94,7 @@
       }
 
       .k-Checkbox__input:disabled + & {
+        color: $background-color-disabled;
         cursor: not-allowed;
 
         &:before {
