@@ -1,0 +1,100 @@
+/// A page footer where you can insert an app logo, extra logos, a copyright,
+/// etc.
+///
+/// @group footer
+///
+/// @example scss - usage
+///   @include k-Footer;
+///
+/// @example html
+///   <div class="k-Footer">
+///     <div class="k-Footer__navContainer">
+///       <div class="k-Footer__app">…</div>
+///       <div class="k-Footer__nav">…</div>
+///       <div class="k-Footer__actions">…</div>
+///     </div>
+///     <div class="k-Footer__logosContainer">
+///       <div class="k-Footer__logo">
+///         <div class="k-Footer__logo__img"><img … /></div>
+///         <div class="k-Footer__logo__text">…</div>
+///       </div>
+///       <div class="k-Footer__copyright">…</div>
+///     </div>
+///   </div>
+@mixin k-Footer {
+  $s-min-width: map-get-deep($k-media-queries, ('s', 'min-width'));
+  $m-min-width: map-get-deep($k-media-queries, ('m', 'min-width'));
+  $l-min-width: map-get-deep($k-media-queries, ('l', 'min-width'));
+
+  .k-Footer__navContainer,
+  .k-Footer__logosContainer {
+    @include k-grid;
+  }
+
+  .k-Footer__app {
+    @include k-typographyFont('source-sans-light');
+    @include k-typographyFontSize(-1);
+
+    @include k-grid-col(4);
+    @include k-grid-offset(4);
+    @media (min-width: $m-min-width) {
+      @include k-grid-col(3);
+      @include k-grid-offset(0);
+    }
+    @media (min-width: $l-min-width) { @include k-grid-col(2); }
+  }
+
+  .k-Footer__nav {
+    @include k-grid-col(12);
+    @media (min-width: $m-min-width) { @include k-grid-col(6); }
+    @media (min-width: $l-min-width) { @include k-grid-offset(1); }
+  }
+
+  .k-Footer__actions {
+    @include k-grid-col(4);
+    @include k-grid-offset(4);
+    @media (min-width: $m-min-width) {
+      @include k-grid-col(3);
+      @include k-grid-offset(0);
+    }
+    @media (min-width: $m-min-width) {
+      @include k-grid-col(2);
+      @include k-grid-offset(1);
+    }
+  }
+
+  .k-Footer__logo {
+    @include k-grid-col(12);
+    @media (min-width: $s-min-width) { @include k-grid-col(6); }
+    @media (min-width: $l-min-width) { @include k-grid-col(4); }
+
+    display: flex;
+
+    @include k-typographyFont('source-sans-light');
+    @include k-typographyFontSize(-1);
+  }
+  .k-Footer__copyright {
+    @include k-grid-col(12);
+    @media (min-width: $l-min-width) { @include k-grid-col(4); }
+
+    align-self: flex-end;
+    text-align: right;
+    @include k-typographyFont('source-sans-semi-bold');
+    @include k-typographyFontSize(-1);
+  }
+
+  .k-Footer__logo__img {
+    flex: 1;
+    margin-right: 1rem;
+  }
+
+  .k-Footer__logo__text {
+    text-align: left;
+  }
+
+  .k-Footer__logo__text {
+    a {
+      color: inherit;
+    }
+  }
+}
