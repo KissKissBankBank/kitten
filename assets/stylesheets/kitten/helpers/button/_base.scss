@@ -21,7 +21,7 @@
 ///   $button: (
 ///     colors: (
 ///       base: (
-///         color: #333,
+///         color: #fff,
 ///         border-color: #4a84ff,
 ///         background-color: #4a84ff,
 ///       ),
@@ -196,6 +196,57 @@
 
       background-color: $is-selected-background-color;
       color: $is-selected-color;
+    }
+  }
+
+  .k-ButtonIcon__svg {
+    fill: $base-color;
+
+    .k-ButtonIcon:hover & {
+      fill: $hover-color;
+    }
+
+    .k-ButtonIcon:focus & {
+      @if $focus-color {
+        fill: $focus-color;
+      }
+      @else {
+        fill: $hover-color;
+      }
+    }
+
+    .k-ButtonIcon:active & {
+      fill: $active-color;
+    }
+
+    .k-ButtonIcon:disabled & {
+      fill: $disabled-color;
+    }
+  }
+
+  .k-ButtonIcon__svg__stroke {
+    stroke: $base-color;
+    transition: stroke $transition-speed;
+
+    .k-ButtonIcon:hover & {
+      stroke: $hover-color;
+    }
+
+    .k-ButtonIcon:focus & {
+      @if $focus-color {
+        stroke: $focus-color;
+      }
+      @else {
+        stroke: $hover-color;
+      }
+    }
+
+    .k-ButtonIcon:active & {
+      stroke: $active-color;
+    }
+
+    .k-ButtonIcon:disabled & {
+      stroke: $disabled-color;
     }
   }
 }
