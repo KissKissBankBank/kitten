@@ -84,6 +84,10 @@
         border-color: $border-color-hover;
       }
 
+      .k-Checkbox__input:checked:focus + &:before {
+        border-color: $border-color;
+      }
+
       .k-Checkbox__input:checked + &:before {
         background: $background-color-checked url($icon) no-repeat center center;
         border-color: $border-color-hover;
@@ -93,7 +97,7 @@
         cursor: not-allowed;
 
         &:before {
-          background: $background-color-disabled;
+          background-color: $background-color-disabled;
           border-color: $background-color-disabled;
         }
       }
