@@ -38,6 +38,10 @@
     }
   }
 
+  .k-Footer__brand__text {
+    max-width: 12rem;
+  }
+
   .k-Footer__nav {
     @include k-grid-col(12);
 
@@ -51,10 +55,6 @@
   .k-Footer__actions {
     margin-top: 1rem;
 
-    .k-Select {
-      text-align: left;
-    }
-
     @include k-grid-col(4);
     @include k-grid-offset(4);
 
@@ -62,6 +62,12 @@
       @include k-grid-col(2);
       @include k-grid-offset(1);
     }
+  }
+
+  .k-Footer__actions__select {
+    min-width: 10rem;
+    max-width: 16rem;
+    text-align: left;
   }
 
   .k-Footer__logos {
@@ -116,6 +122,9 @@
   }
 
   .k-Footer__logo__text {
+    margin: 0 auto;
+    max-width: 23rem;
+
     a {
       color: inherit;
     }
