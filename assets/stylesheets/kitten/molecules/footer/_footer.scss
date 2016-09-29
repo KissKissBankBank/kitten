@@ -17,6 +17,7 @@
 @mixin k-Footer {
   .k-Footer {
     @include k-grid;
+    text-align: center;
   }
 
   .k-Footer__brand {
@@ -24,7 +25,6 @@
     @include k-typographyFontSize(-1);
 
     @include k-grid-col(12);
-    text-align: center;
 
     @include k-media-min('s') {
       @include k-grid-col(4);
@@ -40,7 +40,6 @@
 
   .k-Footer__nav {
     @include k-grid-col(12);
-    text-align: center;
 
     @include k-media-min('l') {
       @include k-grid-col(6);
@@ -51,7 +50,6 @@
 
   .k-Footer__actions {
     margin-top: 1rem;
-    text-align: center;
 
     .k-Select {
       text-align: left;
@@ -69,7 +67,6 @@
   .k-Footer__logos {
     margin-top: 2rem;
     margin-bottom: 1rem;
-    text-align: center;
 
     @include k-grid-col(12);
     @include k-media-min('l') {
@@ -97,7 +94,6 @@
     margin-bottom: 1rem;
 
     align-self: flex-end;
-    text-align: center;
 
     @include k-typographyFont('source-sans-semi-bold');
     @include k-typographyFontSize(-1);
