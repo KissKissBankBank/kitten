@@ -56,6 +56,18 @@
     }
   }
 
+  .k-Footer__nav__container {
+    @include k-grid;
+  }
+
+  .k-Footer__nav__links {
+    @include k-grid-col(12);
+
+    @include k-media-min('m') {
+      @include k-grid-col(4);
+    }
+  }
+
   .k-Footer__actions {
     margin-top: 1rem;
 

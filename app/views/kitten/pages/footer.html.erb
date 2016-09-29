@@ -12,54 +12,49 @@
       </div>
 
       <div class="k-Footer__nav">
-        <div class="k-Grid">
-          <div class="k-Grid__col--12 k-Grid__col--4@m">
-            <ul class="k-LinkList">
-              <li class="k-LinkList__item">
-                <a class="k-LinkList__link" href="#">Emprunter</a>
-              </li>
-              <li class="k-LinkList__item">
-                <a class="k-LinkList__link" href="#">Comment ça marche&nbsp;?</a>
-              </li>
-              <li class="k-LinkList__item">
-                <a class="k-LinkList__link" href="#">CGU</a>
-              </li>
-            </ul>
-          </div>
-          <div class="k-Grid__col--12 k-Grid__col--4@m">
-            <ul class="k-LinkList">
-              <li class="k-LinkList__item">
-                <a class="k-LinkList__link" href="#">Collectes publiques</a>
-              </li>
-              <li class="k-LinkList__item">
-                <a class="k-LinkList__link" href="#">Sélection de projets</a>
-              </li>
-              <li class="k-LinkList__item">
-                <a class="k-LinkList__link" href="#">La méthode</a>
-              </li>
-              <li class="k-LinkList__item">
-                <a class="k-LinkList__link" href="#">Nos statistiques</a>
-              </li>
-            </ul>
-          </div>
-          <div class="k-Grid__col--12 k-Grid__col--4@m">
-            <ul class="k-LinkList">
-              <li class="k-LinkList__item">
-                <a class="k-LinkList__link" href="#">Presse</a>
-              </li>
-              <li class="k-LinkList__item">
-                <a class="k-LinkList__link" href="#">Contact</a>
-              </li>
-              <li class="k-LinkList__item">
-                <a class="k-LinkList__link" href="#">Forum</a>
-              </li>
-              <li class="k-LinkList__item">
-                <a class="k-LinkList__link" href="#">L'équipe</a>
-              </li>
-            </ul>
-          </div>
-        </div>
+        <nav class="k-Footer__nav__container">
+          <ul class="k-Footer__nav__links k-LinkList">
+            <li class="k-LinkList__item">
+              <a class="k-LinkList__link" href="#">Emprunter</a>
+            </li>
+            <li class="k-LinkList__item">
+              <a class="k-LinkList__link" href="#">Comment ça marche&nbsp;?</a>
+            </li>
+            <li class="k-LinkList__item">
+              <a class="k-LinkList__link" href="#">CGU</a>
+            </li>
+          </ul>
+          <ul class="k-Footer__nav__links k-LinkList">
+            <li class="k-LinkList__item">
+              <a class="k-LinkList__link" href="#">Collectes publiques</a>
+            </li>
+            <li class="k-LinkList__item">
+              <a class="k-LinkList__link" href="#">Sélection de projets</a>
+            </li>
+            <li class="k-LinkList__item">
+              <a class="k-LinkList__link" href="#">La méthode</a>
+            </li>
+            <li class="k-LinkList__item">
+              <a class="k-LinkList__link" href="#">Nos statistiques</a>
+            </li>
+          </ul>
+          <ul class="k-Footer__nav__links k-LinkList">
+            <li class="k-LinkList__item">
+              <a class="k-LinkList__link" href="#">Presse</a>
+            </li>
+            <li class="k-LinkList__item">
+              <a class="k-LinkList__link" href="#">Contact</a>
+            </li>
+            <li class="k-LinkList__item">
+              <a class="k-LinkList__link" href="#">Forum</a>
+            </li>
+            <li class="k-LinkList__item">
+              <a class="k-LinkList__link" href="#">L'équipe</a>
+            </li>
+          </ul>
+        </nav>
       </div>
+
       <div class="k-Footer__actions">
         <%= react_component('SelectWithState', props: {
               className: 'k-Footer__actions__select',
