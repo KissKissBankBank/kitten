@@ -116,11 +116,18 @@
   }
 
   .k-Footer__logo__img {
-    margin-right: 1rem;
-    min-height: 4rem;
+    // minimum height and aligns the logos vertically
+    line-height: 4rem;
+    margin-bottom: 1rem;
 
-    > img {
+    > img,
+    > svg {
       vertical-align: middle;
+    }
+
+    @include k-media-min('l') {
+      margin-bottom: 0;
+      margin-right: 1rem;
     }
   }
 
