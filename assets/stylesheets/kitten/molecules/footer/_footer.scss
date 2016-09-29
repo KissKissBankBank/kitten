@@ -15,10 +15,6 @@
 ///     <div class="k-Footer__copyright">…</div>
 ///   </div>
 @mixin k-Footer {
-  $s-min-width: map-get-deep($k-media-queries, ('s', 'min-width'));
-  $m-min-width: map-get-deep($k-media-queries, ('m', 'min-width'));
-  $l-min-width: map-get-deep($k-media-queries, ('l', 'min-width'));
-
   .k-Footer {
     @include k-grid;
   }
@@ -30,12 +26,12 @@
     @include k-grid-col(12);
     text-align: center;
 
-    @media (min-width: $s-min-width) {
+    @include k-media-min('s') {
       @include k-grid-col(4);
       @include k-grid-offset(4);
     }
 
-    @media (min-width: $l-min-width) {
+    @include k-media-min('l') {
       @include k-grid-col(2);
       @include k-grid-offset(0);
       text-align: left;
@@ -46,7 +42,7 @@
     @include k-grid-col(12);
     text-align: center;
 
-    @media (min-width: $l-min-width) {
+    @include k-media-min('l') {
       @include k-grid-col(6);
       @include k-grid-offset(1);
       text-align: left;
@@ -64,7 +60,7 @@
     @include k-grid-col(4);
     @include k-grid-offset(4);
 
-    @media (min-width: $l-min-width) {
+    @include k-media-min('l') {
       @include k-grid-col(2);
       @include k-grid-offset(1);
     }
@@ -76,7 +72,7 @@
     text-align: center;
 
     @include k-grid-col(12);
-    @media (min-width: $l-min-width) {
+    @include k-media-min('l') {
       @include k-grid-col(8);
     }
 
@@ -90,7 +86,7 @@
 
   .k-Footer__logo {
     @include k-grid-col(6);
-    @media (min-width: $l-min-width) {
+    @include k-media-min('l') {
       display: flex;
       text-align: left;
     }
@@ -107,7 +103,7 @@
     @include k-typographyFontSize(-1);
 
     @include k-grid-col(12);
-    @media (min-width: $l-min-width) {
+    @include k-media-min('l') {
       @include k-grid-col(4);
       text-align: right;
     }
