@@ -77,3 +77,48 @@
   border-radius: 2px;
   background: #4a84ff;
 }
+
+// Show the name of the current breakpoint
+
+.karl-OverBreakpoint {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+
+  width: 2em;
+  height: 1.25em;
+  padding: .25em;
+  line-height: 1.25;
+
+  background: rgba(black, .1);
+  border-bottom-right-radius: .25rem;
+
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: rgba(black, .5);
+}
+
+.karl-OverBreakpoint__query {
+  display: none;
+}
+
+.karl-OverBreakpoint__query--xxs {
+  @include k-media-within('xxs') { display: block; }
+}
+.karl-OverBreakpoint__query--xs {
+  @include k-media-within('xs') { display: block; }
+}
+.karl-OverBreakpoint__query--s {
+  @include k-media-within('s') { display: block; }
+}
+.karl-OverBreakpoint__query--m {
+  @include k-media-within('m') { display: block; }
+}
+.karl-OverBreakpoint__query--l {
+  @include k-media-within('l') { display: block; }
+}
+.karl-OverBreakpoint__query--xl {
+  @include k-media-within('xl') { display: block; }
+}
