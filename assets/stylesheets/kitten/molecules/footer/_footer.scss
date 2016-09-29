@@ -78,6 +78,7 @@
     margin-bottom: 1rem;
 
     @include k-grid-col(12);
+
     @include k-media-min('l') {
       @include k-grid-col(8);
     }
@@ -91,7 +92,12 @@
   }
 
   .k-Footer__logo {
-    @include k-grid-col(6);
+    @include k-grid-col(12);
+
+    @include k-media-min('s') {
+      @include k-grid-col(6);
+    }
+
     @include k-media-min('l') {
       display: flex;
       text-align: left;
