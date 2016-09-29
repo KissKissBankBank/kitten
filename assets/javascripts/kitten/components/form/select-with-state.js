@@ -22,14 +22,16 @@ class SelectWithState extends React.Component {
   }
 
   render() {
+    const { _value, _onChange, className, ...other } = this.props
+
     return (
-      <div className="k-Select">
+      <div className={ classNames("k-Select", className) }>
         <Select clearable={ false }
                 searchable={ false }
                 multi={ false }
-                { ...this.props }
                 value={ this.state.value }
-                onChange={ this.handleChange } />
+                onChange={ this.handleChange }
+                { ...other } />
       </div>
     )
   }
