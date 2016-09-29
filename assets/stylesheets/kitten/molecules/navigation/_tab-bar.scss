@@ -53,8 +53,6 @@
     $z-index: k-number-definition(map-get($tabbar, 'z-index'));
     $border-width: 1px;
 
-    .k-TabBar {}
-
     .k-TabBar__nav {
       display: flex;
       align-items: center;
