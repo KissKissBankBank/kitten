@@ -40,13 +40,8 @@ class Dropdown extends React.Component {
   // Component methods
 
   getReferenceElement() {
-    if (typeof(this.props.positionedWith) == 'object') {
+    if (typeof(this.props.positionedWith()) == 'object') {
       return this.props.positionedWith()
-    }
-
-    // TODO: remove props.positionedWith
-    if (this.props.positionedWith == 'parent') {
-      return this.refs.dropdown.parentNode
     }
 
     return this.refs.dropdown
