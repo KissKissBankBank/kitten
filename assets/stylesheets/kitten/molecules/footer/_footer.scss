@@ -8,7 +8,7 @@
 ///
 /// @example html
 ///   <div class="k-Footer">
-///     <div class="k-Footer__app">…</div>
+///     <div class="k-Footer__brand">…</div>
 ///     <div class="k-Footer__nav">…</div>
 ///     <div class="k-Footer__actions">…</div>
 ///     <div class="k-Footer__logos">…</div>
@@ -23,7 +23,7 @@
     @include k-grid;
   }
 
-  .k-Footer__app {
+  .k-Footer__brand {
     @include k-typographyFont('source-sans-light');
     @include k-typographyFontSize(-1);
 
