@@ -59,8 +59,7 @@
   .k-Footer__actions {
     margin-top: 1rem;
 
-    @include k-grid-col(4);
-    @include k-grid-offset(4);
+    @include k-grid-col(12);
 
     @include k-media-min('l') {
       @include k-grid-col(2);
@@ -69,7 +68,7 @@
   }
 
   .k-Footer__actions__select {
-    min-width: 10rem;
+    margin: 0 auto;
     max-width: 16rem;
     text-align: left;
   }
