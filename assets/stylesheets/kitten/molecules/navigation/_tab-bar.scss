@@ -99,24 +99,20 @@
     }
 
     .k-TabBar__item--thinGutters {
-      padding-left: k-px-to-rem(12px);
-      padding-right: k-px-to-rem(12px);
+      padding-left: k-px-to-rem(6px);
+      padding-right: k-px-to-rem(6px);
 
-      @include k-media-xs {
-        padding-left: k-px-to-rem(6px);
-        padding-right: k-px-to-rem(6px);
+      @include k-media-min('xs') {
+        padding-left: k-px-to-rem(12px);
+        padding-right: k-px-to-rem(12px);
       }
     }
 
     .k-TabBar__responsive {
-      display: none;
+      display: flex;
 
-      @include k-media-sm {
-        display: flex;
-      }
-
-      @include k-media-xs {
-        display: flex;
+      @include k-media-min('m') {
+        display: none;
       }
     }
   }
