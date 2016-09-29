@@ -7,8 +7,12 @@
 ///
 /// @example html
 ///   <ul class="k-LinkList">
-///     <li><a href="#" class="k-LinkList__link">Link A</a></li>
-///     <li><a href="#" class="k-LinkList__link">Link B</a></li>
+///     <li class="k-LinkList__item">
+///       <a class="k-LinkList__link" href="#">Link A</a>
+///      </li>
+///     <li class="k-LinkList__item">
+///       <a class="k-LinkList__link" href="#">Link B</a>
+///      </li>
 ///   </ul>
 @mixin k-LinkList {
   .k-LinkList {
@@ -17,8 +21,8 @@
     padding: 0;
   }
 
-  .k-LinkList > * {
-    margin: .6rem 0;
+  .k-LinkList__item {
+    margin: k-px-to-rem(10px) 0;
   }
 
   .k-LinkList__link {
