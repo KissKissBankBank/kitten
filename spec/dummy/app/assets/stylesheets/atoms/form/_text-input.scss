@@ -2,7 +2,7 @@
 
 @include k-TextInput((
   font: 'source-sans',
-  font-size: -2,
+  font-size: -1,
   colors: (
     base: (
       color: #333,
@@ -14,7 +14,7 @@
     ),
     disabled: (
       color: #fff,
-      border: #d8d8d8,
+      border: #fff,
       background: #d8d8d8,
     ),
     is-valid: (
