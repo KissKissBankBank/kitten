@@ -18,7 +18,7 @@ New features:
 - Add branding section on styleguide.
 - Add pages that serve as full-page previews for tests in the style guide.
 - Add modification Text-input and add new Text-input with button and unit.
-- ADD new Checkbox atom.
+- Add new Checkbox atom.
 
 Fixes:
 - Computes position of `k-UserMenu` in `header` organism.
