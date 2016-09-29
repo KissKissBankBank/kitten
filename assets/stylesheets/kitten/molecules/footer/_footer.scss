@@ -46,8 +46,7 @@
     @include k-grid-col(12);
 
     @include k-media-min('l') {
-      @include k-grid-col(6);
-      @include k-grid-offset(1);
+      @include k-grid-col(8);
       text-align: left;
     }
   }
@@ -60,7 +59,7 @@
 
     @include k-media-min('l') {
       @include k-grid-col(2);
-      @include k-grid-offset(1);
+      @include k-grid-offset(0);
     }
   }
 
@@ -112,7 +111,6 @@
   }
 
   .k-Footer__logo__img {
-    flex: 1;
     margin-right: 1rem;
     min-height: 4rem;
 
