@@ -4,24 +4,24 @@
   body { background: white; }
 </style>
 
-<div class="k-Hero k-Hero--onDark" style="background: #4a84ff">
-  <div class="k-Hero__container">
-    <div class="k-Hero__text">
-      <!-- TODO <h1 class="k-Hero__title">Petits pêts entre amis</h1> -->
-      <h1 class="k-Hero__title">Petits prêts entre amis</h1>
-      <p class="k-Hero__subtitle">Vos amis vous avancent de l’argent.</p>
-      <p class="k-Hero__subtitle">Vous les remboursez sans intérêt et sans prise de tête grâce à hellomerci.</p>
-    </div>
-    <div class="k-Hero__action">
-      <div class="k-Card k-Card--light">
-        <form id="loan-simulator">
-          <%= react_component('KarlLoanSimulator') %>
-        </form>
+<div class="k-Row" style="background: #4a84ff">
+  <div class="k-Row__content">
+
+    <div class="k-Hero k-Hero--onDark">
+      <div class="k-Hero__text">
+        <h1 class="k-Hero__title">Petits pêts entre amis</h1>
+        <p class="k-Hero__subtitle">Vos amis vous avancent de l’argent.</p>
+        <p class="k-Hero__subtitle">Vous les remboursez sans intérêt et sans prise de tête.</p>
       </div>
-      <p>
-        &nbsp;
-      </p>
+      <div class="k-Hero__action">
+        <div class="k-Card k-Card--light">
+          <form id="loan-simulator">
+            <%= react_component('KarlLoanSimulator') %>
+          </form>
+        </div>
+      </div>
     </div>
+
   </div>
 </div>
 

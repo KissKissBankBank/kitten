@@ -27,58 +27,71 @@
   @include k-with-module('k-Hero') {
     $font: k-map-fetch($hero, 'font');
 
-    $two-columns-breakpoint: 60em;
-
     .k-Hero {
-      // Apps will want to override with a custom background image and color
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
+      text-align: center;
 
-    .k-Hero__container {
-      @include k-container;
-
-      @media (min-width: $two-columns-breakpoint) {
-        display: flex;
+      @include k-media-min('l') {
+        @include k-grid;
+        text-align: left;
       }
-
-      align-items: center;
     }
 
     .k-Hero__text {
-      flex: 1;
-      margin: 0 gutter();
+      margin: k-px-to-rem(40px) 0;
 
-      @media (max-width: $two-columns-breakpoint) {
-        text-align: center;
+      @include k-media-min('s') {
+        margin-top: k-px-to-rem(62px);
+      }
+
+      @include k-media-min('l') {
+        @include k-grid-col(7);
+        padding-top: k-px-to-rem(107px);
+      }
+
+      @include k-media-min('xl') {
+        @include k-grid-col(6);
+        @include k-grid-offset(1);
       }
     }
-    .k-Hero__action {
-      box-sizing: border-box;
-      margin: 0 gutter();
-      padding-top: 3rem;
 
-      @media (min-width: $two-columns-breakpoint) {
-        width: span(5 of 12);
+    .k-Hero__action {
+      margin: k-px-to-rem(40px) 0;
+      text-align: left;
+
+      @include k-media-min('s') {
+        margin-bottom: k-px-to-rem(80px);
+      }
+
+      @include k-media-min('l') {
+        @include k-grid-col(5);
+      }
+
+      @include k-media-min('xl') {
+        @include k-grid-col(4);
       }
     }
 
     .k-Hero__title {
       margin: 0;
-      @include k-typographyFontSize(10);
       @include k-typographyFont($font);
+      @include k-typographyFontSize(6);
+
+      @include k-media-min('s') {
+        @include k-typographyFontSize(10);
+      }
     }
 
     .k-Hero__subtitle {
-      margin: .5rem 0;
-      @include k-typographyFontSize(2);
+      margin: 0;
       @include k-typographyFont($font);
+      @include k-typographyFontSize(0);
+
+      @include k-media-min('s') {
+        @include k-typographyFontSize(4);
+      }
     }
 
     .k-Hero--onDark {
-      // Apps will want to override the background color and image
-      background-color: #333;
-
       color: #fff;
 
       a {
