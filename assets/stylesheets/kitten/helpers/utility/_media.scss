@@ -17,7 +17,7 @@
 ///     }
 ///   }
 
-@include k-media-min($query) {
+@mixin k-media-min($query) {
   $min-width: map-get-deep($k-media-queries, ($query, 'min-width'));
   @media (min-width: $min-width) {
     @content;
