@@ -40,6 +40,11 @@
 
   .k-Footer__brand__text {
     max-width: 12rem;
+    margin: 1rem auto; // text is centered
+
+    @include k-media-min('l') {
+      margin-left: 0; // text is left-aligned
+    }
   }
 
   .k-Footer__nav {
