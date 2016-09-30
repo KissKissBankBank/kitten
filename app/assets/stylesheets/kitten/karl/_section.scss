@@ -53,6 +53,11 @@
   line-height: 1.4;
 }
 
+.karl-Example__column {
+  justify-content: space-between;
+  flex-direction: column;
+}
+
 @media (max-width: 1100px) {
   .karl-Example__description {
     width: 90%;
