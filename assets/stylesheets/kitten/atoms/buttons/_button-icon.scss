@@ -68,7 +68,7 @@
 @mixin k-ButtonIcon($button-icon) {
   @include k-with-module('k-ButtonIcon: $button-icon') {
     $button-icon-default: map-get-deep($button-icon, ('default'));
-    $button-icon-light: map-get-deep($button-icon, ('light'));
+    $button-icon-primary: map-get-deep($button-icon, ('primary'));
     $button-icon-facebook: map-get-deep($button-icon, ('facebook'));
     $button-icon-twitter: map-get-deep($button-icon, ('twitter'));
     $button-icon-linkedin: map-get-deep($button-icon, ('linkedin'));
@@ -109,13 +109,13 @@
       }
     }
 
-    .k-ButtonIcon--light {
-      @include k-buttonBase($button-icon-light);
+    .k-ButtonIcon--primary {
+      @include k-buttonBase($button-icon-primary);
 
       .k-ButtonIcon__svg {
         @include k-buttonSvg(
-          $button-icon-light,
-          'k-ButtonIcon--light',
+          $button-icon-primary,
+          'k-ButtonIcon--primary',
           'k-ButtonIcon__svg__stroke'
         );
       }

@@ -12,28 +12,33 @@
 /// @example scss - Usage
 ///   @include k-Button((
 ///     font: 'source-sans-semi-bold-uppercase',
-///      colors: (
-///        light: (
-///          color: #333,
-///          background-color: #fff,
-///          border: #d8d8d8,
-///        ),
-///        focus-light: (
-///          color: #fff,
-///          background-color: #4a84ff,
-///          border-color: transparent,
-///        ),
-///        hover-light: (
-///          color: #fff,
-///          background-color: #4a84ff,
-///          border-color: transparent,
-///        ),
-///        active-light: (
-///          color: #fff,
-///          background-color: #4a84ff,
-///          border-color: transparent,
-///        )
-///      )
+///       colors: (
+///         primary: (
+///           color: #fff,
+///           background-color: #4a84ff,
+///           border-color: #4a84ff,
+///         ),
+///         focus: (
+///           color: #fff,
+///           background-color: #3b75f0,
+///           border-color: #3b75f0,
+///         ),
+///         hover: (
+///           color: #fff,
+///           background-color: #3b75f0,
+///           border-color: #3b75f0,
+///         ),
+///         active: (
+///           color: #fff,
+///           background-color: #2c66e1,
+///           border-color: #2c66e1,
+///         ),
+///         disabled: (
+///           color: #fff,
+///           background-color: #d8d8d8,
+///           border-color: #d8d8d8,
+///         )
+///       )
 ///   ));
 
 @mixin k-Button($button) {
@@ -61,37 +66,31 @@
 
     $font: k-string-definition(k-map-fetch($button, 'font'));
 
-    // light
-    $light-color: k-color-definition(
-      k-map-fetch($button, ('colors', 'light', 'color')));
-    $light-background-color: k-color-definition(
-      k-map-fetch($button, ('colors', 'light', 'background-color')));
-    $light-border-color: k-color-definition(
-      k-map-fetch($button, ('colors', 'light', 'border-color')));
+    $colors: k-map-fetch($button, 'colors');
 
-    // focus light
-    $focus-light-color: k-color-definition(
-      k-map-fetch($button, ('colors', 'focus-light', 'color')));
-    $focus-light-background-color: k-color-definition(
-      k-map-fetch($button, ('colors', 'focus-light', 'background-color')));
-    $focus-light-border-color: k-color-definition(
-      k-map-fetch($button, ('colors', 'focus-light', 'border-color')));
+    // primary
+    $primary: k-colors-definition(k-map-fetch($colors, 'primary'));
+    $primary-color: map-get($primary, 'color');
+    $primary-background-color: map-get($primary, 'background-color');
+    $primary-border-color: map-get($primary, 'border-color');
 
-    // hover light
-    $hover-light-color: k-color-definition(
-      k-map-fetch($button, ('colors', 'hover-light', 'color')));
-    $hover-light-background-color: k-color-definition(
-      k-map-fetch($button, ('colors', 'hover-light', 'background-color')));
-    $hover-light-border-color: k-color-definition(
-      k-map-fetch($button, ('colors', 'hover-light', 'border-color')));
+    // focus primary
+    $focus: k-colors-definition(k-map-fetch($colors, 'focus-primary'));
+    $focus-primary-color: map-get($focus, 'color');
+    $focus-primary-background-color: map-get($focus, 'background-color');
+    $focus-primary-border-color: map-get($focus, 'border-color');
 
-    // active light
-    $active-light-color: k-color-definition(
-      k-map-fetch($button, ('colors', 'active-light', 'color')));
-    $active-light-background-color: k-color-definition(
-      k-map-fetch($button, ('colors', 'active-light', 'background-color')));
-    $active-light-border-color: k-color-definition(
-      k-map-fetch($button, ('colors', 'active-light', 'border-color')));
+    // hover primary
+    $hover: k-colors-definition(k-map-fetch($colors, 'hover-primary'));
+    $hover-primary-color: map-get($hover, 'color');
+    $hover-primary-background-color: map-get($hover, 'background-color');
+    $hover-primary-border-color: map-get($hover, 'border-color');
+
+    // active primary
+    $active: k-colors-definition(k-map-fetch($colors, 'active-primary'));
+    $active-primary-color: map-get($active, 'color');
+    $active-primary-background-color: map-get($active, 'background-color');
+    $active-primary-border-color: map-get($active, 'border-color');
 
     .k-Button {
       @include k-buttonBase($button);
@@ -106,27 +105,27 @@
       text-align: center;
     }
 
-    .k-Button--light {
-      color: $light-color;
-      background-color: $light-background-color;
-      border-color: $light-border-color;
+    .k-Button--primary {
+      color: $primary-color;
+      background-color: $primary-background-color;
+      border-color: $primary-border-color;
 
       &:focus {
-        color: $focus-light-color;
-        background-color: $focus-light-background-color;
-        border-color: $focus-light-border-color;
+        color: $focus-primary-color;
+        background-color: $focus-primary-background-color;
+        border-color: $focus-primary-border-color;
       }
 
       &:hover {
-        color: $hover-light-color;
-        background-color: $hover-light-background-color;
-        border-color: $hover-light-border-color;
+        color: $hover-primary-color;
+        background-color: $hover-primary-background-color;
+        border-color: $hover-primary-border-color;
       }
 
       &:active {
-        color: $active-light-color;
-        background-color: $active-light-background-color;
-        border-color: $active-light-border-color;
+        color: $active-primary-color;
+        background-color: $active-primary-background-color;
+        border-color: $active-primary-border-color;
       }
     }
 

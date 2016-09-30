@@ -4,35 +4,6 @@
   default: (
     colors: (
       base: (
-        color: #fff,
-        background-color: #4a84ff,
-        border-color: #4a84ff,
-      ),
-      focus: (
-        color: #fff,
-        background-color: #3b75f0,
-        border-color: #3b75f0,
-      ),
-      hover: (
-        color: #fff,
-        background-color: #3b75f0,
-        border-color: #3b75f0,
-      ),
-      active: (
-        color: #fff,
-        background-color: #2c66e1,
-        border-color: #2c66e1,
-      ),
-      disabled: (
-        color: #fff,
-        background-color: #d8d8d8,
-        border-color: #d8d8d8,
-      )
-    )
-  ),
-  light: (
-    colors: (
-      base: (
         color: #333,
         background-color: #fff,
         border-color: #d8d8d8,
@@ -46,6 +17,35 @@
         color: #4a84ff,
         background-color: #fff,
         border-color: #cadbfd,
+      ),
+      active: (
+        color: #fff,
+        background-color: #2c66e1,
+        border-color: #2c66e1,
+      ),
+      disabled: (
+        color: #fff,
+        background-color: #d8d8d8,
+        border-color: #d8d8d8,
+      )
+    )
+  ),
+  primary: (
+    colors: (
+      base: (
+        color: #fff,
+        background-color: #4a84ff,
+        border-color: #4a84ff,
+      ),
+      focus: (
+        color: #fff,
+        background-color: #3b75f0,
+        border-color: #3b75f0,
+      ),
+      hover: (
+        color: #fff,
+        background-color: #3b75f0,
+        border-color: #3b75f0,
       ),
       active: (
         color: #fff,
