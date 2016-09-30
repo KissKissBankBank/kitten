@@ -17,31 +17,62 @@
 ///
 ///   $button-icon: (
 ///     colors: (
+///       base: (
+///         color: #fff,
+///         background-color: #4a84ff,
+///         border-color: #4a84ff,
+///       ),
 ///       light: (
 ///         color: #333,
 ///         background-color: #fff,
 ///         border-color: #d8d8d8,
 ///       ),
-///       focus-light: (
-///         color: #4a84ff,
-///         background-color: #fff,
-///         border-color: #cadbfd,
+///       focus: (
+///         color: #fff,
+///         background-color: #3b75f0,
+///         border-color: #3b75f0,
+///         light: (
+///           color: #4a84ff,
+///           background-color: #fff,
+///           border-color: #cadbfd,
+///         ),
 ///       ),
-///       hover-light: (
-///         color: #4a84ff,
-///         background-color: #fff,
-///         border-color: #cadbfd,
+///       hover: (
+///         color: #fff,
+///         background-color: #3b75f0,
+///         border-color: #3b75f0,
+///         light: (
+///           color: #4a84ff,
+///           background-color: #fff,
+///           border-color: #cadbfd,
+///         ),
 ///       ),
-///       active-light: (
+///       active: (
 ///         color: #fff,
 ///         background-color: #2c66e1,
 ///         border-color: #2c66e1,
+///         light: (
+///           color: #fff,
+///           background-color: #2c66e1,
+///           border-color: #2c66e1,
+///         ),
+///       ),
+///       disabled: (
+///         color: #fff,
+///         background-color: #d8d8d8,
+///         border-color: #d8d8d8,
 ///       )
 ///     )
 ///   )
 
 @mixin k-ButtonIcon($button-icon) {
   @include k-with-module('k-ButtonIcon: $button-icon') {
+    $button-icon-default: map-get-deep($button-icon, ('default'));
+    $button-icon-light: map-get-deep($button-icon, ('light'));
+    $button-icon-facebook: map-get-deep($button-icon, ('facebook'));
+    $button-icon-twitter: map-get-deep($button-icon, ('twitter'));
+    $button-icon-linkedin: map-get-deep($button-icon, ('linkedin'));
+
     $border-size: 1px;
 
     $button-size-medium: 40px - ($border-size * 2);
@@ -52,138 +83,82 @@
     $icon-width: k-px-to-rem(12px);
     $icon-height: k-px-to-rem(14px);
 
-    // Get data for SVG.
-
-    // light
-    $light-color: map-get-deep($button-icon, ('colors', 'light', 'color'));
-    $light-background-color: map-get-deep(
-      $button-icon, ('colors', 'light', 'background-color'));
-    $light-border-color: map-get-deep(
-      $button-icon, ('colors', 'light', 'border-color'));
-
-    // focus ligth
-    $focus-light-color: map-get-deep(
-      $button-icon, ('colors', 'focus-light', 'color'));
-    $focus-light-background-color: map-get-deep(
-      $button-icon, ('colors', 'focus-light', 'background-color'));
-    $focus-light-border-color: map-get-deep(
-      $button-icon, ('colors', 'focus-light', 'border-color'));
-
-    // hover light
-    $hover-light-color: map-get-deep(
-      $button-icon, ('colors', 'hover-light', 'color'));
-    $hover-light-background-color: map-get-deep(
-      $button-icon, ('colors', 'hover-light', 'background-color'));
-    $hover-light-border-color: map-get-deep(
-      $button-icon, ('colors', 'hover-light', 'border-color'));
-
-    // active light
-    $active-light-color: map-get-deep(
-      $button-icon, ('colors', 'active-light', 'color'));
-    $active-light-background-color: map-get-deep(
-      $button-icon, ('colors', 'active-light', 'background-color'));
-    $active-light-border-color: map-get-deep(
-      $button-icon, ('colors', 'active-light', 'border-color'));
-
     $transition-speed: .2s;
 
     .k-ButtonIcon {
-      @include k-buttonBase($button-icon);
+      @include k-buttonBase($button-icon-default);
       @include k-buttonRounded($button-size, $icon-width, $icon-height);
     }
 
-    .k-ButtonIcon__svg,
-    .k-ButtonIcon--light__svg {
+    .k-ButtonIcon__svg {
+      @include k-buttonSvg(
+        $button-icon-default,
+        'k-ButtonIcon',
+        'k-ButtonIcon__svg__stroke'
+      );
+
       display: block;
       margin: 0;
       padding: 0;
       width: $icon-width;
       height: $icon-height;
       transition: fill $transition-speed;
+
+      .k-ButtonIcon__svg__stroke {
+        transition: stroke $transition-speed;
+      }
     }
 
     .k-ButtonIcon--light {
-      fill: $light-color;
-      background-color: $light-background-color;
-      border-color: $light-border-color;
+      @include k-buttonBase($button-icon-light);
 
-      &:hover {
-        @include k-buttonBorder($hover-light-border-color);
-
-        background-color: $hover-light-background-color;
-        color: $hover-light-color;
-      }
-
-      &:focus {
-        @if map-has-key($button-icon, 'focus-light') {
-          @include k-buttonBorder($focus-light-border-color);
-
-          background-color: $focus-light-background-color;
-          color: $focus-light-color;
-        }
-        @else {
-          @include k-buttonBorder($hover-light-border-color);
-
-          background-color: $hover-light-background-color;
-          color: $hover-light-color;
-        }
-      }
-
-      &:active {
-        @include k-buttonBorder($active-light-border-color);
-
-        background-color: $active-light-background-color;
-        color: $active-light-color;
+      .k-ButtonIcon__svg {
+        @include k-buttonSvg(
+          $button-icon-light,
+          'k-ButtonIcon--light',
+          'k-ButtonIcon__svg__stroke'
+        );
       }
     }
 
-    .k-ButtonIcon--light__svg {
-      transition: fill $transition-speed;
-      fill: $light-color;
+    .k-ButtonIcon--facebook {
+      @include k-buttonBase($button-icon-facebook);
 
-      .k-ButtonIcon:hover & {
-        fill: $hover-light-color;
-      }
-
-      .k-ButtonIcon:focus & {
-        @if $focus-light-color {
-          fill: $focus-light-color;
-        }
-        @else {
-          fill: $hover-light-color;
-        }
-      }
-
-      .k-ButtonIcon:active & {
-        fill: $active-light-color;
+      .k-ButtonIcon__svg {
+        @include k-buttonSvg(
+          $button-icon-facebook,
+          'k-ButtonIcon--facebook',
+          'k-ButtonIcon__svg__stroke'
+        );
       }
     }
 
-    .k-ButtonIcon--light__svg__stroke {
-      stroke: $light-color;
-      transition: stroke $transition-speed;
+    .k-ButtonIcon--twitter {
+      @include k-buttonBase($button-icon-twitter);
 
-      .k-ButtonIcon:hover & {
-        stroke: $hover-light-color;
+      .k-ButtonIcon__svg {
+        @include k-buttonSvg(
+          $button-icon-twitter,
+          'k-ButtonIcon--twitter',
+          'k-ButtonIcon__svg__stroke'
+        );
       }
+    }
 
-      .k-ButtonIcon:focus & {
-        @if $focus-light-color {
-          stroke: $focus-light-color;
-        }
-        @else {
-          stroke: $hover-light-color;
-        }
-      }
+    .k-ButtonIcon--linkedin {
+      @include k-buttonBase($button-icon-linkedin);
 
-      .k-ButtonIcon:active & {
-        stroke: $active-light-color;
+      .k-ButtonIcon__svg {
+        @include k-buttonSvg(
+          $button-icon-linkedin,
+          'k-ButtonIcon--linkedin',
+          'k-ButtonIcon__svg__stroke'
+        );
       }
     }
 
     .k-ButtonIcon--medium {
-      @include k-buttonRounded($button-size-medium,
-        $icon-width, $icon-height);
+      @include k-buttonRounded($button-size-medium, $icon-width, $icon-height);
 
       .k-ButtonIcon__svg {
         width: $icon-width;
@@ -192,8 +167,7 @@
     }
 
     .k-ButtonIcon--big {
-      @include k-buttonRounded($button-size-big,
-        $icon-width, $icon-height);
+      @include k-buttonRounded($button-size-big, $icon-width, $icon-height);
     }
 
     .k-ButtonIcon__heart {

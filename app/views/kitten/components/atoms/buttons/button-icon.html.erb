@@ -1,6 +1,6 @@
-<div class="k-Button--column">
+<div class="karl-Example__column">
   <%= example "Button with icon" do %>
-    <button class="k-ButtonIcon" title="Like">
+    <button class="k-ButtonIcon">
       <svg class='k-ButtonIcon__svg' viewBox="0 0 14 12"
           xmlns="http://www.w3.org/2000/svg"><path d="M7 2.927C6.71 1.267
           5.262.007 3.52.01 1.574.013-.003 1.595 0 3.543 0 4.485.37 5.34.97
@@ -11,10 +11,10 @@
   <% end %>
 </div>
 
-<div class="k-Button--column">
-  <%= example "Button light with icon" do %>
-    <button class="k-ButtonIcon k-ButtonIcon--light" title="Like">
-      <svg class='k-ButtonIcon--light__svg' viewBox="0 0 14 12"
+<div class="karl-Example__column">
+  <%= example "Light button with icon" do %>
+    <button class="k-ButtonIcon k-ButtonIcon--light">
+      <svg class='k-ButtonIcon__svg' viewBox="0 0 14 12"
           xmlns="http://www.w3.org/2000/svg"><path d="M7 2.927C6.71 1.267
           5.262.007 3.52.01 1.574.013-.003 1.595 0 3.543 0 4.485.37 5.34.97
           5.97l.012.014L7.012 12l5.856-5.88c.698-.646 1.134-1.57
@@ -24,37 +24,71 @@
   <% end %>
 </div>
 
-<div class="k-Button--column">
-  <%= example "Medium Button with icon" do %>
-    <button class="k-ButtonIcon k-ButtonIcon--light k-ButtonIcon--medium" title="Like">
-      <svg class='k-ButtonIcon--light__svg' viewBox="0 0 14 12"
-          xmlns="http://www.w3.org/2000/svg"><path d="M7 2.927C6.71 1.267
-          5.262.007 3.52.01 1.574.013-.003 1.595 0 3.543 0 4.485.37 5.34.97
-          5.97l.012.014L7.012 12l5.856-5.88c.698-.646 1.134-1.57
-          1.132-2.597-.002-1.95-1.582-3.525-3.53-3.523C8.73.002 7.284 1.267
-          7 2.927z"/></svg>
-    </button>
-  <% end %>
-
-  <%= example "Big Button with icon" do %>
-    <button class="k-ButtonIcon k-ButtonIcon--light k-ButtonIcon--big" title="Like">
-      <svg class='k-ButtonIcon--light__svg' viewBox="0 0 14 12"
-          xmlns="http://www.w3.org/2000/svg"><path d="M7 2.927C6.71 1.267
-          5.262.007 3.52.01 1.574.013-.003 1.595 0 3.543 0 4.485.37 5.34.97
-          5.97l.012.014L7.012 12l5.856-5.88c.698-.646 1.134-1.57
-          1.132-2.597-.002-1.95-1.582-3.525-3.53-3.523C8.73.002 7.284 1.267
-          7 2.927z"/></svg>
-    </button>
-  <% end %>
-
-  <%= example "Button with icon - Inactive" do %>
-    <button class="k-ButtonIcon" title="Like" disabled="">
+<div class="karl-Example__column">
+  <%= example "Medium light button with icon" do %>
+    <button class="k-ButtonIcon k-ButtonIcon--light k-ButtonIcon--medium">
       <svg class='k-ButtonIcon__svg' viewBox="0 0 14 12"
           xmlns="http://www.w3.org/2000/svg"><path d="M7 2.927C6.71 1.267
           5.262.007 3.52.01 1.574.013-.003 1.595 0 3.543 0 4.485.37 5.34.97
           5.97l.012.014L7.012 12l5.856-5.88c.698-.646 1.134-1.57
           1.132-2.597-.002-1.95-1.582-3.525-3.53-3.523C8.73.002 7.284 1.267
           7 2.927z"/></svg>
+    </button>
+  <% end %>
+
+  <%= example "Big light button with icon" do %>
+    <button class="k-ButtonIcon k-ButtonIcon--light k-ButtonIcon--big">
+      <svg class='k-ButtonIcon__svg' viewBox="0 0 14 12"
+          xmlns="http://www.w3.org/2000/svg"><path d="M7 2.927C6.71 1.267
+          5.262.007 3.52.01 1.574.013-.003 1.595 0 3.543 0 4.485.37 5.34.97
+          5.97l.012.014L7.012 12l5.856-5.88c.698-.646 1.134-1.57
+          1.132-2.597-.002-1.95-1.582-3.525-3.53-3.523C8.73.002 7.284 1.267
+          7 2.927z"/></svg>
+    </button>
+  <% end %>
+
+  <%= example "Disabled button with icon" do %>
+    <button class="k-ButtonIcon" disabled>
+      <svg class='k-ButtonIcon__svg' viewBox="0 0 14 12"
+          xmlns="http://www.w3.org/2000/svg"><path d="M7 2.927C6.71 1.267
+          5.262.007 3.52.01 1.574.013-.003 1.595 0 3.543 0 4.485.37 5.34.97
+          5.97l.012.014L7.012 12l5.856-5.88c.698-.646 1.134-1.57
+          1.132-2.597-.002-1.95-1.582-3.525-3.53-3.523C8.73.002 7.284 1.267
+          7 2.927z"/></svg>
+    </button>
+  <% end %>
+</div>
+
+<div class="karl-Example__column">
+  <%= example "Button social" do %>
+    <button class="k-ButtonIcon k-ButtonIcon--facebook k-ButtonIcon--medium">
+      <svg class='k-ButtonIcon__svg' xmlns="http://www.w3.org/2000/svg"
+           viewBox="-30 -30 160 160"><path d="M54.293
+           79.97v-26.278h8.82l1.32-10.241h-10.14v-6.539c0-2.964.823-4.985 5.075-4.985l5.423-.002v-9.159c-.938-.125-4.156-.404-7.902-.404-7.818
+           0-13.171 4.772-13.171 13.536v7.553h-8.842v10.241h8.842v26.278h10.575z" />
+      </svg>
+    </button>
+    <button class="k-ButtonIcon k-ButtonIcon--twitter k-ButtonIcon--medium">
+      <svg class='k-ButtonIcon__svg' xmlns="http://www.w3.org/2000/svg"
+           viewBox="-30 -30 160 160"><path d="M85.712 32.217c-2.445 1.084-5.072
+           1.816-7.83 2.146 2.814-1.687 4.976-4.358 5.994-7.542-2.634 1.562-5.551
+           2.697-8.657 3.308-2.487-2.649-6.029-4.305-9.95-4.305-7.528 0-13.631
+           6.104-13.631 13.632 0 1.068.121 2.109.353
+           3.106-11.33-.569-21.374-5.996-28.097-14.243-1.174 2.014-1.846
+           4.355-1.846 6.853 0 4.73 2.406 8.902 6.064
+           11.347-2.235-.071-4.337-.684-6.175-1.705l-.001.171c0 6.604 4.699
+           12.114 10.935 13.367-1.144.312-2.348.478-3.591.478-.879
+           0-1.732-.085-2.565-.244 1.735 5.415 6.769 9.357 12.734 9.466-4.665
+           3.656-10.543 5.835-16.93 5.835-1.101 0-2.185-.064-3.252-.191 6.033
+           3.868 13.198 6.125 20.896 6.125 25.074 0 38.786-20.771 38.786-38.785
+           0-.591-.014-1.179-.04-1.764 2.665-1.921 4.976-4.322 6.803-7.055z" />
+      </svg>
+    </button>
+    <button class="k-ButtonIcon k-ButtonIcon--linkedin k-ButtonIcon--medium">
+      <svg class='k-ButtonIcon__svg' xmlns="http://www.w3.org/2000/svg"
+           viewBox="-30 -30 160 160"><path d="M54.293 79.97v-26.278h8.82l1.32-10.241h-10.14v-6.539c0-2.964.823-4.985 5.075-4.985l5.423-.002v-9.159c-.938-.125-4.156-.404-7.902-.404-7.818
+           0-13.171 4.772-13.171 13.536v7.553h-8.842v10.241h8.842v26.278h10.575z" />
+      </svg>
     </button>
   <% end %>
 </div>
