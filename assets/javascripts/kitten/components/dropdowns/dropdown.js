@@ -1,9 +1,11 @@
 import React from 'react'
 import classNames from 'classnames'
-import PubSub from 'pubsub-js'
 import DropdownButton from 'kitten/components/dropdowns/dropdown-button'
 import ButtonImageWithTextAndBadge from 'kitten/components/buttons/button-image-with-text-and-badge'
 import domElementHelper from 'kitten/helpers/dom/element-helper'
+import EventEmitter from 'event-emitter'
+
+const emitter = EventEmitter()
 
 class Dropdown extends React.Component {
   constructor(props) {
@@ -14,9 +16,11 @@ class Dropdown extends React.Component {
 
   componentDidMount() {
     const dropdown = this
+
     this.updateReferenceElementHeightState()
 
-    PubSub.subscribe('dropdown:opening:trigger', function(data) {
+    emitter.on('dropdown:opening:trigger', () => {
+      console.log('dropdown:opening:trigger')
       dropdown.setState({ isExpanded: false })
     })
 
@@ -34,7 +38,7 @@ class Dropdown extends React.Component {
       })
     }
 
-    PubSub.unsubscribe('dropdown:opening:trigger')
+    emitter.off('dropdown:opening:trigger')
   }
 
   // Component methods
@@ -104,7 +108,7 @@ class Dropdown extends React.Component {
     event.stopPropagation()
     event.preventDefault()
 
-    PubSub.publishSync('dropdown:opening:trigger', this)
+    emitter.emit('dropdown:opening:trigger', this)
 
     this.updateReferenceElementHeightState()
     this.setState({
