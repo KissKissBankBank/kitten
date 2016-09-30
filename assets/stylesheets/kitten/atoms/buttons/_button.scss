@@ -93,11 +93,6 @@
     $active-light-border-color: k-color-definition(
       k-map-fetch($button, ('colors', 'active-light', 'border-color')));
 
-    .k-Button--column {
-      justify-content: space-between;
-      flex-direction: column;
-    }
-
     .k-Button {
       @include k-buttonBase($button);
       @include k-typographyFontSize($button-step, $button-line-height);
