@@ -21,7 +21,6 @@ class Dropdown extends React.Component {
     this.updateReferenceElementHeightState()
 
     emitter.on('dropdown:opening:trigger', () => {
-      console.log('dropdown:opening:trigger')
       dropdown.setState({ isExpanded: false })
     })
 
@@ -45,7 +44,7 @@ class Dropdown extends React.Component {
   // Component methods
 
   getReferenceElement() {
-    if (typeof(this.props.positionedWith()) == 'object') {
+    if (typeof this.props.positionedWith != 'undefined') {
       return this.props.positionedWith()
     }
 
@@ -64,6 +63,10 @@ class Dropdown extends React.Component {
   updateReferenceElementHeightState() {
     let referenceElementHeight = this.getReferenceElementHeight()
     this.setState({ parentHeight: referenceElementHeight })
+  }
+
+  isSelfReference() {
+    return typeof this.props.positionedWith == 'undefined'
   }
 
   // Elements
@@ -102,7 +105,9 @@ class Dropdown extends React.Component {
   // Component listener callbacks
 
   handleDropdownPosition() {
-    this.updateReferenceElementHeightState()
+    if (domElementHelper.canUseDom()) {
+      this.updateReferenceElementHeightState()
+    }
   }
 
   handleButtonClick(event) {
@@ -231,9 +236,10 @@ class Dropdown extends React.Component {
   }
 
   render() {
+    console.log(this.isSelfReference())
     const dropdownClass = {
       'is-expanded': this.state.isExpanded,
-      'k-Dropdown--asReference': this.props.positionedWith() == 'self',
+      'k-Dropdown--asReference': this.isSelfReference(),
     }
 
     const dropdownClassName = classNames(
@@ -278,14 +284,6 @@ Dropdown.propTypes = {
 }
 
 Dropdown.defaultProps = {
-  // This prop is used to position the dropdown absolutely in relation with
-  // a reference element.
-  // If you use <DOMNode>, make sure that this element has the "position"
-  // property set in its css.
-  // As using DOMNode is anti-pattern, you should avoid it when it is
-  // possible.
-  positionedWith: () => 'self', // 'self' | <DOMNode>
-
   // This prop is used to fetch the correct height of the reference element
   // for the dropdown position.
   positionedWithBorder: true,
