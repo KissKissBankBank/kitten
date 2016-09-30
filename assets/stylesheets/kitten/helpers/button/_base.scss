@@ -136,6 +136,19 @@
   $is-selected-border-color: map-get($is-selected, 'border-color');
   $is-selected-background-color: map-get($is-selected, 'background-color');
 
+  // facebook colors
+  $facebook: k-colors-definition(map-get($colors, 'facebook'));
+  $facebook-color: map-get($facebook, 'color');
+
+  // twitter colors
+  $twitter: k-colors-definition(map-get($colors, 'twitter'));
+  $twitter-color: map-get($twitter, 'color');
+
+  // linkedin colors
+  $linkedin: k-colors-definition(map-get($colors, 'linkedin'));
+  $linkedin-color: map-get($linkedin, 'color');
+
+
   $transition-speed: .2s;
 
   @include k-buttonBrowserFixes;
@@ -196,57 +209,6 @@
 
       background-color: $is-selected-background-color;
       color: $is-selected-color;
-    }
-  }
-
-  .k-ButtonIcon__svg {
-    fill: $base-color;
-
-    .k-ButtonIcon:hover & {
-      fill: $hover-color;
-    }
-
-    .k-ButtonIcon:focus & {
-      @if $focus-color {
-        fill: $focus-color;
-      }
-      @else {
-        fill: $hover-color;
-      }
-    }
-
-    .k-ButtonIcon:active & {
-      fill: $active-color;
-    }
-
-    .k-ButtonIcon:disabled & {
-      fill: $disabled-color;
-    }
-  }
-
-  .k-ButtonIcon__svg__stroke {
-    stroke: $base-color;
-    transition: stroke $transition-speed;
-
-    .k-ButtonIcon:hover & {
-      stroke: $hover-color;
-    }
-
-    .k-ButtonIcon:focus & {
-      @if $focus-color {
-        stroke: $focus-color;
-      }
-      @else {
-        stroke: $hover-color;
-      }
-    }
-
-    .k-ButtonIcon:active & {
-      stroke: $active-color;
-    }
-
-    .k-ButtonIcon:disabled & {
-      stroke: $disabled-color;
     }
   }
 }
