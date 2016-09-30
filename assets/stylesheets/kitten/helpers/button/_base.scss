@@ -139,14 +139,20 @@
   // facebook colors
   $facebook: k-colors-definition(map-get($colors, 'facebook'));
   $facebook-color: map-get($facebook, 'color');
+  $facebook-border-color: map-get($facebook, 'border-color');
+  $facebook-background-color: map-get($facebook, 'background-color');
 
   // twitter colors
   $twitter: k-colors-definition(map-get($colors, 'twitter'));
   $twitter-color: map-get($twitter, 'color');
+  $twitter-border-color: map-get($twitter, 'border-color');
+  $twitter-background-color: map-get($twitter, 'background-color');
 
   // linkedin colors
   $linkedin: k-colors-definition(map-get($colors, 'linkedin'));
   $linkedin-color: map-get($linkedin, 'color');
+  $linkedin-border-color: map-get($linkedin, 'border-color');
+  $linkedin-background-color: map-get($linkedin, 'background-color');
 
 
   $transition-speed: .2s;
