@@ -12,6 +12,7 @@ class Dropdown extends React.Component {
     super(props)
 
     this.state = { isExpanded: false }
+    this.handleDropdownPosition = this.handleDropdownPosition.bind(this)
   }
 
   componentDidMount() {
