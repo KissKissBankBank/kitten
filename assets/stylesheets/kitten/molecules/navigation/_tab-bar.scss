@@ -17,19 +17,21 @@
 ///
 /// @example html
 ///
-///   <ul class="k-TabBar">
-///     <li>
-///       <a class="k-TabBar__item is-selected" href="#">
-///         Link selected
-///       </a>
-///     </li>
-///     <li>
-///       <a class="k-TabBar__item" href="#">
-///         Link
-///       </a>
-///     </li>
-///     …
-///   </ul>
+///   <div class="k-TabBar k-TabBar--responsive is-fixed">
+///     <ul class="k-TabBar__nav">
+///       <li>
+///         <a class="k-TabBar__item is-selected" href="#">
+///           Link selected
+///         </a>
+///       </li>
+///       <li>
+///         <a class="k-TabBar__item" href="#">
+///           Link
+///         </a>
+///       </li>
+///       …
+///     </ul>
+///   </div>
 
 @mixin k-TabBar($tabbar) {
   @include k-with-module('k-TabBar: $tabbar') {
@@ -51,7 +53,7 @@
     $z-index: k-number-definition(map-get($tabbar, 'z-index'));
     $border-width: 1px;
 
-    .k-TabBar {
+    .k-TabBar__nav {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -62,7 +64,7 @@
       padding: 0;
       background: $background-color;
 
-      &.is-fixed {
+      .k-TabBar.is-fixed & {
         position: fixed;
         left: 0;
         bottom: 0;
@@ -99,24 +101,26 @@
     }
 
     .k-TabBar__item--thinGutters {
-      padding-left: k-px-to-rem(12px);
-      padding-right: k-px-to-rem(12px);
+      padding-left: k-px-to-rem(6px);
+      padding-right: k-px-to-rem(6px);
 
-      @include k-media-xs {
-        padding-left: k-px-to-rem(6px);
-        padding-right: k-px-to-rem(6px);
+      @include k-media-min('xs') {
+        padding-left: k-px-to-rem(12px);
+        padding-right: k-px-to-rem(12px);
       }
     }
 
-    .k-TabBar__responsive {
-      display: none;
+    .k-TabBar--responsive {
+      display: flex;
 
-      @include k-media-sm {
-        display: flex;
+      &.is-fixed {
+        // approximate size of the final element so that it doesn't hide
+        // the last elements on the page
+        min-height: k-px-to-rem(50px);
       }
 
-      @include k-media-xs {
-        display: flex;
+      @include k-media-min('m') {
+        display: none;
       }
     }
   }

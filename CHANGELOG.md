@@ -19,8 +19,10 @@ New features:
 - Add new SliderTooltip molecule.
 - Add new Grid molecule.
 - Add new Select molecule.
-- Add branding section on styleguide.
 - Add new Select with state JavaScript component.
+- Add new LinkList molecule.
+- Add new Footer molecule.
+- Add branding section on styleguide.
 - Add pages that serve as full-page previews for tests in the style guide.
 - Add modification Text-input and add new Text-input with button and unit.
 - Add new Checkbox atom.
