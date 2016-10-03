@@ -26,24 +26,29 @@
     );
 
     .k-Testimony {
+      padding: k-px-to-rem(20px) 0;
       text-align: center;
-      @include k-typographyFont($font);
     }
 
     .k-Testimony__title {
-      margin-bottom: 1rem;
-      @include k-typographyFontSize(2);
+      margin: 0 0 k-px-to-rem(20px) 0;
+      @include k-typographyFont($font);
+      @include k-typographyFontSize(5);
+
+      @include k-media-min('m') {
+        @include k-typographyFontSize(4);
+      }
     }
 
     .k-Testimony__image {
-      margin-bottom: 1rem;
       border-radius: 50%;
     }
 
     .k-Testimony__text {
-      margin: 0; // overrides <blockquote>, <p>, etc.
-      color: $text-color;
-      @include k-typographyFontSize(-1);
+      margin: k-px-to-rem(10px) 0 0 0;
+      @include k-media-min('xl') { color: $text-color; }
+      @include k-typographyFont($font);
+      @include k-typographyFontSize(0);
     }
   }
 }
