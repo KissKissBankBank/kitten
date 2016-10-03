@@ -75,7 +75,8 @@
   }
 
   .k-Teaser__col--image {
-    order: 1; // image is the last child on small screens
+    // Force the image to be the last child on small screens
+    order: 1;
 
     @include k-media-min('l') {
       order: initial;
