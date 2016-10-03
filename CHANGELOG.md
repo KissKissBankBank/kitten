@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [v0.7.0] - 2016-10-03
+
 Breaking changes:
 - Loan Slider requires new props since it does not show fees anymore.
 - Use [Webpack](https://webpack.github.io/) to build js and css assets in dummy.
@@ -13,22 +15,29 @@ Breaking changes:
 
 New features:
 - Grid overlay on the style guide when pressing ctrl+g.
-- Add new Badge atom.
-- Add new ButtonWithBadge molecule.
-- Add new ButtonImageWithText molecule.
-- Add new SliderTooltip molecule.
-- Add new Grid molecule.
-- Add new Select molecule.
-- Add new Select with state JavaScript component.
-- Add new LinkList molecule.
-- Add new Footer molecule.
-- Add branding section on styleguide.
 - Add pages that serve as full-page previews for tests in the style guide.
-- Add modification Text-input and add new Text-input with button and unit.
-- Add new Checkbox atom.
+- Add branding section on styleguide.
+- Add grid on styleguide.
+- Update menu behaviour on styleguide.
+- Add new `Badge` atom.
+- Add new `ButtonWithBadge` molecule.
+- Add new `ButtonImageWithText` molecule.
+- Add new `SliderTooltip` molecule.
+- Add new `Grid` molecule.
+- Add new `Select` molecule.
+- Add new `SelectWithState` JavaScript component.
+- Add new `LinkList` molecule.
+- Add new `Footer` molecule.
+- Add new `TextInputWithButton` molecule.
+- Add new `Checkbox` atom.
+- Add media-queries helpers.
+- Update `Testimonies` molecule positionning and styles.
+- Update `TextInput` atom font-size.
+- Update `Hero` molecule media-queries.
 
 Fixes:
-- Computes position of `k-UserMenu` in `header` organism.
+- Computes position of `UserMenu` in `Header` organism.
+- Fixes small bugs on header (responsive, IE11, dropdown opening)
 - Simpler "production" setup for the dummy app.
 - Small updates on the styleguide.
 
@@ -62,27 +71,27 @@ Breaking changes:
   passing typography styles in mixins.
 - Move all styleguide stylesheets into dummy app for testing.
 - Remove components from `kitten` import.
-- Change some styles for `k-ButtonImage` and `k-ButtonIcon`.
+- Change some styles for `ButtonImage` and `ButtonIcon`.
 - If you are serving the engine in your routes make sure you add
   `if Rails.env.development?` if you don't want to serve it in production.
 
 New features:
 - Add gem configuration options.
 - Add webpack to manage `kitten` scss assets in dummy app.
-- Add new component: `header` organism
-- Add new component: `testimonies` molecule
+- Add new component: `Header` organism
+- Add new component: `Testimonies` molecule
 - /kitten/playground route in the styleguide to test your styles in development
 - Access components directly by removing the `#` in the styleguide in URL
-- Add new component: `tabbar` molecule.
-- Add new component: `user-menu` molecule.
-- Add new component: `text-input` atom.
-- Add new component: `search-input` molecule.
-- Add new component: `platform-switch` molecule.
+- Add new component: `Tabbar` molecule.
+- Add new component: `UserMenu` molecule.
+- Add new component: `TextInput` atom.
+- Add new component: `SearchInput` molecule.
+- Add new component: `PlatformSwitch` molecule.
 - Ignore playground changes in git (requires to type `rake` in development)
-- Add new component: `hero` molecule.
-- Add new component: `card` molecule.
+- Add new component: `Hero` molecule.
+- Add new component: `Card` molecule.
 - Add Susy library to handle grid sizes.
-- Add new component: `row` molecule.
+- Add new component: `Row` molecule.
 - Add image assets management in dummy webpack configuration.
 - Add webpack asset path helper.
 
@@ -97,14 +106,14 @@ Minor updates:
   instead of a function.
 
 New features:
-- Add new component: `horizontal-nav` molecule.
-- Add javascript on `loan-simulator` organism with React.
+- Add new component: `HorizontalNav` molecule.
+- Add javascript on `LoanSimulator` organism with React.
 - Add new css structure on styleguide.
 
 ## [v0.3.0] - 2016-08-01
 
 New features:
-- Add new component: `loan-simulator` organism.
+- Add new component: `LoanSimulator` organism.
 - Add new validation system.
 - Add styleguide routing, controllers and views.
 - Update @import strategy.
@@ -116,7 +125,7 @@ Fix:
 ## [v0.2.0] - 2016-07-20
 
 New features:
-- Add new component: `button` atom.
+- Add new component: `Button` atom.
 - Add `.scss` samples to make a new component creation easier.
 
 Fix:
