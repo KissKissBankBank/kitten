@@ -236,7 +236,6 @@ class Dropdown extends React.Component {
   }
 
   render() {
-    console.log(this.isSelfReference())
     const dropdownClass = {
       'is-expanded': this.state.isExpanded,
       'k-Dropdown--asReference': this.isSelfReference(),
