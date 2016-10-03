@@ -1,22 +1,26 @@
 import React from 'react'
 import classNames from 'classnames'
-import PubSub from 'pubsub-js'
 import DropdownButton from 'kitten/components/dropdowns/dropdown-button'
 import ButtonImageWithTextAndBadge from 'kitten/components/buttons/button-image-with-text-and-badge'
 import domElementHelper from 'kitten/helpers/dom/element-helper'
+import EventEmitter from 'event-emitter'
+
+const emitter = EventEmitter()
 
 class Dropdown extends React.Component {
   constructor(props) {
     super(props)
 
     this.state = { isExpanded: false }
+    this.handleDropdownPosition = this.handleDropdownPosition.bind(this)
   }
 
   componentDidMount() {
     const dropdown = this
+
     this.updateReferenceElementHeightState()
 
-    PubSub.subscribe('dropdown:opening:trigger', function(data) {
+    emitter.on('dropdown:opening:trigger', () => {
       dropdown.setState({ isExpanded: false })
     })
 
@@ -34,19 +38,14 @@ class Dropdown extends React.Component {
       })
     }
 
-    PubSub.unsubscribe('dropdown:opening:trigger')
+    emitter.off('dropdown:opening:trigger')
   }
 
   // Component methods
 
   getReferenceElement() {
-    if (typeof(this.props.positionedWith) == 'object') {
+    if (!this.isSelfReference()) {
       return this.props.positionedWith()
-    }
-
-    // TODO: remove props.positionedWith
-    if (this.props.positionedWith == 'parent') {
-      return this.refs.dropdown.parentNode
     }
 
     return this.refs.dropdown
@@ -64,6 +63,10 @@ class Dropdown extends React.Component {
   updateReferenceElementHeightState() {
     let referenceElementHeight = this.getReferenceElementHeight()
     this.setState({ parentHeight: referenceElementHeight })
+  }
+
+  isSelfReference() {
+    return typeof this.props.positionedWith == 'undefined'
   }
 
   // Elements
@@ -102,14 +105,16 @@ class Dropdown extends React.Component {
   // Component listener callbacks
 
   handleDropdownPosition() {
-    this.updateReferenceElementHeightState()
+    if (domElementHelper.canUseDom()) {
+      this.updateReferenceElementHeightState()
+    }
   }
 
   handleButtonClick(event) {
     event.stopPropagation()
     event.preventDefault()
 
-    PubSub.publishSync('dropdown:opening:trigger', this)
+    emitter.emit('dropdown:opening:trigger', this)
 
     this.updateReferenceElementHeightState()
     this.setState({
@@ -233,7 +238,7 @@ class Dropdown extends React.Component {
   render() {
     const dropdownClass = {
       'is-expanded': this.state.isExpanded,
-      'k-Dropdown--asReference': this.props.positionedWith() == 'self',
+      'k-Dropdown--asReference': this.isSelfReference(),
     }
 
     const dropdownClassName = classNames(
@@ -278,14 +283,6 @@ Dropdown.propTypes = {
 }
 
 Dropdown.defaultProps = {
-  // This prop is used to position the dropdown absolutely in relation with
-  // a reference element.
-  // If you use <DOMNode>, make sure that this element has the "position"
-  // property set in its css.
-  // As using DOMNode is anti-pattern, you should avoid it when it is
-  // possible.
-  positionedWith: () => 'self', // 'self' | <DOMNode>
-
   // This prop is used to fetch the correct height of the reference element
   // for the dropdown position.
   positionedWithBorder: true,
