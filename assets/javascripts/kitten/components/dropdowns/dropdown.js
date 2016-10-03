@@ -44,7 +44,7 @@ class Dropdown extends React.Component {
   // Component methods
 
   getReferenceElement() {
-    if (this.isSelfReference()) {
+    if (!this.isSelfReference()) {
       return this.props.positionedWith()
     }
 
