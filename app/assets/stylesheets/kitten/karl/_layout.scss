@@ -82,6 +82,10 @@ $karl-overgrid-z-index: 9999;
 
 // Show the name of the current breakpoint
 
+.karl-OverBreakpoint {
+  pointer-events: none;
+}
+
 .karl-OverBreakpoint:before {
   position: fixed;
   top: 0;
