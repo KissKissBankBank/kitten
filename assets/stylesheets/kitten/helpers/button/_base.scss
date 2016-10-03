@@ -45,57 +45,10 @@
 ///         border-color: #d8d8d8
 ///         background-color: #d8d8d8
 ///       ),
-///       is-selected: (
-///         color: #fff,
-///         background-color: #151515
-///       ),
 ///     ),
 ///     ...
 ///   )
 ///
-///   .k-MyButton {
-///     @include buttonBase($button);
-///   }
-///
-/// @example css - CSS output
-///   .k-MyButton {
-///     display: inline-block;
-///     border: 1px solid #d8d8d8;
-///
-///     background-color: #fff;
-///     color: #333;
-///     cursor: pointer;
-///   }
-///
-///   .k-MyButton:hover {
-///     border: 1px solid transparent;
-///     background-color: #333;
-///     color: #fff;
-///   }
-///
-///   .k-MyButton:focus {
-///     border: 1px solid transparent;
-///     background-color: #333;
-///     color: #fff;
-///   }
-///
-///   .k-MyButton:active {
-///     border: 1px solid transparent;
-///     background-color: #151515;
-///     color: #fff;
-///   }
-///
-///   .k-MyButton:disabled {
-///     border: 1px solid transparent;
-///     background-color: #d8d8d8;
-///     color: #fff;
-///   }
-///
-///   .k-MyButton.is-selected {
-///     border: 1px solid transparent;
-///     background-color: #151515;
-///     color: #fff;
-///   }
 
 @mixin k-buttonBase($button) {
   $colors: k-map-fetch($button, 'colors');
@@ -129,30 +82,6 @@
   $disabled-color: map-get($disabled, 'color');
   $disabled-border-color: map-get($disabled, 'border-color');
   $disabled-background-color: map-get($disabled, 'background-color');
-
-  // state 'is-selected' colors (optional)
-  $is-selected: k-colors-definition(map-get($colors, 'is-selected'));
-  $is-selected-color: map-get($is-selected, 'color');
-  $is-selected-border-color: map-get($is-selected, 'border-color');
-  $is-selected-background-color: map-get($is-selected, 'background-color');
-
-  // facebook colors
-  $facebook: k-colors-definition(map-get($colors, 'facebook'));
-  $facebook-color: map-get($facebook, 'color');
-  $facebook-border-color: map-get($facebook, 'border-color');
-  $facebook-background-color: map-get($facebook, 'background-color');
-
-  // twitter colors
-  $twitter: k-colors-definition(map-get($colors, 'twitter'));
-  $twitter-color: map-get($twitter, 'color');
-  $twitter-border-color: map-get($twitter, 'border-color');
-  $twitter-background-color: map-get($twitter, 'background-color');
-
-  // linkedin colors
-  $linkedin: k-colors-definition(map-get($colors, 'linkedin'));
-  $linkedin-color: map-get($linkedin, 'color');
-  $linkedin-border-color: map-get($linkedin, 'border-color');
-  $linkedin-background-color: map-get($linkedin, 'background-color');
 
 
   $transition-speed: .2s;
@@ -207,14 +136,5 @@
     background-color: $disabled-background-color;
     color: $disabled-color;
     cursor: not-allowed;
-  }
-
-  @if map-has-key($colors, 'is-selected') {
-    &.is-selected {
-      @include k-buttonBorder($is-selected-border-color);
-
-      background-color: $is-selected-background-color;
-      color: $is-selected-color;
-    }
   }
 }
