@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+New features:
+- Add new `Teaser` molecule.
+
 ## [v0.7.0] - 2016-10-03
 
 Breaking changes:
