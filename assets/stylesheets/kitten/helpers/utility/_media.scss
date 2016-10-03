@@ -18,9 +18,29 @@
 ///   }
 
 @mixin k-media-min($query) {
-  $min-width: map-get-deep($k-media-queries, ($query, 'min-width'));
-  @media (min-width: $min-width) {
+  $queries: map-get($k-media-queries, $query);
+  $min-width: map-get($queries, 'min-width');
+
+  @if $min-width == null {
     @content;
+  } @else {
+    @media (min-width: $min-width) {
+      @content;
+    }
+  }
+}
+
+@mixin k-media-within($query) {
+  $queries: map-get($k-media-queries, $query);
+  $min-width: map-get($queries, 'min-width');
+  $max-width: map-get($queries, 'max-width');
+
+  @if $min-width == null {
+    @media (max-width: $max-width) { @content; }
+  } @else if $max-width == null {
+    @media (min-width: $min-width) { @content; }
+  } @else {
+    @media (min-width: $min-width) and (max-width: $max-width) { @content; }
   }
 }
 
@@ -32,28 +52,28 @@ $md-min-width: $sm-max-width + 1px;
 $md-max-width: 1200px;
 $lg-min-width: $md-max-width + 1px;
 
-// DEPRECATED: use `k-media-min` instead
+// DEPRECATED: use `k-media-within` instead
 @mixin k-media-lg {
   @media (min-width: $lg-min-width) {
     @content;
   }
 }
 
-// DEPRECATED: use `k-media-min` instead
+// DEPRECATED: use `k-media-within` instead
 @mixin k-media-md {
   @media (min-width: $md-min-width) and (max-width: $md-max-width) {
     @content;
   }
 }
 
-// DEPRECATED: use `k-media-min` instead
+// DEPRECATED: use `k-media-within` instead
 @mixin k-media-sm {
   @media (min-width: $sm-min-width) and (max-width: $sm-max-width) {
     @content;
   }
 }
 
-// DEPRECATED: use `k-media-min` instead
+// DEPRECATED: use `k-media-within` instead
 @mixin k-media-xs {
   @media (max-width: $xs-max-width) {
     @content;
