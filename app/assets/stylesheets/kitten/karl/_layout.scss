@@ -102,6 +102,6 @@ $karl-overgrid-z-index: 9999;
   color: rgba(black, .5);
 
   @each $name, $_query in $k-media-queries {
-    @include k-media-min($name) { content: $name; }
+    @include k-media-min($name) { content: "#{$name}"; }
   }
 }
