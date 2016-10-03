@@ -18,15 +18,23 @@
 ///   }
 
 @mixin k-media-min($query) {
-  $min-width: map-get-deep($k-media-queries, ($query, 'min-width'));
-  @media (min-width: $min-width) {
+  $queries: map-get($k-media-queries, $query);
+  $min-width: map-get($queries, 'min-width');
+
+  @if $min-width == null {
     @content;
+  }
+  @if $min-width {
+    @media (min-width: $min-width) {
+      @content;
+    }
   }
 }
 
 @mixin k-media-within($query) {
-  $min-width: map-get-deep($k-media-queries, ($query, 'min-width'));
-  $max-width: map-get-deep($k-media-queries, ($query, 'max-width'));
+  $queries: map-get($k-media-queries, $query);
+  $min-width: map-get($queries, 'min-width');
+  $max-width: map-get($queries, 'max-width');
 
   @if $min-width == null {
     @media (max-width: $max-width) { @content; }
