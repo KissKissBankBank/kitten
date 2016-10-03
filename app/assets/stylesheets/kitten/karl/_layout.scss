@@ -47,7 +47,7 @@ $karl-overgrid-z-index: 9999;
   @include container;
   box-sizing: border-box;
 
-  padding: 0 gutter() * 2;
+  padding: 0 map-get($k-grid, 'gutter-width');
 
   height: 100%;
   outline: 1px dotted rgba(black, .2);
@@ -81,6 +81,10 @@ $karl-overgrid-z-index: 9999;
 }
 
 // Show the name of the current breakpoint
+
+.karl-OverBreakpoint {
+  pointer-events: none;
+}
 
 .karl-OverBreakpoint:before {
   position: fixed;
