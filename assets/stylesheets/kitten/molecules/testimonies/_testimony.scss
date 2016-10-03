@@ -6,9 +6,6 @@
 ///
 ///   @include k-Testimony((
 ///     font: 'source-sans',
-///     colors: (
-///       text: grey,
-///     ),
 ///   ));
 ///
 /// @example html
@@ -21,9 +18,6 @@
 @mixin k-Testimony($testimony) {
   @include k-with-module('k-Testimony: $testimony') {
     $font: k-map-fetch($testimony, 'font');
-    $text-color: k-color-definition(
-      k-map-fetch($testimony, ('colors', 'text'))
-    );
 
     .k-Testimony {
       padding: k-px-to-rem(20px) 0;
@@ -46,7 +40,6 @@
 
     .k-Testimony__text {
       margin: k-px-to-rem(10px) 0 0 0;
-      @include k-media-min('xl') { color: $text-color; }
       @include k-typographyFont($font);
       @include k-typographyFontSize(0);
     }
