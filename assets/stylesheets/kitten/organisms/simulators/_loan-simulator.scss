@@ -52,7 +52,7 @@
     }
 
     .k-LoanSimulator__installment {
-      @include k-typographyFontSize();
+      @include k-typographyFontSize;
       font-weight: bold;
     }
 

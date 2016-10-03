@@ -84,7 +84,7 @@
     .k-Hero__subtitle {
       margin: 0;
       @include k-typographyFont($font);
-      @include k-typographyFontSize();
+      @include k-typographyFontSize;
 
       @include k-media-min('s') {
         @include k-typographyFontSize(4);
