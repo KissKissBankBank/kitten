@@ -75,6 +75,7 @@ $k-typography: k-typography-definition((
 // ----------
 
 // Buttons
+@import 'molecules/buttons/button-icon-words';
 @import 'molecules/buttons/button-image-with-text';
 @import 'molecules/buttons/button-with-badge';
 

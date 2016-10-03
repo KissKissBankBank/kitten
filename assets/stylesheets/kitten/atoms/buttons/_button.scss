@@ -68,7 +68,6 @@
 
     $font: k-string-definition(k-map-fetch($button, 'font'));
 
-    // primary
     $button-default: map-get-deep($button, ('default'));
     $button-primary: map-get-deep($button, ('primary'));
 
