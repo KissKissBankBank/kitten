@@ -4,6 +4,7 @@ import DropdownButton from 'kitten/components/dropdowns/dropdown-button'
 import ButtonImageWithTextAndBadge from 'kitten/components/buttons/button-image-with-text-and-badge'
 import domElementHelper from 'kitten/helpers/dom/element-helper'
 import EventEmitter from 'event-emitter'
+import objectAssign from 'core-js/library/fn/object/assign'
 
 const emitter = EventEmitter()
 
@@ -145,7 +146,7 @@ class Dropdown extends React.Component {
       }
     }
 
-    return Object.assign(positionStyles, horizontalPosition)
+    return objectAssign(positionStyles, horizontalPosition)
   }
 
   getArrowPosition() {
@@ -225,7 +226,7 @@ class Dropdown extends React.Component {
 
     const positionDefault = { position: 'absolute', top: 0 }
     const position = arrowPosition ? this.getArrowPosition() : { right: '50%' }
-    const style = Object.assign(positionDefault, position)
+    const style = objectAssign(positionDefault, position)
 
     return (
       <span ref="arrow"

@@ -26,7 +26,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'react_on_rails', '~> 6.1.0'
 
   # Render react components with execjs on server side by react_on_rails.
-  s.add_dependency 'mini_racer'
+  s.add_dependency 'therubyracer'
 
   s.add_development_dependency 'bundler', '~> 1.8'
   s.add_development_dependency 'rake',    '~> 10.0'
