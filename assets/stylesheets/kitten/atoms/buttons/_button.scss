@@ -9,7 +9,7 @@
 ///
 /// @parameter {Map} $button - a button specification
 ///
-/// @example scss - Usage
+/// @example scss button-primary - Usage
 ///   @include k-Button((
 ///     font: 'source-sans-semi-bold-uppercase',
 ///       colors: (
@@ -123,7 +123,7 @@
     .k-ButtonIconWords {
       display: flex;
 
-      padding: 0 $button-radius;
+      padding: 0 $button-radius 0 .8rem;
       min-width: $button-icon-words-min-width;
 
       .k-Button__svg {
