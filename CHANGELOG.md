@@ -7,6 +7,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 Breaking changes:
 - Remove `GridDuo` molecule.
 
+New features:
+- Add new `Teaser` molecule.
+
 ## [v0.7.0] - 2016-10-03
 
 Breaking changes:
