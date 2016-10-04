@@ -122,6 +122,9 @@ $k-typography: k-typography-definition((
 @import 'molecules/testimonies/testimony';
 @import 'molecules/testimonies/testimony-list';
 
+// Teaser
+@import 'molecules/titles/title-with-actions';
+
 // ----------
 // Organisms
 // ----------
@@ -134,44 +137,3 @@ $k-typography: k-typography-definition((
 
 // Dropdowns
 @import 'organisms/dropdowns/dropdown';
-
-
-
-// TODO move to assets/stylesheets/kitten/molecules/titles/line-of-actions
-// TODO create example
-//
-// Represents a title followed by two buttons, used on a homepage for example.
-.k-titleWithActions {
-  @include k-grid;
-  text-align: center;
-}
-.k-titleWithActions__title {
-  @include k-grid-col(12);
-  @include k-typographyFont('source-sans-light');
-  @include k-typographyFontSize(2);
-
-  @include k-media-min('m') {
-    @include k-grid-col(8);
-    @include k-grid-offset(2);
-    @include k-typographyFontSize(3);
-  }
-
-  @include k-media-min('l') {
-    @include k-grid-col(6);
-    @include k-grid-offset(3);
-  }
-}
-.k-titleWithActions__action {
-  // one button per line
-  //     [ x ]
-  //     [ x ]
-  @include k-grid-col(12);
-
-  @include k-media-min('m') {
-    // one line of two buttons next to each other
-    //    [ x ] [ x ]
-    @include k-grid-col(6);
-    &:nth-of-type(1) { text-align: right; }
-    &:nth-of-type(2) { text-align: left; }
-  }
-}
