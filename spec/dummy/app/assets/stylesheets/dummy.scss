@@ -137,14 +137,15 @@ $k-typography: k-typography-definition((
 
 
 
-// TODO move to assets/stylesheets/kitten/molecules/grid/line-of-actions
+// TODO move to assets/stylesheets/kitten/molecules/titles/line-of-actions
+// TODO create example
 //
 // Represents a title followed by two buttons, used on a homepage for example.
-.k-LineOfActions {
+.k-titleWithActions {
   @include k-grid;
   text-align: center;
 }
-.k-LineOfActions__title {
+.k-titleWithActions__title {
   @include k-grid-col(12);
   @include k-typographyFont('source-sans-light');
   @include k-typographyFontSize(2);
@@ -160,7 +161,7 @@ $k-typography: k-typography-definition((
     @include k-grid-offset(3);
   }
 }
-.k-LineOfActions__action {
+.k-titleWithActions__action {
   // one button per line
   //     [ x ]
   //     [ x ]
