@@ -144,11 +144,18 @@
     $button-size: 30px - ($border-size * 2);
     $button-size-big: 50px - ($border-size * 2);
 
+    // Button tag element default settings.
+    $button-tag-min-width: k-px-to-rem(60px - ($border-size * 2));
+    $button-tag-line-height: k-px-to-rem(40px - ($border-size * 2));
+
     // SVG element default settings.
     $icon-width: k-px-to-rem(12px);
     $icon-height: k-px-to-rem(14px);
 
     $button-radius: 1.25rem;
+
+    // The button tag has a radius of .25rem
+    $button-tag-radius: .25rem;
 
     $transition-speed: .2s;
 
@@ -222,6 +229,12 @@
           'k-ButtonIcon__svg__stroke'
         );
       }
+    }
+
+    .k-ButtonTag {
+      padding: 0 $button-tag-radius;
+      border-radius: $button-tag-radius;
+      min-width: $button-tag-min-width;
     }
 
     .k-ButtonIcon--medium {
