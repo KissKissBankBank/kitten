@@ -134,3 +134,34 @@ $k-typography: k-typography-definition((
 
 // Dropdowns
 @import 'organisms/dropdowns/dropdown';
+
+// Represents a title followed by two buttons, used on a homepage for example.
+//
+// TODO move to assets/stylesheets/kitten/molecules/grid/line-of-actions
+.k-LineOfActions {
+  @include k-grid;
+  text-align: center;
+}
+.k-LineOfActions__title {
+  @include k-grid-col(12);
+  @include k-typographyFont('source-sans-light');
+  @include k-typographyFontSize(2);
+
+  @include k-media-min('m') {
+    @include k-typographyFontSize(3);
+  }
+}
+.k-LineOfActions__action {
+  // one button per line
+  //     [ x ]
+  //     [ x ]
+  @include k-grid-col(12);
+
+  @include k-media-min('m') {
+    // one line of two buttons next to each other
+    //    [ x ] [ x ]
+    @include k-grid-col(6);
+    &:nth-of-type(1) { text-align: right; }
+    &:nth-of-type(2) { text-align: left; }
+  }
+}
