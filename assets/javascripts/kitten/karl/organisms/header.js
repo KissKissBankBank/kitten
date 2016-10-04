@@ -2,6 +2,7 @@ import defaultProps from 'kitten/hoc/default-props'
 import React from 'react'
 import Dropdown from 'kitten/components/dropdowns/dropdown'
 import ExternalRichLink from 'kitten/components/links/external-rich-link'
+import objectAssign from 'core-js/library/fn/object/assign'
 
 // Header platform switch common props
 const unloggedHeaderPlatformSwitchButton = (<svg
@@ -39,7 +40,7 @@ const platformSwitchProps = {
 }
 
 // Unlogged header dropdown
-const unloggedPlatformSwitchProps = Object.assign(
+const unloggedPlatformSwitchProps = objectAssign(
   { positionedWith: () => document.getElementById('header') },
   platformSwitchProps
 )
@@ -49,7 +50,7 @@ const KarlUnloggedHeaderPlatformSwitch = defaultProps(
 )
 
 // Logged header dropdowns
-const loggedPlatformSwitchProps = Object.assign(
+const loggedPlatformSwitchProps = objectAssign(
   { positionedWith: () => document.getElementById('header-logged') },
   platformSwitchProps
 )
