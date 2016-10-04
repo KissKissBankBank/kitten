@@ -5,11 +5,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 Breaking changes:
-- Remove `GridDuo` molecule.
+- Remove `k-GridDuo` molecule.
 - Use `therubyracer` instead of `mini_racer`.
 
 New features:
-- Add new `Teaser` molecule.
+- Add new `k-Teaser` molecule.
+- Add new `k-PressQuotes` molecule.
 
 ## [v0.7.0] - 2016-10-03
 
