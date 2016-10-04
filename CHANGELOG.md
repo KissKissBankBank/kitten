@@ -5,10 +5,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 Breaking changes:
-- Remove `GridDuo` molecule.
+- Remove `k-GridDuo` molecule.
 
 New features:
-- Add new `Teaser` molecule.
+- Add new `k-Teaser` molecule.
+- Add new `k-titleWithActions` molecule.
 
 ## [v0.7.0] - 2016-10-03
 
