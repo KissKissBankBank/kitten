@@ -112,6 +112,9 @@ $k-typography: k-typography-definition((
 @import 'molecules/navigation/user-menu';
 @import 'molecules/navigation/platform-switch';
 
+// Press
+@import 'molecules/press/press-quotes';
+
 // Simulators
 @import 'molecules/simulators/simulator-result';
 

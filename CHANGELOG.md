@@ -11,6 +11,7 @@ Breaking changes:
 New features:
 - Add new `k-Teaser` molecule.
 - Add new `k-titleWithActions` molecule.
+- Add new `k-PressQuotes` molecule.
 
 ## [v0.7.0] - 2016-10-03
 
