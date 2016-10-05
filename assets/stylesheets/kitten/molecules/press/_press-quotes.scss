@@ -45,7 +45,7 @@
   }
 
   .k-PressQuotes__quote {
-    margin: 0 k-px-to-rem(20px) k-px-to-rem(30px) k-px-to-rem(20px);
+    margin: 0 k-px-to-rem(20px) k-px-to-rem(30px);
 
     @include k-media-min('l') {
       flex: 1;
@@ -53,7 +53,7 @@
   }
 
   .k-PressQuotes__quote__text {
-    margin: 0 0 k-px-to-rem(20px) 0;
+    margin: 0 0 k-px-to-rem(20px);
 
     @include k-typographyFont('source-sans-light');
     @include k-typographyFontSize;
