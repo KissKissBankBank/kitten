@@ -51,4 +51,10 @@
       &.is-last { text-align: left; }
     }
   }
+
+  .k-titleWithActions__action__button {
+    @include k-media-min('m') {
+      width: k-px-to-rem(320px);
+    }
+  }
 }
