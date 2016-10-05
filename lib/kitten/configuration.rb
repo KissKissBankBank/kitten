@@ -19,7 +19,7 @@ module Kitten
     attr_accessor :webpack_output_bundles
 
     def initialize
-      self.webpack_output_bundles = ["http://localhost:3500/application-bundle.js"]
+      self.webpack_output_bundles = ['application-bundle.js']
     end
   end
 end
