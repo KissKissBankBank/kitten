@@ -20,6 +20,13 @@ window.karl   = (function(karl) {
     // Manage menu closing on xs media query.
     $links.click(function() {
       $menu.addClass('is-clicked')
+      anchor = $(this).attr('href')
+      anchor = anchor.split('/').join('\\/')
+      target = $(anchor)
+
+      $('html, body').animate({ scrollTop: target.offset().top - 60 }, 500)
+
+      return false
     })
 
     // Manage menu list dropdowns
