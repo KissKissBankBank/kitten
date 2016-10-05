@@ -1,7 +1,7 @@
 module Kitten
   module ComponentsHelper
     def render_type(type, title: nil)
-      title ||= type.split('/').last.capitalize
+      title ||= default_title(type)
       add_menu_type(type, title)
       concat content_tag(:h1, class:"karl-Title", id: type) { title }
       yield
@@ -9,7 +9,7 @@ module Kitten
     end
 
     def render_group(group, title: nil)
-      title ||= group.split('/').last.capitalize
+      title ||= default_title(group)
       add_menu_group(group, title)
       concat content_tag(:h2,
                          class: "karl-Title__breadcrumb",
@@ -21,7 +21,7 @@ module Kitten
                          title: nil,
                          description: nil,
                          examples_display: :horizontal)
-      title ||= component.split('/').last.capitalize
+      title ||= default_title(component)
       add_menu_component(component, title)
       render 'layouts/kitten/component',
              component: component,
@@ -57,6 +57,14 @@ module Kitten
     def add_menu_component(id, title)
       group = @menu_types.last[:groups].last
       group[:components] << { component_id: id, component_title: title }
+    end
+
+    # Turns a type, group or component into a title.
+    #
+    # Example:
+    #   default_title('foo/bar/le-spam') #=> 'Le spam'
+    def default_title(path)
+      path.split('/').last.gsub('-', ' ').capitalize
     end
   end
 end
