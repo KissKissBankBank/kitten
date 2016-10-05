@@ -16,14 +16,55 @@
 @mixin k-TestimonyList {
   @include k-with-module('k-TestimonyList') {
     .k-TestimonyList {
-      display: flex;
-      justify-content: center;
+      @include k-grid;
     }
 
     .k-TestimonyList__item {
-      width: span(3 of 12);
-      margin-left: (gutter() / 2);
-      margin-right: (gutter() / 2);
+      @include k-grid-col(12);
+
+      @include k-media-min('xs') {
+        // One testimony per line, with a small offset on each side:
+        //  [ X ]
+        //  [ X ]
+        //  [ X ]
+        //  [ X ]
+        @include k-grid-col(10);
+        @include k-grid-offset(1);
+      }
+
+      @include k-media-min('s') {
+        // One testimony per line, with an offset on each side:
+        //    [ X ]
+        //    [ X ]
+        //    [ X ]
+        //    [ X ]
+        @include k-grid-col(8);
+        @include k-grid-offset(2);
+      }
+
+      @include k-media-min('m') {
+        // Show two testimonies per line, with an offset on each side:
+        //
+        //   [ X ]   [ X ]
+        //   [ X ]   [ X ]
+        //
+        @include k-grid-col(4);
+        @include k-grid-offset(1);
+        &:nth-of-type(2n) {
+          @include k-grid-offset(2);
+        }
+      }
+
+      @include k-media-min('l') {
+        // Show 4 testimonies per line:
+        // [ X ][ X ][ X ][ X ]
+        //
+        // repeat nth-of-type here to override the previous nth-of-type
+        &, &:nth-of-type(2n) {
+          @include k-grid-col(3);
+          @include k-grid-offset(0);
+        }
+      }
     }
   }
 }

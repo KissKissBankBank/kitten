@@ -1,33 +1,11 @@
 <%= example 'Default rich content link' do %>
-  <div id="external-rich-link-1"></div>
-  <script type="text/babel">
-    ReactDOM.render(
-      <ExternalRichLink></ExternalRichLink>,
-      document.getElementById('external-rich-link-1')
-    )
-  </script>
+  <%= react_component('ExternalRichLink') %>
 <% end %>
 
 <%= example 'Rich content link' do %>
-  <div id="external-rich-link-2"></div>
-  <script type="text/babel">
-    ReactDOM.render(
-      <ExternalRichLink>
-        <img src="https://unsplash.it/150/51?image=957" alt="" />
-      </ExternalRichLink>,
-      document.getElementById('external-rich-link-2')
-    )
-  </script>
+  <%= react_component('KarlImageExternalRichLink') %>
 <% end %>
 
 <%= example 'Image link' do %>
-  <div id="external-rich-link-3"></div>
-  <script type="text/babel">
-    ReactDOM.render(
-      <ExternalRichLink>
-        <img src="https://unsplash.it/150/51?image=947" alt="Kawaiii kitten!" />
-      </ExternalRichLink>,
-      document.getElementById('external-rich-link-3')
-    )
-  </script>
+  <%= react_component('KarlSvgExternalRichLink') %>
 <% end %>

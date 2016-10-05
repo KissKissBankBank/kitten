@@ -1,158 +1,101 @@
-// TODO description
-// TODO animations: https://facebook.github.io/react/docs/animation.html
-window.LoanSimulator = React.createClass({
-  propTypes: {
-    // Label for amount input
-    amountLabel: React.PropTypes.string,
+// Simulator that lets users select an amount and an installment, to start
+// simulating a loan.
 
-    // Placeholder for amount input
-    amountPlaceholder: React.PropTypes.string,
+import React from 'react'
+import classNames from 'classnames'
+import Slider from 'kitten/components/form/slider'
+import SliderTooltip from 'kitten/components/form/slider-tooltip'
+import numberUtils from 'kitten/helpers/utils/number'
 
-    // Bounds for accepted amount
-    amountMin: React.PropTypes.number,
-    amountMax: React.PropTypes.number,
+class LoanSimulator extends React.Component {
+  constructor(props) {
+    super(props)
 
-    // Default amount
-    initialAmount: React.PropTypes.number,
-
-    // Error text when the amount is empty or non-numerical
-    amountEmptyError: React.PropTypes.string,
-
-    // Error text when the amount is over or under the min and max
-    amountOutOfBoundsError: React.PropTypes.string,
-
-    // Label before the slider
-    installmentLabel: React.PropTypes.string,
-
-    // Text before the computed duration
-    durationText: React.PropTypes.string,
-
-    // Bounds for the computed duration
-    durationMin: React.PropTypes.number,
-    durationMax: React.PropTypes.number,
-
-    // Duration value (months)
-    durationSymbol: React.PropTypes.string,
-    durationSymbolPlural: React.PropTypes.string,
-
-    // Currency
-    currencySymbol: React.PropTypes.string,
-
-    // Installment
-    installmentSymbol: React.PropTypes.string,
-
-    // Locale to format amounts correctly
-    locale: React.PropTypes.string,
-
-    // Submit button
-    actionLabel: React.PropTypes.string,
-  },
-
-  getDefaultProps: function() {
-    return {
-      amountLabel: 'Amount',
-      amountPlaceholder: '',
-      amountMin: 1,
-      amountMax: 10000,
-      initialAmount: null,
-
-      amountEmptyError: 'Amount cannot be empty',
-      amountOutOfBoundsError: 'Amount is either too big or too small',
-
-      installmentLabel: 'Reimbursing',
-
-      durationText: 'during',
-      durationMin: 1,
-      durationMax: 36,
-      durationSymbol: 'month',
-      durationSymbolPlural: 'months',
-
-      currencySymbol: '$',
-      installmentSymbol: '$/month',
-      locale: 'en',
-
-      actionLabel: 'OK',
-    }
-  },
-
-  getInitialState: function() {
-    return {
+    this.state = {
       amount: this.props.initialAmount * 1,
       installmentAmount: null,
       installmentPercentage: null,
       dragged: false,
       touched: false,
     }
-  },
 
-  handleFocus: function(e) {
+    this.handleFocus = this.handleFocus.bind(this)
+    this.handleAmountChange = this.handleAmountChange.bind(this)
+    this.handleAmountKeyDown = this.handleAmountKeyDown.bind(this)
+    this.handleInstallmentLabelClick = this.handleInstallmentLabelClick
+                                           .bind(this)
+    this.handleInstallmentChange = this.handleInstallmentChange.bind(this)
+    this.handleInstallmentAction = this.handleInstallmentAction.bind(this)
+  }
+
+  handleFocus(e) {
     this.setState({
       touched: false,
       installmentAmount: null,
       installmentPercentage: null,
     })
-  },
+  }
 
-  handleAmountChange: function(e) {
+  handleAmountChange(e) {
     this.setState({ amount: e.target.value })
-  },
+  }
 
-  handleAmountKeyDown: function(e) {
+  handleAmountKeyDown(e) {
     // when pressing enter
     if (e.keyCode == 13) {
       this.refs.slider.focus()
       this.setState({ touched: true })
     }
-  },
+  }
 
   // on slider click or on grab change
-  handleInstallmentChange: function(value, percentage) {
+  handleInstallmentChange(value, percentage) {
     this.refs.amount.blur()
     this.setState({
       installmentAmount: value,
       installmentPercentage: percentage,
       dragged: true
     })
-  },
+  }
 
-  handleInstallmentAction: function() {
+  handleInstallmentAction() {
     this.setState({ touched: true })
-  },
+  }
 
-  handleInstallmentLabelClick: function() {
+  handleInstallmentLabelClick() {
     this.refs.slider.focus()
-  },
+  }
 
-  duration: function() {
+  duration() {
     if (this.state.installmentAmount)
       return Math.ceil(this.state.amount / this.state.installmentAmount)
-  },
+  }
 
-  toCurrency: function(cents) {
+  toCurrency(cents) {
     if (isNaN(cents))
       return null
 
     return (cents / 100).toLocaleString(this.props.locale)
-  },
+  }
 
-  error: function() {
+  error() {
     if (!this.state.touched)
       return null
 
     return this.amountError()
-  },
+  }
 
-  amountError: function() {
+  amountError() {
     if (!this.state.amount)
       return this.props.amountEmptyError
 
-    if (!isNumber(this.state.amount)
+    if (!numberUtils.isNumber(this.state.amount)
         || this.state.amount < this.props.amountMin
         || this.state.amount > this.props.amountMax)
       return this.props.amountOutOfBoundsError
-  },
+  }
 
-  installmentMin: function() {
+  installmentMin() {
     const installmentStep = this.installmentStep()
     const value = this.state.amount / this.props.durationMax
     const min = Math.ceil(value / installmentStep) * installmentStep
@@ -160,21 +103,21 @@ window.LoanSimulator = React.createClass({
       return this.state.amount
     else
       return min
-  },
+  }
 
-  installmentMax: function() {
+  installmentMax() {
     return this.state.amount * 1
-  },
+  }
 
-  installmentStep: function() {
+  installmentStep() {
     if (this.state.installmentAmount > 1000)
       return 100
     if (this.state.installmentAmount > 200)
       return 10
     return 1
-  },
+  }
 
-  render: function() {
+  render() {
     const { label } = this.props
     const { dragged, touched } = this.state
     const error = this.error()
@@ -191,7 +134,7 @@ window.LoanSimulator = React.createClass({
 
     if (error) {
       errorClass = "is-error"
-      errorTag = <p className="k-LoanSimulator__amount__error">{error}</p>
+      errorTag = <p className="k-LoanSimulator__amount__error">{ error }</p>
     }
 
     if (sliderIsActive) {
@@ -211,8 +154,12 @@ window.LoanSimulator = React.createClass({
 
       tooltipClass = null
       tooltipText = [
-        <div className="k-LoanSimulator__installment">{installmentText}</div>,
-        <div className="k-LoanSimulator__duration">{durationText}</div>
+        <div key="1" className="k-LoanSimulator__installment">
+         { installmentText }
+        </div>,
+        <div key="2" className="k-LoanSimulator__duration">
+          { durationText }
+        </div>
       ]
     } else {
       tooltipClass = 'is-inactive'
@@ -226,52 +173,133 @@ window.LoanSimulator = React.createClass({
     return (
       <div className="k-LoanSimulator">
         <div className="k-LoanSimulator__amount">
-          <label className="k-Label k-LoanSimulator__label" htmlFor="amount">
-            {this.props.amountLabel}
+          <label className="k-Label k-LoanSimulator__label"
+                 htmlFor="loan-simulator-amount">
+            { this.props.amountLabel }
           </label>
-          <div className={classNames('k-TextInputWithUnit',
-                                     errorClass)}>
+          <div className={ classNames('k-TextInputWithUnit', errorClass) }>
             <input ref="amount"
                    className="k-TextInput k-TextInputWithUnit__input"
-                   id="amount"
+                   id="loan-simulator-amount"
+                   name={ this.props.amountName }
                    type="number"
-                   min={this.props.amountMin}
-                   max={this.props.amountMax}
+                   min={ this.props.amountMin }
+                   max={ this.props.amountMax }
                    size="5"
-                   defaultValue={this.props.initialAmount}
-                   onFocus={this.handleFocus}
-                   onChange={this.handleAmountChange}
-                   onKeyDown={this.handleAmountKeyDown}
-                   placeholder={this.props.amountPlaceholder} />
+                   defaultValue={ this.props.initialAmount }
+                   onFocus={ this.handleFocus }
+                   onChange={ this.handleAmountChange }
+                   onKeyDown={ this.handleAmountKeyDown }
+                   placeholder={ this.props.amountPlaceholder } />
             <span className="k-TextInputWithUnit__unit">
-              {this.props.currencySymbol}
+              { this.props.currencySymbol }
             </span>
           </div>
           {errorTag}
         </div>
         <div className="k-LoanSimulator__reimbursing">
           <label className="k-Label k-LoanSimulator__label"
-                 onClick={this.handleInstallmentLabelClick}>
-            {this.props.installmentLabel}
+                 onClick={ this.handleInstallmentLabelClick }>
+            { this.props.installmentLabel }
           </label>
-          <SliderTooltip className={tooltipClass}
-                         percentage={installmentPercentage}>
-            {tooltipText}
+          <SliderTooltip className={ tooltipClass }
+                         percentage={ installmentPercentage }>
+            { tooltipText }
           </SliderTooltip>
           <Slider ref="slider"
-                  step={this.installmentStep()}
-                  min={installmentMin}
-                  max={installmentMax}
-                  power={2}
-                  name={this.props.installmentName}
-                  value={installmentAmount}
-                  onChange={this.handleInstallmentChange}
-                  onAction={this.handleInstallmentAction} />
+                  step={ this.installmentStep() }
+                  min={ installmentMin }
+                  max={ installmentMax }
+                  power={ 2 }
+                  name={ this.props.installmentName }
+                  value={ installmentAmount }
+                  onChange={ this.handleInstallmentChange }
+                  onAction={ this.handleInstallmentAction } />
         </div>
         <div className="k-LoanSimulator__actions">
-          <button className="k-Button">{this.props.actionLabel}</button>
+          <button className="k-Button">{ this.props.actionLabel }</button>
         </div>
       </div>
     )
   }
-})
+}
+
+LoanSimulator.propTypes = {
+  // Label for amount input
+  amountLabel: React.PropTypes.string,
+
+  // Name attribute for the amount input (if needed)
+  amountName: React.PropTypes.string,
+
+  // Name attribute for the hidden installment input (if needed)
+  installmentName: React.PropTypes.string,
+
+  // Placeholder for amount input
+  amountPlaceholder: React.PropTypes.string,
+
+  // Bounds for accepted amount
+  amountMin: React.PropTypes.number,
+  amountMax: React.PropTypes.number,
+
+  // Default amount
+  initialAmount: React.PropTypes.number,
+
+  // Error text when the amount is empty or non-numerical
+  amountEmptyError: React.PropTypes.string,
+
+  // Error text when the amount is over or under the min and max
+  amountOutOfBoundsError: React.PropTypes.string,
+
+  // Label before the slider
+  installmentLabel: React.PropTypes.string,
+
+  // Text before the computed duration
+  durationText: React.PropTypes.string,
+
+  // Bounds for the computed duration
+  durationMin: React.PropTypes.number,
+  durationMax: React.PropTypes.number,
+
+  // Duration value (months)
+  durationSymbol: React.PropTypes.string,
+  durationSymbolPlural: React.PropTypes.string,
+
+  // Currency
+  currencySymbol: React.PropTypes.string,
+
+  // Installment
+  installmentSymbol: React.PropTypes.string,
+
+  // Locale to format amounts correctly
+  locale: React.PropTypes.string,
+
+  // Submit button
+  actionLabel: React.PropTypes.string,
+}
+
+LoanSimulator.defaultProps = {
+  amountLabel: 'Amount',
+  amountPlaceholder: '',
+  amountMin: 1,
+  amountMax: 10000,
+  initialAmount: null,
+
+  amountEmptyError: 'Amount cannot be empty',
+  amountOutOfBoundsError: 'Amount is either too big or too small',
+
+  installmentLabel: 'Reimbursing',
+
+  durationText: 'during',
+  durationMin: 1,
+  durationMax: 36,
+  durationSymbol: 'month',
+  durationSymbolPlural: 'months',
+
+  currencySymbol: '$',
+  installmentSymbol: '$/month',
+  locale: 'en',
+
+  actionLabel: 'OK',
+}
+
+export default LoanSimulator

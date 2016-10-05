@@ -61,6 +61,7 @@ $k-typography: k-typography-definition((
 @import 'atoms/buttons/button-tag';
 
 // Form
+@import 'atoms/form/checkbox';
 @import 'atoms/form/label';
 @import 'atoms/form/text-input';
 
@@ -83,6 +84,9 @@ $k-typography: k-typography-definition((
 // Cards
 @import 'molecules/cards/card';
 
+// Footer
+@import 'molecules/footer/footer';
+
 // Form
 @import 'molecules/form/label-with-info';
 @import 'molecules/form/search-input';
@@ -95,11 +99,14 @@ $k-typography: k-typography-definition((
 
 // Grid
 @import 'molecules/grid/grid';
-@import 'molecules/grid/grid-duo';
 @import 'molecules/grid/row';
 
 // Hero
 @import 'molecules/heroes/hero';
+
+// Links
+@import 'molecules/links/external-rich-link';
+@import 'molecules/links/link-list';
 
 // Navigation
 @import 'molecules/navigation/horizontal-nav';
@@ -110,12 +117,12 @@ $k-typography: k-typography-definition((
 // Simulators
 @import 'molecules/simulators/simulator-result';
 
+// Teaser
+@import 'molecules/teaser/teaser';
+
 // Testimonies
 @import 'molecules/testimonies/testimony';
 @import 'molecules/testimonies/testimony-list';
-
-// Links
-@import 'molecules/links/external-rich-link';
 
 // ----------
 // Organisms

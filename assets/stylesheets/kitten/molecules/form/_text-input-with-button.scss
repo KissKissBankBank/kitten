@@ -81,6 +81,7 @@
     letter-spacing: k-px-to-rem(1px);
     color: $color;
 
+    outline: none;
     cursor: pointer;
 
     &.is-valid {

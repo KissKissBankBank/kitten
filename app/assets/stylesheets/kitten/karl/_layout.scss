@@ -1,3 +1,5 @@
+$karl-overgrid-z-index: 9999;
+
 .karl-Main {
   background-color: $light-grey-1;
 }
@@ -33,7 +35,7 @@
 .karl-OverGrid {
   position: fixed;
   top: 0;
-  z-index: 99999;
+  z-index: $karl-overgrid-z-index;
 
   width: 100%;
   height: 100%;
@@ -45,7 +47,7 @@
   @include container;
   box-sizing: border-box;
 
-  padding: 0 gutter() * 2;
+  padding: 0 map-get($k-grid, 'gutter-width');
 
   height: 100%;
   outline: 1px dotted rgba(black, .2);
@@ -76,4 +78,34 @@
   border: 1px solid white;
   border-radius: 2px;
   background: #4a84ff;
+}
+
+// Show the name of the current breakpoint
+
+.karl-OverBreakpoint {
+  pointer-events: none;
+}
+
+.karl-OverBreakpoint:before {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: $karl-overgrid-z-index + 1;
+
+  width: 2em;
+  height: 1.25em;
+  padding: .25em;
+
+  background: rgba(black, .1);
+  border-bottom-right-radius: .25rem;
+
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 1.25;
+  color: rgba(black, .5);
+
+  @each $name, $_query in $k-media-queries {
+    @include k-media-min($name) { content: "#{$name}"; }
+  }
 }

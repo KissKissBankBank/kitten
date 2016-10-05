@@ -107,7 +107,7 @@
     }
 
     &.is-inactive {
-      border-color-left: $unit-color-is-inactive;
+      border-color: $unit-color-is-inactive;
       color: $unit-color-is-inactive;
     }
   }

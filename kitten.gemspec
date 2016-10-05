@@ -22,7 +22,11 @@ Gem::Specification.new do |s|
   # < 5.0.0 because it has not been tested there yet.
   s.add_dependency 'railties', ['> 3.0.0', '< 5.0.0']
 
-  s.add_dependency 'webpack-rails', '~> 0.9.8'
+  # Render react components easily on client and server side.
+  s.add_dependency 'react_on_rails', '~> 6.1.0'
+
+  # Render react components with execjs on server side by react_on_rails.
+  s.add_dependency 'therubyracer'
 
   s.add_development_dependency 'bundler', '~> 1.8'
   s.add_development_dependency 'rake',    '~> 10.0'

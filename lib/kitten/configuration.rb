@@ -14,16 +14,12 @@ module Kitten
 
   # Configuration variables and defaults.
   class Configuration
-    # This option is used to pass an entry point different from `application` to
-    # the `webpack_asset_paths` helper.
-    attr_accessor :webpack_entry_point
-
-    # This option is used when you need to provide a custom asset host (eg.
-    # CDN url) that will be used in production.
-    attr_accessor :asset_host
+    # This option is used to pass an output bundle name different from
+    # `application-bundle` for hot reloading.
+    attr_accessor :webpack_output_bundle
 
     def initialize
-      self.webpack_entry_point = 'application'
+      self.webpack_output_bundle = 'application-bundle'
     end
   end
 end

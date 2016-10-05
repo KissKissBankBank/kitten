@@ -4,56 +4,24 @@
   body { background: white; }
 </style>
 
-<div class="k-Hero k-Hero--onDark" style="background: #4a84ff">
-  <div class="k-Hero__container">
-    <div class="k-Hero__text">
-      <!-- TODO <h1 class="k-Hero__title">Petits pêts entre amis</h1> -->
-      <h1 class="k-Hero__title">Petits prêts entre amis</h1>
-      <p class="k-Hero__subtitle">Vos amis vous avancent de l’argent.</p>
-      <p class="k-Hero__subtitle">Vous les remboursez sans intérêt et sans prise de tête grâce à hellomerci.</p>
-    </div>
-    <div class="k-Hero__action">
-      <div class="k-Card k-Card--light">
-        <div id="loan-simulator"></div>
-        <script type="text/babel">
-          const nbsp = String.fromCharCode(160)
+<div class="k-Row" style="background: #4a84ff">
+  <div class="k-Row__content">
 
-          ReactDOM.render(
-            React.createElement(LoanSimulator,
-              { amountLabel: 'J’ai besoin de',
-                amountPlaceholder: `Entre 200${nbsp}€ et 10${nbsp}000${nbsp}€`,
-                amountMin: 200,
-                amountMax: 10000,
-                initialAmount: null,
-
-                amountEmptyError: 'Veuillez renseigner un montant',
-                amountOutOfBoundsError: `Veuillez renseigner un montant compris entre
-                                         200 et 10${nbsp}000${nbsp}€`,
-
-                installmentLabel: 'Je rembourse',
-
-                sliderPlaceholder: 'Glisser pour sélectionner',
-
-                durationText: 'soit',
-                durationMin: 1,
-                durationMax: 36,
-                durationSymbol: 'mensualité',
-                durationSymbolPlural: 'mensualités',
-
-                currencySymbol: '€',
-                installmentSymbol: '€/mois',
-                locale: 'fr',
-
-                actionLabel: `C’est parti${nbsp}!`,
-              }),
-            document.getElementById('loan-simulator')
-          )
-        </script>
+    <div class="k-Hero k-Hero--onDark">
+      <div class="k-Hero__text">
+        <h1 class="k-Hero__title">Petits pêts entre amis</h1>
+        <p class="k-Hero__subtitle">Vos amis vous avancent de l’argent.</p>
+        <p class="k-Hero__subtitle">Vous les remboursez sans intérêt et sans prise de tête.</p>
       </div>
-      <p>
-        &nbsp;
-      </p>
+      <div class="k-Hero__action">
+        <div class="k-Card k-Card--light">
+          <form id="loan-simulator">
+            <%= react_component('KarlLoanSimulator') %>
+          </form>
+        </div>
+      </div>
     </div>
+
   </div>
 </div>
 
@@ -115,44 +83,46 @@
 </div>
 
 <div class="k-Row k-Row--padded k-Row--lightBottomBorder">
-  <div class="k-Row__content k-GridDuo">
-    <div class="k-GridDuo__col k-u-centered">
-      <img alt="Cute kitten"
-           src="https://placehold.it/400x300/4a84ff/fff"
-           width="400"
-           height="300" />
-    </div>
-    <div class="k-GridDuo__col">
-      <h2>J’emprunte à mes amis</h2>
-      <p>
-        C’est simple et rapide. J’emprunte à mes proches en quelques clics.
-        hellomerci rassemble l’argent pour moi et le transfère
-        directement sur mon compte bancaire.
-      </p>
-      <p>
-        <button class="k-Button">En savoir plus</button>
-      </p>
+  <div class="k-Row__content">
+    <div class="k-Teaser">
+      <div class="k-Teaser__col k-Teaser__col--image">
+        <img alt="Cute kitten"
+             src="https://placehold.it/400x300/4a84ff/fff"
+             width="400" />
+      </div>
+      <div class="k-Teaser__col k-Teaser__col--text">
+        <h2 class="k-Teaser__title">J’emprunte à mes amis</h2>
+        <p>
+          C’est simple et rapide. J’emprunte à mes proches en quelques clics.
+          hellomerci rassemble l’argent pour moi et le transfère
+          directement sur mon compte bancaire.
+        </p>
+        <p class="k-Teaser__action">
+          <button class="k-Button">En savoir plus</button>
+        </p>
+      </div>
     </div>
   </div>
 </div>
 
 <div class="k-Row k-Row--padded k-Row--light k-Row--lightBottomBorder">
-  <div class="k-Row__content k-GridDuo">
-    <div class="k-GridDuo__col">
-      <h2>Je rembourse mes amis</h2>
-      <p>
-        C’est garanti et pratique. hellomerci prélève automatiquement mon
-        compte pour rembourser mes prêteurs.
-      </p>
-      <p>
-        <button class="k-Button">En savoir plus</button>
-      </p>
-    </div>
-    <div class="k-GridDuo__col k-u-centered">
-      <img alt="Cute kitten"
-           src="https://placehold.it/300x360/4a84ff/fff"
-           width="300"
-           height="360" />
+  <div class="k-Row__content">
+    <div class="k-Teaser">
+      <div class="k-Teaser__col k-Teaser__col--text">
+        <h2 class="k-Teaser__title">Je rembourse mes amis</h2>
+        <p>
+          C’est garanti et pratique. hellomerci prélève automatiquement mon
+          compte pour rembourser mes prêteurs.
+        </p>
+        <p class="k-Teaser__action">
+          <button class="k-Button">En savoir plus</button>
+        </p>
+      </div>
+      <div class="k-Teaser__col k-Teaser__col--image">
+        <img alt="Cute kitten"
+             src="https://placehold.it/300x260/4a84ff/fff"
+             width="300" />
+      </div>
     </div>
   </div>
 </div>
@@ -177,20 +147,20 @@
 
 <div class="k-Row k-Row--padded k-Row--dark k-Row--centered">
   <div class="k-Row__content">
-    <p>
+    <h2>
       hellomerci présente aussi des projets d’intérêt collectif
       quand ils sont soutenus par nos partenaires.
-    </p>
+    </h2>
     <p>
-      <button class="k-Button">Voir les collectes publiques</button>
-      <button class="k-Button">Voir la liste de nos partenaires</button>
+      <a href="#" class="k-Button">Voir les collectes publiques</a>
+      <a href="#" class="k-Button">Voir la liste de nos partenaires</a>
     </p>
   </div>
 </div>
 
 <div class="k-Row k-Row--padded k-Row--light k-Row--lightBottomBorder k-Row--centered">
   <div class="k-Row__content">
-    <h2>La presse parle d'hellomerci&nbsp;: voilà une bonne nouvelle&nbsp;!</h2>
+    <h2>La presse parle de vos collectes publiques</h2>
 
     <div class="k-TestimonyList">
       <div class="k-TestimonyList__item k-Testimony">
@@ -227,25 +197,4 @@
   </div>
 </div>
 
-<div class="k-Row k-Row--padded k-Row--lightBottomBorder">
-  <div class="k-Row__content">
-    <p>Inscrivez-vous à notre Newsletter</p>
-    <p>
-      Suivez nous
-      <img src="https://placehold.it/35x35/4a84ff/fff" width="35" height="35" />
-      <img src="https://placehold.it/35x35/4a84ff/fff" width="35" height="35" />
-      <img src="https://placehold.it/35x35/4a84ff/fff" width="35" height="35" />
-    </p>
-  </div>
-</div>
-
-<div class="k-Row k-Row--padded k-Row--light">
-  <div class="k-Row__content">
-    <p>
-      <img src="https://placehold.it/100x100/4a84ff/fff" width="100" height="100" />
-    </p>
-    <p>
-      Plateforme de pêts entre particuliers de 200 à 10&nbsp;000&nbsp;€.
-    </p>
-  </div>
-</div>
+<%= render template: 'kitten/pages/footer' %>

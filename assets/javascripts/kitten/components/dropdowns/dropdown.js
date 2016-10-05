@@ -1,148 +1,129 @@
-window.Dropdown = React.createClass({
-  propTypes: {
-    positionedWith: React.PropTypes.string,
-    positionedWithBorder: React.PropTypes.bool,
-    positionedOn: React.PropTypes.string,
-    buttonTemplate: React.PropTypes.string,
-    buttonContentOnExpanded: React.PropTypes.string,
-    buttonContentOnCollapsed: React.PropTypes.string,
-    refreshEvents: React.PropTypes.array,
-    dropdownListArrow: React.PropTypes.bool,
-    dropdownList: React.PropTypes.array,
-  },
-  // Lifecycle
-  getDefaultProps: function() {
-    return {
-      // This prop is used to position the dropdown absolutely in relation with
-      // a reference element (self or its parent).
-      // If you use "parent" or <DOMNode>, make sure that this element has the
-      // "position" property set in its css.
-      // As using DOMNode is anti-pattern, you should avoid it when it is
-      // possible.
-      positionedWith: 'self', // 'self' | 'parent' | <DOMNode>
+import React from 'react'
+import classNames from 'classnames'
+import DropdownButton from 'kitten/components/dropdowns/dropdown-button'
+import ButtonImageWithTextAndBadge from 'kitten/components/buttons/button-image-with-text-and-badge'
+import domElementHelper from 'kitten/helpers/dom/element-helper'
+import EventEmitter from 'event-emitter'
+import objectAssign from 'core-js/library/fn/object/assign'
 
-      // This prop is used to fetch the correct height of the reference element
-      // for the dropdown position.
-      positionedWithBorder: true,
+const emitter = EventEmitter()
 
-      // This prop is used to fix the dropdown on left or right.
-      positionedOn: 'left', // 'left' | 'right'
+class Dropdown extends React.Component {
+  constructor(props) {
+    super(props)
 
-      // This prop is used to render with component 'ButtonImageWithTextAndBadger'
-      // or 'DropdownButton'
-      buttonTemplate: 'DropdownButton',
+    this.state = { isExpanded: false }
+    this.handleDropdownPosition = this.handleDropdownPosition.bind(this)
+  }
 
-      // Button settings
-      buttonContentOnExpanded: 'Close me',
-      buttonContentOnCollapsed: 'Expand me',
+  componentDidMount() {
+    const dropdown = this
 
-      spaceAroundGrid: 0,
-
-      // Value of notifications to show badge.
-      notifications: 0,
-
-      // This prop is used to update the reference element height when a
-      // javascript event is triggered on the window object.
-      refreshEvents: [], // eg. ['resize']
-
-      // Dropdown list settings
-      dropdownListArrow: false,
-      dropdownList: []
-    }
-  },
-  getInitialState: function() {
-    return {
-      isExpanded: false
-    }
-  },
-  componentDidMount: function() {
     this.updateReferenceElementHeightState()
+
+    emitter.on('dropdown:opening:trigger', () => {
+      dropdown.setState({ isExpanded: false })
+    })
 
     if (this.props.refreshEvents.length) {
       this.props.refreshEvents.forEach((ev) => {
-        window.addEventListener(ev, this.handleDropdownPosition);
+        window.addEventListener(ev, this.handleDropdownPosition)
       })
     }
-  },
-  componentWillUnmount: function() {
+  }
+
+  componentWillUnmount() {
     if (this.props.refreshEvents.length) {
       this.props.refreshEvents.forEach((ev) => {
         window.removeEventListener(ev, this.handleDropdownPosition);
       })
     }
-  },
+
+    emitter.off('dropdown:opening:trigger')
+  }
 
   // Component methods
-  getReferenceElement: function() {
-    if (typeof(this.props.positionedWith) == 'object') {
-      return this.props.positionedWith
-    }
 
-    if (this.props.positionedWith == 'parent') {
-      return this.refs.dropdown.parentNode
+  getReferenceElement() {
+    if (!this.isSelfReference()) {
+      return this.props.positionedWith()
     }
 
     return this.refs.dropdown
-  },
-  getReferenceElementHeight: function() {
+  }
+
+  getReferenceElementHeight() {
     let referenceElement = this.getReferenceElement()
 
-    return kitten.elements.getComputedHeight(
+    return domElementHelper.getComputedHeight(
       referenceElement,
       this.props.positionedWithBorder
     )
-  },
-  updateReferenceElementHeightState: function() {
+  }
+
+  updateReferenceElementHeightState() {
     let referenceElementHeight = this.getReferenceElementHeight()
     this.setState({ parentHeight: referenceElementHeight })
-  },
+  }
+
+  isSelfReference() {
+    return typeof this.props.positionedWith == 'undefined'
+  }
 
   // Elements
-  getDropdownParent: function() {
-    return this.refs.dropdown ? this.refs.dropdown.parentNode : null
-  },
-  getDropdownContent: function() {
-    return this.refs.dropdownContent ? this.refs.dropdownContent : null
-  },
-  getButtonImage: function() {
-    if (!this.refs.ButtonImageWithTextAndBadge) return
-    return this.refs.ButtonImageWithTextAndBadge.refs.buttonImage
-  },
 
-  // Size of elements
-  getDropdownParentWidth: function() {
-    return kitten.elements.getComputedWidth(this.getDropdownParent())
-  },
-  getButtonImageHalfWidth: function() {
-    return kitten.elements.getComputedWidth(this.getButtonImage()) / 2
-  },
-  getDropdownContentHalfWidth: function() {
-    return kitten.elements.getComputedWidth(this.getDropdownContent()) / 2
-  },
-  getDropdownParentPadding: function($alignment: 'left') {
+  getDropdownParent() {
+    return this.refs.dropdown ? this.refs.dropdown.parentNode : null
+  }
+  getDropdownContent() {
+    return this.refs.dropdownContent ? this.refs.dropdownContent : null
+  }
+  getButtonImage() {
+    if (!this.refs.buttonImageWithTextAndBadge) return
+    return this.refs.buttonImageWithTextAndBadge.refs.buttonImage
+  }
+
+  // Elements size
+
+  getDropdownParentWidth() {
+    return domElementHelper.getComputedWidth(this.getDropdownParent())
+  }
+  getButtonImageHalfWidth() {
+    return domElementHelper.getComputedWidth(this.getButtonImage()) / 2
+  }
+  getDropdownContentHalfWidth() {
+    return domElementHelper.getComputedWidth(this.getDropdownContent()) / 2
+  }
+  getDropdownParentPadding(alignment: 'left') {
     return parseInt(
-      kitten.elements.getComputedStyle(
+      domElementHelper.getComputedStyle(
         this.getDropdownParent(),
-        'padding-' + $alignment
+        'padding-' + alignment
       )
     )
-  },
+  }
 
   // Component listener callbacks
-  handleDropdownPosition: function(event) {
-    this.updateReferenceElementHeightState()
-  },
-  handleButtonClick: function(event) {
+
+  handleDropdownPosition() {
+    if (domElementHelper.canUseDom()) {
+      this.updateReferenceElementHeightState()
+    }
+  }
+
+  handleButtonClick(event) {
     event.stopPropagation()
     event.preventDefault()
+
+    emitter.emit('dropdown:opening:trigger', this)
 
     this.updateReferenceElementHeightState()
     this.setState({
       isExpanded: !this.state.isExpanded
     })
-  },
+  }
 
-  getContentPosition: function() {
+  getContentPosition() {
     const positionStyles = { top: this.state.parentHeight }
     let horizontalPosition = { left: 0 }
 
@@ -165,9 +146,10 @@ window.Dropdown = React.createClass({
       }
     }
 
-    return Object.assign(positionStyles, horizontalPosition)
-  },
-  getArrowPosition: function() {
+    return objectAssign(positionStyles, horizontalPosition)
+  }
+
+  getArrowPosition() {
     const space = this.getDropdownParentWidth()
                   - this.getButtonImageHalfWidth()
                   - this.getDropdownParentPadding(this.props.positionedOn)
@@ -178,18 +160,20 @@ window.Dropdown = React.createClass({
     }
 
     return { left: space + 'px' }
-  },
+  }
 
   // Rendering
-  renderListItem: function(item) {
+
+  renderListItem(item, i) {
     return(
-      <li role="menuitem">
+      <li key={ i } role="menuitem">
         { item }
       </li>
     )
-  },
-  renderList: function() {
-    const items = this.props.dropdownList.map((item) => this.renderListItem(item))
+  }
+
+  renderList() {
+    const items = this.props.dropdownList.map(this.renderListItem)
     const defaultItem = ('No choice')
 
     return(
@@ -197,15 +181,17 @@ window.Dropdown = React.createClass({
         { items.length ? items : defaultItem }
       </ul>
     )
-  },
-  renderButtonContentElement: function() {
+  }
+
+  renderButtonContentElement() {
     if (this.state.isExpanded) {
       return this.props.buttonContentOnExpanded
     }
 
     return this.props.buttonContentOnCollapsed
-  },
-  renderDropdownButton: function() {
+  }
+
+  renderDropdownButton() {
     return (
       <DropdownButton ref="dropdownButton"
                       className={ this.props.buttonClassName }
@@ -215,11 +201,12 @@ window.Dropdown = React.createClass({
         { this.renderButtonContentElement() }
       </DropdownButton>
     )
-  },
-  renderButtonImageWithTextAndBadge: function() {
+  }
+
+  renderButtonImageWithTextAndBadge() {
     return (
       <ButtonImageWithTextAndBadge
-        ref="ButtonImageWithTextAndBadge"
+        ref="buttonImageWithTextAndBadge"
         className={ this.props.buttonClassName }
         id={ this.props.buttonId }
         isExpanded={ this.state.isExpanded }
@@ -232,13 +219,14 @@ window.Dropdown = React.createClass({
         title={ this.props.title }
         notifications= { this.props.notifications } />
     )
-  },
-  renderArrow: function(positionArrow: false) {
+  }
+
+  renderArrow(arrowPosition: false) {
     if (!this.props.dropdownListArrow) return
 
     const positionDefault = { position: 'absolute', top: 0 }
-    const position = positionArrow ? this.getArrowPosition() : { right: '50%' }
-    const style = Object.assign(positionDefault, position)
+    const position = arrowPosition ? this.getArrowPosition() : { right: '50%' }
+    const style = objectAssign(positionDefault, position)
 
     return (
       <span ref="arrow"
@@ -246,11 +234,12 @@ window.Dropdown = React.createClass({
         { this.props.dropdownListArrow }
       </span>
     )
-  },
-  render: function() {
+  }
+
+  render() {
     const dropdownClass = {
       'is-expanded': this.state.isExpanded,
-      'k-Dropdown--asReference': this.props.positionedWith == 'self',
+      'k-Dropdown--asReference': this.isSelfReference(),
     }
 
     const dropdownClassName = classNames(
@@ -260,7 +249,7 @@ window.Dropdown = React.createClass({
     )
 
     const style = this.getContentPosition()
-    const positionArrow = parseInt(style.right) == 0 ||
+    const arrowPosition = parseInt(style.right) == 0 ||
                           parseInt(style.left) == 0
 
     let renderButton = this.renderDropdownButton()
@@ -279,9 +268,49 @@ window.Dropdown = React.createClass({
              aria-hidden="true"
              aria-labelledby={ this.props.buttonId }>
           { this.renderList() }
-          { this.renderArrow(positionArrow) }
+          { this.renderArrow(arrowPosition) }
         </nav>
       </div>
     );
   }
-});
+}
+
+Dropdown.propTypes = {
+  positionedWithBorder: React.PropTypes.bool,
+  positionedOn: React.PropTypes.string,
+  buttonTemplate: React.PropTypes.string,
+  refreshEvents: React.PropTypes.array,
+  dropdownList: React.PropTypes.array,
+}
+
+Dropdown.defaultProps = {
+  // This prop is used to fetch the correct height of the reference element
+  // for the dropdown position.
+  positionedWithBorder: true,
+
+  // This prop is used to fix the dropdown on left or right.
+  positionedOn: 'left', // 'left' | 'right'
+
+  // This prop is used to render with component 'ButtonImageWithTextAndBadger'
+  // or 'DropdownButton'
+  buttonTemplate: 'DropdownButton',
+
+  // Button settings
+  buttonContentOnExpanded: 'Close me',
+  buttonContentOnCollapsed: 'Expand me',
+
+  spaceAroundGrid: 0,
+
+  // Value of notifications to show badge.
+  notifications: 0,
+
+  // This prop is used to update the reference element height when a
+  // javascript event is triggered on the window object.
+  refreshEvents: [], // eg. ['resize']
+
+  // Dropdown list settings
+  dropdownListArrow: false,
+  dropdownList: [],
+}
+
+export default Dropdown
