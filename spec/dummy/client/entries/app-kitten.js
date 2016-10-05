@@ -1,4 +1,4 @@
-require('../stylesheets/dummy-style.scss');
+require('../stylesheets/app-kitten.scss');
 
 import ReactOnRails from 'react-on-rails';
 

@@ -4,7 +4,8 @@
 // Super important: This file is loaded even for hot loading only, so we need to
 // be sure that we don't reference the static generated CSS files.
 
-@import 'dummy-bundle';
+@import 'app-kitten';
+@import 'app-dummy'
 
 // Non-webpack assets
 // @import 'application_non_webpack';

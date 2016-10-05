@@ -1,5 +1,15 @@
-@include k-Dropdown;
+// Kitten library
+@import 'kitten';
 
+// Configuration
+@import 'kitten/config';
+
+// Heroes
+.k-Hero--catBackground {
+  background-image: url("https://unsplash.it/3988/2720?image=1056");
+}
+
+// Dropdowns
 .karl-Dropdown--default {
   margin: 0;
   padding: 0;
