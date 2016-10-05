@@ -112,6 +112,9 @@ $k-typography: k-typography-definition((
 @import 'molecules/navigation/user-menu';
 @import 'molecules/navigation/platform-switch';
 
+// Press
+@import 'molecules/press/press-quotes';
+
 // Simulators
 @import 'molecules/simulators/simulator-result';
 
@@ -134,66 +137,3 @@ $k-typography: k-typography-definition((
 
 // Dropdowns
 @import 'organisms/dropdowns/dropdown';
-
-
-// TODO move to assets/stylesheets/kitten/molecules/press/quotes
-//
-// Example:
-//   <div class="k-PressQuotes">
-//     <div class="k-PressQuotes__title">…</div>
-//     <div class="k-PressQuotes__quotes">
-//       <div class="k-PressQuotes__quote">
-//         <blockquote class="k-PressQuotes__quotes__quote">…</blockquote>
-//         …
-//       </div>
-//       …
-//   </div>
-
-.k-PressQuotes {
-  @include k-grid;
-  text-align: center;
-}
-
-.k-PressQuotes__title {
-  @include k-grid-col(12);
-
-  @include k-typographyFont('source-sans-light');
-  @include k-typographyFontSize(7);
-}
-
-.k-PressQuotes__quotes {
-  @include k-grid-col(6);
-  @include k-grid-offset(3);
-
-  @include k-media-min('l') {
-    @include k-grid-col(10);
-    @include k-grid-offset(1);
-    display: flex;
-  }
-
-  @include k-media-min('xl') {
-    @include k-grid-col(8);
-    @include k-grid-offset(2);
-  }
-}
-
-.k-PressQuotes__quote {
-  margin: 0 k-px-to-rem(20px) k-px-to-rem(30px) k-px-to-rem(20px);
-
-  @include k-media-min('l') {
-    flex: 1;
-  }
-}
-
-.k-PressQuotes__quote__text {
-  margin: 0 0 k-px-to-rem(20px) 0;  // overrides <blockquote>
-
-  @include k-typographyFont('source-sans-light');
-  @include k-typographyFontSize;
-  font-style: italic;
-
-  @include k-media-min('l') {
-    // align on three lines of quote text, so that images stay on the same line
-    min-height: k-px-to-rem(70px);
-  }
-}
