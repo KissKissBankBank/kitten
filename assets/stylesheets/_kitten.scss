@@ -3,7 +3,6 @@ $k-module: null;
 // Dependencies
 @import 'sassy-maps';
 @import 'modular-scale';
-@import '~susy/sass/susy';
 
 // Helpers
 @import 'kitten/schema';
@@ -12,6 +11,9 @@ $k-module: null;
 
 // Default config
 @import 'kitten/default-config';
+
+// Dependencies that have te be loaded after the default config
+@import '~susy/sass/susy';
 
 // Atoms
 @import 'kitten/atoms/buttons/button-icon';
