@@ -67,6 +67,13 @@
   .k-Header__items {
     display: flex;
     align-items: center;
+
+    @include k-media-min('xs') {
+      // Since all items have left and right padding, negate it for the first
+      // and last elements.
+      margin-left: -$item-spacing;
+      margin-right: -$item-spacing;
+    }
   }
 
   .k-Header__items--pull-end {
