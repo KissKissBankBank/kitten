@@ -98,18 +98,18 @@ $menu-width: 14rem;
     position: absolute;
     left: -1em;
 
-    content: url($arrowRight-path);
+    content: url($arrowRight-data);
   }
 
   .karl-Menu.is-opened & {
     &:before {
-      content: url($arrowLeft-path);
+      content: url($arrowLeft-data);
     }
   }
 
   .karl-Menu.is-opened.is-clicked &:before {
     @include k-media-xs {
-      content: url($arrowRight-path);
+      content: url($arrowRight-data);
     }
   }
 }
@@ -155,14 +155,14 @@ $menu-width: 14rem;
       position: absolute;
       right: $menu-padding-right;
 
-      content: url($arrowBottom-path);
+      content: url($arrowBottom-data);
     }
 
     &.is-opened {
       background-color: $light-navy;
 
       &:after {
-        content: url($arrowTop-path);
+        content: url($arrowTop-data);
       }
     }
   }
@@ -199,14 +199,14 @@ $menu-width: 14rem;
       position: absolute;
       right: $menu-padding-right;
 
-      content: url($arrowBottom-path);
+      content: url($arrowBottom-data);
     }
 
     &.is-opened {
       background-color: $light-navy;
 
       &:after {
-        content: url($arrowTop-path);
+        content: url($arrowTop-data);
       }
     }
   }
