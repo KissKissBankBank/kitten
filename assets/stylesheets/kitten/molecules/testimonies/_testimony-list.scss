@@ -18,6 +18,8 @@
 ///   </div>
 @mixin k-TestimonyList {
   @include k-with-module('k-TestimonyList') {
+    $gutter: k-map-fetch($k-grid, 'gutter-width');
+
     .k-TestimonyList {
       @include k-grid;
     }
@@ -54,7 +56,7 @@
         padding-right: 0;
 
         flex: 1;
-        margin-right: 20px;
+        margin-right: $gutter;
 
         &:last-of-type {
           margin-right: 0;
