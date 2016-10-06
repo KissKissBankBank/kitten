@@ -8,6 +8,10 @@ Breaking changes:
 - Change dummy stylesheets fil architecture.
 - Remove `k-GridDuo` molecule.
 - Use `therubyracer` instead of `mini_racer`.
+- Update `k-Header` molecule's HTML
+  * required new `__container`
+  * replace `__grid` by `__row`
+  * remove `k-Header__items--pull-end`
 
 New features:
 - Add new `k-Teaser` molecule.
