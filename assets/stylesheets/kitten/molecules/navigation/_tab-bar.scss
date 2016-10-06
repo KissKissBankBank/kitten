@@ -8,11 +8,13 @@
 ///
 ///   @include k-TabBar((
 ///     font: source-sans-uppercase,
-///     font-size: 10px,
-///     background-color: #333,
-///     color: #fff,
+///     font-step: -4,
+///     line-height: 1.5,
+///     background-color: #4a84ff,
+///     border-color: #5c90ff,
+///     color: #b7ceff,
 ///     color-current: #fff,
-///     z-index: 10
+///     z-index: 50,
 ///   ));
 ///
 /// @example html
@@ -48,6 +50,8 @@
       k-map-fetch($tabbar, 'color-current'));
     $background-color: k-color-definition(
       k-map-fetch($tabbar, 'background-color'));
+    $border-color: k-color-definition(
+      k-map-fetch($tabbar, 'border-color'));
 
     $round-size: k-px-to-rem(25px);
     $z-index: k-number-definition(map-get($tabbar, 'z-index'));
@@ -83,7 +87,7 @@
       display: block;
       position: relative;
       outline: none;
-      border-top: $border-width solid $background-color;
+      border-top: $border-width solid $border-color;
       background-color: $background-color;
       cursor: pointer;
       color: $color;
