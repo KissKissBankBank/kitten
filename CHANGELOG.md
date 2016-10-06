@@ -12,6 +12,7 @@ Breaking changes:
   * required new `__container`
   * replace `__grid` by `__row`
   * remove `k-Header__items--pull-end`
+- The `k-LinkList` molecule requires new arguments.
 
 New features:
 - Add new `k-Teaser` molecule.
