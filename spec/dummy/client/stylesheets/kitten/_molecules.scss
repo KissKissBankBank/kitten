@@ -181,6 +181,10 @@
   ),
 ));
 
+// Press
+
+@include k-PressQuotes;
+
 // Simulators
 
 @include k-SimulatorResult((
@@ -204,3 +208,7 @@
 @include k-Testimony((
   font: 'source-sans-light',
 ));
+
+// Titles
+
+@include k-TitleWithActions;

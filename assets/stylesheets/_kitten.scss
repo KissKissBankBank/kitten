@@ -42,6 +42,7 @@ $k-module: null;
 @import "kitten/molecules/heroes/hero";
 @import 'kitten/molecules/links/external-rich-link';
 @import 'kitten/molecules/links/link-list';
+@import 'kitten/molecules/press/press-quotes';
 @import 'kitten/molecules/navigation/horizontal-nav';
 @import 'kitten/molecules/navigation/platform-switch';
 @import 'kitten/molecules/navigation/tab-bar';
@@ -50,6 +51,7 @@ $k-module: null;
 @import "kitten/molecules/teaser/teaser";
 @import "kitten/molecules/testimonies/testimony-list";
 @import "kitten/molecules/testimonies/testimony";
+@import 'kitten/molecules/titles/title-with-actions';
 
 // Organisms
 @import 'kitten/organisms/dropdowns/dropdown';
