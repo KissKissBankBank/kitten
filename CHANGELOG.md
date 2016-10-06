@@ -13,6 +13,8 @@ Breaking changes:
   * replace `__grid` by `__row`
   * remove `k-Header__items--pull-end`
 - The `k-LinkList` molecule requires new arguments.
+- Update `k-TestimonyList__row` molecule's HTML
+  * required new `TestimonyList__row` container
 
 New features:
 - Add new `k-Teaser` molecule.
