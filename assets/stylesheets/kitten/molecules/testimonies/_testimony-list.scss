@@ -43,10 +43,16 @@
 
     .k-TestimonyList__item {
       @include k-media-min('m') {
-        flex-basis: 40%;
+        @include k-grid-col(6);
+        padding-left: 5%;
+        padding-right: 5%;
       }
 
       @include k-media-min('l') {
+        // do not use the padding strategy anymore (use a right margin instead)
+        padding-left: 0;
+        padding-right: 0;
+
         flex: 1;
         margin-right: 20px;
 
