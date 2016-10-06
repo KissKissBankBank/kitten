@@ -21,7 +21,7 @@ import merge from 'webpack-merge'
 // Import common webpack config.
 import baseConfig from './config/webpack/base.config'
 
-const devServerPort = 3500
+const devServerPort = process.env.HOT_RAILS_PORT || 3500
 const developmentConfig = {
   entry: {
     dummy: [
@@ -30,7 +30,7 @@ const developmentConfig = {
    ],
   },
   output: {
-    filename: '[name]-bundle.js',
+    filename: '[name].js',
     path: path.join(__dirname, 'public'),
     publicPath: `http://localhost:${devServerPort}/`,
   },

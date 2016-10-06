@@ -1,0 +1,214 @@
+// Buttons
+
+@include k-ButtonImageWithText((
+  colors: (
+    base: #333,
+    hover: #4a84ff,
+    active: #2c66e1,
+  )
+));
+
+@include k-ButtonWithBadge;
+
+// Cards
+
+@include k-Card((
+  colors: (
+    light-background: #fff,
+    light-text: #333,
+  ),
+));
+
+// Footer
+
+@include k-Footer;
+
+// Form
+
+@include k-LabelWithInfo((
+  colors: (
+    active: black,
+    inactive: #aaa,
+  ),
+));
+
+@include k-SearchInput;
+
+@include k-Select((
+  colors: (
+    input-bg: #fff,
+    input-border: #d8d8d8,
+    input-border-focus: #4a84ff,
+    option-bg: #fbfbfb,
+  ),
+));
+
+@include k-SliderTooltip((
+  colors: (
+    border: #cadbfd,
+    border-inactive: #eee,
+    background: #fff,
+    background-inactive: #fbfbfb,
+    text: #4a84ff,
+    text-inactive: #b8b8b8,
+  )
+));
+
+@include k-Slider((
+  colors: (
+    progress: #4a84ff,
+    progress-disabled: #d8d8d8,
+    ramp: #eee,
+    handle: #4a84ff,
+    handle-disabled: #d8d8d8,
+    icon: #fff,
+    icon-disabled: #fff,
+    border: #4a84ff,
+  )
+));
+
+
+@include k-TextInputWithButton((
+  font: 'source-sans-semi-bold',
+  font-size: -4,
+  color: #fff,
+  button-background: #4a84ff,
+  button-background-is-valid: #70c050,
+  button-background-is-error: #ff4146,
+));
+
+@include k-TextInputWithInfo((
+  label: (
+    font: 'source-sans-semi-bold',
+    font-size: -2,
+    color: #333,
+  ),
+  error: (
+    font: 'source-sans',
+    font-size: -2,
+    color: #ff4146,
+  )
+));
+
+@include k-TextInputWithUnit((
+  input-font: 'source-sans',
+  unit-font: 'source-sans-semi-bold',
+  border-color: #d8d8d8,
+  color: #333,
+  unit-color: #4a84ff,
+  unit-colors-is-valid: #70c050,
+  unit-colors-is-error: #ff4146,
+  unit-colors-is-inactive: #fff,
+));
+
+// Grid
+
+@include k-Grid;
+
+@include k-Row((
+  colors: (
+    light-background: #fafafa,
+    dark-background: #999,
+    light-bottom-border: #eee,
+  )
+));
+
+// Heroes
+
+@include k-Hero((
+  font: 'source-sans',
+));
+
+// Links
+
+@include k-ExternalRichLink;
+@include k-LinkList;
+
+// Navigation
+
+@include k-HorizontalNav((
+  font: source-sans-semi-bold-uppercase,
+  font-step: -2,
+  colors: (
+    base: (
+      background-color: #fff,
+      border-color: #eee,
+      color: #333,
+    ),
+    hover: (
+      color: #4a84ff,
+    ),
+    focus: (
+      border-color: #4a84ff,
+      color: #4a84ff,
+    ),
+    is-selected: (
+      color: #4a84ff,
+      border-color: #4a84ff,
+    )
+  )
+));
+
+@include k-PlatformSwitch((
+  colors: (
+    background: #fbfbfb,
+    border: #eee,
+    background-hover: #eee,
+    border-active: #4a84ff,
+  )
+));
+
+@include k-TabBar((
+  font: source-sans-uppercase,
+  font-step: -4,
+  line-height: 1.5,
+  background-color: #4a84ff,
+  color: #b7ceff,
+  color-current: #fff,
+  z-index: 50,
+));
+
+@include k-UserMenu((
+  font: 'source-sans-semi-bold',
+  font-step: -2,
+  colors: (
+    base: #333,
+    background: #fbfbfb,
+    border: #eee,
+    background-hover: #eee,
+    color-active: #4a84ff,
+    border-active: #4a84ff,
+  ),
+));
+
+// Press
+
+@include k-PressQuotes;
+
+// Simulators
+
+@include k-SimulatorResult((
+  colors: (
+    border: #eee,
+    background: #fbfbfb,
+    text: #333
+  ),
+  label-font: source-sans-uppercase,
+  value-font: source-sans-semi-bold,
+));
+
+// Teaser
+
+@include k-Teaser;
+
+// Testimonies
+
+@include k-TestimonyList;
+
+@include k-Testimony((
+  font: 'source-sans-light',
+));
+
+// Titles
+
+@include k-TitleWithActions;

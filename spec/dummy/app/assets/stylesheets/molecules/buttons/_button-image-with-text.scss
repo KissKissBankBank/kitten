@@ -1,9 +1,0 @@
-@import 'kitten/molecules/buttons/button-image-with-text';
-
-@include k-ButtonImageWithText((
-  colors: (
-    base: #333,
-    hover: #4a84ff,
-    active: #2c66e1,
-  )
-));

@@ -1,3 +1,6 @@
 Kitten.configure do |config|
-  config.webpack_output_bundle = 'dummy-bundle'
+  config.webpack_output_bundles = [
+    'app-kitten.js',
+    'app-dummy.js'
+  ]
 end
