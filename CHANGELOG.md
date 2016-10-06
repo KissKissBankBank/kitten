@@ -8,6 +8,7 @@ Breaking changes:
 - Change dummy stylesheets fil architecture.
 - Remove `k-GridDuo` molecule.
 - Use `therubyracer` instead of `mini_racer`.
+- The `k-LinkList` molecule requires new arguments.
 
 New features:
 - Add new `k-Teaser` molecule.
