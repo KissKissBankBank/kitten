@@ -3,7 +3,13 @@
 /// @group links
 ///
 /// @example scss - usage
-///   @include k-LinkList;
+///   @include k-LinkList((
+///     colors: (
+///       link: black,
+///       link-active: grey,
+///       link-hover: blue,
+///     ),
+///   ));
 ///
 /// @example html
 ///   <ul class="k-LinkList">
@@ -14,7 +20,11 @@
 ///       <a class="k-LinkList__link" href="#">Link B</a>
 ///      </li>
 ///   </ul>
-@mixin k-LinkList {
+@mixin k-LinkList($link-list) {
+  $link-color: k-default(map-get-deep($link-list, ('colors', 'link')), inherit);
+  $active-color: map-get-deep($link-list, ('colors', 'link-active'));
+  $hover-color: map-get-deep($link-list, ('colors', 'link-hover'));
+
   .k-LinkList {
     // override ul defaults
     list-style-type: none;
@@ -30,6 +40,18 @@
     @include k-typographyFontSize(2);
 
     text-decoration: none;
-    color: inherit;
+
+    color: $link-color;
+
+    &:active,
+    &.is-active {
+     color: $active-color;
+    }
+
+    &:hover {
+      color: $hover-color;
+    }
+
+    transition: color .2s;
   }
 }

@@ -122,7 +122,14 @@
 // Links
 
 @include k-ExternalRichLink;
-@include k-LinkList;
+
+@include k-LinkList((
+  colors: (
+    link: #333,
+    link-active: #2c66e1,
+    link-hover: #4a84ff,
+  ),
+));
 
 // Navigation
 
