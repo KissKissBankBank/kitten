@@ -18,6 +18,7 @@ $k-module: null;
 // Atoms
 @import 'kitten/atoms/buttons/button-icon';
 @import 'kitten/atoms/buttons/button-image';
+@import 'kitten/atoms/buttons/button-tag';
 @import 'kitten/atoms/buttons/button';
 @import 'kitten/atoms/form/checkbox';
 @import 'kitten/atoms/form/label';
@@ -28,6 +29,7 @@ $k-module: null;
 
 // Molecules
 @import 'kitten/molecules/buttons/button-image-with-text';
+@import 'kitten/molecules/buttons/button-icon-words';
 @import 'kitten/molecules/buttons/button-with-badge';
 @import 'kitten/molecules/cards/card';
 @import 'kitten/molecules/footer/footer';
