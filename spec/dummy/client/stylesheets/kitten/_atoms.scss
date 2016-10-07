@@ -1,0 +1,352 @@
+// Buttons
+
+@include k-ButtonIcon((
+  default: (
+    colors: (
+      base: (
+        color: #333,
+        border-color: #d8d8d8,
+        background-color: #fff,
+      ),
+      focus: (
+        color: #4a84ff,
+        border-color: #cadbfd,
+        background-color: #fff,
+      ),
+      hover: (
+        color: #4a84ff,
+        border-color: #cadbfd,
+        background-color: #fff,
+      ),
+      active: (
+        color: #fff,
+        border-color: #2c66e1,
+        background-color: #2c66e1,
+      ),
+      is-selected: (
+        color: #fff,
+        border-color: #2c66e1,
+        background-color: #2c66e1,
+      ),
+      disabled: (
+        color: #fff,
+        border-color: #d8d8d8,
+        background-color: #d8d8d8,
+      )
+    )
+  ),
+  primary: (
+    colors: (
+      base: (
+        color: #fff,
+        border-color: #4a84ff,
+        background-color: #4a84ff,
+      ),
+      focus: (
+        color: #fff,
+        border-color: #3b75f0,
+        background-color: #3b75f0,
+      ),
+      hover: (
+        color: #fff,
+        border-color: #3b75f0,
+        background-color: #3b75f0,
+      ),
+      active: (
+        color: #fff,
+        background-color: #2c66e1,
+        border-color: #2c66e1,
+      ),
+      is-selected: (
+        color: #fff,
+        background-color: #2c66e1,
+        border-color: #2c66e1,
+      ),
+      disabled: (
+        color: #fff,
+        border-color: #d8d8d8,
+        background-color: #d8d8d8,
+      )
+    )
+  )
+));
+
+@include k-ButtonImage((
+  colors: (
+    base: (
+      color: #333,
+      background-color: #fff
+    ),
+    hover: (
+      color: #333,
+      border-color: #d8d8d8,
+      background-color: #fff,
+    ),
+    active: (
+      color: #333,
+      border-color: #d8d8d8,
+      background-color: #fff,
+    )
+  )
+));
+
+@include k-ButtonTag((
+  default: (
+    colors: (
+      base: (
+        color: #333,
+        border-color: #d8d8d8,
+        background-color: #fff,
+      ),
+      focus: (
+        color: #4a84ff,
+        border-color: #cadbfd,
+        background-color: #fff,
+      ),
+      hover: (
+        color: #4a84ff,
+        border-color: #cadbfd,
+        background-color: #fff,
+      ),
+      active: (
+        color: #fff,
+        border-color: #2c66e1,
+        background-color: #2c66e1,
+      ),
+      is-selected: (
+        color: #fff,
+        border-color: #2c66e1,
+        background-color: #2c66e1,
+      ),
+      disabled: (
+        color: #fff,
+        border-color: #d8d8d8,
+        background-color: #d8d8d8,
+      )
+    )
+  )
+));
+
+@include k-Button((
+  font: 'source-sans-semi-bold-uppercase',
+  default: (
+    colors: (
+      base: (
+        color: #333,
+        background-color: #fff,
+        border-color: #d8d8d8,
+      ),
+      focus: (
+        color: #fff,
+        border-color: #4a84ff,
+        background-color: #4a84ff,
+      ),
+      hover: (
+        color: #fff,
+        border-color: #4a84ff,
+        background-color: #4a84ff,
+      ),
+      active: (
+        color: #fff,
+        border-color: #2c66e1,
+        background-color: #2c66e1,
+      ),
+      is-selected: (
+        color: #fff,
+        border-color: #2c66e1,
+        background-color: #2c66e1,
+      ),
+      disabled: (
+        color: #fff,
+        border-color: #d8d8d8,
+        background-color: #d8d8d8,
+      ),
+    ),
+  ),
+  primary: (
+    colors:(
+      base: (
+        color: #fff,
+        border-color: #4a84ff,
+        background-color: #4a84ff,
+      ),
+      focus: (
+        color: #fff,
+        border-color: #3b75f0,
+        background-color: #3b75f0,
+      ),
+      hover: (
+        color: #fff,
+        border-color: #3b75f0,
+        background-color: #3b75f0,
+      ),
+      active: (
+        color: #fff,
+        border-color: #2c66e1,
+        background-color: #2c66e1,
+      ),
+      is-selected: (
+        color: #fff,
+        border-color: #2c66e1,
+        background-color: #2c66e1,
+      ),
+      disabled: (
+        color: #fff,
+        border-color: #d8d8d8,
+        background-color: #d8d8d8,
+      ),
+    )
+  )
+));
+
+
+// Form
+
+@include k-Checkbox((
+  font: 'source-sans-semi-bold',
+  colors: (
+    background: #fff,
+    background-checked: #4a84ff,
+    background-disabled: #d8d8d8,
+    border: #d8d8d8,
+    border-hover: #4a84ff,
+  )
+));
+
+@include k-Label((
+  font: source-sans-semi-bold
+));
+
+@include k-TextInput((
+  font: 'source-sans',
+  font-size: -1,
+  colors: (
+    base: (
+      color: #333,
+      border: #d8d8d8,
+      background: #fff,
+    ),
+    focus: (
+      border: #4a84ff,
+    ),
+    disabled: (
+      color: #fff,
+      border: #fff,
+      background: #d8d8d8,
+    ),
+    is-valid: (
+      color: #70c050,
+      border: #70c050,
+    ),
+    is-error: (
+      color: #ff4146,
+      border: #ff4146,
+    )
+  )
+));
+
+// Notifications
+
+@include k-Badge((
+  colors: (
+    base: #fff,
+    background: #4a84ff,
+  )
+));
+
+// Typography
+
+@include k-TypographyBodyCopy((
+  family: 'source-sans',
+  color: #333
+));
+
+@include k-TypographyScale((
+  styles: (
+    TitleH1: (
+      family: 'source-sans-light',
+      step: 13,
+      line-height: 1.13,
+    ),
+
+    TitleH1Dosis: (
+      family: 'dosis',
+      step: 14,
+      line-height: 1.2,
+    ),
+
+    TitleH2: (
+      family: 'source-sans-semi-bold',
+      step: 9,
+      line-height: 1.16,
+    ),
+
+    TitleH2Dosis: (
+      family: 'dosis',
+      step: 10,
+      line-height: 1,
+    ),
+
+    TitleH3: (
+      family: 'source-sans-semi-bold',
+      step: 6,
+      line-height: 1.8,
+    ),
+
+    TitleH3Dosis: (
+      family: 'dosis',
+      step: 6,
+      line-height: 0.8,
+    ),
+
+    TitleH4: (
+      family: 'source-sans-semi-bold',
+      step: 2,
+      line-height: 1.4,
+    ),
+
+    TitleH4Dosis: (
+      family: 'dosis',
+      step: 2,
+      line-height: 1.3,
+    ),
+
+    // Paragraph (line-height) KissKissBankBank et Lendopolis
+    ParagraphXl: (
+      family: 'source-sans',
+      step: 2,
+      line-height: 1.6,
+    ),
+    // Paragraph (line-height et font-weight) HelloMerci
+    ParagraphXlLight: (
+      family: 'source-sans-light',
+      step: 2,
+      line-height: 1.3,
+    ),
+
+    ParagraphLg: (
+      family: 'source-sans',
+      step: 1,
+    ),
+
+    ParagraphMd: (
+      family: 'source-sans',
+      step: 0,
+    ),
+
+    ParagraphSm: (
+      family: 'source-sans',
+      step: -1,
+    ),
+
+    ParagraphXsSemiBold: (
+      family: 'source-sans-semi-bold',
+      step: -2,
+    ),
+
+    ParagraphXs: (
+      family: 'source-sans',
+      step: -2,
+    )
+  )
+));

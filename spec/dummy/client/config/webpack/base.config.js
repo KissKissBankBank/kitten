@@ -13,8 +13,12 @@ const nodeEnv = devBuild ? 'development' : 'production';
 
 const baseConfig = {
   entry: {
-    dummy: [
-      './app/javascripts/dummy',
+    // Entry name will determine the name of the output bundle.
+    'app-kitten': [
+      './entries/app-kitten',
+    ],
+    'app-dummy': [
+      './entries/app-dummy'
     ]
   },
 

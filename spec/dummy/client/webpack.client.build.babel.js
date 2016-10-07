@@ -28,8 +28,8 @@ import baseConfig from './config/webpack/base.config'
 const production = process.env.NODE_ENV === 'production';
 
 // Static assets filenames
-const jsFilenames = production ? '[name]-bundle-[chunkhash].js' : '[name]-bundle.js';
-const cssFilename = production ? 'dummy-bundle-[chunkhash].scss' : 'dummy-bundle.scss';
+const jsFilenames = production ? '[name]-[chunkhash].js' : '[name].js';
+const cssFilename = production ? '[name]-[chunkhash].scss' : '[name].scss';
 
 const buildConfig = {
   output: {

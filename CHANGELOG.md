@@ -5,11 +5,19 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 Breaking changes:
-- Remove `GridDuo` molecule.
+- Change dummy stylesheets fil architecture.
+- Remove `k-GridDuo` molecule.
 - Use `therubyracer` instead of `mini_racer`.
+- Update `k-Header` molecule's HTML
+  * required new `__container`
+  * replace `__grid` by `__row`
+  * remove `k-Header__items--pull-end`
+- The `k-LinkList` molecule requires new arguments.
 
 New features:
-- Add new `Teaser` molecule.
+- Add new `k-Teaser` molecule.
+- Add new `k-titleWithActions` molecule.
+- Add new `k-PressQuotes` molecule.
 
 ## [v0.7.0] - 2016-10-03
 

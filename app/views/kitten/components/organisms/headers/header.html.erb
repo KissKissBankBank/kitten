@@ -2,65 +2,67 @@
 
   <header id="header" class="k-Header" role="banner">
 
-    <div class="k-Header__grid">
+    <div class="k-Header__container">
+      <div class="k-Header__row">
 
-      <div class="k-Header__items">
+        <div class="k-Header__items">
 
-        <div class="k-Header__item" id="k-Header__platformSwitchDropdown">
-          <%= react_component('KarlUnloggedHeaderPlatformSwitch') %>
+          <div class="k-Header__item" id="k-Header__platformSwitchDropdown">
+            <%= react_component('KarlUnloggedHeaderPlatformSwitch') %>
+          </div>
+
+          <p class="k-Header__item">
+            <img src="https://placeholdit.imgix.net/~text?txt=LOGO&amp;w=180&amp;h=40"
+                 alt="LOGO" />
+          </p>
+
+          <nav class="k-Header__item k-Header__nav">
+            <ul class="k-HorizontalNav" role="menubar">
+              <li role="menuitem">
+                <a class="k-HorizontalNav__item" href="#">
+                  Nav link 1
+                </a>
+              </li>
+              <li role="menuitem">
+                <a class="k-HorizontalNav__item" href="#">
+                  Nav link 2
+                </a>
+              </li>
+              <li role="menuitem">
+                <a class="k-HorizontalNav__item" href="#">
+                  Nav link 3
+                </a>
+              </li>
+              <li role="menuitem">
+                <a class="k-HorizontalNav__item is-selected" href="#">
+                  Nav link 4
+                </a>
+              </li>
+            </ul>
+          </nav>
+
         </div>
 
-        <p class="k-Header__item">
-          <img src="https://placeholdit.imgix.net/~text?txt=LOGO&amp;w=180&amp;h=40"
-               alt="LOGO" />
-        </p>
+        <div class="k-Header__items">
 
-        <nav class="k-Header__item k-Header__nav">
-          <ul class="k-HorizontalNav" role="menubar">
-            <li role="menuitem">
-              <a class="k-HorizontalNav__item" href="#">
-                Nav link 1
-              </a>
-            </li>
-            <li role="menuitem">
-              <a class="k-HorizontalNav__item" href="#">
-                Nav link 2
-              </a>
-            </li>
-            <li role="menuitem">
-              <a class="k-HorizontalNav__item" href="#">
-                Nav link 3
-              </a>
-            </li>
-            <li role="menuitem">
-              <a class="k-HorizontalNav__item is-selected" href="#">
-                Nav link 4
-              </a>
-            </li>
-          </ul>
-        </nav>
+          <div class="k-Header__item">
+            <button class="k-ButtonIcon k-ButtonIcon--medium">
+              <svg class="k-ButtonIcon__svg" viewBox="-0.7 -0.7 18 18"
+                xmlns="http://www.w3.org/2000/svg">
+                <circle cx="7" cy="7" r="7" stroke-width="1.1"
+                  class="k-ButtonIcon__svg__stroke" fill="none" />
+                <path d="M13 11 L17 15 L15.5 16.5 L11.5 12.7z" />
+              </svg>
+            </button>
+          </div>
+
+          <div class="k-Header__item k-Header__signup">
+            <a class="k-Button" href="#">S'identifier</a>
+          </div>
+
+        </div>
 
       </div>
-
-      <div class="k-Header__items k-Header__items--pull-end">
-
-        <div class="k-Header__item">
-          <button class="k-ButtonIcon k-ButtonIcon--medium">
-            <svg class="k-ButtonIcon__svg" viewBox="-0.7 -0.7 18 18"
-              xmlns="http://www.w3.org/2000/svg">
-              <circle cx="7" cy="7" r="7" stroke-width="1.1"
-                class="k-ButtonIcon__svg__stroke" fill="none" />
-              <path d="M13 11 L17 15 L15.5 16.5 L11.5 12.7z" />
-            </svg>
-          </button>
-        </div>
-
-        <div class="k-Header__item k-Header__signup">
-          <a class="k-Button" href="#">S'identifier</a>
-        </div>
-
-      </div>
-
     </div>
 
   </header>
@@ -76,74 +78,76 @@
 
   <header id="header-search" class="k-Header" role="banner">
 
-    <div class="k-Header__grid">
+    <div class="k-Header__container">
+      <div class="k-Header__row">
 
-      <div class="k-Header__items">
+        <div class="k-Header__items">
 
-        <div class="k-Header__item">
-          <button class="k-ButtonIcon">
-            <svg class="k-ButtonIcon__svg" viewBox="0 0 10 7"
-              xmlns="http://www.w3.org/2000/svg">
-              <path d="M5 6.243L3.586 4.828 7.828.586 9.243 2z"/>
-              <path d="M5 6.243L.757 2 2.172.586l4.242 4.242z"/>
-            </svg>
-          </button>
+          <div class="k-Header__item">
+            <button class="k-ButtonIcon k-ButtonIcon--tiny">
+              <svg class="k-ButtonIcon__svg" viewBox="0 0 10 7"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 6.243L3.586 4.828 7.828.586 9.243 2z"/>
+                <path d="M5 6.243L.757 2 2.172.586l4.242 4.242z"/>
+              </svg>
+            </button>
+          </div>
+
+          <p class="k-Header__item">
+            <img src="https://placeholdit.imgix.net/~text?txt=LOGO&amp;w=180&amp;h=40"
+                 alt="LOGO" />
+          </p>
+
+          <nav class="k-Header__item k-Header__nav">
+            <ul class="k-HorizontalNav" role="menubar">
+              <li role="menuitem">
+                <a class="k-HorizontalNav__item" href="#">
+                  Nav link 1
+                </a>
+              </li>
+              <li role="menuitem">
+                <a class="k-HorizontalNav__item" href="#">
+                  Nav link 2
+                </a>
+              </li>
+              <li role="menuitem">
+                <a class="k-HorizontalNav__item" href="#">
+                  Nav link 3
+                </a>
+              </li>
+              <li role="menuitem">
+                <a class="k-HorizontalNav__item is-selected" href="#">
+                  Nav link 4
+                </a>
+              </li>
+            </ul>
+          </nav>
+
         </div>
 
-        <p class="k-Header__item">
-          <img src="https://placeholdit.imgix.net/~text?txt=LOGO&amp;w=180&amp;h=40"
-               alt="LOGO" />
-        </p>
+        <div class="k-Header__items">
 
-        <nav class="k-Header__item k-Header__nav">
-          <ul class="k-HorizontalNav" role="menubar">
-            <li role="menuitem">
-              <a class="k-HorizontalNav__item" href="#">
-                Nav link 1
-              </a>
-            </li>
-            <li role="menuitem">
-              <a class="k-HorizontalNav__item" href="#">
-                Nav link 2
-              </a>
-            </li>
-            <li role="menuitem">
-              <a class="k-HorizontalNav__item" href="#">
-                Nav link 3
-              </a>
-            </li>
-            <li role="menuitem">
-              <a class="k-HorizontalNav__item is-selected" href="#">
-                Nav link 4
-              </a>
-            </li>
-          </ul>
-        </nav>
+          <div class="k-Header__item k-Header__search">
+            <form class="k-SearchInput" role="search">
 
-      </div>
+              <input class="k-TextInput k-SearchInput__input"
+                     type="text"
+                     name="foobar"
+                     placeholder="Foobar…" />
 
-      <div class="k-Header__items k-Header__items--pull-end">
+              <input class="k-SearchInput__submit"
+                     type="submit"
+                     name="foobar_submit"
+                     value="Search" />
 
-        <div class="k-Header__item k-Header__search">
-          <form class="k-SearchInput" role="search">
+            </form>
+          </div>
 
-            <input class="k-TextInput k-SearchInput__input"
-                   type="text"
-                   name="foobar"
-                   placeholder="Foobar…" />
+          <div class="k-Header__item k-Header__signup">
+            <a class="k-Button" href="#">S'identifier</a>
+          </div>
 
-            <input class="k-SearchInput__submit"
-                   type="submit"
-                   name="foobar_submit"
-                   value="Search" />
-
-          </form>
         </div>
-
-        <div class="k-Header__item k-Header__signup">
-          <a class="k-Button" href="#">S'identifier</a>
-        </div>
-
       </div>
 
     </div>
@@ -162,65 +166,67 @@
 
   <header id="header-logged" class="k-Header" role="banner">
 
-    <div class="k-Header__grid">
+    <div class="k-Header__container">
+      <div class="k-Header__row">
 
-      <div class="k-Header__items">
+        <div class="k-Header__items">
 
-        <div class="k-Header__item" id="k-Header__platformSwitchDropdown__example">
-          <%= react_component('KarlLoggedHeaderPlatformSwitch') %>
+          <div class="k-Header__item" id="k-Header__platformSwitchDropdown__example">
+            <%= react_component('KarlLoggedHeaderPlatformSwitch') %>
+          </div>
+
+          <p class="k-Header__item">
+            <img src="https://placeholdit.imgix.net/~text?txt=LOGO&amp;w=180&amp;h=40"
+                 alt="LOGO" />
+          </p>
+
+          <nav class="k-Header__item k-Header__nav">
+            <ul class="k-HorizontalNav" role="menubar">
+              <li role="menuitem">
+                <a class="k-HorizontalNav__item" href="#">
+                  Nav link 1
+                </a>
+              </li>
+              <li role="menuitem">
+                <a class="k-HorizontalNav__item" href="#">
+                  Nav link 2
+                </a>
+              </li>
+              <li role="menuitem">
+                <a class="k-HorizontalNav__item" href="#">
+                  Nav link 3
+                </a>
+              </li>
+              <li role="menuitem">
+                <a class="k-HorizontalNav__item is-selected" href="#">
+                  Nav link 4
+                </a>
+              </li>
+            </ul>
+          </nav>
+
         </div>
 
-        <p class="k-Header__item">
-          <img src="https://placeholdit.imgix.net/~text?txt=LOGO&amp;w=180&amp;h=40"
-               alt="LOGO" />
-        </p>
+        <div class="k-Header__items k-Header__items--pull-end">
 
-        <nav class="k-Header__item k-Header__nav">
-          <ul class="k-HorizontalNav" role="menubar">
-            <li role="menuitem">
-              <a class="k-HorizontalNav__item" href="#">
-                Nav link 1
-              </a>
-            </li>
-            <li role="menuitem">
-              <a class="k-HorizontalNav__item" href="#">
-                Nav link 2
-              </a>
-            </li>
-            <li role="menuitem">
-              <a class="k-HorizontalNav__item" href="#">
-                Nav link 3
-              </a>
-            </li>
-            <li role="menuitem">
-              <a class="k-HorizontalNav__item is-selected" href="#">
-                Nav link 4
-              </a>
-            </li>
-          </ul>
-        </nav>
+          <div class="k-Header__item">
+            <button class="k-ButtonIcon">
+              <svg class="k-ButtonIcon__svg" viewBox="-0.7 -0.7 18 18"
+                xmlns="http://www.w3.org/2000/svg">
+                <circle cx="7" cy="7" r="7" stroke-width="1.1"
+                  class="k-ButtonIcon__svg__stroke" fill="none" />
+                <path d="M13 11 L17 15 L15.5 16.5 L11.5 12.7z" />
+              </svg>
+            </button>
+          </div>
+
+          <div id="k-UserMenuDropdownLogged" class="k-Header__item">
+            <%= react_component('KarlLoggedHeaderUserMenu') %>
+          </div>
+
+        </div>
 
       </div>
-
-      <div class="k-Header__items k-Header__items--pull-end">
-
-        <div class="k-Header__item">
-          <button class="k-ButtonIcon k-ButtonIcon--medium">
-            <svg class="k-ButtonIcon__svg" viewBox="-0.7 -0.7 18 18"
-              xmlns="http://www.w3.org/2000/svg">
-              <circle cx="7" cy="7" r="7" stroke-width="1.1"
-                class="k-ButtonIcon__svg__stroke" fill="none" />
-              <path d="M13 11 L17 15 L15.5 16.5 L11.5 12.7z" />
-            </svg>
-          </button>
-        </div>
-
-        <div id="k-UserMenuDropdownLogged" class="k-Header__item">
-          <%= react_component('KarlLoggedHeaderUserMenu') %>
-        </div>
-
-      </div>
-
     </div>
 
   </header>
