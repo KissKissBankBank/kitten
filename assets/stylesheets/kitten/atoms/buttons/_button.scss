@@ -9,39 +9,41 @@
 ///
 /// @parameter {Map} $button - a button specification
 ///
-/// @example scss button-primary - Usage
+/// @example scss button - Usage
 ///   @include k-Button((
 ///     font: 'source-sans-semi-bold-uppercase',
-///       colors: (
-///         primary: (
-///           base: (
-///             color: #fff,
-///             border-color: #4a84ff,
-///             background-color: #4a84ff,
-///           ),
-///           focus: (
-///             color: #fff,
-///             border-color: #3b75f0,
-///             background-color: #3b75f0,
-///           ),
-///           hover: (
-///             color: #fff,
-///             border-color: #3b75f0,
-///             background-color: #3b75f0,
-///           ),
-///           active: (
-///             color: #fff,
-///             border-color: #2c66e1,
-///             background-color: #2c66e1,
-///           ),
-///           disabled: (
-///             color: #fff,
-///             border-color: #d8d8d8,
-///             background-color: #d8d8d8,
-///           )
-///         )
+///     colors: (
+///       base: (
+///         color: #333,
+///         background-color: #fff,
+///         border-color: #d8d8d8,
+///       ),
+///       focus: (
+///         color: #fff,
+///         border-color: #4a84ff,
+///         background-color: #4a84ff,
+///       ),
+///       hover: (
+///         color: #fff,
+///         border-color: #4a84ff,
+///         background-color: #4a84ff,
+///       ),
+///       active: (
+///         color: #fff,
+///         border-color: #2c66e1,
+///         background-color: #2c66e1,
+///       ),
+///       is-selected: (
+///         color: #fff,
+///         border-color: #2c66e1,
+///         background-color: #2c66e1,
+///       ),
+///       disabled: (
+///         color: #fff,
+///         border-color: #d8d8d8,
+///         background-color: #d8d8d8,
 ///       )
-///   ));
+///     )
 
 @mixin k-Button($button) {
   @include k-with-module('k-Button: $button') {
@@ -50,16 +52,10 @@
     // Button element default settings.
     $button-min-width: k-px-to-rem(160px - ($border-size * 2));
     $button-line-height: k-px-to-rem(40px - ($border-size * 2));
-    // Button icon with words element default settings.
-    $button-icon-words-min-width: k-px-to-rem(110px - ($border-size * 2));
-    $button-icon-words-line-height: k-px-to-rem(40px - ($border-size * 2));
 
     // Button element big settings.
     $button-big-min-width: k-px-to-rem(200px - ($border-size * 2));
     $button-big-line-height: k-px-to-rem(50px - ($border-size * 2));
-    // Button icon with words element big settings.
-    $button-icon-words-big-min-width: k-px-to-rem(130px - ($border-size * 2));
-    $button-icon-words-big-line-height: k-px-to-rem(50px - ($border-size * 2));
 
     // The button element has a radius of 1.25rem (
     //   20px (designed border-radius) / 16px (base font-size)
@@ -101,35 +97,18 @@
         'k-Button__svg__stroke'
       );
 
+      @include k-buttonSvg(
+        $button-primary,
+        'k-Button--primary',
+        'k-Button__svg__stroke'
+      );
+
       width: $icon-width;
       height: $icon-height;
     }
 
     .k-Button--primary {
       @include k-buttonBase($button-primary);
-
-      .k-Button__svg {
-        @include k-buttonSvg(
-          $button-primary,
-          'k-Button',
-          'k-Button__svg__stroke'
-        );
-
-        width: $icon-width;
-        height: $icon-height;
-      }
-    }
-
-    .k-ButtonIconWords {
-      display: flex;
-
-      padding: 0 $button-radius 0 .8rem;
-      min-width: $button-icon-words-min-width;
-
-      .k-Button__svg {
-        margin-top: k-px-to-rem(11px);
-        margin-right: k-px-to-rem(14px);
-      }
     }
 
     .k-Button--big {
@@ -139,6 +118,5 @@
       border-radius: $button-big-radius;
       min-width: $button-big-min-width;
     }
-
   }
 }

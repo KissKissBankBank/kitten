@@ -1,1 +1,49 @@
-@mixin k-ButtonIconWords {}
+@mixin k-ButtonIconWords {
+
+    $border-size: 1px;
+
+    // Button icon with words element default settings.
+    $button-icon-words-min-width: k-px-to-rem(110px - ($border-size * 2));
+    $button-icon-words-line-height: k-px-to-rem(40px - ($border-size * 2));
+
+     // Button icon with words element big settings.
+    $button-icon-words-big-min-width: k-px-to-rem(130px - ($border-size * 2));
+    $button-icon-words-big-line-height: k-px-to-rem(50px - ($border-size * 2));
+
+    // The button element has a radius of 1.25rem (
+    //   20px (designed border-radius) / 16px (base font-size)
+    // ). The horizontal paddings are computed using this radius.
+    $button-radius: 1.25rem;
+    $button-big-radius: 1.56rem;
+
+    // Button font-size is computed using a modular scale and a defined step of this
+    // scale.
+    $button-step: -2;
+
+
+  .k-ButtonIconWords {
+    display: flex;
+
+    padding: 0 $button-radius 0 .8rem;
+    min-width: $button-icon-words-min-width;
+
+    .k-Button__svg {
+      margin-top: k-px-to-rem(11px);
+      margin-right: k-px-to-rem(14px);
+    }
+  }
+
+  .k-ButtonIconWords--big {
+    @include k-typographyFontSize(
+      $button-step, $button-icon-words-big-line-height);
+
+    padding: 0 $button-big-radius;
+    border-radius: $button-big-radius;
+    min-width: $button-icon-words-big-min-width;
+
+    .k-Button__svg {
+      margin-top: k-px-to-rem(15px);
+      margin-right: k-px-to-rem(19px);
+    }
+  }
+}

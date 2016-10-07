@@ -1,34 +1,22 @@
-/// Apply button basic display.
+/// Set a svg on a button.
 ///
-/// This mixin will apply pseudo-classes and state classes on the parent class
-/// that is calling it:
-///   - `:hover`
-///   - `:focus`
-///   - `:active`
-///   - `:disabled` (optionnal)
-///   - `.is-selected` (optionnal)
-///
-/// The `:focus` pseudo-class is optionnal. If it is not defined, the `:hover`
-/// styles will be applied to `:focus` pseudo-class.
-///
-/// When `border-color` is not defined, `transparent` is used by default.
+/// Given a svg color, this mixin will use the passed color to set the
+/// `svg` CSS rule.
 ///
 /// @group buttons
 ///
-/// @parameter {Map} $button - a button specification
+/// @parameter {Color} $button, $parent, $stroke_class
 ///
 /// @example scss - Usage
-///   $button: (
-///     colors: (
-///       base-color: color: #fff,
-///       focus-color: color: #fff,
-///       hover-color: color: #fff,
-///       active-color: color: #fff,
-///       disabled-color: color: #fff,
-///       is-selected-color: color: #fff,
-///     )
-///   )
+///   @include k-buttonSvg(#d8d8d8);
 ///
+/// @example css - CSS output
+///    fill: #fff;
+///    .k-Button,
+///    .k-Button__svg__stroke:hover {
+///      fill: #3b5998;
+///    }
+///   ...
 
 @mixin k-buttonSvg($button, $parent, $stroke_class) {
 
@@ -42,8 +30,12 @@
     k-map-fetch($button, ('colors', 'active', 'color')));
   $disabled-color: k-color-definition(
     k-map-fetch($button, ('colors', 'disabled', 'color')));
+  $is-selected-color: k-color-definition(
+    k-map-fetch($button, ('colors', 'is-selected', 'color')));
 
-  fill: $base-color;
+  .#{$parent} & {
+    fill: $base-color;
+  }
 
   .#{$parent}:hover & {
     fill: $hover-color;
@@ -66,8 +58,15 @@
     fill: $disabled-color;
   }
 
+  .#{$parent}.is-selected & {
+    fill: $is-selected-color;
+  }
+
   .#{$stroke_class} {
-    stroke: $base-color;
+
+    .#{$parent} & {
+      stroke: $base-color;
+    }
 
     .#{$parent}:hover & {
       stroke: $hover-color;
@@ -88,6 +87,10 @@
 
     .#{$parent}:disabled & {
       stroke: $disabled-color;
+    }
+
+    .#{$parent}.is-selected & {
+      stroke: $is-selected-color;
     }
   }
 }
