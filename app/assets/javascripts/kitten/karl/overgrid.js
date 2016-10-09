@@ -1,5 +1,5 @@
-window.karl = (function(karl) {
-
+// Toggle elemnts with `data-overgrid` when calling cltr+g.
+window.karl = (function(karl) {  
   function isOvergridOn() {
     return !!sessionStorage.getItem('karl-overgrid')
   }
@@ -14,14 +14,6 @@ window.karl = (function(karl) {
     $('[data-overgrid]').hide()
   }
 
-  // Toggle an element with the keyboard.
-  //
-  // For example, to show and hide an element by calling ctrl+a:
-  //
-  //     <div data-overgrid>
-  //       You pressed ctrl+a
-  //     </div>
-  //
   karl.initOvergrid = function() {
     if (isOvergridOn())
       showOvergrid()
