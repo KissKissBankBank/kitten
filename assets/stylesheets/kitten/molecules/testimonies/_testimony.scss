@@ -20,7 +20,8 @@
     $font: k-map-fetch($testimony, 'font');
 
     .k-Testimony {
-      padding: k-px-to-rem(20px) 0;
+      padding-top: k-px-to-rem(20px);
+      padding-bottom: k-px-to-rem(20px);
       text-align: center;
     }
 
@@ -30,7 +31,11 @@
       @include k-typographyFontSize(5);
 
       @include k-media-min('m') {
-        @include k-typographyFontSize(4);
+        // Forced height to keep testimonies aligned when the title spans
+        // two lines.
+        min-height: 3.1rem;
+
+        @include k-typographyFontSize(4, 1);
       }
     }
 
