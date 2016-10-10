@@ -4,8 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [v0.8.0]
+
 Breaking changes:
-- Change dummy stylesheets fil architecture.
+- Change dummy stylesheets file architecture.
 - Remove `k-GridDuo` molecule.
 - Use `therubyracer` instead of `mini_racer`.
 - Update `k-Header` molecule's HTML
