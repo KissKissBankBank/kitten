@@ -1,6 +1,6 @@
 module Kitten
   module WebpackHelper
-    def hot_output_bundles
+    def kitten_hot_output_bundles
       port = ENV['HOT_RAILS_PORT'] || 3500
 
       Kitten.configuration.webpack_output_bundles.map do |bundle|
