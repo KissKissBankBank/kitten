@@ -31,7 +31,13 @@
       @include k-typographyFontSize(5);
 
       @include k-media-min('m') {
+        // Forced height to keep testimonies aligned when the title spans
+        // two lines.
+        min-height: 3.1rem;
+
         @include k-typographyFontSize(4);
+
+        line-height: 1; // override's font-size mixin
       }
     }
 
