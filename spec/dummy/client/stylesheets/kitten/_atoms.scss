@@ -8,18 +8,18 @@
       border-color: #d8d8d8,
     ),
     hover: (
-      color: #79ccd7,
+      color: map-get($k-colors, 'primary-1'),
       background-color: #fff,
       border-color: #c8daff,
     ),
     focus: (
-      color: #79ccd7,
+      color: map-get($k-colors, 'primary-1'),
       background-color: #fff,
       border-color: #c8daff,
     ),
     active: (
       color: #fff,
-      background-color: #79ccd7,
+      background-color: map-get($k-colors, 'primary-1'),
     ),
     disabled: (
       color: #fff,
@@ -57,11 +57,11 @@
     ),
     hover: (
       color: #fff,
-      background-color: #79ccd7,
+      background-color: map-get($k-colors, 'primary-1'),
     ),
     focus: (
       color: #fff,
-      background-color: #79ccd7,
+      background-color: map-get($k-colors, 'primary-1'),
     ),
     active: (
       color: #fff,
@@ -80,10 +80,10 @@
   font: 'source-sans-semi-bold',
   colors: (
     background: #fff,
-    background-checked: #79ccd7,
+    background-checked: map-get($k-colors, 'primary-1'),
     background-disabled: #d8d8d8,
     border: #d8d8d8,
-    border-hover: #79ccd7,
+    border-hover: map-get($k-colors, 'primary-1'),
   )
 ));
 
@@ -101,7 +101,7 @@
       background: #fff,
     ),
     focus: (
-      border: #79ccd7,
+      border: map-get($k-colors, 'primary-1'),
     ),
     disabled: (
       color: #fff,
@@ -124,7 +124,7 @@
 @include k-Badge((
   colors: (
     base: #fff,
-    background: #79ccd7,
+    background: map-get($k-colors, 'primary-1'),
   )
 ));
 

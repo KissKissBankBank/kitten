@@ -49,3 +49,21 @@ $susy: (
   gutter-position: split,
   gutters: $gutter-width/$column-width,
 ) !default;
+
+// Colors
+
+$k-colors: (
+  'font-1': #333,
+  'font-2': #b8b8b8,
+  'background-1': #fff,
+  'background-2': #fbfbfb,
+  'background-3': #f6f6f6,
+  'line-1': #f6f6f6,
+  'line-2': #f6f6f6,
+
+  'primary-1': #4a84ff,
+  'primary-2': #3b75f0,
+  'primary-3': #2c66e1,
+  'primary-4': #cadbfd,
+  'primary-5': #ecf2ff,
+) !default;
