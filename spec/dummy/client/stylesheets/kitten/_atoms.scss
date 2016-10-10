@@ -3,7 +3,7 @@
 @include k-ButtonIcon((
   colors: (
     base: (
-      color: #333,
+      color: map-get($k-colors, 'font-1'),
       background-color: #fff,
       border-color: #d8d8d8,
     ),
@@ -31,16 +31,16 @@
 @include k-ButtonImage((
   colors: (
     base: (
-      color: #333,
+      color: map-get($k-colors, 'font-1'),
       background-color: #fff
     ),
     hover: (
-      color: #333,
+      color: map-get($k-colors, 'font-1'),
       background-color: #fff,
       border-color: #d8d8d8
     ),
     active: (
-      color: #333,
+      color: map-get($k-colors, 'font-1'),
       background-color: #fff,
       border-color: #d8d8d8
     )
@@ -51,7 +51,7 @@
   font: 'source-sans-semi-bold-uppercase',
   colors: (
     base: (
-      color: #333,
+      color: map-get($k-colors, 'font-1'),
       background-color: #fff,
       border-color: #d8d8d8
     ),
@@ -96,7 +96,7 @@
   font-size: -1,
   colors: (
     base: (
-      color: #333,
+      color: map-get($k-colors, 'font-1'),
       border: #d8d8d8,
       background: #fff,
     ),
@@ -132,7 +132,7 @@
 
 @include k-TypographyBodyCopy((
   family: 'source-sans',
-  color: #333
+  color: map-get($k-colors, 'font-1')
 ));
 
 @include k-TypographyScale((

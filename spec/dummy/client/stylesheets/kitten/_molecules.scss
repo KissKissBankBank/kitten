@@ -2,7 +2,7 @@
 
 @include k-ButtonImageWithText((
   colors: (
-    base: #333,
+    base: map-get($k-colors, 'font-1'),
     hover: map-get($k-colors, 'primary-1'),
     active: #2c66e1,
   )
@@ -15,7 +15,7 @@
 @include k-Card((
   colors: (
     light-background: #fff,
-    light-text: #333,
+    light-text: map-get($k-colors, 'font-1'),
   ),
 ));
 
@@ -81,7 +81,7 @@
   label: (
     font: 'source-sans-semi-bold',
     font-size: -2,
-    color: #333,
+    color: map-get($k-colors, 'font-1'),
   ),
   error: (
     font: 'source-sans',
@@ -94,7 +94,7 @@
   input-font: 'source-sans',
   unit-font: 'source-sans-semi-bold',
   border-color: #d8d8d8,
-  color: #333,
+  color: map-get($k-colors, 'font-1'),
   unit-color: map-get($k-colors, 'primary-1'),
   unit-colors-is-valid: #70c050,
   unit-colors-is-error: #ff4146,
@@ -125,7 +125,7 @@
 
 @include k-LinkList((
   colors: (
-    link: #333,
+    link: map-get($k-colors, 'font-1'),
     link-active: #2c66e1,
     link-hover: map-get($k-colors, 'primary-1'),
   ),
@@ -140,7 +140,7 @@
     base: (
       background-color: #fff,
       border-color: #eee,
-      color: #333,
+      color: map-get($k-colors, 'font-1'),
     ),
     hover: (
       color: map-get($k-colors, 'primary-1'),
@@ -179,7 +179,7 @@
   font: 'source-sans-semi-bold',
   font-step: -2,
   colors: (
-    base: #333,
+    base: map-get($k-colors, 'font-1'),
     background: #fbfbfb,
     border: #eee,
     background-hover: #eee,
@@ -198,7 +198,7 @@
   colors: (
     border: #eee,
     background: #fbfbfb,
-    text: #333
+    text: map-get($k-colors, 'font-1')
   ),
   label-font: source-sans-uppercase,
   value-font: source-sans-semi-bold,
