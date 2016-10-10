@@ -8,18 +8,18 @@
       border-color: #d8d8d8,
     ),
     hover: (
-      color: #4a84ff,
+      color: #79ccd7,
       background-color: #fff,
       border-color: #c8daff,
     ),
     focus: (
-      color: #4a84ff,
+      color: #79ccd7,
       background-color: #fff,
       border-color: #c8daff,
     ),
     active: (
       color: #fff,
-      background-color: #4a84ff,
+      background-color: #79ccd7,
     ),
     disabled: (
       color: #fff,
@@ -57,11 +57,11 @@
     ),
     hover: (
       color: #fff,
-      background-color: #4a84ff,
+      background-color: #79ccd7,
     ),
     focus: (
       color: #fff,
-      background-color: #4a84ff,
+      background-color: #79ccd7,
     ),
     active: (
       color: #fff,
@@ -80,10 +80,10 @@
   font: 'source-sans-semi-bold',
   colors: (
     background: #fff,
-    background-checked: #4a84ff,
+    background-checked: #79ccd7,
     background-disabled: #d8d8d8,
     border: #d8d8d8,
-    border-hover: #4a84ff,
+    border-hover: #79ccd7,
   )
 ));
 
@@ -101,7 +101,7 @@
       background: #fff,
     ),
     focus: (
-      border: #4a84ff,
+      border: #79ccd7,
     ),
     disabled: (
       color: #fff,
@@ -124,7 +124,7 @@
 @include k-Badge((
   colors: (
     base: #fff,
-    background: #4a84ff,
+    background: #79ccd7,
   )
 ));
 

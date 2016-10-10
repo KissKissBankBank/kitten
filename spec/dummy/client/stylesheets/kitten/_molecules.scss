@@ -3,7 +3,7 @@
 @include k-ButtonImageWithText((
   colors: (
     base: #333,
-    hover: #4a84ff,
+    hover: #79ccd7,
     active: #2c66e1,
   )
 ));
@@ -38,32 +38,32 @@
   colors: (
     input-bg: #fff,
     input-border: #d8d8d8,
-    input-border-focus: #4a84ff,
+    input-border-focus: #79ccd7,
     option-bg: #fbfbfb,
   ),
 ));
 
 @include k-SliderTooltip((
   colors: (
-    border: #cadbfd,
+    border: #d7eff2,
     border-inactive: #eee,
     background: #fff,
     background-inactive: #fbfbfb,
-    text: #4a84ff,
+    text: #79ccd7,
     text-inactive: #b8b8b8,
   )
 ));
 
 @include k-Slider((
   colors: (
-    progress: #4a84ff,
+    progress: #79ccd7,
     progress-disabled: #d8d8d8,
     ramp: #eee,
-    handle: #4a84ff,
+    handle: #79ccd7,
     handle-disabled: #d8d8d8,
     icon: #fff,
     icon-disabled: #fff,
-    border: #4a84ff,
+    border: #79ccd7,
   )
 ));
 
@@ -72,7 +72,7 @@
   font: 'source-sans-semi-bold',
   font-size: -4,
   color: #fff,
-  button-background: #4a84ff,
+  button-background: #79ccd7,
   button-background-is-valid: #70c050,
   button-background-is-error: #ff4146,
 ));
@@ -95,7 +95,7 @@
   unit-font: 'source-sans-semi-bold',
   border-color: #d8d8d8,
   color: #333,
-  unit-color: #4a84ff,
+  unit-color: #79ccd7,
   unit-colors-is-valid: #70c050,
   unit-colors-is-error: #ff4146,
   unit-colors-is-inactive: #fff,
@@ -107,7 +107,7 @@
 
 @include k-Row((
   colors: (
-    light-background: #fafafa,
+    light-background: #fbfdfe,
     dark-background: #999,
     light-bottom-border: #eee,
   )
@@ -127,7 +127,7 @@
   colors: (
     link: #333,
     link-active: #2c66e1,
-    link-hover: #4a84ff,
+    link-hover: #79ccd7,
   ),
 ));
 
@@ -143,15 +143,15 @@
       color: #333,
     ),
     hover: (
-      color: #4a84ff,
+      color: #79ccd7,
     ),
     focus: (
-      border-color: #4a84ff,
-      color: #4a84ff,
+      border-color: #79ccd7,
+      color: #79ccd7,
     ),
     is-selected: (
-      color: #4a84ff,
-      border-color: #4a84ff,
+      color: #79ccd7,
+      border-color: #79ccd7,
     )
   )
 ));
@@ -161,7 +161,7 @@
     background: #fbfbfb,
     border: #eee,
     background-hover: #eee,
-    border-active: #4a84ff,
+    border-active: #79ccd7,
   )
 ));
 
@@ -169,7 +169,7 @@
   font: source-sans-uppercase,
   font-step: -4,
   line-height: 1.5,
-  background-color: #4a84ff,
+  background-color: #79ccd7,
   color: #b7ceff,
   color-current: #fff,
   z-index: 50,
@@ -183,8 +183,8 @@
     background: #fbfbfb,
     border: #eee,
     background-hover: #eee,
-    color-active: #4a84ff,
-    border-active: #4a84ff,
+    color-active: #79ccd7,
+    border-active: #79ccd7,
   ),
 ));
 
