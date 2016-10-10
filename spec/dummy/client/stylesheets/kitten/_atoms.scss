@@ -65,7 +65,7 @@
     ),
     active: (
       color: #fff,
-      background-color: #2c66e1,
+      background-color: map-get($k-colors, 'primary-3'),
     ),
     disabled: (
       color: #fff,
