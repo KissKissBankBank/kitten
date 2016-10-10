@@ -7,6 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [v0.8.0]
 
 Breaking changes:
+- Rename the `hot_output_bundles` to `kitten_hot_output_bundles`
 - Change dummy stylesheets file architecture.
 - Remove `k-GridDuo` molecule.
 - Use `therubyracer` instead of `mini_racer`.
