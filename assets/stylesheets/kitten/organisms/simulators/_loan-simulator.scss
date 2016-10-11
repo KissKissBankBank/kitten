@@ -29,15 +29,12 @@
     $colors: k-map-fetch($loan-simulator, 'colors');
     $error-color: k-color-definition(k-map-fetch($colors, 'error'));
 
-    .k-LoanSimulator__label {
-      margin: k-px-to-rem(20px) 0 k-px-to-rem(10px);
-      @include k-typographyFontSize(-1);
-    }
+    $spacing-between-amount-and-reimbursing: k-px-to-rem(40px);
+    $error-top-margin: k-px-to-rem(10px);
 
-    .k-LoanSimulator__amount__error {
-      color: red;
-      margin: k-px-to-rem(10px) 0 0 0;
-      @include k-typographyFontSize(-2);
+    .k-LoanSimulator__label {
+      margin: 0 0 k-px-to-rem(10px);
+      @include k-typographyFontSize(-1);
     }
 
     .k-LoanSimulator__result {
@@ -45,10 +42,30 @@
     }
 
     .k-LoanSimulator__amount {
-      margin: k-px-to-rem(30px) k-px-to-rem(50px) 0;
+
+      margin: k-px-to-rem(30px)
+              k-px-to-rem(50px)
+              $spacing-between-amount-and-reimbursing;
+
+      .k-LoanSimulator.is-error & {
+        // On error, lower the spacing between amount and reimbursing so that
+        // one line of error text does not move the spacing.
+        margin-bottom: (
+          $spacing-between-amount-and-reimbursing
+          - $error-top-margin
+          - 1.5rem // error text line height
+        );
+      }
     }
+
+    .k-LoanSimulator__amount__error {
+      color: red;
+      margin: $error-top-margin 0 0 0;
+      @include k-typographyFontSize(-2);
+    }
+
     .k-LoanSimulator__reimbursing {
-      margin: k-px-to-rem(40px) k-px-to-rem(50px) 0;
+      margin: 0 k-px-to-rem(50px) 0;
     }
 
     .k-LoanSimulator__actions {

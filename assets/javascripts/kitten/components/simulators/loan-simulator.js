@@ -171,7 +171,7 @@ class LoanSimulator extends React.Component {
                          : this.props.durationSymbolPlural
 
     return (
-      <div className="k-LoanSimulator">
+      <div className={ classNames('k-LoanSimulator', errorClass) }>
         <div className="k-LoanSimulator__amount">
           <label className="k-Label k-LoanSimulator__label"
                  htmlFor="loan-simulator-amount">
