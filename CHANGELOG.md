@@ -4,10 +4,21 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [v0.9.0]
+Breaking changes:
+- Rename the `hot_output_bundles` to `kitten_hot_output_bundles`
+- Update `k-TestimonyList__row` molecule's HTML
+  * required new `TestimonyList__row` container
+
+New features:
+- Add themes color map for the style guide.
+
+Fixes:
+- Dropdown component alignment.
+
 ## [v0.8.0]
 
 Breaking changes:
-- Rename the `hot_output_bundles` to `kitten_hot_output_bundles`
 - Change dummy stylesheets file architecture.
 - Remove `k-GridDuo` molecule.
 - Use `therubyracer` instead of `mini_racer`.
@@ -16,8 +27,6 @@ Breaking changes:
   * replace `__grid` by `__row`
   * remove `k-Header__items--pull-end`
 - The `k-LinkList` molecule requires new arguments.
-- Update `k-TestimonyList__row` molecule's HTML
-  * required new `TestimonyList__row` container
 
 New features:
 - Add new `k-Teaser` molecule.
