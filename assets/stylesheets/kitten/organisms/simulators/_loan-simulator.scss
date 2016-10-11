@@ -42,7 +42,6 @@
     }
 
     .k-LoanSimulator__amount {
-
       margin: k-px-to-rem(30px)
               k-px-to-rem(50px)
               $spacing-between-amount-and-reimbursing;
@@ -60,12 +59,12 @@
 
     .k-LoanSimulator__amount__error {
       color: red;
-      margin: $error-top-margin 0 0 0;
+      margin: $error-top-margin 0 0;
       @include k-typographyFontSize(-2);
     }
 
     .k-LoanSimulator__reimbursing {
-      margin: 0 k-px-to-rem(50px) 0;
+      margin: 0 k-px-to-rem(50px);
     }
 
     .k-LoanSimulator__actions {

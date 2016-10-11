@@ -47,7 +47,7 @@
     }
 
     .k-Testimony__text {
-      margin: k-px-to-rem(20px) 0 0 0;
+      margin: k-px-to-rem(20px) 0 0;
       @include k-typographyFont($font);
       @include k-typographyFontSize;
     }
