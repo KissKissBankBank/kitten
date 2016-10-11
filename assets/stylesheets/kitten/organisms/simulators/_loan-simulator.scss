@@ -30,34 +30,39 @@
     $error-color: k-color-definition(k-map-fetch($colors, 'error'));
 
     .k-LoanSimulator__label {
-      margin: 1em 0;
+      margin: k-px-to-rem(20px) 0 k-px-to-rem(10px);
+      @include k-typographyFontSize(-1);
     }
 
     .k-LoanSimulator__amount__error {
       color: red;
+      margin: k-px-to-rem(10px) 0 0 0;
+      @include k-typographyFontSize(-2);
     }
 
     .k-LoanSimulator__result {
       margin: 1em 0;
     }
 
-    .k-LoanSimulator__amount,
+    .k-LoanSimulator__amount {
+      margin: k-px-to-rem(30px) k-px-to-rem(50px) 0;
+    }
     .k-LoanSimulator__reimbursing {
-      margin: 0 k-px-to-rem(50px);
+      margin: k-px-to-rem(40px) k-px-to-rem(50px) 0;
     }
 
     .k-LoanSimulator__actions {
-      margin: 2rem 0;
+      margin: k-px-to-rem(40px) 0;
       text-align: center;
     }
 
     .k-LoanSimulator__installment {
-      @include k-typographyFontSize;
+      @include k-typographyFontSize(0, 1.3rem);
       font-weight: bold;
     }
 
     .k-LoanSimulator__duration {
-      @include k-typographyFontSize(-2);
+      @include k-typographyFontSize(-2, 1.3rem);
     }
   }
 }

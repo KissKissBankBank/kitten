@@ -20,8 +20,7 @@
     $font: k-map-fetch($testimony, 'font');
 
     .k-Testimony {
-      padding-top: k-px-to-rem(20px);
-      padding-bottom: k-px-to-rem(20px);
+      margin-bottom: k-px-to-rem(30px);
       text-align: center;
     }
 
@@ -40,11 +39,15 @@
     }
 
     .k-Testimony__image {
+      // For margins to stick, we need to turn <img> into block elements
+      display: block;
+      margin: 0 auto;
+
       border-radius: 50%;
     }
 
     .k-Testimony__text {
-      margin: k-px-to-rem(10px) 0 0 0;
+      margin: k-px-to-rem(20px) 0 0 0;
       @include k-typographyFont($font);
       @include k-typographyFontSize;
     }

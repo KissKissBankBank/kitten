@@ -107,7 +107,7 @@
 
 @include k-Row((
   colors: (
-    light-background: #fafafa,
+    light-background: map-get($k-colors, 'background-2'),
     dark-background: #999,
     light-bottom-border: #eee,
   )

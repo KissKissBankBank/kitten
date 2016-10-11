@@ -37,10 +37,10 @@
     }
 
     .k-Hero__text {
-      margin: k-px-to-rem(40px) 0;
+      margin: k-px-to-rem(40px) 0 k-px-to-rem(10px);
 
       @include k-media-min('s') {
-        margin-top: k-px-to-rem(62px);
+        margin: k-px-to-rem(62px) 0 k-px-to-rem(30px);
       }
 
       @include k-media-min('l') {
@@ -51,21 +51,22 @@
     }
 
     .k-Hero__action {
-      margin: k-px-to-rem(40px) 0;
+      margin: 0 0 k-px-to-rem(40px) 0;
       text-align: left;
 
       @include k-media-min('s') {
-        margin-bottom: k-px-to-rem(80px);
         @include k-grid-col(10);
         @include k-grid-offset(1);
       }
 
       @include k-media-min('m') {
+        margin: 0 0 k-px-to-rem(80px);
         @include k-grid-col(8);
         @include k-grid-offset(2);
       }
 
       @include k-media-min('l') {
+        margin: k-px-to-rem(107px) 0;
         @include k-grid-col(4);
         @include k-grid-offset(0);
       }

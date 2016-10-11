@@ -17,6 +17,8 @@
 @mixin k-Footer {
   .k-Footer {
     @include k-grid;
+    margin-top: k-px-to-rem(50px);
+    margin-bottom: k-px-to-rem(30px);
     text-align: center;
   }
 
