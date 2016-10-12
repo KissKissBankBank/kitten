@@ -37,7 +37,8 @@
           <%= link_to "KissKissBankBank", branding_path(
             anchor: "kisskiss/colors"),
             class: "karl-Menu__listItem with-arrow #{'is-opened' if
-              params[:theme] == 'branding/kisskissbankbank'}" %>
+            params[:theme] == 'branding/kisskissbankbank'}",
+            "data-karl-menu-link" => true %>
             <ul class="karl-Menu__subList <%= 'is-opened' if
             params[:theme] == 'kisskissbankbank' %>">
               <li><%= link_to "Colors", branding_path(
@@ -54,7 +55,7 @@
           <%= link_to "hellomerci", branding_path(
           anchor: "hellomerci/colors"),
           class: "karl-Menu__listItem with-arrow #{'is-opened' if
-            params[:theme] == 'hellomerci'}" %>
+          params[:theme] == 'hellomerci'}", "data-karl-menu-link" => true %>
             <ul class="karl-Menu__subList">
               <li><%= link_to "Colors", branding_path(
               anchor: "hellomerci/colors"),
@@ -70,7 +71,7 @@
           <%= link_to "LENDOPOLIS", branding_path(
           anchor: "lendopolis/colors"),
           class: "karl-Menu__listItem with-arrow #{'is-opened' if
-           params[:theme] == 'lendopolis'}" %>
+          params[:theme] == 'lendopolis'}", "data-karl-menu-link" => true %>
             <ul class="karl-Menu__subList">
               <li><%= link_to "Colors", branding_path(
               anchor: "lendopolis/colors"),
@@ -79,7 +80,7 @@
               <li><%= link_to "Fonts", branding_path(
               anchor: "lendopolis/fonts"),
               class: "karl-Menu__subListItem karl-Menu__link",
-                "data-karl-menu-link" => true %></li>
+              "data-karl-menu-link" => true %></li>
             </ul>
           </li>
         </ul>
@@ -91,20 +92,24 @@
           <% @menu_types.each do |type_id:, type_title:, groups:| %>
             <li class="karl-Menu__list">
               <a href="#<%= type_id %>"
-                 class="karl-Menu__listItem"
-                 <%= "with-arrow" if groups.any? %>"><%= type_title %></a>
+                 class="karl-Menu__listItem" data-karl-menu-link
+                <%= "with-arrow" if groups.any? %>"><%= type_title %></a>
               <ul class="karl-Menu__subList">
                 <% groups.each do |group_id:, group_title:, components:| %>
                   <li>
-
                     <a href="#<%= group_id %>"
-                    class="karl-Menu__subListItem karl-Menu__link" data-karl-menu-link
-                    <%= "with-arrow" if components.any? %>"><%= group_title %></a>
-                    <ul class="karl-Menu__subSecondList karl-Menu__link" data-karl-menu-link>
+                       class="karl-Menu__subListItem karl-Menu__link"
+                       data-karl-menu-link
+                      <%= "with-arrow" if components.any? %>"><%= group_title %>
+                    </a>
+                    <ul class="karl-Menu__subSecondList karl-Menu__link"
+                        data-karl-menu-link>
                       <% components.each do |component_id:, component_title:| %>
                         <li>
-                          <a class="karl-Menu__subSecondListItem karl-Menu__link" data-karl-menu-link
-                             href="#<%= component_id %>"><%= component_title %></a>
+                          <a class="karl-Menu__subSecondListItem karl-Menu__link"
+                             data-karl-menu-link
+                             href="#<%= component_id %>"><%= component_title %>
+                          </a>
                         </li>
                       <% end %>
                     </ul>
