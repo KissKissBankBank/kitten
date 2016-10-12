@@ -92,6 +92,7 @@
       &:hover,
       &:focus {
         color: $color-current;
+        text-decoration: none;
       }
 
       &.is-selected {
