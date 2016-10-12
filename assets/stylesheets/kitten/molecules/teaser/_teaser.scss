@@ -52,12 +52,12 @@
 
   .k-Teaser__col--text {
     @include k-typographyFont('source-sans-light');
-    @include k-typographyFontSize;
+    @include k-typographyFontSize(0, 1.6);
     text-align: center;
     margin-bottom: 1rem;
 
     @include k-media-min('m') {
-      @include k-typographyFontSize(2);
+      @include k-typographyFontSize(2, 1.6);
     }
 
     @include k-media-min('l') {
