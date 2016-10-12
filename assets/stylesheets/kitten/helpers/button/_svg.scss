@@ -24,8 +24,6 @@
     k-map-fetch($button, ('colors', 'base', 'color')));
   $hover-color: k-color-definition(
     k-map-fetch($button, ('colors', 'hover', 'color')));
-  $focus-color: k-color-definition(
-    k-map-fetch($button, ('colors', 'focus', 'color')));
   $active-color: k-color-definition(
     k-map-fetch($button, ('colors', 'active', 'color')));
   $disabled-color: k-color-definition(
@@ -39,15 +37,6 @@
 
   .#{$parent}:hover & {
     fill: $hover-color;
-  }
-
-  .#{$parent}:focus & {
-    @if $focus-color {
-      fill: $focus-color;
-    }
-    @else {
-      fill: $hover-color;
-    }
   }
 
   .#{$parent}:active & {
@@ -70,15 +59,6 @@
 
     .#{$parent}:hover & {
       stroke: $hover-color;
-    }
-
-    .#{$parent}:focus & {
-      @if $focus-color {
-        stroke: $focus-color;
-      }
-      @else {
-        stroke: $hover-color;
-      }
     }
 
     .#{$parent}:active & {

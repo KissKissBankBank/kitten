@@ -3,13 +3,9 @@
 /// This mixin will apply pseudo-classes and state classes on the parent class
 /// that is calling it:
 ///   - `:hover`
-///   - `:focus`
 ///   - `:active`
 ///   - `:is-selected`
 ///   - `:disabled` (optionnal)
-///
-/// The `:focus` pseudo-class is optionnal. If it is not defined, the `:hover`
-/// styles will be applied to `:focus` pseudo-class.
 ///
 /// When `border-color` is not defined, `transparent` is used by default.
 ///
@@ -24,11 +20,6 @@
 ///         color: #fff,
 ///         border-color: #4a84ff,
 ///         background-color: #4a84ff,
-///       ),
-///       focus: (
-///         color: #fff,
-///         border-color: #3b75f0,
-///         background-color: #3b75f0,
 ///       ),
 ///       hover: (
 ///         color: #fff,
@@ -70,12 +61,6 @@
   $hover-border-color: map-get($hover, 'border-color');
   $hover-background-color: map-get($hover, 'background-color');
 
-  // focus colors (optional)
-  $focus: k-colors-definition(k-map-fetch($colors, 'focus'));
-  $focus-color: map-get($focus, 'color');
-  $focus-border-color: map-get($focus, 'border-color');
-  $focus-background-color: map-get($focus, 'background-color');
-
   // active colors
   $active: k-colors-definition(k-map-fetch($colors, 'active'));
   $active-color: map-get($active, 'color');
@@ -106,8 +91,6 @@
   background-color: $base-background-color;
   color: $base-color;
   cursor: pointer;
-  outline: 0;
-
   transition: background-color $transition-speed,
               color $transition-speed,
               border-color $transition-speed;
@@ -117,23 +100,6 @@
 
     background-color: $hover-background-color;
     color: $hover-color;
-    text-decoration: none;
-  }
-
-  &:focus {
-    @if map-has-key($colors, 'focus') {
-      @include k-buttonBorder($focus-border-color);
-
-      background-color: $focus-background-color;
-      color: $focus-color;
-    }
-    @else {
-      @include k-buttonBorder($hover-border-color);
-
-      background-color: $hover-background-color;
-      color: $hover-color;
-    }
-
     text-decoration: none;
   }
 

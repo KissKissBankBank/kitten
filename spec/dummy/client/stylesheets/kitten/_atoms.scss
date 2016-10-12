@@ -8,11 +8,6 @@
         border-color: #d8d8d8,
         background-color: #fff,
       ),
-      focus: (
-        color: #4a84ff,
-        border-color: #cadbfd,
-        background-color: #fff,
-      ),
       hover: (
         color: #4a84ff,
         border-color: #cadbfd,
@@ -41,11 +36,6 @@
         color: #fff,
         border-color: #4a84ff,
         background-color: #4a84ff,
-      ),
-      focus: (
-        color: #fff,
-        border-color: #3b75f0,
-        background-color: #3b75f0,
       ),
       hover: (
         color: #fff,
@@ -96,11 +86,6 @@
         border-color: #d8d8d8,
         background-color: #fff,
       ),
-      focus: (
-        color: #4a84ff,
-        border-color: #cadbfd,
-        background-color: #fff,
-      ),
       hover: (
         color: #4a84ff,
         border-color: #cadbfd,
@@ -138,10 +123,6 @@
         color: #fff,
         background-color: map-get($k-colors, 'primary-1'),
       ),
-      focus: (
-        color: #fff,
-        background-color: map-get($k-colors, 'primary-1'),
-      ),
       active: (
         color: #fff,
         background-color: map-get($k-colors, 'primary-3'),
@@ -163,11 +144,6 @@
         color: #fff,
         border-color: #4a84ff,
         background-color: #4a84ff,
-      ),
-      focus: (
-        color: #fff,
-        border-color: #3b75f0,
-        background-color: #3b75f0,
       ),
       hover: (
         color: #fff,
