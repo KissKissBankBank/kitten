@@ -180,12 +180,19 @@
   font: 'source-sans-semi-bold',
   font-step: -2,
   colors: (
-    base: map-get($k-colors, 'font-1'),
-    background: #fbfbfb,
-    border: #eee,
-    background-hover: #eee,
-    color-active: map-get($k-colors, 'primary-1'),
-    border-active: map-get($k-colors, 'primary-1'),
+    default: (
+      base: map-get($k-colors, 'font-1'),
+      background: #fbfbfb,
+      border: #eee,
+      background-hover: #eee,
+      color-active: map-get($k-colors, 'primary-1'),
+      border-active: map-get($k-colors, 'primary-1'),
+    ),
+    secondary: (
+      base: map-get($k-colors, 'font-2'),
+      background: #fbfbfb,
+      border: #eee,
+    ),
   ),
 ));
 

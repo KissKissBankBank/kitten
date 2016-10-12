@@ -10,11 +10,18 @@
 ///     font: 'source-sans-semi-bold',
 ///     font-step: -2,
 ///     colors: (
-///       base: #333,
-///       background: #fbfbfb,
-///       border: #eee,
-///       background-hover: #f8f8f8,
-///       border-hover: #333,
+///       default: (
+///         base: #333,
+///         background: #fbfbfb,
+///         border: #eee,
+///         background-hover: #f8f8f8,
+///         border-hover: #333,
+///      ),
+///       secondary: (
+///         base: #b8b8b8,
+///         background: #fbfbfb,
+///         border: #eee,
+///      ),
 ///     ),
 ///   ));
 ///
@@ -38,20 +45,30 @@
   @include k-with-module('k-UserMenu: $menu') {
 
     $font: k-map-fetch($menu, 'font');
+    $default: k-map-fetch($menu, ('colors', 'default'));
+    $secondary: k-map-fetch($menu, ('colors', 'secondary'));
+
     $font-step: k-number-definition(
       k-map-fetch($menu, 'font-step'), $unit: none);
     $color: k-color-definition(
-      k-map-fetch($menu, ('colors', 'base')));
+      k-map-fetch($default, 'base'));
     $background-color: k-color-definition(
-      k-map-fetch($menu, ('colors', 'background')));
+      k-map-fetch($default, 'background'));
     $border-color: k-color-definition(
-      k-map-fetch($menu, ('colors', 'border')));
+      k-map-fetch($default, 'border'));
     $background-color-hover: k-color-definition(
-      k-map-fetch($menu, ('colors', 'background-hover')));
+      k-map-fetch($default, 'background-hover'));
     $color-active: k-color-definition(
-      k-map-fetch($menu, ('colors', 'color-active')));
+      k-map-fetch($default, 'color-active'));
     $border-color-active: k-color-definition(
-      k-map-fetch($menu, ('colors', 'border-active')));
+      k-map-fetch($default, 'border-active'));
+
+    $secondary-color: k-color-definition(
+      k-map-fetch($secondary, 'base'));
+    $secondary-background-color: k-color-definition(
+      k-map-fetch($secondary, 'background'));
+    $secondary-border-color: k-color-definition(
+      k-map-fetch($secondary, 'border'));
 
     $arrow-size: 9px;
     $border-size: 1px;
@@ -145,6 +162,13 @@
       @include k-media-xs {
         border-left: none;
       }
+    }
+
+    .k-UserMenu__item--secondary {
+      border-left: $border-size solid $secondary-border-color;
+      background: $secondary-background-color;
+
+      color: $secondary-color;
     }
 
     .k-UserMenu__separation {
