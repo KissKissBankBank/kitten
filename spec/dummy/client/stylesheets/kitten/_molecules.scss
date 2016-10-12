@@ -2,9 +2,9 @@
 
 @include k-ButtonImageWithText((
   colors: (
-    base: #333,
-    hover: #4a84ff,
-    active: #2c66e1,
+    base: map-get($k-colors, 'font-1'),
+    hover: map-get($k-colors, 'primary-1'),
+    active: map-get($k-colors, 'primary-3'),
   )
 ));
 
@@ -16,7 +16,7 @@
 @include k-Card((
   colors: (
     light-background: #fff,
-    light-text: #333,
+    light-text: map-get($k-colors, 'font-1'),
   ),
 ));
 
@@ -40,32 +40,32 @@
   colors: (
     input-bg: #fff,
     input-border: #d8d8d8,
-    input-border-focus: #4a84ff,
+    input-border-focus: map-get($k-colors, 'primary-1'),
     option-bg: #fbfbfb,
   ),
 ));
 
 @include k-SliderTooltip((
   colors: (
-    border: #cadbfd,
+    border: map-get($k-colors, 'primary-4'),
     border-inactive: #eee,
-    background: #fff,
+    background: map-get($k-colors, 'background-2'),
     background-inactive: #fbfbfb,
-    text: #4a84ff,
+    text: map-get($k-colors, 'primary-1'),
     text-inactive: #b8b8b8,
   )
 ));
 
 @include k-Slider((
   colors: (
-    progress: #4a84ff,
+    progress: map-get($k-colors, 'primary-1'),
     progress-disabled: #d8d8d8,
     ramp: #eee,
-    handle: #4a84ff,
+    handle: map-get($k-colors, 'primary-1'),
     handle-disabled: #d8d8d8,
     icon: #fff,
     icon-disabled: #fff,
-    border: #4a84ff,
+    border: map-get($k-colors, 'primary-1'),
   )
 ));
 
@@ -74,7 +74,7 @@
   font: 'source-sans-semi-bold',
   font-size: -4,
   color: #fff,
-  button-background: #4a84ff,
+  button-background: map-get($k-colors, 'primary-1'),
   button-background-is-valid: #70c050,
   button-background-is-error: #ff4146,
 ));
@@ -83,7 +83,7 @@
   label: (
     font: 'source-sans-semi-bold',
     font-size: -2,
-    color: #333,
+    color: map-get($k-colors, 'font-1'),
   ),
   error: (
     font: 'source-sans',
@@ -96,8 +96,8 @@
   input-font: 'source-sans',
   unit-font: 'source-sans-semi-bold',
   border-color: #d8d8d8,
-  color: #333,
-  unit-color: #4a84ff,
+  color: map-get($k-colors, 'font-1'),
+  unit-color: map-get($k-colors, 'primary-1'),
   unit-colors-is-valid: #70c050,
   unit-colors-is-error: #ff4146,
   unit-colors-is-inactive: #fff,
@@ -127,9 +127,9 @@
 
 @include k-LinkList((
   colors: (
-    link: #333,
-    link-active: #2c66e1,
-    link-hover: #4a84ff,
+    link: map-get($k-colors, 'font-1'),
+    link-active: map-get($k-colors, 'primary-3'),
+    link-hover: map-get($k-colors, 'primary-1'),
   ),
 ));
 
@@ -142,18 +142,18 @@
     base: (
       background-color: #fff,
       border-color: #eee,
-      color: #333,
+      color: map-get($k-colors, 'font-1'),
     ),
     hover: (
-      color: #4a84ff,
+      color: map-get($k-colors, 'primary-1'),
     ),
     focus: (
-      border-color: #4a84ff,
-      color: #4a84ff,
+      border-color: map-get($k-colors, 'primary-1'),
+      color: map-get($k-colors, 'primary-1'),
     ),
     is-selected: (
-      color: #4a84ff,
-      border-color: #4a84ff,
+      color: map-get($k-colors, 'primary-1'),
+      border-color: map-get($k-colors, 'primary-1'),
     )
   )
 ));
@@ -163,7 +163,7 @@
     background: #fbfbfb,
     border: #eee,
     background-hover: #eee,
-    border-active: #4a84ff,
+    border-active: map-get($k-colors, 'primary-1'),
   )
 ));
 
@@ -171,7 +171,8 @@
   font: source-sans-uppercase,
   font-step: -4,
   line-height: 1.5,
-  background-color: #4a84ff,
+  background-color: map-get($k-colors, 'primary-1'),
+  border-color: #5c90ff,
   color: #b7ceff,
   color-current: #fff,
   z-index: 50,
@@ -181,12 +182,12 @@
   font: 'source-sans-semi-bold',
   font-step: -2,
   colors: (
-    base: #333,
+    base: map-get($k-colors, 'font-1'),
     background: #fbfbfb,
     border: #eee,
     background-hover: #eee,
-    color-active: #4a84ff,
-    border-active: #4a84ff,
+    color-active: map-get($k-colors, 'primary-1'),
+    border-active: map-get($k-colors, 'primary-1'),
   ),
 ));
 
@@ -200,7 +201,7 @@
   colors: (
     border: #eee,
     background: #fbfbfb,
-    text: #333
+    text: map-get($k-colors, 'font-1')
   ),
   label-font: source-sans-uppercase,
   value-font: source-sans-semi-bold,

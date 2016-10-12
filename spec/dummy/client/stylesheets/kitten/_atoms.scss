@@ -74,17 +74,15 @@
 @include k-ButtonImage((
   colors: (
     base: (
-      color: #333,
+      color: map-get($k-colors, 'font-1'),
       background-color: #fff
     ),
     hover: (
-      color: #333,
-      border-color: #d8d8d8,
+      color: map-get($k-colors, 'font-1'),
       background-color: #fff,
     ),
     active: (
-      color: #333,
-      border-color: #d8d8d8,
+      color: map-get($k-colors, 'font-1'),
       background-color: #fff,
     )
   )
@@ -132,29 +130,25 @@
   default: (
     colors: (
       base: (
-        color: #333,
+        color: map-get($k-colors, 'font-1'),
         background-color: #fff,
-        border-color: #d8d8d8,
-      ),
-      focus: (
-        color: #fff,
-        border-color: #4a84ff,
-        background-color: #4a84ff,
+        border-color: #d8d8d8
       ),
       hover: (
         color: #fff,
-        border-color: #4a84ff,
-        background-color: #4a84ff,
+        background-color: map-get($k-colors, 'primary-1'),
+      ),
+      focus: (
+        color: #fff,
+        background-color: map-get($k-colors, 'primary-1'),
       ),
       active: (
         color: #fff,
-        border-color: #2c66e1,
-        background-color: #2c66e1,
+        background-color: map-get($k-colors, 'primary-3'),
       ),
       is-selected: (
         color: #fff,
-        border-color: #2c66e1,
-        background-color: #2c66e1,
+        background-color: map-get($k-colors, 'primary-3'),
       ),
       disabled: (
         color: #fff,
@@ -206,10 +200,10 @@
   font: 'source-sans-semi-bold',
   colors: (
     background: #fff,
-    background-checked: #4a84ff,
+    background-checked: map-get($k-colors, 'primary-1'),
     background-disabled: #d8d8d8,
     border: #d8d8d8,
-    border-hover: #4a84ff,
+    border-hover: map-get($k-colors, 'primary-1'),
   )
 ));
 
@@ -222,12 +216,12 @@
   font-size: -1,
   colors: (
     base: (
-      color: #333,
+      color: map-get($k-colors, 'font-1'),
       border: #d8d8d8,
       background: #fff,
     ),
     focus: (
-      border: #4a84ff,
+      border: map-get($k-colors, 'primary-1'),
     ),
     disabled: (
       color: #fff,
@@ -250,7 +244,7 @@
 @include k-Badge((
   colors: (
     base: #fff,
-    background: #4a84ff,
+    background: map-get($k-colors, 'primary-1'),
   )
 ));
 
@@ -258,7 +252,7 @@
 
 @include k-TypographyBodyCopy((
   family: 'source-sans',
-  color: #333
+  color: map-get($k-colors, 'font-1')
 ));
 
 @include k-TypographyScale((

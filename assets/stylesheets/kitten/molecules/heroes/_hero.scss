@@ -44,13 +44,9 @@
       }
 
       @include k-media-min('l') {
-        @include k-grid-col(7);
-        padding-top: k-px-to-rem(107px);
-      }
-
-      @include k-media-min('xl') {
         @include k-grid-col(6);
         @include k-grid-offset(1);
+        padding-top: k-px-to-rem(107px);
       }
     }
 
@@ -60,14 +56,18 @@
 
       @include k-media-min('s') {
         margin-bottom: k-px-to-rem(80px);
+        @include k-grid-col(10);
+        @include k-grid-offset(1);
+      }
+
+      @include k-media-min('m') {
+        @include k-grid-col(8);
+        @include k-grid-offset(2);
       }
 
       @include k-media-min('l') {
-        @include k-grid-col(5);
-      }
-
-      @include k-media-min('xl') {
         @include k-grid-col(4);
+        @include k-grid-offset(0);
       }
     }
 
