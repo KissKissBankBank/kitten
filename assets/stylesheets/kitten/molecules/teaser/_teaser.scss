@@ -52,12 +52,12 @@
 
   .k-Teaser__col--text {
     @include k-typographyFont('source-sans-light');
-    @include k-typographyFontSize;
+    @include k-typographyFontSize(0, 1.6);
     text-align: center;
     margin-bottom: 1rem;
 
     @include k-media-min('m') {
-      @include k-typographyFontSize(2);
+      @include k-typographyFontSize(2, 1.6);
     }
 
     @include k-media-min('l') {
@@ -75,15 +75,24 @@
   }
 
   .k-Teaser__col--image {
-    // Force the image to be the last child on small screens
-    order: 1;
-
-    @include k-media-min('l') {
-      order: initial;
-    }
-
     svg, img {
       width: 100%;
+    }
+  }
+
+  .k-Teaser__col--small {
+    @include k-media-min('s') {
+      display: none;
+      margin: -20px 0;
+    }
+  }
+
+  .k-Teaser__col--large {
+    display: none;
+
+    @include k-media-min('s') {
+      display: initial;
+      order: 1;
     }
   }
 }

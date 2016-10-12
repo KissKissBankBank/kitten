@@ -68,8 +68,13 @@
       @include k-container;
 
       .k-Row--padded & {
-        padding-top: 2rem;
-        padding-bottom: 2rem;
+        padding-top: k-px-to-rem(60px);
+        padding-bottom: k-px-to-rem(60px);
+
+        @include k-media-min('l') {
+          padding-top: k-px-to-rem(80px);
+          padding-bottom: k-px-to-rem(80px);
+        }
       }
     }
   }

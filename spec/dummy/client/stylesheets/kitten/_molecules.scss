@@ -109,7 +109,7 @@
 
 @include k-Row((
   colors: (
-    light-background: #fafafa,
+    light-background: map-get($k-colors, 'background-2'),
     dark-background: #999,
     light-bottom-border: #eee,
   )
@@ -173,7 +173,7 @@
   line-height: 1.5,
   background-color: map-get($k-colors, 'primary-1'),
   border-color: #5c90ff,
-  color: #b7ceff,
+  color: map-get($k-colors, 'primary-4'),
   color-current: #fff,
   z-index: 50,
 ));

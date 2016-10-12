@@ -20,8 +20,7 @@
     $font: k-map-fetch($testimony, 'font');
 
     .k-Testimony {
-      padding-top: k-px-to-rem(20px);
-      padding-bottom: k-px-to-rem(20px);
+      margin-bottom: k-px-to-rem(30px);
       text-align: center;
     }
 
@@ -31,20 +30,31 @@
       @include k-typographyFontSize(5);
 
       @include k-media-min('m') {
+        @include k-typographyFontSize(4, 1.25);
+      }
+
+      @include k-media-min('l') {
         // Forced height to keep testimonies aligned when the title spans
         // two lines.
-        min-height: 3.1rem;
+        min-height: 4rem;
+        margin-top: -2rem;
 
-        @include k-typographyFontSize(4, 1);
+        // If the title spans two lines, align it to the bottom
+        display: flex;
+        align-items: flex-end;
       }
     }
 
     .k-Testimony__image {
+      // For margins to stick, we need to turn <img> into block elements
+      display: block;
+      margin: 0 auto;
+
       border-radius: 50%;
     }
 
     .k-Testimony__text {
-      margin: k-px-to-rem(10px) 0 0 0;
+      margin: k-px-to-rem(20px) 0 0;
       @include k-typographyFont($font);
       @include k-typographyFontSize;
     }

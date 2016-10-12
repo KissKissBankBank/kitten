@@ -126,12 +126,15 @@
 
       &:hover {
         background-color: $background-color-hover;
+        color: $color-active;
+        text-decoration: none;
       }
 
       &:focus {
         background-color: $background-color-hover;
         border-left-color: $border-color-active;
         color: $color-active;
+        text-decoration: none;
       }
 
       &.is-selected {

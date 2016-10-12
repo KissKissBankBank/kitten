@@ -32,6 +32,11 @@
                           class: 'k-HorizontalNav__item ' +
                           (params['current'] == 'nav-2' ? 'is-selected' : '') %>
             </li>
+            <li role="menuitem">
+              <%= link_to 'Blog',
+                          { current: 'nav-3' },
+                          class: 'k-HorizontalNav__item' %>
+            </li>
           </ul>
         </nav>
 

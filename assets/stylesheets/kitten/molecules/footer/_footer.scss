@@ -17,6 +17,8 @@
 @mixin k-Footer {
   .k-Footer {
     @include k-grid;
+    margin-top: k-px-to-rem(50px);
+    margin-bottom: k-px-to-rem(30px);
     text-align: center;
   }
 
@@ -40,9 +42,12 @@
 
   .k-Footer__brand__text {
     max-width: 12rem;
-    margin: 1rem auto; // text is centered
+    margin: k-px-to-rem(26px) auto k-px-to-rem(30px); // text is centered
+    line-height: 1.4;
 
     @include k-media-min('l') {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
       margin-left: 0; // text is left-aligned
     }
   }
@@ -61,6 +66,8 @@
   }
 
   .k-Footer__nav__links {
+    margin-top: 0;
+
     @include k-grid-col(12);
 
     @include k-media-min('m') {
@@ -96,7 +103,7 @@
     }
 
     @include k-typographyFont('source-sans-light');
-    @include k-typographyFontSize(-1);
+    @include k-typographyFontSize(-1, 1.4);
   }
 
   .k-Footer__logos__list {
@@ -117,8 +124,8 @@
   }
 
   .k-Footer__copyright {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 
     align-self: flex-end;
 
@@ -127,6 +134,8 @@
 
     @include k-grid-col(12);
     @include k-media-min('l') {
+      padding-bottom: k-px-to-rem(21px);
+
       @include k-grid-col(4);
       text-align: right;
     }
@@ -135,14 +144,21 @@
   .k-Footer__logo__img {
     // minimum height and aligns the logos vertically
     line-height: 4rem;
-    margin-bottom: 1rem;
+
+    margin-bottom: k-px-to-rem(10px);
 
     > img,
     > svg {
       vertical-align: middle;
     }
 
+
     @include k-media-min('l') {
+      > img,
+      > svg {
+        vertical-align: top;
+      }
+
       margin-bottom: 0;
       margin-right: 1rem;
     }

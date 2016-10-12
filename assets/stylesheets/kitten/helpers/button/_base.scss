@@ -117,6 +117,7 @@
 
     background-color: $hover-background-color;
     color: $hover-color;
+    text-decoration: none;
   }
 
   &:focus {
@@ -132,6 +133,8 @@
       background-color: $hover-background-color;
       color: $hover-color;
     }
+
+    text-decoration: none;
   }
 
   &:active {
