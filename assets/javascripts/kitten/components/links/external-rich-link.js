@@ -16,7 +16,6 @@ class ExternalRichLink extends React.Component {
         </div>
 
         <div className="k-ExternalRichLink__element
-                        k-ExternalRichLink__element--pull-end
                         k-ExternalRichLink__element--animate">
           <span className="k-ButtonIcon k-ButtonIcon--tiny">
             <svg className="k-ButtonIcon__svg"
