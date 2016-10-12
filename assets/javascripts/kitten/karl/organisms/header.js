@@ -24,17 +24,23 @@ const platformSwitchProps = {
   refreshEvents: ['resize', 'karl:element#header:classToggled'],
   dropdownListClassName: 'k-PlatformSwitch',
   dropdownList: [
-    <ExternalRichLink className="k-PlatformSwitch__item">
-      <img src="https://placeholdit.imgix.net/~text?txt=LOGO&amp;w=180&amp;h=44"
-           alt="LOGO" />
+    <ExternalRichLink
+      className="k-PlatformSwitch__item"
+      title="Se rendre sur le site de KissKissBankBank">
+      <img src="/assets/logos/kisskissbankbank.svg"
+           alt="Logo de KissKissBankBank" />
     </ExternalRichLink>,
-    <ExternalRichLink className="k-PlatformSwitch__item">
-      <img src="https://placeholdit.imgix.net/~text?txt=LOGO&amp;w=180&amp;h=44"
-           alt="LOGO" />
+    <ExternalRichLink
+      className="k-PlatformSwitch__item"
+      title="Se rendre sur le site de Hellomerci">
+      <img src="/assets/logos/hellomerci.svg"
+           alt="Logo de Hellomerci" />
     </ExternalRichLink>,
-    <ExternalRichLink className="k-PlatformSwitch__item">
-      <img src="https://placeholdit.imgix.net/~text?txt=LOGO&amp;w=180&amp;h=44"
-           alt="LOGO" />
+    <ExternalRichLink
+      className="k-PlatformSwitch__item"
+      title="Se rendre sur le site de Lendopolis">
+      <img src="/assets/logos/lendopolis.svg"
+           alt="Logo de Lendopolis" />
     </ExternalRichLink>
   ],
 }
