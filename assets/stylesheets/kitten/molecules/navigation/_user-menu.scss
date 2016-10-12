@@ -46,7 +46,7 @@
 
     $font: k-map-fetch($menu, 'font');
     $default: k-map-fetch($menu, ('colors', 'default'));
-    $secondary: k-map-fetch($menu, ('colors', 'secondary'));
+    $secondary: map-get-deep($menu, ('colors', 'secondary'));
 
     $font-step: k-number-definition(
       k-map-fetch($menu, 'font-step'), $unit: none);
@@ -62,13 +62,6 @@
       k-map-fetch($default, 'color-active'));
     $border-color-active: k-color-definition(
       k-map-fetch($default, 'border-active'));
-
-    $secondary-color: k-color-definition(
-      k-map-fetch($secondary, 'base'));
-    $secondary-background-color: k-color-definition(
-      k-map-fetch($secondary, 'background'));
-    $secondary-border-color: k-color-definition(
-      k-map-fetch($secondary, 'border'));
 
     $arrow-size: 9px;
     $border-size: 1px;
@@ -164,11 +157,20 @@
       }
     }
 
-    .k-UserMenu__item--secondary {
-      border-left: $border-size solid $secondary-border-color;
-      background: $secondary-background-color;
+    @if ($secondary) {
+      $secondary-color: k-color-definition(
+        k-map-fetch($secondary, 'base'));
+      $secondary-background-color: k-color-definition(
+        k-map-fetch($secondary, 'background'));
+      $secondary-border-color: k-color-definition(
+        k-map-fetch($secondary, 'border'));
 
-      color: $secondary-color;
+      .k-UserMenu__item--secondary {
+        border-left: $border-size solid $secondary-border-color;
+        background: $secondary-background-color;
+
+        color: $secondary-color;
+      }
     }
 
     .k-UserMenu__separation {
