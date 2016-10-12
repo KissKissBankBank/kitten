@@ -141,8 +141,8 @@
 
     $border-size: 1px;
 
-    $button-size: 30px - ($border-size * 2);
-    $button-size-medium: 40px - ($border-size * 2);
+    $button-size-tiny: 30px - ($border-size * 2);
+    $button-size: 40px - ($border-size * 2);
     $button-size-big: 50px - ($border-size * 2);
 
     // SVG element default settings.
@@ -217,8 +217,8 @@
       @include k-buttonBase($button-icon-linkedin);
     }
 
-    .k-ButtonIcon--medium {
-      @include k-buttonRounded($button-size-medium, $icon-width, $icon-height);
+    .k-ButtonIcon--tiny {
+      @include k-buttonRounded($button-size-tiny, $icon-width, $icon-height);
 
       .k-ButtonIcon__svg {
         width: $icon-width;
@@ -232,7 +232,7 @@
 
     .k-ButtonIcon__heart {
       $heart-size: k-px-to-rem(14px);
-      @include k-buttonRounded($button-size, $heart-size, $heart-size);
+      @include k-buttonRounded($button-size-tiny, $heart-size, $heart-size);
 
       .k-ButtonIcon__svg {
         width: $heart-size;
@@ -242,7 +242,7 @@
 
     .k-ButtonIcon__signup {
       $signup-size: k-px-to-rem(18px);
-      @include k-buttonRounded($button-size, $signup-size, $signup-size);
+      @include k-buttonRounded($button-size-tiny, $signup-size, $signup-size);
 
       .k-ButtonIcon__svg {
         width: $signup-size;
