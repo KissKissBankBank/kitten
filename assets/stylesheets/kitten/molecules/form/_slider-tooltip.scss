@@ -77,7 +77,7 @@
 
       text-align: center;
       color: $text-color;
-      @include k-typographyFontSize(-1);
+      @include k-typographyFontSize(-1, 1.3rem);
 
       transition: background $transition-speed,
                   color $transition-speed,

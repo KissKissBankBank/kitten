@@ -29,35 +29,56 @@
     $colors: k-map-fetch($loan-simulator, 'colors');
     $error-color: k-color-definition(k-map-fetch($colors, 'error'));
 
-    .k-LoanSimulator__label {
-      margin: 1em 0;
-    }
+    $spacing-between-amount-and-reimbursing: k-px-to-rem(40px);
+    $error-top-margin: k-px-to-rem(10px);
 
-    .k-LoanSimulator__amount__error {
-      color: red;
+    .k-LoanSimulator__label {
+      margin: 0 0 k-px-to-rem(10px);
+      @include k-typographyFontSize(-1);
     }
 
     .k-LoanSimulator__result {
       margin: 1em 0;
     }
 
-    .k-LoanSimulator__amount,
+    .k-LoanSimulator__amount {
+      margin: k-px-to-rem(30px)
+              k-px-to-rem(50px)
+              $spacing-between-amount-and-reimbursing;
+
+      .k-LoanSimulator.is-error & {
+        // On error, lower the spacing between amount and reimbursing so that
+        // one line of error text does not move the spacing.
+        margin-bottom: (
+          $spacing-between-amount-and-reimbursing
+          - $error-top-margin
+          - 1.5rem // error text line height
+        );
+      }
+    }
+
+    .k-LoanSimulator__amount__error {
+      color: red;
+      margin: $error-top-margin 0 0;
+      @include k-typographyFontSize(-2);
+    }
+
     .k-LoanSimulator__reimbursing {
       margin: 0 k-px-to-rem(50px);
     }
 
     .k-LoanSimulator__actions {
-      margin: 2rem 0;
+      margin: k-px-to-rem(40px) 0;
       text-align: center;
     }
 
     .k-LoanSimulator__installment {
-      @include k-typographyFontSize;
+      @include k-typographyFontSize(0, 1.3rem);
       font-weight: bold;
     }
 
     .k-LoanSimulator__duration {
-      @include k-typographyFontSize(-2);
+      @include k-typographyFontSize(-2, 1.3rem);
     }
   }
 }

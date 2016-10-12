@@ -23,9 +23,10 @@
 
   .k-PressQuotes__title {
     @include k-grid-col(12);
+    margin-top: 0;
 
     @include k-typographyFont('source-sans-light');
-    @include k-typographyFontSize(7);
+    @include k-typographyFontSize(4, 1.5);
   }
 
   .k-PressQuotes__quotes {
