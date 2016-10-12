@@ -63,10 +63,15 @@
     // The button tag has a radius of .25rem
     $button-tag-radius: .25rem;
 
+    // Button font-size is computed using a modular scale and a defined step of this
+    // scale.
+    $button-step: -2;
+
     $transition-speed: .2s;
 
     .k-ButtonTag {
       @include k-buttonBase($button-tag);
+      @include k-typographyFontSize($button-step, $button-tag-line-height);
 
       padding: 0 $button-tag-radius;
       border-radius: $button-tag-radius;
