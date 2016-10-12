@@ -34,13 +34,13 @@ const platformSwitchProps = {
       className="k-PlatformSwitch__item"
       title="Se rendre sur le site de Hellomerci">
       <img src="/assets/logos/hellomerci.svg"
-           alt="Logo de Hellomerci" />
+           alt="Logo de hellomerci" />
     </ExternalRichLink>,
     <ExternalRichLink
       className="k-PlatformSwitch__item"
       title="Se rendre sur le site de Lendopolis">
       <img src="/assets/logos/lendopolis.svg"
-           alt="Logo de Lendopolis" />
+           alt="Logo de LENDOPOLIS" />
     </ExternalRichLink>
   ],
 }
