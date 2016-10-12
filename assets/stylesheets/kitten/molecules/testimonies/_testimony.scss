@@ -30,11 +30,18 @@
       @include k-typographyFontSize(5);
 
       @include k-media-min('m') {
+        @include k-typographyFontSize(4, 1.25);
+      }
+
+      @include k-media-min('l') {
         // Forced height to keep testimonies aligned when the title spans
         // two lines.
-        min-height: 3.1rem;
+        min-height: 4rem;
+        margin-top: -2rem;
 
-        @include k-typographyFontSize(4, 1);
+        // If the title spans two lines, align it to the bottom
+        display: flex;
+        align-items: flex-end;
       }
     }
 
