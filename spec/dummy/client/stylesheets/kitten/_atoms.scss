@@ -281,10 +281,7 @@
 
 // Typography
 
-@include k-TypographyBodyCopy((
-  family: 'source-sans',
-  color: map-get($k-colors, 'font-1')
-));
+@include k-TypographyBodyCopy;
 
 @include k-TypographyScale((
   styles: (

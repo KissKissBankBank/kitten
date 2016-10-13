@@ -26,12 +26,14 @@
 ///     line-height: 1.5rem,
 ///   );
 ///
-///   $body-copy: (
-///     family: 'lato',
-///     color:  #444
+///   $k-fonts: (
+///     source-sans: (
+///       family: (lato, sans-serif),
+///       weight: 400,
+///     )
 ///   );
 ///
-///   @include k-TypographyBodyCopy($body-copy);
+///   @include k-TypographyBodyCopy;
 ///
 /// @example css - CSS output
 ///   html {
@@ -43,16 +45,16 @@
 ///     font-weight: 300;
 ///     line-height: 1.5rem;
 ///
-///     font-family: "lato", sans-serif;
+///     font-family: lato, sans-serif;
 ///     color:       #444;
 ///   }
 ///
 ///   body.withGrid {
 ///     ...;
 ///   }
-@mixin k-TypographyBodyCopy($body-copy) {
-  $font: k-map-fetch($body-copy, 'family');
-  $color: k-map-fetch($body-copy, 'color');
+@mixin k-TypographyBodyCopy {
+  $font: 'source-sans';
+  $color: map-get($k-colors, 'font-1');
 
   // The root font size applied to the HTML document.
   $root: k-map-fetch($k-typography, 'root');
@@ -61,6 +63,7 @@
   $base-font-size: k-map-fetch($k-typography, 'font-size');
 
   // The starting font weight applied to the body element.
+  // TODO: remove this since it should be included in `k-typographyFont($font)`
   $base-font-weight: k-map-fetch($k-typography, 'font-weight');
 
   // The base line height.
