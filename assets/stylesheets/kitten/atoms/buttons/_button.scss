@@ -68,12 +68,14 @@
 
     $font: k-string-definition(k-map-fetch($button, 'font'));
 
-    $button-default: map-get-deep($button, ('default'));
     $button-primary: map-get-deep($button, ('primary'));
+    $button-secondary: map-get-deep($button, ('secondary'));
+    $button-secondary-light: map-get-deep($button, ('secondary-light-on-color'));
+    $button-secondary-color: map-get-deep($button, ('secondary-color-on-white'));
 
 
     .k-Button {
-      @include k-buttonBase($button-default);
+      @include k-buttonBase($button-secondary);
       @include k-typographyFontSize($button-step, $button-line-height);
       @include k-typographyFont($font);
 
@@ -87,7 +89,7 @@
 
     .k-Button__svg {
       @include k-buttonSvg(
-        $button-default,
+        $button-secondary,
         'k-Button',
         'k-Button__svg__stroke'
       );
@@ -104,6 +106,14 @@
 
     .k-Button--primary {
       @include k-buttonBase($button-primary);
+    }
+
+    .k-Button--secondary_light {
+      @include k-buttonBase($button-secondary-light);
+    }
+
+    .k-Button--secondary_color {
+      @include k-buttonBase($button-secondary-color);
     }
 
     .k-Button--big {

@@ -16,7 +16,7 @@
 /// @example scss - Usage
 ///
 ///   $button-icon: (
-///     default: (
+///     secondary: (
 ///       colors: (
 ///         base: (
 ///           color: #333,
@@ -48,8 +48,8 @@
 
 @mixin k-ButtonIcon($button-icon) {
   @include k-with-module('k-ButtonIcon: $button-icon') {
-    $button-icon-default: map-get-deep($button-icon, ('default'));
     $button-icon-primary: map-get-deep($button-icon, ('primary'));
+    $button-icon-secondary: map-get-deep($button-icon, ('secondary'));
 
     $button-icon-facebook: (
       colors: (
@@ -154,7 +154,7 @@
     $transition-speed: .2s;
 
     .k-ButtonIcon {
-      @include k-buttonBase($button-icon-default);
+      @include k-buttonBase($button-icon-secondary);
       @include k-buttonRounded($button-size, $icon-width, $icon-height);
     }
 
@@ -167,7 +167,7 @@
       transition: fill $transition-speed;
 
       @include k-buttonSvg(
-        $button-icon-default,
+        $button-icon-secondary,
         'k-ButtonIcon',
         'k-ButtonIcon__svg__stroke'
       );

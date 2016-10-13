@@ -6,7 +6,7 @@
 /// Paddings depend on the size of button and the size of tag.
 /// It is calculate automaticaly with this 2 values.
 ///
-/// You can use only default version of this button
+/// You can use only secondary version of this button
 ///
 /// @group buttons
 ///
@@ -15,7 +15,7 @@
 /// @example scss - Usage
 ///
 ///   $button-tag: (
-///     default: (
+///     secondary: (
 ///       colors: (
 ///         base: (
 ///           color: #333,
@@ -47,7 +47,7 @@
 
 @mixin k-ButtonTag($button-tag) {
   @include k-with-module('k-ButtonTag: $button-tag') {
-    $button-tag: map-get-deep($button-tag, ('default'));
+    $button-tag: map-get-deep($button-tag, ('secondary'));
 
     $border-size: 1px;
 
