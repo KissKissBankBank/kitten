@@ -64,13 +64,15 @@ const KarlLoggedHeaderUserMenu = defaultProps(Dropdown, {
   positionedWithBorder: false,
   positionedOn: 'right',
 
+  notifications: 42,
+  spaceAroundGrid: 20,
   buttonId: 'k-UserMenu',
   buttonTemplate: 'ButtonImageWithTextAndBadge',
   srcImg: 'https://placekitten.com/g/100/100',
   widthImg: 100,
   heightImg: 100,
   altImg: 'Alt Firstname',
-  text: 'F',
+  text: 'Firsname',
   title: 'Profil',
 
   refreshEvents: ['resize', 'karl:element#header:classToggled'],

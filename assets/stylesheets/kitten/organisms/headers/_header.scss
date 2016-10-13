@@ -27,6 +27,7 @@
   $border-color: #eee;
   $border-width: 1px;
 
+  $height: 65px;
   $item-spacing: k-px-to-rem(10px);
   $z-index: 10;
 
@@ -57,6 +58,8 @@
     align-self: flex-start;
     justify-content: space-between;
 
+    height: k-px-to-rem($height);
+
     // Since all items have left and right padding, negate it for the first
     // and last elements.
     margin-left: -$item-spacing;
@@ -68,18 +71,14 @@
     align-items: center;
   }
 
+  .k-Header__items--fixedSize {
+    flex-shrink: 0;
+  }
+
   .k-Header__item {
     display: flex;
     margin: 0;
     padding: 0 $item-spacing;
-
-    @include k-media-sm {
-      margin: $item-spacing 0;
-    }
-
-    @include k-media-xs {
-      margin: $item-spacing 0;
-    }
   }
 
   .k-Header__nav {
@@ -88,24 +87,33 @@
 
     padding: 0 $item-spacing;
 
-    @include k-media-sm {
-      display: none;
-    }
-
-    @include k-media-xs {
+    @include k-media-max('m') {
       display: none;
     }
   }
 
+  .k-Header__nav__item {
+    height: k-px-to-rem($height - $border-width);
+  }
+
+  .k-Header__logo {
+    display: flex;
+
+    svg, img {
+      height: k-px-to-rem(30px);
+    }
+  }
+
   .k-Header__search {
-    @include k-media-xs {
+    @include k-media-max('xxs') {
       display: none;
     }
   }
 
   .k-Header__signup,
-  .k-Header__logged {
-    @include k-media-xs {
+  .k-Header__logged,
+  .k-Header__search {
+    @include k-media-max('xs') {
       display: none;
     }
   }
@@ -113,8 +121,8 @@
   .k-Header__signupIcon {
     display: none;
 
-    @include k-media-xs {
-      display: block;;
+    @include k-media-max('xs') {
+      display: block;
     }
   }
 }

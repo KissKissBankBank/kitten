@@ -10,12 +10,12 @@
     hover: (
       color: map-get($k-colors, 'primary-1'),
       background-color: #fff,
-      border-color: #c8daff,
+      border-color: map-get($k-colors, 'primary-4'),
     ),
     focus: (
       color: map-get($k-colors, 'primary-1'),
       background-color: #fff,
-      border-color: #c8daff,
+      border-color: map-get($k-colors, 'primary-4'),
     ),
     active: (
       color: #fff,

@@ -85,22 +85,22 @@
     }
 
     .k-HorizontalNav__item {
-      @include k-typographyFontSize($font-step);
-      @include k-typographyFont($font);
-      text-align: center;
-      text-decoration: none;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
 
+      padding: 0 $padding;
       background-color: $base-background-color;
       border-bottom: $border-width solid $base-border-color;
-      color: $base-color;
-      cursor: pointer;
-      display: block;
-      outline: none;
-      padding: $padding;
-      transition: color .2s, border-color .2s;
 
-      text-decoration: none;
+      @include k-typographyFontSize($font-step, 1.5);
+      @include k-typographyFont($font);
+      color: $base-color;
       text-align: center;
+      text-decoration: none;
+
+      cursor: pointer;
+      transition: color .2s, border-color .2s;
 
       &:hover {
         color: $hover-color;

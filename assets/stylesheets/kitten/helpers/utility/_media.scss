@@ -30,6 +30,19 @@
   }
 }
 
+@mixin k-media-max($query) {
+  $queries: map-get($k-media-queries, $query);
+  $max-width: map-get($queries, 'max-width');
+
+  @if $max-width == null {
+    @content;
+  } @else {
+    @media (max-width: $max-width) {
+      @content;
+    }
+  }
+}
+
 @mixin k-media-within($query) {
   $queries: map-get($k-media-queries, $query);
   $min-width: map-get($queries, 'min-width');

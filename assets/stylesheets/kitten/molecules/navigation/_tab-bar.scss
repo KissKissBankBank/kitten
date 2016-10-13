@@ -125,7 +125,7 @@
         min-height: k-px-to-rem(50px);
       }
 
-      @include k-media-min('m') {
+      @include k-media-min('l') {
         display: none;
       }
     }

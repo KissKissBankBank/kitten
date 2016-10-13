@@ -24,26 +24,26 @@
             <li role="menuitem">
               <%= link_to 'Emprunter à mes amis',
                           { current: 'nav-1' },
-                          class: 'k-HorizontalNav__item ' +
+                          class: 'k-HorizontalNav__item k-Header__nav__item' +
                           (params['current'] == 'nav-1' ? 'is-selected' : '') %>
             </li>
             <li role="menuitem">
               <%= link_to 'Comment ça marche&nbsp;?'.html_safe,
                           { current: 'nav-2' },
-                          class: 'k-HorizontalNav__item ' +
+                          class: 'k-HorizontalNav__item k-Header__nav__item ' +
                           (params['current'] == 'nav-2' ? 'is-selected' : '') %>
             </li>
             <li role="menuitem">
               <%= link_to 'Blog',
                           { current: 'nav-3' },
-                          class: 'k-HorizontalNav__item' %>
+                          class: 'k-HorizontalNav__item k-Header__nav__item' %>
             </li>
           </ul>
         </nav>
 
       </div>
 
-      <div class="k-Header__items">
+      <div class="k-Header__items k-Header__items--fixedSize">
 
         <% if params.key?(:logged) %>
           <div id="k-UserMenuDropdownLogged" class="k-Header__item">
