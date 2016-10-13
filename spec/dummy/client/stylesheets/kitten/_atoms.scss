@@ -272,19 +272,12 @@
 // Form
 
 @include k-Checkbox;
-
 @include k-Label;
-
 @include k-TextInput;
 
 // Notifications
 
-@include k-Badge((
-  colors: (
-    base: #fff,
-    background: map-get($k-colors, 'primary-1'),
-  )
-));
+@include k-Badge;
 
 // Typography
 

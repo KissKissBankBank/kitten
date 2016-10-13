@@ -4,35 +4,26 @@
 ///
 /// @example scss - usage
 ///
-///   @include k-Badge((
-///     colors: (
-///       base: #fff,
-///       background: #4a84ff,
-///     )
-///   ));
+///   @include k-Badge;
 ///
 /// @example html
 ///
 ///   <span class="k-Badge">42</span>
 
-@mixin k-Badge($badge) {
-  @include k-with-module('k-Badge: $badge') {
-    $color: k-color-definition(
-      k-map-fetch($badge, ('colors', 'base')));
-    $background-color: k-color-definition(
-      k-map-fetch($badge, ('colors', 'background')));
+@mixin k-Badge {
+  $color: #fff;
+  $background-color: map-get($k-colors, 'primary-1');
 
-    .k-Badge {
-      padding: k-px-to-rem(2px) k-px-to-rem(6px);
-      background: $background-color;
-      border-radius: k-px-to-rem(10px);
-      color: $color;
-      @include k-typographyFont('source-sans');
-      @include k-typographyFontSize(-4, 1);
-    }
+  .k-Badge {
+    padding: k-px-to-rem(2px) k-px-to-rem(6px);
+    background: $background-color;
+    border-radius: k-px-to-rem(10px);
+    color: $color;
+    @include k-typographyFont('source-sans');
+    @include k-typographyFontSize(-4, 1);
+  }
 
-    .k-Badge--spaced {
-      margin: 0 k-px-to-rem(5px);
-    }
+  .k-Badge--spaced {
+    margin: 0 k-px-to-rem(5px);
   }
 }
