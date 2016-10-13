@@ -70,8 +70,8 @@
 
     $button-primary: map-get-deep($button, ('primary'));
     $button-secondary: map-get-deep($button, ('secondary'));
-    $button-secondary-light: map-get-deep($button, ('secondary-light-on-color'));
-    $button-secondary-color: map-get-deep($button, ('secondary-color-on-white'));
+    $button-secondary-light: map-get-deep($button, ('secondary-light'));
+    $button-secondary-color: map-get-deep($button, ('secondary-color'));
 
 
     .k-Button {
@@ -100,6 +100,18 @@
         'k-Button__svg__stroke'
       );
 
+      @include k-buttonSvg(
+        $button-secondary-light,
+        'k-Button--secondaryLight',
+        'k-Button__svg__stroke'
+      );
+
+      @include k-buttonSvg(
+        $button-secondary-color,
+        'k-Button--secondaryColor',
+        'k-Button__svg__stroke'
+      );
+
       width: $icon-width;
       height: $icon-height;
     }
@@ -108,11 +120,11 @@
       @include k-buttonBase($button-primary);
     }
 
-    .k-Button--secondary_light {
+    .k-Button--secondaryLight {
       @include k-buttonBase($button-secondary-light);
     }
 
-    .k-Button--secondary_color {
+    .k-Button--secondaryColor {
       @include k-buttonBase($button-secondary-color);
     }
 
