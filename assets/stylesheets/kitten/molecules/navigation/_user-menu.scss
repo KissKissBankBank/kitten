@@ -125,7 +125,7 @@
       padding: k-px-to-rem(15px) k-px-to-rem(20px);
       outline: none;
       border-left: $border-size solid $border-color;
-      background: $background-color;
+      background-color: $background-color;
 
       @include k-typographyFont($font);
       @include k-typographyFontSize($font-step, 1);
@@ -157,7 +157,7 @@
       }
     }
 
-    @if ($secondary) {
+    @if $secondary {
       $secondary-color: k-color-definition(
         k-map-fetch($secondary, 'base'));
       $secondary-background-color: k-color-definition(
@@ -166,8 +166,8 @@
         k-map-fetch($secondary, 'border'));
 
       .k-UserMenu__item--secondary {
-        border-left: $border-size solid $secondary-border-color;
-        background: $secondary-background-color;
+        border-left-color: $secondary-border-color;
+        background-color: $secondary-background-color;
 
         color: $secondary-color;
       }
