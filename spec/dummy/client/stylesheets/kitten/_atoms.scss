@@ -273,9 +273,7 @@
 
 @include k-Checkbox;
 
-@include k-Label((
-  font: source-sans-semi-bold
-));
+@include k-Label;
 
 @include k-TextInput((
   font: 'source-sans',
