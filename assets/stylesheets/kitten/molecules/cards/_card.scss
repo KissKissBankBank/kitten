@@ -4,41 +4,28 @@
 ///
 /// @example scss - usage
 ///
-///   @include k-Card((
-///     colors: (
-///       light-background: white,
-///       light-text: black,
-///     )
-///   ));
+///   @include k-Card;
 ///
 /// @example html
 ///
 ///   <div class="k-Card k-Card--light">
 ///     …
 ///   </div>
-@mixin k-Card($card) {
-  @include k-with-module('k-Card: $card') {
-    $colors: k-map-fetch($card, 'colors');
+@mixin k-Card {
+  $light-background-color: map-get($k-colors, 'background-1');
+  $light-text-color: map-get($k-colors, 'font-1');
 
-    $light-background-color: k-color-definition(
-      k-map-fetch($colors, 'light-background')
-    );
-    $light-text-color: k-color-definition(
-      k-map-fetch($colors, 'light-text')
-    );
+  $radius: 1rem;
 
-    $radius: 1rem;
+  .k-Card {
+    padding-top: $radius;
+    padding-bottom: $radius;
 
-    .k-Card {
-      padding-top: $radius;
-      padding-bottom: $radius;
+    border-radius: $radius;
+  }
 
-      border-radius: $radius;
-    }
-
-    .k-Card--light {
-      background: $light-background-color;
-      color: $light-text-color;
-    }
+  .k-Card--light {
+    background: $light-background-color;
+    color: $light-text-color;
   }
 }

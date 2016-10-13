@@ -7,12 +7,7 @@
 
 // Cards
 
-@include k-Card((
-  colors: (
-    light-background: #fff,
-    light-text: map-get($k-colors, 'font-1'),
-  ),
-));
+@include k-Card;
 
 // Footer
 
