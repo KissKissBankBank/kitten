@@ -3,6 +3,9 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
+Breaking changes:
+- Add a secondary item style on `k-UserMenu`
+  * requires a new colors map
 
 ## [v0.9.0]
 Breaking changes:
