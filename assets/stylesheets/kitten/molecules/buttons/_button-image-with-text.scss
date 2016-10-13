@@ -4,13 +4,7 @@
 ///
 /// @example scss - usage
 ///
-///   @include k-ButtonImageWithText((
-///     colors: (
-///       base: #333,
-///       hover: #4a84ff,
-///       active: #2c66e1,
-///     )
-///   ));
+///   @include k-ButtonImageWithText;
 ///
 /// @example html
 ///
@@ -26,57 +20,52 @@
 ///     <p class="k-ButtonImageWithText__text">Firstname</p>
 ///   </button>
 
-@mixin k-ButtonImageWithText($button) {
-  @include k-with-module('k-ButtonImageWithText: $button') {
-    $color: k-color-definition(
-      k-map-fetch($button, ('colors', 'base')));
-    $color-hover: k-color-definition(
-      k-map-fetch($button, ('colors', 'hover')));
-    $color-active: k-color-definition(
-      k-map-fetch($button, ('colors', 'active')));
+@mixin k-ButtonImageWithText {
+  $color: map-get($k-colors, 'font-1');
+  $color-hover: map-get($k-colors, 'primary-1');
+  $color-active: map-get($k-colors, 'primary-3');
 
-    .k-ButtonImageWithText {
-      display: flex;
-      align-items: center;
-      align-self: flex-start;
+  .k-ButtonImageWithText {
+    display: flex;
+    align-items: center;
+    align-self: flex-start;
 
-      padding: 0;
+    padding: 0;
 
-      // Overrides default values of <button>
-      border: none;
-      background: none;
+    // Overrides default values of <button>
+    border: none;
+    background: none;
 
-      cursor: pointer;
+    cursor: pointer;
+  }
+
+  .k-ButtonImageWithText--vertical {
+    flex-direction: column;
+  }
+
+  .k-ButtonImageWithText__text {
+    margin: k-px-to-rem(10px);
+    text-align: left;
+
+    @include k-typographyFontSize(-1, 1);
+    @include k-typographyFont('source-sans-semi-bold');
+
+    .k-ButtonImageWithText:hover &,
+    &:hover {
+      color: $color-hover;
     }
 
-    .k-ButtonImageWithText--vertical {
-      flex-direction: column;
+    .k-ButtonImageWithText:active &,
+    &:active {
+      color: $color-active;
     }
 
-    .k-ButtonImageWithText__text {
-      margin: k-px-to-rem(10px);
-      text-align: left;
-
-      @include k-typographyFontSize(-1, 1);
-      @include k-typographyFont('source-sans-semi-bold');
-
-      .k-ButtonImageWithText:hover &,
-      &:hover {
-        color: $color-hover;
-      }
-
-      .k-ButtonImageWithText:active &,
-      &:active {
-        color: $color-active;
-      }
-
-      @include k-media-max('m') {
-        display: none;
-      }
+    @include k-media-max('m') {
+      display: none;
     }
+  }
 
-    .k-ButtonImageWithText__text--withoutMarginRight {
-      margin-right: 0;
-    }
+  .k-ButtonImageWithText__text--withoutMarginRight {
+    margin-right: 0;
   }
 }
