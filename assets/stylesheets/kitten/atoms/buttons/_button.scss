@@ -73,7 +73,6 @@
     $button-secondary-light: map-get-deep($button, ('secondary-light'));
     $button-secondary-color: map-get-deep($button, ('secondary-color'));
 
-
     .k-Button {
       @include k-buttonBase($button-secondary);
       @include k-typographyFontSize($button-step, $button-line-height);
