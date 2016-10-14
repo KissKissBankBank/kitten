@@ -114,14 +114,20 @@
     }
   }
 
-  .k-Header__logo--light {
+  .k-Header__logo--lightOnM {
     overflow: hidden;
 
     svg, img {
       @include k-media-within('m') {
         margin-left: -38px;
       }
+    }
+  }
 
+  .k-Header__logo--lightOnXxs {
+    overflow: hidden;
+
+    svg, img {
       @include k-media-within('xxs') {
         margin-left: -38px;
       }
