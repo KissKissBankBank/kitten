@@ -3,6 +3,7 @@
 /// This mixin will apply pseudo-classes and state classes on the parent class
 /// that is calling it:
 ///   - `:hover`
+///   - `:focus` (optionnal)
 ///   - `:active`
 ///   - `:is-selected`
 ///   - `:disabled` (optionnal)
@@ -22,6 +23,11 @@
 ///         background-color: #4a84ff,
 ///       ),
 ///       hover: (
+///         color: #fff,
+///         border-color: #3b75f0,
+///         background-color: #3b75f0,
+///       ),
+///       focus: (
 ///         color: #fff,
 ///         border-color: #3b75f0,
 ///         background-color: #3b75f0,
@@ -60,6 +66,12 @@
   $hover-color: map-get($hover, 'color');
   $hover-border-color: map-get($hover, 'border-color');
   $hover-background-color: map-get($hover, 'background-color');
+
+  // focus colors (optional)
+  $focus: k-colors-definition(k-map-fetch($colors, 'focus'));
+  $focus-color: map-get($focus, 'color');
+  $focus-border-color: map-get($focus, 'border-color');
+  $focus-background-color: map-get($focus, 'background-color');
 
   // active colors
   $active: k-colors-definition(k-map-fetch($colors, 'active'));
@@ -100,6 +112,23 @@
 
     background-color: $hover-background-color;
     color: $hover-color;
+    text-decoration: none;
+  }
+
+  &:focus {
+    @if map-has-key($colors, 'focus') {
+      @include k-buttonBorder($focus-border-color);
+
+      background-color: $focus-background-color;
+      color: $focus-color;
+    }
+    @else {
+      @include k-buttonBorder($hover-border-color);
+
+      background-color: $hover-background-color;
+      color: $hover-color;
+    }
+
     text-decoration: none;
   }
 

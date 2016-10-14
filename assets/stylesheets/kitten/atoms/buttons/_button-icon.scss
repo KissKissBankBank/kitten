@@ -28,6 +28,11 @@
 ///           border-color: #cadbfd,
 ///           background-color: #fff,
 ///         ),
+///         focus: (
+///           color: #4a84ff,
+///           border-color: #cadbfd,
+///           background-color: #fff,
+///         ),
 ///         active: (
 ///           color: #fff,
 ///           border-color: #2c66e1,
@@ -63,6 +68,11 @@
           border-color: #2c4a89,
           background-color: #2c4a89,
         ),
+        focus: (
+          color: #fff,
+          border-color: #2c4a89,
+          background-color: #2c4a89,
+        ),
         active: (
           color: #fff,
           border-color: #1d3b7a,
@@ -88,6 +98,11 @@
           background-color: #55acee,
         ),
         hover: (
+          color: #fff,
+          border-color: #469ddf,
+          background-color: #469ddf,
+        ),
+        focus: (
           color: #fff,
           border-color: #469ddf,
           background-color: #469ddf,
@@ -121,6 +136,11 @@
           border-color: #00578f,
           background-color: #00578f,
         ),
+        focus: (
+          color: #fff,
+          border-color: #00578f,
+          background-color: #00578f,
+        ),
         active: (
           color: #fff,
           border-color: #004880,
@@ -148,8 +168,6 @@
     // SVG element default settings.
     $icon-width: k-px-to-rem(12px);
     $icon-height: k-px-to-rem(14px);
-
-    $button-radius: 1.25rem;
 
     $transition-speed: .2s;
 

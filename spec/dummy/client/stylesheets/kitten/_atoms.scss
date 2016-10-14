@@ -14,6 +14,11 @@
         border-color: map-get($k-colors, 'primary-2'),
         background-color: map-get($k-colors, 'primary-2'),
       ),
+      focus: (
+        color: #fff,
+        border-color: map-get($k-colors, 'primary-2'),
+        background-color: map-get($k-colors, 'primary-2'),
+      ),
       active: (
         color: #fff,
         border-color: map-get($k-colors, 'primary-3'),
@@ -39,6 +44,11 @@
         background-color: #fff,
       ),
       hover: (
+        color: #fff,
+        border-color: map-get($k-colors, 'primary-1'),
+        background-color: map-get($k-colors, 'primary-1'),
+      ),
+      focus: (
         color: #fff,
         border-color: map-get($k-colors, 'primary-1'),
         background-color: map-get($k-colors, 'primary-1'),
@@ -72,6 +82,11 @@
         border-color: map-get($k-colors, 'primary-2'),
         background-color: map-get($k-colors, 'primary-2'),
       ),
+      focus: (
+        color: #fff,
+        border-color: map-get($k-colors, 'primary-2'),
+        background-color: map-get($k-colors, 'primary-2'),
+      ),
       active: (
         color: #fff,
         border-color: map-get($k-colors, 'primary-3'),
@@ -97,6 +112,11 @@
         background-color: map-get($k-colors, 'primary-5'),
       ),
       hover: (
+        color: #fff,
+        border-color: map-get($k-colors, 'primary-2'),
+        background-color: map-get($k-colors, 'primary-2'),
+      ),
+      focus: (
         color: #fff,
         border-color: map-get($k-colors, 'primary-2'),
         background-color: map-get($k-colors, 'primary-2'),
@@ -133,6 +153,11 @@
         border-color: map-get($k-colors, 'primary-2'),
         background-color: map-get($k-colors, 'primary-2'),
       ),
+      focus: (
+        color: #fff,
+        border-color: map-get($k-colors, 'primary-2'),
+        background-color: map-get($k-colors, 'primary-2'),
+      ),
       active: (
         color: #fff,
         background-color: map-get($k-colors, 'primary-3'),
@@ -158,6 +183,11 @@
         background-color: #fff,
       ),
       hover: (
+        color: map-get($k-colors, 'primary-1'),
+        border-color: map-get($k-colors, 'primary-4'),
+        background-color: #fff,
+      ),
+      focus: (
         color: map-get($k-colors, 'primary-1'),
         border-color: map-get($k-colors, 'primary-4'),
         background-color: #fff,
@@ -191,6 +221,10 @@
       color: map-get($k-colors, 'font-1'),
       background-color: #fff,
     ),
+    focus: (
+      color: map-get($k-colors, 'font-1'),
+      background-color: #fff,
+    ),
     active: (
       color: map-get($k-colors, 'font-1'),
       background-color: #fff,
@@ -207,6 +241,11 @@
         background-color: #fff,
       ),
       hover: (
+        color: map-get($k-colors, 'primary-1'),
+        border-color: map-get($k-colors, 'primary-4'),
+        background-color: #fff,
+      ),
+      focus: (
         color: map-get($k-colors, 'primary-1'),
         border-color: map-get($k-colors, 'primary-4'),
         background-color: #fff,

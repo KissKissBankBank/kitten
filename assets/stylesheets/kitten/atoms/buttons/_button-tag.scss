@@ -4,7 +4,7 @@
 /// with a tag inside.
 ///
 /// Paddings depend on the size of button and the size of tag.
-/// It is calculate automaticaly with this 2 values.
+/// It is calculated automaticaly with this 2 values.
 ///
 /// You can use only secondary version of this button
 ///
@@ -23,6 +23,11 @@
 ///           border-color: #d8d8d8,
 ///         ),
 ///         hover: (
+///           color: #4a84ff,
+///           border-color: #cadbfd,
+///           background-color: #fff,
+///         ),
+///         focus: (
 ///           color: #4a84ff,
 ///           border-color: #cadbfd,
 ///           background-color: #fff,
