@@ -5,34 +5,38 @@
 ///
 /// @group buttons
 ///
-/// @parameter {Color} $button - button
-/// @parameter {Color} $parent - parent
-/// @parameter {Color} $stroke_class - stroke_class
+/// @parameter {Map} $colors - map of colors
+/// @parameter {String} $parent - parent's class
+/// @parameter {String} $stroke_class - stroke_class
 ///
 /// @example scss - Usage
-///   @include k-buttonSvg(#d8d8d8);
+///    $colors: (
+///      base: (
+///        color: #fff,
+///        border-color: #00669e,
+///        background-color: #00669e,
+///      ),
+///      hover: (
+///        color: #000,
+///        border-color: #00669e,
+///        background-color: #00669e,
+///      ),
+///      …
+///    );
 ///
-///     .#{$parent} & {
-///       fill: $base-color ;
-///      }
-///      .#{$stroke_class} {
-///        .#{$parent} & {
-///          stroke: $base-color;
-///        }
-///      }
+///   .k-Button {
+///     @include k-buttonSvg($colors, 'k-Button', 'k-Button__stroke');
+///   }
 ///
 /// @example css - CSS output
-///    fill: #fff;
-///    .k-Button,
-///    .k-Button__svg:hover {
-///      fill: #3b5998;
-///     }
+///    .k-Button .k-Button__svg {
+///      fill: #fff;
+///    }
 ///
-///     .k-Button,
-///     .k-Button__svg:hover {
-///       stroke: #3b5998;
-///     }
-///   ...
+///    .k-Button:hover .k-Button__svg {
+///      fill: #000;
+///    }
+///    …
 
 @mixin k-buttonSvg($button, $parent, $stroke_class) {
 
@@ -65,7 +69,8 @@
     fill: $active-color;
   }
 
-  .#{$parent}:disabled & {
+  .#{$parent}:disabled &,
+   .#{$parent}.is-disabled & {
     fill: $disabled-color;
   }
 
@@ -91,7 +96,8 @@
       stroke: $active-color;
     }
 
-    .#{$parent}:disabled & {
+    .#{$parent}:disabled &,
+    .#{$parent}.is-disabled & {
       stroke: $disabled-color;
     }
 
