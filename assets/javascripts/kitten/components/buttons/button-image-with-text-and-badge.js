@@ -18,6 +18,7 @@ class ButtonImageWithTextAndBadge extends React.Component {
     } = this.props
 
     const textClassName = classNames('k-ButtonImageWithText__text',
+                                     'k-ButtonImageWithText__text--withoutMarginRight',
                                      classNameText)
     let buttonClassName = classNames('k-ButtonImageWithText', className)
     if (notifications > 0)
