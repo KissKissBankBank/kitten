@@ -14,7 +14,7 @@
         </div>
 
         <p class="k-Header__item k-Header__item__logo">
-          <a class="k-Header__logo" href="header">
+          <a class="k-Header__logo k-Header__logo--light" href="header">
             <%= image_tag 'brand/lendopolis.svg', alt: 'lendopolis' %>
           </a>
         </p>
@@ -198,7 +198,7 @@
         </div>
 
         <p class="k-Header__item k-Header__item__logo">
-          <a class="k-Header__logo" href="header">
+          <a class="k-Header__logo k-Header__logo--light" href="header">
             <%= image_tag 'brand/kisskissbankbank.svg', alt: 'kisskissbankbank' %>
           </a>
         </p>
@@ -206,13 +206,13 @@
         <nav class="k-Header__item k-Header__nav">
           <ul class="k-HorizontalNav" role="menubar">
             <li role="menuitem">
-              <%= link_to 'Starten sie ihr projekt',
+              <%= link_to 'Starten Dein Projekt',
                           { current: 'nav-1' },
                           class: 'k-HorizontalNav__item k-Header__nav__item ' +
                           (params['current'] == 'nav-1' ? 'is-selected' : '') %>
             </li>
             <li role="menuitem">
-              <%= link_to 'Entdecken sie die projekte'.html_safe,
+              <%= link_to 'Entdecken die Projekte'.html_safe,
                           { current: 'nav-2' },
                           class: 'k-HorizontalNav__item k-Header__nav__item ' +
                           (params['current'] == 'nav-2' ? 'is-selected' : '') %>
@@ -288,13 +288,13 @@
 <div class="k-TabBar k-TabBar--responsive is-fixed">
   <ul class="k-TabBar__nav">
     <li>
-      <%= link_to raw('Starten sie <br />ihr projekt'),
+      <%= link_to raw('Starten dein <br />Projekt'),
                   { current: 'tabbar-1' },
                   class: 'k-TabBar__item k-TabBar__item--thinGutters ' +
                   (params['current'] == 'tabbar-1' ? 'is-selected' : '') %>
     </li>
     <li>
-      <%= link_to raw('Entdecken sie <br />die projekte'),
+      <%= link_to raw('Entdecken die <br />Projekte'),
                   { current: 'tabbar-2' },
                   class: 'k-TabBar__item k-TabBar__item--thinGutters ' +
                   (params['current'] == 'tabbar-2' ? 'is-selected' : '') %>

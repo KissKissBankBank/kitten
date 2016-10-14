@@ -108,11 +108,16 @@
 
   .k-Header__logo {
     display: flex;
-    overflow: hidden;
 
     svg, img {
       height: k-px-to-rem(30px);
+    }
+  }
 
+  .k-Header__logo--light {
+    overflow: hidden;
+
+    svg, img {
       @include k-media-within('m') {
         margin-left: -38px;
       }
