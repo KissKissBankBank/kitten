@@ -93,14 +93,20 @@
       background-color: $base-background-color;
       border-bottom: $border-width solid $base-border-color;
 
-      @include k-typographyFontSize($font-step, 1.5);
       @include k-typographyFont($font);
+      font-size: k-px-to-rem(12px);
+      line-height: normal;
+
       color: $base-color;
       text-align: center;
       text-decoration: none;
 
       cursor: pointer;
       transition: color .2s, border-color .2s;
+
+      @include k-media-within('m') {
+        padding: 0 k-px-to-rem(10px);
+      }
 
       &:hover {
         color: $hover-color;

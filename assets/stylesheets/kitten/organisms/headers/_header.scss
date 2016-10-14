@@ -29,6 +29,7 @@
 
   $height: 65px;
   $item-spacing: k-px-to-rem(10px);
+  $item-spacing-xxs: k-px-to-rem(15px);
   $z-index: 10;
 
   .k-Header {
@@ -64,6 +65,11 @@
     // and last elements.
     margin-left: -$item-spacing;
     margin-right: -$item-spacing;
+
+    @include k-media-within('xxs') {
+      margin-left: -$item-spacing-xxs;
+      margin-right: -$item-spacing-xxs;
+    }
   }
 
   .k-Header__items {
@@ -87,7 +93,7 @@
 
     padding: 0 $item-spacing;
 
-    @include k-media-max('m') {
+    @include k-media-max('s') {
       display: none;
     }
   }
@@ -96,11 +102,24 @@
     height: k-px-to-rem($height - $border-width);
   }
 
+  .k-Header__item__logo {
+    padding-left: k-px-to-rem(5px);
+  }
+
   .k-Header__logo {
     display: flex;
+    overflow: hidden;
 
     svg, img {
       height: k-px-to-rem(30px);
+
+      @include k-media-within('m') {
+        margin-left: -38px;
+      }
+
+      @include k-media-within('xxs') {
+        margin-left: -38px;
+      }
     }
   }
 
@@ -118,11 +137,32 @@
     }
   }
 
-  .k-Header__signupIcon {
-    display: none;
+  .k-Header__signup {
+    @include k-media-within('m') {
+      display: none;
+    }
 
-    @include k-media-max('xs') {
+    @include k-media-within('xxs') {
+      padding-left: 0px;
+    }
+  }
+
+  .k-Header__signupIcon {
+    @include k-media-min('s') {
+      display: none;
+    }
+
+    @include k-media-within('m') {
       display: block;
     }
+
+    @include k-media-within('xxs') {
+      padding-left: 0px;
+    }
+  }
+
+  .k-Header__button {
+    padding-left: 0;
+    padding-right: 0;
   }
 }

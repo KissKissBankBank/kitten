@@ -13,7 +13,7 @@
           <%= react_component('KarlLoggedHeaderPlatformSwitch') %>
         </div>
 
-        <p class="k-Header__item">
+        <p class="k-Header__item k-Header__item__logo">
           <a class="k-Header__logo" href="header">
             <%= image_tag 'brand/lendopolis.svg', alt: 'lendopolis' %>
           </a>
@@ -38,6 +38,12 @@
                           { current: 'nav-3' },
                           class: 'k-HorizontalNav__item k-Header__nav__item ' +
                           (params['current'] == 'nav-3' ? 'is-selected' : '') %>
+            </li>
+            <li role="menuitem">
+              <%= link_to 'À propos'.html_safe,
+                          { current: 'nav-4' },
+                          class: 'k-HorizontalNav__item k-Header__nav__item ' +
+                          (params['current'] == 'nav-4' ? 'is-selected' : '') %>
             </li>
             <li role="menuitem">
               <%= link_to 'Crowd',
@@ -74,7 +80,7 @@
           </div>
         <% else %>
           <div class="k-Header__item k-Header__signup">
-            <%= link_to "Se connecter", { logged: true }, class: 'k-Button' %>
+            <%= link_to "Se connecter", { logged: true }, class: 'k-Button k-Header__button' %>
           </div>
           <div class="k-Header__item k-Header__signupIcon">
             <a href="?logged=true">
@@ -113,7 +119,7 @@
           <%= react_component('KarlLoggedHeaderPlatformSwitch') %>
         </div>
 
-        <p class="k-Header__item">
+        <p class="k-Header__item k-Header__item__logo">
           <a class="k-Header__logo" href="header">
             <%= image_tag 'brand/hellomerci.svg', alt: 'hellomerci' %>
           </a>
@@ -152,7 +158,7 @@
           </div>
         <% else %>
           <div class="k-Header__item k-Header__signup">
-            <%= link_to "Se connecter", { logged: true }, class: 'k-Button' %>
+            <%= link_to "Se connecter", { logged: true }, class: 'k-Button k-Header__button' %>
           </div>
           <div class="k-Header__item k-Header__signupIcon">
             <a href="?logged=true">
@@ -191,7 +197,7 @@
           <%= react_component('KarlLoggedHeaderPlatformSwitch') %>
         </div>
 
-        <p class="k-Header__item">
+        <p class="k-Header__item k-Header__item__logo">
           <a class="k-Header__logo" href="header">
             <%= image_tag 'brand/kisskissbankbank.svg', alt: 'kisskissbankbank' %>
           </a>
@@ -200,19 +206,19 @@
         <nav class="k-Header__item k-Header__nav">
           <ul class="k-HorizontalNav" role="menubar">
             <li role="menuitem">
-              <%= link_to 'Lancer un projet',
+              <%= link_to 'Starten sie ihr projekt',
                           { current: 'nav-1' },
                           class: 'k-HorizontalNav__item k-Header__nav__item ' +
                           (params['current'] == 'nav-1' ? 'is-selected' : '') %>
             </li>
             <li role="menuitem">
-              <%= link_to 'Découvrir les projets'.html_safe,
+              <%= link_to 'Entdecken sie die projekte'.html_safe,
                           { current: 'nav-2' },
                           class: 'k-HorizontalNav__item k-Header__nav__item ' +
                           (params['current'] == 'nav-2' ? 'is-selected' : '') %>
             </li>
             <li role="menuitem">
-              <%= link_to 'Comment ça marche'.html_safe,
+              <%= link_to 'Wie funktioniert das'.html_safe,
                           { current: 'nav-3' },
                           class: 'k-HorizontalNav__item k-Header__nav__item ' +
                           (params['current'] == 'nav-3' ? 'is-selected' : '') %>
@@ -233,7 +239,9 @@
         <div class="k-Header__item k-Header__search">
           <form class="k-SearchInput" role="search">
 
-            <input class="k-TextInput k-SearchInput__input"
+            <input class="k-TextInput
+                          k-SearchInput__input
+                          k-Header__search__input"
                    type="text"
                    name="foobar"
                    placeholder="Foobar…" />
@@ -251,7 +259,7 @@
           </div>
         <% else %>
           <div class="k-Header__item k-Header__signup">
-            <%= link_to "S'identifier", { logged: true }, class: 'k-Button' %>
+            <%= link_to "S'identifier", { logged: true }, class: 'k-Button k-Header__button' %>
           </div>
           <div class="k-Header__item k-Header__signupIcon">
             <a href="?logged=true">
@@ -280,27 +288,28 @@
 <div class="k-TabBar k-TabBar--responsive is-fixed">
   <ul class="k-TabBar__nav">
     <li>
-      <%= link_to raw('Lorem <br />ipsum dolor'),
+      <%= link_to raw('Starten sie <br />ihr projekt'),
                   { current: 'tabbar-1' },
                   class: 'k-TabBar__item k-TabBar__item--thinGutters ' +
                   (params['current'] == 'tabbar-1' ? 'is-selected' : '') %>
     </li>
     <li>
-      <%= link_to raw('Lorem <br />ipsum dolor'),
+      <%= link_to raw('Entdecken sie <br />die projekte'),
                   { current: 'tabbar-2' },
                   class: 'k-TabBar__item k-TabBar__item--thinGutters ' +
                   (params['current'] == 'tabbar-2' ? 'is-selected' : '') %>
     </li>
     <li>
-      <%= link_to raw('Lorem <br />ipsum dolor'),
+      <%= link_to raw('Wie funktioniert <br />das'),
                   { current: 'tabbar-3' },
                   class: 'k-TabBar__item k-TabBar__item--thinGutters ' +
                   (params['current'] == 'tabbar-3' ? 'is-selected' : '') %>
     </li>
     <li>
-      <%= link_to raw('Lorem <br />ipsum dolor'),
+      <%= link_to raw('Crowd'),
                   { current: 'tabbar-4' },
                   class: 'k-TabBar__item k-TabBar__item--thinGutters ' +
+                  'k-TabBar__item--singleLine ' +
                   (params['current'] == 'tabbar-4' ? 'is-selected' : '') %>
     </li>
   </ul>
