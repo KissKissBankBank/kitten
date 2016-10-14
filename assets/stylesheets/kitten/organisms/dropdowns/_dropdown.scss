@@ -27,10 +27,17 @@
   }
 
   .k-Dropdown__button--rotationOnExpanded {
-    transition: transform .2s;
+    path {
+      transition: transform .2s;
+      transform-origin: center;
 
-    .k-Dropdown.is-expanded & {
-      transform: rotate(-180deg);
+      .k-Dropdown.is-expanded & {
+        transform: rotate(-90deg);
+
+        &:first-child {
+          transform: rotate(90deg);
+        }
+      }
     }
   }
 
