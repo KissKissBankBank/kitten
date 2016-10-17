@@ -19,8 +19,10 @@ const karlPlatformSwitchButtonContent = (<svg
     className="k-ButtonIcon__svg"
     viewBox="0 0 10 7"
     xmlns="http://www.w3.org/2000/svg">
-  <path d="M5 6.243L3.586 4.828 7.828.586 9.243 2z"/>
-  <path d="M5 6.243L.757 2 2.172.586l4.242 4.242z"/>
+  <path className="k-Dropdown__button__svgPath"
+        d="M5 6.243L.757 2 2.172.586l4.242 4.242z"/>
+  <path className="k-Dropdown__button__svgPath k-Dropdown__button__svgPathRight"
+        d="M5 6.243L3.586 4.828 7.828.586 9.243 2z"/>
 </svg>)
 
 const KarlPlatformSwitch = defaultProps(Dropdown, {
