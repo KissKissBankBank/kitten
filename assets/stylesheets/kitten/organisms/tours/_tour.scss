@@ -1,0 +1,69 @@
+/// Tour
+///
+/// @group tours
+///
+/// @example scss - usage
+///
+///   @include k-Tour;
+///
+/// @example html
+///
+///   <div id="tour" class="k-Tour">
+///     <div class="k-Tour__container">
+///       <span class="k-Tour__close"></span>
+///       <svg>
+///         …
+///       </svg>
+///     </div>
+///   </div>
+
+@mixin k-Tour {
+
+  $background-color: #fff;
+  $border-color: #eee;
+  $border-size: 1px;
+
+  $border-radius: .87rem;
+
+  .k-Tour {
+    max-width: k-px-to-rem(465px);
+    min-height: k-px-to-rem(218px);
+
+    background-color: $background-color;
+    border-radius: $border-radius;
+    border: $border-size solid $border-color;
+    box-sizing: border-box;
+  }
+
+  .k-Tour__container {
+    display: flex;
+  }
+
+  .k-Tour__svg {
+    margin: 4.68rem 0 0 1.25rem;
+  }
+
+  .k-Tour__content {
+    @include k-typographyFont('source-sans-light');
+    text-align: left;
+    margin: 1.93rem 0 0 1.25rem;
+  }
+
+  .k-Tour__title {
+    @include k-typographyFontSize(2);
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .k-Tour__text {
+    @include k-typographyFontSize(-1);
+  }
+
+  .k-Button__emoji:after{
+    content: " \1F44D";
+  }
+
+  .k-Tour__close {
+    margin: .62rem .62rem 0 0;
+  }
+}
