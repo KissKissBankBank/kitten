@@ -81,6 +81,15 @@ const KarlLoggedHeaderUserMenu = defaultProps(Dropdown, {
     <a className="k-UserMenu__item" href="#">Mes projets</a>,
     <a className="k-UserMenu__item" href="#">Mes contributions</a>,
     <a className="k-UserMenu__item" href="#">Mes messages</a>,
+    <a className="k-UserMenu__item
+                  k-UserMenu__item--secondary
+                  k-UserMenu__separation"
+       href="#">
+      Admin
+    </a>,
+    <a className="k-UserMenu__item k-UserMenu__item--secondary" href="#">
+      Rapports
+    </a>,
     <a className="k-UserMenu__item k-UserMenu__separation" href="#">
       Profil
     </a>,

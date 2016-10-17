@@ -14,6 +14,8 @@ Breaking changes:
   * requires new colors map
 - Update `k-ButtonIconWords`
   * requires new colors map
+- Add a secondary item style on `k-UserMenu`
+  * requires a new colors map
 
 ## [v0.9.0]
 Breaking changes:
