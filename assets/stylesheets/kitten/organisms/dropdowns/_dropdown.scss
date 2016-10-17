@@ -28,14 +28,14 @@
 
   .k-Dropdown__button--rotationOnExpanded {
     path {
-      transition: transform .2s;
+      transition: transform .6s ease-out;
       transform-origin: center;
 
       .k-Dropdown.is-expanded & {
-        transform: rotate(-90deg);
+        transform: rotate(-270deg);
 
         &:first-child {
-          transform: rotate(90deg);
+          transform: rotate(270deg);
         }
       }
     }
