@@ -21,7 +21,7 @@
 
 @mixin k-SearchInput {
 
-  $icon-path: '~icons/magnifying.svg';
+  $icon-data: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTciIGhlaWdodD0iMTciIHZpZXdCb3g9Ii0wLjcgLTAuNyAxOCAxOCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSI3IiBjeT0iNyIgcj0iNyIgc3Ryb2tlPSIjMzMzIiBzdHJva2Utd2lkdGg9IjEuMSIgZmlsbD0ibm9uZSIgLz48cGF0aCBmaWxsPSIjMzMzIiBkPSJNMTMgMTEgTDE3IDE1IEwxNS41IDE2LjUgTDExLjUgMTIuN3oiIC8+PC9zdmc+Cg==';
   $icon-size: k-px-to-rem(17px);
 
   .k-SearchInput {
@@ -43,7 +43,7 @@
     width: $icon-size;
     height: $icon-size;
 
-    background: transparent url($icon-path) no-repeat;
+    background: transparent url($icon-data) no-repeat;
 
     font: 0/0;
     line-height: 1;

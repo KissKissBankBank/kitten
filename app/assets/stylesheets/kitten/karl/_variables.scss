@@ -1,10 +1,10 @@
 $header-height: 3rem;
 
 // ARROWS
-$arrowBottom-path: '~icons/arrow-bottom.svg';
-$arrowTop-path:    '~icons/arrow-top.svg';
-$arrowRight-path:  '~icons/arrow-right.svg';
-$arrowLeft-path:   '~icons/arrow-left.svg';
+$arrowBottom-data: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOSIgaGVpZ2h0PSI2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4LjQ5IDUuNjYiIGZpbGw9IiNmZmYiPjxwYXRoIGQ9Ik00LjI0IDUuNjZMMi44MyA0LjI0IDcuMDcgMGwxLjQyIDEuNDF6Ii8+PHBhdGggZD0iTTQuMjQgNS42NkwwIDEuNDEgMS40MSAwbDQuMjUgNC4yNHoiLz48L3N2Zz4K';
+$arrowTop-data:    'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNiIgaGVpZ2h0PSI5IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1LjY2IDguNDkiPjxwYXRoIGQ9Ik0wIDQuMjVsMS40MS0xLjQyIDQuMjUgNC4yNS0xLjQyIDEuNHoiIGZpbGw9IiNmZmYiLz48cGF0aCBkPSJNMCA0LjI1TDQuMjQgMGwxLjQyIDEuNDItNC4yNSA0LjIzeiIgZmlsbD0iI2ZmZiIvPjwvc3ZnPg==';
+$arrowRight-data:  'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNiIgaGVpZ2h0PSI5IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2IDguOTkiPjxwYXRoIGQ9Ik02IDQuNDhMNC41MSA2IDAgMS40OCAxLjUxIDB6IiBmaWxsPSIjZmZmIi8+PHBhdGggZD0iTTYgNC40OEwxLjUxIDkgMCA3LjQ4IDQuNTEgM3oiIGZpbGw9IiNmZmYiLz48L3N2Zz4K';
+$arrowLeft-data:   'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNiIgaGVpZ2h0PSI5IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1LjY2IDguNDkiPjxwYXRoIGQ9Ik0wIDQuMjVsMS40MS0xLjQyIDQuMjUgNC4yNS0xLjQyIDEuNHoiIGZpbGw9IiNmZmYiLz48cGF0aCBkPSJNMCA0LjI1TDQuMjQgMGwxLjQyIDEuNDItNC4yNSA0LjIzeiIgZmlsbD0iI2ZmZiIvPjwvc3ZnPg==';
 
 // COLORS
 @import 'kitten/normalize';

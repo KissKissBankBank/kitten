@@ -44,7 +44,7 @@
 
     $checkbox-size: k-px-to-rem(20px);
     $border-radius: k-px-to-rem(4px);
-    $icon: '~icons/checked.svg';
+    $icon-data: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTEiIGhlaWdodD0iOCIgdmlld0JveD0iMCAwIDExIDgiCiAgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBmaWxsPSIjZmZmIj4KICA8cGF0aCBkPSJNNC40NCA3LjU5NkwzLjAyNCA2LjE4MiA4LjY4Mi41MjVsMS40MTQgMS40MTR6Ii8+CiAgPHBhdGggZD0iTTQuNDQgNy41OTZMLjkwMyA0LjA2bDEuNDE0LTEuNDE0IDMuNTM2IDMuNTM2eiIvPgo8L3N2Zz4K';
 
     .k-Checkbox {
       @include k-typographyFont($font);
@@ -89,7 +89,7 @@
       }
 
       .k-Checkbox__input:checked + &:before {
-        background: $background-color-checked url($icon) no-repeat center center;
+        background: $background-color-checked url($icon-data) no-repeat center center;
         border-color: $border-color-hover;
       }
 
