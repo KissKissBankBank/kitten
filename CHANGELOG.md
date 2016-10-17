@@ -4,10 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 New features:
-- Add new `k-ButtonTag` atom
-- Add new helper `k-Button__svg`
-- Add new colors map for social networks `k-ButtonIcon`
-- Add new `k-ButtonIconWords` (still in progress)
+- Add new `k-ButtonTag` atom.
+- Add new helper `k-Button__svg`.
+- Add new colors map for social networks `k-ButtonIcon`.
+- Add new `k-ButtonIconWords` (still in progress).
 
 Breaking changes:
 - Update `k-ButtonIcon`
