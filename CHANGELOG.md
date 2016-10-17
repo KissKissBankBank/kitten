@@ -9,7 +9,15 @@ Breaking changes:
   * requires new colors map
 - Update `k-ButtonIconWords`
   * requires new colors map
-- Remove configuration maps
+- Remove configuration maps for:
+  * k-Checkbox
+  * k-Label
+  * k-TextInput
+  * k-Badge
+  * k-TypographyBodyCopy
+  * k-TypographyScale
+  * k-ButtonImageWithText
+  * k-Card
 - Add a secondary item style on `k-UserMenu`
   * requires a new colors map
 - Remove class `k-ExternalRichLink__element--pull-end`.
