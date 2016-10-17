@@ -9,31 +9,42 @@
 ///
 /// @parameter {Map} $button - a button specification
 ///
-/// @example scss - Usage
-///   $button: (
-///     font: 'source-sans',
-///     colors: (
-///       base: (
-///         color: #333,
-///         background-color: #fff,
-///         border-color: #d8d8d8
-///       ),
-///       hover: (
-///         color: #fff,
-///         background-color: #333,
-///         border-color: none
-///       ),
-///       active: (
-///         color: #fff,
-///         background-color: #151515
-///       ),
-///       disabled: (
-///         color: #fff,
-///         background-color: #d8d8d8
+/// @example scss button - Usage
+///   @include k-Button((
+///     font: 'source-sans-semi-bold-uppercase',
+///     primary: (
+///       colors: (
+///         base: (
+///           color: #333,
+///           background-color: #fff,
+///           border-color: #d8d8d8,
+///         ),
+///         hover: (
+///           color: #fff,
+///           border-color: #4a84ff,
+///           background-color: #4a84ff,
+///         ),
+///         active: (
+///           color: #fff,
+///           border-color: #2c66e1,
+///           background-color: #2c66e1,
+///         ),
+///         is-selected: (
+///           color: #fff,
+///           border-color: #2c66e1,
+///           background-color: #2c66e1,
+///         ),
+///         disabled: (
+///           color: #fff,
+///           border-color: #d8d8d8,
+///           background-color: #d8d8d8,
+///         )
 ///       )
-///     )
-///   )
-///   @include k-Button($button)
+///     ),
+///     secondary: (…),
+///     secondary-light: (…),
+///     secondary-color: (…),
+///   ));
 
 @mixin k-Button($button) {
   @include k-with-module('k-Button: $button') {
@@ -43,19 +54,33 @@
     $button-min-width: k-px-to-rem(160px - ($border-size * 2));
     $button-line-height: k-px-to-rem(40px - ($border-size * 2));
 
+    // Button element big settings.
+    $button-big-min-width: k-px-to-rem(200px - ($border-size * 2));
+    $button-big-line-height: k-px-to-rem(50px - ($border-size * 2));
+
     // The button element has a radius of 1.25rem (
     //   20px (designed border-radius) / 16px (base font-size)
     // ). The horizontal paddings are computed using this radius.
     $button-radius: 1.25rem;
+    $button-big-radius: 1.56rem;
 
     // Button font-size is computed using a modular scale and a defined step of this
     // scale.
     $button-step: -2;
 
-    $font: k-map-fetch($button, 'font');
+    // SVG element default settings.
+    $icon-width: k-px-to-rem(12px);
+    $icon-height: k-px-to-rem(14px);
+
+    $font: k-string-definition(k-map-fetch($button, 'font'));
+
+    $button-primary: map-get-deep($button, ('primary'));
+    $button-secondary: map-get-deep($button, ('secondary'));
+    $button-secondary-light: map-get-deep($button, ('secondary-light'));
+    $button-secondary-color: map-get-deep($button, ('secondary-color'));
 
     .k-Button {
-      @include k-buttonBase($button);
+      @include k-buttonBase($button-secondary);
       @include k-typographyFontSize($button-step, $button-line-height);
       @include k-typographyFont($font);
 
@@ -65,6 +90,55 @@
 
       text-decoration: none;
       text-align: center;
+    }
+
+    .k-Button__svg {
+      @include k-buttonSvg(
+        $button-secondary,
+        'k-Button',
+        'k-Button__svg__stroke'
+      );
+
+      @include k-buttonSvg(
+        $button-primary,
+        'k-Button--primary',
+        'k-Button__svg__stroke'
+      );
+
+      @include k-buttonSvg(
+        $button-secondary-light,
+        'k-Button--secondaryLight',
+        'k-Button__svg__stroke'
+      );
+
+      @include k-buttonSvg(
+        $button-secondary-color,
+        'k-Button--secondaryColor',
+        'k-Button__svg__stroke'
+      );
+
+      width: $icon-width;
+      height: $icon-height;
+    }
+
+    .k-Button--primary {
+      @include k-buttonBase($button-primary);
+    }
+
+    .k-Button--secondaryLight {
+      @include k-buttonBase($button-secondary-light);
+    }
+
+    .k-Button--secondaryColor {
+      @include k-buttonBase($button-secondary-color);
+    }
+
+    .k-Button--big {
+      @include k-typographyFontSize($button-step, $button-big-line-height);
+
+      padding: 0 $button-big-radius;
+      border-radius: $button-big-radius;
+      min-width: $button-big-min-width;
     }
   }
 }

@@ -1,29 +1,212 @@
 // Buttons
 
+@include k-Button((
+  font: 'source-sans-semi-bold-uppercase',
+  primary: (
+    colors:(
+      base: (
+        color: #fff,
+        border-color: map-get($k-colors, 'primary-1'),
+        background-color: map-get($k-colors, 'primary-1'),
+      ),
+      hover: (
+        color: #fff,
+        border-color: map-get($k-colors, 'primary-2'),
+        background-color: map-get($k-colors, 'primary-2'),
+      ),
+      focus: (
+        color: #fff,
+        border-color: map-get($k-colors, 'primary-2'),
+        background-color: map-get($k-colors, 'primary-2'),
+      ),
+      active: (
+        color: #fff,
+        border-color: map-get($k-colors, 'primary-3'),
+        background-color: map-get($k-colors, 'primary-3'),
+      ),
+      is-selected: (
+        color: #fff,
+        border-color: map-get($k-colors, 'primary-3'),
+        background-color: map-get($k-colors, 'primary-3'),
+      ),
+      disabled: (
+        color: #fff,
+        border-color: map-get($k-colors, 'line-2'),
+        background-color: map-get($k-colors, 'line-2'),
+      ),
+    ),
+  ),
+  secondary: (
+    colors: (
+      base: (
+        color: map-get($k-colors, 'font-1'),
+        border-color: map-get($k-colors, 'line-2'),
+        background-color: #fff,
+      ),
+      hover: (
+        color: #fff,
+        border-color: map-get($k-colors, 'primary-1'),
+        background-color: map-get($k-colors, 'primary-1'),
+      ),
+      focus: (
+        color: #fff,
+        border-color: map-get($k-colors, 'primary-1'),
+        background-color: map-get($k-colors, 'primary-1'),
+      ),
+      active: (
+        color: #fff,
+        border-color: map-get($k-colors, 'primary-3'),
+        background-color: map-get($k-colors, 'primary-3'),
+      ),
+      is-selected: (
+        color: #fff,
+        border-color: map-get($k-colors, 'primary-3'),
+        background-color: map-get($k-colors, 'primary-3'),
+      ),
+      disabled: (
+        color: #fff,
+        border-color: map-get($k-colors, 'line-2'),
+        background-color: map-get($k-colors, 'line-2'),
+      ),
+    ),
+  ),
+  secondary-light: (
+    colors:(
+      base: (
+        color: map-get($k-colors, 'primary-1'),
+        border-color: map-get($k-colors, 'primary-4'),
+        background-color: #fff,
+      ),
+      hover: (
+        color: #fff,
+        border-color: map-get($k-colors, 'primary-2'),
+        background-color: map-get($k-colors, 'primary-2'),
+      ),
+      focus: (
+        color: #fff,
+        border-color: map-get($k-colors, 'primary-2'),
+        background-color: map-get($k-colors, 'primary-2'),
+      ),
+      active: (
+        color: #fff,
+        border-color: map-get($k-colors, 'primary-3'),
+        background-color: map-get($k-colors, 'primary-3'),
+      ),
+      is-selected: (
+        color: #fff,
+        border-color: map-get($k-colors, 'primary-3'),
+        background-color: map-get($k-colors, 'primary-3'),
+      ),
+      disabled: (
+        color: #fff,
+        border-color: map-get($k-colors, 'line-2'),
+        background-color: map-get($k-colors, 'line-2'),
+      ),
+    ),
+  ),
+  secondary-color: (
+    colors:(
+      base: (
+        color: map-get($k-colors, 'primary-1'),
+        border-color: map-get($k-colors, 'primary-4'),
+        background-color: map-get($k-colors, 'primary-5'),
+      ),
+      hover: (
+        color: #fff,
+        border-color: map-get($k-colors, 'primary-2'),
+        background-color: map-get($k-colors, 'primary-2'),
+      ),
+      focus: (
+        color: #fff,
+        border-color: map-get($k-colors, 'primary-2'),
+        background-color: map-get($k-colors, 'primary-2'),
+      ),
+      active: (
+        color: #fff,
+        border-color: map-get($k-colors, 'primary-3'),
+        background-color: map-get($k-colors, 'primary-3'),
+      ),
+      is-selected: (
+        color: #fff,
+        border-color: map-get($k-colors, 'primary-3'),
+        background-color: map-get($k-colors, 'primary-3'),
+      ),
+      disabled: (
+        color: #fff,
+        border-color: map-get($k-colors, 'line-2'),
+        background-color: map-get($k-colors, 'line-2'),
+      )
+    )
+  )
+));
+
 @include k-ButtonIcon((
-  colors: (
-    base: (
-      color: map-get($k-colors, 'font-1'),
-      background-color: #fff,
-      border-color: #d8d8d8,
-    ),
-    hover: (
-      color: map-get($k-colors, 'primary-1'),
-      background-color: #fff,
-      border-color: #c8daff,
-    ),
-    focus: (
-      color: map-get($k-colors, 'primary-1'),
-      background-color: #fff,
-      border-color: #c8daff,
-    ),
-    active: (
-      color: #fff,
-      background-color: map-get($k-colors, 'primary-1'),
-    ),
-    disabled: (
-      color: #fff,
-      background-color: #d8d8d8,
+  primary: (
+    colors: (
+      base: (
+        color: #fff,
+        border-color: map-get($k-colors, 'primary-1'),
+        background-color: map-get($k-colors, 'primary-1'),
+      ),
+      hover: (
+        color: #fff,
+        border-color: map-get($k-colors, 'primary-2'),
+        background-color: map-get($k-colors, 'primary-2'),
+      ),
+      focus: (
+        color: #fff,
+        border-color: map-get($k-colors, 'primary-2'),
+        background-color: map-get($k-colors, 'primary-2'),
+      ),
+      active: (
+        color: #fff,
+        background-color: map-get($k-colors, 'primary-3'),
+        border-color: map-get($k-colors, 'primary-3'),
+      ),
+      is-selected: (
+        color: #fff,
+        background-color: map-get($k-colors, 'primary-3'),
+        border-color: map-get($k-colors, 'primary-3'),
+      ),
+      disabled: (
+        color: #fff,
+        border-color: map-get($k-colors, 'line-2'),
+        background-color: map-get($k-colors, 'line-2'),
+      )
+    )
+  ),
+  secondary: (
+    colors: (
+      base: (
+        color: #333,
+        border-color: map-get($k-colors, 'line-2'),
+        background-color: #fff,
+      ),
+      hover: (
+        color: map-get($k-colors, 'primary-1'),
+        border-color: map-get($k-colors, 'primary-4'),
+        background-color: #fff,
+      ),
+      focus: (
+        color: map-get($k-colors, 'primary-1'),
+        border-color: map-get($k-colors, 'primary-4'),
+        background-color: #fff,
+      ),
+      active: (
+        color: #fff,
+        border-color: map-get($k-colors, 'primary-3'),
+        background-color: map-get($k-colors, 'primary-3'),
+      ),
+      is-selected: (
+        color: #fff,
+        border-color: map-get($k-colors, 'primary-3'),
+        background-color: map-get($k-colors, 'primary-3'),
+      ),
+      disabled: (
+        color: #fff,
+        border-color: map-get($k-colors, 'line-2'),
+        background-color: map-get($k-colors, 'line-2'),
+      )
     )
   )
 ));
@@ -37,42 +220,55 @@
     hover: (
       color: map-get($k-colors, 'font-1'),
       background-color: #fff,
-      border-color: #d8d8d8
+    ),
+    focus: (
+      color: map-get($k-colors, 'font-1'),
+      background-color: #fff,
     ),
     active: (
       color: map-get($k-colors, 'font-1'),
       background-color: #fff,
-      border-color: #d8d8d8
     )
   )
 ));
 
-@include k-Button((
-  font: 'source-sans-semi-bold-uppercase',
-  colors: (
-    base: (
-      color: map-get($k-colors, 'font-1'),
-      background-color: #fff,
-      border-color: #d8d8d8
-    ),
-    hover: (
-      color: #fff,
-      background-color: map-get($k-colors, 'primary-1'),
-    ),
-    focus: (
-      color: #fff,
-      background-color: map-get($k-colors, 'primary-1'),
-    ),
-    active: (
-      color: #fff,
-      background-color: map-get($k-colors, 'primary-3'),
-    ),
-    disabled: (
-      color: #fff,
-      background-color: #d8d8d8,
+@include k-ButtonTag((
+  secondary: (
+    colors: (
+      base: (
+        color: map-get($k-colors, 'font-1'),
+        border-color: map-get($k-colors, 'line-2'),
+        background-color: #fff,
+      ),
+      hover: (
+        color: map-get($k-colors, 'primary-1'),
+        border-color: map-get($k-colors, 'primary-4'),
+        background-color: #fff,
+      ),
+      focus: (
+        color: map-get($k-colors, 'primary-1'),
+        border-color: map-get($k-colors, 'primary-4'),
+        background-color: #fff,
+      ),
+      active: (
+        color: #fff,
+        border-color: map-get($k-colors, 'primary-3'),
+        background-color: map-get($k-colors, 'primary-3'),
+      ),
+      is-selected: (
+        color: #fff,
+        border-color: map-get($k-colors, 'primary-3'),
+        background-color: map-get($k-colors, 'primary-3'),
+      ),
+      disabled: (
+        color: #fff,
+        border-color: map-get($k-colors, 'line-2'),
+        background-color: map-get($k-colors, 'line-2'),
+      )
     )
   )
 ));
+
 
 // Form
 
@@ -81,8 +277,8 @@
   colors: (
     background: #fff,
     background-checked: map-get($k-colors, 'primary-1'),
-    background-disabled: #d8d8d8,
-    border: #d8d8d8,
+    background-disabled: map-get($k-colors, 'line-2'),
+    border: map-get($k-colors, 'line-2'),
     border-hover: map-get($k-colors, 'primary-1'),
   )
 ));
@@ -97,7 +293,7 @@
   colors: (
     base: (
       color: map-get($k-colors, 'font-1'),
-      border: #d8d8d8,
+      border: map-get($k-colors, 'line-2'),
       background: #fff,
     ),
     focus: (
@@ -106,7 +302,7 @@
     disabled: (
       color: #fff,
       border: #fff,
-      background: #d8d8d8,
+      background: map-get($k-colors, 'line-2'),
     ),
     is-valid: (
       color: #70c050,
