@@ -234,61 +234,54 @@
   .k-ButtonIcon--default {
     @include k-buttonColorBase($default-colors)
 
-    .k-ButtonIcon__svg {
-      @include k-buttonSvg(
-        $default-colors,
-        'k-ButtonIcon',
-        'k-ButtonIcon__svg__stroke'
-      );
-    }
   }
 
   .k-ButtonIcon--primary {
     @include k-buttonColorBase($primary-colors)
-
-    .k-ButtonIcon__svg {
-      @include k-buttonSvg(
-        $primary-colors,
-        'k-ButtonIcon--primary',
-        'k-ButtonIcon__svg__stroke'
-      );
-    }
   }
 
   .k-ButtonIcon--facebook {
     @include k-buttonColorBase($facebook-colors);
-
-    .k-ButtonIcon__svg {
-      @include k-buttonSvg(
-        $facebook-colors,
-        'k-ButtonIcon--facebook',
-        'k-ButtonIcon__svg__stroke'
-      );
-    }
   }
 
   .k-ButtonIcon--twitter {
     @include k-buttonColorBase($twitter-colors);
-
-    .k-ButtonIcon__svg {
-      @include k-buttonSvg(
-        $twitter-colors,
-        'k-ButtonIcon--twitter',
-        'k-ButtonIcon__svg__stroke'
-      );
-    }
   }
 
   .k-ButtonIcon--linkedin {
     @include k-buttonColorBase($linkedin-colors);
+  }
 
-    .k-ButtonIcon__svg {
-      @include k-buttonSvg(
-        $linkedin-colors,
-        'k-ButtonIcon--linkedin',
-        'k-ButtonIcon__svg__stroke'
-      );
-    }
+  .k-ButtonIcon__svg {
+    @include k-buttonSvg(
+      $default-colors,
+      'k-ButtonIcon--default',
+      'k-ButtonIcon__svg__stroke'
+    );
+
+    @include k-buttonSvg(
+      $primary-colors,
+      'k-ButtonIcon--primary',
+      'k-ButtonIcon__svg__stroke'
+    );
+
+    @include k-buttonSvg(
+      $facebook-colors,
+      'k-ButtonIcon--facebook',
+      'k-ButtonIcon__svg__stroke'
+    );
+
+    @include k-buttonSvg(
+      $twitter-colors,
+      'k-ButtonIcon--twitter',
+      'k-ButtonIcon__svg__stroke'
+    );
+
+    @include k-buttonSvg(
+      $linkedin-colors,
+      'k-ButtonIcon--linkedin',
+      'k-ButtonIcon__svg__stroke'
+    );
   }
 
   // Sizes modifiers.
