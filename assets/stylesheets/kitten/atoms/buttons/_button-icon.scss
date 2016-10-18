@@ -232,12 +232,11 @@
   // Colors modifiers.
 
   .k-ButtonIcon--default {
-    @include k-buttonColorBase($default-colors)
-
+    @include k-buttonColorBase($default-colors);
   }
 
   .k-ButtonIcon--primary {
-    @include k-buttonColorBase($primary-colors)
+    @include k-buttonColorBase($primary-colors);
   }
 
   .k-ButtonIcon--facebook {
