@@ -19,7 +19,7 @@ const platformSwitchProps = {
   positionedWithBorder: false,
 
   buttonId: 'k-PlatformSwitch',
-  buttonClassName: 'k-ButtonIcon k-ButtonIcon--tiny ' +
+  buttonClassName: 'k-ButtonIcon k-ButtonIcon--default k-ButtonIcon--tiny ' +
                    'k-Dropdown__button--rotationOnExpanded',
   buttonContentOnExpanded: unloggedHeaderPlatformSwitchButton,
   buttonContentOnCollapsed: unloggedHeaderPlatformSwitchButton,
