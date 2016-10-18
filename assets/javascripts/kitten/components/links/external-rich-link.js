@@ -17,7 +17,10 @@ class ExternalRichLink extends React.Component {
 
         <div className="k-ExternalRichLink__element
                         k-ExternalRichLink__element--animate">
-          <span className="k-ButtonIcon k-ButtonIcon--tiny">
+          <span className="k-ButtonIcon
+                           k-ButtonIcon--default
+                           k-ButtonIcon--withoutHover
+                           k-ButtonIcon--tiny">
             <svg className="k-ButtonIcon__svg"
                  viewBox="0 0 10 10"
                  xmlns="http://www.w3.org/2000/svg">
