@@ -85,22 +85,28 @@
     }
 
     .k-HorizontalNav__item {
-      @include k-typographyFontSize($font-step);
-      @include k-typographyFont($font);
-      text-align: center;
-      text-decoration: none;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
 
+      padding: 0 $padding;
       background-color: $base-background-color;
       border-bottom: $border-width solid $base-border-color;
+
+      @include k-typographyFont($font);
+      font-size: k-px-to-rem(12px);
+      line-height: normal;
+
       color: $base-color;
+      text-align: center;
+      text-decoration: none;
+
       cursor: pointer;
-      display: block;
-      outline: none;
-      padding: $padding;
       transition: color .2s, border-color .2s;
 
-      text-decoration: none;
-      text-align: center;
+      @include k-media-within('m') {
+        padding: 0 k-px-to-rem(10px);
+      }
 
       &:hover {
         color: $hover-color;
@@ -118,6 +124,8 @@
       }
 
       &:focus {
+        position: relative;
+        z-index: 5;
         color: $hover-color;
         text-decoration: none;
       }

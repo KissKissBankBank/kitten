@@ -70,9 +70,13 @@
         color: $color-active;
       }
 
-      @include k-media-xs {
+      @include k-media-max('m') {
         display: none;
       }
+    }
+
+    .k-ButtonImageWithText__text--withoutMarginRight {
+      margin-right: 0;
     }
   }
 }

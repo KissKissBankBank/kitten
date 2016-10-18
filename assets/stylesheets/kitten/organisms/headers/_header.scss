@@ -27,8 +27,12 @@
   $border-color: #eee;
   $border-width: 1px;
 
+  $height: 65px;
   $item-spacing: k-px-to-rem(10px);
+  $item-spacing-xxs: k-px-to-rem(15px);
   $z-index: 10;
+
+  $graphic-logo-size: 38px;
 
   .k-Header {
     background-color: $background-color;
@@ -57,10 +61,17 @@
     align-self: flex-start;
     justify-content: space-between;
 
+    height: k-px-to-rem($height);
+
     // Since all items have left and right padding, negate it for the first
     // and last elements.
     margin-left: -$item-spacing;
     margin-right: -$item-spacing;
+
+    @include k-media-within('xxs') {
+      margin-left: -$item-spacing-xxs;
+      margin-right: -$item-spacing-xxs;
+    }
   }
 
   .k-Header__items {
@@ -68,18 +79,14 @@
     align-items: center;
   }
 
+  .k-Header__items--fixedSize {
+    flex-shrink: 0;
+  }
+
   .k-Header__item {
     display: flex;
     margin: 0;
     padding: 0 $item-spacing;
-
-    @include k-media-sm {
-      margin: $item-spacing 0;
-    }
-
-    @include k-media-xs {
-      margin: $item-spacing 0;
-    }
   }
 
   .k-Header__nav {
@@ -88,33 +95,87 @@
 
     padding: 0 $item-spacing;
 
-    @include k-media-sm {
-      display: none;
-    }
-
-    @include k-media-xs {
+    @include k-media-max('s') {
       display: none;
     }
   }
 
+  .k-Header__nav__item {
+    height: k-px-to-rem($height - $border-width);
+  }
+
+  .k-Header__item__logo {
+    padding-left: k-px-to-rem(5px);
+  }
+
+  .k-Header__logo {
+    display: flex;
+
+    svg, img {
+      height: k-px-to-rem(30px);
+    }
+  }
+
+  .k-Header__logo--lightOnM {
+    overflow: hidden;
+
+    svg, img {
+      @include k-media-within('m') {
+        margin-left: -$graphic-logo-size;
+      }
+    }
+  }
+
+  .k-Header__logo--lightOnXxs {
+    overflow: hidden;
+
+    svg, img {
+      @include k-media-within('xxs') {
+        margin-left: -$graphic-logo-size;
+      }
+    }
+  }
+
   .k-Header__search {
-    @include k-media-xs {
+    @include k-media-max('xxs') {
       display: none;
     }
   }
 
   .k-Header__signup,
-  .k-Header__logged {
-    @include k-media-xs {
+  .k-Header__logged,
+  .k-Header__search {
+    @include k-media-max('xs') {
       display: none;
     }
   }
 
-  .k-Header__signupIcon {
-    display: none;
-
-    @include k-media-xs {
-      display: block;;
+  .k-Header__signup {
+    @include k-media-within('m') {
+      display: none;
     }
+
+    @include k-media-within('xxs') {
+      padding-left: 0;
+    }
+  }
+
+  .k-Header__signupIcon {
+    @include k-media-min('s') {
+      display: none;
+    }
+
+    @include k-media-within('m') {
+      display: block;
+    }
+
+    @include k-media-within('xxs') {
+      padding-left: 0;
+    }
+  }
+
+  .k-Header__button {
+    padding-left: 0;
+    padding-right: 0;
   }
 }

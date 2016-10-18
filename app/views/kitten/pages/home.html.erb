@@ -1,8 +1,81 @@
-<%= render template: 'kitten/pages/header' %>
-
 <style>
   body { background: white; }
 </style>
+
+<header id="header-logged" class="k-Header" role="banner">
+
+  <div class="k-Header__container">
+    <div class="k-Header__row">
+
+      <div class="k-Header__items">
+
+        <div class="k-Header__item" id="k-Header__platformSwitchDropdown">
+          <%= react_component('KarlLoggedHeaderPlatformSwitch') %>
+        </div>
+
+        <p class="k-Header__item">
+          <a class="k-Header__logo" href="home">
+            <%= image_tag 'brand/hellomerci.svg', alt: 'hellomerci' %>
+          </a>
+        </p>
+
+        <nav class="k-Header__item k-Header__nav">
+          <ul class="k-HorizontalNav" role="menubar">
+            <li role="menuitem">
+              <%= link_to 'Emprunter à mes amis',
+                          { current: 'nav-1' },
+                          class: 'k-HorizontalNav__item k-Header__nav__item' +
+                          (params['current'] == 'nav-1' ? 'is-selected' : '') %>
+            </li>
+            <li role="menuitem">
+              <%= link_to 'Comment ça marche&nbsp;?'.html_safe,
+                          { current: 'nav-2' },
+                          class: 'k-HorizontalNav__item k-Header__nav__item ' +
+                          (params['current'] == 'nav-2' ? 'is-selected' : '') %>
+            </li>
+            <li role="menuitem">
+              <%= link_to 'Blog',
+                          { current: 'nav-3' },
+                          class: 'k-HorizontalNav__item k-Header__nav__item' %>
+            </li>
+          </ul>
+        </nav>
+
+      </div>
+
+      <div class="k-Header__items k-Header__items--fixedSize">
+
+        <% if params.key?(:logged) %>
+          <div id="k-UserMenuDropdownLogged" class="k-Header__item">
+            <%= react_component('KarlLoggedHeaderUserMenu') %>
+          </div>
+        <% else %>
+          <div class="k-Header__item k-Header__signup">
+            <%= link_to "Se connecter", { logged: true }, class: 'k-Button' %>
+          </div>
+          <div class="k-Header__item k-Header__signupIcon">
+            <a href="?logged=true">
+              <button class="k-ButtonIcon k-ButtonIcon__signup">
+                <svg class="k-ButtonIcon__svg" viewBox="0 0 14 18"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13.984 14.244c-.404-2.563-2.527-4.502-4.95-5.22
+                    1.042-1.158 1.595-3.05 1.597-4.33C10.636 2.73 9.024.688
+                    6.97.688c-2.055 0-3.667 2.04-3.664 4.006.002 1.287.56 3.188
+                    1.61 4.346-2.4.73-4.497 2.658-4.9 5.204C-.15 15.3 1.075 16
+                    1.865 16.357c1.554.703 3.33.943 5.02.955 1.71.012 3.5-.21
+                    5.086-.883.832-.354 2.19-1.07 2.014-2.186z" />
+                </svg>
+              </button>
+            </a>
+          </div>
+        <% end %>
+
+      </div>
+
+    </div>
+  </div>
+
+</header>
 
 <div class="k-Row" style="background: #79ccd7">
   <div class="k-Row__content">
