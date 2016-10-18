@@ -124,6 +124,8 @@
       }
 
       &:focus {
+        position: relative;
+        z-index: 5;
         color: $hover-color;
         text-decoration: none;
       }
