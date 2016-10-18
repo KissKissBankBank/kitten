@@ -14,8 +14,42 @@
 /// @parameter {Map} $button - a map of colors
 ///
 /// @example scss - Usage
+///  $colors: (
+///    base: (
+///      color: #333,
+///      border-color: #d8d8d8,
+///      background-color: #fff,
+///    ),
+///    hover: (
+///      color: #fff,
+///      border-color: #4a84ff,
+///      background-color: #4a84ff,
+///    ),
+///    focus: (…),
+///    active: (…),
+///    is-selected: (…),
+///    disabled: (…),
+///  );
+///
+///  .k-MyButton {
+///    @include k-buttonColorBase($colors)
+///  }
 ///
 /// @example css - CSS output
+///   .k-MyButton {
+///     …
+///     background-color: #fff;
+///     color: #333;
+///     transition: background-color .2s,
+///                 color .2s,
+///                 border-color .2s;
+///   }
+///
+///   .k-MyButton:hover {
+///     …
+///     background-color: #4a84ff;
+///     color: #fff;
+///   }
 
 @mixin k-buttonColorBase($colors) {
   // base colors
