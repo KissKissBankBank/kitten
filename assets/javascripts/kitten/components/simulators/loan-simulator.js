@@ -217,7 +217,9 @@ class LoanSimulator extends React.Component {
                   onAction={ this.handleInstallmentAction } />
         </div>
         <div className="k-LoanSimulator__actions">
-          <button className="k-Button">{ this.props.actionLabel }</button>
+          <button className="k-Button k-Button--primary k-Button--big">
+            { this.props.actionLabel }
+          </button>
         </div>
       </div>
     )

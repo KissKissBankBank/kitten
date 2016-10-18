@@ -1,53 +1,41 @@
 <div class="karl-Example__column">
+  <%= example "Default button" do %>
+    <button class="k-Button k-Button--default">
+      Button
+    </button>
+  <% end %>
+
   <%= example "Primary button" do %>
     <button class="k-Button k-Button--primary">
       Button
     </button>
   <% end %>
-</div>
 
-<div class="karl-Example__column">
   <%= example "Secondary button" do %>
-    <button class="k-Button">
+    <button class="k-Button k-Button--secondary">
       Button
     </button>
   <% end %>
 
-  <%= example "Secondary button light on color" do %>
-    <button class="k-Button k-Button--secondaryLight">
-      Button
-    </button>
-  <% end %>
-
-  <%= example "Secondary button color on white" do %>
-    <button class="k-Button k-Button--secondaryColor">
+  <%= example "Secondary button on white background" do %>
+    <button class="k-Button k-Button--secondaryOnWhite">
       Button
     </button>
   <% end %>
 </div>
 
 <div class="karl-Example__column">
-  <%= example "Button with many words" do %>
-    <button class="k-Button">
-      Button with many words
-    </button>
-  <% end %>
-
-  <%= example "Big button" do %>
-    <button class="k-Button k-Button--big">
-      Big button
-    </button>
-  <% end %>
-
-  <%= example "Big button" do %>
-    <button class="k-Button k-Button--big">
-      Big button with many words
-    </button>
-  <% end %>
-
   <%= example "Disabled button" do %>
-    <button class="k-Button" disabled>
+    <button class="k-Button k-Button--default" disabled>
       Button
+    </button>
+  <% end %>
+</div>
+
+<div class="karl-Example__column">
+  <%= example "Big button" do %>
+    <button class="k-Button k-Button--default k-Button--big">
+      Big button
     </button>
   <% end %>
 </div>

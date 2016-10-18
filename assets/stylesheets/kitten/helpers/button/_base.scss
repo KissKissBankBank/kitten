@@ -1,181 +1,59 @@
 /// Apply button basic display.
 ///
-/// This mixin will apply pseudo-classes and state classes on the parent class
-/// that is calling it:
-///   - `:hover`
-///   - `:focus` (optionnal)
-///   - `:active`
-///   - `:is-selected`
-///   - `:disabled` (optionnal)
-///
-/// When `border-color` is not defined, `transparent` is used by default.
+/// This mixin will apply button basic styles (pseudo-classes, state classes).
 ///
 /// @group buttons
 ///
-/// @parameter {Map} $button - a button specification
-///
 /// @example scss - Usage
-///   $button: (
-///     colors: (
-///       base: (
-///         color: #fff,
-///         border-color: #4a84ff,
-///         background-color: #4a84ff,
-///       ),
-///       hover: (
-///         color: #fff,
-///         border-color: #3b75f0,
-///         background-color: #3b75f0,
-///       ),
-///       focus: (
-///         color: #fff,
-///         border-color: #3b75f0,
-///         background-color: #3b75f0,
-///       ),
-///       active: (
-///         color: #fff,
-///         border-color: #2c66e1,
-///         background-color: #2c66e1,
-///       ),
-///       is-selected: (
-///         color: #fff,
-///         border-color: #2c66e1,
-///         background-color: #2c66e1,
-///       ),
-///       disabled: (
-///         color: #fff,
-///         border-color: #d8d8d8
-///         background-color: #d8d8d8
-///       ),
-///     ),
-///     ...
-///   )
-///
 ///   .k-MyButton {
-///     @include buttonBase($button);
+///     @include buttonBase;
 ///   }
 ///
 /// @example css - CSS output
 ///   .k-MyButton {
 ///     display: inline-block;
-///     border: 1px solid #d8d8d8;
-///
-///     background-color: #fff;
-///     color: #333;
+///     box-sizing: border-box;
 ///     cursor: pointer;
 ///   }
 ///
 ///   .k-MyButton:hover {
-///     border: 1px solid transparent;
-///     background-color: #333;
-///     color: #fff;
+///     outline: 0;
+///     text-decoration: none;
 ///   }
 ///
+///   .k-MyButton:focus {
+///     text-decoration: none;
+///   }
+///
+///   .k-MyButton:disabled {
+///     cursor: not-allowed;
+///   }
+///
+///   .k-MyButton::-moz-focus-inner {
+///     padding: 0;
+///     border: 0;
+///   }
 
-@mixin k-buttonBase($button) {
-  $colors: k-map-fetch($button, 'colors');
-
-  // base colors
-  $base: k-colors-definition(k-map-fetch($colors, 'base'));
-  $base-color: map-get($base, 'color');
-  $base-border-color: map-get($base, 'border-color');
-  $base-background-color: map-get($base, 'background-color');
-
-  // hover colors
-  $hover: k-colors-definition(k-map-fetch($colors, 'hover'));
-  $hover-color: map-get($hover, 'color');
-  $hover-border-color: map-get($hover, 'border-color');
-  $hover-background-color: map-get($hover, 'background-color');
-
-  // focus colors
-  $focus: k-colors-definition(k-map-fetch($colors, 'focus'));
-  $focus-color: map-get($focus, 'color');
-  $focus-border-color: map-get($focus, 'border-color');
-  $focus-background-color: map-get($focus, 'background-color');
-
-  // active colors
-  $active: k-colors-definition(k-map-fetch($colors, 'active'));
-  $active-color: map-get($active, 'color');
-  $active-border-color: map-get($active, 'border-color');
-  $active-background-color: map-get($active, 'background-color');
-
-  // is-selected colors (optional)
-  $is-selected: k-colors-definition(map-get($colors, 'is-selected'));
-  $is-selected-color: map-get($is-selected, 'color');
-  $is-selected-border-color: map-get($is-selected, 'border-color');
-  $is-selected-background-color: map-get($is-selected, 'background-color');
-
-  // disabled colors (optional)
-  $disabled: k-colors-definition(map-get($colors, 'disabled'));
-  $disabled-color: map-get($disabled, 'color');
-  $disabled-border-color: map-get($disabled, 'border-color');
-  $disabled-background-color: map-get($disabled, 'background-color');
-
-
-  $transition-speed: .2s;
-
+@mixin k-buttonBase {
   @include k-buttonBrowserFixes;
-  @include k-buttonBorder($base-border-color);
-
   display: inline-block;
   box-sizing: border-box;
-
-  background-color: $base-background-color;
-  color: $base-color;
   cursor: pointer;
-  transition: background-color $transition-speed,
-              color $transition-speed,
-              border-color $transition-speed;
+
+  // Reset browser default styles.
+  background-color: transparent;
+  border: 1px solid transparent;
 
   &:hover {
-    @include k-buttonBorder($hover-border-color);
-
-    background-color: $hover-background-color;
-    color: $hover-color;
     outline: 0;
     text-decoration: none;
   }
 
   &:focus {
-    @if map-has-key($colors, 'focus') {
-      @include k-buttonBorder($focus-border-color);
-
-      background-color: $focus-background-color;
-      color: $focus-color;
-    }
-    @else {
-      @include k-buttonBorder($hover-border-color);
-
-      background-color: $hover-background-color;
-      color: $hover-color;
-    }
-
     text-decoration: none;
   }
 
-  &:active {
-    @include k-buttonBorder($active-border-color);
-
-    background-color: $active-background-color;
-    color: $active-color;
-  }
-
-  @if map-has-key($colors, 'disabled') {
-    &:disabled {
-      @include k-buttonBorder($disabled-border-color);
-
-      background-color: $disabled-background-color;
-      color: $disabled-color;
-      cursor: not-allowed;
-    }
-  }
-
-  @if map-has-key($colors, 'is-selected') {
-    &.is-selected {
-      @include k-buttonBorder($is-selected-border-color);
-
-      background-color: $is-selected-background-color;
-      color: $is-selected-color;
-    }
+  &:disabled {
+    cursor: not-allowed;
   }
 }

@@ -1,275 +1,328 @@
 /// Setup a button icon element.
 ///
-/// This mixin will setup an element to look like a button
-/// with a picto inside.
+/// This mixin will setup an element to look like a button with a icon inside.
 ///
-/// Paddings depend on the size of button and the size of picto.
-/// It is calculate automaticaly with this 2 values.
+/// Paddings depend on the size of button and the size of icon.
+/// It is computed automatically with these 2 values.
 ///
-/// You can use 2 versions of this button: primary and secondary
+/// Available color modifiers:
+/// - `.k-ButtonIcon--default`
+/// - `.k-ButtonIcon--primary`
+/// - `.k-ButtonIcon--facebook`
+/// - `.k-ButtonIcon--twitter`
+/// - `.k-ButtonIcon--linkedin`
+///
+/// Available size modifiers:
+/// - `k-ButtonIcon--tiny`
+/// - `k-ButtonIcon--big`
 ///
 /// @group buttons
 ///
-/// @parameter {Map} $button-icon - a button icon specification
-/// @parameter {Map} $icon        - a icon specification
+/// @example scss button - Usage
+///   @include k-ButtonIcon;
 ///
-/// @example scss - Usage
-///
-///   $button-icon: (
-///     secondary: (
-///       colors: (
-///         base: (
-///           color: #333,
-///           background-color: #fff,
-///           border-color: #d8d8d8,
-///         ),
-///         hover: (
-///           color: #4a84ff,
-///           border-color: #cadbfd,
-///           background-color: #fff,
-///         ),
-///         focus: (
-///           color: #4a84ff,
-///           border-color: #cadbfd,
-///           background-color: #fff,
-///         ),
-///         active: (
-///           color: #fff,
-///           border-color: #2c66e1,
-///           background-color: #2c66e1,
-///         ),
-///         is-selected: (
-///           color: #fff,
-///           border-color: #2c66e1,
-///           background-color: #2c66e1,
-///         ),
-///         disabled: (
-///           color: #fff,
-///           border-color: #d8d8d8,
-///           background-color: #d8d8d8,
-///         )
-///       )
-///     ),
+/// @example html
+///   <button class="k-ButtonIcon k-ButtonIcon--default">
+///     <svg class='k-ButtonIcon__svg' viewBox="0 0 14 12"
+///          xmlns="http://www.w3.org/2000/svg"><path d="M7 2.927C6.71 1.267
+///          5.262.007 3.52.01 1.574.013-.003 1.595 0 3.543 0 4.485.37 5.34.97
+///          5.97l.012.014L7.012 12l5.856-5.88c.698-.646 1.134-1.57
+///          1.132-2.597-.002-1.95-1.582-3.525-3.53-3.523C8.73.002 7.284 1.267
+///          7 2.927z"/></svg>
+///   </button>
 
-@mixin k-ButtonIcon($button-icon) {
-  @include k-with-module('k-ButtonIcon: $button-icon') {
-    $button-icon-primary: map-get-deep($button-icon, ('primary'));
-    $button-icon-secondary: map-get-deep($button-icon, ('secondary'));
+@mixin k-ButtonIcon {
+  $border-size: 1px;
 
-    $button-icon-facebook: (
-      colors: (
-        base: (
-          color: #fff,
-          border-color: #3b5998,
-          background-color: #3b5998,
-        ),
-        hover: (
-          color: #fff,
-          border-color: #2c4a89,
-          background-color: #2c4a89,
-        ),
-        focus: (
-          color: #fff,
-          border-color: #2c4a89,
-          background-color: #2c4a89,
-        ),
-        active: (
-          color: #fff,
-          border-color: #1d3b7a,
-          background-color: #1d3b7a,
-        ),
-        is-selected: (
-          color: #fff,
-          border-color: #1d3b7a,
-          background-color: #1d3b7a,
-        ),
-        disabled: (
-          color: #fff,
-          border-color: #d8d8d8,
-          background-color: #d8d8d8,
-        )
-      )
-    );
-    $button-icon-twitter: (
-      colors: (
-        base: (
-          color: #fff,
-          border-color: #55acee,
-          background-color: #55acee,
-        ),
-        hover: (
-          color: #fff,
-          border-color: #469ddf,
-          background-color: #469ddf,
-        ),
-        focus: (
-          color: #fff,
-          border-color: #469ddf,
-          background-color: #469ddf,
-        ),
-        active: (
-          color: #fff,
-          border-color: #388ed0,
-          background-color: #388ed0,
-        ),
-        is-selected: (
-          color: #fff,
-          border-color: #388ed0,
-          background-color: #388ed0,
-        ),
-        disabled: (
-          color: #fff,
-          border-color: #d8d8d8,
-          background-color: #d8d8d8,
-        )
-      )
-    );
-    $button-icon-linkedin: (
-      colors: (
-        base: (
-          color: #fff,
-          border-color: #00669e,
-          background-color: #00669e,
-        ),
-        hover: (
-          color: #fff,
-          border-color: #00578f,
-          background-color: #00578f,
-        ),
-        focus: (
-          color: #fff,
-          border-color: #00578f,
-          background-color: #00578f,
-        ),
-        active: (
-          color: #fff,
-          border-color: #004880,
-          background-color: #004880,
-        ),
-        is-selected: (
-          color: #fff,
-          border-color: #004880,
-          background-color: #004880,
-        ),
-        disabled: (
-          color: #fff,
-          border-color: #d8d8d8,
-          background-color: #d8d8d8,
-        )
-      )
-    );
+  // Size settings.
+  $button-size-tiny: 30px - ($border-size * 2);
+  $button-size: 40px - ($border-size * 2);
+  $button-size-big: 50px - ($border-size * 2);
 
-    $border-size: 1px;
+  // Colors.
+  $default-colors: (
+    base: (
+      color: map-get($k-colors, 'font-1'),
+      border-color: map-get($k-colors, 'line-2'),
+      background-color: map-get($k-colors, 'background-1'),
+    ),
+    hover: (
+      color: map-get($k-colors, 'primary-1'),
+      border-color: map-get($k-colors, 'primary-4'),
+      background-color: map-get($k-colors, 'background-1'),
+    ),
+    focus: (
+      color: map-get($k-colors, 'primary-1'),
+      border-color: map-get($k-colors, 'primary-4'),
+      background-color: map-get($k-colors, 'background-1'),
+    ),
+    active: (
+      color: #fff,
+      border-color: map-get($k-colors, 'primary-3'),
+      background-color: map-get($k-colors, 'primary-3'),
+    ),
+    is-selected: (
+      color: #fff,
+      border-color: map-get($k-colors, 'primary-3'),
+      background-color: map-get($k-colors, 'primary-3'),
+    ),
+    disabled: (
+      color: #fff,
+      border-color: map-get($k-colors, 'line-2'),
+      background-color: map-get($k-colors, 'line-2'),
+    ),
+  );
 
-    $button-size-tiny: 30px - ($border-size * 2);
-    $button-size: 40px - ($border-size * 2);
-    $button-size-big: 50px - ($border-size * 2);
+  $primary-colors: (
+    base: (
+      color: #fff,
+      border-color: map-get($k-colors, 'primary-1'),
+      background-color: map-get($k-colors, 'primary-1'),
+    ),
+    hover: (
+      color: #fff,
+      border-color: map-get($k-colors, 'primary-2'),
+      background-color: map-get($k-colors, 'primary-2'),
+    ),
+    focus: (
+      color: #fff,
+      border-color: map-get($k-colors, 'primary-2'),
+      background-color: map-get($k-colors, 'primary-2'),
+    ),
+    active: (
+      color: #fff,
+      background-color: map-get($k-colors, 'primary-3'),
+      border-color: map-get($k-colors, 'primary-3'),
+    ),
+    is-selected: (
+      color: #fff,
+      background-color: map-get($k-colors, 'primary-3'),
+      border-color: map-get($k-colors, 'primary-3'),
+    ),
+    disabled: (
+      color: #fff,
+      border-color: map-get($k-colors, 'line-2'),
+      background-color: map-get($k-colors, 'line-2'),
+    ),
+  );
 
-    // SVG element default settings.
-    $icon-width: k-px-to-rem(12px);
-    $icon-height: k-px-to-rem(14px);
+  $facebook-colors: (
+    base: (
+      color: #fff,
+      border-color: #3b5998,
+      background-color: #3b5998,
+    ),
+    hover: (
+      color: #fff,
+      border-color: #2c4a89,
+      background-color: #2c4a89,
+    ),
+    focus: (
+      color: #fff,
+      border-color: #2c4a89,
+      background-color: #2c4a89,
+    ),
+    active: (
+      color: #fff,
+      border-color: #1d3b7a,
+      background-color: #1d3b7a,
+    ),
+    is-selected: (
+      color: #fff,
+      border-color: #1d3b7a,
+      background-color: #1d3b7a,
+    ),
+    disabled: (
+      color: #fff,
+      border-color: #d8d8d8,
+      background-color: #d8d8d8,
+    ),
+  );
 
-    $transition-speed: .2s;
+  $twitter-colors: (
+    base: (
+      color: #fff,
+      border-color: #55acee,
+      background-color: #55acee,
+    ),
+    hover: (
+      color: #fff,
+      border-color: #469ddf,
+      background-color: #469ddf,
+    ),
+    focus: (
+      color: #fff,
+      border-color: #469ddf,
+      background-color: #469ddf,
+    ),
+    active: (
+      color: #fff,
+      border-color: #388ed0,
+      background-color: #388ed0,
+    ),
+    is-selected: (
+      color: #fff,
+      border-color: #388ed0,
+      background-color: #388ed0,
+    ),
+    disabled: (
+      color: #fff,
+      border-color: #d8d8d8,
+      background-color: #d8d8d8,
+    ),
+  );
 
-    .k-ButtonIcon {
-      @include k-buttonBase($button-icon-secondary);
-      @include k-buttonRounded($button-size, $icon-width, $icon-height);
+  $linkedin-colors: (
+    base: (
+      color: #fff,
+      border-color: #00669e,
+      background-color: #00669e,
+    ),
+    hover: (
+      color: #fff,
+      border-color: #00578f,
+      background-color: #00578f,
+    ),
+    focus: (
+      color: #fff,
+      border-color: #00578f,
+      background-color: #00578f,
+    ),
+    active: (
+      color: #fff,
+      border-color: #004880,
+      background-color: #004880,
+    ),
+    is-selected: (
+      color: #fff,
+      border-color: #004880,
+      background-color: #004880,
+    ),
+    disabled: (
+      color: #fff,
+      border-color: #d8d8d8,
+      background-color: #d8d8d8,
+    ),
+  );
+
+  // SVG element default settings.
+  $icon-width: k-px-to-rem(12px);
+  $icon-height: k-px-to-rem(14px);
+
+  $transition-speed: .2s;
+
+  .k-ButtonIcon {
+    @include k-buttonBase;
+    @include k-buttonRounded($button-size, $icon-width, $icon-height);
+  }
+
+  .k-ButtonIcon__svg {
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: $icon-width;
+    height: $icon-height;
+    transition: fill $transition-speed;
+
+    .k-ButtonIcon__svg__stroke {
+      transition: stroke $transition-speed;
     }
+  }
+
+  // Colors modifiers.
+
+  .k-ButtonIcon--default {
+    @include k-buttonColorBase($default-colors);
+  }
+
+  .k-ButtonIcon--primary {
+    @include k-buttonColorBase($primary-colors);
+  }
+
+  .k-ButtonIcon--facebook {
+    @include k-buttonColorBase($facebook-colors);
+  }
+
+  .k-ButtonIcon--twitter {
+    @include k-buttonColorBase($twitter-colors);
+  }
+
+  .k-ButtonIcon--linkedin {
+    @include k-buttonColorBase($linkedin-colors);
+  }
+
+  .k-ButtonIcon__svg {
+    @include k-buttonSvg(
+      $default-colors,
+      'k-ButtonIcon--default',
+      'k-ButtonIcon__svg__stroke'
+    );
+
+    @include k-buttonSvg(
+      $primary-colors,
+      'k-ButtonIcon--primary',
+      'k-ButtonIcon__svg__stroke'
+    );
+
+    @include k-buttonSvg(
+      $facebook-colors,
+      'k-ButtonIcon--facebook',
+      'k-ButtonIcon__svg__stroke'
+    );
+
+    @include k-buttonSvg(
+      $twitter-colors,
+      'k-ButtonIcon--twitter',
+      'k-ButtonIcon__svg__stroke'
+    );
+
+    @include k-buttonSvg(
+      $linkedin-colors,
+      'k-ButtonIcon--linkedin',
+      'k-ButtonIcon__svg__stroke'
+    );
+  }
+
+  // Sizes modifiers.
+
+  .k-ButtonIcon--tiny {
+    @include k-buttonRounded($button-size-tiny, $icon-width, $icon-height);
 
     .k-ButtonIcon__svg {
-      display: block;
-      margin: 0;
-      padding: 0;
       width: $icon-width;
       height: $icon-height;
-      transition: fill $transition-speed;
-
-      @include k-buttonSvg(
-        $button-icon-secondary,
-        'k-ButtonIcon',
-        'k-ButtonIcon__svg__stroke'
-      );
-
-      @include k-buttonSvg(
-        $button-icon-primary,
-        'k-ButtonIcon--primary',
-        'k-ButtonIcon__svg__stroke'
-      );
-
-      @include k-buttonSvg(
-        $button-icon-facebook,
-        'k-ButtonIcon--facebook',
-        'k-ButtonIcon__svg__stroke'
-      );
-
-      @include k-buttonSvg(
-        $button-icon-twitter,
-        'k-ButtonIcon--twitter',
-        'k-ButtonIcon__svg__stroke'
-      );
-
-      @include k-buttonSvg(
-        $button-icon-linkedin,
-        'k-ButtonIcon--linkedin',
-        'k-ButtonIcon__svg__stroke'
-      );
-
-      .k-ButtonIcon__svg__stroke {
-        transition: stroke $transition-speed;
-      }
     }
+  }
 
-    .k-ButtonIcon--primary {
-      @include k-buttonBase($button-icon-primary);
+  .k-ButtonIcon--big {
+    @include k-buttonRounded($button-size-big, $icon-width, $icon-height);
+  }
+
+  // Icon modifiers.
+
+  .k-ButtonIcon--heart {
+    $heart-size: k-px-to-rem(14px);
+    @include k-buttonRounded($button-size-tiny, $heart-size, $heart-size);
+
+    .k-ButtonIcon__svg {
+      width: $heart-size;
+      height: $heart-size;
     }
+  }
 
-    .k-ButtonIcon--facebook {
-      @include k-buttonBase($button-icon-facebook);
+  .k-ButtonIcon--signup {
+    $signup-size: k-px-to-rem(18px);
+    @include k-buttonRounded($button-size, $signup-size, $signup-size);
+
+    .k-ButtonIcon__svg {
+      width: $signup-size;
+      height: $signup-size;
     }
+  }
 
-    .k-ButtonIcon--twitter {
-      @include k-buttonBase($button-icon-twitter);
-    }
+  // Misc modifiers.
 
-    .k-ButtonIcon--linkedin {
-      @include k-buttonBase($button-icon-linkedin);
-    }
-
-    .k-ButtonIcon--tiny {
-      @include k-buttonRounded($button-size-tiny, $icon-width, $icon-height);
-
-      .k-ButtonIcon__svg {
-        width: $icon-width;
-        height: $icon-height;
-      }
-    }
-
-    .k-ButtonIcon--big {
-      @include k-buttonRounded($button-size-big, $icon-width, $icon-height);
-    }
-
-    .k-ButtonIcon__heart {
-      $heart-size: k-px-to-rem(14px);
-      @include k-buttonRounded($button-size-tiny, $heart-size, $heart-size);
-
-      .k-ButtonIcon__svg {
-        width: $heart-size;
-        height: $heart-size;
-      }
-    }
-
-    .k-ButtonIcon__signup {
-      $signup-size: k-px-to-rem(18px);
-      @include k-buttonRounded($button-size, $signup-size, $signup-size);
-
-      .k-ButtonIcon__svg {
-        width: $signup-size;
-        height: $signup-size;
-      }
-    }
-
-    .k-ButtonIcon--withoutHover {
-      pointer-events: none;
-    }
+  .k-ButtonIcon--withoutHover {
+    pointer-events: none;
   }
 }

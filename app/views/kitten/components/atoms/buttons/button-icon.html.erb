@@ -1,6 +1,6 @@
 <div class="karl-Example__column">
-  <%= example "Primary tiny button with icon" do %>
-    <button class="k-ButtonIcon k-ButtonIcon--tiny k-ButtonIcon--primary">
+  <%= example "Default icon button" do %>
+    <button class="k-ButtonIcon k-ButtonIcon--default">
       <svg class='k-ButtonIcon__svg' viewBox="0 0 14 12"
           xmlns="http://www.w3.org/2000/svg"><path d="M7 2.927C6.71 1.267
           5.262.007 3.52.01 1.574.013-.003 1.595 0 3.543 0 4.485.37 5.34.97
@@ -10,21 +10,8 @@
     </button>
   <% end %>
 
-  <%= example "Primary tiny button is-selected button with icon" do %>
-    <button class="k-ButtonIcon k-ButtonIcon--tiny k-ButtonIcon--primary is-selected">
-      <svg class='k-ButtonIcon__svg' viewBox="0 0 14 12"
-          xmlns="http://www.w3.org/2000/svg"><path d="M7 2.927C6.71 1.267
-          5.262.007 3.52.01 1.574.013-.003 1.595 0 3.543 0 4.485.37 5.34.97
-          5.97l.012.014L7.012 12l5.856-5.88c.698-.646 1.134-1.57
-          1.132-2.597-.002-1.95-1.582-3.525-3.53-3.523C8.73.002 7.284 1.267
-          7 2.927z"/></svg>
-    </button>
-  <% end %>
-</div>
-
-<div class="karl-Example__column">
-  <%= example "Secondary tiny button with icon" do %>
-    <button class="k-ButtonIcon k-ButtonIcon--tiny">
+  <%= example "Primary icon button" do %>
+    <button class="k-ButtonIcon k-ButtonIcon--primary">
       <svg class='k-ButtonIcon__svg' viewBox="0 0 14 12"
           xmlns="http://www.w3.org/2000/svg"><path d="M7 2.927C6.71 1.267
           5.262.007 3.52.01 1.574.013-.003 1.595 0 3.543 0 4.485.37 5.34.97
@@ -34,8 +21,8 @@
     </button>
   <% end %>
 
-  <%= example "Secondary tiny button is-selected with icon" do %>
-    <button class="k-ButtonIcon k-ButtonIcon--tiny is-selected">
+  <%= example "Disabled icon button" do %>
+    <button class="k-ButtonIcon k-ButtonIcon--default" disabled>
       <svg class='k-ButtonIcon__svg' viewBox="0 0 14 12"
           xmlns="http://www.w3.org/2000/svg"><path d="M7 2.927C6.71 1.267
           5.262.007 3.52.01 1.574.013-.003 1.595 0 3.543 0 4.485.37 5.34.97
@@ -47,8 +34,8 @@
 </div>
 
 <div class="karl-Example__column">
-  <%= example "Button with icon" do %>
-    <button class="k-ButtonIcon">
+  <%= example "Selected default icon button" do %>
+    <button class="k-ButtonIcon k-ButtonIcon--default is-selected">
       <svg class='k-ButtonIcon__svg' viewBox="0 0 14 12"
           xmlns="http://www.w3.org/2000/svg"><path d="M7 2.927C6.71 1.267
           5.262.007 3.52.01 1.574.013-.003 1.595 0 3.543 0 4.485.37 5.34.97
@@ -58,41 +45,8 @@
     </button>
   <% end %>
 
-  <%= example "Button is-selected button with icon" do %>
-    <button class="k-ButtonIcon is-selected">
-      <svg class='k-ButtonIcon__svg' viewBox="0 0 14 12"
-          xmlns="http://www.w3.org/2000/svg"><path d="M7 2.927C6.71 1.267
-          5.262.007 3.52.01 1.574.013-.003 1.595 0 3.543 0 4.485.37 5.34.97
-          5.97l.012.014L7.012 12l5.856-5.88c.698-.646 1.134-1.57
-          1.132-2.597-.002-1.95-1.582-3.525-3.53-3.523C8.73.002 7.284 1.267
-          7 2.927z"/></svg>
-    </button>
-  <% end %>
-
-  <%= example "Big button with icon" do %>
-    <button class="k-ButtonIcon k-ButtonIcon--big">
-      <svg class='k-ButtonIcon__svg' viewBox="0 0 14 12"
-          xmlns="http://www.w3.org/2000/svg"><path d="M7 2.927C6.71 1.267
-          5.262.007 3.52.01 1.574.013-.003 1.595 0 3.543 0 4.485.37 5.34.97
-          5.97l.012.014L7.012 12l5.856-5.88c.698-.646 1.134-1.57
-          1.132-2.597-.002-1.95-1.582-3.525-3.53-3.523C8.73.002 7.284 1.267
-          7 2.927z"/></svg>
-    </button>
-  <% end %>
-
-  <%= example "Big button is-selected button with icon" do %>
-    <button class="k-ButtonIcon k-ButtonIcon--big is-selected">
-      <svg class='k-ButtonIcon__svg' viewBox="0 0 14 12"
-          xmlns="http://www.w3.org/2000/svg"><path d="M7 2.927C6.71 1.267
-          5.262.007 3.52.01 1.574.013-.003 1.595 0 3.543 0 4.485.37 5.34.97
-          5.97l.012.014L7.012 12l5.856-5.88c.698-.646 1.134-1.57
-          1.132-2.597-.002-1.95-1.582-3.525-3.53-3.523C8.73.002 7.284 1.267
-          7 2.927z"/></svg>
-    </button>
-  <% end %>
-
-  <%= example "Disabled button with icon" do %>
-    <button class="k-ButtonIcon" disabled>
+  <%= example "Selected primary icon button" do %>
+    <button class="k-ButtonIcon k-ButtonIcon--primary is-selected">
       <svg class='k-ButtonIcon__svg' viewBox="0 0 14 12"
           xmlns="http://www.w3.org/2000/svg"><path d="M7 2.927C6.71 1.267
           5.262.007 3.52.01 1.574.013-.003 1.595 0 3.543 0 4.485.37 5.34.97
@@ -104,7 +58,31 @@
 </div>
 
 <div class="karl-Example__column">
-  <%= example "Button social" do %>
+  <%= example "Tiny icon button" do %>
+    <button class="k-ButtonIcon k-ButtonIcon--default k-ButtonIcon--tiny">
+      <svg class='k-ButtonIcon__svg' viewBox="0 0 14 12"
+          xmlns="http://www.w3.org/2000/svg"><path d="M7 2.927C6.71 1.267
+          5.262.007 3.52.01 1.574.013-.003 1.595 0 3.543 0 4.485.37 5.34.97
+          5.97l.012.014L7.012 12l5.856-5.88c.698-.646 1.134-1.57
+          1.132-2.597-.002-1.95-1.582-3.525-3.53-3.523C8.73.002 7.284 1.267
+          7 2.927z"/></svg>
+    </button>
+  <% end %>
+
+  <%= example "Big icon button" do %>
+    <button class="k-ButtonIcon k-ButtonIcon--default k-ButtonIcon--big">
+      <svg class='k-ButtonIcon__svg' viewBox="0 0 14 12"
+          xmlns="http://www.w3.org/2000/svg"><path d="M7 2.927C6.71 1.267
+          5.262.007 3.52.01 1.574.013-.003 1.595 0 3.543 0 4.485.37 5.34.97
+          5.97l.012.014L7.012 12l5.856-5.88c.698-.646 1.134-1.57
+          1.132-2.597-.002-1.95-1.582-3.525-3.53-3.523C8.73.002 7.284 1.267
+          7 2.927z"/></svg>
+    </button>
+  <% end %>
+</div>
+
+<div class="karl-Example__column">
+  <%= example "Social icon buttons" do %>
     <button class="k-ButtonIcon k-ButtonIcon--facebook">
       <svg class='k-ButtonIcon__svg' viewBox="0 0 8 15"
            xmlns="http://www.w3.org/2000/svg"><path d="M4.785

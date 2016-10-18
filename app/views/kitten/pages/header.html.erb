@@ -59,7 +59,9 @@
       <div class="k-Header__items k-Header__items--fixedSize">
 
         <div class="k-Header__item">
-          <button class="k-ButtonIcon k-ButtonIcon__signup">
+          <button class="k-ButtonIcon
+                         k-ButtonIcon--default
+                         k-ButtonIcon--signup">
             <svg class="k-ButtonIcon__svg"
                  viewBox="0 0 16 18"
                  xmlns="http://www.w3.org/2000/svg">
@@ -80,11 +82,15 @@
           </div>
         <% else %>
           <div class="k-Header__item k-Header__signup">
-            <%= link_to "Se connecter", { logged: true }, class: 'k-Button k-Header__button' %>
+            <%= link_to "Se connecter",
+                { logged: true },
+                class: 'k-Button k-Button--default k-Header__button' %>
           </div>
           <div class="k-Header__item k-Header__signupIcon">
             <a href="?logged=true">
-              <button class="k-ButtonIcon k-ButtonIcon__signup">
+              <button class="k-ButtonIcon
+                             k-ButtonIcon--default
+                             k-ButtonIcon--signup">
                 <svg class="k-ButtonIcon__svg" viewBox="0 0 14 18"
                   xmlns="http://www.w3.org/2000/svg">
                   <path d="M13.984 14.244c-.404-2.563-2.527-4.502-4.95-5.22
@@ -158,11 +164,15 @@
           </div>
         <% else %>
           <div class="k-Header__item k-Header__signup">
-            <%= link_to "Se connecter", { logged: true }, class: 'k-Button k-Header__button' %>
+            <%= link_to "Se connecter",
+                        { logged: true },
+                        class: 'k-Button k-Button--defaut k-Header__button' %>
           </div>
           <div class="k-Header__item k-Header__signupIcon">
             <a href="?logged=true">
-              <button class="k-ButtonIcon k-ButtonIcon__signup">
+              <button class="k-ButtonIcon
+                             k-ButtonIcon--default
+                             k-ButtonIcon--signup">
                 <svg class="k-ButtonIcon__svg" viewBox="0 0 14 18"
                   xmlns="http://www.w3.org/2000/svg">
                   <path d="M13.984 14.244c-.404-2.563-2.527-4.502-4.95-5.22
@@ -259,11 +269,15 @@
           </div>
         <% else %>
           <div class="k-Header__item k-Header__signup">
-            <%= link_to "S'identifier", { logged: true }, class: 'k-Button k-Header__button' %>
+            <%= link_to "S'identifier",
+                        { logged: true },
+                        class: 'k-Button k-Button--default k-Header__button' %>
           </div>
           <div class="k-Header__item k-Header__signupIcon">
             <a href="?logged=true">
-              <button class="k-ButtonIcon k-ButtonIcon__signup">
+              <button class="k-ButtonIcon
+                             k-ButtonIcon--default
+                             k-ButtonIcon--signup">
                 <svg class="k-ButtonIcon__svg" viewBox="0 0 14 18"
                   xmlns="http://www.w3.org/2000/svg">
                   <path d="M13.984 14.244c-.404-2.563-2.527-4.502-4.95-5.22
