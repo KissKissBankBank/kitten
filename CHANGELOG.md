@@ -24,10 +24,10 @@ Breaking changes:
     `k-Header__item__logo` ; `k-Header__button` ; `k-Header__items--fixedSize`
 - Update `k-ButtonImageWithText`:
   * Add `k-ButtonImageWithText__text--withoutMarginRight`
-- Update `k-Dropdown`:
+- Update `k-Dropdown` organism:
   * Add animation with `k-Dropdown__button__svgPath` and
     `k-Dropdown__button__svgPathRight`
-- Update `k-TabBar` with new class `k-TabBar__item--singleLine`.
+- Update `k-TabBar` molecule with new class `k-TabBar__item--singleLine`.
 
 ## [v0.9.0] - 2016-10-11
 
