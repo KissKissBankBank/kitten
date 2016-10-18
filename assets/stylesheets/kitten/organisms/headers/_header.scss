@@ -32,6 +32,8 @@
   $item-spacing-xxs: k-px-to-rem(15px);
   $z-index: 10;
 
+  $graphic-logo-size: 38px;
+
   .k-Header {
     background-color: $background-color;
     border-bottom: $border-width solid $border-color;
@@ -119,7 +121,7 @@
 
     svg, img {
       @include k-media-within('m') {
-        margin-left: -38px;
+        margin-left: -$graphic-logo-size;
       }
     }
   }
@@ -129,7 +131,7 @@
 
     svg, img {
       @include k-media-within('xxs') {
-        margin-left: -38px;
+        margin-left: -$graphic-logo-size;
       }
     }
   }
@@ -154,7 +156,7 @@
     }
 
     @include k-media-within('xxs') {
-      padding-left: 0px;
+      padding-left: 0;
     }
   }
 
@@ -168,7 +170,7 @@
     }
 
     @include k-media-within('xxs') {
-      padding-left: 0px;
+      padding-left: 0;
     }
   }
 
