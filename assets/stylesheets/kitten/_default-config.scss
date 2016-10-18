@@ -50,6 +50,38 @@ $susy: (
   gutters: $gutter-width/$column-width,
 ) !default;
 
+// Fonts
+
+$k-fonts: (
+  source-sans-light: (
+    family: ("Source Sans Pro", Helvetica, Arial, sans-serif),
+    weight: 300
+  ),
+  source-sans: (
+    family: ("Source Sans Pro", Helvetica, Arial, sans-serif),
+    weight: 400
+  ),
+  source-sans-semi-bold: (
+    family: ("Source Sans Pro", Helvetica, Arial, sans-serif),
+    weight: 600
+  ),
+  source-sans-uppercase: (
+    family: ("Source Sans Pro", Helvetica, Arial, sans-serif),
+    weight: 400,
+    transform: uppercase
+  ),
+  source-sans-semi-bold-uppercase: (
+    family: ("Source Sans Pro", Helvetica, Arial, sans-serif),
+    weight: 600,
+    letter-spacing: .1rem,
+    transform: uppercase
+  ),
+  dosis: (
+    family: ("Dosis", Helvetica, Arial, sans-serif),
+    weight: 400
+  )
+) !default;
+
 // Colors
 
 $k-colors: (
@@ -66,4 +98,7 @@ $k-colors: (
   'primary-3': #2c66e1,
   'primary-4': #cadbfd,
   'primary-5': #ecf2ff,
+
+  'valid': #70c050,
+  'error': #ff4146,
 ) !default;

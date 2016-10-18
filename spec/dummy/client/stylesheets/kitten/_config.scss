@@ -1,33 +1,3 @@
-$k-fonts: (
-  source-sans-light: (
-    family: ("Source Sans Pro", Helvetica, Arial, sans-serif),
-    weight: 300
-  ),
-  source-sans: (
-    family: ("Source Sans Pro", Helvetica, Arial, sans-serif),
-    weight: 400
-  ),
-  source-sans-semi-bold: (
-    family: ("Source Sans Pro", Helvetica, Arial, sans-serif),
-    weight: 600
-  ),
-  source-sans-uppercase: (
-    family: ("Source Sans Pro", Helvetica, Arial, sans-serif),
-    weight: 400,
-    transform: uppercase
-  ),
-  source-sans-semi-bold-uppercase: (
-    family: ("Source Sans Pro", Helvetica, Arial, sans-serif),
-    weight: 600,
-    letter-spacing: .1rem,
-    transform: uppercase
-  ),
-  dosis: (
-    family: ("Dosis", Helvetica, Arial, sans-serif),
-    weight: 400
-  )
-);
-
 $k-typography: k-typography-definition((
   root: 16px,
   font-size: 1rem,

@@ -6,9 +6,7 @@
 ///
 /// @example scss - usage
 ///
-///   @include k-Label((
-///     font: 'source-sans-semi-bold'
-///   ));
+///   @include k-Label;
 ///
 /// @example html
 ///
@@ -20,8 +18,8 @@
 ///   <label><input type="radio" name="sex" value="f" /> Female</label>
 ///   <label><input type="radio" name="sex" value="n" /> Non-binary</label>
 
-@mixin k-Label($label) {
-  $font: k-map-fetch($label, 'font');
+@mixin k-Label {
+  $font: 'source-sans-semi-bold';
 
   .k-Label {
     display: block;
