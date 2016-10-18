@@ -70,7 +70,7 @@
         color: $color-active;
       }
 
-      @include k-media-xs {
+      @include k-media-max('m') {
         display: none;
       }
     }
