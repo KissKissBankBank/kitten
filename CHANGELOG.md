@@ -3,11 +3,13 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
+
 New features:
 - Add new `k-ButtonTag` atom.
 - Add new helper `k-Button__svg`.
 - Add new colors map for social networks `k-ButtonIcon`.
 - Add new `k-ButtonIconWords` (still in progress).
+- Add new helper `k-media-max`.
 
 Breaking changes:
 - Update `k-ButtonIcon`
@@ -16,14 +18,21 @@ Breaking changes:
   * requires new colors map
 - Add a secondary item style on `k-UserMenu`
   * requires a new colors map
-
-Breaking changes:
-- Remove class `k-ExternalRichLink__element--pull-end`
+- Remove class `k-ExternalRichLink__element--pull-end`.
+- Update `k-Header` atom:
+  * Add more classes: `k-Header__nav__item` ; `k-Header__logo` ;
+    `k-Header__item__logo` ; `k-Header__button` ; `k-Header__items--fixedSize`
+- Update `k-ButtonImageWithText`:
+  * Add `k-ButtonImageWithText__text--withoutMarginRight`
+- Update `k-Dropdown`:
+  * Add animation with `k-Dropdown__button__svgPath` and
+    `k-Dropdown__button__svgPathRight`
+- Update `k-TabBar` with new class `k-TabBar__item--singleLine`.
 
 ## [v0.9.0] - 2016-10-11
 
 Breaking changes:
-- Rename the `hot_output_bundles` to `kitten_hot_output_bundles`
+- Rename the `hot_output_bundles` to `kitten_hot_output_bundles`.
 - Update `k-TestimonyList__row` molecule's HTML
   * required new `TestimonyList__row` container
 
@@ -176,7 +185,6 @@ New features:
 
 Fix:
 - Update release task to match with `master` branch.
-
 
 ## [v0.1.0] - 2016-07-05
 
