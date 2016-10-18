@@ -4,6 +4,20 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+Breaking changes:
+- Remove configuration maps for:
+  * k-Button
+  * k-ButtonIcon
+  * k-ButtonTag
+- Apply colors styles in separate modifiers. It required html updates on:
+  * k-Button
+  * k-ButtonIcon
+  * k-ButtonTag
+
+Updates:
+- Remove configuration maps for:
+  * k-ButtonImage (it was not used)
+
 ## [v0.10.0] - 2016-10-18
 
 Breaking changes:
