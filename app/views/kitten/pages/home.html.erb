@@ -51,11 +51,15 @@
           </div>
         <% else %>
           <div class="k-Header__item k-Header__signup">
-            <%= link_to "Se connecter", { logged: true }, class: 'k-Button' %>
+            <%= link_to "Se connecter",
+                        { logged: true },
+                        class: 'k-Button k-Button--default k-Header__button' %>
           </div>
           <div class="k-Header__item k-Header__signupIcon">
             <a href="?logged=true">
-              <button class="k-ButtonIcon k-ButtonIcon__signup">
+              <button class="k-ButtonIcon
+                             k-ButtonIcon--default
+                             k-ButtonIcon--signup">
                 <svg class="k-ButtonIcon__svg" viewBox="0 0 14 18"
                   xmlns="http://www.w3.org/2000/svg">
                   <path d="M13.984 14.244c-.404-2.563-2.527-4.502-4.95-5.22
@@ -150,7 +154,7 @@
       </div>
     </div>
 
-    <button class="k-Button">C’est parti&nbsp;!</button>
+    <button class="k-Button k-Button--default">C’est parti&nbsp;!</button>
 
   </div>
 </div>
@@ -171,7 +175,7 @@
           directement sur mon compte bancaire.
         </p>
         <p class="k-Teaser__action">
-          <button class="k-Button">En savoir plus</button>
+          <button class="k-Button k-Button--secondaryOnWhite">En savoir plus</button>
         </p>
       </div>
       <div class="k-Teaser__col k-Teaser__col--image k-Teaser__col--small">
@@ -193,7 +197,7 @@
           compte pour rembourser mes prêteurs.
         </p>
         <p class="k-Teaser__action">
-          <button class="k-Button">En savoir plus</button>
+          <button class="k-Button k-Button--secondary">En savoir plus</button>
         </p>
       </div>
       <div class="k-Teaser__col k-Teaser__col--image k-Teaser__col--large">
@@ -235,12 +239,16 @@
         soutenus par nos partenaires
       </h2>
       <p class="k-titleWithActions__action is-first">
-        <a href="#" class="k-Button k-titleWithActions__action__button">
+        <a href="#" class="k-Button
+                           k-Button--primary
+                           k-titleWithActions__action__button">
           Voir les collectes publiques
         </a>
       </p>
       <p class="k-titleWithActions__action is-last">
-        <a href="#" class="k-Button k-titleWithActions__action__button">
+        <a href="#" class="k-Button
+                           k-Button--secondary
+                           k-titleWithActions__action__button">
           Voir la liste de nos partenaires
         </a>
       </p>
