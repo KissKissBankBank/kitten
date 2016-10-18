@@ -6,64 +6,52 @@
 ///
 /// @group buttons
 ///
-/// @parameter {Map} $button-image - a button image specification
-///
 /// @example scss - Usage
+///   @include k-ButtonImage;
 ///
-///   $button-image: (
-///     colors: (
-///       base: (
-///         border-color: #d8d8d8
-///       ),
-///       hover: (
-///         border-color: none
-///       ),
-///       active: (
-///         border-color: #151515
-///       )
-///     )
-///   )
+/// @example html
+///  <button class="k-ButtonImage" title="Profil">
+///    <img class="k-ButtonImage__img" src="path_to_image" />
+///  </button>
 
-@mixin k-ButtonImage($button-image) {
-  @include k-with-module('k-ButtonImage: $button-image') {
+@mixin k-ButtonImage {
+  // Size settings.
+  $button-size-tiny: 30px;
+  $button-size: 40px;
+  $button-size-big: 50px;
 
-    $button-size-tiny: 30px;
-    $button-size: 40px;
-    $button-size-big: 50px;
+  .k-ButtonImage {
+    @include k-buttonRoundedImage($button-size);
 
-    .k-ButtonImage {
-      @include k-buttonRoundedImage($button-size);
+    box-sizing: border-box;
+    display: flex;
+    overflow: hidden;
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    opacity: 1;
+    transition: opacity .2s;
 
-      box-sizing: border-box;
-      display: flex;
-      overflow: hidden;
-      cursor: pointer;
-      border: 0;
-      padding: 0;
-      opacity: 1;
-      transition: opacity .2s;
-
-      &:hover,
-      &:focus {
-        opacity: .8;
-      }
+    &:hover,
+    &:focus {
+      opacity: .8;
     }
+  }
 
-    .k-ButtonImage--tiny {
-      @include k-buttonRoundedImage($button-size-tiny);
-    }
+  .k-ButtonImage--tiny {
+    @include k-buttonRoundedImage($button-size-tiny);
+  }
 
-    .k-ButtonImage--big {
-      @include k-buttonRoundedImage($button-size-big);
-    }
+  .k-ButtonImage--big {
+    @include k-buttonRoundedImage($button-size-big);
+  }
 
-    .k-ButtonImage__img {
-      display: block;
-      margin: 0;
-      padding: 0;
-      border: 0;
-      width: 100%;
-      height: 100%;
-    }
+  .k-ButtonImage__img {
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: 100%;
+    height: 100%;
   }
 }

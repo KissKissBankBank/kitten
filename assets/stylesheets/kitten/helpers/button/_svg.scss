@@ -7,7 +7,7 @@
 ///
 /// @parameter {Map} $colors - map of colors
 /// @parameter {String} $parent - parent's class
-/// @parameter {String} $stroke_class - stroke_class
+/// @parameter {String} $stroke_class - parent's stroke class
 ///
 /// @example scss - Usage
 ///    $colors: (
@@ -38,20 +38,20 @@
 ///    }
 ///    …
 
-@mixin k-buttonSvg($button, $parent, $stroke_class) {
+@mixin k-buttonSvg($colors, $parent, $stroke_class) {
 
   $base-color: k-color-definition(
-    k-map-fetch($button, ('colors', 'base', 'color')));
+    k-map-fetch($colors, ('base', 'color')));
   $hover-color: k-color-definition(
-    k-map-fetch($button, ('colors', 'hover', 'color')));
+    k-map-fetch($colors, ('hover', 'color')));
   $focus-color: k-color-definition(
-    k-map-fetch($button, ('colors', 'focus', 'color')));
+    k-map-fetch($colors, ('focus', 'color')));
   $active-color: k-color-definition(
-    k-map-fetch($button, ('colors', 'active', 'color')));
+    k-map-fetch($colors, ('active', 'color')));
   $disabled-color: k-color-definition(
-    k-map-fetch($button, ('colors', 'disabled', 'color')));
+    k-map-fetch($colors, ('disabled', 'color')));
   $is-selected-color: k-color-definition(
-    k-map-fetch($button, ('colors', 'is-selected', 'color')));
+    k-map-fetch($colors, ('is-selected', 'color')));
 
   .#{$parent} & {
     fill: $base-color;

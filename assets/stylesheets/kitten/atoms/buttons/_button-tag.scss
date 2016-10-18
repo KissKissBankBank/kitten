@@ -1,82 +1,79 @@
 /// Setup a button tag element.
 ///
-/// This mixin will setup an element to look like a button
-/// with a tag inside.
+/// This mixin will setup an element to look like a button with a tag inside.
 ///
 /// Paddings depend on the size of button and the size of the tag.
-/// It is calculated automatically with this 2 values.
+/// It is computed automatically with these 2 values.
 ///
-/// You can use only secondary version of this button.
+/// Available color modifiers:
+/// - `.k-ButtonIcon--default`
 ///
 /// @group buttons
 ///
-/// @parameter {Map} $button-tag - a button tag specification
-///
 /// @example scss - Usage
-///
-///   $button-tag: (
-///     secondary: (
-///       colors: (
-///         base: (
-///           color: #333,
-///           background-color: #fff,
-///           border-color: #d8d8d8,
-///         ),
-///         hover: (
-///           color: #4a84ff,
-///           border-color: #cadbfd,
-///           background-color: #fff,
-///         ),
-///         focus: (
-///           color: #4a84ff,
-///           border-color: #cadbfd,
-///           background-color: #fff,
-///         ),
-///         active: (
-///           color: #fff,
-///           border-color: #2c66e1,
-///           background-color: #2c66e1,
-///         ),
-///         is-selected: (
-///           color: #fff,
-///           border-color: #2c66e1,
-///           background-color: #2c66e1,
-///         ),
-///         disabled: (
-///           color: #fff,
-///           border-color: #d8d8d8,
-///           background-color: #d8d8d8,
-///         )
-///       )
-///     ),
+///   @include k-ButtonTag;
 
-@mixin k-ButtonTag($button-tag) {
-  @include k-with-module('k-ButtonTag: $button-tag') {
-    $button-tag: map-get-deep($button-tag, ('secondary'));
+@mixin k-ButtonTag {
+  $border-size: 1px;
 
-    $border-size: 1px;
+  // Size settings.
+  $button-tag-min-width: k-px-to-rem(60px - ($border-size * 2));
+  $button-tag-line-height: k-px-to-rem(40px - ($border-size * 2));
 
-    // Button tag element default settings.
-    $button-tag-min-width: k-px-to-rem(60px - ($border-size * 2));
-    $button-tag-line-height: k-px-to-rem(40px - ($border-size * 2));
+  // Colors.
+  $default-colors: (
+    base: (
+      color: map-get($k-colors, 'font-1'),
+      border-color: map-get($k-colors, 'line-2'),
+      background-color: #fff,
+    ),
+    hover: (
+      color: map-get($k-colors, 'primary-1'),
+      border-color: map-get($k-colors, 'primary-4'),
+      background-color: #fff,
+    ),
+    focus: (
+      color: map-get($k-colors, 'primary-1'),
+      border-color: map-get($k-colors, 'primary-4'),
+      background-color: #fff,
+    ),
+    active: (
+      color: #fff,
+      border-color: map-get($k-colors, 'primary-3'),
+      background-color: map-get($k-colors, 'primary-3'),
+    ),
+    is-selected: (
+      color: #fff,
+      border-color: map-get($k-colors, 'primary-3'),
+      background-color: map-get($k-colors, 'primary-3'),
+    ),
+    disabled: (
+      color: #fff,
+      border-color: map-get($k-colors, 'line-2'),
+      background-color: map-get($k-colors, 'line-2'),
+    ),
+  );
 
-    // The button tag has a radius of .25rem
-    $button-tag-radius: .25rem;
+  // The button tag has a radius of .25rem
+  $button-tag-radius: .25rem;
 
-    // Button font-size is computed using a modular scale and a defined step of this
-    // scale.
-    $button-step: -2;
+  // Button font-size is computed using a modular scale and a defined step of
+  // this scale.
+  $button-step: -2;
 
-    $transition-speed: .2s;
+  $transition-speed: .2s;
 
-    .k-ButtonTag {
-      @include k-buttonBase($button-tag);
-      @include k-typographyFontSize($button-step, $button-tag-line-height);
+  .k-ButtonTag {
+    @include k-buttonBase;
+    @include k-typographyFontSize($button-step, $button-tag-line-height);
 
-      padding: 0 $button-tag-radius;
-      border-radius: $button-tag-radius;
-      min-width: $button-tag-min-width;
-      min-height: $button-tag-line-height;
-    }
+    padding: 0 $button-tag-radius;
+    border-radius: $button-tag-radius;
+    min-width: $button-tag-min-width;
+    min-height: $button-tag-line-height;
+  }
+
+  .k-ButtonTag--default {
+    @include k-buttonColorBase($default-colors);
   }
 }
