@@ -40,6 +40,10 @@
   box-sizing: border-box;
   cursor: pointer;
 
+  // Reset browser default styles.
+  background-color: transparent;
+  border: 1px solid transparent;
+
   &:hover {
     outline: 0;
     text-decoration: none;
