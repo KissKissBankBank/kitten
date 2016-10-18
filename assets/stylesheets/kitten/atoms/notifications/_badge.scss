@@ -16,7 +16,7 @@
 
   .k-Badge {
     padding: k-px-to-rem(2px) k-px-to-rem(6px);
-    background: $background-color;
+    background-color: $background-color;
     border-radius: k-px-to-rem(10px);
     color: $color;
     @include k-typographyFont('source-sans');
