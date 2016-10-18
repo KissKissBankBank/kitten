@@ -3,8 +3,25 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
+New features:
+- Add new `k-ButtonTag` atom.
+- Add new helper `k-Button__svg`.
+- Add new colors map for social networks `k-ButtonIcon`.
+- Add new `k-ButtonIconWords` (still in progress).
 
-## [v0.9.0]
+Breaking changes:
+- Update `k-ButtonIcon`
+  * requires new colors map
+- Update `k-ButtonIconWords`
+  * requires new colors map
+- Add a secondary item style on `k-UserMenu`
+  * requires a new colors map
+
+Breaking changes:
+- Remove class `k-ExternalRichLink__element--pull-end`
+
+## [v0.9.0] - 2016-10-11
+
 Breaking changes:
 - Rename the `hot_output_bundles` to `kitten_hot_output_bundles`
 - Update `k-TestimonyList__row` molecule's HTML
@@ -16,7 +33,7 @@ New features:
 Fixes:
 - Dropdown component alignment.
 
-## [v0.8.0]
+## [v0.8.0] - 2016-10-07
 
 Breaking changes:
 - Change dummy stylesheets file architecture.

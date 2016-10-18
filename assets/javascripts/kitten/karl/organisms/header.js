@@ -27,17 +27,23 @@ const platformSwitchProps = {
   refreshEvents: ['resize', 'karl:element#header:classToggled'],
   dropdownListClassName: 'k-PlatformSwitch',
   dropdownList: [
-    <ExternalRichLink className="k-PlatformSwitch__item">
-      <img src="https://placeholdit.imgix.net/~text?txt=LOGO&amp;w=180&amp;h=44"
-           alt="LOGO" />
+    <ExternalRichLink
+      className="k-PlatformSwitch__item"
+      title="Se rendre sur le site de KissKissBankBank">
+      <img src="/assets/brand/kisskissbankbank.svg"
+           alt="Logo de KissKissBankBank" />
     </ExternalRichLink>,
-    <ExternalRichLink className="k-PlatformSwitch__item">
-      <img src="https://placeholdit.imgix.net/~text?txt=LOGO&amp;w=180&amp;h=44"
-           alt="LOGO" />
+    <ExternalRichLink
+      className="k-PlatformSwitch__item"
+      title="Se rendre sur le site de Hellomerci">
+      <img src="/assets/brand/hellomerci.svg"
+           alt="Logo de hellomerci" />
     </ExternalRichLink>,
-    <ExternalRichLink className="k-PlatformSwitch__item">
-      <img src="https://placeholdit.imgix.net/~text?txt=LOGO&amp;w=180&amp;h=44"
-           alt="LOGO" />
+    <ExternalRichLink
+      className="k-PlatformSwitch__item"
+      title="Se rendre sur le site de Lendopolis">
+      <img src="/assets/brand/lendopolis.svg"
+           alt="Logo de LENDOPOLIS" />
     </ExternalRichLink>
   ],
 }
@@ -86,6 +92,15 @@ const KarlLoggedHeaderUserMenu = defaultProps(Dropdown, {
     <a className="k-UserMenu__item" href="#">Mes projets</a>,
     <a className="k-UserMenu__item" href="#">Mes contributions</a>,
     <a className="k-UserMenu__item" href="#">Mes messages</a>,
+    <a className="k-UserMenu__item
+                  k-UserMenu__item--secondary
+                  k-UserMenu__separation"
+       href="#">
+      Admin
+    </a>,
+    <a className="k-UserMenu__item k-UserMenu__item--secondary" href="#">
+      Rapports
+    </a>,
     <a className="k-UserMenu__item k-UserMenu__separation" href="#">
       Profil
     </a>,
