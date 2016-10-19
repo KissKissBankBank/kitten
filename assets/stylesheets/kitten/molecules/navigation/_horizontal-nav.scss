@@ -73,6 +73,7 @@
       k-map-fetch($colors, ('is-selected', 'color')));
     $is-selected-border-color: k-color-definition(
       k-map-fetch($colors, ('is-selected', 'border-color')));
+    $is-selected-border-width: 2px;
 
     $border-width: 1px;
     $padding: k-px-to-rem(20px);
@@ -90,8 +91,7 @@
       flex-direction: column;
 
       padding: 0 $padding;
-      background-color: $base-background-color;
-      border-bottom: $border-width solid $base-border-color;
+      border-bottom: $border-width solid transparent;
 
       @include k-typographyFont($font);
       font-size: k-px-to-rem(12px);
@@ -120,6 +120,7 @@
 
       &.is-selected {
         border-color: $is-selected-border-color;
+        border-width: $is-selected-border-width;
         color: $is-selected-color;
       }
 
