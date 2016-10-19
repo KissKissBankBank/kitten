@@ -24,13 +24,11 @@
 @mixin k-HorizontalNav {
   // Fonts.
   $font: 'source-sans-semi-bold-uppercase';
-  $font-step: -2;
 
   // Colors.
   $colors: (
     base: (
       background-color: map-get($k-colors, 'background-1'),
-      border-color: #eee,
       color: map-get($k-colors, 'font-1'),
     ),
     hover: (
@@ -49,7 +47,6 @@
   // base colors
   $base: k-colors-definition(k-map-fetch($colors, 'base'));
   $base-color: map-get($base, 'color');
-  $base-border-color: map-get($base, 'border-color');
   $base-background-color: map-get($base, 'background-color');
 
   // hover colors
@@ -117,8 +114,6 @@
     }
 
     &:focus {
-      position: relative;
-      z-index: 5;
       color: $hover-color;
       text-decoration: none;
     }
