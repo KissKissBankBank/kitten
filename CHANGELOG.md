@@ -14,6 +14,9 @@ Features:
     layout).
 - Enable props propagation on `k-PlatformSwitch` molecule.
 
+Fixes:
+- Remove notification badge on `k-UserMenu` when there is no notification.
+
 ## [v0.11.0] - 2016-10-19
 
 Breaking changes:
