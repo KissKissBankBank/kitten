@@ -28,8 +28,12 @@
 
   .k-Dropdown__button--rotationOnExpanded {
     .k-Dropdown__button__svgPath {
-      transition: transform .6s ease-out;
-      transform-origin: center;
+      transition: transform .2s ease-out;
+      transform-origin: 3.5px 50%;
+
+      &.k-Dropdown__button__svgPathRight {
+        transform-origin: 6.5px 50%;
+      }
 
       .k-Dropdown.is-expanded & {
         transform: rotate(-90deg);
