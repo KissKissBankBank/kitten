@@ -14,6 +14,9 @@ Features:
   * Remove `k-TabBar__item--singleLine` modifier class (it doesn't break the
     layout).
 
+Breaking changes:
+- Add modifier `k-ButtonIcon--dropdown` on `k-ButtonIcon`.
+
 ## [v0.11.0] - 2016-10-19
 
 Breaking changes:
