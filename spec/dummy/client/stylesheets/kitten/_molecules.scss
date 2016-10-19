@@ -155,16 +155,7 @@
   )
 ));
 
-@include k-TabBar((
-  font: source-sans-uppercase,
-  font-step: -4,
-  line-height: 1.5,
-  background-color: map-get($k-colors, 'primary-1'),
-  border-color: map-get($k-colors, 'primary-4'),
-  color: map-get($k-colors, 'primary-4'),
-  color-current: #fff,
-  z-index: 50,
-));
+@include k-TabBar((z-index: 50));
 
 @include k-UserMenu((
   font: 'source-sans-semi-bold',
