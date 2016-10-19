@@ -7,10 +7,11 @@ class ExternalRichLink extends React.Component {
   }
 
   render() {
-    const linkClassName = classNames('k-ExternalRichLink', this.props.className)
+    const { className, ...rest } = this.props
+    const linkClassName = classNames('k-ExternalRichLink', className)
 
     return(
-      <a className={ linkClassName } href={ this.props.href }>
+      <a className={ linkClassName } {...rest}>
         <div className="k-ExternalRichLink__element">
           { this.props.children }
         </div>

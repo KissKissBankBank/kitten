@@ -13,6 +13,10 @@ Features:
   * Use flex display.
   * Remove `k-TabBar__item--singleLine` modifier class (it doesn't break the
     layout).
+- Enable props propagation on `k-PlatformSwitch` molecule.
+
+Fixes:
+- Remove notification badge on `k-UserMenu` when there is no notification.
 
 Breaking changes:
 - Add modifier `k-ButtonIcon--dropdown` on `k-ButtonIcon`.

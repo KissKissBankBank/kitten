@@ -4,11 +4,13 @@ import ExternalRichLink from 'kitten/components/links/external-rich-link'
 
 // KarlImageExternalRichLink
 const KarlImageExternalRichLink = defaultProps(ExternalRichLink, {
+  title: 'Image external rich link',
   children: <img src="https://placekitten.com/g/150/51" alt="Kawaiii kitten!" />
 })
 
 // KarlSvgExternalRichLink
 const KarlSvgExternalRichLink = defaultProps(ExternalRichLink, {
+  title: 'Svg external rich link',
   children: (<svg width="100px"
                   height="50px"
                   viewBox="0 0 100 50"
