@@ -320,6 +320,17 @@
     }
   }
 
+  .k-ButtonIcon--dropdown {
+    $dropdown-width: k-px-to-rem(10px);
+    $dropdown-height: k-px-to-rem(7px);
+    @include k-buttonRounded($button-size-tiny, $dropdown-width, $dropdown-height);
+
+    .k-ButtonIcon__svg {
+      width: $dropdown-width;
+      height: $dropdown-height;
+    }
+  }
+
   // Misc modifiers.
 
   .k-ButtonIcon--withoutHover {
