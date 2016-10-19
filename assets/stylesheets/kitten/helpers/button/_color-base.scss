@@ -118,6 +118,9 @@
       background-color: $hover-background-color;
       color: $hover-color;
     }
+
+    outline: 0;
+    box-shadow: 0 0 1rem $hover-color;
   }
 
   &:active {

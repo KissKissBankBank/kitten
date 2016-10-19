@@ -128,6 +128,9 @@
         z-index: 5;
         color: $hover-color;
         text-decoration: none;
+
+        outline: 0;
+        box-shadow: 0 0 1rem $hover-color;
       }
     }
   }
