@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [v0.11.0] - 2016-10-19
+
 Breaking changes:
 - Remove configuration maps for:
   * k-Button
