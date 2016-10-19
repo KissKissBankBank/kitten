@@ -2,6 +2,14 @@ import React from 'react'
 import classNames from 'classnames'
 
 class ButtonImageWithTextAndBadge extends React.Component {
+  renderNotificationBadge() {
+    return(
+      <span className="k-ButtonWithBadge__badge k-Badge">
+        { this.props.notifications }
+      </span>
+    )
+  }
+
   render() {
     const {
       className,
@@ -38,9 +46,7 @@ class ButtonImageWithTextAndBadge extends React.Component {
                  height={ heightImg }
                  alt={ altImg } />
           </span>
-          <span className="k-ButtonWithBadge__badge k-Badge">
-            { notifications }
-          </span>
+          { notifications ? this.renderNotificationBadge() : '' }
         </span>
         <p className={ textClassName }>{ text }</p>
       </span>
