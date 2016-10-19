@@ -4,8 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 Breaking changes:
-- Remove configuration map for:
+- Remove configuration maps for:
   * k-TabBar
+  * k-HorizontalNav
 
 Features:
 - Update `k-TabBar` molecule:
