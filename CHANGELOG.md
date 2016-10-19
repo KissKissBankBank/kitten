@@ -3,10 +3,14 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
+
+## [v0.12.0] - 2016-10-19
+
 Breaking changes:
 - Remove configuration maps for:
   * k-TabBar
   * k-HorizontalNav
+- Add modifier `k-ButtonIcon--dropdown` on `k-ButtonIcon`.
 
 Features:
 - Update `k-TabBar` molecule:
@@ -17,9 +21,6 @@ Features:
 
 Fixes:
 - Remove notification badge on `k-UserMenu` when there is no notification.
-
-Breaking changes:
-- Add modifier `k-ButtonIcon--dropdown` on `k-ButtonIcon`.
 
 ## [v0.11.0] - 2016-10-19
 
