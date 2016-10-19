@@ -59,11 +59,19 @@
     @include k-typographyFontSize(-1);
   }
 
-  .k-Button__emoji:after{
-    content: " \1F44D";
-  }
-
   .k-Tour__close {
     margin: .62rem .62rem 0 0;
+  }
+
+  .k-Tour__navigation {
+    display: flex;
+  }
+
+  .k-Tour__numbering{
+    @include k-typographyFont('source-sans-semi-bold');
+
+    margin: 0;
+    padding: k-px-to-rem(7px);
+    font-size: .87rem;
   }
 }
