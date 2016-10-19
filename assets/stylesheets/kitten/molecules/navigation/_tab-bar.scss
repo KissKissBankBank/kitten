@@ -1,21 +1,15 @@
 /// A tab bar navigation, used in mobile and tablet versions.
 ///
+/// Available options:
+///   - `z-index`
+///
 /// @group navigation
 ///
-/// @parameter {Map} $tabbar - a tabbar specification
+/// @parameter {Map} $options - Tabbar options
 ///
 /// @example scss - usage
 ///
-///   @include k-TabBar((
-///     font: source-sans-uppercase,
-///     font-step: 4,
-///     line-height: 1.5,
-///     background-color: #4a84ff,
-///     border-color: #5c90ff,
-///     color: #b7ceff,
-///     color-current: #fff,
-///     z-index: 50,
-///   ));
+///   @include k-TabBar((z-index: 50));
 ///
 /// @example html
 ///
@@ -35,104 +29,99 @@
 ///     </ul>
 ///   </div>
 
-@mixin k-TabBar($tabbar) {
-  @include k-with-module('k-TabBar: $tabbar') {
+@mixin k-TabBar($options) {
+  // Fonts.
+  $font: 'source-sans-semi-bold-uppercase';
+  $font-step: -4;
+  $line-height: 1.5;
 
-    // Variables & Validations
-    $font: k-map-fetch($tabbar, 'font');
-    $font-step: k-number-definition(
-      k-map-fetch($tabbar, 'font-step'), $unit: none);
-    $line-height: k-number-definition(k-map-fetch($tabbar, 'line-height'));
+  // Colors.
+  $color: map-get($k-colors, 'primary-5');
+  $current-color: #fff;
+  $background-color: map-get($k-colors, 'primary-1');
+  $border-color: map-get($k-colors, 'primary-4');
 
-    $color: k-color-definition(
-      k-map-fetch($tabbar, 'color'));
-    $color-current: k-color-definition(
-      k-map-fetch($tabbar, 'color-current'));
-    $background-color: k-color-definition(
-      k-map-fetch($tabbar, 'background-color'));
-    $border-color: k-color-definition(
-      k-map-fetch($tabbar, 'border-color'));
+  // Size.
+  $round-size: k-px-to-rem(25px);
+  $border-width: 1px;
+  $current-border-width: 2px;
 
-    $round-size: k-px-to-rem(25px);
-    $z-index: k-number-definition(map-get($tabbar, 'z-index'));
-    $border-width: 1px;
+  .k-TabBar__nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0 $border-width 0 $border-color;
 
-    .k-TabBar__nav {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: inset 0 $border-width 0 $border-color;
+    list-style-type: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: $background-color;
 
-      list-style-type: none;
-      width: 100%;
-      margin: 0;
-      padding: 0;
-      background: $background-color;
+    .k-TabBar.is-fixed & {
+      position: fixed;
+      left: 0;
+      bottom: 0;
 
-      .k-TabBar.is-fixed & {
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        z-index: $z-index;
+      @if map-has-key($options, 'z-index') {
+        z-index: k-number-definition(map-get($options, 'z-index'));
       }
     }
+  }
 
-    .k-TabBar__item {
-      @include k-typographyFont($font);
-      @include k-typographyFontSize($font-step, $line-height);
-      letter-spacing: k-px-to-rem(0.8px);
+  .k-TabBar__item {
+    height: k-px-to-rem(50px);
+
+    @include k-typographyFont($font);
+    @include k-typographyFontSize($font-step, $line-height);
+    letter-spacing: k-px-to-rem(0.8px);
+    text-decoration: none;
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    outline: none;
+    border-top: $current-border-width solid transparent;
+    cursor: pointer;
+    color: $color;
+    transition: color .2s, border-color .2s;
+
+    &:hover,
+    &:focus {
+      color: $current-color;
       text-decoration: none;
-      text-align: center;
-
-      padding: k-px-to-rem(11px) k-px-to-rem(18px);
-      display: block;
-      position: relative;
-      outline: none;
-      background-color: $background-color;
-      border-top: $border-width solid $border-color;
-      cursor: pointer;
-      color: $color;
-      transition: color .2s, border-color .2s;
-
-      &:hover,
-      &:focus {
-        color: $color-current;
-        text-decoration: none;
-      }
-
-      &.is-selected {
-        border-color: $color-current;
-        color: $color-current;
-      }
     }
 
-    .k-TabBar__item--singleLine {
-      padding-top: k-px-to-rem(18px);
-      padding-bottom: k-px-to-rem(18px);
+    &.is-selected {
+      border-color: $current-color;
+      border-width: $current-border-width;
+      color: $current-color;
+    }
+  }
+
+  .k-TabBar__item--thinGutters {
+    padding-left: k-px-to-rem(6px);
+    padding-right: k-px-to-rem(6px);
+
+    @include k-media-min('xs') {
+      padding-left: k-px-to-rem(12px);
+      padding-right: k-px-to-rem(12px);
+    }
+  }
+
+  .k-TabBar--responsive {
+    display: flex;
+
+    &.is-fixed {
+      // approximate size of the final element so that it doesn't hide
+      // the last elements on the page
+      min-height: k-px-to-rem(50px);
     }
 
-    .k-TabBar__item--thinGutters {
-      padding-left: k-px-to-rem(6px);
-      padding-right: k-px-to-rem(6px);
-
-      @include k-media-min('xs') {
-        padding-left: k-px-to-rem(12px);
-        padding-right: k-px-to-rem(12px);
-      }
-    }
-
-    .k-TabBar--responsive {
-      display: flex;
-
-      &.is-fixed {
-        // approximate size of the final element so that it doesn't hide
-        // the last elements on the page
-        min-height: k-px-to-rem(50px);
-      }
-
-      @include k-media-min('m') {
-        display: none;
-      }
+    @include k-media-min('m') {
+      display: none;
     }
   }
 }

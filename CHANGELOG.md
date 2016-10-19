@@ -3,6 +3,16 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
+Breaking changes:
+- Remove configuration maps for:
+  * k-TabBar
+  * k-HorizontalNav
+
+Features:
+- Update `k-TabBar` molecule:
+  * Use flex display.
+  * Remove `k-TabBar__item--singleLine` modifier class (it doesn't break the
+    layout).
 
 Breaking changes:
 - Add modifier `k-ButtonIcon--dropdown` on `k-ButtonIcon`.
