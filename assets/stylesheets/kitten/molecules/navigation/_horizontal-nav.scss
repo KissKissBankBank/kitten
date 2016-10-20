@@ -62,9 +62,8 @@
     k-map-fetch($colors, ('is-selected', 'color')));
   $is-selected-border-color: k-color-definition(
     k-map-fetch($colors, ('is-selected', 'border-color')));
-  $is-selected-border-width: 2px;
 
-  $border-width: 1px;
+  $border-width: 2px;
   $padding: k-px-to-rem(20px);
 
   .k-HorizontalNav {
@@ -109,7 +108,6 @@
 
     &.is-selected {
       border-color: $is-selected-border-color;
-      border-width: $is-selected-border-width;
       color: $is-selected-color;
     }
 
