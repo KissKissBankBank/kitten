@@ -10,7 +10,7 @@ class SelectWithState extends React.Component {
     super(props)
 
     this.state = {
-      value: props.value,
+      value: props._value,
     }
 
     this.handleChange = this.handleChange.bind(this)
@@ -18,7 +18,7 @@ class SelectWithState extends React.Component {
 
   handleChange(val) {
     this.setState({ value: val })
-    this.props.onChange(val)
+    this.props._onChange(val)
   }
 
   render() {
@@ -38,7 +38,7 @@ class SelectWithState extends React.Component {
 }
 
 SelectWithState.defaultProps = {
-  onChange: function() {},
+  _onChange: function() {},
 }
 
 export default SelectWithState
