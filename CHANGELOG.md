@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+Fixes:
+- Rename `.k-ButtonImageWithText__text--withoutMarginRight` to    
+         `.k-ButtonImageWithText__text--withoutPaddingRight`
+
 ## [v0.13.0] - 2016-10-21
 
 Breaking changes:
