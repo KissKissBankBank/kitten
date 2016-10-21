@@ -70,11 +70,4 @@
   .k-ButtonImageWithText__text--withoutMarginRight {
     margin-right: 0;
   }
-
-  .k-ButtonImageWithText__text--withEllipsis {
-    text-overflow: ellipsis;
-    max-width: k-px-to-rem(110px);
-    white-space: nowrap;
-    overflow: hidden;
-  }
 }

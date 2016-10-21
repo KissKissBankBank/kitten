@@ -177,4 +177,11 @@
     padding-left: 0;
     padding-right: 0;
   }
+
+  .k-Header__text-withEllipsis {
+    text-overflow: ellipsis;
+    max-width: k-px-to-rem(110px);
+    white-space: nowrap;
+    overflow: hidden;
+  }
 }
