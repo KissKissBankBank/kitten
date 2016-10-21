@@ -11,6 +11,9 @@ Breaking changes:
   * Requires `k-Dropdown__button__svgPath` and `k-Dropdown__button__svgPathRight`
 - Add modifier `k-Header__userMenuText--withEllipsis` on `k-Header`.
 
+Fixes:
+- Fix `SelectWithState` component `onChange` callback.
+
 ## [v0.12.0] - 2016-10-19
 
 Breaking changes:
