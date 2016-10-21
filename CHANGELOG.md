@@ -3,6 +3,8 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
+Features:
+- Close `k-Dropdown` when clicking on a link.
 
 Breaking changes:
 - Update animation on `k-Dropdown__button--rotationOnExpanded`:

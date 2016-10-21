@@ -14,6 +14,7 @@ class Dropdown extends React.Component {
 
     this.state = { isExpanded: false }
     this.handleDropdownPosition = this.handleDropdownPosition.bind(this)
+    this.close = this.close.bind(this)
   }
 
   componentDidMount() {
@@ -22,7 +23,7 @@ class Dropdown extends React.Component {
     this.updateReferenceElementHeightState()
 
     emitter.on('dropdown:opening:trigger', () => {
-      dropdown.setState({ isExpanded: false })
+      dropdown.close()
     })
 
     if (this.props.refreshEvents.length) {
@@ -30,6 +31,8 @@ class Dropdown extends React.Component {
         window.addEventListener(ev, this.handleDropdownPosition)
       })
     }
+
+    this.handleClickOnLinks()
   }
 
   componentWillUnmount() {
@@ -43,6 +46,10 @@ class Dropdown extends React.Component {
   }
 
   // Component methods
+
+  close() {
+    this.setState({ isExpanded: false })
+  }
 
   getReferenceElement() {
     if (!this.isSelfReference()) {
@@ -104,6 +111,14 @@ class Dropdown extends React.Component {
   }
 
   // Component listener callbacks
+
+  handleClickOnLinks() {
+    const links = this.refs.dropdownContent.getElementsByTagName('a')
+
+    for (let link of links) {
+      link.addEventListener('click', this.close)
+    }
+  }
 
   handleDropdownPosition() {
     if (domElementHelper.canUseDom()) {
