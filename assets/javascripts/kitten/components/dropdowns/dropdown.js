@@ -217,7 +217,8 @@ class Dropdown extends React.Component {
         altImg={ this.props.altImg }
         text={ this.props.text }
         title={ this.props.title }
-        notifications= { this.props.notifications } />
+        notifications={ this.props.notifications }
+        textClassName={ this.props.textClassName } />
     )
   }
 

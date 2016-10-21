@@ -7,6 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 Breaking changes:
 - Update animation on `k-Dropdown__button--rotationOnExpanded`:
   * Requires `k-Dropdown__button__svgPath` and `k-Dropdown__button__svgPathRight`
+- Add modifier `k-Header__userMenuText--withEllipsis` on `k-Header`.
 
 ## [v0.12.0] - 2016-10-19
 
