@@ -3,13 +3,16 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
-Features:
-- Close `k-Dropdown` when clicking on a link.
+
+## [v0.13.0] - 2016-10-21
 
 Breaking changes:
 - Update animation on `k-Dropdown__button--rotationOnExpanded`:
   * Requires `k-Dropdown__button__svgPath` and `k-Dropdown__button__svgPathRight`
 - Add modifier `k-Header__userMenuText--withEllipsis` on `k-Header`.
+
+Features:
+- Close `k-Dropdown` when clicking on a link.
 
 Fixes:
 - Fix `SelectWithState` component `onChange` callback.
