@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+Fixes:
+- Fix `SelectWithState` component `onChange` callback.
+
 ## [v0.12.0] - 2016-10-19
 
 Breaking changes:
