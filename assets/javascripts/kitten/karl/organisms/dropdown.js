@@ -57,14 +57,17 @@ const KarlUserMenuDropdown = defaultProps(Dropdown, {
   positionedWithBorder: false,
   positionedOn: 'right',
 
+  notifications: 42,
+  spaceAroundGrid: 20,
   buttonId: 'k-UserMenu',
   buttonTemplate: 'ButtonImageWithTextAndBadge',
   srcImg: 'https://placekitten.com/g/100/100',
   widthImg: 100,
   heightImg: 100,
   altImg: 'Alt Firstname',
-  text: 'F',
+  text: 'Firstname Lastname',
   title: 'Profil',
+  classNameText: 'k-Header__text--withEllipsis',
 
   dropdownListClassName: 'k-UserMenu',
   dropdownListArrow: (<span className="k-UserMenu__arrow" />),
