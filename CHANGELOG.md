@@ -3,6 +3,8 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
+Features:
+- Close `k-Dropdown` when clicking on a link.
 
 ## [v0.12.0] - 2016-10-19
 
