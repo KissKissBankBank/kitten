@@ -83,7 +83,7 @@ const KarlLoggedHeaderUserMenu = defaultProps(Dropdown, {
   altImg: 'Alt Firstname',
   text: 'Firstname Lastname',
   title: 'Profil',
-  textClassName: 'k-Header__text--withEllipsis',
+  textClassName: 'k-Header__userMenuText--withEllipsis',
 
   refreshEvents: ['resize', 'karl:element#header:classToggled'],
   dropdownListClassName: 'k-UserMenu',

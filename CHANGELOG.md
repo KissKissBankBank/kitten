@@ -5,7 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 Breaking changes:
-- Add modifier `k-Header__text--withEllipsis` on `k-Header`.
+- Add modifier `k-Header__userMenuText--withEllipsis` on `k-Header`.
 
 ## [v0.12.0] - 2016-10-19
 

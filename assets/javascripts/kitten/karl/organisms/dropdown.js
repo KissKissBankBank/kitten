@@ -67,7 +67,7 @@ const KarlUserMenuDropdown = defaultProps(Dropdown, {
   altImg: 'Alt Firstname',
   text: 'Firstname Lastname',
   title: 'Profil',
-  textClassName: 'k-Header__text--withEllipsis',
+  textClassName: 'k-Header__userMenuText--withEllipsis',
 
   dropdownListClassName: 'k-UserMenu',
   dropdownListArrow: (<span className="k-UserMenu__arrow" />),
