@@ -16,7 +16,7 @@ class ButtonImageWithTextAndBadge extends React.Component {
       isExpanded,
       text,
       title,
-      classNameText,
+      textClassName,
       srcImg,
       widthImg,
       heightImg,
@@ -25,9 +25,9 @@ class ButtonImageWithTextAndBadge extends React.Component {
       ...rest
     } = this.props
 
-    const textClassName = classNames('k-ButtonImageWithText__text',
-                                     'k-ButtonImageWithText__text--withoutMarginRight',
-                                     classNameText)
+    const textClass = classNames('k-ButtonImageWithText__text',
+                                 'k-ButtonImageWithText__text--withoutMarginRight',
+                                 textClassName)
     let buttonClassName = classNames('k-ButtonImageWithText', className)
     if (notifications > 0)
       buttonClassName = classNames('k-ButtonWithBadge', buttonClassName)
@@ -48,7 +48,7 @@ class ButtonImageWithTextAndBadge extends React.Component {
           </span>
           { notifications ? this.renderNotificationBadge() : '' }
         </span>
-        <p className={ textClassName }>{ text }</p>
+        <p className={ textClass }>{ text }</p>
       </span>
     )
   }
