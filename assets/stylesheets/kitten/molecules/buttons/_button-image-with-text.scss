@@ -44,7 +44,7 @@
   }
 
   .k-ButtonImageWithText__text {
-    margin: k-px-to-rem(10px);
+    padding: k-px-to-rem(10px);
     text-align: left;
 
     @include k-typographyFontSize(-1, 1);
@@ -68,6 +68,6 @@
   // Modifiers.
 
   .k-ButtonImageWithText__text--withoutMarginRight {
-    margin-right: 0;
+    padding-right: 0;
   }
 }
