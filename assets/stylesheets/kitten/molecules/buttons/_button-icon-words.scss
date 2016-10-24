@@ -1,48 +1,178 @@
-// TODO: sassDoc
+/// Setup a button icon with words elements.
+///
+/// This mixin will setup an element to look like a button with icon and words inside.
+///
+/// Vertical paddings depend on the vertical-rhythm and horizontal paddings
+/// is the same for all size modifiers (1.25rem).
+///
+/// Available color modifiers:
+/// - `.k-Button--default`
+/// - `.k-Button--primary`
+/// - `.k-Button--secondary`
+/// - `.k-Button--secondaryOnWhite`
+///
+/// - `.k-ButtonIcon--default`
+/// - `.k-ButtonIcon--primary`
+
+///
+/// Available size modifiers:
+/// - `.k-ButtonIcon--tiny`
+/// - `.k-ButtonIcon--big`
+///
+/// @group buttons
+///
+/// @example scss button - Usage
+///   @include k-ButtonIconWords;
+///
+/// @example html
+///  <button class="k-Button
+///                 k-Button--default
+///                 k-ButtonIconWords
+///                 k-ButtonIconWords--default">
+///    <span class="k-ButtonIcon">
+///      <svg class="k-ButtonIcon__svg">…</svg>
+///    </span>
+///    My button
+///  </button>
 
 @mixin k-ButtonIconWords {
     $border-size: 1px;
+
+    // Button icon with words element tiny settings.
+    $button-icon-words-tiny-min-width: k-px-to-rem(78px - ($border-size * 2));
+    $button-icon-words-tiny-line-height: k-px-to-rem(30px - ($border-size * 2));
 
     // Button icon with words element default settings.
     $button-icon-words-min-width: k-px-to-rem(110px - ($border-size * 2));
     $button-icon-words-line-height: k-px-to-rem(40px - ($border-size * 2));
 
-     // Button icon with words element big settings.
+    // Button icon with words element big settings.
     $button-icon-words-big-min-width: k-px-to-rem(130px - ($border-size * 2));
     $button-icon-words-big-line-height: k-px-to-rem(50px - ($border-size * 2));
+
+    // Colors
+    $default-colors: (
+      base: (
+        color: map-get($k-colors, 'font-1'),
+        border-color: map-get($k-colors, 'line-2'),
+        background-color: #fff,
+      ),
+      hover: (
+        color: #fff,
+        border-color: map-get($k-colors, 'primary-4'),
+        background-color: map-get($k-colors, 'primary-1'),
+      ),
+      focus: (
+        color: #fff,
+        border-color: map-get($k-colors, 'primary-4'),
+        background-color: map-get($k-colors, 'primary-1'),
+      ),
+      active: (
+        color: #fff,
+        border-color: map-get($k-colors, 'primary-3'),
+        background-color: map-get($k-colors, 'primary-3'),
+      ),
+      is-selected: (
+        color: #fff,
+        border-color: map-get($k-colors, 'primary-3'),
+        background-color: map-get($k-colors, 'primary-3'),
+      ),
+      disabled: (
+        color: #fff,
+        border-color: map-get($k-colors, 'line-2'),
+        background-color: map-get($k-colors, 'line-2'),
+      ),
+    );
+
+    // Button font-size is computed using a modular scale and a defined step of this scale.
+    $button-step: -2;
 
     // The button element has a radius of 1.25rem (
     //   20px (designed border-radius) / 16px (base font-size)
     // ). The horizontal paddings are computed using this radius.
+    $button-tiny-radius: 2.5rem;
     $button-radius: 1.25rem;
     $button-big-radius: 1.56rem;
 
-    // Button font-size is computed using a modular scale and a defined step of this
-    // scale.
-    $button-step: -2;
 
   .k-ButtonIconWords {
     display: flex;
     align-items: center;
 
-    padding: 0 $button-radius 0 .8rem;
+    padding: 0 $button-radius 0 0;
     min-width: $button-icon-words-min-width;
+
+    .k-ButtonIcon {
+      border: $border-size solid transparent;
+      background-color: transparent;
+    }
 
     .k-Button__svg {
       margin-right: k-px-to-rem(14px);
     }
   }
 
+  .k-ButtonIconWords--iconRight {
+    padding: 0 0 0 $button-radius;
+  }
+
+  .k-ButtonIconWords--default:hover {
+    .k-ButtonIcon__svg {
+      fill: map-get-deep($default-colors, ('hover', 'color'));
+    }
+  }
+
+  .k-ButtonIconWords--default:focus {
+    .k-ButtonIcon__svg {
+      fill: map-get-deep($default-colors, ('focus', 'color'));
+    }
+  }
+
+  .k-ButtonIconWords--default:active {
+    .k-ButtonIcon__svg {
+      fill: map-get-deep($default-colors, ('active', 'color'));
+    }
+  }
+
+  .k-ButtonIconWords--default.is-selected {
+    .k-ButtonIcon__svg {
+      fill: map-get-deep($default-colors, ('is-selected', 'color'));
+    }
+  }
+
+  .k-ButtonIconWords--default:disabled {
+    .k-ButtonIcon__svg {
+      fill: map-get-deep($default-colors, ('disabled', 'color'));
+    }
+  }
+
+  // Size modifiers.
+
   .k-ButtonIconWords--big {
     @include k-typographyFontSize(
-      $button-step, $button-icon-words-big-line-height);
+      $button-step,
+      $button-icon-words-big-line-height
+    );
 
-    padding: 0 $button-big-radius;
     border-radius: $button-big-radius;
     min-width: $button-icon-words-big-min-width;
 
     .k-Button__svg {
       margin-right: k-px-to-rem(20px);
+    }
+  }
+
+  .k-ButtonIconWords--tiny {
+    @include k-typographyFontSize(
+      $button-step,
+      $button-icon-words-tiny-line-height
+    );
+
+    border-radius: $button-tiny-radius;
+    min-width: $button-icon-words-tiny-min-width;
+
+    .k-Button__svg {
+      margin-right: k-px-to-rem(12px);
     }
   }
 }

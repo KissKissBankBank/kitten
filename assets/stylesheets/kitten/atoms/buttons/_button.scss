@@ -12,7 +12,7 @@
 /// - `.k-ButtonIcon--secondaryOnWhite`
 ///
 /// Available size modifiers:
-/// - `k-ButtonIcon--big`
+/// - `.k-ButtonIcon--big`
 ///
 /// @group buttons
 ///
@@ -220,7 +220,6 @@
         'k-Button--primary',
         'k-Button__svg__stroke'
       );
-
     }
   }
 
@@ -230,7 +229,7 @@
     .k-Button__svg {
       @include k-buttonSvg(
         $secondary-colors,
-        'k-Button--secondaryLight',
+        'k-Button--secondary',
         'k-Button__svg__stroke'
       );
     }
@@ -242,7 +241,7 @@
     .k-Button__svg {
       @include k-buttonSvg(
         $secondary-on-white-colors,
-        'k-Button--secondaryColor',
+        'k-Button--secondaryOnWhite',
         'k-Button__svg__stroke'
       );
     }
