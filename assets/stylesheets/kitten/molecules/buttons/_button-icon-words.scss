@@ -2,7 +2,8 @@
 ///
 /// This mixin will setup an element to look like a button with icon and words inside.
 ///
-/// Vertical paddings depend on the vertical-rhythm and horizontal paddings is the same for all size modifiers (1.25rem).
+/// Vertical paddings depend on the vertical-rhythm and horizontal paddings
+/// is the same for all size modifiers (1.25rem).
 ///
 /// Available color modifiers:
 /// - `.k-Button--default`
@@ -25,10 +26,13 @@
 ///   @include k-ButtonIconWords;
 ///
 /// @example html
-///  <button class="k-Button k-Button--default k-ButtonIconWords -ButtonIconWords--default">
-///  <span class="k-ButtonIcon">
-///    <svg class="k-ButtonIcon__svg">…</svg>
-///  </span>
+///  <button class="k-Button
+///                 k-Button--default
+///                 k-ButtonIconWords
+///                 k-ButtonIconWords--default">
+///    <span class="k-ButtonIcon">
+///      <svg class="k-ButtonIcon__svg">…</svg>
+///    </span>
 ///    My button
 ///  </button>
 
@@ -79,70 +83,6 @@
         border-color: map-get($k-colors, 'line-2'),
         background-color: map-get($k-colors, 'line-2'),
       ),
-    );
-    $secondary-colors: (
-      base: (
-        color: map-get($k-colors, 'primary-1'),
-        border-color: map-get($k-colors, 'primary-4'),
-        background-color: #fff,
-      ),
-      hover: (
-        color: #fff,
-        border-color: map-get($k-colors, 'primary-2'),
-        background-color: map-get($k-colors, 'primary-2'),
-      ),
-      focus: (
-        color: #fff,
-        border-color: map-get($k-colors, 'primary-2'),
-        background-color: map-get($k-colors, 'primary-2'),
-      ),
-      active: (
-        color: #fff,
-        border-color: map-get($k-colors, 'primary-3'),
-        background-color: map-get($k-colors, 'primary-3'),
-      ),
-      is-selected: (
-        color: #fff,
-        border-color: map-get($k-colors, 'primary-3'),
-        background-color: map-get($k-colors, 'primary-3'),
-      ),
-      disabled: (
-        color: #fff,
-        border-color: map-get($k-colors, 'line-2'),
-        background-color: map-get($k-colors, 'line-2'),
-      ),
-    );
-    $secondary-on-white-colors: (
-      base: (
-        color: map-get($k-colors, 'primary-1'),
-        border-color: map-get($k-colors, 'primary-4'),
-        background-color: map-get($k-colors, 'primary-5'),
-      ),
-      hover: (
-        color: #fff,
-        border-color: map-get($k-colors, 'primary-2'),
-        background-color: map-get($k-colors, 'primary-2'),
-      ),
-      focus: (
-        color: #fff,
-        border-color: map-get($k-colors, 'primary-2'),
-        background-color: map-get($k-colors, 'primary-2'),
-      ),
-      active: (
-        color: #fff,
-        border-color: map-get($k-colors, 'primary-3'),
-        background-color: map-get($k-colors, 'primary-3'),
-      ),
-      is-selected: (
-        color: #fff,
-        border-color: map-get($k-colors, 'primary-3'),
-        background-color: map-get($k-colors, 'primary-3'),
-      ),
-      disabled: (
-        color: #fff,
-        border-color: map-get($k-colors, 'line-2'),
-        background-color: map-get($k-colors, 'line-2'),
-      )
     );
 
     // Button font-size is computed using a modular scale and a defined step of this scale.
@@ -204,32 +144,6 @@
   .k-ButtonIconWords--default:disabled {
     .k-ButtonIcon__svg {
       fill: map-get-deep($default-colors, ('disabled', 'color'));
-    }
-  }
-
-  // Colors modifiers.
-
-  .k-ButtonIcon--secondary {
-    @include k-buttonColorBase($secondary-on-white-colors);
-
-    .k-ButtonIcon__svg {
-      @include k-buttonSvg(
-        $secondary-colors,
-        'k-Button--secondary',
-        'k-Button__svg__stroke'
-      );
-    }
-  }
-
-  .k-ButtonIcon--secondaryOnWhite {
-    @include k-buttonColorBase($secondary-on-white-colors);
-
-    .k-ButtonIcon__svg {
-      @include k-buttonSvg(
-        $secondary-on-white-colors,
-        'k-Button--secondaryOnWhite',
-        'k-Button__svg__stroke'
-      );
     }
   }
 
