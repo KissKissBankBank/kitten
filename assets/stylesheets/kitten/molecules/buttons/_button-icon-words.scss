@@ -2,8 +2,7 @@
 ///
 /// This mixin will setup an element to look like a button with icon and words inside.
 ///
-/// Vertical paddings depend on the vertical-rhythm and horizontal paddings
-/// depend on the font-size.
+/// Vertical paddings depend on the vertical-rhythm and horizontal paddings is the same for all size modifiers (1.25rem).
 ///
 /// Available color modifiers:
 /// - `.k-Button--default`
@@ -13,10 +12,12 @@
 ///
 /// - `.k-ButtonIcon--default`
 /// - `.k-ButtonIcon--primary`
+/// - `.k-ButtonIcon--secondary`
+/// - `.k-ButtonIcon--secondaryOnWhite`
 ///
 /// Available size modifiers:
-/// - `k-ButtonIcon--tiny`
-/// - `k-ButtonIcon--big`
+/// - `.k-ButtonIcon--tiny`
+/// - `.k-ButtonIcon--big`
 ///
 /// @group buttons
 ///
@@ -24,12 +25,11 @@
 ///   @include k-ButtonIconWords;
 ///
 /// @example html
-///  <button class="k-Button k-Button--default k-ButtonIconWords">
-///    My button
-///  <span class="k-ButtonIcon k-ButtonIcon--default">
+///  <button class="k-Button k-Button--default k-ButtonIconWords -ButtonIconWords--default">
+///  <span class="k-ButtonIcon">
 ///    <svg class="k-ButtonIcon__svg">…</svg>
 ///  </span>
-///  …
+///    My button
 ///  </button>
 
 @mixin k-ButtonIconWords {
@@ -52,7 +52,7 @@
       base: (
         color: map-get($k-colors, 'font-1'),
         border-color: map-get($k-colors, 'line-2'),
-        background-color: map-get($k-colors, 'background-1'),
+        background-color: #fff,
       ),
       hover: (
         color: #fff,
@@ -80,8 +80,7 @@
         background-color: map-get($k-colors, 'line-2'),
       ),
     );
-
-    $secondary-light: (
+    $secondary-colors: (
       base: (
         color: map-get($k-colors, 'primary-1'),
         border-color: map-get($k-colors, 'primary-4'),
@@ -174,6 +173,10 @@
     }
   }
 
+  .k-ButtonIconWords--iconRight {
+    padding: 0 0 0 $button-radius;
+  }
+
   .k-ButtonIconWords--default:hover {
     .k-ButtonIcon__svg {
       fill: map-get-deep($default-colors, ('hover', 'color'));
@@ -204,9 +207,33 @@
     }
   }
 
+  // Colors modifiers.
 
+  .k-ButtonIcon--secondary {
+    @include k-buttonColorBase($secondary-on-white-colors);
 
+    .k-ButtonIcon__svg {
+      @include k-buttonSvg(
+        $secondary-colors,
+        'k-Button--secondary',
+        'k-Button__svg__stroke'
+      );
+    }
+  }
 
+  .k-ButtonIcon--secondaryOnWhite {
+    @include k-buttonColorBase($secondary-on-white-colors);
+
+    .k-ButtonIcon__svg {
+      @include k-buttonSvg(
+        $secondary-on-white-colors,
+        'k-Button--secondaryOnWhite',
+        'k-Button__svg__stroke'
+      );
+    }
+  }
+
+  // Size modifiers.
 
   .k-ButtonIconWords--big {
     @include k-typographyFontSize(
@@ -229,31 +256,6 @@
 
     .k-Button__svg {
       margin-right: k-px-to-rem(12px);
-    }
-  }
-
-  // Colors modifier
-  .k-ButtonIcon--secondary {
-    @include k-buttonColorBase($secondary-on-white-colors);
-
-    .k-ButtonIcon__svg {
-      @include k-buttonSvg(
-        $secondary-light,
-        'k-Button--secondaryLight',
-        'k-Button__svg__stroke'
-      );
-    }
-  }
-
-  .k-ButtonIcon--secondaryOnWhite {
-    @include k-buttonColorBase($secondary-on-white-colors);
-
-    .k-ButtonIcon__svg {
-      @include k-buttonSvg(
-        $secondary-on-white-colors,
-        'k-Button--secondaryColors',
-        'k-Button__svg__stroke'
-      );
     }
   }
 }
