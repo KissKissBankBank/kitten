@@ -52,6 +52,10 @@
       list-style: none;
     }
 
+    .k-PlatformSwitch--withoutBorderTop {
+      border-top: none;
+    }
+
     .k-PlatformSwitch__item {
       margin: 0;
       padding: k-px-to-rem(15px) k-px-to-rem(10px);
