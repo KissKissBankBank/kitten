@@ -16,7 +16,7 @@ const unloggedHeaderPlatformSwitchButton = (<svg
 </svg>)
 
 const platformSwitchProps = {
-  positionedWithBorder: false,
+  positionedWithBorder: true,
 
   buttonId: 'k-PlatformSwitch',
   buttonClassName: 'k-ButtonIcon k-ButtonIcon--default k-ButtonIcon--dropdown ' +
@@ -25,7 +25,7 @@ const platformSwitchProps = {
   buttonContentOnCollapsed: unloggedHeaderPlatformSwitchButton,
 
   refreshEvents: ['resize', 'karl:element#header:classToggled'],
-  dropdownListClassName: 'k-PlatformSwitch',
+  dropdownListClassName: 'k-PlatformSwitch k-PlatformSwitch--withoutBorderTop',
   dropdownList: [
     <ExternalRichLink
       className="k-PlatformSwitch__item"
