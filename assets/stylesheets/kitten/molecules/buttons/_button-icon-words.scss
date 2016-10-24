@@ -150,7 +150,9 @@
 
   .k-ButtonIconWords--big {
     @include k-typographyFontSize(
-      $button-step, $button-icon-words-big-line-height);
+      $button-step,
+      $button-icon-words-big-line-height
+    );
 
     border-radius: $button-big-radius;
     min-width: $button-icon-words-big-min-width;
@@ -162,7 +164,9 @@
 
   .k-ButtonIconWords--tiny {
     @include k-typographyFontSize(
-      $button-step, $button-icon-words-tiny-line-height);
+      $button-step,
+      $button-icon-words-tiny-line-height
+    );
 
     border-radius: $button-tiny-radius;
     min-width: $button-icon-words-tiny-min-width;
