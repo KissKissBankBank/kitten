@@ -8,6 +8,12 @@ Breaking changes:
   * Use a `<button>` tag instead of an `<input type="submit">`.
   * Use an svg tag instead of an svg background image.
 
+Breaking changes:
+- Update `Dropdown` component:
+  * Add `dropdownContent` prop instead of generating a list inside the
+    `Dropdown` component.
+  * Remove `dropdownList` and `dropdownListClassName` props.
+
 ## [v0.14.0] - 2016-10-31
 
 Features:

@@ -2,16 +2,21 @@ import defaultProps from 'kitten/hoc/default-props'
 import React from 'react'
 import Dropdown from 'kitten/components/dropdowns/dropdown'
 import ExternalRichLink from 'kitten/components/links/external-rich-link'
+import SimpleList from 'kitten/components/lists/simple-list'
 
 // KarlSimpleDropdown
+const dropdownList = [
+  <a href="#" className="karl-Dropdown--default__item">Cute</a>,
+  <a href="#" className="karl-Dropdown--default__item">and lovely</a>,
+  <a href="#" className="karl-Dropdown--default__item">kitten</a>,
+]
+
 const KarlSimpleDropdown = defaultProps(Dropdown, {
   buttonClassName: 'karl-Dropdown--default__button',
   dropdownListClassName: 'karl-Dropdown--default',
-  dropdownList: [
-    <a href="#" className="karl-Dropdown--default__item">Cute</a>,
-    <a href="#" className="karl-Dropdown--default__item">and lovely</a>,
-    <a href="#" className="karl-Dropdown--default__item">kitten</a>,
-  ],
+  dropdownContent: <SimpleList className="karl-Dropdown--default"
+                               role="menubar"
+                               list={ dropdownList } />
 })
 
 // KarlPlatformSwitch
@@ -25,6 +30,21 @@ const karlPlatformSwitchButtonContent = (<svg
         d="M5 6.243L3.586 4.828 7.828.586 9.243 2z"/>
 </svg>)
 
+const platformSwitchDropdownList = [
+  <ExternalRichLink className="k-PlatformSwitch__item">
+    <img src="https://placeholdit.imgix.net/~text?txt=LOGO&amp;w=180&amp;h=44"
+         alt="LOGO" />
+  </ExternalRichLink>,
+  <ExternalRichLink className="k-PlatformSwitch__item">
+    <img src="https://placeholdit.imgix.net/~text?txt=LOGO&amp;w=180&amp;h=44"
+         alt="LOGO" />
+  </ExternalRichLink>,
+  <ExternalRichLink className="k-PlatformSwitch__item">
+    <img src="https://placeholdit.imgix.net/~text?txt=LOGO&amp;w=180&amp;h=44"
+         alt="LOGO" />
+  </ExternalRichLink>,
+]
+
 const KarlPlatformSwitch = defaultProps(Dropdown, {
   positionedWith: () => document.getElementById('k-PlatformSwitchDropdown'),
   positionedWithBorder: false,
@@ -35,26 +55,33 @@ const KarlPlatformSwitch = defaultProps(Dropdown, {
   buttonContentOnCollapsed: karlPlatformSwitchButtonContent,
 
   dropdownListClassName: 'k-PlatformSwitch',
-  dropdownList: [
-    <ExternalRichLink className="k-PlatformSwitch__item">
-      <img className="k-ExternalRichLink__image"
-           src="https://placeholdit.imgix.net/~text?txt=LOGO&amp;w=180&amp;h=44"
-           alt="LOGO" />
-    </ExternalRichLink>,
-    <ExternalRichLink className="k-PlatformSwitch__item">
-      <img className="k-ExternalRichLink__image"
-           src="https://placeholdit.imgix.net/~text?txt=LOGO&amp;w=180&amp;h=44"
-           alt="LOGO" />
-    </ExternalRichLink>,
-    <ExternalRichLink className="k-PlatformSwitch__item">
-      <img className="k-ExternalRichLink__image"
-           src="https://placeholdit.imgix.net/~text?txt=LOGO&amp;w=180&amp;h=44"
-           alt="LOGO" />
-    </ExternalRichLink>
-  ],
+  dropdownContent: <SimpleList className="k-PlatformSwitch"
+                               role="menubar"
+                               list={ platformSwitchDropdownList } />
 })
 
 // KarlUserMenuDropdown
+const userMenuDropdownList = [
+  <a className="k-UserMenu__item" href="#">Mon profil</a>,
+  <a className="k-UserMenu__item" href="#">Mes projets</a>,
+  <a className="k-UserMenu__item" href="#">Mes contributions</a>,
+  <a className="k-UserMenu__item" href="#">Mes messages</a>,
+  <a className="k-UserMenu__item
+                k-UserMenu__item--secondary
+                k-UserMenu__separation"
+     href="#">
+    Admin
+  </a>,
+  <a className="k-UserMenu__item k-UserMenu__item--secondary" href="#">
+    Rapports
+  </a>,
+  <a className="k-UserMenu__item k-UserMenu__separation" href="#">
+    Profil
+  </a>,
+  <a className="k-UserMenu__item" href="#">Réglages</a>,
+  <a className="k-UserMenu__item" href="#">Déconnexion</a>,
+]
+
 const KarlUserMenuDropdown = defaultProps(Dropdown, {
   positionedWith: () => document.getElementById('k-UserMenuDropdown'),
   positionedWithBorder: false,
@@ -72,28 +99,10 @@ const KarlUserMenuDropdown = defaultProps(Dropdown, {
   title: 'Profil',
   textClassName: 'k-Header__userMenuText--withEllipsis',
 
-  dropdownListClassName: 'k-UserMenu',
   dropdownListArrow: (<span className="k-UserMenu__arrow" />),
-  dropdownList: [
-    <a className="k-UserMenu__item" href="#">Mon profil</a>,
-    <a className="k-UserMenu__item" href="#">Mes projets</a>,
-    <a className="k-UserMenu__item" href="#">Mes contributions</a>,
-    <a className="k-UserMenu__item" href="#">Mes messages</a>,
-    <a className="k-UserMenu__item
-                  k-UserMenu__item--secondary
-                  k-UserMenu__separation"
-       href="#">
-      Admin
-    </a>,
-    <a className="k-UserMenu__item k-UserMenu__item--secondary" href="#">
-      Rapports
-    </a>,
-    <a className="k-UserMenu__item k-UserMenu__separation" href="#">
-      Profil
-    </a>,
-    <a className="k-UserMenu__item" href="#">Réglages</a>,
-    <a className="k-UserMenu__item" href="#">Déconnexion</a>
-  ],
+  dropdownContent: <SimpleList className="k-UserMenu"
+                               role="menubar"
+                               list={ userMenuDropdownList } />
 })
 
 export { KarlSimpleDropdown, KarlPlatformSwitch, KarlUserMenuDropdown }

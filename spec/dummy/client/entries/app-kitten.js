@@ -20,6 +20,9 @@ import GrabberIcon from 'kitten/components/icons/grabber-icon'
 // Links
 import ExternalRichLink from 'kitten/components/links/external-rich-link'
 
+// Lists
+import SimpleList from 'kitten/components/lists/simple-list'
+
 // Simulators
 import SimulatorResult from 'kitten/components/simulators/simulator-result'
 import LoanSimulator from 'kitten/components/simulators/loan-simulator'
@@ -43,6 +46,7 @@ ReactOnRails.register({
   Slider,
   Select,
   SelectWithState,
+  SimpleList,
   GrabberIcon,
   ExternalRichLink,
   SimulatorResult,

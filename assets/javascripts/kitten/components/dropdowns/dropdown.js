@@ -5,6 +5,7 @@ import ButtonImageWithTextAndBadge from 'kitten/components/buttons/button-image-
 import domElementHelper from 'kitten/helpers/dom/element-helper'
 import EventEmitter from 'event-emitter'
 import objectAssign from 'core-js/library/fn/object/assign'
+import SimpleList from 'kitten/components/lists/simple-list'
 
 const emitter = EventEmitter()
 
@@ -179,24 +180,6 @@ class Dropdown extends React.Component {
 
   // Rendering
 
-  renderListItem(item, i) {
-    return(
-      <li key={ i } role="menuitem">
-        { item }
-      </li>
-    )
-  }
-
-  renderList() {
-    const items = this.props.dropdownList.map(this.renderListItem)
-    const defaultItem = ('No choice')
-
-    return(
-      <ul className={ this.props.dropdownListClassName } role="menubar">
-        { items.length ? items : defaultItem }
-      </ul>
-    )
-  }
 
   renderButtonContentElement() {
     if (this.state.isExpanded) {
@@ -283,7 +266,7 @@ class Dropdown extends React.Component {
              role="navigation"
              aria-hidden="true"
              aria-labelledby={ this.props.buttonId }>
-          { this.renderList() }
+          { this.props.dropdownContent }
           { this.renderArrow(arrowPosition) }
         </nav>
       </div>
