@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 Features:
 - Add modifier `k-PlatformSwitch--withoutBorderTop` on `k-PlatformSwitch`.
+- Update KissKissBankBank and hellomerci svg logos.
 
 ## [v0.13.0] - 2016-10-21
 
