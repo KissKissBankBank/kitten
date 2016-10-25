@@ -11,21 +11,55 @@
 ///   <div id="tour" class="k-Tour">
 ///     <div class="k-Tour__container">
 ///       <span class="k-Tour__close"></span>
-///       <svg>
-///         …
-///       </svg>
+///       <svg> … </svg>
+///     </div>
+///     <div class="k-Tour__content">
+///       <p class="k-Tour__title"> … </p>
+///       <p class="k-Tour__text"> … </p>
+///       <div class="k-Tour__navigation">
+///         <p class="k-Tour__numbering"> … </p>
+///         <button class="k-Button
+///                k-Button--default
+///                k-ButtonIconWords
+///                k-ButtonIconWords--default
+///                k-ButtonIconWords--tiny
+///                k-Tour--button"
+///                disabled>
+///         <span class="k-ButtonIcon
+///                      k-ButtonIcon--default
+///                      k-ButtonIcon--tiny
+///                      is-disabled">
+///           <svg class="k-ButtonIcon__svg" … ></svg>
+///         </span>
+///         Prec
+///       </button>
+///       <button class="k-Button
+///                k-Button--default
+///                k-ButtonIconWords
+///                k-ButtonIconWords--default
+///                k-ButtonIconWords--tiny
+///                k-ButtonIconWords--iconRight
+///                k-Tour--button">
+///         Suiv
+///         <span class="k-ButtonIcon
+///                      k-ButtonIcon--default
+///                      k-ButtonIcon--tiny">
+///           <svg class="k-ButtonIcon__svg" … ></svg>
+///         </span>
+///       </button>
+///       </div>
 ///     </div>
 ///   </div>
 
 @mixin k-Tour {
-
   $background-color: #fff;
   $border-color: #eee;
   $border-size: 1px;
-
   $border-radius: .87rem;
 
   .k-Tour {
+    display: flex;
+
     max-width: k-px-to-rem(465px);
     min-height: k-px-to-rem(218px);
 
@@ -40,13 +74,18 @@
   }
 
   .k-Tour__svg {
-    margin: 4.68rem 0 0 1.25rem;
+    margin-top: 4.68rem;
+    margin-left: 1.25rem;
   }
 
   .k-Tour__content {
     @include k-typographyFont('source-sans-light');
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    margin: 1.93rem 0 1.87rem 1.25rem;
     text-align: left;
-    margin: 1.93rem 0 0 1.25rem;
   }
 
   .k-Tour__title {
@@ -60,18 +99,23 @@
   }
 
   .k-Tour__close {
-    margin: .62rem .62rem 0 0;
+    margin-top: .62rem;
+    margin-right: .62rem;
   }
 
   .k-Tour__navigation {
     display: flex;
+    margin-top: auto;
   }
 
   .k-Tour__numbering{
     @include k-typographyFont('source-sans-semi-bold');
+      margin: 0;
+      padding-right: 4rem;
+      font-size: .87rem;
+  }
 
-    margin: 0;
-    padding: k-px-to-rem(7px);
-    font-size: .87rem;
+  .k-Tour__button {
+    margin-right: .62rem;
   }
 }
