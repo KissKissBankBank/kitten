@@ -6,6 +6,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 Features:
 - Add modifier `k-PlatformSwitch--withoutBorderTop` on `k-PlatformSwitch`.
 - Update KissKissBankBank and hellomerci svg logos.
+- Update `k-Grid` max-width from `1420px` to `1440px`.
+
+Fixes:
+- Fix SelectWithState component onChange callback (remove all underscores in
+  component props names).
 
 Fixes:
 - Rename `.k-ButtonImageWithText__text--withoutMarginRight` to    
