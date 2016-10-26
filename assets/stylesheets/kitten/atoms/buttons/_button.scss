@@ -1,18 +1,19 @@
 /// Setup a button element.
 ///
-/// This mixin will setup an element to look like a button.
+/// This mixin will setup an element to look like a button and button icon words.
 ///
 /// Vertical paddings depend on the vertical-rhythm and horizontal paddings
 /// depend on the font-size.
 ///
 /// Available color modifiers:
-/// - `.k-ButtonIcon--default`
-/// - `.k-ButtonIcon--primary`
-/// - `.k-ButtonIcon--secondary`
-/// - `.k-ButtonIcon--secondaryOnWhite`
+/// - `.k-Button--default`
+/// - `.k-Button--primary`
+/// - `.k-Button--secondary`
+/// - `.k-Button--secondaryOnWhite`
 ///
 /// Available size modifiers:
-/// - `.k-ButtonIcon--big`
+/// - `.k-Button--tiny`
+/// - `.k-Button--big`
 ///
 /// @group buttons
 ///
@@ -21,16 +22,21 @@
 ///
 /// @example html
 ///  <button class="k-Button k-Button--default">My button</button>
+///
+/// @example scss button icon words - Usage
+///   @include k-Button;
+///
+/// @example html
+///   <button class="k-Button
+///                  k-Button--default
+///                  k-Button--icon">
+///     <svg class="k-Button__icon" … /></svg>
+///     My button
+/// </button>
 
 @mixin k-Button {
   $font: 'source-sans-semi-bold-uppercase';
   $border-size: 1px;
-
-  // Size settings.
-  $button-min-width: k-px-to-rem(160px - ($border-size * 2));
-  $button-line-height: k-px-to-rem(40px - ($border-size * 2));
-  $button-big-min-width: k-px-to-rem(200px - ($border-size * 2));
-  $button-big-line-height: k-px-to-rem(50px - ($border-size * 2));
 
   // Colors.
   $default-colors: (
@@ -165,11 +171,38 @@
     ),
   );
 
-  // The button element has a radius of 1.25rem (
-  //   20px (designed border-radius) / 16px (base font-size)
-  // ). The horizontal paddings are computed using this radius.
-  $button-radius: 1.25rem;
+  // Size settings button.
+  $button-min-width: k-px-to-rem(160px - ($border-size * 2));
+  $button-line-height: k-px-to-rem(40px - ($border-size * 2));
+
+  $button-big-min-width: k-px-to-rem(200px - ($border-size * 2));
+  $button-big-line-height: k-px-to-rem(50px - ($border-size * 2));
+
+  $button-size-tiny: 30px - ($border-size * 2);
+  $button-size: 40px - ($border-size * 2);
+  $button-size-big: 50px - ($border-size * 2);
+
+  // Size settings button icon words.
+  // Button icon with words element tiny settings.
+  $button-icon-words-tiny-min-width: k-px-to-rem(78px - ($border-size * 2));
+  $button-icon-words-tiny-line-height: k-px-to-rem(30px - ($border-size * 2));
+
+  // Button icon with words element default settings.
+  $button-icon-words-min-width: k-px-to-rem(110px - ($border-size * 2));
+  $button-icon-words-line-height: k-px-to-rem(40px - ($border-size * 2));
+
+  // Button icon with words element big settings.
+  $button-icon-words-big-min-width: k-px-to-rem(130px - ($border-size * 2));
+  $button-icon-words-big-line-height: k-px-to-rem(50px - ($border-size * 2));
+
+  // The button element has a radius of 1.5rem (
+  //   20px (designed border-radius) / 16px (base font-size)).
+  $button-tiny-radius: 2.5rem;
+  $button-radius: 1.5rem;
   $button-big-radius: 1.56rem;
+
+  // Horizontal padding all button's type.
+  $button-padding: 1.25rem;
 
   // Button font-size is computed using a modular scale and a defined step of this
   // scale.
@@ -178,6 +211,8 @@
   // SVG element default settings.
   $icon-width: k-px-to-rem(12px);
   $icon-height: k-px-to-rem(14px);
+
+  $transition-speed: .2s;
 
   .k-Button {
     @include k-buttonBase;
@@ -189,62 +224,74 @@
     min-width: $button-min-width;
 
     text-decoration: none;
-    text-align: center;
   }
 
-  .k-Button__svg {
-    width: $icon-width;
-    height: $icon-height;
+  .k-Button--icon {
+    display: flex;
+
+    padding: 0 $button-padding 0 0;
+    min-width: $button-icon-words-min-width;
+
+    .k-Button__icon {
+      @include k-buttonRounded($button-size, $icon-width, $icon-height);
+
+      display: block;
+      width: $icon-width;
+      height: $icon-height;
+      transition: fill $transition-speed;
+
+      .k-Button__icon__stroke {
+        transition: stroke $transition-speed;
+      }
+    }
+  }
+
+  .k-Button--iconRight {
+    padding: 0 0 0 $button-radius;
   }
 
   // Colors modifiers.
 
   .k-Button--default {
     @include k-buttonColorBase($default-colors);
-
-    .k-Button__svg {
-      @include k-buttonSvg(
-        $default-colors,
-        'k-Button',
-        'k-Button__svg__stroke'
-      );
-    }
   }
 
   .k-Button--primary {
     @include k-buttonColorBase($primary-colors);
-
-    .k-Button__svg {
-      @include k-buttonSvg(
-        $primary-colors,
-        'k-Button--primary',
-        'k-Button__svg__stroke'
-      );
-    }
   }
 
   .k-Button--secondary {
     @include k-buttonColorBase($secondary-colors);
-
-    .k-Button__svg {
-      @include k-buttonSvg(
-        $secondary-colors,
-        'k-Button--secondary',
-        'k-Button__svg__stroke'
-      );
-    }
   }
 
   .k-Button--secondaryOnWhite {
     @include k-buttonColorBase($secondary-on-white-colors);
+  }
 
-    .k-Button__svg {
-      @include k-buttonSvg(
-        $secondary-on-white-colors,
-        'k-Button--secondaryOnWhite',
-        'k-Button__svg__stroke'
-      );
-    }
+  .k-Button__icon {
+    @include k-buttonSvg(
+      $default-colors,
+      'k-Button--default',
+      'k-Button__svg__stroke'
+    );
+
+    @include k-buttonSvg(
+      $primary-colors,
+      'k-Button--primary',
+      'k-Button__svg__stroke'
+    );
+
+    @include k-buttonSvg(
+      $secondary-colors,
+      'k-Button--secondary',
+      'k-Button__svg__stroke'
+    );
+
+    @include k-buttonSvg(
+      $secondary-on-white-colors,
+      'k-Button--secondaryOnWhite',
+      'k-Button__svg__stroke'
+    );
   }
 
   // Size modifiers.
@@ -255,5 +302,31 @@
     padding: 0 $button-big-radius;
     border-radius: $button-big-radius;
     min-width: $button-big-min-width;
+  }
+
+  .k-Button--iconTiny {
+    @include k-typographyFontSize(
+      $button-step,
+      $button-icon-words-tiny-line-height
+    );
+
+    min-width: $button-icon-words-tiny-min-width;
+
+    .k-Button__icon {
+      @include k-buttonRounded($button-size-tiny, $icon-width, $icon-height);
+    }
+  }
+
+  .k-Button--iconBig {
+    @include k-typographyFontSize(
+      $button-step,
+      $button-icon-words-big-line-height
+    );
+
+    min-width: $button-icon-words-big-min-width;
+
+    .k-Button__icon {
+      @include k-buttonRounded($button-size-big, $icon-width, $icon-height);
+    }
   }
 }
