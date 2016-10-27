@@ -5,7 +5,6 @@ import ButtonImageWithTextAndBadge from 'kitten/components/buttons/button-image-
 import domElementHelper from 'kitten/helpers/dom/element-helper'
 import EventEmitter from 'event-emitter'
 import objectAssign from 'core-js/library/fn/object/assign'
-import SimpleList from 'kitten/components/lists/simple-list'
 
 const emitter = EventEmitter()
 
