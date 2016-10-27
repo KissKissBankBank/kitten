@@ -11,9 +11,10 @@ Features:
 Fixes:
 - Fix SelectWithState component onChange callback (remove all underscores in
   component props names).
+- Fix ButtonIconWords component with class k-Button--icon.
 
 Fixes:
-- Rename `.k-ButtonImageWithText__text--withoutMarginRight` to    
+- Rename `.k-ButtonImageWithText__text--withoutMarginRight` to
          `.k-ButtonImageWithText__text--withoutPaddingRight`
 
 ## [v0.13.0] - 2016-10-21
