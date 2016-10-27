@@ -14,6 +14,19 @@ Breaking changes:
   * Add `dropdownContent` prop instead of generating a list inside the
     `Dropdown` component.
   * Remove `dropdownList` and `dropdownListClassName` props.
+- Extract `UserMenu` logic from `Dropdown` component:
+  * Add new `UserMenu` component.
+  * Remove some props in `Dropdown` component:
+    - `notifications`
+    - `buttonTemplate`
+    - `srcImg`
+    - `widthImg`
+    - `heightImg`
+    - `altImg`
+    - `text`
+    - `title`
+    - `textClassName`
+  * Add new callback in `Dropdown` component: `onPositionUpdate`.
 
 ## [v0.14.0] - 2016-10-31
 
