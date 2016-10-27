@@ -1,6 +1,6 @@
 /// Setup a button element.
 ///
-/// This mixin will setup an element to look like a button and button icon words.
+/// This mixin will setup an element to look like a button.
 ///
 /// Vertical paddings depend on the vertical-rhythm and horizontal paddings
 /// depend on the font-size.
@@ -15,24 +15,28 @@
 /// - `.k-Button--tiny`
 /// - `.k-Button--big`
 ///
+/// Available size modifiers for icon:
+/// - `.k-Button--iconTiny`
+/// - `.k-Button--iconBig`
+///
 /// @group buttons
 ///
 /// @example scss button - Usage
 ///   @include k-Button;
 ///
-/// @example html
-///  <button class="k-Button k-Button--default">My button</button>
-///
 /// @example scss button icon words - Usage
 ///   @include k-Button;
 ///
 /// @example html
-///   <button class="k-Button
-///                  k-Button--default
-///                  k-Button--icon">
-///     <svg class="k-Button__icon" … /></svg>
-///     My button
-/// </button>
+///  <button class="k-Button k-Button--default">My button</button>
+///
+/// @example html
+///  <button class="k-Button
+///                 k-Button--default
+///                 k-Button--icon">
+///    <svg class="k-Button__icon" … /></svg>
+///    My button
+///  </button>
 
 @mixin k-Button {
   $font: 'source-sans-semi-bold-uppercase';
