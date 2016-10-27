@@ -15,13 +15,13 @@ const platformSwitchDropdownList = [
   </ExternalRichLink>,
   <ExternalRichLink
     className="k-PlatformSwitch__item"
-    title="Se rendre sur le site de Hellomerci">
+    title="Se rendre sur le site de hellomerci">
     <img src="/assets/brand/hellomerci.svg"
          alt="Logo de hellomerci" />
   </ExternalRichLink>,
   <ExternalRichLink
     className="k-PlatformSwitch__item"
-    title="Se rendre sur le site de Lendopolis">
+    title="Se rendre sur le site de LENDOPOLIS">
     <img src="/assets/brand/lendopolis.svg"
          alt="Logo de LENDOPOLIS" />
   </ExternalRichLink>,
