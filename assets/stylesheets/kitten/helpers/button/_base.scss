@@ -57,26 +57,3 @@
     cursor: not-allowed;
   }
 }
-
-@mixin k-buttonBaseLessBorder {
-  @include k-buttonBrowserFixes;
-  display: inline-block;
-  box-sizing: border-box;
-  cursor: pointer;
-
-  // Reset browser default styles.
-  background-color: transparent;
-
-  &:hover {
-    outline: 0;
-    text-decoration: none;
-  }
-
-  &:focus {
-    text-decoration: none;
-  }
-
-  &:disabled {
-    cursor: not-allowed;
-  }
-}
