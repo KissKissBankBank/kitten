@@ -55,6 +55,9 @@
   $background-color: #fff;
   $border-color: #eee;
   $border-size: 1px;
+
+  // The composant `Tour`has a radius of .87rem (15px)
+  // (designed border-radius) / 16px (base font-size)
   $border-radius: .87rem;
 
   .k-Tour {
@@ -71,11 +74,12 @@
 
   .k-Tour__container {
     display: flex;
+    margin: .68rem .68rem 1.87rem .68rem;
   }
 
   .k-Tour__svg {
-    margin-top: 4.68rem;
-    margin-left: 1.25rem;
+    display: flex;
+    align-items: center;
   }
 
   .k-Tour__content {
@@ -84,8 +88,8 @@
     flex-direction: column;
     flex: 1;
 
-    margin: 1.93rem 0 1.87rem 1.25rem;
-    text-align: left;
+    margin-top: 1rem;
+    margin-left: 1rem;
   }
 
   .k-Tour__title {
@@ -98,11 +102,6 @@
     @include k-typographyFontSize(-1);
   }
 
-  .k-Tour__close {
-    margin-top: .62rem;
-    margin-right: .62rem;
-  }
-
   .k-Tour__navigation {
     display: flex;
     margin-top: auto;
@@ -110,9 +109,9 @@
 
   .k-Tour__numbering{
     @include k-typographyFont('source-sans-semi-bold');
-      margin: 0;
-      padding-right: 3.9rem;
-      font-size: .87rem;
+    margin: 0;
+    padding-right: 2.4rem;
+    font-size: .87rem;
   }
 
   .k-Tour__button {
