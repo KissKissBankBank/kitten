@@ -1,1 +1,5 @@
-<svg width="8" height="8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 125"><style>.st0{stroke:#000;stroke-width:3.3672;stroke-linecap:round;stroke-linejoin:round}</style><path transform="rotate(135 293.475 619.47) scale(1.18794)" class="st0" d="M11 997.4h84v16H11z"/><path transform="rotate(135 293.475 619.47) scale(1.18794)" class="st0" d="M45 963.4h16v84H45z"/></svg>
+<svg class="k-ButtonIcon__svg" xmlns="http://www.w3.org/2000/svg"
+  viewBox="-11 -4 125 105">
+  <path d="M91.968 21.407l-70.56 70.56-13.44-13.44 70.56-70.56z"/>
+  <path d="M91.968 78.527l-13.44 13.44-70.56-70.56 13.44-13.44z"/>
+</svg>
