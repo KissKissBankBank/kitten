@@ -218,7 +218,7 @@ class Dropdown extends React.Component {
              role="navigation"
              aria-hidden="true"
              aria-labelledby={ this.props.buttonId }>
-          { this.props.content }
+          { this.props.dropdownContent }
           { this.renderArrow() }
         </nav>
       </div>

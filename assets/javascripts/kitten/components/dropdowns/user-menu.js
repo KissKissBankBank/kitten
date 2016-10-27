@@ -155,7 +155,7 @@ class UserMenu extends React.Component {
     return (
       <Dropdown ref="dropdown"
                 button={ this.getDropdownButton() }
-                content={ this.getDropdownContent() }
+                dropdownContent={ this.getDropdownContent() }
                 dropdownListArrow={ this.getDropdownArrow() }
                 contentHorizontalPositionValue={
                   this.state.contentHorizontalPositionValue
