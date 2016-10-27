@@ -19,11 +19,11 @@
 ///       <div class="k-Tour__navigation">
 ///         <p class="k-Tour__numbering"> … </p>
 ///         <button class="k-Button
-///                k-Button--default
-///                k-ButtonIconWords
-///                k-ButtonIconWords--default
-///                k-ButtonIconWords--tiny
-///                k-Tour--button"
+///                        k-Button--default
+///                        k-ButtonIconWords
+///                        k-ButtonIconWords--default
+///                        k-ButtonIconWords--tiny
+///                        k-Tour--button"
 ///                disabled>
 ///         <span class="k-ButtonIcon
 ///                      k-ButtonIcon--default
@@ -34,12 +34,12 @@
 ///         Prec
 ///       </button>
 ///       <button class="k-Button
-///                k-Button--default
-///                k-ButtonIconWords
-///                k-ButtonIconWords--default
-///                k-ButtonIconWords--tiny
-///                k-ButtonIconWords--iconRight
-///                k-Tour--button">
+///                      k-Button--default
+///                      k-ButtonIconWords
+///                      k-ButtonIconWords--default
+///                      k-ButtonIconWords--tiny
+///                      k-ButtonIconWords--iconRight
+///                      k-Tour--button">
 ///         Suiv
 ///         <span class="k-ButtonIcon
 ///                      k-ButtonIcon--default
@@ -55,26 +55,24 @@
   $background-color: #fff;
   $border-color: #eee;
   $border-size: 1px;
-
-  // The composant `Tour`has a radius of .87rem (15px)
-  // (designed border-radius) / 16px (base font-size)
-  $border-radius: .87rem;
+  $border-radius: k-px-to-rem(15px);
+  $margin-container: k-px-to-rem(11px);
 
   .k-Tour {
     display: flex;
 
     max-width: k-px-to-rem(465px);
     min-height: k-px-to-rem(218px);
+    box-sizing: border-box;
 
     background-color: $background-color;
     border-radius: $border-radius;
     border: $border-size solid $border-color;
-    box-sizing: border-box;
   }
 
   .k-Tour__container {
     display: flex;
-    margin: .68rem .68rem 1.87rem .68rem;
+    margin: $margin-container $margin-container 1.87rem $margin-container;
   }
 
   .k-Tour__svg {
@@ -109,9 +107,10 @@
 
   .k-Tour__numbering{
     @include k-typographyFont('source-sans-semi-bold');
+    @include k-typographyFontSize(-1);
+
     margin: 0;
     padding-right: 2.4rem;
-    font-size: .87rem;
   }
 
   .k-Tour__button {
