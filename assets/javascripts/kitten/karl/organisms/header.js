@@ -30,19 +30,22 @@ const platformSwitchProps = {
     <ExternalRichLink
       className="k-PlatformSwitch__item"
       title="Se rendre sur le site de KissKissBankBank">
-      <img src="/assets/brand/kisskissbankbank.svg"
+      <img className="k-ExternalRichLink__image"
+           src="/assets/brand/kisskissbankbank.svg"
            alt="Logo de KissKissBankBank" />
     </ExternalRichLink>,
     <ExternalRichLink
       className="k-PlatformSwitch__item"
-      title="Se rendre sur le site de Hellomerci">
-      <img src="/assets/brand/hellomerci.svg"
+      title="Se rendre sur le site de hellomerci">
+      <img className="k-ExternalRichLink__image"
+           src="/assets/brand/hellomerci.svg"
            alt="Logo de hellomerci" />
     </ExternalRichLink>,
     <ExternalRichLink
       className="k-PlatformSwitch__item"
-      title="Se rendre sur le site de Lendopolis">
-      <img src="/assets/brand/lendopolis.svg"
+      title="Se rendre sur le site de LENDOPOLIS">
+      <img className="k-ExternalRichLink__image"
+           src="/assets/brand/lendopolis.svg"
            alt="Logo de LENDOPOLIS" />
     </ExternalRichLink>
   ],

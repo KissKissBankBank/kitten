@@ -24,7 +24,7 @@
 ///      …
 ///    );
 ///
-///   .k-Button {
+///   .k-Button__svg {
 ///     @include k-buttonSvg($colors, 'k-Button', 'k-Button__stroke');
 ///   }
 ///
@@ -69,8 +69,7 @@
     fill: $active-color;
   }
 
-  .#{$parent}:disabled &,
-   .#{$parent}.is-disabled & {
+  .#{$parent}:disabled & {
     fill: $disabled-color;
   }
 
@@ -96,8 +95,7 @@
       stroke: $active-color;
     }
 
-    .#{$parent}:disabled &,
-    .#{$parent}.is-disabled & {
+    .#{$parent}:disabled & {
       stroke: $disabled-color;
     }
 

@@ -37,15 +37,18 @@ const KarlPlatformSwitch = defaultProps(Dropdown, {
   dropdownListClassName: 'k-PlatformSwitch',
   dropdownList: [
     <ExternalRichLink className="k-PlatformSwitch__item">
-      <img src="https://placeholdit.imgix.net/~text?txt=LOGO&amp;w=180&amp;h=44"
+      <img className="k-ExternalRichLink__image"
+           src="https://placeholdit.imgix.net/~text?txt=LOGO&amp;w=180&amp;h=44"
            alt="LOGO" />
     </ExternalRichLink>,
     <ExternalRichLink className="k-PlatformSwitch__item">
-      <img src="https://placeholdit.imgix.net/~text?txt=LOGO&amp;w=180&amp;h=44"
+      <img className="k-ExternalRichLink__image"
+           src="https://placeholdit.imgix.net/~text?txt=LOGO&amp;w=180&amp;h=44"
            alt="LOGO" />
     </ExternalRichLink>,
     <ExternalRichLink className="k-PlatformSwitch__item">
-      <img src="https://placeholdit.imgix.net/~text?txt=LOGO&amp;w=180&amp;h=44"
+      <img className="k-ExternalRichLink__image"
+           src="https://placeholdit.imgix.net/~text?txt=LOGO&amp;w=180&amp;h=44"
            alt="LOGO" />
     </ExternalRichLink>
   ],
