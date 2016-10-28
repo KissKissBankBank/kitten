@@ -181,32 +181,18 @@
   $button-size: 40px - ($border-size * 2);
   $button-size-big: 50px - ($border-size * 2);
 
+  $button-tiny-min-width: k-px-to-rem(160px);
+  $button-tiny-line-height: k-px-to-rem($button-size-tiny);
+
   $button-min-width: k-px-to-rem(160px);
   $button-line-height: k-px-to-rem($button-size);
 
   $button-big-min-width: k-px-to-rem(200px);
   $button-big-line-height: k-px-to-rem($button-size-big);
 
-  // Size settings button icon words.
-  // Button icon with words element tiny settings.
-  $button-icon-words-tiny-min-width: k-px-to-rem(78px);
-  $button-icon-words-tiny-line-height: k-px-to-rem($button-size-tiny);
-
-  // Button icon with words element default settings.
-  $button-icon-words-min-width: k-px-to-rem(110px);
-  $button-icon-words-line-height: k-px-to-rem($button-size);
-
-  // Button icon with words element big settings.
-  $button-icon-words-big-min-width: k-px-to-rem(130px);
-  $button-icon-words-big-line-height: k-px-to-rem($button-size-big);
-
   // Button radius settings.
   $button-radius: k-px-to-rem(20px);
   $button-big-radius: k-px-to-rem(25px);
-  $button-radius-icon-words: k-px-to-rem(24px);
-
-  // Horizontal padding all button's type.
-  $button-padding: k-px-to-rem(20px);
 
   // Button font-size is computed using a modular scale and a defined step of this
   // scale.
@@ -223,37 +209,12 @@
     @include k-typographyFontSize($button-step, $button-line-height);
     @include k-typographyFont($font);
 
-    padding: 0 $button-radius * 2;
+    padding: 0 $button-radius;
     border-radius: $button-radius;
     min-width: $button-min-width;
 
     text-align: center;
     text-decoration: none;
-  }
-
-  .k-Button--icon {
-    display: flex;
-
-    padding: 0 $button-padding 0 0;
-    border-radius: $button-radius-icon-words;
-    min-width: $button-icon-words-min-width;
-
-    .k-Button__icon {
-      @include k-buttonRounded($button-size, $icon-width, $icon-height);
-
-      display: block;
-      width: $icon-width;
-      height: $icon-height;
-      transition: fill $transition-speed;
-
-      .k-Button__icon__stroke {
-        transition: stroke $transition-speed;
-      }
-    }
-  }
-
-  .k-Button--iconRight {
-    padding: 0 0 0 $button-radius;
   }
 
   // Colors modifiers.
@@ -302,35 +263,55 @@
 
   // Size modifiers.
 
+  .k-Button--tiny {
+    @include k-typographyFontSize(
+      $button-step,
+      $button-tiny-line-height
+    );
+  }
+
   .k-Button--big {
-    @include k-typographyFontSize($button-step, $button-big-line-height);
+    @include k-typographyFontSize(
+      $button-step,
+      $button-big-line-height
+    );
 
     padding: 0 $button-big-radius;
     border-radius: $button-big-radius;
     min-width: $button-big-min-width;
   }
 
+  .k-Button--icon {
+    display: flex;
+
+    padding: 0 $button-radius 0 0;
+    min-width: auto;
+
+    .k-Button__icon {
+      @include k-buttonRounded($button-size, $icon-width, $icon-height);
+
+      display: block;
+      width: $icon-width;
+      height: $icon-height;
+      transition: fill $transition-speed;
+
+      .k-Button__icon__stroke {
+        transition: stroke $transition-speed;
+      }
+    }
+  }
+
+  .k-Button--iconRight {
+    padding: 0 0 0 $button-radius;
+  }
+
   .k-Button--iconTiny {
-    @include k-typographyFontSize(
-      $button-step,
-      $button-icon-words-tiny-line-height
-    );
-
-    min-width: $button-icon-words-tiny-min-width;
-
     .k-Button__icon {
       @include k-buttonRounded($button-size-tiny, $icon-width, $icon-height);
     }
   }
 
   .k-Button--iconBig {
-    @include k-typographyFontSize(
-      $button-step,
-      $button-icon-words-big-line-height
-    );
-
-    min-width: $button-icon-words-big-min-width;
-
     .k-Button__icon {
       @include k-buttonRounded($button-size-big, $icon-width, $icon-height);
     }
