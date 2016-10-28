@@ -28,9 +28,6 @@
 /// @example scss button - Usage
 ///   @include k-Button;
 ///
-/// @example scss button icon words - Usage
-///   @include k-Button;
-///
 /// @example html
 ///  <button class="k-Button k-Button--default">My button</button>
 ///
@@ -180,37 +177,37 @@
   );
 
   // Size settings button.
-  $button-min-width: k-px-to-rem(160px - ($border-size * 2));
-  $button-line-height: k-px-to-rem(40px - ($border-size * 2));
-
-  $button-big-min-width: k-px-to-rem(200px - ($border-size * 2));
-  $button-big-line-height: k-px-to-rem(50px - ($border-size * 2));
-
   $button-size-tiny: 30px - ($border-size * 2);
   $button-size: 40px - ($border-size * 2);
   $button-size-big: 50px - ($border-size * 2);
 
+  $button-min-width: k-px-to-rem(160px - ($border-size * 2));
+  $button-line-height: k-px-to-rem($button-size);
+
+  $button-big-min-width: k-px-to-rem(200px - ($border-size * 2));
+  $button-big-line-height: k-px-to-rem($button-size-big);
+
   // Size settings button icon words.
   // Button icon with words element tiny settings.
   $button-icon-words-tiny-min-width: k-px-to-rem(78px - ($border-size * 2));
-  $button-icon-words-tiny-line-height: k-px-to-rem(30px - ($border-size * 2));
+  $button-icon-words-tiny-line-height: k-px-to-rem($button-size-tiny);
 
   // Button icon with words element default settings.
   $button-icon-words-min-width: k-px-to-rem(110px - ($border-size * 2));
-  $button-icon-words-line-height: k-px-to-rem(40px - ($border-size * 2));
+  $button-icon-words-line-height: k-px-to-rem($button-size);
 
   // Button icon with words element big settings.
   $button-icon-words-big-min-width: k-px-to-rem(130px - ($border-size * 2));
-  $button-icon-words-big-line-height: k-px-to-rem(50px - ($border-size * 2));
+  $button-icon-words-big-line-height: k-px-to-rem($button-size-big);
 
   // The button element has a radius of 1.5rem (
-  //   20px (designed border-radius) / 16px (base font-size)).
-  $button-tiny-radius: 2.5rem;
-  $button-radius: 1.5rem;
-  $button-big-radius: 1.56rem;
+  //   24px (designed border-radius) / 16px (base font-size)).
+  $button-radius: k-px-to-rem(20px);
+  $button-big-radius: k-px-to-rem(25px);
+  $button-radius-icon-words: k-px-to-rem(24px);
 
   // Horizontal padding all button's type.
-  $button-padding: 1.25rem;
+  $button-padding: k-px-to-rem(20px);
 
   // Button font-size is computed using a modular scale and a defined step of this
   // scale.
@@ -238,6 +235,7 @@
     display: flex;
 
     padding: 0 $button-padding 0 0;
+    border-radius: $button-radius-icon-words;
     min-width: $button-icon-words-min-width;
 
     .k-Button__icon {
