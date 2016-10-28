@@ -19,10 +19,6 @@
 /// - `.k-Button--tiny`
 /// - `.k-Button--big`
 ///
-/// Available size modifiers for icon:
-/// - `.k-Button--iconTiny`
-/// - `.k-Button--iconBig`
-///
 /// @group buttons
 ///
 /// @example scss button - Usage
@@ -268,6 +264,12 @@
       $button-step,
       $button-tiny-line-height
     );
+
+    &.k-Button--icon {
+      .k-Button__icon {
+        @include k-buttonRounded($button-size-tiny, $icon-width, $icon-height);
+      }
+    }
   }
 
   .k-Button--big {
@@ -279,6 +281,12 @@
     padding: 0 $button-big-radius;
     border-radius: $button-big-radius;
     min-width: $button-big-min-width;
+
+    &.k-Button--icon {
+      .k-Button__icon {
+        @include k-buttonRounded($button-size-big, $icon-width, $icon-height);
+      }
+    }
   }
 
   .k-Button--icon {
@@ -303,17 +311,5 @@
 
   .k-Button--iconRight {
     padding: 0 0 0 $button-radius;
-  }
-
-  .k-Button--iconTiny {
-    .k-Button__icon {
-      @include k-buttonRounded($button-size-tiny, $icon-width, $icon-height);
-    }
-  }
-
-  .k-Button--iconBig {
-    .k-Button__icon {
-      @include k-buttonRounded($button-size-big, $icon-width, $icon-height);
-    }
   }
 }
