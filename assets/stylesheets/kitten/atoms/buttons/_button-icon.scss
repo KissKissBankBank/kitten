@@ -375,11 +375,6 @@
 
   .k-ButtonIcon--tiny {
     @include k-buttonRounded($button-size-tiny, $icon-width, $icon-height);
-
-    .k-ButtonIcon__svg {
-      width: $icon-width;
-      height: $icon-height;
-    }
   }
 
   .k-ButtonIcon--big {
