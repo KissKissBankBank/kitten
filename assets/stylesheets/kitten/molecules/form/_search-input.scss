@@ -13,16 +13,54 @@
 ///            type="text"
 ///            name="foobar"
 ///            placeholder="Foobar" />
-///     <input class="k-SearchInput__submit"
-///            type="submit"
-///            name="foobar_submit"
-///            value="Search" />
-///   </form>
+///     <button class="k-SearchInput__submit">
+///       <svg width="17"
+///            height="17"
+///            viewBox="-0.7 -0.7 18 18"
+///            xmlns="http://www.w3.org/2000/svg">
+///         <circle class="k-SearchInput__submit__svgCircle"
+///                 cx="7"
+///                 cy="7"
+///                 r="7"
+///                 stroke="#333"
+///                 stroke-width="1.1"
+///                 fill="none" />
+///           <path class="k-SearchInput__submit__svgPath"
+///                 fill="#333"
+///                 d="M13 11 L17 15 L15.5 16.5 L11.5 12.7z" />
+///       </svg>
+///     </button>
 
 @mixin k-SearchInput {
-
-  $icon-path: '~icons/magnifying.svg';
+  // Size
   $icon-size: k-px-to-rem(17px);
+  $submit-horizontal-padding: k-px-to-rem(12px);
+
+  // Colors
+
+  // Base
+  $border: map-get($k-colors, 'line-2');
+
+  // Focus
+  $submit-focus-color: #fff;
+  $border-focus: map-get($k-colors, 'primary-1');
+  $submit-focus-background: map-get($k-colors, 'primary-1');
+
+  // Hover
+  $submit-hover-color: #fff;
+  $border-hover: map-get($k-colors, 'primary-1');
+  $submit-hover-background: map-get($k-colors, 'primary-1');
+
+  // Active
+  $submit-active-color: #fff;
+  $border-active: map-get($k-colors, 'primary-2');
+  $submit-active-background: map-get($k-colors, 'primary-2');
+
+  // Border radius Text - input
+  $submit-border-radius: k-px-to-rem(4px);
+
+  // Transition
+  $transition-speed: .2s;
 
   .k-SearchInput {
     position: relative;
@@ -32,24 +70,88 @@
   .k-SearchInput__input {
     width: k-px-to-rem(160px);
     padding-right: k-px-to-rem(37px);
+
+    &:focus ~ .k-SearchInput__submit {
+      border-left-color: $border-focus;
+    }
+
+    // You can add this class in JavaScript to manage `k-SearchInput__input`
+    // hover style depending on a following sibling hover state.
+    &.is-hover {
+      border-color: $border-hover;
+    }
+
+    // You can add this class in JavaScript to manage `k-SearchInput__input`
+    // active style depending on a following sibling active state.
+    &.is-active {
+      border-color: $border-active;
+    }
   }
 
   .k-SearchInput__submit {
     position: absolute;
-    top: k-px-to-rem(12px);
-    right: k-px-to-rem(12px);
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    display: block;
-    width: $icon-size;
-    height: $icon-size;
+    width: $submit-horizontal-padding * 2 + $icon-size;
+    height: 100%;
+    padding: 0;
 
-    background: transparent url($icon-path) no-repeat;
+    background-color: transparent;
+    border: none;
+    border-left: 1px solid $border;
+    border-top-right-radius: $submit-border-radius;
+    border-bottom-right-radius: $submit-border-radius;
+    outline: none; // since we introduce our own focus styles
 
     font: 0/0;
     line-height: 1;
     color: transparent;
     text-shadow: none;
-    border: none;
+
     cursor: pointer;
+    transition: all $transition-speed;
+
+    &:focus {
+      background-color: $submit-focus-background;
+      border-left-color: $border-focus;
+
+      & .k-SearchInput__submit__svgPath {
+        fill: $submit-focus-color;
+      }
+
+      & .k-SearchInput__submit__svgCircle {
+        stroke: $submit-focus-color;
+      }
+    }
+
+    &:hover {
+      background-color: $submit-hover-background;
+      border-left-color: $border-hover;
+
+      & .k-SearchInput__submit__svgPath {
+        fill: $submit-hover-color;
+      }
+
+      & .k-SearchInput__submit__svgCircle {
+        stroke: $submit-hover-color;
+      }
+    }
+
+    &:active {
+      background-color: $submit-active-background;
+      border-left-color: $border-active;
+
+      & .k-SearchInput__submit__svgPath {
+        fill: $submit-active-color;
+      }
+
+      & .k-SearchInput__submit__svgCircle {
+        stroke: $submit-active-color;
+      }
+    }
   }
 }
