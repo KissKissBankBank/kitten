@@ -181,23 +181,23 @@
   $button-size: 40px - ($border-size * 2);
   $button-size-big: 50px - ($border-size * 2);
 
-  $button-min-width: k-px-to-rem(160px - ($border-size * 2));
+  $button-min-width: k-px-to-rem(160px);
   $button-line-height: k-px-to-rem($button-size);
 
-  $button-big-min-width: k-px-to-rem(200px - ($border-size * 2));
+  $button-big-min-width: k-px-to-rem(200px);
   $button-big-line-height: k-px-to-rem($button-size-big);
 
   // Size settings button icon words.
   // Button icon with words element tiny settings.
-  $button-icon-words-tiny-min-width: k-px-to-rem(78px - ($border-size * 2));
+  $button-icon-words-tiny-min-width: k-px-to-rem(78px);
   $button-icon-words-tiny-line-height: k-px-to-rem($button-size-tiny);
 
   // Button icon with words element default settings.
-  $button-icon-words-min-width: k-px-to-rem(110px - ($border-size * 2));
+  $button-icon-words-min-width: k-px-to-rem(110px);
   $button-icon-words-line-height: k-px-to-rem($button-size);
 
   // Button icon with words element big settings.
-  $button-icon-words-big-min-width: k-px-to-rem(130px - ($border-size * 2));
+  $button-icon-words-big-min-width: k-px-to-rem(130px);
   $button-icon-words-big-line-height: k-px-to-rem($button-size-big);
 
   // Button radius settings.
