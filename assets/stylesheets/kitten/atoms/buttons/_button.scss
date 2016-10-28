@@ -200,8 +200,7 @@
   $button-icon-words-big-min-width: k-px-to-rem(130px - ($border-size * 2));
   $button-icon-words-big-line-height: k-px-to-rem($button-size-big);
 
-  // The button element has a radius of 1.5rem (
-  //   24px (designed border-radius) / 16px (base font-size)).
+  // Button radius settings.
   $button-radius: k-px-to-rem(20px);
   $button-big-radius: k-px-to-rem(25px);
   $button-radius-icon-words: k-px-to-rem(24px);
@@ -228,6 +227,7 @@
     border-radius: $button-radius;
     min-width: $button-min-width;
 
+    text-align: center;
     text-decoration: none;
   }
 
