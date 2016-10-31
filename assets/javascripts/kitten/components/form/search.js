@@ -50,7 +50,7 @@ class Search extends React.Component {
 
   render() {
     let inputClassName = classNames(
-      'k-TextInput ',
+      'k-TextInput',
       'k-TextInput--tiny',
       'k-SearchInput__input',
       { 'is-active': this.state.focus },
