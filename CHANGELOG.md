@@ -39,8 +39,6 @@ Features:
 Fixes:
 - Fix `SelectWithState` component onChange callback (remove all underscores in
   component props names).
-
-Fixes:
 - Rename `.k-ButtonImageWithText__text--withoutMarginRight` to
          `.k-ButtonImageWithText__text--withoutPaddingRight`
 
