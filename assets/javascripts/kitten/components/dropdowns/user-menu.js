@@ -92,6 +92,7 @@ class UserMenu extends React.Component {
     return (
       <SimpleList className="k-UserMenu"
                   role="menubar"
+                  labelledby={ this.props.labelledby }
                   list={ this.props.dropdownList } />
     )
   }

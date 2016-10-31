@@ -4,7 +4,6 @@ import DropdownButton from 'kitten/components/dropdowns/dropdown-button'
 import domElementHelper from 'kitten/helpers/dom/element-helper'
 import EventEmitter from 'event-emitter'
 import objectAssign from 'core-js/library/fn/object/assign'
-import SimpleList from 'kitten/components/lists/simple-list'
 
 const emitter = EventEmitter()
 
@@ -212,15 +211,12 @@ class Dropdown extends React.Component {
     return(
       <div ref="dropdown" className={ dropdownClassName }>
         { button }
-        <nav ref="dropdownContent"
+        <div ref="dropdownContent"
              className="k-Dropdown__content"
-             style={ this.getContentPosition() }
-             role="navigation"
-             aria-hidden="true"
-             aria-labelledby={ this.props.buttonId }>
+             style={ this.getContentPosition() }>
           { this.props.dropdownContent }
           { this.renderArrow() }
-        </nav>
+        </div>
       </div>
     );
   }

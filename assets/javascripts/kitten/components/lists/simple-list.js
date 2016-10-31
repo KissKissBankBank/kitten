@@ -15,9 +15,13 @@ class SimpleList extends React.Component {
     const defaultItem = ('No choice')
 
     return(
-      <ul { ...others }>
-        { items.length ? items : defaultItem }
-      </ul>
+      <nav role="navigation"
+           aria-hidden="true"
+           aria-labelledby={ this.props.labelledby }>
+        <ul { ...others }>
+          { items.length ? items : defaultItem }
+        </ul>
+      </nav>
     )
   }
 }

@@ -36,7 +36,8 @@ import { KarlSimpleDropdown,
          KarlUserMenuDropdown } from 'kitten/karl/organisms/dropdown'
 import { KarlUnloggedHeaderPlatformSwitch,
          KarlLoggedHeaderPlatformSwitch,
-         KarlLoggedHeaderUserMenu } from 'kitten/karl/organisms/header'
+         KarlLoggedHeaderUserMenu,
+         KarlPhoneDropdown } from 'kitten/karl/organisms/header'
 import { KarlLoanSimulator } from 'kitten/karl/organisms/loan-simulator'
 
 ReactOnRails.register({
@@ -59,5 +60,6 @@ ReactOnRails.register({
   KarlUnloggedHeaderPlatformSwitch,
   KarlLoggedHeaderPlatformSwitch,
   KarlLoggedHeaderUserMenu,
+  KarlPhoneDropdown,
   KarlLoanSimulator,
 })

@@ -1,0 +1,33 @@
+/// Phone dropdown.
+///
+/// @group dropdowns
+///
+/// @example scss - usage
+///   @include k-PhoneDropdown;
+///
+/// @example html
+///   <div class="k-PhoneDropdown">
+///     <p class="k-PhoneDropdown__text--small">…</p>
+///     <p class="k-PhoneDropdown__text--strong">…</p>
+///   </div>
+
+@mixin k-PhoneDropdown {
+
+  .k-PhoneDropdown {
+    background: map-get($k-colors, 'background-2');
+    border: 1px solid map-get($k-colors, 'line-1');
+    padding: 0 k-px-to-rem(30px);
+    text-align: center;
+
+    @include k-typographyFontSize(0);
+    @include k-typographyFont('source-sans-light');
+  }
+
+  .k-PhoneDropdown__text--small {
+    @include k-typographyFontSize(-2);
+  }
+
+  .k-PhoneDropdown__text--strong {
+    @include k-typographyFont('source-sans-semi-bold');
+  }
+}
