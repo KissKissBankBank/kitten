@@ -1,10 +1,10 @@
 import React from 'react'
 import classNames from 'classnames'
 import DropdownButton from 'kitten/components/dropdowns/dropdown-button'
-import ButtonImageWithTextAndBadge from 'kitten/components/buttons/button-image-with-text-and-badge'
 import domElementHelper from 'kitten/helpers/dom/element-helper'
 import EventEmitter from 'event-emitter'
 import objectAssign from 'core-js/library/fn/object/assign'
+import SimpleList from 'kitten/components/lists/simple-list'
 
 const emitter = EventEmitter()
 
@@ -12,15 +12,29 @@ class Dropdown extends React.Component {
   constructor(props) {
     super(props)
 
-    this.state = { isExpanded: false }
+    this.state = {
+      isExpanded: false,
+      referenceElementHeight: 0,
+    }
+
     this.handleDropdownPosition = this.handleDropdownPosition.bind(this)
+    this.revertHandleClickOnLinks = this.revertHandleClickOnLinks.bind(this)
     this.close = this.close.bind(this)
   }
 
   componentDidMount() {
     const dropdown = this
 
-    this.updateReferenceElementHeightState()
+    if (domElementHelper.canUseDom()) {
+      // Update dropdown content position after DOM is build.
+      let referenceElementHeight = this.getReferenceElementHeight()
+
+      this.setState({ referenceElementHeight: referenceElementHeight })
+    }
+
+    // Handle events.
+
+    this.handleClickOnLinks()
 
     emitter.on('dropdown:opening:trigger', () => {
       dropdown.close()
@@ -31,11 +45,11 @@ class Dropdown extends React.Component {
         window.addEventListener(ev, this.handleDropdownPosition)
       })
     }
-
-    this.handleClickOnLinks()
   }
 
   componentWillUnmount() {
+    this.revertHandleClickOnLinks()
+
     if (this.props.refreshEvents.length) {
       this.props.refreshEvents.forEach((ev) => {
         window.removeEventListener(ev, this.handleDropdownPosition);
@@ -45,16 +59,39 @@ class Dropdown extends React.Component {
     emitter.off('dropdown:opening:trigger')
   }
 
+  componentWillReceiveProps(nextProps) {
+    // Enable wrapper component to expand the dropdown.
+    if (nextProps.isExpanded != this.state.isExpanded) {
+      this.toggle(nextProps.isExpanded)
+    }
+  }
+
   // Component methods
 
   close() {
     this.setState({ isExpanded: false })
   }
 
-  getReferenceElement() {
-    if (!this.isSelfReference()) {
-      return this.props.positionedWith()
+  toggle(nextExpandedState) {
+    if (nextExpandedState) {
+      emitter.emit('dropdown:opening:trigger', this)
     }
+
+    this.setState({
+      isExpanded: nextExpandedState
+    })
+  }
+
+  hasDefaultHorizontalPosition() {
+    return this.props.positionedOn == 'left'
+  }
+
+  isSelfReference() {
+    return typeof this.props.positionedWith == 'undefined'
+  }
+
+  getReferenceElement() {
+    if (!this.isSelfReference()) return this.props.positionedWith()
 
     return this.refs.dropdown
   }
@@ -68,49 +105,39 @@ class Dropdown extends React.Component {
     )
   }
 
-  updateReferenceElementHeightState() {
-    let referenceElementHeight = this.getReferenceElementHeight()
-    this.setState({ parentHeight: referenceElementHeight })
+  getArrowPosition() {
+    const defaultPosition = { position: 'absolute', top: 0 }
+    const horizontalPositionValue = this.props.arrowHorizontalPositionValue
+    let horizontalPosition = { left: horizontalPositionValue }
+
+    if (!this.hasDefaultHorizontalPosition()) {
+      horizontalPosition = { right: horizontalPositionValue }
+    }
+
+    return objectAssign(defaultPosition, horizontalPosition)
   }
 
-  isSelfReference() {
-    return typeof this.props.positionedWith == 'undefined'
-  }
+  getContentPosition() {
+    const defaultPosition = { top: this.state.referenceElementHeight }
+    const horizontalPositionValue = this.props.contentHorizontalPositionValue
+    let horizontalPosition = { left: horizontalPositionValue }
 
-  // Elements
+    if (!this.hasDefaultHorizontalPosition()) {
+      horizontalPosition = { right: horizontalPositionValue }
+    }
 
-  getDropdownParent() {
-    return this.refs.dropdown ? this.refs.dropdown.parentNode : null
-  }
-  getDropdownContent() {
-    return this.refs.dropdownContent ? this.refs.dropdownContent : null
-  }
-  getButtonImage() {
-    if (!this.refs.buttonImageWithTextAndBadge) return
-    return this.refs.buttonImageWithTextAndBadge.refs.buttonImage
-  }
-
-  // Elements size
-
-  getDropdownParentWidth() {
-    return domElementHelper.getComputedWidth(this.getDropdownParent())
-  }
-  getButtonImageHalfWidth() {
-    return domElementHelper.getComputedWidth(this.getButtonImage()) / 2
-  }
-  getDropdownContentHalfWidth() {
-    return domElementHelper.getComputedWidth(this.getDropdownContent()) / 2
-  }
-  getDropdownParentPadding(alignment: 'left') {
-    return parseInt(
-      domElementHelper.getComputedStyle(
-        this.getDropdownParent(),
-        'padding-' + alignment
-      )
-    )
+    return objectAssign(defaultPosition, horizontalPosition)
   }
 
   // Component listener callbacks
+
+  revertHandleClickOnLinks() {
+    const links = this.refs.dropdownContent.getElementsByTagName('a')
+
+    for (let link of links) {
+      link.removeEventListener('click', this.close)
+    }
+  }
 
   handleClickOnLinks() {
     const links = this.refs.dropdownContent.getElementsByTagName('a')
@@ -122,7 +149,7 @@ class Dropdown extends React.Component {
 
   handleDropdownPosition() {
     if (domElementHelper.canUseDom()) {
-      this.updateReferenceElementHeightState()
+      this.props.onPositionUpdate()
     }
   }
 
@@ -130,55 +157,10 @@ class Dropdown extends React.Component {
     event.stopPropagation()
     event.preventDefault()
 
-    emitter.emit('dropdown:opening:trigger', this)
-
-    this.updateReferenceElementHeightState()
-    this.setState({
-      isExpanded: !this.state.isExpanded
-    })
-  }
-
-  getContentPosition() {
-    const positionStyles = { top: this.state.parentHeight }
-    let horizontalPosition = { left: 0 }
-
-    if (this.props.positionedOn == 'right') {
-      horizontalPosition = { right: 0 }
-    }
-
-    if (this.props.buttonTemplate == 'ButtonImageWithTextAndBadge') {
-      let space = this.getDropdownParentWidth()
-                  - this.getButtonImageHalfWidth()
-                  - this.getDropdownContentHalfWidth()
-                  - this.getDropdownParentPadding(this.props.positionedOn)
-                  + this.props.spaceAroundGrid
-      space = space < 0 ? 0 : space
-
-      if (this.props.positionedOn == 'right') {
-        horizontalPosition = { right: space + 'px' }
-      } else {
-        horizontalPosition = { left: space + 'px' }
-      }
-    }
-
-    return objectAssign(positionStyles, horizontalPosition)
-  }
-
-  getArrowPosition() {
-    const space = this.getDropdownParentWidth()
-                  - this.getButtonImageHalfWidth()
-                  - this.getDropdownParentPadding(this.props.positionedOn)
-                  + this.props.spaceAroundGrid
-
-    if (this.props.positionedOn == 'right') {
-      return { right: space + 'px' }
-    }
-
-    return { left: space + 'px' }
+    this.toggle(!this.state.isExpanded)
   }
 
   // Rendering
-
 
   renderButtonContentElement() {
     if (this.state.isExpanded) {
@@ -188,7 +170,9 @@ class Dropdown extends React.Component {
     return this.props.buttonContentOnCollapsed
   }
 
-  renderDropdownButton() {
+  renderButton() {
+    if (this.props.button) return this.props.button
+
     return (
       <DropdownButton ref="dropdownButton"
                       className={ this.props.buttonClassName }
@@ -200,31 +184,10 @@ class Dropdown extends React.Component {
     )
   }
 
-  renderButtonImageWithTextAndBadge() {
-    return (
-      <ButtonImageWithTextAndBadge
-        ref="buttonImageWithTextAndBadge"
-        className={ this.props.buttonClassName }
-        id={ this.props.buttonId }
-        isExpanded={ this.state.isExpanded }
-        onClick={ this.handleButtonClick.bind(this) }
-        srcImg={ this.props.srcImg }
-        widthImg={ this.props.widthImg }
-        heightImg={ this.props.heightImg }
-        altImg={ this.props.altImg }
-        text={ this.props.text }
-        title={ this.props.title }
-        notifications={ this.props.notifications }
-        textClassName={ this.props.textClassName } />
-    )
-  }
-
-  renderArrow(arrowPosition: false) {
+  renderArrow() {
     if (!this.props.dropdownListArrow) return
 
-    const positionDefault = { position: 'absolute', top: 0 }
-    const position = arrowPosition ? this.getArrowPosition() : { right: '50%' }
-    const style = objectAssign(positionDefault, position)
+    const style = this.getArrowPosition()
 
     return (
       <span ref="arrow"
@@ -234,39 +197,29 @@ class Dropdown extends React.Component {
     )
   }
 
-  render() {
-    const dropdownClass = {
-      'is-expanded': this.state.isExpanded,
-      'k-Dropdown--asReference': this.isSelfReference(),
-    }
 
+  render() {
+    const button = this.renderButton()
     const dropdownClassName = classNames(
       'k-Dropdown',
-      dropdownClass,
+      {
+        'is-expanded': this.state.isExpanded,
+        'k-Dropdown--asReference': this.isSelfReference(),
+      },
       this.props.className
     )
 
-    const style = this.getContentPosition()
-    const arrowPosition = parseInt(style.right) == 0 ||
-                          parseInt(style.left) == 0
-
-    let renderButton = this.renderDropdownButton()
-
-    if (this.props.buttonTemplate == 'ButtonImageWithTextAndBadge') {
-      renderButton = this.renderButtonImageWithTextAndBadge()
-    }
-
     return(
       <div ref="dropdown" className={ dropdownClassName }>
-        { renderButton }
+        { button }
         <nav ref="dropdownContent"
              className="k-Dropdown__content"
-             style={ style }
+             style={ this.getContentPosition() }
              role="navigation"
              aria-hidden="true"
              aria-labelledby={ this.props.buttonId }>
           { this.props.dropdownContent }
-          { this.renderArrow(arrowPosition) }
+          { this.renderArrow() }
         </nav>
       </div>
     );
@@ -274,41 +227,36 @@ class Dropdown extends React.Component {
 }
 
 Dropdown.propTypes = {
+  isExpanded: React.PropTypes.bool,
+  positionedWith: React.PropTypes.func,
   positionedWithBorder: React.PropTypes.bool,
   positionedOn: React.PropTypes.string,
-  buttonTemplate: React.PropTypes.string,
+  notifications: React.PropTypes.number,
   refreshEvents: React.PropTypes.array,
-  dropdownList: React.PropTypes.array,
+  onPositionUpdate: React.PropTypes.func,
 }
 
 Dropdown.defaultProps = {
-  // This prop is used to fetch the correct height of the reference element
-  // for the dropdown position.
+  // Take border into account to compute reference element height.
   positionedWithBorder: true,
 
-  // This prop is used to fix the dropdown on left or right.
+  // Fix the dropdown on the left or on the right.
   positionedOn: 'left', // 'left' | 'right'
 
-  // This prop is used to render with component 'ButtonImageWithTextAndBadger'
-  // or 'DropdownButton'
-  buttonTemplate: 'DropdownButton',
+  // Custom horizontal position for content and content arrow.
+  contentHorizontalPositionValue: '0',
+  arrowHorizontalPositionValue: '50%',
 
   // Button settings
   buttonContentOnExpanded: 'Close me',
   buttonContentOnCollapsed: 'Expand me',
 
-  spaceAroundGrid: 0,
-
-  // Value of notifications to show badge.
-  notifications: 0,
-
-  // This prop is used to update the reference element height when a
-  // javascript event is triggered on the window object.
+  // List of events that will trigger the update of the reference element
+  // height.
   refreshEvents: [], // eg. ['resize']
 
-  // Dropdown list settings
-  dropdownListArrow: false,
-  dropdownList: [],
+  // Called when one of the `refreshEvents` is triggered.
+  onPositionUpdate: function() {},
 }
 
 export default Dropdown

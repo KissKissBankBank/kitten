@@ -1,8 +1,9 @@
-import defaultProps from 'kitten/hoc/default-props'
 import React from 'react'
-import Dropdown from 'kitten/components/dropdowns/dropdown'
+import defaultProps from 'kitten/hoc/default-props'
 import ExternalRichLink from 'kitten/components/links/external-rich-link'
+import Dropdown from 'kitten/components/dropdowns/dropdown'
 import SimpleList from 'kitten/components/lists/simple-list'
+import UserMenu from 'kitten/components/dropdowns/user-menu'
 
 // KarlSimpleDropdown
 const dropdownList = [
@@ -58,49 +59,43 @@ const KarlPlatformSwitch = defaultProps(Dropdown, {
                                list={ platformSwitchDropdownList } />
 })
 
-// KarlUserMenuDropdown
-const userMenuDropdownList = [
-  <a className="k-UserMenu__item" href="#">Mon profil</a>,
-  <a className="k-UserMenu__item" href="#">Mes projets</a>,
-  <a className="k-UserMenu__item" href="#">Mes contributions</a>,
-  <a className="k-UserMenu__item" href="#">Mes messages</a>,
-  <a className="k-UserMenu__item
-                k-UserMenu__item--secondary
-                k-UserMenu__separation"
-     href="#">
-    Admin
-  </a>,
-  <a className="k-UserMenu__item k-UserMenu__item--secondary" href="#">
-    Rapports
-  </a>,
-  <a className="k-UserMenu__item k-UserMenu__separation" href="#">
-    Profil
-  </a>,
-  <a className="k-UserMenu__item" href="#">Réglages</a>,
-  <a className="k-UserMenu__item" href="#">Déconnexion</a>,
-]
-
-const KarlUserMenuDropdown = defaultProps(Dropdown, {
+const KarlUserMenuDropdown = defaultProps(UserMenu, {
+  // Position
   positionedWith: () => document.getElementById('k-UserMenuDropdown'),
   positionedWithBorder: false,
-  positionedOn: 'right',
-
-  notifications: 42,
   spaceAroundGrid: 20,
-  buttonId: 'k-UserMenu',
-  buttonTemplate: 'ButtonImageWithTextAndBadge',
-  srcImg: 'https://placekitten.com/g/100/100',
-  widthImg: 100,
-  heightImg: 100,
-  altImg: 'Alt Firstname',
-  text: 'Firstname Lastname',
-  title: 'Profil',
-  textClassName: 'k-Header__userMenuText--withEllipsis',
 
-  dropdownListArrow: (<span className="k-UserMenu__arrow" />),
-  dropdownContent: <SimpleList className="k-UserMenu"
-                               role="menubar"
-                               list={ userMenuDropdownList } />
+  // Button
+  buttonId: 'k-UserMenu',
+  buttonImgSrc: 'https://placekitten.com/g/100/100',
+  buttonImgWidth: 100,
+  buttonImgHeight: 100,
+  buttonImgAlt: 'Alt Firstname',
+  buttonText: 'Firstname Lastname',
+  buttonTitle: 'Profil',
+  buttonNotifications: 42,
+
+  // Dropdown content
+  dropdownList: [
+    <a className="k-UserMenu__item" href="#">Mon profil</a>,
+    <a className="k-UserMenu__item" href="#">Mes projets</a>,
+    <a className="k-UserMenu__item" href="#">Mes contributions</a>,
+    <a className="k-UserMenu__item" href="#">Mes messages</a>,
+    <a className="k-UserMenu__item
+                  k-UserMenu__item--secondary
+                  k-UserMenu__separation"
+       href="#">
+      Admin
+    </a>,
+    <a className="k-UserMenu__item k-UserMenu__item--secondary" href="#">
+      Rapports
+    </a>,
+    <a className="k-UserMenu__item k-UserMenu__separation" href="#">
+      Profil
+    </a>,
+    <a className="k-UserMenu__item" href="#">Réglages</a>,
+    <a className="k-UserMenu__item" href="#">Déconnexion</a>,
+  ],
 })
 
 export { KarlSimpleDropdown, KarlPlatformSwitch, KarlUserMenuDropdown }
