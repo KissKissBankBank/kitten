@@ -7,9 +7,6 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 Breaking changes:
 - Update `k-SearchInput` molecule:
   * Use a `<button>` tag instead of an `<input type="submit">`.
-  * Use an svg tag instead of an svg background image.
-
-Breaking changes:
 - Update `Dropdown` component:
   * Add `dropdownContent` prop instead of generating a list inside the
     `Dropdown` component.
@@ -27,6 +24,9 @@ Breaking changes:
     - `title`
     - `textClassName`
   * Add new callback in `Dropdown` component: `onPositionUpdate`.
+
+Features:
+- Add new React component `Search`.
 
 ## [v0.14.0] - 2016-10-31
 
