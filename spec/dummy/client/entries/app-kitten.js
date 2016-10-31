@@ -13,6 +13,7 @@ import DropdownButton from 'kitten/components/dropdowns/dropdown-button'
 import Slider from 'kitten/components/form/slider'
 import Select from 'react-select'
 import SelectWithState from 'kitten/components/form/select-with-state'
+import Search from 'kitten/components/form/search'
 
 // Icons
 import GrabberIcon from 'kitten/components/icons/grabber-icon'
@@ -47,6 +48,7 @@ ReactOnRails.register({
   GrabberIcon,
   LoanSimulator,
   Slider,
+  Search,
   Select,
   SelectWithState,
   SimpleList,
