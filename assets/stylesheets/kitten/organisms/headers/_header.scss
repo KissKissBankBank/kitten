@@ -142,8 +142,7 @@
   }
 
   .k-Header__signup,
-  .k-Header__logged,
-  .k-Header__search {
+  .k-Header__logged {
     @include k-media-max('xs') {
       display: none;
     }
