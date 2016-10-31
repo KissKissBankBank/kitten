@@ -11,21 +11,12 @@ class Search extends React.Component {
       hover: false
     }
 
+    // These listeners help us to handle the text input display depending on the
+    // submit input state (as we cannot handle it directly in css).
     this.handleSubmitFocus = this.handleSubmitFocus.bind(this)
     this.handleSubmitBlur = this.handleSubmitBlur.bind(this)
     this.handleSubmitMouseOver = this.handleSubmitMouseOver.bind(this)
     this.handleSubmitMouseOut = this.handleSubmitMouseOut.bind(this)
-  }
-
-  componentDidMount() {
-    if (domElementHelper.canUseDom()) {
-      // These listeners help us to handle the text input display depending on
-      // the submit input state (as we cannot handle it directly in css).
-      this.refs.submit.addEventListener('focus', this.handleSubmitFocus)
-      this.refs.submit.addEventListener('blur', this.handleSubmitBlur)
-      this.refs.submit.addEventListener('mouseover', this.handleSubmitMouseOver)
-      this.refs.submit.addEventListener('mouseout', this.handleSubmitMouseOut)
-    }
   }
 
   // Component listeners callbacks.
@@ -63,17 +54,19 @@ class Search extends React.Component {
                   action={ this.props.actionUrl }
                   acceptCharset="UTF-8"
                   method="get">
-        <input ref="input"
-               className={ inputClassName }
+        <input className={ inputClassName }
                type="text"
                id={ this.props.inputId }
                name={ this.props.inputName }
                placeholder={ this.props.inputPlaceholder } />
 
-        <button ref="submit"
-                type="submit"
+        <button type="submit"
                 aria-label={ this.props.submitLabel }
-                className="k-SearchInput__submit">
+                className="k-SearchInput__submit"
+                onFocus={ this.handleSubmitFocus }
+                onBlur={ this.handleSubmitBlur }
+                onMouseOver={ this.handleSubmitMouseOver }
+                onMouseOut={ this.handleSubmitMouseOut }>
           <svg width="17"
                height="17"
                viewBox="-0.7 -0.7 18 18"
