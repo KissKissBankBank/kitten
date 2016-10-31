@@ -57,39 +57,40 @@ class Search extends React.Component {
       { 'is-hover': this.state.hover },
     )
 
-    return (<form className="k-SearchInput"
+    return (
+      <form className="k-SearchInput"
                   role="search"
                   action={ this.props.actionUrl }
                   acceptCharset="UTF-8"
                   method="get">
-      <input ref="input"
-             className={ inputClassName }
-             type="text"
-             id={ this.props.inputId }
-             name={ this.props.inputName }
-             placeholder={ this.props.inputPlaceholder } />
+        <input ref="input"
+               className={ inputClassName }
+               type="text"
+               id={ this.props.inputId }
+               name={ this.props.inputName }
+               placeholder={ this.props.inputPlaceholder } />
 
-      <button ref="submit"
-              type="submit"
-              aria-label={ this.props.submitLabel }
-              className="k-SearchInput__submit">
-        <svg width="17"
-             height="17"
-             viewBox="-0.7 -0.7 18 18"
-             xmlns="http://www.w3.org/2000/svg">
-          <circle className="k-SearchInput__submit__svgCircle"
-                  cx="7"
-                  cy="7"
-                  r="7"
-                  stroke="#333"
-                  strokeWidth="1.1"
-                  fill="none" />
-          <path className="k-SearchInput__submit__svgPath"
-                fill="#333"
-                d="M13 11 L17 15 L15.5 16.5 L11.5 12.7z" />
-        </svg>
-      </button>
-    </form>)
+        <button ref="submit"
+                type="submit"
+                aria-label={ this.props.submitLabel }
+                className="k-SearchInput__submit">
+          <svg width="17"
+               height="17"
+               viewBox="-0.7 -0.7 18 18"
+               xmlns="http://www.w3.org/2000/svg">
+            <circle className="k-SearchInput__submit__svgCircle"
+                    cx="7"
+                    cy="7"
+                    r="7"
+                    stroke="#333"
+                    strokeWidth="1.1"
+                    fill="none" />
+            <path className="k-SearchInput__submit__svgPath"
+                  fill="#333"
+                  d="M13 11 L17 15 L15.5 16.5 L11.5 12.7z" />
+          </svg>
+        </button>
+      </form>)
   }
 }
 
