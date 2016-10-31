@@ -3,53 +3,43 @@
 /// @group tours
 ///
 /// @example scss - usage
-///
 ///   @include k-Tour;
 ///
 /// @example html
-///
-///   <div id="tour" class="k-Tour">
-///     <div class="k-Tour__container">
-///       <span class="k-Tour__close"></span>
-///       <svg> … </svg>
-///     </div>
-///     <div class="k-Tour__content">
-///       <p class="k-Tour__title"> … </p>
+/// <div class="k-Tour"
+///      role="dialog"
+///      id="mytour"
+///      aria-hidden="true"
+///      aria-labelledby="dialogtitle">
+///   <div class="k-Tour__container">
+///     <svg> … </svg>
+///   </div>
+///   <div class="k-Tour__content">
+///     <p id="dialogtitle" class="k-Tour__title"> … </p>
 ///       <p class="k-Tour__text"> … </p>
-///       <div class="k-Tour__navigation">
-///         <p class="k-Tour__numbering"> … </p>
-///         <button class="k-Button
-///                        k-Button--default
-///                        k-ButtonIconWords
-///                        k-ButtonIconWords--default
-///                        k-ButtonIconWords--tiny
-///                        k-Tour--button"
-///                disabled>
-///         <span class="k-ButtonIcon
-///                      k-ButtonIcon--default
-///                      k-ButtonIcon--tiny
-///                      is-disabled">
-///           <svg class="k-ButtonIcon__svg" … ></svg>
-///         </span>
+///     <div class="k-Tour__navigation">
+///       <p class="k-Tour__numbering"> … </p>
+///       <button title="Précédent" class="k-Tour__button
+///                                        k-Button
+///                                        k-Button--default
+///                                        k-Button--tiny
+///                                        k-Button--icon"
+///                                        disabled>
+///         <svg class="k-Button__icon" … ></svg>
 ///         Prec
 ///       </button>
-///       <button class="k-Button
-///                      k-Button--default
-///                      k-ButtonIconWords
-///                      k-ButtonIconWords--default
-///                      k-ButtonIconWords--tiny
-///                      k-ButtonIconWords--iconRight
-///                      k-Tour--button">
+///       <button title="Suivant" class="k-Tour--button
+///                                      k-Button
+///                                      k-Button--default
+///                                      k-Button--tiny
+///                                      k-Button--icon
+///                                      k-Button--iconRight">
 ///         Suiv
-///         <span class="k-ButtonIcon
-///                      k-ButtonIcon--default
-///                      k-ButtonIcon--tiny">
-///           <svg class="k-ButtonIcon__svg" … ></svg>
-///         </span>
+///         <svg class="k-ButtonIcon__svg" … ></svg>
 ///       </button>
-///       </div>
 ///     </div>
 ///   </div>
+/// </div>
 
 @mixin k-Tour {
   $background-color: #fff;
@@ -72,7 +62,7 @@
 
   .k-Tour__container {
     display: flex;
-    margin: $margin-container $margin-container 1.87rem $margin-container;
+    margin: $margin-container $margin-container k-px-to-rem(30px) $margin-container;
   }
 
   .k-Tour__svg {
@@ -105,15 +95,15 @@
     margin-top: auto;
   }
 
-  .k-Tour__numbering{
+  .k-Tour__numbering {
     @include k-typographyFont('source-sans-semi-bold');
     @include k-typographyFontSize(-1);
 
     margin: 0;
-    padding-right: 2.4rem;
+    padding-right: k-px-to-rem(78px);
   }
 
   .k-Tour__button {
-    margin-right: .62rem;
+    margin-right: k-px-to-rem(10px);
   }
 }
