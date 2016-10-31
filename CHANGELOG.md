@@ -2,7 +2,8 @@
 
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-## unreleased
+## [unreleased]
+
 Breaking changes:
 - Update `k-SearchInput` molecule:
   * Use a `<button>` tag instead of an `<input type="submit">`.
@@ -19,8 +20,6 @@ Features:
 Fixes:
 - Fix `SelectWithState` component onChange callback (remove all underscores in
   component props names).
-
-Fixes:
 - Rename `.k-ButtonImageWithText__text--withoutMarginRight` to
          `.k-ButtonImageWithText__text--withoutPaddingRight`
 
