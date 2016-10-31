@@ -19,7 +19,7 @@ class Search extends React.Component {
 
   componentDidMount() {
     if (domElementHelper.canUseDom()) {
-      // These listeners helps us to handle the text input display depending on
+      // These listeners help us to handle the text input display depending on
       // the submit input state (as we cannot handle it directly in css).
       this.refs.submit.addEventListener('focus', this.handleSubmitFocus)
       this.refs.submit.addEventListener('blur', this.handleSubmitBlur)
