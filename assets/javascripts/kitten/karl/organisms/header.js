@@ -3,8 +3,30 @@ import React from 'react'
 import Dropdown from 'kitten/components/dropdowns/dropdown'
 import ExternalRichLink from 'kitten/components/links/external-rich-link'
 import objectAssign from 'core-js/library/fn/object/assign'
+import SimpleList from 'kitten/components/lists/simple-list'
 
 // Header platform switch common props
+const platformSwitchDropdownList = [
+  <ExternalRichLink
+    className="k-PlatformSwitch__item"
+    title="Se rendre sur le site de KissKissBankBank">
+    <img src="/assets/brand/kisskissbankbank.svg"
+         alt="Logo de KissKissBankBank" />
+  </ExternalRichLink>,
+  <ExternalRichLink
+    className="k-PlatformSwitch__item"
+    title="Se rendre sur le site de hellomerci">
+    <img src="/assets/brand/hellomerci.svg"
+         alt="Logo de hellomerci" />
+  </ExternalRichLink>,
+  <ExternalRichLink
+    className="k-PlatformSwitch__item"
+    title="Se rendre sur le site de LENDOPOLIS">
+    <img src="/assets/brand/lendopolis.svg"
+         alt="Logo de LENDOPOLIS" />
+  </ExternalRichLink>,
+]
+
 const unloggedHeaderPlatformSwitchButton = (<svg
     className="k-ButtonIcon__svg"
     viewBox="0 0 10 7"
@@ -25,30 +47,10 @@ const platformSwitchProps = {
   buttonContentOnCollapsed: unloggedHeaderPlatformSwitchButton,
 
   refreshEvents: ['resize', 'karl:element#header:classToggled'],
-  dropdownListClassName: 'k-PlatformSwitch k-PlatformSwitch--withoutBorderTop',
-  dropdownList: [
-    <ExternalRichLink
-      className="k-PlatformSwitch__item"
-      title="Se rendre sur le site de KissKissBankBank">
-      <img className="k-ExternalRichLink__image"
-           src="/assets/brand/kisskissbankbank.svg"
-           alt="Logo de KissKissBankBank" />
-    </ExternalRichLink>,
-    <ExternalRichLink
-      className="k-PlatformSwitch__item"
-      title="Se rendre sur le site de hellomerci">
-      <img className="k-ExternalRichLink__image"
-           src="/assets/brand/hellomerci.svg"
-           alt="Logo de hellomerci" />
-    </ExternalRichLink>,
-    <ExternalRichLink
-      className="k-PlatformSwitch__item"
-      title="Se rendre sur le site de LENDOPOLIS">
-      <img className="k-ExternalRichLink__image"
-           src="/assets/brand/lendopolis.svg"
-           alt="Logo de LENDOPOLIS" />
-    </ExternalRichLink>
-  ],
+  dropdownContent: <SimpleList className="k-PlatformSwitch
+                                          k-PlatformSwitch--withoutBorderTop"
+                               role="menubar"
+                               list={ platformSwitchDropdownList } />
 }
 
 // Unlogged header dropdown
@@ -71,6 +73,27 @@ const KarlLoggedHeaderPlatformSwitch = defaultProps(
   loggedPlatformSwitchProps
 )
 
+const userMenuDropdownList = [
+  <a className="k-UserMenu__item" href="#">Mon profil</a>,
+  <a className="k-UserMenu__item" href="#">Mes projets</a>,
+  <a className="k-UserMenu__item" href="#">Mes contributions</a>,
+  <a className="k-UserMenu__item" href="#">Mes messages</a>,
+  <a className="k-UserMenu__item
+                k-UserMenu__item--secondary
+                k-UserMenu__separation"
+     href="#">
+    Admin
+  </a>,
+  <a className="k-UserMenu__item k-UserMenu__item--secondary" href="#">
+    Rapports
+  </a>,
+  <a className="k-UserMenu__item k-UserMenu__separation" href="#">
+    Profil
+  </a>,
+  <a className="k-UserMenu__item" href="#">Réglages</a>,
+  <a className="k-UserMenu__item" href="#">Déconnexion</a>,
+]
+
 const KarlLoggedHeaderUserMenu = defaultProps(Dropdown, {
   positionedWith: () => document.getElementById('header-logged'),
   positionedWithBorder: false,
@@ -89,28 +112,10 @@ const KarlLoggedHeaderUserMenu = defaultProps(Dropdown, {
   textClassName: 'k-Header__userMenuText--withEllipsis',
 
   refreshEvents: ['resize', 'karl:element#header:classToggled'],
-  dropdownListClassName: 'k-UserMenu',
   dropdownListArrow: (<span className="k-UserMenu__arrow" />),
-  dropdownList: [
-    <a className="k-UserMenu__item" href="#">Mon profil</a>,
-    <a className="k-UserMenu__item" href="#">Mes projets</a>,
-    <a className="k-UserMenu__item" href="#">Mes contributions</a>,
-    <a className="k-UserMenu__item" href="#">Mes messages</a>,
-    <a className="k-UserMenu__item
-                  k-UserMenu__item--secondary
-                  k-UserMenu__separation"
-       href="#">
-      Admin
-    </a>,
-    <a className="k-UserMenu__item k-UserMenu__item--secondary" href="#">
-      Rapports
-    </a>,
-    <a className="k-UserMenu__item k-UserMenu__separation" href="#">
-      Profil
-    </a>,
-    <a className="k-UserMenu__item" href="#">Réglages</a>,
-    <a className="k-UserMenu__item" href="#">Déconnexion</a>
-  ],
+  dropdownContent: <SimpleList className="k-UserMenu"
+                               role="menubar"
+                               list={ userMenuDropdownList } />
 })
 
 export { KarlUnloggedHeaderPlatformSwitch,
