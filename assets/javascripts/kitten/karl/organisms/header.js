@@ -47,7 +47,6 @@ const platformSwitchProps = {
   buttonContentOnCollapsed: unloggedHeaderPlatformSwitchButton,
 
   refreshEvents: ['resize', 'karl:element#header:classToggled'],
-  dropdownListClassName: 'k-PlatformSwitch k-PlatformSwitch--withoutBorderTop',
   dropdownContent: <SimpleList className="k-PlatformSwitch
                                           k-PlatformSwitch--withoutBorderTop"
                                role="menubar"

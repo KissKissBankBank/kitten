@@ -13,7 +13,6 @@ const dropdownList = [
 
 const KarlSimpleDropdown = defaultProps(Dropdown, {
   buttonClassName: 'karl-Dropdown--default__button',
-  dropdownListClassName: 'karl-Dropdown--default',
   dropdownContent: <SimpleList className="karl-Dropdown--default"
                                role="menubar"
                                list={ dropdownList } />
@@ -54,7 +53,6 @@ const KarlPlatformSwitch = defaultProps(Dropdown, {
   buttonContentOnExpanded: karlPlatformSwitchButtonContent,
   buttonContentOnCollapsed: karlPlatformSwitchButtonContent,
 
-  dropdownListClassName: 'k-PlatformSwitch',
   dropdownContent: <SimpleList className="k-PlatformSwitch"
                                role="menubar"
                                list={ platformSwitchDropdownList } />
