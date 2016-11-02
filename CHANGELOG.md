@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [v0.15.0] - 2016-10-02
+
 Breaking changes:
 - Update `k-SearchInput` molecule:
   * Use a `<button>` tag instead of an `<input type="submit">`.
