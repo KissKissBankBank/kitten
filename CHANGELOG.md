@@ -4,6 +4,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [v0.15.1] - 2016-10-02
+
+Fixes:
+- Small fixes on header:
+  * Fix `k-TextInput` and `k-SearchInput` sizes.
+  * Update `Search` component examples.
+
 ## [v0.15.0] - 2016-10-02
 
 Breaking changes:
