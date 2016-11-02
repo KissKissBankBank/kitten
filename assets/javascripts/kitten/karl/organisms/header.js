@@ -11,19 +11,22 @@ const platformSwitchDropdownList = [
   <ExternalRichLink
     className="k-PlatformSwitch__item"
     title="Se rendre sur le site de KissKissBankBank">
-    <img src="/assets/brand/kisskissbankbank.svg"
+    <img className="k-ExternalRichLink__image"
+         src="/assets/brand/kisskissbankbank.svg"
          alt="Logo de KissKissBankBank" />
   </ExternalRichLink>,
   <ExternalRichLink
     className="k-PlatformSwitch__item"
     title="Se rendre sur le site de hellomerci">
-    <img src="/assets/brand/hellomerci.svg"
+    <img className="k-ExternalRichLink__image"
+         src="/assets/brand/hellomerci.svg"
          alt="Logo de hellomerci" />
   </ExternalRichLink>,
   <ExternalRichLink
     className="k-PlatformSwitch__item"
     title="Se rendre sur le site de LENDOPOLIS">
-    <img src="/assets/brand/lendopolis.svg"
+    <img className="k-ExternalRichLink__image"
+         src="/assets/brand/lendopolis.svg"
          alt="Logo de LENDOPOLIS" />
   </ExternalRichLink>,
 ]
