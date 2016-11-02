@@ -51,7 +51,6 @@ const platformSwitchProps = {
   dropdownListClassName: 'k-PlatformSwitch k-PlatformSwitch--withoutBorderTop',
   dropdownContent: <SimpleList className="k-PlatformSwitch
                                           k-PlatformSwitch--withoutBorderTop"
-                      labelledby="test"
                       role="menubar"
                       list={ platformSwitchDropdownList } />
 }
@@ -115,7 +114,6 @@ const KarlLoggedHeaderUserMenu = defaultProps(UserMenu, {
   buttonNotifications: 42,
 
   // Dropdown content
-  labelledby: 'User menu',
   dropdownList: [
     <a className="k-UserMenu__item" href="#">Mon profil</a>,
     <a className="k-UserMenu__item" href="#">Mes projets</a>,

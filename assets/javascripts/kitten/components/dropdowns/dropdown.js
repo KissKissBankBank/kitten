@@ -213,7 +213,9 @@ class Dropdown extends React.Component {
         { button }
         <div ref="dropdownContent"
              className="k-Dropdown__content"
-             style={ this.getContentPosition() }>
+             style={ this.getContentPosition() }
+             aria-hidden="true"
+             aria-labelledby={ this.props.buttonId }>
           { this.props.dropdownContent }
           { this.renderArrow() }
         </div>

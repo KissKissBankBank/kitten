@@ -15,9 +15,7 @@ class SimpleList extends React.Component {
     const defaultItem = ('No choice')
 
     return(
-      <nav role="navigation"
-           aria-hidden="true"
-           aria-labelledby={ this.props.labelledby }>
+      <nav role="navigation">
         <ul { ...others }>
           { items.length ? items : defaultItem }
         </ul>
