@@ -7,8 +7,8 @@
 ///
 /// @example html
 ///   <div class="k-PhoneDropdown">
-///     <p class="k-PhoneDropdown__text--small">…</p>
-///     <p class="k-PhoneDropdown__text--strong">…</p>
+///     <p class="k-PhoneDropdown__text k-PhoneDropdown__text--small">…</p>
+///     <p class="k-PhoneDropdown__text k-PhoneDropdown__text--strong">…</p>
 ///   </div>
 
 @mixin k-PhoneDropdown {
@@ -16,11 +16,21 @@
   .k-PhoneDropdown {
     background: map-get($k-colors, 'background-2');
     border: 1px solid map-get($k-colors, 'line-1');
-    padding: 0 k-px-to-rem(30px);
+    padding: k-px-to-rem(10px) k-px-to-rem(30px);
     text-align: center;
 
     @include k-typographyFontSize(0);
     @include k-typographyFont('source-sans-light');
+
+    @include k-media-xs {
+      border-left: none;
+      border-right: none;
+    }
+  }
+
+  .k-PhoneDropdown__text {
+    margin-top: k-px-to-rem(5px);
+    margin-bottom: k-px-to-rem(5px);
   }
 
   .k-PhoneDropdown__text--small {
