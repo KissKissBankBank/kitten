@@ -14,8 +14,8 @@
 ///            name="foobar"
 ///            placeholder="Foobar" />
 ///     <button type="submit" aria-label="Search" class="k-SearchInput__submit">
-///       <svg width="17"
-///            height="17"
+///       <svg width="14"
+///            height="14"
 ///            viewBox="-0.7 -0.7 18 18"
 ///            xmlns="http://www.w3.org/2000/svg">
 ///         <circle class="k-SearchInput__submit__svgCircle"
@@ -33,8 +33,11 @@
 
 @mixin k-SearchInput {
   // Size
-  $icon-size: k-px-to-rem(17px);
-  $submit-horizontal-padding: k-px-to-rem(12px);
+  $icon-size: k-px-to-rem(14px);
+  $submit-horizontal-padding: k-px-to-rem(13px);
+  $input-right-padding: $submit-horizontal-padding * 2 +
+                        $icon-size +
+                        k-px-to-rem(15px);
 
   // Colors
 
@@ -69,7 +72,7 @@
 
   .k-SearchInput__input {
     width: k-px-to-rem(160px);
-    padding-right: k-px-to-rem(37px);
+    padding-right: $input-right-padding;
 
     &:focus ~ .k-SearchInput__submit {
       border-left-color: $border-focus;
