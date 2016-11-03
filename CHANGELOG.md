@@ -5,7 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 Features:
 - Add modifier `k-PlatformSwitch--withoutBorderTop` on `k-PlatformSwitch`.
-- Add component `k-Tour`.
+- Add component `k-Popover`.
 - Update KissKissBankBank and hellomerci svg logos.
 - Update `k-Grid` max-width from `1420px` to `1440px`.
 
