@@ -297,6 +297,17 @@
     }
   }
 
+  // Rotate
+    .k-ButtonIcon__svgRotate {
+      transition: all 0.4s ease;
+      -webkit-transition: all 0.4s ease;
+
+      &:hover {
+        transform: rotate(-90deg);
+        -webkit-transform: rotate(-90deg);
+      }
+    }
+
   // Colors modifiers.
 
   .k-ButtonIcon--default {
