@@ -235,7 +235,7 @@
   }
 
   .k-Button__icon,
-  .k-Button__iconTiny {
+  .k-Button__icon--tiny {
     @include k-buttonSvg(
       $default-colors,
       'k-Button--default',
@@ -314,7 +314,7 @@
       }
     }
 
-    .k-Button__iconTiny {
+    .k-Button__icon--tiny {
       @include k-buttonRounded(
         $button-size-tiny,
         $icon-width-tiny,
@@ -326,7 +326,7 @@
       height: $icon-height-tiny;
       transition: fill $transition-speed;
 
-      .k-Button__iconTiny__stroke {
+      .k-Button__icon--tiny__stroke {
         transition: stroke $transition-speed;
       }
     }

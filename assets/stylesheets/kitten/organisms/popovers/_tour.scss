@@ -43,17 +43,21 @@
 
 @mixin k-Tour {
 
+  // Btn animate transition
+  $animation-duration: .4s;
+
   .k-Tour__popover__svg {
     display: flex;
     align-items: center;
   }
 
-  .k-Tour__popover__svgColor {
+  .k-Tour__popover__svgColor--primary {
     fill: map-get($k-colors, 'primary-1');
   }
 
   .k-Tour__popover__content {
     @include k-typographyFont('source-sans-light');
+
     display: flex;
     flex-direction: column;
     flex: 1;
@@ -64,12 +68,14 @@
 
   .k-Tour__popover__title {
     @include k-typographyFontSize(2);
+
     margin-top: 0;
     margin-bottom: 0;
   }
 
   .k-Tour__popover__text {
     @include k-typographyFontSize(-1);
+
     margin-top: k-px-to-rem(5px);
   }
 
@@ -89,8 +95,8 @@
   .k-Tour__popover__button {
     margin-right: k-px-to-rem(10px);
 
-    transition: all 0.4s ease;
-    -webkit-transition: all 0.4s ease;
+    transition: all $animation-duration ease;
+    -webkit-transition: all $animation-duration ease;
 
     &:hover {
       transform: translateX(-2px);
@@ -103,11 +109,11 @@
     }
   }
 
-  .k-Tour__popover__buttonRight {
+  .k-Tour__popover__button--right {
     margin-right: k-px-to-rem(10px);
 
-    transition: all 0.4s ease;
-    -webkit-transition: all 0.4s ease;
+    transition: all $animation-duration ease;
+    -webkit-transition: all $animation-duration ease;
 
     &:hover {
       transform: translateX(2px);
