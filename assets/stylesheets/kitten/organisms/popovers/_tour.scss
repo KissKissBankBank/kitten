@@ -96,6 +96,11 @@
       transform: translateX(-2px);
       -webkit-transform: translateX(-2px);
     }
+
+    &:disabled {
+      transform: none;
+      -webkit-transform: none;
+    }
   }
 
   .k-Tour__popover__buttonRight {
@@ -107,6 +112,11 @@
     &:hover {
       transform: translateX(2px);
       -webkit-transform: translateX(2px);
+    }
+
+    &:disabled {
+      transform: none;
+      -webkit-transform: none;
     }
   }
 }
