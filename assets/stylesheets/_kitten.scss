@@ -60,7 +60,8 @@ $k-module: null;
 @import 'kitten/organisms/dropdowns/dropdown';
 @import 'kitten/organisms/headers/header';
 @import 'kitten/organisms/simulators/loan-simulator';
-@import 'kitten/organisms/tours/tour';
+@import 'kitten/organisms/popovers/popover';
+@import 'kitten/organisms/popovers/tour';
 
 // Utilities
 @import 'kitten/utilities/text/align';
