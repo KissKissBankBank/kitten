@@ -198,6 +198,9 @@
   $icon-width: k-px-to-rem(12px);
   $icon-height: k-px-to-rem(14px);
 
+  $icon-width-tiny: k-px-to-rem(10px);
+  $icon-height-tiny: k-px-to-rem(12px);
+
   $transition-speed: .2s;
 
   .k-Button {
@@ -231,7 +234,8 @@
     @include k-buttonColorBase($secondary-on-white-colors);
   }
 
-  .k-Button__icon {
+  .k-Button__icon,
+  .k-Button__iconTiny {
     @include k-buttonSvg(
       $default-colors,
       'k-Button--default',
@@ -289,6 +293,8 @@
     }
   }
 
+// Button--icon
+
   .k-Button--icon {
     display: flex;
 
@@ -304,6 +310,23 @@
       transition: fill $transition-speed;
 
       .k-Button__icon__stroke {
+        transition: stroke $transition-speed;
+      }
+    }
+
+    .k-Button__iconTiny {
+      @include k-buttonRounded(
+        $button-size-tiny,
+        $icon-width-tiny,
+        $icon-height-tiny
+      );
+
+      display: block;
+      width: $icon-width-tiny;
+      height: $icon-height-tiny;
+      transition: fill $transition-speed;
+
+      .k-Button__iconTiny__stroke {
         transition: stroke $transition-speed;
       }
     }
