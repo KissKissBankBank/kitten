@@ -279,6 +279,9 @@
 
   $transition-speed: .2s;
 
+  // Btn animate transition
+  $animation-duration: .4s;
+
   .k-ButtonIcon {
     @include k-buttonBase;
     @include k-buttonRounded($button-size, $icon-width, $icon-height);
@@ -298,9 +301,9 @@
   }
 
   // Rotate
-    .k-ButtonIcon__svgRotate {
-      transition: all 0.4s ease;
-      -webkit-transition: all 0.4s ease;
+    .k-ButtonIcon__svg--rotate {
+      transition: all $animation-duration ease;
+      -webkit-transition: all $animation-duration ease;
 
       &:hover {
         transform: rotate(-90deg);
