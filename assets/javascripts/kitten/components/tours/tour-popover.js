@@ -86,7 +86,7 @@ class TourPopover extends React.Component {
            role="dialog"
            aria-hidden="true"
            aria-labelledby="dialogtitle">
-        <div className="k-Popover__container">
+        <div className="k-Popover__container k-Tour__popover__container">
           <div className="k-Tour__popover__illustration">
             { this.props.illustration }
           </div>

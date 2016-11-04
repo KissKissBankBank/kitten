@@ -55,10 +55,16 @@
   .k-Tour__popover__illustration {
     display: flex;
     align-items: center;
+    justify-content: center;
+    width: k-px-to-rem(80px);
   }
 
   .k-Tour__popover__svg--primary {
     fill: map-get($k-colors, 'primary-1');
+  }
+
+  .k-Tour__popover__container {
+    display: flex;
   }
 
   .k-Tour__popover__content {
