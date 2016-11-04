@@ -81,6 +81,7 @@
 
   .k-Tour__popover__navigation {
     display: flex;
+    justify-content: space-between;
     margin-top: auto;
   }
 
@@ -89,7 +90,10 @@
     @include k-typographyFontSize(-1);
 
     margin: 0;
-    padding-right: k-px-to-rem(78px);
+  }
+
+  .k-Tour__popover__buttons {
+    display: flex;
   }
 
   .k-Tour__popover__button {
