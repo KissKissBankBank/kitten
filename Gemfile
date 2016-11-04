@@ -15,4 +15,4 @@ gem 'foreman'
 gem 'sass'
 
 # Styling a SVG with CSS
-gem 'inline_svg'
+gem 'inline_svg', '> 0.11'
