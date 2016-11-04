@@ -1,0 +1,18 @@
+/// HeaderTour
+///
+/// @group tours
+///
+/// @example scss - usage
+///   @include k-HeaderTour;
+
+@mixin k-HeaderTour {
+  $header-height: 65px;
+  $step-top-position: $header-height + 10px;
+
+  .k-HeaderTour {
+    .k-Popover {
+      position: absolute;
+      top: k-px-to-rem($step-top-position);
+    }
+  }
+}
