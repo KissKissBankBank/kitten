@@ -4,6 +4,7 @@ import Dropdown from 'kitten/components/dropdowns/dropdown'
 import ExternalRichLink from 'kitten/components/links/external-rich-link'
 import SimpleList from 'kitten/components/lists/simple-list'
 import UserMenu from 'kitten/components/dropdowns/user-menu'
+import PhoneDropdown from 'kitten/components/dropdowns/phone-dropdown'
 import objectAssign from 'core-js/library/fn/object/assign'
 
 // Header platform switch common props
@@ -141,48 +142,26 @@ const KarlLoggedHeaderUserMenu = defaultProps(UserMenu, {
 
 // Phone dropdown.
 
-const phoneDropdownButton = (
-  <svg className="k-ButtonIcon__svg"
-       viewBox="0 0 16 18"
-       xmlns="http://www.w3.org/2000/svg">
-    <path d='M3.354 0C2.238 0 .496.498.207 2.268-.2 4.764 1.533 9.09
-      4.047 12.202c2.49 3.084 6.305 5.63 8.86
-      5.792.06.004.12.006.177.006 2.39 0 3.002-3.158
-      2.694-3.548l-4.335-1.94c-.26-.15-.532-.225-.79-.225-.263
-      0-.51.08-.713.24l-.866.63c-.093.034-.194.05-.302.05-1.807
-      0-5.535-4.758-4.636-6.166.006-.008.79-.724.79-.724.387-.313.534-.882.347-1.444L4.275.206C4.18.088
-      3.823 0 3.355 0' />
-  </svg>
-)
-
-const phoneDropdownContent = (
-  <div className="k-PhoneDropdown">
-    <p className="k-PhoneDropdown__text--small
-                  k-PhoneDropdown__text--strong">
-      Vous avez une question&nbsp;?
-    </p>
-    <p>
-      Notre équipe vous répond au&nbsp;: <br/>
-      <strong className="k-PhoneDropdown__text--strong">09 72 32 49 42</strong>
-    </p>
-  </div>
-)
-
-const KarlPhoneDropdown = defaultProps(Dropdown, {
+const KarlPhoneDropdown = defaultProps(PhoneDropdown, {
   // Position
   positionedWith: () => document.getElementById('header-logged'),
-  positionedWithBorder: false,
-  positionedOn: 'right',
-  spaceAroundGrid: 20,
-
-  // Button
-  buttonClassName: 'k-ButtonIcon k-ButtonIcon--default k-ButtonIcon--signup',
-  buttonContentOnExpanded: phoneDropdownButton,
-  buttonContentOnCollapsed: phoneDropdownButton,
 
   // Content
-  dropdownListClassName: '',
-  dropdownContent: phoneDropdownContent,
+  dropdownContent: (
+    <div className="k-PhoneDropdown k-Dropdown__content--large">
+      <p className="k-PhoneDropdown__text
+                    k-PhoneDropdown__text--small
+                    k-PhoneDropdown__text--strong">
+        Vous avez une question&nbsp;?
+      </p>
+      <p className="k-PhoneDropdown__text">
+        Notre équipe vous répond au&nbsp;: <br/>
+        <strong className="k-PhoneDropdown__text--strong">
+          09 72 32 49 42
+        </strong>
+      </p>
+    </div>
+  ),
 
   // Settings
   refreshEvents: ['resize', 'karl:element#header:classToggled']

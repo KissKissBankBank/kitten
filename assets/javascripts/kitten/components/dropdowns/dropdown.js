@@ -107,11 +107,7 @@ class Dropdown extends React.Component {
   getArrowPosition() {
     const defaultPosition = { position: 'absolute', top: 0 }
     const horizontalPositionValue = this.props.arrowHorizontalPositionValue
-    let horizontalPosition = { left: horizontalPositionValue }
-
-    if (!this.hasDefaultHorizontalPosition()) {
-      horizontalPosition = { right: horizontalPositionValue }
-    }
+    let horizontalPosition = horizontalPositionValue
 
     return objectAssign(defaultPosition, horizontalPosition)
   }
@@ -119,11 +115,7 @@ class Dropdown extends React.Component {
   getContentPosition() {
     const defaultPosition = { top: this.state.referenceElementHeight }
     const horizontalPositionValue = this.props.contentHorizontalPositionValue
-    let horizontalPosition = { left: horizontalPositionValue }
-
-    if (!this.hasDefaultHorizontalPosition()) {
-      horizontalPosition = { right: horizontalPositionValue }
-    }
+    let horizontalPosition = horizontalPositionValue
 
     return objectAssign(defaultPosition, horizontalPosition)
   }
@@ -196,7 +188,6 @@ class Dropdown extends React.Component {
     )
   }
 
-
   render() {
     const button = this.renderButton()
     const dropdownClassName = classNames(
@@ -242,8 +233,8 @@ Dropdown.defaultProps = {
   positionedOn: 'left', // 'left' | 'right'
 
   // Custom horizontal position for content and content arrow.
-  contentHorizontalPositionValue: '0',
-  arrowHorizontalPositionValue: '50%',
+  contentHorizontalPositionValue: { left: '0' },
+  arrowHorizontalPositionValue: { left: '50%' },
 
   // Button settings
   buttonContentOnExpanded: 'Close me',

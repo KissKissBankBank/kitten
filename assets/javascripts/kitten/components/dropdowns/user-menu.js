@@ -70,12 +70,12 @@ class UserMenu extends React.Component {
     // element border.
     space = space < 0 ? 0 : space
 
-    return space + 'px'
+    return { right: space + 'px' }
   }
 
   getArrowHorizontalPosition() {
     const contentHorizontalPositionValue = parseInt(
-      this.getContentHorizontalPosition(),
+      this.getContentHorizontalPosition().right,
       10
     )
 
@@ -85,7 +85,7 @@ class UserMenu extends React.Component {
                   - this.getButtonImageElementHalfWidth()
                   - contentHorizontalPositionValue
 
-    return space + 'px'
+    return { right: space + 'px' }
   }
 
   getDropdownContent() {
