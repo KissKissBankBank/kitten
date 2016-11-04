@@ -83,7 +83,4 @@ class TourStep extends React.Component {
   }
 }
 
-TourStep.defaultProps = {
-}
-
 export default TourStep

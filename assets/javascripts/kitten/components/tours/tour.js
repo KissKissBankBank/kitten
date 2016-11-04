@@ -158,7 +158,6 @@ Tour.defaultProps = {
   prevButtonTitle: 'Prev',
   closeButtonLabel: 'Close',
   pagingLabel: 'on',
-  autorun: false,
   storeName: 'kitten.Tour',
 }
 
