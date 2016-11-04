@@ -42,16 +42,15 @@
 /// </div>
 
 @mixin k-Tour {
-
-  // Btn animate transition
+  // Button transition animation.
   $animation-duration: .4s;
 
-  .k-Tour__popover__svg {
+  .k-Tour__popover__illustration {
     display: flex;
     align-items: center;
   }
 
-  .k-Tour__popover__svgColor--primary {
+  .k-Tour__popover__svg--primary {
     fill: map-get($k-colors, 'primary-1');
   }
 
