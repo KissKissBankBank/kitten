@@ -41,6 +41,7 @@ Features:
 
 Features:
 - Add modifier `k-PlatformSwitch--withoutBorderTop` on `k-PlatformSwitch`.
+- Add component `k-Popover`.
 - Update KissKissBankBank and hellomerci svg logos.
 - Update `k-Grid` max-width from `1420px` to `1440px`.
 - Remove `k-ButtonIconWords` and use `k-Button--icon` modifier instead.

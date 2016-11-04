@@ -13,3 +13,6 @@ gem 'rubocop', require: false
 gem 'foreman'
 
 gem 'sass'
+
+# Styling a SVG with CSS
+gem 'inline_svg'
