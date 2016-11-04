@@ -19,7 +19,7 @@ class Tour extends React.Component {
   }
 
   componentDidMount() {
-    if (this.shouldStart) {
+    if (this.shouldStart()) {
       this.start()
     }
   }
@@ -40,7 +40,7 @@ class Tour extends React.Component {
     // component.
     const tourState = JSON.parse(localStorage.getItem(this.props.storeName))
 
-    if (tourState.hasPlayed) {
+    if (tourState && tourState.hasPlayed) {
       return false
     }
 
@@ -77,7 +77,7 @@ class Tour extends React.Component {
 
     const tourState = JSON.stringify({ hasPlayed: true })
 
-    //localStorage.setItem(this.props.storeName, tourState)
+    localStorage.setItem(this.props.storeName, tourState)
   }
 
   stop() {
