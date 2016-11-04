@@ -107,10 +107,12 @@ class Tour extends React.Component {
       next: {
         active: this.isNextButtonActive(),
         label: this.props.nextButtonLabel,
+        title: this.props.nextButtonTitle,
       },
       prev: {
         active: this.isPrevButtonActive(),
         label: this.props.prevButtonLabel,
+        title: this.props.prevButtonTitle,
       },
       close: {
         active: true,
@@ -151,7 +153,9 @@ class Tour extends React.Component {
 
 Tour.defaultProps = {
   nextButtonLabel: 'Next',
+  nextButtonTitle: 'Next',
   prevButtonLabel: 'Prev',
+  prevButtonTitle: 'Prev',
   closeButtonLabel: 'Close',
   pagingLabel: 'on',
   autorun: false,

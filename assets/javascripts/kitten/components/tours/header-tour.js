@@ -31,12 +31,13 @@ class HeaderTour extends React.Component {
   }
 
   render() {
+    const { platformSwitchStep, crowdStep, ...otherProps } = this.props
     const steps = [
       this.getPlatformSwitchStep(),
       this.getCrowdStep(),
     ]
 
-    return (<Tour className="k-HeaderTour" steps={ steps } />)
+    return (<Tour className="k-HeaderTour" steps={ steps } { ...otherProps } />)
   }
 }
 

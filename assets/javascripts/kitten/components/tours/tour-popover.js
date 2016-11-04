@@ -19,7 +19,7 @@ class TourPopover extends React.Component {
 
     return (
       <button onClick={ isDisabled ? null : this.props.onNextClick }
-              title="Suivant"
+              title={ this.props.buttons.next.title }
               className={ buttonClassName }
               disabled={ isDisabled }>
         { this.props.buttons.next.label }
@@ -48,7 +48,7 @@ class TourPopover extends React.Component {
 
     return (
       <button onClick={ isDisabled ? null : this.props.onPrevClick }
-              title="Précédent"
+              title={ this.props.buttons.prev.title }
               className={ buttonClassName }
               disabled={ isDisabled }>
         <svg className="k-Button__icon--tiny"
