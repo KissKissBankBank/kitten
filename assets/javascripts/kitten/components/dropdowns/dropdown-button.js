@@ -7,7 +7,8 @@ class DropdownButton extends React.Component {
     const buttonClassName = classNames('k-Dropdown__button', className)
 
     return(
-      <button className={ buttonClassName }
+      <button ref="dropdownButton"
+              className={ buttonClassName }
               aria-haspopup="true"
               aria-expanded={ isExpanded }
               { ...rest }>
