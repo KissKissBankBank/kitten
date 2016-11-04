@@ -53,9 +53,7 @@ class TourStep extends React.Component {
   }
 
   placeTargetHighlight() {
-    console.log('placeTargetHighlight')
     if (domElementHelper.canUseDom()) {
-      console.log(this.getTargetHighlightPositionStyles())
       this.setState({
         targetHighlightStyles: this.getTargetHighlightPositionStyles(),
         currentTarget: this.props.targetElement
