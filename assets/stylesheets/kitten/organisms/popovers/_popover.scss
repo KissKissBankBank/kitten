@@ -13,6 +13,18 @@
 ///      aria-labelledby="dialogtitle">
 ///   <div class="k-Popover__container">
 ///     …
+///     <div class="k-Popover__close">
+///       <button class="k-ButtonIcon
+///                      k-ButtonIcon--default
+///                      k-ButtonIcon--tiny">
+///         <svg class="k-ButtonIcon__svg k-ButtonIcon__svg--rotate"
+///              xmlns="http://www.w3.org/2000/svg"
+///              viewBox="-11 -4 125 105">
+///           <path d="M91.968 21.407l-70.56 70.56-13.44-13.44 70.56-70.56z"/>
+///           <path d="M91.968 78.527l-13.44 13.44-70.56-70.56 13.44-13.44z"/>
+///         </svg>
+///       </button>
+///     </div>
 ///   </div>
 /// </div>
 
@@ -37,6 +49,13 @@
 
   .k-Popover__container {
     display: flex;
-    margin: $margin-container $margin-container k-px-to-rem(30px) $margin-container;
+    margin: $margin-container
+            $margin-container
+            k-px-to-rem(30px)
+            $margin-container;
+  }
+
+  .k-Popover__close {
+    margin-left: k-px-to-rem(10px);
   }
 }
