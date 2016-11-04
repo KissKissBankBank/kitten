@@ -10,6 +10,12 @@
   $step-top-position: $header-height + 10px;
 
   .k-HeaderTour {
+    display: none;
+
+    @include k-media-min('l') {
+      display: block;
+    }
+
     .k-Popover {
       position: absolute;
       top: k-px-to-rem($step-top-position);
