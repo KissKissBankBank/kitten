@@ -14,5 +14,5 @@ gem 'foreman'
 
 gem 'sass'
 
-# Styling a SVG with CSS
-gem 'inline_svg', '> 0.11'
+# Embed SVG documents in HTML to style them in CSS
+gem 'inline_svg', '>= 0.11'
