@@ -10,7 +10,7 @@ import CrowdIllustration from
   'babel?presets[]=babel-preset-es2015,presets[]=babel-preset-react!svg-react!icons/icon-tour-2.svg?name=CrowdIllustration'
 
 class HeaderTour extends React.Component {
-  getPlatformSwitchStep() {
+  platformSwitchStep() {
     const content = this.props.platformSwitchStep
     const illustration = {
       illustration: <PlatformSwitchIllustration
@@ -20,7 +20,7 @@ class HeaderTour extends React.Component {
     return objectAssign(content, illustration)
   }
 
-  getCrowdStep() {
+  crowdStep() {
     const content = this.props.crowdStep
     const illustration = {
       illustration: <CrowdIllustration
@@ -30,14 +30,21 @@ class HeaderTour extends React.Component {
     return objectAssign(content, illustration)
   }
 
+  steps() {
+    return [
+      this.platformSwitchStep(),
+      this.crowdStep(),
+    ]
+  }
+
   render() {
     const { platformSwitchStep, crowdStep, ...otherProps } = this.props
-    const steps = [
-      this.getPlatformSwitchStep(),
-      this.getCrowdStep(),
-    ]
 
-    return (<Tour className="k-HeaderTour" steps={ steps } { ...otherProps } />)
+    return (
+      <Tour className="k-HeaderTour"
+            steps={ this.steps() }
+            { ...otherProps } />
+    )
   }
 }
 
