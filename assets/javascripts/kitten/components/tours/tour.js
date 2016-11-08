@@ -28,7 +28,7 @@ class Tour extends React.Component {
     const currentStep = this.state.currentIndex + 1
     const totalSteps = this.props.steps.length
 
-    return `${currentStep} ${ this.props.pagingLabel } ${totalSteps}`
+    return `${currentStep} ${this.props.pagingLabel} ${totalSteps}`
   }
 
   shouldStart() {
@@ -40,11 +40,7 @@ class Tour extends React.Component {
     // component.
     const tourState = JSON.parse(localStorage.getItem(this.props.storeName))
 
-    if (tourState && tourState.hasPlayed) {
-      return false
-    }
-
-    return true
+    return tourState && tourState.hasPlayed
   }
 
   toggleStep(newIndex) {
@@ -87,19 +83,11 @@ class Tour extends React.Component {
   isNextButtonActive() {
     const currentStep = this.state.currentIndex + 1
 
-    if (currentStep == this.props.steps.length) {
-      return false
-    }
-
-    return true
+    return currentStep != this.props.steps.length
   }
 
   isPrevButtonActive() {
-    if (this.state.currentIndex == 0) {
-      return false
-    }
-
-    return true
+    return this.state.currentIndex != 0
   }
 
   getButtonsList() {
