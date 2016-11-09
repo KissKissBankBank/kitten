@@ -5,7 +5,6 @@ import ButtonImageWithTextAndBadge from
 import SimpleList from 'kitten/components/lists/simple-list'
 import domElementHelper from 'kitten/helpers/dom/element-helper'
 import objectAssign from 'core-js/library/fn/object/assign'
-import classNames from 'classnames'
 
 class UserMenu extends React.Component {
   constructor(props) {
@@ -90,11 +89,8 @@ class UserMenu extends React.Component {
   }
 
   getDropdownContent() {
-    const className = this.props.dropdownContentClassName
-    const dropdownContentClass = classNames('k-UserMenu', className)
-
     return (
-      <SimpleList className={ dropdownContentClass }
+      <SimpleList className='k-UserMenu k-UserMenu--withoutBorderTop'
                   role="menubar"
                   list={ this.props.dropdownList } />
     )
@@ -185,7 +181,6 @@ UserMenu.propTypes = {
   buttonImgAlt: React.PropTypes.string,
   buttonText: React.PropTypes.string,
   buttonTitle: React.PropTypes.string,
-  dropdownContentClassName: React.PropTypes.string,
   dropdownList: React.PropTypes.array,
   positionedWith: React.PropTypes.func,
   positionedWithBorder: React.PropTypes.bool,
