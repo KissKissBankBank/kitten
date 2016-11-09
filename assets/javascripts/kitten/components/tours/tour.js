@@ -9,6 +9,7 @@ class Tour extends React.Component {
 
     this.state = {
       play: false,
+      visible: false,
       currentIndex: 0,
       currentStep: this.props.steps[0],
     }
@@ -16,6 +17,11 @@ class Tour extends React.Component {
     this.handleClickOnNext = this.handleClickOnNext.bind(this)
     this.handleClickOnPrev = this.handleClickOnPrev.bind(this)
     this.handleClickOnClose = this.handleClickOnClose.bind(this)
+    this.handleTargetHighlightPlace = this.handleTargetHighlightPlace.bind(this)
+  }
+
+  handleTargetHighlightPlace() {
+    this.setState({ visible: true })
   }
 
   componentDidMount() {
@@ -123,7 +129,7 @@ class Tour extends React.Component {
                 illustration={ this.state.currentStep.illustration }
                 buttons={ this.getButtonsList() }
                 onStepDisplay={ this.props.onStepDisplay }
-                onTargetHighlightPlace={ this.props.onTargetHighlightPlace }
+                onTargetHighlightPlace={ this.handleTargetHighlightPlace }
                 progress={ this.getProgress() } />
     )
   }
@@ -131,6 +137,7 @@ class Tour extends React.Component {
   render() {
     const tourClassName = classNames(
       'k-Tour',
+      { 'is-visible': this.state.visible },
       this.props.className
     )
 
