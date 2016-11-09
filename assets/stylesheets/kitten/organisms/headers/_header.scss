@@ -100,6 +100,7 @@
   }
 
   .k-Header__nav__item {
+    box-sizing: content-box;
     height: k-px-to-rem($height - $border-width);
   }
 
