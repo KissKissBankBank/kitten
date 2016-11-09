@@ -90,7 +90,7 @@ class UserMenu extends React.Component {
 
   getDropdownContent() {
     return (
-      <SimpleList className="k-UserMenu"
+      <SimpleList className="k-UserMenu k-UserMenu--withoutBorderTop"
                   role="menubar"
                   list={ this.props.dropdownList } />
     )

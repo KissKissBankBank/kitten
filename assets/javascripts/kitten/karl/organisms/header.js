@@ -101,7 +101,7 @@ const userMenuDropdownList = [
 const KarlLoggedHeaderUserMenu = defaultProps(UserMenu, {
   // Position
   positionedWith: () => document.getElementById('header-logged'),
-  positionedWithBorder: false,
+  positionedWithBorder: true,
   positionedOn: 'right',
   spaceAroundGrid: 20,
 

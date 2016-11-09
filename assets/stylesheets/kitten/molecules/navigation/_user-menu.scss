@@ -80,6 +80,10 @@
       }
     }
 
+    .k-UserMenu--withoutBorderTop {
+      border-top: none;
+    }
+
     .k-UserMenu__arrow {
       position: absolute;
       top: -($arrow-size - $border-size);
