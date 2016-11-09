@@ -84,14 +84,14 @@ const userMenuDropdownList = [
   <a className="k-UserMenu__item" href="#">Mes messages</a>,
   <a className="k-UserMenu__item
                 k-UserMenu__item--secondary
-                k-UserMenu__separation"
+                k-UserMenu__borderTop"
      href="#">
     Admin
   </a>,
   <a className="k-UserMenu__item k-UserMenu__item--secondary" href="#">
     Rapports
   </a>,
-  <a className="k-UserMenu__item k-UserMenu__separation" href="#">
+  <a className="k-UserMenu__item k-UserMenu__borderTop" href="#">
     Profil
   </a>,
   <a className="k-UserMenu__item" href="#">Réglages</a>,
@@ -123,14 +123,14 @@ const KarlLoggedHeaderUserMenu = defaultProps(UserMenu, {
     <a className="k-UserMenu__item" href="#">Mes messages</a>,
     <a className="k-UserMenu__item
                   k-UserMenu__item--secondary
-                  k-UserMenu__separation"
+                  k-UserMenu__borderTop"
        href="#">
       Admin
     </a>,
     <a className="k-UserMenu__item k-UserMenu__item--secondary" href="#">
       Rapports
     </a>,
-    <a className="k-UserMenu__item k-UserMenu__separation" href="#">
+    <a className="k-UserMenu__item k-UserMenu__borderTop" href="#">
       Profil
     </a>,
     <a className="k-UserMenu__item" href="#">Réglages</a>,
