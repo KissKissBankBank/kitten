@@ -11,14 +11,25 @@ class TourStep extends React.Component {
       targetHighlightStyles: null,
       currentTarget: this.props.targetElement,
     }
+
+    this.handleResize = this.handleResize.bind(this)
   }
 
   componentDidMount() {
     this.updateTargetHighlight()
+    window.addEventListener('resize', this.handleResize)
   }
 
   componentDidUpdate() {
     if (!this.isTargetHighlightUpdated()) this.updateTargetHighlight()
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.handleResize)
+  }
+
+  handleResize() {
+    this.updateTargetHighlight()
   }
 
   updateTargetHighlight() {
