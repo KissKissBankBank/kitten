@@ -90,8 +90,4 @@ class HeaderTour extends React.Component {
   }
 }
 
-HeaderTour.defaultProps = {
-  storeName: 'karl.HeaderTour',
-}
-
 export default HeaderTour
