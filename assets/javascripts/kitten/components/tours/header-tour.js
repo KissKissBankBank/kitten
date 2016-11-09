@@ -13,12 +13,12 @@ class HeaderTour extends React.Component {
   constructor(props) {
     super(props)
 
-    this.handleStepDisplay = this.handleStepDisplay.bind(this)
+    this.handleTargetHighlightPlace = this.handleTargetHighlightPlace.bind(this)
   }
 
   // Component listener callbacks.
 
-  handleStepDisplay(step) {
+  handleTargetHighlightPlace(step) {
     this.handleTargetElementZIndex(step)
   }
 
@@ -73,7 +73,7 @@ class HeaderTour extends React.Component {
     return (
       <Tour className="k-HeaderTour"
             steps={ this.steps() }
-            onStepDisplay={ this.handleStepDisplay }
+            onTargetHighlightPlace={ this.handleTargetHighlightPlace }
             { ...otherProps } />
     )
   }

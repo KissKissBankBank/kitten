@@ -19,12 +19,12 @@ class TourStep extends React.Component {
   // Component lifecyle.
 
   componentDidMount() {
-    this.updateTargetHighlight()
+    this.placeTargetHighlight()
     window.addEventListener('resize', this.handleResize)
   }
 
   componentDidUpdate() {
-    if (!this.isTargetHighlightUpdated()) this.updateTargetHighlight()
+    if (!this.isTargetHighlightUpdated()) this.placeTargetHighlight()
   }
 
   componentWillUnmount() {
@@ -34,19 +34,14 @@ class TourStep extends React.Component {
   // Component listener callbacks.
 
   handleResize() {
-    this.updateTargetHighlight()
+    this.placeTargetHighlight()
   }
 
   handleTargetHighlightPlace() {
-    this.props.onTargetHighlightPlace()
+    this.props.onTargetHighlightPlace(this.props)
   }
 
   // Component methods.
-
-  updateTargetHighlight() {
-    this.placeTargetHighlight()
-    this.props.onStepDisplay(this.props)
-  }
 
   getTargetHighlightPositionStyles() {
     const target = document.querySelector(this.props.targetElement)

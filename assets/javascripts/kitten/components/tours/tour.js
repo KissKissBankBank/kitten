@@ -30,8 +30,9 @@ class Tour extends React.Component {
 
   // Component listener callbacks.
 
-  handleTargetHighlightPlace() {
+  handleTargetHighlightPlace(step) {
     this.setState({ visible: true })
+    this.props.onTargetHighlightPlace(step)
   }
 
   handleClickOnNext() {
@@ -134,7 +135,6 @@ class Tour extends React.Component {
                 targetElement={ this.state.currentStep.targetElement }
                 illustration={ this.state.currentStep.illustration }
                 buttons={ this.getButtonsList() }
-                onStepDisplay={ this.props.onStepDisplay }
                 onTargetHighlightPlace={ this.handleTargetHighlightPlace }
                 progress={ this.getProgress() } />
     )
