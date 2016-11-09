@@ -79,4 +79,8 @@ class HeaderTour extends React.Component {
   }
 }
 
+HeaderTour.defaultProps = {
+  storeName: 'kitten.HeaderTour',
+}
+
 export default HeaderTour
