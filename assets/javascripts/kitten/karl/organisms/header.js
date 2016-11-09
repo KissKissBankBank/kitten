@@ -101,7 +101,7 @@ const userMenuDropdownList = [
 const KarlLoggedHeaderUserMenu = defaultProps(UserMenu, {
   // Position
   positionedWith: () => document.getElementById('header-logged'),
-  positionedWithBorder: false,
+  positionedWithBorder: true,
   positionedOn: 'right',
   spaceAroundGrid: 20,
 
@@ -116,6 +116,7 @@ const KarlLoggedHeaderUserMenu = defaultProps(UserMenu, {
   buttonNotifications: 42,
 
   // Dropdown content
+  dropdownContentClassName: 'k-UserMenu--withoutBorderTop',
   dropdownList: [
     <a className="k-UserMenu__item" href="#">Mon profil</a>,
     <a className="k-UserMenu__item" href="#">Mes projets</a>,

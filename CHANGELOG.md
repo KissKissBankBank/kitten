@@ -5,6 +5,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 Breaking changes:
+- Update `UserMenu`:
+  * Add modifier `k-UserMenu--withoutBorderTop` on `k-UserMenu`.
+  * Add `dropdownContentClassName` prop.
 - Remove `k-UserMenu__separation` and
   replace by `k-UserMenu__borderTop`, `k-UserMenu__borderBottom`.
 
