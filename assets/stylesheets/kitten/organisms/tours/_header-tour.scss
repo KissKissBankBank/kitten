@@ -8,6 +8,7 @@
 @mixin k-HeaderTour {
   $header-height: 65px;
   $step-top-position: $header-height + 10px;
+  $step-left-position: k-px-to-rem(20px);
 
   .k-HeaderTour {
     display: none;
@@ -19,6 +20,7 @@
     .k-Popover {
       position: absolute;
       top: k-px-to-rem($step-top-position);
+      left: $step-left-position;
     }
   }
 }
