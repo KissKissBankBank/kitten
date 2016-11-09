@@ -70,6 +70,8 @@ class TourStep extends React.Component {
 
   placeTargetHighlight() {
     if (domElementHelper.canUseDom()) {
+      // We have to delay the target highlight display because of a rendering
+      // bug due to the computed positioning.
       setTimeout(this.handleTargetHighlightPlace, 800)
 
       this.setState({
