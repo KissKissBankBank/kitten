@@ -1,4 +1,5 @@
 import React from 'react'
+import classNames from 'classnames'
 import objectAssign from 'core-js/library/fn/object/assign'
 import Tour from 'kitten/components/tours/tour'
 
@@ -13,7 +14,12 @@ class HeaderTour extends React.Component {
   constructor(props) {
     super(props)
 
+    this.state = {
+      visible: false,
+    }
+
     this.handleStepDisplay = this.handleStepDisplay.bind(this)
+    this.handleTargetHighlightPlace = this.handleTargetHighlightPlace.bind(this)
   }
 
   handleStepDisplay(step) {
@@ -30,6 +36,10 @@ class HeaderTour extends React.Component {
     // We need the highlight to be positioned above the header but below the
     // cliquable items (platformSwitch button and Crowd link).
     target.style.zIndex = 10
+  }
+
+  handleTargetHighlightPlace() {
+    this.setState({ visible: true })
   }
 
   isCrowdStep(step) {
@@ -65,11 +75,16 @@ class HeaderTour extends React.Component {
 
   render() {
     const { platformSwitchStep, crowdStep, ...otherProps } = this.props
+    const tourClassName = classNames(
+      'k-HeaderTour',
+      { 'is-visible': this.state.visible }
+    )
 
     return (
-      <Tour className="k-HeaderTour"
+      <Tour className={ tourClassName }
             steps={ this.steps() }
             onStepDisplay={ this.handleStepDisplay }
+            onTargetHighlightPlace={ this.handleTargetHighlightPlace }
             { ...otherProps } />
     )
   }

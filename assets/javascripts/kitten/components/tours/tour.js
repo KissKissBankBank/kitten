@@ -123,6 +123,7 @@ class Tour extends React.Component {
                 illustration={ this.state.currentStep.illustration }
                 buttons={ this.getButtonsList() }
                 onStepDisplay={ this.props.onStepDisplay }
+                onTargetHighlightPlace={ this.props.onTargetHighlightPlace }
                 progress={ this.getProgress() } />
     )
   }
@@ -150,6 +151,7 @@ Tour.defaultProps = {
   pagingLabel: 'on',
   storeName: 'kitten.Tour',
   onStepDisplay: function() {},
+  onTargetHighlightPlace: function() {},
 }
 
 export default Tour
