@@ -159,11 +159,10 @@ Tour.defaultProps = {
   nextButtonLabel: 'Next',
   nextButtonTitle: 'Next',
   prevButtonLabel: 'Prev',
-  prevButtonTitle: 'Prev',
+  prevButtonTitle: 'Previous',
   closeButtonLabel: 'Close',
   pagingLabel: 'on',
   storeName: 'kitten.Tour',
-  onStepDisplay: function() {},
   onTargetHighlightPlace: function() {},
 }
 
