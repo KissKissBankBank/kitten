@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+Features:
+- Add class `.k-UserMenu__separationBottom` on `.k-UserMenu`.
+
 ## [v0.15.1] - 2016-10-02
 
 Fixes:

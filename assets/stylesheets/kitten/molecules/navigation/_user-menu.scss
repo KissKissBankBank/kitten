@@ -176,5 +176,9 @@
     .k-UserMenu__separation {
       border-top: $border-size solid $border-color;
     }
+
+    .k-UserMenu__separationBottom {
+      border-bottom: $border-size solid $border-color;
+    }
   }
 }
