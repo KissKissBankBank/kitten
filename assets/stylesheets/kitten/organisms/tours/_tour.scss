@@ -154,6 +154,7 @@
     border-radius: $target-highlight-radius;
     background: transparent;
     border: 1px solid map-get($k-colors, 'primary-1');
+    opacity: .5;
 
     &:before {
       content: "";
