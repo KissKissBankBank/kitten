@@ -16,6 +16,8 @@ class HeaderTour extends React.Component {
     this.handleStepDisplay = this.handleStepDisplay.bind(this)
   }
 
+  // Component listener callbacks.
+
   handleStepDisplay(step) {
     this.handleTargetElementZIndex(step)
   }
@@ -31,6 +33,8 @@ class HeaderTour extends React.Component {
     // cliquable items (platformSwitch button and Crowd link).
     target.style.zIndex = 10
   }
+
+  // Component methods.
 
   isCrowdStep(step) {
     return step.name == 'crowdStep'

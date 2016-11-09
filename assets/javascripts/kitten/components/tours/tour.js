@@ -20,9 +20,7 @@ class Tour extends React.Component {
     this.handleTargetHighlightPlace = this.handleTargetHighlightPlace.bind(this)
   }
 
-  handleTargetHighlightPlace() {
-    this.setState({ visible: true })
-  }
+  // Component lifecycle.
 
   componentDidMount() {
     if (this.shouldStart()) {
@@ -30,30 +28,10 @@ class Tour extends React.Component {
     }
   }
 
-  getProgress() {
-    const currentStep = this.state.currentIndex + 1
-    const totalSteps = this.props.steps.length
+  // Component listener callbacks.
 
-    return `${currentStep} ${this.props.pagingLabel} ${totalSteps}`
-  }
-
-  shouldStart() {
-    if (!domElementHelper.canUseDom()) {
-      return false
-    }
-
-    // TODO: better implementation of localStorage as state store for React
-    // component.
-    const tourState = JSON.parse(localStorage.getItem(this.props.storeName))
-
-    return !(tourState && tourState.hasPlayed)
-  }
-
-  toggleStep(newIndex) {
-    this.setState({
-      currentIndex: newIndex,
-      currentStep: this.props.steps[newIndex]
-    })
+  handleTargetHighlightPlace() {
+    this.setState({ visible: true })
   }
 
   handleClickOnNext() {
@@ -72,6 +50,8 @@ class Tour extends React.Component {
     this.stop()
   }
 
+  // Component methods.
+
   start() {
     this.setState({
       play: true
@@ -86,6 +66,20 @@ class Tour extends React.Component {
     this.setState({ play: false })
   }
 
+  toggleStep(newIndex) {
+    this.setState({
+      currentIndex: newIndex,
+      currentStep: this.props.steps[newIndex]
+    })
+  }
+
+  getProgress() {
+    const currentStep = this.state.currentIndex + 1
+    const totalSteps = this.props.steps.length
+
+    return `${currentStep} ${this.props.pagingLabel} ${totalSteps}`
+  }
+
   isNextButtonActive() {
     const currentStep = this.state.currentIndex + 1
 
@@ -94,6 +88,18 @@ class Tour extends React.Component {
 
   isPrevButtonActive() {
     return this.state.currentIndex != 0
+  }
+
+  shouldStart() {
+    if (!domElementHelper.canUseDom()) {
+      return false
+    }
+
+    // TODO: better implementation of localStorage as state store for React
+    // component.
+    const tourState = JSON.parse(localStorage.getItem(this.props.storeName))
+
+    return !(tourState && tourState.hasPlayed)
   }
 
   getButtonsList() {
