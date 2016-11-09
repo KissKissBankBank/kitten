@@ -13,7 +13,7 @@ class TourStep extends React.Component {
     }
 
     this.handleResize = this.handleResize.bind(this)
-    this.onTargetHighlightPlace = this.onTargetHighlightPlace.bind(this)
+    this.handleTargetHighlightPlace = this.handleTargetHighlightPlace.bind(this)
   }
 
   componentDidMount() {
@@ -67,13 +67,13 @@ class TourStep extends React.Component {
     }
   }
 
-  onTargetHighlightPlace() {
+  handleTargetHighlightPlace() {
     this.props.onTargetHighlightPlace()
   }
 
   placeTargetHighlight() {
     if (domElementHelper.canUseDom()) {
-      setTimeout(this.onTargetHighlightPlace, 800)
+      setTimeout(this.handleTargetHighlightPlace, 800)
 
       this.setState({
         targetHighlightStyles: this.getTargetHighlightPositionStyles(),
