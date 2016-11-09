@@ -19,6 +19,7 @@ class Dropdown extends React.Component {
 
     this.handleDropdownPosition = this.handleDropdownPosition.bind(this)
     this.revertHandleClickOnLinks = this.revertHandleClickOnLinks.bind(this)
+    this.handleClickEverywhere = this.handleClickEverywhere.bind(this)
     this.close = this.close.bind(this)
   }
 
@@ -35,6 +36,7 @@ class Dropdown extends React.Component {
     // Handle events.
 
     this.handleClickOnLinks()
+    this.handleClickEverywhere()
 
     emitter.on('dropdown:opening:trigger', () => {
       dropdown.close()
@@ -145,6 +147,10 @@ class Dropdown extends React.Component {
     for (let link of links) {
       link.addEventListener('click', this.close)
     }
+  }
+
+  handleClickEverywhere() {
+    window.addEventListener('click', this.close)
   }
 
   handleDropdownPosition() {
