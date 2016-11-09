@@ -107,8 +107,4 @@ class TourStep extends React.Component {
   }
 }
 
-TourStep.defaultProps = {
-  onStepDisplay: function() {},
-}
-
 export default TourStep
