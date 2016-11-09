@@ -157,46 +157,54 @@
     opacity: .5;
 
     &:before {
+      $target-before-options: (
+        width: $target-highlight-width,
+        height: $target-highlight-height,
+      );
+
       content: "";
 
-      @include k-tour-targetHighlightAnimation(
-        $width: $target-highlight-width,
-        $height: $target-highlight-height
-      )
+      @include k-tour-targetHighlightAnimation($target-before-options)
     }
 
     &:after {
-      content: "";
-      animation-delay: 0.8s;
+      $target-after-options: (
+        width: $target-highlight-width,
+        height: $target-highlight-height,
+        animation-delay: 0.8s,
+      );
 
-      @include k-tour-targetHighlightAnimation(
-        $width: $target-highlight-width,
-        $height: $target-highlight-height
-      )
+      content: "";
+
+      @include k-tour-targetHighlightAnimation($target-after-options)
     }
 
     .k-Tour__step__targetHighlightContent {
-      transform: translate(-50%, -50%);
-      display:block;
-      animation-delay: 1.6s;
+      $target-options: (animation-delay: 1.6s);
 
-      @include k-tour-targetHighlightAnimation;
+      transform: translate(-50%, -50%);
+      display: block;
+
+      @include k-tour-targetHighlightAnimation($target-options)
     }
   }
 }
 
 @keyframes k-tour-targetHighlightAnimationKeyframes {
-  0% { transform: translate(-50%, -50%) scale(1); opacity:1; }
-  100% { transform: translate(-50%, -50%) scale(2.5); opacity:0; }
+  0% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+  100% { transform: translate(-50%, -50%) scale(2.5); opacity: 0; }
 }
 
-@mixin k-tour-targetHighlightAnimation($width: 100%, $height: 100%) {
+@mixin k-tour-targetHighlightAnimation($options) {
+  $height: k-default(map-get($options, 'height'), 100%);
+  $width: k-default(map-get($options, 'width'), 100%);
   $animation-duration: 3.5s;
+  $animation-delay: k-default(map-get($options, 'animation-delay'), 0s);
 
   position: absolute;
   top: 50%;
   left: 50%;
-  border: 1px solid rgba(map-get($k-colors, 'primary-1'), 0.4);
+  border: 1px solid rgba(map-get($k-colors, 'primary-1'), .4);
   width: $width;
   height: $height;
   border-radius: 100%;
@@ -204,4 +212,5 @@
   animation-duration: $animation-duration;
   animation-iteration-count: infinite;
   animation-timing-function: ease-out;
+  animation-delay: $animation-delay;
 }
