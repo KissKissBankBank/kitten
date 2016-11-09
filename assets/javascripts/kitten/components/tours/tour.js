@@ -40,7 +40,7 @@ class Tour extends React.Component {
     // component.
     const tourState = JSON.parse(localStorage.getItem(this.props.storeName))
 
-    return tourState && tourState.hasPlayed
+    return !(tourState && tourState.hasPlayed)
   }
 
   toggleStep(newIndex) {
@@ -116,11 +116,13 @@ class Tour extends React.Component {
       <TourStep onNextClick={ this.handleClickOnNext }
                 onPrevClick={ this.handleClickOnPrev }
                 onCloseClick={ this.handleClickOnClose }
+                name={ this.state.currentStep.name }
                 title={ this.state.currentStep.title }
                 content={ this.state.currentStep.content }
                 targetElement={ this.state.currentStep.targetElement }
                 illustration={ this.state.currentStep.illustration }
                 buttons={ this.getButtonsList() }
+                onStepDisplay={ this.props.onStepDisplay }
                 progress={ this.getProgress() } />
     )
   }
@@ -147,6 +149,7 @@ Tour.defaultProps = {
   closeButtonLabel: 'Close',
   pagingLabel: 'on',
   storeName: 'kitten.Tour',
+  onStepDisplay: function() {},
 }
 
 export default Tour

@@ -10,6 +10,32 @@ import CrowdIllustration from
   'babel?presets[]=babel-preset-es2015,presets[]=babel-preset-react!svg-react!icons/icon-tour-2.svg?name=CrowdIllustration'
 
 class HeaderTour extends React.Component {
+  constructor(props) {
+    super(props)
+
+    this.handleStepDisplay = this.handleStepDisplay.bind(this)
+  }
+
+  handleStepDisplay(step) {
+    this.handleTargetElementZIndex(step)
+  }
+
+  handleTargetElementZIndex(step) {
+    let target = document.querySelector(step.targetElement)
+
+    if (this.isCrowdStep(step)) {
+      target = document.querySelector(step.targetElement).parentElement
+    }
+
+    // We need the highlight to be positioned above the header but below the
+    // cliquable items (platformSwitch button and Crowd link).
+    target.style.zIndex = 10
+  }
+
+  isCrowdStep(step) {
+    return step.name == 'crowdStep'
+  }
+
   platformSwitchStep() {
     const content = this.props.platformSwitchStep
     const illustration = {
@@ -43,9 +69,14 @@ class HeaderTour extends React.Component {
     return (
       <Tour className="k-HeaderTour"
             steps={ this.steps() }
+            onStepDisplay={ this.handleStepDisplay }
             { ...otherProps } />
     )
   }
+}
+
+HeaderTour.defaultProps = {
+  storeName: 'karl.HeaderTour',
 }
 
 export default HeaderTour

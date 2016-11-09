@@ -14,13 +14,16 @@ class TourStep extends React.Component {
   }
 
   componentDidMount() {
-    this.placeTargetHighlight()
+    this.updateTargetHighlight()
   }
 
   componentDidUpdate() {
-    if (!this.isTargetHighlightUpdated()) {
-      this.placeTargetHighlight()
-    }
+    if (!this.isTargetHighlightUpdated()) this.updateTargetHighlight()
+  }
+
+  updateTargetHighlight() {
+    this.placeTargetHighlight()
+    this.props.onStepDisplay(this.props)
   }
 
   isTargetHighlightUpdated() {
@@ -81,6 +84,10 @@ class TourStep extends React.Component {
       </div>
     )
   }
+}
+
+TourStep.defaultProps = {
+  onStepDisplay: function() {},
 }
 
 export default TourStep
