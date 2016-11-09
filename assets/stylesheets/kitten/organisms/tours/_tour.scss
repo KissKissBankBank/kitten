@@ -157,8 +157,9 @@
     position: absolute;
     width: $target-highlight-width;
     height: $target-highlight-height;
-    border-radius: $target-highlight-radius;
+
     background: transparent;
+    border-radius: $target-highlight-radius;
     border: 1px solid map-get($k-colors, 'primary-1');
     opacity: .5;
 
@@ -210,10 +211,12 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  border: 1px solid rgba(map-get($k-colors, 'primary-1'), .4);
   width: $width;
   height: $height;
+
+  border: 1px solid rgba(map-get($k-colors, 'primary-1'), .4);
   border-radius: 100%;
+
   animation-name: k-tour-targetHighlightAnimationKeyframes;
   animation-duration: $animation-duration;
   animation-iteration-count: infinite;
