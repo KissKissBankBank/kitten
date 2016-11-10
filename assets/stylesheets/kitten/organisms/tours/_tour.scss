@@ -46,9 +46,10 @@
     k-number-definition(map-get($options, 'popover-z-index')),
     10
   );
+  $tour-animation-duration: 1s;
 
   // Button transition animation.
-  $animation-duration: .4s;
+  $button-animation-duration: .4s;
 
   // Target hightlight.
   $target-highlight-width: k-px-to-rem(30px);
@@ -66,8 +67,7 @@
   .k-Tour__popover {
     z-index: $popover-z-index;
 
-    opacity: 1;
-    transition: opacity 1s ease;
+    transition: opacity $tour-animation-duration ease;
 
     .k-Tour.is-hidden & {
       opacity: 0;
@@ -133,8 +133,8 @@
   .k-Tour__popover__button {
     margin-right: k-px-to-rem(10px);
 
-    transition: all $animation-duration ease;
-    -webkit-transition: all $animation-duration ease;
+    transition: all $button-animation-duration ease;
+    -webkit-transition: all $button-animation-duration ease;
 
     &:hover {
       transform: translateX(-2px);
@@ -150,8 +150,8 @@
   .k-Tour__popover__button--right {
     margin-right: 0;
 
-    transition: all $animation-duration ease;
-    -webkit-transition: all $animation-duration ease;
+    transition: all $button-animation-duration ease;
+    -webkit-transition: all $button-animation-duration ease;
 
     &:hover {
       transform: translateX(2px);
@@ -172,10 +172,9 @@
 
     border-radius: $target-highlight-radius;
     border: 1px solid map-get($k-colors, 'primary-1');
-    opacity: 1;
 
     pointer-events: none;
-    transition: opacity 1s ease;
+    transition: opacity $tour-animation-duration ease;
 
     .k-Tour.is-hidden & {
       opacity: 0;
