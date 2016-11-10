@@ -40,7 +40,7 @@
 ///   </div>
 /// </div>
 
-@mixin k-Tour($options) {
+@mixin k-Tour($options: ()) {
   // Tour.
   $popover-z-index: k-default(
     k-number-definition(map-get($options, 'popover-z-index')),
@@ -206,6 +206,11 @@
       @include k-tour-targetHighlightAnimation($target-options)
     }
   }
+
+  @keyframes k-tour-targetHighlightAnimationKeyframes {
+    0% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+    100% { transform: translate(-50%, -50%) scale(2.5); opacity: 0; }
+  }
 }
 
 
@@ -229,9 +234,4 @@
   animation-iteration-count: infinite;
   animation-timing-function: ease-out;
   animation-delay: $animation-delay;
-
-  @keyframes k-tour-targetHighlightAnimationKeyframes {
-    0% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
-    100% { transform: translate(-50%, -50%) scale(2.5); opacity: 0; }
-  }
 }
