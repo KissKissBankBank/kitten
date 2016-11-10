@@ -5,8 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 Breaking changes:
-- Add inline svg in React files:
-  * Needs `svg-react-loader` to compile assets with Webpack.
+- Add "svg-react-loader": "^0.3.7", to your package.json to compile assets with
+Webpack
 
 Features:
 - Add component `k-HeaderTour` and `k-Tour`
