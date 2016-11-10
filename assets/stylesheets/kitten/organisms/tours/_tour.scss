@@ -207,7 +207,6 @@
     .k-Tour__step__targetHighlightContent {
       $target-options: (animation-delay: 1.6s);
 
-      transform: translate(-50%, -50%);
       display: block;
 
       @include k-tour-targetHighlightAnimation($target-options)
@@ -215,21 +214,22 @@
   }
 
   @keyframes k-tour-targetHighlightAnimationKeyframes {
-    0% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
-    100% { transform: translate(-50%, -50%) scale(2.5); opacity: 0; }
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(2.5); opacity: 0; }
   }
 }
 
 
-@mixin k-tour-targetHighlightAnimation($options) {
+@mixin k-tour-targetHighlightAnimation($options: ()) {
+  $target-border: 1px;
   $height: k-default(map-get($options, 'height'), 100%);
   $width: k-default(map-get($options, 'width'), 100%);
   $animation-duration: 3.5s;
   $animation-delay: k-default(map-get($options, 'animation-delay'), 0s);
 
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: -$target-border;
+  left: -$target-border;
   width: $width;
   height: $height;
 
