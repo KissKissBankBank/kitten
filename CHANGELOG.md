@@ -4,6 +4,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+Breaking changes:
+- Add "svg-react-loader": "^0.3.7", to your package.json to compile assets with
+Webpack
+
+Features:
+- Add component `k-HeaderTour` and `k-Tour`
+
 ## [v0.16.0] - 2016-11-10
 
 Breaking changes:

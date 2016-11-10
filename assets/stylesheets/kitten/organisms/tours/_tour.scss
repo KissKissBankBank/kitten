@@ -1,6 +1,6 @@
 /// Tour
 ///
-/// @group popovers
+/// @group tours
 ///
 /// @example scss - usage
 ///   @include k-Tour;
@@ -8,7 +8,6 @@
 /// @example html
 /// <div class="k-Popover"
 ///      role="dialog"
-///      id="mytour"
 ///      aria-hidden="true"
 ///      aria-labelledby="dialogtitle">
 ///   <div class="k-Popover__container">
@@ -41,18 +40,51 @@
 ///   </div>
 /// </div>
 
-@mixin k-Tour {
+@mixin k-Tour($options: ()) {
+  // Tour.
+  $popover-z-index: k-default(
+    k-number-definition(map-get($options, 'popover-z-index')),
+    10
+  );
 
-  // Btn animate transition
+  // Button transition animation.
   $animation-duration: .4s;
 
-  .k-Tour__popover__svg {
-    display: flex;
-    align-items: center;
+  // Target hightlight.
+  $target-highlight-width: k-px-to-rem(30px);
+  $target-highlight-height: k-px-to-rem(30px);
+  $target-highlight-radius: k-px-to-rem(30px);
+  $target-highlight-z-index: k-default(
+    k-number-definition(map-get($options, 'target-highlight-z-index')),
+    10
+  );
+
+  .k-Tour {
+    opacity: 1;
+    transition: opacity .4s ease;
+
+    &.is-hidden {
+      opacity: 0;
+    }
   }
 
-  .k-Tour__popover__svgColor--primary {
+  .k-Tour__popover {
+    z-index: $popover-z-index;
+  }
+
+  .k-Tour__popover__illustration {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: k-px-to-rem(80px);
+  }
+
+  .k-Tour__popover__svg--primary {
     fill: map-get($k-colors, 'primary-1');
+  }
+
+  .k-Tour__popover__container {
+    display: flex;
   }
 
   .k-Tour__popover__content {
@@ -81,6 +113,7 @@
 
   .k-Tour__popover__navigation {
     display: flex;
+    justify-content: space-between;
     margin-top: auto;
   }
 
@@ -89,7 +122,10 @@
     @include k-typographyFontSize(-1);
 
     margin: 0;
-    padding-right: k-px-to-rem(78px);
+  }
+
+  .k-Tour__popover__buttons {
+    display: flex;
   }
 
   .k-Tour__popover__button {
@@ -110,7 +146,7 @@
   }
 
   .k-Tour__popover__button--right {
-    margin-right: k-px-to-rem(10px);
+    margin-right: 0;
 
     transition: all $animation-duration ease;
     -webkit-transition: all $animation-duration ease;
@@ -125,4 +161,77 @@
       -webkit-transform: none;
     }
   }
+
+  .k-Tour__step__targetHighlight {
+    position: absolute;
+    width: $target-highlight-width;
+    height: $target-highlight-height;
+    z-index: $target-highlight-z-index;
+
+    border-radius: $target-highlight-radius;
+    border: 1px solid map-get($k-colors, 'primary-1');
+    opacity: .5;
+
+    pointer-events: none;
+
+    &:before {
+      $target-before-options: (
+        width: $target-highlight-width,
+        height: $target-highlight-height,
+      );
+
+      content: "";
+
+      @include k-tour-targetHighlightAnimation($target-before-options)
+    }
+
+    &:after {
+      $target-after-options: (
+        width: $target-highlight-width,
+        height: $target-highlight-height,
+        animation-delay: 0.8s,
+      );
+
+      content: "";
+
+      @include k-tour-targetHighlightAnimation($target-after-options)
+    }
+
+    .k-Tour__step__targetHighlightContent {
+      $target-options: (animation-delay: 1.6s);
+
+      transform: translate(-50%, -50%);
+      display: block;
+
+      @include k-tour-targetHighlightAnimation($target-options)
+    }
+  }
+
+  @keyframes k-tour-targetHighlightAnimationKeyframes {
+    0% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+    100% { transform: translate(-50%, -50%) scale(2.5); opacity: 0; }
+  }
+}
+
+
+@mixin k-tour-targetHighlightAnimation($options) {
+  $height: k-default(map-get($options, 'height'), 100%);
+  $width: k-default(map-get($options, 'width'), 100%);
+  $animation-duration: 3.5s;
+  $animation-delay: k-default(map-get($options, 'animation-delay'), 0s);
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: $width;
+  height: $height;
+
+  border: 1px solid rgba(map-get($k-colors, 'primary-1'), .4);
+  border-radius: 100%;
+
+  animation-name: k-tour-targetHighlightAnimationKeyframes;
+  animation-duration: $animation-duration;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+  animation-delay: $animation-delay;
 }
