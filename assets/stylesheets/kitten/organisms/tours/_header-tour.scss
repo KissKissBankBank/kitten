@@ -17,10 +17,14 @@
       display: block;
     }
 
-    .k-Popover {
-      position: absolute;
+    .k-Tour__popover {
+      position: fixed;
       top: $step-top-position;
       left: $step-left-position;
+    }
+
+    .k-Tour__step__targetHighlight {
+      position: fixed;
     }
   }
 }

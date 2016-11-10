@@ -41,6 +41,12 @@
 /// </div>
 
 @mixin k-Tour($options) {
+  // Tour.
+  $popover-z-index: k-default(
+    k-number-definition(map-get($options, 'popover-z-index')),
+    10
+  );
+
   // Button transition animation.
   $animation-duration: .4s;
 
@@ -48,23 +54,22 @@
   $target-highlight-width: k-px-to-rem(30px);
   $target-highlight-height: k-px-to-rem(30px);
   $target-highlight-radius: k-px-to-rem(30px);
+  $target-highlight-z-index: k-default(
+    k-number-definition(map-get($options, 'target-highlight-z-index')),
+    10
+  );
 
   .k-Tour {
-    position: absolute;
-    z-index: 10;
-    top: 0;
-    left: 0;
-    opacity: 0;
-
+    opacity: 1;
     transition: opacity .4s ease;
 
-    @if map-has-key($options, 'z-index') {
-      z-index: k-number-definition(map-get($options, 'z-index'));
+    &.is-hidden {
+      opacity: 0;
     }
+  }
 
-    &.is-visible {
-      opacity: 1;
-    }
+  .k-Tour__popover {
+    z-index: $popover-z-index;
   }
 
   .k-Tour__popover__illustration {
@@ -161,6 +166,7 @@
     position: absolute;
     width: $target-highlight-width;
     height: $target-highlight-height;
+    z-index: $target-highlight-z-index;
 
     background: transparent;
     border-radius: $target-highlight-radius;

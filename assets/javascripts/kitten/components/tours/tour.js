@@ -142,7 +142,7 @@ class Tour extends React.Component {
   render() {
     const tourClassName = classNames(
       'k-Tour',
-      { 'is-visible': this.state.visible },
+      { 'is-hidden': !this.state.visible },
       this.props.className
     )
 

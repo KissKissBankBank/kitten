@@ -82,7 +82,7 @@ class TourPopover extends React.Component {
 
   render() {
     return(
-      <div className="k-Popover"
+      <div className="k-Popover k-Tour__popover"
            role="dialog"
            aria-hidden="true"
            aria-labelledby="dialogtitle">
