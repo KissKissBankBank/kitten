@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [v0.16.0] - 2016-11-10
+
 Breaking changes:
 - Update `UserMenu`:
   * Add modifier `k-UserMenu--withoutBorderTop` on `k-UserMenu`.
