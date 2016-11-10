@@ -32,7 +32,6 @@ class Tour extends React.Component {
 
   handleTargetHighlightPlace(step) {
     this.setState({ visible: true })
-    this.props.onTargetHighlightPlace(step)
   }
 
   handleClickOnNext() {
@@ -163,7 +162,6 @@ Tour.defaultProps = {
   closeButtonLabel: 'Close',
   pagingLabel: 'on',
   storeName: 'kitten.Tour',
-  onTargetHighlightPlace: function() {},
 }
 
 export default Tour

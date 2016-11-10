@@ -167,6 +167,8 @@
     border: 1px solid map-get($k-colors, 'primary-1');
     opacity: .5;
 
+    pointer-events: none;
+
     &:before {
       $target-before-options: (
         width: $target-highlight-width,

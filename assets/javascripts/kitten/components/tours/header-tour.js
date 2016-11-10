@@ -12,26 +12,6 @@ import CrowdIllustration from
 class HeaderTour extends React.Component {
   constructor(props) {
     super(props)
-
-    this.handleTargetHighlightPlace = this.handleTargetHighlightPlace.bind(this)
-  }
-
-  // Component listener callbacks.
-
-  handleTargetHighlightPlace(step) {
-    this.handleTargetElementZIndex(step)
-  }
-
-  handleTargetElementZIndex(step) {
-    let target = document.querySelector(step.targetElement)
-
-    if (this.isCrowdStep(step)) {
-      target = document.querySelector(step.targetElement).parentElement
-    }
-
-    // We need the highlight to be positioned above the header but below the
-    // cliquable items (platformSwitch button and Crowd link).
-    target.style.zIndex = 10
   }
 
   // Component methods.
@@ -73,7 +53,6 @@ class HeaderTour extends React.Component {
     return (
       <Tour className="k-HeaderTour"
             steps={ this.steps() }
-            onTargetHighlightPlace={ this.handleTargetHighlightPlace }
             { ...otherProps } />
     )
   }
