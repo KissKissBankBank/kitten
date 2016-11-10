@@ -63,6 +63,8 @@
     opacity: 1;
     transition: opacity .4s ease;
 
+    color: map-get($k-colors, 'font-1');
+
     &.is-hidden {
       opacity: 0;
     }
