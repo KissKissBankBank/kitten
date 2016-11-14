@@ -4,6 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [v0.17.1] - 2016-11-14
+
+Fixes:
+- Small fixes on `k-Tour` animation and css.
+
 ## [v0.17.0] - 2016-11-10
 
 Breaking changes:
