@@ -21,6 +21,7 @@
 ///   </div>
 ///
 @mixin k-Select($select) {
+  $font: 'source-sans';
   $options: (
     arrow-zone-width: 30px,
     select-input-border-radius: 4px,
@@ -28,6 +29,7 @@
   );
 
   .k-Select {
+    @include k-typographyFont($font);
     @include k-typographyFontSize(-1);
     @include _k-Select-ReactSelect($select, $options);
     @include _k-Select-Overrides($select, $options);
