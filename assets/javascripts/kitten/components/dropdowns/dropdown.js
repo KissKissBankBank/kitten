@@ -55,9 +55,7 @@ class Dropdown extends React.Component {
       })
     }
 
-    emitter.off('dropdown:opening:trigger', () => {
-      dropdown.close()
-    })
+    emitter.off('dropdown:opening:trigger', () => {})
   }
 
   componentWillReceiveProps(nextProps) {
