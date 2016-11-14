@@ -59,7 +59,9 @@ class Tour extends React.Component {
 
     const tourState = JSON.stringify({ hasPlayed: true })
 
-    localStorage.setItem(this.props.storeName, tourState)
+    if (this.props.useStore) {
+      localStorage.setItem(this.props.storeName, tourState)
+    }
   }
 
   stop() {
@@ -162,6 +164,7 @@ Tour.defaultProps = {
   closeButtonLabel: 'Close',
   pagingLabel: 'on',
   storeName: 'kitten.Tour',
+  useStore: true,
 }
 
 export default Tour
