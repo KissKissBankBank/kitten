@@ -2,7 +2,7 @@ import React from 'react'
 import Dropdown from 'kitten/components/dropdowns/dropdown'
 import ButtonImageWithTextAndBadge from
   'kitten/components/buttons/button-image-with-text-and-badge'
-import SimpleList from 'kitten/components/lists/simple-list'
+import NavList from 'kitten/components/lists/nav-list'
 import domElementHelper from 'kitten/helpers/dom/element-helper'
 import objectAssign from 'core-js/library/fn/object/assign'
 
@@ -90,7 +90,7 @@ class UserMenu extends React.Component {
 
   getDropdownContent() {
     return (
-      <SimpleList className="k-UserMenu"
+      <NavList className="k-UserMenu"
                   role="menubar"
                   list={ this.props.dropdownList } />
     )

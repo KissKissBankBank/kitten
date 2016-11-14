@@ -1,6 +1,6 @@
 import React from 'react'
 
-class SimpleList extends React.Component {
+class NavList extends React.Component {
   renderItem(item, i) {
     return(
       <li key={ i } role="menuitem">
@@ -24,4 +24,4 @@ class SimpleList extends React.Component {
   }
 }
 
-export default SimpleList
+export default NavList

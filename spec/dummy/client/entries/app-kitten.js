@@ -21,7 +21,7 @@ import GrabberIcon from 'kitten/components/icons/grabber-icon'
 import ExternalRichLink from 'kitten/components/links/external-rich-link'
 
 // Lists
-import SimpleList from 'kitten/components/lists/simple-list'
+import NavList from 'kitten/components/lists/nav-list'
 
 // Simulators
 import SimulatorResult from 'kitten/components/simulators/simulator-result'
@@ -50,7 +50,7 @@ ReactOnRails.register({
   Slider,
   Select,
   SelectWithState,
-  SimpleList,
+  NavList,
   SimulatorResult,
   KarlImageExternalRichLink,
   KarlSvgExternalRichLink,

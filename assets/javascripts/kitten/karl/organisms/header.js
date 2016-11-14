@@ -2,7 +2,7 @@ import defaultProps from 'kitten/hoc/default-props'
 import React from 'react'
 import Dropdown from 'kitten/components/dropdowns/dropdown'
 import ExternalRichLink from 'kitten/components/links/external-rich-link'
-import SimpleList from 'kitten/components/lists/simple-list'
+import NavList from 'kitten/components/lists/nav-list'
 import UserMenu from 'kitten/components/dropdowns/user-menu'
 import PhoneDropdown from 'kitten/components/dropdowns/phone-dropdown'
 import objectAssign from 'core-js/library/fn/object/assign'
@@ -50,8 +50,8 @@ const platformSwitchProps = {
 
   refreshEvents: ['resize', 'karl:element#header:classToggled'],
   dropdownListClassName: 'k-PlatformSwitch k-PlatformSwitch--withoutBorderTop',
-  dropdownContent: <SimpleList className="k-PlatformSwitch
-                                          k-PlatformSwitch--withoutBorderTop"
+  dropdownContent: <NavList className="k-PlatformSwitch
+                                       k-PlatformSwitch--withoutBorderTop"
                                role="menubar"
                                list={ platformSwitchDropdownList } />
 }
