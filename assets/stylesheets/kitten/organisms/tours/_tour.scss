@@ -67,10 +67,9 @@
   .k-Tour__popover {
     z-index: $popover-z-index;
 
-    box-shadow: 4px 4px 4px rgba(0,0,0, .3);
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, .3);
 
-    transition: opacity $tour-animation-duration ease;
-    transition-delay: $tour-animation-delay;
+    transition: opacity $tour-animation-duration ease $tour-animation-delay;
 
     .k-Tour.is-hidden & {
       opacity: 0;
@@ -177,8 +176,7 @@
     border: 2px solid rgba(map-get($k-colors, 'secondary-1'), .8);
 
     pointer-events: none;
-    transition: opacity $tour-animation-duration ease;
-    transition-delay: $tour-animation-delay;
+    transition: opacity $tour-animation-duration ease $tour-animation-delay;
 
     .k-Tour.is-hidden & {
       opacity: 0;
@@ -218,7 +216,7 @@
 
   @keyframes k-tour-targetHighlightAnimationKeyframes {
     0% { transform: scale(1); opacity: 0; }
-    40% { opacity:1; }
+    40% { opacity: 1; }
     100% { transform: scale(2); opacity: 0; }
   }
 }
