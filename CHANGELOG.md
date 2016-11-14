@@ -11,7 +11,7 @@ Features:
 - Add `k-dropdownArrow` helper.
 
 Breaking changes:
-- Rename `SimpleList` to `NavList`
+- Rename `SimpleList` to `NavList`.
 
 ## [v0.18.0] - 2016-11-14
 
