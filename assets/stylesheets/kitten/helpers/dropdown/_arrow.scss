@@ -26,7 +26,7 @@
 ///   }
 
 @mixin k-dropdownArrow($arrow: ()) {
-  $arrow-size: k-default(map-get($arrow, 'size'), 9px);
+  $arrow-size: k-default(map-get($arrow, 'size'), 7px);
   $border-size: k-default(map-get($arrow, 'border-size'), 1px);
   $background-color: k-default(
     map-get($arrow, 'background-color'),
@@ -64,15 +64,15 @@
   &:after {
     border-color: rgba(255, 255, 255, 0);
     border-bottom-color: $background-color;
-    border-width: $arrow-size - 3;
-    margin-left: -($arrow-size - 3);
+    border-width: $arrow-size - 1;
+    margin-left: -($arrow-size - 1);
   }
 
   &:before {
     border-color: rgba(255, 255, 255, 0);
     border-bottom-color: $border-color;
-    border-width: $arrow-size - 2;
-    margin-left: -($arrow-size - 2);
+    border-width: $arrow-size;
+    margin-left: -($arrow-size);
   }
 
   &.is-hover:after {
