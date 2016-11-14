@@ -64,8 +64,8 @@
   &:after {
     border-color: rgba(255, 255, 255, 0);
     border-bottom-color: $background-color;
-    border-width: $arrow-size - 1;
-    margin-left: -($arrow-size - 1);
+    border-width: $arrow-size - $border-size;
+    margin-left: -($arrow-size - $border-size);
   }
 
   &:before {
