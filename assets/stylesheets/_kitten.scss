@@ -58,6 +58,7 @@ $k-module: null;
 
 // Organisms
 @import 'kitten/organisms/dropdowns/dropdown';
+@import 'kitten/organisms/dropdowns/phone-dropdown';
 @import 'kitten/organisms/headers/header';
 @import 'kitten/organisms/simulators/loan-simulator';
 @import 'kitten/organisms/popovers/popover';
@@ -66,3 +67,5 @@ $k-module: null;
 
 // Utilities
 @import 'kitten/utilities/text/align';
+@import 'kitten/utilities/text/size';
+@import 'kitten/utilities/text/weight';

@@ -2,8 +2,9 @@ import defaultProps from 'kitten/hoc/default-props'
 import React from 'react'
 import Dropdown from 'kitten/components/dropdowns/dropdown'
 import ExternalRichLink from 'kitten/components/links/external-rich-link'
-import SimpleList from 'kitten/components/lists/simple-list'
+import NavList from 'kitten/components/lists/nav-list'
 import UserMenu from 'kitten/components/dropdowns/user-menu'
+import PhoneDropdown from 'kitten/components/dropdowns/phone-dropdown'
 import objectAssign from 'core-js/library/fn/object/assign'
 
 // Header platform switch common props
@@ -51,8 +52,9 @@ const platformSwitchProps = {
   buttonContentOnCollapsed: unloggedHeaderPlatformSwitchButton,
 
   refreshEvents: ['resize', 'karl:element#header:classToggled'],
-  dropdownContent: <SimpleList className="k-PlatformSwitch
-                                          k-PlatformSwitch--withoutBorderTop"
+  dropdownListClassName: 'k-PlatformSwitch k-PlatformSwitch--withoutBorderTop',
+  dropdownContent: <NavList className="k-PlatformSwitch
+                                       k-PlatformSwitch--withoutBorderTop"
                                role="menubar"
                                list={ platformSwitchDropdownList } />
 }
@@ -141,6 +143,34 @@ const KarlLoggedHeaderUserMenu = defaultProps(UserMenu, {
   refreshEvents: ['resize', 'karl:element#header:classToggled'],
 })
 
+// Phone dropdown.
+
+const KarlPhoneDropdown = defaultProps(PhoneDropdown, {
+  // Position
+  positionedWith: () => document.getElementById('header-logged'),
+
+  // Content
+  dropdownContent: (
+    <div className="k-PhoneDropdown k-Dropdown__content--large">
+      <p className="k-PhoneDropdown__text
+                    k-u-small
+                    k-u-strong">
+        Vous avez une question&nbsp;?
+      </p>
+      <p className="k-PhoneDropdown__text">
+        Notre équipe vous répond au&nbsp;: <br/>
+        <strong className="k-u-strong">
+          <a className="k-PhoneDropdown__link" href="tel:+33972324942">09 72 32 49 42</a>
+        </strong>
+      </p>
+    </div>
+  ),
+
+  // Settings
+  refreshEvents: ['resize', 'karl:element#header:classToggled']
+})
+
 export { KarlUnloggedHeaderPlatformSwitch,
          KarlLoggedHeaderPlatformSwitch,
-         KarlLoggedHeaderUserMenu }
+         KarlLoggedHeaderUserMenu,
+         KarlPhoneDropdown }

@@ -4,7 +4,6 @@ import DropdownButton from 'kitten/components/dropdowns/dropdown-button'
 import domElementHelper from 'kitten/helpers/dom/element-helper'
 import EventEmitter from 'event-emitter'
 import objectAssign from 'core-js/library/fn/object/assign'
-import SimpleList from 'kitten/components/lists/simple-list'
 
 const emitter = EventEmitter()
 
@@ -36,9 +35,7 @@ class Dropdown extends React.Component {
 
     this.handleClickOnLinks()
 
-    emitter.on('dropdown:opening:trigger', () => {
-      dropdown.close()
-    })
+    emitter.on('dropdown:opening:trigger', this.close)
 
     if (this.props.refreshEvents.length) {
       this.props.refreshEvents.forEach((ev) => {
@@ -56,7 +53,7 @@ class Dropdown extends React.Component {
       })
     }
 
-    emitter.off('dropdown:opening:trigger')
+    emitter.off('dropdown:opening:trigger', this.close)
   }
 
   componentWillReceiveProps(nextProps) {
@@ -107,24 +104,14 @@ class Dropdown extends React.Component {
 
   getArrowPosition() {
     const defaultPosition = { position: 'absolute', top: 0 }
-    const horizontalPositionValue = this.props.arrowHorizontalPositionValue
-    let horizontalPosition = { left: horizontalPositionValue }
+    const arrowHorizontalPosition = this.props.arrowHorizontalPosition
 
-    if (!this.hasDefaultHorizontalPosition()) {
-      horizontalPosition = { right: horizontalPositionValue }
-    }
-
-    return objectAssign(defaultPosition, horizontalPosition)
+    return objectAssign(defaultPosition, arrowHorizontalPosition)
   }
 
   getContentPosition() {
     const defaultPosition = { top: this.state.referenceElementHeight }
-    const horizontalPositionValue = this.props.contentHorizontalPositionValue
-    let horizontalPosition = { left: horizontalPositionValue }
-
-    if (!this.hasDefaultHorizontalPosition()) {
-      horizontalPosition = { right: horizontalPositionValue }
-    }
+    const horizontalPosition = this.props.contentHorizontalPosition
 
     return objectAssign(defaultPosition, horizontalPosition)
   }
@@ -197,7 +184,6 @@ class Dropdown extends React.Component {
     )
   }
 
-
   render() {
     const button = this.renderButton()
     const dropdownClassName = classNames(
@@ -212,15 +198,14 @@ class Dropdown extends React.Component {
     return(
       <div ref="dropdown" className={ dropdownClassName }>
         { button }
-        <nav ref="dropdownContent"
+        <div ref="dropdownContent"
              className="k-Dropdown__content"
              style={ this.getContentPosition() }
-             role="navigation"
              aria-hidden="true"
              aria-labelledby={ this.props.buttonId }>
           { this.props.dropdownContent }
           { this.renderArrow() }
-        </nav>
+        </div>
       </div>
     );
   }
@@ -244,8 +229,8 @@ Dropdown.defaultProps = {
   positionedOn: 'left', // 'left' | 'right'
 
   // Custom horizontal position for content and content arrow.
-  contentHorizontalPositionValue: '0',
-  arrowHorizontalPositionValue: '50%',
+  contentHorizontalPosition: { left: '0' },
+  arrowHorizontalPosition: { left: '50%' },
 
   // Button settings
   buttonContentOnExpanded: 'Close me',

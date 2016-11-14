@@ -29,6 +29,17 @@ const domElementHelper = {
   },
 
   /**
+   * Return element position left.
+   *
+   * @param {HTMLElement} element
+   */
+  getComputedLeft(element) {
+    if (!element) return
+
+    return element.getBoundingClientRect().left
+  },
+
+  /**
    * Return value of property's style for element.
    *
    * @param {HTMLElement} element

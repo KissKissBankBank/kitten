@@ -85,43 +85,7 @@
     }
 
     .k-UserMenu__arrow {
-      position: absolute;
-      top: -($arrow-size - $border-size);
-      right: 50%;
-
-      display: block;
-      width: 0;
-      height: $arrow-size;
-
-      &:after,
-      &:before {
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        content: " ";
-        width: 0;
-        height: 0;
-        border: solid transparent;
-        pointer-events: none;
-      }
-
-      &:after {
-        border-color: rgba(255, 255, 255, 0);
-        border-bottom-color: $background-color;
-        border-width: $arrow-size - 3;
-        margin-left: -($arrow-size - 3);
-      }
-
-      &:before {
-        border-color: rgba(255, 255, 255, 0);
-        border-bottom-color: $border-color;
-        border-width: $arrow-size - 2;
-        margin-left: -($arrow-size - 2);
-      }
-
-      &.is-hover:after {
-        border-bottom-color: $background-color-hover;
-      }
+      @include k-dropdownArrow;
     }
 
     .k-UserMenu__item {

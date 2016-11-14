@@ -22,7 +22,7 @@ import GrabberIcon from 'kitten/components/icons/grabber-icon'
 import ExternalRichLink from 'kitten/components/links/external-rich-link'
 
 // Lists
-import SimpleList from 'kitten/components/lists/simple-list'
+import NavList from 'kitten/components/lists/nav-list'
 
 // Tours
 import HeaderTour from 'kitten/components/tours/header-tour'
@@ -43,7 +43,8 @@ import { KarlSimpleDropdown,
          KarlUserMenuDropdown } from 'kitten/karl/organisms/dropdown'
 import { KarlUnloggedHeaderPlatformSwitch,
          KarlLoggedHeaderPlatformSwitch,
-         KarlLoggedHeaderUserMenu } from 'kitten/karl/organisms/header'
+         KarlLoggedHeaderUserMenu,
+         KarlPhoneDropdown } from 'kitten/karl/organisms/header'
 import { KarlLoanSimulator } from 'kitten/karl/organisms/loan-simulator'
 
 ReactOnRails.register({
@@ -58,7 +59,7 @@ ReactOnRails.register({
   Search,
   Select,
   SelectWithState,
-  SimpleList,
+  NavList,
   SimulatorResult,
   SimulatorResult,
   Tour,
@@ -72,5 +73,6 @@ ReactOnRails.register({
   KarlUnloggedHeaderPlatformSwitch,
   KarlLoggedHeaderPlatformSwitch,
   KarlLoggedHeaderUserMenu,
+  KarlPhoneDropdown,
   KarlLoanSimulator,
 })

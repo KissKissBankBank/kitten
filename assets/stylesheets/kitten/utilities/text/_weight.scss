@@ -1,0 +1,17 @@
+/// Text weight utilities.
+///
+/// @group text
+///
+/// @example scss - Usage
+///
+///     @include k-utilities-weight;
+///
+/// @example html
+///
+///     <p class="k-u-strong">…</p>
+
+@mixin k-utilities-weight {
+  .k-u-strong {
+    @include k-typographyFont('source-sans-semi-bold');
+  }
+}
