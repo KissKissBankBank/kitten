@@ -14,6 +14,7 @@
 @mixin k-PhoneDropdown {
   $arrow-size: 9px;
   $border-size: 1px;
+  $font-color: map-get($k-colors, 'font-1');
   $background-color: map-get($k-colors, 'background-2');
   $border-color: map-get($k-colors, 'line-1');
   $background-color-hover: map-get($k-colors, 'line-1');
@@ -54,5 +55,24 @@
       border-color: $border-color,
       border-color-hover: $background-color-hover,
     ));
+  }
+
+  .k-PhoneDropdown__link {
+    color: $font-color;
+    text-decoration: none;
+    border-bottom: 1px dashed $font-color;
+
+    &:active {
+      color: $font-color;
+    }
+
+    &:focus {
+      text-decoration: none;
+    }
+
+    &:hover {
+      text-decoration: none;
+      border-bottom-style: solid;
+    }
   }
 }

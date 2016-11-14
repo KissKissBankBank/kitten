@@ -150,14 +150,14 @@ const KarlPhoneDropdown = defaultProps(PhoneDropdown, {
   dropdownContent: (
     <div className="k-PhoneDropdown k-Dropdown__content--large">
       <p className="k-PhoneDropdown__text
-                    k-PhoneDropdown__text--small
-                    k-PhoneDropdown__text--strong">
+                    k-u-small
+                    k-u-strong">
         Vous avez une question&nbsp;?
       </p>
       <p className="k-PhoneDropdown__text">
         Notre équipe vous répond au&nbsp;: <br/>
-        <strong className="k-PhoneDropdown__text--strong">
-          09 72 32 49 42
+        <strong className="k-u-strong">
+          <a className="k-PhoneDropdown__link" href="tel:+33972324942">09 72 32 49 42</a>
         </strong>
       </p>
     </div>

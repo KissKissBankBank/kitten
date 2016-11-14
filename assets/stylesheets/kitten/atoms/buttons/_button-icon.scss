@@ -393,7 +393,8 @@
     }
   }
 
-  .k-ButtonIcon--signup {
+  .k-ButtonIcon--signup,
+  .k-ButtonIcon--phone {
     $signup-size: k-px-to-rem(18px);
     @include k-buttonRounded($button-size, $signup-size, $signup-size);
 

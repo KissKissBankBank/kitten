@@ -87,9 +87,14 @@ class PhoneDropdown extends React.Component {
   }
 
   getDropdownButton() {
+    const buttonClassName = classNames('k-ButtonIcon',
+                                       'k-ButtonIcon--default',
+                                       'k-ButtonIcon--phone',
+                                       this.props.buttonClassName)
+
     return (
       <DropdownButton ref="dropdownButton"
-                      className={ this.props.buttonClassName }
+                      className={ buttonClassName }
                       id={ this.props.buttonId }
                       isExpanded={ this.state.isExpanded }
                       onClick={ this.handleButtonClick }>
@@ -175,8 +180,8 @@ PhoneDropdown.defaultProps = {
   // Position.
   positionedWithBorder: false,
 
-  // Default button classes.
-  buttonClassName: 'k-ButtonIcon k-ButtonIcon--default k-ButtonIcon--signup',
+  // Button classes.
+  buttonClassName: '',
 
   // Add custom value to compute horizontal position.
   spaceAroundGrid: 0,
