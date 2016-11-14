@@ -15,11 +15,11 @@ class Dropdown extends React.Component {
     this.state = {
       isExpanded: false,
       referenceElementHeight: 0,
+      isClosedAt: Date.now(),
     }
 
     this.handleDropdownPosition = this.handleDropdownPosition.bind(this)
     this.revertHandleClickOnLinks = this.revertHandleClickOnLinks.bind(this)
-    this.handleClickEverywhere = this.handleClickEverywhere.bind(this)
     this.close = this.close.bind(this)
   }
 
@@ -36,7 +36,6 @@ class Dropdown extends React.Component {
     // Handle events.
 
     this.handleClickOnLinks()
-    this.handleClickEverywhere()
 
     emitter.on('dropdown:opening:trigger', () => {
       dropdown.close()
@@ -66,12 +65,20 @@ class Dropdown extends React.Component {
     if (nextProps.isExpanded != this.state.isExpanded) {
       this.toggle(nextProps.isExpanded)
     }
+
+    // Enable wrapper component to close the dropdown.
+    if (nextProps.isClosedAt != this.state.isClosedAt) {
+      this.close()
+    }
   }
 
   // Component methods
 
   close() {
-    this.setState({ isExpanded: false })
+    this.setState({
+      isExpanded: false,
+      isClosedAt: Date.now(),
+    })
   }
 
   toggle(nextExpandedState) {
@@ -147,10 +154,6 @@ class Dropdown extends React.Component {
     for (let link of links) {
       link.addEventListener('click', this.close)
     }
-  }
-
-  handleClickEverywhere() {
-    window.addEventListener('click', this.close)
   }
 
   handleDropdownPosition() {
@@ -239,6 +242,7 @@ Dropdown.propTypes = {
   positionedOn: React.PropTypes.string,
   notifications: React.PropTypes.number,
   refreshEvents: React.PropTypes.array,
+  isClosedAt: React.PropTypes.number,
   onPositionUpdate: React.PropTypes.func,
 }
 
@@ -260,6 +264,9 @@ Dropdown.defaultProps = {
   // List of events that will trigger the update of the reference element
   // height.
   refreshEvents: [], // eg. ['resize']
+
+  // Change this variable to close the dropdown.
+  isClosedAt: 0,
 
   // Called when one of the `refreshEvents` is triggered.
   onPositionUpdate: function() {},
