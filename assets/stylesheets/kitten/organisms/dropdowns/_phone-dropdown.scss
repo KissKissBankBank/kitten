@@ -7,8 +7,9 @@
 ///
 /// @example html
 ///   <div class="k-PhoneDropdown">
-///     <p class="k-PhoneDropdown__text k-PhoneDropdown__text--small">…</p>
-///     <p class="k-PhoneDropdown__text k-PhoneDropdown__text--strong">…</p>
+///     <p class="k-PhoneDropdown__text">
+///       <a class="k-PhoneDropdown__link">…</a>
+///     </p>
 ///   </div>
 
 @mixin k-PhoneDropdown {
