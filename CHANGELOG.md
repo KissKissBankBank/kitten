@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+Features:
+- Add prop `useStore` to `k-Tour` component for testing.
+
 ## [v0.17.1] - 2016-11-14
 
 Fixes:
