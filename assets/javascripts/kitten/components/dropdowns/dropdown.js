@@ -35,9 +35,7 @@ class Dropdown extends React.Component {
 
     this.handleClickOnLinks()
 
-    emitter.on('dropdown:opening:trigger', () => {
-      dropdown.close()
-    })
+    emitter.on('dropdown:opening:trigger', this.close)
 
     if (this.props.refreshEvents.length) {
       this.props.refreshEvents.forEach((ev) => {
@@ -55,7 +53,7 @@ class Dropdown extends React.Component {
       })
     }
 
-    emitter.off('dropdown:opening:trigger', () => {})
+    emitter.off('dropdown:opening:trigger', this.close)
   }
 
   componentWillReceiveProps(nextProps) {
