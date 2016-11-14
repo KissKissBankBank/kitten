@@ -47,6 +47,7 @@
     10
   );
   $tour-animation-duration: 1s;
+  $tour-animation-delay: .7s;
 
   // Button transition animation.
   $button-animation-duration: .4s;
@@ -66,7 +67,10 @@
   .k-Tour__popover {
     z-index: $popover-z-index;
 
+    box-shadow: 4px 4px 4px rgba(0,0,0, .3);
+
     transition: opacity $tour-animation-duration ease;
+    transition-delay: $tour-animation-delay;
 
     .k-Tour.is-hidden & {
       opacity: 0;
@@ -173,6 +177,8 @@
     border: 2px solid rgba(map-get($k-colors, 'secondary-1'), .8);
 
     pointer-events: none;
+    transition: opacity $tour-animation-duration ease;
+    transition-delay: $tour-animation-delay;
 
     .k-Tour.is-hidden & {
       opacity: 0;
