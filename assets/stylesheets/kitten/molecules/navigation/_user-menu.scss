@@ -85,7 +85,9 @@
     }
 
     .k-UserMenu__arrow {
-      @include k-dropdownArrow;
+      @include k-media-min('xs') {
+        @include k-dropdownArrow;
+      }
     }
 
     .k-UserMenu__item {
