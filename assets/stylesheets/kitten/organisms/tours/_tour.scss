@@ -47,14 +47,14 @@
     10
   );
   $tour-animation-duration: 1s;
+  $tour-animation-delay: .7s;
 
   // Button transition animation.
   $button-animation-duration: .4s;
 
   // Target hightlight.
-  $target-highlight-width: k-px-to-rem(30px);
-  $target-highlight-height: k-px-to-rem(30px);
-  $target-highlight-radius: k-px-to-rem(30px);
+  $target-highlight-width: k-px-to-rem(50px);
+  $target-highlight-height: k-px-to-rem(50px);
   $target-highlight-z-index: k-default(
     k-number-definition(map-get($options, 'target-highlight-z-index')),
     10
@@ -67,7 +67,9 @@
   .k-Tour__popover {
     z-index: $popover-z-index;
 
-    transition: opacity $tour-animation-duration ease;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, .3);
+
+    transition: opacity $tour-animation-duration ease $tour-animation-delay;
 
     .k-Tour.is-hidden & {
       opacity: 0;
@@ -82,7 +84,7 @@
   }
 
   .k-Tour__popover__svg--primary {
-    fill: map-get($k-colors, 'primary-1');
+    fill: map-get($k-colors, 'font-1');
   }
 
   .k-Tour__popover__container {
@@ -170,11 +172,11 @@
     height: $target-highlight-height;
     z-index: $target-highlight-z-index;
 
-    border-radius: $target-highlight-radius;
-    border: 1px solid map-get($k-colors, 'primary-1');
+    border-radius: 100%;
+    border: 2px solid rgba(map-get($k-colors, 'secondary-1'), .8);
 
     pointer-events: none;
-    transition: opacity $tour-animation-duration ease;
+    transition: opacity $tour-animation-duration ease $tour-animation-delay;
 
     .k-Tour.is-hidden & {
       opacity: 0;
@@ -195,7 +197,7 @@
       $target-after-options: (
         width: $target-highlight-width,
         height: $target-highlight-height,
-        animation-delay: 0.8s,
+        animation-delay: 1s,
       );
 
       content: "";
@@ -204,7 +206,7 @@
     }
 
     .k-Tour__step__targetHighlightContent {
-      $target-options: (animation-delay: 1.6s);
+      $target-options: (animation-delay: 2s);
 
       display: block;
 
@@ -213,31 +215,32 @@
   }
 
   @keyframes k-tour-targetHighlightAnimationKeyframes {
-    0% { transform: scale(1); opacity: 1; }
-    100% { transform: scale(2.5); opacity: 0; }
+    0% { transform: scale(1); opacity: 0; }
+    40% { opacity: 1; }
+    100% { transform: scale(2); opacity: 0; }
   }
 }
 
 
 @mixin k-tour-targetHighlightAnimation($options: ()) {
-  $target-border: 1px;
+  $border-width: 6px;
   $height: k-default(map-get($options, 'height'), 100%);
   $width: k-default(map-get($options, 'width'), 100%);
-  $animation-duration: 3.5s;
+  $animation-duration: 3s;
   $animation-delay: k-default(map-get($options, 'animation-delay'), 0s);
 
   position: absolute;
-  top: -$target-border;
-  left: -$target-border;
+  top: -$border-width;
+  left: -$border-width;
   width: $width;
   height: $height;
 
-  border: 1px solid rgba(map-get($k-colors, 'primary-1'), .4);
+  border: $border-width solid rgba(map-get($k-colors, 'secondary-1'), .6);
   border-radius: 100%;
 
   animation-name: k-tour-targetHighlightAnimationKeyframes;
   animation-duration: $animation-duration;
   animation-iteration-count: infinite;
-  animation-timing-function: ease-out;
+  animation-timing-function: ease;
   animation-delay: $animation-delay;
 }

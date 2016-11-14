@@ -12,7 +12,7 @@ class TourPopover extends React.Component {
       'k-Button--icon',
       'k-Button--iconRight',
       {
-        'k-Button--primary': !isDisabled,
+        'k-Button--zinc': !isDisabled,
         'k-Button--default': isDisabled,
       }
     )
@@ -41,7 +41,7 @@ class TourPopover extends React.Component {
       'k-Button--tiny',
       'k-Button--icon',
       {
-        'k-Button--primary': !isDisabled,
+        'k-Button--zinc': !isDisabled,
         'k-Button--default': isDisabled,
       }
     )
