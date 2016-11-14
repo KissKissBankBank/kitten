@@ -12,12 +12,7 @@
 ///   </div>
 
 @mixin k-PhoneDropdown {
-  $arrow-size: 9px;
-  $border-size: 1px;
   $font-color: map-get($k-colors, 'font-1');
-  $background-color: map-get($k-colors, 'background-2');
-  $border-color: map-get($k-colors, 'line-1');
-  $background-color-hover: map-get($k-colors, 'line-1');
 
   .k-PhoneDropdown {
     background: map-get($k-colors, 'background-2');
@@ -48,13 +43,7 @@
   }
 
   .k-PhoneDropdown__arrow {
-    @include k-dropdownArrow((
-      size: $arrow-size,
-      border-size: $border-size,
-      background-color: $background-color,
-      border-color: $border-color,
-      border-color-hover: $background-color-hover,
-    ));
+    @include k-dropdownArrow;
   }
 
   .k-PhoneDropdown__link {

@@ -25,12 +25,21 @@
 ///     }
 ///   }
 
-@mixin k-dropdownArrow($arrow) {
-  $arrow-size: map-get($arrow, 'size');
-  $border-size: map-get($arrow, 'border-size');
-  $background-color: map-get($arrow, 'background-color');
-  $border-color: map-get($arrow, 'border-color');
-  $border-color-hover: map-get($arrow, 'border-color-hover');
+@mixin k-dropdownArrow($arrow: ()) {
+  $arrow-size: k-default(map-get($arrow, 'size'), 9px);
+  $border-size: k-default(map-get($arrow, 'border-size'), 1px);
+  $background-color: k-default(
+    map-get($arrow, 'background-color'),
+    map-get($k-colors, 'background-2')
+  );
+  $border-color: k-default(
+    map-get($arrow, 'border-color'),
+    map-get($k-colors, 'line-1')
+  );
+  $border-color-hover: k-default(
+    map-get($arrow, 'border-color-hover'),
+    map-get($k-colors, 'line-1')
+  );
 
   position: absolute;
   top: -($arrow-size - $border-size);

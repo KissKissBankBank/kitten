@@ -81,13 +81,7 @@
     }
 
     .k-UserMenu__arrow {
-      @include k-dropdownArrow((
-        size: $arrow-size,
-        border-size: $border-size,
-        background-color: $background-color,
-        border-color: $border-color,
-        border-color-hover: $background-color-hover,
-      ));
+      @include k-dropdownArrow;
     }
 
     .k-UserMenu__item {
