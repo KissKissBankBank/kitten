@@ -4,6 +4,27 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [v0.18.0] - 2016-11-14
+
+Features:
+- Add prop `useStore` to `k-Tour` component for testing.
+
+## [v0.17.1] - 2016-11-14
+
+Fixes:
+- Small fixes on `k-Tour` animation and css.
+
+## [v0.17.0] - 2016-11-10
+
+Breaking changes:
+- Add "svg-react-loader": "^0.3.7", to your package.json to compile assets with
+Webpack
+
+Features:
+- Add component `k-HeaderTour` and `k-Tour`
+
+## [v0.16.0] - 2016-11-10
+
 Breaking changes:
 - Update `UserMenu`:
   * Add modifier `k-UserMenu--withoutBorderTop` on `k-UserMenu`.

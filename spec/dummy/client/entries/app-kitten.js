@@ -24,6 +24,12 @@ import ExternalRichLink from 'kitten/components/links/external-rich-link'
 // Lists
 import SimpleList from 'kitten/components/lists/simple-list'
 
+// Tours
+import HeaderTour from 'kitten/components/tours/header-tour'
+import Tour from 'kitten/components/tours/tour'
+import TourPopover from 'kitten/components/tours/tour-popover'
+import TourStep from 'kitten/components/tours/tour-step'
+
 // Simulators
 import SimulatorResult from 'kitten/components/simulators/simulator-result'
 import LoanSimulator from 'kitten/components/simulators/loan-simulator'
@@ -46,6 +52,7 @@ ReactOnRails.register({
   DropdownButton,
   ExternalRichLink,
   GrabberIcon,
+  HeaderTour,
   LoanSimulator,
   Slider,
   Search,
@@ -53,6 +60,10 @@ ReactOnRails.register({
   SelectWithState,
   SimpleList,
   SimulatorResult,
+  SimulatorResult,
+  Tour,
+  TourPopover,
+  TourStep,
   KarlImageExternalRichLink,
   KarlSvgExternalRichLink,
   KarlSimpleDropdown,
