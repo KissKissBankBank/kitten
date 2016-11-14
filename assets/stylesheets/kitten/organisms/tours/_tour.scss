@@ -81,7 +81,7 @@
   }
 
   .k-Tour__popover__svg--primary {
-    fill: map-get($k-colors, 'primary-1');
+    fill: map-get($k-colors, 'font-1');
   }
 
   .k-Tour__popover__container {
@@ -164,14 +164,13 @@
   }
 
   .k-Tour__step__targetHighlight {
-    $color: #68ffa0;
     position: absolute;
     width: $target-highlight-width;
     height: $target-highlight-height;
     z-index: $target-highlight-z-index;
 
     border-radius: 100%;
-    border: 2px solid rgba($color, .8);
+    border: 2px solid rgba(map-get($k-colors, 'secondary-1'), .8);
 
     pointer-events: none;
 
