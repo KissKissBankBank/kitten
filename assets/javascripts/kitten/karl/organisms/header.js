@@ -52,8 +52,8 @@ const platformSwitchProps = {
   dropdownListClassName: 'k-PlatformSwitch k-PlatformSwitch--withoutBorderTop',
   dropdownContent: <SimpleList className="k-PlatformSwitch
                                           k-PlatformSwitch--withoutBorderTop"
-                      role="menubar"
-                      list={ platformSwitchDropdownList } />
+                               role="menubar"
+                               list={ platformSwitchDropdownList } />
 }
 
 // Unlogged header dropdown

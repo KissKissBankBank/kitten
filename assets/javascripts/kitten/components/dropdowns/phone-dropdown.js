@@ -3,6 +3,7 @@ import Dropdown from 'kitten/components/dropdowns/dropdown'
 import DropdownButton from 'kitten/components/dropdowns/dropdown-button'
 import domElementHelper from 'kitten/helpers/dom/element-helper'
 import objectAssign from 'core-js/library/fn/object/assign'
+import classNames from 'classnames'
 
 class PhoneDropdown extends React.Component {
   constructor(props) {
@@ -10,14 +11,13 @@ class PhoneDropdown extends React.Component {
 
     this.state = {
       isExpanded: false,
-      contentPositionValue: { top: 0, left: 0 },
-      arrowPositionValue: { top: 0, left: 0 },
+      contentPosition: { top: 0, left: 0 },
+      arrowPosition: { top: 0, left: 0 },
       positionOn: 'right',
     }
 
     this.handleButtonClick = this.handleButtonClick.bind(this)
-    this.handlePositionUpdate =
-      this.handlePositionUpdate.bind(this)
+    this.handlePositionUpdate = this.handlePositionUpdate.bind(this)
   }
 
   componentDidMount() {
@@ -32,10 +32,6 @@ class PhoneDropdown extends React.Component {
 
   canComputeSize() {
     return typeof this.refs.dropdown != 'undefined'
-  }
-
-  getWindowWidth() {
-    return window.innerWidth
   }
 
   getDropdownContentElement() {
@@ -71,8 +67,8 @@ class PhoneDropdown extends React.Component {
     // If the interval is negative, just stick the dropdown to the reference
     // element border.
 
-    if (this.getWindowWidth() < space + this.getDropdownContentElementWidth()) {
-      return { left: this.getWindowWidth() - this.getDropdownContentElementWidth()}
+    if(window.innerWidth < space + this.getDropdownContentElementWidth()) {
+      return { left: window.innerWidth - this.getDropdownContentElementWidth()}
     } else {
       return { left: space + 'px' }
     }
@@ -113,18 +109,18 @@ class PhoneDropdown extends React.Component {
   }
 
   getDropdownArrow() {
-    return (<span className="k-PhoneDropdown__arrow" />)
+    return <span className="k-PhoneDropdown__arrow" />
   }
 
-  updateDropdownContentPositionValue() {
+  updateDropdownContentPosition() {
     this.setState({
-      contentHorizontalPositionValue: this.getContentHorizontalPosition()
+      contentHorizontalPosition: this.getContentHorizontalPosition()
     })
   }
 
-  updateDropdownArrowPositionValue() {
+  updateDropdownArrowPosition() {
     this.setState({
-      arrowHorizontalPositionValue: this.getArrowHorizontalPosition()
+      arrowHorizontalPosition: this.getArrowHorizontalPosition()
     })
   }
 
@@ -132,8 +128,8 @@ class PhoneDropdown extends React.Component {
 
   handlePositionUpdate() {
     if (this.canComputeSize()) {
-      this.updateDropdownContentPositionValue()
-      this.updateDropdownArrowPositionValue()
+      this.updateDropdownContentPosition()
+      this.updateDropdownArrowPosition()
     }
   }
 
@@ -154,17 +150,13 @@ class PhoneDropdown extends React.Component {
                 button={ this.getDropdownButton() }
                 dropdownContent={ this.props.dropdownContent }
                 dropdownListArrow={ this.getDropdownArrow() }
-                contentHorizontalPositionValue={
-                  this.state.contentHorizontalPositionValue
+                contentHorizontalPosition={
+                  this.state.contentHorizontalPosition
                 }
-                arrowHorizontalPositionValue={
-                  this.state.arrowHorizontalPositionValue
-                }
+                arrowHorizontalPosition={ this.state.arrowHorizontalPosition }
                 isExpanded={ this.state.isExpanded }
                 buttonId={ this.getButtonId() }
-                onPositionUpdate={
-                  this.handlePositionUpdate
-                }
+                onPositionUpdate={ this.handlePositionUpdate }
                 { ...otherProps } />
     )
   }

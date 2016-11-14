@@ -12,8 +12,8 @@ class UserMenu extends React.Component {
 
     this.state = {
       isExpanded: false,
-      contentPositionValue: { top: 0, left: 0 },
-      arrowPositionValue: { top: 0, left: 0 },
+      contentPosition: { top: 0, left: 0 },
+      arrowPosition: { top: 0, left: 0 },
     }
 
     this.handleButtonClick = this.handleButtonClick.bind(this)
@@ -119,15 +119,15 @@ class UserMenu extends React.Component {
     return (<span className="k-UserMenu__arrow" />)
   }
 
-  updateDropdownContentPositionValue() {
+  updateDropdownContentPosition() {
     this.setState({
-      contentHorizontalPositionValue: this.getContentHorizontalPosition()
+      contentHorizontalPosition: this.getContentHorizontalPosition()
     })
   }
 
-  updateDropdownArrowPositionValue() {
+  updateDropdownArrowPosition() {
     this.setState({
-      arrowHorizontalPositionValue: this.getArrowHorizontalPosition()
+      arrowHorizontalPosition: this.getArrowHorizontalPosition()
     })
   }
 
@@ -135,8 +135,8 @@ class UserMenu extends React.Component {
 
   handlePositionUpdate() {
     if (this.canComputeSize()) {
-      this.updateDropdownContentPositionValue()
-      this.updateDropdownArrowPositionValue()
+      this.updateDropdownContentPosition()
+      this.updateDropdownArrowPosition()
     }
   }
 
@@ -157,11 +157,11 @@ class UserMenu extends React.Component {
                 button={ this.getDropdownButton() }
                 dropdownContent={ this.getDropdownContent() }
                 dropdownListArrow={ this.getDropdownArrow() }
-                contentHorizontalPositionValue={
-                  this.state.contentHorizontalPositionValue
+                contentHorizontalPosition={
+                  this.state.contentHorizontalPosition
                 }
-                arrowHorizontalPositionValue={
-                  this.state.arrowHorizontalPositionValue
+                arrowHorizontalPosition={
+                  this.state.arrowHorizontalPosition
                 }
                 isExpanded={ this.state.isExpanded }
                 buttonId={ this.getButtonId() }
