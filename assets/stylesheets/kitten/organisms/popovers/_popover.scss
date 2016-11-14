@@ -1,0 +1,58 @@
+/// Popover
+///
+/// @group popovers
+///
+/// @example scss - usage
+///   @include k-Popover;
+///
+/// @example html
+/// <div class="k-Popover"
+///      role="dialog"
+///      aria-hidden="true"
+///      aria-labelledby="dialogtitle">
+///   <div class="k-Popover__container">
+///     …
+///     <div class="k-Popover__close">
+///       <button class="k-ButtonIcon
+///                      k-ButtonIcon--default
+///                      k-ButtonIcon--tiny">
+///         <svg class="k-ButtonIcon__svg k-ButtonIcon__svg--rotate"
+///              xmlns="http://www.w3.org/2000/svg"
+///              viewBox="-11 -4 125 105">
+///           <path d="M91.968 21.407l-70.56 70.56-13.44-13.44 70.56-70.56z"/>
+///           <path d="M91.968 78.527l-13.44 13.44-70.56-70.56 13.44-13.44z"/>
+///         </svg>
+///       </button>
+///     </div>
+///   </div>
+/// </div>
+
+@mixin k-Popover {
+  $background-color: #fff;
+  $border-color: #eee;
+  $border-size: 1px;
+  $border-radius: k-px-to-rem(15px);
+  $margin-container: k-px-to-rem(11px);
+
+  .k-Popover {
+    display: flex;
+
+    width: k-px-to-rem(465px);
+    min-height: k-px-to-rem(218px);
+    box-sizing: border-box;
+
+    background-color: $background-color;
+    border-radius: $border-radius;
+    border: $border-size solid $border-color;
+  }
+
+  .k-Popover__container {
+    margin: $margin-container
+            $margin-container
+            k-px-to-rem(30px);
+  }
+
+  .k-Popover__close {
+    margin-left: k-px-to-rem(10px);
+  }
+}

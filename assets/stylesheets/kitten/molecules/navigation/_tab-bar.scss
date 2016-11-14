@@ -50,7 +50,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: inset 0 $border-width 0 $border-color;
+    box-shadow: inset 0 $border-width 0 rgba($current-color, .1);
 
     list-style-type: none;
     width: 100%;

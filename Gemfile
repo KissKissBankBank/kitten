@@ -13,3 +13,6 @@ gem 'rubocop', require: false
 gem 'foreman'
 
 gem 'sass'
+
+# Embed SVG documents in HTML to style them in CSS
+gem 'inline_svg', '>= 0.11'

@@ -90,9 +90,9 @@ class UserMenu extends React.Component {
 
   getDropdownContent() {
     return (
-      <NavList className="k-UserMenu"
-                  role="menubar"
-                  list={ this.props.dropdownList } />
+      <NavList className="k-UserMenu k-UserMenu--withoutBorderTop"
+               role="menubar"
+               list={ this.props.dropdownList } />
     )
   }
 

@@ -32,7 +32,7 @@
   $item-spacing-xxs: k-px-to-rem(15px);
   $z-index: 10;
 
-  $graphic-logo-size: 38px;
+  $graphic-logo-size: 37px;
 
   .k-Header {
     background-color: $background-color;
@@ -100,6 +100,7 @@
   }
 
   .k-Header__nav__item {
+    box-sizing: content-box;
     height: k-px-to-rem($height - $border-width);
   }
 
@@ -142,8 +143,7 @@
   }
 
   .k-Header__signup,
-  .k-Header__logged,
-  .k-Header__search {
+  .k-Header__logged {
     @include k-media-max('xs') {
       display: none;
     }

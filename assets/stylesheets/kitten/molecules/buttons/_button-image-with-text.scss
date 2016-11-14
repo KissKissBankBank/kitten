@@ -64,6 +64,10 @@
     @include k-media-max('m') {
       display: none;
     }
+
+    @include k-media-within('s') {
+      display: block;
+    }
   }
 
   // Modifiers.

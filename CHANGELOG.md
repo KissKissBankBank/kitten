@@ -4,12 +4,45 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [v0.18.0] - 2016-11-14
+
+Features:
+- Add prop `useStore` to `k-Tour` component for testing.
+
+## [v0.17.1] - 2016-11-14
+
+Fixes:
+- Small fixes on `k-Tour` animation and css.
+
+## [v0.17.0] - 2016-11-10
+
+Breaking changes:
+- Add "svg-react-loader": "^0.3.7", to your package.json to compile assets with
+Webpack
+
+Features:
+- Add component `k-HeaderTour` and `k-Tour`
+
+## [v0.16.0] - 2016-11-10
+
+Breaking changes:
+- Update `UserMenu`:
+  * Add modifier `k-UserMenu--withoutBorderTop` on `k-UserMenu`.
+- Remove `k-UserMenu__separation` and
+  replace by `k-UserMenu__borderTop`, `k-UserMenu__borderBottom`.
+
+## [v0.15.1] - 2016-10-02
+
+Fixes:
+- Small fixes on header:
+  * Fix `k-TextInput` and `k-SearchInput` sizes.
+  * Update `Search` component examples.
+
+## [v0.15.0] - 2016-10-02
+
 Breaking changes:
 - Update `k-SearchInput` molecule:
   * Use a `<button>` tag instead of an `<input type="submit">`.
-  * Use an svg tag instead of an svg background image.
-
-Breaking changes:
 - Update `Dropdown` component:
   * Add `dropdownContent` prop instead of generating a list inside the
     `Dropdown` component.
@@ -28,10 +61,14 @@ Breaking changes:
     - `textClassName`
   * Add new callback in `Dropdown` component: `onPositionUpdate`.
 
+Features:
+- Add new React component `Search`.
+
 ## [v0.14.0] - 2016-10-31
 
 Features:
 - Add modifier `k-PlatformSwitch--withoutBorderTop` on `k-PlatformSwitch`.
+- Add component `k-Popover`.
 - Update KissKissBankBank and hellomerci svg logos.
 - Update `k-Grid` max-width from `1420px` to `1440px`.
 - Remove `k-ButtonIconWords` and use `k-Button--icon` modifier instead.
@@ -39,8 +76,6 @@ Features:
 Fixes:
 - Fix `SelectWithState` component onChange callback (remove all underscores in
   component props names).
-
-Fixes:
 - Rename `.k-ButtonImageWithText__text--withoutMarginRight` to
          `.k-ButtonImageWithText__text--withoutPaddingRight`
 

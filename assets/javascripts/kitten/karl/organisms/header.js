@@ -12,19 +12,22 @@ const platformSwitchDropdownList = [
   <ExternalRichLink
     className="k-PlatformSwitch__item"
     title="Se rendre sur le site de KissKissBankBank">
-    <img src="/assets/brand/kisskissbankbank.svg"
+    <img className="k-ExternalRichLink__image"
+         src="/assets/brand/kisskissbankbank.svg"
          alt="Logo de KissKissBankBank" />
   </ExternalRichLink>,
   <ExternalRichLink
     className="k-PlatformSwitch__item"
     title="Se rendre sur le site de hellomerci">
-    <img src="/assets/brand/hellomerci.svg"
+    <img className="k-ExternalRichLink__image"
+         src="/assets/brand/hellomerci.svg"
          alt="Logo de hellomerci" />
   </ExternalRichLink>,
   <ExternalRichLink
     className="k-PlatformSwitch__item"
     title="Se rendre sur le site de LENDOPOLIS">
-    <img src="/assets/brand/lendopolis.svg"
+    <img className="k-ExternalRichLink__image"
+         src="/assets/brand/lendopolis.svg"
          alt="Logo de LENDOPOLIS" />
   </ExternalRichLink>,
 ]
@@ -83,14 +86,14 @@ const userMenuDropdownList = [
   <a className="k-UserMenu__item" href="#">Mes messages</a>,
   <a className="k-UserMenu__item
                 k-UserMenu__item--secondary
-                k-UserMenu__separation"
+                k-UserMenu__borderTop"
      href="#">
     Admin
   </a>,
   <a className="k-UserMenu__item k-UserMenu__item--secondary" href="#">
     Rapports
   </a>,
-  <a className="k-UserMenu__item k-UserMenu__separation" href="#">
+  <a className="k-UserMenu__item k-UserMenu__borderTop" href="#">
     Profil
   </a>,
   <a className="k-UserMenu__item" href="#">Réglages</a>,
@@ -100,7 +103,7 @@ const userMenuDropdownList = [
 const KarlLoggedHeaderUserMenu = defaultProps(UserMenu, {
   // Position
   positionedWith: () => document.getElementById('header-logged'),
-  positionedWithBorder: false,
+  positionedWithBorder: true,
   positionedOn: 'right',
   spaceAroundGrid: 20,
 
@@ -122,14 +125,14 @@ const KarlLoggedHeaderUserMenu = defaultProps(UserMenu, {
     <a className="k-UserMenu__item" href="#">Mes messages</a>,
     <a className="k-UserMenu__item
                   k-UserMenu__item--secondary
-                  k-UserMenu__separation"
+                  k-UserMenu__borderTop"
        href="#">
       Admin
     </a>,
     <a className="k-UserMenu__item k-UserMenu__item--secondary" href="#">
       Rapports
     </a>,
-    <a className="k-UserMenu__item k-UserMenu__separation" href="#">
+    <a className="k-UserMenu__item k-UserMenu__borderTop" href="#">
       Profil
     </a>,
     <a className="k-UserMenu__item" href="#">Réglages</a>,

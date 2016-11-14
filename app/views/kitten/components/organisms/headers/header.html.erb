@@ -84,14 +84,8 @@
 
         <div class="k-Header__items">
 
-          <div class="k-Header__item">
-            <button class="k-ButtonIcon k-ButtonIcon--default k-ButtonIcon--tiny">
-              <svg class="k-ButtonIcon__svg" viewBox="0 0 10 7"
-                xmlns="http://www.w3.org/2000/svg">
-                <path d="M5 6.243L3.586 4.828 7.828.586 9.243 2z"/>
-                <path d="M5 6.243L.757 2 2.172.586l4.242 4.242z"/>
-              </svg>
-            </button>
+          <div class="k-Header__item" id="k-Header__platformSwitchDropdown">
+            <%= react_component('KarlLoggedHeaderPlatformSwitch') %>
           </div>
 
           <p class="k-Header__item">
@@ -130,19 +124,14 @@
         <div class="k-Header__items">
 
           <div class="k-Header__item k-Header__search">
-            <form class="k-SearchInput" role="search">
 
-              <input class="k-TextInput k-SearchInput__input"
-                     type="text"
-                     name="foobar"
-                     placeholder="Foobar…" />
-
-              <input class="k-SearchInput__submit"
-                     type="submit"
-                     name="foobar_submit"
-                     value="Search" />
-
-            </form>
+            <%= react_component('Search', props: {
+                  inputId: 'q',
+                  inputName: 'q',
+                  inputPlaceholder: 'Rechercher…',
+                  submitLabel: 'Search',
+                  actionUrl: '#',
+            }) %>
           </div>
 
           <div class="k-Header__item k-Header__signup">

@@ -2,6 +2,28 @@
   body { background-color: #fbfdfe; }
 </style>
 
+<%= react_component('HeaderTour', { props: {
+    nextButtonLabel: 'Suiv',
+    nextButtonTitle: 'Suivant',
+    prevButtonLabel: 'Préc',
+    prevButtonTitle: 'Précédent',
+    closeButtonLabel: 'Fermer',
+    pagingLabel: 'sur',
+    storeName: 'karl.HeaderTour',
+    platformSwitchStep: {
+      name: 'platformSwitchStep',
+      title: 'Nouveautés',
+      content: "Profitez d'un accès rapide à nos autres services de crowdfunding : KissKissBankBank (don contre don et prévente) et hellomerci (prêts entre particulier).",
+      targetElement: '#k-Header__platformSwitchDropdown',
+    },
+    crowdStep: {
+      name: 'crowdStep',
+      title: 'Nouveautés',
+      content: "Nous lançons Crowd, un blog dédié au crowdfunding et à l'économie peer-to-peer.",
+      targetElement: '#karl-crowd',
+    },
+} }) %>
+
 <header id="header-logged" class="k-Header" role="banner">
 
   <div class="k-Header__container">
@@ -48,8 +70,10 @@
             <li role="menuitem">
               <%= link_to 'Crowd',
                           { current: 'nav-4' },
+                          id: 'karl-crowd',
                           class: 'k-HorizontalNav__item k-Header__nav__item ' +
                           (params['current'] == 'nav-4' ? 'is-selected' : '') %>
+
             </li>
           </ul>
         </nav>
@@ -233,35 +257,13 @@
       <div class="k-Header__items k-Header__items--fixedSize">
 
         <div class="k-Header__item k-Header__search">
-          <form class="k-SearchInput" role="search">
-
-            <input class="k-TextInput
-                          k-TextInput--tiny
-                          k-SearchInput__input"
-                   type="text"
-                   name="foobar"
-                   placeholder="Foobar…" />
-
-            <button type="submit"
-                    aria-label="Search"
-                    class="k-SearchInput__submit">
-              <svg width="17"
-                   height="17"
-                   viewBox="-0.7 -0.7 18 18"
-                   xmlns="http://www.w3.org/2000/svg">
-                <circle class="k-SearchInput__submit__svgCircle"
-                        cx="7"
-                        cy="7"
-                        r="7"
-                        stroke="#333"
-                        stroke-width="1.1"
-                        fill="none" />
-                <path class="k-SearchInput__submit__svgPath"
-                      fill="#333"
-                      d="M13 11 L17 15 L15.5 16.5 L11.5 12.7z" />
-              </svg>
-            </button>
-          </form>
+          <%= react_component('Search', props: {
+                inputId: 'q',
+                inputName: 'q',
+                inputPlaceholder: 'Rechercher…',
+                submitLabel: 'Search',
+                actionUrl: '#',
+          }) %>
         </div>
 
         <% if params.key?(:logged) %>

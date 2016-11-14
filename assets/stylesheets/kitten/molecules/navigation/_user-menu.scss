@@ -34,7 +34,7 @@
 ///       </a>
 ///     </li>
 ///     <li>
-///       <a class="k-UserMenu__item k-UserMenu__separation" href="#">
+///       <a class="k-UserMenu__item k-UserMenu__borderTop" href="#">
 ///         Item
 ///       </a>
 ///     </li>
@@ -78,6 +78,10 @@
       @include k-media-xs {
         border-right: none;
       }
+    }
+
+    .k-UserMenu--withoutBorderTop {
+      border-top: none;
     }
 
     .k-UserMenu__arrow {
@@ -137,8 +141,11 @@
       }
     }
 
-    .k-UserMenu__separation {
-      border-top: $border-size solid $border-color;
+    // Manage items border.
+    @each $position in (Top Bottom) {
+      .k-UserMenu__border#{$position} {
+        border-#{to_lower_case($position)}: $border-size solid $border-color;
+      }
     }
   }
 }
