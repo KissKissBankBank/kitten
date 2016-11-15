@@ -4,7 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+Features:
 - Add prop `closeEvents` to close the dropdowns.
+
+Fixes:
+- Fix dropdowns positioning.
 
 ## [v0.21.1] - 2016-11-15
 
