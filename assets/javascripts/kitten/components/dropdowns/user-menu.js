@@ -28,6 +28,12 @@ class UserMenu extends React.Component {
     this.handlePositionUpdate()
 
     emitter.on('dropdown:opening:trigger', this.handleOtherDropdownsOpening)
+
+    if (this.props.closeEvents) {
+      this.props.closeEvents.forEach((ev) => {
+        window.addEventListener(ev, this.handleOtherDropdownsOpening)
+      })
+    }
   }
 
   // Component methods.
