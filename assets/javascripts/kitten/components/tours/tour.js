@@ -31,6 +31,9 @@ class Tour extends React.Component {
   // Component listener callbacks.
 
   handleTargetHighlightPlace(step) {
+    // TODO: fix this ugly patch.
+    // We have to delay the target highlight display because of a rendering
+    // bug due to the computed positioning.
     this.setState({ visible: true })
   }
 
