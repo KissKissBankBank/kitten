@@ -4,8 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+Features:
 - Add prop `closeEvents` to close the dropdowns.
 - Fix button icons alignment (for Firefox)
+- Add new class `k-HorizontalNav__element`.
+- Add new class `k-Header__item--fixedSize`.
 
 ## [v0.21.1] - 2016-11-15
 

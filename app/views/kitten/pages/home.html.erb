@@ -21,19 +21,19 @@
 
         <nav class="k-Header__item k-Header__nav">
           <ul class="k-HorizontalNav" role="menubar">
-            <li role="menuitem">
+            <li class="k-HorizontalNav__element" role="menuitem">
               <%= link_to 'Emprunter à mes amis',
                           { current: 'nav-1' },
                           class: 'k-HorizontalNav__item k-Header__nav__item' +
                           (params['current'] == 'nav-1' ? 'is-selected' : '') %>
             </li>
-            <li role="menuitem">
+            <li class="k-HorizontalNav__element" role="menuitem">
               <%= link_to 'Comment ça marche&nbsp;?'.html_safe,
                           { current: 'nav-2' },
                           class: 'k-HorizontalNav__item k-Header__nav__item ' +
                           (params['current'] == 'nav-2' ? 'is-selected' : '') %>
             </li>
-            <li role="menuitem">
+            <li class="k-HorizontalNav__element" role="menuitem">
               <%= link_to 'Blog',
                           { current: 'nav-3' },
                           class: 'k-HorizontalNav__item k-Header__nav__item' %>

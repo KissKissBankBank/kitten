@@ -31,11 +31,12 @@
 
       <div class="k-Header__items">
 
-        <div class="k-Header__item" id="k-Header__platformSwitchDropdown">
+        <div class="k-Header__item k-Header__item--fixedSize"
+             id="k-Header__platformSwitchDropdown">
           <%= react_component 'KarlLoggedHeaderPlatformSwitch' %>
         </div>
 
-        <p class="k-Header__item k-Header__item__logo">
+        <p class="k-Header__item k-Header__item--fixedSize k-Header__item__logo">
           <a class="k-Header__logo k-Header__logo--lightOnM k-Header__logo--lightOnXxs" href="header">
             <%= image_tag 'brand/lendopolis.svg', alt: 'lendopolis' %>
           </a>
@@ -43,31 +44,31 @@
 
         <nav class="k-Header__item k-Header__nav">
           <ul class="k-HorizontalNav" role="menubar">
-            <li role="menuitem">
+            <li class="k-HorizontalNav__element" role="menuitem">
               <%= link_to 'Comment emprunter',
                           { current: 'nav-1' },
                           class: 'k-HorizontalNav__item k-Header__nav__item ' +
                           (params['current'] == 'nav-1' ? 'is-selected' : '') %>
             </li>
-            <li role="menuitem">
+            <li class="k-HorizontalNav__element" role="menuitem">
               <%= link_to 'Comment prêter',
                           { current: 'nav-2' },
                           class: 'k-HorizontalNav__item k-Header__nav__item ' +
                           (params['current'] == 'nav-2' ? 'is-selected' : '') %>
             </li>
-            <li role="menuitem">
+            <li class="k-HorizontalNav__element" role="menuitem">
               <%= link_to 'Découvrez les projets',
                           { current: 'nav-3' },
                           class: 'k-HorizontalNav__item k-Header__nav__item ' +
                           (params['current'] == 'nav-3' ? 'is-selected' : '') %>
             </li>
-            <li role="menuitem">
+            <li class="k-HorizontalNav__element" role="menuitem">
               <%= link_to 'À propos',
                           { current: 'nav-4' },
                           class: 'k-HorizontalNav__item k-Header__nav__item ' +
                           (params['current'] == 'nav-4' ? 'is-selected' : '') %>
             </li>
-            <li role="menuitem">
+            <li class="k-HorizontalNav__element" role="menuitem">
               <%= link_to 'Crowd',
                           { current: 'nav-4' },
                           id: 'karl-crowd',
@@ -143,19 +144,19 @@
 
         <nav class="k-Header__item k-Header__nav">
           <ul class="k-HorizontalNav" role="menubar">
-            <li role="menuitem">
+            <li class="k-HorizontalNav__element" role="menuitem">
               <%= link_to 'Emprunter à mes amis',
                           { current: 'nav-1' },
                           class: 'k-HorizontalNav__item k-Header__nav__item ' +
                           (params['current'] == 'nav-1' ? 'is-selected' : '') %>
             </li>
-            <li role="menuitem">
+            <li class="k-HorizontalNav__element" role="menuitem">
               <%= link_to 'Comment ça marche&nbsp;?'.html_safe,
                           { current: 'nav-2' },
                           class: 'k-HorizontalNav__item k-Header__nav__item ' +
                           (params['current'] == 'nav-2' ? 'is-selected' : '') %>
             </li>
-            <li role="menuitem">
+            <li class="k-HorizontalNav__element" role="menuitem">
               <%= link_to 'Crowd',
                           { current: 'nav-3' },
                           class: 'k-HorizontalNav__item k-Header__nav__item ' +
@@ -225,25 +226,25 @@
 
         <nav class="k-Header__item k-Header__nav">
           <ul class="k-HorizontalNav" role="menubar">
-            <li role="menuitem">
+            <li class="k-HorizontalNav__element" role="menuitem">
               <%= link_to 'Starten Dein Projekt',
                           { current: 'nav-1' },
                           class: 'k-HorizontalNav__item k-Header__nav__item ' +
                           (params['current'] == 'nav-1' ? 'is-selected' : '') %>
             </li>
-            <li role="menuitem">
+            <li class="k-HorizontalNav__element" role="menuitem">
               <%= link_to 'Entdecken die Projekte',
                           { current: 'nav-2' },
                           class: 'k-HorizontalNav__item k-Header__nav__item ' +
                           (params['current'] == 'nav-2' ? 'is-selected' : '') %>
             </li>
-            <li role="menuitem">
+            <li class="k-HorizontalNav__element" role="menuitem">
               <%= link_to 'Wie funktioniert das',
                           { current: 'nav-3' },
                           class: 'k-HorizontalNav__item k-Header__nav__item ' +
                           (params['current'] == 'nav-3' ? 'is-selected' : '') %>
             </li>
-            <li role="menuitem">
+            <li class="k-HorizontalNav__element" role="menuitem">
               <%= link_to 'Crowd',
                           { current: 'nav-4' },
                           class: 'k-HorizontalNav__item k-Header__nav__item ' +

@@ -10,7 +10,7 @@
 ///
 ///   <header class="k-Header">
 ///     <div class="k-Header__items">
-///       <div class="k-Header__item">
+///       <div class="k-Header__item k-Header__item--fixedSize">
 ///         …
 ///       </div>
 ///     </div>
@@ -79,7 +79,8 @@
     align-items: center;
   }
 
-  .k-Header__items--fixedSize {
+  .k-Header__items--fixedSize,
+  .k-Header__item--fixedSize {
     flex-shrink: 0;
   }
 
