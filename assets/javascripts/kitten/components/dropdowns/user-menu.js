@@ -4,6 +4,7 @@ import ButtonImageWithTextAndBadge from
   'kitten/components/buttons/button-image-with-text-and-badge'
 import NavList from 'kitten/components/lists/nav-list'
 import domElementHelper from 'kitten/helpers/dom/element-helper'
+import emitter from 'kitten/helpers/utils/emitter'
 import objectAssign from 'core-js/library/fn/object/assign'
 
 class UserMenu extends React.Component {
@@ -19,10 +20,14 @@ class UserMenu extends React.Component {
     this.handleButtonClick = this.handleButtonClick.bind(this)
     this.handlePositionUpdate =
       this.handlePositionUpdate.bind(this)
+    this.handleOtherDropdownsOpening =
+      this.handleOtherDropdownsOpening.bind(this)
   }
 
   componentDidMount() {
     this.handlePositionUpdate()
+
+    emitter.on('dropdown:opening:trigger', this.handleOtherDropdownsOpening)
   }
 
   // Component methods.
@@ -145,6 +150,12 @@ class UserMenu extends React.Component {
     event.preventDefault()
 
     this.setState({ isExpanded: !this.state.isExpanded })
+  }
+
+  handleOtherDropdownsOpening(openedDropdown) {
+    if (openedDropdown != this.refs.dropdown) {
+      this.setState({ isExpanded: false })
+    }
   }
 
   // Rendering.
