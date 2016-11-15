@@ -15,7 +15,6 @@ class Dropdown extends React.Component {
     this.state = {
       isExpanded: false,
       referenceElementHeight: 0,
-      isClosedAt: Date.now(),
     }
 
     this.handleDropdownPosition = this.handleDropdownPosition.bind(this)
@@ -46,6 +45,12 @@ class Dropdown extends React.Component {
         window.addEventListener(ev, this.handleDropdownPosition)
       })
     }
+
+    if (this.props.closureEvents.length) {
+      this.props.closureEvents.forEach((ev) => {
+        window.addEventListener(ev, this.handleClosure)
+      })
+    }
   }
 
   componentWillUnmount() {
@@ -57,6 +62,12 @@ class Dropdown extends React.Component {
       })
     }
 
+    if (this.props.closureEvents.length) {
+      this.props.closureEvents.forEach((ev) => {
+        window.removeEventListener(ev, this.handleClosure)
+      })
+    }
+
     emitter.off('dropdown:opening:trigger')
   }
 
@@ -65,20 +76,12 @@ class Dropdown extends React.Component {
     if (nextProps.isExpanded != this.state.isExpanded) {
       this.toggle(nextProps.isExpanded)
     }
-
-    // Enable wrapper component to close the dropdown.
-    if (nextProps.isClosedAt != this.state.isClosedAt) {
-      this.close()
-    }
   }
 
   // Component methods
 
   close() {
-    this.setState({
-      isExpanded: false,
-      isClosedAt: Date.now(),
-    })
+    this.setState({ isExpanded: false })
   }
 
   toggle(nextExpandedState) {
@@ -169,6 +172,10 @@ class Dropdown extends React.Component {
     this.toggle(!this.state.isExpanded)
   }
 
+  handleClosure() {
+    this.close()
+  }
+
   // Rendering
 
   renderButtonContentElement() {
@@ -242,7 +249,7 @@ Dropdown.propTypes = {
   positionedOn: React.PropTypes.string,
   notifications: React.PropTypes.number,
   refreshEvents: React.PropTypes.array,
-  isClosedAt: React.PropTypes.number,
+  closureEvents: React.PropTypes.array,
   onPositionUpdate: React.PropTypes.func,
 }
 
@@ -265,8 +272,8 @@ Dropdown.defaultProps = {
   // height.
   refreshEvents: [], // eg. ['resize']
 
-  // Change this variable to close the dropdown.
-  isClosedAt: 0,
+  // List of events that will trigger the closure.
+  closureEvents: [],
 
   // Called when one of the `refreshEvents` is triggered.
   onPositionUpdate: function() {},
