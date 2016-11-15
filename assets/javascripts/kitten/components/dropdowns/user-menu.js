@@ -44,11 +44,17 @@ class UserMenu extends React.Component {
     }
   }
 
-  componentWillReceiveProps() {
-    this.handlePositionUpdate()
+  componentDidUpdate(prevProps) {
+    if (this.shouldUpdatePosition(prevProps)) {
+      this.handlePositionUpdate()
+    }
   }
 
   // Component methods.
+
+  shouldUpdatePosition(prevProps) {
+    return prevProps != this.props
+  }
 
   getButtonId() {
     return 'k-UserMenu'
@@ -163,6 +169,7 @@ class UserMenu extends React.Component {
     if (this.canComputeSize()) {
       this.updateDropdownContentPosition()
       this.updateDropdownArrowPosition()
+      emitter.emit('user-menu:positioning:update')
     }
   }
 

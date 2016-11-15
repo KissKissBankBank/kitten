@@ -27,6 +27,7 @@ class PhoneDropdown extends React.Component {
     this.handlePositionUpdate()
 
     emitter.on('dropdown:opening:trigger', this.handleOtherDropdownsOpening)
+    emitter.on('user-menu:positioning:update', this.handlePositionUpdate)
 
     if (this.props.closeEvents) {
       this.props.closeEvents.forEach((ev) => {
