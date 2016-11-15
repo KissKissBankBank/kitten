@@ -24,9 +24,7 @@ class TourStep extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if (this.canPlaceTargetHighlight(nextProps)) {
-      this.placeTargetHighlight(nextProps)
-    }
+    this.placeTargetHighlight(nextProps)
   }
 
   componentWillUnmount() {
@@ -75,7 +73,7 @@ class TourStep extends React.Component {
   }
 
   placeTargetHighlight(props = this.props) {
-    if (domElementHelper.canUseDom()) {
+    if (this.canPlaceTargetHighlight(props) && domElementHelper.canUseDom()) {
       // TODO: fix this ugly patch.
       // We have to delay the target highlight display because of a rendering
       // bug due to the computed positioning.
