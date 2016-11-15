@@ -51,13 +51,13 @@ class Dropdown extends React.Component {
   componentWillUnmount() {
     this.revertHandleClickOnLinks()
 
-    if (this.props.refreshEvents.length) {
+    if (this.props.refreshEvents) {
       this.props.refreshEvents.forEach((ev) => {
         window.removeEventListener(ev, this.handleDropdownPosition);
       })
     }
 
-    if (this.props.closeEvents.length) {
+    if (this.props.closeEvents) {
       this.props.closeEvents.forEach((ev) => {
         window.removeEventListener(ev, this.close)
       })
