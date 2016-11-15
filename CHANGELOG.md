@@ -4,9 +4,24 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Add prop `closeEvents` to close the dropdowns.
+
+## [v0.21.1] - 2016-11-15
+
+Fixes:
+- Do not iterate on NodeLists (for Safari).
+- Fix `k-UserMenu` state when dropdown is closed.
+- Fix SearchInput SVG alignment (for Safari).
+- Fix `k-PhoneDropdown` state when dropdown is closed.
+- Force font-family on `k-Tour__popover`.
+- Fix box-sizing on `k-Button__icon`.
+
+## [v0.21.0] - 2016-11-15
+
 Features:
 - Add `box-sizing` declaration in `k-Tour`.
-- Add prop `closureEvents` to close the dropdowns.
+- Add `font-family` declaration in `k-Select`.
+- Hide `k-UserMenu` arrow on xxs media query.
 
 ## [v0.20.0] - 2016-11-14
 
