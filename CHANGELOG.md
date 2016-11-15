@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+Fixes:
+- Do not iterate on NodeLists (for Safari)
+
 ## [v0.21.0] - 2016-11-15
 
 Features:

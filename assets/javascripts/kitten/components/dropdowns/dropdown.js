@@ -121,17 +121,17 @@ class Dropdown extends React.Component {
   revertHandleClickOnLinks() {
     const links = this.refs.dropdownContent.getElementsByTagName('a')
 
-    for (let link of links) {
+    Array.prototype.forEach.call(links, link => {
       link.removeEventListener('click', this.close)
-    }
+    })
   }
 
   handleClickOnLinks() {
     const links = this.refs.dropdownContent.getElementsByTagName('a')
 
-    for (let link of links) {
-      link.addEventListener('click', this.close)
-    }
+    Array.prototype.forEach.call(links, link => {
+      link.removeEventListener('click', this.close)
+    })
   }
 
   handleDropdownPosition() {
