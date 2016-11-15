@@ -113,6 +113,8 @@
   .k-Tour__popover__text {
     @include k-typographyFont('source-sans-light');
     @include k-typographyFontSize(-1);
+
+    margin: 1em 0;
   }
 
   .k-Tour__popover__navigation {
