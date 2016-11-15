@@ -172,6 +172,39 @@
     ),
   );
 
+  $zinc-colors: (
+    base: (
+      color: map-get($k-colors, 'font-1'),
+      border-color: map-get($k-colors, 'secondary-1'),
+      background-color: map-get($k-colors, 'secondary-1'),
+    ),
+    hover: (
+      color: map-get($k-colors, 'font-1'),
+      border-color: map-get($k-colors, 'secondary-2'),
+      background-color: map-get($k-colors, 'secondary-2'),
+    ),
+    focus: (
+      color: map-get($k-colors, 'font-1'),
+      border-color: map-get($k-colors, 'secondary-2'),
+      background-color: map-get($k-colors, 'secondary-2'),
+    ),
+    active: (
+      color: map-get($k-colors, 'font-1'),
+      border-color: map-get($k-colors, 'secondary-3'),
+      background-color: map-get($k-colors, 'secondary-3'),
+    ),
+    is-selected: (
+      color: map-get($k-colors, 'font-1'),
+      border-color: map-get($k-colors, 'secondary-3'),
+      background-color: map-get($k-colors, 'secondary-3'),
+    ),
+    disabled: (
+      color: #fff,
+      border-color: map-get($k-colors, 'line-2'),
+      background-color: map-get($k-colors, 'line-2'),
+    ),
+  );
+
   // Size settings button.
   $button-size-tiny: 30px - ($border-size * 2);
   $button-size: 40px - ($border-size * 2);
@@ -232,6 +265,11 @@
 
   .k-Button--secondaryOnWhite {
     @include k-buttonColorBase($secondary-on-white-colors);
+  }
+
+  // TODO: rename all buttons name following the same naming strategy.
+  .k-Button--zinc {
+    @include k-buttonColorBase($zinc-colors);
   }
 
   .k-Button__icon,

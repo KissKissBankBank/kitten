@@ -1,0 +1,17 @@
+/// Text size utilities.
+///
+/// @group text
+///
+/// @example scss - Usage
+///
+///     @include k-utilities-size;
+///
+/// @example html
+///
+///     <p class="k-u-small">…</p>
+
+@mixin k-utilities-size {
+  .k-u-small {
+    @include k-typographyFontSize(-2);
+  }
+}

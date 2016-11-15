@@ -5,7 +5,27 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 Features:
+- Add `box-sizing` declaration in `k-Tour`.
 - Add prop `closureEvents` to close the dropdowns.
+
+## [v0.20.0] - 2016-11-14
+
+Features:
+- Add secondary colors.
+- Update `k-Tour` buttons and animation delay.
+
+## [v0.19.0] - 2016-11-14
+
+Features:
+- Add component `k-PhoneDropdown`.
+- Add new helper `getComputedLeft` on `ElementHelper`.
+- Add text utilities classes: `k-u-small` and `k-u-strong`.
+- Add `k-dropdownArrow` helper.
+
+Breaking changes:
+- Rename `SimpleList` to `NavList`.
+- Rename `k-Dropdown` props: `contentHorizontalPosition`
+and `arrowHorizontalPosition`.
 
 ## [v0.18.0] - 2016-11-14
 

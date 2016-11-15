@@ -2,7 +2,7 @@ import React from 'react'
 import defaultProps from 'kitten/hoc/default-props'
 import ExternalRichLink from 'kitten/components/links/external-rich-link'
 import Dropdown from 'kitten/components/dropdowns/dropdown'
-import SimpleList from 'kitten/components/lists/simple-list'
+import NavList from 'kitten/components/lists/nav-list'
 import UserMenu from 'kitten/components/dropdowns/user-menu'
 
 // KarlSimpleDropdown
@@ -14,7 +14,7 @@ const dropdownList = [
 
 const KarlSimpleDropdown = defaultProps(Dropdown, {
   buttonClassName: 'karl-Dropdown--default__button',
-  dropdownContent: <SimpleList className="karl-Dropdown--default"
+  dropdownContent: <NavList className="karl-Dropdown--default"
                                role="menubar"
                                list={ dropdownList } />
 })
@@ -54,7 +54,7 @@ const KarlPlatformSwitch = defaultProps(Dropdown, {
   buttonContentOnExpanded: karlPlatformSwitchButtonContent,
   buttonContentOnCollapsed: karlPlatformSwitchButtonContent,
 
-  dropdownContent: <SimpleList className="k-PlatformSwitch"
+  dropdownContent: <NavList className="k-PlatformSwitch"
                                role="menubar"
                                list={ platformSwitchDropdownList } />
 })

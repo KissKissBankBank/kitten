@@ -1,6 +1,6 @@
 import React from 'react'
 
-class SimpleList extends React.Component {
+class NavList extends React.Component {
   renderItem(item, i) {
     return(
       <li key={ i } role="menuitem">
@@ -15,11 +15,13 @@ class SimpleList extends React.Component {
     const defaultItem = ('No choice')
 
     return(
-      <ul { ...others }>
-        { items.length ? items : defaultItem }
-      </ul>
+      <nav role="navigation">
+        <ul { ...others }>
+          { items.length ? items : defaultItem }
+        </ul>
+      </nav>
     )
   }
 }
 
-export default SimpleList
+export default NavList
