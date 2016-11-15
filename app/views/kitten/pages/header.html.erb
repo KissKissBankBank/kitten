@@ -68,7 +68,8 @@
                           class: 'k-HorizontalNav__item k-Header__nav__item ' +
                           (params['current'] == 'nav-4' ? 'is-selected' : '') %>
             </li>
-            <li class="k-HorizontalNav__element" role="menuitem">
+            <li class="k-HorizontalNav__element k-Header__item--fixedSize"
+                role="menuitem">
               <%= link_to 'Crowd',
                           { current: 'nav-4' },
                           id: 'karl-crowd',
@@ -156,7 +157,8 @@
                           class: 'k-HorizontalNav__item k-Header__nav__item ' +
                           (params['current'] == 'nav-2' ? 'is-selected' : '') %>
             </li>
-            <li class="k-HorizontalNav__element" role="menuitem">
+            <li class="k-HorizontalNav__element k-Header__item--fixedSize"
+                role="menuitem">
               <%= link_to 'Crowd',
                           { current: 'nav-3' },
                           class: 'k-HorizontalNav__item k-Header__nav__item ' +
@@ -214,11 +216,11 @@
 
       <div class="k-Header__items">
 
-        <div class="k-Header__item" id="k-Header__platformSwitchDropdown">
+        <div class="k-Header__item k-Header__item--fixedSize" id="k-Header__platformSwitchDropdown">
           <%= react_component 'KarlLoggedHeaderPlatformSwitch' %>
         </div>
 
-        <p class="k-Header__item k-Header__item__logo">
+        <p class="k-Header__item k-Header__item--fixedSize k-Header__item__logo">
           <a class="k-Header__logo k-Header__logo--lightOnM" href="header">
             <%= image_tag 'brand/kisskissbankbank.svg', alt: 'kisskissbankbank' %>
           </a>
@@ -244,7 +246,8 @@
                           class: 'k-HorizontalNav__item k-Header__nav__item ' +
                           (params['current'] == 'nav-3' ? 'is-selected' : '') %>
             </li>
-            <li class="k-HorizontalNav__element" role="menuitem">
+            <li class="k-HorizontalNav__element k-Header__item--fixedSize"
+                role="menuitem">
               <%= link_to 'Crowd',
                           { current: 'nav-4' },
                           class: 'k-HorizontalNav__item k-Header__nav__item ' +
