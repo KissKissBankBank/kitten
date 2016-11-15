@@ -1,11 +1,9 @@
 import React from 'react'
 import classNames from 'classnames'
+import emitter from 'kitten/helpers/utils/emitter'
 import DropdownButton from 'kitten/components/dropdowns/dropdown-button'
 import domElementHelper from 'kitten/helpers/dom/element-helper'
-import EventEmitter from 'event-emitter'
 import objectAssign from 'core-js/library/fn/object/assign'
-
-const emitter = EventEmitter()
 
 class Dropdown extends React.Component {
   constructor(props) {
