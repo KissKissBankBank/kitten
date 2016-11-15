@@ -25,6 +25,10 @@ class UserMenu extends React.Component {
     this.handlePositionUpdate()
   }
 
+  componentWillReceiveProps() {
+    this.handlePositionUpdate()
+  }
+
   // Component methods.
 
   getButtonId() {
@@ -32,7 +36,10 @@ class UserMenu extends React.Component {
   }
 
   canComputeSize() {
-    return typeof this.refs.dropdown != 'undefined'
+    return (
+      domElementHelper.canUseDom() &&
+      typeof this.refs.dropdown != 'undefined'
+    )
   }
 
   getDropdownContainer() {
