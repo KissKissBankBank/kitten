@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+Features:
+- Add `box-sizing` declaration in `k-Tour`.
+
 ## [v0.20.0] - 2016-11-14
 
 Features:

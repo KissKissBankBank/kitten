@@ -167,6 +167,7 @@
   }
 
   .k-Tour__step__targetHighlight {
+    box-sizing: content-box;
     position: absolute;
     width: $target-highlight-width;
     height: $target-highlight-height;
@@ -229,6 +230,7 @@
   $animation-duration: 3s;
   $animation-delay: k-default(map-get($options, 'animation-delay'), 0s);
 
+  box-sizing: content-box;
   position: absolute;
   top: -$border-width;
   left: -$border-width;
