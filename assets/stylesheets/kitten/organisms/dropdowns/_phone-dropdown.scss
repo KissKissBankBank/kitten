@@ -42,19 +42,12 @@
   .k-PhoneDropdown__link {
     color: $font-color;
     text-decoration: none;
-    border-bottom: 1px dashed $font-color;
 
-    &:active {
-      color: $font-color;
-    }
-
-    &:focus {
-      text-decoration: none;
-    }
-
+    &:active,
+    &:focus,
     &:hover {
+      color: $font-color;
       text-decoration: none;
-      border-bottom-style: solid;
     }
   }
 }
