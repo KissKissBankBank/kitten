@@ -4,11 +4,15 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [v0.21.1] - 2016-11-15
+
 Fixes:
 - Do not iterate on NodeLists (for Safari).
 - Fix `k-UserMenu` state when dropdown is closed.
 - Fix SearchInput SVG alignment (for Safari).
 - Fix `k-PhoneDropdown` state when dropdown is closed.
+- Force font-family on `k-Tour__popover`.
+- Fix box-sizing on `k-Button__icon`.
 
 ## [v0.21.0] - 2016-11-15
 
