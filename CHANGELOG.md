@@ -4,8 +4,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [v0.21.0] - 2016-11-15
+
 Features:
 - Add `box-sizing` declaration in `k-Tour`.
+- Add `font-family` declaration in `k-Select`.
+- Hide `k-UserMenu` arrow on xxs media query.
 
 ## [v0.20.0] - 2016-11-14
 
