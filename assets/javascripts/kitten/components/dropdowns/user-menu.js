@@ -36,6 +36,14 @@ class UserMenu extends React.Component {
     }
   }
 
+  componentWillUnmount() {
+    if (this.props.closeEvents) {
+      this.props.closeEvents.forEach((ev) => {
+        window.removeEventListener(ev, this.handleOtherDropdownsOpening)
+      })
+    }
+  }
+
   // Component methods.
 
   getButtonId() {
