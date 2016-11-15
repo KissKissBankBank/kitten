@@ -35,9 +35,15 @@ class Dropdown extends React.Component {
 
     emitter.on('dropdown:opening:trigger', this.close)
 
-    if (this.props.refreshEvents.length) {
+    if (this.props.refreshEvents) {
       this.props.refreshEvents.forEach((ev) => {
         window.addEventListener(ev, this.handleDropdownPosition)
+      })
+    }
+
+    if (this.props.closeEvents) {
+      this.props.closeEvents.forEach((ev) => {
+        window.addEventListener(ev, this.close)
       })
     }
   }
@@ -45,9 +51,15 @@ class Dropdown extends React.Component {
   componentWillUnmount() {
     this.revertHandleClickOnLinks()
 
-    if (this.props.refreshEvents.length) {
+    if (this.props.refreshEvents) {
       this.props.refreshEvents.forEach((ev) => {
         window.removeEventListener(ev, this.handleDropdownPosition);
+      })
+    }
+
+    if (this.props.closeEvents) {
+      this.props.closeEvents.forEach((ev) => {
+        window.removeEventListener(ev, this.close)
       })
     }
 
@@ -216,6 +228,7 @@ Dropdown.propTypes = {
   positionedOn: React.PropTypes.string,
   notifications: React.PropTypes.number,
   refreshEvents: React.PropTypes.array,
+  closeEvents: React.PropTypes.array,
   onPositionUpdate: React.PropTypes.func,
 }
 
@@ -237,6 +250,9 @@ Dropdown.defaultProps = {
   // List of events that will trigger the update of the reference element
   // height.
   refreshEvents: [], // eg. ['resize']
+
+  // List of events that will trigger the closure.
+  closeEvents: [],
 
   // Called when one of the `refreshEvents` is triggered.
   onPositionUpdate: function() {},

@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Add prop `closeEvents` to close the dropdowns.
 - Fix button icons alignment (for Firefox)
 
 ## [v0.21.1] - 2016-11-15
