@@ -5,7 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 Fixes:
-- Do not iterate on NodeLists (for Safari)
+- Do not iterate on NodeLists (for Safari).
+- Fix `k-UserMenu` state when dropdown is closed.
 
 ## [v0.21.0] - 2016-11-15
 
