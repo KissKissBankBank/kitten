@@ -13,7 +13,6 @@ class TourStep extends React.Component {
     }
 
     this.handleResize = this.handleResize.bind(this)
-    this.handleTargetHighlightPlace = this.handleTargetHighlightPlace.bind(this)
   }
 
   // Component lifecyle.
@@ -34,21 +33,24 @@ class TourStep extends React.Component {
   // Component listener callbacks.
 
   canPlaceTargetHighlight(props) {
-    return (!!props.targetElement && domElementHelper.canUseDom())
+    return (
+      domElementHelper.canUseDom() &&
+      !!this.currentTargetElement(props)
+    )
+  }
+
+  currentTargetElement(props) {
+    return document.querySelector(props.targetElement)
   }
 
   handleResize() {
     this.placeTargetHighlight()
   }
 
-  handleTargetHighlightPlace() {
-    this.props.onTargetHighlightPlace(this.props)
-  }
-
   // Component methods.
 
   getTargetHighlightPositionStyles(props = this.props) {
-    const target = document.querySelector(props.targetElement)
+    const target = this.currentTargetElement(props)
     const targetStyles = target.getBoundingClientRect()
     const targetHeight = targetStyles.height
     const targetWidth = targetStyles.width
@@ -74,11 +76,6 @@ class TourStep extends React.Component {
 
   placeTargetHighlight(props = this.props) {
     if (this.canPlaceTargetHighlight(props)) {
-      // TODO: fix this ugly patch.
-      // We have to delay the target highlight display because of a rendering
-      // bug due to the computed positioning.
-      setTimeout(this.handleTargetHighlightPlace, 800)
-
       this.setState({
         targetHighlightStyles: this.getTargetHighlightPositionStyles(props),
         currentTarget: props.targetElement
