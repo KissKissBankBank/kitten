@@ -187,6 +187,7 @@ UserMenu.propTypes = {
   positionedOn: React.PropTypes.string,
   notifications: React.PropTypes.number,
   refreshEvents: React.PropTypes.array,
+  closeEvents: React.PropTypes.array,
   onPositionUpdate: React.PropTypes.func,
 }
 

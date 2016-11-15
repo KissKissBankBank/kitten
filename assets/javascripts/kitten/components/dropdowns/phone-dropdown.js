@@ -173,6 +173,7 @@ PhoneDropdown.propTypes = {
   positionedWithBorder: React.PropTypes.bool,
   positionedOn: React.PropTypes.string,
   refreshEvents: React.PropTypes.array,
+  closeEvents: React.PropTypes.array,
   onPositionUpdate: React.PropTypes.func,
 }
 
