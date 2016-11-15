@@ -49,8 +49,8 @@ class TourStep extends React.Component {
 
   // Component methods.
 
-  getTargetHighlightPositionStyles(nextProps = this.props) {
-    const target = document.querySelector(nextProps.targetElement)
+  getTargetHighlightPositionStyles(props = this.props) {
+    const target = document.querySelector(props.targetElement)
     const targetStyles = target.getBoundingClientRect()
     const targetHeight = targetStyles.height
     const targetWidth = targetStyles.width
@@ -74,7 +74,7 @@ class TourStep extends React.Component {
     }
   }
 
-  placeTargetHighlight(nextProps = this.props) {
+  placeTargetHighlight(props = this.props) {
     if (domElementHelper.canUseDom()) {
       // TODO: fix this ugly patch.
       // We have to delay the target highlight display because of a rendering
@@ -82,8 +82,8 @@ class TourStep extends React.Component {
       setTimeout(this.handleTargetHighlightPlace, 800)
 
       this.setState({
-        targetHighlightStyles: this.getTargetHighlightPositionStyles(nextProps),
-        currentTarget: nextProps.targetElement
+        targetHighlightStyles: this.getTargetHighlightPositionStyles(props),
+        currentTarget: props.targetElement
       })
     }
   }
