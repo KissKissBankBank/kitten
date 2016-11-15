@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix button icons alignment (for Firefox)
+
 ## [v0.21.1] - 2016-11-15
 
 Fixes:
