@@ -3,6 +3,7 @@ import Dropdown from 'kitten/components/dropdowns/dropdown'
 import DropdownButton from 'kitten/components/dropdowns/dropdown-button'
 import domElementHelper from 'kitten/helpers/dom/element-helper'
 import objectAssign from 'core-js/library/fn/object/assign'
+import emitter from 'kitten/helpers/utils/emitter'
 import classNames from 'classnames'
 
 class PhoneDropdown extends React.Component {
@@ -18,10 +19,14 @@ class PhoneDropdown extends React.Component {
 
     this.handleButtonClick = this.handleButtonClick.bind(this)
     this.handlePositionUpdate = this.handlePositionUpdate.bind(this)
+    this.handleOtherDropdownsOpening =
+      this.handleOtherDropdownsOpening.bind(this)
   }
 
   componentDidMount() {
     this.handlePositionUpdate()
+
+    emitter.on('dropdown:opening:trigger', this.handleOtherDropdownsOpening)
   }
 
   // Component methods.
@@ -143,6 +148,12 @@ class PhoneDropdown extends React.Component {
     event.preventDefault()
 
     this.setState({ isExpanded: !this.state.isExpanded })
+  }
+
+  handleOtherDropdownsOpening(openedDropdown) {
+    if (openedDropdown != this.refs.dropdown) {
+      this.setState({ isExpanded: false })
+    }
   }
 
   // Rendering.

@@ -8,6 +8,7 @@ Fixes:
 - Do not iterate on NodeLists (for Safari).
 - Fix `k-UserMenu` state when dropdown is closed.
 - Fix SearchInput SVG alignment (for Safari).
+- Fix `k-PhoneDropdown` state when dropdown is closed.
 
 ## [v0.21.0] - 2016-11-15
 
