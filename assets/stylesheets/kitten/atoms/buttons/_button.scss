@@ -334,8 +334,6 @@
 // Button--icon
 
   .k-Button--icon {
-    display: flex;
-
     padding: 0 $button-radius 0 0;
     min-width: auto;
 
@@ -343,9 +341,10 @@
       @include k-buttonRounded($button-size, $icon-width, $icon-height);
 
       box-sizing: content-box;
-      display: block;
+      display: inline-block;
       width: $icon-width;
       height: $icon-height;
+      vertical-align: bottom;
       transition: fill $transition-speed;
 
       .k-Button__icon__stroke {
@@ -361,9 +360,10 @@
       );
 
       box-sizing: content-box;
-      display: block;
+      display: inline-block;
       width: $icon-width-tiny;
       height: $icon-height-tiny;
+      vertical-align: bottom;
       transition: fill $transition-speed;
 
       .k-Button__icon--tiny__stroke {
