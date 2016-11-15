@@ -342,6 +342,7 @@
     .k-Button__icon {
       @include k-buttonRounded($button-size, $icon-width, $icon-height);
 
+      box-sizing: content-box;
       display: block;
       width: $icon-width;
       height: $icon-height;
@@ -359,6 +360,7 @@
         $icon-height-tiny
       );
 
+      box-sizing: content-box;
       display: block;
       width: $icon-width-tiny;
       height: $icon-height-tiny;
