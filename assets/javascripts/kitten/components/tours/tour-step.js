@@ -24,7 +24,9 @@ class TourStep extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    this.placeTargetHighlight(nextProps)
+    if (this.canPlaceTargetHighlight(nextProps)) {
+      this.placeTargetHighlight(nextProps)
+    }
   }
 
   componentWillUnmount() {
@@ -32,6 +34,10 @@ class TourStep extends React.Component {
   }
 
   // Component listener callbacks.
+
+  canPlaceTargetHighlight(props) {
+    return !!props.targetElement
+  }
 
   handleResize() {
     this.placeTargetHighlight()
