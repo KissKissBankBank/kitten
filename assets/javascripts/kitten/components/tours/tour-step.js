@@ -9,7 +9,7 @@ class TourStep extends React.Component {
 
     this.state = {
       targetHighlightStyles: null,
-      currentTarget: this.props.targetElement,
+      currentPositionTarget: this.props.targetElement,
       popoverComputedStyles: null,
     }
 
@@ -27,7 +27,7 @@ class TourStep extends React.Component {
   }
 
   componentDidUpdate() {
-    if (this.shouldUpdatePosition()) {
+    if (!this.isTargetHighlightPositionUpdated()) {
       this.positionTargetHighlight()
     }
   }
@@ -83,7 +83,7 @@ class TourStep extends React.Component {
 
       this.setState({
         targetHighlightStyles: this.getTargetHighlightPositionStyles(),
-        currentTarget: this.props.targetElement
+        currentPositionTarget: this.props.targetElement
       })
     }
   }
@@ -111,12 +111,8 @@ class TourStep extends React.Component {
      return { left: targetStyles.left }
   }
 
-  isTargetHighlightUpdated() {
-    return this.state.currentTarget == this.props.targetElement
-  }
-
-  shouldUpdatePosition() {
-    return !this.isTargetHighlightUpdated()
+  isTargetHighlightPositionUpdated() {
+    return this.state.currentPositionTarget == this.props.targetElement
   }
 
   renderTargetHighlight() {
