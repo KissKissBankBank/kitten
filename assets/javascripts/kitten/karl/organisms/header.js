@@ -46,7 +46,7 @@ const platformSwitchProps = {
   positionedWithBorder: true,
 
   buttonId: 'k-PlatformSwitch',
-  buttonClassName: 'k-ButtonIcon k-ButtonIcon--default k-ButtonIcon--horizontal--arrow ' +
+  buttonClassName: 'k-ButtonIcon k-ButtonIcon--default k-ButtonIcon--dropdown ' +
                    'k-Dropdown__button--rotationOnExpanded',
   buttonContentOnExpanded: unloggedHeaderPlatformSwitchButton,
   buttonContentOnCollapsed: unloggedHeaderPlatformSwitchButton,
