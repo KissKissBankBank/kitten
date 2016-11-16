@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+Features:
+- Add `onToggle` to Dropdowns.
+
 ## [v1.0.1] - 2016-11-16
 
 Fixes:

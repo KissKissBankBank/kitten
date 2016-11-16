@@ -38,16 +38,22 @@ class Tour extends React.Component {
     const newIndex = this.state.currentIndex + 1
 
     this.toggleStep(newIndex)
+
+    window.dispatchEvent(new Event('k:tour:next'))
   }
 
   handleClickOnPrev() {
     const newIndex = this.state.currentIndex - 1
 
     this.toggleStep(newIndex)
+
+    window.dispatchEvent(new Event('k:tour:prev'))
   }
 
   handleClickOnClose() {
     this.stop()
+
+    window.dispatchEvent(new Event('k:tour:close'))
   }
 
   // Component methods.
