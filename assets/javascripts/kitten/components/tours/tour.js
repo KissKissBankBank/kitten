@@ -140,6 +140,7 @@ class Tour extends React.Component {
                 title={ this.state.currentStep.title }
                 content={ this.state.currentStep.content }
                 targetElement={ this.state.currentStep.targetElement }
+                popoverPosition={ this.state.currentStep.popoverPosition }
                 illustration={ this.state.currentStep.illustration }
                 buttons={ this.getButtonsList() }
                 onTargetHighlightPlace={ this.handleTargetHighlightPlace }
