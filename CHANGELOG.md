@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 Features:
 - Add `onToggle` to Dropdowns.
+- Update `k-Tour` popover positioning.
 
 ## [v1.0.1] - 2016-11-16
 
