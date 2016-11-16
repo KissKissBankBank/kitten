@@ -166,7 +166,7 @@
     }
 
     @include k-media-within('m') {
-      display: block;
+      display: flex;
     }
 
     @include k-media-within('xxs') {
