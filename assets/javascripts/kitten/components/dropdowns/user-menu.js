@@ -169,7 +169,6 @@ class UserMenu extends React.Component {
     if (this.canComputeSize()) {
       this.updateDropdownContentPosition()
       this.updateDropdownArrowPosition()
-      emitter.emit('user-menu:positioning:update')
     }
   }
 
