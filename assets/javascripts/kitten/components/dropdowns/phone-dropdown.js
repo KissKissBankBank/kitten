@@ -43,8 +43,8 @@ class PhoneDropdown extends React.Component {
       })
     }
 
-    emitter.off('user-menu:positioning:update', this.handlePositionUpdate)
     emitter.off('dropdown:opening:trigger', this.handleOtherDropdownsOpening)
+    emitter.off('element:update', this.handlePositionUpdate)
   }
 
   // Component methods.
