@@ -14,8 +14,9 @@ class TourStep extends React.Component {
     }
 
     this.handleResize = this.handleResize.bind(this)
-    this.handleTargetHighlightPlace = this.handleTargetHighlightPlace.bind(this)
-    this.handlePopoverPlace = this.handlePopoverPlace.bind(this)
+    this.handleTargetHighlightPosition =
+      this.handleTargetHighlightPosition.bind(this)
+    this.handlePopoverPosition = this.handlePopoverPosition.bind(this)
   }
 
   // Component lifecyle.
@@ -41,11 +42,11 @@ class TourStep extends React.Component {
     this.positionTargetHighlight()
   }
 
-  handleTargetHighlightPlace() {
-    this.props.onTargetHighlightPlace(this.props)
+  handleTargetHighlightPosition() {
+    this.props.onTargetHighlightPosition(this.props)
   }
 
-  handlePopoverPlace(popover) {
+  handlePopoverPosition(popover) {
     this.positionPopover(popover)
   }
 
@@ -78,7 +79,7 @@ class TourStep extends React.Component {
 
   positionTargetHighlight() {
     if (domElementHelper.canUseDom()) {
-      this.handleTargetHighlightPlace()
+      this.handleTargetHighlightPosition()
 
       this.setState({
         targetHighlightStyles: this.getTargetHighlightPositionStyles(),
@@ -135,7 +136,7 @@ class TourStep extends React.Component {
       <div className="k-Tour__step">
         { this.renderTargetHighlight() }
         <TourPopover ref="popover"
-                     onPopoverPlace={ this.handlePopoverPlace }
+                     onPopoverPosition={ this.handlePopoverPosition }
                      style={ this.state.popoverComputedStyles }
                      { ...popoverProps } />
       </div>

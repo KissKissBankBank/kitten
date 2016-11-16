@@ -11,20 +11,20 @@ class TourPopover extends React.Component {
   // Component lifecycle.
 
   componentDidMount() {
-    this.props.onPopoverPlace(this.refs.popover)
+    this.props.onPopoverPosition(this.refs.popover)
     window.addEventListener('resize', this.handleResize)
   }
 
   componentDidUpdate(prevProps) {
     if (this.shouldUpdatePosition(prevProps)) {
-      this.props.onPopoverPlace(this.refs.popover)
+      this.props.onPopoverPosition(this.refs.popover)
     }
   }
 
   // Component listener callbacks.
 
   handleResize() {
-    this.props.onPopoverPlace(this.refs.popover)
+    this.props.onPopoverPosition(this.refs.popover)
   }
 
   // Component methods.
