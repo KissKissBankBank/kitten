@@ -35,8 +35,10 @@
   $margin-container: k-px-to-rem(11px);
 
   .k-Popover {
+    position: relative;
+
     width: k-px-to-rem(465px);
-    min-height: k-px-to-rem(218px);
+    min-height: k-px-to-rem(240px);
     box-sizing: border-box;
 
     background-color: $background-color;
