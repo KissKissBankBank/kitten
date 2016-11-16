@@ -4,17 +4,21 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [v1.1.0] - 2016-11-16
+
 Features:
 - Add `onToggle` to Dropdowns.
 - Update `k-Tour` popover positioning.
+
+Fixes:
+- Change class k-ButtonIcon--dropdown to k-ButtonIcon--horizontalArrow.
+- Add class k-ButtonIcon--verticalArrow.
 
 ## [v1.0.1] - 2016-11-16
 
 Fixes:
 - Popover bottom navigation fixed.
 - Fix on Header.
-- Change class k-ButtonIcon--dropdown to k-ButtonIcon--horizontalArrow.
-- Add class k-ButtonIcon--verticalArrow.
 
 ## [v1.0.0] - 2016-11-16
 
