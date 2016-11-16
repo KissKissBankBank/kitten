@@ -4,15 +4,21 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [v1.0.0] - 2016-11-16
+
 Features:
 - Add prop `closeEvents` to close the dropdowns.
-- Fix button icons alignment (for Firefox)
-- Add new class `k-HorizontalNav__element`.
-- Add new class `k-HorizontalNav__element--fixedSize`.
-- Add new class `k-Header__item--fixedSize`.
+- Add new class `k-HorizontalNav__element` (to handle displaying issue on IE).
+- Add new class `k-HorizontalNav__element--fixedSize` (to handle displaying
+  issue on IE).
+- Add new class `k-Header__item--fixedSize` (to handle displaying issue on IE).
+- Add listeners to `k-PhoneDropdown` to handle positioning.
+- Update `k-UserMenu` to handle positioning when receiving new props.
+- Remove styles on `k-PhoneDropdown`.
 
 Fixes:
-- Fix dropdowns positioning.
+- Fix button icons alignment (for Firefox).
+- Fix `k-Popover` display on IE.
 
 ## [v0.21.1] - 2016-11-15
 
