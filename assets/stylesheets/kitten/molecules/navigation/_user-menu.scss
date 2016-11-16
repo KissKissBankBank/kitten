@@ -86,7 +86,7 @@
 
     .k-UserMenu__arrow {
       @include k-media-min('xs') {
-        @include k-dropdownArrow(( without-border-top: true));
+        @include k-dropdownArrow((without-border-top: true));
       }
     }
 
