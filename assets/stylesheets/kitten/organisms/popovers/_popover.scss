@@ -47,6 +47,7 @@
 
   .k-Popover__container {
     min-height: k-px-to-rem(220px);
+    box-sizing: border-box;
     margin: $margin-container;
   }
 
