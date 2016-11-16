@@ -10,6 +10,9 @@ Features:
 - Add new class `k-HorizontalNav__element`.
 - Add new class `k-Header__item--fixedSize`.
 
+Fixes:
+- Fix dropdowns positioning.
+
 ## [v0.21.1] - 2016-11-15
 
 Fixes:

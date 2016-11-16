@@ -44,14 +44,27 @@ class UserMenu extends React.Component {
     }
   }
 
+  componentDidUpdate(prevProps) {
+    if (this.shouldUpdatePosition(prevProps)) {
+      this.handlePositionUpdate()
+    }
+  }
+
   // Component methods.
+
+  shouldUpdatePosition(prevProps) {
+    return prevProps != this.props
+  }
 
   getButtonId() {
     return 'k-UserMenu'
   }
 
   canComputeSize() {
-    return typeof this.refs.dropdown != 'undefined'
+    return (
+      domElementHelper.canUseDom() &&
+      typeof this.refs.dropdown != 'undefined'
+    )
   }
 
   getDropdownContainer() {
