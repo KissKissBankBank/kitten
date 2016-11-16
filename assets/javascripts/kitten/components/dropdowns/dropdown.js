@@ -84,6 +84,8 @@ class Dropdown extends React.Component {
       emitter.emit('dropdown:opening:trigger', this)
     }
 
+    this.props.onToggle()
+
     this.setState({
       isExpanded: nextExpandedState
     })
@@ -256,6 +258,9 @@ Dropdown.defaultProps = {
 
   // Called when one of the `refreshEvents` is triggered.
   onPositionUpdate: function() {},
+
+  // Called when the dropdown is opened or closed
+  onToggle: function() {},
 }
 
 export default Dropdown
