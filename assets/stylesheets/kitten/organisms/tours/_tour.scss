@@ -112,15 +112,20 @@
 
   .k-Tour__popover__text {
     @include k-typographyFont('source-sans-light');
-    @include k-typographyFontSize(-1);
+    @include k-typographyFontSize(0);
 
     margin: 1em 0;
   }
 
   .k-Tour__popover__navigation {
+    position: absolute;
+    bottom: k-px-to-rem(20px);
+
     display: flex;
     justify-content: space-between;
     margin-top: auto;
+
+    width: k-px-to-rem(305px);
   }
 
   .k-Tour__popover__numbering {

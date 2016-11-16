@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 Fixes:
+- Popover bottom navigation fixed.
 - Fix on Header.
 
 ## [v1.0.0] - 2016-11-16
