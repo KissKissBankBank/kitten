@@ -13,6 +13,8 @@ Features:
 Fixes:
 - Popover bottom navigation fixed.
 - Fix on Header.
+- Change class k-ButtonIcon--dropdown to k-ButtonIcon--horizontalArrow.
+- Add class k-ButtonIcon--verticalArrow.
 
 ## [v1.0.0] - 2016-11-16
 
