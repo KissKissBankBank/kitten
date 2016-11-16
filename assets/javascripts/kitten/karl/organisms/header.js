@@ -56,7 +56,11 @@ const platformSwitchProps = {
   dropdownContent: <NavList className="k-PlatformSwitch
                                        k-PlatformSwitch--withoutBorderTop"
                                role="menubar"
-                               list={ platformSwitchDropdownList } />
+                               list={ platformSwitchDropdownList } />,
+  onToggle: function() {
+    // Example event to trigger
+    window.dispatchEvent(new Event("karl:platformSwitch:toggle"))
+  }
 }
 
 // Unlogged header dropdown
