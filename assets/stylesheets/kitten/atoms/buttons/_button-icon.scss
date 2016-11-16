@@ -419,7 +419,7 @@
   }
 
   .k-ButtonIcon--dropdown,
-  .k-ButtonIcon--horizontal--arrow {
+  .k-ButtonIcon--horizontalArrow {
     $horizontalArrow-width: k-px-to-rem(10px);
     $horizontalArrow-height: k-px-to-rem(7px);
     @include k-buttonRounded($button-size-tiny,
@@ -433,7 +433,7 @@
     }
   }
 
-  .k-ButtonIcon--vertical--arrow {
+  .k-ButtonIcon--verticalArrow {
     $verticalArrow-width: k-px-to-rem(9px);
     $verticalArrow-height: k-px-to-rem(12px);
     @include k-buttonRounded($button-size-tiny,
