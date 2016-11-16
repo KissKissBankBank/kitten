@@ -32,13 +32,12 @@
   $border-color: #eee;
   $border-size: 1px;
   $border-radius: k-px-to-rem(15px);
-  $margin-container: k-px-to-rem(11px);
+  $margin-container: k-px-to-rem(10px);
 
   .k-Popover {
     position: relative;
 
     width: k-px-to-rem(465px);
-    min-height: k-px-to-rem(240px);
     box-sizing: border-box;
 
     background-color: $background-color;
@@ -47,12 +46,11 @@
   }
 
   .k-Popover__container {
-    margin: $margin-container
-            $margin-container
-            k-px-to-rem(30px);
+    min-height: k-px-to-rem(220px);
+    margin: $margin-container;
   }
 
   .k-Popover__close {
-    margin-left: k-px-to-rem(10px);
+    margin-left: $margin-container;
   }
 }
