@@ -2,6 +2,43 @@ import React from 'react'
 import classNames from 'classnames'
 
 class TourPopover extends React.Component {
+  constructor(props) {
+    super(props)
+
+    this.handleResize = this.handleResize.bind(this)
+  }
+
+  // Component lifecycle.
+
+  componentDidMount() {
+    this.props.onPopoverPosition(this.refs.popover)
+    window.addEventListener('resize', this.handleResize)
+  }
+
+  componentDidUpdate(prevProps) {
+    if (this.shouldUpdatePosition(prevProps)) {
+      this.props.onPopoverPosition(this.refs.popover)
+    }
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.handleResize)
+  }
+
+  // Component listener callbacks.
+
+  handleResize() {
+    this.props.onPopoverPosition(this.refs.popover)
+  }
+
+  // Component methods.
+
+  shouldUpdatePosition(prevProps) {
+    return prevProps.name != this.props.name
+  }
+
+  // Component rendering.
+
   renderNextButton() {
     const isDisabled = !this.props.buttons.next.active
     const buttonClassName = classNames(
@@ -82,10 +119,12 @@ class TourPopover extends React.Component {
 
   render() {
     return(
-      <div className="k-Popover k-Tour__popover"
+      <div ref="popover"
+           className="k-Popover k-Tour__popover"
            role="dialog"
            aria-hidden="true"
-           aria-labelledby="dialogtitle">
+           aria-labelledby="dialogtitle"
+           style={ this.props.style }>
         <div className="k-Popover__container k-Tour__popover__container">
           <div className="k-Tour__popover__illustration">
             { this.props.illustration }

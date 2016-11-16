@@ -17,7 +17,8 @@ class Tour extends React.Component {
     this.handleClickOnNext = this.handleClickOnNext.bind(this)
     this.handleClickOnPrev = this.handleClickOnPrev.bind(this)
     this.handleClickOnClose = this.handleClickOnClose.bind(this)
-    this.handleTargetHighlightPlace = this.handleTargetHighlightPlace.bind(this)
+    this.handleTargetHighlightPosition =
+      this.handleTargetHighlightPosition.bind(this)
   }
 
   // Component lifecycle.
@@ -30,7 +31,7 @@ class Tour extends React.Component {
 
   // Component listener callbacks.
 
-  handleTargetHighlightPlace(step) {
+  handleTargetHighlightPosition(step) {
     this.setState({ visible: true })
   }
 
@@ -140,9 +141,10 @@ class Tour extends React.Component {
                 title={ this.state.currentStep.title }
                 content={ this.state.currentStep.content }
                 targetElement={ this.state.currentStep.targetElement }
+                popoverPosition={ this.state.currentStep.popoverPosition }
                 illustration={ this.state.currentStep.illustration }
                 buttons={ this.getButtonsList() }
-                onTargetHighlightPlace={ this.handleTargetHighlightPlace }
+                onTargetHighlightPosition={ this.handleTargetHighlightPosition }
                 progress={ this.getProgress() } />
     )
   }
