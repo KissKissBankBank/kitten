@@ -13,7 +13,6 @@ class TourStep extends React.Component {
     }
 
     this.handleResize = this.handleResize.bind(this)
-    this.handleTargetHighlightPlace = this.handleTargetHighlightPlace.bind(this)
   }
 
   // Component lifecyle.
@@ -23,8 +22,8 @@ class TourStep extends React.Component {
     window.addEventListener('resize', this.handleResize)
   }
 
-  componentDidUpdate() {
-    if (!this.isTargetHighlightUpdated()) this.placeTargetHighlight()
+  componentWillReceiveProps(nextProps) {
+    this.placeTargetHighlight(nextProps)
   }
 
   componentWillUnmount() {
@@ -33,18 +32,25 @@ class TourStep extends React.Component {
 
   // Component listener callbacks.
 
+  canPlaceTargetHighlight(props) {
+    return (
+      domElementHelper.canUseDom() &&
+      !!this.currentTargetElement(props)
+    )
+  }
+
+  currentTargetElement(props) {
+    return document.querySelector(props.targetElement)
+  }
+
   handleResize() {
     this.placeTargetHighlight()
   }
 
-  handleTargetHighlightPlace() {
-    this.props.onTargetHighlightPlace(this.props)
-  }
-
   // Component methods.
 
-  getTargetHighlightPositionStyles() {
-    const target = document.querySelector(this.props.targetElement)
+  getTargetHighlightPositionStyles(props = this.props) {
+    const target = this.currentTargetElement(props)
     const targetStyles = target.getBoundingClientRect()
     const targetHeight = targetStyles.height
     const targetWidth = targetStyles.width
@@ -68,21 +74,13 @@ class TourStep extends React.Component {
     }
   }
 
-  placeTargetHighlight() {
-    if (domElementHelper.canUseDom()) {
-      // We have to delay the target highlight display because of a rendering
-      // bug due to the computed positioning.
-      setTimeout(this.handleTargetHighlightPlace, 800)
-
+  placeTargetHighlight(props = this.props) {
+    if (this.canPlaceTargetHighlight(props)) {
       this.setState({
-        targetHighlightStyles: this.getTargetHighlightPositionStyles(),
-        currentTarget: this.props.targetElement
+        targetHighlightStyles: this.getTargetHighlightPositionStyles(props),
+        currentTarget: props.targetElement
       })
     }
-  }
-
-  isTargetHighlightUpdated() {
-    return this.state.currentTarget == this.props.targetElement
   }
 
   renderTargetHighlight() {

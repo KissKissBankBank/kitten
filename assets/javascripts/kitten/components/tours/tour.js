@@ -17,7 +17,6 @@ class Tour extends React.Component {
     this.handleClickOnNext = this.handleClickOnNext.bind(this)
     this.handleClickOnPrev = this.handleClickOnPrev.bind(this)
     this.handleClickOnClose = this.handleClickOnClose.bind(this)
-    this.handleTargetHighlightPlace = this.handleTargetHighlightPlace.bind(this)
   }
 
   // Component lifecycle.
@@ -29,10 +28,6 @@ class Tour extends React.Component {
   }
 
   // Component listener callbacks.
-
-  handleTargetHighlightPlace(step) {
-    this.setState({ visible: true })
-  }
 
   handleClickOnNext() {
     const newIndex = this.state.currentIndex + 1
@@ -54,7 +49,8 @@ class Tour extends React.Component {
 
   start() {
     this.setState({
-      play: true
+      play: true,
+      visible: true
     })
 
     const tourState = JSON.stringify({ hasPlayed: true })
@@ -136,7 +132,6 @@ class Tour extends React.Component {
                 targetElement={ this.state.currentStep.targetElement }
                 illustration={ this.state.currentStep.illustration }
                 buttons={ this.getButtonsList() }
-                onTargetHighlightPlace={ this.handleTargetHighlightPlace }
                 progress={ this.getProgress() } />
     )
   }
