@@ -40,9 +40,17 @@
     map-get($arrow, 'border-color-hover'),
     map-get($k-colors, 'line-1')
   );
+  $without-border-top: k-default(map-get($arrow, 'without-border-top'), false);
 
   position: absolute;
-  top: -($arrow-size - $border-size);
+
+  @if $without-border-top {
+    top: -($arrow-size);
+  }
+  @else {
+    top: -($arrow-size - $border-size);
+  }
+
   right: 50%;
 
   display: block;
