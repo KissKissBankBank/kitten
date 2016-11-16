@@ -99,16 +99,16 @@ class TourStep extends React.Component {
     if (!position) return
 
     const target = document.querySelector(this.props.targetElement)
-    const targetStyles = target.getBoundingClientRect()
-    const popoverStyles = popover.getBoundingClientRect()
 
     if (position == 'right') {
-      const left = targetStyles.left - popoverStyles.width + targetStyles.width
+      const left = domElementHelper.getComputedLeft(target) -
+                   domElementHelper.getComputedWidth(popover) +
+                   domElementHelper.getComputedWidth(target)
 
       return { left: left }
     }
 
-     return { left: targetStyles.left }
+     return { left: domElementHelper.getComputedLeft(target) }
   }
 
   isTargetHighlightPositionUpdated() {

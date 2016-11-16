@@ -21,6 +21,10 @@ class TourPopover extends React.Component {
     }
   }
 
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.handleResize)
+  }
+
   // Component listener callbacks.
 
   handleResize() {
