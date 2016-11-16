@@ -14,7 +14,8 @@
 ///         Nav link 1
 ///       </a>
 ///     </li>
-///     <li class="k-HorizontalNav__element" role="menuitem">
+///     <li class="k-HorizontalNav__element k-HorizontalNav__element--fixedSize"
+///         role="menuitem">
 ///       <a class="k-HorizontalNav__item is-selected" href="#">
 ///         Nav link 2 (selected)
 ///       </a>
@@ -75,6 +76,10 @@
 
   .k-HorizontalNav__element {
     -ms-overflow-x: hidden;
+  }
+
+  .k-HorizontalNav__element--fixedSize {
+    flex-shrink: 0;
   }
 
   .k-HorizontalNav__item {
