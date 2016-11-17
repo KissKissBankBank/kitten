@@ -5,7 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 Fixes:
-- Fix buttonIcon size on Safari 9 (min-width: auto support)
+- Fix buttonIcon size on Safari 9 (min-width: auto support).
 
 ## [v1.1.0] - 2016-11-16
 
