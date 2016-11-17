@@ -3,6 +3,8 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
+Fixes:
+- Add class k-ButtonIcon--verticalArrow on external-rich-link.js.
 
 ## [v1.1.0] - 2016-11-16
 
