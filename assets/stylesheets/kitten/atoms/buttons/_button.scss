@@ -335,7 +335,7 @@
 
   .k-Button--icon {
     padding: 0 $button-radius 0 0;
-    min-width: auto;
+    min-width: 0;
 
     .k-Button__icon {
       @include k-buttonRounded($button-size, $icon-width, $icon-height);
