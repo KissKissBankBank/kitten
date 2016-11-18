@@ -6,7 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 Fixes:
 - Fix buttonIcon size on Safari 9 (min-width: auto support).
-- Better calculation for phone dropdown position.
+- Better computation for phone dropdown position.
 
 ## [v1.1.0] - 2016-11-16
 
