@@ -3,6 +3,8 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
+Fixes:
+- Add class k-ButtonIcon--verticalArrow on k-ExternalRichLink.
 
 Fixes:
 - Fix buttonIcon size on Safari 9 (min-width: auto support).
