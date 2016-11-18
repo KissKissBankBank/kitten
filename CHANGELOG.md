@@ -8,6 +8,7 @@ Fixes:
 
 Fixes:
 - Fix buttonIcon size on Safari 9 (min-width: auto support).
+- Better computation for phone dropdown position.
 
 ## [v1.1.0] - 2016-11-16
 

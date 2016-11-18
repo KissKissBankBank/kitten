@@ -70,7 +70,7 @@ class PhoneDropdown extends React.Component {
   }
 
   getDropdownButtonPositionLeft() {
-    return domElementHelper.getComputedLeft(this.getDropdownButtonElement()) +
+    return this.getDropdownButtonElement().offsetLeft +
            this.getDropdownButtonHalfWidth()
   }
 
@@ -90,8 +90,9 @@ class PhoneDropdown extends React.Component {
     // If the interval is negative, just stick the dropdown to the reference
     // element border.
 
-    if(window.innerWidth < space + this.getDropdownContentElementWidth()) {
-      return { left: window.innerWidth - this.getDropdownContentElementWidth()}
+    if (window.innerWidth < space + this.getDropdownContentElementWidth()) {
+      return { left: (window.innerWidth -
+                      this.getDropdownContentElementWidth()) + 'px' }
     } else {
       return { left: space + 'px' }
     }
