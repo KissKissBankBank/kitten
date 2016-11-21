@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+Fixes:
+- Fix `k-ButtonWithBadge` for IE 10.
+
 ## [v1.1.1] - 2016-11-18
 
 Fixes:
