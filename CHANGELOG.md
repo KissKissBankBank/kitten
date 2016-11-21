@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+Fixes:
+- Add autoprefixer in Webpack to fix styles on old browsers.
+
 ## [v1.1.1] - 2016-11-18
 
 Fixes:
