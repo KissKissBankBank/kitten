@@ -11,6 +11,7 @@
 import path from 'path'
 
 // Node modules specific to webpack.
+const autoprefixer = require('autoprefixer')
 
 // Webpack module.
 import webpack from 'webpack'
@@ -41,11 +42,13 @@ const developmentConfig = {
         loaders: [
           'style',
           'css',
+          'postcss',
           'sass',
         ],
       },
     ],
   },
+  postcss: [ autoprefixer({ browsers: ['> 5%', 'ie >= 10'] }) ],
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),
