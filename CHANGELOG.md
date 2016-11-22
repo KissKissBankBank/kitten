@@ -4,12 +4,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+Breaking changes:
+- Remove height declaration on `k-Header__logo`.
+
 Fixes:
 - Add autoprefixer in Webpack to fix styles on old browsers.
 - Change `images/brand/lendopolis.svg` to fix height.
-
-Breaking changes:
-- Remove height declaration on `k-Header__logo`.
 
 ## [v1.1.1] - 2016-11-18
 
