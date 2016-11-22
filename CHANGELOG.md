@@ -27,6 +27,7 @@ postcss: [ autoprefixer({ browsers: ['> 5%', 'ie >= 10', 'ios_saf >= 9'] }) ],
 
 Fixes:
 - Add autoprefixer in Webpack to fix styles on old browsers.
+- Fix `k-ButtonWithBadge` for IE 10.
 
 ## [v1.1.1] - 2016-11-18
 
