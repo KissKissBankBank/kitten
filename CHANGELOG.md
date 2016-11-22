@@ -5,9 +5,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 Breaking changes:
-- To add autoprefixer in your webpack config, you must:
+- To add autoprefixer in your Webpack config, you must:
   * Use `npm install` in your client folder
-  * Update your config with:
+  * Update your Webpack config with:
     ```js
     …
     const autoprefixer = require('autoprefixer')
