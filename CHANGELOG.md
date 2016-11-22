@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 Fixes:
 - Add autoprefixer in Webpack to fix styles on old browsers.
+- Change syntax of dispatch event to fix on old IE.
 
 ## [v1.1.1] - 2016-11-18
 
