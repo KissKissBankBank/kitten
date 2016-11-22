@@ -26,6 +26,7 @@
   $background-color: #fff;
   $border-color: #eee;
   $border-width: 1px;
+  $nav-border-width: 2px;
 
   $height: 65px;
   $item-spacing: k-px-to-rem(10px);
@@ -92,6 +93,7 @@
 
   .k-Header__nav {
     position: relative;
+    top: $border-width;
 
     padding: 0 $item-spacing;
 
@@ -102,7 +104,7 @@
 
   .k-Header__nav__item {
     box-sizing: content-box;
-    height: k-px-to-rem($height - $border-width);
+    height: k-px-to-rem($height - $nav-border-width);
   }
 
   .k-Header__item__logo {
