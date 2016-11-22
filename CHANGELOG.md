@@ -30,6 +30,7 @@ Fixes:
 - Add autoprefixer in Webpack to fix styles on old browsers.
 - Fix `k-ButtonWithBadge` for IE 10.
 - Change `images/brand/lendopolis.svg` to fix height.
+- Change syntax of dispatch event to fix on old IE.
 
 ## [v1.1.1] - 2016-11-18
 
