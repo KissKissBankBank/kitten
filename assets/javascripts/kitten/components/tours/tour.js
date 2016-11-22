@@ -40,7 +40,7 @@ class Tour extends React.Component {
 
     this.toggleStep(newIndex)
 
-    window.dispatchEvent(new Event('k:tour:next'))
+    dispatchEvent('k:tour:next', true, true)
   }
 
   handleClickOnPrev() {
@@ -48,13 +48,19 @@ class Tour extends React.Component {
 
     this.toggleStep(newIndex)
 
-    window.dispatchEvent(new Event('k:tour:prev'))
+    dispatchEvent('k:tour:prev'))
   }
 
   handleClickOnClose() {
     this.stop()
 
-    window.dispatchEvent(new Event('k:tour:close'))
+    dispatchEvent('k:tour:close'))
+  }
+
+  dispatchEvent(eventLabel) {
+    const event = document.createEvent('Event')
+    event.initEvent(eventLabel, true, true)
+    window.dispatchEvent(event)
   }
 
   // Component methods.

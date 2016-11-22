@@ -59,7 +59,9 @@ const platformSwitchProps = {
                                list={ platformSwitchDropdownList } />,
   onToggle: function() {
     // Example event to trigger
-    window.dispatchEvent(new Event("karl:platformSwitch:toggle"))
+    const event = document.createEvent('Event')
+    event.initEvent('karl:platformSwitch:toggle', true, true)
+    window.dispatchEvent(event)
   }
 }
 
