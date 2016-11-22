@@ -4,10 +4,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [v1.2.1] - 2016-11-22
+
 Breaking changes:
 - Remove height declaration on `k-Header__logo`.
 - To add autoprefixer in your Webpack config, you must:
-  * Use `npm install` in your client folder
+  * Use `npm install postcss-loader --save` in your client folder
   * Update your Webpack config with:
 
 ```js
