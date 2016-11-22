@@ -4,6 +4,26 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+Breaking changes:
+- To add autoprefixer in your webpack config, you must:
+  * Use `npm install` in your client folder
+  * Update your config with:
+    ```js
+    …
+    const autoprefixer = require('autoprefixer')
+    …
+    module: {
+    loaders: [
+      {
+        test: /\.scss$/,
+        loader: ExtractTextPlugin.extract('css-loader!postcss-loader!sass-loader'),
+      },
+    ]
+    },
+    postcss: [ autoprefixer({ browsers: ['> 5%', 'ie >= 10', 'ios_saf >= 9'] }) ],
+    …
+    ```
+
 Fixes:
 - Add autoprefixer in Webpack to fix styles on old browsers.
 
