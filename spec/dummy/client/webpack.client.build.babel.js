@@ -51,7 +51,7 @@ const buildConfig = {
       },
     ]
   },
-  postcss: [ autoprefixer({ browsers: ['> 5%', 'ie >= 10'] }) ],
+  postcss: [ autoprefixer({ browsers: ['> 5%', 'ie >= 10', 'ios_saf >= 9'] }) ],
 }
 
 // Enable devtools if the build is intended to be used on development

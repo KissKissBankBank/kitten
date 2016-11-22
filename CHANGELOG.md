@@ -6,9 +6,29 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 Breaking changes:
 - Remove height declaration on `k-Header__logo`.
+- To add autoprefixer in your Webpack config, you must:
+  * Use `npm install` in your client folder
+  * Update your Webpack config with:
+
+```js
+…
+const autoprefixer = require('autoprefixer')
+…
+module: {
+loaders: [
+  {
+    test: /\.scss$/,
+    loader: ExtractTextPlugin.extract('css-loader!postcss-loader!sass-loader'),
+  },
+]
+},
+postcss: [ autoprefixer({ browsers: ['> 5%', 'ie >= 10', 'ios_saf >= 9'] }) ],
+…
+```
 
 Fixes:
 - Add autoprefixer in Webpack to fix styles on old browsers.
+- Fix `k-ButtonWithBadge` for IE 10.
 - Change `images/brand/lendopolis.svg` to fix height.
 
 ## [v1.1.1] - 2016-11-18
