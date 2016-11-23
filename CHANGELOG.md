@@ -4,6 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [v1.2.2] - 2016-11-23
+
+Fixes:
+- Fix `this.dispatchEvent` in component `Tour`.
+
 ## [v1.2.1] - 2016-11-22
 
 Breaking changes:
