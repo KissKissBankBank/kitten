@@ -43,8 +43,8 @@
     color: $font-color;
     text-decoration: none;
 
+    // &:focus,
     &:active,
-    &:focus,
     &:hover {
       color: $font-color;
       text-decoration: none;

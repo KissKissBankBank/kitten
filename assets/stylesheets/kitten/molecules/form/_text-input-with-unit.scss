@@ -69,10 +69,10 @@
     @include k-typographyFont($input-font);
     @include k-formRemoveNumberSpinner;
 
-    &:focus ~ .k-TextInputWithUnit__unit {
-      border: 1px solid $unit-color;
-      color: $color;
-    }
+    // &:focus ~ .k-TextInputWithUnit__unit {
+    //   border: 1px solid $unit-color;
+    //   color: $color;
+    // }
   }
 
   // Unit

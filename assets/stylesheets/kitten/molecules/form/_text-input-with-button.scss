@@ -57,9 +57,9 @@
   .k-TextInputWithButton__input {
     outline: none; // since we introduce our own focus styles
 
-    &:focus ~ .k-TextInputWithButton__button {
-      background-color: $button-background;
-    }
+    // &:focus ~ .k-TextInputWithButton__button {
+    //   background-color: $button-background;
+    // }
   }
 
   .k-TextInputWithButton__button {

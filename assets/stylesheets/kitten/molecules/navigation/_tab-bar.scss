@@ -88,8 +88,8 @@
     color: $color;
     transition: color .2s, border-color .2s;
 
-    &:hover,
-    &:focus {
+    // &:focus,
+    &:hover {
       color: $current-color;
       text-decoration: none;
     }

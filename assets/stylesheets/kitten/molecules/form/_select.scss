@@ -234,9 +234,9 @@
       box-shadow: 0 1px 0 rgba(0, 0, 0, .06);
     }
 
-    .Select-input:focus {
-      outline: none;
-    }
+    // .Select-input:focus {
+    //   outline: none;
+    // }
   }
 
   .is-searchable {
@@ -307,8 +307,8 @@
       cursor: pointer;
       text-decoration: none;
 
-      &:hover,
-      &:focus {
+      // &:focus,
+      &:hover {
         color: $select-link-hover-color;
         outline: none;
         text-decoration: underline;
@@ -599,8 +599,8 @@
         $select-item-padding-horizontal
         ($select-item-padding-vertical + 1);
 
-      &:hover,
-      &:focus {
+      // &:focus,
+      &:hover {
         background-color: $select-item-hover-bg;
         color: $select-item-hover-color;
       }
@@ -622,8 +622,8 @@
       cursor: not-allowed;
       border-right: 1px solid $select-item-disabled-border-color;
 
+      // &:focus,
       &:hover,
-      &:focus,
       &:active {
         background-color: $select-item-disabled-bg;
       }

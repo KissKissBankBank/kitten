@@ -60,10 +60,10 @@
     color: $color;
     transition: color .2s, border-color .2s;
 
-    &:focus {
-      outline: none;
-      border-color: $border-focus;
-    }
+    // &:focus {
+    //   outline: none;
+    //   border-color: $border-focus;
+    // }
 
     &:disabled {
       border-color: $border-disabled;
@@ -77,20 +77,20 @@
       border-color: $border-is-valid;
       color: $color-is-valid;
 
-      &:focus {
-        border-color: $border-focus;
-        color: $color;
-      }
+      // &:focus {
+      //   border-color: $border-focus;
+      //   color: $color;
+      // }
     }
 
     &.is-error {
       border-color: $border-is-error;
       color: $color-is-error;
 
-      &:focus {
-        border-color: $border-focus;
-        color: $color;
-      }
+      // &:focus {
+      //   border-color: $border-focus;
+      //   color: $color;
+      // }
     }
   }
 

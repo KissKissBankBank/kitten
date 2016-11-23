@@ -61,9 +61,9 @@
     fill: $hover-color;
   }
 
-  .#{$parent}:focus & {
-    fill: $focus-color;
-  }
+  // .#{$parent}:focus & {
+  //   fill: $focus-color;
+  // }
 
   .#{$parent}:active & {
     fill: $active-color;
@@ -87,9 +87,9 @@
       stroke: $hover-color;
     }
 
-    .#{$parent}:focus & {
-      stroke: $focus-color;
-    }
+    // .#{$parent}:focus & {
+    //   stroke: $focus-color;
+    // }
 
     .#{$parent}:active & {
       stroke: $active-color;

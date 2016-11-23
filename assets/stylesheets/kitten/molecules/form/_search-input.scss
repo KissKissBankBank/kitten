@@ -74,9 +74,9 @@
     width: k-px-to-rem(160px);
     padding-right: $input-right-padding;
 
-    &:focus ~ .k-SearchInput__submit {
-      border-left-color: $border-focus;
-    }
+    // &:focus ~ .k-SearchInput__submit {
+    //   border-left-color: $border-focus;
+    // }
 
     // You can add this class in JavaScript to manage `k-SearchInput__input`
     // hover style depending on a following sibling hover state.
@@ -116,18 +116,18 @@
     cursor: pointer;
     transition: all $transition-speed;
 
-    &:focus {
-      background-color: $submit-focus-background;
-      border-left-color: $border-focus;
+    // &:focus {
+    //   background-color: $submit-focus-background;
+    //   border-left-color: $border-focus;
 
-      & .k-SearchInput__submit__svgPath {
-        fill: $submit-focus-color;
-      }
+    //   & .k-SearchInput__submit__svgPath {
+    //     fill: $submit-focus-color;
+    //   }
 
-      & .k-SearchInput__submit__svgCircle {
-        stroke: $submit-focus-color;
-      }
-    }
+    //   & .k-SearchInput__submit__svgCircle {
+    //     stroke: $submit-focus-color;
+    //   }
+    // }
 
     &:hover {
       background-color: $submit-hover-background;

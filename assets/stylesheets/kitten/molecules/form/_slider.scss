@@ -169,7 +169,7 @@
       transition: left $transition-speed,
                   box-shadow $transition-speed;
 
-      &:focus,
+      // &:focus,
       .k-Slider.is-grabbing & {
         box-shadow: 0 0 k-px-to-rem(10px) 0 $handle-color;
       }

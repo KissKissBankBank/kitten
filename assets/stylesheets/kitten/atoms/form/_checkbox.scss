@@ -63,14 +63,14 @@
       transition: border-color .2s, background-color .2s;
     }
 
-    &:hover:before,
-    .k-Checkbox__input:focus + &:before {
+    // .k-Checkbox__input:focus + &:before,
+    &:hover:before {
       border-color: $border-color-hover;
     }
 
-    .k-Checkbox__input:checked:focus + &:before {
-      box-shadow: 0 0 k-px-to-rem(3px) $background-color-checked;
-    }
+    // .k-Checkbox__input:checked:focus + &:before {
+    //   box-shadow: 0 0 k-px-to-rem(3px) $background-color-checked;
+    // }
 
     .k-Checkbox__input:checked + &:before {
       background: $background-color-checked
