@@ -64,8 +64,7 @@
       background: $background-color;
       transition: background-color .2s, border-color .2s;
 
-      &:focus,
-      &:hover {
+      &:focus {
         background-color: $background-color-hover;
       }
 
