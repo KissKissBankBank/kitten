@@ -55,7 +55,7 @@
   }
 
   .k-TextInputWithButton__input {
-    outline: none; // since we introduce our own focus styles
+    //outline: none; // since we introduce our own focus styles
 
     // &:focus ~ .k-TextInputWithButton__button {
     //   background-color: $button-background;
@@ -81,7 +81,7 @@
     letter-spacing: k-px-to-rem(1px);
     color: $color;
 
-    outline: none;
+    //outline: none;
     cursor: pointer;
 
     &.is-valid {

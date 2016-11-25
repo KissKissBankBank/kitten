@@ -105,7 +105,7 @@
     border-left: 1px solid $border;
     border-top-right-radius: $submit-border-radius;
     border-bottom-right-radius: $submit-border-radius;
-    outline: none; // since we introduce our own focus styles
+    //outline: none; // since we introduce our own focus styles
 
     font: 0/0;
     line-height: 1;

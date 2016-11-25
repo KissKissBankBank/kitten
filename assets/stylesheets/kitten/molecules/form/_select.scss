@@ -225,7 +225,7 @@
     border-spacing: 0;
     border-collapse: separate;
     height: $select-input-height;
-    outline: none;
+    //outline: none;
     overflow: hidden;
     position: relative;
     width: 100%;
@@ -310,7 +310,7 @@
       // &:focus,
       &:hover {
         color: $select-link-hover-color;
-        outline: none;
+        //outline: none;
         text-decoration: underline;
       }
     }
@@ -335,7 +335,7 @@
       font-family: inherit;
       font-size: inherit;
       margin: 0;
-      outline: none;
+      //outline: none;
       line-height: 14px; // For IE 8 compatibility
       padding:
         (($select-input-internal-height - 14) / 2 - 2)
@@ -357,7 +357,7 @@
 
   // fake input
   .Select-control:not(.is-searchable) > .Select-input {
-    outline: none;
+    //outline: none;
   }
 
   // loading indicator
