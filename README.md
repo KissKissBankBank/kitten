@@ -14,8 +14,7 @@ styleguide.
 
 - Ruby 2.2.4
 - Bundler (`gem install bundler`)
-- Node > 0.12 (for stylelint)
-- Webpack
+- Node >= 6.9.1
 
 ## Table of content
 - [Installation](#installation)
@@ -174,9 +173,9 @@ Make sure Npm has access to Gemfury (see higher), then:
 Then, run:
 
 ```sh
-$ bundle                 # install gem dependencies
-$ npm install --only=dev # install node dependencies
-$ rake
+$ bundle      # install gem dependencies
+$ npm install # install node dependencies
+$ bundle exec rake
 ```
 
 ### Dummy style guide
