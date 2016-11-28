@@ -184,8 +184,7 @@ To launch the style guide on the dummy app:
 
 ```sh
 $ cd spec/dummy
-$ bundle
-$ npm install
+$ bin/install
 $ foreman start
 ```
 
