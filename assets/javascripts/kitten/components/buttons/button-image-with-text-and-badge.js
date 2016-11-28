@@ -31,7 +31,7 @@ class ButtonImageWithTextAndBadge extends React.Component {
     let buttonClassName = classNames('k-ButtonImageWithText', className)
 
     return(
-      <span className={ buttonClassName }
+      <button className={ buttonClassName }
               aria-haspopup="true"
               aria-expanded={ isExpanded }
               title={ title }
@@ -47,7 +47,7 @@ class ButtonImageWithTextAndBadge extends React.Component {
           { notifications ? this.renderNotificationBadge() : '' }
         </span>
         <p className={ textClass }>{ text }</p>
-      </span>
+      </button>
     )
   }
 }
