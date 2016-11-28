@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "kitten": "file:../../../../kitten",
-    "kitten-launcher": "0.2.0",
+    "kitten-launcher": "^0.3.0",
     "react-on-rails": "^6.1.0"
   }
 }
