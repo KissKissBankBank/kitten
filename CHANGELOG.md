@@ -4,6 +4,15 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+Features:
+- Add `kitten-launcher` module in dummy app `package.json` to manage client
+  front stack dependencies (Webpack, plugins and loaders).
+
+Fixes:
+- Move `kitten` dependencies from client app to main `package.json`.
+- Update `npm-link` command from `preinstall` script to `postinstall` script in
+  dummy app.
+
 ## [v1.2.2] - 2016-11-23
 
 Fixes:
