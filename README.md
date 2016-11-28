@@ -173,8 +173,8 @@ Make sure Npm has access to Gemfury (see higher), then:
 Then, run:
 
 ```sh
-$ bundle      # install gem dependencies
-$ npm install # install node dependencies
+$ bundle                 # install gem dependencies
+$ npm install --only=dev # install node dependencies
 $ bundle exec rake
 ```
 
