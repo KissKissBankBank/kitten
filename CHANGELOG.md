@@ -7,6 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 Features:
 - Add `kitten-launcher` module in dummy app `package.json` to manage client
   front stack dependencies (Webpack, plugins and loaders).
+- Add `spec/dmmy/bin/install` to install dependencies in dummy app.
 
 Fixes:
 - Move `kitten` dependencies from client app to main `package.json`.
