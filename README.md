@@ -14,7 +14,8 @@ styleguide.
 
 - Ruby 2.2.4
 - Bundler (`gem install bundler`)
-- Node >= 6.9.1
+- Node >=6.0.0 <7.0.0
+- Npm >=3.0.0
 
 ## Table of content
 - [Installation](#installation)
