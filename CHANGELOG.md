@@ -4,6 +4,20 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+Breaking changes:
+- Remove support for npm 2. You need to upgrade to npm 3 and reinstall all your
+  node modules.
+
+Features:
+- Add `kitten-launcher` module in dummy app `package.json` to manage client
+  front stack dependencies (Webpack, plugins and loaders).
+- Add `spec/dmmy/bin/install` to install dependencies in dummy app.
+
+Fixes:
+- Move `kitten` dependencies from client app to main `package.json`.
+- Update `npm-link` command from `preinstall` script to `postinstall` script in
+  dummy app.
+
 ## [v1.2.2] - 2016-11-23
 
 Fixes:

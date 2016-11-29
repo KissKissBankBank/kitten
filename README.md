@@ -14,8 +14,8 @@ styleguide.
 
 - Ruby 2.2.4
 - Bundler (`gem install bundler`)
-- Node > 0.12 (for stylelint)
-- Webpack
+- Node ~> 6.0
+- Npm >= 3.0
 
 ## Table of content
 - [Installation](#installation)
@@ -176,7 +176,7 @@ Then, run:
 ```sh
 $ bundle                 # install gem dependencies
 $ npm install --only=dev # install node dependencies
-$ rake
+$ bundle exec rake
 ```
 
 ### Dummy style guide
@@ -185,8 +185,7 @@ To launch the style guide on the dummy app:
 
 ```sh
 $ cd spec/dummy
-$ bundle
-$ npm install
+$ bin/install
 $ foreman start
 ```
 

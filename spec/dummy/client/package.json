@@ -1,50 +1,15 @@
 {
   "name": "kitten-example",
-  "version": "0.6.2",
-  "engines": {
-    "node": "5.10.0",
-    "npm": "3.5.0"
-  },
+  "version": "1.0.0",
   "scripts": {
-    "preinstall": "../bin/npm-link",
+    "postinstall": "../bin/npm-link",
     "build:dev": "webpack -w --config webpack.client.build.babel.js",
     "build": "webpack --config webpack.client.build.babel.js",
     "hot-assets": "babel-node bin/webpack-dev-server.js"
   },
-  "cacheDirectories": [
-    "node_modules",
-    "client/node_modules"
-  ],
   "dependencies": {
-    "autoprefixer": "^6.5.3",
-    "babel-cli": "^6.14.0",
-    "babel-core": "^6.13.2",
-    "babel-loader": "^6.2.5",
-    "babel-preset-es2015": "^6.13.2",
-    "babel-preset-react": "^6.11.1",
-    "babel-preset-stage-0": "^6.5.0",
-    "babel-preset-stage-2": "^6.13.0",
-    "babel-runtime": ">= 6",
-    "core-js": "^2.4.1",
-    "css-loader": "^0.23.1",
-    "es5-shim": "^4.5.7",
-    "expose-loader": "^0.7.1",
-    "extract-text-webpack-plugin": "^1.0.1",
-    "file-loader": "^0.9.0",
-    "imports-loader": "^0.6.5",
-    "kitten": "0.7.0",
-    "node-sass": "^3.8.0",
-    "postcss-loader": "^1.1.1",
-    "react": ">= 0.14",
-    "react-dom": ">= 0.14",
-    "react-on-rails": "6.1.0",
-    "sass-loader": "^4.0.0",
-    "style-loader": "^0.13.1",
-    "svg-react-loader": "^0.3.7",
-    "webpack": "^1.12.14",
-    "webpack-merge": "^0.14.1"
-  },
-  "devDependencies": {
-    "webpack-dev-server": "^1.9.0"
+    "kitten": "file:../../../../kitten",
+    "kitten-launcher": "^0.3.0",
+    "react-on-rails": "^6.1.0"
   }
 }

@@ -1,0 +1,24 @@
+#!/bin/sh
+
+set -e
+
+NPM_VERSION=$(npm --version)
+
+if [[ $NPM_VERSION =~ ^3.[.0-9]* ]]; then
+  bundle
+  npm i
+else
+  echo ""
+  echo "--------------------------------------------------"
+  echo "|                /!\  WARNING /!\                |"
+  echo "--------------------------------------------------"
+  echo ""
+  echo "| The dummy app client installation needs npm >= 3."
+  echo "|"
+  echo "| Before running the installation again, make sure:"
+  echo "|"
+  echo "| - You have the right version of node.js and npm."
+  echo "| - To remove all your previous node modules with:"
+  echo ""
+  echo "  rm -fr node_modules client/node_modules"
+fi
