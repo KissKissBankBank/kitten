@@ -10,10 +10,11 @@
 /// - `.k-Button--icon`
 ///
 /// Available color modifiers:
-/// - `.k-Button--default`
-/// - `.k-Button--primary`
-/// - `.k-Button--secondary`
-/// - `.k-Button--secondaryOnWhite`
+/// - `.k-Button--hydrogen`
+/// - `.k-Button--helium`
+/// - `.k-Button--lithium`
+/// - `.k-Button--beryllium`
+/// - `.k-Button--zinc`
 ///
 /// Available size modifiers:
 /// - `.k-Button--tiny`
@@ -25,11 +26,11 @@
 ///   @include k-Button;
 ///
 /// @example html
-///  <button class="k-Button k-Button--default">My button</button>
+///  <button class="k-Button k-Button--hydrogen">My button</button>
 ///
 /// @example html
 ///  <button class="k-Button
-///                 k-Button--default
+///                 k-Button--hydrogen,
 ///                 k-Button--icon">
 ///    <svg class="k-Button__icon" … /></svg>
 ///    My button
@@ -40,31 +41,31 @@
   $border-size: 1px;
 
   // Colors.
-  $default-colors: (
+  $hydrogen-colors: (
     base: (
       color: map-get($k-colors, 'font-1'),
       border-color: map-get($k-colors, 'line-2'),
-      background-color: #fff,
+      background-color: map-get($k-colors, 'background-1'),
     ),
     hover: (
-      color: #fff,
+      color: map-get($k-colors, 'primary-1'),
       border-color: map-get($k-colors, 'primary-1'),
-      background-color: map-get($k-colors, 'primary-1'),
+      background-color: map-get($k-colors, 'background-1'),
     ),
     focus: (
-      color: #fff,
+      color: map-get($k-colors, 'primary-1'),
       border-color: map-get($k-colors, 'primary-1'),
-      background-color: map-get($k-colors, 'primary-1'),
+      background-color: map-get($k-colors, 'background-1'),
     ),
     active: (
-      color: #fff,
+      color: map-get($k-colors, 'primary-3'),
       border-color: map-get($k-colors, 'primary-3'),
-      background-color: map-get($k-colors, 'primary-3'),
+      background-color: map-get($k-colors, 'background-1'),
     ),
     is-selected: (
-      color: #fff,
+      color: map-get($k-colors, 'primary-3'),
       border-color: map-get($k-colors, 'primary-3'),
-      background-color: map-get($k-colors, 'primary-3'),
+      background-color: map-get($k-colors, 'background-1'),
     ),
     disabled: (
       color: #fff,
@@ -73,7 +74,7 @@
     ),
   );
 
-  $primary-colors: (
+  $helium-colors: (
     base: (
       color: #fff,
       border-color: map-get($k-colors, 'primary-1'),
@@ -106,31 +107,31 @@
     ),
   );
 
-  $secondary-colors: (
+  $lithium-colors: (
     base: (
       color: map-get($k-colors, 'primary-1'),
       border-color: map-get($k-colors, 'primary-4'),
-      background-color: #fff,
+      background-color: map-get($k-colors, 'background-1'),
     ),
     hover: (
-      color: #fff,
-      border-color: map-get($k-colors, 'primary-2'),
-      background-color: map-get($k-colors, 'primary-2'),
+      color: map-get($k-colors, 'primary-1'),
+      border-color: map-get($k-colors, 'primary-1'),
+      background-color: map-get($k-colors, 'background-1'),
     ),
     focus: (
-      color: #fff,
-      border-color: map-get($k-colors, 'primary-2'),
-      background-color: map-get($k-colors, 'primary-2'),
+      color: map-get($k-colors, 'primary-1'),
+      border-color: map-get($k-colors, 'primary-1'),
+      background-color: map-get($k-colors, 'background-1'),
     ),
     active: (
-      color: #fff,
+      color: map-get($k-colors, 'primary-3'),
       border-color: map-get($k-colors, 'primary-3'),
-      background-color: map-get($k-colors, 'primary-3'),
+      background-color: map-get($k-colors, 'background-1'),
     ),
     is-selected: (
-      color: #fff,
+      color: map-get($k-colors, 'primary-3'),
       border-color: map-get($k-colors, 'primary-3'),
-      background-color: map-get($k-colors, 'primary-3'),
+      background-color: map-get($k-colors, 'background-1'),
     ),
     disabled: (
       color: #fff,
@@ -139,31 +140,31 @@
     ),
   );
 
-  $secondary-on-white-colors: (
+  $beryllium-colors: (
     base: (
       color: map-get($k-colors, 'primary-1'),
       border-color: map-get($k-colors, 'primary-4'),
       background-color: map-get($k-colors, 'primary-5'),
     ),
     hover: (
-      color: #fff,
-      border-color: map-get($k-colors, 'primary-2'),
-      background-color: map-get($k-colors, 'primary-2'),
+      color: map-get($k-colors, 'primary-1'),
+      border-color: map-get($k-colors, 'primary-1'),
+      background-color: map-get($k-colors, 'primary-5'),
     ),
     focus: (
-      color: #fff,
-      border-color: map-get($k-colors, 'primary-2'),
-      background-color: map-get($k-colors, 'primary-2'),
+      color: map-get($k-colors, 'primary-1'),
+      border-color: map-get($k-colors, 'primary-1'),
+      background-color: map-get($k-colors, 'primary-5'),
     ),
     active: (
-      color: #fff,
+      color: map-get($k-colors, 'primary-3'),
       border-color: map-get($k-colors, 'primary-3'),
-      background-color: map-get($k-colors, 'primary-3'),
+      background-color: map-get($k-colors, 'primary-5'),
     ),
     is-selected: (
-      color: #fff,
+      color: map-get($k-colors, 'primary-3'),
       border-color: map-get($k-colors, 'primary-3'),
-      background-color: map-get($k-colors, 'primary-3'),
+      background-color: map-get($k-colors, 'primary-5'),
     ),
     disabled: (
       color: #fff,
@@ -175,28 +176,28 @@
   $zinc-colors: (
     base: (
       color: map-get($k-colors, 'font-1'),
-      border-color: map-get($k-colors, 'secondary-1'),
-      background-color: map-get($k-colors, 'secondary-1'),
+      border-color: map-get($k-colors, 'ternary-1'),
+      background-color: map-get($k-colors, 'ternary-1'),
     ),
     hover: (
       color: map-get($k-colors, 'font-1'),
-      border-color: map-get($k-colors, 'secondary-2'),
-      background-color: map-get($k-colors, 'secondary-2'),
+      border-color: map-get($k-colors, 'ternary-2'),
+      background-color: map-get($k-colors, 'ternary-2'),
     ),
     focus: (
       color: map-get($k-colors, 'font-1'),
-      border-color: map-get($k-colors, 'secondary-2'),
-      background-color: map-get($k-colors, 'secondary-2'),
+      border-color: map-get($k-colors, 'ternary-2'),
+      background-color: map-get($k-colors, 'ternary-2'),
     ),
     active: (
       color: map-get($k-colors, 'font-1'),
-      border-color: map-get($k-colors, 'secondary-3'),
-      background-color: map-get($k-colors, 'secondary-3'),
+      border-color: map-get($k-colors, 'ternary-3'),
+      background-color: map-get($k-colors, 'ternary-3'),
     ),
     is-selected: (
       color: map-get($k-colors, 'font-1'),
-      border-color: map-get($k-colors, 'secondary-3'),
-      background-color: map-get($k-colors, 'secondary-3'),
+      border-color: map-get($k-colors, 'ternary-3'),
+      background-color: map-get($k-colors, 'ternary-3'),
     ),
     disabled: (
       color: #fff,
@@ -251,52 +252,30 @@
 
   // Colors modifiers.
 
-  .k-Button--default {
-    @include k-buttonColorBase($default-colors);
+  .k-Button--hydrogen {
+    @include k-buttonColorBase($hydrogen-colors);
+    @include k-buttonSvg($hydrogen-colors);
   }
 
-  .k-Button--primary {
-    @include k-buttonColorBase($primary-colors);
+  .k-Button--helium {
+    @include k-buttonColorBase($helium-colors);
+    @include k-buttonSvg($helium-colors);
   }
 
-  .k-Button--secondary {
-    @include k-buttonColorBase($secondary-colors);
+  .k-Button--lithium {
+    @include k-buttonColorBase($lithium-colors);
+    @include k-buttonSvg($lithium-colors);
   }
 
-  .k-Button--secondaryOnWhite {
-    @include k-buttonColorBase($secondary-on-white-colors);
+  .k-Button--beryllium {
+    @include k-buttonColorBase($beryllium-colors);
+    @include k-buttonSvg($beryllium-colors);
   }
 
   // TODO: rename all buttons name following the same naming strategy.
   .k-Button--zinc {
     @include k-buttonColorBase($zinc-colors);
-  }
-
-  .k-Button__icon,
-  .k-Button__icon--tiny {
-    @include k-buttonSvg(
-      $default-colors,
-      'k-Button--default',
-      'k-Button__svg__stroke'
-    );
-
-    @include k-buttonSvg(
-      $primary-colors,
-      'k-Button--primary',
-      'k-Button__svg__stroke'
-    );
-
-    @include k-buttonSvg(
-      $secondary-colors,
-      'k-Button--secondary',
-      'k-Button__svg__stroke'
-    );
-
-    @include k-buttonSvg(
-      $secondary-on-white-colors,
-      'k-Button--secondaryOnWhite',
-      'k-Button__svg__stroke'
-    );
+    @include k-buttonSvg($zinc-colors);
   }
 
   // Size modifiers.
