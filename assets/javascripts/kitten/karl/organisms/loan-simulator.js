@@ -15,6 +15,19 @@ const KarlLoanSimulator = defaultProps(LoanSimulator, {
   amountOutOfBoundsError: `Veuillez renseigner un montant compris entre
                            200 et 10${nbsp}000${nbsp}€`,
 
+  commission: true,
+  commissionLabel: `Commission${nbsp}:`,
+  commissionRate: function(duration) {
+    if (duration <= 9)
+      return 0.03
+    else if (duration <= 18)
+      return 0.04
+    else if (duration <= 24)
+      return 0.05
+    else
+      return 0.06
+  },
+
   installmentLabel: 'Je rembourse',
   installmentName: 'installment',
 
