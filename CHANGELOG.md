@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [v2.0.0] - 2016-11-29
+
 Breaking changes:
 - Remove support for npm 2. You need to upgrade to npm 3 and reinstall all your
   node modules.
