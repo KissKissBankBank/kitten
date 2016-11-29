@@ -14,6 +14,11 @@ else
   echo "--------------------------------------------------"
   echo ""
   echo "| The dummy app client installation needs npm >= 3."
-  echo "| Make sure you have the right version of node.js and npm before running \
-the installation again."
+  echo "|"
+  echo "| Before running the installation again, make sure:"
+  echo "|"
+  echo "| - You have the right version of node.js and npm."
+  echo "| - To remove all your previous node modules with:"
+  echo ""
+  echo "  rm -fr node_modules client/node_modules"
 fi
