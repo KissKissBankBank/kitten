@@ -60,7 +60,7 @@ class TourPopover extends React.Component {
               className={ buttonClassName }
               disabled={ isDisabled }>
         { this.props.buttons.next.label }
-        <svg className="k-Button__icon--tiny"
+        <svg className="k-Button__icon"
              xmlns="http://www.w3.org/2000/svg"
              viewBox="0 0 10 10">
           <path d="M7.828,5L6.414,6.413L2.172,2.172l1.414-1.415L7.828,5z"/>
