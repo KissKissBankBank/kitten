@@ -1,0 +1,19 @@
+/// Active text utilities.
+///
+/// @group text
+///
+/// @example scss - Usage
+///
+///     @include k-utilities-active;
+///
+/// @example html
+///
+///     <p class="k-u-small">…</p>
+
+@mixin k-utilities-active {
+  .k-u-active__blue {
+    @include k-typographyFontSize(-2);
+    // set the good color
+    color: $blue;
+  }
+}

@@ -1,0 +1,19 @@
+/// Inactive text utilities.
+///
+/// @group text
+///
+/// @example scss - Usage
+///
+///     @include k-utilities-inactive;
+///
+/// @example html
+///
+///     <p class="k-u-small">…</p>
+
+@mixin k-utilities-inactive {
+  .k-u-inactive__grey {
+    @include k-typographyFontSize(-2);
+    // set the good color
+    color: grey;
+  }
+}

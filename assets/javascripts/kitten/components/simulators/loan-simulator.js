@@ -146,19 +146,18 @@ class LoanSimulator extends React.Component {
     }
 
     if (this.props.commission) {
-      let amount = 0
+      const amount = sliderIsActive && amountValid ?
+                   this.toCurrency(this.commissionAmount() * 100)
+                   : 0
 
-      if (sliderIsActive && amountValid)
-        amount = this.toCurrency(this.commissionAmount() * 100)
-      else
-        amount = '--'
+      const textClass = amount != 0 ? 'k-u-active__blue' : 'k-u-inactive__grey'
 
       withCommission =
         <div className="k-Label k-LoanSimulator__label">
           { this.props.commissionLabel }
           { ' ' }
-          <span className="" >
-            { amount }
+          <span className={ textClass }>
+            { amount != 0 ? amount : '--' }
             { ' ' }
             { this.props.currencySymbol }
           </span>
