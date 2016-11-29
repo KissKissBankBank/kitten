@@ -1,0 +1,82 @@
+/// Link box
+///
+/// @group box
+///
+/// @example scss - usage
+///   @include k-Box;
+///
+/// @example html
+/// <div class="k-Box"
+///      role="dialog"
+///      aria-hidden="true"
+///      aria-labelledby="dialogtitle">
+///   <div class="k-Box__container">
+///     <svg> … </svg>
+///   </div>
+///   <div class="k-Box__content">
+///     <p id="dialogtitle" class="k-Box__title"> … </p>
+///       <p class="k-Box__text"> … </p>
+///     <div class="k-Box__navigation">
+///       <button title="Suivant" class="k-Box__button
+///                                      k-ButtonIcon
+///                                      k-ButtonIcon--default
+///                                      k-ButtonIcon--tiny">
+///         <svg class="k-ButtonIcon__svg" … ></svg>
+///       </button>
+///     </div>
+///   </div>
+/// </div>
+
+@mixin k-Box {
+  $background-color: #fff;
+  $border-color: #eee;
+  $border-size: 1px;
+  $border-radius: k-px-to-rem(8px);
+  $margin-container: k-px-to-rem(14px) k-px-to-rem(20px);
+
+  .k-Box {
+    position: relative;
+
+    width: k-px-to-rem(304px);
+    box-sizing: border-box;
+
+    background-color: $background-color;
+    border-radius: $border-radius;
+    border: $border-size solid $border-color;
+  }
+
+  .k-Box__container {
+    min-height: k-px-to-rem(70px);
+    box-sizing: border-box;
+    margin: $margin-container;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .k-Box__content {
+    max-width: k-px-to-rem(204px);
+  }
+
+  .k-Box__title {
+    @include k-typographyFont('source-sans-semi-bold');
+    @include k-typographyFontSize(0);
+
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .k-Box__text {
+    @include k-typographyFont('source-sans-light');
+    @include k-typographyFontSize(-1);
+
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .k-Box__navigation {
+    display: flex;
+    align-items: center;
+    justify-content:center;
+  }
+
+}

@@ -1,0 +1,30 @@
+<%= example 'Link box' do %>
+  <div class="k-Box"
+       role="dialog"
+       aria-hidden="true"
+       aria-labelledby="dialogtitle">
+
+    <div class="k-Box__container">
+      <div class="k-Box__content">
+        <p id="dialogtitle" class="k-Box__title">Lorem ipsum dolor sit amet</p>
+        <p class="k-Box__text">Aenean leo ligula, porttitor eu, vitae eleifend
+        ac, enimiquam ante.</p>
+      </div>
+
+      <div class="k-Box__navigation">
+        <button tittle="Suivant" class="k-Box__button
+                                        k-ButtonIcon
+                                        k-ButtonIcon--default
+                                        k-ButtonIcon--tiny">
+          <svg class="k-ButtonIcon__svg"
+               xmlns="http://www.w3.org/2000/svg"
+               viewBox="0 0 10 10">
+            <path d="M7.828,5L6.414,6.413L2.172,2.172l1.414-1.415L7.828,5z"/>
+            <path d="M7.828,5L3.586,9.243L2.172,7.827l4.242-4.241L7.828,5z"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+<% end %>
