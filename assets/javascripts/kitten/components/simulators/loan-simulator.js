@@ -125,6 +125,48 @@ class LoanSimulator extends React.Component {
     return 1
   }
 
+  renderCommission() {
+    if (!this.props.commission)
+      return
+
+    const active = this.sliderIsActive()
+    const amount = active ?
+                 this.toCurrency(this.commissionAmount() * 100)
+                 : '--'
+
+    const amountToDisplay = ` ${ amount } `
+
+    return (
+      <div className="k-LoanSimulator__commission">
+        { this.props.commissionLabel }
+        <span className={ classNames({ 'k-u-text--active': active,
+                                       'k-u-text--inactive': !active }) }>
+          { amountToDisplay }
+          { this.props.currencySymbol }
+        </span>
+      </div>
+    )
+  }
+
+  sliderIsActive() {
+    return !this.amountError() &&
+           this.state.dragged &&
+           this.state.installmentAmount
+  }
+
+  renderButton() {
+    if (!this.props.actionLabel)
+     return
+
+    return (
+      <div className="k-LoanSimulator__actions">
+        <button className="k-Button k-Button--primary k-Button--big">
+          { this.props.actionLabel }
+        </button>
+      </div>
+    )
+  }
+
   render() {
     const { label } = this.props
     const { dragged, touched } = this.state
@@ -136,7 +178,6 @@ class LoanSimulator extends React.Component {
     const installmentMax = amountValid ? this.installmentMax() : 0
     const installmentAmount = amountValid ? this.state.installmentAmount : 0
     const installmentPercentage = amountValid ? this.state.installmentPercentage : 0
-    const sliderIsActive = amountValid && dragged && installmentAmount
 
     let errorClass, errorTag, tooltipClass, tooltipText, withCommission
 
@@ -145,29 +186,10 @@ class LoanSimulator extends React.Component {
       errorTag = <p className="k-LoanSimulator__amount__error">{ error }</p>
     }
 
-    if (this.props.commission) {
-      const amount = sliderIsActive && amountValid ?
-                   this.toCurrency(this.commissionAmount() * 100)
-                   : 0
-
-      const textClass = amount != 0 ? 'k-u-active__blue' : 'k-u-inactive__grey'
-
-      withCommission =
-        <div className="k-Label k-LoanSimulator__label">
-          { this.props.commissionLabel }
-          { ' ' }
-          <span className={ textClass }>
-            { amount != 0 ? amount : '--' }
-            { ' ' }
-            { this.props.currencySymbol }
-          </span>
-        </div>
-    }
-
-    if (sliderIsActive) {
+    if (this.sliderIsActive()) {
       const durationSymbol = duration === 1
-                           ? this.props.durationSymbol
-                           : this.props.durationSymbolPlural
+        ? this.props.durationSymbol
+        : this.props.durationSymbolPlural
 
       const installmentText = `
         ${this.toCurrency(installmentAmount * 100)}
@@ -192,11 +214,6 @@ class LoanSimulator extends React.Component {
       tooltipClass = 'is-inactive'
       tooltipText = this.props.sliderPlaceholder
     }
-
-    const durationSymbol = duration === 1
-                         ? this.props.durationSymbol
-                         : this.props.durationSymbolPlural
-
 
     return (
       <div className={ classNames('k-LoanSimulator', errorClass) }>
@@ -244,13 +261,9 @@ class LoanSimulator extends React.Component {
                   onChange={ this.handleInstallmentChange }
                   onAction={ this.handleInstallmentAction } />
 
-          { withCommission }
+          { this.renderCommission() }
         </div>
-        <div className="k-LoanSimulator__actions">
-          <button className="k-Button k-Button--primary k-Button--big">
-            { this.props.actionLabel }
-          </button>
-        </div>
+        { this.renderButton() }
       </div>
     )
   }
@@ -319,6 +332,7 @@ LoanSimulator.defaultProps = {
   amountPlaceholder: '',
   amountMin: 1,
   amountMax: 10000,
+
   initialAmount: null,
 
   amountEmptyError: 'Amount cannot be empty',
@@ -340,7 +354,7 @@ LoanSimulator.defaultProps = {
   installmentSymbol: '$/month',
   locale: 'en',
 
-  actionLabel: 'OK',
+  actionLabel: null,
 }
 
 export default LoanSimulator

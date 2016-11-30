@@ -8,12 +8,10 @@
 ///
 /// @example html
 ///
-///     <p class="k-u-small">…</p>
+///     <p class="k-u-text">…</p>
 
 @mixin k-utilities-inactive {
-  .k-u-inactive__grey {
-    @include k-typographyFontSize(-2);
-    // set the good color
-    color: grey;
+  .k-u-text--inactive {
+    color: map-get($k-colors, 'line-2');
   }
 }
