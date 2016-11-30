@@ -126,13 +126,13 @@ class LoanSimulator extends React.Component {
   }
 
   renderCommission() {
-    if (!this.props.commission)
+    if (!this.props.commissionLabel)
       return
 
     const active = this.sliderIsActive()
-    const amount = active ?
-                 this.toCurrency(this.commissionAmount() * 100)
-                 : '--'
+    const amount = active
+      ? this.toCurrency(this.commissionAmount() * 100)
+      : '--'
 
     const amountToDisplay = ` ${ amount } `
 
@@ -295,8 +295,7 @@ LoanSimulator.propTypes = {
   // Error text when the amount is over or under the min and max
   amountOutOfBoundsError: React.PropTypes.string,
 
-  // Display commission if necessary
-  commission: React.PropTypes.bool,
+  // Display commission if requested
   commissionLabel: React.PropTypes.string,
   commissionRate: React.PropTypes.func,
 
@@ -338,8 +337,7 @@ LoanSimulator.defaultProps = {
   amountEmptyError: 'Amount cannot be empty',
   amountOutOfBoundsError: 'Amount is either too big or too small',
 
-  commission: false,
-  commissionLabel: 'Commission:',
+  commissionLabel: null,
   commissionRate: function() { return 0 },
 
   installmentLabel: 'Reimbursing',
