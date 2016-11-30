@@ -50,7 +50,7 @@ class TourPopover extends React.Component {
       'k-Button--iconRight',
       {
         'k-Button--zinc': !isDisabled,
-        'k-Button--default': isDisabled,
+        'k-Button--hydrogen': isDisabled,
       }
     )
 
@@ -79,7 +79,7 @@ class TourPopover extends React.Component {
       'k-Button--icon',
       {
         'k-Button--zinc': !isDisabled,
-        'k-Button--default': isDisabled,
+        'k-Button--hydrogen': isDisabled,
       }
     )
 
@@ -105,7 +105,7 @@ class TourPopover extends React.Component {
               aria-label={ this.props.buttons.close.label }
               onClick={ this.props.onCloseClick }
               className="k-ButtonIcon
-                         k-ButtonIcon--default
+                         k-ButtonIcon--hydrogen
                          k-ButtonIcon--tiny">
         <svg className="k-ButtonIcon__svg k-ButtonIcon__svgRotate"
              xmlns="http://www.w3.org/2000/svg"
