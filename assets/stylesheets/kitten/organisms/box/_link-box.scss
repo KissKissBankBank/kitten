@@ -3,34 +3,34 @@
 /// @group box
 ///
 /// @example scss - usage
-///   @include k-Box((
+///   @include k-LinkBox((
 ///     background-color: #fff,
 ///     border-color: #eee,
 ///     background-color-active: #eee,
 ///   ));
 ///
 /// @example html
-/// <a class="k-Box" href="#">
-///   <div class="k-Box__element">
-///     <div class="k-Box__container">
-///       <div class="k-Box__content">
-///         <p class="k-Box__title"></p>
-///         <p class="k-Box__text"></p>
-///       </div>
-///       <div class="k-Box__navigation">
-///         <button tittle="Suivant" class="k-Box__button
-///                                         k-ButtonIcon
-///                                         k-ButtonIcon--default
-///                                         k-ButtonIcon--tiny
-///                                         k-ButtonIcon--withoutHover">
-///           <svg>…</svg>
-///         </button>
-///       </div>
-///     </div>
-///   </div>
-/// </a>
+///  <a class="k-LinkBox" href="#">
+///    <div class="k-LinkBox__element">
+///      <div class="k-LinkBox__container">
+///        <div class="k-LinkBox__content">
+///          <p class="k-LinkBox__title"></p>
+///          <p class="k-LinkBox__text"></p>
+///        </div>
+///        <div class="k-LinkBox__navigation">
+///          <span title="Suivant" class="k-LinkBox__button
+///                                          k-ButtonIcon
+///                                          k-ButtonIcon--hydrogen
+///                                          k-ButtonIcon--tiny
+///                                          k-ButtonIcon--withoutHover">
+///            <svg>…</svg>
+///          </span>
+///        </div>
+///      </div>
+///    </div>
+///  </a>
 
-@mixin k-Box($link-box) {
+@mixin k-LinkBox($link-box) {
   @include k-with-module("k-Box: $link-box") {
 
     $background-color: k-color-definition(
@@ -43,18 +43,22 @@
     $color: map-get($k-colors, 'font-1');
     $border-size: 1px;
     $border-radius: k-px-to-rem(8px);
-    $margin-container: k-px-to-rem(14px) k-px-to-rem(20px);
+    $padding-container: k-px-to-rem(15px) k-px-to-rem(20px);
 
-    a:link {
+    .k-LinkBox:link {
       text-decoration: none;
     }
 
-    .k-Box__element {
-      position: relative;
+    .k-LinkBox__container {
+      display: flex;
+      justify-content: space-between;
 
-      width: k-px-to-rem(304px);
+      width: k-px-to-rem(305px);
+      min-height: k-px-to-rem(70px);
       box-sizing: border-box;
+      padding: $padding-container;
 
+      color: $color;
       background-color: $background-color;
       border-radius: $border-radius;
       border: $border-size solid $border-color;
@@ -64,42 +68,35 @@
       }
     }
 
-    .k-Box__container {
-      min-height: k-px-to-rem(70px);
-      box-sizing: border-box;
-      margin: $margin-container;
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .k-Box__content {
-      max-width: k-px-to-rem(204px);
-
-      p {
-        color: $color;
-      }
-    }
-
-    .k-Box__title {
+    .k-LinkBox__title {
       @include k-typographyFont('source-sans-semi-bold');
       @include k-typographyFontSize(0);
 
-      margin-top: 0;
-      margin-bottom: 0;
+      margin: 0;
     }
 
-    .k-Box__text {
+    .k-LinkBox__text {
       @include k-typographyFont('source-sans-light');
       @include k-typographyFontSize(-1);
 
-      margin-top: 0;
-      margin-bottom: 0;
+      margin: 0;
     }
 
-    .k-Box__navigation {
+    .k-LinkBox__navigation {
       display: flex;
       align-items: center;
-      justify-content:center;
+      justify-content: center;
+    }
+
+    .k-LinkBox__navigation--animation {
+      position: relative;
+      left: 0;
+      transition: left .2s;
+
+      .k-LinkBox:focus &,
+      .k-LinkBox:hover & {
+        left: 5px;
+      }
     }
   }
 }

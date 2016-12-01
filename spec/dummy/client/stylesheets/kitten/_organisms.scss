@@ -24,9 +24,9 @@
 
 @include k-Popover;
 
-// Box
+// LinkBox
 
-@include k-Box((
+@include k-LinkBox((
   colors: (
     background: map-get($k-colors, 'background-1'),
     border: map-get($k-colors, 'line-1'),
