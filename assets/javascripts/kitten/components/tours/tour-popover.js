@@ -49,7 +49,7 @@ class TourPopover extends React.Component {
       'k-Button--icon',
       'k-Button--iconRight',
       {
-        'k-Button--zinc': !isDisabled,
+        'k-Button--boron': !isDisabled,
         'k-Button--hydrogen': isDisabled,
       }
     )
@@ -78,7 +78,7 @@ class TourPopover extends React.Component {
       'k-Button--tiny',
       'k-Button--icon',
       {
-        'k-Button--zinc': !isDisabled,
+        'k-Button--boron': !isDisabled,
         'k-Button--hydrogen': isDisabled,
       }
     )

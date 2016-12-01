@@ -10,7 +10,7 @@
 /// - `.k-ButtonIcon--helium`
 /// - `.k-ButtonIcon--lithium`
 /// - `.k-ButtonIcon--beryllium`
-/// - `.k-ButtonIcon--zinc`
+/// - `.k-ButtonIcon--boron`
 /// - `.k-ButtonIcon--facebook`
 /// - `.k-ButtonIcon--twitter`
 /// - `.k-ButtonIcon--linkedin`
@@ -175,7 +175,7 @@
     ),
   );
 
-  $zinc-colors: (
+  $boron-colors: (
     base: (
       color: map-get($k-colors, 'font-1'),
       border-color: map-get($k-colors, 'ternary-1'),
@@ -367,9 +367,9 @@
     @include k-buttonSvg($beryllium-colors);
   }
 
-  .k-ButtonIcon--zinc {
-    @include k-buttonColorBase($zinc-colors);
-    @include k-buttonSvg($zinc-colors);
+  .k-ButtonIcon--boron {
+    @include k-buttonColorBase($boron-colors);
+    @include k-buttonSvg($boron-colors);
   }
 
   .k-ButtonIcon--facebook {

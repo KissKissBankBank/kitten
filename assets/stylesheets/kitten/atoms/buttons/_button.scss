@@ -14,7 +14,7 @@
 /// - `.k-Button--helium`
 /// - `.k-Button--lithium`
 /// - `.k-Button--beryllium`
-/// - `.k-Button--zinc`
+/// - `.k-Button--boron`
 ///
 /// Available size modifiers:
 /// - `.k-Button--tiny`
@@ -173,7 +173,7 @@
     ),
   );
 
-  $zinc-colors: (
+  $boron-colors: (
     base: (
       color: map-get($k-colors, 'font-1'),
       border-color: map-get($k-colors, 'ternary-1'),
