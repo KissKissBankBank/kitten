@@ -9,7 +9,7 @@
 /// @example html
 ///
 ///   <div class="k-RadioButton">
-///     <input id="input" type="radio" class="k-RadioButton__XX" />
+///     <input id="input" type="radio" class="k-RadioButton__input" />
 ///     <label for="input" class="k-RadioButton__label">I agree</label>
 ///   </div>
 
@@ -29,6 +29,8 @@
 
   $radio-button-size: k-px-to-rem(16px);
   $border-radius: 50%;
+
+  $transition-duration: .2s;
 
   .k-RadioButton {
     @include k-typographyFont($font);
@@ -60,7 +62,8 @@
       border: 1px solid $border-color;
       border-radius: $border-radius;
 
-      transition: border-color .2s, background-color .2s;
+      transition: border-color $transition-duration,
+                  background-color $transition-duration;
     }
 
     &:hover:before,
