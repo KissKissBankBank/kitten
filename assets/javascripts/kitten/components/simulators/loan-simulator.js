@@ -179,7 +179,7 @@ class LoanSimulator extends React.Component {
     const installmentAmount = amountValid ? this.state.installmentAmount : 0
     const installmentPercentage = amountValid ? this.state.installmentPercentage : 0
 
-    let errorClass, errorTag, tooltipClass, tooltipText, withCommission
+    let errorClass, errorTag, tooltipClass, tooltipText
 
     if (error) {
       errorClass = "is-error"
