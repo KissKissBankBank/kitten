@@ -273,9 +273,9 @@
   }
 
   // TODO: rename all buttons name following the same naming strategy.
-  .k-Button--zinc {
-    @include k-buttonColorBase($zinc-colors);
-    @include k-buttonSvg($zinc-colors);
+  .k-Button--boron {
+    @include k-buttonColorBase($boron-colors);
+    @include k-buttonSvg($boron-colors);
   }
 
   // Size modifiers.
