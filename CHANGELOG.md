@@ -3,6 +3,8 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
+Breaking changes:
+- Change class name all buttons.
 
 ## [v2.0.0] - 2016-11-29
 
