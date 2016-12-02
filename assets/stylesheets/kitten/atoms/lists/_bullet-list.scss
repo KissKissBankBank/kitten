@@ -1,0 +1,29 @@
+/// Bullet list.
+///
+/// @group lists
+///
+/// @example scss - Usage
+///
+///     @include k-BulletList;
+///
+/// @example html
+///
+///     <p class="k-BulletList">…</p>
+
+@mixin k-BulletList {
+  // Font
+  $font: 'source-sans-semi-bold';
+  $font-size: 0;
+  $line-height: 2;
+
+  .k-BulletList {
+    @include k-typographyFont($font);
+    @include k-typographyFontSize($font-size, $line-height);
+
+    font-weight: 100;
+  }
+
+  .k-BulletList--RadioButton {
+    margin-left: k-px-to-rem(18px);
+  }
+}
