@@ -8,22 +8,29 @@
 ///
 /// @example html
 ///
-///     <p class="k-BulletList">…</p>
+///     <ul class="k-BulletList k-BulletList--RadioButton">
+///       <li>..</li>
+///     </ul>
 
 @mixin k-BulletList {
+  // Possible bullet positions
+  $margin-bullet-radio-button: 18px;
+
   // Font
   $font: 'source-sans-semi-bold';
   $font-size: 0;
+  $font-weight: 100;
   $line-height: 2;
+
 
   .k-BulletList {
     @include k-typographyFont($font);
     @include k-typographyFontSize($font-size, $line-height);
 
-    font-weight: 100;
+    font-weight: $font-weight;
   }
 
   .k-BulletList--RadioButton {
-    margin-left: k-px-to-rem(18px);
+    margin-left: k-px-to-rem($margin-bullet-radio-button);
   }
 }
