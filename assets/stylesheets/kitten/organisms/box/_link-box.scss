@@ -10,25 +10,25 @@
 ///   ));
 ///
 /// @example html
-///  <a class="k-LinkBox" href="#">
-///    <div class="k-LinkBox__element">
-///      <div class="k-LinkBox__container">
-///        <div class="k-LinkBox__content">
-///          <p class="k-LinkBox__title"></p>
-///          <p class="k-LinkBox__text"></p>
-///        </div>
-///        <div class="k-LinkBox__navigation">
-///          <span title="Suivant" class="k-LinkBox__button
-///                                          k-ButtonIcon
-///                                          k-ButtonIcon--hydrogen
-///                                          k-ButtonIcon--tiny
-///                                          k-ButtonIcon--withoutHover">
-///            <svg>…</svg>
-///          </span>
-///        </div>
-///      </div>
-///    </div>
-///  </a>
+///   <a class="k-LinkBox" href="#">
+///     <div class="k-LinkBox__element">
+///       <div class="k-LinkBox__container">
+///         <div class="k-LinkBox__content">
+///           <p class="k-LinkBox__title"></p>
+///           <p class="k-LinkBox__text"></p>
+///         </div>
+///         <div class="k-LinkBox__navigation">
+///           <span title="Suivant" class="k-LinkBox__button
+///                                        k-ButtonIcon
+///                                        k-ButtonIcon--hydrogen
+///                                        k-ButtonIcon--tiny
+///                                        k-ButtonIcon--withoutHover">
+///             <svg>…</svg>
+///           </span>
+///         </div>
+///       </div>
+///     </div>
+///   </a>
 
 @mixin k-LinkBox($link-box) {
   @include k-with-module("k-Box: $link-box") {
@@ -88,7 +88,7 @@
       justify-content: center;
     }
 
-    .k-LinkBox__navigation--animation {
+    .k-LinkBox__navigation--withAnimation {
       position: relative;
       left: 0;
       transition: left .2s;
