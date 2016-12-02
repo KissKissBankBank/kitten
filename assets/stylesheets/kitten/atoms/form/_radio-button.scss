@@ -28,6 +28,7 @@
   $border-color-hover: map-get($k-colors, 'primary-1');
 
   $radio-button-size: k-px-to-rem(16px);
+  $space-button-label: k-px-to-rem(10px);
   $border-radius: 50%;
 
   $transition-duration: .2s;
@@ -35,10 +36,6 @@
   .k-RadioButton {
     @include k-typographyFont($font);
     @include k-typographyFontSize($font-size, $line-height);
-
-    display: flex;
-    align-items: center;
-    align-self: flex-start;
 
     margin: k-px-to-rem(10px);
   }
@@ -55,7 +52,7 @@
       display: inline-block;
       width: $radio-button-size;
       height: $radio-button-size;
-      margin-right: k-px-to-rem(10px);
+      margin-right: $space-button-label;
 
       content: '';
       background-color: $background-color;
@@ -100,6 +97,12 @@
   .k-RadioButton__label--large {
     @include k-typographyFontSize($font-size-large);
     font-weight: 300;
+  }
+
+  .k-RadioButton__labelContents {
+    display: block;
+    margin-top: k-px-to-rem(10px);
+    margin-left: $radio-button-size + $space-button-label
   }
 
   .k-RadioButton__input {

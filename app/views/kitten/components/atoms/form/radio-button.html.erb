@@ -71,4 +71,21 @@
     </label>
   </div>
 
+  <%= example 'Radio button containers' do %>
+    <div class="k-RadioButton">
+      <input id="karl-radio-button-with-content"
+             type="radio"
+             name="karl-radio-button-with-content"
+             class="k-RadioButton__input" />
+      <label for="karl-radio-button-with-content"
+             class="k-RadioButton__label k-RadioButton__label--large">
+        Large
+      </label>
+      <div class="k-RadioButton__labelContents">
+        <p> The content is aligned with radio button label above !</p>
+      </div>
+    </div>
+
+  <% end %>
+
 <% end %>
