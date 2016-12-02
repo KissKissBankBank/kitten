@@ -176,28 +176,28 @@
   $boron-colors: (
     base: (
       color: map-get($k-colors, 'font-1'),
-      border-color: map-get($k-colors, 'ternary-1'),
-      background-color: map-get($k-colors, 'ternary-1'),
+      border-color: map-get($k-colors, 'tertiary-1'),
+      background-color: map-get($k-colors, 'tertiary-1'),
     ),
     hover: (
       color: map-get($k-colors, 'font-1'),
-      border-color: map-get($k-colors, 'ternary-2'),
-      background-color: map-get($k-colors, 'ternary-2'),
+      border-color: map-get($k-colors, 'tertiary-2'),
+      background-color: map-get($k-colors, 'tertiary-2'),
     ),
     focus: (
       color: map-get($k-colors, 'font-1'),
-      border-color: map-get($k-colors, 'ternary-2'),
-      background-color: map-get($k-colors, 'ternary-2'),
+      border-color: map-get($k-colors, 'tertiary-2'),
+      background-color: map-get($k-colors, 'tertiary-2'),
     ),
     active: (
       color: map-get($k-colors, 'font-1'),
-      border-color: map-get($k-colors, 'ternary-3'),
-      background-color: map-get($k-colors, 'ternary-3'),
+      border-color: map-get($k-colors, 'tertiary-3'),
+      background-color: map-get($k-colors, 'tertiary-3'),
     ),
     is-selected: (
       color: map-get($k-colors, 'font-1'),
-      border-color: map-get($k-colors, 'ternary-3'),
-      background-color: map-get($k-colors, 'ternary-3'),
+      border-color: map-get($k-colors, 'tertiary-3'),
+      background-color: map-get($k-colors, 'tertiary-3'),
     ),
     disabled: (
       color: #fff,
