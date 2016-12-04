@@ -1,5 +1,5 @@
 {
-  "name": "kitten",
+  "name": "kitten-components",
   "version": "2.0.0",
   "description": "Front-end components library",
   "main": "src/index.js",
@@ -10,10 +10,11 @@
   "keywords": [
     "sass",
     "scss",
+    "react",
     "components",
     "kitten"
   ],
-  "author": "KissKissBankBank",
+  "author": "KissKissBankBank & Co",
   "homepage": "https://github.com/KissKissBankBank/kitten#readme",
   "devDependencies": {
     "sassdoc": "^2.1.20",
