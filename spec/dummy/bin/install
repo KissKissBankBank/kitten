@@ -5,6 +5,7 @@ set -e
 NPM_VERSION=$(npm --version)
 
 if [[ $NPM_VERSION =~ ^3.[.0-9]* ]]; then
+  rm -rf client/node_modules
   bundle
   npm i
 else
