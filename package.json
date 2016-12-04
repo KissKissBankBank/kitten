@@ -42,10 +42,10 @@
     "react-dom": "^15.3.1",
     "react-on-rails": "^6.1.0",
     "react-select": "^1.0.0-rc.1",
-    "sassy-maps": "^0.4.2",
     "susy": "^2.2.12"
   },
   "scripts": {
+    "postinstall": "cd vendor/assets/stylesheets/kitten/sassy-maps && npm install",
     "sassdoc": "sassdoc -d public/sassdoc assets/stylesheets",
     "stylelint": "stylelint --syntax scss 'assets/stylesheets/**/*.scss'"
   }
