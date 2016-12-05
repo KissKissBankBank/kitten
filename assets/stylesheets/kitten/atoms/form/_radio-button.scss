@@ -11,6 +11,9 @@
 ///   <div class="k-RadioButton">
 ///     <input id="input" type="radio" class="k-RadioButton__input" />
 ///     <label for="input" class="k-RadioButton__label">I agree</label>
+///     <div class="k-RadioButton__labelContents">
+///       <p>This is the content !</p>
+///     </div>
 ///   </div>
 
 @mixin k-RadioButton {
