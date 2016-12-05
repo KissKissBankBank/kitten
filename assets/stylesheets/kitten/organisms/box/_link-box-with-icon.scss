@@ -1,0 +1,97 @@
+/// Link box with icon
+///
+/// @group box
+///
+
+@mixin k-LinkBoxWithIcon {
+
+// Base
+  $background-color: map-get($k-colors, 'background-1');
+  $border-color: map-get($k-colors, 'line-1');
+  $color: map-get($k-colors, 'font-1');
+
+  $background-color-image: map-get($k-colors, 'primary-4');
+
+// Active
+  $background-color-active: map-get($k-colors, 'line-1');
+  $border-color-active: map-get($k-colors, 'line-1');
+
+  $border-size: 1px;
+  $border-radius: k-px-to-rem(8px);
+  $padding-container: k-px-to-rem(15px) k-px-to-rem(20px);
+
+  .k-LinkBoxWithIcon:link {
+    text-decoration: none;
+  }
+
+  .k-LinkBoxWithIcon__container {
+    display: flex;
+    justify-content: space-between;
+
+    width: k-px-to-rem(395px);
+    min-height: k-px-to-rem(70px);
+    box-sizing: border-box;
+
+    color: $color;
+    background-color: $background-color;
+    border-radius: $border-radius;
+    border: $border-size solid $border-color;
+
+    &:active {
+      background-color: $background-color-active;
+    }
+  }
+
+  .k-LinkBoxWithIcon__image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: k-px-to-rem(90px);
+    background-color: $background-color-image;
+    border-top-left-radius: $border-radius;
+    border-bottom-left-radius: $border-radius;
+  }
+
+
+  .k-LinkBoxWithIcon__svg {
+    width: k-px-to-rem(38px);
+  }
+
+  .k-LinkBoxWithIcon__content {
+    display: flex;
+    width: k-px-to-rem(305px);
+
+    padding: $padding-container;
+  }
+
+  .k-LinkBoxWithIcon__title {
+    @include k-typographyFont('source-sans-semi-bold');
+    @include k-typographyFontSize(0);
+
+    margin: 0;
+  }
+
+  .k-LinkBoxWithIcon__text {
+    @include k-typographyFont('source-sans-light');
+    @include k-typographyFontSize(-1);
+
+    margin: 0;
+  }
+
+  .k-LinkBoxWithIcon__navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .k-LinkBoxWithIcon__navigation--withAnimation {
+    position: relative;
+    left: 0;
+    transition: left .2s;
+
+    .k-LinkBoxWithIcon:focus &,
+    .k-LinkBoxWithIcon:hover & {
+      left: 5px;
+    }
+  }
+}

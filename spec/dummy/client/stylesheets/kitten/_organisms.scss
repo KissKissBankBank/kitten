@@ -33,3 +33,7 @@
     background-active: map-get($k-colors, 'line-1'),
   )
 ));
+
+// LinkBoxWithIcon
+
+@include k-LinkBoxWithIcon;

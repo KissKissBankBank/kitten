@@ -1,0 +1,36 @@
+<%= example 'Link box with icon' do %>
+  <a class="k-LinkBoxWithIcon">
+    <div class="k-LinkBoxWithIcon__container">
+      <div class="k-LinkBoxWithIcon__image">
+        <%= inline_svg "icons/icon-link-box.svg",
+                       class: "k-LinkBoxWithIcon__svg" %>
+      </div>
+
+      <div class="k-LinkBoxWithIcon__content">
+        <div class="k-LinkBoxWithIcon__paragraph">
+          <p class="k-LinkBoxWithIcon__title">Lorem ipsum dolor sit amet</p>
+          <p class="k-LinkBoxWithIcon__text">Aenean leo ligula, porttitor eu, vitae eleifend
+          ac, enimiquam ante.</p>
+        </div>
+
+        <div class="k-LinkBoxWithIcon__navigation
+                    k-LinkBoxWithIcon__navigation--withAnimation">
+          <span title="Suivant" class="k-LinkBoxWithIcon__button
+                                       k-ButtonIcon
+                                       k-ButtonIcon--hydrogen
+                                       k-ButtonIcon--tiny
+                                       k-ButtonIcon--withoutHover
+                                       k-ButtonIcon--verticalArrow">
+            <svg class="k-ButtonIcon__svg"
+                 xmlns="http://www.w3.org/2000/svg"
+                 viewBox="0 0 10 10">
+              <path d="M7.828,5L6.414,6.413L2.172,2.172l1.414-1.415L7.828,5z"/>
+              <path d="M7.828,5L3.586,9.243L2.172,7.827l4.242-4.241L7.828,5z"/>
+            </svg>
+          </span>
+        </div>
+      </div>
+
+    </div>
+  </a>
+<% end %>
