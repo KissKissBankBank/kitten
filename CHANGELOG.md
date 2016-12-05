@@ -13,6 +13,9 @@ Breaking changes:
 Features:
 - Add `k-RadioButton` component.
 
+Features:
+- Add `k-BulletList` component.
+
 ## [v2.0.0] - 2016-11-29
 
 Breaking changes:
