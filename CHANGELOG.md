@@ -10,6 +10,9 @@ Breaking changes:
 - Rename class `k-Button--secondaryOnWhite` to `k-Button--beryllium`.
 - Rename class `k-Button--zinc` to `k-Button--boron`.
 
+Features:
+- Add `k-RadioButton` component.
+
 ## [v2.0.0] - 2016-11-29
 
 Breaking changes:
