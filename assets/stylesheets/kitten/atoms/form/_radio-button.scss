@@ -46,6 +46,8 @@
     align-self: flex-start;
 
     cursor: pointer;
+    transition: color $transition-duration;
+
 
     &:before {
       box-sizing: border-box;
@@ -70,7 +72,6 @@
 
     &:hover {
       color: $border-color-hover;
-      transition: color $transition-duration;
     }
 
     .k-RadioButton__input:checked:focus + &:before {
