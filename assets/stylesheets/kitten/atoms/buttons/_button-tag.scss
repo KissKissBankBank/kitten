@@ -6,7 +6,7 @@
 /// It is computed automatically with these 2 values.
 ///
 /// Available color modifiers:
-/// - `.k-ButtonIcon--default`
+/// - `.k-ButtonIcon--hydrogen`
 ///
 /// @group buttons
 ///
@@ -21,7 +21,7 @@
   $button-tag-line-height: k-px-to-rem(40px - ($border-size * 2));
 
   // Colors.
-  $default-colors: (
+  $hydrogen-colors: (
     base: (
       color: map-get($k-colors, 'font-1'),
       border-color: map-get($k-colors, 'line-2'),
@@ -73,7 +73,7 @@
     min-height: $button-tag-line-height;
   }
 
-  .k-ButtonTag--default {
-    @include k-buttonColorBase($default-colors);
+  .k-ButtonTag--hydrogen {
+    @include k-buttonColorBase($hydrogen-colors);
   }
 }
