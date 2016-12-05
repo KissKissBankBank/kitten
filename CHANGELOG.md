@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+Features:
+- Add commission displaying to class `LoanSimulator`.
+
 ## [v2.0.0] - 2016-11-29
 
 Breaking changes:
