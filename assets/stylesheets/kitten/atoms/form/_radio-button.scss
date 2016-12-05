@@ -15,9 +15,9 @@
 
 @mixin k-RadioButton {
   // Font
-  $font: 'source-sans-semi-bold';
-  $font-size: -1;
-  $font-size-large: 3;
+  $font: 'source-sans-light';
+  $font-step: -1;
+  $font-step-large: 3;
   $line-height: 1;
 
   // Colors
@@ -35,9 +35,9 @@
 
   .k-RadioButton {
     @include k-typographyFont($font);
-    @include k-typographyFontSize($font-size, $line-height);
+    @include k-typographyFontSize($font-step, $line-height);
 
-    margin: k-px-to-rem(10px);
+    margin: k-px-to-rem(10px) 0;
   }
 
   .k-RadioButton__label {
@@ -70,6 +70,7 @@
 
     &:hover {
       color: $border-color-hover;
+      transition: color $transition-duration;
     }
 
     .k-RadioButton__input:checked:focus + &:before {
@@ -95,14 +96,13 @@
   }
 
   .k-RadioButton__label--large {
-    @include k-typographyFontSize($font-size-large);
-    font-weight: 300;
+    @include k-typographyFontSize($font-step-large);
   }
 
   .k-RadioButton__labelContents {
     display: block;
     margin-top: k-px-to-rem(10px);
-    margin-left: $radio-button-size + $space-button-label
+    margin-left: $radio-button-size + $space-button-label;
   }
 
   .k-RadioButton__input {
