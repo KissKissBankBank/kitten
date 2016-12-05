@@ -1,0 +1,58 @@
+/// Bullet list.
+///
+/// @group lists
+///
+/// @example scss - usage
+///
+///     @include k-BulletList;
+///
+/// @example html
+///
+///     <ul class="k-BulletList">
+///       <li class="k-BulletList__item">...</li>
+///     </ul>
+
+@mixin k-BulletList {
+  // Font
+  $font: 'source-sans-light';
+  $font-step: 0;
+  $line-height: 1.5;
+
+  // Bullet properties
+  $bullet-color: map-get($k-colors, 'font-1');
+  $bullet-size: 4px;
+  $border-radius: 50%;
+
+  // Text alignment
+  $space-bullet-text: 10px;
+  $space-bullet-indent: $space-bullet-text + $bullet-size;
+
+  .k-BulletList {
+    @include k-typographyFont($font);
+    @include k-typographyFontSize($font-step, $line-height);
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+  }
+
+  .k-BulletList__item {
+    margin: k-px-to-rem(5px) k-px-to-rem($space-bullet-indent);
+    display: block;
+
+    &:before {
+      margin-left: -(k-px-to-rem($space-bullet-indent));
+      margin-right: k-px-to-rem($space-bullet-text);
+
+      box-sizing: border-box;
+      border-radius: $border-radius;
+      width: k-px-to-rem($bullet-size);
+      height: k-px-to-rem($bullet-size);
+      display: inline-block;
+
+      content: '';
+      background-color: $bullet-color;
+    }
+  }
+}
