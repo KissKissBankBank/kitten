@@ -50,7 +50,7 @@ const KarlPlatformSwitch = defaultProps(Dropdown, {
   positionedWithBorder: false,
 
   buttonId: 'k-PlatformSwitch',
-  buttonClassName: 'k-ButtonIcon k-ButtonIcon--default k-ButtonIcon--dropdown',
+  buttonClassName: 'k-ButtonIcon k-ButtonIcon--hydrogen k-ButtonIcon--dropdown',
   buttonContentOnExpanded: karlPlatformSwitchButtonContent,
   buttonContentOnCollapsed: karlPlatformSwitchButtonContent,
 

@@ -3,6 +3,12 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
+Breaking changes:
+- Rename class `k-Button--default` to `k-Button--hydrogen`.
+- Rename class `k-Button--primary` to `k-Button--helium`.
+- Rename class `k-Button--secondary` to `k-Button--lithium`.
+- Rename class `k-Button--secondaryOnWhite` to `k-Button--beryllium`.
+- Rename class `k-Button--zinc` to `k-Button--boron`.
 
 Features:
 - Add component `k-LinkBox`.

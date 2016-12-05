@@ -38,8 +38,7 @@
 ///    }
 ///    …
 
-@mixin k-buttonSvg($colors, $parent, $stroke_class) {
-
+@mixin k-buttonSvg($colors) {
   $base-color: k-color-definition(
     k-map-fetch($colors, ('base', 'color')));
   $hover-color: k-color-definition(
@@ -53,53 +52,50 @@
   $is-selected-color: k-color-definition(
     k-map-fetch($colors, ('is-selected', 'color')));
 
-  .#{$parent} & {
+  .k-Button__icon,
+  .k-ButtonIcon__svg {
     fill: $base-color;
-  }
-
-  .#{$parent}:hover & {
-    fill: $hover-color;
-  }
-
-  .#{$parent}:focus & {
-    fill: $focus-color;
-  }
-
-  .#{$parent}:active & {
-    fill: $active-color;
-  }
-
-  .#{$parent}:disabled & {
-    fill: $disabled-color;
-  }
-
-  .#{$parent}.is-selected & {
-    fill: $is-selected-color;
-  }
-
-  .#{$stroke_class} {
-
-    .#{$parent} & {
+    .k-Button__svg__stroke {
       stroke: $base-color;
     }
+  }
 
-    .#{$parent}:hover & {
+  &:hover .k-Button__icon,
+  &:hover .k-ButtonIcon__svg, {
+    fill: $hover-color;
+    .k-Button__svg__stroke {
       stroke: $hover-color;
     }
+  }
 
-    .#{$parent}:focus & {
+  &:focus .k-Button__icon,
+  &:focus .k-ButtonIcon__svg {
+    fill: $focus-color;
+    .k-Button__svg__stroke {
       stroke: $focus-color;
     }
+  }
 
-    .#{$parent}:active & {
+  &:active .k-Button__icon,
+  &:active .k-ButtonIcon__svg {
+    fill: $active-color;
+    .k-Button__svg__stroke {
       stroke: $active-color;
     }
+  }
 
-    .#{$parent}:disabled & {
+  &:disabled .k-Button__icon,
+  &:disabled .k-ButtonIcon__svg {
+    fill: $disabled-color;
+    .k-Button__svg__stroke {
       stroke: $disabled-color;
     }
+  }
 
-    .#{$parent}.is-selected & {
+  &.is-selected .k-Button__icon,
+  &.is-selected .k-ButtonIcon__svg {
+    fill: $is-selected-color;
+    .k-Button__svg__stroke {
       stroke: $is-selected-color;
     }
   }
