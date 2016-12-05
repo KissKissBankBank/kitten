@@ -3,8 +3,9 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
+
 Features:
-- Add class k-RadioButton for radio button item with label and content .
+- Add `k-RadioButton` component.
 
 ## [v2.0.0] - 2016-11-29
 
