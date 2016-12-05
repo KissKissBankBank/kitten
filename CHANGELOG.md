@@ -4,7 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 Breaking changes:
-- `k-Button--primary` to `k-Button--hydrogen`.
+- `k-Button--default` to `k-Button--hydrogen`.
+- `k-Button--primary` to `k-Button--helium`.
+- `k-Button--secondary` to `k-Button--lithium`.
+- `k-Button--secondaryOnWhite` to `k-Button--beryllium`.
+- New composant `k-Button--boron
 
 ## [v2.0.0] - 2016-11-29
 
