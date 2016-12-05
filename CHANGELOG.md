@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 Breaking changes:
-- Change class name all buttons.
+- `k-Button--primary` to `k-Button--hydrogen`.
 
 ## [v2.0.0] - 2016-11-29
 
