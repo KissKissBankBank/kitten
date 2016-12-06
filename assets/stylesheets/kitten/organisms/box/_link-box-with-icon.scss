@@ -2,6 +2,41 @@
 ///
 /// @group box
 ///
+/// @example scss - usage
+///   @include k-LinkBoxWithIcon((
+///     background-color: #fff,
+///     border-color: #eee,
+///     background-color-active: #eee,
+///
+///     background-color-icon: #cadbfd,
+///   ));
+
+/// @example html
+///   <a class="k-LinkBoxWithIcon">
+///     <div class="k-LinkBoxWithIcon__container">
+///       <div class="k-LinkBoxWithIcon__image">…</div>
+///
+///       <div class="k-LinkBoxWithIcon__content">
+///         <div class="k-LinkBoxWithIcon__paragraph">
+///           <p class="k-LinkBoxWithIcon__title">…</p>
+///           <p class="k-LinkBoxWithIcon__text">…</p>
+///         </div>
+///
+///         <div class="k-LinkBoxWithIcon__navigation
+///                     k-LinkBoxWithIcon__navigation--withAnimation">
+///           <span title="Suivant" class="k-LinkBoxWithIcon__button
+///                                        k-ButtonIcon
+///                                        k-ButtonIcon--hydrogen
+///                                        k-ButtonIcon--tiny
+///                                        k-ButtonIcon--withoutHover
+///                                        k-ButtonIcon--verticalArrow">
+///             <svg class="k-ButtonIcon__svg">…</svg>
+///           </span>
+///         </div>
+///       </div>
+///
+///     </div>
+///   </a>
 
 @mixin k-LinkBoxWithIcon {
 
@@ -10,7 +45,7 @@
   $border-color: map-get($k-colors, 'line-1');
   $color: map-get($k-colors, 'font-1');
 
-  $background-color-image: map-get($k-colors, 'primary-4');
+  $background-color-icon: map-get($k-colors, 'primary-4');
 
 // Active
   $background-color-active: map-get($k-colors, 'line-1');
@@ -47,7 +82,7 @@
     align-items: center;
     justify-content: center;
     width: k-px-to-rem(90px);
-    background-color: $background-color-image;
+    background-color: $background-color-icon;
     border-top-left-radius: $border-radius;
     border-bottom-left-radius: $border-radius;
   }
