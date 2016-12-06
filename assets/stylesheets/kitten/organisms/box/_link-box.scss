@@ -30,73 +30,72 @@
 ///     </div>
 ///   </a>
 
-@mixin k-LinkBox($link-box) {
-  @include k-with-module("k-Box: $link-box") {
+@mixin k-LinkBox {
 
-    $background-color: k-color-definition(
-      k-map-fetch($link-box, ('colors', 'background')));
-    $border-color: k-color-definition(
-      k-map-fetch($link-box, ('colors', 'border')));
-    $background-color-active: k-color-definition(
-      k-map-fetch($link-box, ('colors', 'background-active')));
+// Base
+  $background-color: map-get($k-colors, 'background-1');
+  $border-color: map-get($k-colors, 'line-1');
+  $color: map-get($k-colors, 'font-1');
 
-    $color: map-get($k-colors, 'font-1');
-    $border-size: 1px;
-    $border-radius: k-px-to-rem(8px);
-    $padding-container: k-px-to-rem(15px) k-px-to-rem(20px);
+// Active
+  $background-color-active: map-get($k-colors, 'line-1');
+  $border-color-active: map-get($k-colors, 'line-1');
 
-    .k-LinkBox:link {
-      text-decoration: none;
+  $border-size: 1px;
+  $border-radius: k-px-to-rem(8px);
+  $padding-container: k-px-to-rem(15px) k-px-to-rem(20px);
+
+  .k-LinkBox:link {
+    text-decoration: none;
+  }
+
+  .k-LinkBox__container {
+    display: flex;
+    justify-content: space-between;
+
+    width: k-px-to-rem(305px);
+    min-height: k-px-to-rem(70px);
+    box-sizing: border-box;
+    padding: $padding-container;
+
+    color: $color;
+    background-color: $background-color;
+    border-radius: $border-radius;
+    border: $border-size solid $border-color;
+
+    &:active {
+      background-color: $background-color-active;
     }
+  }
 
-    .k-LinkBox__container {
-      display: flex;
-      justify-content: space-between;
+  .k-LinkBox__title {
+    @include k-typographyFont('source-sans-semi-bold');
+    @include k-typographyFontSize(0);
 
-      width: k-px-to-rem(305px);
-      min-height: k-px-to-rem(70px);
-      box-sizing: border-box;
-      padding: $padding-container;
+    margin: 0;
+  }
 
-      color: $color;
-      background-color: $background-color;
-      border-radius: $border-radius;
-      border: $border-size solid $border-color;
+  .k-LinkBox__text {
+    @include k-typographyFont('source-sans-light');
+    @include k-typographyFontSize(-1);
 
-      &:active {
-        background-color: $background-color-active;
-      }
-    }
+    margin: 0;
+  }
 
-    .k-LinkBox__title {
-      @include k-typographyFont('source-sans-semi-bold');
-      @include k-typographyFontSize(0);
+  .k-LinkBox__navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-      margin: 0;
-    }
+  .k-LinkBox__navigation--withAnimation {
+    position: relative;
+    left: 0;
+    transition: left .2s;
 
-    .k-LinkBox__text {
-      @include k-typographyFont('source-sans-light');
-      @include k-typographyFontSize(-1);
-
-      margin: 0;
-    }
-
-    .k-LinkBox__navigation {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .k-LinkBox__navigation--withAnimation {
-      position: relative;
-      left: 0;
-      transition: left .2s;
-
-      .k-LinkBox:focus &,
-      .k-LinkBox:hover & {
-        left: 5px;
-      }
+    .k-LinkBox:focus &,
+    .k-LinkBox:hover & {
+      left: 5px;
     }
   }
 }
