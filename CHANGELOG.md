@@ -11,7 +11,7 @@ Breaking changes:
 - Rename class `k-Button--zinc` to `k-Button--boron`.
 
 Features:
-- Add component `k-LinkBox`.
+- Add `k-LinkBox` component.
 
 ## [v2.0.0] - 2016-11-29
 
