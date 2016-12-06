@@ -38,7 +38,7 @@
   $padding-container: k-px-to-rem(15px) k-px-to-rem(20px);
   $transition-duration: .2s;
 
-  .k-LinkBox
+  .k-LinkBox {
     color: $color;
     text-decoration: none;
 
