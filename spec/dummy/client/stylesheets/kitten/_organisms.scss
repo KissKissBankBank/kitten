@@ -24,16 +24,9 @@
 
 @include k-Popover;
 
-// LinkBox
+// Box
 
-@include k-LinkBox((
-  colors: (
-    background: map-get($k-colors, 'background-1'),
-    border: map-get($k-colors, 'line-1'),
-    background-active: map-get($k-colors, 'line-1'),
-  )
-));
-
-// LinkBoxWithIcon
-
+@include k-LinkBox;
 @include k-LinkBoxWithIcon;
+
+

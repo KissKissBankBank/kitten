@@ -97,6 +97,78 @@
       .k-LinkBox:hover & {
         left: 5px;
       }
+=======
+@mixin k-LinkBox {
+
+  $background-color: map-get($k-colors, 'background-1');
+  $border-color: map-get($k-colors, 'line-1');
+  $background-color-active: map-get($k-colors, 'line-1');
+  $color: map-get($k-colors, 'font-1');
+
+  $border-size: 1px;
+  $border-radius: k-px-to-rem(8px);
+  $padding-container: k-px-to-rem(15px) k-px-to-rem(20px);
+  $transition-duration: .2s;
+
+  .k-LinkBox
+    color: $color;
+    text-decoration: none;
+
+    &:link {
+      text-decoration: none;
+    }
+  }
+
+  .k-LinkBox__container {
+    display: flex;
+    justify-content: space-between;
+
+    width: k-px-to-rem(305px);
+    min-height: k-px-to-rem(70px);
+    box-sizing: border-box;
+    padding: $padding-container;
+
+    color: $color;
+    background-color: $background-color;
+    border-radius: $border-radius;
+    border: $border-size solid $border-color;
+
+    transition: background $transition-duration;
+
+    .k-LinkBox:active & {
+      background-color: $background-color-active;
+    }
+  }
+
+  .k-LinkBox__title {
+    @include k-typographyFont('source-sans-semi-bold');
+    @include k-typographyFontSize(0);
+
+    margin: 0;
+  }
+
+  .k-LinkBox__text {
+    @include k-typographyFont('source-sans-light');
+    @include k-typographyFontSize(-1);
+
+    margin: 0;
+  }
+
+  .k-LinkBox__navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .k-LinkBox__navigation--withAnimation {
+    position: relative;
+    left: 0;
+    transition: left $transition-duration;
+
+    .k-LinkBox:focus &,
+    .k-LinkBox:hover & {
+      left: 5px;
+>>>>>>> master
     }
   }
 }
