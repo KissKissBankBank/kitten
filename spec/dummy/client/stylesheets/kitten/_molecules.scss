@@ -13,13 +13,6 @@
 
 // Form
 
-@include k-LabelWithInfo((
-  colors: (
-    active: black,
-    inactive: #aaa,
-  ),
-));
-
 @include k-SearchInput;
 
 @include k-Select((
