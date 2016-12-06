@@ -26,10 +26,4 @@
 
 // LinkBox
 
-@include k-LinkBox((
-  colors: (
-    background: map-get($k-colors, 'background-1'),
-    border: map-get($k-colors, 'line-1'),
-    background-active: map-get($k-colors, 'line-1'),
-  )
-));
+@include k-LinkBox;
