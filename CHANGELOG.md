@@ -6,6 +6,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 Features:
 - Add commission displaying to class `LoanSimulator`.
+- Add text inactive style `k-u--inactive`.
+- Add text active style `k-u--active`.
+- Add commission style `k-LoanSimulator__commission`.
 
 ## [v2.0.0] - 2016-11-29
 
