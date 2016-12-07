@@ -339,7 +339,7 @@ LoanSimulator.defaultProps = {
   amountOutOfBoundsError: 'Amount is either too big or too small',
 
   displayCommission: false,
-  commissionLabel: 'Commission\xa0:',
+  commissionLabel: 'Commission:',
   commissionRate: function() { return 0 },
 
   installmentLabel: 'Reimbursing',
