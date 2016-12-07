@@ -3,14 +3,9 @@
 /// @group box
 ///
 /// @example scss - usage
-///   @include k-LinkBoxWithIcon((
-///     background-color: #fff,
-///     border-color: #eee,
-///     background-color-active: #eee,
 ///
-///     background-color-icon: #cadbfd,
-///   ));
-
+///  @include k-LinkBoxWithIcon;
+///
 /// @example html
 ///   <a class="k-LinkBoxWithIcon">
 ///     <div class="k-LinkBoxWithIcon__container">
@@ -40,14 +35,14 @@
 
 @mixin k-LinkBoxWithIcon {
 
-// Base
+  // Base
   $background-color: map-get($k-colors, 'background-1');
   $border-color: map-get($k-colors, 'line-1');
   $color: map-get($k-colors, 'font-1');
 
   $background-color-icon: map-get($k-colors, 'primary-4');
 
-// Active
+  // Active
   $background-color-active: map-get($k-colors, 'line-1');
   $border-color-active: map-get($k-colors, 'line-1');
 
