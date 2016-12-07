@@ -1,0 +1,11 @@
+#!/bin/sh
+
+set -e
+
+rm -rf client/node_modules
+rm -rf public/assets
+rm -rf tmp
+rm app/assets/webpack/*.js
+rm app/assets/webpack/*.scss
+rm -rf app/assets/webpack/images
+rm client/npm-debug.log.*
