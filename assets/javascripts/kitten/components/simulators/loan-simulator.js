@@ -126,7 +126,7 @@ class LoanSimulator extends React.Component {
   }
 
   renderCommission() {
-    if (!this.props.commissionLabel)
+    if (!this.props.displayCommission)
       return
 
     const active = this.sliderIsActive()
@@ -296,6 +296,7 @@ LoanSimulator.propTypes = {
   amountOutOfBoundsError: React.PropTypes.string,
 
   // Display commission if requested
+  displayCommission: React.PropTypes.bool,
   commissionLabel: React.PropTypes.string,
   commissionRate: React.PropTypes.func,
 
@@ -337,7 +338,8 @@ LoanSimulator.defaultProps = {
   amountEmptyError: 'Amount cannot be empty',
   amountOutOfBoundsError: 'Amount is either too big or too small',
 
-  commissionLabel: null,
+  displayCommission: false,
+  commissionLabel: 'Commission\xa0:',
   commissionRate: function() { return 0 },
 
   installmentLabel: 'Reimbursing',

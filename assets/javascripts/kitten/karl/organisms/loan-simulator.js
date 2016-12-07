@@ -34,7 +34,7 @@ const KarlLoanSimulator = defaultProps(LoanSimulator, {
 })
 
 const KarlLoanSimulatorWithCommission = defaultProps(KarlLoanSimulator, {
-  commissionLabel: `Commission${nbsp}:`,
+  displayCommission: true,
   commissionRate: function(duration) {
     if (duration <= 9)
       return 0.03
