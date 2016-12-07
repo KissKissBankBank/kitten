@@ -7,18 +7,18 @@
 ///  @include k-LinkBoxWithIcon;
 ///
 /// @example html
-///   <a class="k-LinkBoxWithIcon">
-///     <div class="k-LinkBoxWithIcon__container">
+///   <a class="k-LinkBox k-LinkBoxWithIcon" href="#">
+///     <div class="k-LinkBox__container k-LinkBoxWithIcon__container">
 ///       <div class="k-LinkBoxWithIcon__image">…</div>
 ///
 ///       <div class="k-LinkBoxWithIcon__content">
-///         <div class="k-LinkBoxWithIcon__paragraph">
-///           <p class="k-LinkBoxWithIcon__title">…</p>
-///           <p class="k-LinkBoxWithIcon__text">…</p>
+///         <div class="k-LinkBox__paragraph">
+///           <p class="k-LinkBox__title">…</p>
+///           <p class="k-LinkBox__text">…</p>
 ///         </div>
 ///
-///         <div class="k-LinkBoxWithIcon__navigation
-///                     k-LinkBoxWithIcon__navigation--withAnimation">
+///         <div class="k-LinkBox__navigation
+///                     k-LinkBox__navigation--withAnimation">
 ///           <span title="Suivant" class="k-LinkBoxWithIcon__button
 ///                                        k-ButtonIcon
 ///                                        k-ButtonIcon--hydrogen
@@ -35,41 +35,24 @@
 
 @mixin k-LinkBoxWithIcon {
 
-  // Base
-  $background-color: map-get($k-colors, 'background-1');
-  $border-color: map-get($k-colors, 'line-1');
-  $color: map-get($k-colors, 'font-1');
-
+  // Color icon
   $background-color-icon: map-get($k-colors, 'primary-4');
-
-  // Active
-  $background-color-active: map-get($k-colors, 'line-1');
-  $border-color-active: map-get($k-colors, 'line-1');
 
   $border-size: 1px;
   $border-radius: k-px-to-rem(8px);
   $padding-container: k-px-to-rem(15px) k-px-to-rem(20px);
 
-  .k-LinkBoxWithIcon:link {
-    text-decoration: none;
+  .k-LinkBoxWithIcon__container {
+    width: k-px-to-rem(395px);
+    padding: 0;
   }
 
-  .k-LinkBoxWithIcon__container {
+  .k-LinkBoxWithBox__content {
     display: flex;
-    justify-content: space-between;
 
-    width: k-px-to-rem(395px);
-    min-height: k-px-to-rem(70px);
+    max-width: k-px-to-rem(305px);
     box-sizing: border-box;
-
-    color: $color;
-    background-color: $background-color;
-    border-radius: $border-radius;
-    border: $border-size solid $border-color;
-
-    &:active {
-      background-color: $background-color-active;
-    }
+    padding: $padding-container;
   }
 
   .k-LinkBoxWithIcon__image {
@@ -84,43 +67,5 @@
 
   .k-LinkBoxWithIcon__svg {
     width: k-px-to-rem(38px);
-  }
-
-  .k-LinkBoxWithIcon__content {
-    display: flex;
-    width: k-px-to-rem(305px);
-
-    padding: $padding-container;
-  }
-
-  .k-LinkBoxWithIcon__title {
-    @include k-typographyFont('source-sans-semi-bold');
-    @include k-typographyFontSize(0);
-
-    margin: 0;
-  }
-
-  .k-LinkBoxWithIcon__text {
-    @include k-typographyFont('source-sans-light');
-    @include k-typographyFontSize(-1);
-
-    margin: 0;
-  }
-
-  .k-LinkBoxWithIcon__navigation {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .k-LinkBoxWithIcon__navigation--withAnimation {
-    position: relative;
-    left: 0;
-    transition: left .2s;
-
-    .k-LinkBoxWithIcon:focus &,
-    .k-LinkBoxWithIcon:hover & {
-      left: 5px;
-    }
   }
 }
