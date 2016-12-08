@@ -22,6 +22,8 @@
   $font-large: 'source-sans-light';
   $font-step: -1;
   $font-step-large: 3;
+  $font-step-content: -1;
+  $font-step-content-large: 0;
   $line-height: 1;
 
   // Colors
@@ -108,6 +110,12 @@
     display: block;
     margin-top: k-px-to-rem(10px);
     margin-left: $radio-button-size + $space-button-label;
+
+    @include k-typographyFontSize($font-step-content);
+  }
+
+  .k-RadioButton__labelContents--large {
+    @include k-typographyFontSize($font-step-content-large);
   }
 
   .k-RadioButton__input {
