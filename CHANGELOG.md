@@ -9,6 +9,7 @@ Breaking changes:
 - Rename class `k-Button--secondary` to `k-Button--lithium`.
 - Rename class `k-Button--secondaryOnWhite` to `k-Button--beryllium`.
 - Rename class `k-Button--zinc` to `k-Button--boron`.
+- Delete `k-LabelWithInfo` component.
 
 Features:
 - Add `k-LinkBox` component.
