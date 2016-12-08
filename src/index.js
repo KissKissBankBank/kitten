@@ -1,4 +1,4 @@
-var path = require('path');
+var path = require('path')
 
 var getScssPaths = function() {
   var kittenStylesheetsPath = path.join(
@@ -13,12 +13,19 @@ var getScssPaths = function() {
     __dirname,
     '../vendor/assets/stylesheets'
   )
+
+  var sassyMapsStylesheetsPath = path.join(
+    __dirname,
+    '../vendor/assets/stylesheets/kitten/sassy-maps/' +
+    'node_modules/sassy-maps/sass'
+  )
   var modularscalePath = require.resolve('modularscale-sass')
 
   return [
     kittenStylesheetsPath,
     karlStylesheetsPath,
     vendorStylesheetsPath,
+    sassyMapsStylesheetsPath,
     path.join(modularscalePath, '..'),
   ]
 }
