@@ -3,7 +3,19 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
+
+Features:
+- Add commission displaying to class `LoanSimulator`.
+- Add text inactive style `k-u--inactive`.
+- Add text active style `k-u--active`.
+- Add commission style `k-LoanSimulator__commission`.
+
+## [v3.0.0] - 2016-12-08
+
 Breaking changes:
+- Rename module from `kitten` to `kitten-components` to publish the module to
+  the npm public registry. You have to update your `package.json` and reinstall
+  all your node modules with `bin/install`.
 - Rename class `k-Button--default` to `k-Button--hydrogen`.
 - Rename class `k-Button--primary` to `k-Button--helium`.
 - Rename class `k-Button--secondary` to `k-Button--lithium`.
@@ -15,17 +27,6 @@ Features:
 - Add `k-LinkBox` component.
 - Add `k-RadioButton` component.
 - Add `k-BulletList` component.
-
-Breaking changes:
-- Rename module from `kitten` to `kitten-components` to publish the module to
-  the npm public registry. You have to update your `package.json` and reinstall
-  all your node modules with `bin/install`.
-
-Features:
-- Add commission displaying to class `LoanSimulator`.
-- Add text inactive style `k-u--inactive`.
-- Add text active style `k-u--active`.
-- Add commission style `k-LoanSimulator__commission`.
 
 ## [v2.0.0] - 2016-11-29
 
