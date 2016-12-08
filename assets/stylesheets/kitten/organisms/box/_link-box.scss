@@ -46,14 +46,6 @@
 
   $border-size: 1px;
   $border-radius: k-px-to-rem(8px);
-  $padding-paragraph: k-px-to-rem(15px)
-                      k-px-to-rem(10px)
-                      k-px-to-rem(15px)
-                      k-px-to-rem(20px);
-  $padding-navigation: k-px-to-rem(15px)
-                       k-px-to-rem(20px)
-                       k-px-to-rem(15px)
-                       k-px-to-rem(10px);
   $transition-duration: .2s;
 
   .k-LinkBox,
@@ -105,7 +97,10 @@
   }
 
   .k-LinkBox__paragraph {
-    padding: $padding-paragraph;
+    padding: k-px-to-rem(15px)
+             k-px-to-rem(10px)
+             k-px-to-rem(15px)
+             k-px-to-rem(20px);
   }
 
   .k-LinkBox__title {
@@ -127,7 +122,10 @@
     align-items: center;
     justify-content: center;
 
-    padding: $padding-navigation;
+    padding: k-px-to-rem(15px)
+             k-px-to-rem(20px)
+             k-px-to-rem(15px)
+             k-px-to-rem(10px);
   }
 
   .k-LinkBox__navigation--withAnimation {
