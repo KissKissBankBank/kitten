@@ -1,0 +1,19 @@
+<%= example "Form composer" do %>
+  <input class="k-TextInput"
+         type="text"
+         placeholder="Lorem ipsum dolor sit amet" />
+
+  <%= react_component('SelectWithState', props: {
+        name: 'locale',
+        options: [
+          { value: 'en', label: 'English' },
+          { value: 'fr', label: 'Français' },
+          { value: 'es', label: 'Español' },
+        ],
+        clearable: false,
+        searchable: false,
+        placeholder: false,
+        multi: false,
+        value: 'fr',
+  }) %>
+<% end %>
