@@ -2,14 +2,24 @@ var path = require('path');
 var kittenPath = require.resolve('kitten');
 
 var getScssPaths = function() {
-  var sassyMapsPath = require.resolve('sassy-maps');
+  var kittenStylesheetsPath = path.join(
+    kittenPath,
+    '../../assets/stylesheets'
+  )
+  var karlStylesheetsPath = path.join(
+    kittenPath,
+    '../../app/assets/stylesheets'
+  )
+  var vendorStylesheetsPath = path.join(
+    kittenPath,
+    '../../vendor/assets/stylesheets'
+  )
   var modularscalePath = require.resolve('modularscale-sass');
 
   return [
-    path.join(kittenPath, '..', '..', 'assets/stylesheets'),
-    path.join(kittenPath, '..', '..', 'app/assets/stylesheets'),
-    path.join(kittenPath, '..', '..', 'vendor/assets/stylesheets'),
-    path.join(sassyMapsPath, '..'),
+    kittenStylesheetsPath,
+    karlStylesheetsPath,
+    vendorStylesheetsPath,
     path.join(modularscalePath, '..'),
   ];
 }

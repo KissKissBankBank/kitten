@@ -15,6 +15,11 @@ Features:
 - Add `k-RadioButton` component.
 - Add `k-BulletList` component.
 
+Breaking changes:
+- Rename module from `kitten` to `kitten-components` to publish the module to
+  the npm public registry. You have to update your `package.json` and reinstall
+  all your node modules with `bin/install`.
+
 ## [v2.0.0] - 2016-11-29
 
 Breaking changes:
