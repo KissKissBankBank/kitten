@@ -1,4 +1,10 @@
-/// Link box
+/// Setup a box element.
+///
+/// This mixin will setup an element to look like a link-box.
+///
+/// Available box modifiers:
+/// - `.k-LinkBox`
+/// - `.k-LinkBox--withIcon`
 ///
 /// @group box
 ///
@@ -7,39 +13,51 @@
 ///   @include k-LinkBox;
 ///
 /// @example html
-///   <a class="k-LinkBox" href="#">
-///     <div class="k-LinkBox__element">
-///       <div class="k-LinkBox__container">
-///         <div class="k-LinkBox__content">
-///           <p class="k-LinkBox__title"></p>
-///           <p class="k-LinkBox__text"></p>
-///         </div>
-///         <div class="k-LinkBox__navigation">
-///           <span title="Suivant" class="k-LinkBox__button
-///                                        k-ButtonIcon
-///                                        k-ButtonIcon--hydrogen
-///                                        k-ButtonIcon--tiny
-///                                        k-ButtonIcon--withoutHover">
-///             <svg>…</svg>
-///           </span>
-///         </div>
+///   <a class="k-LinkBox k-LinkBox--withIcon" href="#">
+///     <div class="k-LinkBox__container">
+///       <div class="k-LinkBox__content">
+///         <p class="k-LinkBox__title"></p>
+///         <p class="k-LinkBox__text"></p>
+///       </div>
+///       <div class="k-LinkBox__navigation">
+///         <span title="Suivant" class="k-LinkBox__button
+///                                      k-ButtonIcon
+///                                      k-ButtonIcon--hydrogen
+///                                      k-ButtonIcon--tiny
+///                                      k-ButtonIcon--withoutHover">
+///           <svg>…</svg>
+///         </span>
 ///       </div>
 ///     </div>
 ///   </a>
 
 @mixin k-LinkBox {
 
+  // Base
+  $color: map-get($k-colors, 'font-1');
   $background-color: map-get($k-colors, 'background-1');
   $border-color: map-get($k-colors, 'line-1');
+
+  // Active
   $background-color-active: map-get($k-colors, 'line-1');
-  $color: map-get($k-colors, 'font-1');
+
+  // Color icon
+  $background-color-icon: map-get($k-colors, 'primary-4');
 
   $border-size: 1px;
   $border-radius: k-px-to-rem(8px);
-  $padding-container: k-px-to-rem(15px) k-px-to-rem(20px);
+  $padding-paragraph: k-px-to-rem(15px)
+                      k-px-to-rem(10px)
+                      k-px-to-rem(15px)
+                      k-px-to-rem(20px);
+  $padding-navigation: k-px-to-rem(15px)
+                       k-px-to-rem(20px)
+                       k-px-to-rem(15px)
+                       k-px-to-rem(10px);
   $transition-duration: .2s;
 
-  .k-LinkBox {
+  .k-LinkBox,
+  .k-LinkBox--withIcon {
     color: $color;
     text-decoration: none;
 
@@ -55,7 +73,6 @@
     width: k-px-to-rem(305px);
     min-height: k-px-to-rem(70px);
     box-sizing: border-box;
-    padding: $padding-container;
 
     color: $color;
     background-color: $background-color;
@@ -67,6 +84,28 @@
     .k-LinkBox:active & {
       background-color: $background-color-active;
     }
+
+    .k-LinkBox--withIcon & {
+      width: k-px-to-rem(395px);
+    }
+  }
+
+  .k-LinkBox__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: k-px-to-rem(90px);
+    background-color: $background-color-icon;
+    border-top-left-radius: $border-radius;
+    border-bottom-left-radius: $border-radius;
+  }
+
+  .k-LinkBox__svg {
+    width: k-px-to-rem(38px);
+  }
+
+  .k-LinkBox__paragraph {
+    padding: $padding-paragraph;
   }
 
   .k-LinkBox__title {
@@ -87,6 +126,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    padding: $padding-navigation;
   }
 
   .k-LinkBox__navigation--withAnimation {
