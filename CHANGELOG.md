@@ -11,6 +11,9 @@ Features:
 - Add commission style `k-LoanSimulator__commission`.
 - Add `bin/install` and `bin/cleanup`
 
+Fix:
+- Remove unused sassy-maps option in package
+
 ## [v3.0.0] - 2016-12-08
 
 Breaking changes:
@@ -28,7 +31,6 @@ Features:
 - Add `k-LinkBox` component.
 - Add `k-RadioButton` component.
 - Add `k-BulletList` component.
->>>>>>> origin/master
 
 ## [v2.0.0] - 2016-11-29
 
