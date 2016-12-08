@@ -1,5 +1,5 @@
 import path from 'path'
-import kitten from 'kitten'
+import kittenComponents from 'kitten-components'
 
 // Assets paths
 const cssPath = path.resolve(__dirname, '../../../app/assets/stylesheets');
@@ -9,7 +9,7 @@ const assetPath = path.join(__dirname, '../../../app/assets')
 const appCssPath = path.resolve(__dirname, '../../../app/assets/stylesheets');
 
 // Sass load paths
-const sassLoadPaths = kitten
+const sassLoadPaths = kittenComponents
                       .scssPaths
                       .concat([
                         cssPath,
@@ -18,9 +18,9 @@ const sassLoadPaths = kitten
 
 // Modules resolving paths
 const nodeModulesPath = path.resolve(__dirname, '../../node_modules')
-const resolvingPaths = kitten.jsPaths
+const resolvingPaths = kittenComponents.jsPaths
                        .concat(nodeModulesPath)
-                       .concat(kitten.imagesPaths)
+                       .concat(kittenComponents.imagesPaths)
 
 const resolve_paths = {
   sass: sassLoadPaths,
