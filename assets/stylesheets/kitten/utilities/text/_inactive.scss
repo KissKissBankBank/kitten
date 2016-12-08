@@ -1,0 +1,17 @@
+/// Inactive text utilities.
+///
+/// @group text
+///
+/// @example scss - Usage
+///
+///     @include k-utilities-inactive;
+///
+/// @example html
+///
+///     <p class="k-u-text--inactive">…</p>
+
+@mixin k-utilities-inactive {
+  .k-u-text--inactive {
+    color: map-get($k-colors, 'line-2');
+  }
+}

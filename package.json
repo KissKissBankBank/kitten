@@ -1,6 +1,7 @@
 {
-  "name": "kitten",
-  "version": "2.0.0",
+  "name": "kitten-components",
+  "version": "3.0.0",
+  "license": "MIT",
   "description": "Front-end components library",
   "main": "src/index.js",
   "repository": {
@@ -10,10 +11,11 @@
   "keywords": [
     "sass",
     "scss",
+    "react",
     "components",
     "kitten"
   ],
-  "author": "KissKissBankBank",
+  "author": "KissKissBankBank & Co",
   "homepage": "https://github.com/KissKissBankBank/kitten#readme",
   "devDependencies": {
     "sassdoc": "^2.1.20",
@@ -40,10 +42,10 @@
     "react-dom": "^15.3.1",
     "react-on-rails": "^6.1.0",
     "react-select": "^1.0.0-rc.1",
-    "sassy-maps": "^0.4.2",
     "susy": "^2.2.12"
   },
   "scripts": {
+    "postinstall": "cd vendor/assets/stylesheets/kitten/sassy-maps && npm install",
     "sassdoc": "sassdoc -d public/sassdoc assets/stylesheets",
     "stylelint": "stylelint --syntax scss 'assets/stylesheets/**/*.scss'"
   }
