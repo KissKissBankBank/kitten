@@ -12,7 +12,7 @@ Breaking changes:
 
 Features:
 - Add `k-LinkBox` component.
-- Add `k-LinkBoxWithIcon` component.
+- Add modifier `k-LinkBox--withIcon` on `k-LinkBox`.
 - Add `k-RadioButton` component.
 - Add `k-BulletList` component.
 
