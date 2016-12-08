@@ -21,7 +21,7 @@ class ExternalRichLink extends React.Component {
         <div className={ classNames("k-ExternalRichLink__element",
                                     "k-ExternalRichLink__element--animate") }>
           <span className={ classNames("k-ButtonIcon",
-                                       "k-ButtonIcon--default",
+                                       "k-ButtonIcon--hydrogen",
                                        "k-ButtonIcon--withoutHover",
                                        "k-ButtonIcon--tiny",
                                        "k-ButtonIcon--verticalArrow") }>

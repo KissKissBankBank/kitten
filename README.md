@@ -5,7 +5,7 @@ create flexible components based on your own brand elements (colors, fonts,
 typographic scale, etc.).
 
 It is an npm module coupled with a Rails engine that provides an integrated
-styleguide.
+styleguide. It should eventually be separated into two different repositories.
 
 ![Kittens](http://i.imgur.com/EbGhfDH.gif)
 
@@ -35,28 +35,8 @@ You can choose to use the npm module only or with the Rails engine.
 
 ### Npm
 
-As the `kitten` and `sassy-map` modules are on a
-[private registry on Gemfury](https://gemfury.com/help/npm-registry),
-you have to setup your npm configuration aka your `.npmrc` to be able to
-install all npm dependencies.
-
-Set your default registry in your `.npmrc`:
-
 ```sh
-npm config set registry https://npm-proxy.fury.io/bob/
-```
-
-Set your authentication token in your `.npmrc` by providing your Gemfury
-username and password:
-
-```sh
-npm login
-```
-
-Install the dependency:
-
-```sh
-npm install kitten --save-dev
+npm install kitten-components --save-dev
 ```
 
 ### Rails engine
@@ -253,10 +233,6 @@ $ bundle exec rake kitten_release
 ```
 
 ### Gemfury
-
-As the `kitten` module is on a [private registry on
-Gemfury](https://gemfury.com/help/npm-registry), you have to make sure you have
-publication rights on the Gemfury repository, then:
 
 You can upload the new `pkg/kitten-*.gem` build to Gemfury.
 

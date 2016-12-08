@@ -49,8 +49,8 @@ class TourPopover extends React.Component {
       'k-Button--icon',
       'k-Button--iconRight',
       {
-        'k-Button--zinc': !isDisabled,
-        'k-Button--default': isDisabled,
+        'k-Button--boron': !isDisabled,
+        'k-Button--hydrogen': isDisabled,
       }
     )
 
@@ -60,7 +60,7 @@ class TourPopover extends React.Component {
               className={ buttonClassName }
               disabled={ isDisabled }>
         { this.props.buttons.next.label }
-        <svg className="k-Button__icon--tiny"
+        <svg className="k-Button__icon"
              xmlns="http://www.w3.org/2000/svg"
              viewBox="0 0 10 10">
           <path d="M7.828,5L6.414,6.413L2.172,2.172l1.414-1.415L7.828,5z"/>
@@ -78,8 +78,8 @@ class TourPopover extends React.Component {
       'k-Button--tiny',
       'k-Button--icon',
       {
-        'k-Button--zinc': !isDisabled,
-        'k-Button--default': isDisabled,
+        'k-Button--boron': !isDisabled,
+        'k-Button--hydrogen': isDisabled,
       }
     )
 
@@ -105,7 +105,7 @@ class TourPopover extends React.Component {
               aria-label={ this.props.buttons.close.label }
               onClick={ this.props.onCloseClick }
               className="k-ButtonIcon
-                         k-ButtonIcon--default
+                         k-ButtonIcon--hydrogen
                          k-ButtonIcon--tiny">
         <svg className="k-ButtonIcon__svg k-ButtonIcon__svgRotate"
              xmlns="http://www.w3.org/2000/svg"

@@ -112,7 +112,7 @@ class PhoneDropdown extends React.Component {
 
   getDropdownButton() {
     const buttonClassName = classNames('k-ButtonIcon',
-                                       'k-ButtonIcon--default',
+                                       'k-ButtonIcon--hydrogen',
                                        'k-ButtonIcon--phone',
                                        this.props.buttonClassName)
 
