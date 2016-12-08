@@ -57,7 +57,4 @@
 @mixin k-FontSize($font-step, $font-step-large) {
   @include k-typographyFontSize($font-step);
   @include k-media-min('s') { @include k-typographyFontSize($font-step-large); }
-  @include k-media-min('m') { @include k-typographyFontSize($font-step-large); }
-  @include k-media-min('l') { @include k-typographyFontSize($font-step-large); }
-  @include k-media-min('xl') { @include k-typographyFontSize($font-step-large); }
 }
