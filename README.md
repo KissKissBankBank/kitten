@@ -224,25 +224,35 @@ To release a new version:
 - Pull `master`
 - Update the version in `lib/kitten/version.rb`.
 - Update the version in `package.json`.
-- Update the version in `CHANGELOG.md` and add a new `[unreleased]` section.
+- Update the `CHANGELOG.md` file:
+  * Update the version.
+  * Add a new `[unreleased]` section.
+  * Check that [each merged
+    PR](https://github.com/KissKissBankBank/kitten/commits/master)
+    from the last release has an entry.
 
 - Run this command:
 
 ```sh
 $ bundle exec rake kitten_release
 ```
+### Npm
 
-### Gemfury
+Save your credentials in your `.npmrc`:
+```
+npm adduser
+```
 
-You can upload the new `pkg/kitten-*.gem` build to Gemfury.
-
-And:
+Then:
 
 ```
 npm publish
 ```
 
-### Github
+[More
+information](https://docs.npmjs.com/getting-started/publishing-npm-packages)
+on publishing npm packages.
 
-You can now rename the "Next release" milestone to "Release vX.X.X" and close
-it. Finally, make sure you create a new milestone called "Next release".
+### Gemfury
+
+You can upload the new `pkg/kitten-*.gem` build to our private Gemfury registry.
