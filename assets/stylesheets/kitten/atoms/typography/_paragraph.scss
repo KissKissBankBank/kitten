@@ -1,0 +1,53 @@
+/// Paragraph font
+///
+/// @group typography
+///
+/// @example scss - usage
+///
+///   @include k-Paragraph;
+///
+/// @example html
+///
+///   <p class='k-Paragraph k-Paragraph--primary'>Paragraph 1</p>
+///   <p class='k-Paragraph k-Paragraph--secondary'>Paragraph 2</p>
+///   <p class='k-Paragraph k-Paragraph--tertiary'>Paragraph 3</p>
+///   <p class='k-Paragraph k-Paragraph--quaternary'>Paragraph 4</p>
+
+@mixin k-Paragraph {
+  $font: 'source-sans-light';
+
+  .k-Paragraph {
+    @include k-typographyFont($font);
+  }
+
+  .k-Paragraph--primary {
+    $font-step: 1;
+    $font-step-large: 2;
+
+    @include k-FontSize($font-step, $font-step-large);
+  }
+
+  .k-Paragraph--secondary {
+    $font-step: 0;
+    $font-step-large: 1;
+
+    @include k-FontSize($font-step, $font-step-large);
+  }
+  .k-Paragraph--tertiary {
+    $font-step: 0;
+    $font-step-large: 0;
+
+    @include k-FontSize($font-step, $font-step-large);
+  }
+  .k-Paragraph--quaternary {
+    $font-step: -1;
+    $font-step-large: -1;
+
+    @include k-FontSize($font-step, $font-step-large);
+  }
+}
+
+@mixin k-FontSize($font-step, $font-step-large: null) {
+  @include k-typographyFontSize($font-step);
+  @include k-media-min('s') { @include k-typographyFontSize($font-step-large); }
+}
