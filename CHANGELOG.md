@@ -4,12 +4,17 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [v3.1.0] - 2016-12-08
+
 Features:
 - Add commission displaying to class `LoanSimulator`.
 - Add text inactive style `k-u--inactive`.
 - Add text active style `k-u--active`.
 - Add commission style `k-LoanSimulator__commission`.
 - Add `bin/install` and `bin/cleanup`
+
+Fixes:
+- Fix dependencies paths.
 
 ## [v3.0.0] - 2016-12-08
 
@@ -28,7 +33,6 @@ Features:
 - Add `k-LinkBox` component.
 - Add `k-RadioButton` component.
 - Add `k-BulletList` component.
->>>>>>> origin/master
 
 ## [v2.0.0] - 2016-11-29
 
