@@ -24,7 +24,8 @@
 ///                                      k-ButtonIcon
 ///                                      k-ButtonIcon--hydrogen
 ///                                      k-ButtonIcon--tiny
-///                                      k-ButtonIcon--withoutHover">
+///                                      k-ButtonIcon--withoutHover
+///                                      k-ButtonIcon--verticalArrow">
 ///           <svg>…</svg>
 ///         </span>
 ///       </div>
@@ -63,7 +64,7 @@
     justify-content: space-between;
 
     width: k-px-to-rem(305px);
-    min-height: k-px-to-rem(70px);
+    height: k-px-to-rem(90px);
     box-sizing: border-box;
 
     color: $color;
@@ -84,6 +85,11 @@
 
   .k-LinkBox__icon {
     display: flex;
+
+    margin-top: -$border-size;
+    margin-left: -$border-size;
+    margin-bottom: -$border-size;
+
     align-items: center;
     justify-content: center;
     min-width: k-px-to-rem(90px);
@@ -112,7 +118,7 @@
 
   .k-LinkBox__text {
     @include k-typographyFont('source-sans-light');
-    @include k-typographyFontSize(-1);
+    @include k-typographyFontSize(-1, 1.3);
 
     margin: 0;
   }
