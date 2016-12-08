@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+Features:
+- Add `k-Title` to stylize titles
+- Add `k-Paragraph` to stylize paragraph
+
 ## [v3.1.0] - 2016-12-08
 
 Features:
