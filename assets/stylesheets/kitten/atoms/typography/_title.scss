@@ -1,0 +1,63 @@
+/// Title
+///
+/// @group typography
+///
+/// @example scss - usage
+///
+///   @include k-Title;
+///
+/// @example html
+///
+///   <h1 class='k-Title k-Title--primary'>Title 1</h1>
+///   <h2 class='k-Title k-Title--secondary'>Title 2</h2>
+///   <h3 class='k-Title k-Title--tertiary'>Title 3</h3>
+///   <h4 class='k-Title k-Title--quaternary'>Title 4</h4>
+///   <h5 class='k-Title k-Title--quinary'>Title 5</h5>
+
+@mixin k-Title {
+  $font: 'source-sans-light';
+
+  .k-Title {
+    @include k-typographyFont($font);
+  }
+
+  .k-Title--primary {
+    $font-step: 7;
+    $font-step-large: 12;
+
+    @include k-FontSize($font-step, $font-step-large);
+  }
+
+  .k-Title--secondary {
+    $font-step: 6;
+    $font-step-large: 9;
+
+    @include k-FontSize($font-step, $font-step-large);
+  }
+  .k-Title--tertiary {
+    $font-step: 5;
+    $font-step-large: 7;
+
+    @include k-FontSize($font-step, $font-step-large);
+  }
+  .k-Title--quaternary {
+    $font-step: 4;
+    $font-step-large: 5;
+
+    @include k-FontSize($font-step, $font-step-large);
+  }
+  .k-Title--quinary {
+    $font-step: 2;
+    $font-step-large: 4;
+
+    @include k-FontSize($font-step, $font-step-large);
+  }
+}
+
+@mixin k-FontSize($font-step, $font-step-large) {
+  @include k-typographyFontSize($font-step);
+  @include k-media-min('s') { @include k-typographyFontSize($font-step-large); }
+  @include k-media-min('m') { @include k-typographyFontSize($font-step-large); }
+  @include k-media-min('l') { @include k-typographyFontSize($font-step-large); }
+  @include k-media-min('xl') { @include k-typographyFontSize($font-step-large); }
+}
