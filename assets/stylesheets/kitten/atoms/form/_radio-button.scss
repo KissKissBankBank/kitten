@@ -19,7 +19,7 @@
 @mixin k-RadioButton {
   // Font
   $font: 'source-sans-semi-bold';
-  $font-on-lg: 'source-sans-light';
+  $font-lg: 'source-sans-light';
   $font-step: -1;
   $font-step-on-lg: 3;
   $font-step-content: -1;
@@ -102,7 +102,7 @@
   }
 
   .k-RadioButton__label--large {
-    @include k-typographyFont($font-on-lg);
+    @include k-typographyFont($font-lg);
     @include k-typographyFontSize($font-step-on-lg);
   }
 
