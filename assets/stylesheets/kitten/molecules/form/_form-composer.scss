@@ -1,0 +1,47 @@
+/// Setup a form composer element.
+///
+/// This mixin will setup an element to like a form composer
+///
+/// @group form
+///
+/// Available for components :
+/// - `FormAmountAndCurrency`
+/// - `FormPhoneNumber`
+///
+/// @example scss form composer - Usage
+///   @include k-FormComposer
+///
+/// @example html
+///   <div className="k-FormComposer">
+///     <div className="k-FormComposer__element">
+///       <input className="k-TextInput k-TextInput--tiny"
+///              type="text"
+///              placeholder="Lorem ipsum dolor sit amet" />
+///     </div>
+///
+///     <div className="k-FormComposer__element k-FormComposer__element--main">
+///       <SelectWithState name="currency"
+///                        options={ this.props.currencyOptions }
+///                        value={ this.props.value } />
+///     </div>
+///   </div>
+
+@mixin k-FormComposer {
+  $between-form: k-px-to-rem(15px);
+
+  .k-FormComposer {
+    display: flex;
+  }
+
+  .k-FormComposer__element {
+    margin-right: $between-form;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .k-FormComposer__element--main {
+    width: 100%;
+  }
+}
