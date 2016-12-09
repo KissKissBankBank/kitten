@@ -16,7 +16,7 @@
 @mixin k-Checkbox {
   // Font
   $font: 'source-sans-semi-bold';
-  $font-size: -2;
+  $font-step: -2;
   $line-height: 1;
 
   // Colors
@@ -33,7 +33,7 @@
 
   .k-Checkbox {
     @include k-typographyFont($font);
-    @include k-typographyFontSize($font-size, $line-height);
+    @include k-typographyFontSize($font-step, $line-height);
 
     display: flex;
     align-items: center;

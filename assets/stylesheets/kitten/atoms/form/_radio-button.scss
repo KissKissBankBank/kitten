@@ -19,11 +19,11 @@
 @mixin k-RadioButton {
   // Font
   $font: 'source-sans-semi-bold';
-  $font-large: 'source-sans-light';
+  $font-on-lg: 'source-sans-light';
   $font-step: -1;
-  $font-step-large: 3;
+  $font-step-on-lg: 3;
   $font-step-content: -1;
-  $font-step-content-large: 0;
+  $font-step-content-on-lg: 0;
   $line-height: 1;
 
   // Colors
@@ -102,8 +102,8 @@
   }
 
   .k-RadioButton__label--large {
-    @include k-typographyFont($font-large);
-    @include k-typographyFontSize($font-step-large);
+    @include k-typographyFont($font-on-lg);
+    @include k-typographyFontSize($font-step-on-lg);
   }
 
   .k-RadioButton__labelContents {
@@ -115,7 +115,7 @@
   }
 
   .k-RadioButton__labelContents--large {
-    @include k-typographyFontSize($font-step-content-large);
+    @include k-typographyFontSize($font-step-content-on-lg);
   }
 
   .k-RadioButton__input {
