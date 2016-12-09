@@ -7,6 +7,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [v3.1.0] - 2016-12-08
 
 Features:
+- Add `k-FormComposer` component.
+- Add new `FormAmountAndCurrency` JavaScript component.
+- Add new `FormPhoneNumber` JavaScript component.
 - Add commission displaying to class `LoanSimulator`.
 - Add text inactive style `k-u--inactive`.
 - Add text active style `k-u--active`.
