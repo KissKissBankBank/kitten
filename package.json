@@ -47,6 +47,9 @@
   "scripts": {
     "postinstall": "cd vendor/assets/stylesheets/kitten/sassy-maps && npm install",
     "sassdoc": "sassdoc -d public/sassdoc assets/stylesheets",
-    "stylelint": "stylelint --syntax scss 'assets/stylesheets/**/*.scss'"
+    "stylelint": "stylelint --syntax scss 'assets/stylesheets/**/*.scss'",
+    "build:dev": "(cd spec/dummy/client && npm run build:dev)",
+    "build": "(cd spec/dummy/client && npm run build --silent)",
+    "hot-assets": "(cd spec/dummy/client && npm run hot-assets)"
   }
 }

@@ -11,7 +11,8 @@ Features:
 - Add text inactive style `k-u--inactive`.
 - Add text active style `k-u--active`.
 - Add commission style `k-LoanSimulator__commission`.
-- Add `bin/install` and `bin/cleanup`
+- Add `bin/install` and `bin/cleanup`.
+- Add `build:dev`, `build`, and `hot-assets` scripts to the root `npm run`.
 
 Fixes:
 - Fix dependencies paths.
