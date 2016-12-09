@@ -252,7 +252,3 @@ npm publish
 [More
 information](https://docs.npmjs.com/getting-started/publishing-npm-packages)
 on publishing npm packages.
-
-### Gemfury
-
-You can upload the new `pkg/kitten-*.gem` build to our private Gemfury registry.
