@@ -12,7 +12,7 @@ Features:
 - Add `bin/install` and `bin/cleanup`
 
 Fix:
-- Remove unused sassy-maps option in package
+- Remove unused sassy-maps option in package.
 
 ## [v3.0.0] - 2016-12-08
 
