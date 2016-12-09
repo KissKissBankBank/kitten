@@ -17,6 +17,9 @@ Features:
 Fixes:
 - Fix dependencies paths.
 
+Fix:
+- Remove unused sassy-maps option in package.
+
 ## [v3.0.0] - 2016-12-08
 
 Breaking changes:
