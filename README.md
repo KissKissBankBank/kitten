@@ -248,7 +248,3 @@ Then:
 ```
 npm publish
 ```
-
-[More
-information](https://docs.npmjs.com/getting-started/publishing-npm-packages)
-on publishing npm packages.
