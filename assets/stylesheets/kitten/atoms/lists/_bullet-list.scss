@@ -15,7 +15,8 @@
 @mixin k-BulletList {
   // Font
   $font: 'source-sans-light';
-  $font-step: 0;
+  $font-step: -1;
+  $font-step-large: 0;
   $line-height: 1.5;
 
   // Bullet properties
@@ -54,5 +55,9 @@
       content: '';
       background-color: $bullet-color;
     }
+  }
+
+  .k-BulletList__item--large {
+    @include k-typographyFontSize($font-step-large);
   }
 }
