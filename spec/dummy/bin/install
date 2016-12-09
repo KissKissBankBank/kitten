@@ -21,4 +21,5 @@ else
   echo "| - To remove all your previous node modules with:"
   echo ""
   echo "  rm -fr node_modules client/node_modules"
+  exit 1
 fi
