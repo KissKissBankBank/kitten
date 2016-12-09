@@ -1,0 +1,8 @@
+#!/bin/sh
+set -e
+
+bundle install
+npm install
+
+cd spec/dummy
+bin/install

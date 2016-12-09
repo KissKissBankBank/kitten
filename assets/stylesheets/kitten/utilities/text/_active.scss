@@ -1,0 +1,17 @@
+/// Active text utilities.
+///
+/// @group text
+///
+/// @example scss - Usage
+///
+///     @include k-utilities-active;
+///
+/// @example html
+///
+///     <p class="k-u-text--active">…</p>
+
+@mixin k-utilities-active {
+  .k-u-text--active {
+    color: map-get($k-colors, 'primary-1');
+  }
+}

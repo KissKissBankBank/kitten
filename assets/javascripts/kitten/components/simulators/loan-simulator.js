@@ -78,6 +78,14 @@ class LoanSimulator extends React.Component {
     return (cents / 100).toLocaleString(this.props.locale)
   }
 
+  commissionRate() {
+    return this.props.commissionRate(this.duration())
+  }
+
+  commissionAmount() {
+    return this.commissionRate() * this.state.amount
+  }
+
   error() {
     if (!this.state.touched)
       return null
@@ -117,6 +125,48 @@ class LoanSimulator extends React.Component {
     return 1
   }
 
+  renderCommission() {
+    if (!this.props.displayCommission)
+      return
+
+    const active = this.sliderIsActive()
+    const amount = active
+      ? this.toCurrency(this.commissionAmount() * 100)
+      : '--'
+
+    const amountToDisplay = ` ${ amount } `
+
+    return (
+      <div className="k-LoanSimulator__commission">
+        { this.props.commissionLabel }
+        <span className={ classNames({ 'k-u-text--active': active,
+                                       'k-u-text--inactive': !active }) }>
+          { amountToDisplay }
+          { this.props.currencySymbol }
+        </span>
+      </div>
+    )
+  }
+
+  sliderIsActive() {
+    return !this.amountError() &&
+           this.state.dragged &&
+           this.state.installmentAmount
+  }
+
+  renderButton() {
+    if (!this.props.actionLabel)
+     return
+
+    return (
+      <div className="k-LoanSimulator__actions">
+        <button className="k-Button k-Button--helium k-Button--big">
+          { this.props.actionLabel }
+        </button>
+      </div>
+    )
+  }
+
   render() {
     const { label } = this.props
     const { dragged, touched } = this.state
@@ -128,7 +178,6 @@ class LoanSimulator extends React.Component {
     const installmentMax = amountValid ? this.installmentMax() : 0
     const installmentAmount = amountValid ? this.state.installmentAmount : 0
     const installmentPercentage = amountValid ? this.state.installmentPercentage : 0
-    const sliderIsActive = amountValid && dragged && installmentAmount
 
     let errorClass, errorTag, tooltipClass, tooltipText
 
@@ -137,10 +186,10 @@ class LoanSimulator extends React.Component {
       errorTag = <p className="k-LoanSimulator__amount__error">{ error }</p>
     }
 
-    if (sliderIsActive) {
+    if (this.sliderIsActive()) {
       const durationSymbol = duration === 1
-                           ? this.props.durationSymbol
-                           : this.props.durationSymbolPlural
+        ? this.props.durationSymbol
+        : this.props.durationSymbolPlural
 
       const installmentText = `
         ${this.toCurrency(installmentAmount * 100)}
@@ -165,10 +214,6 @@ class LoanSimulator extends React.Component {
       tooltipClass = 'is-inactive'
       tooltipText = this.props.sliderPlaceholder
     }
-
-    const durationSymbol = duration === 1
-                         ? this.props.durationSymbol
-                         : this.props.durationSymbolPlural
 
     return (
       <div className={ classNames('k-LoanSimulator', errorClass) }>
@@ -195,7 +240,7 @@ class LoanSimulator extends React.Component {
               { this.props.currencySymbol }
             </span>
           </div>
-          {errorTag}
+          { errorTag }
         </div>
         <div className="k-LoanSimulator__reimbursing">
           <label className="k-Label k-LoanSimulator__label"
@@ -215,12 +260,10 @@ class LoanSimulator extends React.Component {
                   value={ installmentAmount }
                   onChange={ this.handleInstallmentChange }
                   onAction={ this.handleInstallmentAction } />
+
+          { this.renderCommission() }
         </div>
-        <div className="k-LoanSimulator__actions">
-          <button className="k-Button k-Button--helium k-Button--big">
-            { this.props.actionLabel }
-          </button>
-        </div>
+        { this.renderButton() }
       </div>
     )
   }
@@ -251,6 +294,11 @@ LoanSimulator.propTypes = {
 
   // Error text when the amount is over or under the min and max
   amountOutOfBoundsError: React.PropTypes.string,
+
+  // Display commission if requested
+  displayCommission: React.PropTypes.bool,
+  commissionLabel: React.PropTypes.string,
+  commissionRate: React.PropTypes.func,
 
   // Label before the slider
   installmentLabel: React.PropTypes.string,
@@ -284,10 +332,15 @@ LoanSimulator.defaultProps = {
   amountPlaceholder: '',
   amountMin: 1,
   amountMax: 10000,
+
   initialAmount: null,
 
   amountEmptyError: 'Amount cannot be empty',
   amountOutOfBoundsError: 'Amount is either too big or too small',
+
+  displayCommission: false,
+  commissionLabel: 'Commission:',
+  commissionRate: function() { return 0 },
 
   installmentLabel: 'Reimbursing',
 
@@ -301,7 +354,7 @@ LoanSimulator.defaultProps = {
   installmentSymbol: '$/month',
   locale: 'en',
 
-  actionLabel: 'OK',
+  actionLabel: null,
 }
 
 export default LoanSimulator

@@ -1,6 +1,6 @@
 $k-module: null;
 
-// Dependencies
+// Vendor dependencies
 @import 'sassy-maps';
 @import 'modular-scale';
 
@@ -34,7 +34,6 @@ $k-module: null;
 @import 'kitten/molecules/buttons/button-with-badge';
 @import 'kitten/molecules/cards/card';
 @import 'kitten/molecules/footer/footer';
-@import 'kitten/molecules/form/label-with-info';
 @import 'kitten/molecules/form/search-input';
 @import 'kitten/molecules/form/select';
 @import 'kitten/molecules/form/form-composer';
@@ -73,3 +72,5 @@ $k-module: null;
 @import 'kitten/utilities/text/align';
 @import 'kitten/utilities/text/size';
 @import 'kitten/utilities/text/weight';
+@import 'kitten/utilities/text/active';
+@import 'kitten/utilities/text/inactive';

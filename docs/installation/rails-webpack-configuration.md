@@ -126,7 +126,7 @@ dependencies.
 
 ```js
 import path from 'path'
-import kitten from 'kitten'
+import kittenComponents from 'kitten-components'
 
 const nodeModulesPath = path.resolve(__dirname, '../../node_modules')
 
@@ -135,7 +135,8 @@ const config = {
   resolve: {
     // Adds kitten paths to webpack.
     // Make sure `node_modules` directory is declared with an absolute path.
-    root: nodeModulesPath.concat(kitten.jsPaths).concat(kitten.imagesPaths)
+    root: nodeModulesPath.concat(kittenComponents.jsPaths)
+                         .concat(kittenComponents.imagesPaths)
   },
   resolveLoader: {
     // Add the absolute path to the `node_modules` directory to make sure

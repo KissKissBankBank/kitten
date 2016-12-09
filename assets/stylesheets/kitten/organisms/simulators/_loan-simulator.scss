@@ -80,5 +80,10 @@
     .k-LoanSimulator__duration {
       @include k-typographyFontSize(-2, 1.3rem);
     }
+
+    .k-LoanSimulator__commission {
+      margin-top: k-px-to-rem(30px);
+      @include k-typographyFontSize(0);
+    }
   }
 }
