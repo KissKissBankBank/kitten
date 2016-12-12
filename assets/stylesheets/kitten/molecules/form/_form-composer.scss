@@ -27,7 +27,7 @@
 ///   </div>
 
 @mixin k-FormComposer {
-  $between-form: k-px-to-rem(15px);
+  $between-form: k-px-to-rem(10px);
 
   .k-FormComposer {
     display: flex;
