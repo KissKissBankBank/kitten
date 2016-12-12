@@ -24,7 +24,7 @@ styleguide. It should eventually be separated into two different repositories.
 - [Usage](#usage)
   - [CSS components](#css-components)
   - [React components](#react-components)
-  - [Rails engine](#rails-engine-1)
+  - [Style Guide](#style-guide)
 - [Development](#development)
 - [Contributing](#contributing)
 - [Release](#release)
@@ -44,22 +44,19 @@ npm install kitten-components --save-dev
 Add this line to your application's Gemfile:
 
 ```ruby
+# Style guide
 gem 'kitten'
 ```
 
-Then execute:
-
-    $ bundle
-
-Install routes for the style guide and sassdoc, add to your `routes.rb`:
-
+And these routes to your `routes.rb`:
 ```ruby
 mount Kitten::Engine, at: '/kitten' if Rails.env.development?
 ```
 
-`kitten`'s' Rails engine is designed to serve assets with
-[Webpack](webpack.github.io) through
-[React on Rails](https://github.com/shakacode/react_on_rails).
+You can then run `bundle` and restart your server.
+
+`kitten` is designed to serve assets with [Webpack](webpack.github.io)
+through [React on Rails](https://github.com/shakacode/react_on_rails).
 
 **For more detailed instructions**, see [Rails webpack
 configuration](docs/installation/rails-webpack-configuration.md).
@@ -67,44 +64,25 @@ configuration](docs/installation/rails-webpack-configuration.md).
 ## Usage
 
 ### CSS components
-Import `kitten` in your main Sass file:
+
+Import `kitten` and the components your want to use in your application:
 
 ```scss
 @import 'kitten';
-```
 
-Define your font families and typography settings:
-
-```scss
-$k-fonts: (
-  source-sans: (
-    family: ("Source Sans Pro", Helvetica, Arial, sans-serif),
-    weight: 400,
-  ),
-);
-
-$k-typography: k-typography-definition((
-  root: 16px,
-  font-size: 1rem,
-  font-weight: 400,
-  line-height: 1.5rem,
-  scale-multiplier: $major-second,
-));
-```
-
-Include the component your want to use in your application:
-
-```scss
 @import 'kitten/atoms/buttons/button';
-@include k-Button((
-  font: 'source-sans',
-  …
-));
+@include k-Button;
 ```
+
+You can define your own font families, typography settings and colors by overriding the
+the `$k-fonts`, `$k-typography` and `$k-colors` options. Check out the
+[default config](https://github.com/KissKissBankBank/kitten/blob/master/assets/stylesheets/kitten/_default-config.scss)
+for an example.
 
 ### React components
 
 You can render React components directly in your js bundle:
+
 ```js
 const yourLoanSimulatorProps = {}
 
@@ -117,28 +95,30 @@ ReactDOM.render(
 Or, use [React on
 Rails](https://github.com/shakacode/react_on_rails#including-your-react-component-in-your-rails-views)
 view helper in your `.erb` file:
+
 ```erb
-<%= react_component('LoanSimulator', props: @your_loan_simulator_props) %>
+<%= react_component('LoanSimulator', props: your_loan_simulator_props) %>
 ```
 
-### Rails engine
+### Style guide
 
-`kitten` provides a styleguide interface through a Rails engine. This feature is
-only available if you are using the gem with Ruby on Rails.
+`kitten` provides a styleguide interface through a Rails engine.
+You can run see it in your browser by downloading kitten and launching
+the dummy app or by installing the style guide in your Rails app.
 
-#### Configuration
+The engine provides some configuration options that can be defined in
+`config/initializers/kitten.rb`:
+
+- **webpack_output_bundle**: This option is used to pass an output bundle name
+  for hot reloading. By default, it is set to `application-bundle`.
+
+Example configuration:
 
 ```rb
 Kitten.configure do |config|
   config.webpack_output_bundle = 'your-custom-bundle'
 end
 ```
-
-`kitten` provides some configuration options that can be defined in
-`config/initializers/kitten.rb`:
-
-- **webpack_output_bundle**: This option is used to pass an output bundle name
-  for hot reloading. By default, it is set to `application-bundle`.
 
 ## Development
 
@@ -147,16 +127,10 @@ end
 Check out the [guidelines](../../wiki/Contribution-guidelines) to start
 creating new components!
 
-### Installation
-
-Make sure Npm has access to Gemfury (see higher), then:
-
-Then, run:
+### Install
 
 ```sh
-$ bundle                 # install gem dependencies
-$ npm install --only=dev # install node dependencies
-$ bundle exec rake
+$ bin/install
 ```
 
 ### Dummy style guide
@@ -165,7 +139,6 @@ To launch the style guide on the dummy app:
 
 ```sh
 $ cd spec/dummy
-$ bin/install
 $ foreman start
 ```
 
@@ -177,6 +150,14 @@ example), you can compile the assets and serve a production server:
 ```sh
 $ bin/rake staging:assets:precompile
 $ REACT_ON_RAILS_ENV= rails s -b 0.0.0.0
+```
+
+### Cleanup
+
+To cleanup installed modules:
+
+```sh
+bin/cleanup
 ```
 
 ### Style checker
@@ -208,14 +189,17 @@ The documentation is accessible on development environment: `/kitten/sassdoc`.
 
 ## Contributing
 
-- Create a PR with a clear title in English.
-- Tag it with the right label (`Work in progress`, `Needs reviews`, etc.).
-- Don't forget to update the `CHANGELOG.md` under the `[unreleased]` section
+To contribute code:
 
-For admin collaborators, before merging the PR:
+- Create a pull request on Github with a clear title in English.
+- Tag it with the right labels: `Needs reviews`, `Needs testing` or `Work in progress`.
+- Don't forget to update the `CHANGELOG.md` under the `[unreleased]` section.
 
-- Add the PR to the "Next release" milestone.
-- Use `Squash and merge` option to merge the PR.
+To merge code into master:
+
+- Make sure the code has been reviewed by someone.
+- Make sure it has been tested.
+- Use the `Squash and merge` option on Github.
 
 ## Release
 
@@ -236,6 +220,7 @@ To release a new version:
 ```sh
 $ bundle exec rake kitten_release
 ```
+
 ### Npm
 
 Save your credentials in your `.npmrc`:
