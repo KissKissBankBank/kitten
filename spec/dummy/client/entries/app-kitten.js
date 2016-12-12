@@ -2,6 +2,9 @@ require('../stylesheets/app-kitten.scss');
 
 import ReactOnRails from 'react-on-rails';
 
+// Box
+import LinkBox from 'kitten/components/box/link-box'
+
 // Buttons
 import ButtonImageWithTextAndBadge from 'kitten/components/buttons/button-image-with-text-and-badge'
 
@@ -56,6 +59,7 @@ ReactOnRails.register({
   ExternalRichLink,
   GrabberIcon,
   HeaderTour,
+  LinkBox,
   LoanSimulator,
   Slider,
   Search,
