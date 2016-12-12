@@ -4,6 +4,98 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [v3.1.0] - 2016-12-08
+
+Features:
+- Add commission displaying to class `LoanSimulator`.
+- Add text inactive style `k-u--inactive`.
+- Add text active style `k-u--active`.
+- Add commission style `k-LoanSimulator__commission`.
+- Add `bin/install` and `bin/cleanup`.
+- Add `build:dev`, `build`, and `hot-assets` scripts to the root `npm run`.
+
+Fixes:
+- Fix dependencies paths.
+
+Fix:
+- Remove unused sassy-maps option in package.
+
+## [v3.0.0] - 2016-12-08
+
+Breaking changes:
+- Rename module from `kitten` to `kitten-components` to publish the module to
+  the npm public registry. You have to update your `package.json` and reinstall
+  all your node modules with `bin/install`.
+- Rename class `k-Button--default` to `k-Button--hydrogen`.
+- Rename class `k-Button--primary` to `k-Button--helium`.
+- Rename class `k-Button--secondary` to `k-Button--lithium`.
+- Rename class `k-Button--secondaryOnWhite` to `k-Button--beryllium`.
+- Rename class `k-Button--zinc` to `k-Button--boron`.
+- Delete `k-LabelWithInfo` component.
+
+Features:
+- Add `k-LinkBox` component.
+- Add `k-RadioButton` component.
+- Add `k-BulletList` component.
+
+## [v2.0.0] - 2016-11-29
+
+Breaking changes:
+- Remove support for npm 2. You need to upgrade to npm 3 and reinstall all your
+  node modules.
+
+Features:
+- Add `kitten-launcher` module in dummy app `package.json` to manage client
+  front stack dependencies (Webpack, plugins and loaders).
+- Add `spec/dmmy/bin/install` to install dependencies in dummy app.
+
+Fixes:
+- Move `kitten` dependencies from client app to main `package.json`.
+- Update `npm-link` command from `preinstall` script to `postinstall` script in
+  dummy app.
+
+## [v1.2.2] - 2016-11-23
+
+Fixes:
+- Fix `this.dispatchEvent` in component `Tour`.
+
+## [v1.2.1] - 2016-11-22
+
+Breaking changes:
+- Remove height declaration on `k-Header__logo`.
+- To add autoprefixer in your Webpack config, you must:
+  * Use `npm install postcss-loader --save` in your client folder
+  * Update your Webpack config with:
+
+```js
+…
+const autoprefixer = require('autoprefixer')
+…
+module: {
+loaders: [
+  {
+    test: /\.scss$/,
+    loader: ExtractTextPlugin.extract('css-loader!postcss-loader!sass-loader'),
+  },
+]
+},
+postcss: [ autoprefixer({ browsers: ['> 5%', 'ie >= 10', 'ios_saf >= 9'] }) ],
+…
+```
+
+Fixes:
+- Add autoprefixer in Webpack to fix styles on old browsers.
+- Fix `k-ButtonWithBadge` for IE 10.
+- Change `images/brand/lendopolis.svg` to fix height.
+- Change syntax of dispatch event to fix on old IE.
+
+## [v1.1.1] - 2016-11-18
+
+Fixes:
+- Fix buttonIcon size on Safari 9 (min-width: auto support).
+- Better computation for phone dropdown position.
+- Add class k-ButtonIcon--verticalArrow on k-ExternalRichLink.
+
 ## [v1.1.0] - 2016-11-16
 
 Features:

@@ -10,6 +10,7 @@
 import path from 'path'
 
 // Node modules specific to webpack.
+const autoprefixer = require('autoprefixer')
 
 // Webpack module.
 import webpack from 'webpack'
@@ -45,10 +46,12 @@ const buildConfig = {
     loaders: [
       {
         test: /\.scss$/,
-        loader: ExtractTextPlugin.extract('css-loader!sass-loader'),
+        loader: ExtractTextPlugin.extract(
+          'css-loader!postcss-loader!sass-loader'),
       },
     ]
   },
+  postcss: [ autoprefixer({ browsers: ['> 5%', 'ie >= 10', 'ios_saf >= 9'] }) ],
 }
 
 // Enable devtools if the build is intended to be used on development

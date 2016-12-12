@@ -10,18 +10,21 @@ class ExternalRichLink extends React.Component {
     const { className, ...rest } = this.props
     const linkClassName = classNames('k-ExternalRichLink', className)
 
+
+
     return(
       <a className={ linkClassName } {...rest}>
         <div className="k-ExternalRichLink__element">
           { this.props.children }
         </div>
 
-        <div className="k-ExternalRichLink__element
-                        k-ExternalRichLink__element--animate">
-          <span className="k-ButtonIcon
-                           k-ButtonIcon--default
-                           k-ButtonIcon--withoutHover
-                           k-ButtonIcon--tiny">
+        <div className={ classNames("k-ExternalRichLink__element",
+                                    "k-ExternalRichLink__element--animate") }>
+          <span className={ classNames("k-ButtonIcon",
+                                       "k-ButtonIcon--hydrogen",
+                                       "k-ButtonIcon--withoutHover",
+                                       "k-ButtonIcon--tiny",
+                                       "k-ButtonIcon--verticalArrow") }>
             <svg className="k-ButtonIcon__svg"
                  viewBox="0 0 10 10"
                  xmlns="http://www.w3.org/2000/svg">

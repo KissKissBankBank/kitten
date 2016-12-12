@@ -46,7 +46,7 @@ const platformSwitchProps = {
   positionedWithBorder: true,
 
   buttonId: 'k-PlatformSwitch',
-  buttonClassName: 'k-ButtonIcon k-ButtonIcon--default k-ButtonIcon--dropdown ' +
+  buttonClassName: 'k-ButtonIcon k-ButtonIcon--hydrogen k-ButtonIcon--dropdown ' +
                    'k-Dropdown__button--rotationOnExpanded',
   buttonContentOnExpanded: unloggedHeaderPlatformSwitchButton,
   buttonContentOnCollapsed: unloggedHeaderPlatformSwitchButton,
@@ -59,7 +59,9 @@ const platformSwitchProps = {
                                list={ platformSwitchDropdownList } />,
   onToggle: function() {
     // Example event to trigger
-    window.dispatchEvent(new Event("karl:platformSwitch:toggle"))
+    const event = document.createEvent('Event')
+    event.initEvent('karl:platformSwitch:toggle', true, true)
+    window.dispatchEvent(event)
   }
 }
 

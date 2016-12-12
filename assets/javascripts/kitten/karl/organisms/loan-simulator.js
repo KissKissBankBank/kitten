@@ -33,4 +33,24 @@ const KarlLoanSimulator = defaultProps(LoanSimulator, {
   actionLabel: `C’est parti${nbsp}!`,
 })
 
-export { KarlLoanSimulator }
+const KarlLoanSimulatorWithCommission = defaultProps(KarlLoanSimulator, {
+  displayCommission: true,
+  commissionLabel: `Commission${nbsp}:`,
+  commissionRate: function(duration) {
+    if (duration <= 9)
+      return 0.03
+    else if (duration <= 18)
+      return 0.04
+    else if (duration <= 24)
+      return 0.05
+    else
+      return 0.06
+  },
+
+  initialAmount: 2500,
+
+  actionLabel: null,
+})
+
+
+export { KarlLoanSimulator, KarlLoanSimulatorWithCommission }

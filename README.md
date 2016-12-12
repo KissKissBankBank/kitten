@@ -5,7 +5,7 @@ create flexible components based on your own brand elements (colors, fonts,
 typographic scale, etc.).
 
 It is an npm module coupled with a Rails engine that provides an integrated
-styleguide.
+styleguide. It should eventually be separated into two different repositories.
 
 ![Kittens](http://i.imgur.com/EbGhfDH.gif)
 
@@ -14,8 +14,8 @@ styleguide.
 
 - Ruby 2.2.4
 - Bundler (`gem install bundler`)
-- Node > 0.12 (for stylelint)
-- Webpack
+- Node ~> 6.0
+- Npm >= 3.0
 
 ## Table of content
 - [Installation](#installation)
@@ -35,28 +35,8 @@ You can choose to use the npm module only or with the Rails engine.
 
 ### Npm
 
-As the `kitten` and `sassy-map` modules are on a
-[private registry on Gemfury](https://gemfury.com/help/npm-registry),
-you have to setup your npm configuration aka your `.npmrc` to be able to
-install all npm dependencies.
-
-Set your default registry in your `.npmrc`:
-
 ```sh
-npm config set registry https://npm-proxy.fury.io/bob/
-```
-
-Set your authentication token in your `.npmrc` by providing your Gemfury
-username and password:
-
-```sh
-npm login
-```
-
-Install the dependency:
-
-```sh
-npm install kitten --save-dev
+npm install kitten-components --save-dev
 ```
 
 ### Rails engine
@@ -176,7 +156,7 @@ Then, run:
 ```sh
 $ bundle                 # install gem dependencies
 $ npm install --only=dev # install node dependencies
-$ rake
+$ bundle exec rake
 ```
 
 ### Dummy style guide
@@ -185,8 +165,7 @@ To launch the style guide on the dummy app:
 
 ```sh
 $ cd spec/dummy
-$ bundle
-$ npm install
+$ bin/install
 $ foreman start
 ```
 
@@ -245,29 +224,27 @@ To release a new version:
 - Pull `master`
 - Update the version in `lib/kitten/version.rb`.
 - Update the version in `package.json`.
-- Update the version in `CHANGELOG.md` and add a new `[unreleased]` section.
+- Update the `CHANGELOG.md` file:
+  * Update the version.
+  * Add a new `[unreleased]` section.
+  * Check that [each merged
+    PR](https://github.com/KissKissBankBank/kitten/commits/master)
+    from the last release has an entry.
 
 - Run this command:
 
 ```sh
 $ bundle exec rake kitten_release
 ```
+### Npm
 
-### Gemfury
+Save your credentials in your `.npmrc`:
+```
+npm adduser
+```
 
-As the `kitten` module is on a [private registry on
-Gemfury](https://gemfury.com/help/npm-registry), you have to make sure you have
-publication rights on the Gemfury repository, then:
-
-You can upload the new `pkg/kitten-*.gem` build to Gemfury.
-
-And:
+Then:
 
 ```
 npm publish
 ```
-
-### Github
-
-You can now rename the "Next release" milestone to "Release vX.X.X" and close
-it. Finally, make sure you create a new milestone called "Next release".
