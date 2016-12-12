@@ -1,13 +1,19 @@
-<%= example 'Link box' do %>
-  <a class="k-LinkBox" href="#">
+<%= example 'Link box with icon' do %>
+  <a class="k-LinkBox k-LinkBox--withIcon" href="#">
     <div class="k-LinkBox__container">
+      <div class="k-LinkBox__icon">
+        <%= inline_svg "icons/icon-link-box.svg",
+                       class: "k-LinkBox__svg" %>
+      </div>
+
       <div class="k-LinkBox__paragraph">
         <p class="k-LinkBox__title">Lorem ipsum dolor sit amet</p>
         <p class="k-LinkBox__text">Aenean leo ligula, porttitor eu, vitae eleifend
         ac, enimiquam ante.</p>
       </div>
 
-      <div class="k-LinkBox__navigation k-LinkBox__navigation--withAnimation">
+      <div class="k-LinkBox__navigation
+                  k-LinkBox__navigation--withAnimation">
         <span title="Suivant" class="k-LinkBox__button
                                      k-ButtonIcon
                                      k-ButtonIcon--hydrogen
@@ -23,5 +29,6 @@
         </span>
       </div>
     </div>
+
   </a>
 <% end %>
