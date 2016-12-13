@@ -7,7 +7,7 @@ class LinkBox extends React.Component {
     if (this.props.iconDisplay) {
       return (
         <div className="k-LinkBox__icon">
-          <div dangerouslySetInnerHTML={{__html: this.props.iconSrc }} />
+          <div dangerouslySetInnerHTML={{__html: this.props.iconSrc }@dnn} />
         </div>
       )
     }
@@ -30,11 +30,11 @@ class LinkBox extends React.Component {
 
           <div className="k-LinkBox__navigation k-LinkBox__navigation--withAnimation">
             <span title="Suivant" className="k-LinkBox__button
-                                         k-ButtonIcon
-                                         k-ButtonIcon--hydrogen
-                                         k-ButtonIcon--tiny
-                                         k-ButtonIcon--withoutHover
-                                         k-ButtonIcon--verticalArrow">
+                                             k-ButtonIcon
+                                             k-ButtonIcon--hydrogen
+                                             k-ButtonIcon--tiny
+                                             k-ButtonIcon--withoutHover
+                                             k-ButtonIcon--verticalArrow">
               <svg className="k-ButtonIcon__svg"
                    xmlns="http://www.w3.org/2000/svg"
                    viewBox="0 0 10 10">
