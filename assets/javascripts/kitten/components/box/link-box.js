@@ -7,7 +7,7 @@ class LinkBox extends React.Component {
     if (this.props.iconDisplay) {
       return (
         <div className="k-LinkBox__icon">
-          <div dangerouslySetInnerHTML={{__html: this.props.iconSrc }@dnn} />
+          <div dangerouslySetInnerHTML={{__html: this.props.iconSrc}} />
         </div>
       )
     }
