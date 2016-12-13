@@ -2,6 +2,8 @@ require('babel-register')()
 
 var jsdom = require('jsdom').jsdom
 var exposedProperties = ['window', 'navigator', 'document']
+var chai = require('chai')
+var chaiEnzyme = require('chai-enzyme')
 
 global.document = jsdom('')
 global.window = document.defaultView
@@ -18,3 +20,5 @@ global.navigator = {
 }
 
 documentRef = document
+
+chai.use(chaiEnzyme())

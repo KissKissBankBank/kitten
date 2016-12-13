@@ -14,14 +14,14 @@ const component = mount(
 
 describe('<TextareaWithCounter />', () => {
 
-  it('has a label', () => {
-    expect(component.find('label').html()).to.equal(
-      '<label for="textarea-with-counter-test">Ma description</label>'
-    )
+  it('has a label with attribute `for`', () => {
+    expect(component.find('label')).to.have.length(1)
+    expect(component.find('label')).to.have.attr('for', 'textarea-with-counter-test')
   })
 
   it('has a textarea', () => {
     expect(component.find('textarea')).to.have.length(1)
+    expect(component.find('textarea')).to.have.id('textarea-with-counter-test')
   })
 
   it('has a counter', () => {

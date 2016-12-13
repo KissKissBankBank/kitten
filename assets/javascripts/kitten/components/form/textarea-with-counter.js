@@ -41,6 +41,7 @@ class TextareaWithCounter extends React.Component {
       <div>
         <label htmlFor={ id }>{ label }</label>
         <textarea ref="textareaWithCounter"
+                  id={ id }
                   className="k-TextInput"
                   rows={ rows }
                   maxLength={ limit }
