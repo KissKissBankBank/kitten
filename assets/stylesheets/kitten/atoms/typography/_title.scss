@@ -22,39 +22,22 @@
   }
 
   .k-Title--primary {
-    $font-step: 7;
-    $font-step-large: 12;
-
-    @include k-FontSize($font-step, $font-step-large);
+    @include k-typographyFontScale($font-step: 7, $font-step-on-media: 12);
   }
 
   .k-Title--secondary {
-    $font-step: 6;
-    $font-step-large: 9;
-
-    @include k-FontSize($font-step, $font-step-large);
+    @include k-typographyFontScale($font-step: 6, $font-step-on-media: 9);
   }
+
   .k-Title--tertiary {
-    $font-step: 5;
-    $font-step-large: 7;
-
-    @include k-FontSize($font-step, $font-step-large);
+    @include k-typographyFontScale($font-step: 5, $font-step-on-media: 7);
   }
+
   .k-Title--quaternary {
-    $font-step: 4;
-    $font-step-large: 5;
-
-    @include k-FontSize($font-step, $font-step-large);
+    @include k-typographyFontScale($font-step: 4, $font-step-on-media: 5);
   }
+
   .k-Title--quinary {
-    $font-step: 2;
-    $font-step-large: 4;
-
-    @include k-FontSize($font-step, $font-step-large);
+    @include k-typographyFontScale($font-step: 2, $font-step-on-media: 4);
   }
-}
-
-@mixin k-FontSize($font-step, $font-step-large) {
-  @include k-typographyFontSize($font-step);
-  @include k-media-min('s') { @include k-typographyFontSize($font-step-large); }
 }

@@ -21,33 +21,18 @@
   }
 
   .k-Paragraph--primary {
-    $font-step: 1;
-    $font-step-large: 2;
-
-    @include k-FontSize($font-step, $font-step-large);
+    @include k-typographyFontScale($font-step: 1, $font-step-on-media: 2);
   }
 
   .k-Paragraph--secondary {
-    $font-step: 0;
-    $font-step-large: 1;
-
-    @include k-FontSize($font-step, $font-step-large);
+    @include k-typographyFontScale($font-step: 0, $font-step-on-media: 1);
   }
+
   .k-Paragraph--tertiary {
-    $font-step: 0;
-    $font-step-large: 0;
-
-    @include k-FontSize($font-step, $font-step-large);
+    @include k-typographyFontScale();
   }
+
   .k-Paragraph--quaternary {
-    $font-step: -1;
-    $font-step-large: -1;
-
-    @include k-FontSize($font-step, $font-step-large);
+    @include k-typographyFontScale($font-step: -1);
   }
-}
-
-@mixin k-FontSize($font-step, $font-step-large: null) {
-  @include k-typographyFontSize($font-step);
-  @include k-media-min('s') { @include k-typographyFontSize($font-step-large); }
 }
