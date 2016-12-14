@@ -19,18 +19,21 @@
 /// @example scss - Usage
 ///   $k-typography: (
 ///     font-size:   1rem,
-///     scale-multiplier: 1.125
+///     line-height: 1.5rem,
+///     scale-multiplier: 1.618
 ///     ...
 ///   );
 ///
-///   @include k-typographyFontScale(3);
+///   @include k-typographyFontSize(3);
 ///
 /// @example css - CSS output
-///   font-size:   1.424rem;
+///   font-size:   4.236rem;
+///   line-height: 4.5rem;
 @mixin k-typographyFontScale($font-step: 0,
                              $font-step-on-media: null,
-                             $media-size: 's') {
-  @include k-typographyFontSize($font-step);
+                             $media-size: 's',
+                             $line-height: null) {
+  @include k-typographyFontSize($font-step, $line-height);
 
   @if $font-step-on-media {
     @include k-media-min($media-size) {
