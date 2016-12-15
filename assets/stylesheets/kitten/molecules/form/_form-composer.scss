@@ -20,9 +20,7 @@
 ///     </div>
 ///
 ///     <div className="k-FormComposer__element k-FormComposer__element--main">
-///       <SelectWithState name="currency"
-///                        options={ this.props.currencyOptions }
-///                        value={ this.props.value } />
+///       <div class="k-Select"> … </div>
 ///     </div>
 ///   </div>
 
