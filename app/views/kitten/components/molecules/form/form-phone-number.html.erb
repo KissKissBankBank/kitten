@@ -1,12 +1,12 @@
 <%= example "Form phone number" do %>
   <%= react_component('FormPhoneNumber', props: {
       areaZoneOptions: [
-        { value: '+33(fr)', label: '+33(FR)'},
-        { value: '+44(uk)', label: '+44(UK)'},
-        { value: '+34(es)', label: '+34(ES)'},
-        { value: '+39(it)', label: '+39(IT)'}
+        { value: '+33(fr)', label: '+33(FR)' },
+        { value: '+44(uk)', label: '+44(UK)' },
+        { value: '+34(es)', label: '+34(ES)' },
+        { value: '+39(it)', label: '+39(IT)' }
       ],
-      value: '+33',
+      name: 'areaZone',
       placeholder: 'Lorem ipsum dolor sit amet',
     }
   ) %>

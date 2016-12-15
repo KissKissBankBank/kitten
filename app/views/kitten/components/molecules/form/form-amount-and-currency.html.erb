@@ -1,11 +1,12 @@
 <%= example "Form amount and currency" do %>
   <%= react_component('FormAmountAndCurrency', props: {
       currencyOptions: [
-        { value: 'usd', label: 'USD'},
-        { value: 'cad', label: 'CAD'},
-        { value: 'gbp', label: 'GBP'},
-        { value: 'eur', label: 'EUR'}
+        { value: 'usd', label: 'USD' },
+        { value: 'cad', label: 'CAD' },
+        { value: 'gbp', label: 'GBP' },
+        { value: 'eur', label: 'EUR' }
       ],
+      name: 'currency',
       value: 'usd',
       placeholder: 'Lorem ipsum dolor sit amet',
     }
