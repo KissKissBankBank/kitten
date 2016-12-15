@@ -4,13 +4,13 @@ import SelectWithState from 'kitten/components/form/select-with-state'
 function FormAmountAndCurrency(props) {
   return (
     <div className="k-FormComposer">
-      <div className="k-FormComposer__element">
+      <div className="k-FormComposer__element k-FormComposer__element--main">
         <input className="k-TextInput k-TextInput--tiny"
                type="text"
                placeholder={ props.placeholder } />
       </div>
 
-      <div className="k-FormComposer__element k-FormComposer__element--main">
+      <div className="k-FormComposer__element">
         <SelectWithState name={ props.name }
                          options={ props.currencyOptions }
                          value={ props.value } />
