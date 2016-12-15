@@ -13,6 +13,7 @@ Fixes:
 - Change font color for disabled elements on checkboxes and radio buttons
 - Change font color for pressed elements on checkboxes and radio buttons
 - Change font type for radio buttons
+- Change font and font size of small checkboxes
 - Remove hover on radio buttons and checkboxes
 - Change large paragraph font size for radio buttons containers
 
