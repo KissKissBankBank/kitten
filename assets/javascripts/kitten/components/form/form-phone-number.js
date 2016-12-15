@@ -5,7 +5,7 @@ function FormPhoneNumber(props) {
   return (
     <div className="k-FormComposer">
       <div className="k-FormComposer__element k-FormComposer__element--main">
-        <SelectWithState name="currency"
+        <SelectWithState name={ props.name }
                          options={ props.areaZoneOptions }
                          value={ props.value } />
       </div>

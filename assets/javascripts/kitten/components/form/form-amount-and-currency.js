@@ -11,7 +11,7 @@ function FormAmountAndCurrency(props) {
       </div>
 
       <div className="k-FormComposer__element k-FormComposer__element--main">
-        <SelectWithState name="currency"
+        <SelectWithState name={ props.name }
                          options={ props.currencyOptions }
                          value={ props.value } />
       </div>
