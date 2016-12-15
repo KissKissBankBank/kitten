@@ -45,12 +45,12 @@
 @mixin k-typographyFontScale($font-step: 0,
                              $font-step-on-media: null,
                              $media-size: 's',
-                             $line-height-on-media: null,
-                             $line-height: null) {
+                             $line-height: null,
+                             $line-height-on-media: null) {
   @include k-typographyFontSize($font-step, $line-height);
 
   @if $font-step-on-media {
-    @if not $line-height-on-media { $line-height-on-media: $line-height }
+    $line-height-on-media: $line-height !default;
     @include k-media-min($media-size) {
       @include k-typographyFontSize($font-step-on-media, $line-height-on-media);
     }
