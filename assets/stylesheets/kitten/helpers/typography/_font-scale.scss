@@ -6,14 +6,14 @@
 /// Font-step-on-media is optional. If it is not defined, it will be set to the
 /// regular font step.
 ///
-/// media-size will be computed directly using the modular scale. It is
+/// Media-size will be computed directly using the modular scale. It is
 /// optional and is set to media 's' by default. It's the minimum media size
-/// from where the large font step has to be applied.
+/// from where a specified font step has to be applied.
 ///
 /// @group typography
 ///
 /// @parameter {Number} $font-step                 - the modular scale step to compute
-/// @parameter {Number} $font-step-on-media [null] - the font step on large media
+/// @parameter {Number} $font-step-on-media [null] - the font step on the media specified by $media-size
 /// @parameter {String} $media-size ['s']          - the minimum media to be considered as large
 ///
 /// @example scss - Usage
