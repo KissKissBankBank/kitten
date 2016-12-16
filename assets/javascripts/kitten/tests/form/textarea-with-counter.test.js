@@ -15,20 +15,29 @@ const component = mount(
 describe('<TextareaWithCounter />', () => {
 
   it('has a label with attribute `for`', () => {
-    expect(component.find('label')).to.have.length(1)
-    expect(component.find('label')).to.have.attr('for', 'textarea-with-counter-test')
+    const label = component.find('label')
+
+    expect(label).to.have.length(1)
+    expect(label).to.have.attr('for', 'textarea-with-counter-test')
   })
 
-  it('has a textarea', () => {
-    expect(component.find('textarea')).to.have.length(1)
-    expect(component.find('textarea')).to.have.id('textarea-with-counter-test')
+  it('has a textarea with attributes', () => {
+    const textarea = component.find('textarea')
+
+    expect(textarea).to.have.length(1)
+    expect(textarea).to.have.id('textarea-with-counter-test')
+    expect(textarea).to.have.attr('rows', '5')
+    expect(textarea).to.have.attr('maxLength', '1000')
+    expect(textarea).to.have.attr('placeholder', 'Description sommaire du créateur')
   })
 
   it('has a counter', () => {
-    expect(component.find('span').text()).to.be.equal('1000')
+    const counter = component.find('.k-TextareaWithCounter__counter')
+
+    expect(counter.text()).to.be.equal('1000')
   })
 
-  it('update characters remaining when input value changes', () => {
+  it('update characters remaining when value changes', () => {
     const textarea = component.ref('textareaWithCounter')
     const value = 'Ceci est ma description !'
     const counter = 1000 - value.length
