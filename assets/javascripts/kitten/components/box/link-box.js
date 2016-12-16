@@ -2,12 +2,11 @@ import React from 'react'
 import classNames from 'classnames'
 
 class LinkBox extends React.Component {
-
   renderIcon() {
     if (this.props.iconDisplay) {
       return (
         <div className="k-LinkBox__icon">
-          <div dangerouslySetInnerHTML={{__html: this.props.iconSrc}} />
+          <div dangerouslySetInnerHTML={{__html: this.props.iconUrl}} />
         </div>
       )
     }
