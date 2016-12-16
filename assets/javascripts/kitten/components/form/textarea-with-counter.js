@@ -15,10 +15,15 @@ class TextareaWithCounter extends React.Component {
     super(props)
 
     this.state = {
+      limit: this.props.limit,
       counter: this.props.limit
     }
 
     this.handleChange = this.handleChange.bind(this)
+  }
+
+  componentDidMount() {
+    this.getLimit()
   }
 
   handleChange() {
@@ -27,15 +32,26 @@ class TextareaWithCounter extends React.Component {
     })
   }
 
+  getLimit() {
+    fetch('/kitten/projects/default-props')
+      .then((response) => response.json())
+      .then((data) => {
+        this.setState({
+          limit: data.limit,
+          counter: data.limit
+        })
+      })
+  }
+
   charactersRemaining() {
     if (!this.refs.textareaWithCounter.value)
-      return this.props.limit
+      return this.state.limit
 
-    return this.props.limit - this.refs.textareaWithCounter.value.length
+    return this.state.limit - this.refs.textareaWithCounter.value.length
   }
 
   render() {
-    const { id, label, rows, placeholder, textareaValue, limit } = this.props
+    const { id, label, rows, placeholder, textareaValue } = this.props
 
     return (
       <div>
@@ -44,7 +60,7 @@ class TextareaWithCounter extends React.Component {
                   id={ id }
                   className="k-TextInput"
                   rows={ rows }
-                  maxLength={ limit }
+                  maxLength={ this.state.limit }
                   placeholder={ placeholder }
                   onChange={ this.handleChange }>{ textareaValue }</textarea>
         <Counter counter={ this.state.counter } />
