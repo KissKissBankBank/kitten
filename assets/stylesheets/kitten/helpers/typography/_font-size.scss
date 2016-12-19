@@ -51,7 +51,7 @@
   @if not $line-height {
     // If line-height is not defined, we use the vertical rhythm rule to compute
     // if. Line height should be the closest multiple of the base line height.
-    @if $title == true {
+    @if $title == false {
       $line-height: $font-size * 1.6;
     } @else {
       $line-height: ceil($font-size / $base-line-height) * $base-line-height;
