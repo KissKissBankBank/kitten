@@ -13,6 +13,8 @@
 
 // Form
 
+@include k-FormComposer;
+
 @include k-SearchInput;
 
 @include k-Select((
