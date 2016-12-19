@@ -4,6 +4,7 @@ import ReactOnRails from 'react-on-rails';
 
 // Box
 import LinkBox from 'kitten/components/box/link-box'
+import DocLinkBox from 'kitten/components/box/doc-link-box'
 
 // Buttons
 import ButtonImageWithTextAndBadge from 'kitten/components/buttons/button-image-with-text-and-badge'
@@ -56,6 +57,7 @@ import { KarlLoanSimulator,
 
 ReactOnRails.register({
   ButtonImageWithTextAndBadge,
+  DocLinkBox,
   Dropdown,
   DropdownButton,
   ExternalRichLink,

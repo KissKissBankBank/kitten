@@ -3,10 +3,10 @@ import classNames from 'classnames'
 
 class LinkBox extends React.Component {
   renderIcon() {
-    if (this.props.iconDisplay) {
+    if (this.props.displayIcon) {
       return (
         <div className="k-LinkBox__icon">
-          <div dangerouslySetInnerHTML={{__html: this.props.iconUrl}} />
+          { this.props.children }
         </div>
       )
     }
@@ -15,7 +15,7 @@ class LinkBox extends React.Component {
   render() {
     let linkBoxClassNames = classNames(
       'k-LinkBox',
-      { 'k-LinkBox--withIcon': this.props.iconDisplay },
+      { 'k-LinkBox--withIcon': this.props.displayIcon },
     )
 
     return (
@@ -49,7 +49,7 @@ class LinkBox extends React.Component {
 }
 
 LinkBox.defaultProps = {
-  iconDisplay: false,
+  displayIcon: false,
   href: '#',
 }
 
