@@ -13,6 +13,7 @@ Features:
 - Add `k-FormComposer` component.
 - Add new `FormAmountAndCurrency` React component.
 - Add new `FormPhoneNumber` React component.
+- New `DevGrid` React component.
 
 Fixes:
 - Change font color for disabled elements on checkboxes and radio buttons.
