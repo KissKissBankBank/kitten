@@ -16,6 +16,7 @@ Fixes:
 - Change font and font size of small checkboxes.
 - Remove hover on radio buttons and checkboxes.
 - Change large paragraph font size for radio buttons containers.
+- Remove loan simulator left margins.
 
 ## [v3.1.0] - 2016-12-08
 
