@@ -13,6 +13,7 @@ Features:
 - Add `k-FormComposer` component.
 - Add new `FormAmountAndCurrency` React component.
 - Add new `FormPhoneNumber` React component.
+- Add new `k-Button--carbon` and `k-ButtonIcon--carbon`.
 
 Fixes:
 - Change font color for disabled elements on checkboxes and radio buttons.
