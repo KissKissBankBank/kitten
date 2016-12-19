@@ -15,19 +15,19 @@
 /// @example html
 ///   <a class="k-LinkBox k-LinkBox--withIcon" href="#">
 ///     <div class="k-LinkBox__container">
-///       <div class="k-LinkBox__icon">…</div>
+///       <div class="k-LinkBox__icon"> … </div>
 ///       <div class="k-LinkBox__paragraph">
-///         <p class="k-LinkBox__title"></p>
-///         <p class="k-LinkBox__text"></p>
+///         <p class="k-LinkBox__title"> … </p>
+///         <p class="k-LinkBox__text"> … </p>
 ///       </div>
-///       <div class="k-LinkBox__navigation">
+///       <div class="k-LinkBox__navigation k-LinkBox__navigation--withAnimation">
 ///         <span title="Suivant" class="k-LinkBox__button
 ///                                      k-ButtonIcon
 ///                                      k-ButtonIcon--hydrogen
 ///                                      k-ButtonIcon--tiny
 ///                                      k-ButtonIcon--withoutHover
 ///                                      k-ButtonIcon--verticalArrow">
-///           <svg>…</svg>
+///           <svg> … </svg>
 ///         </span>
 ///       </div>
 ///     </div>
