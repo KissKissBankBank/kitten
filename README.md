@@ -192,11 +192,10 @@ The documentation is accessible on development environment: `/kitten/sassdoc`.
 To launch the JS tests:
 
 ```sh
-npm test
+bin/test
 ```
 
-Check out the [guidelines](../../kitten/wiki/Component-testing) to know how is integrated tests in
-kitten.
+Check out the [guidelines](../../kitten/wiki/Component-testing) to know how to test kitten.
 
 ## Contributing
 
