@@ -9,7 +9,7 @@
 /// @example html
 ///
 ///   <div class="k-Card k-Card--light">
-///     …
+///     <div style="k-Card--padded">...</div>
 ///   </div>
 @mixin k-Card {
   $light-background-color: map-get($k-colors, 'background-1');
@@ -27,5 +27,10 @@
   .k-Card--light {
     background: $light-background-color;
     color: $light-text-color;
+  }
+
+  .k-Card--padded {
+    padding-left: k-px-to-rem(50px);
+    padding-right: k-px-to-rem(50px);
   }
 }
