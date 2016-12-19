@@ -4,12 +4,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+Breaking changes:
+- Remove `k-TypographyScale`.
+
 Features:
 - Add `k-Title` to style titles.
 - Add `k-Paragraph` to style paragraphs.
-
-Breaking changes:
-- Remove `k-TypographyScale`.
 
 ## [v3.1.0] - 2016-12-08
 
