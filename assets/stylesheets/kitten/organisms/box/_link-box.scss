@@ -38,7 +38,7 @@
   // Base
   $color: map-get($k-colors, 'font-1');
   $background-color: map-get($k-colors, 'background-1');
-  $border-color: map-get($k-colors, 'line-1');
+  $border-color: map-get($k-colors, 'line-2');
 
   // Active
   $background-color-active: map-get($k-colors, 'line-1');
@@ -80,6 +80,10 @@
 
     .k-LinkBox--withIcon & {
       width: k-px-to-rem(395px);
+
+      @include k-media-max('s') {
+        width: k-px-to-rem(305px);
+      }
     }
   }
 
@@ -96,6 +100,10 @@
     background-color: $background-color-icon;
     border-top-left-radius: $border-radius;
     border-bottom-left-radius: $border-radius;
+
+    @include k-media-max('s') {
+      display: none;
+    }
   }
 
   .k-LinkBox__icon--svg {
