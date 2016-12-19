@@ -16,7 +16,7 @@
   // Font
   $font: 'source-sans-light';
   $font-step: -1;
-  $font-step-on-lg: 0;
+  $font-step-on-media: 0;
   $line-height: 1.5;
 
   // Bullet properties
@@ -58,6 +58,6 @@
   }
 
   .k-BulletList__item--large {
-    @include k-typographyFontSize($font-step-on-lg);
+    @include k-typographyFontSize($font-step-on-media);
   }
 }

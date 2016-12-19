@@ -5,17 +5,17 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 Features:
-- Add small radio buttons label
-- Add small paragraph for radio buttons containers
-- Add large bullet list
+- Add small radio buttons label.
+- Add small paragraph for radio buttons containers.
+- Add large bullet list.
 
 Fixes:
-- Change font color for disabled elements on checkboxes and radio buttons
-- Change font color for pressed elements on checkboxes and radio buttons
-- Change font type for radio buttons
-- Change font and font size of small checkboxes
-- Remove hover on radio buttons and checkboxes
-- Change large paragraph font size for radio buttons containers
+- Change font color for disabled elements on checkboxes and radio buttons.
+- Change font color for pressed elements on checkboxes and radio buttons.
+- Change font type for radio buttons.
+- Change font and font size of small checkboxes.
+- Remove hover on radio buttons and checkboxes.
+- Change large paragraph font size for radio buttons containers.
 
 ## [v3.1.0] - 2016-12-08
 
