@@ -242,7 +242,7 @@ class LoanSimulator extends React.Component {
           </div>
           { errorTag }
         </div>
-        <div className="k-LoanSimulator__reimbursing">
+        <div>
           <label className="k-Label k-LoanSimulator__label"
                  onClick={ this.handleInstallmentLabelClick }>
             { this.props.installmentLabel }

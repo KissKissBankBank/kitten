@@ -1,7 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 
-class LinkBox extends React.Component {
+export default class LinkBox extends React.Component {
   renderIcon() {
     if (this.props.displayIcon) {
       return (
@@ -28,12 +28,12 @@ class LinkBox extends React.Component {
           </div>
 
           <div className="k-LinkBox__navigation k-LinkBox__navigation--withAnimation">
-            <span title="Suivant" className="k-LinkBox__button
-                                             k-ButtonIcon
-                                             k-ButtonIcon--hydrogen
-                                             k-ButtonIcon--tiny
-                                             k-ButtonIcon--withoutHover
-                                             k-ButtonIcon--verticalArrow">
+            <span className="k-LinkBox__button
+                             k-ButtonIcon
+                             k-ButtonIcon--hydrogen
+                             k-ButtonIcon--tiny
+                             k-ButtonIcon--withoutHover
+                             k-ButtonIcon--verticalArrow">
               <svg className="k-ButtonIcon__svg"
                    xmlns="http://www.w3.org/2000/svg"
                    viewBox="0 0 10 10">
@@ -52,5 +52,3 @@ LinkBox.defaultProps = {
   displayIcon: false,
   href: '#',
 }
-
-export default LinkBox

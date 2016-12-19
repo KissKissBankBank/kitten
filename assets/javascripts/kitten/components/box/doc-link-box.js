@@ -1,7 +1,7 @@
 import React from 'react'
 import LinkBox from './link-box'
 
-class DocLinkBox extends React.Component {
+export default class DocLinkBox extends React.Component {
   render() {
     return (
       <LinkBox { ...this.props } displayIcon={ true } >
@@ -11,5 +11,3 @@ class DocLinkBox extends React.Component {
     )
   }
 }
-
-export default DocLinkBox
