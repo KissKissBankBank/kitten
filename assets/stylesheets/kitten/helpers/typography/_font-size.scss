@@ -23,7 +23,7 @@
 /// @example css - CSS output
 ///   font-size:   4.236rem;
 ///   line-height: 4.5rem;
-@mixin k-typographyFontSize($step: 0, $line-height: null) {
+@mixin k-typographyFontSize($step: 0, $line-height: null, $title: false) {
   // Modular scale multiplier
   $multiplier: k-map-fetch($k-typography, 'scale-multiplier');
 
@@ -51,7 +51,11 @@
   @if not $line-height {
     // If line-height is not defined, we use the vertical rhythm rule to compute
     // if. Line height should be the closest multiple of the base line height.
-    $line-height: ceil($font-size / $base-line-height) * $base-line-height;
+    @if $title == true {
+      $line-height: $font-size * 1.6;
+    } @else {
+      $line-height: ceil($font-size / $base-line-height) * $base-line-height;
+    }
   }
 
   // Apply font size and line height.
