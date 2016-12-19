@@ -7,6 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [v3.1.0] - 2016-12-08
 
 Features:
+- Add test setup.
 - Add `k-FormComposer` component.
 - Add new `FormAmountAndCurrency` React component.
 - Add new `FormPhoneNumber` React component.
