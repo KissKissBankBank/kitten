@@ -23,7 +23,6 @@ Fixes:
 - Change large paragraph font size for radio buttons containers.
 - Remove loan simulator left margins.
 - Fix size unit text input.
-- Remove unused sassy-maps option in package.
 
 ## [v3.1.0] - 2016-12-08
 
@@ -37,6 +36,7 @@ Features:
 
 Fixes:
 - Fix dependencies paths.
+- Remove unused sassy-maps option in package.
 
 ## [v3.0.0] - 2016-12-08
 
