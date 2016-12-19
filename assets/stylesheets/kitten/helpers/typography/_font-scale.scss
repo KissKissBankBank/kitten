@@ -1,23 +1,23 @@
 /// Apply a font scale using according to media view.
 ///
-/// Font-step will be computed directly using the modular scale. It is optional
+/// `font-step` will be computed directly using the modular scale. It is optional
 /// and set to 0 by default the regular font step.
 ///
-/// Font-step-on-media is optional. If it is not defined, it will be set to the
+/// `font-step-on-media` is optional. If it is not defined, it will be set to the
 /// regular font step.
 ///
-/// Media-size will be computed directly using the modular scale. It is
+/// `media-size` will be computed directly using the modular scale. It is
 /// optional and is set to media 's' by default. It's the minimum media size
 /// from where a specified font step has to be applied.
 ///
-/// Line-height is optional. If it is not defined, it will be set with default
-/// line height calculated in font size mixin
+/// `line-height` is optional. If it is not defined, it will be set with default
+/// line height computed in font size mixin.
 ///
-/// Line-height-on-media is optional and set to Line-height value if not
+/// `line-height-on-media` is optional and set to line-height value if not
 /// defined. It will be applied only if the minimum media size is reached.
 ///
-/// Paragraph is optional and set to false if not explicitely defined. If it's
-/// true, the line height is set up to the font size value.
+/// `paragraph` is optional and set to false if not explicitely defined. If
+/// set to true, the line height is set up to the font size value.
 ///
 /// @group typography
 ///
