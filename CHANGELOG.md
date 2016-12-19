@@ -13,6 +13,11 @@ Features:
 - Add large bullet list.
 - Add `k-Title` to style titles.
 - Add `k-Paragraph` to style paragraphs.
+- Add new `LinkBox` React component.
+- Add new `DocLinkBox` React component.
+- Add `k-FormComposer` component.
+- Add new `FormAmountAndCurrency` React component.
+- Add new `FormPhoneNumber` React component.
 
 Fixes:
 - Change font color for disabled elements on checkboxes and radio buttons.
@@ -22,13 +27,11 @@ Fixes:
 - Remove hover on radio buttons and checkboxes.
 - Change large paragraph font size for radio buttons containers.
 - Remove loan simulator left margins.
+- Fix size unit text input.
 
 ## [v3.1.0] - 2016-12-08
 
 Features:
-- Add `k-FormComposer` component.
-- Add new `FormAmountAndCurrency` React component.
-- Add new `FormPhoneNumber` React component.
 - Add commission displaying to class `LoanSimulator`.
 - Add text inactive style `k-u--inactive`.
 - Add text active style `k-u--active`.
@@ -38,8 +41,6 @@ Features:
 
 Fixes:
 - Fix dependencies paths.
-
-Fix:
 - Remove unused sassy-maps option in package.
 
 ## [v3.0.0] - 2016-12-08
