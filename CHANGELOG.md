@@ -21,6 +21,9 @@ Fixes:
 ## [v3.1.0] - 2016-12-08
 
 Features:
+- Add `k-FormComposer` component.
+- Add new `FormAmountAndCurrency` React component.
+- Add new `FormPhoneNumber` React component.
 - Add commission displaying to class `LoanSimulator`.
 - Add text inactive style `k-u--inactive`.
 - Add text active style `k-u--active`.
@@ -49,6 +52,7 @@ Breaking changes:
 
 Features:
 - Add `k-LinkBox` component.
+- Add modifier `k-LinkBox--withIcon` on `k-LinkBox`.
 - Add `k-RadioButton` component.
 - Add `k-BulletList` component.
 
