@@ -7,4 +7,6 @@ Kitten::Engine.routes.draw do
   get 'components/:type/:group/:name' => 'components#show'
   get 'pages/:name' => 'pages#show'
   get 'playground' => 'playgrounds#show'
+
+  get 'projects/default-props' => 'projects#default_props'
 end

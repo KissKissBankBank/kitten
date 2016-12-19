@@ -20,6 +20,7 @@ import Slider from 'kitten/components/form/slider'
 import Select from 'react-select'
 import SelectWithState from 'kitten/components/form/select-with-state'
 import Search from 'kitten/components/form/search'
+import TextareaWithCounter from 'kitten/components/form/textarea-with-counter'
 
 // Icons
 import GrabberIcon from 'kitten/components/icons/grabber-icon'
@@ -88,4 +89,5 @@ ReactOnRails.register({
   KarlPhoneDropdown,
   KarlLoanSimulator,
   KarlLoanSimulatorWithCommission,
+  TextareaWithCounter,
 })
