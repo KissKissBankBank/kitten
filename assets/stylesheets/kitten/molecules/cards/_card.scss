@@ -8,8 +8,8 @@
 ///
 /// @example html
 ///
-///   <div class="k-Card k-Card--light">
-///     <div style="k-Card--padded">...</div>
+///   <div class="k-Card k-Card--light k-Card--padded">
+///     ...
 ///   </div>
 @mixin k-Card {
   $light-background-color: map-get($k-colors, 'background-1');
