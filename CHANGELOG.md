@@ -4,16 +4,25 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+Breaking changes:
+- Remove `k-TypographyScale`.
+
 Features:
+- Add test setup.
 - Add small radio buttons label.
 - Add small paragraph for radio buttons containers.
 - Add large bullet list.
+- Add `k-Title` to style titles.
+- Add `k-Paragraph` to style paragraphs.
 - Add new `LinkBox` React component.
 - Add new `DocLinkBox` React component.
 - Add `k-FormComposer` component.
 - Add new `FormAmountAndCurrency` React component.
 - Add new `FormPhoneNumber` React component.
 - Add new `k-Button--carbon` and `k-ButtonIcon--carbon`.
+- Add hidden input to fetch `duration` data in `k-LoanSimulator` component.
+- New `DevGrid` React component and new CSS components `k-DevGrid` and
+  `k-DevBreakpoint`.
 
 Fixes:
 - Change font color for disabled elements on checkboxes and radio buttons.
@@ -24,6 +33,7 @@ Fixes:
 - Change large paragraph font size for radio buttons containers.
 - Remove loan simulator left margins.
 - Fix size unit text input.
+- Add `LinkBox` and `DocLinkBox` testing.
 
 ## [v3.1.0] - 2016-12-08
 
