@@ -4,15 +4,40 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+Breaking changes:
+- Remove `k-TypographyScale`.
+
 Features:
+- Add test setup.
+- Add small radio buttons label.
+- Add small paragraph for radio buttons containers.
+- Add large bullet list.
+- Add `k-Title` to style titles.
+- Add `k-Paragraph` to style paragraphs.
+- Add new `LinkBox` React component.
+- Add new `DocLinkBox` React component.
+- Add `k-FormComposer` component.
+- Add new `FormAmountAndCurrency` React component.
+- Add new `FormPhoneNumber` React component.
+- Add hidden input to fetch `duration` data in `k-LoanSimulator` component.
+- New `DevGrid` React component and new CSS components `k-DevGrid` and
+  `k-DevBreakpoint`.
 - Add `k-SingleColumn` molecule.
+
+Fixes:
+- Change font color for disabled elements on checkboxes and radio buttons.
+- Change font color for pressed elements on checkboxes and radio buttons.
+- Change font type for radio buttons.
+- Change font and font size of small checkboxes.
+- Remove hover on radio buttons and checkboxes.
+- Change large paragraph font size for radio buttons containers.
+- Remove loan simulator left margins.
+- Fix size unit text input.
+- Add `LinkBox` and `DocLinkBox` testing.
 
 ## [v3.1.0] - 2016-12-08
 
 Features:
-- Add `k-FormComposer` component.
-- Add new `FormAmountAndCurrency` React component.
-- Add new `FormPhoneNumber` React component.
 - Add commission displaying to class `LoanSimulator`.
 - Add text inactive style `k-u--inactive`.
 - Add text active style `k-u--active`.
@@ -22,8 +47,6 @@ Features:
 
 Fixes:
 - Fix dependencies paths.
-
-Fix:
 - Remove unused sassy-maps option in package.
 
 ## [v3.0.0] - 2016-12-08

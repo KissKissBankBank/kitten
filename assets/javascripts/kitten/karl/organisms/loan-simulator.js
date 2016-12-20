@@ -18,6 +18,8 @@ const KarlLoanSimulator = defaultProps(LoanSimulator, {
   installmentLabel: 'Je rembourse',
   installmentName: 'installment',
 
+  durationName: 'duration',
+
   sliderPlaceholder: 'Glisser pour sélectionner',
 
   durationText: 'soit',

@@ -1,27 +1,8 @@
 <%= example 'Link box' do %>
-  <a class="k-LinkBox" href="#">
-    <div class="k-LinkBox__container">
-      <div class="k-LinkBox__paragraph">
-        <p class="k-LinkBox__title">Lorem ipsum dolor sit amet</p>
-        <p class="k-LinkBox__text">Aenean leo ligula, porttitor eu, vitae eleifend
-        ac, enimiquam ante.</p>
-      </div>
-
-      <div class="k-LinkBox__navigation k-LinkBox__navigation--withAnimation">
-        <span title="Suivant" class="k-LinkBox__button
-                                     k-ButtonIcon
-                                     k-ButtonIcon--hydrogen
-                                     k-ButtonIcon--tiny
-                                     k-ButtonIcon--withoutHover
-                                     k-ButtonIcon--verticalArrow">
-          <svg class="k-ButtonIcon__svg"
-               xmlns="http://www.w3.org/2000/svg"
-               viewBox="0 0 10 10">
-            <path d="M7.828,5L6.414,6.413L2.172,2.172l1.414-1.415L7.828,5z"/>
-            <path d="M7.828,5L3.586,9.243L2.172,7.827l4.242-4.241L7.828,5z"/>
-          </svg>
-        </span>
-      </div>
-    </div>
-  </a>
+  <%= react_component('LinkBox', props: {
+    title: 'Lorem Ipsum ',
+    text: 'Aenean leo ligula, porttitor eu, vitae eleifend
+        ac, enimiquam ante.',
+    }
+  ) %>
 <% end %>

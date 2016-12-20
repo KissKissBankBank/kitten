@@ -215,6 +215,12 @@ class LoanSimulator extends React.Component {
       tooltipText = this.props.sliderPlaceholder
     }
 
+    let durationInput
+    if (this.props.durationName)
+      durationInput = <input type="hidden"
+                             name={ this.props.durationName }
+                             value={ this.duration() } />
+
     return (
       <div className={ classNames('k-LoanSimulator', errorClass) }>
         <div className="k-LoanSimulator__amount">
@@ -242,7 +248,7 @@ class LoanSimulator extends React.Component {
           </div>
           { errorTag }
         </div>
-        <div className="k-LoanSimulator__reimbursing">
+        <div>
           <label className="k-Label k-LoanSimulator__label"
                  onClick={ this.handleInstallmentLabelClick }>
             { this.props.installmentLabel }
@@ -262,6 +268,7 @@ class LoanSimulator extends React.Component {
                   onAction={ this.handleInstallmentAction } />
 
           { this.renderCommission() }
+          { durationInput }
         </div>
         { this.renderButton() }
       </div>
@@ -278,6 +285,9 @@ LoanSimulator.propTypes = {
 
   // Name attribute for the hidden installment input (if needed)
   installmentName: React.PropTypes.string,
+
+  // Name attribute for the hidden duration input (if needed)
+  durationName: React.PropTypes.string,
 
   // Placeholder for amount input
   amountPlaceholder: React.PropTypes.string,
