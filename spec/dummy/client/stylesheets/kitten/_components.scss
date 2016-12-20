@@ -1,20 +1,31 @@
 // Buttons
 
+@include k-Button;
+@include k-ButtonIcon;
+@include k-ButtonImage;
 @include k-ButtonImageWithText;
+@include k-ButtonTag;
 @include k-ButtonWithBadge;
+
+// Boxes
+
+@include k-LinkBox;
 
 // Cards
 
 @include k-Card;
 
-// Footer
+// Dropdowns
 
-@include k-Footer;
+@include k-Dropdown;
+@include k-PhoneDropdown;
 
 // Form
 
+@include k-Checkbox;
+@include k-Label;
 @include k-FormComposer;
-
+@include k-RadioButton;
 @include k-SearchInput;
 
 @include k-Select((
@@ -50,7 +61,7 @@
   )
 ));
 
-
+@include k-TextInput;
 @include k-TextInputWithButton((
   font: 'source-sans-semi-bold',
   font-size: -4,
@@ -84,6 +95,10 @@
   unit-colors-is-inactive: #fff,
 ));
 
+// Footer
+
+@include k-Footer;
+
 // Grid
 
 @include k-Grid;
@@ -95,6 +110,10 @@
     light-bottom-border: #eee,
   )
 ));
+
+// Header
+
+@include k-Header;
 
 // Heroes
 
@@ -113,6 +132,10 @@
     link-hover: map-get($k-colors, 'primary-1'),
   ),
 ));
+
+// Lists
+
+@include k-BulletList;
 
 // Navigation
 
@@ -149,11 +172,25 @@
   ),
 ));
 
+// Notifications
+
+@include k-Badge;
+
 // Press
 
 @include k-PressQuotes;
 
+// Popover
+
+@include k-Popover;
+
 // Simulators
+
+@include k-LoanSimulator((
+  colors: (
+    error: red
+  )
+));
 
 @include k-SimulatorResult((
   colors: (
@@ -180,3 +217,14 @@
 // Titles
 
 @include k-TitleWithActions;
+
+// Tours
+
+@include k-Tour;
+@include k-HeaderTour;
+
+// Typography
+
+@include k-TypographyBodyCopy;
+@include k-Title;
+@include k-Paragraph;
