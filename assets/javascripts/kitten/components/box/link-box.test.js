@@ -23,7 +23,7 @@ describe('<LinkBox />', () => {
     expect(title).to.have.text('Your history')
   })
 
-  it('renders a text', () => {
+  it('renders text', () => {
     const text = component.find('.k-LinkBox__text')
 
     expect(text).to.have.length(1)
