@@ -3,6 +3,7 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
+- Add new `k-buttonIcon--micro`component.
 
 ## [v4.0.0] - 2016-12-20
 
@@ -25,7 +26,6 @@ Features:
 - Add hidden input to fetch `duration` data in `k-LoanSimulator` component.
 - New `DevGrid` React component and new CSS components `k-DevGrid` and
   `k-DevBreakpoint`.
-- Add new `k-buttonIcon--extraTiny`component.
 - Add `k-SingleColumn` molecule.
 - Add `build:dev`, `build`, and `hot-assets` scripts to the root `npm run`.
 

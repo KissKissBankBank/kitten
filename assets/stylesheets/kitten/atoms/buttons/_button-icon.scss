@@ -17,6 +17,7 @@
 /// - `.k-ButtonIcon--linkedin`
 ///
 /// Available size modifiers:
+/// - `k-ButtonIcon--micro`
 /// - `k-ButtonIcon--tiny`
 /// - `k-ButtonIcon--big`
 ///
@@ -39,7 +40,7 @@
   $border-size: 1px;
 
   // Size settings.
-  $button-size-extraTiny: 20px - ($border-size * 2);
+  $button-size-micro: 20px - ($border-size * 2);
   $button-size-tiny: 30px - ($border-size * 2);
   $button-size: 40px - ($border-size * 2);
   $button-size-big: 50px - ($border-size * 2);
@@ -439,13 +440,13 @@
 
   // Icon modifiers.
 
-  .k-ButtonIcon--extraTiny {
-    $extraTiny-size: k-px-to-rem(8px);
-    @include k-buttonRounded($button-size-extraTiny, $extraTiny-size, $extraTiny-size);
+  .k-ButtonIcon--micro {
+    $micro-size: k-px-to-rem(8px);
+    @include k-buttonRounded($button-size-micro, $micro-size, $micro-size);
 
     .k-ButtonIcon__svg {
-      width: $extraTiny-size;
-      height: $extraTiny-size;
+      width: $micro-size;
+      height: $micro-size;
     }
   }
 
