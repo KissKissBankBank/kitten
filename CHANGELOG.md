@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [v4.0.0] - 2016-12-20
+
 Breaking changes:
 - Remove `k-TypographyScale`.
 
@@ -19,10 +21,13 @@ Features:
 - Add `k-FormComposer` component.
 - Add new `FormAmountAndCurrency` React component.
 - Add new `FormPhoneNumber` React component.
+- Add new `k-Button--carbon` and `k-ButtonIcon--carbon`.
 - Add hidden input to fetch `duration` data in `k-LoanSimulator` component.
 - New `DevGrid` React component and new CSS components `k-DevGrid` and
   `k-DevBreakpoint`.
 - Add new `k-buttonIcon--extraTiny`component.
+- Add `k-SingleColumn` molecule.
+- Add `build:dev`, `build`, and `hot-assets` scripts to the root `npm run`.
 
 Fixes:
 - Change font color for disabled elements on checkboxes and radio buttons.
@@ -32,8 +37,7 @@ Fixes:
 - Remove hover on radio buttons and checkboxes.
 - Change large paragraph font size for radio buttons containers.
 - Remove loan simulator left margins.
-- Fix size unit text input.
-- Add `LinkBox` and `DocLinkBox` testing.
+- Fix unit size on `k-TextInputWithUnit`.
 
 ## [v3.1.0] - 2016-12-08
 
@@ -43,7 +47,6 @@ Features:
 - Add text active style `k-u--active`.
 - Add commission style `k-LoanSimulator__commission`.
 - Add `bin/install` and `bin/cleanup`.
-- Add `build:dev`, `build`, and `hot-assets` scripts to the root `npm run`.
 
 Fixes:
 - Fix dependencies paths.
