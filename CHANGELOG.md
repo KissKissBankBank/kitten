@@ -19,6 +19,7 @@ Features:
 - Add `k-FormComposer` component.
 - Add new `FormAmountAndCurrency` React component.
 - Add new `FormPhoneNumber` React component.
+- Add new `k-Button--carbon` and `k-ButtonIcon--carbon`.
 - Add hidden input to fetch `duration` data in `k-LoanSimulator` component.
 - New `DevGrid` React component and new CSS components `k-DevGrid` and
   `k-DevBreakpoint`.
