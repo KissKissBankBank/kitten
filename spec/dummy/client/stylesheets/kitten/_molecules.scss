@@ -96,6 +96,8 @@
   )
 ));
 
+@include k-SingleColumn;
+
 // Heroes
 
 @include k-Hero((
