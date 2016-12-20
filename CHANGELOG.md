@@ -22,6 +22,7 @@ Features:
 - Add hidden input to fetch `duration` data in `k-LoanSimulator` component.
 - New `DevGrid` React component and new CSS components `k-DevGrid` and
   `k-DevBreakpoint`.
+- Add new `k-buttonIcon--extraTiny`component.
 
 Fixes:
 - Change font color for disabled elements on checkboxes and radio buttons.
