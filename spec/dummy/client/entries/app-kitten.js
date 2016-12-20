@@ -30,6 +30,10 @@ import ExternalRichLink from 'kitten/components/links/external-rich-link'
 // Lists
 import NavList from 'kitten/components/lists/nav-list'
 
+// Tooltips
+import ReactTooltip from 'react-tooltip'
+import Tooltip from 'kitten/components/tooltips/tooltip'
+
 // Tours
 import HeaderTour from 'kitten/components/tours/header-tour'
 import Tour from 'kitten/components/tours/tour'
@@ -67,6 +71,7 @@ ReactOnRails.register({
   HeaderTour,
   LinkBox,
   LoanSimulator,
+  ReactTooltip,
   Slider,
   Search,
   Select,
@@ -74,6 +79,7 @@ ReactOnRails.register({
   NavList,
   SimulatorResult,
   SimulatorResult,
+  Tooltip,
   Tour,
   TourPopover,
   TourStep,
