@@ -207,7 +207,7 @@
     ),
   );
 
-    $carbon-colors: (
+  $carbon-colors: (
     base: (
       color: map-get($k-colors, 'font-1'),
       border-color: map-get($k-colors, 'background-1'),
