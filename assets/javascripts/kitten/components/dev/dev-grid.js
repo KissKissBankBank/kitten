@@ -15,7 +15,7 @@ export class DevGrid extends React.Component {
   componentDidMount() {
     window.addEventListener('keydown', this.handleKeyDown)
 
-    if (window.sessionStorage.getItem('karl-overgrid'))
+    if (window.sessionStorage.getItem(this.props.storageKey))
       this.setState({ visible: true })
   }
 
@@ -35,59 +35,59 @@ export class DevGrid extends React.Component {
   }
 
   show() {
-    window.sessionStorage.setItem('k-devgrid', 'on')
+    window.sessionStorage.setItem(this.props.storageKey, 'on')
     this.setState({ visible: true })
   }
 
   hide() {
-    window.sessionStorage.removeItem('k-devgrid')
+    window.sessionStorage.removeItem(this.props.storageKey)
     this.setState({ visible: false })
   }
 
   render() {
-    const style = this.state.visible ? { display: "none" } : null
+    const style = this.state.visible ? null : { display: "none" }
     return (
       <div style={ style }>
-        <div className="karl-OverBreakpoint"></div>
+        <div className="k-DevBreakpoint"></div>
 
-        <div className="karl-OverGrid">
-          <div className="karl-OverGrid__container">
-            <div className="karl-OverGrid__row">
-              <div className="karl-OverGrid__col">
-                <div className="karl-OverGrid__inner"></div>
+        <div className="k-DevGrid">
+          <div className="k-DevGrid__container">
+            <div className="k-DevGrid__row">
+              <div className="k-DevGrid__col">
+                <div className="k-DevGrid__inner"></div>
               </div>
-              <div className="karl-OverGrid__col">
-                <div className="karl-OverGrid__inner"></div>
+              <div className="k-DevGrid__col">
+                <div className="k-DevGrid__inner"></div>
               </div>
-              <div className="karl-OverGrid__col">
-                <div className="karl-OverGrid__inner"></div>
+              <div className="k-DevGrid__col">
+                <div className="k-DevGrid__inner"></div>
               </div>
-              <div className="karl-OverGrid__col">
-                <div className="karl-OverGrid__inner"></div>
+              <div className="k-DevGrid__col">
+                <div className="k-DevGrid__inner"></div>
               </div>
-              <div className="karl-OverGrid__col">
-                <div className="karl-OverGrid__inner"></div>
+              <div className="k-DevGrid__col">
+                <div className="k-DevGrid__inner"></div>
               </div>
-              <div className="karl-OverGrid__col">
-                <div className="karl-OverGrid__inner"></div>
+              <div className="k-DevGrid__col">
+                <div className="k-DevGrid__inner"></div>
               </div>
-              <div className="karl-OverGrid__col">
-                <div className="karl-OverGrid__inner"></div>
+              <div className="k-DevGrid__col">
+                <div className="k-DevGrid__inner"></div>
               </div>
-              <div className="karl-OverGrid__col">
-                <div className="karl-OverGrid__inner"></div>
+              <div className="k-DevGrid__col">
+                <div className="k-DevGrid__inner"></div>
               </div>
-              <div className="karl-OverGrid__col">
-                <div className="karl-OverGrid__inner"></div>
+              <div className="k-DevGrid__col">
+                <div className="k-DevGrid__inner"></div>
               </div>
-              <div className="karl-OverGrid__col">
-                <div className="karl-OverGrid__inner"></div>
+              <div className="k-DevGrid__col">
+                <div className="k-DevGrid__inner"></div>
               </div>
-              <div className="karl-OverGrid__col">
-                <div className="karl-OverGrid__inner"></div>
+              <div className="k-DevGrid__col">
+                <div className="k-DevGrid__inner"></div>
               </div>
-              <div className="karl-OverGrid__col">
-                <div className="karl-OverGrid__inner"></div>
+              <div className="k-DevGrid__col">
+                <div className="k-DevGrid__inner"></div>
               </div>
             </div>
           </div>
@@ -97,3 +97,6 @@ export class DevGrid extends React.Component {
   }
 }
 
+DevGrid.defaultProps = {
+  storageKey: 'k-devgrid',
+}
