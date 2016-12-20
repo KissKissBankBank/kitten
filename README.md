@@ -187,6 +187,16 @@ $ npm run sassdoc
 
 The documentation is accessible on development environment: `/kitten/sassdoc`.
 
+### Component testing
+
+To launch the JS tests:
+
+```sh
+bin/test
+```
+
+Check out the [guidelines](../../kitten/wiki/Component-testing) to know how to test kitten.
+
 ## Contributing
 
 To contribute code:

@@ -8,6 +8,7 @@ Breaking changes:
 - Remove `k-TypographyScale`.
 
 Features:
+- Add test setup.
 - Add small radio buttons label.
 - Add small paragraph for radio buttons containers.
 - Add large bullet list.
