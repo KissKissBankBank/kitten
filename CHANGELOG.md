@@ -19,9 +19,6 @@ Features:
 - Add `k-FormComposer` component.
 - Add new `FormAmountAndCurrency` React component.
 - Add new `FormPhoneNumber` React component.
-- Use new files architecture for stylesheets:
-  * Remove `atoms`, `molecules` and `organisms` directories.
-  * Use `components` directory instead to match javascripts files architecture.
 
 Fixes:
 - Change font color for disabled elements on checkboxes and radio buttons.
@@ -32,6 +29,9 @@ Fixes:
 - Change large paragraph font size for radio buttons containers.
 - Remove loan simulator left margins.
 - Fix size unit text input.
+- Use new files architecture for stylesheets:
+  * Remove `atoms`, `molecules` and `organisms` directories.
+  * Use `components` directory instead to match javascripts files architecture.
 
 ## [v3.1.0] - 2016-12-08
 
