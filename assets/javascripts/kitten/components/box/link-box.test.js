@@ -31,18 +31,18 @@ describe('<LinkBox />', () => {
   })
 
   describe('with icon', () => {
-    const component_with_icon = shallow(
+    const componentWithIcon = shallow(
       <LinkBox displayIcon="true">
         <span>My icon</span>
       </LinkBox>
     )
 
     it('has an icon class', () => {
-      expect(component_with_icon).to.have.className('k-LinkBox--withIcon')
+      expect(componentWithIcon).to.have.className('k-LinkBox--withIcon')
     })
 
     it('renders an icon', () => {
-      const icon = component_with_icon.find('.k-LinkBox__icon')
+      const icon = componentWithIcon.find('.k-LinkBox__icon')
 
       expect(icon).to.have.length(1)
       expect(icon).to.have.text('My icon')
@@ -50,14 +50,14 @@ describe('<LinkBox />', () => {
   })
 
   describe('with default props', () => {
-    const default_component = shallow(<LinkBox />)
+    const defaultComponent = shallow(<LinkBox />)
 
     it('has a default href', () => {
-      expect(default_component).attr('href', '#')
+      expect(defaultComponent).attr('href', '#')
     })
 
     it('has no icon', () => {
-      expect(default_component.find('.k-LinkBox__icon')).to.have.length(0)
+      expect(defaultComponent.find('.k-LinkBox__icon')).to.have.length(0)
     })
   })
 })
