@@ -19,7 +19,7 @@
 </head>
 <body>
 
-<% if @menu_types || controller_name == "branding" %>
+<% if @groups || controller_name == "branding" %>
   <div class="karl-Menu" data-karl-menu>
     <div class="karl-Menu__header">
       <a data-karl-menu-toggle="true" class="karl-Menu__title">menu</a>
@@ -87,32 +87,20 @@
       <% end %>
 
       <%= link_to "Components", components_path, class: "karl-Menu__listTitle" %>
-      <% if @menu_types %>
+      <% if @groups %>
         <ul data-karl-menu-list>
-          <% @menu_types.each do |type_id:, type_title:, groups:| %>
+          <% @groups.each do |group_id:, group_title:, components:| %>
             <li class="karl-Menu__list">
-              <a href="#<%= type_id %>"
+              <a href="#<%= group_id %>"
                  class="karl-Menu__listItem" data-karl-menu-link
-                <%= "with-arrow" if groups.any? %>"><%= type_title %></a>
+                <%= "with-arrow" if components.any? %>"><%= group_title %></a>
               <ul class="karl-Menu__subList">
-                <% groups.each do |group_id:, group_title:, components:| %>
+                <% components.each do |component_id:, component_title:| %>
                   <li>
-                    <a href="#<%= group_id %>"
+                    <a href="#<%= component_id %>"
                        class="karl-Menu__subListItem karl-Menu__link"
-                       data-karl-menu-link
-                      <%= "with-arrow" if components.any? %>"><%= group_title %>
+                       data-karl-menu-link><%= component_title %>
                     </a>
-                    <ul class="karl-Menu__subSecondList karl-Menu__link"
-                        data-karl-menu-link>
-                      <% components.each do |component_id:, component_title:| %>
-                        <li>
-                          <a class="karl-Menu__subSecondListItem karl-Menu__link"
-                             data-karl-menu-link
-                             href="#<%= component_id %>"><%= component_title %>
-                          </a>
-                        </li>
-                      <% end %>
-                    </ul>
                   </li>
                 <% end %>
               </ul>
