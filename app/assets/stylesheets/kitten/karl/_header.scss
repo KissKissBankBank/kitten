@@ -27,17 +27,17 @@
 }
 
 .karl-Title {
+  @include k-typographyFont('source-sans-light');
+  @include k-typographyFontSize(9);
+
+  text-align: center;
   margin-top: 5rem;
-}
 
-.karl-Title__breadcrumb {
-  margin-bottom: 2.5rem;
-
-  border-bottom: 2px solid $light-grey-2;
-
-  color: #333;
-  font-size: 1.5rem;
-  font-weight: 400;
-  line-height: 2.4rem;
-  text-transform: capitalize;
+  &:after {
+    display: block;
+    margin: k-px-to-rem(30px) auto 0;
+    width: 50px;
+    border-bottom: 1px $light-grey-2 solid;
+    content: '';
+  }
 }

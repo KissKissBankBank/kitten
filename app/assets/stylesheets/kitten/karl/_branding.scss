@@ -7,8 +7,10 @@
 }
 
 .karl-Colors__cardDescription {
-  padding: .12rem .6rem;
+  padding: k-px-to-rem(15px) k-px-to-rem(20px);
 
+  @include k-typographyFont('source-sans-light');
+  @include k-typographyFontSize(-1);
   border-top: solid 1px $light-grey-3;
 }
 
