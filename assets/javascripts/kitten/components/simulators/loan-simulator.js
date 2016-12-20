@@ -215,9 +215,11 @@ class LoanSimulator extends React.Component {
       tooltipText = this.props.sliderPlaceholder
     }
 
-    let durationInput = <input type="hidden"
-                               name={ this.props.durationName }
-                               value={ this.duration() } />
+    let durationInput
+    if (this.props.durationName)
+      durationInput = <input type="hidden"
+                             name={ this.props.durationName }
+                             value={ this.duration() } />
 
     return (
       <div className={ classNames('k-LoanSimulator', errorClass) }>
