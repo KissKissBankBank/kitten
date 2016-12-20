@@ -9,6 +9,7 @@ Breaking changes:
 
 Features:
 - Add test setup.
+- Add `LinkBox` and `DocLinkBox` testing.
 - Add small radio buttons label.
 - Add small paragraph for radio buttons containers.
 - Add large bullet list.
