@@ -3,7 +3,9 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
-- Add new `k-buttonIcon--micro`component.
+
+Features:
+- Add modifier `k-buttonIcon--micro` on `k-ButtonIcon`.
 
 ## [v4.0.0] - 2016-12-20
 
