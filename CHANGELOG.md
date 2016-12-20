@@ -7,6 +7,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 Features:
 - Add modifier `k-buttonIcon--micro` on `k-ButtonIcon`.
 
+Fixes:
+- Move `babel-preset-airbnb` module from `devDependencies` to `dependencies`.
+
+
 ## [v4.0.0] - 2016-12-20
 
 Breaking changes:
