@@ -430,16 +430,6 @@
 
   // Sizes modifiers.
 
-  .k-ButtonIcon--tiny {
-    @include k-buttonRounded($button-size-tiny, $icon-width, $icon-height);
-  }
-
-  .k-ButtonIcon--big {
-    @include k-buttonRounded($button-size-big, $icon-width, $icon-height);
-  }
-
-  // Icon modifiers.
-
   .k-ButtonIcon--micro {
     $micro-size: k-px-to-rem(8px);
     @include k-buttonRounded($button-size-micro, $micro-size, $micro-size);
@@ -449,6 +439,16 @@
       height: $micro-size;
     }
   }
+
+  .k-ButtonIcon--tiny {
+    @include k-buttonRounded($button-size-tiny, $icon-width, $icon-height);
+  }
+
+  .k-ButtonIcon--big {
+    @include k-buttonRounded($button-size-big, $icon-width, $icon-height);
+  }
+
+  // Icon modifiers.
 
   .k-ButtonIcon--heart {
     $heart-size: k-px-to-rem(14px);
