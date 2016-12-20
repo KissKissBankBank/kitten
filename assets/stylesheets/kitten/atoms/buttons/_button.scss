@@ -15,6 +15,7 @@
 /// - `.k-Button--lithium`
 /// - `.k-Button--beryllium`
 /// - `.k-Button--boron`
+/// - `.k-Button--carbon`
 ///
 /// Available size modifiers:
 /// - `.k-Button--tiny`
@@ -206,6 +207,39 @@
     ),
   );
 
+  $carbon-colors: (
+    base: (
+      color: map-get($k-colors, 'font-1'),
+      border-color: map-get($k-colors, 'background-1'),
+      background-color: map-get($k-colors, 'background-1'),
+    ),
+    hover: (
+      color: map-get($k-colors, 'font-1'),
+      border-color: map-get($k-colors, 'background-2'),
+      background-color: map-get($k-colors, 'background-2'),
+    ),
+    focus: (
+      color: map-get($k-colors, 'font-1'),
+      border-color: map-get($k-colors, 'background-2'),
+      background-color: map-get($k-colors, 'background-2'),
+    ),
+    active: (
+      color: map-get($k-colors, 'font-1'),
+      border-color: map-get($k-colors, 'background-3'),
+      background-color: map-get($k-colors, 'background-3'),
+    ),
+    is-selected: (
+      color: map-get($k-colors, 'font-1'),
+      border-color: map-get($k-colors, 'background-3'),
+      background-color: map-get($k-colors, 'background-3'),
+    ),
+    disabled: (
+      color: #fff,
+      border-color: map-get($k-colors, 'line-2'),
+      background-color: map-get($k-colors, 'line-2'),
+    ),
+  );
+
   // Size settings button.
   $button-size-tiny: 30px - ($border-size * 2);
   $button-size: 40px - ($border-size * 2);
@@ -276,6 +310,11 @@
   .k-Button--boron {
     @include k-buttonColorBase($boron-colors);
     @include k-buttonSvg($boron-colors);
+  }
+
+  .k-Button--carbon {
+    @include k-buttonColorBase($carbon-colors);
+    @include k-buttonSvg($carbon-colors);
   }
 
   // Size modifiers.

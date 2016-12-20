@@ -1,6 +1,6 @@
 {
   "name": "kitten-components",
-  "version": "3.1.0",
+  "version": "4.0.0",
   "license": "MIT",
   "description": "Front-end components library",
   "main": "src/index.js",
@@ -18,6 +18,12 @@
   "author": "KissKissBankBank & Co",
   "homepage": "https://github.com/KissKissBankBank/kitten#readme",
   "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-enzyme": "^0.6.1",
+    "enzyme": "^2.6.0",
+    "jsdom": "^9.8.3",
+    "mocha": "^3.2.0",
+    "react-addons-test-utils": "^15.4.1",
     "sassdoc": "^2.1.20",
     "stylelint": "^6.7.1",
     "stylelint-scss": "^1.2.0"
@@ -26,6 +32,7 @@
     "autoprefixer": "^6.5.3",
     "babel-cli": "^6.14.0",
     "babel-core": "^6.13.2",
+    "babel-preset-airbnb": "^2.1.1",
     "babel-preset-es2015": "^6.13.2",
     "babel-preset-react": "^6.11.1",
     "babel-preset-stage-0": "^6.5.0",
@@ -50,6 +57,7 @@
     "stylelint": "stylelint --syntax scss 'assets/stylesheets/**/*.scss'",
     "build:dev": "(cd spec/dummy/client && npm run build:dev)",
     "build": "(cd spec/dummy/client && npm run build --silent)",
-    "hot-assets": "(cd spec/dummy/client && npm run hot-assets)"
+    "hot-assets": "(cd spec/dummy/client && npm run hot-assets)",
+    "test": "mocha assets/javascripts/kitten/config/test-setup.js assets/javascripts/kitten/components/**/*.test.js"
   }
 }
