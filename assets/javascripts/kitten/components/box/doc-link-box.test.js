@@ -11,7 +11,7 @@ describe('<DocLinkBox />', () => {
     expect(component).to.have.type(LinkBox)
   })
 
-  it('renders a svg icon', () => {
+  it('renders an svg icon', () => {
     expect(component).to.have.prop('displayIcon', true)
     expect(component.find('.k-LinkBox__icon--svg')).to.have.length(1)
   })
