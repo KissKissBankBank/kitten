@@ -4,10 +4,15 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+Breaking changes:
+- Remove `k-TypographyScale`.
+
 Features:
 - Add small radio buttons label.
 - Add small paragraph for radio buttons containers.
 - Add large bullet list.
+- Add `k-Title` to style titles.
+- Add `k-Paragraph` to style paragraphs.
 - Add new `LinkBox` React component.
 - Add new `DocLinkBox` React component.
 - Add `k-FormComposer` component.
