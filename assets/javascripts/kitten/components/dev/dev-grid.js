@@ -24,7 +24,7 @@ export class DevGrid extends React.Component {
   }
 
   handleKeyDown(e) {
-    var char = String.fromCharCode(e.keyCode).toLowerCase()
+    const char = String.fromCharCode(e.keyCode).toLowerCase()
     if (!e.ctrlKey || char != 'g')
       return
 
