@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+Fixes:
+- Move `babel-preset-airbnb` module from `devDependencies` to `dependencies`.
+
 ## [v4.0.0] - 2016-12-20
 
 Breaking changes:
