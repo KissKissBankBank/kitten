@@ -49,10 +49,10 @@ class LoanSimulator extends React.Component {
   }
 
   // on slider click or on grab change
-  handleInstallmentChange(value, percentage) {
+  handleInstallmentChange(value, ratio) {
     this.setState({
       installmentAmount: value,
-      installmentPercentage: percentage,
+      installmentPercentage: ratio * 100 + '%',
       dragged: true
     })
   }

@@ -75,23 +75,23 @@ class Slider extends React.Component {
     return Math.pow(powerRatio, 1 / this.props.power)
   }
 
-  percentage() {
-    return this.percentageForValue(this.props.value)
+  ratio() {
+    return this.ratioForValue(this.props.value)
   }
 
-  percentageForValue(value) {
+  ratioForValue(value) {
     const { min, max } = this.props
     if (value === null)
-      return '0%'
+      return 0
     const powerRatio = (value - min) / (max - min)
     const ratio = this.computeRatio(powerRatio)
     const boundRatio = ratio > 1 ? 1 : (ratio < 0 ? 0 : ratio)
-    return boundRatio * 100 + '%'
+    return boundRatio
   }
 
   move(to) {
     const value = this.valueInBounds(to)
-    this.props.onChange(value, this.percentageForValue(value))
+    this.props.onChange(value, this.ratioForValue(value))
   }
 
   valueInBounds(value) {
@@ -126,7 +126,7 @@ class Slider extends React.Component {
                            onStart={ this.handleStart }
                            onClick={ this.handleClick }
                            onAction={ this.props.onAction }
-                           percentage={ this.percentage() } />
+                           ratio={ this.ratio() } />
   }
 }
 
@@ -201,8 +201,9 @@ class SliderContents extends React.Component {
   }
 
   render() {
-    const trackStyles = { width: this.props.percentage }
-    const thumbStyles = { left: this.props.percentage }
+    const percentage = this.props.ratio * 100 + '%'
+    const trackStyles = { width: percentage }
+    const thumbStyles = { left: percentage }
     const grabbingClass = this.props.grabbing ? 'is-grabbing' : null
 
     let input
