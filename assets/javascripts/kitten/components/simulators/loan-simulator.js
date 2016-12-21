@@ -3,8 +3,8 @@
 
 import React from 'react'
 import classNames from 'classnames'
-import Slider from 'kitten/components/form/slider'
-import SliderTooltip from 'kitten/components/form/slider-tooltip'
+import SliderWithTooltipAndPower
+  from 'kitten/components/form/slider-with-tooltip-and-power'
 import numberUtils from 'kitten/helpers/utils/number'
 
 class LoanSimulator extends React.Component {
@@ -290,19 +290,19 @@ class LoanSimulatorContent extends React.Component {
                  onClick={ this.props.handleInstallmentLabelClick }>
             { this.props.installmentLabel }
           </label>
-          <SliderTooltip className={ tooltipClass }
-                         percentage={ installmentPercentage }>
-            { tooltipText }
-          </SliderTooltip>
-          <Slider ref="slider"
-                  step={ this.props.installmentStep }
-                  min={ installmentMin }
-                  max={ installmentMax }
-                  power={ 2 }
-                  name={ this.props.installmentName }
-                  value={ installmentAmount }
-                  onChange={ this.handleInstallmentChange }
-                  onAction={ this.props.handleInstallmentAction } />
+          <SliderWithTooltipAndPower
+            ref="slider"
+            step={ this.props.installmentStep }
+            min={ installmentMin }
+            max={ installmentMax }
+            power={ 2 }
+            name={ this.props.installmentName }
+            value={ installmentAmount }
+            onChange={ this.handleInstallmentChange }
+            onAction={ this.props.handleInstallmentAction }
+            tooltipClass={ tooltipClass }
+            tooltipText={ tooltipText }
+            percentage={ installmentPercentage } />
 
           { this.renderCommission() }
           { durationInput }
@@ -312,6 +312,7 @@ class LoanSimulatorContent extends React.Component {
     )
   }
 }
+
 
 LoanSimulator.propTypes = {
   // Label for amount input
