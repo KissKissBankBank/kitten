@@ -21,7 +21,7 @@ class LoanSimulator extends React.Component {
 
     this.handleFocus = this.handleFocus.bind(this)
     this.handleAmountChange = this.handleAmountChange.bind(this)
-    this.handleAmountKeyDown = this.handleAmountKeyDown.bind(this)
+    this.handleEnter = this.handleEnter.bind(this)
     this.handleInstallmentLabelClick = this.handleInstallmentLabelClick
                                            .bind(this)
     this.handleInstallmentChange = this.handleInstallmentChange.bind(this)
@@ -40,17 +40,16 @@ class LoanSimulator extends React.Component {
     this.setState({ amount: e.target.value })
   }
 
-  handleAmountKeyDown(e) {
-    // when pressing enter
-    if (e.keyCode == 13) {
-      this.refs.slider.focus()
-      this.setState({ touched: true })
-    }
+  handleEnter(e) {
+    this.setState({ touched: true })
+  }
+
+  handleInstallmentLabelClick() {
+    this.refs.slider.focus()
   }
 
   // on slider click or on grab change
   handleInstallmentChange(value, percentage) {
-    this.refs.amount.blur()
     this.setState({
       installmentAmount: value,
       installmentPercentage: percentage,
@@ -62,20 +61,9 @@ class LoanSimulator extends React.Component {
     this.setState({ touched: true })
   }
 
-  handleInstallmentLabelClick() {
-    this.refs.slider.focus()
-  }
-
   duration() {
     if (this.state.installmentAmount)
       return Math.ceil(this.state.amount / this.state.installmentAmount)
-  }
-
-  toCurrency(cents) {
-    if (isNaN(cents))
-      return null
-
-    return (cents / 100).toLocaleString(this.props.locale)
   }
 
   commissionRate() {
@@ -84,23 +72,6 @@ class LoanSimulator extends React.Component {
 
   commissionAmount() {
     return this.commissionRate() * this.state.amount
-  }
-
-  error() {
-    if (!this.state.touched)
-      return null
-
-    return this.amountError()
-  }
-
-  amountError() {
-    if (!this.state.amount)
-      return this.props.amountEmptyError
-
-    if (!numberUtils.isNumber(this.state.amount)
-        || this.state.amount < this.props.amountMin
-        || this.state.amount > this.props.amountMax)
-      return this.props.amountOutOfBoundsError
   }
 
   installmentMin() {
@@ -125,13 +96,87 @@ class LoanSimulator extends React.Component {
     return 1
   }
 
+  error() {
+    if (!this.state.touched)
+      return null
+
+    return this.amountError()
+  }
+
+  amountError() {
+    if (!this.state.amount)
+      return this.props.amountEmptyError
+
+    if (!numberUtils.isNumber(this.state.amount)
+        || this.state.amount < this.props.amountMin
+        || this.state.amount > this.props.amountMax)
+      return this.props.amountOutOfBoundsError
+  }
+
+  render() {
+    return (
+      <LoanSimulatorContent
+        { ...this.props }
+        { ...this.state }
+        handleFocus={ this.handleFocus }
+        handleAmountChange={ this.handleAmountChange }
+        handleAmountKeyDown={ this.handleAmountKeyDown }
+        handleInstallmentLabelClick={ this.handleInstallmentLabelClick }
+        handleInstallmentChange={ this.handleInstallmentChange }
+        handleInstallmentAction={ this.handleInstallmentAction }
+        duration={ this.duration() }
+        commissionAmount={ this.commissionAmount() }
+        commissionRate={ this.commissionRate() }
+        installmentMin={ this.installmentMin() }
+        installmentMax={ this.installmentMax() }
+        installmentStep={ this.installmentStep() }
+        error={ this.error() }
+        amountError={ this.amountError() } />
+    )
+  }
+}
+
+class LoanSimulatorContent extends React.Component {
+  constructor(props) {
+    super(props)
+
+    this.handleAmountKeyDown = this.handleAmountKeyDown.bind(this)
+    this.handleInstallmentChange = this.handleInstallmentChange.bind(this)
+  }
+
+  handleAmountKeyDown(e) {
+    // when pressing enter
+    if (e.keyCode == 13) {
+      this.refs.slider.focus()
+      this.props.handleEnter()
+    }
+  }
+
+  handleInstallmentChange(value, percentage) {
+    this.refs.amount.blur()
+    this.props.handleInstallmentChange(value, percentage)
+  }
+
+  toCurrency(cents) {
+    if (isNaN(cents))
+      return null
+
+    return (cents / 100).toLocaleString(this.props.locale)
+  }
+
+  sliderIsActive() {
+    return !this.props.amountError &&
+           this.props.dragged &&
+           this.props.installmentAmount
+  }
+
   renderCommission() {
     if (!this.props.displayCommission)
       return
 
     const active = this.sliderIsActive()
     const amount = active
-      ? this.toCurrency(this.commissionAmount() * 100)
+      ? this.toCurrency(this.props.commissionAmount * 100)
       : '--'
 
     const amountToDisplay = ` ${ amount } `
@@ -148,12 +193,6 @@ class LoanSimulator extends React.Component {
     )
   }
 
-  sliderIsActive() {
-    return !this.amountError() &&
-           this.state.dragged &&
-           this.state.installmentAmount
-  }
-
   renderButton() {
     if (!this.props.actionLabel)
      return
@@ -168,16 +207,14 @@ class LoanSimulator extends React.Component {
   }
 
   render() {
-    const { label } = this.props
-    const { dragged, touched } = this.state
-    const error = this.error()
-    const amountValid = !this.amountError()
-    const duration = this.duration()
+    const { label, dragged, touched, duration, error } = this.props
+    const amountValid = !this.props.amountError
     const showResult = !error && touched && duration
-    const installmentMin = amountValid ? this.installmentMin() : 0
-    const installmentMax = amountValid ? this.installmentMax() : 0
-    const installmentAmount = amountValid ? this.state.installmentAmount : 0
-    const installmentPercentage = amountValid ? this.state.installmentPercentage : 0
+    const installmentMin = amountValid ? this.props.installmentMin : 0
+    const installmentMax = amountValid ? this.props.installmentMax : 0
+    const installmentAmount = amountValid ? this.props.installmentAmount : 0
+    const installmentPercentage = amountValid ?
+      this.props.installmentPercentage : 0
 
     let errorClass, errorTag, tooltipClass, tooltipText
 
@@ -219,7 +256,7 @@ class LoanSimulator extends React.Component {
     if (this.props.durationName)
       durationInput = <input type="hidden"
                              name={ this.props.durationName }
-                             value={ this.duration() } />
+                             value={ this.props.duration } />
 
     return (
       <div className={ classNames('k-LoanSimulator', errorClass) }>
@@ -238,9 +275,9 @@ class LoanSimulator extends React.Component {
                    max={ this.props.amountMax }
                    size="5"
                    defaultValue={ this.props.initialAmount }
-                   onFocus={ this.handleFocus }
-                   onChange={ this.handleAmountChange }
-                   onKeyDown={ this.handleAmountKeyDown }
+                   onFocus={ this.props.handleFocus }
+                   onChange={ this.props.handleAmountChange }
+                   onKeyDown={ this.props.handleAmountKeyDown }
                    placeholder={ this.props.amountPlaceholder } />
             <span className="k-TextInputWithUnit__unit">
               { this.props.currencySymbol }
@@ -250,7 +287,7 @@ class LoanSimulator extends React.Component {
         </div>
         <div>
           <label className="k-Label k-LoanSimulator__label"
-                 onClick={ this.handleInstallmentLabelClick }>
+                 onClick={ this.props.handleInstallmentLabelClick }>
             { this.props.installmentLabel }
           </label>
           <SliderTooltip className={ tooltipClass }
@@ -258,14 +295,14 @@ class LoanSimulator extends React.Component {
             { tooltipText }
           </SliderTooltip>
           <Slider ref="slider"
-                  step={ this.installmentStep() }
+                  step={ this.props.installmentStep }
                   min={ installmentMin }
                   max={ installmentMax }
                   power={ 2 }
                   name={ this.props.installmentName }
                   value={ installmentAmount }
                   onChange={ this.handleInstallmentChange }
-                  onAction={ this.handleInstallmentAction } />
+                  onAction={ this.props.handleInstallmentAction } />
 
           { this.renderCommission() }
           { durationInput }
