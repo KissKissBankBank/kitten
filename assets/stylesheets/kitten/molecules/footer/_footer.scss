@@ -156,6 +156,8 @@
     @include k-media-min('l') {
       > img,
       > svg {
+        display: block;
+        width: 100%;
         vertical-align: top;
       }
 
