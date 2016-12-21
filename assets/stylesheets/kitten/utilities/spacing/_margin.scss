@@ -11,18 +11,22 @@
 ///     <div class="k-u-margin-top-single">…</div>
 ///     <div class="k-u-margin-top-double">…</div>
 ///     <div class="k-u-margin-top-triple">…</div>
+///     <div class="k-u-margin-top-none">…</div>
 ///
 ///     <div class="k-u-margin-bottom-single">…</div>
 ///     <div class="k-u-margin-bottom-double">…</div>
 ///     <div class="k-u-margin-bottom-triple">…</div>
+///     <div class="k-u-margin-bottom-none">…</div>
 ///
 ///     <div class="k-u-margin-left-single">…</div>
 ///     <div class="k-u-margin-left-double">…</div>
 ///     <div class="k-u-margin-left-triple">…</div>
+///     <div class="k-u-margin-left-none">…</div>
 ///
 ///     <div class="k-u-margin-right-single">…</div>
 ///     <div class="k-u-margin-right-double">…</div>
 ///     <div class="k-u-margin-right-triple">…</div>
+///     <div class="k-u-margin-right-none">…</div>
 
 @mixin k-utilities-margin {
   // Margin top

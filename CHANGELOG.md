@@ -5,12 +5,15 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 Features:
+- Add `k-u-margin` for margins.
 - Add modifier `k-buttonIcon--micro` on `k-ButtonIcon`.
 - Add `initialInstallment` option to `LoanSimulator`.
 - Display Utilities in the menu.
+- Add modifier `k-Row--lightTopBorder` on `k-Row`.
 
 Fixes:
 - Move `babel-preset-airbnb` module from `devDependencies` to `dependencies`.
+- Fix image width on `.k-Footer__logo__img > img`.
 
 ## [v4.0.0] - 2016-12-20
 
