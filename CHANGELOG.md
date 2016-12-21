@@ -8,6 +8,7 @@ Features:
 - Add `k-u-margin` for margins.
 - Add modifier `k-buttonIcon--micro` on `k-ButtonIcon`.
 - Add `initialInstallment` option to `LoanSimulator`.
+- Add modifier `k-Row--lightTopBorder` on `k-Row`.
 
 Fixes:
 - Move `babel-preset-airbnb` module from `devDependencies` to `dependencies`.
