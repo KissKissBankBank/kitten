@@ -7,6 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 Features:
 - Add modifier `k-buttonIcon--micro` on `k-ButtonIcon`.
 - Add `initialInstallment` option to `LoanSimulator`.
+- Display Utilities in the menu.
 
 Fixes:
 - Move `babel-preset-airbnb` module from `devDependencies` to `dependencies`.
