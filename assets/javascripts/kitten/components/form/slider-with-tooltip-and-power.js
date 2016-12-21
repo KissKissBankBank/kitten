@@ -6,6 +6,10 @@ export default class SliderWithTooltipAndPower extends React.Component {
   constructor(props) {
     super(props)
 
+    this.state = {
+      ratio: this.ratio(),
+    }
+
     this.handleKeyDown = this.handleKeyDown.bind(this)
     this.handleMove = this.handleMove.bind(this)
   }
@@ -13,6 +17,15 @@ export default class SliderWithTooltipAndPower extends React.Component {
   // Allow other components to focus
   focus() {
     this.refs.focus()
+  }
+
+  // on slider click or on grab change
+  handleInstallmentChange(value, ratio) {
+    this.setState({
+      installmentAmount: value,
+      installmentPercentage: ratio * 100 + '%',
+      dragged: true
+    })
   }
 
   handleKeyDown(e) {
@@ -88,7 +101,9 @@ export default class SliderWithTooltipAndPower extends React.Component {
 
   move(to) {
     const value = this.valueInBounds(to)
-    this.props.onChange(value, this.ratioForValue(value))
+    const ratio = this.ratioForValue(value)
+    this.setState({ ratio })
+    this.props.onChange(value, ratio)
   }
 
   valueInBounds(value) {
@@ -113,11 +128,12 @@ export default class SliderWithTooltipAndPower extends React.Component {
   }
 
   render() {
-    const { tooltipClass, tooltipText, percentage, ...other } = this.props
+    const { tooltipClass, tooltipText, ...other } = this.props
 
     return (
       <div>
-        <SliderTooltip className={ tooltipClass } percentage={ percentage }>
+        <SliderTooltip className={ tooltipClass }
+                       percentage={ this.state.ratio * 100 + '%' }>
           { tooltipText }
         </SliderTooltip>
         <SliderContents { ...other }

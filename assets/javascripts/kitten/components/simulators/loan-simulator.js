@@ -14,7 +14,6 @@ class LoanSimulator extends React.Component {
     this.state = {
       amount: props.initialAmount * 1,
       installmentAmount: props.initialInstallment,
-      installmentPercentage: null,
       dragged: !!props.initialInstallment,
       touched: false,
     }
@@ -32,7 +31,6 @@ class LoanSimulator extends React.Component {
     this.setState({
       touched: false,
       installmentAmount: null,
-      installmentPercentage: null,
     })
   }
 
@@ -52,7 +50,6 @@ class LoanSimulator extends React.Component {
   handleInstallmentChange(value, ratio) {
     this.setState({
       installmentAmount: value,
-      installmentPercentage: ratio * 100 + '%',
       dragged: true
     })
   }
@@ -152,9 +149,9 @@ class LoanSimulatorContent extends React.Component {
     }
   }
 
-  handleInstallmentChange(value, percentage) {
+  handleInstallmentChange(value, ratio) {
     this.refs.amount.blur()
-    this.props.handleInstallmentChange(value, percentage)
+    this.props.handleInstallmentChange(value, ratio)
   }
 
   toCurrency(cents) {
@@ -301,8 +298,7 @@ class LoanSimulatorContent extends React.Component {
             onChange={ this.handleInstallmentChange }
             onAction={ this.props.handleInstallmentAction }
             tooltipClass={ tooltipClass }
-            tooltipText={ tooltipText }
-            percentage={ installmentPercentage } />
+            tooltipText={ tooltipText } />
 
           { this.renderCommission() }
           { durationInput }
