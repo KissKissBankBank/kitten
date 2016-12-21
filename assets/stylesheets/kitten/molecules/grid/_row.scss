@@ -60,6 +60,10 @@
       color: $dark-text-color;
     }
 
+    .k-Row--lightTopBorder {
+      border-top: 1px solid $light-bottom-border-color;
+    }
+
     .k-Row--lightBottomBorder {
       border-bottom: 1px solid $light-bottom-border-color;
     }
