@@ -173,7 +173,7 @@ class Slider extends React.Component {
     if (this.props.name)
       input = <input type="hidden"
                      name={ this.props.name }
-                     value={ this.props.value ? this.props.value : '' } />
+                     value={ this.props.value || '' } />
 
     return (
       <div className={ classNames("k-Slider", grabbingClass) }

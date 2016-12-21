@@ -256,7 +256,7 @@ class LoanSimulatorContent extends React.Component {
     if (this.props.durationName)
       durationInput = <input type="hidden"
                              name={ this.props.durationName }
-                             value={ this.props.duration } />
+                             value={ this.props.duration || '' } />
 
     return (
       <div className={ classNames('k-LoanSimulator', errorClass) }>
