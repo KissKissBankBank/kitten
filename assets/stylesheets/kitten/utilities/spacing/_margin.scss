@@ -1,10 +1,10 @@
-/// Spacing utilities.
+/// Margin utilities.
 ///
-/// @group spacing
+/// @group margin
 ///
 /// @example scss - Usage
 ///
-///     @include k-utilities-spacing;
+///     @include k-utilities-margin;
 ///
 /// @example html
 ///
@@ -24,7 +24,7 @@
 ///     <div class="k-u-margin-right-double">…</div>
 ///     <div class="k-u-margin-right-triple">…</div>
 
-@mixin k-utilities-spacing {
+@mixin k-utilities-margin {
   // Margin top
   .k-u-margin-top-single {
     margin-top: k-px-to-rem(10px);
@@ -36,6 +36,10 @@
 
   .k-u-margin-top-triple {
     margin-top: k-px-to-rem(30px);
+  }
+
+  .k-u-margin-top-none {
+    margin-top: 0;
   }
 
   // Margin bottom
@@ -51,6 +55,10 @@
     margin-bottom: k-px-to-rem(30px);
   }
 
+  .k-u-margin-bottom-none {
+    margin-bottom: 0;
+  }
+
   // Margin left
   .k-u-margin-left-single {
     margin-left: k-px-to-rem(10px);
@@ -64,6 +72,10 @@
     margin-left: k-px-to-rem(30px);
   }
 
+  .k-u-margin-left-none {
+    margin-left: 0;
+  }
+
   // Margin right
   .k-u-margin-right-single {
     margin-right: k-px-to-rem(10px);
@@ -75,5 +87,9 @@
 
   .k-u-margin-right-triple {
     margin-right: k-px-to-rem(30px);
+  }
+
+  .k-u-margin-right-none {
+    margin-right: 0;
   }
 }
