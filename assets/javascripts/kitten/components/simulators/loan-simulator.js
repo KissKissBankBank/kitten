@@ -12,10 +12,10 @@ class LoanSimulator extends React.Component {
     super(props)
 
     this.state = {
-      amount: this.props.initialAmount * 1,
-      installmentAmount: null,
+      amount: props.initialAmount * 1,
+      installmentAmount: props.initialInstallment,
       installmentPercentage: null,
-      dragged: false,
+      dragged: !!props.initialInstallment,
       touched: false,
     }
 
@@ -353,6 +353,7 @@ LoanSimulator.defaultProps = {
   commissionRate: function() { return 0 },
 
   installmentLabel: 'Reimbursing',
+  initialInstallment: null,
 
   durationText: 'during',
   durationMin: 1,
