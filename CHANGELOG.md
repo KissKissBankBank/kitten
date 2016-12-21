@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [v4.1.0] - 2016-12-21
+
 Features:
 - Add `k-u-margin` for margins.
 - Add modifier `k-buttonIcon--micro` on `k-ButtonIcon`.
