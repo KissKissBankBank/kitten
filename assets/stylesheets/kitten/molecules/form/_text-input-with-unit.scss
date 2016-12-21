@@ -82,8 +82,8 @@
 
     box-sizing: border-box;
     height: 100%;
-    width: k-px-to-rem(50px);
-    padding: k-px-to-rem(11px) k-px-to-rem(18px);
+    width: k-px-to-rem(40px);
+    padding: k-px-to-rem(11px) k-px-to-rem(14px);
 
     border-top-right-radius: $border-text-input;
     border-bottom-right-radius: $border-text-input;
@@ -113,6 +113,7 @@
   }
 
   .k-TextInputWithUnit__unit--tiny {
-    padding: k-px-to-rem(7px) k-px-to-rem(18px);
+    width: k-px-to-rem(30px);
+    padding: k-px-to-rem(7px) k-px-to-rem(9px);
   }
 }

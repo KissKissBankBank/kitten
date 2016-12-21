@@ -2,14 +2,23 @@ require('../stylesheets/app-kitten.scss');
 
 import ReactOnRails from 'react-on-rails';
 
+// Box
+import LinkBox from 'kitten/components/box/link-box'
+import DocLinkBox from 'kitten/components/box/doc-link-box'
+
 // Buttons
 import ButtonImageWithTextAndBadge from 'kitten/components/buttons/button-image-with-text-and-badge'
+
+// Dev
+import { DevGrid } from 'kitten/components/dev/dev-grid'
 
 // Dropdowns
 import Dropdown from 'kitten/components/dropdowns/dropdown'
 import DropdownButton from 'kitten/components/dropdowns/dropdown-button'
 
 // Form
+import FormAmountAndCurrency from 'kitten/components/form/form-amount-and-currency'
+import FormPhoneNumber from 'kitten/components/form/form-phone-number'
 import Slider from 'kitten/components/form/slider'
 import Select from 'react-select'
 import SelectWithState from 'kitten/components/form/select-with-state'
@@ -51,11 +60,16 @@ import { KarlLoanSimulator,
 
 ReactOnRails.register({
   ButtonImageWithTextAndBadge,
+  DevGrid,
+  DocLinkBox,
   Dropdown,
   DropdownButton,
   ExternalRichLink,
+  FormAmountAndCurrency,
+  FormPhoneNumber,
   GrabberIcon,
   HeaderTour,
+  LinkBox,
   LoanSimulator,
   Slider,
   Search,

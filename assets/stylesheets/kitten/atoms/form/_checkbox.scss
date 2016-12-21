@@ -15,15 +15,16 @@
 
 @mixin k-Checkbox {
   // Font
-  $font: 'source-sans-semi-bold';
-  $font-size: -2;
+  $font: 'source-sans-light';
+  $font-step: 0;
   $line-height: 1;
 
   // Colors
   $background-color: map-get($k-colors, 'background-1');
   $background-color-checked: map-get($k-colors, 'primary-1');
-  $background-color-disabled: map-get($k-colors, 'line-2');
-  $border-color: map-get($k-colors, 'line-2');
+  $background-color-active: map-get($k-colors, 'primary-3');
+  $background-color-disabled: map-get($k-colors, 'font-2');
+  $border-color: map-get($k-colors, 'font-2');
   $border-color-hover: map-get($k-colors, 'primary-1');
 
   $checkbox-size: k-px-to-rem(20px);
@@ -32,7 +33,7 @@
 
   .k-Checkbox {
     @include k-typographyFont($font);
-    @include k-typographyFontSize($font-size, $line-height);
+    @include k-typographyFontSize($font-step, $line-height);
 
     display: flex;
     align-items: center;
@@ -63,10 +64,12 @@
       transition: border-color .2s, background-color .2s;
     }
 
-    // .k-Checkbox__input:focus + &:before,
-    &:hover:before {
-      border-color: $border-color-hover;
-    }
+    // .k-Checkbox__input:focus + &:before {
+    //   border-color: $border-color-hover;
+    // }
+
+    &:hover { color: $border-color-hover; }
+    &:active { color: $background-color-active; }
 
     // .k-Checkbox__input:checked:focus + &:before {
     //   box-shadow: 0 0 k-px-to-rem(3px) $background-color-checked;
