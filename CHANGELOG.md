@@ -11,6 +11,7 @@ Features:
 
 Fixes:
 - Move `babel-preset-airbnb` module from `devDependencies` to `dependencies`.
+- Fix image width on `.k-Footer__logo__img > img`.
 
 ## [v4.0.0] - 2016-12-20
 
