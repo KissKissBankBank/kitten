@@ -9,21 +9,13 @@ class Slider extends React.Component {
   constructor(props) {
     super(props)
 
-    this.state = {
-      grabbing: false,
-    }
-
-    this.handleMove = this.handleMove.bind(this)
-    this.handleStart = this.handleStart.bind(this)
-    this.handleEnd = this.handleEnd.bind(this)
-    this.handleClick = this.handleClick.bind(this)
     this.handleKeyDown = this.handleKeyDown.bind(this)
-    this.handleAction = this.props.onAction.bind(this)
+    this.handleMove = this.handleMove.bind(this)
   }
 
   // Allow other components to focus
   focus() {
-    this.refs.thumb.focus()
+    this.refs.focus()
   }
 
   handleKeyDown(e) {
@@ -54,49 +46,10 @@ class Slider extends React.Component {
     }
   }
 
-  handleStart(e) {
-    this.props.onAction(e)
-    e.stopPropagation()
-    e.preventDefault()
-
-    if (domElementHelper.canUseDom()) {
-      document.addEventListener('mousemove', this.handleMove)
-      document.addEventListener('touchmove', this.handleMove)
-      document.addEventListener('mouseup', this.handleEnd)
-      document.addEventListener('touchend', this.handleEnd)
-    }
-
-    this.setState({ grabbing: true })
-  }
-
-  handleEnd() {
-    if (domElementHelper.canUseDom()) {
-      document.removeEventListener('mousemove', this.handleMove)
-      document.removeEventListener('touchmove', this.handleMove)
-      document.removeEventListener('mouseup', this.handleEnd)
-      document.removeEventListener('touchend', this.handleEnd)
-    }
-
-    this.setState({ grabbing: false })
-  }
-
-  handleClick(e) {
-    this.props.onAction(e)
-    this.setState({ grabbing: false })
-    this.handleMove(e)
-  }
-
-  handleMove(e) {
-    e.stopPropagation()
-    e.preventDefault()
-
+  handleMove(ratio) {
     const { min, max } = this.props
-    const coordinate = e.touches ? e.touches[0].clientX : e.clientX
-    const trackPosition = this.refs.track.getBoundingClientRect()
-    const ratio = (coordinate - trackPosition.left) / trackPosition.width
     const powerRatio = this.computePowerRatio(ratio)
     const value = Math.round(powerRatio * (max - min) + min)
-
     this.move(value)
   }
 
@@ -138,7 +91,6 @@ class Slider extends React.Component {
 
   move(to) {
     const value = this.valueInBounds(to)
-
     this.props.onChange(value, this.percentageForValue(value))
   }
 
@@ -164,10 +116,94 @@ class Slider extends React.Component {
   }
 
   render() {
-    const percentage = this.percentage(),
-          trackStyles = { width: percentage },
-          thumbStyles = { left: percentage },
-          grabbingClass = this.state.grabbing ? 'is-grabbing' : null
+    return <SliderContents ref="contents"
+                           { ...this.props }
+                           { ...this.state }
+                           onMove={ this.handleMove }
+                           onStart={ this.handleStart }
+                           onKeyDown={ this.handleKeyDown }
+                           onStart={ this.handleStart }
+                           onStart={ this.handleStart }
+                           onClick={ this.handleClick }
+                           onAction={ this.props.onAction }
+                           percentage={ this.percentage() } />
+  }
+}
+
+class SliderContents extends React.Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      grabbing: false,
+    }
+
+    this.handleMove = this.handleMove.bind(this)
+    this.handleStart = this.handleStart.bind(this)
+    this.handleEnd = this.handleEnd.bind(this)
+    this.handleClick = this.handleClick.bind(this)
+    this.handleClick = this.handleClick.bind(this)
+  }
+
+  // Allow other components to focus
+  focus() {
+    this.refs.thumb.focus()
+  }
+
+  handleClick(e) {
+    this.props.onAction(e)
+    this.setState({ grabbing: false })
+    this.handleMove(e)
+  }
+
+  handleStart(e) {
+    this.props.onAction(e)
+    e.stopPropagation()
+    e.preventDefault()
+
+    if (domElementHelper.canUseDom()) {
+      document.addEventListener('mousemove', this.handleMove)
+      document.addEventListener('touchmove', this.handleMove)
+      document.addEventListener('mouseup', this.handleEnd)
+      document.addEventListener('touchend', this.handleEnd)
+    }
+
+    this.setState({ grabbing: true })
+  }
+
+  handleEnd() {
+    if (domElementHelper.canUseDom()) {
+      document.removeEventListener('mousemove', this.handleMove)
+      document.removeEventListener('touchmove', this.handleMove)
+      document.removeEventListener('mouseup', this.handleEnd)
+      document.removeEventListener('touchend', this.handleEnd)
+    }
+
+    this.setState({ grabbing: false })
+  }
+
+  handleMove(e) {
+    e.stopPropagation()
+    e.preventDefault()
+
+    const coordinate = e.touches ? e.touches[0].clientX : e.clientX
+    const trackPosition = this.refs.track.getBoundingClientRect()
+    const ratio = (coordinate - trackPosition.left) / trackPosition.width
+
+    this.props.onMove(ratio)
+  }
+
+  renderInput() {
+    if (this.props.name)
+      return <input type="hidden"
+                    name={ this.props.name }
+                    value={ this.props.value || '' } />
+  }
+
+  render() {
+    const trackStyles = { width: this.props.percentage }
+    const thumbStyles = { left: this.props.percentage }
+    const grabbingClass = this.props.grabbing ? 'is-grabbing' : null
 
     let input
     if (this.props.name)
@@ -190,15 +226,15 @@ class Slider extends React.Component {
                aria-valuemin={ this.props.min }
                aria-valuemax={ this.props.max }
                aria-valuenow={ this.props.value }
-               onKeyDown={ this.handleKeyDown }
+               onKeyDown={ this.props.onKeyDown }
                onMouseDown={ this.handleStart }
                onTouchStart={ this.handleStart }
                onClick={ this.handleClick }
-               onFocus={ this.handleAction }>
+               onFocus={ this.props.onAction }>
             <GrabberIcon className="k-Slider__handleIcon" />
           </div>
         </div>
-        { input }
+        { this.renderInput() }
       </div>
     )
   }
