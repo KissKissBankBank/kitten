@@ -36,6 +36,7 @@ import NavList from 'kitten/components/lists/nav-list'
 // Tooltips
 import ReactTooltip from 'react-tooltip'
 import Tooltip from 'kitten/components/tooltips/tooltip'
+import TooltipIcon from 'kitten/components/tooltips/tooltip-icon'
 
 // Tours
 import HeaderTour from 'kitten/components/tours/header-tour'
@@ -84,6 +85,7 @@ ReactOnRails.register({
   SimulatorResult,
   SimulatorResult,
   Tooltip,
+  TooltipIcon,
   Tour,
   TourPopover,
   TourStep,
