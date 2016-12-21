@@ -5,7 +5,7 @@ import domEvents from 'kitten/helpers/dom/events'
 import domElementHelper from 'kitten/helpers/dom/element-helper'
 
 // Slider input to choose an integer value between two bounds
-class Slider extends React.Component {
+export class Slider extends React.Component {
   constructor(props) {
     super(props)
 
@@ -130,7 +130,7 @@ class Slider extends React.Component {
   }
 }
 
-class SliderContents extends React.Component {
+export class SliderContents extends React.Component {
   constructor(props) {
     super(props)
 
@@ -281,5 +281,3 @@ Slider.defaultProps = {
   onChange: function() {},
   onChangeEnd: function() {},
 }
-
-export default Slider
