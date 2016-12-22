@@ -1,6 +1,7 @@
 import React from 'react'
-import { SliderContents, withHandleKeyDown }
-  from 'kitten/components/form/slider'
+import { SliderContents } from 'kitten/components/form/slider'
+import { sliderKeyDownEnhancer }
+  from 'kitten/enhancers/sliders/slider-key-down-enhancer'
 import SliderTooltip from 'kitten/components/form/slider-tooltip'
 
 class BaseSliderWithTooltipAndPower extends React.Component {
@@ -20,6 +21,10 @@ class BaseSliderWithTooltipAndPower extends React.Component {
     const powerRatio = this.computePowerRatio(ratio)
     const value = Math.round(powerRatio * (max - min) + min)
     this.move(value)
+  }
+
+  ratio() {
+    return this.ratioForValue(this.props.value)
   }
 
   move(to) {
@@ -49,10 +54,6 @@ class BaseSliderWithTooltipAndPower extends React.Component {
   //   computeRatio(1) # => 1
   computeRatio(powerRatio) {
     return Math.pow(powerRatio, 1 / this.props.power)
-  }
-
-  ratio() {
-    return this.ratioForValue(this.props.value)
   }
 
   ratioForValue(value) {
@@ -119,7 +120,7 @@ class BaseSliderWithTooltipAndPower extends React.Component {
 }
 
 export const SliderWithTooltipAndPower =
-  withHandleKeyDown(BaseSliderWithTooltipAndPower)
+  sliderKeyDownEnhancer(BaseSliderWithTooltipAndPower)
 
 SliderWithTooltipAndPower.defaultProps = {
   value: null,
