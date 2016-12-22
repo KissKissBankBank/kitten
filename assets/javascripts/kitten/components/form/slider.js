@@ -204,7 +204,7 @@ export class SliderContents extends React.Component {
     const percentage = this.props.ratio * 100 + '%'
     const trackStyles = { width: percentage }
     const thumbStyles = { left: percentage }
-    const grabbingClass = this.props.grabbing ? 'is-grabbing' : null
+    const grabbingClass = this.state.grabbing ? 'is-grabbing' : null
 
     let input
     if (this.props.name)
