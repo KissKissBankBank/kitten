@@ -6,10 +6,6 @@ export default class SliderWithTooltipAndPower extends React.Component {
   constructor(props) {
     super(props)
 
-    this.state = {
-      ratio: this.ratio(),
-    }
-
     this.handleKeyDown = this.handleKeyDown.bind(this)
     this.handleMove = this.handleMove.bind(this)
   }
@@ -17,15 +13,6 @@ export default class SliderWithTooltipAndPower extends React.Component {
   // Allow other components to focus
   focus() {
     this.refs.focus()
-  }
-
-  // on slider click or on grab change
-  handleInstallmentChange(value, ratio) {
-    this.setState({
-      installmentAmount: value,
-      installmentPercentage: ratio * 100 + '%',
-      dragged: true
-    })
   }
 
   handleKeyDown(e) {
@@ -99,8 +86,8 @@ export default class SliderWithTooltipAndPower extends React.Component {
   ratioForValue(value) {
     const { min, max } = this.props
 
-    if (value === null)
-      return min
+    if (value === null || isNaN(value))
+      return 0
 
     const powerRatio = (value - min) / (max - min)
     return this.ratioInBounds(this.computeRatio(powerRatio))
@@ -132,24 +119,28 @@ export default class SliderWithTooltipAndPower extends React.Component {
   }
 
   render() {
-    const { tooltipClass, tooltipText, ...other } = this.props
+    const { tooltipClass, tooltipText } = this.props
 
     return (
       <div>
         <SliderTooltip className={ tooltipClass }
-                       percentage={ this.state.ratio * 100 + '%' }>
+                       percentage={ this.ratio() * 100 + '%' }>
           { tooltipText }
         </SliderTooltip>
-        <SliderContents { ...other }
-                        { ...this.state }
+        <SliderContents onAction={ this.props.onAction }
+                        onMove={ this.props.onMove }
+                        name={ this.props.name }
+                        value={ this.props.value }
+                        min={ this.props.min }
+                        max={ this.props.max }
+                        ratio={ this.ratio() }
                         onMove={ this.handleMove }
                         onStart={ this.handleStart }
                         onKeyDown={ this.handleKeyDown }
                         onStart={ this.handleStart }
                         onStart={ this.handleStart }
                         onClick={ this.handleClick }
-                        onAction={ this.props.onAction }
-                        ratio={ this.ratio() } />
+                        onAction={ this.props.onAction } />
       </div>
     )
   }

@@ -43,7 +43,7 @@ class LoanSimulator extends React.Component {
   }
 
   handleInstallmentLabelClick() {
-    this.refs.slider.focus()
+    this.refs.content.focusSlider()
   }
 
   // on slider click or on grab change
@@ -113,14 +113,15 @@ class LoanSimulator extends React.Component {
   render() {
     return (
       <LoanSimulatorContent
+        ref="content"
         { ...this.props }
         { ...this.state }
-        handleFocus={ this.handleFocus }
-        handleAmountChange={ this.handleAmountChange }
-        handleAmountKeyDown={ this.handleAmountKeyDown }
-        handleInstallmentLabelClick={ this.handleInstallmentLabelClick }
-        handleInstallmentChange={ this.handleInstallmentChange }
-        handleInstallmentAction={ this.handleInstallmentAction }
+        onFocus={ this.handleFocus }
+        onAmountChange={ this.handleAmountChange }
+        onEnter={ this.handleEnter }
+        onInstallmentLabelClick={ this.handleInstallmentLabelClick }
+        onInstallmentChange={ this.handleInstallmentChange }
+        onInstallmentAction={ this.handleInstallmentAction }
         duration={ this.duration() }
         commissionAmount={ this.commissionAmount() }
         commissionRate={ this.commissionRate() }
@@ -141,17 +142,22 @@ class LoanSimulatorContent extends React.Component {
     this.handleInstallmentChange = this.handleInstallmentChange.bind(this)
   }
 
+  // Allow parents to focus the slider
+  focusSlider() {
+    this.refs.slider.focus()
+  }
+
   handleAmountKeyDown(e) {
     // when pressing enter
     if (e.keyCode == 13) {
-      this.refs.slider.focus()
-      this.props.handleEnter()
+      this.focusSlider()
+      this.props.onEnter()
     }
   }
 
   handleInstallmentChange(value, ratio) {
     this.refs.amount.blur()
-    this.props.handleInstallmentChange(value, ratio)
+    this.props.onInstallmentChange(value, ratio)
   }
 
   toCurrency(cents) {
@@ -272,9 +278,9 @@ class LoanSimulatorContent extends React.Component {
                    max={ this.props.amountMax }
                    size="5"
                    defaultValue={ this.props.initialAmount }
-                   onFocus={ this.props.handleFocus }
-                   onChange={ this.props.handleAmountChange }
-                   onKeyDown={ this.props.handleAmountKeyDown }
+                   onFocus={ this.props.onFocus }
+                   onChange={ this.props.onAmountChange }
+                   onKeyDown={ this.props.onAmountKeyDown }
                    placeholder={ this.props.amountPlaceholder } />
             <span className="k-TextInputWithUnit__unit">
               { this.props.currencySymbol }
@@ -284,7 +290,7 @@ class LoanSimulatorContent extends React.Component {
         </div>
         <div>
           <label className="k-Label k-LoanSimulator__label"
-                 onClick={ this.props.handleInstallmentLabelClick }>
+                 onClick={ this.props.onInstallmentLabelClick }>
             { this.props.installmentLabel }
           </label>
           <SliderWithTooltipAndPower
@@ -296,7 +302,7 @@ class LoanSimulatorContent extends React.Component {
             name={ this.props.installmentName }
             value={ installmentAmount }
             onChange={ this.handleInstallmentChange }
-            onAction={ this.props.handleInstallmentAction }
+            onAction={ this.props.onInstallmentAction }
             tooltipClass={ tooltipClass }
             tooltipText={ tooltipText } />
 
