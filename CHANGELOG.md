@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+Features:
+- Add `k-Link` to style links.
+
 ## [v4.1.0] - 2016-12-21
 
 Features:
