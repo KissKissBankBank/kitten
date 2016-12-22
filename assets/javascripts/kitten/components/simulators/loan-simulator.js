@@ -47,7 +47,7 @@ class LoanSimulator extends React.Component {
   }
 
   // on slider click or on grab change
-  handleInstallmentChange(value, ratio) {
+  handleInstallmentChange(value) {
     this.setState({
       installmentAmount: value,
       dragged: true
