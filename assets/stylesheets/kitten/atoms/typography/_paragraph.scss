@@ -22,7 +22,6 @@
 
   // Link
   $link-font: 'source-sans';
-  $link-font-step: -1;
   $link-color: map-get($k-colors, 'primary-1');
   $link-hover-color: map-get($k-colors, 'primary-2');
   $link-active-color: map-get($k-colors, 'primary-3');
@@ -51,7 +50,6 @@
 
   .k-Paragraph__link {
     @include k-typographyFont($link-font);
-    @include k-typographyFontSize($link-font-step);
 
     color: $link-color;
     text-decoration: none;
