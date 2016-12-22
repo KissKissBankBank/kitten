@@ -183,12 +183,6 @@ export class SliderContents extends React.Component {
     const thumbStyles = { left: percentage }
     const grabbingClass = this.state.grabbing ? 'is-grabbing' : null
 
-    let input
-    if (this.props.name)
-      input = <input type="hidden"
-                     name={ this.props.name }
-                     value={ this.props.value || '' } />
-
     return (
       <div className={ classNames("k-Slider", grabbingClass) }
            onClick={ this.handleClick }>
