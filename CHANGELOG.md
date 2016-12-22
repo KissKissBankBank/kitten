@@ -5,7 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 Fixes:
-- Fix Loan simulator initial installment
+- Fix Loan simulator initial installment tooltip placement.
 
 ## [v4.1.0] - 2016-12-21
 
