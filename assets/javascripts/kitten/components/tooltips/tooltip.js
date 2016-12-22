@@ -7,8 +7,8 @@ export default class Tooltip extends React.Component {
     return (
       <div>
         <TooltipIcon data-tip
-                 data-for="tooltip"
-                 data-event="click" />
+                     data-for="tooltip"
+                     data-event="click" />
 
         <ReactTooltip id="tooltip"
                       class="k-Tooltip--custom"

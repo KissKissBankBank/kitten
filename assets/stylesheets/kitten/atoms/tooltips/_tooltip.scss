@@ -1,5 +1,23 @@
 /// Tooltip
-
+///
+/// @group tooltips
+///
+/// @example scss - Usage
+///
+///   @include k-Tooltip;
+///
+/// @example html
+///
+///   <ReactTooltip id="tooltip"
+///                 class="k-Tooltip--custom"
+///                 effect="solid">
+///     <button class="k-ButtonIcon
+///                    k-ButtonIcon--beryllium
+///                    k-ButtonIcon--micro
+///                    k-ButtonIcon--tooltip">
+///       <svg class="k-ButtonIcon__svg"/> … </svg>
+///     </button>
+///   </ReactTooltip>
 
 @mixin k-Tooltip {
 
@@ -20,6 +38,4 @@
       border-top-width: 8px !important;
     }
   }
-
-
 }
