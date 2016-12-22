@@ -75,7 +75,7 @@ export default class SliderWithTooltipAndPower extends React.Component {
   //
   // Example:
   //   computePowerRatio(0) # => 0
-    //   computePowerRatio(0.5) # => 0.76534543
+  //   computePowerRatio(0.5) # => 0.76534543
   //   computePowerRatio(1) # => 1
   computePowerRatio(ratio) {
     return ratio < 0 ? 0 : Math.pow(ratio, this.props.power)
