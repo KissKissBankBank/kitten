@@ -9,7 +9,9 @@
 /// @example html
 ///
 ///     <ul class="k-BulletList">
-///       <li class="k-BulletList__item">...</li>
+///       <li class="k-BulletList__item">
+///         Lorem<a class="k-BulletList__link">Ipsum</a>
+///       </li>
 ///     </ul>
 
 @mixin k-BulletList {
@@ -23,6 +25,12 @@
   $bullet-color: map-get($k-colors, 'font-1');
   $bullet-size: 4px;
   $border-radius: 50%;
+
+  // Link
+  $link-font: 'source-sans';
+  $link-color: map-get($k-colors, 'primary-1');
+  $link-hover-color: map-get($k-colors, 'primary-2');
+  $link-active-color: map-get($k-colors, 'primary-3');
 
   // Text alignment
   $space-bullet-text: 10px;
@@ -59,5 +67,16 @@
 
   .k-BulletList__item--large {
     @include k-typographyFontSize($font-step-on-media);
+  }
+
+  .k-BulletList__link {
+    @include k-typographyFont($link-font);
+    @include k-typographyFontSize($font-step);
+
+    color: $link-color;
+    text-decoration: none;
+
+    &:hover { color: $link-hover-color; }
+    &:active { color: $link-active-color; }
   }
 }
