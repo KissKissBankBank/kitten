@@ -97,9 +97,7 @@ export class Slider extends React.Component {
                            { ...this.props }
                            { ...this.state }
                            onMove={ this.handleMove }
-                           onStart={ this.handleStart }
                            onKeyDown={ this.handleKeyDown }
-                           onStart={ this.handleStart }
                            onStart={ this.handleStart }
                            onClick={ this.handleClick }
                            onAction={ this.props.onAction }
