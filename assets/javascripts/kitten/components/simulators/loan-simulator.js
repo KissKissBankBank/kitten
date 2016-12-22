@@ -3,9 +3,9 @@
 
 import React from 'react'
 import classNames from 'classnames'
-import { SliderWithTooltipAndPower }
-  from 'kitten/components/form/slider-with-tooltip-and-power'
 import numberUtils from 'kitten/helpers/utils/number'
+import { SliderWithTooltipAndPower }
+  from 'kitten/components/sliders/slider-with-tooltip-and-power'
 
 class LoanSimulator extends React.Component {
   constructor(props) {

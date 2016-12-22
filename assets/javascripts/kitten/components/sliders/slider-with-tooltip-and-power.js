@@ -1,5 +1,5 @@
 import React from 'react'
-import { SliderContents } from 'kitten/components/form/slider'
+import { SliderBar } from 'kitten/components/sliders/slider-bar'
 import { sliderKeyDownEnhancer }
   from 'kitten/enhancers/sliders/slider-key-down-enhancer'
 import SliderTooltip from 'kitten/components/form/slider-tooltip'
@@ -100,20 +100,20 @@ class BaseSliderWithTooltipAndPower extends React.Component {
                        percentage={ this.ratio() * 100 + '%' }>
           { tooltipText }
         </SliderTooltip>
-        <SliderContents onAction={ this.props.onAction }
-                        onMove={ this.props.onMove }
-                        name={ this.props.name }
-                        value={ this.props.value }
-                        min={ this.props.min }
-                        max={ this.props.max }
-                        ratio={ this.ratio() }
-                        onMove={ this.handleMove }
-                        onStart={ this.handleStart }
-                        onKeyDown={ this.handleKeyDown }
-                        onStart={ this.handleStart }
-                        onStart={ this.handleStart }
-                        onClick={ this.handleClick }
-                        onAction={ this.props.onAction } />
+        <SliderBar onAction={ this.props.onAction }
+                   onMove={ this.props.onMove }
+                   name={ this.props.name }
+                   value={ this.props.value }
+                   min={ this.props.min }
+                   max={ this.props.max }
+                   ratio={ this.ratio() }
+                   onMove={ this.handleMove }
+                   onStart={ this.handleStart }
+                   onKeyDown={ this.handleKeyDown }
+                   onStart={ this.handleStart }
+                   onStart={ this.handleStart }
+                   onClick={ this.handleClick }
+                   onAction={ this.props.onAction } />
       </div>
     )
   }
