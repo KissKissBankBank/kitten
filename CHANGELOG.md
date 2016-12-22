@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+Features:
+- Add links item in `k-BulletList` et `k-Paragraph`.
+
 ## [v4.1.0] - 2016-12-21
 
 Features:
