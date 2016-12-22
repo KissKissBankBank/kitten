@@ -47,32 +47,8 @@ export class Slider extends React.Component {
   }
 
   handleMove(ratio) {
-    const { min, max } = this.props
-    const powerRatio = this.computePowerRatio(ratio)
-    const value = Math.round(powerRatio * (max - min) + min)
+    const value = Math.round(ratio * (max - min) + min)
     this.move(value)
-  }
-
-  // Turns a normal ratio (between 0 and 1) into a ratio with a different
-  // distribution based on the power.
-  //
-  // Example:
-  //   computePowerRatio(0) # => 0
-    //   computePowerRatio(0.5) # => 0.76534543
-  //   computePowerRatio(1) # => 1
-  computePowerRatio(ratio) {
-    return ratio < 0 ? 0 : Math.pow(ratio, this.props.power)
-  }
-
-  // Inverse of computePowerRatio. Turns a powered ratio (between 0 and 1) into
-  // the ratio where we should place the slider.
-  //
-  // Example:
-  //   computeRatio(0) # => 0
-  //   computeRatio(0.76534543) # => 0.5
-  //   computeRatio(1) # => 1
-  computeRatio(powerRatio) {
-    return Math.pow(powerRatio, 1 / this.props.power)
   }
 
   ratio() {
@@ -81,17 +57,18 @@ export class Slider extends React.Component {
 
   ratioForValue(value) {
     const { min, max } = this.props
-    if (value === null)
-      return 0
-    const powerRatio = (value - min) / (max - min)
-    const ratio = this.computeRatio(powerRatio)
-    const boundRatio = ratio > 1 ? 1 : (ratio < 0 ? 0 : ratio)
-    return boundRatio
+    return value === null
+      ? min
+      : this.ratioInBounds((value - min) / (max - min))
   }
 
   move(to) {
     const value = this.valueInBounds(to)
     this.props.onChange(value, this.ratioForValue(value))
+  }
+
+  ratioInBounds(ratio) {
+    return ratio > 1 ? 1 : (ratio < 0 ? 0 : ratio)
   }
 
   valueInBounds(value) {
@@ -254,10 +231,6 @@ Slider.propTypes = {
   // Space between each possible value when updated by keyboard (e.g. 1)
   step: React.PropTypes.number,
 
-  // Change the distribution of values in the slider by applying a different
-  // power. Defaults to 1 for a normal distribution.
-  power: React.PropTypes.number,
-
   // Input name, if needed (e.g. "amount")
   name: React.PropTypes.string,
 
@@ -277,7 +250,6 @@ Slider.defaultProps = {
   min: 0,
   max: 100,
   step: 1,
-  power: 1,
   onChange: function() {},
   onChangeEnd: function() {},
 }

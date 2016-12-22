@@ -63,6 +63,13 @@ export default class SliderWithTooltipAndPower extends React.Component {
     this.move(value)
   }
 
+  move(to) {
+    const value = this.valueInBounds(to)
+    const ratio = this.ratioForValue(value)
+    this.setState({ ratio })
+    this.props.onChange(value, ratio)
+  }
+
   // Turns a normal ratio (between 0 and 1) into a ratio with a different
   // distribution based on the power.
   //
@@ -92,18 +99,13 @@ export default class SliderWithTooltipAndPower extends React.Component {
   ratioForValue(value) {
     const { min, max } = this.props
     if (value === null)
-      return 0
+      return min
     const powerRatio = (value - min) / (max - min)
-    const ratio = this.computeRatio(powerRatio)
-    const boundRatio = ratio > 1 ? 1 : (ratio < 0 ? 0 : ratio)
-    return boundRatio
+    return this.ratioInBounds(this.computeRatio(powerRatio))
   }
 
-  move(to) {
-    const value = this.valueInBounds(to)
-    const ratio = this.ratioForValue(value)
-    this.setState({ ratio })
-    this.props.onChange(value, ratio)
+  ratioInBounds(ratio) {
+    return ratio > 1 ? 1 : (ratio < 0 ? 0 : ratio)
   }
 
   valueInBounds(value) {
