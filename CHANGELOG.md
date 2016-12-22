@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+Features:
+- Add links item in `k-BulletList` et `k-Paragraph`.
+
 Fixes:
 - Fix Loan simulator initial installment tooltip placement.
 
