@@ -3,7 +3,7 @@
 
 import React from 'react'
 import classNames from 'classnames'
-import SliderWithTooltipAndPower
+import { SliderWithTooltipAndPower }
   from 'kitten/components/form/slider-with-tooltip-and-power'
 import numberUtils from 'kitten/helpers/utils/number'
 
@@ -315,7 +315,6 @@ class LoanSimulatorContent extends React.Component {
     )
   }
 }
-
 
 LoanSimulator.propTypes = {
   // Label for amount input

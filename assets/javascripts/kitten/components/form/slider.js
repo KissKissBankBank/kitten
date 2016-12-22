@@ -5,45 +5,16 @@ import domEvents from 'kitten/helpers/dom/events'
 import domElementHelper from 'kitten/helpers/dom/element-helper'
 
 // Slider input to choose an integer value between two bounds
-export class Slider extends React.Component {
+class BaseSlider extends React.Component {
   constructor(props) {
     super(props)
 
-    this.handleKeyDown = this.handleKeyDown.bind(this)
     this.handleMove = this.handleMove.bind(this)
   }
 
   // Allow other components to focus
   focus() {
     this.refs.focus()
-  }
-
-  handleKeyDown(e) {
-    // Make bigger steps when alt or shift key is being held
-    const { min, max } = this.props
-
-    // make larger steps if alt or shift is entered,
-    // change direction if we go to high to low
-    let step = this.props.step
-    if (e.altKey)
-      step *= 10
-    if (e.shiftKey)
-      step *= 10
-    if (min > max)
-      step *= -1
-
-    switch (e.keyCode) {
-      case domEvents.keyboard.right:
-      case domEvents.keyboard.up:
-        return this.move(this.props.value + step)
-      case domEvents.keyboard.left:
-      case domEvents.keyboard.down:
-        return this.move(this.props.value - step)
-      case domEvents.keyboard.home:
-        return this.move(min)
-      case domEvents.keyboard.end:
-        return this.move(max)
-    }
   }
 
   handleMove(ratio) {
@@ -208,6 +179,50 @@ export class SliderContents extends React.Component {
     )
   }
 }
+
+export function withHandleKeyDown(SliderComponent) {
+  return class SliderWithHandleKeyDown extends React.Component {
+    constructor(props) {
+      super(props)
+
+      this.handleKeyDown = this.handleKeyDown.bind(this)
+    }
+
+    handleKeyDown(e) {
+      // Make bigger steps when alt or shift key is being held
+      const { min, max } = this.props
+
+      // make larger steps if alt or shift is entered,
+      // change direction if we go to high to low
+      let step = this.props.step
+      if (e.altKey)
+        step *= 10
+      if (e.shiftKey)
+        step *= 10
+      if (min > max)
+        step *= -1
+
+      switch (e.keyCode) {
+        case domEvents.keyboard.right:
+        case domEvents.keyboard.up:
+          return this.move(this.props.value + step)
+        case domEvents.keyboard.left:
+        case domEvents.keyboard.down:
+          return this.move(this.props.value - step)
+        case domEvents.keyboard.home:
+          return this.move(min)
+        case domEvents.keyboard.end:
+          return this.move(max)
+      }
+    }
+
+    render() {
+      return <SliderComponent { ...this.props } />
+    }
+  }
+}
+
+export const Slider = withHandleKeyDown(BaseSlider)
 
 Slider.propTypes = {
   // Starting value (e.g. 50)

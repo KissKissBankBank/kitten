@@ -1,8 +1,9 @@
 import React from 'react'
-import { SliderContents } from 'kitten/components/form/slider'
+import { SliderContents, withHandleKeyDown }
+  from 'kitten/components/form/slider'
 import SliderTooltip from 'kitten/components/form/slider-tooltip'
 
-export default class SliderWithTooltipAndPower extends React.Component {
+class BaseSliderWithTooltipAndPower extends React.Component {
   constructor(props) {
     super(props)
 
@@ -146,6 +147,8 @@ export default class SliderWithTooltipAndPower extends React.Component {
   }
 }
 
+export const SliderWithTooltipAndPower =
+  withHandleKeyDown(BaseSliderWithTooltipAndPower)
 
 SliderWithTooltipAndPower.defaultProps = {
   value: null,
