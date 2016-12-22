@@ -119,7 +119,6 @@ export class SliderContents extends React.Component {
     this.handleStart = this.handleStart.bind(this)
     this.handleEnd = this.handleEnd.bind(this)
     this.handleClick = this.handleClick.bind(this)
-    this.handleClick = this.handleClick.bind(this)
   }
 
   // Allow other components to focus
