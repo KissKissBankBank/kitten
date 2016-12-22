@@ -98,8 +98,10 @@ export default class SliderWithTooltipAndPower extends React.Component {
 
   ratioForValue(value) {
     const { min, max } = this.props
+
     if (value === null)
       return min
+
     const powerRatio = (value - min) / (max - min)
     return this.ratioInBounds(this.computeRatio(powerRatio))
   }
