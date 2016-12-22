@@ -75,6 +75,7 @@ class LoanSimulator extends React.Component {
     const installmentStep = this.installmentStep()
     const value = this.state.amount / this.props.durationMax
     const min = Math.ceil(value / installmentStep) * installmentStep
+
     if (min > this.state.amount * 1)
       return this.state.amount
     else
