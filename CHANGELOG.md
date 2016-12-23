@@ -5,7 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 Fixes:
-- Fix the links text decoration in `k-Paragraph__link` and `k-BulletList__link`.
+- Fix text-decoration in `k-Paragraph__link` and `k-BulletList__link`.
 
 ## [v4.2.0] - 2016-12-23
 
