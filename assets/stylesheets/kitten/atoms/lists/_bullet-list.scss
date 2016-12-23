@@ -76,7 +76,14 @@
     color: $link-color;
     text-decoration: none;
 
-    &:hover { color: $link-hover-color; }
-    &:active { color: $link-active-color; }
+    &:hover {
+      color: $link-hover-color;
+      text-decoration: none;
+    }
+
+    &:active {
+      color: $link-active-color;
+      text-decoration: none;
+    }
   }
 }
