@@ -18,7 +18,7 @@ export default class LinkBox extends React.Component {
       { 'k-LinkBox--withIcon': this.props.displayIcon },
     )
 
-    const target = this.props.isExternal ? { target: '_blank' } : ''
+    const target = this.props.isExternal ? { target: '_blank' } : {}
 
     return (
       <a className= { linkBoxClassNames }
