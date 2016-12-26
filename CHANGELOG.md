@@ -9,6 +9,7 @@ Features:
 
 Fixes:
 - Change some styles on `k-LinkBox`.
+- Fix text-decoration in `k-Paragraph__link` and `k-BulletList__link`.
 
 ## [v4.2.0] - 2016-12-23
 
