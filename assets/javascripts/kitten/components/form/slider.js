@@ -1,4 +1,4 @@
-// TODO move to "sliders" group (breaking change)
+// TODO move to the "sliders" group (breaking change)
 
 import React from 'react'
 import { SliderBar } from 'kitten/components/sliders/slider-bar'
@@ -78,7 +78,7 @@ class BaseSlider extends React.Component {
   }
 }
 
-export const Slider = sliderKeyDownEnhancer(BaseSlider)
+const Slider = sliderKeyDownEnhancer(BaseSlider)
 
 Slider.propTypes = {
   // Starting value (e.g. 50)
@@ -115,3 +115,5 @@ Slider.defaultProps = {
   onChange: function() {},
   onChangeEnd: function() {},
 }
+
+export default Slider
