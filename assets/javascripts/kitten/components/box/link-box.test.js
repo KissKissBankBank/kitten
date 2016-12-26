@@ -7,13 +7,15 @@ describe('<LinkBox />', () => {
   const component = shallow(
     <LinkBox href="http://…/history.pdf"
              title="Your history"
-             text="Download your history (pdf - 8Mo)" />
+             text="Download your history (pdf - 8Mo)"
+             isExternal="true" />
   )
 
   it('renders a <a class="k-LinkBox" />', () => {
     expect(component).to.have.tagName('a')
     expect(component).to.have.className('k-LinkBox')
     expect(component).to.have.attr('href', 'http://…/history.pdf')
+    expect(component).to.have.attr('target', '_blank')
   })
 
   it('renders a title', () => {
@@ -54,6 +56,10 @@ describe('<LinkBox />', () => {
 
     it('has a default href', () => {
       expect(defaultComponent).attr('href', '#')
+    })
+
+    it('has no target', () => {
+      expect(defaultComponent).not.to.have.attr('target')
     })
 
     it('has no icon', () => {
