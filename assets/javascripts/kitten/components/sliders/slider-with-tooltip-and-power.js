@@ -1,14 +1,15 @@
 import React from 'react'
 import { SliderBar } from 'kitten/components/sliders/slider-bar'
-import { sliderKeyDownEnhancer }
-  from 'kitten/enhancers/sliders/slider-key-down-enhancer'
+import { sliderKeyDownHandler }
+  from 'kitten/handlers/sliders/slider-key-down-handler'
 import SliderTooltip from 'kitten/components/sliders/slider-tooltip'
 
-class BaseSliderWithTooltipAndPower extends React.Component {
+export class SliderWithTooltipAndPower extends React.Component {
   constructor(props) {
     super(props)
 
     this.handleMove = this.handleMove.bind(this)
+    this.handleKeyDown = sliderKeyDownHandler.bind(this)
   }
 
   // Allow other components to focus
@@ -92,13 +93,11 @@ class BaseSliderWithTooltipAndPower extends React.Component {
   }
 
   render() {
-    const { tooltipClass, tooltipText } = this.props
-
     return (
       <div>
-        <SliderTooltip className={ tooltipClass }
+        <SliderTooltip className={ this.props.tooltipClass }
                        percentage={ this.ratio() * 100 + '%' }>
-          { tooltipText }
+          { this.props.tooltipText }
         </SliderTooltip>
         <SliderBar onAction={ this.props.onAction }
                    onMove={ this.props.onMove }
@@ -109,18 +108,13 @@ class BaseSliderWithTooltipAndPower extends React.Component {
                    ratio={ this.ratio() }
                    onMove={ this.handleMove }
                    onStart={ this.handleStart }
-                   onKeyDown={ this.handleKeyDown }
-                   onStart={ this.handleStart }
-                   onStart={ this.handleStart }
                    onClick={ this.handleClick }
-                   onAction={ this.props.onAction } />
+                   onAction={ this.props.onAction }
+                   onKeyDown={ this.handleKeyDown } />
       </div>
     )
   }
 }
-
-export const SliderWithTooltipAndPower =
-  sliderKeyDownEnhancer(BaseSliderWithTooltipAndPower)
 
 SliderWithTooltipAndPower.defaultProps = {
   value: null,

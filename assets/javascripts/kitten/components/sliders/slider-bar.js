@@ -3,7 +3,7 @@ import domElementHelper from 'kitten/helpers/dom/element-helper'
 import GrabberIcon from 'kitten/components/icons/grabber-icon'
 import classNames from 'classnames'
 
-// DOM for a Slider component
+// DOM for the Slider component. See Slider for state and
 export class SliderBar extends React.Component {
   constructor(props) {
     super(props)

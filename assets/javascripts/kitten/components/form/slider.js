@@ -2,15 +2,16 @@
 
 import React from 'react'
 import { SliderBar } from 'kitten/components/sliders/slider-bar'
-import { sliderKeyDownEnhancer }
-  from 'kitten/enhancers/sliders/slider-key-down-enhancer'
+import { sliderKeyDownHandler }
+  from 'kitten/handlers/sliders/slider-key-down-handler'
 
 // Slider input to choose an integer value between two bounds
-class BaseSlider extends React.Component {
+export default class Slider extends React.Component {
   constructor(props) {
     super(props)
 
     this.handleMove = this.handleMove.bind(this)
+    this.handleKeyDown = sliderKeyDownHandler.bind(this)
   }
 
   // Allow other components to focus
@@ -70,15 +71,12 @@ class BaseSlider extends React.Component {
                       { ...this.props }
                       { ...this.state }
                       onMove={ this.handleMove }
-                      onKeyDown={ this.handleKeyDown }
                       onStart={ this.handleStart }
                       onClick={ this.handleClick }
                       onAction={ this.props.onAction }
                       ratio={ this.ratio() } />
   }
 }
-
-const Slider = sliderKeyDownEnhancer(BaseSlider)
 
 Slider.propTypes = {
   // Starting value (e.g. 50)
@@ -115,5 +113,3 @@ Slider.defaultProps = {
   onChange: function() {},
   onChangeEnd: function() {},
 }
-
-export default Slider
