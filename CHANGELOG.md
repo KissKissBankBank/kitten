@@ -4,6 +4,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+Features:
+- Add `isExternal` option to `LinkBox`.
+
+Fixes:
+- Change some styles on `k-LinkBox`.
+
 ## [v4.2.0] - 2016-12-23
 
 Features:
