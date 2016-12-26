@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [v4.3.0] - 2016-12-26
+
 Features:
 - Add `isExternal` option to `LinkBox`.
 
