@@ -87,14 +87,14 @@ class LoanSimulator extends React.Component {
   }
 
   // The `commissionRules` prop has to be an array containing a `durationMax`
-  // rule. This will return the first `ratio` which matches the rule for the
+  // rule. This will return the first `rate` which matches the rule for the
   // current `duration`.
   //
   // Example `commissionRules` prop:
   //     [
-  //       { durationMax: 20, ratio: 0.3 },
-  //       { durationMax: 12, ratio: 0.2 },
-  //       { ratio: 0.1 }
+  //       { durationMax: 12, rate: 0.3 },
+  //       { durationMax: 20, rate: 0.2 },
+  //       { rate: 0.1 }
   //     ]
   commissionRateFromRules() {
     const duration = this.duration()
