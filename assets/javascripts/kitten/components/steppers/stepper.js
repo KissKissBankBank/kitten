@@ -33,11 +33,11 @@ export class Stepper extends React.Component {
       { 'k-Stepper__item--tinySpacing': this.props.withTinySpacing },
     )
 
-    return items.map((item) => {
-      return <li className={ itemClassNames }>
+    return items.map(item =>
+      <li className={ itemClassNames }>
         { this.renderLink(item) }
       </li>
-    })
+    )
   }
 
   render() {
