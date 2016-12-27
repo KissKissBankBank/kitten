@@ -123,10 +123,12 @@
 
     &:hover {
       color: $color-hover;
+      text-decoration: none;
     }
 
     &:active {
       color: $color-active;
+      text-decoration: none;
     }
   }
 
