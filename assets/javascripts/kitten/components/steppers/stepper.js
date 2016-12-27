@@ -2,7 +2,6 @@ import React from 'react'
 import classNames from 'classnames'
 
 export class Stepper extends React.Component {
-
   lineBreaks(text) {
     const regex = /(\n)/i
 
