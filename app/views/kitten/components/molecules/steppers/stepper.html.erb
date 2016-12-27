@@ -1,63 +1,57 @@
 <%= example "Stepper" do %>
 
-  <nav class="k-Stepper" role="navigation">
-    <ul class="k-Stepper__list">
-      <li class="k-Stepper__item">
-        <a class="k-Stepper__link" href="#">
-          Catopuma<br class="k-Stepper__break"/>
-          Temminckii
-        </a>
-      </li>
-      <li class="k-Stepper__item">
-        <a class="k-Stepper__link k-Stepper__link--inProgress" href="#">
-          Prionaelurus<br class="k-Stepper__break"/>
-          planiceps
-        </a>
-      </li>
-      <li class="k-Stepper__item">
-        <a class="k-Stepper__link k-Stepper__link--validated" href="#">
-          Serval
-        </a>
-      </li>
-      <li class="k-Stepper__item">
-        <span class="k-Stepper__link k-Stepper__link--inactive">
-          Lynx<br class="k-Stepper__break"/>
-          pardinus
-        </span>
-      </li>
-    </ul>
-  </nav>
+  <%= react_component('Stepper', props: {
+    items: [
+      {
+        text: 'Catopuma<br /> Temminckii',
+        href: "#",
+      },
+      {
+        text: 'Prionaelurus<br /> planiceps',
+        href: "#",
+        linkClassNames: 'k-Stepper__link--inProgress',
+      },
+      {
+        text: 'Serval',
+        href: "#",
+        linkClassNames: 'k-Stepper__link--validated',
+      },
+      {
+        text: 'Lynx<br /> pardinus',
+        href: "#",
+        linkClassNames: 'k-Stepper__link--inactive',
+      },
+    ]
+  }) %>
 
 <% end %>
 
 <%= example "Stepper aligned to start" do %>
 
-  <nav class="k-Stepper" role="navigation">
-    <ul class="k-Stepper__list k-Stepper__list--alignStart">
-      <li class="k-Stepper__item k-Stepper__item--tinySpacing">
-        <a class="k-Stepper__link" href="#">
-          Catopuma<br>
-          Temminckii
-        </a>
-      </li>
-      <li class="k-Stepper__item k-Stepper__item--tinySpacing">
-        <a class="k-Stepper__link k-Stepper__link--inProgress" href="#">
-          Prionaelurus<br>
-          planiceps
-        </a>
-      </li>
-      <li class="k-Stepper__item k-Stepper__item--tinySpacing">
-        <a class="k-Stepper__link k-Stepper__link--validated" href="#">
-          Serval
-        </a>
-      </li>
-      <li class="k-Stepper__item k-Stepper__item--tinySpacing">
-        <span class="k-Stepper__link k-Stepper__link--inactive">
-          Lynx<br>
-          pardinus
-        </span>
-      </li>
-    </ul>
-  </nav>
+  <%= react_component('Stepper', props: {
+    isAlignStart: true,
+    withTinySpacing: true,
+    items: [
+      {
+        text: 'Catopuma<br /> Temminckii',
+        href: "#",
+      },
+      {
+        text: 'Prionaelurus<br /> planiceps',
+        href: "#",
+        linkClassNames: 'k-Stepper__link--inProgress',
+      },
+      {
+        text: 'Serval',
+        href: "#",
+        linkClassNames: 'k-Stepper__link--validated',
+      },
+      {
+        text: 'Lynx<br /> pardinus',
+        href: "#",
+        linkClassNames: 'k-Stepper__link--inactive',
+      },
+    ]
+  }) %>
 
 <% end %>
