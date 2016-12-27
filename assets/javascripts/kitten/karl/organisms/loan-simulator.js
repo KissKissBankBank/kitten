@@ -47,6 +47,7 @@ const KarlLoanSimulatorWithCommission = defaultProps(KarlLoanSimulator, {
   ],
 
   initialAmount: 2500,
+  initialInstallment: 150,
 
   actionLabel: null,
 })
