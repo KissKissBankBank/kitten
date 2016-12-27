@@ -7,6 +7,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 Features:
 - Add `commissionRules` prop to `LoanSimulator`.
 
+Fixes:
+- Fix Loan simulator initial installment tooltip placement.
+
 ## [v4.3.0] - 2016-12-26
 
 Features:
@@ -20,9 +23,6 @@ Fixes:
 
 Features:
 - Add links item in `k-BulletList` et `k-Paragraph`.
-
-Fixes:
-- Fix Loan simulator initial installment tooltip placement.
 
 ## [v4.1.0] - 2016-12-21
 
