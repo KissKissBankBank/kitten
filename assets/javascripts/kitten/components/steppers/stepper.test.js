@@ -1,7 +1,7 @@
 import React from 'react'
 import { expect } from 'chai'
 import { shallow } from 'enzyme'
-import Stepper from '../../components/steppers/stepper'
+import { Stepper } from '../../components/steppers/stepper'
 
 const items = [
   {

@@ -44,7 +44,7 @@ import SimulatorResult from 'kitten/components/simulators/simulator-result'
 import LoanSimulator from 'kitten/components/simulators/loan-simulator'
 
 // Steppers
-import Stepper from 'kitten/components/steppers/stepper'
+import { Stepper } from 'kitten/components/steppers/stepper'
 
 // Karl composed components
 

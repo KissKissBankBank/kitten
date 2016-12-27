@@ -1,7 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 
-export default class Stepper extends React.Component {
+export class Stepper extends React.Component {
 
   breakLine(text) {
     const regex = /(\n)/i
