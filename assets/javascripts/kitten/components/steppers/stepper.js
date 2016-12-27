@@ -3,12 +3,12 @@ import classNames from 'classnames'
 
 export class Stepper extends React.Component {
 
-  breakLine(text) {
+  lineBreaks(text) {
     const regex = /(\n)/i
 
-    return text.split(regex).map((line) => {
-      return line.match(regex) ? <br className="k-Stepper__break" /> : line
-    })
+    return text.split(regex).map(line =>
+      line.match(regex) ? <br className="k-Stepper__break" /> : line
+    )
   }
 
   renderLink(item) {
@@ -22,7 +22,7 @@ export class Stepper extends React.Component {
     }
 
     return <Tag { ...attrs }>
-      { this.breakLine(item.text) }
+      { this.lineBreaks(item.text) }
     </Tag>
   }
 
@@ -41,9 +41,6 @@ export class Stepper extends React.Component {
   }
 
   render() {
-    if (!this.props.items.length)
-      return false
-
     const listClassNames = classNames(
       'k-Stepper__list',
       { 'k-Stepper__list--alignStart': this.props.withAlignStart },

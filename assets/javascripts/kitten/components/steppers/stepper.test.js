@@ -49,7 +49,7 @@ describe('<Stepper />', () => {
     expect(links.first()).to.have.attr('href', 'http://…')
   })
 
-  it('renders a link no focusable', () => {
+  it('renders an unfocusable link', () => {
     const spanLink = component.find('span.k-Stepper__link')
 
     expect(spanLink).to.have.length(1)
