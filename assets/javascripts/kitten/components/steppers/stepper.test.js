@@ -63,7 +63,7 @@ describe('<Stepper />', () => {
   describe('with align start', () => {
     const componentWithAlignStart = shallow(
       <Stepper items={ items }
-               isAlignStart="true" />
+               withAlignStart="true" />
     )
 
     it('renders a list with `.k-Stepper__list--alignStart`', () => {

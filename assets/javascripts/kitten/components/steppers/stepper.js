@@ -46,7 +46,7 @@ export default class Stepper extends React.Component {
 
     const listClassNames = classNames(
       'k-Stepper__list',
-      { 'k-Stepper__list--alignStart': this.props.isAlignStart },
+      { 'k-Stepper__list--alignStart': this.props.withAlignStart },
     )
 
     return (
@@ -60,7 +60,7 @@ export default class Stepper extends React.Component {
 }
 
 Stepper.defaultProps = {
-  isAlignStart: false,
+  withAlignStart: false,
   withTinySpacing: false,
   items: [],
 }
