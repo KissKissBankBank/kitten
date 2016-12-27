@@ -63,7 +63,7 @@ describe('<Stepper />', () => {
   describe('with align start', () => {
     const componentWithAlignStart = shallow(
       <Stepper items={ items }
-               withAlignStart="true" />
+               withAlignStart={ true } />
     )
 
     it('renders a list with `.k-Stepper__list--alignStart`', () => {
@@ -76,7 +76,7 @@ describe('<Stepper />', () => {
   describe('with tiny spacing', () => {
     const componentWithTinySpacing = shallow(
       <Stepper items={ items }
-               withTinySpacing="true" />
+               withTinySpacing={ true } />
     )
 
     it('renders items with `.k-Stepper__item--tinySpacing`', () => {
