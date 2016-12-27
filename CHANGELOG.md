@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+Features:
+- Add new `Stepper` component.
+
 ## [v4.3.0] - 2016-12-26
 
 Features:
