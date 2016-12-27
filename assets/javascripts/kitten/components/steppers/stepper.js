@@ -11,6 +11,21 @@ export default class Stepper extends React.Component {
     })
   }
 
+  renderLink(item) {
+    const Tag = item.focusable === false ? 'span' : 'a'
+    const attrs = {
+      className: classNames(
+        'k-Stepper__link',
+        item.linkClassNames,
+      ),
+      href: Tag == 'a' ? item.href : null
+    }
+
+    return <Tag { ...attrs }>
+      { this.breakLine(item.text) }
+    </Tag>
+  }
+
   renderItems() {
     const items = this.props.items
     const itemClassNames = classNames(
@@ -19,15 +34,8 @@ export default class Stepper extends React.Component {
     )
 
     return items.map((item) => {
-      const linkClassNames = classNames(
-        'k-Stepper__link',
-        item.linkClassNames,
-      )
-
       return <li className={ itemClassNames }>
-        <a className={ linkClassNames } href={ item.href }>
-          { this.breakLine(item.text) }
-        </a>
+        { this.renderLink(item) }
       </li>
     })
   }
