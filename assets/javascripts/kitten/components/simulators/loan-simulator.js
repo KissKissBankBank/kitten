@@ -79,7 +79,30 @@ class LoanSimulator extends React.Component {
   }
 
   commissionRate() {
+    if (this.props.commissionRules.length > 0)
+      return this.commissionRateFromRules()
+
+    // DEPRECATED in favor of commissionRules
     return this.props.commissionRate(this.duration())
+  }
+
+  // The `commissionRules` prop has to be an array containing a `durationMax`
+  // rule. This will return the first `rate` which matches the rule for the
+  // current `duration`.
+  //
+  // Example `commissionRules` prop:
+  //     [
+  //       { durationMax: 12, rate: 0.3 },
+  //       { durationMax: 20, rate: 0.2 },
+  //       { rate: 0.1 }
+  //     ]
+  commissionRateFromRules() {
+    const duration = this.duration()
+    for (let i = 0, len = this.props.commissionRules.length; i < len; i++) {
+      let rule = this.props.commissionRules[i]
+      if (!rule.durationMax || duration <= rule.durationMax)
+        return rule.rate
+    }
   }
 
   commissionAmount() {
@@ -308,6 +331,9 @@ LoanSimulator.propTypes = {
   // Display commission if requested
   displayCommission: React.PropTypes.bool,
   commissionLabel: React.PropTypes.string,
+  commissionRules: React.PropTypes.array,
+
+  // DEPRECATED in favor of commissionRules
   commissionRate: React.PropTypes.func,
 
   // Label before the slider
@@ -350,6 +376,9 @@ LoanSimulator.defaultProps = {
 
   displayCommission: false,
   commissionLabel: 'Commission:',
+  commissionRules: {},
+
+  // DEPRECATED in favor of commissionRules
   commissionRate: function() { return 0 },
 
   installmentLabel: 'Reimbursing',
