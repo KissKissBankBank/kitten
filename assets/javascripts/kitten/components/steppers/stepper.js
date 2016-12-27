@@ -4,7 +4,7 @@ import classNames from 'classnames'
 export default class Stepper extends React.Component {
 
   breakLine(text) {
-    const regex = /(<br.*>)/i
+    const regex = /(\n)/i
 
     return text.split(regex).map((line) => {
       return line.match(regex) ? <br className="k-Stepper__break" /> : line
