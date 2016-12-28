@@ -15,10 +15,13 @@ const iconTypeComponents = {
 export class Stepper extends React.Component {
   lineBreaks(text) {
     const regex = /(\n)/i
+    const brClassNames = classNames(
+      { 'k-Stepper__break': !this.props.withAlignStart }
+    )
 
     return text.split(regex).map((line, index) =>
       line.match(regex)
-      ? <br className="k-Stepper__break" key={ index } />
+      ? <br className={ brClassNames } key={ index } />
       : line
     )
   }
