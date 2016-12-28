@@ -2,6 +2,11 @@ import React from 'react'
 import { expect } from 'chai'
 import { shallow } from 'enzyme'
 import { Stepper } from '../../components/steppers/stepper'
+import {
+  StepperIconDefault,
+  StepperIconInProgress,
+  StepperIconValidated,
+} from './stepper-icon'
 
 const items = [
   {
@@ -92,6 +97,26 @@ describe('<Stepper />', () => {
       items.map(item => {
         expect(item).to.have.className('k-Stepper__item--tinySpacing')
       })
+    })
+  })
+
+  describe('with different icon types', () => {
+    it('renders a <StepperIconDefault />', () => {
+      const icon = component.find('.k-Stepper__link').at(0).children().first()
+
+      expect(icon).to.have.type(StepperIconDefault)
+    })
+
+    it('renders a <StepperIconInProgress />', () => {
+      const icon = component.find('.k-Stepper__link').at(1).children().first()
+
+      expect(icon).to.have.type(StepperIconInProgress)
+    })
+
+    it('renders a <StepperIconValidated />', () => {
+      const icon = component.find('.k-Stepper__link').at(2).children().first()
+
+      expect(icon).to.have.type(StepperIconValidated)
     })
   })
 })
