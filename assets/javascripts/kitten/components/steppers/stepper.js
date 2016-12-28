@@ -24,7 +24,7 @@ export class Stepper extends React.Component {
   }
 
   renderLink(item) {
-    const Tag = item.focusable === false ? 'span' : 'a'
+    const Tag = item.href ? 'a' : 'span'
     const IconType = iconTypeComponents[item.iconType]
     const attrs = {
       className: classNames(
