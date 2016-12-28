@@ -56,6 +56,7 @@
     @include k-typographyFont($font);
     @include k-typographyFontSize($font-step, $line-height);
     color: $color;
+    text-align: left;
   }
 
   .k-Stepper__list {
@@ -64,10 +65,10 @@
     justify-content: center;
 
     margin: 0;
-    padding: 0;
+    padding: 15px 0;
     list-style: none;
 
-    @include k-media-max('xs') {
+    @include k-media-max('s') {
       flex-direction: column;
       align-items: flex-start;
     }
@@ -75,6 +76,7 @@
 
   .k-Stepper__list--alignStart {
     justify-content: flex-start;
+    flex-wrap: wrap;
   }
 
   .k-Stepper__item {
@@ -88,13 +90,25 @@
       margin-right: 0;
     }
 
-    @include k-media-max('xs') {
+    @include k-media-max('s') {
       margin: ($margin / 3) 0;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .k-Stepper__list--alignStart & {
+      margin: 0 $margin ($margin / 3 * 2) 0;
     }
   }
 
   .k-Stepper__item--tinySpacing {
-    @include k-media-min('s') {
+    @include k-media-min('m') {
       margin-left: $margin-tiny;
       margin-right: $margin-tiny;
     }
@@ -129,8 +143,7 @@
     }
   }
 
-  .k-Stepper__link--inProgress,
-  .k-Stepper__link--validated {
+  .k-Stepper__link--inProgress {
     color: $color-hover;
   }
 
@@ -159,11 +172,11 @@
   .k-Stepper__break {
     display: block;
 
-    @include k-media-min('m') {
+    @include k-media-min('l') {
       display: none;
     }
 
-    @include k-media-max('xs') {
+    @include k-media-max('s') {
       display: none;
     }
   }
