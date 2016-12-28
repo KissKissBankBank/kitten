@@ -1,7 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
-import { ArrowIcon } from '../icons/arrow-icon'
-import { CheckedIcon } from '../icons/checked-icon'
+import { ArrowIcon } from 'kitten/components/icons/arrow-icon'
+import { CheckedIcon } from 'kitten/components/icons/checked-icon'
 
 export class StepperIcon extends React.Component {
   render() {

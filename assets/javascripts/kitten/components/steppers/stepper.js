@@ -4,7 +4,7 @@ import {
   StepperIconDefault,
   StepperIconInProgress,
   StepperIconValidated,
-} from './stepper-icon'
+} from 'kitten/components/steppers/stepper-icon'
 
 const iconTypeComponents = {
   'default': StepperIconDefault,

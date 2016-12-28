@@ -1,12 +1,12 @@
 import React from 'react'
 import { expect } from 'chai'
 import { shallow } from 'enzyme'
-import { Stepper } from '../../components/steppers/stepper'
+import { Stepper } from 'kitten/components/steppers/stepper'
 import {
   StepperIconDefault,
   StepperIconInProgress,
   StepperIconValidated,
-} from './stepper-icon'
+} from 'kitten/components/steppers/stepper-icon'
 
 const items = [
   {
