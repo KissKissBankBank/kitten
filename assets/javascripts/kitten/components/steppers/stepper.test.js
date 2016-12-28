@@ -7,17 +7,24 @@ const items = [
   {
     text: "Catopuma\n Temminckii",
     href: "http://…",
+    iconType: "default",
   },
   {
     text: "Prionaelurus\n planiceps",
     href: "#",
     linkClassNames: "k-Stepper__link--inProgress",
+    iconType: "inProgress",
   },
   {
     text: "Serval",
     href: "#",
+    linkClassNames: "k-Stepper__link--validated",
+    iconType: "validated",
+  },
+  {
+    text: "Lynx\n pardinus",
     linkClassNames: "k-Stepper__link--inactive",
-    focusable: false,
+    iconType: "default",
   },
 ]
 
@@ -37,13 +44,13 @@ describe('<Stepper />', () => {
   })
 
   it('renders items', () => {
-    expect(component.find('li.k-Stepper__item')).to.have.length(3)
+    expect(component.find('li.k-Stepper__item')).to.have.length(4)
   })
 
   it('renders links', () => {
     const links = component.find('.k-Stepper__link')
 
-    expect(links).to.have.length(3)
+    expect(links).to.have.length(4)
     expect(links.find('.k-Stepper__link--inProgress')).to.have.length(1)
     expect(links.find('.k-Stepper__link--inactive')).to.have.length(1)
     expect(links.first()).to.have.attr('href', 'http://…')
@@ -57,7 +64,7 @@ describe('<Stepper />', () => {
   })
 
   it('replaces line feed by <br class"k-Stepper__break" />', () => {
-    expect(component.find('br.k-Stepper__break')).to.have.length(2)
+    expect(component.find('br.k-Stepper__break')).to.have.length(3)
   })
 
   describe('with align start', () => {
