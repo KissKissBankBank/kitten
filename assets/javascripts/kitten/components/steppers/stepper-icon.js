@@ -1,5 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
+import { ArrowIcon } from '../icons/arrow-icon'
+import { CheckedIcon } from '../icons/checked-icon'
 
 export class StepperIcon extends React.Component {
   render() {
@@ -32,12 +34,7 @@ export class StepperIconInProgress extends React.Component {
   render() {
     return (
       <StepperIcon className="k-Stepper__icon--inProgress">
-        <svg className="k-ButtonIcon__svg k-Stepper__svg"
-             xmlns="http://www.w3.org/2000/svg"
-             viewBox="0 0 6 8.99">
-          <path d="M6 4.48L4.51 6 0 1.48 1.51 0z"/>
-          <path d="M6 4.48L1.51 9 0 7.48 4.51 3z"/>
-        </svg>
+        <ArrowIcon className="k-ButtonIcon__svg k-Stepper__svg" />
       </StepperIcon>
     )
   }
@@ -52,12 +49,7 @@ export class StepperIconValidated extends React.Component {
 
     return (
       <StepperIcon className={ validatedClassNames }>
-        <svg className="k-ButtonIcon__svg k-Stepper__svg"
-             xmlns="http://www.w3.org/2000/svg"
-             viewBox="0 0 11 8">
-          <path d="M4.44 7.596L3.024 6.182 8.682.525l1.414 1.414z"/>
-          <path d="M4.44 7.596L.903 4.06l1.414-1.414 3.536 3.536z"/>
-        </svg>
+        <CheckedIcon className="k-ButtonIcon__svg k-Stepper__svg" />
       </StepperIcon>
     )
   }
