@@ -162,5 +162,9 @@
     @include k-media-min('m') {
       display: none;
     }
+
+    @include k-media-max('xs') {
+      display: none;
+    }
   }
 }
