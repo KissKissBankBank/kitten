@@ -1,5 +1,16 @@
 import React from 'react'
 import classNames from 'classnames'
+import {
+  StepperIconDefault,
+  StepperIconInProgress,
+  StepperIconValidated,
+} from './stepper-icon'
+
+const iconTypeComponents = {
+  'default': StepperIconDefault,
+  'inProgress': StepperIconInProgress,
+  'validated': StepperIconValidated,
+}
 
 export class Stepper extends React.Component {
   lineBreaks(text) {
@@ -14,15 +25,17 @@ export class Stepper extends React.Component {
 
   renderLink(item) {
     const Tag = item.focusable === false ? 'span' : 'a'
+    const IconType = iconTypeComponents[item.iconType]
     const attrs = {
       className: classNames(
         'k-Stepper__link',
         item.linkClassNames,
       ),
-      href: Tag == 'a' ? item.href : null
+      href: Tag == 'a' ? item.href : null,
     }
 
     return <Tag { ...attrs }>
+      <IconType />
       { this.lineBreaks(item.text) }
     </Tag>
   }

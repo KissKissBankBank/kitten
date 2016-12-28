@@ -108,18 +108,6 @@
 
     transition: $transition-duration color;
 
-    &:before {
-      box-sizing: border-box;
-      display: inline-block;
-      margin-right: k-px-to-rem($circle-size / 2);
-      width: k-px-to-rem($circle-size);
-      height: k-px-to-rem($circle-size);
-      border: 1px solid $line;
-      border-radius: k-px-to-rem($circle-size / 2);
-      background: $background no-repeat center center;
-      content: '';
-    }
-
     &:hover {
       color: $color-hover;
       text-decoration: none;
@@ -141,22 +129,30 @@
     }
   }
 
-  .k-Stepper__link--inProgress {
+  .k-Stepper__link--inProgress,
+  .k-Stepper__link--validated {
     color: $color-hover;
+  }
 
-    &:before {
-      border-color: $color-hover;
-      background-image: url('~icons/arrow-right-primary-1.svg');
+  .k-Stepper__icon {
+    margin-right: $margin / 2;
+  }
+
+  .k-Stepper__icon--inProgress {
+    background: $background;
+    border-color: $color-hover;
+
+    .k-Stepper__svg {
+      fill: $color-hover;
     }
   }
 
-  .k-Stepper__link--validated {
-    color: $color-hover;
+  .k-Stepper__icon--validated {
+    background: $color-hover;
+    border-color: $color-hover;
 
-    &:before {
-      border-color: $color-hover;
-      background-color: $color-hover;
-      background-image: url('~icons/checked.svg');
+    .k-Stepper__svg {
+      fill: $background;
     }
   }
 
