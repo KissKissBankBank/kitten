@@ -26,15 +26,12 @@ export class Stepper extends React.Component {
   renderLink(item) {
     const Tag = item.href ? 'a' : 'span'
     const IconType = iconTypeComponents[item.iconType]
-    const attrs = {
-      className: classNames(
-        'k-Stepper__link',
-        item.linkClassNames,
-      ),
-      href: Tag == 'a' ? item.href : null,
-    }
+    const linkClassNames = classNames(
+      'k-Stepper__link',
+      item.linkClassNames,
+    )
 
-    return <Tag { ...attrs }>
+    return <Tag className={ linkClassNames } href={ item.href }>
       <IconType />
       { this.lineBreaks(item.text) }
     </Tag>
