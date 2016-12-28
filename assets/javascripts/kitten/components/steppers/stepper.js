@@ -5,8 +5,10 @@ export class Stepper extends React.Component {
   lineBreaks(text) {
     const regex = /(\n)/i
 
-    return text.split(regex).map(line =>
-      line.match(regex) ? <br className="k-Stepper__break" /> : line
+    return text.split(regex).map((line, index) =>
+      line.match(regex)
+      ? <br className="k-Stepper__break" key={ index } />
+      : line
     )
   }
 
@@ -32,9 +34,9 @@ export class Stepper extends React.Component {
       { 'k-Stepper__item--tinySpacing': this.props.withTinySpacing },
     )
 
-    return items.map(item =>
-      <li className={ itemClassNames }>
-        { this.renderLink(item) }
+    return items.map((item, index) =>
+      <li className={ itemClassNames } key={ index }>
+        { this.renderLink(item, index) }
       </li>
     )
   }
