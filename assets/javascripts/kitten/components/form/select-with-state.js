@@ -35,10 +35,7 @@ class SelectWithState extends React.Component {
 
     return (
       <div className={ classNames('k-Select', className) }>
-        <SelectWithMultiLevel clearable={ false }
-                              searchable={ false }
-                              multi={ false }
-                              value={ this.state.value }
+        <SelectWithMultiLevel value={ this.state.value }
                               onChange={ this.handleChange }
                               { ...other } />
       </div>
