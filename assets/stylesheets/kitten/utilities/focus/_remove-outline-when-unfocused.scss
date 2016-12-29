@@ -1,0 +1,16 @@
+/// Remove the default browser focus on links and buttons inside the
+/// `k-u-unfocused` class.
+///
+/// @group form
+///
+/// @example scss - Usage
+///   @include k-removeOutlineWhenUnfocused;
+
+@mixin k-utilities-removeOutlineWhenUnfocused {
+  .k-u-unfocused {
+    a:focus,
+    button:focus {
+      outline: 0;
+    }
+  }
+}
