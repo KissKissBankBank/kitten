@@ -1,6 +1,19 @@
-<%= example "Tooltips" do %>
-  <%= react_component('Tooltip', props: {
-      children: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor, enean massa. Cum sociis natoque penatibus et magnis dis parturien.',
-    }
-  )%>
-<% end %>
+<div class="karl-Example__column">
+  <%= example "Tooltips Icon" do %>
+    <%= react_component('ButtonTooltipIcon', props: {
+
+      }
+    )%>
+  <% end %>
+
+  <%= example "Tooltips" do %>
+    <%= react_component('Tooltip', props: {
+        children: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor, enean massa. Cum sociis natoque penatibus et magnis dis parturien.',
+        data_for: 'tooltip',
+        data_id: 'tooltip',
+        data_role: 'tooltip',
+        place: 'left',
+      }
+    )%>
+  <% end %>
+</div>
