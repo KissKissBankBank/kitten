@@ -7,13 +7,13 @@ export default class Tooltip extends React.Component {
     return (
       <div>
         <ButtonTooltipIcon data-tip
-                     data-for={ this.props.data_for}
-                     data-event="click"
-                     data-dismiss={this.props.data_for} />
+                           data-for={ this.props.data_for }
+                           data-event="click"
+                           data-dismiss={ this.props.data_for } />
 
-        <ReactTooltip id={ this.props.data_id}
+        <ReactTooltip id={ this.props.data_id }
                       class="k-Tooltip"
-                      role={ this.props.data_role}
+                      role={ this.props.data_role }
                       aria-describedby={ this.props.data_id }
                       effect="solid"
                       place={ this.props.place }
