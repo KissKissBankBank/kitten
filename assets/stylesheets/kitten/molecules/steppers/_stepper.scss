@@ -50,8 +50,6 @@
   $margin-tiny: k-px-to-rem(15px);
   $transition-duration: .2s;
 
-  $circle-size: 20px;
-
   .k-Stepper {
     @include k-typographyFont($font);
     @include k-typographyFontSize($font-step, $line-height);
