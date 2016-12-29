@@ -64,16 +64,16 @@
       transition: border-color .2s, background-color .2s;
     }
 
-    // .k-Checkbox__input:focus + &:before {
-    //   border-color: $border-color-hover;
-    // }
+    .k-Checkbox__input:focus + &:before {
+      border-color: $border-color-hover;
+    }
 
     &:hover { color: $border-color-hover; }
     &:active { color: $background-color-active; }
 
-    // .k-Checkbox__input:checked:focus + &:before {
-    //   box-shadow: 0 0 k-px-to-rem(3px) $background-color-checked;
-    // }
+    html:not(.k-u-unfocused) .k-Checkbox__input:focus + &:before {
+      box-shadow: 0 0 1rem $background-color-checked;
+    }
 
     .k-Checkbox__input:checked + &:before {
       background: $background-color-checked
@@ -96,7 +96,7 @@
 
   .k-Checkbox__input {
     position: absolute;
-    visibility: hidden;
+    opacity: 0;
     cursor: pointer;
 
     &:disabled {

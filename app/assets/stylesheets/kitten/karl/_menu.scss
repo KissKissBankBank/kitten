@@ -167,7 +167,7 @@ $menu-width: 14rem;
     }
   }
 
-  // &:focus,
+  &:focus,
   &:hover {
     background-color: $light-navy;
   }
@@ -211,7 +211,7 @@ $menu-width: 14rem;
     }
   }
 
-  // &:focus,
+  &:focus,
   &:hover {
     background-color: $light-navy;
   }
@@ -231,7 +231,7 @@ $menu-width: 14rem;
 
   color: #cadbfd;
 
-  // &:focus,
+  &:focus,
   &:hover,
   &.is-selected,
   &.is-opened {

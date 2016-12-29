@@ -62,17 +62,17 @@
   // Input
   .k-TextInputWithUnit__input {
     box-sizing: border-box;
-    //outline: none; // since we introduce our own focus styles
+    outline: none; // since we introduce our own focus styles
 
     transition: all $transition-speed;
 
     @include k-typographyFont($input-font);
     @include k-formRemoveNumberSpinner;
 
-    // &:focus ~ .k-TextInputWithUnit__unit {
-    //   border: 1px solid $unit-color;
-    //   color: $color;
-    // }
+    &:focus ~ .k-TextInputWithUnit__unit {
+      border: 1px solid $unit-color;
+      color: $color;
+    }
   }
 
   // Unit
