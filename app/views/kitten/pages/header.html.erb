@@ -309,31 +309,32 @@
 </header>
 
 <div class="k-TabBar k-TabBar--responsive is-fixed">
-  <ul class="k-TabBar__nav">
-    <li>
-      <%= link_to raw('Starten dein <br />Projekt'),
-                  { current: 'tabbar-1' },
-                  class: 'k-TabBar__item k-TabBar__item--thinGutters ' +
-                  (params['current'] == 'tabbar-1' ? 'is-selected' : '') %>
-    </li>
-    <li>
-      <%= link_to raw('Entdecken die <br />Projekte'),
-                  { current: 'tabbar-2' },
-                  class: 'k-TabBar__item k-TabBar__item--thinGutters ' +
-                  (params['current'] == 'tabbar-2' ? 'is-selected' : '') %>
-    </li>
-    <li>
-      <%= link_to raw('Wie funktioniert <br />das'),
-                  { current: 'tabbar-3' },
-                  class: 'k-TabBar__item k-TabBar__item--thinGutters ' +
-                  (params['current'] == 'tabbar-3' ? 'is-selected' : '') %>
-    </li>
-    <li>
-      <%= link_to raw('Crowd'),
-                  { current: 'tabbar-4' },
-                  class: 'k-TabBar__item k-TabBar__item--thinGutters ' +
-                  'k-TabBar__item--singleLine ' +
-                  (params['current'] == 'tabbar-4' ? 'is-selected' : '') %>
-    </li>
-  </ul>
+  <nav class="k-TabBar__nav">
+    <ul class="k-TabBar__list">
+      <li>
+        <%= link_to raw('Starten dein <br />Projekt'),
+                    { current: 'tabbar-1' },
+                    class: 'k-TabBar__item ' +
+                    (params['current'] == 'tabbar-1' ? 'is-selected' : '') %>
+      </li>
+      <li>
+        <%= link_to raw('Entdecken die <br />Projekte'),
+                    { current: 'tabbar-2' },
+                    class: 'k-TabBar__item ' +
+                    (params['current'] == 'tabbar-2' ? 'is-selected' : '') %>
+      </li>
+      <li>
+        <%= link_to raw('Wie funktioniert <br />das'),
+                    { current: 'tabbar-3' },
+                    class: 'k-TabBar__item ' +
+                    (params['current'] == 'tabbar-3' ? 'is-selected' : '') %>
+      </li>
+      <li>
+        <%= link_to raw('Crowd'),
+                    { current: 'tabbar-4' },
+                    class: 'k-TabBar__item ' +
+                    (params['current'] == 'tabbar-4' ? 'is-selected' : '') %>
+      </li>
+    </ul>
+  </nav>
 </div>
