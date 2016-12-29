@@ -12,9 +12,9 @@ export default class Tooltip extends React.Component {
                      data-dismiss={this.props.data_for} />
 
         <ReactTooltip id={ this.props.data_id}
+                      class="k-Tooltip"
                       role={ this.props.data_role}
                       aria-describedby={ this.props.data_id }
-                      class="k-Tooltip"
                       effect="solid"
                       place={ this.props.place }
                       globalEventOff="click" >
