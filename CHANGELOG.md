@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Handle multi-level options in the Select
+- Feature: Select defaults to un-clearable, un-searchable, and un-multi
+
 ## [v.4.4.0] - 2016-12-27
 
 Features:

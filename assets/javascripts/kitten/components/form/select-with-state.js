@@ -1,6 +1,15 @@
 // Select that uses https://github.com/JedWatson/react-select
 // with default states and handles the current value as a local state.
-
+//
+// Also handles multi-level options. You can give `children: []` to each option
+// and fill it with options to represent a hierarchy of options.
+//
+// E.g:
+//    <SelectWithState options={
+//      { label: 'Cat',
+//        children: [{ label: 'A' }, { label: 'B' }]
+//      } />
+//
 import React from 'react'
 import classNames from 'classnames'
 import Select from 'react-select'
@@ -75,6 +84,9 @@ class SelectWithMultiLevel extends React.Component {
 
 SelectWithState.defaultProps = {
   onChange: function() {},
+  clearable: false,
+  searchable: false,
+  multi: false,
 }
 
 export default SelectWithState
