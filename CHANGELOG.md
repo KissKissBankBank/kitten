@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: disable React on Rails console traces in dev style guide
+- Fix: disable React on Rails console traces in dev style guide.
 
 ## [v.4.4.0] - 2016-12-27
 
