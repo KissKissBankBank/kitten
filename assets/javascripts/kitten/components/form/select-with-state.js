@@ -44,17 +44,8 @@ class SelectWithState extends React.Component {
 }
 
 class SelectWithMultiLevel extends React.Component {
-  optionRenderer({ level, label }) {
-    if (!level)
-      return label
-
-    return (
-      <span className={ 'k-Select__option--level' + level }>
-        { label }
-      </span>
-    )
-  }
-
+  // Turns a hierarchy of options with `children` into a flat array
+  // of options with a `level` of 1, 2 or null.
   flattenedOptions() {
     const options = []
     this.props.options.map((option) => {
@@ -70,6 +61,18 @@ class SelectWithMultiLevel extends React.Component {
       }
     })
     return options
+  }
+
+  // React-Select allows changing the way options are rendered.
+  optionRenderer({ level, label }) {
+    if (!level)
+      return label
+
+    return (
+      <span className={ 'k-Select__option--level' + level }>
+        { label }
+      </span>
+    )
   }
 
   render() {
