@@ -1,6 +1,6 @@
 <%= example "select" do %>
   <%= react_component('SelectWithState', props: {
-        name: 'locale',
+        value: 'fr',
         options: [
           { value: 'de', label: 'Deutsch' },
           { value: 'en', label: 'English' },
@@ -16,14 +16,12 @@
           { value: 'se', label: 'Davvisámegiella' },
           { value: 'av', label: 'авар мацӀ' },
         ],
-        placeholder: false,
-        value: 'fr',
   }) %>
 <% end %>
 
 <%= example "select with sub-levels" do %>
   <%= react_component('SelectWithState', props: {
-        name: 'locale',
+        placeholder: 'Taxonomia…',
         options: [
           { label: 'Genus Catopuma',
             children: [
@@ -48,6 +46,5 @@
           },
           { label: 'Genus Disablus', children: [], disabled: true },
         ],
-        placeholder: 'Taxonomia…',
   }) %>
 <% end %>

@@ -2,7 +2,7 @@
 // with default states and handles the current value as a local state.
 //
 // Also handles multi-level options. You can give `children: []` to each option
-// and fill it with options to represent a hierarchy of options.
+// and fill it with options to represent a hierarchy.
 //
 // E.g:
 //    <SelectWithState options={
