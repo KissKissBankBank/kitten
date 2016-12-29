@@ -48,11 +48,12 @@ class SelectWithMultiLevel extends React.Component {
   // of options with a `level` of 1, 2 or null.
   flattenedOptions() {
     const options = []
-    this.props.options.map((option) => {
+
+    this.props.options.map(option => {
       if (option.children) {
         option.level = 1
         options.push(option)
-        option.children.map((opt) => {
+        option.children.map(opt => {
           opt.level = 2
           options.push(opt)
         })
@@ -60,6 +61,7 @@ class SelectWithMultiLevel extends React.Component {
         options.push(option)
       }
     })
+
     return options
   }
 
