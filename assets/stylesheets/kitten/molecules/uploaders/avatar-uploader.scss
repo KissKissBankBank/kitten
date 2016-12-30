@@ -1,0 +1,104 @@
+/// An avatar uploader.
+///
+/// @group uploaders
+///
+/// @example scss - usage
+///
+///   @include k-AvatarUploader;
+///
+/// @example html
+///
+///   …
+
+@mixin k-AvatarUploader {
+  $font: 'source-sans-light';
+  $font-step: -1;
+  $color: map-get($k-colors, 'font-1');
+
+  $dropdown-size: 50px - 2px;
+  $icon-size: k-px-to-rem(18px);
+  $gutter: k-px-to-rem(10px);
+
+  // Dropdown colors.
+  $border-color: map-get($k-colors, 'line-2');
+  $background-color: map-get($k-colors, 'background');
+  $border-drag-color: map-get($k-colors, 'primary-1');
+  $background-drag-color: map-get($k-colors, 'primary-5');
+
+  $transition-duration: .4s;
+
+  .k-AvatarUploader {
+    display: inline-block;
+
+    @include k-typographyFont($font);
+    @include k-typographyFontSize($font-step);
+
+    margin-left: 50px; // Remove…
+  }
+
+  .k-AvatarUploader__label {
+    display: flex;
+    align-items: center;
+
+    cursor: pointer;
+  }
+
+  .k-AvatarUploader__dropzone {
+    @include k-buttonBase;
+    @include k-buttonRounded($dropdown-size, $icon-size, $icon-size);
+
+    box-sizing: border-box;
+    margin-right: $gutter;
+    border: 1px dashed $border-color;
+    background-color: $background-color;
+
+    transition: background-color .4s, border-color .4s;
+  }
+
+  .k-AvatarUploader__dropzone--loading {
+    @include k-buttonRounded($dropdown-size, 0, 0);
+    position: relative;
+
+    .k-AvatarUploader__dropzone__svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: $dropdown-size;
+      height: $dropdown-size;
+      fill: $border-drag-color;
+    }
+  }
+
+  .k-AvatarUploader:hover .k-AvatarUploader__dropzone,
+  .k-AvatarUploader__dropzone--drag {
+    @include k-buttonRounded(($dropdown-size + 5px), $icon-size, $icon-size);
+    position: relative;
+    margin-left: -2.5px;
+    margin-top: -2.5px;
+    margin-bottom: -2.5px;
+    margin-right: 10px - 2.5px;
+
+    border-color: $border-drag-color;
+    background-color: $background-drag-color;
+
+    .k-AvatarUploader__dropzone__svg {
+      fill: $border-drag-color;
+    }
+  }
+
+  .k-AvatarUploader__dropzone__svg {
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: $icon-size;
+    height: $icon-size;
+    fill: $color;
+
+    transition: fill .4s;
+  }
+
+  .k-AvatarUploader__input {
+    display: none;
+  }
+}
