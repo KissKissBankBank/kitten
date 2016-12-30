@@ -6,6 +6,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 Features:
 - Add modifier `k-buttonIcon--micro` on `k-ButtonIcon`.
+- Add new `k-Tooltip` React component.
+- Add new `k-TooltipIcon` component.
 
 Fixes:
 - Move `babel-preset-airbnb` module from `devDependencies` to `dependencies`.
