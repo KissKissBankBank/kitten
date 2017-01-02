@@ -7,6 +7,7 @@ describe('<LinkBox />', () => {
   const component = shallow(
     <LinkBox href="http://…/history.pdf"
              title="Your history"
+             titleClassNames="k-LinkBox__title--withEllipsis"
              text="Download your history (pdf - 8Mo)"
              isExternal="true" />
   )
@@ -23,6 +24,7 @@ describe('<LinkBox />', () => {
 
     expect(title).to.have.length(1)
     expect(title).to.have.text('Your history')
+    expect(title).to.have.className('k-LinkBox__title--withEllipsis')
   })
 
   it('renders text', () => {

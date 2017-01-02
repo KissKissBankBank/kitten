@@ -17,7 +17,7 @@
 ///     <div class="k-LinkBox__container">
 ///       <div class="k-LinkBox__icon"> … </div>
 ///       <div class="k-LinkBox__paragraph">
-///         <p class="k-LinkBox__title"> … </p>
+///         <p class="k-LinkBox__title k-LinkBox__title--withEllipsis"> … </p>
 ///         <p class="k-LinkBox__text"> … </p>
 ///       </div>
 ///       <div class="k-LinkBox__navigation k-LinkBox__navigation--withAnimation">
@@ -124,6 +124,13 @@
     @include k-typographyFontSize(0);
 
     margin: 0;
+  }
+
+  .k-LinkBox__title--withEllipsis {
+    text-overflow: ellipsis;
+    max-width: k-px-to-rem(215px);
+    white-space: nowrap;
+    overflow: hidden;
   }
 
   .k-LinkBox__text {
