@@ -8,6 +8,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 Features:
 - Add `commissionRules` prop to `LoanSimulator`.
+- Add new `k-ButtonTooltip` React component.
 
 Fixes:
 - Fix Loan simulator initial installment tooltip placement.

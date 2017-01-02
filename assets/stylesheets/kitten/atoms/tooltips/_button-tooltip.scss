@@ -1,0 +1,31 @@
+/// Button Tooltip
+///
+/// @group tooltips
+///
+/// @example scss - Usage
+///
+///   @include k-ButtonTooltip;
+///
+/// @example html
+
+
+@mixin k-ButtonTooltip {
+
+  // Colors
+  // $background-color: map-get($k-colors, 'primary-5');
+  // $color: map-get($k-colors, 'primary-1');
+  // $border-color: map-get($k-colors, 'primary-4')
+
+  $font: 'source-sans';
+  $font-size: -2;
+  $line-height: 1.3;
+
+  // $arrow-size: k-px-to-rem(8px);
+  // $tooltip-margin: k-px-to-rem(18px);
+
+  .k-ButtonTooltip__content {
+    @include k-typographyFont($font);
+    @include k-typographyFontSize($font-size, $line-height);
+
+  }
+}
