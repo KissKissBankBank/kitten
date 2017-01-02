@@ -4,13 +4,41 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [v.4.4.0] - 2016-12-27
+
 Features:
+- Add `commissionRules` prop to `LoanSimulator`.
+
+Fixes:
+- Fix Loan simulator initial installment tooltip placement.
+
+## [v4.3.0] - 2016-12-26
+
+Features:
+- Add `isExternal` option to `LinkBox`.
+
+Fixes:
+- Change some styles on `k-LinkBox`.
+- Fix text-decoration in `k-Paragraph__link` and `k-BulletList__link`.
+
+## [v4.2.0] - 2016-12-23
+
+Features:
+- Add links item in `k-BulletList` et `k-Paragraph`.
+
+## [v4.1.0] - 2016-12-21
+
+Features:
+- Add `k-u-margin` for margins.
 - Add modifier `k-buttonIcon--micro` on `k-ButtonIcon`.
 - Add new `k-Tooltip` React component.
 - Add new `k-TooltipIcon` component.
+- Add `initialInstallment` option to `LoanSimulator`.
+- Add modifier `k-Row--lightTopBorder` on `k-Row`.
 
 Fixes:
 - Move `babel-preset-airbnb` module from `devDependencies` to `dependencies`.
+- Fix image width on `.k-Footer__logo__img > img`.
 
 ## [v4.0.0] - 2016-12-20
 
