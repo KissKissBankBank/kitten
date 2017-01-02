@@ -84,7 +84,6 @@ ReactOnRails.register({
   SelectWithState,
   NavList,
   SimulatorResult,
-  SimulatorResult,
   Tooltip,
   Tour,
   TourPopover,
