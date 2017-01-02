@@ -1,9 +1,11 @@
-<%= example "Avatar uploader" do %>
+<%= example "Avatar uploader - default" do %>
 
   <div class="k-AvatarUploader">
-    <label for="file" class="k-AvatarUploader__label" tabindex="1">
-      <span class="k-AvatarUploader__dropzone">
-        <svg class="k-AvatarUploader__dropzone__svg" viewBox="0 0 14 18"
+    <label for="avatar"
+           class="k-AvatarUploader__dropzone k-AvatarUploader__dropzone--hover"
+           tabindex="0">
+      <span class="k-AvatarUploader__button" role="button">
+        <svg class="k-AvatarUploader__button__svg" viewBox="0 0 14 18"
             xmlns="http://www.w3.org/2000/svg">
           <path d="M13.984 14.244c-.404-2.563-2.527-4.502-4.95-5.22
             1.042-1.158 1.595-3.05 1.597-4.33C10.636 2.73 9.024.688
@@ -17,26 +19,98 @@
       <span>Lorem ipsum dolor</span>
     </label>
 
-    <input id="file" class="k-AvatarUploader__input" type="file" />
+    <input id="avatar" class="k-AvatarUploader__input" type="file" />
   </div>
 
 <% end %>
 
-<%= example "Avatar uploader" do %>
+<%= example "Avatar uploader - drag" do %>
 
   <div class="k-AvatarUploader">
-    <label for="file" class="k-AvatarUploader__label">
-      <span class="k-AvatarUploader__dropzone k-AvatarUploader__dropzone--loading">
-        <svg class="k-AvatarUploader__dropzone__svg" viewBox="0 0 50 50"
+    <label for="avatar2"
+           class="k-AvatarUploader__dropzone k-AvatarUploader__dropzone--drag"
+           tabindex="0">
+      <span class="k-AvatarUploader__button" role="button">
+        <svg class="k-AvatarUploader__button__svg" viewBox="0 0 14 18"
             xmlns="http://www.w3.org/2000/svg">
-          <ellipse class="" ry="25" rx="25" cy="25" cx="25"></ellipse>
+          <path d="M13.984 14.244c-.404-2.563-2.527-4.502-4.95-5.22
+            1.042-1.158 1.595-3.05 1.597-4.33C10.636 2.73 9.024.688
+            6.97.688c-2.055 0-3.667 2.04-3.664 4.006.002 1.287.56 3.188
+            1.61 4.346-2.4.73-4.497 2.658-4.9 5.204C-.15 15.3 1.075 16
+            1.865 16.357c1.554.703 3.33.943 5.02.955 1.71.012 3.5-.21
+            5.086-.883.832-.354 2.19-1.07 2.014-2.186z" />
         </svg>
       </span>
 
       <span>Lorem ipsum dolor</span>
     </label>
 
-    <input id="file" class="k-AvatarUploader__input" type="file" />
+    <input id="avatar2" class="k-AvatarUploader__input" type="file" />
+  </div>
+
+<% end %>
+
+<%= example "Avatar uploader - progress" do %>
+
+  <div class="k-AvatarUploader">
+    <label for="avatar3"
+           class="k-AvatarUploader__dropzone k-AvatarUploader__dropzone--progress"
+           tabindex="0">
+      <span class="k-AvatarUploader__button" role="button">
+        <svg class="k-AvatarUploader__button__svg" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+          <circle cx="10" cy="10" r="10" />
+        </svg>
+      </span>
+
+      <span>Lorem ipsum dolor</span>
+    </label>
+
+    <input id="avatar3" class="k-AvatarUploader__input" type="file" />
+  </div>
+
+<% end %>
+
+<%= example "Avatar uploader - validated" do %>
+
+  <div class="k-AvatarUploader">
+    <label for="avatar3"
+           class="k-AvatarUploader__dropzone k-AvatarUploader__dropzone--completed"
+           tabindex="0">
+
+      <span class="k-AvatarUploader__button" role="button">
+        <img class="k-AvatarUploader__img" src="http://placekitten.com/g/48/48" alt="">
+      </span>
+
+      <span class="k-AvatarUploader__button k-AvatarUploader__button--validated" role="button">
+        <svg class="k-AvatarUploader__button__svg" viewBox="-1 0 20 16"
+            xmlns="http://www.w3.org/2000/svg">
+          <path class="k-AvatarUploader__svgPath" d="M17.401,0.322L6.713,13.04L0.376,5.799"/>
+        </svg>
+      </span>
+
+      <span>Lorem ipsum dolor</span>
+    </label>
+
+    <input id="avatar3" class="k-AvatarUploader__input" type="file" />
+  </div>
+
+<% end %>
+
+<%= example "Avatar uploader - completed" do %>
+
+  <div class="k-AvatarUploader">
+    <label for="avatar3"
+           class="k-AvatarUploader__dropzone k-AvatarUploader__dropzone--completed"
+           tabindex="0">
+      <span class="k-AvatarUploader__button" role="button">
+        <img class="k-AvatarUploader__img" src="http://placekitten.com/g/48/48" alt="">
+      </span>
+
+      <span>Lorem ipsum dolor</span>
+    </label>
+
+    <input id="avatar3" class="k-AvatarUploader__input" type="file" />
   </div>
 
 <% end %>

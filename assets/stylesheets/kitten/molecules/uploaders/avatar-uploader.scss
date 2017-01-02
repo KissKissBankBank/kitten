@@ -21,13 +21,14 @@
 
   // Dropdown colors.
   $border-color: map-get($k-colors, 'line-2');
-  $background-color: map-get($k-colors, 'background');
+  $background-color: map-get($k-colors, 'background-1');
   $border-drag-color: map-get($k-colors, 'primary-1');
   $background-drag-color: map-get($k-colors, 'primary-5');
 
   $transition-duration: .4s;
 
   .k-AvatarUploader {
+    position: relative;
     display: inline-block;
 
     @include k-typographyFont($font);
@@ -36,14 +37,14 @@
     margin-left: 50px; // Remove…
   }
 
-  .k-AvatarUploader__label {
+  .k-AvatarUploader__dropzone {
     display: flex;
     align-items: center;
 
     cursor: pointer;
   }
 
-  .k-AvatarUploader__dropzone {
+  .k-AvatarUploader__button {
     @include k-buttonBase;
     @include k-buttonRounded($dropdown-size, $icon-size, $icon-size);
 
@@ -53,41 +54,94 @@
     background-color: $background-color;
 
     transition: background-color .4s, border-color .4s;
-  }
 
-  .k-AvatarUploader__dropzone--loading {
-    @include k-buttonRounded($dropdown-size, 0, 0);
-    position: relative;
+    // Drag.
 
-    .k-AvatarUploader__dropzone__svg {
+    .k-AvatarUploader__dropzone--hover:hover &,
+    .k-AvatarUploader__dropzone--drag & {
+      @include k-buttonRounded(($dropdown-size + 5px), $icon-size, $icon-size);
+      margin-left: -2.5px;
+      margin-top: -2.5px;
+      margin-bottom: -2.5px;
+      margin-right: 10px - 2.5px;
+
+      border-color: $border-drag-color;
+      background-color: $background-drag-color;
+
+      .k-AvatarUploader__button__svg {
+        fill: $border-drag-color;
+      }
+    }
+
+    // Progress.
+
+    .k-AvatarUploader__dropzone--progress & {
+      @include k-buttonRounded($dropdown-size, k-px-to-rem(10px), k-px-to-rem(10px));
+      position: relative;
+
+      border-color: $border-drag-color;
+      background-color: $background-drag-color;
+
+      .k-AvatarUploader__button__svg {
+        width: k-px-to-rem(10px);
+        height: k-px-to-rem(10px);
+        fill: $border-drag-color;
+
+        transform: scale(0);
+
+        animation-name: progress;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+      }
+    }
+
+    // Completed.
+
+    .k-AvatarUploader__dropzone--completed & {
+      @include k-buttonRounded($dropdown-size, k-px-to-rem(48px), k-px-to-rem(48px));
+      overflow: hidden;
+      border-style: solid;
+    }
+
+    // Validated.
+
+    &.k-AvatarUploader__button--validated {
+      @include k-buttonRounded($dropdown-size, k-px-to-rem(20px), k-px-to-rem(20px));
       position: absolute;
       top: 0;
       left: 0;
 
-      width: $dropdown-size;
-      height: $dropdown-size;
-      fill: $border-drag-color;
+      border-color: $border-drag-color;
+      background-color: $border-drag-color;
+
+      animation: validated 2s forwards;
+
+      .k-AvatarUploader__button__svg {
+        width: k-px-to-rem(20px);
+        height: k-px-to-rem(20px);
+        fill: $background-color;
+      }
+
+      .k-AvatarUploader__img {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
     }
   }
 
-  .k-AvatarUploader:hover .k-AvatarUploader__dropzone,
-  .k-AvatarUploader__dropzone--drag {
-    @include k-buttonRounded(($dropdown-size + 5px), $icon-size, $icon-size);
-    position: relative;
-    margin-left: -2.5px;
-    margin-top: -2.5px;
-    margin-bottom: -2.5px;
-    margin-right: 10px - 2.5px;
-
-    border-color: $border-drag-color;
-    background-color: $background-drag-color;
-
-    .k-AvatarUploader__dropzone__svg {
-      fill: $border-drag-color;
-    }
+  .k-AvatarUploader__button--completed {
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 
-  .k-AvatarUploader__dropzone__svg {
+  .k-AvatarUploader__img {
+    display: block;
+    border: 0;
+  }
+
+  .k-AvatarUploader__button__svg {
     display: block;
     margin: 0;
     padding: 0;
@@ -100,5 +154,54 @@
 
   .k-AvatarUploader__input {
     display: none;
+  }
+}
+
+.k-AvatarUploader__svgPath {
+  stroke: white;
+  stroke-width: 4px;
+  fill: none;
+  stroke-dasharray: 100;
+  stroke-dashoffset: -100;
+  stroke-miterlimit: 10;
+
+  $curve: cubic-bezier(0.650, 0.000, 0.450, 1.000);
+  animation: stroke 1s forwards;
+}
+
+@keyframes progress {
+  0% { transform: scale(0); }
+  100% { transform: scale(5); }
+}
+
+@keyframes validated {
+  5% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(1.3);
+  }
+  20% {
+    transform: scale(1);
+  }
+  70% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.3);
+  }
+  80% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+@keyframes stroke {
+  to {
+    stroke-dashoffset: 0;
   }
 }
