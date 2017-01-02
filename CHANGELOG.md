@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+Feature: Add `k-LinkBox__title--withEllipsis` modifier.
+Feature: Add `titleClassNames` prop to `LinkBox`.
+
 ## [v.4.4.0] - 2016-12-27
 
 Features:

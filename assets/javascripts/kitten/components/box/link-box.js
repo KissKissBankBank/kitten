@@ -17,6 +17,10 @@ export default class LinkBox extends React.Component {
       'k-LinkBox',
       { 'k-LinkBox--withIcon': this.props.displayIcon },
     )
+    const titleClassNames = classNames(
+      'k-LinkBox__title',
+      this.props.titleClassNames
+    )
 
     const target = this.props.isExternal ? { target: '_blank' } : {}
 
@@ -27,7 +31,7 @@ export default class LinkBox extends React.Component {
         <div className="k-LinkBox__container">
           { this.renderIcon() }
           <div className="k-LinkBox__paragraph">
-            <p className="k-LinkBox__title">{ this.props.title }</p>
+            <p className={ titleClassNames }>{ this.props.title }</p>
             <p className="k-LinkBox__text">{ this.props.text }</p>
           </div>
 
@@ -55,5 +59,6 @@ export default class LinkBox extends React.Component {
 LinkBox.defaultProps = {
   displayIcon: false,
   href: '#',
+  titleClassNames: '',
   isExternal: false,
 }
