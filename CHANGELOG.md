@@ -3,6 +3,8 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
+- Feature: Add new `k-Tooltip` React component.
+- Feature: Add new `k-TooltipIcon` component.
 
 - Fix: disable React on Rails console traces in dev style guide.
 - Fix: make radio button and checkbox accessible by keyboard.
