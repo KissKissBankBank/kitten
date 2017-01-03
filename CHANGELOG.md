@@ -3,6 +3,8 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
+- Add `initialInstallment` option to `LoanSimulator`.
+- Add modifier `k-Row--lightTopBorder` on `k-Row`.
 
 - Fix: disable React on Rails console traces in dev style guide.
 - Fix: make radio button and checkbox accessible by keyboard.
@@ -20,6 +22,7 @@ Features:
 - Add new `Stepper` component.
 - Add new `ArrowIcon` and `CheckedIcon` components.
 - Add `commissionRules` prop to `LoanSimulator`.
+- Add new `k-ButtonTooltip` React component.
 
 Fixes:
 - Fix Loan simulator initial installment tooltip placement.
@@ -43,8 +46,8 @@ Features:
 Features:
 - Add `k-u-margin` for margins.
 - Add modifier `k-buttonIcon--micro` on `k-ButtonIcon`.
-- Add `initialInstallment` option to `LoanSimulator`.
-- Add modifier `k-Row--lightTopBorder` on `k-Row`.
+- Add new `k-Tooltip` React component.
+- Add new `k-TooltipIcon` component.
 
 Fixes:
 - Move `babel-preset-airbnb` module from `devDependencies` to `dependencies`.

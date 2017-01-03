@@ -8,6 +8,8 @@ import DocLinkBox from 'kitten/components/box/doc-link-box'
 
 // Buttons
 import ButtonImageWithTextAndBadge from 'kitten/components/buttons/button-image-with-text-and-badge'
+import ButtonTooltipIcon from 'kitten/components/buttons/button-tooltip-icon'
+import ButtonTooltipText from 'kitten/components/buttons/button-tooltip-text'
 
 // Dev
 import { DevGrid } from 'kitten/components/dev/dev-grid'
@@ -32,6 +34,11 @@ import ExternalRichLink from 'kitten/components/links/external-rich-link'
 
 // Lists
 import NavList from 'kitten/components/lists/nav-list'
+
+// Tooltips
+import ReactTooltip from 'react-tooltip'
+import Tooltip from 'kitten/components/tooltips/tooltip'
+import ButtonTooltip from 'kitten/components/tooltips/button-tooltip'
 
 // Tours
 import HeaderTour from 'kitten/components/tours/header-tour'
@@ -63,6 +70,9 @@ import { KarlLoanSimulator,
 
 ReactOnRails.register({
   ButtonImageWithTextAndBadge,
+  ButtonTooltip,
+  ButtonTooltipText,
+  ButtonTooltipIcon,
   DevGrid,
   DocLinkBox,
   Dropdown,
@@ -74,12 +84,14 @@ ReactOnRails.register({
   HeaderTour,
   LinkBox,
   LoanSimulator,
+  ReactTooltip,
   Slider,
   Search,
   Select,
   SelectWithState,
   NavList,
   SimulatorResult,
+  Tooltip,
   Stepper,
   Tour,
   TourPopover,

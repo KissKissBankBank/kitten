@@ -20,6 +20,11 @@
 
 @include k-Badge;
 
+// Tooltip
+
+@include k-Tooltip;
+@include k-ButtonTooltip;
+
 // Typography
 
 @include k-TypographyBodyCopy;
