@@ -4,11 +4,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix warning on default commissionRules prop type for LoanSimulator.
+- Fix: Fix Warning on default commissionRules prop type for LoanSimulator.
+- Fix: Disable React on Rails console traces in dev style guide.
 
 ## [v.4.4.0] - 2016-12-27
 
 Features:
+- Add new `Stepper` component.
+- Add new `ArrowIcon` and `CheckedIcon` components.
 - Add `commissionRules` prop to `LoanSimulator`.
 
 Fixes:

@@ -500,6 +500,20 @@
     }
   }
 
+  .k-ButtonIcon--checked--micro {
+    $micro-size: k-px-to-rem(10px);
+    @include k-buttonRounded($button-size-micro, $micro-size, $micro-size);
+
+    .k-ButtonIcon__svg {
+      width: $micro-size;
+      height: $micro-size;
+    }
+  }
+
+  .k-ButtonIcon--empty--micro {
+    @include k-buttonRounded($button-size-micro, 0, 0);
+  }
+
   // Misc modifiers.
 
   .k-ButtonIcon--withoutHover {
