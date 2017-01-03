@@ -64,7 +64,6 @@
     display: flex;
     justify-content: space-between;
 
-    width: k-px-to-rem(305px);
     min-height: k-px-to-rem(90px);
     box-sizing: border-box;
 
@@ -77,14 +76,6 @@
 
     .k-LinkBox:active & {
       background-color: $background-color-active;
-    }
-
-    .k-LinkBox--withIcon & {
-      width: k-px-to-rem(395px);
-
-      @include k-media-max('s') {
-        width: k-px-to-rem(305px);
-      }
     }
   }
 
