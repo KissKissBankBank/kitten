@@ -7,25 +7,59 @@
 ///   @include k-ButtonTooltip;
 ///
 /// @example html
-
+///   <ReactTooltip id="button-tooltip"
+///                 class="k-k-ButtonTooltip__content"
+///                 role="tooltip"
+///                 effect="solid"
+///                 place="bottom">
+///     <button class="k-Button"
+///                    k-Button--helium">
+///       …
+///     </button>
+///   </ReactTooltip>
 
 @mixin k-ButtonTooltip {
 
   // Colors
-  // $background-color: map-get($k-colors, 'primary-5');
-  // $color: map-get($k-colors, 'primary-1');
-  // $border-color: map-get($k-colors, 'primary-4')
+  $background-color: map-get($k-colors, 'background-1');
+  $color: map-get($k-colors, 'primary-1');
+  $border-color: map-get($k-colors, 'primary-4');
+
+  $border-size: k-px-to-rem(1px);
 
   $font: 'source-sans';
   $font-size: -2;
   $line-height: 1.3;
 
-  // $arrow-size: k-px-to-rem(8px);
-  // $tooltip-margin: k-px-to-rem(18px);
+  $arrow-size: k-px-to-rem(8px);
+  $tooltip-margin: k-px-to-rem(18px);
 
   .k-ButtonTooltip__content {
     @include k-typographyFont($font);
     @include k-typographyFontSize($font-size, $line-height);
 
+    background-color: $background-color !important;
+    color: $color !important;
+    border: $border-size solid $border-color !important;
+    opacity: 1 !important;
+
+    padding: k-px-to-rem(20px) !important;
+
+    max-width: k-px-to-rem(253px) !important;
+    border-radius: k-px-to-rem(8px) !important;
+
+    &.place-bottom {
+      margin-top: $tooltip-margin !important;
+      border: $border-size solid $border-color !important;
+
+      &:after {
+        border-bottom-color: $background-color !important;
+        border-bottom: solid transparent !important;
+        border-width: $arrow-size !important;
+        margin-left: -($arrow-size) !important;
+        top: k-px-to-rem(-8px) !important;
+        left: 50.3% !important;
+      }
+    }
   }
 }

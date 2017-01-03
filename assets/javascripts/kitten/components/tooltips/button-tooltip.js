@@ -9,6 +9,7 @@ export default class ButtonTooltip extends React.Component {
         <ButtonTooltipText data-tip
                            data-for={ this.props.id }
                            data-event="click"
+                           data-dismiss={ this.props.id }
                            aria-describedby={ this.props.id } />
 
         <ReactTooltip id={ this.props.id }
