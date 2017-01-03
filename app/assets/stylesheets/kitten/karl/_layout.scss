@@ -1,4 +1,6 @@
 $karl-overgrid-z-index: 9999;
+$karl-color-1: map-get($k-colors, 'primary-1');
+$karl-color-4: map-get($k-colors, 'primary-4');
 
 .karl-Main {
   background-color: $light-grey-1;
@@ -37,13 +39,14 @@ $karl-overgrid-z-index: 9999;
   margin-bottom: 1rem;
   border: 1px solid white;
   border-radius: 2px;
-  background: #4a84ff;
+  background: $karl-color-1;
 }
 
 .karl-RowBox {
-  background-color: #4a84ff;
+  background-color: $karl-color-1;
+  min-height: 1rem;
 
   &:nth-child(odd) {
-    background-color: #cadbfd;
+    background-color: $karl-color-4;
   }
 }
