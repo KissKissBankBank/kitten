@@ -25,7 +25,6 @@ describe('<Tooltip />', () => {
     expect(button).to.have.attr('data-event', 'click')
     expect(button).to.have.attr('data-dismiss', 'tooltip-right')
     expect(button).to.have.attr('aria-describedby', 'tooltip-right')
-
   })
 
   it('renders ReactTooltip', () => {
