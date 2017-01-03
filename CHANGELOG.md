@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: disable React on Rails console traces in dev style guide.
+- Fix: make radio button and checkbox accessible by keyboard.
 - Breaking change: Remove the fixed size on the LinkBox.
 - Fix: Fix Warning on default commissionRules prop type for LoanSimulator.
 - Feature: Handle multi-level options in the Select.

@@ -120,8 +120,8 @@
 
   .k-RadioButton__input {
     position: absolute;
+    opacity: 0;
     cursor: pointer;
-    visibility: hidden;
 
     &:disabled {
       cursor: not-allowed;
