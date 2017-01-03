@@ -39,7 +39,7 @@
   $space-button-label: k-px-to-rem(10px);
   $border-radius: 50%;
 
-  $transition-duration: .2s;
+  $transition-duration: .1s;
 
   .k-RadioButton {
     margin: k-px-to-rem(10px) 0;
@@ -54,7 +54,7 @@
     align-self: flex-start;
 
     cursor: pointer;
-    transition: color $transition-duration;
+    transition: color ($transition-duration * 2);
 
 
     &:before {
@@ -69,8 +69,7 @@
       border: 1px solid $border-color;
       border-radius: $border-radius;
 
-      transition: border-color $transition-duration,
-                  background-color $transition-duration;
+      transition: border $transition-duration;
     }
 
     .k-RadioButton__input:focus + &:before {

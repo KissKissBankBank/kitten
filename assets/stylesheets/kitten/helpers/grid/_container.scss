@@ -13,5 +13,5 @@
 
   box-sizing: border-box;
   max-width: k-map-fetch($k-grid, 'container');
-  padding: 0 k-map-fetch($k-grid, 'gutter-width');
+  padding: 0 (k-map-fetch($k-grid, 'gutter-width') / 2);
 }
