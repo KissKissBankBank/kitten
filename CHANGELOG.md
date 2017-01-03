@@ -9,6 +9,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [v.4.4.0] - 2016-12-27
 
 Features:
+- Add new `Stepper` component.
+- Add new `ArrowIcon` and `CheckedIcon` components.
 - Add `commissionRules` prop to `LoanSimulator`.
 
 Fixes:

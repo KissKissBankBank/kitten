@@ -1,0 +1,181 @@
+/// A stepper navigation.
+///
+/// @group steppers
+///
+/// @example scss - usage
+///
+///   @include k-Stepper;
+///
+/// @example html
+///
+///   <nav class="k-Stepper" role="navigation">
+///     <ul class="k-Stepper__list">
+///       <li class="k-Stepper__item">
+///         <a class="k-Stepper__link" href="#">
+///           Prionaelurus<br class="k-Stepper__break"/>
+///           planiceps
+///         </a>
+///       </li>
+///       <li class="k-Stepper__item">
+///         <a class="k-Stepper__link k-Stepper__link--inProgress" href="#">
+///           …
+///         </a>
+///       </li>
+///       <li class="k-Stepper__item">
+///         <a class="k-Stepper__link k-Stepper__link--validated" href="#">
+///           …
+///         </a>
+///       </li>
+///       <li class="k-Stepper__item">
+///         <span class="k-Stepper__link k-Stepper__link--inactive">
+///           …
+///         </span>
+///       </li>
+///     </ul>
+///   </nav>
+
+@mixin k-Stepper {
+  $font: 'source-sans-semi-bold-uppercase';
+  $font-step: -3;
+  $line-height: 1.3;
+
+  $color: map-get($k-colors, 'font-1');
+  $color-inactive: map-get($k-colors, 'font-2');
+  $color-hover: map-get($k-colors, 'primary-1');
+  $color-active: map-get($k-colors, 'primary-3');
+  $line: map-get($k-colors, 'line-2');
+  $background: map-get($k-colors, 'background-1');
+
+  $margin: k-px-to-rem(20px);
+  $margin-tiny: k-px-to-rem(15px);
+  $transition-duration: .2s;
+
+  .k-Stepper {
+    @include k-typographyFont($font);
+    @include k-typographyFontSize($font-step, $line-height);
+    color: $color;
+    text-align: left;
+  }
+
+  .k-Stepper__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0;
+    padding: k-px-to-rem(15px) 0;
+    list-style: none;
+
+    @include k-media-max('s') {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  .k-Stepper__list--alignStart {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .k-Stepper__item {
+    margin: 0 $margin;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    @include k-media-max('s') {
+      margin: ($margin / 3) 0;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .k-Stepper__list--alignStart & {
+      margin: 0 $margin ($margin / 3 * 2) 0;
+    }
+  }
+
+  .k-Stepper__item--tinySpacing {
+    @include k-media-min('m') {
+      margin-left: $margin-tiny;
+      margin-right: $margin-tiny;
+    }
+  }
+
+  .k-Stepper__link {
+    display: flex;
+    align-items: center;
+    color: $color;
+    text-decoration: none;
+
+    transition: $transition-duration color;
+
+    &:hover {
+      color: $color-hover;
+      text-decoration: none;
+    }
+
+    &:active {
+      color: $color-active;
+      text-decoration: none;
+    }
+  }
+
+  .k-Stepper__link--inactive {
+    color: $color-inactive;
+    cursor: default;
+
+    &:hover,
+    &:active {
+      color: $color-inactive;
+    }
+  }
+
+  .k-Stepper__link--inProgress {
+    color: $color-hover;
+  }
+
+  .k-Stepper__icon {
+    margin-right: $margin / 2;
+  }
+
+  .k-Stepper__icon--inProgress {
+    background: $background;
+    border-color: $color-hover;
+
+    .k-Stepper__svg {
+      fill: $color-hover;
+    }
+  }
+
+  .k-Stepper__icon--validated {
+    background: $color-hover;
+    border-color: $color-hover;
+
+    .k-Stepper__svg {
+      fill: $background;
+    }
+  }
+
+  .k-Stepper__break {
+    display: block;
+
+    @include k-media-min('l') {
+      display: none;
+    }
+
+    @include k-media-max('s') {
+      display: none;
+    }
+  }
+}
