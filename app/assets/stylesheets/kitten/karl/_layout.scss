@@ -39,3 +39,11 @@ $karl-overgrid-z-index: 9999;
   border-radius: 2px;
   background: #4a84ff;
 }
+
+.karl-RowBox {
+  background-color: #4a84ff;
+
+  &:nth-child(odd) {
+    background-color: #cadbfd;
+  }
+}
