@@ -416,7 +416,7 @@ LoanSimulator.defaultProps = {
 
   displayCommission: false,
   commissionLabel: 'Commission:',
-  commissionRules: {},
+  commissionRules: [],
 
   // DEPRECATED in favor of commissionRules
   commissionRate: function() { return 0 },

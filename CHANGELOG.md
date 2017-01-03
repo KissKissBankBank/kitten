@@ -6,6 +6,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Fix: disable React on Rails console traces in dev style guide.
 - Fix: make radio button and checkbox accessible by keyboard.
+- Breaking change: Remove the fixed size on the LinkBox.
+- Fix: Fix Warning on default commissionRules prop type for LoanSimulator.
+- Feature: Handle multi-level options in the Select.
+- Feature: Select can now be clearable, searchable, and multi.
+- Feature: Add new `k-VerticalGrid` component.
+- Feature: Add new `k-FormActions` component.
+- Fix: Disable React on Rails console traces in dev style guide.
 
 ## [v.4.4.0] - 2016-12-27
 
