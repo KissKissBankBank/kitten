@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Fix Warning on default commissionRules prop type for LoanSimulator.
 - Feature: Handle multi-level options in the Select.
 - Feature: Select can now be clearable, searchable, and multi.
 - Feature: Add new `k-VerticalGrid` component.
