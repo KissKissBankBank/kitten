@@ -48,7 +48,7 @@ export default class LinkBox extends React.Component {
           </div>
         </div>
       </a>
-      )
+    )
   }
 }
 
