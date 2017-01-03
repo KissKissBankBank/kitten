@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Handle multi-level options in the Select.
+- Feature: Select can now be clearable, searchable, and multi.
 - Feature: Add new `k-VerticalGrid` component.
 - Feature: Add new `k-FormActions` component.
 - Fix: disable React on Rails console traces in dev style guide.
