@@ -1,0 +1,21 @@
+/// Submit actions usually at the end of a form.
+///
+/// @group form
+///
+/// @example scss - Usage
+///
+///   @include k-FormActions;
+///
+/// @example html
+///
+///   <div class="k-FormActions">
+///     <button>…</button>
+///     <button>…</button>
+///   </div>
+
+@mixin k-FormActions {
+  .k-FormActions {
+    display: flex;
+    justify-content: space-between;
+  }
+}
