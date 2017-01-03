@@ -3,10 +3,14 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
+- Add `initialInstallment` option to `LoanSimulator`.
+- Add modifier `k-Row--lightTopBorder` on `k-Row`.
 
 ## [v.4.4.0] - 2016-12-27
 
 Features:
+- Add new `Stepper` component.
+- Add new `ArrowIcon` and `CheckedIcon` components.
 - Add `commissionRules` prop to `LoanSimulator`.
 - Add new `k-ButtonTooltip` React component.
 
@@ -34,8 +38,6 @@ Features:
 - Add modifier `k-buttonIcon--micro` on `k-ButtonIcon`.
 - Add new `k-Tooltip` React component.
 - Add new `k-TooltipIcon` component.
-- Add `initialInstallment` option to `LoanSimulator`.
-- Add modifier `k-Row--lightTopBorder` on `k-Row`.
 
 Fixes:
 - Move `babel-preset-airbnb` module from `devDependencies` to `dependencies`.

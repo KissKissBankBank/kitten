@@ -17,7 +17,7 @@
 ///     <button class="k-ButtonIcon
 ///                    k-ButtonIcon--beryllium
 ///                    k-ButtonIcon--micro">
-///       <svg class="k-ButtonIcon__svg"/> … </svg>
+///       <svg class="k-ButtonIcon__svg"> … </svg>
 ///     </button>
 ///   </ReactTooltip>
 
@@ -70,7 +70,6 @@
         margin-top: -($arrow-size) !important;
         left: k-px-to-rem(-8px) !important;
         top: 52% !important;
-
       }
     }
 

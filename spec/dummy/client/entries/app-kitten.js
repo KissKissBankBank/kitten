@@ -50,6 +50,9 @@ import TourStep from 'kitten/components/tours/tour-step'
 import SimulatorResult from 'kitten/components/simulators/simulator-result'
 import LoanSimulator from 'kitten/components/simulators/loan-simulator'
 
+// Steppers
+import { Stepper } from 'kitten/components/steppers/stepper'
+
 // Karl composed components
 
 import { KarlImageExternalRichLink,
@@ -89,6 +92,7 @@ ReactOnRails.register({
   NavList,
   SimulatorResult,
   Tooltip,
+  Stepper,
   Tour,
   TourPopover,
   TourStep,

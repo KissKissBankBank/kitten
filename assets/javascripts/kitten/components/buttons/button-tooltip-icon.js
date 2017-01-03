@@ -8,7 +8,7 @@ export default class ButtonTooltipIcon extends React.Component {
                          k-ButtonIcon--beryllium
                          k-ButtonIcon--micro"
               { ...this.props }>
-        <TooltipIcon className="k-ButtonIcon__svg"/>
+        <TooltipIcon className="k-ButtonIcon__svg" />
       </button>
     )
   }

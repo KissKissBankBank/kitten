@@ -1,12 +1,12 @@
 <div class="karl-Example__column">
-  <%= example "Tooltips Icon" do %>
+  <%= example "Tooltip Icon" do %>
     <%= react_component('ButtonTooltipIcon') %>
   <% end %>
 
   <%= example "Tooltip top" do %>
     <%= react_component('Tooltip', props: {
         children: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor, enean massa. Cum sociis natoque penatibus et magnis dis parturien.',
-        data_id: 'tooltip-top',
+        id: 'tooltip-top',
         place: 'top',
       }
     ) %>
@@ -15,7 +15,7 @@
   <%= example "Tooltip right" do %>
     <%= react_component('Tooltip', props: {
         children: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor, enean massa. Cum sociis natoque penatibus et magnis dis parturien.',
-        data_id: 'tooltip-right',
+        id: 'tooltip-right',
         place: 'right',
       }
     ) %>
@@ -24,7 +24,7 @@
   <%= example "Tooltip bottom" do %>
     <%= react_component('Tooltip', props: {
         children: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor, enean massa. Cum sociis natoque penatibus et magnis dis parturien.',
-        data_id: 'tooltip-bottom',
+        id: 'tooltip-bottom',
         place: 'bottom',
       }
     ) %>
@@ -34,7 +34,7 @@
   <%= example "Tooltip left" do %>
     <%= react_component('Tooltip', props: {
         children: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor, enean massa. Cum sociis natoque penatibus et magnis dis parturien.',
-        data_id: 'tooltip-left',
+        id: 'tooltip-left',
         place: 'left',
       }
     ) %>
