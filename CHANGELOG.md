@@ -3,9 +3,8 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
-- Add modifier `k-Row--lightTopBorder` on `k-Row`.
-- Add new `k-Tooltip` React component.
-- Add new `k-TooltipIcon` component.
+- Feature: Add new `k-Tooltip` React component.
+- Feature: Add new `k-TooltipIcon` component.
 
 ## [v.4.4.0] - 2016-12-27
 
@@ -34,9 +33,10 @@ Features:
 ## [v4.1.0] - 2016-12-21
 
 Features:
-- Add `initialInstallment` option to `LoanSimulator`.
 - Add `k-u-margin` for margins.
 - Add modifier `k-buttonIcon--micro` on `k-ButtonIcon`.
+- Add `initialInstallment` option to `LoanSimulator`.
+- Add modifier `k-Row--lightTopBorder` on `k-Row`.
 
 Fixes:
 - Move `babel-preset-airbnb` module from `devDependencies` to `dependencies`.
