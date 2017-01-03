@@ -6,9 +6,9 @@ import ButtonTooltipIcon from 'kitten/components/buttons/button-tooltip-icon'
 import ReactTooltip from 'react-tooltip'
 
 const component = shallow(
-  <Tooltip data_id="tooltip-right"
+  <Tooltip id="tooltip-right"
            place="right"
-           children="Lorem …"/>
+           children="Lorem …" />
 )
 
 describe('<Tooltip />', () => {
