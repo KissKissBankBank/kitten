@@ -133,7 +133,7 @@
 
   .k-Switch__input {
     position: absolute;
-    visibility: hidden;
+    opacity: 0;
     cursor: pointer;
 
     &:disabled {
