@@ -40,6 +40,9 @@ Fixes:
 Features:
 - Add links item in `k-BulletList` et `k-Paragraph`.
 
+Features:
+- Add `k-Link` to style links.
+
 ## [v4.1.0] - 2016-12-21
 
 Features:
