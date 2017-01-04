@@ -1,0 +1,130 @@
+/// Radio button
+///
+/// @group form
+///
+/// @example scss - usage
+///
+///   @include k-RadioButton;
+///
+/// @example html
+///
+///   <div class="k-RadioButton">
+///    <input id="karl-radio-button-1"
+///           type="radio"
+///           name="karl-radio-button"
+///           class="k-RadioButton__input" />
+///    <label for="karl-radio-button-1" class="k-RadioButton__label">
+///      Default
+///    </label>
+///  </div>
+
+@mixin k-RadioButton {
+  // Font
+  $font: 'source-sans-light';
+  $font-step: 0;
+  $font-step-on-media: 3;
+  $font-step-content: -1;
+  $font-step-content-large: 0;
+  $line-height: 1;
+
+  // Colors
+  $background-color: map-get($k-colors, 'background-1');
+  $background-color-checked: map-get($k-colors, 'primary-1');
+  $background-color-active: map-get($k-colors, 'primary-3');
+  $background-color-disabled: map-get($k-colors, 'font-2');
+  $border-color: map-get($k-colors, 'font-2');
+  $border-color-hover: map-get($k-colors, 'primary-1');
+
+  $radio-button-size: k-px-to-rem(16px);
+  $space-button-label: k-px-to-rem(10px);
+  $border-radius: 50%;
+
+  $transition-duration: .2s;
+
+  .k-RadioButton {
+    margin: k-px-to-rem(10px) 0;
+  }
+
+  .k-RadioButton__label {
+    @include k-typographyFont($font);
+    @include k-typographyFontSize($font-step, $line-height);
+
+    display: flex;
+    align-items: center;
+    align-self: flex-start;
+
+    cursor: pointer;
+    transition: color $transition-duration;
+
+
+    &:before {
+      box-sizing: border-box;
+      display: inline-block;
+      width: $radio-button-size;
+      height: $radio-button-size;
+      margin-right: $space-button-label;
+
+      content: '';
+      background-color: $background-color;
+      border: 1px solid $border-color;
+      border-radius: $border-radius;
+
+      transition: border-color $transition-duration,
+                  background-color $transition-duration;
+    }
+
+    .k-RadioButton__input:focus + &:before {
+      border-color: $border-color-hover;
+    }
+
+    &:hover { color: $border-color-hover; }
+    &:active { color: $background-color-active;}
+
+    .k-RadioButton__input:checked:focus + &:before {
+      box-shadow: 0 0 k-px-to-rem(3px) $background-color-checked;
+    }
+
+    .k-RadioButton__input:checked + &:before {
+      position: relative;
+
+      border: 5px solid $background-color-checked;
+      background-color: white;
+    }
+
+    .k-RadioButton__input:disabled + & {
+      color: $background-color-disabled;
+      cursor: not-allowed;
+
+      &:before {
+        background-color: $background-color-disabled;
+        border-color: $background-color-disabled;
+      }
+    }
+  }
+
+  .k-RadioButton__label--large {
+    @include k-typographyFontSize($font-step-on-media);
+  }
+
+  .k-RadioButton__labelContents {
+    display: block;
+    margin-top: k-px-to-rem(10px);
+    margin-left: $radio-button-size + $space-button-label;
+
+    @include k-typographyFontSize($font-step-content);
+  }
+
+  .k-RadioButton__labelContents--large {
+    @include k-typographyFontSize($font-step-content-large);
+  }
+
+  .k-RadioButton__input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+
+    &:disabled {
+      cursor: not-allowed;
+    }
+  }
+}
