@@ -70,7 +70,6 @@ Import `kitten` and the components your want to use in your application:
 ```scss
 @import 'kitten';
 
-@import 'kitten/components/buttons/button';
 @include k-Button;
 ```
 
