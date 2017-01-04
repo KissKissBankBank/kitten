@@ -6,8 +6,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Add new `k-Tooltip` React component.
 - Feature: Add new `k-TooltipIcon` component.
 
-- Fix: disable React on Rails console traces in dev style guide.
-- Fix: make radio button and checkbox accessible by keyboard.
+- Fix: Disable React on Rails console traces in dev style guide.
+- Fix: Make radio button and checkbox accessible by keyboard.
 - Breaking change: Remove the fixed size on the LinkBox.
 - Fix: Fix Warning on default commissionRules prop type for LoanSimulator.
 - Feature: Handle multi-level options in the Select.
@@ -15,12 +15,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Add new `k-VerticalGrid` component.
 - Feature: Add new `k-FormActions` component.
 - Fix: Disable React on Rails console traces in dev style guide.
+- Feature: Add new `Stepper` component.
+- Feature: Add new `ArrowIcon` and `CheckedIcon` components.
 
 ## [v.4.4.0] - 2016-12-27
 
 Features:
-- Add new `Stepper` component.
-- Add new `ArrowIcon` and `CheckedIcon` components.
 - Add `commissionRules` prop to `LoanSimulator`.
 
 Fixes:
