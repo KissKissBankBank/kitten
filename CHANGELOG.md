@@ -46,6 +46,7 @@ Features:
 - Add `k-u-margin` for margins.
 - Add modifier `k-buttonIcon--micro` on `k-ButtonIcon`.
 - Add `initialInstallment` option to `LoanSimulator`.
+- Display Utilities in the menu.
 - Add modifier `k-Row--lightTopBorder` on `k-Row`.
 
 Fixes:
