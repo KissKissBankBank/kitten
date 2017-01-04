@@ -1,0 +1,67 @@
+/// Paragraph font
+///
+/// @group typography
+///
+/// @example scss - usage
+///
+///   @include k-Paragraph;
+///
+/// @example html
+///
+///   <p class='k-Paragraph k-Paragraph--primary'>Paragraph 1</p>
+///   <p class='k-Paragraph k-Paragraph--secondary'>Paragraph 2</p>
+///   <p class='k-Paragraph k-Paragraph--tertiary'>Paragraph 3</p>
+///   <p class='k-Paragraph k-Paragraph--quaternary'>Paragraph 4</p>
+///   <p class='k-Paragraph k-Paragraph--quaternary'>
+///     Paragraph <a class="k-Paragraph__link">with link</a>
+///   </p>
+
+@mixin k-Paragraph {
+  // Font
+  $font: 'source-sans-light';
+
+  // Link
+  $link-font: 'source-sans';
+  $link-color: map-get($k-colors, 'primary-1');
+  $link-hover-color: map-get($k-colors, 'primary-2');
+  $link-active-color: map-get($k-colors, 'primary-3');
+
+  .k-Paragraph {
+    @include k-typographyFont($font);
+  }
+
+  .k-Paragraph--primary {
+    @include k-typographyFontScale($font-step: 1,
+                                   $font-step-on-media: 2,
+                                   $paragraph: true);
+  }
+
+  .k-Paragraph--secondary {
+    @include k-typographyFontScale($font-step-on-media: 1, $paragraph: true);
+  }
+
+  .k-Paragraph--tertiary {
+    @include k-typographyFontScale($paragraph: true);
+  }
+
+  .k-Paragraph--quaternary {
+    @include k-typographyFontScale($font-step: -1, $paragraph: true);
+  }
+
+  .k-Paragraph__link {
+    @include k-typographyFont($link-font);
+
+    color: $link-color;
+    text-decoration: none;
+
+    &:hover {
+      color: $link-hover-color;
+      text-decoration: none;
+    }
+
+    &:active {
+      color: $link-active-color;
+      text-decoration: none;
+    }
+  }
+}

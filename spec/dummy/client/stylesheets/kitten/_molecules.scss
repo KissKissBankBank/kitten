@@ -7,18 +7,19 @@
 
 @include k-Card;
 
+// Dev
+
+@include k-DevGrid;
+@include k-DevBreakpoint;
+
 // Footer
 
 @include k-Footer;
 
 // Form
 
-@include k-LabelWithInfo((
-  colors: (
-    active: black,
-    inactive: #aaa,
-  ),
-));
+@include k-FormActions;
+@include k-FormComposer;
 
 @include k-SearchInput;
 
@@ -101,6 +102,10 @@
   )
 ));
 
+@include k-SingleColumn;
+
+@include k-VerticalGrid;
+
 // Heroes
 
 @include k-Hero((
@@ -169,6 +174,10 @@
   label-font: source-sans-uppercase,
   value-font: source-sans-semi-bold,
 ));
+
+// Steppers
+
+@include k-Stepper;
 
 // Teaser
 

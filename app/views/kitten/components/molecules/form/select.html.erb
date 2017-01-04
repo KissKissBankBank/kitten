@@ -1,22 +1,6 @@
-<%= example "select without a placeholder value" do %>
+<%= example "select" do %>
   <%= react_component('SelectWithState', props: {
-        name: 'locale',
-        options: [
-          { value: 'en', label: 'English' },
-          { value: 'fr', label: 'Français' },
-          { value: 'es', label: 'Español' },
-        ],
-        clearable: false,
-        searchable: false,
-        placeholder: false,
-        multi: false,
         value: 'fr',
-  }) %>
-<% end %>
-
-<%= example "select with a placeholder value" do %>
-  <%= react_component('SelectWithState', props: {
-        name: 'locale',
         options: [
           { value: 'de', label: 'Deutsch' },
           { value: 'en', label: 'English' },
@@ -24,22 +8,43 @@
           { value: 'fr', label: 'Français' },
           { value: 'it', label: 'Italiano' },
           { value: 'nl', label: 'Nederlands' },
-          { value: 'sv', label: 'Svenska' },
-          { value: 'no', label: 'Norsk' },
-          { value: 'is', label: 'Íslenska' },
+          { value: 'sv', label: 'Svenska', disabled: true },
+          { value: 'no', label: 'Norsk', disabled: true },
+          { value: 'is', label: 'Íslenska', disabled: true },
           { value: 'ca', label: 'Català' },
           { value: 'ki', label: 'Gĩkũyũ' },
           { value: 'se', label: 'Davvisámegiella' },
           { value: 'av', label: 'авар мацӀ' },
-          { value: 'yi', label: 'ייִדיש' },
-          { value: 'bh', label: 'भोजपुरी' },
-          { value: 'hi', label: 'हिन्दी' },
-          { value: 'cr', label: 'ᓀᐦᐃᔭᐍᐏᐣ' },
         ],
-        clearable: false,
-        searchable: false,
-        multi: false,
-        placeholder: 'Language…',
-        value: nil,
+  }) %>
+<% end %>
+
+<%= example "select with sub-levels" do %>
+  <%= react_component('SelectWithState', props: {
+        placeholder: 'Taxonomia…',
+        options: [
+          { label: 'Genus Catopuma',
+            children: [
+              { label: 'Catopuma Temminckii' },
+              { label: 'Catopuma badia' },
+            ],
+          },
+          { label: 'Genus Otocolobus',
+            children: [
+              { label: 'Manul' },
+            ],
+          },
+          { label: 'Genus Profelis', children: [] },
+          { label: 'Genus Felis',
+            children: [
+              { label: 'Feles silvestris' },
+              { label: 'Margarita' },
+              { label: 'Chaus' },
+              { label: 'Feles nigripes', disabled: true },
+              { label: 'Feles Bieti' },
+            ],
+          },
+          { label: 'Genus Disablus', children: [], disabled: true },
+        ],
   }) %>
 <% end %>

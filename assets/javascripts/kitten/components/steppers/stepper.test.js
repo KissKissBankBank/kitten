@@ -1,0 +1,122 @@
+import React from 'react'
+import { expect } from 'chai'
+import { shallow } from 'enzyme'
+import { Stepper } from 'kitten/components/steppers/stepper'
+import {
+  StepperIconDefault,
+  StepperIconInProgress,
+  StepperIconValidated,
+} from 'kitten/components/steppers/stepper-icon'
+
+const items = [
+  {
+    text: "Catopuma\n Temminckii",
+    href: "http://…",
+    iconType: "default",
+  },
+  {
+    text: "Prionaelurus\n planiceps",
+    href: "#",
+    linkClassNames: "k-Stepper__link--inProgress",
+    iconType: "inProgress",
+  },
+  {
+    text: "Serval",
+    href: "#",
+    linkClassNames: "k-Stepper__link--validated",
+    iconType: "validated",
+  },
+  {
+    text: "Lynx\n pardinus",
+    linkClassNames: "k-Stepper__link--inactive",
+    iconType: "default",
+  },
+]
+
+describe('<Stepper />', () => {
+
+  const component = shallow(
+    <Stepper items={ items } />
+  )
+
+  it('renders a <nav class="k-Stepper" />', () => {
+    expect(component).to.have.tagName('nav')
+    expect(component).to.have.className('k-Stepper')
+  })
+
+  it('has a list', () => {
+    expect(component.find('ul.k-Stepper__list')).to.have.length(1)
+  })
+
+  it('renders items', () => {
+    expect(component.find('li.k-Stepper__item')).to.have.length(4)
+  })
+
+  it('renders links', () => {
+    const links = component.find('.k-Stepper__link')
+
+    expect(links).to.have.length(4)
+    expect(links.find('.k-Stepper__link--inProgress')).to.have.length(1)
+    expect(links.find('.k-Stepper__link--inactive')).to.have.length(1)
+    expect(links.first()).to.have.attr('href', 'http://…')
+  })
+
+  it('renders an unfocusable link', () => {
+    const spanLink = component.find('span.k-Stepper__link')
+
+    expect(spanLink).to.have.length(1)
+    expect(spanLink).not.to.have.attr('href')
+  })
+
+  it('replaces line feed by <br class"k-Stepper__break" />', () => {
+    expect(component.find('br.k-Stepper__break')).to.have.length(3)
+  })
+
+  describe('with align start', () => {
+    const componentWithAlignStart = shallow(
+      <Stepper items={ items }
+               withAlignStart={ true } />
+    )
+
+    it('renders a list with `.k-Stepper__list--alignStart`', () => {
+      const list = componentWithAlignStart.find('.k-Stepper__list')
+
+      expect(list).to.have.className('k-Stepper__list--alignStart')
+    })
+  })
+
+  describe('with tiny spacing', () => {
+    const componentWithTinySpacing = shallow(
+      <Stepper items={ items }
+               withTinySpacing={ true } />
+    )
+
+    it('renders items with `.k-Stepper__item--tinySpacing`', () => {
+      const items = componentWithTinySpacing.find('.k-Stepper__item')
+
+      items.map(item => {
+        expect(item).to.have.className('k-Stepper__item--tinySpacing')
+      })
+    })
+  })
+
+  describe('with different icon types', () => {
+    it('renders a <StepperIconDefault />', () => {
+      const icon = component.find('.k-Stepper__link').at(0).children().first()
+
+      expect(icon).to.have.type(StepperIconDefault)
+    })
+
+    it('renders a <StepperIconInProgress />', () => {
+      const icon = component.find('.k-Stepper__link').at(1).children().first()
+
+      expect(icon).to.have.type(StepperIconInProgress)
+    })
+
+    it('renders a <StepperIconValidated />', () => {
+      const icon = component.find('.k-Stepper__link').at(2).children().first()
+
+      expect(icon).to.have.type(StepperIconValidated)
+    })
+  })
+})

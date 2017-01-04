@@ -21,7 +21,12 @@
 
 @include k-Badge;
 
+// Tooltip
+
+@include k-Tooltip;
+
 // Typography
 
 @include k-TypographyBodyCopy;
-@include k-TypographyScale;
+@include k-Title;
+@include k-Paragraph;

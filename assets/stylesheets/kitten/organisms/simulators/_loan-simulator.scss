@@ -21,7 +21,6 @@
 ///     <div class="k-LoanSimulator__installment">3 $/month</div>
 ///     <div class="k-LoanSimulator__duration">for 4 months</div>
 ///     <div class="k-LoanSimulator__result">…</div>
-///     <div class="k-LoanSimulator__reimbursing">…</div>
 ///     <div class="k-LoanSimulator__actions">…</div>
 ///   </div>
 @mixin k-LoanSimulator($loan-simulator) {
@@ -33,18 +32,16 @@
     $error-top-margin: k-px-to-rem(10px);
 
     .k-LoanSimulator__label {
-      margin: 0 0 k-px-to-rem(10px);
+      margin-bottom: k-px-to-rem(10px);
       @include k-typographyFontSize(-1);
     }
 
     .k-LoanSimulator__result {
-      margin: 1em 0;
+      margin-top: 1em;
     }
 
     .k-LoanSimulator__amount {
-      margin: k-px-to-rem(30px)
-              k-px-to-rem(50px)
-              $spacing-between-amount-and-reimbursing;
+      margin: k-px-to-rem(30px) 0 $spacing-between-amount-and-reimbursing;
 
       .k-LoanSimulator.is-error & {
         // On error, lower the spacing between amount and reimbursing so that
@@ -63,10 +60,6 @@
       @include k-typographyFontSize(-2);
     }
 
-    .k-LoanSimulator__reimbursing {
-      margin: 0 k-px-to-rem(50px);
-    }
-
     .k-LoanSimulator__actions {
       margin: k-px-to-rem(40px) 0;
       text-align: center;
@@ -79,6 +72,11 @@
 
     .k-LoanSimulator__duration {
       @include k-typographyFontSize(-2, 1.3rem);
+    }
+
+    .k-LoanSimulator__commission {
+      margin-top: k-px-to-rem(30px);
+      @include k-typographyFontSize(0);
     }
   }
 }

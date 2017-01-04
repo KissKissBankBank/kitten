@@ -18,6 +18,8 @@ const KarlLoanSimulator = defaultProps(LoanSimulator, {
   installmentLabel: 'Je rembourse',
   installmentName: 'installment',
 
+  durationName: 'duration',
+
   sliderPlaceholder: 'Glisser pour sélectionner',
 
   durationText: 'soit',
@@ -33,4 +35,22 @@ const KarlLoanSimulator = defaultProps(LoanSimulator, {
   actionLabel: `C’est parti${nbsp}!`,
 })
 
-export { KarlLoanSimulator }
+const KarlLoanSimulatorWithCommission = defaultProps(KarlLoanSimulator, {
+  displayCommission: true,
+  commissionLabel: `Commission${nbsp}:`,
+
+  commissionRules: [
+    { durationMax: 9, rate: 0.03 },
+    { durationMax: 18, rate: 0.04 },
+    { durationMax: 24, rate: 0.05 },
+    { rate: 0.06 },
+  ],
+
+  initialAmount: 2500,
+  initialInstallment: 150,
+
+  actionLabel: null,
+})
+
+
+export { KarlLoanSimulator, KarlLoanSimulatorWithCommission }
