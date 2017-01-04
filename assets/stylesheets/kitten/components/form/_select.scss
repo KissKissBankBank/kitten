@@ -22,6 +22,7 @@
 ///
 @mixin k-Select($select) {
   $font: 'source-sans';
+  $bold: 'source-sans-semi-bold';
   $options: (
     arrow-zone-width: 30px,
     select-input-border-radius: 4px,
@@ -33,6 +34,14 @@
     @include k-typographyFontSize(-1);
     @include _k-Select-ReactSelect($select, $options);
     @include _k-Select-Overrides($select, $options);
+  }
+
+  .k-Select__option--level1 {
+    @include k-typographyFont($bold);
+  }
+
+  .k-Select__option--level2 {
+    padding-left: k-px-to-rem(10px);
   }
 
   @include _k-Select-ReactSelectAnimations;

@@ -51,6 +51,7 @@
   $transition-duration: .2s;
 
   .k-LinkBox {
+    display: inline-block;
     color: $color;
     text-decoration: none;
 
@@ -63,8 +64,7 @@
     display: flex;
     justify-content: space-between;
 
-    width: k-px-to-rem(305px);
-    height: k-px-to-rem(90px);
+    min-height: k-px-to-rem(90px);
     box-sizing: border-box;
 
     color: $color;
@@ -76,14 +76,6 @@
 
     .k-LinkBox:active & {
       background-color: $background-color-active;
-    }
-
-    .k-LinkBox--withIcon & {
-      width: k-px-to-rem(395px);
-
-      @include k-media-max('s') {
-        width: k-px-to-rem(305px);
-      }
     }
   }
 
@@ -112,7 +104,7 @@
   }
 
   .k-LinkBox__paragraph {
-    padding: k-px-to-rem(15px)
+    padding: k-px-to-rem(10px)
              k-px-to-rem(10px)
              k-px-to-rem(15px)
              k-px-to-rem(20px);

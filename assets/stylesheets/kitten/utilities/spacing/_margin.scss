@@ -1,0 +1,99 @@
+/// Margin utilities.
+///
+/// @group margin
+///
+/// @example scss - Usage
+///
+///     @include k-utilities-margin;
+///
+/// @example html
+///
+///     <div class="k-u-margin-top-single">…</div>
+///     <div class="k-u-margin-top-double">…</div>
+///     <div class="k-u-margin-top-triple">…</div>
+///     <div class="k-u-margin-top-none">…</div>
+///
+///     <div class="k-u-margin-bottom-single">…</div>
+///     <div class="k-u-margin-bottom-double">…</div>
+///     <div class="k-u-margin-bottom-triple">…</div>
+///     <div class="k-u-margin-bottom-none">…</div>
+///
+///     <div class="k-u-margin-left-single">…</div>
+///     <div class="k-u-margin-left-double">…</div>
+///     <div class="k-u-margin-left-triple">…</div>
+///     <div class="k-u-margin-left-none">…</div>
+///
+///     <div class="k-u-margin-right-single">…</div>
+///     <div class="k-u-margin-right-double">…</div>
+///     <div class="k-u-margin-right-triple">…</div>
+///     <div class="k-u-margin-right-none">…</div>
+
+@mixin k-utilities-margin {
+  // Margin top
+  .k-u-margin-top-single {
+    margin-top: k-px-to-rem(10px);
+  }
+
+  .k-u-margin-top-double {
+    margin-top: k-px-to-rem(20px);
+  }
+
+  .k-u-margin-top-triple {
+    margin-top: k-px-to-rem(30px);
+  }
+
+  .k-u-margin-top-none {
+    margin-top: 0;
+  }
+
+  // Margin bottom
+  .k-u-margin-bottom-single {
+    margin-bottom: k-px-to-rem(10px);
+  }
+
+  .k-u-margin-bottom-double {
+    margin-bottom: k-px-to-rem(20px);
+  }
+
+  .k-u-margin-bottom-triple {
+    margin-bottom: k-px-to-rem(30px);
+  }
+
+  .k-u-margin-bottom-none {
+    margin-bottom: 0;
+  }
+
+  // Margin left
+  .k-u-margin-left-single {
+    margin-left: k-px-to-rem(10px);
+  }
+
+  .k-u-margin-left-double {
+    margin-left: k-px-to-rem(20px);
+  }
+
+  .k-u-margin-left-triple {
+    margin-left: k-px-to-rem(30px);
+  }
+
+  .k-u-margin-left-none {
+    margin-left: 0;
+  }
+
+  // Margin right
+  .k-u-margin-right-single {
+    margin-right: k-px-to-rem(10px);
+  }
+
+  .k-u-margin-right-double {
+    margin-right: k-px-to-rem(20px);
+  }
+
+  .k-u-margin-right-triple {
+    margin-right: k-px-to-rem(30px);
+  }
+
+  .k-u-margin-right-none {
+    margin-right: 0;
+  }
+}

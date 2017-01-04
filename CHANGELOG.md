@@ -3,6 +3,59 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
+- Feature: Add new `k-Tooltip` React component.
+- Feature: Add new `k-TooltipIcon` component.
+
+- Fix: disable React on Rails console traces in dev style guide.
+- Fix: make radio button and checkbox accessible by keyboard.
+- Breaking change: Remove the fixed size on the LinkBox.
+- Fix: Fix Warning on default commissionRules prop type for LoanSimulator.
+- Feature: Handle multi-level options in the Select.
+- Feature: Select can now be clearable, searchable, and multi.
+- Feature: Add new `k-VerticalGrid` component.
+- Feature: Add new `k-FormActions` component.
+- Fix: Disable React on Rails console traces in dev style guide.
+- Fix: Use new files architecture for stylesheets:
+  * Remove `atoms`, `molecules` and `organisms` directories.
+  * Use `components` directory instead to match javascripts files architecture.
+
+## [v.4.4.0] - 2016-12-27
+
+Features:
+- Add new `Stepper` component.
+- Add new `ArrowIcon` and `CheckedIcon` components.
+- Add `commissionRules` prop to `LoanSimulator`.
+
+Fixes:
+- Fix Loan simulator initial installment tooltip placement.
+
+## [v4.3.0] - 2016-12-26
+
+Features:
+- Add `isExternal` option to `LinkBox`.
+
+Fixes:
+- Change some styles on `k-LinkBox`.
+- Fix text-decoration in `k-Paragraph__link` and `k-BulletList__link`.
+
+## [v4.2.0] - 2016-12-23
+
+Features:
+- Add links item in `k-BulletList` et `k-Paragraph`.
+
+## [v4.1.0] - 2016-12-21
+
+Features:
+- Add `k-u-margin` for margins.
+- Add modifier `k-buttonIcon--micro` on `k-ButtonIcon`.
+- Add `initialInstallment` option to `LoanSimulator`.
+- Add modifier `k-Row--lightTopBorder` on `k-Row`.
+
+Fixes:
+- Move `babel-preset-airbnb` module from `devDependencies` to `dependencies`.
+- Fix image width on `.k-Footer__logo__img > img`.
+
+## [v4.0.0] - 2016-12-20
 
 Breaking changes:
 - Remove `k-TypographyScale`.
@@ -19,6 +72,12 @@ Features:
 - Add `k-FormComposer` component.
 - Add new `FormAmountAndCurrency` React component.
 - Add new `FormPhoneNumber` React component.
+- Add new `k-Button--carbon` and `k-ButtonIcon--carbon`.
+- Add hidden input to fetch `duration` data in `k-LoanSimulator` component.
+- New `DevGrid` React component and new CSS components `k-DevGrid` and
+  `k-DevBreakpoint`.
+- Add `k-SingleColumn` molecule.
+- Add `build:dev`, `build`, and `hot-assets` scripts to the root `npm run`.
 
 Fixes:
 - Change font color for disabled elements on checkboxes and radio buttons.
@@ -28,10 +87,7 @@ Fixes:
 - Remove hover on radio buttons and checkboxes.
 - Change large paragraph font size for radio buttons containers.
 - Remove loan simulator left margins.
-- Fix size unit text input.
-- Use new files architecture for stylesheets:
-  * Remove `atoms`, `molecules` and `organisms` directories.
-  * Use `components` directory instead to match javascripts files architecture.
+- Fix unit size on `k-TextInputWithUnit`.
 
 ## [v3.1.0] - 2016-12-08
 
@@ -41,7 +97,6 @@ Features:
 - Add text active style `k-u--active`.
 - Add commission style `k-LoanSimulator__commission`.
 - Add `bin/install` and `bin/cleanup`.
-- Add `build:dev`, `build`, and `hot-assets` scripts to the root `npm run`.
 
 Fixes:
 - Fix dependencies paths.

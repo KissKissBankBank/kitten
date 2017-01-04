@@ -15,8 +15,14 @@
 
 @include k-Card;
 
-// Dropdowns
+// Dev
 
+@include k-DevGrid;
+@include k-DevBreakpoint;
+
+// Footer
+
+// Dropdowns
 @include k-Dropdown;
 @include k-PhoneDropdown;
 
@@ -24,6 +30,7 @@
 
 @include k-Checkbox;
 @include k-Label;
+@include k-FormActions;
 @include k-FormComposer;
 @include k-RadioButton;
 @include k-SearchInput;
@@ -110,6 +117,10 @@
     light-bottom-border: #eee,
   )
 ));
+
+@include k-SingleColumn;
+
+@include k-VerticalGrid;
 
 // Header
 
@@ -201,6 +212,10 @@
   label-font: source-sans-uppercase,
   value-font: source-sans-semi-bold,
 ));
+
+// Steppers
+
+@include k-Stepper;
 
 // Teaser
 

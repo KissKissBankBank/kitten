@@ -18,8 +18,12 @@ export default class LinkBox extends React.Component {
       { 'k-LinkBox--withIcon': this.props.displayIcon },
     )
 
+    const target = this.props.isExternal ? { target: '_blank' } : {}
+
     return (
-      <a className= { linkBoxClassNames } href={ this.props.href }>
+      <a className= { linkBoxClassNames }
+         href={ this.props.href }
+         { ...target }>
         <div className="k-LinkBox__container">
           { this.renderIcon() }
           <div className="k-LinkBox__paragraph">
@@ -44,11 +48,12 @@ export default class LinkBox extends React.Component {
           </div>
         </div>
       </a>
-      )
+    )
   }
 }
 
 LinkBox.defaultProps = {
   displayIcon: false,
   href: '#',
+  isExternal: false,
 }

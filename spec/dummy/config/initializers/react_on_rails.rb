@@ -33,7 +33,8 @@ ReactOnRails.configure do |config|
   config.prerender = true
 
   # default is true for development, off otherwise
-  config.trace = Rails.env.development?
+  # config.trace = Rails.env.development?
+  config.trace = false
 
   ################################################################################
   # SERVER RENDERING OPTIONS

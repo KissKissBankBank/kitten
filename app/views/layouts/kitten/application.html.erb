@@ -128,50 +128,7 @@
   <%= yield %>
 <% end %>
 
-<div class="karl-OverBreakpoint" data-overgrid style="display: none"></div>
-
-<div class="karl-OverGrid" data-overgrid style="display: none">
-  <div class="karl-OverGrid__container">
-    <div class="karl-OverGrid__row">
-      <div class="karl-OverGrid__col">
-        <div class="karl-OverGrid__inner"></div>
-      </div>
-      <div class="karl-OverGrid__col">
-        <div class="karl-OverGrid__inner"></div>
-      </div>
-      <div class="karl-OverGrid__col">
-        <div class="karl-OverGrid__inner"></div>
-      </div>
-      <div class="karl-OverGrid__col">
-        <div class="karl-OverGrid__inner"></div>
-      </div>
-      <div class="karl-OverGrid__col">
-        <div class="karl-OverGrid__inner"></div>
-      </div>
-      <div class="karl-OverGrid__col">
-        <div class="karl-OverGrid__inner"></div>
-      </div>
-      <div class="karl-OverGrid__col">
-        <div class="karl-OverGrid__inner"></div>
-      </div>
-      <div class="karl-OverGrid__col">
-        <div class="karl-OverGrid__inner"></div>
-      </div>
-      <div class="karl-OverGrid__col">
-        <div class="karl-OverGrid__inner"></div>
-      </div>
-      <div class="karl-OverGrid__col">
-        <div class="karl-OverGrid__inner"></div>
-      </div>
-      <div class="karl-OverGrid__col">
-        <div class="karl-OverGrid__inner"></div>
-      </div>
-      <div class="karl-OverGrid__col">
-        <div class="karl-OverGrid__inner"></div>
-      </div>
-    </div>
-  </div>
-</div>
+<%= react_component 'DevGrid' %>
 
 <%= env_javascript_include_tag(static: 'application',
                                hot: 'application_non_webpack') %>
