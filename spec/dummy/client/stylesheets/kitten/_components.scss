@@ -69,6 +69,7 @@
   )
 ));
 
+@include k-Switch;
 @include k-TextInput;
 @include k-TextInputWithButton((
   font: 'source-sans-semi-bold',

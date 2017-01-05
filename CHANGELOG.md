@@ -14,6 +14,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Add new `k-VerticalGrid` component.
 - Feature: Add new `k-FormActions` component.
 - Fix: Disable React on Rails console traces in dev style guide.
+- Feature: Add new `k-Switch` React component.
 - Fix: Use new files architecture for stylesheets:
   * Remove `atoms`, `molecules` and `organisms` directories.
   * Use `components` directory instead to match javascripts files architecture.
