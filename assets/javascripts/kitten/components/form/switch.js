@@ -3,7 +3,7 @@ import classNames from 'classnames'
 
 export default class Switch extends React.Component {
   render() {
-    let SwitchClassNames = classNames(
+    let switchClassNames = classNames(
       'k-Switch__label',
       { 'k-Switch__label--big': this.props.big },
     )
@@ -17,8 +17,8 @@ export default class Switch extends React.Component {
                 disabled={ this.props.disabled } />
 
         <label htmlFor={ this.props.id }
-               className={ SwitchClassNames } >
-          { this.props.label}
+               className={ switchClassNames } >
+          { this.props.label }
         </label>
       </div>
     )
