@@ -15,10 +15,9 @@
 
 @mixin k-Switch {
   // Font
-  $font: 'source-sans-semi-bold';
-  $font-step: -2;
+  $font: 'source-sans-light';
+  $font-step: 0;
   $line-height: 1;
-  $font-big: 'source-sans-light';
   $font-step-big: 3;
 
   // Colors
@@ -37,7 +36,6 @@
   $border-radius: 18px;
 
   $transition-duration: .2s;
-  $easing: cubic-bezier(0, .01, .415, 1.545);
 
   .k-Switch {
     display: flex;
@@ -97,9 +95,6 @@
       background-color: $background-color;
       border: $border-size solid $border-color;
       border-radius: k-px-to-rem($switch-height);
-
-      transition: left $transition-duration $easing,
-                  right $transition-duration $easing;
     }
 
     .k-Switch__input:focus + &:before {
@@ -127,7 +122,6 @@
   }
 
   .k-Switch__label--big {
-    @include k-typographyFont($font-big);
     @include k-typographyFontSize($font-step-big, $line-height);
   }
 

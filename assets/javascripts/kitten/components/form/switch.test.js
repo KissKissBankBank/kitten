@@ -39,7 +39,7 @@ describe('<Switch />', () => {
       <Switch big="true" />
     )
 
-    it('has an big class', () => {
+    it('has a big class', () => {
       const label = componentBig.find('label')
 
       expect(label).to.have.className('k-Switch__label--big')
