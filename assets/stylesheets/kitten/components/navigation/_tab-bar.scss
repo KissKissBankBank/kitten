@@ -82,13 +82,11 @@
     justify-content: center;
     flex-direction: column;
     position: relative;
-    //outline: none;
     border-top: $current-border-width solid transparent;
     cursor: pointer;
     color: $color;
     transition: color .2s, border-color .2s;
 
-    // &:focus,
     &:hover {
       color: $current-color;
       text-decoration: none;

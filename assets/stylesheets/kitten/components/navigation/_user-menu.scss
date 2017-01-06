@@ -93,7 +93,6 @@
     .k-UserMenu__item {
       display: block;
       padding: k-px-to-rem(15px) k-px-to-rem(20px);
-      //outline: none;
       border-left: $border-size solid $border-color;
       background-color: $background-color;
 
@@ -109,13 +108,6 @@
         color: $color-active;
         text-decoration: none;
       }
-
-      // &:focus {
-      //   background-color: $background-color-hover;
-      //   border-left-color: $border-color-active;
-      //   color: $color-active;
-      //   text-decoration: none;
-      // }
 
       &.is-selected {
         border-left-color: $border-color-active;

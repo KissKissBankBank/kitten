@@ -80,8 +80,8 @@
     &:hover { color: $border-color-hover; }
     &:active { color: $background-color-active;}
 
-    .k-RadioButton__input:checked:focus + &:before {
-      box-shadow: 0 0 k-px-to-rem(3px) $background-color-checked;
+    html:not(.k-u-unfocused) .k-RadioButton__input:focus + &:before {
+      box-shadow: 0 0 1rem $background-color-checked;
     }
 
     .k-RadioButton__input:checked + &:before {

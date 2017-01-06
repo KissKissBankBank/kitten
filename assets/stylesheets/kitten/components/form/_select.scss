@@ -243,9 +243,9 @@
       box-shadow: 0 1px 0 rgba(0, 0, 0, .06);
     }
 
-    // .Select-input:focus {
-    //   outline: none;
-    // }
+    .Select-input:focus {
+      outline: 0;
+    }
   }
 
   .is-searchable {
@@ -316,10 +316,8 @@
       cursor: pointer;
       text-decoration: none;
 
-      // &:focus,
       &:hover {
         color: $select-link-hover-color;
-        //outline: none;
         text-decoration: underline;
       }
     }

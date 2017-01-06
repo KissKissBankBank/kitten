@@ -43,8 +43,6 @@
     k-map-fetch($colors, ('base', 'color')));
   $hover-color: k-color-definition(
     k-map-fetch($colors, ('hover', 'color')));
-  $focus-color: k-color-definition(
-    k-map-fetch($colors, ('focus', 'color')));
   $active-color: k-color-definition(
     k-map-fetch($colors, ('active', 'color')));
   $disabled-color: k-color-definition(
@@ -67,14 +65,6 @@
       stroke: $hover-color;
     }
   }
-
-  // &:focus .k-Button__icon,
-  // &:focus .k-ButtonIcon__svg {
-  //   fill: $focus-color;
-  //   .k-Button__svg__stroke {
-  //     stroke: $focus-color;
-  //   }
-  // }
 
   &:active .k-Button__icon,
   &:active .k-ButtonIcon__svg {
