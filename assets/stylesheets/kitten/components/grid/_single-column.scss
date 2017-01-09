@@ -35,10 +35,5 @@
       @include k-grid-col(6);
       @include k-grid-offset(3);
     }
-
-    @include k-media-min('l') {
-      @include k-grid-col(4);
-      @include k-grid-offset(4);
-    }
   }
 }
