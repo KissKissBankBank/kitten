@@ -16,6 +16,10 @@
 
 @mixin k-SingleColumn {
   .k-SingleColumn {
+    @include k-container;
+  }
+
+  .k-SingleColumn__grid {
     @include k-grid;
   }
 
