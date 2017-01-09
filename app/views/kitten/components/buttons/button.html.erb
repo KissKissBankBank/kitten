@@ -1,48 +1,39 @@
 <div class="karl-Example__column">
   <%= example 'Hydrogen button' do %>
-    <%= react_component('ButtonHydrogen', props: {
-        nameClass: 'k-Button--hydrogen',
-        text: 'Button'
-      }
-    ) %>
+    <%= react_component('Button') %>
   <% end %>
 
   <%= example "Helium button" do %>
-    <%= react_component('ButtonHelium', props: {
-        nameClass: 'k-Button--helium',
-        text: 'Button'
+    <%= react_component('Button', props: {
+        name: 'helium',
       }
     ) %>
   <% end %>
 
   <%= example "Lithium button" do %>
-    <%= react_component('ButtonLithium', props: {
-        nameClass: 'k-Button--lithium',
-        text: 'Button'
+    <%= react_component('Button', props: {
+        name: 'lithium',
       }
     ) %>
   <% end %>
 
   <%= example "Beryllium button" do %>
-    <%= react_component('ButtonBeryllium', props: {
-        nameClass: 'k-Button--beryllium',
-        text: 'Button'
+    <%= react_component('Button', props: {
+        name: 'beryllium',
       }
     ) %>
   <% end %>
 
   <%= example "Boron button" do %>
-    <%= react_component('ButtonBoron', props: {
-        nameClass: 'k-Button--boron',
-        text: 'Button'
+    <%= react_component('Button', props: {
+        name: 'boron',
       }
     ) %>
   <% end %>
 
   <%= example "Carbon button" do %>
-    <%= react_component('ButtonCarbon', props: {
-        nameClass: 'k-Button--carbon',
-        text: 'Button'
+    <%= react_component('Button', props: {
+        name: 'carbon',
       }
     ) %>
   <% end %>
@@ -50,10 +41,8 @@
 
 <div class="karl-Example__column">
   <%= example "Disabled button" do %>
-    <%= react_component('ButtonHydrogen', props: {
-        nameClass: 'k-Button--hydrogen',
-        text: 'Button'
-        disabled: 'true'
+    <%= react_component('Button', props: {
+        disabled: true,
       }
     ) %>
   <% end %>
@@ -61,19 +50,15 @@
 
 <div class="karl-Example__column">
   <%= example "Tiny button" do %>
-    <%= react_component('ButtonHydrogen', props: {
-        nameClass: 'k-Button--hydrogen',
-        text: 'Button'
-        size: 'tiny'
+    <%= react_component('Button', props: {
+        size: 'tiny',
       }
     ) %>
   <% end %>
 
   <%= example "Big button" do %>
-    <%= react_component('ButtonHydrogen', props: {
-        nameClass: 'k-Button--hydrogen',
-        text: 'Button'
-        size: 'big'
+    <%= react_component('Button', props: {
+        size: 'big',
       }
     ) %>
   <% end %>

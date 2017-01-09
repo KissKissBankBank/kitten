@@ -7,6 +7,8 @@ import LinkBox from 'kitten/components/box/link-box'
 import DocLinkBox from 'kitten/components/box/doc-link-box'
 
 // Buttons
+import Button from 'kitten/components/buttons/button'
+import ButtonIconWords from 'kitten/components/buttons/button-icon-words'
 import ButtonImageWithTextAndBadge from 'kitten/components/buttons/button-image-with-text-and-badge'
 import ButtonTooltipIcon from 'kitten/components/buttons/button-tooltip-icon'
 
@@ -68,6 +70,8 @@ import { KarlLoanSimulator,
        } from 'kitten/karl/organisms/loan-simulator'
 
 ReactOnRails.register({
+  Button,
+  ButtonIconWords,
   ButtonImageWithTextAndBadge,
   ButtonTooltipIcon,
   DevGrid,
