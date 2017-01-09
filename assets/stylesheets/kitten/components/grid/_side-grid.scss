@@ -11,16 +11,18 @@
 ///   <div class="k-SideGrid k-SideGrid--asideLeft">
 ///     <div class="k-SideGrid__container">
 ///       <div class="k-SideGrid__row">
-///         <div class="k-SideGrid__aside">
+///         <div class="k-SideGrid__aside k-SideGrid__aside--col-4">
 ///           <div class="k-SideGrid__asideContent">…</div>
 ///         </div>
 ///
-///         <div class="k-SideGrid__content">…</div>
+///         <div class="k-SideGrid__content k-SideGrid__content--col-8">…</div>
 ///       </div>
 ///     </div>
 ///   </div>
 
 @mixin k-SideGrid {
+  $number-of-columns: k-map-fetch($k-grid, 'columns');
+
   $background: map-get($k-colors, 'background-1');
   $aside-background: map-get($k-colors, 'background-2');
   $aside-border-color: map-get($k-colors, 'line-1');
@@ -56,21 +58,17 @@
   }
 
   .k-SideGrid__content {
-    @include k-grid-col(8);
+    display: flex;
     background-color: $background;
   }
 
   .k-SideGrid__aside {
-    @include k-grid-col(4);
+    display: flex;
     border-left: $half-gutter solid $background;
-    padding-left: 0;
-    padding-right: $half-gutter;
 
     .k-SideGrid--asideLeft & {
       border-left: none;
       border-right: $half-gutter solid $background;
-      padding-left: $half-gutter;
-      padding-right: 0;
     }
   }
 
@@ -82,6 +80,25 @@
     .k-SideGrid--asideLeft & {
       border-left: none;
       border-right: $aside-border-width solid $aside-border-color;
+    }
+  }
+
+  // Custom grid with column modifiers.
+
+  @for $columns from 1 through $number-of-columns {
+    .k-SideGrid__content--col-#{$columns} {
+      @include k-grid-col($columns);
+    }
+
+    .k-SideGrid__aside--col-#{$columns} {
+      @include k-grid-col($columns);
+      padding-left: 0;
+      padding-right: $half-gutter;
+
+      .k-SideGrid--asideLeft & {
+        padding-left: $half-gutter;
+        padding-right: 0;
+      }
     }
   }
 }
