@@ -48,3 +48,15 @@
         ],
   }) %>
 <% end %>
+
+<%= example "select with label" do %>
+  <label class="k-Select--label">Please select a language:</label>
+  <%= react_component('SelectWithState', props: {
+        value: 'fr',
+        options: [
+          { value: 'de', label: 'Deutsch' },
+          { value: 'en', label: 'English' },
+          { value: 'es', label: 'Español' },
+        ],
+  }) %>
+<% end %>
