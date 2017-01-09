@@ -76,7 +76,7 @@
 
     .k-LoanSimulator__commission {
       margin-top: k-px-to-rem(30px);
-      @include k-typographyFontSize(0);
+      @include k-typographyFontSize(-1);
     }
   }
 }
