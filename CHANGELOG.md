@@ -20,6 +20,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   * Use `components` directory instead to match javascripts files architecture.
 - Feature: Add new `Stepper` component.
 - Feature: Add new `ArrowIcon` and `CheckedIcon` components.
+- Fix: Change `k-SingleColumn` width from media `l`.
 
 ## [v.4.4.0] - 2016-12-27
 
