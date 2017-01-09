@@ -23,8 +23,8 @@
     @include k-grid-col(12);
 
     @include k-media-min('l') {
-      @include k-grid-col(4);
-      @include k-grid-offset(4);
+      @include k-grid-col(6);
+      @include k-grid-offset(3);
     }
   }
 }
