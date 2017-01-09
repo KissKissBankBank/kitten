@@ -56,7 +56,6 @@
   )
 ));
 
-
 @include k-TextInputWithButton((
   font: 'source-sans-semi-bold',
   font-size: -4,
@@ -102,8 +101,8 @@
   )
 ));
 
+@include k-SideGrid;
 @include k-SingleColumn;
-
 @include k-VerticalGrid;
 
 // Heroes
