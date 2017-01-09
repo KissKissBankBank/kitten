@@ -1,9 +1,12 @@
 /// Side Grid.
 ///
-/// Available column modifiers:
-/// - `.k-SideGrid__content--col-(1-12)`
-/// - `.k-SideGrid__aside--col-(1-12)`
+/// Available position modifier:
+/// - `.k-SideGrid--asideStart`
 ///
+/// Available column modifiers:
+/// - `.k-SideGrid--asideLarge`
+/// - `.k-SideGrid--asideSmall`
+////
 /// @group grid
 ///
 /// @example scss - usage
@@ -12,21 +15,19 @@
 ///
 /// @example html
 ///
-///   <div class="k-SideGrid k-SideGrid--asideLeft">
+///   <div class="k-SideGrid k-SideGrid--asideStart k-SideGrid--asideSmall">
 ///     <div class="k-SideGrid__container">
 ///       <div class="k-SideGrid__row">
-///         <div class="k-SideGrid__aside k-SideGrid__aside--col-4">
+///         <div class="k-SideGrid__aside">
 ///           <div class="k-SideGrid__asideContent">…</div>
 ///         </div>
 ///
-///         <div class="k-SideGrid__content k-SideGrid__content--col-8">…</div>
+///         <div class="k-SideGrid__content">…</div>
 ///       </div>
 ///     </div>
 ///   </div>
 
 @mixin k-SideGrid {
-  $number-of-columns: k-map-fetch($k-grid, 'columns');
-
   $background: map-get($k-colors, 'background-1');
   $aside-background: map-get($k-colors, 'background-2');
   $aside-border-color: map-get($k-colors, 'line-1');
@@ -34,23 +35,27 @@
   $half-gutter: k-px-to-rem(10px);
 
   .k-SideGrid {
-    background: linear-gradient(
-      to right,
-      $background 0%,
-      $background 50%,
-      $aside-background 50%,
-      $aside-background 100%
-    );
+    @include k-media-min('m') {
+      background: linear-gradient(
+        to right,
+        $background 0%,
+        $background 50%,
+        $aside-background 50%,
+        $aside-background 100%
+      );
+    }
   }
 
-  .k-SideGrid--asideLeft {
-    background: linear-gradient(
-      to left,
-      $background 0%,
-      $background 50%,
-      $aside-background 50%,
-      $aside-background 100%
-    );
+  .k-SideGrid--asideStart {
+    @include k-media-min('m') {
+      background: linear-gradient(
+        to left,
+        $background 0%,
+        $background 50%,
+        $aside-background 50%,
+        $aside-background 100%
+      );
+    }
   }
 
   .k-SideGrid__container {
@@ -62,17 +67,47 @@
   }
 
   .k-SideGrid__content {
+    @include k-grid-col(12);
     display: flex;
     background-color: $background;
+
+    @include k-media-min('m') {
+      @include k-grid-col(8);
+
+      .k-SideGrid--asideLarge & {
+        @include k-grid-col(7);
+      }
+
+      .k-SideGrid--asideSmall & {
+        @include k-grid-col(9);
+      }
+    }
   }
 
   .k-SideGrid__aside {
+    @include k-grid-col(4);
     display: flex;
     border-left: $half-gutter solid $background;
+    padding-left: 0;
+    padding-right: $half-gutter;
 
-    .k-SideGrid--asideLeft & {
+    .k-SideGrid--asideLarge & {
+      @include k-grid-col(5);
+    }
+
+    .k-SideGrid--asideSmall & {
+      @include k-grid-col(3);
+    }
+
+    .k-SideGrid--asideStart & {
       border-left: none;
       border-right: $half-gutter solid $background;
+      padding-left: $half-gutter;
+      padding-right: 0;
+    }
+
+    @include k-media-max('s') {
+      display: none;
     }
   }
 
@@ -81,28 +116,9 @@
     border-left: $aside-border-width solid $aside-border-color;
     background-color: $aside-background;
 
-    .k-SideGrid--asideLeft & {
+    .k-SideGrid--asideStart & {
       border-left: none;
       border-right: $aside-border-width solid $aside-border-color;
-    }
-  }
-
-  // Custom grid with column modifiers.
-
-  @for $columns from 1 through $number-of-columns {
-    .k-SideGrid__content--col-#{$columns} {
-      @include k-grid-col($columns);
-    }
-
-    .k-SideGrid__aside--col-#{$columns} {
-      @include k-grid-col($columns);
-      padding-left: 0;
-      padding-right: $half-gutter;
-
-      .k-SideGrid--asideLeft & {
-        padding-left: $half-gutter;
-        padding-right: 0;
-      }
     }
   }
 }
