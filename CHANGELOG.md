@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Change `k-SingleColumn` width according to the media.
+
 ## [v5.0.0] - 2017-01-09
 
 Breaking changes:

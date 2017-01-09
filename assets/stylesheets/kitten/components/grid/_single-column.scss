@@ -16,15 +16,24 @@
 
 @mixin k-SingleColumn {
   .k-SingleColumn {
+    @include k-container;
+  }
+
+  .k-SingleColumn__grid {
     @include k-grid;
   }
 
   .k-SingleColumn__content {
     @include k-grid-col(12);
 
-    @include k-media-min('l') {
-      @include k-grid-col(4);
-      @include k-grid-offset(4);
+    @include k-media-min('s') {
+      @include k-grid-col(8);
+      @include k-grid-offset(2);
+    }
+
+    @include k-media-min('m') {
+      @include k-grid-col(6);
+      @include k-grid-offset(3);
     }
   }
 }
