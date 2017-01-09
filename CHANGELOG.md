@@ -30,6 +30,9 @@ Fixes:
 - Use new files architecture for stylesheets:
   * Remove `atoms`, `molecules` and `organisms` directories.
   * Use `components` directory instead to match javascripts files architecture.
+- Feature: Add new `Stepper` component.
+- Feature: Add new `ArrowIcon` and `CheckedIcon` components.
+- Feature: Add `k-Select__label` to `k-Select`.
 
 ## [v4.4.0] - 2016-12-27
 

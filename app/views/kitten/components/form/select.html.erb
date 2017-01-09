@@ -1,6 +1,7 @@
 <%= example "select" do %>
   <%= react_component('SelectWithState', props: {
         value: 'fr',
+        id: 'select-with-label',
         options: [
           { value: 'de', label: 'Deutsch' },
           { value: 'en', label: 'English' },
@@ -22,6 +23,7 @@
 <%= example "select with sub-levels" do %>
   <%= react_component('SelectWithState', props: {
         placeholder: 'Taxonomia…',
+        id: 'select-with-sub-levels',
         options: [
           { label: 'Genus Catopuma',
             children: [
@@ -50,9 +52,10 @@
 <% end %>
 
 <%= example "select with label" do %>
-  <label class="k-Select--label">Please select a language:</label>
   <%= react_component('SelectWithState', props: {
         value: 'fr',
+        labelText: 'Please select a language:',
+        id: 'select-with-label',
         options: [
           { value: 'de', label: 'Deutsch' },
           { value: 'en', label: 'English' },
