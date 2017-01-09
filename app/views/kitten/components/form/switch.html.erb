@@ -1,0 +1,67 @@
+<%= example 'Switch' do %>
+  <%= react_component('Switch', props: {
+      label: "label",
+      id: "switch-input-1",
+    }
+  ) %>
+
+  <%= react_component('Switch', props: {
+      label: "label",
+      id: "switch-input-2",
+      isChecked: true,
+    }
+  ) %>
+<% end %>
+
+<%= example 'Switch - Disabled' do %>
+  <%= react_component('Switch', props: {
+      label: "label",
+      id: "switch-input-3",
+      disabled: true,
+    }
+  ) %>
+
+  <%= react_component('Switch', props: {
+      label: "label",
+      id: "switch-input-4",
+      isChecked: true,
+      disabled: true,
+    }
+  ) %>
+<% end %>
+
+<%= example 'Switch with big label' do %>
+  <%= react_component('Switch', props: {
+      label: "label",
+      id: "switch-input-5",
+      big: true,
+    }
+  ) %>
+
+  <%= react_component('Switch', props: {
+      label: "label",
+      id: "switch-input-6",
+      isChecked: true,
+      big: true,
+    }
+  ) %>
+<% end %>
+
+<%= example 'Switch with big label - Disabled' do %>
+  <%= react_component('Switch', props: {
+      label: "label",
+      id: "switch-input-7",
+      disabled: true,
+      big: true,
+    }
+  ) %>
+
+  <%= react_component('Switch', props: {
+      label: "label",
+      id: "switch-input-8",
+      isChecked: true,
+      disabled: true,
+      big: true,
+    }
+  ) %>
+<% end %>

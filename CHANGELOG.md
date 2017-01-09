@@ -16,12 +16,16 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Add new `k-VerticalGrid` component.
 - Feature: Add new `k-FormActions` component.
 - Fix: Disable React on Rails console traces in dev style guide.
+- Feature: Add new `k-Switch` React component.
+- Fix: Use new files architecture for stylesheets:
+  * Remove `atoms`, `molecules` and `organisms` directories.
+  * Use `components` directory instead to match javascripts files architecture.
+- Feature: Add new `Stepper` component.
+- Feature: Add new `ArrowIcon` and `CheckedIcon` components.
 
 ## [v.4.4.0] - 2016-12-27
 
 Features:
-- Add new `Stepper` component.
-- Add new `ArrowIcon` and `CheckedIcon` components.
 - Add `commissionRules` prop to `LoanSimulator`.
 
 Fixes:
