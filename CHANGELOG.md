@@ -3,6 +3,7 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
+- Feature: Add new `k-Button` and `k-Button--icon` React components.
 - Feature: Add new `k-Tooltip` React component.
 - Feature: Add new `k-TooltipIcon` component.
 - Fix: Disable React on Rails console traces in dev style guide.
@@ -61,7 +62,6 @@ Breaking changes:
 - Remove `k-TypographyScale`.
 
 Features:
-- Add new `k-Button` and `k-Button--icon` React component.
 - Add test setup.
 - Add small radio buttons label.
 - Add small paragraph for radio buttons containers.
