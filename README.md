@@ -242,3 +242,8 @@ Then:
 ```
 npm publish
 ```
+
+### Github
+
+Update [the kanban](https://github.com/orgs/KissKissBankBank/projects/5): move
+cards that are released from `done` column to `released` column.
