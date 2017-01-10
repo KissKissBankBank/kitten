@@ -4,7 +4,16 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `quadruple` utilities in `k-utilities-margin`.
+- Feature: Add elements in `k-Header`.
+- Feature: Add container in `k-VerticalGrid`.
+- Feature: Add styles on `k-Checkbox`.
 - Feature: Add new `k-SideGrid` component.
+- Fix: Fix flex in `k-Header`.
+- Fix: Fix aside `flex-direction` in `k-SideGrid`.
+- Fix: Remove overflow on `k-Row`.
+- Fix: Change transition on `k-RadioButton`.
+- Fix: Change `k-LinkBox` display before `m` version.
 - Fix: Change `k-SingleColumn` width according to the media.
 
 ## [v5.0.0] - 2017-01-09
