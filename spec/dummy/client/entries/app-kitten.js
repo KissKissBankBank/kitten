@@ -67,6 +67,9 @@ import { KarlLoanSimulator,
          KarlLoanSimulatorWithCommission
        } from 'kitten/karl/organisms/loan-simulator'
 
+// Maker steps.
+import { MakerWhoAmIStep } from 'app/maker/who-am-i/components/container'
+
 ReactOnRails.register({
   ButtonImageWithTextAndBadge,
   ButtonTooltipIcon,
@@ -105,4 +108,5 @@ ReactOnRails.register({
   KarlPhoneDropdown,
   KarlLoanSimulator,
   KarlLoanSimulatorWithCommission,
+  MakerWhoAmIStep,
 })
