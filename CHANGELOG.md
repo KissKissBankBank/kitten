@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add new `k-RadioButton` React component.
 - Feature: Add new `k-SideGrid` component.
 - Fix: Change `k-SingleColumn` width according to the media.
 
