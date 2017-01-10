@@ -46,12 +46,11 @@
   }
 
   .k-Select__label {
+    display: inline-block;
+    margin-bottom: k-px-to-rem(10px);
+
     @include k-typographyFont($bold);
     @include k-typographyFontSize(-1);
-
-    display: inline-block;
-
-    margin-bottom: k-px-to-rem(10px);
   }
 
   @include _k-Select-ReactSelectAnimations;
