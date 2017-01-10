@@ -24,6 +24,7 @@ import Slider from 'kitten/components/form/slider'
 import Select from 'react-select'
 import SelectWithState from 'kitten/components/form/select-with-state'
 import Search from 'kitten/components/form/search'
+import Switch from 'kitten/components/form/switch'
 
 // Icons
 import GrabberIcon from 'kitten/components/icons/grabber-icon'
@@ -89,6 +90,7 @@ ReactOnRails.register({
   SimulatorResult,
   Tooltip,
   Stepper,
+  Switch,
   Tour,
   TourPopover,
   TourStep,
