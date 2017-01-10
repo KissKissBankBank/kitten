@@ -43,10 +43,6 @@
       k-map-fetch($colors, 'light-bottom-border')
     );
 
-    .k-Row {
-      overflow: auto; // to collapse inner margins
-    }
-
     .k-Row--centered {
       text-align: center;
     }
