@@ -61,6 +61,7 @@ Breaking changes:
 - Remove `k-TypographyScale`.
 
 Features:
+- Add new `k-Button` and `k-Button--icon` React component.
 - Add test setup.
 - Add small radio buttons label.
 - Add small paragraph for radio buttons containers.

@@ -15,5 +15,4 @@ describe('<ButtonIconWords />', () => {
     expect(component).to.have.className('k-Button--icon')
     expect(component.find('.k-Button__icon')).to.have.length(1)
   })
-
 })

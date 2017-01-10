@@ -13,7 +13,14 @@ export default class Button extends React.Component {
   }
 
   render() {
-    const { className, text, children, tag, size, iconOnRight, ...rest } = this.props
+    const { className,
+            text,
+            children,
+            tag,
+            size,
+            iconOnRight,
+            ...rest }
+    = this.props
 
     const buttonTypeClassName = `k-Button--${this.props.name}`
 
