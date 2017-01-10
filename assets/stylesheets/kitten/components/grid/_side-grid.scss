@@ -113,6 +113,7 @@
 
   .k-SideGrid__asideContent {
     display: flex;
+    flex-direction: column;
     border-left: $aside-border-width solid $aside-border-color;
     background-color: $aside-background;
 
