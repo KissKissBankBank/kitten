@@ -4,7 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `k-Select--label` to `k-Select`.
+- Feature: Add `k-Select__label` to `k-Select`.
+- Feature: Add `aria-labelledby` to `k-Select` and an id to the label.
 
 ## [v5.0.0] - 2017-01-09
 
@@ -30,9 +31,6 @@ Fixes:
 - Use new files architecture for stylesheets:
   * Remove `atoms`, `molecules` and `organisms` directories.
   * Use `components` directory instead to match javascripts files architecture.
-- Feature: Add new `Stepper` component.
-- Feature: Add new `ArrowIcon` and `CheckedIcon` components.
-- Feature: Add `k-Select__label` to `k-Select`.
 
 ## [v4.4.0] - 2016-12-27
 
