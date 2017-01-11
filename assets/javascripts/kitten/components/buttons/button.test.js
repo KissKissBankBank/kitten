@@ -47,21 +47,4 @@ describe('<Button />', () => {
       expect(componentWithIconRight).to.have.className('k-Button--iconRight')
     })
   })
-
-  describe('with default props', () => {
-    const defaultComponent = shallow(<Button />)
-
-    it('has a default name', () => {
-      expect(defaultComponent).attr('name', 'hydrogen')
-    })
-
-    it('has a default text', () => {
-      expect(defaultComponent).attr('text', 'Button')
-    })
-
-    it('has a default tag', () => {
-      expect(defaultComponent).attr('tag', 'button')
-    })
-
-  })
 })

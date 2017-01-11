@@ -3,6 +3,7 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
+- Feature: Add new `HeartIcon`component.
 - Feature: Add new `k-Button` and `k-Button--icon` React components.
 - Feature: Add new `k-Tooltip` React component.
 - Feature: Add new `k-TooltipIcon` component.
