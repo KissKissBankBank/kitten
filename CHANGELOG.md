@@ -4,11 +4,16 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `k-Select__label` to `k-Select`.
-- Feature: Add `labelText` option to `SelectWithMultiLevel`.
-- Fix: Change font size in `k-LoanSimulator__commission`.
-- Feature: Add new `k-SideGrid` component.
-- Fix: Change `k-SingleColumn` width according to the media.
+## [5.1.0] - 2017-01-11
+
+Features:
+- Add `k-Select__label` to `k-Select`.
+- Add `labelText` option to `SelectWithMultiLevel`.
+- Add new `k-SideGrid` component.
+
+Fixes:
+- Change font size in `k-LoanSimulator__commission`.
+- Change `k-SingleColumn` width according to the media.
 
 ## [v5.0.0] - 2017-01-09
 
