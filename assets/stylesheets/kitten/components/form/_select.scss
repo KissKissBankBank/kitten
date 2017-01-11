@@ -16,6 +16,7 @@
 ///   ));
 ///
 /// @example html:
+///   <label class="k-Select__label">Select label:</label>
 ///   <div class="k-Select">
 ///     <div class="Select-control">…</div>
 ///   </div>
@@ -42,6 +43,14 @@
 
   .k-Select__option--level2 {
     padding-left: k-px-to-rem(10px);
+  }
+
+  .k-Select__label {
+    display: inline-block;
+    margin-bottom: k-px-to-rem(10px);
+
+    @include k-typographyFont($bold);
+    @include k-typographyFontSize(-1);
   }
 
   @include _k-Select-ReactSelectAnimations;
