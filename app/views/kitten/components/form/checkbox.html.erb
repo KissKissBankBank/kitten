@@ -1,39 +1,32 @@
 <%= example 'Checkbox' do %>
+  <%= react_component('Checkbox', props: {
+      id: "input-1",
+      text: "Filter 1",
+    }
+  ) %>
 
-  <div class="k-Checkbox">
-    <input id="input-1"
-           type="checkbox"
-           class="k-Checkbox__input" />
-    <label for="input-1" class="k-Checkbox__label">Filter 1</label>
-  </div>
-
-  <div class="k-Checkbox">
-    <input id="input-2"
-           type="checkbox"
-           checked
-           class="k-Checkbox__input" />
-    <label for="input-2" class="k-Checkbox__label">Filter 2</label>
-  </div>
-
+  <%= react_component('Checkbox', props: {
+      id: "input-2",
+      text: "Filter 2",
+      isChecked: true,
+    }
+  ) %>
 <% end %>
 
 <%= example 'Disabled checkbox' do %>
 
-  <div class="k-Checkbox">
-    <input id="input-3"
-           type="checkbox"
-           disabled
-           class="k-Checkbox__input" />
-    <label for="input-3" class="k-Checkbox__label">Filter 1</label>
-  </div>
+  <%= react_component('Checkbox', props: {
+      id: "input-3",
+      text: "Filter 1",
+      disabled: true,
+    }
+  ) %>
 
-  <div class="k-Checkbox">
-    <input id="input-4"
-           type="checkbox"
-           checked
-           disabled
-           class="k-Checkbox__input" />
-    <label for="input-4" class="k-Checkbox__label">Filter 2</label>
-  </div>
-
+  <%= react_component('Checkbox', props: {
+      id: "input-4",
+      text: "Filter 2",
+      isChecked: true,
+      disabled: true,
+    }
+  ) %>
 <% end %>
