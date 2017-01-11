@@ -18,12 +18,46 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fix: Disable React on Rails console traces in dev style guide.
 - Feature: Add new `k-Switch` React component.
 - Fix: Use new files architecture for stylesheets:
+
+
+## [5.1.0] - 2017-01-11
+
+Features:
+- Add `k-Select__label` to `k-Select`.
+- Add `labelText` option to `SelectWithMultiLevel`.
+- Add new `k-SideGrid` component.
+
+Fixes:
+- Change font size in `k-LoanSimulator__commission`.
+- Change `k-SingleColumn` width according to the media.
+
+## [v5.0.0] - 2017-01-09
+
+Breaking changes:
+- Remove the fixed size on the LinkBox.
+
+Features:
+- Add new `k-Tooltip` React component.
+- Add new `k-TooltipIcon` component.
+- Handle multi-level options in the Select.
+- Select can now be clearable, searchable, and multi.
+- Add new `k-VerticalGrid` component.
+- Add new `k-FormActions` component.
+- Add new `k-Switch` React component.
+- Add new `Stepper` component.
+- Add new `ArrowIcon` and `CheckedIcon` components.
+
+Fixes:
+- Disable React on Rails console traces in dev style guide.
+- Make radio button and checkbox accessible by keyboard.
+- Fix Warning on default commissionRules prop type for LoanSimulator.
+- Disable React on Rails console traces in dev style guide.
+- Use new files architecture for stylesheets:
+
   * Remove `atoms`, `molecules` and `organisms` directories.
   * Use `components` directory instead to match javascripts files architecture.
-- Feature: Add new `Stepper` component.
-- Feature: Add new `ArrowIcon` and `CheckedIcon` components.
 
-## [v.4.4.0] - 2016-12-27
+## [v4.4.0] - 2016-12-27
 
 Features:
 - Add `commissionRules` prop to `LoanSimulator`.
