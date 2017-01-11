@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Add default margins to `.k-PressQuotes__title` and
+  `.k-titleWithActions__title`.
+
 ## [5.1.0] - 2017-01-11
 
 Features:
