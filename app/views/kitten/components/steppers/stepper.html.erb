@@ -1,0 +1,63 @@
+<%= example "Stepper" do %>
+
+  <%= react_component("Stepper", props: {
+    items: [
+      {
+        text: "Catopuma\n Temminckii",
+        href: "#",
+        iconType: "default",
+      },
+      {
+        text: "Prionaelurus\n planiceps",
+        href: "#",
+        linkClassNames: "k-Stepper__link--inProgress",
+        iconType: "inProgress",
+      },
+      {
+        text: "Serval",
+        href: "#",
+        linkClassNames: "k-Stepper__link--validated",
+        iconType: "validated",
+      },
+      {
+        text: "Lynx\n pardinus",
+        linkClassNames: "k-Stepper__link--inactive",
+        iconType: "default",
+      },
+    ]
+  }) %>
+
+<% end %>
+
+<%= example "Stepper aligned to start" do %>
+
+  <%= react_component("Stepper", props: {
+    withAlignStart: true,
+    withTinySpacing: true,
+    items: [
+      {
+        text: "Catopuma\n Temminckii",
+        href: "#",
+        iconType: "default",
+      },
+      {
+        text: "Prionaelurus\n planiceps",
+        href: "#",
+        linkClassNames: "k-Stepper__link--inProgress",
+        iconType: "inProgress",
+      },
+      {
+        text: "Serval",
+        href: "#",
+        linkClassNames: "k-Stepper__link--validated",
+        iconType: "validated",
+      },
+      {
+        text: "Lynx\n pardinus",
+        linkClassNames: "k-Stepper__link--inactive",
+        iconType: "default",
+      },
+    ]
+  }) %>
+
+<% end %>

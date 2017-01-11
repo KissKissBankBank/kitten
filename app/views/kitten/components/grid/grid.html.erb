@@ -1,0 +1,65 @@
+<%= example "12 columns" do %>
+  <div class="k-Grid">
+    <div class="k-Grid__col--1"><div class="karl-GridBox"></div></div>
+    <div class="k-Grid__col--1"><div class="karl-GridBox"></div></div>
+    <div class="k-Grid__col--1"><div class="karl-GridBox"></div></div>
+    <div class="k-Grid__col--1"><div class="karl-GridBox"></div></div>
+    <div class="k-Grid__col--1"><div class="karl-GridBox"></div></div>
+    <div class="k-Grid__col--1"><div class="karl-GridBox"></div></div>
+    <div class="k-Grid__col--1"><div class="karl-GridBox"></div></div>
+    <div class="k-Grid__col--1"><div class="karl-GridBox"></div></div>
+    <div class="k-Grid__col--1"><div class="karl-GridBox"></div></div>
+    <div class="k-Grid__col--1"><div class="karl-GridBox"></div></div>
+    <div class="k-Grid__col--1"><div class="karl-GridBox"></div></div>
+    <div class="k-Grid__col--1"><div class="karl-GridBox"></div></div>
+  </div>
+<% end %>
+
+<%= example "grid in grid" do %>
+  <div class="k-Grid">
+    <div class="k-Grid__col--6">
+      <div class="k-Grid">
+        <div class="k-Grid__col--1"><div class="karl-GridBox"></div></div>
+        <div class="k-Grid__col--1"><div class="karl-GridBox"></div></div>
+        <div class="k-Grid__col--1"><div class="karl-GridBox"></div></div>
+        <div class="k-Grid__col--1"><div class="karl-GridBox"></div></div>
+        <div class="k-Grid__col--1"><div class="karl-GridBox"></div></div>
+        <div class="k-Grid__col--1"><div class="karl-GridBox"></div></div>
+        <div class="k-Grid__col--1"><div class="karl-GridBox"></div></div>
+        <div class="k-Grid__col--1"><div class="karl-GridBox"></div></div>
+        <div class="k-Grid__col--1"><div class="karl-GridBox"></div></div>
+        <div class="k-Grid__col--1"><div class="karl-GridBox"></div></div>
+        <div class="k-Grid__col--1"><div class="karl-GridBox"></div></div>
+        <div class="k-Grid__col--1"><div class="karl-GridBox"></div></div>
+      </div>
+    </div>
+    <div class="k-Grid__col--6">
+      <div class="karl-GridBox"></div>
+    </div>
+  </div>
+<% end %>
+
+<%= example "2, 4 and 6 columns starting from small" do %>
+  <div class="k-Grid">
+    <div class="k-Grid__col--12 k-Grid__col--2@s">
+      <div class="karl-GridBox"></div>
+    </div>
+    <div class="k-Grid__col--12 k-Grid__col--4@s">
+      <div class="karl-GridBox"></div>
+    </div>
+    <div class="k-Grid__col--12 k-Grid__col--6@s">
+      <div class="karl-GridBox"></div>
+    </div>
+  </div>
+<% end %>
+
+<%= example "6 and 4 columns with offset starting from large" do %>
+  <div class="k-Grid">
+    <div class="k-Grid__col--12 k-Grid__col--6@l">
+      <div class="karl-GridBox"></div>
+    </div>
+    <div class="k-Grid__col--12 k-Grid__col--4@l k-Grid__col--offset-2@l">
+      <div class="karl-GridBox"></div>
+    </div>
+  </div>
+<% end %>

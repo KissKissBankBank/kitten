@@ -1,0 +1,115 @@
+<%= example 'Radio buttons' do %>
+
+  <div class="k-RadioButton">
+    <input id="karl-radio-button-1"
+           type="radio"
+           name="karl-radio-button"
+           class="k-RadioButton__input" />
+    <label for="karl-radio-button-1" class="k-RadioButton__label">
+      Default
+    </label>
+  </div>
+
+  <div class="k-RadioButton">
+    <input id="karl-radio-button-2"
+           type="radio"
+           name="karl-radio-button"
+           checked
+           class="k-RadioButton__input" />
+    <label for="karl-radio-button-2" class="k-RadioButton__label">
+      Default checked
+    </label>
+  </div>
+
+  <div class="k-RadioButton">
+    <input id="karl-radio-button-3"
+           type="radio"
+           name="karl-radio-button"
+           disabled
+           class="k-RadioButton__input" />
+    <label for="karl-radio-button-3" class="k-RadioButton__label">
+      Default disabled
+    </label>
+  </div>
+
+<% end %>
+
+<%= example 'Large radio buttons' do %>
+
+  <div class="k-RadioButton">
+    <input id="karl-radio-button-large-1"
+           type="radio"
+           name="karl-radio-button-large"
+           class="k-RadioButton__input" />
+    <label for="karl-radio-button-large-1"
+           class="k-RadioButton__label k-RadioButton__label--large">
+      Large
+    </label>
+  </div>
+
+  <div class="k-RadioButton">
+    <input id="karl-radio-button-large-2"
+           type="radio"
+           name="karl-radio-button-large"
+           checked
+           class="k-RadioButton__input" />
+    <label for="karl-radio-button-large-2"
+           class="k-RadioButton__label k-RadioButton__label--large">
+      Large checked
+    </label>
+  </div>
+
+  <div class="k-RadioButton">
+    <input id="karl-radio-button-large-3"
+           type="radio"
+           name="karl-radio-button-large"
+           disabled
+           class="k-RadioButton__input" />
+    <label for="karl-radio-button-large-3"
+           class="k-RadioButton__label k-RadioButton__label--large">
+      Large disabled
+    </label>
+  </div>
+
+<% end %>
+
+<%= example 'Radio button containers' do %>
+
+  <div class="k-RadioButton">
+    <input id="karl-radio-button-with-content"
+           type="radio"
+           name="karl-radio-button-with-content"
+           class="k-RadioButton__input" />
+    <label for="karl-radio-button-with-content" class="k-RadioButton__label">
+      Default
+    </label>
+    <div class="k-RadioButton__labelContents">
+      <p>
+        Harum trium sententiarum nulli prorsus assentior. Nec enim illa prima
+        vera est, ut, quem ad modum in se quisque sit, sic in amicum sit
+        animatus. Quam multa enim, quae nostra causa numquam faceremus, facimus
+        causa.
+      </p>
+    </div>
+  </div>
+
+  <div class="k-RadioButton">
+    <input id="karl-radio-button-with-content-large"
+           type="radio"
+           name="karl-radio-button-with-content"
+           class="k-RadioButton__input" />
+    <label for="karl-radio-button-with-content-large"
+           class="k-RadioButton__label k-RadioButton__label--large">
+      Large
+    </label>
+    <div class="k-RadioButton__labelContents
+                k-RadioButton__labelContents--large">
+      <p>
+        Quam multa enim, quae nostra causa numquam faceremus, facimus causa
+        amicorum! precari ab indigno, supplicare, tum acerbius in aliquem
+        invehi insectarique vehementius.
+      </p>
+    </div>
+  </div>
+
+<% end %>
