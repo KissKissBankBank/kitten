@@ -6,9 +6,8 @@ import RadioButton from 'kitten/components/form/radio-button'
 describe('<RadioButton />', () => {
   const component = shallow(
     <RadioButton id="karl-radio-button-1"
-                 isChecked="true"
-                 disabled="true"
-                 text="Default" />
+                 text="Default"
+                 name="karl-radio-button" />
   )
 
   it('has a <div class="k-RadioButton" />', () => {
@@ -21,10 +20,8 @@ describe('<RadioButton />', () => {
 
     expect(input).to.have.attr('id', 'karl-radio-button-1')
     expect(input).to.have.attr('type', 'radio')
-    //expect(input).to.have.attr('name', 'karl-radio-button')
+    expect(input).to.have.attr('name', 'karl-radio-button')
     expect(input).to.have.className('k-RadioButton__input')
-    expect(input).to.have.attr('checked')
-    expect(input).to.have.attr('disabled')
   })
 
   it('renders label', () => {
@@ -35,12 +32,27 @@ describe('<RadioButton />', () => {
     expect(label).to.have.text('Default')
   })
 
-  // it('has a <div class="k-RadioButton__labelContents" />', () => {
-  //   const div = component.find('div')
+  describe('isChecked', () => {
+    const component = shallow(
+      <RadioButton isChecked="true" />
+    )
 
-  //   expect(div).to.have.className('k-RadioButton__labelContents')
-  //   expect(div).to.have.content('Lorem …')
-  // })
+    it('has a checked', () => {
+      const input = component.find('input')
+      expect(input).to.have.attr('checked')
+    })
+  })
+
+  describe('disabled', () => {
+    const component = shallow(
+      <RadioButton disabled="true" />
+    )
+
+    it('has a disabled', () => {
+      const input = component.find('input')
+      expect(input).to.have.attr('disabled')
+    })
+  })
 
   describe('large', () => {
     const componentLarge = shallow(
@@ -54,13 +66,17 @@ describe('<RadioButton />', () => {
     })
   })
 
-  describe('with content large', () => {
-    const componentContentLarge = shallow(
-      <RadioButton contentLarge="true" />
+  describe('with content', () => {
+    const componentWithContent = shallow(
+      <RadioButton content="Harum trium …"
+                   contentLarge="true" />
     )
 
-    it('has a content large class', () => {
-      expect(componentContentLarge).to.have.className(".k-RadioButton__labelContents--large")
+    it('has a content class', () => {
+      const content = componentWithContent.find('.k-RadioButton__labelContents')
+
+      expect(content).to.have.text("Harum trium …")
+      expect(content).to.have.className("k-RadioButton__labelContents--large")
     })
   })
 })
