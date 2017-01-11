@@ -7,7 +7,8 @@ describe('<Checkbox />', () => {
   const component = shallow(
     <Checkbox id="input-1"
               type="checkbox"
-              className="k-Checkbox__input" />
+              className="k-Checkbox__input"
+              value="input" />
   )
 
   it('has a <div class="k-Checkbox" />', () => {
@@ -19,6 +20,7 @@ describe('<Checkbox />', () => {
 
     expect(input).to.have.attr('id', 'input-1')
     expect(input).to.have.attr('type', 'checkbox')
+    expect(input).to.have.attr('value', 'input')
     expect(input).to.have.className('k-Checkbox__input')
   })
 

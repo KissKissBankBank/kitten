@@ -8,6 +8,7 @@ export default class Checkbox extends React.Component {
         <input id={ this.props.id }
                type="checkbox"
                className="k-Checkbox__input"
+               value={ this.props.value }
                defaultChecked={ this.props.isChecked }
                disabled={ this.props.disabled } />
 
