@@ -4,7 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Introduce `k-Teaser__col--start@l` to fix ordering of columns on teaser.
+- Feature: Introduce `k-Teaser__col--start@l` to fix ordering of columns on
+  `k-Teaser`.
 
 ## [5.1.0] - 2017-01-11
 
