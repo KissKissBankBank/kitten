@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `k-Select__label` to `k-Select`.
+- Feature: Add `labelText` option to `SelectWithMultiLevel`.
 - Fix: Change font size in `k-LoanSimulator__commission`.
 - Feature: Add new `k-SideGrid` component.
 - Fix: Change `k-SingleColumn` width according to the media.

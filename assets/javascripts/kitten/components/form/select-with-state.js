@@ -30,11 +30,23 @@ class SelectWithState extends React.Component {
     this.props.onChange(val)
   }
 
+  renderLabel() {
+    if (!this.props.labelText)
+      return
+
+    return (
+      <label className="k-Select__label" id={ this.props.id }>
+        { this.props.labelText }
+      </label>
+    )
+  }
+
   render() {
     const { value, onChange, className, ...other } = this.props
 
     return (
       <div className={ classNames('k-Select', className) }>
+        { this.renderLabel() }
         <SelectWithMultiLevel value={ this.state.value }
                               onChange={ this.handleChange }
                               { ...other } />
@@ -78,8 +90,14 @@ class SelectWithMultiLevel extends React.Component {
   }
 
   render() {
+    let inputProps = {}
+
+    if (this.props.labelText)
+      inputProps = { 'aria-labelledby': this.props.id }
+
     return <Select optionRenderer={ this.optionRenderer }
                    { ...this.props }
+                   inputProps={ inputProps }
                    options={ this.flattenedOptions() } />
   }
 }
@@ -89,6 +107,7 @@ SelectWithState.defaultProps = {
   clearable: false,
   searchable: false,
   multi: false,
+  labelText: null,
 }
 
 export default SelectWithState
