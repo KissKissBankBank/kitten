@@ -3,55 +3,59 @@ import { expect } from 'chai'
 import { shallow } from 'enzyme'
 import { Checkbox } from 'kitten/components/form/checkbox'
 
-describe('<Checkbox />', () => {
-  const component = shallow(
-    <Checkbox id="input-1"
-              type="checkbox"
-              className="k-Checkbox__input"
-              value="input" />
-  )
+describe('Checkbox with default props', () => {
+  const defaultComponent = shallow(
+    <Checkbox />)
 
-  it('has a <div class="k-Checkbox" />', () => {
-    expect(component).to.have.className('k-Checkbox')
+  it('has a default attribute', () => {
+    expect(defaultComponent).to.have.attr('id', 'input-1')
+    expect(defaultComponent).to.have.attr('value', 'ok')
+    expect(defaultComponent).to.have.attr('text', 'Filter-1')
+    expect(defaultComponent).not.to.have.attr('disabled')
+    expect(defaultComponent).not.to.have.attr('checked')
   })
 
-  it('renders input', () => {
-    const input = component.find('input')
-
-    expect(input).to.have.attr('id', 'input-1')
-    expect(input).to.have.attr('type', 'checkbox')
-    expect(input).to.have.attr('value', 'input')
-    expect(input).to.have.className('k-Checkbox__input')
-  })
-
-  describe('isChecked', () => {
+  describe('<Checkbox />', () => {
     const component = shallow(
-      <Checkbox isChecked="true" />
+      <Checkbox id="input-1"
+                type="checkbox"
+                className="k-Checkbox__input"
+                value="input" />
     )
 
-    it('has a checked', () => {
-      const input = component.find('input')
-      expect(input).to.have.attr('checked')
+    it('has a <div class="k-Checkbox" />', () => {
+      expect(component).to.have.className('k-Checkbox')
     })
-  })
 
-  describe('disabled', () => {
-    const component = shallow(
-      <Checkbox disabled="true" />
-    )
-
-    it('has a disabled', () => {
+    it('renders input', () => {
       const input = component.find('input')
-      expect(input).to.have.attr('disabled')
+
+      expect(input).to.have.attr('id', 'input-1')
+      expect(input).to.have.attr('type', 'checkbox')
+      expect(input).to.have.attr('value', 'input')
+      expect(input).to.have.className('k-Checkbox__input')
     })
-  })
 
-  describe('with default props', () => {
-    const defaultComponent = shallow(
-      <Checkbox />)
+    describe('checked', () => {
+      const component = shallow(
+        <Checkbox checked="true" />
+      )
 
-    it('has a default disabled', () => {
-      expect(defaultComponent).not.to.have.attr('disabled')
+      it('has a checked attribute', () => {
+        const input = component.find('input')
+        expect(input).to.have.attr('checked')
+      })
+    })
+
+    describe('disabled', () => {
+      const component = shallow(
+        <Checkbox disabled="true" />
+      )
+
+      it('has a disabled attribute', () => {
+        const input = component.find('input')
+        expect(input).to.have.attr('disabled')
+      })
     })
   })
 })

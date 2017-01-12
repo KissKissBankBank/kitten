@@ -9,7 +9,7 @@ export class Checkbox extends React.Component {
                type="checkbox"
                className="k-Checkbox__input"
                value={ this.props.value }
-               defaultChecked={ this.props.isChecked }
+               defaultChecked={ this.props.checked }
                disabled={ this.props.disabled } />
 
         <label htmlFor={ this.props.id } className="k-Checkbox__label">
@@ -21,5 +21,9 @@ export class Checkbox extends React.Component {
 }
 
 Checkbox.defaultProps = {
+  id: 'input-1',
+  value: 'ok',
+  text: 'Filter 1',
   disabled: false,
+  checked: false,
 }

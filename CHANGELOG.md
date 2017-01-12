@@ -3,7 +3,7 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
-Feature: Add new `k-Checkbox` React component.
+- Feature: Add new `k-Checkbox` React component.
 
 ## [5.1.0] - 2017-01-11
 
