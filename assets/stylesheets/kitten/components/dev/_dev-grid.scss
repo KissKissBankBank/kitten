@@ -63,12 +63,10 @@
   }
 
   .k-DevGrid__container {
-    @include container;
+    @include k-container;
     box-sizing: border-box;
-
-    padding: 0 map-get($k-grid, 'gutter-width');
-
     height: 100%;
+
     outline: 1px dotted rgba(black, .2);
   }
 
