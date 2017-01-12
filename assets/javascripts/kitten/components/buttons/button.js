@@ -1,7 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 
-export default class Button extends React.Component {
+export class Button extends React.Component {
   renderLeftIcon() {
     if (this.props.iconOnRight) { return null }
     return this.props.children

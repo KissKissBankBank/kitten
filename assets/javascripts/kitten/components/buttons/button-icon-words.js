@@ -2,9 +2,8 @@ import React from 'react'
 import Button from './button'
 import { HeartIcon } from 'kitten/components/icons/heart-icon'
 
-export default class ButtonIconWords extends React.Component {
+export class ButtonHeartIconWords extends React.Component {
   render() {
-
     return (
       <Button { ...this.props } className='k-Button--icon' >
         <HeartIcon className="k-Button__icon" />
@@ -13,7 +12,7 @@ export default class ButtonIconWords extends React.Component {
   }
 }
 
-ButtonIconWords.defaultProps = {
+ButtonHeartIconWords.defaultProps = {
   name: 'hydrogen',
   text: 'Button',
 }

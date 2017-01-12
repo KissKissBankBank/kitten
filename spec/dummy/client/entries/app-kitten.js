@@ -7,8 +7,8 @@ import LinkBox from 'kitten/components/box/link-box'
 import DocLinkBox from 'kitten/components/box/doc-link-box'
 
 // Buttons
-import Button from 'kitten/components/buttons/button'
-import ButtonIconWords from 'kitten/components/buttons/button-icon-words'
+import { Button } from 'kitten/components/buttons/button'
+import { ButtonHeartIconWords } from 'kitten/components/buttons/button-icon-words'
 import ButtonImageWithTextAndBadge from 'kitten/components/buttons/button-image-with-text-and-badge'
 import ButtonTooltipIcon from 'kitten/components/buttons/button-tooltip-icon'
 
@@ -30,6 +30,7 @@ import Switch from 'kitten/components/form/switch'
 
 // Icons
 import GrabberIcon from 'kitten/components/icons/grabber-icon'
+import { HeartIcon } from 'kitten/components/icons/heart-icon'
 
 // Links
 import ExternalRichLink from 'kitten/components/links/external-rich-link'
@@ -71,7 +72,7 @@ import { KarlLoanSimulator,
 
 ReactOnRails.register({
   Button,
-  ButtonIconWords,
+  ButtonHeartIconWords,
   ButtonImageWithTextAndBadge,
   ButtonTooltipIcon,
   DevGrid,
@@ -83,6 +84,7 @@ ReactOnRails.register({
   FormPhoneNumber,
   GrabberIcon,
   HeaderTour,
+  HeartIcon,
   LinkBox,
   LoanSimulator,
   ReactTooltip,

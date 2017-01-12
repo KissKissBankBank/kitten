@@ -1,7 +1,7 @@
 import React from 'react'
 import { expect } from 'chai'
 import { shallow } from 'enzyme'
-import Button from 'kitten/components/buttons/button'
+import { Button } from 'kitten/components/buttons/button'
 
 describe('<Button />', () => {
   const component = shallow(
