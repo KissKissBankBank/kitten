@@ -1,13 +1,14 @@
 import React from 'react'
 import { expect } from 'chai'
 import { shallow } from 'enzyme'
-import RadioButton from 'kitten/components/form/radio-button'
+import { RadioButton } from 'kitten/components/form/radio-button'
 
 describe('<RadioButton />', () => {
   const component = shallow(
     <RadioButton id="karl-radio-button-1"
                  text="Default"
-                 name="karl-radio-button" />
+                 name="karl-radio-button"
+                 value="input" />
   )
 
   it('has a <div class="k-RadioButton" />', () => {
@@ -21,6 +22,7 @@ describe('<RadioButton />', () => {
     expect(input).to.have.attr('id', 'karl-radio-button-1')
     expect(input).to.have.attr('type', 'radio')
     expect(input).to.have.attr('name', 'karl-radio-button')
+    expect(input).to.have.attr('value', 'input')
     expect(input).to.have.className('k-RadioButton__input')
   })
 
@@ -77,6 +79,15 @@ describe('<RadioButton />', () => {
 
       expect(content).to.have.text("Harum trium …")
       expect(content).to.have.className("k-RadioButton__labelContents--large")
+    })
+  })
+
+  describe('with default props', () => {
+    const defaultComponent = shallow(
+      <RadioButton />)
+
+    it('has a default disabled', () => {
+      expect(defaultComponent).not.to.have.attr('disabled')
     })
   })
 })

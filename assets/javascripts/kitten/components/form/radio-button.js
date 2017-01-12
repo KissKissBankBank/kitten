@@ -1,15 +1,14 @@
 import React from 'react'
 import classNames from 'classnames'
 
-export default class RadioButton extends React.Component {
-
+export class RadioButton extends React.Component {
   renderContent() {
     if (!this.props.content)
       return
 
-    const labelContentsClassNames = classNames (
-    'k-RadioButton__labelContents',
-    { 'k-RadioButton__labelContents--large': this.props.contentLarge }
+    const labelContentsClassNames = classNames(
+      'k-RadioButton__labelContents',
+      { 'k-RadioButton__labelContents--large': this.props.contentLarge }
     )
     return (
       <div className={ labelContentsClassNames }>
@@ -30,6 +29,7 @@ export default class RadioButton extends React.Component {
                type="radio"
                name={ this.props.name }
                className="k-RadioButton__input"
+               value={ this.props.value }
                defaultChecked={ this.props.isChecked }
                disabled={ this.props.disabled } />
 
@@ -41,4 +41,8 @@ export default class RadioButton extends React.Component {
       </div>
     )
   }
+}
+
+RadioButton.defaultProps = {
+  disabled: false,
 }
