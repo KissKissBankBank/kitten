@@ -74,25 +74,15 @@
     }
   }
 
+  .k-Teaser__col--start\@l {
+    @include k-media-min('l') {
+      order: -1;
+    }
+  }
+
   .k-Teaser__col--image {
     svg, img {
       width: 100%;
-    }
-  }
-
-  .k-Teaser__col--small {
-    @include k-media-min('s') {
-      display: none;
-      margin: -20px 0;
-    }
-  }
-
-  .k-Teaser__col--large {
-    display: none;
-
-    @include k-media-min('s') {
-      display: initial;
-      order: 1;
     }
   }
 }
