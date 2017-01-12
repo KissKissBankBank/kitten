@@ -1,7 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 
-export default class Checkbox extends React.Component {
+export class Checkbox extends React.Component {
   render() {
     return (
       <div className="k-Checkbox">
@@ -18,4 +18,8 @@ export default class Checkbox extends React.Component {
       </div>
     )
   }
+}
+
+Checkbox.defaultProps = {
+  disabled: false,
 }

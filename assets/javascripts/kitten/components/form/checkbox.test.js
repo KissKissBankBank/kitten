@@ -1,7 +1,7 @@
 import React from 'react'
 import { expect } from 'chai'
 import { shallow } from 'enzyme'
-import Checkbox from 'kitten/components/form/checkbox'
+import { Checkbox } from 'kitten/components/form/checkbox'
 
 describe('<Checkbox />', () => {
   const component = shallow(
@@ -46,4 +46,12 @@ describe('<Checkbox />', () => {
     })
   })
 
+  describe('with default props', () => {
+    const defaultComponent = shallow(
+      <Checkbox />)
+
+    it('has a default disabled', () => {
+      expect(defaultComponent).not.to.have.attr('disabled')
+    })
+  })
 })
