@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Add default margins to `.k-PressQuotes__title` and
+  `.k-titleWithActions__title`.
 - Fix: Testimony row is larger on xxs.
 - Feature: Introduce `k-Teaser__col--start@l` to fix ordering of columns on
   `k-Teaser`.
