@@ -1,1 +1,30 @@
-<%= react_component 'MakerWhoAmIStep' %>
+<%= react_component 'MakerWhoAmIStep', props: {
+  header: {
+    platformSwitch: {
+      visible: false,
+    },
+    logo: {
+      src: image_path('brand/kisskissbankbank.svg'),
+    }
+  },
+  stepper: {
+    items: [
+      {
+        text: "Statut\n du créateur",
+        href: "#",
+        linkClassNames: "k-Stepper__link--inProgress",
+        iconType: "inProgress",
+      },
+      {
+        text: "Le projet",
+        linkClassNames: "k-Stepper__link--inactive",
+        iconType: "default",
+      },
+      {
+        text: "Description\n sommaire",
+        linkClassNames: "k-Stepper__link--inactive",
+        iconType: "default",
+      },
+    ]
+  }
+} %>
