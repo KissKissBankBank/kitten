@@ -215,15 +215,14 @@ To merge code into master:
 To release a new version:
 
 - Pull `master`
-- Update the version in `lib/kitten/version.rb`.
-- Update the version in `package.json`.
 - Update the `CHANGELOG.md` file:
   * Update the version.
   * Add a new `[unreleased]` section.
   * Check that [each merged
     PR](https://github.com/KissKissBankBank/kitten/commits/master)
     from the last release has an entry.
-
+- Update the version in `lib/kitten/version.rb`.
+- Update the version in `package.json`.
 - Run this command:
 
 ```sh

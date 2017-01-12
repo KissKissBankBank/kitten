@@ -4,13 +4,20 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Add default margins to `.k-PressQuotes__title` and
-  `.k-titleWithActions__title`.
-- Fix: Testimony row is larger on xxs.
 - Fix: At xxs, use thinner gutters.
-- Feature: Introduce `k-Teaser__col--start@l` to fix ordering of columns on
-  `k-Teaser`.
-- Fix: Vertical align on `k-LinkBox__paragraph`.
+
+## [5.2.0] - 2017-01-12
+
+Features:
+- Add `primary-6` color.
+- Introduce `k-Teaser__col--start@l` to fix ordering of columns on `k-Teaser`.
+
+Fixes:
+- Add default margins to `.k-PressQuotes__title` and
+  `.k-titleWithActions__title`.
+- Testimony row is larger on xxs.
+- Vertical align on `k-LinkBox__paragraph`.
+- Add default colors to `k-Row`.
 
 ## [5.1.0] - 2017-01-11
 
