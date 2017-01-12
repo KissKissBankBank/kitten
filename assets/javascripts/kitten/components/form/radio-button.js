@@ -30,7 +30,7 @@ export class RadioButton extends React.Component {
                name={ this.props.name }
                className="k-RadioButton__input"
                value={ this.props.value }
-               defaultChecked={ this.props.isChecked }
+               defaultChecked={ this.props.checked }
                disabled={ this.props.disabled } />
 
         <label htmlFor={ this.props.id }
@@ -44,5 +44,13 @@ export class RadioButton extends React.Component {
 }
 
 RadioButton.defaultProps = {
+  id: 'karl-radio-button-1',
+  name: 'karl-radio-button',
+  value: 'ok',
+  text: 'Default',
+  large: false,
+  contentLarge: false,
+  content: ' ',
+  checked: false,
   disabled: false,
 }
