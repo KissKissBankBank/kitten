@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Testimony row is larger on xxs
+- Fix: Testimony row is larger on xxs.
 
 ## [5.1.0] - 2017-01-11
 
