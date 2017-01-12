@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add new display utility (`k-u-hide`).
 - Fix: Add default margins to `.k-PressQuotes__title` and
   `.k-titleWithActions__title`.
 - Fix: Testimony row is larger on xxs.
