@@ -49,7 +49,6 @@ Button.defaultProps = {
   name: 'hydrogen',
   text: 'Button',
   tag: 'button',
-  size: 'k-Button--tiny',
   iconOnRight: false,
-  disabled: false,
+  children: null,
 }

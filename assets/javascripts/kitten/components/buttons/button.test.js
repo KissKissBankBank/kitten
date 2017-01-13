@@ -16,14 +16,6 @@ describe('Button with default props', () => {
     expect(defaultComponent).attr('name')
   })
 
-  it('has a default disabled', () => {
-    expect(defaultComponent).not.to.have.attr('disabled')
-  })
-
-  it('has a default size', () => {
-    expect(defaultComponent).not.to.have.attr('size')
-  })
-
   it('has an iconRight svg', () => {
     expect(defaultComponent.find('k-Button--iconRight')).to.have.length(0)
   })
@@ -34,7 +26,7 @@ describe('Button with default props', () => {
               text="Button" />
     )
 
-    it('has a <Button class="k-Button" />', () => {
+    it('renders a <Button class="k-Button" />', () => {
       expect(component).to.have.tagName('button')
       expect(component).to.have.className('k-Button')
       expect(component).to.have.className('k-Button--hydrogen')
@@ -44,25 +36,6 @@ describe('Button with default props', () => {
       it('accepts helium', () => {
         const component = shallow(<Button name="helium" />)
         expect(component).to.have.className('k-Button--helium')
-      })
-    })
-
-    describe('disabled', () => {
-      it('has a disabled attribute', () => {
-        const component = shallow(<Button disabled="true" />)
-        expect(component).to.have.attr('disabled')
-      })
-    })
-
-    describe('size', () => {
-      it('accepts tiny', () => {
-        const component = shallow(<Button size="tiny" />)
-        expect(component).to.have.className('k-Button--tiny')
-      })
-
-      it('accepts big', () => {
-        const component = shallow(<Button size="big" />)
-        expect(component).to.have.className('k-Button--big')
       })
     })
 
