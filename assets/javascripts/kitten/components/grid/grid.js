@@ -36,7 +36,7 @@ export class GridCol extends React.Component {
     const gridClassNames = classNames(
       { [`k-Grid__col--${this.props.col}`]: this.props.col },
       { [`k-Grid__col--offset-${this.props.offset}`]: this.props.offset },
-      this.classByMediaQueries(),
+      this.classByMediaQuery(),
     )
 
     return (
