@@ -1,4 +1,8 @@
 #!/bin/sh
 set -e
 
-npm test
+if [[ $1 ]]; then
+  npm test -- $1
+else
+  npm test -- 'assets/javascripts/kitten/components/**/*.test.js'
+fi

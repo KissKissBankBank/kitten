@@ -192,6 +192,10 @@ To launch the JS tests:
 
 ```sh
 bin/test
+
+# OR
+
+bin/test assets/javascripts/kitten/components/steppers/stepper.test.js
 ```
 
 Check out the [guidelines](../../kitten/wiki/Component-testing) to know how to test kitten.
