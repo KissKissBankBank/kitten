@@ -22,7 +22,7 @@ export class Checkbox extends React.Component {
 
 Checkbox.defaultProps = {
   id: 'input-1',
-  value: 'ok',
+  value: 'null',
   text: 'Filter 1',
   disabled: false,
   checked: false,

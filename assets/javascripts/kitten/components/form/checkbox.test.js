@@ -7,12 +7,26 @@ describe('Checkbox with default props', () => {
   const defaultComponent = shallow(
     <Checkbox />)
 
-  it('has a default attribute', () => {
-    expect(defaultComponent).to.have.attr('id', 'input-1')
-    expect(defaultComponent).to.have.attr('value', 'ok')
-    expect(defaultComponent).to.have.attr('text', 'Filter-1')
-    expect(defaultComponent).not.to.have.attr('disabled')
-    expect(defaultComponent).not.to.have.attr('checked')
+  it('has a default class attribute', () => {
+    expect(defaultComponent.find('k-Checkbox')).to.have.length(0)
+  })
+
+  it('has a default input attributes', () => {
+    const input = defaultComponent.find('input')
+
+    expect(input).to.have.attr('id', 'input-1')
+    expect(input).to.have.attr('type', 'checkbox')
+    expect(input).to.have.className('k-Checkbox__input')
+    expect(input).attr('value')
+    expect(input).not.to.have.attr('disabled')
+    expect(input).not.to.have.attr('checked')
+  })
+
+  it('has a default label attributes', () => {
+    const label = defaultComponent.find('label')
+
+    expect(label).to.have.attr('for', 'input-1')
+    expect(label).not.to.have.attr('text')
   })
 
   describe('<Checkbox />', () => {
@@ -20,7 +34,9 @@ describe('Checkbox with default props', () => {
       <Checkbox id="input-1"
                 type="checkbox"
                 className="k-Checkbox__input"
-                value="input" />
+                value="null"
+                htmlFor="input-1"
+                text="Filter 1" />
     )
 
     it('has a <div class="k-Checkbox" />', () => {
@@ -32,7 +48,7 @@ describe('Checkbox with default props', () => {
 
       expect(input).to.have.attr('id', 'input-1')
       expect(input).to.have.attr('type', 'checkbox')
-      expect(input).to.have.attr('value', 'input')
+      expect(input).to.have.attr('value', 'null')
       expect(input).to.have.className('k-Checkbox__input')
     })
 
