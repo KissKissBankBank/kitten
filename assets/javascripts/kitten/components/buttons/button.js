@@ -18,6 +18,7 @@ export class Button extends React.Component {
             children,
             tag,
             size,
+            this.props.name
             iconOnRight,
             ...rest }
     = this.props
@@ -45,7 +46,7 @@ export class Button extends React.Component {
     const Tag = tag
 
     return (
-      <Tag className={ buttonClassNames } { ...rest } >
+      <Tag className={ buttonClassNames } { ...rest }>
         { this.renderLeftIcon() }
         { text }
         { this.renderRightIcon() }
@@ -58,4 +59,7 @@ Button.defaultProps = {
   name: 'hydrogen',
   text: 'Button',
   tag: 'button',
+  size: 'k-Button--tiny',
+  iconOnRight: 'k-Button--iconRight',
+  disabled: false,
 }

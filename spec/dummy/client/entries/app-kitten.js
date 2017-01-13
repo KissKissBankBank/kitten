@@ -8,7 +8,7 @@ import DocLinkBox from 'kitten/components/box/doc-link-box'
 
 // Buttons
 import { Button } from 'kitten/components/buttons/button'
-import { ButtonHeartIconWords } from 'kitten/components/buttons/button-icon-words'
+import { ButtonHeartIconWords } from 'kitten/components/buttons/button-heart-icon-words'
 import ButtonImageWithTextAndBadge from 'kitten/components/buttons/button-image-with-text-and-badge'
 import ButtonTooltipIcon from 'kitten/components/buttons/button-tooltip-icon'
 
