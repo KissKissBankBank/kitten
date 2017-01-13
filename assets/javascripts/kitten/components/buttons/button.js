@@ -18,7 +18,6 @@ export class Button extends React.Component {
             children,
             tag,
             size,
-            this.props.name
             iconOnRight,
             ...rest }
     = this.props

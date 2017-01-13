@@ -17,7 +17,7 @@ describe('Button with default props', () => {
   })
 
   it('has a default disabled', () => {
-    expect(defaultComponent).attr('disabled')
+    expect(defaultComponent).not.to.have.attr('disabled')
   })
 
   it('has a default size', () => {
