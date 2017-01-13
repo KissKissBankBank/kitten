@@ -8,7 +8,7 @@ export class RadioButton extends React.Component {
 
     const labelContentsClassNames = classNames(
       'k-RadioButton__labelContents',
-      { 'k-RadioButton__labelContents--large': this.props.contentLarge }
+      { 'k-RadioButton__labelContents--large': this.props.largeContent }
     )
     return (
       <div className={ labelContentsClassNames }>
@@ -18,24 +18,23 @@ export class RadioButton extends React.Component {
   }
 
   render() {
+    const { id, text, large, ...others } = this.props
+
     let radioButtonClassNames = classNames (
       'k-RadioButton__label',
-      { 'k-RadioButton__label--large': this.props.large },
+      { 'k-RadioButton__label--large': large },
     )
 
     return (
       <div className="k-RadioButton">
-        <input id={ this.props.id }
+        <input id={ id }
                type="radio"
-               name={ this.props.name }
                className="k-RadioButton__input"
-               value={ this.props.value }
-               defaultChecked={ this.props.checked }
-               disabled={ this.props.disabled } />
+               { ...others } />
 
-        <label htmlFor={ this.props.id }
+        <label htmlFor={ id }
                className={ radioButtonClassNames } >
-          { this.props.text }
+          { text }
         </label>
           { this.renderContent() }
       </div>
@@ -44,13 +43,8 @@ export class RadioButton extends React.Component {
 }
 
 RadioButton.defaultProps = {
-  id: 'karl-radio-button-1',
-  name: 'karl-radio-button',
-  value: 'ok',
   text: 'Default',
   large: false,
-  contentLarge: false,
-  content: ' ',
-  checked: false,
-  disabled: false,
+  largeContent: false,
+  content: '',
 }

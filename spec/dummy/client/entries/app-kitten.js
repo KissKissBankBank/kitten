@@ -3,8 +3,8 @@ require('../stylesheets/app-kitten.scss');
 import ReactOnRails from 'react-on-rails';
 
 // Box
-import LinkBox from 'kitten/components/box/link-box'
 import DocLinkBox from 'kitten/components/box/doc-link-box'
+import LinkBox from 'kitten/components/box/link-box'
 
 // Buttons
 import ButtonImageWithTextAndBadge from 'kitten/components/buttons/button-image-with-text-and-badge'
@@ -21,10 +21,10 @@ import DropdownButton from 'kitten/components/dropdowns/dropdown-button'
 import FormAmountAndCurrency from 'kitten/components/form/form-amount-and-currency'
 import FormPhoneNumber from 'kitten/components/form/form-phone-number'
 import { RadioButton } from 'kitten/components/form/radio-button'
-import Slider from 'kitten/components/form/slider'
+import Search from 'kitten/components/form/search'
 import Select from 'react-select'
 import SelectWithState from 'kitten/components/form/select-with-state'
-import Search from 'kitten/components/form/search'
+import Slider from 'kitten/components/form/slider'
 import Switch from 'kitten/components/form/switch'
 
 // Icons
@@ -47,8 +47,8 @@ import TourPopover from 'kitten/components/tours/tour-popover'
 import TourStep from 'kitten/components/tours/tour-step'
 
 // Simulators
-import SimulatorResult from 'kitten/components/simulators/simulator-result'
 import LoanSimulator from 'kitten/components/simulators/loan-simulator'
+import SimulatorResult from 'kitten/components/simulators/simulator-result'
 
 // Steppers
 import { Stepper } from 'kitten/components/steppers/stepper'
@@ -69,33 +69,58 @@ import { KarlLoanSimulator,
        } from 'kitten/karl/organisms/loan-simulator'
 
 ReactOnRails.register({
+  // Box
+  DocLinkBox,
+  LinkBox,
+
+  // Buttons
   ButtonImageWithTextAndBadge,
   ButtonTooltipIcon,
+
+  // Dev
   DevGrid,
-  DocLinkBox,
+
+  // Dropdowns
   Dropdown,
   DropdownButton,
-  ExternalRichLink,
+
+  // Form
   FormAmountAndCurrency,
   FormPhoneNumber,
-  GrabberIcon,
-  HeaderTour,
-  LinkBox,
-  LoanSimulator,
   RadioButton,
-  ReactTooltip,
-  Slider,
   Search,
   Select,
   SelectWithState,
-  NavList,
-  SimulatorResult,
-  Tooltip,
-  Stepper,
+  Slider,
   Switch,
+
+  // Icons
+  GrabberIcon,
+
+  // Links
+  ExternalRichLink,
+
+  // Lists
+  NavList,
+
+  // Tooltips
+  ReactTooltip,
+  Tooltip,
+
+  // Tours
+  HeaderTour,
   Tour,
   TourPopover,
   TourStep,
+
+  // Simulators
+  LoanSimulator,
+  SimulatorResult,
+
+  // Steppers
+  Stepper,
+
+  // Karl composed components
   KarlImageExternalRichLink,
   KarlSvgExternalRichLink,
   KarlSimpleDropdown,
