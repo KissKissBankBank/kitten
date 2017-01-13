@@ -49,4 +49,5 @@ export class GridCol extends React.Component {
 
 GridCol.defaultProps = {
   col: '12',
+  offset: null,
 }
