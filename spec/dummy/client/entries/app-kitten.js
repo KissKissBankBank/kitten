@@ -66,6 +66,10 @@ import { KarlUnloggedHeaderPlatformSwitch,
 import { KarlLoanSimulator,
          KarlLoanSimulatorWithCommission
        } from 'kitten/karl/organisms/loan-simulator'
+import { KarlSideGridWithRightAside,
+         KarlSideGridWithLeftAsideAndSmallSize
+       } from 'kitten/karl/grid/side-grid'
+
 
 ReactOnRails.register({
   ButtonImageWithTextAndBadge,
@@ -105,4 +109,6 @@ ReactOnRails.register({
   KarlPhoneDropdown,
   KarlLoanSimulator,
   KarlLoanSimulatorWithCommission,
+  KarlSideGridWithRightAside,
+  KarlSideGridWithLeftAsideAndSmallSize,
 })
