@@ -17,35 +17,26 @@ export class Button extends React.Component {
             text,
             children,
             tag,
+            name,
             size,
             iconOnRight,
-            ...rest }
+            ...others }
     = this.props
-
-    const buttonTypeClassName = `k-Button--${this.props.name}`
-
-    let buttonSizeClassName
-    if (size) {
-      buttonSizeClassName = `k-Button--${size}`
-    }
-
-    let buttonIconOnRightClassName
-    if (iconOnRight) {
-      buttonIconOnRightClassName = 'k-Button--iconRight'
-    }
 
     let buttonClassNames = classNames(
       'k-Button',
-       className,
-       buttonTypeClassName,
-       buttonSizeClassName,
-       buttonIconOnRightClassName
+      className,
+      {
+        [`k-Button--${name}`]: name,
+        [`k-Button--${size}`]: size,
+        'k-Button--iconRight': iconOnRight,
+      },
     )
 
     const Tag = tag
 
     return (
-      <Tag className={ buttonClassNames } { ...rest }>
+      <Tag className={ buttonClassNames } name={ name } { ...others }>
         { this.renderLeftIcon() }
         { text }
         { this.renderRightIcon() }
@@ -59,6 +50,6 @@ Button.defaultProps = {
   text: 'Button',
   tag: 'button',
   size: 'k-Button--tiny',
-  iconOnRight: 'k-Button--iconRight',
+  iconOnRight: false,
   disabled: false,
 }
