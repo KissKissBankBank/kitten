@@ -191,11 +191,11 @@ The documentation is accessible on development environment: `/kitten/sassdoc`.
 To launch the JS tests:
 
 ```sh
-bin/test
+$ bin/test
 
 # OR
 
-bin/test assets/javascripts/kitten/components/steppers/stepper.test.js
+$ bin/test {PATH}/{FILE}.test.js
 ```
 
 Check out the [guidelines](../../kitten/wiki/Component-testing) to know how to test kitten.
