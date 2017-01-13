@@ -24,8 +24,10 @@ export class GridCol extends React.Component {
 
       return classNames(
         classNamesByMediaQuery,
-        { [`k-Grid__col--${col}@${mediaQuery}`]: col },
-        { [`k-Grid__col--offset-${offset}@${mediaQuery}`]: offset },
+        {
+          [`k-Grid__col--${col}@${mediaQuery}`]: col,
+          [`k-Grid__col--offset-${offset}@${mediaQuery}`]: offset,
+        },
       )
     })
 
@@ -34,8 +36,10 @@ export class GridCol extends React.Component {
 
   render() {
     const gridClassNames = classNames(
-      { [`k-Grid__col--${this.props.col}`]: this.props.col },
-      { [`k-Grid__col--offset-${this.props.offset}`]: this.props.offset },
+      {
+        [`k-Grid__col--${this.props.col}`]: this.props.col,
+        [`k-Grid__col--offset-${this.props.offset}`]: this.props.offset,
+      },
       this.classByMediaQuery(),
     )
 
