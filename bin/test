@@ -1,8 +1,6 @@
 #!/bin/sh
 set -e
 
-if [[ $1 ]]; then
-  npm test -- $1
-else
-  npm test -- 'assets/javascripts/kitten/components/**/*.test.js'
-fi
+FILES=${1:-assets/javascripts/kitten/components/**/*.test.js}
+
+npm test -- $FILES
