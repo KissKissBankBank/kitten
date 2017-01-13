@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add new `SideGrid`, `SideGridContent` and `SideGridAside` components.
+
 ## [5.2.0] - 2017-01-12
 
 Features:
