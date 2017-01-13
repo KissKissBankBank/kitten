@@ -16,9 +16,8 @@ export class Grid extends React.Component {
 export class GridCol extends React.Component {
   classByMediaQuery() {
     const props = this.props
-    let classNamesByMediaQuery = {}
 
-    classNamesByMediaQuery = mediaQueries.map(mediaQuery => {
+    const classNamesByMediaQuery = mediaQueries.map(mediaQuery => {
       const col = props[`col-${mediaQuery}`]
       const offset = props[`offset-${mediaQuery}`]
 
