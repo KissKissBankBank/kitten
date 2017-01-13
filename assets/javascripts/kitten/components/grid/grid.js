@@ -14,22 +14,22 @@ export class Grid extends React.Component {
 }
 
 export class GridCol extends React.Component {
-  classByMediaQueries() {
-    let classNamesByMediaQueries = {}
+  classByMediaQuery() {
     const props = this.props
+    let classNamesByMediaQuery = {}
 
     mediaQueries.forEach(mediaQuery => {
       const col = props[`col-${mediaQuery}`]
       const offset = props[`offset-${mediaQuery}`]
 
-      classNamesByMediaQueries = classNames(
-        classNamesByMediaQueries,
+      classNamesByMediaQuery = classNames(
+        classNamesByMediaQuery,
         { [`k-Grid__col--${col}@${mediaQuery}`]: col },
         { [`k-Grid__col--offset-${offset}@${mediaQuery}`]: offset },
       )
     })
 
-    return classNamesByMediaQueries
+    return classNamesByMediaQuery
   }
 
   render() {
