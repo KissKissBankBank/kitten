@@ -4,7 +4,7 @@ export const stringUtils = {
    */
   upcaseFirst(str) {
     if (!str || typeof(str) !== 'string')
-      return
+      return str
 
     return str.charAt(0).toUpperCase() + str.slice(1)
   }
