@@ -35,6 +35,9 @@ import ExternalRichLink from 'kitten/components/links/external-rich-link'
 // Lists
 import NavList from 'kitten/components/lists/nav-list'
 
+// Titles
+import TitleWithActions from 'kitten/components/titles/title-with-actions'
+
 // Tooltips
 import ReactTooltip from 'react-tooltip'
 import Tooltip from 'kitten/components/tooltips/tooltip'
@@ -91,6 +94,7 @@ ReactOnRails.register({
   Tooltip,
   Stepper,
   Switch,
+  TitleWithActions,
   Tour,
   TourPopover,
   TourStep,
