@@ -22,7 +22,7 @@ describe('<SideGrid />', () => {
 
   describe('with aside options', () => {
     const component = shallow(
-      <SideGrid asidePosition="Start" asideSize="Large" />
+      <SideGrid asidePosition="start" asideSize="large" />
     )
 
     it('has the right classes', () => {

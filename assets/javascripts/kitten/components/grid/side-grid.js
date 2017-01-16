@@ -1,12 +1,17 @@
 import React from 'react'
 import classNames from 'classnames'
+import { stringUtils } from 'kitten/helpers/utils/string'
 
 export class SideGrid extends React.Component {
   render() {
-    const { className,
-            containerClassName,
-            asidePosition,
-            asideSize } = this.props
+    let { className,
+          containerClassName,
+          asidePosition,
+          asideSize } = this.props
+
+    asidePosition = stringUtils.upcaseFirst(asidePosition)
+    asideSize = stringUtils.upcaseFirst(asideSize)
+
     const sideGridClassName = classNames(
       'k-SideGrid',
       this.props.className,
@@ -56,8 +61,8 @@ export class SideGridAside extends React.Component {
 SideGrid.defaultProps = {
   className: null,
   containerClassName: null,
-  asidePosition: 'End', // 'Start' or 'End'
-  asideSize: 'Default', // 'Default', 'Small' or 'Large'
+  asidePosition: 'end', // 'start' or 'end'
+  asideSize: 'default', // 'default', 'small' or 'large'
 }
 
 SideGridContent.defaultProps = {
