@@ -56,6 +56,11 @@
 
     .k-Testimony__text {
       margin: k-px-to-rem(20px) 0 0;
+
+      // Override boostrap on blockquotes
+      padding: 0;
+      border: 0;
+
       @include k-typographyFont($font);
       @include k-typographyFontSize;
     }
