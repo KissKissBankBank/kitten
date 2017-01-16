@@ -29,6 +29,9 @@
       flex-wrap: wrap;
       justify-content: space-around;
 
+      @include k-grid-col(10);
+      @include k-grid-offset(1);
+
       @include k-media-min('xs') {
         @include k-grid-col(8);
         @include k-grid-offset(2);

@@ -26,6 +26,9 @@ import SelectWithState from 'kitten/components/form/select-with-state'
 import Search from 'kitten/components/form/search'
 import Switch from 'kitten/components/form/switch'
 
+// Grid
+import { Grid, GridCol } from 'kitten/components/grid/grid'
+
 // Icons
 import GrabberIcon from 'kitten/components/icons/grabber-icon'
 
@@ -69,7 +72,11 @@ import { KarlLoanSimulator,
 import { KarlSideGridWithRightAside,
          KarlSideGridWithLeftAsideAndSmallSize
        } from 'kitten/karl/grid/side-grid'
-
+import { KarlGridTwelveColumns,
+         KarlGridInGrid,
+         KarlGridSmall,
+         KarlGridWithOffset
+       } from 'kitten/karl/grid/grid'
 
 ReactOnRails.register({
   ButtonImageWithTextAndBadge,
@@ -81,6 +88,8 @@ ReactOnRails.register({
   ExternalRichLink,
   FormAmountAndCurrency,
   FormPhoneNumber,
+  Grid,
+  GridCol,
   GrabberIcon,
   HeaderTour,
   LinkBox,
@@ -111,4 +120,8 @@ ReactOnRails.register({
   KarlLoanSimulatorWithCommission,
   KarlSideGridWithRightAside,
   KarlSideGridWithLeftAsideAndSmallSize,
+  KarlGridTwelveColumns,
+  KarlGridInGrid,
+  KarlGridSmall,
+  KarlGridWithOffset,
 })
