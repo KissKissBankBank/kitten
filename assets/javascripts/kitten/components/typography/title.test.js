@@ -7,7 +7,7 @@ describe('Title with default props', () => {
   const defaultComponent = shallow(
     <Title />)
 
-  it('has a default title attributes', () => {
+  it('has a default title attribute', () => {
     expect(defaultComponent).not.to.have.attr('tag', 'h1')
     expect(defaultComponent.find('.k-Title')).to.have.length(1)
   })
@@ -22,21 +22,21 @@ describe('Title with default props', () => {
 
   describe('<Title />', () => {
     const component = shallow(
-      <Title className="k-Title"
+      <Title className="k-Title--custom"
              text="Felis ..." />
     )
 
     it('renders a <Title class="k-Title" />', () => {
       expect(component).to.have.tagName('h1')
-      expect(component).to.have.className('k-Title')
+      expect(component).to.have.className('k-Title--custom')
       expect(component).to.have.className('k-Title--primary')
       expect(component).to.have.text('Felis ...')
     })
 
-    describe('name', () => {
+    describe('type', () => {
       it('accepts secondary', () => {
         const component = shallow(
-          <Title name="secondary" />
+          <Title type="secondary" />
         )
         expect(component).to.have.className('k-Title--secondary')
       })

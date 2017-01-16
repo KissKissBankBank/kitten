@@ -3,13 +3,13 @@ import classNames from 'classnames'
 
 export class Title extends React.Component {
   render() {
-    const { className, text, name, tag } = this.props
+    const { className, text, type, tag } = this.props
 
-    let titleClassNames = classNames(
+    const titleClassNames = classNames(
       'k-Title',
       className,
       {
-        [`k-Title--${name}`]: name
+        `k-Title--${type}`
       },
     )
 
@@ -25,6 +25,6 @@ export class Title extends React.Component {
 
 Title.defaultProps = {
   tag: 'h1',
-  name: 'primary',
+  type: 'primary',
   text: 'Felis ...',
 }
