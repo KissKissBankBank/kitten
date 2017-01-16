@@ -220,6 +220,19 @@ class LoanSimulatorContent extends React.Component {
     )
   }
 
+  renderDurationError() {
+    const { duration, touched, requiredDurationError } = this.props
+
+    if (!touched || duration > 0 || !requiredDurationError)
+      return
+
+    return (
+      <span className="k-LoanSimulator__durationError">
+        { this.props.requiredDurationError }
+      </span>
+    )
+  }
+
   renderButton() {
     if (!this.props.actionLabel)
      return
@@ -332,6 +345,7 @@ class LoanSimulatorContent extends React.Component {
 
           { this.renderCommission() }
           { durationInput }
+          { this.renderDurationError() }
         </div>
         { this.renderButton() }
       </div>
@@ -370,6 +384,9 @@ LoanSimulator.propTypes = {
 
   // Error text when the amount is over or under the min and max
   amountOutOfBoundsError: React.PropTypes.string,
+
+  // Error text when the duration has not been set
+  requiredDurationError: React.PropTypes.string,
 
   // Display commission if requested
   displayCommission: React.PropTypes.bool,
@@ -417,6 +434,7 @@ LoanSimulator.defaultProps = {
 
   amountEmptyError: 'Amount cannot be empty',
   amountOutOfBoundsError: 'Amount is either too big or too small',
+  requiredDurationError: 'Duration is required',
 
   displayCommission: false,
   commissionLabel: 'Commission:',

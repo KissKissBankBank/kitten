@@ -21,6 +21,7 @@
 ///   </div>
 @mixin k-LoanSimulator($loan-simulator: ()) {
   @include k-with-module('k-LoanSimulator: $loan-simulator') {
+    $error-color: map-get($k-colors, 'error');
     $spacing-between-amount-and-reimbursing: k-px-to-rem(40px);
     $error-top-margin: k-px-to-rem(10px);
 
@@ -48,8 +49,13 @@
     }
 
     .k-LoanSimulator__amount__error {
-      color: map-get($k-colors, 'error');
+      color: $error-color;
       margin: $error-top-margin 0 0;
+      @include k-typographyFontSize(-2);
+    }
+
+    .k-LoanSimulator__durationError {
+      color: $error-color;
       @include k-typographyFontSize(-2);
     }
 
