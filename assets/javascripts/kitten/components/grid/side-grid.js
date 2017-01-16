@@ -15,10 +15,8 @@ export class SideGrid extends React.Component {
     const sideGridClassName = classNames(
       'k-SideGrid',
       this.props.className,
-      {
-        [`k-SideGrid--aside${asidePosition}`]: asidePosition,
-        [`k-SideGrid--aside${asideSize}`]: asideSize,
-      },
+      `k-SideGrid--aside${asidePosition}`,
+      `k-SideGrid--aside${asideSize}`,
     )
 
     return (
