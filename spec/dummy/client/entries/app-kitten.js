@@ -18,6 +18,7 @@ import Dropdown from 'kitten/components/dropdowns/dropdown'
 import DropdownButton from 'kitten/components/dropdowns/dropdown-button'
 
 // Form
+import { Checkbox } from 'kitten/components/form/checkbox'
 import FormAmountAndCurrency from 'kitten/components/form/form-amount-and-currency'
 import FormPhoneNumber from 'kitten/components/form/form-phone-number'
 import Slider from 'kitten/components/form/slider'
@@ -72,6 +73,7 @@ import { KarlLoanSimulator,
 import { KarlSideGridWithRightAside,
          KarlSideGridWithLeftAsideAndSmallSize
        } from 'kitten/karl/grid/side-grid'
+import { KarlFormActions } from 'kitten/karl/form/form-actions'
 import { KarlGridTwelveColumns,
          KarlGridInGrid,
          KarlGridSmall,
@@ -81,6 +83,7 @@ import { KarlGridTwelveColumns,
 ReactOnRails.register({
   ButtonImageWithTextAndBadge,
   ButtonTooltipIcon,
+  Checkbox,
   DevGrid,
   DocLinkBox,
   Dropdown,
@@ -120,6 +123,7 @@ ReactOnRails.register({
   KarlLoanSimulatorWithCommission,
   KarlSideGridWithRightAside,
   KarlSideGridWithLeftAsideAndSmallSize,
+  KarlFormActions,
   KarlGridTwelveColumns,
   KarlGridInGrid,
   KarlGridSmall,

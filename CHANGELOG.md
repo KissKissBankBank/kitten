@@ -6,6 +6,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Add new `SideGrid`, `SideGridContent` and `SideGridAside` components.
 - Feature: Add new `upcaseFirst()` string helper.
+- Feature: Add new `Checkbox` React component.
+- Feature: Add new `FormActions` React component.
 - Feature: Add new `Grid` and `GridCol` React components.
 - Fix: At xxs, use thinner gutters.
 
