@@ -29,7 +29,7 @@ export const KarlSideGridWithRightAside = () => {
 
 export const KarlSideGridWithLeftAsideAndSmallSize = () => {
   return (
-    <SideGrid asidePosition="Start" asideSize="Small">
+    <SideGrid asidePosition="start" asideSize="small">
       <SideGridAside>
         <p>
           Cat ipsum dolor sit amet, lick sellotape and meowzer!
