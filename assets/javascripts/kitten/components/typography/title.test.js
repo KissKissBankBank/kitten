@@ -22,15 +22,14 @@ describe('Title with default props', () => {
 
   describe('<Title />', () => {
     const component = shallow(
-      <Title className="k-Title--custom"
-             text="Felis ..." />
+      <Title className="k-Title--custom">Felis…</Title>
     )
 
     it('renders a <Title class="k-Title" />', () => {
       expect(component).to.have.tagName('h1')
       expect(component).to.have.className('k-Title--custom')
       expect(component).to.have.className('k-Title--primary')
-      expect(component).to.have.text('Felis ...')
+      expect(component).to.have.text('Felis…')
     })
 
     describe('type', () => {
