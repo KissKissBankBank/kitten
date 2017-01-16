@@ -23,6 +23,7 @@
     @include k-grid-col(12);
     @include k-typographyFont('source-sans-light');
     @include k-typographyFontSize(2);
+    margin-bottom: k-px-to-rem(30px);
 
     @include k-media-min('m') {
       @include k-grid-col(8);

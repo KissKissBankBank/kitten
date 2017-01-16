@@ -111,15 +111,7 @@
 // Grid
 
 @include k-Grid;
-
-@include k-Row((
-  colors: (
-    light-background: map-get($k-colors, 'background-2'),
-    dark-background: #999,
-    light-bottom-border: #eee,
-  )
-));
-
+@include k-Row;
 @include k-SideGrid;
 @include k-SingleColumn;
 @include k-VerticalGrid;

@@ -34,6 +34,7 @@ $k-grid: (
   columns: 12,
   container: 1440px,
   gutter-width: 20px,
+  thin-gutter-width: 15px,
 ) !default;
 
 // Susy
@@ -98,6 +99,7 @@ $k-colors: (
   'primary-3': #2c66e1,
   'primary-4': #cadbfd,
   'primary-5': #ecf2ff,
+  'primary-6': #f6f9ff,
 
   'secondary-1': #4bfffa,
   'secondary-2': #3cf0eb,
