@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add new `Header` React component.
 - Feature: Add new `Checkbox` React component.
 - Feature: Add new `FormActions` React component.
 - Feature: Add new `Grid` and `GridCol` React components.

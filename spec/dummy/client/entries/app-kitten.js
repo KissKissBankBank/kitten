@@ -63,10 +63,13 @@ import { KarlImageExternalRichLink,
 import { KarlSimpleDropdown,
          KarlPlatformSwitch,
          KarlUserMenuDropdown } from 'kitten/karl/organisms/dropdown'
-import { KarlUnloggedHeaderPlatformSwitch,
+import { KarlHeader,
+         KarlHeaderWithSearchInput,
+         KarlHeaderWhenLogged,
+         KarlUnloggedHeaderPlatformSwitch,
          KarlLoggedHeaderPlatformSwitch,
          KarlLoggedHeaderUserMenu,
-         KarlPhoneDropdown } from 'kitten/karl/organisms/header'
+         KarlPhoneDropdown } from 'kitten/karl/headers/header'
 import { KarlLoanSimulator,
          KarlLoanSimulatorWithCommission
        } from 'kitten/karl/organisms/loan-simulator'
@@ -112,6 +115,9 @@ ReactOnRails.register({
   KarlSimpleDropdown,
   KarlPlatformSwitch,
   KarlUserMenuDropdown,
+  KarlHeader,
+  KarlHeaderWithSearchInput,
+  KarlHeaderWhenLogged,
   KarlUnloggedHeaderPlatformSwitch,
   KarlLoggedHeaderPlatformSwitch,
   KarlLoggedHeaderUserMenu,
