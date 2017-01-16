@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: At xxs, use thinner gutters.
+- Fix: Override bootstrap on blockquotes in `k-Testimony__text`
+  and `k-PressQuotes__quote__text`
 
 ## [5.2.0] - 2017-01-12
 
