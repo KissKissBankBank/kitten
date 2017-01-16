@@ -9,7 +9,7 @@ describe('Button with default props', () => {
 
   it('has a default button attributes', () => {
     expect(defaultComponent).not.to.have.attr('tag', 'button')
-    expect(defaultComponent.find('k-Button')).to.have.length(0)
+    expect(defaultComponent.find('.k-Button')).to.have.length(1)
   })
 
   it('has a default name', () => {

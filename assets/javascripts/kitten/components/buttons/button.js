@@ -46,9 +46,9 @@ export class Button extends React.Component {
 }
 
 Button.defaultProps = {
+  tag: 'button',
   name: 'hydrogen',
   text: 'Button',
-  tag: 'button',
   iconOnRight: false,
   children: null,
 }
