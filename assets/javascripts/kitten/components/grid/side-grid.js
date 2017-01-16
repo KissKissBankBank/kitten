@@ -12,7 +12,7 @@ export class SideGrid extends React.Component {
 
     const sideGridClassName = classNames(
       'k-SideGrid',
-      this.props.className,
+      className,
       `k-SideGrid--aside${asidePosition}`,
       `k-SideGrid--aside${asideSize}`,
     )
@@ -20,7 +20,7 @@ export class SideGrid extends React.Component {
     return (
       <div className={ sideGridClassName }>
         <div className={ classNames('k-SideGrid__container',
-                                    this.props.containerClassName) }>
+                                    containerClassName) }>
           <div className="k-SideGrid__row">
             { this.props.children }
           </div>
