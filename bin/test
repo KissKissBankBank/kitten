@@ -1,6 +1,6 @@
 #!/bin/sh
 set -e
 
-FILES=${1:-assets/javascripts/kitten/components/**/*.test.js}
+FILES=${1:-assets/javascripts/kitten/**/*.test.js}
 
 npm test -- $FILES
