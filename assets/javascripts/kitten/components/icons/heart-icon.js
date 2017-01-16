@@ -4,7 +4,7 @@ export const HeartIcon = ({ className }) => {
   return (
     <svg xmlns="http://www.w3.org/2000/svg"
          viewBox="0 0 14 12"
-         className={ className }>
+         { ...props }>
       <path d="M7 2.927C6.71 1.267
            5.262.007 3.52.01 1.574.013-.003 1.595 0 3.543 0 4.485.37 5.34.97
            5.97l.012.014L7.012 12l5.856-5.88c.698-.646 1.134-1.57
