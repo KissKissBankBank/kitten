@@ -15,7 +15,7 @@ class LoanSimulator extends React.Component {
       amount: props.initialAmount * 1,
       installmentAmount: props.initialInstallment,
       dragged: !!props.initialInstallment,
-      touched: false,
+      touched: props.initialTouched,
     }
 
     this.handleFocus = this.handleFocus.bind(this)
@@ -362,6 +362,9 @@ LoanSimulator.propTypes = {
   // Default amount
   initialAmount: React.PropTypes.number,
 
+  // Set this to true to show errors on first use
+  initialTouched: React.PropTypes.bool,
+
   // Error text when the amount is empty or non-numerical
   amountEmptyError: React.PropTypes.string,
 
@@ -410,6 +413,7 @@ LoanSimulator.defaultProps = {
   amountMax: 10000,
 
   initialAmount: null,
+  initialTouched: false,
 
   amountEmptyError: 'Amount cannot be empty',
   amountOutOfBoundsError: 'Amount is either too big or too small',

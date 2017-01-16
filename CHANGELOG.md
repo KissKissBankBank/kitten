@@ -9,7 +9,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Add new `Grid` and `GridCol` React components.
 - Fix: At xxs, use thinner gutters.
 - Fix: Override bootstrap on blockquotes in `k-Testimony__text`
-  and `k-PressQuotes__quote__text`
+  and `k-PressQuotes__quote__text`.
+- Feature: Add new `initialTouched` prop to `LoanSimulator`.
 
 ## [5.2.0] - 2017-01-12
 

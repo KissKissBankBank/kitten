@@ -68,7 +68,8 @@ import { KarlUnloggedHeaderPlatformSwitch,
          KarlLoggedHeaderUserMenu,
          KarlPhoneDropdown } from 'kitten/karl/organisms/header'
 import { KarlLoanSimulator,
-         KarlLoanSimulatorWithCommission
+         KarlLoanSimulatorWithCommission,
+         KarlLoanSimulatorWithError,
        } from 'kitten/karl/organisms/loan-simulator'
 import { KarlFormActions } from 'kitten/karl/form/form-actions'
 import { KarlGridTwelveColumns,
@@ -118,6 +119,7 @@ ReactOnRails.register({
   KarlPhoneDropdown,
   KarlLoanSimulator,
   KarlLoanSimulatorWithCommission,
+  KarlLoanSimulatorWithError,
   KarlFormActions,
   KarlGridTwelveColumns,
   KarlGridInGrid,
