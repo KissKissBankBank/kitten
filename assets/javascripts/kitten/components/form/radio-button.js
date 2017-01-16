@@ -36,7 +36,7 @@ export class RadioButton extends React.Component {
                className={ radioButtonClassNames } >
           { text }
         </label>
-          { this.renderContent() }
+        { this.renderContent() }
       </div>
     )
   }
