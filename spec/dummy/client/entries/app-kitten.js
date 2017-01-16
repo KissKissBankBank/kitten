@@ -10,6 +10,10 @@ import DocLinkBox from 'kitten/components/box/doc-link-box'
 import ButtonImageWithTextAndBadge from 'kitten/components/buttons/button-image-with-text-and-badge'
 import ButtonTooltipIcon from 'kitten/components/buttons/button-tooltip-icon'
 
+// Detectors
+import { DocumentUnfocusDetector }
+  from 'kitten/components/detectors/document-unfocus-detector'
+
 // Dev
 import { DevGrid } from 'kitten/components/dev/dev-grid'
 
@@ -78,6 +82,7 @@ import { KarlGridTwelveColumns,
 ReactOnRails.register({
   ButtonImageWithTextAndBadge,
   ButtonTooltipIcon,
+  DocumentUnfocusDetector,
   DevGrid,
   DocLinkBox,
   Dropdown,

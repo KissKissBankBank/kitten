@@ -105,23 +105,6 @@
     color: $hover-color;
   }
 
-  &:focus {
-    @if map-has-key($colors, 'focus') {
-      @include k-buttonBorder($focus-border-color);
-
-      background-color: $focus-background-color;
-      color: $focus-color;
-    }
-    @else {
-      @include k-buttonBorder($hover-border-color);
-
-      background-color: $hover-background-color;
-      color: $hover-color;
-    }
-
-    outline: none;
-  }
-
   &:active {
     @include k-buttonBorder($active-border-color);
 

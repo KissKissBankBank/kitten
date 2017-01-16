@@ -69,10 +69,10 @@
     }
 
     &:hover { color: $border-color-hover; }
-    &:active { color: $background-color-active;}
+    &:active { color: $background-color-active; }
 
-    .k-Checkbox__input:checked:focus + &:before {
-      box-shadow: 0 0 k-px-to-rem(3px) $background-color-checked;
+    html:not(.k-u-unfocused) .k-Checkbox__input:focus + &:before {
+      box-shadow: 0 0 1rem $background-color-checked;
     }
 
     .k-Checkbox__input:checked + &:before {

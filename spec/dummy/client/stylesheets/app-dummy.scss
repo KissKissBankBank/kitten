@@ -28,7 +28,6 @@
   border-radius: 2px;
   background-color: white;
   cursor: pointer;
-  outline: 0;
 
   @include k-typographyFontSize(-2, 2);
   @include k-typographyFont('source-sans-semi-bold-uppercase');
@@ -42,7 +41,6 @@
   text-decoration: none;
   color: #333;
 
-  &:focus,
   &:hover {
     background-color: #d8d8d8;
   }

@@ -35,7 +35,7 @@
     hover: (
       color: map-get($k-colors, 'primary-1'),
     ),
-    focus: (
+    active: (
       border-color: map-get($k-colors, 'primary-1'),
       color: map-get($k-colors, 'primary-1'),
     ),
@@ -53,10 +53,10 @@
   // hover colors
   $hover-color: k-color-definition(k-map-fetch($colors, ('hover', 'color')));
 
-  // focus colors
-  $focus-color: k-color-definition(k-map-fetch($colors, ('focus', 'color')));
-  $focus-border-color: k-color-definition(
-    k-map-fetch($colors, ('focus', 'border-color')));
+  // active colors
+  $active-color: k-color-definition(k-map-fetch($colors, ('active', 'color')));
+  $active-border-color: k-color-definition(
+    k-map-fetch($colors, ('active', 'border-color')));
 
   // state 'is-selected' colors
   $is-selected-color: k-color-definition(
@@ -111,21 +111,13 @@
     }
 
     &:active {
-      border-color: $focus-border-color;
-      color: $focus-color;
+      border-color: $active-border-color;
+      color: $active-color;
     }
 
     &.is-selected {
       border-color: $is-selected-border-color;
       color: $is-selected-color;
-    }
-
-    &:focus {
-      color: $hover-color;
-      text-decoration: none;
-
-      outline: 0;
-      box-shadow: 0 0 1rem $hover-color;
     }
   }
 }

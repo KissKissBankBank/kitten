@@ -243,7 +243,7 @@
     border-spacing: 0;
     border-collapse: separate;
     height: $select-input-height;
-    outline: none;
+    //outline: none;
     overflow: hidden;
     position: relative;
     width: 100%;
@@ -253,7 +253,7 @@
     }
 
     .Select-input:focus {
-      outline: none;
+      outline: 0;
     }
   }
 
@@ -325,10 +325,8 @@
       cursor: pointer;
       text-decoration: none;
 
-      &:hover,
-      &:focus {
+      &:hover {
         color: $select-link-hover-color;
-        outline: none;
         text-decoration: underline;
       }
     }
@@ -353,7 +351,7 @@
       font-family: inherit;
       font-size: inherit;
       margin: 0;
-      outline: none;
+      //outline: none;
       line-height: 14px; // For IE 8 compatibility
       padding:
         (($select-input-internal-height - 14) / 2 - 2)
@@ -375,7 +373,7 @@
 
   // fake input
   .Select-control:not(.is-searchable) > .Select-input {
-    outline: none;
+    //outline: none;
   }
 
   // loading indicator
@@ -617,8 +615,8 @@
         $select-item-padding-horizontal
         ($select-item-padding-vertical + 1);
 
-      &:hover,
-      &:focus {
+      // &:focus,
+      &:hover {
         background-color: $select-item-hover-bg;
         color: $select-item-hover-color;
       }
@@ -640,8 +638,8 @@
       cursor: not-allowed;
       border-right: 1px solid $select-item-disabled-border-color;
 
+      // &:focus,
       &:hover,
-      &:focus,
       &:active {
         background-color: $select-item-disabled-bg;
       }
