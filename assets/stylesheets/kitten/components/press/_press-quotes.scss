@@ -57,6 +57,10 @@
   .k-PressQuotes__quote__text {
     margin: 0 0 k-px-to-rem(20px);
 
+    // Override boostrap on blockquotes
+    padding: 0;
+    border: 0;
+
     @include k-typographyFont('source-sans-light');
     @include k-typographyFontSize;
     font-style: italic;
