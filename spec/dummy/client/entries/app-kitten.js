@@ -49,6 +49,9 @@ import Tour from 'kitten/components/tours/tour'
 import TourPopover from 'kitten/components/tours/tour-popover'
 import TourStep from 'kitten/components/tours/tour-step'
 
+// Typography
+import { Title } from 'kitten/components/typography/title'
+
 // Simulators
 import SimulatorResult from 'kitten/components/simulators/simulator-result'
 import LoanSimulator from 'kitten/components/simulators/loan-simulator'
@@ -104,6 +107,7 @@ ReactOnRails.register({
   Tooltip,
   Stepper,
   Switch,
+  Title,
   Tour,
   TourPopover,
   TourStep,
