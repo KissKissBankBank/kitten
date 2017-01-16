@@ -4,7 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add new `Checkbox` React component.
 - Feature: Add new `FormActions` React component.
+- Feature: Add new `Grid` and `GridCol` React components.
 - Fix: At xxs, use thinner gutters.
 
 ## [5.2.0] - 2017-01-12

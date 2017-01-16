@@ -18,6 +18,7 @@ import Dropdown from 'kitten/components/dropdowns/dropdown'
 import DropdownButton from 'kitten/components/dropdowns/dropdown-button'
 
 // Form
+import { Checkbox } from 'kitten/components/form/checkbox'
 import FormAmountAndCurrency from 'kitten/components/form/form-amount-and-currency'
 import FormPhoneNumber from 'kitten/components/form/form-phone-number'
 import Slider from 'kitten/components/form/slider'
@@ -25,6 +26,9 @@ import Select from 'react-select'
 import SelectWithState from 'kitten/components/form/select-with-state'
 import Search from 'kitten/components/form/search'
 import Switch from 'kitten/components/form/switch'
+
+// Grid
+import { Grid, GridCol } from 'kitten/components/grid/grid'
 
 // Icons
 import GrabberIcon from 'kitten/components/icons/grabber-icon'
@@ -67,10 +71,16 @@ import { KarlLoanSimulator,
          KarlLoanSimulatorWithCommission
        } from 'kitten/karl/organisms/loan-simulator'
 import { KarlFormActions } from 'kitten/karl/form/form-actions'
+import { KarlGridTwelveColumns,
+         KarlGridInGrid,
+         KarlGridSmall,
+         KarlGridWithOffset
+       } from 'kitten/karl/grid/grid'
 
 ReactOnRails.register({
   ButtonImageWithTextAndBadge,
   ButtonTooltipIcon,
+  Checkbox,
   DevGrid,
   DocLinkBox,
   Dropdown,
@@ -78,6 +88,8 @@ ReactOnRails.register({
   ExternalRichLink,
   FormAmountAndCurrency,
   FormPhoneNumber,
+  Grid,
+  GridCol,
   GrabberIcon,
   HeaderTour,
   LinkBox,
@@ -107,4 +119,8 @@ ReactOnRails.register({
   KarlLoanSimulator,
   KarlLoanSimulatorWithCommission,
   KarlFormActions,
+  KarlGridTwelveColumns,
+  KarlGridInGrid,
+  KarlGridSmall,
+  KarlGridWithOffset,
 })
