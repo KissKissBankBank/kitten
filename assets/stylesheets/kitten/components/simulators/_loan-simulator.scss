@@ -55,7 +55,7 @@
     }
 
     .k-LoanSimulator__amount__error {
-      color: red;
+      color: map-get($k-colors, 'error');
       margin: $error-top-margin 0 0;
       @include k-typographyFontSize(-2);
     }
