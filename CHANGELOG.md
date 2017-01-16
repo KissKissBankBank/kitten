@@ -4,14 +4,20 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add new `Checkbox` React component.
-- Feature: Add new `FormActions` React component.
-- Feature: Add new `Grid` and `GridCol` React components.
-- Fix: At xxs, use thinner gutters.
-- Fix: Override bootstrap on blockquotes in `k-Testimony__text`
-  and `k-PressQuotes__quote__text`.
 - Feature: Add new `initialTouched` and `requiredDurationError` props
   to `LoanSimulator`.
+
+## [5.3.0] - 2017-01-16
+
+Features:
+- Add new `Checkbox` React component.
+- Add new `FormActions` React component.
+- Add new `Grid` and `GridCol` React components.
+
+Fixes:
+- At xxs, use thinner gutters.
+- Override bootstrap on blockquotes in `k-Testimony__text`
+  and `k-PressQuotes__quote__text`.
 
 ## [5.2.0] - 2017-01-12
 
