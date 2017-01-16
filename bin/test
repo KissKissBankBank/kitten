@@ -1,4 +1,6 @@
 #!/bin/sh
 set -e
 
-npm test
+FILES=${1:-assets/javascripts/kitten/**/*.test.js}
+
+npm test -- $FILES
