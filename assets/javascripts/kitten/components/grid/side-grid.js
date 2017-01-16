@@ -4,9 +4,9 @@ import { stringUtils } from 'kitten/helpers/utils/string'
 
 export class SideGrid extends React.Component {
   render() {
-    let { className,
-          containerClassName,
-          asidePosition,
+    const { className,
+            containerClassName } = this.props
+    let { asidePosition,
           asideSize } = this.props
 
     asidePosition = stringUtils.upcaseFirst(asidePosition)
