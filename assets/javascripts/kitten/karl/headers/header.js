@@ -1,4 +1,5 @@
 import React from 'react'
+import classNames from 'classnames'
 import defaultProps from 'kitten/hoc/default-props'
 import objectAssign from 'core-js/library/fn/object/assign'
 
@@ -22,9 +23,9 @@ export const KarlHeader = () => {
         </HeaderItem>
 
         <HeaderItem tag="p" fixedSize="true">
-          <a className="k-Header__logo
-                        k-Header__logo--lightOnM
-                        k-Header__logo--lightOnXxs"
+          <a className={ classNames('k-Header__logo',
+                                    'k-Header__logo--lightOnM',
+                                    'k-Header__logo--lightOnXxs') }
              href="header">
             <img src="https://placeholdit.imgix.net/~text?txt=LOGO&amp;w=180&amp;h=40"
                  alt="LOGO" />
@@ -63,10 +64,11 @@ export const KarlHeader = () => {
 
         <HeaderItem id="k-PhoneDropdown">
           <button className="k-ButtonIcon k-ButtonIcon--hydrogen">
-            <svg className="k-ButtonIcon__svg" viewBox="-0.7 -0.7 18 18"
-              xmlns="http://www.w3.org/2000/svg">
+            <svg className="k-ButtonIcon__svg"
+                 viewBox="-0.7 -0.7 18 18"
+                 xmlns="http://www.w3.org/2000/svg">
               <circle cx="7" cy="7" r="7" stroke-width="1.1"
-                className="k-ButtonIcon__svg__stroke" fill="none" />
+                      className="k-ButtonIcon__svg__stroke" fill="none" />
               <path d="M13 11 L17 15 L15.5 16.5 L11.5 12.7z" />
             </svg>
           </button>
@@ -96,9 +98,9 @@ export const KarlHeaderWithSearchInput = () => {
         </HeaderItem>
 
         <HeaderItem tag="p" fixedSize="true">
-          <a className="k-Header__logo
-                        k-Header__logo--lightOnM
-                        k-Header__logo--lightOnXxs"
+          <a className={ classNames('k-Header__logo',
+                                    'k-Header__logo--lightOnM',
+                                    'k-Header__logo--lightOnXxs') }
              href="header">
             <img src="https://placeholdit.imgix.net/~text?txt=LOGO&amp;w=180&amp;h=40"
                  alt="LOGO" />
@@ -145,9 +147,9 @@ export const KarlHeaderWithSearchInput = () => {
 
         <HeaderItem className="k-Header__signup">
           <a href="#"
-             className="k-Button
-                        k-Button--hydrogen
-                        k-Header__button">
+             className={ classNames('k-Button',
+                                    'k-Button--hydrogen',
+                                    'k-Header__button') }>
             S'identifier
           </a>
         </HeaderItem>
@@ -167,9 +169,9 @@ export const KarlHeaderWhenLogged = () => {
         </HeaderItem>
 
         <HeaderItem tag="p" fixedSize="true">
-          <a className="k-Header__logo
-                        k-Header__logo--lightOnM
-                        k-Header__logo--lightOnXxs"
+          <a className={ classNames('k-Header__logo',
+                                    'k-Header__logo--lightOnM',
+                                    'k-Header__logo--lightOnXxs') }
              href="header">
             <img src="https://placeholdit.imgix.net/~text?txt=LOGO&amp;w=180&amp;h=40"
                  alt="LOGO" />
@@ -208,10 +210,11 @@ export const KarlHeaderWhenLogged = () => {
 
         <HeaderItem>
           <button className="k-ButtonIcon k-ButtonIcon--hydrogen">
-            <svg className="k-ButtonIcon__svg" viewBox="-0.7 -0.7 18 18"
-              xmlns="http://www.w3.org/2000/svg">
+            <svg className="k-ButtonIcon__svg"
+                 viewBox="-0.7 -0.7 18 18"
+                 xmlns="http://www.w3.org/2000/svg">
               <circle cx="7" cy="7" r="7" stroke-width="1.1"
-                className="k-ButtonIcon__svg__stroke" fill="none" />
+                      className="k-ButtonIcon__svg__stroke" fill="none" />
               <path d="M13 11 L17 15 L15.5 16.5 L11.5 12.7z" />
             </svg>
           </button>
