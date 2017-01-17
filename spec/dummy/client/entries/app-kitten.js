@@ -72,7 +72,8 @@ import { KarlHeader,
          KarlLoggedHeaderUserMenu,
          KarlPhoneDropdown } from 'kitten/karl/headers/header'
 import { KarlLoanSimulator,
-         KarlLoanSimulatorWithCommission
+         KarlLoanSimulatorWithCommission,
+         KarlLoanSimulatorWithError,
        } from 'kitten/karl/organisms/loan-simulator'
 import { KarlSideGridWithRightAside,
          KarlSideGridWithLeftAsideAndSmallSize
@@ -161,6 +162,7 @@ ReactOnRails.register({
   KarlPhoneDropdown,
   KarlLoanSimulator,
   KarlLoanSimulatorWithCommission,
+  KarlLoanSimulatorWithError,
   KarlSideGridWithRightAside,
   KarlSideGridWithLeftAsideAndSmallSize,
   KarlFormActions,

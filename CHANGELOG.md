@@ -8,6 +8,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Add new `Header` React component.
 - Feature: Add new `SideGrid`, `SideGridContent` and `SideGridAside` components.
 - Feature: Add new `upcaseFirst()` string helper.
+- Feature: Add new `initialTouched` and `requiredDurationError` props
+  to `LoanSimulator`.
 
 ## [5.3.0] - 2017-01-16
 
