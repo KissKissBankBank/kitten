@@ -3,8 +3,40 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
+
 - Feature: Add new `HeartIcon` component.
 - Feature: Add new `Button` and `ButtonHeartIconWords` React components.
+- Feature: Add new `k-RadioButton` React component.
+- Feature: Add new `k-SideGrid` component.
+- Fix: Change `k-SingleColumn` width according to the media.
+
+- Feature: Add new `SideGrid`, `SideGridContent` and `SideGridAside` components.
+- Feature: Add new `upcaseFirst()` string helper.
+
+## [5.3.0] - 2017-01-16
+
+Features:
+- Add new `Checkbox` React component.
+- Add new `FormActions` React component.
+- Add new `Grid` and `GridCol` React components.
+
+Fixes:
+- At xxs, use thinner gutters.
+- Override bootstrap on blockquotes in `k-Testimony__text`
+  and `k-PressQuotes__quote__text`.
+
+## [5.2.0] - 2017-01-12
+
+Features:
+- Add `primary-6` color.
+- Introduce `k-Teaser__col--start@l` to fix ordering of columns on `k-Teaser`.
+
+Fixes:
+- Add default margins to `.k-PressQuotes__title` and
+  `.k-titleWithActions__title`.
+- Testimony row is larger on xxs.
+- Vertical align on `k-LinkBox__paragraph`.
+- Add default colors to `k-Row`.
 
 ## [5.1.0] - 2017-01-11
 

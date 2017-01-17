@@ -3,8 +3,8 @@ require('../stylesheets/app-kitten.scss');
 import ReactOnRails from 'react-on-rails';
 
 // Box
-import LinkBox from 'kitten/components/box/link-box'
 import DocLinkBox from 'kitten/components/box/doc-link-box'
+import LinkBox from 'kitten/components/box/link-box'
 
 // Buttons
 import { Button } from 'kitten/components/buttons/button'
@@ -20,13 +20,18 @@ import Dropdown from 'kitten/components/dropdowns/dropdown'
 import DropdownButton from 'kitten/components/dropdowns/dropdown-button'
 
 // Form
+import { Checkbox } from 'kitten/components/form/checkbox'
 import FormAmountAndCurrency from 'kitten/components/form/form-amount-and-currency'
 import FormPhoneNumber from 'kitten/components/form/form-phone-number'
-import Slider from 'kitten/components/form/slider'
+import { RadioButton } from 'kitten/components/form/radio-button'
+import Search from 'kitten/components/form/search'
 import Select from 'react-select'
 import SelectWithState from 'kitten/components/form/select-with-state'
-import Search from 'kitten/components/form/search'
+import Slider from 'kitten/components/form/slider'
 import Switch from 'kitten/components/form/switch'
+
+// Grid
+import { Grid, GridCol } from 'kitten/components/grid/grid'
 
 // Icons
 import GrabberIcon from 'kitten/components/icons/grabber-icon'
@@ -49,8 +54,8 @@ import TourPopover from 'kitten/components/tours/tour-popover'
 import TourStep from 'kitten/components/tours/tour-step'
 
 // Simulators
-import SimulatorResult from 'kitten/components/simulators/simulator-result'
 import LoanSimulator from 'kitten/components/simulators/loan-simulator'
+import SimulatorResult from 'kitten/components/simulators/simulator-result'
 
 // Steppers
 import { Stepper } from 'kitten/components/steppers/stepper'
@@ -69,19 +74,43 @@ import { KarlUnloggedHeaderPlatformSwitch,
 import { KarlLoanSimulator,
          KarlLoanSimulatorWithCommission
        } from 'kitten/karl/organisms/loan-simulator'
+import { KarlSideGridWithRightAside,
+         KarlSideGridWithLeftAsideAndSmallSize
+       } from 'kitten/karl/grid/side-grid'
+import { KarlFormActions } from 'kitten/karl/form/form-actions'
+import { KarlGridTwelveColumns,
+         KarlGridInGrid,
+         KarlGridSmall,
+         KarlGridWithOffset
+       } from 'kitten/karl/grid/grid'
 
 ReactOnRails.register({
+
   Button,
   ButtonHeartIconWords,
+
+  // Box
+  DocLinkBox,
+  LinkBox,
+
+  // Buttons
   ButtonImageWithTextAndBadge,
   ButtonTooltipIcon,
+
+  // Dev
+  Checkbox,
   DevGrid,
-  DocLinkBox,
+
+  // Dropdowns
   Dropdown,
   DropdownButton,
-  ExternalRichLink,
+
+  // Form
   FormAmountAndCurrency,
   FormPhoneNumber,
+  RadioButton,
+  Grid,
+  GridCol,
   GrabberIcon,
   HeaderTour,
   HeartIcon,
@@ -89,17 +118,40 @@ ReactOnRails.register({
   LoanSimulator,
   ReactTooltip,
   Slider,
+
   Search,
   Select,
   SelectWithState,
-  NavList,
-  SimulatorResult,
-  Tooltip,
-  Stepper,
+  Slider,
   Switch,
+
+  // Icons
+  GrabberIcon,
+
+  // Links
+  ExternalRichLink,
+
+  // Lists
+  NavList,
+
+  // Tooltips
+  ReactTooltip,
+  Tooltip,
+
+  // Tours
+  HeaderTour,
   Tour,
   TourPopover,
   TourStep,
+
+  // Simulators
+  LoanSimulator,
+  SimulatorResult,
+
+  // Steppers
+  Stepper,
+
+  // Karl composed components
   KarlImageExternalRichLink,
   KarlSvgExternalRichLink,
   KarlSimpleDropdown,
@@ -111,4 +163,11 @@ ReactOnRails.register({
   KarlPhoneDropdown,
   KarlLoanSimulator,
   KarlLoanSimulatorWithCommission,
+  KarlSideGridWithRightAside,
+  KarlSideGridWithLeftAsideAndSmallSize,
+  KarlFormActions,
+  KarlGridTwelveColumns,
+  KarlGridInGrid,
+  KarlGridSmall,
+  KarlGridWithOffset,
 })

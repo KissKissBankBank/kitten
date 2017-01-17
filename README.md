@@ -191,7 +191,11 @@ The documentation is accessible on development environment: `/kitten/sassdoc`.
 To launch the JS tests:
 
 ```sh
-bin/test
+$ bin/test
+
+# OR
+
+$ bin/test {PATH}/{FILE}.test.js
 ```
 
 Check out the [guidelines](../../kitten/wiki/Component-testing) to know how to test kitten.
@@ -215,15 +219,14 @@ To merge code into master:
 To release a new version:
 
 - Pull `master`
-- Update the version in `lib/kitten/version.rb`.
-- Update the version in `package.json`.
 - Update the `CHANGELOG.md` file:
   * Update the version.
   * Add a new `[unreleased]` section.
   * Check that [each merged
     PR](https://github.com/KissKissBankBank/kitten/commits/master)
     from the last release has an entry.
-
+- Update the version in `lib/kitten/version.rb`.
+- Update the version in `package.json`.
 - Run this command:
 
 ```sh
@@ -242,3 +245,12 @@ Then:
 ```
 npm publish
 ```
+
+### Github
+
+**Only for [KissKissBankBank](https://github.com/KissKissBankBank)
+collaborators**
+
+Update
+[our private project kanban](https://github.com/orgs/KissKissBankBank/projects/5):
+move cards that are released from `done` column to `released` column.
