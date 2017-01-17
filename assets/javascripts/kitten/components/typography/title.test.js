@@ -8,7 +8,6 @@ describe('Title with default props', () => {
     <Title />)
 
   it('has a default title attribute', () => {
-    expect(defaultComponent).not.to.have.attr('tag', 'h1')
     expect(defaultComponent.find('.k-Title')).to.have.length(1)
   })
 
