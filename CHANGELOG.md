@@ -5,6 +5,15 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 - Feature: Add new `Title` React component.
 
+## [5.4.0] - 2017-01-17
+
+Features:
+- Add new `RadioButton` React component.
+- Add new `Header` React component.
+- Add new `SideGrid`, `SideGridContent` and `SideGridAside` components.
+- Add new `upcaseFirst()` string helper.
+- Add new `initialTouched` and `requiredDurationError` props to `LoanSimulator`.
+
 ## [5.3.0] - 2017-01-16
 
 Features:
