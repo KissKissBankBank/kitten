@@ -3,10 +3,10 @@ import classNames from 'classnames'
 
 export class Header extends React.Component {
   render() {
-    const { className, children, isFixed, ...other } = this.props
+    const { className, children, fixed, ...other } = this.props
     const headerClassName = classNames(
       'k-Header',
-      { 'is-fixed': isFixed },
+      { 'is-fixed': fixed },
       className,
     )
 
@@ -34,7 +34,7 @@ export class HeaderItems extends React.Component {
     )
 
     return (
-      <div className={ itemsClassName } {...other } />
+      <div className={ itemsClassName } { ...other } />
     )
   }
 }
@@ -50,13 +50,13 @@ export class HeaderItem extends React.Component {
     )
 
     return (
-      <Tag className={ itemClassName } {...other } />
+      <Tag className={ itemClassName } { ...other } />
     )
   }
 }
 
 Header.defaultProps = {
-  isFixed: false,
+  fixed: false,
 }
 
 HeaderItems.defaultProps = {

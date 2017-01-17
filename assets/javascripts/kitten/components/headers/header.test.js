@@ -33,7 +33,7 @@ describe('<Header />', () => {
   })
 
   describe('with fixed version', () => {
-    const header = shallow(<Header isFixed={ true } />)
+    const header = shallow(<Header fixed={ true } />)
 
     it('has `.is-fixed` class', () => {
       expect(header).to.have.className('is-fixed')
