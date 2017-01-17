@@ -24,11 +24,11 @@ export const KarlHeader = () => {
         </HeaderItem>
 
         <HeaderItem tag="p" fixedSize="true">
-          <HeaderLogo className={ classNames('k-Header__logo--lightOnM',
-                                             'k-Header__logo--lightOnXxs') }
-                      href="header"
-                      imgSrc="https://placeholdit.imgix.net/~text?txt=LOGO&amp;w=180&amp;h=40"
-                      imgAlt="LOGO" />
+          <HeaderLogo href="header"
+                      src="https://placeholdit.imgix.net/~text?txt=LOGO&amp;w=180&amp;h=40"
+                      alt="LOGO"
+                      lightOnM={ true }
+                      lightOnXxs={ true } />
         </HeaderItem>
 
         <HeaderItem tag="nav" className="k-Header__nav">
@@ -97,11 +97,11 @@ export const KarlHeaderWithSearchInput = () => {
         </HeaderItem>
 
         <HeaderItem tag="p" fixedSize="true">
-          <HeaderLogo className={ classNames('k-Header__logo--lightOnM',
-                                             'k-Header__logo--lightOnXxs') }
-                      href="header"
-                      imgSrc="https://placeholdit.imgix.net/~text?txt=LOGO&amp;w=180&amp;h=40"
-                      imgAlt="LOGO" />
+          <HeaderLogo href="header"
+                      src="https://placeholdit.imgix.net/~text?txt=LOGO&amp;w=180&amp;h=40"
+                      alt="LOGO"
+                      lightOnM={ true }
+                      lightOnXxs={ true } />
         </HeaderItem>
 
         <HeaderItem tag="nav" className="k-Header__nav">
@@ -166,11 +166,11 @@ export const KarlHeaderWhenLogged = () => {
         </HeaderItem>
 
         <HeaderItem tag="p" fixedSize="true">
-          <HeaderLogo className={ classNames('k-Header__logo--lightOnM',
-                                             'k-Header__logo--lightOnXxs') }
-                      href="header"
-                      imgSrc="https://placeholdit.imgix.net/~text?txt=LOGO&amp;w=180&amp;h=40"
-                      imgAlt="LOGO" />
+          <HeaderLogo href="header"
+                      src="https://placeholdit.imgix.net/~text?txt=LOGO&amp;w=180&amp;h=40"
+                      alt="LOGO"
+                      lightOnM={ true }
+                      lightOnXxs={ true } />
         </HeaderItem>
 
         <HeaderItem tag="nav" className="k-Header__nav">
