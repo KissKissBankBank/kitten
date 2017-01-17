@@ -9,7 +9,6 @@ export class Button extends React.Component {
 
   renderRightIcon() {
     if (this.props.iconOnRight) { return this.props.children }
-    return null
   }
 
   render() {
@@ -20,8 +19,7 @@ export class Button extends React.Component {
             name,
             size,
             iconOnRight,
-            ...others }
-    = this.props
+            ...others } = this.props
 
     let buttonClassNames = classNames(
       'k-Button',

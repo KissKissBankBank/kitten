@@ -90,14 +90,13 @@ import { KarlGridTwelveColumns,
 
 ReactOnRails.register({
 
-  Button,
-  ButtonHeartIconWords,
-
   // Box
   DocLinkBox,
   LinkBox,
 
   // Buttons
+  Button,
+  ButtonHeartIconWords,
   ButtonImageWithTextAndBadge,
   ButtonTooltipIcon,
 
@@ -117,7 +116,6 @@ ReactOnRails.register({
   GridCol,
   GrabberIcon,
   HeaderTour,
-  HeartIcon,
   LinkBox,
   LoanSimulator,
   ReactTooltip,
@@ -131,6 +129,7 @@ ReactOnRails.register({
 
   // Icons
   GrabberIcon,
+  HeartIcon,
 
   // Links
   ExternalRichLink,

@@ -74,7 +74,6 @@ Fixes:
 - Fix Warning on default commissionRules prop type for LoanSimulator.
 - Disable React on Rails console traces in dev style guide.
 - Use new files architecture for stylesheets:
-
   * Remove `atoms`, `molecules` and `organisms` directories.
   * Use `components` directory instead to match javascripts files architecture.
 
