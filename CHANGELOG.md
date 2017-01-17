@@ -6,12 +6,15 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Add new `HeartIcon` component.
 - Feature: Add new `Button` and `ButtonHeartIconWords` React components.
-- Feature: Add new `k-RadioButton` React component.
-- Feature: Add new `k-SideGrid` component.
-- Fix: Change `k-SingleColumn` width according to the media.
 
-- Feature: Add new `SideGrid`, `SideGridContent` and `SideGridAside` components.
-- Feature: Add new `upcaseFirst()` string helper.
+## [5.4.0] - 2017-01-17
+
+Features:
+- Add new `RadioButton` React component.
+- Add new `Header` React component.
+- Add new `SideGrid`, `SideGridContent` and `SideGridAside` components.
+- Add new `upcaseFirst()` string helper.
+- Add new `initialTouched` and `requiredDurationError` props to `LoanSimulator`.
 
 ## [5.3.0] - 2017-01-16
 
