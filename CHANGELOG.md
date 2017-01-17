@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add new `RadioButton` React component.
+- Feature: Add new `Header` React component.
 - Feature: Add new `SideGrid`, `SideGridContent` and `SideGridAside` components.
 - Feature: Add new `upcaseFirst()` string helper.
 - Feature: Add new `initialTouched` and `requiredDurationError` props
