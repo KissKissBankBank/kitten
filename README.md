@@ -141,7 +141,7 @@ $ cd spec/dummy
 $ foreman start
 ```
 
-Then visit http://localhost:3000
+Then visit http://localhost:3003
 
 To share the dummy app with production settings (to share via ngrok for
 example), you can compile the assets and serve a production server:
