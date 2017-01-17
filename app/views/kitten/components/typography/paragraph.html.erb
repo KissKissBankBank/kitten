@@ -1,35 +1,19 @@
 <%= example "Paragraph 1" do %>
-  <%= react_component('Paragraph') %>
+  <%= react_component('KarlParagraph') %>
 <% end %>
 
 <%= example "Paragraph 2" do %>
-  <%= react_component('Paragraph', props: {
-    type: "secondary",
-    children: 'Praesent vel congue quam, in malesuada magna. Nullam vel molestie leo. Aenean tempor id arcu vitae cursus. Pellentesque eu mauris sit amet mi euismod pulvinar. Pellentesque sed congue libero. Vivamus in libero.'
-    }
-  ) %>
+  <%= react_component('KarlParagraphSecondary') %>
 <% end %>
 
 <%= example "Paragraph 3" do %>
-  <%= react_component('Paragraph', props: {
-      type: 'tertiary',
-      children: 'Sed eu ex pulvinar, sollicitudin est quis, euismod metus. Maecenas feugiat, neque eu consequat laoreet, velit elit pretium est, at lacinia libero tellus ac lectus. Donec rhoncus erat orci, porta volutpat lectus accumsan',
-  }) %>
+  <%= react_component('KarlParagraphTertiary') %>
 <% end %>
 
 <%= example "Paragraph 4" do %>
-  <%= react_component('Paragraph', props: {
-      type: 'quaternary',
-      children: 'Morbi eu ultricies lectus, eu fermentum leo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin at semper felis, vel sollicitudin sapien. Donec imperdiet dolor dolor, euismod molestie ex sollicitudin vel.',
-  }) %>
+  <%= react_component('KarlParagraphQuaternary') %>
 <% end %>
 
 <%= example "Paragraph with link" do %>
-  <%= react_component('Paragraph', props: {
-      type: 'quaternary',
-      children: 'Morbi eu ultricies lectus, eu fermentum leo. Interdum et malesuada fames ac ante ipsum primis in.',
-      link: 'link',
-      # isExternal: true,
-      # href: '#',
-  }) %>
+  <%= react_component('KarlParagraphWithLink') %>
 <% end %>

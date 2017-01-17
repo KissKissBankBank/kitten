@@ -83,6 +83,13 @@ import { KarlGridTwelveColumns,
          KarlGridSmall,
          KarlGridWithOffset
        } from 'kitten/karl/grid/grid'
+import { KarlParagraph,
+         KarlParagraphSecondary,
+         KarlParagraphTertiary,
+         KarlParagraphQuaternary,
+         KarlParagraphWithLink,
+       } from 'kitten/karl/typography/paragraph'
+
 
 ReactOnRails.register({
   // Box
@@ -168,4 +175,9 @@ ReactOnRails.register({
   KarlGridInGrid,
   KarlGridSmall,
   KarlGridWithOffset,
+  KarlParagraph,
+  KarlParagraphSecondary,
+  KarlParagraphTertiary,
+  KarlParagraphQuaternary,
+  KarlParagraphWithLink,
 })
