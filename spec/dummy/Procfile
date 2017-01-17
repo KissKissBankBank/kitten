@@ -1,7 +1,7 @@
 # Procfile for development with hot reloading of JavaScript and CSS
 
 # Server
-rails: REACT_ON_RAILS_ENV=HOT rails s -p 3000 -b 0.0.0.0
+rails: REACT_ON_RAILS_ENV=HOT rails s -p 3003 -b 0.0.0.0
 
 # Run the hot reload server for client development
 hot-assets: npm run hot-assets
