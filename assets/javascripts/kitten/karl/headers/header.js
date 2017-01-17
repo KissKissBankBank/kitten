@@ -12,6 +12,7 @@ import Search from 'kitten/components/form/search'
 import { Header,
          HeaderItems,
          HeaderItem } from 'kitten/components/headers/header'
+import { HeaderTitles } from 'kitten/components/headers/header-titles'
 
 export const KarlHeader = () => {
   return (
@@ -135,7 +136,7 @@ export const KarlHeaderWithSearchInput = () => {
 
       </HeaderItems>
 
-      <HeaderItems>
+      <HeaderItems fixedSize="true">
 
         <HeaderItem className="k-Header__search">
           <Search inputId='q'
@@ -222,6 +223,41 @@ export const KarlHeaderWhenLogged = () => {
 
         <HeaderItem id="k-UserMenuDropdownLogged">
           <KarlLoggedHeaderUserMenu />
+        </HeaderItem>
+
+      </HeaderItems>
+    </Header>
+  )
+}
+
+export const KarlHeaderWithTitles = () => {
+  return (
+    <Header id="header-with-titles">
+      <HeaderItems>
+
+        <HeaderItem tag="p" fixedSize="true">
+          <a className={ classNames('k-Header__logo',
+                                    'k-Header__logo--lightOnM',
+                                    'k-Header__logo--lightOnXxs') }
+             href="header">
+            <img src="https://placeholdit.imgix.net/~text?txt=LOGO&amp;w=180&amp;h=40"
+                 alt="LOGO" />
+          </a>
+        </HeaderItem>
+
+        <HeaderTitles title="Title" subtitle="Lorem ipsum…" />
+
+      </HeaderItems>
+
+      <HeaderItems fixedSize="true">
+
+        <HeaderItem className="k-Header__signup">
+          <a href="#"
+             className={ classNames('k-Button',
+                                    'k-Button--hydrogen',
+                                    'k-Header__button') }>
+            S'identifier
+          </a>
         </HeaderItem>
 
       </HeaderItems>
