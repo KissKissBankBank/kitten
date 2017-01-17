@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add new `HeaderTitles` component.
 - Feature: Add new `RadioButton` React component.
 - Feature: Add new `Header` React component.
 - Feature: Add new `SideGrid`, `SideGridContent` and `SideGridAside` components.
