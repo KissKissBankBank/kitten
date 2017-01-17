@@ -12,6 +12,7 @@ import Search from 'kitten/components/form/search'
 import { Header,
          HeaderItems,
          HeaderItem } from 'kitten/components/headers/header'
+import { HeaderLogo } from 'kitten/components/headers/header-logo'
 
 export const KarlHeader = () => {
   return (
@@ -23,13 +24,11 @@ export const KarlHeader = () => {
         </HeaderItem>
 
         <HeaderItem tag="p" fixedSize="true">
-          <a className={ classNames('k-Header__logo',
-                                    'k-Header__logo--lightOnM',
-                                    'k-Header__logo--lightOnXxs') }
-             href="header">
-            <img src="https://placeholdit.imgix.net/~text?txt=LOGO&amp;w=180&amp;h=40"
-                 alt="LOGO" />
-          </a>
+          <HeaderLogo className={ classNames('k-Header__logo--lightOnM',
+                                             'k-Header__logo--lightOnXxs') }
+                      href="header"
+                      imgSrc="https://placeholdit.imgix.net/~text?txt=LOGO&amp;w=180&amp;h=40"
+                      imgAlt="LOGO" />
         </HeaderItem>
 
         <HeaderItem tag="nav" className="k-Header__nav">
@@ -98,13 +97,11 @@ export const KarlHeaderWithSearchInput = () => {
         </HeaderItem>
 
         <HeaderItem tag="p" fixedSize="true">
-          <a className={ classNames('k-Header__logo',
-                                    'k-Header__logo--lightOnM',
-                                    'k-Header__logo--lightOnXxs') }
-             href="header">
-            <img src="https://placeholdit.imgix.net/~text?txt=LOGO&amp;w=180&amp;h=40"
-                 alt="LOGO" />
-          </a>
+          <HeaderLogo className={ classNames('k-Header__logo--lightOnM',
+                                             'k-Header__logo--lightOnXxs') }
+                      href="header"
+                      imgSrc="https://placeholdit.imgix.net/~text?txt=LOGO&amp;w=180&amp;h=40"
+                      imgAlt="LOGO" />
         </HeaderItem>
 
         <HeaderItem tag="nav" className="k-Header__nav">
@@ -169,13 +166,11 @@ export const KarlHeaderWhenLogged = () => {
         </HeaderItem>
 
         <HeaderItem tag="p" fixedSize="true">
-          <a className={ classNames('k-Header__logo',
-                                    'k-Header__logo--lightOnM',
-                                    'k-Header__logo--lightOnXxs') }
-             href="header">
-            <img src="https://placeholdit.imgix.net/~text?txt=LOGO&amp;w=180&amp;h=40"
-                 alt="LOGO" />
-          </a>
+          <HeaderLogo className={ classNames('k-Header__logo--lightOnM',
+                                             'k-Header__logo--lightOnXxs') }
+                      href="header"
+                      imgSrc="https://placeholdit.imgix.net/~text?txt=LOGO&amp;w=180&amp;h=40"
+                      imgAlt="LOGO" />
         </HeaderItem>
 
         <HeaderItem tag="nav" className="k-Header__nav">
