@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add new `HeaderLogo` React component.
+
 ## [5.4.0] - 2017-01-17
 
 Features:
