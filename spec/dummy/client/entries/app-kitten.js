@@ -40,6 +40,13 @@ import ExternalRichLink from 'kitten/components/links/external-rich-link'
 // Lists
 import NavList from 'kitten/components/lists/nav-list'
 
+// Simulators
+import LoanSimulator from 'kitten/components/simulators/loan-simulator'
+import SimulatorResult from 'kitten/components/simulators/simulator-result'
+
+// Steppers
+import { Stepper } from 'kitten/components/steppers/stepper'
+
 // Tooltips
 import ReactTooltip from 'react-tooltip'
 import Tooltip from 'kitten/components/tooltips/tooltip'
@@ -50,12 +57,8 @@ import Tour from 'kitten/components/tours/tour'
 import TourPopover from 'kitten/components/tours/tour-popover'
 import TourStep from 'kitten/components/tours/tour-step'
 
-// Simulators
-import LoanSimulator from 'kitten/components/simulators/loan-simulator'
-import SimulatorResult from 'kitten/components/simulators/simulator-result'
-
-// Steppers
-import { Stepper } from 'kitten/components/steppers/stepper'
+// Typography
+import { Paragraph } from 'kitten/components/typography/paragraph'
 
 // Karl composed components
 
@@ -142,6 +145,9 @@ ReactOnRails.register({
 
   // Steppers
   Stepper,
+
+  // Typography
+  Paragraph,
 
   // Karl composed components
   KarlImageExternalRichLink,
