@@ -17,10 +17,8 @@ export class HeaderTitles extends React.Component {
 
     return (
       <HeaderItem className="k-Header__titles" { ...other }>
-        <div>
-          <p className="k-Header__title">{ title }</p>
-          { this.renderSubtitle() }
-        </div>
+        <p className="k-Header__title">{ title }</p>
+        { this.renderSubtitle() }
       </HeaderItem>
     )
   }
