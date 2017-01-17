@@ -26,7 +26,7 @@ export class Header extends React.Component {
 
 export class HeaderItems extends React.Component {
   render() {
-    const { className, children, fixedSize, ...other } = this.props
+    const { className, fixedSize, ...other } = this.props
     const itemsClassName = classNames(
       'k-Header__items',
       { 'k-Header__items--fixedSize': fixedSize },
@@ -34,16 +34,14 @@ export class HeaderItems extends React.Component {
     )
 
     return (
-      <div className={ itemsClassName } {...other }>
-        { children }
-      </div>
+      <div className={ itemsClassName } {...other } />
     )
   }
 }
 
 export class HeaderItem extends React.Component {
   render() {
-    const { className, children, fixedSize, ...other } = this.props
+    const { className, fixedSize, ...other } = this.props
     const Tag = this.props.tag
     const itemClassName = classNames(
       'k-Header__item',
@@ -52,9 +50,7 @@ export class HeaderItem extends React.Component {
     )
 
     return (
-      <Tag className={ itemClassName } {...other }>
-        { children }
-      </Tag>
+      <Tag className={ itemClassName } {...other } />
     )
   }
 }
