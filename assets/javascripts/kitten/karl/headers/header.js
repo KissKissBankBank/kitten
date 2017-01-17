@@ -76,9 +76,9 @@ export const KarlHeader = () => {
 
         <HeaderItem className="k-Header__signup">
           <a href="#"
-             className="k-Button
-                        k-Button--hydrogen
-                        k-Header__button">
+             className={ classNames('k-Button',
+                                    'k-Button--hydrogen',
+                                    'k-Header__button') }>
             S'identifier
           </a>
         </HeaderItem>
