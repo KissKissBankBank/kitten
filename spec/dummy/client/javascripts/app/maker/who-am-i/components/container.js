@@ -12,6 +12,9 @@ import { HeaderLogo } from 'kitten/components/headers/header-logo'
 import { RadioButton } from 'kitten/components/form/radio-button'
 import { Checkbox } from 'kitten/components/form/checkbox'
 import { FormActions } from 'kitten/components/form/form-actions'
+import { Button } from 'kitten/components/buttons/button'
+import { Title } from 'kitten/components/typography/title'
+import { Paragraph } from 'kitten/components/typography/paragraph'
 import DocLinkBox from 'kitten/components/box/doc-link-box'
 
 export class MakerWhoAmIStep extends React.Component {
@@ -36,11 +39,10 @@ export class MakerWhoAmIStep extends React.Component {
       return (
         <RadioButton className="k-u-margin-bottom-triple"
                      id={ item.id }
+                     key={ item.id }
                      name={ name }
                      text={ item.text }>
-          <p className="k-Paragraph k-Paragraph--quaternary">
-            { item.content }
-          </p>
+          <Paragraph modifier="quaternary">{ item.content }</Paragraph>
         </RadioButton>
       )
     })
@@ -51,7 +53,9 @@ export class MakerWhoAmIStep extends React.Component {
 
     return items.map(item => {
       return (
-        <Checkbox id={ item.id } text={ item.text } />
+        <Checkbox id={ item.id }
+                  key={ item.id }
+                  text={ item.text } />
       )
     })
   }
@@ -61,7 +65,7 @@ export class MakerWhoAmIStep extends React.Component {
 
     return (
       <div>
-        <MakerHeader project={ project } { ...header } />
+        <MakerHeader { ...header } />
 
         { this.renderStepper() }
 
@@ -70,25 +74,24 @@ export class MakerWhoAmIStep extends React.Component {
           <SideGridContent>
             <Grid>
               <GridCol col-s="10" offset-s="1" col-l="8">
-                <p className="k-Title k-Title--secondary">
-                  { form.title }
-                </p>
+                <Title modifier="secondary">{ form.title }</Title>
 
                 { this.renderRadioButtons() }
                 { this.renderCheckboxes() }
 
                 <FormActions className="k-u-margin-top-quadruple
                                         k-u-margin-bottom-quadruple">
-                  <a href={ form.actions.return.href }
-                     className="k-Button
-                                k-Button--hydrogen">
+                  <Button tag="a"
+                          modifier="hydrogen"
+                          href={ form.actions.return.href }>
                     { form.actions.return.text }
-                  </a>
+                  </Button>
 
-                  <input type="submit"
-                         value={ form.actions.submit.text }
-                         className="k-Button
-                                    k-Button--helium" />
+                  <Button tag="input"
+                          type="submit"
+                          value={ form.actions.submit.text }
+                          className="k-Button
+                                     k-Button--helium" />
                 </FormActions>
               </GridCol>
             </Grid>
@@ -138,10 +141,11 @@ class MakerHeader extends React.Component {
 
         <HeaderItems fixedSize={ true }>
           <HeaderItem>
-            <a href={ this.props.button.href }
-               className="k-Button k-Button--lithium">
+            <Button tag="a"
+                    modifier="lithium"
+                    href={ this.props.button.href }>
               { this.props.button.text }
-            </a>
+            </Button>
           </HeaderItem>
         </HeaderItems>
       </Header>
