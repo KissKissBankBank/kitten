@@ -1,19 +1,35 @@
 <%= example "Title : primary" do %>
-  <h1 class="k-Title k-Title--primary">Felis silvestris catus</h1>
+  <%= react_component('Title') %>
 <% end %>
 
 <%= example "Title : secondary" do %>
-  <h2 class="k-Title k-Title--secondary">Felis silvestris catus</h2>
+  <%= react_component('Title', props: {
+    modifier: "secondary",
+    tag: "h2",
+    children: "Felis…",
+  }) %>
 <% end %>
 
 <%= example "Title : tertiary" do %>
-  <h3 class="k-Title k-Title--tertiary">Felis silvestris catus</h3>
+  <%= react_component('Title', props: {
+    modifier: "tertiary",
+    tag: "h3",
+    children: "Felis…",
+  }) %>
 <% end %>
 
 <%= example "Title : quaternary" do %>
-  <h4 class="k-Title k-Title--quaternary">Felis silvestris catus</h4>
+  <%= react_component('Title', props: {
+    modifier: "quaternary",
+    tag: "h4",
+    children: "Felis…",
+  }) %>
 <% end %>
 
-<%= example "Title quinary" do %>
-  <h5 class="k-Title k-Title--quinary">Felis silvestris catus</h5>
+<%= example "Title : quinary" do %>
+  <%= react_component('Title', props: {
+    modifier: "quinary",
+    tag: "h5",
+    children: "Felis…",
+  }) %>
 <% end %>

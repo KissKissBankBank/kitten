@@ -52,6 +52,9 @@ import Tour from 'kitten/components/tours/tour'
 import TourPopover from 'kitten/components/tours/tour-popover'
 import TourStep from 'kitten/components/tours/tour-step'
 
+// Typography
+import { Title } from 'kitten/components/typography/title'
+
 // Simulators
 import LoanSimulator from 'kitten/components/simulators/loan-simulator'
 import SimulatorResult from 'kitten/components/simulators/simulator-result'
@@ -120,7 +123,6 @@ ReactOnRails.register({
   LoanSimulator,
   ReactTooltip,
   Slider,
-
   Search,
   Select,
   SelectWithState,
@@ -137,6 +139,13 @@ ReactOnRails.register({
   // Lists
   NavList,
 
+  // Simulators
+  LoanSimulator,
+  SimulatorResult,
+
+  // Steppers
+  Stepper,
+
   // Tooltips
   ReactTooltip,
   Tooltip,
@@ -147,12 +156,8 @@ ReactOnRails.register({
   TourPopover,
   TourStep,
 
-  // Simulators
-  LoanSimulator,
-  SimulatorResult,
-
-  // Steppers
-  Stepper,
+  // Typography
+  Title,
 
   // Karl composed components
   KarlButtonIconHeartRight,
