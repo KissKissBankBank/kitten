@@ -7,6 +7,7 @@ import DocLinkBox from 'kitten/components/box/doc-link-box'
 import LinkBox from 'kitten/components/box/link-box'
 
 // Buttons
+import { Button } from 'kitten/components/buttons/button'
 import ButtonImageWithTextAndBadge from 'kitten/components/buttons/button-image-with-text-and-badge'
 import ButtonTooltipIcon from 'kitten/components/buttons/button-tooltip-icon'
 
@@ -33,6 +34,7 @@ import { Grid, GridCol } from 'kitten/components/grid/grid'
 
 // Icons
 import GrabberIcon from 'kitten/components/icons/grabber-icon'
+import { HeartIcon } from 'kitten/components/icons/heart-icon'
 
 // Links
 import ExternalRichLink from 'kitten/components/links/external-rich-link'
@@ -84,6 +86,9 @@ import { KarlGridTwelveColumns,
          KarlGridSmall,
          KarlGridWithOffset
        } from 'kitten/karl/grid/grid'
+import { KarlButtonIconHeartRight,
+         KarlButtonIconHeartLeft
+       } from 'kitten/karl/buttons/button-heart-icon-words'
 
 ReactOnRails.register({
   // Box
@@ -91,6 +96,7 @@ ReactOnRails.register({
   LinkBox,
 
   // Buttons
+  Button,
   ButtonImageWithTextAndBadge,
   ButtonTooltipIcon,
 
@@ -123,6 +129,7 @@ ReactOnRails.register({
 
   // Icons
   GrabberIcon,
+  HeartIcon,
 
   // Links
   ExternalRichLink,
@@ -148,6 +155,8 @@ ReactOnRails.register({
   Stepper,
 
   // Karl composed components
+  KarlButtonIconHeartRight,
+  KarlButtonIconHeartLeft,
   KarlImageExternalRichLink,
   KarlSvgExternalRichLink,
   KarlSimpleDropdown,
