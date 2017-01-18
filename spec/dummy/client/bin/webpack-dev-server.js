@@ -17,7 +17,7 @@ import WebpackDevServer from 'webpack-dev-server';
 // Import development webpack config.
 import webpackConfig from './../webpack.client.dev.babel.js';
 
-const devServerPort = process.env.HOT_RAILS_PORT || 3500;
+const devServerPort = process.env.HOT_RAILS_PORT || 3503;
 const compiler = webpack(webpackConfig);
 const devServer = new WebpackDevServer(compiler, {
   publicPath: webpackConfig.output.publicPath,

@@ -13,6 +13,7 @@ import { Header,
          HeaderItems,
          HeaderItem } from 'kitten/components/headers/header'
 import { HeaderTitles } from 'kitten/components/headers/header-titles'
+import { HeaderLogo } from 'kitten/components/headers/header-logo'
 
 export const KarlHeader = () => {
   return (
@@ -24,13 +25,11 @@ export const KarlHeader = () => {
         </HeaderItem>
 
         <HeaderItem tag="p" fixedSize="true">
-          <a className={ classNames('k-Header__logo',
-                                    'k-Header__logo--lightOnM',
-                                    'k-Header__logo--lightOnXxs') }
-             href="header">
-            <img src="https://placeholdit.imgix.net/~text?txt=LOGO&amp;w=180&amp;h=40"
-                 alt="LOGO" />
-          </a>
+          <HeaderLogo href="header"
+                      src="https://placeholdit.imgix.net/~text?txt=LOGO&amp;w=180&amp;h=40"
+                      alt="LOGO"
+                      lightOnM={ true }
+                      lightOnXxs={ true } />
         </HeaderItem>
 
         <HeaderItem tag="nav" className="k-Header__nav">
@@ -99,13 +98,11 @@ export const KarlHeaderWithSearchInput = () => {
         </HeaderItem>
 
         <HeaderItem tag="p" fixedSize="true">
-          <a className={ classNames('k-Header__logo',
-                                    'k-Header__logo--lightOnM',
-                                    'k-Header__logo--lightOnXxs') }
-             href="header">
-            <img src="https://placeholdit.imgix.net/~text?txt=LOGO&amp;w=180&amp;h=40"
-                 alt="LOGO" />
-          </a>
+          <HeaderLogo href="header"
+                      src="https://placeholdit.imgix.net/~text?txt=LOGO&amp;w=180&amp;h=40"
+                      alt="LOGO"
+                      lightOnM={ true }
+                      lightOnXxs={ true } />
         </HeaderItem>
 
         <HeaderItem tag="nav" className="k-Header__nav">
@@ -170,13 +167,11 @@ export const KarlHeaderWhenLogged = () => {
         </HeaderItem>
 
         <HeaderItem tag="p" fixedSize="true">
-          <a className={ classNames('k-Header__logo',
-                                    'k-Header__logo--lightOnM',
-                                    'k-Header__logo--lightOnXxs') }
-             href="header">
-            <img src="https://placeholdit.imgix.net/~text?txt=LOGO&amp;w=180&amp;h=40"
-                 alt="LOGO" />
-          </a>
+          <HeaderLogo href="header"
+                      src="https://placeholdit.imgix.net/~text?txt=LOGO&amp;w=180&amp;h=40"
+                      alt="LOGO"
+                      lightOnM={ true }
+                      lightOnXxs={ true } />
         </HeaderItem>
 
         <HeaderItem tag="nav" className="k-Header__nav">
