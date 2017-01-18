@@ -31,10 +31,10 @@ describe('Title with default props', () => {
       expect(component).to.have.text('Felis…')
     })
 
-    describe('type', () => {
+    describe('modifier', () => {
       it('accepts secondary', () => {
         const component = shallow(
-          <Title type="secondary" />
+          <Title modifier="secondary" />
         )
         expect(component).to.have.className('k-Title--secondary')
       })
