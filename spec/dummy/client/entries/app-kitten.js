@@ -91,7 +91,6 @@ import { KarlButtonIconHeartRight,
        } from 'kitten/karl/buttons/button-heart-icon-words'
 
 ReactOnRails.register({
-
   // Box
   DocLinkBox,
   LinkBox,
