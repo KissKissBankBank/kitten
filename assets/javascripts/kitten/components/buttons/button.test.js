@@ -8,12 +8,11 @@ describe('Button with default props', () => {
     <Button />)
 
   it('has a default button attributes', () => {
-    expect(defaultComponent).not.to.have.attr('tag', 'button')
     expect(defaultComponent.find('.k-Button')).to.have.length(1)
   })
 
-  it('has a default name', () => {
-    expect(defaultComponent).attr('name')
+  it('has a default tag', () => {
+    expect(defaultComponent).to.have.tagName('button')
   })
 
   it('has an iconRight svg', () => {
@@ -22,8 +21,7 @@ describe('Button with default props', () => {
 
   describe('<Button />', () => {
     const component = shallow(
-      <Button className="k-Button"
-              text="Button" />
+      <Button className="k-Button" Button />
     )
 
     it('renders a <Button class="k-Button" />', () => {
@@ -32,9 +30,9 @@ describe('Button with default props', () => {
       expect(component).to.have.className('k-Button--hydrogen')
     })
 
-    describe('name', () => {
+    describe('modifier', () => {
       it('accepts helium', () => {
-        const component = shallow(<Button name="helium" />)
+        const component = shallow(<Button modifier="helium" />)
         expect(component).to.have.className('k-Button--helium')
       })
     })

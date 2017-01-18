@@ -4,8 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add new `HeartIcon` component.
-- Feature: Add new `Button` and `ButtonHeartIconWords` React components.
+- Feature: Add new `HeartIcon` React component.
+- Feature: Add new `Button` React component.
 - Fix: Change default port in development from 3000 to 3003. You should now
   see the style guide on http://localhost:3003 instead.
 

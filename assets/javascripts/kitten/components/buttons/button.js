@@ -2,21 +2,11 @@ import React from 'react'
 import classNames from 'classnames'
 
 export class Button extends React.Component {
-  renderLeftIcon() {
-    if (this.props.iconOnRight) { return null }
-    return this.props.children
-  }
-
-  renderRightIcon() {
-    if (this.props.iconOnRight) { return this.props.children }
-  }
-
   render() {
     const { className,
-            text,
             children,
             tag,
-            name,
+            modifier,
             size,
             iconOnRight,
             ...others } = this.props
@@ -25,7 +15,7 @@ export class Button extends React.Component {
       'k-Button',
       className,
       {
-        [`k-Button--${name}`]: name,
+        [`k-Button--${modifier}`]: modifier,
         [`k-Button--${size}`]: size,
         'k-Button--iconRight': iconOnRight,
       },
@@ -34,10 +24,8 @@ export class Button extends React.Component {
     const Tag = tag
 
     return (
-      <Tag className={ buttonClassNames } name={ name } { ...others }>
-        { this.renderLeftIcon() }
-        { text }
-        { this.renderRightIcon() }
+      <Tag className={ buttonClassNames } { ...others }>
+        { children }
       </Tag>
     )
   }
@@ -45,8 +33,7 @@ export class Button extends React.Component {
 
 Button.defaultProps = {
   tag: 'button',
-  name: 'hydrogen',
-  text: 'Button',
+  modifier: 'hydrogen',
+  children: 'Button',
   iconOnRight: false,
-  children: null,
 }

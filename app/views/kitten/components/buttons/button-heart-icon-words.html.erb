@@ -1,39 +1,39 @@
 <div class="karl-Example__column">
   <%= example "Hydrogen button with icon and words" do %>
-    <%= react_component('ButtonHeartIconWords') %>
+    <%= react_component('KarlButtonIconHeartLeft') %>
   <% end %>
 
   <%= example "Helium button with icon and words" do %>
-    <%= react_component('ButtonHeartIconWords', props: {
-        name: 'helium',
+    <%= react_component('KarlButtonIconHeartLeft', props: {
+        modifier: 'helium',
       }
     ) %>
   <% end %>
 
   <%= example "Lithium button with icon and words" do %>
-    <%= react_component('ButtonHeartIconWords', props: {
-        name: 'lithium',
+    <%= react_component('KarlButtonIconHeartLeft', props: {
+        modifier: 'lithium',
       }
     ) %>
   <% end %>
 
   <%= example "Beryllium button with icon and words" do %>
-    <%= react_component('ButtonHeartIconWords', props: {
-        name: 'beryllium',
+    <%= react_component('KarlButtonIconHeartLeft', props: {
+        modifier: 'beryllium',
       }
     ) %>
   <% end %>
 
   <%= example "Boron button with icon and words" do %>
-    <%= react_component('ButtonHeartIconWords', props: {
-        name: 'boron',
+    <%= react_component('KarlButtonIconHeartLeft', props: {
+        modifier: 'boron',
       }
     ) %>
   <% end %>
 
   <%= example "Carbon button with icon and words" do %>
-    <%= react_component('ButtonHeartIconWords', props: {
-        name: 'carbon',
+    <%= react_component('KarlButtonIconHeartLeft', props: {
+        modifier: 'carbon',
       }
     ) %>
   <% end %>
@@ -41,7 +41,7 @@
 
 <div class="karl-Example__column">
   <%= example "Disabled button with icon and words" do %>
-    <%= react_component('ButtonHeartIconWords', props: {
+    <%= react_component('KarlButtonIconHeartLeft', props: {
         disabled: true,
       }
     ) %>
@@ -50,24 +50,22 @@
 
 <div class="karl-Example__column">
   <%= example "Tiny button with icon and words" do %>
-    <%= react_component('ButtonHeartIconWords', props: {
+    <%= react_component('KarlButtonIconHeartLeft', props: {
         size: 'tiny',
-        text: 'btn',
       }
     ) %>
   <% end %>
 
   <%= example "Tiny button with icon and words" do %>
-    <%= react_component('ButtonHeartIconWords', props: {
+    <%= react_component('KarlButtonIconHeartRight', props: {
         size: 'tiny',
-        text: 'btn',
         iconOnRight: true,
       }
     ) %>
   <% end %>
 
   <%= example "Big button with icon and words" do %>
-    <%= react_component('ButtonHeartIconWords', props: {
+    <%= react_component('KarlButtonIconHeartLeft', props: {
         size: 'big',
       }
     ) %>
