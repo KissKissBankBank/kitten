@@ -25,14 +25,14 @@ describe('Paragraph with default props', () => {
       <Paragraph className='k-Paragraph--custom'>Loren ipsum…</Paragraph>
     )
 
-    it('renders a <Paragraph class="k-Paragraph" />', () => {
+    it('renders a <p class="k-Paragraph" />', () => {
       expect(component).to.have.tagName('p')
       expect(component).to.have.className('k-Paragraph--custom')
       expect(component).to.have.className('k-Paragraph--primary')
       expect(component).to.have.text('Loren ipsum…')
     })
 
-    describe('type', () => {
+    describe('modifier', () => {
       it('accepts secondary', () => {
         const component = shallow(
           <Paragraph title="k-Paragraph--secondary" />

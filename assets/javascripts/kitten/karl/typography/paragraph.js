@@ -11,7 +11,7 @@ export const KarlParagraph = () => {
 
 export const KarlParagraphSecondary = () => {
   return (
-    <Paragraph type="secondary">
+    <Paragraph modifier="secondary">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non.
     </Paragraph>
   )
@@ -19,7 +19,7 @@ export const KarlParagraphSecondary = () => {
 
 export const KarlParagraphTertiary = () => {
   return (
-    <Paragraph type="tertiary">
+    <Paragraph modifier="tertiary">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non.
     </Paragraph>
   )
@@ -27,7 +27,7 @@ export const KarlParagraphTertiary = () => {
 
 export const KarlParagraphQuaternary = () => {
   return (
-    <Paragraph type="quaternary">
+    <Paragraph modifier="quaternary">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non.
     </Paragraph>
   )
@@ -35,7 +35,7 @@ export const KarlParagraphQuaternary = () => {
 
 export const KarlParagraphWithLink = () => {
   return (
-    <Paragraph type="quaternary">
+    <Paragraph modifier="quaternary">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud <a href="#" className="k-Paragraph__link">exercitation ullamco laboris nisi ut aliquip</a> ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non.
     </Paragraph>
   )

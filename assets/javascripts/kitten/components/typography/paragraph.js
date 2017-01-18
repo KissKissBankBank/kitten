@@ -3,12 +3,12 @@ import classNames from 'classnames'
 
 export class Paragraph extends React.Component {
   render() {
-    const { className, tag, type, ...other } = this.props
+    const { className, tag, modifier, ...other } = this.props
 
     const paragraphClassNames = classNames(
       'k-Paragraph',
       className,
-      `k-Paragraph--${type}`,
+      `k-Paragraph--${modifier}`,
     )
 
     const Tag = tag
@@ -22,5 +22,5 @@ export class Paragraph extends React.Component {
 
 Paragraph.defaultProps = {
   tag: 'p',
-  type: 'primary',
+  modifier: 'primary',
 }
