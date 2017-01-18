@@ -29,8 +29,35 @@ export class MakerWhoAmIStep extends React.Component {
     )
   }
 
+  renderRadioButtons() {
+    const { name, items } = this.props.form.radioButtons
+
+    return items.map(item => {
+      return (
+        <RadioButton className="k-u-margin-bottom-triple"
+                     id={ item.id }
+                     name={ name }
+                     text={ item.text }>
+          <p className="k-Paragraph k-Paragraph--quaternary">
+            { item.content }
+          </p>
+        </RadioButton>
+      )
+    })
+  }
+
+  renderCheckboxes() {
+    const { items } = this.props.form.checkboxes
+
+    return items.map(item => {
+      return (
+        <Checkbox id={ item.id } text={ item.text } />
+      )
+    })
+  }
+
   render() {
-    const { header, project } = this.props
+    const { header, project, form } = this.props
 
     return (
       <div>
@@ -44,71 +71,22 @@ export class MakerWhoAmIStep extends React.Component {
             <Grid>
               <GridCol col-s="10" offset-s="1" col-l="8">
                 <p className="k-Title k-Title--secondary">
-                  Qui suis-je&nbsp;?
+                  { form.title }
                 </p>
 
-                <RadioButton className="k-u-margin-bottom-triple"
-                             id="karl-radio-button-1"
-                             name="karl-radio-button"
-                             text="Particulier / Auto-entrepreneur">
-                  <p className="k-Paragraph k-Paragraph--quaternary">
-                    Harum trium sententiarum nulli prorsus assentior. Nec enim
-                    illa prima vera est, ut, quem ad modum in se quisque sit,
-                    sic in amicum sit animatus
-                  </p>
-                </RadioButton>
-
-                <RadioButton className="k-u-margin-bottom-triple"
-                             id="karl-radio-button-2"
-                             name="karl-radio-button"
-                             text="Association">
-                  <p className="k-Paragraph k-Paragraph--quaternary">
-                    Harum trium sententiarum nulli prorsus assentior. Nec enim
-                    illa prima vera est, ut, quem ad modum in se quisque sit,
-                    sic in amicum sit animatus
-                  </p>
-                </RadioButton>
-
-                <RadioButton className="k-u-margin-bottom-triple"
-                             id="karl-radio-button-3"
-                             name="karl-radio-button"
-                             text="Entreprise">
-                  <p className="k-Paragraph k-Paragraph--quaternary">
-                    Harum trium sententiarum nulli prorsus assentior. Nec enim
-                    illa prima vera est, ut, quem ad modum in se quisque sit,
-                    sic in amicum sit animatus
-                  </p>
-                </RadioButton>
-
-                <RadioButton className="k-u-margin-bottom-triple"
-                             id="karl-radio-button-4"
-                             name="karl-radio-button"
-                             text="Collectivité territorial">
-                  <p className="k-Paragraph k-Paragraph--quaternary">
-                    Harum trium sententiarum nulli prorsus assentior. Nec enim
-                    illa prima vera est, ut, quem ad modum in se quisque sit,
-                    sic in amicum sit animatus
-                  </p>
-                </RadioButton>
-
-                <Checkbox id="input-1"
-                          text="Déposez un projet Scouts
-                                et Guides de France." />
-
-                <Checkbox id="input-2"
-                          text="Déposez un projet Éclaireurs
-                                Unionistes de France." />
+                { this.renderRadioButtons() }
+                { this.renderCheckboxes() }
 
                 <FormActions className="k-u-margin-top-quadruple
                                         k-u-margin-bottom-quadruple">
-                  <a href="#"
+                  <a href={ form.actions.return.href }
                      className="k-Button
                                 k-Button--hydrogen">
-                    Retour
+                    { form.actions.return.text }
                   </a>
 
                   <input type="submit"
-                         value="Suivant"
+                         value={ form.actions.submit.text }
                          className="k-Button
                                     k-Button--helium" />
                 </FormActions>
@@ -150,9 +128,9 @@ class MakerHeader extends React.Component {
 
           <HeaderItem className="k-Header__titles">
             <div>
-              <p className="k-Header__title">TODO HeaderTitles - Étape 1</p>
+              <p className="k-Header__title">{ this.props.titles.title }</p>
               <p className="k-Header__subtitle">
-                Commencez par l'essentiel
+                { this.props.titles.subtitle }
               </p>
             </div>
           </HeaderItem>
@@ -160,16 +138,9 @@ class MakerHeader extends React.Component {
 
         <HeaderItems fixedSize={ true }>
           <HeaderItem>
-            <p className="k-Paragraph k-Paragraph--quaternary">
-              TODO Paragraph -
-              Enregistré il y a { this.props.project.updated_at }
-            </p>
-          </HeaderItem>
-
-          <HeaderItem>
             <a href={ this.props.button.href }
                className="k-Button k-Button--lithium">
-              Sauvegarder et quitter
+              { this.props.button.text }
             </a>
           </HeaderItem>
         </HeaderItems>

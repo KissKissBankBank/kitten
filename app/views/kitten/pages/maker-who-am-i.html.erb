@@ -1,15 +1,17 @@
-<%= react_component 'MakerWhoAmIStep', props: {
-  project: {
-    updated_at: DateTime.now.beginning_of_day,
-  },
+<%= react_component "MakerWhoAmIStep", props: {
   header: {
     logo: {
-      href: 'maker-who-am-i',
-      src: image_path('brand/kisskissbankbank.svg'),
-      alt: 'KissKissBankBank',
+      href: "maker-who-am-i",
+      src: image_path("brand/kisskissbankbank.svg"),
+      alt: "KissKissBankBank",
+    },
+    titles: {
+      title: "Étape 1",
+      subtitle: "Commencez par l'essentiel",
     },
     button: {
-      href: "#save-and-exit",
+      href: request.url,
+      text: "Sauvegarder et quitter",
     }
   },
   stepper: {
@@ -32,4 +34,57 @@
       },
     ]
   },
+  form: {
+    title: "Qui suis-je ?",
+    radioButtons: {
+      name: "karl-radio-button",
+      items: [
+        {
+          id: "karl-radio-button-1",
+          text: "Particulier / Auto-entrepreneur",
+          content: "Harum trium sententiarum nulli prorsus assentior. Nec enim
+          illa prima vera est, ut, quem ad modum in se quisque sit,
+          sic in amicum sit animatus",
+        }, {
+          id: "karl-radio-button-2",
+          text: "Association",
+          content: "Harum trium sententiarum nulli prorsus assentior. Nec enim
+          illa prima vera est, ut, quem ad modum in se quisque sit,
+          sic in amicum sit animatus",
+        }, {
+          id: "karl-radio-button-3",
+          text: "Entreprise",
+          content: "Harum trium sententiarum nulli prorsus assentior. Nec enim
+          illa prima vera est, ut, quem ad modum in se quisque sit,
+          sic in amicum sit animatus",
+        }, {
+          id: "karl-radio-button-4",
+          text: "Collectivité territorial",
+          content: "Harum trium sententiarum nulli prorsus assentior. Nec enim
+          illa prima vera est, ut, quem ad modum in se quisque sit,
+          sic in amicum sit animatus",
+        },
+      ]
+    },
+    checkboxes: {
+      items: [
+        {
+          id: "input-1",
+          text: "Déposez un projet Scouts et Guides de France."
+        }, {
+          id: "input-2",
+          text: "Déposez un projet Éclaireurs Unionistes de France."
+        },
+      ]
+    },
+    actions: {
+      return: {
+        href: request.url,
+        text: "Retour",
+      },
+      submit: {
+        text: "Suivant",
+      }
+    }
+  }
 } %>
