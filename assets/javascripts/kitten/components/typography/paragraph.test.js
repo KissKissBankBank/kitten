@@ -35,7 +35,7 @@ describe('Paragraph with default props', () => {
     describe('modifier', () => {
       it('accepts secondary', () => {
         const component = shallow(
-          <Paragraph title="k-Paragraph--secondary" />
+          <Paragraph modifier="secondary" />
         )
         expect(component).to.have.className('k-Paragraph--secondary')
       })
