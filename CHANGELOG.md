@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 - Feature: Add new `Title` React component.
-
+- Feature: Add new `Paragraph` React component.
 - Feature: Add new `HeartIcon` React component.
 - Feature: Add new `Button` React component.
 - Feature: Add new `HeaderLogo` React component.

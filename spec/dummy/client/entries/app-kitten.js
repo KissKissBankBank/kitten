@@ -42,6 +42,13 @@ import ExternalRichLink from 'kitten/components/links/external-rich-link'
 // Lists
 import NavList from 'kitten/components/lists/nav-list'
 
+// Simulators
+import LoanSimulator from 'kitten/components/simulators/loan-simulator'
+import SimulatorResult from 'kitten/components/simulators/simulator-result'
+
+// Steppers
+import { Stepper } from 'kitten/components/steppers/stepper'
+
 // Tooltips
 import ReactTooltip from 'react-tooltip'
 import Tooltip from 'kitten/components/tooltips/tooltip'
@@ -53,14 +60,8 @@ import TourPopover from 'kitten/components/tours/tour-popover'
 import TourStep from 'kitten/components/tours/tour-step'
 
 // Typography
+import { Paragraph } from 'kitten/components/typography/paragraph'
 import { Title } from 'kitten/components/typography/title'
-
-// Simulators
-import LoanSimulator from 'kitten/components/simulators/loan-simulator'
-import SimulatorResult from 'kitten/components/simulators/simulator-result'
-
-// Steppers
-import { Stepper } from 'kitten/components/steppers/stepper'
 
 // Karl composed components
 
@@ -89,6 +90,12 @@ import { KarlGridTwelveColumns,
          KarlGridSmall,
          KarlGridWithOffset
        } from 'kitten/karl/grid/grid'
+import { KarlParagraph,
+         KarlParagraphSecondary,
+         KarlParagraphTertiary,
+         KarlParagraphQuaternary,
+         KarlParagraphWithLink,
+       } from 'kitten/karl/typography/paragraph'
 import { KarlButtonIconHeartRight,
          KarlButtonIconHeartLeft
        } from 'kitten/karl/buttons/button-heart-icon-words'
@@ -157,6 +164,7 @@ ReactOnRails.register({
   TourStep,
 
   // Typography
+  Paragraph,
   Title,
 
   // Karl composed components
@@ -184,4 +192,9 @@ ReactOnRails.register({
   KarlGridInGrid,
   KarlGridSmall,
   KarlGridWithOffset,
+  KarlParagraph,
+  KarlParagraphSecondary,
+  KarlParagraphTertiary,
+  KarlParagraphQuaternary,
+  KarlParagraphWithLink,
 })
