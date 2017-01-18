@@ -21,12 +21,12 @@ describe('Button with default props', () => {
 
   describe('<Button />', () => {
     const component = shallow(
-      <Button className="k-Button" Button />
+      <Button className="k-Button--custom" />
     )
 
     it('renders a <Button class="k-Button" />', () => {
       expect(component).to.have.tagName('button')
-      expect(component).to.have.className('k-Button')
+      expect(component).to.have.className('k-Button--custom')
       expect(component).to.have.className('k-Button--hydrogen')
     })
 
@@ -39,7 +39,7 @@ describe('Button with default props', () => {
 
     describe('button with iconRight svg', () => {
       const componentWithIconRight = shallow(
-        <Button iconOnRight="true" />
+        <Button iconOnRight={ true } />
       )
 
       it('has an icon right', () => {
