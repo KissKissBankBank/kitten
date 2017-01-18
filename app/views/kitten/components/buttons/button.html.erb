@@ -1,59 +1,65 @@
 <div class="karl-Example__column">
-  <%= example "Hydrogen button" do %>
-    <button class="k-Button k-Button--hydrogen">
-      Button
-    </button>
+  <%= example 'Hydrogen button' do %>
+    <%= react_component('Button') %>
   <% end %>
 
   <%= example "Helium button" do %>
-    <button class="k-Button k-Button--helium">
-      Button
-    </button>
+    <%= react_component('Button', props: {
+        modifier: 'helium',
+      }
+    ) %>
   <% end %>
 
   <%= example "Lithium button" do %>
-    <button class="k-Button k-Button--lithium">
-      Button
-    </button>
+    <%= react_component('Button', props: {
+        modifier: 'lithium',
+      }
+    ) %>
   <% end %>
 
   <%= example "Beryllium button" do %>
-    <button class="k-Button k-Button--beryllium">
-      Button
-    </button>
+    <%= react_component('Button', props: {
+        modifier: 'beryllium',
+      }
+    ) %>
   <% end %>
 
   <%= example "Boron button" do %>
-    <button class="k-Button k-Button--boron">
-      Button
-    </button>
+    <%= react_component('Button', props: {
+        modifier: 'boron',
+      }
+    ) %>
   <% end %>
 
   <%= example "Carbon button" do %>
-    <button class="k-Button k-Button--carbon">
-      Button
-    </button>
+    <%= react_component('Button', props: {
+        modifier: 'carbon',
+      }
+    ) %>
   <% end %>
 </div>
 
 <div class="karl-Example__column">
   <%= example "Disabled button" do %>
-    <button class="k-Button k-Button--hydrogen" disabled>
-      Button
-    </button>
+    <%= react_component('Button', props: {
+        disabled: true,
+      }
+    ) %>
   <% end %>
 </div>
 
 <div class="karl-Example__column">
   <%= example "Tiny button" do %>
-    <button class="k-Button k-Button--hydrogen k-Button--tiny">
-      Tiny button
-    </button>
+    <%= react_component('Button', props: {
+        size: 'tiny',
+      }
+    ) %>
   <% end %>
 
   <%= example "Big button" do %>
-    <button class="k-Button k-Button--hydrogen k-Button--big">
-      Big button
-    </button>
+    <%= react_component('Button', props: {
+        size: 'big',
+      }
+    ) %>
   <% end %>
 </div>

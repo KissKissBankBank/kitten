@@ -7,6 +7,7 @@ import DocLinkBox from 'kitten/components/box/doc-link-box'
 import LinkBox from 'kitten/components/box/link-box'
 
 // Buttons
+import { Button } from 'kitten/components/buttons/button'
 import ButtonImageWithTextAndBadge from 'kitten/components/buttons/button-image-with-text-and-badge'
 import ButtonTooltipIcon from 'kitten/components/buttons/button-tooltip-icon'
 
@@ -33,12 +34,20 @@ import { Grid, GridCol } from 'kitten/components/grid/grid'
 
 // Icons
 import GrabberIcon from 'kitten/components/icons/grabber-icon'
+import { HeartIcon } from 'kitten/components/icons/heart-icon'
 
 // Links
 import ExternalRichLink from 'kitten/components/links/external-rich-link'
 
 // Lists
 import NavList from 'kitten/components/lists/nav-list'
+
+// Simulators
+import LoanSimulator from 'kitten/components/simulators/loan-simulator'
+import SimulatorResult from 'kitten/components/simulators/simulator-result'
+
+// Steppers
+import { Stepper } from 'kitten/components/steppers/stepper'
 
 // Tooltips
 import ReactTooltip from 'react-tooltip'
@@ -50,12 +59,9 @@ import Tour from 'kitten/components/tours/tour'
 import TourPopover from 'kitten/components/tours/tour-popover'
 import TourStep from 'kitten/components/tours/tour-step'
 
-// Simulators
-import LoanSimulator from 'kitten/components/simulators/loan-simulator'
-import SimulatorResult from 'kitten/components/simulators/simulator-result'
-
-// Steppers
-import { Stepper } from 'kitten/components/steppers/stepper'
+// Typography
+import { Paragraph } from 'kitten/components/typography/paragraph'
+import { Title } from 'kitten/components/typography/title'
 
 // Karl composed components
 
@@ -85,6 +91,15 @@ import { KarlGridTwelveColumns,
          KarlGridSmall,
          KarlGridWithOffset
        } from 'kitten/karl/grid/grid'
+import { KarlParagraph,
+         KarlParagraphSecondary,
+         KarlParagraphTertiary,
+         KarlParagraphQuaternary,
+         KarlParagraphWithLink,
+       } from 'kitten/karl/typography/paragraph'
+import { KarlButtonIconHeartRight,
+         KarlButtonIconHeartLeft
+       } from 'kitten/karl/buttons/button-heart-icon-words'
 
 ReactOnRails.register({
   // Box
@@ -92,6 +107,7 @@ ReactOnRails.register({
   LinkBox,
 
   // Buttons
+  Button,
   ButtonImageWithTextAndBadge,
   ButtonTooltipIcon,
 
@@ -115,7 +131,6 @@ ReactOnRails.register({
   LoanSimulator,
   ReactTooltip,
   Slider,
-
   Search,
   Select,
   SelectWithState,
@@ -124,12 +139,20 @@ ReactOnRails.register({
 
   // Icons
   GrabberIcon,
+  HeartIcon,
 
   // Links
   ExternalRichLink,
 
   // Lists
   NavList,
+
+  // Simulators
+  LoanSimulator,
+  SimulatorResult,
+
+  // Steppers
+  Stepper,
 
   // Tooltips
   ReactTooltip,
@@ -141,14 +164,13 @@ ReactOnRails.register({
   TourPopover,
   TourStep,
 
-  // Simulators
-  LoanSimulator,
-  SimulatorResult,
-
-  // Steppers
-  Stepper,
+  // Typography
+  Paragraph,
+  Title,
 
   // Karl composed components
+  KarlButtonIconHeartRight,
+  KarlButtonIconHeartLeft,
   KarlImageExternalRichLink,
   KarlSvgExternalRichLink,
   KarlSimpleDropdown,
@@ -172,4 +194,9 @@ ReactOnRails.register({
   KarlGridInGrid,
   KarlGridSmall,
   KarlGridWithOffset,
+  KarlParagraph,
+  KarlParagraphSecondary,
+  KarlParagraphTertiary,
+  KarlParagraphQuaternary,
+  KarlParagraphWithLink,
 })
