@@ -8,7 +8,6 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Add elements in `k-Header`.
 - Feature: Add container in `k-VerticalGrid`.
 - Feature: Add styles on `k-Checkbox`.
-- Feature: Add new `k-SideGrid` component.
 - Fix: Fix flex in `k-Header`.
 - Fix: Fix aside `flex-direction` in `k-SideGrid`.
 - Fix: Remove overflow on `k-Row`.
