@@ -23,11 +23,17 @@ export class Button extends React.Component {
 
     const Tag = tag
 
-    return (
-      <Tag className={ buttonClassNames } { ...others }>
-        { children }
-      </Tag>
-    )
+    if (tag == "input") {
+      return (
+        <Tag className={ buttonClassNames } { ...others } />
+      )
+    } else {
+      return (
+        <Tag className={ buttonClassNames } { ...others }>
+          { children }
+        </Tag>
+      )
+    }
   }
 }
 
