@@ -22,7 +22,7 @@ import merge from 'webpack-merge'
 // Import common webpack config.
 import baseConfig from './config/webpack/base.config'
 
-const devServerPort = process.env.HOT_RAILS_PORT || 3500
+const devServerPort = process.env.HOT_RAILS_PORT || 3503
 const developmentConfig = {
   entry: {
     dummy: [

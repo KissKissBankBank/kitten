@@ -30,7 +30,6 @@
 
   $height: 65px;
   $item-spacing: k-px-to-rem(10px);
-  $item-spacing-xxs: k-px-to-rem(15px);
   $z-index: 10;
 
   $graphic-logo-size: 37px;
@@ -68,11 +67,6 @@
     // and last elements.
     margin-left: -$item-spacing;
     margin-right: -$item-spacing;
-
-    @include k-media-within('xxs') {
-      margin-left: -$item-spacing-xxs;
-      margin-right: -$item-spacing-xxs;
-    }
   }
 
   .k-Header__items {

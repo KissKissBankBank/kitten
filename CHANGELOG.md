@@ -15,6 +15,54 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fix: Change transition on `k-RadioButton`.
 - Fix: Change `k-LinkBox` display before `m` version.
 - Fix: Change `k-SingleColumn` width according to the media.
+- Feature: Add new `HeaderLogo` React component.
+- Fix: Change default port in development from 3000 to 3003. You should now
+  see the style guide on http://localhost:3003 instead.
+
+## [5.4.0] - 2017-01-17
+
+Features:
+- Add new `RadioButton` React component.
+- Add new `Header` React component.
+- Add new `SideGrid`, `SideGridContent` and `SideGridAside` components.
+- Add new `upcaseFirst()` string helper.
+- Add new `initialTouched` and `requiredDurationError` props to `LoanSimulator`.
+
+## [5.3.0] - 2017-01-16
+
+Features:
+- Add new `Checkbox` React component.
+- Add new `FormActions` React component.
+- Add new `Grid` and `GridCol` React components.
+
+Fixes:
+- At xxs, use thinner gutters.
+- Override bootstrap on blockquotes in `k-Testimony__text`
+  and `k-PressQuotes__quote__text`.
+
+## [5.2.0] - 2017-01-12
+
+Features:
+- Add `primary-6` color.
+- Introduce `k-Teaser__col--start@l` to fix ordering of columns on `k-Teaser`.
+
+Fixes:
+- Add default margins to `.k-PressQuotes__title` and
+  `.k-titleWithActions__title`.
+- Testimony row is larger on xxs.
+- Vertical align on `k-LinkBox__paragraph`.
+- Add default colors to `k-Row`.
+
+## [5.1.0] - 2017-01-11
+
+Features:
+- Add `k-Select__label` to `k-Select`.
+- Add `labelText` option to `SelectWithMultiLevel`.
+- Add new `k-SideGrid` component.
+
+Fixes:
+- Change font size in `k-LoanSimulator__commission`.
+- Change `k-SingleColumn` width according to the media.
 
 ## [v5.0.0] - 2017-01-09
 
