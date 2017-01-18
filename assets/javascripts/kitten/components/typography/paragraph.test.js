@@ -37,8 +37,8 @@ describe('Paragraph with default props', () => {
         const component = shallow(
           <Paragraph title="k-Paragraph--secondary" />
         )
+        expect(component).to.have.className('k-Paragraph--secondary')
       })
     })
-
   })
 })
