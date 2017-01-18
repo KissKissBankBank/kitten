@@ -1,10 +1,15 @@
 <%= react_component 'MakerWhoAmIStep', props: {
+  project: {
+    updated_at: DateTime.now.beginning_of_day,
+  },
   header: {
-    platformSwitch: {
-      visible: false,
-    },
     logo: {
+      href: 'maker-who-am-i',
       src: image_path('brand/kisskissbankbank.svg'),
+      alt: 'KissKissBankBank',
+    },
+    button: {
+      href: "#save-and-exit",
     }
   },
   stepper: {
@@ -26,5 +31,5 @@
         iconType: "default",
       },
     ]
-  }
+  },
 } %>

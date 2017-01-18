@@ -66,8 +66,9 @@ describe('RadioButton with default props', () => {
 
     describe('with content', () => {
       const componentWithContent = shallow(
-        <RadioButton content="Harum trium …"
-                     largeContent="true" />
+        <RadioButton largeContent="true">
+          <p>Harum trium …</p>
+        </RadioButton>
       )
 
       it('has a content class', () => {
