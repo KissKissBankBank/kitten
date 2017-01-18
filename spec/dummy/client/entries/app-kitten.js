@@ -140,6 +140,13 @@ ReactOnRails.register({
   // Lists
   NavList,
 
+  // Simulators
+  LoanSimulator,
+  SimulatorResult,
+
+  // Steppers
+  Stepper,
+
   // Tooltips
   ReactTooltip,
   Tooltip,
@@ -149,13 +156,6 @@ ReactOnRails.register({
   Tour,
   TourPopover,
   TourStep,
-
-  // Simulators
-  LoanSimulator,
-  SimulatorResult,
-
-  // Steppers
-  Stepper,
 
   // Typography
   Paragraph,
