@@ -5,6 +5,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: Update color `RadioButton` disabled.
+- Feature: Add new `Title` React component.
+- Feature: Add new `Paragraph` React component.
+- Feature: Add new `HeartIcon` React component.
+- Feature: Add new `Button` React component.
 - Feature: Add new `HeaderLogo` React component.
 - Fix: Change default port in development from 3000 to 3003. You should now
   see the style guide on http://localhost:3003 instead.
