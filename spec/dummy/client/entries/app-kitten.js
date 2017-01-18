@@ -117,7 +117,6 @@ ReactOnRails.register({
   LoanSimulator,
   ReactTooltip,
   Slider,
-
   Search,
   Select,
   SelectWithState,
@@ -133,12 +132,16 @@ ReactOnRails.register({
   // Lists
   NavList,
 
+  // Simulators
+  LoanSimulator,
+  SimulatorResult,
+
+  // Steppers
+  Stepper,
+
   // Tooltips
   ReactTooltip,
   Tooltip,
-  Stepper,
-  Switch,
-  Title,
 
   // Tours
   HeaderTour,
@@ -146,12 +149,8 @@ ReactOnRails.register({
   TourPopover,
   TourStep,
 
-  // Simulators
-  LoanSimulator,
-  SimulatorResult,
-
-  // Steppers
-  Stepper,
+  // Typography
+  Title,
 
   // Karl composed components
   KarlImageExternalRichLink,
