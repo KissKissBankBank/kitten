@@ -128,7 +128,7 @@ export class MakerWhoAmIStep extends React.Component {
              className="k-u-margin-top-triple
                         k-u-margin-right-double
                         k-u-margin-left-quadruple">
-          <DocLinkBox {...item} />
+          <DocLinkBox { ...item } />
         </div>
       )
     })
