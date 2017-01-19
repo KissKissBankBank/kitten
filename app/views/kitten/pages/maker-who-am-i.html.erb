@@ -1,4 +1,6 @@
-<%= react_component "MakerWhoAmIStep", props: {
+<%= react_component "MakerWhoAmIStep",
+                    html_options: { class: "k-VerticalGrid__page" },
+                    props: {
   header: {
     logo: {
       href: "maker-who-am-i",
@@ -43,27 +45,27 @@
           id: "karl-radio-button-1",
           text: "Particulier / Auto-entrepreneur",
           content: "Harum trium sententiarum nulli prorsus assentior. Nec enim
-          illa prima vera est, ut, quem ad modum in se quisque sit,
-          sic in amicum sit animatus",
+            illa prima vera est, ut, quem ad modum in se quisque sit,
+            sic in amicum sit animatus",
           defaultChecked: true,
         }, {
           id: "karl-radio-button-2",
           text: "Association",
           content: "Harum trium sententiarum nulli prorsus assentior. Nec enim
-          illa prima vera est, ut, quem ad modum in se quisque sit,
-          sic in amicum sit animatus",
+            illa prima vera est, ut, quem ad modum in se quisque sit,
+            sic in amicum sit animatus",
         }, {
           id: "karl-radio-button-3",
           text: "Entreprise",
           content: "Harum trium sententiarum nulli prorsus assentior. Nec enim
-          illa prima vera est, ut, quem ad modum in se quisque sit,
-          sic in amicum sit animatus",
+            illa prima vera est, ut, quem ad modum in se quisque sit,
+            sic in amicum sit animatus",
         }, {
           id: "karl-radio-button-4",
           text: "Collectivité territorial",
           content: "Harum trium sententiarum nulli prorsus assentior. Nec enim
-          illa prima vera est, ut, quem ad modum in se quisque sit,
-          sic in amicum sit animatus",
+            illa prima vera est, ut, quem ad modum in se quisque sit,
+            sic in amicum sit animatus",
         },
       ]
     },
@@ -86,6 +88,22 @@
       submit: {
         text: "Suivant",
       }
+    }
+  },
+  sidebar: {
+    docLinkBoxes: {
+      items: [
+        {
+          title: "Lorem Ipsum",
+          text: "Aenean leo ligula, porttitor eu, vitae eleifend ac,
+            enimiquam ante.",
+        },
+        {
+          title: "Lorem Ipsum 2",
+          text: "Aenean leo ligula, porttitor eu, vitae eleifend ac,
+            enimiquam ante.",
+        }
+      ]
     }
   }
 } %>

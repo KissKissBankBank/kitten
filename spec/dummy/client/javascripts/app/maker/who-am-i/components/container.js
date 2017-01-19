@@ -107,10 +107,12 @@ export class MakerWhoAmIStep extends React.Component {
       <SideGridContent>
         <Grid>
           <GridCol col-s="10" offset-s="1" col-l="8">
-            { this.renderTitle() }
-            { this.renderRadioButtons() }
-            { this.renderCheckboxes() }
-            { this.renderActions() }
+            <form>
+              { this.renderTitle() }
+              { this.renderRadioButtons() }
+              { this.renderCheckboxes() }
+              { this.renderActions() }
+            </form>
           </GridCol>
         </Grid>
       </SideGridContent>
@@ -118,30 +120,27 @@ export class MakerWhoAmIStep extends React.Component {
   }
 
   renderAside() {
-    return (
-      <SideGridAside>
-        <div className="k-u-margin-top-triple
-                        k-u-margin-right-double
-                        k-u-margin-left-quadruple">
-          <DocLinkBox title="Lorem Ipsum"
-                      text="Aenean leo ligula, porttitor eu, vitae
-                            eleifend ac, enimiquam ante." />
-        </div>
+    const { items } = this.props.sidebar.docLinkBoxes
 
-        <div className="k-u-margin-top-triple
+    const docLinkBoxes = items.map((item, key) => {
+      return (
+        <div key={ key }
+             className="k-u-margin-top-triple
                         k-u-margin-right-double
                         k-u-margin-left-quadruple">
-          <DocLinkBox title="Lorem Ipsum"
-                      text="Aenean leo ligula, porttitor eu, vitae
-                            eleifend ac, enimiquam ante." />
+          <DocLinkBox {...item} />
         </div>
-      </SideGridAside>
+      )
+    })
+
+    return (
+      <SideGridAside>{ docLinkBoxes }</SideGridAside>
     )
   }
 
   render() {
     return (
-      <div>
+      <div className="k-VerticalGrid__page">
         { this.renderHeader() }
         { this.renderStepper() }
         { this.renderSideGrid() }
