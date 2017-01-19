@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add new `DatePicker` React component.
 - Fix: Update color `RadioButton` disabled.
 - Feature: Add new `Title` React component.
 - Feature: Add new `Paragraph` React component.

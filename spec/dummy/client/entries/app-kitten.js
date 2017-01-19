@@ -20,6 +20,9 @@ import DropdownButton from 'kitten/components/dropdowns/dropdown-button'
 
 // Form
 import { Checkbox } from 'kitten/components/form/checkbox'
+import { DatePicker } from 'kitten/components/form/date-picker'
+import moment from 'moment'
+import ReactDatePicker from 'react-datepicker'
 import FormAmountAndCurrency from 'kitten/components/form/form-amount-and-currency'
 import FormPhoneNumber from 'kitten/components/form/form-phone-number'
 import { RadioButton } from 'kitten/components/form/radio-button'
@@ -111,7 +114,6 @@ ReactOnRails.register({
   ButtonTooltipIcon,
 
   // Dev
-  Checkbox,
   DevGrid,
 
   // Dropdowns
@@ -119,6 +121,10 @@ ReactOnRails.register({
   DropdownButton,
 
   // Form
+  Checkbox,
+  ReactDatePicker,
+  moment,
+  DatePicker,
   FormAmountAndCurrency,
   FormPhoneNumber,
   RadioButton,
@@ -128,7 +134,6 @@ ReactOnRails.register({
   HeaderTour,
   LinkBox,
   LoanSimulator,
-  ReactTooltip,
   Slider,
   Search,
   Select,
