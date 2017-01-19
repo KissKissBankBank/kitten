@@ -3,6 +3,7 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
+- Fix: Update color disabled placeholder for `Text-input`.
 - Feature: Add new `Title` React component.
 - Feature: Add new `Paragraph` React component.
 - Feature: Add new `HeartIcon` React component.
