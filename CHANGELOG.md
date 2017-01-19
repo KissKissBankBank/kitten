@@ -3,6 +3,8 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
+
+- Fix: Update color `RadioButton` disabled.
 - Feature: Add new `Title` React component.
 - Feature: Add new `Paragraph` React component.
 - Feature: Add new `HeartIcon` React component.
