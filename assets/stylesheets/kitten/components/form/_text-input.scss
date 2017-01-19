@@ -71,6 +71,14 @@
       color: $color-disabled;
 
       cursor: not-allowed;
+
+      &::placeholder {
+        opacity: 1 !important;
+      }
+
+      &::-moz-placeholder {
+        opacity: 1 !important;
+      }
     }
 
     &.is-valid {
