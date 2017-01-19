@@ -19,6 +19,14 @@ import DocLinkBox from 'kitten/components/box/doc-link-box'
 
 export class MakerWhoAmIStep extends React.Component {
 
+  renderHeader() {
+    const { header } = this.props
+
+    return (
+      <MakerHeader { ...header } />
+    )
+  }
+
   renderStepper() {
     if (!this.props.stepper.items)
       return
@@ -29,6 +37,12 @@ export class MakerWhoAmIStep extends React.Component {
           <Stepper items={ this.props.stepper.items } />
         </div>
       </div>
+    )
+  }
+
+  renderTitle() {
+    return (
+      <Title modifier="secondary">{ this.props.form.title }</Title>
     )
   }
 
@@ -57,61 +71,80 @@ export class MakerWhoAmIStep extends React.Component {
     })
   }
 
-  render() {
-    const { header, project, form } = this.props
+  renderActions() {
+    const { actions } = this.props.form
 
     return (
+      <FormActions className="k-u-margin-top-quadruple
+                              k-u-margin-bottom-quadruple">
+        <Button tag="a"
+                modifier="hydrogen"
+                href={ actions.return.href }>
+          { actions.return.text }
+        </Button>
+
+        <Button tag="input"
+                type="submit"
+                value={ actions.submit.text }
+                className="k-Button
+                           k-Button--helium" />
+      </FormActions>
+    )
+  }
+
+  renderSideGrid() {
+    return (
+      <SideGrid className="k-VerticalGrid__fluid"
+                containerClassName="k-VerticalGrid__container">
+        { this.renderContent() }
+        { this.renderAside() }
+      </SideGrid>
+    )
+  }
+
+  renderContent() {
+    return (
+      <SideGridContent>
+        <Grid>
+          <GridCol col-s="10" offset-s="1" col-l="8">
+            { this.renderTitle() }
+            { this.renderRadioButtons() }
+            { this.renderCheckboxes() }
+            { this.renderActions() }
+          </GridCol>
+        </Grid>
+      </SideGridContent>
+    )
+  }
+
+  renderAside() {
+    return (
+      <SideGridAside>
+        <div className="k-u-margin-top-triple
+                        k-u-margin-right-double
+                        k-u-margin-left-quadruple">
+          <DocLinkBox title="Lorem Ipsum"
+                      text="Aenean leo ligula, porttitor eu, vitae
+                            eleifend ac, enimiquam ante." />
+        </div>
+
+        <div className="k-u-margin-top-triple
+                        k-u-margin-right-double
+                        k-u-margin-left-quadruple">
+          <DocLinkBox title="Lorem Ipsum"
+                      text="Aenean leo ligula, porttitor eu, vitae
+                            eleifend ac, enimiquam ante." />
+        </div>
+      </SideGridAside>
+    )
+  }
+
+  render() {
+    return (
       <div>
-        <MakerHeader { ...header } />
-
+        { this.renderHeader() }
         { this.renderStepper() }
-
-        <SideGrid className="k-VerticalGrid__fluid"
-                  containerClassName="k-VerticalGrid__container">
-          <SideGridContent>
-            <Grid>
-              <GridCol col-s="10" offset-s="1" col-l="8">
-                <Title modifier="secondary">{ form.title }</Title>
-
-                { this.renderRadioButtons() }
-                { this.renderCheckboxes() }
-
-                <FormActions className="k-u-margin-top-quadruple
-                                        k-u-margin-bottom-quadruple">
-                  <Button tag="a"
-                          modifier="hydrogen"
-                          href={ form.actions.return.href }>
-                    { form.actions.return.text }
-                  </Button>
-
-                  <Button tag="input"
-                          type="submit"
-                          value={ form.actions.submit.text }
-                          className="k-Button
-                                     k-Button--helium" />
-                </FormActions>
-              </GridCol>
-            </Grid>
-          </SideGridContent>
-
-          <SideGridAside>
-            <div className="k-u-margin-top-triple
-                            k-u-margin-right-double
-                            k-u-margin-left-quadruple">
-              <DocLinkBox title="Lorem Ipsum"
-                          text="Aenean leo ligula, porttitor eu, vitae
-                                eleifend ac, enimiquam ante." />
-            </div>
-
-            <div className="k-u-margin-top-triple
-                            k-u-margin-right-double
-                            k-u-margin-left-quadruple">
-              <DocLinkBox title="Lorem Ipsum"
-                          text="Aenean leo ligula, porttitor eu, vitae
-                                eleifend ac, enimiquam ante." />
-            </div>
-          </SideGridAside>
-        </SideGrid>
+        { this.renderSideGrid() }
       </div>
     )
   }
