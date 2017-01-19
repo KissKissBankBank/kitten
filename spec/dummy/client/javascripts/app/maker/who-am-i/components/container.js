@@ -4,11 +4,7 @@ import { SideGrid,
          SideGridContent,
          SideGridAside } from 'kitten/components/grid/side-grid'
 import { Grid, GridCol } from 'kitten/components/grid/grid'
-import { Header,
-         HeaderItems,
-         HeaderItem } from 'kitten/components/headers/header'
 import { Stepper } from 'kitten/components/steppers/stepper'
-import { HeaderLogo } from 'kitten/components/headers/header-logo'
 import { RadioButton } from 'kitten/components/form/radio-button'
 import { Checkbox } from 'kitten/components/form/checkbox'
 import { FormActions } from 'kitten/components/form/form-actions'
@@ -16,6 +12,7 @@ import { Button } from 'kitten/components/buttons/button'
 import { Title } from 'kitten/components/typography/title'
 import { Paragraph } from 'kitten/components/typography/paragraph'
 import DocLinkBox from 'kitten/components/box/doc-link-box'
+import { MakerHeader } from 'app/maker/components/maker-header'
 
 export class MakerWhoAmIStep extends React.Component {
 
@@ -84,10 +81,9 @@ export class MakerWhoAmIStep extends React.Component {
         </Button>
 
         <Button tag="input"
+                modifier="helium"
                 type="submit"
-                value={ actions.submit.text }
-                className="k-Button
-                           k-Button--helium" />
+                value={ actions.submit.text } />
       </FormActions>
     )
   }
@@ -145,39 +141,6 @@ export class MakerWhoAmIStep extends React.Component {
         { this.renderStepper() }
         { this.renderSideGrid() }
       </div>
-    )
-  }
-}
-
-class MakerHeader extends React.Component {
-  render() {
-    return (
-      <Header>
-        <HeaderItems>
-          <HeaderItem fixedSize={ true }>
-            <HeaderLogo lightOnM={ true } { ...this.props.logo } />
-          </HeaderItem>
-
-          <HeaderItem className="k-Header__titles">
-            <div>
-              <p className="k-Header__title">{ this.props.titles.title }</p>
-              <p className="k-Header__subtitle">
-                { this.props.titles.subtitle }
-              </p>
-            </div>
-          </HeaderItem>
-        </HeaderItems>
-
-        <HeaderItems fixedSize={ true }>
-          <HeaderItem>
-            <Button tag="a"
-                    modifier="lithium"
-                    href={ this.props.button.href }>
-              { this.props.button.text }
-            </Button>
-          </HeaderItem>
-        </HeaderItems>
-      </Header>
     )
   }
 }
