@@ -38,10 +38,9 @@ export class MakerWhoAmIStep extends React.Component {
     return items.map(item => {
       return (
         <RadioButton className="k-u-margin-bottom-triple"
-                     id={ item.id }
                      key={ item.id }
                      name={ name }
-                     text={ item.text }>
+                     { ...item }>
           <Paragraph modifier="quaternary">{ item.content }</Paragraph>
         </RadioButton>
       )
@@ -53,9 +52,7 @@ export class MakerWhoAmIStep extends React.Component {
 
     return items.map(item => {
       return (
-        <Checkbox id={ item.id }
-                  key={ item.id }
-                  text={ item.text } />
+        <Checkbox key={ item.id } { ...item } />
       )
     })
   }
