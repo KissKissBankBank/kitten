@@ -4,6 +4,7 @@ import { Header,
          HeaderItems,
          HeaderItem } from 'kitten/components/headers/header'
 import { HeaderLogo } from 'kitten/components/headers/header-logo'
+import { HeaderTitles } from 'kitten/components/headers/header-titles'
 import { Button } from 'kitten/components/buttons/button'
 
 export class MakerHeader extends React.Component {
@@ -15,14 +16,7 @@ export class MakerHeader extends React.Component {
             <HeaderLogo lightOnM={ true } { ...this.props.logo } />
           </HeaderItem>
 
-          <HeaderItem className="k-Header__titles">
-            <div>
-              <p className="k-Header__title">{ this.props.titles.title }</p>
-              <p className="k-Header__subtitle">
-                { this.props.titles.subtitle }
-              </p>
-            </div>
-          </HeaderItem>
+          <HeaderTitles { ...this.props.titles  } />
         </HeaderItems>
 
         <HeaderItems fixedSize={ true }>
