@@ -16,6 +16,10 @@ import { MakerHeader } from 'app/maker/components/maker-header'
 
 export class MakerWhoAmIStep extends React.Component {
 
+  getParamValue(name) {
+    return this.props.project.params[name]
+  }
+
   renderHeader() {
     const { header } = this.props
 
@@ -45,12 +49,16 @@ export class MakerWhoAmIStep extends React.Component {
 
   renderRadioButtons() {
     const { name, items } = this.props.form.radioButtons
+    const currentValue = this.getParamValue(name)
 
     return items.map(item => {
+      const checked = currentValue && currentValue == item.value
+
       return (
         <RadioButton className="k-u-margin-bottom-triple"
                      key={ item.id }
                      name={ name }
+                     defaultChecked={ checked }
                      { ...item }>
           <Paragraph modifier="quaternary">{ item.content }</Paragraph>
         </RadioButton>
@@ -62,8 +70,11 @@ export class MakerWhoAmIStep extends React.Component {
     const { items } = this.props.form.checkboxes
 
     return items.map(item => {
+      const currentValue = this.getParamValue(item.name)
+      const checked = currentValue && currentValue == item.value
+
       return (
-        <Checkbox key={ item.id } { ...item } />
+        <Checkbox key={ item.id } defaultChecked={ checked } { ...item } />
       )
     })
   }

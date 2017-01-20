@@ -4,6 +4,9 @@
     class: "k-VerticalGrid__page"
   },
   props: {
+    project: {
+      params: params
+    },
     header: {
       logo: {
         href: "maker-who-am-i",
@@ -23,7 +26,6 @@
       items: [
         {
           text: "Statut\n du créateur",
-          href: "#",
           linkClassNames: "k-Stepper__link--inProgress",
           iconType: "inProgress",
         },
@@ -42,47 +44,55 @@
     form: {
       title: "Qui suis-je ?",
       radioButtons: {
-        name: "karl-radio-button",
+        name: "who_am_i",
         items: [
           {
-            id: "karl-radio-button-1",
+            id: "who-am-in-1",
             text: "Particulier / Auto-entrepreneur",
             content: "Harum trium sententiarum nulli prorsus assentior. Nec enim
               illa prima vera est, ut, quem ad modum in se quisque sit,
               sic in amicum sit animatus",
+            value: "particulier-auto-entrepreneur",
             defaultChecked: true,
           },
           {
-            id: "karl-radio-button-2",
+            id: "who-am-in-2",
             text: "Association",
             content: "Harum trium sententiarum nulli prorsus assentior. Nec enim
               illa prima vera est, ut, quem ad modum in se quisque sit,
               sic in amicum sit animatus",
+            value: "association",
           },
           {
-            id: "karl-radio-button-3",
+            id: "who-am-in-3",
             text: "Entreprise",
             content: "Harum trium sententiarum nulli prorsus assentior. Nec enim
               illa prima vera est, ut, quem ad modum in se quisque sit,
               sic in amicum sit animatus",
+            value: "entreprise",
           },
           {
-            id: "karl-radio-button-4",
+            id: "who-am-in-4",
             text: "Collectivité territorial",
             content: "Harum trium sententiarum nulli prorsus assentior. Nec enim
               illa prima vera est, ut, quem ad modum in se quisque sit,
               sic in amicum sit animatus",
+            value: "collectivite-territorial",
           },
         ]
       },
       checkboxes: {
         items: [
           {
-            id: "input-1",
+            id: "option-scouts",
+            name: "option_scouts",
+            value: 1,
             text: "Déposez un projet Scouts et Guides de France.",
           },
           {
-            id: "input-2",
+            id: "option-eclaireurs",
+            name: "option_eclaireurs",
+            value: 1,
             text: "Déposez un projet Éclaireurs Unionistes de France.",
           },
         ]
