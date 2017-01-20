@@ -1,13 +1,12 @@
 <div class="karl-Example__column">
   <%= example "Hydrogen tag button" do %>
-    <button class="k-ButtonTag k-ButtonTag--hydrogen">
-      Tag
-    </button>
+    <%= react_component('ButtonTag') %>
   <% end %>
 
   <%= example "Selected tag button" do %>
-    <button class="k-ButtonTag k-ButtonTag--hydrogen is-selected">
-      Tag
-    </button>
+    <%= react_component('ButtonTag', props: {
+        isSelected: true,
+      }
+    ) %>
   <% end %>
 </div>
