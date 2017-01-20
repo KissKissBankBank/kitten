@@ -182,6 +182,7 @@
 
   .k-Header__titles {
     flex: 1;
+    flex-direction: column;
     justify-content: center;
     text-align: center;
     @include k-typographyFontSize($step: -1, $line-height: 1.3);

@@ -15,6 +15,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fix: Change transition on `k-RadioButton`.
 - Fix: Change `k-LinkBox` display before `m` version.
 - Fix: Change `k-SingleColumn` width according to the media.
+- Feature: Add new `HeaderTitles` component.
+- Fix: Update color `Checkbox` disabled.
+- Fix: Update color `RadioButton` disabled.
 - Feature: Add new `Title` React component.
 - Feature: Add new `Paragraph` React component.
 - Feature: Add new `HeartIcon` React component.
