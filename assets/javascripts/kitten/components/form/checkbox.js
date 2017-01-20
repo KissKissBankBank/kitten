@@ -3,7 +3,7 @@ import classNames from 'classnames'
 
 export class Checkbox extends React.Component {
   render() {
-    const { id, text, ...others } = this.props
+    const { id, children, ...others } = this.props
 
     return (
       <div className="k-Checkbox">
@@ -13,7 +13,7 @@ export class Checkbox extends React.Component {
                { ...others } />
 
         <label htmlFor={ id } className="k-Checkbox__label">
-          { text }
+          { children }
         </label>
       </div>
     )
@@ -21,5 +21,5 @@ export class Checkbox extends React.Component {
 }
 
 Checkbox.defaultProps = {
-  text: 'Filter 1',
+  children: 'Filter 1',
 }

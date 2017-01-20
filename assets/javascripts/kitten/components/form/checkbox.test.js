@@ -21,7 +21,7 @@ describe('Checkbox with default props', () => {
     const component = shallow(
       <Checkbox id="input-1"
                 htmlFor="input-1"
-                text="Filter 1" />
+                children="Filter 1" />
     )
 
     it('renders a <div class="k-Checkbox" />', () => {
