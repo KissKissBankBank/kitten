@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add new `HeaderTitles` component.
 - Fix: Update color `Checkbox` disabled.
 - Fix: Update color `RadioButton` disabled.
 - Feature: Add new `Title` React component.
