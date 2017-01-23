@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Add props `children` on `Checkbox`.
+- Breaking change: Add props `children` on `Checkbox`.
 - Feature: Add new `HeaderTitles` component.
 - Fix: Update color `Checkbox` disabled.
 - Fix: Update color `RadioButton` disabled.
