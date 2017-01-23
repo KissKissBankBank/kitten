@@ -1,7 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 
-export class ButtonTag extends React.Component {
+export class TagButton extends React.Component {
   render() {
     const { className,
             tag,
@@ -10,24 +10,24 @@ export class ButtonTag extends React.Component {
             selected,
             ...others } = this.props
 
-    const buttonTagClassNames = classNames(
-      'k-ButtonTag',
+    const tagButtonClassNames = classNames(
+      'k-TagButton',
       className,
-      `k-ButtonTag--${modifier}`,
+      `k-TagButton--${modifier}`,
       { 'is-selected': selected },
     )
 
     const Tag = tag
 
     return (
-      <Tag className={ buttonTagClassNames } { ...others }>
+      <Tag className={ tagButtonClassNames } { ...others }>
         { children }
       </Tag>
     )
   }
 }
 
-ButtonTag.defaultProps = {
+TagButton.defaultProps = {
   tag: 'button',
   modifier: 'hydrogen',
   children: 'Tag',

@@ -9,8 +9,8 @@ import LinkBox from 'kitten/components/box/link-box'
 // Buttons
 import { Button } from 'kitten/components/buttons/button'
 import ButtonImageWithTextAndBadge from 'kitten/components/buttons/button-image-with-text-and-badge'
-import { ButtonTag } from 'kitten/components/buttons/button-tag'
 import ButtonTooltipIcon from 'kitten/components/buttons/button-tooltip-icon'
+import { TagButton } from 'kitten/components/buttons/tag-button'
 
 // Dev
 import { DevGrid } from 'kitten/components/dev/dev-grid'
@@ -110,8 +110,8 @@ ReactOnRails.register({
   // Buttons
   Button,
   ButtonImageWithTextAndBadge,
-  ButtonTag,
   ButtonTooltipIcon,
+  TagButton,
 
   // Dev
   Checkbox,
