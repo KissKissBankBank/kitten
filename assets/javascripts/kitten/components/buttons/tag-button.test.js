@@ -43,6 +43,18 @@ describe('TagButton with default props', () => {
       })
     })
 
+    describe('renders children', () => {
+      const component = shallow(
+        <TagButton>
+          <svg />
+        </TagButton>
+      )
+
+      it('it children', () => {
+        expect(component.children()).to.have.tagName('svg')
+      })
+    })
+
     describe('button with selected', () => {
       const componentWithSelected = shallow(
         <TagButton selected={ true } />
