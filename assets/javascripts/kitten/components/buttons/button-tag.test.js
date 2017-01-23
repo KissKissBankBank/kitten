@@ -16,28 +16,34 @@ describe('ButtonTag with default props', () => {
     expect(defaultComponent).to.have.tagName('button')
   })
 
-  it('has an is-selected class', () => {
-    expect(defaultComponent.find('is-selected')).to.have.length(0)
+  it('renders children', () => {
+    expect(defaultComponent).to.have.text('Tag')
+  })
+
+  it('renders <class> without is-selected', () => {
+    expect(defaultComponent).not.to.have.attr('selected')
   })
 
   describe('<Button />', () => {
      const component = shallow(
-      <ButtonTag className="k-ButtonTag--custom" />
+      <ButtonTag className="k-ButtonTag--custom"
+                 selected={ false } />
     )
 
     it('renders a <Button class="k-ButtonTag" />', () => {
       expect(component).to.have.tagName('button')
+      expect(component).to.have.text('Tag')
       expect(component).to.have.className('k-ButtonTag--custom')
       expect(component).to.have.className('k-ButtonTag--hydrogen')
     })
 
     describe('button with is-selected class', () => {
-      const componentWithIsSelected = shallow(
-        <ButtonTag isSelected={ true } />
+      const componentWithSelected = shallow(
+        <ButtonTag selected={ true } />
       )
 
       it('has an is-selected', () => {
-        expect(componentWithIsSelected).to.have.className('is-selected')
+        expect(componentWithSelected).to.have.className('is-selected')
       })
     })
   })

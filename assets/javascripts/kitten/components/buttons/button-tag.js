@@ -7,14 +7,14 @@ export class ButtonTag extends React.Component {
             tag,
             modifier,
             children,
-            isSelected,
+            selected,
             ...others } = this.props
 
     const buttonTagClassNames = classNames(
       'k-ButtonTag',
       className,
       `k-ButtonTag--${modifier}`,
-      { 'is-selected': isSelected },
+      { 'is-selected': selected },
     )
 
     const Tag = tag
@@ -31,5 +31,5 @@ ButtonTag.defaultProps = {
   tag: 'button',
   modifier: 'hydrogen',
   children: 'Tag',
-  isSelected: false,
+  selected: false,
 }
