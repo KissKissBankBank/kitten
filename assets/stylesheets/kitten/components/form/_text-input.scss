@@ -73,11 +73,11 @@
       cursor: not-allowed;
 
       &::placeholder {
-        opacity: 1 !important;
+        opacity: 1;
       }
 
       &::-moz-placeholder {
-        opacity: 1 !important;
+        opacity: 1;
       }
     }
 

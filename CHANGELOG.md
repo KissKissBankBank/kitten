@@ -3,7 +3,8 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
-- Fix: Update color disabled placeholder for `Text-input`.
+
+- Fix: Update color for placeholder on disabled `Text-input`.
 - Fix: Update color `Checkbox` disabled.
 - Fix: Update color `RadioButton` disabled.
 - Feature: Add new `Title` React component.
