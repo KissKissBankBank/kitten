@@ -34,4 +34,18 @@ describe('Checkbox with default props', () => {
       expect(input).to.have.attr('id', 'input-1')
     })
   })
+
+  describe('renders children', () => {
+    const componentChildren = shallow(
+      <Checkbox>
+        <svg />
+      </Checkbox>
+    )
+
+    it('it children', () => {
+      const labelChildren = componentChildren.find('label').children()
+
+      expect(labelChildren).to.have.tagName('svg')
+    })
+  })
 })
