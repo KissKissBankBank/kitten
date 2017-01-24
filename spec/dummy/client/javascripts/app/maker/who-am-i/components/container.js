@@ -4,7 +4,6 @@ import { SideGrid,
          SideGridContent,
          SideGridAside } from 'kitten/components/grid/side-grid'
 import { Grid, GridCol } from 'kitten/components/grid/grid'
-import { Stepper } from 'kitten/components/steppers/stepper'
 import { RadioButton } from 'kitten/components/form/radio-button'
 import { Checkbox } from 'kitten/components/form/checkbox'
 import { FormActions } from 'kitten/components/form/form-actions'
@@ -13,6 +12,7 @@ import { Title } from 'kitten/components/typography/title'
 import { Paragraph } from 'kitten/components/typography/paragraph'
 import DocLinkBox from 'kitten/components/box/doc-link-box'
 import { KarlMakerHeader } from 'app/maker/components/maker-header'
+import { KarlMakerStepper } from 'app/maker/components/maker-stepper'
 
 export class KarlMakerWhoAmIStep extends React.Component {
   getParamValue(name) {
@@ -26,15 +26,8 @@ export class KarlMakerWhoAmIStep extends React.Component {
   }
 
   renderStepper() {
-    if (!this.props.stepper.items)
-      return
-
     return (
-      <div className="k-Row k-Row--centered k-Row--lightBottomBorder">
-        <div className="k-Row__content">
-          <Stepper items={ this.props.stepper.items } />
-        </div>
-      </div>
+      <KarlMakerStepper { ...this.props.stepper } />
     )
   }
 
