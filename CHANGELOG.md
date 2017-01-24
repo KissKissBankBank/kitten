@@ -15,6 +15,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fix: Change transition on `k-RadioButton`.
 - Fix: Change `k-LinkBox` display before `m` version.
 - Fix: Change `k-SingleColumn` width according to the media.
+- Fix: Update color for placeholder on disabled `Text-input`.
+- Feature: Add `children` props to `Checkbox`.
 - Feature: Add new `HeaderTitles` component.
 - Fix: Update color `Checkbox` disabled.
 - Fix: Update color `RadioButton` disabled.
