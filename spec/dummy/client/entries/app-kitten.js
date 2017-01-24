@@ -44,6 +44,7 @@ import NavList from 'kitten/components/lists/nav-list'
 
 // Popovers
 import { Popover } from 'kitten/components/popovers/popover'
+import { CallToActionPopover } from 'kitten/components/popovers/call-to-action-popover'
 
 // Simulators
 import LoanSimulator from 'kitten/components/simulators/loan-simulator'
@@ -151,6 +152,7 @@ ReactOnRails.register({
   NavList,
 
   // Popovers
+  CallToActionPopover,
   Popover,
 
   // Simulators

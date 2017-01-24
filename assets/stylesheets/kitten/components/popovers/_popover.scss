@@ -54,4 +54,60 @@
   .k-Popover__close {
     margin-left: $margin-container;
   }
+
+  .k-Popover__illustration {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: k-px-to-rem(80px);
+  }
+
+  .k-Popover__svg--primary {
+    fill: map-get($k-colors, 'font-1');
+  }
+
+  .k-Popover__container {
+    display: flex;
+  }
+
+  .k-Popover__content {
+    @include k-typographyFont('source-sans-light');
+
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    margin-top: 1rem;
+    margin-left: 1rem;
+  }
+
+  .k-Popover__title {
+    @include k-typographyFont('source-sans-semi-bold');
+    @include k-typographyFontSize(2);
+
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .k-Popover__text {
+    @include k-typographyFont('source-sans-light');
+    @include k-typographyFontSize(0);
+
+    margin: 1em 0;
+  }
+
+  .k-Popover__navigation {
+    position: absolute;
+    bottom: k-px-to-rem(20px);
+
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+
+    width: k-px-to-rem(305px);
+  }
+
+  .k-Popover__buttons {
+    display: flex;
+  }
 }

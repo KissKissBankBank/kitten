@@ -2,18 +2,16 @@ import React from 'react'
 import classNames from 'classnames'
 
 export class Popover extends React.Component {
-  renderCloseButton() {
-    return (
-      <Popover closeLabel={ closeButtonLabel }
-               onClick={ function(){} popoverClassName='k-Tour__popover' containerClassName='k-Tour__popover__container' } />
-    )
+
+  handleCloseClick() {
+    if (this.props.onCloseClick) return this.props.onCloseClick()
   }
 
-  renderButton() {
+  renderCloseButton() {
     return (
-      <button title={ this.props.closeLabel }
-              aria-label={ this.props.closeLabel }
-              onClick={ this.props.onCloseClick }
+      <button title={ this.props.closeButtonLabel }
+              aria-label={ this.props.closeButtonLabel }
+              onClick={ this.handleCloseClick }
               className="k-ButtonIcon
                          k-ButtonIcon--hydrogen
                          k-ButtonIcon--tiny">
@@ -28,18 +26,28 @@ export class Popover extends React.Component {
   }
 
   render() {
-    const { ...others } = this.props
+    const { children, popoverClassName, containerClassName, ...others } = this.props
+
+    const popoverClassNames = classNames(
+      "k-Popover",
+      popoverClassName
+    )
+
+    const containerClassNames = classNames(
+      "k-Popover__container",
+      containerClassName
+    )
+
     return (
       <div ref="popover"
-           className="k-Popover" { popoverClassName }
+           className={ popoverClassNames }
            role="dialog"
            aria-hidden="true"
            aria-labelledby="dialogtitle"
            { ...others }>
-        <div className="k-Popover__container" { containerClassName }>
+        <div className={ containerClassNames }>
           { children }
           <div className="k-Popover__close">{ this.renderCloseButton() }</div>
-          }
         </div>
       </div>
     )
@@ -47,6 +55,7 @@ export class Popover extends React.Component {
 }
 
 Popover.defaultProps = {
-  closeLabel:
   closeButtonLabel: 'Close',
+  popoverClassName: "",
+  containerClassName: "",
 }
