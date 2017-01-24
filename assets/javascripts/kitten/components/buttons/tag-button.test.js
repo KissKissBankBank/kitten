@@ -4,7 +4,7 @@ import { shallow } from 'enzyme'
 import { TagButton } from 'kitten/components/buttons/tag-button'
 
 
-describe('TagButton with default props', () => {
+describe('TagButton', () => {
   const defaultComponent = shallow(
     <TagButton />)
 
@@ -16,52 +16,44 @@ describe('TagButton with default props', () => {
     expect(defaultComponent).to.have.tagName('button')
   })
 
-  it('renders children', () => {
+  it('with children', () => {
     expect(defaultComponent).to.have.text('Tag')
   })
 
-  describe('<Button />', () => {
-    const component = shallow(
+  describe('<TagButton />', () => {
+
+    describe('basic props', () => {
+      const component = shallow(
       <TagButton className="k-TagButton--custom"
                  selected={ false } />
-    )
+      )
 
-    it('renders a <Button class="k-TagButton" />', () => {
-      expect(component).to.have.tagName('button')
-      expect(component).to.have.text('Tag')
-      expect(component).to.have.className('k-TagButton--custom')
-      expect(component).to.have.className('k-TagButton--hydrogen')
-    })
+      it('renders a <Button class="k-TagButton" />', () => {
+        expect(component).to.have.tagName('button')
+        expect(component).to.have.text('Tag')
+        expect(component).to.have.className('k-TagButton--custom')
+        expect(component).to.have.className('k-TagButton--hydrogen')
+      })
 
     describe('tag prop', () => {
       const component = shallow(
         <a className="k-TagButton" />
       )
 
-      it('it renders a <a className"k-TagButton" />', () => {
+      it('accepts <a className"k-TagButton" />', () => {
         expect(component).to.have.tagName('a')
       })
     })
 
-    describe('renders children', () => {
+    describe('children', () => {
       const component = shallow(
         <TagButton>
           <svg />
         </TagButton>
       )
 
-      it('it children', () => {
+      it('has children', () => {
         expect(component.children()).to.have.tagName('svg')
-      })
-    })
-
-    describe('button with selected', () => {
-      const componentWithSelected = shallow(
-        <TagButton selected={ true } />
-      )
-
-      it('has an is-selected class', () => {
-        expect(componentWithSelected).to.have.className('is-selected')
       })
     })
   })
