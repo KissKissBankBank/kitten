@@ -4,7 +4,6 @@ import classNames from 'classnames'
 export class Button extends React.Component {
   render() {
     const { className,
-            children,
             tag,
             modifier,
             size,
@@ -23,23 +22,14 @@ export class Button extends React.Component {
 
     const Tag = tag
 
-    if (tag == "input") {
-      return (
-        <Tag className={ buttonClassNames } { ...others } />
-      )
-    } else {
-      return (
-        <Tag className={ buttonClassNames } { ...others }>
-          { children }
-        </Tag>
-      )
-    }
+    return (
+      <Tag className={ buttonClassNames } { ...others } />
+    )
   }
 }
 
 Button.defaultProps = {
   tag: 'button',
   modifier: 'hydrogen',
-  children: 'Button',
   iconOnRight: false,
 }
