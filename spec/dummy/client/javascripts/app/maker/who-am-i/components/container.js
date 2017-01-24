@@ -37,12 +37,13 @@ export class KarlMakerWhoAmIStep extends React.Component {
     )
   }
 
-  renderRadioButtons() {
-    const { name, items } = this.props.form.radioButtons
+  renderBillingTypes() {
+    const { name, defaultValue, items } = this.props.form.billingTypes
     const currentValue = this.getParamValue(name)
 
     return items.map(item => {
-      const checked = currentValue && currentValue == item.value
+      const checked = (defaultValue == item.value) ||
+                      (currentValue && currentValue == item.value)
 
       return (
         <RadioButton className="k-u-margin-bottom-triple"
@@ -56,8 +57,8 @@ export class KarlMakerWhoAmIStep extends React.Component {
     })
   }
 
-  renderCheckboxes() {
-    const { items } = this.props.form.checkboxes
+  renderChallenges() {
+    const { items } = this.props.form.challenges
 
     return items.map(item => {
       const currentValue = this.getParamValue(item.name)
@@ -106,8 +107,8 @@ export class KarlMakerWhoAmIStep extends React.Component {
           <GridCol col-s="10" offset-s="1" col-l="8">
             <form>
               { this.renderTitle() }
-              { this.renderRadioButtons() }
-              { this.renderCheckboxes() }
+              { this.renderBillingTypes() }
+              { this.renderChallenges() }
               { this.renderActions() }
             </form>
           </GridCol>
