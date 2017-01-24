@@ -3,7 +3,7 @@ import classNames from 'classnames'
 
 export class RadioButton extends React.Component {
   renderContent() {
-    if (!this.props.children)
+    if (!this.props.children && !this.props.content)
       return
 
     const labelContentsClassNames = classNames(
@@ -12,7 +12,7 @@ export class RadioButton extends React.Component {
     )
     return (
       <div className={ labelContentsClassNames }>
-        { this.props.children }
+        { this.props.children || this.props.content }
       </div>
     )
   }
