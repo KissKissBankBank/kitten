@@ -26,7 +26,6 @@ describe('RadioButton with default props', () => {
   describe('<RadioButton />', () => {
     const component = shallow(
       <RadioButton id="karl-radio-button-1"
-                   content=" "
                    large="false"
                    largeContent="false" />
     )

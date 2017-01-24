@@ -24,6 +24,7 @@ export class RadioButton extends React.Component {
             large,
             largeContent,
             children,
+            content,
             ...others } = this.props
 
     let radioButtonClassNames = classNames (
@@ -53,5 +54,6 @@ RadioButton.defaultProps = {
   text: 'Default',
   large: false,
   largeContent: false,
+  // DEPRECATED.
   content: '',
 }
