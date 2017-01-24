@@ -16,8 +16,8 @@ export class HeaderLogo extends React.Component {
       'k-Header__logo',
       className,
       {
-        'k-Header__logo--lightOnM': this.props.lightOnM,
-        'k-Header__logo--lightOnXxs': this.props.lightOnXxs,
+        'k-Header__logo--lightOnM': lightOnM,
+        'k-Header__logo--lightOnXxs': lightOnXxs,
       },
     )
 
