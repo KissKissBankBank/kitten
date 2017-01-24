@@ -38,36 +38,39 @@ export class KarlMakerWhoAmIStep extends React.Component {
   }
 
   renderBillingTypes() {
-    const { name, defaultValue, items } = this.props.form.billingTypes
+    const { items } = this.props.form.billingTypes
+    return items.map(item => this.renderBillingTypesOption(item))
+  }
+
+  renderBillingTypesOption(option) {
+    const { name, defaultValue } = this.props.form.billingTypes
     const currentValue = this.getParamValue(name)
+    const checked = (defaultValue == option.value) ||
+                    (currentValue && currentValue == option.value)
 
-    return items.map(item => {
-      const checked = (defaultValue == item.value) ||
-                      (currentValue && currentValue == item.value)
-
-      return (
-        <RadioButton className="k-u-margin-bottom-triple"
-                     key={ item.id }
-                     name={ name }
-                     defaultChecked={ checked }
-                     { ...item }>
-          <Paragraph modifier="quaternary">{ item.content }</Paragraph>
-        </RadioButton>
-      )
-    })
+    return (
+      <RadioButton className="k-u-margin-bottom-triple"
+                   key={ option.id }
+                   name={ name }
+                   defaultChecked={ checked }
+                   { ...option }>
+        <Paragraph modifier="quaternary">{ option.content }</Paragraph>
+      </RadioButton>
+    )
   }
 
   renderChallenges() {
     const { items } = this.props.form.challenges
+    return items.map(item => this.renderChallengesOption(item))
+  }
 
-    return items.map(item => {
-      const currentValue = this.getParamValue(item.name)
-      const checked = currentValue && currentValue == item.value
+  renderChallengesOption(option) {
+    const currentValue = this.getParamValue(option.name)
+    const checked = currentValue && currentValue == option.value
 
-      return (
-        <Checkbox key={ item.id } defaultChecked={ checked } { ...item } />
-      )
-    })
+    return (
+      <Checkbox key={ option.id } defaultChecked={ checked } { ...option } />
+    )
   }
 
   renderActions() {
