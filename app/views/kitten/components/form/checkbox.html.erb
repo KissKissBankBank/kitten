@@ -1,13 +1,13 @@
 <%= example 'Checkbox' do %>
   <%= react_component('Checkbox', props: {
       id: "input-1",
-      text: "Filter 1",
+      children: "Filter 1",
     }
   ) %>
 
   <%= react_component('Checkbox', props: {
       id: "input-2",
-      text: "Filter 2",
+      children: "Filter 2",
       defaultChecked: true,
     }
   ) %>
@@ -16,14 +16,14 @@
 <%= example 'Disabled checkbox' do %>
   <%= react_component('Checkbox', props: {
       id: "input-3",
-      text: "Filter 1",
+      children: "Filter 1",
       disabled: true,
     }
   ) %>
 
   <%= react_component('Checkbox', props: {
       id: "input-4",
-      text: "Filter 2",
+      children: "Filter 2",
       defaultChecked: true,
       disabled: true,
     }

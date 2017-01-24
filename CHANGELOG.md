@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add new `TagButton` React component.
+- Feature: Add `children` props to `Checkbox`.
 - Feature: Add new `HeaderTitles` component.
 - Fix: Update color `Checkbox` disabled.
 - Fix: Update color `RadioButton` disabled.
