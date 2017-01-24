@@ -100,9 +100,7 @@ import { KarlParagraph,
 import { KarlButtonIconHeartRight,
          KarlButtonIconHeartLeft
        } from 'kitten/karl/buttons/button-heart-icon-words'
-
-// Maker steps.
-import { MakerWhoAmIStep } from 'app/maker/who-am-i/components/container'
+import { KarlMakerWhoAmIStep } from 'app/maker/who-am-i/components/container'
 
 ReactOnRails.register({
   // Box
@@ -202,7 +200,5 @@ ReactOnRails.register({
   KarlParagraphTertiary,
   KarlParagraphQuaternary,
   KarlParagraphWithLink,
-
-  // Maker
-  MakerWhoAmIStep,
+  KarlMakerWhoAmIStep,
 })

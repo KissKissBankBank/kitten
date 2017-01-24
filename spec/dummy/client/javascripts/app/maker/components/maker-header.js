@@ -7,7 +7,7 @@ import { HeaderLogo } from 'kitten/components/headers/header-logo'
 import { HeaderTitles } from 'kitten/components/headers/header-titles'
 import { Button } from 'kitten/components/buttons/button'
 
-export class MakerHeader extends React.Component {
+export class KarlMakerHeader extends React.Component {
   render() {
     return (
       <Header>

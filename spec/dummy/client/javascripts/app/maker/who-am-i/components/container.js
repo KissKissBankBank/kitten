@@ -12,19 +12,16 @@ import { Button } from 'kitten/components/buttons/button'
 import { Title } from 'kitten/components/typography/title'
 import { Paragraph } from 'kitten/components/typography/paragraph'
 import DocLinkBox from 'kitten/components/box/doc-link-box'
-import { MakerHeader } from 'app/maker/components/maker-header'
+import { KarlMakerHeader } from 'app/maker/components/maker-header'
 
-export class MakerWhoAmIStep extends React.Component {
-
+export class KarlMakerWhoAmIStep extends React.Component {
   getParamValue(name) {
     return this.props.project.params[name]
   }
 
   renderHeader() {
-    const { header } = this.props
-
     return (
-      <MakerHeader { ...header } />
+      <KarlMakerHeader { ...this.props.header } />
     )
   }
 
