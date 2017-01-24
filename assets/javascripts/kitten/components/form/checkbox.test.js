@@ -35,14 +35,14 @@ describe('Checkbox with default props', () => {
     })
   })
 
-  describe('renders children', () => {
+  describe('with children', () => {
     const componentChildren = shallow(
       <Checkbox>
         <svg />
       </Checkbox>
     )
 
-    it('it children', () => {
+    it('renders the children inside the label', () => {
       const labelChildren = componentChildren.find('label').children()
 
       expect(labelChildren).to.have.tagName('svg')

@@ -22,6 +22,6 @@ export class Checkbox extends React.Component {
 
 Checkbox.defaultProps = {
   children: 'Filter 1',
-  // Deprecated
+  // DEPRECATED
   text: null,
 }
