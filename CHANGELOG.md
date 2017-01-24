@@ -8,7 +8,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Add elements in `k-Header`.
 - Feature: Add container in `k-VerticalGrid`.
 - Feature: Add styles on `k-Checkbox`.
-- Fix: `RadioButton` use children to display content.
+- Fix: `RadioButton` uses children to display content.
 - Fix: Fix flex in `k-Header`.
 - Fix: Fix aside `flex-direction` in `k-SideGrid`.
 - Fix: Remove overflow on `k-Row`.
