@@ -47,6 +47,7 @@ export class CallToActionPopover extends React.Component {
               { this.renderButtonsList() }
             </div>
           </div>
+
         </div>
       </Popover>
     )

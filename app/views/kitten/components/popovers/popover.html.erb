@@ -20,4 +20,20 @@
     }) %>
   <% end %>
 
+  <%= example 'Call To Action with illustration Popover' do %>
+    <%= react_component('CallToActionPopover', props: {
+      title: "Instantly break out",
+      text: "Spend all night ensuring people don't sleep sleep all day pee in human's bed until he cleans the litter box put butt in owner's face.
+        Spend all night ensuring people don't sleep sleep all day pee in human's bed until he cleans the litter box put butt in owner's face.",
+      withIllustration: true,
+      buttons: [{
+        label: "Découvrir",
+        modifier: "boron",
+        size: "",
+        tag: "a",
+        href: "http://www.catipsum.com",
+      }]
+    }) %>
+  <% end %>
+
 </div>

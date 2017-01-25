@@ -25,8 +25,22 @@ export class Popover extends React.Component {
     )
   }
 
+  renderContent() {
+    if (typeof this.props.children != 'string') {
+      return this.props.children
+    }
+
+    return (
+      <div className="k-Popover__content"> { this.props.children } </div>
+    )
+  }
+
   render() {
-    const { children, popoverClassName, containerClassName, ...others } = this.props
+    const { children,
+            popoverClassName,
+            containerClassName,
+            ...others }
+      = this.props
 
     const popoverClassNames = classNames(
       "k-Popover",
@@ -46,7 +60,7 @@ export class Popover extends React.Component {
            aria-labelledby="dialogtitle"
            { ...others }>
         <div className={ containerClassNames }>
-          { children }
+          { this.renderContent() }
           <div className="k-Popover__close">{ this.renderCloseButton() }</div>
         </div>
       </div>

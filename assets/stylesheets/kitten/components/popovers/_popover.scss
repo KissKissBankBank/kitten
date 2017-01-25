@@ -33,8 +33,11 @@
   $border-size: 1px;
   $border-radius: k-px-to-rem(15px);
   $margin-container: k-px-to-rem(10px);
+  $font: 'source-sans-light';
+  $font-title: 'source-sans-semi-bold';
 
   .k-Popover {
+    @include k-typographyFont($font);
     position: relative;
 
     width: k-px-to-rem(465px);
@@ -71,7 +74,7 @@
   }
 
   .k-Popover__content {
-    @include k-typographyFont('source-sans-light');
+    @include k-typographyFont($font);
 
     display: flex;
     flex-direction: column;
@@ -82,7 +85,7 @@
   }
 
   .k-Popover__title {
-    @include k-typographyFont('source-sans-semi-bold');
+    @include k-typographyFont($font-title);
     @include k-typographyFontSize(2);
 
     margin-top: 0;
@@ -90,19 +93,19 @@
   }
 
   .k-Popover__text {
-    @include k-typographyFont('source-sans-light');
+    @include k-typographyFont($font);
     @include k-typographyFontSize(0);
 
     margin: 1em 0;
   }
 
   .k-Popover__navigation {
-    position: absolute;
     bottom: k-px-to-rem(20px);
 
     display: flex;
     justify-content: space-between;
     margin-top: auto;
+    padding-bottom: k-px-to-rem(15px);
 
     width: k-px-to-rem(305px);
   }
