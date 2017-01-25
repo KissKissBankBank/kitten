@@ -4,11 +4,11 @@ import { Button } from 'kitten/components/buttons/button'
 
 export class CallToActionPopover extends React.Component {
   renderIllustration() {
-    if (!this.props.withIllustration) return
+    if (!this.props.illustration) return
 
     return (
     <div className="k-Popover__illustration">
-      SVG style
+      { this.props.illustration }
     </div>)
   }
 
@@ -55,6 +55,6 @@ export class CallToActionPopover extends React.Component {
 CallToActionPopover.defaultProps = {
   title: "",
   text: "",
-  withIllustration: false,
+  illustration: null,
   buttons: null,
 }
