@@ -20,40 +20,38 @@ describe('TagButton', () => {
     expect(defaultComponent).to.have.text('Tag')
   })
 
-  //describe('<TagButton />', () => {
+  describe('<TagButton />', () => {
 
-  describe('basic props', () => {
-    const component = shallow(
-      <TagButton className="k-TagButton--custom"
-                 selected={ false } />
-    )
-
-    it('renders a <Button class="k-TagButton" />', () => {
-      expect(component).to.have.tagName('button')
-      expect(component).to.have.text('Tag')
-      expect(component).to.have.className('k-TagButton--custom')
-      expect(component).to.have.className('k-TagButton--hydrogen')
-    })
-
-    describe('tag prop', () => {
+    describe('basic props', () => {
       const component = shallow(
-        <a className="k-TagButton" />
-      )
+        <TagButton className="k-TagButton--custom"
+                   selected={ false } />)
 
-      it('accepts <a className"k-TagButton" />', () => {
-        expect(component).to.have.tagName('a')
+      it('renders a <Button class="k-TagButton" />', () => {
+        expect(component).to.have.tagName('button')
+        expect(component).to.have.text('Tag')
+        expect(component).to.have.className('k-TagButton--custom')
+        expect(component).to.have.className('k-TagButton--hydrogen')
       })
-    })
 
-    describe('children', () => {
-      const component = shallow(
-        <TagButton>
-          <svg />
-        </TagButton>
-      )
+      describe('tag prop', () => {
+        const component = shallow(
+          <a className="k-TagButton" />)
 
-      it('has children', () => {
-        expect(component.children()).to.have.tagName('svg')
+        it('accepts <a className"k-TagButton" />', () => {
+          expect(component).to.have.tagName('a')
+        })
+      })
+
+      describe('children', () => {
+        const component = shallow(
+          <TagButton>
+            <svg />
+          </TagButton>)
+
+        it('has children', () => {
+          expect(component.children()).to.have.tagName('svg')
+        })
       })
     })
   })
