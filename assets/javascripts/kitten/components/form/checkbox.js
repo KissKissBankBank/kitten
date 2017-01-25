@@ -1,6 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
-import { deprecated } from 'react-prop-types'
+import deprecated from 'react-prop-types/lib/deprecated'
 
 export class Checkbox extends React.Component {
   render() {
