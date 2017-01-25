@@ -3,14 +3,21 @@ import classNames from 'classnames'
 
 export class HeaderLogo extends React.Component {
   render() {
-    const { className, src, alt, width, height, ...other } = this.props
+    const { className,
+            src,
+            alt,
+            width,
+            height,
+            lightOnM,
+            lightOnXxs,
+            ...other } = this.props
     const imgProps = { src, alt, width, height }
     const linkClassName = classNames(
       'k-Header__logo',
       className,
       {
-        'k-Header__logo--lightOnM': this.props.lightOnM,
-        'k-Header__logo--lightOnXxs': this.props.lightOnXxs,
+        'k-Header__logo--lightOnM': lightOnM,
+        'k-Header__logo--lightOnXxs': lightOnXxs,
       },
     )
 
