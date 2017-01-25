@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add deprecated function.
 - Feature: Add `quadruple` utilities in `k-utilities-margin`.
 - Feature: Add elements in `k-Header`.
 - Feature: Add container in `k-VerticalGrid`.
