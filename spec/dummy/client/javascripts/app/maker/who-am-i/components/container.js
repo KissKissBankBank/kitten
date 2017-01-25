@@ -54,7 +54,7 @@ export class KarlMakerWhoAmIStep extends React.Component {
                    name={ name }
                    defaultChecked={ checked }
                    { ...option }>
-        <Paragraph modifier="quaternary">{ option.content }</Paragraph>
+        <Paragraph modifier="quaternary">{ option.children }</Paragraph>
       </RadioButton>
     )
   }

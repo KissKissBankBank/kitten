@@ -49,6 +49,7 @@
     "pubsub-js": "^1.5.3",
     "react": "^15.3.1",
     "react-dom": "^15.3.1",
+    "react-is-deprecated": "^0.1.2",
     "react-on-rails": "^6.1.0",
     "react-select": "^1.0.0-rc.1",
     "react-tooltip": "^3.2.2",

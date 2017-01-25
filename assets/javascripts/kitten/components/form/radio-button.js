@@ -1,5 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
+import { deprecate } from 'react-is-deprecated'
 
 export class RadioButton extends React.Component {
   renderContent() {
@@ -53,6 +54,9 @@ RadioButton.defaultProps = {
   text: 'Default',
   large: false,
   largeContent: false,
-  // DEPRECATED.
-  content: '',
+}
+
+RadioButton.propTypes = {
+  content: deprecate(React.PropTypes.string,
+    '"content" property of "RadioButton" has been deprecated.')
 }
