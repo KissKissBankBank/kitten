@@ -13,12 +13,10 @@ export class CallToActionPopover extends React.Component {
   }
 
   renderButton(options) {
-    const{ modifier, size, tag, label } = options
+    const { label, ...others } = options
 
     return (
-      <Button modifier={ modifier }
-              size={ size }
-              tag={ tag }>
+      <Button { ...others }>
         { label }
       </Button>
     )
