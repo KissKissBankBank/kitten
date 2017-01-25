@@ -21,6 +21,10 @@ export class Checkbox extends React.Component {
   }
 }
 
+Checkbox.defaultProps = {
+  children: 'Filter 1',
+}
+
 Checkbox.propTypes = {
   text: deprecate(React.PropTypes.string,
     '"text" property of "Checkbox" has been deprecated.')
