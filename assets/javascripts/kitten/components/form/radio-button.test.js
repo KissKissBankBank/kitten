@@ -26,7 +26,6 @@ describe('RadioButton with default props', () => {
   describe('<RadioButton />', () => {
     const component = shallow(
       <RadioButton id="karl-radio-button-1"
-                   content=" "
                    large="false"
                    largeContent="false" />
     )
@@ -66,14 +65,15 @@ describe('RadioButton with default props', () => {
 
     describe('with content', () => {
       const componentWithContent = shallow(
-        <RadioButton content="Harum trium …"
-                     largeContent="true" />
+        <RadioButton largeContent="true">
+          <p>Harum trium…</p>
+        </RadioButton>
       )
 
       it('has a content class', () => {
         const content = componentWithContent.find('.k-RadioButton__labelContents')
 
-        expect(content).to.have.text("Harum trium …")
+        expect(content).to.have.text("Harum trium…")
         expect(content).to.have.className("k-RadioButton__labelContents--large")
       })
     })

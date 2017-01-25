@@ -4,6 +4,17 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `quadruple` utilities in `k-utilities-margin`.
+- Feature: Add elements in `k-Header`.
+- Feature: Add container in `k-VerticalGrid`.
+- Feature: Add styles on `k-Checkbox`.
+- Fix: `RadioButton` uses children to display content.
+- Fix: Fix flex in `k-Header`.
+- Fix: Fix aside `flex-direction` in `k-SideGrid`.
+- Fix: Remove overflow on `k-Row`.
+- Fix: Change transition on `k-RadioButton`.
+- Fix: Change `k-LinkBox` display before `m` version.
+- Fix: Change `k-SingleColumn` width according to the media.
 - Fix: Update color for placeholder on disabled `Text-input`.
 - Feature: Add `children` props to `Checkbox`.
 - Feature: Add new `HeaderTitles` component.

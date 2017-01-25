@@ -41,8 +41,8 @@ export class HeaderItems extends React.Component {
 
 export class HeaderItem extends React.Component {
   render() {
-    const { className, fixedSize, ...other } = this.props
-    const Tag = this.props.tag
+    const { className, fixedSize, tag, ...other } = this.props
+    const Tag = tag
     const itemClassName = classNames(
       'k-Header__item',
       { 'k-Header__item--fixedSize': fixedSize },
