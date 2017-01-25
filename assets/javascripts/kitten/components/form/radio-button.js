@@ -3,16 +3,16 @@ import classNames from 'classnames'
 
 export class RadioButton extends React.Component {
   renderContent() {
-    if (!this.props.children && !this.props.content) return
+    // `content` prop is DEPRECATED.
+    const content = this.props.children || this.props.content
+    if (!content) return
 
     const labelContentsClassNames = classNames(
       'k-RadioButton__labelContents',
       { 'k-RadioButton__labelContents--large': this.props.largeContent }
     )
     return (
-      <div className={ labelContentsClassNames }>
-        { this.props.children || this.props.content }
-      </div>
+      <div className={ labelContentsClassNames }>{ content }</div>
     )
   }
 
