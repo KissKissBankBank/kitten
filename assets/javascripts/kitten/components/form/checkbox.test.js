@@ -21,7 +21,7 @@ describe('Checkbox with default props', () => {
     const component = shallow(
       <Checkbox id="input-1"
                 htmlFor="input-1"
-                text="Filter 1" />
+                children="Filter 1" />
     )
 
     it('renders a <div class="k-Checkbox" />', () => {
@@ -32,6 +32,20 @@ describe('Checkbox with default props', () => {
       const input = component.find('input')
 
       expect(input).to.have.attr('id', 'input-1')
+    })
+  })
+
+  describe('with children', () => {
+    const componentChildren = shallow(
+      <Checkbox>
+        <svg />
+      </Checkbox>
+    )
+
+    it('renders the children inside the label', () => {
+      const labelChildren = componentChildren.find('label').children()
+
+      expect(labelChildren).to.have.tagName('svg')
     })
   })
 })

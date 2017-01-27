@@ -1,9 +1,10 @@
 import React from 'react'
 import classNames from 'classnames'
+import deprecated from 'react-prop-types/lib/deprecated'
 
 export class Checkbox extends React.Component {
   render() {
-    const { id, text, ...others } = this.props
+    const { id, children, text, ...others } = this.props
 
     return (
       <div className="k-Checkbox">
@@ -13,7 +14,7 @@ export class Checkbox extends React.Component {
                { ...others } />
 
         <label htmlFor={ id } className="k-Checkbox__label">
-          { text }
+          { children || text }
         </label>
       </div>
     )
@@ -21,5 +22,9 @@ export class Checkbox extends React.Component {
 }
 
 Checkbox.defaultProps = {
-  text: 'Filter 1',
+  children: 'Filter 1',
+}
+
+Checkbox.propTypes = {
+  text: deprecated(React.PropTypes.string, 'Use `children` prop instead')
 }

@@ -10,6 +10,7 @@ import LinkBox from 'kitten/components/box/link-box'
 import { Button } from 'kitten/components/buttons/button'
 import ButtonImageWithTextAndBadge from 'kitten/components/buttons/button-image-with-text-and-badge'
 import ButtonTooltipIcon from 'kitten/components/buttons/button-tooltip-icon'
+import { TagButton } from 'kitten/components/buttons/tag-button'
 
 // Dev
 import { DevGrid } from 'kitten/components/dev/dev-grid'
@@ -105,6 +106,7 @@ import { KarlParagraph,
 import { KarlButtonIconHeartRight,
          KarlButtonIconHeartLeft
        } from 'kitten/karl/buttons/button-heart-icon-words'
+import { KarlMakerWhoAmIStep } from 'app/maker/who-am-i/components/container'
 
 ReactOnRails.register({
   // Box
@@ -115,6 +117,7 @@ ReactOnRails.register({
   Button,
   ButtonImageWithTextAndBadge,
   ButtonTooltipIcon,
+  TagButton,
 
   // Dev
   Checkbox,
@@ -209,4 +212,5 @@ ReactOnRails.register({
   KarlParagraphTertiary,
   KarlParagraphQuaternary,
   KarlParagraphWithLink,
+  KarlMakerWhoAmIStep,
 })
