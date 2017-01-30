@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `inputClassName` on `RadioButton` and `Checkbox` components.
 - Feature: Add new `TagButton` React component.
 
 ## [5.5.0] - 2017-01-25
