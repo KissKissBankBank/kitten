@@ -3,7 +3,8 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
-- Update color `Select` disabled.
+
+- Fix: Update disabled color for `Select`.
 
 ## [5.6.0] - 2017-01-30
 
