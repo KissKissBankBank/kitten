@@ -11,15 +11,22 @@ describe('Popover', () => {
   it('renders <div class="k-Popover">', () => {
     expect(defaultComponent.find('.k-Popover')).to.have.length(1)
   })
+
+  it('renders <div class= "k-Popover__content">', () => {
+    expect(defaultComponent.find('.k-Popover__content')).to.have.length(0)
+  })
 })
 
 describe('<Popover />', () => {
 
   describe('basic props', () => {
     const component = shallow(
-      <Popover>
-      </Popover>
+      <Popover className="k-Popover"/>
     )
+
+    it('renders a <Popover class="k-Popover" />', () => {
+      expect(component).to.have.className('k-Popover')
+    })
   })
 })
 
@@ -41,21 +48,16 @@ describe('with close button', () => {
 
       describe('children', () => {
         const componentWithCloseButton = shallow(
-
           <Button>
             <svg />
           </Button>)
 
-        it('has achildren', () => {
+        it('has children', () => {
           expect(componentWithCloseButton.children()).to.have.tagName('svg')
         })
       })
-
     })
   })
 })
 
-describe('with content', () => {
-
-})
 
