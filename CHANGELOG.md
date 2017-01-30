@@ -7,7 +7,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Add new `KarlLoudspeakerPopover` React component.
 - Feature: Add new `Popover` React component.
 - Feature: Add new `CallToActionPopover` React component.
-- Feature: Add new `TagButton` React component.
+
+## [5.6.0] - 2017-01-30
+
+Features:
+- Add `className` prop on `Checkbox` component.
+- Add `inputClassName` prop on `RadioButton` and `Checkbox` components.
+- Add new `TagButton` React component.
 
 ## [5.5.0] - 2017-01-25
 
