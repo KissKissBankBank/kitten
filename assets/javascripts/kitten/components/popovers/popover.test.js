@@ -11,10 +11,6 @@ describe('Popover', () => {
   it('renders <div class="k-Popover">', () => {
     expect(defaultComponent.find('.k-Popover')).to.have.length(1)
   })
-
-  it('renders <div class= "k-Popover__content">', () => {
-    expect(defaultComponent.find('.k-Popover__content')).to.have.length(0)
-  })
 })
 
 describe('<Popover />', () => {
