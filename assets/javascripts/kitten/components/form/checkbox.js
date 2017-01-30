@@ -4,14 +4,19 @@ import deprecated from 'react-prop-types/lib/deprecated'
 
 export class Checkbox extends React.Component {
   render() {
-    const { id, children, text, ...others } = this.props
+    const { className,
+            id,
+            children,
+            text,
+            inputClassName,
+            ...inputProps } = this.props
 
     return (
-      <div className="k-Checkbox">
+      <div className={ classNames('k-Checkbox', className) }>
         <input id={ id }
                type="checkbox"
-               className="k-Checkbox__input"
-               { ...others } />
+               className={ classNames('k-Checkbox__input', inputClassName) }
+               { ...inputProps } />
 
         <label htmlFor={ id } className="k-Checkbox__label">
           { children || text }

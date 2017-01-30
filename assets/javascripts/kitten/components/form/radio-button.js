@@ -25,6 +25,7 @@ export class RadioButton extends React.Component {
             largeContent,
             children,
             content,
+            inputClassName,
             ...inputProps } = this.props
 
     let radioButtonClassNames = classNames (
@@ -36,7 +37,7 @@ export class RadioButton extends React.Component {
       <div className={ classNames('k-RadioButton', className) }>
         <input id={ id }
                type="radio"
-               className="k-RadioButton__input"
+               className={ classNames('k-RadioButton__input', inputClassName) }
                { ...inputProps } />
 
         <label htmlFor={ id }
