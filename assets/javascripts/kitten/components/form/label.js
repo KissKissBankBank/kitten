@@ -28,7 +28,7 @@ export class Label extends React.Component {
 
     return (
       <Tag className={ labelClassName }
-           htmlFor={ focusId }
+           htmlFor={ tag == 'label' ? focusId : null }
            onClick={ this.handleClick }>
         { children }
       </Tag>
