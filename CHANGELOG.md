@@ -4,7 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Breaking change: Change `k-Tabbar` html structure to fix spacing.
+- Feature: `TabBar` React component with new html structure.
+- Feature: Add `react-markdown` and `json-loader` to manage HTML props.
 
 ## [5.6.0] - 2017-01-30
 

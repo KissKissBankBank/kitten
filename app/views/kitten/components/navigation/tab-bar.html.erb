@@ -66,3 +66,24 @@
   </p>
 
 <% end %>
+
+<%= example 'Tab bar with React component' do %>
+  <%= react_component "TabBar", props: {
+    items: [
+      { text: "Lorem <br />ipsum dolor", href: "#", selected: true },
+      { text: "Lorem <br />ipsum dolor", href: "#" },
+      { text: "Lorem <br />ipsum dolor", href: "#" },
+    ]
+  } %>
+
+  <br>
+
+  <%= react_component "TabBar", props: {
+    items: [
+      { text: "Lorem <br />ipsum dolor", href: "#" },
+      { text: "Lorem <br />ipsum dolor", href: "#" },
+      { text: "Lorem <br />ipsum dolor", href: "#", selected: true },
+      { text: "Lorem <br />ipsum dolor", href: "#" },
+    ]
+  } %>
+<% end %>
