@@ -10,3 +10,8 @@ export class FormRow extends React.Component {
     )
   }
 }
+
+FormRow.defaultProps = {
+  className: null,
+  children: null,
+}
