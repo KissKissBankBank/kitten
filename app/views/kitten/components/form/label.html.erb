@@ -11,12 +11,23 @@
   <%= react_component "Label", props: {
     tag: "span",
     children: "Another label",
-    focusId: "m",
+    focusId: "form-label-span-m",
   } %>
 
-  <label><input type="radio" name="sex" value="m" id="m" /> Male</label>
-  <label><input type="radio" name="sex" value="f" /> Female</label>
-  <label><input type="radio" name="sex" value="n" /> Non-binary</label>
+  <label>
+    <input type="radio" name="sex" value="m" id="form-label-span-m" />
+    Male
+  </label>
+
+  <label>
+    <input type="radio" name="sex" value="f" />
+    Female
+  </label>
+
+  <label>
+    <input type="radio" name="sex" value="n" />
+    Non-binary
+  </label>
 <% end %>
 
 <%= example "on tiny label" do %>
