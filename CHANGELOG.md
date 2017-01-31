@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Breaking change: Change `k-Tabbar` html structure to fixe spacing.
+- Breaking change: Change `k-Tabbar` html structure to fix spacing.
 
 ## [5.1.0] - 2017-01-11
 
