@@ -7,8 +7,7 @@ export const KarlPaymentButton = (props) => {
   const text = <TagButton big={ true } icon={ true } tag="span">
                  <VisaIcon />
                </TagButton>
-
   return (
-    <RadioButton id="payment-button" text={ text } />
+    <RadioButton id="payment-button" text={ text } { ...props } />
   )
 }
