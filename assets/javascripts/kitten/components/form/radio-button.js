@@ -52,7 +52,7 @@ export class RadioButton extends React.Component {
 }
 
 RadioButton.defaultProps = {
-  text: 'Default',
+  text: '',
   large: false,
   largeContent: false,
 }
