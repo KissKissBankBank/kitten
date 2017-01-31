@@ -4,16 +4,44 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add new `HeaderTitles` component.
-- Fix: Update color `Checkbox` disabled.
-- Fix: Update color `RadioButton` disabled.
-- Feature: Add new `Title` React component.
-- Feature: Add new `Paragraph` React component.
-- Feature: Add new `HeartIcon` React component.
-- Feature: Add new `Button` React component.
-- Feature: Add new `HeaderLogo` React component.
-- Fix: Change default port in development from 3000 to 3003. You should now
-  see the style guide on http://localhost:3003 instead.
+- Fix: Update hover background-color for `LinkBox`.
+- Fix: Update disabled color for `Select`.
+
+## [5.6.0] - 2017-01-30
+
+Features:
+- Add `className` prop on `Checkbox` component.
+- Add `inputClassName` prop on `RadioButton` and `Checkbox` components.
+- Add new `TagButton` React component.
+
+## [5.5.0] - 2017-01-25
+
+Features:
+- Add deprecated function.
+- Add `quadruple` utilities in `k-utilities-margin`.
+- Add elements in `k-Header`.
+- Add container in `k-VerticalGrid`.
+- Add styles on `k-Checkbox`.
+- Add `children` props to `Checkbox`.
+- Add new `HeaderTitles` component.
+- Add new `Title` React component.
+- Add new `Paragraph` React component.
+- Add new `HeartIcon` React component.
+- Add new `Button` React component.
+- Add new `HeaderLogo` React component.
+
+Fixes:
+- `RadioButton` uses children to display content.
+- Fix flex in `k-Header`.
+- Fix aside `flex-direction` in `k-SideGrid`.
+- Remove overflow on `k-Row`.
+- Change transition on `k-RadioButton`.
+- Change `k-LinkBox` display before `m` version.
+- Change `k-SingleColumn` width according to the media.
+- Update color for placeholder on disabled `Text-input`.
+- Update color `Checkbox` disabled.
+- Update color `RadioButton` disabled.
+- Change default port in development from 3000 to 3003. You should now
 
 ## [5.4.0] - 2017-01-17
 

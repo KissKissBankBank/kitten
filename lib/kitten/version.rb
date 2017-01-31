@@ -1,4 +1,4 @@
 # Gem version.
 module Kitten
-  VERSION = '5.4.0'.freeze
+  VERSION = '5.6.0'.freeze
 end

@@ -13,7 +13,7 @@ export class HeaderTitles extends React.Component {
   }
 
   render() {
-    const { title, ...other } = this.props
+    const { title, subtitle, ...other } = this.props
 
     return (
       <HeaderItem className="k-Header__titles" { ...other }>
