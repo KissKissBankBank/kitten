@@ -20,7 +20,7 @@ export class TabBar extends React.Component {
     return (
       <li key={ key }>
         <a className={ itemClassName } { ...linkProps }>
-          <Markdown source={ text } />
+          <Markdown softBreak="br" source={ text } />
         </a>
       </li>
     )
