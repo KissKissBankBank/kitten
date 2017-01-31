@@ -18,11 +18,16 @@ export class Label extends React.Component {
   }
 
   render() {
-    const { tag, className, children, focusId } = this.props
+    const { tag, className, children, focusId, size } = this.props
     const Tag = tag
+    const labelClassName = classNames(
+      "k-Label",
+      className,
+      { [`k-Label--${size}`]: size },
+    )
 
     return (
-      <Tag className={ classNames("k-Label", className) }
+      <Tag className={ labelClassName }
            htmlFor={ focusId }
            onClick={ this.handleClick }>
         { children }
@@ -36,4 +41,5 @@ Label.defaultProps = {
   className: null,
   children: 'Label',
   focusId: null,
+  size: null, // `tiny`
 }

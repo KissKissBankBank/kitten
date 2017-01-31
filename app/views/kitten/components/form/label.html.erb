@@ -18,3 +18,13 @@
   <label><input type="radio" name="sex" value="f" /> Female</label>
   <label><input type="radio" name="sex" value="n" /> Non-binary</label>
 <% end %>
+
+<%= example "on tiny label" do %>
+  <%= react_component "Label", props: {
+    children: "A label",
+    focusId: "age2",
+    size: "tiny",
+  } %>
+
+  <input id="age2" name="age2" />
+<% end %>
