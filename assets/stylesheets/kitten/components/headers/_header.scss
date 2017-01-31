@@ -30,7 +30,6 @@
 
   $height: 65px;
   $item-spacing: k-px-to-rem(10px);
-  $item-spacing-xxs: k-px-to-rem(15px);
   $z-index: 10;
 
   $graphic-logo-size: 37px;
@@ -68,20 +67,17 @@
     // and last elements.
     margin-left: -$item-spacing;
     margin-right: -$item-spacing;
-
-    @include k-media-within('xxs') {
-      margin-left: -$item-spacing-xxs;
-      margin-right: -$item-spacing-xxs;
-    }
   }
 
   .k-Header__items {
     display: flex;
     align-items: center;
+    flex: 1;
   }
 
   .k-Header__items--fixedSize,
   .k-Header__item--fixedSize {
+    flex: initial;
     flex-shrink: 0;
   }
 
@@ -182,5 +178,23 @@
     max-width: k-px-to-rem(110px);
     white-space: nowrap;
     overflow: hidden;
+  }
+
+  .k-Header__titles {
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    @include k-typographyFontSize($step: -1, $line-height: 1.3);
+  }
+
+  .k-Header__title {
+    margin: 0;
+    @include k-typographyFont('source-sans-semi-bold-uppercase');
+  }
+
+  .k-Header__subtitle {
+    margin: 0;
+    @include k-typographyFont('source-sans-light');
   }
 }

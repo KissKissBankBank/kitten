@@ -52,5 +52,11 @@ const KarlLoanSimulatorWithCommission = defaultProps(KarlLoanSimulator, {
   actionLabel: null,
 })
 
+const KarlLoanSimulatorWithError = defaultProps(KarlLoanSimulator, {
+  initialTouched: true,
+  actionLabel: null,
+})
 
-export { KarlLoanSimulator, KarlLoanSimulatorWithCommission }
+export { KarlLoanSimulator,
+         KarlLoanSimulatorWithCommission,
+         KarlLoanSimulatorWithError }

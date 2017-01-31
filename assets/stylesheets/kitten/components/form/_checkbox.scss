@@ -23,9 +23,10 @@
   $background-color: map-get($k-colors, 'background-1');
   $background-color-checked: map-get($k-colors, 'primary-1');
   $background-color-active: map-get($k-colors, 'primary-3');
-  $background-color-disabled: map-get($k-colors, 'font-2');
+  $background-color-disabled: map-get($k-colors, 'line-2');
   $border-color: map-get($k-colors, 'font-2');
   $border-color-hover: map-get($k-colors, 'primary-1');
+  $link-color: map-get($k-colors, 'primary-1');
 
   $checkbox-size: k-px-to-rem(20px);
   $border-radius: k-px-to-rem(4px);
@@ -48,6 +49,7 @@
     align-self: flex-start;
 
     cursor: pointer;
+    transition: color .2s;
 
     &:before {
       box-sizing: border-box;
@@ -69,7 +71,7 @@
     }
 
     &:hover { color: $border-color-hover; }
-    &:active { color: $background-color-active;}
+    &:active { color: $background-color-active; }
 
     .k-Checkbox__input:checked:focus + &:before {
       box-shadow: 0 0 k-px-to-rem(3px) $background-color-checked;
@@ -101,6 +103,21 @@
 
     &:disabled {
       cursor: not-allowed;
+    }
+  }
+
+  .k-Checkbox__link {
+    color: $link-color;
+    text-decoration: none;
+
+    &:hover {
+      color: $link-color;
+      text-decoration: none;
+    }
+
+    &:active {
+      color: $background-color-active;
+      text-decoration: none;
     }
   }
 }

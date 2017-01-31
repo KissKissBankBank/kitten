@@ -1,4 +1,4 @@
-/// Setup a button tag element.
+/// Setup a tag button element.
 ///
 /// This mixin will setup an element to look like a button with a tag inside.
 ///
@@ -11,14 +11,14 @@
 /// @group buttons
 ///
 /// @example scss - Usage
-///   @include k-ButtonTag;
+///   @include k-TagButton;
 
-@mixin k-ButtonTag {
+@mixin k-TagButton {
   $border-size: 1px;
 
   // Size settings.
-  $button-tag-min-width: k-px-to-rem(60px - ($border-size * 2));
-  $button-tag-line-height: k-px-to-rem(40px - ($border-size * 2));
+  $tag-button-min-width: k-px-to-rem(60px - ($border-size * 2));
+  $tag-button-line-height: k-px-to-rem(40px - ($border-size * 2));
 
   // Colors.
   $hydrogen-colors: (
@@ -54,8 +54,8 @@
     ),
   );
 
-  // The button tag has a radius of .25rem
-  $button-tag-radius: .25rem;
+  // The tag button has a radius of .25rem
+  $tag-button-radius: .25rem;
 
   // Button font-size is computed using a modular scale and a defined step of
   // this scale.
@@ -63,17 +63,17 @@
 
   $transition-speed: .2s;
 
-  .k-ButtonTag {
+  .k-TagButton {
     @include k-buttonBase;
-    @include k-typographyFontSize($button-step, $button-tag-line-height);
+    @include k-typographyFontSize($button-step, $tag-button-line-height);
 
-    padding: 0 $button-tag-radius;
-    border-radius: $button-tag-radius;
-    min-width: $button-tag-min-width;
-    min-height: $button-tag-line-height;
+    padding: 0 $tag-button-radius;
+    border-radius: $tag-button-radius;
+    min-width: $tag-button-min-width;
+    min-height: $tag-button-line-height;
   }
 
-  .k-ButtonTag--hydrogen {
+  .k-TagButton--hydrogen {
     @include k-buttonColorBase($hydrogen-colors);
   }
 }

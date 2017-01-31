@@ -1,6 +1,6 @@
 {
   "name": "kitten-components",
-  "version": "5.1.0",
+  "version": "5.6.0",
   "license": "MIT",
   "description": "Front-end components library",
   "main": "src/index.js",
@@ -37,17 +37,20 @@
     "babel-preset-react": "^6.11.1",
     "babel-preset-stage-0": "^6.5.0",
     "babel-preset-stage-2": "^6.13.0",
+    "babel-register": "^6.18.0",
     "babel-runtime": ">= 6",
     "classnames": "^2.2.5",
     "core-js": "^2.4.1",
     "es5-shim": "^4.5.7",
     "event-emitter": "^0.3.4",
+    "isomorphic-fetch": "^2.2.1",
     "modularscale-sass": "^2.1.1",
     "node-sass": "^3.8.0",
     "pubsub-js": "^1.5.3",
     "react": "^15.3.1",
     "react-dom": "^15.3.1",
     "react-on-rails": "^6.1.0",
+    "react-prop-types": "^0.4.0",
     "react-select": "^1.0.0-rc.1",
     "react-tooltip": "^3.2.2",
     "susy": "^2.2.12"
@@ -59,6 +62,6 @@
     "build:dev": "(cd spec/dummy/client && npm run build:dev)",
     "build": "(cd spec/dummy/client && npm run build --silent)",
     "hot-assets": "(cd spec/dummy/client && npm run hot-assets)",
-    "test": "NODE_PATH=assets/javascripts mocha assets/javascripts/kitten/config/test-setup.js assets/javascripts/kitten/components/**/*.test.js"
+    "test": "NODE_PATH=assets/javascripts mocha assets/javascripts/kitten/config/test-setup.js"
   }
 }

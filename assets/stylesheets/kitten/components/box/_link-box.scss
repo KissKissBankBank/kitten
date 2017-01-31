@@ -93,7 +93,7 @@
     border-top-left-radius: $border-radius;
     border-bottom-left-radius: $border-radius;
 
-    @include k-media-max('s') {
+    @include k-media-max('m') {
       display: none;
     }
   }
@@ -104,6 +104,9 @@
   }
 
   .k-LinkBox__paragraph {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     padding: k-px-to-rem(10px)
              k-px-to-rem(10px)
              k-px-to-rem(15px)
