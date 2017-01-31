@@ -18,7 +18,7 @@ export class Label extends React.Component {
   }
 
   render() {
-    const { tag, className, children, focusId, size } = this.props
+    const { tag, className, children, focusId, size, ...other } = this.props
     const Tag = tag
     const labelClassName = classNames(
       "k-Label",
@@ -29,7 +29,8 @@ export class Label extends React.Component {
     return (
       <Tag className={ labelClassName }
            htmlFor={ tag == 'label' ? focusId : null }
-           onClick={ this.handleClick }>
+           onClick={ this.handleClick }
+           { ...other }>
         { children }
       </Tag>
     )
