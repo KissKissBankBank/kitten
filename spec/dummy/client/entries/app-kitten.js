@@ -23,6 +23,7 @@ import DropdownButton from 'kitten/components/dropdowns/dropdown-button'
 import { Checkbox } from 'kitten/components/form/checkbox'
 import FormAmountAndCurrency from 'kitten/components/form/form-amount-and-currency'
 import FormPhoneNumber from 'kitten/components/form/form-phone-number'
+import { Label } from 'kitten/components/form/label'
 import { RadioButton } from 'kitten/components/form/radio-button'
 import Search from 'kitten/components/form/search'
 import Select from 'react-select'
@@ -130,8 +131,7 @@ ReactOnRails.register({
   GridCol,
   GrabberIcon,
   HeaderTour,
-  LinkBox,
-  LoanSimulator,
+  Label,
   ReactTooltip,
   Slider,
   Search,

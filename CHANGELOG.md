@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `Label` React component.
 - Fix: Update hover background-color for `LinkBox`.
 - Fix: Update disabled color for `Select`.
 

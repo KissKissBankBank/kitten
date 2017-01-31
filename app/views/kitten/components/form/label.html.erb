@@ -1,12 +1,19 @@
 <%= example "on label" do %>
-  <label class="k-Label" for="age">A label</label>
+  <%= react_component "Label", props: {
+    children: "A label",
+    focusId: "age",
+  } %>
+
   <input id="age" name="age" />
 <% end %>
 
 <%= example "on span" do %>
-  <span class="k-Label" onclick="document.getElementById('m').focus()">
-    Another label
-  </span>
+  <%= react_component "Label", props: {
+    tag: "span",
+    children: "Another label",
+    focusId: "m",
+  } %>
+
   <label><input type="radio" name="sex" value="m" id="m" /> Male</label>
   <label><input type="radio" name="sex" value="f" /> Female</label>
   <label><input type="radio" name="sex" value="n" /> Non-binary</label>
