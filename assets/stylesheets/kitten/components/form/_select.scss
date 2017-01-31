@@ -166,7 +166,7 @@
   $select-option-focused-bg: #eee;
   $select-option-selected-color: #333;
   $select-option-selected-bg: #d8d8d8;
-  $select-option-disabled-color: lighten($select-text-color, 60%);
+  $select-option-disabled-color: k-map-fetch($k-colors, 'font-2');
 
   $select-noresults-color: lighten($select-text-color, 40%);
 

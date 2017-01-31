@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: Update hover background-color for `LinkBox`.
+- Fix: Update disabled color for `Select`.
 
 ## [5.6.0] - 2017-01-30
 
