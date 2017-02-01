@@ -33,8 +33,11 @@
   $border-size: 1px;
   $border-radius: k-px-to-rem(15px);
   $margin-container: k-px-to-rem(10px);
+  $font: 'source-sans-light';
+  $font-title: 'source-sans-semi-bold';
 
   .k-Popover {
+    @include k-typographyFont($font);
     position: relative;
 
     width: k-px-to-rem(465px);
@@ -53,5 +56,61 @@
 
   .k-Popover__close {
     margin-left: $margin-container;
+  }
+
+  .k-Popover__illustration {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: k-px-to-rem(80px);
+  }
+
+  .k-Popover__svg--primary {
+    fill: map-get($k-colors, 'font-1');
+  }
+
+  .k-Popover__container {
+    display: flex;
+  }
+
+  .k-Popover__content {
+    @include k-typographyFont($font);
+
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    margin-top: 1rem;
+    margin-left: 1rem;
+  }
+
+  .k-Popover__title {
+    @include k-typographyFont($font-title);
+    @include k-typographyFontSize(2);
+
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .k-Popover__text {
+    @include k-typographyFont($font);
+    @include k-typographyFontSize(0);
+
+    margin: 1em 0;
+  }
+
+  .k-Popover__navigation {
+    bottom: k-px-to-rem(20px);
+
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+    padding-bottom: k-px-to-rem(15px);
+
+    width: k-px-to-rem(305px);
+  }
+
+  .k-Popover__buttons {
+    display: flex;
   }
 }

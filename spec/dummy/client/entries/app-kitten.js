@@ -43,6 +43,13 @@ import ExternalRichLink from 'kitten/components/links/external-rich-link'
 // Lists
 import NavList from 'kitten/components/lists/nav-list'
 
+// Meters
+import { Progress } from 'kitten/components/meters/progress'
+
+// Popovers
+import { Popover } from 'kitten/components/popovers/popover'
+import { CallToActionPopover } from 'kitten/components/popovers/call-to-action-popover'
+
 // Simulators
 import LoanSimulator from 'kitten/components/simulators/loan-simulator'
 import SimulatorResult from 'kitten/components/simulators/simulator-result'
@@ -66,6 +73,7 @@ import { Title } from 'kitten/components/typography/title'
 
 // Karl composed components
 
+import { KarlLoudspeakerPopover } from 'karl/components/popovers/loudspeaker-popover'
 import { KarlImageExternalRichLink,
          KarlSvgExternalRichLink } from 'kitten/karl/molecules/external-rich-link'
 import { KarlSimpleDropdown,
@@ -150,6 +158,13 @@ ReactOnRails.register({
   // Lists
   NavList,
 
+  // Meters
+  Progress,
+
+  // Popovers
+  CallToActionPopover,
+  Popover,
+
   // Simulators
   LoanSimulator,
   SimulatorResult,
@@ -172,6 +187,7 @@ ReactOnRails.register({
   Title,
 
   // Karl composed components
+  KarlLoudspeakerPopover,
   KarlButtonIconHeartRight,
   KarlButtonIconHeartLeft,
   KarlImageExternalRichLink,
