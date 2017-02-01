@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Add modifiers `big` and `icon` on `TagButton`.
 - Feature: Add new `VisaIcon` React component.
+- Fix: Fix flexbox on `k-SideGrid` and `k-VerticalGrid`.
 - Fix: Update hover background-color for `LinkBox`.
 - Fix: Update disabled color for `Select`.
 
