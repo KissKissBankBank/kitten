@@ -4,7 +4,6 @@ import { shallow } from 'enzyme'
 import { FormRow } from 'kitten/components/form/form-row'
 
 describe('<FormRow />', () => {
-
   it('renders a <div class="k-FormRow" />', () => {
     const component = shallow(<FormRow />)
 
