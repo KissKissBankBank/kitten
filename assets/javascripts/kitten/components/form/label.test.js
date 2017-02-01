@@ -27,11 +27,30 @@ describe('<Label />', () => {
       </Label>
     )
 
-    it('renders a label with options', () => {
+    it('renders a span with options', () => {
       expect(component).to.have.tagName('span')
       expect(component).to.have.className('custom-class')
       expect(component).to.have.className('k-Label--tiny')
       expect(component).not.to.have.attr('for', 'custom-id')
+    })
+  })
+
+  describe('with `focusId` prop', () => {
+    const wrapper = mount(
+      <div>
+        <Label tag="span" focusId="focus" children="Label" />
+        <input type="text" id="focus" />
+      </div>,
+      { attachTo: document.body }
+    )
+
+    it('simulates click event on label', () => {
+      const input = wrapper.find('#focus').at(0).node
+      const label = wrapper.find('.k-Label')
+
+      label.simulate('click')
+
+      expect(input).to.be.equal(document.activeElement)
     })
   })
 })
