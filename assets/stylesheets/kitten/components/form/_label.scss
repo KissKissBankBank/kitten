@@ -24,9 +24,11 @@
 @mixin k-Label {
   $font: 'source-sans-semi-bold';
   $font-step-tiny: -1;
+  $line-height-tiny: 1;
 
   .k-Label {
     display: block;
+    margin-bottom: k-px-to-rem(10px);
 
     @include k-typographyFont($font);
 
@@ -34,6 +36,6 @@
   }
 
   .k-Label--tiny {
-    @include k-typographyFontSize($font-step-tiny);
+    @include k-typographyFontSize($font-step-tiny, $line-height-tiny);
   }
 }
