@@ -43,6 +43,9 @@ import ExternalRichLink from 'kitten/components/links/external-rich-link'
 // Lists
 import NavList from 'kitten/components/lists/nav-list'
 
+// Meters
+import { Progress } from 'kitten/components/meters/progress'
+
 // Simulators
 import LoanSimulator from 'kitten/components/simulators/loan-simulator'
 import SimulatorResult from 'kitten/components/simulators/simulator-result'
@@ -149,6 +152,9 @@ ReactOnRails.register({
 
   // Lists
   NavList,
+
+  // Meters
+  Progress,
 
   // Simulators
   LoanSimulator,
