@@ -68,7 +68,6 @@
 
   .k-SideGrid__content {
     @include k-grid-col(12);
-    display: flex;
     background-color: $background;
 
     @include k-media-min('m') {
