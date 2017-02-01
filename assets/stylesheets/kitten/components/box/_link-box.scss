@@ -43,6 +43,9 @@
   // Active
   $background-color-active: map-get($k-colors, 'line-1');
 
+  // Hover
+  $background-color-hover: map-get($k-colors, 'background-2');
+
   // Color icon
   $background-color-icon: map-get($k-colors, 'primary-4');
 
@@ -76,6 +79,10 @@
 
     .k-LinkBox:active & {
       background-color: $background-color-active;
+    }
+
+    .k-LinkBox:hover & {
+      background-color: $background-color-hover;
     }
   }
 
