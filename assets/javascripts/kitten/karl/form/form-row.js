@@ -1,20 +1,21 @@
 import React from 'react'
+import { TagButton } from 'kitten/components/buttons/tag-button'
 import { FormRow } from 'kitten/components/form/form-row'
 
 export const KarlFormRow = () => {
   return (
     <FormRow>
-      <button className="k-FormRow__item k-TagButton" modifier="hydrogen">
+      <TagButton className="k-FormRow__item">
         Tag
-      </button>
+      </TagButton>
 
-      <button className="k-FormRow__item k-TagButton" modifier="hydrogen">
+      <TagButton className="k-FormRow__item">
         Button
-      </button>
+      </TagButton>
 
-      <button className="k-FormRow__item k-TagButton" modifier="hydrogen">
+      <TagButton className="k-FormRow__item">
         Button
-      </button>
+      </TagButton>
     </FormRow>
   )
 }
