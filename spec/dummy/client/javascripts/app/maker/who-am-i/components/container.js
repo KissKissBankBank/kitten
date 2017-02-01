@@ -53,9 +53,7 @@ export class KarlMakerWhoAmIStep extends React.Component {
                    key={ option.id }
                    name={ name }
                    defaultChecked={ checked }
-                   { ...option }>
-        <Paragraph modifier="quaternary">{ option.children }</Paragraph>
-      </RadioButton>
+                   { ...option } />
     )
   }
 
@@ -105,7 +103,7 @@ export class KarlMakerWhoAmIStep extends React.Component {
 
   renderContent() {
     return (
-      <SideGridContent>
+      <SideGridContent className="k-VerticalGrid__element">
         <Grid>
           <GridCol col-s="10" offset-s="1" col-l="8">
             <form>

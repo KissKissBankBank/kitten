@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Fix flexbox on `k-SideGrid` and `k-VerticalGrid`.
 - Fix: Update hover background-color for `LinkBox`.
 - Fix: Update disabled color for `Select`.
 
