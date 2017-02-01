@@ -117,10 +117,5 @@
       border-color: map-get($k-colors, 'primary-3');
       background-color: map-get($k-colors, 'background-1');
     }
-
-    &.is-selected {
-      border-color: map-get($k-colors, 'line-2');
-      background-color: map-get($k-colors, 'background-1');
-    }
   }
 }
