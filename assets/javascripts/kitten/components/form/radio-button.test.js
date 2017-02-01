@@ -15,6 +15,7 @@ describe('RadioButton with default props', () => {
     const label = defaultComponent.find('label')
 
     expect(label).not.to.have.attr('large')
+    expect(label).to.have.text('')
   })
 
   it('renders <div> without large content', () => {
@@ -49,6 +50,7 @@ describe('RadioButton with default props', () => {
 
       expect(label).to.have.attr('for', 'karl-radio-button-1')
       expect(label).to.have.className('k-RadioButton__label')
+      expect(label).to.have.text('')
     })
 
     describe('large', () => {

@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add new `k-TagButton` component.
 - Feature: Add new `VisaIcon` React component.
 - Feature: Add new example `KarlPaymentButton`.
 - Fix: Update hover background-color for `LinkBox`.

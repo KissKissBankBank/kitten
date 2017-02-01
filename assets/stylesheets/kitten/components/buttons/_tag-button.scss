@@ -20,7 +20,7 @@
 ///   @include k-TagButton;
 ///
 /// @example html
-///   <button class="k-TagButton k-TagButton--hydrogen"> Tag </button>
+///   <button class="k-TagButton k-TagButton--hydrogen">Tag</button>
 ///
 /// @example html
 ///   <button class="k-TagButton k-TagButton--icon">
@@ -104,7 +104,7 @@
 
   // Icon modifier.
   .k-TagButton--icon {
-    padding: 0 k-px-to-rem(19px);
+    padding: 0 k-px-to-rem(20px);
     border-color: map-get($k-colors, 'line-2');
     background-color: map-get($k-colors, 'background-1');
 
