@@ -9,4 +9,10 @@
 ///
  @mixin k-Progress {
 
+  .k-Progress {
+    max-width: 100%;
+    height: k-px-to-rem(20px);
+
+    background-color: green;
+  }
  }
