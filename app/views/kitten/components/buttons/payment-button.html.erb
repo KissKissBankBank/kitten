@@ -1,0 +1,15 @@
+<div class="Karl-Example__column">
+  <%= example 'Payment button' do %>
+    <%= react_component('KarlPaymentButton', props: {
+        name: 'payment-button-1'
+      }
+    ) %>
+
+    <%= react_component('KarlPaymentButton', props: {
+        name: 'payment-button-1',
+        defaultChecked: true,
+        id: "checked-payment-button"
+      }
+    ) %>
+  <% end %>
+</div>

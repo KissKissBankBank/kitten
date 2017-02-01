@@ -36,6 +36,7 @@ import { Grid, GridCol } from 'kitten/components/grid/grid'
 // Icons
 import GrabberIcon from 'kitten/components/icons/grabber-icon'
 import { HeartIcon } from 'kitten/components/icons/heart-icon'
+import { VisaIcon } from 'kitten/components/icons/visa-icon'
 
 // Links
 import ExternalRichLink from 'kitten/components/links/external-rich-link'
@@ -106,6 +107,7 @@ import { KarlParagraph,
 import { KarlButtonIconHeartRight,
          KarlButtonIconHeartLeft
        } from 'kitten/karl/buttons/button-heart-icon-words'
+import { KarlPaymentButton } from 'kitten/karl/buttons/payment-button'
 import { KarlMakerWhoAmIStep } from 'app/maker/who-am-i/components/container'
 
 ReactOnRails.register({
@@ -148,6 +150,7 @@ ReactOnRails.register({
   // Icons
   GrabberIcon,
   HeartIcon,
+  VisaIcon,
 
   // Links
   ExternalRichLink,
@@ -212,5 +215,6 @@ ReactOnRails.register({
   KarlParagraphTertiary,
   KarlParagraphQuaternary,
   KarlParagraphWithLink,
+  KarlPaymentButton,
   KarlMakerWhoAmIStep,
 })
