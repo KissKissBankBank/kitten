@@ -21,20 +21,20 @@ describe('CallToActionPopover', () => {
     expect(defaultComponent).not.to.have.attr('buttons')
   })
 
-  it('has a paragraph', () => {
+  it('has a content', () => {
     expect(defaultComponent).to.have.text('')
   })
+})
 
-  describe('<CallToActionPopover />', () => {
+describe('<CallToActionPopover />', () => {
 
-    describe('basic props', () => {
-      const component = shallow(
-        <Popover className="k-Popover__custom" />
-      )
+  describe('basic props', () => {
+    const component = shallow(
+      <Popover className="k-Popover__custom" />
+    )
 
-      it('renders a <div class="k-Popover" />', () => {
-        expect(component).to.have.className('k-Popover__custom')
-      })
+    it('renders a <div class="k-Popover" />', () => {
+      expect(component).to.have.className('k-Popover__custom')
     })
   })
 })

@@ -17,11 +17,23 @@ describe('<Popover />', () => {
 
   describe('basic props', () => {
     const component = shallow(
-      <Popover className="k-Popover"/>
+      <Popover className="k-Popover k-Popover--custom"/>
     )
 
     it('renders a <Popover class="k-Popover" />', () => {
       expect(component).to.have.className('k-Popover')
+      expect(component).to.have.className('k-Popover--custom')
+    })
+
+    describe('children', () => {
+      const component = shallow(
+        <div class="k-Popover__content">
+          <div class="k-Popover--custom" />
+        </div>)
+
+      it('has a children', () => {
+        expect(component.children()).to.have.text('')
+      })
     })
   })
 })
