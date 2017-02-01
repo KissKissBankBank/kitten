@@ -43,6 +43,9 @@ import ExternalRichLink from 'kitten/components/links/external-rich-link'
 // Lists
 import NavList from 'kitten/components/lists/nav-list'
 
+// Meters
+import { Progress } from 'kitten/components/meters/progress'
+
 // Popovers
 import { Popover } from 'kitten/components/popovers/popover'
 import { CallToActionPopover } from 'kitten/components/popovers/call-to-action-popover'
@@ -154,6 +157,9 @@ ReactOnRails.register({
 
   // Lists
   NavList,
+
+  // Meters
+  Progress,
 
   // Popovers
   CallToActionPopover,

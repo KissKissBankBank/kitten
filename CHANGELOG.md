@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add new `Progress` React component.
 - Feature: Add new `KarlLoudspeakerPopover` React component.
 - Feature: Add new `Popover` React component.
 - Feature: Add new `CallToActionPopover` React component.
