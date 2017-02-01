@@ -1,4 +1,4 @@
-/// Submit row usually at the end of a form.
+/// Submit fields row usually side by side.
 ///
 /// @group form
 ///
@@ -9,8 +9,7 @@
 /// @example html
 ///
 ///   <div class="k-FormRow">
-///     <span>…</span>
-///     <span>…</span>
+///     <span class="k-FormRow__item">…</span>
 ///   </div>
 
 @mixin k-FormRow {
