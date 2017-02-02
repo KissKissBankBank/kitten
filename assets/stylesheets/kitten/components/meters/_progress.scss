@@ -2,17 +2,64 @@
 ///
 /// @group meter
 ///
+/// @example scss - usage
 ///
+///   @include k-Progress((
+///     colors: (
+///       progress: #4a84ff,
+///       progress-disabled: darkgrey,
+///       ramp: #eee,
+///     )
+///   ));
 ///
+/// @example html
 ///
-///
-///
- @mixin k-Progress {
+///   <div class="k-Progress">
+///     <div class="k-Progress__ramp">
+///       <div class="k-Progress__slider"></div>
+///     </div>
+///   </div>
 
-  .k-Progress {
-    max-width: 100%;
-    height: k-px-to-rem(20px);
+@mixin k-Progress($progress) {
+  @include k-with-module('k-Progress: $progress') {
+    $colors: k-map-fetch($progress, 'colors');
 
-    background-color: green;
+    $progress-color: k-color-definition(
+      k-map-fetch($colors, 'progress')
+    );
+    $progress-disabled-color: k-color-definition(
+      k-map-fetch($colors, 'progress-disabled')
+    );
+    $ramp-color: k-color-definition(
+      k-map-fetch($colors, 'ramp')
+    );
+
+    $ramp-height: k-px-to-rem(20px);
+    $progress-border-radius: k-px-to-rem(30px);
+
+    .k-Progress {
+      max-width: 100%;
+    }
+
+    .k-Progress__ramp {
+      position: relative;
+      height: $ramp-height;
+      border-radius: $progress-border-radius;
+
+      background-color: $ramp-color;
+    }
+
+    .k-Progress__slider {
+      width: 0;
+      height: 100%;
+
+      border-radius: $progress-border-radius;
+      background: $progress-color;
+
+      .k-Progress.is-disabled & {
+        background: $progress-disabled-color;
+      }
+    }
+
   }
- }
+}

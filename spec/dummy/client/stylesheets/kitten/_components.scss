@@ -144,7 +144,14 @@
 
 // Meters
 
-@include k-Progress;
+@include k-Progress((
+  colors: (
+    progress: map-get($k-colors, 'primary-1'),
+    progress-disabled: #d8d8d8,
+    ramp: #eee,
+    border: map-get($k-colors, 'primary-1'),
+  )
+));
 
 // Navigation
 

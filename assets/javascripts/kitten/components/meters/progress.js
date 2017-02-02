@@ -4,28 +4,33 @@ import classNames from 'classnames'
 export class Progress extends React.Component {
   render() {
     const { className,
-            name,
-            children,
             value,
-            max,
-            text,
             ...others } = this.props
 
-    const progressClassNames = classNames(
+    const progressClassName = classNames(
       'k-Progress',
       className,
     )
 
+    const style = {
+      width: this.props.value + "%"
+    }
+
     return (
-      <progress className={ progressClassNames } { ...others }>
-        { children }
-      </progress>
+      <div role="progressbar"
+           aria-valuemin="0"
+           aria-valuemax="100"
+           aria-valuenow={ this.props.value }
+           className={ progressClassName }
+           { ...others }>
+        <div className="k-Progress__ramp">
+          <div className="k-Progress__slider" style={ style }></div>
+        </div>
+      </div>
     )
   }
 }
 
 Progress.defaultProps = {
-  text: '50%',
-  value: "50",
-  max: "100",
+  value: 50,
 }
