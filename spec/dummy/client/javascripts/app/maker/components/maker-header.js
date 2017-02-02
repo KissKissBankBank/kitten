@@ -16,7 +16,8 @@ export class KarlMakerHeader extends React.Component {
             <HeaderLogo lightOnM={ true } { ...this.props.logo } />
           </HeaderItem>
 
-          <HeaderTitles { ...this.props.titles  } />
+          <HeaderTitles { ...this.props.titles  }
+                        className="k-Header__item--centered" />
         </HeaderItems>
 
         <HeaderItems fixedSize={ true }>
