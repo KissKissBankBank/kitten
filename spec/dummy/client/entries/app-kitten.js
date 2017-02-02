@@ -45,6 +45,9 @@ import ExternalRichLink from 'kitten/components/links/external-rich-link'
 // Lists
 import NavList from 'kitten/components/lists/nav-list'
 
+// Navigation
+import { TabBar } from 'kitten/components/navigation/tab-bar'
+
 // Simulators
 import LoanSimulator from 'kitten/components/simulators/loan-simulator'
 import SimulatorResult from 'kitten/components/simulators/simulator-result'
@@ -89,6 +92,7 @@ import { KarlSideGridWithRightAside,
          KarlSideGridWithLeftAsideAndSmallSize
        } from 'kitten/karl/grid/side-grid'
 import { KarlFormActions } from 'kitten/karl/form/form-actions'
+import { KarlFormRow } from 'kitten/karl/form/form-row'
 import { KarlGridTwelveColumns,
          KarlGridInGrid,
          KarlGridSmall,
@@ -154,6 +158,9 @@ ReactOnRails.register({
   // Lists
   NavList,
 
+  // Navigation
+  TabBar,
+
   // Simulators
   LoanSimulator,
   SimulatorResult,
@@ -198,6 +205,7 @@ ReactOnRails.register({
   KarlSideGridWithRightAside,
   KarlSideGridWithLeftAsideAndSmallSize,
   KarlFormActions,
+  KarlFormRow,
   KarlGridTwelveColumns,
   KarlGridInGrid,
   KarlGridSmall,

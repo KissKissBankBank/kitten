@@ -14,19 +14,21 @@
 /// @example html
 ///
 ///   <div class="k-TabBar k-TabBar--responsive is-fixed">
-///     <ul class="k-TabBar__nav">
-///       <li>
-///         <a class="k-TabBar__item is-selected" href="#">
-///           Link selected
-///         </a>
-///       </li>
-///       <li>
-///         <a class="k-TabBar__item" href="#">
-///           Link
-///         </a>
-///       </li>
-///       …
-///     </ul>
+///     <nav class="k-TabBar__nav">
+///       <ul class="k-TabBar__list">
+///         <li>
+///           <a class="k-TabBar__item is-selected" href="#">
+///             Link selected
+///           </a>
+///         </li>
+///         <li>
+///           <a class="k-TabBar__item" href="#">
+///             Link
+///           </a>
+///         </li>
+///         …
+///       </ul>
+///     </nav>
 ///   </div>
 
 @mixin k-TabBar($options) {
@@ -45,6 +47,7 @@
   $round-size: k-px-to-rem(25px);
   $border-width: 1px;
   $current-border-width: 2px;
+  $gutter: k-px-to-rem(10px);
 
   .k-TabBar__nav {
     display: flex;
@@ -69,8 +72,22 @@
     }
   }
 
+  .k-TabBar__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    margin: 0;
+    padding: 0;
+    width: k-px-to-rem(375px);
+
+    list-style-type: none;
+  }
+
   .k-TabBar__item {
     height: k-px-to-rem(50px);
+    padding-left: $gutter;
+    padding-right: $gutter;
 
     @include k-typographyFont($font);
     @include k-typographyFontSize($font-step, $line-height);
@@ -98,16 +115,6 @@
       border-color: $current-color;
       border-width: $current-border-width;
       color: $current-color;
-    }
-  }
-
-  .k-TabBar__item--thinGutters {
-    padding-left: k-px-to-rem(6px);
-    padding-right: k-px-to-rem(6px);
-
-    @include k-media-min('xs') {
-      padding-left: k-px-to-rem(12px);
-      padding-right: k-px-to-rem(12px);
     }
   }
 
