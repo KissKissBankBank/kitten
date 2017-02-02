@@ -45,6 +45,9 @@ import ExternalRichLink from 'kitten/components/links/external-rich-link'
 // Lists
 import NavList from 'kitten/components/lists/nav-list'
 
+// Navigation
+import { TabBar } from 'kitten/components/navigation/tab-bar'
+
 // Simulators
 import LoanSimulator from 'kitten/components/simulators/loan-simulator'
 import SimulatorResult from 'kitten/components/simulators/simulator-result'
@@ -152,6 +155,9 @@ ReactOnRails.register({
 
   // Lists
   NavList,
+
+  // Navigation
+  TabBar,
 
   // Simulators
   LoanSimulator,
