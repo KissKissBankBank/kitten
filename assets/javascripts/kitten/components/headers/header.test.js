@@ -88,6 +88,14 @@ describe('<HeaderItem />', () => {
     })
   })
 
+  describe('with centered version', () => {
+    const headerItem = shallow(<HeaderItem centered={ true } />)
+
+    it('has a custom class', () => {
+      expect(headerItem).to.have.className('k-Header__item--centered')
+    })
+  })
+
   describe('with custom tag', () => {
     const headerItem = shallow(<HeaderItem tag="nav" />)
 
