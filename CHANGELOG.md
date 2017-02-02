@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `centered` option to `HeaderItem` component.
 - Feature: Add new `FormRow` React component.
 - Feature: `TabBar` React component with new html structure.
 - Feature: Add `react-markdown` and `json-loader` to manage HTML props.

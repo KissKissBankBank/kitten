@@ -87,6 +87,12 @@
     padding: 0 $item-spacing;
   }
 
+  .k-Header__item--centered {
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+
   .k-Header__nav {
     position: relative;
     top: $border-width;
