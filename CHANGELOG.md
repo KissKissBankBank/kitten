@@ -4,17 +4,23 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add new display utility (`k-u-hidden`).
-- Feature: Add `centered` option to `HeaderItem` component.
-- Feature: Add new `FormRow` React component.
-- Feature: `TabBar` React component with new html structure.
-- Feature: Add `react-markdown` and `json-loader` to manage HTML props.
-- Feature: Add `Label` React component.
-- Feature: Add modifiers `big` and `icon` on `TagButton`.
-- Feature: Add new `VisaIcon` React component.
-- Fix: Fix flexbox on `k-SideGrid` and `k-VerticalGrid`.
-- Fix: Update hover background-color for `LinkBox`.
-- Fix: Update disabled color for `Select`.
+## [5.7.0] - 2017-02-02
+
+Features:
+
+- Add new display utility (`k-u-hidden`).
+- Add `centered` option to `HeaderItem` component.
+- Add new `FormRow` React component.
+- `TabBar` React component with new html structure.
+- Add `react-markdown` and `json-loader` to manage HTML props.
+- Add `Label` React component.
+- Add modifiers `big` and `icon` on `TagButton`.
+- Add new `VisaIcon` React component.
+
+Fixes:
+- Fix flexbox on `k-SideGrid` and `k-VerticalGrid`.
+- Update hover background-color for `LinkBox`.
+- Update disabled color for `Select`.
 
 ## [5.6.0] - 2017-01-30
 
