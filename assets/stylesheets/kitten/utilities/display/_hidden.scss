@@ -1,0 +1,48 @@
+/// Utilities to hide items according to media-queries.
+///
+/// @group display
+///
+/// @example scss - Usage
+///
+///   @include k-utilities-hidden;
+///
+/// @example html
+///
+///   <div class="k-u-hidden">…</div>
+///
+///   <div class="k-u-hidden@xxs-down">…</div>
+///   <div class="k-u-hidden@xs-down">…</div>
+///   <div class="k-u-hidden@s-down">…</div>
+///   <div class="k-u-hidden@m-down">…</div>
+///   <div class="k-u-hidden@l-down">…</div>
+///
+///   <div class="k-u-hidden@xs-up">…</div>
+///   <div class="k-u-hidden@s-up">…</div>
+///   <div class="k-u-hidden@m-up">…</div>
+///   <div class="k-u-hidden@l-up">…</div>
+///   <div class="k-u-hidden@xl-up">…</div>
+
+@mixin k-utilities-hidden {
+  .k-u-hidden {
+    display: none;
+  }
+
+  @each $name, $query in $k-media-queries {
+
+    @if $name != "xl" {
+      .k-u-hidden\@#{$name}-down {
+        @include k-media-max($name) {
+          display: none;
+        }
+      }
+    }
+
+    @if $name != "xxs" {
+      .k-u-hidden\@#{$name}-up {
+        @include k-media-min($name) {
+          display: none;
+        }
+      }
+    }
+  }
+}

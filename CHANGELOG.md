@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add new `Progress` React component.
+- Feature: Add new display utility (`k-u-hidden`).
+- Feature: Add `centered` option to `HeaderItem` component.
 - Feature: Add new `FormRow` React component.
 - Feature: `TabBar` React component with new html structure.
 - Feature: Add `react-markdown` and `json-loader` to manage HTML props.
