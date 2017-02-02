@@ -1,7 +1,7 @@
 import React from 'react'
 import { expect } from 'chai'
 import { shallow } from 'enzyme'
-import { Progress } from 'kitten/components/metters/progress'
+import { Progress } from 'kitten/components/meters/progress'
 
 describe('Progress', () => {
   const defaultComponent = shallow(
@@ -9,10 +9,6 @@ describe('Progress', () => {
 
   it('renders <div class="k-Progress">', () => {
     expect(defaultComponent.find('.k-Progress')).to.have.length(1)
-  })
-
-  it('has a default value', () => {
-    expect(defaultComponent).to.have.attr('value')
   })
 })
 
@@ -26,6 +22,15 @@ describe('<Progress />', () => {
   })
 
   it('renders a value', () => {
-    expect(component).to.have.attr('value')
+    expect(component).to.have.attr('aria-valuenow', '50')
+  })
+
+  describe('style', () => {
+    const component = shallow(
+      <Progress style="width: 50%" />)
+
+    it('renders slider', () => {
+      expect(component.find('.k-Progress__slider')).to.have.style('width', '50%')
+    })
   })
 })
