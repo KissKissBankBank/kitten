@@ -8,6 +8,8 @@
 ///
 /// @example html
 ///
+///   <div class="k-u-hidden">…</div>
+///
 ///   <div class="k-u-hidden@xxs-down">…</div>
 ///   <div class="k-u-hidden@xs-down">…</div>
 ///   <div class="k-u-hidden@s-down">…</div>
@@ -23,6 +25,10 @@
 ///   <div class="k-u-hidden@xl-up">…</div>
 
 @mixin k-utilities-hidden {
+  .k-u-hidden {
+    display: none;
+  }
+
   @each $name, $query in $k-media-queries {
     .k-u-hidden\@#{$name}-down {
       @include k-media-max($name) {
