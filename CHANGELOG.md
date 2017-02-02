@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Vertically align buttons to the middle of the line.
 - Feature: Add `Label` React component.
 - Feature: Add modifiers `big` and `icon` on `TagButton`.
 - Feature: Add new `VisaIcon` React component.
