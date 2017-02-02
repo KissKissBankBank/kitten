@@ -15,9 +15,7 @@
 ///   <div class="k-u-hidden@s-down">…</div>
 ///   <div class="k-u-hidden@m-down">…</div>
 ///   <div class="k-u-hidden@l-down">…</div>
-///   <div class="k-u-hidden@xl-down">…</div>
 ///
-///   <div class="k-u-hidden@xxs-up">…</div>
 ///   <div class="k-u-hidden@xs-up">…</div>
 ///   <div class="k-u-hidden@s-up">…</div>
 ///   <div class="k-u-hidden@m-up">…</div>
@@ -30,15 +28,20 @@
   }
 
   @each $name, $query in $k-media-queries {
-    .k-u-hidden\@#{$name}-down {
-      @include k-media-max($name) {
-        display: none;
+
+    @if $name != "xl" {
+      .k-u-hidden\@#{$name}-down {
+        @include k-media-max($name) {
+          display: none;
+        }
       }
     }
 
-    .k-u-hidden\@#{$name}-up {
-      @include k-media-min($name) {
-        display: none;
+    @if $name != "xxs" {
+      .k-u-hidden\@#{$name}-up {
+        @include k-media-min($name) {
+          display: none;
+        }
       }
     }
   }
