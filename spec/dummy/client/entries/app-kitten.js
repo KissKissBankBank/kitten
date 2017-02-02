@@ -23,6 +23,7 @@ import DropdownButton from 'kitten/components/dropdowns/dropdown-button'
 import { Checkbox } from 'kitten/components/form/checkbox'
 import FormAmountAndCurrency from 'kitten/components/form/form-amount-and-currency'
 import FormPhoneNumber from 'kitten/components/form/form-phone-number'
+import { Label } from 'kitten/components/form/label'
 import { RadioButton } from 'kitten/components/form/radio-button'
 import Search from 'kitten/components/form/search'
 import Select from 'react-select'
@@ -47,6 +48,9 @@ import NavList from 'kitten/components/lists/nav-list'
 // Popovers
 import { Popover } from 'kitten/components/popovers/popover'
 import { CallToActionPopover } from 'kitten/components/popovers/call-to-action-popover'
+
+// Navigation
+import { TabBar } from 'kitten/components/navigation/tab-bar'
 
 // Simulators
 import LoanSimulator from 'kitten/components/simulators/loan-simulator'
@@ -93,6 +97,7 @@ import { KarlSideGridWithRightAside,
          KarlSideGridWithLeftAsideAndSmallSize
        } from 'kitten/karl/grid/side-grid'
 import { KarlFormActions } from 'kitten/karl/form/form-actions'
+import { KarlFormRow } from 'kitten/karl/form/form-row'
 import { KarlGridTwelveColumns,
          KarlGridInGrid,
          KarlGridSmall,
@@ -137,8 +142,7 @@ ReactOnRails.register({
   GridCol,
   GrabberIcon,
   HeaderTour,
-  LinkBox,
-  LoanSimulator,
+  Label,
   ReactTooltip,
   Slider,
   Search,
@@ -161,6 +165,9 @@ ReactOnRails.register({
   // Popovers
   CallToActionPopover,
   Popover,
+
+  // Navigation
+  TabBar,
 
   // Simulators
   LoanSimulator,
@@ -206,6 +213,7 @@ ReactOnRails.register({
   KarlSideGridWithRightAside,
   KarlSideGridWithLeftAsideAndSmallSize,
   KarlFormActions,
+  KarlFormRow,
   KarlGridTwelveColumns,
   KarlGridInGrid,
   KarlGridSmall,

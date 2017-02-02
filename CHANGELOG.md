@@ -7,6 +7,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Add new `LoudspeakerIllustration` React component.
 - Feature: Add new `Popover` React component.
 - Feature: Add new `CallToActionPopover` React component.
+- Feature: Add new display utility (`k-u-hidden`).
+- Feature: Add `centered` option to `HeaderItem` component.
+- Feature: Add new `FormRow` React component.
+- Feature: `TabBar` React component with new html structure.
+- Feature: Add `react-markdown` and `json-loader` to manage HTML props.
+- Feature: Add `Label` React component.
 - Feature: Add modifiers `big` and `icon` on `TagButton`.
 - Feature: Add new `VisaIcon` React component.
 - Fix: Fix flexbox on `k-SideGrid` and `k-VerticalGrid`.
