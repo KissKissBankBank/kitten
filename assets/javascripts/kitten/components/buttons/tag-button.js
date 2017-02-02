@@ -8,13 +8,19 @@ export class TagButton extends React.Component {
             modifier,
             children,
             selected,
+            big,
+            icon,
             ...others } = this.props
 
     const tagButtonClassNames = classNames(
       'k-TagButton',
       className,
       `k-TagButton--${modifier}`,
-      { 'is-selected': selected },
+      {
+        'is-selected': selected,
+        'k-TagButton--big': big,
+        'k-TagButton--icon': icon,
+      },
     )
 
     const Tag = tag
@@ -32,4 +38,6 @@ TagButton.defaultProps = {
   modifier: 'hydrogen',
   children: 'Tag',
   selected: false,
+  icon: false,
+  big: false,
 }
