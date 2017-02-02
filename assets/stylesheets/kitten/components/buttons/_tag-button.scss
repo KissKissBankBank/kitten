@@ -1,0 +1,121 @@
+/// Setup a tag button element.
+///
+/// This mixin will setup an element to look like a button with a tag inside.
+///
+/// Paddings depend on the size of button and the size of the tag.
+/// It is computed automatically with these 2 values.
+///
+/// Available color modifier:
+/// - `.k-ButtonIcon--hydrogen`
+///
+/// Available size modifier:
+/// - `.k-TagButton--big`
+///
+/// Available icon modifier:
+/// - `.k-TagButton--icon
+///
+/// @group buttons
+///
+/// @example scss - Usage
+///   @include k-TagButton;
+///
+/// @example html
+///   <button class="k-TagButton k-TagButton--hydrogen">Tag</button>
+///
+/// @example html
+///   <button class="k-TagButton k-TagButton--icon">
+///     <svg />
+///   </button>
+
+@mixin k-TagButton {
+  $border-size: 1px;
+
+  // Size settings tag-button.
+  $tag-button-min-width: k-px-to-rem(60px - ($border-size * 2));
+  $tag-button-line-height: k-px-to-rem(40px - ($border-size * 2));
+
+  $tag-button-min-width-big: k-px-to-rem(80px - ($border-size * 2));
+  $tag-button-line-height-big: k-px-to-rem(50px - ($border-size * 2));
+
+  // Colors.
+  $hydrogen-colors: (
+    base: (
+      color: map-get($k-colors, 'font-1'),
+      border-color: map-get($k-colors, 'line-2'),
+      background-color: map-get($k-colors, 'background-1'),
+    ),
+    hover: (
+      color: map-get($k-colors, 'primary-1'),
+      border-color: map-get($k-colors, 'primary-4'),
+      background-color: map-get($k-colors, 'background-1'),
+    ),
+    focus: (
+      color: map-get($k-colors, 'primary-1'),
+      border-color: map-get($k-colors, 'primary-4'),
+      background-color: map-get($k-colors, 'background-1'),
+    ),
+    active: (
+      color: #fff,
+      border-color: map-get($k-colors, 'primary-3'),
+      background-color: map-get($k-colors, 'primary-3'),
+    ),
+    is-selected: (
+      color: #fff,
+      border-color: map-get($k-colors, 'primary-3'),
+      background-color: map-get($k-colors, 'primary-3'),
+    ),
+    disabled: (
+      color: #fff,
+      border-color: map-get($k-colors, 'line-2'),
+      background-color: map-get($k-colors, 'line-2'),
+    ),
+  );
+
+  // The tag button has a radius of .25rem
+  $tag-button-radius: .25rem;
+
+  // Button font-size is computed using a modular scale and a defined step of
+  // this scale.
+  $button-step: -2;
+
+  $transition-speed: .2s;
+
+  .k-TagButton {
+    @include k-buttonBase;
+    @include k-typographyFontSize($button-step, $tag-button-line-height);
+
+    padding: 0 $tag-button-radius;
+    border-radius: $tag-button-radius;
+    min-width: $tag-button-min-width;
+    min-height: $tag-button-line-height;
+  }
+
+  .k-TagButton--hydrogen {
+    @include k-buttonColorBase($hydrogen-colors);
+  }
+
+  // Size modifier.
+  .k-TagButton--big {
+    @include k-typographyFontSize($button-step, $tag-button-line-height-big);
+
+    min-width: $tag-button-min-width-big;
+    min-height: $tag-button-line-height-big;
+  }
+
+  // Icon modifier.
+  .k-TagButton--icon {
+    padding: 0 k-px-to-rem(20px);
+    border-color: map-get($k-colors, 'line-2');
+    background-color: map-get($k-colors, 'background-1');
+
+    &:hover {
+      border-color: map-get($k-colors, 'primary-1');
+      background-color: map-get($k-colors, 'background-1');
+    }
+
+    &:active {
+      border-color: map-get($k-colors, 'primary-3');
+      background-color: map-get($k-colors, 'background-1');
+    }
+  }
+}

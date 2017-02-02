@@ -68,7 +68,6 @@
 
   .k-SideGrid__content {
     @include k-grid-col(12);
-    display: flex;
     background-color: $background;
 
     @include k-media-min('m') {
@@ -113,6 +112,7 @@
 
   .k-SideGrid__asideContent {
     display: flex;
+    flex-direction: column;
     border-left: $aside-border-width solid $aside-border-color;
     background-color: $aside-background;
 

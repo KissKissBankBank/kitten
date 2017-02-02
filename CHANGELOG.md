@@ -4,13 +4,83 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add new display utility (`k-u-hide`).
-- Fix: Add default margins to `.k-PressQuotes__title` and
+- Feature: Add new display utility (`k-u-hidden`).
+- Feature: Add `Label` React component.
+- Feature: Add modifiers `big` and `icon` on `TagButton`.
+- Feature: Add new `VisaIcon` React component.
+- Fix: Fix flexbox on `k-SideGrid` and `k-VerticalGrid`.
+- Fix: Update hover background-color for `LinkBox`.
+- Fix: Update disabled color for `Select`.
+
+## [5.6.0] - 2017-01-30
+
+Features:
+- Add `className` prop on `Checkbox` component.
+- Add `inputClassName` prop on `RadioButton` and `Checkbox` components.
+- Add new `TagButton` React component.
+
+## [5.5.0] - 2017-01-25
+
+Features:
+- Add deprecated function.
+- Add `quadruple` utilities in `k-utilities-margin`.
+- Add elements in `k-Header`.
+- Add container in `k-VerticalGrid`.
+- Add styles on `k-Checkbox`.
+- Add `children` props to `Checkbox`.
+- Add new `HeaderTitles` component.
+- Add new `Title` React component.
+- Add new `Paragraph` React component.
+- Add new `HeartIcon` React component.
+- Add new `Button` React component.
+- Add new `HeaderLogo` React component.
+
+Fixes:
+- `RadioButton` uses children to display content.
+- Fix flex in `k-Header`.
+- Fix aside `flex-direction` in `k-SideGrid`.
+- Remove overflow on `k-Row`.
+- Change transition on `k-RadioButton`.
+- Change `k-LinkBox` display before `m` version.
+- Change `k-SingleColumn` width according to the media.
+- Update color for placeholder on disabled `Text-input`.
+- Update color `Checkbox` disabled.
+- Update color `RadioButton` disabled.
+- Change default port in development from 3000 to 3003. You should now
+
+## [5.4.0] - 2017-01-17
+
+Features:
+- Add new `RadioButton` React component.
+- Add new `Header` React component.
+- Add new `SideGrid`, `SideGridContent` and `SideGridAside` components.
+- Add new `upcaseFirst()` string helper.
+- Add new `initialTouched` and `requiredDurationError` props to `LoanSimulator`.
+
+## [5.3.0] - 2017-01-16
+
+Features:
+- Add new `Checkbox` React component.
+- Add new `FormActions` React component.
+- Add new `Grid` and `GridCol` React components.
+
+Fixes:
+- At xxs, use thinner gutters.
+- Override bootstrap on blockquotes in `k-Testimony__text`
+  and `k-PressQuotes__quote__text`.
+
+## [5.2.0] - 2017-01-12
+
+Features:
+- Add `primary-6` color.
+- Introduce `k-Teaser__col--start@l` to fix ordering of columns on `k-Teaser`.
+
+Fixes:
+- Add default margins to `.k-PressQuotes__title` and
   `.k-titleWithActions__title`.
-- Fix: Testimony row is larger on xxs.
-- Feature: Introduce `k-Teaser__col--start@l` to fix ordering of columns on
-  `k-Teaser`.
-- Fix: Vertical align on `k-LinkBox__paragraph`.
+- Testimony row is larger on xxs.
+- Vertical align on `k-LinkBox__paragraph`.
+- Add default colors to `k-Row`.
 
 ## [5.1.0] - 2017-01-11
 

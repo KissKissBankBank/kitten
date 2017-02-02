@@ -32,4 +32,13 @@
   .k-VerticalGrid__fluid {
     flex-basis: 100%;
   }
+
+  .k-VerticalGrid__container {
+    display: flex;
+    height: 100%;
+  }
+
+  .k-VerticalGrid__element {
+    flex-grow: 1;
+  }
 }

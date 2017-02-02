@@ -1,0 +1,19 @@
+<div class="karl-Example__column">
+  <%= example "Hydrogen tag button" do %>
+    <%= react_component('TagButton') %>
+  <% end %>
+
+  <%= example "Selected tag button" do %>
+    <%= react_component('TagButton', props: {
+        selected: true,
+      }
+    ) %>
+  <% end %>
+
+  <%= example "Tag button big" do %>
+    <%= react_component('TagButton', props: {
+        big: true,
+      }
+    ) %>
+  <% end %>
+</div>
