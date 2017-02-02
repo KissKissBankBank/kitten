@@ -23,6 +23,7 @@ import DropdownButton from 'kitten/components/dropdowns/dropdown-button'
 import { Checkbox } from 'kitten/components/form/checkbox'
 import FormAmountAndCurrency from 'kitten/components/form/form-amount-and-currency'
 import FormPhoneNumber from 'kitten/components/form/form-phone-number'
+import { Label } from 'kitten/components/form/label'
 import { RadioButton } from 'kitten/components/form/radio-button'
 import Search from 'kitten/components/form/search'
 import Select from 'react-select'
@@ -36,6 +37,7 @@ import { Grid, GridCol } from 'kitten/components/grid/grid'
 // Icons
 import GrabberIcon from 'kitten/components/icons/grabber-icon'
 import { HeartIcon } from 'kitten/components/icons/heart-icon'
+import { VisaIcon } from 'kitten/components/icons/visa-icon'
 
 // Links
 import ExternalRichLink from 'kitten/components/links/external-rich-link'
@@ -45,6 +47,9 @@ import NavList from 'kitten/components/lists/nav-list'
 
 // Meters
 import { Progress } from 'kitten/components/meters/progress'
+
+// Navigation
+import { TabBar } from 'kitten/components/navigation/tab-bar'
 
 // Simulators
 import LoanSimulator from 'kitten/components/simulators/loan-simulator'
@@ -104,6 +109,7 @@ import { KarlParagraph,
 import { KarlButtonIconHeartRight,
          KarlButtonIconHeartLeft
        } from 'kitten/karl/buttons/button-heart-icon-words'
+import { KarlPaymentButton } from 'kitten/karl/buttons/payment-button'
 import { KarlMakerWhoAmIStep } from 'app/maker/who-am-i/components/container'
 
 ReactOnRails.register({
@@ -133,8 +139,7 @@ ReactOnRails.register({
   GridCol,
   GrabberIcon,
   HeaderTour,
-  LinkBox,
-  LoanSimulator,
+  Label,
   ReactTooltip,
   Slider,
   Search,
@@ -146,6 +151,7 @@ ReactOnRails.register({
   // Icons
   GrabberIcon,
   HeartIcon,
+  VisaIcon,
 
   // Links
   ExternalRichLink,
@@ -155,6 +161,9 @@ ReactOnRails.register({
 
   // Meters
   Progress,
+  
+  // Navigation
+  TabBar,
 
   // Simulators
   LoanSimulator,
@@ -208,5 +217,6 @@ ReactOnRails.register({
   KarlParagraphTertiary,
   KarlParagraphQuaternary,
   KarlParagraphWithLink,
+  KarlPaymentButton,
   KarlMakerWhoAmIStep,
 })

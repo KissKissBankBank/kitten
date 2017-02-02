@@ -5,6 +5,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add new `Progress` React component.
+- Feature: `TabBar` React component with new html structure.
+- Feature: Add `react-markdown` and `json-loader` to manage HTML props.
+- Feature: Add `Label` React component.
+- Feature: Add modifiers `big` and `icon` on `TagButton`.
+- Feature: Add new `VisaIcon` React component.
+- Fix: Fix flexbox on `k-SideGrid` and `k-VerticalGrid`.
 - Fix: Update hover background-color for `LinkBox`.
 - Fix: Update disabled color for `Select`.
 
