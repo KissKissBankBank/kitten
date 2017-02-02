@@ -49,6 +49,10 @@ const baseConfig = {
         loaders: ['file?name=images/[name].[ext]'],
       },
       {
+        test: /\.json$/,
+        loader: 'json',
+      },
+      {
         test: /\.jsx?$/,
         loader: 'babel',
         query: {
