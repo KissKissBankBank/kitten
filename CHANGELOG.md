@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add new display utility (`k-u-hidden`).
+- Feature: `TabBar` React component with new html structure.
+- Feature: Add `react-markdown` and `json-loader` to manage HTML props.
 - Feature: Add `Label` React component.
 - Feature: Add modifiers `big` and `icon` on `TagButton`.
 - Feature: Add new `VisaIcon` React component.
