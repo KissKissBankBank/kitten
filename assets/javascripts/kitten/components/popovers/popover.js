@@ -31,7 +31,7 @@ export class Popover extends React.Component {
     }
 
     return (
-      <div className="k-Popover__content"> { this.props.children } </div>
+      <div className="k-Popover__content">{ this.props.children }</div>
     )
   }
 

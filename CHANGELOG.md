@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add new `KarlLoudspeakerPopover` React component.
+- Feature: Add new `LoudspeakerIllustration` React component.
 - Feature: Add new `Popover` React component.
 - Feature: Add new `CallToActionPopover` React component.
 - Feature: Add modifiers `big` and `icon` on `TagButton`.

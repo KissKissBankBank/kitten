@@ -23,7 +23,6 @@ const resolvingPaths = kittenComponents.jsPaths
                        .concat(appJsPath)
                        .concat(nodeModulesPath)
                        .concat(kittenComponents.imagesPaths)
-                       .concat(appJsPath)
 
 const resolve_paths = {
   sass: sassLoadPaths,

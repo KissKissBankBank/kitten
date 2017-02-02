@@ -5,6 +5,5 @@ import { CallToActionPopover } from 'kitten/components/popovers/call-to-action-p
 export const KarlLoudspeakerPopover = (props) => {
   return (
     <CallToActionPopover illustration={ LoudspeakerIllustration } { ...props } />
-
   )
 }
