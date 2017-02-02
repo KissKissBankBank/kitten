@@ -41,11 +41,14 @@ export class HeaderItems extends React.Component {
 
 export class HeaderItem extends React.Component {
   render() {
-    const { className, fixedSize, tag, ...other } = this.props
+    const { className, fixedSize, centered, tag, ...other } = this.props
     const Tag = tag
     const itemClassName = classNames(
       'k-Header__item',
-      { 'k-Header__item--fixedSize': fixedSize },
+      {
+        'k-Header__item--fixedSize': fixedSize,
+        'k-Header__item--centered': centered,
+      },
       className,
     )
 
@@ -66,4 +69,5 @@ HeaderItems.defaultProps = {
 HeaderItem.defaultProps = {
   tag: 'div', // 'div', 'p', 'nav', …
   fixedSize: false,
+  centered: false,
 }

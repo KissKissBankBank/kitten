@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `k-Header__item--centered` class.
+- Feature: Add `centered` option to `HeaderItem` component.
 - Feature: Add `Label` React component.
 - Feature: Add modifiers `big` and `icon` on `TagButton`.
 - Feature: Add new `VisaIcon` React component.
