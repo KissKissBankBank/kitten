@@ -8,16 +8,22 @@ export class HeaderTitles extends React.Component {
       return
 
     return (
-      <p className="k-Header__subtitle">{ this.props.subtitle }</p>
+      <p className={ classNames("k-Header__subtitle",
+                                this.props.subtitleClassName) }>
+        { this.props.subtitle }
+      </p>
     )
   }
 
   render() {
-    const { title, subtitle, ...other } = this.props
+    const { title, subtitle, className, titleClassName, ...other } = this.props
 
     return (
-      <HeaderItem className="k-Header__titles" { ...other }>
-        <p className="k-Header__title">{ title }</p>
+      <HeaderItem className={ classNames("k-Header__titles", className) }
+                  { ...other }>
+        <p className={ classNames("k-Header__title", titleClassName) }>
+          { title }
+        </p>
         { this.renderSubtitle() }
       </HeaderItem>
     )
@@ -27,4 +33,7 @@ export class HeaderTitles extends React.Component {
 HeaderTitles.defaultProps = {
   title: 'You forgot the title!',
   subtitle: null,
+  className: null,
+  titleClassName: null,
+  subtitleClassName: null,
 }
