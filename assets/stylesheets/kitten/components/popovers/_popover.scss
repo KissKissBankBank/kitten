@@ -34,7 +34,7 @@
   $border-radius: k-px-to-rem(15px);
   $margin-container: k-px-to-rem(10px);
   $font: 'source-sans-light';
-  $font-title: 'source-sans-semi-bold';
+  $title-font: 'source-sans-semi-bold';
 
   .k-Popover {
     @include k-typographyFont($font);
@@ -85,7 +85,7 @@
   }
 
   .k-Popover__title {
-    @include k-typographyFont($font-title);
+    @include k-typographyFont($title-font);
     @include k-typographyFontSize(2);
 
     margin-top: 0;

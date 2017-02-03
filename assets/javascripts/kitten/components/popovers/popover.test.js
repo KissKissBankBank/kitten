@@ -20,7 +20,7 @@ describe('<Popover />', () => {
       <Popover className="k-Popover k-Popover--custom"/>
     )
 
-    it('renders a <Popover class="k-Popover" />', () => {
+    it('renders a <div class="k-Popover" />', () => {
       expect(component).to.have.className('k-Popover')
       expect(component).to.have.className('k-Popover--custom')
     })
@@ -30,6 +30,10 @@ describe('<Popover />', () => {
         <div class="k-Popover__content">
           <div class="k-Popover--custom" />
         </div>)
+
+      it('has only text', () => {
+        expect(component.find('.k-Popover__text')).to.have.className('k-Popover__content')
+      })
 
       it('has a children', () => {
         expect(component.children()).to.have.text('')

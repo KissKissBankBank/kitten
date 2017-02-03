@@ -14,27 +14,14 @@ describe('CallToActionPopover', () => {
   })
 
   it('renders <div> without illustration', () => {
-    expect(defaultComponent).not.to.have.attr('illustration')
+    expect(defaultComponent.find('.k-Popover__illustration')).to.have.length(0)
   })
 
   it('renders <div> without buttons', () => {
-    expect(defaultComponent).not.to.have.attr('buttons')
+    expect(defaultComponent.find('buttons')).to.have.length(0)
   })
 
   it('has a content', () => {
     expect(defaultComponent).to.have.text('')
-  })
-})
-
-describe('<CallToActionPopover />', () => {
-
-  describe('basic props', () => {
-    const component = shallow(
-      <Popover className="k-Popover__custom" />
-    )
-
-    it('renders a <div class="k-Popover" />', () => {
-      expect(component).to.have.className('k-Popover__custom')
-    })
   })
 })
