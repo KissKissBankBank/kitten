@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Vertically align buttons to the middle of the line.
 - Feature: Add `quintuple` utilities in `k-utilities-margin`.
 
 ## [5.7.0] - 2017-02-02
