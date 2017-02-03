@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add new `TextInput` React component.
 - Feature: Add new display utility (`k-u-hidden`).
 - Feature: Add `centered` option to `HeaderItem` component.
 - Feature: Add new `FormRow` React component.
