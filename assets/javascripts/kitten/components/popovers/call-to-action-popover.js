@@ -7,7 +7,6 @@ export class CallToActionPopover extends React.Component {
     if (!this.props.illustration) return
 
     const Illustration = this.props.illustration
-
     return (
       <div className="k-Popover__illustration">
          <Illustration />
@@ -29,13 +28,13 @@ export class CallToActionPopover extends React.Component {
   }
 
   render() {
-    const{ title, text, id } = this.props
+    const{ title, text } = this.props
 
     return (
       <Popover>
         { this.renderIllustration() }
         <div className="k-Popover__content">
-          <p id={ id }
+          <p id="dialogtitle"
              className="k-Popover__title">
             { title }
           </p>
@@ -54,7 +53,6 @@ export class CallToActionPopover extends React.Component {
 }
 
 CallToActionPopover.defaultProps = {
-  id: "dialogtitle",
   title: "",
   text: "",
   illustration: null,
