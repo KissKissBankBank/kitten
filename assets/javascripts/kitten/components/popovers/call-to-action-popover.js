@@ -56,5 +56,10 @@ CallToActionPopover.defaultProps = {
   title: "",
   text: "",
   illustration: null,
-  buttons: null,
+  buttons: [{
+    label: "Ok",
+    modifier: "boron",
+    size: "big",
+  }],
 }
+
