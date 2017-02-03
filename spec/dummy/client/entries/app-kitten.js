@@ -112,6 +112,7 @@ import { KarlParagraph,
 import { KarlButtonIconHeartRight,
          KarlButtonIconHeartLeft
        } from 'kitten/karl/buttons/button-heart-icon-words'
+import { KarlButtonAndText } from 'kitten/karl/buttons/button'
 import { KarlPaymentButton } from 'kitten/karl/buttons/payment-button'
 import { KarlMakerWhoAmIStep } from 'app/maker/who-am-i/components/container'
 
@@ -194,6 +195,7 @@ ReactOnRails.register({
   KarlLoudspeakerPopover,
   KarlButtonIconHeartRight,
   KarlButtonIconHeartLeft,
+  KarlButtonAndText,
   KarlImageExternalRichLink,
   KarlSvgExternalRichLink,
   KarlSimpleDropdown,
