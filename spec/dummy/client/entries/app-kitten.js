@@ -30,6 +30,7 @@ import Select from 'react-select'
 import SelectWithState from 'kitten/components/form/select-with-state'
 import Slider from 'kitten/components/form/slider'
 import Switch from 'kitten/components/form/switch'
+import { TextInput } from 'kitten/components/form/text-input'
 
 // Grid
 import { Grid, GridCol } from 'kitten/components/grid/grid'
@@ -145,6 +146,7 @@ ReactOnRails.register({
   SelectWithState,
   Slider,
   Switch,
+  TextInput,
 
   // Icons
   GrabberIcon,
