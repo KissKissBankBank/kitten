@@ -4,7 +4,6 @@ import classNames from 'classnames'
 export class TextInput extends React.Component {
   render() {
     const { className,
-            type,
             tag,
             valid,
             error,
@@ -32,7 +31,7 @@ export class TextInput extends React.Component {
 TextInput.defaultProps = {
   tag: 'input',
   type: 'text',
-  placeholder: "Lorem ipsum dolor sit amet",
+  placeholder: "Lorem ipsum dolor sit amet ...",
   valid: false,
   error: false,
   small: false,
