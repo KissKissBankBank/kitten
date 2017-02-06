@@ -60,7 +60,7 @@ describe('<CallToActionPopover />', () => {
       title={ title }
       text={ text }
       buttons={ buttons }
-      ariaLabel="custom-aria-label" />
+      titleAriaLabelId="custom-aria-label" />
     )
 
     it('renders a title', () => {

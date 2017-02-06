@@ -18,7 +18,6 @@ describe('<Popover />', () => {
 
       expect(popoverComponent).to.have.attr('role', 'dialog')
       expect(popoverComponent).to.have.attr('aria-hidden', 'true')
-      expect(popoverComponent).to.have.attr('aria-labelledby', 'dialogtitle')
     })
 
     it('renders close button', () => {
@@ -33,7 +32,7 @@ describe('<Popover />', () => {
       <Popover popoverClassName="k-Popover--custom"
                containerClassName="k-Popover__container--custom"
                closeButtonLabel="Fermer"
-               ariaLabel="custom-aria-label" />)
+               titleAriaLabelId="custom-aria-label" />)
 
     it('renders custom aria-labelledby attribute', () => {
       const popoverComponent = component.find('.k-Popover')
