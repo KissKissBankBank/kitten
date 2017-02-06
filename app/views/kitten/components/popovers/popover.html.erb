@@ -1,0 +1,41 @@
+<div class="karl-Example__column">
+  <%= example 'Popover' do %>
+    <%= react_component('Popover', props: {
+      children: 'Lick the curtain just to be annoying. Rub whiskers on bare skin act innocent love to play with owners hair tie eat grass. Lick the curtain just to be annoying. Rub whiskers on bare skin act innocent love to play with owners hair tie eat grass. Lick the curtain just to be annoying. Rub whiskers on bare skin act innocent love to play with owners hair tie eat grass',
+      }
+    ) %>
+  <% end %>
+
+  <%= example 'Call To Action Popover' do %>
+    <%= react_component('CallToActionPopover', props: {
+      title: "Instantly break out",
+      text: "Spend all night ensuring people don't sleep sleep all day pee in human's bed until he cleans the litter box put butt in owner's face. Swat at dog brown cats with pink ears, for meow.",
+      buttons: [{
+        label: "Découvrir",
+        modifier: "boron",
+        size: "big",
+        tag: "a",
+        href: "http://www.catipsum.com",
+        target: "_blank",
+      }],
+      titleAriaLabelId: 'dialogtitle-call-to-action',
+    }) %>
+  <% end %>
+
+  <%= example 'Call To Action with illustration Popover' do %>
+    <%= react_component('KarlLoudspeakerPopover', props: {
+      title: "Instantly break out",
+      text: "Spend all night ensuring people don't sleep sleep all day pee in human's bed until he cleans the litter box put butt in owner's face.
+        Spend all night ensuring people don't sleep sleep all day pee in human's bed until he cleans the litter box put butt in owner's face.",
+      buttons: [{
+        label: "Découvrir",
+        modifier: "boron",
+        tag: "a",
+        href: "http://www.catipsum.com",
+        target: "_blank",
+      }],
+      titleAriaLabelId: 'dialogtitle-with-illustration',
+    }) %>
+  <% end %>
+
+</div>

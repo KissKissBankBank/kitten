@@ -45,6 +45,10 @@ import ExternalRichLink from 'kitten/components/links/external-rich-link'
 // Lists
 import NavList from 'kitten/components/lists/nav-list'
 
+// Popovers
+import { Popover } from 'kitten/components/popovers/popover'
+import { CallToActionPopover } from 'kitten/components/popovers/call-to-action-popover'
+
 // Navigation
 import { TabBar } from 'kitten/components/navigation/tab-bar'
 
@@ -71,6 +75,7 @@ import { Title } from 'kitten/components/typography/title'
 
 // Karl composed components
 
+import { KarlLoudspeakerPopover } from 'karl/components/popovers/loudspeaker-popover'
 import { KarlImageExternalRichLink,
          KarlSvgExternalRichLink } from 'kitten/karl/molecules/external-rich-link'
 import { KarlSimpleDropdown,
@@ -158,6 +163,10 @@ ReactOnRails.register({
   // Lists
   NavList,
 
+  // Popovers
+  CallToActionPopover,
+  Popover,
+
   // Navigation
   TabBar,
 
@@ -183,6 +192,7 @@ ReactOnRails.register({
   Title,
 
   // Karl composed components
+  KarlLoudspeakerPopover,
   KarlButtonIconHeartRight,
   KarlButtonIconHeartLeft,
   KarlButtonAndText,
