@@ -14,23 +14,14 @@ describe('Progress', () => {
 
 describe('<Progress />', () => {
   const component = shallow(
-  <Progress className="k-Progress--custom"
-            value="50" />)
+    <Progress className="k-Progress--custom"
+              value= { 42 } />)
 
   it('renders a <Progress class="k-Progress" />', () => {
     expect(component).to.have.className('k-Progress--custom')
   })
 
   it('renders a value', () => {
-    expect(component).to.have.attr('aria-valuenow', '50')
-  })
-
-  describe('style', () => {
-    const component = shallow(
-      <Progress style="width: 50%" />)
-
-    it('renders slider', () => {
-      expect(component.find('.k-Progress__slider')).to.have.style('width', '50%')
-    })
+    expect(component).to.have.attr('aria-valuenow', '42')
   })
 })
