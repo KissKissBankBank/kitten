@@ -31,6 +31,7 @@ import SelectWithState from 'kitten/components/form/select-with-state'
 import Slider from 'kitten/components/form/slider'
 import Switch from 'kitten/components/form/switch'
 import { TextInput } from 'kitten/components/form/text-input'
+import { TextInputWithCounter } from 'kitten/components/form/text-input-with-counter'
 
 // Grid
 import { Grid, GridCol } from 'kitten/components/grid/grid'
@@ -153,6 +154,7 @@ ReactOnRails.register({
   Slider,
   Switch,
   TextInput,
+  TextInputWithCounter,
 
   // Icons
   GrabberIcon,
