@@ -5,7 +5,7 @@ import { TextInput } from 'kitten/components/form/text-input'
 
 describe('Text-input with default props', () => {
   const defaultComponent = shallow(
-  <TextInput />)
+    <TextInput />)
 
   it('has a default text-input attributes', () => {
     expect(defaultComponent.find('.k-TextInput')).to.have.length(1)
@@ -15,15 +15,15 @@ describe('Text-input with default props', () => {
     expect(defaultComponent).to.have.tagName('input')
   })
 
-  it('has a valid class', () => {
+  it('does not contain a is-valid element', () => {
     expect(defaultComponent.find('.is-valid')).to.have.length(0)
   })
 
-  it('has a error class', () => {
+  it('does not contain a is-error element', () => {
     expect(defaultComponent.find('.is-error')).to.have.length(0)
   })
 
-  it('has a tiny class', () => {
+  it('does not contain a tiny element', () => {
     expect(defaultComponent.find('.k-TextInput--tiny')).to.have.length(0)
   })
 
