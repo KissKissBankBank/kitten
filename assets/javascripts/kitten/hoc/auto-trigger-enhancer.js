@@ -77,7 +77,7 @@ export const autoTriggerEnhancer = (WrappedComponent, wrappedComponentProps) => 
     }
 
     render() {
-      if (!this.state.play) return <div></div>
+      if (!this.state.play) return null
 
       return (
         <WrappedComponent
