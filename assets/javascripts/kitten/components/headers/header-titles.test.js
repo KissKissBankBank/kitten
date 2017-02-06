@@ -35,4 +35,19 @@ describe('<HeaderTitles />', () => {
       expect(subtitle).to.have.text('Custom subtitle')
     })
   })
+
+  describe('with custom class', () => {
+    const titles = shallow(
+      <HeaderTitles className="custom-class"
+                    titleClassName="title-custom-class"
+                    subtitleClassName="subtitle-custom-class"
+                    subtitle="Custom subtitle" />
+    )
+
+    it('has the right classes', () => {
+      expect(titles).to.have.className('custom-class')
+      expect(titles).to.have.descendants('.title-custom-class')
+      expect(titles).to.have.descendants('.subtitle-custom-class')
+    })
+  })
 })

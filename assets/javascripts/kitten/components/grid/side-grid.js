@@ -4,7 +4,7 @@ import { stringUtils } from 'kitten/helpers/utils/string'
 
 export class SideGrid extends React.Component {
   render() {
-    const { className, containerClassName } = this.props
+    const { className, containerClassName, rowClassName } = this.props
     let { asidePosition, asideSize } = this.props
 
     asidePosition = stringUtils.upcaseFirst(asidePosition)
@@ -21,7 +21,7 @@ export class SideGrid extends React.Component {
       <div className={ sideGridClassName }>
         <div className={ classNames('k-SideGrid__container',
                                     containerClassName) }>
-          <div className="k-SideGrid__row">
+          <div className={ classNames('k-SideGrid__row', rowClassName) }>
             { this.props.children }
           </div>
         </div>
@@ -57,6 +57,7 @@ export class SideGridAside extends React.Component {
 SideGrid.defaultProps = {
   className: null,
   containerClassName: null,
+  rowClassName: null,
   asidePosition: 'end', // 'start' or 'end'
   asideSize: 'default', // 'default', 'small' or 'large'
 }
