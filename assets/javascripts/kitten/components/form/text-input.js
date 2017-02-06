@@ -23,7 +23,7 @@ export class TextInput extends React.Component {
     const Tag = tag
 
     return (
-      <Tag className= { textInputClassNames } { ...others } />
+      <Tag className={ textInputClassNames } { ...others } />
     )
   }
 }
