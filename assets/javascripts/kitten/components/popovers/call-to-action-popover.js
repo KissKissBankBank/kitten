@@ -29,13 +29,13 @@ export class CallToActionPopover extends React.Component {
   }
 
   render() {
-    const{ title, text } = this.props
+    const{ title, text, ariaLabel } = this.props
 
     return (
-      <Popover>
+      <Popover ariaLabel={ ariaLabel }>
         { this.renderIllustration() }
         <div className="k-Popover__content">
-          <p id="dialogtitle"
+          <p id={ ariaLabel }
              className="k-Popover__title">
             { title }
           </p>
@@ -62,5 +62,5 @@ CallToActionPopover.defaultProps = {
     modifier: "boron",
     size: "big",
   }],
+  ariaLabel: 'dialogtitle',
 }
-

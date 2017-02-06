@@ -32,7 +32,15 @@ describe('<Popover />', () => {
     const component = shallow(
       <Popover popoverClassName="k-Popover--custom"
                containerClassName="k-Popover__container--custom"
-               closeButtonLabel="Fermer" />)
+               closeButtonLabel="Fermer"
+               ariaLabel="custom-aria-label" />)
+
+    it('renders custom aria-labelledby attribute', () => {
+      const popoverComponent = component.find('.k-Popover')
+
+      expect(popoverComponent).to.have
+        .attr('aria-labelledby', 'custom-aria-label')
+    })
 
     it('renders <div className="k-Popover--custom" />', () => {
       expect(component.find('.k-Popover--custom')).to.have.length(1)

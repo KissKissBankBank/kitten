@@ -36,9 +36,11 @@ export class Popover extends React.Component {
   }
 
   render() {
+    console.log(this.props)
     const { children,
             popoverClassName,
             containerClassName,
+            ariaLabel,
             ...others }
       = this.props
 
@@ -57,7 +59,7 @@ export class Popover extends React.Component {
            className={ popoverClassNames }
            role="dialog"
            aria-hidden="true"
-           aria-labelledby="dialogtitle"
+           aria-labelledby={ ariaLabel }
            { ...others }>
         <div className={ containerClassNames }>
           { this.renderContent() }
@@ -72,4 +74,5 @@ Popover.defaultProps = {
   closeButtonLabel: 'Close',
   popoverClassName: "",
   containerClassName: "",
+  ariaLabel: 'dialogtitle',
 }

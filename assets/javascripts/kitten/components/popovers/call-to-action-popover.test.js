@@ -59,7 +59,8 @@ describe('<CallToActionPopover />', () => {
     <CallToActionPopover
       title={ title }
       text={ text }
-      buttons={ buttons } />
+      buttons={ buttons }
+      ariaLabel="custom-aria-label" />
     )
 
     it('renders a title', () => {
@@ -74,6 +75,13 @@ describe('<CallToActionPopover />', () => {
 
       expect(textComponent).to.have.length(1)
       expect(textComponent).to.have.text(text)
+    })
+
+    it('assigns custom id for aria label', () => {
+      const titleComponent = component.find('.k-Popover__title')
+
+      expect(titleComponent).to.have
+        .attr('id', 'custom-aria-label')
     })
   })
 
