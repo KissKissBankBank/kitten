@@ -5,8 +5,21 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add new `TextInput` React component.
-- Fix: Vertically align buttons to the middle of the line.
-- Feature: Add `quintuple` utilities in `k-utilities-margin`.
+
+## [5.8.0] - 2017-02-06
+
+Features:
+- Add new `LoudspeakerIllustration` React component.
+- Add new `Popover` React component.
+- Add new `CallToActionPopover` React component.
+- Add `rowClassName` prop on `SideGrid` component.
+- Add `className`, `titleClassName` and `subtitleClassName` props
+  on `HeaderTitles`.
+- Add `quintuple` utilities in `k-utilities-margin`.
+
+Fixes:
+- Vertically align buttons to the middle of the line.
+- Remove pointer-events on `k-Header__item--centered`.
 
 ## [5.7.0] - 2017-02-02
 
