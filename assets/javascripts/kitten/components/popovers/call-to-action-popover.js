@@ -7,6 +7,7 @@ export class CallToActionPopover extends React.Component {
     if (!this.props.illustration) return
 
     const Illustration = this.props.illustration
+
     return (
       <div className="k-Popover__illustration">
          <Illustration />
