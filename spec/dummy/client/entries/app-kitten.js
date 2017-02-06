@@ -76,6 +76,8 @@ import { Title } from 'kitten/components/typography/title'
 
 // Karl composed components
 
+import { KarlAutoTriggerPopover }
+  from 'karl/components/popovers/auto-trigger-popover'
 import { KarlLoudspeakerPopover } from 'karl/components/popovers/loudspeaker-popover'
 import { KarlImageExternalRichLink,
          KarlSvgExternalRichLink } from 'kitten/karl/molecules/external-rich-link'
@@ -194,6 +196,7 @@ ReactOnRails.register({
   Title,
 
   // Karl composed components
+  KarlAutoTriggerPopover,
   KarlLoudspeakerPopover,
   KarlButtonIconHeartRight,
   KarlButtonIconHeartLeft,
