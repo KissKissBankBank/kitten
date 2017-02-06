@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add new `TextInputWithCounter` React component.
 - Feature: Add new `TextInput` React component.
 
 ## [5.8.0] - 2017-02-06
