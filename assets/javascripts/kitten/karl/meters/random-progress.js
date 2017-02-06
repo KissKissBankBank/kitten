@@ -14,12 +14,11 @@ export class KarlRandomProgress extends React.Component {
     const randomProgress = () => {
       this.setState({ value: Math.random() * 100 })
     }
-    const intervalId = setInterval(randomProgress, 1000)
-    this.setState({ intervalId })
+    this.intervalId = setInterval(randomProgress, 1000)
   }
 
   componentWillUnmount() {
-    clearInterval(this.state.intervalId)
+    clearInterval(this.intervalId)
   }
 
   render() {
