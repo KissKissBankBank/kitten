@@ -34,15 +34,19 @@ export const autoTriggerEnhancer = (WrappedComponent, wrappedComponentProps) => 
       window.dispatchEvent(event)
     }
 
-    shouldStart() {
-      if (!domElementHelper.canUseDom()) { return false }
-      if (this.props.development) { return true }
-
+    hasPlayed() {
       // TODO: better implementation of localStorage as state store for React
       // component.
       const componentState = JSON.parse(localStorage.getItem(this.props.storeName))
 
-      return !(componentState && componentState.hasPlayed)
+      return componentState && componentState.hasPlayed
+    }
+
+    shouldStart() {
+      if (!domElementHelper.canUseDom()) { return false }
+      if (this.props.development) { return true }
+
+      return !this.hasPlayed()
     }
 
     start() {
