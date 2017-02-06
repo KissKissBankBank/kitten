@@ -2,7 +2,7 @@ import React from 'react'
 
 export const PhoneIllustration = (props) => {
   return(
-  <svg { ...props }
+    <svg { ...props }
        width="66"
        height="62"
        viewBox="0 0 66 62"
