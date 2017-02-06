@@ -9,6 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   on `HeaderTitles`.
 - Fix: Vertically align buttons to the middle of the line.
 - Feature: Add `quintuple` utilities in `k-utilities-margin`.
+- Fix: Remove pointer-events on `k-Header__item--centered`.
 
 ## [5.7.0] - 2017-02-02
 
