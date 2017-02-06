@@ -1,5 +1,12 @@
 <div class="karl-Example__column">
   <%= example "Progress" do %>
-    <%= react_component('Progress') %>
+    <%= react_component('Progress', props: {
+        value: 60
+      }
+    ) %>
+  <% end %>
+
+  <%= example "Progress" do %>
+    <%= react_component('KarlRandomProgress') %>
   <% end %>
 </div>

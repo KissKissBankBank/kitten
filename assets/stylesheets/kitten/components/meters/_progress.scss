@@ -28,6 +28,8 @@
   $ramp-height: k-px-to-rem(20px);
   $border-radius: k-px-to-rem(30px);
 
+  $transition-speed: .2s;
+
   .k-Progress {
     max-width: 100%;
   }
@@ -46,6 +48,9 @@
 
     border-radius: $border-radius;
     background: $color;
+
+    transition: width $transition-speed;
+
 
     .k-Progress.is-disabled & {
       background: $disabled-color;

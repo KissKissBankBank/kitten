@@ -15,13 +15,13 @@ describe('Progress', () => {
 describe('<Progress />', () => {
   const component = shallow(
     <Progress className="k-Progress--custom"
-              value= { 42 } />)
+              value= { 50 } />)
 
   it('renders a <Progress class="k-Progress" />', () => {
     expect(component).to.have.className('k-Progress--custom')
   })
 
   it('renders a value', () => {
-    expect(component).to.have.attr('aria-valuenow', '42')
+    expect(component).to.have.attr('aria-valuenow', '50')
   })
 })

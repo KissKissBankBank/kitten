@@ -32,5 +32,5 @@ export class Progress extends React.Component {
 }
 
 Progress.defaultProps = {
-  value: 42,
+  value: 50,
 }
