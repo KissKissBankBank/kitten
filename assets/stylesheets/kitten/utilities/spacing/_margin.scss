@@ -12,24 +12,28 @@
 ///     <div class="k-u-margin-top-double">…</div>
 ///     <div class="k-u-margin-top-triple">…</div>
 ///     <div class="k-u-margin-top-quadruple">…</div>
+///     <div class="k-u-margin-top-quintuple">…</div>
 ///     <div class="k-u-margin-top-none">…</div>
 ///
 ///     <div class="k-u-margin-bottom-single">…</div>
 ///     <div class="k-u-margin-bottom-double">…</div>
 ///     <div class="k-u-margin-bottom-triple">…</div>
 ///     <div class="k-u-margin-bottom-quadruple">…</div>
+///     <div class="k-u-margin-bottom-quintuple">…</div>
 ///     <div class="k-u-margin-bottom-none">…</div>
 ///
 ///     <div class="k-u-margin-left-single">…</div>
 ///     <div class="k-u-margin-left-double">…</div>
 ///     <div class="k-u-margin-left-triple">…</div>
 ///     <div class="k-u-margin-left-quadruple">…</div>
+///     <div class="k-u-margin-left-quintuple">…</div>
 ///     <div class="k-u-margin-left-none">…</div>
 ///
 ///     <div class="k-u-margin-right-single">…</div>
 ///     <div class="k-u-margin-right-double">…</div>
 ///     <div class="k-u-margin-right-triple">…</div>
 ///     <div class="k-u-margin-right-quadruple">…</div>
+///     <div class="k-u-margin-right-quintuple">…</div>
 ///     <div class="k-u-margin-right-none">…</div>
 
 @mixin k-utilities-margin {
@@ -48,6 +52,10 @@
 
   .k-u-margin-top-quadruple {
     margin-top: k-px-to-rem(40px);
+  }
+
+  .k-u-margin-top-quintuple {
+    margin-top: k-px-to-rem(50px);
   }
 
   .k-u-margin-top-none {
@@ -71,6 +79,10 @@
     margin-bottom: k-px-to-rem(40px);
   }
 
+  .k-u-margin-bottom-quintuple {
+    margin-bottom: k-px-to-rem(50px);
+  }
+
   .k-u-margin-bottom-none {
     margin-bottom: 0;
   }
@@ -92,6 +104,10 @@
     margin-left: k-px-to-rem(40px);
   }
 
+  .k-u-margin-left-quintuple {
+    margin-left: k-px-to-rem(50px);
+  }
+
   .k-u-margin-left-none {
     margin-left: 0;
   }
@@ -111,6 +127,10 @@
 
   .k-u-margin-right-quadruple {
     margin-right: k-px-to-rem(40px);
+  }
+
+  .k-u-margin-right-quintuple {
+    margin-right: k-px-to-rem(50px);
   }
 
   .k-u-margin-right-none {

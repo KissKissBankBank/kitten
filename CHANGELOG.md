@@ -5,6 +5,15 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add new `Progress` React component.
+- Feature: Add new `LoudspeakerIllustration` React component.
+- Feature: Add new `Popover` React component.
+- Feature: Add new `CallToActionPopover` React component.
+- Feature: Add `rowClassName` prop on `SideGrid` component.
+- Feature: Add `className`, `titleClassName` and `subtitleClassName` props
+  on `HeaderTitles`.
+- Feature: Add `quintuple` utilities in `k-utilities-margin`.
+- Fix: Vertically align buttons to the middle of the line.
+- Fix: Remove pointer-events on `k-Header__item--centered`.
 
 ## [5.7.0] - 2017-02-02
 

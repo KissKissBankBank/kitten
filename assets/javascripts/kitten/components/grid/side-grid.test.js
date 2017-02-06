@@ -30,6 +30,20 @@ describe('<SideGrid />', () => {
       expect(component).to.have.className('k-SideGrid--asideLarge')
     })
   })
+
+  describe('with custom class', () => {
+    const component = shallow(
+      <SideGrid className="custom-class"
+                containerClassName="container-custom-class"
+                rowClassName="row-custom-class" />
+    )
+
+    it('has the right classes', () => {
+      expect(component).to.have.className('custom-class')
+      expect(component).to.have.descendants('.container-custom-class')
+      expect(component).to.have.descendants('.row-custom-class')
+    })
+  })
 })
 
 describe('<SideGridContent />', () => {
