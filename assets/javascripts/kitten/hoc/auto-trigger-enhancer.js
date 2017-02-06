@@ -44,7 +44,7 @@ export const autoTriggerEnhancer = (WrappedComponent, wrappedComponentProps) => 
 
     shouldStart() {
       if (!domElementHelper.canUseDom()) { return false }
-      if (this.props.verifyStorageOnStart) { return true }
+      if (!this.props.verifyStorageOnStart) { return true }
 
       return !this.hasPlayed()
     }
@@ -89,7 +89,7 @@ export const autoTriggerEnhancer = (WrappedComponent, wrappedComponentProps) => 
 
   AutoTriggerWrapper.defaultProps = {
     storeName: 'kitten.AutoTrigger',
-    verifyStorageOnStart: false,
+    verifyStorageOnStart: true,
     stopEventName: 'k:auto-trigger:stop',
     stopHandlerName: null,
   }
