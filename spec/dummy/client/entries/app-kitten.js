@@ -30,6 +30,7 @@ import Select from 'react-select'
 import SelectWithState from 'kitten/components/form/select-with-state'
 import Slider from 'kitten/components/form/slider'
 import Switch from 'kitten/components/form/switch'
+import { TextInput } from 'kitten/components/form/text-input'
 
 // Grid
 import { Grid, GridCol } from 'kitten/components/grid/grid'
@@ -78,6 +79,8 @@ import { Title } from 'kitten/components/typography/title'
 
 // Karl composed components
 
+import { KarlAutoTriggerPopover }
+  from 'karl/components/popovers/auto-trigger-popover'
 import { KarlLoudspeakerPopover } from 'karl/components/popovers/loudspeaker-popover'
 import { KarlImageExternalRichLink,
          KarlSvgExternalRichLink } from 'kitten/karl/molecules/external-rich-link'
@@ -155,6 +158,7 @@ ReactOnRails.register({
   SelectWithState,
   Slider,
   Switch,
+  TextInput,
 
   // Icons
   GrabberIcon,
@@ -199,6 +203,7 @@ ReactOnRails.register({
   Title,
 
   // Karl composed components
+  KarlAutoTriggerPopover,
   KarlLoudspeakerPopover,
   KarlButtonIconHeartRight,
   KarlButtonIconHeartLeft,
