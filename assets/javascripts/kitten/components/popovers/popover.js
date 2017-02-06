@@ -71,6 +71,6 @@ export class Popover extends React.Component {
 
 Popover.defaultProps = {
   closeButtonLabel: 'Close',
-  popoverClassName: "",
-  containerClassName: "",
+  popoverClassName: '',
+  containerClassName: '',
 }
