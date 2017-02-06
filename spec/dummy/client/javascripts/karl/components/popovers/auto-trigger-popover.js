@@ -9,5 +9,6 @@ const text = 'I could pee on this if i had the energy. Present belly, scratch ' 
 
 export const KarlAutoTriggerPopover = autoTriggerEnhancer(Popover, {
   children: text,
+  popoverClassName: 'karl-AutoTriggerPopover',
   titleAriaLabelId: 'dialogtitle-auto-trigger-popover',
 })

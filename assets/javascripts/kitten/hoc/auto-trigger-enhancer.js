@@ -9,6 +9,8 @@ export const autoTriggerEnhancer = (WrappedComponent, wrappedComponentProps) => 
       this.state = {
         play: false
       }
+
+      this.handleStop = this.handleStop.bind(this)
     }
 
     componentDidMount() {
@@ -17,8 +19,24 @@ export const autoTriggerEnhancer = (WrappedComponent, wrappedComponentProps) => 
       }
     }
 
+    handleStop() {
+      this.stop()
+
+      this.dispatchEvent(this.props.stopEventName)
+    }
+
+    dispatchEvent(eventLabel) {
+      if (!domElementHelper.canUseDom()) return
+
+      const event = document.createEvent('Event')
+
+      event.initEvent(eventLabel, true, true)
+      window.dispatchEvent(event)
+    }
+
     shouldStart() {
       if (!domElementHelper.canUseDom()) { return false }
+      if (this.props.development) { return true }
 
       // TODO: better implementation of localStorage as state store for React
       // component.
@@ -34,25 +52,39 @@ export const autoTriggerEnhancer = (WrappedComponent, wrappedComponentProps) => 
 
       const componentState = JSON.stringify({ hasPlayed: true })
 
-      if (!this.props.development) {
-        localStorage.setItem(this.props.storeName, componentState)
-      }
+      localStorage.setItem(this.props.storeName, componentState)
     }
 
     stop() {
       this.setState({ play: false })
     }
 
+    handlerProps() {
+      const handlerProps = {}
+
+      if (this.props.stopHandlerName) {
+        handlerProps[this.props.stopHandlerName] = this.handleStop
+      }
+
+      return handlerProps
+    }
+
     render() {
       if (!this.state.play) return <div></div>
 
-      return <WrappedComponent { ...wrappedComponentProps } />
+      return (
+        <WrappedComponent
+          { ...this.handlerProps() }
+          { ...wrappedComponentProps } />
+      )
     }
   }
 
   AutoTriggerWrapper.defaultProps = {
     storeName: 'kitten.AutoTrigger',
     development: false,
+    stopEventName: 'k:auto-trigger:stop',
+    stopHandlerName: null,
   }
 
   return AutoTriggerWrapper

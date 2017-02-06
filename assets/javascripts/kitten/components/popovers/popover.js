@@ -2,6 +2,11 @@ import React from 'react'
 import classNames from 'classnames'
 
 export class Popover extends React.Component {
+  constructor(props) {
+    super(props)
+
+    this.handleCloseClick = this.handleCloseClick.bind(this)
+  }
 
   handleCloseClick() {
     if (this.props.onCloseClick) return this.props.onCloseClick()
@@ -40,7 +45,9 @@ export class Popover extends React.Component {
             popoverClassName,
             containerClassName,
             titleAriaLabelId,
-            ...others }
+            onCloseClick,
+            closeButtonLabel,
+            ...popoverAttributes }
       = this.props
 
     const popoverClassNames = classNames(
@@ -59,7 +66,7 @@ export class Popover extends React.Component {
            role="dialog"
            aria-hidden="true"
            aria-labelledby={ titleAriaLabelId }
-           { ...others }>
+           { ...popoverAttributes }>
         <div className={ containerClassNames }>
           { this.renderContent() }
           <div className="k-Popover__close">{ this.renderCloseButton() }</div>
