@@ -7,14 +7,14 @@ export class TextInput extends React.Component {
             tag,
             valid,
             error,
-            small,
+            tiny,
             ...others } = this.props
 
     let textInputClassNames = classNames(
       'k-TextInput',
       className,
       {
-        'k-TextInput--tiny': small,
+        'k-TextInput--tiny': tiny,
         'is-valid': valid,
         'is-error': error,
       },
@@ -31,8 +31,8 @@ export class TextInput extends React.Component {
 TextInput.defaultProps = {
   tag: 'input',
   type: 'text',
-  placeholder: "Lorem ipsum dolor sit amet ...",
+  placeholder: null,
   valid: false,
   error: false,
-  small: false,
+  tiny: false,
 }

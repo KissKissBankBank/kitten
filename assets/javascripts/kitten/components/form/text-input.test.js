@@ -23,7 +23,7 @@ describe('Text-input with default props', () => {
     expect(defaultComponent.find('.is-error')).to.have.length(0)
   })
 
-  it('has a small class', () => {
+  it('has a tiny class', () => {
     expect(defaultComponent.find('.k-TextInput--tiny')).to.have.length(0)
   })
 
@@ -36,33 +36,33 @@ describe('Text-input with default props', () => {
       expect(component).to.have.className('k-TextInput--custom')
     })
 
-    describe('button with valid class', () => {
+    describe('text-input with valid class', () => {
       const componentWithValidClass = shallow(
         <TextInput valid={ true } />
       )
 
-      it('has a valid', () => {
+      it('has a valid class', () => {
         expect(componentWithValidClass).to.have.className('is-valid')
       })
     })
 
-    describe('button with error class', () => {
+    describe('text-input with error class', () => {
       const componentWithErrorClass = shallow(
         <TextInput error={ true } />
       )
 
-      it('has a error', () => {
+      it('has a error class', () => {
         expect(componentWithErrorClass).to.have.className('is-error')
       })
     })
 
-    describe('button with small class', () => {
-      const componentWithSmallClass = shallow(
-        <TextInput small={ true } />
+    describe('text-input with tiny class', () => {
+      const componentWithTinyClass = shallow(
+        <TextInput tiny={ true } />
       )
 
-      it('has a small', () => {
-        expect(componentWithSmallClass).to.have.className('k-TextInput--tiny')
+      it('has a tiny class', () => {
+        expect(componentWithTinyClass).to.have.className('k-TextInput--tiny')
       })
     })
   })

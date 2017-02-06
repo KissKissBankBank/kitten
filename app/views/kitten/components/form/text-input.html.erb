@@ -1,16 +1,16 @@
 <%= example "Text input - Default" do %>
-  <%= react_component('TextInput') %>
-<% end %>
-
-<%= example "Text input - Small" do %>
   <%= react_component('TextInput', props: {
-      small: true,
+      placeholder: "Lorem ipsum dolor sit amet ..."
     }
   ) %>
 <% end %>
 
-<%= example "Text input - Text" do %>
-  <%= react_component('TextInput') %>
+<%= example "Text input - Tiny" do %>
+  <%= react_component('TextInput', props: {
+      tiny: true,
+      placeholder: "Lorem ipsum dolor sit amet ..."
+    }
+  ) %>
 <% end %>
 
 <%= example "Text input - Text with counter" do %>
@@ -34,6 +34,7 @@
 <%= example "Text input - Valid" do %>
   <%= react_component('TextInput', props: {
       valid: true,
+      placeholder: "Lorem ipsum dolor sit amet ..."
     }
   ) %>
 <% end %>
@@ -41,6 +42,7 @@
 <%= example "Text input - Error" do %>
   <%= react_component('TextInput', props: {
       error: true,
+      placeholder: "Lorem ipsum dolor sit amet ..."
     }
   ) %>
 <% end %>
@@ -48,6 +50,7 @@
 <%= example "Text input - Inactive" do %>
   <%= react_component('TextInput', props: {
       disabled: true,
+      placeholder: "Lorem ipsum dolor sit amet ..."
     }
   ) %>
 <% end %>
