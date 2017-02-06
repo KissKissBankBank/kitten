@@ -8,8 +8,7 @@ import { Button } from 'kitten/components/buttons/button'
 
 describe('<CallToActionPopover />', () => {
   describe('with default props', () => {
-    const defaultComponent = shallow(
-      <CallToActionPopover />)
+    const defaultComponent = shallow(<CallToActionPopover />)
 
     it('renders a title', () => {
       const title = defaultComponent.find('.k-Popover__title')
@@ -56,11 +55,11 @@ describe('<CallToActionPopover />', () => {
     const title = "Instantly break out"
     const text = "Spend all night ensuring people don't sleep"
     const component = shallow(
-    <CallToActionPopover
-      title={ title }
-      text={ text }
-      buttons={ buttons }
-      titleAriaLabelId="custom-aria-label" />
+      <CallToActionPopover
+        title={ title }
+        text={ text }
+        buttons={ buttons }
+        titleAriaLabelId="custom-aria-label" />
     )
 
     it('renders a title', () => {

@@ -11,17 +11,14 @@ export class CallToActionPopover extends React.Component {
     return (
       <div className="k-Popover__illustration">
          <Illustration />
-      </div>)
+      </div>
+    )
   }
 
   renderButton(options) {
     const { label, ...others } = options
 
-    return (
-      <Button { ...others }>
-        { label }
-      </Button>
-    )
+    return <Button { ...others } children={ label } />
   }
 
   renderButtonsList() {
@@ -29,7 +26,7 @@ export class CallToActionPopover extends React.Component {
   }
 
   render() {
-    const{ title, text, titleAriaLabelId } = this.props
+    const { title, text, titleAriaLabelId } = this.props
 
     return (
       <Popover titleAriaLabelId={ titleAriaLabelId }>

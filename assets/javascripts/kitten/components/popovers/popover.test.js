@@ -31,7 +31,7 @@ describe('<Popover />', () => {
     const component = shallow(
       <Popover popoverClassName="k-Popover--custom"
                containerClassName="k-Popover__container--custom"
-               closeButtonLabel="Fermer"
+               closeButtonLabel="Custom close"
                titleAriaLabelId="custom-aria-label" />)
 
     it('renders custom aria-labelledby attribute', () => {
@@ -52,7 +52,7 @@ describe('<Popover />', () => {
     it('renders close button with a specific label', () => {
       const closeButtonComponent = component.find('.k-ButtonIcon')
 
-      expect(closeButtonComponent).to.have.attr('title', 'Fermer')
+      expect(closeButtonComponent).to.have.attr('title', 'Custom close')
     })
   })
 })

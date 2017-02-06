@@ -36,7 +36,6 @@ export class Popover extends React.Component {
   }
 
   render() {
-    console.log(this.props)
     const { children,
             popoverClassName,
             containerClassName,
