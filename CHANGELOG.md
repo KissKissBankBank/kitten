@@ -2,10 +2,11 @@
 
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-## [unreleased]
+## [5.9.0] - 2017-02-06
 
-- Feature: Add new `TextInput` React component.
-- Feature: Add `autoTriggerEnhancer` high-order component.
+Features:
+- Add new `TextInput` React component.
+- Add `autoTriggerEnhancer` high-order component.
 
 ## [5.8.0] - 2017-02-06
 
