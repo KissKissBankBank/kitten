@@ -46,6 +46,9 @@ import ExternalRichLink from 'kitten/components/links/external-rich-link'
 // Lists
 import NavList from 'kitten/components/lists/nav-list'
 
+// Meters
+import { Progress } from 'kitten/components/meters/progress'
+
 // Popovers
 import { Popover } from 'kitten/components/popovers/popover'
 import { CallToActionPopover } from 'kitten/components/popovers/call-to-action-popover'
@@ -117,6 +120,7 @@ import { KarlButtonIconHeartRight,
        } from 'kitten/karl/buttons/button-heart-icon-words'
 import { KarlButtonAndText } from 'kitten/karl/buttons/button'
 import { KarlPaymentButton } from 'kitten/karl/buttons/payment-button'
+import { KarlRandomProgress } from 'kitten/karl/meters/random-progress'
 import { KarlMakerWhoAmIStep } from 'app/maker/who-am-i/components/container'
 
 ReactOnRails.register({
@@ -166,6 +170,9 @@ ReactOnRails.register({
 
   // Lists
   NavList,
+
+  // Meters
+  Progress,
 
   // Popovers
   CallToActionPopover,
@@ -231,5 +238,6 @@ ReactOnRails.register({
   KarlParagraphQuaternary,
   KarlParagraphWithLink,
   KarlPaymentButton,
+  KarlRandomProgress,
   KarlMakerWhoAmIStep,
 })

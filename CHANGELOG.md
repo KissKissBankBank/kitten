@@ -2,6 +2,10 @@
 
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [unreleased]
+
+- Feature: Add new `Progress` React component.
+
 ## [5.9.0] - 2017-02-06
 
 Features:
