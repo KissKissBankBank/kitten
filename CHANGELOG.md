@@ -4,10 +4,15 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add new `Progress` React component.
-- Feature: Add 'PhoneIllustration' React component.
-- Fix: Propagate props from `CallToActionPopover` to `Popover` components.
-- Fix: Add key to buttons rendering in `CallToActionPopover`.
+## [5.10.0] - 2017-02-07
+
+Features:
+- Add new `Progress` React component.
+- Add 'PhoneIllustration' React component.
+
+Fixes:
+- Propagate props from `CallToActionPopover` to `Popover` components.
+- Add key to buttons rendering in `CallToActionPopover`.
 
 ## [5.9.0] - 2017-02-06
 
