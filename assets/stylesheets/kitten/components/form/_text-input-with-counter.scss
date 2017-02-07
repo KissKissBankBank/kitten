@@ -1,3 +1,21 @@
+/// Text input with counter
+///
+/// A simple text input.
+///
+/// @group form
+///
+/// @example scss - Usage
+///
+///   @include k-TextInputWithCounter;
+///
+/// @example html
+///
+///   <div class="k-TextInputCounter">
+///     <div class="k-TextInput__counter">…</div>
+///     <input class="k-TextInputWithCounter"
+///            type="text" />
+///   </div>
+
 @mixin k-TextInputWithCounter {
   $font: 'source-sans';
   $font-size: -2;

@@ -6,7 +6,7 @@ export class TextInputWithCounter extends React.Component {
   render() {
     return (
       <div className="k-TextInputCounter">
-        <div className="k-TextInput__counter">42</div>
+        <div className="k-TextInput__counter">90</div>
         <TextInput />
       </div>
     )
