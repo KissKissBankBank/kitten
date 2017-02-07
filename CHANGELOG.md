@@ -5,7 +5,16 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add new `TextInputWithCounter` React component.
-- Feature: Add new `Progress` React component.
+
+## [5.10.0] - 2017-02-07
+
+Features:
+- Add new `Progress` React component.
+- Add 'PhoneIllustration' React component.
+
+Fixes:
+- Propagate props from `CallToActionPopover` to `Popover` components.
+- Add key to buttons rendering in `CallToActionPopover`.
 
 ## [5.9.0] - 2017-02-06
 

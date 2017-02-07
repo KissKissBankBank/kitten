@@ -15,10 +15,12 @@ export class CallToActionPopover extends React.Component {
     )
   }
 
-  renderButton(options) {
+  renderButton(options, i) {
     const { label, ...others } = options
 
-    return <Button { ...others } children={ label } />
+    return <Button key={ `k-Popover__button-${i}` }
+                   { ...others }
+                   children={ label } />
   }
 
   renderButtonsList() {
@@ -26,10 +28,17 @@ export class CallToActionPopover extends React.Component {
   }
 
   render() {
-    const { title, text, titleAriaLabelId } = this.props
+    const {
+      title,
+      text,
+      titleAriaLabelId,
+      buttons,
+      illustration,
+      ...popoverProps
+    } = this.props
 
     return (
-      <Popover titleAriaLabelId={ titleAriaLabelId }>
+      <Popover titleAriaLabelId={ titleAriaLabelId } { ...popoverProps }>
         { this.renderIllustration() }
         <div className="k-Popover__content">
           <p id={ titleAriaLabelId }
