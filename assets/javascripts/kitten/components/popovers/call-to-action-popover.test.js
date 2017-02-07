@@ -1,6 +1,6 @@
 import React from 'react'
 import { expect } from 'chai'
-import { shallow } from 'enzyme'
+import { shallow, mount } from 'enzyme'
 import { Popover } from 'kitten/components/popovers/popover'
 import { CallToActionPopover } from 'kitten/components/popovers/call-to-action-popover'
 import { LoudspeakerIllustration } from 'kitten/components/illustrations/loudspeaker-illustration'
@@ -54,12 +54,13 @@ describe('<CallToActionPopover />', () => {
 
     const title = "Instantly break out"
     const text = "Spend all night ensuring people don't sleep"
-    const component = shallow(
+    const component = mount(
       <CallToActionPopover
         title={ title }
         text={ text }
         buttons={ buttons }
-        titleAriaLabelId="custom-aria-label" />
+        titleAriaLabelId="custom-aria-label"
+        popoverClassName="custom-popover" />
     )
 
     it('renders a title', () => {
@@ -81,6 +82,12 @@ describe('<CallToActionPopover />', () => {
 
       expect(titleComponent).to.have
         .attr('id', 'custom-aria-label')
+    })
+
+    it('propagates props to <Popover />', () => {
+      const popoverComponent = component.find('.custom-popover')
+
+      expect(popoverComponent).to.have.length(1)
     })
   })
 
