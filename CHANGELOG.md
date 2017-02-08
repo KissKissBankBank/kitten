@@ -4,8 +4,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Breaking changes: Rename `autoTriggerEnhancer` to `triggerEnhancer`.
-- Feature: Add prop to `triggerEnhancer` to enable autorun.
+## [6.0.0] - 2017-02-08
+
+Breaking change:
+- Rename `autoTriggerEnhancer` to `triggerEnhancer`.
+
+Feature:
+- Add prop to `triggerEnhancer` to enable autorun.
 
 ## [5.10.0] - 2017-02-07
 
