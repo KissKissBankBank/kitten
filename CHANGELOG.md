@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add new `InformationBox` React component.
+
 ## [5.10.0] - 2017-02-07
 
 Features:
