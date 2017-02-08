@@ -18,14 +18,9 @@
 
   .k-InformationBox {
     display: inline-block;
-
-    max-height: k-px-to-rem(240px);
   }
 
   .k-InformationBox__container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     padding: k-px-to-rem(10px)
              k-px-to-rem(10px)
              k-px-to-rem(15px)
@@ -50,5 +45,4 @@
 
     margin: 0;
   }
-
 }
