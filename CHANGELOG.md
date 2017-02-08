@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-Fix: Return `@include k-Tooltip;` in _components.scss.
+- Fix: Bring back `@include k-Tooltip;` in _components.scss.
 
 ## [5.10.0] - 2017-02-07
 
