@@ -11,9 +11,8 @@
 /// @example html
 ///
 ///   <div class="k-TextInputCounter">
-///     <div class="k-TextInput__counter">…</div>
-///     <input class="k-TextInputWithCounter"
-///            type="text" />
+///     <input class="k-TextInputCounter__input" />
+///     <div class="k-TextInputCounter__counter">…</div>
 ///   </div>
 
 @mixin k-TextInputWithCounter {
@@ -24,23 +23,37 @@
   // Margin counter
   $margin-counter: k-px-to-rem(5px);
 
-  // Counter
+  // Counter color
   $color: map-get($k-colors, 'font-2');
+  $error-color: map-get($k-colors, 'error');
+  $active-color: map-get($k-colors, 'font-1');
 
   .k-TextInputCounter {
     position: relative;
     display: block;
   }
 
-  .k-TextInput__counter {
+  .k-TextInputCounter__counter {
     @include k-typographyFont($font);
     @include k-typographyFontSize($font-size, $line-height);
     position: absolute;
     right: 0;
+    top: 0;
 
     margin-top: $margin-counter;
     margin-right: $margin-counter;
 
     color: $color;
+
+    .k-TextInputCounter__input:focus ~ & {
+      color: $active-color;
+    }
+
+    &.is-error {
+      &,
+      .k-TextInputCounter__input:focus ~ & {
+        color: $error-color;
+      }
+    }
   }
 }
