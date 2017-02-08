@@ -20,9 +20,10 @@
   "devDependencies": {
     "chai": "^3.5.0",
     "chai-enzyme": "^0.6.1",
-    "enzyme": "^2.6.0",
+    "enzyme": "^2.7.1",
     "jsdom": "^9.8.3",
     "mocha": "^3.2.0",
+    "mock-local-storage": "^1.0.2",
     "react-addons-test-utils": "^15.4.1",
     "sassdoc": "^2.1.20",
     "stylelint": "^6.7.1",
@@ -64,6 +65,6 @@
     "build:dev": "(cd spec/dummy/client && npm run build:dev)",
     "build": "(cd spec/dummy/client && npm run build --silent)",
     "hot-assets": "(cd spec/dummy/client && npm run hot-assets)",
-    "test": "NODE_PATH=assets/javascripts mocha assets/javascripts/kitten/config/test-setup.js"
+    "test": "NODE_PATH=assets/javascripts mocha --compilers js:babel-core/register --require assets/javascripts/kitten/config/test-setup.js"
   }
 }
