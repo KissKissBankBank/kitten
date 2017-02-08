@@ -1,5 +1,6 @@
 import React from 'react'
 import domElementHelper from 'kitten/helpers/dom/element-helper'
+import { localStorageUtils } from 'kitten/helpers/utils/local-storage'
 
 export const triggerEnhancer = (WrappedComponent, wrappedComponentProps) => {
   class TriggerWrapper extends React.Component {
@@ -35,9 +36,7 @@ export const triggerEnhancer = (WrappedComponent, wrappedComponentProps) => {
     }
 
     hasPlayed() {
-      // TODO: better implementation of localStorage as state store for React
-      // component.
-      const componentState = JSON.parse(localStorage.getItem(this.props.storeName))
+      const componentState = localStorageUtils.get(this.props.storeName)
 
       return componentState && componentState.hasPlayed
     }
@@ -53,10 +52,10 @@ export const triggerEnhancer = (WrappedComponent, wrappedComponentProps) => {
       setTimeout(() => this.setState({ play: true }), 10)
 
       setTimeout(() => {
-        const componentState = JSON.stringify({ hasPlayed: true })
+        const componentState = { hasPlayed: true }
         const storeName = this.props.storeName
 
-        localStorage.setItem(storeName, componentState)
+        localStorageUtils.set(storeName, componentState)
       }, 1000)
     }
 
