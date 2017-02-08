@@ -50,14 +50,12 @@ export const autoTriggerEnhancer = (WrappedComponent, wrappedComponentProps) => 
     }
 
     start() {
-      this.setState({
-        play: true
-      })
-
-      const componentState = JSON.stringify({ hasPlayed: true })
-      const storeName = this.props.storeName
-
       setTimeout(() => {
+        this.setState({ play: true })
+
+        const componentState = JSON.stringify({ hasPlayed: true })
+        const storeName = this.props.storeName
+
         localStorage.setItem(storeName, componentState)
       }, 1000)
     }
