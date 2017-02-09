@@ -4,7 +4,23 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+<<<<<<< HEAD
+- Feature: Add new `TextInputWithLimit` React component.
+=======
 - Feature: Add new `TextInputWithCounter` React component.
+- Fix: Bring back `@include k-Tooltip;` in _components.scss.
+
+## [6.0.0] - 2017-02-08
+
+Breaking change:
+- Rename `autoTriggerEnhancer` to `triggerEnhancer`.
+
+Feature:
+- Add prop to `triggerEnhancer` to enable autorun.
+<<<<<<< HEAD
+>>>>>>> origin/feature/text-input-with-counter
+=======
+>>>>>>> origin/feature/text-input-with-counter
 
 ## [5.10.0] - 2017-02-07
 

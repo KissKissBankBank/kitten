@@ -2,7 +2,7 @@ import React from 'react'
 import classNames from 'classnames'
 import { TextInput } from 'kitten/components/form/text-input'
 
-export class TextInputWithCounter extends React.Component {
+export class TextInputWithLimit extends React.Component {
   constructor(props) {
     super(props)
 
@@ -18,33 +18,34 @@ export class TextInputWithCounter extends React.Component {
   }
 
   render() {
-    const { counter,
+    const { limit,
+            defaultValue,
             ...others } = this.props
 
     const length = this.state.value ? this.state.value.length : 0
 
     const counterClassNames = classNames(
-      'k-TextInputCounter__counter',
+      'k-TextInputLimit__counter',
       {
-        'is-error': length > this.props.counter,
+        'is-error': length > limit,
       }
     )
 
     return (
-      <div className="k-TextInputCounter">
-        <TextInput className="k-TextInputCounter__input"
+      <div className="k-TextInputLimit">
+        <TextInput className="k-TextInputLimit__input"
                    value={ this.state.value }
                    onInput={ this.handleInput }
                    { ...others } />
         <div className={ counterClassNames }>
-          { this.props.counter - length }
+          { limit - length }
         </div>
       </div>
     )
   }
 }
 
-TextInputWithCounter.defaultProps = {
-  placeholder: "Lorem ipsum…",
-  counter: 80,
+TextInputWithLimit.defaultProps = {
+  limit: 80,
+  defaultValue: "",
 }

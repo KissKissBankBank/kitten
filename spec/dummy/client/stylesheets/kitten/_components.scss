@@ -72,7 +72,7 @@
 
 @include k-Switch;
 @include k-TextInput;
-@include k-TextInputWithCounter;
+@include k-TextInputWithLimit;
 @include k-TextInputWithButton((
   font: 'source-sans-semi-bold',
   font-size: -4,
@@ -232,6 +232,10 @@
 // Titles
 
 @include k-TitleWithActions;
+
+// Tooltips
+
+@include k-Tooltip;
 
 // Tours
 

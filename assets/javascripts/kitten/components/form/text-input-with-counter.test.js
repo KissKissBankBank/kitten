@@ -1,5 +1,0 @@
-import React from 'react'
-import { expect } from 'chai'
-import { shallow } from 'enzyme'
-import { TextInput } from 'kitten/components/form/text-input'
-import { TextInputWithCounter } from 'kitten/components/form/text-input-with-counter'

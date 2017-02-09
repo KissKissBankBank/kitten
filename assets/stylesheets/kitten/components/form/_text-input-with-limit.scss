@@ -1,4 +1,4 @@
-/// Text input with counter
+/// Text input with limit
 ///
 /// A simple text input.
 ///
@@ -6,52 +6,54 @@
 ///
 /// @example scss - Usage
 ///
-///   @include k-TextInputWithCounter;
+///   @include k-TextInput;
+///   @include k-TextInputWithLimit;
 ///
 /// @example html
 ///
-///   <div class="k-TextInputCounter">
-///     <input class="k-TextInputCounter__input" />
-///     <div class="k-TextInputCounter__counter">…</div>
+///   <div class="k-TextInputLimit">
+///     <input class="k-TextInputLimit__input"
+///            value="Test" />
+///     <div class="k-TextInputLimit__counter">…</div>
 ///   </div>
 
-@mixin k-TextInputWithCounter {
+@mixin k-TextInputWithLimit {
   $font: 'source-sans';
   $font-size: -2;
   $line-height: 1.3;
 
-  // Margin counter
-  $margin-counter: k-px-to-rem(5px);
+  // Margin limit
+  $margin-limit: k-px-to-rem(5px);
 
-  // Counter color
+  // Limit colors
   $color: map-get($k-colors, 'font-2');
   $error-color: map-get($k-colors, 'error');
   $active-color: map-get($k-colors, 'font-1');
 
-  .k-TextInputCounter {
+  .k-TextInputLimit {
     position: relative;
     display: block;
   }
 
-  .k-TextInputCounter__counter {
+  .k-TextInputLimit__counter {
     @include k-typographyFont($font);
     @include k-typographyFontSize($font-size, $line-height);
     position: absolute;
     right: 0;
     top: 0;
 
-    margin-top: $margin-counter;
-    margin-right: $margin-counter;
+    margin-top: $margin-limit;
+    margin-right: $margin-limit;
 
     color: $color;
 
-    .k-TextInputCounter__input:focus ~ & {
+    .k-TextInputLimit__input:focus ~ & {
       color: $active-color;
     }
 
     &.is-error {
       &,
-      .k-TextInputCounter__input:focus ~ & {
+      .k-TextInputLimit__input:focus ~ & {
         color: $error-color;
       }
     }
