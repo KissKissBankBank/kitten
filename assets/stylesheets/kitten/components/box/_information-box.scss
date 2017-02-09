@@ -21,11 +21,14 @@
   $background-color: map-get($k-colors, 'background-1');
   $border-color: map-get($k-colors, 'line-2');
 
+  $font: 'source-sans-light';
+
   $border-size: 1px;
   $border-radius: k-px-to-rem(8px);
 
   .k-InformationBox {
     display: inline-block;
+    @include k-typographyFont($font);
   }
 
   .k-InformationBox__container {
@@ -41,14 +44,12 @@
   }
 
   .k-InformationBox__title {
-    @include k-typographyFont('source-sans-light');
     @include k-typographyFontSize(4);
 
     margin: 0;
   }
 
   .k-InformationBox__content {
-    @include k-typographyFont('source-sans-light');
     @include k-typographyFontSize(-1, 1.3);
 
     margin: 0;

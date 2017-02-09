@@ -7,7 +7,7 @@ describe('<InformationBox />', () => {
   describe('by default', () => {
     const defaultComponent = shallow(<InformationBox />)
 
-    it('renders <div class="k-InformationBox">', () => {
+    it('renders .k-InformationBox', () => {
       expect(defaultComponent.find('.k-InformationBox')).to.have.length(1)
     })
 
@@ -20,24 +20,36 @@ describe('<InformationBox />', () => {
     })
   })
 
-  it('renders a <InformationBox class="k-InformationBox" />', () => {
+  describe('<InformationBox />', () => {
     const component = shallow(
-      <InformationBox className="k-InformationBox--custom" />
-    )
-    expect(component).to.have.className('k-InformationBox--custom')
+      <InformationBox className="k-InformationBox__custom" />)
+
+    it('renders a <InformationBox class="k-InformationBox" />', () => {
+      expect(component).to.have.className('k-InformationBox__custom')
+    })
   })
 
-  it('renders title', () => {
-    const componentTitle = shallow(
-      <InformationBox className="k-InformationBox__title" />
+  describe('title prop', () => {
+    const component = shallow(
+      <InformationBox title="Lorem ipsum" />
     )
-    expect(componentTitle).to.have.className('k-InformationBox__title')
+
+    it('adds a title element', () => {
+      const title = component.find('.k-InformationBox__title')
+      expect(title).to.have.length(1)
+      expect(title).to.have.text('Lorem ipsum')
+    })
   })
 
-  it('renders content', () => {
-    const componentContent = shallow(
-      <InformationBox className="k-InformationBox__content" />
+  describe('children prop', () => {
+    const component = shallow(
+      <InformationBox>Example content</InformationBox>
     )
-    expect(componentContent).to.have.className('k-InformationBox__content')
+
+    it('adds a children element', () => {
+      const children = component.find('.k-InformationBox__content')
+      expect(children).to.have.length(1)
+      expect(children).to.have.text('Example content')
+    })
   })
 })
