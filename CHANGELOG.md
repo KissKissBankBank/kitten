@@ -5,6 +5,15 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add new `InformationBox` React component.
+- Fix: Bring back `@include k-Tooltip;` in _components.scss.
+
+## [6.0.0] - 2017-02-08
+
+Breaking change:
+- Rename `autoTriggerEnhancer` to `triggerEnhancer`.
+
+Feature:
+- Add prop to `triggerEnhancer` to enable autorun.
 
 ## [5.10.0] - 2017-02-07
 

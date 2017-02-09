@@ -1,8 +1,8 @@
 import React from 'react'
 import domElementHelper from 'kitten/helpers/dom/element-helper'
 
-export const autoTriggerEnhancer = (WrappedComponent, wrappedComponentProps) => {
-  class AutoTriggerWrapper extends React.Component {
+export const triggerEnhancer = (WrappedComponent, wrappedComponentProps) => {
+  class TriggerWrapper extends React.Component {
     constructor(props) {
       super(props)
 
@@ -46,18 +46,16 @@ export const autoTriggerEnhancer = (WrappedComponent, wrappedComponentProps) => 
       if (!domElementHelper.canUseDom()) { return false }
       if (!this.props.verifyStorageOnStart) { return true }
 
-      return !this.hasPlayed()
+      return this.props.autorun && !this.hasPlayed()
     }
 
     start() {
-      this.setState({
-        play: true
-      })
-
-      const componentState = JSON.stringify({ hasPlayed: true })
-      const storeName = this.props.storeName
+      setTimeout(() => this.setState({ play: true }), 10)
 
       setTimeout(() => {
+        const componentState = JSON.stringify({ hasPlayed: true })
+        const storeName = this.props.storeName
+
         localStorage.setItem(storeName, componentState)
       }, 1000)
     }
@@ -87,12 +85,13 @@ export const autoTriggerEnhancer = (WrappedComponent, wrappedComponentProps) => 
     }
   }
 
-  AutoTriggerWrapper.defaultProps = {
-    storeName: 'kitten.AutoTrigger',
-    verifyStorageOnStart: true,
+  TriggerWrapper.defaultProps = {
+    autorun: true,
     stopEventName: 'k:auto-trigger:stop',
     stopHandlerName: null,
+    storeName: 'kitten.AutoTrigger',
+    verifyStorageOnStart: true,
   }
 
-  return AutoTriggerWrapper
+  return TriggerWrapper
 }
