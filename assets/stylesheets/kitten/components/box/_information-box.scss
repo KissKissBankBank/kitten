@@ -5,10 +5,18 @@
 /// @example scss - usage
 ///
 ///   @include k-InformationBox;
+///
 /// example html
+///   <div class="k-InformationBox">
+///     <div className="k-InformationBox__container">
+///       <p className="k-InformationBox__title"> … </p>
+///       <div className="k-InformationBox__content">
+///         …
+///       </div>
+///     </div>
+///   </div>
 
 @mixin k-InformationBox {
-
   $color: map-get($k-colors, 'font-1');
   $background-color: map-get($k-colors, 'background-1');
   $border-color: map-get($k-colors, 'line-2');
@@ -39,7 +47,7 @@
     margin: 0;
   }
 
-  .k-InformationBox__text {
+  .k-InformationBox__content {
     @include k-typographyFont('source-sans-light');
     @include k-typographyFontSize(-1, 1.3);
 

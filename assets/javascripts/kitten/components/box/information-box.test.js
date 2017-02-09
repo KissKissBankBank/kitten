@@ -16,7 +16,7 @@ describe('<InformationBox />', () => {
     })
 
     it('has a default children', () => {
-      expect(defaultComponent.find('.k-InformationBox__text')).to.have.length(1)
+      expect(defaultComponent.find('.k-InformationBox__content')).to.have.length(1)
     })
   })
 
@@ -25,5 +25,19 @@ describe('<InformationBox />', () => {
       <InformationBox className="k-InformationBox--custom" />
     )
     expect(component).to.have.className('k-InformationBox--custom')
+  })
+
+  it('renders title', () => {
+    const componentTitle = shallow(
+      <InformationBox className="k-InformationBox__title" />
+    )
+    expect(componentTitle).to.have.className('k-InformationBox__title')
+  })
+
+  it('renders content', () => {
+    const componentContent = shallow(
+      <InformationBox className="k-InformationBox__content" />
+    )
+    expect(componentContent).to.have.className('k-InformationBox__content')
   })
 })

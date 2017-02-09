@@ -13,7 +13,7 @@ export class InformationBox extends React.Component {
       <div className="k-InformationBox" { ...other }>
         <div className="k-InformationBox__container">
           <p className="k-InformationBox__title">{ title }</p>
-          <div className="k-InformationBox__text">
+          <div className="k-InformationBox__content">
             { children }
           </div>
         </div>
