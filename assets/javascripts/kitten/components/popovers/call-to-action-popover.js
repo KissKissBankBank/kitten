@@ -16,15 +16,17 @@ export class CallToActionPopover extends React.Component {
   }
 
   renderButton(options, i) {
-    const { label, ...others } = options
+    const { label, closeOnClick, ...others } = options
+    const handleClick = closeOnClick ? this.props.onCloseClick : null
 
-    return <Button key={ `k-Popover__button-${i}` }
+    return <Button onClick={ handleClick }
+                   key={ `k-Popover__button-${i}` }
                    { ...others }
                    children={ label } />
   }
 
   renderButtonsList() {
-    return this.props.buttons.map(this.renderButton)
+    return this.props.buttons.map(this.renderButton.bind(this))
   }
 
   render() {
