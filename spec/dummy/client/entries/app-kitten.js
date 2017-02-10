@@ -31,7 +31,7 @@ import SelectWithState from 'kitten/components/form/select-with-state'
 import Slider from 'kitten/components/form/slider'
 import Switch from 'kitten/components/form/switch'
 import { TextInput } from 'kitten/components/form/text-input'
-import { LocatiionInput } from 'kitten/components/form/location-input'
+import { LocationInput } from 'kitten/components/form/location-input'
 
 // Grid
 import { Grid, GridCol } from 'kitten/components/grid/grid'
@@ -146,12 +146,13 @@ ReactOnRails.register({
   // Form
   FormAmountAndCurrency,
   FormPhoneNumber,
-  RadioButton,
   Grid,
   GridCol,
   GrabberIcon,
   HeaderTour,
   Label,
+  LocationInput,
+  RadioButton,
   ReactTooltip,
   Slider,
   Search,
@@ -160,7 +161,6 @@ ReactOnRails.register({
   Slider,
   Switch,
   TextInput,
-  TextInputWithAutocomplete,
 
   // Icons
   GrabberIcon,

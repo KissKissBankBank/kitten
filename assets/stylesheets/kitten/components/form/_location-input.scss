@@ -1,0 +1,20 @@
+/// Location input
+///
+///
+/// @group form
+///
+/// @example scss - usage
+///
+///   @include k-LocationInput;
+///
+/// @example html
+///
+
+@mixin k-LocationInput {
+  $font: 'source-sans';
+
+
+  .k-LocationInput {
+    padding-bottom: 40px;
+  }
+}
