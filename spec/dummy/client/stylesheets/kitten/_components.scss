@@ -73,6 +73,7 @@
 
 @include k-Switch;
 @include k-TextInput;
+@include k-TextInputWithLimit;
 @include k-TextInputWithButton((
   font: 'source-sans-semi-bold',
   font-size: -4,
