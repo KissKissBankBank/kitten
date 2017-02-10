@@ -6,7 +6,6 @@ export class CallToActionPopover extends React.Component {
   constructor(props) {
     super(props)
 
-    this.getButtonClickHandler = this.getButtonClickHandler.bind(this)
     this.renderButton = this.renderButton.bind(this)
   }
 
