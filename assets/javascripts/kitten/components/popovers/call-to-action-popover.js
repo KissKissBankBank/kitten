@@ -3,6 +3,14 @@ import { Popover } from 'kitten/components/popovers/popover'
 import { Button } from 'kitten/components/buttons/button'
 
 export class CallToActionPopover extends React.Component {
+  constructor(props) {
+    super(props)
+
+    this.handleCloseClick = this.handleCloseClick.bind(this)
+    this.getButtonClickHandler = this.getButtonClickHandler.bind(this)
+    this.renderButton = this.renderButton.bind(this)
+  }
+
   handleCloseClick() {
     if (!this.props.onCloseClick) return
 
@@ -11,10 +19,7 @@ export class CallToActionPopover extends React.Component {
 
   getButtonClickHandler(clickOptions) {
     if (!clickOptions) return
-
-    if (clickOptions.closeOnClick) {
-      return this.handleCloseClick
-    }
+    if (clickOptions.closeOnClick) { return this.handleCloseClick }
   }
 
   renderIllustration() {
@@ -33,14 +38,14 @@ export class CallToActionPopover extends React.Component {
     const { label, clickOptions, ...others } = options
     const clickHandler = this.getButtonClickHandler(clickOptions)
 
-    return <Button onClick={ this.clickHandler }
+    return <Button onClick={ clickHandler }
                    key={ i }
                    { ...others }
                    children={ label } />
   }
 
   renderButtonsList() {
-    return this.props.buttons.map(this.renderButton.bind(this))
+    return this.props.buttons.map(this.renderButton)
   }
 
   render() {

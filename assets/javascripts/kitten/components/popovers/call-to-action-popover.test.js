@@ -153,18 +153,6 @@ describe('<CallToActionPopover />', () => {
     })
   })
 
-  describe('custom props', () => {
-    const component = mount(
-      <CallToActionPopover popoverClassName="custom-popover" />
-    )
-
-    it('propagates props to <Popover />', () => {
-      const popoverComponent = component.find('.custom-popover')
-
-      expect(popoverComponent).to.have.length(1)
-    })
-  })
-
   describe('illustration prop', () => {
     const componentWithIllustration = shallow(
       <CallToActionPopover illustration={ LoudspeakerIllustration } />)
@@ -180,6 +168,18 @@ describe('<CallToActionPopover />', () => {
       const illustration = <LoudspeakerIllustration />
 
       expect(componentWithIllustration).to.contain(illustration)
+    })
+  })
+
+  describe('custom props', () => {
+    const component = mount(
+      <CallToActionPopover popoverClassName="custom-popover" />
+    )
+
+    it('propagates props to <Popover />', () => {
+      const popoverComponent = component.find('.custom-popover')
+
+      expect(popoverComponent).to.have.length(1)
     })
   })
 })
