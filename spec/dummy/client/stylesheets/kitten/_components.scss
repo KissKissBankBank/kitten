@@ -31,6 +31,7 @@
 
 @include k-Checkbox;
 @include k-Label;
+@include k-LocationInput;
 @include k-FormActions;
 @include k-FormComposer;
 @include k-FormRow;
@@ -72,7 +73,6 @@
 
 @include k-Switch;
 @include k-TextInput;
-@include k-TextInputWithAutocomplete;
 @include k-TextInputWithButton((
   font: 'source-sans-semi-bold',
   font-size: -4,
