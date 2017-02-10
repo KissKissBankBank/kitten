@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add new `TextInputWithLimit` React component.
 - Fix: Bring back `@include k-Tooltip;` in _components.scss.
 
 ## [6.0.0] - 2017-02-08
