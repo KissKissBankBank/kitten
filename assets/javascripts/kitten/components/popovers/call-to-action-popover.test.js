@@ -36,12 +36,13 @@ describe('<CallToActionPopover />', () => {
       })
 
       it('renders a <Button /> component', () => {
-        const buttonComponent = <Button
-          onClick={ undefined }
-          modifier="boron"
-          size="big">
-          Ok
-        </Button>
+        const buttonComponent = (
+          <Button onClick={ undefined }
+                 modifier="boron"
+                 size="big">
+            Ok
+          </Button>
+        )
 
         expect(defaultComponent).to.contain(buttonComponent)
       })
