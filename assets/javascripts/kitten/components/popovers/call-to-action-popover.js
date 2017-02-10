@@ -6,20 +6,14 @@ export class CallToActionPopover extends React.Component {
   constructor(props) {
     super(props)
 
-    this.handleCloseClick = this.handleCloseClick.bind(this)
     this.getButtonClickHandler = this.getButtonClickHandler.bind(this)
     this.renderButton = this.renderButton.bind(this)
   }
 
-  handleCloseClick() {
-    if (!this.props.onCloseClick) return
-
-    return this.props.onCloseClick()
-  }
-
   getButtonClickHandler(clickOptions) {
     if (!clickOptions) return
-    if (clickOptions.closeOnClick) { return this.handleCloseClick }
+
+    if (clickOptions.closeOnClick) { return this.props.onCloseClick }
   }
 
   renderIllustration() {
@@ -89,4 +83,5 @@ CallToActionPopover.defaultProps = {
     modifier: "boron",
     size: "big",
   }],
+  onCloseClick: null,
 }
