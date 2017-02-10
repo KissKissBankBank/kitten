@@ -20,7 +20,7 @@ describe('<InformationBox />', () => {
     })
   })
 
-  describe('<InformationBox />', () => {
+  describe('other props', () => {
     const component = shallow(
       <InformationBox className="k-InformationBox__custom" />)
 
