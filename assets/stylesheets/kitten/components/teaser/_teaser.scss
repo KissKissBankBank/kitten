@@ -41,9 +41,17 @@
 
       // center offset needs to be twice as large
       &:nth-of-type(2) {
-       @include k-grid-offset(2);
+        @include k-grid-offset(2);
+
+        &.k-Teaser__col--start\@l {
+          @include k-grid-offset(1);
+        }
       }
     }
+  }
+
+  .k-Teaser__col--end\@l {
+    @include k-grid-offset(2);
   }
 
   .k-Teaser__action {
