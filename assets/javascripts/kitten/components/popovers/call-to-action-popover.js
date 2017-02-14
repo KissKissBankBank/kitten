@@ -3,6 +3,18 @@ import { Popover } from 'kitten/components/popovers/popover'
 import { Button } from 'kitten/components/buttons/button'
 
 export class CallToActionPopover extends React.Component {
+  constructor(props) {
+    super(props)
+
+    this.renderButton = this.renderButton.bind(this)
+  }
+
+  getButtonClickHandler(clickOptions) {
+    if (!clickOptions) return
+
+    if (clickOptions.closeOnClick) { return this.props.onCloseClick }
+  }
+
   renderIllustration() {
     if (!this.props.illustration) return
 
@@ -16,9 +28,11 @@ export class CallToActionPopover extends React.Component {
   }
 
   renderButton(options, i) {
-    const { label, ...others } = options
+    const { label, clickOptions, ...others } = options
+    const clickHandler = this.getButtonClickHandler(clickOptions)
 
-    return <Button key={ `k-Popover__button-${i}` }
+    return <Button onClick={ clickHandler }
+                   key={ i }
                    { ...others }
                    children={ label } />
   }
@@ -68,4 +82,5 @@ CallToActionPopover.defaultProps = {
     modifier: "boron",
     size: "big",
   }],
+  onCloseClick: null,
 }
