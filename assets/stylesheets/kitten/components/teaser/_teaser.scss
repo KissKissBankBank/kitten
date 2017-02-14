@@ -42,16 +42,22 @@
       // center offset needs to be twice as large
       &:nth-of-type(2) {
         @include k-grid-offset(2);
-
-        &.k-Teaser__col--start\@l {
-          @include k-grid-offset(1);
-        }
       }
     }
   }
 
-  .k-Teaser__col--end\@l {
-    @include k-grid-offset(2);
+  @include k-media-min('l') {
+    .k-Teaser__col--start\@l-up {
+      order: -1;
+
+      &:nth-of-type(2) {
+        @include k-grid-offset(1);
+      }
+    }
+
+    .k-Teaser__col--end\@l-up {
+      @include k-grid-offset(2);
+    }
   }
 
   .k-Teaser__action {
@@ -79,12 +85,6 @@
 
     @include k-media-min('m') {
       @include k-typographyFontSize(9);
-    }
-  }
-
-  .k-Teaser__col--start\@l {
-    @include k-media-min('l') {
-      order: -1;
     }
   }
 
