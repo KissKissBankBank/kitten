@@ -5,7 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add new `TextInputWithLimit` React component.
-- Feature: Add new modifier `k-TitleWithAction-withoutMargin` in
+- Feature: Add new modifier `k-TitleWithAction--withoutMargin` in
   `k-TitleWithAction`.
 - Fix: Bring back `@include k-Tooltip;` in _components.scss.
 
