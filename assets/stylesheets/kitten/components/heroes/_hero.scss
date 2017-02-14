@@ -75,20 +75,20 @@
     .k-Hero__title {
       margin: 0;
       @include k-typographyFont($font);
-      @include k-typographyFontSize(10, $line-height: normal);
+      @include k-typographyFontSize(10, normal);
 
       @include k-media-min('m') {
-        @include k-typographyFontSize(7, $line-height: normal);
+        @include k-typographyFontSize(7, normal);
       }
     }
 
     .k-Hero__subtitle {
       margin: 0;
       @include k-typographyFont($font);
-      @include k-typographyFontSize(4, $line-height: 1.6);
+      @include k-typographyFontSize(4, 1.6);
 
       @include k-media-min('s') {
-        @include k-typographyFontSize(2, $line-height: 1.6);
+        @include k-typographyFontSize(2, 1.6);
       }
     }
 
