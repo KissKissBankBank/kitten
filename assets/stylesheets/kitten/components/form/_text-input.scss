@@ -34,6 +34,9 @@
   $border-disabled: #fff;
   $background-disabled: map-get($k-colors, 'line-2');
 
+  // Placeholder
+  $color-placeholder: map-get($k-colors, 'font-2');
+
   // Is-valid
   $color-is-valid: map-get($k-colors, 'valid');
   $border-is-valid: map-get($k-colors, 'valid');
@@ -59,6 +62,14 @@
     padding: 0 k-px-to-rem(15px);
     color: $color;
     transition: color .2s, border-color .2s;
+
+    &::placeholder {
+      color: $color-placeholder;
+    }
+
+    &::-moz-placeholder {
+      color: $color-placeholder;
+    }
 
     &:focus {
       outline: none;
