@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add click handler on `CallToActionPopover` buttons.
 - Feature: Add new `TextInputWithLimit` React component.
 - Fix: Bring back `@include k-Tooltip;` in _components.scss.
 
