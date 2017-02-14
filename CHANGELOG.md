@@ -9,6 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Add new modifier `k-TitleWithAction--withoutMargin` in
   `k-TitleWithAction`.
 - Fix: Bring back `@include k-Tooltip;` in `_components.scss`.
+- Fix: Text sizing in `k-Hero`.
 - Fix: Images and text placement in `k-Teaser`.
 - Fix: Set placeholder color in `k-TextInput`.
 
