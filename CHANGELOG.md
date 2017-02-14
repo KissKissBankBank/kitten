@@ -4,14 +4,18 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add click handler on `CallToActionPopover` buttons.
-- Feature: Add new `TextInputWithLimit` React component.
-- Feature: Add new modifier `k-TitleWithAction--withoutMargin` in
-  `k-TitleWithAction`.
-- Fix: Bring back `@include k-Tooltip;` in `_components.scss`.
-- Fix: Text sizing in `k-Hero`.
-- Fix: Images and text placement in `k-Teaser`.
-- Fix: Set placeholder color in `k-TextInput`.
+## [6.1.0] - 2017-02-14
+
+Features:
+- Add click handler on `CallToActionPopover` buttons.
+- Add new `TextInputWithLimit` React component.
+- Add new modifier `k-TitleWithAction--withoutMargin` in `k-TitleWithAction`.
+
+Fixes:
+- Bring back `@include k-Tooltip;` in `_components.scss`.
+- Text sizing in `k-Hero`.
+- Images and text placement in `k-Teaser`.
+- Set placeholder color in `k-TextInput`.
 
 ## [6.0.0] - 2017-02-08
 
