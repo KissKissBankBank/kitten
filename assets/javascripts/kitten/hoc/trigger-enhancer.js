@@ -38,7 +38,7 @@ export const triggerEnhancer = (WrappedComponent, wrappedComponentProps) => {
     hasPlayed() {
       const componentState = localStorageUtils.get(this.props.storeName)
 
-      return componentState && componentState.hasPlayed
+      return !!(componentState && componentState.hasPlayed)
     }
 
     shouldStart() {
