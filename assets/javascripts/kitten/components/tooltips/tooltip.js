@@ -10,7 +10,8 @@ export default class Tooltip extends React.Component {
                            data-for={ this.props.id }
                            data-event="click"
                            data-dismiss={ this.props.id }
-                           aria-describedby={ this.props.id } />
+                           aria-describedby={ this.props.id }
+                           type={ this.props.type } />
 
         <ReactTooltip id={ this.props.id }
                       className="k-Tooltip__content"
