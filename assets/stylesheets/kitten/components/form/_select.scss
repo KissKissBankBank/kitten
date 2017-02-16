@@ -29,12 +29,7 @@
     select-input-border-radius: 4px,
     select-input-border-width: 1px,
   );
-  $options-big: (
-    arrow-zone-width: 30px,
-    select-input-border-radius: 4px,
-    select-input-border-width: 1px,
-    select-input-height: 50px,
-  );
+  $options-big: map-merge($options, (select-input-height: 50px));
 
   .k-Select {
     @include k-typographyFont($font);
