@@ -32,7 +32,7 @@ class SelectWithState extends React.Component {
 
   renderLabel() {
     if (!this.props.labelText)
-      return
+      return ''
 
     return (
       <label className="k-Select__label" id={ this.props.id }>
@@ -42,10 +42,15 @@ class SelectWithState extends React.Component {
   }
 
   render() {
-    const { value, onChange, className, ...other } = this.props
+    const { value, onChange, className, size, ...other } = this.props
+    const selectClassName = classNames(
+      'k-Select',
+      className,
+      { [`k-Select--${size}`]: size }
+    )
 
     return (
-      <div className={ classNames('k-Select', className) }>
+      <div className={ selectClassName }>
         { this.renderLabel() }
         <SelectWithMultiLevel value={ this.state.value }
                               onChange={ this.handleChange }
@@ -108,6 +113,7 @@ SelectWithState.defaultProps = {
   searchable: false,
   multi: false,
   labelText: null,
+  size: null, // Select size modifier: 'big'
 }
 
 export default SelectWithState
