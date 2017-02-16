@@ -4,8 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-Features:
-- Add line component
+Features: Add new `Line` component.
 
 ## [6.1.0] - 2017-02-14
 
