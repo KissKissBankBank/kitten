@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add big select input `k-Select--big`.
+- Feature: Add `k-Select--big` modifier.
 
 ## [6.1.0] - 2017-02-14
 

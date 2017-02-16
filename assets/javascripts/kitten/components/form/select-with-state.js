@@ -31,8 +31,7 @@ class SelectWithState extends React.Component {
   }
 
   renderLabel() {
-    if (!this.props.labelText)
-      return ''
+    if (!this.props.labelText) return ''
 
     return (
       <label className="k-Select__label" id={ this.props.id }>
@@ -84,8 +83,7 @@ class SelectWithMultiLevel extends React.Component {
 
   // React-Select allows changing the way options are rendered.
   optionRenderer({ level, label }) {
-    if (!level)
-      return label
+    if (!level) return label
 
     return (
       <span className={ 'k-Select__option--level' + level }>
