@@ -31,11 +31,8 @@ import SelectWithState from 'kitten/components/form/select-with-state'
 import Slider from 'kitten/components/form/slider'
 import Switch from 'kitten/components/form/switch'
 import { TextInput } from 'kitten/components/form/text-input'
-<<<<<<< HEAD
 import { LocationInput } from 'kitten/components/form/location-input'
-=======
 import { TextInputWithLimit } from 'kitten/components/form/text-input-with-limit'
->>>>>>> origin/master
 
 // Grid
 import { Grid, GridCol } from 'kitten/components/grid/grid'
