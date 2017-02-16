@@ -4,7 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `big` prop to `k-Select`.
+## [6.2.0] - 2017-02-16
+
+Feature:
+- Add `big` prop to `k-Select`.
 
 ## [6.1.0] - 2017-02-14
 
