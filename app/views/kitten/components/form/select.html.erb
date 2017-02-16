@@ -60,3 +60,16 @@
         ],
   }) %>
 <% end %>
+
+<%= example "big select with label" do %>
+  <%= react_component('SelectWithState', props: {
+        labelText: 'Please select a language:',
+        id: 'select-with-label',
+        options: [
+          { value: 'de', label: 'Deutsch' },
+          { value: 'en', label: 'English' },
+          { value: 'es', label: 'Español' },
+        ],
+        big: true,
+  }) %>
+<% end %>

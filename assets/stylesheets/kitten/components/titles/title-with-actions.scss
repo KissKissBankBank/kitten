@@ -22,19 +22,23 @@
   .k-titleWithActions__title {
     @include k-grid-col(12);
     @include k-typographyFont('source-sans-light');
-    @include k-typographyFontSize(2);
+    @include k-typographyFontSize(5);
     margin-bottom: k-px-to-rem(30px);
 
     @include k-media-min('m') {
       @include k-grid-col(8);
       @include k-grid-offset(2);
-      @include k-typographyFontSize(3);
+      @include k-typographyFontSize(4, 1.25);
     }
 
     @include k-media-min('l') {
       @include k-grid-col(6);
       @include k-grid-offset(3);
     }
+  }
+
+  .k-titleWithActions__title--withoutMargin {
+    margin-bottom: 0;
   }
 
   .k-titleWithActions__action {
