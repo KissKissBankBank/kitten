@@ -21,12 +21,12 @@
 @include k-DevGrid;
 @include k-DevBreakpoint;
 
-// Footer
-@include k-Footer;
-
 // Dropdowns
 @include k-Dropdown;
 @include k-PhoneDropdown;
+
+// Footer
+@include k-Footer;
 
 // Form
 
