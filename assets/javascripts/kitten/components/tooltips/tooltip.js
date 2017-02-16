@@ -13,7 +13,7 @@ export default class Tooltip extends React.Component {
                            aria-describedby={ this.props.id } />
 
         <ReactTooltip id={ this.props.id }
-                      class="k-Tooltip__content"
+                      className="k-Tooltip__content"
                       role="tooltip"
                       effect="solid"
                       place={ this.props.place }
