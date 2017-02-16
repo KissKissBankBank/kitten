@@ -41,6 +41,7 @@ import { Grid, GridCol } from 'kitten/components/grid/grid'
 import GrabberIcon from 'kitten/components/icons/grabber-icon'
 import { HeartIcon } from 'kitten/components/icons/heart-icon'
 import { VisaIcon } from 'kitten/components/icons/visa-icon'
+import { LocationIcon } from 'kitten/components/icons/location-icon'
 
 // Links
 import ExternalRichLink from 'kitten/components/links/external-rich-link'
@@ -170,6 +171,7 @@ ReactOnRails.register({
   GrabberIcon,
   HeartIcon,
   VisaIcon,
+  LocationIcon,
 
   // Links
   ExternalRichLink,
