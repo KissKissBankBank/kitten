@@ -23,7 +23,7 @@ export class TextInputWithUnit extends React.Component {
                    className={ textInputClassNames }
                    placeholder={ placeholder }
                    { ...others }/>
-        <span class="k-TextInputWithUnit__unit">
+        <span className="k-TextInputWithUnit__unit">
           { unit }
         </span>
       </div>
