@@ -4,55 +4,73 @@ import { shallow } from 'enzyme'
 import { Line } from 'kitten/components/layout/line'
 
 describe('<Line />', () => {
-  it('renders a <div class="k-Line" />', () => {
+  describe('by default', () => {
     const component = shallow(<Line />)
 
-    expect(component).to.have.tagName('div')
-    expect(component).to.have.className('k-Line')
+    it('renders a <div />', () => {
+      expect(component).to.have.tagName('div')
+    })
+
+    it('has "k-Line" class', () => {
+      expect(component).to.have.className('k-Line')
+    })
   })
 
-  it('has a custom class', () => {
+  describe('className prop', () => {
     const component = shallow(
       <Line className="test-Line--lorem" />
     )
 
-    expect(component).to.have.className('test-Line--lorem')
+    it('has a custom class', () => {
+      expect(component).to.have.className('test-Line--lorem')
+    })
   })
 
-  it('renders children', () => {
+  describe('children prop', () => {
     const component = shallow(
       <Line>
         <p>Lorem ipsum…</p>
       </Line>
     )
 
-    expect(component).to.have.text('Lorem ipsum…')
+    it('renders children', () => {
+      expect(component).to.have.text('Lorem ipsum…')
+    })
   })
 })
 
 describe('<Line.Item />', () => {
-  it('renders a <div class="k-Line__item" />', () => {
+  describe('by default', () => {
     const component = shallow(<Line.Item />)
 
-    expect(component).to.have.tagName('div')
-    expect(component).to.have.className('k-Line__item')
+    it('renders a <div />', () => {
+      expect(component).to.have.tagName('div')
+    })
+
+    it('has "k-Line__item" class', () => {
+      expect(component).to.have.className('k-Line__item')
+    })
   })
 
-  it('has a custom class', () => {
+  describe('className prop', () => {
     const component = shallow(
       <Line className="test-Line__item--lorem" />
     )
 
-    expect(component).to.have.className('test-Line__item--lorem')
+    it('has a custom class', () => {
+      expect(component).to.have.className('test-Line__item--lorem')
+    })
   })
 
-  it('renders children', () => {
+  describe('children prop', () => {
     const component = shallow(
       <Line>
         <p>Lorem ipsum…</p>
       </Line>
     )
 
-    expect(component).to.have.text('Lorem ipsum…')
+    it('renders children', () => {
+      expect(component).to.have.text('Lorem ipsum…')
+    })
   })
 })
