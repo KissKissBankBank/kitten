@@ -63,6 +63,7 @@
 }
 
 // Our overrides to React Select's default styles
+// TODO: Merge with _ReactSelect. Not possible to keep both separated.
 @mixin _k-Select-Overrides($select, $options) {
   $colors: k-map-fetch($select, 'colors');
   $select-input-bg: k-map-fetch($colors, 'input-bg');
