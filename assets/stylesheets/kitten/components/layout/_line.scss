@@ -20,5 +20,9 @@
 
   .k-Line__item {
     margin-right: k-px-to-rem(10px);
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }
