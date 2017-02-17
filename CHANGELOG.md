@@ -5,7 +5,6 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add new `Line` component.
-
 - Feature: Add new `InformationBox` React component.
 
 ## [6.2.0] - 2017-02-16
