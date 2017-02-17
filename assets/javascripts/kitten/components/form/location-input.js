@@ -7,18 +7,19 @@ export class LocationInput extends React.Component {
     super(props)
     this.state = {
       placeholder: 'Localisation',
-      address: ''
+      address: '',
     }
     this.onChange = (address) => this.setState({ address })
+    this.onSelect = (address) => this.setState({ address })
   }
 
   render() {
     const { hideLabel,
+            label,
             ...other } = this.props
 
     const cssClasses = {
       root: 'k-LocationInput__group',
-      label: 'k-LocationInput__label',
       input: 'k-LocationInput__input',
       autocompleteContainer: 'k-LocationInput__autocomplete'
     }
@@ -33,14 +34,19 @@ export class LocationInput extends React.Component {
 
     return (
       <div className="k-LocationInput">
-        <PlacesAutocomplete
-          value={ this.state.address }
-          onChange={ this.onChange }
-          classNames={ cssClasses }
-          placeholder={ this.state.placeholder }
-          autocompleteItem={ autocompleteItem }
-          { ...this.props }
-        />
+        <div className="k-LocationInput__label">
+          { label }
+        </div>
+        <div className="k-LocationInput__icon">
+          <LocationIcon />
+        </div>
+        <PlacesAutocomplete classNames={ cssClasses }
+                            value={ this.state.address }
+                            onChange={ this.onChange }
+                            onSelect={ this.onSelect }
+                            placeholder={ this.state.placeholder }
+                            autocompleteItem={ autocompleteItem }
+                            { ...this.props } />
       </div>
     )
   }

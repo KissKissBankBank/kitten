@@ -9,12 +9,29 @@
 ///
 /// @example html
 ///
+///   <div class="k-LocationInput">
+///     <div class="k-LocationInput__label">…</div>
+///     <div class="k-LocationInput__icon">
+///       <svg />
+///     </div>
+///     <input class="k-LocationInput__group
+///                   k-LocationInput__input
+///                   k-LocationInput__autocomplete" />
+///   </div>
 
 @mixin k-LocationInput {
   $font: 'source-sans';
+  $label-font: 'source-sans-semi-bold';
   $font-size: -1;
   $line-height: 1.3;
   $height: k-px-to-rem(50px);
+
+  $icon-margin: k-px-to-rem(17px);
+
+  // Color autocomplete
+  $color-mainText: map-get($k-colors, 'font-1');
+  $color-secondaryText: map-get($k-colors, 'font-2');
+  $border-autocomplete: map-get($k-colors, 'line-2');
 
   // Base
   $color: map-get($k-colors, 'font-1');
@@ -53,12 +70,14 @@
     }
 
     .k-LocationInput__label {
-      color: green;
+      @include k-typographyFont($label-font);
+
+      color: $color;
       margin-bottom: k-px-to-rem(20px);
     }
 
-    .k-LocationInput__input,
-    .k-LocationInput__input:active {
+    .k-LocationInput__input {
+      position: relative;
       display: block;
       box-sizing: border-box;
       border: 1px solid $border;
@@ -69,18 +88,91 @@
       background: $background;
 
       color: $color;
-      padding: 0 k-px-to-rem(15px);
+      padding: 0 k-px-to-rem(15px) 0 k-px-to-rem(37px);
       transition: color .2s, border-color .2s;
       outline: none;
+
+      &::placeholder {
+        color: $color-placeholder;
+      }
+
+      &::-moz-placeholder {
+        color: $color-placeholder;
+      }
+
+      &:focus {
+        outline: none;
+        border-color: $border-focus;
+      }
+
+      &:disabled {
+        border-color: $border-disabled;
+        background-color: $background-disabled;
+        color: $color-disabled;
+
+        cursor: not-allowed;
+
+        &::placeholder {
+          opacity: 1;
+        }
+
+        &::-moz-placeholder {
+          opacity: 1;
+        }
+      }
+
+      &.is-valid {
+        border-color: $border-is-valid;
+        color: $color-is-valid;
+
+        &:focus {
+          border-color: $border-focus;
+          color: $color;
+        }
+      }
+    }
+
+    &.is-error {
+      border-color: $border-is-error;
+      color: $color-is-error;
+
+      &:focus {
+        border-color: $border-focus;
+        color: $color;
+      }
     }
 
     .k-LocationInput__autocomplete {
-      background-color: green !important;
+      border-bottom: $border-autocomplete !important;
+      border-left: $border-autocomplete !important;
+      border-right: $border-autocomplete !important;
+      border-top: 1px solid #e6e6e6 !important;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      border-radius: 0 0 2px 2px;
     }
 
     .k-LocationInput__suggestionItem {
-      padding: 4px;
-      text-align: left;
+      padding: k-px-to-rem(4px);
+
+      color: $color-placeholder;
+      border-bottom: 1px solid $border-autocomplete;
+    }
+
+    strong {
+      color: $color-mainText;
+      margin: 0 k-px-to-rem(5px);
+    }
+
+    small {
+      color: $color-secondaryText;
+    }
+
+
+    .k-LocationInput__icon {
+      position: absolute;
+      z-index: 1;
+
+      margin: $icon-margin 0 0 $icon-margin;
     }
   }
 }
