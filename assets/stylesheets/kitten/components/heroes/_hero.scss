@@ -37,7 +37,7 @@
     }
 
     .k-Hero__text {
-      margin: k-px-to-rem(40px) 0 k-px-to-rem(10px);
+      margin: k-px-to-rem(40px) 0 k-px-to-rem(30px);
 
       @include k-media-min('s') {
         margin: k-px-to-rem(62px) 0 k-px-to-rem(30px);
@@ -73,9 +73,8 @@
     }
 
     .k-Hero__title {
-      margin: 0;
       @include k-typographyFont($font);
-      @include k-typographyFontSize(10, normal);
+      @include k-typographyFontSize(5, normal);
 
       @include k-media-min('m') {
         @include k-typographyFontSize(7, normal);
@@ -84,10 +83,12 @@
 
     .k-Hero__subtitle {
       margin: 0;
+      display: none;
       @include k-typographyFont($font);
-      @include k-typographyFontSize(4, 1.6);
+      @include k-typographyFontSize(0, 1.6);
 
-      @include k-media-min('s') {
+      @include k-media-min('m') {
+        display: block;
         @include k-typographyFontSize(2, 1.6);
       }
     }

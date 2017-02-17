@@ -4,6 +4,16 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add new `Line` React component.
+- Feature: Add new `Line` component.
+- Feature: Add new `InformationBox` React component.
+- Fix: Change the font size and the margin bottom in `k-Hero`.
+
+## [6.2.0] - 2017-02-16
+
+Feature:
+- Add `big` prop to `k-Select`.
+
 ## [6.1.0] - 2017-02-14
 
 Features:

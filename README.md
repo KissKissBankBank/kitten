@@ -206,7 +206,13 @@ To contribute code:
 
 - Create a pull request on Github with a clear title in English.
 - Tag it with the right labels: `Needs reviews`, `Needs testing` or `Work in progress`.
-- Don't forget to update the `CHANGELOG.md` under the `[unreleased]` section.
+- Don't forget to update the `CHANGELOG.md` under the `[unreleased]` section
+  with the following syntax:
+  ```
+  - Breaking change: a breaking change.
+  - Feature: a new feature.
+  - Fix: a fix.
+  ```
 
 To merge code into master:
 
