@@ -19,7 +19,7 @@ export class TextInputWithUnit extends React.Component {
     return (
       <div className="k-TextInputWithUnit">
         <TextInput tag="input"
-                   type="text"
+                   type="number"
                    className={ textInputClassNames }
                    placeholder={ placeholder }
                    { ...others }/>
