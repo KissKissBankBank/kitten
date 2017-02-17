@@ -31,10 +31,10 @@ describe('<Line />', () => {
       <Line>
         <p>Lorem ipsum…</p>
       </Line>
-    )
+    ).children()
 
-    it('renders children', () => {
-      expect(component).to.have.text('Lorem ipsum…')
+    it('renders a <p>', () => {
+      expect(component).to.have.tagName('p')
     })
   })
 })
@@ -67,10 +67,10 @@ describe('<Line.Item />', () => {
       <Line>
         <p>Lorem ipsum…</p>
       </Line>
-    )
+    ).children()
 
-    it('renders children', () => {
-      expect(component).to.have.text('Lorem ipsum…')
+    it('renders a <p>', () => {
+      expect(component).to.have.tagName('p')
     })
   })
 })
