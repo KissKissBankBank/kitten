@@ -29,12 +29,18 @@
     select-input-border-radius: 4px,
     select-input-border-width: 1px,
   );
+  $options-big: map-merge($options, (select-input-height: 50px));
 
   .k-Select {
     @include k-typographyFont($font);
     @include k-typographyFontSize(-1);
     @include _k-Select-ReactSelect($select, $options);
     @include _k-Select-Overrides($select, $options);
+  }
+
+  .k-Select--big {
+    @include _k-Select-ReactSelect($select, $options-big);
+    @include _k-Select-Overrides($select, $options-big);
   }
 
   .k-Select__option--level1 {
@@ -146,7 +152,9 @@
   $select-input-border-focus: k-map-fetch($colors, 'input-border-focus');
   $select-input-border-width: k-map-fetch($options,
                                           'select-input-border-width');
-  $select-input-height: 40px;
+  $select-input-height: k-default(map-get($options,
+                                          'select-input-height'),
+                                          40px);
   $select-input-internal-height:
     ($select-input-height - ($select-input-border-width * 2));
   $select-input-placeholder: #b8b8b8;

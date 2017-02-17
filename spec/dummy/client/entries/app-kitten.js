@@ -4,6 +4,7 @@ import ReactOnRails from 'react-on-rails';
 
 // Box
 import DocLinkBox from 'kitten/components/box/doc-link-box'
+import { InformationBox } from 'kitten/components/box/information-box'
 import LinkBox from 'kitten/components/box/link-box'
 
 // Buttons
@@ -131,6 +132,7 @@ import { KarlMakerWhoAmIStep } from 'app/maker/who-am-i/components/container'
 ReactOnRails.register({
   // Box
   DocLinkBox,
+  InformationBox,
   LinkBox,
 
   // Buttons
