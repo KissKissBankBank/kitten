@@ -33,6 +33,7 @@ import Slider from 'kitten/components/form/slider'
 import Switch from 'kitten/components/form/switch'
 import { TextInput } from 'kitten/components/form/text-input'
 import { TextInputWithLimit } from 'kitten/components/form/text-input-with-limit'
+import { TextInputWithUnit } from 'kitten/components/form/text-input-with-unit'
 
 // Grid
 import { Grid, GridCol } from 'kitten/components/grid/grid'
@@ -167,6 +168,7 @@ ReactOnRails.register({
   Switch,
   TextInput,
   TextInputWithLimit,
+  TextInputWithUnit,
 
   // Icons
   GrabberIcon,
