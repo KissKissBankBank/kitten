@@ -5,7 +5,7 @@ import ButtonTooltipIcon from 'kitten/components/buttons/button-tooltip-icon'
 export default class Tooltip extends React.Component {
   render() {
     const { place,
-            ...others } = this.props
+            ...buttonTooltipIconProps } = this.props
 
     return (
       <div className="k-Tooltip">
@@ -14,7 +14,7 @@ export default class Tooltip extends React.Component {
                            data-event="click"
                            data-dismiss={ this.props.id }
                            aria-describedby={ this.props.id }
-                           { ...others } />
+                           { ...buttonTooltipIconProps } />
 
         <ReactTooltip id={ this.props.id }
                       // This is not a mistake, this attribute is called
