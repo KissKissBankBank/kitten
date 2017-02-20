@@ -83,28 +83,25 @@
       color: $color;
     }
 
-    &:disabled + { .k-TextInputWithUnit__unit {
-        background: $background-disabled;
-      }
+    &:disabled + .k-TextInputWithUnit__unit {
+      background: $background-disabled;
     }
   }
 
   // Unit
   .k-TextInputWithUnit__unit {
     display: table-cell;
-    vertical-align: middle;
     position: relative;
-
-    box-sizing: border-box;
-    height: 100%;
-    width: 1%; // To let the input take all the remaining space
-
-    padding: k-px-to-rem(11px) k-px-to-rem(14px);
+    vertical-align: middle;
 
     border-top-right-radius: $border-text-input;
     border-bottom-right-radius: $border-text-input;
     border: 1px solid $border-color;
     border-left: 0;
+    box-sizing: border-box;
+    height: 100%;
+    width: 1%; // To let the input take all the remaining space
+    padding: k-px-to-rem(11px) k-px-to-rem(14px);
 
     color: $color;
 
