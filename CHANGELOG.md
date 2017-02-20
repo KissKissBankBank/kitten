@@ -4,9 +4,15 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add new `TextInputWithUnit` React component.
-- Fix: Make unit from text input extensible according to its child.
-- Fix: Add missing props to `Tooltip` component.
+
+## [6.4.0] - 2017-02-20
+
+Feature:
+- Add new `TextInputWithUnit` React component.
+
+Fixes:
+- Make unit from text input extensible according to its child.
+- Add missing props to `Tooltip` component.
 
 ## [6.3.0] - 2017-02-17
 
