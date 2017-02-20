@@ -18,7 +18,7 @@ export class TextInputWithUnit extends React.Component {
       className,
     )
 
-    let unitClassNames = classNames(
+    let unitClassName = classNames(
       'k-TextInputWithUnit__unit',
       {
         'k-TextInputWithUnit__unit--tiny': tiny,
@@ -38,7 +38,7 @@ export class TextInputWithUnit extends React.Component {
                    disabled={ disabled }
                    { ...others }
                    tag="input" />
-        <span className={ unitClassNames }>{ unit }</span>
+        <span className={ unitClassName }>{ unit }</span>
       </div>
     )
   }
