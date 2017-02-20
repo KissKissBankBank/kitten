@@ -11,40 +11,28 @@ describe('<TextInputWithUnit />', () => {
       expect(component).to.have.tagName('div')
     })
 
-    it('has "k-TextInputWithUnit" class', () => {
+    it('has a "k-TextInputWithUnit" class', () => {
       expect(component).to.have.className('k-TextInputWithUnit')
     })
 
-    describe('children prop', () => {
+    it('renders an input.k-TextInputWithUnit__input', () => {
       const textInput = component.find('TextInput')
 
-      describe('1st', () => {
-        it('renders an <input /> child', () => {
-          expect(textInput).to.have.tagName('input')
-        })
+      expect(textInput).to.have.tagName('input')
+      expect(textInput).to.have.className('k-TextInputWithUnit__input')
+    })
 
-        it('has "k-TextInputWithUnit__input" class', () => {
-          expect(textInput).to.have.className('k-TextInputWithUnit__input')
-        })
-      })
+    it('renders a span.k-TextInputWithUnit__unit', () => {
+      const span = component.find('span')
 
-      describe('2nd', () => {
-        const span = component.find('span')
-
-        it('renders a <span /> child', () => {
-          expect(span).to.have.tagName('span')
-        })
-
-        it('has "k-TextInputWithUnit__unit" class', () => {
-          expect(span).to.have.className('k-TextInputWithUnit__unit')
-        })
-      })
+      expect(span).to.have.tagName('span')
+      expect(span).to.have.className('k-TextInputWithUnit__unit')
     })
   })
 
   describe('tiny prop', () => {
     const component = mount(<TextInputWithUnit tiny={ true } />)
-    const textInput = component.find('TextInput')
+    const textInput = component.find('input')
     const span = component.find('span')
     const textInputExpectation = textInput.hasClass("k-TextInput--tiny")
     const spanExpectation = span.hasClass("k-TextInputWithUnit__unit--tiny")
@@ -60,7 +48,7 @@ describe('<TextInputWithUnit />', () => {
 
   describe('valid prop', () => {
     const component = mount(<TextInputWithUnit valid={ true } />)
-    const textInput = component.find('TextInput')
+    const textInput = component.find('input')
     const span = component.find('span')
     const textInputExpectation = textInput.hasClass("is-valid")
     const spanExpectation = span.hasClass("is-valid")
