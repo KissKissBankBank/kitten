@@ -5,7 +5,6 @@ import { TextInput } from 'kitten/components/form/text-input'
 export class TextInputWithUnit extends React.Component {
   render() {
     const { className,
-            placeholder,
             tag,
             valid,
             error,
@@ -15,7 +14,7 @@ export class TextInputWithUnit extends React.Component {
             disabled,
             ...others } = this.props
 
-    let textInputClassNames = classNames(
+    const textInputClassName = classNames(
       'k-TextInput k-TextInputWithUnit__input',
       className,
     )
@@ -33,9 +32,8 @@ export class TextInputWithUnit extends React.Component {
     return (
       <div className="k-TextInputWithUnit">
         <TextInput tag="input"
-                   type="number"
-                   className={ textInputClassNames }
-                   placeholder={ placeholder }
+                   type={type}
+                   className={ textInputClassName }
                    valid={ valid }
                    error={ error }
                    tiny={ tiny }
@@ -49,6 +47,7 @@ export class TextInputWithUnit extends React.Component {
 
 TextInputWithUnit.defaultProps = {
   unit: 'λ',
+  type: 'number'
   placeholder: null,
   valid: false,
   error: false,
