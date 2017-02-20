@@ -47,7 +47,7 @@ export class TextInputWithUnit extends React.Component {
 
 TextInputWithUnit.defaultProps = {
   unit: 'λ',
-  type: 'number'
+  type: 'number',
   placeholder: null,
   valid: false,
   error: false,
