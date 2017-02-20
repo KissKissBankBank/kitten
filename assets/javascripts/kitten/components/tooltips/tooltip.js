@@ -26,3 +26,10 @@ export default class Tooltip extends React.Component {
     )
   }
 }
+
+Tooltip.defaultProps = {
+  id: 'tooltip-id',
+  place: 'right',
+  type: 'button',
+  children: null,
+}
