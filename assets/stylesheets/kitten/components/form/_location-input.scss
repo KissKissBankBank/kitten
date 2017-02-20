@@ -143,11 +143,8 @@
     }
 
     .k-LocationInput__autocomplete {
-      border-bottom: $border-autocomplete !important;
-      border-left: $border-autocomplete !important;
-      border-right: $border-autocomplete !important;
-      border-top: 1px solid #e6e6e6 !important;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      border-color: $border-autocomplete !important;
+      border-top: 1px solid !important;
       border-radius: 0 0 2px 2px;
     }
 
