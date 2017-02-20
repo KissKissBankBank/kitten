@@ -4,11 +4,11 @@ import { shallow, mount } from 'enzyme'
 import { TextInputWithUnit } from 'kitten/components/form/text-input-with-unit'
 
 describe('<TextInputWithUnit />', () => {
-  let component = shallow(<TextInputWithUnit />)
-  let textInput = component.find('TextInput')
-  let span = component.find('span')
-
   describe('by default', () => {
+    const component = shallow(<TextInputWithUnit />)
+    const textInput = component.find('TextInput')
+    const span = component.find('span')
+
     it('renders a <div />', () => {
       expect(component).to.have.tagName('div')
     })
@@ -41,11 +41,11 @@ describe('<TextInputWithUnit />', () => {
   })
 
   describe('tiny prop', () => {
-    component = mount(<TextInputWithUnit tiny={ true } />)
-    textInput = component.find('TextInput')
-    span = component.find('span')
-    let textInputExpectation = textInput.hasClass("k-TextInput--tiny")
-    let spanExpectation = span.hasClass("k-TextInputWithUnit__unit--tiny")
+    const component = mount(<TextInputWithUnit tiny={ true } />)
+    const textInput = component.find('TextInput')
+    const span = component.find('span')
+    const textInputExpectation = textInput.hasClass("k-TextInput--tiny")
+    const spanExpectation = span.hasClass("k-TextInputWithUnit__unit--tiny")
 
     it('has an <input /> with "k-TextInput--tiny" class', () => {
       expect(textInputExpectation).to.equal(true)
@@ -57,11 +57,11 @@ describe('<TextInputWithUnit />', () => {
   })
 
   describe('valid prop', () => {
-    component = mount(<TextInputWithUnit valid={ true } />)
-    textInput = component.find('TextInput')
-    span = component.find('span')
-    let textInputExpectation = textInput.hasClass("is-valid")
-    let spanExpectation = span.hasClass("is-valid")
+    const component = mount(<TextInputWithUnit valid={ true } />)
+    const textInput = component.find('TextInput')
+    const span = component.find('span')
+    const textInputExpectation = textInput.hasClass("is-valid")
+    const spanExpectation = span.hasClass("is-valid")
 
     it('has an <input /> with "is-valid" class', () => {
       expect(textInputExpectation).to.equal(true)
@@ -73,11 +73,11 @@ describe('<TextInputWithUnit />', () => {
   })
 
   describe('error prop', () => {
-    component = mount(<TextInputWithUnit error={ true } />)
-    textInput = component.find('TextInput')
-    span = component.find('span')
-    let textInputExpectation = textInput.hasClass("is-error")
-    let spanExpectation = span.hasClass("is-error")
+    const component = mount(<TextInputWithUnit error={ true } />)
+    const textInput = component.find('TextInput')
+    const span = component.find('span')
+    const textInputExpectation = textInput.hasClass("is-error")
+    const spanExpectation = span.hasClass("is-error")
 
     it('has an <input /> with "is-error" class', () => {
       expect(textInputExpectation).to.equal(true)
@@ -89,10 +89,10 @@ describe('<TextInputWithUnit />', () => {
   })
 
   describe('disabled prop', () => {
-    component = mount(<TextInputWithUnit disabled={ true } />)
-    textInput = component.find('TextInput')
-    span = component.find('span')
-    let spanExpectation = span.hasClass("is-inactive")
+    const component = mount(<TextInputWithUnit disabled={ true } />)
+    const textInput = component.find('TextInput')
+    const span = component.find('span')
+    const spanExpectation = span.hasClass("is-inactive")
 
     it('has a disabled <input />', () => {
       expect(textInput).to.have.attr('disabled')
