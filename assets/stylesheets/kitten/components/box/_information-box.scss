@@ -1,0 +1,57 @@
+/// Setup a box element.
+///
+/// @group box
+///
+/// @example scss - usage
+///
+///   @include k-InformationBox;
+///
+/// example html
+///   <div class="k-InformationBox">
+///     <div className="k-InformationBox__container">
+///       <p className="k-InformationBox__title"> … </p>
+///       <div className="k-InformationBox__content">
+///         …
+///       </div>
+///     </div>
+///   </div>
+
+@mixin k-InformationBox {
+  $color: map-get($k-colors, 'font-1');
+  $background-color: map-get($k-colors, 'background-1');
+  $border-color: map-get($k-colors, 'line-2');
+
+  $font: 'source-sans-light';
+
+  $border-size: 1px;
+  $border-radius: k-px-to-rem(8px);
+
+  .k-InformationBox {
+    display: inline-block;
+    @include k-typographyFont($font);
+  }
+
+  .k-InformationBox__container {
+    padding: k-px-to-rem(10px)
+             k-px-to-rem(10px)
+             k-px-to-rem(15px)
+             k-px-to-rem(20px);
+
+    color: $color;
+    background-color: $background-color;
+    border-radius: $border-radius;
+    border: $border-size solid $border-color;
+  }
+
+  .k-InformationBox__title {
+    @include k-typographyFontSize(4);
+
+    margin: 0;
+  }
+
+  .k-InformationBox__content {
+    @include k-typographyFontSize(-1, 1.56);
+
+    margin: 0;
+  }
+}

@@ -4,6 +4,7 @@ import ReactOnRails from 'react-on-rails';
 
 // Box
 import DocLinkBox from 'kitten/components/box/doc-link-box'
+import { InformationBox } from 'kitten/components/box/information-box'
 import LinkBox from 'kitten/components/box/link-box'
 
 // Buttons
@@ -124,6 +125,8 @@ import { KarlButtonIconHeartRight,
          KarlButtonIconHeartLeft
        } from 'kitten/karl/buttons/button-heart-icon-words'
 import { KarlButtonAndText } from 'kitten/karl/buttons/button'
+import { KarlLineWithTooltip,
+         KarlLineWithBigHeart } from 'kitten/karl/layout/line'
 import { KarlPaymentButton } from 'kitten/karl/buttons/payment-button'
 import { KarlRandomProgress } from 'kitten/karl/meters/random-progress'
 import { KarlMakerWhoAmIStep } from 'app/maker/who-am-i/components/container'
@@ -131,6 +134,7 @@ import { KarlMakerWhoAmIStep } from 'app/maker/who-am-i/components/container'
 ReactOnRails.register({
   // Box
   DocLinkBox,
+  InformationBox,
   LinkBox,
 
   // Buttons
@@ -217,6 +221,8 @@ ReactOnRails.register({
   KarlButtonIconHeartRight,
   KarlButtonIconHeartLeft,
   KarlButtonAndText,
+  KarlLineWithTooltip,
+  KarlLineWithBigHeart,
   KarlImageExternalRichLink,
   KarlSvgExternalRichLink,
   KarlSimpleDropdown,

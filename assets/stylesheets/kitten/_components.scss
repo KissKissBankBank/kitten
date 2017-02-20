@@ -8,6 +8,7 @@
 
 // Box
 @import 'kitten/components/box/link-box';
+@import 'kitten/components/box/information-box';
 
 // Cards
 @import 'kitten/components/cards/card';
@@ -54,6 +55,9 @@
 
 // Heroes
 @import "kitten/components/heroes/hero";
+
+// Layout
+@import 'kitten/components/layout/line';
 
 // Links
 @import 'kitten/components/links/external-rich-link';

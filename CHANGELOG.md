@@ -7,6 +7,21 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Add new `LocationIcon` React component.
 - Feature: Add new `LocationInput` React component.
 
+## [6.3.0] - 2017-02-17
+
+Features:
+- Add new `Line` React component.
+- Add new `Line` component.
+- Add new `InformationBox` React component.
+
+Fix:
+- Change the font size and the margin bottom in `k-Hero`.
+
+## [6.2.0] - 2017-02-16
+
+Feature:
+- Add `big` prop to `k-Select`.
+
 ## [6.1.0] - 2017-02-14
 
 Features:

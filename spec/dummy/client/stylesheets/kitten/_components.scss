@@ -10,6 +10,7 @@
 // Boxes
 
 @include k-LinkBox;
+@include k-InformationBox;
 
 // Cards
 
@@ -20,12 +21,14 @@
 @include k-DevGrid;
 @include k-DevBreakpoint;
 
-// Footer
-@include k-Footer;
-
 // Dropdowns
+
 @include k-Dropdown;
 @include k-PhoneDropdown;
+
+// Footer
+
+@include k-Footer;
 
 // Form
 
@@ -128,6 +131,10 @@
 @include k-Hero((
   font: 'source-sans',
 ));
+
+// Layout
+
+@include k-Line;
 
 // Links
 
