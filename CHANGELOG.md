@@ -5,7 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add new `TextInputWithUnit` React component.
-- Fix: Make unit from text input extensible according to his child.
+- Fix: Make unit from text input extensible according to its child.
 
 ## [6.3.0] - 2017-02-17
 
