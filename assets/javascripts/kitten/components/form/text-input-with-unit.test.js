@@ -6,8 +6,6 @@ import { TextInputWithUnit } from 'kitten/components/form/text-input-with-unit'
 describe('<TextInputWithUnit />', () => {
   describe('by default', () => {
     const component = shallow(<TextInputWithUnit />)
-    const textInput = component.find('TextInput')
-    const span = component.find('span')
 
     it('renders a <div />', () => {
       expect(component).to.have.tagName('div')
@@ -18,6 +16,8 @@ describe('<TextInputWithUnit />', () => {
     })
 
     describe('children prop', () => {
+      const textInput = component.find('TextInput')
+
       describe('1st', () => {
         it('renders an <input /> child', () => {
           expect(textInput).to.have.tagName('input')
@@ -29,6 +29,8 @@ describe('<TextInputWithUnit />', () => {
       })
 
       describe('2nd', () => {
+        const span = component.find('span')
+
         it('renders a <span /> child', () => {
           expect(span).to.have.tagName('span')
         })
