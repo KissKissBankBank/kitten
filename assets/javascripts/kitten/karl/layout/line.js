@@ -9,13 +9,12 @@ export const KarlLineWithTooltip = (props) => {
   return (
     <Line>
       <Line.Item>
-        Lorem ipsum dolor sit amet.
+        { props.text }
       </Line.Item>
       <Line.Item>
-        <Tooltip place='right'>
-          Lorem ipsum dolor sit amet, consectetur adipisicing
-          elit. Velit recusandae, dolores placeat. Sit iste
-          adipisci ex fuga accusamus autem id, dolorum.
+        <Tooltip id={ props.id }
+                 place={ props.place }>
+          { props.tooltipText }
         </Tooltip>
       </Line.Item>
     </Line>

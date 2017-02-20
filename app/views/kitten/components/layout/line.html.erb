@@ -1,6 +1,14 @@
 <div class="karl-Example__column">
   <%= example "line with tooltip" do %>
-    <%= react_component('KarlLineWithTooltip') %>
+    <%= react_component('KarlLineWithTooltip', props: {
+        text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+        tooltipText: 'Lorem ipsum dolor sit amet, consectetuer adipiscing
+                      elit. Aenean commodo ligula eget dolor, enean massa.
+                      Cum sociis natoque penatibus et magnis dis parturien.',
+        id: 'line-eg-tooltip-top',
+        place: 'right',
+      }
+    ) %>
   <% end %>
 
   <%= example "line with Big icon" do %>

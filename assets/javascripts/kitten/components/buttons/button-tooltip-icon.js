@@ -13,3 +13,7 @@ export default class ButtonTooltipIcon extends React.Component {
     )
   }
 }
+
+ButtonTooltipIcon.defaultProps = {
+  type: 'button',
+}
