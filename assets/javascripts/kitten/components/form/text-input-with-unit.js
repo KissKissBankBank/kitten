@@ -5,7 +5,6 @@ import { TextInput } from 'kitten/components/form/text-input'
 export class TextInputWithUnit extends React.Component {
   render() {
     const { className,
-            tag,
             valid,
             error,
             type,
@@ -31,14 +30,14 @@ export class TextInputWithUnit extends React.Component {
 
     return (
       <div className="k-TextInputWithUnit">
-        <TextInput tag="input"
-                   type={type}
+        <TextInput type={type}
                    className={ textInputClassName }
                    valid={ valid }
                    error={ error }
                    tiny={ tiny }
                    disabled={ disabled }
-                   { ...others }/>
+                   { ...others }
+                   tag="input" />
         <span className={ unitClassNames }>{ unit }</span>
       </div>
     )
