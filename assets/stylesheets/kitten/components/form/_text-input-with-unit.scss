@@ -57,9 +57,9 @@
 
   .k-TextInputWithUnit {
     display: table;
-    border-collapse: separate;
     position: relative; // to place an absolute unit
 
+    border-collapse: separate;
     box-sizing: border-box;
     width: 100%;
   }
