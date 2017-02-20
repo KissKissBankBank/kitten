@@ -17,7 +17,9 @@ export default class Tooltip extends React.Component {
                            { ...others } />
 
         <ReactTooltip id={ this.props.id }
-                      className="k-Tooltip__content"
+                      // This is not a mistake, this attribute is called
+                      // class not className !
+                      class="k-Tooltip__content"
                       role="tooltip"
                       effect="solid"
                       place={ place }
