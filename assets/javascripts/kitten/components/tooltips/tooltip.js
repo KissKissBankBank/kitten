@@ -4,21 +4,23 @@ import ButtonTooltipIcon from 'kitten/components/buttons/button-tooltip-icon'
 
 export default class Tooltip extends React.Component {
   render() {
+    const { place,
+            ...others } = this.props
+
     return (
       <div className="k-Tooltip">
-        <ButtonTooltipIcon dataTip
-                           dataFor={ this.props.id }
-                           dataEvent="click"
-                           dataDismiss={ this.props.id }
-                           ariaDescribedby={ this.props.id }
-                           type={ this.props.type }
-                           { ...this.props }/>
+        <ButtonTooltipIcon data-tip
+                           data-for={ this.props.id }
+                           data-event="click"
+                           data-dismiss={ this.props.id }
+                           aria-describedby={ this.props.id }
+                           { ...others } />
 
         <ReactTooltip id={ this.props.id }
                       className="k-Tooltip__content"
                       role="tooltip"
                       effect="solid"
-                      place={ this.props.place }
+                      place={ place }
                       globalEventOff="click">
           { this.props.children }
         </ReactTooltip>
