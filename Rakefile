@@ -40,7 +40,7 @@ task kitten_release: [:sassdoc, :build] do
   sh 'git push origin master'
   sh 'git push origin --tags'
   puts
-  puts "Done! You can now upload pkg/kitten-#{Kitten::VERSION}.gem to Gemfury"
+  puts "Done! You can publish kitten-components #{Kitten::VERSION} module on npm"
 end
 
 task default: ['app/views/layouts/kitten/playground.html.erb',
