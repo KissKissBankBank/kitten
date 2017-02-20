@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Add missing props to `Tooltip` component
+
 ## [6.3.0] - 2017-02-17
 
 Features:
