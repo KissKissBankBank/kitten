@@ -52,4 +52,5 @@ TextInputWithUnit.defaultProps = {
   valid: false,
   error: false,
   tiny: false,
+  disabled: false,
 }
