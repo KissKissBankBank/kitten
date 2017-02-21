@@ -6,9 +6,73 @@
         { value: 'gbp', label: 'GBP' },
         { value: 'eur', label: 'EUR' }
       ],
-      name: 'currency',
-      value: 'usd',
+      currencyName: 'currency',
+      currencyValue: 'usd',
       placeholder: 'Lorem ipsum dolor sit amet',
+    }
+  ) %>
+<% end %>
+
+<%= example "Form amount and currency - Valid" do %>
+  <%= react_component('FormAmountAndCurrency', props: {
+      currencyOptions: [
+        { value: 'usd', label: 'USD' },
+        { value: 'cad', label: 'CAD' },
+        { value: 'gbp', label: 'GBP' },
+        { value: 'eur', label: 'EUR' }
+      ],
+      currencyName: 'currency',
+      currencyValue: 'usd',
+      placeholder: 'Lorem ipsum dolor sit amet',
+      valid: true
+    }
+  ) %>
+<% end %>
+
+<%= example "Form amount and currency - Error" do %>
+  <%= react_component('FormAmountAndCurrency', props: {
+      currencyOptions: [
+        { value: 'usd', label: 'USD' },
+        { value: 'cad', label: 'CAD' },
+        { value: 'gbp', label: 'GBP' },
+        { value: 'eur', label: 'EUR' }
+      ],
+      currencyName: 'currency',
+      currencyValue: 'usd',
+      placeholder: 'Lorem ipsum dolor sit amet',
+      error: true
+    }
+  ) %>
+<% end %>
+
+<%= example "Form amount and currency - Disabled" do %>
+  <%= react_component('FormAmountAndCurrency', props: {
+      currencyOptions: [
+        { value: 'usd', label: 'USD' },
+        { value: 'cad', label: 'CAD' },
+        { value: 'gbp', label: 'GBP' },
+        { value: 'eur', label: 'EUR' }
+      ],
+      currencyName: 'currency',
+      currencyValue: 'usd',
+      placeholder: 'Lorem ipsum dolor sit amet',
+      disabled: true
+    }
+  ) %>
+<% end %>
+
+<%= example "Form amount and currency - Tiny" do %>
+  <%= react_component('FormAmountAndCurrency', props: {
+      currencyOptions: [
+        { value: 'usd', label: 'USD' },
+        { value: 'cad', label: 'CAD' },
+        { value: 'gbp', label: 'GBP' },
+        { value: 'eur', label: 'EUR' }
+      ],
+      currencyName: 'currency',
+      currencyValue: 'usd',
+      placeholder: 'Lorem ipsum dolor sit amet',
+      tiny: true,
     }
   ) %>
 <% end %>
