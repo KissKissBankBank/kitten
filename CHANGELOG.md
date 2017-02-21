@@ -4,8 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Breaking change: the component `FormAmountAndCurrency` shouldn't have a forced size
-- Breaking change: the component `SelectWithState` should have a `tiny` props
+- Breaking change: the component `FormAmountAndCurrency` is not tiny by default.
+- Breaking change: the component `SelectWithState` has a `tiny` props instead
+  of a `big` one.
 
 ## [6.4.0] - 2017-02-20
 
