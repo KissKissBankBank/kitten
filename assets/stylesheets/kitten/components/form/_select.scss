@@ -24,12 +24,12 @@
 @mixin k-Select($select) {
   $font: 'source-sans';
   $bold: 'source-sans-semi-bold';
-  $options: (
+  $options-tiny: (
     arrow-zone-width: 30px,
     select-input-border-radius: 4px,
     select-input-border-width: 1px,
   );
-  $options-big: map-merge($options, (select-input-height: 50px));
+  $options: map-merge($options-tiny, (select-input-height: 50px));
 
   .k-Select {
     @include k-typographyFont($font);
@@ -38,9 +38,9 @@
     @include _k-Select-Overrides($select, $options);
   }
 
-  .k-Select--big {
-    @include _k-Select-ReactSelect($select, $options-big);
-    @include _k-Select-Overrides($select, $options-big);
+  .k-Select--tiny {
+    @include _k-Select-ReactSelect($select, $options-tiny);
+    @include _k-Select-Overrides($select, $options-tiny);
   }
 
   .k-Select__option--level1 {
