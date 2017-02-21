@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-Fix: resize font for tiny `TextInputWithUnit` component.
+Fix: Change font-size on `--tiny` modifier for `TextInputWithUnit` component.
 
 ## [6.4.0] - 2017-02-20
 
