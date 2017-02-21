@@ -9,11 +9,9 @@ describe('<FormAmountAndCurrency />', () => {
   describe('valid props', () => {
     const component = mount(<FormAmountAndCurrency valid={ true } />)
     const textInput = component.find('input')
-    const select = component.find('.Select')
-    const textInputExpectation = textInput.hasClass("is-valid")
-    const selectExpectation = select.hasClass("is-valid")
+    const textInputExpectation = textInput.hasClass('is-valid')
 
-    it('render an input.is-valid', () => {
+    it('renders an input.is-valid', () => {
       expect(textInputExpectation).to.equal(true)
     })
   })
@@ -21,9 +19,9 @@ describe('<FormAmountAndCurrency />', () => {
   describe('error props', () => {
     const component = mount(<FormAmountAndCurrency error={ true } />)
     const textInput = component.find('input')
-    const textInputExpectation = textInput.hasClass("is-error")
+    const textInputExpectation = textInput.hasClass('is-error')
 
-    it('render an input.is-error', () => {
+    it('renders an input.is-error', () => {
       expect(textInputExpectation).to.equal(true)
     })
   })
@@ -32,14 +30,14 @@ describe('<FormAmountAndCurrency />', () => {
     const component = mount(<FormAmountAndCurrency tiny={ true } />)
     const textInput = component.find('input')
     const select = component.find('.k-Select')
-    const textInputExpectation = textInput.hasClass("k-TextInput--tiny")
-    const selectExpectation = select.hasClass("k-Select--tiny")
+    const textInputExpectation = textInput.hasClass('k-TextInput--tiny')
+    const selectExpectation = select.hasClass('k-Select--tiny')
 
-    it('render an input.k-TextInput--tiny', () => {
+    it('renders an input.k-TextInput--tiny', () => {
       expect(textInputExpectation).to.equal(true)
     })
 
-    it('render a .k-Select.k-Select--tiny', () => {
+    it('renders a .k-Select.k-Select--tiny', () => {
       expect(selectExpectation).to.equal(true)
     })
   })
@@ -52,11 +50,11 @@ describe('<FormAmountAndCurrency />', () => {
       disabled: true,
     }
 
-    it('render a disabled <input />', () => {
+    it('renders a disabled <input />', () => {
       expect(textInput).to.have.attr('disabled')
     })
 
-    it('render a .Select.is-inactive', () => {
+    it('passes the right props to the `Select` component', () => {
       expect(component.props()).to.contain.all.keys(expectedProps)
     })
   })
