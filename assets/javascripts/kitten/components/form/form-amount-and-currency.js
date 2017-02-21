@@ -3,7 +3,7 @@ import classNames from 'classnames'
 import SelectWithState from 'kitten/components/form/select-with-state'
 import { TextInput } from 'kitten/components/form/text-input'
 
-function FormAmountAndCurrency(props) {
+const FormAmountAndCurrency = props => {
   const { className,
           tiny,
           disabled,
