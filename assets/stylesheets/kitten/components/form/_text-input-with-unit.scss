@@ -129,6 +129,8 @@
   }
 
   .k-TextInputWithUnit__unit--tiny {
+    @include k-typographyFontSize(-1);
+
     padding: k-px-to-rem(7px) k-px-to-rem(9px);
   }
 }
