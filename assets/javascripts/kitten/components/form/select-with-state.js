@@ -41,11 +41,11 @@ class SelectWithState extends React.Component {
   }
 
   render() {
-    const { value, onChange, className, big, ...other } = this.props
+    const { value, onChange, className, tiny, ...other } = this.props
     const selectClassName = classNames(
       'k-Select',
       className,
-      { 'k-Select--big': big }
+      { 'k-Select--tiny': tiny }
     )
 
     return (
@@ -111,7 +111,7 @@ SelectWithState.defaultProps = {
   searchable: false,
   multi: false,
   labelText: null,
-  big: false, // Select size modifier
+  tiny: false,
 }
 
 export default SelectWithState
