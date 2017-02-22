@@ -8,15 +8,15 @@ describe('<LocationInput />', () => {
   describe('by default', () => {
     const component = shallow(<LocationInput />)
 
-    it('render a .k-LocationInput', () => {
+    it('renders a .k-LocationInput', () => {
       expect(component.find('.k-LocationInput')).to.have.length(1)
     })
 
-    it('render a .k-LocationInput__label', () => {
+    it('renders a .k-LocationInput__label', () => {
       expect(component.find('.k-LocationInput__label')).to.have.length(1)
     })
 
-    it('render a .k-LocationInput__icon', () => {
+    it('renders a .k-LocationInput__icon', () => {
       expect(component.find('.k-LocationInput__icon')).to.have.length(1)
     })
 
@@ -25,12 +25,22 @@ describe('<LocationInput />', () => {
     })
   })
 
+  describe('location-input with error class', () => {
+    const componentWithErrorClass = shallow(
+      <LocationInput error={ true } />
+    )
+
+    it('has a error class', () => {
+      expect(componentWithErrorClass).to.have.className('is-error')
+    })
+  })
+
   describe('label prop', () => {
     const component = shallow(
       <LocationInput label="Lorem ipsum" />
     )
 
-    it('add a label element', () => {
+    it('adds a label element', () => {
       const label = component.find('.k-LocationInput__label')
       expect(label).to.have.length(1)
       expect(label).to.have.text('Lorem ipsum')
