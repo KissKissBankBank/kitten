@@ -110,7 +110,7 @@
     transition: all $transition-speed;
 
     @include k-typographyFont($unit-font);
-    @include k-typographyFontSize(1);
+    @include k-typographyFontSize(-1);
 
     &.is-valid {
       border-color: $unit-color-is-valid;

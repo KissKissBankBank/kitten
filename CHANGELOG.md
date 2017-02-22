@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Change font-size for `TextInputWithUnit` component.
 - Breaking change: The `FormAmountAndCurrency` has new props.
   To be retro-compatible you should, in your app's components:
   - Rename `value` to `currencyValue`.
