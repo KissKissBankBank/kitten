@@ -14,7 +14,9 @@ export const FormAmountAndCurrency = props => {
 
   return (
     <div className="k-FormComposer">
-      <div className="k-FormComposer__element k-FormComposer__element--main">
+      <div className="k-FormComposer__element
+                      k-FormComposer__element--main
+                      k-FormAmountAndCurrency">
         <TextInput tiny={ tiny }
                    disabled={ disabled }
                    { ...textInputProps }
