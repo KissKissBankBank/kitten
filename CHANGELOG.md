@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+Fix: Increase line-height on tiny `Label`.
 
 ## [7.0.0] - 2017-02-22
 
