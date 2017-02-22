@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-Fix: Change font-size for `TextInputWithUnit` component.
+- Fix: Change font-size for `TextInputWithUnit` component.
 
 ## [6.4.0] - 2017-02-20
 
