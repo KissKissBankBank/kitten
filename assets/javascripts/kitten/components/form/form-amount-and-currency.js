@@ -33,8 +33,6 @@ export const FormAmountAndCurrency = props => {
 }
 
 FormAmountAndCurrency.defaultProps = {
-  valid: false,
-  error: false,
   tiny: false,
   disabled: false,
   currencyOptions: [{ value: 'eur', label: 'EUR' }],
