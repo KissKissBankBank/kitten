@@ -48,10 +48,6 @@
   // Placeholder
   $color-placeholder: map-get($k-colors, 'font-2');
 
-  // Is-valid
-  $color-is-valid: map-get($k-colors, 'valid');
-  $border-is-valid: map-get($k-colors, 'valid');
-
   // Is-error
   $color-is-error: map-get($k-colors, 'error');
   $border-is-error: map-get($k-colors, 'error');
@@ -79,17 +75,17 @@
       position: relative;
       display: block;
       box-sizing: border-box;
-      border: 1px solid $border;
+      outline: none;
+      padding: 0 k-px-to-rem(15px) 0 k-px-to-rem(37px);
 
       width: 100%;
       height: $height;
-      border-radius: $border-text-input;
       background: $background;
+      border: 1px solid $border;
+      border-radius: $border-text-input;
+      transition: color .2s, border-color .2s;
 
       color: $color;
-      padding: 0 k-px-to-rem(15px) 0 k-px-to-rem(37px);
-      transition: color .2s, border-color .2s;
-      outline: none;
 
       &::placeholder {
         color: $color-placeholder;
@@ -117,16 +113,6 @@
 
         &::-moz-placeholder {
           opacity: 1;
-        }
-      }
-
-      &.is-valid {
-        border-color: $border-is-valid;
-        color: $color-is-valid;
-
-        &:focus {
-          border-color: $border-focus;
-          color: $color;
         }
       }
     }
