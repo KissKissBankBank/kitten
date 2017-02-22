@@ -1,22 +1,41 @@
 import React from 'react'
+import classNames from 'classnames'
 import SelectWithState from 'kitten/components/form/select-with-state'
+import { TextInput } from 'kitten/components/form/text-input'
 
-function FormAmountAndCurrency(props) {
+export const FormAmountAndCurrency = props => {
+  const { className,
+          tiny,
+          disabled,
+          currencyOptions,
+          currencyName,
+          currencyValue,
+          ...textInputProps } = props
+
   return (
     <div className="k-FormComposer">
       <div className="k-FormComposer__element k-FormComposer__element--main">
-        <input className="k-TextInput k-TextInput--tiny"
-               type="text"
-               placeholder={ props.placeholder } />
+        <TextInput tiny={ tiny }
+                   disabled={ disabled }
+                   { ...textInputProps }
+                   type='number' />
       </div>
 
       <div className="k-FormComposer__element">
-        <SelectWithState name={ props.name }
-                         options={ props.currencyOptions }
-                         value={ props.value } />
+        <SelectWithState name={ currencyName }
+                         options={ currencyOptions }
+                         value={ currencyValue }
+                         tiny={ tiny }
+                         disabled={ disabled } />
       </div>
     </div>
   )
 }
 
-export default FormAmountAndCurrency
+FormAmountAndCurrency.defaultProps = {
+  tiny: false,
+  disabled: false,
+  currencyOptions: [{ value: 'eur', label: 'EUR' }],
+  currencyName: null,
+  currencyValue: null,
+}

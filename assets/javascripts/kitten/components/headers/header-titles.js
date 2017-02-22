@@ -16,11 +16,17 @@ export class HeaderTitles extends React.Component {
   }
 
   render() {
-    const { title, subtitle, className, titleClassName, ...other } = this.props
+    const {
+      title,
+      subtitle,
+      className,
+      titleClassName,
+      subtitleClassName,
+      ...headerItemProps } = this.props
 
     return (
       <HeaderItem className={ classNames("k-Header__titles", className) }
-                  { ...other }>
+                  { ...headerItemProps }>
         <p className={ classNames("k-Header__title", titleClassName) }>
           { title }
         </p>

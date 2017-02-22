@@ -22,7 +22,7 @@ import DropdownButton from 'kitten/components/dropdowns/dropdown-button'
 
 // Form
 import { Checkbox } from 'kitten/components/form/checkbox'
-import FormAmountAndCurrency from 'kitten/components/form/form-amount-and-currency'
+import { FormAmountAndCurrency } from 'kitten/components/form/form-amount-and-currency'
 import FormPhoneNumber from 'kitten/components/form/form-phone-number'
 import { Label } from 'kitten/components/form/label'
 import { RadioButton } from 'kitten/components/form/radio-button'
@@ -34,6 +34,7 @@ import Switch from 'kitten/components/form/switch'
 import { TextInput } from 'kitten/components/form/text-input'
 import { LocationInput } from 'kitten/components/form/location-input'
 import { TextInputWithLimit } from 'kitten/components/form/text-input-with-limit'
+import { TextInputWithUnit } from 'kitten/components/form/text-input-with-unit'
 
 // Grid
 import { Grid, GridCol } from 'kitten/components/grid/grid'
@@ -170,6 +171,7 @@ ReactOnRails.register({
   Switch,
   TextInput,
   TextInputWithLimit,
+  TextInputWithUnit,
 
   // Icons
   GrabberIcon,

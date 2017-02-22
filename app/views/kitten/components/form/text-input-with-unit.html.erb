@@ -1,72 +1,54 @@
 <%= example "Text input - Default" do %>
-  <div class="k-TextInputWithUnit">
-    <input class="k-TextInput k-TextInputWithUnit__input"
-           placeholder="Lorem ipsum dolor sit amet"
-           type="number" />
-
-    <span class="k-TextInputWithUnit__unit">€</span>
-  </div>
+  <%= react_component('TextInputWithUnit', props: {
+    placeholder: 'Lorem ipsum dolor sit amet',
+    unit: '€',
+  }) %>
 <% end %>
 
-<%= example "Text input with unit - Small" do %>
-  <div class="k-TextInputWithUnit">
-    <input class="k-TextInput k-TextInput--tiny k-TextInputWithUnit__input"
-           placeholder="Lorem ipsum dolor sit amet"
-           type="number" />
-
-    <span class="k-TextInputWithUnit__unit k-TextInputWithUnit__unit--tiny">€</span>
-  </div>
+<%= example "Text input - With custom size unit" do %>
+  <%= react_component('TextInputWithUnit', props: {
+    placeholder: 'Lorem ipsum dolor sit amet',
+    unit: 'jours',
+  }) %>
 <% end %>
 
-<%= example "Text input with unit - Text" do %>
-  <div class="k-TextInputWithUnit">
-    <input class="k-TextInput k-TextInputWithUnit__input"
-           placeholder="Lorem ipsum dolor sit amet"
-           type="number" />
-
-    <span class="k-TextInputWithUnit__unit">€</span>
-  </div>
+<%= example "Text input with unit - Tiny" do %>
+  <%= react_component('TextInputWithUnit', props: {
+    placeholder: 'Lorem ipsum dolor sit amet',
+    unit: '€',
+    tiny: true,
+  }) %>
 <% end %>
 
 <%= example "Text input with unit - Valid" do %>
-  <div class="k-TextInputWithUnit">
-    <input class="k-TextInput is-valid k-TextInputWithUnit__input"
-           placeholder="Lorem ipsum dolor sit amet"
-           type="number" />
-
-    <span class="k-TextInputWithUnit__unit is-valid">€</span>
-  </div>
+  <%= react_component('TextInputWithUnit', props: {
+    placeholder: 'Lorem ipsum dolor sit amet',
+    unit: '$',
+    valid: true,
+  }) %>
 <% end %>
 
 <%= example "Text input with unit - Error" do %>
-  <div class="k-TextInputWithUnit">
-    <input class="k-TextInput is-error k-TextInputWithUnit__input"
-           placeholder="Lorem ipsum dolor sit amet"
-           type="number" />
-
-    <span class="k-TextInputWithUnit__unit is-error">€</span>
-  </div>
+  <%= react_component('TextInputWithUnit', props: {
+    placeholder: 'Lorem ipsum dolor sit amet',
+    unit: '£',
+    error: true,
+  }) %>
 <% end %>
 
-<%= example "Text input with unit - Inactive" do %>
-  <div class="k-TextInputWithUnit">
-    <input class="k-TextInput k-TextInputWithUnit__input"
-           placeholder="Lorem ipsum dolor sit amet"
-           disabled=""
-           type="number" />
-
-    <span class="k-TextInputWithUnit__unit is-inactive">€</span>
-  </div>
+<%= example "Text input with unit - Disabled" do %>
+  <%= react_component('TextInputWithUnit', props: {
+    placeholder: 'Lorem ipsum dolor sit amet',
+    disabled: true,
+    unit: '€',
+  }) %>
 <% end %>
 
 <%= example "Text input with unit with info - Error" do %>
-  <div class="k-TextInputWithUnit">
-    <input class="k-TextInput is-error k-TextInputWithUnit__input"
-           placeholder="Lorem ipsum dolor sit amet"
-           type="number" />
-
-    <span class="k-TextInputWithUnit__unit is-error">€</span>
-  </div>
+  <%= react_component('TextInputWithUnit', props: {
+    placeholder: 'Lorem ipsum dolor sit amet',
+    unit: '€',
+    error: true,
+  }) %>
   <p class="k-TextInputWithInfo__error">Cum sociis natoque penatibus et magnis</p>
 <% end %>
-
