@@ -4,8 +4,20 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking change: The `FormAmountAndCurrency` has new props.
+  To be retro-compatible you should, in your app's components:
+  - Rename `value` to `currencyValue`.
+  - Rename `amount` to `currencyAmount`.
+  - Add the `tiny` boolean prop.
+  - Replace `import FormAmountAndCurrency` by
+    `import { FormAmountAndCurrency }`.
+- Breaking change: The `SelectWithState` has a new default size and export.
+  To be retro-compatible you should, in your app's components:
+  - Add the `tiny` boolean prop if the component does not have `big` set
+    to `true`.
+  - Remove the `big` boolean prop.
 - Fix: Remove unknown props from `RadioButton`, `KarlHeader`,
- `KarlHeaderWhenLogged`, `HeaderTitles` and `LoudspeakerIllustration`.
+       `KarlHeaderWhenLogged`, `HeaderTitles` and `LoudspeakerIllustration`.
 
 ## [6.4.0] - 2017-02-20
 
