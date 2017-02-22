@@ -63,7 +63,10 @@
     color: $color;
     transition: color .2s, border-color .2s;
 
-    &::placeholder,
+    &::placeholder {
+      color: $color-placeholder;
+    }
+
     &::-moz-placeholder {
       color: $color-placeholder;
     }
