@@ -7,7 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fix: Add `k-TextInputWithUnit--two-digits-length` class to
   `TextInputWithUnit` to limit his size.
 - Fix: Add `k-FormAmountAndCurrency` class to resize `FormAmountAndCurrency`.
-Fix: Increase line-height on tiny `Label`.
+- Fix: Increase line-height on tiny `Label`.
 
 ## [7.0.0] - 2017-02-22
 
