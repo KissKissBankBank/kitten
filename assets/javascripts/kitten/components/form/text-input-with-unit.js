@@ -36,7 +36,7 @@ export class TextInputWithUnit extends React.Component {
 
     return (
       <div className={ TextInputWithUnitClassName }>
-        <TextInput type={type}
+        <TextInput type={ type }
                    className={ textInputClassName }
                    valid={ valid }
                    error={ error }
