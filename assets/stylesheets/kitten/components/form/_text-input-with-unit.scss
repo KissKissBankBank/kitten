@@ -88,6 +88,18 @@
     }
   }
 
+  .k-TextInputWithUnit--two-digits-length {
+    width: inherit;
+
+    .k-TextInputWithUnit__input {
+      width: k-px-to-rem(47px);
+    }
+
+    .k-TextInputWithUnit__unit {
+      width: inherit;
+    }
+  }
+
   // Unit
   .k-TextInputWithUnit__unit {
     display: table-cell;
