@@ -8,8 +8,9 @@ export class TextInput extends React.Component {
             valid,
             error,
             tiny,
-            rows,
             ...others } = this.props
+
+    const rows = (tag == 'textarea' ? this.props.rows : null)
 
     let textInputClassNames = classNames(
       'k-TextInput',
@@ -25,7 +26,7 @@ export class TextInput extends React.Component {
     const Tag = tag
 
     return (
-      <Tag className={ textInputClassNames } { ...others } rows={ rows }/>
+      <Tag className={ textInputClassNames } { ...others } rows={ rows } />
     )
   }
 }
@@ -33,7 +34,6 @@ export class TextInput extends React.Component {
 TextInput.defaultProps = {
   tag: 'input',
   type: 'text',
-  rows: '1',
   placeholder: null,
   valid: false,
   error: false,
