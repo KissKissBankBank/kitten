@@ -25,6 +25,7 @@ export class RadioButton extends React.Component {
             largeContent,
             children,
             content,
+            contentLarge,
             inputClassName,
             ...inputProps } = this.props
 
