@@ -64,6 +64,7 @@
     transition: color .2s, border-color .2s;
 
     &::placeholder {
+      padding: k-px-to-rem(10px) 0;
       color: $color-placeholder;
     }
 
@@ -115,5 +116,9 @@
 
   .k-TextInput--tiny {
     height: $tiny-height;
+  }
+
+  .k-TextInput__area {
+    height: 100%;
   }
 }

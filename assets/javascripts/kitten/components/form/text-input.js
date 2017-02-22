@@ -8,6 +8,7 @@ export class TextInput extends React.Component {
             valid,
             error,
             tiny,
+            rows,
             ...others } = this.props
 
     let textInputClassNames = classNames(
@@ -15,6 +16,7 @@ export class TextInput extends React.Component {
       className,
       {
         'k-TextInput--tiny': tiny,
+        'k-TextInput__area': tag == 'textarea',
         'is-valid': valid,
         'is-error': error,
       },
@@ -23,7 +25,7 @@ export class TextInput extends React.Component {
     const Tag = tag
 
     return (
-      <Tag className={ textInputClassNames } { ...others } />
+      <Tag className={ textInputClassNames } { ...others } rows={ rows }/>
     )
   }
 }
@@ -31,6 +33,7 @@ export class TextInput extends React.Component {
 TextInput.defaultProps = {
   tag: 'input',
   type: 'text',
+  rows: '1',
   placeholder: null,
   valid: false,
   error: false,
