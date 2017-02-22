@@ -61,7 +61,6 @@
 
     border-collapse: separate;
     box-sizing: border-box;
-    width: 100%;
   }
 
   // Input
@@ -88,15 +87,11 @@
     }
   }
 
-  .k-TextInputWithUnit--two-digits-length {
-    width: inherit;
-
-    .k-TextInputWithUnit__input {
-      width: k-px-to-rem(47px);
-    }
+  .k-TextInputWithUnit--fullWidth {
+    width: 100%;
 
     .k-TextInputWithUnit__unit {
-      width: inherit;
+      width: 1%; // To let the input take all the remaining space
     }
   }
 
@@ -112,7 +107,6 @@
     border-left: 0;
     box-sizing: border-box;
     height: 100%;
-    width: 1%; // To let the input take all the remaining space
     padding: k-px-to-rem(11px) k-px-to-rem(14px);
 
     color: $color;

@@ -9,10 +9,11 @@
   <%= react_component('TextInputWithUnit', props: {
     placeholder: '30',
     mainClassName: 'k-TextInputWithUnit--two-digits-length',
-    max: '60',
-    min: '1',
+    max: 60,
+    min: 1,
     type: 'number',
     unit: 'jours',
+    digits: 2,
   }) %>
 <% end %>
 
@@ -20,11 +21,12 @@
   <%= react_component('TextInputWithUnit', props: {
     placeholder: '30',
     mainClassName: 'k-TextInputWithUnit--two-digits-length',
-    max: '60',
-    min: '1',
+    max: 60,
+    min: 1,
     type: 'number',
     unit: 'jours',
     tiny: true,
+    digits: 2,
   }) %>
 <% end %>
 

@@ -12,15 +12,20 @@ export const FormAmountAndCurrency = props => {
           currencyValue,
           ...textInputProps } = props
 
+  const amountWrapperClassName = classNames(
+    'k-FormComposer__element',
+    {
+      'k-FormComposer__element--main': !props.digits
+    }
+  )
+
   return (
     <div className="k-FormComposer">
-      <div className="k-FormComposer__element
-                      k-FormComposer__element--main
-                      k-FormAmountAndCurrency">
+      <div className={ amountWrapperClassName }>
         <TextInput tiny={ tiny }
                    disabled={ disabled }
                    { ...textInputProps }
-                   type='number' />
+                   type="number" />
       </div>
 
       <div className="k-FormComposer__element">
@@ -40,4 +45,5 @@ FormAmountAndCurrency.defaultProps = {
   currencyOptions: [{ value: 'eur', label: 'EUR' }],
   currencyName: null,
   currencyValue: null,
+  digits: null,
 }
