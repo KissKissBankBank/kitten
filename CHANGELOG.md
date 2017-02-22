@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `TextInput` React component with text area.
 
 ## [6.4.0] - 2017-02-20
 
