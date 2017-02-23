@@ -1,8 +1,0 @@
-@mixin k-FormAmountAndCurrency {
-  .k-FormAmountAndCurrency {
-    &.k-FormComposer__element--main,
-    .k-TextInput {
-      width: k-px-to-rem(134px);
-    }
-  }
-}
