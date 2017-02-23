@@ -71,20 +71,12 @@ describe('Text-input with default props', () => {
         <TextInput tag='textarea' rows='7' />
       )
 
-      const textInput = shallow(
-        <TextInput rows='7' />
-      )
-
       it('has a textarea tag', () => {
         expect(textArea).to.have.tagName('textarea')
       })
 
       it('has 7 rows', () => {
         expect(textArea).to.have.attr('rows', '7')
-      })
-
-      it('does not have rows when not textarea', () => {
-        expect(textInput).not.to.have.attr('rows')
       })
     })
   })
