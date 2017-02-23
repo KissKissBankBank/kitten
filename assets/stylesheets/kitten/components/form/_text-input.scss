@@ -49,7 +49,7 @@
   $border-text-input: k-px-to-rem(4px);
 
   // Others
-  $vertical-padding: 15px;
+  $horizontal-padding: 15px;
   $digit-length: 9px;
 
   .k-TextInput {
@@ -63,7 +63,7 @@
 
     width: 100%;
     height: $height;
-    padding: 0 k-px-to-rem($vertical-padding);
+    padding: 0 k-px-to-rem($horizontal-padding);
     color: $color;
     transition: color .2s, border-color .2s;
 
@@ -118,11 +118,11 @@
   }
 
   .k-TextInput--twoDigits {
-    width: k-px-to-rem($vertical-padding * 2 + $digit-length * 2);
+    width: k-px-to-rem($horizontal-padding * 2 + $digit-length * 2);
   }
 
   .k-TextInput--twelveDigits {
-    width: k-px-to-rem($vertical-padding * 2 + $digit-length * 12);
+    width: k-px-to-rem($horizontal-padding * 2 + $digit-length * 12);
   }
 
   .k-TextInput--tiny {
