@@ -17,7 +17,7 @@ export class TextInput extends React.Component {
       className,
       {
         'k-TextInput--tiny': tiny,
-        'k-TextInput__area': tag == 'textarea',
+        'k-TextInput--area': tag == 'textarea',
         'is-valid': valid,
         'is-error': error,
       },
