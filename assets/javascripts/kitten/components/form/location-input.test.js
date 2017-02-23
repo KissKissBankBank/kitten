@@ -26,12 +26,12 @@ describe('<LocationInput />', () => {
   })
 
   describe('location-input with error class', () => {
-    const componentWithErrorClass = shallow(
+    const component = shallow(
       <LocationInput error={ true } />
     )
 
     it('has a error class', () => {
-      expect(componentWithErrorClass).to.have.className('is-error')
+      expect(component).to.have.className('is-error')
     })
   })
 
