@@ -20,10 +20,10 @@ export class Button extends React.Component {
       },
     )
 
-    const Tag = tag
-
     // Adds keyboard accessibility to `<a>`
-    const tabindex = this.props.tag == "a" && !this.props.href ? 0 : null
+    const tabindex = (tag == "a" && !this.props.href) ? 0 : null
+
+    const Tag = tag
 
     return (
       <Tag className={ buttonClassNames }
