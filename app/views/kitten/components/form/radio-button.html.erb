@@ -24,22 +24,7 @@
 <% end %>
 
 <%= example 'Radio buttons - Error' do %>
-  <%= react_component('RadioButton', props: {
-      id: "karl-radio-button-error-1",
-      name: "karl-radio-button-error",
-      defaultChecked: true,
-      text: "Error default checked",
-      error: true,
-    }
-  ) %>
-
-  <%= react_component('RadioButton', props: {
-      id: "karl-radio-button-error-2",
-      name: "karl-radio-button-error",
-      text: "Error default",
-      error: true,
-    }
-  ) %>
+  <%= react_component('KarlRadioButtonError') %>
 <% end %>
 
 <%= example 'Large radio buttons' do %>
