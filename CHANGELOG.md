@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add new props `error` on `RadioButton` and `Checkbox`.
 
 ## [7.0.0] - 2017-02-22
 
