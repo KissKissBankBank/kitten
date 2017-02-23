@@ -50,8 +50,6 @@ export const TextInputAndSelect = props => {
     return [renderTextInputWrapper(), renderSelectWrapper()]
   }
 
-  console.log('props', props)
-
   return (
     <div className="k-FormComposer">
       { renderTextInputAndSelect() }
