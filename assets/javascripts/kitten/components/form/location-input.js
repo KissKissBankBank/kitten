@@ -12,9 +12,8 @@ export class LocationInput extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      address:'',
+      address: '',
     }
-
     this.handleChange = this.handleChange.bind(this)
   }
 
@@ -29,9 +28,7 @@ export class LocationInput extends React.Component {
 
     const locationInputClassNames = classNames(
       'k-LocationInput',
-      {
-        'is-error': error,
-      }
+      { 'is-error': error }
     )
 
     const placesClassNames = {
