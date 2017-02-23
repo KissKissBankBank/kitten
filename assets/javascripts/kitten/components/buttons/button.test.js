@@ -22,6 +22,10 @@ describe('Button with default props', () => {
     it('does not have the iconRight modifier class', () => {
       expect(component).not.to.have.className('k-Button--iconRight')
     })
+
+    it('does not have a tabindex attribute', () => {
+      expect(component).not.to.have.attr('tabindex')
+    })
   })
 
   describe('className prop', () => {
@@ -40,8 +44,29 @@ describe('Button with default props', () => {
 
   describe('iconRight prop', () => {
     it('adds the iconRight modifier class', () => {
-      const componentWithIconRight = shallow(<Button iconOnRight />)
-      expect(componentWithIconRight).to.have.className('k-Button--iconRight')
+      const component = shallow(<Button iconOnRight />)
+      expect(component).to.have.className('k-Button--iconRight')
+    })
+  })
+
+  describe('tag prop', () => {
+    it('changes the tag', () => {
+      const component = shallow(<Button tag="a" />)
+      expect(component).to.have.tagName('a')
+    })
+  })
+
+  describe('with tag="a" and no href', () => {
+    it('adds a tabindex', () => {
+      const component = shallow(<Button tag="a" />)
+      expect(component).to.have.attr('tabindex', '0')
+    })
+  })
+
+  describe('with tag="a" href="foo"', () => {
+    it('does not add a tabindex', () => {
+      const component = shallow(<Button tag="a" href="foo" />)
+      expect(component).not.to.have.attr('tabindex')
     })
   })
 })
