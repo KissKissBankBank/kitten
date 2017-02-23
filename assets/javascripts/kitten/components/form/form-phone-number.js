@@ -1,22 +1,27 @@
 import React from 'react'
-import SelectWithState from 'kitten/components/form/select-with-state'
+import { TextInputAndSelect } from 'kitten/components/form/text-input-and-select'
 
-function FormPhoneNumber(props) {
+export const FormPhoneNumber = props => {
+  const { areaZoneOptions,
+          areaZoneName,
+          areaZoneValue,
+          ...textInputAndSelectProps } = props
+
   return (
-    <div className="k-FormComposer">
-      <div className="k-FormComposer__element">
-        <SelectWithState name={ props.name }
-                         options={ props.areaZoneOptions }
-                         value={ props.value } />
-      </div>
-
-      <div className="k-FormComposer__element k-FormComposer__element--main">
-        <input className="k-TextInput k-TextInput--tiny"
-               type="text"
-               placeholder={ props.placeholder } />
-      </div>
-    </div>
+    <TextInputAndSelect
+      selectOptions={ areaZoneOptions}
+      selectName={ areaZoneName}
+      selectValue={ areaZoneValue}
+      appendSelect={ true }
+      { ...textInputAndSelectProps } />
   )
 }
 
-export default FormPhoneNumber
+FormPhoneNumber.defaultProps = {
+  tiny: false,
+  disabled: false,
+  areaZoneOptions: [{ value: '+33(fr)', label: '+33(FR)' }],
+  areaZoneName: null,
+  areaZoneValue: null,
+  digits: null, // 2 or 12 for now
+}
