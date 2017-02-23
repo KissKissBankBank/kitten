@@ -23,6 +23,25 @@
   ) %>
 <% end %>
 
+<%= example 'Radio buttons - Error' do %>
+  <%= react_component('RadioButton', props: {
+      id: "karl-radio-button-error-1",
+      name: "karl-radio-button-error",
+      defaultChecked: true,
+      text: "Error default checked",
+      error: true,
+    }
+  ) %>
+
+  <%= react_component('RadioButton', props: {
+      id: "karl-radio-button-error-2",
+      name: "karl-radio-button-error",
+      text: "Error default",
+      error: true,
+    }
+  ) %>
+<% end %>
+
 <%= example 'Large radio buttons' do %>
   <%= react_component('RadioButton', props: {
       id: "karl-radio-button-large-1",
@@ -69,6 +88,17 @@
       text: "Large",
       large: true,
       contentLarge: true,
+      content: "Quam multa enim, quae nostra causa numquam faceremus, facimus causa
+        amicorum! precari ab indigno, supplicare, tum acerbius in aliquem
+        invehi insectarique vehementius.",
+    }
+  ) %>
+
+  <%= react_component('RadioButton', props: {
+      id: "karl-radio-button-with-content-large-error",
+      name: "karl-radio-button-with-content",
+      text: "Error",
+      error: true,
       content: "Quam multa enim, quae nostra causa numquam faceremus, facimus causa
         amicorum! precari ab indigno, supplicare, tum acerbius in aliquem
         invehi insectarique vehementius.",

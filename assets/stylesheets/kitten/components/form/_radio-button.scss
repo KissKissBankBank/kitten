@@ -36,6 +36,7 @@
   $background-color-checked: map-get($k-colors, 'primary-1');
   $background-color-active: map-get($k-colors, 'primary-3');
   $background-color-disabled: map-get($k-colors, 'line-2');
+  $background-color-error: map-get($k-colors, 'error');
   $border-color: map-get($k-colors, 'font-2');
   $border-color-hover: map-get($k-colors, 'primary-1');
 
@@ -102,6 +103,29 @@
         background-color: $background-color-disabled;
         border-color: $background-color-disabled;
       }
+    }
+
+    .k-RadioButton__input.is-error + & {
+      color: $background-color-error;
+      border-color: $background-color-error;
+
+      &:before {
+        border-color: $background-color-error;
+      }
+
+      &:hover { color: $background-color-error; }
+      &:active { color: $background-color-error;}
+    }
+
+    .k-RadioButton__input.is-error:checked:focus + &:before {
+      box-shadow: 0 0 k-px-to-rem(3px) $background-color-error;
+    }
+
+    .k-RadioButton__input.is-error:checked + &:before {
+      position: relative;
+
+      border: 5px solid $background-color-error;
+      background-color: white;
     }
   }
 
