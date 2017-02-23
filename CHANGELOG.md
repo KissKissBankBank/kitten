@@ -4,8 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Add classes to resize `TextInputWithUnit`.
-- Fix: Add class to resize `FormAmountAndCurrency`.
+- Feature: Add digits prop to resize `TextInput`, `TextInputWithUnit` and 
+  `FormAmountAndCurrency`.
 - Fix: Increase line-height on tiny `Label`.
 
 ## [7.0.0] - 2017-02-22
