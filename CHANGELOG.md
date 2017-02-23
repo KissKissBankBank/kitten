@@ -4,9 +4,15 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add digits prop to resize `TextInput`, `TextInputWithUnit` and 
+
+## [7.1.0] - 2017-02-23
+
+Feature:
+- Add digits prop to resize `TextInput`, `TextInputWithUnit` and
   `FormAmountAndCurrency`.
-- Fix: Increase line-height on tiny `Label`.
+
+Fix:
+- Increase line-height on tiny `Label`.
 
 ## [7.0.0] - 2017-02-22
 
