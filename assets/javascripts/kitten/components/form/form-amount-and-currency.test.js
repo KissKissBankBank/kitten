@@ -43,7 +43,7 @@ describe('<FormAmountAndCurrency />', () => {
   })
 
   describe('disabled prop', () => {
-    const component = shallow(<FormAmountAndCurrency disabled={ true } />)
+    const component = mount(<FormAmountAndCurrency disabled={ true } />)
     const textInput = component.find('TextInput')
     const select = component.find('SelectWithState')
 
