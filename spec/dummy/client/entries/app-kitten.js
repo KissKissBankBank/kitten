@@ -109,6 +109,7 @@ import { KarlSideGridWithRightAside,
        } from 'kitten/karl/grid/side-grid'
 import { KarlFormActions } from 'kitten/karl/form/form-actions'
 import { KarlFormRow } from 'kitten/karl/form/form-row'
+import { KarlRadioButtonError } from 'kitten/karl/form/radio-button'
 import { KarlGridTwelveColumns,
          KarlGridInGrid,
          KarlGridSmall,
@@ -241,6 +242,7 @@ ReactOnRails.register({
   KarlSideGridWithLeftAsideAndSmallSize,
   KarlFormActions,
   KarlFormRow,
+  KarlRadioButtonError,
   KarlGridTwelveColumns,
   KarlGridInGrid,
   KarlGridSmall,
