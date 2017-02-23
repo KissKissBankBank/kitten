@@ -4,7 +4,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add digits prop to resize `TextInput`, `TextInputWithUnit` and 
+- Breaking change: The `FormPhoneNumber` has new props.
+  To be retro-compatible you should, in your app's components:
+  - Rename `value` to `areaZoneValue`.
+  - Rename `amount` to `areaZoneAmount`.
+  - Add the `tiny` boolean prop.
+  - Replace `import FormPhoneNumber` by
+    `import { FormPhoneNumber }`.
+- Feature: Add digits prop to resize `TextInput`, `TextInputWithUnit` and
   `FormAmountAndCurrency`.
 - Fix: Increase line-height on tiny `Label`.
 
