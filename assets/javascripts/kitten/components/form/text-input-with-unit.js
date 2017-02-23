@@ -11,7 +11,6 @@ export class TextInputWithUnit extends React.Component {
             unit,
             tiny,
             disabled,
-            mainClassName,
             ...others } = this.props
 
     const textInputClassName = classNames(
