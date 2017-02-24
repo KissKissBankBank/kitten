@@ -64,7 +64,7 @@ describe('<TextInputWithUnit />', () => {
 
   describe('error prop', () => {
     const component = mount(<TextInputWithUnit error={ true } />)
-    const textInput = component.find('TextInput')
+    const textInput = component.find('input')
     const span = component.find('span')
     const textInputExpectation = textInput.hasClass("is-error")
     const spanExpectation = span.hasClass("is-error")
