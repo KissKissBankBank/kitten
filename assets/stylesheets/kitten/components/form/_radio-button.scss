@@ -60,11 +60,10 @@
     cursor: pointer;
     transition: color ($transition-duration * 2);
 
-
     &:before {
       box-sizing: border-box;
       display: inline-block;
-      width: $radio-button-size;
+      flex: 0 0 $radio-button-size;
       height: $radio-button-size;
       margin-right: $space-button-label;
 
