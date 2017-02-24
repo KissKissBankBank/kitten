@@ -10,9 +10,9 @@ export const FormAmountAndCurrency = props => {
 
   return (
     <TextInputAndSelect
-      selectOptions={ currencyOptions}
-      selectName={ currencyName}
-      selectValue={ currencyValue}
+      selectOptions={ currencyOptions }
+      selectName={ currencyName }
+      selectValue={ currencyValue }
       type="number"
       { ...textInputAndSelectProps } />
   )
