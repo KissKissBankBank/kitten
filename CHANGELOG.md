@@ -6,8 +6,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Breaking change: The `FormPhoneNumber` has new props.
   To be retro-compatible you should, in your app's components:
-  - Rename `value` to `areaZoneValue`.
-  - Rename `amount` to `areaZoneAmount`.
+  - Rename `name` to `areaName`.
+  - Rename `options` to `areaOptions`.
+  - Rename `value` to `areaValue`.
   - Add the `tiny` boolean prop.
   - Replace `import FormPhoneNumber` by
     `import { FormPhoneNumber }`.
