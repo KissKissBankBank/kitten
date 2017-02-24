@@ -12,6 +12,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   - Add the `tiny` boolean prop.
   - Replace `import FormPhoneNumber` by
     `import { FormPhoneNumber }`.
+- Fix: `TextInput` React component with text area.
+- Fix: Add keyboard accessibility to `Button`s with `a` tags and no `href`.
 
 ## [7.1.0] - 2017-02-23
 
