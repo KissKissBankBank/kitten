@@ -23,13 +23,7 @@ export class LocationInput extends React.Component {
 
   render() {
     const { label,
-            error,
             ...others } = this.props
-
-    const locationInputClassNames = classNames(
-      'k-LocationInput',
-      { 'is-error': error }
-    )
 
     const placesClassNames = {
       root: 'k-LocationInput__group',
@@ -51,7 +45,7 @@ export class LocationInput extends React.Component {
     )
 
     return (
-      <div className={ locationInputClassNames }>
+      <div className="k-LocationInput">
         <div className="k-LocationInput__label">
           { label }
         </div>
@@ -71,5 +65,4 @@ export class LocationInput extends React.Component {
 
 LocationInput.defaultProps = {
   label: 'Localisation',
-  error: false,
 }

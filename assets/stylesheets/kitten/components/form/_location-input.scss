@@ -49,10 +49,6 @@
   // Placeholder
   $color-placeholder: map-get($k-colors, 'font-2');
 
-  // Is-error
-  $color-is-error: map-get($k-colors, 'error');
-  $border-color-is-error: map-get($k-colors, 'error');
-
   // Border radius Text - input
   $border-text-input: k-px-to-rem(4px);
 
@@ -115,16 +111,6 @@
         &::-moz-placeholder {
           opacity: 1;
         }
-      }
-    }
-
-    &.is-error {
-      border-color: $border-color-is-error;
-      color: $color-is-error;
-
-      &:focus {
-        border-color: $border-color-focus;
-        color: $color;
       }
     }
 

@@ -24,18 +24,6 @@ describe('<LocationInput />', () => {
     })
   })
 
-  describe('location-input with error class', () => {
-    const component = shallow(
-      <LocationInput error />
-    )
-
-    it('has a .is-error class', () => {
-      const error = component.find('.is-error')
-      expect(error).to.have.length(0)
-      expect(error).to.equal(true)
-    })
-  })
-
   describe('label prop', () => {
     const component = shallow(
       <LocationInput label="Lorem ipsum" />
