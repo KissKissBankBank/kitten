@@ -11,7 +11,8 @@ export const KarlCheckboxError = () => {
         </Checkbox>
         <Checkbox error
                   id="input-error-checked"
-                  children="Error default checked">
+                  children="Error default checked"
+                  defaultChecked>
         </Checkbox>
       </p>
       <p className="k-TextInputWithInfo__error">
