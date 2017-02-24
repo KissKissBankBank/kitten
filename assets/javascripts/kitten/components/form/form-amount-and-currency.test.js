@@ -43,7 +43,7 @@ describe('<FormAmountAndCurrency />', () => {
   })
 
   describe('disabled prop', () => {
-    const component = mount(<FormAmountAndCurrency disabled={ true } />)
+    const component = mount(<FormAmountAndCurrency disabled />)
     const textInput = component.find('TextInput')
     const select = component.find('SelectWithState')
 
