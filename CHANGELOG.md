@@ -6,7 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Fix: `TextInput` React component with text area.
 - Fix: Add keyboard accessibility to `Button`s with `a` tags and no `href`.
-- Fix: width error on `checkbox` & `radiobutton` component.
+- Fix: width error on `Checkbox` & `RadioButton` component.
 
 ## [7.1.0] - 2017-02-23
 
