@@ -61,7 +61,6 @@
 
     border-collapse: separate;
     box-sizing: border-box;
-    width: 100%;
   }
 
   // Input
@@ -88,6 +87,14 @@
     }
   }
 
+  .k-TextInputWithUnit--fullWidth {
+    width: 100%;
+
+    .k-TextInputWithUnit__unit {
+      width: 1%; // To let the input take all the remaining space
+    }
+  }
+
   // Unit
   .k-TextInputWithUnit__unit {
     display: table-cell;
@@ -100,7 +107,6 @@
     border-left: 0;
     box-sizing: border-box;
     height: 100%;
-    width: 1%; // To let the input take all the remaining space
     padding: k-px-to-rem(11px) k-px-to-rem(14px);
 
     color: $color;
@@ -110,7 +116,7 @@
     transition: all $transition-speed;
 
     @include k-typographyFont($unit-font);
-    @include k-typographyFontSize(1);
+    @include k-typographyFontSize(-1);
 
     &.is-valid {
       border-color: $unit-color-is-valid;

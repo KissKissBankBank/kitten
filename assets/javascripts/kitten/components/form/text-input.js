@@ -8,9 +8,10 @@ export class TextInput extends React.Component {
             valid,
             error,
             tiny,
+            digits,
             ...others } = this.props
 
-    let textInputClassNames = classNames(
+    const textInputClassNames = classNames(
       'k-TextInput',
       className,
       {
@@ -18,6 +19,8 @@ export class TextInput extends React.Component {
         'k-TextInput--area': tag == 'textarea',
         'is-valid': valid,
         'is-error': error,
+        'k-TextInput--twoDigits': digits == 2,
+        'k-TextInput--twelveDigits': digits == 12,
       },
     )
 
@@ -36,4 +39,5 @@ TextInput.defaultProps = {
   valid: false,
   error: false,
   tiny: false,
+  digits: null,
 }

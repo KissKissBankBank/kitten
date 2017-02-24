@@ -5,6 +5,37 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: `TextInput` React component with text area.
+- Fix: Add keyboard accessibility to `Button`s with `a` tags and no `href`.
+
+## [7.1.0] - 2017-02-23
+
+Feature:
+- Add digits prop to resize `TextInput`, `TextInputWithUnit` and
+  `FormAmountAndCurrency`.
+
+Fix:
+- Increase line-height on tiny `Label`.
+
+## [7.0.0] - 2017-02-22
+
+Breaking changes:
+- The `FormAmountAndCurrency` has new props.
+  To be retro-compatible you should, in your app's components:
+  - Rename `value` to `currencyValue`.
+  - Rename `amount` to `currencyAmount`.
+  - Add the `tiny` boolean prop.
+  - Replace `import FormAmountAndCurrency` by
+    `import { FormAmountAndCurrency }`.
+- The `SelectWithState` has a new default size and export.
+  To be retro-compatible you should, in your app's components:
+  - Add the `tiny` boolean prop if the component does not have `big` set
+    to `true`.
+  - Remove the `big` boolean prop.
+
+Fixes:
+- Change font-size for `TextInputWithUnit` component.
+- Remove unknown props from `RadioButton`, `KarlHeader`,
+  `KarlHeaderWhenLogged`, `HeaderTitles` and `LoudspeakerIllustration`.
 
 ## [6.4.0] - 2017-02-20
 
