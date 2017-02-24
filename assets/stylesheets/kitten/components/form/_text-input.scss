@@ -48,6 +48,10 @@
   // Border radius Text - input
   $border-text-input: k-px-to-rem(4px);
 
+  // Others
+  $horizontal-padding: 15px;
+  $digit-length: 9px;
+
   .k-TextInput {
     @include k-typographyFont($font);
     @include k-typographyFontSize($font-size, $line-height);
@@ -59,11 +63,12 @@
 
     width: 100%;
     height: $height;
-    padding: 0 k-px-to-rem(15px);
+    padding: 0 k-px-to-rem($horizontal-padding);
     color: $color;
     transition: color .2s, border-color .2s;
 
     &::placeholder {
+      padding: k-px-to-rem(10px) 0;
       color: $color-placeholder;
     }
 
@@ -113,7 +118,19 @@
     }
   }
 
+  .k-TextInput--twoDigits {
+    width: k-px-to-rem($horizontal-padding * 2 + $digit-length * 2);
+  }
+
+  .k-TextInput--twelveDigits {
+    width: k-px-to-rem($horizontal-padding * 2 + $digit-length * 12);
+  }
+
   .k-TextInput--tiny {
     height: $tiny-height;
+  }
+
+  .k-TextInput--area {
+    height: initial;
   }
 }

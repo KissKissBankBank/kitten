@@ -7,8 +7,24 @@
 
 <%= example "Text input - With custom size unit" do %>
   <%= react_component('TextInputWithUnit', props: {
-    placeholder: 'Lorem ipsum dolor sit amet',
+    placeholder: '30',
+    max: 60,
+    min: 1,
+    type: 'number',
     unit: 'jours',
+    digits: 2,
+  }) %>
+<% end %>
+
+<%= example "Text input - With custom size unit - Tiny" do %>
+  <%= react_component('TextInputWithUnit', props: {
+    placeholder: '30',
+    max: 60,
+    min: 1,
+    type: 'number',
+    unit: 'jours',
+    tiny: true,
+    digits: 2,
   }) %>
 <% end %>
 

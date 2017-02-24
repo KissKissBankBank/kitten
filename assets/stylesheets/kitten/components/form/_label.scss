@@ -24,7 +24,7 @@
 @mixin k-Label {
   $font: 'source-sans-semi-bold';
   $font-step-tiny: -1;
-  $line-height-tiny: 1;
+  $line-height-tiny: 1.3;
 
   .k-Label {
     display: block;
