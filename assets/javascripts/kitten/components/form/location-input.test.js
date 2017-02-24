@@ -2,7 +2,6 @@ import React from 'react'
 import { expect } from 'chai'
 import { shallow, mount } from 'enzyme'
 import { LocationInput } from 'kitten/components/form/location-input'
-import { LocationIcon } from 'kitten/components/icons/location-icon'
 
 describe('<LocationInput />', () => {
   describe('by default', () => {
@@ -27,11 +26,13 @@ describe('<LocationInput />', () => {
 
   describe('location-input with error class', () => {
     const component = shallow(
-      <LocationInput error={ true } />
+      <LocationInput error />
     )
 
-    it('has a error class', () => {
-      expect(component).to.have.className('is-error')
+    it('has a .is-error class', () => {
+      const error = component.find('.is-error')
+      expect(error).to.have.length(0)
+      expect(error).to.equal(true)
     })
   })
 
