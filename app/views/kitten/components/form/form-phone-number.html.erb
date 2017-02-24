@@ -1,13 +1,13 @@
 <%= example "Form phone number" do %>
   <%= react_component('FormPhoneNumber', props: {
-      areaZoneOptions: [
+      areaOptions: [
         { value: '+33(fr)', label: '+33(FR)' },
         { value: '+44(uk)', label: '+44(UK)' },
         { value: '+34(es)', label: '+34(ES)' },
         { value: '+39(it)', label: '+39(IT)' }
       ],
-      areaZoneName: 'areaZone',
-      areaZoneValue: '+33(fr)',
+      areaName: 'area',
+      areaValue: '+33(fr)',
       placeholder: 'Lorem ipsum dolor sit amet',
     }
   ) %>
@@ -15,14 +15,14 @@
 
 <%= example "Form phone number - tiny" do %>
   <%= react_component('FormPhoneNumber', props: {
-      areaZoneOptions: [
+      areaOptions: [
         { value: '+33(fr)', label: '+33(FR)' },
         { value: '+44(uk)', label: '+44(UK)' },
         { value: '+34(es)', label: '+34(ES)' },
         { value: '+39(it)', label: '+39(IT)' }
       ],
-      areaZoneName: 'areaZone',
-      areaZoneValue: '+44(uk)',
+      areaName: 'area',
+      areaValue: '+44(uk)',
       placeholder: 'Lorem ipsum dolor sit amet',
       tiny: true,
     }

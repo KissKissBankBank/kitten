@@ -2,16 +2,16 @@ import React from 'react'
 import { TextInputAndSelect } from 'kitten/components/form/text-input-and-select'
 
 export const FormPhoneNumber = props => {
-  const { areaZoneOptions,
-          areaZoneName,
-          areaZoneValue,
+  const { areaOptions,
+          areaName,
+          areaValue,
           ...textInputAndSelectProps } = props
 
   return (
     <TextInputAndSelect
-      selectOptions={ areaZoneOptions}
-      selectName={ areaZoneName}
-      selectValue={ areaZoneValue}
+      selectOptions={ areaOptions }
+      selectName={ areaName }
+      selectValue={ areaValue }
       appendSelect={ true }
       { ...textInputAndSelectProps } />
   )
@@ -20,8 +20,8 @@ export const FormPhoneNumber = props => {
 FormPhoneNumber.defaultProps = {
   tiny: false,
   disabled: false,
-  areaZoneOptions: [{ value: '+33(fr)', label: '+33(FR)' }],
-  areaZoneName: null,
-  areaZoneValue: null,
+  areaOptions: [{ value: '+33(fr)', label: '+33(FR)' }],
+  areaName: null,
+  areaValue: null,
   digits: null, // 2 or 12 for now
 }
