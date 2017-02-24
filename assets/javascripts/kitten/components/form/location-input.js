@@ -3,6 +3,7 @@ import classNames from 'classnames'
 // Via "https://github.com/kenny-hibino/react-places-autocomplete"
 import PlacesAutocomplete from 'react-places-autocomplete'
 import { LocationIcon } from 'kitten/components/icons/location-icon'
+import { Label } from 'kitten/components/form/label'
 
 // Make sure you include a script to the Google Maps places API.
 // For example:
@@ -22,13 +23,12 @@ export class LocationInput extends React.Component {
   }
 
   render() {
-    const { label,
-            ...others } = this.props
+    const { ...others } = this.props
 
     const placesClassNames = {
       root: 'k-LocationInput__group',
       input: 'k-LocationInput__input',
-      autocompleteContainer: 'k-LocationInput__autocomplete'
+      autocompleteContainer: 'k-LocationInput__autocomplete',
     }
 
     const autocompleteItem = ({ formattedSuggestion }) => (
@@ -46,9 +46,6 @@ export class LocationInput extends React.Component {
 
     return (
       <div className="k-LocationInput">
-        <div className="k-LocationInput__label">
-          { label }
-        </div>
         <div className="k-LocationInput__icon">
           <LocationIcon />
         </div>
@@ -61,8 +58,4 @@ export class LocationInput extends React.Component {
       </div>
     )
   }
-}
-
-LocationInput.defaultProps = {
-  label: 'Localisation',
 }

@@ -7,7 +7,7 @@ export const LocationIcon = props => {
          height="16"
          viewBox="0 0 10 16"
          fill="#333"
-         { ...props } >
+         { ...props }>
       <path d="M5 16c-.398 0-5-6-5-11 0-3.5 2-5 5-5s5 1.5 5 5c0 5-4.602 11-5 11zm0-8.333a2.5 2.5 0 0 0 0-5 2.5 2.5 0 0 0 0 5z" />
     </svg>
   )

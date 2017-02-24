@@ -9,7 +9,6 @@
 /// @example html
 ///
 ///   <div class="k-LocationInput">
-///     <div class="k-LocationInput__label">…</div>
 ///     <div class="k-LocationInput__icon">
 ///       <svg />
 ///     </div>
@@ -21,7 +20,6 @@
 
 @mixin k-LocationInput {
   $font: 'source-sans';
-  $label-font: 'source-sans-semi-bold';
   $font-size: -1;
   $line-height: 1.3;
   $height: k-px-to-rem(50px);
@@ -61,19 +59,12 @@
       width: 100%;
     }
 
-    .k-LocationInput__label {
-      @include k-typographyFont($label-font);
-
-      color: $color;
-      margin-bottom: k-px-to-rem(20px);
-    }
-
     .k-LocationInput__input {
       position: relative;
       display: block;
       box-sizing: border-box;
       outline: none;
-      padding: 0 k-px-to-rem(15px) 0 k-px-to-rem(37px);
+      padding: 0 k-px-to-rem(15px) 0 k-px-to-rem(35px);
 
       width: 100%;
       height: $height;
@@ -116,7 +107,6 @@
 
     .k-LocationInput__autocomplete {
       border-color: $border-color-autocomplete !important;
-      border-top: 1px solid !important;
       border-radius: 2px;
     }
 
@@ -124,12 +114,10 @@
       padding: k-px-to-rem(4px);
 
       color: $color-placeholder;
-      border-bottom: 1px solid $border-color-autocomplete;
-
 
       .k-LocationInput__suggestionItem__mainText {
         color: $color-main-text;
-        margin: 0 k-px-to-rem(5px);
+        margin-left: k-px-to-rem(10px);
       }
 
       .k-LocationInput__suggestionItem__secondaryText {
