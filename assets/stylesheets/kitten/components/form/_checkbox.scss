@@ -36,10 +36,6 @@
     @include k-typographyFont($font);
     @include k-typographyFontSize($font-step, $line-height);
 
-    display: flex;
-    align-items: center;
-    align-self: flex-start;
-
     margin: k-px-to-rem(10px) 0;
   }
 
