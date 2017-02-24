@@ -28,7 +28,8 @@ describe('RadioButton with default props', () => {
       <RadioButton id="karl-radio-button-1"
                    large="false"
                    largeContent="false"
-                   inputClassName="custom-class" />
+                   inputClassName="custom-class"
+                   error />
     )
 
     it('renders a <div class="k-RadioButton" />', () => {
@@ -38,11 +39,13 @@ describe('RadioButton with default props', () => {
 
     it('renders input with passed props', () => {
       const input = component.find('input')
+      const errorClass = input.hasClass("is-error")
 
       expect(input).to.have.attr('id', 'karl-radio-button-1')
       expect(input).to.have.attr('type', 'radio')
       expect(input).to.have.className('k-RadioButton__input')
       expect(input).to.have.className('custom-class')
+      expect(errorClass).to.equal(true)
     })
 
     it('renders label', () => {

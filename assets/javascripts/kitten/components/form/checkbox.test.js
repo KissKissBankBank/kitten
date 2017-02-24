@@ -23,7 +23,8 @@ describe('Checkbox with default props', () => {
                 htmlFor="input-1"
                 children="Filter 1"
                 className="custom-class"
-                inputClassName="custom-input-class" />
+                inputClassName="custom-input-class"
+                error />
     )
 
     it('renders a <div class="k-Checkbox" />', () => {
@@ -33,9 +34,11 @@ describe('Checkbox with default props', () => {
 
     it('renders input with passed props', () => {
       const input = component.find('input')
+      const errorClass = input.hasClass("is-error")
 
       expect(input).to.have.attr('id', 'input-1')
       expect(input).to.have.className('custom-input-class')
+      expect(errorClass).to.equal(true)
     })
   })
 
