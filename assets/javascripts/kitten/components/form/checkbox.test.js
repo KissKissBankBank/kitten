@@ -34,7 +34,7 @@ describe('Checkbox with default props', () => {
 
     it('renders input with passed props', () => {
       const input = component.find('input')
-      const errorClass = input.hasClass("is-error")
+      const errorClass = input.hasClass('is-error')
 
       expect(input).to.have.attr('id', 'input-1')
       expect(input).to.have.className('custom-input-class')
