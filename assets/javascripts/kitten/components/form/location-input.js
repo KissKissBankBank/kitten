@@ -1,12 +1,12 @@
 import React from 'react'
 import classNames from 'classnames'
+// Via "https://github.com/kenny-hibino/react-places-autocomplete"
 import PlacesAutocomplete from 'react-places-autocomplete'
 import { LocationIcon } from 'kitten/components/icons/location-icon'
 
 // Make sure you include a script to the Google Maps places API.
 // For example:
 //   <script src="https://maps.googleapis.com/maps/api/js?key=…&libraries=places"></script>
-// We use this librairy "https://github.com/kenny-hibino/react-places-autocomplete"
 
 export class LocationInput extends React.Component {
   constructor(props) {

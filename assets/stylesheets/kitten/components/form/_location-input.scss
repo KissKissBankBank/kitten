@@ -54,7 +54,7 @@
   $border-color-is-error: map-get($k-colors, 'error');
 
   // Border radius Text - input
-  $border-color-text-input: k-px-to-rem(4px);
+  $border-text-input: k-px-to-rem(4px);
 
   .k-LocationInput {
     @include k-typographyFont($font);
@@ -83,7 +83,7 @@
       height: $height;
       background: $background-color;
       border: 1px solid $border-color;
-      border-radius: $border-color-text-input;
+      border-radius: $border-text-input;
       color: $color;
 
       transition: color .2s, border-color .2s;
@@ -131,7 +131,7 @@
     .k-LocationInput__autocomplete {
       border-color: $border-color-autocomplete !important;
       border-top: 1px solid !important;
-      border-radius: 0 0 2px 2px;
+      border-radius: 2px;
     }
 
     .k-LocationInput__suggestionItem {
