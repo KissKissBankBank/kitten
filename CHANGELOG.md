@@ -6,6 +6,16 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Add new `LocationIcon` React component.
 - Feature: Add new `LocationInput` React component.
+- Fix: Add keyboard accessibility to `Button`s with `a` tags and no `href`.
+
+## [7.1.0] - 2017-02-23
+
+Feature:
+- Add digits prop to resize `TextInput`, `TextInputWithUnit` and
+  `FormAmountAndCurrency`.
+
+Fix:
+- Increase line-height on tiny `Label`.
 
 ## [7.0.0] - 2017-02-22
 
