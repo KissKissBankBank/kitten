@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `TextInput` React component with text area.
 - Fix: Add keyboard accessibility to `Button`s with `a` tags and no `href`.
 
 ## [7.1.0] - 2017-02-23

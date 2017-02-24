@@ -65,5 +65,19 @@ describe('Text-input with default props', () => {
         expect(componentWithTinyClass).to.have.className('k-TextInput--tiny')
       })
     })
+
+    describe('text-input with textarea tag', () => {
+      const textArea = shallow(
+        <TextInput tag='textarea' rows='7' />
+      )
+
+      it('has a textarea tag', () => {
+        expect(textArea).to.have.tagName('textarea')
+      })
+
+      it('has 7 rows', () => {
+        expect(textArea).to.have.attr('rows', '7')
+      })
+    })
   })
 })
