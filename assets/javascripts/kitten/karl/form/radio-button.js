@@ -7,12 +7,12 @@ export const KarlRadioButtonError = () => {
       <p>
         <RadioButton error
                      name="karlradiobuttonerror"
-                     text="Error default checked"
-                     defaultChecked>
+                     text="Error default">
         </RadioButton>
         <RadioButton error
                      name="karlradiobuttonerror"
-                     text="Error default">
+                     text="Error default checked"
+                     defaultChecked>
         </RadioButton>
       </p>
       <p className="k-TextInputWithInfo__error">
