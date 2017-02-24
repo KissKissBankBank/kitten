@@ -22,7 +22,7 @@ export const TextInputAndSelect = props => {
 
   const renderTextInputWrapper = () => {
     return (
-      <div className={ inputWrapperClassName }>
+      <div className={ inputWrapperClassName } key="1">
         <TextInput tiny={ tiny }
                    disabled={ disabled }
                    { ...textInputProps } />
@@ -32,7 +32,7 @@ export const TextInputAndSelect = props => {
 
   const renderSelectWrapper = () => {
     return (
-      <div className="k-FormComposer__element">
+      <div className="k-FormComposer__element" key="2">
         <SelectWithState name={ selectName }
                          options={ selectOptions }
                          value={ selectValue }
