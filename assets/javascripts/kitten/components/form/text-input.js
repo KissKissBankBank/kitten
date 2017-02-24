@@ -16,6 +16,7 @@ export class TextInput extends React.Component {
       className,
       {
         'k-TextInput--tiny': tiny,
+        'k-TextInput--area': tag == 'textarea',
         'is-valid': valid,
         'is-error': error,
         'k-TextInput--twoDigits': digits == 2,
