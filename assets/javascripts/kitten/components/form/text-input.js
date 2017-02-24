@@ -10,8 +10,6 @@ export class TextInput extends React.Component {
             tiny,
             ...others } = this.props
 
-    const rows = (tag == 'textarea' ? this.props.rows : null)
-
     let textInputClassNames = classNames(
       'k-TextInput',
       className,
@@ -26,7 +24,7 @@ export class TextInput extends React.Component {
     const Tag = tag
 
     return (
-      <Tag className={ textInputClassNames } { ...others } rows={ rows } />
+      <Tag className={ textInputClassNames } { ...others } />
     )
   }
 }
