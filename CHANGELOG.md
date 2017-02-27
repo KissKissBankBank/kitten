@@ -15,8 +15,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fix: `TextInput` React component with text area.
 - Fix: Add keyboard accessibility to `Button`s with `a` tags and no `href`.
 - Fix: width error on `Checkbox` & `RadioButton` component.
-- Fix: Use `defaultValue` prop instead of `value` in `TextInputWithLimit`
-  component.
+- Fix: Use `handleChange` handler instead of `handleInput` in
+  `TextInputWithLimit` to prevent React warning.
 
 ## [7.1.0] - 2017-02-23
 
