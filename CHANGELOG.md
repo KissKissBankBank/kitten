@@ -4,6 +4,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking change: The `FormPhoneNumber` has new props.
+  To be retro-compatible you should, in your app's components:
+  - Rename `name` to `areaName`.
+  - Rename `options` to `areaOptions`.
+  - Rename `value` to `areaValue`.
+  - Add the `tiny` boolean prop.
+  - Replace `import FormPhoneNumber` by
+    `import { FormPhoneNumber }`.
 - Fix: `TextInputWithUnit` does not pass over `digits` to its `TextInput`.
 - Fix: `TextInput` React component with text area.
 - Fix: Add keyboard accessibility to `Button`s with `a` tags and no `href`.
