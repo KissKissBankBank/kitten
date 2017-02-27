@@ -63,12 +63,11 @@
 
     width: 100%;
     height: $height;
-    padding: 0 k-px-to-rem($horizontal-padding);
+    padding: k-px-to-rem(10px) k-px-to-rem($horizontal-padding);
     color: $color;
     transition: color .2s, border-color .2s;
 
     &::placeholder {
-      padding: k-px-to-rem(10px) 0;
       color: $color-placeholder;
     }
 
