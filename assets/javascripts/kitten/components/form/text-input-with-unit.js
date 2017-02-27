@@ -11,6 +11,7 @@ export class TextInputWithUnit extends React.Component {
             unit,
             tiny,
             disabled,
+            digits,
             ...others } = this.props
 
     const textInputClassName = classNames(
@@ -31,7 +32,7 @@ export class TextInputWithUnit extends React.Component {
     const textInputWithUnitClassName = classNames(
       'k-TextInputWithUnit',
       {
-        'k-TextInputWithUnit--fullWidth': !this.props.digits,
+        'k-TextInputWithUnit--fullWidth': !digits,
       },
     )
 
