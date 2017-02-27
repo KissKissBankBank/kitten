@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `TextInputWithUnit` does not pass over `digits` to its `TextInput`.
 - Fix: `TextInput` React component with text area.
 - Fix: Add keyboard accessibility to `Button`s with `a` tags and no `href`.
 - Fix: width error on `Checkbox` & `RadioButton` component.
