@@ -52,7 +52,7 @@ describe('<TextInputWithLimit />', () => {
 
       const input = component.find('input')
       input.node.value = 'Test'
-      input.simulate('input')
+      input.simulate('change')
 
       const counter = component.find('.k-TextInputLimit__counter')
       expect(counter).to.have.text('11')
