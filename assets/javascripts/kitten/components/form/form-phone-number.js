@@ -13,6 +13,7 @@ export const FormPhoneNumber = props => {
       selectName={ areaName }
       selectValue={ areaValue }
       appendSelect={ true }
+      type='tel'
       { ...textInputAndSelectProps } />
   )
 }
