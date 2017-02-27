@@ -83,7 +83,9 @@
       border-color: $border-color-hover;
     }
 
-    &:active { color: $background-color-active;}
+    &:active {
+      color: $background-color-active;
+    }
 
     .k-RadioButton__input:checked:focus + &:before {
       box-shadow: 0 0 k-px-to-rem(3px) $background-color-checked;
@@ -114,7 +116,9 @@
         border-color: $color-error;
       }
 
-      &:active { color: $color-error;}
+      &:active {
+        color: $color-error;
+      }
     }
 
     .k-RadioButton__input.is-error:checked:focus + &:before {
