@@ -34,7 +34,7 @@ export class TextInputWithLimit extends React.Component {
     return (
       <div className="k-TextInputLimit">
         <TextInput className="k-TextInputLimit__input"
-                   value={ this.state.value }
+                   defaultValue={ this.state.value }
                    onInput={ this.handleInput }
                    { ...others } />
         <div className={ counterClassNames }>
