@@ -1,3 +1,12 @@
 <%= example "Text input with limit" do %>
   <%= react_component('TextInputWithLimit') %>
 <% end %>
+
+<%= example "Textarea with limit" do %>
+  <%= react_component('TextInputWithLimit', props: {
+    tag: 'textarea',
+    rows: 10,
+    placeholder: 'Lorem ipsum dolor sit amet',
+    limit: 128,
+  }) %>
+<% end %>
