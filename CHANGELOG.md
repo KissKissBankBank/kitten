@@ -5,8 +5,17 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add new props `error` on `RadioButton` and `Checkbox`.
+- Breaking change: The `FormPhoneNumber` has new props.
+  To be retro-compatible you should, in your app's components:
+  - Rename `name` to `areaName`.
+  - Rename `options` to `areaOptions`.
+  - Rename `value` to `areaValue`.
+  - Add the `tiny` boolean prop.
+  - Replace `import FormPhoneNumber` by
+    `import { FormPhoneNumber }`.
 - Fix: `TextInput` React component with text area.
 - Fix: Add keyboard accessibility to `Button`s with `a` tags and no `href`.
+- Fix: width error on `Checkbox` & `RadioButton` component.
 
 ## [7.1.0] - 2017-02-23
 
