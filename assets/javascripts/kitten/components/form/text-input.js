@@ -12,7 +12,7 @@ export class TextInput extends React.Component {
             ...others } = this.props
 
     const textInputClassNames = classNames(
-      'k-TextInput',
+      'k-TextInput__input',
       className,
       {
         'k-TextInput--tiny': tiny,
@@ -26,8 +26,19 @@ export class TextInput extends React.Component {
 
     const Tag = tag
 
+    const renderGradient = () => {
+      if(tag == 'textarea') {
+        return (
+          <div className='k-TextInput__gradient' />
+        )
+      }
+    }
+
     return (
-      <Tag className={ textInputClassNames } { ...others } />
+      <div className='k-TextInput'>
+        <Tag className={ textInputClassNames } { ...others } />
+        { renderGradient() }
+      </div>
     )
   }
 }
