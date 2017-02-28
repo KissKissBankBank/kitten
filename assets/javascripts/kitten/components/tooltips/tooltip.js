@@ -13,11 +13,12 @@ export class Tooltip extends React.Component {
     }
 
     this.handleClick = this.handleClick.bind(this)
+    this.show = this.show.bind(this)
   }
 
   componentDidMount() {
     if (this.props.alwaysOpen) {
-      this.show()
+      setTimeout(this.show, 1000)
     }
   }
 
@@ -46,14 +47,18 @@ export class Tooltip extends React.Component {
     const { className,
             place,
             alwaysOpen,
-            element,
             children,
+            refElement,
+            refElementProps,
             tooltipModifier,
-            elementChildren,
-            id,
-            ...buttonTooltipIconProps } = this.props
+            id } = this.props
 
-    const ButtonTag = element
+    const RefTag = refElement
+
+    const tooltipContainerClassName = classNames(
+      'k-Tooltip',
+      className,
+    )
 
     const tooltipClassName = classNames(
       'k-Tooltip__content',
@@ -61,14 +66,13 @@ export class Tooltip extends React.Component {
     )
 
     return (
-      <div className="k-Tooltip">
-        <ButtonTag ref={ button => this.button = button }
+      <div className={ tooltipContainerClassName }>
+        <RefTag ref={ button => this.button = button }
                    data-tip="tooltip"
                    data-for={ id }
                    onClick={ this.handleClick }
                    aria-describedby={ id }
-                   children={ elementChildren }
-                   { ...buttonTooltipIconProps } />
+                   { ...refElementProps } />
         <ReactTooltip id={ id }
                       // This is not a mistake, this attribute is called
                       // class not className!
@@ -88,8 +92,7 @@ Tooltip.defaultProps = {
   id: '',
   place: 'right',
   children: null,
-  elementChildren: null,
   alwaysOpen: false,
-  element: ButtonTooltipIcon,
   tooltipModifier: 'hydrogen',
+  refElement: ButtonTooltipIcon,
 }

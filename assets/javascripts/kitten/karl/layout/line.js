@@ -14,7 +14,7 @@ export const KarlLineWithTooltip = props => {
       <Line.Item>
         <Tooltip id={ props.id }
                  place={ props.place }>
-          { props.tooltipText }
+          { props.children }
         </Tooltip>
       </Line.Item>
     </Line>

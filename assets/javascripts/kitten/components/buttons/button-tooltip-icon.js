@@ -4,10 +4,10 @@ import { TooltipIcon } from 'kitten/components/icons/tooltip-icon'
 export default class ButtonTooltipIcon extends React.Component {
   render() {
     return (
-      <button className="k-ButtonIcon
+      <button { ...this.props }
+              className="k-ButtonIcon
                          k-ButtonIcon--beryllium
-                         k-ButtonIcon--micro"
-              { ...this.props }>
+                         k-ButtonIcon--micro">
         <TooltipIcon className="k-ButtonIcon__svg" />
       </button>
     )
