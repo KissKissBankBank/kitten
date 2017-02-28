@@ -314,7 +314,6 @@ class LoanSimulatorContent extends React.Component {
             type="number"
             min={ this.props.amountMin }
             max={ this.props.amountMax }
-            digits="12"
             defaultValue={ this.props.initialAmount }
             onFocus={ this.props.onFocus }
             onChange={ this.props.onAmountChange }
