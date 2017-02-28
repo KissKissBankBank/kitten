@@ -5,7 +5,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add new props `error` on `RadioButton` and `Checkbox`.
-- Breaking change: The `FormPhoneNumber` has new props.
+- Feature: Add new `LocationIcon` React component.
+- Feature: Add new `LocationInput` React component.
+
+## [8.0.0] - 2017-02-28
+
+Breaking change:
+- The `FormPhoneNumber` has new props.
   To be retro-compatible you should, in your app's components:
   - Rename `name` to `areaName`.
   - Rename `options` to `areaOptions`.
@@ -13,9 +19,20 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   - Add the `tiny` boolean prop.
   - Replace `import FormPhoneNumber` by
     `import { FormPhoneNumber }`.
-- Fix: `TextInput` React component with text area.
-- Fix: Add keyboard accessibility to `Button`s with `a` tags and no `href`.
-- Fix: width error on `Checkbox` & `RadioButton` component.
+- Add `@include k-TextAreaWrapper;` in your SCSS if you use `TextInput` with
+  `tag='texteara'`.
+
+Feature:
+- Add gradient to textarea.
+- Add `limit` prop to textarea.
+
+Fix:
+- Add blur event to `TextInput` component.
+- `TextInput` placeholder on Safari.
+- `TextInputWithUnit` does not pass over `digits` to its `TextInput`.
+- `TextInput` React component with text area.
+- Add keyboard accessibility to `Button`s with `a` tags and no `href`.
+- width error on `Checkbox` & `RadioButton` component.
 
 ## [7.1.0] - 2017-02-23
 

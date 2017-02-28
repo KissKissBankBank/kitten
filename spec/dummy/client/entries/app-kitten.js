@@ -32,6 +32,7 @@ import SelectWithState from 'kitten/components/form/select-with-state'
 import Slider from 'kitten/components/form/slider'
 import Switch from 'kitten/components/form/switch'
 import { TextInput } from 'kitten/components/form/text-input'
+import { LocationInput } from 'kitten/components/form/location-input'
 import { TextInputWithLimit } from 'kitten/components/form/text-input-with-limit'
 import { TextInputWithUnit } from 'kitten/components/form/text-input-with-unit'
 
@@ -42,6 +43,7 @@ import { Grid, GridCol } from 'kitten/components/grid/grid'
 import GrabberIcon from 'kitten/components/icons/grabber-icon'
 import { HeartIcon } from 'kitten/components/icons/heart-icon'
 import { VisaIcon } from 'kitten/components/icons/visa-icon'
+import { LocationIcon } from 'kitten/components/icons/location-icon'
 
 // Links
 import ExternalRichLink from 'kitten/components/links/external-rich-link'
@@ -112,6 +114,7 @@ import { KarlFormRow } from 'kitten/karl/form/form-row'
 import { KarlRadioButtonError,
          KarlRadioButtonContentError} from 'kitten/karl/form/radio-button'
 import { KarlCheckboxError } from 'kitten/karl/form/checkbox'
+import { KarlLocationInput } from 'kitten/karl/form/location-input'
 import { KarlGridTwelveColumns,
          KarlGridInGrid,
          KarlGridSmall,
@@ -156,12 +159,13 @@ ReactOnRails.register({
   // Form
   FormAmountAndCurrency,
   FormPhoneNumber,
-  RadioButton,
   Grid,
   GridCol,
   GrabberIcon,
   HeaderTour,
   Label,
+  LocationInput,
+  RadioButton,
   ReactTooltip,
   Slider,
   Search,
@@ -177,6 +181,7 @@ ReactOnRails.register({
   GrabberIcon,
   HeartIcon,
   VisaIcon,
+  LocationIcon,
 
   // Links
   ExternalRichLink,
@@ -243,6 +248,7 @@ ReactOnRails.register({
   KarlSideGridWithRightAside,
   KarlSideGridWithLeftAsideAndSmallSize,
   KarlCheckboxError,
+  KarlLocationInput,
   KarlFormActions,
   KarlFormRow,
   KarlRadioButtonError,
