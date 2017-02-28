@@ -3,7 +3,6 @@ import classNames from 'classnames'
 import { TextInput } from 'kitten/components/form/text-input'
 
 export class TextInputWithUnit extends React.Component {
-
   blur() {
     this.input.blur()
   }
@@ -49,7 +48,6 @@ export class TextInputWithUnit extends React.Component {
                    error={ error }
                    tiny={ tiny }
                    disabled={ disabled }
-                   onBlur={ this.handleBlur }
                    ref={ input => this.input = input }
                    { ...others }
                    tag="input" />

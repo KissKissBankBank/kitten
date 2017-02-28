@@ -2,7 +2,6 @@ import React from 'react'
 import classNames from 'classnames'
 
 export class TextInput extends React.Component {
-
   blur() {
     this.input.blur()
   }
@@ -21,7 +20,7 @@ export class TextInput extends React.Component {
       className,
       {
         'k-TextInput--tiny': tiny,
-        'k-TextInput--area': tag == 'textarea',
+        'k-TextAreaWrapper__input': tag == 'textarea',
         'is-valid': valid,
         'is-error': error,
         'k-TextInput--twoDigits': digits == 2,
