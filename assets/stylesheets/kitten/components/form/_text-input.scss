@@ -54,12 +54,6 @@
   $digit-length: 9px;
 
   .k-TextInput {
-    position: relative;
-
-    display: flex;
-  }
-
-  .k-TextInput__input {
     @include k-typographyFont($font);
     @include k-typographyFontSize($font-size, $line-height);
 
@@ -142,7 +136,13 @@
     resize: vertical;
   }
 
-  .k-TextInput__gradient {
+  .k-TextAreaWrapper {
+    position: relative;
+
+    display: flex;
+  }
+
+  .k-TextAreaWrapper__gradient {
     position: absolute;
     left: $vertical-padding;
     right: $vertical-padding;

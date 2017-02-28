@@ -2,6 +2,11 @@ import React from 'react'
 import classNames from 'classnames'
 
 export class TextInput extends React.Component {
+
+  blur() {
+    this.input.blur()
+  }
+
   render() {
     const { className,
             tag,
@@ -12,7 +17,7 @@ export class TextInput extends React.Component {
             ...others } = this.props
 
     const textInputClassNames = classNames(
-      'k-TextInput__input',
+      'k-TextInput',
       className,
       {
         'k-TextInput--tiny': tiny,
@@ -24,29 +29,26 @@ export class TextInput extends React.Component {
       },
     )
 
-    const Tag = tag
-
-    const renderGradient = () => {
-      if(tag == 'textarea') {
-        return (
-          <div className='k-TextInput__gradient' />
-        )
-      }
+    if (tag == 'textarea') {
+      return (
+        <div className="k-TextAreaWrapper">
+          <textarea className={ textInputClassNames }
+                    ref={ input => this.input = input }
+                    { ...others } />
+          <div className="k-TextAreaWrapper__gradient" />
+        </div>
+      )
+    } else {
+      return <input className={ textInputClassNames }
+                    ref={ input => this.input = input }
+                    type="text"
+                    { ...others } />
     }
-
-    return (
-      <div className='k-TextInput'>
-        <Tag className={ textInputClassNames } { ...others } />
-        { renderGradient() }
-      </div>
-    )
   }
 }
 
 TextInput.defaultProps = {
-  tag: 'input',
-  type: 'text',
-  placeholder: null,
+  tag: 'input', // or 'textarea'
   valid: false,
   error: false,
   tiny: false,
