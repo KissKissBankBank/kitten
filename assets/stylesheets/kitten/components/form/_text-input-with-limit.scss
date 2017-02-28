@@ -46,6 +46,16 @@
     margin-right: $margin-limit;
 
     color: $color;
+    // Add a white border around the text.
+    text-shadow: 2px 0 0 #fff,
+                 -2px 0 0 #fff,
+                 0 2px 0 #fff,
+                 0 -2px 0 #fff,
+                 1px 1px #fff,
+                 -1px -1px 0 #fff,
+                 1px -1px 0 #fff,
+                 -1px 1px 0 #fff;
+    pointer-events: none;
 
     .k-TextInputLimit__input:focus ~ & {
       color: $active-color;
