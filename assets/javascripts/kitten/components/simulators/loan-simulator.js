@@ -6,6 +6,7 @@ import classNames from 'classnames'
 import numberUtils from 'kitten/helpers/utils/number'
 import { SliderWithTooltipAndPower }
   from 'kitten/components/sliders/slider-with-tooltip-and-power'
+import { TextInputWithUnit } from 'kitten/components/form/text-input-with-unit'
 
 class LoanSimulator extends React.Component {
   constructor(props) {
@@ -168,7 +169,7 @@ class LoanSimulatorContent extends React.Component {
 
   // Allow parents to focus the slider
   focusSlider() {
-    this.refs.slider.focus()
+    this.slider.focus()
   }
 
   handleAmountKeyDown(e) {
@@ -180,7 +181,7 @@ class LoanSimulatorContent extends React.Component {
   }
 
   handleInstallmentChange(value, ratio) {
-    this.refs.amount.blur()
+    this.amount.blur()
     this.props.onInstallmentChange(value, ratio)
   }
 
@@ -305,24 +306,21 @@ class LoanSimulatorContent extends React.Component {
                  htmlFor="loan-simulator-amount">
             { this.props.amountLabel }
           </label>
-          <div className={ classNames('k-TextInputWithUnit', errorClass) }>
-            <input ref="amount"
-                   className="k-TextInput k-TextInputWithUnit__input"
-                   id="loan-simulator-amount"
-                   name={ this.props.amountName }
-                   type="number"
-                   min={ this.props.amountMin }
-                   max={ this.props.amountMax }
-                   size="5"
-                   defaultValue={ this.props.initialAmount }
-                   onFocus={ this.props.onFocus }
-                   onChange={ this.props.onAmountChange }
-                   onKeyDown={ this.props.onAmountKeyDown }
-                   placeholder={ this.props.amountPlaceholder } />
-            <span className="k-TextInputWithUnit__unit">
-              { this.props.currencySymbol }
-            </span>
-          </div>
+          <TextInputWithUnit
+            ref={ input => this.amount = input }
+            error={ error }
+            id="loan-simulator-amount"
+            name={ this.props.amountName }
+            type="number"
+            min={ this.props.amountMin }
+            max={ this.props.amountMax }
+            digits="12"
+            defaultValue={ this.props.initialAmount }
+            onFocus={ this.props.onFocus }
+            onChange={ this.props.onAmountChange }
+            onKeyDown={ this.props.onAmountKeyDown }
+            placeholder={ this.props.amountPlaceholder }
+            unit={ this.props.currencySymbol } />
           { errorTag }
         </div>
         <div>
@@ -331,7 +329,7 @@ class LoanSimulatorContent extends React.Component {
             { this.props.installmentLabel }
           </label>
           <SliderWithTooltipAndPower
-            ref="slider"
+            ref={ input => this.slider = input }
             step={ this.props.installmentStep }
             min={ installmentMin }
             max={ installmentMax }
