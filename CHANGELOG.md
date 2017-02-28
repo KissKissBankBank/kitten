@@ -12,6 +12,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   - Add the `tiny` boolean prop.
   - Replace `import FormPhoneNumber` by
     `import { FormPhoneNumber }`.
+- Breaking change: Add `@include k-TextAreaWrapper;` in your SCSS if you use
+  `TextInput` with `tag='texteara'`.
+- Feature: Add gradient to textarea.
+- Feature: Add `limit` prop to textarea.
+- Fix: Add blur event to `TextInput` component.
+- Fix: `TextInput` placeholder on Safari.
 - Fix: `TextInputWithUnit` does not pass over `digits` to its `TextInput`.
 - Fix: `TextInput` React component with text area.
 - Fix: Add keyboard accessibility to `Button`s with `a` tags and no `href`.

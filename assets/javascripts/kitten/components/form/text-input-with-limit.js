@@ -46,6 +46,7 @@ export class TextInputWithLimit extends React.Component {
 }
 
 TextInputWithLimit.defaultProps = {
+  tag: 'input',
   limit: 80,
   defaultValue: "",
 }
