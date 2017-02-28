@@ -6,7 +6,7 @@
   <%= example "Tooltip top" do %>
     <%= react_component('KarlLineWithTooltip', props: {
         text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
-        tooltipText: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+        children: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
                       Aenean commodo ligula eget dolor, enean massa. Cum sociis
                       natoque penatibus et magnis dis parturien.',
         id: 'tooltip-top',
@@ -18,7 +18,7 @@
   <%= example "Tooltip right" do %>
     <%= react_component('KarlLineWithTooltip', props: {
         text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
-        tooltipText: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+        children: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
                       Aenean commodo ligula eget dolor, enean massa. Cum sociis
                       natoque penatibus et magnis dis parturien.',
         id: 'tooltip-right',
@@ -30,7 +30,7 @@
   <%= example "Tooltip bottom" do %>
     <%= react_component('KarlLineWithTooltip', props: {
         text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
-        tooltipText: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+        children: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
                       Aenean commodo ligula eget dolor, enean massa. Cum sociis
                       natoque penatibus et magnis dis parturien.',
         id: 'tooltip-bottom',
@@ -42,11 +42,23 @@
   <%= example "Tooltip left" do %>
     <%= react_component('KarlLineWithTooltip', props: {
         text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
-        tooltipText: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+        children: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
                       Aenean commodo ligula eget dolor, enean massa. Cum sociis
                       natoque penatibus et magnis dis parturien.',
         id: 'tooltip-left',
         place: 'left',
+      }
+    ) %>
+  <% end %>
+
+  <%=example "Static tooltip" do %>
+    <%= react_component('KarlStaticTooltip', props: {
+        children: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                      Aenean commodo ligula eget dolor, enean massa. Cum sociis
+                      natoque penatibus et magnis dis parturien.',
+        id: 'tooltip-left',
+        place: 'left',
+        tooltipModifier: 'lithium',
       }
     ) %>
   <% end %>

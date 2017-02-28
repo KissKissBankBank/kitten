@@ -1,30 +1,83 @@
 import React from 'react'
+import classNames from 'classnames'
+import { findDOMNode } from 'react-dom'
 import ReactTooltip from 'react-tooltip'
 import ButtonTooltipIcon from 'kitten/components/buttons/button-tooltip-icon'
 
-export default class Tooltip extends React.Component {
+export class Tooltip extends React.Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      open: false,
+    }
+
+    this.handleClick = this.handleClick.bind(this)
+  }
+
+  componentDidMount() {
+    if (this.props.alwaysOpen) {
+      this.show()
+    }
+  }
+
+  handleClick() {
+    if (this.props.alwaysOpen)
+      return
+
+    if (this.state.open) {
+      this.hide()
+    } else {
+      this.show()
+    }
+  }
+
+  show() {
+    ReactTooltip.show(findDOMNode(this.button))
+    this.setState({ open: true })
+  }
+
+  hide() {
+    ReactTooltip.hide(findDOMNode(this.button))
+    this.setState({ open: false })
+  }
+
   render() {
-    const { place,
+    const { className,
+            place,
+            alwaysOpen,
+            element,
+            children,
+            tooltipModifier,
+            elementChildren,
+            id,
             ...buttonTooltipIconProps } = this.props
+
+    const ButtonTag = element
+
+    const tooltipClassName = classNames(
+      'k-Tooltip__content',
+      `k-Tooltip__content--${tooltipModifier}`
+    )
 
     return (
       <div className="k-Tooltip">
-        <ButtonTooltipIcon data-tip
-                           data-for={ this.props.id }
-                           data-event="click"
-                           data-dismiss={ this.props.id }
-                           aria-describedby={ this.props.id }
-                           { ...buttonTooltipIconProps } />
-
-        <ReactTooltip id={ this.props.id }
+        <ButtonTag ref={ button => this.button = button }
+                   data-tip="tooltip"
+                   data-for={ id }
+                   onClick={ this.handleClick }
+                   aria-describedby={ id }
+                   children={ elementChildren }
+                   { ...buttonTooltipIconProps } />
+        <ReactTooltip id={ id }
                       // This is not a mistake, this attribute is called
-                      // class not className !
-                      class="k-Tooltip__content"
+                      // class not className!
+                      class={ tooltipClassName }
                       role="tooltip"
                       effect="solid"
                       place={ place }
-                      globalEventOff="click">
-          { this.props.children }
+                      event="none">
+          { children }
         </ReactTooltip>
       </div>
     )
@@ -34,6 +87,9 @@ export default class Tooltip extends React.Component {
 Tooltip.defaultProps = {
   id: '',
   place: 'right',
-  type: 'button',
   children: null,
+  elementChildren: null,
+  alwaysOpen: false,
+  element: ButtonTooltipIcon,
+  tooltipModifier: 'hydrogen',
 }
