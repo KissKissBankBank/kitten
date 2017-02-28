@@ -69,7 +69,7 @@ describe('Text-input with default props', () => {
     describe('text-input with textarea tag', () => {
       const textArea = shallow(
         <TextInput tag='textarea' rows='7' />
-      )
+      ).find('textarea')
 
       it('has a textarea tag', () => {
         expect(textArea).to.have.tagName('textarea')
