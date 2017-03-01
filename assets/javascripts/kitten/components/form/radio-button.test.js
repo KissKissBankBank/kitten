@@ -1,86 +1,54 @@
 import React from 'react'
 import { expect } from 'chai'
-import { shallow } from 'enzyme'
+import { shallow, mount } from 'enzyme'
 import { RadioButton } from 'kitten/components/form/radio-button'
 
-describe('RadioButton with default props', () => {
-  const defaultComponent = shallow(
-    <RadioButton />)
+describe('<RadioButton />', () => {
+  describe('By default', () => {
+    const component = shallow(<RadioButton />)
+    const input = component.find('input')
+    const label = component.find('label')
 
-  it('renders <div class="k-RadioButton">', () => {
-    expect(defaultComponent.find('.k-RadioButton')).to.have.length(1)
+    it('renders an input.k-RadioButton__input">', () => {
+      expect(input).to.tagName('input')
+      expect(input.hasClass('k-RadioButton__input')).to.equal(true)
+    })
+
+    it('renders a label.k-RadioButton__label">', () => {
+      expect(label).to.tagName('label')
+      expect(label.hasClass('k-RadioButton__label')).to.equal(true)
+    })
   })
 
-  it('has a default label attributes', () => {
-    const label = defaultComponent.find('label')
+  describe('large prop', () => {
+    const component = shallow(<RadioButton large />)
+    const label = component.find('label')
 
-    expect(label).not.to.have.attr('large')
-    expect(label).to.be.empty
+    it('passes the right props to the `label` component', () => {
+      expect(label).to.have.className("k-RadioButton__label--large")
+    })
   })
 
-  it('renders <div> without large content', () => {
-    expect(defaultComponent).not.to.have.attr('largeContent')
-  })
-
-
-  describe('<RadioButton />', () => {
+  describe('largeContent prop', () => {
     const component = shallow(
-      <RadioButton id="karl-radio-button-1"
-                   large="false"
-                   largeContent="false"
-                   inputClassName="custom-class"
-                   error />
+      <RadioButton contentLarge>Hello</RadioButton>
     )
+    const label = component.find('label')
+    const labelContents = component.find('.k-RadioButton__labelContents')
 
-    it('renders a <div class="k-RadioButton" />', () => {
-      expect(component).to.have.tagName('div')
-      expect(component).to.have.className('k-RadioButton')
-    })
-
-    it('renders input with passed props', () => {
-      const input = component.find('input')
-      const errorClass = input.hasClass("is-error")
-
-      expect(input).to.have.attr('id', 'karl-radio-button-1')
-      expect(input).to.have.attr('type', 'radio')
-      expect(input).to.have.className('k-RadioButton__input')
-      expect(input).to.have.className('custom-class')
-      expect(errorClass).to.equal(true)
-    })
-
-    it('renders label', () => {
-      const label = component.find('label')
-
-      expect(label).to.have.attr('for', 'karl-radio-button-1')
-      expect(label).to.have.className('k-RadioButton__label')
-      expect(label).to.to.empty
-    })
-
-    describe('large', () => {
-      const componentLarge = shallow(
-        <RadioButton large="true" />
+    it('passes the right props to the `contentLarge` component', () => {
+      expect(labelContents).to.have.className(
+        'k-RadioButton__labelContents--large'
       )
-
-      it('has a large class', () => {
-        const label = componentLarge.find('label')
-
-        expect(label).to.have.className("k-RadioButton__label--large")
-      })
     })
+  })
 
-    describe('with content', () => {
-      const componentWithContent = shallow(
-        <RadioButton largeContent="true">
-          <p>Harum trium…</p>
-        </RadioButton>
-      )
+  describe('error prop', () => {
+    const component = shallow(<RadioButton error />)
+    const input = component.find('input')
 
-      it('has a content class', () => {
-        const content = componentWithContent.find('.k-RadioButton__labelContents')
-
-        expect(content).to.have.text("Harum trium…")
-        expect(content).to.have.className("k-RadioButton__labelContents--large")
-      })
+    it('passes the right props to the `input`component', () => {
+      expect(input).to.have.className('is-error')
     })
   })
 })
