@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add new `LocationIcon` React component.
+- Feature: Add new `LocationInput` React component.
 - Fix: Fix wrong padding for `InformationBox` component.
 
 ## [8.0.0] - 2017-02-28
