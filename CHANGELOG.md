@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add new `karlStaticTooltip` example.
+- Feature: Add new `StaticTooltip` React component.
 - Fix: `TextInput` React component with text area.
 - Fix: Add keyboard accessibility to `Button`s with `a` tags and no `href`.
 - Fix: width error on `Checkbox` & `RadioButton` component.

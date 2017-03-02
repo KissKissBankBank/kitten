@@ -127,7 +127,6 @@ import { KarlButtonIconHeartRight,
 import { KarlButtonAndText } from 'kitten/karl/buttons/button'
 import { KarlLineWithTooltip,
          KarlLineWithBigHeart } from 'kitten/karl/layout/line'
-import { KarlStaticTooltip } from 'kitten/karl/tooltips/tooltip'
 import { KarlPaymentButton } from 'kitten/karl/buttons/payment-button'
 import { KarlRandomProgress } from 'kitten/karl/meters/random-progress'
 import { KarlMakerWhoAmIStep } from 'app/maker/who-am-i/components/container'
@@ -242,7 +241,6 @@ ReactOnRails.register({
   KarlLoanSimulatorWithError,
   KarlSideGridWithRightAside,
   KarlSideGridWithLeftAsideAndSmallSize,
-  KarlStaticTooltip,
   KarlFormActions,
   KarlFormRow,
   KarlGridTwelveColumns,

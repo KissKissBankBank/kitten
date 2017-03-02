@@ -43,6 +43,8 @@
     @include k-typographyFont($font);
     @include k-typographyFontSize($font-size, $line-height);
 
+    background-color: $background-color !important;
+    color: $color !important;
     opacity: 1 !important;
 
     padding: k-px-to-rem(20px) !important;
@@ -52,9 +54,9 @@
 
     &.place-top {
       margin-bottom: $tooltip-margin !important;
-      border: 1px solid;
 
       &:after {
+        border-top-color: $background-color !important;
         border-top-style: solid !important;
         border-top-width: $arrow-size !important;
         margin-left: -($arrow-size) !important;
@@ -65,9 +67,9 @@
 
     &.place-right {
       margin-left: $tooltip-margin !important;
-      border: 1px solid;
 
       &:after {
+        border-right-color: $background-color !important;
         border-right-style: solid !important;
         border-width: $arrow-size !important;
         margin-top: -($arrow-size) !important;
@@ -78,9 +80,9 @@
 
     &.place-bottom {
       margin-top: $tooltip-margin !important;
-      border: 1px solid;
 
       &:after {
+        border-bottom-color: $background-color !important;
         border-bottom-style: solid !important;
         border-width: $arrow-size !important;
         margin-left: -($arrow-size) !important;
@@ -91,106 +93,14 @@
 
     &.place-left {
      margin-right: $tooltip-margin !important;
-     border: 1px solid;
 
       &:after {
+        border-left-color: $background-color !important;
         border-left-style: solid !important;
         border-width: $arrow-size !important;
         margin-top: -($arrow-size) !important;
         right: k-px-to-rem(-8px) !important;
         top: 52% !important;
-      }
-    }
-  }
-
-  .k-Tooltip__content--hydrogen {
-    background-color: $background-color !important;
-    color: $color !important;
-    border-color: $background-color !important;
-
-    &.place-top {
-      &:after {
-        border-top-color: $background-color !important;
-      }
-    }
-
-    &.place-right {
-      &:after {
-        border-right-color: $background-color !important;
-      }
-    }
-
-    &.place-bottom {
-      &:after {
-        border-bottom-color: $background-color !important;
-      }
-    }
-
-    &.place-left {
-      &:after {
-        border-left-color: $background-color !important;
-      }
-    }
-  }
-
-  .k-Tooltip__content--lithium {
-    background-color: $background-color-lithium !important;
-    color: $color-lithium !important;
-    border-color: $border-color-lithium !important;
-
-    &.place-top {
-      &:before {
-        border: 8px solid transparent !important;
-        border-top-color: white !important;
-        bottom: -15px !important;
-        right: 50% !important;
-        margin-left: -7px !important;
-        z-index: 100 !important;
-      }
-      &:after {
-        border-top-color: $border-color-lithium !important;
-      }
-    }
-
-    &.place-right {
-      &:before {
-        border: 8px solid transparent !important;
-        border-right-color: white !important;
-        left: -15px !important;
-        top: 50% !important;
-        margin-top: -6px !important;
-        z-index: 100 !important;
-      }
-      &:after {
-        border-right-color: $border-color-lithium !important;
-      }
-    }
-
-    &.place-bottom {
-      &:before {
-        border: 8px solid transparent !important;
-        border-bottom-color: white !important;
-        top: -15px !important;
-        left: 50% !important;
-        margin-left: -7px !important;
-        z-index: 100 !important;
-      }
-      &:after {
-        border-bottom-color: $border-color-lithium !important;
-      }
-    }
-
-    &.place-left {
-      &:before {
-        border: 8px solid transparent !important;
-        border-left-color: white !important;
-        right: -15px !important;
-        bottom: 50% !important;
-        margin-top: -6px !important;
-        z-index: 100 !important;
-      }
-      &:after {
-        border-left-color: $border-color-lithium !important;
       }
     }
   }
