@@ -57,7 +57,7 @@ export const KarlAlertWithMarkdown = props => {
   return (
     <Alert>
       <Markdown renderers={ markdownRenderers }
-        source={ markdownExample } />
+                source={ markdownExample } />
     </Alert>
   )
 }
