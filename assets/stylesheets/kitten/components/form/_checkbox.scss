@@ -103,10 +103,7 @@
     }
 
     .k-Checkbox__input.is-error:checked + &:before {
-      background: $error-color
-                  url($icon)
-                  no-repeat
-                  center;
+      background-color: $error-color;
       border-color: $error-color;
     }
 
