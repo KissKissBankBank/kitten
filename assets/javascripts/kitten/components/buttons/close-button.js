@@ -8,7 +8,7 @@ export class CloseButton extends React.Component {
 
     return (
       <button className={ classNames('k-ButtonIcon',
-                                     'k-ButtonIcon--tiny',
+                                     'k-ButtonIcon--cross',
                                      className) }
               title={ closeButtonLabel }
               aria-label={ closeButtonLabel }

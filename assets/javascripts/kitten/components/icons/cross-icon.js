@@ -3,10 +3,10 @@ import React from 'react'
 export const CrossIcon = props => {
   return (
     <svg xmlns="http://www.w3.org/2000/svg"
-         viewBox="-11 -4 125 105"
+         viewBox="0 0 8 8"
          { ...props }>
-      <path d="M91.968 21.407l-70.56 70.56-13.44-13.44 70.56-70.56z" />
-      <path d="M91.968 78.527l-13.44 13.44-70.56-70.56 13.44-13.44z" />
+         <path d="M.464 6.12L6.12.465 7.537 1.88 1.88 7.535z" />
+         <path d="M1.88.464L7.535 6.12 6.12 7.537.465 1.88z" />
     </svg>
   )
 }
