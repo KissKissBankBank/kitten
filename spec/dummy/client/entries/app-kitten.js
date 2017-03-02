@@ -136,6 +136,7 @@ import { KarlPaymentButton } from 'kitten/karl/buttons/payment-button'
 import { KarlRandomProgress } from 'kitten/karl/meters/random-progress'
 import { KarlMakerWhoAmIStep } from 'app/maker/who-am-i/components/container'
 import { KarlAlert,
+         KarlAlertWithButton,
          KarlAlertWithMarkdown } from 'kitten/karl/notifications/alert'
 
 ReactOnRails.register({
@@ -227,6 +228,7 @@ ReactOnRails.register({
 
   // Karl composed components
   KarlAlert,
+  KarlAlertWithButton,
   KarlAlertWithMarkdown,
   KarlAutoTriggerCallToActionPopover,
   KarlAutoTriggerPopover,

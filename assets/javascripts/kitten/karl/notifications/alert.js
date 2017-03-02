@@ -35,6 +35,15 @@ export const KarlAlert = props => {
     <Alert { ...props }>
       <Markdown renderers={ markdownRenderers }
         source="Lorem ipsum dolor sit amet, [consectetuer adipiscing](#) elit." />
+    </Alert>
+  )
+}
+
+export const KarlAlertWithButton = props => {
+  return (
+    <Alert { ...props }>
+      <Markdown renderers={ markdownRenderers }
+        source="Lorem ipsum dolor sit amet, [consectetuer adipiscing](#) elit." />
       <Button modifier="carbon" className="k-u-margin-top-double">
         Button
       </Button>
