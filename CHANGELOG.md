@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add new `Alert` component.
+- Feature: Add new `CloseButton` component.
+- Feature: Add new `CrossIcon` component.
 - Feature: Add new `LocationIcon` React component.
 - Feature: Add new `LocationInput` React component.
 - Fix: Fix wrong padding for `InformationBox` component.

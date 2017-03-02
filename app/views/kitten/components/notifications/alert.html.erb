@@ -1,5 +1,21 @@
-<%= example 'Alerte rouge !' do %>
-  <%= react_component 'Alert', props: {
-    children: 'ALERTE ROUGE !!!',
+<%= example 'Alert' do %>
+  <%= react_component 'KarlAlert' %>
+<% end %>
+
+<%= example 'Error alert' do %>
+  <%= react_component 'KarlAlert', props: {
+    error: true,
+    closeButton: true,
   } %>
+<% end %>
+
+<%= example 'Success alert' do %>
+  <%= react_component 'KarlAlert', props: {
+    success: true,
+    closeButton: true,
+  } %>
+<% end %>
+
+<%= example 'Alert with markdown' do %>
+  <%= react_component 'KarlAlertWithMarkdown' %>
 <% end %>
