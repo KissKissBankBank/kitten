@@ -26,13 +26,13 @@
   .k-Alert {
     @include k-container;
     position: relative;
-    padding-top: 13px;
-    padding-bottom: 13px;
     background-color: $background;
   }
 
   .k-Alert__row {
     @include k-grid;
+    padding-top: 13px;
+    padding-bottom: 13px;
   }
 
   .k-Alert__content {
@@ -98,5 +98,20 @@
     .k-Alert__content {
       color: $colorError;
     }
+  }
+
+  .k-Alert--hidden {
+    pointer-events: none;
+    animation: fadeOut 1s linear forwards;
+  }
+
+  // FadeOut animation.
+
+  @keyframes fadeOut {
+    0% { opacity: 1; height: initial; }
+    80% { opacity: 1; height: initial; transform: translateY(0px); }
+    89% { opacity: 0; height: initial; transform: translateY(-30px); }
+    90% { opacity: 0; height: initial; }
+    100% { opacity: 0; height: 0; }
   }
 }
