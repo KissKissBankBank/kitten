@@ -1,0 +1,42 @@
+/// Static Tooltip
+///
+/// @group tooltips
+///
+/// @example scss - Usage
+///
+///   @include k-StaticTooltip;
+///
+/// @example html
+///
+
+@mixin k-StaticTooltip {
+
+  // Colors Lithium
+  $color-lithium: map-get($k-colors, 'primary-1');
+  $border-color-lithium: map-get($k-colors, 'primary-4');
+  $background-color-lithium: map-get($k-colors, 'background-1');
+
+  $font: 'source-sans';
+  $font-size: -2;
+  $line-height: 1.3;
+
+  $arrow-size: k-px-to-rem(8px);
+  $tooltip-margin: k-px-to-rem(18px);
+
+  .k-StaticTooltip__content {
+    @include k-typographyFont($font);
+    @include k-typographyFontSize($font-size, $line-height);
+
+    padding: k-px-to-rem(20px) !important;
+
+    background-color: white;
+    border: 1px solid red;
+
+    max-width: k-px-to-rem(245px) !important;
+    border-radius: k-px-to-rem(8px) !important;
+  }
+
+
+
+
+}

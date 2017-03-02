@@ -4,7 +4,7 @@ import { Button } from 'kitten/components/buttons/button'
 
 export const KarlStaticTooltip = props => {
   const refElementProps = {
-    modifier:'lithium',
+    modifier: 'helium',
     children: 'Button',
   }
 
