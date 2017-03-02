@@ -7,10 +7,8 @@ export class Alert extends React.Component {
     if (!this.props.closeButton) return
 
     return (
-      <div className="k-Alert__close">
-        <CloseButton className="k-ButtonIcon--carbon"
-                     closeButtonLabel={ this.props.closeButtonLabel } />
-      </div>
+      <CloseButton className="k-ButtonIcon--carbon k-Alert__close"
+                   closeButtonLabel={ this.props.closeButtonLabel } />
     )
   }
 
@@ -29,9 +27,9 @@ export class Alert extends React.Component {
           <div className="k-Alert__content">
             { this.props.children }
           </div>
-
-          { this.renderCloseButton() }
         </div>
+
+        { this.renderCloseButton() }
       </div>
     )
   }
