@@ -8,7 +8,15 @@
 ///
 /// @example html
 ///
-///   …
+///   <div class="k-Alert k-Alert--success" role="alert">
+///     <div class="k-Alert__row">
+///       <div class="k-Alert__content">
+///         Lorem ipsum…
+///       </div>
+///     </div>
+///
+///     <button class="k-Alert__close">x</button>
+///   </div>
 
 @mixin k-Alert {
   $font: 'source-sans';
@@ -102,12 +110,12 @@
 
   .k-Alert--hidden {
     pointer-events: none;
-    animation: fadeOut 1s linear forwards;
+    animation: kAlertFadeOut 1s linear forwards;
   }
 
   // FadeOut animation.
 
-  @keyframes fadeOut {
+  @keyframes kAlertFadeOut {
     0% { opacity: 1; height: initial; }
     80% { opacity: 1; height: initial; transform: translateY(0px); }
     89% { opacity: 0; height: initial; transform: translateY(-30px); }
