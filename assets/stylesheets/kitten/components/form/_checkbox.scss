@@ -20,7 +20,7 @@
   $line-height: 1;
 
   // Error
-  $color-error: map-get($k-colors, 'error');
+  $error-color: map-get($k-colors, 'error');
 
   // Colors
   $background-color: map-get($k-colors, 'background-1');
@@ -86,28 +86,28 @@
     }
 
     .k-Checkbox__input.is-error + & {
-      color: $color-error;
-      border-color: $color-error;
+      color: $error-color;
+      border-color: $error-color;
 
       &:before {
-        border-color: $color-error;
+        border-color: $error-color;
       }
 
       &:active {
-        color: $color-error;
+        color: $error-color;
       }
     }
 
     .k-Checkbox__input.is-error:checked:focus + &:before {
-      box-shadow: 0 0 k-px-to-rem(3px) $color-error;
+      box-shadow: 0 0 k-px-to-rem(3px) $error-color;
     }
 
     .k-Checkbox__input.is-error:checked + &:before {
-      background: $color-error
+      background: $error-color
                   url($icon)
                   no-repeat
                   center;
-      border-color: $color-error;
+      border-color: $error-color;
     }
 
     .k-Checkbox__input:disabled + & {

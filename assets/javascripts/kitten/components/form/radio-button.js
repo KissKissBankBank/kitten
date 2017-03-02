@@ -10,7 +10,7 @@ export class RadioButton extends React.Component {
 
     const labelContentsClassNames = classNames(
       'k-RadioButton__labelContents',
-      { 'k-RadioButton__labelContents--large': this.props.contentLarge }
+      { 'k-RadioButton__labelContents--large': this.props.largeContent }
     )
     return (
       <div className={ labelContentsClassNames }>{ content }</div>
@@ -25,7 +25,6 @@ export class RadioButton extends React.Component {
             largeContent,
             children,
             content,
-            contentLarge,
             inputClassName,
             error,
             ...inputProps } = this.props
@@ -61,7 +60,7 @@ export class RadioButton extends React.Component {
 RadioButton.defaultProps = {
   text: null,
   large: false,
-  contentLarge: false,
+  largeContent: false,
 }
 
 RadioButton.propTypes = {

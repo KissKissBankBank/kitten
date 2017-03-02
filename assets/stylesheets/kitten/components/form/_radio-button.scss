@@ -78,12 +78,12 @@
       transition: border $transition-duration;
     }
 
-    .k-RadioButton__input:focus + &:before {
-      border-color: $border-color-hover;
-    }
-
     &:active {
       color: $background-color-active;
+    }
+
+    .k-RadioButton__input:focus + &:before {
+      border-color: $border-color-hover;
     }
 
     .k-RadioButton__input:checked:focus + &:before {
