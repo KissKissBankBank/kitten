@@ -3,21 +3,41 @@ import classNames from 'classnames'
 import { CloseButton } from 'kitten/components/buttons/close-button'
 
 export class Alert extends React.Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      show: props.show
+    }
+
+    this.handleCloseClick = this.handleCloseClick.bind(this)
+  }
+
+  handleCloseClick() {
+    this.setState({
+      show: false,
+    })
+  }
+
   renderCloseButton() {
     if (!this.props.closeButton) return
 
     return (
       <CloseButton className="k-ButtonIcon--carbon k-Alert__close"
-                   closeButtonLabel={ this.props.closeButtonLabel } />
+                   closeButtonLabel={ this.props.closeButtonLabel }
+                   onClick={ this.handleCloseClick } />
     )
   }
 
   render() {
+    if (!this.props.show) return null
+
     const alertClassName = classNames(
       'k-Alert',
       {
         'k-Alert--success': this.props.success,
         'k-Alert--error': this.props.error,
+        'k-Alert--hidden': !this.state.show,
       }
     )
 
@@ -36,6 +56,7 @@ export class Alert extends React.Component {
 }
 
 Alert.defaultProps = {
+  show: true,
   error: false,
   success: false,
   closeButton: false,
