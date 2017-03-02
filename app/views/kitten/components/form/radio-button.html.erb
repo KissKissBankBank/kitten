@@ -23,6 +23,10 @@
   ) %>
 <% end %>
 
+<%= example 'Radio buttons - Error' do %>
+  <%= react_component('KarlRadioButtonError') %>
+<% end %>
+
 <%= example 'Large radio buttons' do %>
   <%= react_component('RadioButton', props: {
       id: "karl-radio-button-large-1",
@@ -56,7 +60,7 @@
       id: "karl-radio-button-with-content",
       name: "karl-radio-button-with-content",
       text: "Default",
-      content: "Harum trium sententiarum nulli prorsus assentior. Nec enim illa prima
+      children: "Harum trium sententiarum nulli prorsus assentior. Nec enim illa prima
         vera est, ut, quem ad modum in se quisque sit, sic in amicum sit
         animatus. Quam multa enim, quae nostra causa numquam faceremus, facimus
         causa.",
@@ -68,10 +72,12 @@
       name: "karl-radio-button-with-content",
       text: "Large",
       large: true,
-      contentLarge: true,
-      content: "Quam multa enim, quae nostra causa numquam faceremus, facimus causa
+      largeContent: true,
+      children: "Quam multa enim, quae nostra causa numquam faceremus, facimus causa
         amicorum! precari ab indigno, supplicare, tum acerbius in aliquem
         invehi insectarique vehementius.",
     }
   ) %>
+
+  <%= react_component('KarlRadioButtonContentError') %>
 <% end %>

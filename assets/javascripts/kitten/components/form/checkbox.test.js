@@ -3,52 +3,50 @@ import { expect } from 'chai'
 import { shallow } from 'enzyme'
 import { Checkbox } from 'kitten/components/form/checkbox'
 
-describe('Checkbox with default props', () => {
-  const defaultComponent = shallow(
-    <Checkbox />)
+describe('<Checkbox />', () => {
+  describe('By default', () => {
+    const component = shallow(<Checkbox />)
+    const input = component.find('input')
+    const label = component.find('label')
 
-  it('renders <div class="k-Checkbox">', () => {
-    expect(defaultComponent.find('.k-Checkbox')).to.have.length(1)
+    it('renders an input.k-Checkbox__input', () => {
+      expect(input).to.tagName('input')
+      expect(input.hasClass('k-Checkbox__input')).to.equal(true)
+    })
+
+    it('renders a label.k-Checkbox__label', () => {
+      expect(label).to.tagName('label')
+      expect(label.hasClass('k-Checkbox__label')).to.equal(true)
+    })
   })
 
-  it('has a default label attributes', () => {
-    const label = defaultComponent.find('label')
+  describe('error prop', () => {
+    const component = shallow(<Checkbox error />)
+    const input = component.find('input')
 
-    expect(label).to.have.text('Filter 1')
+    it('passes the right props to the `input` component', () => {
+      expect(input).to.have.className('is-error')
+    })
   })
 
-  describe('<Checkbox />', () => {
+  describe('disabled prop', () => {
+    const component = shallow(<Checkbox disabled />)
+    const input = component.find('input')
+
+    it('passes the right props to the `input` component', () => {
+      expect(input.props()).to.contains.all.keys({ disabled: true })
+    })
+  })
+
+  describe('children prop', () => {
     const component = shallow(
-      <Checkbox id="input-1"
-                htmlFor="input-1"
-                children="Filter 1"
-                className="custom-class"
-                inputClassName="custom-input-class" />
-    )
-
-    it('renders a <div class="k-Checkbox" />', () => {
-      expect(component).to.have.className('k-Checkbox')
-      expect(component).to.have.className('custom-class')
-    })
-
-    it('renders input with passed props', () => {
-      const input = component.find('input')
-
-      expect(input).to.have.attr('id', 'input-1')
-      expect(input).to.have.className('custom-input-class')
-    })
-  })
-
-  describe('with children', () => {
-    const componentChildren = shallow(
       <Checkbox>
         <svg />
       </Checkbox>
     )
+    const labelChildren = component.find('label').children()
 
-    it('renders the children inside the label', () => {
-      const labelChildren = componentChildren.find('label').children()
-
+    it('passes the right props to the `label` component', () => {
       expect(labelChildren).to.have.tagName('svg')
     })
   })

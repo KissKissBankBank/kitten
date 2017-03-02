@@ -31,6 +31,9 @@
   $font-step-content-large: 0;
   $line-height: 1;
 
+  // Error
+  $color-error: map-get($k-colors, 'error');
+
   // Colors
   $background-color: map-get($k-colors, 'background-1');
   $background-color-checked: map-get($k-colors, 'primary-1');
@@ -75,12 +78,13 @@
       transition: border $transition-duration;
     }
 
+    &:active {
+      color: $background-color-active;
+    }
+
     .k-RadioButton__input:focus + &:before {
       border-color: $border-color-hover;
     }
-
-    &:hover { color: $border-color-hover; }
-    &:active { color: $background-color-active;}
 
     .k-RadioButton__input:checked:focus + &:before {
       box-shadow: 0 0 k-px-to-rem(3px) $background-color-checked;
@@ -101,6 +105,30 @@
         background-color: $background-color-disabled;
         border-color: $background-color-disabled;
       }
+    }
+
+    .k-RadioButton__input.is-error + & {
+      color: $color-error;
+      border-color: $color-error;
+
+      &:before {
+        border-color: $color-error;
+      }
+
+      &:active {
+        color: $color-error;
+      }
+    }
+
+    .k-RadioButton__input.is-error:checked:focus + &:before {
+      box-shadow: 0 0 k-px-to-rem(3px) $color-error;
+    }
+
+    .k-RadioButton__input.is-error:checked + &:before {
+      position: relative;
+
+      border: 5px solid $color-error;
+      background-color: white;
     }
   }
 
