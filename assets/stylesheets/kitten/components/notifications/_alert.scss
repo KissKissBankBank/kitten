@@ -1,0 +1,20 @@
+/// Alert
+///
+/// @group notifications
+///
+/// @example scss - usage
+///
+///   @include k-Alert;
+///
+/// @example html
+///
+///   …
+
+@mixin k-Alert {
+  .k-Alert {
+    padding: 10px;
+    background-color: #ff0000;
+    text-align: center;
+    color: #fff;
+  }
+}

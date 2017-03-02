@@ -54,12 +54,15 @@ import NavList from 'kitten/components/lists/nav-list'
 // Meters
 import { Progress } from 'kitten/components/meters/progress'
 
+// Navigation
+import { TabBar } from 'kitten/components/navigation/tab-bar'
+
+// Notifications
+import { Alert } from 'kitten/components/notifications/alert'
+
 // Popovers
 import { Popover } from 'kitten/components/popovers/popover'
 import { CallToActionPopover } from 'kitten/components/popovers/call-to-action-popover'
-
-// Navigation
-import { TabBar } from 'kitten/components/navigation/tab-bar'
 
 // Simulators
 import LoanSimulator from 'kitten/components/simulators/loan-simulator'
@@ -189,12 +192,15 @@ ReactOnRails.register({
   // Meters
   Progress,
 
+  // Navigation
+  TabBar,
+
+  // Notifications
+  Alert,
+
   // Popovers
   CallToActionPopover,
   Popover,
-
-  // Navigation
-  TabBar,
 
   // Simulators
   LoanSimulator,
