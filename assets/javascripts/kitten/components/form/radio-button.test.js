@@ -31,7 +31,7 @@ describe('<RadioButton />', () => {
 
   describe('largeContent prop', () => {
     const component = shallow(
-      <RadioButton contentLarge>Hello</RadioButton>
+      <RadioButton largeContent>Hello</RadioButton>
     )
     const label = component.find('label')
     const labelContents = component.find('.k-RadioButton__labelContents')
