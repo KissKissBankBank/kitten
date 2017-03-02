@@ -1,6 +1,5 @@
 import React from 'react'
 import classNames from 'classnames'
-import { Button } from 'kitten/components/buttons/button'
 import { CrossIcon } from 'kitten/components/icons/cross-icon'
 
 export class CloseButton extends React.Component {
