@@ -111,6 +111,9 @@ import { KarlSideGridWithRightAside,
        } from 'kitten/karl/grid/side-grid'
 import { KarlFormActions } from 'kitten/karl/form/form-actions'
 import { KarlFormRow } from 'kitten/karl/form/form-row'
+import { KarlRadioButtonError,
+         KarlRadioButtonContentError} from 'kitten/karl/form/radio-button'
+import { KarlCheckboxError } from 'kitten/karl/form/checkbox'
 import { KarlLocationInput } from 'kitten/karl/form/location-input'
 import { KarlGridTwelveColumns,
          KarlGridInGrid,
@@ -244,9 +247,12 @@ ReactOnRails.register({
   KarlLoanSimulatorWithError,
   KarlSideGridWithRightAside,
   KarlSideGridWithLeftAsideAndSmallSize,
+  KarlCheckboxError,
   KarlLocationInput,
   KarlFormActions,
   KarlFormRow,
+  KarlRadioButtonError,
+  KarlRadioButtonContentError,
   KarlGridTwelveColumns,
   KarlGridInGrid,
   KarlGridSmall,
