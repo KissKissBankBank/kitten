@@ -25,6 +25,10 @@ describe('<Alert />', () => {
     it('has not a <CloseButton />', () => {
       expect(alert).not.to.have.descendants('CloseButton')
     })
+
+    it('has initial state', () => {
+      expect(alert.state().show).to.be.true
+    })
   })
 
   describe('with show prop at false', () => {
@@ -78,6 +82,21 @@ describe('<Alert />', () => {
       expect(alert).to.have.text(
         'Lorem ipsum dolor sit amet, consectetur adipisicing elit…'
       )
+    })
+  })
+
+  describe('simulates click event on CloseButton', () => {
+    const alert = shallow(<Alert closeButton />)
+    const closeButton = alert.find('CloseButton')
+
+    closeButton.simulate('click')
+
+    it('changes state', () => {
+      expect(alert.state().show).to.be.false
+    })
+
+    it('has a hidden class', () => {
+      expect(alert).to.have.className('k-Alert--hidden')
     })
   })
 })
