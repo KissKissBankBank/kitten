@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add new `LinkedinIcon` React component.
+- Feature: Add new `TwitterIcon` React component.
+- Feature: Add new `FacebookIcon` React component.
+- Feature: Add new `ButtonIcon` React component.
 - Feature: Add new `error` props on `RadioButton` and `Checkbox`.
 - Feature: Add new `LocationIcon` React component.
 - Feature: Add new `LocationInput` React component.
