@@ -4,12 +4,17 @@ import { CrossIcon } from 'kitten/components/icons/cross-icon'
 
 export class CloseButton extends React.Component {
   render() {
-    const { className, closeButtonLabel, ...others } = this.props
+    const { className, closeButtonLabel, modifier, ...others } = this.props
+
+    const buttonClassName = classNames(
+      'k-ButtonIcon',
+      'k-ButtonIcon--cross',
+      className,
+      { [`k-ButtonIcon--${modifier}`]: modifier },
+    )
 
     return (
-      <button className={ classNames('k-ButtonIcon',
-                                     'k-ButtonIcon--cross',
-                                     className) }
+      <button className={ buttonClassName }
               title={ closeButtonLabel }
               aria-label={ closeButtonLabel }
               { ...others }>
@@ -21,5 +26,5 @@ export class CloseButton extends React.Component {
 
 CloseButton.defaultProps = {
   closeButtonLabel: "Close",
-  className: "k-ButtonIcon--hydrogen",
+  modifier: "hydrogen",
 }

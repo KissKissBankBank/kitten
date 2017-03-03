@@ -23,7 +23,8 @@ export class Alert extends React.Component {
     if (!this.props.closeButton) return
 
     return (
-      <CloseButton className="k-ButtonIcon--carbon k-Alert__close"
+      <CloseButton modifier="carbon"
+                   className="k-Alert__close"
                    closeButtonLabel={ this.props.closeButtonLabel }
                    onClick={ this.handleCloseClick } />
     )
