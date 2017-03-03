@@ -1,6 +1,5 @@
 import React from 'react'
 import classNames from 'classnames'
-import { HeartIcon } from 'kitten/components/icons/heart-icon'
 
 export class ButtonIcon extends React.Component {
   render() {
