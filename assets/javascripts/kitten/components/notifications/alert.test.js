@@ -55,6 +55,14 @@ describe('<Alert />', () => {
     })
   })
 
+  describe('with custom class', () => {
+    const alert = shallow(<Alert className="custom__class" />)
+
+    it('has a custom class', () => {
+      expect(alert).to.have.className('custom__class')
+    })
+  })
+
   describe('with close button', () => {
     const alert = shallow(
       <Alert closeButton closeButtonLabel="Close this alert" />

@@ -39,7 +39,8 @@ export class Alert extends React.Component {
         'k-Alert--success': this.props.success,
         'k-Alert--error': this.props.error,
         'k-Alert--hidden': !this.state.show,
-      }
+      },
+      this.props.className
     )
 
     return (
@@ -57,6 +58,7 @@ export class Alert extends React.Component {
 }
 
 Alert.defaultProps = {
+  className: null,
   show: true,
   error: false,
   success: false,
