@@ -4,11 +4,16 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add new `Alert` component.
-- Feature: Add new `CloseButton` component.
-- Feature: Add new `CrossIcon` component.
-- Fix: `SelectWithState` defaults to `deleteRemoves` to `false`.
-- Fix: Use `CloseButton` component instead of simple button in `Popover`.
+## [8.2.0] - 2017-03-06
+
+Features:
+- Add new `Alert` component.
+- Add new `CloseButton` component.
+- Add new `CrossIcon` component.
+
+Fixes:
+- `SelectWithState` defaults to `deleteRemoves` to `false`.
+- Use `CloseButton` component instead of simple button in `Popover`.
 
 ## [8.1.0] - 2017-03-06
 
