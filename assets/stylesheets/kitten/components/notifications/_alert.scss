@@ -110,7 +110,7 @@
 
   .k-Alert--hidden {
     pointer-events: none;
-    animation: kAlertFadeOut 1s linear forwards;
+    animation: kAlertFadeOut .8s linear forwards;
   }
 
   // FadeOut animation.
