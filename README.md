@@ -198,7 +198,7 @@ $ bin/test
 $ bin/test {PATH}/{FILE}.test.js
 ```
 
-Check out the [guidelines](../../kitten/wiki/Component-testing) to know how to test kitten.
+Check out the [guidelines](../../wiki/Component-testing) to know how to test kitten.
 
 ## Contributing
 
@@ -208,6 +208,7 @@ To contribute code:
 - Tag it with the right labels: `Needs reviews`, `Needs testing` or `Work in progress`.
 - Don't forget to update the `CHANGELOG.md` under the `[unreleased]` section
   with the following syntax:
+
   ```
   - Breaking change: a breaking change.
   - Feature: a new feature.
