@@ -16,15 +16,3 @@
     closeButtonLabel: 'Close this alert',
   } %>
 <% end %>
-
-<%= example 'Stacking alerts' do %>
-  <%= react_component 'KarlAlert', props: {
-    error: true,
-    closeButton: true,
-  } %>
-
-  <%= react_component 'KarlAlertWithButton', props: {
-    error: true,
-    closeButton: true,
-  } %>
-<% end %>
