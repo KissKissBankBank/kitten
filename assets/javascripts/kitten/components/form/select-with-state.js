@@ -109,6 +109,7 @@ SelectWithState.defaultProps = {
   onChange: function() {},
   clearable: false,
   searchable: false,
+  deleteRemoves: false,
   multi: false,
   labelText: null,
   tiny: false,

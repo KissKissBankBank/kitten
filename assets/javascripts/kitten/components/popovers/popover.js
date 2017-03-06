@@ -1,5 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
+import { CloseButton } from 'kitten/components/buttons/close-button'
 
 export class Popover extends React.Component {
   constructor(props) {
@@ -14,19 +15,8 @@ export class Popover extends React.Component {
 
   renderCloseButton() {
     return (
-      <button title={ this.props.closeButtonLabel }
-              aria-label={ this.props.closeButtonLabel }
-              onClick={ this.handleCloseClick }
-              className="k-ButtonIcon
-                         k-ButtonIcon--hydrogen
-                         k-ButtonIcon--tiny">
-        <svg className="k-ButtonIcon__svg k-ButtonIcon__svgRotate"
-             xmlns="http://www.w3.org/2000/svg"
-             viewBox="-11 -4 125 105">
-          <path d="M91.968 21.407l-70.56 70.56-13.44-13.44 70.56-70.56z"/>
-          <path d="M91.968 78.527l-13.44 13.44-70.56-70.56 13.44-13.44z"/>
-        </svg>
-      </button>
+      <CloseButton closeButtonLabel={ this.props.closeButtonLabel }
+                   onClick={ this.handleCloseClick } />
     )
   }
 
