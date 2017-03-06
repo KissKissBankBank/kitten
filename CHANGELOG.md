@@ -6,19 +6,19 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [8.1.0] - 2017-03-06
 
-Feature:
+Features:
 - Add new `error` props on `RadioButton` and `Checkbox`.
 - Add new `LocationIcon` React component.
 - Add new `LocationInput` React component.
 
-Fix:
+Fixes:
 - Fix wrong padding for `InformationBox` component.
 - Use `handleChange` handler instead of `handleInput` in `TextInputWithLimit`
   to prevent React warning.
 
 ## [8.0.0] - 2017-02-28
 
-Breaking change:
+Breaking changes:
 - The `FormPhoneNumber` has new props.
   To be retro-compatible you should, in your app's components:
   - Rename `name` to `areaName`.
@@ -30,11 +30,11 @@ Breaking change:
 - Add `@include k-TextAreaWrapper;` in your SCSS if you use `TextInput` with
   `tag='texteara'`.
 
-Feature:
+Features:
 - Add gradient to textarea.
 - Add `limit` prop to textarea.
 
-Fix:
+Fixes:
 - Add blur event to `TextInput` component.
 - `TextInput` placeholder on Safari.
 - `TextInputWithUnit` does not pass over `digits` to its `TextInput`.
@@ -44,11 +44,11 @@ Fix:
 
 ## [7.1.0] - 2017-02-23
 
-Feature:
+Features:
 - Add digits prop to resize `TextInput`, `TextInputWithUnit` and
   `FormAmountAndCurrency`.
 
-Fix:
+Fixes:
 - Increase line-height on tiny `Label`.
 
 ## [7.0.0] - 2017-02-22
