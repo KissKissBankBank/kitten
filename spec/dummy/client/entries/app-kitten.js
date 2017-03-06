@@ -54,12 +54,15 @@ import NavList from 'kitten/components/lists/nav-list'
 // Meters
 import { Progress } from 'kitten/components/meters/progress'
 
+// Navigation
+import { TabBar } from 'kitten/components/navigation/tab-bar'
+
+// Notifications
+import { Alert } from 'kitten/components/notifications/alert'
+
 // Popovers
 import { Popover } from 'kitten/components/popovers/popover'
 import { CallToActionPopover } from 'kitten/components/popovers/call-to-action-popover'
-
-// Navigation
-import { TabBar } from 'kitten/components/navigation/tab-bar'
 
 // Simulators
 import LoanSimulator from 'kitten/components/simulators/loan-simulator'
@@ -135,6 +138,9 @@ import { KarlLineWithTooltip,
 import { KarlPaymentButton } from 'kitten/karl/buttons/payment-button'
 import { KarlRandomProgress } from 'kitten/karl/meters/random-progress'
 import { KarlMakerWhoAmIStep } from 'app/maker/who-am-i/components/container'
+import { KarlAlert,
+         KarlAlertWithButton,
+         KarlAlertWithMarkdown } from 'kitten/karl/notifications/alert'
 
 ReactOnRails.register({
   // Box
@@ -192,12 +198,15 @@ ReactOnRails.register({
   // Meters
   Progress,
 
+  // Navigation
+  TabBar,
+
+  // Notifications
+  Alert,
+
   // Popovers
   CallToActionPopover,
   Popover,
-
-  // Navigation
-  TabBar,
 
   // Simulators
   LoanSimulator,
@@ -221,6 +230,9 @@ ReactOnRails.register({
   Title,
 
   // Karl composed components
+  KarlAlert,
+  KarlAlertWithButton,
+  KarlAlertWithMarkdown,
   KarlAutoTriggerCallToActionPopover,
   KarlAutoTriggerPopover,
   KarlLoudspeakerPopover,
