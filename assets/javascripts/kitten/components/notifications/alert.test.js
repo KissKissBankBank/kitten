@@ -28,7 +28,7 @@ describe('<Alert />', () => {
 
     it('has initial state', () => {
       expect(alert.state().show).to.be.true
-      expect(alert.state().height).to.be.equal("auto")
+      expect(alert.state().height).to.be.equal('auto')
     })
   })
 
@@ -110,7 +110,7 @@ describe('<Alert />', () => {
 
     it('changes state', () => {
       expect(alert.state().show).to.be.false
-      expect(alert.state().height).not.to.be.equal("auto")
+      expect(alert.state().height).not.to.be.equal('auto')
     })
 
     it('has a hidden class', () => {
