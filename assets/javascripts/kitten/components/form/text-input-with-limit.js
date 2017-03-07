@@ -10,10 +10,10 @@ export class TextInputWithLimit extends React.Component {
       value: this.props.defaultValue
     }
 
-    this.handleInput = this.handleInput.bind(this)
+    this.handleChange = this.handleChange.bind(this)
   }
 
-  handleInput(e) {
+  handleChange(e) {
     this.setState({ value: e.target.value })
   }
 
@@ -35,7 +35,7 @@ export class TextInputWithLimit extends React.Component {
       <div className="k-TextInputLimit">
         <TextInput className="k-TextInputLimit__input"
                    value={ this.state.value }
-                   onInput={ this.handleInput }
+                   onChange={ this.handleChange }
                    { ...others } />
         <div className={ counterClassNames }>
           { limit - length }
@@ -46,6 +46,7 @@ export class TextInputWithLimit extends React.Component {
 }
 
 TextInputWithLimit.defaultProps = {
+  tag: 'input',
   limit: 80,
   defaultValue: "",
 }

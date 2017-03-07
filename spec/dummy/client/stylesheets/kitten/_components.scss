@@ -33,6 +33,7 @@
 // Form
 
 @include k-Checkbox;
+@include k-LocationInput;
 @include k-Label;
 @include k-FormActions;
 @include k-FormComposer;
@@ -74,6 +75,7 @@
 ));
 
 @include k-Switch;
+@include k-TextAreaWrapper;
 @include k-TextInput;
 @include k-TextInputWithLimit;
 @include k-TextInputWithButton((
@@ -192,6 +194,7 @@
 
 // Notifications
 
+@include k-Alert;
 @include k-Badge;
 
 // Press

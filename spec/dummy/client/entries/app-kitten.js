@@ -23,7 +23,7 @@ import DropdownButton from 'kitten/components/dropdowns/dropdown-button'
 // Form
 import { Checkbox } from 'kitten/components/form/checkbox'
 import { FormAmountAndCurrency } from 'kitten/components/form/form-amount-and-currency'
-import FormPhoneNumber from 'kitten/components/form/form-phone-number'
+import { FormPhoneNumber } from 'kitten/components/form/form-phone-number'
 import { Label } from 'kitten/components/form/label'
 import { RadioButton } from 'kitten/components/form/radio-button'
 import Search from 'kitten/components/form/search'
@@ -32,6 +32,7 @@ import SelectWithState from 'kitten/components/form/select-with-state'
 import Slider from 'kitten/components/form/slider'
 import Switch from 'kitten/components/form/switch'
 import { TextInput } from 'kitten/components/form/text-input'
+import { LocationInput } from 'kitten/components/form/location-input'
 import { TextInputWithLimit } from 'kitten/components/form/text-input-with-limit'
 import { TextInputWithUnit } from 'kitten/components/form/text-input-with-unit'
 
@@ -42,6 +43,7 @@ import { Grid, GridCol } from 'kitten/components/grid/grid'
 import GrabberIcon from 'kitten/components/icons/grabber-icon'
 import { HeartIcon } from 'kitten/components/icons/heart-icon'
 import { VisaIcon } from 'kitten/components/icons/visa-icon'
+import { LocationIcon } from 'kitten/components/icons/location-icon'
 
 // Links
 import ExternalRichLink from 'kitten/components/links/external-rich-link'
@@ -52,12 +54,15 @@ import NavList from 'kitten/components/lists/nav-list'
 // Meters
 import { Progress } from 'kitten/components/meters/progress'
 
+// Navigation
+import { TabBar } from 'kitten/components/navigation/tab-bar'
+
+// Notifications
+import { Alert } from 'kitten/components/notifications/alert'
+
 // Popovers
 import { Popover } from 'kitten/components/popovers/popover'
 import { CallToActionPopover } from 'kitten/components/popovers/call-to-action-popover'
-
-// Navigation
-import { TabBar } from 'kitten/components/navigation/tab-bar'
 
 // Simulators
 import LoanSimulator from 'kitten/components/simulators/loan-simulator'
@@ -110,6 +115,10 @@ import { KarlSideGridWithRightAside,
        } from 'kitten/karl/grid/side-grid'
 import { KarlFormActions } from 'kitten/karl/form/form-actions'
 import { KarlFormRow } from 'kitten/karl/form/form-row'
+import { KarlRadioButtonError,
+         KarlRadioButtonContentError} from 'kitten/karl/form/radio-button'
+import { KarlCheckboxError } from 'kitten/karl/form/checkbox'
+import { KarlLocationInput } from 'kitten/karl/form/location-input'
 import { KarlGridTwelveColumns,
          KarlGridInGrid,
          KarlGridSmall,
@@ -130,6 +139,9 @@ import { KarlLineWithTooltip,
 import { KarlPaymentButton } from 'kitten/karl/buttons/payment-button'
 import { KarlRandomProgress } from 'kitten/karl/meters/random-progress'
 import { KarlMakerWhoAmIStep } from 'app/maker/who-am-i/components/container'
+import { KarlAlert,
+         KarlAlertWithButton,
+         KarlAlertWithMarkdown } from 'kitten/karl/notifications/alert'
 
 ReactOnRails.register({
   // Box
@@ -154,12 +166,13 @@ ReactOnRails.register({
   // Form
   FormAmountAndCurrency,
   FormPhoneNumber,
-  RadioButton,
   Grid,
   GridCol,
   GrabberIcon,
   HeaderTour,
   Label,
+  LocationInput,
+  RadioButton,
   ReactTooltip,
   Slider,
   Search,
@@ -175,6 +188,7 @@ ReactOnRails.register({
   GrabberIcon,
   HeartIcon,
   VisaIcon,
+  LocationIcon,
 
   // Links
   ExternalRichLink,
@@ -185,12 +199,15 @@ ReactOnRails.register({
   // Meters
   Progress,
 
+  // Navigation
+  TabBar,
+
+  // Notifications
+  Alert,
+
   // Popovers
   CallToActionPopover,
   Popover,
-
-  // Navigation
-  TabBar,
 
   // Simulators
   LoanSimulator,
@@ -215,6 +232,9 @@ ReactOnRails.register({
   Title,
 
   // Karl composed components
+  KarlAlert,
+  KarlAlertWithButton,
+  KarlAlertWithMarkdown,
   KarlAutoTriggerCallToActionPopover,
   KarlAutoTriggerPopover,
   KarlLoudspeakerPopover,
@@ -241,8 +261,12 @@ ReactOnRails.register({
   KarlLoanSimulatorWithError,
   KarlSideGridWithRightAside,
   KarlSideGridWithLeftAsideAndSmallSize,
+  KarlCheckboxError,
+  KarlLocationInput,
   KarlFormActions,
   KarlFormRow,
+  KarlRadioButtonError,
+  KarlRadioButtonContentError,
   KarlGridTwelveColumns,
   KarlGridInGrid,
   KarlGridSmall,

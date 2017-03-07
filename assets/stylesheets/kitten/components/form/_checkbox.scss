@@ -19,6 +19,9 @@
   $font-step: 0;
   $line-height: 1;
 
+  // Error
+  $error-color: map-get($k-colors, 'error');
+
   // Colors
   $background-color: map-get($k-colors, 'background-1');
   $background-color-checked: map-get($k-colors, 'primary-1');
@@ -66,8 +69,9 @@
       border-color: $border-color-hover;
     }
 
-    &:hover { color: $border-color-hover; }
-    &:active { color: $background-color-active; }
+    &:active {
+      color: $background-color-active;
+    }
 
     .k-Checkbox__input:checked:focus + &:before {
       box-shadow: 0 0 k-px-to-rem(3px) $background-color-checked;
@@ -79,6 +83,28 @@
                   no-repeat
                   center;
       border-color: $border-color-hover;
+    }
+
+    .k-Checkbox__input.is-error + & {
+      color: $error-color;
+      border-color: $error-color;
+
+      &:before {
+        border-color: $error-color;
+      }
+
+      &:active {
+        color: $error-color;
+      }
+    }
+
+    .k-Checkbox__input.is-error:checked:focus + &:before {
+      box-shadow: 0 0 k-px-to-rem(3px) $error-color;
+    }
+
+    .k-Checkbox__input.is-error:checked + &:before {
+      background-color: $error-color;
+      border-color: $error-color;
     }
 
     .k-Checkbox__input:disabled + & {

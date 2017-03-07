@@ -3,6 +3,10 @@ import classNames from 'classnames'
 import { TextInput } from 'kitten/components/form/text-input'
 
 export class TextInputWithUnit extends React.Component {
+  blur() {
+    this.input.blur()
+  }
+
   render() {
     const { className,
             valid,
@@ -11,6 +15,7 @@ export class TextInputWithUnit extends React.Component {
             unit,
             tiny,
             disabled,
+            digits,
             ...others } = this.props
 
     const textInputClassName = classNames(
@@ -31,7 +36,7 @@ export class TextInputWithUnit extends React.Component {
     const textInputWithUnitClassName = classNames(
       'k-TextInputWithUnit',
       {
-        'k-TextInputWithUnit--fullWidth': !this.props.digits,
+        'k-TextInputWithUnit--fullWidth': !digits,
       },
     )
 
@@ -43,6 +48,7 @@ export class TextInputWithUnit extends React.Component {
                    error={ error }
                    tiny={ tiny }
                    disabled={ disabled }
+                   ref={ input => this.input = input }
                    { ...others }
                    tag="input" />
         <span className={ unitClassName }>{ unit }</span>

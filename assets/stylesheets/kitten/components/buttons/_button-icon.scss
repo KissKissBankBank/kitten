@@ -510,6 +510,16 @@
     }
   }
 
+  .k-ButtonIcon--cross {
+    $cross-size: k-px-to-rem(8px);
+    @include k-buttonRounded($button-size-tiny, $cross-size, $cross-size);
+
+    .k-ButtonIcon__svg {
+      width: $cross-size;
+      height: $cross-size;
+    }
+  }
+
   .k-ButtonIcon--empty--micro {
     @include k-buttonRounded($button-size-micro, 0, 0);
   }

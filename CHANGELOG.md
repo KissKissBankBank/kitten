@@ -9,13 +9,67 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fix: Add keyboard accessibility to `Button`s with `a` tags and no `href`.
 - Fix: width error on `Checkbox` & `RadioButton` component.
 
+## [8.2.1] - 2017-03-07
+
+Fixes:
+- Animation change when `Alert` closes.
+
+## [8.2.0] - 2017-03-06
+
+Features:
+- Add new `Alert` component.
+- Add new `CloseButton` component.
+- Add new `CrossIcon` component.
+
+Fixes:
+- `SelectWithState` defaults to `deleteRemoves` to `false`.
+- Use `CloseButton` component instead of simple button in `Popover`.
+
+## [8.1.0] - 2017-03-06
+
+Features:
+- Add new `error` props on `RadioButton` and `Checkbox`.
+- Add new `LocationIcon` React component.
+- Add new `LocationInput` React component.
+
+Fixes:
+- Fix wrong padding for `InformationBox` component.
+- Use `handleChange` handler instead of `handleInput` in `TextInputWithLimit`
+  to prevent React warning.
+
+## [8.0.0] - 2017-02-28
+
+Breaking changes:
+- The `FormPhoneNumber` has new props.
+  To be retro-compatible you should, in your app's components:
+  - Rename `name` to `areaName`.
+  - Rename `options` to `areaOptions`.
+  - Rename `value` to `areaValue`.
+  - Add the `tiny` boolean prop.
+  - Replace `import FormPhoneNumber` by
+    `import { FormPhoneNumber }`.
+- Add `@include k-TextAreaWrapper;` in your SCSS if you use `TextInput` with
+  `tag='texteara'`.
+
+Features:
+- Add gradient to textarea.
+- Add `limit` prop to textarea.
+
+Fixes:
+- Add blur event to `TextInput` component.
+- `TextInput` placeholder on Safari.
+- `TextInputWithUnit` does not pass over `digits` to its `TextInput`.
+- `TextInput` React component with text area.
+- Add keyboard accessibility to `Button`s with `a` tags and no `href`.
+- width error on `Checkbox` & `RadioButton` component.
+
 ## [7.1.0] - 2017-02-23
 
-Feature:
+Features:
 - Add digits prop to resize `TextInput`, `TextInputWithUnit` and
   `FormAmountAndCurrency`.
 
-Fix:
+Fixes:
 - Increase line-height on tiny `Label`.
 
 ## [7.0.0] - 2017-02-22
