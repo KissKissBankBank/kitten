@@ -9,7 +9,7 @@ export class Alert extends React.Component {
 
     this.state = {
       show: props.show,
-      height: "auto",
+      height: 'auto',
     }
 
     this.handleCloseClick = this.handleCloseClick.bind(this)
@@ -81,5 +81,5 @@ Alert.defaultProps = {
   error: false,
   success: false,
   closeButton: false,
-  closeButtonLabel: "Close",
+  closeButtonLabel: 'Close',
 }
