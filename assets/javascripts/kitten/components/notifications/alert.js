@@ -18,6 +18,8 @@ export class Alert extends React.Component {
   handleCloseClick() {
     this.setState({
       show: false,
+
+      // The css animation on the close button requires a fixed height.
       height: domElementHelper.getComputedHeight(this.container),
     })
   }
