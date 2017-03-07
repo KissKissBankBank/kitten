@@ -1,7 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 import { expect } from 'chai'
-import { shallow } from 'enzyme'
+import { shallow, mount } from 'enzyme'
 import { Alert } from 'kitten/components/notifications/alert'
 
 describe('<Alert />', () => {
@@ -28,6 +28,7 @@ describe('<Alert />', () => {
 
     it('has initial state', () => {
       expect(alert.state().show).to.be.true
+      expect(alert.state().height).to.be.equal("auto")
     })
   })
 
@@ -63,6 +64,14 @@ describe('<Alert />', () => {
     })
   })
 
+  describe('with other prop', () => {
+    const alert = shallow(<Alert aria-hidden="true" />)
+
+    it('has an aria-hidden attribute', () => {
+      expect(alert).to.have.attr('aria-hidden', 'true')
+    })
+  })
+
   describe('with close button', () => {
     const alert = shallow(
       <Alert closeButton closeButtonLabel="Close this alert" />
@@ -94,13 +103,14 @@ describe('<Alert />', () => {
   })
 
   describe('simulates click event on CloseButton', () => {
-    const alert = shallow(<Alert closeButton />)
+    const alert = mount(<Alert closeButton />)
     const closeButton = alert.find('CloseButton')
 
     closeButton.simulate('click')
 
     it('changes state', () => {
       expect(alert.state().show).to.be.false
+      expect(alert.state().height).not.to.be.equal("auto")
     })
 
     it('has a hidden class', () => {
