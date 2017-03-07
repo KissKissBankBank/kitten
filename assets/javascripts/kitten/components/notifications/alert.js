@@ -44,7 +44,7 @@ export class Alert extends React.Component {
       closeButton,
       closeButtonLabel,
       children,
-      ...others
+      ...others,
     } = this.props
 
     const alertClassName = classNames(
