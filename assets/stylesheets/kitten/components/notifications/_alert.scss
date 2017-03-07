@@ -31,7 +31,7 @@
   $backgroundError: map-get($k-colors, 'error-2');
   $backgroundSuccess: map-get($k-colors, 'tertiary-1');
 
-  $easeInQuart: cubic-bezier(.895, .030, .685, .22);
+  $easeInQuart: cubic-bezier(.895, .03, .685, .22);
 
   .k-Alert {
     @include k-container;
