@@ -4,7 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Animation change when `Alert` closes.
+## [8.2.1] - 2017-03-07
+
+Fixes:
+- Animation change when `Alert` closes.
 
 ## [8.2.0] - 2017-03-06
 
