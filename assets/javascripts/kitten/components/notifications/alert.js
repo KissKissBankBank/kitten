@@ -1,13 +1,15 @@
 import React from 'react'
 import classNames from 'classnames'
 import { CloseButton } from 'kitten/components/buttons/close-button'
+import domElementHelper from 'kitten/helpers/dom/element-helper'
 
 export class Alert extends React.Component {
   constructor(props) {
     super(props)
 
     this.state = {
-      show: props.show
+      show: props.show,
+      height: 'auto',
     }
 
     this.handleCloseClick = this.handleCloseClick.bind(this)
@@ -16,6 +18,9 @@ export class Alert extends React.Component {
   handleCloseClick() {
     this.setState({
       show: false,
+
+      // The css animation on the close button requires a fixed height.
+      height: domElementHelper.getComputedHeight(this.container),
     })
   }
 
@@ -33,21 +38,36 @@ export class Alert extends React.Component {
   render() {
     if (!this.props.show) return null
 
+    const {
+      className,
+      show,
+      error,
+      success,
+      closeButton,
+      closeButtonLabel,
+      children,
+      ...others,
+    } = this.props
+
     const alertClassName = classNames(
       'k-Alert',
       {
-        'k-Alert--success': this.props.success,
-        'k-Alert--error': this.props.error,
+        'k-Alert--success': success,
+        'k-Alert--error': error,
         'k-Alert--hidden': !this.state.show,
       },
-      this.props.className
+      className
     )
 
     return (
-      <div className={ alertClassName } role="alert">
+      <div ref={ div => this.container = div }
+           role="alert"
+           style={ { height: this.state.height } }
+           className={ alertClassName }
+           { ...others }>
         <div className="k-Alert__row">
           <div className="k-Alert__content">
-            { this.props.children }
+            { children }
           </div>
         </div>
 
@@ -63,5 +83,5 @@ Alert.defaultProps = {
   error: false,
   success: false,
   closeButton: false,
-  closeButtonLabel: "Close",
+  closeButtonLabel: 'Close',
 }

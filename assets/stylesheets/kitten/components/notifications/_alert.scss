@@ -31,9 +31,12 @@
   $backgroundError: map-get($k-colors, 'error-2');
   $backgroundSuccess: map-get($k-colors, 'tertiary-1');
 
+  $easeInQuart: cubic-bezier(.895, .03, .685, .22);
+
   .k-Alert {
     @include k-container;
     position: relative;
+    overflow: hidden;
     background-color: $background;
   }
 
@@ -110,16 +113,13 @@
 
   .k-Alert--hidden {
     pointer-events: none;
-    animation: kAlertFadeOut .8s linear forwards;
+    animation: kAlertFadeOut .4s $easeInQuart forwards;
   }
 
   // FadeOut animation.
 
   @keyframes kAlertFadeOut {
-    0% { opacity: 1; height: initial; }
-    80% { opacity: 1; height: initial; transform: translateY(0px); }
-    89% { opacity: 0; height: initial; transform: translateY(-30px); }
-    90% { opacity: 0; height: initial; }
+    0% { opacity: 1; }
     100% { opacity: 0; height: 0; }
   }
 }
