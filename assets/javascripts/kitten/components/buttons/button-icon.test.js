@@ -15,10 +15,50 @@ describe('<ButtonIcon />', () => {
   })
 
   describe('className prop', () => {
-    const component = shallow(<ButtonIcon className="k-ButtonIcon--helium" />)
+    const component = shallow(<ButtonIcon modifier="helium" />)
 
     it('has className', () => {
       expect(component).to.have.className('k-ButtonIcon--helium')
+    })
+  })
+
+  describe('customClass prop', () => {
+    const component = shallow(<ButtonIcon modifier="customClass" />)
+
+    it('has className', () => {
+      expect(component).to.have.className('k-ButtonIcon--customClass')
+    })
+  })
+
+  describe('size prop', () => {
+    const component = shallow(<ButtonIcon size="tiny" />)
+
+    it('has size', () => {
+      expect(component).to.have.className('k-ButtonIcon--tiny')
+    })
+  })
+
+  describe('tag prop', () => {
+    const component = shallow(<ButtonIcon tag="a" />)
+
+    it('changes the tag', () => {
+      expect(component).to.have.tagName('a')
+    })
+  })
+
+  describe('with tag="a" and no href', () => {
+    const component = shallow(<ButtonIcon tag="a" />)
+
+    it('adds a tabindex', () => {
+      expect(component).to.have.attr('tabindex', '0')
+    })
+  })
+
+  describe('with tag="a" href="foo"', () => {
+    const component = shallow(<ButtonIcon tag="a" href="foo" />)
+
+    it('does not add a tabindex', () => {
+      expect(component).not.to.have.attr('tabindex')
     })
   })
 

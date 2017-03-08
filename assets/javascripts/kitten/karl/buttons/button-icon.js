@@ -24,7 +24,7 @@ export const KarlButtonIconMicro = props => {
 
 export const KarlButtonIconFacebookIcon = props => {
   return (
-    <ButtonIcon className="k-Button--icon" { ...props }>
+    <ButtonIcon className="k-Button--icon k-u-margin-bottom-single" { ...props }>
       <FacebookIcon className="k-ButtonIcon__svg" />
     </ButtonIcon>
   )
@@ -32,7 +32,7 @@ export const KarlButtonIconFacebookIcon = props => {
 
 export const KarlButtonIconTwitterIcon = props => {
   return (
-    <ButtonIcon className="k-Button--icon" { ...props }>
+    <ButtonIcon className="k-Button--icon k-u-margin-bottom-single" { ...props }>
       <TwitterIcon className="k-ButtonIcon__svg" />
     </ButtonIcon>
   )

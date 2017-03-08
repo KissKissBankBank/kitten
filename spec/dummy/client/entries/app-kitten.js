@@ -142,7 +142,7 @@ import { KarlButtonIconHeart,
          KarlButtonIconFacebookIcon,
          KarlButtonIconTwitterIcon,
          KarlButtonIconLinkedinIcon
-       } from 'kitten/karl/buttons/button-icon-heart-icon'
+       } from 'kitten/karl/buttons/button-icon'
 import { KarlLineWithTooltip,
          KarlLineWithBigHeart } from 'kitten/karl/layout/line'
 import { KarlPaymentButton } from 'kitten/karl/buttons/payment-button'

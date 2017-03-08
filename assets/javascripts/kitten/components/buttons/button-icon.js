@@ -33,5 +33,6 @@ export class ButtonIcon extends React.Component {
 
 ButtonIcon.defaultProps = {
   tag: 'button',
+  size: null,
   modifier: 'hydrogen',
 }
