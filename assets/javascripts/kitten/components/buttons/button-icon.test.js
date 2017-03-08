@@ -22,11 +22,11 @@ describe('<ButtonIcon />', () => {
     })
   })
 
-  describe('modifier prop', () => {
-    const component = shallow(<ButtonIcon modifier="customClass" />)
+  describe('className prop', () => {
+    const component = shallow(<ButtonIcon className="customClass" />)
 
     it('has customClass', () => {
-      expect(component).to.have.className('k-ButtonIcon--customClass')
+      expect(component).to.have.className('customClass')
     })
   })
 
