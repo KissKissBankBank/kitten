@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `SelectWithState` now accepts an `onInputChange` function.
+- Fix: `SelectWithState` does not overwrite previous `inputProps`.
+
 ## [8.2.1] - 2017-03-07
 
 Fixes:
