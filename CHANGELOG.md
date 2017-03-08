@@ -4,8 +4,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: `LocationInput` does not overwrite `onChange`.
+- Feature: Accept more props on `ArrowIcon`.
+- Feature: Add new `LinkedinIcon` React component.
+- Feature: Add new `TwitterIcon` React component.
+- Feature: Add new `FacebookIcon` React component.
+- Feature: Add new `ButtonIcon` React component.
 - Feature: Add `defaultValue` to `Location`.
+- Fix: `LocationInput` does not overwrite `onChange`.
 
 ## [8.3.0] - 2017-03-08
 
