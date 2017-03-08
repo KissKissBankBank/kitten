@@ -24,6 +24,8 @@ export class LocationInput extends React.Component {
   }
 
   render() {
+    const { onChange, defaultValue, ...others } = this.props
+
     const placesClassNames = {
       root: 'k-LocationInput__group',
       input: 'k-LocationInput__input',
@@ -51,9 +53,9 @@ export class LocationInput extends React.Component {
         <PlacesAutocomplete classNames={ placesClassNames }
                             value={ this.state.address }
                             autocompleteItem={ autocompleteItem }
+                            onChange={ this.handleChange }
                             hideLabel={ true }
-                            { ...this.props }
-                            onChange={ this.handleChange } />
+                            { ...others } />
       </div>
     )
   }
