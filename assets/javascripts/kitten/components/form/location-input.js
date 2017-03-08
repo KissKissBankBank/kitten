@@ -13,7 +13,7 @@ export class LocationInput extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      address: '',
+      address: this.props.defaultValue,
     }
     this.handleChange = this.handleChange.bind(this)
   }
@@ -61,4 +61,5 @@ export class LocationInput extends React.Component {
 
 LocationInput.defaultProps = {
   onChange: function() {},
+  defaultValue: '',
 }
