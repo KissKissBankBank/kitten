@@ -10,6 +10,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Add new `FacebookIcon` React component.
 - Feature: Add new `ButtonIcon` React component.
 
+## [8.3.0] - 2017-03-08
+
+Features:
+- `SelectWithState` now accepts an `onInputChange` function.
+
+Fixes:
+- `SelectWithState` does not overwrite previous `inputProps`.
+
 ## [8.2.1] - 2017-03-07
 
 Fixes:
