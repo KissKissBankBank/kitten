@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `LocationInput` does not overwrite `onChange`.
+
 ## [8.3.0] - 2017-03-08
 
 Features:
