@@ -18,7 +18,7 @@ export class ButtonIcon extends React.Component {
       },
     )
 
-  // Adds keyboard accessibility to `<a>`
+    // Adds keyboard accessibility to `<a>`
     const tabindex = (tag == "a" && !this.props.href) ? 0 : null
 
     const Tag = tag

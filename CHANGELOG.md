@@ -4,8 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Change file name `button-icon-hear-icon` to `button-icon`.
-- Fix: Change prop name `children`.
+- Feature: Accept more props on `ArrowIcon`.
 - Feature: Add new `LinkedinIcon` React component.
 - Feature: Add new `TwitterIcon` React component.
 - Feature: Add new `FacebookIcon` React component.
