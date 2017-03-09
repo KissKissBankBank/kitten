@@ -23,42 +23,46 @@
   $arrow-size: k-px-to-rem(8px);
   $tooltip-margin: k-px-to-rem(18px);
 
+  .k-StaticTooltip {
+    position: relative;
+    margin-top: 20px;
+  }
+
   .k-StaticTooltip__content {
     @include k-typographyFont($font);
     @include k-typographyFontSize($font-size, $line-height);
 
-    position: absolute;
     padding: k-px-to-rem(20px);
+    margin-top: $arrow-size;
+    width: k-px-to-rem(245px);
 
     background-color: $background-color-lithium;
     border: 1px solid $border-color-lithium;
-    color: $color-lithium;
-
-    width: k-px-to-rem(245px);
     border-radius: k-px-to-rem(8px);
-    margin-top: $tooltip-margin;
+    color: $color-lithium;
+  }
 
-    &::after,
+  .k-StaticTooltip__arrow {
+    position: absolute;
+    left: 8rem;
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: $arrow-size solid transparent;
+    border-right: $arrow-size solid transparent;
+    border-bottom: $arrow-size solid $border-color-lithium;
+    top: -$arrow-size;
+
     &::before {
       content: "";
-      border: 8px solid transparent;
-      left: 50%;
-      margin-left: -6px;
       position: absolute;
       width: 0;
       height: 0;
-    }
-
-    &::after {
-      top: -16px;
-      border-bottom-color: $border-color-lithium;
-    }
-
-    &::before {
-      border-bottom-color: white;
-      top: -15px;
-      left: 50%;
-      z-index: 101 !important;
+      margin-left: -$arrow-size;
+      margin-top: .09rem;
+      border-left: $arrow-size solid transparent;
+      border-right: $arrow-size solid transparent;
+      border-bottom: $arrow-size solid white;
     }
   }
 }
