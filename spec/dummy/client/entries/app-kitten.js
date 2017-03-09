@@ -9,6 +9,7 @@ import LinkBox from 'kitten/components/box/link-box'
 
 // Buttons
 import { Button } from 'kitten/components/buttons/button'
+import { ButtonIcon } from 'kitten/components/buttons/button-icon'
 import ButtonImageWithTextAndBadge from 'kitten/components/buttons/button-image-with-text-and-badge'
 import ButtonTooltipIcon from 'kitten/components/buttons/button-tooltip-icon'
 import { TagButton } from 'kitten/components/buttons/tag-button'
@@ -44,6 +45,9 @@ import GrabberIcon from 'kitten/components/icons/grabber-icon'
 import { HeartIcon } from 'kitten/components/icons/heart-icon'
 import { VisaIcon } from 'kitten/components/icons/visa-icon'
 import { LocationIcon } from 'kitten/components/icons/location-icon'
+import { FacebookIcon } from 'kitten/components/icons/facebook-icon'
+import { TwitterIcon } from 'kitten/components/icons/twitter-icon'
+import { LinkedinIcon } from 'kitten/components/icons/linkedin-icon'
 
 // Links
 import ExternalRichLink from 'kitten/components/links/external-rich-link'
@@ -134,6 +138,12 @@ import { KarlButtonIconHeartRight,
          KarlButtonIconHeartLeft
        } from 'kitten/karl/buttons/button-heart-icon-words'
 import { KarlButtonAndText } from 'kitten/karl/buttons/button'
+import { KarlButtonIconHeart,
+         KarlButtonIconMicro,
+         KarlButtonIconFacebookIcon,
+         KarlButtonIconTwitterIcon,
+         KarlButtonIconLinkedinIcon
+       } from 'kitten/karl/buttons/button-icon'
 import { KarlLineWithTooltip,
          KarlLineWithBigHeart } from 'kitten/karl/layout/line'
 import { KarlPaymentButton } from 'kitten/karl/buttons/payment-button'
@@ -152,6 +162,7 @@ ReactOnRails.register({
 
   // Buttons
   Button,
+  ButtonIcon,
   ButtonImageWithTextAndBadge,
   ButtonTooltipIcon,
   TagButton,
@@ -190,6 +201,9 @@ ReactOnRails.register({
   HeartIcon,
   VisaIcon,
   LocationIcon,
+  FacebookIcon,
+  TwitterIcon,
+  LinkedinIcon,
 
   // Links
   ExternalRichLink,
@@ -239,6 +253,11 @@ ReactOnRails.register({
   KarlAutoTriggerCallToActionPopover,
   KarlAutoTriggerPopover,
   KarlLoudspeakerPopover,
+  KarlButtonIconHeart,
+  KarlButtonIconMicro,
+  KarlButtonIconFacebookIcon,
+  KarlButtonIconTwitterIcon,
+  KarlButtonIconLinkedinIcon,
   KarlButtonIconHeartRight,
   KarlButtonIconHeartLeft,
   KarlButtonAndText,

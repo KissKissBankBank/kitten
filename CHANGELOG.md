@@ -5,9 +5,27 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add new `StaticTooltip` React component.
-- Fix: `TextInput` React component with text area.
-- Fix: Add keyboard accessibility to `Button`s with `a` tags and no `href`.
-- Fix: width error on `Checkbox` & `RadioButton` component.
+
+## [8.4.0] - 2017-03-08
+
+Features:
+- Accept more props on `ArrowIcon`.
+- Add new `LinkedinIcon` React component.
+- Add new `TwitterIcon` React component.
+- Add new `FacebookIcon` React component.
+- Add new `ButtonIcon` React component.
+- Add `defaultValue` to `Location`.
+
+Fixes:
+- `LocationInput` does not overwrite `onChange`.
+
+## [8.3.0] - 2017-03-08
+
+Features:
+- `SelectWithState` now accepts an `onInputChange` function.
+
+Fixes:
+- `SelectWithState` does not overwrite previous `inputProps`.
 
 ## [8.2.1] - 2017-03-07
 
