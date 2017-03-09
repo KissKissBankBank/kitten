@@ -1,6 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 import domElementHelper from 'kitten/helpers/dom/element-helper'
+import { TextInput } from 'kitten/components/form/text-input'
 
 class Search extends React.Component {
   constructor(props) {
@@ -54,15 +55,15 @@ class Search extends React.Component {
                   action={ this.props.actionUrl }
                   acceptCharset="UTF-8"
                   method="get">
-        <input className={ inputClassName }
-               type="text"
-               id={ this.props.inputId }
-               name={ this.props.inputName }
-               placeholder={ this.props.inputPlaceholder } />
+        <TextInput className={ inputClassName }
+                   type="text"
+                   id={ this.props.inputId }
+                   name={ this.props.inputName }
+                   placeholder={ this.props.inputPlaceholder } />
 
         <button type="submit"
                 aria-label={ this.props.submitLabel }
-                className="k-SearchInput__submit"
+                className="k-SearchInput__submit k-SearchInput__submit--tiny"
                 onFocus={ this.handleSubmitFocus }
                 onBlur={ this.handleSubmitBlur }
                 onMouseOver={ this.handleSubmitMouseOver }
