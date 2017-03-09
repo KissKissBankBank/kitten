@@ -73,7 +73,7 @@ import { Stepper } from 'kitten/components/steppers/stepper'
 
 // Tooltips
 import ReactTooltip from 'react-tooltip'
-import { Tooltip } from 'kitten/components/tooltips/tooltip'
+import Tooltip from 'kitten/components/tooltips/tooltip'
 import { StaticTooltip } from 'kitten/components/tooltips/static-tooltip'
 
 // Tours
@@ -137,6 +137,7 @@ import { KarlButtonAndText } from 'kitten/karl/buttons/button'
 import { KarlLineWithTooltip,
          KarlLineWithBigHeart } from 'kitten/karl/layout/line'
 import { KarlPaymentButton } from 'kitten/karl/buttons/payment-button'
+import { KarlStaticTooltip } from 'kitten/karl/tooltips/static-tooltip'
 import { KarlRandomProgress } from 'kitten/karl/meters/random-progress'
 import { KarlMakerWhoAmIStep } from 'app/maker/who-am-i/components/container'
 import { KarlAlert,
@@ -261,6 +262,7 @@ ReactOnRails.register({
   KarlLoanSimulatorWithError,
   KarlSideGridWithRightAside,
   KarlSideGridWithLeftAsideAndSmallSize,
+  KarlStaticTooltip,
   KarlCheckboxError,
   KarlLocationInput,
   KarlFormActions,
