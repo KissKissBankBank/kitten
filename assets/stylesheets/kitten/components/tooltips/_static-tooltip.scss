@@ -48,10 +48,9 @@
     display: block;
     width: 0;
     height: 0;
-    border-left: $arrow-size solid transparent;
-    border-right: $arrow-size solid transparent;
-    border-bottom: $arrow-size solid $border-color-lithium;
-    top: -$arrow-size;
+    border: $arrow-size solid transparent;
+    border-bottom-color: $border-color-lithium;
+    top: -1rem;
 
     &::before {
       content: "";
@@ -60,9 +59,9 @@
       height: 0;
       margin-left: -$arrow-size;
       margin-top: .09rem;
-      border-left: $arrow-size solid transparent;
-      border-right: $arrow-size solid transparent;
-      border-bottom: $arrow-size solid white;
+      border: $arrow-size solid transparent;
+      border-bottom-color: white;
+      top: -.5rem;
     }
   }
 }

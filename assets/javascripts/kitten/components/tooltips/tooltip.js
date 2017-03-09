@@ -14,6 +14,7 @@ export default class Tooltip extends React.Component {
         <ButtonTooltipIcon data-tip
                            data-for={ id }
                            data-event="click"
+                           data-dismiss={ id }
                            aria-describedby={ id }
                            { ...buttonTooltipIconProps } />
         <ReactTooltip id={ id }

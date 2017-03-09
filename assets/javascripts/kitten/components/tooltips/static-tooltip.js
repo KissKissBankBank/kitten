@@ -5,16 +5,17 @@ export class StaticTooltip extends React.Component {
     let style
 
     if (this.props.arrowLeftPosition) {
-      style= { left: this.props.arrowLeftPosition }
+      style = { left: this.props.arrowLeftPosition }
     }
-    
+
     return (
-      <span style={style} className="k-StaticTooltip__arrow" />
+      <span style={ style } className="k-StaticTooltip__arrow" />
     )
   }
 
   render() {
-    const { children } = this.props
+    const { children,
+            ...others } = this.props
 
     return (
       <div className="k-StaticTooltip">
@@ -25,4 +26,8 @@ export class StaticTooltip extends React.Component {
       </div>
     )
   }
+}
+
+StaticTooltip.defaultProps = {
+  arrowLeftPosition: null,
 }
