@@ -2,8 +2,14 @@ import React from 'react'
 
 export class StaticTooltip extends React.Component {
   renderArrow() {
+    let style
+
+    if (this.props.arrowLeftPosition) {
+      style= { left: this.props.arrowLeftPosition }
+    }
+    
     return (
-      <span className="k-StaticTooltip__arrow" />
+      <span style={style} className="k-StaticTooltip__arrow" />
     )
   }
 
