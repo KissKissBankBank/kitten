@@ -28,6 +28,7 @@ class SelectWithState extends React.Component {
   handleChange(val) {
     this.setState({ value: val })
     this.props.onChange(val)
+    this.props.onInputChange({ value: val, name: this.props.name })
   }
 
   renderLabel() {
@@ -93,10 +94,10 @@ class SelectWithMultiLevel extends React.Component {
   }
 
   render() {
-    let inputProps = {}
+    let inputProps = this.props.inputProps
 
-    if (this.props.labelText)
-      inputProps = { 'aria-labelledby': this.props.id }
+    if (this.props.labelText && !inputProps['aria-labelledby'])
+      inputProps['aria-labelledby'] = this.props.id
 
     return <Select optionRenderer={ this.optionRenderer }
                    { ...this.props }
@@ -107,11 +108,15 @@ class SelectWithMultiLevel extends React.Component {
 
 SelectWithState.defaultProps = {
   onChange: function() {},
+  onInputChange: function() {},
   clearable: false,
   searchable: false,
+  deleteRemoves: false,
   multi: false,
   labelText: null,
   tiny: false,
+  name: null,
+  inputProps: {},
 }
 
 export default SelectWithState

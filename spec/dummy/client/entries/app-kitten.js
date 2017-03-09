@@ -9,6 +9,7 @@ import LinkBox from 'kitten/components/box/link-box'
 
 // Buttons
 import { Button } from 'kitten/components/buttons/button'
+import { ButtonIcon } from 'kitten/components/buttons/button-icon'
 import ButtonImageWithTextAndBadge from 'kitten/components/buttons/button-image-with-text-and-badge'
 import ButtonTooltipIcon from 'kitten/components/buttons/button-tooltip-icon'
 import { TagButton } from 'kitten/components/buttons/tag-button'
@@ -44,6 +45,9 @@ import GrabberIcon from 'kitten/components/icons/grabber-icon'
 import { HeartIcon } from 'kitten/components/icons/heart-icon'
 import { VisaIcon } from 'kitten/components/icons/visa-icon'
 import { LocationIcon } from 'kitten/components/icons/location-icon'
+import { FacebookIcon } from 'kitten/components/icons/facebook-icon'
+import { TwitterIcon } from 'kitten/components/icons/twitter-icon'
+import { LinkedinIcon } from 'kitten/components/icons/linkedin-icon'
 
 // Links
 import ExternalRichLink from 'kitten/components/links/external-rich-link'
@@ -54,12 +58,15 @@ import NavList from 'kitten/components/lists/nav-list'
 // Meters
 import { Progress } from 'kitten/components/meters/progress'
 
+// Navigation
+import { TabBar } from 'kitten/components/navigation/tab-bar'
+
+// Notifications
+import { Alert } from 'kitten/components/notifications/alert'
+
 // Popovers
 import { Popover } from 'kitten/components/popovers/popover'
 import { CallToActionPopover } from 'kitten/components/popovers/call-to-action-popover'
-
-// Navigation
-import { TabBar } from 'kitten/components/navigation/tab-bar'
 
 // Simulators
 import LoanSimulator from 'kitten/components/simulators/loan-simulator'
@@ -130,11 +137,20 @@ import { KarlButtonIconHeartRight,
          KarlButtonIconHeartLeft
        } from 'kitten/karl/buttons/button-heart-icon-words'
 import { KarlButtonAndText } from 'kitten/karl/buttons/button'
+import { KarlButtonIconHeart,
+         KarlButtonIconMicro,
+         KarlButtonIconFacebookIcon,
+         KarlButtonIconTwitterIcon,
+         KarlButtonIconLinkedinIcon
+       } from 'kitten/karl/buttons/button-icon'
 import { KarlLineWithTooltip,
          KarlLineWithBigHeart } from 'kitten/karl/layout/line'
 import { KarlPaymentButton } from 'kitten/karl/buttons/payment-button'
 import { KarlRandomProgress } from 'kitten/karl/meters/random-progress'
 import { KarlMakerWhoAmIStep } from 'app/maker/who-am-i/components/container'
+import { KarlAlert,
+         KarlAlertWithButton,
+         KarlAlertWithMarkdown } from 'kitten/karl/notifications/alert'
 
 ReactOnRails.register({
   // Box
@@ -144,6 +160,7 @@ ReactOnRails.register({
 
   // Buttons
   Button,
+  ButtonIcon,
   ButtonImageWithTextAndBadge,
   ButtonTooltipIcon,
   TagButton,
@@ -182,6 +199,9 @@ ReactOnRails.register({
   HeartIcon,
   VisaIcon,
   LocationIcon,
+  FacebookIcon,
+  TwitterIcon,
+  LinkedinIcon,
 
   // Links
   ExternalRichLink,
@@ -192,12 +212,15 @@ ReactOnRails.register({
   // Meters
   Progress,
 
+  // Navigation
+  TabBar,
+
+  // Notifications
+  Alert,
+
   // Popovers
   CallToActionPopover,
   Popover,
-
-  // Navigation
-  TabBar,
 
   // Simulators
   LoanSimulator,
@@ -221,9 +244,17 @@ ReactOnRails.register({
   Title,
 
   // Karl composed components
+  KarlAlert,
+  KarlAlertWithButton,
+  KarlAlertWithMarkdown,
   KarlAutoTriggerCallToActionPopover,
   KarlAutoTriggerPopover,
   KarlLoudspeakerPopover,
+  KarlButtonIconHeart,
+  KarlButtonIconMicro,
+  KarlButtonIconFacebookIcon,
+  KarlButtonIconTwitterIcon,
+  KarlButtonIconLinkedinIcon,
   KarlButtonIconHeartRight,
   KarlButtonIconHeartLeft,
   KarlButtonAndText,

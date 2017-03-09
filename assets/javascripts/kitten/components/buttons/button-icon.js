@@ -1,0 +1,38 @@
+import React from 'react'
+import classNames from 'classnames'
+
+export class ButtonIcon extends React.Component {
+  render() {
+    const { className,
+            tag,
+            modifier,
+            size,
+            ...others } = this.props
+
+    const buttonIconClassNames = classNames(
+      'k-ButtonIcon',
+      className,
+      {
+        [`k-ButtonIcon--${modifier}`]: modifier,
+        [`k-ButtonIcon--${size}`]: size,
+      },
+    )
+
+    // Adds keyboard accessibility to `<a>`
+    const tabindex = (tag == "a" && !this.props.href) ? 0 : null
+
+    const Tag = tag
+
+    return (
+      <Tag className={ buttonIconClassNames }
+           tabIndex={ tabindex }
+           { ...others } />
+    )
+  }
+}
+
+ButtonIcon.defaultProps = {
+  tag: 'button',
+  size: null,
+  modifier: 'hydrogen',
+}
