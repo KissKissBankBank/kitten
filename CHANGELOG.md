@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Fix wrong display for SearchInput component
+
 ## [8.1.0] - 2017-03-06
 
 Feature:
