@@ -12,6 +12,14 @@ describe('<StaticTooltip />', () => {
     })
   })
 
+  describe('className prop', () => {
+    const component = shallow(<StaticTooltip className="customClass" />)
+
+    it('has customClass', () => {
+      expect(component).to.have.className('customClass')
+    })
+  })
+
   describe('arrowLeftPosition', () => {
     const component = shallow(<StaticTooltip arrowLeftPosition="150px" />)
     const arrow = component.find('.k-StaticTooltip__arrow')

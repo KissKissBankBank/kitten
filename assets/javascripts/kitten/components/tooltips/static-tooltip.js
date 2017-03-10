@@ -1,4 +1,5 @@
 import React from 'react'
+import classNames from 'classnames'
 
 export class StaticTooltip extends React.Component {
   renderArrow() {
@@ -15,10 +16,16 @@ export class StaticTooltip extends React.Component {
 
   render() {
     const { children,
+            className,
             ...others } = this.props
 
+    const staticTooltipClassName = classNames(
+      'k-StaticTooltip',
+      className,
+    )
+
     return (
-      <div className="k-StaticTooltip" { ...others }>
+      <div className={ staticTooltipClassName } { ...others }>
         { this.renderArrow() }
         <div className="k-StaticTooltip__content">
           { children }
