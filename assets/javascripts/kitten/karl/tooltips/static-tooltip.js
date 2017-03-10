@@ -4,11 +4,11 @@ import { Button } from 'kitten/components/buttons/button'
 
 export const KarlStaticTooltip = props => {
   return (
-    <span>
+    <div className="karl-StaticTooltip">
       <Button modifier="helium">
         Button
       </Button>
       <StaticTooltip { ...props } />
-    </span>
+    </div>
   )
 }
