@@ -63,7 +63,7 @@
   $submit-border-radius: k-px-to-rem(4px);
 
   // Tiny height from k-TextInput
-  $tiny-height: k-px-to-rem(40px);
+  $submit-tiny-height: k-px-to-rem(40px);
 
   // Transition
   $transition-speed: .2s;
@@ -171,6 +171,6 @@
   }
 
   .k-SearchInput__submit--tiny {
-    height: $tiny-height;
+    height: $submit-tiny-height;
   }
 }
