@@ -26,8 +26,12 @@
   $arrow-size: k-px-to-rem(8px);
 
   .k-StaticTooltip {
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
     margin-top: 20px;
+    text-align: left;
   }
 
   .k-StaticTooltip__content {
@@ -37,6 +41,7 @@
     padding: k-px-to-rem(20px);
     margin-top: $arrow-size;
     width: k-px-to-rem(245px);
+    position: relative;
 
     background-color: $background-color-lithium;
     border: 1px solid $border-color-lithium;

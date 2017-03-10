@@ -17,6 +17,7 @@ export class StaticTooltip extends React.Component {
   render() {
     const { children,
             className,
+            arrowLeftPosition,
             ...others } = this.props
 
     const staticTooltipClassName = classNames(
@@ -26,8 +27,8 @@ export class StaticTooltip extends React.Component {
 
     return (
       <div className={ staticTooltipClassName } { ...others }>
-        { this.renderArrow() }
         <div className="k-StaticTooltip__content">
+          { this.renderArrow() }
           { children }
         </div>
       </div>
