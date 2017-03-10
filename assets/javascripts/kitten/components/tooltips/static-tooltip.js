@@ -18,7 +18,7 @@ export class StaticTooltip extends React.Component {
             ...others } = this.props
 
     return (
-      <div className="k-StaticTooltip">
+      <div className="k-StaticTooltip" { ...others }>
         { this.renderArrow() }
         <div className="k-StaticTooltip__content">
           { children }

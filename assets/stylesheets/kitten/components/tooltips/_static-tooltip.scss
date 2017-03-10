@@ -8,9 +8,12 @@
 ///
 /// @example html
 ///
+///   <StaticTooltip class="k-StaticTooltip">
+///     <span class="k-StaticTooltip__arrow" />
+///     <div class="k-StaticTooltip__content">Lorem ipsum...</div>
+///   </StaticTooltip>
 
 @mixin k-StaticTooltip {
-
   // Colors Lithium
   $color-lithium: map-get($k-colors, 'primary-1');
   $border-color-lithium: map-get($k-colors, 'primary-4');
@@ -21,7 +24,6 @@
   $line-height: 1.3;
 
   $arrow-size: k-px-to-rem(8px);
-  $tooltip-margin: k-px-to-rem(18px);
 
   .k-StaticTooltip {
     position: relative;
