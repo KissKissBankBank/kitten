@@ -62,59 +62,73 @@
   // Border radius Text - input
   $submit-border-radius: k-px-to-rem(4px);
 
+  // Tiny height from k-TextInput
+  $submit-tiny-height: k-px-to-rem(40px);
+
   // Transition
   $transition-speed: .2s;
 
   .k-SearchInput {
-    position: relative;
-    display: inline-block;
+    display: table;
+    position: relative; // to place an absolute unit
+
+    border-collapse: separate;
+    box-sizing: border-box;
+    width: k-px-to-rem(160px) + $submit-horizontal-padding * 2 + $icon-size;
   }
 
   .k-SearchInput__input {
-    width: k-px-to-rem(160px);
+    display: table-cell;
+    vertical-align: middle;
+
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    border-right: 0 !important;
+    box-sizing: border-box;
+    width: initial !important;
     padding-right: $input-right-padding;
 
     &:focus ~ .k-SearchInput__submit {
-      border-left-color: $border-focus;
+      border-color: $border-focus;
     }
 
     // You can add this class in JavaScript to manage `k-SearchInput__input`
     // hover style depending on a following sibling hover state.
-    &.is-hover {
+    &.is-hover ~ .k-SearchInput__submit {
       border-color: $border-hover;
     }
 
     // You can add this class in JavaScript to manage `k-SearchInput__input`
     // active style depending on a following sibling active state.
-    &.is-active {
+    &.is-active ~ .k-SearchInput__submit {
       border-color: $border-active;
     }
   }
 
   .k-SearchInput__submit {
-    position: absolute;
-    top: 0;
-    right: 0;
+    display: table-cell;
+    vertical-align: middle;
 
+    box-sizing: border-box;
     width: $submit-horizontal-padding * 2 + $icon-size;
     height: 100%;
-    padding: 0;
 
     background-color: transparent;
-    border: none;
-    border-left: 1px solid $border;
     border-top-right-radius: $submit-border-radius;
     border-bottom-right-radius: $submit-border-radius;
+    border: 1px solid $border;
     outline: none; // since we introduce our own focus styles
 
-    font: 0/0;
-    line-height: 1;
     color: transparent;
     text-shadow: none;
-    text-align: center;
 
     cursor: pointer;
     transition: all $transition-speed;
+
+    svg {
+      display: block;
+      margin: 0 auto;
+    }
 
     &:focus {
       background-color: $submit-focus-background;
@@ -154,5 +168,9 @@
         stroke: $submit-active-color;
       }
     }
+  }
+
+  .k-SearchInput__submit--tiny {
+    height: $submit-tiny-height;
   }
 }
