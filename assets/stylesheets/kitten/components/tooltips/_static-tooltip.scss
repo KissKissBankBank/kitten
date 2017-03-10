@@ -9,8 +9,10 @@
 /// @example html
 ///
 ///   <StaticTooltip class="k-StaticTooltip">
-///     <span class="k-StaticTooltip__arrow" />
-///     <div class="k-StaticTooltip__content">Lorem ipsum...</div>
+///     <div class="k-StaticTooltip__content">
+///       <div class="k-StaticTooltip__arrow" />
+///       Lorem ipsum...
+///     </div>
 ///   </StaticTooltip>
 
 @mixin k-StaticTooltip {
