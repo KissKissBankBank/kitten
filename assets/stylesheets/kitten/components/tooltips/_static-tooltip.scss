@@ -8,12 +8,12 @@
 ///
 /// @example html
 ///
-///   <StaticTooltip class="k-StaticTooltip">
+///   <div class="k-StaticTooltip">
 ///     <div class="k-StaticTooltip__content">
 ///       <span class="k-StaticTooltip__arrow" />
 ///       Lorem ipsum...
 ///     </div>
-///   </StaticTooltip>
+///   </div>
 
 @mixin k-StaticTooltip {
   // Colors Lithium
