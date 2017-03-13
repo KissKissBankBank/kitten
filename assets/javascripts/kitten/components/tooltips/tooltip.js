@@ -5,26 +5,27 @@ import ButtonTooltipIcon from 'kitten/components/buttons/button-tooltip-icon'
 export default class Tooltip extends React.Component {
   render() {
     const { place,
+            children,
+            id,
             ...buttonTooltipIconProps } = this.props
 
     return (
       <div className="k-Tooltip">
         <ButtonTooltipIcon data-tip
-                           data-for={ this.props.id }
+                           data-for={ id }
                            data-event="click"
-                           data-dismiss={ this.props.id }
-                           aria-describedby={ this.props.id }
+                           data-dismiss={ id }
+                           aria-describedby={ id }
                            { ...buttonTooltipIconProps } />
-
-        <ReactTooltip id={ this.props.id }
+        <ReactTooltip id={ id }
                       // This is not a mistake, this attribute is called
-                      // class not className !
+                      // class not className!
                       class="k-Tooltip__content"
                       role="tooltip"
                       effect="solid"
                       place={ place }
-                      globalEventOff="click">
-          { this.props.children }
+                      event="none">
+          { children }
         </ReactTooltip>
       </div>
     )
@@ -34,6 +35,5 @@ export default class Tooltip extends React.Component {
 Tooltip.defaultProps = {
   id: '',
   place: 'right',
-  type: 'button',
   children: null,
 }
