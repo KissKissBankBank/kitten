@@ -20,7 +20,7 @@ describe('<StaticTooltip />', () => {
     })
   })
 
-  describe('arrowLeftPosition', () => {
+  describe('arrowLeftPosition prop', () => {
     const component = shallow(<StaticTooltip arrowLeftPosition="150px" />)
     const arrow = component.find('.k-StaticTooltip__arrow')
 
