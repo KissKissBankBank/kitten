@@ -7,12 +7,12 @@ describe('<StaticTooltip />', () => {
   describe('by default', () => {
     const component = shallow(<StaticTooltip />)
 
-    it('a <StaticTooltip />', () => {
+    it('has the k-StaticTooltip class', () => {
       expect(component).to.have.className('k-StaticTooltip')
     })
   })
 
-  describe('has the k-StaticTooltip class', () => {
+  describe('className prop', () => {
     const component = shallow(<StaticTooltip className="customClass" />)
 
     it('adds the customClass to the component', () => {
