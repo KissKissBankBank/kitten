@@ -1,10 +1,9 @@
 import React from 'react'
 
 export class AmountList extends React.Component {
-
-  renderTable() {
+  renderContent() {
     <th className="k-AmountList__title" scope="row">
-      { title }
+      { this.props.title }
       <td className="k-AmountList__info">
         500&nbsp;€
       </td>
@@ -18,7 +17,7 @@ export class AmountList extends React.Component {
     return (
       <table className="k-AmountList">
         <tr className="k-AmountList__row">
-          { this.renderTable() }
+          { this.renderContent() }
         </tr>
       </table>
     )
