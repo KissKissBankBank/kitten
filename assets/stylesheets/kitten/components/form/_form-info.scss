@@ -1,5 +1,3 @@
-/// DEPRECATED in favor of k-FormInfo
-///
 /// Text input with info
 ///
 /// A simple text input.
@@ -10,7 +8,7 @@
 ///
 /// @example scss - Usage
 ///
-/// @include k-TextInputWithInfo((
+/// @include k-FormInfo((
 ///  label: (
 ///    font: 'source-sans-semi-bold',
 ///    font-size: -2,
@@ -23,15 +21,15 @@
 ///  )
 /// ));
 ///
-/// <div class="k-TextInputWithInfo">
-///   <label class="k-TextInputWithInfo__label">Nom du label</label>
+/// <div class="k-FormInfo">
+///   <label class="k-FormInfo__label">Nom du label</label>
 ///   <input class="k-TextInput"
 ///          type="text"
 ///          name=""
 ///          placeholder="Lorem ipsum dolor sit amet" />
 /// </div>
 
-@mixin k-TextInputWithInfo($input) {
+@mixin k-FormInfo($input) {
 
   // Label
   $font-label: k-string-definition(
@@ -49,7 +47,7 @@
   $color-error: k-color-definition(
     k-map-fetch($input, ('error', 'color')));
 
-  .k-TextInputWithInfo__label {
+  .k-FormInfo__label {
     @include k-typographyFont($font-label);
     @include k-typographyFontSize($font-size-label);
 
@@ -59,7 +57,7 @@
     color: $color-label;
   }
 
-  .k-TextInputWithInfo__error {
+  .k-FormInfo__error {
     @include k-typographyFont($font-error);
     @include k-typographyFontSize($font-size-error);
     color: $color-error;
