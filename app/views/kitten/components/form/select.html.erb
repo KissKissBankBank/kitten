@@ -61,7 +61,7 @@
   }) %>
 <% end %>
 
-<%= example "big select with label" do %>
+<%= example "tiny select with label" do %>
   <%= react_component('SelectWithState', props: {
         labelText: 'Please select a language:',
         id: 'select-with-label',
@@ -70,6 +70,18 @@
           { value: 'en', label: 'English' },
           { value: 'es', label: 'Español' },
         ],
-        big: true,
+        tiny: true,
+  }) %>
+<% end %>
+
+<%= example "error select" do %>
+  <%= react_component('SelectWithState', props: {
+        id: 'select-with-label',
+        options: [
+          { value: 'de', label: 'Deutsch' },
+          { value: 'en', label: 'English' },
+          { value: 'es', label: 'Español' },
+        ],
+        error: true,
   }) %>
 <% end %>

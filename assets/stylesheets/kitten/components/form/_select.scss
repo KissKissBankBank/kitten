@@ -30,6 +30,7 @@
     select-input-border-width: 1px,
   );
   $options: map-merge($options-tiny, (select-input-height: 50px));
+  $colors-error: map-get($k-colors, 'error');
 
   .k-Select {
     @include k-typographyFont($font);
@@ -57,6 +58,21 @@
 
     @include k-typographyFont($bold);
     @include k-typographyFontSize(-1);
+  }
+
+  .k-Select.is-error .Select:not(.is-open):not(.is-focused) {
+    .Select-control {
+      border-color: $colors-error;
+    }
+    .Select-arrow-zone {
+      background-image: url('~icons/arrow-bottom-red.svg');
+      border-left-color: $colors-error;
+    }
+
+    &.has-value.Select--single > .Select-control,
+     .Select-value .Select-value-label {
+      color: $colors-error;
+    }
   }
 
   @include _k-Select-ReactSelectAnimations;
