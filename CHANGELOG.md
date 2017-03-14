@@ -4,9 +4,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add new `StaticTooltip` React component.
-- Fix: Add bottom padding to `.k-SideGrid__content` element.
-- Fix: Fix SearchInput content overflow display.
+## [8.5.0] - 2017-03-14
+
+Features:
+- Add new `StaticTooltip` React component.
+
+Fixes:
+- Add bottom padding to `.k-SideGrid__content` element.
+- Fix SearchInput content overflow display.
 
 ## [8.4.0] - 2017-03-08
 
