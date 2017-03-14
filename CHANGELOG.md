@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add new `AmountsList` React Component.
 - Fix: Fix SearchInput content overflow display.
 
 ## [8.4.0] - 2017-03-08
