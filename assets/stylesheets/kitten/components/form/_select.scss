@@ -64,6 +64,7 @@
     .Select-control {
       border-color: $colors-error;
     }
+
     .Select-arrow-zone {
       background-image: url('~icons/arrow-bottom-red.svg');
       border-left-color: $colors-error;
@@ -346,6 +347,7 @@
     .Select-value-label {
       color: $select-text-color;
     }
+
     a.Select-value-label {
       cursor: pointer;
       text-decoration: none;
@@ -455,6 +457,7 @@
   .Select--multi .Select-multi-value-wrapper {
     display: inline-block;
   }
+
   .Select .Select-aria-only {
     display: inline-block;
     height: 1px;
@@ -463,7 +466,6 @@
     clip: rect(0, 0, 0, 0);
     overflow: hidden;
   }
-
 
   // arrow indicator
 
@@ -488,6 +490,7 @@
     height: 0;
     width: 0;
   }
+
   .is-open .Select-arrow,
   .Select-arrow-zone:hover > .Select-arrow {
     border-top-color: $select-arrow-color-hover;
@@ -526,7 +529,6 @@
     max-height: ($select-menu-max-height - 2px);
     overflow-y: auto;
   }
-
 
   // options
 
