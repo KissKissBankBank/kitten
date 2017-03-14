@@ -1,0 +1,28 @@
+/// Amounts List
+///
+/// @group lists
+///
+/// @example scss - Usage
+///
+///   @include k-AmountsList;
+///
+/// @example html
+///
+
+@mixin k-AmountsList {
+  // Font
+  $font: 'source-sans-light';
+  $font-amounts: 'source-sans-bold';
+  $font-size: 0;
+  $line-height: 1.5;
+
+  // Size
+  $list-height: k-px-to-rem(50px);
+
+  .k-AmountsList {
+    @include k-typographyFont($font);
+    @include k-typographyFontSize($font-size, $line-height);
+
+    padding: k-px-to-rem(13px) k-px-to-rem(15px);
+  }
+}
