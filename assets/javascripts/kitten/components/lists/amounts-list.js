@@ -1,10 +1,10 @@
 import React from 'react'
 
-export class AmountList extends React.Component {
+export class AmountsList extends React.Component {
   renderContent() {
-    <th className="k-AmountList__title" scope="row">
+    <th className="k-AmountsList__title" scope="row">
       { this.props.title }
-      <td className="k-AmountList__info">
+      <td className="k-AmountsList__info">
         500&nbsp;€
       </td>
     </th>
@@ -15,8 +15,8 @@ export class AmountList extends React.Component {
             ...others } = this.props
 
     return (
-      <table className="k-AmountList">
-        <tr className="k-AmountList__row">
+      <table className="k-AmountsList">
+        <tr className="k-AmountsList__row">
           { this.renderContent() }
         </tr>
       </table>
@@ -24,6 +24,6 @@ export class AmountList extends React.Component {
   }
 }
 
-AmountList.defaultProps = {
+AmountsList.defaultProps = {
   title: "Toto",
 }

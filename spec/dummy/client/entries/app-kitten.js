@@ -53,7 +53,7 @@ import { LinkedinIcon } from 'kitten/components/icons/linkedin-icon'
 import ExternalRichLink from 'kitten/components/links/external-rich-link'
 
 // Lists
-import { AmountList } from 'kitten/components/lists/amount-list'
+import { AmountsList } from 'kitten/components/lists/amounts-list'
 import NavList from 'kitten/components/lists/nav-list'
 
 // Meters
@@ -208,7 +208,7 @@ ReactOnRails.register({
   ExternalRichLink,
 
   // Lists
-  AmountList,
+  AmountsList,
   NavList,
 
   // Meters
