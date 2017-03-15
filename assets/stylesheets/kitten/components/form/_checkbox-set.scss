@@ -9,12 +9,12 @@
 /// @example html
 ///
 ///   <div class="k-CheckboxSet">
-///     <div class="k-Checkbox">
+///     <div class="k-Checkbox k-CheckboxSet__checkbox">
 ///       <input id="input" type="checkbox" class="k-Checkbox__input" />
 ///       <label for="input" class="k-Checkbox__label">I agree</label>
 ///     </div>
 ///
-///     <div class="k-Checkbox">
+///     <div class="k-Checkbox k-CheckboxSet__checkbox">
 ///       <input id="input2" type="checkbox" class="k-Checkbox__input" />
 ///       <label for="input2" class="k-Checkbox__label">I agree</label>
 ///     </div>

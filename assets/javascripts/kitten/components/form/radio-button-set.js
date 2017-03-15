@@ -12,7 +12,7 @@ export class RadioButtonSet extends React.Component {
     const { label, checked, children } = item
     const { items, className, ...inputProps } = this.props
     const radioButtonClassName = classNames(
-      'k-RadioButtonSet__radio-button',
+      'k-RadioButtonSet__radioButton',
       className
     )
 

@@ -9,7 +9,7 @@
 /// @example html
 ///
 ///   <div class="k-RadioButtonSet">
-///     <div class="k-RadioButton">
+///     <div class="k-RadioButton k-RadioButtonSet__radioButton">
 ///       <input id="karl-radio-button-1"
 ///              type="radio"
 ///              name="karl-radio-button"
@@ -18,7 +18,7 @@
 ///         Default
 ///       </label>
 ///     </div>
-///     <div class="k-RadioButton">
+///     <div class="k-RadioButton k-RadioButtonSet__radioButton">
 ///       <input id="karl-radio-button-2"
 ///              type="radio"
 ///              name="karl-radio-button"
