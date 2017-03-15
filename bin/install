@@ -1,6 +1,17 @@
 #!/bin/sh
 set -e
 
+# Update ruby-build
+if which brew > /dev/null; then
+  brew update
+  brew upgrade ruby-build
+fi
+
+# Install Ruby
+rbenv install --skip-existing
+gem install bundler
+
+# Install dependencies
 bundle install
 npm install
 
