@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Add `GridCol` on `StaticTooltip`.
+- Fix: Change width and margin on `StaticTooltip`.
 - Fix: Change arrow-zone size on tiny select.
 
 ## [8.5.0] - 2017-03-14
