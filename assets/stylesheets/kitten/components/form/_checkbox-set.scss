@@ -1,0 +1,30 @@
+/// CheckboxSet
+///
+/// @group form
+///
+/// @example scss - usage
+///
+///   @include k-CheckboxSet;
+///
+/// @example html
+///
+///   <div class="k-CheckboxSet">
+///     <div class="k-Checkbox">
+///       <input id="input" type="checkbox" class="k-Checkbox__input" />
+///       <label for="input" class="k-Checkbox__label">I agree</label>
+///     </div>
+///
+///     <div class="k-Checkbox">
+///       <input id="input2" type="checkbox" class="k-Checkbox__input" />
+///       <label for="input2" class="k-Checkbox__label">I agree</label>
+///     </div>
+///   </div>
+
+@mixin k-CheckboxSet {
+  .k-CheckboxSet__checkbox {
+    margin: k-px-to-rem(10px) 0;
+
+    &:first-child { margin-top: 0; }
+    &:last-child { margin-bottom: 0; }
+  }
+}

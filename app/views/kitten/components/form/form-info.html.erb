@@ -54,15 +54,15 @@
       Label name here
     </label>
 
-    <%= react_component('Checkbox', props: {
+    <%= react_component('CheckboxSet', props: {
       error: true,
-      children: 'Error default',
-    }) %>
-
-    <%= react_component('Checkbox', props: {
-      error: true,
-      children: 'Error default checked',
-      defaultChecked: true,
+      items: [{
+        label: 'Error default',
+        checked: false,
+      }, {
+        label: 'Error default checked',
+        checked: false,
+      }],
     }) %>
 
     <p class="k-FormInfo__error">Cum sociis natoque penatibus et magnis</p>
