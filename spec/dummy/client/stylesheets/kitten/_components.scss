@@ -37,18 +37,7 @@
 @include k-Label;
 @include k-FormActions;
 @include k-FormComposer;
-@include k-FormInfo((
-  label: (
-    font: 'source-sans-semi-bold',
-    font-size: -2,
-    color: map-get($k-colors, 'font-1'),
-  ),
-  error: (
-    font: 'source-sans',
-    font-size: -2,
-    color: #ff4146,
-  )
-));
+@include k-FormInfo;
 @include k-FormRow;
 @include k-RadioButton;
 @include k-SearchInput;
