@@ -73,3 +73,15 @@
         tiny: true,
   }) %>
 <% end %>
+
+<%= example "error select" do %>
+  <%= react_component('SelectWithState', props: {
+        id: 'error-select',
+        options: [
+          { value: 'de', label: 'Deutsch' },
+          { value: 'en', label: 'English' },
+          { value: 'es', label: 'Español' },
+        ],
+        error: true,
+  }) %>
+<% end %>

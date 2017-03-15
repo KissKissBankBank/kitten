@@ -29,6 +29,9 @@
     select-input-border-radius: 4px,
     select-input-border-width: 1px,
   );
+  $options: map-merge($options-tiny, (select-input-height: 50px));
+  $error-color: map-get($k-colors, 'error');
+
   $options: (
     arrow-zone-width: 40px,
     select-input-border-radius: 4px,
@@ -62,6 +65,21 @@
 
     @include k-typographyFont($bold);
     @include k-typographyFontSize(-1);
+  }
+
+  .k-Select.is-error .Select:not(.is-open):not(.is-focused) {
+    .Select-control {
+      border-color: $error-color;
+    }
+
+    .Select-arrow-zone {
+      background-image: url('~icons/arrow-bottom-red.svg');
+      border-left-color: $error-color;
+    }
+
+    .Select-value .Select-value-label {
+      color: $error-color;
+    }
   }
 
   @include _k-Select-ReactSelectAnimations;
@@ -335,6 +353,7 @@
     .Select-value-label {
       color: $select-text-color;
     }
+
     a.Select-value-label {
       cursor: pointer;
       text-decoration: none;
@@ -444,6 +463,7 @@
   .Select--multi .Select-multi-value-wrapper {
     display: inline-block;
   }
+
   .Select .Select-aria-only {
     display: inline-block;
     height: 1px;
@@ -452,7 +472,6 @@
     clip: rect(0, 0, 0, 0);
     overflow: hidden;
   }
-
 
   // arrow indicator
 
@@ -477,6 +496,7 @@
     height: 0;
     width: 0;
   }
+
   .is-open .Select-arrow,
   .Select-arrow-zone:hover > .Select-arrow {
     border-top-color: $select-arrow-color-hover;
@@ -515,7 +535,6 @@
     max-height: ($select-menu-max-height - 2px);
     overflow-y: auto;
   }
-
 
   // options
 

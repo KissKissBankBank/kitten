@@ -42,11 +42,14 @@ class SelectWithState extends React.Component {
   }
 
   render() {
-    const { value, onChange, className, tiny, ...other } = this.props
+    const { value, onChange, className, tiny, error, ...other } = this.props
     const selectClassName = classNames(
       'k-Select',
       className,
-      { 'k-Select--tiny': tiny }
+      {
+        'k-Select--tiny': tiny,
+        'is-error': error,
+      }
     )
 
     return (
@@ -114,6 +117,7 @@ SelectWithState.defaultProps = {
   deleteRemoves: false,
   multi: false,
   labelText: null,
+  error: false,
   tiny: false,
   name: null,
   inputProps: {},
