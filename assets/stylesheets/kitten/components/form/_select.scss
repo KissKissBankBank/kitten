@@ -30,7 +30,7 @@
     select-input-border-width: 1px,
   );
   $options: map-merge($options-tiny, (select-input-height: 50px));
-  $colors-error: map-get($k-colors, 'error');
+  $error-color: map-get($k-colors, 'error');
 
   .k-Select {
     @include k-typographyFont($font);
@@ -62,17 +62,16 @@
 
   .k-Select.is-error .Select:not(.is-open):not(.is-focused) {
     .Select-control {
-      border-color: $colors-error;
+      border-color: $error-color;
     }
 
     .Select-arrow-zone {
       background-image: url('~icons/arrow-bottom-red.svg');
-      border-left-color: $colors-error;
+      border-left-color: $error-color;
     }
 
-    &.has-value.Select--single > .Select-control,
-     .Select-value .Select-value-label {
-      color: $colors-error;
+    .Select-value .Select-value-label {
+      color: $error-color;
     }
   }
 
