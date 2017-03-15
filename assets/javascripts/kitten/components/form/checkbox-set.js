@@ -5,10 +5,10 @@ import { Checkbox } from 'kitten/components/form/checkbox'
 export class CheckboxSet extends React.Component {
   constructor(props) {
     super(props)
-    this.createCheckbox = this.createCheckbox.bind(this)
+    this.renderCheckbox = this.renderCheckbox.bind(this)
   }
 
-  createCheckbox(item) {
+  renderCheckbox(item) {
     const { label, checked } = item
     const { items, className, ...inputProps } = this.props
     const checkboxClassName = classNames('k-CheckboxSet__checkbox', className)
@@ -17,18 +17,18 @@ export class CheckboxSet extends React.Component {
       <Checkbox children={ label }
                 className={ checkboxClassName }
                 { ...inputProps }
-                defaultChecked={ checked }/>
+                defaultChecked={ checked } />
     )
   }
 
-  createCheckboxes() {
-    return this.props.items.map(this.createCheckbox)
+  renderCheckboxes() {
+    return this.props.items.map(this.renderCheckbox)
   }
 
   render() {
     return (
       <div>
-        { this.createCheckboxes() }
+        { this.renderCheckboxes() }
       </div>
     )
   }

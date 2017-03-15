@@ -5,10 +5,10 @@ import { RadioButton } from 'kitten/components/form/radio-button'
 export class RadioButtonSet extends React.Component {
   constructor(props) {
     super(props)
-    this.createRadioButton = this.createRadioButton.bind(this)
+    this.renderRadioButton = this.renderRadioButton.bind(this)
   }
 
-  createRadioButton(item) {
+  renderRadioButton(item) {
     const { label, checked, children } = item
     const { items, className, ...inputProps } = this.props
     const radioButtonClassName = classNames(
@@ -25,14 +25,14 @@ export class RadioButtonSet extends React.Component {
     )
   }
 
-  createRadioButtons() {
-    return this.props.items.map(this.createRadioButton)
+  renderRadioButtons() {
+    return this.props.items.map(this.renderRadioButton)
   }
 
   render() {
     return (
       <div>
-        { this.createRadioButtons() }
+        { this.renderRadioButtons() }
       </div>
     )
   }
