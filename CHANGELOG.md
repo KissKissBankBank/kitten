@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Change width and margin on `StaticTooltip`.
 - Feature: Add new `error` props on SelectWithState.
 - Fix: Change arrow-zone size on tiny select.
 
