@@ -2,17 +2,17 @@ import { expect } from 'chai'
 import { uniqueIdUtils } from 'kitten/helpers/utils/unique-id'
 
 describe('getNextId()', () => {
-  it('get next id', () => {
+  it('returns a string starting at 1', () => {
     const id = uniqueIdUtils.getNextId('k-MyComponent')
     expect(id).to.be.equal('k-MyComponent-1')
   })
 
-  it('get next id', () => {
+  it('increments the string when called twice', () => {
     const id = uniqueIdUtils.getNextId('k-MyComponent')
     expect(id).to.be.equal('k-MyComponent-2')
   })
 
-  it('get next id', () => {
+  it('returns another string starting at 1', () => {
     const id = uniqueIdUtils.getNextId('k-AnotherComponent')
     expect(id).to.be.equal('k-AnotherComponent-1')
   })
@@ -20,6 +20,9 @@ describe('getNextId()', () => {
 
 describe('resetId()', () => {
   it('reset id', () => {
+    uniqueIdUtils.getNextId('k-MyComponent')
+    uniqueIdUtils.getNextId('k-AnotherComponent')
+
     uniqueIdUtils.resetId()
 
     const id = uniqueIdUtils.getNextId('k-MyComponent')
