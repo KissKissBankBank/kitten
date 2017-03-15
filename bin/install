@@ -1,6 +1,18 @@
 #!/bin/sh
 set -e
 
+# Install ruby with brew and rbenv
+if hash brew 2> /dev/null && hash rbenv 2> /dev/null; then
+  brew upgrade ruby-build || true
+  rbenv install --skip-existing
+
+# Install ruby with rvm
+elif hash rvm 2> /dev/null; then
+  rvm use `cat .ruby-version`
+fi
+
+# Install dependencies
+gem install --no-document bundler
 bundle install
 npm install
 
