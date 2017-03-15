@@ -1,15 +1,14 @@
 #!/bin/sh
 set -e
 
-# Update ruby-build
-if which brew > /dev/null; then
+# Install ruby
+if hash brew 2> /dev/null; then
   brew update
-  brew upgrade ruby-build
-fi
+  brew upgrade ruby-build || true
 
-# Install Ruby
-rbenv install --skip-existing
-gem install bundler
+  rbenv install --skip-existing
+  gem install bundler
+fi
 
 # Install dependencies
 bundle install
