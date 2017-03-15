@@ -33,15 +33,15 @@
       Label name here
     </label>
 
-    <%= react_component('RadioButton', props: {
+    <%= react_component('RadioButtonSet', props: {
       error: true,
-      text: 'Error default',
-    }) %>
-
-    <%= react_component('RadioButton', props: {
-      error: true,
-      text: 'Error default checked',
-      defaultChecked: true,
+      items: [{
+        label: 'Error default',
+      }, {
+        label: 'Error default checked',
+        children: 'lorem ipsum dolor',
+        checked: true,
+      }],
     }) %>
 
     <p class="k-FormInfo__error">Cum sociis natoque penatibus et magnis</p>
@@ -61,7 +61,7 @@
         checked: false,
       }, {
         label: 'Error default checked',
-        checked: false,
+        checked: true,
       }],
     }) %>
 
