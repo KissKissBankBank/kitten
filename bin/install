@@ -2,12 +2,14 @@
 set -e
 
 # Install ruby
-if hash brew 2> /dev/null; then
+if hash brew 2> /dev/null && hash ruby-build 2> /dev/null; then
   brew update
   brew upgrade ruby-build || true
 
   rbenv install --skip-existing
   gem install bundler
+elif hash rvm 2> /dev/null; then
+  rvm use `cat .ruby-version`
 fi
 
 # Install dependencies
