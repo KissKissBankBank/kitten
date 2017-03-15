@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+-Fix: Add `GridCol` on `StaticTooltip`.
+
 ## [8.5.0] - 2017-03-14
 
 Features:
