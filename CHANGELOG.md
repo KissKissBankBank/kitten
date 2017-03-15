@@ -4,11 +4,16 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `k-FormInfo` style.
+## [8.6.0] - 2017-03-15
+
+Features:
+- Add `k-FormInfo` style.
   `k-TextInputWithInfo` is now deprecated. Use `k-FormInfo` instead.
-- Fix: Change width and margin on `StaticTooltip`.
-- Feature: Add new `error` props on SelectWithState.
-- Fix: Change arrow-zone size on tiny select.
+- Add new `error` props on SelectWithState.
+
+Fixies:
+- Change width and margin on `StaticTooltip`.
+- Change arrow-zone size on tiny select.
 
 ## [8.5.0] - 2017-03-14
 
