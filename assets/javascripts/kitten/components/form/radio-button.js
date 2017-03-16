@@ -1,7 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
 import deprecated from 'react-prop-types/lib/deprecated'
-import { uniqueIdUtils } from 'kitten/helpers/utils/unique-id'
 
 export class RadioButton extends React.Component {
   renderContent() {
@@ -41,16 +40,14 @@ export class RadioButton extends React.Component {
       { 'is-error': error },
     )
 
-    let defaultId = id || uniqueIdUtils.getNextId('k-RadioButton')
-
     return (
       <div className={ classNames('k-RadioButton', className) }>
-        <input id={ defaultId }
+        <input id={ id }
                type="radio"
                className={ radioButtonInputClassNames }
                { ...inputProps } />
 
-        <label htmlFor={ defaultId }
+        <label htmlFor={ id }
                className={ radioButtonLabelClassNames } >
           { text }
         </label>

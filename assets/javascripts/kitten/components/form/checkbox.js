@@ -1,7 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
 import deprecated from 'react-prop-types/lib/deprecated'
-import { uniqueIdUtils } from 'kitten/helpers/utils/unique-id'
 
 export class Checkbox extends React.Component {
   render() {
@@ -19,16 +18,14 @@ export class Checkbox extends React.Component {
       { 'is-error': error },
     )
 
-    let defaultId = id || uniqueIdUtils.getNextId('k-Checkbox')
-
     return (
       <div className={ classNames('k-Checkbox', className) }>
-        <input id={ defaultId }
+        <input id={ id }
                type="checkbox"
                className={ checkboxInputClassNames }
                { ...inputProps } />
 
-        <label htmlFor={ defaultId } className="k-Checkbox__label">
+        <label htmlFor={ id } className="k-Checkbox__label">
           { children || text }
         </label>
       </div>
