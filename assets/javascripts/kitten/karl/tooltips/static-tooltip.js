@@ -6,7 +6,7 @@ import { Grid, GridCol } from 'kitten/components/grid/grid'
 export const KarlStaticTooltip = props => {
   return (
     <GridCol col-s="4">
-      <div className="karl-StaticTooltip">
+      <div className="k-u-align-right">
         <Button modifier="helium">
           Button
         </Button>
