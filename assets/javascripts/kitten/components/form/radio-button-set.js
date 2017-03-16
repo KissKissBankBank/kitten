@@ -10,9 +10,6 @@ export class RadioButtonSet extends React.Component {
 
   renderRadioButton(item, index) {
     const { className, ...itemProps } = item
-    const validName = (this.props.name || 'k-RadioButtonSet')
-      .replace(/[^\w]/g, '')
-    const uniqId = `${validName}${index}`
     const radioButtonClassName = classNames(
       'k-RadioButtonSet__radioButton',
       className
@@ -22,8 +19,7 @@ export class RadioButtonSet extends React.Component {
       <RadioButton className={ radioButtonClassName }
                    error={ this.props.error }
                    name={ this.props.name }
-                   key={ uniqId }
-                   id={ uniqId }
+                   key={ item.id }
                    { ...itemProps } />
     )
   }

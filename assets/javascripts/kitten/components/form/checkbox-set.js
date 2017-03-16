@@ -11,15 +11,12 @@ export class CheckboxSet extends React.Component {
   renderCheckbox(item, index) {
     const { className, ...itemProps } = item
     const checkboxClassName = classNames('k-CheckboxSet__checkbox', className)
-    const validName = (this.props.name || 'k-CheckboxSet').replace(/[^\w]/g, '')
-    const uniqId = `${validName}${index}`
 
     return(
       <Checkbox className={ checkboxClassName }
                 error={ this.props.error }
                 name={ this.props.name }
-                key={ uniqId }
-                id={ uniqId }
+                key={ item.id }
                 { ...itemProps } />
     )
   }
