@@ -24,11 +24,17 @@ const addCard = () => {
 }
 
 export const KarlLegoGrid = () => {
+  const masonryProps = {
+    options: {
+      transitionDuration: 0,
+    }
+  }
+
   return (
     <div className="k-DevGrid__container" style={{ outline: "none" }}>
       <Grid>
         <GridCol col="12">
-          <LegoGrid>
+          <LegoGrid masonryProps={ masonryProps }>
             <LegoGrid.Item>{ addCard() }</LegoGrid.Item>
             <LegoGrid.Item>{ addCard() }</LegoGrid.Item>
             <LegoGrid.Item>{ addCard() }</LegoGrid.Item>
