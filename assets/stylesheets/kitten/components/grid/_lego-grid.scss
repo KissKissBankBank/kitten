@@ -1,0 +1,34 @@
+/// Lego Grid.
+///
+/// @group grid
+///
+/// @example scss - usage
+///
+///   @include k-LegoGrid;
+///
+/// @example html
+///
+///   <div className="k-LegoGrid">
+///     <div className="k-LegoGrid__item">…</div>
+///     <div className="k-LegoGrid__item">…</div>
+///     …
+///   </div>
+
+@mixin k-LegoGrid {
+  .k-LegoGrid {
+    @include k-grid;
+    display: block;
+  }
+
+  .k-LegoGrid__item {
+    @include k-grid-colSize(12, $flexible: false);
+
+    @include k-media-min('s') {
+      @include k-grid-colSize(6, $flexible: false);
+    }
+
+    @include k-media-min('l') {
+      @include k-grid-colSize(4, $flexible: false);
+    }
+  }
+}
