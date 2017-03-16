@@ -32,6 +32,6 @@
 
 @mixin k-RadioButtonSet {
   .k-RadioButtonSet__radioButton {
-    @include k-choiceInputSet;
+    @include k-inputSet;
   }
 }
