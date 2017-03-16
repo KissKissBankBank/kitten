@@ -9,7 +9,7 @@ const randomColorHexa = () => {
 }
 
 const addCard = () => {
-  const randWidth = Math.random() * 300 + 100
+  const randWidth = Math.random() * 300 + 100 // Random between 100 and 400px.
   const styles = {
     border: '1px solid #eee',
     height: `${randWidth}px`,
