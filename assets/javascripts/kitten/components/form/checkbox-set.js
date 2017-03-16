@@ -21,7 +21,7 @@ export class CheckboxSet extends React.Component {
     )
   }
 
-  renderCheckboxes() {
+  render() {
     const { items, className, name, error, ...checkboxSetProps } = this.props
     const checkboxSetClassName = classNames(
       'k-CheckboxSet',
@@ -34,20 +34,14 @@ export class CheckboxSet extends React.Component {
       </div>
     )
   }
-
-  render() {
-    return (
-      <div>
-        { this.renderCheckboxes() }
-      </div>
-    )
-  }
 }
 
 CheckboxSet.defaultProps = {
   name: 'checkboxSet[]',
+  error: false,
   items: [{
     label: 'filter 1',
     defaultChecked: true,
+    id: 'myCheckbox' // Replace by a real value
   }],
 }

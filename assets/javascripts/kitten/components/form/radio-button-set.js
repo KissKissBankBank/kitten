@@ -24,7 +24,7 @@ export class RadioButtonSet extends React.Component {
     )
   }
 
-  renderRadioButtons() {
+  render() {
     const { items, className, name, error, ...radioButtonSetProps } = this.props
     const radioButtonSetClassName = classNames(
       'k-RadioButtonSet',
@@ -37,21 +37,15 @@ export class RadioButtonSet extends React.Component {
       </div>
     )
   }
-
-  render() {
-    return (
-      <div>
-        { this.renderRadioButtons() }
-      </div>
-    )
-  }
 }
 
 RadioButtonSet.defaultProps = {
   name: 'radioButtonSet',
+  error: false,
   items: [{
     text: 'filter 1',
     children: 'lorem ipsum dolor',
     defaultChecked: true,
+    id: 'myRadioButton' // Replace by a real value
   }],
 }
