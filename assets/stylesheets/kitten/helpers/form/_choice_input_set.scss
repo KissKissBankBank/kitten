@@ -1,0 +1,31 @@
+/// Apply choice input basic set display.
+///
+/// This mixin will apply good margin on CheckboxSet & RadioButtonSet
+/// components.
+///
+/// @group form
+///
+/// @example scss - Usage
+///   .k-CheckboxSet__checkbox {
+///     @include k-choiceInputSet;
+///   }
+///
+/// @example css - CSS output
+///   .k-CheckboxSet__checkbox {
+///     margin: k-px-to-rem(10px) 0;
+///   }
+///
+///   .k-CheckboxSet__checkbox:first-child {
+///     margin-top: 0;
+///   }
+///
+///   .k-CheckboxSet__checkbox:last-child {
+///     margin-bottom: 0;
+///   }
+
+@mixin k-choiceInputSet {
+  margin: k-px-to-rem(10px) 0;
+
+  &:first-child { margin-top: 0; }
+  &:last-child { margin-bottom: 0; }
+}
