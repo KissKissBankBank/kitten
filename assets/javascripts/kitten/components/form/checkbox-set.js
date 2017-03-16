@@ -8,21 +8,34 @@ export class CheckboxSet extends React.Component {
     this.renderCheckbox = this.renderCheckbox.bind(this)
   }
 
-  renderCheckbox(item) {
-    const { label, checked } = item
-    const { items, className, ...inputProps } = this.props
+  renderCheckbox(item, index) {
+    const { className, ...itemProps } = item
     const checkboxClassName = classNames('k-CheckboxSet__checkbox', className)
+    const validName = (this.props.name || 'k-CheckboxSet').replace(/[^\w]/g, '')
+    const uniqId = `${validName}${index}`
 
     return(
-      <Checkbox children={ label }
-                className={ checkboxClassName }
-                { ...inputProps }
-                defaultChecked={ checked } />
+      <Checkbox className={ checkboxClassName }
+                error={ this.props.error }
+                name={ this.props.name }
+                key={ uniqId }
+                id={ uniqId }
+                { ...itemProps } />
     )
   }
 
   renderCheckboxes() {
-    return this.props.items.map(this.renderCheckbox)
+    const { items, className, name, error, ...checkboxSetProps } = this.props
+    const checkboxSetClassName = classNames(
+      'k-CheckboxSet',
+      className
+    )
+
+    return (
+      <div className={ checkboxSetClassName } { ...checkboxSetProps }>
+        { this.props.items.map(this.renderCheckbox) }
+      </div>
+    )
   }
 
   render() {
@@ -35,8 +48,9 @@ export class CheckboxSet extends React.Component {
 }
 
 CheckboxSet.defaultProps = {
+  name: 'checkboxSet[]',
   items: [{
     label: 'filter 1',
-    checked: true,
+    defaultChecked: true,
   }],
 }

@@ -37,11 +37,11 @@
       error: true,
       name: 'formInfoRadioButtonSetError',
       items: [{
-        label: 'Error default',
+        text: 'Error default',
       }, {
-        label: 'Error default checked',
+        text: 'Error default checked',
         children: 'lorem ipsum dolor',
-        checked: true,
+        defaultChecked: true,
       }],
     }) %>
 
@@ -57,12 +57,12 @@
 
     <%= react_component('CheckboxSet', props: {
       error: true,
+      name: 'checkboxSet[]',
       items: [{
         label: 'Error default',
-        checked: false,
       }, {
         label: 'Error default checked',
-        checked: true,
+        defaultChecked: true,
       }],
     }) %>
 

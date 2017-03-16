@@ -8,25 +8,38 @@ export class RadioButtonSet extends React.Component {
     this.renderRadioButton = this.renderRadioButton.bind(this)
   }
 
-  renderRadioButton(item) {
-    const { label, checked, children } = item
-    const { items, className, ...inputProps } = this.props
+  renderRadioButton(item, index) {
+    const { className, ...itemProps } = item
+    const validName = (this.props.name || 'k-RadioButtonSet')
+      .replace(/[^\w]/g, '')
+    const uniqId = `${validName}${index}`
     const radioButtonClassName = classNames(
       'k-RadioButtonSet__radioButton',
       className
     )
 
     return(
-      <RadioButton text={ label }
-                   children={ children }
-                   className={ radioButtonClassName }
-                   { ...inputProps }
-                   defaultChecked={ checked } />
+      <RadioButton className={ radioButtonClassName }
+                   error={ this.props.error }
+                   name={ this.props.name }
+                   key={ uniqId }
+                   id={ uniqId }
+                   { ...itemProps } />
     )
   }
 
   renderRadioButtons() {
-    return this.props.items.map(this.renderRadioButton)
+    const { items, className, name, error, ...radioButtonSetProps } = this.props
+    const radioButtonSetClassName = classNames(
+      'k-RadioButtonSet',
+      className
+    )
+
+    return (
+      <div className={ radioButtonSetClassName } { ...radioButtonSetProps }>
+        { this.props.items.map(this.renderRadioButton) }
+      </div>
+    )
   }
 
   render() {
@@ -39,9 +52,10 @@ export class RadioButtonSet extends React.Component {
 }
 
 RadioButtonSet.defaultProps = {
+  name: 'radioButtonSet',
   items: [{
-    label: 'filter 1',
+    text: 'filter 1',
     children: 'lorem ipsum dolor',
-    checked: true,
+    defaultChecked: true,
   }],
 }
