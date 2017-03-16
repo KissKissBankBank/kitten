@@ -5,13 +5,15 @@ import { Grid, GridCol } from 'kitten/components/grid/grid'
 
 export const KarlStaticTooltip = props => {
   return (
-    <GridCol col-s="4">
-      <div className="k-u-align-right">
-        <Button modifier="helium">
-          Button
-        </Button>
-        <StaticTooltip { ...props } />
-      </div>
-    </GridCol>
+    <Grid>
+      <GridCol col-s="4">
+        <div className="k-u-align-right">
+          <Button modifier="helium">
+            Button
+          </Button>
+          <StaticTooltip { ...props } />
+        </div>
+      </GridCol>
+    </Grid>
   )
 }
