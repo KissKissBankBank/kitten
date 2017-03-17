@@ -33,15 +33,18 @@
       Label name here
     </label>
 
-    <%= react_component('RadioButton', props: {
+    <%= react_component('RadioButtonSet', props: {
       error: true,
-      text: 'Error default',
-    }) %>
-
-    <%= react_component('RadioButton', props: {
-      error: true,
-      text: 'Error default checked',
-      defaultChecked: true,
+      name: 'formInfoRadioButtonSetError',
+      items: [{
+        text: 'Error default',
+        id: 'radioButtonSet1',
+      }, {
+        text: 'Error default checked',
+        children: 'lorem ipsum dolor',
+        defaultChecked: true,
+        id: 'radioButtonSet2',
+      }],
     }) %>
 
     <p class="k-FormInfo__error">Cum sociis natoque penatibus et magnis</p>
@@ -54,15 +57,17 @@
       Label name here
     </label>
 
-    <%= react_component('Checkbox', props: {
+    <%= react_component('CheckboxSet', props: {
       error: true,
-      children: 'Error default',
-    }) %>
-
-    <%= react_component('Checkbox', props: {
-      error: true,
-      children: 'Error default checked',
-      defaultChecked: true,
+      name: 'checkboxSet[]',
+      items: [{
+        label: 'Error default',
+        id: 'checkboxSet1',
+      }, {
+        label: 'Error default checked',
+        defaultChecked: true,
+        id: 'checkboxSet2',
+      }],
     }) %>
 
     <p class="k-FormInfo__error">Cum sociis natoque penatibus et magnis</p>

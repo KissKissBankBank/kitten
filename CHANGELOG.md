@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Create `CheckboxSet` & `RadioButtonSet` components.
 - Feature: Add `k-FormInfo` style.
   `k-TextInputWithInfo` is now deprecated. Use `k-FormInfo` instead.
 - Fix: Change width and margin on `StaticTooltip`.
