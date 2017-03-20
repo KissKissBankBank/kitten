@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Create `SideLayout` react component to fix layout error on Safari.
+
 ## [8.6.0] - 2017-03-15
 
 Features:
