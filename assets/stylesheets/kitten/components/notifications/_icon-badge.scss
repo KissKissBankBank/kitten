@@ -37,6 +37,6 @@
     color: $color;
     text-align: center;
     @include k-typographyFont($font);
-    @include k-typographyFontSize($font-step, 1);
+    @include k-typographyFontSize($font-step, 0);
   }
 }
