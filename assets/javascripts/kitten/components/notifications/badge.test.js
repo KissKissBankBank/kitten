@@ -24,6 +24,14 @@ describe('<Badge />', () => {
     })
   })
 
+  describe('with `spaced` prop', () => {
+    const badge = shallow(<Badge spaced />)
+
+    it('has a good class', () => {
+      expect(badge).to.have.className('k-Badge--spaced')
+    })
+  })
+
   describe('with other prop', () => {
     const badge = shallow(<Badge aria-hidden="true" />)
 
