@@ -11,7 +11,7 @@ describe('<Badge />', () => {
       expect(badge).to.have.tagName('span')
     })
 
-    it('has a default classes', () => {
+    it('has a default class', () => {
       expect(badge).to.have.className('k-Badge')
     })
   })
