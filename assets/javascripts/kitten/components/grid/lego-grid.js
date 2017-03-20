@@ -3,11 +3,11 @@ import classNames from 'classnames'
 import Masonry from 'react-masonry-component'
 
 export const LegoGrid = props => {
-  const { className, masonryProps, children } = props
+  const { className, masonryProps, children, ...others } = props
   const gridClassName = classNames('k-LegoGrid', className)
 
   return (
-    <div className={ gridClassName } { ...props }>
+    <div className={ gridClassName } { ...others }>
       <Masonry { ...masonryProps }>
         { children }
       </Masonry>

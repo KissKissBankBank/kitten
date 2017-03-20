@@ -18,6 +18,11 @@
   .k-LegoGrid {
     @include k-grid;
     display: block;
+
+    @include k-media-max('xs') {
+      margin-left: k-px-to-rem(-20px);
+      margin-right: k-px-to-rem(-20px);
+    }
   }
 
   .k-LegoGrid__item {
