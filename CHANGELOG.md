@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Prevent newline in mobile view for `SearchInput` component.
+
 ## [8.6.0] - 2017-03-15
 
 Features:
