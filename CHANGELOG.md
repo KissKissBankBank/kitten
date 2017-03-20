@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `tiny` prop on `Progress` component.
+
 ## [8.6.0] - 2017-03-15
 
 Features:
