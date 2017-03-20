@@ -1,0 +1,42 @@
+/// Icon Badge
+///
+/// @group notifications
+///
+/// @example scss - usage
+///
+///   @include k-IconBadge;
+///
+/// @example html
+///
+///   <span class="k-IconBadge">
+///     <span class="k-IconBadge__content">A</span>
+///   </span>
+
+@mixin k-IconBadge {
+  $font: 'source-sans';
+  $font-step: -2; // 12px.
+  $color: map-get($k-colors, 'background-1');
+  $background-color: map-get($k-colors, 'primary-1');
+  $size: k-px-to-rem(30px);
+
+  .k-IconBadge {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: $size;
+    height: $size;
+    border-radius: $size;
+    background-color: $background-color;
+    padding: 0;
+  }
+
+  .k-IconBadge__content {
+    flex-basis: k-px-to-rem(15px);
+    fill: $color;
+    color: $color;
+    text-align: center;
+    @include k-typographyFont($font);
+    @include k-typographyFontSize($font-step, 1);
+  }
+}
