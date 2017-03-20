@@ -54,4 +54,13 @@
       background: $disabled-color;
     }
   }
+
+  // Modifiers.
+
+  .k-Progress--tiny {
+    .k-Progress__ramp {
+      height: 2px;
+      border-radius: none;
+    }
+  }
 }

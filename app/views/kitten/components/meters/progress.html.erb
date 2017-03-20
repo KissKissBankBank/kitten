@@ -9,4 +9,12 @@
   <%= example "Progress" do %>
     <%= react_component('KarlRandomProgress') %>
   <% end %>
+
+  <%= example "Tiny progress" do %>
+    <%= react_component('Progress', props: {
+        value: 40,
+        tiny: true,
+      }
+    ) %>
+  <% end %>
 </div>
