@@ -13,7 +13,7 @@ Features:
   `k-TextInputWithInfo` is now deprecated. Use `k-FormInfo` instead.
 - Add new `error` props on SelectWithState.
 
-Fixies:
+Fixes:
 - Change width and margin on `StaticTooltip`.
 - Change arrow-zone size on tiny select.
 
