@@ -14,7 +14,6 @@ const renderCard = () => {
 }
 
 export const KarlLegoGrid = () => {
-  const containerStyles = { outline: "none" }
   const masonryProps = {
     options: {
       transitionDuration: 0,
@@ -22,7 +21,7 @@ export const KarlLegoGrid = () => {
   }
 
   return (
-    <div className="k-DevGrid__container" style={ containerStyles }>
+    <div className="k-DevGrid__container k-DevGrid__container--withoutOutline">
       <Grid>
         <GridCol col="12">
           <LegoGrid masonryProps={ masonryProps }>

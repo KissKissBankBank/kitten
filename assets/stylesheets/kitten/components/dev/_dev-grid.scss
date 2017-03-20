@@ -70,6 +70,10 @@
     outline: 1px dotted rgba(black, .2);
   }
 
+  .k-DevGrid__container--withoutOutline {
+    outline: none;
+  }
+
   .k-DevGrid__row {
     height: 100%;
     @include k-grid;
