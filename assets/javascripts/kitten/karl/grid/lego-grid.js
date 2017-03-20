@@ -14,6 +14,7 @@ const renderCard = () => {
 }
 
 export const KarlLegoGrid = () => {
+  const cardsNb= 10
   const masonryProps = {
     options: {
       transitionDuration: 0,
@@ -25,16 +26,9 @@ export const KarlLegoGrid = () => {
       <Grid>
         <GridCol col="12">
           <LegoGrid masonryProps={ masonryProps }>
-            <LegoGrid.Item>{ renderCard() }</LegoGrid.Item>
-            <LegoGrid.Item>{ renderCard() }</LegoGrid.Item>
-            <LegoGrid.Item>{ renderCard() }</LegoGrid.Item>
-            <LegoGrid.Item>{ renderCard() }</LegoGrid.Item>
-            <LegoGrid.Item>{ renderCard() }</LegoGrid.Item>
-            <LegoGrid.Item>{ renderCard() }</LegoGrid.Item>
-            <LegoGrid.Item>{ renderCard() }</LegoGrid.Item>
-            <LegoGrid.Item>{ renderCard() }</LegoGrid.Item>
-            <LegoGrid.Item>{ renderCard() }</LegoGrid.Item>
-            <LegoGrid.Item>{ renderCard() }</LegoGrid.Item>
+            { [...Array(cardsNb)].map((c, i) =>
+              <LegoGrid.Item key={ i }>{ renderCard() }</LegoGrid.Item>
+            ) }
           </LegoGrid>
         </GridCol>
       </Grid>
