@@ -28,4 +28,12 @@ describe('<Progress />', () => {
     const slider = component.find('.k-Progress__slider')
     expect(slider).to.have.style('width', '42%')
   })
+
+  describe('with tiny prop', () => {
+    const progress = shallow(<Progress tiny />)
+
+    it('has a good class', () => {
+      expect(progress).to.have.className('k-Progress--tiny')
+    })
+  })
 })
