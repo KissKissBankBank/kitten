@@ -13,12 +13,12 @@ describe('<LegoGrid />', () => {
       expect(legoGrid).to.have.tagName('div')
     })
 
-    it('has a default classes', () => {
+    it('has a default class', () => {
       expect(legoGrid).to.have.className('k-LegoGrid')
     })
 
     it('has a <Masonry /> component', () => {
-      expect(legoGrid).not.to.have.descendants('Masonry')
+      expect(legoGrid).to.have.descendants(Masonry)
     })
   })
 
@@ -37,7 +37,7 @@ describe('<LegoGrid />', () => {
     })
   })
 
-  describe('with custom class', () => {
+  describe('with a custom class', () => {
     const legoGrid = shallow(<LegoGrid className="custom__class" />)
 
     it('has a custom class', () => {
@@ -54,12 +54,12 @@ describe('<LegoGrid.Item />', () => {
       expect(legoGridItem).to.have.tagName('div')
     })
 
-    it('has a default classes', () => {
+    it('has a default class', () => {
       expect(legoGridItem).to.have.className('k-LegoGrid__item')
     })
   })
 
-  describe('with custom class', () => {
+  describe('with a custom class', () => {
     const legoGridItem = shallow(<LegoGrid.Item className="custom__class" />)
 
     it('has a custom class', () => {
