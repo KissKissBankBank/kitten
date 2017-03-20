@@ -63,6 +63,7 @@ import { TabBar } from 'kitten/components/navigation/tab-bar'
 
 // Notifications
 import { Alert } from 'kitten/components/notifications/alert'
+import { Badge } from 'kitten/components/notifications/badge'
 
 // Popovers
 import { Popover } from 'kitten/components/popovers/popover'
@@ -219,6 +220,7 @@ ReactOnRails.register({
 
   // Notifications
   Alert,
+  Badge,
 
   // Popovers
   CallToActionPopover,
