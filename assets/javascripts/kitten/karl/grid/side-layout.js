@@ -3,7 +3,7 @@ import classNames from 'classnames'
 import { SideLayout } from 'kitten/components/grid/side-layout'
 import { InformationBox } from 'kitten/components/box/information-box'
 
-export const renderInformationBox = () => {
+const renderInformationBox = () => {
   return (
     <div className={ classNames('k-u-margin-top-quadruple',
                                 'k-u-margin-right-quadruple',
@@ -20,10 +20,29 @@ export const renderInformationBox = () => {
   )
 }
 
+const renderDocLinkBox = () => {
+  return {
+    items: [{
+        id: 'myLink1',
+        href: '#',
+        title: 'My title',
+        text: 'My text',
+      }, {
+        id: 'myLink2',
+        isExternal: true,
+        href: 'http://www.google.com',
+        title: 'My title 2',
+        text: 'My text 2',
+      },
+    ]
+  }
+}
+
 export const KarlSideLayout = () => {
   return (
     <SideLayout className="k-VerticalGrid__fluid"
                 title="Your title here"
+                sidebar={ renderDocLinkBox() }
                 sidebarContent={ renderInformationBox() }>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit.
       Nulla assumenda, corporis, esse accusantium minus ex vel officia unde
