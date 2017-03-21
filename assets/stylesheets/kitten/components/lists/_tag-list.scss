@@ -1,0 +1,56 @@
+/// Tag list.
+///
+/// @group lists
+///
+/// @example scss - usage
+///
+///   @include k-TagList;
+///
+/// @example html
+///
+///   <ul class="k-TagList">
+///     <li class="k-TagList">…</li>
+///     <li class="k-TagList">…</li>
+///     …
+///   </ul>
+
+@mixin k-TagList {
+  // Font
+  $font: 'source-sans-semi-bold';
+  $font-step: -1; // 14px.
+  $color: map-get($k-colors, 'font-1');
+
+  .k-TagList {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    color: $color;
+    @include k-typographyFont($font);
+    @include k-typographyFontSize($font-step);
+  }
+
+  .k-TagList__item {
+    display: inline-block;
+    margin-right: k-px-to-rem(10px);
+
+    &:before {
+      margin-right: k-px-to-rem(10px);
+      content: '•';
+      color: $color;
+    }
+  }
+
+  .k-TagList__item--first {
+    &:before {
+      margin-right: 0;
+      content: '';
+    }
+  }
+
+  .k-TagList__icon {
+    height: k-px-to-rem(10px);
+    margin-right: k-px-to-rem(10px);
+  }
+}
