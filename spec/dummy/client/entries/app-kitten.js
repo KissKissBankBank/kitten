@@ -39,7 +39,7 @@ import { TextInputWithUnit } from 'kitten/components/form/text-input-with-unit'
 
 // Grid
 import { Grid, GridCol } from 'kitten/components/grid/grid'
-import { KarlSideLayout } from 'kitten/karl/grid/side-layout'
+import { KarlSideLayout } from 'kitten/karl/layout/side-layout'
 
 // Icons
 import GrabberIcon from 'kitten/components/icons/grabber-icon'
