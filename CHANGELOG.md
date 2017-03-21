@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add new `Badge` React component.
+- Feature: Add `k-u-align-right` class.
+- Fix: Deprecate `k-u-centered` in favor of `k-u-align-center`.
 
 ## [8.6.0] - 2017-03-15
 
