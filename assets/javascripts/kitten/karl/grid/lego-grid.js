@@ -3,7 +3,7 @@ import { Grid, GridCol } from 'kitten/components/grid/grid'
 import { LegoGrid } from 'kitten/components/grid/lego-grid'
 
 const renderCard = () => {
-  const randWidth = Math.random() * 300 + 100 // Random between 100 and 400px.
+  const randWidth = Math.random() * 300 + 100 // Random between 100 and 400.
   const styles = {
     height: `${randWidth}px`,
   }
@@ -14,7 +14,7 @@ const renderCard = () => {
 }
 
 export const KarlLegoGrid = () => {
-  const cardsNb= 10
+  const numberOfCards = 10
   const masonryProps = {
     options: {
       transitionDuration: 0,
@@ -26,8 +26,8 @@ export const KarlLegoGrid = () => {
       <Grid>
         <GridCol col="12">
           <LegoGrid masonryProps={ masonryProps }>
-            { [...Array(cardsNb)].map((c, i) =>
-              <LegoGrid.Item key={ i }>{ renderCard() }</LegoGrid.Item>
+            { [...Array(numberOfCards)].map((_, index) =>
+              <LegoGrid.Item key={ index }>{ renderCard() }</LegoGrid.Item>
             ) }
           </LegoGrid>
         </GridCol>

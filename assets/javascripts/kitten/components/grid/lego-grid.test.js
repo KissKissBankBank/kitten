@@ -22,7 +22,7 @@ describe('<LegoGrid />', () => {
     })
   })
 
-  describe('with Masonry props', () => {
+  describe('with masonryProps props', () => {
     const masonryProps = {
       options: {
         transitionDuration: 0,
@@ -32,7 +32,7 @@ describe('<LegoGrid />', () => {
     const legoGrid = shallow(<LegoGrid masonryProps={ masonryProps } />)
     const masonry = legoGrid.find(Masonry).first()
 
-    it('spreads props in Masonry component', () => {
+    it('sends props to Masonry component', () => {
       expect(masonry).to.have.props(masonryProps)
     })
   })
@@ -68,16 +68,10 @@ describe('<LegoGrid.Item />', () => {
   })
 
   describe('with children', () => {
-    const legoGridItem = shallow(
-      <LegoGrid.Item>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit…
-      </LegoGrid.Item>
-    )
+    const legoGridItem = shallow(<LegoGrid.Item>Lorem ipsum…</LegoGrid.Item>)
 
     it('has text', () => {
-      expect(legoGridItem).to.have.text(
-        'Lorem ipsum dolor sit amet, consectetur adipisicing elit…'
-      )
+      expect(legoGridItem).to.have.text('Lorem ipsum…')
     })
   })
 })
