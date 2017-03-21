@@ -1,22 +1,20 @@
 import React from 'react'
 import classNames from 'classnames'
 
-export class IconBadge extends React.Component {
-  render() {
-    const { className, children, ...others } = this.props
-    const iconBadgeClassName = classNames(
-      'k-IconBadge',
-      className,
-    )
+export const IconBadge = props => {
+  const { className, children, ...others } = props
+  const iconBadgeClassName = classNames(
+    'k-IconBadge',
+    className,
+  )
 
-    return (
-      <span className={ iconBadgeClassName } { ...others }>
-        <span className='k-IconBadge__content'>
-          { children }
-        </span>
+  return (
+    <span className={ iconBadgeClassName } { ...others }>
+      <span className='k-IconBadge__content'>
+        { children }
       </span>
-    )
-  }
+    </span>
+  )
 }
 
 IconBadge.defaultProps = {
