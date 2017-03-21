@@ -78,6 +78,8 @@
     border-collapse: separate;
     box-sizing: border-box;
     width: $search-width;
+
+    white-space: nowrap; // Prevent newline in mobile view
   }
 
   .k-SearchInput__input {
