@@ -41,7 +41,7 @@ export class SideLayout extends React.Component {
   }
 
   renderDocLinkBoxes() {
-    if (!this.props.sidebar) return
+    if (!this.props.sidebar.items) return
 
     return this.props.sidebar.items.map(this.renderDocLinkBox)
   }
