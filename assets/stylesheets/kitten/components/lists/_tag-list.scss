@@ -9,16 +9,17 @@
 /// @example html
 ///
 ///   <ul class="k-TagList">
-///     <li class="k-TagList">…</li>
+///     <li class="k-TagList k-TagList__item--first">…</li>
 ///     <li class="k-TagList">…</li>
 ///     …
 ///   </ul>
 
 @mixin k-TagList {
-  // Font
   $font: 'source-sans-semi-bold';
   $font-step: -1; // 14px.
   $color: map-get($k-colors, 'font-1');
+  $spacing: k-px-to-rem(5px);
+  $icon-height: k-px-to-rem(10px);
 
   .k-TagList {
     margin: 0;
@@ -33,10 +34,10 @@
 
   .k-TagList__item {
     display: inline-block;
-    margin-right: k-px-to-rem(10px);
+    margin-right: $spacing;
 
     &:before {
-      margin-right: k-px-to-rem(10px);
+      margin-right: $spacing;
       content: '•';
       color: $color;
     }
@@ -50,7 +51,7 @@
   }
 
   .k-TagList__icon {
-    height: k-px-to-rem(10px);
-    margin-right: k-px-to-rem(10px);
+    height: $icon-height;
+    margin-right: $spacing;
   }
 }
