@@ -3,7 +3,12 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
-- Feature: Create `SideLayout` react component to fix layout error on Safari.
+
+- Feature: Add `SideLayout` react component to fix layout error on Safari.
+- Feature: Add `IconBadge` component.
+- Feature: Add new `Badge` React component.
+- Feature: Add `LegoGrid` component.
+- Feature: Add `flexible` option to `k-grid-colSize` mixin.
 - Feature: Add `k-u-align-right` class.
 - Fix: Prevent newline in mobile view for `SearchInput` component.
 - Fix: Deprecate `k-u-centered` in favor of `k-u-align-center`.
