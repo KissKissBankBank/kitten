@@ -12,13 +12,13 @@
     $button-big-line-height
   );
 
-    padding: 0 $button-big-radius;
-    border-radius: $button-big-radius;
-    min-width: $button-big-min-width;
+  padding: 0 $button-big-radius;
+  border-radius: $button-big-radius;
+  min-width: $button-big-min-width;
 
-    &.k-Button--icon {
-      .k-Button__icon {
-        @include k-buttonRounded($button-size-big, $icon-width, $icon-height);
-      }
+  &.k-Button--icon {
+    .k-Button__icon {
+      @include k-buttonRounded($button-size-big, $icon-width, $icon-height);
     }
+  }
 }

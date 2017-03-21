@@ -20,6 +20,7 @@
 /// Available size modifiers:
 /// - `.k-Button--tiny`
 /// - `.k-Button--big`
+/// - `.k-Button--big@s-up`
 ///
 /// @group buttons
 ///
@@ -271,6 +272,17 @@
 
   $transition-speed: .2s;
 
+  // Big size options button.
+  $buttonBigOption: (
+    typography-step: $button-step,
+    line-height: $button-big-line-height,
+    radius: $button-big-radius,
+    width: $button-big-min-width,
+    icon-size: $button-size-big,
+    icon-width: $icon-width,
+    icon-height: $icon-height,
+  );
+
   .k-Button {
     @include k-buttonBase;
     @include k-typographyFontSize($button-step, $button-line-height);
@@ -333,28 +345,12 @@
   }
 
   .k-Button--big {
-    @include k-buttonBig((
-      typography-step: $button-step,
-      line-height: $button-big-line-height,
-      radius: $button-big-radius,
-      width: $button-big-min-width,
-      icon-size: $button-size-big,
-      icon-width: $icon-width,
-      icon-height: $icon-height,
-    ))
+    @include k-buttonBig($buttonBigOption);
   }
 
   .k-Button--big\@s-up {
     @include k-media-min('s') {
-      @include k-buttonBig((
-        typography-step: $button-step,
-        line-height: $button-big-line-height,
-        radius: $button-big-radius,
-        width: $button-big-min-width,
-        icon-size: $button-size-big,
-        icon-width: $icon-width,
-        icon-height: $icon-height,
-      ))
+      @include k-buttonBig($buttonBigOption);
     }
   }
 
