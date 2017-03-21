@@ -154,6 +154,7 @@ import { KarlMakerWhoAmIStep } from 'app/maker/who-am-i/components/container'
 import { KarlAlert,
          KarlAlertWithButton,
          KarlAlertWithMarkdown } from 'kitten/karl/notifications/alert'
+import { KarlLegoGrid } from 'kitten/karl/grid/lego-grid'
 
 ReactOnRails.register({
   // Box
@@ -302,4 +303,5 @@ ReactOnRails.register({
   KarlPaymentButton,
   KarlRandomProgress,
   KarlMakerWhoAmIStep,
+  KarlLegoGrid,
 })
