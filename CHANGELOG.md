@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking change: Change height of `k-Progress` component.
 - Feature: Add `IconBadge` component.
 - Feature: Add new `Badge` React component.
 - Feature: Add `LegoGrid` component.
