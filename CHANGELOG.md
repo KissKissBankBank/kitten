@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Add `LegoGrid` component.
 - Feature: Add `flexible` option to `k-grid-colSize` mixin.
+- Fix: Prevent newline in mobile view for `SearchInput` component.
 - Feature: Add `k-u-align-right` class.
 - Fix: Deprecate `k-u-centered` in favor of `k-u-align-center`.
 
