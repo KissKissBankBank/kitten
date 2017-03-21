@@ -153,6 +153,7 @@ import { KarlMakerWhoAmIStep } from 'app/maker/who-am-i/components/container'
 import { KarlAlert,
          KarlAlertWithButton,
          KarlAlertWithMarkdown } from 'kitten/karl/notifications/alert'
+import { KarlProjectCard } from 'kitten/karl/cards/project-card'
 
 ReactOnRails.register({
   // Box
@@ -267,6 +268,7 @@ ReactOnRails.register({
   KarlSvgExternalRichLink,
   KarlSimpleDropdown,
   KarlPlatformSwitch,
+  KarlProjectCard,
   KarlUserMenuDropdown,
   KarlHeader,
   KarlHeaderWithSearchInput,

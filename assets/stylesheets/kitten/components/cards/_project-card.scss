@@ -1,0 +1,50 @@
+/// Project card
+///
+/// @group cards
+///
+/// @example scss - usage
+///
+///   @include k-ProjectCard;
+///
+/// @example html
+///
+///   <div class="k-ProjectCard">
+///     …
+///   </div>
+
+@mixin k-ProjectCard {
+  .k-ProjectCard {
+    box-sizing: border-box;
+    margin: 0 k-px-to-rem(10px) k-px-to-rem(20px);
+    background: map-get($k-colors, 'background-1');
+    border: 1px solid map-get($k-colors, 'line-1');
+
+    box-shadow: 0 5px 15px map-get($k-colors, 'line-1');
+    cursor: pointer;
+
+    transition: transform .4s, box-shadow .4s;
+
+    &:hover {
+      box-shadow: 0 5px 15px map-get($k-colors, 'line-2');
+      transform: translateY(-10px);
+    }
+  }
+
+  .k-ProjectCard__content {
+    padding: 0 k-px-to-rem(20px);
+  }
+
+  .k-ProjectCard__progress {
+    padding: k-px-to-rem(20px);
+  }
+
+  .k-ProjectCard__img {
+    display: block;
+    width: 100%;
+    margin: k-px-to-rem(20px) 0;
+  }
+
+  .k-ProjectCard__borderBottom {
+    border-bottom: 1px solid map-get($k-colors, 'line-1');
+  }
+}
