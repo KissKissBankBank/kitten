@@ -4,7 +4,7 @@
 ///
 /// @example scss - usage
 ///
-///   @include k-Progress
+///   @include k-Progress;
 ///
 /// @example html
 ///
@@ -23,9 +23,7 @@
 
   // Ramp
   $ramp-color: map-get($k-colors, 'line-1');
-
-  $ramp-height: k-px-to-rem(20px);
-  $border-radius: k-px-to-rem(30px);
+  $ramp-height: k-px-to-rem(2px);
 
   $transition-speed: .2s;
 
@@ -36,7 +34,6 @@
   .k-Progress__ramp {
     position: relative;
     height: $ramp-height;
-    border-radius: $border-radius;
 
     background: $ramp-color;
   }
@@ -45,22 +42,12 @@
     width: 0;
     height: 100%;
 
-    border-radius: $border-radius;
     background: $color;
 
     transition: width $transition-speed;
 
     .k-Progress.is-disabled & {
       background: $disabled-color;
-    }
-  }
-
-  // Modifiers.
-
-  .k-Progress--tiny {
-    .k-Progress__ramp {
-      height: 2px;
-      border-radius: none;
     }
   }
 }

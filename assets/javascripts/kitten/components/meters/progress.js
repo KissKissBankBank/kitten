@@ -5,12 +5,10 @@ export class Progress extends React.Component {
   render() {
     const { className,
             value,
-            tiny,
             ...others } = this.props
 
     const progressClassName = classNames(
       'k-Progress',
-      { 'k-Progress--tiny': tiny },
       className,
     )
 
@@ -35,5 +33,4 @@ export class Progress extends React.Component {
 
 Progress.defaultProps = {
   value: 50,
-  tiny: false,
 }
