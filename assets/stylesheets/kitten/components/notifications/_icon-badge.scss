@@ -18,6 +18,7 @@
   $color: map-get($k-colors, 'background-1');
   $background-color: map-get($k-colors, 'primary-1');
   $size: k-px-to-rem(30px);
+  $content-size: k-px-to-rem(15px);
 
   .k-IconBadge {
     display: flex;
@@ -32,7 +33,7 @@
   }
 
   .k-IconBadge__content {
-    flex-basis: k-px-to-rem(15px);
+    flex-basis: $content-size;
     fill: $color;
     color: $color;
     text-align: center;
