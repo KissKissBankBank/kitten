@@ -13,7 +13,7 @@ describe('<SideLayout />', () => {
   )
 
   const component = mount(
-    <SideLayout className="k-VerticalGrid__fluid"
+    <SideLayout className="myAwesomeClass"
                 title="SideLayout title here"
                 sidebarContent={ informationBox }>
       <Paragraph>
@@ -27,8 +27,8 @@ describe('<SideLayout />', () => {
   const informationBoxTitle = component.find('.k-InformationBox__title')
   const informationBoxText = component.find('.k-InformationBox__content')
 
-  it('renders a <div class="k-VerticalGrid__fluid" />', () => {
-    expect(component).to.have.className('k-VerticalGrid__fluid')
+  it('renders a <div class="myAwesomeClass" />', () => {
+    expect(component).to.have.className('myAwesomeClass')
   })
 
   it('has a title', () => {
