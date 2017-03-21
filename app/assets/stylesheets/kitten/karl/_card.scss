@@ -36,3 +36,11 @@ $karl-card-layout: (
     }
   }
 }
+
+.karl-ProjectCard {
+  border: 1px solid map-get($k-colors, 'line-1');
+  height: k-px-to-rem(100px);
+  background-color: map-get($k-colors, 'background-1');
+  box-shadow: 0 5px 10px map-get($k-colors, 'line-2');
+  margin: 0 k-px-to-rem(10px) k-px-to-rem(20px);
+}
