@@ -63,6 +63,8 @@ import { TabBar } from 'kitten/components/navigation/tab-bar'
 
 // Notifications
 import { Alert } from 'kitten/components/notifications/alert'
+import { Badge } from 'kitten/components/notifications/badge'
+import { IconBadge } from 'kitten/components/notifications/icon-badge'
 
 // Popovers
 import { Popover } from 'kitten/components/popovers/popover'
@@ -153,6 +155,8 @@ import { KarlMakerWhoAmIStep } from 'app/maker/who-am-i/components/container'
 import { KarlAlert,
          KarlAlertWithButton,
          KarlAlertWithMarkdown } from 'kitten/karl/notifications/alert'
+import { KarlIconBadgeWithSvg } from 'kitten/karl/notifications/icon-badge'
+import { KarlLegoGrid } from 'kitten/karl/grid/lego-grid'
 
 ReactOnRails.register({
   // Box
@@ -219,6 +223,8 @@ ReactOnRails.register({
 
   // Notifications
   Alert,
+  Badge,
+  IconBadge,
 
   // Popovers
   CallToActionPopover,
@@ -263,6 +269,7 @@ ReactOnRails.register({
   KarlButtonAndText,
   KarlLineWithTooltip,
   KarlLineWithBigHeart,
+  KarlIconBadgeWithSvg,
   KarlImageExternalRichLink,
   KarlSvgExternalRichLink,
   KarlSimpleDropdown,
@@ -300,4 +307,5 @@ ReactOnRails.register({
   KarlPaymentButton,
   KarlRandomProgress,
   KarlMakerWhoAmIStep,
+  KarlLegoGrid,
 })

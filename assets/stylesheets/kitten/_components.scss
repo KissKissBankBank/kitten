@@ -47,6 +47,7 @@
 
 // Grid
 @import 'kitten/components/grid/grid';
+@import 'kitten/components/grid/lego-grid';
 @import "kitten/components/grid/row";
 @import "kitten/components/grid/side-grid";
 @import "kitten/components/grid/single-column";
@@ -80,6 +81,7 @@
 // Notifications
 @import 'kitten/components/notifications/alert';
 @import 'kitten/components/notifications/badge';
+@import 'kitten/components/notifications/icon-badge';
 
 // Press
 @import 'kitten/components/press/press-quotes';

@@ -1,0 +1,21 @@
+<%= example 'Badge with one character' do %>
+  <p>
+    <%= react_component 'IconBadge', props: {
+      children: 'C',
+    } %>
+  </p>
+<% end %>
+
+<%= example 'Badge with two characters' do %>
+  <p>
+    <%= react_component 'IconBadge', props: {
+      children: 'A+',
+    } %>
+  </p>
+<% end %>
+
+<%= example 'Badge with svg' do %>
+  <p>
+    <%= react_component 'KarlIconBadgeWithSvg' %>
+  </p>
+<% end %>
