@@ -333,19 +333,28 @@
   }
 
   .k-Button--big {
-    @include k-typographyFontSize(
-      $button-step,
-      $button-big-line-height
-    );
+    @include k-buttonBig((
+      typography-step: $button-step,
+      line-height: $button-big-line-height,
+      radius: $button-big-radius,
+      width: $button-big-min-width,
+      icon-size: $button-size-big,
+      icon-width: $icon-width,
+      icon-height: $icon-height,
+    ))
+  }
 
-    padding: 0 $button-big-radius;
-    border-radius: $button-big-radius;
-    min-width: $button-big-min-width;
-
-    &.k-Button--icon {
-      .k-Button__icon {
-        @include k-buttonRounded($button-size-big, $icon-width, $icon-height);
-      }
+  .k-Button--big\@s-up {
+    @include k-media-min('s') {
+      @include k-buttonBig((
+        typography-step: $button-step,
+        line-height: $button-big-line-height,
+        radius: $button-big-radius,
+        width: $button-big-min-width,
+        icon-size: $button-size-big,
+        icon-width: $icon-width,
+        icon-height: $icon-height,
+      ))
     }
   }
 
