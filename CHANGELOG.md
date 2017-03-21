@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `tiny` prop on `Progress` component.
+- Breaking change: Change height of `k-Progress` component.
 - Feature: Add `k-u-align-right` class.
 - Fix: Deprecate `k-u-centered` in favor of `k-u-align-center`.
 
