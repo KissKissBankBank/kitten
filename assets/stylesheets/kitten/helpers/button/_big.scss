@@ -1,3 +1,40 @@
+/// Change button size.
+///
+/// This mixin will change size button in terms of media queries.
+///
+/// @group buttons
+///
+/// @example scss - Usage
+///
+///  $buttonBigOption: (
+///    typography-step: -2,
+///    line-height: 50px,
+///    radius: 25px,
+///    width: 200px,
+///    icon-size: 50px,
+///    icon-width: 12px,
+///    icon-height: 14px,
+///  );
+///
+///  .k-Button--big {
+///    @include k-buttonBig($buttonBigOption);
+///  }
+///
+/// @example css - CSS output
+///  .k-Button--big {
+///    @include k-typographyFontSize(-2, 50px);
+///
+///    padding: 0 25px;
+///    border-radius: 25px;
+///    min-width: 200px;
+///  }
+///
+///  .k-Button--big.k-Button--icon {
+///    .k-Button__icon {
+///      @include k-buttonRounded(50px, 12px, 14px);
+///    }
+///  }
+
 @mixin k-buttonBig($options) {
   $button-step: map-get($options, 'typography-step');
   $button-size-big: map-get($options,'icon-size');
