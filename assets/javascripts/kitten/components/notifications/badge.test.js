@@ -16,7 +16,7 @@ describe('<Badge />', () => {
     })
   })
 
-  describe('with custom class', () => {
+  describe('with className prop', () => {
     const badge = shallow(<Badge className="custom__class" />)
 
     it('has a custom class', () => {
@@ -24,7 +24,7 @@ describe('<Badge />', () => {
     })
   })
 
-  describe('with `spaced` prop', () => {
+  describe('with spaced prop', () => {
     const badge = shallow(<Badge spaced />)
 
     it('has a good class', () => {
