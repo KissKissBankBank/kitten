@@ -13,6 +13,8 @@ export class SideLayout extends React.Component {
     super(props)
 
     this.state = { needsFullHeight: false }
+
+    this.renderDocLinkBox = this.renderDocLinkBox.bind(this)
   }
 
   needsFullHeight() {
@@ -25,21 +27,23 @@ export class SideLayout extends React.Component {
     }
   }
 
+  renderDocLinkBox(item) {
+    const { id, ...docLinkBoxProps } = item
+
+    return (
+      <div key={ id }
+           className={ classNames('k-u-margin-top-triple',
+                                  'k-u-margin-right-double',
+                                  'k-u-margin-left-quadruple') }>
+        <DocLinkBox { ...docLinkBoxProps } />
+      </div>
+    )
+  }
+
   renderDocLinkBoxes() {
     if (!this.props.sidebar) return
 
-    const { items } = this.props.sidebar
-
-    return items.map((item, key) => {
-      return (
-        <div key={ key }
-             className={ classNames('k-u-margin-top-triple',
-                                    'k-u-margin-right-double',
-                                    'k-u-margin-left-quadruple') }>
-          <DocLinkBox { ...item } />
-        </div>
-      )
-    })
+    return this.props.sidebar.items.map(this.renderDocLinkBox)
   }
 
   render() {
@@ -80,6 +84,15 @@ export class SideLayout extends React.Component {
 }
 
 SideLayout.defaultProps = {
-  title: 'Your title here',
-  children: 'lorem ipsum dolor',
+  title: 'Title',
+  children: 'Children',
+  // sidebar: items: [{ // for DocLinkBox components
+  //   id: 'myLink1', // id are required for sidebar content
+  //   href: '#',
+  //   title: 'My title',
+  //   text: 'My text',
+  // },],
+  sidebar: {},
+  // sidebarContent: renderOfhatYouWant() // for custom components in aside grid
+  sidebarContent: {}
 }
