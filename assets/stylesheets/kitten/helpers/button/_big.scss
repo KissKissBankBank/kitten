@@ -6,19 +6,19 @@
 ///
 /// @example scss - Usage
 ///
-///  $buttonBigOptions: (
-///    typography-step: -2,
-///    line-height: 50px,
-///    radius: 25px,
-///    width: 200px,
-///    icon-size: 50px,
-///    icon-width: 12px,
-///    icon-height: 14px,
-///  );
+///   $buttonBigOptions: (
+///     typography-step: -2,
+///     line-height: 50px,
+///     radius: 25px,
+///     width: 200px,
+///     icon-size: 50px,
+///     icon-width: 12px,
+///     icon-height: 14px,
+///   );
 ///
-///  .k-Button--big {
-///    @include k-buttonBig($buttonBigOptions);
-///  }
+///   .k-Button--big {
+///     @include k-buttonBig($buttonBigOptions);
+///   }
 ///
 /// @example css - CSS output
 ///   .k-Button--big {
