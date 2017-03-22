@@ -5,7 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add `TagList` component.
-- Feature: Add `TagIcon` React component.
+- Feature: Add `TagIcon` component.
 - Feature: Add `IconBadge` component.
 - Feature: Add new `Badge` React component.
 - Feature: Add `LegoGrid` component.
