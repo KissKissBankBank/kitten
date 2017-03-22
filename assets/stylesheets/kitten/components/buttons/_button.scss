@@ -273,7 +273,7 @@
   $transition-speed: .2s;
 
   // Big size options button.
-  $buttonBigOption: (
+  $buttonBigOptions: (
     typography-step: $button-step,
     line-height: $button-big-line-height,
     radius: $button-big-radius,
@@ -345,12 +345,12 @@
   }
 
   .k-Button--big {
-    @include k-buttonBig($buttonBigOption);
+    @include k-buttonBig($buttonBigOptions);
   }
 
   .k-Button--big\@s-up {
     @include k-media-min('s') {
-      @include k-buttonBig($buttonBigOption);
+      @include k-buttonBig($buttonBigOptions);
     }
   }
 

@@ -6,7 +6,7 @@
 ///
 /// @example scss - Usage
 ///
-///  $buttonBigOption: (
+///  $buttonBigOptions: (
 ///    typography-step: -2,
 ///    line-height: 50px,
 ///    radius: 25px,
@@ -17,23 +17,23 @@
 ///  );
 ///
 ///  .k-Button--big {
-///    @include k-buttonBig($buttonBigOption);
+///    @include k-buttonBig($buttonBigOptions);
 ///  }
 ///
 /// @example css - CSS output
-///  .k-Button--big {
-///    @include k-typographyFontSize(-2, 50px);
+///   .k-Button--big {
+///     @include k-typographyFontSize(-2, 50px);
 ///
-///    padding: 0 25px;
-///    border-radius: 25px;
-///    min-width: 200px;
-///  }
+///     padding: 0 25px;
+///     border-radius: 25px;
+///     min-width: 200px;
+///   }
 ///
-///  .k-Button--big.k-Button--icon {
-///    .k-Button__icon {
-///      @include k-buttonRounded(50px, 12px, 14px);
-///    }
-///  }
+///   .k-Button--big.k-Button--icon {
+///     .k-Button__icon {
+///       @include k-buttonRounded(50px, 12px, 14px);
+///     }
+///   }
 
 @mixin k-buttonBig($options) {
   $button-step: map-get($options, 'typography-step');
