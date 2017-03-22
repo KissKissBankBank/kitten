@@ -18,7 +18,9 @@ describe('<SideLayout />', () => {
 
   describe('with sidebar prop', () => {
     const component = mount(
-      <SideLayout sidebar='Sidebar content'></SideLayout>
+      <SideLayout sidebar='Sidebar content'>
+        …
+      </SideLayout>
     )
 
     const sideGridAside = component.find('.k-SideGrid__aside')
