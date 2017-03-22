@@ -29,7 +29,7 @@ export class KarlSideLayout extends React.Component {
     return this.props.sidebar.docLinkBoxes.items.map(this.renderDocLinkBox)
   }
 
-  renderInformationBox = () => {
+  renderInformationBox() {
     return (
       <div key='karlSideLayoutInformationBox'
            className={ classNames('k-u-margin-top-quadruple',
