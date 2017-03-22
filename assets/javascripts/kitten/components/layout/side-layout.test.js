@@ -7,6 +7,7 @@ describe('<SideLayout />', () => {
   describe('by default', () => {
     const component = mount(
       <SideLayout className="myAwesomeClass">
+        …
       </SideLayout>
     )
 
@@ -20,8 +21,10 @@ describe('<SideLayout />', () => {
       <SideLayout sidebar='Sidebar content'></SideLayout>
     )
 
+    const sideGridAside = component.find('.k-SideGrid__aside')
+
     it('has a sidebar content', () => {
-      expect(component).to.have.props({ sidebar: 'Sidebar content' })
+      expect(sideGridAside).to.have.text('Sidebar content')
     })
   })
 
