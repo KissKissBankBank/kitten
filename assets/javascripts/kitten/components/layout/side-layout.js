@@ -56,7 +56,7 @@ export class SideLayout extends React.Component {
 
 SideLayout.defaultProps = {
   children: 'Children',
-  // sidebar: renderOfhatYouWant() // for custom components in aside grid
+  // sidebar: renderOfhatYouWant() // Content for aside grid
   // E.g: see assets/javascripts/kitten/karl/layout/side-layout.js
   sidebar: null,
 }
