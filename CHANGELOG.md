@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Add `k-Button--big@s-up` modifier.
 - Feature: Add `k-buttonBig` mixin.
+- Breaking change: Change height of `k-Progress` component.
 - Feature: Add `IconBadge` component.
 - Feature: Add new `Badge` React component.
 - Feature: Add `LegoGrid` component.

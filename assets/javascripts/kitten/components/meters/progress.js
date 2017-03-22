@@ -13,7 +13,7 @@ export class Progress extends React.Component {
     )
 
     const style = {
-      width: this.props.value + "%"
+      width: `${value}%`,
     }
 
     return (
