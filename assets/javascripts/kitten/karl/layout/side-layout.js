@@ -1,6 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 import { SideLayout } from 'kitten/components/layout/side-layout'
+import { Grid, GridCol } from 'kitten/components/grid/grid'
 import { Title } from 'kitten/components/typography/title'
 import { Paragraph } from 'kitten/components/typography/paragraph'
 import { InformationBox } from 'kitten/components/box/information-box'
@@ -109,9 +110,13 @@ export class KarlSideLayout extends React.Component {
       <SideLayout className="k-VerticalGrid__fluid"
                   sidebar={ this.renderSidebar() }>
         { this.renderTitle() }
-        { this.renderIntro() }
-        { this.renderSummaryProjectForm() }
-        { this.renderActions() }
+        <Grid>
+          <GridCol col-s="10" col-l="8">
+            { this.renderIntro() }
+            { this.renderSummaryProjectForm() }
+            { this.renderActions() }
+          </GridCol>
+        </Grid>
       </SideLayout>
     )
   }
