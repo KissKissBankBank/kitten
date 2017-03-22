@@ -11,7 +11,7 @@ Features:
 - Add `k-buttonBig` mixin.
 - Add `k-u-align-right` class.
 - Add `IconBadge` component.
-- Add new `Badge` React component.
+- Add new `Badge` component.
 - Add `LegoGrid` component.
 - Add `flexible` option to `k-grid-colSize` mixin.
 - Add `k-u-align-right` class.
