@@ -31,13 +31,14 @@ export default class LinkBox extends React.Component {
             <p className="k-LinkBox__text">{ this.props.text }</p>
           </div>
 
-          <div className="k-LinkBox__navigation k-LinkBox__navigation--withAnimation">
-            <span className="k-LinkBox__button
-                             k-ButtonIcon
-                             k-ButtonIcon--hydrogen
-                             k-ButtonIcon--tiny
-                             k-ButtonIcon--withoutHover
-                             k-ButtonIcon--verticalArrow">
+          <div className={ classNames('k-LinkBox__navigation',
+                                      'k-LinkBox__navigation--withAnimation') }>
+            <span className={ classNames('k-LinkBox__button',
+                                         'k-ButtonIcon',
+                                         'k-ButtonIcon--hydrogen',
+                                         'k-ButtonIcon--tiny',
+                                         'k-ButtonIcon--withoutHover',
+                                         'k-ButtonIcon--verticalArrow') }>
               <svg className="k-ButtonIcon__svg"
                    xmlns="http://www.w3.org/2000/svg"
                    viewBox="0 0 10 10">
