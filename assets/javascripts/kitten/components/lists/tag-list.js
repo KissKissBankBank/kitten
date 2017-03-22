@@ -13,7 +13,8 @@ export class TagList extends React.Component {
     return this.props.items.map(this.renderItem)
   }
 
-  renderItem(item, index) {
+  renderItem(element, index) {
+    const { key, item } = element
     const isFirstItem = index == 0
     const itemClassName = classNames(
       'k-TagList__item',
@@ -25,7 +26,7 @@ export class TagList extends React.Component {
       : item
 
     return (
-      <li key={ index } className={ itemClassName }>
+      <li key={ key } className={ itemClassName }>
         { children }
       </li>
     )
