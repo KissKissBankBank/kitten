@@ -5,73 +5,126 @@ import { Title } from 'kitten/components/typography/title'
 import { Paragraph } from 'kitten/components/typography/paragraph'
 import { InformationBox } from 'kitten/components/box/information-box'
 import DocLinkBox from 'kitten/components/box/doc-link-box'
+import { FormActions } from 'kitten/components/form/form-actions'
+import { Button } from 'kitten/components/buttons/button'
+import { Label } from 'kitten/components/form/label'
+import { TextInputWithLimit } from 'kitten/components/form/text-input-with-limit'
 
-const renderInformationBox = () => {
-  return (
-    <div key='karlSideLayoutInformationBox'
-         className={ classNames('k-u-margin-top-quadruple',
-                                'k-u-margin-right-quadruple',
-                                'k-u-margin-left-quadruple') }>
-      <InformationBox title="Your title here">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum assumenda,
-          rem doloribus voluptatem corporis iure sapiente, aperiam eligendi
-          officiis nam, repellendus accusamus nulla a quia debitis eveniet
-          necessitatibus eum veritatis.
-        </p>
-      </InformationBox>
-    </div>
-  )
-}
+export class KarlSideLayout extends React.Component {
+  renderDocLinkBox(item) {
+    const { id, ...docLinkBoxProps } = item
 
-const renderDocLinkBox = (item) => {
-  const { id, ...docLinkBoxProps } = item
+    return (
+      <div key={ id }
+           className={ classNames('k-u-margin-top-triple',
+                                  'k-u-margin-right-double',
+                                  'k-u-margin-left-quadruple') }>
+        <DocLinkBox { ...docLinkBoxProps } />
+      </div>
+    )
+  }
 
-  return (
-    <div key={ id }
-         className={ classNames('k-u-margin-top-triple',
-                                'k-u-margin-right-double',
-                                'k-u-margin-left-quadruple') }>
-      <DocLinkBox { ...docLinkBoxProps } />
-    </div>
-  )
-}
+  renderDocLinkBoxes() {
+    return this.props.sidebar.docLinkBoxes.items.map(this.renderDocLinkBox)
+  }
 
-const renderDocLinkBoxes = () => {
-  return [
-    {
-      id: 'myLink1',
-      href: '#',
-      title: 'My title',
-      text: 'My text',
-    }, {
-      id: 'myLink2',
-      isExternal: true,
-      href: 'http://www.google.com',
-      title: 'My title 2',
-      text: 'My text 2',
-    },
-  ].map(renderDocLinkBox)
-}
+  renderInformationBox = () => {
+    return (
+      <div key='karlSideLayoutInformationBox'
+           className={ classNames('k-u-margin-top-quadruple',
+                                  'k-u-margin-right-quadruple',
+                                  'k-u-margin-left-quadruple') }>
+        <InformationBox title={ this.props.sidebar.informationBox.title }>
+          <p>
+            { this.props.sidebar.informationBox.text.paragraph1 }
+          </p>
+          <p className='k-u-margin-bottom-none'>
+            { this.props.sidebar.informationBox.text.paragraph2 }
+          </p>
+        </InformationBox>
+      </div>
+    )
+  }
 
-const renderSidebar = () => {
-  return [renderDocLinkBoxes(), renderInformationBox()]
-}
+  renderSidebar() {
+    return [this.renderDocLinkBoxes(), this.renderInformationBox()]
+  }
 
-export const KarlSideLayout = () => {
-  return (
-    <SideLayout className="k-VerticalGrid__fluid"
-                sidebar={ renderSidebar() }>
+  renderTitle() {
+    return(
       <Title>
-        Your title here
+        { this.props.form.title }
       </Title>
+    )
+  }
 
+  renderIntro() {
+    return(
       <Paragraph>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        Nulla assumenda, corporis, esse accusantium minus ex vel officia unde
-        rerum labore explicabo voluptatem facere omnis suscipit neque distinctio
-        dolores dolor minima!
+        { this.props.form.intro }
       </Paragraph>
-    </SideLayout>
-  )
+    )
+  }
+
+  renderSummaryProjectForm() {
+    return (
+      <div className="k-u-margin-bottom-triple">
+        <Label className="k-u-margin-bottom-single"
+               tag="span"
+               size="tiny"
+               focusId={ false }>
+          { this.shortDescField().label }
+        </Label>
+        <TextInputWithLimit onBlur={ this.handleInputUpdate }
+                            name={ this.shortDescField().name }
+                            tag="textarea"
+                            placeholder={ this.shortDescField().placeholder }
+                            rows="8"
+                            limit="500" />
+      </div>
+    )
+  }
+
+  renderActions() {
+    return (
+      <FormActions className={ classNames('k-u-margin-top-quadruple',
+                                          'k-u-margin-bottom-quadruple') }>
+        <Button tag="a"
+                modifier="hydrogen"
+                href={ this.props.previousStepUrl }>
+          { this.props.previousStepLabel }
+        </Button>
+
+        <Button tag="a"
+                modifier="helium"
+                onClick={ this.handleOnSubmit }>
+          { this.props.nextStepLabel }
+        </Button>
+      </FormActions>
+    )
+  }
+
+  renderSideLayout() {
+    return (
+      <SideLayout className="k-VerticalGrid__fluid"
+                  sidebar={ this.renderSidebar() }>
+        { this.renderTitle() }
+        { this.renderIntro() }
+        { this.renderSummaryProjectForm() }
+        { this.renderActions() }
+      </SideLayout>
+    )
+  }
+
+  render() {
+    return (
+      <div className='k-VerticalGrid__page'>
+        { this.renderSideLayout() }
+      </div>
+    )
+  }
+
+  shortDescField() {
+    return this.props.form.fields['project[short_desc]']
+  }
 }
