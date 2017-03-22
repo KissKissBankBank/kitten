@@ -40,7 +40,7 @@ export class SideLayout extends React.Component {
                 rowClassName="k-VerticalGrid__element">
         <SideGridContent>
           <Grid>
-            <GridCol col-s="10" offset-s="1" col-l="8">
+            <GridCol col-s="12">
               { this.props.children }
             </GridCol>
           </Grid>
