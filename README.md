@@ -242,7 +242,8 @@ $ bundle exec rake kitten_release
 
 ### Npm
 
-Save your credentials in your `.npmrc`:
+Only if this is your first release, save your credentials in your `.npmrc`:
+
 ```
 npm adduser
 ```
