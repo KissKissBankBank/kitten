@@ -10,6 +10,14 @@ Features:
 - Add `k-Button--big@s-up` modifier.
 - Add `k-buttonBig` mixin.
 - Add `k-u-align-right` class.
+- Add `IconBadge` component.
+- Add new `Badge` React component.
+- Add `LegoGrid` component.
+- Add `flexible` option to `k-grid-colSize` mixin.
+- Add `k-u-align-right` class.
+
+Breaking change:
+- Change height of `k-Progress` component.
 
 Fixes:
 - Prevent newline in mobile view for `SearchInput` component.
