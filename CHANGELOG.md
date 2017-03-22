@@ -4,7 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-## [8.7.0] - 2017-03-22
+## [9.0.0] - 2017-03-22
+
+Breaking change:
+- Change height of `k-Progress` component.
 
 Features:
 - Add `k-Button--big@s-up` modifier.
@@ -15,9 +18,6 @@ Features:
 - Add `LegoGrid` component.
 - Add `flexible` option to `k-grid-colSize` mixin.
 - Add `k-u-align-right` class.
-
-Breaking change:
-- Change height of `k-Progress` component.
 
 Fixes:
 - Prevent newline in mobile view for `SearchInput` component.
