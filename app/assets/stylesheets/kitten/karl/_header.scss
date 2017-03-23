@@ -7,7 +7,7 @@
   height: $header-height;
   width: 100%;
 
-  background-color: $blue;
+  background-color: map-get($k-colors, '$primary-1');
   height: $header-height;
   width: 100%;
   position: fixed;
@@ -37,7 +37,7 @@
     display: block;
     margin: k-px-to-rem(30px) auto 0;
     width: 50px;
-    border-bottom: 1px $light-grey-2 solid;
+    border-bottom: 1px solid map-get($k-colors, 'line-2') ;
     content: '';
   }
 }
