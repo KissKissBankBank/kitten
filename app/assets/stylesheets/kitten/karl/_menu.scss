@@ -1,7 +1,7 @@
 $menu-padding-right: 1rem;
 $header-title-margin: 2rem;
 
-$color-menu: map-get($k-colors, 'primary-3');
+$menu-color: map-get($k-colors, 'primary-3');
 
 // We need a fixed with to position correctly '.karl-Menu__header__title'
 $menu-width: 14rem;
@@ -130,7 +130,7 @@ $menu-width: 14rem;
 
   padding: 3.125rem 0 1rem 1rem;
 
-  border-bottom: 1px solid $color-menu;
+  border-bottom: 1px solid $menu-color;
 
   font-size: 1.25rem;
   font-weight: 300;
@@ -146,7 +146,7 @@ $menu-width: 14rem;
   padding: 1.5rem 0 .75rem 1rem;
   padding-right: $menu-padding-right;
 
-  border-bottom: 1px solid $color-menu;
+  border-bottom: 1px solid $menu-color;
 
   font-size: .75rem;
   text-transform: uppercase;
@@ -161,7 +161,7 @@ $menu-width: 14rem;
     }
 
     &.is-opened {
-      background-color: $color-menu;
+      background-color: $menu-color;
 
       &:after {
         content: url($arrowTop-path);
@@ -171,14 +171,14 @@ $menu-width: 14rem;
 
   &:hover,
   &:focus {
-    background-color: $color-menu;
+    background-color: $menu-color;
   }
 }
 
 .karl-Menu__link {
   display: block;
 
-  border-bottom: 1px solid $color-menu;
+  border-bottom: 1px solid $menu-color;
   list-style: none;
 
   font-size: 0.75rem;
@@ -205,7 +205,7 @@ $menu-width: 14rem;
     }
 
     &.is-opened {
-      background-color: $color-menu;
+      background-color: $menu-color;
 
       &:after {
         content: url($arrowTop-path);
@@ -215,7 +215,7 @@ $menu-width: 14rem;
 
   &:hover,
   &:focus {
-    background-color: $color-menu;
+    background-color: $menu-color;
   }
 }
 
@@ -237,6 +237,6 @@ $menu-width: 14rem;
   &:focus,
   &.is-selected,
   &.is-opened {
-    background-color: $color-menu;
+    background-color: $menu-color;
   }
 }
