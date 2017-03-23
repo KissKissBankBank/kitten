@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Remove unneeded padding on `SearchInput` component.
+
 ## [9.1.0] - 2017-03-22
 
 Feature:
