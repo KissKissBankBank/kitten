@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Redesign new subtitles and add border-bottom.
+- Fix: Install new grid on 10 columns.
+
 ## [9.1.0] - 2017-03-22
 
 Feature:
