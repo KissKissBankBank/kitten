@@ -1,73 +1,69 @@
-<div class="karl-Section__example">
-  <div class="karl-Example__column">
-    <%= example 'Hydrogen button' do %>
-      <%= react_component('Button', props: {
-          children: 'Button'
-          }) %>
-    <% end %>
+<div class="karl-Example__column">
+  <%= example 'Hydrogen button' do %>
+    <%= react_component('Button', props: {
+        children: 'Button'
+        }) %>
+  <% end %>
 
-    <%= example 'Helium button' do %>
-      <%= react_component('Button', props: {
-          modifier: 'helium',
-          children: 'Button',
-          }) %>
-    <% end %>
+  <%= example 'Helium button' do %>
+    <%= react_component('Button', props: {
+        modifier: 'helium',
+        children: 'Button',
+        }) %>
+  <% end %>
 
-    <%= example 'Lithium button' do %>
-      <%= react_component('Button', props: {
-          modifier: 'lithium',
-          children: 'Button',
-          }) %>
-    <% end %>
+  <%= example 'Lithium button' do %>
+    <%= react_component('Button', props: {
+        modifier: 'lithium',
+        children: 'Button',
+        }) %>
+  <% end %>
 
-    <%= example 'Beryllium button' do %>
-      <%= react_component('Button', props: {
-          modifier: 'beryllium',
-          children: 'Button',
-          }) %>
-    <% end %>
+  <%= example 'Beryllium button' do %>
+    <%= react_component('Button', props: {
+        modifier: 'beryllium',
+        children: 'Button',
+        }) %>
+  <% end %>
 
-    <%= example 'Boron button' do %>
-      <%= react_component('Button', props: {
-          modifier: 'boron',
-          children: 'Button',
-          }) %>
-    <% end %>
+  <%= example 'Boron button' do %>
+    <%= react_component('Button', props: {
+        modifier: 'boron',
+        children: 'Button',
+        }) %>
+  <% end %>
 
-    <%= example 'Carbon button' do %>
-      <%= react_component('Button', props: {
-          modifier: 'carbon',
-          children: 'Button',
-          }) %>
-    <% end %>
-  </div>
+  <%= example 'Carbon button' do %>
+    <%= react_component('Button', props: {
+        modifier: 'carbon',
+        children: 'Button',
+        }) %>
+  <% end %>
 
-  <div class="karl-Example__column">
-    <%= example 'Disabled button' do %>
-      <%= react_component('Button', props: {
-          disabled: true,
-          children: 'Button'
-          }) %>
-    <% end %>
-
-    <%= example 'Tiny button' do %>
-      <%= react_component('Button', props: {
-          size: 'tiny',
-          children: 'Button',
-          }) %>
-    <% end %>
-
-    <%= example 'Big button' do %>
-      <%= react_component('Button', props: {
-          size: 'big',
-          children: 'Button',
-          }) %>
-    <% end %>
-  </div>
-</div>
-
-<div class="karl-Section__example">
   <%= example 'Buttons with text next to it' do %>
     <%= react_component('KarlButtonAndText') %>
+  <% end %>
+</div>
+
+<div class="karl-Example__column">
+  <%= example 'Disabled button' do %>
+    <%= react_component('Button', props: {
+        disabled: true,
+        children: 'Button'
+        }) %>
+  <% end %>
+
+  <%= example 'Tiny button' do %>
+    <%= react_component('Button', props: {
+        size: 'tiny',
+        children: 'Button',
+        }) %>
+  <% end %>
+
+  <%= example 'Big button' do %>
+    <%= react_component('Button', props: {
+        size: 'big',
+        children: 'Button',
+        }) %>
   <% end %>
 </div>
