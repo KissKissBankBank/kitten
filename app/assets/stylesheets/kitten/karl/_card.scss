@@ -21,7 +21,7 @@ $karl-card-layout: (
   box-sizing: border-box;
   margin: .6rem 0 2.5rem 0;
 
-  border: solid 1px map-get($k-colors, 'line-1');
+  border: 1px solid map-get($k-colors, 'line-1');
   background-color: white;
 
   &:last-child {

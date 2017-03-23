@@ -11,7 +11,7 @@
 
   @include k-typographyFont('source-sans-light');
   @include k-typographyFontSize(-1);
-  border-top: solid 1px map-get($k-colors, 'line-1');
+  border-top: 1px solid map-get($k-colors, 'line-1');
 }
 
 .karl-Colors__cardParagraph {
