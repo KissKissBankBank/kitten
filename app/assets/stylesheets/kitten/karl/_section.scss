@@ -8,7 +8,8 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-bottom: 4.5em;
+  padding-bottom: 3em;
+  border-bottom: 1px solid map-get($k-colors, 'line-2');
 }
 
 @media (max-width: 1100px) {
@@ -19,9 +20,13 @@
 
 .karl-Section__example--vertical {
   flex-direction: column;
+
+  padding-bottom: 3em;
+  border-bottom: 1px solid map-get($k-colors, 'line-2');
 }
 
 .karl-Section__title {
+  margin-top: 2rem;
   margin-bottom: 1rem;
 
   @include k-typographyFont('source-sans-light');
