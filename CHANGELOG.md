@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Remplace images to images empty.
+
 ## [9.2.0] - 2017-03-23
 
 Fix:
