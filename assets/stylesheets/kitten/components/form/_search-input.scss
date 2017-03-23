@@ -35,9 +35,6 @@
   // Size
   $icon-size: k-px-to-rem(14px);
   $submit-horizontal-padding: k-px-to-rem(13px);
-  $input-right-padding: $submit-horizontal-padding * 2 +
-                        $icon-size +
-                        k-px-to-rem(15px);
 
   // Colors
 
@@ -91,7 +88,6 @@
     border-right: 0 !important;
     box-sizing: border-box;
     width: $search-input-width !important;
-    padding-right: $input-right-padding;
 
     &:focus ~ .k-SearchInput__submit {
       border-color: $border-focus;
