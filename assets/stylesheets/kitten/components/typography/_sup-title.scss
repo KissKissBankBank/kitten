@@ -1,0 +1,23 @@
+/// SupTitle
+///
+/// @group typography
+///
+/// @example scss - usage
+///
+/// @include k-SupTitle;
+///
+/// @example html
+///
+///   <SupTitle>Step 1</SupTitle>
+///   <Title>My title</Title>
+
+@mixin k-SupTitle {
+  $font: 'source-sans-semi-bold';
+
+  .k-SupTitle {
+    @include k-typographyFont($font);
+    @include k-typographyFontScale($font-step: -1,
+                                   $line-height: normal);
+    text-transform: uppercase;
+  }
+}
