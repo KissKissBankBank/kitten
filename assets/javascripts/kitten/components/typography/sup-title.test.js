@@ -6,21 +6,21 @@ import { SupTitle } from 'kitten/components/typography/sup-title'
 describe('<SupTitle />', () => {
   describe('by default', () => {
     const component = shallow(
-      <SupTitle>
-        …
-      </SupTitle>
+      <SupTitle />
     )
 
     it('renders a <div class="k-SupTitle" />', () => {
       expect(component).to.have.className('k-SupTitle')
     })
+
+    it('with default children', () => {
+      expect(component).to.have.text('Sup Title')
+    })
   })
 
   describe('className prop', () => {
     const component = mount(
-      <SupTitle className='customClass'>
-        …
-      </SupTitle>
+      <SupTitle className='customClass' />
     )
 
     it('adds the customClass to the component', () => {
@@ -30,9 +30,7 @@ describe('<SupTitle />', () => {
 
   describe('tag prop', () => {
     const component = mount(
-      <SupTitle tag='h1'>
-        …
-      </SupTitle>
+      <SupTitle tag='h1' />
     )
 
     it('changes the tag of the component', () => {
