@@ -16,6 +16,30 @@ describe('<SupTitle />', () => {
     })
   })
 
+  describe('className prop', () => {
+    const component = mount(
+      <SupTitle className='customClass'>
+        …
+      </SupTitle>
+    )
+
+    it('adds the customClass to the component', () => {
+      expect(component).to.have.className('customClass')
+    })
+  })
+
+  describe('tag prop', () => {
+    const component = mount(
+      <SupTitle tag='h1'>
+        …
+      </SupTitle>
+    )
+
+    it('changes the tag of the component', () => {
+      expect(component).to.have.tagName('h1')
+    })
+  })
+
   describe('with children', () => {
     const component = mount(
       <SupTitle>
