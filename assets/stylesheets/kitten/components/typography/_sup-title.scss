@@ -8,8 +8,8 @@
 ///
 /// @example html
 ///
-///   <SupTitle>Step 1</SupTitle>
-///   <Title>My title</Title>
+///   <div class='k-SupTitle'>Step 1</div>
+///   <div class='k-Title'>My title</div>
 
 @mixin k-SupTitle {
   $font: 'source-sans-semi-bold';
