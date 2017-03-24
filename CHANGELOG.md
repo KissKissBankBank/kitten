@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Remlace images by empty images.
+- Fix: Replace images by empty images.
 - Fix: Delete description.
 - Fix: Redesign new subtitles and add border-bottom.
 - Fix: Install new grid on 10 columns.
