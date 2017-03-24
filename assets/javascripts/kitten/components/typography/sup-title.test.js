@@ -5,7 +5,11 @@ import { SupTitle } from 'kitten/components/typography/sup-title'
 
 describe('<SupTitle />', () => {
   describe('by default', () => {
-    const component = shallow(<SupTitle>…</SupTitle>)
+    const component = shallow(
+      <SupTitle>
+        …
+      </SupTitle>
+    )
 
     it('renders a <div class="k-SupTitle" />', () => {
       expect(component).to.have.className('k-SupTitle')
