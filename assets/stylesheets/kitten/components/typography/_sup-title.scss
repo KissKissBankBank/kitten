@@ -4,12 +4,11 @@
 ///
 /// @example scss - usage
 ///
-/// @include k-SupTitle;
+///   @include k-SupTitle;
 ///
 /// @example html
 ///
 ///   <div class='k-SupTitle'>Step 1</div>
-///   <div class='k-Title'>My title</div>
 
 @mixin k-SupTitle {
   $font: 'source-sans-semi-bold';
