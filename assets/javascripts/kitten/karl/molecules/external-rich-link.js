@@ -5,7 +5,7 @@ import ExternalRichLink from 'kitten/components/links/external-rich-link'
 // KarlImageExternalRichLink
 const KarlImageExternalRichLink = defaultProps(ExternalRichLink, {
   title: 'Image external rich link',
-  children: <img src="https://placekitten.com/g/150/51"
+  children: <img src="https://placehold.it/150x51/4a84ff/4a84ff"
                  className="k-ExternalRichLink__image"
                  alt="Kawaiii kitten!" />
 })

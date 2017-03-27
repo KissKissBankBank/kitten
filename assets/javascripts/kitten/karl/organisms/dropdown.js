@@ -67,7 +67,7 @@ const KarlUserMenuDropdown = defaultProps(UserMenu, {
 
   // Button
   buttonId: 'k-UserMenu',
-  buttonImgSrc: 'https://placekitten.com/g/100/100',
+  buttonImgSrc: 'https://placehold.it/100x100/4a84ff/4a84ff',
   buttonImgWidth: 100,
   buttonImgHeight: 100,
   buttonImgAlt: 'Alt Firstname',
