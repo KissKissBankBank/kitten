@@ -118,12 +118,14 @@
   </div>
 
   <div class="karl-Main">
-    <div class="k-Grid">
-      <section class="k-Grid__col--10 k-Grid__col--offset-1">
-        <div class="k-Grid">
-          <%= yield %>
-        </div>
-      </section>
+    <div class="k-Row">
+      <div class="k-Row__content">
+        <section class="k-Grid">
+          <div class="k-Grid__col k-Grid__col--10 k-Grid__col--offset-1">
+            <%= yield %>
+          </div>
+        </section>
+      </div>
     </div>
   </div>
 <% else %>

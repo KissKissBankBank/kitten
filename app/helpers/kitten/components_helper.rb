@@ -23,7 +23,7 @@ module Kitten
     def example(title = nil)
       content_tag(:div, class: "karl-Example") do
         if title
-          concat content_tag(:p, title, class: "k-Grid__col--3@l karl-Example__title")
+          concat content_tag(:p, title, class: "karl-Example__title")
         end
 
         yield
