@@ -4,13 +4,18 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `TagList` component.
-- Feature: Add `TagIcon` component.
-- Feature: Create `SupTitle` component.
-- Fix: Replace images by empty images.
-- Fix: Delete description.
-- Fix: Redesign new subtitles and add border-bottom.
-- Fix: Install new grid on 10 columns.
+## [9.3.0] - 2017-03-27
+
+Features:
+- Add `TagList` component.
+- Add `TagIcon` component.
+- Create `SupTitle` component.
+
+Fixes:
+- Replace images by empty images.
+- Delete description.
+- Redesign new subtitles and add border-bottom.
+- Install new grid on 10 columns.
 
 ## [9.2.0] - 2017-03-23
 
