@@ -27,10 +27,15 @@
   padding-left: ($gutter-width/2);
 }
 
-@mixin k-grid-colSize($columns) {
+@mixin k-grid-colSize($columns, $flexible: true) {
   $number-of-columns: k-map-fetch($k-grid, 'columns');
   $width: (100% / $number-of-columns) * $columns;
 
-  flex-basis: $width;
-  max-width: $width;
+  @if $flexible {
+    flex-basis: $width;
+    max-width: $width;
+  }
+  @else {
+    width: $width;
+  }
 }

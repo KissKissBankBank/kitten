@@ -48,6 +48,7 @@
 
 // Grid
 @import 'kitten/components/grid/grid';
+@import 'kitten/components/grid/lego-grid';
 @import "kitten/components/grid/row";
 @import "kitten/components/grid/side-grid";
 @import "kitten/components/grid/single-column";
@@ -68,6 +69,7 @@
 
 // Lists
 @import 'kitten/components/lists/bullet-list';
+@import 'kitten/components/lists/tag-list';
 
 // Meters
 @import 'kitten/components/meters/progress';
@@ -81,6 +83,7 @@
 // Notifications
 @import 'kitten/components/notifications/alert';
 @import 'kitten/components/notifications/badge';
+@import 'kitten/components/notifications/icon-badge';
 
 // Press
 @import 'kitten/components/press/press-quotes';
@@ -116,4 +119,5 @@
 // Typography
 @import 'kitten/components/typography/body-copy';
 @import 'kitten/components/typography/paragraph';
+@import 'kitten/components/typography/sup-title';
 @import 'kitten/components/typography/title';

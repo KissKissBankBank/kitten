@@ -4,6 +4,48 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [9.3.0] - 2017-03-27
+
+Features:
+- Add `TagList` component.
+- Add `TagIcon` component.
+- Create `SupTitle` component.
+
+Fixes:
+- Replace images by empty images.
+- Delete description.
+- Redesign new subtitles and add border-bottom.
+- Install new grid on 10 columns.
+
+## [9.2.0] - 2017-03-23
+
+Fix:
+- Remove unneeded padding on `SearchInput` component.
+
+## [9.1.0] - 2017-03-22
+
+Feature:
+- Add `SideLayout` component and fix layout error on Safari.
+
+## [9.0.0] - 2017-03-22
+
+Breaking change:
+- Change height of `k-Progress` component.
+
+Features:
+- Add `k-Button--big@s-up` modifier.
+- Add `k-buttonBig` mixin.
+- Add `k-u-align-right` class.
+- Add `IconBadge` component.
+- Add new `Badge` component.
+- Add `LegoGrid` component.
+- Add `flexible` option to `k-grid-colSize` mixin.
+- Add `k-u-align-right` class.
+
+Fixes:
+- Prevent newline in mobile view for `SearchInput` component.
+- Deprecate `k-u-centered` in favor of `k-u-align-center`.
+
 ## [8.6.0] - 2017-03-15
 
 Features:
@@ -11,7 +53,7 @@ Features:
   `k-TextInputWithInfo` is now deprecated. Use `k-FormInfo` instead.
 - Add new `error` props on SelectWithState.
 
-Fixies:
+Fixes:
 - Change width and margin on `StaticTooltip`.
 - Change arrow-zone size on tiny select.
 

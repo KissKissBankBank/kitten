@@ -39,6 +39,7 @@ import { TextInputWithUnit } from 'kitten/components/form/text-input-with-unit'
 
 // Grid
 import { Grid, GridCol } from 'kitten/components/grid/grid'
+import { KarlSideLayout } from 'kitten/karl/layout/side-layout'
 
 // Icons
 import GrabberIcon from 'kitten/components/icons/grabber-icon'
@@ -63,6 +64,8 @@ import { TabBar } from 'kitten/components/navigation/tab-bar'
 
 // Notifications
 import { Alert } from 'kitten/components/notifications/alert'
+import { Badge } from 'kitten/components/notifications/badge'
+import { IconBadge } from 'kitten/components/notifications/icon-badge'
 
 // Popovers
 import { Popover } from 'kitten/components/popovers/popover'
@@ -88,6 +91,7 @@ import TourStep from 'kitten/components/tours/tour-step'
 
 // Typography
 import { Paragraph } from 'kitten/components/typography/paragraph'
+import { SupTitle } from 'kitten/components/typography/sup-title'
 import { Title } from 'kitten/components/typography/title'
 
 // Karl composed components
@@ -153,6 +157,9 @@ import { KarlMakerWhoAmIStep } from 'app/maker/who-am-i/components/container'
 import { KarlAlert,
          KarlAlertWithButton,
          KarlAlertWithMarkdown } from 'kitten/karl/notifications/alert'
+import { KarlIconBadgeWithSvg } from 'kitten/karl/notifications/icon-badge'
+import { KarlLegoGrid } from 'kitten/karl/grid/lego-grid'
+import { KarlTagList } from 'kitten/karl/lists/tag-list'
 import { KarlProjectCard } from 'kitten/karl/cards/project-card'
 
 ReactOnRails.register({
@@ -220,6 +227,8 @@ ReactOnRails.register({
 
   // Notifications
   Alert,
+  Badge,
+  IconBadge,
 
   // Popovers
   CallToActionPopover,
@@ -245,6 +254,7 @@ ReactOnRails.register({
 
   // Typography
   Paragraph,
+  SupTitle,
   Title,
 
   // Karl composed components
@@ -264,6 +274,7 @@ ReactOnRails.register({
   KarlButtonAndText,
   KarlLineWithTooltip,
   KarlLineWithBigHeart,
+  KarlIconBadgeWithSvg,
   KarlImageExternalRichLink,
   KarlSvgExternalRichLink,
   KarlSimpleDropdown,
@@ -294,6 +305,7 @@ ReactOnRails.register({
   KarlGridInGrid,
   KarlGridSmall,
   KarlGridWithOffset,
+  KarlSideLayout,
   KarlParagraph,
   KarlParagraphSecondary,
   KarlParagraphTertiary,
@@ -302,4 +314,6 @@ ReactOnRails.register({
   KarlPaymentButton,
   KarlRandomProgress,
   KarlMakerWhoAmIStep,
+  KarlLegoGrid,
+  KarlTagList,
 })

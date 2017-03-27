@@ -120,6 +120,7 @@
 // Grid
 
 @include k-Grid;
+@include k-LegoGrid;
 @include k-Row;
 @include k-SideGrid;
 @include k-SingleColumn;
@@ -154,6 +155,7 @@
 // Lists
 
 @include k-BulletList;
+@include k-TagList;
 
 // Meters
 
@@ -198,6 +200,7 @@
 
 @include k-Alert;
 @include k-Badge;
+@include k-IconBadge;
 
 // Press
 
@@ -257,6 +260,7 @@
 
 // Typography
 
+@include k-SupTitle;
 @include k-TypographyBodyCopy;
 @include k-Title;
 @include k-Paragraph;

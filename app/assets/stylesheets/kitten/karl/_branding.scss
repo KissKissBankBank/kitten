@@ -3,7 +3,7 @@
 .karl-Colors__cardBackground {
   padding-top: 8rem;
 
-  background-color: $light-navy;
+  background-color: map-get($k-colors, 'primary-3');
 }
 
 .karl-Colors__cardDescription {
@@ -11,7 +11,7 @@
 
   @include k-typographyFont('source-sans-light');
   @include k-typographyFontSize(-1);
-  border-top: solid 1px $light-grey-3;
+  border-top: 1px solid map-get($k-colors, 'line-1');
 }
 
 .karl-Colors__cardParagraph {
