@@ -3,7 +3,7 @@ module Kitten
     def render_group(group, title: nil)
       title ||= default_title(group)
       add_menu_group(group, title)
-      concat content_tag(:h2, class: 'k-Grid__col--12 karl-Title', id: group) { title }
+      concat content_tag(:h2, class: 'k-Row karl-Title', id: group) { title }
       render "kitten/groups/#{group}"
     end
 
@@ -23,7 +23,7 @@ module Kitten
     def example(title = nil)
       content_tag(:div, class: "karl-Example") do
         if title
-          concat content_tag(:p, title, class: " k-Grid__col--3 k-Grid__col--12@s karl-Example__title")
+          concat content_tag(:p, title, class: "k-Grid__col--3@l karl-Example__title")
         end
 
         yield
