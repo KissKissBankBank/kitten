@@ -5,7 +5,10 @@ import { TagList } from 'kitten/components/lists/tag-list'
 import { TagIcon } from 'kitten/components/icons/tag-icon'
 
 describe('<TagList />', () => {
-  const items = ['Foo', 'Bar']
+  const items = [
+    { key: 'foo', item: 'Foo' },
+    { key: 'bar', item: 'Bar' }, 
+  ]
 
   describe('by default', () => {
     const tagList = shallow(<TagList items={ items } />)
