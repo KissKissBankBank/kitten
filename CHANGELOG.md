@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Create `SupTitle` component.
 - Fix: Replace images by empty images.
 - Fix: Delete description.
 - Fix: Redesign new subtitles and add border-bottom.
