@@ -35,7 +35,7 @@ describe('<TagList />', () => {
 
   describe('with className prop', () => {
     const tagList = shallow(
-      <TagList items={ items } className='custom__class' />
+      <TagList items={ items } className="custom__class" />
     )
 
     it('has a custom class', () => {

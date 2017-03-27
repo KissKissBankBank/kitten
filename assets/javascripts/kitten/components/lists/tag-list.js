@@ -22,7 +22,7 @@ export class TagList extends React.Component {
     )
 
     const children = isFirstItem
-      ? [<TagIcon key='tag-icon' className='k-TagList__icon' />, item]
+      ? [<TagIcon key="tag-icon" className="k-TagList__icon" />, item]
       : item
 
     return (
