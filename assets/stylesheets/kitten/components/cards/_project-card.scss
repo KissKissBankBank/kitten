@@ -15,6 +15,8 @@
 @mixin k-ProjectCard {
   .k-ProjectCard {
     box-sizing: border-box;
+    max-width: k-px-to-rem(350px);
+
     margin: 0 k-px-to-rem(10px) k-px-to-rem(20px);
     background: map-get($k-colors, 'background-1');
     border: 1px solid map-get($k-colors, 'line-1');
@@ -34,17 +36,28 @@
     padding: 0 k-px-to-rem(20px);
   }
 
+  .k-ProjectCard__grid {
+    display: flex;
+    align-items: center;
+  }
+
+  .k-ProjectCard__grid--spaceBetween {
+    justify-content: space-between;
+  }
+
+  .k-ProjectCard__grid__fluid {
+    flex: 1;
+  }
+
   .k-ProjectCard__progress {
-    padding: k-px-to-rem(20px);
+    padding: 0 k-px-to-rem(20px);
+    border-top: 1px solid map-get($k-colors, 'line-1');
+    border-bottom: 1px solid map-get($k-colors, 'line-1');
   }
 
   .k-ProjectCard__img {
     display: block;
     width: 100%;
     margin: k-px-to-rem(20px) 0;
-  }
-
-  .k-ProjectCard__borderBottom {
-    border-bottom: 1px solid map-get($k-colors, 'line-1');
   }
 }
