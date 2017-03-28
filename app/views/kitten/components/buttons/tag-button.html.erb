@@ -1,19 +1,33 @@
-<div class="karl-Example__column">
-  <%= example "Hydrogen tag button" do %>
-    <%= react_component('TagButton') %>
-  <% end %>
+<div class="k-Grid">
+  <div class="k-Grid__col k-Grid__col--12 k-Grid__col--3@l">
+    <div class="k-Grid">
+      <div class="k-Grid__col k-Grid__col--12 k-Grid__col--3@m k-Grid__col--12@l">
+        <%= example "Hydrogen" do %>
+          <%= react_component('TagButton') %>
+        <% end %>
+      </div>
 
-  <%= example "Selected tag button" do %>
-    <%= react_component('TagButton', props: {
-        selected: true,
-      }
-    ) %>
-  <% end %>
+      <div class="k-Grid__col k-Grid__col--12 k-Grid__col--3@m k-Grid__col--12@l">
+        <%= example "Big" do %>
+          <%= react_component('TagButton', props: {
+              big: true,
+            }
+          ) %>
+        <% end %>
+      </div>
+    </div>
+  </div>
 
-  <%= example "Tag button big" do %>
-    <%= react_component('TagButton', props: {
-        big: true,
-      }
-    ) %>
-  <% end %>
+  <div class="k-Grid__col k-Grid__col--12 k-Grid__col--3@l">
+    <div class="k-Grid">
+      <div class="k-Grid__col k-Grid__col--12 k-Grid__col--3@m k-Grid__col--12@l">
+        <%= example "Selected" do %>
+          <%= react_component('TagButton', props: {
+              selected: true,
+            }
+          ) %>
+        <% end %>
+      </div>
+    </div>
+  </div>
 </div>

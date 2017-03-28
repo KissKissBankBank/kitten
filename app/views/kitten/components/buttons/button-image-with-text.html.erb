@@ -1,59 +1,73 @@
-<%= example "button with text on the right" do %>
+<div class="k-Grid">
+  <div class="k-Grid__col k-Grid__col--12 k-Grid__col--3@l">
+    <div class="k-Grid">
+      <div class="k-Grid__col k-Grid__col--12 k-Grid__col--3@m k-Grid__col--12@l">
+        <%= example "button with text on the right" do %>
+          <button class="k-ButtonImageWithText">
+            <span class="k-ButtonImage">
+              <img class="k-ButtonImage__img"
+                   src="https://placekitten.com/g/40/40"
+                   width="40"
+                   height="40" />
+            </span>
+            <p class="k-ButtonImageWithText__text">Firstname</p>
+          </button>
+        <% end %>
+      </div>
+    </div>
+  </div>
 
-  <button class="k-ButtonImageWithText">
-    <span class="k-ButtonImage">
-      <img class="k-ButtonImage__img"
-           src="https://placekitten.com/g/40/40"
-           width="40"
-           height="40" />
-    </span>
+  <div class="k-Grid__col k-Grid__col--12 k-Grid__col--3@l">
+    <div class="k-Grid">
+      <div class="k-Grid__col k-Grid__col--12 k-Grid__col--3@m k-Grid__col--12@l">
+        <%= example "button with text on the left" do %>
+          <button class="k-ButtonImageWithText">
+            <p class="k-ButtonImageWithText__text">Firstname</p>
+            <span class="k-ButtonImage">
+              <img class="k-ButtonImage__img"
+                   src="https://placekitten.com/g/40/40"
+                   width="40"
+                   height="40" />
+            </span>
+          </button>
+        <% end %>
+      </div>
+    </div>
+  </div>
 
-    <p class="k-ButtonImageWithText__text">Firstname</p>
-  </button>
+  <div class="k-Grid__col k-Grid__col--12 k-Grid__col--3@l">
+    <div class="k-Grid">
+      <div class="k-Grid__col k-Grid__col--12 k-Grid__col--3@m k-Grid__col--12@l">
+        <%= example "button with text on the top" do %>
+          <button class="k-ButtonImageWithText k-ButtonImageWithText--vertical">
+            <p class="k-ButtonImageWithText__text">Firstname</p>
+            <span class="k-ButtonImage">
+              <img class="k-ButtonImage__img"
+                   src="https://placekitten.com/g/40/40"
+                   width="40"
+                   height="40" />
+            </span>
+          </button>
+        <% end %>
+      </div>
+    </div>
+  </div>
 
-<% end %>
-
-<%= example "button with text on the left" do %>
-
-  <button class="k-ButtonImageWithText">
-    <p class="k-ButtonImageWithText__text">Firstname</p>
-
-    <span class="k-ButtonImage">
-      <img class="k-ButtonImage__img"
-           src="https://placekitten.com/g/40/40"
-           width="40"
-           height="40" />
-    </span>
-  </button>
-
-<% end %>
-
-<%= example "button with text on the top" do %>
-
-  <button class="k-ButtonImageWithText k-ButtonImageWithText--vertical">
-    <p class="k-ButtonImageWithText__text">Firstname</p>
-
-    <span class="k-ButtonImage">
-      <img class="k-ButtonImage__img"
-           src="https://placekitten.com/g/40/40"
-           width="40"
-           height="40" />
-    </span>
-  </button>
-
-<% end %>
-
-<%= example "button with text on the bottom" do %>
-
-  <button class="k-ButtonImageWithText k-ButtonImageWithText--vertical">
-    <span class="k-ButtonImage">
-      <img class="k-ButtonImage__img"
-           src="https://placekitten.com/g/40/40"
-           width="40"
-           height="40" />
-    </span>
-
-    <p class="k-ButtonImageWithText__text">Firstname</p>
-  </button>
-
-<% end %>
+  <div class="k-Grid__col k-Grid__col--12 k-Grid__col--3@l">
+    <div class="k-Grid">
+      <div class="k-Grid__col k-Grid__col--12 k-Grid__col--3@m k-Grid__col--12@l">
+        <%= example "button with text on the bottom" do %>
+          <button class="k-ButtonImageWithText k-ButtonImageWithText--vertical">
+            <span class="k-ButtonImage">
+              <img class="k-ButtonImage__img"
+                   src="https://placekitten.com/g/40/40"
+                   width="40"
+                   height="40" />
+            </span>
+            <p class="k-ButtonImageWithText__text">Firstname</p>
+          </button>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

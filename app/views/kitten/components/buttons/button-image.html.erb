@@ -1,44 +1,67 @@
-<%= example "button tag" do %>
-  <button class="k-ButtonImage" title="Profil">
-    <img class="k-ButtonImage__img"
-      src="https://unsplash.it/40/40?image=839"
-         alt=""
-         width="40"
-         height="40" />
-  </button>
-<% end %>
+<div class="k-Grid">
+  <div class="k-Grid__col k-Grid__col--12 k-Grid__col--3@l">
+    <div class="k-Grid">
+      <div class="k-Grid__col k-Grid__col--12 k-Grid__col--3@m k-Grid__col--12@l">
+        <%= example "button tag tiny" do %>
+          <button class="k-ButtonImage k-ButtonImage--tiny" title="Profil">
+            <img class="k-ButtonImage__img"
+              src="https://unsplash.it/40/40?image=832" width="40" height="40" />
+          </button>
+        <% end %>
+      </div>
+      <div class="k-Grid__col k-Grid__col--12 k-Grid__col--3@m k-Grid__col--12@l">
+        <%= example "button tag big" do %>
+          <button class="k-ButtonImage k-ButtonImage--big" title="Profil">
+            <img class="k-ButtonImage__img"
+              src="https://unsplash.it/40/40?image=823" width="40" height="40" alt="" />
+          </button>
+        <% end %>
+      </div>
+    </div>
+  </div>
 
-<%= example "a tag" do %>
-  <a href="#" class="k-ButtonImage" title="Profil">
-    <img class="k-ButtonImage__img"
-      src="https://unsplash.it/40/40?image=836" width="40" height="40" />
-  </a>
-<% end %>
+  <div class="k-Grid__col k-Grid__col--12 k-Grid__col--3@l">
+    <div class="k-Grid">
+      <div class="k-Grid__col k-Grid__col--12 k-Grid__col--3@m k-Grid__col--12@l">
+        <%= example "button tag" do %>
+          <button class="k-ButtonImage" title="Profil">
+            <img class="k-ButtonImage__img"
+              src="https://unsplash.it/40/40?image=839"
+                 alt=""
+                 width="40"
+                 height="40" />
+          </button>
+        <% end %>
+      </div>
+      <div class="k-Grid__col k-Grid__col--12 k-Grid__col--3@m k-Grid__col--12@l">
+        <%= example "a tag" do %>
+          <a href="#" class="k-ButtonImage" title="Profil">
+            <img class="k-ButtonImage__img"
+              src="https://unsplash.it/40/40?image=836" width="40" height="40" />
+          </a>
+        <% end %>
+      </div>
+      <div class="k-Grid__col k-Grid__col--12 k-Grid__col--3@m k-Grid__col--12@l">
+        <%= example "span tag" do %>
+          <span class="k-ButtonImage" title="Profil">
+            <img class="k-ButtonImage__img"
+              src="https://unsplash.it/40/40?image=838" width="40" height="40"/>
+          </span>
+        <% end %>
+      </div>
+    </div>
+  </div>
 
-<%= example "span tag" do %>
-  <span class="k-ButtonImage" title="Profil">
-    <img class="k-ButtonImage__img"
-      src="https://unsplash.it/40/40?image=838" width="40" height="40"/>
-  </span>
-<% end %>
-
-<%= example "button tag tiny" do %>
-  <button class="k-ButtonImage k-ButtonImage--tiny" title="Profil">
-    <img class="k-ButtonImage__img"
-      src="https://unsplash.it/40/40?image=832" width="40" height="40" />
-  </button>
-<% end %>
-
-<%= example "button tag big" do %>
-  <button class="k-ButtonImage k-ButtonImage--big" title="Profil">
-    <img class="k-ButtonImage__img"
-      src="https://unsplash.it/40/40?image=823" width="40" height="40" alt="" />
-  </button>
-<% end %>
-
-<%= example "button tag disabled" do %>
-  <button class="k-ButtonImage k-ButtonImage--big" disabled title="Profil">
-    <img class="k-ButtonImage__img"
-      src="https://unsplash.it/40/40?image=821" width="40" height="40" />
-  </button>
-<% end %>
+  <div class="k-Grid__col k-Grid__col--12 k-Grid__col--3@l">
+    <div class="k-Grid">
+        <div class="k-Grid__col k-Grid__col--12 k-Grid__col--3@m k-Grid__col--12@l">
+        <%= example "Disabled" do %>
+          <button class="k-ButtonImage k-ButtonImage--big" disabled title="Profil">
+            <img class="k-ButtonImage__img"
+              src="https://unsplash.it/40/40?image=821" width="40" height="40" />
+          </button>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
