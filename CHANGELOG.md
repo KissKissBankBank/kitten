@@ -4,8 +4,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add color utilities.
-- Fix: Pass the `onChange` prop correctly in `TextInputWithLimit`.
+## [9.4.0]
+
+Feature:
+- Add color utilities.
+
+Fix:
+- Pass the `onChange` prop correctly in `TextInputWithLimit`.
 
 ## [9.3.0] - 2017-03-27
 
