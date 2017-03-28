@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add color utilities.
+
 ## [9.3.0] - 2017-03-27
 
 Features:
