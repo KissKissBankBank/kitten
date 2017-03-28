@@ -15,11 +15,13 @@ export class TextInputWithLimit extends React.Component {
 
   handleChange(e) {
     this.setState({ value: e.target.value })
+    this.props.onChange(e)
   }
 
   render() {
     const { limit,
             defaultValue,
+            onChange,
             ...others } = this.props
 
     const length = this.state.value ? this.state.value.length : 0
@@ -49,4 +51,5 @@ TextInputWithLimit.defaultProps = {
   tag: 'input',
   limit: 80,
   defaultValue: "",
+  onChange: function() {},
 }
