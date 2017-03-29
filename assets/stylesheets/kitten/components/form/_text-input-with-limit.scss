@@ -35,12 +35,6 @@
     display: block;
   }
 
-  .is-disabled {
-    .k-TextInputLimit__counter {
-      text-shadow: none;
-    }
-  }
-
   .k-TextInputLimit__counter {
     @include k-typographyFont($font);
     @include k-typographyFontSize($font-size, $line-height);
@@ -62,6 +56,10 @@
                  1px -1px 0 #fff,
                  -1px 1px 0 #fff;
     pointer-events: none;
+
+    &.is-disabled {
+      text-shadow: none;
+    }
 
     .k-TextInputLimit__input:focus ~ & {
       color: $active-color;

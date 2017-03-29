@@ -33,7 +33,7 @@ describe('<TextInputWithLimit />', () => {
       expect(counter).to.have.text('15')
     })
 
-    it('changes the counter when set it', () => {
+    it('changes the counter when set', () => {
       const component = shallow(
         <TextInputWithLimit defaultValue="Test" limit={ 15 } />
       )
@@ -58,6 +58,7 @@ describe('<TextInputWithLimit />', () => {
 
     it('is disabled', () => {
       expect(component).to.have.className('is-disabled')
+      expect(component.find('TextInput')).to.have.attr('disabled')
     })
   })
 
