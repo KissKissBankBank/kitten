@@ -15,6 +15,12 @@
     resize: vertical;
   }
 
+  .is-disabled {
+    .k-TextAreaWrapper__gradient {
+      display: none;
+    }
+  }
+
   .k-TextAreaWrapper__gradient {
     position: absolute;
     left: $vertical-padding;

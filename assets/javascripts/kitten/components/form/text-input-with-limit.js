@@ -22,11 +22,19 @@ export class TextInputWithLimit extends React.Component {
     const { limit,
             defaultValue,
             onChange,
+            disabled,
             ...others } = this.props
 
     const length = this.state.value ? this.state.value.length : 0
 
-    const counterClassNames = classNames(
+    const textInputLimitClassName = classNames(
+      'k-TextInputLimit',
+      {
+        'is-disabled': !!disabled,
+      }
+    )
+
+    const counterClassName = classNames(
       'k-TextInputLimit__counter',
       {
         'is-error': length > limit,
@@ -34,12 +42,13 @@ export class TextInputWithLimit extends React.Component {
     )
 
     return (
-      <div className="k-TextInputLimit">
+      <div className={ textInputLimitClassName }>
         <TextInput className="k-TextInputLimit__input"
                    value={ this.state.value }
                    onChange={ this.handleChange }
+                   disabled={ !!disabled }
                    { ...others } />
-        <div className={ counterClassNames }>
+        <div className={ counterClassName }>
           { limit - length }
         </div>
       </div>
@@ -50,6 +59,6 @@ export class TextInputWithLimit extends React.Component {
 TextInputWithLimit.defaultProps = {
   tag: 'input',
   limit: 80,
-  defaultValue: "",
+  defaultValue: '',
   onChange: function() {},
 }
