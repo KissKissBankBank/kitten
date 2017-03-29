@@ -1,53 +1,53 @@
 <%= example "button tag" do %>
-  <button class="k-ButtonImage" title="Profil">
-    <img class="k-ButtonImage__img"
-         src="https://placehold.it/40x40/4a84ff/4a84ff"
-         width="40"
-         height="40" />
-  </button>
+  <%= react_component "ButtonImage", props: {
+    img: {
+      src: "https://placekitten.com/g/50/50",
+    }
+  } %>
 <% end %>
 
 <%= example "a tag" do %>
-  <a href="#" class="k-ButtonImage" title="Profil">
-    <img class="k-ButtonImage__img"
-         src="https://placehold.it/40x40/4a84ff/4a84ff"
-         width="40"
-         height="40" />
-  </a>
+  <%= react_component "ButtonImage", props: {
+    tag: "a",
+    href: "#",
+    img: {
+      src: "https://placekitten.com/g/50/50",
+    }
+  } %>
 <% end %>
 
 <%= example "span tag" do %>
-  <span class="k-ButtonImage" title="Profil">
-    <img class="k-ButtonImage__img"
-         src="https://placehold.it/40x40/4a84ff/4a84ff"
-         width="40"
-         height="40" />
-  </span>
+  <%= react_component "ButtonImage", props: {
+    tag: "span",
+    img: {
+      src: "https://placekitten.com/g/50/50",
+    }
+  } %>
 <% end %>
 
 <%= example "button tag tiny" do %>
-  <button class="k-ButtonImage k-ButtonImage--tiny" title="Profil">
-    <img class="k-ButtonImage__img"
-         src="https://placehold.it/40x40/4a84ff/4a84ff"
-         width="40"
-         height="40" />
-  </button>
+  <%= react_component "ButtonImage", props: {
+    tiny: true,
+    img: {
+      src: "https://placekitten.com/g/50/50",
+    }
+  } %>
 <% end %>
 
 <%= example "button tag big" do %>
-  <button class="k-ButtonImage k-ButtonImage--big" title="Profil">
-    <img class="k-ButtonImage__img"
-         src="https://placehold.it/40x40/4a84ff/4a84ff"
-         width="40"
-         height="40" />
-  </button>
+  <%= react_component "ButtonImage", props: {
+    big: true,
+    img: {
+      src: "https://placekitten.com/g/50/50",
+    }
+  } %>
 <% end %>
 
 <%= example "button tag disabled" do %>
-  <button class="k-ButtonImage k-ButtonImage--big" disabled title="Profil">
-    <img class="k-ButtonImage__img"
-         src="https://placehold.it/40x40/4a84ff/4a84ff"
-         width="40"
-         height="40" />
-  </button>
+  <%= react_component "ButtonImage", props: {
+    disabled: true,
+    img: {
+      src: "https://placekitten.com/g/50/50",
+    }
+  } %>
 <% end %>
