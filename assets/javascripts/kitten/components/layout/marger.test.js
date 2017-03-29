@@ -10,11 +10,6 @@ describe('<Marger />', () => {
     it('is a <div />', () => {
       expect(marger).to.have.tagName('div')
     })
-
-    it('has default styles', () => {
-      expect(marger).to.have.style('margin-top', '0px')
-      expect(marger).to.have.style('margin-bottom', '0px')
-    })
   })
 
   describe('with top prop', () => {
@@ -22,7 +17,6 @@ describe('<Marger />', () => {
 
     it('has good styles', () => {
       expect(marger).to.have.style('margin-top', '15px')
-      expect(marger).to.have.style('margin-bottom', '0px')
     })
   })
 
@@ -30,7 +24,6 @@ describe('<Marger />', () => {
     const marger = shallow(<Marger bottom=".5" />)
 
     it('has good styles', () => {
-      expect(marger).to.have.style('margin-top', '0px')
       expect(marger).to.have.style('margin-bottom', '5px')
     })
   })

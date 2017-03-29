@@ -4,8 +4,8 @@ export const Marger = ({ top, bottom, style, ...props }) => {
   const gutter = 10
   const styles = {
     ...style,
-    marginTop: `${ top * gutter }px`,
-    marginBottom: `${ bottom * gutter }px`,
+    marginTop: top ? `${ top * gutter }px` : null,
+    marginBottom: bottom ? `${ bottom * gutter }px` : null,
   }
 
   return (
