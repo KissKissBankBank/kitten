@@ -41,4 +41,12 @@ describe('Paragraph with default props', () => {
       })
     })
   })
+
+  describe('with margin prop', () => {
+    const component = shallow(<Paragraph margin={ false } />)
+
+    it('has a good class', () => {
+      expect(component).to.have.className('k-Paragraph--withoutMargin')
+    })
+  })
 })
