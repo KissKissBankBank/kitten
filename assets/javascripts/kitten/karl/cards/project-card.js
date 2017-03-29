@@ -15,6 +15,11 @@ export const KarlProjectCard = () => {
 
   return (
     <div className="k-ProjectCard">
+
+
+
+
+
       <div className="k-ProjectCard__content">
         <div className="k-ProjectCard__grid">
           <ButtonIcon size="big" />
@@ -28,7 +33,9 @@ export const KarlProjectCard = () => {
           <IconBadge>A</IconBadge>
         </div>
 
-        <Title modifier="quaternary">Location de materiel de reception</Title>
+        <Title modifier="quaternary" className="k-u-margin-top-single">
+          Location de materiel de reception
+        </Title>
 
         <TagList items={ tagItems } />
 
@@ -60,28 +67,33 @@ export const KarlProjectCard = () => {
 
       <div className="k-ProjectCard__progress k-ProjectCard__grid">
         <Progress className="k-ProjectCard__grid__fluid k-u-margin-right-single" />
-        <Paragraph modifier="quaternary"><strong>23 %</strong></Paragraph>
+        <Paragraph modifier="quaternary">
+          <strong className="k-u-color-primary1">23 %</strong>
+        </Paragraph>
       </div>
 
       <div className="k-ProjectCard__content">
         <div className="k-ProjectCard__grid k-ProjectCard__grid--spaceBetween">
           <Paragraph modifier="quaternary" className="k-u-align-center">
-            812 <br />
+            <span className="k-u-color-primary1">812</span> <br />
             preteurs
           </Paragraph>
 
           <Paragraph modifier="quaternary" className="k-u-align-center">
-            71 000 € <br />
+            <span className="k-u-color-primary1">71 000 €</span> <br />
             collectés
           </Paragraph>
 
           <Paragraph modifier="quaternary" className="k-u-align-center">
-            12 j <br />
+            <span className="k-u-color-primary1">12 j</span> <br />
             restants
           </Paragraph>
         </div>
       </div>
 
+      <div className="k-ProjectCard__status">
+        Projet à l'étude
+      </div>
     </div>
   )
 }

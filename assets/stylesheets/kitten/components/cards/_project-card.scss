@@ -17,13 +17,15 @@
     box-sizing: border-box;
     max-width: k-px-to-rem(350px);
 
+    // TODO: remove this.
     margin: 0 k-px-to-rem(10px) k-px-to-rem(20px);
+
     background: map-get($k-colors, 'background-1');
     border: 1px solid map-get($k-colors, 'line-1');
 
+    // TODO: move in component.
     box-shadow: 0 5px 15px map-get($k-colors, 'line-1');
     cursor: pointer;
-
     transition: transform .4s, box-shadow .4s;
 
     &:hover {
@@ -59,5 +61,28 @@
     display: block;
     width: 100%;
     margin: k-px-to-rem(20px) 0;
+  }
+
+  .k-ProjectCard__status {
+    padding: 10px;
+    border-top: 1px solid map-get($k-colors, 'line-1');
+
+    text-align: center;
+    @include k-typographyFont('source-sans-semi-bold');
+    @include k-typographyFontSize(-1);
+  }
+
+  .k-ProjectCard__status--consideration {
+    background: map-get($k-colors, 'primary-1');
+    color: #fff;
+  }
+
+  .k-ProjectCard__status--succeed {
+    background-color: map-get($k-colors, 'tertiary-1');
+    color: map-get($k-colors, 'font-1');
+  }
+
+  .k-ProjectCard__status--defaulted {
+    background-color: map-get($k-colors, 'primary-2');
   }
 }
