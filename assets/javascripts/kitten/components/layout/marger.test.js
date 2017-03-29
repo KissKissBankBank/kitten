@@ -16,7 +16,7 @@ describe('<Marger />', () => {
     const marger = shallow(<Marger top="1.5" />)
 
     it('has good styles', () => {
-      expect(marger).to.have.style('margin-top', '15px')
+      expect(marger).to.have.style('margin-top', '0.9375rem')
     })
   })
 
@@ -24,7 +24,7 @@ describe('<Marger />', () => {
     const marger = shallow(<Marger bottom=".5" />)
 
     it('has good styles', () => {
-      expect(marger).to.have.style('margin-bottom', '5px')
+      expect(marger).to.have.style('margin-bottom', '0.3125rem')
     })
   })
 
