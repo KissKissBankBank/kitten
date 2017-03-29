@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: display correctly disabled `TextInputWithLimit` component.
+
 ## [9.4.0]
 
 Feature:
