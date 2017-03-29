@@ -337,6 +337,8 @@
       $button-tiny-line-height
     );
 
+    min-width: $button-tiny-min-width;
+
     &.k-Button--icon {
       .k-Button__icon {
         @include k-buttonRounded($button-size-tiny, $icon-width, $icon-height);
