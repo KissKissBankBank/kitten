@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `Marger` component.
+
 ## [9.4.0]
 
 Feature:
