@@ -5,7 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: Install new grid on each components.
-- Fix: Delete description.
+- Fix: Delete example descriptions.
 - Fix: Redesign new subtitles and add border-bottom.
 - Fix: Install new grid on 10 columns.
 
