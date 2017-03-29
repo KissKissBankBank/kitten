@@ -1,10 +1,17 @@
 import React from 'react'
+import sinon from 'sinon'
 import { expect } from 'chai'
 import { shallow, mount } from 'enzyme'
 import { TextInput } from 'kitten/components/form/text-input'
 import { TextInputWithLimit } from 'kitten/components/form/text-input-with-limit'
 
 describe('<TextInputWithLimit />', () => {
+  const sandbox = sinon.sandbox.create()
+
+  afterEach(() => {
+    sandbox.restore()
+  })
+
   describe('by default', () => {
     const defaultComponent = shallow(<TextInputWithLimit />)
 
@@ -44,7 +51,7 @@ describe('<TextInputWithLimit />', () => {
     })
   })
 
-  describe('on input', () => {
+  describe('on onChange event', () => {
     it('updates the TextInput value', () => {
       const component = mount(
         <TextInputWithLimit limit={ 15 } />
@@ -56,6 +63,23 @@ describe('<TextInputWithLimit />', () => {
 
       const counter = component.find('.k-TextInputLimit__counter')
       expect(counter).to.have.text('11')
+    })
+  })
+
+  describe('with onChange prop', () => {
+    const handleChange = () => {}
+    const onChangeSpy = sandbox.spy(handleChange)
+    const component = mount(
+      <TextInputWithLimit onChange={ onChangeSpy } />
+    )
+
+    before(() => {
+      const input = component.find('input')
+      input.simulate('change')
+    })
+
+    it('calls the onChange prop callback', () => {
+      expect(onChangeSpy.calledOnce).to.equal(true)
     })
   })
 })

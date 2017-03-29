@@ -91,6 +91,7 @@ import TourStep from 'kitten/components/tours/tour-step'
 
 // Typography
 import { Paragraph } from 'kitten/components/typography/paragraph'
+import { SupTitle } from 'kitten/components/typography/sup-title'
 import { Title } from 'kitten/components/typography/title'
 
 // Karl composed components
@@ -158,6 +159,7 @@ import { KarlAlert,
          KarlAlertWithMarkdown } from 'kitten/karl/notifications/alert'
 import { KarlIconBadgeWithSvg } from 'kitten/karl/notifications/icon-badge'
 import { KarlLegoGrid } from 'kitten/karl/grid/lego-grid'
+import { KarlTagList } from 'kitten/karl/lists/tag-list'
 
 ReactOnRails.register({
   // Box
@@ -251,6 +253,7 @@ ReactOnRails.register({
 
   // Typography
   Paragraph,
+  SupTitle,
   Title,
 
   // Karl composed components
@@ -310,4 +313,5 @@ ReactOnRails.register({
   KarlRandomProgress,
   KarlMakerWhoAmIStep,
   KarlLegoGrid,
+  KarlTagList,
 })

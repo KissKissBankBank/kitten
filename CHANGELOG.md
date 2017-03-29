@@ -9,6 +9,27 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fix: Redesign new subtitles and add border-bottom.
 - Fix: Install new grid on 10 columns.
 
+## [9.4.0]
+
+Feature:
+- Add color utilities.
+
+Fix:
+- Pass the `onChange` prop correctly in `TextInputWithLimit`.
+
+## [9.3.0] - 2017-03-27
+
+Features:
+- Add `TagList` component.
+- Add `TagIcon` component.
+- Create `SupTitle` component.
+
+Fixes:
+- Replace images by empty images.
+- Delete description.
+- Redesign new subtitles and add border-bottom.
+- Install new grid on 10 columns.
+
 ## [9.2.0] - 2017-03-23
 
 Fix:
