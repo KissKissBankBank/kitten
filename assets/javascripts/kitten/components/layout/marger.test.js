@@ -35,6 +35,14 @@ describe('<Marger />', () => {
     })
   })
 
+  describe('with other styles', () => {
+    const marger = shallow(<Marger style={ { backgroundColor: 'red' } } />)
+
+    it('has a custom style', () => {
+      expect(marger).to.have.style('background-color', 'red')
+    })
+  })
+
   describe('with other prop', () => {
     const marger = shallow(<Marger className="custom__class">Lorem…</Marger>)
 

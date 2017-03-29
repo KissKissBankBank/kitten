@@ -1,8 +1,9 @@
 import React from 'react'
 
-export const Marger = ({ top, bottom, ...props }) => {
+export const Marger = ({ top, bottom, style, ...props }) => {
   const gutter = 10
   const styles = {
+    ...style,
     marginTop: `${ top * gutter }px`,
     marginBottom: `${ bottom * gutter }px`,
   }
