@@ -1,17 +1,20 @@
 // Branding/Colors
 
+.karl-Colors {
+  background-color: white;
+  border-radius: k-px-to-rem(8px);
+}
+
 .karl-Colors__cardBackground {
-  padding-top: 8rem;
+  padding-top: 3rem;
+  width: 3rem;
+  border-radius: 50px;
 
   background-color: map-get($k-colors, 'primary-3');
 }
 
 .karl-Colors__cardDescription {
-  padding: k-px-to-rem(15px) k-px-to-rem(20px);
-
-  @include k-typographyFont('source-sans-light');
-  @include k-typographyFontSize(-1);
-  border-top: 1px solid map-get($k-colors, 'line-1');
+  @include k-typographyFont('source-sans');
 }
 
 .karl-Colors__cardParagraph {
@@ -34,5 +37,5 @@
 }
 
 .karl-Fonts__cardParagraph {
-  font-size: .75rem;
+  font-size: k-to-px-rem(18px);
 }
