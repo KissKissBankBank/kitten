@@ -57,7 +57,7 @@
                  -1px 1px 0 #fff;
     pointer-events: none;
 
-    &.is-disabled {
+    .k-TextInputLimit.is-disabled & {
       text-shadow: none;
     }
 

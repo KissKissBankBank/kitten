@@ -38,7 +38,6 @@ export class TextInputWithLimit extends React.Component {
       'k-TextInputLimit__counter',
       {
         'is-error': length > limit,
-        'is-disabled': disabled,
       }
     )
 

@@ -30,13 +30,6 @@ export class TextInput extends React.Component {
       },
     )
 
-    const gradientClassName = classNames(
-      'k-TextAreaWrapper__gradient',
-      {
-        'is-disabled': disabled,
-      }
-    )
-
     if (tag == 'textarea') {
       return (
         <div className="k-TextAreaWrapper">
@@ -44,7 +37,7 @@ export class TextInput extends React.Component {
                     ref={ input => this.input = input }
                     disabled={ disabled }
                     { ...others } />
-          <div className={ gradientClassName } />
+          <div className="k-TextAreaWrapper__gradient" />
         </div>
       )
     } else {

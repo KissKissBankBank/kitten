@@ -13,6 +13,10 @@
     &.k-TextInput { height: initial; }
 
     resize: vertical;
+
+    &.is-disabled {
+      resize: none;
+    }
   }
 
   .k-TextAreaWrapper__gradient {
@@ -29,7 +33,7 @@
 
     pointer-events: none;
 
-    &.is-disabled {
+    .k-TextAreaWrapper__input.is-disabled + & {
       display: none;
     }
   }
