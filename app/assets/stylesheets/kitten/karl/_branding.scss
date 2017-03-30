@@ -1,4 +1,4 @@
-$size-card: k-px-to-rem(50px);
+$size-card: k-px-to-rem(48px);
 
 .karl-Colors {
   display: flex;
@@ -17,7 +17,7 @@ $size-card: k-px-to-rem(50px);
   padding-top: $size-card;
   margin-left: k-px-to-rem(20px);
   width: $size-card;
-  border-radius: $size-card;
+  border-radius: k-px-to-rem(50px);
   border: k-px-to-rem(1px) solid;
 }
 
