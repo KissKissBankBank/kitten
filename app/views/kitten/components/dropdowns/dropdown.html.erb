@@ -1,15 +1,23 @@
-<%= example 'Default dropdown (positioned with itself)' do %>
-  <%= react_component('KarlSimpleDropdown') %>
-<% end %>
-
-<%= example 'Platform switch dropdown (positioned with parent)' do %>
-  <div id="k-PlatformSwitchDropdown" class="karl-Dropdown--platformSwitch">
-    <%= react_component('KarlPlatformSwitch') %>
+<div class="k-Grid">
+  <div class="k-Grid__col k-Grid__col--12 k-Grid__col--8@m k-Grid__col--8@l">
+    <%= example 'Default dropdown (positioned with itself)' do %>
+      <%= react_component('KarlSimpleDropdown') %>
+    <% end %>
   </div>
-<% end %>
 
-<%= example 'User menu dropdown (positioned to right of the parent)' do %>
-  <div id="k-UserMenuDropdown" class="karl-Dropdown--platformSwitch">
-    <%= react_component('KarlUserMenuDropdown') %>
+  <div class="k-Grid__col k-Grid__col--12 k-Grid__col--8@m k-Grid__col--8@l">
+    <%= example 'Platform switch dropdown (positioned with parent)' do %>
+      <div id="k-PlatformSwitchDropdown" class="karl-Dropdown--platformSwitch">
+        <%= react_component('KarlPlatformSwitch') %>
+      </div>
+    <% end %>
   </div>
-<% end %>
+
+  <div class="k-Grid__col k-Grid__col--12 k-Grid__col--8@m k-Grid__col--8@l">
+    <%= example 'User menu dropdown (positioned to right of the parent)' do %>
+      <div id="k-UserMenuDropdown" class="karl-Dropdown--platformSwitch">
+        <%= react_component('KarlUserMenuDropdown') %>
+      </div>
+    <% end %>
+  </div>
+</div>
