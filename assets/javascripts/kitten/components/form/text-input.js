@@ -11,11 +11,12 @@ export class TextInput extends React.Component {
             tag,
             valid,
             error,
+            disabled,
             tiny,
             digits,
             ...others } = this.props
 
-    const textInputClassNames = classNames(
+    const textInputClassName = classNames(
       'k-TextInput',
       className,
       {
@@ -23,6 +24,7 @@ export class TextInput extends React.Component {
         'k-TextAreaWrapper__input': tag == 'textarea',
         'is-valid': valid,
         'is-error': error,
+        'is-disabled': disabled,
         'k-TextInput--twoDigits': digits == 2,
         'k-TextInput--twelveDigits': digits == 12,
       },
@@ -31,15 +33,17 @@ export class TextInput extends React.Component {
     if (tag == 'textarea') {
       return (
         <div className="k-TextAreaWrapper">
-          <textarea className={ textInputClassNames }
+          <textarea className={ textInputClassName }
                     ref={ input => this.input = input }
+                    disabled={ disabled }
                     { ...others } />
           <div className="k-TextAreaWrapper__gradient" />
         </div>
       )
     } else {
-      return <input className={ textInputClassNames }
+      return <input className={ textInputClassName }
                     ref={ input => this.input = input }
+                    disabled={ disabled }
                     type="text"
                     { ...others } />
     }
@@ -50,6 +54,7 @@ TextInput.defaultProps = {
   tag: 'input', // or 'textarea'
   valid: false,
   error: false,
+  disabled: false,
   tiny: false,
   digits: null,
 }

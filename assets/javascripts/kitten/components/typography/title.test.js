@@ -48,5 +48,13 @@ describe('Title with default props', () => {
         expect(component).to.have.tagName('h2')
       })
     })
+
+    describe('with margin prop', () => {
+      const component = shallow(<Title margin={ false } />)
+
+      it('has a good class', () => {
+        expect(component).to.have.className('k-Title--withoutMargin')
+      })
+    })
   })
 })

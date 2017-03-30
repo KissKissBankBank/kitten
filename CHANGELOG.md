@@ -9,7 +9,17 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fix: Redesign new subtitles and add border-bottom.
 - Fix: Install new grid on 10 columns.
 
-## [9.4.0]
+## [9.5.0] - 2017-03-30
+
+Features:
+- Add `Marger` component.
+- Add `ButtonImage` component.
+- Add `margin` prop to `Paragraph` component.
+
+Fixes:
+- Display correctly disabled `TextInputWithLimit` component.
+
+## [9.4.0] - 2017-03-28
 
 Feature:
 - Add color utilities.
