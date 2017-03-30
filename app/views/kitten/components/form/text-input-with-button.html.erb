@@ -1,87 +1,73 @@
-<%= example "Text input with button" do %>
-  <form role="button">
-    <div class="k-TextInputWithButton">
-      <input class="k-TextInput k-TextInputWithButton__input"
-             type="text"
-             placeholder="Lorem ipsum dolor sit amet" />
+<div class="k-Grid">
+  <div class="k-Grid__col k-Grid__col--12 k-Grid__col--6@l">
+    <div class="k-Grid">
+      <div class="k-Grid__col k-Grid__col--12 k-Grid__col--4@m k-Grid__col--12@l">
+        <%= example "Tiny" do %>
+          <form role="button">
+            <div class="k-TextInputWithButton">
+              <input class="k-TextInput k-TextInput--tiny k-TextInputWithButton__input"
+                     type="text"
+                     placeholder="Lorem ipsum dolor sit amet" />
 
-      <input class="k-TextInputWithButton__button"
-             type="submit"
-             value="Button" />
-    </div>
-  </form>
-<% end %>
-
-
-<%= example "Text input with button - Small" do %>
-  <form role="button">
-    <div class="k-TextInputWithButton">
-      <input class="k-TextInput k-TextInput--tiny k-TextInputWithButton__input"
-             type="text"
-             placeholder="Item" />
-
-      <input class="k-TextInputWithButton__button"
-             type="submit"
-             value="Button" />
-    </div>
-  </form>
-<% end %>
-
-<%= example "Text input with button - Text" do %>
-  <form role="button">
-    <div class="k-TextInputWithButton">
-      <input class="k-TextInput k-TextInputWithButton__input"
-             type="text"
-             placeholder="Lorem ipsum dolor sit amet" />
-
-      <input class="k-TextInputWithButton__button"
-             type="submit"
-             value="Button" />
-    </div>
-  </form>
-<% end %>
-
-<%= example "Text input with button - Valid" do %>
-  <form role="button">
-    <div class="k-TextInputWithButton">
-      <input class="k-TextInput is-valid k-TextInputWithButton__input"
-             type="text"
-             placeholder="Lorem ipsum dolor sit amet" />
-
-      <input class="k-TextInputWithButton__button is-valid"
-             type="submit"
-             value="Button" />
-    </div>
-  </form>
-<% end %>
-
-<%= example "Text input with button - Error" do %>
-  <form role="button">
-    <div class="k-TextInputWithButton">
-      <input class="k-TextInput is-error k-TextInputWithButton__input"
-             type="text"
-             placeholder="Lorem ipsum dolor sit amet" />
-
-      <input class="k-TextInputWithButton__button is-error"
-             type="submit"
-             value="Button" />
-    </div>
-  </form>
-<% end %>
-
-<%= example "Text input with button with info - Error" do %>
-  <div class="k-TextInputWithButtonInfo">
-    <form role="button">
-      <div class="k-TextInputWithButton">
-        <input class="k-TextInput is-error k-TextInputWithButton__input"
-               type="text"
-               placeholder="Lorem ipsum dolor sit amet" />
-
-        <input class="k-TextInputWithButton__button is-error"
-               type="submit"
-               value="Button" />
+              <input class="k-TextInputWithButton__button"
+                     type="submit"
+                     value="Button" />
+            </div>
+          </form>
+        <% end %>
       </div>
-    </form>
-    <p class="k-TextInputWithInfo__error">Cum sociis natoque penatibus et magnis</p>
+
+      <div class="k-Grid__col k-Grid__col--12 k-Grid__col--4@m k-Grid__col--12@l">
+        <%= example "Normal" do %>
+          <form role="button">
+            <div class="k-TextInputWithButton">
+              <input class="k-TextInput k-TextInputWithButton__input"
+                     type="text"
+                     placeholder="Lorem ipsum dolor sit amet" />
+
+              <input class="k-TextInputWithButton__button"
+                     type="submit"
+                     value="Button" />
+            </div>
+          </form>
+        <% end %>
+      </div>
+    </div>
   </div>
-<% end %>
+
+  <div class="k-Grid__col k-Grid__col--12 k-Grid__col--6@l">
+    <div class="k-Grid">
+      <div class="k-Grid__col k-Grid__col--12 k-Grid__col--4@m k-Grid__col--12@l">
+        <%= example "Valid" do %>
+          <form role="button">
+            <div class="k-TextInputWithButton">
+              <input class="k-TextInput is-valid k-TextInputWithButton__input"
+                     type="text"
+                     placeholder="Lorem ipsum dolor sit amet" />
+
+              <input class="k-TextInputWithButton__button is-valid"
+                     type="submit"
+                     value="Button" />
+            </div>
+          </form>
+        <% end %>
+      </div>
+
+      <div class="k-Grid__col k-Grid__col--12 k-Grid__col--4@m k-Grid__col--12@l">
+        <%= example "Error" do %>
+          <form role="button">
+            <div class="k-TextInputWithButton">
+              <input class="k-TextInput is-error k-TextInputWithButton__input"
+                     type="text"
+                     placeholder="Lorem ipsum dolor sit amet" />
+
+              <input class="k-TextInputWithButton__button is-error"
+                     type="submit"
+                     value="Button" />
+            </div>
+          </form>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

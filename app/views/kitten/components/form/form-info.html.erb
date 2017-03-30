@@ -1,70 +1,88 @@
-<%= example "Form info" do %>
-  <div class="k-FormInfo">
-    <label for="input-form-info" class="k-FormInfo__label">
-      Label name here
-    </label>
+<div class="k-Grid">
+  <div class="k-Grid__col k-Grid__col--12 k-Grid__col--6@l">
+    <div class="k-Grid">
+      <div class="k-Grid__col k-Grid__col--12 k-Grid__col--6@m k-Grid__col--12@l">
+        <%= example "Normal" do %>
+          <div class="k-FormInfo">
+            <label for="input-form-info" class="k-FormInfo__label">
+              Label name here
+            </label>
 
-    <%= react_component('TextInput', props: {
-      id: 'input-form-info',
-      placeholder: 'Lorem ipsum dolor sit amet',
-    }) %>
+            <%= react_component('TextInput', props: {
+              id: 'input-form-info',
+              placeholder: 'Lorem ipsum dolor sit amet',
+            }) %>
+          </div>
+        <% end %>
+      </div>
+
+      <div class="k-Grid__col k-Grid__col--12 k-Grid__col--6@m k-Grid__col--12@l">
+        <%= example "TextInput error" do %>
+          <div class="k-FormInfo">
+            <label for="input-form-info-error" class="k-FormInfo__label">
+              Label name here
+            </label>
+
+            <%= react_component('TextInput', props: {
+              id: 'input-form-info-error',
+              error: true,
+              placeholder: 'Lorem ipsum dolor sit amet',
+            }) %>
+
+            <p class="k-FormInfo__error">Cum sociis natoque penatibus et magnis</p>
+          </div>
+        <% end %>
+      </div>
+    </div>
   </div>
-<% end %>
 
-<%= example "Form info with textInput error" do %>
-  <div class="k-FormInfo">
-    <label for="input-form-info-error" class="k-FormInfo__label">
-      Label name here
-    </label>
+  <div class="k-Grid__col k-Grid__col--12 k-Grid__col--6@l">
+    <div class="k-Grid">
+      <div class="k-Grid__col k-Grid__col--12 k-Grid__col--6@m k-Grid__col--12@l">
+        <%= example "RadioButton error" do %>
+          <div class="k-FormInfo">
+            <label class="k-FormInfo__label">
+              Label name here
+            </label>
 
-    <%= react_component('TextInput', props: {
-      id: 'input-form-info-error',
-      error: true,
-      placeholder: 'Lorem ipsum dolor sit amet',
-    }) %>
+            <%= react_component('RadioButton', props: {
+              error: true,
+              text: 'Error default',
+            }) %>
 
-    <p class="k-FormInfo__error">Cum sociis natoque penatibus et magnis</p>
+            <%= react_component('RadioButton', props: {
+              error: true,
+              text: 'Error default checked',
+              defaultChecked: true,
+            }) %>
+
+            <p class="k-FormInfo__error">Cum sociis natoque penatibus et magnis</p>
+          </div>
+        <% end %>
+      </div>
+
+      <div class="k-Grid__col k-Grid__col--12 k-Grid__col--6@m k-Grid__col--12@l">
+        <%= example "Checkbox error" do %>
+          <div class="k-FormInfo">
+            <label class="k-FormInfo__label">
+              Label name here
+            </label>
+
+            <%= react_component('Checkbox', props: {
+              error: true,
+              children: 'Error default',
+            }) %>
+
+            <%= react_component('Checkbox', props: {
+              error: true,
+              children: 'Error default checked',
+              defaultChecked: true,
+            }) %>
+
+            <p class="k-FormInfo__error">Cum sociis natoque penatibus et magnis</p>
+          </div>
+        <% end %>
+      </div>
+    </div>
   </div>
-<% end %>
-
-<%= example "Form info with RadioButton error" do %>
-  <div class="k-FormInfo">
-    <label class="k-FormInfo__label">
-      Label name here
-    </label>
-
-    <%= react_component('RadioButton', props: {
-      error: true,
-      text: 'Error default',
-    }) %>
-
-    <%= react_component('RadioButton', props: {
-      error: true,
-      text: 'Error default checked',
-      defaultChecked: true,
-    }) %>
-
-    <p class="k-FormInfo__error">Cum sociis natoque penatibus et magnis</p>
-  </div>
-<% end %>
-
-<%= example "Form info with Checkbox error" do %>
-  <div class="k-FormInfo">
-    <label class="k-FormInfo__label">
-      Label name here
-    </label>
-
-    <%= react_component('Checkbox', props: {
-      error: true,
-      children: 'Error default',
-    }) %>
-
-    <%= react_component('Checkbox', props: {
-      error: true,
-      children: 'Error default checked',
-      defaultChecked: true,
-    }) %>
-
-    <p class="k-FormInfo__error">Cum sociis natoque penatibus et magnis</p>
-  </div>
-<% end %>
+</div>

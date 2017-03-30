@@ -1,30 +1,38 @@
-<%= example "Form phone number" do %>
-  <%= react_component('FormPhoneNumber', props: {
-      areaOptions: [
-        { value: '+33(fr)', label: '+33(FR)' },
-        { value: '+44(uk)', label: '+44(UK)' },
-        { value: '+34(es)', label: '+34(ES)' },
-        { value: '+39(it)', label: '+39(IT)' }
-      ],
-      areaName: 'area',
-      areaValue: '+33(fr)',
-      placeholder: 'Lorem ipsum dolor sit amet',
-    }
-  ) %>
-<% end %>
+<div class="k-Grid">
+  <div class="k-Grid__col k-Grid__col--12 k-Grid__col--6@l">
+    <div class="k-Grid">
+      <div class="k-Grid__col k-Grid__col--12 k-Grid__col--12@m k-Grid__col--12@l">
+        <%= example "Normal" do %>
+          <%= react_component('FormPhoneNumber', props: {
+              areaOptions: [
+                { value: '+33(fr)', label: '+33(FR)' },
+                { value: '+44(uk)', label: '+44(UK)' },
+                { value: '+34(es)', label: '+34(ES)' },
+                { value: '+39(it)', label: '+39(IT)' }
+              ],
+              areaName: 'area',
+              areaValue: '+33(fr)',
+              placeholder: 'Lorem ipsum dolor sit amet',
+            }
+          ) %>
+        <% end %>
 
-<%= example "Form phone number - tiny" do %>
-  <%= react_component('FormPhoneNumber', props: {
-      areaOptions: [
-        { value: '+33(fr)', label: '+33(FR)' },
-        { value: '+44(uk)', label: '+44(UK)' },
-        { value: '+34(es)', label: '+34(ES)' },
-        { value: '+39(it)', label: '+39(IT)' }
-      ],
-      areaName: 'area',
-      areaValue: '+44(uk)',
-      placeholder: 'Lorem ipsum dolor sit amet',
-      tiny: true,
-    }
-  ) %>
-<% end %>
+        <%= example "Tiny" do %>
+          <%= react_component('FormPhoneNumber', props: {
+              areaOptions: [
+                { value: '+33(fr)', label: '+33(FR)' },
+                { value: '+44(uk)', label: '+44(UK)' },
+                { value: '+34(es)', label: '+34(ES)' },
+                { value: '+39(it)', label: '+39(IT)' }
+              ],
+              areaName: 'area',
+              areaValue: '+44(uk)',
+              placeholder: 'Lorem ipsum dolor sit amet',
+              tiny: true,
+            }
+          ) %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

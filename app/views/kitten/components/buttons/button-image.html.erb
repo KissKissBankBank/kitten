@@ -1,53 +1,76 @@
-<%= example "button tag" do %>
-  <button class="k-ButtonImage" title="Profil">
-    <img class="k-ButtonImage__img"
-         src="https://placehold.it/40x40/4a84ff/4a84ff"
-         width="40"
-         height="40" />
-  </button>
-<% end %>
+<div class="k-Grid">
+  <div class="k-Grid__col k-Grid__col--12 k-Grid__col--3@l">
+    <div class="k-Grid">
+      <div class="k-Grid__col k-Grid__col--12 k-Grid__col--3@m k-Grid__col--12@l">
+        <%= example "button tag" do %>
+          <%= react_component "ButtonImage", props: {
+            img: {
+              src: "https://placehold.it/40x40/4a84ff/4a84ff",
+            } 
+          } %>
+        <% end %>
+      </div>
+      
+      <div class="k-Grid__col k-Grid__col--12 k-Grid__col--3@m k-Grid__col--12@l">
+        <%= example "button tag big" do %>
+          <%= react_component "ButtonImage", props: {
+            big: true,
+            img: {
+              src: "https://placehold.it/40x40/4a84ff/4a84ff",
+            } 
+          } %>
+        <% end %>
+      </div>
+    </div>
+  </div>
 
-<%= example "a tag" do %>
-  <a href="#" class="k-ButtonImage" title="Profil">
-    <img class="k-ButtonImage__img"
-         src="https://placehold.it/40x40/4a84ff/4a84ff"
-         width="40"
-         height="40" />
-  </a>
-<% end %>
+  <div class="k-Grid__col k-Grid__col--12 k-Grid__col--3@l">
+    <div class="k-Grid">
+      <div class="k-Grid__col k-Grid__col--12 k-Grid__col--3@m k-Grid__col--12@l">
+        <%= example "button tag" do %>
+          <%= react_component "ButtonImage", props: {
+            img: {
+              src: "https://placehold.it/40x40/4a84ff/4a84ff",
+            } 
+          } %>
+        <% end %>
+      </div>
+      <div class="k-Grid__col k-Grid__col--12 k-Grid__col--3@m k-Grid__col--12@l">        
+        <%= example "a tag" do %>
+          <%= react_component "ButtonImage", props: {
+            tag: "a",
+            href: "#",
+            img: {
+              src: "https://placehold.it/40x40/4a84ff/4a84ff",
+            }
+          } %>
+        <% end %>
+      </div>
+      <div class="k-Grid__col k-Grid__col--12 k-Grid__col--3@m k-Grid__col--12@l">
+        <%= example "span tag" do %>
+          <%= react_component "ButtonImage", props: {
+            tag: "span",
+            img: {
+              src: "https://placehold.it/40x40/4a84ff/4a84ff",
+            }
+          } %>
+        <% end %>
+      </div>
+    </div>
+  </div>
 
-<%= example "span tag" do %>
-  <span class="k-ButtonImage" title="Profil">
-    <img class="k-ButtonImage__img"
-         src="https://placehold.it/40x40/4a84ff/4a84ff"
-         width="40"
-         height="40" />
-  </span>
-<% end %>
-
-<%= example "button tag tiny" do %>
-  <button class="k-ButtonImage k-ButtonImage--tiny" title="Profil">
-    <img class="k-ButtonImage__img"
-         src="https://placehold.it/40x40/4a84ff/4a84ff"
-         width="40"
-         height="40" />
-  </button>
-<% end %>
-
-<%= example "button tag big" do %>
-  <button class="k-ButtonImage k-ButtonImage--big" title="Profil">
-    <img class="k-ButtonImage__img"
-         src="https://placehold.it/40x40/4a84ff/4a84ff"
-         width="40"
-         height="40" />
-  </button>
-<% end %>
-
-<%= example "button tag disabled" do %>
-  <button class="k-ButtonImage k-ButtonImage--big" disabled title="Profil">
-    <img class="k-ButtonImage__img"
-         src="https://placehold.it/40x40/4a84ff/4a84ff"
-         width="40"
-         height="40" />
-  </button>
-<% end %>
+  <div class="k-Grid__col k-Grid__col--12 k-Grid__col--3@l">
+    <div class="k-Grid">
+        <div class="k-Grid__col k-Grid__col--12 k-Grid__col--3@m k-Grid__col--12@l">
+          <%= example "button tag tiny" do %>
+            <%= react_component "ButtonImage", props: {
+              tiny: true,
+              img: {
+                src: "https://placehold.it/40x40/4a84ff/4a84ff",
+              }
+            } %>
+          <% end %>
+      </div>
+    </div>
+  </div>
+</div>

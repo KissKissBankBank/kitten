@@ -1,89 +1,93 @@
-<%= example 'tab bar' do %>
+<div class="k-Grid">
+  <div class="k-Grid__col k-Grid__col--12">
+    <%= example 'tab bar' do %>
+      <div id="tabbar" class="k-TabBar">
+        <nav class="k-TabBar__nav">
+          <ul class="k-TabBar__list">
+            <li>
+              <a class="k-TabBar__item is-selected" href="#">
+                Lorem <br />ipsum dolor
+              </a>
+            </li>
+            <li>
+              <a class="k-TabBar__item" href="#">
+                Lorem <br />ipsum dolor
+              </a>
+            </li>
+            <li>
+              <a class="k-TabBar__item" href="#">
+                Lorem <br />ipsum dolor
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
 
-  <div id="tabbar" class="k-TabBar">
-    <nav class="k-TabBar__nav">
-      <ul class="k-TabBar__list">
-        <li>
-          <a class="k-TabBar__item is-selected" href="#">
-            Lorem <br />ipsum dolor
-          </a>
-        </li>
-        <li>
-          <a class="k-TabBar__item" href="#">
-            Lorem <br />ipsum dolor
-          </a>
-        </li>
-        <li>
-          <a class="k-TabBar__item" href="#">
-            Lorem <br />ipsum dolor
-          </a>
-        </li>
-      </ul>
-    </nav>
+      <p>
+        <a data-toggle-class="is-fixed"
+           data-toggle-element="#tabbar"
+           href="#">Toggle fixed version</a>
+      </p>
+    <% end %>
   </div>
 
-  <p>
-    <a data-toggle-class="is-fixed"
-       data-toggle-element="#tabbar"
-       href="#">Toggle fixed version</a>
-  </p>
+  <div class="k-Grid__col k-Grid__col--12">
+    <%= example 'Tab bar with 4 items' do %>
+      <div id="tabbar2" class="k-TabBar">
+        <nav class="k-TabBar__nav">
+          <ul class="k-TabBar__list">
+            <li>
+              <a class="k-TabBar__item is-selected" href="#">
+                Lorem <br />ipsum dolor
+              </a>
+            </li>
+            <li>
+              <a class="k-TabBar__item" href="#">
+                Lorem <br />ipsum dolor
+              </a>
+            </li>
+            <li>
+              <a class="k-TabBar__item" href="#">
+                Lorem <br />ipsum dolor
+              </a>
+            </li>
+            <li>
+              <a class="k-TabBar__item" href="#">
+                Lorem <br />ipsum dolor
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
 
-<% end %>
-
-<%= example 'Tab bar with 4 items' do %>
-
-  <div id="tabbar2" class="k-TabBar">
-    <nav class="k-TabBar__nav">
-      <ul class="k-TabBar__list">
-        <li>
-          <a class="k-TabBar__item is-selected" href="#">
-            Lorem <br />ipsum dolor
-          </a>
-        </li>
-        <li>
-          <a class="k-TabBar__item" href="#">
-            Lorem <br />ipsum dolor
-          </a>
-        </li>
-        <li>
-          <a class="k-TabBar__item" href="#">
-            Lorem <br />ipsum dolor
-          </a>
-        </li>
-        <li>
-          <a class="k-TabBar__item" href="#">
-            Lorem <br />ipsum dolor
-          </a>
-        </li>
-      </ul>
-    </nav>
+      <p>
+        <a data-toggle-class="is-fixed"
+           data-toggle-element="#tabbar2"
+           href="#">Toggle fixed version</a>
+      </p>
+    <% end %>
   </div>
 
-  <p>
-    <a data-toggle-class="is-fixed"
-       data-toggle-element="#tabbar2"
-       href="#">Toggle fixed version</a>
-  </p>
+  <div class="k-Grid__col k-Grid__col--12">
+    <%= example 'Tab bar with React component' do %>
+      <%= react_component "TabBar", props: {
+        items: [
+          { text: "Lorem\nipsum dolor", href: "#", selected: true },
+          { text: "Lorem\nipsum dolor", href: "#" },
+          { text: "Lorem\nipsum dolor", href: "#" },
+        ]
+      } %>
 
-<% end %>
+      <br>
 
-<%= example 'Tab bar with React component' do %>
-  <%= react_component "TabBar", props: {
-    items: [
-      { text: "Lorem\nipsum dolor", href: "#", selected: true },
-      { text: "Lorem\nipsum dolor", href: "#" },
-      { text: "Lorem\nipsum dolor", href: "#" },
-    ]
-  } %>
-
-  <br>
-
-  <%= react_component "TabBar", props: {
-    items: [
-      { text: "Lorem\nipsum dolor", href: "#" },
-      { text: "Lorem\nipsum dolor", href: "#" },
-      { text: "Lorem\nipsum dolor", href: "#", selected: true },
-      { text: "Lorem\nipsum dolor", href: "#" },
-    ]
-  } %>
-<% end %>
+      <%= react_component "TabBar", props: {
+        items: [
+          { text: "Lorem\nipsum dolor", href: "#" },
+          { text: "Lorem\nipsum dolor", href: "#" },
+          { text: "Lorem\nipsum dolor", href: "#", selected: true },
+          { text: "Lorem\nipsum dolor", href: "#" },
+        ]
+      } %>
+    <% end %>
+  </div>
+</div>
