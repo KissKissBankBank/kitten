@@ -57,6 +57,10 @@
                  -1px 1px 0 #fff;
     pointer-events: none;
 
+    .k-TextInputLimit.is-disabled & {
+      text-shadow: none;
+    }
+
     .k-TextInputLimit__input:focus ~ & {
       color: $active-color;
     }
