@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-Breaking change: - Update button size on `button-tiny`.
+- Breaking change: Update button `min-width` class on `button-tiny`.
 
 ## [9.4.0]
 
