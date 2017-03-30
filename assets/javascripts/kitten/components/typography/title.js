@@ -3,12 +3,15 @@ import classNames from 'classnames'
 
 export class Title extends React.Component {
   render() {
-    const { className, modifier, tag, ...other } = this.props
+    const { className, modifier, tag, margin, ...other } = this.props
 
     const titleClassNames = classNames(
       'k-Title',
       className,
-      `k-Title--${modifier}`
+      `k-Title--${modifier}`,
+      {
+        'k-Title--withoutMargin': !margin,
+      }
     )
 
     const Tag = tag
@@ -23,4 +26,5 @@ Title.defaultProps = {
   tag: 'h1',
   modifier: 'primary',
   children: 'Felis…',
+  margin: true,
 }
