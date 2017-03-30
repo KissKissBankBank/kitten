@@ -34,39 +34,34 @@
     }
   }
 
-  .k-ProjectCard__content {
+  .k-ProjectCard__grid {
     padding: 0 k-px-to-rem(20px);
   }
 
-  .k-ProjectCard__grid {
+  .k-ProjectCard__flex {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
   }
 
-  .k-ProjectCard__grid--spaceBetween {
+  .k-ProjectCard__flex--spaceBetween {
     justify-content: space-between;
   }
 
-  .k-ProjectCard__grid__fluid {
+  .k-ProjectCard__flex__fluid {
     flex: 1;
   }
 
-  .k-ProjectCard__progress {
-    padding: 0 k-px-to-rem(20px);
+  .k-ProjectCard__borderTop {
     border-top: 1px solid map-get($k-colors, 'line-1');
-    border-bottom: 1px solid map-get($k-colors, 'line-1');
   }
 
   .k-ProjectCard__img {
     display: block;
     width: 100%;
-    margin: k-px-to-rem(20px) 0;
   }
 
   .k-ProjectCard__status {
-    padding: 10px;
-    border-top: 1px solid map-get($k-colors, 'line-1');
-
     text-align: center;
     @include k-typographyFont('source-sans-semi-bold');
     @include k-typographyFontSize(-1);
@@ -74,7 +69,7 @@
 
   .k-ProjectCard__status--consideration {
     background: map-get($k-colors, 'primary-1');
-    color: #fff;
+    color: map-get($k-colors, 'background-1');;
   }
 
   .k-ProjectCard__status--succeed {
