@@ -4,12 +4,17 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `Marger` component.
-- Feature: Add `ButtonImage` component.
-- Feature: Add `margin` prop to `Paragraph` component.
-- Fix: Display correctly disabled `TextInputWithLimit` component.
+## [9.5.0] - 2017-03-30
 
-## [9.4.0]
+Features:
+- Add `Marger` component.
+- Add `ButtonImage` component.
+- Add `margin` prop to `Paragraph` component.
+
+Fixes:
+- Display correctly disabled `TextInputWithLimit` component.
+
+## [9.4.0] - 2017-03-28
 
 Feature:
 - Add color utilities.
