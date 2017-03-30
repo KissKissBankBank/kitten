@@ -60,5 +60,6 @@ TextInputWithLimit.defaultProps = {
   tag: 'input',
   limit: 80,
   defaultValue: '',
+  disabled: false,
   onChange: function() {},
 }
