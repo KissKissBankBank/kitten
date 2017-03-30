@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Add `ButtonImage` component.
 - Feature: Add `margin` prop to `Paragraph` component.
+- Fix: Display correctly disabled `TextInputWithLimit` component.
 
 ## [9.4.0]
 

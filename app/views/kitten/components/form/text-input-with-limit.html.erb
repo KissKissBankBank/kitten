@@ -2,11 +2,28 @@
   <%= react_component('TextInputWithLimit') %>
 <% end %>
 
+<%= example "Text input with limit - disabled" do %>
+  <%= react_component('TextInputWithLimit', props: {
+    disabled: true,
+    placeholder: 'Lorem ipsum dolor'
+  }) %>
+<% end %>
+
 <%= example "Textarea with limit" do %>
   <%= react_component('TextInputWithLimit', props: {
     tag: 'textarea',
     rows: 4,
     placeholder: 'Lorem ipsum dolor sit amet',
     limit: 128,
+  }) %>
+<% end %>
+
+<%= example "Textarea with limit - disabled" do %>
+  <%= react_component('TextInputWithLimit', props: {
+    tag: 'textarea',
+    rows: 4,
+    placeholder: 'Lorem ipsum dolor sit amet',
+    limit: 128,
+    disabled: true,
   }) %>
 <% end %>

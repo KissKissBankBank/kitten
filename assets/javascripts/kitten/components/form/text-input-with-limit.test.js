@@ -25,7 +25,7 @@ describe('<TextInputWithLimit />', () => {
   })
 
   describe('defaultValue prop', () => {
-    it('when empty it sets the counter to the limit', () => {
+    it('sets the counter to the limit when empty', () => {
       const component = shallow(
         <TextInputWithLimit defaultValue="" limit={ 15 } />
       )
@@ -33,7 +33,7 @@ describe('<TextInputWithLimit />', () => {
       expect(counter).to.have.text('15')
     })
 
-    it('when set it changes the counter', () => {
+    it('changes the counter when set', () => {
       const component = shallow(
         <TextInputWithLimit defaultValue="Test" limit={ 15 } />
       )
@@ -41,13 +41,24 @@ describe('<TextInputWithLimit />', () => {
       expect(counter).to.have.text('11')
     })
 
-    it('when over the limit it adds an error', () => {
+    it('adds an error when over the limit', () => {
       const component = shallow(
         <TextInputWithLimit defaultValue="Test" limit={ 3 } />
       )
       const counter = component.find('.k-TextInputLimit__counter')
       expect(counter).to.have.text('-1')
       expect(counter).to.have.className('is-error')
+    })
+  })
+
+  describe('disabled prop', () => {
+    const component = shallow(
+      <TextInputWithLimit disabled />
+    )
+
+    it('is disabled', () => {
+      expect(component).to.have.className('is-disabled')
+      expect(component.find('TextInput')).to.have.attr('disabled')
     })
   })
 
