@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `ButtonImage` component.
 - Feature: Add `margin` prop to `Paragraph` component.
 
 ## [9.4.0]
