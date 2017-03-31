@@ -18,7 +18,11 @@
     // max-width: k-px-to-rem(350px);
 
     // TODO: remove this.
-    margin: 0 k-px-to-rem(10px) k-px-to-rem(20px);
+    margin: 0 0 k-px-to-rem(20px);
+
+    @include k-media-min('s') {
+      margin: 0 k-px-to-rem(10px) k-px-to-rem(20px);
+    }
 
     background: map-get($k-colors, 'background-1');
     border: 1px solid map-get($k-colors, 'line-1');
