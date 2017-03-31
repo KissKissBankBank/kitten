@@ -54,10 +54,15 @@ $menu-width: 14rem;
   width: $menu-width;
   right: -$menu-width - $header-title-margin;
 
-  color: white;
-  font-size: 1.2rem;
-  font-weight: 300;
+  color: map-get($k-colors, 'background-1');
+  @include k-typographyFontSize(0);
   line-height: $header-height;
+  text-transform: uppercase;
+}
+
+.karl-Menu__header__about {
+  position: relative;
+  color: map-get($k-colors, 'primary-1');
 }
 
 .karl-Menu__content {

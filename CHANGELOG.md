@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Add `KisskissIcon` component.
+- Fix: Add `InformationIcon` component.
 - Fix: Install new grid on each components.
 - Fix: Delete example descriptions.
 - Fix: Redesign new subtitles and add border-bottom.

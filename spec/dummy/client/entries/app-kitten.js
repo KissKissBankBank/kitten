@@ -45,6 +45,8 @@ import { KarlSideLayout } from 'kitten/karl/layout/side-layout'
 // Icons
 import GrabberIcon from 'kitten/components/icons/grabber-icon'
 import { HeartIcon } from 'kitten/components/icons/heart-icon'
+import { InformationIcon } from 'kitten/components/icons/information-icon'
+import { KisskissIcon } from 'kitten/components/icons/kisskiss-icon'
 import { VisaIcon } from 'kitten/components/icons/visa-icon'
 import { LocationIcon } from 'kitten/components/icons/location-icon'
 import { FacebookIcon } from 'kitten/components/icons/facebook-icon'
@@ -207,6 +209,8 @@ ReactOnRails.register({
 
   // Icons
   GrabberIcon,
+  InformationIcon,
+  KisskissIcon,
   HeartIcon,
   VisaIcon,
   LocationIcon,
