@@ -15,7 +15,7 @@
 @mixin k-ProjectCard {
   .k-ProjectCard {
     box-sizing: border-box;
-    max-width: k-px-to-rem(350px);
+    // max-width: k-px-to-rem(350px);
 
     // TODO: remove this.
     margin: 0 k-px-to-rem(10px) k-px-to-rem(20px);
@@ -32,6 +32,18 @@
       box-shadow: 0 5px 15px map-get($k-colors, 'line-2');
       transform: translateY(-10px);
     }
+
+    &.is-disabled {
+      filter: grayscale(1) opacity(0.4);
+    }
+
+    &.is-failed {
+      filter: grayscale(1);
+    }
+  }
+
+  .k-ProjectCard--fullWidth {
+    max-width: none;
   }
 
   .k-ProjectCard__grid {
@@ -62,14 +74,14 @@
   }
 
   .k-ProjectCard__status {
-    text-align: center;
+    overflow: auto;
     @include k-typographyFont('source-sans-semi-bold');
     @include k-typographyFontSize(-1);
   }
 
-  .k-ProjectCard__status--consideration {
+  .k-ProjectCard__status--studing {
     background: map-get($k-colors, 'primary-1');
-    color: map-get($k-colors, 'background-1');;
+    color: map-get($k-colors, 'background-1');
   }
 
   .k-ProjectCard__status--succeed {
@@ -77,7 +89,29 @@
     color: map-get($k-colors, 'font-1');
   }
 
-  .k-ProjectCard__status--defaulted {
-    background-color: map-get($k-colors, 'primary-2');
+  .k-ProjectCard__status--defaulted,
+  .k-ProjectCard__status--retarded,
+  .k-ProjectCard__status--fraudulent {
+    background-color: map-get($k-colors, 'error');
+    color: map-get($k-colors, 'background-1');
+  }
+
+  .k-ProjectCard__status--failed {
+    background-color: map-get($k-colors, 'line-2');
+    color: map-get($k-colors, 'background-1');
+  }
+
+  .k-ProjectCard__status__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .k-ProjectCard__status__svg {
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin-right: k-px-to-rem(10px);
   }
 }

@@ -1,3 +1,54 @@
-<%= example "Project card" do %>
-  <%= react_component 'KarlProjectCard' %>
+<%= example 'Default' do %>
+  <%= react_component 'KarlProjectCard', props: {
+    status: 'collecting',
+  } %>
+<% end %>
+
+<%= example 'En closing' do %>
+  <%= react_component 'KarlProjectCard', props: {
+    status: 'closing',
+  } %>
+<% end %>
+
+<%= example 'Personne morale' do %>
+  <%= react_component 'KarlProjectCard', props: {
+    disabled: true,
+    status: 'collecting',
+  } %>
+<% end %>
+
+<%= example 'Collecte réussie' do %>
+  <%= react_component 'KarlProjectCard', props: {
+    status: 'succeed',
+  } %>
+<% end %>
+
+<%= example 'Collecte en attente' do %>
+  <%= react_component 'KarlProjectCard', props: {
+    status: 'studing',
+  } %>
+<% end %>
+
+<%= example 'En défaut de paiement' do %>
+  <%= react_component 'KarlProjectCard', props: {
+    status: 'defaulted',
+  } %>
+<% end %>
+
+<%= example 'En retard de paiement' do %>
+  <%= react_component 'KarlProjectCard', props: {
+    status: 'retarded',
+  } %>
+<% end %>
+
+<%= example 'Frauduleuse' do %>
+  <%= react_component 'KarlProjectCard', props: {
+    status: 'fraudulent',
+  } %>
+<% end %>
+
+<%= example 'Collecte échouée/annulée' do %>
+  <%= react_component 'KarlProjectCard', props: {
+    status: 'failed',
+  } %>
 <% end %>
