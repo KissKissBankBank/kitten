@@ -44,6 +44,7 @@ import { KarlSideLayout } from 'kitten/karl/layout/side-layout'
 
 // Icons
 import GrabberIcon from 'kitten/components/icons/grabber-icon'
+import { BurgerIcon } from 'kitten/components/icons/burger-icon'
 import { HeartIcon } from 'kitten/components/icons/heart-icon'
 import { InformationIcon } from 'kitten/components/icons/information-icon'
 import { KisskissIcon } from 'kitten/components/icons/kisskiss-icon'
@@ -208,6 +209,7 @@ ReactOnRails.register({
   TextInputWithUnit,
 
   // Icons
+  BurgerIcon,
   GrabberIcon,
   InformationIcon,
   KisskissIcon,
