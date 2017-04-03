@@ -5,6 +5,7 @@ import { Title } from 'kitten/components/typography/title'
 import { Marger } from 'kitten/components/layout/marger'
 import { Checkbox } from 'kitten/components/form/checkbox'
 import { KarlProjectCard } from 'kitten/karl/cards/project-card'
+import { Separator } from 'kitten/components/layout/separator'
 
 const randomLogo = (key) => {
   return `http://lorempixel.com/40/40/abstract/${ key }`
@@ -22,9 +23,7 @@ export const KarlBrowsing = () => {
   }
 
   const projectCards = [
-    { key: 'project-1', status: 'collecting', score: 'A', image: false, logo: randomLogo(1) },
     { key: 'project-2', status: 'closing', score: 'C', image: randomImage(1), logo: randomLogo(2) },
-    { key: 'project-3', status: 'collecting', disabled: true, score: 'A+', image: randomImage(2), logo: randomLogo(3) },
     { key: 'project-4', status: 'succeed', score: 'B', image: false, dataLocked: true, logo: randomLogo(4) },
     { key: 'project-5', status: 'studing', score: 'B+', image: false, logo: randomLogo(5) },
     { key: 'project-6', status: 'defaulted', score: 'C', image: randomImage(3), logo: randomLogo(6) },
@@ -33,11 +32,36 @@ export const KarlBrowsing = () => {
     { key: 'project-9', status: 'failed', score: 'A+', image: randomImage(5), logo: randomLogo(9) },
   ]
 
+  const projectCollectingCards = [
+    { key: 'project-1', status: 'collecting', score: 'A', image: false, logo: randomLogo(1) },
+    { key: 'project-3', status: 'collecting', disabled: true, score: 'A+', image: randomImage(2), logo: randomLogo(3) },
+  ]
+
   return (
     <div className="k-DevGrid__container k-DevGrid__container--withoutOutline">
       <Marger top="3" bottom="3">
         <Grid>
-          <GridCol col="10">
+          <GridCol col-l="10" col="12">
+            <Marger top="1.5" bottom="1.5">
+              <Title margin={ false } tag="h2" modifier="secondary">Collectes en cours</Title>
+            </Marger>
+
+            <LegoGrid masonryProps={ masonryProps }>
+              { projectCollectingCards.map((project, index) =>
+                <LegoGrid.Item key={ index }>
+                  <KarlProjectCard { ...project } />
+                </LegoGrid.Item>
+              ) }
+            </LegoGrid>
+
+            <Marger top="4" bottom="3">
+              <Separator darker />
+            </Marger>
+
+            <Marger top="3" bottom="1.5">
+              <Title margin={ false } tag="h2" modifier="secondary">Collectes terminées</Title>
+            </Marger>
+
             <LegoGrid masonryProps={ masonryProps }>
               { projectCards.map((project, index) =>
                 <LegoGrid.Item key={ index }>
@@ -62,8 +86,8 @@ export const KarlBrowsing = () => {
               <Checkbox id="status-option-7">Collectes annulées</Checkbox>
             </Marger>
 
-            <Marger top="2" bottom="2">
-              <hr style={ { marginTop: 0, marginBottom: 0 } } />
+            <Marger top="3" bottom="2">
+              <Separator />
             </Marger>
 
             <Marger top="1.5" bottom="1.5">
