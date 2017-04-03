@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Propagate `className` prop to `Grid` and `GridCol` components.
 - Feature: Add `Separator` component.
 - Fix: Install new grid on each components.
 - Fix: Delete example descriptions.

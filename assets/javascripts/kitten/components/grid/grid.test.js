@@ -17,6 +17,22 @@ describe('<Grid />', () => {
   it('renders children', () => {
     expect(grid).to.have.text('Test')
   })
+
+  describe('with className prop', () => {
+    const grid = shallow(<Grid className="custom__class" />)
+
+    it('has good class', () => {
+      expect(grid).to.have.className('custom__class')
+    })
+  })
+
+  describe('with other prop', () => {
+    const grid = shallow(<Grid aria-hidden="true" />)
+
+    it('has an aria-hidden attribute', () => {
+      expect(grid).to.have.attr('aria-hidden', 'true')
+    })
+  })
 })
 
 describe('<GridCol />', () => {
@@ -59,6 +75,14 @@ describe('<GridCol />', () => {
       expect(gridCol).to.have.className('k-Grid__col--offset-2@s')
       expect(gridCol).to.have.className('k-Grid__col--offset-3@m')
       expect(gridCol).to.have.className('k-Grid__col--offset-4@l')
+    })
+  })
+
+  describe('with className prop', () => {
+    const gridCol = shallow(<GridCol className="custom__class" />)
+
+    it('has good class', () => {
+      expect(gridCol).to.have.className('custom__class')
     })
   })
 })
