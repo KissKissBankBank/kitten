@@ -45,11 +45,12 @@ import { KarlSideLayout } from 'kitten/karl/layout/side-layout'
 // Icons
 import GrabberIcon from 'kitten/components/icons/grabber-icon'
 import { HeartIcon } from 'kitten/components/icons/heart-icon'
-import { VisaIcon } from 'kitten/components/icons/visa-icon'
-import { LocationIcon } from 'kitten/components/icons/location-icon'
 import { FacebookIcon } from 'kitten/components/icons/facebook-icon'
-import { TwitterIcon } from 'kitten/components/icons/twitter-icon'
 import { LinkedinIcon } from 'kitten/components/icons/linkedin-icon'
+import { LocationIcon } from 'kitten/components/icons/location-icon'
+import { MastercardIcon } from 'kitten/components/icons/mastercard-icon'
+import { TwitterIcon } from 'kitten/components/icons/twitter-icon'
+import { VisaIcon } from 'kitten/components/icons/visa-icon'
 
 // Layout
 import { Separator } from 'kitten/components/layout/separator'
@@ -211,11 +212,12 @@ ReactOnRails.register({
   // Icons
   GrabberIcon,
   HeartIcon,
-  VisaIcon,
-  LocationIcon,
   FacebookIcon,
-  TwitterIcon,
   LinkedinIcon,
+  LocationIcon,
+  MastercardIcon,
+  TwitterIcon,
+  VisaIcon,
 
   // Layout
   Separator,
