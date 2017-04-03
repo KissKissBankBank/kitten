@@ -5,10 +5,11 @@ const mediaQueries = ['xxs', 'xs', 's', 'm', 'l', 'xl']
 
 export class Grid extends React.Component {
   render() {
+    const { className, ...others } = this.props
+    const gridClassName = classNames('k-Grid', className)
+
     return (
-      <div className="k-Grid">
-        { this.props.children }
-      </div>
+      <div className={ gridClassName } { ...others } />
     )
   }
 }
@@ -40,6 +41,7 @@ export class GridCol extends React.Component {
         [`k-Grid__col--offset-${this.props.offset}`]: this.props.offset,
       },
       this.classByMediaQuery(),
+      this.props.className,
     )
 
     return (
@@ -50,7 +52,12 @@ export class GridCol extends React.Component {
   }
 }
 
+Grid.defaultProps = {
+  className: null,
+}
+
 GridCol.defaultProps = {
   col: '12',
   offset: null,
+  className: null,
 }
