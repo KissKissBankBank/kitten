@@ -1,0 +1,24 @@
+/// Display a separator.
+///
+/// @group layout
+///
+/// @example scss - Usage
+///
+///   @include k-Separator;
+///
+/// @example html
+///
+///   <hr class="k-Separator" />
+
+@mixin k-Separator {
+  .k-Separator {
+    margin: 0;
+    border: none;
+    height: 1px;
+    background: map-get($k-colors, 'line-1');
+  }
+
+  .k-Separator--darker {
+    background-color: map-get($k-colors, 'line-2');
+  }
+}

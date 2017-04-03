@@ -1,16 +1,13 @@
-<h3 id="<%= component %>" class="karl-Section__title">
+<h3 id="<%= component %>" class="k-Row karl-Section__title">
   <%= title %>
 </h3>
 
 <% if defined?(examples_display) && examples_display == :vertical %>
   <% classname = 'karl-Section__example--vertical' %>
 <% else %>
-  <% classname = 'karl-Section__example' %>
 <% end %>
 
-<section class="<%= classname %>">
   <%= render template: "kitten/#{component}" %>
-</section>
 
 <% if description.present? %>
   <section class="karl-Section__example">

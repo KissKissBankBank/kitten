@@ -1,41 +1,47 @@
-<%= example "SupTitle" do %>
-  <%= react_component('SupTitle', props: {
-    children: 'This is a sup-title',
-  }) %>
-<% end %>
+<div class="k-Grid">
+  <div class="k-Grid__col k-Grid__col--12">
+    <%= example "Title : primary" do %>
+      <%= react_component('Title') %>
+    <% end %>
+  </div>
 
-<%= example "Title : primary" do %>
-  <%= react_component('Title') %>
-<% end %>
+  <div class="k-Grid__col k-Grid__col--12">
+    <%= example "Title : secondary" do %>
+      <%= react_component('Title', props: {
+        modifier: "secondary",
+        tag: "h2",
+        children: "Felis…",
+      }) %>
+    <% end %>
+  </div>
 
-<%= example "Title : secondary" do %>
-  <%= react_component('Title', props: {
-    modifier: "secondary",
-    tag: "h2",
-    children: "Felis…",
-  }) %>
-<% end %>
+  <div class="k-Grid__col k-Grid__col--12">
+    <%= example "Title : tertiary" do %>
+      <%= react_component('Title', props: {
+        modifier: "tertiary",
+        tag: "h3",
+        children: "Felis…",
+      }) %>
+    <% end %>
+  </div>
 
-<%= example "Title : tertiary" do %>
-  <%= react_component('Title', props: {
-    modifier: "tertiary",
-    tag: "h3",
-    children: "Felis…",
-  }) %>
-<% end %>
+  <div class="k-Grid__col k-Grid__col--12">
+    <%= example "Title : quaternary" do %>
+      <%= react_component('Title', props: {
+        modifier: "quaternary",
+        tag: "h4",
+        children: "Felis…",
+      }) %>
+    <% end %>
+  </div>
 
-<%= example "Title : quaternary" do %>
-  <%= react_component('Title', props: {
-    modifier: "quaternary",
-    tag: "h4",
-    children: "Felis…",
-  }) %>
-<% end %>
-
-<%= example "Title : quinary" do %>
-  <%= react_component('Title', props: {
-    modifier: "quinary",
-    tag: "h5",
-    children: "Felis…",
-  }) %>
-<% end %>
+  <div class="k-Grid__col k-Grid__col--12">
+    <%= example "Title : quinary" do %>
+      <%= react_component('Title', props: {
+        modifier: "quinary",
+        tag: "h5",
+        children: "Felis…",
+      }) %>
+    <% end %>
+  </div>
+</div>

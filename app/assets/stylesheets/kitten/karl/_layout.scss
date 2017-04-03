@@ -6,23 +6,6 @@ $karl-color-4: map-get($k-colors, 'primary-4');
   background-color: map-get($k-colors, 'background-2');
 }
 
-.karl-Main__container {
-  @include container;
-
-  box-sizing: border-box;
-  padding: 0 gutter() * 2;
-
-  position: relative;
-  display: flex;
-
-  box-sizing: border-box;
-}
-
-.karl-Main__content {
-  width: span(10);
-  margin: 0 auto;
-}
-
 // Utilities
 
 .k-u-clearfix:after {
