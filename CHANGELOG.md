@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Remove `button-heart-icon-words` to `button-with-icon-words`.
 - Fix: Propagate `className` prop to `Grid` and `GridCol` components.
 - Fix: Remove `error` label on Checkbox and RadioButton guideline example.
 - Feature: Add `Separator` component.
