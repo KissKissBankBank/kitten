@@ -7,6 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fix: Add `BurgerIcon` and component.
 - Fix: Add `KisskissIcon` component.
 - Fix: Add `InformationIcon` component.
+- Feature: Add `Separator` component.
 - Fix: Install new grid on each components.
 - Fix: Delete example descriptions.
 - Fix: Redesign new subtitles and add border-bottom.

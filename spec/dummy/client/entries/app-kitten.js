@@ -54,6 +54,9 @@ import { FacebookIcon } from 'kitten/components/icons/facebook-icon'
 import { TwitterIcon } from 'kitten/components/icons/twitter-icon'
 import { LinkedinIcon } from 'kitten/components/icons/linkedin-icon'
 
+// Layout
+import { Separator } from 'kitten/components/layout/separator'
+
 // Links
 import ExternalRichLink from 'kitten/components/links/external-rich-link'
 
@@ -219,6 +222,9 @@ ReactOnRails.register({
   FacebookIcon,
   TwitterIcon,
   LinkedinIcon,
+
+  // Layout
+  Separator,
 
   // Links
   ExternalRichLink,
