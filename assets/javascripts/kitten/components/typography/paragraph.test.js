@@ -49,4 +49,12 @@ describe('Paragraph with default props', () => {
       expect(component).to.have.className('k-Paragraph--withoutMargin')
     })
   })
+
+  describe('with normalLineHeight prop', () => {
+    const component = shallow(<Paragraph normalLineHeight />)
+
+    it('has a good class', () => {
+      expect(component).to.have.className('k-Paragraph--normalLineHeight')
+    })
+  })
 })
