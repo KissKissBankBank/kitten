@@ -71,24 +71,26 @@ export class KarlBrowsing extends React.Component {
     }
 
     const projectCards = [
-      { key: 'project-2', status: 'closing', score: 'C', image: randomImage(1), logo: randomLogo(2) },
       { key: 'project-4', status: 'succeed', score: 'B', image: false, dataLocked: true, logo: randomLogo(4) },
       { key: 'project-5', status: 'studing', score: 'B+', image: false, logo: randomLogo(5) },
       { key: 'project-6', status: 'defaulted', score: 'C', image: randomImage(3), logo: randomLogo(6) },
       { key: 'project-7', status: 'retarded', score: 'A', image: randomImage(4), logo: randomLogo(7) },
       { key: 'project-8', status: 'fraudulent', score: 'B+', image: false, logo: randomLogo(8) },
       { key: 'project-9', status: 'failed', score: 'A+', image: randomImage(5), logo: randomLogo(9) },
+      { key: 'project-9', status: 'failed', score: 'C', image: false, logo: randomLogo(10) },
+      { key: 'project-9', status: 'failed', score: 'B+', image: randomImage(6), logo: randomLogo(1) },
     ]
 
     const projectCollectingCards = [
       { key: 'project-1', status: 'collecting', score: 'A', image: false, logo: randomLogo(1) },
+      { key: 'project-2', status: 'closing', score: 'C', image: randomImage(1), logo: randomLogo(2) },
       { key: 'project-3', status: 'collecting', disabled: true, score: 'A+', image: randomImage(2), logo: randomLogo(3) },
     ]
 
     return (
       <div>
         <Marger top="1.5" bottom="1.5">
-          <Title margin={ false } tag="h2" modifier="secondary">Collectes en cours</Title>
+          <Title margin={ false } tag="h2" modifier="secondary">Collectes du moment</Title>
         </Marger>
 
         <LegoGrid masonryProps={ masonryProps }>
@@ -134,6 +136,7 @@ export class KarlBrowsing extends React.Component {
               </Marger>
 
               <Marger top="1.5" bottom="3">
+                <RadioButton id="status-option-0" name="status" checked text="Tous les statuts" />
                 <RadioButton id="status-option-1" name="status" text="Collectes en cours" />
                 <RadioButton id="status-option-2" name="status" text="Projets en remboursement" />
                 <RadioButton id="status-option-3" name="status" text="Projets en défaut de paiement" />
@@ -152,6 +155,7 @@ export class KarlBrowsing extends React.Component {
               </Marger>
 
               <Marger top="1.5" bottom="1.5">
+                <RadioButton id="domaine-option-0" name="domaines" checked text="Tous les domaines" />
                 <RadioButton id="domaine-option-1" name="domaines" text="Agriculture" />
                 <RadioButton id="domaine-option-2" name="domaines" text="Industrie et agroalimentaire" />
                 <RadioButton id="domaine-option-3" name="domaines" text="Construction" />
@@ -172,6 +176,7 @@ export class KarlBrowsing extends React.Component {
               </Marger>
 
               <Marger top="1.5" bottom="1.5">
+                <RadioButton id="localisation-option-0" name="localisation" checked text="Toutes les localisations" />
                 <RadioButton id="localisation-option-1" name="localisation" text="France" />
                 <RadioButton id="localisation-option-2" name="localisation" text="Île-de-France" />
                 <RadioButton id="localisation-option-3" name="localisation" text="Nord-Ouest" />
@@ -189,10 +194,11 @@ export class KarlBrowsing extends React.Component {
               </Marger>
 
               <Marger top="1.5" bottom="1.5">
+                <RadioButton id="note-option-0" name="score" checked text="Toutes les notes" />
                 <RadioButton id="note-option-1" name="score" text="A+" />
                 <RadioButton id="note-option-2" name="score" text="A" />
-                <RadioButton id="note-option-3" name="score" text="B" />
                 <RadioButton id="note-option-4" name="score" text="B+" />
+                <RadioButton id="note-option-3" name="score" text="B" />
                 <RadioButton id="note-option-5" name="score" text="C" />
               </Marger>
             </GridCol>
