@@ -47,17 +47,19 @@ $menu-width: 14rem;
 
 .karl-Menu__header__title {
   position: absolute;
+  text-align: center;
   top: 0;
 
   margin-top: 0;
   margin-bottom: 0;
   width: $menu-width;
-  right: -$menu-width - $header-title-margin;
+  //right: -$menu-width - $header-title-margin;
+  right: -45rem;
 
   color: map-get($k-colors, 'background-1');
   @include k-typographyFontSize(0);
-  line-height: $header-height;
   text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .karl-Menu__header__about {

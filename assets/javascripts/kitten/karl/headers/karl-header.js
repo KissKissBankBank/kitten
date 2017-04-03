@@ -5,21 +5,18 @@ import { InformationIcon } from 'kitten/components/icons/information-icon'
 import { BurgerIcon } from 'kitten/components/icons/burger-icon'
 import { ButtonIcon } from 'kitten/components/buttons/button-con'
 
-export const KarlHeader = () => {
-  return (
-    <div className="karl-Menu__header">
-      <ButtonIcon className="karl-Menu__header__menu" { ...props }>
-        <BurgerIcon className="k-ButtonIcon__svg" />
-      </ButtonIcon>
+export const KarlMenuHeader = () => {
+  <div className="karl-Menu__header">
+    <ButtonIcon className="karl-Menu__header__menu" { ...props }>
+      <BurgerIcon className="k-ButtonIcon__svg" />
+    </ButtonIcon>
 
-      <KisskissIcon className="karl-Menu__header__logo" />
+    <KisskissIcon className="karl-Menu__header__logo" />
 
-      <h3 className="karl-Menu__header__title">Styleguide</h3>
+    <h3 className="karl-Menu__header__title">Styleguide</h3>
 
-      <ButtonIcon className="karl-Menu__header__about" { ...props }>
-        <InformationIcon className="k-ButtonIcon__svg" />
-      </ButtonIcon>
-
-    </div>
-  )
+    <ButtonIcon className="karl-Menu__header__about" { ...props }>
+      <InformationIcon className="k-ButtonIcon__svg" />
+    </ButtonIcon>
+  </div>
 }
