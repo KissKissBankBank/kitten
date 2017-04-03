@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Delete `error` label on Checkbox and RadioButton.
+- Fix: Remove `error` label on Checkbox and RadioButton guideline example.
 - Feature: Add `Separator` component.
 - Fix: Install new grid on each components.
 - Fix: Delete example descriptions.
