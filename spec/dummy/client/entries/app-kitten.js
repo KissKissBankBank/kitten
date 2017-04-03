@@ -44,6 +44,7 @@ import { KarlSideLayout } from 'kitten/karl/layout/side-layout'
 
 // Icons
 import GrabberIcon from 'kitten/components/icons/grabber-icon'
+import { CbIcon } from 'kitten/components/icons/cb-icon'
 import { HeartIcon } from 'kitten/components/icons/heart-icon'
 import { FacebookIcon } from 'kitten/components/icons/facebook-icon'
 import { LinkedinIcon } from 'kitten/components/icons/linkedin-icon'
@@ -156,7 +157,9 @@ import { KarlButtonIconHeart,
 import { KarlLineWithTooltip,
          KarlLineWithBigHeart } from 'kitten/karl/layout/line'
 import { KarlPaymentButtonVisa,
-         KarlPaymentButtonMastercard } from 'kitten/karl/buttons/payment-button'
+         KarlPaymentButtonMastercard,
+         KarlPaymentButtonCb,
+         KarlPaymentButtonVirement } from 'kitten/karl/buttons/payment-button'
 import { KarlStaticTooltip } from 'kitten/karl/tooltips/static-tooltip'
 import { KarlRandomProgress } from 'kitten/karl/meters/random-progress'
 import { KarlMakerWhoAmIStep } from 'app/maker/who-am-i/components/container'
@@ -211,6 +214,7 @@ ReactOnRails.register({
   TextInputWithUnit,
 
   // Icons
+  CbIcon,
   GrabberIcon,
   HeartIcon,
   FacebookIcon,
@@ -322,6 +326,8 @@ ReactOnRails.register({
   KarlParagraphWithLink,
   KarlPaymentButtonVisa,
   KarlPaymentButtonMastercard,
+  KarlPaymentButtonCb,
+  KarlPaymentButtonVirement,
   KarlRandomProgress,
   KarlMakerWhoAmIStep,
   KarlLegoGrid,
