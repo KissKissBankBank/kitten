@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Set `line-height: normal` to `RadioButton/Checkbox/Switch` components.
 - Fix: Replace `KarlButtonIconHeartRight` and `KarlButtonIconHeartLeft` examples
   with `KarlButtonIconWordsRight` and `KarlButtonIconWordsLeft`.
 - Feature: Add `normalLineHeight` prop to `Paragraph` component.
