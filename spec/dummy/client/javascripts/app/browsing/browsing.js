@@ -159,18 +159,18 @@ export class KarlBrowsing extends React.Component {
 
             <GridCol col="2" className="k-u-hidden@m-down">
               <Marger top="1.5" bottom="1.5">
-                <Title margin={ false } tag="p" modifier="quaternary">Statuts de projets</Title>
+                <Title margin={ false } tag="p" modifier="quaternary">Statuts</Title>
               </Marger>
 
               <Marger top="1.5" bottom="3">
-                <RadioButton id="status-option-0" name="status" checked text="Tous les statuts" />
-                <RadioButton id="status-option-1" name="status" text="Collectes en cours" />
-                <RadioButton id="status-option-2" name="status" text="Projets en remboursement" />
-                <RadioButton id="status-option-3" name="status" text="Projets en défaut de paiement" />
-                <RadioButton id="status-option-4" name="status" text="Projets en retard de paiement" />
-                <RadioButton id="status-option-5" name="status" text="Projets frauduleux" />
-                <RadioButton id="status-option-6" name="status" text="Collectes échouées" />
-                <RadioButton id="status-option-7" name="status" text="Collectes annulées" />
+                <RadioButton id="status-option-0" name="status" defaultChecked text="Tous les statuts" />
+                <RadioButton id="status-option-1" name="status" text="En cours" />
+                <RadioButton id="status-option-2" name="status" text="En remboursement" />
+                <RadioButton id="status-option-3" name="status" text="En défaut de paiement" />
+                <RadioButton id="status-option-4" name="status" text="En retard de paiement" />
+                <RadioButton id="status-option-5" name="status" text="Frauduleux" />
+                <RadioButton id="status-option-6" name="status" text="Échouées" />
+                <RadioButton id="status-option-7" name="status" text="Annulées" />
               </Marger>
 
               <Marger top="3" bottom="2">
@@ -182,7 +182,7 @@ export class KarlBrowsing extends React.Component {
               </Marger>
 
               <Marger top="1.5" bottom="1.5">
-                <RadioButton id="domaine-option-0" name="domaines" checked text="Tous les domaines" />
+                <RadioButton id="domaine-option-0" name="domaines" defaultChecked text="Tous les domaines" />
                 <RadioButton id="domaine-option-1" name="domaines" text="Agriculture" />
                 <RadioButton id="domaine-option-2" name="domaines" text="Industrie et agroalimentaire" />
                 <RadioButton id="domaine-option-3" name="domaines" text="Construction" />
@@ -203,7 +203,7 @@ export class KarlBrowsing extends React.Component {
               </Marger>
 
               <Marger top="1.5" bottom="1.5">
-                <RadioButton id="localisation-option-0" name="localisation" checked text="Toutes les localisations" />
+                <RadioButton id="localisation-option-0" name="localisation" defaultChecked text="Toutes les localisations" />
                 <RadioButton id="localisation-option-1" name="localisation" text="France" />
                 <RadioButton id="localisation-option-2" name="localisation" text="Île-de-France" />
                 <RadioButton id="localisation-option-3" name="localisation" text="Nord-Ouest" />
@@ -221,7 +221,7 @@ export class KarlBrowsing extends React.Component {
               </Marger>
 
               <Marger top="1.5" bottom="1.5">
-                <RadioButton id="note-option-0" name="score" checked text="Toutes les notes" />
+                <RadioButton id="note-option-0" name="score" defaultChecked text="Toutes les notes" />
                 <RadioButton id="note-option-1" name="score" text="A+" />
                 <RadioButton id="note-option-2" name="score" text="A" />
                 <RadioButton id="note-option-4" name="score" text="B+" />
