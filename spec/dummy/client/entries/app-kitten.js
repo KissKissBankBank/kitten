@@ -142,9 +142,9 @@ import { KarlParagraph,
          KarlParagraphQuaternary,
          KarlParagraphWithLink,
        } from 'kitten/karl/typography/paragraph'
-import { KarlButtonIconHeartRight,
-         KarlButtonIconHeartLeft
-       } from 'kitten/karl/buttons/button-heart-icon-words'
+import { KarlButtonIconWordsRight,
+         KarlButtonIconWordsLeft
+       } from 'kitten/karl/buttons/button-with-icon-words'
 import { KarlButtonAndText } from 'kitten/karl/buttons/button'
 import { KarlButtonIconHeart,
          KarlButtonIconMicro,
@@ -276,8 +276,8 @@ ReactOnRails.register({
   KarlButtonIconFacebookIcon,
   KarlButtonIconTwitterIcon,
   KarlButtonIconLinkedinIcon,
-  KarlButtonIconHeartRight,
-  KarlButtonIconHeartLeft,
+  KarlButtonIconWordsRight,
+  KarlButtonIconWordsLeft,
   KarlButtonAndText,
   KarlLineWithTooltip,
   KarlLineWithBigHeart,
