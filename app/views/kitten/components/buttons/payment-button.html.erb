@@ -3,10 +3,7 @@
     <div class="k-Grid">
       <div class="k-Grid__col k-Grid__col--12 k-Grid__col--3@m k-Grid__col--12@l">
         <%= example 'Visa' do %>
-          <%= react_component('KarlPaymentButtonVisa', props: {
-              name: 'payment-button-1'
-            }
-          ) %>
+          <%= react_component('KarlPaymentButtonVisa') %>
         <% end %>
       </div>
     </div>
@@ -16,12 +13,7 @@
     <div class="k-Grid">
       <div class="k-Grid__col k-Grid__col--12 k-Grid__col--3@m k-Grid__col--12@l">
         <%= example 'Mastercard' do %>
-          <%= react_component('KarlPaymentButtonMastercard', props: {
-              name: 'payment-button-1',
-              defaultChecked: true,
-              id: "checked-payment-button"
-            }
-          ) %>
+          <%= react_component('KarlPaymentButtonMastercard') %>
         <% end %>
       </div>
     </div>
@@ -31,11 +23,7 @@
     <div class="k-Grid">
       <div class="k-Grid__col k-Grid__col--12 k-Grid__col--3@m k-Grid__col--12@l">
         <%= example 'Cb' do %>
-          <%= react_component('KarlPaymentButtonCb', props: {
-              name: 'payment-button-1',
-              id: "checked-payment-button-cb"
-            }
-          ) %>
+          <%= react_component('KarlPaymentButtonCb') %>
         <% end %>
       </div>
     </div>
@@ -45,11 +33,7 @@
     <div class="k-Grid">
       <div class="k-Grid__col k-Grid__col--12 k-Grid__col--3@m k-Grid__col--12@l">
         <%= example 'Virement' do %>
-          <%= react_component('KarlPaymentButtonVirement', props: {
-              name: 'payment-button-1',
-              id: "checked-payment-button-mastercard"
-            }
-          ) %>
+          <%= react_component('KarlPaymentButtonVirement') %>
         <% end %>
       </div>
     </div>

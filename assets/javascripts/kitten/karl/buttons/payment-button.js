@@ -5,35 +5,36 @@ import { VisaIcon } from 'kitten/components/icons/visa-icon'
 import { MastercardIcon } from 'kitten/components/icons/mastercard-icon'
 import { CbIcon } from 'kitten/components/icons/cb-icon'
 
-export const KarlPaymentButtonVisa = props => {
-  const text = <TagButton big={ true } icon={ true } tag="span">
-                 <VisaIcon />
-               </TagButton>
+const paymentButtonWrapper = (WrappedComponent, props) => {
+  return class PaymentButtonWrapper extends React.Component {
+    render() {
+      const text = <TagButton big={ true } icon={ true } tag="span">
+                     <WrappedComponent />
+                   </TagButton>
 
-  return (
-    <RadioButton id="payment-button" text={ text } { ...props } />
-  )
+      return (
+        <RadioButton id="payment-button"
+                     text={ text }
+                     { ...props } />
+      )
+    }
+  }
 }
 
-export const KarlPaymentButtonMastercard = props => {
-  const text = <TagButton big={ true } icon={ true } tag="span">
-                 <MastercardIcon />
-               </TagButton>
+export const KarlPaymentButtonVisa = paymentButtonWrapper(VisaIcon, {
+  name: 'payment-button-1'
+})
 
-  return (
-    <RadioButton id="payment-button" text={ text } { ...props } />
-  )
-}
+export const KarlPaymentButtonMastercard = paymentButtonWrapper(MastercardIcon, {
+  name: 'payment-button-1',
+  defaultChecked: true,
+  id: 'checked-payment-button'
+})
 
-export const KarlPaymentButtonCb = props => {
-  const text = <TagButton big={ true } icon={ true } tag="span">
-                 <CbIcon />
-               </TagButton>
-
-  return (
-    <RadioButton id="payment-button" text={ text } { ...props } />
-  )
-}
+export const KarlPaymentButtonCb = paymentButtonWrapper(CbIcon, {
+  name: 'payment-button-1',
+  id: 'checked-payment-button-cb'
+})
 
 export const KarlPaymentButtonVirement = props => {
   const text = <TagButton big={ true } icon={ true } tag="span">
@@ -41,6 +42,8 @@ export const KarlPaymentButtonVirement = props => {
                </TagButton>
 
   return (
-    <RadioButton id="payment-button" text={ text } { ...props } />
+    <RadioButton text={ text }
+                 name='payment-button-1'
+                 id="checked-payment-button-mastercard" />
   )
 }
