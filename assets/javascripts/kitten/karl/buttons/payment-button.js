@@ -37,7 +37,7 @@ export const KarlPaymentButtonCb = paymentButtonWrapper(CbIcon, {
 })
 
 export const KarlPaymentButtonVirement = props => {
-  const text = <TagButton big={ true } icon={ true } tag="span">
+  const text = <TagButton big={ true } tag="span">
                  Virement
                </TagButton>
 

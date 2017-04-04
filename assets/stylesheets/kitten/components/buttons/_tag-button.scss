@@ -30,6 +30,9 @@
 @mixin k-TagButton {
   $border-size: 1px;
 
+  // Font
+  $font: 'source-sans-semi-bold';
+
   // Size settings tag-button.
   $tag-button-min-width: k-px-to-rem(60px - ($border-size * 2));
   $tag-button-line-height: k-px-to-rem(40px - ($border-size * 2));
@@ -71,6 +74,7 @@
     ),
   );
 
+
   // The tag button has a radius of .25rem
   $tag-button-radius: .25rem;
 
@@ -82,11 +86,15 @@
 
   .k-TagButton {
     @include k-buttonBase;
+    @include k-typographyFont($font);
     @include k-typographyFontSize($button-step, $tag-button-line-height);
 
-    padding: 0 $tag-button-radius;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 k-px-to-rem(20px);
     border-radius: $tag-button-radius;
-    min-width: $tag-button-min-width;
     min-height: $tag-button-line-height;
   }
 
@@ -104,7 +112,6 @@
 
   // Icon modifier.
   .k-TagButton--icon {
-    padding: 0 k-px-to-rem(20px);
     border-color: map-get($k-colors, 'line-2');
     background-color: map-get($k-colors, 'background-1');
 
