@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Set `line-height: normal` to `RadioButton/Checkbox/Switch` components.
 - Feature: Add `normalLineHeight` prop to `Paragraph` component.
 - Fix: Propagate `className` prop to `Grid` and `GridCol` components.
 - Fix: Remove `error` label on Checkbox and RadioButton guideline example.
