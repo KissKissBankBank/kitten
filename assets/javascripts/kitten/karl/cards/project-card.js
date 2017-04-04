@@ -25,7 +25,6 @@ export class KarlProjectCard extends React.Component {
   initialState(props) {
     const isCollectingOrClosing = props.status == 'collecting' || props.status == 'closing'
 
-    // TODO: Use _underscore.js
     const showProgress = isCollectingOrClosing
     const showResults = props.status != 'studing'
     const showCurrentlyResults = isCollectingOrClosing && !props.disabled
@@ -138,6 +137,7 @@ export class KarlProjectCard extends React.Component {
                                             'k-u-margin-left-single',
                                             'k-u-margin-right-single') }
                      margin={ false }
+                     normalLineHeight
                      modifier="quaternary">
             par&nbsp;:<br />
             <span className="k-u-strong">{ this.props.company }</span>
@@ -163,6 +163,7 @@ export class KarlProjectCard extends React.Component {
 
         <Marger top=".5" bottom="1.5">
           <Paragraph margin={ false } modifier="quaternary">
+            {/* TODO: Add `Paragraph.Link` component. */}
             <span className="k-Paragraph__link k-u-hidden@s-up">
               Lire la suite…
             </span>
@@ -179,32 +180,26 @@ export class KarlProjectCard extends React.Component {
                 bottom="2"
                 className={ classNames('k-ProjectCard__flex',
                                        'k-ProjectCard__flex--spaceBetween') }>
-          <Paragraph margin={ false }
-                     modifier="quaternary"
-                     className="k-u-align-center">
+          <span className="k-u-align-center k-ProjectCard__data">
             Taux d’intérêt<br />
-            <span className="k-u-strong">
-              { this.props.dataLocked ? <LockIcon width="20" /> : this.props.interestRate }
+            <span className="k-ProjectCard__data__value">
+              { this.props.dataLocked ? <LockIcon width="12" /> : this.props.interestRate }
             </span>
-          </Paragraph>
+          </span>
 
-          <Paragraph margin={ false }
-                     modifier="quaternary"
-                     className="k-u-align-center">
+          <span className="k-u-align-center k-ProjectCard__data">
             Objectif<br />
-            <span className="k-u-strong">
+            <span className="k-ProjectCard__data__value">
               { this.props.goal }
             </span>
-          </Paragraph>
+          </span>
 
-          <Paragraph margin={ false }
-                     modifier="quaternary"
-                    className="k-u-align-center">
+          <span className="k-u-align-center k-ProjectCard__data">
             Durée<br />
-            <span className="k-u-strong">
-              { this.props.dataLocked ? <LockIcon width="20" /> : this.props.duration }
+            <span className="k-ProjectCard__data__value">
+              { this.props.dataLocked ? <LockIcon width="12" /> : this.props.duration }
             </span>
-          </Paragraph>
+          </span>
         </Marger>
       </div>
     )
@@ -228,12 +223,12 @@ export class KarlProjectCard extends React.Component {
 
     return (
       <div className="k-ProjectCard__grid k-ProjectCard__borderTop">
-        <Marger top="2" bottom="2" className="k-ProjectCard__flex">
+        <Marger top="1.5" bottom="1.5" className="k-ProjectCard__flex">
           <Progress className="k-ProjectCard__flex__fluid"
                     value={ this.props.progress } />
           <Paragraph margin={ false }
                      modifier="quaternary"
-                     className={ classNames('k-u-margin-left-single',
+                     className={ classNames('k-u-margin-left-double',
                                             'k-u-color-primary1',
                                             'k-u-strong') }>
             { this.props.progress }&nbsp;%
@@ -247,7 +242,7 @@ export class KarlProjectCard extends React.Component {
     if (!this.state.showResults) return
 
     const dataClassName = classNames(
-      'k-u-strong',
+      'k-ProjectCard__data__value',
       { 'k-u-color-primary1': this.state.showCurrentlyResults },
     )
 
@@ -256,31 +251,21 @@ export class KarlProjectCard extends React.Component {
         <Marger top="1.5"
                 bottom="1.5"
                 className="k-ProjectCard__flex k-ProjectCard__flex--spaceBetween">
-          <Paragraph margin={ false }
-                     modifier="quaternary"
-                     className="k-u-align-center">
+          <span className="k-u-align-center k-ProjectCard__data">
             <span className={ dataClassName }>
               { this.props.lenders }
             </span><br />
             preteurs
-          </Paragraph>
+          </span>
 
-          <Paragraph margin={ false }
-                     modifier="quaternary"
-                     className="k-u-align-center">
+          <span className="k-u-align-center k-ProjectCard__data">
             <span className={ dataClassName }>
               { this.props.collected }
             </span><br />
-            {
-              this.state.showCurrentlyResults
-              ? 'collectés'
-              : `sur ${ this.props.goal }`
-            }
-          </Paragraph>
+            collectés
+          </span>
 
-          <Paragraph margin={ false }
-                     modifier="quaternary"
-                     className="k-u-align-center">
+          <span className="k-u-align-center k-ProjectCard__data">
             <span className={ dataClassName }>
               {
                 this.state.showCurrentlyResults
@@ -293,7 +278,7 @@ export class KarlProjectCard extends React.Component {
               ? 'restants'
               : 'date de fin'
             }
-          </Paragraph>
+          </span>
         </Marger>
       </div>
     )
@@ -306,7 +291,7 @@ export class KarlProjectCard extends React.Component {
 
     const statusClassName = classNames(
       'k-ProjectCard__grid',
-      'k-ProjectCard__borderTop',
+      { 'k-ProjectCard__borderTop': this.props.status == 'closing' },
       'k-ProjectCard__status',
       data.modifier,
     )

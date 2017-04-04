@@ -14,7 +14,7 @@ const randomLogo = (key) => {
 }
 
 const randomImage = (key) => {
-  return `http://lorempixel.com/500/230/business/${ key }`
+  return `http://lorempixel.com/620/310/business/${ key }`
 }
 
 export class KarlBrowsing extends React.Component {
@@ -94,6 +94,33 @@ export class KarlBrowsing extends React.Component {
         </Marger>
 
         <LegoGrid masonryProps={ masonryProps }>
+          <LegoGrid.Item key="special-card">
+            <div className="k-ProjectCard">
+              <div className="k-ProjectCard__grid">
+                <Title modifier="quaternary">Projets recommandés</Title>
+                <Paragraph modifier="tertiary">
+                  Nous avons sélectionné pour vous les projets correspondant à
+                  votre profil. La souscription aux investissements proposés
+                  nécessite de bien comprendre l'engagement financier
+                  correspondant.
+                </Paragraph>
+                <Paragraph modifier="tertiary">
+                  Prenez le temps de lire les documents relatifs à chaque
+                  projet (Termes et conditions des opérations et Document
+                  d'information réglementaire) et n'hésitez pas à nous
+                  contacter pour toutes vos questions concernant les projets.
+                </Paragraph>
+                <Paragraph modifier="tertiary">
+                  La maturité des projets ci-contre correspond à votre horizon
+                  d'investissement. Nous vous conseillons cependant de
+                  n'investir que les sommes dont vous n'aurez pas besoin
+                  pendant la durée de remboursement, et de ne pas investir
+                  plus de 10% de votre patrimoine financier.
+                </Paragraph>
+              </div>
+            </div>
+          </LegoGrid.Item>
+
           { projectCollectingCards.map((project, index) =>
             <LegoGrid.Item key={ index }>
               <KarlProjectCard { ...project } />

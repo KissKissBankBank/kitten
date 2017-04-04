@@ -68,6 +68,17 @@
     flex: 1;
   }
 
+  .k-ProjectCard__data {
+    width: percentage(100/3/100);
+    @include k-typographyFont('source-sans-light');
+    @include k-typographyFontSize(-1, normal);
+  }
+
+  .k-ProjectCard__data__value {
+    @include k-typographyFont('source-sans-semi-bold');
+    @include k-typographyFontSize(0, normal);
+  }
+
   .k-ProjectCard__borderTop {
     border-top: 1px solid map-get($k-colors, 'line-1');
   }
@@ -79,8 +90,9 @@
 
   .k-ProjectCard__status {
     overflow: auto;
+    margin: 0 -1px -1px;
     @include k-typographyFont('source-sans-semi-bold');
-    @include k-typographyFontSize(-1);
+    @include k-typographyFontSize(-1, normal);
   }
 
   .k-ProjectCard__status--studing {
