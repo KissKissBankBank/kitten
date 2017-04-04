@@ -1,4 +1,4 @@
-$size-card: k-px-to-rem(48px);
+$card-size: k-px-to-rem(48px);
 
 .karl-Colors {
   display: flex;
@@ -14,11 +14,11 @@ $size-card: k-px-to-rem(48px);
 
 
 .karl-Colors__cardBackground {
-  padding-top: $size-card;
+  padding-top: $card-size;
   margin-left: k-px-to-rem(20px);
-  width: $size-card;
+  width: $card-size;
   border-radius: k-px-to-rem(50px);
-  border: k-px-to-rem(1px) solid;
+  border: k-px-to-rem(1px) solid transparent;
 }
 
 .karl-Colors__cardDescription {
@@ -29,10 +29,10 @@ $size-card: k-px-to-rem(48px);
 }
 
 .karl-Colors__cardColorName {
+  @include k-typographyFont('source-sans-semi-bold');
   @include k-typographyFontSize(1);
 
   margin: 0;
-  font-weight: 600;
 }
 
 .karl-Colors__cardHexaName {
@@ -44,5 +44,5 @@ $size-card: k-px-to-rem(48px);
 
 .karl-Colors__cardSection {
   border-top: k-px-to-rem(1px) solid map-get($k-colors, 'line-2');
-  margin: k-px-to-rem(30px) 0 k-px-to-rem(16px);
+  margin: k-px-to-rem(30px) 0 k-px-to-rem(15px);
 }
