@@ -1,0 +1,43 @@
+/// Link card
+///
+/// @group cards
+///
+/// @example scss - usage
+///
+///   @include k-LinkCard;
+///
+/// @example html
+///
+///   <a href="#" class="k-LinkCard">…</a>
+
+@mixin k-LinkCard {
+  $box-shadow-values: 0 5px 15px;
+  $box-shadow-color: map-get($k-colors, 'line-1');
+  $box-shadow-color-hover: map-get($k-colors, 'line-2');
+  $transition-duration: .4s;
+
+  .k-LinkCard {
+    display: block;
+    box-shadow: none;
+    transition: transform $transition-duration, box-shadow $transition-duration;
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: $box-shadow-values $box-shadow-color;
+    }
+  }
+
+  .k-LinkCard--shadow {
+    box-shadow: $box-shadow-values $box-shadow-color;
+
+    &:hover {
+      box-shadow: $box-shadow-values $box-shadow-color-hover;
+    }
+  }
+
+  .k-LinkCard--translateOnHover {
+    &:hover {
+      transform: translateY(-10px);
+    }
+  }
+}
