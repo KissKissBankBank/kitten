@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const MastercardIcon = props  => {
+export const MasterCardIcon = props  => {
   return (
     <svg xmlns="http://www.w3.org/2000/svg"
          viewBox="0 0 340.53 264.89"

@@ -4,16 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Add `KarlPaymentButtonVirement`, `KarlPaymentButtonMastercard`,
-  `KarlPaymentButtonCb` and `KarlPaymentButtonVirement` on `PaymentButton`.
-- Fix: Add new `MastercardIcon` and `CbIcon` component.
-- Fix: Propagate `className` prop to `Grid` and `GridCol` components.
-- Fix: Remove `error` label on Checkbox and RadioButton guideline example.
 - Feature: Add `Separator` component.
-- Fix: Install new grid on each components.
-- Fix: Delete example descriptions.
-- Fix: Redesign new subtitles and add border-bottom.
-- Fix: Install new grid on 10 columns.
 - Breaking change: Update button `min-width` class on `button-tiny`.
 - Feature: Add `margin` prop to `Title` component.
 
@@ -41,12 +32,6 @@ Features:
 - Add `TagList` component.
 - Add `TagIcon` component.
 - Create `SupTitle` component.
-
-Fixes:
-- Replace images by empty images.
-- Delete description.
-- Redesign new subtitles and add border-bottom.
-- Install new grid on 10 columns.
 
 ## [9.2.0] - 2017-03-23
 

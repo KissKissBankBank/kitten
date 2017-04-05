@@ -49,7 +49,7 @@ import { HeartIcon } from 'kitten/components/icons/heart-icon'
 import { FacebookIcon } from 'kitten/components/icons/facebook-icon'
 import { LinkedinIcon } from 'kitten/components/icons/linkedin-icon'
 import { LocationIcon } from 'kitten/components/icons/location-icon'
-import { MastercardIcon } from 'kitten/components/icons/mastercard-icon'
+import { MasterCardIcon } from 'kitten/components/icons/mastercard-icon'
 import { TwitterIcon } from 'kitten/components/icons/twitter-icon'
 import { VisaIcon } from 'kitten/components/icons/visa-icon'
 
@@ -157,9 +157,9 @@ import { KarlButtonIconHeart,
 import { KarlLineWithTooltip,
          KarlLineWithBigHeart } from 'kitten/karl/layout/line'
 import { KarlPaymentButtonVisa,
-         KarlPaymentButtonMastercard,
+         KarlPaymentButtonMasterCard,
          KarlPaymentButtonCb,
-         KarlPaymentButtonVirement } from 'kitten/karl/buttons/payment-button'
+         KarlPaymentButtonBankTransfer } from 'kitten/karl/buttons/payment-button'
 import { KarlStaticTooltip } from 'kitten/karl/tooltips/static-tooltip'
 import { KarlRandomProgress } from 'kitten/karl/meters/random-progress'
 import { KarlMakerWhoAmIStep } from 'app/maker/who-am-i/components/container'
@@ -220,7 +220,7 @@ ReactOnRails.register({
   FacebookIcon,
   LinkedinIcon,
   LocationIcon,
-  MastercardIcon,
+  MasterCardIcon,
   TwitterIcon,
   VisaIcon,
 
@@ -325,9 +325,9 @@ ReactOnRails.register({
   KarlParagraphQuaternary,
   KarlParagraphWithLink,
   KarlPaymentButtonVisa,
-  KarlPaymentButtonMastercard,
+  KarlPaymentButtonMasterCard,
   KarlPaymentButtonCb,
-  KarlPaymentButtonVirement,
+  KarlPaymentButtonBankTransfer,
   KarlRandomProgress,
   KarlMakerWhoAmIStep,
   KarlLegoGrid,
