@@ -13,8 +13,7 @@ const paymentButtonWrapper = (WrappedComponent, props) => {
                    </TagButton>
 
       return (
-        <RadioButton id="payment-button"
-                     text={ text }
+        <RadioButton text={ text }
                      { ...props } />
       )
     }
