@@ -4,6 +4,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Set `line-height: normal` to `RadioButton/Checkbox/Switch` components.
+- Fix: Replace `KarlButtonIconHeartRight` and `KarlButtonIconHeartLeft` examples
+  with `KarlButtonIconWordsRight` and `KarlButtonIconWordsLeft`.
+- Feature: Add `normalLineHeight` prop to `Paragraph` component.
+- Fix: Propagate `className` prop to `Grid` and `GridCol` components.
+- Fix: Remove `error` label on Checkbox and RadioButton guideline example.
 - Feature: Add `Separator` component.
 - Breaking change: Update button `min-width` class on `button-tiny`.
 - Feature: Add `margin` prop to `Title` component.
