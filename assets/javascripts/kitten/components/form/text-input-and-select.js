@@ -20,7 +20,8 @@ export const TextInputAndSelect = props => {
     'k-FormComposer__element',
     {
       'k-FormComposer__element--main': !props.digits
-    }
+    },
+    className,
   )
 
   // TODO: handle key without currencyName prop
