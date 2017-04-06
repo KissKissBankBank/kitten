@@ -81,4 +81,13 @@ describe('card()', () => {
       expect(component).to.have.className('k-Card--withVerticalPadding')
     })
   })
+
+  describe('with custom prop', () => {
+    const ExampleCard = card(ExampleCardComponent, { 'title': 'Foo' })
+    const component = shallow(<ExampleCard title="Bar" />)
+
+    it('has a component custom prop', () => {
+      expect(component).to.have.attr('title', 'Bar')
+    })
+  })
 })

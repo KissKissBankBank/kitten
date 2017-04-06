@@ -24,7 +24,7 @@ export const card = (WrappedComponent, wrappedProps) => {
       withShadow,
       withVerticalPadding,
       ...others,
-    } = { ...defaultProps, ...props, ...wrappedProps }
+    } = { ...defaultProps, ...wrappedProps, ...props }
 
     const cardClassName = classNames(
       'k-Card',
