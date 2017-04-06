@@ -105,6 +105,17 @@ describe('<TextInputWithSelect />', () => {
     })
   })
 
+  describe('with errorOnSelect prop', () => {
+    it('pass the errorOnSelect prop to <SelectWithState />', () => {
+      const handleSelectChange = () => {}
+      const component = shallow(<TextInputAndSelect errorOnSelect />)
+      const selectWithState = component.find(SelectWithState)
+      const expectedProps = { error: true }
+
+      expect(selectWithState.props()).to.contain.any.keys(expectedProps)
+    })
+  })
+
   describe('with custom prop', () => {
     it('pass the prop to <TextInput />', () => {
       const component = shallow(<TextInputAndSelect data-custom="Alice" />)
