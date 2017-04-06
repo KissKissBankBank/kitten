@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Update link style on `Header` and `TabBar` components guideline example.
 - Fix: Set `line-height: normal` to `RadioButton/Checkbox/Switch` components.
 - Fix: Replace `KarlButtonIconHeartRight` and `KarlButtonIconHeartLeft` examples
   with `KarlButtonIconWordsRight` and `KarlButtonIconWordsLeft`.
