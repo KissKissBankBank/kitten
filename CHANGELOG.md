@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking change: Use `k-Card--withVerticalPadding` and `k-Card--rounded`
+  to have the same render of old `k-Card`.
+- Feature: Add modifiers on `k-Card` mixin.
 - Feature: Add `card` high-order component.
 - Fix: Set `line-height: normal` to `RadioButton/Checkbox/Switch` components.
 - Fix: Replace `KarlButtonIconHeartRight` and `KarlButtonIconHeartLeft` examples
