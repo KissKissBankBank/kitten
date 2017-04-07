@@ -12,8 +12,7 @@
 
 @mixin k-Card {
   $color: map-get($k-colors, 'background-1');
-  $height: k-px-to-rem(99px);
-  $width: k-px-to-rem(99px);
+  $size-card: k-px-to-rem(99px);
 
 // Radius
   $radius-tiny: k-px-to-rem(4px);
@@ -24,8 +23,8 @@
   $border-size: k-px-to-rem(1px);
 
   .k-Card {
-    height: $height;
-    max-width: $width;
+    height: $size-card;
+    max-width: $size-card;
 
     border-radius: $radius;
     background-color: $color;
