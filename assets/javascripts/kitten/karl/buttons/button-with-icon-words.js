@@ -2,7 +2,7 @@ import React from 'react'
 import { Button } from 'kitten/components/buttons/button'
 import { HeartIcon } from 'kitten/components/icons/heart-icon'
 
-export const KarlButtonIconHeartLeft = (props) => {
+export const KarlButtonIconWordsLeft = (props) => {
   return (
     <Button className="k-Button--icon" { ...props }>
       <HeartIcon className="k-Button__icon" />
@@ -11,7 +11,7 @@ export const KarlButtonIconHeartLeft = (props) => {
   )
 }
 
-export const KarlButtonIconHeartRight = (props) => {
+export const KarlButtonIconWordsRight = (props) => {
   return (
     <Button className="k-Button--icon" iconOnRight={ true } { ...props }>
       Button
