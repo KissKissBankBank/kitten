@@ -12,7 +12,7 @@ export class Card extends React.Component {
       'k-Card',
       className,
       {
-        [`k-Card--outline`]: outline,
+        [`k-Card__outline`]: outline,
         [`k-Card--${size}`]: size,
       },
     )
