@@ -14,44 +14,36 @@
 
 @mixin k-ProjectCard {
   .k-ProjectCard {
-    box-sizing: border-box;
-    // max-width: k-px-to-rem(350px);
-
-    // TODO: remove this.
     margin: 0 0 k-px-to-rem(20px);
 
     @include k-media-min('s') {
       margin: 0 k-px-to-rem(10px) k-px-to-rem(20px);
     }
 
-    background: map-get($k-colors, 'background-1');
-    border: 1px solid map-get($k-colors, 'line-1');
-
-    // TODO: move in component.
-    box-shadow: 0 5px 15px map-get($k-colors, 'line-1');
-    cursor: pointer;
-    transition: transform .4s, box-shadow .4s;
-
-    &:hover {
-      box-shadow: 0 5px 15px map-get($k-colors, 'line-2');
-      transform: translateY(-10px);
+    @include k-media-max('xs') {
+      border-left: 0;
+      border-right: 0;
     }
 
     &.is-disabled {
       filter: grayscale(1) opacity(0.4);
     }
-
-    &.is-failed {
-      filter: grayscale(1);
-    }
-  }
-
-  .k-ProjectCard--fullWidth {
-    max-width: none;
   }
 
   .k-ProjectCard__grid {
     padding: 0 k-px-to-rem(20px);
+  }
+
+  .k-ProjectCard__grid--withoutPadding\@s-down {
+    @include k-media-max('xs') {
+      padding: 0;
+    }
+  }
+
+  .k-ProjectCard__marger--withoutMarginBottom\@s-down {
+    @include k-media-max('xs') {
+      margin-bottom: 0 !important;
+    }
   }
 
   .k-ProjectCard__flex {
@@ -68,13 +60,13 @@
     flex: 1;
   }
 
-  .k-ProjectCard__data {
+  .k-ProjectCard__info {
     width: percentage(100/3/100);
     @include k-typographyFont('source-sans-light');
     @include k-typographyFontSize(-1, normal);
   }
 
-  .k-ProjectCard__data__value {
+  .k-ProjectCard__info__value {
     @include k-typographyFont('source-sans-semi-bold');
     @include k-typographyFontSize(0, normal);
   }
@@ -126,8 +118,8 @@
 
   .k-ProjectCard__status__svg {
     display: block;
-    width: 20px;
-    height: 20px;
+    width: k-px-to-rem(20px);
+    height: k-px-to-rem(20px);
     margin-right: k-px-to-rem(10px);
   }
 }
