@@ -15,6 +15,9 @@ import ButtonImageWithTextAndBadge from 'kitten/components/buttons/button-image-
 import ButtonTooltipIcon from 'kitten/components/buttons/button-tooltip-icon'
 import { TagButton } from 'kitten/components/buttons/tag-button'
 
+// Cards
+import { Card } from 'kitten/components/cards/card'
+
 // Dev
 import { DevGrid } from 'kitten/components/dev/dev-grid'
 
@@ -178,6 +181,9 @@ ReactOnRails.register({
   ButtonImageWithTextAndBadge,
   ButtonTooltipIcon,
   TagButton,
+
+// Cards
+  Card,
 
   // Dev
   Checkbox,

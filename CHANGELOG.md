@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Resize `Card` component.
+- Feature: Add new `Card` component.
 - Feature: Add `normalLineHeight` prop to `Paragraph` component.
 - Fix: Propagate `className` prop to `Grid` and `GridCol` components.
 - Fix: Remove `error` label on Checkbox and RadioButton guideline example.

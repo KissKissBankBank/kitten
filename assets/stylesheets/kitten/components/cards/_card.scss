@@ -8,29 +8,38 @@
 ///
 /// @example html
 ///
-///   <div class="k-Card k-Card--light k-Card--padded">
-///     ...
-///   </div>
-@mixin k-Card {
-  $light-background-color: map-get($k-colors, 'background-1');
-  $light-text-color: map-get($k-colors, 'font-1');
+///   <div class="k-Card k-Card--tiny k-Card--outline" />
 
-  $radius: 1rem;
+@mixin k-Card {
+  $color: map-get($k-colors, 'background-1');
+  $height: k-px-to-rem(99px);
+  $width: k-px-to-rem(99px);
+
+// Radius
+  $radius-tiny: k-px-to-rem(4px);
+  $radius: k-px-to-rem(8px);
+  $radius-big: k-px-to-rem(16px);
+
+  $border-color: map-get($k-colors, 'line-1');
+  $border-size: k-px-to-rem(1px);
 
   .k-Card {
-    padding-top: $radius;
-    padding-bottom: $radius;
+    height: $height;
+    max-width: $width;
 
     border-radius: $radius;
+    background-color: $color;
   }
 
-  .k-Card--light {
-    background: $light-background-color;
-    color: $light-text-color;
+  .k-Card--outline {
+    border: $border-size solid $border-color;
   }
 
-  .k-Card--padded {
-    padding-left: k-px-to-rem(50px);
-    padding-right: k-px-to-rem(50px);
+  .k-Card--tiny {
+    border-radius: $radius-tiny;
+  }
+
+  .k-Card--big {
+    border-radius: $radius-big;
   }
 }
