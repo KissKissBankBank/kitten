@@ -8,6 +8,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   to have the same render of old `k-Card`.
 - Feature: Add modifiers on `k-Card` mixin.
 - Feature: Add `card` high-order component.
+- Fix: Add missing checked disabled style for `RadioButton` component.
 - Fix: Set `line-height: normal` to `RadioButton/Checkbox/Switch` components.
 - Fix: Replace `KarlButtonIconHeartRight` and `KarlButtonIconHeartLeft` examples
   with `KarlButtonIconWordsRight` and `KarlButtonIconWordsLeft`.

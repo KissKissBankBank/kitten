@@ -97,6 +97,10 @@
       background-color: white;
     }
 
+    .k-RadioButton__input:checked:disabled + &:before {
+      background-color: white;
+    }
+
     .k-RadioButton__input:disabled + & {
       color: $background-color-disabled;
       cursor: not-allowed;
