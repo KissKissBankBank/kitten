@@ -22,6 +22,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fix: Install new grid on 10 columns.
 - Breaking change: Update button `min-width` class on `button-tiny`.
 - Feature: Add `margin` prop to `Title` component.
+- Feature: Add `onSelectChange` and `errorOnSelect` props to `TextInputAndSelect`
+component.
 
 ## [9.5.0] - 2017-03-30
 
