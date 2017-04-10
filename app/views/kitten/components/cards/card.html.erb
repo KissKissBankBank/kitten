@@ -2,50 +2,52 @@
   <div class="k-Grid__col k-Grid__col--12 k-Grid__col--3@l">
     <div class="k-Grid">
       <div class="k-Grid__col k-Grid__col--12 k-Grid__col--4@s k-Grid__col--12@l">
+        <%= example "With micro radius" do %>
+          <%= react_component('KarlCard', props: {
+              microRounded: true,
+            }) %>
+        <% end %>
+      </div>
+      <div class="k-Grid__col k-Grid__col--12 k-Grid__col--4@s k-Grid__col--12@l">
         <%= example "With tiny radius" do %>
-          <%= react_component('Card', props: {
-              size: 'tiny',
+          <%= react_component('KarlCard', props: {
+              tinyRounded: true,
             }) %>
         <% end %>
       </div>
       <div class="k-Grid__col k-Grid__col--12 k-Grid__col--4@s k-Grid__col--12@l">
         <%= example "With normal radius" do %>
-          <%= react_component('Card') %>
-        <% end %>
-      </div>
-      <div class="k-Grid__col k-Grid__col--12 k-Grid__col--4@s k-Grid__col--12@l">
-        <%= example "With big radius" do %>
-          <%= react_component('Card', props: {
-              size: 'big',
+          <%= react_component('KarlCard', props: {
+              rounded: true,
           }) %>
         <% end %>
       </div>
-
     </div>
   </div>
 
   <div class="k-Grid__col k-Grid__col--12 k-Grid__col--3@l">
     <div class="k-Grid">
       <div class="k-Grid__col k-Grid__col--12 k-Grid__col--4@s k-Grid__col--12@l">
-        <%= example "With tiny radius and outline" do %>
-          <%= react_component('Card', props: {
-              size: 'tiny',
-              outline: true,
+        <%= example "With micro radius and border" do %>
+          <%= react_component('KarlCard', props: {
+              microRounded: true,
+              withBorder: true,
             }) %>
         <% end %>
       </div>
       <div class="k-Grid__col k-Grid__col--12 k-Grid__col--4@s k-Grid__col--12@l">
-        <%= example "With normal radius and outline" do %>
-          <%= react_component('Card', props: {
-              outline: true,
+        <%= example "With tiny radius and border" do %>
+          <%= react_component('KarlCard', props: {
+              tinyRounded: true,
+              withBorder: true,
             }) %>
         <% end %>
       </div>
       <div class="k-Grid__col k-Grid__col--12 k-Grid__col--4@s k-Grid__col--12@l">
-        <%= example "With big radius and outline" do %>
-          <%= react_component('Card', props: {
-            size: 'big',
-            outline: true,
+        <%= example "With normal radius and border" do %>
+          <%= react_component('KarlCard', props: {
+              rounded: true,
+              withBorder: true,
           }) %>
         <% end %>
       </div>
