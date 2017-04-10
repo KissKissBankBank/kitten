@@ -34,10 +34,13 @@
   $easeInQuart: cubic-bezier(.895, .03, .685, .22);
 
   .k-Alert {
-    @include k-container;
     position: relative;
     overflow: hidden;
     background-color: $background;
+  }
+
+  .k-Alert__container {
+    @include k-container;
   }
 
   .k-Alert__row {
