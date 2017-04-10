@@ -29,7 +29,7 @@
   $font-step-on-media: 3;
   $font-step-content: -1;
   $font-step-content-large: 0;
-  $line-height: 1;
+  $line-height: normal;
 
   // Error
   $color-error: map-get($k-colors, 'error');
@@ -94,6 +94,10 @@
       position: relative;
 
       border: 5px solid $background-color-checked;
+      background-color: white;
+    }
+
+    .k-RadioButton__input:checked:disabled + &:before {
       background-color: white;
     }
 

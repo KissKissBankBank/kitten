@@ -10,16 +10,22 @@ export const TextInputAndSelect = props => {
           selectOptions,
           selectName,
           selectValue,
+          onSelectChange,
+          errorOnSelect,
           appendSelect,
           ...textInputProps } = props
 
+  // TODO: use another prop that digits to handle
+  // `k-FormComposer__element--main` class.
   const inputWrapperClassName = classNames(
     'k-FormComposer__element',
     {
       'k-FormComposer__element--main': !props.digits
-    }
+    },
+    className,
   )
 
+  // TODO: handle key without currencyName prop
   const renderTextInputWrapper = () => {
     return (
       <div className={ inputWrapperClassName } key={ `${props.currencyName}1` }>
@@ -37,6 +43,8 @@ export const TextInputAndSelect = props => {
                          options={ selectOptions }
                          value={ selectValue }
                          tiny={ tiny }
+                         onInputChange={ onSelectChange }
+                         error={ errorOnSelect }
                          disabled={ disabled } />
       </div>
     )
@@ -63,6 +71,8 @@ TextInputAndSelect.defaultProps = {
   selectOptions: [{ value: 'myValue', label: 'My label' }],
   selectName: null,
   selectValue: null,
+  onSelectChange: function() {},
+  errorOnSelect: false,
   digits: null,
   appendSelect: false,
 }
