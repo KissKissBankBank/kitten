@@ -64,7 +64,7 @@ class ProjectCardComponent extends React.Component {
         <Marger top="1.5"
                 bottom="1.5"
                 className="k-ProjectCard__marger--withoutMarginBottom@s-down">
-          <img className="k-ProjectCard__img" src={ this.props.image } />
+          <img className="k-ProjectCard__img" src={ this.props.image } alt="" />
         </Marger>
       </div>
     )
