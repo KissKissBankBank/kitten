@@ -4,6 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking change: Use `k-Card--withVerticalPadding` and `k-Card--rounded`
+  to have the same render of old `k-Card`.
+- Feature: Add modifiers on `k-Card` mixin.
+- Feature: Add `card` high-order component.
+- Fix: Add missing checked disabled style for `RadioButton` component.
 - Fix: Set `line-height: normal` to `RadioButton/Checkbox/Switch` components.
 - Fix: Replace `KarlButtonIconHeartRight` and `KarlButtonIconHeartLeft` examples
   with `KarlButtonIconWordsRight` and `KarlButtonIconWordsLeft`.
@@ -17,6 +22,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fix: Install new grid on 10 columns.
 - Breaking change: Update button `min-width` class on `button-tiny`.
 - Feature: Add `margin` prop to `Title` component.
+- Feature: Add `onSelectChange` and `errorOnSelect` props to `TextInputAndSelect`
+component.
 
 ## [9.5.0] - 2017-03-30
 
