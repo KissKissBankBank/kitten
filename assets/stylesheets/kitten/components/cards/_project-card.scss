@@ -9,7 +9,30 @@
 /// @example html
 ///
 ///   <div class="k-ProjectCard">
-///     …
+///     <div class="k-ProjectCard__grid">
+///       <div class="k-ProjectCard__flex">
+///         …
+///         <div class="k-ProjectCard__flex__fluid">…</div>
+///         …
+///       </div>
+///     </div>
+///
+///     <div class="k-ProjectCard__grid">
+///       <img class="k-ProjectCard__img" src="" />
+///     </div>
+///
+///     <div class="k-ProjectCard__grid k-ProjectCard__borderTop">
+///       <div class="k-ProjectCard__info">
+///         <span class="k-ProjectCard__info__value">…</span>
+///         <span class="k-ProjectCard__info__value">…</span>
+///         <span class="k-ProjectCard__info__value">…</span>
+///       </div>
+///     </div>
+///
+///     <div class="k-ProjectCard__status">
+///       <svg class="k-ProjectCard__status__svg">…</svg>
+///       …
+///     </div>
 ///   </div>
 
 @mixin k-ProjectCard {
