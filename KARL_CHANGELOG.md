@@ -4,5 +4,23 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Remove `TabBar` useless component examples.
-- Fix: Update link style on `Header` and `TabBar` components guideline example.
+## [10.0.0] - 2017-04-10
+
+Fixes:
+- Remove `TabBar` useless component examples.
+- Update link style on `Header` and `TabBar` components guideline example.
+- Replace `KarlButtonIconHeartRight` and `KarlButtonIconHeartLeft` examples
+  `KarlButtonIconWordsRight` and `KarlButtonIconWordsLeft`.
+- Remove `error` label on Checkbox and RadioButton guideline example.
+- Install new grid on each components.
+- Update `hexa` colors and layout.
+- Fix ReactOnRails version.
+- Fix warning with random height renderer.
+
+## [9.3.0] - 2017-03-27
+
+Fixes:
+- Replace images by empty images.
+- Delete example descriptions.
+- Redesign new subtitles and add border-bottom.
+- Install new grid on 10 columns.
