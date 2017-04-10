@@ -4,4 +4,4 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Remove `TabBar` component examples inutils.
+- Fix: Remove `TabBar` useless component examples.
