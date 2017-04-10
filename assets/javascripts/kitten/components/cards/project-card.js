@@ -100,8 +100,7 @@ class ProjectCardComponent extends React.Component {
       <div className="k-ProjectCard__borderTop">
         <Marger top="1.5"
                 bottom="1.5"
-                className={ classNames('k-ProjectCard__flex',
-                                       'k-ProjectCard__flex--spaceBetween') }>
+                className={ classNames('k-ProjectCard__flex') }>
           <span className="k-u-align-center k-ProjectCard__info">
             <span className={ infoClassName }>
               {
