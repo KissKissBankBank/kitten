@@ -6,6 +6,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Add `ProjectCard` component.
 - Feature: Add `withoutPointerEvents` prop to `ButtonImage` component.
+- Feature: Add `CheckedCircleIcon`, `ClockCircleIcon`, `CrossCircleIcon`,
+  `LockIcon` and `WarningCircleIcon` components.
 - Feature: Add `normalLineHeight` prop to `Paragraph` component.
 - Fix: Propagate `className` prop to `Grid` and `GridCol` components.
 - Fix: Remove `error` label on Checkbox and RadioButton guideline example.
