@@ -121,10 +121,8 @@ describe('<TextInputWithSelect />', () => {
         <TextInputAndSelect className="k-TextInput--custom" />
       )
       const inputWrapper = component.find('.k-TextInput--custom')
-      const wrapperContainsInput = inputWrapper.find(TextInput)
 
-      expect(wrapperContainsInput).to.have.length(1)
-      expect(expectation).to.have.length(1)
+      expect(inputWrapper).to.have.length(1)
     })
   })
 
