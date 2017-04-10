@@ -115,6 +115,17 @@ describe('<TextInputWithSelect />', () => {
     })
   })
 
+  describe ('with a custom class', () => {
+    it('pass the class name to the input wrapper', () => {
+      const component = shallow(
+        <TextInputAndSelect className="k-TextInput--custom" />
+      )
+      const inputWrapper = component.find('.k-FormComposer__element--main')
+
+      expect(inputWrapper).to.have.className('k-TextInput--custom')
+    })
+  })
+
   describe('with custom prop', () => {
     it('pass the prop to <TextInput />', () => {
       const component = shallow(<TextInputAndSelect data-custom="Alice" />)
