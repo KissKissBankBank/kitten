@@ -1,54 +1,57 @@
-<%= example 'Default' do %>
-  <%= react_component 'KarlProjectCard', props: {
-    status: 'collecting',
-  } %>
-<% end %>
+<div class="k-Grid">
+  <div class="k-Grid__col k-Grid__col--12 k-Grid__col--4@m k-Grid__col--4@l">
+    <%= example 'Project card' do %>
+      <%= react_component 'ProjectCard', props: {
+        progress: 42,
+        avatar: 'https://placehold.it/400x200/4a84ff/4a84ff',
+        image: 'https://placehold.it/400x200/4a84ff/4a84ff',
+        scoreValue: 'A',
+        infosValuesColored: true,
+      } %>
+    <% end %>
+  </div>
 
-<%= example 'En closing' do %>
-  <%= react_component 'KarlProjectCard', props: {
-    status: 'closing',
-  } %>
-<% end %>
+  <div class="k-Grid__col k-Grid__col--12 k-Grid__col--4@m k-Grid__col--4@l">
+    <%= example 'Clickable project card' do %>
+      <%= react_component 'ProjectCard', props: {
+        href: '#',
+        progress: 42,
+        avatar: 'https://placehold.it/400x200/4a84ff/4a84ff',
+        image: 'https://placehold.it/400x200/4a84ff/4a84ff',
+        scoreValue: 'A',
+      } %>
+    <% end %>
+  </div>
 
-<%= example 'Personne morale' do %>
-  <%= react_component 'KarlProjectCard', props: {
-    disabled: true,
-    status: 'collecting',
-  } %>
-<% end %>
+  <div class="k-Grid__col k-Grid__col--12 k-Grid__col--4@m k-Grid__col--4@l">
+    <%= example 'Project card with status' do %>
+      <%= react_component 'ProjectCard', props: {
+        progress: 42,
+        avatar: 'https://placehold.it/400x200/4a84ff/4a84ff',
+        image: 'https://placehold.it/400x200/4a84ff/4a84ff',
+        statusContent: 'Status',
+      } %>
+    <% end %>
+  </div>
 
-<%= example 'Collecte réussie' do %>
-  <%= react_component 'KarlProjectCard', props: {
-    status: 'succeed',
-  } %>
-<% end %>
+  <div class="k-Grid__col k-Grid__col--12 k-Grid__col--4@m k-Grid__col--4@l">
+    <%= example 'Project card without progress' do %>
+      <%= react_component 'ProjectCard', props: {
+        progress: false,
+        avatar: 'https://placehold.it/400x200/4a84ff/4a84ff',
+        image: 'https://placehold.it/400x200/4a84ff/4a84ff',
+      } %>
+    <% end %>
+  </div>
 
-<%= example 'Collecte en attente' do %>
-  <%= react_component 'KarlProjectCard', props: {
-    status: 'studing',
-  } %>
-<% end %>
-
-<%= example 'En défaut de paiement' do %>
-  <%= react_component 'KarlProjectCard', props: {
-    status: 'defaulted',
-  } %>
-<% end %>
-
-<%= example 'En retard de paiement' do %>
-  <%= react_component 'KarlProjectCard', props: {
-    status: 'retarded',
-  } %>
-<% end %>
-
-<%= example 'Frauduleuse' do %>
-  <%= react_component 'KarlProjectCard', props: {
-    status: 'fraudulent',
-  } %>
-<% end %>
-
-<%= example 'Collecte échouée/annulée' do %>
-  <%= react_component 'KarlProjectCard', props: {
-    status: 'failed',
-  } %>
-<% end %>
+  <div class="k-Grid__col k-Grid__col--12 k-Grid__col--4@m k-Grid__col--4@l">
+    <%= example 'Disabled project card' do %>
+      <%= react_component 'ProjectCard', props: {
+        progress: 42,
+        avatar: 'https://placehold.it/400x200/4a84ff/4a84ff',
+        image: 'https://placehold.it/400x200/4a84ff/4a84ff',
+        disabled: true,
+      } %>
+    <% end %>
+  </div>
+</div>
