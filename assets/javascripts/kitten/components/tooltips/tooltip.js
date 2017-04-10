@@ -3,11 +3,38 @@ import ReactTooltip from 'react-tooltip'
 import ButtonTooltipIcon from 'kitten/components/buttons/button-tooltip-icon'
 
 export default class Tooltip extends React.Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      width: null,
+    }
+
+    this.updateDimensions = this.updateDimensions.bind(this)
+  }
+
+  updateDimensions() {
+    this.setState({
+      width: window.innerWidth,
+    })
+  }
+
+  componentDidMount() {
+    window.addEventListener('resize', this.updateDimensions);
+    this.updateDimensions()
+  }
+
   render() {
     const { place,
             children,
             id,
             ...buttonTooltipIconProps } = this.props
+
+    let mobilePlace = void(0)
+
+    if (this.state.width && this.state.width <= 480) {
+      mobilePlace = 'bottom'
+    }
 
     return (
       <div className="k-Tooltip">
@@ -23,7 +50,7 @@ export default class Tooltip extends React.Component {
                       class="k-Tooltip__content"
                       role="tooltip"
                       effect="solid"
-                      place={ place }
+                      place={ mobilePlace || place }
                       event="none">
           { children }
         </ReactTooltip>
