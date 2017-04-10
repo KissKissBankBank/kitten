@@ -120,9 +120,11 @@ describe('<TextInputWithSelect />', () => {
       const component = shallow(
         <TextInputAndSelect className="k-TextInput--custom" />
       )
-      const inputWrapper = component.find('.k-FormComposer__element--main')
+      const inputWrapper = component.find('.k-TextInput--custom')
+      const wrapperContainsInput = inputWrapper.find(TextInput)
 
-      expect(inputWrapper).to.have.className('k-TextInput--custom')
+      expect(wrapperContainsInput).to.have.length(1)
+      expect(expectation).to.have.length(1)
     })
   })
 
