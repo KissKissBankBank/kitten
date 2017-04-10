@@ -163,6 +163,20 @@ describe('<ProjectCard />', () => {
     })
   })
 
+  describe('with infosValuesColored prop', () => {
+    const projectCard = mount(
+      <ProjectCard
+        infosValuesColored
+        info1={ { value: 'Custom value 1', text: 'Custom text 1' } } />
+    )
+    const info = projectCard.find('.k-ProjectCard__info').first()
+    const value = info.find('.k-ProjectCard__info__value')
+
+    it('renders an info value with color modifier', () => {
+      expect(value).to.have.className('k-u-color-primary1')
+    })
+  })
+
   describe('with status props', () => {
     const projectCard = mount(
       <ProjectCard statusContent="Custom status"
