@@ -173,10 +173,11 @@ class ProjectCardComponent extends React.Component {
     )
 
     const Tag = this.props.href && !this.props.disabled ? 'a' : 'div'
+    const href = this.props.disabled ? null : this.props.href
 
     return (
       <Tag key={ this.props.id }
-           href={ this.props.href }
+           href={ href }
            className={ projectCardClassName }>
         { this.renderDescription() }
         { this.renderImage() }
