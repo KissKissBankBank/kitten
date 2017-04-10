@@ -11,34 +11,84 @@
 ///   <div class="k-Card k-Card--tiny k-Card--outline" />
 
 @mixin k-Card {
-  $color: map-get($k-colors, 'background-1');
-  $size-card: k-px-to-rem(99px);
+  $radius-micro: k-px-to-rem(4px);
+  $radius-tiny: k-px-to-rem(8px);
+  $radius: k-px-to-rem(16px);
 
-// Radius
-  $radius-tiny: k-px-to-rem(4px);
-  $radius: k-px-to-rem(8px);
-  $radius-big: k-px-to-rem(16px);
+  $padded: k-px-to-rem(50px);
+  $translate-y: k-px-to-rem(-10px);
+
+  $light-background-color: map-get($k-colors, 'background-1');
+  $light-text-color: map-get($k-colors, 'font-1');
 
   $border-color: map-get($k-colors, 'line-1');
   $border-size: k-px-to-rem(1px);
 
+  $box-shadow-values: 0 5px 15px;
+  $box-shadow-color: map-get($k-colors, 'line-1');
+  $box-shadow-color-hover: map-get($k-colors, 'line-2');
+
+  $transition-duration: .4s;
+
   .k-Card {
-    height: $size-card;
-    max-width: $size-card;
-
-    border-radius: $radius;
-    background-color: $color;
+    display: block;
   }
 
-  .k-Card__outline {
-    border: $border-size solid $border-color;
+  // Modifiers.
+  .k-Card--light {
+    background: $light-background-color;
+    color: $light-text-color;
   }
 
-  .k-Card--tiny {
+  .k-Card--padded {
+    padding-left: $padded;
+    padding-right: $padded;
+  }
+
+  .k-Card--microRounded {
+    border-radius: $radius-micro;
+  }
+
+  .k-Card--tinyRounded {
     border-radius: $radius-tiny;
   }
 
-  .k-Card--big {
-    border-radius: $radius-big;
+  .k-Card--rounded {
+    border-radius: $radius;
+  }
+
+  .k-Card--withBorder {
+    box-sizing: border-box;
+    border: $border-size solid $border-color;
+  }
+
+  .k-Card--withShadow {
+    box-shadow: $box-shadow-values $box-shadow-color;
+  }
+
+  .k-Card--withVerticalPadding {
+    padding-top: $radius;
+    padding-bottom: $radius;
+  }
+
+  // Linkable card.
+
+  a.k-Card {
+    text-decoration: inherit;
+    color: inherit;
+
+    transition: transform $transition-duration, box-shadow $transition-duration;
+
+    &:hover {
+      box-shadow: $box-shadow-values $box-shadow-color;
+
+      &.k-Card--withShadow {
+        box-shadow: $box-shadow-values $box-shadow-color-hover;
+      }
+
+      &.k-Card--translateOnHover {
+        transform: translateY($translate-y);
+      }
+    }
   }
 }
