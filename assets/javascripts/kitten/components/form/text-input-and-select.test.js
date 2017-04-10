@@ -107,7 +107,6 @@ describe('<TextInputWithSelect />', () => {
 
   describe('with errorOnSelect prop', () => {
     it('pass the errorOnSelect prop to <SelectWithState />', () => {
-      const handleSelectChange = () => {}
       const component = shallow(<TextInputAndSelect errorOnSelect />)
       const selectWithState = component.find(SelectWithState)
       const expectedProps = { error: true }
