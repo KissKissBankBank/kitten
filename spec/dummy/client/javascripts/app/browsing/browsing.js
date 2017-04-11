@@ -73,7 +73,8 @@ export class KarlBrowsing extends React.Component {
 
     const projectCards = [
       {
-        href: "#",
+        linkHref: "#",
+        linkTitle: "Se rendre sur le projet …",
         id: 'project-4',
         status: 'succeed',
         score: 'A',
@@ -87,7 +88,8 @@ export class KarlBrowsing extends React.Component {
         info3: { value: '135 000 €', text: 'Objectif' },
       },
       {
-        href: "#",
+        linkHref: "#",
+        linkTitle: "Se rendre sur le projet …",
         id: 'project-5',
         status: 'studying',
         score: 'B+',
@@ -101,7 +103,8 @@ export class KarlBrowsing extends React.Component {
         info3: { value: '135 000 €', text: 'Objectif' },
       },
       {
-        href: "#",
+        linkHref: "#",
+        linkTitle: "Se rendre sur le projet …",
         id: 'project-6',
         status: 'defaulted',
         score: 'C',
@@ -115,7 +118,8 @@ export class KarlBrowsing extends React.Component {
         info3: { value: '135 000 €', text: 'Objectif' },
       },
       {
-        href: "#",
+        linkHref: "#",
+        linkTitle: "Se rendre sur le projet …",
         id: 'project-7',
         status: 'delayed',
         score: 'A',
@@ -129,7 +133,8 @@ export class KarlBrowsing extends React.Component {
         info3: { value: '135 000 €', text: 'Objectif' },
       },
       {
-        href: "#",
+        linkHref: "#",
+        linkTitle: "Se rendre sur le projet …",
         id: 'project-8',
         status: 'fraudulent',
         score: 'B+',
@@ -143,7 +148,8 @@ export class KarlBrowsing extends React.Component {
         info3: { value: '135 000 €', text: 'Objectif' },
       },
       {
-        href: "#",
+        linkHref: "#",
+        linkTitle: "Se rendre sur le projet …",
         id: 'project-9',
         status: 'failed',
         score: 'A+',
@@ -157,7 +163,8 @@ export class KarlBrowsing extends React.Component {
         info3: { value: '135 000 €', text: 'Objectif' },
       },
       {
-        href: "#",
+        linkHref: "#",
+        linkTitle: "Se rendre sur le projet …",
         id: 'project-10',
         status: 'failed',
         score: 'C',
@@ -171,7 +178,8 @@ export class KarlBrowsing extends React.Component {
         info3: { value: '135 000 €', text: 'Objectif' },
       },
       {
-        href: "#",
+        linkHref: "#",
+        linkTitle: "Se rendre sur le projet …",
         id: 'project-11',
         status: 'failed',
         score: 'B+',
@@ -188,7 +196,8 @@ export class KarlBrowsing extends React.Component {
 
     const projectCollectingCards = [
       {
-        href: "#",
+        linkHref: "#",
+        linkTitle: "Se rendre sur le projet …",
         id: 'project-1',
         status: 'collecting',
         score: 'A',
@@ -203,7 +212,8 @@ export class KarlBrowsing extends React.Component {
         info3: { value: '135 000 €', text: 'Objectif' },
       },
       {
-        href: "#",
+        linkHref: "#",
+        linkTitle: "Se rendre sur le projet …",
         id: 'project-2',
         status: 'closing',
         score: 'C',
@@ -218,7 +228,8 @@ export class KarlBrowsing extends React.Component {
         info3: { value: '135 000 €', text: 'Objectif' },
       },
       {
-        href: "#",
+        linkHref: "#",
+        linkTitle: "Se rendre sur le projet …",
         id: 'project-3',
         status: 'collecting',
         score: 'A+',

@@ -22,8 +22,8 @@ describe('<ProjectCard />', () => {
     })
   })
 
-  describe('with href prop', () => {
-    const projectCard = shallow(<ProjectCard href="#" />)
+  describe('with linkHref prop', () => {
+    const projectCard = shallow(<ProjectCard linkHref="#" />)
 
     it('is a <a />', () => {
       expect(projectCard).to.have.tagName('a')
@@ -31,6 +31,14 @@ describe('<ProjectCard />', () => {
 
     it('has a href attribute', () => {
       expect(projectCard).to.have.attr('href', '#')
+    })
+  })
+
+  describe('with linkTitle prop', () => {
+    const projectCard = shallow(<ProjectCard linkTitle="Custom link title" />)
+
+    it('has a title attribute', () => {
+      expect(projectCard).to.have.attr('title', 'Custom link title')
     })
   })
 

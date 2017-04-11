@@ -163,12 +163,14 @@ class ProjectCardComponent extends React.Component {
       this.props.className,
     )
 
-    const Tag = this.props.href && !this.props.disabled ? 'a' : 'div'
-    const href = this.props.disabled ? null : this.props.href
+    const Tag = this.props.linkHref && !this.props.disabled ? 'a' : 'div'
+    const href = this.props.disabled ? null : this.props.linkHref
+    const title = this.props.disabled ? null : this.props.linkTitle
 
     return (
       <Tag key={ this.props.id }
            href={ href }
+           title={ title }
            className={ projectCardClassName }>
         { this.renderDescription() }
         { this.renderImage() }
@@ -182,7 +184,8 @@ class ProjectCardComponent extends React.Component {
 
 ProjectCardComponent.defaultProps = {
   id: null,
-  href: null,
+  linkHref: null,
+  linkTitle: null,
   ownerAvatarSrc: null,
   ownerName: 'Name',
   tags: 'Tag 1, Tag 2',
