@@ -65,9 +65,11 @@ export class Alert extends React.Component {
            style={ { height: this.state.height } }
            className={ alertClassName }
            { ...others }>
-        <div className="k-Alert__row">
-          <div className="k-Alert__content">
-            { children }
+        <div className="k-Alert__container">
+          <div className="k-Alert__row">
+            <div className="k-Alert__content">
+              { children }
+            </div>
           </div>
         </div>
 

@@ -14,6 +14,7 @@ describe('<Alert />', () => {
 
     it('has a default classes', () => {
       expect(alert).to.have.className('k-Alert')
+      expect(alert).to.have.descendants('.k-Alert__container')
       expect(alert).to.have.descendants('.k-Alert__row')
       expect(alert).to.have.descendants('.k-Alert__content')
     })
