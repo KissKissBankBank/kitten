@@ -101,7 +101,7 @@ class ProjectCardComponent extends React.Component {
         <Marger top="1.5"
                 bottom="1.5"
                 className={ classNames('k-ProjectCard__flex') }>
-          <span className="k-u-align-center k-ProjectCard__info">
+          <div className="k-u-align-center k-ProjectCard__info">
             <span className={ infoClassName }>
               {
                 this.props.info1.lockedValue
@@ -110,9 +110,9 @@ class ProjectCardComponent extends React.Component {
               }
             </span><br />
             { this.props.info1.text }
-          </span>
+          </div>
 
-          <span className="k-u-align-center k-ProjectCard__info">
+          <div className="k-u-align-center k-ProjectCard__info">
             <span className={ infoClassName }>
               {
                 this.props.info2.lockedValue
@@ -121,9 +121,9 @@ class ProjectCardComponent extends React.Component {
               }
             </span><br />
             { this.props.info2.text }
-          </span>
+          </div>
 
-          <span className="k-u-align-center k-ProjectCard__info">
+          <div className="k-u-align-center k-ProjectCard__info">
             <span className={ infoClassName }>
               {
                 this.props.info3.lockedValue
@@ -132,7 +132,7 @@ class ProjectCardComponent extends React.Component {
               }
             </span><br />
             { this.props.info3.text }
-          </span>
+          </div>
         </Marger>
       </div>
     )
