@@ -116,7 +116,7 @@ class ProjectCardComponent extends React.Component {
     return (
       <div className="k-u-align-center k-ProjectCard__info">
         <span className={ infoClassName }>
-          { info.lockedValue ? <LockIcon width="12" /> : info.value }
+          { info.locked ? <LockIcon width="12" /> : info.value }
         </span><br />
         { info.text }
       </div>
@@ -184,9 +184,9 @@ ProjectCardComponent.defaultProps = {
   image: null,
   progress: 0,
   coloredInfosValues: false,
-  info1: { value: 'xx', text: 'Info 1', lockedValue: false },
-  info2: { value: 'xx', text: 'Info 2', lockedValue: false },
-  info3: { value: 'xx', text: 'Info 3', lockedValue: false },
+  info1: { value: 'xx', text: 'Info 1', locked: false },
+  info2: { value: 'xx', text: 'Info 2', locked: false },
+  info3: { value: 'xx', text: 'Info 3', locked: false },
   disabled: false,
   statusContent: null,
   statusModifier: null,

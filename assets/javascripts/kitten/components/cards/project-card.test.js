@@ -139,7 +139,7 @@ describe('<ProjectCard />', () => {
     const projectCard = mount(
       <ProjectCard
         info1={ { value: 'Custom value 1', text: 'Custom text 1' } }
-        info2={ { value: 'Custom value 2', text: 'Custom text 2', lockedValue: true } }
+        info2={ { value: 'Custom value 2', text: 'Custom text 2', locked: true } }
         info3={ { value: 'Custom value 3', text: 'Custom text 3' } } />
     )
     const infos = projectCard.find('.k-ProjectCard__info')

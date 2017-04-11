@@ -83,8 +83,8 @@ export class KarlBrowsing extends React.Component {
         tags: 'TPE / PME',
         title: 'Reprise d\'une micro crèche',
         progress: 23,
-        info1: { value: '8,8 %', text: 'Taux d\'intérêt', lockedValue: true },
-        info2: { value: '48 mois', text: 'Durée', lockedValue: true },
+        info1: { value: '8,8 %', text: 'Taux d\'intérêt', locked: true },
+        info2: { value: '48 mois', text: 'Durée', locked: true },
         info3: { value: '135 000 €', text: 'Objectif' },
       },
       {
