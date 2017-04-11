@@ -7,7 +7,7 @@ import { TagIcon } from 'kitten/components/icons/tag-icon'
 describe('<TagList />', () => {
   const items = [
     { key: 'foo', item: 'Foo' },
-    { key: 'bar', item: 'Bar' }, 
+    { key: 'bar', item: 'Bar' },
   ]
 
   describe('by default', () => {
@@ -43,6 +43,16 @@ describe('<TagList />', () => {
 
     it('has a custom class', () => {
       expect(tagList).to.have.className('custom__class')
+    })
+  })
+
+  describe('with tiny prop', () => {
+    const tagList = shallow(
+      <TagList tiny />
+    )
+
+    it('has a good class', () => {
+      expect(tagList).to.have.className('k-TagList--tiny')
     })
   })
 })
