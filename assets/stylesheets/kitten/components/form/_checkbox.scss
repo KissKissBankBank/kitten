@@ -17,7 +17,10 @@
   // Font
   $font: 'source-sans-light';
   $font-step: 0;
-  $line-height: 1;
+  $line-height: normal;
+
+  // Error
+  $error-color: map-get($k-colors, 'error');
 
   // Colors
   $background-color: map-get($k-colors, 'background-1');
@@ -36,10 +39,6 @@
     @include k-typographyFont($font);
     @include k-typographyFontSize($font-step, $line-height);
 
-    display: flex;
-    align-items: center;
-    align-self: flex-start;
-
     margin: k-px-to-rem(10px) 0;
   }
 
@@ -54,7 +53,7 @@
     &:before {
       box-sizing: border-box;
       display: inline-block;
-      width: $checkbox-size;
+      flex: 0 0 $checkbox-size;
       height: $checkbox-size;
       margin-right: k-px-to-rem(10px);
 
@@ -70,8 +69,9 @@
       border-color: $border-color-hover;
     }
 
-    &:hover { color: $border-color-hover; }
-    &:active { color: $background-color-active; }
+    &:active {
+      color: $background-color-active;
+    }
 
     .k-Checkbox__input:checked:focus + &:before {
       box-shadow: 0 0 k-px-to-rem(3px) $background-color-checked;
@@ -83,6 +83,28 @@
                   no-repeat
                   center;
       border-color: $border-color-hover;
+    }
+
+    .k-Checkbox__input.is-error + & {
+      color: $error-color;
+      border-color: $error-color;
+
+      &:before {
+        border-color: $error-color;
+      }
+
+      &:active {
+        color: $error-color;
+      }
+    }
+
+    .k-Checkbox__input.is-error:checked:focus + &:before {
+      box-shadow: 0 0 k-px-to-rem(3px) $error-color;
+    }
+
+    .k-Checkbox__input.is-error:checked + &:before {
+      background-color: $error-color;
+      border-color: $error-color;
     }
 
     .k-Checkbox__input:disabled + & {

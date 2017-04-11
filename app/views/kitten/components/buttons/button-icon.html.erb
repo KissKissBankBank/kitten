@@ -1,147 +1,110 @@
-<div class="karl-Example__column">
-  <%= example "Hydrogen icon button" do %>
-    <button class="k-ButtonIcon k-ButtonIcon--hydrogen">
-      <svg class='k-ButtonIcon__svg' viewBox="0 0 14 12"
-          xmlns="http://www.w3.org/2000/svg"><path d="M7 2.927C6.71 1.267
-          5.262.007 3.52.01 1.574.013-.003 1.595 0 3.543 0 4.485.37 5.34.97
-          5.97l.012.014L7.012 12l5.856-5.88c.698-.646 1.134-1.57
-          1.132-2.597-.002-1.95-1.582-3.525-3.53-3.523C8.73.002 7.284 1.267
-          7 2.927z"/></svg>
-    </button>
-  <% end %>
+<div class="k-Grid">
+  <div class="k-Grid__col k-Grid__col--12 k-Grid__col--2@l">
+    <div class="k-Grid">
+      <div class="k-Grid__col k-Grid__col--12 k-Grid__col--3@s k-Grid__col--12@l">
+        <%= example "Micro" do %>
+          <%= react_component('KarlButtonIconMicro', props: {
+              size: 'micro',
+          }) %>
+        <% end %>
+      </div>
+      <div class="k-Grid__col k-Grid__col--12 k-Grid__col--3@s k-Grid__col--12@l">
+        <%= example "Tiny" do %>
+          <%= react_component('KarlButtonIconHeart', props: {
+              size: 'tiny',
+          }) %>
+        <% end %>
+      </div>
+      <div class="k-Grid__col k-Grid__col--12 k-Grid__col--3@s k-Grid__col--12@l">
+        <%= example "Normal" do %>
+          <%= react_component('KarlButtonIconHeart') %>
+        <% end %>
+      </div>
+      <div class="k-Grid__col k-Grid__col--12 k-Grid__col--3@s k-Grid__col--12@l">
+        <%= example "Big" do %>
+          <%= react_component('KarlButtonIconHeart', props: {
+              size: 'big',
+          }) %>
+        <% end %>
+      </div>
+    </div>
+  </div>
 
-  <%= example "Helium icon button" do %>
-    <button class="k-ButtonIcon k-ButtonIcon--helium">
-      <svg class='k-ButtonIcon__svg' viewBox="0 0 14 12"
-          xmlns="http://www.w3.org/2000/svg"><path d="M7 2.927C6.71 1.267
-          5.262.007 3.52.01 1.574.013-.003 1.595 0 3.543 0 4.485.37 5.34.97
-          5.97l.012.014L7.012 12l5.856-5.88c.698-.646 1.134-1.57
-          1.132-2.597-.002-1.95-1.582-3.525-3.53-3.523C8.73.002 7.284 1.267
-          7 2.927z"/></svg>
-    </button>
-  <% end %>
+  <div class="k-Grid__col k-Grid__col--12 k-Grid__col--2@l">
+    <div class="k-Grid">
+      <div class="k-Grid__col k-Grid__col--12 k-Grid__col--3@s k-Grid__col--12@l">
+        <%= example "Hydrogen" do %>
+          <%= react_component('KarlButtonIconHeart') %>
+        <% end %>
+      </div>
+      <div class="k-Grid__col k-Grid__col--12 k-Grid__col--3@s k-Grid__col--12@l">
+        <%= example "Helium" do %>
+          <%= react_component('KarlButtonIconHeart', props: {
+              modifier: 'helium',
+          }) %>
+        <% end %>
+      </div>
+      <div class="k-Grid__col k-Grid__col--12 k-Grid__col--3@s k-Grid__col--12@l">
+        <%= example "Lithium" do %>
+          <%= react_component('KarlButtonIconHeart', props: {
+              modifier: 'lithium',
+          }) %>
+        <% end %>
+      </div>
+    </div>
+  </div>
 
-  <%= example "Lithium icon button" do %>
-    <button class="k-ButtonIcon k-ButtonIcon--lithium">
-      <svg class='k-ButtonIcon__svg' viewBox="0 0 14 12"
-          xmlns="http://www.w3.org/2000/svg"><path d="M7 2.927C6.71 1.267
-          5.262.007 3.52.01 1.574.013-.003 1.595 0 3.543 0 4.485.37 5.34.97
-          5.97l.012.014L7.012 12l5.856-5.88c.698-.646 1.134-1.57
-          1.132-2.597-.002-1.95-1.582-3.525-3.53-3.523C8.73.002 7.284 1.267
-          7 2.927z"/></svg>
-    </button>
-  <% end %>
+  <div class="k-Grid__col k-Grid__col--12 k-Grid__col--2@l">
+    <div class="k-Grid">
+      <div class="k-Grid__col k-Grid__col--12 k-Grid__col--3@s k-Grid__col--12@l">
+        <%= example "Beryllium" do %>
+          <%= react_component('KarlButtonIconHeart', props: {
+              modifier: 'beryllium',
+          }) %>
+        <% end %>
+      </div>
+      <div class="k-Grid__col k-Grid__col--12 k-Grid__col--3@s k-Grid__col--12@l">
+        <%= example "Boron" do %>
+          <%= react_component('KarlButtonIconHeart', props: {
+              modifier: 'boron',
+          }) %>
+        <% end %>
+      </div>
+      <div class="k-Grid__col k-Grid__col--12 k-Grid__col--3@s k-Grid__col--12@l">
+        <%= example "Carbon" do %>
+          <%= react_component('KarlButtonIconHeart', props: {
+              modifier: 'carbon',
+          }) %>
+        <% end %>
+      </div>
+    </div>
+  </div>
 
-  <%= example "Beryllium icon button" do %>
-    <button class="k-ButtonIcon k-ButtonIcon--beryllium">
-      <svg class='k-ButtonIcon__svg' viewBox="0 0 14 12"
-          xmlns="http://www.w3.org/2000/svg"><path d="M7 2.927C6.71 1.267
-          5.262.007 3.52.01 1.574.013-.003 1.595 0 3.543 0 4.485.37 5.34.97
-          5.97l.012.014L7.012 12l5.856-5.88c.698-.646 1.134-1.57
-          1.132-2.597-.002-1.95-1.582-3.525-3.53-3.523C8.73.002 7.284 1.267
-          7 2.927z"/></svg>
-    </button>
-  <% end %>
+  <div class="k-Grid__col k-Grid__col--12 k-Grid__col--2@l">
+    <%= example "Disabled" do %>
+      <%= react_component('KarlButtonIconHeart', props: {
+          disabled: true,
+      }) %>
+    <% end %>
+  </div>
 
-  <%= example "Boron icon button" do %>
-    <button class="k-ButtonIcon k-ButtonIcon--boron">
-      <svg class='k-ButtonIcon__svg' viewBox="0 0 14 12"
-          xmlns="http://www.w3.org/2000/svg"><path d="M7 2.927C6.71 1.267
-          5.262.007 3.52.01 1.574.013-.003 1.595 0 3.543 0 4.485.37 5.34.97
-          5.97l.012.014L7.012 12l5.856-5.88c.698-.646 1.134-1.57
-          1.132-2.597-.002-1.95-1.582-3.525-3.53-3.523C8.73.002 7.284 1.267
-          7 2.927z"/></svg>
-    </button>
-  <% end %>
+  <div class="k-Grid__col k-Grid__col--12 k-Grid__col--2@l">
+    <div class="k-Grid">
+      <div class="k-Grid__col k-Grid__col--12 k-Grid__col--3@s k-Grid__col--12@l">
+        <%= example "Social" do %>
+          <%= react_component('KarlButtonIconFacebookIcon', props: {
+              modifier: 'facebook',
+          }) %>
 
-  <%= example "Carbon icon button" do %>
-    <button class="k-ButtonIcon k-ButtonIcon--carbon">
-      <svg class='k-ButtonIcon__svg' viewBox="0 0 14 12"
-          xmlns="http://www.w3.org/2000/svg"><path d="M7 2.927C6.71 1.267
-          5.262.007 3.52.01 1.574.013-.003 1.595 0 3.543 0 4.485.37 5.34.97
-          5.97l.012.014L7.012 12l5.856-5.88c.698-.646 1.134-1.57
-          1.132-2.597-.002-1.95-1.582-3.525-3.53-3.523C8.73.002 7.284 1.267
-          7 2.927z"/></svg>
-    </button>
-  <% end %>
-</div>
+          <%= react_component('KarlButtonIconTwitterIcon', props: {
+              modifier: 'twitter',
+          }) %>
 
-<div class="karl-Example__column">
-  <%= example "Disabled icon button" do %>
-    <button class="k-ButtonIcon k-ButtonIcon--hydrogen" disabled>
-      <svg class='k-ButtonIcon__svg' viewBox="0 0 14 12"
-          xmlns="http://www.w3.org/2000/svg"><path d="M7 2.927C6.71 1.267
-          5.262.007 3.52.01 1.574.013-.003 1.595 0 3.543 0 4.485.37 5.34.97
-          5.97l.012.014L7.012 12l5.856-5.88c.698-.646 1.134-1.57
-          1.132-2.597-.002-1.95-1.582-3.525-3.53-3.523C8.73.002 7.284 1.267
-          7 2.927z"/></svg>
-    </button>
-  <% end %>
-</div>
-
-<div class="karl-Example__column">
-  <%= example "Micro icon button" do %>
-    <button class="k-ButtonIcon k-ButtonIcon--hydrogen
-    k-ButtonIcon--micro">
-      <svg class="k-ButtonIcon__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6 8.99"><path d="M6 4.48L4.51 6 0 1.48 1.51 0z"/><path d="M6 4.48L1.51 9 0 7.48 4.51 3z"/></svg>
-    </button>
-  <% end %>
-
-  <%= example "Tiny icon button" do %>
-    <button class="k-ButtonIcon k-ButtonIcon--hydrogen k-ButtonIcon--tiny">
-      <svg class='k-ButtonIcon__svg' viewBox="0 0 14 12"
-          xmlns="http://www.w3.org/2000/svg"><path d="M7 2.927C6.71 1.267
-          5.262.007 3.52.01 1.574.013-.003 1.595 0 3.543 0 4.485.37 5.34.97
-          5.97l.012.014L7.012 12l5.856-5.88c.698-.646 1.134-1.57
-          1.132-2.597-.002-1.95-1.582-3.525-3.53-3.523C8.73.002 7.284 1.267
-          7 2.927z"/></svg>
-    </button>
-  <% end %>
-
-  <%= example "Big icon button" do %>
-    <button class="k-ButtonIcon k-ButtonIcon--hydrogen k-ButtonIcon--big">
-      <svg class='k-ButtonIcon__svg' viewBox="0 0 14 12"
-          xmlns="http://www.w3.org/2000/svg"><path d="M7 2.927C6.71 1.267
-          5.262.007 3.52.01 1.574.013-.003 1.595 0 3.543 0 4.485.37 5.34.97
-          5.97l.012.014L7.012 12l5.856-5.88c.698-.646 1.134-1.57
-          1.132-2.597-.002-1.95-1.582-3.525-3.53-3.523C8.73.002 7.284 1.267
-          7 2.927z"/></svg>
-    </button>
-  <% end %>
-</div>
-
-<div class="karl-Example__column">
-  <%= example "Social icon buttons" do %>
-    <button class="k-ButtonIcon k-ButtonIcon--facebook">
-      <svg class='k-ButtonIcon__svg' viewBox="0 0 8 15"
-           xmlns="http://www.w3.org/2000/svg"><path d="M4.785
-           14.196V7.72H6.96l.324-2.523h-2.5v-1.61c0-.732.204-1.23
-           1.252-1.23h1.336V.1C7.142.07 6.348 0 5.425 0 3.498 0 2.18 1.176 2.18
-           3.336v1.86H0v2.525h2.18v6.476h2.605z" />
-      </svg>
-    </button>
-
-    <button class="k-ButtonIcon k-ButtonIcon--twitter">
-      <svg class='k-ButtonIcon__svg' viewBox="0 0 15 14"
-           xmlns="http://www.w3.org/2000/svg"><path d="M15.256 1.468a6.22 6.22 0
-           0 1-1.797.493c.645-.387 1.14-1 1.375-1.73a6.276 6.276 0 0
-           1-1.988.758A3.128 3.128 0 0 0 7.433 3.13c0 .245.027.484.08.713a8.88
-           8.88 0 0 1-6.45-3.27 3.13 3.13 0 0 0 .968 4.179A3.109 3.109 0 0 1
-           .614 4.36v.04c0 1.516 1.08 2.78 2.51 3.07a3.2 3.2 0 0 1-.824.11c-.203
-           0-.4-.02-.59-.058a3.13 3.13 0 0 0 2.924 2.174A6.273 6.273 0 0 1 0
-           10.992a8.86 8.86 0 0 0 4.798 1.407c5.757 0 8.906-4.77 8.906-8.907
-           0-.136-.003-.27-.01-.405a6.332 6.332 0 0 0 1.562-1.62"/>
-      </svg>
-    </button>
-
-    <button class="k-ButtonIcon k-ButtonIcon--linkedin">
-      <svg class='k-ButtonIcon__svg' viewBox="0 0 14 14"
-           xmlns="http://www.w3.org/2000/svg"><path d="M1.622 0a1.62 1.62 0 1 1-.002
-           3.242A1.62 1.62 0 0 1 1.622 0zm-1.4 13.465H3.02V4.47H.222v8.995zM4.773
-           4.47h2.68V5.7h.038c.374-.707 1.286-1.452 2.646-1.452 2.83 0 3.353 1.862
-           3.353 4.284v4.933h-2.796V9.09c0-1.042-.018-2.384-1.452-2.384-1.455
-           0-1.677 1.137-1.677 2.31v4.45H4.773V4.47"/>
-      </svg>
-    </button>
-  <% end %>
+          <%= react_component('KarlButtonIconLinkedinIcon', props: {
+              modifier: 'linkedin',
+          }) %>
+        <% end %>
+      </div>
+    </div>
+  </div>
 </div>

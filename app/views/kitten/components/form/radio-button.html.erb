@@ -1,77 +1,93 @@
-<%= example 'Radio buttons' do %>
-  <%= react_component('RadioButton', props: {
-      id: "karl-radio-button-1",
-      name: "karl-radio-button",
-      text: "Default",
-    }
-  ) %>
+<div class="k-Grid">
+  <div class="k-Grid__col k-Grid__col--12 k-Grid__col--4@m k-Grid__col--4@l">
+    <%= example 'Normal' do %>
+      <%= react_component('RadioButton', props: {
+          id: "karl-radio-button-1",
+          name: "karl-radio-button",
+          text: "Default",
+        }
+      ) %>
 
-  <%= react_component('RadioButton', props: {
-      id: "karl-radio-button-2",
-      name: "karl-radio-button",
-      defaultChecked: true,
-      text: "Default checked",
-    }
-  ) %>
+      <%= react_component('RadioButton', props: {
+          id: "karl-radio-button-2",
+          name: "karl-radio-button",
+          defaultChecked: true,
+          text: "Default checked",
+        }
+      ) %>
 
-  <%= react_component('RadioButton', props: {
-      id: "karl-radio-button-3",
-      name: "karl-radio-button",
-      disabled: true,
-      text: "Default disabled",
-    }
-  ) %>
-<% end %>
+      <%= react_component('RadioButton', props: {
+          id: "karl-radio-button-3",
+          name: "karl-radio-button",
+          disabled: true,
+          text: "Default disabled",
+        }
+      ) %>
+    <% end %>
+  </div>
 
-<%= example 'Large radio buttons' do %>
-  <%= react_component('RadioButton', props: {
-      id: "karl-radio-button-large-1",
-      name: "karl-radio-button-large",
-      large: true,
-      text: "Large",
-    }
-  ) %>
+  <div class="k-Grid__col k-Grid__col--12 k-Grid__col--4@m k-Grid__col--4@l">
+    <%= example 'Large' do %>
+      <%= react_component('RadioButton', props: {
+          id: "karl-radio-button-large-1",
+          name: "karl-radio-button-large",
+          large: true,
+          text: "Large",
+        }
+      ) %>
 
-  <%= react_component('RadioButton', props: {
-      id: "karl-radio-button-large-2",
-      name: "karl-radio-button-large",
-      defaultChecked: true,
-      large: true,
-      text: "Large checked",
-    }
-  ) %>
+      <%= react_component('RadioButton', props: {
+          id: "karl-radio-button-large-2",
+          name: "karl-radio-button-large",
+          defaultChecked: true,
+          large: true,
+          text: "Large checked",
+        }
+      ) %>
 
-  <%= react_component('RadioButton', props: {
-      id: "karl-radio-button-large-3",
-      name: "karl-radio-button-large",
-      disabled: true,
-      large: true,
-      text: "Large disabled",
-    }
-  ) %>
-<% end %>
+      <%= react_component('RadioButton', props: {
+          id: "karl-radio-button-large-3",
+          name: "karl-radio-button-large",
+          disabled: true,
+          large: true,
+          text: "Large disabled",
+        }
+      ) %>
+    <% end %>
+  </div>
 
-<%= example 'Radio button containers' do %>
-  <%= react_component('RadioButton', props: {
-      id: "karl-radio-button-with-content",
-      name: "karl-radio-button-with-content",
-      text: "Default",
-      content: "Harum trium sententiarum nulli prorsus assentior. Nec enim illa prima
-        vera est, ut, quem ad modum in se quisque sit, sic in amicum sit
-        animatus. Quam multa enim, quae nostra causa numquam faceremus, facimus
-        causa.",
-    }
-  ) %>
+  <div class="k-Grid__col k-Grid__col--12 k-Grid__col--4@m k-Grid__col--4@l">
+    <%= example 'Error' do %>
+      <%= react_component('KarlRadioButtonError') %>
+    <% end %>
+  </div>
 
-  <%= react_component('RadioButton', props: {
-      id: "karl-radio-button-with-content-large",
-      name: "karl-radio-button-with-content",
-      text: "Large",
-      large: true,
-      contentLarge: true,
-      content: "Quam multa enim, quae nostra causa numquam faceremus, facimus causa
-        amicorum! precari ab indigno, supplicare, tum acerbius in aliquem
-        invehi insectarique vehementius.",
-    }
-  ) %>
-<% end %>
+  <div class="k-Grid__col k-Grid__col--12">
+    <%= example 'Containers' do %>
+      <%= react_component('RadioButton', props: {
+          id: "karl-radio-button-with-content",
+          name: "karl-radio-button-with-content",
+          text: "Default",
+          children: "Harum trium sententiarum nulli prorsus assentior. Nec enim illa prima
+            vera est, ut, quem ad modum in se quisque sit, sic in amicum sit
+            animatus. Quam multa enim, quae nostra causa numquam faceremus, facimus
+            causa.",
+        }
+      ) %>
+
+      <%= react_component('RadioButton', props: {
+          id: "karl-radio-button-with-content-large",
+          name: "karl-radio-button-with-content",
+          text: "Large",
+          large: true,
+          largeContent: true,
+          children: "Quam multa enim, quae nostra causa numquam faceremus, facimus causa
+            amicorum! precari ab indigno, supplicare, tum acerbius in aliquem
+            invehi insectarique vehementius.",
+        }
+      ) %>
+
+      <%= react_component('KarlRadioButtonContentError') %>
+    <% end %>
+  </div>
+</div>

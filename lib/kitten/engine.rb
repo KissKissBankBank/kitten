@@ -16,8 +16,6 @@ module Kitten
 
       Rails.application.config.assets.precompile += %w(
         kitten/jquery-3.1.0.min.js
-        kitten/noframework.waypoints.min.js
-        kitten/waypoint.js
         kitten/dropdown.js
         kitten/karl.js
       )

@@ -4,18 +4,28 @@
 ///
 /// @example scss - Usage
 ///
-///     @include k-utilities-align;
+///   @include k-utilities-align;
 ///
 /// @example html
 ///
-///     <div class="k-u-centered">…</div>
-///     <div class="k-u-spacedHorizontally">…</div>
-///     <div class="k-u-spacedVertically">…</div>
-///     <div class="k-u-spaced">…</div>
+///   <div class="k-u-align-center">…</div>
+///   <div class="k-u-align-right">…</div>
+///   <div class="k-u-spacedHorizontally">…</div>
+///   <div class="k-u-spacedVertically">…</div>
+///   <div class="k-u-spaced">…</div>
+///
+///  @example html - Deprecated
+///
+///    <div class="k-u-centered">…</div>
 
 @mixin k-utilities-align {
-  .k-u-centered {
+  .k-u-align-center,
+  .k-u-centered { // DEPRECATED
     text-align: center;
+  }
+
+  .k-u-align-right {
+    text-align: right;
   }
 
   .k-u-spacedHorizontally {

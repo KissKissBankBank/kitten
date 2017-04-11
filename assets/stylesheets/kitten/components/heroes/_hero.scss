@@ -18,7 +18,7 @@
 ///        <h2 class="k-Hero__subtitle">Until you have to roll them back.</h2>
 ///      </div>
 ///      <div class="k-Hero__action">
-///        <img src="https://placekitten.com/g/300/400" alt="" />
+///        <img src="https://placehold.it/300x400/4a84ff/4a84ff" alt="" />
 ///      </div>
 ///    </div>
 ///  </div>
@@ -37,7 +37,7 @@
     }
 
     .k-Hero__text {
-      margin: k-px-to-rem(40px) 0 k-px-to-rem(10px);
+      margin: k-px-to-rem(40px) 0 k-px-to-rem(30px);
 
       @include k-media-min('s') {
         margin: k-px-to-rem(62px) 0 k-px-to-rem(30px);
@@ -73,9 +73,8 @@
     }
 
     .k-Hero__title {
-      margin: 0;
       @include k-typographyFont($font);
-      @include k-typographyFontSize(10, normal);
+      @include k-typographyFontSize(5, normal);
 
       @include k-media-min('m') {
         @include k-typographyFontSize(7, normal);
@@ -84,10 +83,12 @@
 
     .k-Hero__subtitle {
       margin: 0;
+      display: none;
       @include k-typographyFont($font);
-      @include k-typographyFontSize(4, 1.6);
+      @include k-typographyFontSize(0, 1.6);
 
-      @include k-media-min('s') {
+      @include k-media-min('m') {
+        display: block;
         @include k-typographyFontSize(2, 1.6);
       }
     }

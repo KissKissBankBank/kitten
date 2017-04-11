@@ -6,7 +6,7 @@
 /// depend on the font-size.
 ///
 /// k-Button--icon is different to k-ButtonIcon. This class is only used on
-/// button-heart-icon-words.
+/// button-with-icon-words.
 /// - `.k-Button--icon`
 ///
 /// Available color modifiers:
@@ -20,6 +20,7 @@
 /// Available size modifiers:
 /// - `.k-Button--tiny`
 /// - `.k-Button--big`
+/// - `.k-Button--big@s-up`
 ///
 /// @group buttons
 ///
@@ -245,7 +246,7 @@
   $button-size: 40px - ($border-size * 2);
   $button-size-big: 50px - ($border-size * 2);
 
-  $button-tiny-min-width: k-px-to-rem(160px);
+  $button-tiny-min-width: k-px-to-rem(110px);
   $button-tiny-line-height: k-px-to-rem($button-size-tiny);
 
   $button-min-width: k-px-to-rem(160px);
@@ -270,6 +271,17 @@
   $icon-height-tiny: k-px-to-rem(12px);
 
   $transition-speed: .2s;
+
+  // Big size options button.
+  $buttonBigOptions: (
+    typography-step: $button-step,
+    line-height: $button-big-line-height,
+    radius: $button-big-radius,
+    width: $button-big-min-width,
+    icon-size: $button-size-big,
+    icon-width: $icon-width,
+    icon-height: $icon-height,
+  );
 
   .k-Button {
     @include k-buttonBase;
@@ -325,6 +337,8 @@
       $button-tiny-line-height
     );
 
+    min-width: $button-tiny-min-width;
+
     &.k-Button--icon {
       .k-Button__icon {
         @include k-buttonRounded($button-size-tiny, $icon-width, $icon-height);
@@ -333,19 +347,12 @@
   }
 
   .k-Button--big {
-    @include k-typographyFontSize(
-      $button-step,
-      $button-big-line-height
-    );
+    @include k-buttonBig($buttonBigOptions);
+  }
 
-    padding: 0 $button-big-radius;
-    border-radius: $button-big-radius;
-    min-width: $button-big-min-width;
-
-    &.k-Button--icon {
-      .k-Button__icon {
-        @include k-buttonRounded($button-size-big, $icon-width, $icon-height);
-      }
+  .k-Button--big\@s-up {
+    @include k-media-min('s') {
+      @include k-buttonBig($buttonBigOptions);
     }
   }
 

@@ -1,17 +1,31 @@
-<%= example 'Badge with one number' do %>
-  <p>
-    <span class="k-Badge">4</span>
-  </p>
-<% end %>
+<div class="k-Grid">
+  <div class="k-Grid__col k-Grid__col--12 k-Grid__col--4@l">
+   <%= example 'Badge with one number' do %>
+      <p>
+        <%= react_component 'Badge', props: {
+          children: '4',
+        } %>
+      </p>
+    <% end %>
+  </div>
 
-<%= example 'Badge with two numbers' do %>
-  <p>
-    <span class="k-Badge">42</span>
-  </p>
-<% end %>
+  <div class="k-Grid__col k-Grid__col--12 k-Grid__col--4@l">
+    <%= example 'Badge with two numbers' do %>
+      <p>
+        <%= react_component 'Badge', props: {
+          children: '42',
+        } %>
+      </p>
+    <% end %>
+  </div>
 
-<%= example 'Badge with more numbers' do %>
-  <p>
-    <span class="k-Badge">4242</span>
-  </p>
-<% end %>
+  <div class="k-Grid__col k-Grid__col--12 k-Grid__col--4@l">
+    <%= example 'Badge with more numbers' do %>
+      <p>
+        <%= react_component 'Badge', props: {
+          children: '4242',
+        } %>
+      </p>
+    <% end %>
+  </div>
+</div>

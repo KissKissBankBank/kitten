@@ -33,6 +33,10 @@
     flex-basis: 100%;
   }
 
+  .k-VerticalGrid__fullHeight {
+    height: 100vh;
+  }
+
   .k-VerticalGrid__container {
     display: flex;
     height: 100%;

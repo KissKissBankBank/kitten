@@ -46,6 +46,9 @@
   $unit-color-is-inactive: k-color-definition(
     k-map-fetch($input, 'unit-colors-is-inactive'));
 
+  // Disable
+  $background-disabled: map-get($k-colors, 'line-2');
+
   // Border radius Text - input
   $border-text-input: k-px-to-rem(4px);
 
@@ -53,14 +56,19 @@
   $transition-speed: .2s;
 
   .k-TextInputWithUnit {
-    display: flex;
+    display: table;
     position: relative; // to place an absolute unit
 
+    border-collapse: separate;
     box-sizing: border-box;
   }
 
   // Input
   .k-TextInputWithUnit__input {
+    display: table-cell;
+
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
     box-sizing: border-box;
     outline: none; // since we introduce our own focus styles
 
@@ -70,31 +78,45 @@
     @include k-formRemoveNumberSpinner;
 
     &:focus ~ .k-TextInputWithUnit__unit {
-      border: 1px solid $unit-color;
+      border-color: $unit-color;
       color: $color;
+    }
+
+    &:disabled + .k-TextInputWithUnit__unit {
+      background: $background-disabled;
+    }
+  }
+
+  .k-TextInputWithUnit--fullWidth {
+    width: 100%;
+
+    .k-TextInputWithUnit__unit {
+      width: 1%; // To let the input take all the remaining space
     }
   }
 
   // Unit
   .k-TextInputWithUnit__unit {
-    position: absolute;
-    right: 0;
-
-    box-sizing: border-box;
-    height: 100%;
-    width: k-px-to-rem(40px);
-    padding: k-px-to-rem(11px) k-px-to-rem(14px);
+    display: table-cell;
+    position: relative;
+    vertical-align: middle;
 
     border-top-right-radius: $border-text-input;
     border-bottom-right-radius: $border-text-input;
     border: 1px solid $border-color;
+    border-left: 0;
+    box-sizing: border-box;
+    height: 100%;
+    padding: k-px-to-rem(11px) k-px-to-rem(14px);
 
     color: $color;
+
+    white-space: nowrap;
 
     transition: all $transition-speed;
 
     @include k-typographyFont($unit-font);
-    @include k-typographyFontSize(1);
+    @include k-typographyFontSize(-1);
 
     &.is-valid {
       border-color: $unit-color-is-valid;
@@ -113,7 +135,6 @@
   }
 
   .k-TextInputWithUnit__unit--tiny {
-    width: k-px-to-rem(30px);
     padding: k-px-to-rem(7px) k-px-to-rem(9px);
   }
 }

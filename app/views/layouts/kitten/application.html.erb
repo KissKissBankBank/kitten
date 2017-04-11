@@ -118,10 +118,14 @@
   </div>
 
   <div class="karl-Main">
-    <div class="karl-Main__container">
-      <section class="karl-Main__content">
-        <%= yield %>
-      </section>
+    <div class="k-Row">
+      <div class="k-Row__content">
+        <section class="k-Grid">
+          <div class="k-Grid__col k-Grid__col--10 k-Grid__col--offset-1">
+            <%= yield %>
+          </div>
+        </section>
+      </div>
     </div>
   </div>
 <% else %>
@@ -133,10 +137,8 @@
 <%= env_javascript_include_tag(static: 'application',
                                hot: 'application_non_webpack') %>
 
-<%#= javascript_include_tag 'kitten/noframework.waypoints.min.js' %>
 <%= javascript_include_tag 'kitten/jquery-3.1.0.min.js' %>
-<%#= javascript_include_tag 'kitten/waypoint.js' %>
 <%= javascript_include_tag 'kitten/karl.js' %>
-
+<%= javascript_include_tag src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCkc6oSvJDWUXb0HhsKV65MxzhhteWKErM&libraries=places" %>
 </body>
 </html>

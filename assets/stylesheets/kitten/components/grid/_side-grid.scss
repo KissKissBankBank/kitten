@@ -69,8 +69,11 @@
   .k-SideGrid__content {
     @include k-grid-col(12);
     background-color: $background;
+    padding-bottom: k-px-to-rem(30px);
 
     @include k-media-min('m') {
+      padding-bottom: k-px-to-rem(50px);
+
       @include k-grid-col(8);
 
       .k-SideGrid--asideLarge & {

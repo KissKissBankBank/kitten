@@ -4,6 +4,235 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [10.1.0] - 2017-04-11
+
+Fix:
+- Background `Alert` width.
+
+## [10.0.0] - 2017-04-10
+
+Breaking changes:
+- Use `k-Card--withVerticalPadding` and `k-Card--rounded` to have the same
+render of old `k-Card`.
+- Update button `min-width` class on `.k-Button--tiny`.
+
+Features:
+- Add modifiers on `k-Card` mixin.
+- Add `card` high-order component.
+- Add `normalLineHeight` prop to `Paragraph` component.
+- Add `margin` prop to `Title` component.
+- Add `onSelectChange` and `errorOnSelect` props to `TextInputAndSelect`
+component.
+- Add `Separator` component.
+
+Fixes:
+- Add missing checked disabled style for `RadioButton` component.
+- Set `line-height: normal` to `RadioButton/Checkbox/Switch` components.
+- Propagate `className` prop to `Grid` and `GridCol` components.
+
+## [9.5.0] - 2017-03-30
+
+Features:
+- Add `Marger` component.
+- Add `ButtonImage` component.
+- Add `margin` prop to `Paragraph` component.
+
+Fixes:
+- Display correctly disabled `TextInputWithLimit` component.
+
+## [9.4.0] - 2017-03-28
+
+Feature:
+- Add color utilities.
+
+Fix:
+- Pass the `onChange` prop correctly in `TextInputWithLimit`.
+
+## [9.3.0] - 2017-03-27
+
+Features:
+- Add `TagList` component.
+- Add `TagIcon` component.
+- Create `SupTitle` component.
+
+## [9.2.0] - 2017-03-23
+
+Fix:
+- Remove unneeded padding on `SearchInput` component.
+
+## [9.1.0] - 2017-03-22
+
+Feature:
+- Add `SideLayout` component and fix layout error on Safari.
+
+## [9.0.0] - 2017-03-22
+
+Breaking change:
+- Change height of `k-Progress` component.
+
+Features:
+- Add `k-Button--big@s-up` modifier.
+- Add `k-buttonBig` mixin.
+- Add `k-u-align-right` class.
+- Add `IconBadge` component.
+- Add new `Badge` component.
+- Add `LegoGrid` component.
+- Add `flexible` option to `k-grid-colSize` mixin.
+- Add `k-u-align-right` class.
+
+Fixes:
+- Prevent newline in mobile view for `SearchInput` component.
+- Deprecate `k-u-centered` in favor of `k-u-align-center`.
+
+## [8.6.0] - 2017-03-15
+
+Features:
+- Add `k-FormInfo` style.
+  `k-TextInputWithInfo` is now deprecated. Use `k-FormInfo` instead.
+- Add new `error` props on SelectWithState.
+
+Fixes:
+- Change width and margin on `StaticTooltip`.
+- Change arrow-zone size on tiny select.
+
+## [8.5.0] - 2017-03-14
+
+Features:
+- Add new `StaticTooltip` React component.
+
+Fixes:
+- Add bottom padding to `.k-SideGrid__content` element.
+- Fix SearchInput content overflow display.
+
+## [8.4.0] - 2017-03-08
+
+Features:
+- Accept more props on `ArrowIcon`.
+- Add new `LinkedinIcon` React component.
+- Add new `TwitterIcon` React component.
+- Add new `FacebookIcon` React component.
+- Add new `ButtonIcon` React component.
+- Add `defaultValue` to `Location`.
+
+Fixes:
+- `LocationInput` does not overwrite `onChange`.
+
+## [8.3.0] - 2017-03-08
+
+Features:
+- `SelectWithState` now accepts an `onInputChange` function.
+
+Fixes:
+- `SelectWithState` does not overwrite previous `inputProps`.
+
+## [8.2.1] - 2017-03-07
+
+Fixes:
+- Animation change when `Alert` closes.
+
+## [8.2.0] - 2017-03-06
+
+Features:
+- Add new `Alert` component.
+- Add new `CloseButton` component.
+- Add new `CrossIcon` component.
+
+Fixes:
+- `SelectWithState` defaults to `deleteRemoves` to `false`.
+- Use `CloseButton` component instead of simple button in `Popover`.
+
+## [8.1.0] - 2017-03-06
+
+Features:
+- Add new `error` props on `RadioButton` and `Checkbox`.
+- Add new `LocationIcon` React component.
+- Add new `LocationInput` React component.
+
+Fixes:
+- Fix wrong padding for `InformationBox` component.
+- Use `handleChange` handler instead of `handleInput` in `TextInputWithLimit`
+  to prevent React warning.
+
+## [8.0.0] - 2017-02-28
+
+Breaking changes:
+- The `FormPhoneNumber` has new props.
+  To be retro-compatible you should, in your app's components:
+  - Rename `name` to `areaName`.
+  - Rename `options` to `areaOptions`.
+  - Rename `value` to `areaValue`.
+  - Add the `tiny` boolean prop.
+  - Replace `import FormPhoneNumber` by
+    `import { FormPhoneNumber }`.
+- Add `@include k-TextAreaWrapper;` in your SCSS if you use `TextInput` with
+  `tag='texteara'`.
+
+Features:
+- Add gradient to textarea.
+- Add `limit` prop to textarea.
+
+Fixes:
+- Add blur event to `TextInput` component.
+- `TextInput` placeholder on Safari.
+- `TextInputWithUnit` does not pass over `digits` to its `TextInput`.
+- `TextInput` React component with text area.
+- Add keyboard accessibility to `Button`s with `a` tags and no `href`.
+- width error on `Checkbox` & `RadioButton` component.
+
+## [7.1.0] - 2017-02-23
+
+Features:
+- Add digits prop to resize `TextInput`, `TextInputWithUnit` and
+  `FormAmountAndCurrency`.
+
+Fixes:
+- Increase line-height on tiny `Label`.
+
+## [7.0.0] - 2017-02-22
+
+Breaking changes:
+- The `FormAmountAndCurrency` has new props.
+  To be retro-compatible you should, in your app's components:
+  - Rename `value` to `currencyValue`.
+  - Rename `amount` to `currencyAmount`.
+  - Add the `tiny` boolean prop.
+  - Replace `import FormAmountAndCurrency` by
+    `import { FormAmountAndCurrency }`.
+- The `SelectWithState` has a new default size and export.
+  To be retro-compatible you should, in your app's components:
+  - Add the `tiny` boolean prop if the component does not have `big` set
+    to `true`.
+  - Remove the `big` boolean prop.
+
+Fixes:
+- Change font-size for `TextInputWithUnit` component.
+- Remove unknown props from `RadioButton`, `KarlHeader`,
+  `KarlHeaderWhenLogged`, `HeaderTitles` and `LoudspeakerIllustration`.
+
+## [6.4.0] - 2017-02-20
+
+Feature:
+- Add new `TextInputWithUnit` React component.
+
+Fixes:
+- Make unit from text input extensible according to its child.
+- Add missing props to `Tooltip` component.
+
+## [6.3.0] - 2017-02-17
+
+Features:
+- Add new `Line` React component.
+- Add new `Line` component.
+- Add new `InformationBox` React component.
+
+Fix:
+- Change the font size and the margin bottom in `k-Hero`.
+
+## [6.2.0] - 2017-02-16
+
+Feature:
+- Add `big` prop to `k-Select`.
+
 ## [6.1.0] - 2017-02-14
 
 Features:

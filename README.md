@@ -198,7 +198,7 @@ $ bin/test
 $ bin/test {PATH}/{FILE}.test.js
 ```
 
-Check out the [guidelines](../../kitten/wiki/Component-testing) to know how to test kitten.
+Check out the [guidelines](../../wiki/Component-testing) to know how to test kitten.
 
 ## Contributing
 
@@ -241,7 +241,8 @@ $ bundle exec rake kitten_release
 
 ### Npm
 
-Save your credentials in your `.npmrc`:
+Only if this is your first release, save your credentials in your `.npmrc`:
+
 ```
 npm adduser
 ```

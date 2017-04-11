@@ -15,6 +15,7 @@
 ///          placeholder="Lorem ipsum dolor sit amet" />
 
 @mixin k-TextInput {
+  $border-width: 1px;
   $font: 'source-sans';
   $font-size: -1;
   $line-height: 1.3;
@@ -23,7 +24,7 @@
 
   // Base
   $color: map-get($k-colors, 'font-1');
-  $border: map-get($k-colors, 'line-2');
+  $border-color: map-get($k-colors, 'line-2');
   $background: map-get($k-colors, 'background-1');
 
   // Focus
@@ -48,18 +49,23 @@
   // Border radius Text - input
   $border-text-input: k-px-to-rem(4px);
 
+  // Others
+  $horizontal-padding: 15px;
+  $vertical-padding: 10px;
+  $digit-length: 9px;
+
   .k-TextInput {
     @include k-typographyFont($font);
     @include k-typographyFontSize($font-size, $line-height);
 
     box-sizing: border-box;
-    border: 1px solid $border;
+    border: $border-width solid $border-color;
     border-radius: $border-text-input;
     background: $background;
 
     width: 100%;
     height: $height;
-    padding: 0 k-px-to-rem(15px);
+    padding: k-px-to-rem($vertical-padding) k-px-to-rem($horizontal-padding);
     color: $color;
     transition: color .2s, border-color .2s;
 
@@ -111,6 +117,14 @@
         color: $color;
       }
     }
+  }
+
+  .k-TextInput--twoDigits {
+    width: k-px-to-rem($horizontal-padding * 2 + $digit-length * 2);
+  }
+
+  .k-TextInput--twelveDigits {
+    width: k-px-to-rem($horizontal-padding * 2 + $digit-length * 12);
   }
 
   .k-TextInput--tiny {

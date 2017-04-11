@@ -26,25 +26,31 @@ export class RadioButton extends React.Component {
             children,
             content,
             inputClassName,
+            error,
             ...inputProps } = this.props
 
-    let radioButtonClassNames = classNames (
+    const radioButtonLabelClassNames = classNames(
       'k-RadioButton__label',
       { 'k-RadioButton__label--large': large },
+    )
+
+    const radioButtonInputClassNames = classNames(
+      'k-RadioButton__input',
+      inputClassName,
+      { 'is-error': error },
     )
 
     return (
       <div className={ classNames('k-RadioButton', className) }>
         <input id={ id }
                type="radio"
-               className={ classNames('k-RadioButton__input', inputClassName) }
+               className={ radioButtonInputClassNames }
                { ...inputProps } />
 
         <label htmlFor={ id }
-               className={ radioButtonClassNames } >
+               className={ radioButtonLabelClassNames } >
           { text }
         </label>
-
         { this.renderContent() }
       </div>
     )

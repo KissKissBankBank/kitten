@@ -1,0 +1,22 @@
+<div class="k-Grid">
+  <div class="k-Grid__col k-Grid__col--12">
+    <%= example 'Alert' do %>
+      <%= react_component 'KarlAlert' %>
+    <% end %>
+
+    <%= example 'Error alert' do %>
+      <%= react_component 'KarlAlertWithButton', props: {
+        error: true,
+        closeButton: true,
+      } %>
+    <% end %>
+
+    <%= example 'Success alert' do %>
+      <%= react_component 'KarlAlertWithButton', props: {
+        success: true,
+        closeButton: true,
+        closeButtonLabel: 'Close this alert',
+      } %>
+    <% end %>
+  </div>
+</div>

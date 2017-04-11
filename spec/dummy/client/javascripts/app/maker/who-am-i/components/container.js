@@ -79,12 +79,14 @@ export class KarlMakerWhoAmIStep extends React.Component {
                               k-u-margin-bottom-quadruple">
         <Button tag="a"
                 modifier="hydrogen"
+                size="big@s-up"
                 href={ actions.return.href }>
           { actions.return.text }
         </Button>
 
         <Button tag="input"
                 modifier="helium"
+                size="big@s-up"
                 type="submit"
                 value={ actions.submit.text } />
       </FormActions>

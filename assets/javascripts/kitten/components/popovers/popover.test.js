@@ -21,7 +21,7 @@ describe('<Popover />', () => {
     })
 
     it('renders close button', () => {
-      const buttonIconComponent = defaultComponent.find('.k-ButtonIcon')
+      const buttonIconComponent = defaultComponent.find('CloseButton')
 
       expect(buttonIconComponent).to.have.length(1)
     })
@@ -50,9 +50,10 @@ describe('<Popover />', () => {
     })
 
     it('renders close button with a specific label', () => {
-      const closeButtonComponent = component.find('.k-ButtonIcon')
+      const closeButtonComponent = component.find('CloseButton')
 
-      expect(closeButtonComponent).to.have.attr('title', 'Custom close')
+      expect(closeButtonComponent).to.have.prop('closeButtonLabel')
+                                          .equal('Custom close')
     })
   })
 })

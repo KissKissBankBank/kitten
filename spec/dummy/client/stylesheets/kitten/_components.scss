@@ -10,6 +10,7 @@
 // Boxes
 
 @include k-LinkBox;
+@include k-InformationBox;
 
 // Cards
 
@@ -20,19 +21,23 @@
 @include k-DevGrid;
 @include k-DevBreakpoint;
 
-// Footer
-@include k-Footer;
-
 // Dropdowns
+
 @include k-Dropdown;
 @include k-PhoneDropdown;
+
+// Footer
+
+@include k-Footer;
 
 // Form
 
 @include k-Checkbox;
+@include k-LocationInput;
 @include k-Label;
 @include k-FormActions;
 @include k-FormComposer;
+@include k-FormInfo;
 @include k-FormRow;
 @include k-RadioButton;
 @include k-SearchInput;
@@ -71,6 +76,7 @@
 ));
 
 @include k-Switch;
+@include k-TextAreaWrapper;
 @include k-TextInput;
 @include k-TextInputWithLimit;
 @include k-TextInputWithButton((
@@ -81,7 +87,7 @@
   button-background-is-valid: #70c050,
   button-background-is-error: #ff4146,
 ));
-
+// DEPRECATED
 @include k-TextInputWithInfo((
   label: (
     font: 'source-sans-semi-bold',
@@ -113,6 +119,7 @@
 // Grid
 
 @include k-Grid;
+@include k-LegoGrid;
 @include k-Row;
 @include k-SideGrid;
 @include k-SingleColumn;
@@ -127,6 +134,11 @@
 @include k-Hero((
   font: 'source-sans',
 ));
+
+// Layout
+
+@include k-Line;
+@include k-Separator;
 
 // Links
 
@@ -143,6 +155,7 @@
 // Lists
 
 @include k-BulletList;
+@include k-TagList;
 
 // Meters
 
@@ -185,7 +198,9 @@
 
 // Notifications
 
+@include k-Alert;
 @include k-Badge;
+@include k-IconBadge;
 
 // Press
 
@@ -236,6 +251,7 @@
 // Tooltips
 
 @include k-Tooltip;
+@include k-StaticTooltip;
 
 // Tours
 
@@ -244,6 +260,7 @@
 
 // Typography
 
+@include k-SupTitle;
 @include k-TypographyBodyCopy;
 @include k-Title;
 @include k-Paragraph;

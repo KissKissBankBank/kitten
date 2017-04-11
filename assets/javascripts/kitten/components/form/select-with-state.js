@@ -28,11 +28,11 @@ class SelectWithState extends React.Component {
   handleChange(val) {
     this.setState({ value: val })
     this.props.onChange(val)
+    this.props.onInputChange({ value: val, name: this.props.name })
   }
 
   renderLabel() {
-    if (!this.props.labelText)
-      return
+    if (!this.props.labelText) return ''
 
     return (
       <label className="k-Select__label" id={ this.props.id }>
@@ -42,10 +42,18 @@ class SelectWithState extends React.Component {
   }
 
   render() {
-    const { value, onChange, className, ...other } = this.props
+    const { value, onChange, className, tiny, error, ...other } = this.props
+    const selectClassName = classNames(
+      'k-Select',
+      className,
+      {
+        'k-Select--tiny': tiny,
+        'is-error': error,
+      }
+    )
 
     return (
-      <div className={ classNames('k-Select', className) }>
+      <div className={ selectClassName }>
         { this.renderLabel() }
         <SelectWithMultiLevel value={ this.state.value }
                               onChange={ this.handleChange }
@@ -79,8 +87,7 @@ class SelectWithMultiLevel extends React.Component {
 
   // React-Select allows changing the way options are rendered.
   optionRenderer({ level, label }) {
-    if (!level)
-      return label
+    if (!level) return label
 
     return (
       <span className={ 'k-Select__option--level' + level }>
@@ -90,10 +97,10 @@ class SelectWithMultiLevel extends React.Component {
   }
 
   render() {
-    let inputProps = {}
+    let inputProps = this.props.inputProps
 
-    if (this.props.labelText)
-      inputProps = { 'aria-labelledby': this.props.id }
+    if (this.props.labelText && !inputProps['aria-labelledby'])
+      inputProps['aria-labelledby'] = this.props.id
 
     return <Select optionRenderer={ this.optionRenderer }
                    { ...this.props }
@@ -104,10 +111,16 @@ class SelectWithMultiLevel extends React.Component {
 
 SelectWithState.defaultProps = {
   onChange: function() {},
+  onInputChange: function() {},
   clearable: false,
   searchable: false,
+  deleteRemoves: false,
   multi: false,
   labelText: null,
+  error: false,
+  tiny: false,
+  name: null,
+  inputProps: {},
 }
 
 export default SelectWithState
