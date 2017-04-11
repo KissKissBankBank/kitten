@@ -16,14 +16,8 @@ class ProjectCardComponent extends React.Component {
       ownerAvatarSrc,
       ownerName,
       tags,
-      scoreValue,
-      scoreBackgroundColor,
       title,
     } = this.props
-
-    const scoreStyles = {
-      backgroundColor: scoreBackgroundColor,
-    }
 
     return (
       <div className="k-ProjectCard__grid">
@@ -40,17 +34,26 @@ class ProjectCardComponent extends React.Component {
             <span className="k-u-strong">{ ownerName }</span><br />
             { tags }
           </Paragraph>
-          {
-            scoreValue
-            ? <IconBadge style={ scoreStyles }>{ scoreValue }</IconBadge>
-            : null
-          }
+
+          { this.renderScore() }
         </Marger>
 
         <Marger top="1" bottom="1.5">
           <Title margin={ false } modifier="quaternary">{ title }</Title>
         </Marger>
       </div>
+    )
+  }
+
+  renderScore() {
+    if (!this.props.scoreValue) return
+
+    const scoreStyles = {
+      backgroundColor: this.props.scoreBackgroundColor,
+    }
+
+    return (
+      <IconBadge style={ scoreStyles }>{ this.props.scoreValue }</IconBadge>
     )
   }
 
