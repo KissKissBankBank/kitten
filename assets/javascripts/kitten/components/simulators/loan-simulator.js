@@ -210,17 +210,17 @@ class LoanSimulatorContent extends React.Component {
     let commissionAmount = ' 0 '
     let exemptionText = null
 
-    if (!this.props.feesExemptions) {
+    if (!this.props.feesExemption) {
       commissionAmount = ` ${ amount } `
     } else {
       const text = `
-        (${ this.props.feesExemptionsLabel }
+        (${ this.props.feesExemptionLabel }
         ${ amount }
         ${ this.props.currencySymbol })
       `
 
       exemptionText =
-        <span className="k-LoanSimulator__feesExemptions">
+        <span className="k-LoanSimulator__feesExemption">
           { text }
         </span>
     }
@@ -451,8 +451,8 @@ LoanSimulator.defaultProps = {
   requiredDurationError: 'Duration is required',
 
   displayCommission: false,
-  feesExemptions: false,
-  feesExemptionsLabel: 'instead of',
+  feesExemption: false,
+  feesExemptionLabel: 'instead of',
   commissionLabel: 'Commission:',
   commissionRules: [],
 

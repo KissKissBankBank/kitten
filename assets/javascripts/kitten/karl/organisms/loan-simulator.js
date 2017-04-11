@@ -52,10 +52,10 @@ const KarlLoanSimulatorWithCommission = defaultProps(KarlLoanSimulator, {
   actionLabel: null,
 })
 
-const KarlLoanSimulatorWithFeesExemptions = defaultProps(KarlLoanSimulator, {
+const KarlLoanSimulatorWithfeesExemption = defaultProps(KarlLoanSimulator, {
   displayCommission: true,
-  feesExemptions: true,
-  feesExemptionsLabel: `au lieu de`,
+  feesExemption: true,
+  feesExemptionLabel: `au lieu de`,
   commissionLabel: `Commission${nbsp}:`,
 
   commissionRules: [
@@ -78,5 +78,5 @@ const KarlLoanSimulatorWithError = defaultProps(KarlLoanSimulator, {
 
 export { KarlLoanSimulator,
          KarlLoanSimulatorWithCommission,
-         KarlLoanSimulatorWithFeesExemptions,
+         KarlLoanSimulatorWithfeesExemption,
          KarlLoanSimulatorWithError }
