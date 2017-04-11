@@ -63,7 +63,7 @@ class ProjectCardComponent extends React.Component {
 
     return (
       <div className="k-ProjectCard__grid">
-        <Marger top="1.5" bottom="1.5">
+        <Marger top="1.5" bottom="1.3">
           <img className="k-ProjectCard__img" src={ this.props.image } alt="" />
         </Marger>
       </div>
@@ -75,7 +75,7 @@ class ProjectCardComponent extends React.Component {
 
     return (
       <div className="k-ProjectCard__grid k-ProjectCard__borderTop">
-        <Marger top="1.5" bottom="1.5" className="k-ProjectCard__flex">
+        <Marger top="1.3" bottom="1.5" className="k-ProjectCard__flex">
           <Progress className="k-ProjectCard__flex__fluid"
                     value={ this.props.progress } />
           <Paragraph margin={ false }
@@ -95,7 +95,7 @@ class ProjectCardComponent extends React.Component {
 
     return (
       <div className="k-ProjectCard__grid">
-        <Marger top="1.5" bottom="1.5">
+        <Marger top="1.3" bottom="1.3">
           <TagList items={ this.props.tags } tiny />
         </Marger>
       </div>
