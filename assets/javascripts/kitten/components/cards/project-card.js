@@ -126,7 +126,10 @@ class ProjectCardComponent extends React.Component {
   renderStatus() {
     const {
       statusContent,
-      statusModifier,
+      statusPrimaryBackground,
+      statusTertiaryBackground,
+      statusGreyBackground,
+      statusErrorBackground,
       statusWithoutTopBorder,
     } = this.props
 
@@ -134,9 +137,14 @@ class ProjectCardComponent extends React.Component {
 
     const statusClassName = classNames(
       'k-ProjectCard__grid',
-      { 'k-ProjectCard__borderTop': !statusWithoutTopBorder },
       'k-ProjectCard__status',
-      statusModifier,
+      {
+        'k-ProjectCard__borderTop': !statusWithoutTopBorder,
+        'k-ProjectCard__status--primaryBackground': statusPrimaryBackground,
+        'k-ProjectCard__status--tertiaryBackground': statusTertiaryBackground,
+        'k-ProjectCard__status--greyBackground': statusGreyBackground,
+        'k-ProjectCard__status--errorBackground': statusErrorBackground,
+      },
     )
 
     return (
@@ -189,7 +197,10 @@ ProjectCardComponent.defaultProps = {
   info3: { value: 'xx', text: 'Info 3', locked: false },
   disabled: false,
   statusContent: null,
-  statusModifier: null,
+  statusPrimaryBackground: false,
+  statusTertiaryBackground: false,
+  statusGreyBackground: false,
+  statusErrorBackground: false,
   statusWithoutTopBorder: false,
 }
 

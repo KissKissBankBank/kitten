@@ -180,16 +180,66 @@ describe('<ProjectCard />', () => {
   describe('with status props', () => {
     const projectCard = mount(
       <ProjectCard statusContent="Custom status"
-                   statusModifier="custom-modifier"
                    statusWithoutTopBorder />
     )
     const status = projectCard.find('.k-ProjectCard__status')
 
     it('renders a status block', () => {
       expect(status).to.have.length(1)
-      expect(status).to.have.className('custom-modifier')
       expect(status).to.have.descendants('.k-ProjectCard__status__content')
       expect(status).to.contain.text('Custom status')
+    })
+  })
+
+  describe('with statusPrimaryBackground prop', () => {
+    const projectCard = mount(
+      <ProjectCard statusContent="Custom status"
+                   statusPrimaryBackground />
+    )
+    const status = projectCard.find('.k-ProjectCard__status').first()
+
+    it('has a good class', () => {
+      expect(status)
+        .to.have.className('k-ProjectCard__status--primaryBackground')
+    })
+  })
+
+  describe('with statusTertiaryBackground prop', () => {
+    const projectCard = mount(
+      <ProjectCard statusContent="Custom status"
+                   statusTertiaryBackground />
+    )
+    const status = projectCard.find('.k-ProjectCard__status').first()
+
+    it('has a good class', () => {
+      expect(status)
+        .to.have.className('k-ProjectCard__status--tertiaryBackground')
+    })
+  })
+
+  describe('with statusGreyBackground prop', () => {
+    const projectCard = mount(
+      <ProjectCard statusContent="Custom status"
+                   statusGreyBackground />
+    )
+    const status = projectCard.find('.k-ProjectCard__status').first()
+
+    it('has a good class', () => {
+      expect(status)
+        .to.have.className('k-ProjectCard__status--greyBackground')
+    })
+  })
+
+  describe('with statusErrorBackground prop', () => {
+    const projectCard = mount(
+      <ProjectCard statusContent="Custom status"
+                   statusErrorBackground />
+    )
+    const status = projectCard.find('.k-ProjectCard__status').first()
+
+    it('has a good class', () => {
+      expect(status)
+        .to.have.className('k-ProjectCard__status--errorBackground')
     })
   })
 })

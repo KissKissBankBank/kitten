@@ -49,7 +49,7 @@ export class KarlProjectCard extends React.Component {
         break
       case 'succeed':
         data = {
-          statusModifier: 'k-ProjectCard__status--succeed',
+          statusTertiaryBackground: true,
           statusContent: [
             <CheckedCircleIcon key={ `succeed-icon-${ this.props.id }` }
                                className={ iconClassName } />,
@@ -60,7 +60,7 @@ export class KarlProjectCard extends React.Component {
         break
       case 'defaulted':
         data = {
-          statusModifier: 'k-ProjectCard__status--defaulted',
+          statusErrorBackground: true,
           statusContent: [
             <WarningCircleIcon key={ `defaulted-icon-${ this.props.id }` }
                                warningColor="#ff4146"
@@ -72,7 +72,7 @@ export class KarlProjectCard extends React.Component {
         break
       case 'retarded':
         data = {
-          statusModifier: 'k-ProjectCard__status--retarded',
+          statusErrorBackground: true,
           statusContent: [
             <WarningCircleIcon key={ `retarded-icon-${ this.props.id }` }
                                warningColor="#ff4146"
@@ -84,7 +84,7 @@ export class KarlProjectCard extends React.Component {
         break
       case 'fraudulent':
         data = {
-          statusModifier: 'k-ProjectCard__status--retarded',
+          statusErrorBackground: true,
           statusContent: [
             <WarningCircleIcon key={ `fraudulent-icon-${ this.props.id }` }
                                warningColor="#ff4146"
@@ -96,7 +96,7 @@ export class KarlProjectCard extends React.Component {
         break
       case 'failed':
         data = {
-          statusModifier: 'k-ProjectCard__status--failed',
+          statusGreyBackground: true,
           statusContent: [
             <CrossCircleIcon key={ `failed-icon-${ this.props.id }` }
                              crossColor="#d8d8d8"
@@ -108,7 +108,7 @@ export class KarlProjectCard extends React.Component {
         break;
       case 'studing':
         data = {
-          statusModifier: 'k-ProjectCard__status--studing',
+          statusPrimaryBackground: true,
           statusContent: [
             <ClockCircleIcon key={ `studing-icon-${ this.props.id }` }
                              clockColor="#197ff2"
