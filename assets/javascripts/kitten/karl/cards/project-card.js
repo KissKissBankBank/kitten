@@ -72,14 +72,14 @@ export class KarlProjectCard extends React.Component {
           ],
         }
         break
-      case 'retarded':
+      case 'delayed':
         data = {
           statusErrorBackground: true,
           statusContent: [
-            <WarningCircleIcon key={ `retarded-icon-${ this.props.id }` }
+            <WarningCircleIcon key={ `delayed-icon-${ this.props.id }` }
                                warningColor="#ff4146"
                                className={ iconClassName } />,
-            this.props.labelRetarded
+            this.props.labelDelayed
           ],
         }
         break
@@ -105,14 +105,14 @@ export class KarlProjectCard extends React.Component {
           ],
         }
         break;
-      case 'studing':
+      case 'studying':
         data = {
           statusPrimaryBackground: true,
           statusContent: [
-            <ClockCircleIcon key={ `studing-icon-${ this.props.id }` }
+            <ClockCircleIcon key={ `studying-icon-${ this.props.id }` }
                              clockColor="#197ff2"
                              className={ iconClassName } />,
-            this.props.labelStuding
+            this.props.labelStudying
           ],
         }
         break
@@ -133,7 +133,7 @@ export class KarlProjectCard extends React.Component {
 }
 
 // Status possibilities: collecting, closing, succeed, defaulted,
-//                       retarded, fraudulent, failed, studing.
+//                       delayed, fraudulent, failed, studying.
 
 KarlProjectCard.defaultProps = {
   score: null,
@@ -142,8 +142,8 @@ KarlProjectCard.defaultProps = {
   labelClosing: "Collecte en closing !",
   labelSucceed: "Collecte réussie !",
   labelDefaulted: "Projet en défaut de paiement",
-  labelRetarded: "Projet en retard de paiement",
+  labelDelayed: "Projet en retard de paiement",
   labelFraudulent: "Projet frauduleux",
   labelFailed: "Collecte échouée",
-  labelStuding: "Projet à l'étude",
+  labelStudying: "Projet à l'étude",
 }

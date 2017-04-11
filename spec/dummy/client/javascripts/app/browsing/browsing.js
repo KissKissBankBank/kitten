@@ -89,7 +89,7 @@ export class KarlBrowsing extends React.Component {
       {
         href: "#",
         id: 'project-5',
-        status: 'studing',
+        status: 'studying',
         score: 'B+',
         image: false,
         ownerAvatarSrc: randomOwnerAvatarSrc(5),
@@ -117,7 +117,7 @@ export class KarlBrowsing extends React.Component {
       {
         href: "#",
         id: 'project-7',
-        status: 'retarded',
+        status: 'delayed',
         score: 'A',
         image: randomImage(4),
         ownerAvatarSrc: randomOwnerAvatarSrc(7),
