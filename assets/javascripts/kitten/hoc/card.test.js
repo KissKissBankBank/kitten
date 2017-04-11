@@ -42,7 +42,7 @@ describe('card()', () => {
     })
   })
 
-  describe('with tiny rounded prop', () => {
+  describe('with tinyRounded prop', () => {
     const component = shallow(<ExampleCard tinyRounded />)
 
     it('has a good class', () => {
@@ -50,7 +50,7 @@ describe('card()', () => {
     })
   })
 
-  describe('with micro rounded prop', () => {
+  describe('with microRounded prop', () => {
     const component = shallow(<ExampleCard microRounded />)
 
     it('has a good class', () => {

@@ -8,7 +8,7 @@
 ///
 /// @example html
 ///
-///   <div class="k-Card k-Card--tiny k-Card--outline" />
+///   <div class="karl-SizeCard k-Card k-Card--light k-Card--microRounded" />
 
 @mixin k-Card {
   $radius-micro: k-px-to-rem(4px);

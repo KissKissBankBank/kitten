@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add modifiers `Card` component.
+- Feature: Add modifiers to Card component.
 
 ## [10.2.0] - 2017-04-11
 
