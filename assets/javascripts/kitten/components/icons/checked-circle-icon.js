@@ -14,6 +14,6 @@ export const CheckedCircleIcon = ({ circleColor, checkedColor, ...props }) => {
 }
 
 CheckedCircleIcon.defaultProps = {
-  circleColor: '#FFF',
+  circleColor: '#fff',
   checkedColor: '#333',
 }

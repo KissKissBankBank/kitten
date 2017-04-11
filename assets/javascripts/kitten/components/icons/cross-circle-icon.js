@@ -15,6 +15,6 @@ export const CrossCircleIcon = ({ circleColor, crossColor, ...props }) => {
 }
 
 CrossCircleIcon.defaultProps = {
-  circleColor: '#FFF',
+  circleColor: '#fff',
   crossColor: '#333',
 }

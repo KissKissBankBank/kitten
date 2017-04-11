@@ -12,6 +12,6 @@ export const ClockCircleIcon = ({ circleColor, clockColor, ...props }) => {
 }
 
 ClockCircleIcon.defaultProps = {
-  circleColor: '#FFF',
+  circleColor: '#fff',
   clockColor: '#333',
 }

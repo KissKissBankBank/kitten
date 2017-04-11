@@ -16,6 +16,6 @@ export const WarningCircleIcon = ({ circleColor, warningColor, ...props }) => {
 }
 
 WarningCircleIcon.defaultProps = {
-  circleColor: '#FFF',
+  circleColor: '#fff',
   warningColor: '#333',
 }

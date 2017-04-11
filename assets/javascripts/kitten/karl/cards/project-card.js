@@ -11,11 +11,11 @@ export class KarlProjectCard extends React.Component {
     if (!this.props.score) return
 
     const hexaByScore = {
-      'A+': '#00696E',
+      'A+': '#00696e',
       'A': '#009682',
-      'B+': '#009B5F',
-      'B': '#04AB2F',
-      'C': '#8CC31E',
+      'B+': '#009b5f',
+      'B': '#04ab2f',
+      'C': '#8cc31e',
     }
 
     return hexaByScore[this.props.score]
