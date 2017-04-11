@@ -37,15 +37,10 @@
 
 @mixin k-ProjectCard {
   .k-ProjectCard {
-    margin: 0 0 k-px-to-rem(20px);
+    margin: 0 k-px-to-rem(15px) k-px-to-rem(20px);
 
     @include k-media-min('s') {
       margin: 0 k-px-to-rem(10px) k-px-to-rem(20px);
-    }
-
-    @include k-media-max('xs') {
-      border-left: 0;
-      border-right: 0;
     }
 
     &.is-disabled {
@@ -55,18 +50,6 @@
 
   .k-ProjectCard__grid {
     padding: 0 k-px-to-rem(20px);
-  }
-
-  .k-ProjectCard__grid--withoutPadding\@s-down {
-    @include k-media-max('xs') {
-      padding: 0;
-    }
-  }
-
-  .k-ProjectCard__marger--withoutMarginBottom\@s-down {
-    @include k-media-max('xs') {
-      margin-bottom: 0 !important;
-    }
   }
 
   .k-ProjectCard__flex {

@@ -9,13 +9,14 @@ import { Progress } from 'kitten/components/meters/progress'
 import { ButtonImage } from 'kitten/components/buttons/button-image'
 import { IconBadge } from 'kitten/components/notifications/icon-badge'
 import { LockIcon } from 'kitten/components/icons/lock-icon'
+import { TagList } from 'kitten/components/lists/tag-list'
 
 class ProjectCardComponent extends React.Component {
   renderDescription() {
     const {
       ownerAvatarSrc,
       ownerName,
-      tags,
+      ownerLocation,
       title,
     } = this.props
 
@@ -32,7 +33,7 @@ class ProjectCardComponent extends React.Component {
                      normalLineHeight
                      modifier="quaternary">
             <span className="k-u-strong">{ ownerName }</span><br />
-            { tags }
+            { ownerLocation }
           </Paragraph>
 
           { this.renderScore() }
@@ -61,12 +62,8 @@ class ProjectCardComponent extends React.Component {
     if (!this.props.image) return
 
     return (
-      <div className={ classNames(
-        'k-ProjectCard__grid',
-        'k-ProjectCard__grid--withoutPadding@s-down') }>
-        <Marger top="1.5"
-                bottom="1.5"
-                className="k-ProjectCard__marger--withoutMarginBottom@s-down">
+      <div className="k-ProjectCard__grid">
+        <Marger top="1.5" bottom="1.5">
           <img className="k-ProjectCard__img" src={ this.props.image } alt="" />
         </Marger>
       </div>
@@ -88,6 +85,18 @@ class ProjectCardComponent extends React.Component {
                                             'k-u-strong') }>
             { this.props.progress }&nbsp;%
           </Paragraph>
+        </Marger>
+      </div>
+    )
+  }
+
+  renderTags() {
+    if (!this.props.tags) return
+
+    return (
+      <div className="k-ProjectCard__grid">
+        <Marger top="1.5" bottom="1.5">
+          <TagList items={ this.props.tags } tiny />
         </Marger>
       </div>
     )
@@ -115,10 +124,10 @@ class ProjectCardComponent extends React.Component {
 
     return (
       <div className="k-u-align-center k-ProjectCard__info">
+        { info.text }<br />
         <span className={ infoClassName }>
           { info.locked ? <LockIcon width="12" /> : info.value }
-        </span><br />
-        { info.text }
+        </span>
       </div>
     )
   }
@@ -174,6 +183,7 @@ class ProjectCardComponent extends React.Component {
            className={ projectCardClassName }>
         { this.renderDescription() }
         { this.renderImage() }
+        { this.renderTags() }
         { this.renderProgress() }
         { this.renderInfos() }
         { this.renderStatus() }
@@ -188,7 +198,8 @@ ProjectCardComponent.defaultProps = {
   linkTitle: null,
   ownerAvatarSrc: null,
   ownerName: 'Name',
-  tags: 'Tag 1, Tag 2',
+  ownerLocation: 'Location',
+  tags: [{ key: 'tag-1', item: 'Tag 1' }, { key: 'tag-2', item: 'Tag 2' }],
   scoreValue: null,
   scoreBackgroundColor: null,
   title: 'Title',
