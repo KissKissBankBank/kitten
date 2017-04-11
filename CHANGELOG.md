@@ -7,7 +7,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Add `ProjectCard` component.
 - Feature: Add `withoutPointerEvents` prop to `ButtonImage` component.
 - Feature: Add `CheckedCircleIcon`, `ClockCircleIcon`, `CrossCircleIcon`,
-  `LockIcon` and `WarningCircleIcon` components.
+  `LockIcon` and `WarningCircleIcon` components.  
+- Feature: Add `tiny` prop to `TagList` component.
 
 ## [10.0.0] - 2017-04-10
 
