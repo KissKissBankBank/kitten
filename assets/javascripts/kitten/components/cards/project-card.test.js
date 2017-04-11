@@ -55,9 +55,9 @@ describe('<ProjectCard />', () => {
     })
   })
 
-  describe('with avatar prop', () => {
+  describe('with ownerAvatarSrc prop', () => {
     const projectCard = mount(
-      <ProjectCard avatar="#avatar" />
+      <ProjectCard ownerAvatarSrc="#avatar" />
     )
     const buttonImage = projectCard.find(ButtonImage)
     const buttonImageImgProps = { src: '#avatar' }
@@ -69,9 +69,9 @@ describe('<ProjectCard />', () => {
     })
   })
 
-  describe('with name and tags props', () => {
+  describe('with ownerName and tags props', () => {
     const projectCard = mount(
-      <ProjectCard name="Custom name" tags="Custom tag" />
+      <ProjectCard ownerName="Custom name" tags="Custom tag" />
     )
     const paragraph = projectCard.find(Paragraph).first()
 

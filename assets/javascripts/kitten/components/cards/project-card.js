@@ -13,8 +13,8 @@ import { LockIcon } from 'kitten/components/icons/lock-icon'
 class ProjectCardComponent extends React.Component {
   renderDescription() {
     const {
-      avatar,
-      name,
+      ownerAvatarSrc,
+      ownerName,
       tags,
       scoreValue,
       scoreBackgroundColor,
@@ -29,7 +29,7 @@ class ProjectCardComponent extends React.Component {
       <div className="k-ProjectCard__grid">
         <Marger top="2" bottom="1" className="k-ProjectCard__flex">
           <ButtonImage tag="span"
-                       img={ { src: avatar } }
+                       img={ { src: ownerAvatarSrc } }
                        withoutPointerEvents />
           <Paragraph className={ classNames('k-ProjectCard__flex__fluid',
                                             'k-u-margin-left-single',
@@ -37,7 +37,7 @@ class ProjectCardComponent extends React.Component {
                      margin={ false }
                      normalLineHeight
                      modifier="quaternary">
-            <span className="k-u-strong">{ name }</span><br />
+            <span className="k-u-strong">{ ownerName }</span><br />
             { tags }
           </Paragraph>
           {
@@ -190,8 +190,8 @@ class ProjectCardComponent extends React.Component {
 ProjectCardComponent.defaultProps = {
   id: null,
   href: null,
-  avatar: null,
-  name: 'Name',
+  ownerAvatarSrc: null,
+  ownerName: 'Name',
   tags: 'Tag 1, Tag 2',
   scoreValue: null,
   scoreBackgroundColor: null,

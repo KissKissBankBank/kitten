@@ -3,7 +3,7 @@
     <%= example 'Project card' do %>
       <%= react_component 'ProjectCard', props: {
         progress: 42,
-        avatar: 'https://placehold.it/400x200/4a84ff/4a84ff',
+        ownerAvatarSrc: 'https://placehold.it/400x200/4a84ff/4a84ff',
         image: 'https://placehold.it/400x200/4a84ff/4a84ff',
         scoreValue: 'A',
         coloredInfosValues: true,
@@ -16,7 +16,7 @@
       <%= react_component 'ProjectCard', props: {
         href: '#',
         progress: 42,
-        avatar: 'https://placehold.it/400x200/4a84ff/4a84ff',
+        ownerAvatarSrc: 'https://placehold.it/400x200/4a84ff/4a84ff',
         image: 'https://placehold.it/400x200/4a84ff/4a84ff',
         scoreValue: 'A',
       } %>
@@ -27,7 +27,7 @@
     <%= example 'Project card with status' do %>
       <%= react_component 'ProjectCard', props: {
         progress: 42,
-        avatar: 'https://placehold.it/400x200/4a84ff/4a84ff',
+        ownerAvatarSrc: 'https://placehold.it/400x200/4a84ff/4a84ff',
         image: 'https://placehold.it/400x200/4a84ff/4a84ff',
         statusContent: 'Status',
       } %>
@@ -38,7 +38,7 @@
     <%= example 'Project card without progress' do %>
       <%= react_component 'ProjectCard', props: {
         progress: false,
-        avatar: 'https://placehold.it/400x200/4a84ff/4a84ff',
+        ownerAvatarSrc: 'https://placehold.it/400x200/4a84ff/4a84ff',
         image: 'https://placehold.it/400x200/4a84ff/4a84ff',
       } %>
     <% end %>
@@ -48,7 +48,7 @@
     <%= example 'Disabled project card' do %>
       <%= react_component 'ProjectCard', props: {
         progress: 42,
-        avatar: 'https://placehold.it/400x200/4a84ff/4a84ff',
+        ownerAvatarSrc: 'https://placehold.it/400x200/4a84ff/4a84ff',
         image: 'https://placehold.it/400x200/4a84ff/4a84ff',
         disabled: true,
       } %>
