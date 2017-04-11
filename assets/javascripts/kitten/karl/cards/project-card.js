@@ -22,6 +22,8 @@ export class KarlProjectCard extends React.Component {
   }
 
   getScoreData() {
+    if (!this.props.score) return
+
     return {
       scoreValue: this.props.score,
       scoreBackgroundColor: this.getHexaByScore(),
@@ -57,7 +59,6 @@ export class KarlProjectCard extends React.Component {
                                className={ iconClassName } />,
             this.props.labelSucceed
           ],
-          progress: false,
         }
         break
       case 'defaulted':
@@ -69,7 +70,6 @@ export class KarlProjectCard extends React.Component {
                                className={ iconClassName } />,
             this.props.labelDefaulted
           ],
-          progress: false,
         }
         break
       case 'retarded':
@@ -81,7 +81,6 @@ export class KarlProjectCard extends React.Component {
                                className={ iconClassName } />,
             this.props.labelRetarded
           ],
-          progress: false,
         }
         break
       case 'fraudulent':
@@ -93,7 +92,6 @@ export class KarlProjectCard extends React.Component {
                                className={ iconClassName } />,
             this.props.labelFraudulent
           ],
-          progress: false,
         }
         break
       case 'failed':
@@ -105,7 +103,6 @@ export class KarlProjectCard extends React.Component {
                              className={ iconClassName } />,
             this.props.labelFailed
           ],
-          progress: false,
         }
         break;
       case 'studing':
@@ -117,7 +114,6 @@ export class KarlProjectCard extends React.Component {
                              className={ iconClassName } />,
             this.props.labelStuding
           ],
-          progress: false,
         }
         break
       default:

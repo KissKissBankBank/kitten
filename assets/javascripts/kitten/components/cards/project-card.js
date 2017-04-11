@@ -190,7 +190,7 @@ ProjectCardComponent.defaultProps = {
   scoreBackgroundColor: null,
   title: 'Title',
   image: null,
-  progress: 0,
+  progress: false,
   coloredInfosValues: false,
   info1: { value: 'xx', text: 'Info 1', locked: false },
   info2: { value: 'xx', text: 'Info 2', locked: false },
