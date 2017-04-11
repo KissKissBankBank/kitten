@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add fees exemption to `LoanSimulator` component.
+
 ## [10.1.0] - 2017-04-11
 
 Fix:
