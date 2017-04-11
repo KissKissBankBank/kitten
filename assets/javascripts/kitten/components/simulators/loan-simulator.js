@@ -213,10 +213,11 @@ class LoanSimulatorContent extends React.Component {
     if (!this.props.feesExemptions) {
       commissionAmount = ` ${ amount } `
     } else {
-      const text = ` (
-        ${ this.props.feesExemptionsLabel }
+      const text = `
+        (${ this.props.feesExemptionsLabel }
         ${ amount }
-        ${ this.props.currencySymbol })`
+        ${ this.props.currencySymbol })
+      `
 
       exemptionAmount =
         <span className="k-LoanSimulator__feesExemptions">
