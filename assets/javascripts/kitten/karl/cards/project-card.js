@@ -33,7 +33,7 @@ export class KarlProjectCard extends React.Component {
     switch(this.props.status) {
       case 'collecting':
         data = {
-          infosValuesColored: true,
+          coloredInfosValues: true,
         }
         break
       case 'closing':
@@ -44,7 +44,7 @@ export class KarlProjectCard extends React.Component {
                                circleColor="#68ffa0" />,
             this.props.labelClosing
           ],
-          infosValuesColored: true,
+          coloredInfosValues: true,
         }
         break
       case 'succeed':

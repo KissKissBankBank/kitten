@@ -93,7 +93,7 @@ class ProjectCardComponent extends React.Component {
   renderInfos() {
     const infoClassName = classNames(
       'k-ProjectCard__info__value',
-      { 'k-u-color-primary1': this.props.infosValuesColored },
+      { 'k-u-color-primary1': this.props.coloredInfosValues },
     )
 
     return (
@@ -198,7 +198,7 @@ ProjectCardComponent.defaultProps = {
   title: 'Title',
   image: null,
   progress: 0,
-  infosValuesColored: false,
+  coloredInfosValues: false,
   info1: { value: 'xx', text: 'Info 1', lockedValue: false },
   info2: { value: 'xx', text: 'Info 2', lockedValue: false },
   info3: { value: 'xx', text: 'Info 3', lockedValue: false },

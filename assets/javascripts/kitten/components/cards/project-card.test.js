@@ -163,10 +163,10 @@ describe('<ProjectCard />', () => {
     })
   })
 
-  describe('with infosValuesColored prop', () => {
+  describe('with coloredInfosValues prop', () => {
     const projectCard = mount(
       <ProjectCard
-        infosValuesColored
+        coloredInfosValues
         info1={ { value: 'Custom value 1', text: 'Custom text 1' } } />
     )
     const info = projectCard.find('.k-ProjectCard__info').first()
