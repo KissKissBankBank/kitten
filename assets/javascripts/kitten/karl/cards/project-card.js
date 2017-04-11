@@ -8,6 +8,8 @@ import { ClockCircleIcon } from 'kitten/components/icons/clock-circle-icon'
 
 export class KarlProjectCard extends React.Component {
   getHexaByScore() {
+    if (!this.props.score) return
+
     const hexaByScore = {
       'A+': '#00696E',
       'A': '#009682',
@@ -16,7 +18,7 @@ export class KarlProjectCard extends React.Component {
       'C': '#8CC31E',
     }
 
-    return this.props.score ? hexaByScore[this.props.score] : null
+    return hexaByScore[this.props.score]
   }
 
   getScoreData() {
