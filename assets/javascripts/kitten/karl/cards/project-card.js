@@ -40,6 +40,7 @@ export class KarlProjectCard extends React.Component {
           coloredInfosValues: true,
         }
         break
+
       case 'closing':
         data = {
           statusContent: [
@@ -51,6 +52,7 @@ export class KarlProjectCard extends React.Component {
           coloredInfosValues: true,
         }
         break
+
       case 'succeed':
         data = {
           statusTertiaryBackground: true,
@@ -61,6 +63,7 @@ export class KarlProjectCard extends React.Component {
           ],
         }
         break
+
       case 'defaulted':
         data = {
           statusErrorBackground: true,
@@ -72,6 +75,7 @@ export class KarlProjectCard extends React.Component {
           ],
         }
         break
+
       case 'delayed':
         data = {
           statusErrorBackground: true,
@@ -83,6 +87,7 @@ export class KarlProjectCard extends React.Component {
           ],
         }
         break
+
       case 'fraudulent':
         data = {
           statusErrorBackground: true,
@@ -94,6 +99,7 @@ export class KarlProjectCard extends React.Component {
           ],
         }
         break
+
       case 'failed':
         data = {
           statusGreyBackground: true,
@@ -104,7 +110,8 @@ export class KarlProjectCard extends React.Component {
             this.props.labelFailed
           ],
         }
-        break;
+        break
+
       case 'studying':
         data = {
           statusPrimaryBackground: true,
@@ -116,6 +123,7 @@ export class KarlProjectCard extends React.Component {
           ],
         }
         break
+        
       default:
         data = {}
     }
