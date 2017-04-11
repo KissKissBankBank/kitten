@@ -6,6 +6,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Add modifiers `Card` component.
 
+## [10.1.0] - 2017-04-11
+
+Fix:
+- Background `Alert` width.
+
 ## [10.0.0] - 2017-04-10
 
 Breaking changes:
