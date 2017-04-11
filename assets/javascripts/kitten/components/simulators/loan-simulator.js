@@ -225,13 +225,14 @@ class LoanSimulatorContent extends React.Component {
         </span>
     }
 
+    commissionAmount += ` ${ this.props.currencySymbol }`
+
     return (
       <div className="k-LoanSimulator__commission">
         { this.props.commissionLabel }
         <span className={ classNames({ 'k-u-text--active': active,
                                        'k-u-text--inactive': !active }) }>
           { commissionAmount }
-          { this.props.currencySymbol }
         </span>
         { exemptionText }
       </div>
