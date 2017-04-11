@@ -207,16 +207,32 @@ class LoanSimulatorContent extends React.Component {
       ? this.toCurrency(this.props.commissionAmount * 100)
       : '--'
 
-    const amountToDisplay = ` ${ amount } `
+    let commissionAmount = ' 0 '
+    let exemptionAmount = null
+
+    if (!this.props.feesExemptions) {
+      commissionAmount = ` ${ amount } `
+    } else {
+      const text = ` (
+        ${ this.props.feesExemptionsLabel }
+        ${ amount }
+        ${ this.props.currencySymbol })`
+
+      exemptionAmount =
+        <span className="k-LoanSimulator__feesExemptions">
+          { text }
+        </span>
+    }
 
     return (
       <div className="k-LoanSimulator__commission">
         { this.props.commissionLabel }
         <span className={ classNames({ 'k-u-text--active': active,
                                        'k-u-text--inactive': !active }) }>
-          { amountToDisplay }
+          { commissionAmount }
           { this.props.currencySymbol }
         </span>
+        { exemptionAmount }
       </div>
     )
   }
@@ -434,6 +450,8 @@ LoanSimulator.defaultProps = {
   requiredDurationError: 'Duration is required',
 
   displayCommission: false,
+  feesExemptions: false,
+  feesExemptionsLabel: 'instead of',
   commissionLabel: 'Commission:',
   commissionRules: [],
 
