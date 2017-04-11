@@ -94,49 +94,31 @@ class ProjectCardComponent extends React.Component {
   }
 
   renderInfos() {
+    return (
+      <div className="k-ProjectCard__borderTop">
+        <Marger top="1.5"
+                bottom="1.5"
+                className={ classNames('k-ProjectCard__flex') }>
+          { this.renderInfo(this.props.info1) }
+          { this.renderInfo(this.props.info2) }
+          { this.renderInfo(this.props.info3) }
+        </Marger>
+      </div>
+    )
+  }
+
+  renderInfo(info) {
     const infoClassName = classNames(
       'k-ProjectCard__info__value',
       { 'k-u-color-primary1': this.props.coloredInfosValues },
     )
 
     return (
-      <div className="k-ProjectCard__borderTop">
-        <Marger top="1.5"
-                bottom="1.5"
-                className={ classNames('k-ProjectCard__flex') }>
-          <div className="k-u-align-center k-ProjectCard__info">
-            <span className={ infoClassName }>
-              {
-                this.props.info1.lockedValue
-                ? <LockIcon width="12" />
-                : this.props.info1.value
-              }
-            </span><br />
-            { this.props.info1.text }
-          </div>
-
-          <div className="k-u-align-center k-ProjectCard__info">
-            <span className={ infoClassName }>
-              {
-                this.props.info2.lockedValue
-                ? <LockIcon width="12" />
-                : this.props.info2.value
-              }
-            </span><br />
-            { this.props.info2.text }
-          </div>
-
-          <div className="k-u-align-center k-ProjectCard__info">
-            <span className={ infoClassName }>
-              {
-                this.props.info3.lockedValue
-                ? <LockIcon width="12" />
-                : this.props.info3.value
-              }
-            </span><br />
-            { this.props.info3.text }
-          </div>
-        </Marger>
+      <div className="k-u-align-center k-ProjectCard__info">
+        <span className={ infoClassName }>
+          { info.lockedValue ? <LockIcon width="12" /> : info.value }
+        </span><br />
+        { info.text }
       </div>
     )
   }
