@@ -1,0 +1,17 @@
+/// Container.
+///
+/// @group grid
+///
+/// @example scss - usage
+///
+///   @include k-Container;
+///
+/// @example html
+///
+///   <div className="k-Container">…</div>
+
+@mixin k-Container {
+  .k-Container {
+    @include container;
+  }
+}
