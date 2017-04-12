@@ -139,8 +139,8 @@ export class KarlProjectCard extends React.Component {
   }
 }
 
-// Status possibilities: collecting, closing, succeed, defaulted,
-//                       delayed, fraudulent, failed, studying.
+// Status options: collecting, closing, succeed, defaulted,
+//                 delayed, fraudulent, failed, studying.
 
 KarlProjectCard.defaultProps = {
   score: null,
