@@ -9,6 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Add `CheckedCircleIcon`, `ClockCircleIcon`, `CrossCircleIcon`,
   `LockIcon` and `WarningCircleIcon` components.  
 - Feature: Add `tiny` prop to `TagList` component.
+- Feature: Add `Container` component.
 
 ## [10.2.0] - 2017-04-11
 
