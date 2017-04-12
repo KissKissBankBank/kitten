@@ -22,11 +22,11 @@ class ProjectCardComponent extends React.Component {
 
     return (
       <div className="k-ProjectCard__grid">
-        <Marger top="2" bottom="1" className="k-ProjectCard__flex">
+        <Marger top="2" bottom="1" className="k-ProjectCard__grid--flex">
           <ButtonImage tag="span"
                        img={ { src: ownerAvatarSrc } }
                        withoutPointerEvents />
-          <Paragraph className={ classNames('k-ProjectCard__flex__fluid',
+          <Paragraph className={ classNames('k-ProjectCard__grid--flex__item-fluid',
                                             'k-u-margin-left-single',
                                             'k-u-margin-right-single') }
                      margin={ false }
@@ -74,9 +74,9 @@ class ProjectCardComponent extends React.Component {
     if (this.props.progress === false) return
 
     return (
-      <div className="k-ProjectCard__grid k-ProjectCard__borderTop">
-        <Marger top="1.3" bottom="1.5" className="k-ProjectCard__flex">
-          <Progress className="k-ProjectCard__flex__fluid"
+      <div className="k-ProjectCard__grid k-ProjectCard__grid--withBorderTop">
+        <Marger top="1.3" bottom="1.5" className="k-ProjectCard__grid--flex">
+          <Progress className="k-ProjectCard__grid--flex__item-fluid"
                     value={ this.props.progress } />
           <Paragraph margin={ false }
                      modifier="quaternary"
@@ -104,10 +104,8 @@ class ProjectCardComponent extends React.Component {
 
   renderInfos() {
     return (
-      <div className="k-ProjectCard__borderTop">
-        <Marger top="1.5"
-                bottom="1.5"
-                className={ classNames('k-ProjectCard__flex') }>
+      <div className="k-ProjectCard__grid--withBorderTop">
+        <Marger top="1.5" bottom="1.5" className="k-ProjectCard__grid--flex">
           { this.renderInfo(this.props.info1) }
           { this.renderInfo(this.props.info2) }
           { this.renderInfo(this.props.info3) }
@@ -148,7 +146,7 @@ class ProjectCardComponent extends React.Component {
       'k-ProjectCard__grid',
       'k-ProjectCard__status',
       {
-        'k-ProjectCard__borderTop': !statusWithoutTopBorder,
+        'k-ProjectCard__grid--withBorderTop': !statusWithoutTopBorder,
         'k-ProjectCard__status--primaryBackground': statusPrimaryBackground,
         'k-ProjectCard__status--tertiaryBackground': statusTertiaryBackground,
         'k-ProjectCard__status--greyBackground': statusGreyBackground,

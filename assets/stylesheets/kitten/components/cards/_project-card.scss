@@ -10,9 +10,9 @@
 ///
 ///   <div class="k-ProjectCard">
 ///     <div class="k-ProjectCard__grid">
-///       <div class="k-ProjectCard__flex">
+///       <div class="k-ProjectCard__grid--flex">
 ///         …
-///         <div class="k-ProjectCard__flex__fluid">…</div>
+///         <div class="k-ProjectCard__grid--flex__item-fluid">…</div>
 ///         …
 ///       </div>
 ///     </div>
@@ -52,13 +52,17 @@
     padding: 0 k-px-to-rem(20px);
   }
 
-  .k-ProjectCard__flex {
+  .k-ProjectCard__grid--withBorderTop {
+    border-top: 1px solid map-get($k-colors, 'line-1');
+  }
+
+  .k-ProjectCard__grid--flex {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
   }
 
-  .k-ProjectCard__flex__fluid {
+  .k-ProjectCard__grid--flex__item-fluid {
     flex: 1;
   }
 
@@ -71,10 +75,6 @@
   .k-ProjectCard__info__value {
     @include k-typographyFont('source-sans-semi-bold');
     @include k-typographyFontSize(0, normal);
-  }
-
-  .k-ProjectCard__borderTop {
-    border-top: 1px solid map-get($k-colors, 'line-1');
   }
 
   .k-ProjectCard__img {
