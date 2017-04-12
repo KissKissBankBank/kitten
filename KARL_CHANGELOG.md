@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `ProjectCard` component examples.
+
 ## [10.0.0] - 2017-04-10
 
 Fixes:
