@@ -259,7 +259,7 @@ export class KarlBrowsing extends React.Component {
 
     return (
       <div>
-        <Marger top="1.5" bottom="1.5">
+        <Marger top="1.5" bottom="3">
           <Title margin={ false } tag="h2" modifier="secondary">
             Collectes du moment
           </Title>
@@ -305,10 +305,10 @@ export class KarlBrowsing extends React.Component {
         </LegoGrid>
 
         <Marger top="4" bottom="3">
-          <Separator darker />
+          <Separator />
         </Marger>
 
-        <Marger top="3" bottom="1.5">
+        <Marger top="3" bottom="3">
           <Title margin={ false } tag="h2" modifier="secondary">
             Collectes terminées
           </Title>
