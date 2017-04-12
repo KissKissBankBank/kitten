@@ -123,9 +123,8 @@ export class KarlProjectCard extends React.Component {
           ],
         }
         break
-        
+
       default:
-        data = {}
     }
 
     return data
