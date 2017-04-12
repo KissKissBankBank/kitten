@@ -8,6 +8,7 @@ import { IconBadge } from 'kitten/components/notifications/icon-badge'
 import { Title } from 'kitten/components/typography/title'
 import { Progress } from 'kitten/components/meters/progress'
 import { LockIcon } from 'kitten/components/icons/lock-icon'
+import { TagList } from 'kitten/components/lists/tag-list'
 
 describe('<ProjectCard />', () => {
   describe('by default', () => {
@@ -77,9 +78,10 @@ describe('<ProjectCard />', () => {
     })
   })
 
-  describe('with ownerName and tags props', () => {
+  describe('with ownerName and ownerLocation props', () => {
     const projectCard = mount(
-      <ProjectCard ownerName="Custom name" tags="Custom tag" />
+      <ProjectCard ownerName="Custom name"
+                   ownerLocation="Custom location" />
     )
     const paragraph = projectCard.find(Paragraph).first()
 
@@ -87,8 +89,18 @@ describe('<ProjectCard />', () => {
       expect(paragraph).to.contain.text('Custom name')
     })
 
-    it('renders a tag value', () => {
-      expect(paragraph).to.contain.text('Custom tag')
+    it('renders a location value', () => {
+      expect(paragraph).to.contain.text('Custom location')
+    })
+  })
+
+  describe('with tags props', () => {
+    const projectCard = mount(
+      <ProjectCard tags={ [ { key: 'custom-tag', item: 'Custom tag' } ] } />
+    )
+
+    it('renders a <TagList />', () => {
+      expect(projectCard).to.have.descendants(TagList)
     })
   })
 
