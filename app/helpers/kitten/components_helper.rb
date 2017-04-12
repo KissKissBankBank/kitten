@@ -1,5 +1,13 @@
 module Kitten
   module ComponentsHelper
+    def render_category(category)
+      id = category[:id]
+      title = default_title(id)
+      add_menu_group(id, title)
+
+      content_tag(:h2, class: 'k-Row karl-Title', id: id) { title }
+    end
+
     def render_group(group, title: nil)
       title ||= default_title(group)
       add_menu_group(group, title)
