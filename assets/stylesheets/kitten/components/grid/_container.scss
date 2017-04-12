@@ -12,6 +12,6 @@
 
 @mixin k-Container {
   .k-Container {
-    @include container;
+    @include k-container;
   }
 }
