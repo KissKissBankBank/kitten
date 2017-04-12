@@ -23,4 +23,20 @@ describe('<Container />', () => {
       expect(container).to.have.className('custom__class')
     })
   })
+
+  describe('with other props', () => {
+    const container = shallow(<Container aria-hidden />)
+
+    it('has aria-hidden attribute', () => {
+      expect(container).to.have.attr('aria-hidden', 'true')
+    })
+  })
+
+  describe('with children', () => {
+    const container = shallow(<Container>Lorem ipsum…</Container>)
+
+    it('has text', () => {
+      expect(container).to.have.text('Lorem ipsum…')
+    })
+  })
 })
