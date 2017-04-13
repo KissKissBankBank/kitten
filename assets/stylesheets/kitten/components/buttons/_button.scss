@@ -70,9 +70,9 @@
       background-color: map-get($k-colors, 'background-1'),
     ),
     disabled: (
-      color: #fff,
+      color: map-get($k-colors, 'font-2'),
       border-color: map-get($k-colors, 'line-2'),
-      background-color: map-get($k-colors, 'line-2'),
+      background-color: map-get($k-colors, 'line-1'),
     ),
   );
 

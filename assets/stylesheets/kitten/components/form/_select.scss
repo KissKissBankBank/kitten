@@ -169,7 +169,7 @@
 
   // control options
   $select-input-bg: k-map-fetch($colors, 'input-bg');
-  $select-input-bg-disabled: #d8d8d8;
+  $select-input-bg-disabled: #eee;
   $select-input-border-color: k-map-fetch($colors, 'input-border');
   $select-input-border-radius: k-map-fetch($options,
                                            'select-input-border-radius');
@@ -198,7 +198,7 @@
   $select-option-focused-bg: #eee;
   $select-option-selected-color: #333;
   $select-option-selected-bg: #d8d8d8;
-  $select-option-disabled-color: k-map-fetch($k-colors, 'font-2');
+  $select-option-disabled-color: k-map-fetch($k-colors, 'line-2');
 
   $select-noresults-color: lighten($select-text-color, 40%);
 
@@ -229,8 +229,8 @@
   $select-item-border-color: darken($select-item-bg, 10%);
   $select-item-hover-color: darken($select-item-color, 5%);
   $select-item-hover-bg: darken($select-item-bg, 5%);
-  $select-item-disabled-color: #333;
-  $select-item-disabled-bg: #fcfcfc;
+  $select-item-disabled-color: #d8d8d8;
+  $select-item-disabled-bg: #eee;
   $select-item-disabled-border-color: darken($select-item-disabled-bg, 10%);
 
   /* stylelint-disable selector-max-specificity */
