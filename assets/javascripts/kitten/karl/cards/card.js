@@ -8,8 +8,10 @@ const KarlCardComponent = ({ className, ...props }) => {
       className,
     )
 
+   const styles = { height: '100px' }
+
   return (
-    <div className={ cardClassName } { ...props } />
+    <div className={ cardClassName } styles={ styles } { ...props } />
   )
 }
 

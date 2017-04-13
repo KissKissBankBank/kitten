@@ -7,10 +7,6 @@ $karl-card-layout: (
   gutters: $karl-card-gutter-width/$karl-card-column-width
 );
 
-.karl-SizeCard {
-  height: k-px-to-rem(100px);
-}
-
 .karl-CardGrid {
   box-sizing: border-box;
   width: 100%;
