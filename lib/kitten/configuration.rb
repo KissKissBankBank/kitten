@@ -270,10 +270,6 @@ module Kitten
               examples_display: :vertical
             },
             {
-              path: 'components/lists/bullet-list',
-              examples_display: :vertical
-            },
-            {
               path: 'components/links/external-rich-link'
             },
             {
