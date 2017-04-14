@@ -43,7 +43,7 @@ describe('<ProjectCard />', () => {
     })
   })
 
-  describe('with is-disabled prop', () => {
+  describe('with disabled prop', () => {
     const projectCard = shallow(<ProjectCard href="#" disabled />)
 
     it('has a disabled class', () => {
