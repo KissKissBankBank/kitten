@@ -59,12 +59,14 @@ class ProjectCardComponent extends React.Component {
   }
 
   renderImage() {
-    if (!this.props.image) return
+    if (!this.props.imageSrc) return
 
     return (
       <div className="k-ProjectCard__grid">
         <Marger top="1.5" bottom="1.3">
-          <img className="k-ProjectCard__img" src={ this.props.image } alt="" />
+          <img className="k-ProjectCard__img"
+               src={ this.props.imageSrc }
+               alt="" />
         </Marger>
       </div>
     )
@@ -201,7 +203,7 @@ ProjectCardComponent.defaultProps = {
   scoreValue: null,
   scoreBackgroundColor: null,
   title: 'Title',
-  image: null,
+  imageSrc: null,
   progress: false,
   coloredInfosValues: false,
   info1: { value: 'xx', text: 'Info 1', locked: false },
