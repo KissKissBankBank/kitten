@@ -212,8 +212,8 @@ export class KarlBrowsing extends React.Component {
             </div>
           </LegoGrid.Item>
 
-          { projectCollectingCards.map((project, index) =>
-            <LegoGrid.Item key={ index }>
+          { projectCollectingCards.map(project =>
+            <LegoGrid.Item key={ project.id }>
               <KarlProjectCard { ...projectDefaultProps } { ...project } />
             </LegoGrid.Item>
           ) }
@@ -230,8 +230,8 @@ export class KarlBrowsing extends React.Component {
         </Marger>
 
         <LegoGrid masonryProps={ masonryProps }>
-          { projectCards.map((project, index) =>
-            <LegoGrid.Item key={ index }>
+          { projectCards.map(project =>
+            <LegoGrid.Item key={ project.id }>
               <KarlProjectCard { ...projectDefaultProps } { ...project } />
             </LegoGrid.Item>
           ) }
