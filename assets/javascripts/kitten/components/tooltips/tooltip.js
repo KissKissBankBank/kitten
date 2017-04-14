@@ -7,7 +7,7 @@ export default class Tooltip extends React.Component {
     super(props)
 
     this.state = {
-      width: null,
+      width: window.innerWidth,
     }
 
     this.updateDimensions = this.updateDimensions.bind(this)
