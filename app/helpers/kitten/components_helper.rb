@@ -8,13 +8,6 @@ module Kitten
       content_tag(:h2, class: 'k-Row karl-Title', id: id) { title }
     end
 
-    def render_group(group, title: nil)
-      title ||= default_title(group)
-      add_menu_group(group, title)
-      concat content_tag(:h2, class: 'k-Row karl-Title', id: group) { title }
-      render "kitten/groups/#{group}"
-    end
-
     def render_component(component,
                          title: nil,
                          description: nil,
