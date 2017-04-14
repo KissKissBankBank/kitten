@@ -31,27 +31,21 @@ module Kitten
           components: [
             {
               path: 'components/grid/grid',
-              examples_display: :vertical,
             },
             {
               path: 'components/grid/vertical-grid',
-              examples_display: :vertical,
             },
             {
               path: 'components/grid/side-grid',
-              examples_display: :vertical,
             },
             {
               path: 'components/grid/row',
-              examples_display: :vertical,
             },
             {
               path: 'components/grid/single-column',
-              examples_display: :vertical,
             },
             {
               path: 'components/grid/lego-grid',
-              examples_display: :vertical,
             },
           ],
         },
@@ -61,11 +55,9 @@ module Kitten
           components: [
             {
               path: 'components/typography/title',
-              examples_display: :vertical,
             },
             {
               path: 'components/typography/paragraph',
-              examples_display: :vertical,
             },
           ],
         },
@@ -105,65 +97,51 @@ module Kitten
           components: [
             {
               path: 'components/form/checkbox',
-              examples_display: :vertical,
             },
             {
               path: 'components/form/radio-button',
-              examples_display: :vertical,
             },
             {
               path: 'components/form/text-input',
-              examples_display: :vertical,
             },
             {
               path: 'components/form/text-input-with-button',
-              examples_display: :vertical,
             },
             {
               path: 'components/form/text-input-with-limit',
-              examples_display: :vertical,
             },
             {
               path: 'components/form/text-input-with-unit',
-              examples_display: :vertical,
             },
             {
               path: 'components/form/location-input',
-              examples_display: :vertical,
             },
             {
               path: 'components/form/select',
-              examples_display: :vertical,
             },
             {
               path: 'components/form/switch',
             },
             {
               path: 'components/form/slider',
-              examples_display: :vertical,
             },
             {
               path: 'components/form/search-input',
             },
             {
               path: 'components/form/form-actions',
-              examples_display: :vertical,
             },
             {
               path: 'components/form/form-row',
-              examples_display: :vertical,
             },
             {
               path: 'components/form/form-info',
-              examples_display: :vertical,
             },
             {
               path: 'components/form/form-amount-and-currency',
-              examples_display: :vertical,
             },
             {
               path: 'components/form/form-phone-number',
-              examples_display: :vertical,
             },
           ],
         },
@@ -176,23 +154,18 @@ module Kitten
             },
             {
               path: 'components/navigation/tab-bar',
-              examples_display: :vertical,
             },
             {
               path: 'components/navigation/user-menu',
-              examples_display: :vertical,
             },
             {
               path: 'components/navigation/platform-switch',
-              examples_display: :vertical,
             },
             {
               path: 'components/headers/header',
-              examples_display: :vertical,
             },
             {
               path: 'components/steppers/stepper',
-              examples_display: :vertical,
             },
             {
               path: 'components/dropdowns/dropdown',
@@ -205,7 +178,6 @@ module Kitten
           components: [
             {
               path: 'components/notifications/alert',
-              examples_display: :vertical,
             },
             {
               path: 'components/notifications/badge',
@@ -224,22 +196,18 @@ module Kitten
           components: [
             {
               path: 'components/meters/progress',
-              examples_display: :vertical,
             },
             {
               path: 'components/simulators/loan-simulator',
-              examples_display: :vertical,
             },
             {
               path: 'components/simulators/simulator-result',
             },
             {
               path: 'components/teaser/teaser',
-              examples_display: :vertical,
             },
             {
               path: 'components/popovers/popover',
-              examples_display: :vertical,
             },
           ],
         },
@@ -249,11 +217,9 @@ module Kitten
           components: [
             {
               path: 'components/cards/card',
-              examples_display: :vertical,
             },
             {
               path: 'components/heroes/hero',
-              examples_display: :vertical,
             },
             {
               path: 'components/press/press-quotes',
@@ -263,11 +229,9 @@ module Kitten
             },
             {
               path: 'components/testimonies/testimony-list',
-              examples_display: :vertical,
             },
             {
               path: 'components/titles/title-with-actions',
-              examples_display: :vertical,
             },
             {
               path: 'components/links/external-rich-link',
@@ -301,7 +265,6 @@ module Kitten
             },
             {
               path: 'components/tooltips/static-tooltip',
-              examples_display: :vertical,
             },
           ],
         },
@@ -314,15 +277,12 @@ module Kitten
             },
             {
               path: 'components/form/form-actions',
-              examples_display: :vertical,
             },
             {
               path: 'components/form/form-row',
-              examples_display: :vertical,
             },
             {
               path: 'components/layout/separator',
-              examples_display: :vertical,
             },
           ],
         }

@@ -10,15 +10,13 @@ module Kitten
 
     def render_component(component,
                          title: nil,
-                         description: nil,
-                         examples_display: :horizontal)
+                         description: nil)
       title ||= default_title(component)
       add_menu_component(component, title)
       render 'layouts/kitten/component',
              component: component,
              title: title,
-             description: description,
-             examples_display: examples_display
+             description: description
     end
 
     def example(title = nil)
