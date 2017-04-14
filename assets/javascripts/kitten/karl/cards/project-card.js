@@ -6,6 +6,13 @@ import { WarningCircleIcon } from 'kitten/components/icons/warning-circle-icon'
 import { CrossCircleIcon } from 'kitten/components/icons/cross-circle-icon'
 import { ClockCircleIcon } from 'kitten/components/icons/clock-circle-icon'
 
+const colors = {
+  'line-2': '#d8d8d8',
+  'primary-1': '#4a84ff',
+  'tertiary-1': '#68ffa0',
+  'error': '#ff4146',
+}
+
 export class KarlProjectCard extends React.Component {
   getHexaByScore() {
     if (!this.props.score) return
@@ -46,7 +53,7 @@ export class KarlProjectCard extends React.Component {
           statusContent: [
             <CheckedCircleIcon key={ `closing-icon-${ this.props.id }` }
                                className={ iconClassName }
-                               circleColor="#68ffa0" />,
+                               circleColor={ colors['tertiary-1'] }  />,
             this.props.labelClosing
           ],
           coloredInfosValues: true,
@@ -69,7 +76,7 @@ export class KarlProjectCard extends React.Component {
           statusErrorBackground: true,
           statusContent: [
             <WarningCircleIcon key={ `defaulted-icon-${ this.props.id }` }
-                               warningColor="#ff4146"
+                               warningColor={ colors['error'] }
                                className={ iconClassName } />,
             this.props.labelDefaulted
           ],
@@ -81,7 +88,7 @@ export class KarlProjectCard extends React.Component {
           statusErrorBackground: true,
           statusContent: [
             <WarningCircleIcon key={ `delayed-icon-${ this.props.id }` }
-                               warningColor="#ff4146"
+                               warningColor={ colors['error'] }
                                className={ iconClassName } />,
             this.props.labelDelayed
           ],
@@ -93,7 +100,7 @@ export class KarlProjectCard extends React.Component {
           statusErrorBackground: true,
           statusContent: [
             <WarningCircleIcon key={ `fraudulent-icon-${ this.props.id }` }
-                               warningColor="#ff4146"
+                               warningColor={ colors['error'] }
                                className={ iconClassName } />,
             this.props.labelFraudulent
           ],
@@ -105,7 +112,7 @@ export class KarlProjectCard extends React.Component {
           statusGreyBackground: true,
           statusContent: [
             <CrossCircleIcon key={ `failed-icon-${ this.props.id }` }
-                             crossColor="#d8d8d8"
+                             crossColor={ colors['line-2'] }
                              className={ iconClassName } />,
             this.props.labelFailed
           ],
@@ -117,7 +124,7 @@ export class KarlProjectCard extends React.Component {
           statusPrimaryBackground: true,
           statusContent: [
             <ClockCircleIcon key={ `studying-icon-${ this.props.id }` }
-                             clockColor="#197ff2"
+                             clockColor={ colors['primary-1'] }
                              className={ iconClassName } />,
             this.props.labelStudying
           ],
