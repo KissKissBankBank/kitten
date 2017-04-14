@@ -4,20 +4,38 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Add missing checked disabled style for `RadioButton` component.
-- Fix: Set `line-height: normal` to `RadioButton/Checkbox/Switch` components.
-- Fix: Replace `KarlButtonIconHeartRight` and `KarlButtonIconHeartLeft` examples
-  with `KarlButtonIconWordsRight` and `KarlButtonIconWordsLeft`.
-- Feature: Add `normalLineHeight` prop to `Paragraph` component.
-- Fix: Propagate `className` prop to `Grid` and `GridCol` components.
-- Fix: Remove `error` label on Checkbox and RadioButton guideline example.
-- Feature: Add `Separator` component.
-- Fix: Install new grid on each components.
-- Fix: Delete example descriptions.
-- Fix: Redesign new subtitles and add border-bottom.
-- Fix: Install new grid on 10 columns.
-- Breaking change: Update button `min-width` class on `button-tiny`.
-- Feature: Add `margin` prop to `Title` component.
+- Feature: Add `Container` component.
+
+## [10.2.0] - 2017-04-11
+
+Feature:
+- Add fees exemption to `LoanSimulator` component.
+
+## [10.1.0] - 2017-04-11
+
+Fix:
+- Background `Alert` width.
+
+## [10.0.0] - 2017-04-10
+
+Breaking changes:
+- Use `k-Card--withVerticalPadding` and `k-Card--rounded` to have the same
+render of old `k-Card`.
+- Update button `min-width` class on `.k-Button--tiny`.
+
+Features:
+- Add modifiers on `k-Card` mixin.
+- Add `card` high-order component.
+- Add `normalLineHeight` prop to `Paragraph` component.
+- Add `margin` prop to `Title` component.
+- Add `onSelectChange` and `errorOnSelect` props to `TextInputAndSelect`
+component.
+- Add `Separator` component.
+
+Fixes:
+- Add missing checked disabled style for `RadioButton` component.
+- Set `line-height: normal` to `RadioButton/Checkbox/Switch` components.
+- Propagate `className` prop to `Grid` and `GridCol` components.
 
 ## [9.5.0] - 2017-03-30
 
@@ -43,12 +61,6 @@ Features:
 - Add `TagList` component.
 - Add `TagIcon` component.
 - Create `SupTitle` component.
-
-Fixes:
-- Replace images by empty images.
-- Delete description.
-- Redesign new subtitles and add border-bottom.
-- Install new grid on 10 columns.
 
 ## [9.2.0] - 2017-03-23
 

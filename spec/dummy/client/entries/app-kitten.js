@@ -39,6 +39,7 @@ import { TextInputWithLimit } from 'kitten/components/form/text-input-with-limit
 import { TextInputWithUnit } from 'kitten/components/form/text-input-with-unit'
 
 // Grid
+import { Container } from 'kitten/components/grid/container'
 import { Grid, GridCol } from 'kitten/components/grid/grid'
 import { KarlSideLayout } from 'kitten/karl/layout/side-layout'
 
@@ -120,6 +121,7 @@ import { KarlHeader,
          KarlPhoneDropdown } from 'kitten/karl/headers/header'
 import { KarlLoanSimulator,
          KarlLoanSimulatorWithCommission,
+         KarlLoanSimulatorWithfeesExemption,
          KarlLoanSimulatorWithError,
        } from 'kitten/karl/organisms/loan-simulator'
 import { KarlSideGridWithRightAside,
@@ -190,8 +192,6 @@ ReactOnRails.register({
   // Form
   FormAmountAndCurrency,
   FormPhoneNumber,
-  Grid,
-  GridCol,
   GrabberIcon,
   HeaderTour,
   Label,
@@ -207,6 +207,11 @@ ReactOnRails.register({
   TextInput,
   TextInputWithLimit,
   TextInputWithUnit,
+
+  // Grid
+  Container,
+  Grid,
+  GridCol,
 
   // Icons
   GrabberIcon,
@@ -297,6 +302,7 @@ ReactOnRails.register({
   KarlPhoneDropdown,
   KarlLoanSimulator,
   KarlLoanSimulatorWithCommission,
+  KarlLoanSimulatorWithfeesExemption,
   KarlLoanSimulatorWithError,
   KarlSideGridWithRightAside,
   KarlSideGridWithLeftAsideAndSmallSize,
