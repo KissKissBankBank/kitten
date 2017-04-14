@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Update `Card` examples.
 - Fix: Update all subtitles components examples.
 
 ## [10.0.0] - 2017-04-10
