@@ -58,7 +58,7 @@
     "react-places-autocomplete": "^3.0.0",
     "react-prop-types": "^0.4.0",
     "react-select": "^1.0.0-rc.1",
-    "react-tooltip": "^3.2.10",
+    "react-tooltip": "^3.3.0",
     "susy": "^2.2.12"
   },
   "scripts": {
