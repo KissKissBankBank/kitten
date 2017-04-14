@@ -19,7 +19,7 @@
 @mixin k-InformationBox {
   $color: map-get($k-colors, 'font-1');
   $background-color: map-get($k-colors, 'background-1');
-  $border-color: map-get($k-colors, 'line-2');
+  $border-color: map-get($k-colors, 'line-1');
 
   $font: 'source-sans-light';
 
