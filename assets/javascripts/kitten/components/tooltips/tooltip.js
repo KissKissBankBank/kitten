@@ -30,10 +30,10 @@ export default class Tooltip extends React.Component {
             id,
             ...buttonTooltipIconProps } = this.props
 
-    let mobilePlace = void(0)
+    let responsivePlace = place
 
-    if (this.state.width && this.state.width <= 480) {
-      mobilePlace = 'bottom'
+    if (this.state.width <= 480) {
+      responsivePlace = 'bottom'
     }
 
     return (
@@ -50,7 +50,7 @@ export default class Tooltip extends React.Component {
                       class="k-Tooltip__content"
                       role="tooltip"
                       effect="solid"
-                      place={ mobilePlace || place }
+                      place={ responsivePlace }
                       event="none">
           { children }
         </ReactTooltip>
