@@ -108,7 +108,6 @@
     }
 
     .k-Checkbox__input:disabled + & {
-      color: $background-color-disabled;
       cursor: not-allowed;
 
       &:before {

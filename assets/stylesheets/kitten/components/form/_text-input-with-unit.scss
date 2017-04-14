@@ -12,7 +12,7 @@
 ///     unit-color: #4a84ff,
 ///     unit-colors-is-valid: #70c050,
 ///     unit-colors-is-error: #ff4146,
-///     unit-colors-is-inactive: #fff,
+///     unit-colors-is-inactive: #b8b8b8,
 ///   ));
 ///
 /// @example html
@@ -47,7 +47,8 @@
     k-map-fetch($input, 'unit-colors-is-inactive'));
 
   // Disable
-  $background-disabled: map-get($k-colors, 'line-2');
+  $background-disabled: map-get($k-colors, 'line-1');
+  $border-disabled: map-get($k-colors, 'line-2');
 
   // Border radius Text - input
   $border-text-input: k-px-to-rem(4px);
@@ -84,6 +85,7 @@
 
     &:disabled + .k-TextInputWithUnit__unit {
       background: $background-disabled;
+      border-color: $border-disabled;
     }
   }
 
