@@ -18,6 +18,18 @@ const randomImage = (key) => {
   return `http://lorempixel.com/620/310/business/${ key }`
 }
 
+const projectDefaultProps = {
+  linkHref: "#",
+  linkTitle: "Se rendre sur le projet …",
+  ownerName: 'Léa & Léo Groupe',
+  ownerLocation: 'Paris',
+  tags: [{ key: 'tpe-pme', item: 'TPE / PME' }],
+  title: 'Reprise d\'une micro crèche',
+  info1: { value: '8,8 %', text: 'Taux d\'intérêt' },
+  info2: { value: '48 mois', text: 'Durée' },
+  info3: { value: '135 000 €', text: 'Objectif' },
+}
+
 export class KarlBrowsing extends React.Component {
   constructor(props) {
     super(props)
@@ -73,186 +85,89 @@ export class KarlBrowsing extends React.Component {
 
     const projectCards = [
       {
-        linkHref: "#",
-        linkTitle: "Se rendre sur le projet …",
         id: 'project-4',
         status: 'succeed',
         score: 'A',
         imageSrc: randomImage(4),
         ownerAvatarSrc: randomOwnerAvatarSrc(4),
-        ownerName: 'Léa & Léo Groupe',
-        ownerLocation: 'Paris',
-        tags: [{ key: 'tpe-pme', item: 'TPE / PME' }],
-        title: 'Reprise d\'une micro crèche',
         info1: { value: '8,8 %', text: 'Taux d\'intérêt', locked: true },
         info2: { value: '48 mois', text: 'Durée', locked: true },
-        info3: { value: '135 000 €', text: 'Objectif' },
       },
       {
-        linkHref: "#",
-        linkTitle: "Se rendre sur le projet …",
         id: 'project-5',
         status: 'studying',
         score: 'B+',
         imageSrc: randomImage(5),
         ownerAvatarSrc: randomOwnerAvatarSrc(5),
-        ownerName: 'Léa & Léo Groupe',
-        ownerLocation: 'Paris',
-        tags: [{ key: 'tpe-pme', item: 'TPE / PME' }],
-        title: 'Reprise d\'une micro crèche',
-        info1: { value: '8,8 %', text: 'Taux d\'intérêt' },
-        info2: { value: '48 mois', text: 'Durée' },
-        info3: { value: '135 000 €', text: 'Objectif' },
       },
       {
-        linkHref: "#",
-        linkTitle: "Se rendre sur le projet …",
         id: 'project-6',
         status: 'defaulted',
         score: 'C',
         imageSrc: randomImage(3),
         ownerAvatarSrc: randomOwnerAvatarSrc(6),
-        ownerName: 'Léa & Léo Groupe',
-        ownerLocation: 'Paris',
-        tags: [{ key: 'tpe-pme', item: 'TPE / PME' }],
-        title: 'Reprise d\'une micro crèche',
-        info1: { value: '8,8 %', text: 'Taux d\'intérêt' },
-        info2: { value: '48 mois', text: 'Durée' },
-        info3: { value: '135 000 €', text: 'Objectif' },
       },
       {
-        linkHref: "#",
-        linkTitle: "Se rendre sur le projet …",
         id: 'project-7',
         status: 'delayed',
         score: 'A',
         imageSrc: randomImage(4),
         ownerAvatarSrc: randomOwnerAvatarSrc(7),
-        ownerName: 'Léa & Léo Groupe',
-        ownerLocation: 'Paris',
-        tags: [{ key: 'tpe-pme', item: 'TPE / PME' }],
-        title: 'Reprise d\'une micro crèche',
-        info1: { value: '8,8 %', text: 'Taux d\'intérêt' },
-        info2: { value: '48 mois', text: 'Durée' },
-        info3: { value: '135 000 €', text: 'Objectif' },
       },
       {
-        linkHref: "#",
-        linkTitle: "Se rendre sur le projet …",
         id: 'project-8',
         status: 'fraudulent',
         score: 'B+',
         imageSrc: randomImage(8),
         ownerAvatarSrc: randomOwnerAvatarSrc(8),
-        ownerName: 'Léa & Léo Groupe',
-        ownerLocation: 'Paris',
-        tags: [{ key: 'tpe-pme', item: 'TPE / PME' }],
-        title: 'Reprise d\'une micro crèche',
-        info1: { value: '8,8 %', text: 'Taux d\'intérêt' },
-        info2: { value: '48 mois', text: 'Durée' },
-        info3: { value: '135 000 €', text: 'Objectif' },
       },
       {
-        linkHref: "#",
-        linkTitle: "Se rendre sur le projet …",
         id: 'project-9',
         status: 'failed',
         score: 'A+',
         imageSrc: randomImage(5),
         ownerAvatarSrc: randomOwnerAvatarSrc(9),
-        ownerName: 'Léa & Léo Groupe',
-        ownerLocation: 'Paris',
-        tags: [{ key: 'tpe-pme', item: 'TPE / PME' }],
-        title: 'Reprise d\'une micro crèche',
-        info1: { value: '8,8 %', text: 'Taux d\'intérêt' },
-        info2: { value: '48 mois', text: 'Durée' },
-        info3: { value: '135 000 €', text: 'Objectif' },
       },
       {
-        linkHref: "#",
-        linkTitle: "Se rendre sur le projet …",
         id: 'project-10',
         status: 'failed',
         score: 'C',
         imageSrc: randomImage(6),
         ownerAvatarSrc: randomOwnerAvatarSrc(10),
-        ownerName: 'Léa & Léo Groupe',
-        ownerLocation: 'Paris',
-        tags: [{ key: 'tpe-pme', item: 'TPE / PME' }],
-        title: 'Reprise d\'une micro crèche',
-        info1: { value: '8,8 %', text: 'Taux d\'intérêt' },
-        info2: { value: '48 mois', text: 'Durée' },
-        info3: { value: '135 000 €', text: 'Objectif' },
       },
       {
-        linkHref: "#",
-        linkTitle: "Se rendre sur le projet …",
         id: 'project-11',
         status: 'failed',
         score: 'B+',
         imageSrc: randomImage(1),
         ownerAvatarSrc: randomOwnerAvatarSrc(1),
-        ownerName: 'Léa & Léo Groupe',
-        ownerLocation: 'Paris',
-        tags: [{ key: 'tpe-pme', item: 'TPE / PME' }],
-        title: 'Reprise d\'une micro crèche',
-        info1: { value: '8,8 %', text: 'Taux d\'intérêt' },
-        info2: { value: '48 mois', text: 'Durée' },
-        info3: { value: '135 000 €', text: 'Objectif' },
       },
     ]
 
     const projectCollectingCards = [
       {
-        linkHref: "#",
-        linkTitle: "Se rendre sur le projet …",
         id: 'project-1',
         status: 'collecting',
         score: 'A',
         imageSrc: randomImage(1),
         ownerAvatarSrc: randomOwnerAvatarSrc(1),
-        ownerName: 'Léa & Léo Groupe',
-        ownerLocation: 'Paris',
-        tags: [{ key: 'tpe-pme', item: 'TPE / PME' }],
-        title: 'Reprise d\'une micro crèche',
         progress: 23,
-        info1: { value: '8,8 %', text: 'Taux d\'intérêt' },
-        info2: { value: '48 mois', text: 'Durée' },
-        info3: { value: '135 000 €', text: 'Objectif' },
       },
       {
-        linkHref: "#",
-        linkTitle: "Se rendre sur le projet …",
         id: 'project-2',
         status: 'closing',
         score: 'C',
         imageSrc: randomImage(2),
         ownerAvatarSrc: randomOwnerAvatarSrc(2),
-        ownerName: 'Léa & Léo Groupe',
-        ownerLocation: 'Paris',
-        tags: [{ key: 'tpe-pme', item: 'TPE / PME' }],
-        title: 'Reprise d\'une micro crèche',
         progress: 23,
-        info1: { value: '8,8 %', text: 'Taux d\'intérêt' },
-        info2: { value: '48 mois', text: 'Durée' },
-        info3: { value: '135 000 €', text: 'Objectif' },
       },
       {
-        linkHref: "#",
-        linkTitle: "Se rendre sur le projet …",
         id: 'project-3',
         status: 'collecting',
         score: 'A+',
         imageSrc: randomImage(3),
         ownerAvatarSrc: randomOwnerAvatarSrc(3),
-        ownerName: 'Léa & Léo Groupe',
-        ownerLocation: 'Paris',
-        tags: [{ key: 'tpe-pme', item: 'TPE / PME' }],
-        title: 'Reprise d\'une micro crèche',
         progress: 23,
-        info1: { value: '8,8 %', text: 'Taux d\'intérêt' },
-        info2: { value: '48 mois', text: 'Durée' },
-        info3: { value: '135 000 €', text: 'Objectif' },
         disabled: true,
       },
     ]
@@ -299,7 +214,7 @@ export class KarlBrowsing extends React.Component {
 
           { projectCollectingCards.map((project, index) =>
             <LegoGrid.Item key={ index }>
-              <KarlProjectCard { ...project } />
+              <KarlProjectCard { ...projectDefaultProps } { ...project } />
             </LegoGrid.Item>
           ) }
         </LegoGrid>
@@ -317,7 +232,7 @@ export class KarlBrowsing extends React.Component {
         <LegoGrid masonryProps={ masonryProps }>
           { projectCards.map((project, index) =>
             <LegoGrid.Item key={ index }>
-              <KarlProjectCard { ...project } />
+              <KarlProjectCard { ...projectDefaultProps } { ...project } />
             </LegoGrid.Item>
           ) }
         </LegoGrid>
