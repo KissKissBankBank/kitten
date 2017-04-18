@@ -1,24 +1,6 @@
-<%= render_group 'components/box' %>
-<%= render_group 'components/buttons' %>
-<%= render_group 'components/cards' %>
-<%= render_group 'components/dropdowns' %>
-<%= render_group 'components/form' %>
-<%= render_group 'components/grid' %>
-<%= render_group 'components/headers' %>
-<%= render_group 'components/heroes' %>
-<%= render_group 'components/layout' %>
-<%= render_group 'components/links' %>
-<%= render_group 'components/lists' %>
-<%= render_group 'components/meters' %>
-<%= render_group 'components/navigation' %>
-<%= render_group 'components/notifications' %>
-<%= render_group 'components/popovers' %>
-<%= render_group 'components/press' %>
-<%= render_group 'components/simulators' %>
-<%= render_group 'components/steppers' %>
-<%= render_group 'components/teaser' %>
-<%= render_group 'components/testimonies' %>
-<%= render_group 'components/titles' %>
-<%= render_group 'components/tooltips' %>
-<%= render_group 'components/tours' %>
-<%= render_group 'components/typography' %>
+<% Kitten.configuration.default_categories.each do |category| %>
+  <%= render_category(category) %>
+  <% category[:components].each do |component| %>
+    <%= render_component(component) %>
+  <% end %>
+<% end %>
