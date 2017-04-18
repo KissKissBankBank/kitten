@@ -4,14 +4,14 @@
       <div class="k-Grid__col k-Grid__col--12 k-Grid__col--4@s k-Grid__col--12@l">
         <%= example 'With micro radius' do %>
           <%= react_component('KarlCard', props: {
-              microRounded: true,
+              rounded: 'micro',
           }) %>
         <% end %>
       </div>
       <div class="k-Grid__col k-Grid__col--12 k-Grid__col--4@s k-Grid__col--12@l">
         <%= example 'With tiny radius' do %>
           <%= react_component('KarlCard', props: {
-              tinyRounded: true,
+              rounded: 'tiny',
           }) %>
         <% end %>
       </div>
@@ -30,7 +30,7 @@
       <div class="k-Grid__col k-Grid__col--12 k-Grid__col--4@s k-Grid__col--12@l">
         <%= example 'With micro radius and border' do %>
           <%= react_component('KarlCard', props: {
-              microRounded: true,
+              rounded: 'micro',
               withBorder: true,
           }) %>
         <% end %>
@@ -38,7 +38,7 @@
       <div class="k-Grid__col k-Grid__col--12 k-Grid__col--4@s k-Grid__col--12@l">
         <%= example 'With tiny radius and border' do %>
           <%= react_component('KarlCard', props: {
-              tinyRounded: true,
+              rounded: 'tiny',
               withBorder: true,
           }) %>
         <% end %>
