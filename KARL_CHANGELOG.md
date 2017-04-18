@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: Update `Card` examples.
+- Fix: Update `border-color` on `InformationBox` component.
 - Fix: Update all subtitles components examples.
 
 ## [10.0.0] - 2017-04-10
