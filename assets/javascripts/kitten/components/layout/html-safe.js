@@ -1,5 +1,5 @@
 import React from 'react'
-import DOMPurify from 'dompurify';
+import DOMPurify from 'dompurify'
 
 export class HtmlSafe extends React.Component {
   constructor(props) {
