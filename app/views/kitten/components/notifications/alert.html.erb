@@ -1,17 +1,17 @@
 <div class="k-Grid">
   <div class="k-Grid__col k-Grid__col--12">
-    <%= example 'With link' do %>
+    <%= example 'Default' do %>
       <%= react_component 'KarlAlert' %>
     <% end %>
 
-    <%= example 'With link - Error' do %>
+    <%= example 'Error' do %>
       <%= react_component 'KarlAlertWithButton', props: {
         error: true,
         closeButton: true,
       } %>
     <% end %>
 
-    <%= example 'With link - Success' do %>
+    <%= example 'Success' do %>
       <%= react_component 'KarlAlertWithButton', props: {
         success: true,
         closeButton: true,
