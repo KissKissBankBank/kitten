@@ -11,8 +11,8 @@
 ///   <div class="k-Card k-Card--light k-Card--microRounded" />
 
 @mixin k-Card {
-  $radius-micro: k-px-to-rem(4px);
-  $radius-tiny: k-px-to-rem(8px);
+  $micro-radius: k-px-to-rem(4px);
+  $tiny-radius: k-px-to-rem(8px);
   $radius: k-px-to-rem(16px);
 
   $padded: k-px-to-rem(50px);
@@ -46,11 +46,11 @@
   }
 
   .k-Card--microRounded {
-    border-radius: $radius-micro;
+    border-radius: $micro-radius;
   }
 
   .k-Card--tinyRounded {
-    border-radius: $radius-tiny;
+    border-radius: $tiny-radius;
   }
 
   .k-Card--rounded {
