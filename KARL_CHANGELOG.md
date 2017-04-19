@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `ProjectCard` component examples.
 - Fix: New organisation for components view.
 - Fix: Update `border-color` on `InformationBox` component.
 - Fix: Update all subtitles components examples.

@@ -120,6 +120,7 @@ module Kitten
           label: 'Presentation elements',
           components: [
             'components/cards/card',
+            'components/cards/project-card',
             'components/heroes/hero',
             'components/press/press-quotes',
             'components/testimonies/testimony',

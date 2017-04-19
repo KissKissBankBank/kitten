@@ -4,6 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `ProjectCard` component.
+- Feature: Add `withoutPointerEvents` prop to `ButtonImage` component.
+- Feature: Add `CheckedCircleIcon`, `ClockCircleIcon`, `CrossCircleIcon`,
+  `LockIcon` and `WarningCircleIcon` components.
+- Feature: Add `tiny` prop to `TagList` component.
 - Feature: Update grid in `LegoGrid.Item` component.
 - Feature: Add `Container` component.
 

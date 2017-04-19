@@ -15,6 +15,9 @@ import ButtonImageWithTextAndBadge from 'kitten/components/buttons/button-image-
 import ButtonTooltipIcon from 'kitten/components/buttons/button-tooltip-icon'
 import { TagButton } from 'kitten/components/buttons/tag-button'
 
+// Cards
+import { ProjectCard } from 'kitten/components/cards/project-card'
+
 // Dev
 import { DevGrid } from 'kitten/components/dev/dev-grid'
 
@@ -166,6 +169,7 @@ import { KarlAlert,
 import { KarlIconBadgeWithSvg } from 'kitten/karl/notifications/icon-badge'
 import { KarlLegoGrid } from 'kitten/karl/grid/lego-grid'
 import { KarlTagList } from 'kitten/karl/lists/tag-list'
+import { KarlBrowsing } from 'app/browsing/browsing'
 
 ReactOnRails.register({
   // Box
@@ -180,6 +184,9 @@ ReactOnRails.register({
   ButtonImageWithTextAndBadge,
   ButtonTooltipIcon,
   TagButton,
+
+  // Cards
+  ProjectCard,
 
   // Dev
   Checkbox,
@@ -328,4 +335,5 @@ ReactOnRails.register({
   KarlMakerWhoAmIStep,
   KarlLegoGrid,
   KarlTagList,
+  KarlBrowsing,
 })
