@@ -23,11 +23,23 @@ LegoGrid.Item = props => {
   )
 }
 
+LegoGrid.ItemContent = props => {
+  const itemClassName = classNames('k-LegoGrid__item__content', props.className)
+
+  return (
+    <div { ...props } className={ itemClassName } />
+  )
+}
+
 LegoGrid.defaultProps = {
   className: null,
   masonryProps: {},
 }
 
 LegoGrid.Item.defaultProps = {
+  className: null,
+}
+
+LegoGrid.ItemContent.defaultProps = {
   className: null,
 }

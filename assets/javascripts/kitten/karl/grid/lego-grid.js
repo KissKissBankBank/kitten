@@ -29,8 +29,10 @@ export const KarlLegoGrid = () => {
           <LegoGrid masonryProps={ masonryProps }>
             { cards.map(card =>
               <LegoGrid.Item key={ card.key }>
-                <div className="karl-ProjectCard"
-                     style={ { height: card.height } } />
+                <LegoGrid.ItemContent>
+                  <div className="karl-ProjectCard"
+                       style={ { height: card.height } } />
+                </LegoGrid.ItemContent>
               </LegoGrid.Item>
             ) }
           </LegoGrid>
