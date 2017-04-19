@@ -12,6 +12,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fix: Update all subtitles components examples.
 - Fix: Make the radio button example clickable.
 - Fix: Rename button examples.
+- Fix: Loan Simulator example in English.
 - Fix: English spelling fixes.
 
 ## [10.0.0] - 2017-04-10
