@@ -42,14 +42,7 @@
 @include k-RadioButton;
 @include k-SearchInput;
 
-@include k-Select((
-  colors: (
-    input-bg: #fff,
-    input-border: #d8d8d8,
-    input-border-focus: map-get($k-colors, 'primary-1'),
-    option-bg: #fbfbfb,
-  ),
-));
+@include k-Select;
 
 @include k-SliderTooltip((
   colors: (

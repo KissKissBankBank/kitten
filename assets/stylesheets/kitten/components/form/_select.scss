@@ -21,34 +21,40 @@
 ///     <div class="Select-control">…</div>
 ///   </div>
 ///
-@mixin k-Select($select) {
-  $font: 'source-sans';
-  $bold: 'source-sans-semi-bold';
-  $options-tiny: (
-    arrow-zone-width: 30px,
-    select-input-border-radius: 4px,
-    select-input-border-width: 1px,
-  );
-  $options: map-merge($options-tiny, (select-input-height: 50px));
-  $error-color: map-get($k-colors, 'error');
+// @mixin k-Select($select: ()) {
+@mixin k-Select {
 
   $options: (
-    arrow-zone-width: 40px,
-    select-input-border-radius: 4px,
-    select-input-border-width: 1px,
-    select-input-height: 50px,
+    error-color: map-get($k-colors, 'error'),
+    valid-color: map-get($k-colors, 'valid'),
+    select-input-bg: map-get($k-colors, 'background-1'),
+    select-input-bg-disabled: map-get($k-colors, 'line-1'),
+    select-item-disabled-color: map-get($k-colors, 'font-2'),
+    arrow-zone-width: k-px-to-rem(40px),
+    select-input-border-radius: k-px-to-rem(4px),
+    select-input-border-width: k-px-to-rem(1px),
+    select-input-height: k-px-to-rem(50px),
   );
+
+  $options-tiny: map-merge($options, (
+    arrow-zone-width: k-px-to-rem(30px),
+    select-input-border-radius: k-px-to-rem(4px),
+    select-input-border-width: k-px-to-rem(1px),
+  ));
+
+  $font: 'source-sans';
+  $bold: 'source-sans-semi-bold';
 
   .k-Select {
     @include k-typographyFont($font);
     @include k-typographyFontSize(-1);
-    @include _k-Select-ReactSelect($select, $options);
-    @include _k-Select-Overrides($select, $options);
+    @include _k-Select-ReactSelect($options);
+    @include _k-Select-Overrides($options);
   }
 
   .k-Select--tiny {
-    @include _k-Select-ReactSelect($select, $options-tiny);
-    @include _k-Select-Overrides($select, $options-tiny);
+    @include _k-Select-ReactSelect($options-tiny);
+    @include _k-Select-Overrides($options-tiny);
   }
 
   .k-Select__option--level1 {
@@ -69,16 +75,43 @@
 
   .k-Select.is-error .Select:not(.is-open):not(.is-focused) {
     .Select-control {
-      border-color: $error-color;
+      border-color: map-get($options, 'error-color');
     }
 
     .Select-arrow-zone {
-      background-image: url('~icons/arrow-bottom-red.svg');
-      border-left-color: $error-color;
+      border-left-color: map-get($options, 'error-color');
+    }
+  }
+
+  .k-Select.is-valid .Select:not(.is-open):not(.is-focused) {
+    .Select-control {
+      border-color: map-get($options, 'valid-color');
     }
 
-    .Select-value .Select-value-label {
-      color: $error-color;
+    .Select-arrow-zone {
+      border-left-color: map-get($options, 'valid-color');
+    }
+  }
+
+  .k-Select.is-disabled .Select:not(.is-open):not(.is-focused) {
+    .Select-control {
+      background-color: map-get($options, 'select-input-bg-disabled');
+    }
+
+    .Select-arrow-zone {
+      background: map-get($options, 'select-input-bg-disabled')
+                  url('~icons/arrow-bottom-disabled.svg')
+                  no-repeat
+                  center;
+      cursor: not-allowed;
+    }
+
+    .Select-value {
+      cursor: not-allowed;
+    }
+
+    .Select-value-label {
+      color: map-get($options, 'select-item-disabled-color');
     }
   }
 
@@ -87,9 +120,7 @@
 
 // Our overrides to React Select's default styles
 // TODO: Merge with _ReactSelect. Not possible to keep both separated.
-@mixin _k-Select-Overrides($select, $options) {
-  $colors: k-map-fetch($select, 'colors');
-  $select-input-bg: k-map-fetch($colors, 'input-bg');
+@mixin _k-Select-Overrides($options) {
   $arrow-zone-width: k-map-fetch($options, 'arrow-zone-width');
   $select-input-border-radius: k-map-fetch($options,
                                            'select-input-border-radius');
@@ -106,12 +137,11 @@
     width: $arrow-zone-width;
     padding-right: 0;
 
-    border-left: 1px solid k-map-fetch($colors, 'input-border');
-
-    background-color: $select-input-bg;
-    background-image: url('~icons/arrow-bottom-black.svg');
-    background-repeat: no-repeat;
-    background-position: center;
+    border-left: 1px solid map-get($k-colors, 'line-2');
+    background: map-get($options, 'select-input-bg')
+                url('~icons/arrow-bottom-black.svg')
+                no-repeat
+                center;
   }
 
   .Select-arrow {
@@ -119,7 +149,7 @@
   }
 
   .Select-menu-outer {
-    border-top-color: k-map-fetch($colors, 'input-border');
+    border-top-color: map-get($k-colors, 'line-2');
 
     // When the select is open, hide the arrow-zone's bottom border
     &:before {
@@ -131,16 +161,16 @@
       height: $select-input-border-width;
 
       content: "";
-      background: k-map-fetch($colors, 'option-bg');
+      background: map-get($k-colors, 'background-2');
     }
   }
 
   .Select.is-focused:not(.is-open) .Select-arrow-zone {
-    border-left-color: k-map-fetch($colors, 'input-border-focus');
+    border-left-color: map-get($k-colors, 'primary-1');
   }
 
   .Select.is-open .Select-arrow-zone {
-    background-color: k-map-fetch($colors, 'option-bg');
+    background-color: map-get($k-colors, 'background-2');
     background-image: url('~icons/arrow-top-black.svg');
   }
 }
@@ -152,8 +182,8 @@
 // - removed mixins
 // - merged all SCSS files into one file
 // - applied our code-style
-@mixin _k-Select-ReactSelect($select, $options) {
-  $colors: k-map-fetch($select, 'colors');
+@mixin _k-Select-ReactSelect($options) {
+  //$colors: k-map-fetch($select, 'colors');
 
   /**
    * React Select
@@ -168,12 +198,12 @@
   // ------------------------------
 
   // control options
-  $select-input-bg: k-map-fetch($colors, 'input-bg');
-  $select-input-bg-disabled: #eee;
-  $select-input-border-color: k-map-fetch($colors, 'input-border');
+
+  $select-input-border-color: map-get($k-colors, 'line-2');
   $select-input-border-radius: k-map-fetch($options,
                                            'select-input-border-radius');
-  $select-input-border-focus: k-map-fetch($colors, 'input-border-focus');
+
+  $select-input-border-focus: map-get($k-colors, 'primary-1');
   $select-input-border-width: k-map-fetch($options,
                                           'select-input-border-width');
   $select-input-height: k-default(map-get($options,
@@ -181,8 +211,8 @@
                                           40px);
   $select-input-internal-height:
     ($select-input-height - ($select-input-border-width * 2));
-  $select-input-placeholder: #b8b8b8;
-  $select-text-color: #333;
+  $select-input-placeholder: map-get($k-colors, 'font-2');
+  $select-text-color: map-get($k-colors, 'font-1');
   $select-link-hover-color: $select-input-border-focus;
 
   $select-padding-vertical: 10px;
@@ -193,12 +223,12 @@
   $select-menu-max-height: 250px;
 
   $select-option-color: $select-text-color;
-  $select-option-bg: k-map-fetch($colors, 'option-bg');
+  $select-option-bg: map-get($k-colors, 'background-2');
   $select-option-focused-color: $select-text-color;
-  $select-option-focused-bg: #eee;
-  $select-option-selected-color: #333;
-  $select-option-selected-bg: #d8d8d8;
-  $select-option-disabled-color: k-map-fetch($k-colors, 'line-2');
+  $select-option-focused-bg: map-get($k-colors, 'line-1');
+  $select-option-selected-color: map-get($k-colors, 'font-1');
+  $select-option-selected-bg: map-get($k-colors, 'line-2');
+  $select-option-disabled-color: map-get($k-colors, 'line-2');
 
   $select-noresults-color: lighten($select-text-color, 40%);
 
@@ -209,8 +239,8 @@
   $select-clear-width: ($select-input-internal-height / 2);
 
   // arrow indicator
-  $select-arrow-color: #333;
-  $select-arrow-color-hover: #333;
+  $select-arrow-color: map-get($k-colors, 'font-1');
+  $select-arrow-color-hover: map-get($k-colors, 'font-1');
   $select-arrow-width: 5px;
 
   // loading indicator
@@ -224,14 +254,14 @@
   $select-item-padding-vertical: 2px;
   $select-item-padding-horizontal: 5px;
   $select-item-font-size: 1em;
-  $select-item-color: #333;
-  $select-item-bg: #d8d8d8;
+  $select-item-color: map-get($k-colors, 'font-1');
+  $select-item-bg: map-get($k-colors, 'line-2');
   $select-item-border-color: darken($select-item-bg, 10%);
   $select-item-hover-color: darken($select-item-color, 5%);
   $select-item-hover-bg: darken($select-item-bg, 5%);
-  $select-item-disabled-color: #d8d8d8;
-  $select-item-disabled-bg: #eee;
-  $select-item-disabled-border-color: darken($select-item-disabled-bg, 10%);
+  // $select-item-disabled-color: map-get($k-colors, 'font-2');
+  // $select-item-disabled-bg: map-get($k-colors, 'line-1');
+  // $select-item-disabled-border-color: darken($select-item-disabled-bg, 10%);
 
   /* stylelint-disable selector-max-specificity */
   /* stylelint-disable no-descending-specificity */
@@ -247,22 +277,22 @@
     }
 
     // handle disabled state
-    &.is-disabled > .Select-control {
-      background-color: $select-input-bg-disabled;
-      &:hover {
-        box-shadow: none;
-      }
-    }
-    &.is-disabled .Select-arrow-zone {
-      cursor: default;
-      pointer-events: none;
-    }
+    // &.is-disabled > .Select-control {
+    //   background-color: map-get($options, 'select-input-bg-disabled');
+    //   &:hover {
+    //     box-shadow: none;
+    //   }
+    // }
+    // &.is-disabled .Select-arrow-zone {
+    //   cursor: default;
+    //   pointer-events: none;
+    // }
   }
 
   // Base
 
   .Select-control {
-    background-color: $select-input-bg;
+    background-color: map-get($options, 'select-input-bg');
     border-color:
       lighten($select-input-border-color, 5%)
       $select-input-border-color
@@ -299,7 +329,7 @@
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
 
-    background: $select-input-bg;
+    background: map-get($options, 'select-input-bg');
     border-color:
       darken($select-input-border-color, 10%)
       $select-input-border-color
@@ -516,9 +546,9 @@
     // and does not have to repaint on scroll.
     border-bottom-right-radius: $select-input-border-radius;
     border-bottom-left-radius: $select-input-border-radius;
-    background-color: $select-input-bg;
+    background-color: map-get($options, 'select-input-bg');
     border: 1px solid $select-input-border-color;
-    border-top-color: mix($select-input-bg, $select-input-border-color, 50%);
+    border-top-color: mix(map-get($options, 'select-input-bg'), $select-input-border-color, 50%);
     box-sizing: border-box;
     margin-top: -1px;
     max-height: $select-menu-max-height;
@@ -589,7 +619,6 @@
     // add margin to the input element
     .Select-input {
       vertical-align: middle;
-      // border: 1px solid transparent;
       margin-left: $select-padding-horizontal;
       padding: 0;
     }
@@ -661,24 +690,6 @@
 
   }
 
-  .Select--multi.is-disabled {
-    .Select-value {
-      background-color: $select-item-disabled-bg;
-      border: 1px solid $select-item-disabled-border-color;
-      color: $select-item-disabled-color;
-    }
-    // icon
-    .Select-value-icon {
-      cursor: not-allowed;
-      border-right: 1px solid $select-item-disabled-border-color;
-
-      &:hover,
-      &:focus,
-      &:active {
-        background-color: $select-item-disabled-bg;
-      }
-    }
-  }
   /* stylelint-enable */
 }
 

@@ -34,6 +34,7 @@
   $checkbox-size: k-px-to-rem(20px);
   $border-radius: k-px-to-rem(4px);
   $icon: '~icons/checked.svg';
+  $icon-disabled: '~icons/checked-disabled.svg';
 
   .k-Checkbox {
     @include k-typographyFont($font);
@@ -114,6 +115,13 @@
         background-color: $background-color-disabled;
         border-color: $background-color-disabled;
       }
+    }
+
+    .k-Checkbox__input:disabled:checked + &:before {
+      background: $background-color-disabled
+                    url($icon-disabled)
+                    no-repeat
+                    center;
     }
   }
 
