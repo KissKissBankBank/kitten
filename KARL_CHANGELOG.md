@@ -5,9 +5,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: Update `Card` examples.
+- Feature: Add `ProjectCard` component examples.
 - Fix: New organisation for components view.
 - Fix: Update `border-color` on `InformationBox` component.
 - Fix: Update all subtitles components examples.
+- Fix: Make the radio button example clickable.
+- Fix: Rename button examples.
 
 ## [10.0.0] - 2017-04-10
 
