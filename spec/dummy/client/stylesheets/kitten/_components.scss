@@ -47,23 +47,23 @@
 @include k-SliderTooltip((
   colors: (
     border: map-get($k-colors, 'primary-4'),
-    border-inactive: #eee,
+    border-inactive: map-get($k-colors, 'line-1'),
     background: map-get($k-colors, 'background-2'),
-    background-inactive: #fbfbfb,
+    background-inactive: map-get($k-colors, 'background-2'),
     text: map-get($k-colors, 'primary-1'),
-    text-inactive: #b8b8b8,
+    text-inactive: map-get($k-colors, 'font-2'),
   )
 ));
 
 @include k-Slider((
   colors: (
     progress: map-get($k-colors, 'primary-1'),
-    progress-disabled: #d8d8d8,
-    ramp: #eee,
+    progress-disabled: map-get($k-colors, 'line-2'),
+    ramp: map-get($k-colors, 'line-1'),
     handle: map-get($k-colors, 'primary-1'),
-    handle-disabled: #d8d8d8,
-    icon: #fff,
-    icon-disabled: #fff,
+    handle-disabled: map-get($k-colors, 'line-2'),
+    icon: map-get($k-colors, 'background-1'),
+    icon-disabled: map-get($k-colors, 'background-1'),
     border: map-get($k-colors, 'primary-1'),
   )
 ));
@@ -75,10 +75,10 @@
 @include k-TextInputWithButton((
   font: 'source-sans-semi-bold',
   font-size: -4,
-  color: #fff,
+  color: map-get($k-colors, 'background-1'),
   button-background: map-get($k-colors, 'primary-1'),
-  button-background-is-valid: #70c050,
-  button-background-is-error: #ff4146,
+  button-background-is-valid: map-get($k-colors, 'valid'),
+  button-background-is-error: map-get($k-colors, 'error'),
 ));
 // DEPRECATED
 @include k-TextInputWithInfo((
@@ -90,19 +90,19 @@
   error: (
     font: 'source-sans',
     font-size: -2,
-    color: #ff4146,
+    color: map-get($k-colors, 'error'),
   )
 ));
 
 @include k-TextInputWithUnit((
   input-font: 'source-sans',
   unit-font: 'source-sans-semi-bold',
-  border-color: #d8d8d8,
+  border-color: map-get($k-colors, 'line-2'),
   color: map-get($k-colors, 'font-1'),
   unit-color: map-get($k-colors, 'primary-1'),
-  unit-colors-is-valid: #70c050,
-  unit-colors-is-error: #ff4146,
-  unit-colors-is-inactive: #b8b8b8,
+  unit-colors-is-valid: map-get($k-colors, 'valid'),
+  unit-colors-is-error: map-get($k-colors, 'error'),
+  unit-colors-is-inactive: map-get($k-colors, 'font-2'),
 ));
 
 // Footer
@@ -161,9 +161,9 @@
 
 @include k-PlatformSwitch((
   colors: (
-    background: #fbfbfb,
-    border: #eee,
-    background-hover: #eee,
+    background: map-get($k-colors, 'background-2'),
+    border: map-get($k-colors, 'line-1'),
+    background-hover: map-get($k-colors, 'line-1'),
     border-active: map-get($k-colors, 'primary-1'),
   )
 ));
@@ -176,16 +176,16 @@
   colors: (
     default: (
       base: map-get($k-colors, 'font-1'),
-      background: #fbfbfb,
-      border: #eee,
-      background-hover: #eee,
+      background: map-get($k-colors, 'background-2'),
+      border: map-get($k-colors, 'line-1'),
+      background-hover: map-get($k-colors, 'line-1'),
       color-active: map-get($k-colors, 'primary-1'),
       border-active: map-get($k-colors, 'primary-1'),
     ),
     secondary: (
       base: map-get($k-colors, 'font-2'),
-      background: #fbfbfb,
-      border: #eee,
+      background: map-get($k-colors, 'background-2'),
+      border: map-get($k-colors, 'line-1'),
     ),
   ),
 ));
@@ -214,8 +214,8 @@
 
 @include k-SimulatorResult((
   colors: (
-    border: #eee,
-    background: #fbfbfb,
+    border: map-get($k-colors, 'line-1'),
+    background: map-get($k-colors, 'background-2'),
     text: map-get($k-colors, 'font-1')
   ),
   label-font: source-sans-uppercase,

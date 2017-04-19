@@ -4,7 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Add `checked-disabled` and `arrow-bottom-disabled` icons svg.
+- Fix: Add `checked-disabled` and `arrow-bottom-disabled` svgs.
+- Breaking change: The k-Select mixin does not accept options anymore.
+  Please update `@import k-Select((…));` to `@import k-Select;`.
 - Fix: Update disabled color on `TextInput`, `Button` and `Select`.
 - Fix: New organisation for components view.
 - Fix: Update `border-color` on `InformationBox` component.

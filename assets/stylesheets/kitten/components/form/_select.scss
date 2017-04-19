@@ -4,24 +4,17 @@
 /// These are React Select's slightly-modified default SCSS styles, namespaced
 /// inside a k-Select style.
 ///
-/// @example scss:
+/// @example scss - Usage
 ///
-///   @import k-Select((
-///     colors: (
-///       input-bg: #fff,
-///       input-border: #d8d8d8,
-///       input-border-focus: #4a84ff,
-///       option-bg: #fbfbfb,
-///     ),
-///   ));
+/// @include k-Select;
 ///
-/// @example html:
+/// @example html
+///
 ///   <label class="k-Select__label">Select label:</label>
 ///   <div class="k-Select">
 ///     <div class="Select-control">…</div>
 ///   </div>
 ///
-// @mixin k-Select($select: ()) {
 @mixin k-Select {
 
   $options: (
@@ -183,7 +176,6 @@
 // - merged all SCSS files into one file
 // - applied our code-style
 @mixin _k-Select-ReactSelect($options) {
-  //$colors: k-map-fetch($select, 'colors');
 
   /**
    * React Select
@@ -259,9 +251,6 @@
   $select-item-border-color: darken($select-item-bg, 10%);
   $select-item-hover-color: darken($select-item-color, 5%);
   $select-item-hover-bg: darken($select-item-bg, 5%);
-  // $select-item-disabled-color: map-get($k-colors, 'font-2');
-  // $select-item-disabled-bg: map-get($k-colors, 'line-1');
-  // $select-item-disabled-border-color: darken($select-item-disabled-bg, 10%);
 
   /* stylelint-disable selector-max-specificity */
   /* stylelint-disable no-descending-specificity */
@@ -275,18 +264,6 @@
     & span {
       box-sizing: border-box;
     }
-
-    // handle disabled state
-    // &.is-disabled > .Select-control {
-    //   background-color: map-get($options, 'select-input-bg-disabled');
-    //   &:hover {
-    //     box-shadow: none;
-    //   }
-    // }
-    // &.is-disabled .Select-arrow-zone {
-    //   cursor: default;
-    //   pointer-events: none;
-    // }
   }
 
   // Base
