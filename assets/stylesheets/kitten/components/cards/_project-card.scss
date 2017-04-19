@@ -37,12 +37,6 @@
 
 @mixin k-ProjectCard {
   .k-ProjectCard {
-    margin: 0 k-px-to-rem(20px) k-px-to-rem(20px);
-
-    @include k-media-min('s') {
-      margin: 0 k-px-to-rem(10px) k-px-to-rem(20px);
-    }
-
     &.is-disabled {
       filter: grayscale(1) opacity(0.4);
     }
