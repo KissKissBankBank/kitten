@@ -54,7 +54,7 @@ describe('<LegoGrid.Item />', () => {
       expect(legoGridItem).to.have.tagName('div')
     })
 
-    it('has a default classes', () => {
+    it('has default classes', () => {
       expect(legoGridItem).to.have.className('k-LegoGrid__item')
       expect(legoGridItem).to.have.descendants('.k-LegoGrid__item__content')
     })
