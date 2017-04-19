@@ -18,7 +18,8 @@ export const KarlRadioButtonError = () => (
 export const KarlRadioButtonContentError = () => (
   <div className="k-TextInputWithInfo">
     <RadioButton error
-                 name="karlradiobuttoncontenterror"
+                 id="karl-radio-button-with-content-error"
+                 name="karl-radio-button-with-content"
                  text="Error">
        Quam multa enim, quae nostra causa numquam faceremus,
        facimus causa amicorum! precari ab indigno, supplicare, tum
