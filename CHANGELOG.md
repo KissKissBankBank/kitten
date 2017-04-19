@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `HtmlSafe` component.
 - Feature: Add `Container` component.
 
 ## [10.2.0] - 2017-04-11
