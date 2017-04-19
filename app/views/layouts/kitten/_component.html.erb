@@ -2,12 +2,7 @@
   <%= title %>
 </h3>
 
-<% if defined?(examples_display) && examples_display == :vertical %>
-  <% classname = 'karl-Section__example--vertical' %>
-<% else %>
-<% end %>
-
-  <%= render template: "kitten/#{component}" %>
+<%= render template: "kitten/#{component}" %>
 
 <% if description.present? %>
   <section class="karl-Section__example">
@@ -16,3 +11,5 @@
     </div>
   </section>
 <% end %>
+
+<%= react_component 'Separator', props: { darker: true } %>

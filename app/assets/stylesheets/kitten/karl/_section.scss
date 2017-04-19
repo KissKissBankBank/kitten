@@ -18,13 +18,6 @@
   }
 }
 
-.karl-Section__example--vertical {
-  flex-direction: column;
-
-  padding-bottom: 3em;
-  border-bottom: 1px solid map-get($k-colors, 'line-2');
-}
-
 .karl-Section__title {
   margin-top: 2rem;
   margin-bottom: 1rem;
@@ -38,7 +31,7 @@
 // Section Example
 .karl-Example {
   clear: both;
-  margin-bottom: k-px-to-rem(30px);
+  margin-bottom: k-px-to-rem(50px);
 }
 
 .karl-Example__title {
