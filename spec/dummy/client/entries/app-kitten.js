@@ -81,7 +81,6 @@ import { CallToActionPopover } from 'kitten/components/popovers/call-to-action-p
 
 // Simulators
 import LoanSimulator from 'kitten/components/simulators/loan-simulator'
-import SimulatorResult from 'kitten/components/simulators/simulator-result'
 
 // Steppers
 import { Stepper } from 'kitten/components/steppers/stepper'
@@ -256,7 +255,6 @@ ReactOnRails.register({
 
   // Simulators
   LoanSimulator,
-  SimulatorResult,
 
   // Steppers
   Stepper,
