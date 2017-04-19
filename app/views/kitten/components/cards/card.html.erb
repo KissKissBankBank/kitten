@@ -1,25 +1,56 @@
 <div class="k-Grid">
-  <div class="k-Grid__col k-Grid__col--12">
-    <%= example 'Light' do %>
-      <div style="background: #333; padding: 3rem">
-        <div class="k-Card k-Card--light">
-          <img src="https://placehold.it/1000x600/4a84ff/4a84ff"
-               alt=""
-               style="width: 100%; display: block" />
-        </div>
+  <div class="k-Grid__col k-Grid__col--12 k-Grid__col--3@l">
+    <div class="k-Grid">
+      <div class="k-Grid__col k-Grid__col--12 k-Grid__col--4@s k-Grid__col--12@l">
+        <%= example 'With micro radius' do %>
+          <%= react_component('KarlCard', props: {
+              rounded: 'micro',
+          }) %>
+        <% end %>
       </div>
-    <% end %>
+      <div class="k-Grid__col k-Grid__col--12 k-Grid__col--4@s k-Grid__col--12@l">
+        <%= example 'With tiny radius' do %>
+          <%= react_component('KarlCard', props: {
+              rounded: 'tiny',
+          }) %>
+        <% end %>
+      </div>
+      <div class="k-Grid__col k-Grid__col--12 k-Grid__col--4@s k-Grid__col--12@l">
+        <%= example 'With normal radius' do %>
+          <%= react_component('KarlCard', props: {
+              rounded: true,
+          }) %>
+        <% end %>
+      </div>
+    </div>
   </div>
 
-  <div class="k-Grid__col k-Grid__col--12">
-    <%= example 'Padded' do %>
-      <div style="background: #333; padding: 3rem">
-        <div class="k-Card k-Card--light k-Card--padded">
-          <img src="https://placehold.it/1000x600/4a84ff/4a84ff"
-               alt=""
-               style="width: 100%; display: block"/>
-        </div>
+  <div class="k-Grid__col k-Grid__col--12 k-Grid__col--3@l">
+    <div class="k-Grid">
+      <div class="k-Grid__col k-Grid__col--12 k-Grid__col--4@s k-Grid__col--12@l">
+        <%= example 'With micro radius and border' do %>
+          <%= react_component('KarlCard', props: {
+              rounded: 'micro',
+              withBorder: true,
+          }) %>
+        <% end %>
       </div>
-    <% end %>
+      <div class="k-Grid__col k-Grid__col--12 k-Grid__col--4@s k-Grid__col--12@l">
+        <%= example 'With tiny radius and border' do %>
+          <%= react_component('KarlCard', props: {
+              rounded: 'tiny',
+              withBorder: true,
+          }) %>
+        <% end %>
+      </div>
+      <div class="k-Grid__col k-Grid__col--12 k-Grid__col--4@s k-Grid__col--12@l">
+        <%= example 'With normal radius and border' do %>
+          <%= react_component('KarlCard', props: {
+              rounded: true,
+              withBorder: true,
+          }) %>
+        <% end %>
+      </div>
+    </div>
   </div>
 </div>

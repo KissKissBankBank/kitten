@@ -31,7 +31,9 @@ export const card = (WrappedComponent, wrappedProps) => {
       {
         'k-Card--light': light,
         'k-Card--padded': padded,
-        'k-Card--rounded': rounded,
+        'k-Card--microRounded': rounded == 'micro',
+        'k-Card--tinyRounded': rounded == 'tiny',
+        'k-Card--rounded': rounded == true,
         'k-Card--translateOnHover': translateOnHover,
         'k-Card--withBorder': withBorder,
         'k-Card--withShadow': withShadow,
@@ -46,4 +48,8 @@ export const card = (WrappedComponent, wrappedProps) => {
   }
 
   return Card
+}
+
+card.propTypes = {
+  rounded: React.PropTypes.oneOf(['micro', 'tiny']),
 }

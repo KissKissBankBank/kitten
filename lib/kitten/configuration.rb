@@ -50,10 +50,10 @@ module Kitten
           label: 'Buttons',
           components: [
             'components/buttons/button',
-            'components/buttons/button-icon',
-            'components/buttons/button-with-icon-words',
-            'components/buttons/button-image',
-            'components/buttons/button-image-with-text',
+            'components/buttons/icon-button',
+            'components/buttons/icon-button-with-words',
+            'components/buttons/image-button',
+            'components/buttons/image-button-with-text',
             'components/buttons/tag-button',
             'components/buttons/payment-button',
             'components/buttons/button-with-badge',
@@ -120,6 +120,7 @@ module Kitten
           label: 'Presentation elements',
           components: [
             'components/cards/card',
+            'components/cards/project-card',
             'components/heroes/hero',
             'components/press/press-quotes',
             'components/testimonies/testimony',

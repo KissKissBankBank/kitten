@@ -4,6 +4,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `rounded="micro"` and `rounded="tiny"` to the `Card` component.
+- Feature: Add `ProjectCard` component.
+- Feature: Add `withoutPointerEvents` prop to `ButtonImage` component.
+- Feature: Add `CheckedCircleIcon`, `ClockCircleIcon`, `CrossCircleIcon`,
+  `LockIcon` and `WarningCircleIcon` components.
+- Feature: Add `tiny` prop to `TagList` component.
+- Feature: Update grid in `LegoGrid.Item` component.
 - Feature: Add `Container` component.
 
 ## [10.2.0] - 2017-04-11

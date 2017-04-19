@@ -33,10 +33,15 @@ export class TagList extends React.Component {
   }
 
   render() {
-    const { className, items, ...others } = this.props
+    const { className, tiny, items, ...others } = this.props
+    const listClassName = classNames(
+      'k-TagList',
+      { 'k-TagList--tiny': tiny },
+      className,
+    )
 
     return (
-      <ul className={ classNames('k-TagList', className) } { ...others }>
+      <ul className={ listClassName } { ...others }>
         { this.renderItems() }
       </ul>
     )
@@ -45,5 +50,6 @@ export class TagList extends React.Component {
 
 TagList.defaultProps = {
   className: null,
+  tiny: false,
   items: [],
 }
