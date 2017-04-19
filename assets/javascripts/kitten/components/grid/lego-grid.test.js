@@ -54,8 +54,9 @@ describe('<LegoGrid.Item />', () => {
       expect(legoGridItem).to.have.tagName('div')
     })
 
-    it('has a default class', () => {
+    it('has a default classes', () => {
       expect(legoGridItem).to.have.className('k-LegoGrid__item')
+      expect(legoGridItem).to.have.descendants('.k-LegoGrid__item__content')
     })
   })
 
@@ -72,40 +73,6 @@ describe('<LegoGrid.Item />', () => {
 
     it('has text', () => {
       expect(legoGridItem).to.have.text('Lorem ipsum…')
-    })
-  })
-})
-
-describe('<LegoGrid.ItemContent />', () => {
-  describe('by default', () => {
-    const content = shallow(<LegoGrid.ItemContent />)
-
-    it('is a <div />', () => {
-      expect(content).to.have.tagName('div')
-    })
-
-    it('has a default class', () => {
-      expect(content).to.have.className('k-LegoGrid__item__content')
-    })
-  })
-
-  describe('with a custom class', () => {
-    const content = shallow(<LegoGrid.ItemContent className="custom__class" />)
-
-    it('has a custom class', () => {
-      expect(content).to.have.className('custom__class')
-    })
-  })
-
-  describe('with children', () => {
-    const content = shallow(
-      <LegoGrid.ItemContent>
-        Lorem ipsum…
-      </LegoGrid.ItemContent>
-    )
-
-    it('has text', () => {
-      expect(content).to.have.text('Lorem ipsum…')
     })
   })
 })

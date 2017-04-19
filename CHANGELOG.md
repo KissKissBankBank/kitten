@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `LegoGrid.ItemContent` component.
+- Feature: Update grid in `LegoGrid.Item` component.
 - Feature: Add `Container` component.
 
 ## [10.2.0] - 2017-04-11
