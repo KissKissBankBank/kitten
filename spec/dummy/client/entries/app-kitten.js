@@ -169,6 +169,7 @@ import { KarlAlert,
 import { KarlIconBadgeWithSvg } from 'kitten/karl/notifications/icon-badge'
 import { KarlLegoGrid } from 'kitten/karl/grid/lego-grid'
 import { KarlTagList } from 'kitten/karl/lists/tag-list'
+import { KarlCard } from 'kitten/karl/cards/card'
 import { KarlBrowsing } from 'app/browsing/browsing'
 
 ReactOnRails.register({
@@ -335,5 +336,6 @@ ReactOnRails.register({
   KarlMakerWhoAmIStep,
   KarlLegoGrid,
   KarlTagList,
+  KarlCard,
   KarlBrowsing,
 })
