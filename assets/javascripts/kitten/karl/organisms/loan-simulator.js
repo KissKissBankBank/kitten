@@ -2,42 +2,40 @@ import defaultProps from 'kitten/hoc/default-props'
 import React from 'react'
 import LoanSimulator from 'kitten/components/simulators/loan-simulator'
 
-const nbsp = String.fromCharCode(160)
 const KarlLoanSimulator = defaultProps(LoanSimulator, {
-  amountLabel: 'J’ai besoin de',
-  amountPlaceholder: `Entre 200${nbsp}€ et 10${nbsp}000${nbsp}€`,
+  amountLabel: 'I need',
+  amountPlaceholder: 'Between $200 and $10,000',
   amountMin: 200,
   amountMax: 10000,
   amountName: 'amount',
   initialAmount: null,
 
-  amountEmptyError: 'Veuillez renseigner un montant',
-  amountOutOfBoundsError: `Veuillez renseigner un montant compris entre
-                           200 et 10${nbsp}000${nbsp}€`,
+  amountEmptyError: 'Please select an amount',
+  amountOutOfBoundsError: 'Please choose an amount between $200 and $10,000',
 
-  installmentLabel: 'Je rembourse',
+  installmentLabel: 'I can reimburse',
   installmentName: 'installment',
 
   durationName: 'duration',
 
-  sliderPlaceholder: 'Glisser pour sélectionner',
+  sliderPlaceholder: 'Slide to choose',
 
-  durationText: 'soit',
+  durationText: 'therefore',
   durationMin: 1,
   durationMax: 36,
-  durationSymbol: 'mensualité',
-  durationSymbolPlural: 'mensualités',
+  durationSymbol: 'month',
+  durationSymbolPlural: 'months',
 
-  currencySymbol: '€',
-  installmentSymbol: '€/mois',
+  currencySymbol: '$',
+  installmentSymbol: '$/month',
   locale: 'fr',
 
-  actionLabel: `C’est parti${nbsp}!`,
+  actionLabel: 'Go!',
 })
 
 const KarlLoanSimulatorWithCommission = defaultProps(KarlLoanSimulator, {
   displayCommission: true,
-  commissionLabel: `Commission${nbsp}:`,
+  commissionLabel: 'Commission:',
 
   commissionRules: [
     { durationMax: 9, rate: 0.03 },
@@ -55,8 +53,8 @@ const KarlLoanSimulatorWithCommission = defaultProps(KarlLoanSimulator, {
 const KarlLoanSimulatorWithfeesExemption = defaultProps(KarlLoanSimulator, {
   displayCommission: true,
   feesExemption: true,
-  feesExemptionLabel: `au lieu de`,
-  commissionLabel: `Commission${nbsp}:`,
+  feesExemptionLabel: `instead of`,
+  commissionLabel: `Commission:`,
 
   commissionRules: [
     { durationMax: 9, rate: 0.03 },
