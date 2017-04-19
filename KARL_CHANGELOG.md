@@ -6,7 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Fix: New organisation for components view.
 - Fix: Update `border-color` on `InformationBox` component.
-- Fix: Prefer Latin examples for Bullet List.
+- Fix: Prefer Latin examples for BulletList.
 - Fix: Update all subtitles components examples.
 - Fix: Make the radio button example clickable.
 - Fix: Rename button examples.
