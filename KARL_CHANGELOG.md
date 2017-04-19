@@ -8,6 +8,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fix: Update `border-color` on `InformationBox` component.
 - Fix: Update all subtitles components examples.
 - Fix: Make the radio button example clickable.
+- Fix: Rename button examples.
 
 ## [10.0.0] - 2017-04-10
 
