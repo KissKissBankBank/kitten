@@ -209,7 +209,7 @@
 
 @include k-LoanSimulator((
   colors: (
-    error: red
+    error: map-get($k-colors, 'error'),
   )
 ));
 
@@ -217,7 +217,7 @@
   colors: (
     border: map-get($k-colors, 'line-1'),
     background: map-get($k-colors, 'background-2'),
-    text: map-get($k-colors, 'font-1')
+    text: map-get($k-colors, 'font-1'),
   ),
   label-font: source-sans-uppercase,
   value-font: source-sans-semi-bold,
