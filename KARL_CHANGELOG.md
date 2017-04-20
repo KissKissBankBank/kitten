@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Delete `SimulatorResult` component.
+- Breaking change: Delete `SimulatorResult` component.
 - Fix: Update `Card` examples.
 - Feature: Add `ProjectCard` component examples.
 - Fix: New organisation for components view.
