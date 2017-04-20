@@ -110,7 +110,6 @@ module Kitten
           components: [
             'components/meters/progress',
             'components/simulators/loan-simulator',
-            'components/simulators/simulator-result',
             'components/teaser/teaser',
             'components/popovers/popover',
           ],

@@ -220,16 +220,6 @@
   )
 ));
 
-@include k-SimulatorResult((
-  colors: (
-    border: #eee,
-    background: #fbfbfb,
-    text: map-get($k-colors, 'font-1')
-  ),
-  label-font: source-sans-uppercase,
-  value-font: source-sans-semi-bold,
-));
-
 // Steppers
 
 @include k-Stepper;
