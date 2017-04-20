@@ -11,13 +11,17 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   Please update `@import k-Select((…));` to `@import k-Select;`.
 - Fix: Update disabled color on `TextInput`, `TextInputAndSelect`, `Button`
   and `Select`.
+- Breaking change: Delete `SimulatorResult` component.
 - Fix: Update `Card` examples.
 - Feature: Add `ProjectCard` component examples.
 - Fix: New organisation for components view.
 - Fix: Update `border-color` on `InformationBox` component.
+- Fix: Prefer Latin examples for BulletList.
 - Fix: Update all subtitles components examples.
 - Fix: Make the radio button example clickable.
 - Fix: Rename button examples.
+- Fix: Loan Simulator example in English.
+- Fix: English spelling fixes.
 
 ## [10.0.0] - 2017-04-10
 
