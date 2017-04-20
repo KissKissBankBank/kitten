@@ -1,4 +1,4 @@
-<% Kitten.configuration.default_categories.each do |category| %>
+<% Kitten.configuration.component_categories.each do |category| %>
   <%= render_category(category) %>
   <% category[:components].each do |component| %>
     <%= render_component(component) %>

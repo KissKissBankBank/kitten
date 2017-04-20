@@ -17,13 +17,29 @@ module Kitten
     # This option is used to pass an array of output bundles different from
     # `application-bundle` for hot reloading.
     attr_accessor :webpack_output_bundles
-    attr_accessor :default_categories
+    attr_accessor :component_categories
+    attr_accessor :branding_categories
 
     def initialize
       self.webpack_output_bundles = ['application-bundle.js']
     end
 
-    def default_categories
+    def branding_categories
+      [
+        {
+          id: 'brand-colors',
+          label: 'Brand colors',
+          components: [
+            'branding/colors/common',
+            'branding/colors/kisskissbankbank',
+            'branding/colors/hellomerci',
+            'branding/colors/lendopolis',
+          ],
+        }
+      ]
+    end
+
+    def component_categories
       [
         {
           id: 'grid-system',
