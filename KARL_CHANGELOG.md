@@ -5,7 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: Add k-Grid class on `Slider`, `Bullet-list`, `Progress` and
-  `Text-input-with-unit` component.
+  `Text-input-with-unit` components.
 - Breaking change: Delete `SimulatorResult` component.
 - Fix: Update `Card` examples.
 - Feature: Add `ProjectCard` component examples.
