@@ -1,8 +1,10 @@
-window.karl   = (function(karl) {
-  var $menu   = $('[data-karl-menu]')
-  var $links  = $('[data-karl-menu-link]')
-  var $toggle = $('[data-karl-menu-toggle]')
-  var $items  = $('[data-karl-menu-list] a')
+window.karl    = (function(karl) {
+  var $menu    = $('[data-karl-menu]')
+  var $links   = $('[data-karl-menu-link]')
+  var $toggle  = $('[data-karl-menu-toggle]')
+  var $items   = $('[data-karl-menu-list] a')
+  var $section = $('[data-karl-section]')
+  var $opacity = $('[data-karl-section-opacity]')
 
   karl.initMenu = function() {
 
@@ -14,6 +16,13 @@ window.karl   = (function(karl) {
       } else {
         $menu.toggleClass('is-opened')
         $menu.removeClass('is-clicked')
+      }
+    })
+
+    // Manage opacity body when menu opening
+    $opacity.click(function() {
+      if ($menu.hasClass('is-opened')) {
+        $section.addClass('with-opacity')
       }
     })
 

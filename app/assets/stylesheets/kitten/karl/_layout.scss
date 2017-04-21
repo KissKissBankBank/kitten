@@ -4,6 +4,10 @@ $karl-color-4: map-get($k-colors, 'primary-4');
 
 .karl-Main {
   background-color: map-get($k-colors, 'background-2');
+
+  &.with-opacity {
+    background-color: green;
+  }
 }
 
 // Utilities
