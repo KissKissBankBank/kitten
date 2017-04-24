@@ -9,7 +9,7 @@ import { SliderWithTooltipAndPower }
   from 'kitten/components/sliders/slider-with-tooltip-and-power'
 import { TextInputWithUnit } from 'kitten/components/form/text-input-with-unit'
 
-class LoanSimulator extends React.Component {
+class LoanSimulatorComponent extends React.Component {
   constructor(props) {
     super(props)
 
@@ -369,7 +369,7 @@ class LoanSimulatorContent extends React.Component {
   }
 }
 
-LoanSimulator.propTypes = {
+LoanSimulatorComponent.propTypes = {
   // Label for amount input
   amountLabel: React.PropTypes.string,
 
@@ -439,7 +439,7 @@ LoanSimulator.propTypes = {
   actionLabel: React.PropTypes.string,
 }
 
-LoanSimulator.defaultProps = {
+LoanSimulatorComponent.defaultProps = {
   amountLabel: 'Amount',
   amountPlaceholder: '',
   amountMin: 1,
@@ -478,3 +478,14 @@ LoanSimulator.defaultProps = {
 }
 
 export default LoanSimulator
+
+
+// Add card generic styles.
+
+export const LoanSimulator = card(LoanSimulatorComponent, {
+  light: true,
+  withBorder: true,
+  withShadow: true,
+  translateOnHover: true,
+})
+

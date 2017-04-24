@@ -2,7 +2,7 @@ import defaultProps from 'kitten/hoc/default-props'
 import React from 'react'
 import LoanSimulator from 'kitten/components/simulators/loan-simulator'
 
-const KarlLoanSimulator = defaultProps(LoanSimulator, {
+const KarlLoanSimulator = defaultProps(LoanSimulatorComponent, {
   amountLabel: 'I need',
   amountPlaceholder: 'Between $200 and $10,000',
   amountMin: 200,
