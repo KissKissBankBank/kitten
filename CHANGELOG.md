@@ -11,6 +11,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fix: Update disabled color on `TextInput`, `TextInputAndSelect`, `Button`
   and `Select`.
 - Breaking change: The k-Select mixin does not accept options anymore.
+- Breaking change: Remove `react-on-rails` module as dependency.
+  To be retro-compatible, add the dependency on your project's `package.json`:
+  ```
+  "dependencies": {
+    "react-on-rails": "~6.10.1"
+  }
+  ```
+- Fix: Update `react_on_rails` gem dependency to `6.10.1`
 - Feature: Add `rounded="micro"` and `rounded="tiny"` to the `Card` component.
 - Feature: Add `ProjectCard` component.
 - Feature: Add `withoutPointerEvents` prop to `ButtonImage` component.
