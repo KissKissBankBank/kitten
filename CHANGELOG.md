@@ -4,30 +4,38 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `Card` component on `LoanSimulator` component examples.
-- Fix: Add `validOnSelect`, `disabled` props to the `TextInputAndSelect` component.
-- Fix: Add `valid`, `disabled` props to the `SelectWithState` component.
-- Fix: Add `checked-disabled` and `arrow-bottom-disabled` svgs.
+
+## [11.0.0] - 2017-04-24
+
+Breaking changes:
+- Delete `SimulatorResult` component.
+- The `k-Select` mixin does not accept options anymore.
   Please update `@import k-Select((…));` to `@import k-Select;`.
-- Fix: Update disabled color on `TextInput`, `TextInputAndSelect`, `Button`
-  and `Select`.
-- Breaking change: The k-Select mixin does not accept options anymore.
-- Breaking change: Remove `react-on-rails` module as dependency.
+- Remove `react-on-rails` module as dependency.
   To be retro-compatible, add the dependency on your project's `package.json`:
   ```
   "dependencies": {
     "react-on-rails": "~6.10.1"
   }
   ```
-- Fix: Update `react_on_rails` gem dependency to `6.10.1`
-- Feature: Add `rounded="micro"` and `rounded="tiny"` to the `Card` component.
-- Feature: Add `ProjectCard` component.
-- Feature: Add `withoutPointerEvents` prop to `ButtonImage` component.
-- Feature: Add `CheckedCircleIcon`, `ClockCircleIcon`, `CrossCircleIcon`,
-  `LockIcon` and `WarningCircleIcon` components.
-- Feature: Add `tiny` prop to `TagList` component.
-- Feature: Update grid in `LegoGrid.Item` component.
-- Feature: Add `Container` component.
+
+Features:
+- Add `rounded="micro"` and `rounded="tiny"` to the `Card` component.
+- Add `ProjectCard` component.
+- Add `withoutPointerEvents` prop to `ButtonImage` component.
+- Add `CheckedCircleIcon`, `ClockCircleIcon`, `CrossCircleIcon`, `LockIcon` and
+  `WarningCircleIcon` components.
+- Add `tiny` prop to `TagList` component.
+- Update grid in `LegoGrid.Item` component.
+- Add `Container` component.
+
+Fixs:
+- Add `validOnSelect`, `disabled` props to the `TextInputAndSelect` component.
+- Add `valid`, `disabled` props to the `SelectWithState` component.
+- Add `checked-disabled` and `arrow-bottom-disabled` svgs.
+- Update disabled color on `TextInput`, `TextInputAndSelect`, `Button` and
+  `Select`.
+- Update `react_on_rails` gem dependency to `6.10.1`
 
 ## [10.2.0] - 2017-04-11
 
