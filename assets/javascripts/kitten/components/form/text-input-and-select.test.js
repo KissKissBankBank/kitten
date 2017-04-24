@@ -43,9 +43,7 @@ describe('<TextInputWithSelect />', () => {
     it('pass the tiny prop to <TextInput />', () => {
       const component = shallow(<TextInputAndSelect tiny />)
       const textInput = component.find(TextInput)
-      const expectedProps = {
-        tiny: true
-      }
+      const expectedProps = { tiny: true }
 
       expect(textInput.props()).to.contain.all.keys(expectedProps)
     })
@@ -58,6 +56,45 @@ describe('<TextInputWithSelect />', () => {
       const expectedProps = { disabled: true }
 
       expect(textInput.props()).to.contain.any.keys(expectedProps)
+    })
+
+    it('pass the disabled prop to <SelectWithState />', () => {
+      const component = shallow(<TextInputAndSelect disabled />)
+      const selectWithState = component.find(SelectWithState)
+      const expectedProps = { disabled: true }
+
+      expect(selectWithState.props()).to.contain.any.keys(expectedProps)
+    })
+
+  })
+
+  describe('with error prop', () => {
+    it('pass the error prop to <TextInput />', () => {
+      const component = shallow(<TextInputAndSelect error />)
+      const textInput = component.find(TextInput)
+      const expectedProps = { error: true }
+
+      expect(textInput.props()).to.contain.any.keys(expectedProps)
+    })
+  })
+
+  describe('with valid prop', () => {
+    it('pass the valid prop to <TextInput />', () => {
+      const component = shallow(<TextInputAndSelect valid />)
+      const textInput = component.find(TextInput)
+      const expectedProps = { valid: true }
+
+      expect(textInput.props()).to.contain.any.keys(expectedProps)
+    })
+  })
+
+  describe('with validOnSelect prop', () => {
+    it('pass the validOnSelect prop to <SelectWithState />', () => {
+      const component = shallow(<TextInputAndSelect validOnSelect />)
+      const selectWithState = component.find(SelectWithState)
+      const expectedProps = { valid: true }
+
+      expect(selectWithState.props()).to.contain.any.keys(expectedProps)
     })
   })
 
