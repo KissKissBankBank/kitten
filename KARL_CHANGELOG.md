@@ -4,15 +4,16 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `Card` component on `LoanSimulator` component examples.
+
 ## [11.0.0] - 2017-04-24
 
 Features:
-- Update react-on-rails module dependency to `6.10.1`.
+- Update react-on-rails module dependency to 6.10.1.
 - Add `ProjectCard` component examples.
 
-Fixs:
+Fixes:
 - Add k-Grid class on `Slider`, `Bullet-list`, `Progress` and
-- Feature: Add `Card` component on `LoanSimulator` component examples.
   `Text-input-with-unit` components.
 - Update `Card` examples.
 - New organisation for components view.
