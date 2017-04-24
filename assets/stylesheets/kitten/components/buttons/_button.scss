@@ -70,9 +70,9 @@
       background-color: map-get($k-colors, 'background-1'),
     ),
     disabled: (
-      color: #fff,
+      color: map-get($k-colors, 'font-2'),
       border-color: map-get($k-colors, 'line-2'),
-      background-color: map-get($k-colors, 'line-2'),
+      background-color: map-get($k-colors, 'line-1'),
     ),
   );
 
@@ -103,9 +103,9 @@
       background-color: map-get($k-colors, 'primary-3'),
     ),
     disabled: (
-      color: #fff,
+      color: map-get($k-colors, 'font-2'),
       border-color: map-get($k-colors, 'line-2'),
-      background-color: map-get($k-colors, 'line-2'),
+      background-color: map-get($k-colors, 'line-1'),
     ),
   );
 
@@ -136,9 +136,9 @@
       background-color: map-get($k-colors, 'background-1'),
     ),
     disabled: (
-      color: #fff,
+      color: map-get($k-colors, 'font-2'),
       border-color: map-get($k-colors, 'line-2'),
-      background-color: map-get($k-colors, 'line-2'),
+      background-color: map-get($k-colors, 'line-1'),
     ),
   );
 
@@ -169,9 +169,9 @@
       background-color: map-get($k-colors, 'primary-5'),
     ),
     disabled: (
-      color: #fff,
+      color: map-get($k-colors, 'font-2'),
       border-color: map-get($k-colors, 'line-2'),
-      background-color: map-get($k-colors, 'line-2'),
+      background-color: map-get($k-colors, 'line-1'),
     ),
   );
 
@@ -202,9 +202,9 @@
       background-color: map-get($k-colors, 'tertiary-3'),
     ),
     disabled: (
-      color: #fff,
+      color: map-get($k-colors, 'font-2'),
       border-color: map-get($k-colors, 'line-2'),
-      background-color: map-get($k-colors, 'line-2'),
+      background-color: map-get($k-colors, 'line-1'),
     ),
   );
 
@@ -235,9 +235,9 @@
       background-color: map-get($k-colors, 'background-3'),
     ),
     disabled: (
-      color: #fff,
+      color: map-get($k-colors, 'font-2'),
       border-color: map-get($k-colors, 'line-2'),
-      background-color: map-get($k-colors, 'line-2'),
+      background-color: map-get($k-colors, 'line-1'),
     ),
   );
 

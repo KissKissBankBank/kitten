@@ -12,6 +12,7 @@ export const TextInputAndSelect = props => {
           selectValue,
           onSelectChange,
           errorOnSelect,
+          validOnSelect,
           appendSelect,
           ...textInputProps } = props
 
@@ -45,6 +46,7 @@ export const TextInputAndSelect = props => {
                          tiny={ tiny }
                          onInputChange={ onSelectChange }
                          error={ errorOnSelect }
+                         valid={ validOnSelect }
                          disabled={ disabled } />
       </div>
     )
@@ -73,6 +75,8 @@ TextInputAndSelect.defaultProps = {
   selectValue: null,
   onSelectChange: function() {},
   errorOnSelect: false,
+  validOnSelect: false,
+  disabled: false,
   digits: null,
   appendSelect: false,
 }

@@ -37,20 +37,12 @@
       ) %>
 
       <%= react_component('RadioButton', props: {
-          id: "karl-radio-button-large-2",
-          name: "karl-radio-button-large",
-          defaultChecked: true,
-          large: true,
-          text: "Large checked",
-        }
-      ) %>
-
-      <%= react_component('RadioButton', props: {
           id: "karl-radio-button-large-3",
           name: "karl-radio-button-large",
           disabled: true,
           large: true,
-          text: "Large disabled",
+          defaultChecked: true,
+          text: "Large disabled checked",
         }
       ) %>
     <% end %>

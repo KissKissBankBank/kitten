@@ -4,17 +4,24 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Breaking change: Delete `SimulatorResult` component.
-- Fix: Update `Card` examples.
-- Feature: Add `ProjectCard` component examples.
-- Fix: New organisation for components view.
-- Fix: Update `border-color` on `InformationBox` component.
-- Fix: Prefer Latin examples for BulletList.
-- Fix: Update all subtitles components examples.
-- Fix: Make the radio button example clickable.
-- Fix: Rename button examples.
-- Fix: Loan Simulator example in English.
-- Fix: English spelling fixes.
+## [11.0.0] - 2017-04-24
+
+Features:
+- Update react-on-rails module dependency to `6.10.1`.
+- Add `ProjectCard` component examples.
+
+Fixs:
+- Add k-Grid class on `Slider`, `Bullet-list`, `Progress` and
+  `Text-input-with-unit` components.
+- Update `Card` examples.
+- New organisation for components view.
+- Update `border-color` on `InformationBox` component.
+- Prefer Latin examples for BulletList.
+- Update all subtitles components examples.
+- Make the radio button example clickable.
+- Rename button examples.
+- Loan Simulator example in English.
+- English spelling fixes.
 
 ## [10.0.0] - 2017-04-10
 
