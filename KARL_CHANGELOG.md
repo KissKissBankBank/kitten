@@ -4,13 +4,6 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Add `validOnSelect`, `disabled` props to the `TextInputAndSelect` component.
-- Fix: Add `valid`, `disabled` props to the `SelectWithState` component.
-- Fix: Add `checked-disabled` and `arrow-bottom-disabled` svgs.
-- Breaking change: The k-Select mixin does not accept options anymore.
-  Please update `@import k-Select((…));` to `@import k-Select;`.
-- Fix: Update disabled color on `TextInput`, `TextInputAndSelect`, `Button`
-  and `Select`.
 - Fix: Add k-Grid class on `Slider`, `Bullet-list`, `Progress` and
   `Text-input-with-unit` components.
 - Breaking change: Delete `SimulatorResult` component.
