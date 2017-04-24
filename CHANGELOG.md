@@ -35,7 +35,6 @@ Fixs:
 - Update disabled color on `TextInput`, `TextInputAndSelect`, `Button` and
   `Select`.
 - Update `react_on_rails` gem dependency to `6.10.1`
->>>>>>> 4b71f0b0fbbe7b71f5c819de9e2815b631863aad
 
 ## [10.2.0] - 2017-04-11
 
