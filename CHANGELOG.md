@@ -4,7 +4,6 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `Card` component on `LoanSimulator` component examples.
 - Feature: Add `rounded="micro"` and `rounded="tiny"` to the `Card` component.
 - Feature: Add `ProjectCard` component.
 - Feature: Add `withoutPointerEvents` prop to `ButtonImage` component.
