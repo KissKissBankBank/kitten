@@ -12,6 +12,7 @@ Features:
 
 Fixs:
 - Add k-Grid class on `Slider`, `Bullet-list`, `Progress` and
+- Feature: Add `Card` component on `LoanSimulator` component examples.
   `Text-input-with-unit` components.
 - Update `Card` examples.
 - New organisation for components view.
