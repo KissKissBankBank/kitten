@@ -9,7 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [11.0.0] - 2017-04-24
 
 Features:
-- Update react-on-rails module dependency to 6.10.1.
+- Update react-on-rails module dependency to `6.10.1`.
 - Add `ProjectCard` component examples.
 
 Fixes:
