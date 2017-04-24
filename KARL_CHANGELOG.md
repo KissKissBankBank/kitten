@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Update react-on-rails module dependency to `6.10.1`.
 - Breaking change: Delete `SimulatorResult` component.
 - Fix: Update `Card` examples.
 - Feature: Add `ProjectCard` component examples.
