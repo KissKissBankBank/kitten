@@ -11,6 +11,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   Please update `@import k-Select((…));` to `@import k-Select;`.
 - Fix: Update disabled color on `TextInput`, `TextInputAndSelect`, `Button`
   and `Select`.
+- Fix: Add k-Grid class on `Slider`, `Bullet-list`, `Progress` and
+  `Text-input-with-unit` components.
 - Breaking change: Delete `SimulatorResult` component.
 - Fix: Update `Card` examples.
 - Feature: Add `ProjectCard` component examples.
