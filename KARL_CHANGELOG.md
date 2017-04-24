@@ -6,6 +6,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Update react-on-rails module dependency to `6.10.1`.
 - Breaking change: Delete `SimulatorResult` component.
+- Fix: Add k-Grid class on `Slider`, `Bullet-list`, `Progress` and
+  `Text-input-with-unit` components.
 - Fix: Update `Card` examples.
 - Feature: Add `ProjectCard` component examples.
 - Fix: New organisation for components view.
