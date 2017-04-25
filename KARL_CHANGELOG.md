@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Update menu style.
+
 ## [11.0.0] - 2017-04-24
 
 Features:

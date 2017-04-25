@@ -17,8 +17,8 @@ module Kitten
     # This option is used to pass an array of output bundles different from
     # `application-bundle` for hot reloading.
     attr_accessor :webpack_output_bundles
-    attr_accessor :component_categories
     attr_accessor :branding_categories
+    attr_accessor :component_categories
 
     def initialize
       self.webpack_output_bundles = ['application-bundle.js']

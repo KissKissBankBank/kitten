@@ -38,11 +38,11 @@
                class="karl-Menu__listItem" data-karl-menu-link
               <%= "with-arrow" if components.any? %>"><%= label %></a>
             <ul class="karl-Menu__subList">
-              <% components.each do |component_path| %>
+              <% components.each do |branding_path| %>
                 <li>
-                  <a href="#<%= component_path %>"
+                  <a href="#<%= branding_path %>"
                      class="karl-Menu__subListItem karl-Menu__link"
-                     data-karl-menu-link><%= default_title(component_path) %>
+                     data-karl-menu-link><%= default_title(branding_path) %>
                   </a>
                 </li>
               <% end %>
