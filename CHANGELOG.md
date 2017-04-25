@@ -28,7 +28,7 @@ Features:
 - Update grid in `LegoGrid.Item` component.
 - Add `Container` component.
 
-Fixs:
+Fixes:
 - Add `validOnSelect`, `disabled` props to the `TextInputAndSelect` component.
 - Add `valid`, `disabled` props to the `SelectWithState` component.
 - Add `checked-disabled` and `arrow-bottom-disabled` svgs.
