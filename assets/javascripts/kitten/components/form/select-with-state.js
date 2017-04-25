@@ -42,13 +42,15 @@ class SelectWithState extends React.Component {
   }
 
   render() {
-    const { value, onChange, className, tiny, error, ...other } = this.props
+    const { value, onChange, className, tiny, error, valid, disabled, ...other } = this.props
     const selectClassName = classNames(
       'k-Select',
       className,
       {
         'k-Select--tiny': tiny,
         'is-error': error,
+        'is-valid': valid,
+        'is-disabled': disabled,
       }
     )
 
@@ -57,6 +59,7 @@ class SelectWithState extends React.Component {
         { this.renderLabel() }
         <SelectWithMultiLevel value={ this.state.value }
                               onChange={ this.handleChange }
+                              disabled={ disabled }
                               { ...other } />
       </div>
     )
@@ -118,6 +121,8 @@ SelectWithState.defaultProps = {
   multi: false,
   labelText: null,
   error: false,
+  valid: false,
+  disabled: false,
   tiny: false,
   name: null,
   inputProps: {},

@@ -17,9 +17,11 @@
 @mixin k-TagList {
   $font: 'source-sans-semi-bold';
   $font-step: -1; // 14px.
+  $font-step-tiny: -2; // 12px.
   $color: map-get($k-colors, 'font-1');
   $spacing: k-px-to-rem(5px);
   $icon-height: k-px-to-rem(10px);
+  $icon-height-tiny: k-px-to-rem(8px);
 
   .k-TagList {
     margin: 0;
@@ -30,6 +32,10 @@
     color: $color;
     @include k-typographyFont($font);
     @include k-typographyFontSize($font-step);
+  }
+
+  .k-TagList--tiny {
+    @include k-typographyFontSize($font-step-tiny);
   }
 
   .k-TagList__item {
@@ -53,5 +59,9 @@
   .k-TagList__icon {
     height: $icon-height;
     margin-right: $spacing;
+
+    .k-TagList--tiny & {
+      height: $icon-height-tiny;
+    }
   }
 }

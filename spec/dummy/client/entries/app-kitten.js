@@ -15,6 +15,9 @@ import ButtonImageWithTextAndBadge from 'kitten/components/buttons/button-image-
 import ButtonTooltipIcon from 'kitten/components/buttons/button-tooltip-icon'
 import { TagButton } from 'kitten/components/buttons/tag-button'
 
+// Cards
+import { ProjectCard } from 'kitten/components/cards/project-card'
+
 // Dev
 import { DevGrid } from 'kitten/components/dev/dev-grid'
 
@@ -39,6 +42,7 @@ import { TextInputWithLimit } from 'kitten/components/form/text-input-with-limit
 import { TextInputWithUnit } from 'kitten/components/form/text-input-with-unit'
 
 // Grid
+import { Container } from 'kitten/components/grid/container'
 import { Grid, GridCol } from 'kitten/components/grid/grid'
 import { KarlSideLayout } from 'kitten/karl/layout/side-layout'
 
@@ -80,7 +84,6 @@ import { CallToActionPopover } from 'kitten/components/popovers/call-to-action-p
 
 // Simulators
 import LoanSimulator from 'kitten/components/simulators/loan-simulator'
-import SimulatorResult from 'kitten/components/simulators/simulator-result'
 
 // Steppers
 import { Stepper } from 'kitten/components/steppers/stepper'
@@ -123,6 +126,7 @@ import { KarlHeader,
          KarlPhoneDropdown } from 'kitten/karl/headers/header'
 import { KarlLoanSimulator,
          KarlLoanSimulatorWithCommission,
+         KarlLoanSimulatorWithfeesExemption,
          KarlLoanSimulatorWithError,
        } from 'kitten/karl/organisms/loan-simulator'
 import { KarlSideGridWithRightAside,
@@ -145,9 +149,9 @@ import { KarlParagraph,
          KarlParagraphQuaternary,
          KarlParagraphWithLink,
        } from 'kitten/karl/typography/paragraph'
-import { KarlButtonIconHeartRight,
-         KarlButtonIconHeartLeft
-       } from 'kitten/karl/buttons/button-heart-icon-words'
+import { KarlButtonIconWordsRight,
+         KarlButtonIconWordsLeft
+       } from 'kitten/karl/buttons/button-with-icon-words'
 import { KarlButtonAndText } from 'kitten/karl/buttons/button'
 import { KarlButtonIconHeart,
          KarlButtonIconMicro,
@@ -167,6 +171,8 @@ import { KarlAlert,
 import { KarlIconBadgeWithSvg } from 'kitten/karl/notifications/icon-badge'
 import { KarlLegoGrid } from 'kitten/karl/grid/lego-grid'
 import { KarlTagList } from 'kitten/karl/lists/tag-list'
+import { KarlCard } from 'kitten/karl/cards/card'
+import { KarlBrowsing } from 'app/browsing/browsing'
 
 ReactOnRails.register({
   // Box
@@ -182,6 +188,9 @@ ReactOnRails.register({
   ButtonTooltipIcon,
   TagButton,
 
+  // Cards
+  ProjectCard,
+
   // Dev
   Checkbox,
   DevGrid,
@@ -193,8 +202,6 @@ ReactOnRails.register({
   // Form
   FormAmountAndCurrency,
   FormPhoneNumber,
-  Grid,
-  GridCol,
   GrabberIcon,
   HeaderTour,
   Label,
@@ -210,6 +217,11 @@ ReactOnRails.register({
   TextInput,
   TextInputWithLimit,
   TextInputWithUnit,
+
+  // Grid
+  Container,
+  Grid,
+  GridCol,
 
   // Icons
   BurgerIcon,
@@ -249,7 +261,6 @@ ReactOnRails.register({
 
   // Simulators
   LoanSimulator,
-  SimulatorResult,
 
   // Steppers
   Stepper,
@@ -282,8 +293,8 @@ ReactOnRails.register({
   KarlButtonIconFacebookIcon,
   KarlButtonIconTwitterIcon,
   KarlButtonIconLinkedinIcon,
-  KarlButtonIconHeartRight,
-  KarlButtonIconHeartLeft,
+  KarlButtonIconWordsRight,
+  KarlButtonIconWordsLeft,
   KarlButtonAndText,
   KarlLineWithTooltip,
   KarlLineWithBigHeart,
@@ -303,6 +314,7 @@ ReactOnRails.register({
   KarlPhoneDropdown,
   KarlLoanSimulator,
   KarlLoanSimulatorWithCommission,
+  KarlLoanSimulatorWithfeesExemption,
   KarlLoanSimulatorWithError,
   KarlSideGridWithRightAside,
   KarlSideGridWithLeftAsideAndSmallSize,
@@ -328,4 +340,6 @@ ReactOnRails.register({
   KarlMakerWhoAmIStep,
   KarlLegoGrid,
   KarlTagList,
+  KarlCard,
+  KarlBrowsing,
 })

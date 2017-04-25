@@ -1,6 +1,6 @@
 <div class="k-Grid">
   <div class="k-Grid__col k-Grid__col--12 k-Grid__col--4@m k-Grid__col--4@l">
-    <%= example 'Normal' do %>
+    <%= example 'With label' do %>
       <%= react_component('RadioButton', props: {
           id: "karl-radio-button-1",
           name: "karl-radio-button",
@@ -27,7 +27,7 @@
   </div>
 
   <div class="k-Grid__col k-Grid__col--12 k-Grid__col--4@m k-Grid__col--4@l">
-    <%= example 'Large' do %>
+    <%= example 'With big label' do %>
       <%= react_component('RadioButton', props: {
           id: "karl-radio-button-large-1",
           name: "karl-radio-button-large",
@@ -37,20 +37,12 @@
       ) %>
 
       <%= react_component('RadioButton', props: {
-          id: "karl-radio-button-large-2",
-          name: "karl-radio-button-large",
-          defaultChecked: true,
-          large: true,
-          text: "Large checked",
-        }
-      ) %>
-
-      <%= react_component('RadioButton', props: {
           id: "karl-radio-button-large-3",
           name: "karl-radio-button-large",
           disabled: true,
           large: true,
-          text: "Large disabled",
+          defaultChecked: true,
+          text: "Large disabled checked",
         }
       ) %>
     <% end %>
