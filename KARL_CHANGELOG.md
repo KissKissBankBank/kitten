@@ -4,8 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add example of `ButtonImage` with border.
-- Feature: Add `Card` component on `LoanSimulator` component examples.
+## [11.1.0] - 2017-04-26
+
+Features:
+- Add example of `ButtonImage` with border.
+- Add `Card` component on `LoanSimulator` component examples.
 
 ## [11.0.0] - 2017-04-24
 

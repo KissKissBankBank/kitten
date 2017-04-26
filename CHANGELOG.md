@@ -4,7 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `withBorder` prop to `ButtonImage` component.
+## [11.1.0] - 2017-04-26
+
+Feature:
+- Add `withBorder` prop to `ButtonImage` component.
 
 ## [11.0.0] - 2017-04-24
 
