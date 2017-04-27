@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Add `BurgerIcon` and component.
+- Fix: Add `MenuIcon` and component.
 - Fix: Add `KisskissIcon` component.
 - Fix: Add `InformationIcon` component.
 

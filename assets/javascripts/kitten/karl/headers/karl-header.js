@@ -1,22 +1,34 @@
 import React from 'react'
 import classNames from 'classnames'
 import { KisskissIcon } from 'kitten/components/icons/kisskiss-icon'
-import { InformationIcon } from 'kitten/components/icons/information-icon'
-import { BurgerIcon } from 'kitten/components/icons/burger-icon'
-import { ButtonIcon } from 'kitten/components/buttons/button-con'
+import { CrossIcon } from 'kitten/components/icons/cross-icon'
+import { MenuIcon } from 'kitten/components/icons/menu-icon'
+import { ButtonIcon } from 'kitten/components/buttons/button-icon'
+import { Header,
+         HeaderItems,
+         HeaderItem } from 'kitten/components/headers/header'
+import { HeaderTitles } from 'kitten/components/headers/header-titles'
+import { HeaderLogo } from 'kitten/components/headers/header-logo'
 
-export const KarlMenuHeader = () => {
-  <div className="karl-Menu__header">
-    <ButtonIcon className="karl-Menu__header__menu" { ...props }>
-      <BurgerIcon className="k-ButtonIcon__svg" />
-    </ButtonIcon>
+export const KarlMenuHeader = () => (
 
-    <KisskissIcon className="karl-Menu__header__logo" />
+  <Header className="karl-Header karl-Menu__header" fixed>
 
-    <h3 className="karl-Menu__header__title">Styleguide</h3>
+    <HeaderItems>
 
-    <ButtonIcon className="karl-Menu__header__about" { ...props }>
-      <InformationIcon className="k-ButtonIcon__svg" />
-    </ButtonIcon>
-  </div>
-}
+      <HeaderItem>
+        <ButtonIcon data-karl-menu-toggle="true" className="karl-Menu__header__button">
+          <MenuIcon className="k-ButtonIcon__svg karl-Menu__header__icon karl-Menu__header__icon--closed" />
+          <CrossIcon className="k-ButtonIcon__svg karl-Menu__header__icon karl-Menu__header__icon--opened" />
+        </ButtonIcon>
+      </HeaderItem>
+
+      <HeaderItem>
+        <KisskissIcon className="k-Header__logo karl-Menu__header__logo" />
+      </HeaderItem>
+
+      <HeaderTitles title="Styleguide" className="karl-Menu__header__title" />
+
+    </HeaderItems>
+  </Header>
+)

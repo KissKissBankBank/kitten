@@ -6,13 +6,19 @@ $menu-color: map-get($k-colors, 'primary-3');
 // We need a fixed with to position correctly '.karl-Menu__header__title'
 $menu-width: 14rem;
 
+// ARROWS
+$arrowBottom-path: '~icons/arrow-bottom.svg';
+$arrowTop-path:    '~icons/arrow-top.svg';
+$arrowRight-path:  '~icons/arrow-right.svg';
+$arrowLeft-path:   '~icons/arrow-left.svg';
+
+@import 'kitten/normalize';
+
 // Menu Dropdown
 .karl-Menu {
   position: fixed;
   left: 0;
   z-index: 3;
-
-  width: auto;
 
   // TODO manage transition
   //transition: width 0.5s, background-color 0.5;
@@ -20,6 +26,7 @@ $menu-width: 14rem;
   &.is-opened {
     width: $menu-width;
     height: 100%;
+    margin-top: 50px;
 
     background-color: map-get($k-colors, 'primary-2');
 
@@ -41,30 +48,56 @@ $menu-width: 14rem;
   ul { margin: 0; padding: 0; }
 }
 
-.karl-Menu__header {
-  position: relative;
+.karl-Menu .karl-Menu__header {
+  background-color: map-get($k-colors, 'primary-1');
+  border: none;
+}
+
+.karl-Menu .karl-Menu__header__button {
+  background-color: $menu-color;
+  border-color:  $menu-color;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: $menu-color;
+    border-color:  $menu-color;
+
+    .karl-Menu__header__icon {
+      fill: #fff;
+    }
+  }
+}
+
+.karl-Menu .karl-Menu__header__button .karl-Menu__header__icon--closed {
+  display: block;
+  fill: #fff;
+}
+
+.karl-Menu.is-opened .karl-Menu__header__icon--closed {
+  display: none;
+}
+
+.karl-Menu .karl-Menu__header__button .karl-Menu__header__icon--opened {
+  display: none;
+  fill: #fff;
+}
+
+.karl-Menu.is-opened .karl-Menu__header__icon--opened {
+  display: block;
 }
 
 .karl-Menu__header__title {
   position: absolute;
-  text-align: center;
-  top: 0;
-
-  margin-top: 0;
-  margin-bottom: 0;
-  width: $menu-width;
-  //right: -$menu-width - $header-title-margin;
-  right: -45rem;
+  width: 100%;
 
   color: map-get($k-colors, 'background-1');
-  @include k-typographyFontSize(0);
-  text-transform: uppercase;
-  letter-spacing: 1px;
 }
 
-.karl-Menu__header__about {
-  position: relative;
-  color: map-get($k-colors, 'primary-1');
+.karl-Menu .karl-Menu__header .karl-Menu__header__logo {
+  @include k-media-max('xs') {
+    display: none;
+  }
 }
 
 .karl-Menu__content {
@@ -80,46 +113,6 @@ $menu-width: 14rem;
   // This class simulates closing on the menu only on XS media query.
   .karl-Menu.is-clicked & {
     @include k-media-xs { display: none; }
-  }
-}
-
-.karl-Menu__title {
-  display: block;
-  position: relative;
-
-  float: right;
-  height: $header-height;
-  margin-left: 2rem;
-  padding-right: $menu-padding-right;
-
-  color: white;
-  font-size: .75rem;
-  font-weight: 300;
-  letter-spacing: 1px;
-  text-align: right;
-  text-transform: uppercase;
-  text-decoration: none;
-  line-height: $header-height;
-
-  cursor: pointer;
-
-  &:before {
-    position: absolute;
-    left: -1em;
-
-    content: url($arrowRight-path);
-  }
-
-  .karl-Menu.is-opened & {
-    &:before {
-      content: url($arrowLeft-path);
-    }
-  }
-
-  .karl-Menu.is-opened.is-clicked &:before {
-    @include k-media-xs {
-      content: url($arrowRight-path);
-    }
   }
 }
 

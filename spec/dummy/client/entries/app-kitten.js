@@ -48,7 +48,7 @@ import { KarlSideLayout } from 'kitten/karl/layout/side-layout'
 
 // Icons
 import GrabberIcon from 'kitten/components/icons/grabber-icon'
-import { BurgerIcon } from 'kitten/components/icons/burger-icon'
+import { MenuIcon } from 'kitten/components/icons/menu-icon'
 import { HeartIcon } from 'kitten/components/icons/heart-icon'
 import { InformationIcon } from 'kitten/components/icons/information-icon'
 import { KisskissIcon } from 'kitten/components/icons/kisskiss-icon'
@@ -172,6 +172,7 @@ import { KarlIconBadgeWithSvg } from 'kitten/karl/notifications/icon-badge'
 import { KarlLegoGrid } from 'kitten/karl/grid/lego-grid'
 import { KarlTagList } from 'kitten/karl/lists/tag-list'
 import { KarlCard } from 'kitten/karl/cards/card'
+import { KarlMenuHeader } from 'kitten/karl/headers/karl-header'
 import { KarlBrowsing } from 'app/browsing/browsing'
 
 ReactOnRails.register({
@@ -224,7 +225,7 @@ ReactOnRails.register({
   GridCol,
 
   // Icons
-  BurgerIcon,
+  MenuIcon,
   GrabberIcon,
   InformationIcon,
   KisskissIcon,
@@ -341,5 +342,6 @@ ReactOnRails.register({
   KarlLegoGrid,
   KarlTagList,
   KarlCard,
+  KarlMenuHeader,
   KarlBrowsing,
 })
