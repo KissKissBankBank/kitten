@@ -25,6 +25,7 @@ class ProjectCardComponent extends React.Component {
         <Marger top="2" bottom="1" className="k-ProjectCard__grid--flex">
           <ButtonImage tag="span"
                        img={ { src: ownerAvatarSrc } }
+                       withBorder
                        withoutPointerEvents />
           <Paragraph className={ classNames('k-ProjectCard__grid--flex__item-fluid',
                                             'k-u-margin-left-single',

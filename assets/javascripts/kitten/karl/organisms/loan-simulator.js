@@ -1,8 +1,19 @@
 import defaultProps from 'kitten/hoc/default-props'
 import React from 'react'
 import LoanSimulator from 'kitten/components/simulators/loan-simulator'
+import { card } from 'kitten/hoc/card'
+import { Marger } from 'kitten/components/layout/marger'
 
-const KarlLoanSimulator = defaultProps(LoanSimulator, {
+const KarlLoanSimulatorCardComponent = props =>
+  <div { ...props } />
+
+const KarlLoanSimulatorCard = card(KarlLoanSimulatorCardComponent, {
+  light: true,
+  rounded: true,
+  padded: true,
+})
+
+const KarlLoanSimulatorComponent = defaultProps(LoanSimulator, {
   amountLabel: 'I need',
   amountPlaceholder: 'Between $200 and $10,000',
   amountMin: 200,
@@ -20,7 +31,7 @@ const KarlLoanSimulator = defaultProps(LoanSimulator, {
   actionLabel: 'OK',
 })
 
-const KarlLoanSimulatorWithCommission = defaultProps(KarlLoanSimulator, {
+const KarlLoanSimulatorComponentWithCommission = defaultProps(LoanSimulator, {
   displayCommission: true,
 
   commissionRules: [
@@ -36,7 +47,7 @@ const KarlLoanSimulatorWithCommission = defaultProps(KarlLoanSimulator, {
   actionLabel: null,
 })
 
-const KarlLoanSimulatorWithfeesExemption = defaultProps(KarlLoanSimulator, {
+const KarlLoanSimulatorComponentWithfeesExemption = defaultProps(LoanSimulator, {
   displayCommission: true,
   feesExemption: true,
   commissionRules: [
@@ -52,12 +63,35 @@ const KarlLoanSimulatorWithfeesExemption = defaultProps(KarlLoanSimulator, {
   actionLabel: null,
 })
 
-const KarlLoanSimulatorWithError = defaultProps(KarlLoanSimulator, {
+const KarlLoanSimulatorComponentWithError = defaultProps(LoanSimulator, {
   initialTouched: true,
   actionLabel: null,
 })
 
-export { KarlLoanSimulator,
-         KarlLoanSimulatorWithCommission,
-         KarlLoanSimulatorWithfeesExemption,
-         KarlLoanSimulatorWithError }
+export const KarlLoanSimulator = () =>
+  <KarlLoanSimulatorCard>
+    <Marger top="2" bottom="2">
+      <KarlLoanSimulatorComponent />
+    </Marger>
+  </KarlLoanSimulatorCard>
+
+export const KarlLoanSimulatorWithCommission = () =>
+  <KarlLoanSimulatorCard>
+    <Marger top="2" bottom="2">
+      <KarlLoanSimulatorComponentWithCommission />
+    </Marger>
+  </KarlLoanSimulatorCard>
+
+export const KarlLoanSimulatorWithfeesExemption = () =>
+  <KarlLoanSimulatorCard>
+    <Marger top="2" bottom="2">
+      <KarlLoanSimulatorComponentWithfeesExemption />
+    </Marger>
+  </KarlLoanSimulatorCard>
+
+export const KarlLoanSimulatorWithError = () =>
+  <KarlLoanSimulatorCard>
+    <Marger top="2" bottom="2">
+      <KarlLoanSimulatorComponentWithError />
+    </Marger>
+  </KarlLoanSimulatorCard>
