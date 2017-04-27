@@ -20,59 +20,16 @@
 <body class="k-VerticalGrid__page">
 
 <% if @groups || controller_name == "branding" %>
-  <div class="karl-Menu" data-karl-menu>
+  <div class="karl-Menu is-opened">
     <div class="karl-Menu__header">
       <a data-karl-menu-toggle="true" class="karl-Menu__title">menu</a>
       <h3 class="karl-Menu__header__title">Styleguide <strong>KissKiss&amp;Co</strong></h3>
       <div class="k-u-clearfix"></div>
     </div>
 
-    <nav class="karl-Menu__content">
-      <div class="k-u-clearfix"></div>
-
-      <%= link_to "Branding", branding_path, class: "karl-Menu__listTitle" %>
-      <ul data-karl-menu-list>
-        <% Kitten.configuration.branding_categories.each do |id:, label:, components:| %>
-          <li class="karl-Menu__list">
-            <a href="#<%= id %>"
-               class="karl-Menu__listItem" data-karl-menu-link
-              <%= "with-arrow" if components.any? %>"><%= label %></a>
-            <ul class="karl-Menu__subList">
-              <% components.each do |branding_path| %>
-                <li>
-                  <a href="#<%= branding_path %>"
-                     class="karl-Menu__subListItem karl-Menu__link"
-                     data-karl-menu-link><%= default_title(branding_path) %>
-                  </a>
-                </li>
-              <% end %>
-            </ul>
-          </li>
-        <% end %>
-      </ul>
-
-      <%= link_to "Component", components_path, class: "karl-Menu__listTitle" %>
-      <ul data-karl-menu-list>
-        <% Kitten.configuration.component_categories.each do |id:, label:, components:| %>
-          <li class="karl-Menu__list">
-            <a href="#<%= id %>"
-               class="karl-Menu__listItem" data-karl-menu-link
-              <%= "with-arrow" if components.any? %>"><%= label %></a>
-            <ul class="karl-Menu__subList">
-              <% components.each do |component_path| %>
-                <li>
-                  <a href="#<%= component_path %>"
-                     class="karl-Menu__subListItem karl-Menu__link"
-                     data-karl-menu-link><%= default_title(component_path) %>
-                  </a>
-                </li>
-              <% end %>
-            </ul>
-          </li>
-        <% end %>
-      </ul>
-
-    </nav>
+    <%= react_component 'KarlMenuContent', props: {
+        brandingCategories: Kitten.configuration.branding_categories
+      } %>
   </div>
 
   <div class="karl-Header">
