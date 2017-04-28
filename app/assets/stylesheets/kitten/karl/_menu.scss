@@ -51,6 +51,7 @@ $arrowTop-path:    '~icons/arrow-top.svg';
 .karl-Menu .karl-Menu__header__button {
   background-color: $menu-color;
   border-color:  $menu-color;
+  z-index: 1;
 
   &:hover,
   &:focus {
