@@ -17,17 +17,17 @@ export const KarlMenuHeader = () => (
       <HeaderItem>
         <ButtonIcon data-karl-menu-toggle="true"
                     className="karl-Menu__header__button">
-          <MenuIcon className="k-ButtonIcon__svg
-                               karl-Menu__header__icon
-                               karl-Menu__header__icon--closed" />
-          <CrossIcon className="k-ButtonIcon__svg
-                                karl-Menu__header__icon
-                                karl-Menu__header__icon--opened" />
+          <MenuIcon className={ classNames('k-ButtonIcon__svg',
+                                           'karl-Menu__header__icon',
+                                           'karl-Menu__header__icon--closed') } />
+          <CrossIcon className={ classNames('k-ButtonIcon__svg',
+                                            'karl-Menu__header__icon',
+                                            'karl-Menu__header__icon--opened') } />
         </ButtonIcon>
       </HeaderItem>
       <HeaderItem>
-        <KisskissIcon className="k-Header__logo
-                                 karl-Menu__header__logo" />
+        <KisskissIcon className={ classNames('k-Header__logo',
+                                             'karl-Menu__header__logo') } />
       </HeaderItem>
       <HeaderTitles title="Styleguide"
                     className="karl-Menu__header__title" />
