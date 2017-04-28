@@ -6,9 +6,14 @@ export class KarlMenuContent extends React.Component {
     super(props)
 
     this.renderBrandCategory = this.renderBrandCategory.bind(this)
+    this.renderComponentCategory = this.renderComponentCategory.bind(this)
   }
 
   renderBrandCategory(category) {
+    return <KarlMenuCategory { ...category } />
+  }
+
+  renderComponentCategory(category) {
     return <KarlMenuCategory { ...category } />
   }
 
@@ -22,6 +27,12 @@ export class KarlMenuContent extends React.Component {
         <ul>
           { this.props.brandingCategories.map(this.renderBrandCategory) }
         </ul>
+        <a href="component" className="karl-Menu__listTitle">
+          Components
+        </a>
+        <ul>
+          { this.props.componentCategories.map(this.renderComponentCategory) }
+        </ul>
       </nav>
     )
   }
@@ -34,6 +45,7 @@ class KarlMenuCategory extends React.Component {
     this.state = { opened: false }
 
     this.renderBrandComponent = this.renderBrandComponent.bind(this)
+    this.renderElementComponent = this.renderElementComponent.bind(this)
     this.handleClick = this.handleClick.bind(this)
   }
 
@@ -41,6 +53,17 @@ class KarlMenuCategory extends React.Component {
     return (
       <li>
         <a href={ `branding#${component.path}` }
+           className="karl-Menu__subListItem karl-Menu__link">
+           { component.name }
+        </a>
+      </li>
+    )
+  }
+
+  renderElementComponent(component) {
+    return (
+      <li>
+        <a href={ `component#${component.path}` }
            className="karl-Menu__subListItem karl-Menu__link">
            { component.name }
         </a>
@@ -76,6 +99,19 @@ class KarlMenuCategory extends React.Component {
         </a>
         <ul className={ karlMenuCategoryClassName }>
           { this.props.components.map(this.renderBrandComponent) }
+        </ul>
+      </li>
+    )
+
+    return (
+      <li className="karl-Menu__list">
+        <a href={ `component#${this.props.id}` }
+           className={ karlMenuItemClassName }
+           onClick= { this.handleClick }>
+          { this.props.label }
+        </a>
+        <ul className={ karlMenuCategoryClassName }>
+          { this.props.components.map(this.renderElementComponent) }
         </ul>
       </li>
     )
