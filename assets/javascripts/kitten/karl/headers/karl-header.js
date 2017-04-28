@@ -8,27 +8,29 @@ import { Header,
          HeaderItems,
          HeaderItem } from 'kitten/components/headers/header'
 import { HeaderTitles } from 'kitten/components/headers/header-titles'
-import { HeaderLogo } from 'kitten/components/headers/header-logo'
 
 export const KarlMenuHeader = () => (
 
-  <Header className="karl-Header karl-Menu__header" fixed>
-
+  <Header className="karl-Header karl-Menu__header"
+          fixed>
     <HeaderItems>
-
       <HeaderItem>
-        <ButtonIcon data-karl-menu-toggle="true" className="karl-Menu__header__button">
-          <MenuIcon className="k-ButtonIcon__svg karl-Menu__header__icon karl-Menu__header__icon--closed" />
-          <CrossIcon className="k-ButtonIcon__svg karl-Menu__header__icon karl-Menu__header__icon--opened" />
+        <ButtonIcon data-karl-menu-toggle="true"
+                    className="karl-Menu__header__button">
+          <MenuIcon className="k-ButtonIcon__svg
+                               karl-Menu__header__icon
+                               karl-Menu__header__icon--closed" />
+          <CrossIcon className="k-ButtonIcon__svg
+                                karl-Menu__header__icon
+                                karl-Menu__header__icon--opened" />
         </ButtonIcon>
       </HeaderItem>
-
       <HeaderItem>
-        <KisskissIcon className="k-Header__logo karl-Menu__header__logo" />
+        <KisskissIcon className="k-Header__logo
+                                 karl-Menu__header__logo" />
       </HeaderItem>
-
-      <HeaderTitles title="Styleguide" className="karl-Menu__header__title" />
-
+      <HeaderTitles title="Styleguide"
+                    className="karl-Menu__header__title" />
     </HeaderItems>
   </Header>
 )

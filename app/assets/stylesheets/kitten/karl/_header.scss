@@ -11,14 +11,6 @@ $header-height: 4rem;
   background-color: map-get($k-colors, 'primary-1');
 }
 
-.karl-Header__container {
-  display: flex;
-
-  @include container;
-  box-sizing: border-box;
-  padding: 0 gutter() * 2;
-}
-
 .karl-Title {
   @include k-typographyFont('source-sans-light');
   @include k-typographyFontSize(9);

@@ -1,5 +1,4 @@
 $menu-padding-right: 1rem;
-$header-title-margin: 2rem;
 
 $menu-color: map-get($k-colors, 'primary-3');
 
@@ -9,8 +8,6 @@ $menu-width: 14rem;
 // ARROWS
 $arrowBottom-path: '~icons/arrow-bottom.svg';
 $arrowTop-path:    '~icons/arrow-top.svg';
-$arrowRight-path:  '~icons/arrow-right.svg';
-$arrowLeft-path:   '~icons/arrow-left.svg';
 
 @import 'kitten/normalize';
 
@@ -56,7 +53,6 @@ $arrowLeft-path:   '~icons/arrow-left.svg';
 .karl-Menu .karl-Menu__header__button {
   background-color: $menu-color;
   border-color:  $menu-color;
-  cursor: pointer;
 
   &:hover,
   &:focus {
@@ -70,7 +66,6 @@ $arrowLeft-path:   '~icons/arrow-left.svg';
 }
 
 .karl-Menu .karl-Menu__header__button .karl-Menu__header__icon--closed {
-  display: block;
   fill: #fff;
 }
 
