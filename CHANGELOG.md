@@ -8,6 +8,16 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fix: Add `KisskissIcon` component.
 - Fix: Add `InformationIcon` component.
 
+## [11.2.0] - 2017-04-26
+
+Feature:
+- Add `withBorder` prop to `ButtonImage` in `ProjectCard`.
+
+## [11.1.0] - 2017-04-26
+
+Feature:
+- Add `withBorder` prop to `ButtonImage` component.
+
 ## [11.0.0] - 2017-04-24
 
 Breaking changes:
@@ -32,7 +42,7 @@ Features:
 - Update grid in `LegoGrid.Item` component.
 - Add `Container` component.
 
-Fixs:
+Fixes:
 - Add `validOnSelect`, `disabled` props to the `TextInputAndSelect` component.
 - Add `valid`, `disabled` props to the `SelectWithState` component.
 - Add `checked-disabled` and `arrow-bottom-disabled` svgs.

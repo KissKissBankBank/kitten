@@ -22,6 +22,7 @@ export class ButtonImage extends React.Component {
       tiny,
       big,
       withoutPointerEvents,
+      withBorder,
       img,
       ...others,
     } = this.props
@@ -32,6 +33,7 @@ export class ButtonImage extends React.Component {
         'k-ButtonImage--tiny': tiny,
         'k-ButtonImage--big': big,
         'k-ButtonImage--withoutPointerEvents': withoutPointerEvents,
+        'k-ButtonImage--withBorder': withBorder,
       },
       className,
     )
@@ -55,6 +57,7 @@ ButtonImage.defaultProps = {
   tiny: false,
   big: false,
   withoutPointerEvents: false,
+  withBorder: false,
   img: {
     className: null,
   },
