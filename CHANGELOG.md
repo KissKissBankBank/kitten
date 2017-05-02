@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Change overflow default value to manage negative margins
+  on `k-ProjectCard`.
+
 ## [11.2.0] - 2017-04-26
 
 Feature:
