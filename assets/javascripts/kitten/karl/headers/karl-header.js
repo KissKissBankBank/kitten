@@ -9,12 +9,12 @@ import { Header,
          HeaderItem } from 'kitten/components/headers/header'
 import { HeaderTitles } from 'kitten/components/headers/header-titles'
 
-export const KarlMenuHeader = () => (
+export const KarlMenuHeader = props => (
   <Header className="karl-Header karl-Menu__header"
           fixed>
     <HeaderItems>
       <HeaderItem>
-        <ButtonIcon data-karl-menu-toggle="true"
+        <ButtonIcon onClick={ props.onButtonClick }
                     className="karl-Menu__header__button">
           <MenuIcon className={ classNames('k-ButtonIcon__svg',
                                            'karl-Menu__header__icon',
@@ -33,3 +33,7 @@ export const KarlMenuHeader = () => (
     </HeaderItems>
   </Header>
 )
+
+KarlMenuHeader.defaultProps = {
+  onButtonClick: function() {},
+}

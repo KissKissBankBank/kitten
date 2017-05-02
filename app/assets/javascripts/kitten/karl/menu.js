@@ -1,8 +1,8 @@
-window.karl    = (function(karl) {
-  var $menu    = $('[data-karl-menu]')
-  var $links   = $('[data-karl-menu-link]')
-  var $toggle  = $('[data-karl-menu-toggle]')
-  var $items   = $('[data-karl-menu-list] a')
+window.karl = (function(karl) {
+  var $menu = $('[data-karl-menu]')
+  var $links = $('[data-karl-menu-link]')
+  var $toggle = $('[data-karl-menu-toggle]')
+  var $items = $('[data-karl-menu-list] a')
   var $opacity = $('[data-karl-opacity]')
 
   karl.initMenu = function() {

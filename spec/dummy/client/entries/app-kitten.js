@@ -173,7 +173,8 @@ import { KarlLegoGrid } from 'kitten/karl/grid/lego-grid'
 import { KarlTagList } from 'kitten/karl/lists/tag-list'
 import { KarlCard } from 'kitten/karl/cards/card'
 import { KarlMenuHeader } from 'kitten/karl/headers/karl-header'
-import { KarlMenuContent } from 'kitten/karl/menus/karl-menu'
+import { KarlMenu,
+         KarlMenuContent } from 'kitten/karl/menus/karl-menu'
 import { KarlBrowsing } from 'app/browsing/browsing'
 
 ReactOnRails.register({
@@ -344,6 +345,7 @@ ReactOnRails.register({
   KarlTagList,
   KarlCard,
   KarlMenuHeader,
+  KarlMenu,
   KarlMenuContent,
   KarlBrowsing,
 })

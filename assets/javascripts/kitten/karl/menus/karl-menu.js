@@ -1,5 +1,46 @@
 import React from 'react'
 import classNames from 'classnames'
+import { KarlMenuHeader } from 'kitten/karl/headers/karl-header'
+
+export class KarlMenu extends React.Component {
+  constructor(props) {
+    super(props)
+
+    this.state = { opened: false }
+    this.handleClick = this.handleClick.bind(this)
+  }
+
+  handleClick() {
+    this.setState({ opened: !this.state.opened })
+  }
+
+  renderOpacity() {
+    if (this.state.opened)
+      return <div className="karl-Opacity" onClick={ this.handleClick } />
+  }
+
+  render() {
+    const karlMenuHeaderClassName = classNames(
+      'karl-Menu',
+      {
+        'is-opened': this.state.opened,
+      },
+    )
+
+    return (
+      <div>
+        <div className={ karlMenuHeaderClassName }>
+          <KarlMenuHeader onButtonClick={ this.handleClick } />
+          <KarlMenuContent
+            brandingCategories={ this.props.brandingCategories }
+            componentCategories={ this.props.componentCategories } />
+        </div>
+
+        { this.renderOpacity() }
+      </div>
+    )
+  }
+}
 
 export class KarlMenuContent extends React.Component {
   constructor(props) {
@@ -36,6 +77,11 @@ export class KarlMenuContent extends React.Component {
       </nav>
     )
   }
+}
+
+KarlMenuContent.defaultProps = {
+  brandingCategories: [],
+  componentCategories: [],
 }
 
 class KarlMenuCategory extends React.Component {

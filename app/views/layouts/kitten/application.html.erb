@@ -20,27 +20,11 @@
 <body class="k-VerticalGrid__page">
 
 <% if @groups || controller_name == "branding" %>
-  <div class="karl-Menu">
-    <div class="karl-Menu__header">
-      <a data-karl-menu-toggle class="karl-Menu__title">menu</a>
-      <h3 class="karl-Menu__header__title">Styleguide <strong>KissKiss&amp;Co</strong></h3>
-      <div class="k-u-clearfix"></div>
-    </div>
 
-    <%= react_component 'KarlMenuContent', props: {
+  <%= react_component 'KarlMenu', props: {
         brandingCategories: Kitten.configuration.branding_categories,
         componentCategories: Kitten.configuration.component_categories
-      }
-    %>
-  </div>
-
-  <div class="karl-Header">
-    <header class="karl-Header__container">
-      <div class="karl-Header__content"></div>
-    </header>
-  </div>
-
-  <div class="karl-Opacity" data-karl-opacity style="display: none"></div>
+    } %>
 
   <div class="karl-Main">
     <div class="k-Row">
