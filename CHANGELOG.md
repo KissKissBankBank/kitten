@@ -4,11 +4,15 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Change overflow default value to manage negative margins
-  on `k-ProjectCard`.
-- Feature: Add `MenuIcon` and component.
-- Feature: Add `KissKissBankBankLogoIcon` component.
-- Feature: Add `InformationIcon` component.
+## [11.3.0] - 2017-05-02
+
+Features:
+- Add `MenuIcon` and component.
+- Add `KissKissBankBankLogoIcon` component.
+- Add `InformationIcon` component.
+
+Fix:
+- Change overflow default value to manage negative margins on `k-ProjectCard`.
 
 ## [11.2.0] - 2017-04-26
 
