@@ -2,21 +2,19 @@ module Kitten
   module ComponentsHelper
     def render_category(category)
       id = category[:id]
-      title = default_title(id)
+      title = category[:name]
       add_menu_group(id, title)
 
       content_tag(:h2, class: 'k-Row karl-Title', id: id) { title }
     end
 
     def render_component(component,
-                         title: nil,
-                         description: nil)
-      title ||= default_title(component)
+                         title: nil)
+      title ||= category[:component]
       add_menu_component(component, title)
       render 'layouts/kitten/component',
              component: component,
-             title: title,
-             description: description
+             title: title
     end
 
     def example(title = nil)
@@ -43,12 +41,5 @@ module Kitten
       group[:components] << { component_id: id, component_title: title }
     end
 
-    # Turns a type, group or component into a title.
-    #
-    # Example:
-    #   default_title('foo/bar/le-spam') #=> 'Le spam'
-    def default_title(path)
-      path.split('/').last.gsub('-', ' ').capitalize
-    end
   end
 end

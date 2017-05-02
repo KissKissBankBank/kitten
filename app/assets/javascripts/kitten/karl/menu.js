@@ -20,11 +20,11 @@ window.karl    = (function(karl) {
     })
 
     // Manage opacity body when menu opening
-    $opacity.click(function() {
-      if ($menu.hasClass('is-opened')) {
-        $section.addClass('with-opacity')
-      }
-    })
+    // $opacity.click(function() {
+    //   if ($menu.hasClass('is-opened')) {
+    //     $section.addClass('with-opacity')
+    //   }
+    // })
 
     // Manage menu closing on xs media query.
     $links.click(function() {

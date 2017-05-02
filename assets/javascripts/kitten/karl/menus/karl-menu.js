@@ -10,11 +10,11 @@ export class KarlMenuContent extends React.Component {
   }
 
   renderBrandCategory(category) {
-    return <KarlMenuCategory { ...category } />
+    return <KarlMenuCategory href="branding" { ...category } />
   }
 
   renderComponentCategory(category) {
-    return <KarlMenuCategory { ...category } />
+    return <KarlMenuCategory href="components" { ...category } />
   }
 
   render() {
@@ -27,7 +27,7 @@ export class KarlMenuContent extends React.Component {
         <ul>
           { this.props.brandingCategories.map(this.renderBrandCategory) }
         </ul>
-        <a href="component" className="karl-Menu__listTitle">
+        <a href="components" className="karl-Menu__listTitle">
           Components
         </a>
         <ul>
@@ -44,26 +44,14 @@ class KarlMenuCategory extends React.Component {
 
     this.state = { opened: false }
 
-    this.renderBrandComponent = this.renderBrandComponent.bind(this)
-    this.renderElementComponent = this.renderElementComponent.bind(this)
+    this.renderComponent = this.renderComponent.bind(this)
     this.handleClick = this.handleClick.bind(this)
   }
 
-  renderBrandComponent(component) {
+  renderComponent(component) {
     return (
       <li>
-        <a href={ `branding#${component.path}` }
-           className="karl-Menu__subListItem karl-Menu__link">
-           { component.name }
-        </a>
-      </li>
-    )
-  }
-
-  renderElementComponent(component) {
-    return (
-      <li>
-        <a href={ `component#${component.path}` }
+        <a href={ `${this.props.href}#${component.path}` }
            className="karl-Menu__subListItem karl-Menu__link">
            { component.name }
         </a>
@@ -92,50 +80,15 @@ class KarlMenuCategory extends React.Component {
 
     return (
       <li className="karl-Menu__list">
-        <a href={ `branding#${this.props.id}` }
+        <a href={ `${this.props.href}#${this.props.id}` }
            className={ karlMenuItemClassName }
            onClick= { this.handleClick }>
           { this.props.label }
         </a>
         <ul className={ karlMenuCategoryClassName }>
-          { this.props.components.map(this.renderBrandComponent) }
-        </ul>
-      </li>
-    )
-
-    return (
-      <li className="karl-Menu__list">
-        <a href={ `component#${this.props.id}` }
-           className={ karlMenuItemClassName }
-           onClick= { this.handleClick }>
-          { this.props.label }
-        </a>
-        <ul className={ karlMenuCategoryClassName }>
-          { this.props.components.map(this.renderElementComponent) }
+          { this.props.components.map(this.renderComponent) }
         </ul>
       </li>
     )
   }
 }
-
-//   <%= link_to "Component", components_path, class: "karl-Menu__listTitle" %>
-//   <ul data-karl-menu-list>
-//     <% Kitten.configuration.component_categories.each do |id:, label:, components:| %>
-//       <li class="karl-Menu__list">
-//         <a href="components#<%= id %>"
-//            class="karl-Menu__listItem" data-karl-menu-link
-//           <%= "with-arrow" if components.any? %>"><%= label %></a>
-//         <ul class="karl-Menu__subList">
-//           <% components.each do |component_path| %>
-//             <li>
-//               <a href="components#<%= component_path %>"
-//                  class="karl-Menu__subListItem karl-Menu__link"
-//                  data-karl-menu-link><%= default_title(component_path) %>
-//               </a>
-//             </li>
-//           <% end %>
-//         </ul>
-//       </li>
-//     <% end %>
-//   </ul>
-// </nav>
