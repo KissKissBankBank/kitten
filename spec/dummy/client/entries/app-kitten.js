@@ -48,7 +48,10 @@ import { KarlSideLayout } from 'kitten/karl/layout/side-layout'
 
 // Icons
 import GrabberIcon from 'kitten/components/icons/grabber-icon'
+import { MenuIcon } from 'kitten/components/icons/menu-icon'
 import { HeartIcon } from 'kitten/components/icons/heart-icon'
+import { InformationIcon } from 'kitten/components/icons/information-icon'
+import { KissKissBankBankLogoIcon } from 'kitten/components/icons/kisskissbankbanklogo-icon'
 import { VisaIcon } from 'kitten/components/icons/visa-icon'
 import { LocationIcon } from 'kitten/components/icons/location-icon'
 import { FacebookIcon } from 'kitten/components/icons/facebook-icon'
@@ -169,6 +172,7 @@ import { KarlIconBadgeWithSvg } from 'kitten/karl/notifications/icon-badge'
 import { KarlLegoGrid } from 'kitten/karl/grid/lego-grid'
 import { KarlTagList } from 'kitten/karl/lists/tag-list'
 import { KarlCard } from 'kitten/karl/cards/card'
+import { KarlMenuHeader } from 'kitten/karl/headers/karl-header'
 import { KarlBrowsing } from 'app/browsing/browsing'
 
 ReactOnRails.register({
@@ -221,7 +225,10 @@ ReactOnRails.register({
   GridCol,
 
   // Icons
+  MenuIcon,
   GrabberIcon,
+  InformationIcon,
+  KissKissBankBankLogoIcon,
   HeartIcon,
   VisaIcon,
   LocationIcon,
@@ -335,5 +342,6 @@ ReactOnRails.register({
   KarlLegoGrid,
   KarlTagList,
   KarlCard,
+  KarlMenuHeader,
   KarlBrowsing,
 })
