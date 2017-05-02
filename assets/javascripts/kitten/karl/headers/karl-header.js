@@ -1,6 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
-import { KisskissIcon } from 'kitten/components/icons/kisskiss-icon'
+import { KissKissBankBankLogoIcon } from 'kitten/components/icons/kisskissbankbank-icon'
 import { CrossIcon } from 'kitten/components/icons/cross-icon'
 import { MenuIcon } from 'kitten/components/icons/menu-icon'
 import { ButtonIcon } from 'kitten/components/buttons/button-icon'
@@ -10,7 +10,6 @@ import { Header,
 import { HeaderTitles } from 'kitten/components/headers/header-titles'
 
 export const KarlMenuHeader = () => (
-
   <Header className="karl-Header karl-Menu__header"
           fixed>
     <HeaderItems>
@@ -26,8 +25,8 @@ export const KarlMenuHeader = () => (
         </ButtonIcon>
       </HeaderItem>
       <HeaderItem>
-        <KisskissIcon className={ classNames('k-Header__logo',
-                                             'karl-Menu__header__logo') } />
+        <KissKissBankBankLogoIcon className={ classNames('k-Header__logo',
+                                                         'karl-Menu__header__logo') } />
       </HeaderItem>
       <HeaderTitles title="Styleguide"
                     className="karl-Menu__header__title" />

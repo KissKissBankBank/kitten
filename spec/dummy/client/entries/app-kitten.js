@@ -51,7 +51,7 @@ import GrabberIcon from 'kitten/components/icons/grabber-icon'
 import { MenuIcon } from 'kitten/components/icons/menu-icon'
 import { HeartIcon } from 'kitten/components/icons/heart-icon'
 import { InformationIcon } from 'kitten/components/icons/information-icon'
-import { KisskissIcon } from 'kitten/components/icons/kisskiss-icon'
+import { KissKissBankBankLogoIcon } from 'kitten/components/icons/kisskissbankbank-icon'
 import { VisaIcon } from 'kitten/components/icons/visa-icon'
 import { LocationIcon } from 'kitten/components/icons/location-icon'
 import { FacebookIcon } from 'kitten/components/icons/facebook-icon'
@@ -228,7 +228,7 @@ ReactOnRails.register({
   MenuIcon,
   GrabberIcon,
   InformationIcon,
-  KisskissIcon,
+  KissKissBankBankLogoIcon,
   HeartIcon,
   VisaIcon,
   LocationIcon,

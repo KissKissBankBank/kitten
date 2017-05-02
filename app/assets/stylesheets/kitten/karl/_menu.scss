@@ -7,7 +7,7 @@ $menu-width: 14rem;
 
 // ARROWS
 $arrowBottom-path: '~icons/arrow-bottom.svg';
-$arrowTop-path:    '~icons/arrow-top.svg';
+$arrowTop-path: '~icons/arrow-top.svg';
 
 // Menu Dropdown
 .karl-Menu {
@@ -47,6 +47,8 @@ $arrowTop-path:    '~icons/arrow-top.svg';
     border: none;
 
     .karl-Menu__header__logo {
+      fill: #fff;
+
       @include k-media-max('xs') {
         display: none;
       }
@@ -74,7 +76,6 @@ $arrowTop-path:    '~icons/arrow-top.svg';
 
     .karl-Menu__header__icon--opened {
       display: none;
-      fill: #fff;
     }
   }
 }
