@@ -37,11 +37,11 @@
 
 @mixin k-ProjectCard {
   .k-ProjectCard {
-    // Change overflow for negative margins on k-ProjectCard__status.
+    // Change overflow for negative margins on .k-ProjectCard__status.
     overflow: visible;
 
     &.is-disabled {
-      filter: grayscale(1) opacity(0.4);
+      filter: grayscale(1) opacity(.4);
     }
   }
 
