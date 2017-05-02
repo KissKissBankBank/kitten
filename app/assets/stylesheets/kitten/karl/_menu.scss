@@ -76,7 +76,6 @@ $arrowTop-path: '~icons/arrow-top.svg';
 
     .karl-Menu__header__icon--opened {
       display: none;
-      fill: #fff;
     }
   }
 }
@@ -88,6 +87,7 @@ $arrowTop-path: '~icons/arrow-top.svg';
 
   .karl-Menu__header__icon--opened {
     display: block;
+    fill: #fff;
   }
 }
 
