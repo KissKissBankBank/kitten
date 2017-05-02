@@ -1,6 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
-import { KissKissBankBankLogoIcon } from 'kitten/components/icons/kisskissbankbank-icon'
+import { KissKissBankBankLogoIcon } from 'kitten/components/icons/kisskissbankbanklogo-icon'
 import { CrossIcon } from 'kitten/components/icons/cross-icon'
 import { MenuIcon } from 'kitten/components/icons/menu-icon'
 import { ButtonIcon } from 'kitten/components/buttons/button-icon'
