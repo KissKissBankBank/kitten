@@ -32,6 +32,7 @@ export class KarlMenu extends React.Component {
         <div className={ karlMenuHeaderClassName }>
           <KarlMenuHeader onButtonClick={ this.handleClick } />
           <KarlMenuContent
+            onMenuItemClick={ this.handleClick }
             brandingCategories={ this.props.brandingCategories }
             componentCategories={ this.props.componentCategories } />
         </div>
@@ -51,11 +52,17 @@ export class KarlMenuContent extends React.Component {
   }
 
   renderBrandCategory(category) {
-    return <KarlMenuCategory href="branding" { ...category } />
+    return <KarlMenuCategory key={ category.id }
+                             href="branding"
+                             onMenuItemClick={ this.props.onMenuItemClick }
+                             { ...category } />
   }
 
   renderComponentCategory(category) {
-    return <KarlMenuCategory href="components" { ...category } />
+    return <KarlMenuCategory key={ category.id }
+                             href="components"
+                             onMenuItemClick={ this.props.onMenuItemClick }
+                             { ...category } />
   }
 
   render() {
@@ -96,9 +103,10 @@ class KarlMenuCategory extends React.Component {
 
   renderComponent(component) {
     return (
-      <li>
+      <li key={ component.path }>
         <a href={ `${this.props.href}#${component.path}` }
-           className="karl-Menu__subListItem karl-Menu__link">
+           className="karl-Menu__subListItem karl-Menu__link"
+           onClick={ this.props.onMenuItemClick }>
            { component.name }
         </a>
       </li>
@@ -128,7 +136,7 @@ class KarlMenuCategory extends React.Component {
       <li className="karl-Menu__list">
         <a href={ `${this.props.href}#${this.props.id}` }
            className={ karlMenuItemClassName }
-           onClick= { this.handleClick }>
+           onClick={ this.handleClick }>
           { this.props.label }
         </a>
         <ul className={ karlMenuCategoryClassName }>
