@@ -57,7 +57,7 @@ $arrowTop-path: '~icons/arrow-top.svg';
     background-color: map-get($k-colors, 'primary-1');
     border: none;
 
-    .karl-Menu__header__logo {t
+    .karl-Menu__header__logo {
       fill: #fff;
 
       @include k-media-max('xs') {
