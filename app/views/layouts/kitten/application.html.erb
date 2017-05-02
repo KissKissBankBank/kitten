@@ -20,7 +20,7 @@
 <body class="k-VerticalGrid__page">
 
 <% if @groups || controller_name == "branding" %>
-  <div class="karl-Menu is-opened">
+  <div class="karl-Menu">
     <div class="karl-Menu__header">
       <a data-karl-menu-toggle="true" class="karl-Menu__title">menu</a>
       <h3 class="karl-Menu__header__title">Styleguide <strong>KissKiss&amp;Co</strong></h3>
@@ -32,7 +32,6 @@
         componentCategories: Kitten.configuration.component_categories
       }
     %>
-
   </div>
 
   <div class="karl-Header">
@@ -41,10 +40,13 @@
     </header>
   </div>
 
-  <div class="karl-Main" data-karl-section>
+  <div class="karl-Opacity" data-karl-opacity style="display: none"></div>
+
+
+  <div class="karl-Main">
     <div class="k-Row">
       <div class="k-Row__content">
-        <section data-karl-section-opacity class="k-Grid">
+        <section class="k-Grid">
           <div class="k-Grid__col k-Grid__col--10 k-Grid__col--offset-1">
             <%= yield %>
           </div>

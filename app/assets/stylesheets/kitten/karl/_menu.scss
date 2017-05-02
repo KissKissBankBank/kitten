@@ -6,6 +6,17 @@ $menu-color: map-get($k-colors, 'primary-3');
 // We need a fixed with to position correctly '.karl-Menu__header__title'
 $menu-width: 14rem;
 
+// Opacity
+.karl-Opacity {
+  background-color: #f6f6f6;
+  opacity: .8;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 // Menu Dropdown
 .karl-Menu {
   position: fixed;

@@ -3,8 +3,7 @@ window.karl    = (function(karl) {
   var $links   = $('[data-karl-menu-link]')
   var $toggle  = $('[data-karl-menu-toggle]')
   var $items   = $('[data-karl-menu-list] a')
-  var $section = $('[data-karl-section]')
-  var $opacity = $('[data-karl-section-opacity]')
+  var $opacity = $('[data-karl-opacity]')
 
   karl.initMenu = function() {
 
@@ -13,18 +12,13 @@ window.karl    = (function(karl) {
       // Simulate menu closing on XS media query with a `is-clicked` class.
       if ($menu.hasClass('is-opened') && $menu.hasClass('is-clicked')) {
         $menu.removeClass('is-clicked')
+        $opacity.hide()
       } else {
         $menu.toggleClass('is-opened')
         $menu.removeClass('is-clicked')
+        $opacity.show()
       }
     })
-
-    // Manage opacity body when menu opening
-    // $opacity.click(function() {
-    //   if ($menu.hasClass('is-opened')) {
-    //     $section.addClass('with-opacity')
-    //   }
-    // })
 
     // Manage menu closing on xs media query.
     $links.click(function() {
