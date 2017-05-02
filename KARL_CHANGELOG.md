@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: Update menu style.
+- Fix: Update icons, logo and background-color header.
 
 ## [11.1.0] - 2017-04-26
 

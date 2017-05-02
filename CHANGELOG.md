@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `MenuIcon` and component.
+- Feature: Add `KissKissBankBankLogoIcon` component.
+- Feature: Add `InformationIcon` component.
+
 ## [11.2.0] - 2017-04-26
 
 Feature:
