@@ -14,9 +14,9 @@ export class KarlMenu extends React.Component {
     this.setState({ opened: !this.state.opened })
   }
 
-  renderOpacity() {
+  renderShadow() {
     if (this.state.opened)
-      return <div className="karl-Opacity" onClick={ this.handleClick } />
+      return <div className="karl-MenuShadow" onClick={ this.handleClick } />
   }
 
   render() {
@@ -37,7 +37,7 @@ export class KarlMenu extends React.Component {
             componentCategories={ this.props.componentCategories } />
         </div>
 
-        { this.renderOpacity() }
+        { this.renderShadow() }
       </div>
     )
   }
@@ -104,7 +104,7 @@ class KarlMenuCategory extends React.Component {
   renderComponent(component) {
     return (
       <li key={ component.path }>
-        <a href={ `${this.props.href}#${component.path}` }
+        <a href={ `${ this.props.href }#${ component.path }` }
            className="karl-Menu__subListItem karl-Menu__link"
            onClick={ this.props.onMenuItemClick }>
            { component.name }
