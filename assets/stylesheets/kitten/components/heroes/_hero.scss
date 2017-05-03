@@ -8,36 +8,42 @@
 ///
 /// @example html
 ///
-///  <div class="k-Hero k-Hero__grid k-Card k-Card--withBorder">
+///  <div class="k-Hero k-Hero__grid">
 ///    <div class="k-Marger">
 ///      <div class="k-Grid">
 ///        <div class="k-GridCol">
-///          <h3 class="k-Title k-Hero__title">Lorem ipsum dolor sit amet</h3>
-///          <p class="k-Paragrph">
-///            Phasellus viverra nulla ut metus varius …
-///          </p>
+///          <div class="k-Marger">
+///            <h2 class="k-Title"> … </h2>
+///            <p class="k-Paragraph"> … </p>
+///            <div class="k-Button k-Button--helium k-Button--big"> … </div>
+///          </div>
 ///        </div>
 ///        <div class="k-GridCol">
-///         <div class="k-Card k-Card--withBorder k-Hero__card" />
+///         <div class="k-Hero__card k-Card k-Card--withBorder" />
 ///        </div>
 ///      </div>
 ///    </div>
 ///  </div>
 
 @mixin k-Hero {
+  $box-shadow-values: 0 5px 15px;
+  $box-shadow-color: map-get($k-colors, 'line-1');
 
   .k-Hero {
-    height: k-px-to-rem(500px);
     background-color: map-get($k-colors, 'background-1');
     border: 1px solid map-get($k-colors, 'line-2');
+
+    @include k-media-max('m') {
+      text-align: center;
+    }
+  }
+
+  .k-Hero--withShadow {
+    box-shadow: $box-shadow-values $box-shadow-color;
   }
 
   .k-Hero__grid {
     padding: 0 k-px-to-rem(40px);
-  }
-
-  .k-Hero__title {
-    color: black;
   }
 
   .k-Hero__card {
