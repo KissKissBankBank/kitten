@@ -46,9 +46,6 @@ import { Container } from 'kitten/components/grid/container'
 import { Grid, GridCol } from 'kitten/components/grid/grid'
 import { KarlSideLayout } from 'kitten/karl/layout/side-layout'
 
-
-// Hero
-import { Hero } from 'kitten/components/heroes/hero'
 // Icons
 import GrabberIcon from 'kitten/components/icons/grabber-icon'
 import { MenuIcon } from 'kitten/components/icons/menu-icon'
@@ -176,6 +173,7 @@ import { KarlLegoGrid } from 'kitten/karl/grid/lego-grid'
 import { KarlTagList } from 'kitten/karl/lists/tag-list'
 import { KarlCard } from 'kitten/karl/cards/card'
 import { KarlMenuHeader } from 'kitten/karl/headers/karl-header'
+import { KarlHero } from 'kitten/karl/heroes/hero'
 import { KarlBrowsing } from 'app/browsing/browsing'
 
 ReactOnRails.register({
@@ -226,9 +224,6 @@ ReactOnRails.register({
   Container,
   Grid,
   GridCol,
-
-  // Hero
-  Hero,
 
   // Icons
   MenuIcon,
@@ -349,5 +344,6 @@ ReactOnRails.register({
   KarlTagList,
   KarlCard,
   KarlMenuHeader,
+  KarlHero,
   KarlBrowsing,
 })

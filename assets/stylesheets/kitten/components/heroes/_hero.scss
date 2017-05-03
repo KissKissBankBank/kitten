@@ -4,109 +4,43 @@
 ///
 /// @example scss - usage
 ///
-///   @include k-Hero((
-///     font: 'source-sans',
-///   ));
+///   @include k-Hero;
 ///
 /// @example html
 ///
-///  <div class="k-Hero">
-///    <div class="k-Hero__container">
-///      <div class="k-Hero__text">
-///        <h1 class="k-Hero__title">Wool balls</h1>
-///        <h2 class="k-Hero__subtitle">Infinite fun.</h2>
-///      </div>
-///      <div class="k-Hero__action">
-///        <img src="https://placehold.it/300x400/4a84ff/4a84ff" alt="" />
+///  <div class="k-Hero k-Hero__grid k-Card k-Card--withBorder">
+///    <div class="k-Marger">
+///      <div class="k-Grid">
+///        <div class="k-GridCol">
+///          <h3 class="k-Title k-Hero__title">Lorem ipsum dolor sit amet</h3>
+///          <p class="k-Paragrph">
+///            Phasellus viverra nulla ut metus varius …
+///          </p>
+///        </div>
+///        <div class="k-GridCol">
+///         <div class="k-Card k-Card--withBorder k-Hero__card" />
+///        </div>
 ///      </div>
 ///    </div>
 ///  </div>
 
-@mixin k-Hero($hero) {
-  @include k-with-module('k-Hero') {
-    $font: k-map-fetch($hero, 'font');
+@mixin k-Hero {
 
-    .k-Hero {
-      text-align: center;
-      height: k-px-to-rem(500px);
-      background-color: map-get($k-colors, 'background-1');
-      border: 1px solid map-get($k-colors, 'line-2');
+  .k-Hero {
+    height: k-px-to-rem(500px);
+    background-color: map-get($k-colors, 'background-1');
+    border: 1px solid map-get($k-colors, 'line-2');
+  }
 
-      @include k-media-min('l') {
-        @include k-grid;
-        text-align: left;
-      }
-    }
+  .k-Hero__grid {
+    padding: 0 k-px-to-rem(40px);
+  }
 
-    .k-Hero__text {
-      color: black;
-      // margin: k-px-to-rem(40px) 0 k-px-to-rem(30px);
+  .k-Hero__title {
+    color: black;
+  }
 
-      // @include k-media-min('s') {
-      //   margin: k-px-to-rem(62px) 0 k-px-to-rem(30px);
-      // }
-
-      // @include k-media-min('l') {
-      //   margin: k-px-to-rem(107px) 0;
-      //   @include k-grid-col(4);
-      //   @include k-grid-offset(1);
-      // }
-    }
-
-    .k-Hero__grid {
-      padding-left: k-px-to-rem(40px);
-    }
-
-    .k-Hero__action {
-      margin: 0 0 k-px-to-rem(40px);
-      text-align: left;
-
-      @include k-media-min('s') {
-        @include k-grid-col(10);
-        @include k-grid-offset(1);
-      }
-
-      @include k-media-min('m') {
-        margin: 0 0 k-px-to-rem(80px);
-        @include k-grid-col(8);
-        @include k-grid-offset(2);
-      }
-
-      @include k-media-min('l') {
-        margin: k-px-to-rem(107px) 0;
-        @include k-grid-col(4);
-        @include k-grid-offset(2);
-      }
-    }
-
-    .k-Hero__title {
-      color: black;
-      @include k-typographyFont($font);
-      @include k-typographyFontSize(5, normal);
-
-      @include k-media-min('m') {
-        @include k-typographyFontSize(7, normal);
-      }
-    }
-
-    .k-Hero__subtitle {
-      margin: 0;
-      display: none;
-      @include k-typographyFont($font);
-      @include k-typographyFontSize(0, 1.6);
-
-      @include k-media-min('m') {
-        display: block;
-        @include k-typographyFontSize(2, 1.6);
-      }
-    }
-
-    .k-Hero--onDark {
-      color: #fff;
-
-      a {
-        color: inherit;
-      }
-    }
+  .k-Hero__card {
+    height: k-px-to-rem(420px);
   }
 }
