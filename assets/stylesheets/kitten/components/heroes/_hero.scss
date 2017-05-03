@@ -15,7 +15,6 @@
 ///      <div class="k-Hero__text">
 ///        <h1 class="k-Hero__title">Wool balls</h1>
 ///        <h2 class="k-Hero__subtitle">Infinite fun.</h2>
-///        <h2 class="k-Hero__subtitle">Until you have to roll them back.</h2>
 ///      </div>
 ///      <div class="k-Hero__action">
 ///        <img src="https://placehold.it/300x400/4a84ff/4a84ff" alt="" />
@@ -29,6 +28,9 @@
 
     .k-Hero {
       text-align: center;
+      height: k-px-to-rem(500px);
+      background-color: map-get($k-colors, 'background-1');
+      border: 1px solid map-get($k-colors, 'line-2');
 
       @include k-media-min('l') {
         @include k-grid;
@@ -37,17 +39,22 @@
     }
 
     .k-Hero__text {
-      margin: k-px-to-rem(40px) 0 k-px-to-rem(30px);
+      color: black;
+      // margin: k-px-to-rem(40px) 0 k-px-to-rem(30px);
 
-      @include k-media-min('s') {
-        margin: k-px-to-rem(62px) 0 k-px-to-rem(30px);
-      }
+      // @include k-media-min('s') {
+      //   margin: k-px-to-rem(62px) 0 k-px-to-rem(30px);
+      // }
 
-      @include k-media-min('l') {
-        margin: k-px-to-rem(107px) 0;
-        @include k-grid-col(4);
-        @include k-grid-offset(1);
-      }
+      // @include k-media-min('l') {
+      //   margin: k-px-to-rem(107px) 0;
+      //   @include k-grid-col(4);
+      //   @include k-grid-offset(1);
+      // }
+    }
+
+    .k-Hero__grid {
+      padding-left: k-px-to-rem(40px);
     }
 
     .k-Hero__action {
@@ -73,6 +80,7 @@
     }
 
     .k-Hero__title {
+      color: black;
       @include k-typographyFont($font);
       @include k-typographyFontSize(5, normal);
 

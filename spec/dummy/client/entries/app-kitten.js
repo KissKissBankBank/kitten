@@ -46,6 +46,9 @@ import { Container } from 'kitten/components/grid/container'
 import { Grid, GridCol } from 'kitten/components/grid/grid'
 import { KarlSideLayout } from 'kitten/karl/layout/side-layout'
 
+
+// Hero
+import { Hero } from 'kitten/components/heroes/hero'
 // Icons
 import GrabberIcon from 'kitten/components/icons/grabber-icon'
 import { MenuIcon } from 'kitten/components/icons/menu-icon'
@@ -223,6 +226,9 @@ ReactOnRails.register({
   Container,
   Grid,
   GridCol,
+
+  // Hero
+  Hero,
 
   // Icons
   MenuIcon,
