@@ -9,7 +9,7 @@ const paymentButtonWrapper = (WrappedComponent, props) => {
   return class PaymentButtonWrapper extends React.Component {
     render() {
       const text = <TagButton big icon tag="span">
-                     <WrappedComponent />
+                     <WrappedComponent className="k-TagButton__icon" />
                    </TagButton>
 
       return (

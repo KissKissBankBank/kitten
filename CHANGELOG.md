@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking changes: Add `KarlPaymentButtonVirement`, `KarlPaymentButtonMasterCard`,
+  `KarlPaymentButtonCb` and `KarlPaymentButtonBankTransfer` on `PaymentButton`
+   example.
+
 ## [11.3.0] - 2017-05-02
 
 Features:

@@ -4,10 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Add `KarlPaymentButtonVirement`, `KarlPaymentButtonMasterCard`,
-  `KarlPaymentButtonCb` and `KarlPaymentButtonBankTransfer` on `PaymentButton`
-   example.
-- Fix: Add new `MasterCardIcon` and `CbIcon` component.
+- Feature: Add new `MasterCardIcon` and `CbIcon` component.
 
 ## [11.3.0] - 2017-05-02
 
