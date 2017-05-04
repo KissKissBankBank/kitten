@@ -4,9 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Breaking changes: Add `KarlPaymentButtonVirement`, `KarlPaymentButtonMasterCard`,
-  `KarlPaymentButtonCb` and `KarlPaymentButtonBankTransfer` on `PaymentButton`
-   examples.
+- Feature: Add status in `ProjectCard`.
+- Fix: Fix tag `Title` in `ProjectCardComponent`.
+- Fix: Fix test launch.
 
 ## [11.3.0] - 2017-05-02
 
