@@ -136,7 +136,7 @@ describe('<ProjectCard />', () => {
   })
 
   describe('with image prop', () => {
-    const projectCard = mount(<ProjectCard image="#" />)
+    const projectCard = mount(<ProjectCard imageSrc="#" />)
     const image = projectCard.find('.k-ProjectCard__img')
 
     it('renders an image with good href', () => {
