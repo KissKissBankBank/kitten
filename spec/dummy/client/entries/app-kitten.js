@@ -15,6 +15,9 @@ import ButtonImageWithTextAndBadge from 'kitten/components/buttons/button-image-
 import ButtonTooltipIcon from 'kitten/components/buttons/button-tooltip-icon'
 import { TagButton } from 'kitten/components/buttons/tag-button'
 
+// Cards
+import { ProjectCard } from 'kitten/components/cards/project-card'
+
 // Dev
 import { DevGrid } from 'kitten/components/dev/dev-grid'
 
@@ -39,13 +42,19 @@ import { TextInputWithLimit } from 'kitten/components/form/text-input-with-limit
 import { TextInputWithUnit } from 'kitten/components/form/text-input-with-unit'
 
 // Grid
+import { Container } from 'kitten/components/grid/container'
 import { Grid, GridCol } from 'kitten/components/grid/grid'
 import { KarlSideLayout } from 'kitten/karl/layout/side-layout'
 
 // Icons
 import GrabberIcon from 'kitten/components/icons/grabber-icon'
 import { CbIcon } from 'kitten/components/icons/cb-icon'
+import { MenuIcon } from 'kitten/components/icons/menu-icon'
 import { HeartIcon } from 'kitten/components/icons/heart-icon'
+import { InformationIcon } from 'kitten/components/icons/information-icon'
+import { KissKissBankBankLogoIcon } from 'kitten/components/icons/kisskissbankbanklogo-icon'
+import { VisaIcon } from 'kitten/components/icons/visa-icon'
+import { LocationIcon } from 'kitten/components/icons/location-icon'
 import { FacebookIcon } from 'kitten/components/icons/facebook-icon'
 import { LinkedinIcon } from 'kitten/components/icons/linkedin-icon'
 import { LocationIcon } from 'kitten/components/icons/location-icon'
@@ -79,7 +88,6 @@ import { CallToActionPopover } from 'kitten/components/popovers/call-to-action-p
 
 // Simulators
 import LoanSimulator from 'kitten/components/simulators/loan-simulator'
-import SimulatorResult from 'kitten/components/simulators/simulator-result'
 
 // Steppers
 import { Stepper } from 'kitten/components/steppers/stepper'
@@ -122,6 +130,7 @@ import { KarlHeader,
          KarlPhoneDropdown } from 'kitten/karl/headers/header'
 import { KarlLoanSimulator,
          KarlLoanSimulatorWithCommission,
+         KarlLoanSimulatorWithfeesExemption,
          KarlLoanSimulatorWithError,
        } from 'kitten/karl/organisms/loan-simulator'
 import { KarlSideGridWithRightAside,
@@ -169,6 +178,9 @@ import { KarlAlert,
 import { KarlIconBadgeWithSvg } from 'kitten/karl/notifications/icon-badge'
 import { KarlLegoGrid } from 'kitten/karl/grid/lego-grid'
 import { KarlTagList } from 'kitten/karl/lists/tag-list'
+import { KarlCard } from 'kitten/karl/cards/card'
+import { KarlMenuHeader } from 'kitten/karl/headers/karl-header'
+import { KarlBrowsing } from 'app/browsing/browsing'
 
 ReactOnRails.register({
   // Box
@@ -184,6 +196,9 @@ ReactOnRails.register({
   ButtonTooltipIcon,
   TagButton,
 
+  // Cards
+  ProjectCard,
+
   // Dev
   Checkbox,
   DevGrid,
@@ -195,8 +210,6 @@ ReactOnRails.register({
   // Form
   FormAmountAndCurrency,
   FormPhoneNumber,
-  Grid,
-  GridCol,
   GrabberIcon,
   HeaderTour,
   Label,
@@ -213,9 +226,17 @@ ReactOnRails.register({
   TextInputWithLimit,
   TextInputWithUnit,
 
+  // Grid
+  Container,
+  Grid,
+  GridCol,
+
   // Icons
   CbIcon,
+  MenuIcon,
   GrabberIcon,
+  InformationIcon,
+  KissKissBankBankLogoIcon,
   HeartIcon,
   FacebookIcon,
   LinkedinIcon,
@@ -250,7 +271,6 @@ ReactOnRails.register({
 
   // Simulators
   LoanSimulator,
-  SimulatorResult,
 
   // Steppers
   Stepper,
@@ -304,6 +324,7 @@ ReactOnRails.register({
   KarlPhoneDropdown,
   KarlLoanSimulator,
   KarlLoanSimulatorWithCommission,
+  KarlLoanSimulatorWithfeesExemption,
   KarlLoanSimulatorWithError,
   KarlSideGridWithRightAside,
   KarlSideGridWithLeftAsideAndSmallSize,
@@ -332,4 +353,7 @@ ReactOnRails.register({
   KarlMakerWhoAmIStep,
   KarlLegoGrid,
   KarlTagList,
+  KarlCard,
+  KarlMenuHeader,
+  KarlBrowsing,
 })

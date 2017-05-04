@@ -36,4 +36,12 @@
       @include k-grid-colSize(4, $flexible: false);
     }
   }
+
+  .k-LegoGrid__item__content {
+    margin: 0 k-px-to-rem(20px) k-px-to-rem(20px);
+
+    @include k-media-min('s') {
+      margin: 0 k-px-to-rem(10px) k-px-to-rem(20px);
+    }
+  }
 }

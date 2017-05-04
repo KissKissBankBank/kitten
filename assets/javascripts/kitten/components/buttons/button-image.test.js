@@ -82,4 +82,20 @@ describe('<ButtonImage />', () => {
       expect(image).to.have.attr('width', '140')
     })
   })
+
+  describe('with withoutPointerEvents prop', () => {
+    const button = shallow(<ButtonImage withoutPointerEvents />)
+
+    it('has a good class', () => {
+      expect(button).to.have.className('k-ButtonImage--withoutPointerEvents')
+    })
+  })
+
+  describe('with withBorder prop', () => {
+    const button = shallow(<ButtonImage withBorder />)
+
+    it('has a good class', () => {
+      expect(button).to.have.className('k-ButtonImage--withBorder')
+    })
+  })
 })

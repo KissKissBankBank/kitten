@@ -1,0 +1,122 @@
+/// Project card
+///
+/// @group cards
+///
+/// @example scss - usage
+///
+///   @include k-ProjectCard;
+///
+/// @example html
+///
+///   <div class="k-ProjectCard">
+///     <div class="k-ProjectCard__grid">
+///       <div class="k-ProjectCard__grid--flex">
+///         …
+///         <div class="k-ProjectCard__grid--flex__item-fluid">…</div>
+///         …
+///       </div>
+///     </div>
+///
+///     <div class="k-ProjectCard__grid">
+///       <img class="k-ProjectCard__img" src="" />
+///     </div>
+///
+///     <div class="k-ProjectCard__grid k-ProjectCard__borderTop">
+///       <div class="k-ProjectCard__info">
+///         <span class="k-ProjectCard__info__value">…</span>
+///         <span class="k-ProjectCard__info__value">…</span>
+///         <span class="k-ProjectCard__info__value">…</span>
+///       </div>
+///     </div>
+///
+///     <div class="k-ProjectCard__status">
+///       <svg class="k-ProjectCard__status__svg">…</svg>
+///       …
+///     </div>
+///   </div>
+
+@mixin k-ProjectCard {
+  .k-ProjectCard {
+    // Change overflow for negative margins on .k-ProjectCard__status.
+    overflow: visible;
+
+    &.is-disabled {
+      filter: grayscale(1) opacity(.4);
+    }
+  }
+
+  .k-ProjectCard__grid {
+    padding: 0 k-px-to-rem(20px);
+  }
+
+  .k-ProjectCard__grid--withBorderTop {
+    border-top: 1px solid map-get($k-colors, 'line-1');
+  }
+
+  .k-ProjectCard__grid--flex {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .k-ProjectCard__grid--flex__item-fluid {
+    flex: 1;
+  }
+
+  .k-ProjectCard__info {
+    width: percentage(1/3);
+    @include k-typographyFont('source-sans-light');
+    @include k-typographyFontSize(-1, normal);
+  }
+
+  .k-ProjectCard__info__value {
+    @include k-typographyFont('source-sans-semi-bold');
+    @include k-typographyFontSize(0, normal);
+  }
+
+  .k-ProjectCard__img {
+    display: block;
+    width: 100%;
+  }
+
+  .k-ProjectCard__status {
+    overflow: auto;
+    margin: 0 -1px -1px;
+    @include k-typographyFont('source-sans-semi-bold');
+    @include k-typographyFontSize(-1, normal);
+  }
+
+  .k-ProjectCard__status--primaryBackground {
+    background: map-get($k-colors, 'primary-1');
+    color: map-get($k-colors, 'background-1');
+  }
+
+  .k-ProjectCard__status--tertiaryBackground {
+    background-color: map-get($k-colors, 'tertiary-1');
+    color: map-get($k-colors, 'font-1');
+  }
+
+  .k-ProjectCard__status--greyBackground {
+    background-color: map-get($k-colors, 'line-2');
+    color: map-get($k-colors, 'background-1');
+  }
+
+  .k-ProjectCard__status--errorBackground {
+    background-color: map-get($k-colors, 'error');
+    color: map-get($k-colors, 'background-1');
+  }
+
+  .k-ProjectCard__status__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .k-ProjectCard__status__svg {
+    display: block;
+    width: k-px-to-rem(20px);
+    height: k-px-to-rem(20px);
+    margin-right: k-px-to-rem(10px);
+  }
+}

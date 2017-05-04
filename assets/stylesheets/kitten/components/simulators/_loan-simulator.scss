@@ -77,5 +77,10 @@
       margin-top: k-px-to-rem(30px);
       @include k-typographyFontSize(-1);
     }
+
+    .k-LoanSimulator__feesExemption {
+      @include k-typographyFont('source-sans-light');
+      @include k-typographyFontSize(-2);
+    }
   }
 }

@@ -20,13 +20,9 @@
 <body class="k-VerticalGrid__page">
 
 <% if @groups || controller_name == "branding" %>
-  <div class="karl-Menu" data-karl-menu>
-    <div class="karl-Menu__header">
-      <a data-karl-menu-toggle="true" class="karl-Menu__title">menu</a>
-      <h3 class="karl-Menu__header__title">Styleguide <strong>KissKiss&amp;Co</strong></h3>
-      <div class="k-u-clearfix"></div>
-    </div>
 
+  <div class="karl-Menu" data-karl-menu>
+    <%= react_component 'KarlMenuHeader' %>
     <nav class="karl-Menu__content">
       <div class="k-u-clearfix"></div>
 
@@ -109,12 +105,6 @@
         </ul>
       <% end %>
     </nav>
-  </div>
-
-  <div class="karl-Header">
-    <header class="karl-Header__container">
-      <div class="karl-Header__content"></div>
-    </header>
   </div>
 
   <div class="karl-Main">

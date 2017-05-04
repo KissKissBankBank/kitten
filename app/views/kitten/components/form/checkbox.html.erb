@@ -1,6 +1,6 @@
 <div class="k-Grid">
   <div class="k-Grid__col k-Grid__col--12 k-Grid__col--4@m k-Grid__col--4@l">
-    <%= example 'Checkbox' do %>
+    <%= example 'With label' do %>
       <%= react_component('Checkbox', props: {
           id: "input-1",
           children: "Filter 1",
@@ -17,13 +17,13 @@
   </div>
 
   <div class="k-Grid__col k-Grid__col--12 k-Grid__col--4@m k-Grid__col--4@l">
-    <%= example 'Checkbox - Error' do %>
+    <%= example 'Error' do %>
       <%= react_component('KarlCheckboxError') %>
     <% end %>
   </div>
 
   <div class="k-Grid__col k-Grid__col--12 k-Grid__col--4@m k-Grid__col--4@l">
-    <%= example 'Disabled checkbox' do %>
+    <%= example 'Disabled' do %>
       <%= react_component('Checkbox', props: {
           id: "input-3",
           children: "Filter 1",
