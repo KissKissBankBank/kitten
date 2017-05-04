@@ -262,4 +262,17 @@ describe('<ProjectCard />', () => {
         .to.have.className('k-ProjectCard__status--errorBackground')
     })
   })
+
+  describe('with statusError2Background prop', () => {
+    const projectCard = mount(
+      <ProjectCard statusContent="Custom status"
+                   statusError2Background />
+    )
+    const status = projectCard.find('.k-ProjectCard__status').first()
+
+    it('has a good class', () => {
+      expect(status)
+        .to.have.className('k-ProjectCard__status--error2Background')
+    })
+  })
 })
