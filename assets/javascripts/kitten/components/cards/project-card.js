@@ -41,7 +41,11 @@ class ProjectCardComponent extends React.Component {
         </Marger>
 
         <Marger top="1" bottom="1.5">
-          <Title margin={ false } modifier="quaternary">{ title }</Title>
+          <Title margin={ false }
+                 modifier="quaternary"
+                 tag="p">
+            { title }
+          </Title>
         </Marger>
       </div>
     )
