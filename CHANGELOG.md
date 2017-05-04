@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: tag `Title` in `ProjectCardComponent`.
+- Fix: Fix tag `Title` in `ProjectCardComponent`.
 
 ## [11.3.0] - 2017-05-02
 
