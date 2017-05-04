@@ -106,8 +106,7 @@
     color: map-get($k-colors, 'background-1');
   }
 
-  .k-ProjectCard__status--error2Background {
-    background-color: map-get($k-colors, 'background-1');
+  .k-ProjectCard__status--errorReverseBackground {
     color: map-get($k-colors, 'error');
   }
 
