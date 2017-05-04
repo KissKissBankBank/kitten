@@ -9,6 +9,17 @@ $menu-width: 14rem;
 $arrowBottom-path: '~icons/arrow-bottom.svg';
 $arrowTop-path: '~icons/arrow-top.svg';
 
+// Shadow
+.karl-MenuShadow {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  background-color: rgba(map-get($k-colors, 'background-3'), .8);
+}
+
 // Menu Dropdown
 .karl-Menu {
   position: fixed;
@@ -24,7 +35,6 @@ $arrowTop-path: '~icons/arrow-top.svg';
     margin-top: 50px;
 
     background-color: map-get($k-colors, 'primary-2');
-
     overflow: scroll;
 
     @include k-media-xs { width: 100%; }
@@ -130,7 +140,7 @@ $arrowTop-path: '~icons/arrow-top.svg';
 
   border-bottom: 1px solid $menu-color;
 
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 300;
   text-decoration: none;
   color: white;
@@ -181,9 +191,7 @@ $arrowTop-path: '~icons/arrow-top.svg';
 
   font-size: 0.75rem;
   font-weight: 400;
-  letter-spacing: 1px;
   line-height: 3.2rem;
-
   text-decoration: none;
 }
 

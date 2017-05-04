@@ -4,7 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Remove size on empty images.
+## [11.4.0] - 2017-05-04
+
+Fixes:
+- Update menu style.
+- Remove size on empty images.
 
 ## [11.3.0] - 2017-05-02
 
