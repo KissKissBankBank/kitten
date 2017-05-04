@@ -17,7 +17,7 @@ $arrowTop-path: '~icons/arrow-top.svg';
   bottom: 0;
   left: 0;
   z-index: 2;
-  background-color: rgba(#f6f6f6, .8);
+  background-color: rgba(map-get($k-colors, 'background-3'), .8);
 }
 
 // Menu Dropdown
