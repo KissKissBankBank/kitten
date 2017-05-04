@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Delete states option in `areaOptions` in `FormPhoneNumber`.
+
 ## [11.3.0] - 2017-05-02
 
 Fix:
