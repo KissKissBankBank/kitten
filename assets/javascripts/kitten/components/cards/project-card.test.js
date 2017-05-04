@@ -136,12 +136,12 @@ describe('<ProjectCard />', () => {
   })
 
   describe('with image prop', () => {
-    const projectCard = mount(<ProjectCard image="#" />)
+    const projectCard = mount(<ProjectCard imageSrc="test" />)
     const image = projectCard.find('.k-ProjectCard__img')
 
     it('renders an image with good href', () => {
       expect(image).to.have.length(1)
-      expect(image).to.have.attr('src', '#')
+      expect(image).to.have.attr('src', 'test')
     })
   })
 
