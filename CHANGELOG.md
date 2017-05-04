@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add status in `ProjectCard`.
+- Fix: Fix test launch.
 
 ## [11.3.0] - 2017-05-02
 
