@@ -144,6 +144,7 @@ class ProjectCardComponent extends React.Component {
       statusTertiaryBackground,
       statusGreyBackground,
       statusErrorBackground,
+      statusErrorReverseBackground,
       statusWithoutTopBorder,
     } = this.props
 
@@ -158,6 +159,8 @@ class ProjectCardComponent extends React.Component {
         'k-ProjectCard__status--tertiaryBackground': statusTertiaryBackground,
         'k-ProjectCard__status--greyBackground': statusGreyBackground,
         'k-ProjectCard__status--errorBackground': statusErrorBackground,
+        'k-ProjectCard__status--errorReverseBackground':
+          statusErrorReverseBackground,
       },
     )
 
@@ -220,6 +223,7 @@ ProjectCardComponent.defaultProps = {
   statusTertiaryBackground: false,
   statusGreyBackground: false,
   statusErrorBackground: false,
+  statusErrorReverseBackground: false,
   statusWithoutTopBorder: false,
 }
 

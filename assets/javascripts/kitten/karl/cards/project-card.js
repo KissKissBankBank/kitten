@@ -85,10 +85,11 @@ export class KarlProjectCard extends React.Component {
 
       case 'delayed':
         data = {
-          statusErrorBackground: true,
+          statusErrorReverseBackground: true,
           statusContent: [
             <WarningCircleIcon key={ `delayed-icon-${ this.props.id }` }
-                               warningColor={ colors['error'] }
+                               warningColor="#fff"
+                               circleColor={ colors['error'] }
                                className={ iconClassName } />,
             this.props.labelDelayed
           ],

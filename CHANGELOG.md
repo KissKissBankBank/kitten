@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add status in `ProjectCard`.
 - Fix: Fix tag `Title` in `ProjectCardComponent`.
 - Fix: Fix test launch.
 

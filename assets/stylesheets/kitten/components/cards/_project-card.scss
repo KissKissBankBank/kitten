@@ -106,6 +106,10 @@
     color: map-get($k-colors, 'background-1');
   }
 
+  .k-ProjectCard__status--errorReverseBackground {
+    color: map-get($k-colors, 'error');
+  }
+
   .k-ProjectCard__status__content {
     display: flex;
     flex-direction: row;
