@@ -35,5 +35,5 @@ export const KarlMenuHeader = props => (
 )
 
 KarlMenuHeader.defaultProps = {
-  onButtonClick: {},
+  onButtonClick: () => {},
 }
