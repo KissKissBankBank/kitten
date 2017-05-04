@@ -4,14 +4,15 @@
       <div class="k-Grid__col k-Grid__col--12 k-Grid__col--12@m k-Grid__col--12@l">
         <%= example 'Tiny' do %>
           <%= react_component('FormPhoneNumber', props: {
+              tinyForm: true,
               areaOptions: [
-                { value: '+33(fr)', label: '+33(FR)' },
-                { value: '+44(uk)', label: '+44(UK)' },
-                { value: '+34(es)', label: '+34(ES)' },
-                { value: '+39(it)', label: '+39(IT)' }
+                { value: '+33', label: '+33' },
+                { value: '+44', label: '+44' },
+                { value: '+34', label: '+34' },
+                { value: '+39', label: '+39' }
               ],
               areaName: 'area',
-              areaValue: '+44(uk)',
+              areaValue: '+44',
               placeholder: 'Lorem ipsum dolor sit amet',
               tiny: true,
             }
@@ -21,13 +22,13 @@
         <%= example 'Normal' do %>
           <%= react_component('FormPhoneNumber', props: {
               areaOptions: [
-                { value: '+33(fr)', label: '+33(FR)' },
-                { value: '+44(uk)', label: '+44(UK)' },
-                { value: '+34(es)', label: '+34(ES)' },
-                { value: '+39(it)', label: '+39(IT)' }
+                { value: '+33', label: '+33' },
+                { value: '+44', label: '+44' },
+                { value: '+34', label: '+34' },
+                { value: '+39', label: '+39' }
               ],
               areaName: 'area',
-              areaValue: '+33(fr)',
+              areaValue: '+33',
               placeholder: 'Lorem ipsum dolor sit amet',
             }
           ) %>
