@@ -12,7 +12,7 @@
 
 @mixin k-Separator {
   .k-Separator {
-    margin: 0;
+    margin: k-px-to-rem(50px) 0 0;
     border: none;
     height: 1px;
     background: map-get($k-colors, 'line-1');

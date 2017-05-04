@@ -17,139 +17,155 @@ module Kitten
     # This option is used to pass an array of output bundles different from
     # `application-bundle` for hot reloading.
     attr_accessor :webpack_output_bundles
-    attr_accessor :default_categories
+    attr_accessor :branding_categories
+    attr_accessor :component_categories
 
     def initialize
       self.webpack_output_bundles = ['application-bundle.js']
     end
 
-    def default_categories
+    def branding_categories
+      [
+        {
+          id: 'brand-colors',
+          label: 'Brand colors',
+          components: [
+            { path: 'branding/colors/common', name: 'Common' },
+            { path: 'branding/colors/kisskissbankbank', name: 'KissKissBankBank' },
+            { path: 'branding/colors/hellomerci', name: 'hellomerci' },
+            { path: 'branding/colors/lendopolis', name: 'LENDOPOLIS' },
+          ],
+        }
+      ]
+    end
+
+    def component_categories
       [
         {
           id: 'grid-system',
           label: 'Grid system',
           components: [
-            'components/grid/grid',
-            'components/grid/vertical-grid',
-            'components/grid/side-grid',
-            'components/grid/row',
-            'components/grid/single-column',
-            'components/grid/lego-grid',
+            { path: 'components/grid/grid', name: 'Grid' },
+            { path: 'components/grid/vertical-grid', name: 'Vertical grid' },
+            { path: 'components/grid/side-grid', name: 'Slide grid' },
+            { path: 'components/grid/row', name: 'Row' },
+            { path: 'components/grid/single-column', name: 'Single column' },
+            { path: 'components/grid/lego-grid', name: 'Lego grid' },
           ],
         },
         {
           id: 'typography',
           label: 'Typography',
           components: [
-            'components/typography/title',
-            'components/typography/paragraph',
+            { path: 'components/typography/title', name: 'Title' },
+            { path: 'components/typography/paragraph', name: 'Paragraph' },
           ],
         },
         {
           id: 'buttons',
           label: 'Buttons',
           components: [
-            'components/buttons/button',
-            'components/buttons/icon-button',
-            'components/buttons/icon-button-with-words',
-            'components/buttons/image-button',
-            'components/buttons/image-button-with-text',
-            'components/buttons/tag-button',
-            'components/buttons/payment-button',
-            'components/buttons/button-with-badge',
+            { path: 'components/buttons/button', name: 'Button' },
+            { path: 'components/buttons/icon-button', name: 'Icon button' },
+            { path: 'components/buttons/icon-button-with-words', name: 'Icon button with words' },
+            { path: 'components/buttons/image-button', name: 'Image button' },
+            { path: 'components/buttons/image-button-with-text', name: 'Image button with text' },
+            { path: 'components/buttons/tag-button', name: 'Tag button' },
+            { path: 'components/buttons/payment-button', name: 'Payment button' },
+            { path: 'components/buttons/button-with-badge', name: 'Button with badge' },
           ],
         },
         {
           id: 'form-elements',
           label: 'Form elements',
           components: [
-            'components/form/checkbox',
-            'components/form/radio-button',
-            'components/form/text-input',
-            'components/form/text-input-with-button',
-            'components/form/text-input-with-limit',
-            'components/form/text-input-with-unit',
-            'components/form/location-input',
-            'components/form/select',
-            'components/form/switch',
-            'components/form/slider',
-            'components/form/search-input',
-            'components/form/form-actions',
-            'components/form/form-row',
-            'components/form/form-info',
-            'components/form/form-amount-and-currency',
-            'components/form/form-phone-number',
+            { path: 'components/form/checkbox', name: 'Checkbox' },
+            { path: 'components/form/radio-button', name: 'Radio button' },
+            { path: 'components/form/text-input', name: 'Text input' },
+            { path: 'components/form/text-input-with-button', name: 'Text input with button' },
+            { path: 'components/form/text-input-with-limit', name: 'Text input with limit' },
+            { path: 'components/form/text-input-with-unit', name: 'Text input with unit' },
+            { path: 'components/form/location-input', name: 'Location input' },
+            { path: 'components/form/select', name: 'Select' },
+            { path: 'components/form/switch', name: 'Switch' },
+            { path: 'components/form/slider', name: 'Slider' },
+            { path: 'components/form/search-input', name: 'Search input' },
+            { path: 'components/form/form-actions', name: 'Form actions' },
+            { path: 'components/form/form-row', name: 'Form row' },
+            { path: 'components/form/form-info', name: 'Form info' },
+            { path: 'components/form/form-amount-and-currency', name: 'Form amount and currency' },
+            { path: 'components/form/form-phone-number', name: 'Form phone number' },
           ],
         },
         {
           id: 'navigation',
           label: 'Navigation',
           components: [
-            'components/navigation/horizontal-nav',
-            'components/navigation/tab-bar',
-            'components/navigation/user-menu',
-            'components/navigation/platform-switch',
-            'components/headers/header',
-            'components/steppers/stepper',
-            'components/dropdowns/dropdown',
+            { path: 'components/navigation/horizontal-nav', name: 'Horizontal nav' },
+            { path: 'components/navigation/tab-bar', name: 'Tab bar' },
+            { path: 'components/navigation/user-menu', name: 'User menu' },
+            { path: 'components/navigation/platform-switch', name: 'Plateform switch' },
+            { path: 'components/headers/header', name: 'Header' },
+            { path: 'components/steppers/stepper', name: 'Stepper' },
+            { path: 'components/dropdowns/dropdown', name: 'Dropdown' },
           ],
         },
         {
           id: 'notifications',
           label: 'Notification',
           components: [
-            'components/notifications/alert',
-            'components/notifications/badge',
-            'components/notifications/icon-badge',
-            'components/tours/tour',
+            { path: 'components/notifications/alert', name: 'Alert' },
+            { path: 'components/notifications/badge', name: 'Badge' },
+            { path: 'components/notifications/icon-badge', name: 'Icon badge' },
+            { path: 'components/tours/tour', name: 'Tour' },
           ],
         },
         {
           id: 'crowdfunding',
           label: 'Crowdfunding',
           components: [
-            'components/meters/progress',
-            'components/simulators/loan-simulator',
-            'components/teaser/teaser',
-            'components/popovers/popover',
+            { path: 'components/meters/progress', name: 'Progress' },
+            { path: 'components/simulators/loan-simulator', name: 'Loan simulator' },
+            { path: 'components/teaser/teaser', name: 'Teaser' },
+            { path: 'components/popovers/popover', name: 'Popover' },
           ],
         },
         {
           id: 'presentation-elements',
           label: 'Presentation elements',
           components: [
-            'components/cards/card',
-            'components/cards/project-card',
-            'components/heroes/hero',
-            'components/press/press-quotes',
-            'components/testimonies/testimony',
-            'components/testimonies/testimony-list',
-            'components/titles/title-with-actions',
-            'components/links/external-rich-link',
-            'components/links/link-list',
-            'components/lists/bullet-list',
-            'components/lists/tag-list',
+            { path: 'components/cards/card', name: 'Card' },
+            { path: 'components/cards/project-card', name: 'Project card' },
+            { path: 'components/heroes/hero', name: 'Hero' },
+            { path: 'components/press/press-quotes', name: 'Press quotes' },
+            { path: 'components/testimonies/testimony', name: 'Testimony' },
+            { path: 'components/testimonies/testimony-list', name: 'Testimony list' },
+            { path: 'components/titles/title-with-actions', name: 'Title with actions' },
+            { path: 'components/links/external-rich-link', name: 'External rich link' },
+            { path: 'components/links/link-list', name: 'Link list' },
+            { path: 'components/lists/bullet-list', name: 'Bullet list' },
+            { path: 'components/lists/tag-list', name: 'Tag list' },
           ],
         },
         {
           id: 'contextual-content',
           label: 'Contextual content',
           components: [
-            'components/box/information-box',
-            'components/box/link-box',
-            'components/box/link-box-with-icon',
-            'components/tooltips/tooltip',
-            'components/tooltips/static-tooltip',
+            { path: 'components/box/information-box', name: 'Information box' },
+            { path: 'components/box/link-box', name: 'Link box' },
+            { path: 'components/box/link-box-with-icon', name: 'Link box with icon' },
+            { path: 'components/tooltips/tooltip', name: 'Tooltip' },
+            { path: 'components/tooltips/static-tooltip', name: 'Static tooltip' },
           ],
         },
         {
           id: 'layout',
           label: 'Layout',
           components: [
-            'components/layout/line',
-            'components/form/form-actions',
-            'components/form/form-row',
-            'components/layout/separator',
+            { path: 'components/layout/line', name: 'Line' },
+            { path: 'components/form/form-actions', name: 'Form actions' },
+            { path: 'components/form/form-row', name: 'Form row' },
+            { path: 'components/layout/separator', name: 'Separator' },
           ],
         }
       ]
