@@ -4,12 +4,4 @@
 
 <%= render template: "kitten/#{component}" %>
 
-<% if description.present? %>
-  <section class="karl-Section__example">
-    <div class="karl-Example__description">
-      <p><%= description %></p>
-    </div>
-  </section>
-<% end %>
-
 <%= react_component 'Separator', props: { darker: true } %>
