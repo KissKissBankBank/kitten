@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add new `MasterCardIcon` and `CbIcon` component.
+- Feature: Add new `MasterCardIcon` and `CbIcon` components.
 
 ## [11.3.0] - 2017-05-02
 
