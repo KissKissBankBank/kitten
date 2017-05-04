@@ -163,10 +163,7 @@ import { KarlButtonIconHeart,
        } from 'kitten/karl/buttons/button-icon'
 import { KarlLineWithTooltip,
          KarlLineWithBigHeart } from 'kitten/karl/layout/line'
-import { KarlPaymentButtonVisa,
-         KarlPaymentButtonMasterCard,
-         KarlPaymentButtonCb,
-         KarlPaymentButtonBankTransfer } from 'kitten/karl/buttons/payment-button'
+import { KarlPaymentButtons } from 'kitten/karl/buttons/payment-button'
 import { KarlStaticTooltip } from 'kitten/karl/tooltips/static-tooltip'
 import { KarlRandomProgress } from 'kitten/karl/meters/random-progress'
 import { KarlMakerWhoAmIStep } from 'app/maker/who-am-i/components/container'
@@ -345,10 +342,7 @@ ReactOnRails.register({
   KarlParagraphTertiary,
   KarlParagraphQuaternary,
   KarlParagraphWithLink,
-  KarlPaymentButtonVisa,
-  KarlPaymentButtonMasterCard,
-  KarlPaymentButtonCb,
-  KarlPaymentButtonBankTransfer,
+  KarlPaymentButtons,
   KarlRandomProgress,
   KarlMakerWhoAmIStep,
   KarlLegoGrid,
