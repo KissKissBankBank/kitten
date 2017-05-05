@@ -1,0 +1,20 @@
+/// Project creator card
+///
+/// @group cards
+///
+/// @example scss - usage
+///
+///   @include k-ProjectCreatorCard;
+///
+/// @example html
+///
+
+@mixin k-ProjectCreatorCard {
+  .k-ProjectCreatorCard {
+    overflow: hidden;
+  }
+
+  .k-ProjectCreatorCard__grid {
+    padding: 0 k-px-to-rem(20px);
+  }
+}

@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add new `StudingIcon` component.
+
 ## [11.4.0] - 2017-05-04
 
 Feature:

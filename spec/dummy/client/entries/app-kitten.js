@@ -17,6 +17,7 @@ import { TagButton } from 'kitten/components/buttons/tag-button'
 
 // Cards
 import { ProjectCard } from 'kitten/components/cards/project-card'
+import { ProjectCreatorCard } from 'kitten/components/cards/project-creator-card'
 
 // Dev
 import { DevGrid } from 'kitten/components/dev/dev-grid'
@@ -57,6 +58,7 @@ import { LocationIcon } from 'kitten/components/icons/location-icon'
 import { FacebookIcon } from 'kitten/components/icons/facebook-icon'
 import { TwitterIcon } from 'kitten/components/icons/twitter-icon'
 import { LinkedinIcon } from 'kitten/components/icons/linkedin-icon'
+import { StudingIcon } from 'kitten/components/icons/studing-icon'
 
 // Layout
 import { Separator } from 'kitten/components/layout/separator'
@@ -193,6 +195,7 @@ ReactOnRails.register({
 
   // Cards
   ProjectCard,
+  ProjectCreatorCard,
 
   // Dev
   Checkbox,
@@ -237,6 +240,7 @@ ReactOnRails.register({
   FacebookIcon,
   TwitterIcon,
   LinkedinIcon,
+  StudingIcon,
 
   // Layout
   Separator,
