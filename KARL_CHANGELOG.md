@@ -4,7 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Remove country in `areaOptions` and `FormPhoneNumber`.
+## [11.5.0] - 2017-05-09
+
+Fix:
+- Remove country in `areaOptions` and `FormPhoneNumber`.
 
 ## [11.4.0] - 2017-05-04
 
