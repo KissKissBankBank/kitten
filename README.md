@@ -1,6 +1,6 @@
-# kitten
+# Kitten
 
-`kitten` is a components library based on Sass and React. It provides mixins to
+Kitten is a components library based on Sass and React. It provides mixins to
 create flexible components based on your own brand elements (colors, fonts,
 typographic scale, etc.).
 
@@ -49,6 +49,7 @@ gem 'kitten'
 ```
 
 And these routes to your `routes.rb`:
+
 ```ruby
 mount Kitten::Engine, at: '/kitten' if Rails.env.development?
 ```
@@ -101,7 +102,7 @@ view helper in your `.erb` file:
 
 ### Style guide
 
-`kitten` provides a styleguide interface through a Rails engine.
+Kitten provides a styleguide interface through a Rails engine.
 You can run see it in your browser by downloading kitten and launching
 the dummy app or by installing the style guide in your Rails app.
 
