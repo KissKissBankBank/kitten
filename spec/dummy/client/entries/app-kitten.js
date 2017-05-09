@@ -111,8 +111,6 @@ import { KarlAutoTriggerPopover }
 import { KarlAutoTriggerCallToActionPopover }
   from 'karl/components/popovers/auto-trigger-call-to-action-popover'
 import { KarlLoudspeakerPopover } from 'karl/components/popovers/loudspeaker-popover'
-import { KarlImageExternalRichLink,
-         KarlSvgExternalRichLink } from 'kitten/karl/molecules/external-rich-link'
 import { KarlSimpleDropdown,
          KarlPlatformSwitch,
          KarlUserMenuDropdown } from 'kitten/karl/organisms/dropdown'
@@ -302,8 +300,6 @@ ReactOnRails.register({
   KarlLineWithTooltip,
   KarlLineWithBigHeart,
   KarlIconBadgeWithSvg,
-  KarlImageExternalRichLink,
-  KarlSvgExternalRichLink,
   KarlSimpleDropdown,
   KarlPlatformSwitch,
   KarlUserMenuDropdown,
