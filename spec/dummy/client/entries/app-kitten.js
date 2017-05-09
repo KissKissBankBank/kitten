@@ -174,6 +174,7 @@ import { KarlTagList } from 'kitten/karl/lists/tag-list'
 import { KarlCard } from 'kitten/karl/cards/card'
 import { KarlMenuHeader } from 'kitten/karl/headers/karl-header'
 import { KarlBrowsing } from 'app/browsing/browsing'
+import { KarlCroppingImage } from 'kitten/karl/images/cropping-image'
 
 ReactOnRails.register({
   // Box
@@ -344,4 +345,5 @@ ReactOnRails.register({
   KarlCard,
   KarlMenuHeader,
   KarlBrowsing,
+  KarlCroppingImage,
 })

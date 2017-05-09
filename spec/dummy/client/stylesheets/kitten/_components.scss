@@ -130,6 +130,10 @@
   font: 'source-sans',
 ));
 
+// Images
+
+@include k-Cropper;
+
 // Layout
 
 @include k-Line;
