@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: Update `UserMenu` and `PlatformSwitch` components with `dropdown` component.
+- Fix: Remove country in `areaOptions` and `FormPhoneNumber`.
 
 ## [11.4.0] - 2017-05-04
 
