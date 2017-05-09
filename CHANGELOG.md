@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: Fix the tiny option on Select.
+- Feature: Add responsive image utility.
 
 ## [11.4.0] - 2017-05-04
 
