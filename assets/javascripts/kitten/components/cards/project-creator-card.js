@@ -5,7 +5,7 @@ import { Marger } from 'kitten/components/layout/marger'
 import { Grid, GridCol } from 'kitten/components/grid/grid'
 import { StudingIcon } from 'kitten/components/icons/studing-icon'
 import { Paragraph } from 'kitten/components/typography/paragraph'
-import linkBox from 'kitten/components/box/link-box'
+import LinkBox from 'kitten/components/box/link-box'
 
 class ProjectCreatorCardComponent extends React.Component {
   renderDescription() {
@@ -18,7 +18,7 @@ class ProjectCreatorCardComponent extends React.Component {
         <Marger top='1.8'
                 bottom='2'>
           { this.renderDate() }
-          <div> Status </div>
+          <div className="k-ProjecrCreatorCard__date"> Le 15 mars 2017 </div>
 
           <Paragraph margin={ false }>
             { ownerTitle }
@@ -54,7 +54,7 @@ class ProjectCreatorCardComponent extends React.Component {
     if (!linkContent) return
 
     return (
-      <Tag margin={ false}>
+      <Tag margin={ false }>
         <LinkBox> { linkContent } </LinkBox>
       </Tag>
     )

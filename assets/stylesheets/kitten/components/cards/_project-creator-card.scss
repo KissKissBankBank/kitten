@@ -9,12 +9,21 @@
 /// @example html
 ///
 
+
+
 @mixin k-ProjectCreatorCard {
+  $font: 'source-sans-light';
+
   .k-ProjectCreatorCard {
     overflow: hidden;
   }
 
   .k-ProjectCreatorCard__grid {
     padding: 0 k-px-to-rem(20px);
+  }
+
+  .k-ProjecrCreatorCard__date {
+    @include k-typographyFontSize(-3);
+    @include k-typographyFont($font);
   }
 }
