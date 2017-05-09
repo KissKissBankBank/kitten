@@ -21,7 +21,7 @@ export const TextInputAndSelect = props => {
   const inputWrapperClassName = classNames(
     'k-FormComposer__element',
     {
-      'k-FormComposer__element--main': !props.digits
+      'k-FormComposer__element--main': !props.digits,
     },
     className,
   )

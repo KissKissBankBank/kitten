@@ -5,6 +5,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add `TagButton` with large word example.
+- Fix: Update `UserMenu` and `PlatformSwitch` components with `dropdown` component.
+- Fix: Remove `ExternalRichLink` example.
+
+## [11.5.0] - 2017-05-09
+
+Fix:
+- Remove country in `areaOptions` and `FormPhoneNumber`.
 
 ## [11.4.0] - 2017-05-04
 
@@ -48,7 +55,7 @@ Fixes:
 - Remove `TabBar` useless component examples.
 - Update link style on `Header` and `TabBar` components guideline example.
 - Replace `KarlButtonIconHeartRight` and `KarlButtonIconHeartLeft` examples
-  `KarlButtonIconWordsRight` and `KarlButtonIconWordsLeft`.
+  `KarlButtonIconWordsRight` and `KarlButtonIconWordsLeft`.t
 - Remove `error` label on Checkbox and RadioButton guideline example.
 - Install new grid on each components.
 - Update `hexa` colors and layout.

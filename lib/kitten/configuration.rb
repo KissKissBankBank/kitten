@@ -106,7 +106,6 @@ module Kitten
             { path: 'components/navigation/platform-switch', name: 'Plateform switch' },
             { path: 'components/headers/header', name: 'Header' },
             { path: 'components/steppers/stepper', name: 'Stepper' },
-            { path: 'components/dropdowns/dropdown', name: 'Dropdown' },
           ],
         },
         {
@@ -140,7 +139,6 @@ module Kitten
             { path: 'components/testimonies/testimony', name: 'Testimony' },
             { path: 'components/testimonies/testimony-list', name: 'Testimony list' },
             { path: 'components/titles/title-with-actions', name: 'Title with actions' },
-            { path: 'components/links/external-rich-link', name: 'External rich link' },
             { path: 'components/links/link-list', name: 'Link list' },
             { path: 'components/lists/bullet-list', name: 'Bullet list' },
             { path: 'components/lists/tag-list', name: 'Tag list' },

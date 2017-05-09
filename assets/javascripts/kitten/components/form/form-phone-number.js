@@ -21,7 +21,7 @@ export const FormPhoneNumber = props => {
 FormPhoneNumber.defaultProps = {
   tiny: false,
   disabled: false,
-  areaOptions: [{ value: '+33(fr)', label: '+33(FR)' }],
+  areaOptions: [{ value: '+33', label: '+33' }],
   areaName: null,
   areaValue: null,
   digits: null, // 2 or 12 for now
