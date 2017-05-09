@@ -128,7 +128,7 @@ export class KarlCroppingImage extends React.Component {
     return (
       <Marger top="2" bottom="1">
         <Label size="tiny">
-          Zoom de l'image
+          Zoom de l’image
         </Label>
       </Marger>
     )
