@@ -48,15 +48,17 @@ import { KarlSideLayout } from 'kitten/karl/layout/side-layout'
 
 // Icons
 import GrabberIcon from 'kitten/components/icons/grabber-icon'
+import { CbIcon } from 'kitten/components/icons/cb-icon'
 import { MenuIcon } from 'kitten/components/icons/menu-icon'
 import { HeartIcon } from 'kitten/components/icons/heart-icon'
 import { InformationIcon } from 'kitten/components/icons/information-icon'
 import { KissKissBankBankLogoIcon } from 'kitten/components/icons/kisskissbankbanklogo-icon'
-import { VisaIcon } from 'kitten/components/icons/visa-icon'
-import { LocationIcon } from 'kitten/components/icons/location-icon'
 import { FacebookIcon } from 'kitten/components/icons/facebook-icon'
-import { TwitterIcon } from 'kitten/components/icons/twitter-icon'
 import { LinkedinIcon } from 'kitten/components/icons/linkedin-icon'
+import { LocationIcon } from 'kitten/components/icons/location-icon'
+import { MasterCardIcon } from 'kitten/components/icons/mastercard-icon'
+import { TwitterIcon } from 'kitten/components/icons/twitter-icon'
+import { VisaIcon } from 'kitten/components/icons/visa-icon'
 
 // Layout
 import { Separator } from 'kitten/components/layout/separator'
@@ -159,7 +161,7 @@ import { KarlButtonIconHeart,
        } from 'kitten/karl/buttons/button-icon'
 import { KarlLineWithTooltip,
          KarlLineWithBigHeart } from 'kitten/karl/layout/line'
-import { KarlPaymentButton } from 'kitten/karl/buttons/payment-button'
+import { KarlPaymentButtons } from 'kitten/karl/buttons/payment-button'
 import { KarlStaticTooltip } from 'kitten/karl/tooltips/static-tooltip'
 import { KarlRandomProgress } from 'kitten/karl/meters/random-progress'
 import { KarlMakerWhoAmIStep } from 'app/maker/who-am-i/components/container'
@@ -225,16 +227,18 @@ ReactOnRails.register({
   GridCol,
 
   // Icons
+  CbIcon,
   MenuIcon,
   GrabberIcon,
   InformationIcon,
   KissKissBankBankLogoIcon,
   HeartIcon,
-  VisaIcon,
-  LocationIcon,
   FacebookIcon,
-  TwitterIcon,
   LinkedinIcon,
+  LocationIcon,
+  MasterCardIcon,
+  TwitterIcon,
+  VisaIcon,
 
   // Layout
   Separator,
@@ -334,7 +338,7 @@ ReactOnRails.register({
   KarlParagraphTertiary,
   KarlParagraphQuaternary,
   KarlParagraphWithLink,
-  KarlPaymentButton,
+  KarlPaymentButtons,
   KarlRandomProgress,
   KarlMakerWhoAmIStep,
   KarlLegoGrid,

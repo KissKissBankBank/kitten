@@ -71,7 +71,6 @@ module Kitten
             { path: 'components/buttons/image-button', name: 'Image button' },
             { path: 'components/buttons/image-button-with-text', name: 'Image button with text' },
             { path: 'components/buttons/tag-button', name: 'Tag button' },
-            { path: 'components/buttons/payment-button', name: 'Payment button' },
             { path: 'components/buttons/button-with-badge', name: 'Button with badge' },
           ],
         },
@@ -107,7 +106,6 @@ module Kitten
             { path: 'components/navigation/platform-switch', name: 'Plateform switch' },
             { path: 'components/headers/header', name: 'Header' },
             { path: 'components/steppers/stepper', name: 'Stepper' },
-            { path: 'components/dropdowns/dropdown', name: 'Dropdown' },
           ],
         },
         {

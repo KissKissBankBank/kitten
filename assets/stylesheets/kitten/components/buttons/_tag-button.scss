@@ -12,7 +12,10 @@
 /// - `.k-TagButton--big`
 ///
 /// Available icon modifier:
-/// - `.k-TagButton--icon
+/// - `.k-TagButton--icon`
+///
+/// Available svg modifier:
+/// - `.k-TagButton__svg`
 ///
 /// @group buttons
 ///
@@ -24,11 +27,14 @@
 ///
 /// @example html
 ///   <button class="k-TagButton k-TagButton--icon">
-///     <svg />
+///     <svg class="k-TagButton__icon" />
 ///   </button>
 
 @mixin k-TagButton {
   $border-size: 1px;
+
+  // Font
+  $font: 'source-sans-semi-bold';
 
   // Size settings tag-button.
   $tag-button-min-width: k-px-to-rem(60px - ($border-size * 2));
@@ -82,11 +88,11 @@
 
   .k-TagButton {
     @include k-buttonBase;
+    @include k-typographyFont($font);
     @include k-typographyFontSize($button-step, $tag-button-line-height);
 
-    padding: 0 $tag-button-radius;
+    padding: 0 k-px-to-rem(20px);
     border-radius: $tag-button-radius;
-    min-width: $tag-button-min-width;
     min-height: $tag-button-line-height;
   }
 
@@ -104,7 +110,6 @@
 
   // Icon modifier.
   .k-TagButton--icon {
-    padding: 0 k-px-to-rem(20px);
     border-color: map-get($k-colors, 'line-2');
     background-color: map-get($k-colors, 'background-1');
 
@@ -117,5 +122,10 @@
       border-color: map-get($k-colors, 'primary-3');
       background-color: map-get($k-colors, 'background-1');
     }
+  }
+
+  // svg modifier.
+  .k-TagButton__icon {
+    vertical-align: middle;
   }
 }
