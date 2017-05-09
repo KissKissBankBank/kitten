@@ -72,6 +72,7 @@ export class KarlCroppingImage extends React.Component {
   renderCropper() {
     const cropperProps = {
       ref: 'cropper',
+      className: 'k-Cropper',
       src: this.state.imageSrc,
       style: { width: '480px', height: '270px' },
       aspectRatio: 16/9,
