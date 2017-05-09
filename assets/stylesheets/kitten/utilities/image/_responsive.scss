@@ -1,0 +1,20 @@
+/// Utilities to get responsive image.
+///
+/// @group image
+///
+/// @example scss - Usage
+///
+///   @include k-utilities-responsive;
+///
+/// @example html
+///
+///   <img class="k-u-image-responsive" href="…" alt="…" />
+
+@mixin k-utilities-responsive {
+  .k-u-image-responsive {
+    display: block;
+
+    max-width: 100%;
+    height: auto;
+  }
+}
