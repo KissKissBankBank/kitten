@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Remove `ExternalRichLink` example.
+
 ## [11.5.0] - 2017-05-09
 
 Fix:

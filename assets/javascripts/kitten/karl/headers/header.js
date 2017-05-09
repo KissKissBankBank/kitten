@@ -25,7 +25,7 @@ export const KarlHeader = () => {
         </HeaderItem>
 
         <HeaderItem tag="p" fixedSize="true">
-          <HeaderLogo href="header"
+          <HeaderLogo href="pages/header"
                       src="https://placeholdit.imgix.net/~text?txt=LOGO&amp;w=180&amp;h=40"
                       alt="LOGO"
                       lightOnM={ true }
@@ -98,7 +98,7 @@ export const KarlHeaderWithSearchInput = () => {
         </HeaderItem>
 
         <HeaderItem tag="p" fixedSize="true">
-          <HeaderLogo href="header"
+          <HeaderLogo href="pages/header"
                       src="https://placeholdit.imgix.net/~text?txt=LOGO&amp;w=180&amp;h=40"
                       alt="LOGO"
                       lightOnM={ true }
@@ -167,7 +167,7 @@ export const KarlHeaderWhenLogged = () => {
         </HeaderItem>
 
         <HeaderItem tag="p" fixedSize="true">
-          <HeaderLogo href="header"
+          <HeaderLogo href="pages/header"
                       src="https://placeholdit.imgix.net/~text?txt=LOGO&amp;w=180&amp;h=40"
                       alt="LOGO"
                       lightOnM={ true }
@@ -234,7 +234,7 @@ export const KarlHeaderWithTitles = () => {
           <a className={ classNames('k-Header__logo',
                                     'k-Header__logo--lightOnM',
                                     'k-Header__logo--lightOnXxs') }
-             href="header">
+             href="pages/header">
             <img src="https://placeholdit.imgix.net/~text?txt=LOGO&amp;w=180&amp;h=40"
                  alt="LOGO" />
           </a>
