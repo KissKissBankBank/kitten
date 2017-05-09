@@ -31,8 +31,7 @@
 
   $options-tiny: map-merge($options, (
     arrow-zone-width: k-px-to-rem(30px),
-    select-input-border-radius: k-px-to-rem(4px),
-    select-input-border-width: k-px-to-rem(1px),
+    select-input-height: k-px-to-rem(40px),
   ));
 
   $font: 'source-sans';
