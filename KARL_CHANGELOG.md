@@ -55,7 +55,7 @@ Fixes:
 - Remove `TabBar` useless component examples.
 - Update link style on `Header` and `TabBar` components guideline example.
 - Replace `KarlButtonIconHeartRight` and `KarlButtonIconHeartLeft` examples
-  `KarlButtonIconWordsRight` and `KarlButtonIconWordsLeft`.t
+  `KarlButtonIconWordsRight` and `KarlButtonIconWordsLeft`.
 - Remove `error` label on Checkbox and RadioButton guideline example.
 - Install new grid on each components.
 - Update `hexa` colors and layout.
