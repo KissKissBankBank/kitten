@@ -107,7 +107,6 @@ module Kitten
             { path: 'components/navigation/platform-switch', name: 'Plateform switch' },
             { path: 'components/headers/header', name: 'Header' },
             { path: 'components/steppers/stepper', name: 'Stepper' },
-            { path: 'components/dropdowns/dropdown', name: 'Dropdown' },
           ],
         },
         {

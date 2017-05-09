@@ -5,20 +5,6 @@ import Dropdown from 'kitten/components/dropdowns/dropdown'
 import NavList from 'kitten/components/lists/nav-list'
 import UserMenu from 'kitten/components/dropdowns/user-menu'
 
-// KarlSimpleDropdown
-const dropdownList = [
-  <a href="#" className="karl-Dropdown--default__item">Cute</a>,
-  <a href="#" className="karl-Dropdown--default__item">and lovely</a>,
-  <a href="#" className="karl-Dropdown--default__item">kitten</a>,
-]
-
-const KarlSimpleDropdown = defaultProps(Dropdown, {
-  buttonClassName: 'karl-Dropdown--default__button',
-  dropdownContent: <NavList className="karl-Dropdown--default"
-                               role="menubar"
-                               list={ dropdownList } />
-})
-
 // KarlPlatformSwitch
 const karlPlatformSwitchButtonContent = (<svg
     className="k-ButtonIcon__svg"
@@ -98,4 +84,4 @@ const KarlUserMenuDropdown = defaultProps(UserMenu, {
   ],
 })
 
-export { KarlSimpleDropdown, KarlPlatformSwitch, KarlUserMenuDropdown }
+export { KarlPlatformSwitch, KarlUserMenuDropdown }
