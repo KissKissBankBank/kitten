@@ -90,7 +90,7 @@ export class KarlCroppingImage extends React.Component {
     }
 
     return (
-      <Marger top="2" bottom="2">
+      <Marger key="cropper" top="2" bottom="2">
         <Cropper { ...cropperProps } />
       </Marger>
     )
@@ -98,7 +98,7 @@ export class KarlCroppingImage extends React.Component {
 
   renderCropperInfo() {
     return (
-      <Marger top="2" bottom="2">
+      <Marger key="cropper-info" top="2" bottom="2">
         <Paragraph modifier="quaternary" margin={ false }>
           Déplacez l’image dans le cadre pour obtenir le plan voulu.
         </Paragraph>
@@ -118,7 +118,7 @@ export class KarlCroppingImage extends React.Component {
     }
 
     return (
-      <Marger top="1" bottom="2">
+      <Marger key="slider" top="1" bottom="2">
         <SliderWithTooltipAndPower { ...sliderProps } />
       </Marger>
     )
@@ -126,7 +126,7 @@ export class KarlCroppingImage extends React.Component {
 
   renderSliderTitle() {
     return (
-      <Marger top="2" bottom="1">
+      <Marger key="slider-title" top="2" bottom="1">
         <Label size="tiny">
           Zoom de l’image
         </Label>
