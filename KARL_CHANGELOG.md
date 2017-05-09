@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Upadate `UserMenu` and `PlateformSwitch` components with `dropdown` component.
+- Fix: Update `UserMenu` and `PlatformSwitch` components with `dropdown` component.
 
 ## [11.4.0] - 2017-05-04
 
