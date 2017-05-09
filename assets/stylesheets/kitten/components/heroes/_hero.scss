@@ -75,6 +75,7 @@
     .k-Hero__title {
       @include k-typographyFont($font);
       @include k-typographyFontSize(5, normal);
+      font-weight: 300;
 
       @include k-media-min('m') {
         @include k-typographyFontSize(7, normal);
