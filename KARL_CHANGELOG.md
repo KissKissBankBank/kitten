@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Delete states option in `areaOptions` in `FormPhoneNumber`.
+- Fix: Remove country in `areaOptions` and `FormPhoneNumber`.
 
 ## [11.4.0] - 2017-05-04
 
