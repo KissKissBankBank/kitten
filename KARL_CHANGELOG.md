@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Re-looking `k-Hero`.
 - Fix: Remove `ExternalRichLink` example.
 
 ## [11.5.0] - 2017-05-09
