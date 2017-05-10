@@ -9,6 +9,7 @@ export class Uploader extends React.Component {
       errors: {
         extensionsError: false,
         sizeError: false,
+        hasError: false,
       },
     }
 
@@ -24,7 +25,7 @@ export class Uploader extends React.Component {
     this.setState({
       errors: {
         ...this.state.errors,
-        extensionsError: (file.type.search(regex) < 1),
+        extensionsError: file.type.search(regex) < 1,
       }
     })
   }
@@ -33,7 +34,18 @@ export class Uploader extends React.Component {
     this.setState({
       errors: {
         ...this.state.errors,
-        sizeError: (this.props.maxSize && file.size > this.props.maxSize),
+        sizeError: this.props.maxSize && file.size > this.props.maxSize,
+      }
+    })
+  }
+
+  updateHasError() {
+    const errors = this.state.errors
+
+    this.setState({
+      errors: {
+        ...errors,
+        hasError: errors.extensionsError || errors.sizeError,
       }
     })
   }
@@ -45,9 +57,13 @@ export class Uploader extends React.Component {
     reader.onload = event => {
       this.checkExtensions(file)
       this.checkSize(file)
+      this.updateHasError()
 
-      this.props.onChange(event)
       this.props.onError(this.state.errors)
+
+      if (!this.state.errors.hasError) {
+        this.props.onChange(event)
+      }
     }
 
     if (file) {

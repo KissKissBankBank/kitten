@@ -17,10 +17,7 @@ export class KarlCroppingImage extends React.Component {
     super(props)
 
     this.state = {
-      imageSrc: null,
-      imageCropSrc: null,
-      touched: false,
-      sliderValue: 1,
+      ...this.initialProps(),
       errors: {},
     }
 
@@ -31,6 +28,17 @@ export class KarlCroppingImage extends React.Component {
     this.handleSliderAction = this.handleSliderAction.bind(this)
 
     this.handleCrop = this.handleCrop.bind(this)
+
+    this.renderError = this.renderError.bind(this)
+  }
+
+  initialProps() {
+    return {
+      imageSrc: null,
+      imageCropSrc: null,
+      touched: false,
+      sliderValue: 1,
+    }
   }
 
   handleChange(file) {
@@ -48,6 +56,10 @@ export class KarlCroppingImage extends React.Component {
     this.setState({
       errors: errors,
     })
+
+    if (this.state.errors.hasError) {
+      this.setState(this.initialProps())
+    }
   }
 
   handleSliderChange(value) {
@@ -63,11 +75,17 @@ export class KarlCroppingImage extends React.Component {
   }
 
   handleCrop() {
-    const dataUrl = this.refs.cropper.getCroppedCanvas().toDataURL()
+    if (this.state.imageSrc) {
+      const dataUrl = this.refs.cropper.getCroppedCanvas().toDataURL()
 
-    this.setState({
-      imageCropSrc: dataUrl,
-    })
+      this.setState({
+        imageCropSrc: dataUrl,
+      })
+    }
+  }
+
+  getErrorLabel(error) {
+    return this.props[`${ error }Label`] ? this.props[`${ error }Label`] : null
   }
 
   renderCropper() {
@@ -145,6 +163,26 @@ export class KarlCroppingImage extends React.Component {
     ]
   }
 
+  renderError(error) {
+    if (!this.state.errors[error]) return
+
+    return (
+      <p key={ `error-${ error }` } className="k-FormInfo__error">
+        { this.getErrorLabel(error) }
+      </p>
+    )
+  }
+
+  renderErrors() {
+    if (!this.state.errors.hasError) return
+
+    return (
+      <Marger key="error" top="1" bottom="1">
+        { Object.keys(this.state.errors).map(this.renderError) }
+      </Marger>
+    )
+  }
+
   render() {
     const uploaderProps = {
       name: this.props.name,
@@ -167,6 +205,8 @@ export class KarlCroppingImage extends React.Component {
             <Marger top="1" bottom="1">
               <Uploader { ...uploaderProps } />
             </Marger>
+
+            { this.renderErrors() }
 
             <Marger top="1" bottom="1">
               <Paragraph modifier="quaternary" margin={ false }>
@@ -197,4 +237,6 @@ export class KarlCroppingImage extends React.Component {
 
 KarlCroppingImage.defaultProps = {
   name: 'picture',
+  extensionsErrorLabel: 'Your file extension is not valid.',
+  sizeErrorLabel: 'Your file size is too big.',
 }
