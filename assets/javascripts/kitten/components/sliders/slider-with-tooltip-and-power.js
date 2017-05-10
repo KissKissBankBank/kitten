@@ -130,6 +130,7 @@ SliderWithTooltipAndPower.defaultProps = {
   max: 100,
   step: 1,
   power: 1,
+  tooltipText: null,
   onChange: function() {},
   onChangeEnd: function() {},
 }
