@@ -54,6 +54,8 @@ export class Uploader extends React.Component {
     const file = event.target.files[0]
     const reader = new FileReader()
 
+    this.props.onChange()
+
     reader.onload = event => {
       this.checkExtensions(file)
       this.checkSize(file)

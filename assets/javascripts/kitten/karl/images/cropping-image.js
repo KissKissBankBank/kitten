@@ -44,6 +44,7 @@ export class KarlCroppingImage extends React.Component {
   handleChange(file) {
     this.setState({
       imageSrc: file ? file.target.result : null,
+      imageCropSrc: null,
       sliderValue: 1,
     })
   }
