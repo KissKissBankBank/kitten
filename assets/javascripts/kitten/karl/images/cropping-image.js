@@ -27,6 +27,7 @@ export class KarlCroppingImage extends React.Component {
     this.handleSliderChange = this.handleSliderChange.bind(this)
     this.handleSliderAction = this.handleSliderAction.bind(this)
 
+    this.handleReady = this.handleReady.bind(this)
     this.handleCrop = this.handleCrop.bind(this)
 
     this.renderError = this.renderError.bind(this)
@@ -38,6 +39,8 @@ export class KarlCroppingImage extends React.Component {
       imageCropSrc: null,
       touched: false,
       sliderValue: 1,
+      sliderMin: 1,
+      sliderMax: 500,
     }
   }
 
@@ -69,6 +72,22 @@ export class KarlCroppingImage extends React.Component {
 
   handleSliderAction() {
     this.setState({ touched: true })
+  }
+
+  // Calculate the right range for the zoom slider.
+  handleReady() {
+    const imageData = this.refs.cropper.getImageData()
+    const naturalWidth = imageData.naturalWidth
+    const width = imageData.width
+    const ratio = width / naturalWidth * 100
+    const min = this.state.sliderMin + ratio - 1
+    const max = this.state.sliderMax + ratio
+
+    this.setState({
+      sliderMin: min,
+      sliderMax: max,
+      sliderValue: min,
+    })
   }
 
   handleCrop() {
@@ -103,6 +122,7 @@ export class KarlCroppingImage extends React.Component {
       zoomOnWheel: false,
       dragMode: 'move',
       crop: this.handleCrop,
+      ready: this.handleReady,
     }
 
     return (
@@ -125,8 +145,8 @@ export class KarlCroppingImage extends React.Component {
   renderSlider() {
     const sliderProps = {
       name: 'zoom',
-      min: 1,
-      max: 500,
+      min: this.state.sliderMin,
+      max: this.state.sliderMax,
       value: this.state.sliderValue,
       onChange: this.handleSliderChange,
       onAction: this.handleSliderAction,
