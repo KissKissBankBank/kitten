@@ -42,8 +42,6 @@ export class KarlCroppingImage extends React.Component {
   }
 
   handleChange(file) {
-    console.log('file ---> ', file)
-
     this.setState({
       imageSrc: file ? file.target.result : null,
       sliderValue: 1,
@@ -51,8 +49,6 @@ export class KarlCroppingImage extends React.Component {
   }
 
   handleErrors(errors) {
-    console.log('errors ---> ', errors)
-
     this.setState({
       errors: errors,
     })
