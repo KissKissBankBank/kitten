@@ -9,19 +9,19 @@
 /// @example html
 ///
 ///  <div class="k-Hero">
-///    <div class="k-Hero__container">
-///      <div class="k-Hero__text">
-///        <h1 class="k-Hero__title">Wool balls</h1>
-///        <p class="k-Hero__subtitle">Infinite fun.</p>
-///      </div>
-///      <div class="k-Hero__action">
+///    <div class="k-Hero__text">
+///      <h1 class="k-Hero__title k-u-margin-bottom-double">Wool balls</h1>
+///      <p class="k-Hero__subtitle">Infinite fun.</p>
+///    </div>
+///    <div class="k-Hero__action">
+///      <div class="k-Card k-Card--light k-Card--padded">
 ///        <img class="k-Hero__img" />
 ///      </div>
 ///    </div>
 ///  </div>
 
-@mixin k-Hero {
-  $font: 'source-sans-light';
+@mixin k-Hero($hero) {
+  $font: k-map-fetch($hero, 'font');
 
   .k-Hero {
     @include k-grid;
@@ -36,11 +36,11 @@
     margin: k-px-to-rem(40px) 0 k-px-to-rem(30px);
 
     @include k-media-min('s') {
-      margin: k-px-to-rem(62px) k-px-to-rem(10px) k-px-to-rem(30px);
+      margin: k-px-to-rem(60px) k-px-to-rem(10px) k-px-to-rem(30px);
     }
 
     @include k-media-min('l') {
-      margin: k-px-to-rem(107px) 0;
+      margin: k-px-to-rem(110px) 0;
       @include k-grid-col(4);
       @include k-grid-offset(1);
     }
@@ -68,7 +68,7 @@
   }
 
   .k-Hero__action {
-    margin: 0 0 k-px-to-rem(40px);
+    margin-bottom: k-px-to-rem(40px);
     text-align: left;
     @include k-grid-col(12);
 
@@ -79,15 +79,10 @@
     }
 
     @include k-media-min('l') {
-      margin: k-px-to-rem(107px) 0;
+      margin: k-px-to-rem(110px) 0;
       @include k-grid-col(4);
       @include k-grid-offset(2);
     }
-  }
-
-  .k-Hero__img {
-    max-width: 100%;
-    height: 350px;
   }
 
   .k-Hero--onDark {

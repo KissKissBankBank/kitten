@@ -126,7 +126,9 @@
 
 // Hero
 
-@include k-Hero;
+@include k-Hero((
+  font: 'source-sans-light',
+));
 
 // Layout
 
