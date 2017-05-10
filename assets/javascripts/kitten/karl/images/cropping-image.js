@@ -10,6 +10,7 @@ import { Paragraph } from 'kitten/components/typography/paragraph'
 import { Uploader } from 'kitten/components/uploaders/uploader'
 import { SliderWithTooltipAndPower }
   from 'kitten/components/sliders/slider-with-tooltip-and-power'
+import Slider from 'kitten/components/form/slider'
 
 export class KarlCroppingImage extends React.Component {
   constructor(props) {
@@ -109,17 +110,16 @@ export class KarlCroppingImage extends React.Component {
   renderSlider() {
     const sliderProps = {
       name: 'zoom',
-      min: '1',
-      max: '500',
+      min: 1,
+      max: 500,
       value: this.state.sliderValue,
       onChange: this.handleSliderChange,
       onAction: this.handleSliderAction,
-      tooltipText: `${ this.state.sliderValue } %`,
     }
 
     return (
       <Marger key="slider" top="1" bottom="2">
-        <SliderWithTooltipAndPower { ...sliderProps } />
+        <Slider { ...sliderProps } />
       </Marger>
     )
   }
