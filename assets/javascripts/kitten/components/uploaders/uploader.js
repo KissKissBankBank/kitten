@@ -86,7 +86,7 @@ export class Uploader extends React.Component {
 
 Uploader.defaultProps = {
   name: null,
-  acceptedFiles: '.jpg',
+  acceptedFiles: '.jpg', // Separate the values with a comma: '.jpg,.png'.
   maxSize: null,
   onChange: () => {},
   onError: () => {},
