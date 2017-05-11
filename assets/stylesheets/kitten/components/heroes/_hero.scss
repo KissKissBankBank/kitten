@@ -35,14 +35,14 @@
     }
 
     .k-Hero__text {
-      padding: k-px-to-rem(40px) 0 k-px-to-rem(30px);
+      margin: k-px-to-rem(40px) 0 k-px-to-rem(30px);
 
       @include k-media-min('s') {
-        padding: k-px-to-rem(62px) 0 k-px-to-rem(30px);
+        margin: k-px-to-rem(62px) 0 k-px-to-rem(30px);
       }
 
       @include k-media-min('l') {
-        padding: k-px-to-rem(107px) 0;
+        margin: k-px-to-rem(107px) 0;
         @include k-grid-col(4);
         @include k-grid-offset(1);
       }
@@ -70,7 +70,7 @@
     }
 
     .k-Hero__action {
-      padding-bottom: k-px-to-rem(40px);
+      margin-bottom: k-px-to-rem(40px);
       text-align: left;
       @include k-grid-col(12);
 
@@ -80,6 +80,7 @@
       }
 
       @include k-media-min('m') {
+        margin: 0 0 k-px-to-rem(80px);
         @include k-grid-col(8);
         @include k-grid-offset(2);
       }
