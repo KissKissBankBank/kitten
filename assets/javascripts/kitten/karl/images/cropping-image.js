@@ -241,9 +241,7 @@ export class KarlCroppingImage extends React.Component {
             <Paragraph>Preview</Paragraph>
 
             <Marger top="2" bottom="2">
-              <img
-                src={ this.state.imageCropSrc }
-                alt="" />
+              <img src={ this.state.imageCropSrc } alt="" />
             </Marger>
           </GridCol>
         </Grid>
