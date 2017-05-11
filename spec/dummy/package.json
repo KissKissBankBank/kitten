@@ -10,7 +10,7 @@
     "client/node_modules"
   ],
   "scripts": {
-    "postinstall": "cd client && npm install",
+    "postinstall": "cd client && yarn install",
     "build:dev": "(cd client && npm run build:dev)",
     "build": "(cd client && npm run build --silent)",
     "hot-assets": "(cd client && npm run hot-assets)"
