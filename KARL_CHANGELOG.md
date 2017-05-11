@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Re-looking `Hero` example.
+- Fix: `Hero` example relooking.
 - Feature: Add `TagButton` with large word example.
 - Fix: Update `UserMenu` and `PlatformSwitch` components with `dropdown` component.
 - Fix: Remove `ExternalRichLink` example.
