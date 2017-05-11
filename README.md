@@ -15,7 +15,6 @@ styleguide. It should eventually be separated into two different repositories.
 - Ruby 2.2.4
 - Bundler (`gem install bundler`)
 - Node ~> 6.0
-- Yarn (`npm install -g yarn`)
 
 ## Table of content
 - [Installation](#installation)
