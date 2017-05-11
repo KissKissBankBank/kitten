@@ -61,7 +61,7 @@
     "susy": "^2.2.12"
   },
   "scripts": {
-    "postinstall": "cd vendor/assets/stylesheets/kitten/sassy-maps && npm install",
+    "postinstall": "cd vendor/assets/stylesheets/kitten/sassy-maps && yarn install",
     "sassdoc": "sassdoc -d public/sassdoc assets/stylesheets",
     "stylelint": "stylelint --syntax scss 'assets/stylesheets/**/*.scss'",
     "build:dev": "(cd spec/dummy/client && npm run build:dev)",
