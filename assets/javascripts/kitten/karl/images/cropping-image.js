@@ -38,8 +38,8 @@ export class KarlCroppingImage extends React.Component {
       imageSrc: null,
       imageCropSrc: null,
       touched: false,
-      sliderValue: 1,
-      sliderMin: 1,
+      sliderValue: 0,
+      sliderMin: 0,
       sliderMax: 500,
     }
   }
@@ -48,7 +48,7 @@ export class KarlCroppingImage extends React.Component {
     this.setState({
       imageSrc: file ? file.target.result : null,
       imageCropSrc: null,
-      sliderValue: 1,
+      sliderValue: 0,
     })
   }
 
@@ -80,7 +80,7 @@ export class KarlCroppingImage extends React.Component {
     const naturalWidth = imageData.naturalWidth
     const width = imageData.width
     const ratio = width / naturalWidth * 100
-    const min = this.state.sliderMin + ratio - 1
+    const min = this.state.sliderMin + ratio
     const max = this.state.sliderMax + ratio
 
     this.setState({
