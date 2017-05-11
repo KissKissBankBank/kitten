@@ -70,7 +70,7 @@
     }
 
     .k-Hero__action {
-      margin-bottom: k-px-to-rem(40px);
+      margin: 0 0 k-px-to-rem(40px);
       text-align: left;
 
       @include k-media-min('s') {
