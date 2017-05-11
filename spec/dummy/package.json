@@ -16,6 +16,6 @@
     "hot-assets": "(cd client && npm run hot-assets)"
   },
   "devDependencies": {
-    "webpack": "^2.5.1"
+    "kitten-launcher": "^1.0.0"
   }
 }
