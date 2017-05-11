@@ -45,6 +45,7 @@ export class Alert extends React.Component {
       success,
       closeButton,
       closeButtonLabel,
+      positionedInAbsolute,
       children,
       ...others,
     } = this.props
@@ -55,6 +56,7 @@ export class Alert extends React.Component {
         'k-Alert--success': success,
         'k-Alert--error': error,
         'k-Alert--hidden': !this.state.show,
+        'k-Alert--absolute': positionedInAbsolute,
       },
       className
     )
@@ -84,6 +86,7 @@ Alert.defaultProps = {
   show: true,
   error: false,
   success: false,
+  positionedInAbsolute: false,
   closeButton: false,
   closeButtonLabel: 'Close',
 }

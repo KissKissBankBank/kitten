@@ -57,6 +57,14 @@ describe('<Alert />', () => {
     })
   })
 
+  describe('with positionedInAbsolute prop', () => {
+    const alert = shallow(<Alert positionedInAbsolute />)
+
+    it('has a class for absolute position', () => {
+      expect(alert).to.have.className('k-Alert--absolute')
+    })
+  })
+
   describe('with custom class', () => {
     const alert = shallow(<Alert className="custom__class" />)
 
