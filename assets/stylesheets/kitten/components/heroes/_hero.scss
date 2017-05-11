@@ -72,7 +72,6 @@
     .k-Hero__action {
       margin-bottom: k-px-to-rem(40px);
       text-align: left;
-      @include k-grid-col(12);
 
       @include k-media-min('s') {
         @include k-grid-col(10);
