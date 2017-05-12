@@ -12,10 +12,13 @@ import { Label } from 'kitten/components/form/label'
 export class LocationInput extends React.Component {
   constructor(props) {
     super(props)
+
     this.state = {
       address: this.props.defaultValue,
     }
+
     this.handleChange = this.handleChange.bind(this)
+    this.handleSelect = this.handleSelect.bind(this)
   }
 
   handleChange(address) {
@@ -23,8 +26,33 @@ export class LocationInput extends React.Component {
     this.props.onChange({ value: address, name: this.props.name })
   }
 
+  handleSelect(address, placeId) {
+    const input   = $('#PlacesAutocomplete__root input')[0]
+    const service = new google.maps.places.PlacesService(input);
+
+    service.getDetails(
+      { placeId: placeId },
+      (place, status) => {
+        if (status == google.maps.places.PlacesServiceStatus.OK) {
+          const number = place.address_components[0].long_name
+          const street = place.address_components[1].long_name
+          const value = `${number} ${street}`
+
+          this.setState({ address: value })
+          this.props.onSelect(address, placeId, place)
+        }
+      }
+    )
+  }
+
   render() {
-    const { onChange, defaultValue, inputProps, ...others } = this.props
+    const {
+      onChange,
+      onSelect,
+      defaultValue,
+      inputProps,
+      ...others,
+    } = this.props
 
     const placesClassNames = {
       root: 'k-LocationInput__group',
@@ -56,10 +84,12 @@ export class LocationInput extends React.Component {
         <div className="k-LocationInput__icon">
           <LocationIcon />
         </div>
+
         <PlacesAutocomplete classNames={ placesClassNames }
                             autocompleteItem={ autocompleteItem }
                             hideLabel={ true }
                             inputProps={ finalInputProps }
+                            onSelect={ this.handleSelect }
                             { ...others } />
       </div>
     )
@@ -68,5 +98,6 @@ export class LocationInput extends React.Component {
 
 LocationInput.defaultProps = {
   onChange: function() {},
+  onSelect: function() {},
   defaultValue: '',
 }
