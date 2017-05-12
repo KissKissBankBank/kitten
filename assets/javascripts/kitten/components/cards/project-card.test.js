@@ -275,4 +275,23 @@ describe('<ProjectCard />', () => {
         .to.have.className('k-ProjectCard__status--errorReverseBackground')
     })
   })
+
+  describe('with tooltipText prop', () => {
+    const projectCard = mount(
+      <ProjectCard tooltipText="Custom text" />
+    )
+
+    it('has good classes', () => {
+      expect(projectCard).to.have.descendants('.k-ProjectCard__tooltip')
+      expect(projectCard)
+        .to.have.descendants('.k-ProjectCard__tooltip__content')
+    })
+
+    it('has a good text', () => {
+      const content =
+        projectCard.find('.k-ProjectCard__tooltip__content').first()
+
+      expect(content).to.have.text('Custom text')
+    })
+  })
 })
