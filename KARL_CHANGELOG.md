@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Update `ProjectCard` example with investment tooltip.
+- Feature: Update `ProjectCard` example with tooltip.
 - Fix: Update component text.
 - Fix: `Hero` example relooking.
 - Feature: Add `TagButton` with large word example.

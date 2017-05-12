@@ -106,7 +106,7 @@ export class KarlBrowsing extends React.Component {
         score: 'C',
         imageSrc: randomImage(3),
         ownerAvatarSrc: randomOwnerAvatarSrc(6),
-        investmentText: '50 € investis',
+        tooltipText: '50 € investis',
       },
       {
         id: 'project-7',
@@ -114,7 +114,7 @@ export class KarlBrowsing extends React.Component {
         score: 'A',
         imageSrc: randomImage(4),
         ownerAvatarSrc: randomOwnerAvatarSrc(7),
-        investmentText: '50 € investis',
+        tooltipText: '50 € investis',
       },
       {
         id: 'project-8',
@@ -129,7 +129,7 @@ export class KarlBrowsing extends React.Component {
         score: 'A+',
         imageSrc: randomImage(5),
         ownerAvatarSrc: randomOwnerAvatarSrc(9),
-        investmentText: '50 € investis',
+        tooltipText: '50 € investis',
       },
       {
         id: 'project-10',
@@ -155,7 +155,7 @@ export class KarlBrowsing extends React.Component {
         imageSrc: randomImage(1),
         ownerAvatarSrc: randomOwnerAvatarSrc(1),
         progress: 23,
-        investmentText: '50 € investis',
+        tooltipText: '50 € investis',
       },
       {
         id: 'project-2',
@@ -164,7 +164,7 @@ export class KarlBrowsing extends React.Component {
         imageSrc: randomImage(2),
         ownerAvatarSrc: randomOwnerAvatarSrc(2),
         progress: 23,
-        investmentText: '1 000 € investis',
+        tooltipText: '1 000 € investis',
       },
       {
         id: 'project-3',

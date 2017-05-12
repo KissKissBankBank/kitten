@@ -276,9 +276,9 @@ describe('<ProjectCard />', () => {
     })
   })
 
-  describe('with investmentText prop', () => {
+  describe('with tooltipText prop', () => {
     const projectCard = mount(
-      <ProjectCard investmentText="Custom text" />
+      <ProjectCard tooltipText="Custom text" />
     )
 
     it('has good classes', () => {

@@ -38,7 +38,7 @@ class ProjectCardComponent extends React.Component {
             { ownerLocation }
           </Paragraph>
 
-          { this.renderInvestment() }
+          { this.renderTooltip() }
         </Marger>
 
         <Marger top="1" bottom="1.5" className="k-ProjectCard__grid--flex">
@@ -55,17 +55,17 @@ class ProjectCardComponent extends React.Component {
     )
   }
 
-  renderInvestment() {
-    if (!this.props.investmentText) return
+  renderTooltip() {
+    if (!this.props.tooltipText) return
 
     return (
       <div className="k-ProjectCard__tooltip">
         <span className="k-ProjectCard__tooltip__content">
-          { this.props.investmentText }
+          { this.props.tooltipText }
         </span>
         <CheckedCircleIcon
           style={ { width: '20px', height: '20px' } }
-          circleColor={ this.props.investmentIconColor }
+          circleColor={ this.props.tooltipIconColor }
           checkedColor="#fff" />
       </div>
     )
@@ -230,8 +230,8 @@ ProjectCardComponent.defaultProps = {
   ownerName: 'Name',
   ownerLocation: 'Location',
   tags: [{ key: 'tag-1', item: 'Tag 1' }, { key: 'tag-2', item: 'Tag 2' }],
-  investmentText: null,
-  investmentIconColor: '#4a84ff',
+  tooltipText: null,
+  tooltipIconColor: '#4a84ff',
   scoreValue: null,
   scoreBackgroundColor: null,
   title: 'Title',
