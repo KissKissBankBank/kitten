@@ -454,13 +454,13 @@ LoanSimulator.defaultProps = {
   displayCommission: false,
   feesExemption: false,
   feesExemptionLabel: 'instead of',
-  commissionLabel: 'Commission:',
+  commissionLabel: 'Fees:',
   commissionRules: [],
 
   // DEPRECATED in favor of commissionRules
   commissionRate: function() { return 0 },
 
-  installmentLabel: 'Reimbursing',
+  installmentLabel: "I'd like to reimburs",
   initialInstallment: null,
 
   durationText: 'during',

@@ -25,6 +25,6 @@ export class Title extends React.Component {
 Title.defaultProps = {
   tag: 'h1',
   modifier: 'primary',
-  children: 'Felis…',
+  children: 'Lorem ipsum dolor sit amet…',
   margin: true,
 }
