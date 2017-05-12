@@ -9,7 +9,12 @@
 //
 //
 // E.g:
-//    <SelectWithStateAsync loadOptions={} />
+//
+//    function getPostalCodes(input, callback) {
+//      return [...];
+//    }
+//
+//    <SelectWithStateAsync loadOptions={getPostalCodes} />
 //
 import React from 'react'
 import classNames from 'classnames'
@@ -68,13 +73,18 @@ class SelectWithStateAsync extends React.Component {
 }
 
 class SelectWithMultiLevelAsync extends React.Component {
+  constructor(props) {
+    super(props)
+
+    this.loadAndFlattenOptions = this.loadAndFlattenOptions.bind(this)
+  }
+
   // Turns a hierarchy of options with `children` into a flat array
   // of options with a `level` of 1, 2 or null.
-  // TODO: Where should we post-process the list of returned options?
-  flattenedOptions() {
+  flattenOptions(rawOptions) {
     const options = []
 
-    this.props.options.map(option => {
+    rawOptions.map(option => {
       if (option.children) {
         option.level = 1
         options.push(option)
@@ -88,6 +98,19 @@ class SelectWithMultiLevelAsync extends React.Component {
     })
 
     return options
+  }
+
+  loadAndFlattenOptions(input, callback) {
+    this.props.loadOptions(
+      input,
+      (error, options) => {
+        if (!error) {
+          callback(error, { options: this.flattenOptions(options) })
+        } else {
+          callback(error, { options })
+        }
+      }
+    )
   }
 
   // React-Select allows changing the way options are rendered.
@@ -111,7 +134,7 @@ class SelectWithMultiLevelAsync extends React.Component {
                          { ...this.props }
                          inputProps={ inputProps }
                          options={ this.props.options }
-                         loadOptions={ this.props.loadOptions } />
+                         loadOptions={ this.loadAndFlattenOptions } />
   }
 }
 
