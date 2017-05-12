@@ -439,7 +439,7 @@ LoanSimulator.propTypes = {
 }
 
 LoanSimulator.defaultProps = {
-  amountLabel: 'Amount',
+  amountLabel: 'I need',
   amountPlaceholder: '',
   amountMin: 1,
   amountMax: 10000,
@@ -460,7 +460,7 @@ LoanSimulator.defaultProps = {
   // DEPRECATED in favor of commissionRules
   commissionRate: function() { return 0 },
 
-  installmentLabel: "I'd like to reimburs",
+  installmentLabel: "I'd like to reimburse",
   initialInstallment: null,
 
   durationText: 'during',
