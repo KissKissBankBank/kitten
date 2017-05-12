@@ -4,6 +4,19 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Update `ProjectCard` example with tooltip.
+- Fix: Remove `Line` and `Line.Item` on `KarlPaymentButtons` example.
+- Fix: Update component text.
+- Fix: `Hero` example relooking.
+- Feature: Add `TagButton` with large word example.
+- Fix: Update `UserMenu` and `PlatformSwitch` components with `dropdown` component.
+- Fix: Remove `ExternalRichLink` example.
+
+## [11.5.0] - 2017-05-09
+
+Fix:
+- Remove country in `areaOptions` and `FormPhoneNumber`.
+
 ## [11.4.0] - 2017-05-04
 
 Fixes:

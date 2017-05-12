@@ -5,6 +5,17 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add new `StudingIcon` component.
+- Feature: Add tooltip in `ProjectCard`.
+- Feature: Add new `MasterCardIcon` and `CbIcon` components.
+- Feature: Add `.k-TagButton__icon` class to adds icons to tag buttons.
+
+## [11.5.0] - 2017-05-09
+
+Feature:
+- Add responsive image utility.
+
+Fix:
+- Fix the tiny option on Select.
 
 ## [11.4.0] - 2017-05-04
 

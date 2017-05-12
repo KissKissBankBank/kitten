@@ -50,16 +50,17 @@ import { KarlSideLayout } from 'kitten/karl/layout/side-layout'
 // Icons
 import GrabberIcon from 'kitten/components/icons/grabber-icon'
 import { ArrowRightIcon } from 'kitten/components/icons/arrow-right-icon'
-import { MenuIcon } from 'kitten/components/icons/menu-icon'
+import { CbIcon } from 'kitten/components/icons/cb-icon'import { MenuIcon } from 'kitten/components/icons/menu-icon'
 import { HeartIcon } from 'kitten/components/icons/heart-icon'
 import { InformationIcon } from 'kitten/components/icons/information-icon'
 import { KissKissBankBankLogoIcon } from 'kitten/components/icons/kisskissbankbanklogo-icon'
-import { VisaIcon } from 'kitten/components/icons/visa-icon'
-import { LocationIcon } from 'kitten/components/icons/location-icon'
 import { FacebookIcon } from 'kitten/components/icons/facebook-icon'
-import { TwitterIcon } from 'kitten/components/icons/twitter-icon'
 import { LinkedinIcon } from 'kitten/components/icons/linkedin-icon'
 import { StudingIcon } from 'kitten/components/icons/studing-icon'
+import { LocationIcon } from 'kitten/components/icons/location-icon'
+import { MasterCardIcon } from 'kitten/components/icons/mastercard-icon'
+import { TwitterIcon } from 'kitten/components/icons/twitter-icon'
+import { VisaIcon } from 'kitten/components/icons/visa-icon'
 
 // Layout
 import { Separator } from 'kitten/components/layout/separator'
@@ -114,10 +115,7 @@ import { KarlAutoTriggerPopover }
 import { KarlAutoTriggerCallToActionPopover }
   from 'karl/components/popovers/auto-trigger-call-to-action-popover'
 import { KarlLoudspeakerPopover } from 'karl/components/popovers/loudspeaker-popover'
-import { KarlImageExternalRichLink,
-         KarlSvgExternalRichLink } from 'kitten/karl/molecules/external-rich-link'
-import { KarlSimpleDropdown,
-         KarlPlatformSwitch,
+import { KarlPlatformSwitch,
          KarlUserMenuDropdown } from 'kitten/karl/organisms/dropdown'
 import { KarlHeader,
          KarlHeaderWithSearchInput,
@@ -164,7 +162,7 @@ import { KarlButtonIconHeart,
        } from 'kitten/karl/buttons/button-icon'
 import { KarlLineWithTooltip,
          KarlLineWithBigHeart } from 'kitten/karl/layout/line'
-import { KarlPaymentButton } from 'kitten/karl/buttons/payment-button'
+import { KarlPaymentButtons } from 'kitten/karl/buttons/payment-button'
 import { KarlStaticTooltip } from 'kitten/karl/tooltips/static-tooltip'
 import { KarlRandomProgress } from 'kitten/karl/meters/random-progress'
 import { KarlMakerWhoAmIStep } from 'app/maker/who-am-i/components/container'
@@ -232,17 +230,19 @@ ReactOnRails.register({
 
   // Icons
   ArrowRightIcon,
+  CbIcon,
   MenuIcon,
   GrabberIcon,
   InformationIcon,
   KissKissBankBankLogoIcon,
   HeartIcon,
-  VisaIcon,
-  LocationIcon,
   FacebookIcon,
-  TwitterIcon,
   LinkedinIcon,
   StudingIcon,
+  LocationIcon,
+  MasterCardIcon,
+  TwitterIcon,
+  VisaIcon,
 
   // Layout
   Separator,
@@ -308,9 +308,6 @@ ReactOnRails.register({
   KarlLineWithTooltip,
   KarlLineWithBigHeart,
   KarlIconBadgeWithSvg,
-  KarlImageExternalRichLink,
-  KarlSvgExternalRichLink,
-  KarlSimpleDropdown,
   KarlPlatformSwitch,
   KarlUserMenuDropdown,
   KarlHeader,
@@ -344,7 +341,7 @@ ReactOnRails.register({
   KarlParagraphTertiary,
   KarlParagraphQuaternary,
   KarlParagraphWithLink,
-  KarlPaymentButton,
+  KarlPaymentButtons,
   KarlRandomProgress,
   KarlMakerWhoAmIStep,
   KarlLegoGrid,
