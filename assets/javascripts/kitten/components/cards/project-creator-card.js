@@ -5,40 +5,30 @@ import { Marger } from 'kitten/components/layout/marger'
 import { Grid, GridCol } from 'kitten/components/grid/grid'
 import { StudingIcon } from 'kitten/components/icons/studing-icon'
 import { Paragraph } from 'kitten/components/typography/paragraph'
-import LinkBox from 'kitten/components/box/link-box'
+import { ButtonIcon } from 'kitten/components/buttons/button-icon'
+import { ArrowRightIcon } from 'kitten/components/icons/arrow-right-icon'
 
 class ProjectCreatorCardComponent extends React.Component {
   renderDescription() {
     const {
       ownerTitle,
+      ownerDate,
     } = this.props
 
     return (
       <div className="k-ProjectCreatorCard__grid">
         <Marger top='1.8'
                 bottom='2'>
-          { this.renderDate() }
-          <div className="k-ProjecrCreatorCard__date"> Le 15 mars 2017 </div>
+          <div className="k-ProjectCreatorCard__title">
+            <span><StudingIcon /></span>
+            <div className="k-ProjectCreatorCard__date">{ ownerDate }</div>
+          </div>
 
-          <Paragraph margin={ false }>
+          <Paragraph margin={ false }
+                     className="k-ProjectCreatorCard__text">
             { ownerTitle }
           </Paragraph>
         </Marger>
-      </div>
-    )
-  }
-
-  renderDate() {
-    const {
-      ownerDate,
-    } = this.props
-
-    if (!this.props.date) return
-
-    return (
-      <div>
-        <StudingIcon />
-        { ownerDate }
       </div>
     )
   }
@@ -54,9 +44,21 @@ class ProjectCreatorCardComponent extends React.Component {
     if (!linkContent) return
 
     return (
-      <Tag margin={ false }>
-        <LinkBox> { linkContent } </LinkBox>
-      </Tag>
+      <div className="k-ProjectCreatorCard__link">
+        <div className="k-ProjectCreatorCard__grid
+                        k-ProjectCreatorCard__grid--withBorderTop">
+          <Marger top="1.2" bottom="1.2">
+            <div className="k-ProjectCreatorCard__link--flex">
+              <div> Voir le project </div>
+              <span>
+                <ButtonIcon size="tiny" className="k-ButtonIcon--verticalArrow">
+                  <ArrowRightIcon className="k-ButtonIcon__svg" />
+                </ButtonIcon>
+              </span>
+            </div>
+          </Marger>
+        </div>
+      </div>
     )
   }
 
@@ -75,10 +77,9 @@ class ProjectCreatorCardComponent extends React.Component {
   }
 }
 
-
 ProjectCreatorCardComponent.defaultProps = {
   ownerDate: null,
-  ownerTitle: 'Title',
+  ownerTitle: null,
   linkContent: null,
   tag: 'a',
 }

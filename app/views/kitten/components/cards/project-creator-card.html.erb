@@ -2,7 +2,8 @@
   <div class="k-Grid__col k-Grid__col--12 k-Grid__col--6@l">
     <%= example 'Project creator card' do %>
       <%= react_component 'ProjectCreatorCard', props: {
-          ownerDate: '15 juin 2016',
+          ownerDate: 'Le 15 juin 2016',
+          ownerTitle: 'Et si on révolutionnait encore plus l’entraide ?',
         } %>
     <% end %>
   </div>
@@ -10,7 +11,8 @@
   <div class="k-Grid__col k-Grid__col--12 k-Grid__col--6@l">
     <%= example 'Project creator card with link' do %>
       <%= react_component 'ProjectCreatorCard', props: {
-          ownerDate: '15 juin 2016',
+          ownerDate: 'Le 15 juin 2016',
+          ownerTitle: 'Et si on révolutionnait encore plus l’entraide ?',
           linkContent: true,
         } %>
     <% end %>

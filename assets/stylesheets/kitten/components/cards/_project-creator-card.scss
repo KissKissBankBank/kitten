@@ -9,21 +9,44 @@
 /// @example html
 ///
 
-
-
 @mixin k-ProjectCreatorCard {
   $font: 'source-sans-light';
 
   .k-ProjectCreatorCard {
     overflow: hidden;
+    max-width: k-px-to-rem(380px);
   }
 
   .k-ProjectCreatorCard__grid {
     padding: 0 k-px-to-rem(20px);
   }
 
-  .k-ProjecrCreatorCard__date {
+  .k-ProjectCreatorCard__grid--withBorderTop {
+    border-top: 1px solid map-get($k-colors, 'line-1');
+  }
+
+  .k-ProjectCreatorCard__title {
+    display: flex;
+  }
+
+  .k-ProjectCreatorCard__date {
+    margin-left: k-px-to-rem(6px);
     @include k-typographyFontSize(-3);
     @include k-typographyFont($font);
+  }
+
+  .k-ProjectCreatorCard__text {
+    margin-right: k-px-to-rem(50px);
+  }
+
+  .k-ProjectCreatorCard__link {
+    &:hover {
+      background-color: map-get($k-colors, 'background-2');
+    }
+  }
+
+  .k-ProjectCreatorCard__link--flex {
+    display: flex;
+    justify-content: space-between;
   }
 }
