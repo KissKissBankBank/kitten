@@ -22,20 +22,12 @@ const paymentButtonWrapper = (WrappedComponent, props) => {
 }
 
 export const KarlPaymentButtons = () => (
-  <Line>
-    <Line.Item>
-      <KarlPaymentButtonVisa />
-    </Line.Item>
-    <Line.Item>
-      <KarlPaymentButtonMasterCard />
-    </Line.Item>
-    <Line.Item>
-      <KarlPaymentButtonCb />
-    </Line.Item>
-    <Line.Item>
-      <KarlPaymentButtonBankTransfer />
-    </Line.Item>
-  </Line>
+  <div>
+    <KarlPaymentButtonVisa />
+    <KarlPaymentButtonMasterCard />
+    <KarlPaymentButtonCb />
+    <KarlPaymentButtonBankTransfer />
+  </div>
 )
 
 const KarlPaymentButtonVisa = paymentButtonWrapper(VisaIcon, {
@@ -58,6 +50,6 @@ const KarlPaymentButtonBankTransfer = props => {
 
   return (
     <RadioButton text={ text }
-                 name='payment-button-1' />
+                 name="payment-button-1" />
   )
 }
