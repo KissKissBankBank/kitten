@@ -9,6 +9,7 @@ import { Progress } from 'kitten/components/meters/progress'
 import { ButtonImage } from 'kitten/components/buttons/button-image'
 import { IconBadge } from 'kitten/components/notifications/icon-badge'
 import { LockIcon } from 'kitten/components/icons/lock-icon'
+import { CheckedCircleIcon } from 'kitten/components/icons/checked-circle-icon'
 import { TagList } from 'kitten/components/lists/tag-list'
 
 class ProjectCardComponent extends React.Component {
@@ -37,16 +38,35 @@ class ProjectCardComponent extends React.Component {
             { ownerLocation }
           </Paragraph>
 
-          { this.renderScore() }
+          { this.renderTooltip() }
         </Marger>
 
-        <Marger top="1" bottom="1.5">
-          <Title margin={ false }
+        <Marger top="1" bottom="1.5" className="k-ProjectCard__grid--flex">
+          <Title className="k-ProjectCard__grid--flex__item-fluid"
+                 margin={ false }
                  modifier="quaternary"
                  tag="p">
             { title }
           </Title>
+
+          { this.renderScore() }
         </Marger>
+      </div>
+    )
+  }
+
+  renderTooltip() {
+    if (!this.props.tooltipText) return
+
+    return (
+      <div className="k-ProjectCard__tooltip">
+        <span className="k-ProjectCard__tooltip__content">
+          { this.props.tooltipText }
+        </span>
+        <CheckedCircleIcon
+          style={ { width: '20px', height: '20px' } }
+          circleColor={ this.props.tooltipIconColor }
+          checkedColor="#fff" />
       </div>
     )
   }
@@ -59,7 +79,9 @@ class ProjectCardComponent extends React.Component {
     }
 
     return (
-      <IconBadge style={ scoreStyles }>{ this.props.scoreValue }</IconBadge>
+      <IconBadge style={ scoreStyles } className="k-u-margin-left-single">
+        { this.props.scoreValue }
+      </IconBadge>
     )
   }
 
@@ -208,6 +230,8 @@ ProjectCardComponent.defaultProps = {
   ownerName: 'Name',
   ownerLocation: 'Location',
   tags: [{ key: 'tag-1', item: 'Tag 1' }, { key: 'tag-2', item: 'Tag 2' }],
+  tooltipText: null,
+  tooltipIconColor: '#4a84ff',
   scoreValue: null,
   scoreBackgroundColor: null,
   title: 'Title',
