@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Allow to hide tooltip in `SliderWithTooltipAndPower`.
 - Feature: Add new `MasterCardIcon` and `CbIcon` components.
 - Feature: Add `.k-TagButton__icon` class to adds icons to tag buttons.
 

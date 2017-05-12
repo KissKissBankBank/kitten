@@ -92,13 +92,21 @@ export class SliderWithTooltipAndPower extends React.Component {
     return Math.round(value / step) * step
   }
 
+  renderTooltip() {
+    if (!this.props.tooltipText) return
+
+    return (
+      <SliderTooltip className={ this.props.tooltipClass }
+                     percentage={ this.ratio() * 100 + '%' }>
+        { this.props.tooltipText }
+      </SliderTooltip>
+    )
+  }
+
   render() {
     return (
       <div>
-        <SliderTooltip className={ this.props.tooltipClass }
-                       percentage={ this.ratio() * 100 + '%' }>
-          { this.props.tooltipText }
-        </SliderTooltip>
+        { this.renderTooltip() }
         <SliderBar onAction={ this.props.onAction }
                    onMove={ this.props.onMove }
                    name={ this.props.name }
@@ -122,6 +130,7 @@ SliderWithTooltipAndPower.defaultProps = {
   max: 100,
   step: 1,
   power: 1,
+  tooltipText: null,
   onChange: function() {},
   onChangeEnd: function() {},
 }
