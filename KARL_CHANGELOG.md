@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: Update component text.
+- Feature: Update `ProjectCard` example with tooltip.
 - Fix: Remove `Line` and `Line.Item` on `KarlPaymentButtons` example.
 - Fix: Update component text.
 - Fix: `Hero` example relooking.
