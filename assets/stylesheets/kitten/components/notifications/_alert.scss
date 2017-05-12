@@ -119,6 +119,10 @@
     animation: kAlertFadeOut .4s $easeInQuart forwards;
   }
 
+  .k-Alert--absolute {
+    position: absolute;
+  }
+
   // FadeOut animation.
 
   @keyframes kAlertFadeOut {

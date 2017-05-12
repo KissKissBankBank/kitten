@@ -7,6 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Add tooltip in `ProjectCard`.
 - Feature: Add new `MasterCardIcon` and `CbIcon` components.
 - Feature: Add `.k-TagButton__icon` class to adds icons to tag buttons.
+- Feature: Add `positionedInAbsolute` prop to `Alert` component.
 
 ## [11.5.0] - 2017-05-09
 
