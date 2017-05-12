@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Remove `Line` and `Line.Item` on `KarlPaymentButtons` example.
 - Fix: Update component text.
 - Fix: `Hero` example relooking.
 - Feature: Add `TagButton` with large word example.
