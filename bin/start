@@ -1,0 +1,2 @@
+cd spec/dummy
+foreman start
