@@ -44,7 +44,6 @@ export class Uploader extends React.Component {
           width: '90px',
           height: '90px',
         } } />
-      <
     )
   }
 }
