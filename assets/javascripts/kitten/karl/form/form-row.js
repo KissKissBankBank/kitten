@@ -6,15 +6,15 @@ export const KarlFormRow = () => {
   return (
     <FormRow>
       <TagButton className="k-FormRow__item">
-        Lorem Ipsum…
+        Button
       </TagButton>
 
       <TagButton className="k-FormRow__item">
-        Lorem Ipsum…
+        Button
       </TagButton>
 
       <TagButton className="k-FormRow__item">
-        Lorem Ipsum…
+        Button
       </TagButton>
     </FormRow>
   )

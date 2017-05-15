@@ -1,6 +1,7 @@
 {
   "name": "kitten-example",
   "version": "1.0.0",
+  "license": "MIT",
   "scripts": {
     "postinstall": "../bin/npm-link",
     "build:dev": "webpack -w --config webpack.client.build.babel.js",

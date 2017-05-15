@@ -89,8 +89,6 @@ module Kitten
             { path: 'components/form/switch', name: 'Switch' },
             { path: 'components/form/slider', name: 'Slider' },
             { path: 'components/form/search-input', name: 'Search input' },
-            { path: 'components/form/form-actions', name: 'Form actions' },
-            { path: 'components/form/form-row', name: 'Form row' },
             { path: 'components/form/form-info', name: 'Form info' },
             { path: 'components/form/form-amount-and-currency', name: 'Form amount and currency' },
             { path: 'components/form/form-phone-number', name: 'Form phone number' },

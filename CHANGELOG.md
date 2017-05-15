@@ -4,8 +4,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add new `MasterCardIcon` and `CbIcon` components.
-- Feature: Add `.k-TagButton__icon` class to adds icons to tag buttons.
+## [11.6.0] - 2017-05-15
+
+Features:
+- Add tooltip in `ProjectCard`.
+- Add new `MasterCardIcon` and `CbIcon` components.
+- Add `.k-TagButton__icon` class to adds icons to tag buttons.
 
 ## [11.5.0] - 2017-05-09
 
