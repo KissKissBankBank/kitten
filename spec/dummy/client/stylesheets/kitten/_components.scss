@@ -34,6 +34,7 @@
 // Form
 
 @include k-Checkbox;
+@include k-CheckboxSet;
 @include k-LocationInput;
 @include k-Label;
 @include k-FormActions;
@@ -41,6 +42,7 @@
 @include k-FormInfo;
 @include k-FormRow;
 @include k-RadioButton;
+@include k-RadioButtonSet;
 @include k-SearchInput;
 
 @include k-Select;

@@ -33,8 +33,9 @@ desc "Generate documentation, commit, create tag v#{Kitten::VERSION}, " \
      'build and push (make sure you update version.rb and CHANGELOG.md ' \
      'beforehand)'
 task kitten_release: [:sassdoc, :build] do
+  sh 'bundle install'
   sh 'git add lib/kitten/version.rb *CHANGELOG.md public/sassdoc/index.html ' \
-     'package.json spec/dummy/client/yarn.lock'
+     'package.json spec/dummy/client/yarn.lock Gemfile.lock'
   sh "git commit -m v#{Kitten::VERSION}"
   sh "git tag v#{Kitten::VERSION}"
   sh 'git push origin master'

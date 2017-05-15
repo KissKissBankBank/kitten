@@ -4,6 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [11.7.0] - 2017-05-15
+
+Feature:
+- Create `CheckboxSet` & `RadioButtonSet` components.
+
 ## [11.6.0] - 2017-05-15
 
 Features:
