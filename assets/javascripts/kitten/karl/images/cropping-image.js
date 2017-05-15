@@ -166,12 +166,19 @@ export class KarlCroppingImage extends React.Component {
   renderCroppingImage() {
     if (!this.state.imageSrc) return
 
-    return [
-      this.renderCropper(),
-      this.renderCropperInfo(),
-      this.renderSliderTitle(),
-      this.renderSlider(),
-    ]
+    return (
+      <Grid>
+        <GridCol col="6" ref>
+          { this.renderCropper() }
+        </GridCol>
+
+        <GridCol col="6">
+          { this.renderCropperInfo() }
+          { this.renderSliderTitle() }
+          { this.renderSlider() }
+        </GridCol>
+      </Grid>
+    )
   }
 
   renderError(error) {
@@ -225,10 +232,10 @@ export class KarlCroppingImage extends React.Component {
                 Les dimensions recommandées sont 620x376 px.
               </Paragraph>
             </Marger>
-
-            { this.renderCroppingImage() }
           </GridCol>
         </Grid>
+
+        { this.renderCroppingImage() }
       </Container>
     )
   }
