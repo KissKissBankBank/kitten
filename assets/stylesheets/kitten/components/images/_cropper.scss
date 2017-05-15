@@ -9,24 +9,14 @@
   $border-color: map-get($k-colors, 'line-1');
 
   .k-Cropper {
-      
+
     .cropper-container {
       font-size: 0;
       line-height: 0;
-
       position: relative;
-
-      -webkit-user-select: none;
-
-         -moz-user-select: none;
-
-          -ms-user-select: none;
-
-              user-select: none;
-
+      user-select: none;
       direction: ltr;
-      -ms-touch-action: none;
-          touch-action: none
+      touch-action: none
     }
 
     .cropper-container img {
@@ -119,7 +109,7 @@
     }
 
     .cropper-center:before,
-      .cropper-center:after {
+    .cropper-center:after {
       position: absolute;
       display: block;
       content: ' ';
@@ -294,10 +284,6 @@
 
     .cropper-invisible {
       opacity: 0;
-    }
-
-    .cropper-bg {
-      background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAAA3NCSVQICAjb4U/gAAAABlBMVEXMzMz////TjRV2AAAACXBIWXMAAArrAAAK6wGCiw1aAAAAHHRFWHRTb2Z0d2FyZQBBZG9iZSBGaXJld29ya3MgQ1M26LyyjAAAABFJREFUCJlj+M/AgBVhF/0PAH6/D/HkDxOGAAAAAElFTkSuQmCC');
     }
 
     .cropper-hide {
