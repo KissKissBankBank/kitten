@@ -4,13 +4,18 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Update components text.
-- Feature: Update `ProjectCard` example with tooltip.
-- Fix: Remove `Line` and `Line.Item` on `KarlPaymentButtons` example.
-- Fix: `Hero` example relooking.
-- Feature: Add `TagButton` with large word example.
-- Fix: Update `UserMenu` and `PlatformSwitch` components with `dropdown` component.
-- Fix: Remove `ExternalRichLink` example.
+## [11.6.0] - 2017-05-15
+
+Features:
+- Update `ProjectCard` example with tooltip.
+- Add `TagButton` with large word example.
+
+Fixes:
+- Update components text.
+- Remove `Line` and `Line.Item` on `KarlPaymentButtons` example.
+- `Hero` example relooking.
+- Update `UserMenu` and `PlatformSwitch` components with `dropdown` component.
+- Remove `ExternalRichLink` example.
 
 ## [11.5.0] - 2017-05-09
 
