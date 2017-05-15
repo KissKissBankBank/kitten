@@ -1,10 +1,15 @@
 import React from 'react'
-import classNames from 'classnames'
 import Dropzone from 'react-dropzone'
+import { UploaderThemes }
+  from 'kitten/components/uploaders/uploader-themes'
 
 export class Uploader extends React.Component {
   constructor(props) {
     super(props)
+
+    this.state = {
+      fileName: null,
+    }
 
     this.handleChangeAcceptedFiles = this.handleChangeAcceptedFiles.bind(this)
     this.handleChangeRejectedFiles = this.handleChangeRejectedFiles.bind(this)
@@ -13,6 +18,10 @@ export class Uploader extends React.Component {
 
   handleChangeAcceptedFiles(acceptedFiles) {
     const file = acceptedFiles[0]
+
+    this.setState({
+      fileName: file.name,
+    })
 
     this.props.onChange(file.preview)
     this.props.hasError(false)
@@ -24,7 +33,21 @@ export class Uploader extends React.Component {
   }
 
   handleCancel() {
+    this.setState({
+      fileName: null,
+    })
+
     this.props.onChange()
+  }
+
+  renderTheme() {
+    const Theme = this.props.theme
+
+    return (
+      <Theme
+        buttonLabel={ this.props.buttonLabel }
+        fileName={ this.state.fileName } />
+    )
   }
 
   render() {
@@ -36,22 +59,19 @@ export class Uploader extends React.Component {
         onDropAccepted={ this.handleChangeAcceptedFiles }
         onDropRejected={ this.handleChangeRejectedFiles }
         onFileDialogCancel={ this.handleCancel }
-        disablePreview={ false }
         multiple={ false }
-        style={ {
-          borderRadius: '8px',
-          border: '1px dashed #d8d8d8',
-          width: '90px',
-          height: '90px',
-        } } />
+        style={ {} }
+        children={ this.renderTheme() } />
     )
   }
 }
 
 Uploader.defaultProps = {
   name: null,
-  acceptedFiles: '.jpg', // Separate the values with a comma: '.jpg,.png'.
+  acceptedFiles: 'image/*',
   maxSize: null,
+  theme: UploaderThemes.Light,
+  buttonLabel: 'Lorem ipsum…',
   onChange: () => {},
   hasError: () => {},
 }
