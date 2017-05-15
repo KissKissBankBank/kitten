@@ -54,6 +54,7 @@
     "react": "^15.3.1",
     "react-cropper": "^0.12.0",
     "react-dom": "^15.3.1",
+    "react-dropzone": "^3.13.1",
     "react-markdown": "^2.4.4",
     "react-masonry-component": "^5.0.3",
     "react-places-autocomplete": "^3.0.0",

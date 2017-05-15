@@ -1,85 +1,50 @@
 import React from 'react'
 import classNames from 'classnames'
+import Dropzone from 'react-dropzone'
 
 export class Uploader extends React.Component {
   constructor(props) {
     super(props)
 
-    this.state = {
-      errors: {
-        extensionsError: false,
-        sizeError: false,
-        hasError: false,
-      },
-    }
-
-    this.handleChange = this.handleChange.bind(this)
+    this.handleChangeAcceptedFiles = this.handleChangeAcceptedFiles.bind(this)
+    this.handleChangeRejectedFiles = this.handleChangeRejectedFiles.bind(this)
+    this.handleCancel = this.handleCancel.bind(this)
   }
 
-  checkExtensions(file) {
-    if (!this.props.acceptedFiles) return
+  handleChangeAcceptedFiles(acceptedFiles) {
+    const file = acceptedFiles[0]
 
-    const extensions = this.props.acceptedFiles.split(',')
-    const regex = new RegExp(`(${ extensions.join('|') })`)
-
-    this.setState({
-      errors: {
-        ...this.state.errors,
-        extensionsError: file.type.search(regex) < 1,
-      }
-    })
+    this.props.onChange(file.preview)
+    this.props.hasError(false)
   }
 
-  checkSize(file) {
-    this.setState({
-      errors: {
-        ...this.state.errors,
-        sizeError: this.props.maxSize && file.size > this.props.maxSize,
-      }
-    })
-  }
-
-  updateHasError() {
-    const errors = this.state.errors
-
-    this.setState({
-      errors: {
-        ...errors,
-        hasError: errors.extensionsError || errors.sizeError,
-      }
-    })
-  }
-
-  handleChange(event) {
-    const file = event.target.files[0]
-    const reader = new FileReader()
-
+  handleChangeRejectedFiles(rejectedFiles) {
     this.props.onChange()
+    this.props.hasError(true)
+  }
 
-    reader.onload = event => {
-      this.checkExtensions(file)
-      this.checkSize(file)
-      this.updateHasError()
-
-      this.props.onError(this.state.errors)
-
-      if (!this.state.errors.hasError) {
-        this.props.onChange(event)
-      }
-    }
-
-    if (file) {
-      reader.readAsDataURL(file)
-    }
+  handleCancel() {
+    this.props.onChange()
   }
 
   render() {
     return (
-      <input
-        type="file"
+      <Dropzone
         name={ this.props.name }
         accept={ this.props.acceptedFiles }
-        onChange={ this.handleChange } />
+        maxSize={ this.props.maxSize }
+        onDropAccepted={ this.handleChangeAcceptedFiles }
+        onDropRejected={ this.handleChangeRejectedFiles }
+        onFileDialogCancel={ this.handleCancel }
+        disablePreview={ false }
+        multiple={ false }
+        style={ {
+          borderRadius: '8px',
+          border: '1px dashed #d8d8d8',
+          width: '90px',
+          height: '90px',
+        } } />
+      <
     )
   }
 }
@@ -89,5 +54,5 @@ Uploader.defaultProps = {
   acceptedFiles: '.jpg', // Separate the values with a comma: '.jpg,.png'.
   maxSize: null,
   onChange: () => {},
-  onError: () => {},
+  hasError: () => {},
 }

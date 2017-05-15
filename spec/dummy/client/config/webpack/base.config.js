@@ -64,7 +64,8 @@ const baseConfig = {
             'babel-preset-stage-0',
             'babel-preset-stage-2',
           ].map(require.resolve),
-        }
+        },
+        exclude: /node_modules/,
       },
     ],
   },
