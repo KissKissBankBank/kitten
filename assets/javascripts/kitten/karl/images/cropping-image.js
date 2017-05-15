@@ -8,8 +8,6 @@ import { Grid, GridCol } from 'kitten/components/grid/grid'
 import { Label } from 'kitten/components/form/label'
 import { Paragraph } from 'kitten/components/typography/paragraph'
 import { Uploader } from 'kitten/components/uploaders/uploader'
-import { SliderWithTooltipAndPower }
-  from 'kitten/components/sliders/slider-with-tooltip-and-power'
 import Slider from 'kitten/components/form/slider'
 
 export class KarlCroppingImage extends React.Component {
