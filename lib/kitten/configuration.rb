@@ -92,6 +92,7 @@ module Kitten
             { path: 'components/form/form-info', name: 'Form info' },
             { path: 'components/form/form-amount-and-currency', name: 'Form amount and currency' },
             { path: 'components/form/form-phone-number', name: 'Form phone number' },
+            { path: 'components/form/date-picker', name: 'Date picker' },
           ],
         },
         {
