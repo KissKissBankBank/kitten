@@ -27,10 +27,12 @@ import DropdownButton from 'kitten/components/dropdowns/dropdown-button'
 
 // Form
 import { Checkbox } from 'kitten/components/form/checkbox'
+import { CheckboxSet } from 'kitten/components/form/checkbox-set'
 import { FormAmountAndCurrency } from 'kitten/components/form/form-amount-and-currency'
 import { FormPhoneNumber } from 'kitten/components/form/form-phone-number'
 import { Label } from 'kitten/components/form/label'
 import { RadioButton } from 'kitten/components/form/radio-button'
+import { RadioButtonSet } from 'kitten/components/form/radio-button-set'
 import Search from 'kitten/components/form/search'
 import Select from 'react-select'
 import SelectWithState from 'kitten/components/form/select-with-state'
@@ -195,6 +197,7 @@ ReactOnRails.register({
 
   // Dev
   Checkbox,
+  CheckboxSet,
   DevGrid,
 
   // Dropdowns
@@ -209,6 +212,7 @@ ReactOnRails.register({
   Label,
   LocationInput,
   RadioButton,
+  RadioButtonSet,
   ReactTooltip,
   Slider,
   Search,
