@@ -37,8 +37,8 @@ export class KarlCroppingImage extends React.Component {
       imageCropSrc: null,
       touched: false,
       sliderValue: 0,
-      sliderMin: 0,
-      sliderMax: 500,
+      sliderMin: this.props.sliderMin,
+      sliderMax: this.props.sliderMax,
     }
   }
 
@@ -78,8 +78,8 @@ export class KarlCroppingImage extends React.Component {
     const naturalWidth = imageData.naturalWidth
     const width = imageData.width
     const ratio = width / naturalWidth * 100
-    const min = this.state.sliderMin + ratio
-    const max = this.state.sliderMax + ratio
+    const min = this.props.sliderMin + ratio
+    const max = this.props.sliderMax + ratio
 
     this.setState({
       sliderMin: min,
@@ -243,5 +243,6 @@ KarlCroppingImage.defaultProps = {
   imageSrc: 'https://placekitten.com/480/270',
   fileName: 'kitten.png',
   uploaderErrorLabel: 'You have an error on upload.',
-
+  sliderMin: 0,
+  sliderMax: 500,
 }
