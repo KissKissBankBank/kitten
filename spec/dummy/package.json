@@ -16,6 +16,7 @@
     "hot-assets": "(cd client && yarn hot-assets)"
   },
   "devDependencies": {
+    "babel-cli": "^6.24.1",
     "kitten-launcher": "^1.0.0",
     "webpack": "^2.5.1"
   }
