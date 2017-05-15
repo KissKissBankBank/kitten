@@ -26,7 +26,7 @@ end
 desc 'Generate kitten SassDoc'
 task :sassdoc do
   puts 'Generating kitten SassDoc...'
-  `npm run sassdoc`
+  `yarn sassdoc`
 end
 
 desc "Generate documentation, commit, create tag v#{Kitten::VERSION}, " \

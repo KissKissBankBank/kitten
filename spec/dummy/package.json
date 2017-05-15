@@ -11,8 +11,8 @@
   ],
   "scripts": {
     "postinstall": "cd client && yarn install",
-    "build:dev": "(cd client && npm run build:dev)",
-    "build": "(cd client && npm run build --silent)",
-    "hot-assets": "(cd client && npm run hot-assets)"
+    "build:dev": "(cd client && yarn build:dev)",
+    "build": "(cd client && yarn build --silent)",
+    "hot-assets": "(cd client && yarn hot-assets)"
   }
 }

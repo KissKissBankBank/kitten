@@ -58,15 +58,16 @@
     "react-prop-types": "^0.4.0",
     "react-select": "^1.0.0-rc.1",
     "react-tooltip": "^3.2.2",
-    "susy": "^2.2.12"
+    "susy": "^2.2.12",
+    "webpack": "^2.5.1"
   },
   "scripts": {
     "postinstall": "cd vendor/assets/stylesheets/kitten/sassy-maps && yarn install",
     "sassdoc": "sassdoc -d public/sassdoc assets/stylesheets",
     "stylelint": "stylelint --syntax scss 'assets/stylesheets/**/*.scss'",
-    "build:dev": "(cd spec/dummy/client && npm run build:dev)",
-    "build": "(cd spec/dummy/client && npm run build --silent)",
-    "hot-assets": "(cd spec/dummy/client && npm run hot-assets)",
+    "build:dev": "(cd spec/dummy/client && yarn build:dev)",
+    "build": "(cd spec/dummy/client && yarn build --silent)",
+    "hot-assets": "(cd spec/dummy/client && yarn hot-assets)",
     "test": "NODE_PATH=assets/javascripts mocha assets/javascripts/kitten/config/test-setup.js"
   }
 }

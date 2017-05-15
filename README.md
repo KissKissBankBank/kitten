@@ -162,7 +162,7 @@ bin/cleanup
 ### Style checker
 
 ```sh
-$ npm run --silent stylelint
+$ yarn stylelint
 ```
 
 ### Ruby specs
@@ -181,7 +181,7 @@ Generate the documentation:
 ```sh
 $ bundle exec rake sassdoc
 # OR
-$ npm run sassdoc
+$ yarn sassdoc
 ```
 
 The documentation is accessible on development environment: `/kitten/sassdoc`.
