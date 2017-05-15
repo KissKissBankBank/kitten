@@ -19,6 +19,8 @@
 
   .k-UploaderLight {
     display: flex;
+    align-items: center;
+    height: k-px-to-rem(20px);
   }
 
   .k-UploaderLight__button {
@@ -34,5 +36,9 @@
     @include k-typographyFontSize(-1, normal);
     text-overflow: ellipsis;
     white-space: nowrap;
+  }
+
+  .k-UploaderLight__buttonIcon {
+    margin-left: k-px-to-rem(10px);
   }
 }

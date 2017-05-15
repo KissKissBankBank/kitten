@@ -33,7 +33,7 @@ export class KarlCroppingImage extends React.Component {
 
   initialProps() {
     return {
-      imageSrc: null,
+      imageSrc: this.props.imageSrc,
       imageCropSrc: null,
       touched: false,
       sliderValue: 0,
@@ -167,7 +167,7 @@ export class KarlCroppingImage extends React.Component {
     )
   }
 
-  renderImage() {
+  renderCroppingImage() {
     if (!this.state.imageSrc) return
 
     return [
@@ -182,9 +182,11 @@ export class KarlCroppingImage extends React.Component {
     if (!this.state.hasErrorOnUploader) return
 
     return (
-      <p key={ `uploader-error` } className="k-FormInfo__error">
-        { this.props.uploaderErrorLabel }
-      </p>
+      <Marger top="1" bottom="1" key={ `uploader-error` }>
+        <span className="k-FormInfo__error">
+          { this.props.uploaderErrorLabel }
+        </span>
+      </Marger>
     )
   }
 
@@ -195,6 +197,8 @@ export class KarlCroppingImage extends React.Component {
       acceptedFiles: '.jpg,.jpeg,.gif,.png',
       onChange: this.handleUploaderChange,
       hasError: this.handleUploaderError,
+      buttonLabel: 'Choisissez un fichier',
+      fileName: this.props.fileName,
     }
 
     return (
@@ -207,7 +211,7 @@ export class KarlCroppingImage extends React.Component {
       <Container>
         <Grid>
           <GridCol col="12">
-            <Marger top="2" bottom="1">
+            <Marger top="1" bottom="1">
               <Label size="tiny">
                 Image de présentation
               </Label>
@@ -226,17 +230,7 @@ export class KarlCroppingImage extends React.Component {
               </Paragraph>
             </Marger>
 
-            { this.renderImage() }
-
-            <Marger top="2" bottom="2">
-              <Separator />
-            </Marger>
-
-            <Paragraph>Preview</Paragraph>
-
-            <Marger top="2" bottom="2">
-              <img src={ this.state.imageCropSrc } alt="" />
-            </Marger>
+            { this.renderCroppingImage() }
           </GridCol>
         </Grid>
       </Container>
@@ -246,5 +240,8 @@ export class KarlCroppingImage extends React.Component {
 
 KarlCroppingImage.defaultProps = {
   name: 'picture',
+  imageSrc: 'https://placekitten.com/480/270',
+  fileName: 'kitten.png',
   uploaderErrorLabel: 'You have an error on upload.',
+
 }
