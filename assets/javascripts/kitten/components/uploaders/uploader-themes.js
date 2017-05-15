@@ -10,8 +10,8 @@ UploaderThemes.Light = props => {
     ? <ButtonIcon className="k-UploaderLight__buttonIcon"
                 size="micro"
                 onClick={ props.onCancel }>
-      <CrossIcon className="k-ButtonIcon__svg" />
-    </ButtonIcon>
+        <CrossIcon className="k-ButtonIcon__svg" />
+      </ButtonIcon>
     : null
 
   return (
