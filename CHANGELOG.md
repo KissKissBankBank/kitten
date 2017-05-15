@@ -174,7 +174,6 @@ Features:
 Fixes:
 - Change width and margin on `StaticTooltip`.
 - Change arrow-zone size on tiny select.
->>>>>>> master
 
 ## [8.5.0] - 2017-03-14
 
