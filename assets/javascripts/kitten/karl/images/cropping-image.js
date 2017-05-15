@@ -98,10 +98,6 @@ export class KarlCroppingImage extends React.Component {
     }
   }
 
-  getErrorLabel(error) {
-    return this.props[`${ error }Label`] ? this.props[`${ error }Label`] : null
-  }
-
   renderCropper() {
     const cropperProps = {
       ref: 'cropper',
