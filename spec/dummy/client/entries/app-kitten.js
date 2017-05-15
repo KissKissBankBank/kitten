@@ -26,8 +26,8 @@ import Dropdown from 'kitten/components/dropdowns/dropdown'
 import DropdownButton from 'kitten/components/dropdowns/dropdown-button'
 
 // Form
-import { CheckboxSet } from 'kitten/components/form/checkbox-set'
 import { Checkbox } from 'kitten/components/form/checkbox'
+import { CheckboxSet } from 'kitten/components/form/checkbox-set'
 import { FormAmountAndCurrency } from 'kitten/components/form/form-amount-and-currency'
 import { FormPhoneNumber } from 'kitten/components/form/form-phone-number'
 import { Label } from 'kitten/components/form/label'
@@ -196,8 +196,8 @@ ReactOnRails.register({
   ProjectCard,
 
   // Dev
-  CheckboxSet,
   Checkbox,
+  CheckboxSet,
   DevGrid,
 
   // Dropdowns
