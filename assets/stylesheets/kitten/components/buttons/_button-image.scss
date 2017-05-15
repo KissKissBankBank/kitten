@@ -46,6 +46,14 @@
     @include k-buttonRoundedImage($button-size-big);
   }
 
+  .k-ButtonImage--withoutPointerEvents {
+    pointer-events: none;
+  }
+
+  .k-ButtonImage--withBorder {
+    border: 1px solid map-get($k-colors, 'line-2');
+  }
+
   .k-ButtonImage__img {
     display: block;
     margin: 0;

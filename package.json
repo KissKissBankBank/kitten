@@ -1,6 +1,6 @@
 {
   "name": "kitten-components",
-  "version": "8.5.0",
+  "version": "11.5.0",
   "license": "MIT",
   "description": "Front-end components library",
   "main": "src/index.js",
@@ -25,6 +25,7 @@
     "mocha": "^3.2.0",
     "react-addons-test-utils": "^15.4.1",
     "sassdoc": "^2.1.20",
+    "sinon": "^2.1.0",
     "stylelint": "^6.7.1",
     "stylelint-scss": "^1.2.0"
   },
@@ -39,6 +40,7 @@
     "babel-preset-stage-2": "^6.13.0",
     "babel-register": "^6.18.0",
     "babel-runtime": ">= 6",
+    "bowser": "^1.6.0",
     "classnames": "^2.2.5",
     "core-js": "^2.4.1",
     "es5-shim": "^4.5.7",
@@ -51,7 +53,7 @@
     "react": "^15.3.1",
     "react-dom": "^15.3.1",
     "react-markdown": "^2.4.4",
-    "react-on-rails": "^6.1.0",
+    "react-masonry-component": "^5.0.3",
     "react-places-autocomplete": "^3.0.0",
     "react-prop-types": "^0.4.0",
     "react-select": "^1.0.0-rc.1",

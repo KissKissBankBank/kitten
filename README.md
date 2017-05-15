@@ -1,6 +1,6 @@
-# kitten
+# Kitten
 
-`kitten` is a components library based on Sass and React. It provides mixins to
+Kitten is a components library based on Sass and React. It provides mixins to
 create flexible components based on your own brand elements (colors, fonts,
 typographic scale, etc.).
 
@@ -49,6 +49,7 @@ gem 'kitten'
 ```
 
 And these routes to your `routes.rb`:
+
 ```ruby
 mount Kitten::Engine, at: '/kitten' if Rails.env.development?
 ```
@@ -101,7 +102,7 @@ view helper in your `.erb` file:
 
 ### Style guide
 
-`kitten` provides a styleguide interface through a Rails engine.
+Kitten provides a styleguide interface through a Rails engine.
 You can run see it in your browser by downloading kitten and launching
 the dummy app or by installing the style guide in your Rails app.
 
@@ -227,11 +228,14 @@ To release a new version:
 
 - Pull `master`
 - Update the `CHANGELOG.md` file:
-  * Update the version.
+  * Update the version following the [Semantic Versioning](http://semver.org/).
   * Add a new `[unreleased]` section.
   * Check that [each merged
     PR](https://github.com/KissKissBankBank/kitten/commits/master)
     from the last release has an entry.
+- Update the `KARL_CHANGELOG.md` file:
+  * Update the version with the version of the library.
+  * Add a new `[unreleased]` section.
 - Update the version in `lib/kitten/version.rb`.
 - Update the version in `package.json`.
 - Run this command:
@@ -242,7 +246,8 @@ $ bundle exec rake kitten_release
 
 ### Npm
 
-Save your credentials in your `.npmrc`:
+Only if this is your first release, save your credentials in your `.npmrc`:
+
 ```
 npm adduser
 ```

@@ -1,41 +1,46 @@
-<div class="karl-Example__column">
-  <%= example 'Popover' do %>
-    <%= react_component('Popover', props: {
-      children: 'Lick the curtain just to be annoying. Rub whiskers on bare skin act innocent love to play with owners hair tie eat grass. Lick the curtain just to be annoying. Rub whiskers on bare skin act innocent love to play with owners hair tie eat grass. Lick the curtain just to be annoying. Rub whiskers on bare skin act innocent love to play with owners hair tie eat grass',
-      }
-    ) %>
-  <% end %>
+<div class="k-Grid">
+  <div class="k-Grid__col k-Grid__col--12">
+    <%= example 'Normal' do %>
+      <%= react_component('Popover', props: {
+        children: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
 
-  <%= example 'Call To Action Popover' do %>
-    <%= react_component('CallToActionPopover', props: {
-      title: "Instantly break out",
-      text: "Spend all night ensuring people don't sleep sleep all day pee in human's bed until he cleans the litter box put butt in owner's face. Swat at dog brown cats with pink ears, for meow.",
-      buttons: [{
-        label: "Découvrir",
-        modifier: "boron",
-        size: "big",
-        tag: "a",
-        href: "http://www.catipsum.com",
-        target: "_blank",
-      }],
-      titleAriaLabelId: 'dialogtitle-call-to-action',
-    }) %>
-  <% end %>
+        }
+      ) %>
+    <% end %>
+  </div>
 
-  <%= example 'Call To Action with illustration Popover' do %>
-    <%= react_component('KarlLoudspeakerPopover', props: {
-      title: "Instantly break out",
-      text: "Spend all night ensuring people don't sleep sleep all day pee in human's bed until he cleans the litter box put butt in owner's face.
-        Spend all night ensuring people don't sleep sleep all day pee in human's bed until he cleans the litter box put butt in owner's face.",
-      buttons: [{
-        label: "Découvrir",
-        modifier: "boron",
-        tag: "a",
-        href: "http://www.catipsum.com",
-        target: "_blank",
-      }],
-      titleAriaLabelId: 'dialogtitle-with-illustration',
-    }) %>
-  <% end %>
+  <div class="k-Grid__col k-Grid__col--12">
+    <%= example 'Call To Action Popover' do %>
+      <%= react_component('CallToActionPopover', props: {
+        title: "Indicium perfusorumque",
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
+        buttons: [{
+          label: "Action",
+          modifier: "boron",
+          size: "big",
+          tag: "a",
+          href: "http://www.catipsum.com",
+          target: "_blank",
+        }],
+        titleAriaLabelId: 'dialogtitle-call-to-action',
+      }) %>
+    <% end %>
+  </div>
 
+  <div class="k-Grid__col k-Grid__col--12">
+    <%= example 'Call To Action with illustration Popover' do %>
+      <%= react_component('KarlLoudspeakerPopover', props: {
+        title: "Latens eius obscurum",
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
+        buttons: [{
+          label: "Action",
+          modifier: "boron",
+          tag: "a",
+          href: "http://www.catipsum.com",
+          target: "_blank",
+        }],
+        titleAriaLabelId: 'dialogtitle-with-illustration',
+      }) %>
+    <% end %>
+  </div>
 </div>

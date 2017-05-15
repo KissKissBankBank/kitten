@@ -35,14 +35,14 @@
   // Size
   $icon-size: k-px-to-rem(14px);
   $submit-horizontal-padding: k-px-to-rem(13px);
-  $input-right-padding: $submit-horizontal-padding * 2 +
-                        $icon-size +
-                        k-px-to-rem(15px);
 
   // Colors
 
   // Base
   $border: map-get($k-colors, 'line-2');
+  $search-submit-width: $submit-horizontal-padding * 2 + $icon-size;
+  $search-input-width: k-px-to-rem(160px);
+  $search-width: $search-input-width + $search-submit-width;
 
   // Focus
   $submit-focus-color: #fff;
@@ -74,7 +74,9 @@
 
     border-collapse: separate;
     box-sizing: border-box;
-    width: k-px-to-rem(160px) + $submit-horizontal-padding * 2 + $icon-size;
+    width: $search-width;
+
+    white-space: nowrap; // Prevent newline in mobile view
   }
 
   .k-SearchInput__input {
@@ -85,8 +87,7 @@
     border-bottom-right-radius: 0 !important;
     border-right: 0 !important;
     box-sizing: border-box;
-    width: initial !important;
-    padding-right: $input-right-padding;
+    width: $search-input-width !important;
 
     &:focus ~ .k-SearchInput__submit {
       border-color: $border-focus;
@@ -110,7 +111,7 @@
     vertical-align: middle;
 
     box-sizing: border-box;
-    width: $submit-horizontal-padding * 2 + $icon-size;
+    width: $search-submit-width;
     height: 100%;
 
     background-color: transparent;

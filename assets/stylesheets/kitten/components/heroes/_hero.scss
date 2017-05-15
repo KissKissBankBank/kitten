@@ -5,21 +5,18 @@
 /// @example scss - usage
 ///
 ///   @include k-Hero((
-///     font: 'source-sans',
+///     font: 'source-sans-light',
 ///   ));
 ///
 /// @example html
 ///
 ///  <div class="k-Hero">
-///    <div class="k-Hero__container">
-///      <div class="k-Hero__text">
-///        <h1 class="k-Hero__title">Wool balls</h1>
-///        <h2 class="k-Hero__subtitle">Infinite fun.</h2>
-///        <h2 class="k-Hero__subtitle">Until you have to roll them back.</h2>
-///      </div>
-///      <div class="k-Hero__action">
-///        <img src="https://placekitten.com/g/300/400" alt="" />
-///      </div>
+///    <div class="k-Hero__text">
+///      <h1 class="k-Hero__title">Wool balls</h1>
+///      <p class="k-Hero__subtitle">Infinite fun.</p>
+///    </div>
+///    <div class="k-Hero__action">
+///      …
 ///    </div>
 ///  </div>
 
@@ -29,6 +26,7 @@
 
     .k-Hero {
       text-align: center;
+      overflow: auto;
 
       @include k-media-min('l') {
         @include k-grid;
@@ -47,6 +45,27 @@
         margin: k-px-to-rem(107px) 0;
         @include k-grid-col(4);
         @include k-grid-offset(1);
+      }
+    }
+
+    .k-Hero__title {
+      @include k-typographyFont($font);
+      @include k-typographyFontSize(5, normal);
+
+      @include k-media-min('m') {
+        @include k-typographyFontSize(7, normal);
+      }
+    }
+
+    .k-Hero__subtitle {
+      margin: 0;
+      display: none;
+      @include k-typographyFont($font);
+      @include k-typographyFontSize(0, 1.6);
+
+      @include k-media-min('m') {
+        display: block;
+        @include k-typographyFontSize(2, 1.6);
       }
     }
 
@@ -69,27 +88,6 @@
         margin: k-px-to-rem(107px) 0;
         @include k-grid-col(4);
         @include k-grid-offset(2);
-      }
-    }
-
-    .k-Hero__title {
-      @include k-typographyFont($font);
-      @include k-typographyFontSize(5, normal);
-
-      @include k-media-min('m') {
-        @include k-typographyFontSize(7, normal);
-      }
-    }
-
-    .k-Hero__subtitle {
-      margin: 0;
-      display: none;
-      @include k-typographyFont($font);
-      @include k-typographyFontSize(0, 1.6);
-
-      @include k-media-min('m') {
-        display: block;
-        @include k-typographyFontSize(2, 1.6);
       }
     }
 

@@ -1,7 +1,13 @@
-<%= example "Side grid with right aside" do %>
-  <%= react_component 'KarlSideGridWithRightAside' %>
-<% end %>
+<div class="k-Grid">
+  <div class="k-Grid__col k-Grid__col--12">
+    <%= example 'Side grid with right aside' do %>
+      <%= react_component 'KarlSideGridWithRightAside' %>
+    <% end %>
+  </div>
 
-<%= example "Side grid with left aside" do %>
-  <%= react_component 'KarlSideGridWithLeftAsideAndSmallSize' %>
-<% end %>
+  <div class="k-Grid__col k-Grid__col--12">
+    <%= example 'Side grid with left aside' do %>
+      <%= react_component 'KarlSideGridWithLeftAsideAndSmallSize' %>
+    <% end %>
+  </div>
+</div>

@@ -5,11 +5,176 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Create `CheckboxSet` & `RadioButtonSet` components.
-- Feature: Add `k-FormInfo` style.
+- Feature: Add tooltip in `ProjectCard`.
+- Feature: Add new `MasterCardIcon` and `CbIcon` components.
+- Feature: Add `.k-TagButton__icon` class to adds icons to tag buttons.
+
+## [11.5.0] - 2017-05-09
+
+Feature:
+- Add responsive image utility.
+
+Fix:
+- Fix the tiny option on Select.
+
+## [11.4.0] - 2017-05-04
+
+Feature:
+- Add status in `ProjectCard`.
+
+Fixes:
+- Fix `LegoGrid` grid.
+- Fix tag `Title` in `ProjectCardComponent`.
+- Fix test launch.
+
+## [11.3.0] - 2017-05-02
+
+Features:
+- Add `MenuIcon` and component.
+- Add `KissKissBankBankLogoIcon` component.
+- Add `InformationIcon` component.
+
+Fix:
+- Change overflow default value to manage negative margins on `k-ProjectCard`.
+
+## [11.2.0] - 2017-04-26
+
+Feature:
+- Add `withBorder` prop to `ButtonImage` in `ProjectCard`.
+
+## [11.1.0] - 2017-04-26
+
+Feature:
+- Add `withBorder` prop to `ButtonImage` component.
+
+## [11.0.0] - 2017-04-24
+
+Breaking changes:
+- Delete `SimulatorResult` component.
+- The `k-Select` mixin does not accept options anymore.
+  Please update `@import k-Select((…));` to `@import k-Select;`.
+- Remove `react-on-rails` module as dependency.
+  To be retro-compatible, add the dependency on your project's `package.json`:
+  ```
+  "dependencies": {
+    "react-on-rails": "~6.10.1"
+  }
+  ```
+
+Features:
+- Add `rounded="micro"` and `rounded="tiny"` to the `Card` component.
+- Add `ProjectCard` component.
+- Add `withoutPointerEvents` prop to `ButtonImage` component.
+- Add `CheckedCircleIcon`, `ClockCircleIcon`, `CrossCircleIcon`, `LockIcon` and
+  `WarningCircleIcon` components.
+- Add `tiny` prop to `TagList` component.
+- Update grid in `LegoGrid.Item` component.
+- Add `Container` component.
+
+Fixes:
+- Add `validOnSelect`, `disabled` props to the `TextInputAndSelect` component.
+- Add `valid`, `disabled` props to the `SelectWithState` component.
+- Add `checked-disabled` and `arrow-bottom-disabled` svgs.
+- Update disabled color on `TextInput`, `TextInputAndSelect`, `Button` and
+  `Select`.
+- Update `react_on_rails` gem dependency to `6.10.1`
+
+## [10.2.0] - 2017-04-11
+
+Feature:
+- Add fees exemption to `LoanSimulator` component.
+
+## [10.1.0] - 2017-04-11
+
+Fix:
+- Background `Alert` width.
+
+## [10.0.0] - 2017-04-10
+
+Breaking changes:
+- Use `k-Card--withVerticalPadding` and `k-Card--rounded` to have the same
+render of old `k-Card`.
+- Update button `min-width` class on `.k-Button--tiny`.
+
+Features:
+- Add modifiers on `k-Card` mixin.
+- Add `card` high-order component.
+- Add `normalLineHeight` prop to `Paragraph` component.
+- Add `margin` prop to `Title` component.
+- Add `onSelectChange` and `errorOnSelect` props to `TextInputAndSelect`
+component.
+- Add `Separator` component.
+
+Fixes:
+- Add missing checked disabled style for `RadioButton` component.
+- Set `line-height: normal` to `RadioButton/Checkbox/Switch` components.
+- Propagate `className` prop to `Grid` and `GridCol` components.
+
+## [9.5.0] - 2017-03-30
+
+Features:
+- Add `Marger` component.
+- Add `ButtonImage` component.
+- Add `margin` prop to `Paragraph` component.
+
+Fixes:
+- Display correctly disabled `TextInputWithLimit` component.
+
+## [9.4.0] - 2017-03-28
+
+Feature:
+- Add color utilities.
+
+Fix:
+- Pass the `onChange` prop correctly in `TextInputWithLimit`.
+
+## [9.3.0] - 2017-03-27
+
+Features:
+- Add `TagList` component.
+- Add `TagIcon` component.
+- Create `SupTitle` component.
+
+## [9.2.0] - 2017-03-23
+
+Fix:
+- Remove unneeded padding on `SearchInput` component.
+
+## [9.1.0] - 2017-03-22
+
+Feature:
+- Add `SideLayout` component and fix layout error on Safari.
+
+## [9.0.0] - 2017-03-22
+
+Breaking change:
+- Change height of `k-Progress` component.
+
+Features:
+- Add `k-Button--big@s-up` modifier.
+- Add `k-buttonBig` mixin.
+- Add `k-u-align-right` class.
+- Add `IconBadge` component.
+- Add new `Badge` component.
+- Add `LegoGrid` component.
+- Add `flexible` option to `k-grid-colSize` mixin.
+- Add `k-u-align-right` class.
+
+Fixes:
+- Prevent newline in mobile view for `SearchInput` component.
+- Deprecate `k-u-centered` in favor of `k-u-align-center`.
+
+## [8.6.0] - 2017-03-15
+
+Features:
+- Add `k-FormInfo` style.
   `k-TextInputWithInfo` is now deprecated. Use `k-FormInfo` instead.
-- Fix: Change width and margin on `StaticTooltip`.
-- Feature: Add new `error` props on SelectWithState.
-- Fix: Change arrow-zone size on tiny select.
+- Add new `error` props on SelectWithState.
+
+Fixes:
+- Change width and margin on `StaticTooltip`.
+- Change arrow-zone size on tiny select.
+>>>>>>> master
 
 ## [8.5.0] - 2017-03-14
 

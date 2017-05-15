@@ -21,7 +21,7 @@ $karl-card-layout: (
   box-sizing: border-box;
   margin: .6rem 0 2.5rem 0;
 
-  border: solid 1px $light-grey-3;
+  border: 1px solid map-get($k-colors, 'line-1');
   background-color: white;
 
   &:last-child {
@@ -35,4 +35,11 @@ $karl-card-layout: (
       @include span(4);
     }
   }
+}
+
+.karl-ProjectCard {
+  border: 1px solid map-get($k-colors, 'line-1');
+  height: k-px-to-rem(100px);
+  background-color: map-get($k-colors, 'background-1');
+  box-shadow: 0 5px 10px map-get($k-colors, 'line-2');
 }

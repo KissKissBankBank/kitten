@@ -1,43 +1,38 @@
 import defaultProps from 'kitten/hoc/default-props'
 import React from 'react'
 import LoanSimulator from 'kitten/components/simulators/loan-simulator'
+import { card } from 'kitten/hoc/card'
+import { Marger } from 'kitten/components/layout/marger'
 
-const nbsp = String.fromCharCode(160)
-const KarlLoanSimulator = defaultProps(LoanSimulator, {
-  amountLabel: 'J’ai besoin de',
-  amountPlaceholder: `Entre 200${nbsp}€ et 10${nbsp}000${nbsp}€`,
+const KarlLoanSimulatorCardComponent = props =>
+  <div { ...props } />
+
+const KarlLoanSimulatorCard = card(KarlLoanSimulatorCardComponent, {
+  light: true,
+  rounded: true,
+  padded: true,
+})
+
+const KarlLoanSimulatorComponent = defaultProps(LoanSimulator, {
+  amountLabel: 'I need',
+  amountPlaceholder: 'Between $200 and $10,000',
   amountMin: 200,
   amountMax: 10000,
   amountName: 'amount',
-  initialAmount: null,
 
-  amountEmptyError: 'Veuillez renseigner un montant',
-  amountOutOfBoundsError: `Veuillez renseigner un montant compris entre
-                           200 et 10${nbsp}000${nbsp}€`,
+  amountOutOfBoundsError: 'Please choose an amount between $200 and $10,000',
 
-  installmentLabel: 'Je rembourse',
   installmentName: 'installment',
 
   durationName: 'duration',
 
-  sliderPlaceholder: 'Glisser pour sélectionner',
+  sliderPlaceholder: 'Slide to choose',
 
-  durationText: 'soit',
-  durationMin: 1,
-  durationMax: 36,
-  durationSymbol: 'mensualité',
-  durationSymbolPlural: 'mensualités',
-
-  currencySymbol: '€',
-  installmentSymbol: '€/mois',
-  locale: 'fr',
-
-  actionLabel: `C’est parti${nbsp}!`,
+  actionLabel: 'OK',
 })
 
-const KarlLoanSimulatorWithCommission = defaultProps(KarlLoanSimulator, {
+const KarlLoanSimulatorComponentWithCommission = defaultProps(LoanSimulator, {
   displayCommission: true,
-  commissionLabel: `Commission${nbsp}:`,
 
   commissionRules: [
     { durationMax: 9, rate: 0.03 },
@@ -52,11 +47,51 @@ const KarlLoanSimulatorWithCommission = defaultProps(KarlLoanSimulator, {
   actionLabel: null,
 })
 
-const KarlLoanSimulatorWithError = defaultProps(KarlLoanSimulator, {
+const KarlLoanSimulatorComponentWithfeesExemption = defaultProps(LoanSimulator, {
+  displayCommission: true,
+  feesExemption: true,
+  commissionRules: [
+    { durationMax: 9, rate: 0.03 },
+    { durationMax: 18, rate: 0.04 },
+    { durationMax: 24, rate: 0.05 },
+    { rate: 0.06 },
+  ],
+
+  initialAmount: 2500,
+  initialInstallment: 150,
+
+  actionLabel: null,
+})
+
+const KarlLoanSimulatorComponentWithError = defaultProps(LoanSimulator, {
   initialTouched: true,
   actionLabel: null,
 })
 
-export { KarlLoanSimulator,
-         KarlLoanSimulatorWithCommission,
-         KarlLoanSimulatorWithError }
+export const KarlLoanSimulator = () =>
+  <KarlLoanSimulatorCard>
+    <Marger top="2" bottom="2">
+      <KarlLoanSimulatorComponent />
+    </Marger>
+  </KarlLoanSimulatorCard>
+
+export const KarlLoanSimulatorWithCommission = () =>
+  <KarlLoanSimulatorCard>
+    <Marger top="2" bottom="2">
+      <KarlLoanSimulatorComponentWithCommission />
+    </Marger>
+  </KarlLoanSimulatorCard>
+
+export const KarlLoanSimulatorWithfeesExemption = () =>
+  <KarlLoanSimulatorCard>
+    <Marger top="2" bottom="2">
+      <KarlLoanSimulatorComponentWithfeesExemption />
+    </Marger>
+  </KarlLoanSimulatorCard>
+
+export const KarlLoanSimulatorWithError = () =>
+  <KarlLoanSimulatorCard>
+    <Marger top="2" bottom="2">
+      <KarlLoanSimulatorComponentWithError />
+    </Marger>
+  </KarlLoanSimulatorCard>
