@@ -192,11 +192,11 @@ export class KarlCroppingImage extends React.Component {
 
     return (
       <Grid>
-        <GridCol col="6" ref>
+        <GridCol col="12" col-m="6">
           { this.renderCropper() }
         </GridCol>
 
-        <GridCol col="6">
+        <GridCol col="12" col-m="6">
           { this.renderCropperInfo() }
           { this.renderSliderTitle() }
           { this.renderSlider() }
