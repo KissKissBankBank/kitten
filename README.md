@@ -15,7 +15,6 @@ styleguide. It should eventually be separated into two different repositories.
 - Ruby 2.2.4
 - Bundler (`gem install bundler`)
 - Node ~> 6.0
-- Npm >= 3.0
 
 ## Table of content
 - [Installation](#installation)
@@ -163,7 +162,7 @@ bin/cleanup
 ### Style checker
 
 ```sh
-$ npm run --silent stylelint
+$ yarn stylelint
 ```
 
 ### Ruby specs
@@ -182,7 +181,7 @@ Generate the documentation:
 ```sh
 $ bundle exec rake sassdoc
 # OR
-$ npm run sassdoc
+$ yarn sassdoc
 ```
 
 The documentation is accessible on development environment: `/kitten/sassdoc`.

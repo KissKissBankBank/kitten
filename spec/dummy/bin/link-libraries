@@ -3,11 +3,11 @@
 cd ../../..
 
 # Create global symlink to local kitten repository.
-npm link
+yarn link
 
 # Create symlink to kitten in node_modules for src/index.js file.
-npm link kitten-components
+yarn link kitten-components
 
 # Create symlink to kitten in spec/dummy/client/node_modules for dummy app.
 cd spec/dummy/client
-npm link kitten-components
+yarn link kitten-components
