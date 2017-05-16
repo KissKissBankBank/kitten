@@ -137,8 +137,7 @@ $ bin/install
 To launch the style guide on the dummy app:
 
 ```sh
-$ cd spec/dummy
-$ foreman start
+$ bin/start
 ```
 
 Then visit http://localhost:3003
