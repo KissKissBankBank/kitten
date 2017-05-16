@@ -9,6 +9,7 @@ import { Label } from 'kitten/components/form/label'
 import { Paragraph } from 'kitten/components/typography/paragraph'
 import { Uploader } from 'kitten/components/uploaders/uploader'
 import Slider from 'kitten/components/form/slider'
+import domElementHelper from 'kitten/helpers/dom/element-helper'
 
 export class KarlCroppingImage extends React.Component {
   constructor(props) {
@@ -17,6 +18,7 @@ export class KarlCroppingImage extends React.Component {
     this.state = {
       ...this.initialProps(),
       hasErrorOnUploader: false,
+      cropperHeight: null,
     }
 
     this.handleUploaderChange = this.handleUploaderChange.bind(this)
@@ -29,6 +31,7 @@ export class KarlCroppingImage extends React.Component {
     this.handleCrop = this.handleCrop.bind(this)
 
     this.renderError = this.renderError.bind(this)
+    this.setCropperHeight = this.setCropperHeight.bind(this)
   }
 
   initialProps() {
@@ -40,6 +43,12 @@ export class KarlCroppingImage extends React.Component {
       sliderMin: this.props.sliderMin,
       sliderMax: this.props.sliderMax,
     }
+  }
+
+  componentDidMount() {
+    this.setCropperHeight()
+
+    window.addEventListener('resize', this.setCropperHeight)
   }
 
   handleUploaderChange(file) {
@@ -90,12 +99,23 @@ export class KarlCroppingImage extends React.Component {
 
   handleCrop() {
     if (this.state.imageSrc) {
-      const dataUrl = this.refs.cropper.getCroppedCanvas().toDataURL()
+      const croppedCanvas = this.refs.cropper.getCroppedCanvas()
 
-      this.setState({
-        imageCropSrc: dataUrl,
-      })
+      if (croppedCanvas) {
+        this.setState({
+          imageCropSrc: croppedCanvas.toDataURL(),
+        })
+      }
     }
+  }
+
+  setCropperHeight() {
+    const width = domElementHelper.getComputedWidth(this.refs.cropperContainer)
+    const height = width * 9 / 16
+
+    this.setState({
+      cropperHeight: height,
+    })
   }
 
   renderCropper() {
@@ -103,7 +123,7 @@ export class KarlCroppingImage extends React.Component {
       ref: 'cropper',
       className: 'k-Cropper',
       src: this.state.imageSrc,
-      style: { width: '480px', height: '270px' },
+      style: { height: this.state.cropperHeight },
       aspectRatio: 16/9,
       viewMode: 3,
       guides: false,
@@ -121,7 +141,11 @@ export class KarlCroppingImage extends React.Component {
 
     return (
       <Marger key="cropper" top="2" bottom="2">
-        <Cropper { ...cropperProps } />
+        <div ref="cropperContainer">
+          <Cropper
+            key={ `cropper-${ this.state.cropperHeight }` }
+            { ...cropperProps } />
+        </div>
       </Marger>
     )
   }
