@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Prefer `npm` to `yarn` in the postinstall script.
+
 ## [11.8.0] - 2017-05-17
 
 Feature:
