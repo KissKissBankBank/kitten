@@ -50,6 +50,10 @@ class UserMenu extends React.Component {
     }
   }
 
+  componentWillReceiveProps() {
+    this.handlePositionUpdate()
+  }
+
   // Component methods.
 
   shouldUpdatePosition(prevProps) {
