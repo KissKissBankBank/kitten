@@ -33,6 +33,7 @@ import { FormPhoneNumber } from 'kitten/components/form/form-phone-number'
 import { Label } from 'kitten/components/form/label'
 import { RadioButton } from 'kitten/components/form/radio-button'
 import { RadioButtonSet } from 'kitten/components/form/radio-button-set'
+import { RichTextInput } from 'kitten/components/form/rich-text-input'
 import Search from 'kitten/components/form/search'
 import Select from 'react-select'
 import SelectWithState from 'kitten/components/form/select-with-state'
@@ -214,6 +215,7 @@ ReactOnRails.register({
   RadioButton,
   RadioButtonSet,
   ReactTooltip,
+  RichTextInput,
   Slider,
   Search,
   Select,

@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `RichTextInput` component.
+  Add '<script src="//cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>'
+  to your pages.
+
 ## [11.7.0] - 2017-05-15
 
 Feature:
