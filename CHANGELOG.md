@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `RichTextInput` component.
+
 ## [11.7.0] - 2017-05-15
 
 Feature:
