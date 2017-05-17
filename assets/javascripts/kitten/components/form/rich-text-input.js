@@ -32,7 +32,7 @@ export class RichTextInput extends React.Component {
         } , {
           name: 'clipboard',
           items: [
-            'Undo', 'Redo'
+            'Undo', 'Redo',
           ],
         },
       ],
