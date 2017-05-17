@@ -46,5 +46,5 @@ BulletList.defaultProps = {
   className: null,
   large: false,
   big: false,
-  items: [],
+  items: [], // Eg: [{ key: …, item: … }]
 }
