@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Add `KarlSeparator` and `KarlSeparatorDarker` examples components.
+- Fix: Add `KarlSeparator` example component.
 
 ## [11.7.0] - 2017-05-15
 
