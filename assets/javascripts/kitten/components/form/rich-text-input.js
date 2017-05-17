@@ -22,7 +22,7 @@ export class RichTextInput extends React.Component {
 
   config() {
     return {
-      defaultLanguage: 'en',
+      defaultLanguage: this.props.locale,
       toolbar: [
         {
           name: 'basicstyles',
@@ -53,4 +53,5 @@ export class RichTextInput extends React.Component {
 
 RichTextInput.defaultProps = {
   content: '',
+  locale: 'en',
 }
