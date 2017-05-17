@@ -50,3 +50,7 @@ export class RichTextInput extends React.Component {
     )
   }
 }
+
+RichTextInput.defaultProps = {
+  content: '',
+}
