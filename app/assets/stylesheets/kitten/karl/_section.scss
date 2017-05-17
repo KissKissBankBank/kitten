@@ -28,9 +28,19 @@
   color: #333;
 }
 
+@media (max-width: 639px) {
+  .karl-Section__title {
+    text-align: center;
+  }
+}
+
 // Section Example
 .karl-Example {
   clear: both;
+
+  @media (max-width: 639px) {
+    text-align: center;
+  }
 }
 
 .karl-Example__title {
@@ -40,6 +50,10 @@
   font-size: 0.75rem;
   text-align: left;
   font-style: italic;
+
+  @media (max-width: 639px) {
+    text-align: center;
+  }
 }
 
 .karl-Example__title--margin {

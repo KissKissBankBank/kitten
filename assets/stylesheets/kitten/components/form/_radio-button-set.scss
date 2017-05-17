@@ -31,6 +31,10 @@
 ///   </div>
 
 @mixin k-RadioButtonSet {
+  .k-RadioButtonSet {
+    text-align: left;
+  }
+
   .k-RadioButtonSet__radioButton {
     @include k-inputSet;
   }
