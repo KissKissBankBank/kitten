@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Remove `margin-top: 50px` on `k-Separator`.
 - Fix: Prefer `npm` to `yarn` in the postinstall script.
 
 ## [11.8.0] - 2017-05-17
