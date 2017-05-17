@@ -9,7 +9,7 @@
     "hot-assets": "babel-node bin/webpack-dev-server.js"
   },
   "dependencies": {
-    "kitten-components": "file:../../../../kitten",
+    "kitten-components": "file:../../..",
     "kitten-launcher": "^1.0.0",
     "react-on-rails": "~6.10.1"
   }
