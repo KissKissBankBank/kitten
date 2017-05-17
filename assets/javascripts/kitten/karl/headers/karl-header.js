@@ -8,6 +8,7 @@ import { Header,
          HeaderItems,
          HeaderItem } from 'kitten/components/headers/header'
 import { HeaderTitles } from 'kitten/components/headers/header-titles'
+import { KarlGithubRibbon } from 'kitten/karl/headers/karl-github-ribbon'
 
 export const KarlMenuHeader = props => (
   <Header className="karl-Header karl-Menu__header"
@@ -30,6 +31,9 @@ export const KarlMenuHeader = props => (
       </HeaderItem>
       <HeaderTitles title="Styleguide"
                     className="karl-Menu__header__title" />
+      <HeaderItem>
+        <KarlGithubRibbon className="karl-Menu__header__ribbon" />
+      </HeaderItem>
     </HeaderItems>
   </Header>
 )

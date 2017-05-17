@@ -108,6 +108,13 @@ $arrowTop-path: '~icons/arrow-top.svg';
   color: map-get($k-colors, 'background-1');
 }
 
+.karl-Menu__header__ribbon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 0;
+}
+
 .karl-Menu__content {
   display: none;
   clear: both;
