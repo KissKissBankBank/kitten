@@ -5,6 +5,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: Add Github ribbon `KarlGithubRibbon` example component.
+- Fix: Repairs `HorizontalNav` component.
+- Fix: Add `<Grid>` and `<GridCol>` on `karl-header.
+- Fix: Center components in size `xs`.
 
 ## [11.7.0] - 2017-05-15
 
