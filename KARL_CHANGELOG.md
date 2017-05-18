@@ -6,6 +6,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Use `BulletList` React component and add `big` version.
 
+## [11.8.1] - 2017-05-17
+
+No changes.
+
+## [11.8.0] - 2017-05-17
+
+No changes.
+
 ## [11.7.0] - 2017-05-15
 
 Feature:
