@@ -1,5 +1,6 @@
 import React from 'react'
-//See also https://github.com/blog/273-github-ribbons
+
+// See also https://github.com/blog/273-github-ribbons
 
 export const KarlGithubRibbon = props => (
   <a href="https://github.com/KissKissBankBank/kitten"
