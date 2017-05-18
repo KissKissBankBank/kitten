@@ -3,7 +3,17 @@ set -e
 
 # Install ruby with brew and rbenv
 if hash brew 2> /dev/null && hash rbenv 2> /dev/null; then
-  brew upgrade ruby-build || true
+
+  # Install or upgrade rbenv
+  if brew list -1 | grep -q '^ruby-build'; then
+    if brew outdated -1 | grep -q '^ruby-build'; then
+      brew upgrade ruby-build
+    fi
+  else
+    brew install ruby-build
+  fi
+
+  # Install ruby
   rbenv install --skip-existing
 
 # Install ruby with rvm
