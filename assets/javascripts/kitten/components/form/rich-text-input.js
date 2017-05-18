@@ -53,7 +53,7 @@ export class RichTextInput extends React.Component {
 }
 
 RichTextInput.defaultProps = {
-  onChange: function() {},
+  onChange: (_value) => {},
   content: '',
   locale: 'en',
 }
