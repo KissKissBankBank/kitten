@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Use `BulletList` React component and add `big` version.
+
 ## [11.9.0] - 2017-05-18
 
 - Feature: Add `KarlSeparator` component.

@@ -70,6 +70,7 @@ import { Separator } from 'kitten/components/layout/separator'
 import ExternalRichLink from 'kitten/components/links/external-rich-link'
 
 // Lists
+import { BulletList } from 'kitten/components/lists/bullet-list'
 import NavList from 'kitten/components/lists/nav-list'
 
 // Meters
@@ -253,6 +254,7 @@ ReactOnRails.register({
   ExternalRichLink,
 
   // Lists
+  BulletList,
   NavList,
 
   // Meters
