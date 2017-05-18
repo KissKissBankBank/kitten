@@ -70,6 +70,10 @@
     @include k-typographyFontSize($font-step-on-media);
   }
 
+  .k-BulletList__item--big {
+    @include k-typographyFontSize(2);
+  }
+
   .k-BulletList__link {
     @include k-typographyFont($link-font);
     @include k-typographyFontSize($font-step);
