@@ -9,6 +9,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fix: Add `<Grid>` and `<GridCol>` on `karl-header`.
 - Fix: Center components in size `xs`.
 
+## [11.8.1] - 2017-05-17
+
+No changes.
+
+## [11.8.0] - 2017-05-17
+
+No changes.
+
 ## [11.7.0] - 2017-05-15
 
 Feature:
