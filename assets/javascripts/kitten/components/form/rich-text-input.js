@@ -18,6 +18,7 @@ export class RichTextInput extends React.Component {
 
   handleChange(value) {
     this.setState({ content: value })
+    this.props.onChange({ value })
   }
 
   config() {
@@ -52,6 +53,7 @@ export class RichTextInput extends React.Component {
 }
 
 RichTextInput.defaultProps = {
+  onChange: function() {},
   content: '',
   locale: 'en',
 }
