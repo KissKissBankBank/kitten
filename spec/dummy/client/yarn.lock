@@ -2574,8 +2574,8 @@ kind-of@^3.0.2:
   dependencies:
     is-buffer "^1.1.5"
 
-"kitten-components@file:../../../../kitten":
-  version "11.8.1"
+"kitten-components@file:../../..":
+  version "11.9.0"
   dependencies:
     autoprefixer "^6.5.3"
     babel-cli "^6.14.0"
