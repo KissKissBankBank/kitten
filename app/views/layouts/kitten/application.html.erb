@@ -17,24 +17,26 @@
 <%= csrf_meta_tags %>
 
 </head>
-<body class="k-VerticalGrid__page">
+<body class="k-VerticalGrid__page karl-Main">
 
 <% if @groups || controller_name == "branding" %>
+
+ <%= react_component 'KarlGithubRibbon', props: {
+      className: 'karl-GithubRibbon',
+  } %>
 
   <%= react_component 'KarlMenu', props: {
         brandingCategories: Kitten.configuration.branding_categories,
         componentCategories: Kitten.configuration.component_categories,
     } %>
 
-  <div class="karl-Main">
-    <div class="k-Row">
-      <div class="k-Row__content">
-        <section class="k-Grid">
-          <div class="k-Grid__col k-Grid__col--10 k-Grid__col--offset-1">
-            <%= yield %>
-          </div>
-        </section>
-      </div>
+  <div class="k-Row">
+    <div class="k-Row__content">
+      <section class="k-Grid">
+        <div class="k-Grid__col k-Grid__col--10 k-Grid__col--offset-1">
+          <%= yield %>
+        </div>
+      </section>
     </div>
   </div>
 

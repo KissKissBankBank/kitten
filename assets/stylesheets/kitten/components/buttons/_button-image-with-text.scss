@@ -26,7 +26,7 @@
   $color-active: map-get($k-colors, 'primary-3');
 
   .k-ButtonImageWithText {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     align-self: flex-start;
 
