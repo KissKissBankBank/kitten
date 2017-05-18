@@ -8,6 +8,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fix: Repairs `HorizontalNav` component.
 - Fix: Add `<Grid>` and `<GridCol>` on `karl-header`.
 - Fix: Center components in size `xs`.
+
+## [11.9.0] - 2017-05-18
+
 - Feature: Add `KarlSeparator` component.
 
 ## [11.8.1] - 2017-05-17
