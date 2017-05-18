@@ -9,7 +9,6 @@ import { Header,
          HeaderItem } from 'kitten/components/headers/header'
 import { Grid, GridCol } from 'kitten/components/grid/grid'
 import { HeaderTitles } from 'kitten/components/headers/header-titles'
-import { KarlGithubRibbon } from 'kitten/karl/headers/karl-github-ribbon'
 
 export const KarlMenuHeader = props => (
   <Grid>
