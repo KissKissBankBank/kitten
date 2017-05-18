@@ -6,7 +6,15 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Add `BulletList` component.
 - Feature: Add `big` modifier to `.k-BulletList`.
-- Feature: Add background color utilities.
+
+## [11.9.0] - 2017-05-18
+
+Feature:
+- Add background color utilities.
+
+Fixes:
+- Remove `margin-top: 50px` on `k-Separator`.
+- Add missing onChange prop on `RichTextInput` component.
 
 ## [11.8.1] - 2017-05-17
 

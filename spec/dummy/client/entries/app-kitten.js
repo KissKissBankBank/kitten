@@ -179,6 +179,7 @@ import { KarlMenuHeader } from 'kitten/karl/headers/karl-header'
 import { KarlMenu,
          KarlMenuContent } from 'kitten/karl/menus/karl-menu'
 import { KarlBrowsing } from 'app/browsing/browsing'
+import { KarlSeparator } from 'kitten/karl/layout/separator'
 
 ReactOnRails.register({
   // Box
@@ -354,4 +355,5 @@ ReactOnRails.register({
   KarlMenu,
   KarlMenuContent,
   KarlBrowsing,
+  KarlSeparator,
 })
