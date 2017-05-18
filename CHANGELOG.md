@@ -4,7 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Remove `margin-top: 50px` on `k-Separator`.
 - Feature: Add background color utilities.
+- Fix: Add missing onChange prop on `RichTextInput` component.
 
 ## [11.8.1] - 2017-05-17
 
