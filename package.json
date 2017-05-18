@@ -1,6 +1,6 @@
 {
   "name": "kitten-components",
-  "version": "11.8.0",
+  "version": "11.8.1",
   "license": "MIT",
   "description": "Front-end components library",
   "main": "src/index.js",
@@ -63,7 +63,7 @@
     "webpack": "^2.5.1"
   },
   "scripts": {
-    "postinstall": "cd vendor/assets/stylesheets/kitten/sassy-maps && yarn install",
+    "postinstall": "cd vendor/assets/stylesheets/kitten/sassy-maps && npm install",
     "sassdoc": "sassdoc -d public/sassdoc assets/stylesheets",
     "stylelint": "stylelint --syntax scss 'assets/stylesheets/**/*.scss'",
     "build:dev": "(cd spec/dummy/client && yarn build:dev)",

@@ -1,5 +1,6 @@
 {
   "name": "kitten-example",
+  "license": "MIT",
   "version": "1.0.0",
   "engines": {
     "node": "6.9.1",
