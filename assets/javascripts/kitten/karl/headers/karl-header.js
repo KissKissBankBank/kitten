@@ -34,7 +34,6 @@ export const KarlMenuHeader = props => (
           </HeaderItem>
           <HeaderTitles title="Styleguide"
                         className="karl-Menu__header__title" />
-          <KarlGithubRibbon className="karl-Menu__header__ribbon" />
         </HeaderItems>
       </Header>
     </GridCol>
