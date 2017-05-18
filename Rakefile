@@ -41,8 +41,9 @@ task kitten_release: [:sassdoc, :build] do
   sh "git tag v#{Kitten::VERSION}"
   sh 'git push origin master'
   sh 'git push origin --tags'
+  sh 'npm publish'
   puts
-  puts "Done! You can publish kitten-components #{Kitten::VERSION} module on npm"
+  puts "Done! kitten-components #{Kitten::VERSION} module is published! 🚀"
 end
 
 task default: ['app/views/layouts/kitten/playground.html.erb',
