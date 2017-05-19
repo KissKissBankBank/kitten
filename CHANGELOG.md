@@ -4,8 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `BulletList` component.
-- Feature: Add `big` modifier to `.k-BulletList`.
+## [11.10.0] - 2017-05-19
+
+Features:
+- Add `BulletList` component.
+- Add `big` modifier to `.k-BulletList`.
 
 ## [11.9.0] - 2017-05-18
 
