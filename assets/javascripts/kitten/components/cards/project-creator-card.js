@@ -2,17 +2,39 @@ import React from 'react'
 import classNames from 'classnames'
 import { card } from 'kitten/hoc/card'
 import { Marger } from 'kitten/components/layout/marger'
+import { Status } from 'kitten/components/layout/status'
 import { Grid, GridCol } from 'kitten/components/grid/grid'
-import { StudingIcon } from 'kitten/components/icons/studing-icon'
+import { ClockIcon } from 'kitten/components/icons/clock-icon'
 import { Paragraph } from 'kitten/components/typography/paragraph'
 import { ButtonIcon } from 'kitten/components/buttons/button-icon'
 import { ArrowRightIcon } from 'kitten/components/icons/arrow-right-icon'
 
 class ProjectCreatorCardComponent extends React.Component {
+  renderDate() {
+    const {
+      ownerDate,
+    } = this.props
+
+    return (
+      <div className="k-ProjectCreatorCard__content">
+        <ClockIcon />
+        <div className="k-ProjectCreatorCard__date">
+          { ownerDate }
+        </div>
+      </div>
+    )
+  }
+
+  renderStatus() {
+    return (
+      <Status backgroundColor='#0d9ddb'
+              borderColor='#0d9ddb' />
+    )
+  }
+
   renderDescription() {
     const {
       ownerTitle,
-      ownerDate,
     } = this.props
 
     return (
@@ -20,8 +42,11 @@ class ProjectCreatorCardComponent extends React.Component {
         <Marger top='1.8'
                 bottom='2'>
           <div className="k-ProjectCreatorCard__title">
-            <span><StudingIcon /></span>
-            <div className="k-ProjectCreatorCard__date">{ ownerDate }</div>
+
+            { this.renderDate() }
+
+            { this.renderStatus() }
+
           </div>
 
           <Paragraph margin={ false }

@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add new `StudingIcon` component.
+- Feature: Add new `ClockIcon` component.
 - Feature: Add tooltip in `ProjectCard`.
 - Feature: Add new `MasterCardIcon` and `CbIcon` components.
 - Feature: Add `.k-TagButton__icon` class to adds icons to tag buttons.
