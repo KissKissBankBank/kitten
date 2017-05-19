@@ -27,6 +27,12 @@
 
   .k-ProjectCreatorCard__title {
     display: flex;
+    justify-content: space-between;
+  }
+
+  .k-ProjectCreatorCard__content {
+    display: flex;
+    align-items: center;
   }
 
   .k-ProjectCreatorCard__date {
