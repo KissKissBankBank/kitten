@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Corrective center components in size `xs`.
+
 ## [11.10.0] - 2017-05-19
 
 Features:
