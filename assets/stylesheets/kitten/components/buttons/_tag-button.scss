@@ -67,8 +67,8 @@
     ),
     is-selected: (
       color: #fff,
-      border-color: map-get($k-colors, 'primary-3'),
-      background-color: map-get($k-colors, 'primary-3'),
+      border-color: map-get($k-colors, 'primary-1'),
+      background-color: map-get($k-colors, 'primary-1'),
     ),
     disabled: (
       color: map-get($k-colors, 'font-2'),

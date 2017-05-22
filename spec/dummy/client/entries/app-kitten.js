@@ -70,6 +70,7 @@ import { Separator } from 'kitten/components/layout/separator'
 import ExternalRichLink from 'kitten/components/links/external-rich-link'
 
 // Lists
+import { BulletList } from 'kitten/components/lists/bullet-list'
 import NavList from 'kitten/components/lists/nav-list'
 
 // Meters
@@ -175,6 +176,7 @@ import { KarlLegoGrid } from 'kitten/karl/grid/lego-grid'
 import { KarlTagList } from 'kitten/karl/lists/tag-list'
 import { KarlCard } from 'kitten/karl/cards/card'
 import { KarlMenuHeader } from 'kitten/karl/headers/karl-header'
+import { KarlGithubRibbon } from 'kitten/karl/headers/karl-github-ribbon'
 import { KarlMenu,
          KarlMenuContent } from 'kitten/karl/menus/karl-menu'
 import { KarlBrowsing } from 'app/browsing/browsing'
@@ -253,6 +255,7 @@ ReactOnRails.register({
   ExternalRichLink,
 
   // Lists
+  BulletList,
   NavList,
 
   // Meters
@@ -353,5 +356,6 @@ ReactOnRails.register({
   KarlMenu,
   KarlMenuContent,
   KarlBrowsing,
+  KarlGithubRibbon,
   KarlSeparator,
 })
