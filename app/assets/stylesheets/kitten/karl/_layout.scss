@@ -44,3 +44,7 @@ $karl-color-4: map-get($k-colors, 'primary-4');
     color: map-get($k-colors, 'primary-2');
   }
 }
+
+.karl-Height {
+  height: k-px-to-rem(60px);
+}
