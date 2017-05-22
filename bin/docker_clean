@@ -1,0 +1,5 @@
+#!/bin/sh
+# docker_clean
+# Cleans running docker images (used in development)
+docker rmi $(docker images -q)
+docker rm -f $(docker ps -a -q)

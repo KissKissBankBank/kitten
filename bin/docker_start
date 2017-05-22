@@ -1,0 +1,11 @@
+#!/bin/sh
+# docker_start
+# starts dummy app in backgrounad
+# executes crawler to get static dump
+# stops dummy app
+cd spec/dummy
+foreman start -f Procfile.static &
+sleep 45
+perl bin/fashionista.pl
+ps axf | grep foreman | grep -v grep | awk '{print "kill -9 " $1}' | sh
+exit 1;
