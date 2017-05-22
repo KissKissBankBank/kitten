@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import deprecated from 'react-prop-types/lib/deprecated'
 
@@ -64,5 +65,5 @@ RadioButton.defaultProps = {
 }
 
 RadioButton.propTypes = {
-  content: deprecated(React.PropTypes.string, 'Use `children` prop instead')
+  content: deprecated(PropTypes.string, 'Use `children` prop instead')
 }

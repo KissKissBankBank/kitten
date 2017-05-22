@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import deprecated from 'react-prop-types/lib/deprecated'
 
@@ -38,5 +39,5 @@ Checkbox.defaultProps = {
 }
 
 Checkbox.propTypes = {
-  text: deprecated(React.PropTypes.string, 'Use `children` prop instead')
+  text: deprecated(PropTypes.string, 'Use `children` prop instead')
 }
