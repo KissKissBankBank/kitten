@@ -203,7 +203,7 @@ Check out the [guidelines](../../wiki/Component-testing) to know how to test kit
 
 To contribute code:
 
-- Create a pull request on Github with a clear title in English.
+- Create a pull request on GitHub with a clear title in English.
 - Tag it with the right labels: `Needs reviews`, `Needs testing` or `Work in progress`.
 - Don't forget to update the `CHANGELOG.md` under the `[unreleased]` section
   with the following syntax:
@@ -218,7 +218,7 @@ To merge code into master:
 
 - Make sure the code has been reviewed by someone.
 - Make sure it has been tested.
-- Use the `Squash and merge` option on Github.
+- Merge using `Squash and merge` on GitHub.
 
 ## Release
 
@@ -256,7 +256,7 @@ Then:
 npm publish
 ```
 
-### Github
+### GitHub
 
 **Only for [KissKissBankBank](https://github.com/KissKissBankBank)
 collaborators**
