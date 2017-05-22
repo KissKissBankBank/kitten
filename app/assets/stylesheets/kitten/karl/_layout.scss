@@ -42,6 +42,7 @@ $karl-color-4: map-get($k-colors, 'primary-4');
 
 .karl-u-align-center\@xs-down {
   @include k-media-max('xs') {
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
