@@ -11,15 +11,11 @@ import { ArrowRightIcon } from 'kitten/components/icons/arrow-right-icon'
 
 class ProjectCreatorCardComponent extends React.Component {
   renderDate() {
-    const {
-      ownerDate,
-    } = this.props
-
     return (
       <div className="k-ProjectCreatorCard__content">
         <ClockIcon />
         <div className="k-ProjectCreatorCard__date">
-          { ownerDate }
+          { this.props.date }
         </div>
       </div>
     )
@@ -27,31 +23,25 @@ class ProjectCreatorCardComponent extends React.Component {
 
   renderStatus() {
     return (
-      <Status backgroundColor='#0d9ddb'
-              borderColor='#0d9ddb' />
+      <Status backgroundColor={ this.props.statusBackgroundColor }
+              borderColor= { this.props.statusBorderColor }>
+        { this.props.statusText }
+      </Status>
     )
   }
 
   renderDescription() {
-    const {
-      ownerTitle,
-    } = this.props
-
     return (
       <div className="k-ProjectCreatorCard__grid">
-        <Marger top='1.8'
-                bottom='2'>
-          <div className="k-ProjectCreatorCard__title">
-
+        <Marger top="1.8"
+                bottom="2">
+          <div className="k-ProjectCreatorCard__link--flex">
             { this.renderDate() }
-
             { this.renderStatus() }
-
           </div>
-
           <Paragraph margin={ false }
                      className="k-ProjectCreatorCard__text">
-            { ownerTitle }
+            { this.props.children }
           </Paragraph>
         </Marger>
       </div>
@@ -59,31 +49,30 @@ class ProjectCreatorCardComponent extends React.Component {
   }
 
   renderLink() {
-    const {
-      linkContent,
-      tag,
-    } = this.props
+    const target = this.props.isExternal ? { target: '_blank' } : {}
 
-    const Tag = tag
-
-    if (!linkContent) return
+    if (!this.props.linkContent) return
 
     return (
-      <div className="k-ProjectCreatorCard__link">
-        <div className="k-ProjectCreatorCard__grid
-                        k-ProjectCreatorCard__grid--withBorderTop">
-          <Marger top="1.2" bottom="1.2">
-            <div className="k-ProjectCreatorCard__link--flex">
-              <div> Voir le project </div>
-              <span>
-                <ButtonIcon size="tiny" className="k-ButtonIcon--verticalArrow">
-                  <ArrowRightIcon className="k-ButtonIcon__svg" />
-                </ButtonIcon>
-              </span>
-            </div>
+      <a className="k-ProjectCreatorCard__link"
+           href={ this.props.href }
+           { ...target }>
+        <div className={ classNames('k-ProjectCreatorCard__grid',
+                                    'k-ProjectCreatorCard__grid--withBorderTop') }>
+          <Marger top="1.2"
+                  bottom="1.2"
+                  className="k-ProjectCreatorCard__link--flex">
+            <div> { this.props.linkText } </div>
+            <span>
+              <ButtonIcon className={ classNames('k-ButtonIcon--withoutHover',
+                                                 'k-ButtonIcon--verticalArrow') }
+                          size="tiny">
+                <ArrowRightIcon className="k-ButtonIcon__svg" />
+              </ButtonIcon>
+            </span>
           </Marger>
         </div>
-      </div>
+      </a>
     )
   }
 
@@ -103,10 +92,15 @@ class ProjectCreatorCardComponent extends React.Component {
 }
 
 ProjectCreatorCardComponent.defaultProps = {
-  ownerDate: null,
-  ownerTitle: null,
+  date: null,
+  children: null,
   linkContent: null,
-  tag: 'a',
+  href: '#',
+  isExternal: false,
+  linkText: '',
+  statusBackgroundColor: null,
+  statusBorderColor: null,
+  statusText: 'Ipsum',
 }
 
 // Add card generic styles.

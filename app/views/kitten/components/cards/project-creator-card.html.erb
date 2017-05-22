@@ -2,8 +2,12 @@
   <div class="k-Grid__col k-Grid__col--12 k-Grid__col--6@l">
     <%= example 'Project creator card' do %>
       <%= react_component 'ProjectCreatorCard', props: {
-          ownerDate: 'Le 15 juin 2016',
-          ownerTitle: 'Et si on révolutionnait encore plus l’entraide ?',
+          date: 'Le 17 août 2016',
+          children: 'Post emensos insuperabilis expeditionis eventus ?',
+          linkText: 'Lorem Ipsum',
+          statusBackgroundColor: '#f3fafd',
+          statusBorderColor: '#cbe8f9',
+          statusText: 'Nouveau',
         } %>
     <% end %>
   </div>
@@ -11,9 +15,12 @@
   <div class="k-Grid__col k-Grid__col--12 k-Grid__col--6@l">
     <%= example 'Project creator card with link' do %>
       <%= react_component 'ProjectCreatorCard', props: {
-          ownerDate: 'Le 15 juin 2016',
-          ownerTitle: 'Et si on révolutionnait encore plus l’entraide ?',
+          date: 'Le 17 août 2016',
+          children: 'Post emensos insuperabilis expeditionis eventus ?',
+          linkText: 'Lorem Ipsum',
           linkContent: true,
+          statusBackgroundColor: '#68ffa0',
+          statusText: 'Réussi',
         } %>
     <% end %>
   </div>

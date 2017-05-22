@@ -8,16 +8,35 @@
 ///
 /// @example html
 ///
+///   <div class="k-ProjectCreatorCard k-Card k-Card--light k-Card--tinyRounded
+///               k-Card--translateOnHover k-Card--withBorder"
+///     <div class="k-ProjectCreatorCard__grid">
+///       <div class="k-ProjectCreatorCard__link--flex">
+///         <div class="k-ProjectCreatorCard__content">
+///           <svg />
+///         </div>
+///         …
+///         <p class="k-ProjectCreatorCard__text k-Paragraph--primary
+///                   k-Paragraph--withoutMargin"
+///       </div>
+///     </div>
+///     <a class="k-ProjectCreatorCard__link">
+///       <div class="k-ProjectCreatorCard__grid k-ProjectCreatorCard__grid--withBorderTop">
+///         <div class="k-ProjectCreatorCard__link--flex">
+///         </div>
+///       </div>
+///     </a>
+///   </div>
 
 @mixin k-ProjectCreatorCard {
   $font: 'source-sans-light';
 
   .k-ProjectCreatorCard {
-    overflow: hidden;
     max-width: k-px-to-rem(380px);
   }
 
   .k-ProjectCreatorCard__grid {
+    overflow: hidden;
     padding: 0 k-px-to-rem(20px);
   }
 
@@ -25,7 +44,7 @@
     border-top: 1px solid map-get($k-colors, 'line-1');
   }
 
-  .k-ProjectCreatorCard__title {
+  .k-ProjectCreatorCard__link--flex {
     display: flex;
     justify-content: space-between;
   }
@@ -37,6 +56,7 @@
 
   .k-ProjectCreatorCard__date {
     margin-left: k-px-to-rem(6px);
+
     @include k-typographyFontSize(-3);
     @include k-typographyFont($font);
   }
@@ -46,13 +66,11 @@
   }
 
   .k-ProjectCreatorCard__link {
+    display: block;
+    text-decoration: none;
+    color: map-get($k-colors, 'font-1');
     &:hover {
       background-color: map-get($k-colors, 'background-2');
     }
-  }
-
-  .k-ProjectCreatorCard__link--flex {
-    display: flex;
-    justify-content: space-between;
   }
 }
