@@ -11,7 +11,7 @@ No changes.
 ## [11.10.0] - 2017-05-19
 
 Features:
-- Add Github ribbon `KarlGithubRibbon` component.
+- Add GitHub ribbon `KarlGithubRibbon` component.
 - Use `BulletList` React component and add `big` version.
 
 Fixes:
