@@ -222,7 +222,16 @@ To merge code into master:
 
 ## Release
 
-To release a new version:
+### Login
+
+If this is your first release, start by saving your npm credentials in
+your `~/.npmrc` by calling:
+
+```sh
+$ yarn login
+```
+
+### Prepare the release
 
 - Pull `master`
 - Update the `CHANGELOG.md` file:
@@ -236,27 +245,16 @@ To release a new version:
   * Add a new `[unreleased]` section.
 - Update the version in `lib/kitten/version.rb`.
 - Update the version in `package.json`.
-- Run this command:
+
+### Release!
+
+Run this command:
 
 ```sh
 $ bundle exec rake kitten_release
 ```
 
-### Npm
-
-Only if this is your first release, save your credentials in your `.npmrc`:
-
-```
-npm adduser
-```
-
-Then:
-
-```
-npm publish
-```
-
-### Github
+### Update Github
 
 **Only for [KissKissBankBank](https://github.com/KissKissBankBank)
 collaborators**
