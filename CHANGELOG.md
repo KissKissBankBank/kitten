@@ -4,7 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Change `TagButton` background.
+## [11.11.0] - 2017-05-22
+
+Fix:
+- Change `TagButton` background.
 
 ## [11.10.0] - 2017-05-19
 
