@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add new `ProjectCreatorCard` component.
+- Feature: Add new `Status` component.
 - Feature: Add new `ClockIcon` component.
 - Feature: Add tooltip in `ProjectCard`.
 - Feature: Add new `MasterCardIcon` and `CbIcon` components.
