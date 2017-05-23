@@ -18,6 +18,9 @@ import { TagButton } from 'kitten/components/buttons/tag-button'
 // Cards
 import { ProjectCard } from 'kitten/components/cards/project-card'
 
+// Detectors
+import { DocumentUnfocusDetector } from 'kitten/components/detectors/document-unfocus-detector'
+
 // Dev
 import { DevGrid } from 'kitten/components/dev/dev-grid'
 
@@ -198,6 +201,9 @@ ReactOnRails.register({
 
   // Cards
   ProjectCard,
+
+  // Detectors,
+  DocumentUnfocusDetector,
 
   // Dev
   Checkbox,
