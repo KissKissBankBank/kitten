@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Fix display element as a block element (`ButtonImageWithText`, `ButtonImage`,
+       `ButtonWithBadge`, `IconBadge`).
 - Fix: Remove `React.PropTypes` and use `PropTypes` from
   [prop-types](https://www.npmjs.com/package/prop-types) library instead.
 - Fix: Update deprecated
