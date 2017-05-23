@@ -52,7 +52,7 @@ import { KarlSideLayout } from 'kitten/karl/layout/side-layout'
 
 // Icons
 import GrabberIcon from 'kitten/components/icons/grabber-icon'
-import { ArrowRightIcon } from 'kitten/components/icons/arrow-right-icon'
+import { RightArrowIcon } from 'kitten/components/icons/right-arrow-icon'
 import { CbIcon } from 'kitten/components/icons/cb-icon'
 import { MenuIcon } from 'kitten/components/icons/menu-icon'
 import { HeartIcon } from 'kitten/components/icons/heart-icon'
@@ -239,7 +239,7 @@ ReactOnRails.register({
   GridCol,
 
   // Icons
-  ArrowRightIcon,
+  RightArrowIcon,
   CbIcon,
   MenuIcon,
   GrabberIcon,

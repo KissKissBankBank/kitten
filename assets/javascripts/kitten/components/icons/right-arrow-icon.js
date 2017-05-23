@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const ArrowRightIcon = props => (
+export const RightArrowIcon = props => (
   <svg xmlns="http://www.w3.org/2000/svg"
        viewBox="0 0 10 10"
        fill="#000"

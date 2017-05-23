@@ -30,9 +30,10 @@
 
 @mixin k-ProjectCreatorCard {
   $font: 'source-sans-light';
+  $statusSize: k-px-to-rem(10px);
 
   .k-ProjectCreatorCard {
-    max-width: k-px-to-rem(380px);
+    width: 100%;
   }
 
   .k-ProjectCreatorCard__grid {
@@ -40,11 +41,7 @@
     padding: 0 k-px-to-rem(20px);
   }
 
-  .k-ProjectCreatorCard__grid--withBorderTop {
-    border-top: 1px solid map-get($k-colors, 'line-1');
-  }
-
-  .k-ProjectCreatorCard__link--flex {
+  .k-ProjectCreatorCard__grid--flex {
     display: flex;
     justify-content: space-between;
   }
@@ -55,7 +52,7 @@
   }
 
   .k-ProjectCreatorCard__date {
-    margin-left: k-px-to-rem(6px);
+    margin-left: k-px-to-rem(5px);
 
     @include k-typographyFontSize(-3);
     @include k-typographyFont($font);
@@ -73,4 +70,25 @@
       background-color: map-get($k-colors, 'background-2');
     }
   }
+
+  .k-ProjectCreatorCard__status {
+    display: flex;
+    align-items: center;
+  }
+
+  .k-ProjectCreatorCard__status--icon {
+    width: $statusSize;
+    height: $statusSize;
+    margin-right: k-px-to-rem(5px);
+
+    box-sizing: border-box;
+    border-radius: $statusSize / 2;
+    border: 1px solid transparent;
+  }
+
+  .k-ProjectCreatorCard__status--text {
+    @include k-typographyFont('source-sans-semi-bold');
+    @include k-typographyFontSize(-3);
+  }
+
 }

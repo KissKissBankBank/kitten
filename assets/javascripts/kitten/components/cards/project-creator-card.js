@@ -2,31 +2,45 @@ import React from 'react'
 import classNames from 'classnames'
 import { card } from 'kitten/hoc/card'
 import { Marger } from 'kitten/components/layout/marger'
-import { Status } from 'kitten/components/layout/status'
 import { Grid, GridCol } from 'kitten/components/grid/grid'
 import { ClockIcon } from 'kitten/components/icons/clock-icon'
 import { Paragraph } from 'kitten/components/typography/paragraph'
 import { ButtonIcon } from 'kitten/components/buttons/button-icon'
-import { ArrowRightIcon } from 'kitten/components/icons/arrow-right-icon'
+import { Separator } from 'kitten/components/layout/separator'
+import { RightArrowIcon } from 'kitten/components/icons/right-arrow-icon'
 
 class ProjectCreatorCardComponent extends React.Component {
   renderDate() {
     return (
       <div className="k-ProjectCreatorCard__content">
         <ClockIcon />
-        <div className="k-ProjectCreatorCard__date">
+        <span className="k-ProjectCreatorCard__date">
           { this.props.date }
-        </div>
+        </span>
       </div>
     )
   }
 
   renderStatus() {
+    const  { statusBackgroundColor,
+             statusBorderColor,
+             statusText,
+             ...others } = this.props
+
+    const statusStyles = {
+      backgroundColor: statusBackgroundColor,
+      borderColor: statusBorderColor ? statusBorderColor : statusBackgroundColor
+    }
+
     return (
-      <Status backgroundColor={ this.props.statusBackgroundColor }
-              borderColor= { this.props.statusBorderColor }>
-        { this.props.statusText }
-      </Status>
+      <div className="k-ProjectCreatorCard__status">
+        <span className="k-ProjectCreatorCard__status--icon"
+              style={ statusStyles }>
+        </span>
+        <div className="k-ProjectCreatorCard__status--text">
+          { statusText }
+        </div>
+      </div>
     )
   }
 
@@ -35,7 +49,7 @@ class ProjectCreatorCardComponent extends React.Component {
       <div className="k-ProjectCreatorCard__grid">
         <Marger top="1.8"
                 bottom="2">
-          <div className="k-ProjectCreatorCard__link--flex">
+          <div className="k-ProjectCreatorCard__grid--flex">
             { this.renderDate() }
             { this.renderStatus() }
           </div>
@@ -49,25 +63,24 @@ class ProjectCreatorCardComponent extends React.Component {
   }
 
   renderLink() {
-    const target = this.props.isExternal ? { target: '_blank' } : {}
-
     if (!this.props.linkContent) return
+
+    const target = this.props.isExternal ? { target: '_blank' } : {}
 
     return (
       <a className="k-ProjectCreatorCard__link"
-           href={ this.props.href }
-           { ...target }>
-        <div className={ classNames('k-ProjectCreatorCard__grid',
-                                    'k-ProjectCreatorCard__grid--withBorderTop') }>
+         href={ this.props.href }
+         { ...target }>
+        <div className="k-ProjectCreatorCard__grid">
           <Marger top="1.2"
                   bottom="1.2"
-                  className="k-ProjectCreatorCard__link--flex">
-            <div> { this.props.linkText } </div>
+                  className="k-ProjectCreatorCard__grid--flex">
+            <span>{ this.props.linkText }</span>
             <span>
               <ButtonIcon className={ classNames('k-ButtonIcon--withoutHover',
                                                  'k-ButtonIcon--verticalArrow') }
                           size="tiny">
-                <ArrowRightIcon className="k-ButtonIcon__svg" />
+                <RightArrowIcon className="k-ButtonIcon__svg" />
               </ButtonIcon>
             </span>
           </Marger>
@@ -83,8 +96,9 @@ class ProjectCreatorCardComponent extends React.Component {
     )
 
     return (
-      <div className= { ProjectCreatorCardClassName }>
+      <div className={ ProjectCreatorCardClassName }>
         { this.renderDescription() }
+        <Separator />
         { this.renderLink() }
       </div>
     )
@@ -100,10 +114,8 @@ ProjectCreatorCardComponent.defaultProps = {
   linkText: '',
   statusBackgroundColor: null,
   statusBorderColor: null,
-  statusText: 'Ipsum',
+  statusText: 'Status',
 }
-
-// Add card generic styles.
 
 export const ProjectCreatorCard = card(ProjectCreatorCardComponent, {
   light: true,
