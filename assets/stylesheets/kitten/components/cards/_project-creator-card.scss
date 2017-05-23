@@ -58,10 +58,6 @@
     @include k-typographyFont($font);
   }
 
-  .k-ProjectCreatorCard__text {
-    margin-right: k-px-to-rem(50px);
-  }
-
   .k-ProjectCreatorCard__link {
     display: block;
     text-decoration: none;

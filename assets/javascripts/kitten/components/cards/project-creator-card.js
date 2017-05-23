@@ -2,7 +2,6 @@ import React from 'react'
 import classNames from 'classnames'
 import { card } from 'kitten/hoc/card'
 import { Marger } from 'kitten/components/layout/marger'
-import { Grid, GridCol } from 'kitten/components/grid/grid'
 import { ClockIcon } from 'kitten/components/icons/clock-icon'
 import { Paragraph } from 'kitten/components/typography/paragraph'
 import { ButtonIcon } from 'kitten/components/buttons/button-icon'
@@ -47,14 +46,16 @@ class ProjectCreatorCardComponent extends React.Component {
   renderDescription() {
     return (
       <div className="k-ProjectCreatorCard__grid">
-        <Marger top="1.8"
-                bottom="2">
+        <Marger top="2"
+                bottom="1">
           <div className="k-ProjectCreatorCard__grid--flex">
             { this.renderDate() }
             { this.renderStatus() }
           </div>
-          <Paragraph margin={ false }
-                     className="k-ProjectCreatorCard__text">
+        </Marger>
+        <Marger top="1"
+                bottom="2">
+          <Paragraph margin={ false }>
             { this.props.children }
           </Paragraph>
         </Marger>
