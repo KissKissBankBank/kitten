@@ -4,8 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Corrective center components (`ButtonImageWithText`, `ButtonImage`,
-       `ButtonWithBadge`, `IconBadge`) with class `karl-u-align-center\@xs-down`.
+- Fix: Fix display element as a block element (`ButtonImageWithText`, `ButtonImage`,
+       `ButtonWithBadge`, `IconBadge`).
 
 ## [11.10.0] - 2017-05-19
 

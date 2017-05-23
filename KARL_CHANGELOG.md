@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Corrective center components in size `xs` with class `karl-u-align-center\@xs-down`.
+- Fix: Center components in `xs` with `karl-u-align-center\@xs-down` class.
 
 ## [11.10.0] - 2017-05-19
 
