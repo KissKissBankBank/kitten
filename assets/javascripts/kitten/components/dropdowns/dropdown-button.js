@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import classNames from 'classnames'
 
 class DropdownButton extends React.Component {
@@ -18,8 +19,8 @@ class DropdownButton extends React.Component {
 }
 
 DropdownButton.propTypes = {
-  onClick: React.PropTypes.func,
-  isExpanded: React.PropTypes.bool,
+  onClick: PropTypes.func,
+  isExpanded: PropTypes.bool,
 }
 
 DropdownButton.defaultProps = {

@@ -6,6 +6,17 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Fix: Fix display element as a block element (`ButtonImageWithText`, `ButtonImage`,
        `ButtonWithBadge`, `IconBadge`).
+- Fix: Remove `React.PropTypes` and use `PropTypes` from
+  [prop-types](https://www.npmjs.com/package/prop-types) library instead.
+- Fix: Update deprecated
+  [react-prop-types](https://github.com/react-bootstrap/react-prop-types)
+  library with
+  [prop-types-extra](https://github.com/react-bootstrap/prop-types-extra).
+
+## [11.11.0] - 2017-05-22
+
+Fix:
+- Change `TagButton` background.
 
 ## [11.10.0] - 2017-05-19
 

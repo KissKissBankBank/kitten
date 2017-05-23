@@ -203,7 +203,7 @@ Check out the [guidelines](../../wiki/Component-testing) to know how to test kit
 
 To contribute code:
 
-- Create a pull request on Github with a clear title in English.
+- Create a pull request on GitHub with a clear title in English.
 - Tag it with the right labels: `Needs reviews`, `Needs testing` or `Work in progress`.
 - Don't forget to update the `CHANGELOG.md` under the `[unreleased]` section
   with the following syntax:
@@ -218,11 +218,20 @@ To merge code into master:
 
 - Make sure the code has been reviewed by someone.
 - Make sure it has been tested.
-- Use the `Squash and merge` option on Github.
+- Merge using `Squash and merge` on GitHub.
 
 ## Release
 
-To release a new version:
+### Login
+
+If this is your first release, start by saving your npm credentials in
+your `~/.npmrc` by calling:
+
+```sh
+$ yarn login
+```
+
+### Prepare the release
 
 - Pull `master`
 - Update the `CHANGELOG.md` file:
@@ -236,27 +245,16 @@ To release a new version:
   * Add a new `[unreleased]` section.
 - Update the version in `lib/kitten/version.rb`.
 - Update the version in `package.json`.
-- Run this command:
+
+### Release!
+
+Run this command:
 
 ```sh
 $ bundle exec rake kitten_release
 ```
 
-### Npm
-
-Only if this is your first release, save your credentials in your `.npmrc`:
-
-```
-npm adduser
-```
-
-Then:
-
-```
-npm publish
-```
-
-### Github
+### Update GitHub
 
 **Only for [KissKissBankBank](https://github.com/KissKissBankBank)
 collaborators**

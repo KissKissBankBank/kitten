@@ -6,10 +6,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Fix: Center components in `xs` with `karl-u-align-center\@xs-down` class.
 
+## [11.11.0] - 2017-05-19
+
+No changes.
+
 ## [11.10.0] - 2017-05-19
 
 Features:
-- Add Github ribbon `KarlGithubRibbon` component.
+- Add GitHub ribbon `KarlGithubRibbon` component.
 - Use `BulletList` React component and add `big` version.
 
 Fixes:

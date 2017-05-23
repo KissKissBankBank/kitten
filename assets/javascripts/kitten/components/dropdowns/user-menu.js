@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Dropdown from 'kitten/components/dropdowns/dropdown'
 import ButtonImageWithTextAndBadge from
   'kitten/components/buttons/button-image-with-text-and-badge'
@@ -212,21 +213,21 @@ class UserMenu extends React.Component {
 }
 
 UserMenu.propTypes = {
-  buttonClassName: React.PropTypes.string,
-  buttonImgSrc: React.PropTypes.string,
-  buttonImgWidth: React.PropTypes.number,
-  buttonImgHeight: React.PropTypes.number,
-  buttonImgAlt: React.PropTypes.string,
-  buttonText: React.PropTypes.string,
-  buttonTitle: React.PropTypes.string,
-  dropdownList: React.PropTypes.array,
-  positionedWith: React.PropTypes.func,
-  positionedWithBorder: React.PropTypes.bool,
-  positionedOn: React.PropTypes.string,
-  notifications: React.PropTypes.number,
-  refreshEvents: React.PropTypes.array,
-  closeEvents: React.PropTypes.array,
-  onPositionUpdate: React.PropTypes.func,
+  buttonClassName: PropTypes.string,
+  buttonImgSrc: PropTypes.string,
+  buttonImgWidth: PropTypes.number,
+  buttonImgHeight: PropTypes.number,
+  buttonImgAlt: PropTypes.string,
+  buttonText: PropTypes.string,
+  buttonTitle: PropTypes.string,
+  dropdownList: PropTypes.array,
+  positionedWith: PropTypes.func,
+  positionedWithBorder: PropTypes.bool,
+  positionedOn: PropTypes.string,
+  notifications: PropTypes.number,
+  refreshEvents: PropTypes.array,
+  closeEvents: PropTypes.array,
+  onPositionUpdate: PropTypes.func,
 }
 
 UserMenu.defaultProps = {
