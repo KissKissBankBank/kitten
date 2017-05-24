@@ -5,8 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add new `ProjectCreatorCard` component.
-- Feature: Add new `Status` component.
 - Feature: Add new `ClockIcon` component.
+- Feature: Add new `RightArrowIcon` component.
 - Fix: Remove `React.PropTypes` and use `PropTypes` from
   [prop-types](https://www.npmjs.com/package/prop-types) library instead.
 - Fix: Update deprecated
