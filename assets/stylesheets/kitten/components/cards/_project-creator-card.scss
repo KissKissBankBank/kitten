@@ -8,16 +8,14 @@
 ///
 /// @example html
 ///
-///   <div class="k-ProjectCreatorCard k-Card k-Card--light k-Card--tinyRounded
-///               k-Card--translateOnHover k-Card--withBorder"
+///   <div class="k-ProjectCreatorCard"
 ///     <div class="k-ProjectCreatorCard__grid">
 ///       <div class="k-ProjectCreatorCard__link--flex">
 ///         <div class="k-ProjectCreatorCard__content">
 ///           <svg />
 ///         </div>
 ///         …
-///         <p class="k-ProjectCreatorCard__text k-Paragraph--primary
-///                   k-Paragraph--withoutMargin"
+///         <p class="k-ProjectCreatorCard__text"
 ///       </div>
 ///     </div>
 ///     <a class="k-ProjectCreatorCard__link">
@@ -33,7 +31,7 @@
   $statusSize: k-px-to-rem(10px);
 
   .k-ProjectCreatorCard {
-    width: 100%;
+    text-align: left;
   }
 
   .k-ProjectCreatorCard__grid {

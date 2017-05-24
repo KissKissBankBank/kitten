@@ -10,6 +10,8 @@ import { RightArrowIcon } from 'kitten/components/icons/right-arrow-icon'
 
 class ProjectCreatorCardComponent extends React.Component {
   renderDate() {
+    if (!this.props.date) return
+
     return (
       <div className="k-ProjectCreatorCard__content">
         <ClockIcon />
@@ -21,10 +23,11 @@ class ProjectCreatorCardComponent extends React.Component {
   }
 
   renderStatus() {
-    const  { statusBackgroundColor,
-             statusBorderColor,
-             statusText,
-             ...others } = this.props
+    if (!this.props.statusText) return
+
+    const { statusBackgroundColor,
+            statusBorderColor,
+            statusText } = this.props
 
     const statusStyles = {
       backgroundColor: statusBackgroundColor,
@@ -64,7 +67,7 @@ class ProjectCreatorCardComponent extends React.Component {
   }
 
   renderLink() {
-    if (!this.props.linkContent) return
+    if (!this.props.href) return
 
     const target = this.props.isExternal ? { target: '_blank' } : {}
 
@@ -76,14 +79,12 @@ class ProjectCreatorCardComponent extends React.Component {
           <Marger top="1.2"
                   bottom="1.2"
                   className="k-ProjectCreatorCard__grid--flex">
-            <span>{ this.props.linkText }</span>
-            <span>
-              <ButtonIcon className={ classNames('k-ButtonIcon--withoutHover',
-                                                 'k-ButtonIcon--verticalArrow') }
-                          size="tiny">
-                <RightArrowIcon className="k-ButtonIcon__svg" />
-              </ButtonIcon>
-            </span>
+            { this.props.linkText }
+            <ButtonIcon className={ classNames('k-ButtonIcon--withoutHover',
+                                               'k-ButtonIcon--verticalArrow') }
+                        size="tiny">
+              <RightArrowIcon className="k-ButtonIcon__svg" />
+            </ButtonIcon>
           </Marger>
         </div>
       </a>
@@ -109,10 +110,9 @@ class ProjectCreatorCardComponent extends React.Component {
 ProjectCreatorCardComponent.defaultProps = {
   date: null,
   children: null,
-  linkContent: null,
-  href: '#',
+  href: null,
   isExternal: false,
-  linkText: '',
+  linkText: null,
   statusBackgroundColor: null,
   statusBorderColor: null,
   statusText: 'Status',
