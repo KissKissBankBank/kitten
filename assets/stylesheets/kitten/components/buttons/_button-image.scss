@@ -24,7 +24,7 @@
     @include k-buttonRoundedImage($button-size);
 
     box-sizing: border-box;
-    display: inline-flex;
+    display: flex;
     overflow: hidden;
     cursor: pointer;
     border: 0;
