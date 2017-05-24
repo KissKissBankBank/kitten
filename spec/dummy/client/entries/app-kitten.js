@@ -202,7 +202,7 @@ ReactOnRails.register({
   // Cards
   ProjectCard,
 
-  // Detectors,
+  // Detectors
   DocumentUnfocusDetector,
 
   // Dev
