@@ -7,18 +7,18 @@ export class DocumentUnfocusDetector extends React.Component {
   constructor(props) {
     super(props)
 
-    this.handleKeydown = this.handleKeydown.bind(this)
+    this.handleKeyDown = this.handleKeyDown.bind(this)
     this.handleMouseDown = this.handleMouseDown.bind(this)
   }
 
   componentDidMount() {
     document.addEventListener('mousedown', this.handleMouseDown)
-    document.addEventListener('keydown', this.handleKeydown)
+    document.addEventListener('keydown', this.handleKeyDown)
   }
 
   componentWillUnmount() {
     document.removeEventListener('mousedown', this.handleMouseDown)
-    document.removeEventListener('keydown', this.handleKeydown)
+    document.removeEventListener('keydown', this.handleKeyDown)
   }
 
   // We add our class if the mouse is beeing used.
@@ -28,7 +28,7 @@ export class DocumentUnfocusDetector extends React.Component {
 
   // On keydown, we consider that the user could be using his keyboard to tab
   // through elements, so we remove our class.
-  handleKeydown() {
+  handleKeyDown() {
     document.documentElement.classList.remove(this.props.className)
   }
 
