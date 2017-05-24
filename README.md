@@ -222,6 +222,20 @@ To merge code into master:
 - Make sure it has been tested.
 - Use the `Squash and merge` option on Github.
 
+## Static Dump 
+
+To build an on disk static file mirror:
+
+- Pull `feature/dockerized`
+- Install 
+- launch dummy app server 
+- run 
+```sh
+$ perl spec/dummy/bin/fashionista.pl
+```
+- files are located in build/
+
+
 ## Release
 
 To release a new version:
