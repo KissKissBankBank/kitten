@@ -128,8 +128,7 @@ process();
 #
 
 # subname
-# Return the name of the parent caller
-# used in log calls
+# Return the name of the parent caller, used in log calls
 sub subname { return ( split /::/, ( caller(1) )[3] )[1] }
 
 # process:
@@ -197,10 +196,8 @@ sub process {
                 );
                 my $uri = $token->get_attr( $t_ref->{'l_tag'} );
 
-                # is it one of ours ?
                 if ( uri_belongs_to_us($uri) ) {
 
-                    # host (to avoid trying to copy google stuff etc)
                     $token->set_attr( $t_ref->{'l_tag'} => rewrite_url($uri) );
                     create_tree_from_uri($uri);
                     if (    $token->is_start_tag('link')
@@ -342,7 +339,7 @@ sub create_tree_from_uri {
     return 1;
 }
 
-# host
+# uri_belongs_to_us
 # Determine if img url host is our url
 # to avoid trying to copy google stuff etc
 sub uri_belongs_to_us {
@@ -432,8 +429,50 @@ This is the extractor for the Kitten styleguide
 It connects to the main styleguide page and attempts
 to mirror it on disk in the specified "build" dir
 
+=head1 CONFIGURATION
+
+This script looks for its default configuration file in $Bin/../$Bin.conf.
+Configuration is done in the apache conf style.
+see L<http://httpd.apache.org/docs/current/sections.html> for format
+
+Keys include: 
+dir:
+ Path to store the site mirror files
+base_url:
+ URL of the main site page to crawl 
+<log><file> filename SOME_LOG_FILE </file></log>:
+ log file path 
+<log> loglevel LOGLEVEL </log>:
+ minimum level of events to log, relevant values are
+  -TRACE 
+  -DEBUG 
+  -NOTICE 
+  -INFO 
+  -ERROR 
+  -FATAL
+
+=head1 OPTIONS
+	see USAGE
+
+=head1 DEPENDENCIES 
+
+URI
+Template
+File::Path
+LWP::Simple
+File::Touch
+Getopt::Long
+Log::Log4perl
+Config::General
+HTML::TokeParser::Simple
+
+=head1 INCOMPATIBILITIES
+
+won't work with a version of Perl < 5.18
+
 =head1 AUTHOR
 
 Morad IGMIR - L<morad.igmir@kisskissbankbank.com>
+
 
 =cut
