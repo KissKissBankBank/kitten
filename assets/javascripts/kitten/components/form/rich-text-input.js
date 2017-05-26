@@ -23,6 +23,7 @@ export class RichTextInput extends React.Component {
 
   config() {
     const config = Object.assign(
+      {},
       this.props.config,
       {
         defaultLanguage: this.props.locale,
