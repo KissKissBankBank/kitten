@@ -4,8 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Breaking change: Rename `ButtonTooltioIcon` to `ButtonInfoIcon`
-- Breaking change: Rename TooltipIcon` to `InfoIcon`
+- Breaking change: Rename `ButtonTooltioIcon` to `ButtonInfoIcon`.
+- Breaking change: Rename TooltipIcon` to `InfoIcon`.
 - Breaking change: Split tooltip component into a component `Tooltip` and hoc:
   `withTooltip`.
   To be retro-compatible, you should replace `Tooltip` component with `InfoWithTooltip`.

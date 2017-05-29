@@ -5,9 +5,9 @@ export class ButtonInfoIcon extends React.Component {
   render() {
     return (
       <button { ...this.props }
-              className="k-ButtonIcon
-                         k-ButtonIcon--beryllium
-                         k-ButtonIcon--micro">
+              className={ classNames('k-ButtonIcon',
+                                     'k-ButtonIcon--beryllium',
+                                     'k-ButtonIcon--micro') }>
         <InfoIcon className="k-ButtonIcon__svg" />
       </button>
     )
