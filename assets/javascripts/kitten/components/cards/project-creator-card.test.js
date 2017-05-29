@@ -48,12 +48,12 @@ describe('<ProjectCreatorCard />', () => {
       expect(status).to.have.length(1)
     })
 
-    it('renders a icon props', () => {
+    it('renders an icon with a style attribute', () => {
       expect(icon).to.have.prop( 'style' )
                   .deep.equal({ backgroundColor: '#e6f5fb', borderColor: '#cbe8f9' })
     })
 
-    it('renders a text props', () => {
+    it('renders a text value', () => {
       expect(text).to.contain.text('Custom status')
     })
   })
@@ -65,14 +65,14 @@ describe('<ProjectCreatorCard />', () => {
     )
     const link = projectCreatorCard.find('.k-ProjectCreatorCard__link')
 
-    it('renders a href attributes', () => {
+    it('renders href attributes', () => {
       expect(link).to.have.tagName('a')
       expect(link).to.have.attr('href', '#')
       expect(link).to.have.attr('target', '_blank')
     })
   })
 
-  describe('with linkText props', () => {
+  describe('with linkText prop', () => {
     const projectCreatorCard = mount(
       <ProjectCreatorCard href="#"
                           linkText="Custom text" />)
