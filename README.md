@@ -140,7 +140,7 @@ To launch the style guide on the dummy app:
 $ bin/kitten start
 ```
 
-Then visit http://localhost:3003
+Then visit http://localhost:3000
 
 
 To stop the style guide on the dummy app:
