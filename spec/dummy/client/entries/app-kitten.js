@@ -98,6 +98,7 @@ import { Stepper } from 'kitten/components/steppers/stepper'
 import ReactTooltip from 'react-tooltip'
 import Tooltip from 'kitten/components/tooltips/tooltip'
 import { StaticTooltip } from 'kitten/components/tooltips/static-tooltip'
+import { NewTooltip } from 'kitten/components/tooltips/new-tooltip'
 
 // Tours
 import HeaderTour from 'kitten/components/tours/header-tour'
@@ -283,6 +284,7 @@ ReactOnRails.register({
   ReactTooltip,
   Tooltip,
   StaticTooltip,
+  NewTooltip,
 
   // Tours
   HeaderTour,
