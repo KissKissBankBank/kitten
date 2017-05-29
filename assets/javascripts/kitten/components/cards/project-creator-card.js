@@ -75,6 +75,7 @@ class ProjectCreatorCardComponent extends React.Component {
       <a className="k-ProjectCreatorCard__link"
          href={ this.props.href }
          { ...target }>
+        <Separator />
         <div className="k-ProjectCreatorCard__grid">
           <Marger top="1.2"
                   bottom="1.2"
@@ -100,7 +101,6 @@ class ProjectCreatorCardComponent extends React.Component {
     return (
       <div className={ ProjectCreatorCardClassName }>
         { this.renderDescription() }
-        <Separator />
         { this.renderLink() }
       </div>
     )
