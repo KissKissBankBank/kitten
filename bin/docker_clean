@@ -1,4 +1,0 @@
-#!/bin/sh
-# Erase running docker images (used in development) to avoid issues with cache
-docker rmi $(docker images -q)
-docker rm -f $(docker ps -a -q)
