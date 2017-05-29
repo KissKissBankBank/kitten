@@ -129,7 +129,7 @@ creating new components!
 ### Install
 
 ```sh
-$ bin/install
+$ bin/kitten install
 ```
 
 ### Dummy style guide
@@ -137,10 +137,35 @@ $ bin/install
 To launch the style guide on the dummy app:
 
 ```sh
-$ bin/start
+$ bin/kitten start
 ```
 
 Then visit http://localhost:3003
+
+
+To stop the style guide on the dummy app:
+
+```sh
+$ bin/kitten stop
+```
+
+
+To check wether the dummy app is running or not:
+
+```sh
+$ bin/kitten status
+```
+
+
+To tail the dummy app logs in real time:
+
+```sh
+$ bin/kitten log 
+```
+
+Hit `Ctrl+C` to stop the tail 
+
+
 
 To share the dummy app with production settings (to share via ngrok for
 example), you can compile the assets and serve a production server:
@@ -155,7 +180,7 @@ $ REACT_ON_RAILS_ENV= rails s -b 0.0.0.0
 To cleanup installed modules:
 
 ```sh
-bin/cleanup
+bin/kitten cleanup
 ```
 
 ### Style checker
@@ -190,7 +215,7 @@ The documentation is accessible on development environment: `/kitten/sassdoc`.
 To launch the JS tests:
 
 ```sh
-$ bin/test
+$ bin/ test
 
 # OR
 
@@ -224,12 +249,8 @@ To merge code into master:
 
 To build an on disk static file mirror:
 
-- Pull `feature/dockerized`
-- Install 
-- launch dummy app server 
-- run 
 ```sh
-$ perl spec/dummy/bin/fashionista.pl
+$ bin/styleguide buildstatic
 ```
 - files are located in build/
 
