@@ -1,9 +1,0 @@
-#!/bin/sh
-cd spec/dummy
-# Start foreman in background and wait for it to load
-foreman start -f Procfile.static &
-sleep 45
-# Launch crawler 
-perl bin/fashionista.pl
-# Stop foreman 
-kill %1
