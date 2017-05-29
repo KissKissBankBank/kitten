@@ -151,6 +151,7 @@ module Kitten
             { path: 'components/box/link-box-with-icon', name: 'Link box with icon' },
             { path: 'components/tooltips/tooltip', name: 'Tooltip' },
             { path: 'components/tooltips/static-tooltip', name: 'Static tooltip' },
+            { path: 'components/cards/project-creator-card', name: 'Project creator card' },
           ],
         },
         {

@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add new `ProjectCreatorCard` component.
 - Feature: Add favicon.
 - Fix: Center components in `xs` with `karl-u-align-center@xs-down` class.
 

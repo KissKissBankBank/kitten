@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add new `ProjectCreatorCard` component.
+- Feature: Add new `ClockIcon` component.
+- Feature: Add new `RightArrowIcon` component.
 - Feature: Add config & toolbar to default props `RichTextInput` component.
 - Fix: Fix display element as a block element (`ButtonImageWithText`, `ButtonImage`,
        `ButtonWithBadge`, `IconBadge`).
