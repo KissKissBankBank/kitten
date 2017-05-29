@@ -69,6 +69,10 @@ status(){
 }
 
 install(){
+  if [ -d "nodes_modules" ]; then
+    echo There seems to be a previous install of $SCRIPT_NAME
+    cleanup
+  fi 
   ./bin/install
 }
 
