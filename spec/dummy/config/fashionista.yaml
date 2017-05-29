@@ -1,0 +1,13 @@
+---
+index: main.html
+location: 'http:// localhost : 3000 /'
+log:
+  log_level: 'DEBUG'
+  file:
+    autoflush: 1
+    filename: '/Users/bsartek/Dev/kisskiss/kitten/spec/dummy/bin/../fashionista.log'
+    mode: 'append'
+    pattern: '[%d] [%p] %m%n'
+  screen:
+    stderr: 1
+    utf8: 1
