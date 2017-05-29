@@ -22,25 +22,16 @@ export class RichTextInput extends React.Component {
   }
 
   config() {
-    return {
-      defaultLanguage: this.props.locale,
-      toolbar: [
-        {
-          name: 'basicstyles',
-          items: [
-            'Bold', 'Italic', 'Underline', 'Link', 'Image',
-          ],
-        } , {
-          name: 'clipboard',
-          items: [
-            'Undo', 'Redo',
-          ],
-        },
-      ],
-      // Hide bottom bar
-      removePlugins: 'elementspath',
-      resize_enabled: false,
-    }
+    const config = Object.assign(
+      {},
+      this.props.config,
+      {
+        defaultLanguage: this.props.locale,
+        toolbar: this.props.toolbar,
+      }
+    )
+
+    return config
   }
 
   render() {
@@ -56,4 +47,21 @@ RichTextInput.defaultProps = {
   onChange: () => {},
   content: '',
   locale: 'en',
+  config: {
+    removePlugins: 'elementspath',
+    resize_enabled: false,
+  },
+  toolbar: [
+    {
+      name: 'basicstyles',
+      items: [
+        'Bold', 'Italic', 'Underline', 'Link', 'Image',
+      ],
+    }, {
+      name: 'clipboard',
+      items: [
+        'Undo', 'Redo',
+      ],
+    },
+  ],
 }
