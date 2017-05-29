@@ -1,19 +1,19 @@
 import React from 'react'
-import { TooltipIcon } from 'kitten/components/icons/tooltip-icon'
+import { InfoIcon } from 'kitten/components/icons/info-icon'
 
-export default class ButtonTooltipIcon extends React.Component {
+export class ButtonInfoIcon extends React.Component {
   render() {
     return (
       <button { ...this.props }
               className="k-ButtonIcon
                          k-ButtonIcon--beryllium
                          k-ButtonIcon--micro">
-        <TooltipIcon className="k-ButtonIcon__svg" />
+        <InfoIcon className="k-ButtonIcon__svg" />
       </button>
     )
   }
 }
 
-ButtonTooltipIcon.defaultProps = {
+ButtonInfoIcon.defaultProps = {
   type: 'button',
 }

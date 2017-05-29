@@ -1,0 +1,24 @@
+/// WithTooltip
+///
+/// @group tooltips
+///
+/// @example scss - Usage
+///
+///   @include k-WithTooltip;
+///
+/// @example html
+///
+///   <div class="k-WithTooltip">
+///     <Tooltip />
+///   </div>
+
+@mixin k-WithTooltip {
+  .k-WithTooltip {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    margin-top: k-px-to-rem(10px);
+    text-align: left;
+  }
+}

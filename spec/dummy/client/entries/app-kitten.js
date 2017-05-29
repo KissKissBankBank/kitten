@@ -12,7 +12,6 @@ import { Button } from 'kitten/components/buttons/button'
 import { ButtonIcon } from 'kitten/components/buttons/button-icon'
 import { ButtonImage } from 'kitten/components/buttons/button-image'
 import ButtonImageWithTextAndBadge from 'kitten/components/buttons/button-image-with-text-and-badge'
-import ButtonTooltipIcon from 'kitten/components/buttons/button-tooltip-icon'
 import { TagButton } from 'kitten/components/buttons/tag-button'
 
 // Cards
@@ -96,9 +95,9 @@ import { Stepper } from 'kitten/components/steppers/stepper'
 
 // Tooltips
 import ReactTooltip from 'react-tooltip'
-import Tooltip from 'kitten/components/tooltips/tooltip'
 import { StaticTooltip } from 'kitten/components/tooltips/static-tooltip'
-import { NewTooltip } from 'kitten/components/tooltips/new-tooltip'
+import { Tooltip } from 'kitten/components/tooltips/tooltip'
+import { InfoWithTooltip } from 'kitten/components/tooltips/info-with-tooltip'
 
 // Tours
 import HeaderTour from 'kitten/components/tours/header-tour'
@@ -194,7 +193,6 @@ ReactOnRails.register({
   ButtonIcon,
   ButtonImage,
   ButtonImageWithTextAndBadge,
-  ButtonTooltipIcon,
   TagButton,
 
   // Cards
@@ -284,7 +282,7 @@ ReactOnRails.register({
   ReactTooltip,
   Tooltip,
   StaticTooltip,
-  NewTooltip,
+  InfoWithTooltip,
 
   // Tours
   HeaderTour,

@@ -18,6 +18,7 @@ export class NewTooltip extends React.Component {
   render() {
     const { children,
             className,
+            id,
             arrowLeftPosition,
             ...others } = this.props
 
@@ -29,10 +30,11 @@ export class NewTooltip extends React.Component {
     return (
       <div className={ newTooltipClassName } { ...others }>
         <div className="k-NewTooltip__button">
-          <ButtonTooltipIcon />
+          <ButtonTooltipIcon id={ id } />
         </div>
 
-        <div className="k-NewTooltip__content">
+        <div id={ id }
+             className="k-NewTooltip__content">
           { this.renderArrow() }
           { children }
         </div>

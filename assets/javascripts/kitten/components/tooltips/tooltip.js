@@ -1,39 +1,39 @@
 import React from 'react'
-import ReactTooltip from 'react-tooltip'
-import ButtonTooltipIcon from 'kitten/components/buttons/button-tooltip-icon'
+import classNames from 'classnames'
 
-export default class Tooltip extends React.Component {
-  render() {
-    const { place,
-            children,
-            id,
-            ...buttonTooltipIconProps } = this.props
+export class Tooltip extends React.Component {
+  renderArrow() {
+    let style
+
+    if (this.props.arrowLeftPosition) {
+      style = { left: this.props.arrowLeftPosition }
+    }
 
     return (
-      <div className="k-Tooltip">
-        <ButtonTooltipIcon data-tip
-                           data-for={ id }
-                           data-event="click"
-                           data-dismiss={ id }
-                           aria-describedby={ id }
-                           { ...buttonTooltipIconProps } />
-        <ReactTooltip id={ id }
-                      // This is not a mistake, this attribute is called
-                      // class not className!
-                      class="k-Tooltip__content"
-                      role="tooltip"
-                      effect="solid"
-                      place={ place }
-                      event="none">
-          { children }
-        </ReactTooltip>
+      <span style={ style } className="k-Tooltip__arrow" />
+    )
+  }
+
+  render() {
+    const { children,
+            className,
+            arrowLeftPosition,
+            ...others } = this.props
+
+    const tooltipClassName = classNames(
+      'k-Tooltip',
+      className,
+    )
+
+    return (
+      <div className={ tooltipClassName } { ...others }>
+        { this.renderArrow() }
+        { children }
       </div>
     )
   }
 }
 
 Tooltip.defaultProps = {
-  id: '',
-  place: 'right',
-  children: null,
+  arrowLeftPosition: null,
 }
