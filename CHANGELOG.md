@@ -4,6 +4,47 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Fix display element as a block element (`ButtonImageWithText`, `ButtonImage`,
+       `ButtonWithBadge`, `IconBadge`).
+- Fix: Remove `React.PropTypes` and use `PropTypes` from
+  [prop-types](https://www.npmjs.com/package/prop-types) library instead.
+- Fix: Update deprecated
+  [react-prop-types](https://github.com/react-bootstrap/react-prop-types)
+  library with
+  [prop-types-extra](https://github.com/react-bootstrap/prop-types-extra).
+
+## [11.11.0] - 2017-05-22
+
+Fix:
+- Change `TagButton` background.
+
+## [11.10.0] - 2017-05-19
+
+Features:
+- Add `BulletList` component.
+- Add `big` modifier to `.k-BulletList`.
+
+## [11.9.0] - 2017-05-18
+
+Feature:
+- Add background color utilities.
+
+Fixes:
+- Remove `margin-top: 50px` on `k-Separator`.
+- Add missing onChange prop on `RichTextInput` component.
+
+## [11.8.1] - 2017-05-17
+
+Fix:
+- Prefer `npm` to `yarn` in the postinstall script.
+
+## [11.8.0] - 2017-05-17
+
+Feature:
+- Add `RichTextInput` component.
+  Add '<script src="//cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>'
+  to your pages.
+
 ## [11.7.0] - 2017-05-15
 
 Feature:

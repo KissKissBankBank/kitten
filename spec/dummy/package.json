@@ -1,5 +1,6 @@
 {
   "name": "kitten-example",
+  "license": "MIT",
   "version": "1.0.0",
   "engines": {
     "node": "6.9.1",
@@ -10,12 +11,14 @@
     "client/node_modules"
   ],
   "scripts": {
-    "postinstall": "cd client && npm install",
-    "build:dev": "(cd client && npm run build:dev)",
-    "build": "(cd client && npm run build --silent)",
-    "hot-assets": "(cd client && npm run hot-assets)"
+    "postinstall": "cd client && yarn install",
+    "build:dev": "(cd client && yarn build:dev)",
+    "build": "(cd client && yarn build --silent)",
+    "hot-assets": "(cd client && yarn hot-assets)"
   },
   "devDependencies": {
-    "kitten-launcher": "^1.0.0"
+    "babel-cli": "^6.24.1",
+    "kitten-launcher": "^1.0.0",
+    "webpack": "^2.5.1"
   }
 }

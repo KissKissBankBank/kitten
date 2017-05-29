@@ -1,8 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
-import { TagIcon } from 'kitten/components/icons/tag-icon'
 
-export class TagList extends React.Component {
+export class BulletList extends React.Component {
   constructor(props) {
     super(props)
 
@@ -13,30 +12,25 @@ export class TagList extends React.Component {
     return this.props.items.map(this.renderItem)
   }
 
-  renderItem(element, index) {
+  renderItem(element) {
     const { key, item } = element
-    const isFirstItem = index == 0
     const itemClassName = classNames(
-      'k-TagList__item',
-      { 'k-TagList__item--first': isFirstItem },
+      'k-BulletList__item',
+      { 'k-BulletList__item--large': this.props.large },
+      { 'k-BulletList__item--big': this.props.big },
     )
-
-    const children = isFirstItem
-      ? [<TagIcon key="tag-icon" className="k-TagList__icon" />, item]
-      : item
 
     return (
       <li key={ key } className={ itemClassName }>
-        { children }
+        { item }
       </li>
     )
   }
 
   render() {
-    const { className, tiny, items, ...others } = this.props
+    const { className, large, big, items, ...others } = this.props
     const listClassName = classNames(
-      'k-TagList',
-      { 'k-TagList--tiny': tiny },
+      'k-BulletList',
       className,
     )
 
@@ -48,8 +42,9 @@ export class TagList extends React.Component {
   }
 }
 
-TagList.defaultProps = {
+BulletList.defaultProps = {
   className: null,
-  tiny: false,
+  large: false,
+  big: false,
   items: [], // Eg: [{ key: …, item: … }]
 }

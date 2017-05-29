@@ -5,6 +5,7 @@
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <title>Kitten style guide</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="<%= asset_path 'favicon.ico' %>" rel="icon" />
 
 <%= env_stylesheet_link_tag(static: 'application',
                             hot: 'application_non_webpack',
@@ -17,24 +18,26 @@
 <%= csrf_meta_tags %>
 
 </head>
-<body class="k-VerticalGrid__page">
+<body class="k-VerticalGrid__page karl-Main">
 
 <% if @groups || controller_name == "branding" %>
+
+ <%= react_component 'KarlGithubRibbon', props: {
+      className: 'karl-GithubRibbon',
+  } %>
 
   <%= react_component 'KarlMenu', props: {
         brandingCategories: Kitten.configuration.branding_categories,
         componentCategories: Kitten.configuration.component_categories,
     } %>
 
-  <div class="karl-Main">
-    <div class="k-Row">
-      <div class="k-Row__content">
-        <section class="k-Grid">
-          <div class="k-Grid__col k-Grid__col--10 k-Grid__col--offset-1">
-            <%= yield %>
-          </div>
-        </section>
-      </div>
+  <div class="k-Row">
+    <div class="k-Row__content">
+      <section class="k-Grid">
+        <div class="k-Grid__col k-Grid__col--10 k-Grid__col--offset-1">
+          <%= yield %>
+        </div>
+      </section>
     </div>
   </div>
 
@@ -50,5 +53,6 @@
 <%= javascript_include_tag 'kitten/jquery-3.1.0.min.js' %>
 <%= javascript_include_tag 'kitten/karl.js' %>
 <%= javascript_include_tag src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCkc6oSvJDWUXb0HhsKV65MxzhhteWKErM&libraries=places" %>
+<%= javascript_include_tag src="https://cdn.ckeditor.com/4.6.2/standard/ckeditor.js" %>
 </body>
 </html>

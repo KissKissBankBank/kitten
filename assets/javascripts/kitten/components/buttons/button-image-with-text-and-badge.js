@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import classNames from 'classnames'
 
 class ButtonImageWithTextAndBadge extends React.Component {
@@ -53,16 +54,16 @@ class ButtonImageWithTextAndBadge extends React.Component {
 }
 
 ButtonImageWithTextAndBadge.propTypes = {
-  children: React.PropTypes.string,
-  onClick: React.PropTypes.func,
-  isExpanded: React.PropTypes.bool,
-  text: React.PropTypes.string,
-  title: React.PropTypes.string,
-  srcImg: React.PropTypes.string,
-  widthImg: React.PropTypes.number,
-  heightImg: React.PropTypes.number,
-  altImg: React.PropTypes.string,
-  notifications: React.PropTypes.number,
+  children: PropTypes.string,
+  onClick: PropTypes.func,
+  isExpanded: PropTypes.bool,
+  text: PropTypes.string,
+  title: PropTypes.string,
+  srcImg: PropTypes.string,
+  widthImg: PropTypes.number,
+  heightImg: PropTypes.number,
+  altImg: PropTypes.string,
+  notifications: PropTypes.number,
 }
 
 ButtonImageWithTextAndBadge.defaultProps = {
