@@ -10,15 +10,21 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   `withTooltip`.
   To be retro-compatible, you should replace `Tooltip` component with `InfoWithTooltip`.
 - Feature: Add new `NewTooltip` component.
-- Feature: Add new `ProjectCreatorCard` component.
-- Feature: Add new `ClockIcon` component.
-- Feature: Add new `RightArrowIcon` component.
-- Feature: Add config & toolbar to default props `RichTextInput` component.
-- Fix: Fix display element as a block element (`ButtonImageWithText`, `ButtonImage`,
-       `ButtonWithBadge`, `IconBadge`).
-- Fix: Remove `React.PropTypes` and use `PropTypes` from
+
+## [12.0.0] - 2017-05-30
+
+Features:
+- Add new `ProjectCreatorCard` component.
+- Add new `ClockIcon` component.
+- Add new `RightArrowIcon` component.
+- Add config & toolbar to default props `RichTextInput` component.
+- Fix: Fix display element as a block element (`ButtonImageWithText`,
+    `ButtonImage`, `ButtonWithBadge`, `IconBadge`).
+
+Fixes:
+- Remove `React.PropTypes` and use `PropTypes` from
   [prop-types](https://www.npmjs.com/package/prop-types) library instead.
-- Fix: Update deprecated
+- Update deprecated
   [react-prop-types](https://github.com/react-bootstrap/react-prop-types)
   library with
   [prop-types-extra](https://github.com/react-bootstrap/prop-types-extra).
