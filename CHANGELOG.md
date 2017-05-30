@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+<<<<<<< HEAD
 - Breaking change: Rename `ButtonTooltioIcon` to `ButtonInfoIcon`.
 - Breaking change: Rename TooltipIcon` to `InfoIcon`.
 - Breaking change: Split tooltip component into a component `Tooltip` and hoc:
@@ -17,8 +18,22 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fix: Fix display element as a block element (`ButtonImageWithText`, `ButtonImage`,
        `ButtonWithBadge`, `IconBadge`).
 - Fix: Remove `React.PropTypes` and use `PropTypes` from
+=======
+## [12.0.0] - 2017-05-30
+
+Features:
+- Add new `ProjectCreatorCard` component.
+- Add new `ClockIcon` component.
+- Add new `RightArrowIcon` component.
+- Add config & toolbar to default props `RichTextInput` component.
+- Fix: Fix display element as a block element (`ButtonImageWithText`,
+    `ButtonImage`, `ButtonWithBadge`, `IconBadge`).
+
+Fixes:
+- Remove `React.PropTypes` and use `PropTypes` from
+>>>>>>> 1ec6a451f823e866140ab9af169314b8218c4559
   [prop-types](https://www.npmjs.com/package/prop-types) library instead.
-- Fix: Update deprecated
+- Update deprecated
   [react-prop-types](https://github.com/react-bootstrap/react-prop-types)
   library with
   [prop-types-extra](https://github.com/react-bootstrap/prop-types-extra).
