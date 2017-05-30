@@ -1,6 +1,5 @@
 import React from 'react'
 import classNames from 'classnames'
-//import ButtonTooltipIcon from 'kitten/components/buttons/button-tooltip-icon'
 
 export class NewTooltip extends React.Component {
   // renderArrow() {

@@ -2,7 +2,6 @@ import React from 'react'
 import { expect } from 'chai'
 import { shallow } from 'enzyme'
 import Tooltip from 'kitten/components/tooltips/tooltip'
-//import ButtonTooltipIcon from 'kitten/components/buttons/button-tooltip-icon'
 import ReactTooltip from 'react-tooltip'
 
 const component = shallow(
