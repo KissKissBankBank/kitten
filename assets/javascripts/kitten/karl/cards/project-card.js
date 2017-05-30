@@ -53,7 +53,7 @@ export class KarlProjectCard extends React.Component {
           statusContent: [
             <CheckedCircleIcon key={ `closing-icon-${ this.props.id }` }
                                className={ iconClassName }
-                               circleColor={ colors['tertiary-1'] }  />,
+                               circleColor={ colors['tertiary-1'] } />,
             this.props.labelClosing
           ],
           coloredInfosValues: true,
