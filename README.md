@@ -250,7 +250,7 @@ To merge code into master:
 To build an on disk static file mirror:
 
 ```sh
-$ bin/styleguide buildstatic
+$ bin/kitten buildstatic
 ```
 - files are located in build/
 
