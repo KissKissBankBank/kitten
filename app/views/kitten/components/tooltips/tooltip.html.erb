@@ -3,8 +3,18 @@
     <%= example 'Tooltip Icon' do %>
       <%= react_component('InfoWithTooltip', props: {
           children: 'Lorem ipsum',
-          arrowLeftPosition: '30px',
           id: 'tooltip',
+        }
+      ) %>
+    <% end %>
+  </div>
+
+  <div class="k-Grid__col k-Grid__col--12">
+    <%= example 'With tooltip' do %>
+      <%= react_component('KarlLineWithTooltip', props: {
+          text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+          children: 'Lorem ipsum',
+          id: 'tooltip-2',
         }
       ) %>
     <% end %>

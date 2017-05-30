@@ -1,9 +1,10 @@
 import React from 'react'
 import { Line } from 'kitten/components/layout/line'
-import Tooltip from 'kitten/components/tooltips/tooltip'
-import { Label } from 'kitten/components/form/label'
-import { TextInput } from 'kitten/components/form/text-input'
+import { withTooltip } from 'kitten/hoc/with-tooltip'
+import { ButtonInfoIcon } from 'kitten/components/buttons/button-info-icon'
 import { HeartIcon } from 'kitten/components/icons/heart-icon'
+
+const InfoWithTooltipButtonIcon = withTooltip(ButtonInfoIcon, {})
 
 export const KarlLineWithTooltip = props => {
   return (
@@ -12,10 +13,7 @@ export const KarlLineWithTooltip = props => {
         { props.text }
       </Line.Item>
       <Line.Item>
-        <Tooltip id={ props.id }
-                 place={ props.place }>
-          { props.children }
-        </Tooltip>
+        <InfoWithTooltipButtonIcon />
       </Line.Item>
     </Line>
   )

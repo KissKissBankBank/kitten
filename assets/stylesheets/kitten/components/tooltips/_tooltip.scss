@@ -42,26 +42,26 @@
     color: $color-lithium;
   }
 
-  .k-Tooltip__arrow {
-    position: absolute;
-    left: 8rem;
-    display: block;
-    width: 0;
-    height: 0;
-    border: $arrow-size solid transparent;
-    border-bottom-color: $border-color-lithium;
-    top: -1rem;
+  // .k-Tooltip__arrow {
+  //   position: absolute;
+  //   left: 8rem;
+  //   display: block;
+  //   width: 0;
+  //   height: 0;
+  //   border: $arrow-size solid transparent;
+  //   border-bottom-color: $border-color-lithium;
+  //   top: -1rem;
 
-    &::before {
-      content: "";
-      position: absolute;
-      width: 0;
-      height: 0;
-      margin-left: -$arrow-size;
-      margin-top: .09rem;
-      border: $arrow-size solid transparent;
-      border-bottom-color: white;
-      top: -.5rem;
-    }
-  }
+  //   &::before {
+  //     content: "";
+  //     position: absolute;
+  //     width: 0;
+  //     height: 0;
+  //     margin-left: -$arrow-size;
+  //     margin-top: .09rem;
+  //     border: $arrow-size solid transparent;
+  //     border-bottom-color: white;
+  //     top: -.5rem;
+  //   }
+  // }
 }

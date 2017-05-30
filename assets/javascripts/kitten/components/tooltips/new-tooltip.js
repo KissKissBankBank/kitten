@@ -1,25 +1,24 @@
 import React from 'react'
 import classNames from 'classnames'
-import ButtonTooltipIcon from 'kitten/components/buttons/button-tooltip-icon'
+//import ButtonTooltipIcon from 'kitten/components/buttons/button-tooltip-icon'
 
 export class NewTooltip extends React.Component {
-  renderArrow() {
-    let style
+  // renderArrow() {
+  //   let style
 
-    if (this.props.arrowLeftPosition) {
-      style = { left: this.props.arrowLeftPosition }
-    }
+  //   if (this.props.arrowLeftPosition) {
+  //     style = { left: this.props.arrowLeftPosition }
+  //   }
 
-    return (
-      <span style={ style } className="k-NewTooltip__arrow" />
-    )
-  }
+  //   return (
+  //     <span style={ style } className="k-NewTooltip__arrow" />
+  //   )
+  // }
 
   render() {
     const { children,
             className,
             id,
-            arrowLeftPosition,
             ...others } = this.props
 
     const newTooltipClassName = classNames(
@@ -35,7 +34,6 @@ export class NewTooltip extends React.Component {
 
         <div id={ id }
              className="k-NewTooltip__content">
-          { this.renderArrow() }
           { children }
         </div>
       </div>
@@ -44,5 +42,5 @@ export class NewTooltip extends React.Component {
 }
 
 NewTooltip.defaultProps = {
-  arrowLeftPosition: null,
+  //arrowLeftPosition: null,
 }

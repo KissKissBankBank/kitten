@@ -1,5 +1,6 @@
 import React from 'react'
 import { InfoIcon } from 'kitten/components/icons/info-icon'
+import classNames from 'classnames'
 
 export class ButtonInfoIcon extends React.Component {
   render() {

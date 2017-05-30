@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactTooltip from 'react-tooltip'
-import ButtonTooltipIcon from 'kitten/components/buttons/button-tooltip-icon'
+//import ButtonTooltipIcon from 'kitten/components/buttons/button-tooltip-icon'
 
 export default class Tooltip extends React.Component {
   render() {

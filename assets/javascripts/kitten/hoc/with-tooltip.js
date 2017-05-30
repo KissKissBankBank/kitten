@@ -17,14 +17,14 @@ export const withTooltip = (WrappedComponent, wrappedProps) => {
 
     return (
       <div className={ withTooltipClassName } { ...others }>
+        <Tooltip  id={ id } className={ tooltipClassName } { ...others }>
+          { children }
+        </Tooltip>
+
         <div className="k-WithTooltip__origin">
           <WrappedComponent data-for={ id }
                             aria-describedby={ id } />
         </div>
-
-        <Tooltip  id={ id } className={ tooltipClassName } { ...others }>
-          { children }
-        </Tooltip>
       </div>
     )
   }
