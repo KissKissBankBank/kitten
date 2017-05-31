@@ -2,17 +2,17 @@ import React from 'react'
 import classNames from 'classnames'
 
 export class NewTooltip extends React.Component {
-  // renderArrow() {
-  //   let style
+  renderArrow() {
+    let style
 
-  //   if (this.props.arrowLeftPosition) {
-  //     style = { left: this.props.arrowLeftPosition }
-  //   }
+    if (this.props.arrowLeftPosition) {
+      style = { left: this.props.arrowLeftPosition }
+    }
 
-  //   return (
-  //     <span style={ style } className="k-NewTooltip__arrow" />
-  //   )
-  // }
+    return (
+      <span style={ style } className="k-NewTooltip__arrow" />
+    )
+  }
 
   render() {
     const { children,
@@ -41,5 +41,5 @@ export class NewTooltip extends React.Component {
 }
 
 NewTooltip.defaultProps = {
-  //arrowLeftPosition: null,
+  arrowLeftPosition: null,
 }

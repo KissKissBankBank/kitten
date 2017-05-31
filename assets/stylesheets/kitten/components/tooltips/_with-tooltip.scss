@@ -23,6 +23,6 @@
 
   .k-WithTooltip__tooltip {
     position: absolute;
-    bottom: 30px;
+    bottom: k-px-to-rem(30px);
   }
 }

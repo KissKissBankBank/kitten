@@ -32,7 +32,7 @@
     padding: k-px-to-rem(20px);
     margin-top: $arrow-size;
     position: relative;
-    width: 340px;
+    width: k-px-to-rem(340px);
 
     background-color: $background-color-lithium;
     border: 1px solid $border-color-lithium;
