@@ -15,9 +15,16 @@ export const withTooltip = (WrappedComponent, wrappedProps) => {
       className,
     )
 
+    const withTooltipTooltipClassName = classNames(
+      'k-WithTooltip__tooltip',
+      className,
+    )
+
     return (
       <div className={ withTooltipClassName } { ...others }>
-        <Tooltip  id={ id } className={ tooltipClassName } { ...others }>
+        <Tooltip  id={ id }
+                  className={ withTooltipTooltipClassName }
+                  { ...others }>
           { children }
         </Tooltip>
 

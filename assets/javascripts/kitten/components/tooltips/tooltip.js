@@ -1,5 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
+import { withTooltip } from 'kitten/hoc/with-tooltip'
 
 export class Tooltip extends React.Component {
   renderArrow() {
