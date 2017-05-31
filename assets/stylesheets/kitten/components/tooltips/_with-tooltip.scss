@@ -9,7 +9,8 @@
 /// @example html
 ///
 ///   <div class="k-WithTooltip">
-///     <Tooltip />
+///     <div class="k-WithTooltip__tooltip">…</div>
+///     <div class="k-WithTooltip__origin">…</div>
 ///   </div>
 
 @mixin k-WithTooltip {

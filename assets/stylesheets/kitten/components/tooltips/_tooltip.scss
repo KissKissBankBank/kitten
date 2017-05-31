@@ -9,11 +9,8 @@
 /// @example html
 ///
 ///   <div class="k-Tooltip">
-///     <div class="k-Tooltip__button"> … </div>
-///     <div class="k-Tooltip__content">
-///       <span class="k-Tooltip__arrow" />
-///       Lorem ipsum...
-///     </div>
+///     <span class="k-Tooltip__arrow" />
+///     Lorem ipsum...
 ///   </div>
 
 @mixin k-Tooltip {
