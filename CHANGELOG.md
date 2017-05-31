@@ -23,7 +23,6 @@ Features:
 
 Fixes:
 - Remove `React.PropTypes` and use `PropTypes` from
-
   [prop-types](https://www.npmjs.com/package/prop-types) library instead.
 - Update deprecated
   [react-prop-types](https://github.com/react-bootstrap/react-prop-types)
