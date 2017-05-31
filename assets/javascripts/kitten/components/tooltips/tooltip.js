@@ -35,6 +35,5 @@ export class Tooltip extends React.Component {
 }
 
 Tooltip.defaultProps = {
-  arrowLeftPosition: null,
-  children: 'Lorem ipsum',
+  arrowLeftPosition: "182px",
 }

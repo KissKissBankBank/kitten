@@ -12,8 +12,10 @@ export const KarlLineWithTooltip = props => {
       <Line.Item>
         { props.text }
       </Line.Item>
-      <Line.Item>
-        <InfoWithTooltipButtonIcon />
+      <Line.Item >
+        <InfoWithTooltipButtonIcon tooltipClassName="k-WithTooltip__tooltip"
+                                   children="Lorem ipsum, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+                                   id="tooltip-2" />
       </Line.Item>
     </Line>
   )
