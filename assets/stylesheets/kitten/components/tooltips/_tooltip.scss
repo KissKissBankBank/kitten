@@ -10,14 +10,14 @@
 ///
 ///   <div class="k-Tooltip">
 ///     <span class="k-Tooltip__arrow" />
-///     Lorem ipsum...
+///     Lorem ipsum…
 ///   </div>
 
 @mixin k-Tooltip {
-  // Colors Lithium
-  $color-lithium: map-get($k-colors, 'primary-1');
-  $border-color-lithium: map-get($k-colors, 'primary-4');
-  $background-color-lithium: map-get($k-colors, 'background-1');
+  // Colors helium
+  $color-helium: map-get($k-colors, 'background-1');
+  $border-color-helium: map-get($k-colors, 'primary-1');
+  $background-color-helium: map-get($k-colors, 'primary-1');
 
   $font: 'source-sans';
   $font-size: -3;
@@ -31,13 +31,13 @@
 
     padding: k-px-to-rem(20px);
     margin-top: $arrow-size;
-    position: relative;
     width: k-px-to-rem(340px);
+    box-sizing: border-box;
 
-    background-color: $background-color-lithium;
-    border: 1px solid $border-color-lithium;
+    background-color: $background-color-helium;
+    border: 1px solid $border-color-helium;
     border-radius: k-px-to-rem(8px);
-    color: $color-lithium;
+    color: $color-helium;
   }
 
   .k-Tooltip__arrow {
@@ -47,19 +47,7 @@
     width: 0;
     height: 0;
     border: $arrow-size solid transparent;
-    border-top-color: $border-color-lithium;
+    border-top-color: $border-color-helium;
     bottom: -1rem;
-
-    &::before {
-      content: "";
-      position: absolute;
-      width: 0;
-      height: 0;
-      margin-left: -$arrow-size;
-      margin-top: .09rem;
-      border: $arrow-size solid transparent;
-      border-top-color: white;
-      bottom: -.4rem;
-    }
   }
 }
