@@ -1,4 +1,5 @@
 import React from 'react'
+import classNames from 'classnames'
 import { IconBadge } from 'kitten/components/notifications/icon-badge'
 import { CheckedIcon } from 'kitten/components/icons/checked-icon'
 
@@ -8,8 +9,8 @@ export const KarlIconBadgeWithSvg = props => {
   }
 
   return (
-    <IconBadge style={ customBackground }>
-      <CheckedIcon />
+    <IconBadge style={ customBackground } { ...props }>
+      <CheckedIcon className="k-ButtonIcon__svg" />
     </IconBadge>
   )
 }
