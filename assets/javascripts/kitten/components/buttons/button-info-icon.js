@@ -1,19 +1,13 @@
 import React from 'react'
 import { InfoIcon } from 'kitten/components/icons/info-icon'
-import classNames from 'classnames'
+import { ButtonIcon } from 'kitten/components/buttons/button-icon'
 
-export class ButtonInfoIcon extends React.Component {
-  render() {
-    return (
-      <button { ...this.props }
-              className={ classNames('k-ButtonIcon',
-                                     'k-ButtonIcon--beryllium',
-                                     'k-ButtonIcon--micro') }>
-        <InfoIcon className="k-ButtonIcon__svg" />
-      </button>
-    )
-  }
-}
+export const ButtonInfoIcon = props => (
+  <ButtonIcon modifier="beryllium"
+              size="micro">
+    <InfoIcon className="k-ButtonIcon__svg" />
+  </ButtonIcon>
+)
 
 ButtonInfoIcon.defaultProps = {
   type: 'button',
