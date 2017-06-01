@@ -1,6 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 import { withTooltip } from 'kitten/hoc/with-tooltip'
+import { Marger } from 'kitten/components/layout/marger'
 
 export class Tooltip extends React.Component {
   renderArrow() {
@@ -28,13 +29,15 @@ export class Tooltip extends React.Component {
 
     return (
       <div className={ tooltipClassName } { ...others }>
-        { this.renderArrow() }
-        { children }
+        <Marger top="2" bottom="2">
+          { children }
+          { this.renderArrow() }
+        </Marger>
       </div>
     )
   }
 }
 
 Tooltip.defaultProps = {
-  arrowLeftPosition: "182px",
+  arrowLeftPosition: "50%",
 }

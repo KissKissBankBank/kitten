@@ -29,8 +29,8 @@
     @include k-typographyFont($font);
     @include k-typographyFontSize($font-size, $line-height);
 
-    padding: k-px-to-rem(20px);
-    margin-top: $arrow-size;
+    padding-right: k-px-to-rem(20px);
+    padding-left: k-px-to-rem(20px);
     width: k-px-to-rem(340px);
     box-sizing: border-box;
 

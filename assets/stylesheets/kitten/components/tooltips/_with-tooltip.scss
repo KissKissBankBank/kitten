@@ -10,19 +10,15 @@
 ///
 ///   <div class="k-WithTooltip">
 ///     <div class="k-WithTooltip__tooltip">…</div>
-///     <div class="k-WithTooltip__origin">…</div>
 ///   </div>
 
 @mixin k-WithTooltip {
   .k-WithTooltip {
-    display: flex;
-    flex-direction: column;
     position: relative;
     align-items: center;
   }
 
   .k-WithTooltip__tooltip {
     position: absolute;
-    bottom: k-px-to-rem(30px);
   }
 }
