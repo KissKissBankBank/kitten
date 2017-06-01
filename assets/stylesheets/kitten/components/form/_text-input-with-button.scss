@@ -84,6 +84,10 @@
     outline: none;
     cursor: pointer;
 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
     &.is-valid {
       background-color: $button-background-is-valid;
     }

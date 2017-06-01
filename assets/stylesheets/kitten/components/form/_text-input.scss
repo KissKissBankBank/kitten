@@ -69,6 +69,10 @@
     color: $color;
     transition: color .2s, border-color .2s;
 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
     &::placeholder {
       color: $color-placeholder;
     }
