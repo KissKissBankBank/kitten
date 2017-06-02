@@ -35,8 +35,18 @@ describe('<ResponsiveVideoIframe />', () => {
       </ResponsiveVideoIframe>
     )
 
-    it('has an iframe has child', () => {
+    it('has an iframe as child', () => {
       expect(component.find('iframe')).to.have.length(1)
+    })
+  })
+
+  describe('with ratio prop', () => {
+    const component = shallow(
+      <ResponsiveVideoIframe ratio='42'/>
+    )
+
+    it('has a ratio of 42%', () => {
+      expect(component).to.have.prop('style').deep.equal({ paddingBottom: '42%' })
     })
   })
 })
