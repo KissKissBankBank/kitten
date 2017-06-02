@@ -5,7 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: create `ResponsiveVideoIframeContainer` component for responsive video iframe.
-  The component is used with embedly genereated iframe.
+  The component is used with embedly generated iframe.
 - Fix: Fix error with `Object.assign` in `RichTextInput` component to prevent
   error in React on Rails *(`Object function […] has no method 'assign'`)*.
 
