@@ -2,20 +2,20 @@ import React from 'react'
 import classNames from 'classnames'
 
 export const ResponsiveVideoIframeContainer =
-  ({ ratio, styles, className, ...props }) => {
+  ({ ratio, style, className, ...props }) => {
     const componentClassName = classNames(
       'k-ResponsiveVideoIframeContainer',
       className
     )
 
-    const style = {
+    const styles = {
       paddingBottom: `${ratio}%`,
-      ...styles
+      ...style
     }
 
     return (
       <div className={ componentClassName }
-           style={ style }
+           style={ styles }
            { ...props } />
     )
   }
