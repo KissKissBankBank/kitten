@@ -1,5 +1,4 @@
 import React from 'react'
-import classNames from 'classnames'
 import { IconBadge } from 'kitten/components/notifications/icon-badge'
 import { CheckedIcon } from 'kitten/components/icons/checked-icon'
 
