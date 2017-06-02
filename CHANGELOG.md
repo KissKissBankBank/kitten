@@ -5,7 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: Fix error with `Object.assign` in `RichTextInput` component to prevent
-  error in react on rails *(`Object function […] has no method 'assign'`)*.
+  error in React on Rails *(`Object function […] has no method 'assign'`)*.
 
 ## [12.0.0] - 2017-05-30
 
