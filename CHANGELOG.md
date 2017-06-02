@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `.k-u-object-responsive` for responsive iframe.
 - Fix: Fix error with `Object.assign` in `RichTextInput` component to prevent
   error in React on Rails *(`Object function […] has no method 'assign'`)*.
 
