@@ -123,7 +123,7 @@ module Kitten
             { path: 'components/meters/progress', name: 'Progress' },
             { path: 'components/simulators/loan-simulator', name: 'Loan simulator' },
             { path: 'components/teaser/teaser', name: 'Teaser' },
-            { path: 'components/popovers/popover', name: 'Popover' },
+            { path: 'components/popovers/popover', name: 'Popover', hidden_on_s: true },
           ],
         },
         {
