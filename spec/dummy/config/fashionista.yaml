@@ -1,8 +1,8 @@
 ---
 index: main.html
-location: 'http:// localhost : 3000 /'
+location: 'http://localhost:3000/'
 log:
-  log_level: 'DEBUG'
+  log_level: 'INFO'
   file:
     autoflush: 1
     filename: '/Users/bsartek/Dev/kisskiss/kitten/spec/dummy/bin/../fashionista.log'
