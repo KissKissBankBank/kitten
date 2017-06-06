@@ -44,7 +44,7 @@ cleanup() {
   if [ "$SURE" = "yes" ]; then
     stop
     cd -
-    /bin/bash ./bin/cleanup
+    bash ./bin/cleanup
   fi
   echo "Cleanup done"
 }
@@ -73,7 +73,7 @@ install(){
     echo There seems to be a previous install of $SCRIPT_NAME
     cleanup
   fi
-  /bin/bash ./bin/install
+  bash ./bin/install
 }
 
 start(){
@@ -172,7 +172,7 @@ case "$1" in
 		echo Waiting for $SCRIPT_NAME to be fully launched
     sleep 50
     echo Launching crawler
-    /usr/bin/perl ./bin/fashionista.pl
+    perl ./bin/fashionista.pl
     if [ ! -d "../../build" ]; then
       echo Something went wrong while building static $SCRIPT_NAME
       exit 1

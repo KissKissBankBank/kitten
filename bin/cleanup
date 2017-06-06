@@ -1,8 +1,8 @@
-#!/bin/sh
+#!/usr/bin/env bash
 set -e
 
 rm -fr node_modules
 rm -fr vendor/assets/stylesheets/kitten/sassy-maps/node_modules
 
 cd spec/dummy
-/bin/bash bin/cleanup
+bash bin/cleanup

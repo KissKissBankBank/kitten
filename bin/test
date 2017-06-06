@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 set -e
 
 FILES=${1:-assets/javascripts/kitten/**/*.test.js}
