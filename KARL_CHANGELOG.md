@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add new `KarlLineWithTooltip` component.
+- Fix: Add `k-u-hidden@s-down` class on component hidden s.
 
 ## [12.0.0] - 2017-05-30
 
