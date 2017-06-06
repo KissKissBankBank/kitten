@@ -10,7 +10,7 @@ export const ResponsiveVideoIframeContainer =
 
     const styles = {
       ...style,
-      paddingBottom: `${ratio}%`
+      paddingBottom: `${ratio}%`,
     }
 
     return (

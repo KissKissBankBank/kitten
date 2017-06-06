@@ -1,7 +1,8 @@
 import React from 'react'
 import { expect } from 'chai'
 import { shallow } from 'enzyme'
-import { ResponsiveVideoIframeContainer } from 'kitten/components/layout/responsive-video-iframe-container'
+import { ResponsiveVideoIframeContainer } from
+  'kitten/components/layout/responsive-video-iframe-container'
 
 describe('<ResponsiveVideoIframeContainer />', () => {
   describe('by default', () => {
@@ -16,12 +17,16 @@ describe('<ResponsiveVideoIframeContainer />', () => {
     })
 
     it('has a ratio of 67.5%', () => {
-      expect(component).to.have.prop('style').deep.equal({ paddingBottom: '67.5%' })
+      const ratioProp = { paddingBottom: '67.5%' }
+
+      expect(component).to.have.prop('style').deep.equal(ratioProp)
     })
   })
 
   describe('with className prop', () => {
-    const component = shallow(<ResponsiveVideoIframeContainer className="custom__class" />)
+    const component = shallow(
+      <ResponsiveVideoIframeContainer className="custom__class" />
+    )
 
     it('has a custom class', () => {
       expect(component).to.have.className('custom__class')
@@ -46,7 +51,9 @@ describe('<ResponsiveVideoIframeContainer />', () => {
     )
 
     it('has a ratio of 42%', () => {
-      expect(component).to.have.prop('style').deep.equal({ paddingBottom: '42%' })
+      const ratioProp = { paddingBottom: '42%' }
+
+      expect(component).to.have.prop('style').deep.equal(ratioProp)
     })
   })
 })
