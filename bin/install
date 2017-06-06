@@ -32,4 +32,4 @@ bundle install
 yarn install
 
 cd spec/dummy
-bin/install
+/bin/bash bin/install

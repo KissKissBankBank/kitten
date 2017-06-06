@@ -5,4 +5,4 @@ rm -fr node_modules
 rm -fr vendor/assets/stylesheets/kitten/sassy-maps/node_modules
 
 cd spec/dummy
-bin/cleanup
+/bin/bash bin/cleanup
