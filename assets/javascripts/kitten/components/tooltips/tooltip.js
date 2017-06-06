@@ -1,6 +1,5 @@
 import React from 'react'
 import classNames from 'classnames'
-import { withTooltip } from 'kitten/hoc/with-tooltip'
 import { Marger } from 'kitten/components/layout/marger'
 
 export class Tooltip extends React.Component {
