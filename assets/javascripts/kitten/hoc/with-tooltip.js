@@ -19,28 +19,26 @@ export const withTooltip = (WrappedComponent, wrappedProps) => {
 
       const withTooltipTooltipClassName = classNames(
         'k-WithTooltip__tooltip',
-        'popper',
       )
 
       return (
         <Manager>
           <div className={ withTooltipClassName } { ...others }>
-            <Popper placement="right" className="popper"
-                    ref={c => (this._popper = findDOMNode(c))}>
-                <Tooltip id={ id }
-                         className={ withTooltipTooltipClassName }>
-                  Bonjour
-                  <Arrow>
-                      <span
-                        className="popper__arrow"
-                      />
-                  </Arrow>
-                </Tooltip>
-            </Popper>
-            <Target>
+            <Target style={ { display: 'inline-block' } }>
               <WrappedComponent data-for={ id }
                                 aria-describedby={ id } />
             </Target>
+            <Popper placement="top" className="popper">
+              <Tooltip id={ id }
+                       className={ withTooltipTooltipClassName }>
+                Bonjour
+                <Arrow>
+                    <span
+                      className="popper__arrow"
+                    />
+                </Arrow>
+              </Tooltip>
+            </Popper>
           </div>
         </Manager>
       )
