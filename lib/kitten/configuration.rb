@@ -113,7 +113,7 @@ module Kitten
             { path: 'components/notifications/alert', name: 'Alert' },
             { path: 'components/notifications/badge', name: 'Badge' },
             { path: 'components/notifications/icon-badge', name: 'Icon badge' },
-            { path: 'components/tours/tour', name: 'Tour' },
+            { path: 'components/tours/tour', name: 'Tour', hidden_on_s: true },
           ],
         },
         {
@@ -123,7 +123,7 @@ module Kitten
             { path: 'components/meters/progress', name: 'Progress' },
             { path: 'components/simulators/loan-simulator', name: 'Loan simulator' },
             { path: 'components/teaser/teaser', name: 'Teaser' },
-            { path: 'components/popovers/popover', name: 'Popover' },
+            { path: 'components/popovers/popover', name: 'Popover', hidden_on_s: true },
           ],
         },
         {
@@ -151,6 +151,7 @@ module Kitten
             { path: 'components/box/link-box-with-icon', name: 'Link box with icon' },
             { path: 'components/tooltips/tooltip', name: 'Tooltip' },
             { path: 'components/tooltips/static-tooltip', name: 'Static tooltip' },
+            { path: 'components/cards/project-creator-card', name: 'Project creator card' },
           ],
         },
         {
