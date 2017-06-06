@@ -1,7 +1,0 @@
-#!/bin/sh
-foreman start -f Procfile.static &
-sleep 45
-perl bin/fashionista.pl
-export dir=build
-echo "looking for dump in $dir"
-ls ../../$dir
