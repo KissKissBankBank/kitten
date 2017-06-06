@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: Add `karl-FormActions__button` class and `KarlFormActions` component.
+- Fix: Add `k-u-hidden@s-down` class on component hidden s.
 
 ## [12.0.0] - 2017-05-30
 
