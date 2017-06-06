@@ -155,7 +155,7 @@ is_installed(){
 }
 
 case "$1" in
-  start|stop|forcestop|cleanup|install)
+  usage|start|stop|forcestop|cleanup|install)
     ${1}
     ;;
   restart)
