@@ -5,6 +5,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: Fix IOS style's button and remove shadow in `TextInput`.
+- Feature: create `ResponsiveVideoIframeContainer` component for responsive video iframe.
+  The component is used with embedly generated iframe.
+- Fix: Fix error with `Object.assign` in `RichTextInput` component to prevent
+  error in React on Rails *(`Object function […] has no method 'assign'`)*.
 
 ## [12.0.0] - 2017-05-30
 

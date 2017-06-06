@@ -9,12 +9,14 @@ module Kitten
     end
 
     def render_component(component,
-                         title: nil)
+                         title: nil,
+                         hidden_on_s: false)
       title ||= category[:component]
       add_menu_component(component, title)
       render 'layouts/kitten/component',
              component: component,
-             title: title
+             title: title,
+             hidden_on_s: hidden_on_s
     end
 
     def example(title = nil)
