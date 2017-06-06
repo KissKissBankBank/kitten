@@ -9,7 +9,7 @@ export const KarlIconBadgeWithSvg = props => {
 
   return (
     <IconBadge style={ customBackground } { ...props }>
-      <CheckedIcon className="k-ButtonIcon__svg" />
+      <CheckedIcon className="k-IconBadge__svg" />
     </IconBadge>
   )
 }
