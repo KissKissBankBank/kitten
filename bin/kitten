@@ -10,6 +10,7 @@ DAEMON_LOG_FILE="${SCRIPT_NAME}.log"
 DAEMON_CMD="$DAEMON start -f Procfile.static"
 PATH=$PATH:".:bin:spec/dummy/bin:$PATH"
 
+<<<<<<< HEAD
 # Allow `./kitten [command]`  to function when called within `bin` by
 #   returning to the project root directory. The purpose of the `sleep` calls
 #   is to allow it to be run from within `bin` (because why not), yet  make it
