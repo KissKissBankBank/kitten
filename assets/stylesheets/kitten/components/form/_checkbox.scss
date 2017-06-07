@@ -88,15 +88,10 @@
     }
 
     .k-Checkbox__input.is-error + & {
-      color: $error-color;
       border-color: $error-color;
 
       &:before {
         border-color: $error-color;
-      }
-
-      &:active {
-        color: $error-color;
       }
     }
 
