@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: Add `width` on `k-TagButton__icon` class (fix bug firefox).
+- Fix: Add `box-shadow: none` property on `TextInput`.
 - Feature: create `ResponsiveVideoIframeContainer` component for responsive video iframe.
   The component is used with embedly generated iframe.
 - Fix: Fix error with `Object.assign` in `RichTextInput` component to prevent
