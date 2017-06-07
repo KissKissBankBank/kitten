@@ -111,6 +111,7 @@
     &.is-error {
       border-color: $border-is-error;
       color: $color-is-error;
+      box-shadow: none;
 
       &:focus {
         border-color: $border-focus;
