@@ -53,7 +53,7 @@ export class KarlProjectCard extends React.Component {
           statusContent: [
             <CheckedCircleIcon key={ `closing-icon-${ this.props.id }` }
                                className={ iconClassName }
-                               circleColor={ colors['tertiary-1'] }  />,
+                               circleColor={ colors['tertiary-1'] } />,
             this.props.labelClosing
           ],
           coloredInfosValues: true,
@@ -85,10 +85,11 @@ export class KarlProjectCard extends React.Component {
 
       case 'delayed':
         data = {
-          statusErrorBackground: true,
+          statusErrorReverseBackground: true,
           statusContent: [
             <WarningCircleIcon key={ `delayed-icon-${ this.props.id }` }
-                               warningColor={ colors['error'] }
+                               warningColor="#fff"
+                               circleColor={ colors['error'] }
                                className={ iconClassName } />,
             this.props.labelDelayed
           ],

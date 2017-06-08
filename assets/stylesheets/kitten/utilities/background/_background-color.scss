@@ -1,0 +1,17 @@
+/// Background color utilities.
+///
+/// @group background
+///
+/// @example scss - Usage
+///
+///   @include k-utilities-background-color;
+///
+/// @example html
+///
+///   <span class="k-u-background-color-background2">…</span>
+
+@mixin k-utilities-background-color {
+  .k-u-background-color-background2 {
+    background-color: map-get($k-colors, 'background-2');
+  }
+}

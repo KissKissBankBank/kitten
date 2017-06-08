@@ -1,6 +1,6 @@
-# kitten
+# Kitten
 
-`kitten` is a components library based on Sass and React. It provides mixins to
+Kitten is a components library based on Sass and React. It provides mixins to
 create flexible components based on your own brand elements (colors, fonts,
 typographic scale, etc.).
 
@@ -15,7 +15,6 @@ styleguide. It should eventually be separated into two different repositories.
 - Ruby 2.2.4
 - Bundler (`gem install bundler`)
 - Node ~> 6.0
-- Npm >= 3.0
 
 ## Table of content
 - [Installation](#installation)
@@ -49,6 +48,7 @@ gem 'kitten'
 ```
 
 And these routes to your `routes.rb`:
+
 ```ruby
 mount Kitten::Engine, at: '/kitten' if Rails.env.development?
 ```
@@ -101,7 +101,7 @@ view helper in your `.erb` file:
 
 ### Style guide
 
-`kitten` provides a styleguide interface through a Rails engine.
+Kitten provides a styleguide interface through a Rails engine.
 You can run see it in your browser by downloading kitten and launching
 the dummy app or by installing the style guide in your Rails app.
 
@@ -129,7 +129,7 @@ creating new components!
 ### Install
 
 ```sh
-$ bin/install
+$ bin/kitten install
 ```
 
 ### Dummy style guide
@@ -137,11 +137,35 @@ $ bin/install
 To launch the style guide on the dummy app:
 
 ```sh
-$ cd spec/dummy
-$ foreman start
+$ bin/kitten start
 ```
 
-Then visit http://localhost:3003
+Then visit http://localhost:3000
+
+
+To stop the style guide on the dummy app:
+
+```sh
+$ bin/kitten stop
+```
+
+
+To check wether the dummy app is running or not:
+
+```sh
+$ bin/kitten status
+```
+
+
+To tail the dummy app logs in real time:
+
+```sh
+$ bin/kitten log 
+```
+
+Hit `Ctrl+C` to stop the tail 
+
+
 
 To share the dummy app with production settings (to share via ngrok for
 example), you can compile the assets and serve a production server:
@@ -156,13 +180,13 @@ $ REACT_ON_RAILS_ENV= rails s -b 0.0.0.0
 To cleanup installed modules:
 
 ```sh
-bin/cleanup
+bin/kitten cleanup
 ```
 
 ### Style checker
 
 ```sh
-$ npm run --silent stylelint
+$ yarn stylelint
 ```
 
 ### Ruby specs
@@ -181,7 +205,7 @@ Generate the documentation:
 ```sh
 $ bundle exec rake sassdoc
 # OR
-$ npm run sassdoc
+$ yarn sassdoc
 ```
 
 The documentation is accessible on development environment: `/kitten/sassdoc`.
@@ -191,7 +215,7 @@ The documentation is accessible on development environment: `/kitten/sassdoc`.
 To launch the JS tests:
 
 ```sh
-$ bin/test
+$ bin/ test
 
 # OR
 
@@ -204,7 +228,7 @@ Check out the [guidelines](../../wiki/Component-testing) to know how to test kit
 
 To contribute code:
 
-- Create a pull request on Github with a clear title in English.
+- Create a pull request on GitHub with a clear title in English.
 - Tag it with the right labels: `Needs reviews`, `Needs testing` or `Work in progress`.
 - Don't forget to update the `CHANGELOG.md` under the `[unreleased]` section
   with the following syntax:
@@ -219,11 +243,30 @@ To merge code into master:
 
 - Make sure the code has been reviewed by someone.
 - Make sure it has been tested.
-- Use the `Squash and merge` option on Github.
+- Merge using `Squash and merge` on GitHub.
+
+## Static Dump 
+
+To build an on disk static file mirror:
+
+```sh
+$ bin/kitten buildstatic
+```
+- files are located in build/
+
 
 ## Release
 
-To release a new version:
+### Login
+
+If this is your first release, start by saving your npm credentials in
+your `~/.npmrc` by calling:
+
+```sh
+$ yarn login
+```
+
+### Prepare the release
 
 - Pull `master`
 - Update the `CHANGELOG.md` file:
@@ -237,27 +280,16 @@ To release a new version:
   * Add a new `[unreleased]` section.
 - Update the version in `lib/kitten/version.rb`.
 - Update the version in `package.json`.
-- Run this command:
+
+### Release!
+
+Run this command:
 
 ```sh
 $ bundle exec rake kitten_release
 ```
 
-### Npm
-
-Only if this is your first release, save your credentials in your `.npmrc`:
-
-```
-npm adduser
-```
-
-Then:
-
-```
-npm publish
-```
-
-### Github
+### Update GitHub
 
 **Only for [KissKissBankBank](https://github.com/KissKissBankBank)
 collaborators**

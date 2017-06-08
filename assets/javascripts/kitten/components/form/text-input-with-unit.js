@@ -19,7 +19,7 @@ export class TextInputWithUnit extends React.Component {
             ...others } = this.props
 
     const textInputClassName = classNames(
-      'k-TextInput k-TextInputWithUnit__input',
+      'k-TextInputWithUnit__input',
       className,
     )
 

@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const VisaIcon = ({ props }) => {
+export const VisaIcon = props => {
   return (
     <svg xmlns="http://www.w3.org/2000/svg"
          viewBox="0 0 732 224.43"

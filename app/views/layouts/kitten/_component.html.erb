@@ -1,15 +1,15 @@
+<% if hidden_on_s %>
+  <div class="k-u-hidden@s-down">
+<% end %>
+
 <h3 id="<%= component %>" class="k-Row karl-Section__title">
   <%= title %>
 </h3>
 
 <%= render template: "kitten/#{component}" %>
 
-<% if description.present? %>
-  <section class="karl-Section__example">
-    <div class="karl-Example__description">
-      <p><%= description %></p>
-    </div>
-  </section>
-<% end %>
+<%= react_component('KarlSeparator') %>
 
-<%= react_component 'Separator', props: { darker: true } %>
+<% if hidden_on_s %>
+  </div>
+<% end %>

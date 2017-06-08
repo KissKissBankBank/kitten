@@ -42,6 +42,7 @@
 
     margin: 0;
     padding: 0;
+    text-align: left;
 
     list-style: none;
   }
@@ -67,6 +68,12 @@
 
   .k-BulletList__item--large {
     @include k-typographyFontSize($font-step-on-media);
+  }
+
+  .k-BulletList__item--big {
+    margin-top: k-px-to-rem(10px);
+    margin-bottom: k-px-to-rem(10px);
+    @include k-typographyFontSize(2);
   }
 
   .k-BulletList__link {

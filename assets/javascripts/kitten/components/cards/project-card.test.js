@@ -136,12 +136,12 @@ describe('<ProjectCard />', () => {
   })
 
   describe('with image prop', () => {
-    const projectCard = mount(<ProjectCard image="#" />)
+    const projectCard = mount(<ProjectCard imageSrc="test" />)
     const image = projectCard.find('.k-ProjectCard__img')
 
     it('renders an image with good href', () => {
       expect(image).to.have.length(1)
-      expect(image).to.have.attr('src', '#')
+      expect(image).to.have.attr('src', 'test')
     })
   })
 
@@ -260,6 +260,38 @@ describe('<ProjectCard />', () => {
     it('has a good class', () => {
       expect(status)
         .to.have.className('k-ProjectCard__status--errorBackground')
+    })
+  })
+
+  describe('with statusErrorReverseBackground prop', () => {
+    const projectCard = mount(
+      <ProjectCard statusContent="Custom status"
+                   statusErrorReverseBackground />
+    )
+    const status = projectCard.find('.k-ProjectCard__status').first()
+
+    it('has a good class', () => {
+      expect(status)
+        .to.have.className('k-ProjectCard__status--errorReverseBackground')
+    })
+  })
+
+  describe('with tooltipText prop', () => {
+    const projectCard = mount(
+      <ProjectCard tooltipText="Custom text" />
+    )
+
+    it('has good classes', () => {
+      expect(projectCard).to.have.descendants('.k-ProjectCard__tooltip')
+      expect(projectCard)
+        .to.have.descendants('.k-ProjectCard__tooltip__content')
+    })
+
+    it('has a good text', () => {
+      const content =
+        projectCard.find('.k-ProjectCard__tooltip__content').first()
+
+      expect(content).to.have.text('Custom text')
     })
   })
 })

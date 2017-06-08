@@ -111,15 +111,10 @@
     }
 
     .k-RadioButton__input.is-error + & {
-      color: $color-error;
       border-color: $color-error;
 
       &:before {
         border-color: $color-error;
-      }
-
-      &:active {
-        color: $color-error;
       }
     }
 
