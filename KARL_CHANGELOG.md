@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Center component and add `k-ButtonIcon__svg` class on `IconBadge` component.
+- Fix: Center position `IconBadge` component.
 - Fix: Add `k-u-hidden@s-down` class on component hidden s.
 
 ## [12.0.0] - 2017-05-30
