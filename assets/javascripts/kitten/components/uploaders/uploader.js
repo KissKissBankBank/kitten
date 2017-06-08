@@ -83,7 +83,7 @@ Uploader.defaultProps = {
   maxSize: null,
   fileName: null,
   theme: null,
-  buttonLabel: 'Lorem ipsum…',
+  buttonLabel: 'Choose a file',
   onSuccess: () => {},
   onError: () => {},
   onReset: () => {},
