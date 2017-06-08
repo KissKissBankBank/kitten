@@ -1,5 +1,0 @@
-#!/bin/sh
-set -e
-
-cd spec/dummy
-bundle exec foreman start
