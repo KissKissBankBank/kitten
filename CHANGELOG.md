@@ -10,6 +10,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Breaking change: Split tooltip component into a component `Tooltip` and hoc:
   `withTooltip`.
   To be retro-compatible, you should replace `Tooltip` component with `InfoWithTooltip`.
+- Fix: Remove `color-error` label on `RadioButton` and `Checkbox` components.
+- Fix: Add `box-shadow: none` property on `TextInput`.
 - Feature: create `ResponsiveVideoIframeContainer` component for responsive video iframe.
   The component is used with embedly generated iframe.
 - Fix: Fix error with `Object.assign` in `RichTextInput` component to prevent
