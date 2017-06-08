@@ -6,7 +6,7 @@ export class FormActions extends React.Component {
     const { className, children, ...others } = this.props
 
     return (
-      <div className={ classNames('k-FormActions', className) } {...others }>
+      <div className={ classNames('k-FormActions', className) } { ...others }>
         { children }
       </div>
     )

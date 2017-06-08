@@ -4,7 +4,7 @@ import { Button } from 'kitten/components/buttons/button'
 
 export const KarlFormActions = props => {
   return (
-    <FormActions {...props}>
+    <FormActions { ...props }>
       <Button className="karl-FormActions__button"
               tag="a"
               href="#"
