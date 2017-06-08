@@ -18,10 +18,12 @@ export class KarlImageCropper extends React.Component {
       ...this.initialState(),
       hasErrorOnUploader: false,
       cropperHeight: null,
+      imageSrc: this.props.imageSrc,
     }
 
-    this.handleUploaderChange = this.handleUploaderChange.bind(this)
+    this.handleUploaderSuccess = this.handleUploaderSuccess.bind(this)
     this.handleUploaderError = this.handleUploaderError.bind(this)
+    this.handleUploaderReset = this.handleUploaderReset.bind(this)
 
     this.handleSliderChange = this.handleSliderChange.bind(this)
     this.handleSliderAction = this.handleSliderAction.bind(this)
@@ -35,7 +37,7 @@ export class KarlImageCropper extends React.Component {
 
   initialState() {
     return {
-      imageSrc: this.props.imageSrc,
+      imageSrc: null,
       imageCropSrc: null,
       touched: false,
       sliderValue: 0,
@@ -50,7 +52,7 @@ export class KarlImageCropper extends React.Component {
     window.addEventListener('resize', this.setCropperHeight)
   }
 
-  handleUploaderChange(file) {
+  handleUploaderSuccess(file) {
     this.setState({
       imageSrc: file,
       imageCropSrc: null,
@@ -63,9 +65,13 @@ export class KarlImageCropper extends React.Component {
       hasErrorOnUploader: hasError,
     })
 
-    if (this.state.hasErrorOnUploader) {
+    if (hasError) {
       this.setState(this.initialState())
     }
+  }
+
+  handleUploaderReset() {
+    this.setState(this.initialState())
   }
 
   handleSliderChange(value) {
@@ -223,8 +229,9 @@ export class KarlImageCropper extends React.Component {
       name: this.props.name,
       maxSize: 5242880, // 5 Mo.
       acceptedFiles: '.jpg,.jpeg,.gif,.png',
-      onChange: this.handleUploaderChange,
-      hasError: this.handleUploaderError,
+      onSuccess: this.handleUploaderSuccess,
+      onError: this.handleUploaderError,
+      onReset: this.handleUploaderReset,
       buttonLabel: this.props.buttonLabel,
       fileName: this.props.fileName,
     }

@@ -23,13 +23,14 @@ export class Uploader extends React.Component {
       fileName: file.name,
     })
 
-    this.props.onChange(file.preview)
-    this.props.hasError(false)
+    this.props.onSuccess(file.preview)
+    this.props.onError(false)
   }
 
   handleChangeRejectedFiles(rejectedFiles) {
-    this.props.onChange()
-    this.props.hasError(true)
+    this.props.onError(true)
+
+    this.handleCancel()
   }
 
   handleClick() {
@@ -41,7 +42,7 @@ export class Uploader extends React.Component {
       fileName: null,
     })
 
-    this.props.onChange()
+    this.props.onReset()
   }
 
   renderTheme() {
@@ -83,6 +84,7 @@ Uploader.defaultProps = {
   fileName: null,
   theme: null,
   buttonLabel: 'Lorem ipsum…',
-  onChange: (_value) => {},
-  hasError: (_hasError) => {},
+  onSuccess: () => {},
+  onError: () => {},
+  onReset: () => {},
 }
