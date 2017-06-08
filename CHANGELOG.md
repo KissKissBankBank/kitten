@@ -4,11 +4,17 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Remove `color-error` label on `RadioButton` and `Checkbox` components.
-- Fix: Add `box-shadow: none` property on `TextInput`.
-- Feature: create `ResponsiveVideoIframeContainer` component for responsive video iframe.
+## [12.1.0] - 2017-06-08
+
+Feature:
+- Create `ResponsiveVideoIframeContainer` component for responsive video iframe.
   The component is used with embedly generated iframe.
-- Fix: Fix error with `Object.assign` in `RichTextInput` component to prevent
+
+Fixies:
+- Remove `color-error` label on `RadioButton` and `Checkbox` components.
+- Add `box-shadow: none` property on `TextInput`.
+- Feature:
+- Fix error with `Object.assign` in `RichTextInput` component to prevent
   error in React on Rails *(`Object function […] has no method 'assign'`)*.
 
 ## [12.0.0] - 2017-05-30
