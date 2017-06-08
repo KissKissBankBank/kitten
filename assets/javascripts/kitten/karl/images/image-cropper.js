@@ -1,5 +1,4 @@
 import React from 'react'
-import classNames from 'classnames'
 import Cropper from 'react-cropper'
 import { Marger } from 'kitten/components/layout/marger'
 import { Separator } from 'kitten/components/layout/separator'
@@ -7,16 +6,16 @@ import { Container } from 'kitten/components/grid/container'
 import { Grid, GridCol } from 'kitten/components/grid/grid'
 import { Label } from 'kitten/components/form/label'
 import { Paragraph } from 'kitten/components/typography/paragraph'
-import { Uploader } from 'kitten/components/uploaders/uploader'
+import { SimpleUploader } from 'kitten/components/uploaders/simple-uploader'
 import Slider from 'kitten/components/form/slider'
 import domElementHelper from 'kitten/helpers/dom/element-helper'
 
-export class KarlCroppingImage extends React.Component {
+export class KarlImageCropper extends React.Component {
   constructor(props) {
     super(props)
 
     this.state = {
-      ...this.initialProps(),
+      ...this.initialState(),
       hasErrorOnUploader: false,
       cropperHeight: null,
     }
@@ -34,7 +33,7 @@ export class KarlCroppingImage extends React.Component {
     this.setCropperHeight = this.setCropperHeight.bind(this)
   }
 
-  initialProps() {
+  initialState() {
     return {
       imageSrc: this.props.imageSrc,
       imageCropSrc: null,
@@ -53,7 +52,7 @@ export class KarlCroppingImage extends React.Component {
 
   handleUploaderChange(file) {
     this.setState({
-      imageSrc: file ? file : null,
+      imageSrc: file,
       imageCropSrc: null,
       sliderValue: 0,
     })
@@ -65,7 +64,7 @@ export class KarlCroppingImage extends React.Component {
     })
 
     if (this.state.hasErrorOnUploader) {
-      this.setState(this.initialProps())
+      this.setState(this.initialState())
     }
   }
 
@@ -143,6 +142,8 @@ export class KarlCroppingImage extends React.Component {
       <Marger key="cropper" top="2" bottom="2">
         <div ref="cropperContainer">
           <Cropper
+            // This helps unmount and remount a new cropper to keep
+            // the component responsive.
             key={ `cropper-${ this.state.cropperHeight }` }
             { ...cropperProps } />
         </div>
@@ -152,9 +153,9 @@ export class KarlCroppingImage extends React.Component {
 
   renderCropperInfo() {
     return (
-      <Marger key="cropper-info" top="2" bottom="2">
+      <Marger top="2" bottom="2">
         <Paragraph modifier="quaternary" margin={ false }>
-          Déplacez l’image dans le cadre pour obtenir le plan voulu.
+          { this.props.cropperInfo }
         </Paragraph>
       </Marger>
     )
@@ -171,7 +172,7 @@ export class KarlCroppingImage extends React.Component {
     }
 
     return (
-      <Marger key="slider" top="1" bottom="2">
+      <Marger top="1" bottom="2">
         <Slider { ...sliderProps } />
       </Marger>
     )
@@ -179,9 +180,9 @@ export class KarlCroppingImage extends React.Component {
 
   renderSliderTitle() {
     return (
-      <Marger key="slider-title" top="2" bottom="1">
+      <Marger top="2" bottom="1">
         <Label size="tiny">
-          Zoom de l’image
+          { this.props.sliderTitle }
         </Label>
       </Marger>
     )
@@ -224,12 +225,12 @@ export class KarlCroppingImage extends React.Component {
       acceptedFiles: '.jpg,.jpeg,.gif,.png',
       onChange: this.handleUploaderChange,
       hasError: this.handleUploaderError,
-      buttonLabel: 'Choisissez un fichier',
+      buttonLabel: this.props.buttonLabel,
       fileName: this.props.fileName,
     }
 
     return (
-      <Uploader { ...uploaderProps } />
+      <SimpleUploader { ...uploaderProps } />
     )
   }
 
@@ -240,7 +241,7 @@ export class KarlCroppingImage extends React.Component {
           <GridCol col="12">
             <Marger top="1" bottom="1">
               <Label size="tiny">
-                Image de présentation
+                { this.props.label }
               </Label>
             </Marger>
 
@@ -252,8 +253,7 @@ export class KarlCroppingImage extends React.Component {
 
             <Marger top="1" bottom="1">
               <Paragraph modifier="quaternary" margin={ false }>
-                Taille max : 5 Mo au format JPEG, PNG ou GIF.<br />
-                Les dimensions recommandées sont 620x376 px.
+                { this.props.description }
               </Paragraph>
             </Marger>
           </GridCol>
@@ -265,11 +265,17 @@ export class KarlCroppingImage extends React.Component {
   }
 }
 
-KarlCroppingImage.defaultProps = {
+KarlImageCropper.defaultProps = {
   name: 'picture',
   imageSrc: 'https://placekitten.com/480/270',
   fileName: 'kitten.png',
   uploaderErrorLabel: 'You have an error on upload.',
   sliderMin: 0,
   sliderMax: 500,
+  label: 'Image de présentation',
+  cropperInfo: 'Déplacez l’image dans le cadre pour obtenir le plan voulu.',
+  sliderTitle: 'Zoom de l’image',
+  buttonLabel: 'Choisissez un fichier',
+  description: 'Taille max : 5 Mo au format JPEG, PNG ou GIF. \
+    Les dimensions recommandées sont 620x376 px.',
 }

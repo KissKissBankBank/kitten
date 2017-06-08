@@ -1,33 +1,30 @@
-/// Uploader themes.
+/// Simple uploader theme.
 ///
 /// @group uploaders
 ///
 /// @example scss - usage
 ///
-///   @include k-Uploader;
+///   @include k-SimpleUploader;
 ///
-/// @example html - Light
+/// @example html
 ///
-///   <div class="k-UploaderLight">
-///     <button class="k-UploaderLight__button">…</button>
-///     <span class="k-UploaderLight__text">…</span>
+///   <div class="k-SimpleUploader">
+///     <button class="k-SimpleUploader__button">…</button>
+///     <span class="k-SimpleUploader__text">…</span>
 ///   </div>
 
-@mixin k-Uploader {
-
-  // Light.
-
-  .k-UploaderLight {
+@mixin k-SimpleUploader {
+  .k-SimpleUploader {
     display: flex;
     align-items: center;
     height: k-px-to-rem(20px);
   }
 
-  .k-UploaderLight__button {
+  .k-SimpleUploader__button {
     cursor: pointer;
   }
 
-  .k-UploaderLight__text {
+  .k-SimpleUploader__text {
     overflow: hidden;
     max-width: k-px-to-rem(200px);
     margin-left: k-px-to-rem(10px);
@@ -38,7 +35,7 @@
     white-space: nowrap;
   }
 
-  .k-UploaderLight__buttonIcon {
+  .k-SimpleUploader__buttonIcon {
     margin-left: k-px-to-rem(10px);
   }
 }

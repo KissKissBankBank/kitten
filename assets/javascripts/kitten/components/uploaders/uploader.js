@@ -1,7 +1,5 @@
 import React from 'react'
 import Dropzone from 'react-dropzone'
-import { UploaderThemes }
-  from 'kitten/components/uploaders/uploader-themes'
 
 let dropzoneRef
 
@@ -47,6 +45,8 @@ export class Uploader extends React.Component {
   }
 
   renderTheme() {
+    if (!this.props.theme) return
+
     const Theme = this.props.theme
 
     return (
@@ -69,8 +69,9 @@ export class Uploader extends React.Component {
         onDropRejected={ this.handleChangeRejectedFiles }
         disableClick={ true }
         multiple={ false }
-        style={ {} }
-        children={ this.renderTheme() } />
+        style={ {} }>
+        { this.renderTheme() }
+      </Dropzone>
     )
   }
 }
@@ -80,8 +81,8 @@ Uploader.defaultProps = {
   acceptedFiles: 'image/*',
   maxSize: null,
   fileName: null,
-  theme: UploaderThemes.Light,
+  theme: null,
   buttonLabel: 'Lorem ipsum…',
-  onChange: () => {},
-  hasError: () => {},
+  onChange: (_value) => {},
+  hasError: (_hasError) => {},
 }
