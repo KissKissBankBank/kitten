@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: For `xs` media-querie, `FormActions` component is placed in `float: left`.
+
 ## [12.1.0] - 2017-06-08
 
 Feature:
