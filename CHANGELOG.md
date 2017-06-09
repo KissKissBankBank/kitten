@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `SimpleUploader` and `Uploader` components.
+
 ## [12.1.0] - 2017-06-08
 
 Feature:
@@ -13,7 +15,6 @@ Feature:
 Fixies:
 - Remove `color-error` label on `RadioButton` and `Checkbox` components.
 - Add `box-shadow: none` property on `TextInput`.
-- Feature:
 - Fix error with `Object.assign` in `RichTextInput` component to prevent
   error in React on Rails *(`Object function […] has no method 'assign'`)*.
 
