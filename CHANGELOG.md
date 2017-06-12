@@ -10,11 +10,18 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Breaking change: Split tooltip component into a component `Tooltip` and hoc:
   `withTooltip`.
   To be retro-compatible, you should replace `Tooltip` component with `InfoWithTooltip`.
-- Fix: Remove `color-error` label on `RadioButton` and `Checkbox` components.
-- Fix: Add `box-shadow: none` property on `TextInput`.
-- Feature: create `ResponsiveVideoIframeContainer` component for responsive video iframe.
+- Fix: Fix IOS style's button and remove shadow in `TextInput`.
+
+## [12.1.0] - 2017-06-08
+
+Feature:
+- Create `ResponsiveVideoIframeContainer` component for responsive video iframe.
   The component is used with embedly generated iframe.
-- Fix: Fix error with `Object.assign` in `RichTextInput` component to prevent
+
+Fixies:
+- Remove `color-error` label on `RadioButton` and `Checkbox` components.
+- Add `box-shadow: none` property on `TextInput`.
+- Fix error with `Object.assign` in `RichTextInput` component to prevent
   error in React on Rails *(`Object function […] has no method 'assign'`)*.
 
 ## [12.0.0] - 2017-05-30
