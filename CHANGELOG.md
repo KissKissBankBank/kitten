@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `SimpleUploader` and `Uploader` components.
+- Feature: Add `SimpleUploader`, `Uploader` and `ImageCropper` components.
 
 ## [12.1.0] - 2017-06-08
 
