@@ -9,7 +9,6 @@ const CustomTheme = props => <div className="custom-theme" />
 describe('<Uploader />', () => {
   describe('by default', () => {
     const component = mount(<Uploader />)
-    const dropzone = component.find(Dropzone).first()
 
     it('has default props', () => {
       expect(component).to.have.props({
@@ -26,7 +25,9 @@ describe('<Uploader />', () => {
       expect(component).to.have.state('fileName', null)
     })
 
-    it('is a <Dropzone /> with default props', () => {
+    it('has a <Dropzone /> with default props', () => {
+      const dropzone = component.find(Dropzone).first()
+
       expect(dropzone).to.have.length(1)
       expect(dropzone).to.have.props({
         accept: 'image/*',

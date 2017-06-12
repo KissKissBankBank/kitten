@@ -116,7 +116,7 @@ export class ImageCropper extends React.Component {
 
   setCropperHeight() {
     const width = domElementHelper.getComputedWidth(this.refs.cropperContainer)
-    const height = width * 9 / 16
+    const height = width / this.props.aspectRatio
 
     this.setState({
       cropperHeight: height,
@@ -129,7 +129,7 @@ export class ImageCropper extends React.Component {
       className: 'k-Cropper',
       src: this.state.imageSrc,
       style: { height: this.state.cropperHeight },
-      aspectRatio: 16/9,
+      aspectRatio: this.props.aspectRatio,
       viewMode: 3,
       guides: false,
       modal: false,
@@ -228,7 +228,7 @@ export class ImageCropper extends React.Component {
     const uploaderProps = {
       name: this.props.name,
       maxSize: 5242880, // 5 Mo.
-      acceptedFiles: '.jpg,.jpeg,.gif,.png',
+      acceptedFiles: this.props.acceptedFiles,
       onSuccess: this.handleUploaderSuccess,
       onError: this.handleUploaderError,
       onReset: this.handleUploaderReset,
@@ -279,6 +279,8 @@ ImageCropper.defaultProps = {
   uploaderErrorLabel: 'Lorem ipsum…',
   sliderMin: 0,
   sliderMax: 500,
+  aspectRatio: 16/9,
+  acceptedFiles: '.jpg,.jpeg,.gif,.png',
   label: 'Lorem ipsum…',
   cropperInfo: 'Lorem ipsum…',
   sliderTitle: 'Lorem ipsum…',

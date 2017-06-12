@@ -9,11 +9,11 @@ describe('<SimpleUploader />', () => {
     const component = mount(<SimpleUploader />)
     const theme = component.find('.k-SimpleUploader')
 
-    it('it a <Uploader />', () => {
+    it('it has an <Uploader />', () => {
       expect(component.find(Uploader)).to.have.length(1)
     })
 
-    it('has a children with good classes', () => {
+    it('has children with good classes', () => {
       expect(component.find('.k-SimpleUploader')).to.be.present()
       expect(component.find('.k-SimpleUploader__button')).to.be.present()
       expect(component.find('.k-SimpleUploader__text')).to.be.present()
@@ -24,7 +24,7 @@ describe('<SimpleUploader />', () => {
         .to.have.text('Choose a file')
     })
 
-    it('has not delete button', () => {
+    it('doesn\'t have a delete button', () => {
       expect(component.find('.k-SimpleUploader__buttonIcon')).to.be.blank()
     })
   })
