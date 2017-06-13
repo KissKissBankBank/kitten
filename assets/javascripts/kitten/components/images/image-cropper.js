@@ -17,6 +17,7 @@ export class ImageCropper extends React.Component {
     this.state = {
       ...this.initialState(),
       hasErrorOnUploader: false,
+      cropperWidth: null,
       cropperHeight: null,
       imageSrc: this.props.imageSrc,
     }
@@ -122,6 +123,7 @@ export class ImageCropper extends React.Component {
       const height = width * 9 / 16
 
       this.setState({
+        cropperWidth: width,
         cropperHeight: height,
       })
     }
@@ -132,7 +134,10 @@ export class ImageCropper extends React.Component {
       ref: 'cropper',
       className: 'k-Cropper',
       src: this.state.imageSrc,
-      style: { height: this.state.cropperHeight },
+      style: {
+        width: this.state.cropperWidth,
+        height: this.state.cropperHeight,
+      },
       aspectRatio: this.props.aspectRatio,
       viewMode: 3,
       guides: false,
