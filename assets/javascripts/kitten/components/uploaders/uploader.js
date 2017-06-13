@@ -23,7 +23,10 @@ export class Uploader extends React.Component {
       fileName: file.name,
     })
 
-    this.props.onSuccess(file.preview)
+    this.props.onSuccess({
+      file: file.preview,
+      name: file.name,
+    })
     this.props.onError(false)
   }
 

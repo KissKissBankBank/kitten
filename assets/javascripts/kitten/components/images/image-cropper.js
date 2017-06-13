@@ -40,6 +40,7 @@ export class ImageCropper extends React.Component {
     return {
       imageSrc: null,
       imageCropSrc: null,
+      fileName: null,
       touched: false,
       sliderValue: 0,
       sliderMin: this.props.sliderMin,
@@ -53,10 +54,11 @@ export class ImageCropper extends React.Component {
     window.addEventListener('resize', this.setCropperHeight)
   }
 
-  handleUploaderSuccess(file) {
+  handleUploaderSuccess(data) {
     this.setState({
-      imageSrc: file,
+      imageSrc: data.file,
       imageCropSrc: null,
+      fileName: data.name,
       sliderValue: 0,
     }, () => {
       this.setCropperHeight()
@@ -110,8 +112,15 @@ export class ImageCropper extends React.Component {
       const croppedCanvas = this.refs.cropper.getCroppedCanvas()
 
       if (croppedCanvas) {
+        const imageCropSrc = croppedCanvas.toDataURL()
+
         this.setState({
-          imageCropSrc: croppedCanvas.toDataURL(),
+          imageCropSrc: imageCropSrc,
+        })
+
+        this.props.onChange({
+          value: imageCropSrc,
+          name: this.state.fileName,
         })
       }
     }
@@ -295,4 +304,6 @@ ImageCropper.defaultProps = {
   sliderTitle: 'Lorem ipsum…',
   buttonLabel: 'Lorem ipsum…',
   description: 'Lorem ipsum…',
+
+  onChange: (_fileData) => {},
 }
