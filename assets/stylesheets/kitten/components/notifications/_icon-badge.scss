@@ -40,4 +40,12 @@
     @include k-typographyFont($font);
     @include k-typographyFontSize($font-step, 0);
   }
+
+  .k-IconBadge__svg {
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: $content-size;
+    height: $content-size;
+  }
 }
