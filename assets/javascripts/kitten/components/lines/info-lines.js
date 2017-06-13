@@ -38,5 +38,5 @@ export class InfoLines extends React.Component {
 }
 
 InfoLines.defaultProps = {
-  items: [], // Eg: [{ key: …,value: … }]
+  items: [], // Eg: [{ key: …, value: … }]
 }

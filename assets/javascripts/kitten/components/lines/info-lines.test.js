@@ -5,8 +5,8 @@ import { InfoLines } from 'kitten/components/lines/info-lines'
 
 describe('<InfoLines />', () => {
   const infos = [
-    { key: 'Lorem', value: 'Ipsum'},
-    { key: 'Dolor', value: 'Sit amet'},
+    { key: 'Lorem', value: 'Ipsum' },
+    { key: 'Dolor', value: 'Sit amet' },
   ]
 
   describe('by default', () => {
