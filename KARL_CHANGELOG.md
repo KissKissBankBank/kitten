@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Center position `IconBadge` component.
+
 ## [12.1.0] - 2017-06-08
 
 Fix:
