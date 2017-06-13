@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add new `InfoLines` component.
 - Fix: Fix IOS style's button and remove shadow in `TextInput`.
 
 ## [12.1.0] - 2017-06-08
