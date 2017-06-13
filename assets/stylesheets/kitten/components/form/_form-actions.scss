@@ -17,5 +17,10 @@
   .k-FormActions {
     display: flex;
     justify-content: space-between;
+
+    @include k-media-max('xs') {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 }

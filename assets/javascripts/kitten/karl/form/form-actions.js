@@ -1,20 +1,27 @@
 import React from 'react'
 import { FormActions } from 'kitten/components/form/form-actions'
+import { Button } from 'kitten/components/buttons/button'
 
-export const KarlFormActions = () => {
+export const KarlFormActions = props => {
   return (
-    <FormActions>
-      <a href="#" className="k-Button k-Button--hydrogen">
+    <FormActions { ...props }>
+      <Button className="karl-FormActions__button"
+              tag="a"
+              href="#"
+              modifier="hydrogen">
         Button
-      </a>
+      </Button>
 
-      <button className="k-Button k-Button--helium">
+      <Button className="karl-FormActions__button"
+              modifier="helium">
         Button
-      </button>
+      </Button>
 
-      <input className="k-Button k-Button--beryllium"
-             type="submit"
-             value="Button" />
+      <Button className="karl-FormActions__button"
+              tag="input"
+              modifier="beryllium"
+              type="submit"
+              value="Button" />
     </FormActions>
   )
 }
