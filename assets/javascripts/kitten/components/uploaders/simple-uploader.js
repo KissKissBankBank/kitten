@@ -1,5 +1,6 @@
 import React from 'react'
 import { Uploader } from 'kitten/components/uploaders/uploader'
+import { Button } from 'kitten/components/buttons/button'
 import { ButtonIcon } from 'kitten/components/buttons/button-icon'
 import { CrossIcon } from 'kitten/components/icons/cross-icon'
 
@@ -14,11 +15,12 @@ const Theme = props => {
 
   return (
     <div className="k-SimpleUploader">
-      <button type="button"
+      <Button size="tiny"
+              type="button"
               className="k-SimpleUploader__button"
               onClick={ props.onClick }>
         { props.buttonLabel }
-      </button>
+      </Button>
 
       <span className="k-SimpleUploader__text">
         { props.fileName }
