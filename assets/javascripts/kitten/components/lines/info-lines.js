@@ -21,7 +21,7 @@ export class InfoLines extends React.Component {
           { key }
         </div>
 
-        <div className="k-InfoLines__line__values">
+        <div className="k-InfoLines__line__value">
           { value }
         </div>
       </div>

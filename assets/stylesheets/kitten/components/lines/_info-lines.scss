@@ -4,14 +4,14 @@
 ///
 /// @example scss - usage
 ///
-///   @include k-InfoLine;
+///   @include k-InfoLines;
 ///
 /// @example html
 ///
 ///   <div class="k-InfoLines">
 ///     <div class="k-InfoLines__line">
 ///       <div class="k-InfoLines__line__key"> … </div>
-///       <div class="k-InfoLine__line__value"> … </div>
+///       <div class="k-InfoLines__line__value"> … </div>
 ///     </div>
 ///   </div>
 
@@ -34,7 +34,7 @@
     }
   }
 
-  .k-InfoLines__line__values {
+  .k-InfoLines__line__value {
     margin-left: auto;
   }
 }

@@ -21,15 +21,4 @@ describe('<InfoLines />', () => {
       expect(firstInfo).to.have.className('k-InfoLines__line')
     })
   })
-
-  describe('with className prop', () => {
-    const infoLines = shallow(
-      <InfoLines infos={ infos } className="custom__class" />
-    )
-
-    it('has a custom class', () => {
-      expect(infoLines).to.have.className('custom__class')
-    })
-  })
-
 })
