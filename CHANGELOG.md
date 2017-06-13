@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: Add `width` attribute on payment button svg tag (fixes firefox bug).
+- Fix: Add `k-ButtonIcon__svg` class on `IconBadge` component.
 - Fix: Fix IOS style's button and remove shadow in `TextInput`.
 
 ## [12.1.0] - 2017-06-08
