@@ -160,12 +160,10 @@ $ bin/kitten status
 To tail the dummy app logs in real time:
 
 ```sh
-$ bin/kitten log 
+$ bin/kitten log
 ```
 
-Hit `Ctrl+C` to stop the tail 
-
-
+Hit `Ctrl+C` to stop the tail.
 
 To share the dummy app with production settings (to share via ngrok for
 example), you can compile the assets and serve a production server:
@@ -215,7 +213,7 @@ The documentation is accessible on development environment: `/kitten/sassdoc`.
 To launch the JS tests:
 
 ```sh
-$ bin/ test
+$ bin/test
 
 # OR
 
@@ -245,7 +243,7 @@ To merge code into master:
 - Make sure it has been tested.
 - Merge using `Squash and merge` on GitHub.
 
-## Static Dump 
+## Static Dump
 
 To build an on disk static file mirror:
 
