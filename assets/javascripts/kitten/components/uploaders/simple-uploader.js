@@ -14,7 +14,8 @@ const Theme = props => {
 
   return (
     <div className="k-SimpleUploader">
-      <button className="k-SimpleUploader__button"
+      <button type="button"
+              className="k-SimpleUploader__button"
               onClick={ props.onClick }>
         { props.buttonLabel }
       </button>
