@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add new `KarlLineWithTooltip` component.
+- Feature: Update the tooltip examples.
 
 ## [12.1.0] - 2017-06-08
 
