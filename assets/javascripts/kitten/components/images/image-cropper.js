@@ -57,6 +57,8 @@ export class ImageCropper extends React.Component {
       imageSrc: file,
       imageCropSrc: null,
       sliderValue: 0,
+    }, () => {
+      this.setCropperHeight()
     })
   }
 
@@ -115,12 +117,14 @@ export class ImageCropper extends React.Component {
   }
 
   setCropperHeight() {
-    const width = domElementHelper.getComputedWidth(this.refs.cropperContainer)
-    const height = width / this.props.aspectRatio
+    if (this.refs.cropperContainer) {
+      const width = domElementHelper.getComputedWidth(this.refs.cropperContainer)
+      const height = width * 9 / 16
 
-    this.setState({
-      cropperHeight: height,
-    })
+      this.setState({
+        cropperHeight: height,
+      })
+    }
   }
 
   renderCropper() {
@@ -243,7 +247,7 @@ export class ImageCropper extends React.Component {
 
   render() {
     return (
-      <Container>
+      <section>
         <Grid>
           <GridCol col="12">
             <Marger top="1" bottom="1">
@@ -267,7 +271,7 @@ export class ImageCropper extends React.Component {
         </Grid>
 
         { this.renderCroppingImage() }
-      </Container>
+      </section>
     )
   }
 }
