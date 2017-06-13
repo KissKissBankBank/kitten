@@ -19,17 +19,12 @@
 
   .k-InfoLines {
     border-top: 1px solid map-get($k-colors, 'line-1');
-    border-bottom: 1px solid map-get($k-colors, 'line-1');
   }
 
   .k-InfoLines__line {
     display: flex;
     padding: k-px-to-rem(15px);
     border-bottom: 1px solid map-get($k-colors, 'line-1');
-
-    &:last-child {
-      border-bottom: none;
-    }
   }
 
   .k-InfoLines__line__value {
