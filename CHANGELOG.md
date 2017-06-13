@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: For `xs` media-querie, `FormActions` component is placed in columns.
+- Feature: For `xs` media-query, `FormActions` component is placed in columns.
 - Fix: Fix IOS style's button and remove shadow in `TextInput`.
 
 ## [12.1.0] - 2017-06-08
