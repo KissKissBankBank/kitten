@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Update the tooltip examples.
+- Fix: Center position `IconBadge` component.
 
 ## [12.1.0] - 2017-06-08
 
@@ -54,7 +55,7 @@ Feature:
 - Add `CheckboxSet` & `RadioButtonSet` examples.
 
 ## [11.6.0] - 2017-05-15
-
+t
 Features:
 - Update `ProjectCard` example with tooltip.
 - Add `TagButton` with large word example.

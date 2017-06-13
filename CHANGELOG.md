@@ -10,6 +10,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Breaking change: Split tooltip component into a component `Tooltip` and hoc:
   `withTooltip`.
   To be retro-compatible, you should replace `Tooltip` component with `InfoWithTooltip`.
+- Fix: Add `k-ButtonIcon__svg` class on `IconBadge` component.
 - Fix: Fix IOS style's button and remove shadow in `TextInput`.
 
 ## [12.1.0] - 2017-06-08
