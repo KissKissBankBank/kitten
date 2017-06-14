@@ -64,19 +64,16 @@ export class ImageCropper extends React.Component {
       imageCropSrc: null,
       fileName: data.name,
       sliderValue: 0,
-    }, () => {
-      this.setCropperHeight()
-    })
+    }, this.setCropperHeight)
   }
 
   handleUploaderError(hasError) {
+    const resetState = hasError ? this.initialState() : {}
+
     this.setState({
       hasErrorOnUploader: hasError,
+      ...resetState,
     })
-
-    if (hasError) {
-      this.setState(this.initialState())
-    }
   }
 
   handleUploaderReset() {
@@ -112,28 +109,28 @@ export class ImageCropper extends React.Component {
   }
 
   handleCrop() {
-    if (this.state.imageSrc) {
-      const croppedCanvas = this.refs.cropper.getCroppedCanvas()
+    if (!this.state.imageSrc) return
 
-      if (croppedCanvas) {
-        const imageCropSrc = croppedCanvas.toDataURL()
+    const croppedCanvas = this.refs.cropper.getCroppedCanvas()
 
-        this.setState({
-          imageCropSrc: imageCropSrc,
-        })
+    if (croppedCanvas) {
+      const imageCropSrc = croppedCanvas.toDataURL()
 
-        this.props.onChange({
-          value: imageCropSrc,
-          name: this.state.fileName,
-        })
-      }
+      this.setState({
+        imageCropSrc: imageCropSrc,
+      })
+
+      this.props.onChange({
+        value: imageCropSrc,
+        name: this.state.fileName,
+      })
     }
   }
 
   setCropperHeight() {
-    if (this.refs.cropperContainer) {
-      const width = domElementHelper.getComputedWidth(this.refs.cropperContainer)
-      const height = width / (this.props.aspectRatio)
+    if (this.cropperContainer) {
+      const width = domElementHelper.getComputedWidth(this.cropperContainer)
+      const height = width / this.props.aspectRatio
 
       this.setState({
         cropperWidth: width,
@@ -143,37 +140,36 @@ export class ImageCropper extends React.Component {
   }
 
   renderCropper() {
-    const cropperProps = {
-      ref: 'cropper',
-      className: 'k-Cropper',
-      src: this.state.imageSrc,
-      style: {
-        width: this.state.cropperWidth,
-        height: this.state.cropperHeight,
-      },
-      aspectRatio: this.props.aspectRatio,
-      viewMode: 3,
-      guides: false,
-      modal: false,
-      autoCropArea: 1,
-      cropBoxMovable: false,
-      cropBoxResizable: false,
-      toggleDragModeOnDblclick: false,
-      zoomOnTouch: false,
-      zoomOnWheel: false,
-      dragMode: 'move',
-      crop: this.handleCrop,
-      ready: this.handleReady,
+    const styles = {
+      width: this.state.cropperWidth,
+      height: this.state.cropperHeight,
     }
 
     return (
       <Marger key="cropper" top="2" bottom="2">
-        <div ref="cropperContainer">
+        <div ref={ node => { this.cropperContainer = node } }>
           <Cropper
             // This helps unmount and remount a new cropper to keep
             // the component responsive.
             key={ `cropper-${ this.state.cropperHeight }` }
-            { ...cropperProps } />
+            ref="cropper"
+            className="k-Cropper"
+            src={ this.state.imageSrc }
+            style={ styles }
+            aspectRatio={ this.props.aspectRatio }
+            viewMode={ 3 }
+            guides={ false }
+            modal={ false }
+            autoCropArea={ 1 }
+            cropBoxMovable={ false }
+            cropBoxResizable={ false }
+            toggleDragModeOnDblclick={ false }
+            zoomOnTouch={ false }
+            zoomOnWheel={ false }
+            dragMode={ 'move' }
+            crop={ this.handleCrop }
+            ready={ this.handleReady }
+          />
         </div>
       </Marger>
     )
@@ -190,18 +186,16 @@ export class ImageCropper extends React.Component {
   }
 
   renderSlider() {
-    const sliderProps = {
-      name: 'zoom',
-      min: this.state.sliderMin,
-      max: this.state.sliderMax,
-      value: this.state.sliderValue,
-      onChange: this.handleSliderChange,
-      onAction: this.handleSliderAction,
-    }
-
     return (
       <Marger top="1" bottom="2">
-        <Slider { ...sliderProps } />
+        <Slider
+          name="zoom"
+          min={ this.state.sliderMin }
+          max={ this.state.sliderMax }
+          value={ this.state.sliderValue }
+          onChange={ this.handleSliderChange }
+          onAction={ this.handleSliderAction }
+        />
       </Marger>
     )
   }
@@ -238,7 +232,7 @@ export class ImageCropper extends React.Component {
     if (!this.state.hasErrorOnUploader) return
 
     return (
-      <Marger top="1" bottom="1" key={ `uploader-error` }>
+      <Marger top="1" bottom="1">
         <span className="k-FormInfo__error">
           { this.props.uploaderErrorLabel }
         </span>
@@ -247,19 +241,17 @@ export class ImageCropper extends React.Component {
   }
 
   renderUploader() {
-    const uploaderProps = {
-      name: this.props.name,
-      maxSize: 5242880, // 5 Mo.
-      acceptedFiles: this.props.acceptedFiles,
-      onSuccess: this.handleUploaderSuccess,
-      onError: this.handleUploaderError,
-      onReset: this.handleUploaderReset,
-      buttonLabel: this.props.buttonLabel,
-      fileName: this.props.fileName,
-    }
-
     return (
-      <SimpleUploader { ...uploaderProps } />
+      <SimpleUploader
+        name={ this.props.name }
+        maxSize={ 5 * 1024 * 1024 } // 5 Mo.
+        acceptedFiles={ this.props.acceptedFiles }
+        onSuccess={ this.handleUploaderSuccess }
+        onError={ this.handleUploaderError }
+        onReset={ this.handleUploaderReset }
+        buttonLabel={ this.props.buttonLabel }
+        fileName={ this.props.fileName }
+      />
     )
   }
 
@@ -298,16 +290,16 @@ ImageCropper.defaultProps = {
   name: 'picture',
   imageSrc: null,
   fileName: null,
-  uploaderErrorLabel: 'Lorem ipsum…',
+  uploaderErrorLabel: 'You have an error on upload.',
   sliderMin: 0,
   sliderMax: 500,
   aspectRatio: 16/9,
   acceptedFiles: '.jpg,.jpeg,.gif,.png',
   label: 'Lorem ipsum…',
-  cropperInfo: 'Lorem ipsum…',
-  sliderTitle: 'Lorem ipsum…',
-  buttonLabel: 'Lorem ipsum…',
+  cropperInfo: 'Move the image…',
+  sliderTitle: 'Zoom…',
+  buttonLabel: 'Choose a file…',
   description: 'Lorem ipsum…',
 
-  onChange: (_fileData) => {},
+  onChange: _fileData => {},
 }

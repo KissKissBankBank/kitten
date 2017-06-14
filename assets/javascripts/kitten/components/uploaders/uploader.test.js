@@ -4,7 +4,7 @@ import { mount } from 'enzyme'
 import { Uploader } from 'kitten/components/uploaders/uploader'
 import Dropzone from 'react-dropzone'
 
-const CustomTheme = props => <div className="custom-theme" />
+const CustomTheme = () => <div className="custom-theme" />
 
 describe('<Uploader />', () => {
   describe('by default', () => {
@@ -21,7 +21,7 @@ describe('<Uploader />', () => {
       })
     })
 
-    it('has default states', () => {
+    it('has a default state', () => {
       expect(component).to.have.state('fileName', null)
     })
 

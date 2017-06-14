@@ -4,7 +4,7 @@ import { ImageCropper } from 'kitten/components/images/image-cropper'
 export const KarlImageCropper = () => {
   const defaultProps = {
     name: 'picture',
-    uploaderErrorLabel: 'You have an error on upload.',
+    uploaderErrorLabel: 'Erreur sur l\'upload du fichier.',
     sliderMin: 0,
     sliderMax: 300,
     label: 'Image de présentation',

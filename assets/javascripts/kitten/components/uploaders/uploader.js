@@ -1,8 +1,6 @@
 import React from 'react'
 import Dropzone from 'react-dropzone'
 
-let dropzoneRef
-
 export class Uploader extends React.Component {
   constructor(props) {
     super(props)
@@ -13,6 +11,7 @@ export class Uploader extends React.Component {
 
     this.handleChangeAcceptedFiles = this.handleChangeAcceptedFiles.bind(this)
     this.handleChangeRejectedFiles = this.handleChangeRejectedFiles.bind(this)
+    this.handleClick = this.handleClick.bind(this)
     this.handleCancel = this.handleCancel.bind(this)
   }
 
@@ -27,6 +26,7 @@ export class Uploader extends React.Component {
       file: file.preview,
       name: file.name,
     })
+
     this.props.onError(false)
   }
 
@@ -37,7 +37,7 @@ export class Uploader extends React.Component {
   }
 
   handleClick() {
-    dropzoneRef.open()
+    this.dropzoneRef.open()
   }
 
   handleCancel() {
@@ -65,13 +65,13 @@ export class Uploader extends React.Component {
   render() {
     return (
       <Dropzone
-        ref={ node => { dropzoneRef = node } }
+        ref={ node => { this.dropzoneRef = node } }
         name={ this.props.name }
         accept={ this.props.acceptedFiles }
         maxSize={ this.props.maxSize }
         onDropAccepted={ this.handleChangeAcceptedFiles }
         onDropRejected={ this.handleChangeRejectedFiles }
-        disableClick={ true }
+        disableClick
         multiple={ false }
         style={ {} }>
         { this.renderTheme() }

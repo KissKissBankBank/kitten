@@ -22,7 +22,7 @@
     }
 
     .cropper-container img {
-      // Avoid margin top issue (Occur only when margin-top <= -height)
+      // Avoid margin top issue (Occurs only when margin-top <= -height)
       display: block;
       min-width: 0 !important;
       max-width: none !important;
@@ -101,7 +101,6 @@
       top: 50%;
       left: 50%;
 
-      // display: block;
       display: none;
 
       width: 0;
