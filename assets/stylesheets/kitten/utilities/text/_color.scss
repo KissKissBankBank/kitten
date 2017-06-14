@@ -14,4 +14,8 @@
   .k-u-color-primary1 {
     color: map-get($k-colors, 'primary-1');
   }
+
+  .k-u-color-error {
+    color: map-get($k-colors, 'error');
+  }
 }
