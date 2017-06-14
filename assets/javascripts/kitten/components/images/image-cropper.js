@@ -129,7 +129,7 @@ export class ImageCropper extends React.Component {
   setCropperHeight() {
     if (this.refs.cropperContainer) {
       const width = domElementHelper.getComputedWidth(this.refs.cropperContainer)
-      const height = width * 9 / 16
+      const height = width / (this.props.aspectRatio)
 
       this.setState({
         cropperWidth: width,
