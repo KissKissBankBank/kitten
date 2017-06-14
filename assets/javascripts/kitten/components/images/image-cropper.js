@@ -54,6 +54,10 @@ export class ImageCropper extends React.Component {
     window.addEventListener('resize', this.setCropperHeight)
   }
 
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.setCropperHeight)
+  }
+
   handleUploaderSuccess(data) {
     this.setState({
       imageSrc: data.file,
