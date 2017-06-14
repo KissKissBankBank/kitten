@@ -141,6 +141,7 @@ module Kitten
             { path: 'components/links/link-list', name: 'Link list' },
             { path: 'components/lists/bullet-list', name: 'Bullet list' },
             { path: 'components/lists/tag-list', name: 'Tag list' },
+            { path: 'components/lines/info-lines', name: 'Info lines' },
           ],
         },
         {
