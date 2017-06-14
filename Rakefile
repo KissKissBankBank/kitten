@@ -41,6 +41,10 @@ task kitten_release: [:sassdoc, :build] do
   sh "git tag v#{Kitten::VERSION}"
   sh 'git push origin master'
   sh 'git push origin --tags'
+  sh 'git checkout styleguide'
+  sh 'git merge --ff-only master'
+  sh 'git push origin styleguide'
+  sh 'git checkout master'
   sh 'npm publish'
   puts
   puts "Done! kitten-components #{Kitten::VERSION} is published! 🚀"
