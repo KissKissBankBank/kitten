@@ -1,4 +1,5 @@
 import React from 'react'
+import classNames from 'classnames'
 import { Line } from 'kitten/components/layout/line'
 import { withTooltip } from 'kitten/hoc/with-tooltip'
 import { ButtonInfoIcon } from 'kitten/components/buttons/button-info-icon'
@@ -14,7 +15,8 @@ export const KarlLineWithTooltip = props => {
       </Line.Item>
       <Line.Item >
         <InfoWithTooltipButtonIcon id="tooltip-2">
-          Lorem ipsum, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+          Lorem ipsum, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua
         </InfoWithTooltipButtonIcon>
       </Line.Item>
     </Line>
@@ -28,7 +30,9 @@ export const KarlLineWithBigHeart = props => {
         Lorem ipsum dolor sit amet.
       </Line.Item>
       <Line.Item>
-        <button className="k-ButtonIcon k-ButtonIcon--hydrogen k-ButtonIcon--big">
+        <button className={ classNames('k-ButtonIcon',
+                                       'k-ButtonIcon--hydrogen',
+                                       'k-ButtonIcon--big') }>
           <HeartIcon className="k-ButtonIcon__svg" />
         </button>
       </Line.Item>
