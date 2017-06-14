@@ -40,6 +40,9 @@ Theme.defaultProps = {
 
 export const SimpleUploader = props => {
   return (
-    <Uploader { ...props } theme={ Theme } />
+    <Uploader
+      { ...props }
+      theme={ Theme }
+    />
   )
 }

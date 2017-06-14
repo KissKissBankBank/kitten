@@ -58,7 +58,8 @@ export class Uploader extends React.Component {
         buttonLabel={ this.props.buttonLabel }
         fileName={ this.state.fileName }
         onClick={ this.handleClick }
-        onCancel={ this.handleCancel } />
+        onCancel={ this.handleCancel }
+      />
     )
   }
 
