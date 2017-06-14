@@ -68,6 +68,9 @@ import { VisaIcon } from 'kitten/components/icons/visa-icon'
 // Layout
 import { Separator } from 'kitten/components/layout/separator'
 
+// Lines
+import { InfoLines } from 'kitten/components/lines/info-lines'
+
 // Links
 import ExternalRichLink from 'kitten/components/links/external-rich-link'
 
@@ -255,6 +258,9 @@ ReactOnRails.register({
 
   // Layout
   Separator,
+
+  // Lines
+  InfoLines,
 
   // Links
   ExternalRichLink,

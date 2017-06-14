@@ -1,0 +1,32 @@
+/// Info lines
+///
+/// @group lines
+///
+/// @example scss - usage
+///
+///   @include k-InfoLines;
+///
+/// @example html
+///
+///   <div class="k-InfoLines">
+///     <div class="k-InfoLines__line">
+///       <div class="k-InfoLines__line__key"> … </div>
+///       <div class="k-InfoLines__line__value"> … </div>
+///     </div>
+///   </div>
+
+@mixin k-InfoLines {
+  .k-InfoLines {
+    border-top: 1px solid map-get($k-colors, 'line-1');
+  }
+
+  .k-InfoLines__line {
+    display: flex;
+    padding: k-px-to-rem(15px);
+    border-bottom: 1px solid map-get($k-colors, 'line-1');
+  }
+
+  .k-InfoLines__line__value {
+    margin-left: auto;
+  }
+}
