@@ -16,7 +16,6 @@
 ///   </div>
 
 @mixin k-InfoLines {
-
   .k-InfoLines {
     border-top: 1px solid map-get($k-colors, 'line-1');
   }
