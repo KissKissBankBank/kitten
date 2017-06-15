@@ -5,9 +5,6 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add `async` and `loadOptions` props to `SelectWithState` component.
-- Fix: Fix display element as a block element (`ButtonImageWithText`, `ButtonImage`,
-       `ButtonWithBadge`, `IconBadge`).
-- Fix: Remove `React.PropTypes` and use `PropTypes` from
 - Feature: Add new `InfoLines` component.
 - Fix: Add `width` attribute on payment button svg tag (fixes firefox bug).
 - Feature: Add `color-error` color text utility.
@@ -34,8 +31,6 @@ Features:
 - Add new `ClockIcon` component.
 - Add new `RightArrowIcon` component.
 - Add config & toolbar to default props `RichTextInput` component.
-- Fix: Fix display element as a block element (`ButtonImageWithText`,
-    `ButtonImage`, `ButtonWithBadge`, `IconBadge`).
 
 Fixes:
 - Remove `React.PropTypes` and use `PropTypes` from
@@ -44,6 +39,8 @@ Fixes:
   [react-prop-types](https://github.com/react-bootstrap/react-prop-types)
   library with
   [prop-types-extra](https://github.com/react-bootstrap/prop-types-extra).
+- Fix display element as a block element (`ButtonImageWithText`,
+  `ButtonImage`, `ButtonWithBadge`, `IconBadge`).
 
 ## [11.11.0] - 2017-05-22
 
