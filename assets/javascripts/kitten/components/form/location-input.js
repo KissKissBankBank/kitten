@@ -1,5 +1,4 @@
 import React from 'react'
-import classNames from 'classnames'
 // Via "https://github.com/kenny-hibino/react-places-autocomplete"
 import PlacesAutocomplete, { geocodeByPlaceId } from 'react-places-autocomplete'
 import { LocationIcon } from 'kitten/components/icons/location-icon'
@@ -84,19 +83,21 @@ export class LocationInput extends React.Component {
           <LocationIcon />
         </div>
 
-        <PlacesAutocomplete classNames={ placesClassNames }
-                            autocompleteItem={ autocompleteItem }
-                            hideLabel={ true }
-                            inputProps={ finalInputProps }
-                            onSelect={ this.handleSelect }
-                            { ...others } />
+        <PlacesAutocomplete
+          classNames={ placesClassNames }
+          autocompleteItem={ autocompleteItem }
+          inputProps={ finalInputProps }
+          onSelect={ this.handleSelect }
+          hideLabel
+          { ...others }
+        />
       </div>
     )
   }
 }
 
 LocationInput.defaultProps = {
-  onChange: function() {},
-  onSelect: function() {},
+  onChange: () => {},
+  onSelect: () => {},
   defaultValue: '',
 }
