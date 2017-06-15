@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Breaking Change: Rename `ResponsiveVideoIframeContainer` component to
   `ResponsiveIframeContainer`.
+- Feature: Add `onSelect` prop to `LocationInput` component.
 - Feature: Add new `InfoLines` component.
 - Feature: Add `color-error` color text utility.
 - Feature: For `xs` media-query, `FormActions` component is placed in columns.

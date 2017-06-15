@@ -1926,7 +1926,7 @@ faye-websocket@~0.11.0:
   dependencies:
     websocket-driver ">=0.5.1"
 
-fbjs@^0.8.4, fbjs@^0.8.9:
+fbjs@^0.8.9:
   version "0.8.12"
   resolved "https://registry.yarnpkg.com/fbjs/-/fbjs-0.8.12.tgz#10b5d92f76d45575fd63a217d4ea02bea2f8ed04"
   dependencies:
@@ -2575,7 +2575,7 @@ kind-of@^3.0.2:
     is-buffer "^1.1.5"
 
 "kitten-components@file:../../..":
-  version "11.11.0"
+  version "12.1.0"
   dependencies:
     autoprefixer "^6.5.3"
     babel-cli "^6.14.0"
@@ -2601,7 +2601,9 @@ kind-of@^3.0.2:
     pubsub-js "^1.5.3"
     react "^15.3.1"
     react-ckeditor-wrapper "^1.0.22"
+    react-cropper "^0.12.0"
     react-dom "^15.3.1"
+    react-dropzone "^3.13.1"
     react-markdown "^2.4.4"
     react-masonry-component "^5.0.3"
     react-places-autocomplete "^3.0.0"
@@ -2761,7 +2763,7 @@ lodash.clonedeep@^4.3.2:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/lodash.clonedeep/-/lodash.clonedeep-4.5.0.tgz#e23f3f9c4f8fbdde872529c1071857a086e5ccef"
 
-lodash.debounce@^4.0.6:
+lodash.debounce@^4.0.6, lodash.debounce@^4.0.8:
   version "4.0.8"
   resolved "https://registry.yarnpkg.com/lodash.debounce/-/lodash.debounce-4.0.8.tgz#82d79bff30a67c4005ffd5e2515300ad9ca4d7af"
 
@@ -3896,11 +3898,19 @@ react-on-rails@~6.10.1:
   version "6.10.1"
   resolved "https://registry.yarnpkg.com/react-on-rails/-/react-on-rails-6.10.1.tgz#fea46416d138b56472f1ea753c58ecfe5ebaab41"
 
-react-places-autocomplete@^3.0.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/react-places-autocomplete/-/react-places-autocomplete-3.1.0.tgz#7a108b8a8a0ab5da9686c0ef9684772a435b56af"
+react-places-autocomplete@^5.0.0:
+  version "5.3.1"
+  resolved "https://registry.yarnpkg.com/react-places-autocomplete/-/react-places-autocomplete-5.3.1.tgz#f37e737eec05c53d8a9ba38b0106bac522f3ee99"
   dependencies:
-    react "15.4.2"
+    lodash.debounce "^4.0.8"
+    prop-types "^15.5.8"
+    react "^15.3.0"
+
+react-prop-types@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/react-prop-types/-/react-prop-types-0.4.0.tgz#f99b0bfb4006929c9af2051e7c1414a5c75b93d0"
+  dependencies:
+    warning "^3.0.0"
 
 react-select@^1.0.0-rc.1:
   version "1.0.0-rc.3"
@@ -3916,15 +3926,7 @@ react-tooltip@^3.2.2:
     classnames "^2.2.0"
     prop-types "^15.5.8"
 
-react@15.4.2:
-  version "15.4.2"
-  resolved "https://registry.yarnpkg.com/react/-/react-15.4.2.tgz#41f7991b26185392ba9bae96c8889e7e018397ef"
-  dependencies:
-    fbjs "^0.8.4"
-    loose-envify "^1.1.0"
-    object-assign "^4.1.0"
-
-react@^15.3.1:
+react@^15.3.0, react@^15.3.1:
   version "15.5.4"
   resolved "https://registry.yarnpkg.com/react/-/react-15.5.4.tgz#fa83eb01506ab237cdc1c8c3b1cea8de012bf047"
   dependencies:
