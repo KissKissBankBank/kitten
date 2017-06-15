@@ -9,7 +9,7 @@
 //      { label: 'Cat',
 //        children: [{ label: 'A' }, { label: 'B' }]
 //      } />
-//
+
 import React from 'react'
 import classNames from 'classnames'
 import Select from 'react-select'
@@ -42,7 +42,17 @@ class SelectWithState extends React.Component {
   }
 
   render() {
-    const { value, onChange, className, tiny, error, valid, disabled, ...other } = this.props
+    const {
+      value,
+      onChange,
+      className,
+      tiny,
+      error,
+      valid,
+      disabled,
+      ...other,
+    } = this.props
+
     const selectClassName = classNames(
       'k-Select',
       className,
@@ -67,12 +77,18 @@ class SelectWithState extends React.Component {
 }
 
 class SelectWithMultiLevel extends React.Component {
+  constructor(props) {
+    super(props)
+
+    this.loadAndFlattenOptions = this.loadAndFlattenOptions.bind(this)
+  }
+
   // Turns a hierarchy of options with `children` into a flat array
   // of options with a `level` of 1, 2 or null.
-  flattenedOptions() {
+  flattenedOptions(rawOptions = this.props.options) {
     const options = []
 
-    this.props.options.map(option => {
+    rawOptions.map(option => {
       if (option.children) {
         option.level = 1
         options.push(option)
@@ -88,12 +104,25 @@ class SelectWithMultiLevel extends React.Component {
     return options
   }
 
+  loadAndFlattenOptions(input, callback) {
+    this.props.loadOptions(
+      input,
+      (error, options) => {
+        if (!error) {
+          callback(error, { options: this.flattenOptions(options) })
+        } else {
+          callback(error, { options })
+        }
+      }
+    )
+  }
+
   // React-Select allows changing the way options are rendered.
   optionRenderer({ level, label }) {
     if (!level) return label
 
     return (
-      <span className={ 'k-Select__option--level' + level }>
+      <span className={ `k-Select__option--level${ level }` }>
         { label }
       </span>
     )
@@ -102,19 +131,26 @@ class SelectWithMultiLevel extends React.Component {
   render() {
     let inputProps = this.props.inputProps
 
-    if (this.props.labelText && !inputProps['aria-labelledby'])
+    if (this.props.labelText && !inputProps['aria-labelledby']) {
       inputProps['aria-labelledby'] = this.props.id
+    }
 
-    return <Select optionRenderer={ this.optionRenderer }
-                   { ...this.props }
-                   inputProps={ inputProps }
-                   options={ this.flattenedOptions() } />
+    const Component = this.props.async ? Select.Async : Select
+
+    return <Component
+      { ...this.props }
+      optionRenderer={ this.optionRenderer }
+      inputProps={ inputProps }
+      options={ this.flattenedOptions() }
+      loadOptions={ this.loadAndFlattenOptions }
+    />
   }
 }
 
 SelectWithState.defaultProps = {
-  onChange: function() {},
-  onInputChange: function() {},
+  onChange: () => {},
+  onInputChange: () => {},
+  loadOptions: () => {},
   clearable: false,
   searchable: false,
   deleteRemoves: false,
@@ -126,6 +162,7 @@ SelectWithState.defaultProps = {
   tiny: false,
   name: null,
   inputProps: {},
+  async: false,
 }
 
 export default SelectWithState
