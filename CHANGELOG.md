@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `async` and `loadOptions` props to `SelectWithState` component.
 - Fix: Fix display element as a block element (`ButtonImageWithText`, `ButtonImage`,
        `ButtonWithBadge`, `IconBadge`).
 - Fix: Remove `React.PropTypes` and use `PropTypes` from
