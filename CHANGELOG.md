@@ -4,10 +4,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking Change: Reword `ResponsiveVideoIframeContainer` component to
+  `ResponsiveIframeContainer`.
 - Feature: Add new `InfoLines` component.
-- Fix: Add `width` attribute on payment button svg tag (fixes firefox bug).
 - Feature: Add `color-error` color text utility.
 - Feature: For `xs` media-query, `FormActions` component is placed in columns.
+- Fix: Add `width` attribute on payment button svg tag (fixes firefox bug).
 - Fix: Add `k-ButtonIcon__svg` class on `IconBadge` component.
 - Fix: Fix IOS style's button and remove shadow in `TextInput`.
 
@@ -17,7 +19,7 @@ Feature:
 - Create `ResponsiveVideoIframeContainer` component for responsive video iframe.
   The component is used with embedly generated iframe.
 
-Fixies:
+Fixes:
 - Remove `color-error` label on `RadioButton` and `Checkbox` components.
 - Add `box-shadow: none` property on `TextInput`.
 - Fix error with `Object.assign` in `RichTextInput` component to prevent
