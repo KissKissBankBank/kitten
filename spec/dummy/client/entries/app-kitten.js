@@ -17,6 +17,7 @@ import { TagButton } from 'kitten/components/buttons/tag-button'
 
 // Cards
 import { ProjectCard } from 'kitten/components/cards/project-card'
+import { ProjectCreatorCard } from 'kitten/components/cards/project-creator-card'
 
 // Dev
 import { DevGrid } from 'kitten/components/dev/dev-grid'
@@ -51,6 +52,7 @@ import { KarlSideLayout } from 'kitten/karl/layout/side-layout'
 
 // Icons
 import GrabberIcon from 'kitten/components/icons/grabber-icon'
+import { RightArrowIcon } from 'kitten/components/icons/right-arrow-icon'
 import { CbIcon } from 'kitten/components/icons/cb-icon'
 import { MenuIcon } from 'kitten/components/icons/menu-icon'
 import { HeartIcon } from 'kitten/components/icons/heart-icon'
@@ -58,6 +60,7 @@ import { InformationIcon } from 'kitten/components/icons/information-icon'
 import { KissKissBankBankLogoIcon } from 'kitten/components/icons/kisskissbankbanklogo-icon'
 import { FacebookIcon } from 'kitten/components/icons/facebook-icon'
 import { LinkedinIcon } from 'kitten/components/icons/linkedin-icon'
+import { ClockIcon } from 'kitten/components/icons/clock-icon'
 import { LocationIcon } from 'kitten/components/icons/location-icon'
 import { MasterCardIcon } from 'kitten/components/icons/mastercard-icon'
 import { TwitterIcon } from 'kitten/components/icons/twitter-icon'
@@ -65,6 +68,9 @@ import { VisaIcon } from 'kitten/components/icons/visa-icon'
 
 // Layout
 import { Separator } from 'kitten/components/layout/separator'
+
+// Lines
+import { InfoLines } from 'kitten/components/lines/info-lines'
 
 // Links
 import ExternalRichLink from 'kitten/components/links/external-rich-link'
@@ -198,6 +204,7 @@ ReactOnRails.register({
 
   // Cards
   ProjectCard,
+  ProjectCreatorCard,
 
   // Dev
   Checkbox,
@@ -235,6 +242,7 @@ ReactOnRails.register({
   GridCol,
 
   // Icons
+  RightArrowIcon,
   CbIcon,
   MenuIcon,
   GrabberIcon,
@@ -243,6 +251,7 @@ ReactOnRails.register({
   HeartIcon,
   FacebookIcon,
   LinkedinIcon,
+  ClockIcon,
   LocationIcon,
   MasterCardIcon,
   TwitterIcon,
@@ -250,6 +259,9 @@ ReactOnRails.register({
 
   // Layout
   Separator,
+
+  // Lines
+  InfoLines,
 
   // Links
   ExternalRichLink,

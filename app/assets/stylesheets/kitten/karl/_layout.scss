@@ -46,3 +46,9 @@ $karl-color-4: map-get($k-colors, 'primary-4');
     margin-right: auto;
   }
 }
+
+.karl-FormActions__button {
+  @include k-media-max('s') {
+    margin-bottom: k-px-to-rem(20px);
+  }
+}

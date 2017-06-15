@@ -3,9 +3,11 @@ import classNames from 'classnames'
 
 export class FormActions extends React.Component {
   render() {
+    const { className, children, ...others } = this.props
+
     return (
-      <div className={ classNames('k-FormActions', this.props.className) }>
-        { this.props.children }
+      <div className={ classNames('k-FormActions', className) } { ...others }>
+        { children }
       </div>
     )
   }

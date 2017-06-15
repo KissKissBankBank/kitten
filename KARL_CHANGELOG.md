@@ -4,8 +4,24 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add favicon.
-- Fix: Center components in `xs` with `karl-u-align-center@xs-down` class.
+- Fix: Add `karl-FormActions__button` class and update `KarlFormActions`
+       component.
+- Fix: Center position `IconBadge` component.
+- Feature: Release the style guide when releasing a new Kitten version.
+
+## [12.1.0] - 2017-06-08
+
+Fix:
+- Add `k-u-hidden@s-down` class on component hidden s.
+
+## [12.0.0] - 2017-05-30
+
+Features:
+- Add new `ProjectCreatorCard` component.
+- Add favicon.
+
+Fix:
+- Center components in `xs` with `karl-u-align-center@xs-down` class.
 
 ## [11.11.0] - 2017-05-19
 

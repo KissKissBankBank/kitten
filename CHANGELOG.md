@@ -8,8 +8,39 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fix: Fix display element as a block element (`ButtonImageWithText`, `ButtonImage`,
        `ButtonWithBadge`, `IconBadge`).
 - Fix: Remove `React.PropTypes` and use `PropTypes` from
+- Feature: Add new `InfoLines` component.
+- Fix: Add `width` attribute on payment button svg tag (fixes firefox bug).
+- Feature: Add `color-error` color text utility.
+- Feature: For `xs` media-query, `FormActions` component is placed in columns.
+- Fix: Add `k-ButtonIcon__svg` class on `IconBadge` component.
+- Fix: Fix IOS style's button and remove shadow in `TextInput`.
+
+## [12.1.0] - 2017-06-08
+
+Feature:
+- Create `ResponsiveVideoIframeContainer` component for responsive video iframe.
+  The component is used with embedly generated iframe.
+
+Fixies:
+- Remove `color-error` label on `RadioButton` and `Checkbox` components.
+- Add `box-shadow: none` property on `TextInput`.
+- Fix error with `Object.assign` in `RichTextInput` component to prevent
+  error in React on Rails *(`Object function […] has no method 'assign'`)*.
+
+## [12.0.0] - 2017-05-30
+
+Features:
+- Add new `ProjectCreatorCard` component.
+- Add new `ClockIcon` component.
+- Add new `RightArrowIcon` component.
+- Add config & toolbar to default props `RichTextInput` component.
+- Fix: Fix display element as a block element (`ButtonImageWithText`,
+    `ButtonImage`, `ButtonWithBadge`, `IconBadge`).
+
+Fixes:
+- Remove `React.PropTypes` and use `PropTypes` from
   [prop-types](https://www.npmjs.com/package/prop-types) library instead.
-- Fix: Update deprecated
+- Update deprecated
   [react-prop-types](https://github.com/react-bootstrap/react-prop-types)
   library with
   [prop-types-extra](https://github.com/react-bootstrap/prop-types-extra).
