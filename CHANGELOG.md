@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `onSelect` prop to `LocationInput` component.
 - Fix: Fix the tiny option on Select.
 
 ## [11.4.0] - 2017-05-04
