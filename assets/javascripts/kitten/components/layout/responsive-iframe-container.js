@@ -1,10 +1,10 @@
 import React from 'react'
 import classNames from 'classnames'
 
-export const ResponsiveVideoIframeContainer =
+export const ResponsiveIframeContainer =
   ({ ratio, style, className, ...props }) => {
     const componentClassName = classNames(
-      'k-ResponsiveVideoIframeContainer',
+      'k-ResponsiveIframeContainer',
       className
     )
 
@@ -20,7 +20,7 @@ export const ResponsiveVideoIframeContainer =
     )
   }
 
-ResponsiveVideoIframeContainer.defaultProps = {
+ResponsiveIframeContainer.defaultProps = {
   ratio: '67.5',
   children: <iframe />,
 }

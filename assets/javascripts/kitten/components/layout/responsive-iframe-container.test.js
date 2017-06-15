@@ -1,19 +1,19 @@
 import React from 'react'
 import { expect } from 'chai'
 import { shallow } from 'enzyme'
-import { ResponsiveVideoIframeContainer } from
-  'kitten/components/layout/responsive-video-iframe-container'
+import { ResponsiveIframeContainer } from
+  'kitten/components/layout/responsive-iframe-container'
 
-describe('<ResponsiveVideoIframeContainer />', () => {
+describe('<ResponsiveIframeContainer />', () => {
   describe('by default', () => {
-    const component = shallow(<ResponsiveVideoIframeContainer />)
+    const component = shallow(<ResponsiveIframeContainer />)
 
     it('is a <div />', () => {
       expect(component).to.have.tagName('div')
     })
 
     it('has good class', () => {
-      expect(component).to.have.className('k-ResponsiveVideoIframeContainer')
+      expect(component).to.have.className('k-ResponsiveIframeContainer')
     })
 
     it('has a ratio of 67.5%', () => {
@@ -25,7 +25,7 @@ describe('<ResponsiveVideoIframeContainer />', () => {
 
   describe('with className prop', () => {
     const component = shallow(
-      <ResponsiveVideoIframeContainer className="custom__class" />
+      <ResponsiveIframeContainer className="custom__class" />
     )
 
     it('has a custom class', () => {
@@ -35,9 +35,9 @@ describe('<ResponsiveVideoIframeContainer />', () => {
 
   describe('with children prop', () => {
     const component = shallow(
-      <ResponsiveVideoIframeContainer>
+      <ResponsiveIframeContainer>
         <iframe />
-      </ResponsiveVideoIframeContainer>
+      </ResponsiveIframeContainer>
     )
 
     it('has an iframe as child', () => {
@@ -47,7 +47,7 @@ describe('<ResponsiveVideoIframeContainer />', () => {
 
   describe('with ratio prop', () => {
     const component = shallow(
-      <ResponsiveVideoIframeContainer ratio='42'/>
+      <ResponsiveIframeContainer ratio='42'/>
     )
 
     it('has a ratio of 42%', () => {

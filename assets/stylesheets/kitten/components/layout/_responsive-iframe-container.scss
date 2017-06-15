@@ -4,18 +4,18 @@
 ///
 /// @example scss - Usage
 ///
-///   @include k-ResponsiveVideoIframeContainer;
+///   @include k-ResponsiveIframeContainer;
 ///
 /// @example html
 ///
-///   <div class="k-ResponsiveVideoIframeContainer">
+///   <div class="k-ResponsiveIframeContainer">
 ///     <iframe />
 ///   </div>
 ///
 /// See also: http://docs.embed.ly/docs/responsive-embeds
 
-@mixin k-ResponsiveVideoIframeContainer {
-  .k-ResponsiveVideoIframeContainer {
+@mixin k-ResponsiveIframeContainer {
+  .k-ResponsiveIframeContainer {
     position: relative;
     overflow: hidden;
     // iframe ratio.
