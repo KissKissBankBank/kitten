@@ -4,15 +4,22 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Breaking Change: Rename `ResponsiveVideoIframeContainer` component to
+## [13.0.0] - 2017-06-15
+
+Breaking change:
+- Rename `ResponsiveVideoIframeContainer` component to
   `ResponsiveIframeContainer`.
-- Feature: Add `onSelect` prop to `LocationInput` component.
-- Feature: Add new `InfoLines` component.
-- Feature: Add `color-error` color text utility.
-- Feature: For `xs` media-query, `FormActions` component is placed in columns.
-- Fix: Add `width` attribute on payment button svg tag (fixes firefox bug).
-- Fix: Add `k-ButtonIcon__svg` class on `IconBadge` component.
-- Fix: Fix IOS style's button and remove shadow in `TextInput`.
+
+Features:
+- Add `onSelect` prop to `LocationInput` component.
+- Add new `InfoLines` component.
+- Add `color-error` color text utility.
+- For `xs` media-query, `FormActions` component is placed in columns.
+
+Fixes:
+- Add `width` attribute on payment button svg tag (fixes firefox bug).
+- Add `k-ButtonIcon__svg` class on `IconBadge` component.
+- Fix IOS style's button and remove shadow in `TextInput`.
 
 ## [12.1.0] - 2017-06-08
 
