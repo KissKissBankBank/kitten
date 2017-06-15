@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Breaking Change: Reword `ResponsiveVideoIframeContainer` component to
+- Breaking Change: Rename `ResponsiveVideoIframeContainer` component to
   `ResponsiveIframeContainer`.
 - Feature: Add new `InfoLines` component.
 - Feature: Add `color-error` color text utility.
