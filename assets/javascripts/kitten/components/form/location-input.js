@@ -1,7 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 // Via "https://github.com/kenny-hibino/react-places-autocomplete"
-import PlacesAutocomplete from 'react-places-autocomplete'
+import PlacesAutocomplete, { geocodeByPlaceId } from 'react-places-autocomplete'
 import { LocationIcon } from 'kitten/components/icons/location-icon'
 import { Label } from 'kitten/components/form/label'
 
@@ -27,13 +27,13 @@ export class LocationInput extends React.Component {
   }
 
   handleSelect(address, placeId) {
-    const input   = $('#PlacesAutocomplete__root input')[0]
-    const service = new google.maps.places.PlacesService(input);
+    const service = geocodeByPlaceId(placeId)
 
-    service.getDetails(
-      { placeId: placeId },
-      (place, status) => {
-        if (status == google.maps.places.PlacesServiceStatus.OK) {
+    service
+      .then(results => {
+        const place = results[0]
+
+        if (place) {
           const number = place.address_components[0].long_name
           const street = place.address_components[1].long_name
           const value = `${number} ${street}`
@@ -41,8 +41,7 @@ export class LocationInput extends React.Component {
           this.setState({ address: value })
           this.props.onSelect(address, placeId, place)
         }
-      }
-    )
+      })
   }
 
   render() {
