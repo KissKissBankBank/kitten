@@ -10,5 +10,6 @@ type = ENV["REACT_ON_RAILS_ENV"] == 'HOT' ? 'non_webpack' : 'static'
 Rails.application.config.assets.precompile += [
   "application_#{type}.js",
   "application_#{type}.css",
+  "favicon.ico",
   /\.svg$/,
 ]

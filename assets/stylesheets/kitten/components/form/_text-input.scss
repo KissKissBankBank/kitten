@@ -69,6 +69,8 @@
     color: $color;
     transition: color .2s, border-color .2s;
 
+    appearance: none;
+
     &::placeholder {
       color: $color-placeholder;
     }
@@ -111,6 +113,7 @@
     &.is-error {
       border-color: $border-is-error;
       color: $color-is-error;
+      box-shadow: none;
 
       &:focus {
         border-color: $border-focus;

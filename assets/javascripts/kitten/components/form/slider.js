@@ -1,6 +1,7 @@
 // TODO move to the "sliders" group (breaking change)
 
 import React from 'react'
+import PropTypes from 'prop-types'
 import { SliderBar } from 'kitten/components/sliders/slider-bar'
 import { sliderKeyDownHandler }
   from 'kitten/handlers/sliders/slider-key-down-handler'
@@ -80,29 +81,29 @@ export default class Slider extends React.Component {
 
 Slider.propTypes = {
   // Starting value (e.g. 50)
-  initialValue: React.PropTypes.number,
+  initialValue: PropTypes.number,
 
   // Minimum possible value (e.g. 0)
-  min: React.PropTypes.number,
+  min: PropTypes.number,
 
   // Maximum possible value (e.g. 100)
-  max: React.PropTypes.number,
+  max: PropTypes.number,
 
   // Space between each possible value when updated by keyboard (e.g. 1)
-  step: React.PropTypes.number,
+  step: PropTypes.number,
 
   // Input name, if needed (e.g. "amount")
-  name: React.PropTypes.string,
+  name: PropTypes.string,
 
   // Callback when the value changes (clicked or while dragging)
   // passes the current value and percentage as an argument
   //
   // You should use the given value and pass it back to the Slider props
   // to re-render the Slider value at the correct position.
-  onChange: React.PropTypes.func,
+  onChange: PropTypes.func,
 
   // Callback when we click, touch or focus
-  onAction: React.PropTypes.func,
+  onAction: PropTypes.func,
 }
 
 Slider.defaultProps = {

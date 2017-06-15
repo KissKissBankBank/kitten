@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Dropdown from 'kitten/components/dropdowns/dropdown'
 import DropdownButton from 'kitten/components/dropdowns/dropdown-button'
 import domElementHelper from 'kitten/helpers/dom/element-helper'
@@ -198,13 +199,13 @@ class PhoneDropdown extends React.Component {
 }
 
 PhoneDropdown.propTypes = {
-  buttonClassName: React.PropTypes.string,
-  positionedWith: React.PropTypes.func,
-  positionedWithBorder: React.PropTypes.bool,
-  positionedOn: React.PropTypes.string,
-  refreshEvents: React.PropTypes.array,
-  closeEvents: React.PropTypes.array,
-  onPositionUpdate: React.PropTypes.func,
+  buttonClassName: PropTypes.string,
+  positionedWith: PropTypes.func,
+  positionedWithBorder: PropTypes.bool,
+  positionedOn: PropTypes.string,
+  refreshEvents: PropTypes.array,
+  closeEvents: PropTypes.array,
+  onPositionUpdate: PropTypes.func,
 }
 
 PhoneDropdown.defaultProps = {

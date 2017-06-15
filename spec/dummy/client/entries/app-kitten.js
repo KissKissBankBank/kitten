@@ -17,6 +17,7 @@ import { TagButton } from 'kitten/components/buttons/tag-button'
 
 // Cards
 import { ProjectCard } from 'kitten/components/cards/project-card'
+import { ProjectCreatorCard } from 'kitten/components/cards/project-creator-card'
 
 // Dev
 import { DevGrid } from 'kitten/components/dev/dev-grid'
@@ -27,10 +28,13 @@ import DropdownButton from 'kitten/components/dropdowns/dropdown-button'
 
 // Form
 import { Checkbox } from 'kitten/components/form/checkbox'
+import { CheckboxSet } from 'kitten/components/form/checkbox-set'
 import { FormAmountAndCurrency } from 'kitten/components/form/form-amount-and-currency'
 import { FormPhoneNumber } from 'kitten/components/form/form-phone-number'
 import { Label } from 'kitten/components/form/label'
 import { RadioButton } from 'kitten/components/form/radio-button'
+import { RadioButtonSet } from 'kitten/components/form/radio-button-set'
+import { RichTextInput } from 'kitten/components/form/rich-text-input'
 import Search from 'kitten/components/form/search'
 import Select from 'react-select'
 import SelectWithState from 'kitten/components/form/select-with-state'
@@ -48,23 +52,31 @@ import { KarlSideLayout } from 'kitten/karl/layout/side-layout'
 
 // Icons
 import GrabberIcon from 'kitten/components/icons/grabber-icon'
+import { RightArrowIcon } from 'kitten/components/icons/right-arrow-icon'
+import { CbIcon } from 'kitten/components/icons/cb-icon'
 import { MenuIcon } from 'kitten/components/icons/menu-icon'
 import { HeartIcon } from 'kitten/components/icons/heart-icon'
 import { InformationIcon } from 'kitten/components/icons/information-icon'
 import { KissKissBankBankLogoIcon } from 'kitten/components/icons/kisskissbankbanklogo-icon'
-import { VisaIcon } from 'kitten/components/icons/visa-icon'
-import { LocationIcon } from 'kitten/components/icons/location-icon'
 import { FacebookIcon } from 'kitten/components/icons/facebook-icon'
-import { TwitterIcon } from 'kitten/components/icons/twitter-icon'
 import { LinkedinIcon } from 'kitten/components/icons/linkedin-icon'
+import { ClockIcon } from 'kitten/components/icons/clock-icon'
+import { LocationIcon } from 'kitten/components/icons/location-icon'
+import { MasterCardIcon } from 'kitten/components/icons/mastercard-icon'
+import { TwitterIcon } from 'kitten/components/icons/twitter-icon'
+import { VisaIcon } from 'kitten/components/icons/visa-icon'
 
 // Layout
 import { Separator } from 'kitten/components/layout/separator'
+
+// Lines
+import { InfoLines } from 'kitten/components/lines/info-lines'
 
 // Links
 import ExternalRichLink from 'kitten/components/links/external-rich-link'
 
 // Lists
+import { BulletList } from 'kitten/components/lists/bullet-list'
 import NavList from 'kitten/components/lists/nav-list'
 
 // Meters
@@ -111,10 +123,7 @@ import { KarlAutoTriggerPopover }
 import { KarlAutoTriggerCallToActionPopover }
   from 'karl/components/popovers/auto-trigger-call-to-action-popover'
 import { KarlLoudspeakerPopover } from 'karl/components/popovers/loudspeaker-popover'
-import { KarlImageExternalRichLink,
-         KarlSvgExternalRichLink } from 'kitten/karl/molecules/external-rich-link'
-import { KarlSimpleDropdown,
-         KarlPlatformSwitch,
+import { KarlPlatformSwitch,
          KarlUserMenuDropdown } from 'kitten/karl/organisms/dropdown'
 import { KarlHeader,
          KarlHeaderWithSearchInput,
@@ -161,7 +170,7 @@ import { KarlButtonIconHeart,
        } from 'kitten/karl/buttons/button-icon'
 import { KarlLineWithTooltip,
          KarlLineWithBigHeart } from 'kitten/karl/layout/line'
-import { KarlPaymentButton } from 'kitten/karl/buttons/payment-button'
+import { KarlPaymentButtons } from 'kitten/karl/buttons/payment-button'
 import { KarlStaticTooltip } from 'kitten/karl/tooltips/static-tooltip'
 import { KarlRandomProgress } from 'kitten/karl/meters/random-progress'
 import { KarlMakerWhoAmIStep } from 'app/maker/who-am-i/components/container'
@@ -173,9 +182,11 @@ import { KarlLegoGrid } from 'kitten/karl/grid/lego-grid'
 import { KarlTagList } from 'kitten/karl/lists/tag-list'
 import { KarlCard } from 'kitten/karl/cards/card'
 import { KarlMenuHeader } from 'kitten/karl/headers/karl-header'
+import { KarlGithubRibbon } from 'kitten/karl/headers/karl-github-ribbon'
 import { KarlMenu,
          KarlMenuContent } from 'kitten/karl/menus/karl-menu'
 import { KarlBrowsing } from 'app/browsing/browsing'
+import { KarlSeparator } from 'kitten/karl/layout/separator'
 
 ReactOnRails.register({
   // Box
@@ -193,9 +204,11 @@ ReactOnRails.register({
 
   // Cards
   ProjectCard,
+  ProjectCreatorCard,
 
   // Dev
   Checkbox,
+  CheckboxSet,
   DevGrid,
 
   // Dropdowns
@@ -210,7 +223,9 @@ ReactOnRails.register({
   Label,
   LocationInput,
   RadioButton,
+  RadioButtonSet,
   ReactTooltip,
+  RichTextInput,
   Slider,
   Search,
   Select,
@@ -227,24 +242,32 @@ ReactOnRails.register({
   GridCol,
 
   // Icons
+  RightArrowIcon,
+  CbIcon,
   MenuIcon,
   GrabberIcon,
   InformationIcon,
   KissKissBankBankLogoIcon,
   HeartIcon,
-  VisaIcon,
-  LocationIcon,
   FacebookIcon,
-  TwitterIcon,
   LinkedinIcon,
+  ClockIcon,
+  LocationIcon,
+  MasterCardIcon,
+  TwitterIcon,
+  VisaIcon,
 
   // Layout
   Separator,
+
+  // Lines
+  InfoLines,
 
   // Links
   ExternalRichLink,
 
   // Lists
+  BulletList,
   NavList,
 
   // Meters
@@ -302,9 +325,6 @@ ReactOnRails.register({
   KarlLineWithTooltip,
   KarlLineWithBigHeart,
   KarlIconBadgeWithSvg,
-  KarlImageExternalRichLink,
-  KarlSvgExternalRichLink,
-  KarlSimpleDropdown,
   KarlPlatformSwitch,
   KarlUserMenuDropdown,
   KarlHeader,
@@ -338,7 +358,7 @@ ReactOnRails.register({
   KarlParagraphTertiary,
   KarlParagraphQuaternary,
   KarlParagraphWithLink,
-  KarlPaymentButton,
+  KarlPaymentButtons,
   KarlRandomProgress,
   KarlMakerWhoAmIStep,
   KarlLegoGrid,
@@ -348,4 +368,6 @@ ReactOnRails.register({
   KarlMenu,
   KarlMenuContent,
   KarlBrowsing,
+  KarlGithubRibbon,
+  KarlSeparator,
 })

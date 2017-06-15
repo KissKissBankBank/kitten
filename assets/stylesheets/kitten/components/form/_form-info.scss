@@ -55,6 +55,9 @@
   .k-FormInfo__error {
     @include k-typographyFont($font-error);
     @include k-typographyFontSize($font-size-error);
+
+    margin-top: k-px-to-rem(5px);
+
     color: $color-error;
   }
 }

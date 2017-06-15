@@ -4,7 +4,75 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Remove country in `areaOptions` and `FormPhoneNumber`.
+- Fix: Add `karl-FormActions__button` class and update `KarlFormActions`
+       component.
+- Fix: Center position `IconBadge` component.
+- Feature: Release the style guide when releasing a new Kitten version.
+
+## [12.1.0] - 2017-06-08
+
+Fix:
+- Add `k-u-hidden@s-down` class on component hidden s.
+
+## [12.0.0] - 2017-05-30
+
+Features:
+- Add new `ProjectCreatorCard` component.
+- Add favicon.
+
+Fix:
+- Center components in `xs` with `karl-u-align-center@xs-down` class.
+
+## [11.11.0] - 2017-05-19
+
+No changes.
+
+## [11.10.0] - 2017-05-19
+
+Features:
+- Add GitHub ribbon `KarlGithubRibbon` component.
+- Use `BulletList` React component and add `big` version.
+
+Fixes:
+- Repairs `HorizontalNav` component.
+- Add `<Grid>` and `<GridCol>` on `karl-header`.
+- Center components in size `xs`.
+
+## [11.9.0] - 2017-05-18
+
+Feature:
+- Add `KarlSeparator` component.
+
+## [11.8.1] - 2017-05-17
+
+No changes.
+
+## [11.8.0] - 2017-05-17
+
+No changes.
+
+## [11.7.0] - 2017-05-15
+
+Feature:
+- Add `CheckboxSet` & `RadioButtonSet` examples.
+
+## [11.6.0] - 2017-05-15
+
+Features:
+- Update `ProjectCard` example with tooltip.
+- Add `TagButton` with large word example.
+
+Fixes:
+- Update components text.
+- Remove `Line` and `Line.Item` on `KarlPaymentButtons` example.
+- `Hero` example relooking.
+- Update `UserMenu` and `PlatformSwitch` components with `dropdown` component.
+- Remove `ExternalRichLink` example.
+
+## [11.5.0] - 2017-05-09
+
+Fix:
+- Remove country in `areaOptions` and `FormPhoneNumber`.
 
 ## [11.4.0] - 2017-05-04
 

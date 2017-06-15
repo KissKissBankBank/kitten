@@ -51,5 +51,5 @@ export class TagList extends React.Component {
 TagList.defaultProps = {
   className: null,
   tiny: false,
-  items: [],
+  items: [], // Eg: [{ key: …, item: … }]
 }

@@ -1,14 +1,15 @@
 {
   "name": "kitten-example",
   "version": "1.0.0",
+  "license": "MIT",
   "scripts": {
-    "postinstall": "../bin/npm-link",
+    "postinstall": "../bin/link-libraries",
     "build:dev": "webpack -w --config webpack.client.build.babel.js",
     "build": "webpack --config webpack.client.build.babel.js",
     "hot-assets": "babel-node bin/webpack-dev-server.js"
   },
   "dependencies": {
-    "kitten-components": "file:../../../../kitten",
+    "kitten-components": "file:../../..",
     "kitten-launcher": "^1.0.0",
     "react-on-rails": "~6.10.1"
   }

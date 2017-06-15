@@ -71,7 +71,6 @@ module Kitten
             { path: 'components/buttons/image-button', name: 'Image button' },
             { path: 'components/buttons/image-button-with-text', name: 'Image button with text' },
             { path: 'components/buttons/tag-button', name: 'Tag button' },
-            { path: 'components/buttons/payment-button', name: 'Payment button' },
             { path: 'components/buttons/button-with-badge', name: 'Button with badge' },
           ],
         },
@@ -90,8 +89,6 @@ module Kitten
             { path: 'components/form/switch', name: 'Switch' },
             { path: 'components/form/slider', name: 'Slider' },
             { path: 'components/form/search-input', name: 'Search input' },
-            { path: 'components/form/form-actions', name: 'Form actions' },
-            { path: 'components/form/form-row', name: 'Form row' },
             { path: 'components/form/form-info', name: 'Form info' },
             { path: 'components/form/form-amount-and-currency', name: 'Form amount and currency' },
             { path: 'components/form/form-phone-number', name: 'Form phone number' },
@@ -107,7 +104,6 @@ module Kitten
             { path: 'components/navigation/platform-switch', name: 'Plateform switch' },
             { path: 'components/headers/header', name: 'Header' },
             { path: 'components/steppers/stepper', name: 'Stepper' },
-            { path: 'components/dropdowns/dropdown', name: 'Dropdown' },
           ],
         },
         {
@@ -117,7 +113,7 @@ module Kitten
             { path: 'components/notifications/alert', name: 'Alert' },
             { path: 'components/notifications/badge', name: 'Badge' },
             { path: 'components/notifications/icon-badge', name: 'Icon badge' },
-            { path: 'components/tours/tour', name: 'Tour' },
+            { path: 'components/tours/tour', name: 'Tour', hidden_on_s: true },
           ],
         },
         {
@@ -127,7 +123,7 @@ module Kitten
             { path: 'components/meters/progress', name: 'Progress' },
             { path: 'components/simulators/loan-simulator', name: 'Loan simulator' },
             { path: 'components/teaser/teaser', name: 'Teaser' },
-            { path: 'components/popovers/popover', name: 'Popover' },
+            { path: 'components/popovers/popover', name: 'Popover', hidden_on_s: true },
           ],
         },
         {
@@ -141,10 +137,10 @@ module Kitten
             { path: 'components/testimonies/testimony', name: 'Testimony' },
             { path: 'components/testimonies/testimony-list', name: 'Testimony list' },
             { path: 'components/titles/title-with-actions', name: 'Title with actions' },
-            { path: 'components/links/external-rich-link', name: 'External rich link' },
             { path: 'components/links/link-list', name: 'Link list' },
             { path: 'components/lists/bullet-list', name: 'Bullet list' },
             { path: 'components/lists/tag-list', name: 'Tag list' },
+            { path: 'components/lines/info-lines', name: 'Info lines' },
           ],
         },
         {
@@ -156,6 +152,7 @@ module Kitten
             { path: 'components/box/link-box-with-icon', name: 'Link box with icon' },
             { path: 'components/tooltips/tooltip', name: 'Tooltip' },
             { path: 'components/tooltips/static-tooltip', name: 'Static tooltip' },
+            { path: 'components/cards/project-creator-card', name: 'Project creator card' },
           ],
         },
         {

@@ -2,12 +2,54 @@ import React from 'react'
 import { RadioButton } from 'kitten/components/form/radio-button'
 import { TagButton } from 'kitten/components/buttons/tag-button'
 import { VisaIcon } from 'kitten/components/icons/visa-icon'
+import { MasterCardIcon } from 'kitten/components/icons/mastercard-icon'
+import { CbIcon } from 'kitten/components/icons/cb-icon'
+import { Line } from 'kitten/components/layout/line'
 
-export const KarlPaymentButton = (props) => {
-  const text = <TagButton big={ true } icon={ true } tag="span">
-                 <VisaIcon />
+const paymentButtonWrapper = (WrappedComponent, props) => {
+  return class PaymentButtonWrapper extends React.Component {
+    render() {
+      const text = <TagButton big icon tag="span">
+                     <WrappedComponent className="k-TagButton__icon" />
+                   </TagButton>
+
+      return (
+        <RadioButton text={ text }
+                     { ...props } />
+      )
+    }
+  }
+}
+
+export const KarlPaymentButtons = () => (
+  <div>
+    <KarlPaymentButtonVisa />
+    <KarlPaymentButtonMasterCard />
+    <KarlPaymentButtonCb />
+    <KarlPaymentButtonBankTransfer />
+  </div>
+)
+
+const KarlPaymentButtonVisa = paymentButtonWrapper(VisaIcon, {
+  name: 'payment-button-1',
+})
+
+const KarlPaymentButtonMasterCard = paymentButtonWrapper(MasterCardIcon, {
+  name: 'payment-button-1',
+  defaultChecked: true,
+})
+
+const KarlPaymentButtonCb = paymentButtonWrapper(CbIcon, {
+  name: 'payment-button-1',
+})
+
+const KarlPaymentButtonBankTransfer = props => {
+  const text = <TagButton big tag="span">
+                 Virement
                </TagButton>
+
   return (
-    <RadioButton id="payment-button" text={ text } { ...props } />
+    <RadioButton text={ text }
+                 name="payment-button-1" />
   )
 }

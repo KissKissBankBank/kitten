@@ -1,6 +1,7 @@
 {
   "name": "sassy-maps",
   "version": "1.0.0",
+  "license": "MIT",
   "description": "Temporary replacement module for Sassy Maps",
   "author": "KissKissBankBank & Co",
   "dependencies": {

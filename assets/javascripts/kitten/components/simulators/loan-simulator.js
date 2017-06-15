@@ -2,6 +2,7 @@
 // simulating a loan.
 
 import React from 'react'
+import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import numberUtils from 'kitten/helpers/utils/number'
 import { SliderWithTooltipAndPower }
@@ -370,76 +371,76 @@ class LoanSimulatorContent extends React.Component {
 
 LoanSimulator.propTypes = {
   // Label for amount input
-  amountLabel: React.PropTypes.string,
+  amountLabel: PropTypes.string,
 
   // Name attribute for the amount input (if needed)
-  amountName: React.PropTypes.string,
+  amountName: PropTypes.string,
 
   // Name attribute for the hidden installment input (if needed)
-  installmentName: React.PropTypes.string,
+  installmentName: PropTypes.string,
 
   // Name attribute for the hidden duration input (if needed)
-  durationName: React.PropTypes.string,
+  durationName: PropTypes.string,
 
   // Placeholder for amount input
-  amountPlaceholder: React.PropTypes.string,
+  amountPlaceholder: PropTypes.string,
 
   // Bounds for accepted amount
-  amountMin: React.PropTypes.number,
-  amountMax: React.PropTypes.number,
+  amountMin: PropTypes.number,
+  amountMax: PropTypes.number,
 
   // Default amount
-  initialAmount: React.PropTypes.number,
+  initialAmount: PropTypes.number,
 
   // Set this to true to show errors on first use
-  initialTouched: React.PropTypes.bool,
+  initialTouched: PropTypes.bool,
 
   // Error text when the amount is empty or non-numerical
-  amountEmptyError: React.PropTypes.string,
+  amountEmptyError: PropTypes.string,
 
   // Error text when the amount is over or under the min and max
-  amountOutOfBoundsError: React.PropTypes.string,
+  amountOutOfBoundsError: PropTypes.string,
 
   // Error text when the duration has not been set
-  requiredDurationError: React.PropTypes.string,
+  requiredDurationError: PropTypes.string,
 
   // Display commission if requested
-  displayCommission: React.PropTypes.bool,
-  commissionLabel: React.PropTypes.string,
-  commissionRules: React.PropTypes.array,
+  displayCommission: PropTypes.bool,
+  commissionLabel: PropTypes.string,
+  commissionRules: PropTypes.array,
 
   // DEPRECATED in favor of commissionRules
-  commissionRate: React.PropTypes.func,
+  commissionRate: PropTypes.func,
 
   // Label before the slider
-  installmentLabel: React.PropTypes.string,
+  installmentLabel: PropTypes.string,
 
   // Text before the computed duration
-  durationText: React.PropTypes.string,
+  durationText: PropTypes.string,
 
   // Bounds for the computed duration
-  durationMin: React.PropTypes.number,
-  durationMax: React.PropTypes.number,
+  durationMin: PropTypes.number,
+  durationMax: PropTypes.number,
 
   // Duration value (months)
-  durationSymbol: React.PropTypes.string,
-  durationSymbolPlural: React.PropTypes.string,
+  durationSymbol: PropTypes.string,
+  durationSymbolPlural: PropTypes.string,
 
   // Currency
-  currencySymbol: React.PropTypes.string,
+  currencySymbol: PropTypes.string,
 
   // Installment
-  installmentSymbol: React.PropTypes.string,
+  installmentSymbol: PropTypes.string,
 
   // Locale to format amounts correctly
-  locale: React.PropTypes.string,
+  locale: PropTypes.string,
 
   // Submit button
-  actionLabel: React.PropTypes.string,
+  actionLabel: PropTypes.string,
 }
 
 LoanSimulator.defaultProps = {
-  amountLabel: 'Amount',
+  amountLabel: 'I need',
   amountPlaceholder: '',
   amountMin: 1,
   amountMax: 10000,
@@ -454,13 +455,13 @@ LoanSimulator.defaultProps = {
   displayCommission: false,
   feesExemption: false,
   feesExemptionLabel: 'instead of',
-  commissionLabel: 'Commission:',
+  commissionLabel: 'Fees:',
   commissionRules: [],
 
   // DEPRECATED in favor of commissionRules
   commissionRate: function() { return 0 },
 
-  installmentLabel: 'Reimbursing',
+  installmentLabel: "I'd like to reimburse",
   initialInstallment: null,
 
   durationText: 'during',

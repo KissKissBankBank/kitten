@@ -1,23 +1,4 @@
-
 // Section
-.karl-Section {
-  padding: 3.25em 8em;
-}
-
-.karl-Section__example {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding-bottom: 3em;
-  border-bottom: 1px solid map-get($k-colors, 'line-2');
-}
-
-@media (max-width: 1100px) {
-  .karl-Section__example {
-    display: block;
-  }
-}
-
 .karl-Section__title {
   margin-top: 2rem;
   margin-bottom: 1rem;
@@ -26,11 +7,19 @@
   @include k-typographyFontSize(6);
 
   color: #333;
+
+  @include k-media-max('xs') {
+    text-align: center;
+  }
 }
 
 // Section Example
 .karl-Example {
   clear: both;
+
+  @include k-media-max('xs') {
+    text-align: center;
+  }
 }
 
 .karl-Example__title {
@@ -40,43 +29,17 @@
   font-size: 0.75rem;
   text-align: left;
   font-style: italic;
-}
 
-.karl-Example__title--margin {
-  padding-right: 2rem;
-}
-
-.karl-Example__description {
-  width: 40%;
-  margin-right: 6rem;
-
-  font-size: 1.25rem;
-  font-weight: 400;
-  line-height: 1.4;
-}
-
-.karl-Example__column {
-  justify-content: space-between;
-  flex-direction: column;
-}
-
-@media (max-width: 1100px) {
-  .karl-Example__description {
-    width: 90%;
-    padding-right: 6em;
+  @include k-media-max('xs') {
+    text-align: center;
   }
 }
 
-.karl-Example__bloc {
-  margin-top: 1.5rem;
-  width: 470px;
-  height: 272px;
-
-  background-color: map-get($k-colors, 'primary-1');
-}
-
-@media (max-width: 1100px) {
-  .karl-Example__bloc {
-    width: 90%;
-  }
+// GitHub Ribbon
+.karl-GithubRibbon {
+  z-index: 4;
+  position: fixed;
+  top: 0;
+  right: 0;
+  border: 0;
 }
