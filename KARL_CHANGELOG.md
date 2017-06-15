@@ -56,7 +56,7 @@ Feature:
 - Add `CheckboxSet` & `RadioButtonSet` examples.
 
 ## [11.6.0] - 2017-05-15
-t
+
 Features:
 - Update `ProjectCard` example with tooltip.
 - Add `TagButton` with large word example.
