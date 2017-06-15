@@ -26,19 +26,13 @@ export class LocationInput extends React.Component {
   }
 
   handleSelect(address, placeId) {
-    const service = geocodeByPlaceId(placeId)
-
-    service
+    geocodeByPlaceId(placeId)
       .then(results => {
         const place = results[0]
 
         if (place) {
-          const number = place.address_components[0].long_name
-          const street = place.address_components[1].long_name
-          const value = `${number} ${street}`
-
-          this.setState({ address: value })
-          this.props.onSelect(address, placeId, place)
+          this.setState({ address })
+          this.props.onSelect({ value: address, placeId, place })
         }
       })
   }
