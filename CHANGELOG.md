@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `onSelect` prop to `LocationInput` component.
 - Feature: Add new `InfoLines` component.
 - Fix: Add `width` attribute on payment button svg tag (fixes firefox bug).
 - Feature: Add `color-error` color text utility.

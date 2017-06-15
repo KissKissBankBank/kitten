@@ -1,7 +1,6 @@
 import React from 'react'
-import classNames from 'classnames'
 // Via "https://github.com/kenny-hibino/react-places-autocomplete"
-import PlacesAutocomplete from 'react-places-autocomplete'
+import PlacesAutocomplete, { geocodeByPlaceId } from 'react-places-autocomplete'
 import { LocationIcon } from 'kitten/components/icons/location-icon'
 import { Label } from 'kitten/components/form/label'
 
@@ -12,10 +11,13 @@ import { Label } from 'kitten/components/form/label'
 export class LocationInput extends React.Component {
   constructor(props) {
     super(props)
+
     this.state = {
       address: this.props.defaultValue,
     }
+
     this.handleChange = this.handleChange.bind(this)
+    this.handleSelect = this.handleSelect.bind(this)
   }
 
   handleChange(address) {
@@ -23,8 +25,26 @@ export class LocationInput extends React.Component {
     this.props.onChange({ value: address, name: this.props.name })
   }
 
+  handleSelect(address, placeId) {
+    geocodeByPlaceId(placeId)
+      .then(results => {
+        const place = results[0]
+
+        if (place) {
+          this.setState({ address })
+          this.props.onSelect({ value: address, placeId, place })
+        }
+      })
+  }
+
   render() {
-    const { onChange, defaultValue, ...others } = this.props
+    const {
+      onChange,
+      onSelect,
+      defaultValue,
+      inputProps,
+      ...others,
+    } = this.props
 
     const placesClassNames = {
       root: 'k-LocationInput__group',
@@ -45,23 +65,33 @@ export class LocationInput extends React.Component {
       </div>
     )
 
+    const finalInputProps = {
+      ...inputProps,
+      value: this.state.address,
+      onChange: this.handleChange,
+    }
+
     return (
       <div className="k-LocationInput">
         <div className="k-LocationInput__icon">
           <LocationIcon />
         </div>
-        <PlacesAutocomplete classNames={ placesClassNames }
-                            value={ this.state.address }
-                            autocompleteItem={ autocompleteItem }
-                            onChange={ this.handleChange }
-                            hideLabel={ true }
-                            { ...others } />
+
+        <PlacesAutocomplete
+          classNames={ placesClassNames }
+          autocompleteItem={ autocompleteItem }
+          inputProps={ finalInputProps }
+          onSelect={ this.handleSelect }
+          hideLabel
+          { ...others }
+        />
       </div>
     )
   }
 }
 
 LocationInput.defaultProps = {
-  onChange: function() {},
+  onChange: () => {},
+  onSelect: () => {},
   defaultValue: '',
 }
