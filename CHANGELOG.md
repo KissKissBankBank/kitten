@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
--Fix: Harmonize label component on `formInfo` and `locationInput`.
+- Fix: Harmonize font-size label component on `FormInfo`.
 
 ## [13.0.0] - 2017-06-15
 
