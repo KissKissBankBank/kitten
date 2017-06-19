@@ -45,7 +45,7 @@ task kitten_release: [:sassdoc, :build] do
   sh 'git push origin --tags'
 
   # Publish on npm
-  sh 'yarn publish'
+  sh 'npm publish'
 
   # Move the styleguide branch to the latest version
   sh 'git checkout styleguide'
