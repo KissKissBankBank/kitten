@@ -5,8 +5,15 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Update the tooltip examples.
-- Fix: Add `karl-FormActions__button` class and update `KarlFormActions` component.
-- Fix: Center position `IconBadge` component.
+
+## [13.0.0] - 2017-06-15
+
+Feature:
+- Release the style guide when releasing a new Kitten version.
+
+Fixes:
+- Add `karl-FormActions__button` class and update `KarlFormActions` component.
+- Center position `IconBadge` component.
 
 ## [12.1.0] - 2017-06-08
 

@@ -10,18 +10,18 @@ DAEMON_LOG_FILE="${SCRIPT_NAME}.log"
 DAEMON_CMD="$DAEMON start -f Procfile.static"
 PATH=$PATH:".:bin:spec/dummy/bin:$PATH"
 
-# Allow `./kitten [command]`  to function when called within `bin` by 
-#   returning to the project root directory. The purpose of the `sleep` calls 
+# Allow `./kitten [command]`  to function when called within `bin` by
+#   returning to the project root directory. The purpose of the `sleep` calls
 #   is to allow it to be run from within `bin` (because why not), yet  make it
 #   slightly inconvenient so users end up correcting their behavior. Pavlov ftw
-if [ `basename $PWD` == "bin" ]; then 
+if [ `basename $PWD` == "bin" ]; then
   echo "You're in bin/ when you should be executing this from the kitten root directory"
   echo "Step back..."
   sleep 2
   echo "A little more!"
   cd ../
   sleep 1
-  echo "That's better! you're now in `pwd` as you should" 
+  echo "That's better! you're now in `pwd` as you should"
 fi
 
 # Do not run unless run from the right place ; check for a known path to be sure
@@ -72,15 +72,15 @@ install(){
   if [ -d "nodes_modules" ]; then
     echo There seems to be a previous install of $SCRIPT_NAME
     cleanup
-  fi 
+  fi
   ./bin/install
 }
 
 start(){
   if [ ! -d node_modules ];then
     echo $SCRIPT_NAME has missing files
-    echo Did you run 
-    echo "    ./bin/$SCRIPT_NAME install" 
+    echo Did you run
+    echo "    ./bin/$SCRIPT_NAME install"
     exit 1
   fi
   cd $DAEMON_RUN_DIR
@@ -92,7 +92,7 @@ start(){
       "-t")
         tail -n 20 -f $DAEMON_LOG_FILE
       ;;
-    esac 
+    esac
   else
     echo "Error when starting ${SCRIPT_NAME}: pid file $DAEMON_RUN_DIR/$DAEMON_PID_FILE found"
 		exit 1
@@ -102,18 +102,18 @@ start(){
 forcestop(){
   cd $DAEMON_RUN_DIR
 	echo Forcing $SCRIPT_NAME stop
-  for PID in `ps ax | grep 'spec/dummy' | grep -v grep| awk ' { print $1;}'`; do 
+  for PID in `ps ax | grep 'spec/dummy' | grep -v grep| awk ' { print $1;}'`; do
     kill -9 $PID 1>/dev/null 2>&1
     if [ $? == 0 ];then
       echo PID $PID killed
-    else 
-      echo Could not kill process $PID 
+    else
+      echo Could not kill process $PID
     fi
   done
 	rm -f $DAEMON_PID_FILE 1>/dev/null 2>&1
   if [ $? == 0 ];then
 	  echo lockfile removed
-  else 
+  else
     echo Could not remove lockfile
   fi
 }
@@ -133,29 +133,29 @@ stop(){
       kill $PID 1>/dev/null 2>&1
       if [ $? == 0 ];then
         echo $SCRIPT_NAME killed
-      else 
+      else
         echo Could not kill $SCRIPT_NAME, try forcestop
       fi
     else
-      echo $SCRIPT_NAME not running, removing $DAEMON_RUN_DIR/$DAEMON_PID_FILE 
+      echo $SCRIPT_NAME not running, removing $DAEMON_RUN_DIR/$DAEMON_PID_FILE
     fi
     rm -f $DAEMON_PID_FILE 1>/dev/null 2>&1
     if [ $? == 0 ];then
       echo Lockfile $DAEMON_RUN_DIR/$DAEMON_PID_FILE removed
-    else 
+    else
       echo Could not remove lock file, try forcestop
     fi
   else
     echo Lockfile $DAEMON_RUN_DIR/$DAEMON_PID_FILE not found
   fi
-}  
+}
 
 is_installed(){
  [ -d node_modules ]
 }
 
 case "$1" in
-  start|stop|forcestop|cleanup|install)
+  start|stop|forcestop|cleanup|install|usage)
     ${1}
     ;;
   restart)
@@ -171,8 +171,8 @@ case "$1" in
     start
 		echo Waiting for $SCRIPT_NAME to be fully launched
     sleep 50
-    echo Launching crawler 
-    ./bin/fashionista.pl
+    echo Launching crawler
+    /usr/bin/perl ./bin/fashionista.pl
     if [ ! -d "../../build" ]; then
       echo Something went wrong while building static $SCRIPT_NAME
       exit 1
