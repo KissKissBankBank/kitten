@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Manages responsive of `InfoLines` component.
+- Fix: Handles small version of `InfoLines` component.
 
 ## [13.0.0] - 2017-06-15
 

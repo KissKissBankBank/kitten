@@ -31,10 +31,8 @@
   }
 
   .k-InfoLines__line__value {
-    margin-left: auto;
-
-    @include k-media-max('s') {
-      margin-left: 0;
+    @include k-media-min('m') {
+      margin-left: auto;
     }
   }
 }
