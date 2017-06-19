@@ -24,9 +24,15 @@
     display: flex;
     padding: k-px-to-rem(15px);
     border-bottom: 1px solid map-get($k-colors, 'line-1');
+
+    @include k-media-max('s') {
+      flex-direction: column;
+    }
   }
 
   .k-InfoLines__line__value {
-    margin-left: auto;
+    @include k-media-min('m') {
+      margin-left: auto;
+    }
   }
 }
