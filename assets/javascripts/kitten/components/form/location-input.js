@@ -2,7 +2,6 @@ import React from 'react'
 // Via "https://github.com/kenny-hibino/react-places-autocomplete"
 import PlacesAutocomplete, { geocodeByPlaceId } from 'react-places-autocomplete'
 import { LocationIcon } from 'kitten/components/icons/location-icon'
-import { Label } from 'kitten/components/form/label'
 
 // Make sure you include a script to the Google Maps places API.
 // For example:
