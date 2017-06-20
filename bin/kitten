@@ -33,7 +33,7 @@ fi
 
 usage() {
     cat << EOF
-USAGE: $SCRIPT_NAME {start [-t]|stop|forcestop|restart|buildstatic|status|log|install|cleanup}
+USAGE: $SCRIPT_NAME {start [-t]|stop|forcestop|restart|buildstatic|status|log|install|cleanup|test}
 EOF
 }
 
