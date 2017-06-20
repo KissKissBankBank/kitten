@@ -75,7 +75,9 @@ test(){
     echo "    ./bin/$SCRIPT_NAME install"
     exit 1
   fi
-  ./bin/test
+  args="${@:3}"
+
+  bin/test $args
 }
 
 install(){
@@ -165,8 +167,11 @@ is_installed(){
 }
 
 case "$1" in
-  start|stop|forcestop|cleanup|install|usage|test)
+  start|stop|forcestop|cleanup|install|usage)
     ${1}
+    ;;
+  test)
+    test "$@"
     ;;
   restart)
     stop
