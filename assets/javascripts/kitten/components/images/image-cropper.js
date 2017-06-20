@@ -60,7 +60,7 @@ export class ImageCropper extends React.Component {
 
   handleUploaderSuccess(data) {
     this.setState({
-      imageSrc: data.file,
+      imageSrc: data.preview,
       imageCropSrc: null,
       fileName: data.name,
       sliderValue: 0,
