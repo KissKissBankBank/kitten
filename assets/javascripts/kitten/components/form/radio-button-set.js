@@ -43,8 +43,8 @@ RadioButtonSet.defaultProps = {
   name: 'radioButtonSet',
   error: false,
   items: [{
-    text: 'filter 1',
-    children: 'lorem ipsum dolor',
+    text: 'Filter 1',
+    children: '',
     defaultChecked: true,
     id: 'myRadioButton' // Replace by a real value
   }],
