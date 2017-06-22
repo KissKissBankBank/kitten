@@ -75,9 +75,9 @@ test(){
     echo "    ./bin/$SCRIPT_NAME install"
     exit 1
   fi
-  args="${@:3}"
-
-  bin/test $args
+  set -e
+  FILES=${2:-assets/javascripts/**/*.test.js}
+  yarn test -- "$FILES"
 }
 
 install(){
@@ -171,7 +171,7 @@ case "$1" in
     ${1}
     ;;
   test)
-    test "$@"
+    test $1
     ;;
   restart)
     stop
