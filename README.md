@@ -213,11 +213,11 @@ The documentation is accessible on development environment: `/kitten/sassdoc`.
 To launch the JS tests:
 
 ```sh
-$ bin/test
+$ bin/kitten test
 
 # OR
 
-$ bin/test {PATH}/{FILE}.test.js
+$ bin/kitten test {PATH}/{FILE}.test.js
 ```
 
 Check out the [guidelines](../../wiki/Component-testing) to know how to test kitten.
