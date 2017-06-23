@@ -4,6 +4,10 @@ import { Line } from 'kitten/components/layout/line'
 import { withTooltip } from 'kitten/hoc/with-tooltip'
 import { ButtonInfoIcon } from 'kitten/components/buttons/button-info-icon'
 import { HeartIcon } from 'kitten/components/icons/heart-icon'
+// DEPRECATED
+import Tooltip from 'kitten/components/tooltips/tooltip'
+import { Label } from 'kitten/components/form/label'
+import { TextInput } from 'kitten/components/form/text-input'
 
 const InfoWithTooltipButtonIcon = withTooltip(ButtonInfoIcon, {})
 
@@ -35,6 +39,23 @@ export const KarlLineWithBigHeart = props => {
                                        'k-ButtonIcon--big') }>
           <HeartIcon className="k-ButtonIcon__svg" />
         </button>
+      </Line.Item>
+    </Line>
+  )
+}
+
+//DEPRECATED
+export const KarlLineWithTooltip = props => {
+  return (
+    <Line>
+      <Line.Item>
+        { props.text }
+      </Line.Item>
+      <Line.Item >
+        <Tooltip id={ props.id }
+                 place={ props.place }>
+          { children }
+        </Tooltip>
       </Line.Item>
     </Line>
   )

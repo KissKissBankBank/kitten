@@ -25,7 +25,10 @@
 
   $arrow-size: k-px-to-rem(8px);
 
-  .k-Tooltip {
+  // DEPRECATED
+  $tooltip-margin: k-px-to-rem(18px);
+
+  .k-Tooltip .k-Tooltip__content {
     @include k-typographyFont($font);
     @include k-typographyFontSize($font-size, $line-height);
 
@@ -50,5 +53,16 @@
     border: $arrow-size solid transparent;
     border-top-color: $border-color-helium;
     bottom: -1rem;
+  }
+
+  .k-Tooltip__content {
+    background-color: $background-color !important;
+    color: $color !important;
+    opacity: 1 !important;
+
+    padding: k-px-to-rem(20px) !important;
+
+    max-width: k-px-to-rem(340px) !important;
+    border-radius: k
   }
 }
