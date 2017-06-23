@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Remove `appearence: none` on `k-TextInput`.
 - Fix: Handles small version of `InfoLines` component.
 - Fix: Harmonize font-size label component on `FormInfo`.
 
