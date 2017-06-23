@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: missing `key` prop in `InfoLines` component & rename attribute in
+- Fix: Missing `key` prop in `InfoLines` component & rename attribute in
   defaultProps.
 - Fix: Handles small version of `InfoLines` component.
 - Fix: Harmonize font-size label component on `FormInfo`.
