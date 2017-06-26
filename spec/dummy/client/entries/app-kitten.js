@@ -12,6 +12,7 @@ import { Button } from 'kitten/components/buttons/button'
 import { ButtonIcon } from 'kitten/components/buttons/button-icon'
 import { ButtonImage } from 'kitten/components/buttons/button-image'
 import ButtonImageWithTextAndBadge from 'kitten/components/buttons/button-image-with-text-and-badge'
+import ButtonTooltipIcon from 'kitten/components/buttons/button-tooltip-icon'
 import { TagButton } from 'kitten/components/buttons/tag-button'
 
 // Cards
@@ -55,6 +56,7 @@ import { RightArrowIcon } from 'kitten/components/icons/right-arrow-icon'
 import { CbIcon } from 'kitten/components/icons/cb-icon'
 import { MenuIcon } from 'kitten/components/icons/menu-icon'
 import { HeartIcon } from 'kitten/components/icons/heart-icon'
+import { InfoIcon } from 'kitten/components/icons/info-icon'
 import { InformationIcon } from 'kitten/components/icons/information-icon'
 import { KissKissBankBankLogoIcon } from 'kitten/components/icons/kisskissbankbanklogo-icon'
 import { FacebookIcon } from 'kitten/components/icons/facebook-icon'
@@ -102,7 +104,8 @@ import { Stepper } from 'kitten/components/steppers/stepper'
 // Tooltips
 import ReactTooltip from 'react-tooltip'
 import { StaticTooltip } from 'kitten/components/tooltips/static-tooltip'
-import { Tooltip } from 'kitten/components/tooltips/tooltip'
+import Tooltip from 'kitten/components/tooltips/tooltip'
+import { TooltipNew } from 'kitten/components/tooltips/tooltip-new'
 import { InfoWithTooltip } from 'kitten/components/tooltips/info-with-tooltip'
 
 // Tours
@@ -199,6 +202,7 @@ ReactOnRails.register({
   ButtonIcon,
   ButtonImage,
   ButtonImageWithTextAndBadge,
+  ButtonTooltipIcon,
   TagButton,
 
   // Cards
@@ -245,6 +249,7 @@ ReactOnRails.register({
   CbIcon,
   MenuIcon,
   GrabberIcon,
+  InfoIcon,
   InformationIcon,
   KissKissBankBankLogoIcon,
   HeartIcon,
@@ -293,6 +298,7 @@ ReactOnRails.register({
   // Tooltips
   ReactTooltip,
   Tooltip,
+  TooltipNew,
   StaticTooltip,
   InfoWithTooltip,
 

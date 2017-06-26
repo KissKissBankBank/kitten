@@ -1,6 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
-import { Tooltip } from 'kitten/components/tooltips/tooltip'
+import { TooltipNew } from 'kitten/components/tooltips/tooltip-new'
 
 export const withTooltip = (WrappedComponent, wrappedProps) => {
   const WithTooltip = props => {
@@ -10,22 +10,11 @@ export const withTooltip = (WrappedComponent, wrappedProps) => {
             id,
             ...others } = props
 
-    const withTooltipClassName = classNames(
-      'k-WithTooltip',
-      className,
-    )
-
-    const withTooltipTooltipClassName = classNames(
-      'k-WithTooltip__tooltip',
-    )
-
     return (
-      <div className={ withTooltipClassName } { ...others }>
-        <Tooltip id={ id }
-                 className={ withTooltipTooltipClassName }
-                 { ...others }>
+      <div>
+        <TooltipNew id={ id } { ...others }>
           { children }
-        </Tooltip>
+        </TooltipNew>
 
         <div>
           <WrappedComponent data-for={ id }

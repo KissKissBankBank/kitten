@@ -14,6 +14,10 @@
 ///   </div>
 
 @mixin k-Tooltip {
+  // Colors
+  $background-color: map-get($k-colors, 'primary-1');
+  $color: map-get($k-colors, 'background-1');
+
   // Colors helium
   $color-helium: map-get($k-colors, 'background-1');
   $border-color-helium: map-get($k-colors, 'primary-1');
@@ -63,6 +67,58 @@
     padding: k-px-to-rem(20px) !important;
 
     max-width: k-px-to-rem(340px) !important;
-    border-radius: k
+    border-radius: k-px-to-rem(8px) !important;
+
+    &.place-top {
+      margin-bottom: $tooltip-margin !important;
+
+      &:after {
+        border-top-color: $background-color !important;
+        border-top-style: solid !important;
+        border-top-width: $arrow-size !important;
+        margin-left: -($arrow-size) !important;
+        bottom: k-px-to-rem(-8px) !important;
+        left: 50.3% !important;
+      }
+    }
+
+    &.place-right {
+      margin-left: $tooltip-margin !important;
+
+      &:after {
+        border-right-color: $background-color !important;
+        border-right-style: solid !important;
+        border-width: $arrow-size !important;
+        margin-top: -($arrow-size) !important;
+        left: k-px-to-rem(-8px) !important;
+        top: 52% !important;
+      }
+    }
+
+    &.place-bottom {
+      margin-top: $tooltip-margin !important;
+
+      &:after {
+        border-bottom-color: $background-color !important;
+        border-bottom-style: solid !important;
+        border-width: $arrow-size !important;
+        margin-left: -($arrow-size) !important;
+        top: k-px-to-rem(-8px) !important;
+        left: 50.3% !important;
+      }
+    }
+
+    &.place-left {
+     margin-right: $tooltip-margin !important;
+
+      &:after {
+        border-left-color: $background-color !important;
+        border-left-style: solid !important;
+        border-width: $arrow-size !important;
+        margin-top: -($arrow-size) !important;
+        right: k-px-to-rem(-8px) !important;
+        top: 52% !important;
+      }
+    }
   }
 }
