@@ -242,7 +242,7 @@ export class ImageCropper extends React.Component {
     return (
       <SimpleUploader
         name={ this.props.name }
-        maxSize={ 5 * 1024 * 1024 } // 5 Mo.
+        maxSize={ this.props.maxSize }
         acceptedFiles={ this.props.acceptedFiles }
         onSuccess={ this.handleUploaderSuccess }
         onError={ this.handleUploaderError }
@@ -292,6 +292,7 @@ ImageCropper.defaultProps = {
   sliderMin: 0,
   sliderMax: 500,
   aspectRatio: 16/9,
+  maxSize: 5 * 1024 * 1024, // 5 Mo.
   acceptedFiles: '.jpg,.jpeg,.gif,.png',
   label: 'Lorem ipsum…',
   cropperInfo: 'Move the image…',
