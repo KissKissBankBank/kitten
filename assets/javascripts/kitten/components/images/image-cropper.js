@@ -1,8 +1,6 @@
 import React from 'react'
 import Cropper from 'react-cropper'
 import { Marger } from 'kitten/components/layout/marger'
-import { Separator } from 'kitten/components/layout/separator'
-import { Container } from 'kitten/components/grid/container'
 import { Grid, GridCol } from 'kitten/components/grid/grid'
 import { Label } from 'kitten/components/form/label'
 import { Paragraph } from 'kitten/components/typography/paragraph'
