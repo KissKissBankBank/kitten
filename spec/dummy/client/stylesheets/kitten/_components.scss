@@ -133,6 +133,10 @@
   font: 'source-sans-light',
 ));
 
+// Images
+
+@include k-Cropper;
+
 // Layout
 
 @include k-Line;
@@ -257,3 +261,7 @@
 @include k-TypographyBodyCopy;
 @include k-Title;
 @include k-Paragraph;
+
+// Uploaders
+
+@include k-SimpleUploader;
