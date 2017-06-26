@@ -5,9 +5,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add new `InfoWithTooltip` component.
-- Breaking change: Rename `ButtonTooltipIcon` to `ButtonInfoIcon`.
-- Breaking change: Rename `TooltipIcon` to `InfoIcon`.
-- Breaking change: Split tooltip component into a component `Tooltip` and hoc:
+- Feature: Add new `ButtonInfoIcon` component.
+- Feature: Add new `InfoIcon` component.
+- Feature: Split tooltip component into a component `Tooltip` and hoc:
   `withTooltip`.
   To be retro-compatible, you should replace `Tooltip` component with `InfoWithTooltip`.
 - Fix: Handles small version of `InfoLines` component.
