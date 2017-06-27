@@ -44,6 +44,11 @@ export class Modal extends React.Component {
           afterOpen: 'k-Modal--afterOpen',
           beforeClose: 'k-Modal--beforeClose'
         }}
+        overlayClassName={{
+          base: 'k-ModalOverlay',
+          afterOpen: 'k-ModalOverlay--afterOpen',
+          beforeClose: 'k-ModalOverlay--beforeClose'
+        }}
         isOpen={ this.state.showModal }
       >
 

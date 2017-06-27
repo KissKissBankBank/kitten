@@ -14,6 +14,7 @@
     text-align: center;
 
     outline: none;
+    overflow: scroll;
   }
 
   .k-Modal__close {
@@ -23,29 +24,44 @@
   }
 
   .k-Modal__paragraph {
-    padding: 0 k-px-to-rem(60px);
+    padding: 0 k-px-to-rem(20px);
 
-    @include k-media-max('s') {
-      padding: 0 k-px-to-rem(20px);
+    @include k-media-min('m') {
+      padding: 0 k-px-to-rem(70px);
     }
   }
 
   .k-Modal__action {
-    display: flex;
-    justify-content: center;
+    flex-direction: column;
+    padding: 0 k-px-to-rem(45px);
 
-    @include k-media-max('s') {
-      flex-direction: column;
-      padding: 0 k-px-to-rem(45px);
+    @include k-media-min('m') {
+      justify-content: center;
+      padding: 0 k-px-to-rem(70px);
     }
   }
 
   .k-Modal__button--first {
     margin-bottom: k-px-to-rem(10px);
 
-    @include k-media-min('m') {
+    @include k-media-min('l') {
       margin-right: k-px-to-rem(10px);
       margin-bottom: 0;
     }
+  }
+
+  .k-ModalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.75);
+    overflow: scroll;
+  }
+
+// Removes scroll from body
+  .ReactModal__Body--open {
+    overflow: hidden;
   }
 }
