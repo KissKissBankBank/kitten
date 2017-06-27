@@ -16,7 +16,7 @@ export class Modal extends React.Component {
     }
 
     this.handleOpenModal = this.handleOpenModal.bind(this)
-    //this.afterOpenModal = this.afterOpenModal.bind(this)
+    this.afterOpenModal = this.afterOpenModal.bind(this)
     this.handleCloseModal = this.handleCloseModal.bind(this)
   }
 
@@ -24,9 +24,9 @@ export class Modal extends React.Component {
     this.setState({ showModal: true })
   }
 
-  // afterOpenModal() {
-  //   this.subtitle.style.color = '#f00';
-  // }
+  afterOpenModal() {
+    this.subtitle.style.color = '#f00';
+  }
 
   handleCloseModal() {
     this.setState({ showModal: false })
@@ -62,10 +62,11 @@ export class Modal extends React.Component {
 
     return (
       <ReactModal
-        className="k-Modal"
+        className={{
+          base: 'k-Modal'}}
         isOpen={ this.state.showModal }
-        // style={ customStyles }
-        >
+        style={ customStyles }
+      >
 
         <Title
           modifier="quaternary"
