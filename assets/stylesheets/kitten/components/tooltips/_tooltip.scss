@@ -38,15 +38,10 @@
     @include k-typographyFont($font);
     @include k-typographyFontSize($font-size, $line-height);
 
-    padding-right: k-px-to-rem(20px);
-    padding-left: k-px-to-rem(20px);
     width: k-px-to-rem(340px);
     box-sizing: border-box;
 
-    background-color: $background-color-helium;
     border: 1px solid $border-color-helium;
-    border-radius: k-px-to-rem(8px);
-    color: $color-helium;
   }
 
   .k-Tooltip__arrow {
