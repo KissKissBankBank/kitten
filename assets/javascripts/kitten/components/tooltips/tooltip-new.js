@@ -4,10 +4,9 @@ import { Marger } from 'kitten/components/layout/marger'
 
 export class TooltipNew extends React.Component {
   renderArrow() {
-    const style = {}
 
     return (
-      <span style={ style } className="k-TooltipNew__arrow" />
+      <span className="k-TooltipNew__arrow" />
     )
   }
 
@@ -34,5 +33,5 @@ export class TooltipNew extends React.Component {
 }
 
 TooltipNew.defaultProps = {
-  arrowLeftPosition: "50%",
+  arrowLeftPosition: '50%',
 }

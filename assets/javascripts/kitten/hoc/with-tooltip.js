@@ -17,8 +17,9 @@ export const withTooltip = (WrappedComponent, wrappedProps) => {
         </TooltipNew>
 
         <div>
-          <WrappedComponent data-for={ id }
-                            aria-describedby={ id } />
+          <WrappedComponent
+            data-for={ id }
+            aria-describedby={ id } />
         </div>
       </div>
     )
