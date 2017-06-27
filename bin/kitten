@@ -33,7 +33,7 @@ fi
 
 usage() {
     cat << EOF
-USAGE: $SCRIPT_NAME {start [-t]|stop|forcestop|restart|buildstatic|status|log|install|cleanup}
+USAGE: $SCRIPT_NAME {start [-t]|stop|forcestop|restart|buildstatic|status|log|install|cleanup|test}
 EOF
 }
 
@@ -66,6 +66,18 @@ status(){
   else
     echo "$SCRIPT_NAME is not running ($DAEMON_RUN_DIR/$DAEMON_PID_FILE not found)"
   fi
+}
+
+test(){
+  if [ ! -d node_modules ];then
+    echo $SCRIPT_NAME has missing files
+    echo Did you run
+    echo "    ./bin/$SCRIPT_NAME install"
+    exit 1
+  fi
+  set -e
+  FILES=${2:-assets/javascripts/**/*.test.js}
+  yarn test -- "$FILES"
 }
 
 install(){
@@ -157,6 +169,9 @@ is_installed(){
 case "$1" in
   start|stop|forcestop|cleanup|install|usage)
     ${1}
+    ;;
+  test)
+    test $1
     ;;
   restart)
     stop
