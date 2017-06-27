@@ -7,6 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Add new `InfoWithTooltip` component.
 - Feature: Add new `ButtonInfoIcon` component.
 - Feature: Add new `InfoIcon` component.
+- Feature: Add `SimpleUploader`, `Uploader` and `ImageCropper` components.
 - Fix: Handles small version of `InfoLines` component.
 - Fix: Harmonize font-size label component on `FormInfo`.
 

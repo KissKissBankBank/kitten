@@ -190,6 +190,7 @@ import { KarlMenu,
          KarlMenuContent } from 'kitten/karl/menus/karl-menu'
 import { KarlBrowsing } from 'app/browsing/browsing'
 import { KarlSeparator } from 'kitten/karl/layout/separator'
+import { KarlImageCropper } from 'kitten/karl/images/image-cropper'
 
 ReactOnRails.register({
   // Box
@@ -376,4 +377,5 @@ ReactOnRails.register({
   KarlBrowsing,
   KarlGithubRibbon,
   KarlSeparator,
+  KarlImageCropper,
 })
