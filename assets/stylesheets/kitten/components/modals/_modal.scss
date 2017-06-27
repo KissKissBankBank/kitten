@@ -1,0 +1,11 @@
+@mixin k-Modal {
+  // .k-Modal {
+  //   text-align: center;
+  // }
+
+  .k-Modal__close {
+    position: absolute;
+    top: k-px-to-rem(10px);
+    right: k-px-to-rem(10px);
+  }
+}
