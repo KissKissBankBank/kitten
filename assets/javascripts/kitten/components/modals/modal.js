@@ -3,7 +3,7 @@ import React from 'react'
 import ReactModal from 'react-modal'
 import classNames from 'classnames'
 import { Button } from 'kitten/components/buttons/button'
-// import { CloseButton } from 'kitten/components/buttons/close-button'
+import { CloseButton } from 'kitten/components/buttons/close-button'
 import { Title } from 'kitten/components/typography/title'
 import { Paragraph } from 'kitten/components/typography/paragraph'
 
@@ -16,10 +16,24 @@ export class Modal extends React.Component {
     }
 
     this.handleOpenModal = this.handleOpenModal.bind(this)
+    this.handleCloseModal = this.handleCloseModal.bind(this)
   }
 
   handleOpenModal() {
     this.setState({ showModal: true })
+  }
+
+  handleCloseModal() {
+    this.setState({ showModal: false })
+  }
+
+  renderCloseModal() {
+    return (
+      <CloseButton
+        className="k-Modal__close"
+        modifier="hydrogen"
+        onClick={ this.handleCloseModal } />
+    )
   }
 
   renderModal() {
@@ -52,11 +66,13 @@ export class Modal extends React.Component {
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
             ligula eget dolor. Donec quam felis, ultricies nec, pellentesque eu, pretium
         </Paragraph>
+
+        { this.renderCloseModal() }
       </ReactModal>
     )
   }
 
-  render () {
+  render() {
     return (
       <div>
         <Button
