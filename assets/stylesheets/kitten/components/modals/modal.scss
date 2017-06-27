@@ -1,0 +1,51 @@
+@mixin k-Modal {
+  .k-Modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    bottom: auto;
+    right: auto;
+    padding: k-px-to-rem(40px) 0;
+
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 1px solid #eee;
+    border-radius: 15px;
+    text-align: center;
+
+    outline: none;
+  }
+
+  .k-Modal__close {
+    position: absolute;
+    top: k-px-to-rem(10px);
+    right: k-px-to-rem(10px);
+  }
+
+  .k-Modal__paragraph {
+    padding: 0 k-px-to-rem(60px);
+
+    @include k-media-max('s') {
+      padding: 0 k-px-to-rem(20px);
+    }
+  }
+
+  .k-Modal__action {
+    display: flex;
+    justify-content: center;
+
+    @include k-media-max('s') {
+      flex-direction: column;
+      padding: 0 k-px-to-rem(45px);
+    }
+  }
+
+  .k-Modal__button--first {
+    margin-bottom: k-px-to-rem(10px);
+
+    @include k-media-min('m') {
+      margin-right: k-px-to-rem(10px);
+      margin-bottom: 0;
+    }
+  }
+}

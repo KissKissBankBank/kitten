@@ -37,37 +37,47 @@ export class Modal extends React.Component {
   }
 
   renderModal() {
-    const customStyles = {
-      content : {
-         top          : '50%',
-         left         : '50%',
-         right        : 'auto',
-         bottom       : 'auto',
-         maxWidth     : '550px',
-         padding      : '10px',
-         transform    : 'translate(-50%, -50%)',
-         borderRadius : '15px'
-      }
-    }
-
     return (
       <ReactModal
+        className={{
+          base: 'k-Modal',
+          afterOpen: 'k-Modal--afterOpen',
+          beforeClose: 'k-Modal--beforeClose'
+        }}
         isOpen={ this.state.showModal }
-        style={ customStyles }>
-
-        <Title
-          modifier="quaternary"
-          ref={subtitle => this.subtitle = subtitle}>
-            Popin title
-        </Title>
-
-        <Paragraph
-          modifier="tertiary">
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-            ligula eget dolor. Donec quam felis, ultricies nec, pellentesque eu, pretium
-        </Paragraph>
+      >
 
         { this.renderCloseModal() }
+
+        <div className="k-Modal__paragraph">
+          <Title
+            margin={ false }
+            modifier="quaternary"
+            ref={subtitle => this.subtitle = subtitle}>
+              Titre de la popin
+          </Title>
+
+          <Paragraph
+            modifier="tertiary">
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+              ligula eget dolor. Donec quam felis, ultricies nec, pellentesque eu, pretium
+          </Paragraph>
+        </div>
+
+        <div className="k-Modal__action">
+          <Button
+            className="k-Modal__button--first"
+            modifier="hydrogen"
+            size="big">
+              Big button
+          </Button>
+          <Button
+            modifier="helium"
+            size="big">
+              Big button
+          </Button>
+
+        </div>
       </ReactModal>
     )
   }
