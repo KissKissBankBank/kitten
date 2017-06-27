@@ -2,12 +2,25 @@ import React from 'react'
 // Via "https://github.com/reactjs/react-modal"
 import ReactModal from 'react-modal'
 import classNames from 'classnames'
-// import { Button } from 'kitten/components/buttons/button'
+import { Button } from 'kitten/components/buttons/button'
 // import { CloseButton } from 'kitten/components/buttons/close-button'
 import { Title } from 'kitten/components/typography/title'
 import { Paragraph } from 'kitten/components/typography/paragraph'
 
 export class Modal extends React.Component {
+  constructor() {
+    super()
+
+    this.state = {
+      showModal: false
+    }
+
+    this.handleOpenModal = this.handleOpenModal.bind(this)
+  }
+
+  handleOpenModal() {
+    this.setState({ showModal: true })
+  }
 
   renderModal() {
     const customStyles = {
@@ -25,7 +38,7 @@ export class Modal extends React.Component {
 
     return (
       <ReactModal
-        isOpen={ true }
+        isOpen={ this.state.showModal }
         style={ customStyles }>
 
         <Title
@@ -46,6 +59,13 @@ export class Modal extends React.Component {
   render () {
     return (
       <div>
+        <Button
+          modifier="helium"
+          size="tiny"
+          onClick={ this.handleOpenModal }>
+           Open
+        </Button>
+
         { this.renderModal() }
       </div>
     )
