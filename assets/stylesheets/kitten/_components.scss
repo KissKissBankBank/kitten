@@ -64,10 +64,16 @@
 // Heroes
 @import "kitten/components/heroes/hero";
 
+// Images
+@import "kitten/components/images/cropper";
+
 // Layout
 @import 'kitten/components/layout/line';
-@import 'kitten/components/layout/responsive-video-iframe-container';
+@import 'kitten/components/layout/responsive-iframe-container';
 @import 'kitten/components/layout/separator';
+
+// Lines
+@import 'kitten/components/lines/info-lines';
 
 // Links
 @import 'kitten/components/links/external-rich-link';
@@ -126,3 +132,6 @@
 @import 'kitten/components/typography/paragraph';
 @import 'kitten/components/typography/sup-title';
 @import 'kitten/components/typography/title';
+
+// Uploaders
+@import 'kitten/components/uploaders/simple-uploader'

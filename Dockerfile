@@ -12,9 +12,9 @@ RUN apt-get install -y curl git automake libtool build-essential nodejs perl lib
 RUN mkdir -p /usr/src/app
 ADD . /usr/src/app
 WORKDIR /usr/src/app
-RUN bash bin/kitten install
+RUN /bin/bash bin/kitten install
 # modify client package.json for docker path modification
 RUN perl -pi.bak -e "s/(\.\.\/)/\/usr\/src\/app\//g" spec/dummy/client/package.json
 
 # run
-CMD ["bash", "bin/kitten","buildstatic"]
+CMD ["/bin/bash", "bin/kitten","buildstatic"]

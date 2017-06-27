@@ -92,6 +92,7 @@ module Kitten
             { path: 'components/form/form-info', name: 'Form info' },
             { path: 'components/form/form-amount-and-currency', name: 'Form amount and currency' },
             { path: 'components/form/form-phone-number', name: 'Form phone number' },
+            { path: 'components/images/image-cropper', name: 'Image cropper' },
           ],
         },
         {
@@ -140,6 +141,7 @@ module Kitten
             { path: 'components/links/link-list', name: 'Link list' },
             { path: 'components/lists/bullet-list', name: 'Bullet list' },
             { path: 'components/lists/tag-list', name: 'Tag list' },
+            { path: 'components/lines/info-lines', name: 'Info lines' },
           ],
         },
         {

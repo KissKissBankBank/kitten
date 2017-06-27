@@ -69,6 +69,9 @@ import { VisaIcon } from 'kitten/components/icons/visa-icon'
 // Layout
 import { Separator } from 'kitten/components/layout/separator'
 
+// Lines
+import { InfoLines } from 'kitten/components/lines/info-lines'
+
 // Links
 import ExternalRichLink from 'kitten/components/links/external-rich-link'
 
@@ -184,6 +187,7 @@ import { KarlMenu,
          KarlMenuContent } from 'kitten/karl/menus/karl-menu'
 import { KarlBrowsing } from 'app/browsing/browsing'
 import { KarlSeparator } from 'kitten/karl/layout/separator'
+import { KarlImageCropper } from 'kitten/karl/images/image-cropper'
 
 ReactOnRails.register({
   // Box
@@ -256,6 +260,9 @@ ReactOnRails.register({
 
   // Layout
   Separator,
+
+  // Lines
+  InfoLines,
 
   // Links
   ExternalRichLink,
@@ -364,4 +371,5 @@ ReactOnRails.register({
   KarlBrowsing,
   KarlGithubRibbon,
   KarlSeparator,
+  KarlImageCropper,
 })

@@ -12,7 +12,7 @@
 /// @include k-FormInfo((
 ///  label: (
 ///    font: 'source-sans-semi-bold',
-///    font-size: -2,
+///    font-size: -1,
 ///    color: #333,
 ///  ),
 ///  error: (
@@ -34,7 +34,7 @@
 
   // Label
   $font-label: 'source-sans-semi-bold';
-  $font-size-label: -2;
+  $font-size-label: -1;
   $color-label: map-get($k-colors, 'font-1');
 
   // Error
