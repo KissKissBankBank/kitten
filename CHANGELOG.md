@@ -4,9 +4,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `SimpleUploader`, `Uploader` and `ImageCropper` components.
-- Fix: Handles small version of `InfoLines` component.
-- Fix: Harmonize font-size label component on `FormInfo`.
+## [13.1.0] - 2017-06-27
+
+Feature:
+- Add `SimpleUploader`, `Uploader` and `ImageCropper` components.
+
+Fixes:
+- Handles small version of `InfoLines` component.
+- Harmonize font-size label component on `FormInfo`.
 
 ## [13.0.0] - 2017-06-15
 
