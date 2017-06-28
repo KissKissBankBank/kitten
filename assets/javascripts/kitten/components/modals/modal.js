@@ -2,6 +2,7 @@ import React from 'react'
 // Via "https://github.com/reactjs/react-modal"
 import ReactModal from 'react-modal'
 import classNames from 'classnames'
+import { Grid, GridCol } from 'kitten/components/grid/grid'
 import { Button } from 'kitten/components/buttons/button'
 import { CloseButton } from 'kitten/components/buttons/close-button'
 import { Title } from 'kitten/components/typography/title'
@@ -49,7 +50,8 @@ export class Modal extends React.Component {
           afterOpen: 'k-ModalOverlay--afterOpen',
           beforeClose: 'k-ModalOverlay--beforeClose'
         }}
-        isOpen={ this.state.showModal }>
+        isOpen={ this.state.showModal }
+        onRequestClose= { this.handleCloseModal }>
 
         { this.renderCloseModal() }
 
@@ -67,17 +69,24 @@ export class Modal extends React.Component {
         </div>
 
         <div className="k-Modal__action">
-          <Button
-            className="k-Modal__button--first"
-            modifier="hydrogen"
-            size="big">
-              Big button
-          </Button>
-          <Button
-            modifier="helium"
-            size="big">
-              Big button
-          </Button>
+          <Grid>
+            <GridCol col="12" col-m="6" className="k-Modal__button--first">
+              <Button
+                className="k-Modal__button--button"
+                modifier="hydrogen"
+                size="big">
+                  Big button
+              </Button>
+            </GridCol>
+
+            <GridCol col="12" col-m="6" className="k-Modal__button--last">
+              <Button
+                modifier="helium"
+                size="big">
+                  Big button
+              </Button>
+            </GridCol>
+          </Grid>
         </div>
       </ReactModal>
     )
