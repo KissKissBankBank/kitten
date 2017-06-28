@@ -49,19 +49,16 @@ export class Modal extends React.Component {
           afterOpen: 'k-ModalOverlay--afterOpen',
           beforeClose: 'k-ModalOverlay--beforeClose'
         }}
-        isOpen={ this.state.showModal }
-      >
+        isOpen={ this.state.showModal }>
 
         { this.renderCloseModal() }
 
         <div className="k-Modal__paragraph">
           <Title
             margin={ false }
-            modifier="quaternary"
-            ref={subtitle => this.subtitle = subtitle}>
+            modifier="quaternary">
               Titre de la popin
           </Title>
-
           <Paragraph
             modifier="tertiary">
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
@@ -81,7 +78,6 @@ export class Modal extends React.Component {
             size="big">
               Big button
           </Button>
-
         </div>
       </ReactModal>
     )
@@ -96,7 +92,6 @@ export class Modal extends React.Component {
           onClick={ this.handleOpenModal }>
            Open
         </Button>
-
         { this.renderModal() }
       </div>
     )
