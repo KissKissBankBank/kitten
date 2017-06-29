@@ -93,6 +93,8 @@ export class Modal extends React.Component {
   }
 
   render() {
+    const { ...others } = this.props
+
     return (
       <div>
         <Button
