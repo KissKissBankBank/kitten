@@ -35,6 +35,10 @@ export const Modal = (ModalComponent, WrappedComponent, WrappedProps) => {
     }
 
     renderModal() {
+      const { children,
+              className,
+              ... others } = this.props
+
       return (
         <ReactModal
           className={{
@@ -53,21 +57,14 @@ export const Modal = (ModalComponent, WrappedComponent, WrappedProps) => {
           { this.renderCloseModal() }
 
           <ModalComponent />
-
         </ReactModal>
       )
     }
 
     render() {
-      const { children,
-              className,
-              modalClassName,
-              ... others } = this.props
-
       return (
         <div>
           { this.renderModal() }
-
           <WrappedComponent
             onClick={ this.handleOpenModal } />
         </div>
