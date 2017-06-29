@@ -4,7 +4,7 @@ import ReactModal from 'react-modal'
 import classNames from 'classnames'
 import { CloseButton } from 'kitten/components/buttons/close-button'
 
-export const Modal = (ModalComponent, WrappedComponent, WrappedProps) => {
+export const modal = (ModalComponent, WrappedComponent, WrappedProps) => {
   return class Modal extends React.Component {
     constructor() {
       super()

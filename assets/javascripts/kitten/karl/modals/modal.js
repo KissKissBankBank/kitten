@@ -1,5 +1,5 @@
 import React from 'react'
-import { Modal } from 'kitten/hoc/modal'
+import { modal } from 'kitten/hoc/modal'
 import { Button } from 'kitten/components/buttons/button'
 import { Grid, GridCol } from 'kitten/components/grid/grid'
 import { Title } from 'kitten/components/typography/title'
@@ -47,4 +47,4 @@ const KarlModalButton = props => {
   )
 }
 
-export const ButtonWithModal = Modal(KarlModalComponent, KarlModalButton)
+export const ButtonWithModal = modal(KarlModalComponent, KarlModalButton)
