@@ -84,7 +84,6 @@ import { Progress } from 'kitten/components/meters/progress'
 
 // Modals
 import ReactModal from 'react-modal'
-import { Modal } from 'kitten/components/modals/modal'
 
 // Navigation
 import { TabBar } from 'kitten/components/navigation/tab-bar'
@@ -192,6 +191,7 @@ import { KarlMenu,
 import { KarlBrowsing } from 'app/browsing/browsing'
 import { KarlSeparator } from 'kitten/karl/layout/separator'
 import { KarlImageCropper } from 'kitten/karl/images/image-cropper'
+import { ButtonWithModal } from 'kitten/karl/modals/modal'
 
 ReactOnRails.register({
   // Box
@@ -280,7 +280,7 @@ ReactOnRails.register({
 
   // Modal
   ReactModal,
-  Modal,
+  ButtonWithModal,
 
   // Navigation
   TabBar,

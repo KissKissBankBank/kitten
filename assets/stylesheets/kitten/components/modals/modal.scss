@@ -24,7 +24,7 @@
 
     background-color: map-get($k-colors, 'background-1');
     border: 1px solid map-get($k-colors, 'line-1');
-    border-radius: 15px;
+    border-radius: k-px-to-rem(16px);
     text-align: center;
 
     outline: none;
@@ -57,11 +57,8 @@
   }
 
   .k-Modal__button--button {
-    margin-bottom: k-px-to-rem(10px);
-
-    @include k-media-min('m') {
-      margin-right: k-px-to-rem(10px);
-      margin-bottom: 0;
+    @include k-media-max('s') {
+      margin-bottom: k-px-to-rem(10px);
     }
   }
 
@@ -77,7 +74,7 @@
     justify-content: center;
     align-items: center;
 
-    background-color: rgba(255, 255, 255, 0.75);
+    background-color: rgba(0, 0, 0, 0.5);
   }
 
 // Removes scroll from body
