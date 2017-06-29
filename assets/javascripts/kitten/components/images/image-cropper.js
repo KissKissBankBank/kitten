@@ -18,6 +18,7 @@ export class ImageCropper extends React.Component {
       cropperWidth: null,
       cropperHeight: null,
       imageSrc: this.props.imageSrc,
+      fileName: this.props.fileName,
     }
 
     this.handleUploaderSuccess = this.handleUploaderSuccess.bind(this)
@@ -146,28 +147,30 @@ export class ImageCropper extends React.Component {
     return (
       <Marger key="cropper" top="2" bottom="2">
         <div ref={ node => { this.cropperContainer = node } }>
-          <Cropper
-            // This helps unmount and remount a new cropper to keep
-            // the component responsive.
-            key={ `cropper-${ this.state.cropperHeight }` }
-            ref="cropper"
-            className="k-Cropper"
-            src={ this.state.imageSrc }
-            style={ styles }
-            aspectRatio={ this.props.aspectRatio }
-            viewMode={ 3 }
-            guides={ false }
-            modal={ false }
-            autoCropArea={ 1 }
-            cropBoxMovable={ false }
-            cropBoxResizable={ false }
-            toggleDragModeOnDblclick={ false }
-            zoomOnTouch={ false }
-            zoomOnWheel={ false }
-            dragMode={ 'move' }
-            crop={ this.handleCrop }
-            ready={ this.handleReady }
-          />
+          { (this.state.cropperWidth && this.state.cropperHeight) &&
+            <Cropper
+              // This helps unmount and remount a new cropper to keep
+              // the component responsive.
+              key={ `cropper-${ this.state.cropperHeight }` }
+              ref="cropper"
+              className="k-Cropper"
+              src={ this.state.imageSrc }
+              style={ styles }
+              aspectRatio={ this.props.aspectRatio }
+              viewMode={ 3 }
+              guides={ false }
+              modal={ false }
+              autoCropArea={ 1 }
+              cropBoxMovable={ false }
+              cropBoxResizable={ false }
+              toggleDragModeOnDblclick={ false }
+              zoomOnTouch={ false }
+              zoomOnWheel={ false }
+              dragMode={ 'move' }
+              crop={ this.handleCrop }
+              ready={ this.handleReady }
+            />
+          }
         </div>
       </Marger>
     )
