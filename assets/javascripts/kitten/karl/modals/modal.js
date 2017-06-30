@@ -11,7 +11,7 @@ const KarlModalComponent = props => {
       <Title
         margin={ false }
         modifier="quaternary">
-          Titre de la popin
+          Title
       </Title>
       <Paragraph
         modifier="tertiary">
@@ -47,4 +47,4 @@ const KarlModalButton = props => {
   )
 }
 
-export const ButtonWithModal = modal(KarlModalComponent, KarlModalButton)
+export const KarlButtonWithModal = modal(KarlModalComponent, KarlModalButton)
