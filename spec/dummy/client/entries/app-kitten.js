@@ -48,6 +48,7 @@ import { TextInputWithUnit } from 'kitten/components/form/text-input-with-unit'
 // Grid
 import { Container } from 'kitten/components/grid/container'
 import { Grid, GridCol } from 'kitten/components/grid/grid'
+import { KarlRow } from 'kitten/karl/grid/row'
 import { KarlSideLayout } from 'kitten/karl/layout/side-layout'
 
 // Icons
@@ -241,6 +242,7 @@ ReactOnRails.register({
   Container,
   Grid,
   GridCol,
+  KarlRow,
 
   // Icons
   RightArrowIcon,
