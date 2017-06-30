@@ -44,7 +44,7 @@ describe('<Row />', () => {
   describe('with centered prop', () => {
     const row = shallow(<Row centered />)
 
-    it('has a specifiq class', () => {
+    it('has a specific class', () => {
       expect(row).to.have.className('k-Row--centered')
     })
   })
