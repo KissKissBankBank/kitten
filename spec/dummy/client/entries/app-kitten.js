@@ -18,6 +18,7 @@ import { TagButton } from 'kitten/components/buttons/tag-button'
 // Cards
 import { ProjectCard } from 'kitten/components/cards/project-card'
 import { ProjectCreatorCard } from 'kitten/components/cards/project-creator-card'
+import { ProjectSimilarCard } from 'kitten/components/cards/project-similar-card'
 
 // Dev
 import { DevGrid } from 'kitten/components/dev/dev-grid'
@@ -206,6 +207,7 @@ ReactOnRails.register({
   // Cards
   ProjectCard,
   ProjectCreatorCard,
+  ProjectSimilarCard,
 
   // Dev
   Checkbox,

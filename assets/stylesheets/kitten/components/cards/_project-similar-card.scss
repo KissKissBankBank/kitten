@@ -1,0 +1,46 @@
+/// Project similar card
+///
+/// @group cards
+///
+/// @example scss - usage
+///
+///   @include k-ProjectSimilarCard;
+///
+/// @example html
+///
+
+@mixin k-ProjectSimilarCard {
+$font: 'source-sans';
+$boldFont: 'source-sans-semi-bold';
+
+  .k-ProjectSimilarCard__grid {
+    overflow: hidden;
+    padding: k-px-to-rem(10px);
+  }
+
+  .k-ProjectSimilarCard__grid--flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .k-ProjectSimilarCard__refresh,
+  .k-ProjectSimilarCard__navigation {
+    display: flex;
+    align-items: center;
+  }
+
+  .k-ProjectSimilarCard__header--step {
+    @include k-typographyFont('source-sans');
+    @include k-typographyFontSize(-1, normal);
+
+    margin-right: k-px-to-rem(10px);
+  }
+
+  .k-ProjectSimilarCard__navigation {
+    justify-content: flex-end;
+
+    margin-left: k-px-to-rem(20px);
+    margin-right: k-px-to-rem(20px);
+  }
+}
