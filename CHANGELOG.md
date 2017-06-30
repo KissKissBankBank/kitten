@@ -4,7 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Fix initial size of `cropper` in `ImageCropper` component.
+## [13.1.1] - 2017-06-30
+
+Fix:
+- Fix initial size of `cropper` in `ImageCropper` component.
 
 ## [13.1.0] - 2017-06-27
 
