@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `KarlModal` example.
 - Feature: Add `KarlImageCropper` example.
 - Fix: Harmonize font-size label component on `LocationInput`.
 

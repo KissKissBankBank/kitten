@@ -1,16 +1,15 @@
-import React from 'react'
+import React, { Component } from 'react'
 // Via "https://github.com/reactjs/react-modal"
 import ReactModal from 'react-modal'
-import classNames from 'classnames'
 import { CloseButton } from 'kitten/components/buttons/close-button'
 
-export const modal = (ModalComponent, WrappedComponent, WrappedProps) => {
-  return class Modal extends React.Component {
+export const modal = (ModalContentComponent, TriggerComponent, ModalProps) => {
+  return class Modal extends Component {
     constructor() {
       super()
 
       this.state = {
-      showModal: false
+        showModal: false
       }
 
       this.handleOpenModal = this.handleOpenModal.bind(this)
@@ -30,12 +29,13 @@ export const modal = (ModalComponent, WrappedComponent, WrappedProps) => {
         <CloseButton
           className="k-Modal__close"
           modifier="hydrogen"
-          onClick={ this.handleCloseModal } />
+          onClick={ this.handleCloseModal }
+        />
       )
     }
 
     renderModal() {
-      const { children,
+      const { TriggerComponent,
               className,
               ... others } = this.props
 
@@ -44,19 +44,19 @@ export const modal = (ModalComponent, WrappedComponent, WrappedProps) => {
           className={{
             base: 'k-Modal',
             afterOpen: 'k-Modal--afterOpen',
-            beforeClose: 'k-Modal--beforeClose'
+            beforeClose: 'k-Modal--beforeClose',
           }}
           overlayClassName={{
             base: 'k-ModalOverlay',
             afterOpen: 'k-ModalOverlay--afterOpen',
-            beforeClose: 'k-ModalOverlay--beforeClose'
+            beforeClose: 'k-ModalOverlay--beforeClose',
           }}
           isOpen={ this.state.showModal }
           onRequestClose={ this.handleCloseModal }>
+          <ModalContentComponent />
 
           { this.renderCloseModal() }
 
-          <ModalComponent />
         </ReactModal>
       )
     }
@@ -65,8 +65,9 @@ export const modal = (ModalComponent, WrappedComponent, WrappedProps) => {
       return (
         <div>
           { this.renderModal() }
-          <WrappedComponent
-            onClick={ this.handleOpenModal } />
+          <TriggerComponent
+            onClick={ this.handleOpenModal }
+          />
         </div>
       )
     }

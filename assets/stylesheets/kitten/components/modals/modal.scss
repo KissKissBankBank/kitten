@@ -5,21 +5,25 @@
 /// @example scss - usage
 ///
 ///   @include k-Modal((
-///     z-index: 10
+///     z-index: 10,
 ///   ));
 ///
 /// @example html
 ///
 ///   <div class="k-Modal k-Modal--afterOpen">
-///     <div class="k-Modal__paragraph"> … </div>
-///     <div class="k-Modal__action"> … </div>
+///     <div> … </div>
+///     <div> … </div>
+///     <Button class="k-Modal__close"> … </Button>
 ///   </div>
 
 @mixin k-Modal($options) {
+
+  $size: k-px-to-rem(16px);
+
   .k-Modal {
     position: relative;
-    max-height: calc(100vh - #{k-px-to-rem(16px)} * 2);
-    max-width: calc(100vw - #{k-px-to-rem(16px)} * 2);
+    max-height: calc(100vh - #{$size} * 2);
+    max-width: calc(100vw - #{$size} * 2);
     padding: k-px-to-rem(40px) k-px-to-rem(20px);
 
     background-color: map-get($k-colors, 'background-1');
@@ -44,18 +48,6 @@
     right: k-px-to-rem(10px);
   }
 
-  .k-Modal__button--first {
-    @include k-media-min('m') {
-     text-align: right;
-    }
-  }
-
-  .k-Modal__button--last {
-    @include k-media-min('m') {
-      text-align: left;
-    }
-  }
-
   .k-Modal__button--button {
     @include k-media-max('s') {
       margin-bottom: k-px-to-rem(10px);
@@ -77,7 +69,7 @@
     background-color: rgba(0, 0, 0, 0.5);
   }
 
-// Removes scroll from body
+  // Removes scroll from body
   .ReactModal__Body--open {
     overflow: hidden;
   }
