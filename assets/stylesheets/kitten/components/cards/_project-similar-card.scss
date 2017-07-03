@@ -30,6 +30,13 @@ $boldFont: 'source-sans-semi-bold';
     align-items: center;
   }
 
+  .k-ProjectSimilarCard__header--button {
+
+    &:first-child {
+      margin-right: k-px-to-rem(5px);
+    }
+  }
+
   .k-ProjectSimilarCard__header--step {
     @include k-typographyFont('source-sans');
     @include k-typographyFontSize(-1, normal);

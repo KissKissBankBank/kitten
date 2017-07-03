@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import classNames from 'classnames'
 import { card } from 'kitten/hoc/card'
 import { Grid, GridCol } from 'kitten/components/grid/grid'
@@ -10,10 +10,9 @@ import { Separator } from 'kitten/components/layout/separator'
 import { TagList } from 'kitten/components/lists/tag-list'
 import { RefreshIcon } from 'kitten/components/icons/refresh-icon'
 import { RightArrowIcon } from 'kitten/components/icons/right-arrow-icon'
-import { LeftArrowIcon } from 'kitten/components/icons/left-arrow-icon'
 
 
-class ProjectSimilarCardComponent extends React.Component {
+class ProjectSimilarCardComponent extends Component {
   renderHeader() {
     return (
       <div className={ classNames('k-ProjectSimilarCard__grid') }>
@@ -22,8 +21,8 @@ class ProjectSimilarCardComponent extends React.Component {
           bottom="1">
           <div className="k-ProjectSimilarCard__grid--flex">
             <div className="k-ProjectSimilarCard__refresh">
-              <ButtonIcon>
-                <RefreshIcon />
+              <ButtonIcon size="tiny">
+                <RefreshIcon className="k-ButtonIcon__svg"/>
               </ButtonIcon>
             </div>
 
@@ -32,15 +31,17 @@ class ProjectSimilarCardComponent extends React.Component {
                 1/5
               </div>
 
-              <ButtonIcon className={ classNames('k-ButtonIcon--verticalArrow') }
-                          size="tiny">
-                <LeftArrowIcon className="k-ButtonIcon__svg" />
-              </ButtonIcon>
+              <div className="k-ProjectSimilarCard__header--button">
+                <ButtonIcon className={ classNames('k-ButtonIcon--verticalArrow') }
+                            size="tiny">
+                  <RightArrowIcon className="k-ButtonIcon__svg k-ButtonIcon__svg--miror" />
+                </ButtonIcon>
 
-              <ButtonIcon className={ classNames('k-ButtonIcon--verticalArrow') }
-                          size="tiny">
-                <RightArrowIcon className="k-ButtonIcon__svg" />
-              </ButtonIcon>
+                <ButtonIcon className={ classNames('k-ButtonIcon--verticalArrow') }
+                            size="tiny">
+                  <RightArrowIcon className="k-ButtonIcon__svg" />
+                </ButtonIcon>
+              </div>
             </div>
           </div>
         </Marger>

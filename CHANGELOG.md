@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add new `ProjectSimilarCard` component.
+
 ## [13.1.1] - 2017-06-30
 
 Fix:
