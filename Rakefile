@@ -40,7 +40,7 @@ task kitten_release: [:sassdoc, :build] do
   sh 'git add lib/kitten/version.rb *CHANGELOG.md public/sassdoc/index.html ' \
      'package.json spec/dummy/client/yarn.lock Gemfile.lock'
   sh "git commit -m v#{Kitten::VERSION}"
-  sh "git tag -a v#{Kitten::VERSION} 'Version #{Kitten::VERSION}'"
+  sh "git tag -a v#{Kitten::VERSION} -m 'Version #{Kitten::VERSION}'"
   sh 'git push origin master'
   sh 'git push origin --tags'
 
