@@ -44,18 +44,6 @@
     border: 1px solid $border-color-helium;
   }
 
-  .k-Tooltip__arrow {
-    position: absolute;
-    // TODO this should be set by JavaScript only
-    left: 8rem;
-    display: block;
-    width: 0;
-    height: 0;
-    border: $arrow-size solid transparent;
-    border-top-color: $border-color-helium;
-    bottom: -1rem;
-  }
-
   .k-Tooltip__content {
     background-color: $background-color-helium !important;
     color: $color-helium !important;
