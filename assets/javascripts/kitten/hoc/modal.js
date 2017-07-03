@@ -52,7 +52,8 @@ export const modal = (ModalContentComponent, TriggerComponent) => {
             beforeClose: 'k-ModalOverlay--beforeClose',
           }}
           isOpen={ this.state.showModal }
-          onRequestClose={ this.handleCloseModal }>
+          onRequestClose={ this.handleCloseModal }
+          contentLabel="Modal">
 
           <ModalContentComponent />
 
