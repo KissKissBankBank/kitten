@@ -30,7 +30,8 @@
     @include k-typographyFontSize($font-size, $line-height);
 
     position: absolute;
-    padding: k-px-to-rem(20px);
+    padding-right: k-px-to-rem(20px);
+    padding-left: k-px-to-rem(20px);
     margin-top: $arrow-size;
 
     background-color: $background-color-helium;
@@ -45,13 +46,15 @@
 
   .k-TooltipNew__arrow {
     position: absolute;
+    display: block;
+
     // Example
     left: 8rem;
-    display: block;
+    top: -1rem;
     width: 0;
     height: 0;
+
     border: $arrow-size solid transparent;
     border-bottom-color: $border-color-helium;
-    top: -1rem;
   }
 }
