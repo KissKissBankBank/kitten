@@ -82,9 +82,6 @@ import NavList from 'kitten/components/lists/nav-list'
 // Meters
 import { Progress } from 'kitten/components/meters/progress'
 
-// Modals
-import ReactModal from 'react-modal'
-
 // Navigation
 import { TabBar } from 'kitten/components/navigation/tab-bar'
 
@@ -277,9 +274,6 @@ ReactOnRails.register({
 
   // Meters
   Progress,
-
-  // Modal
-  ReactModal,
 
   // Navigation
   TabBar,
