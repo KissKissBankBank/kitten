@@ -4,7 +4,6 @@ import { Marger } from 'kitten/components/layout/marger'
 
 export class TooltipNew extends React.Component {
   renderArrow() {
-
     return (
       <span className="k-TooltipNew__arrow" />
     )
