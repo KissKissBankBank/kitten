@@ -277,7 +277,6 @@ sub create_tree_from_uri {
     my %conf = %{ shift() };
     my $url  = shift;
 
-    #$url=~m/image/ and die $url;
     my $uri_o    = URI->new($url);
     my $scheme   = $uri_o->scheme;
     my $uri_path = $uri_o->path();
