@@ -44,7 +44,7 @@ cleanup() {
   if [ "$SURE" = "yes" ]; then
     stop
     cd -
-    ./bin/cleanup
+    bash ./bin/cleanup
   fi
   echo "Cleanup done"
 }
@@ -85,7 +85,7 @@ install(){
     echo There seems to be a previous install of $SCRIPT_NAME
     cleanup
   fi
-  ./bin/install
+  bash ./bin/install
 }
 
 start(){
