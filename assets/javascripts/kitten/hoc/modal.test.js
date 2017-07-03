@@ -1,48 +1,38 @@
 import React from 'react'
 import classNames from 'classnames'
 import { expect } from 'chai'
-import { shallow } from 'enzyme'
+import { shallow, mount } from 'enzyme'
 import { modal } from 'kitten/hoc/modal'
+import { Button } from 'kitten/components/buttons/button'
 
-const ExampleModalComponent = props => {
+
+const ExampleContentComponent = props => {
   const exampleClassName = classNames(
-    'test-ExampleModal',
+    'test-ExampleContent',
     props.className,
   )
-
   return (
-    <div { ...props } className={ exampleClassName } />
+    <div { ...props } className={ exampleClassName }>
+      <div> coucou </div>
+    </div>
   )
 }
 
-const ExampleModal = modal(ExampleModalComponent)
+const ExampleTriggerComponent = props => (
+  <Button { ...props } />
+)
+
+const ExampleModal = modal(ExampleContentComponent, ExampleTriggerComponent)
 
 describe('modal()', () => {
-  describe('by default', () => {
-    const component = shallow(<ExampleModalComponent />)
+  describe('with TriggerComponent', () => {
+    const component = mount(
+      <ExampleModal>
+        <Button />
+      </ExampleModal>)
 
-    it('has a default class', () => {
-      expect(component).to.have.className('k-Modal')
-    })
-  })
-
-  describe('with button', () => {
-    const component = component.children().first()
-  })
-
-  describe('with CloseButton', () => {
-    const component = shallow(<ExampleModalComponent closeButon />)
-
-    it('renders CloseButton', () => {
-      expect(component).to.have.className('k-Modal__close')
-    })
-  })
-
-  describe('with react modal', () => {
-    it('renders ReactModal', () => {
-      const modal = component.children().last()
-
-      expect(modal).to.have.type(ReactModal)
+    it('has a trigger class', () => {
+      expect(component).to.have.descendants('.k-Button')
     })
   })
 })

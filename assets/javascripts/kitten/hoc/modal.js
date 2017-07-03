@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import ReactModal from 'react-modal'
 import { CloseButton } from 'kitten/components/buttons/close-button'
 
-export const modal = (ModalContentComponent, TriggerComponent, ModalProps) => {
+export const modal = (ModalContentComponent, TriggerComponent) => {
   return class Modal extends Component {
     constructor() {
       super()
@@ -53,10 +53,10 @@ export const modal = (ModalContentComponent, TriggerComponent, ModalProps) => {
           }}
           isOpen={ this.state.showModal }
           onRequestClose={ this.handleCloseModal }>
+
           <ModalContentComponent />
 
           { this.renderCloseModal() }
-
         </ReactModal>
       )
     }
