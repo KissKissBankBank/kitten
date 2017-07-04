@@ -1,92 +1,47 @@
 <div class="k-Grid">
   <div class="k-Grid__col k-Grid__col--12">
     <%= example 'row' do %>
-      <div class="k-Row">
-        <div class="k-Row__content">
-          <p>
-            Ideoque fertur neminem aliquando ob haec vel similia poenae addictum
-            oblato de more elogio revocari iussisse, quod inexorabiles quoque
-            principes factitarunt. et exitiale hoc vitium, quod in aliis non
-            numquam intepescit.
-          </p>
-        </div>
-      </div>
+      <%= react_component 'KarlRow' %>
     <% end %>
   </div>
 
   <div class="k-Grid__col k-Grid__col--12">
     <%= example 'padded row' do %>
-      <div class="k-Row k-Row--padded">
-        <div class="k-Row__content">
-          <p>
-            Quibus occurrere bene pertinax miles explicatis ordinibus parans
-            hastisque feriens scuta qui habitus iram pugnantium concitat et dolorem
-            proximos iam gestu terrebat sed eum in certamen alacriter consurgentem
-            revocavere ductores.
-          </p>
-        </div>
-      </div>
+      <%= react_component 'KarlRow', props: {
+        padded: true,
+      } %>
     <% end %>
   </div>
 
   <div class="k-Grid__col k-Grid__col--12">
     <%= example 'centered row' do %>
-      <div class="k-Row k-Row--centered">
-        <div class="k-Row__content">
-          <p>
-            Incenderat autem audaces usque ad insaniam homines ad haec, quae
-            nefariis egere conatibus, Luscus quidam curator urbis subito visus:
-            eosque ut heiulans baiolorum praecentor ad expediendum quod orsi sunt
-            incitans vocibus crebris. qui haut longe postea ideo vivus exustus est.
-          </p>
-        </div>
-      </div>
+      <%= react_component 'KarlRow', props: {
+        centered: true,
+      } %>
     <% end %>
   </div>
 
   <div class="k-Grid__col k-Grid__col--12">
     <%= example 'light row' do %>
-      <div class="k-Row k-Row--light">
-        <div class="k-Row__content">
-          <p>
-            Siquis enim militarium vel honoratorum aut nobilis inter suos rumore
-            tenus esset insimulatus fovisse partes hostiles, iniecto onere catenarum
-            in modum beluae trahebatur et inimico urgente vel nullo, quasi sufficiente
-            hoc solo, quod nominatus esset aut delatus aut postulatus, capite vel
-            multatione bonorum aut insulari solitudine damnabatur.
-          </p>
-        </div>
-      </div>
+      <%= react_component 'KarlRow', props: {
+        light: true,
+      } %>
     <% end %>
   </div>
 
   <div class="k-Grid__col k-Grid__col--12">
     <%= example 'dark row' do %>
-      <div class="k-Row k-Row--dark">
-        <div class="k-Row__content">
-          <p>
-            Post hoc impie perpetratum quod in aliis quoque iam timebatur, tamquam
-            licentia crudelitati indulta per suspicionum nebulas aestimati quidam
-            noxii damnabantur. quorum pars necati, alii puniti bonorum multatione
-            actique laribus suis extorres nullo sibi relicto praeter querelas et
-            lacrimas, stipe conlaticia victitabant, et civili iustoque imperio.
-          </p>
-        </div>
-      </div>
+      <%= react_component 'KarlRow', props: {
+        dark: true,
+      } %>
     <% end %>
   </div>
 
   <div class="k-Grid__col k-Grid__col--12">
     <%= example 'row with light bottom border' do %>
-      <div class="k-Row k-Row--lightBottomBorder">
-        <div class="k-Row__content">
-          <p>
-            Nunc vero inanes flatus quorundam vile esse quicquid extra urbis
-            pomerium nascitur aestimant praeter orbos et caelibes, nec credi
-            potest qua obsequiorum diversitate coluntur homines sine liberis Romae.
-          </p>
-        </div>
-      </div>
+      <%= react_component 'KarlRow', props: {
+        lightBottomBorder: true,
+      } %>
     <% end %>
   </div>
 </div>
