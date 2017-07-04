@@ -4,13 +4,18 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Fix `SimpleUploader` responsive.
-- Feature: Add `Row` component.
-- Feature: Add new `TooltipNew` component.
-- Feature: Add new `InfoWithTooltip` component.
-- Feature: Add new `ButtonInfoIcon` component.
-- Feature: Add new `InfoIcon` component.
-- Feature: Add `italic` prop to `Paragraph` component.
+## [13.2.1] - 2017-07-04
+
+Features:
+- Add `Row` component.
+- Add new `TooltipNew` component.
+- Add new `InfoWithTooltip` component.
+- Add new `ButtonInfoIcon` component.
+- Add new `InfoIcon` component.
+- Add `italic` prop to `Paragraph` component.
+
+Fix:
+- Fix `SimpleUploader` responsive.
 
 ## [13.1.1] - 2017-06-30
 
