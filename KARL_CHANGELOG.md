@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add `KarlRow` example.
+- Feature: Update the tooltip examples.
+- Feature: Add italic paragraph example.
 
 ## [13.1.1] - 2017-06-30
 

@@ -248,7 +248,7 @@ sub process_css {
     open my $handle, '<', \$content
       or $log->logdie( sprintf '%s - open scalar failed', subname );
     while (<$handle>) {
-        m/content:\s*url\((.*)\)/xms
+        m/\s*url\((.*)\)/xms
           and my $match = $1;
         next if !$match;
         next if List::Util::any { /$match/ } @links;
@@ -258,9 +258,15 @@ sub process_css {
     }
     close $handle
       or $log->logdie( '%s - coudlnt close handle', subname );
-    for my $link (@links) {
+  LINK: for my $link (@links) {
+        if ( !uri_belongs_to_us( \%conf, $link ) ) {
+            $log->info( sprintf '%s - url %s is ours, processing url',
+                subname, $link );
+            next LINK;
+        }
         my $tree = sprintf( '%s%s', $path, $link );
         create_tree_from_uri( \%conf, $tree );
+
     }
     return 1;
 }
@@ -268,9 +274,9 @@ sub process_css {
 # create_tree_from_uri
 # Create directories and files matching a given uri
 sub create_tree_from_uri {
-    my %conf     = %{ shift() };
-    my $url      = shift;
-        #$url=~m/image/ and die $url;
+    my %conf = %{ shift() };
+    my $url  = shift;
+
     my $uri_o    = URI->new($url);
     my $scheme   = $uri_o->scheme;
     my $uri_path = $uri_o->path();
@@ -320,6 +326,7 @@ sub create_tree_from_uri {
     open( my $file, '>:encoding(UTF-8)', $full_path )
       or $log->logdie( sprintf '%s - open failed: %s %s',
         subname, $full_path, $! );
+    binmode $file;
     print {$file} $content;
     close $file
       or croak('couldnt close');
@@ -337,7 +344,8 @@ sub create_tree_from_uri {
 sub uri_belongs_to_us {
     my %conf = %{ shift() };
     my $url  = shift;
-    my $uri  = URI->new($url)
+    print Dumper $url;
+    my $uri = URI->new($url)
       or $log->debug( sprintf '%s - invalid url %s', subname, $url );
 
     my $belongs = 0;
@@ -358,13 +366,13 @@ sub uri_belongs_to_us {
         if ($uri_host) {
             $log->trace( sprintf '%s - uri host: %s', subname(), $uri_host, );
             if ( $uri_host eq $base_uri_host ) {
-                $log->debug(
+                $log->info(
                     sprintf '%s - uris = match - uri_host: %s - base_url: %s',
                     subname(), $uri_host, $base_uri_host );
                 $belongs = 1;
             }
             else {
-                $log->debug(
+                $log->info(
                     sprintf '%s - no match - uri_host: %s - base_url: %s',
                     subname(), $uri_host, $base_uri_host );
             }

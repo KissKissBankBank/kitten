@@ -57,6 +57,7 @@ import { RightArrowIcon } from 'kitten/components/icons/right-arrow-icon'
 import { CbIcon } from 'kitten/components/icons/cb-icon'
 import { MenuIcon } from 'kitten/components/icons/menu-icon'
 import { HeartIcon } from 'kitten/components/icons/heart-icon'
+import { InfoIcon } from 'kitten/components/icons/info-icon'
 import { InformationIcon } from 'kitten/components/icons/information-icon'
 import { KissKissBankBankLogoIcon } from 'kitten/components/icons/kisskissbankbanklogo-icon'
 import { FacebookIcon } from 'kitten/components/icons/facebook-icon'
@@ -103,8 +104,10 @@ import { Stepper } from 'kitten/components/steppers/stepper'
 
 // Tooltips
 import ReactTooltip from 'react-tooltip'
-import Tooltip from 'kitten/components/tooltips/tooltip'
 import { StaticTooltip } from 'kitten/components/tooltips/static-tooltip'
+import Tooltip from 'kitten/components/tooltips/tooltip'
+import { TooltipNew } from 'kitten/components/tooltips/tooltip-new'
+import { InfoWithTooltip } from 'kitten/components/tooltips/info-with-tooltip'
 
 // Tours
 import HeaderTour from 'kitten/components/tours/header-tour'
@@ -249,6 +252,7 @@ ReactOnRails.register({
   CbIcon,
   MenuIcon,
   GrabberIcon,
+  InfoIcon,
   InformationIcon,
   KissKissBankBankLogoIcon,
   HeartIcon,
@@ -297,7 +301,9 @@ ReactOnRails.register({
   // Tooltips
   ReactTooltip,
   Tooltip,
+  TooltipNew,
   StaticTooltip,
+  InfoWithTooltip,
 
   // Tours
   HeaderTour,
