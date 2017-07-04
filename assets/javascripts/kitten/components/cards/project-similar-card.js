@@ -15,7 +15,7 @@ import { RightArrowIcon } from 'kitten/components/icons/right-arrow-icon'
 class ProjectSimilarCardComponent extends Component {
   renderHeader() {
     return (
-      <div className={ classNames('k-ProjectSimilarCard__grid') }>
+      <div className="k-ProjectSimilarCard__grid">
         <Marger
           top="1"
           bottom="1">
@@ -50,36 +50,74 @@ class ProjectSimilarCardComponent extends Component {
     )
   }
 
-  // renderDescription() {
-  //   return ()
-  // }
+  renderImage() {
+    if (!this.props.image) return
 
-  // renderImage() {
-  //   return ()
-  // }
+    return (
+      <div className="k-ProjectSimilarCard__grid">
+        <Marger top="1.5" bottom="1.3">
+          <img className="k-ProjectSimilarCard__img"
+                src={ this.props.image }
+                alt="" />
+        </Marger>
+      </div>
+    )
+  }
 
-  // renderTags() {
-  //   return ()
-  // }
+  renderDescription() {
+    const {
+      title,
+      text,
+    } = this.props
 
-  // renderInfos() {
-  //   return (
-  //     <div>
-  //       <Marger>
-  //         { this.renderInfo(this.props.info1) }
-  //         { this.renderInfo(this.props.info2) }
-  //         { this.renderInfo(this.props.info3) }
-  //       </Marger>
-  //     </div>
-  //   )
-  // }
+    return(
+      <Marger bottom="2">
+        <div className="k-ProjectSimilarCard__grid">
+          <Title modifier="quaternary"
+                 margin={ false }>{ title }</Title>
+          { this.renderTags() }
+          <Paragraph modifier="tertiary"
+                     margin={ false }>{ text }</Paragraph>
+        </div>
+      </Marger>
+    )
+  }
 
-  // renderInfo(info) {
-  //   const infoClassName = classNames(
-  //     'k-ProjectSimilarCard__info__value',
-  //     { }
-  //   )
-  // }
+  renderTags() {
+    if (!this.props.tags) return
+
+    return (
+      <Marger top=".5" bottom="1">
+        <TagList items={ this.props.tags } tiny />
+      </Marger>
+    )
+  }
+
+  renderInfos() {
+    return (
+      <Marger top="1.6" bottom="1.6" className="k-ProjectCard__grid--flex">
+        { this.renderInfo(this.props.info1) }
+        { this.renderInfo(this.props.info2) }
+        { this.renderInfo(this.props.info3) }
+      </Marger>
+    )
+  }
+
+  renderInfo(info) {
+    const infoClassName = classNames(
+      'k-ProjectSimilarCard__info__value',
+      { 'k-u-color-primary1': this.props.coloredInfosValues },
+    )
+
+    return (
+      <div className="k-u-align-center k-ProjectSimilarCard__info">
+        { info.text }<br />
+        <span className={ infoClassName }>
+          { info.locked ? <LockIcon width="12" /> : info.value }
+        </span>
+      </div>
+    )
+  }
 
   render() {
     const ProjectSimilarCardClassName = classNames(
@@ -91,11 +129,25 @@ class ProjectSimilarCardComponent extends Component {
       <div className={ ProjectSimilarCardClassName }>
         { this.renderHeader() }
         <Separator />
+        { this.renderImage() }
+        { this.renderDescription() }
+        <Separator />
+        { this.renderInfos() }
       </div>
     )
   }
 }
 
+
+ProjectSimilarCardComponent.defaultProps = {
+  image: 'https://placehold.it/400x200/4a84ff/4a84ff',
+  title: "Lorem ipsum dolor sit amet",
+  text:  "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium",
+  tags: [{ key: 'tag-1', item: 'Tag 1' }, { key: 'tag-2', item: 'Tag 2', }],
+  info1: { value: 'xx', text: 'Info 1', locked: false },
+  info2: { value: 'xx', text: 'Info 2', locked: false },
+  info3: { value: 'xx', text: 'Info 3', locked: false },
+}
 
 // Add card generic styles.
 
