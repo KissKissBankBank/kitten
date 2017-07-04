@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Fix `SimpleUploader` responsive.
 - Feature: Add new `TooltipNew` component.
 - Feature: Add new `InfoWithTooltip` component.
 - Feature: Add new `ButtonInfoIcon` component.
