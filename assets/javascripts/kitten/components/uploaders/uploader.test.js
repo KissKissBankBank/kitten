@@ -54,12 +54,16 @@ describe('<Uploader />', () => {
       expect(component).to.have.descendants('.custom-theme')
     })
 
-    it('passes buttonLabel prop to the custom theme', () => {
-      expect(theme).to.have.prop('buttonLabel', 'Custom label')
+    describe('with a buttonLabel prop', () => {
+      it('passes buttonLabel prop to the custom theme', () => {
+        expect(theme).to.have.prop('buttonLabel', 'Custom label')
+      })
     })
 
-    it('passes disabled prop to the custom theme', () => {
-      expect(theme).to.have.prop('disabled', true)
+    describe('with a disabled prop', () => {
+      it('passes disabled prop to the custom theme', () => {
+        expect(theme).to.have.prop('disabled', true)
+      })
     })
   })
 })
