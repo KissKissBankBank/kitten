@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-Feature: Add `disabled` prop to `ImageCropper`, `SimpleUploader` and `Uploader`
+- Feature: Add `disabled` prop to `ImageCropper`, `SimpleUploader` and `Uploader`
 components.
 
 ## [13.2.1] - 2017-07-04
