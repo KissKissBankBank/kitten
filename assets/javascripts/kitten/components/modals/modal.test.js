@@ -2,37 +2,31 @@ import React from 'react'
 import classNames from 'classnames'
 import { expect } from 'chai'
 import { shallow, mount } from 'enzyme'
+import ReactModal from 'react-modal'
 import { Modal } from 'kitten/components/modals/modal'
 import { Button } from 'kitten/components/buttons/button'
+import { CloseButton } from 'kitten/components/buttons/close-button'
 
-
-const ExampleContentComponent = props => {
-  const exampleClassName = classNames(
-    'test-ExampleContent',
-    props.className,
-  )
-  return (
-    <div { ...props } className={ exampleClassName }>
-      <div> coucou </div>
-    </div>
-  )
-}
-
-const ExampleTriggerComponent = props => (
-  <Button { ...props } />
-)
-
-const ExampleModal = modal(ExampleContentComponent, ExampleTriggerComponent)
-
-describe('modal()', () => {
-  describe('with TriggerComponent', () => {
+describe('<Modal />', () => {
+  describe('with trigger', () => {
     const component = mount(
-      <ExampleModal>
-        <Button />
-      </ExampleModal>)
+      <Modal trigger={ <span className="trigger-example" /> } />
+    )
 
-    it('has a trigger class', () => {
-      expect(component).to.have.descendants('.k-Button')
+    it('contains the trigger', () => {
+      expect(component).to.have.descendants('.trigger-example')
+    })
+  })
+
+  describe('with className', () => {
+    const component = mount(
+      <Modal className="content-example" />
+    )
+
+    it('contains the content', () => {
+      expect(component).to.have.className('k-ModalTrigger')
+      expect(component).to.have.className('content-example')
+      expect(component).to.have.descendants('.k-ModalTrigger__trigger')
     })
   })
 })
