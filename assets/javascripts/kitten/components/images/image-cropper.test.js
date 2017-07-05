@@ -130,7 +130,8 @@ describe('<ImageCropper />', () => {
         const component = shallow(
           <ImageCropper
             disabled
-            imageSrc="custom-file.jpg" />
+            imageSrc="custom-file.jpg"
+          />
         )
         component.setState({ cropperHeight: 100, cropperWidth: 200 })
         const cropper = component.find(Cropper)

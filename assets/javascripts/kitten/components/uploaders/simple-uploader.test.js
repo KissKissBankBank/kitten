@@ -55,7 +55,7 @@ describe('<SimpleUploader />', () => {
     it('passes the right props to the delete button', () => {
       const expectedProps = {
         className: 'k-SimpleUploader__buttonIcon',
-        size: 'micro'
+        size: 'micro',
       }
 
       expect(deleteButton.props()).to.contains(expectedProps)
@@ -86,7 +86,7 @@ describe('<SimpleUploader />', () => {
     })
 
     describe('without a fileName prop', () => {
-      const component = mount(<SimpleUploader disabled={ true } />)
+      const component = mount(<SimpleUploader disabled />)
       const uploadButton = component.find('.k-SimpleUploader__button')
 
       it('adds a disabled attribute to the upload button', () => {
