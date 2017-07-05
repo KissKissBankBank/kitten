@@ -1,11 +1,11 @@
 import React from 'react'
-import { modal } from 'kitten/hoc/modal'
 import { Button } from 'kitten/components/buttons/button'
 import { Grid, GridCol } from 'kitten/components/grid/grid'
 import { Title } from 'kitten/components/typography/title'
 import { Paragraph } from 'kitten/components/typography/paragraph'
+import { Modal } from 'kitten/components/modals/modal'
 
-const KarlModalComponent = props => (
+const KarlModalComponent = () => (
   <div>
     <Title
       margin={ false }
@@ -39,8 +39,13 @@ const KarlModalComponent = props => (
   </div>
 )
 
-const KarlModalButton = props => (
-  <Button modifier="helium" { ...props }>Open</Button>
+const KarlModalButton = () => (
+  <Button modifier="helium">Open</Button>
 )
 
-export const KarlModal = modal(KarlModalComponent, KarlModalButton)
+export const KarlModal = props => (
+  <Modal
+    trigger={ <KarlModalButton /> }
+    content={ <KarlModalComponent /> }
+  />
+)

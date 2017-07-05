@@ -2,7 +2,7 @@ import React from 'react'
 import classNames from 'classnames'
 import { expect } from 'chai'
 import { shallow, mount } from 'enzyme'
-import { modal } from 'kitten/hoc/modal'
+import { Modal } from 'kitten/components/modals/modal'
 import { Button } from 'kitten/components/buttons/button'
 
 
