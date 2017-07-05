@@ -5,11 +5,12 @@ import { ButtonIcon } from 'kitten/components/buttons/button-icon'
 import { CrossIcon } from 'kitten/components/icons/cross-icon'
 
 const Theme = props => {
+  const handleClick = props.disabled ? null : props.onCancel
   const deleteButton = props.fileName
     ? <ButtonIcon className="k-SimpleUploader__buttonIcon"
                   size="micro"
                   disabled={ props.disabled }
-                  onClick={ props.onCancel }>
+                  onClick={ handleClick }>
         <CrossIcon className="k-ButtonIcon__svg" />
       </ButtonIcon>
     : null
