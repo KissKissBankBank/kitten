@@ -5,9 +5,39 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add `Modal` component.
-- Feature: Add `SimpleUploader`, `Uploader` and `ImageCropper` components.
-- Fix: Handles small version of `InfoLines` component.
-- Fix: Harmonize font-size label component on `FormInfo`.
+
+## [13.3.0] - 2017-07-05
+
+Feature:
+- Add `disabled` prop to `ImageCropper`, `SimpleUploader` and `Uploader`
+components.
+
+## [13.2.1] - 2017-07-04
+
+Features:
+- Add `Row` component.
+- Add new `TooltipNew` component.
+- Add new `InfoWithTooltip` component.
+- Add new `ButtonInfoIcon` component.
+- Add new `InfoIcon` component.
+- Add `italic` prop to `Paragraph` component.
+
+Fix:
+- Fix `SimpleUploader` responsive.
+
+## [13.1.1] - 2017-06-30
+
+Fix:
+- Fix initial size of `cropper` in `ImageCropper` component.
+
+## [13.1.0] - 2017-06-27
+
+Feature:
+- Add `SimpleUploader`, `Uploader` and `ImageCropper` components.
+
+Fixes:
+- Handles small version of `InfoLines` component.
+- Harmonize font-size label component on `FormInfo`.
 
 ## [13.0.0] - 2017-06-15
 
