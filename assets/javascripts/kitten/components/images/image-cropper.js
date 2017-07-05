@@ -143,6 +143,7 @@ export class ImageCropper extends React.Component {
       width: this.state.cropperWidth,
       height: this.state.cropperHeight,
     }
+    const dragMode = this.props.disabled ? 'none' : 'move'
 
     return (
       <Marger key="cropper" top="2" bottom="2">
@@ -166,7 +167,7 @@ export class ImageCropper extends React.Component {
               toggleDragModeOnDblclick={ false }
               zoomOnTouch={ false }
               zoomOnWheel={ false }
-              dragMode={ 'move' }
+              dragMode={ dragMode }
               crop={ this.handleCrop }
               ready={ this.handleReady }
             />
@@ -252,6 +253,7 @@ export class ImageCropper extends React.Component {
         onReset={ this.handleUploaderReset }
         buttonLabel={ this.props.buttonLabel }
         fileName={ this.props.fileName }
+        disabled={ this.props.disabled }
       />
     )
   }
@@ -302,6 +304,7 @@ ImageCropper.defaultProps = {
   sliderTitle: 'Zoom…',
   buttonLabel: 'Choose a file…',
   description: 'Lorem ipsum…',
+  disabled: false,
 
   onChange: _fileData => {},
 }

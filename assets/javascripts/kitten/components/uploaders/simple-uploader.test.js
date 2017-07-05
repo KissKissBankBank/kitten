@@ -50,4 +50,32 @@ describe('<SimpleUploader />', () => {
       expect(component.find('.k-SimpleUploader__buttonIcon')).to.be.present()
     })
   })
+
+  describe('with disabled prop', () => {
+    describe('with a fileName prop', () => {
+      const component = mount(<SimpleUploader
+        fileName="custom-filename.png"
+        disabled />
+      )
+      const buttonIcon = component.find('.k-SimpleUploader__buttonIcon')
+      const uploadButton = component.find('.k-SimpleUploader__button')
+
+      it('adds a disabled attribute to the delete button', () => {
+        expect(buttonIcon).to.have.attr('disabled')
+      })
+
+      it('adds a disabled attribute to the upload button', () => {
+        expect(uploadButton).to.have.attr('disabled')
+      })
+    })
+
+    describe('without a fileName prop', () => {
+      const component = mount(<SimpleUploader disabled={ true } />)
+      const uploadButton = component.find('.k-SimpleUploader__button')
+
+      it('adds a disabled attribute to the upload button', () => {
+        expect(uploadButton).to.have.attr('disabled')
+      })
+    })
+  })
 })

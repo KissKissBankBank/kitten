@@ -43,12 +43,22 @@ describe('<Uploader />', () => {
       <Uploader
         theme={ CustomTheme }
         buttonLabel="Custom label"
+        disabled
         fileName="custom-filename.jpg"
       />
     )
+    const theme = component.find(CustomTheme).first()
 
     it('renders a custom theme', () => {
       expect(component).to.have.descendants('.custom-theme')
+    })
+
+    it('passes buttonLabel prop to the custom theme', () => {
+      expect(theme).to.have.prop('buttonLabel', 'Custom label')
+    })
+
+    it('passes disabled prop to the custom theme', () => {
+      expect(theme).to.have.prop('disabled', true)
     })
   })
 })

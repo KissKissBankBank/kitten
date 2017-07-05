@@ -8,6 +8,7 @@ const Theme = props => {
   const deleteButton = props.fileName
     ? <ButtonIcon className="k-SimpleUploader__buttonIcon"
                   size="micro"
+                  disabled={ props.disabled }
                   onClick={ props.onCancel }>
         <CrossIcon className="k-ButtonIcon__svg" />
       </ButtonIcon>
@@ -18,6 +19,7 @@ const Theme = props => {
       <Button size="tiny"
               type="button"
               className="k-SimpleUploader__button"
+              disabled={ props.disabled }
               onClick={ props.onClick }>
         { props.buttonLabel }
       </Button>
@@ -36,6 +38,7 @@ Theme.defaultProps = {
   fileName: null,
   onClick: () => {},
   onCancel: () => {},
+  disabled: false,
 }
 
 export const SimpleUploader = props => {
