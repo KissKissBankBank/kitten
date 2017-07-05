@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 // Via "https://github.com/reactjs/react-modal"
+import classNames from 'classnames'
 import ReactModal from 'react-modal'
 import { CloseButton } from 'kitten/components/buttons/close-button'
 
@@ -37,6 +38,7 @@ export class Modal extends Component {
     const {
       trigger,
       content,
+      className,
       ...others
     } = this.props
 

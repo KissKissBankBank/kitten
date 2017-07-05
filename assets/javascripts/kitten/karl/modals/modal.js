@@ -15,7 +15,8 @@ const KarlModalComponent = () => (
     <Paragraph
       modifier="tertiary">
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-        ligula eget dolor. Donec quam felis, ultricies nec, pellentesque eu, pretium
+        ligula eget dolor. Donec quam felis, ultricies nec, pellentesque eu,
+        pretium
     </Paragraph>
 
     <Grid>
