@@ -212,6 +212,18 @@ export class ImageCropper extends React.Component {
     )
   }
 
+  renderSliderAndCropperInfo() {
+    if (this.props.disabled) return
+
+    return(
+      <GridCol col="12" col-m="6">
+        { this.renderCropperInfo() }
+        { this.renderSliderTitle() }
+        { this.renderSlider() }
+      </GridCol>
+    )
+  }
+
   renderCroppingImage() {
     if (!this.state.imageSrc) return
 
@@ -221,11 +233,7 @@ export class ImageCropper extends React.Component {
           { this.renderCropper() }
         </GridCol>
 
-        <GridCol col="12" col-m="6">
-          { this.renderCropperInfo() }
-          { this.renderSliderTitle() }
-          { this.renderSlider() }
-        </GridCol>
+        { this.renderSliderAndCropperInfo() }
       </Grid>
     )
   }

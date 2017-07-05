@@ -1,11 +1,18 @@
 import React from 'react'
+import sinon from 'sinon'
 import { expect } from 'chai'
-import { mount, shallow } from 'enzyme'
+import { mount } from 'enzyme'
 import { ImageCropper } from 'kitten/components/images/image-cropper'
 import Cropper from 'react-cropper'
 import { SimpleUploader } from 'kitten/components/uploaders/simple-uploader'
 
 describe('<ImageCropper />', () => {
+  const sandbox = sinon.sandbox.create()
+
+  afterEach(() => {
+    sandbox.restore()
+  })
+
   describe('by default', () => {
     const component = mount(<ImageCropper />)
 
@@ -97,7 +104,8 @@ describe('<ImageCropper />', () => {
     })
 
     describe('with cropperHeight and cropperWidth set in state', () => {
-      const component = shallow(<ImageCropper imageSrc="custom-file.jpg" />)
+      global.XMLHttpRequest = sandbox.useFakeXMLHttpRequest()
+      const component = mount(<ImageCropper imageSrc="custom-file.jpg" />)
       component.setState({ cropperHeight: 100, cropperWidth: 200 })
       const cropper = component.find(Cropper)
 
@@ -126,8 +134,16 @@ describe('<ImageCropper />', () => {
         expect(cropper.props().style).to.eql({ width: 200, height: 100 })
       })
 
+      it('renders the slider and the cropper info', () => {
+        const slider = component.find('.k-Slider')
+
+        expect(slider).to.have.length(1)
+        expect(component.text()).to.contains('Zoom…')
+        expect(component.text()).to.contains('Move the image…')
+      })
+
       describe('with disabled prop', () => {
-        const component = shallow(
+        const component = mount(
           <ImageCropper
             disabled
             imageSrc="custom-file.jpg"
@@ -138,6 +154,14 @@ describe('<ImageCropper />', () => {
 
         it('passes dragMode prop to `none` to the Cropper component', () => {
           expect(cropper.props().dragMode).to.eql('none')
+        })
+
+        it('doesn\'t render the slider and the cropper info', () => {
+          const slider = component.find('.k-Slider')
+
+          expect(slider).to.have.length(0)
+          expect(component.text()).not.to.contains('Zoom…')
+          expect(component.text()).not.to.contains('Move the image…')
         })
       })
     })
