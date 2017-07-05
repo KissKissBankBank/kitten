@@ -4,8 +4,6 @@ import { expect } from 'chai'
 import { shallow, mount } from 'enzyme'
 import ReactModal from 'react-modal'
 import { Modal } from 'kitten/components/modals/modal'
-import { Button } from 'kitten/components/buttons/button'
-import { CloseButton } from 'kitten/components/buttons/close-button'
 
 describe('<Modal />', () => {
   describe('with trigger', () => {
