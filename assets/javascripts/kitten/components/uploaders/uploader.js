@@ -93,4 +93,5 @@ Uploader.defaultProps = {
   onSuccess: () => {},
   onError: () => {},
   onReset: () => {},
+  disabled: false,
 }

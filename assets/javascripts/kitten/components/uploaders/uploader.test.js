@@ -18,6 +18,7 @@ describe('<Uploader />', () => {
         fileName: null,
         theme: null,
         buttonLabel: 'Choose a file',
+        disabled: false,
       })
     })
 
