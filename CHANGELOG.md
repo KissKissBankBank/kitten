@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Missing `key` prop in `InfoLines` component & rename attribute in
+  defaultProps.
+
 ## [13.3.0] - 2017-07-05
 
 Feature:
