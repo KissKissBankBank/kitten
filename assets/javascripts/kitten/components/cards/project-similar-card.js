@@ -11,7 +11,6 @@ import { TagList } from 'kitten/components/lists/tag-list'
 import { RefreshIcon } from 'kitten/components/icons/refresh-icon'
 import { RightArrowIcon } from 'kitten/components/icons/right-arrow-icon'
 
-
 class ProjectSimilarCardComponent extends Component {
   renderHeader() {
     return (
@@ -22,22 +21,27 @@ class ProjectSimilarCardComponent extends Component {
           <div className="k-ProjectSimilarCard__grid--flex">
             <div className="k-ProjectSimilarCard__refresh">
               <ButtonIcon size="tiny">
-                <RefreshIcon className="k-ButtonIcon__svg"/>
+                <RefreshIcon
+                  className="k-ButtonIcon__svg"
+                  strokeClassName="k-Button__svg__stroke"
+                  fillClassName="k-ButtonIcon__svg" />
               </ButtonIcon>
             </div>
 
             <div className="k-ProjectSimilarCard__navigation">
               <div className="k-ProjectSimilarCard__header--step">
-                1/5
+                { this.props.step }
               </div>
 
               <div className="k-ProjectSimilarCard__header--button">
-                <ButtonIcon className={ classNames('k-ButtonIcon--verticalArrow') }
+                <ButtonIcon className="k-ButtonIcon--verticalArrow"
                             size="tiny">
-                  <RightArrowIcon className="k-ButtonIcon__svg k-ButtonIcon__svg--miror" />
+                  <RightArrowIcon
+                    className={ classNames('k-ButtonIcon__svg',
+                                           'k-ButtonIcon__svg--miror' )} />
                 </ButtonIcon>
 
-                <ButtonIcon className={ classNames('k-ButtonIcon--verticalArrow') }
+                <ButtonIcon className="k-ButtonIcon--verticalArrow"
                             size="tiny">
                   <RightArrowIcon className="k-ButtonIcon__svg" />
                 </ButtonIcon>
@@ -54,30 +58,32 @@ class ProjectSimilarCardComponent extends Component {
     if (!this.props.image) return
 
     return (
-      <div className="k-ProjectSimilarCard__grid">
-        <Marger top="1.5" bottom="1.3">
+      <Marger top="1.5">
+        <div className="k-ProjectSimilarCard__grid">
           <img className="k-ProjectSimilarCard__img"
                 src={ this.props.image }
                 alt="" />
-        </Marger>
-      </div>
+        </div>
+      </Marger>
     )
   }
 
   renderDescription() {
     const {
       title,
-      text,
+      paragraph,
     } = this.props
 
     return(
-      <Marger bottom="2">
+      <Marger top="2" bottom="2">
         <div className="k-ProjectSimilarCard__grid">
           <Title modifier="quaternary"
                  margin={ false }>{ title }</Title>
           { this.renderTags() }
-          <Paragraph modifier="tertiary"
-                     margin={ false }>{ text }</Paragraph>
+          <Marger top="1">
+            <Paragraph modifier="tertiary"
+                       margin={ false }>{ paragraph }</Paragraph>
+          </Marger>
         </div>
       </Marger>
     )
@@ -87,30 +93,33 @@ class ProjectSimilarCardComponent extends Component {
     if (!this.props.tags) return
 
     return (
-      <Marger top=".5" bottom="1">
+      <Marger top=".5">
         <TagList items={ this.props.tags } tiny />
       </Marger>
     )
   }
 
   renderInfos() {
+    if (!this.props.infos) return
+
     return (
-      <Marger top="1.6" bottom="1.6" className="k-ProjectCard__grid--flex">
-        { this.renderInfo(this.props.info1) }
-        { this.renderInfo(this.props.info2) }
-        { this.renderInfo(this.props.info3) }
-      </Marger>
+      <div>
+        <Separator />
+        <Marger top="1.6" bottom="1.6" className="k-ProjectCard__grid--flex">
+          { this.props.infos.map(this.renderInfo) }
+        </Marger>
+      </div>
     )
   }
 
   renderInfo(info) {
     const infoClassName = classNames(
       'k-ProjectSimilarCard__info__value',
-      { 'k-u-color-primary1': this.props.coloredInfosValues },
     )
 
     return (
-      <div className="k-u-align-center k-ProjectSimilarCard__info">
+      <div className={ classNames('k-u-align-center',
+                                  'k-ProjectSimilarCard__info' )}>
         { info.text }<br />
         <span className={ infoClassName }>
           { info.locked ? <LockIcon width="12" /> : info.value }
@@ -122,8 +131,8 @@ class ProjectSimilarCardComponent extends Component {
   render() {
     const ProjectSimilarCardClassName = classNames(
       'k-ProjectSimilarCard',
-      this.props.className,
-    )
+      className,
+    ) = this.props
 
     return (
       <div className={ ProjectSimilarCardClassName }>
@@ -131,7 +140,6 @@ class ProjectSimilarCardComponent extends Component {
         <Separator />
         { this.renderImage() }
         { this.renderDescription() }
-        <Separator />
         { this.renderInfos() }
       </div>
     )
@@ -140,13 +148,12 @@ class ProjectSimilarCardComponent extends Component {
 
 
 ProjectSimilarCardComponent.defaultProps = {
-  image: 'https://placehold.it/400x200/4a84ff/4a84ff',
+  image: null,
   title: "Lorem ipsum dolor sit amet",
-  text:  "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium",
-  tags: [{ key: 'tag-1', item: 'Tag 1' }, { key: 'tag-2', item: 'Tag 2', }],
-  info1: { value: 'xx', text: 'Info 1', locked: false },
-  info2: { value: 'xx', text: 'Info 2', locked: false },
-  info3: { value: 'xx', text: 'Info 3', locked: false },
+  paragraph: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium",
+  tags: null,
+  infos: false,
+
 }
 
 // Add card generic styles.
