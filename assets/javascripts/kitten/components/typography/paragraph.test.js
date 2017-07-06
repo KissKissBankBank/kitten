@@ -57,4 +57,12 @@ describe('Paragraph with default props', () => {
       expect(component).to.have.className('k-Paragraph--normalLineHeight')
     })
   })
+
+  describe('with italic prop', () => {
+    const component = shallow(<Paragraph italic />)
+
+    it('has a good class', () => {
+      expect(component).to.have.className('k-Paragraph--italic')
+    })
+  })
 })

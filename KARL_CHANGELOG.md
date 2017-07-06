@@ -4,7 +4,24 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Harmonize font-size label component on `LocationInput`.
+## [13.2.1] - 2017-07-04
+
+Features:
+- Add `KarlRow` example.
+- Update the tooltip examples.
+- Add italic paragraph example.
+
+## [13.1.1] - 2017-06-30
+
+No changes.
+
+## [13.1.0] - 2017-06-27
+
+Feature:
+- Add `KarlImageCropper` example.
+
+Fix:
+- Harmonize font-size label component on `LocationInput`.
 
 ## [13.0.0] - 2017-06-15
 

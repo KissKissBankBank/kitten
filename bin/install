@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 set -e
 
 # Install ruby with brew and rbenv
@@ -32,4 +32,4 @@ bundle install
 yarn install
 
 cd spec/dummy
-bin/install
+bash bin/install

@@ -64,6 +64,9 @@
 // Heroes
 @import "kitten/components/heroes/hero";
 
+// Images
+@import "kitten/components/images/cropper";
+
 // Layout
 @import 'kitten/components/layout/line';
 @import 'kitten/components/layout/responsive-iframe-container';
@@ -118,6 +121,7 @@
 
 // Tooltips
 @import 'kitten/components/tooltips/tooltip';
+@import 'kitten/components/tooltips/tooltip-new';
 @import 'kitten/components/tooltips/static-tooltip';
 
 // Tours
@@ -129,3 +133,6 @@
 @import 'kitten/components/typography/paragraph';
 @import 'kitten/components/typography/sup-title';
 @import 'kitten/components/typography/title';
+
+// Uploaders
+@import 'kitten/components/uploaders/simple-uploader'

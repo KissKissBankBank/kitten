@@ -1,0 +1,41 @@
+/// Simple uploader theme.
+///
+/// @group uploaders
+///
+/// @example scss - usage
+///
+///   @include k-SimpleUploader;
+///
+/// @example html
+///
+///   <div class="k-SimpleUploader">
+///     <button class="k-SimpleUploader__button">…</button>
+///     <span class="k-SimpleUploader__text">…</span>
+///   </div>
+
+@mixin k-SimpleUploader {
+  .k-SimpleUploader {
+    display: flex;
+    align-items: center;
+  }
+
+  .k-SimpleUploader__button {
+    flex-shrink: 0;
+    cursor: pointer;
+  }
+
+  .k-SimpleUploader__text {
+    overflow: hidden;
+    max-width: k-px-to-rem(140px);
+    margin-left: k-px-to-rem(10px);
+
+    @include k-typographyFont('source-sans-light');
+    @include k-typographyFontSize(-1, normal);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .k-SimpleUploader__buttonIcon {
+    margin-left: k-px-to-rem(10px);
+  }
+}

@@ -33,7 +33,7 @@ fi
 
 usage() {
     cat << EOF
-USAGE: $SCRIPT_NAME {start [-t]|stop|forcestop|restart|buildstatic|status|log|install|cleanup}
+USAGE: $SCRIPT_NAME {start [-t]|stop|forcestop|restart|buildstatic|status|log|install|cleanup|test}
 EOF
 }
 
@@ -44,7 +44,7 @@ cleanup() {
   if [ "$SURE" = "yes" ]; then
     stop
     cd -
-    ./bin/cleanup
+    bash ./bin/cleanup
   fi
   echo "Cleanup done"
 }
@@ -68,12 +68,24 @@ status(){
   fi
 }
 
+test(){
+  if [ ! -d node_modules ];then
+    echo $SCRIPT_NAME has missing files
+    echo Did you run
+    echo "    ./bin/$SCRIPT_NAME install"
+    exit 1
+  fi
+  set -e
+  FILES=${2:-assets/javascripts/**/*.test.js}
+  yarn test -- "$FILES"
+}
+
 install(){
   if [ -d "nodes_modules" ]; then
     echo There seems to be a previous install of $SCRIPT_NAME
     cleanup
   fi
-  ./bin/install
+  bash ./bin/install
 }
 
 start(){
@@ -157,6 +169,9 @@ is_installed(){
 case "$1" in
   start|stop|forcestop|cleanup|install|usage)
     ${1}
+    ;;
+  test)
+    test $1
     ;;
   restart)
     stop

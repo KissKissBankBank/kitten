@@ -9,6 +9,7 @@ export class Paragraph extends React.Component {
       modifier,
       margin,
       normalLineHeight,
+      italic,
       ...other,
     } = this.props
 
@@ -19,6 +20,7 @@ export class Paragraph extends React.Component {
       {
         'k-Paragraph--withoutMargin': !margin,
         'k-Paragraph--normalLineHeight': normalLineHeight,
+        'k-Paragraph--italic': italic,
       }
     )
 
@@ -35,4 +37,5 @@ Paragraph.defaultProps = {
   modifier: 'primary',
   margin: true,
   normalLineHeight: false,
+  italic: false,
 }
