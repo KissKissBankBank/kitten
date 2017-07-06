@@ -38,7 +38,7 @@ class ProjectSimilarCardComponent extends Component {
                             size="tiny">
                   <RightArrowIcon
                     className={ classNames('k-ButtonIcon__svg',
-                                           'k-ButtonIcon__svg--miror' )} />
+                                           'k-ButtonIcon__svg--miror') } />
                 </ButtonIcon>
 
                 <ButtonIcon className="k-ButtonIcon--verticalArrow"
@@ -119,7 +119,7 @@ class ProjectSimilarCardComponent extends Component {
 
     return (
       <div className={ classNames('k-u-align-center',
-                                  'k-ProjectSimilarCard__info' )}>
+                                  'k-ProjectSimilarCard__info') }>
         { info.text }<br />
         <span className={ infoClassName }>
           { info.locked ? <LockIcon width="12" /> : info.value }
@@ -148,6 +148,7 @@ class ProjectSimilarCardComponent extends Component {
 
 
 ProjectSimilarCardComponent.defaultProps = {
+  step: "1/5",
   image: null,
   title: "Lorem ipsum dolor sit amet",
   paragraph: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium",
