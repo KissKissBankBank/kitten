@@ -131,8 +131,8 @@ class ProjectSimilarCardComponent extends Component {
   render() {
     const ProjectSimilarCardClassName = classNames(
       'k-ProjectSimilarCard',
-      className,
-    ) = this.props
+      this.props.className,
+    )
 
     return (
       <div className={ ProjectSimilarCardClassName }>
