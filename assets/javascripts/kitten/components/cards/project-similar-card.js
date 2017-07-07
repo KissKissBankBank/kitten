@@ -196,7 +196,6 @@ ProjectSimilarCardComponent.defaultProps = {
   tags: null,
   infos: false,
   coloredInfosValues: false,
-
 }
 
 // Add card generic styles.
