@@ -6,6 +6,31 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Add new `ProjectSimilarCard` component.
 
+## [13.3.1] - 2017-07-06
+
+Fix:
+- Add missing `key` prop in `InfoLines` component & rename attribute in
+  defaultProps.
+
+## [13.3.0] - 2017-07-05
+
+Feature:
+- Add `disabled` prop to `ImageCropper`, `SimpleUploader` and `Uploader`
+components.
+
+## [13.2.1] - 2017-07-04
+
+Features:
+- Add `Row` component.
+- Add new `TooltipNew` component.
+- Add new `InfoWithTooltip` component.
+- Add new `ButtonInfoIcon` component.
+- Add new `InfoIcon` component.
+- Add `italic` prop to `Paragraph` component.
+
+Fix:
+- Fix `SimpleUploader` responsive.
+
 ## [13.1.1] - 2017-06-30
 
 Fix:

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "postinstall": "../bin/link-libraries",
+    "postinstall": "bash ../bin/link-libraries",
     "build:dev": "webpack -w --config webpack.client.build.babel.js",
     "build": "webpack --config webpack.client.build.babel.js",
     "hot-assets": "babel-node bin/webpack-dev-server.js"

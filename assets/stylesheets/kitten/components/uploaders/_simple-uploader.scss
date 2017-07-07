@@ -20,12 +20,13 @@
   }
 
   .k-SimpleUploader__button {
+    flex-shrink: 0;
     cursor: pointer;
   }
 
   .k-SimpleUploader__text {
     overflow: hidden;
-    max-width: k-px-to-rem(200px);
+    max-width: k-px-to-rem(140px);
     margin-left: k-px-to-rem(10px);
 
     @include k-typographyFont('source-sans-light');
