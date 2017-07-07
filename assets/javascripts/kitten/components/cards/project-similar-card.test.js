@@ -5,6 +5,7 @@ import { ProjectSimilarCard } from 'kitten/components/cards/project-similar-card
 import { Title } from 'kitten/components/typography/title'
 import { Paragraph } from 'kitten/components/typography/paragraph'
 import { TagList } from 'kitten/components/lists/tag-list'
+import { LockIcon } from 'kitten/components/icons/lock-icon'
 
 describe('<ProjectSimilarCard />', () => {
   describe('by default', () => {
