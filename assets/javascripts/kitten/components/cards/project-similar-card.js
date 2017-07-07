@@ -12,6 +12,12 @@ import { RefreshIcon } from 'kitten/components/icons/refresh-icon'
 import { RightArrowIcon } from 'kitten/components/icons/right-arrow-icon'
 
 class ProjectSimilarCardComponent extends Component {
+  constructor(props) {
+    super(props)
+
+    this.renderInfo = this.renderInfo.bind(this)
+  }
+
   renderHeader() {
     const {
       step,
@@ -62,8 +68,8 @@ class ProjectSimilarCardComponent extends Component {
       <Marger top="2" bottom="1">
         <div className="k-ProjectSimilarCard__grid">
           <img className="k-ProjectSimilarCard__img"
-                src={ imageSrc }
-                alt="" />
+               src={ imageSrc }
+               alt="" />
         </div>
       </Marger>
     )
@@ -72,6 +78,7 @@ class ProjectSimilarCardComponent extends Component {
   renderTitle() {
     const {
       title,
+      imageSrc,
     } = this.props
 
     const top = imageSrc ? "1" : "2"
@@ -138,13 +145,17 @@ class ProjectSimilarCardComponent extends Component {
   }
 
   renderInfo(info) {
+    const {
+      coloredInfosValues,
+    } = this.props
+
     const infoClassName = classNames(
       'k-ProjectSimilarCard__info__value',
+      { 'k-u-color-primary1': coloredInfosValues },
     )
 
     return (
-      <div className={ classNames('k-u-align-center',
-                                  'k-ProjectSimilarCard__info') }>
+      <div className="k-u-align-center k-ProjectSimilarCard__info">
         { info.text }<br />
         <span className={ infoClassName }>
           { info.locked ? <LockIcon width="12" /> : info.value }
@@ -154,9 +165,13 @@ class ProjectSimilarCardComponent extends Component {
   }
 
   render() {
+    const {
+      className,
+    } = this.props
+
     const ProjectSimilarCardClassName = classNames(
       'k-ProjectSimilarCard',
-      this.props.className,
+      className,
     )
 
     return (
@@ -176,6 +191,7 @@ ProjectSimilarCardComponent.defaultProps = {
   step: "1/5",
   imageSrc: null,
   title: "Lorem ipsum dolor sit amet",
+  coloredInfosValues: false,
   paragraph: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium",
   tags: null,
   infos: false,
