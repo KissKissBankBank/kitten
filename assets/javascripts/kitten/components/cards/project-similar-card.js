@@ -191,10 +191,10 @@ ProjectSimilarCardComponent.defaultProps = {
   step: "1/5",
   imageSrc: null,
   title: "Lorem ipsum dolor sit amet",
-  coloredInfosValues: false,
   paragraph: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium",
   tags: null,
   infos: false,
+  coloredInfosValues: false,
 
 }
 
