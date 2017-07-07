@@ -10,6 +10,7 @@ import { Separator } from 'kitten/components/layout/separator'
 import { TagList } from 'kitten/components/lists/tag-list'
 import { RefreshIcon } from 'kitten/components/icons/refresh-icon'
 import { RightArrowIcon } from 'kitten/components/icons/right-arrow-icon'
+import { LockIcon } from 'kitten/components/icons/lock-icon'
 
 class ProjectSimilarCardComponent extends Component {
   constructor() {
