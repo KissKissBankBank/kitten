@@ -12,8 +12,8 @@ import { RefreshIcon } from 'kitten/components/icons/refresh-icon'
 import { RightArrowIcon } from 'kitten/components/icons/right-arrow-icon'
 
 class ProjectSimilarCardComponent extends Component {
-  constructor(props) {
-    super(props)
+  constructor() {
+    super()
 
     this.renderInfo = this.renderInfo.bind(this)
   }
