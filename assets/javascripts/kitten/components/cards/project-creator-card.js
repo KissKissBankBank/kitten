@@ -81,9 +81,9 @@ class ProjectCreatorCardComponent extends React.Component {
                   bottom="1.2"
                   className="k-ProjectCreatorCard__grid--flex">
             { this.props.linkText }
-            <ButtonIcon className={ classNames('k-ButtonIcon--withoutHover',
-                                               'k-ButtonIcon--verticalArrow') }
-                        size="tiny">
+            <ButtonIcon size="tiny"
+                        withoutHover
+                        verticalArrow>
               <RightArrowIcon className="k-ButtonIcon__svg" />
             </ButtonIcon>
           </Marger>
