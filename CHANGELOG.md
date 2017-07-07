@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Add animation `ButtonIcon` on `ProjectCreatorCard`.
+- Fix: Add `ButtonIcon` animation on `ProjectCreatorCard`.
 
 ## [13.3.1] - 2017-07-06
 
