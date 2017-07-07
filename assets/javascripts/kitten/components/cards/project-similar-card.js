@@ -10,6 +10,7 @@ import { Separator } from 'kitten/components/layout/separator'
 import { TagList } from 'kitten/components/lists/tag-list'
 import { RefreshIcon } from 'kitten/components/icons/refresh-icon'
 import { RightArrowIcon } from 'kitten/components/icons/right-arrow-icon'
+import { LockIcon } from 'kitten/components/icons/lock-icon'
 
 class ProjectSimilarCardComponent extends Component {
   renderHeader() {
@@ -55,13 +56,13 @@ class ProjectSimilarCardComponent extends Component {
   }
 
   renderImage() {
-    if (!this.props.image) return
+    if (!this.props.imageSrc) return
 
     return (
       <Marger top="1.5">
         <div className="k-ProjectSimilarCard__grid">
           <img className="k-ProjectSimilarCard__img"
-                src={ this.props.image }
+                src={ this.props.imageSrc }
                 alt="" />
         </div>
       </Marger>
@@ -78,11 +79,16 @@ class ProjectSimilarCardComponent extends Component {
       <Marger top="2" bottom="2">
         <div className="k-ProjectSimilarCard__grid">
           <Title modifier="quaternary"
-                 margin={ false }>{ title }</Title>
+                 margin={ false }
+                 tag="p">
+            { title }
+          </Title>
           { this.renderTags() }
           <Marger top="1">
             <Paragraph modifier="tertiary"
-                       margin={ false }>{ paragraph }</Paragraph>
+                       margin={ false }>
+              { paragraph }
+            </Paragraph>
           </Marger>
         </div>
       </Marger>
@@ -149,7 +155,7 @@ class ProjectSimilarCardComponent extends Component {
 
 ProjectSimilarCardComponent.defaultProps = {
   step: "1/5",
-  image: null,
+  imageSrc: null,
   title: "Lorem ipsum dolor sit amet",
   paragraph: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium",
   tags: null,
