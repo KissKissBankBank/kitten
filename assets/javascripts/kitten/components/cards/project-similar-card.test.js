@@ -4,7 +4,6 @@ import { shallow, mount } from 'enzyme'
 import { ProjectSimilarCard } from 'kitten/components/cards/project-similar-card'
 import { Title } from 'kitten/components/typography/title'
 import { Paragraph } from 'kitten/components/typography/paragraph'
-import { Separator } from 'kitten/components/layout/separator'
 import { TagList } from 'kitten/components/lists/tag-list'
 import { LockIcon } from 'kitten/components/icons/lock-icon'
 

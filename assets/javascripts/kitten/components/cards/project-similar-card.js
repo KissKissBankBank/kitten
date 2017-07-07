@@ -10,30 +10,28 @@ import { Separator } from 'kitten/components/layout/separator'
 import { TagList } from 'kitten/components/lists/tag-list'
 import { RefreshIcon } from 'kitten/components/icons/refresh-icon'
 import { RightArrowIcon } from 'kitten/components/icons/right-arrow-icon'
-import { LockIcon } from 'kitten/components/icons/lock-icon'
 
 class ProjectSimilarCardComponent extends Component {
   renderHeader() {
+    const {
+      step,
+    } = this.props
+
     return (
       <div className="k-ProjectSimilarCard__grid">
-        <Marger
-          top="1"
-          bottom="1">
+        <Marger top="1" bottom="1">
           <div className="k-ProjectSimilarCard__grid--flex">
             <div className="k-ProjectSimilarCard__refresh">
               <ButtonIcon size="tiny">
-                <RefreshIcon
-                  className="k-ButtonIcon__svg"
-                  strokeClassName="k-Button__svg__stroke"
-                  fillClassName="k-ButtonIcon__svg" />
+                <RefreshIcon className="k-ButtonIcon__svg"
+                             strokeClassName="k-Button__svg__stroke"
+                             fillClassName="k-ButtonIcon__svg" />
               </ButtonIcon>
             </div>
-
             <div className="k-ProjectSimilarCard__navigation">
               <div className="k-ProjectSimilarCard__header--step">
-                { this.props.step }
+                { step }
               </div>
-
               <div className="k-ProjectSimilarCard__header--button">
                 <ButtonIcon className="k-ButtonIcon--verticalArrow"
                             size="tiny">
@@ -41,7 +39,6 @@ class ProjectSimilarCardComponent extends Component {
                     className={ classNames('k-ButtonIcon__svg',
                                            'k-ButtonIcon__svg--miror') } />
                 </ButtonIcon>
-
                 <ButtonIcon className="k-ButtonIcon--verticalArrow"
                             size="tiny">
                   <RightArrowIcon className="k-ButtonIcon__svg" />
@@ -50,69 +47,91 @@ class ProjectSimilarCardComponent extends Component {
             </div>
           </div>
         </Marger>
-
       </div>
     )
   }
 
   renderImage() {
-    if (!this.props.imageSrc) return
+    const {
+      imageSrc,
+    } = this.props
+
+    if (!imageSrc) return
 
     return (
-      <Marger top="1.5">
+      <Marger top="2" bottom="1">
         <div className="k-ProjectSimilarCard__grid">
           <img className="k-ProjectSimilarCard__img"
-                src={ this.props.imageSrc }
+                src={ imageSrc }
                 alt="" />
         </div>
       </Marger>
     )
   }
 
-  renderDescription() {
+  renderTitle() {
     const {
       title,
-      paragraph,
     } = this.props
 
+    const top = imageSrc ? "1" : "2"
+
     return(
-      <Marger top="2" bottom="2">
-        <div className="k-ProjectSimilarCard__grid">
-          <Title modifier="quaternary"
-                 margin={ false }
-                 tag="p">
-            { title }
-          </Title>
-          { this.renderTags() }
-          <Marger top="1">
-            <Paragraph modifier="tertiary"
-                       margin={ false }>
-              { paragraph }
-            </Paragraph>
-          </Marger>
-        </div>
+      <Marger top={ top } bottom="1">
+        <Title modifier="quaternary"
+               margin={ false }
+               tag="p">
+          { title }
+        </Title>
       </Marger>
     )
   }
 
+  renderDescription() {
+    const {
+      paragraph,
+    } = this.props
+
+    return(
+      <div className="k-ProjectSimilarCard__grid">
+        { this.renderTitle() }
+        { this.renderTags() }
+        <Marger top="1" bottom="2">
+          <Paragraph modifier="tertiary"
+                     margin={ false }>
+            { paragraph }
+          </Paragraph>
+        </Marger>
+      </div>
+    )
+  }
+
   renderTags() {
-    if (!this.props.tags) return
+    const {
+      tags,
+    } = this.props
+
+    if (!tags) return
 
     return (
-      <Marger top=".5">
-        <TagList items={ this.props.tags } tiny />
+      <Marger top="1" bottom="1">
+        <TagList items={ tags } tiny />
       </Marger>
     )
   }
 
   renderInfos() {
-    if (!this.props.infos) return
+    const {
+      infos,
+    } = this.props
+
+    if (!infos) return
 
     return (
       <div>
         <Separator />
-        <Marger top="1.6" bottom="1.6" className="k-ProjectCard__grid--flex">
-          { this.props.infos.map(this.renderInfo) }
+        <Marger top="1.5" bottom="1.5" className="k-ProjectCard__grid--flex">
+          { infos.map(this.renderInfo) }
         </Marger>
       </div>
     )
