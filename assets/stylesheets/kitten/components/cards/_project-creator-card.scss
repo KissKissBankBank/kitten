@@ -21,6 +21,8 @@
 ///     <a class="k-ProjectCreatorCard__link">
 ///       <div class="k-ProjectCreatorCard__grid k-ProjectCreatorCard__grid--withBorderTop">
 ///         <div class="k-ProjectCreatorCard__link--flex">
+///           <div class="k-ProjectCreatorCard__link--withAnimation">
+///           </div>
 ///         </div>
 ///       </div>
 ///     </a>
@@ -31,6 +33,7 @@
   $boldFont: 'source-sans-semi-bold';
 
   $statusSize: k-px-to-rem(10px);
+  $transition-duration: .2s;
 
   .k-ProjectCreatorCard {
     text-align: left;
@@ -69,6 +72,17 @@
 
     &:hover {
       background-color: map-get($k-colors, 'background-2');
+    }
+  }
+
+  .k-ProjectCreatorCard__link--withAnimation {
+    position: relative;
+    left: 0;
+    transition: left $transition-duration;
+
+    .k-ProjectCreatorCard:focus &,
+    .k-ProjectCreatorCard:hover & {
+      left: k-px-to-rem(5px);
     }
   }
 
