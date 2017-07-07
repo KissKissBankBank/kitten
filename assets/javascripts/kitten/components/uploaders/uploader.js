@@ -60,6 +60,7 @@ export class Uploader extends React.Component {
         fileName={ this.state.fileName }
         onClick={ this.handleClick }
         onCancel={ this.handleCancel }
+        disabled={ this.props.disabled }
       />
     )
   }
@@ -92,4 +93,5 @@ Uploader.defaultProps = {
   onSuccess: () => {},
   onError: () => {},
   onReset: () => {},
+  disabled: false,
 }

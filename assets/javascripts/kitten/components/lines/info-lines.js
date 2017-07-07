@@ -13,10 +13,10 @@ export class InfoLines extends React.Component {
   }
 
   renderInfo(element) {
-    const { key, value } = element
+    const { key, value, id } = element
 
     return (
-      <div className="k-InfoLines__line">
+      <div className="k-InfoLines__line" key={ id }>
         <div className="k-InfoLines__line__key">
           { key }
         </div>
@@ -38,5 +38,5 @@ export class InfoLines extends React.Component {
 }
 
 InfoLines.defaultProps = {
-  items: [], // Eg: [{ key: …, value: … }]
+  infos: [], // Eg: [{ key: …, value: …, id: … }]
 }
