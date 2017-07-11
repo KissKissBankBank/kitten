@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-// Via "https://github.com/reactjs/react-modal"
 import classNames from 'classnames'
+// Via "https://github.com/reactjs/react-modal"
 import ReactModal from 'react-modal'
 import { CloseButton } from 'kitten/components/buttons/close-button'
 
@@ -39,7 +39,7 @@ export class Modal extends Component {
       trigger,
       content,
       className,
-      ...others
+      ...others,
     } = this.props
 
     const triggerClassNames = classNames(
@@ -49,8 +49,9 @@ export class Modal extends Component {
 
     return (
       <div className={ triggerClassNames } { ...others }>
-        <span className="k-ModalTrigger__trigger"
-              onClick={ this.handleOpenModal }>
+        <span
+          className="k-ModalTrigger__trigger"
+          onClick={ this.handleOpenModal }>
           { trigger }
         </span>
 

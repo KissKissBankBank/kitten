@@ -2,7 +2,6 @@ import React from 'react'
 import classNames from 'classnames'
 import { expect } from 'chai'
 import { shallow, mount } from 'enzyme'
-import ReactModal from 'react-modal'
 import { Modal } from 'kitten/components/modals/modal'
 
 describe('<Modal />', () => {
@@ -16,15 +15,14 @@ describe('<Modal />', () => {
     })
   })
 
-  describe('with className', () => {
+  describe('with content prop', () => {
     const component = mount(
       <Modal className="content-example" />
     )
 
     it('contains the content', () => {
-      expect(component).to.have.className('k-ModalTrigger')
       expect(component).to.have.className('content-example')
-      expect(component).to.have.descendants('.k-ModalTrigger__trigger')
+      expect(component).to.have.className('k-ModalTrigger')
     })
   })
 })
