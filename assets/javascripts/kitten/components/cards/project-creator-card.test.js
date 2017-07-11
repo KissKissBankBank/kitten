@@ -21,6 +21,21 @@ describe('<ProjectCreatorCard />', () => {
     })
   })
 
+  describe('with buttonIcon props', () => {
+    const projectCreatorCard = mount(
+      <ProjectCreatorCard withoutHover
+                          verticalArrow />
+    )
+
+    it('renders a withoutHover', () => {
+      expect(projectCreatorCard).to.have.length(1)
+    })
+
+    it('renders a verticalArrow', () => {
+      expect(projectCreatorCard).to.have.length(1)
+    })
+  })
+
   describe('with date prop', () => {
     const projectCreatorCard = mount(<ProjectCreatorCard date="Custom date" />)
     const icon = projectCreatorCard.find(ClockIcon)
