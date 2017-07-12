@@ -60,7 +60,8 @@ describe('<ProjectCreatorCard />', () => {
       <ProjectCreatorCard
         statusBackgroundColor="#e6f5fb"
         statusBorderColor="#cbe8f9"
-        statusText="Custom status" />
+        statusText="Custom status"
+      />
     )
     const status = projectCreatorCard.find('.k-ProjectCreatorCard__status')
     const icon = status.find('.k-ProjectCreatorCard__status--icon')
@@ -84,7 +85,8 @@ describe('<ProjectCreatorCard />', () => {
     const projectCreatorCard = mount(
       <ProjectCreatorCard
         href="#"
-        isExternal="true" />
+        isExternal="true"
+      />
     )
     const link = projectCreatorCard.find('.k-ProjectCreatorCard__link')
 
@@ -99,7 +101,9 @@ describe('<ProjectCreatorCard />', () => {
     const projectCreatorCard = mount(
       <ProjectCreatorCard
         href="#"
-        linkText="Custom text" />)
+        linkText="Custom text"
+      />
+    )
 
     it('renders a text content', () => {
       expect(projectCreatorCard).to.contain.text('Custom text')
