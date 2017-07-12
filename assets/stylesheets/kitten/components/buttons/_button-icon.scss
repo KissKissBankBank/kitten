@@ -370,25 +370,24 @@
     }
   }
 
-  // Miror rotate
-    .k-ButtonIcon__svg--miror {
-      transform : rotate(-180deg);
-      -webkit-transform : rotate(-180deg)
-    }
+  // Mirror rotate
+  .k-ButtonIcon__svg--mirror {
+    transform : rotate(-180deg);
+    -webkit-transform : rotate(-180deg)
+  }
 
   // Animate rotate
-    .k-ButtonIcon__svg--rotate {
-      transition: all $animation-duration ease;
-      -webkit-transition: all $animation-duration ease;
+  .k-ButtonIcon__svg--rotate {
+    transition: all $animation-duration ease;
+    -webkit-transition: all $animation-duration ease;
 
-      &:hover {
-        transform: rotate(-90deg);
-        -webkit-transform: rotate(-90deg);
-      }
+    &:hover {
+      transform: rotate(-90deg);
+      -webkit-transform: rotate(-90deg);
     }
+  }
 
   // Colors modifiers.
-
   .k-ButtonIcon--hydrogen {
     @include k-buttonColorBase($hydrogen-colors);
     @include k-buttonSvg($hydrogen-colors);
@@ -435,7 +434,6 @@
   }
 
   // Sizes modifiers.
-
   .k-ButtonIcon--micro {
     $micro-size: k-px-to-rem(8px);
     @include k-buttonRounded($button-size-micro, $micro-size, $micro-size);
@@ -455,7 +453,6 @@
   }
 
   // Icon modifiers.
-
   .k-ButtonIcon--heart {
     $heart-size: k-px-to-rem(14px);
     @include k-buttonRounded($button-size-tiny, $heart-size, $heart-size);
@@ -531,7 +528,6 @@
   }
 
   // Misc modifiers.
-
   .k-ButtonIcon--withoutHover {
     pointer-events: none;
   }

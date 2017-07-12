@@ -30,9 +30,10 @@ class ProjectSimilarCardComponent extends Component {
           <div className="k-ProjectSimilarCard__grid--flex">
             <div className="k-ProjectSimilarCard__refresh">
               <ButtonIcon size="tiny">
-                <RefreshIcon className="k-ButtonIcon__svg"
-                             strokeClassName="k-Button__svg__stroke"
-                             fillClassName="k-ButtonIcon__svg" />
+                <RefreshIcon
+                  className="k-ButtonIcon__svg"
+                  strokeClassName="k-Button__svg__stroke"
+                  fillClassName="k-ButtonIcon__svg" />
               </ButtonIcon>
             </div>
             <div className="k-ProjectSimilarCard__navigation">
@@ -40,14 +41,16 @@ class ProjectSimilarCardComponent extends Component {
                 { step }
               </div>
               <div className="k-ProjectSimilarCard__header--button">
-                <ButtonIcon className="k-ButtonIcon--verticalArrow"
-                            size="tiny">
+                <ButtonIcon
+                  size="tiny"
+                  verticalArrow>
                   <RightArrowIcon
                     className={ classNames('k-ButtonIcon__svg',
-                                           'k-ButtonIcon__svg--miror') } />
+                                           'k-ButtonIcon__svg--mirror') } />
                 </ButtonIcon>
-                <ButtonIcon className="k-ButtonIcon--verticalArrow"
-                            size="tiny">
+                <ButtonIcon
+                  size="tiny"
+                  verticalArrow>
                   <RightArrowIcon className="k-ButtonIcon__svg" />
                 </ButtonIcon>
               </div>
@@ -68,9 +71,10 @@ class ProjectSimilarCardComponent extends Component {
     return (
       <Marger top="2" bottom="1">
         <div className="k-ProjectSimilarCard__grid">
-          <img className="k-ProjectSimilarCard__img"
-               src={ imageSrc }
-               alt="" />
+          <img
+            className="k-ProjectSimilarCard__img"
+            src={ imageSrc }
+            alt="" />
         </div>
       </Marger>
     )
@@ -86,9 +90,10 @@ class ProjectSimilarCardComponent extends Component {
 
     return(
       <Marger top={ top } bottom="1">
-        <Title modifier="quaternary"
-               margin={ false }
-               tag="p">
+        <Title
+          modifier="quaternary"
+          margin={ false }
+          tag="p">
           { title }
         </Title>
       </Marger>
@@ -105,8 +110,9 @@ class ProjectSimilarCardComponent extends Component {
         { this.renderTitle() }
         { this.renderTags() }
         <Marger top="1" bottom="2">
-          <Paragraph modifier="tertiary"
-                     margin={ false }>
+          <Paragraph
+            modifier="tertiary"
+            margin={ false }>
             { paragraph }
           </Paragraph>
         </Marger>
@@ -122,8 +128,10 @@ class ProjectSimilarCardComponent extends Component {
     if (!tags) return
 
     return (
-      <Marger top="1" bottom="1">
-        <TagList items={ tags } tiny />
+      <Marger top='1' bottom='1'>
+        <TagList
+          items={ tags }
+          tiny />
       </Marger>
     )
   }
@@ -138,7 +146,10 @@ class ProjectSimilarCardComponent extends Component {
     return (
       <div>
         <Separator />
-        <Marger top="1.5" bottom="1.5" className="k-ProjectCard__grid--flex">
+        <Marger
+          top="1.5"
+          bottom="1.5"
+          className="k-ProjectCard__grid--flex">
           { infos.map(this.renderInfo) }
         </Marger>
       </div>
@@ -159,7 +170,7 @@ class ProjectSimilarCardComponent extends Component {
       <div className="k-u-align-center k-ProjectSimilarCard__info">
         { info.text }<br />
         <span className={ infoClassName }>
-          { info.locked ? <LockIcon width="12" /> : info.value }
+          { info.locked ? <LockIcon width='12' /> : info.value }
         </span>
       </div>
     )
@@ -187,9 +198,8 @@ class ProjectSimilarCardComponent extends Component {
   }
 }
 
-
 ProjectSimilarCardComponent.defaultProps = {
-  step: "1/5",
+  step: '1/5',
   imageSrc: null,
   title: "Lorem ipsum dolor sit amet",
   paragraph: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem \
@@ -200,7 +210,6 @@ ProjectSimilarCardComponent.defaultProps = {
 }
 
 // Add card generic styles.
-
 export const ProjectSimilarCard = card(ProjectSimilarCardComponent, {
   light: true,
   withBorder: true,

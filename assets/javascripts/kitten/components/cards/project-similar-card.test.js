@@ -33,18 +33,22 @@ describe('<ProjectSimilarCard />', () => {
   describe('with title prop', () => {
     const projectSimilarCard = mount(
       <ProjectSimilarCard title="Custom title" />)
+    const title = projectSimilarCard.find('.k-Title')
 
     it('renders a <Title />', () => {
       expect(projectSimilarCard).to.have.descendants(Title)
+      expect(title.text()).to.equal("Custom title")
     })
   })
 
   describe('with paragraph prop', () => {
     const projectSimilarCard = mount(
       <ProjectSimilarCard paragraph="Custom paragraph" />)
+    const paragraph = projectSimilarCard.find('.k-Paragraph')
 
     it('renders a <Paragraph />', () => {
       expect(projectSimilarCard).to.have.descendants(Paragraph)
+      expect(paragraph.text()).to.equal("Custom paragraph")
     })
   })
 
@@ -53,9 +57,16 @@ describe('<ProjectSimilarCard />', () => {
       <ProjectSimilarCard
         tags={ [ { key: 'custom-tag', item: 'Custom tag' } ] } />
     )
+    const tags = projectSimilarCard.find('.k-TagList')
 
     it('renders a <TagList />', () => {
       expect(projectSimilarCard).to.have.descendants(TagList)
+    })
+
+    it('has a first block with good item', () => {
+      const firstTag = tags.at(0)
+
+      expect(firstTag).to.contain.text('Custom tag')
     })
   })
 
@@ -92,6 +103,23 @@ describe('<ProjectSimilarCard />', () => {
 
       expect(secondInfo).to.have.descendants(LockIcon)
       expect(secondInfo).to.contain.text('Custom text 2')
+    })
+  })
+
+  describe('with coloredInfosValues prop', () => {
+    const projectSimilarCard = mount(
+      <ProjectSimilarCard
+        coloredInfosValues
+        infos={ [ { key: 'info-1',
+                  text: 'Custom text 1',
+                  value: 'Custom value 1' } ] }
+      />
+    )
+    const info = projectSimilarCard.find('.k-ProjectSimilarCard__info').first()
+    const value = info.find('.k-ProjectSimilarCard__info__value')
+
+    it('renders an info value with color modifier', () => {
+      expect(value).to.have.className('k-u-color-primary1')
     })
   })
 })
