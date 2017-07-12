@@ -86,7 +86,7 @@ class ProjectSimilarCardComponent extends Component {
       imageSrc,
     } = this.props
 
-    const top = imageSrc ? "1" : "2"
+    const top = imageSrc ? '1' : '2'
 
     return(
       <Marger top={ top } bottom="1">
@@ -128,7 +128,7 @@ class ProjectSimilarCardComponent extends Component {
     if (!tags) return
 
     return (
-      <Marger top='1' bottom='1'>
+      <Marger top="1" bottom="1">
         <TagList
           items={ tags }
           tiny />
