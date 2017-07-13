@@ -13,7 +13,7 @@ export class LinkList extends Component {
   }
 
   renderItem(element) {
-    const { key, content, active, href } = element
+    const { key, content, href, active } = element
 
     const linkListClassName = classNames(
       'k-LinkList__link',
@@ -23,7 +23,7 @@ export class LinkList extends Component {
     )
 
     return (
-      <li className="k-LinkList__item">
+      <li className="k-LinkList__content">
         <a
           href={ href }
           key={ key }
@@ -41,8 +41,13 @@ export class LinkList extends Component {
       ...others,
     } = this.props
 
+    const listClassName = classNames(
+      'k-LinkList',
+      className,
+    )
+
     return (
-      <ul className="k-LinkList" { ...others }>
+      <ul className={ listClassName } { ...others }>
         { this.renderItems() }
       </ul>
     )
@@ -50,5 +55,7 @@ export class LinkList extends Component {
 }
 
 LinkList.defaultProps = {
-  items: [], // Eg: [{ key: …, content: … }]
+  className: null,
+  items: [], // Eg: [{ key: …, content: …, href: … }]
+  href: '#',
 }
