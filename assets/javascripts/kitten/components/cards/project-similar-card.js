@@ -19,6 +19,14 @@ class ProjectSimilarCardComponent extends Component {
     this.renderInfo = this.renderInfo.bind(this)
   }
 
+  renderRefresh() {
+    return (
+      <div className="k-ProjectSimilarCard__refresh">
+        <a href="#">Actualiser</a>
+      </div>
+    )
+  }
+
   renderHeader() {
     const {
       step,
@@ -28,14 +36,7 @@ class ProjectSimilarCardComponent extends Component {
       <div className="k-ProjectSimilarCard__grid">
         <Marger top="1" bottom="1">
           <div className="k-ProjectSimilarCard__grid--flex">
-            <div className="k-ProjectSimilarCard__refresh">
-              <ButtonIcon size="tiny">
-                <RefreshIcon
-                  className="k-ButtonIcon__svg"
-                  strokeClassName="k-Button__svg__stroke"
-                  fillClassName="k-ButtonIcon__svg" />
-              </ButtonIcon>
-            </div>
+            { this.renderRefresh() }
             <div className="k-ProjectSimilarCard__navigation">
               <div className="k-ProjectSimilarCard__header--step">
                 { step }
