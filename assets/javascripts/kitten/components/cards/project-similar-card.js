@@ -8,7 +8,6 @@ import { Paragraph } from 'kitten/components/typography/paragraph'
 import { ButtonIcon } from 'kitten/components/buttons/button-icon'
 import { Separator } from 'kitten/components/layout/separator'
 import { TagList } from 'kitten/components/lists/tag-list'
-import { RefreshIcon } from 'kitten/components/icons/refresh-icon'
 import { RightArrowIcon } from 'kitten/components/icons/right-arrow-icon'
 import { LockIcon } from 'kitten/components/icons/lock-icon'
 
@@ -20,9 +19,18 @@ class ProjectSimilarCardComponent extends Component {
   }
 
   renderRefresh() {
+    const {
+      refresh,
+      refreshOnClick,
+    } = this.props
+
     return (
       <div className="k-ProjectSimilarCard__refresh">
-        <a href="#">Actualiser</a>
+        <span
+          className="k-ProjectSimilarCard__refresh__link"
+          onClick={ refreshOnClick }>
+          { refresh }
+        </span>
       </div>
     )
   }
@@ -87,7 +95,7 @@ class ProjectSimilarCardComponent extends Component {
       imageSrc,
     } = this.props
 
-    const top = imageSrc ? '1' : '2'
+    const top = imageSrc ? "1" : "2"
 
     return(
       <Marger top={ top } bottom="1">
@@ -205,12 +213,14 @@ ProjectSimilarCardComponent.defaultProps = {
   title: "Lorem ipsum dolor sit amet",
   paragraph: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem \
               accusantium doloremque laudantium",
-  tags: null,
-  infos: false,
+  tags: null, // Eg: [{ key: …, item: … }]
+  infos: false, // Eg: [{ key: …, text: …, value: …, locked: … }]
   coloredInfosValues: false,
+  refresh: "Refresh",
+  refreshOnClick: () => {},
 }
 
-// Add card generic styles.
+// Add generic card styles.
 export const ProjectSimilarCard = card(ProjectSimilarCardComponent, {
   light: true,
   withBorder: true,
