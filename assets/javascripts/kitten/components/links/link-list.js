@@ -57,5 +57,4 @@ export class LinkList extends Component {
 LinkList.defaultProps = {
   className: null,
   items: [], // Eg: [{ key: …, content: …, href: … }]
-  href: '#',
 }

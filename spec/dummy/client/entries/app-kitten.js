@@ -75,8 +75,8 @@ import { Separator } from 'kitten/components/layout/separator'
 import { InfoLines } from 'kitten/components/lines/info-lines'
 
 // Links
-import { LinkList } from 'kitten/components/links/link-list'
 import ExternalRichLink from 'kitten/components/links/external-rich-link'
+import { LinkList } from 'kitten/components/links/link-list'
 
 // Lists
 import { BulletList } from 'kitten/components/lists/bullet-list'
@@ -272,8 +272,8 @@ ReactOnRails.register({
   InfoLines,
 
   // Links
-  LinkList,
   ExternalRichLink,
+  LinkList,
 
   // Lists
   BulletList,

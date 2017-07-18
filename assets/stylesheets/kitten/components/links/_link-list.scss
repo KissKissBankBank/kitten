@@ -13,10 +13,10 @@
 ///
 /// @example html
 ///   <ul class="k-LinkList">
-///     <li class="k-LinkList__item">
+///     <li class="k-LinkList__content">
 ///       <a class="k-LinkList__link" href="#">Link A</a>
 ///      </li>
-///     <li class="k-LinkList__item">
+///     <li class="k-LinkList__content">
 ///       <a class="k-LinkList__link" href="#">Link B</a>
 ///      </li>
 ///   </ul>
@@ -32,7 +32,8 @@
     padding: 0;
   }
 
-  .k-LinkList__content {
+  .k-LinkList__content
+  .k-LinkList__item { // DEPRECATED
     margin: 0 0 k-px-to-rem(10px);
   }
 

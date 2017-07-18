@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add new `LinkList` component.
+- Deprecate `k-LinkList__item` in favor of `k-LinkList__content`.
 
 ## [13.3.1] - 2017-07-06
 

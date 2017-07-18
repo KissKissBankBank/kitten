@@ -3,10 +3,10 @@
     <%= example 'List of links' do %>
       <%= react_component 'LinkList', props: {
         items: [
-          { key: 'key1', content: 'Litterae' },
-          { key: 'key2', content: 'Notae' },
-          { key: 'key3', content: 'Bibliographia' },
-          { key: 'key4', content: 'Nexus' },
+          { key: 'key1', content: 'Litterae', href: '#' },
+          { key: 'key2', content: 'Notae', href: '#' },
+          { key: 'key3', content: 'Bibliographia', href: '#' },
+          { key: 'key4', content: 'Nexus', href: '#' },
         ]
       } %>
     <% end %>
@@ -16,10 +16,10 @@
     <%= example 'List of links with a selected item' do %>
       <%= react_component 'LinkList', props: {
         items: [
-          { key: 'key1', content: 'Litterae' },
-          { key: 'key2', content: 'Notae' },
-          { key: 'key3', content: 'Bibliographia', active: true, },
-          { key: 'key4', content: 'Nexus' },
+          { key: 'key1', content: 'Litterae', href: '#' },
+          { key: 'key2', content: 'Notae', href: '#' },
+          { key: 'key3', content: 'Bibliographia', active: true, href: '#' },
+          { key: 'key4', content: 'Nexus', href: '#' },
         ]
       } %>
     <% end %>
