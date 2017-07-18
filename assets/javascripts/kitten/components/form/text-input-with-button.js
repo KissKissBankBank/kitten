@@ -10,7 +10,7 @@ export class TextInputWithButton extends Component {
       error,
       tiny,
       value,
-      ...others,
+      ...textInputProps,
     } = this.props
 
     const textInputWithButtonClassName = classNames(
@@ -22,22 +22,20 @@ export class TextInputWithButton extends Component {
     )
 
     return (
-      <form role="button">
-        <div className="k-TextInputWithButton">
-          <TextInput
-            className="k-TextInputWithButton__input"
-            tiny={ tiny }
-            { ...others }
-          />
-          <input
-            className={ textInputWithButtonClassName }
-            type="submit"
-            value={ value }
-            valid={ valid }
-            error={ error }
-          />
-        </div>
-      </form>
+      <div className="k-TextInputWithButton">
+        <TextInput
+          className="k-TextInputWithButton__input"
+          tiny={ tiny }
+          { ...textInputProps }
+        />
+        <input
+          className={ textInputWithButtonClassName }
+          type="button"
+          value={ value }
+          valid={ valid }
+          error={ error }
+        />
+      </div>
     )
   }
 }

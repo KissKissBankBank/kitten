@@ -14,6 +14,7 @@ export class TextInput extends React.Component {
             disabled,
             tiny,
             digits,
+            props,
             ...others } = this.props
 
     const textInputClassName = classNames(
