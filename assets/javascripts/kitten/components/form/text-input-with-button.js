@@ -24,16 +24,16 @@ export class TextInputWithButton extends Component {
     return (
       <div className="k-TextInputWithButton">
         <TextInput
-          className="k-TextInputWithButton__input"
           tiny={ tiny }
+          valid={ valid }
+          error={ error }
+          className="k-TextInputWithButton__input"
           { ...textInputProps }
         />
         <input
           className={ textInputWithButtonClassName }
           type="button"
           value={ value }
-          valid={ valid }
-          error={ error }
         />
       </div>
     )
