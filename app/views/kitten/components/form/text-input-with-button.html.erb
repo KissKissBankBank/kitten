@@ -4,8 +4,10 @@
       <div class="k-Grid__col k-Grid__col--12 k-Grid__col--4@m k-Grid__col--12@l">
         <%= example 'Tiny' do %>
           <%= react_component 'TextInputWithButton', props: {
-              placeholder: 'Lorem ipsum dolor sit amet…',
-              tiny: true,
+              textInputProps: {
+                tiny: true,
+                placeholder: 'Lorem ipsum dolor sit amet…',
+              }
             }
           %>
         <% end %>
@@ -14,7 +16,9 @@
       <div class="k-Grid__col k-Grid__col--12 k-Grid__col--4@m k-Grid__col--12@l">
         <%= example 'Normal' do %>
           <%= react_component 'TextInputWithButton', props: {
-              placeholder: 'Lorem ipsum dolor sit amet…',
+              textInputProps: {
+                placeholder: 'Lorem ipsum dolor sit amet…',
+              }
             }
           %>
         <% end %>
@@ -27,8 +31,10 @@
       <div class="k-Grid__col k-Grid__col--12 k-Grid__col--4@m k-Grid__col--12@l">
         <%= example 'Valid' do %>
           <%= react_component 'TextInputWithButton', props: {
-              placeholder: 'Lorem ipsum dolor sit amet…',
               valid: true,
+              textInputProps: {
+                placeholder: 'Lorem ipsum dolor sit amet…',
+              }
             }
           %>
         <% end %>
@@ -37,8 +43,10 @@
       <div class="k-Grid__col k-Grid__col--12 k-Grid__col--4@m k-Grid__col--12@l">
         <%= example 'Error' do %>
           <%= react_component 'TextInputWithButton', props: {
-              placeholder: 'Lorem ipsum dolor sit amet…',
               error: true,
+              textInputProps: {
+                placeholder: 'Lorem ipsum dolor sit amet…',
+              }
             }
           %>
         <% end %>

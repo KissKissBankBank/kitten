@@ -5,12 +5,12 @@ import { TextInput } from 'kitten/components/form/text-input'
 export class TextInputWithButton extends Component {
   render() {
     const {
-      className,
       valid,
       error,
-      tiny,
       value,
-      ...textInputProps,
+      textInputProps,
+      buttonProps,
+      ...others,
     } = this.props
 
     const textInputWithButtonClassName = classNames(
@@ -22,18 +22,18 @@ export class TextInputWithButton extends Component {
     )
 
     return (
-      <div className="k-TextInputWithButton">
+      <div className="k-TextInputWithButton" { ...others }>
         <TextInput
-          tiny={ tiny }
           valid={ valid }
           error={ error }
           className="k-TextInputWithButton__input"
           { ...textInputProps }
         />
-        <input
+        <button
           className={ textInputWithButtonClassName }
           type="button"
-          value={ value }
+          children={ value }
+          { ...buttonProps }
         />
       </div>
     )
@@ -45,5 +45,6 @@ TextInputWithButton.defaultProps = {
   valid: false,
   error: false,
   value: 'Button',
-  tiny: false,
+  textInputProps: {},
+  buttonProps: {},
 }
