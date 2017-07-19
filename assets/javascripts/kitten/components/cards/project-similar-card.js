@@ -95,7 +95,7 @@ class ProjectSimilarCardComponent extends Component {
       imageSrc,
     } = this.props
 
-    const top = imageSrc ? "1" : "2"
+    const top = imageSrc ? 1 : 2
 
     return(
       <Marger top={ top } bottom="1">
@@ -210,9 +210,8 @@ class ProjectSimilarCardComponent extends Component {
 ProjectSimilarCardComponent.defaultProps = {
   step: '1/5',
   imageSrc: null,
-  title: "Lorem ipsum dolor sit amet",
-  paragraph: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem \
-              accusantium doloremque laudantium",
+  title: "",
+  paragraph: "",
   tags: null, // Eg: [{ key: …, item: … }]
   infos: false, // Eg: [{ key: …, text: …, value: …, locked: … }]
   coloredInfosValues: false,

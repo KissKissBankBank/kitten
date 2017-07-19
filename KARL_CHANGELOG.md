@@ -3,7 +3,8 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
-
+- Feature: Add new `KarlProjectSimilarCard` and `KarlProjectSimilarCardInfos`
+  component
 - Feature: Add new `ProjectSimilarCard` component.
 
 ## [13.3.1] - 2017-07-06
