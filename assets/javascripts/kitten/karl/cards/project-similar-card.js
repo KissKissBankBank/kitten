@@ -5,7 +5,7 @@ export const KarlProjectSimilarCard = () => (
   <ProjectSimilarCard
     imageSrc="https://placehold.it/400x200/4a84ff/4a84ff"
     title="Lorem ipsum dolor sit amet"
-    paragraph="Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+    paragraph="Sed ut perspiciatis unde omnis iste natus error sit voluptatem\
     accusantium doloremque laudantium"
   />
 )
@@ -27,7 +27,7 @@ export const KarlProjectSimilarCardInfos = props => {
       title="Lorem ipsum dolor sit amet"
       tags= { tags }
       infos= { infos }
-      paragraph="Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+      paragraph="Sed ut perspiciatis unde omnis iste natus error sit voluptatem\
       accusantium doloremque laudantium"
     />
   )
