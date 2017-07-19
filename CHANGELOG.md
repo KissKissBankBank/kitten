@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-Fix:  Add `withoutHover` and `verticalArrow` options on `ButtonIcon` component.
+- Fix: Add `withoutHover` and `verticalArrow` options on `ButtonIcon` component.
 
 ## [13.3.1] - 2017-07-06
 
