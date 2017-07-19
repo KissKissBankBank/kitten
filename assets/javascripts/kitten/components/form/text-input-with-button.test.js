@@ -23,43 +23,52 @@ describe('<TextInputWithButton />', () => {
       expect(textInput).to.have.className('k-TextInputWithButton__input')
     })
 
-    it('renders a input.k-TextInputWithButton__button', () => {
-      const input = component.find('input')
+    it('renders a button.k-TextInputWithButton__button', () => {
+      const button = component.find('button')
 
-      expect(input).to.have.tagName('input')
-      expect(input).to.have.className('k-TextInputWithButton__button')
+      expect(button).to.have.tagName('button')
+      expect(button).to.have.className('k-TextInputWithButton__button')
     })
   })
 
-  describe('tiny prop', () => {
-    const component = shallow(<TextInputWithButton tiny />)
+  describe('textInputProps', () => {
+    const textInputProps = {
+      'aria-hidden': true,
+      className: 'custom-class',
+    }
+    const component = mount(
+      <TextInputWithButton
+        textInputProps={ textInputProps }
+      />
+    )
     const textInput = component.find('input')
 
-    it('has an <input /> with "k-TextInput--tiny" class', () => {
-      expect(textInput.hasClass('k-TextInput--tiny'))
+    it('renders textInput with className prop', () => {
+      expect(textInput).to.have.className('custom-class')
+      expect(textInput).to.have.attr('aria-hidden', 'true')
     })
   })
 
   describe('valid prop', () => {
-    const component = shallow(<TextInputWithButton valid />)
+    const component = mount(<TextInputWithButton valid />)
     const textInput = component.find('input')
 
     it('has an <input /> with "is-valid" class', () => {
-      expect(textInput.hasClass('is-valid'))
+      expect(textInput).to.have.className('is-valid')
     })
   })
 
   describe('error prop', () => {
-    const component = shallow(<TextInputWithButton error />)
+    const component = mount(<TextInputWithButton error />)
     const textInput = component.find('input')
 
     it('has an <input /> with "is-error" class', () => {
-      expect(textInput.hasClass('is-error'))
+      expect(textInput).to.have.className('is-error')
     })
   })
 
   describe('value prop', () => {
-    const component = mount(<TextInputWithButton value="Button" />)
+    const component = mount(<TextInputWithButton value />)
     const button = component.find('.k-TextInputWithButton__button')
 
     it('renders value', () => {
