@@ -21,14 +21,14 @@ class ProjectSimilarCardComponent extends Component {
   renderRefresh() {
     const {
       refresh,
-      refreshOnClick,
+      onRefreshClick,
     } = this.props
 
     return (
       <div className="k-ProjectSimilarCard__refresh">
         <span
           className="k-ProjectSimilarCard__refresh__link"
-          onClick={ refreshOnClick }>
+          onClick={ onRefreshClick }>
           { refresh }
         </span>
       </div>
@@ -216,7 +216,7 @@ ProjectSimilarCardComponent.defaultProps = {
   infos: false, // Eg: [{ key: …, text: …, value: …, locked: … }]
   coloredInfosValues: false,
   refresh: "Refresh",
-  refreshOnClick: () => {},
+  onRefreshClick: () => {},
 }
 
 // Add generic card styles.
