@@ -34,10 +34,15 @@ export class Stepper extends React.Component {
       item.linkClassNames,
     )
 
-    return <Tag className={ linkClassNames } href={ item.href }>
-      <IconType />
-      { this.lineBreaks(item.text) }
-    </Tag>
+    return (
+      <Tag
+        className={ linkClassNames }
+        href={ item.href }
+        onClick={ item.onClick }>
+        <IconType />
+        { this.lineBreaks(item.text) }
+      </Tag>
+    )
   }
 
   renderItems() {

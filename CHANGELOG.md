@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `onClick` props to `Stepper` component.
 - Feature: Add new `LinkList` component.
 - Feature : Add new `TextInputWithButton` component.
 - Fix: Add `withoutHover` and `verticalArrow` options on `ButtonIcon` component.
