@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add new `Contextual elements` group.
+- Feature: Add `Loader`, `LoaderWithParagraph`
+  and `KarlLoaderInButton` examples.
+
 ## [13.3.1] - 2017-07-06
 
 No changes.
