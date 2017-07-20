@@ -31,7 +31,7 @@ describe('<TextInputWithButton />', () => {
     })
   })
 
-  describe('textInputProps', () => {
+  describe('with prop textInputProps', () => {
     const textInputProps = {
       'aria-hidden': true,
       className: 'custom-class',
@@ -68,11 +68,11 @@ describe('<TextInputWithButton />', () => {
   })
 
   describe('value prop', () => {
-    const component = mount(<TextInputWithButton value />)
+    const component = mount(<TextInputWithButton value="custom-button" />)
     const button = component.find('.k-TextInputWithButton__button')
 
     it('renders value', () => {
-      expect(button).to.have.length(1)
+      expect(button).to.contain.text('custom-button')
     })
   })
 })
