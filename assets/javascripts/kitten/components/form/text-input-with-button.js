@@ -26,7 +26,7 @@ export class TextInputWithButton extends Component {
 
     const textInputWithButtonButtonClassName = classNames(
       'k-TextInputWithButton__button',
-      className,
+      buttonProps.className,
       {
         'is-valid': valid,
         'is-error': error,
