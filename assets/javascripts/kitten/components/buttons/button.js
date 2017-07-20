@@ -3,21 +3,27 @@ import classNames from 'classnames'
 
 export class Button extends React.Component {
   render() {
-    const { className,
-            tag,
-            modifier,
-            size,
-            iconOnRight,
-            ...others } = this.props
+    const {
+      className,
+      tag,
+      modifier,
+      size,
+      icon,
+      iconOnRight,
+      iconWithMinWidth,
+      ...others,
+    } = this.props
 
     let buttonClassNames = classNames(
       'k-Button',
-      className,
       {
         [`k-Button--${modifier}`]: modifier,
         [`k-Button--${size}`]: size,
+        'k-Button--icon': icon,
         'k-Button--iconRight': iconOnRight,
+        'k-Button--iconWithMinWidth': iconWithMinWidth,
       },
+      className,
     )
 
     // Adds keyboard accessibility to `<a>`
@@ -26,9 +32,11 @@ export class Button extends React.Component {
     const Tag = tag
 
     return (
-      <Tag className={ buttonClassNames }
-           tabIndex={ tabindex }
-           { ...others } />
+      <Tag
+        className={ buttonClassNames }
+        tabIndex={ tabindex }
+        { ...others }
+      />
     )
   }
 }
@@ -36,5 +44,7 @@ export class Button extends React.Component {
 Button.defaultProps = {
   tag: 'button',
   modifier: 'hydrogen',
+  icon: false,
   iconOnRight: false,
+  iconWithMinWidth: false,
 }

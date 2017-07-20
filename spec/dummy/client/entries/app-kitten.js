@@ -81,6 +81,12 @@ import ExternalRichLink from 'kitten/components/links/external-rich-link'
 import { BulletList } from 'kitten/components/lists/bullet-list'
 import NavList from 'kitten/components/lists/nav-list'
 
+// Loaders
+import { KarlLoaderInButton } from 'kitten/karl/loaders/karl-loaders'
+import { Loader } from 'kitten/components/loaders/loader'
+import { LoaderWithParagraph }
+  from 'kitten/components/loaders/loader-with-paragraph'
+
 // Meters
 import { Progress } from 'kitten/components/meters/progress'
 
@@ -276,6 +282,11 @@ ReactOnRails.register({
   // Lists
   BulletList,
   NavList,
+
+  // Loader
+  KarlLoaderInButton,
+  Loader,
+  LoaderWithParagraph,
 
   // Meters
   Progress,

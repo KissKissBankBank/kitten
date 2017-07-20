@@ -145,6 +145,13 @@ module Kitten
           ],
         },
         {
+          id: 'contextual-elements',
+          label: 'Contextual elements',
+          components: [
+            { path: 'components/loaders/loader', name: 'Loader' },
+          ],
+        },
+        {
           id: 'contextual-content',
           label: 'Contextual content',
           components: [
