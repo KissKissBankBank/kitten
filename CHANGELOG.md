@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Add new `ProjectSimilarCard` component.
 - Feature: Add new `RefreshIcon` component.
+- Fix: Add `withoutHover` and `verticalArrow` options on `ButtonIcon` component.
 - Fix: Add `ButtonIcon` animation on `ProjectCreatorCard`.
 - Feature: Add `k-u-align-center-block` utility to center blocks.
 
