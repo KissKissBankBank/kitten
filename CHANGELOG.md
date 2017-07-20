@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Add new `ProjectSimilarCard` component.
 - Feature: Add new `RefreshIcon` component.
+- Feature: Add `k-u-align-center-block` utility to center blocks.
 
 ## [13.3.1] - 2017-07-06
 
