@@ -194,6 +194,7 @@ import { KarlMenu,
 import { KarlBrowsing } from 'app/browsing/browsing'
 import { KarlSeparator } from 'kitten/karl/layout/separator'
 import { KarlImageCropper } from 'kitten/karl/images/image-cropper'
+import { KarlFooterLendo } from 'kitten/karl/footer/footer-lendo'
 
 ReactOnRails.register({
   // Box
@@ -221,6 +222,9 @@ ReactOnRails.register({
   // Dropdowns
   Dropdown,
   DropdownButton,
+
+  // Footer
+  FooterLendo,
 
   // Form
   FormAmountAndCurrency,
@@ -384,4 +388,5 @@ ReactOnRails.register({
   KarlGithubRibbon,
   KarlSeparator,
   KarlImageCropper,
+  KarlFooterLendo,
 })
