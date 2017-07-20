@@ -46,7 +46,7 @@ export class LoaderWithParagraph extends Component {
         modifier="secondary"
         margin={ false }
         { ...paragraphProps }>
-        { this.props.text }
+        { this.props.children }
       </Paragraph>
     ]
 
@@ -66,7 +66,7 @@ export class LoaderWithParagraph extends Component {
 }
 
 LoaderWithParagraph.defaultProps = {
-  text: 'Loading',
+  children: 'Loading',
   className: null,
   loaderPosition: 'left', // Possibilities: top, right, bottom, left.
   loaderProps: {}, // Show Loader component.
