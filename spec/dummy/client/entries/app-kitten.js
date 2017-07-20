@@ -77,6 +77,7 @@ import { InfoLines } from 'kitten/components/lines/info-lines'
 
 // Links
 import ExternalRichLink from 'kitten/components/links/external-rich-link'
+import { LinkList } from 'kitten/components/links/link-list'
 
 // Lists
 import { BulletList } from 'kitten/components/lists/bullet-list'
@@ -274,6 +275,7 @@ ReactOnRails.register({
 
   // Links
   ExternalRichLink,
+  LinkList,
 
   // Lists
   BulletList,
