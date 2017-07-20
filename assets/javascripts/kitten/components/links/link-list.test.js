@@ -5,8 +5,8 @@ import { LinkList } from 'kitten/components/links/link-list'
 
 describe('<LinkList />', () => {
   const items = [
-    { key: 'foo', content: 'Foo', href: '#' },
-    { key: 'bar', content: 'Bar', href: '#', active: true },
+    { key: 'foo', item: 'Foo', href: '#' },
+    { key: 'bar', item: 'Bar', href: '#', active: true },
   ]
 
   describe('by default', () => {
@@ -24,9 +24,9 @@ describe('<LinkList />', () => {
       expect(linkList.children()).to.have.length(2)
     })
 
-    it('has a good class on content', () => {
-      const firstContent = linkList.children().first()
-      expect(firstContent).to.have.className('k-LinkList__content')
+    it('has a good class on item', () => {
+      const firstItem = linkList.children().first()
+      expect(firstItem).to.have.className('k-LinkList__item')
     })
   })
 
@@ -40,10 +40,10 @@ describe('<LinkList />', () => {
     })
   })
 
-  describe('with content', () => {
+  describe('with item', () => {
     const linkList = shallow(<LinkList items={ items } />)
 
-    it('has a first block with good content', () => {
+    it('has a first block with good item', () => {
       const firstItem = linkList.find('.k-LinkList__link').at(0)
 
       expect(firstItem).to.contain.text('Foo')
