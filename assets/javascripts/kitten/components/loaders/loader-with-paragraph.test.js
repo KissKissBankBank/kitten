@@ -34,8 +34,8 @@ describe('<LoaderWithParagraph />', () => {
       const first = loader.children().first()
       const last = loader.children().last()
 
-      expect(first).to.have.descendants(Paragraph)
-      expect(last).to.have.descendants(Loader)
+      expect(first).to.have.descendants(Loader)
+      expect(last).to.have.descendants(Paragraph)
     })
   })
 
