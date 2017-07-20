@@ -63,9 +63,9 @@ export class Modal extends Component {
             beforeClose: 'k-Modal--beforeClose',
           }}
           overlayClassName={{
-            base: 'k-ModalOverlay',
-            afterOpen: 'k-ModalOverlay--afterOpen',
-            beforeClose: 'k-ModalOverlay--beforeClose',
+            base: 'k-Modal__overlay',
+            afterOpen: 'k-Modal__overlay--afterOpen',
+            beforeClose: 'k-Modal__overlay--beforeClose',
           }}
           isOpen={ this.state.showModal }
           onRequestClose={ this.handleCloseModal }

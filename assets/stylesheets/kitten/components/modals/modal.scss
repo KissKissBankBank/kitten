@@ -17,12 +17,12 @@
 ///   </div>
 
 @mixin k-Modal($options) {
-  $size: k-px-to-rem(16px);
+  $outer-gutters-size: k-px-to-rem(16px);
 
   .k-Modal {
     position: relative;
-    max-height: calc(100vh - #{$size} * 2);
-    max-width: calc(100vw - #{$size} * 2);
+    max-height: calc(100vh - #{$outer-gutters-size} * 2);
+    max-width: calc(100vw - #{$outer-gutters-size} * 2);
     padding: k-px-to-rem(40px) k-px-to-rem(20px);
 
     background-color: map-get($k-colors, 'background-1');
@@ -53,7 +53,7 @@
     }
   }
 
-  .k-ModalOverlay {
+  .k-Modal__overlay {
     position: fixed;
     z-index: map-get($options, 'z-index');
     top: 0;
