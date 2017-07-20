@@ -44,6 +44,7 @@ import { TextInput } from 'kitten/components/form/text-input'
 import { LocationInput } from 'kitten/components/form/location-input'
 import { TextInputWithLimit } from 'kitten/components/form/text-input-with-limit'
 import { TextInputWithUnit } from 'kitten/components/form/text-input-with-unit'
+import { TextInputWithButton } from 'kitten/components/form/text-input-with-button'
 
 // Grid
 import { Container } from 'kitten/components/grid/container'
@@ -241,6 +242,7 @@ ReactOnRails.register({
   TextInput,
   TextInputWithLimit,
   TextInputWithUnit,
+  TextInputWithButton,
 
   // Grid
   Container,
