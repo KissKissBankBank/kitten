@@ -8,13 +8,25 @@ export class TextInputWithButton extends Component {
       valid,
       error,
       value,
+      className,
       textInputProps,
       buttonProps,
       ...others,
     } = this.props
 
-    const textInputWithButtonClassName = classNames(
+    const TextInputWithButtonClassName = classNames(
+      'k-TextInputWithButton',
+      className,
+    )
+
+    const textInputWithButtonInputClassName = classNames(
+      'k-TextInputWithButton__input',
+      textInputProps.className,
+    )
+
+    const textInputWithButtonButtonClassName = classNames(
       'k-TextInputWithButton__button',
+      className,
       {
         'is-valid': valid,
         'is-error': error,
@@ -22,19 +34,19 @@ export class TextInputWithButton extends Component {
     )
 
     return (
-      <div className="k-TextInputWithButton" { ...others }>
+      <div className={ TextInputWithButtonClassName } { ...others }>
         <TextInput
+          { ...textInputProps }
           valid={ valid }
           error={ error }
-          className="k-TextInputWithButton__input"
-          { ...textInputProps }
+          className={ textInputWithButtonInputClassName }
         />
         <button
-          className={ textInputWithButtonClassName }
-          type="button"
-          children={ value }
           { ...buttonProps }
-        />
+          className={ textInputWithButtonButtonClassName }
+          type="button">
+          { value }
+        </button>
       </div>
     )
   }
