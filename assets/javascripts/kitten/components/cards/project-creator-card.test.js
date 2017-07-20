@@ -21,22 +21,22 @@ describe('<ProjectCreatorCard />', () => {
     })
   })
 
-  describe('with a BuutonIcon with withoutHover prop', () => {
+  describe('with withoutHover prop', () => {
     const projectCreatorCard = mount(
       <ProjectCreatorCard href="#" withoutHover />)
     const buttonIcon = projectCreatorCard.find('.k-ButtonIcon--withoutHover')
 
-    it('renders a withoutHover', () => {
+    it('renders a ButtonIcon with withoutHover class', () => {
       expect(buttonIcon).to.have.length(1)
     })
   })
 
-  describe('with a ButtonIcon with a verticalArrow props', () => {
+  describe('with verticalArrow props', () => {
     const projectCreatorCard = mount(
       <ProjectCreatorCard href="#" verticalArrow />)
     const buttonIcon = projectCreatorCard.find('.k-ButtonIcon--verticalArrow')
 
-    it('renders a verticalArrow', () => {
+    it('renders a ButtonIcon with vertical arrow', () => {
       expect(buttonIcon).to.have.length(1)
     })
   })
