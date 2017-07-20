@@ -111,8 +111,8 @@ describe('<ProjectSimilarCard />', () => {
       <ProjectSimilarCard
         coloredInfosValues
         infos={ [ { key: 'info-1',
-                  text: 'Custom text 1',
-                  value: 'Custom value 1' } ] }
+                    text: 'Custom text 1',
+                    value: 'Custom value 1' } ] }
       />
     )
     const info = projectSimilarCard.find('.k-ProjectSimilarCard__info').first()
