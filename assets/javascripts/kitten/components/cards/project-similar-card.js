@@ -208,7 +208,7 @@ class ProjectSimilarCardComponent extends Component {
 }
 
 ProjectSimilarCardComponent.defaultProps = {
-  step: "1/5",
+  step: "",
   imageSrc: null,
   title: "",
   paragraph: "",

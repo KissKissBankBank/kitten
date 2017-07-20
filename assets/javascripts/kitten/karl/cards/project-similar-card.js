@@ -3,10 +3,10 @@ import { ProjectSimilarCard } from 'kitten/components/cards/project-similar-card
 
 export const KarlProjectSimilarCard = () => (
   <ProjectSimilarCard
+    step="1/5"
     imageSrc="https://placehold.it/400x200/4a84ff/4a84ff"
     title="Lorem ipsum dolor sit amet"
-    paragraph="Sed ut perspiciatis unde omnis iste natus error sit voluptatem\
-    accusantium doloremque laudantium"
+    paragraph="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium"
   />
 )
 
@@ -24,11 +24,11 @@ export const KarlProjectSimilarCardInfos = props => {
 
   return (
     <ProjectSimilarCard
+      step="1/5"
       title="Lorem ipsum dolor sit amet"
       tags={ tags }
       infos={ infos }
-      paragraph="Sed ut perspiciatis unde omnis iste natus error sit voluptatem\
-      accusantium doloremque laudantium"
+      paragraph="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium"
     />
   )
 }
