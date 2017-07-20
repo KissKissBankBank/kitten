@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add new `LinkList` component.
+- Feature: Add `k-u-align-center-block` utility to center blocks.
 
 ## [13.3.1] - 2017-07-06
 
