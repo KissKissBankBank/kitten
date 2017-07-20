@@ -45,6 +45,7 @@ import { TextInput } from 'kitten/components/form/text-input'
 import { LocationInput } from 'kitten/components/form/location-input'
 import { TextInputWithLimit } from 'kitten/components/form/text-input-with-limit'
 import { TextInputWithUnit } from 'kitten/components/form/text-input-with-unit'
+import { TextInputWithButton } from 'kitten/components/form/text-input-with-button'
 
 // Grid
 import { Container } from 'kitten/components/grid/container'
@@ -77,6 +78,7 @@ import { InfoLines } from 'kitten/components/lines/info-lines'
 
 // Links
 import ExternalRichLink from 'kitten/components/links/external-rich-link'
+import { LinkList } from 'kitten/components/links/link-list'
 
 // Lists
 import { BulletList } from 'kitten/components/lists/bullet-list'
@@ -244,6 +246,7 @@ ReactOnRails.register({
   TextInput,
   TextInputWithLimit,
   TextInputWithUnit,
+  TextInputWithButton,
 
   // Grid
   Container,
@@ -276,6 +279,7 @@ ReactOnRails.register({
 
   // Links
   ExternalRichLink,
+  LinkList,
 
   // Lists
   BulletList,
