@@ -38,6 +38,7 @@ export class Modal extends Component {
     const {
       trigger,
       content,
+      label,
       className,
       ...others,
     } = this.props
@@ -68,7 +69,7 @@ export class Modal extends Component {
           }}
           isOpen={ this.state.showModal }
           onRequestClose={ this.handleCloseModal }
-          contentLabel="Modal">
+          contentLabel={ label }>
 
           { content }
 
@@ -77,4 +78,8 @@ export class Modal extends Component {
       </div>
     )
   }
+}
+
+Modal.defaultProps = {
+  label: "Modal",
 }
