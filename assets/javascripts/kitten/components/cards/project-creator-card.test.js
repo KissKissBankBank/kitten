@@ -21,7 +21,7 @@ describe('<ProjectCreatorCard />', () => {
     })
   })
 
-  describe('with withoutHover prop', () => {
+  describe('with a BuutonIcon with withoutHover prop', () => {
     const projectCreatorCard = mount(
       <ProjectCreatorCard href="#" withoutHover />)
     const buttonIcon = projectCreatorCard.find('.k-ButtonIcon--withoutHover')
@@ -31,7 +31,7 @@ describe('<ProjectCreatorCard />', () => {
     })
   })
 
-  describe('with verticalArrow props', () => {
+  describe('with a ButtonIcon with a verticalArrow props', () => {
     const projectCreatorCard = mount(
       <ProjectCreatorCard href="#" verticalArrow />)
     const buttonIcon = projectCreatorCard.find('.k-ButtonIcon--verticalArrow')
