@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: Add `withoutHover` and `verticalArrow` options on `ButtonIcon` component.
+- Feature: Add `k-u-align-center-block` utility to center blocks.
 
 ## [13.3.1] - 2017-07-06
 
