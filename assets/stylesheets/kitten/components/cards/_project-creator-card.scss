@@ -81,7 +81,7 @@
 
     .k-ProjectCreatorCard:focus &,
     .k-ProjectCreatorCard:hover & {
-      left: 5px;
+      left: k-px-to-rem(5px);
     }
   }
 
