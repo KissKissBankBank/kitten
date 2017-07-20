@@ -9,7 +9,7 @@ export const RefreshIcon = ({ circleColor,
        viewBox="0 0 10 11.5"
        { ...props }>
     <path d="M5 1.5a5 5 0 1 0 4.47 2.75"
-          fill={ circleColor }/>
+          fill={ circleColor } />
     <path d="M4.86 2a4.5 4.5 0 1 0 4.22 2.6"
           fill="none"
           stroke="#333"

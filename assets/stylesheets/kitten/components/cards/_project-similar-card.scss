@@ -54,14 +54,13 @@
     align-items: center;
   }
 
-    .k-ProjectSimilarCard__refresh__link {
-      text-decoration: none;
-      color: map-get($k-colors, 'primary-1');
-      @include k-typographyFont($font);
-      @include k-typographyFontSize(-1, normal);
-      cursor: pointer;
-    }
-
+  .k-ProjectSimilarCard__refresh__link {
+    text-decoration: none;
+    color: map-get($k-colors, 'primary-1');
+    @include k-typographyFont($font);
+    @include k-typographyFontSize(-1, normal);
+    cursor: pointer;
+  }
 
   .k-ProjectSimilarCard__header--button {
     > :first-child {

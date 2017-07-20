@@ -25,8 +25,8 @@ export const KarlProjectSimilarCardInfos = props => {
   return (
     <ProjectSimilarCard
       title="Lorem ipsum dolor sit amet"
-      tags= { tags }
-      infos= { infos }
+      tags={ tags }
+      infos={ infos }
       paragraph="Sed ut perspiciatis unde omnis iste natus error sit voluptatem\
       accusantium doloremque laudantium"
     />
