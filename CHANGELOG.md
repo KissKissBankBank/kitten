@@ -6,11 +6,18 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Add `Loader` and `LoaderWithParagraph` components.
 - Feature: Add `icon` and `iconWithMinWidth` props to `Button` component.
-- Feature: Add new `LinkList` component.
-- Feature: Add new `TextInputWithButton` component.
-- Feature: Add `k-u-align-center-block` utility to center blocks.
-- Fix: Add `withoutHover` and `verticalArrow` options on `ButtonIcon` component.
-- Fix: Add `ButtonIcon` animation on `ProjectCreatorCard`.
+
+## [13.4.0] - 2017-07-20
+
+Features:
+- Add `other` props to `Stepper` component.
+- Add new `LinkList` component.
+- Add new `TextInputWithButton` component.
+- Add `k-u-align-center-block` utility to center blocks.
+
+Fixes:
+- Add `withoutHover` and `verticalArrow` options on `ButtonIcon` component.
+- Add `ButtonIcon` animation on `ProjectCreatorCard`.
 
 ## [13.3.1] - 2017-07-06
 
