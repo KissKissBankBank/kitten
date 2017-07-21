@@ -20,10 +20,10 @@ describe('<Loader />', () => {
     })
   })
 
-  describe('with a div tag', () => {
+  describe('with a span tag', () => {
     const loader = mount(<Loader tag="span" />)
 
-    it('is a <div />', () => {
+    it('is a <span />', () => {
       expect(loader).to.have.tagName('span')
     })
   })

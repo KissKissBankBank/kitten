@@ -68,7 +68,7 @@ export class LoaderWithParagraph extends Component {
 LoaderWithParagraph.defaultProps = {
   children: 'Loading',
   className: null,
-  loaderPosition: 'left', // Possibilities: top, right, bottom, left.
+  loaderPosition: 'left', // Available options: top, right, bottom, left.
   loaderProps: {}, // Show Loader component.
   paragraphProps: {}, // Show Paragraph component.
 }
