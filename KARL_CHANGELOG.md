@@ -3,10 +3,13 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
+
 - Feature: Add new `KarlProjectSimilarCard` and `KarlProjectSimilarCardInfos`
   component
 - Feature: Add new `ProjectSimilarCard` component.
-
+- Feature: Add new `Contextual elements` group.
+- Feature: Add `Loader`, `LoaderWithParagraph`
+  and `KarlLoaderInButton` examples.
 - Feature: Replace `KarlButtonIconFacebookIcon` by `FacebookButtonIcon`,
   `KarlButtonIconTwitterIcon` by `TwitterButtonIcon` and
   `KarlButtonIconLinkedinIcon` by `LinkedinButtonIcon`.

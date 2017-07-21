@@ -400,4 +400,13 @@
   .k-Button--iconRight {
     padding: 0 0 0 $button-radius;
   }
+
+  .k-Button--iconWithMinWidth {
+    padding: 0;
+    min-width: $button-min-width;
+
+    .k-Button__icon {
+      width: auto;
+    }
+  }
 }
