@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Replace `KarlButtonIconFacebookIcon` by `FacebookButtonIcon`,
+  `KarlButtonIconTwitterIcon` by `TwitterButtonIcon` and
+  `KarlButtonIconLinkedinIcon` by `LinkedinButtonIcon`.
+
 ## [13.4.0] - 2017-07-20
 
 No changes.

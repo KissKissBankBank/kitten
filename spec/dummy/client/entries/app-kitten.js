@@ -13,6 +13,11 @@ import { ButtonIcon } from 'kitten/components/buttons/button-icon'
 import { ButtonImage } from 'kitten/components/buttons/button-image'
 import ButtonImageWithTextAndBadge from 'kitten/components/buttons/button-image-with-text-and-badge'
 import ButtonTooltipIcon from 'kitten/components/buttons/button-tooltip-icon'
+import {
+  FacebookButtonIcon,
+  TwitterButtonIcon,
+  LinkedinButtonIcon,
+} from 'kitten/components/buttons/social-button-icon'
 import { TagButton } from 'kitten/components/buttons/tag-button'
 
 // Cards
@@ -169,10 +174,7 @@ import { KarlButtonIconWordsRight,
        } from 'kitten/karl/buttons/button-with-icon-words'
 import { KarlButtonAndText } from 'kitten/karl/buttons/button'
 import { KarlButtonIconHeart,
-         KarlButtonIconMicro,
-         KarlButtonIconFacebookIcon,
-         KarlButtonIconTwitterIcon,
-         KarlButtonIconLinkedinIcon
+         KarlButtonIconMicro
        } from 'kitten/karl/buttons/button-icon'
 import { KarlLineWithTooltip,
          KarlLineWithBigHeart } from 'kitten/karl/layout/line'
@@ -207,7 +209,10 @@ ReactOnRails.register({
   ButtonImage,
   ButtonImageWithTextAndBadge,
   ButtonTooltipIcon,
+  FacebookButtonIcon,
+  LinkedinButtonIcon,
   TagButton,
+  TwitterButtonIcon,
 
   // Cards
   ProjectCard,
@@ -329,9 +334,6 @@ ReactOnRails.register({
   KarlLoudspeakerPopover,
   KarlButtonIconHeart,
   KarlButtonIconMicro,
-  KarlButtonIconFacebookIcon,
-  KarlButtonIconTwitterIcon,
-  KarlButtonIconLinkedinIcon,
   KarlButtonIconWordsRight,
   KarlButtonIconWordsLeft,
   KarlButtonAndText,
