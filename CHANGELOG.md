@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add new `ProjectSimilarCard` component.
+- Feature: Add new `RefreshIcon` component.
+
 ## [13.4.0] - 2017-07-20
 
 Features:
