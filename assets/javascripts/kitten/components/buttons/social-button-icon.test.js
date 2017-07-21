@@ -28,7 +28,7 @@ describe('<FacebookButtonIcon />', () => {
   describe('with other props', () => {
     const button = shallow(<FacebookButtonIcon className="custom__class" />)
 
-    it('has aria-hidden attribute', () => {
+    it('has custom class', () => {
       expect(button).to.have.className('custom__class')
     })
   })
@@ -51,7 +51,7 @@ describe('<TwitterButtonIcon />', () => {
   describe('with other props', () => {
     const button = shallow(<TwitterButtonIcon className="custom__class" />)
 
-    it('has aria-hidden attribute', () => {
+    it('has custom class', () => {
       expect(button).to.have.className('custom__class')
     })
   })
@@ -74,7 +74,7 @@ describe('<LinkedinButtonIcon />', () => {
   describe('with other props', () => {
     const button = shallow(<LinkedinButtonIcon className="custom__class" />)
 
-    it('has aria-hidden attribute', () => {
+    it('has custom class', () => {
       expect(button).to.have.className('custom__class')
     })
   })
