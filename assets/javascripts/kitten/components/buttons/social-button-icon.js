@@ -5,19 +5,19 @@ import { TwitterIcon } from 'kitten/components/icons/twitter-icon'
 import { LinkedinIcon } from 'kitten/components/icons/linkedin-icon'
 
 export const FacebookButtonIcon = props => (
-  <ButtonIcon modifier="facebook" { ...props }>
+  <ButtonIcon { ...props } modifier="facebook">
     <FacebookIcon className="k-ButtonIcon__svg" />
   </ButtonIcon>
 )
 
 export const TwitterButtonIcon = props => (
-  <ButtonIcon modifier="twitter" { ...props }>
+  <ButtonIcon { ...props } modifier="twitter">
     <TwitterIcon className="k-ButtonIcon__svg" />
   </ButtonIcon>
 )
 
 export const LinkedinButtonIcon = props => (
-  <ButtonIcon modifier="linkedin" { ...props }>
+  <ButtonIcon { ...props } modifier="linkedin">
     <LinkedinIcon className="k-ButtonIcon__svg" />
   </ButtonIcon>
 )
