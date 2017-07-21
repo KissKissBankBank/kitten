@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add social button icon components (`FacebookButtonIcon`, …).
+- Feature: Add border utilities (`k-u-border-left-line1`, …).
 - Feature: Add new `ProjectSimilarCard` component.
 - Feature: Add new `RefreshIcon` component.
 
