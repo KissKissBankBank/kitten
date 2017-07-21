@@ -33,33 +33,22 @@ export class LoaderWithParagraph extends Component {
       loaderProps.className,
     )
 
-    const loader =
-      <Loader
-        key="loader"
-        { ...loaderProps }
-        className={ loaderClassName }
-      />
+    const loader = <Loader { ...loaderProps } className={ loaderClassName } />
 
-    let elements = [
-      <Paragraph
-        key="paragraph"
-        modifier="secondary"
-        margin={ false }
-        { ...paragraphProps }>
-        { this.props.children }
-      </Paragraph>
-    ]
-
-    if (loaderPosition == 'left' || loaderPosition == 'top') {
-      elements.unshift(loader)
-    }
-    else {
-      elements.push(loader)
-    }
+    const loaderBefore = loaderPosition == 'top' || loaderPosition == 'left'
 
     return (
       <div className={ containerClassName } { ...others }>
-        { elements }
+        { loaderBefore ? loader : null }
+
+        <Paragraph
+          modifier="secondary"
+          margin={ false }
+          { ...paragraphProps }>
+          { this.props.children }
+        </Paragraph>
+
+        { loaderBefore ? null : loader }
       </div>
     )
   }
