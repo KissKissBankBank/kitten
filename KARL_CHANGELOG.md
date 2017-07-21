@@ -6,6 +6,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Add `KarlModal` example.
 
+## [13.4.0] - 2017-07-20
+
+No changes.
+
 ## [13.3.1] - 2017-07-06
 
 No changes.
