@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add border utilities (`k-u-border-left-line1`, …).
+
 ## [13.4.0] - 2017-07-20
 
 Features:
