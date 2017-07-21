@@ -3,6 +3,9 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
+- Feature: Add new `KarlProjectSimilarCard` and `KarlProjectSimilarCardInfos`
+  component
+- Feature: Add new `ProjectSimilarCard` component.
 
 - Feature: Replace `KarlButtonIconFacebookIcon` by `FacebookButtonIcon`,
   `KarlButtonIconTwitterIcon` by `TwitterButtonIcon` and
