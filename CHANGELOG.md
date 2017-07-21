@@ -6,6 +6,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Add `Loader` and `LoaderWithParagraph` components.
 - Feature: Add `icon` and `iconWithMinWidth` props to `Button` component.
+- Feature: Add new `ProjectSimilarCard` component.
+- Feature: Add new `RefreshIcon` component.
 
 ## [13.4.0] - 2017-07-20
 
