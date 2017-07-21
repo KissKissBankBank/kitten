@@ -223,9 +223,6 @@ ReactOnRails.register({
   Dropdown,
   DropdownButton,
 
-  // Footer
-  FooterLendo,
-
   // Form
   FormAmountAndCurrency,
   FormPhoneNumber,
