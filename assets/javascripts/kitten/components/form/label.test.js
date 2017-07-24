@@ -54,7 +54,7 @@ describe('<Label />', () => {
     })
   })
 
-  describe('with withoutPointerEvents props', () => {
+  describe('with withoutPointerEvents prop', () => {
     const component = shallow(<Label withoutPointerEvents />)
 
     it('has a good class', () => {
