@@ -1,6 +1,13 @@
 @mixin k-FooterLendo {
   .k-FooterLendo {
-
+    box-sizing: border-box;
   }
 
+  .k-FooterLendo__network {
+    align-items: center;
+  }
+
+  .k-FooterLendo__svg {
+    margin-right: k-px-to-rem(10px);
+  }
 }
