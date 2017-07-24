@@ -134,6 +134,7 @@ module Kitten
           components: [
             { path: 'components/cards/card', name: 'Card' },
             { path: 'components/cards/project-card', name: 'Project card' },
+            { path: 'components/cards/project-similar-card', name: 'Project similar card' },
             { path: 'components/heroes/hero', name: 'Hero' },
             { path: 'components/press/press-quotes', name: 'Press quotes' },
             { path: 'components/testimonies/testimony', name: 'Testimony' },
@@ -143,6 +144,13 @@ module Kitten
             { path: 'components/lists/bullet-list', name: 'Bullet list' },
             { path: 'components/lists/tag-list', name: 'Tag list' },
             { path: 'components/lines/info-lines', name: 'Info lines' },
+          ],
+        },
+        {
+          id: 'contextual-elements',
+          label: 'Contextual elements',
+          components: [
+            { path: 'components/loaders/loader', name: 'Loader' },
           ],
         },
         {

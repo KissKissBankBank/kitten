@@ -3,7 +3,6 @@ import { expect } from 'chai'
 import { shallow } from 'enzyme'
 import { TagButton } from 'kitten/components/buttons/tag-button'
 
-
 describe('TagButton', () => {
   const defaultComponent = shallow(
     <TagButton />)

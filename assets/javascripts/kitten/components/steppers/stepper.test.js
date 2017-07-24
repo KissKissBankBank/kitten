@@ -13,6 +13,7 @@ const items = [
     text: "Catopuma\n Temminckii",
     href: "http://…",
     iconType: "default",
+    onClick: () => {},
   },
   {
     text: "Prionaelurus\n planiceps",
@@ -59,6 +60,7 @@ describe('<Stepper />', () => {
     expect(links.find('.k-Stepper__link--inProgress')).to.have.length(1)
     expect(links.find('.k-Stepper__link--inactive')).to.have.length(1)
     expect(links.first()).to.have.attr('href', 'http://…')
+    expect(links.first().props().onClick).to.be.a('function')
   })
 
   it('renders an unfocusable link', () => {
