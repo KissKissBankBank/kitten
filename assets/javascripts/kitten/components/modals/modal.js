@@ -58,7 +58,7 @@ export class Modal extends Component {
 
         <ReactModal
           className={{
-            base: 'k-Modal',
+            base: 'k-Modal__content',
             afterOpen: 'k-Modal--afterOpen',
             beforeClose: 'k-Modal--beforeClose',
           }}
