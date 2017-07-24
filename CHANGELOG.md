@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `k-Label--withoutPointerEvents` prop to `Label` component.
 - Feature: Add `Loader` and `LoaderWithParagraph` components.
 - Feature: Add `icon` and `iconWithMinWidth` props to `Button` component.
 - Feature: Add social button icon components (`FacebookButtonIcon`, …).

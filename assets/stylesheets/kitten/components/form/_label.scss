@@ -37,4 +37,8 @@
   .k-Label--tiny {
     @include k-typographyFontSize($font-step-tiny, $line-height-tiny);
   }
+
+  .k-Label--withoutPointerEvents {
+    pointer-events: none;
+  }
 }
