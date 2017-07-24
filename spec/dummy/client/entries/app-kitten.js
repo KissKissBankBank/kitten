@@ -13,11 +13,17 @@ import { ButtonIcon } from 'kitten/components/buttons/button-icon'
 import { ButtonImage } from 'kitten/components/buttons/button-image'
 import ButtonImageWithTextAndBadge from 'kitten/components/buttons/button-image-with-text-and-badge'
 import ButtonTooltipIcon from 'kitten/components/buttons/button-tooltip-icon'
+import {
+  FacebookButtonIcon,
+  TwitterButtonIcon,
+  LinkedinButtonIcon,
+} from 'kitten/components/buttons/social-button-icon'
 import { TagButton } from 'kitten/components/buttons/tag-button'
 
 // Cards
 import { ProjectCard } from 'kitten/components/cards/project-card'
 import { ProjectCreatorCard } from 'kitten/components/cards/project-creator-card'
+import { ProjectSimilarCard } from 'kitten/components/cards/project-similar-card'
 
 // Dev
 import { DevGrid } from 'kitten/components/dev/dev-grid'
@@ -82,6 +88,12 @@ import { LinkList } from 'kitten/components/links/link-list'
 // Lists
 import { BulletList } from 'kitten/components/lists/bullet-list'
 import NavList from 'kitten/components/lists/nav-list'
+
+// Loaders
+import { KarlLoaderInButton } from 'kitten/karl/loaders/karl-loaders'
+import { Loader } from 'kitten/components/loaders/loader'
+import { LoaderWithParagraph }
+  from 'kitten/components/loaders/loader-with-paragraph'
 
 // Meters
 import { Progress } from 'kitten/components/meters/progress'
@@ -169,10 +181,7 @@ import { KarlButtonIconWordsRight,
        } from 'kitten/karl/buttons/button-with-icon-words'
 import { KarlButtonAndText } from 'kitten/karl/buttons/button'
 import { KarlButtonIconHeart,
-         KarlButtonIconMicro,
-         KarlButtonIconFacebookIcon,
-         KarlButtonIconTwitterIcon,
-         KarlButtonIconLinkedinIcon
+         KarlButtonIconMicro
        } from 'kitten/karl/buttons/button-icon'
 import { KarlLineWithTooltip,
          KarlLineWithBigHeart } from 'kitten/karl/layout/line'
@@ -187,6 +196,8 @@ import { KarlIconBadgeWithSvg } from 'kitten/karl/notifications/icon-badge'
 import { KarlLegoGrid } from 'kitten/karl/grid/lego-grid'
 import { KarlTagList } from 'kitten/karl/lists/tag-list'
 import { KarlCard } from 'kitten/karl/cards/card'
+import { KarlProjectSimilarCard,
+         KarlProjectSimilarCardInfos } from 'kitten/karl/cards/project-similar-card'
 import { KarlMenuHeader } from 'kitten/karl/headers/karl-header'
 import { KarlGithubRibbon } from 'kitten/karl/headers/karl-github-ribbon'
 import { KarlMenu,
@@ -208,11 +219,15 @@ ReactOnRails.register({
   ButtonImage,
   ButtonImageWithTextAndBadge,
   ButtonTooltipIcon,
+  FacebookButtonIcon,
+  LinkedinButtonIcon,
   TagButton,
+  TwitterButtonIcon,
 
   // Cards
   ProjectCard,
   ProjectCreatorCard,
+  ProjectSimilarCard,
 
   // Dev
   Checkbox,
@@ -282,6 +297,11 @@ ReactOnRails.register({
   BulletList,
   NavList,
 
+  // Loader
+  KarlLoaderInButton,
+  Loader,
+  LoaderWithParagraph,
+
   // Meters
   Progress,
 
@@ -330,9 +350,6 @@ ReactOnRails.register({
   KarlLoudspeakerPopover,
   KarlButtonIconHeart,
   KarlButtonIconMicro,
-  KarlButtonIconFacebookIcon,
-  KarlButtonIconTwitterIcon,
-  KarlButtonIconLinkedinIcon,
   KarlButtonIconWordsRight,
   KarlButtonIconWordsLeft,
   KarlButtonAndText,
@@ -378,6 +395,8 @@ ReactOnRails.register({
   KarlLegoGrid,
   KarlTagList,
   KarlCard,
+  KarlProjectSimilarCard,
+  KarlProjectSimilarCardInfos,
   KarlMenuHeader,
   KarlMenu,
   KarlMenuContent,
