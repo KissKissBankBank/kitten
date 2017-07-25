@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `InfoLines` examples
+  with new modifiers (`withoutTopBottomBorder`, `borderColorPrimary4`).
 - Feature: Add new `KarlProjectSimilarCard` and `KarlProjectSimilarCardInfos`
   component
 - Feature: Add new `ProjectSimilarCard` component.

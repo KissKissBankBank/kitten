@@ -35,4 +35,22 @@
       margin-left: auto;
     }
   }
+
+  // Modifiers.
+
+  .k-InfoLines--withoutTopBottomBorder {
+    border-top: none;
+
+    .k-InfoLines__line:last-child {
+      border-bottom: none;
+    }
+  }
+
+  .k-InfoLines--borderColorPrimary4 {
+    border-color: map-get($k-colors, 'primary-4');
+
+    .k-InfoLines__line {
+      border-color: map-get($k-colors, 'primary-4');
+    }
+  }
 }

@@ -9,4 +9,28 @@
       } %>
     <% end %>
   </div>
+
+  <div class="k-Grid__col k-Grid__col--12 k-Grid__col--6@l">
+    <%= example 'Info lines without top and bottom border' do %>
+      <%= react_component 'InfoLines', props: {
+        withoutTopBottomBorder: true,
+        infos: [
+          { key: 'Lorem', value: 'Ipsum' },
+          { key: 'Dolor', value: 'Sit amet' },
+        ]
+      } %>
+    <% end %>
+  </div>
+
+  <div class="k-Grid__col k-Grid__col--12 k-Grid__col--6@l">
+    <%= example 'Info lines with custom border color' do %>
+      <%= react_component 'InfoLines', props: {
+        borderColorPrimary4: true,
+        infos: [
+          { key: 'Lorem', value: 'Ipsum' },
+          { key: 'Dolor', value: 'Sit amet' },
+        ]
+      } %>
+    <% end %>
+  </div>
 </div>
