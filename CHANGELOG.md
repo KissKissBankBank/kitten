@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `mangopay.svg` logo.
 - Feature: Add new `KarlFooterLendo` component.
 - Feature: Add new modifier `k-LinkList--withoutMargin` in `LinkList`.
 - Feature: Add `withoutPointerEvents` prop to `Label` component.

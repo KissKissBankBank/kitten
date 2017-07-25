@@ -4,10 +4,33 @@
   }
 
   .k-FooterLendo__network {
-    align-items: center;
+
+    @include k-media-max('s') {
+      text-align: center;
+    }
+  }
+
+  .k-FooterLendo__network--follow {
+    text-align: center;
+
+    @include k-media-min('l') {
+      text-align: right;
+    }
   }
 
   .k-FooterLendo__buttonIcon {
     margin-right: k-px-to-rem(10px);
+  }
+
+  .k-FooterLendo__logo {
+    width: 110px;
+  }
+
+  .k-FooterLendo__notice--copyright {
+    text-align: center;
+
+    @include k-media-min('l') {
+      text-align: right;
+    }
   }
 }

@@ -16,43 +16,38 @@ import { Row } from 'kitten/components/grid/row'
 export class KarlFooterLendo extends Component {
   renderNetwork() {
     return (
-      <Row
-        lightTopBorder>
-        <Marger top="3" bottom="3">
-          <Grid>
-            <GridCol col="12">
-              <div className="k-FooterLendo__network">
-                <Grid>
-                  <GridCol col="2">
-                    <Paragraph
-                      modifier="tertiary"
-                      margin={ false }>
-                      Inscrivez-vous à notre Newsletter et à l'alerte nouveau projet
-                    </Paragraph>
-                  </GridCol>
-                  <GridCol col="4">
-                    <TextInputWithButton />
-                  </GridCol>
-                  <GridCol col="2" />
-                  <GridCol col="2">
-                    <Paragraph
-                      modifier="tertiary"
-                      margin={ false }
-                      className="k-u-align-right">
-                      Suivez nous
-                    </Paragraph>
-                  </GridCol>
-                  <GridCol col="2">
-                    <FacebookButtonIcon className="k-FooterLendo__buttonIcon" />
-                    <TwitterButtonIcon className="k-FooterLendo__buttonIcon" />
-                    <LinkedinButtonIcon />
-                  </GridCol>
-                </Grid>
-              </div>
-            </GridCol>
-          </Grid>
-        </Marger>
-      </Row>
+      <div className="k-FooterLendo__network">
+        <Row
+          lightTopBorder>
+          <Marger top="3" bottom="3">
+            <Grid>
+              <GridCol col="12" col-l="2">
+                <Paragraph
+                  modifier="tertiary"
+                  margin={ false }>
+                  Inscrivez-vous à notre Newsletter et à l'alerte nouveau projet
+                </Paragraph>
+              </GridCol>
+              <GridCol col="12" col-l="4">
+                <TextInputWithButton />
+              </GridCol>
+              <GridCol col="12" col-l="2" offset-l="2">
+                <Paragraph
+                  modifier="tertiary"
+                  margin={ false }
+                  className="k-FooterLendo__network--follow">
+                  Suivez nous
+                </Paragraph>
+              </GridCol>
+              <GridCol col="12" col-l="2">
+                <FacebookButtonIcon className="k-FooterLendo__buttonIcon" />
+                <TwitterButtonIcon className="k-FooterLendo__buttonIcon" />
+                <LinkedinButtonIcon />
+              </GridCol>
+            </Grid>
+          </Marger>
+        </Row>
+      </div>
     )
   }
 
@@ -104,40 +99,84 @@ export class KarlFooterLendo extends Component {
     return (
       <Row
         lightTopBorder>
-        <Marger top="7.5" bottom="2">
+        <Marger top="5" bottom="5">
           <Grid>
-            <GridCol col="12">
+            <GridCol col="12" col-l="2">
+              <img
+                className="k-FooterLendo__logo"
+                src="/assets/brand/lendopolis.svg"
+                alt="" />
+            </GridCol>
+            <GridCol col="12" col-l="10">
               <Grid>
-                <GridCol col="2">
-                  <img
-                    className="k-FooterLendo__logo"
-                    src="/assets/brand/lendopolis.svg"
-                    alt="" />
+                <GridCol col="12" col-l="3">
+                  <LinkList
+                    margin={ false }
+                    items={ items }
+                    className="k-u-align-center" />
                 </GridCol>
-                <GridCol col="10">
-                  <Grid>
-                    <GridCol col="12">
-                      <Grid>
-                        <GridCol col="3">
-                          <LinkList items={ items } />
-                        </GridCol>
-                        <GridCol col="3">
-                          <LinkList items={ items2 } />
-                        </GridCol>
-                        <GridCol col="3">
-                          <LinkList items={ items3 } />
-                        </GridCol>
-                        <GridCol col="3">
-                          <LinkList items={ items4 } />
-                        </GridCol>
-                      </Grid>
-                    </GridCol>
-                  </Grid>
+                <GridCol col="12" col-l="3">
+                  <LinkList
+                    margin={ false }
+                    items={ items2 } />
+                </GridCol>
+                <GridCol col="12" col-l="3">
+                  <LinkList
+                    margin={ false }
+                    items={ items3 } />
+                </GridCol>
+                <GridCol col="12" col-l="3">
+                  <LinkList
+                    margin={ false }
+                    items={ items4 } />
                 </GridCol>
               </Grid>
             </GridCol>
           </Grid>
         </Marger>
+      </Row>
+    )
+  }
+
+  renderNotice() {
+    return (
+      <Row>
+        <Grid>
+          <GridCol col="12" col-m="6" col-l="1">
+            <img
+              src="/assets/partners/french-authorities.svg"
+              alt="Autorités Française"
+            />
+          </GridCol>
+          <GridCol col="12" col-m="6" col-l="3">
+            <Paragraph
+              modifier="quaternary"
+              margin={ false }>
+              LENDOPOLIS est une plateforme de financement participatif régulée par les autorités françaises. Immatriculation : 14007218
+            </Paragraph>
+          </GridCol>
+          <GridCol col="12" col-m="6" col-l="1">
+            <img
+              src="/assets/partners/mangopay.svg"
+              alt="MANGOPAY"
+            />
+          </GridCol>
+          <GridCol col="12" col-m="6" col-l="3">
+            <Paragraph
+              modifier="quaternary"
+              margin={ false }>
+              KissKissBankBank & Co est agent de l'institution financière MANGOPAY SA. Paiements sécurisés avec MANGOPAY SA.
+            </Paragraph>
+          </GridCol>
+          <GridCol col="12" col-l="4">
+            <Paragraph
+              modifier="quaternary"
+              className="k-FooterLendo__notice--copyright k-u-strong"
+              margin={ false }>
+              © 2016 KissKissBankBank & Co
+            </Paragraph>
+          </GridCol>
+        </Grid>
       </Row>
     )
   }
@@ -148,6 +187,7 @@ export class KarlFooterLendo extends Component {
         { this.renderNetwork() }
         { this.renderQuote() }
         { this.renderList() }
+        { this.renderNotice() }
       </div>
     )
   }
