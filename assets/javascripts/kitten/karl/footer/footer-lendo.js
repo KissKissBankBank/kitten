@@ -43,8 +43,8 @@ export class KarlFooterLendo extends Component {
                     </Paragraph>
                   </GridCol>
                   <GridCol col="2">
-                    <FacebookButtonIcon className="k-FooterLendo__svg" />
-                    <TwitterButtonIcon className="k-FooterLendo__svg" />
+                    <FacebookButtonIcon className="k-FooterLendo__buttonIcon" />
+                    <TwitterButtonIcon className="k-FooterLendo__buttonIcon" />
                     <LinkedinButtonIcon />
                   </GridCol>
                 </Grid>
@@ -106,24 +106,33 @@ export class KarlFooterLendo extends Component {
         lightTopBorder>
         <Marger top="7.5" bottom="2">
           <Grid>
-            <GridCol col="2">
-              <img src="lendopolis.svg" />
-            </GridCol>
-          </Grid>
-          <Grid>
             <GridCol col="12">
               <Grid>
-                <GridCol col="3">
-                  <LinkList items={ items } />
+                <GridCol col="2">
+                  <img
+                    className="k-FooterLendo__logo"
+                    src="/assets/brand/lendopolis.svg"
+                    alt="" />
                 </GridCol>
-                <GridCol col="3">
-                  <LinkList items={ items2 } />
-                </GridCol>
-                <GridCol col="3">
-                  <LinkList items={ items3 } />
-                </GridCol>
-                <GridCol col="3">
-                  <LinkList items={ items4 } />
+                <GridCol col="10">
+                  <Grid>
+                    <GridCol col="12">
+                      <Grid>
+                        <GridCol col="3">
+                          <LinkList items={ items } />
+                        </GridCol>
+                        <GridCol col="3">
+                          <LinkList items={ items2 } />
+                        </GridCol>
+                        <GridCol col="3">
+                          <LinkList items={ items3 } />
+                        </GridCol>
+                        <GridCol col="3">
+                          <LinkList items={ items4 } />
+                        </GridCol>
+                      </Grid>
+                    </GridCol>
+                  </Grid>
                 </GridCol>
               </Grid>
             </GridCol>
