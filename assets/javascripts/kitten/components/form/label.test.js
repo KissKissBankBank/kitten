@@ -53,4 +53,12 @@ describe('<Label />', () => {
       expect(input).to.be.equal(document.activeElement)
     })
   })
+
+  describe('with withoutPointerEvents prop', () => {
+    const component = shallow(<Label withoutPointerEvents />)
+
+    it('has a good class', () => {
+      expect(component).to.have.className('k-Label--withoutPointerEvents')
+    })
+  })
 })

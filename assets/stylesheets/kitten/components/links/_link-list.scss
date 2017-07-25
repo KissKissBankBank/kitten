@@ -55,4 +55,9 @@
 
     transition: color .2s;
   }
+
+  .k-LinkList--withoutMargin {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }
