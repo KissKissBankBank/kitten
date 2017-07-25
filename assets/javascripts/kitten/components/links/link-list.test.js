@@ -44,7 +44,7 @@ describe('<LinkList />', () => {
     const linkList = shallow(<LinkList margin={ false } />)
 
     it('has a good class', () => {
-      expect(linkList).to.have.className('')
+      expect(linkList).to.have.className('k-LinkList--withoutMargin')
     })
   })
 
