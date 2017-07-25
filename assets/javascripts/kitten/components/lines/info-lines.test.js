@@ -70,7 +70,7 @@ describe('<InfoLines />', () => {
             key: 'Foo',
             value: 'Bar',
             className:'custom__class',
-            'aria-hidden': true
+            'aria-hidden': true,
           },
         ]
       } />
