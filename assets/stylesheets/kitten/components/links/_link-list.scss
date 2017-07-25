@@ -30,7 +30,6 @@
     text-align: left;
     list-style-type: none;
     padding: 0;
-    margin: 0;
   }
 
   .k-LinkList__item {
@@ -55,5 +54,10 @@
     }
 
     transition: color .2s;
+  }
+
+  .k-LinkList--withoutMargin {
+    margin-top: 0;
+    margin-bottom: 0;
   }
 }
