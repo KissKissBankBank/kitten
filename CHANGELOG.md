@@ -7,6 +7,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: `LinkList` responsive.
 - Feature: Add new modifier `k-LinkList--withoutMargin` in `LinkList`.
 - Feature: Add `withoutPointerEvents` prop to `Label` component.
+- Breaking change: Remove deprecated `text` prop on `Checkbox`.
+  Use the `children` prop instead.
 - Feature: Add `Loader` and `LoaderWithParagraph` components.
 - Feature: Add `icon` and `iconWithMinWidth` props to `Button` component.
 - Feature: Add social button icon components (`FacebookButtonIcon`, …).
