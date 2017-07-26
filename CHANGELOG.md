@@ -5,7 +5,37 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Breaking change: Add generic keys for fonts.
-  In App, update your configuration with new keys and use `map-merge`.
+  For CSS mixins with configuration maps, replace `font` with the new key.
+  Replace your previous `$k-fonts:` definition by:
+
+```css
+$k-fonts: map-merge($k-fonts, (
+  light: (
+    family: ("Source Sans Pro", Helvetica, Arial, sans-serif),
+    weight: 300
+  ),
+  regular: (
+    family: ("Source Sans Pro", Helvetica, Arial, sans-serif),
+    weight: 400
+  ),
+  bold: (
+    family: ("Source Sans Pro", Helvetica, Arial, sans-serif),
+    weight: 600
+  ),
+  regular-uppercase: (
+    family: ("Source Sans Pro", Helvetica, Arial, sans-serif),
+    weight: 400,
+    transform: uppercase
+  ),
+  bold-uppercase: (
+    family: ("Source Sans Pro", Helvetica, Arial, sans-serif),
+    weight: 600,
+    letter-spacing: .1rem,
+    transform: uppercase
+  ),
+));
+```
+
 - Feature: Add new modifier `k-LinkList--withoutMargin` in `LinkList`.
 - Feature: Add `withoutPointerEvents` prop to `Label` component.
 - Feature: Add `Loader` and `LoaderWithParagraph` components.
