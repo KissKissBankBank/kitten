@@ -53,11 +53,11 @@ describe('<InfoLines />', () => {
     })
   })
 
-  describe('with borderColorPrimary4 prop', () => {
-    const infoLines = shallow(<InfoLines borderColorPrimary4 />)
+  describe('with borderColor prop', () => {
+    const infoLines = shallow(<InfoLines borderColor="red" />)
 
-    it('has a good class', () => {
-      expect(infoLines).to.have.className('k-InfoLines--borderColorPrimary4')
+    it('has a red border color', () => {
+      expect(infoLines).to.have.style('border-color', 'red')
     })
   })
 

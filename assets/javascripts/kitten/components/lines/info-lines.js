@@ -13,15 +13,24 @@ export class InfoLines extends Component {
   }
 
   renderInfo(element) {
-    const { key, value, id, className, ...others } = element
+    const { key, value, id, className, style, ...others } = element
 
     const infoClassName = classNames(
       'k-InfoLines__line',
       className,
     )
 
+    const infoStyle = {
+      ...style,
+      borderColor: this.props.borderColor,
+    }
+
     return (
-      <div key={ id } className={ infoClassName } { ...others }>
+      <div
+        { ...others }
+        key={ id }
+        className={ infoClassName }
+        style={ infoStyle }>
         <div className="k-InfoLines__line__key">
           { key }
         </div>
@@ -38,7 +47,8 @@ export class InfoLines extends Component {
       infos,
       className,
       withoutTopBottomBorder,
-      borderColorPrimary4,
+      borderColor,
+      style,
       ...others,
     } = this.props
 
@@ -46,13 +56,20 @@ export class InfoLines extends Component {
       'k-InfoLines',
       {
         'k-InfoLines--withoutTopBottomBorder': withoutTopBottomBorder,
-        'k-InfoLines--borderColorPrimary4': borderColorPrimary4,
       },
       className,
     )
 
+    const infoLinesStyle = {
+      ...style,
+      borderColor: borderColor,
+    }
+
     return (
-      <div className={ infoLinesClassName } { ...others }>
+      <div
+        { ...others }
+        className={ infoLinesClassName }
+        style={ infoLinesStyle }>
         { this.renderInfos() }
       </div>
     )
@@ -63,5 +80,5 @@ InfoLines.defaultProps = {
   className: null,
   infos: [], // Eg: [{ key: …, value: …, id: … }]
   withoutTopBottomBorder: false,
-  borderColorPrimary4: false,
+  borderColor: null,
 }
