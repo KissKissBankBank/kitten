@@ -29,7 +29,7 @@
     max-width: k-px-to-rem(140px);
     margin-left: k-px-to-rem(10px);
 
-    @include k-typographyFont('source-sans-light');
+    @include k-typographyFont('light');
     @include k-typographyFontSize(-1, normal);
     text-overflow: ellipsis;
     white-space: nowrap;

@@ -54,6 +54,31 @@ $susy: (
 // Fonts
 
 $k-fonts: (
+  light: (
+    family: ("Source Sans Pro", Helvetica, Arial, sans-serif),
+    weight: 300
+  ),
+  regular: (
+    family: ("Source Sans Pro", Helvetica, Arial, sans-serif),
+    weight: 400
+  ),
+  bold: (
+    family: ("Source Sans Pro", Helvetica, Arial, sans-serif),
+    weight: 600
+  ),
+  regular-uppercase: (
+    family: ("Source Sans Pro", Helvetica, Arial, sans-serif),
+    weight: 400,
+    transform: uppercase
+  ),
+  bold-uppercase: (
+    family: ("Source Sans Pro", Helvetica, Arial, sans-serif),
+    weight: 600,
+    letter-spacing: .1rem,
+    transform: uppercase
+  ),
+
+  // DEPRECATED.
   source-sans-light: (
     family: ("Source Sans Pro", Helvetica, Arial, sans-serif),
     weight: 300
@@ -77,6 +102,7 @@ $k-fonts: (
     letter-spacing: .1rem,
     transform: uppercase
   ),
+
   dosis: (
     family: ("Dosis", Helvetica, Arial, sans-serif),
     weight: 400

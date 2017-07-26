@@ -22,7 +22,7 @@
     text-align: center;
 
     @include k-typographyFontSize(0);
-    @include k-typographyFont('source-sans-light');
+    @include k-typographyFont('light');
 
     @include k-media-xs {
       border-left: none;

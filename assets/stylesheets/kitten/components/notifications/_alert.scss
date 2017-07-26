@@ -19,8 +19,8 @@
 ///   </div>
 
 @mixin k-Alert {
-  $font: 'source-sans';
-  $font-bold: 'source-sans-semi-bold';
+  $font: 'regular';
+  $font-bold: 'bold';
   $font-step: -1;
 
   $color: map-get($k-colors, 'primary-1');
@@ -73,7 +73,7 @@
   }
 
   .k-Alert__strong {
-    @include k-typographyFont('source-sans-semi-bold');
+    @include k-typographyFont('bold');
   }
 
   .k-Alert__link,

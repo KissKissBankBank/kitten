@@ -13,7 +13,7 @@
 ///   </span>
 
 @mixin k-IconBadge {
-  $font: 'source-sans';
+  $font: 'regular';
   $font-step: -2; // 12px.
   $color: map-get($k-colors, 'background-1');
   $background-color: map-get($k-colors, 'primary-1');

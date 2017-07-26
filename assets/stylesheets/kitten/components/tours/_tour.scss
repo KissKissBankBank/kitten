@@ -92,7 +92,7 @@
   }
 
   .k-Tour__popover__content {
-    @include k-typographyFont('source-sans-light');
+    @include k-typographyFont('light');
 
     display: flex;
     flex-direction: column;
@@ -103,7 +103,7 @@
   }
 
   .k-Tour__popover__title {
-    @include k-typographyFont('source-sans-semi-bold');
+    @include k-typographyFont('bold');
     @include k-typographyFontSize(2);
 
     margin-top: 0;
@@ -111,7 +111,7 @@
   }
 
   .k-Tour__popover__text {
-    @include k-typographyFont('source-sans-light');
+    @include k-typographyFont('light');
     @include k-typographyFontSize(0);
 
     margin: 1em 0;
@@ -129,7 +129,7 @@
   }
 
   .k-Tour__popover__numbering {
-    @include k-typographyFont('source-sans-semi-bold');
+    @include k-typographyFont('bold');
     @include k-typographyFontSize(-1);
 
     margin: 0;

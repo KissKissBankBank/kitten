@@ -12,6 +12,6 @@
 
 @mixin k-utilities-weight {
   .k-u-strong {
-    @include k-typographyFont('source-sans-semi-bold');
+    @include k-typographyFont('bold');
   }
 }

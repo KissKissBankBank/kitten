@@ -31,7 +31,7 @@
   outline: 0;
 
   @include k-typographyFontSize(-2, 2);
-  @include k-typographyFont('source-sans-semi-bold-uppercase');
+  @include k-typographyFont('bold-uppercase');
 }
 
 .karl-Dropdown--default__item {

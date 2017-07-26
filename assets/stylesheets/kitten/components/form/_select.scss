@@ -34,8 +34,8 @@
     select-input-height: k-px-to-rem(40px),
   ));
 
-  $font: 'source-sans';
-  $bold: 'source-sans-semi-bold';
+  $font: 'regular';
+  $bold: 'bold';
 
   .k-Select {
     @include k-typographyFont($font);

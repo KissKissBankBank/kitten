@@ -26,7 +26,7 @@
     margin-top: 0;
     margin-bottom: k-px-to-rem(30px);
 
-    @include k-typographyFont('source-sans-light');
+    @include k-typographyFont('light');
     @include k-typographyFontSize(4, 1.5);
   }
 
@@ -61,7 +61,7 @@
     padding: 0;
     border: 0;
 
-    @include k-typographyFont('source-sans-light');
+    @include k-typographyFont('light');
     @include k-typographyFontSize;
     font-style: italic;
 

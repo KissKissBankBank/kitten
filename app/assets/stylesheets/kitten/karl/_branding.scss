@@ -22,14 +22,14 @@ $card-size: k-px-to-rem(48px);
 }
 
 .karl-Colors__cardDescription {
-  @include k-typographyFont('source-sans');
+  @include k-typographyFont('regular');
 
   margin-left: k-px-to-rem(10px);
   color: map-get($k-colors, 'font-1');
 }
 
 .karl-Colors__cardColorName {
-  @include k-typographyFont('source-sans-semi-bold');
+  @include k-typographyFont('bold');
   @include k-typographyFontSize(1);
 
   margin: 0;

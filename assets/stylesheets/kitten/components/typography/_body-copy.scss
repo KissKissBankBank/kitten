@@ -25,7 +25,7 @@
 ///   );
 ///
 ///   $k-fonts: (
-///     source-sans: (
+///     regular: (
 ///       family: (lato, sans-serif),
 ///       weight: 400,
 ///     )
@@ -51,7 +51,7 @@
 ///     ...;
 ///   }
 @mixin k-TypographyBodyCopy {
-  $font: 'source-sans';
+  $font: 'regular';
   $color: map-get($k-colors, 'font-1');
 
   // The root font size applied to the HTML document.
