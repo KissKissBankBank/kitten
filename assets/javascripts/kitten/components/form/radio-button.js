@@ -13,7 +13,7 @@ export class RadioButton extends React.Component {
       { 'k-RadioButton__labelContents--large': largeContent }
     )
     return (
-      <div className={ labelContentsClassNames }>{ content }</div>
+      <div className={ labelContentsClassNames }>{ children }</div>
     )
   }
 

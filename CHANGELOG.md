@@ -11,6 +11,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Add `icon` and `iconWithMinWidth` props to `Button` component.
 - Feature: Add social button icon components (`FacebookButtonIcon`, …).
 - Breaking change: Remove deprecated `content` prop from `RadioButton`.
+  Prefer the `children` prop.
 - Feature: Add border utilities (`k-u-border-left-line1`, …).
 - Feature: Add new `ProjectSimilarCard` component.
 - Feature: Add new `RefreshIcon` component.
