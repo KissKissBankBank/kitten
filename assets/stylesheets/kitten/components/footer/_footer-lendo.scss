@@ -3,6 +3,14 @@
     box-sizing: border-box;
   }
 
+  .k-FooterLendo__text {
+    text-align: center;
+
+    @include k-media-min('l') {
+      text-align: left;
+    }
+  }
+
   .k-FooterLendo__network {
 
     @include k-media-max('s') {
@@ -10,27 +18,66 @@
     }
   }
 
-  .k-FooterLendo__network--follow {
-    text-align: center;
-
-    @include k-media-min('l') {
-      text-align: right;
-    }
-  }
-
   .k-FooterLendo__buttonIcon {
     margin-right: k-px-to-rem(10px);
   }
 
-  .k-FooterLendo__logo {
-    width: 110px;
-  }
-
   .k-FooterLendo__notice--copyright {
     text-align: center;
+    margin-top: k-px-to-rem(30px);
 
     @include k-media-min('l') {
       text-align: right;
+      align-self: flex-end;
+      margin-top: 0;
     }
   }
+
+  .k-FooterLendo__notice__logos--list--item {
+    align-self: flex-end;
+
+    @include k-media-max('s') {
+      margin-top: k-px-to-rem(30px);
+    }
+  }
+
+  .k-FooterLendo__notice__logo,
+  .k-FooterLendo__network__input {
+    @include k-media-min('l') {
+      display: flex;
+      text-align: left;
+    }
+  }
+
+  .k-FooterLendo__logo--img {
+    text-align: center;
+    margin-bottom: k-px-to-rem(10px);
+
+    > img,
+    > svg {
+      vertical-align: middle;
+    }
+
+
+    @include k-media-min('l') {
+      > img,
+      > svg {
+        display: block;
+        vertical-align: top;
+      }
+
+      line-height: 4rem;
+      margin-bottom: 0;
+      margin-right: 1rem;
+    }
+  }
+
+  .k-FooterLendo__logo--imgLendo {
+    margin-bottom: k-px-to-rem(30px);
+  }
+
+  .k-FooterLendo__logo--imgMangopay {
+    width: 100px;
+  }
 }
+
