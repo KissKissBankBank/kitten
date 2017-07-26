@@ -13,6 +13,24 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Add border utilities (`k-u-border-left-line1`, …).
 - Feature: Add new `ProjectSimilarCard` component.
 - Feature: Add new `RefreshIcon` component.
+- Breaking change: Replace the deprecated `commissionRate` prop by a list of
+  `commissionRules`. To upgrade you should replace for example:
+
+      function commissionRate(duration) {
+        if (duration >= 20) return 0.2
+        if (duration >= 12) return 0.3
+        return 0.1
+      }
+      <LoanSimulator commissionRate={ commissionRate } />
+
+  By:
+
+      const commissionRules = [
+        { durationMax: 12, rate: 0.3 },
+        { durationMax: 20, rate: 0.2 },
+        { rate: 0.1 }
+      ]
+      <LoanSimulator commissionRules={ commissionRules } />
 
 ## [13.4.0] - 2017-07-20
 
