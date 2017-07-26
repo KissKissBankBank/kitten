@@ -18,10 +18,10 @@
 
 @mixin k-Paragraph {
   // Font
-  $font: 'source-sans-light';
+  $font: 'light';
 
   // Link
-  $link-font: 'source-sans';
+  $link-font: 'regular';
   $link-color: map-get($k-colors, 'primary-1');
   $link-hover-color: map-get($k-colors, 'primary-2');
   $link-active-color: map-get($k-colors, 'primary-3');
