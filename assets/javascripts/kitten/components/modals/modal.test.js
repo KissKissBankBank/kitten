@@ -22,7 +22,7 @@ describe('<Modal />', () => {
 
     it('contains the content', () => {
       expect(component).to.have.className('content-example')
-      expect(component).to.have.className('k-ModalTrigger')
+      expect(component).to.have.className('k-Modal')
     })
   })
 })
