@@ -38,12 +38,16 @@ export class LinkList extends Component {
   render() {
     const {
       className,
+      margin,
       ...others,
     } = this.props
 
     const listClassName = classNames(
       'k-LinkList',
       className,
+      {
+        'k-LinkList--withoutMargin': !margin,
+      }
     )
 
     return (
@@ -56,5 +60,6 @@ export class LinkList extends Component {
 
 LinkList.defaultProps = {
   className: null,
+  margin: true,
   items: [], // Eg: [{ key: …, item: …, href: … }]
 }

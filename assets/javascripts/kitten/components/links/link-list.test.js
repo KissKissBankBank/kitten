@@ -40,6 +40,14 @@ describe('<LinkList />', () => {
     })
   })
 
+  describe('with margin prop', () => {
+    const linkList = shallow(<LinkList margin={ false } />)
+
+    it('has a good class', () => {
+      expect(linkList).to.have.className('k-LinkList--withoutMargin')
+    })
+  })
+
   describe('with item', () => {
     const linkList = shallow(<LinkList items={ items } />)
 
