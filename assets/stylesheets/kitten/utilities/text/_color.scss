@@ -11,6 +11,10 @@
 ///   <span class="k-u-color-primary1">…</span>
 
 @mixin k-utilities-color {
+  .k-u-color-font1 {
+    color: map-get($k-colors, 'font-1');
+  }
+
   .k-u-color-primary1 {
     color: map-get($k-colors, 'primary-1');
   }

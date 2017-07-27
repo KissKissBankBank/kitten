@@ -11,6 +11,15 @@
 ///     <p class="k-u-strong">…</p>
 
 @mixin k-utilities-weight {
+  .k-u-weight-light {
+    @include k-typographyFont('source-sans-light');
+  }
+
+  .k-u-weight-regular {
+    @include k-typographyFont('source-sans');
+  }
+
+  .k-u-weight-bold,
   .k-u-strong {
     @include k-typographyFont('source-sans-semi-bold');
   }
