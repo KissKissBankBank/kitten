@@ -114,6 +114,7 @@ module Kitten
             { path: 'components/notifications/alert', name: 'Alert' },
             { path: 'components/notifications/badge', name: 'Badge' },
             { path: 'components/notifications/icon-badge', name: 'Icon badge' },
+            { path: 'components/modals/modal', name: 'Modal' },
             { path: 'components/tours/tour', name: 'Tour', hidden_on_s: true },
           ],
         },
