@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `KarlModal` example.
 - Feature: Add `InfoLines` examples with new modifiers
   (`withoutTopBottomBorder`, `borderColor`).
 - Feature: Add new `KarlProjectSimilarCard` and `KarlProjectSimilarCardInfos`

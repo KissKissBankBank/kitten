@@ -67,6 +67,12 @@
     margin-bottom: k-px-to-rem(10px);
   }
 
+  .k-u-margin-bottom-single\@s-down {
+    @include k-media-max('s') {
+      margin-bottom: k-px-to-rem(10px);
+    }
+  }
+
   .k-u-margin-bottom-double {
     margin-bottom: k-px-to-rem(20px);
   }

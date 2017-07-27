@@ -7,6 +7,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Add `Text` component.
 - Feature: Add `align`, `color`, `decoration`, `line-height`, `size`, `style`,   
   `transform` and `weight` utilities.
+- Feature: Accept other props to `GridCol` component.
+- Feature: Add `Modal` component.
 - Feature: Add `withoutTopBottomBorder`, `borderColor` and other props
   to `InfoLines` component.
 - Feature: `LinkList` responsive.
