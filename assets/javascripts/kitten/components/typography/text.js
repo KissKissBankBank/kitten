@@ -82,7 +82,7 @@ Text.propTypes = {
 }
 
 Text.defaultProps = {
-  children: 'Lorem ipsum…',
+  children: null,
   tag: 'p',
   className: null,
   weight: null,
