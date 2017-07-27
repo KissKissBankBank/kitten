@@ -7,6 +7,7 @@ export class Text extends Component {
       tag,
       weight,
       size,
+      lineHeight,
       color,
       style,
       align,
@@ -33,6 +34,9 @@ export class Text extends Component {
         'k-u-size-tiny': size == 'tiny',
         'k-u-size-micro': size == 'micro',
         'k-u-size-nano': size == 'nano',
+
+        // Line height.
+        'k-u-line-height-normal': lineHeight == 'normal',
 
         // Color.
         'k-u-color-font1': color == 'font1',
@@ -75,6 +79,7 @@ Text.defaultProps = {
   className: null,
   weight: null, // Available options: 'light', 'regular', 'bold'.
   size: null, // Available options: 'huge', 'big', 'default', 'tiny', 'micro', 'nano'.
+  lineHeight: null, // Available options: 'normal'.
   color: null, // Available options: 'font1', 'primary1', 'error'.
   style: null,  // Available options: 'normal', 'italic'.
   align: null, // Available options: 'left', 'center', 'right'.
