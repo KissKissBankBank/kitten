@@ -17,44 +17,53 @@ import { Line } from 'kitten/components/layout/line'
 export class KarlFooterLendo extends Component {
   renderNetwork() {
     return (
-      <div className="k-FooterLendo__network">
-        <Row
-          lightTopBorder>
-          <Marger top="3" bottom="3">
-            <Grid>
-              <GridCol>
-                <Grid>
-                  <GridCol col-l="6">
-                    <div className="k-FooterLendo__network__input">
+      <Row
+        lightTopBorder>
+        <Marger top="3" bottom="3">
+          <Grid>
+            <GridCol>
+              <Grid>
+                <GridCol col-m="6" col-l="7">
+                  <Grid>
+                    <GridCol col-m="12" col-l="5">
                       <Paragraph
                         className="k-FooterLendo__text"
                         modifier="tertiary"
                         margin={ false }>
-                        Inscrivez-vous à notre Newsletter et à l'alerte nouveau projet
+                        Inscrivez-vous à notre Newsletter
+                        <span className="k-FooterLendo__network--textNone">
+                          et à l'alerte nouveau projet
+                        </span>
                       </Paragraph>
+                    </GridCol>
+                    <GridCol col-m="12" col-l="7" className="k-FooterLendo__network--list">
                       <TextInputWithButton />
-                    </div>
-                  </GridCol>
+                    </GridCol>
+                  </Grid>
+                </GridCol>
 
-                  <GridCol col-l="2" offset-l="2">
-                    <Paragraph
-                      modifier="tertiary"
-                      margin={ false }
-                      className="k-FooterLendo__text">
-                      Suivez nous
-                    </Paragraph>
-                  </GridCol>
-                  <GridCol col-l="2">
-                    <FacebookButtonIcon className="k-FooterLendo__buttonIcon" />
-                    <TwitterButtonIcon className="k-FooterLendo__buttonIcon" />
-                    <LinkedinButtonIcon />
-                  </GridCol>
-                </Grid>
-              </GridCol>
-            </Grid>
-          </Marger>
-        </Row>
-      </div>
+                <GridCol col-m="6" col-l="5" className="k-FooterLendo__network--marger">
+                  <Grid>
+                    <GridCol col-l="4" offset-l="3" className="k-FooterLendo__network--follow">
+                      <Paragraph
+                        modifier="tertiary"
+                        margin={ false }
+                        className="k-FooterLendo__text k-FooterLendo__network--followText">
+                        Suivez nous
+                      </Paragraph>
+                    </GridCol>
+                    <GridCol col-l="5" className="k-u-align-center k-FooterLendo__network--list">
+                      <FacebookButtonIcon className="k-FooterLendo__buttonIcon" />
+                      <TwitterButtonIcon className="k-FooterLendo__buttonIcon" />
+                      <LinkedinButtonIcon />
+                    </GridCol>
+                  </Grid>
+                </GridCol>
+              </Grid>
+            </GridCol>
+          </Grid>
+        </Marger>
+      </Row>
     )
   }
 

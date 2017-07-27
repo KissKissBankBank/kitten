@@ -11,11 +11,31 @@
     }
   }
 
-  .k-FooterLendo__network {
-
+  .k-FooterLendo__network--marger {
     @include k-media-max('s') {
-      text-align: center;
+      margin-top: k-px-to-rem(30px);
     }
+  }
+
+  .k-FooterLendo__network--followText {
+    @include k-media-min('l') {
+      text-align: right;
+    }
+  }
+
+  .k-FooterLendo__network--textNone {
+    @include k-media-max('m') {
+      display: none;
+    }
+  }
+  .k-FooterLendo__network--list {
+    @include k-media-max('m') {
+      margin-top: k-px-to-rem(10px);
+    }
+  }
+
+  .k-FooterLendo__network--follow {
+    align-self: center;
   }
 
   .k-FooterLendo__buttonIcon {
@@ -41,8 +61,7 @@
     }
   }
 
-  .k-FooterLendo__notice__logo,
-  .k-FooterLendo__network__input {
+  .k-FooterLendo__notice__logo {
     @include k-media-min('l') {
       display: flex;
       text-align: left;
