@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Accept other props to `GridCol` component.
+- Feature: Add `Modal` component.
 - Feature: Add `withoutTopBottomBorder`, `borderColor` and other props
   to `InfoLines` component.
 - Feature: `LinkList` responsive.
