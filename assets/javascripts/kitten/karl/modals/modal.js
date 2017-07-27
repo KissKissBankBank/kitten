@@ -22,7 +22,7 @@ const KarlModalComponent = () => (
     <Grid>
       <GridCol col="12" col-m="6">
         <Button
-          className="k-Modal__button--button"
+          className="k-u-margin-bottom-single@s-down"
           modifier="hydrogen"
           size="big">
           Action 1 Button

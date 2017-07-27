@@ -47,12 +47,6 @@
     right: k-px-to-rem(10px);
   }
 
-  .k-Modal__button--button {
-    @include k-media-max('s') {
-      margin-bottom: k-px-to-rem(10px);
-    }
-  }
-
   .k-Modal__overlay {
     position: fixed;
     z-index: map-get($options, 'z-index');
@@ -65,7 +59,7 @@
     justify-content: center;
     align-items: center;
 
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, .5);
   }
 
   // Removes scroll from body

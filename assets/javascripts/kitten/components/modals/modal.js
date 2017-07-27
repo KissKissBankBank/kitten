@@ -44,14 +44,14 @@ export class Modal extends Component {
     } = this.props
 
     const triggerClassNames = classNames(
-      'k-ModalTrigger',
+      'k-Modal',
       className,
     )
 
     return (
       <div className={ triggerClassNames } { ...others }>
         <span
-          className="k-ModalTrigger__trigger"
+          className="k-Modal__trigger"
           onClick={ this.handleOpenModal }>
           { trigger }
         </span>
