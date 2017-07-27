@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import classNames from 'classnames'
+import PropTypes from 'prop-types'
 
 export class Text extends Component {
   render() {
@@ -69,16 +70,27 @@ export class Text extends Component {
   }
 }
 
+Text.propTypes = {
+  weight: PropTypes.oneOf(['light', 'regular', 'bold']),
+  size: PropTypes.oneOf(['huge', 'big', 'default', 'tiny', 'micro', 'nano']),
+  lineHeight: PropTypes.oneOf(['normal']),
+  color: PropTypes.oneOf(['font1', 'primary1', 'error']),
+  style: PropTypes.oneOf(['normal', 'italic']),
+  align: PropTypes.oneOf(['left', 'center', 'right']),
+  transform: PropTypes.oneOf(['uppercase']),
+  decoration: PropTypes.oneOf(['underline']),
+}
+
 Text.defaultProps = {
   children: 'Lorem ipsum…',
   tag: 'p',
   className: null,
-  weight: null, // Available options: 'light', 'regular', 'bold'.
-  size: null, // Available options: 'huge', 'big', 'default', 'tiny', 'micro', 'nano'.
-  lineHeight: null, // Available options: 'normal'.
-  color: null, // Available options: 'font1', 'primary1', 'error'.
-  style: null,  // Available options: 'normal', 'italic'.
-  align: null, // Available options: 'left', 'center', 'right'.
-  transform: null, // Available options: 'uppercase'.
-  decoration: null, // Available options: 'underline'.
+  weight: null,
+  size: null,
+  lineHeight: null,
+  color: null,
+  style: null,
+  align: null,
+  transform: null,
+  decoration: null,
 }
