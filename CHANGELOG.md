@@ -9,6 +9,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   Replace your previous fonts definition by:
   `$k-fonts: k-merge($k-fonts, ( …your-own-font-definitions-here… );`.
 
+- Feature: Add `withoutTopBottomBorder`, `borderColor` and other props
+  to `InfoLines` component.
 - Feature: `LinkList` responsive.
 - Feature: Add new modifier `k-LinkList--withoutMargin` in `LinkList`.
 - Feature: Add `withoutPointerEvents` prop to `Label` component.
