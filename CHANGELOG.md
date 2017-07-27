@@ -7,6 +7,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Add `Text` component.
 - Feature: Add `align`, `color`, `decoration`, `line-height`, `size`, `style`,   
   `transform` and `weight` utilities.
+- Feature: Add `withoutTopBottomBorder`, `borderColor` and other props
+  to `InfoLines` component.
 - Feature: `LinkList` responsive.
 - Feature: Add new modifier `k-LinkList--withoutMargin` in `LinkList`.
 - Feature: Add `withoutPointerEvents` prop to `Label` component.
