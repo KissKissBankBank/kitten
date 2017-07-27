@@ -54,13 +54,9 @@ export class Text extends Component {
 
         // Transform.
         'k-u-transform-uppercase': transform == 'uppercase',
-        'k-u-transform-lowercase': transform == 'lowercase',
-        'k-u-transform-capitalize': transform == 'capitalize',
 
         // Decoration.
         'k-u-decoration-underline': decoration == 'underline',
-        'k-u-decoration-overline': decoration == 'overline',
-        'k-u-decoration-line-through': decoration == 'line-through',
       },
       className,
     )
@@ -83,6 +79,6 @@ Text.defaultProps = {
   color: null, // Available options: 'font1', 'primary1', 'error'.
   style: null,  // Available options: 'normal', 'italic'.
   align: null, // Available options: 'left', 'center', 'right'.
-  transform: null, // Available options: 'uppercase', 'lowercase', 'capitalize'.
-  decoration: null, // Available options: 'underline', 'overline', 'line-through'.
+  transform: null, // Available options: 'uppercase'.
+  decoration: null, // Available options: 'underline'.
 }

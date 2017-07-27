@@ -8,19 +8,9 @@
 ///
 /// @example html
 ///
-///     <p class="k-u-decoration-overline">…</p>
-///     <p class="k-u-decoration-line-through">…</p>
 ///     <p class="k-u-decoration-underline">…</p>
 
 @mixin k-utilities-decoration {
-  .k-u-decoration-overline {
-    text-decoration: overline;
-  }
-
-  .k-u-decoration-line-through {
-    text-decoration: line-through;
-  }
-
   .k-u-decoration-underline {
     text-decoration: underline;
   }
