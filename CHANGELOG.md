@@ -6,7 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Breaking change: Add generic keys for fonts.
   For CSS mixins with configuration maps, replace `font` with the new key.
-  Replace your previous fonts definition by :
+  Replace your previous fonts definition by:
   `$k-fonts: k-merge($k-fonts, ( …your-own-font-definitions-here… );`.
 
 - Feature: `LinkList` responsive.
