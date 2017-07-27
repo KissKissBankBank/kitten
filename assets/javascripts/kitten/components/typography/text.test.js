@@ -7,16 +7,16 @@ describe('<Text />', () => {
   describe('by default', () => {
     const component = shallow(<Text />)
 
-    it('renders a <p />', () => {
-      expect(component).to.have.tagName('p')
+    it('renders a <span />', () => {
+      expect(component).to.have.tagName('span')
     })
   })
 
   describe('with tag prop', () => {
-    const component = shallow(<Text tag="span" />)
+    const component = shallow(<Text tag="div" />)
 
-    it('renders a <span />', () => {
-      expect(component).to.have.tagName('span')
+    it('renders a <div />', () => {
+      expect(component).to.have.tagName('div')
     })
   })
 

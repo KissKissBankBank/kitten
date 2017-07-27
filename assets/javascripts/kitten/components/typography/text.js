@@ -5,17 +5,16 @@ import PropTypes from 'prop-types'
 export class Text extends Component {
   render() {
     const {
-      tag,
-      weight,
-      size,
-      lineHeight,
-      color,
-      style,
       align,
-      transform,
-      decoration,
       className,
-      children,
+      color,
+      decoration,
+      lineHeight,
+      size,
+      style,
+      tag,
+      transform,
+      weight,
       ...others,
     } = this.props
 
@@ -23,10 +22,21 @@ export class Text extends Component {
 
     const textClassName = classNames(
       {
-        // Weight.
-        'k-u-weight-light': weight == 'light',
-        'k-u-weight-regular': weight == 'regular',
-        'k-u-weight-bold': weight == 'bold',
+        // Align.
+        'k-u-align-left': align == 'left',
+        'k-u-align-center': align == 'center',
+        'k-u-align-right': align == 'right',
+
+        // Color.
+        'k-u-color-font1': color == 'font1',
+        'k-u-color-primary1': color == 'primary1',
+        'k-u-color-error': color == 'error',
+
+        // Decoration.
+        'k-u-decoration-underline': decoration == 'underline',
+
+        // Line height.
+        'k-u-line-height-normal': lineHeight == 'normal',
 
         // Size.
         'k-u-size-huge': size == 'huge',
@@ -36,61 +46,47 @@ export class Text extends Component {
         'k-u-size-micro': size == 'micro',
         'k-u-size-nano': size == 'nano',
 
-        // Line height.
-        'k-u-line-height-normal': lineHeight == 'normal',
-
-        // Color.
-        'k-u-color-font1': color == 'font1',
-        'k-u-color-primary1': color == 'primary1',
-        'k-u-color-error': color == 'error',
-
         // Style.
         'k-u-style-normal': style == 'normal',
         'k-u-style-italic': style == 'italic',
 
-        // Align.
-        'k-u-align-left': align == 'left',
-        'k-u-align-center': align == 'center',
-        'k-u-align-right': align == 'right',
-
         // Transform.
         'k-u-transform-uppercase': transform == 'uppercase',
 
-        // Decoration.
-        'k-u-decoration-underline': decoration == 'underline',
+        // Weight.
+        'k-u-weight-light': weight == 'light',
+        'k-u-weight-regular': weight == 'regular',
+        'k-u-weight-bold': weight == 'bold',
       },
       className,
     )
 
     return (
-      <Tag { ...others } className={ textClassName }>
-        { children }
-      </Tag>
+      <Tag { ...others } className={ textClassName } />
     )
   }
 }
 
 Text.propTypes = {
-  weight: PropTypes.oneOf(['light', 'regular', 'bold']),
-  size: PropTypes.oneOf(['huge', 'big', 'default', 'tiny', 'micro', 'nano']),
-  lineHeight: PropTypes.oneOf(['normal']),
-  color: PropTypes.oneOf(['font1', 'primary1', 'error']),
-  style: PropTypes.oneOf(['normal', 'italic']),
   align: PropTypes.oneOf(['left', 'center', 'right']),
-  transform: PropTypes.oneOf(['uppercase']),
+  color: PropTypes.oneOf(['font1', 'primary1', 'error']),
   decoration: PropTypes.oneOf(['underline']),
+  lineHeight: PropTypes.oneOf(['normal']),
+  size: PropTypes.oneOf(['huge', 'big', 'default', 'tiny', 'micro', 'nano']),
+  style: PropTypes.oneOf(['normal', 'italic']),
+  transform: PropTypes.oneOf(['uppercase']),
+  weight: PropTypes.oneOf(['light', 'regular', 'bold']),
 }
 
 Text.defaultProps = {
-  children: null,
-  tag: 'p',
-  className: null,
-  weight: null,
-  size: null,
-  lineHeight: null,
-  color: null,
-  style: null,
   align: null,
-  transform: null,
+  className: null,
+  color: null,
   decoration: null,
+  lineHeight: null,
+  size: null,
+  style: null,
+  tag: 'span',
+  transform: null,
+  weight: null,
 }

@@ -19,8 +19,8 @@
     @include k-typographyFont('source-sans');
   }
 
-  .k-u-weight-bold,
-  .k-u-strong {
+  .k-u-strong,
+  .k-u-weight-bold {
     @include k-typographyFont('source-sans-semi-bold');
   }
 }
