@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `KarlProjectSimilarLoader` example.
+
 ## [13.5.0] - 2017-07-28
 
 Feature:
