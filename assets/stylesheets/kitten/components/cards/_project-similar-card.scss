@@ -94,4 +94,8 @@
     @include k-typographyFont($boldFont);
     @include k-typographyFontSize(0, normal);
   }
+
+  .k-ProjectSimilarCard__loading {
+    justify-content: center;
+  }
 }

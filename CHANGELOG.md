@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `Loader` on `ProjectSimilarCard` component.
 - Feature: Accept other props to `GridCol` component.
 - Feature: Add `Modal` component.
 - Feature: Add `withoutTopBottomBorder`, `borderColor` and other props

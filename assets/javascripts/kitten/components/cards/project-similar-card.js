@@ -201,7 +201,7 @@ class ProjectSimilarCardComponent extends Component {
     return (
       <Marger top="9" bottom="9">
         <div className="k-ProjectSimilarCard__grid">
-          <Loader />
+          <Loader className="k-ProjectSimilarCard__loading" />
         </div>
       </Marger>
     )
@@ -224,7 +224,7 @@ class ProjectSimilarCardComponent extends Component {
         { this.renderImage() }
         { this.renderDescription() }
         { this.renderInfos() }
-
+        { this.renderLoader() }
       </div>
     )
   }
