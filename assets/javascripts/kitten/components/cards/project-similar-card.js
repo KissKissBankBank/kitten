@@ -17,6 +17,28 @@ class ProjectSimilarCardComponent extends Component {
     super()
 
     this.renderInfo = this.renderInfo.bind(this)
+    this.handleLeftArrowClick = this.handleLeftArrowClick.bind(this)
+    this.handleRightArrowClick = this.handleRightArrowClick.bind(this)
+
+    this.state = {
+      currentIndex: 0,
+    }
+  }
+
+  handleLeftArrowClick() {
+    const newCurrentIndex = this.state.currentIndex - 1
+
+    this.goTo(newCurrentIndex)
+  }
+
+  handleRightArrowClick() {
+    const newCurrentIndex = this.state.currentIndex + 1
+
+    this.goTo(newCurrentIndex)
+  }
+
+  goTo(index) {
+    this.setState({ currentIndex: index })
   }
 
   renderRefresh() {
@@ -36,11 +58,44 @@ class ProjectSimilarCardComponent extends Component {
     )
   }
 
-  renderHeader() {
-    const {
-      step,
-    } = this.props
+  renderRightArrow() {
+    const disabled = this.state.currentIndex == this.props.projects.length
 
+    return(
+      <ButtonIcon
+        size="tiny"
+        disabled={ disabled }
+        onClick={ this.handleRightArrowClick }
+        verticalArrow>
+        <RightArrowIcon className="k-ButtonIcon__svg" />
+      </ButtonIcon>
+    )
+  }
+
+  renderLeftArrow() {
+    const disabled = this.state.currentIndex == 0
+
+    return(
+      <ButtonIcon
+        size="tiny"
+        disabled={ disabled }
+        onClick={ this.handleLeftArrowClick }
+        verticalArrow>
+        <RightArrowIcon
+          className={ classNames('k-ButtonIcon__svg',
+                                 'k-ButtonIcon__svg--mirror') } />
+      </ButtonIcon>
+    )
+  }
+  renderStep() {
+    const { projects } = this.props
+
+    if (projects.length == 0) return
+
+    return `${this.state.currentIndex + 1 }/${ projects.length }`
+  }
+
+  renderHeader() {
     return (
       <div className="k-ProjectSimilarCard__grid">
         <Marger top="1" bottom="1">
@@ -48,21 +103,11 @@ class ProjectSimilarCardComponent extends Component {
             { this.renderRefresh() }
             <div className="k-ProjectSimilarCard__navigation">
               <div className="k-ProjectSimilarCard__header--step">
-                { step }
+                { this.renderStep() }
               </div>
               <div className="k-ProjectSimilarCard__header--button">
-                <ButtonIcon
-                  size="tiny"
-                  verticalArrow>
-                  <RightArrowIcon
-                    className={ classNames('k-ButtonIcon__svg',
-                                           'k-ButtonIcon__svg--mirror') } />
-                </ButtonIcon>
-                <ButtonIcon
-                  size="tiny"
-                  verticalArrow>
-                  <RightArrowIcon className="k-ButtonIcon__svg" />
-                </ButtonIcon>
+                { this.renderLeftArrow() }
+                { this.renderRightArrow() }
               </div>
             </div>
           </div>
@@ -71,10 +116,10 @@ class ProjectSimilarCardComponent extends Component {
     )
   }
 
-  renderImage() {
+  renderImage(projectProps) {
     const {
       imageSrc,
-    } = this.props
+    } = projectProps
 
     if (!imageSrc) return
 
@@ -90,11 +135,13 @@ class ProjectSimilarCardComponent extends Component {
     )
   }
 
-  renderTitle() {
+  renderTitle(projectProps) {
     const {
       title,
       imageSrc,
-    } = this.props
+    } = projectProps
+
+    if (!title) return
 
     const top = imageSrc ? 1 : 2
 
@@ -110,30 +157,32 @@ class ProjectSimilarCardComponent extends Component {
     )
   }
 
-  renderDescription() {
+  renderDescription(projectProps) {
     const {
-      paragraph,
-    } = this.props
+      description,
+    } = projectProps
+
+    if (!description) return
 
     return(
       <div className="k-ProjectSimilarCard__grid">
-        { this.renderTitle() }
-        { this.renderTags() }
+        { this.renderTitle(projectProps) }
+        { this.renderTags(projectProps) }
         <Marger top="1" bottom="2">
           <Paragraph
             modifier="tertiary"
             margin={ false }>
-            { paragraph }
+            { description }
           </Paragraph>
         </Marger>
       </div>
     )
   }
 
-  renderTags() {
+  renderTags(projectProps) {
     const {
       tags,
-    } = this.props
+    } = projectProps
 
     if (!tags) return
 
@@ -146,10 +195,10 @@ class ProjectSimilarCardComponent extends Component {
     )
   }
 
-  renderInfos() {
+  renderInfos(projectProps) {
     const {
       infos,
-    } = this.props
+    } = projectProps
 
     if (!infos) return
 
@@ -226,6 +275,8 @@ class ProjectSimilarCardComponent extends Component {
       className,
     )
 
+    const currentProjectProps = this.props.projects[this.state.currentIndex]
+
     return (
       <div className={ ProjectSimilarCardClassName }>
         { this.renderHeader() }
@@ -238,12 +289,15 @@ class ProjectSimilarCardComponent extends Component {
 }
 
 ProjectSimilarCardComponent.defaultProps = {
-  step: "",
-  imageSrc: null,
-  title: "",
-  paragraph: "",
-  tags: null, // Eg: [{ key: …, item: … }]
-  infos: false, // Eg: [{ key: …, text: …, value: …, locked: … }]
+  projects: [
+    {
+      imageSrc: null,
+      title: "",
+      description: "",
+      tags: null, // Eg: [{ key: …, item: … }]
+      infos: false, // Eg: [{ key: …, text: …, value: …, locked: … }]
+    },
+  ],
   coloredInfosValues: false,
   refresh: "Refresh",
   onRefreshClick: () => {},
