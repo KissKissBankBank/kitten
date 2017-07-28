@@ -129,6 +129,7 @@ describe('<ProjectSimilarCard />', () => {
     const loader = projectSimilarCard.find('.k-ProjectSimilarCard__loading')
 
     it('render <Loader />', () => {
+      expect(projectSimilarCard).to.have.descendants(Loader)
       expect(loader).to.have.length(1)
     })
   })

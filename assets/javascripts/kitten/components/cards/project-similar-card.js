@@ -77,7 +77,7 @@ class ProjectSimilarCardComponent extends Component {
       loading,
     } = this.props
 
-    if (!imageSrc || loading) return
+    if (!imageSrc) return
 
     return (
       <Marger top="2" bottom="1">
@@ -117,8 +117,6 @@ class ProjectSimilarCardComponent extends Component {
       loading,
     } = this.props
 
-    if (loading) return
-
     return(
       <div className="k-ProjectSimilarCard__grid">
         { this.renderTitle() }
@@ -156,7 +154,7 @@ class ProjectSimilarCardComponent extends Component {
       loading,
     } = this.props
 
-    if (!infos || loading) return
+    if (!infos) return
 
     return (
       <div>
@@ -196,7 +194,7 @@ class ProjectSimilarCardComponent extends Component {
       loading,
     } = this.props
 
-    if(!loading) return
+    if (!loading) return
 
     return (
       <Marger top="9" bottom="9">
@@ -205,6 +203,20 @@ class ProjectSimilarCardComponent extends Component {
         </div>
       </Marger>
     )
+  }
+
+  renderProject() {
+    const {
+      loading,
+    } = this.props
+
+    if (loading) return
+
+    return [
+      this.renderImage(),
+      this.renderDescription(),
+      this.renderInfos(),
+    ]
   }
 
   render() {
@@ -221,9 +233,7 @@ class ProjectSimilarCardComponent extends Component {
       <div className={ ProjectSimilarCardClassName }>
         { this.renderHeader() }
         <Separator />
-        { this.renderImage() }
-        { this.renderDescription() }
-        { this.renderInfos() }
+        { this.renderProject() }
         { this.renderLoader() }
       </div>
     )
