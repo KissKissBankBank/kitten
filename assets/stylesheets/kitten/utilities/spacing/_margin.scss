@@ -1,10 +1,10 @@
 /// Margin utilities.
 ///
-/// @group margin
+/// @group spacing
 ///
 /// @example scss - Usage
 ///
-///     @include k-utilities-margin;
+///     @include k-utilities-k-u-margin;
 ///
 /// @example html
 ///
@@ -36,7 +36,7 @@
 ///     <div class="k-u-margin-right-quintuple">…</div>
 ///     <div class="k-u-margin-right-none">…</div>
 
-@mixin margin($position, $slug, $size) {
+@mixin k-u-margin($position, $slug, $size) {
   $value: k-px-to-rem($size);
 
   .k-u-margin-#{$position}-#{$slug} {
@@ -62,36 +62,36 @@
   }
 }
 
-@mixin k-utilities-margin {
+@mixin k-utilities-k-u-margin {
   // Margin top
-  @include margin('top', 'none', 0px);
-  @include margin('top', 'single', 10px);
-  @include margin('top', 'double', 20px);
-  @include margin('top', 'triple', 30px);
-  @include margin('top', 'quadruple', 40px);
-  @include margin('top', 'quintuple', 50px);
+  @include k-u-margin('top', 'none', 0px);
+  @include k-u-margin('top', 'single', 10px);
+  @include k-u-margin('top', 'double', 20px);
+  @include k-u-margin('top', 'triple', 30px);
+  @include k-u-margin('top', 'quadruple', 40px);
+  @include k-u-margin('top', 'quintuple', 50px);
 
   // Margin bottom
-  @include margin('bottom', 'none', 0px);
-  @include margin('bottom', 'single', 10px);
-  @include margin('bottom', 'double', 20px);
-  @include margin('bottom', 'triple', 30px);
-  @include margin('bottom', 'quadruple', 40px);
-  @include margin('bottom', 'quintuple', 50px);
+  @include k-u-margin('bottom', 'none', 0px);
+  @include k-u-margin('bottom', 'single', 10px);
+  @include k-u-margin('bottom', 'double', 20px);
+  @include k-u-margin('bottom', 'triple', 30px);
+  @include k-u-margin('bottom', 'quadruple', 40px);
+  @include k-u-margin('bottom', 'quintuple', 50px);
 
   // Margin left
-  @include margin('left', 'none', 0px);
-  @include margin('left', 'single', 10px);
-  @include margin('left', 'double', 20px);
-  @include margin('left', 'triple', 30px);
-  @include margin('left', 'quadruple', 40px);
-  @include margin('left', 'quintuple', 50px);
+  @include k-u-margin('left', 'none', 0px);
+  @include k-u-margin('left', 'single', 10px);
+  @include k-u-margin('left', 'double', 20px);
+  @include k-u-margin('left', 'triple', 30px);
+  @include k-u-margin('left', 'quadruple', 40px);
+  @include k-u-margin('left', 'quintuple', 50px);
 
   // Margin right
-  @include margin('right', 'none', 0px);
-  @include margin('right', 'single', 10px);
-  @include margin('right', 'double', 20px);
-  @include margin('right', 'triple', 30px);
-  @include margin('right', 'quadruple', 40px);
-  @include margin('right', 'quintuple', 50px);
+  @include k-u-margin('right', 'none', 0px);
+  @include k-u-margin('right', 'single', 10px);
+  @include k-u-margin('right', 'double', 20px);
+  @include k-u-margin('right', 'triple', 30px);
+  @include k-u-margin('right', 'quadruple', 40px);
+  @include k-u-margin('right', 'quintuple', 50px);
 }
