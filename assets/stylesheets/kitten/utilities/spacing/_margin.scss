@@ -4,7 +4,7 @@
 ///
 /// @example scss - Usage
 ///
-///     @include k-utilities-k-u-margin;
+///     @include k-utilities-margin;
 ///
 /// @example html
 ///
@@ -62,7 +62,7 @@
   }
 }
 
-@mixin k-utilities-k-u-margin {
+@mixin k-utilities-margin {
   // Margin top
   @include k-u-margin('top', 'none', 0px);
   @include k-u-margin('top', 'single', 10px);
