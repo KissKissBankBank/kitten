@@ -74,7 +74,6 @@ class ProjectSimilarCardComponent extends Component {
   renderImage() {
     const {
       imageSrc,
-      loading,
     } = this.props
 
     if (!imageSrc) return
@@ -114,7 +113,6 @@ class ProjectSimilarCardComponent extends Component {
   renderDescription() {
     const {
       paragraph,
-      loading,
     } = this.props
 
     return(
@@ -151,7 +149,6 @@ class ProjectSimilarCardComponent extends Component {
   renderInfos() {
     const {
       infos,
-      loading,
     } = this.props
 
     if (!infos) return
