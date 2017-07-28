@@ -5,16 +5,19 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add `KarlProjectSimilarLoader` example.
-- Feature: Add `KarlModal` example.
-- Feature: Add `InfoLines` examples with new modifiers
+
+## [13.5.0] - 2017-07-28
+
+Feature:
+- Add `KarlModal` example.
+- Add `InfoLines` examples with new modifiers.
   (`withoutTopBottomBorder`, `borderColor`).
-- Feature: Add new `KarlProjectSimilarCard` and `KarlProjectSimilarCardInfos`
-  component
-- Feature: Add new `ProjectSimilarCard` component.
-- Feature: Add new `Contextual elements` group.
-- Feature: Add `Loader`, `LoaderWithParagraph`
+- Add new `KarlProjectSimilarCard` and `KarlProjectSimilarCardInfos` component.
+- Add new `ProjectSimilarCard` component.
+- Add new `Contextual elements` group.
+- Add `Loader`, `LoaderWithParagraph`
   and `KarlLoaderInButton` examples.
-- Feature: Replace `KarlButtonIconFacebookIcon` by `FacebookButtonIcon`,
+- Replace `KarlButtonIconFacebookIcon` by `FacebookButtonIcon`,
   `KarlButtonIconTwitterIcon` by `TwitterButtonIcon` and
   `KarlButtonIconLinkedinIcon` by `LinkedinButtonIcon`.
 
