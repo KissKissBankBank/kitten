@@ -66,6 +66,7 @@ export class SimilarProjectsCard extends Component {
       onRefreshClick,
       onLeftArrowClick,
       onRightArrowClick,
+      ...others
     } = this.props
 
     const nextIndex = this.state.currentIndex + 1
@@ -74,10 +75,8 @@ export class SimilarProjectsCard extends Component {
     return (
       <ProjectSimilarCard
         { ...this.currentProjectProps() }
+        { ...others }
         step={ this.currentStep() }
-        coloredInfosValues={ this.props.coloredInfosValues }
-        refresh={ this.props.refresh }
-        onRefreshClick={ this.props.onRefreshClick }
         onLeftArrowClick={
           this.curryHandleArrowClick(previousIndex, this.props.onLeftArrowClick)
         }

@@ -312,4 +312,16 @@ describe('<SimilarProjectsCard />', () => {
       })
     })
   })
+
+  describe('with custom prop', () => {
+    const similarProjectsCard = shallow(
+      <SimilarProjectsCard className="custom-className" />
+    )
+    const staticSimilarProjectCard = similarProjectsCard.find(ProjectSimilarCard)
+
+    it('passes the right props', () => {
+      expect(staticSimilarProjectCard.props())
+        .to.contains({ className: 'custom-className' })
+    })
+  })
 })
