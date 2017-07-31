@@ -143,4 +143,31 @@ describe('<ProjectSimilarCard />', () => {
       expect(loader).to.have.length(1)
     })
   })
+
+  describe('with refresh prop', () => {
+    const projectSimilarCard = mount(
+      <ProjectSimilarCard refresh="Custom refresh" />
+    )
+    const refreshLink = projectSimilarCard.find(
+      '.k-ProjectSimilarCard__refresh__link'
+    )
+
+    it('renders a refresh link with the right text', () => {
+      expect(refreshLink).to.contain.text('Custom refresh')
+    })
+  })
+
+  describe('with onRefreshClick prop', () => {
+    const handleRefreshClick = () => {}
+    const projectSimilarCard = mount(
+      <ProjectSimilarCard onRefreshClick={ handleRefreshClick } />
+    )
+    const refreshLink = projectSimilarCard.find(
+      '.k-ProjectSimilarCard__refresh__link'
+    )
+
+    it('attaches the right handler to the onClick prop', () => {
+      expect(refreshLink.props().onClick).to.equal(handleRefreshClick)
+    })
+  })
 })
