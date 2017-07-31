@@ -12,8 +12,6 @@ export class Modal extends Component {
       showModal: false
     }
 
-    this.handleOpenModal = this.handleOpenModal.bind(this)
-    this.handleCloseModal = this.handleCloseModal.bind(this)
     this.open = this.open.bind(this)
     this.close = this.close.bind(this)
   }
@@ -27,20 +25,12 @@ export class Modal extends Component {
     this.setState({ showModal: false })
   }
 
-  handleOpenModal() {
-    this.open()
-  }
-
-  handleCloseModal() {
-    this.close()
-  }
-
   renderCloseModal() {
     return (
       <CloseButton
         className="k-Modal__close"
         modifier="hydrogen"
-        onClick={ this.handleCloseModal }
+        onClick={ this.close }
       />
     )
   }
@@ -51,7 +41,7 @@ export class Modal extends Component {
     return (
       <span
         className="k-Modal__trigger"
-        onClick={ this.handleOpenModal }>
+        onClick={ this.open }>
         { this.props.trigger }
       </span>
     )
@@ -87,7 +77,7 @@ export class Modal extends Component {
             beforeClose: 'k-Modal__overlay--beforeClose',
           }}
           isOpen={ this.state.showModal }
-          onRequestClose={ this.handleCloseModal }
+          onRequestClose={ this.close }
           contentLabel={ label }>
 
           { content }
