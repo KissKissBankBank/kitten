@@ -11,6 +11,14 @@ import { Loader } from 'kitten/components/loaders/loader'
 describe('<ProjectSimilarCard />', () => {
   describe('by default', () => {
     const projectSimilarCard = shallow(<ProjectSimilarCard />)
+    const leftArrowButton = projectSimilarCard
+      .dive()
+      .find('.k-ButtonIcon')
+      .first()
+    const rightArrowButton = projectSimilarCard
+      .dive()
+      .find('.k-ButtonIcon')
+      .last()
 
     it('is a <div />', () => {
       expect(projectSimilarCard).to.have.tagName('div')
@@ -18,6 +26,14 @@ describe('<ProjectSimilarCard />', () => {
 
     it('has a default class', () => {
       expect(projectSimilarCard.dive()).to.have.className('k-ProjectSimilarCard')
+    })
+
+    it('has a regular left arrow', () => {
+      expect(leftArrowButton).not.to.have.attr('disabled')
+    })
+
+    it('has a regular right arrow', () => {
+      expect(rightArrowButton).not.to.have.attr('disabled')
     })
   })
 
@@ -166,8 +182,50 @@ describe('<ProjectSimilarCard />', () => {
       '.k-ProjectSimilarCard__refresh__link'
     )
 
-    it('attaches the right handler to the onClick prop', () => {
+    it('attaches the right handler to refresh link onClick prop', () => {
       expect(refreshLink.props().onClick).to.equal(handleRefreshClick)
+    })
+  })
+
+  describe('with leftArrowDisabled prop', () => {
+    const projectSimilarCard = mount(<ProjectSimilarCard leftArrowDisabled />)
+    const leftArrowButton = projectSimilarCard.find('.k-ButtonIcon').first()
+
+    it('disables the left arrow button', () => {
+      expect(leftArrowButton).to.have.attr('disabled')
+    })
+  })
+
+  describe('with rightArrowDisabled prop', () => {
+    const projectSimilarCard = mount(<ProjectSimilarCard rightArrowDisabled />)
+    const rightArrowButton = projectSimilarCard.find('.k-ButtonIcon').last()
+
+    it('disables the right arrow button', () => {
+      expect(rightArrowButton).to.have.attr('disabled')
+    })
+  })
+
+  describe('with onLeftArrowClick prop', () => {
+    const handleOnLeftArrowClick = () => {}
+    const projectSimilarCard = mount(
+      <ProjectSimilarCard onLeftArrowClick={ handleOnLeftArrowClick } />
+    )
+    const leftArrowButton = projectSimilarCard.find('.k-ButtonIcon').first()
+
+    it('attaches the right handler to left arrow button onClick prop', () => {
+      expect(leftArrowButton.props().onClick).to.equal(handleOnLeftArrowClick)
+    })
+  })
+
+  describe('with onRightArrowClick prop', () => {
+    const handleOnRightArrowClick = () => {}
+    const projectSimilarCard = mount(
+      <ProjectSimilarCard onRightArrowClick={ handleOnRightArrowClick } />
+    )
+    const rightArrowButton = projectSimilarCard.find('.k-ButtonIcon').last()
+
+    it('attaches the right handler to right arrow button onClick prop', () => {
+      expect(rightArrowButton.props().onClick).to.equal(handleOnRightArrowClick)
     })
   })
 })

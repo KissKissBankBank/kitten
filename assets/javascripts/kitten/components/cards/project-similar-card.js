@@ -36,6 +36,34 @@ class ProjectSimilarCardComponent extends Component {
     )
   }
 
+  renderLeftArrow() {
+    return(
+      <ButtonIcon
+        size="tiny"
+        verticalArrow
+        disabled={ this.props.leftArrowDisabled }
+        onClick={ this.props.onLeftArrowClick }
+      >
+        <RightArrowIcon
+          className={ classNames('k-ButtonIcon__svg',
+                                 'k-ButtonIcon__svg--mirror') } />
+      </ButtonIcon>
+    )
+  }
+
+  renderRightArrow() {
+    return (
+      <ButtonIcon
+        size="tiny"
+        verticalArrow
+        disabled={ this.props.rightArrowDisabled }
+        onClick={ this.props.onRightArrowClick }
+      >
+        <RightArrowIcon className="k-ButtonIcon__svg" />
+      </ButtonIcon>
+    )
+  }
+
   renderHeader() {
     const {
       step,
@@ -51,18 +79,8 @@ class ProjectSimilarCardComponent extends Component {
                 { step }
               </div>
               <div className="k-ProjectSimilarCard__header--button">
-                <ButtonIcon
-                  size="tiny"
-                  verticalArrow>
-                  <RightArrowIcon
-                    className={ classNames('k-ButtonIcon__svg',
-                                           'k-ButtonIcon__svg--mirror') } />
-                </ButtonIcon>
-                <ButtonIcon
-                  size="tiny"
-                  verticalArrow>
-                  <RightArrowIcon className="k-ButtonIcon__svg" />
-                </ButtonIcon>
+                { this.renderLeftArrow() }
+                { this.renderRightArrow() }
               </div>
             </div>
           </div>
@@ -247,7 +265,11 @@ ProjectSimilarCardComponent.defaultProps = {
   coloredInfosValues: false,
   refresh: "Refresh",
   onRefreshClick: () => {},
+  onLeftArrowClick: () => {},
+  onRightArrowClick: () => {},
   loading: false,
+  leftArrowDisabled: false,
+  rightArrowDisabled: false,
 }
 
 // Add generic card styles.
