@@ -32,20 +32,26 @@ export class SimilarProjectsCard extends Component {
     this.setState({ currentIndex: index })
   }
 
+  hasProjects() {
+    return this.props.projects.length > 0
+  }
+
   isLastProjectCurrent() {
+    if (!this.hasProjects()) return false
+
     return this.state.currentIndex == this.props.projects.length - 1
   }
 
   isFirstProjectCurrent() {
+    if (!this.hasProjects()) return false
+
     return this.state.currentIndex == 0
   }
 
   currentProject() {
-    const projects = this.props.projects
+    if (!this.hasProjects()) return
 
-    if (projects.length == 0) return
-
-    return projects[this.state.currentIndex]
+    return this.props.projects[this.state.currentIndex]
   }
 
   currentProjectProps() {

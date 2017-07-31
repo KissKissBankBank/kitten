@@ -73,8 +73,8 @@ describe('<SimilarProjectsCard />', () => {
         step: '',
         coloredInfosValues: false,
         refresh: 'Refresh',
-        leftArrowDisabled: true,
-        rightArrowDisabled: true,
+        leftArrowDisabled: false,
+        rightArrowDisabled: false,
       }
 
       const projectProps = {
