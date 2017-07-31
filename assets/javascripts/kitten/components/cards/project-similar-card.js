@@ -42,8 +42,7 @@ class ProjectSimilarCardComponent extends Component {
         size="tiny"
         verticalArrow
         disabled={ this.props.leftArrowDisabled }
-        onClick={ this.props.onLeftArrowClick }
-      >
+        onClick={ this.props.onLeftArrowClick }>
         <RightArrowIcon
           className={ classNames('k-ButtonIcon__svg',
                                  'k-ButtonIcon__svg--mirror') } />
@@ -57,8 +56,7 @@ class ProjectSimilarCardComponent extends Component {
         size="tiny"
         verticalArrow
         disabled={ this.props.rightArrowDisabled }
-        onClick={ this.props.onRightArrowClick }
-      >
+        onClick={ this.props.onRightArrowClick }>
         <RightArrowIcon className="k-ButtonIcon__svg" />
       </ButtonIcon>
     )

@@ -208,7 +208,7 @@ import { KarlSeparator } from 'kitten/karl/layout/separator'
 import { KarlImageCropper } from 'kitten/karl/images/image-cropper'
 import { KarlModal } from 'kitten/karl/modals/modal'
 import { KarlSimilarProjectsCard,
-         KarlSimilarProjectsWithInfosCard}
+         KarlSimilarProjectsWithInfosCard }
   from 'kitten/karl/cards/similar-projects-card'
 
 ReactOnRails.register({

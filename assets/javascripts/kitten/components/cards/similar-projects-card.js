@@ -22,13 +22,13 @@ export class SimilarProjectsCard extends Component {
     return this.props.projects.length > 0
   }
 
-  isLastProjectCurrent() {
+  isAtEnd() {
     if (!this.hasProjects()) return false
 
     return this.state.currentIndex == this.props.projects.length - 1
   }
 
-  isFirstProjectCurrent() {
+  isAtStart() {
     if (!this.hasProjects()) return false
 
     return this.state.currentIndex == 0
@@ -41,19 +41,21 @@ export class SimilarProjectsCard extends Component {
   }
 
   currentProjectProps() {
-    if (!this.currentProject()) return
+    const project = this.currentProject()
+
+    if (!project) return
 
     return {
-      imageSrc: this.currentProject().imageSrc,
-      title: this.currentProject().title,
-      paragraph: this.currentProject().description,
-      tags: this.currentProject().tags,
-      infos: this.currentProject().infos,
+      imageSrc: project.imageSrc,
+      title: project.title,
+      paragraph: project.description,
+      tags: project.tags,
+      infos: project.infos,
     }
   }
 
   currentStep() {
-    if (!this.currentProject()) return ''
+    if (!this.hasProjects()) return
 
     return `${this.state.currentIndex + 1 }/${ this.props.projects.length }`
   }
@@ -82,15 +84,15 @@ export class SimilarProjectsCard extends Component {
         onRightArrowClick={
           this.curryHandleArrowClick(nextIndex, this.props.onRightArrowClick)
         }
-        leftArrowDisabled={ this.isFirstProjectCurrent() }
-        rightArrowDisabled={ this.isLastProjectCurrent() }
+        leftArrowDisabled={ this.isAtStart() }
+        rightArrowDisabled={ this.isAtEnd() }
       />
     )
   }
 }
 
 SimilarProjectsCard.defaultProps = {
-  projects: [],
+  projects: [], // Check ProjectSimilarCard for project data format.
   coloredInfosValues: false,
   refresh: 'Refresh',
   onRefreshClick: () => {},

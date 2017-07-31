@@ -11,29 +11,29 @@ describe('<SimilarProjectsCard />', () => {
   const tags = [
     {
       key: 'tag-1',
-      item: 'Tag 1'
+      item: 'Tag 1',
     },
     {
       key: 'tag-2',
-      item: 'Tag 2'
+      item: 'Tag 2',
     }
   ]
   const infos = [
     {
       key: 'info-1',
       text: 'Custom text 1',
-      value: 'Custom value 1'
+      value: 'Custom value 1',
     },
     {
       key: 'info-2',
       text: 'Custom text 2',
       value: 'Custom value 2',
-      locked: true
+      locked: true,
     },
     {
       key: 'info-3',
       text: 'Custom text 3',
-      value: 'Custom value 3'
+      value: 'Custom value 3',
     }
   ]
   const project1 = {
@@ -122,7 +122,6 @@ describe('<SimilarProjectsCard />', () => {
         const staticSimilarProjectCard = similarProjectsCard
           .find(ProjectSimilarCard)
 
-
         it('passes the right props for the project', () => {
           const projectProps = {
             imageSrc: 'image-2',
@@ -142,7 +141,6 @@ describe('<SimilarProjectsCard />', () => {
         )
         const staticSimilarProjectCard = similarProjectsCard
           .find(ProjectSimilarCard)
-
 
         it('passes the right props for the project', () => {
           const projectProps = {

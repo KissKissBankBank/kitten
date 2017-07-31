@@ -6,17 +6,17 @@ const projectsWithImage = [
   {
     imageSrc: 'https://placehold.it/400x200/4a84ff/4a84ff',
     title: 'Title 1',
-    description: 'Intellectum est enim mihi quidem in multis, et maxime in me ipso'
+    description: 'Intellectum est enim mihi quidem in multis, et maxime in me ipso',
   },
   {
     imageSrc: 'https://placehold.it/400x200/3b75f0/3b75f0',
     title: 'Title 2',
-    description: 'Sed paulo ante in omnibus, cum M. Marcellum senatui'
+    description: 'Sed paulo ante in omnibus, cum M. Marcellum senatui',
   },
   {
     imageSrc: 'https://placehold.it/400x200/2c66e1/2c66e1',
     title: 'Title 3',
-    description: 'Ille quidem fructum omnis ante actae vitae hodierno die maximum cepit'
+    description: 'Ille quidem fructum omnis ante actae vitae hodierno die maximum cepit',
   },
 ]
 

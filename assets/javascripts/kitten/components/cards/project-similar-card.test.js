@@ -11,14 +11,9 @@ import { Loader } from 'kitten/components/loaders/loader'
 describe('<ProjectSimilarCard />', () => {
   describe('by default', () => {
     const projectSimilarCard = shallow(<ProjectSimilarCard />)
-    const leftArrowButton = projectSimilarCard
-      .dive()
-      .find('.k-ButtonIcon')
-      .first()
-    const rightArrowButton = projectSimilarCard
-      .dive()
-      .find('.k-ButtonIcon')
-      .last()
+    const arrowButtons = projectSimilarCard.dive().find('.k-ButtonIcon')
+    const leftArrowButton = arrowButtons.first()
+    const rightArrowButton = arrowButtons.last()
 
     it('is a <div />', () => {
       expect(projectSimilarCard).to.have.tagName('div')
