@@ -238,10 +238,10 @@ class ProjectSimilarCardComponent extends Component {
 }
 
 ProjectSimilarCardComponent.defaultProps = {
-  step: "",
+  step: '',
   imageSrc: null,
-  title: "",
-  paragraph: "",
+  title: '',
+  paragraph: '',
   tags: null, // Eg: [{ key: …, item: … }]
   infos: false, // Eg: [{ key: …, text: …, value: …, locked: … }]
   coloredInfosValues: false,
