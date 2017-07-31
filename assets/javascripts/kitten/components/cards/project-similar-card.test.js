@@ -10,8 +10,8 @@ import { Loader } from 'kitten/components/loaders/loader'
 
 describe('<ProjectSimilarCard />', () => {
   describe('by default', () => {
-    const projectSimilarCard = shallow(<ProjectSimilarCard />)
-    const arrowButtons = projectSimilarCard.dive().find('.k-ButtonIcon')
+    const projectSimilarCard = mount(<ProjectSimilarCard />)
+    const arrowButtons = projectSimilarCard.find('.k-ButtonIcon')
     const leftArrowButton = arrowButtons.first()
     const rightArrowButton = arrowButtons.last()
 
@@ -20,15 +20,15 @@ describe('<ProjectSimilarCard />', () => {
     })
 
     it('has a default class', () => {
-      expect(projectSimilarCard.dive()).to.have.className('k-ProjectSimilarCard')
+      expect(projectSimilarCard).to.have.className('k-ProjectSimilarCard')
     })
 
-    it('has a regular left arrow', () => {
-      expect(leftArrowButton).not.to.have.attr('disabled')
+    it('has a disabled left arrow', () => {
+      expect(leftArrowButton).to.have.attr('disabled')
     })
 
-    it('has a regular right arrow', () => {
-      expect(rightArrowButton).not.to.have.attr('disabled')
+    it('has a disabled right arrow', () => {
+      expect(rightArrowButton).to.have.attr('disabled')
     })
   })
 

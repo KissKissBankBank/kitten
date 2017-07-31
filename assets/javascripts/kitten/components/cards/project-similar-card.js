@@ -266,8 +266,8 @@ ProjectSimilarCardComponent.defaultProps = {
   onLeftArrowClick: () => {},
   onRightArrowClick: () => {},
   loading: false,
-  leftArrowDisabled: false,
-  rightArrowDisabled: false,
+  leftArrowDisabled: true,
+  rightArrowDisabled: true,
 }
 
 // Add generic card styles.
