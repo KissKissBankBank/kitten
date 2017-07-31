@@ -232,9 +232,9 @@ import { SupTitle } from 'kitten/components/typography/sup-title'
 import { Title } from 'kitten/components/typography/title'
 import {
   KarlParagraph,
+  KarlParagraphQuaternary,
   KarlParagraphSecondary,
   KarlParagraphTertiary,
-  KarlParagraphQuaternary,
   KarlParagraphWithLink,
 } from 'kitten/karl/typography/paragraph'
 
@@ -434,8 +434,8 @@ ReactOnRails.register({
   SupTitle,
   Title,
   KarlParagraph,
+  KarlParagraphQuaternary,
   KarlParagraphSecondary,
   KarlParagraphTertiary,
-  KarlParagraphQuaternary,
   KarlParagraphWithLink,
 })
