@@ -70,7 +70,6 @@ describe('<SimilarProjectsCard />', () => {
 
     it('passes the right props', () => {
       const expectedProps = {
-        step: '',
         coloredInfosValues: false,
         refresh: 'Refresh',
         leftArrowDisabled: false,
