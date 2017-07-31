@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { Button } from 'kitten/components/buttons/button'
 import { Grid, GridCol } from 'kitten/components/grid/grid'
 import { Title } from 'kitten/components/typography/title'
@@ -50,3 +50,18 @@ export const KarlModal = props => (
     content={ <KarlModalComponent /> }
   />
 )
+
+export class KarlModalExternalTrigger extends Component {
+  render() {
+    return (
+      <div>
+        <Button onClick={ () => this._modal.open() }>
+          Open
+        </Button>
+        <Modal
+          ref={ node => this._modal = node }
+          content={ <KarlModalComponent /> } />
+      </div>
+    )
+  }
+}
