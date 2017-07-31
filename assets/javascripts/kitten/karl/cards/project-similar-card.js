@@ -32,3 +32,10 @@ export const KarlProjectSimilarCardInfos = props => {
     />
   )
 }
+
+export const KarlProjectSimilarLoader = () => (
+  <ProjectSimilarCard
+    step="1/5"
+    loading
+  />
+)

@@ -6,6 +6,7 @@ import { Title } from 'kitten/components/typography/title'
 import { Paragraph } from 'kitten/components/typography/paragraph'
 import { TagList } from 'kitten/components/lists/tag-list'
 import { LockIcon } from 'kitten/components/icons/lock-icon'
+import { Loader } from 'kitten/components/loaders/loader'
 
 describe('<ProjectSimilarCard />', () => {
   describe('by default', () => {
@@ -120,6 +121,16 @@ describe('<ProjectSimilarCard />', () => {
 
     it('renders an info value with color modifier', () => {
       expect(value).to.have.className('k-u-color-primary1')
+    })
+  })
+
+  describe('with loading prop', () => {
+    const projectSimilarCard = mount(<ProjectSimilarCard loading />)
+    const loader = projectSimilarCard.find('.k-ProjectSimilarCard__loading')
+
+    it('render <Loader />', () => {
+      expect(projectSimilarCard).to.have.descendants(Loader)
+      expect(loader).to.have.length(1)
     })
   })
 })

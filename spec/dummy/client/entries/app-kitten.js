@@ -197,7 +197,8 @@ import { KarlLegoGrid } from 'kitten/karl/grid/lego-grid'
 import { KarlTagList } from 'kitten/karl/lists/tag-list'
 import { KarlCard } from 'kitten/karl/cards/card'
 import { KarlProjectSimilarCard,
-         KarlProjectSimilarCardInfos } from 'kitten/karl/cards/project-similar-card'
+         KarlProjectSimilarCardInfos,
+         KarlProjectSimilarLoader } from 'kitten/karl/cards/project-similar-card'
 import { KarlMenuHeader } from 'kitten/karl/headers/karl-header'
 import { KarlGithubRibbon } from 'kitten/karl/headers/karl-github-ribbon'
 import { KarlMenu,
@@ -205,7 +206,8 @@ import { KarlMenu,
 import { KarlBrowsing } from 'app/browsing/browsing'
 import { KarlSeparator } from 'kitten/karl/layout/separator'
 import { KarlImageCropper } from 'kitten/karl/images/image-cropper'
-import { KarlModal } from 'kitten/karl/modals/modal'
+import { KarlModal,
+         KarlModalExternalTrigger } from 'kitten/karl/modals/modal'
 
 ReactOnRails.register({
   // Box
@@ -397,6 +399,7 @@ ReactOnRails.register({
   KarlCard,
   KarlProjectSimilarCard,
   KarlProjectSimilarCardInfos,
+  KarlProjectSimilarLoader,
   KarlMenuHeader,
   KarlMenu,
   KarlMenuContent,
@@ -405,4 +408,5 @@ ReactOnRails.register({
   KarlSeparator,
   KarlImageCropper,
   KarlModal,
+  KarlModalExternalTrigger,
 })

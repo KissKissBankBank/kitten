@@ -10,6 +10,7 @@ import { Separator } from 'kitten/components/layout/separator'
 import { TagList } from 'kitten/components/lists/tag-list'
 import { RightArrowIcon } from 'kitten/components/icons/right-arrow-icon'
 import { LockIcon } from 'kitten/components/icons/lock-icon'
+import { Loader } from 'kitten/components/loaders/loader'
 
 class ProjectSimilarCardComponent extends Component {
   constructor() {
@@ -185,6 +186,36 @@ class ProjectSimilarCardComponent extends Component {
     )
   }
 
+  renderLoader() {
+    const {
+      loading,
+    } = this.props
+
+    if (!loading) return
+
+    return (
+      <Marger top="9" bottom="9">
+        <div className="k-ProjectSimilarCard__grid">
+          <Loader className="k-ProjectSimilarCard__loading" />
+        </div>
+      </Marger>
+    )
+  }
+
+  renderProject() {
+    const {
+      loading,
+    } = this.props
+
+    if (loading) return
+
+    return [
+      this.renderImage(),
+      this.renderDescription(),
+      this.renderInfos(),
+    ]
+  }
+
   render() {
     const {
       className,
@@ -199,9 +230,8 @@ class ProjectSimilarCardComponent extends Component {
       <div className={ ProjectSimilarCardClassName }>
         { this.renderHeader() }
         <Separator />
-        { this.renderImage() }
-        { this.renderDescription() }
-        { this.renderInfos() }
+        { this.renderProject() }
+        { this.renderLoader() }
       </div>
     )
   }
@@ -217,6 +247,7 @@ ProjectSimilarCardComponent.defaultProps = {
   coloredInfosValues: false,
   refresh: "Refresh",
   onRefreshClick: () => {},
+  loading: false,
 }
 
 // Add generic card styles.
