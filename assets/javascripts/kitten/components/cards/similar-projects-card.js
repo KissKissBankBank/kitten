@@ -64,7 +64,7 @@ export class SimilarProjectsCard extends Component {
       onRefreshClick,
       onLeftArrowClick,
       onRightArrowClick,
-      ...others } = this.props
+    } = this.pros
 
     const nextIndex = this.state.currentIndex + 1
     const previousIndex = this.state.currentIndex - 1
