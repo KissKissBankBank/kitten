@@ -26,8 +26,8 @@ import {
   KarlButtonIconMicro,
 } from 'kitten/karl/buttons/button-icon'
 import {
-  KarlButtonIconWordsRight,
   KarlButtonIconWordsLeft,
+  KarlButtonIconWordsRight,
 } from 'kitten/karl/buttons/button-with-icon-words'
 import { KarlPaymentButtons } from 'kitten/karl/buttons/payment-button'
 
@@ -70,34 +70,34 @@ import SelectWithState from 'kitten/components/form/select-with-state'
 import Slider from 'kitten/components/form/slider'
 import Switch from 'kitten/components/form/switch'
 import { TextInput } from 'kitten/components/form/text-input'
+import { TextInputWithButton } from 'kitten/components/form/text-input-with-button'
 import { TextInputWithLimit }
   from 'kitten/components/form/text-input-with-limit'
 import { TextInputWithUnit } from 'kitten/components/form/text-input-with-unit'
-import { TextInputWithButton } from 'kitten/components/form/text-input-with-button'
 import { KarlCheckboxError } from 'kitten/karl/form/checkbox'
 import { KarlFormActions } from 'kitten/karl/form/form-actions'
 import { KarlFormRow } from 'kitten/karl/form/form-row'
 import { KarlLocationInput } from 'kitten/karl/form/location-input'
 import {
-  KarlRadioButtonError,
   KarlRadioButtonContentError,
+  KarlRadioButtonError,
 } from 'kitten/karl/form/radio-button'
 
 // Grid
 import { Container } from 'kitten/components/grid/container'
 import { Grid, GridCol } from 'kitten/components/grid/grid'
 import {
-  KarlGridTwelveColumns,
   KarlGridInGrid,
   KarlGridSmall,
+  KarlGridTwelveColumns,
   KarlGridWithOffset,
 } from 'kitten/karl/grid/grid'
 import { KarlLegoGrid } from 'kitten/karl/grid/lego-grid'
-import {
-  KarlSideGridWithRightAside,
-  KarlSideGridWithLeftAsideAndSmallSize,
-} from 'kitten/karl/grid/side-grid'
 import { KarlRow } from 'kitten/karl/grid/row'
+import {
+  KarlSideGridWithLeftAsideAndSmallSize,
+  KarlSideGridWithRightAside,
+} from 'kitten/karl/grid/side-grid'
 import { KarlSideLayout } from 'kitten/karl/layout/side-layout'
 
 // Header
@@ -138,8 +138,8 @@ import { KarlImageCropper } from 'kitten/karl/images/image-cropper'
 // Layout
 import { Separator } from 'kitten/components/layout/separator'
 import {
-  KarlLineWithTooltip,
   KarlLineWithBigHeart,
+  KarlLineWithTooltip,
 } from 'kitten/karl/layout/line'
 import { KarlSeparator } from 'kitten/karl/layout/separator'
 
@@ -186,10 +186,10 @@ import { KarlIconBadgeWithSvg } from 'kitten/karl/notifications/icon-badge'
 import { CallToActionPopover }
   from 'kitten/components/popovers/call-to-action-popover'
 import { Popover } from 'kitten/components/popovers/popover'
-import { KarlAutoTriggerPopover }
-  from 'karl/components/popovers/auto-trigger-popover'
 import { KarlAutoTriggerCallToActionPopover }
   from 'karl/components/popovers/auto-trigger-call-to-action-popover'
+import { KarlAutoTriggerPopover }
+  from 'karl/components/popovers/auto-trigger-popover'
 import { KarlLoudspeakerPopover }
   from 'karl/components/popovers/loudspeaker-popover'
 
@@ -206,8 +206,8 @@ import LoanSimulator from 'kitten/components/simulators/loan-simulator'
 import {
   KarlLoanSimulator,
   KarlLoanSimulatorWithCommission,
-  KarlLoanSimulatorWithfeesExemption,
   KarlLoanSimulatorWithError,
+  KarlLoanSimulatorWithfeesExemption,
 } from 'kitten/karl/organisms/loan-simulator'
 
 // Steppers
@@ -257,8 +257,8 @@ ReactOnRails.register({
   KarlButtonAndText,
   KarlButtonIconHeart,
   KarlButtonIconMicro,
-  KarlButtonIconWordsRight,
   KarlButtonIconWordsLeft,
+  KarlButtonIconWordsRight,
   KarlPaymentButtons,
 
   // Cards
@@ -295,41 +295,41 @@ ReactOnRails.register({
   Slider,
   Switch,
   TextInput,
+  TextInputWithButton,
   TextInputWithLimit,
   TextInputWithUnit,
-  TextInputWithButton,
   KarlCheckboxError,
   KarlFormActions,
   KarlFormRow,
   KarlLocationInput,
-  KarlRadioButtonError,
   KarlRadioButtonContentError,
+  KarlRadioButtonError,
 
   // Grid
   Container,
   Grid,
   GridCol,
-  KarlGridTwelveColumns,
   KarlGridInGrid,
   KarlGridSmall,
+  KarlGridTwelveColumns,
   KarlGridWithOffset,
   KarlLegoGrid,
-  KarlSideGridWithRightAside,
-  KarlSideGridWithLeftAsideAndSmallSize,
   KarlRow,
+  KarlSideGridWithLeftAsideAndSmallSize,
+  KarlSideGridWithRightAside,
   KarlSideLayout,
 
   // Header
+  KarlGithubRibbon,
   KarlHeader,
   KarlHeaderWithSearchInput,
   KarlHeaderWithTitles,
   KarlHeaderWhenLogged,
   KarlLoggedHeaderPlatformSwitch,
   KarlLoggedHeaderUserMenu,
+  KarlMenuHeader,
   KarlPhoneDropdown,
   KarlUnloggedHeaderPlatformSwitch,
-  KarlGithubRibbon,
-  KarlMenuHeader,
 
   // Icons
   CbIcon,
@@ -353,8 +353,8 @@ ReactOnRails.register({
 
   // Layout
   Separator,
-  KarlLineWithTooltip,
   KarlLineWithBigHeart,
+  KarlLineWithTooltip,
   KarlSeparator,
 
   // Lines
@@ -396,8 +396,8 @@ ReactOnRails.register({
   // Popovers
   CallToActionPopover,
   Popover,
-  KarlAutoTriggerPopover,
   KarlAutoTriggerCallToActionPopover,
+  KarlAutoTriggerPopover,
   KarlLoudspeakerPopover,
 
   // Pages
@@ -410,8 +410,8 @@ ReactOnRails.register({
   LoanSimulator,
   KarlLoanSimulator,
   KarlLoanSimulatorWithCommission,
-  KarlLoanSimulatorWithfeesExemption,
   KarlLoanSimulatorWithError,
+  KarlLoanSimulatorWithfeesExemption,
 
   // Steppers
   Stepper,
