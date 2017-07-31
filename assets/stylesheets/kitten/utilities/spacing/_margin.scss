@@ -9,6 +9,20 @@
 /// @example html
 ///
 ///     <div class="k-u-margin-top-single">…</div>
+///
+///     <div class="k-u-margin-top-single@xxs-down">…</div>
+///     <div class="k-u-margin-top-single@xs-down">…</div>
+///     <div class="k-u-margin-top-single@s-down">…</div>
+///     <div class="k-u-margin-top-single@m-down">…</div>
+///     <div class="k-u-margin-top-single@l-down">…</div>
+///
+///     <div class="k-u-margin-top-single@xs-up">…</div>
+///     <div class="k-u-margin-top-single@s-up">…</div>
+///     <div class="k-u-margin-top-single@m-up">…</div>
+///     <div class="k-u-margin-top-single@l-up">…</div>
+///     <div class="k-u-margin-top-single@xl-up">…</div>
+///
+///
 ///     <div class="k-u-margin-top-double">…</div>
 ///     <div class="k-u-margin-top-triple">…</div>
 ///     <div class="k-u-margin-top-quadruple">…</div>
@@ -63,35 +77,19 @@
 }
 
 @mixin k-utilities-margin {
-  // Margin top
-  @include k-u-margin('top', 'none', 0px);
-  @include k-u-margin('top', 'single', 10px);
-  @include k-u-margin('top', 'double', 20px);
-  @include k-u-margin('top', 'triple', 30px);
-  @include k-u-margin('top', 'quadruple', 40px);
-  @include k-u-margin('top', 'quintuple', 50px);
+  $k-sizes: (
+    none: 0,
+    single: 10px,
+    double: 20px,
+    triple: 30px,
+    quadruple: 40px,
+    quintuple: 50px,
+  );
 
-  // Margin bottom
-  @include k-u-margin('bottom', 'none', 0px);
-  @include k-u-margin('bottom', 'single', 10px);
-  @include k-u-margin('bottom', 'double', 20px);
-  @include k-u-margin('bottom', 'triple', 30px);
-  @include k-u-margin('bottom', 'quadruple', 40px);
-  @include k-u-margin('bottom', 'quintuple', 50px);
-
-  // Margin left
-  @include k-u-margin('left', 'none', 0px);
-  @include k-u-margin('left', 'single', 10px);
-  @include k-u-margin('left', 'double', 20px);
-  @include k-u-margin('left', 'triple', 30px);
-  @include k-u-margin('left', 'quadruple', 40px);
-  @include k-u-margin('left', 'quintuple', 50px);
-
-  // Margin right
-  @include k-u-margin('right', 'none', 0px);
-  @include k-u-margin('right', 'single', 10px);
-  @include k-u-margin('right', 'double', 20px);
-  @include k-u-margin('right', 'triple', 30px);
-  @include k-u-margin('right', 'quadruple', 40px);
-  @include k-u-margin('right', 'quintuple', 50px);
+  @each $name, $size in $k-sizes {
+    @include k-u-margin('top', $name, $size);
+    @include k-u-margin('bottom', $name, $size);
+    @include k-u-margin('left', $name, $size);
+    @include k-u-margin('right', $name, $size);
+  }
 }

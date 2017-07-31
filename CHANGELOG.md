@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add responsive mixin on `k-u-margin(…)`.
+- Feature: Add responsive mixin `k-u-margin(…)`.
 - Feature: Add `Loader` on `ProjectSimilarCard` component.
 
 ## [13.5.0] - 2017-07-28
