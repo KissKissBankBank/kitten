@@ -45,14 +45,14 @@ export class Modal extends Component {
     )
   }
 
-  renderTriggerAction(trigger) {
-    if (!trigger) return
+  renderTriggerAction() {
+    if (!this.props.trigger) return
 
     return (
       <span
         className="k-Modal__trigger"
         onClick={ this.handleOpenModal }>
-        { trigger }
+        { this.props.trigger }
       </span>
     )
   }
@@ -73,7 +73,7 @@ export class Modal extends Component {
 
     return (
       <div className={ triggerClassNames } { ...others }>
-        { this.renderTriggerAction(trigger) }
+        { this.renderTriggerAction() }
 
         <ReactModal
           className={{
