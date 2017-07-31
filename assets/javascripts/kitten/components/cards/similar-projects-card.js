@@ -13,13 +13,9 @@ export class SimilarProjectsCard extends Component {
 
   curryHandleArrowClick(newCurrentIndex, callback) {
     return () => {
-      this.goTo(newCurrentIndex)
+      this.setState({ currentIndex: newCurrentIndex })
       callback()
     }
-  }
-
-  goTo(index) {
-    this.setState({ currentIndex: index })
   }
 
   hasProjects() {
