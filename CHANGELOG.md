@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add external trigger to `Modal` component.
 - Feature: Add `Loader` on `ProjectSimilarCard` component.
 
 ## [13.5.0] - 2017-07-28
