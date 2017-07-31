@@ -6,26 +6,16 @@ export class SimilarProjectsCard extends Component {
   constructor() {
     super()
 
-    this.handleLeftArrowClick = this.handleLeftArrowClick.bind(this)
-    this.handleRightArrowClick = this.handleRightArrowClick.bind(this)
-
     this.state = {
       currentIndex: 0,
     }
   }
 
-  handleLeftArrowClick() {
-    const newCurrentIndex = this.state.currentIndex - 1
-
-    this.goTo(newCurrentIndex)
-    this.props.onLeftArrowClick()
-  }
-
-  handleRightArrowClick() {
-    const newCurrentIndex = this.state.currentIndex + 1
-
-    this.goTo(newCurrentIndex)
-    this.props.onRightArrowClick()
+  curryHandleArrowClick(newCurrentIndex, callback) {
+    return () => {
+      this.goTo(newCurrentIndex)
+      callback()
+    }
   }
 
   goTo(index) {
@@ -80,6 +70,8 @@ export class SimilarProjectsCard extends Component {
       onRightArrowClick,
       ...others } = this.props
 
+    const nextIndex = this.state.currentIndex + 1
+    const previousIndex = this.state.currentIndex - 1
 
     return (
       <ProjectSimilarCard
@@ -88,8 +80,12 @@ export class SimilarProjectsCard extends Component {
         coloredInfosValues={ this.props.coloredInfosValues }
         refresh={ this.props.refresh }
         onRefreshClick={ this.props.onRefreshClick }
-        onLeftArrowClick={ this.handleLeftArrowClick }
-        onRightArrowClick={ this.handleRightArrowClick }
+        onLeftArrowClick={
+          this.curryHandleArrowClick(previousIndex, this.props.onLeftArrowClick)
+        }
+        onRightArrowClick={
+          this.curryHandleArrowClick(nextIndex, this.props.onRightArrowClick)
+        }
         leftArrowDisabled={ this.isFirstProjectCurrent() }
         rightArrowDisabled={ this.isLastProjectCurrent() }
       />
