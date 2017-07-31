@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import classNames from 'classnames'
-import { ProjectSimilarCard } from 'kitten/components/cards/project-similar-card'
+import { SimilarProjectCard } from 'kitten/components/cards/project-similar-card'
 
 export class SimilarProjectsCard extends Component {
   constructor() {
@@ -73,7 +73,7 @@ export class SimilarProjectsCard extends Component {
     const previousIndex = this.state.currentIndex - 1
 
     return (
-      <ProjectSimilarCard
+      <SimilarProjectCard
         { ...this.currentProjectProps() }
         { ...others }
         step={ this.currentStep() }

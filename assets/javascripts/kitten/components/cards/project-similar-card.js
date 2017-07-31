@@ -12,7 +12,7 @@ import { RightArrowIcon } from 'kitten/components/icons/right-arrow-icon'
 import { LockIcon } from 'kitten/components/icons/lock-icon'
 import { Loader } from 'kitten/components/loaders/loader'
 
-class ProjectSimilarCardComponent extends Component {
+class SimilarProjectCardComponent extends Component {
   constructor() {
     super()
 
@@ -253,7 +253,7 @@ class ProjectSimilarCardComponent extends Component {
   }
 }
 
-ProjectSimilarCardComponent.defaultProps = {
+SimilarProjectCardComponent.defaultProps = {
   step: '',
   imageSrc: null,
   title: '',
@@ -271,9 +271,12 @@ ProjectSimilarCardComponent.defaultProps = {
 }
 
 // Add generic card styles.
-export const ProjectSimilarCard = card(ProjectSimilarCardComponent, {
+export const SimilarProjectCard = card(SimilarProjectCardComponent, {
   light: true,
   withBorder: true,
   withShadow: true,
   translateOnHover: true,
 })
+
+// Deprecated
+export const ProjectSimilarCard = SimilarProjectCard

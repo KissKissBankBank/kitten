@@ -1,26 +1,27 @@
 import React, { Component } from 'react'
 import { expect } from 'chai'
 import { shallow, mount } from 'enzyme'
-import { ProjectSimilarCard } from 'kitten/components/cards/project-similar-card'
+import { SimilarProjectCard }
+  from 'kitten/components/cards/project-similar-card'
 import { Title } from 'kitten/components/typography/title'
 import { Paragraph } from 'kitten/components/typography/paragraph'
 import { TagList } from 'kitten/components/lists/tag-list'
 import { LockIcon } from 'kitten/components/icons/lock-icon'
 import { Loader } from 'kitten/components/loaders/loader'
 
-describe('<ProjectSimilarCard />', () => {
+describe('<SimilarProjectCard />', () => {
   describe('by default', () => {
-    const projectSimilarCard = mount(<ProjectSimilarCard />)
-    const arrowButtons = projectSimilarCard.find('.k-ButtonIcon')
+    const similarProjectCard = mount(<SimilarProjectCard />)
+    const arrowButtons = similarProjectCard.find('.k-ButtonIcon')
     const leftArrowButton = arrowButtons.first()
     const rightArrowButton = arrowButtons.last()
 
     it('is a <div />', () => {
-      expect(projectSimilarCard).to.have.tagName('div')
+      expect(similarProjectCard).to.have.tagName('div')
     })
 
     it('has a default class', () => {
-      expect(projectSimilarCard).to.have.className('k-ProjectSimilarCard')
+      expect(similarProjectCard).to.have.className('k-ProjectSimilarCard')
     })
 
     it('has a disabled left arrow', () => {
@@ -33,8 +34,8 @@ describe('<ProjectSimilarCard />', () => {
   })
 
   describe('with imageSrc prop', () => {
-    const projectSimilarCard = mount(<ProjectSimilarCard imageSrc="test" />)
-    const image = projectSimilarCard.find('.k-ProjectSimilarCard__img')
+    const similarProjectCard = mount(<SimilarProjectCard imageSrc="test" />)
+    const image = similarProjectCard.find('.k-ProjectSimilarCard__img')
 
     it('renders an image with good href', () => {
       expect(image).to.have.length(1)
@@ -43,36 +44,36 @@ describe('<ProjectSimilarCard />', () => {
   })
 
   describe('with title prop', () => {
-    const projectSimilarCard = mount(
-      <ProjectSimilarCard title="Custom title" />)
-    const title = projectSimilarCard.find('.k-Title')
+    const similarProjectCard = mount(
+      <SimilarProjectCard title="Custom title" />)
+    const title = similarProjectCard.find('.k-Title')
 
     it('renders a <Title />', () => {
-      expect(projectSimilarCard).to.have.descendants(Title)
+      expect(similarProjectCard).to.have.descendants(Title)
       expect(title.text()).to.equal("Custom title")
     })
   })
 
   describe('with paragraph prop', () => {
-    const projectSimilarCard = mount(
-      <ProjectSimilarCard paragraph="Custom paragraph" />)
-    const paragraph = projectSimilarCard.find('.k-Paragraph')
+    const similarProjectCard = mount(
+      <SimilarProjectCard paragraph="Custom paragraph" />)
+    const paragraph = similarProjectCard.find('.k-Paragraph')
 
     it('renders a <Paragraph />', () => {
-      expect(projectSimilarCard).to.have.descendants(Paragraph)
+      expect(similarProjectCard).to.have.descendants(Paragraph)
       expect(paragraph.text()).to.equal("Custom paragraph")
     })
   })
 
   describe('with tags props', () => {
-    const projectSimilarCard = mount(
-      <ProjectSimilarCard
+    const similarProjectCard = mount(
+      <SimilarProjectCard
         tags={ [ { key: 'custom-tag', item: 'Custom tag' } ] } />
     )
-    const tags = projectSimilarCard.find('.k-TagList')
+    const tags = similarProjectCard.find('.k-TagList')
 
     it('renders a <TagList />', () => {
-      expect(projectSimilarCard).to.have.descendants(TagList)
+      expect(similarProjectCard).to.have.descendants(TagList)
     })
 
     it('has a first block with good item', () => {
@@ -83,8 +84,8 @@ describe('<ProjectSimilarCard />', () => {
   })
 
   describe('with infos props', () => {
-    const projectSimilarCard = mount(
-      <ProjectSimilarCard
+    const similarProjectCard = mount(
+      <SimilarProjectCard
         infos={ [ { key: 'info-1',
                     text: 'Custom text 1',
                     value: 'Custom value 1' },
@@ -97,7 +98,7 @@ describe('<ProjectSimilarCard />', () => {
                     value: 'Custom value 3' } ] }
       />
     )
-    const infos = projectSimilarCard.find('.k-ProjectSimilarCard__info')
+    const infos = similarProjectCard.find('.k-ProjectSimilarCard__info')
 
     it('renders 3 blocks', () => {
       expect(infos).to.have.length(3)
@@ -119,15 +120,15 @@ describe('<ProjectSimilarCard />', () => {
   })
 
   describe('with coloredInfosValues prop', () => {
-    const projectSimilarCard = mount(
-      <ProjectSimilarCard
+    const similarProjectCard = mount(
+      <SimilarProjectCard
         coloredInfosValues
         infos={ [ { key: 'info-1',
                     text: 'Custom text 1',
                     value: 'Custom value 1' } ] }
       />
     )
-    const info = projectSimilarCard.find('.k-ProjectSimilarCard__info').first()
+    const info = similarProjectCard.find('.k-ProjectSimilarCard__info').first()
     const value = info.find('.k-ProjectSimilarCard__info__value')
 
     it('renders an info value with color modifier', () => {
@@ -136,30 +137,30 @@ describe('<ProjectSimilarCard />', () => {
   })
 
   describe('with loading prop', () => {
-    const projectSimilarCard = mount(<ProjectSimilarCard loading />)
-    const loader = projectSimilarCard.find('.k-ProjectSimilarCard__loading')
+    const similarProjectCard = mount(<SimilarProjectCard loading />)
+    const loader = similarProjectCard.find('.k-ProjectSimilarCard__loading')
 
     it('render <Loader />', () => {
-      expect(projectSimilarCard).to.have.descendants(Loader)
+      expect(similarProjectCard).to.have.descendants(Loader)
       expect(loader).to.have.length(1)
     })
   })
 
   describe('with loading prop', () => {
-    const projectSimilarCard = mount(<ProjectSimilarCard loading />)
-    const loader = projectSimilarCard.find('.k-ProjectSimilarCard__loading')
+    const similarProjectCard = mount(<SimilarProjectCard loading />)
+    const loader = similarProjectCard.find('.k-ProjectSimilarCard__loading')
 
     it('render <Loader />', () => {
-      expect(projectSimilarCard).to.have.descendants(Loader)
+      expect(similarProjectCard).to.have.descendants(Loader)
       expect(loader).to.have.length(1)
     })
   })
 
   describe('with refresh prop', () => {
-    const projectSimilarCard = mount(
-      <ProjectSimilarCard refresh="Custom refresh" />
+    const similarProjectCard = mount(
+      <SimilarProjectCard refresh="Custom refresh" />
     )
-    const refreshLink = projectSimilarCard.find(
+    const refreshLink = similarProjectCard.find(
       '.k-ProjectSimilarCard__refresh__link'
     )
 
@@ -170,10 +171,10 @@ describe('<ProjectSimilarCard />', () => {
 
   describe('with onRefreshClick prop', () => {
     const handleRefreshClick = () => {}
-    const projectSimilarCard = mount(
-      <ProjectSimilarCard onRefreshClick={ handleRefreshClick } />
+    const similarProjectCard = mount(
+      <SimilarProjectCard onRefreshClick={ handleRefreshClick } />
     )
-    const refreshLink = projectSimilarCard.find(
+    const refreshLink = similarProjectCard.find(
       '.k-ProjectSimilarCard__refresh__link'
     )
 
@@ -183,8 +184,8 @@ describe('<ProjectSimilarCard />', () => {
   })
 
   describe('with leftArrowDisabled prop', () => {
-    const projectSimilarCard = mount(<ProjectSimilarCard leftArrowDisabled />)
-    const leftArrowButton = projectSimilarCard.find('.k-ButtonIcon').first()
+    const similarProjectCard = mount(<SimilarProjectCard leftArrowDisabled />)
+    const leftArrowButton = similarProjectCard.find('.k-ButtonIcon').first()
 
     it('disables the left arrow button', () => {
       expect(leftArrowButton).to.have.attr('disabled')
@@ -192,8 +193,8 @@ describe('<ProjectSimilarCard />', () => {
   })
 
   describe('with rightArrowDisabled prop', () => {
-    const projectSimilarCard = mount(<ProjectSimilarCard rightArrowDisabled />)
-    const rightArrowButton = projectSimilarCard.find('.k-ButtonIcon').last()
+    const similarProjectCard = mount(<SimilarProjectCard rightArrowDisabled />)
+    const rightArrowButton = similarProjectCard.find('.k-ButtonIcon').last()
 
     it('disables the right arrow button', () => {
       expect(rightArrowButton).to.have.attr('disabled')
@@ -202,10 +203,10 @@ describe('<ProjectSimilarCard />', () => {
 
   describe('with onLeftArrowClick prop', () => {
     const handleOnLeftArrowClick = () => {}
-    const projectSimilarCard = mount(
-      <ProjectSimilarCard onLeftArrowClick={ handleOnLeftArrowClick } />
+    const similarProjectCard = mount(
+      <SimilarProjectCard onLeftArrowClick={ handleOnLeftArrowClick } />
     )
-    const leftArrowButton = projectSimilarCard.find('.k-ButtonIcon').first()
+    const leftArrowButton = similarProjectCard.find('.k-ButtonIcon').first()
 
     it('attaches the right handler to left arrow button onClick prop', () => {
       expect(leftArrowButton.props().onClick).to.equal(handleOnLeftArrowClick)
@@ -214,10 +215,10 @@ describe('<ProjectSimilarCard />', () => {
 
   describe('with onRightArrowClick prop', () => {
     const handleOnRightArrowClick = () => {}
-    const projectSimilarCard = mount(
-      <ProjectSimilarCard onRightArrowClick={ handleOnRightArrowClick } />
+    const similarProjectCard = mount(
+      <SimilarProjectCard onRightArrowClick={ handleOnRightArrowClick } />
     )
-    const rightArrowButton = projectSimilarCard.find('.k-ButtonIcon').last()
+    const rightArrowButton = similarProjectCard.find('.k-ButtonIcon').last()
 
     it('attaches the right handler to right arrow button onClick prop', () => {
       expect(rightArrowButton.props().onClick).to.equal(handleOnRightArrowClick)

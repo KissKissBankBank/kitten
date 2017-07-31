@@ -3,7 +3,7 @@ import { expect } from 'chai'
 import { shallow, mount } from 'enzyme'
 import { SimilarProjectsCard } from
   'kitten/components/cards/similar-projects-card'
-import { ProjectSimilarCard } from
+import { SimilarProjectCard } from
   'kitten/components/cards/project-similar-card'
 
 describe('<SimilarProjectsCard />', () => {
@@ -62,9 +62,9 @@ describe('<SimilarProjectsCard />', () => {
 
   describe('by default', () => {
     const similarProjectsCard = shallow(<SimilarProjectsCard />)
-    const staticSimilarProjectCard = similarProjectsCard.find(ProjectSimilarCard)
+    const staticSimilarProjectCard = similarProjectsCard.find(SimilarProjectCard)
 
-    it('is renders <ProjectSimilarCard />', () => {
+    it('is renders <SimilarProjectCard />', () => {
       expect(staticSimilarProjectCard).to.have.length(1)
     })
 
@@ -99,7 +99,7 @@ describe('<SimilarProjectsCard />', () => {
           <SimilarProjectsCard projects={ [project1] } />
         )
         const staticSimilarProjectCard = similarProjectsCard
-          .find(ProjectSimilarCard)
+          .find(SimilarProjectCard)
 
         it('passes the right props for the project', () => {
           const projectProps = {
@@ -119,7 +119,7 @@ describe('<SimilarProjectsCard />', () => {
           <SimilarProjectsCard projects={ [project2] } />
         )
         const staticSimilarProjectCard = similarProjectsCard
-          .find(ProjectSimilarCard)
+          .find(SimilarProjectCard)
 
         it('passes the right props for the project', () => {
           const projectProps = {
@@ -139,7 +139,7 @@ describe('<SimilarProjectsCard />', () => {
           <SimilarProjectsCard projects={ [project3] } />
         )
         const staticSimilarProjectCard = similarProjectsCard
-          .find(ProjectSimilarCard)
+          .find(SimilarProjectCard)
 
         it('passes the right props for the project', () => {
           const projectProps = {
@@ -167,14 +167,14 @@ describe('<SimilarProjectsCard />', () => {
               projects={ [project1, project2, project3] } />
           )
           staticSimilarProjectCard = similarProjectsCard
-            .find(ProjectSimilarCard)
+            .find(SimilarProjectCard)
           leftArrowButton = similarProjectsCard.find('.k-ButtonIcon').first()
 
           similarProjectsCard.setState({ currentIndex: 2 })
           leftArrowButton.simulate('click')
         })
 
-        it('passes the previous project props to <ProjectSimilarCard>', () => {
+        it('passes the previous project props to <SimilarProjectCard>', () => {
           const projectProps = {
             imageSrc: 'image-2',
             title: 'Title 2',
@@ -203,14 +203,14 @@ describe('<SimilarProjectsCard />', () => {
               projects={ [project1, project2, project3] } />
           )
           staticSimilarProjectCard = similarProjectsCard
-            .find(ProjectSimilarCard)
+            .find(SimilarProjectCard)
           leftArrowButton = similarProjectsCard.find('.k-ButtonIcon').first()
 
           similarProjectsCard.setState({ currentIndex: 1 })
           leftArrowButton.simulate('click')
         })
 
-        it('passes the first project props to <ProjectSimilarCard>', () => {
+        it('passes the first project props to <SimilarProjectCard>', () => {
           const projectProps = {
             imageSrc: 'image-1',
             title: 'Title 1',
@@ -246,13 +246,13 @@ describe('<SimilarProjectsCard />', () => {
               projects={ [project1, project2, project3] } />
           )
           staticSimilarProjectCard = similarProjectsCard
-            .find(ProjectSimilarCard)
+            .find(SimilarProjectCard)
           rightArrowButton = similarProjectsCard.find('.k-ButtonIcon').last()
 
           rightArrowButton.simulate('click')
         })
 
-        it('passes the next project props to <ProjectSimilarCard>', () => {
+        it('passes the next project props to <SimilarProjectCard>', () => {
           const projectProps = {
             imageSrc: 'image-2',
             title: 'Title 2',
@@ -281,14 +281,14 @@ describe('<SimilarProjectsCard />', () => {
               projects={ [project1, project2, project3] } />
           )
           staticSimilarProjectCard = similarProjectsCard
-            .find(ProjectSimilarCard)
+            .find(SimilarProjectCard)
           rightArrowButton = similarProjectsCard.find('.k-ButtonIcon').last()
 
           similarProjectsCard.setState({ currentIndex: 1 })
           rightArrowButton.simulate('click')
         })
 
-        it('passes the last project props to <ProjectSimilarCard>', () => {
+        it('passes the last project props to <SimilarProjectCard>', () => {
           const projectProps = {
             imageSrc: 'image-3',
             title: 'Title 3',
@@ -317,7 +317,7 @@ describe('<SimilarProjectsCard />', () => {
     const similarProjectsCard = shallow(
       <SimilarProjectsCard className="custom-className" />
     )
-    const staticSimilarProjectCard = similarProjectsCard.find(ProjectSimilarCard)
+    const staticSimilarProjectCard = similarProjectsCard.find(SimilarProjectCard)
 
     it('passes the right props', () => {
       expect(staticSimilarProjectCard.props())
