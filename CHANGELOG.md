@@ -5,6 +5,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add `Loader` on `ProjectSimilarCard` component.
+- Feature: Add `leftArrowDisabled`, `rightArrowDisabled`, `onLeftArrowClick` and
+  `onRightArrowClick` props to `ProjectSimilarCard` component.
+- Feature: Add `SimilarProjectsCard` component.
 
 ## [13.5.0] - 2017-07-28
 
