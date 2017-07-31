@@ -90,5 +90,5 @@ export class Modal extends Component {
 }
 
 Modal.defaultProps = {
-  label: "Modal",
+  label: 'Modal',
 }
