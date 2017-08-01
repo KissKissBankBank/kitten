@@ -92,9 +92,6 @@ export class SimilarProjectsCard extends Component {
 
 SimilarProjectsCard.defaultProps = {
   projects: [], // Check ProjectSimilarCard for project data format.
-  coloredInfosValues: false,
-  refresh: 'Refresh',
-  onRefreshClick: () => {},
   onLeftArrowClick: () => {},
   onRightArrowClick: () => {},
 }
