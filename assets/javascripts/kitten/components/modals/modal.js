@@ -5,22 +5,23 @@ import ReactModal from 'react-modal'
 import { CloseButton } from 'kitten/components/buttons/close-button'
 
 export class Modal extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
 
     this.state = {
       showModal: false
     }
 
-    this.handleOpenModal = this.handleOpenModal.bind(this)
-    this.handleCloseModal = this.handleCloseModal.bind(this)
+    this.open = this.open.bind(this)
+    this.close = this.close.bind(this)
   }
 
-  handleOpenModal() {
+
+  open() {
     this.setState({ showModal: true })
   }
 
-  handleCloseModal() {
+  close() {
     this.setState({ showModal: false })
   }
 
@@ -29,8 +30,20 @@ export class Modal extends Component {
       <CloseButton
         className="k-Modal__close"
         modifier="hydrogen"
-        onClick={ this.handleCloseModal }
+        onClick={ this.close }
       />
+    )
+  }
+
+  renderTriggerAction() {
+    if (!this.props.trigger) return
+
+    return (
+      <span
+        className="k-Modal__trigger"
+        onClick={ this.open }>
+        { this.props.trigger }
+      </span>
     )
   }
 
@@ -50,11 +63,7 @@ export class Modal extends Component {
 
     return (
       <div className={ triggerClassNames } { ...others }>
-        <span
-          className="k-Modal__trigger"
-          onClick={ this.handleOpenModal }>
-          { trigger }
-        </span>
+        { this.renderTriggerAction() }
 
         <ReactModal
           className={{
@@ -68,7 +77,7 @@ export class Modal extends Component {
             beforeClose: 'k-Modal__overlay--beforeClose',
           }}
           isOpen={ this.state.showModal }
-          onRequestClose={ this.handleCloseModal }
+          onRequestClose={ this.close }
           contentLabel={ label }>
 
           { content }
@@ -81,5 +90,5 @@ export class Modal extends Component {
 }
 
 Modal.defaultProps = {
-  label: "Modal",
+  label: 'Modal',
 }
