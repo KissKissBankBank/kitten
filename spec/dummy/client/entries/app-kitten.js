@@ -36,11 +36,10 @@ import { ProjectCard } from 'kitten/components/cards/project-card'
 import { ProjectCreatorCard } from 'kitten/components/cards/project-creator-card'
 import { ProjectSimilarCard } from 'kitten/components/cards/project-similar-card'
 import { KarlCard } from 'kitten/karl/cards/card'
-import {
-  KarlProjectSimilarCard,
-  KarlProjectSimilarCardInfos,
-  KarlProjectSimilarLoader,
-} from 'kitten/karl/cards/project-similar-card'
+import { KarlSimilarProjectsCard,
+         KarlSimilarProjectsWithInfosCard }
+  from 'kitten/karl/cards/similar-projects-card'
+import { KarlProjectSimilarLoader } from 'kitten/karl/cards/project-similar-card'
 
 // Dev
 import { DevGrid } from 'kitten/components/dev/dev-grid'
@@ -166,7 +165,9 @@ import { Progress } from 'kitten/components/meters/progress'
 import { KarlRandomProgress } from 'kitten/karl/meters/random-progress'
 
 // Modals
-import { KarlModal } from 'kitten/karl/modals/modal'
+import { KarlModal,
+         KarlModalExternalTrigger,
+} from 'kitten/karl/modals/modal'
 
 // Navigation
 import { TabBar } from 'kitten/components/navigation/tab-bar'
@@ -266,8 +267,8 @@ ReactOnRails.register({
   ProjectCreatorCard,
   ProjectSimilarCard,
   KarlCard,
-  KarlProjectSimilarCard,
-  KarlProjectSimilarCardInfos,
+  KarlSimilarProjectsCard,
+  KarlSimilarProjectsWithInfosCard,
   KarlProjectSimilarLoader,
 
   // Dev
@@ -380,6 +381,7 @@ ReactOnRails.register({
 
   // Modals
   KarlModal,
+  KarlModalExternalTrigger,
 
   // Navigation
   TabBar,

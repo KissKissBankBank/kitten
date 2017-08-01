@@ -4,8 +4,15 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `KarlProjectSimilarLoader` example.
 - Fix: Reorder components imports.
+
+## [13.6.0] - 2017-08-01
+
+Features:
+- Add `KarlProjectSimilarLoader` example.
+- Replace `KarlProjectSimilarCard` and `KarlProjectSimilarCardInfos`
+  examples with `KarlSimilarProjectsCard` and
+  `KarlSimilarProjectsWithInfosCard`.
 
 ## [13.5.0] - 2017-07-28
 
