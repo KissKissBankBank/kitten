@@ -4,8 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `KarlProjectSimilarLoader` example.
-- Feature: Replace `KarlProjectSimilarCard` and `KarlProjectSimilarCardInfos`
+## [13.6.0] - 2017-08-01
+
+Features:
+- Add `KarlProjectSimilarLoader` example.
+- Replace `KarlProjectSimilarCard` and `KarlProjectSimilarCardInfos`
   examples with `KarlSimilarProjectsCard` and
   `KarlSimilarProjectsWithInfosCard`.
 

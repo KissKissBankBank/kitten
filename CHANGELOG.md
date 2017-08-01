@@ -4,12 +4,15 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add external trigger to `Modal` component.
-- Feature: Add responsive mixin `k-u-margin(…)`.
-- Feature: Add `Loader` on `ProjectSimilarCard` component.
-- Feature: Add `leftArrowDisabled`, `rightArrowDisabled`, `onLeftArrowClick` and
+## [13.6.0] - 2017-08-01
+
+Features:
+- Add external trigger to `Modal` component.
+- Add responsive mixin `k-u-margin(…)`.
+- Add `Loader` on `ProjectSimilarCard` component.
+- Add `leftArrowDisabled`, `rightArrowDisabled`, `onLeftArrowClick` and
   `onRightArrowClick` props to `ProjectSimilarCard` component.
-- Feature: Add `SimilarProjectsCard` component.
+- Add `SimilarProjectsCard` component.
 
 ## [13.5.0] - 2017-07-28
 
