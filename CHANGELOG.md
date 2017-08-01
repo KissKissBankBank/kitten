@@ -4,15 +4,6 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: `LinkList` responsive.
-- Feature: Add new modifier `k-LinkList--withoutMargin` in `LinkList`.
-- Feature: Add `withoutPointerEvents` prop to `Label` component.
-- Feature: Add `Loader` and `LoaderWithParagraph` components.
-- Feature: Add `icon` and `iconWithMinWidth` props to `Button` component.
-- Feature: Add social button icon components (`FacebookButtonIcon`, …).
-- Feature: Add border utilities (`k-u-border-left-line1`, …).
-- Feature: Add new `ProjectSimilarCard` component.
-- Feature: Add new `RefreshIcon` component.
 - Breaking change: Replace the deprecated `commissionRate` prop by a list of
   `commissionRules`. To upgrade you should replace for example:
 
@@ -31,6 +22,33 @@ This project adheres to [Semantic Versioning](http://semver.org/).
         { rate: 0.1 }
       ]
       <LoanSimulator commissionRules={ commissionRules } />
+
+## [13.6.0] - 2017-08-01
+
+Features:
+- Add external trigger to `Modal` component.
+- Add responsive mixin `k-u-margin(…)`.
+- Add `Loader` on `ProjectSimilarCard` component.
+- Add `leftArrowDisabled`, `rightArrowDisabled`, `onLeftArrowClick` and
+  `onRightArrowClick` props to `ProjectSimilarCard` component.
+- Add `SimilarProjectsCard` component.
+
+## [13.5.0] - 2017-07-28
+
+Features:
+- Accept other props to `GridCol` component.
+- Add `Modal` component.
+- Add `withoutTopBottomBorder`, `borderColor` and other props
+  to `InfoLines` component.
+- `LinkList` responsive.
+- Add new modifier `k-LinkList--withoutMargin` in `LinkList`.
+- Add `withoutPointerEvents` prop to `Label` component.
+- Add `Loader` and `LoaderWithParagraph` components.
+- Add `icon` and `iconWithMinWidth` props to `Button` component.
+- Add social button icon components (`FacebookButtonIcon`, …).
+- Add border utilities (`k-u-border-left-line1`, …).
+- Add new `ProjectSimilarCard` component.
+- Add new `RefreshIcon` component.
 
 ## [13.4.0] - 2017-07-20
 

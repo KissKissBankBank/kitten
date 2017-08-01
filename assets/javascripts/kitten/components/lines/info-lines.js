@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { Component } from 'react'
 import classNames from 'classnames'
 
-export class InfoLines extends React.Component {
+export class InfoLines extends Component {
   constructor(props) {
     super(props)
 
@@ -13,10 +13,24 @@ export class InfoLines extends React.Component {
   }
 
   renderInfo(element) {
-    const { key, value, id } = element
+    const { key, value, id, className, style, ...others } = element
+
+    const infoClassName = classNames(
+      'k-InfoLines__line',
+      className,
+    )
+
+    const infoStyle = {
+      ...style,
+      borderColor: this.props.borderColor,
+    }
 
     return (
-      <div className="k-InfoLines__line" key={ id }>
+      <div
+        { ...others }
+        key={ id }
+        className={ infoClassName }
+        style={ infoStyle }>
         <div className="k-InfoLines__line__key">
           { key }
         </div>
@@ -29,8 +43,33 @@ export class InfoLines extends React.Component {
   }
 
   render() {
+    const {
+      infos,
+      className,
+      withoutTopBottomBorder,
+      borderColor,
+      style,
+      ...others,
+    } = this.props
+
+    const infoLinesClassName = classNames(
+      'k-InfoLines',
+      {
+        'k-InfoLines--withoutTopBottomBorder': withoutTopBottomBorder,
+      },
+      className,
+    )
+
+    const infoLinesStyle = {
+      ...style,
+      borderColor: borderColor,
+    }
+
     return (
-      <div className="k-InfoLines">
+      <div
+        { ...others }
+        className={ infoLinesClassName }
+        style={ infoLinesStyle }>
         { this.renderInfos() }
       </div>
     )
@@ -38,5 +77,8 @@ export class InfoLines extends React.Component {
 }
 
 InfoLines.defaultProps = {
+  className: null,
   infos: [], // Eg: [{ key: …, value: …, id: … }]
+  withoutTopBottomBorder: false,
+  borderColor: null,
 }
