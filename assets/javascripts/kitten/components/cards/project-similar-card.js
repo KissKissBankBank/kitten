@@ -12,7 +12,7 @@ import { RightArrowIcon } from 'kitten/components/icons/right-arrow-icon'
 import { LockIcon } from 'kitten/components/icons/lock-icon'
 import { Loader } from 'kitten/components/loaders/loader'
 
-class ProjectSimilarCardComponent extends Component {
+class SimilarProjectCardComponent extends Component {
   constructor() {
     super()
 
@@ -36,6 +36,32 @@ class ProjectSimilarCardComponent extends Component {
     )
   }
 
+  renderLeftArrow() {
+    return(
+      <ButtonIcon
+        size="tiny"
+        verticalArrow
+        disabled={ this.props.leftArrowDisabled }
+        onClick={ this.props.onLeftArrowClick }>
+        <RightArrowIcon
+          className={ classNames('k-ButtonIcon__svg',
+                                 'k-ButtonIcon__svg--mirror') } />
+      </ButtonIcon>
+    )
+  }
+
+  renderRightArrow() {
+    return (
+      <ButtonIcon
+        size="tiny"
+        verticalArrow
+        disabled={ this.props.rightArrowDisabled }
+        onClick={ this.props.onRightArrowClick }>
+        <RightArrowIcon className="k-ButtonIcon__svg" />
+      </ButtonIcon>
+    )
+  }
+
   renderHeader() {
     const {
       step,
@@ -51,18 +77,8 @@ class ProjectSimilarCardComponent extends Component {
                 { step }
               </div>
               <div className="k-ProjectSimilarCard__header--button">
-                <ButtonIcon
-                  size="tiny"
-                  verticalArrow>
-                  <RightArrowIcon
-                    className={ classNames('k-ButtonIcon__svg',
-                                           'k-ButtonIcon__svg--mirror') } />
-                </ButtonIcon>
-                <ButtonIcon
-                  size="tiny"
-                  verticalArrow>
-                  <RightArrowIcon className="k-ButtonIcon__svg" />
-                </ButtonIcon>
+                { this.renderLeftArrow() }
+                { this.renderRightArrow() }
               </div>
             </div>
           </div>
@@ -237,23 +253,30 @@ class ProjectSimilarCardComponent extends Component {
   }
 }
 
-ProjectSimilarCardComponent.defaultProps = {
-  step: "",
+SimilarProjectCardComponent.defaultProps = {
+  step: '',
   imageSrc: null,
-  title: "",
-  paragraph: "",
+  title: '',
+  paragraph: '',
   tags: null, // Eg: [{ key: …, item: … }]
   infos: false, // Eg: [{ key: …, text: …, value: …, locked: … }]
   coloredInfosValues: false,
   refresh: "Refresh",
   onRefreshClick: () => {},
+  onLeftArrowClick: () => {},
+  onRightArrowClick: () => {},
   loading: false,
+  leftArrowDisabled: true,
+  rightArrowDisabled: true,
 }
 
 // Add generic card styles.
-export const ProjectSimilarCard = card(ProjectSimilarCardComponent, {
+export const SimilarProjectCard = card(SimilarProjectCardComponent, {
   light: true,
   withBorder: true,
   withShadow: true,
   translateOnHover: true,
 })
+
+// DEPRECATED
+export const ProjectSimilarCard = SimilarProjectCard

@@ -24,6 +24,8 @@ import { TagButton } from 'kitten/components/buttons/tag-button'
 import { ProjectCard } from 'kitten/components/cards/project-card'
 import { ProjectCreatorCard } from 'kitten/components/cards/project-creator-card'
 import { ProjectSimilarCard } from 'kitten/components/cards/project-similar-card'
+import { SimilarProjectsCard }
+  from 'kitten/components/cards/similar-projects-card'
 
 // Dev
 import { DevGrid } from 'kitten/components/dev/dev-grid'
@@ -196,9 +198,7 @@ import { KarlIconBadgeWithSvg } from 'kitten/karl/notifications/icon-badge'
 import { KarlLegoGrid } from 'kitten/karl/grid/lego-grid'
 import { KarlTagList } from 'kitten/karl/lists/tag-list'
 import { KarlCard } from 'kitten/karl/cards/card'
-import { KarlProjectSimilarCard,
-         KarlProjectSimilarCardInfos,
-         KarlProjectSimilarLoader } from 'kitten/karl/cards/project-similar-card'
+import { KarlProjectSimilarLoader } from 'kitten/karl/cards/project-similar-card'
 import { KarlMenuHeader } from 'kitten/karl/headers/karl-header'
 import { KarlGithubRibbon } from 'kitten/karl/headers/karl-github-ribbon'
 import { KarlMenu,
@@ -208,6 +208,9 @@ import { KarlSeparator } from 'kitten/karl/layout/separator'
 import { KarlImageCropper } from 'kitten/karl/images/image-cropper'
 import { KarlModal,
          KarlModalExternalTrigger } from 'kitten/karl/modals/modal'
+import { KarlSimilarProjectsCard,
+         KarlSimilarProjectsWithInfosCard }
+  from 'kitten/karl/cards/similar-projects-card'
 
 ReactOnRails.register({
   // Box
@@ -374,6 +377,8 @@ ReactOnRails.register({
   KarlLoanSimulatorWithError,
   KarlSideGridWithRightAside,
   KarlSideGridWithLeftAsideAndSmallSize,
+  KarlSimilarProjectsCard,
+  KarlSimilarProjectsWithInfosCard,
   KarlStaticTooltip,
   KarlCheckboxError,
   KarlLocationInput,
@@ -397,8 +402,6 @@ ReactOnRails.register({
   KarlLegoGrid,
   KarlTagList,
   KarlCard,
-  KarlProjectSimilarCard,
-  KarlProjectSimilarCardInfos,
   KarlProjectSimilarLoader,
   KarlMenuHeader,
   KarlMenu,
