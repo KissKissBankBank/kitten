@@ -227,7 +227,8 @@ Check out the [guidelines](../../wiki/Component-testing) to know how to test kit
 To contribute code:
 
 - Create a pull request on GitHub with a clear title in English.
-- Tag it with the right labels: `Needs reviews`, `Needs testing` or `Work in progress`.
+- [Tag it](https://github.com/KissKissBankBank/kitten/wiki/Contribution-guidelines#labels-on-pull-request)
+  with the right labels: `Needs reviews`, `Needs testing` or `Work in progress`.
 - Don't forget to update the `CHANGELOG.md` under the `[unreleased]` section
   with the following syntax:
 
@@ -236,12 +237,15 @@ To contribute code:
   - Feature: a new feature.
   - Fix: a fix.
   ```
+- Update the `KARL_CHANGELOG.md` under the [unreleased] section if you added some
+  updates to the styleguide.
 
 To merge code into master:
 
 - Make sure the code has been reviewed by someone.
 - Make sure it has been tested.
 - Merge using `Squash and merge` on GitHub.
+- Delete the branch.
 
 ## Static Dump
 
