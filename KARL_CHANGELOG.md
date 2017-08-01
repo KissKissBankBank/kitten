@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Reorder components imports.
+
 ## [13.6.0] - 2017-08-01
 
 Features:
