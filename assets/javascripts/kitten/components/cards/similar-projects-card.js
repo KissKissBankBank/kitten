@@ -74,8 +74,8 @@ export class SimilarProjectsCard extends Component {
 
     return (
       <SimilarProjectCard
-        { ...this.currentProjectProps() }
         { ...others }
+        { ...this.currentProjectProps() }
         step={ this.currentStep() }
         onLeftArrowClick={
           this.curryHandleArrowClick(previousIndex, this.props.onLeftArrowClick)
