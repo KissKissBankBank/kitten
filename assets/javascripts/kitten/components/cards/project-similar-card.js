@@ -278,5 +278,5 @@ export const SimilarProjectCard = card(SimilarProjectCardComponent, {
   translateOnHover: true,
 })
 
-// Deprecated
+// DEPRECATED
 export const ProjectSimilarCard = SimilarProjectCard
