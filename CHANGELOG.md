@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Pass `onRefreshClick` prop correctly to `SimilarProjectCard` component in
+  `SimilarProjectsCard` component.
+
 ## [13.6.1] - 2017-08-03
 
 Fix:
