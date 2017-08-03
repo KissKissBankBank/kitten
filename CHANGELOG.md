@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Add `type` attribute to navigation buttons in `SimilarProjectCard`
+  component.
+
 ## [13.6.0] - 2017-08-01
 
 Features:

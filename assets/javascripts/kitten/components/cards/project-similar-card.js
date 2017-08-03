@@ -40,6 +40,7 @@ class SimilarProjectCardComponent extends Component {
     return(
       <ButtonIcon
         size="tiny"
+        type="button"
         verticalArrow
         disabled={ this.props.leftArrowDisabled }
         onClick={ this.props.onLeftArrowClick }>
@@ -54,6 +55,7 @@ class SimilarProjectCardComponent extends Component {
     return (
       <ButtonIcon
         size="tiny"
+        type="button"
         verticalArrow
         disabled={ this.props.rightArrowDisabled }
         onClick={ this.props.onRightArrowClick }>

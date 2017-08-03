@@ -24,12 +24,24 @@ describe('<SimilarProjectCard />', () => {
       expect(similarProjectCard).to.have.className('k-ProjectSimilarCard')
     })
 
-    it('has a disabled left arrow', () => {
-      expect(leftArrowButton).to.have.attr('disabled')
+    describe('left arrow', () => {
+      it('is disabled', () => {
+        expect(leftArrowButton).to.have.attr('disabled')
+      })
+
+      it('has a button type', () => {
+        expect(leftArrowButton).to.have.attr('type', 'button')
+      })
     })
 
-    it('has a disabled right arrow', () => {
-      expect(rightArrowButton).to.have.attr('disabled')
+    describe('right arrow', () => {
+      it('is disabled', () => {
+        expect(rightArrowButton).to.have.attr('disabled')
+      })
+
+      it('has a button type', () => {
+        expect(rightArrowButton).to.have.attr('type', 'button')
+      })
     })
   })
 
