@@ -3,7 +3,7 @@
     box-sizing: border-box;
   }
 
-  .k-FooterLendo__text {
+  .k-FooterLendo__network--text {
     text-align: center;
 
     @include k-media-min('l') {
@@ -11,26 +11,12 @@
     }
   }
 
-  .k-FooterLendo__network--marger {
-    @include k-media-max('s') {
-      margin-top: k-px-to-rem(30px);
-    }
-  }
-
   .k-FooterLendo__network--followText {
+    text-align: center;
+
     @include k-media-min('l') {
       text-align: right;
-    }
-  }
-
-  .k-FooterLendo__network--textNone {
-    @include k-media-max('m') {
-      display: none;
-    }
-  }
-  .k-FooterLendo__network--list {
-    @include k-media-max('m') {
-      margin-top: k-px-to-rem(10px);
+      margin-right: k-px-to-rem(15px);
     }
   }
 
@@ -38,13 +24,15 @@
     align-self: center;
   }
 
-  .k-FooterLendo__buttonIcon {
-    margin-right: k-px-to-rem(10px);
+  .k-FooterLendo__network__logo {
+    @include k-media-min('l') {
+      display: flex;
+      justify-content: flex-end;
+    }
   }
 
   .k-FooterLendo__notice--copyright {
     text-align: center;
-    margin-top: k-px-to-rem(30px);
 
     @include k-media-min('l') {
       text-align: right;
@@ -55,10 +43,6 @@
 
   .k-FooterLendo__notice__logos--list--item {
     align-self: flex-end;
-
-    @include k-media-max('s') {
-      margin-top: k-px-to-rem(30px);
-    }
   }
 
   .k-FooterLendo__notice__logo {
@@ -70,13 +54,11 @@
 
   .k-FooterLendo__logo--img {
     text-align: center;
-    margin-bottom: k-px-to-rem(10px);
 
     > img,
     > svg {
       vertical-align: middle;
     }
-
 
     @include k-media-min('l') {
       > img,
@@ -91,12 +73,11 @@
     }
   }
 
-  .k-FooterLendo__logo--imgLendo {
-    margin-bottom: k-px-to-rem(30px);
-  }
-
   .k-FooterLendo__logo--imgMangopay {
-    width: 100px;
+    width: k-px-to-rem(100px);
+
+    @include k-media-max('m') {
+      height: k-px-to-rem(50px);
+    }
   }
 }
-
