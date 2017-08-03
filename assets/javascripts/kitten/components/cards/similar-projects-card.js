@@ -51,12 +51,11 @@ export class SimilarProjectsCard extends Component {
 
     if (!project) return
 
+    const { paragraph, ...otherProjectProps } = project
+
     return {
-      imageSrc: project.imageSrc,
-      title: project.title,
       paragraph: project.description,
-      tags: project.tags,
-      infos: project.infos,
+      ...otherProjectProps,
     }
   }
 
