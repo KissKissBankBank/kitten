@@ -302,7 +302,8 @@ describe('<SimilarProjectsCard />', () => {
         before(() => {
           similarProjectsCard = mount(
             <SimilarProjectsCard
-              projects={ [project1, project2, project3] } />
+              projects={ [project1, project2, project3] }
+            />
           )
           staticSimilarProjectCard = similarProjectsCard
             .find(SimilarProjectCard)
