@@ -6,6 +6,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Fix: Pass `onRefreshClick` prop correctly to `SimilarProjectCard` component in
   `SimilarProjectsCard` component.
+- Fix: Set current index to 0 when projects list is refreshed in
+  `SimilarProjectsCard` component.
 
 ## [13.6.1] - 2017-08-03
 
