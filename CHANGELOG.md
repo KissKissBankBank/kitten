@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `withoutResponsiveVersion` prop to `InfoLines` component.
+
 ## [13.6.1] - 2017-08-03
 
 Fix:

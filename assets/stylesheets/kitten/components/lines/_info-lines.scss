@@ -45,4 +45,16 @@
       border-bottom: none;
     }
   }
+
+  .k-InfoLines--withoutResponsiveVersion {
+    .k-InfoLines__line {
+      @include k-media-max('s') {
+        flex-direction: row;
+      }
+    }
+
+    .k-InfoLines__line__value {
+      margin-left: auto;
+    }
+  }
 }
