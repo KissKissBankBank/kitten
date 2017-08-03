@@ -12,7 +12,7 @@ export class SimilarProjectsCard extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if (this.props.projects != nextProps) {
+    if (this.props.projects != nextProps.projects) {
       this.setState({ currentIndex: 0 })
     }
   }
