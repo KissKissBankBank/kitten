@@ -63,7 +63,6 @@ export class SimilarProjectsCard extends Component {
   render() {
     const {
       projects,
-      onRefreshClick,
       onLeftArrowClick,
       onRightArrowClick,
       ...others,
