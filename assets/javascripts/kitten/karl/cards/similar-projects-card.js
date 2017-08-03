@@ -7,16 +7,19 @@ const projectsWithImage = [
     imageSrc: 'https://placehold.it/400x200/4a84ff/4a84ff',
     title: 'Title 1',
     description: 'Intellectum est enim mihi quidem in multis, et maxime in me ipso',
+    linkHref: 'http://www.kisskissbankbank.com',
   },
   {
     imageSrc: 'https://placehold.it/400x200/3b75f0/3b75f0',
     title: 'Title 2',
     description: 'Sed paulo ante in omnibus, cum M. Marcellum senatui',
+    linkHref: 'http://www.hellomerci.com',
   },
   {
     imageSrc: 'https://placehold.it/400x200/2c66e1/2c66e1',
     title: 'Title 3',
     description: 'Ille quidem fructum omnis ante actae vitae hodierno die maximum cepit',
+    linkHref: 'http://www.lendopolis.com',
   },
 ]
 
@@ -35,18 +38,21 @@ const projectsWithInfos = [
   {
     title: 'Title 1',
     description: 'Excogitatum est super his, ut homines quidam ignoti, vilitate ipsa parum cavendi ad colligendos rumores per Antiochiae latera cuncta destinarentur ',
+    linkHref: 'http://www.kisskissbankbank.com',
     tags: tags,
     infos: infos,
   },
   {
     title: 'Title 2',
     description: 'Relaturi quae audirent. hi peragranter et dissimulanter honoratorum circulis adsistendo pervadendoque divites domus egentium habitu quicquid ',
+    linkHref: 'http://www.hellomerci.com',
     tags: tags,
     infos: infos,
   },
   {
     title: 'Title 3',
     description: 'Noscere poterant vel audire latenter intromissi per posticas in regiam nuntiabant, id observantes conspiratione concordi, ut fingerent quaedam',
+    linkHref: 'http://www.lendopolis.com',
     tags: tags,
     infos: infos,
   },
