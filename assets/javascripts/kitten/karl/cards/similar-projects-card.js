@@ -80,7 +80,8 @@ class KarlSimilarProjectsCardBase extends React.Component {
     return (
       <SimilarProjectsCard
         onRefreshClick={ this.handleOnRefreshClick }
-        projects={ this.state.projects } />
+        projects={ this.state.projects }
+      />
     )
   }
 }
