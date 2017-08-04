@@ -236,4 +236,106 @@ describe('<SimilarProjectCard />', () => {
       expect(rightArrowButton.props().onClick).to.equal(handleOnRightArrowClick)
     })
   })
+
+  describe('with linkHref prop', () => {
+    it('adds the right class to the content tag', () => {
+      const similarProjectCard = mount(
+        <SimilarProjectCard linkHref="custom-link" />
+      )
+
+      const content = similarProjectCard.find('.k-ProjectSimilarCard__content')
+
+      expect(content).to.have.length(1)
+    })
+
+    describe('with loading prop', () => {
+      const similarProjectCard = mount(
+        <SimilarProjectCard linkHref="custom-link" loading={ true }/>
+      )
+      const content = similarProjectCard.find('.k-ProjectSimilarCard__content')
+
+      it('renders a <div> tag for the content', () => {
+        expect(content).to.have.tagName('div')
+      })
+
+      it('passes the right props to the <div> tag', () => {
+        const expectedProps = {
+          href: null,
+          target: null,
+          title: null,
+        }
+
+        expect(content.props()).to.contains(expectedProps)
+      })
+    })
+
+    describe('without loading prop', () => {
+      const similarProjectCard = mount(
+        <SimilarProjectCard linkHref="custom-link" />
+      )
+      const content = similarProjectCard.find('.k-ProjectSimilarCard__content')
+
+      it('renders a <a> tag for the content', () => {
+        expect(content).to.have.tagName('a')
+      })
+
+      it('passes the right props to the <a> tag', () => {
+        const expectedProps = {
+          href: 'custom-link',
+          target: '_blank',
+          title: '',
+        }
+
+        expect(content.props()).to.contains(expectedProps)
+      })
+    })
+  })
+
+  describe('with linkTitle prop', () => {
+    describe('with linkHref prop', () => {
+      const similarProjectCard = mount(
+        <SimilarProjectCard linkHref="custom-link" linkTitle="custom-title" />
+      )
+      const content = similarProjectCard.find('.k-ProjectSimilarCard__content')
+
+      it('passes the title to the content link', () => {
+        expect(content.props().title).to.eq('custom-title')
+      })
+    })
+
+    describe('without linkHref prop', () => {
+      const similarProjectCard = mount(
+        <SimilarProjectCard linkTitle="custom-title" />
+      )
+      const content = similarProjectCard.find('.k-ProjectSimilarCard__content')
+
+      it('passes an empty title to the content tag', () => {
+        expect(content.props().title).to.be.null
+      })
+    })
+  })
+
+  describe('with linkTarget prop', () => {
+    describe('with linkHref prop', () => {
+      const similarProjectCard = mount(
+        <SimilarProjectCard linkHref="custom-link" linkTarget="_self" />
+      )
+      const content = similarProjectCard.find('.k-ProjectSimilarCard__content')
+
+      it('passes the target to the content link', () => {
+        expect(content.props().target).to.eq('_self')
+      })
+    })
+
+    describe('without linkHref prop', () => {
+      const similarProjectCard = mount(
+        <SimilarProjectCard linkTarget="_self" />
+      )
+      const content = similarProjectCard.find('.k-ProjectSimilarCard__content')
+
+      it('passes an empty target to the content tag', () => {
+        expect(content.props().target).to.be.null
+      })
+    })
+  })
 })
