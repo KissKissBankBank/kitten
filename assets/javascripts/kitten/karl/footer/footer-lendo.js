@@ -20,7 +20,6 @@ export class KarlFooterLendo extends Component {
       <Row
         lightTopBorder>
         <Marger top="3" bottom="3">
-
           <Grid>
             <GridCol col-m="6" col-l="7">
               <Grid>
@@ -43,7 +42,6 @@ export class KarlFooterLendo extends Component {
                 </GridCol>
               </Grid>
             </GridCol>
-
             <GridCol
               col-m="6" col-l="5"
               className={classNames('k-u-margin-top-triple@s-down',
@@ -69,7 +67,6 @@ export class KarlFooterLendo extends Component {
               </div>
             </GridCol>
           </Grid>
-
         </Marger>
       </Row>
     )
@@ -168,7 +165,6 @@ export class KarlFooterLendo extends Component {
   renderNotice() {
     return(
       <Row>
-
         <Grid>
           <GridCol col-xs="8" offset-xs="2" col-s="10" offset-s="1" col-m="6" offset-m="0" col-l="4">
             <div className="k-FooterLendo__notice__logo">
@@ -187,7 +183,6 @@ export class KarlFooterLendo extends Component {
               </Paragraph>
             </div>
           </GridCol>
-
           <GridCol
             col-xs="8" offset-xs="2" col-s="10" offset-s="1" col-m="6" offset-m="0" col-l="4"
             className="k-u-margin-top-triple@s-down">
@@ -204,7 +199,7 @@ export class KarlFooterLendo extends Component {
                 modifier="quaternary"
                 className="k-u-align-left"
                 margin={ false }>
-                KissKissBankBank & Co est agent de l'institution financière&nbsp;
+                KissKissBankBank & Co est agent de l’institution financière&nbsp;
                 <span className="k-u-decoration-underline">
                   MANGOPAY SA.
                 </span>
@@ -212,7 +207,6 @@ export class KarlFooterLendo extends Component {
               </Paragraph>
             </div>
           </GridCol>
-
           <GridCol
             col-l="4"
             className={classNames('k-FooterLendo__notice--copyright',
@@ -227,7 +221,6 @@ export class KarlFooterLendo extends Component {
             </div>
           </GridCol>
         </Grid>
-
       </Row>
     )
   }
