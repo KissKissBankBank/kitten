@@ -235,14 +235,15 @@ class SimilarProjectCardComponent extends Component {
   }
 
   hasLink() {
-    return !this.props.loading && !!this.props.link.href
+    return !this.props.loading && !!this.props.link && !!this.props.link.href
   }
 
   contentTagProps() {
-    const { className, target, ...linkProps } = this.props.link
     const tagClassName = 'k-ProjectSimilarCard__content'
 
     if (!this.hasLink()) return { className: tagClassName }
+
+    const { className, target, ...linkProps } = this.props.link
 
     return {
       ...linkProps,
