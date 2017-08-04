@@ -3,7 +3,7 @@
     box-sizing: border-box;
   }
 
-  .k-FooterLendo__network--text {
+  .k-FooterLendo__network__text {
     text-align: center;
 
     @include k-media-min('l') {
@@ -11,7 +11,7 @@
     }
   }
 
-  .k-FooterLendo__network--followText {
+  .k-FooterLendo__network__followText {
     text-align: center;
 
     @include k-media-min('l') {
@@ -20,7 +20,7 @@
     }
   }
 
-  .k-FooterLendo__network--follow {
+  .k-FooterLendo__network__follow {
     align-self: center;
   }
 
@@ -31,7 +31,7 @@
     }
   }
 
-  .k-FooterLendo__notice--copyright {
+  .k-FooterLendo__notice__copyright {
     text-align: center;
 
     @include k-media-min('l') {
@@ -41,7 +41,7 @@
     }
   }
 
-  .k-FooterLendo__notice__logos--list--item {
+  .k-FooterLendo__notice__logos--listItem {
     align-self: flex-end;
   }
 
@@ -52,7 +52,7 @@
     }
   }
 
-  .k-FooterLendo__logo--img {
+  .k-FooterLendo__logo__img {
     text-align: center;
 
     > img,
@@ -73,7 +73,7 @@
     }
   }
 
-  .k-FooterLendo__logo--imgMangopay {
+  .k-FooterLendo__logo__imgMangopay {
     width: k-px-to-rem(100px);
 
     @include k-media-max('m') {

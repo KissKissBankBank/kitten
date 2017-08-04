@@ -124,9 +124,9 @@ export class KarlFooterLendo extends Component {
         <Marger top="5" bottom="5">
           <Grid>
             <GridCol col-l="2">
-              <div className={classNames('k-FooterLendo__logo--img',
+              <div className={classNames('k-FooterLendo__logo__img',
                                          'k-u-margin-bottom-triple',
-                                         'k-FooterLendo__logo--imgLendo') }>
+                                         'k-FooterLendo__logo__imgLendo') }>
                 <img
                   src="/assets/brand/new-lendopolis.svg"
                   alt="" />
@@ -168,7 +168,7 @@ export class KarlFooterLendo extends Component {
         <Grid>
           <GridCol col-xs="8" offset-xs="2" col-s="10" offset-s="1" col-m="6" offset-m="0" col-l="4">
             <div className="k-FooterLendo__notice__logo">
-              <div className={classNames('k-FooterLendo__logo--img',
+              <div className={classNames('k-FooterLendo__logo__img',
                                          'k-u-margin-bottom-single') }>
                 <img
                   src="/assets/partners/french-authorities.svg"
@@ -187,12 +187,12 @@ export class KarlFooterLendo extends Component {
             col-xs="8" offset-xs="2" col-s="10" offset-s="1" col-m="6" offset-m="0" col-l="4"
             className="k-u-margin-top-triple@s-down">
             <div className="k-FooterLendo__notice__logo">
-              <div className={classNames('k-FooterLendo__logo--img',
+              <div className={classNames('k-FooterLendo__logo__img',
                                          'k-u-margin-bottom-single') }>
                 <img
                   src="/assets/partners/mangopay.svg"
                   alt="MANGOPAY"
-                  className="k-FooterLendo__logo--imgMangopay"
+                  className="k-FooterLendo__logo__imgMangopay"
                 />
               </div>
               <Paragraph
