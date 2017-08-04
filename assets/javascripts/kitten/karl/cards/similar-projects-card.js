@@ -70,12 +70,9 @@ class KarlSimilarProjectsCardBase extends React.Component {
   }
 
   newProjectsList() {
-    const projects = this.state.projects.slice(0)
-    const firstProject = projects.shift()
+    const projects = this.state.projects
 
-    projects.push(firstProject)
-
-    return projects
+    return [...projects.slice(1), projects[0]]
   }
 
   handleOnRefreshClick() {
