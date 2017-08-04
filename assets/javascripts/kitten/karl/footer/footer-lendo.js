@@ -25,7 +25,7 @@ export class KarlFooterLendo extends Component {
               <Grid>
                 <GridCol col-m="12" col-l="5">
                   <Paragraph
-                    className="k-FooterLendo__network--text"
+                    className="k-FooterLendo__network__text"
                     modifier="tertiary"
                     margin={ false }>
                     Inscrivez-vous à notre Newsletter&nbsp;
@@ -45,13 +45,13 @@ export class KarlFooterLendo extends Component {
             <GridCol
               col-m="6" col-l="5"
               className={classNames('k-u-margin-top-triple@s-down',
-                                    'k-FooterLendo__network--follow') }>
+                                    'k-FooterLendo__network__follow') }>
               <div className="k-FooterLendo__network__logo">
-                <div className="k-FooterLendo__network--follow">
+                <div className="k-FooterLendo__network__follow">
                   <Paragraph
                     modifier="tertiary"
                     margin={ false }
-                    className="k-FooterLendo__network--followText">
+                    className="k-FooterLendo__network__followText">
                     Suivez nous
                   </Paragraph>
                 </div>
@@ -209,7 +209,7 @@ export class KarlFooterLendo extends Component {
           </GridCol>
           <GridCol
             col-l="4"
-            className={classNames('k-FooterLendo__notice--copyright',
+            className={classNames('k-FooterLendo__notice__copyright',
                                   'k-u-margin-top-triple') }>
             <div>
               <Paragraph

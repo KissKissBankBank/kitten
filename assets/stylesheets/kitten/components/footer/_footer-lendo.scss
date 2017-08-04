@@ -1,8 +1,4 @@
 @mixin k-FooterLendo {
-  .k-FooterLendo {
-    box-sizing: border-box;
-  }
-
   .k-FooterLendo__network__text {
     text-align: center;
 
@@ -39,10 +35,6 @@
       align-self: flex-end;
       margin-top: 0;
     }
-  }
-
-  .k-FooterLendo__notice__logos--listItem {
-    align-self: flex-end;
   }
 
   .k-FooterLendo__notice__logo {
