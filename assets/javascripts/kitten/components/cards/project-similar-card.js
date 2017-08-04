@@ -234,6 +234,10 @@ class SimilarProjectCardComponent extends Component {
     ]
   }
 
+  hasLink() {
+    return !this.props.loading && !!this.props.linkHref
+  }
+
   render() {
     const {
       className,
@@ -244,10 +248,10 @@ class SimilarProjectCardComponent extends Component {
       className,
     )
 
-    const Tag = this.props.linkHref && !this.props.loading ? 'a' : 'div'
-    const href = this.props.loading ? null : this.props.linkHref
-    const title = this.props.loading ? null : this.props.linkTitle
-    const target = this.props.loading ? null : this.props.linkTarget
+    const Tag = this.hasLink() ? 'a' : 'div'
+    const href = this.hasLink() ? this.props.linkHref : null
+    const title = this.hasLink() ? this.props.linkTitle : null
+    const target = this.hasLink() ? this.props.linkTarget : null
 
     return (
       <div className={ ProjectSimilarCardClassName }>
