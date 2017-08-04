@@ -31,7 +31,7 @@ export class KarlFooterLendo extends Component {
                     margin={ false }>
                     Inscrivez-vous à notre Newsletter&nbsp;
                     <span className="k-u-hidden@m-down">
-                      et à l'alerte nouveau projet
+                      et à l’alerte nouveau projet
                     </span>
                   </Paragraph>
                 </GridCol>
