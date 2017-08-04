@@ -250,7 +250,7 @@ describe('<SimilarProjectCard />', () => {
 
     describe('with loading prop', () => {
       const similarProjectCard = mount(
-        <SimilarProjectCard linkHref="custom-link" loading={ true }/>
+        <SimilarProjectCard linkHref="custom-link" loading />
       )
       const content = similarProjectCard.find('.k-ProjectSimilarCard__content')
 
