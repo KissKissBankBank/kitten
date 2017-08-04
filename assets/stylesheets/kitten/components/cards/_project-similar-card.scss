@@ -98,4 +98,9 @@
   .k-ProjectSimilarCard__loading {
     justify-content: center;
   }
+
+  a.k-ProjectSimilarCard__content {
+    color: inherit;
+    text-decoration: inherit;
+  }
 }

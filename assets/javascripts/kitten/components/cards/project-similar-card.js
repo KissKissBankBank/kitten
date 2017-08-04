@@ -244,12 +244,23 @@ class SimilarProjectCardComponent extends Component {
       className,
     )
 
+    const Tag = this.props.linkHref && !this.props.loading ? 'a' : 'div'
+    const href = this.props.loading ? null : this.props.linkHref
+    const title = this.props.loading ? null : this.props.linkTitle
+    const target = this.props.loading ? null : this.props.linkTarget
+
     return (
       <div className={ ProjectSimilarCardClassName }>
         { this.renderHeader() }
         <Separator />
-        { this.renderProject() }
-        { this.renderLoader() }
+        <Tag
+          className="k-ProjectSimilarCard__content"
+          href={ href }
+          target={ target }
+          title={ title }>
+          { this.renderProject() }
+          { this.renderLoader() }
+        </Tag>
       </div>
     )
   }
@@ -270,6 +281,9 @@ SimilarProjectCardComponent.defaultProps = {
   loading: false,
   leftArrowDisabled: true,
   rightArrowDisabled: true,
+  linkHref: null,
+  linkTitle: '',
+  linkTarget: '_blank',
 }
 
 // Add generic card styles.
