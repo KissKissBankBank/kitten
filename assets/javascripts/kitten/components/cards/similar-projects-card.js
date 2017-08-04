@@ -11,6 +11,12 @@ export class SimilarProjectsCard extends Component {
     }
   }
 
+  componentWillReceiveProps(nextProps) {
+    if (this.props.projects != nextProps.projects) {
+      this.setState({ currentIndex: 0 })
+    }
+  }
+
   curryHandleArrowClick(newCurrentIndex, callback) {
     return () => {
       this.setState({ currentIndex: newCurrentIndex })

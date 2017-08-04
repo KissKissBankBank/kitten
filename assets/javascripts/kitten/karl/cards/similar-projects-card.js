@@ -70,10 +70,41 @@ const projectsWithInfos = [
   },
 ]
 
+class KarlSimilarProjectsCardBase extends React.Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      projects: this.props.projects,
+    }
+
+    this.handleOnRefreshClick = this.handleOnRefreshClick.bind(this)
+  }
+
+  newProjectsList() {
+    const projects = this.state.projects
+
+    return [...projects.slice(1), projects[0]]
+  }
+
+  handleOnRefreshClick() {
+    this.setState({ projects: this.newProjectsList() })
+  }
+
+  render() {
+    return (
+      <SimilarProjectsCard
+        onRefreshClick={ this.handleOnRefreshClick }
+        projects={ this.state.projects }
+      />
+    )
+  }
+}
+
 export const KarlSimilarProjectsCard = () => (
-  <SimilarProjectsCard projects={ projectsWithImage } />
+  <KarlSimilarProjectsCardBase projects={ projectsWithImage } />
 )
 
 export const KarlSimilarProjectsWithInfosCard = () => (
-  <SimilarProjectsCard projects={ projectsWithInfos } />
+  <KarlSimilarProjectsCardBase projects={ projectsWithInfos } />
 )
