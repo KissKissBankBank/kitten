@@ -291,10 +291,15 @@ SimilarProjectCardComponent.defaultProps = {
   loading: false,
   leftArrowDisabled: true,
   rightArrowDisabled: true,
-  link: {
-    href: null,
-    target: '_blank',
-  },
+
+  // `link` prop should be formatted as follow:
+  // {
+  //   href: 'link-url',
+  //   target: '_blank',
+  //   className: 'link-custom-classname',
+  //   …
+  // }
+  link: null,
 }
 
 // Add generic card styles.
