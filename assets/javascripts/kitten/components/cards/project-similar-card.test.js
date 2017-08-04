@@ -24,6 +24,16 @@ describe('<SimilarProjectCard />', () => {
       expect(similarProjectCard).to.have.className('k-ProjectSimilarCard')
     })
 
+    it('adds the right class to the content tag', () => {
+      const similarProjectCard = mount(
+        <SimilarProjectCard linkHref="custom-link" />
+      )
+
+      const content = similarProjectCard.find('.k-ProjectSimilarCard__content')
+
+      expect(content).to.have.length(1)
+    })
+
     describe('left arrow', () => {
       it('is disabled', () => {
         expect(leftArrowButton).to.have.attr('disabled')
@@ -237,104 +247,156 @@ describe('<SimilarProjectCard />', () => {
     })
   })
 
-  describe('with linkHref prop', () => {
-    it('adds the right class to the content tag', () => {
-      const similarProjectCard = mount(
-        <SimilarProjectCard linkHref="custom-link" />
-      )
-
-      const content = similarProjectCard.find('.k-ProjectSimilarCard__content')
-
-      expect(content).to.have.length(1)
-    })
+  describe('with link prop', () => {
+    const linkProps = {
+      href: 'custom-link',
+    }
 
     describe('with loading prop', () => {
-      const similarProjectCard = mount(
-        <SimilarProjectCard linkHref="custom-link" loading />
-      )
-      const content = similarProjectCard.find('.k-ProjectSimilarCard__content')
+      describe('by default', () => {
+        const similarProjectCard = mount(
+          <SimilarProjectCard link={ linkProps } loading />
+        )
+        const content = similarProjectCard.find('.k-ProjectSimilarCard__content')
 
-      it('renders a <div> tag for the content', () => {
-        expect(content).to.have.tagName('div')
+        it('renders a <div> tag for the content', () => {
+          expect(content).to.have.tagName('div')
+        })
+
+        it('passes the right props to the <div> tag', () => {
+          expect(content.props()).not.to.any.keys('href', 'target')
+        })
       })
 
-      it('passes the right props to the <div> tag', () => {
-        const expectedProps = {
-          href: null,
-          target: null,
-          title: null,
+      describe('with link custom target', () => {
+        const withTargetLinkProps = {
+          href: 'custom-link',
+          target: '_self',
         }
+        const similarProjectCard = mount(
+          <SimilarProjectCard link={ withTargetLinkProps } loading />
+        )
+        const content = similarProjectCard.find('.k-ProjectSimilarCard__content')
 
-        expect(content.props()).to.contains(expectedProps)
+        it('passes the right props to the <div> tag', () => {
+          expect(content.props()).not.to.any.keys('href', 'target')
+        })
+      })
+
+      describe('with link className', () => {
+        const withClassNameLinkProps = {
+          href: 'custom-link',
+          className: 'custom-classname',
+        }
+        const similarProjectCard = mount(
+          <SimilarProjectCard link={ withClassNameLinkProps } loading />
+        )
+        const content = similarProjectCard.find('.k-ProjectSimilarCard__content')
+
+        it('passes the right props to the <div> tag', () => {
+          expect(content.props()).not.to.any.keys('href', 'target')
+        })
+
+        it('does not pass custom className to tag content', () => {
+          expect(content).not.to.have.className('custom-classname')
+        })
+      })
+
+      describe('with link custom prop', () => {
+        const withTitleLinkProps = {
+          href: 'custom-link',
+          title: 'custom-title',
+        }
+        const similarProjectCard = mount(
+          <SimilarProjectCard link={ withTitleLinkProps } loading />
+        )
+        const content = similarProjectCard.find('.k-ProjectSimilarCard__content')
+
+        it('passes the right props to the <div> tag', () => {
+          expect(content.props()).not.to.any.keys('href', 'title')
+        })
       })
     })
 
     describe('without loading prop', () => {
-      const similarProjectCard = mount(
-        <SimilarProjectCard linkHref="custom-link" />
-      )
-      const content = similarProjectCard.find('.k-ProjectSimilarCard__content')
+      describe('by default', () => {
+        const similarProjectCard = mount(
+          <SimilarProjectCard link={ linkProps } />
+        )
+        const content = similarProjectCard.find('.k-ProjectSimilarCard__content')
 
-      it('renders a <a> tag for the content', () => {
-        expect(content).to.have.tagName('a')
+        it('renders a <a> tag for the content', () => {
+          expect(content).to.have.tagName('a')
+        })
+
+        it('passes the right props to the <a> tag', () => {
+          const expectedProps = {
+            href: 'custom-link',
+            target: '_blank',
+          }
+
+          expect(content.props()).to.contains(expectedProps)
+        })
       })
 
-      it('passes the right props to the <a> tag', () => {
-        const expectedProps = {
+      describe('with link custom target', () => {
+        const withTargetLinkProps = {
           href: 'custom-link',
-          target: '_blank',
-          title: '',
+          target: '_self',
         }
+        const similarProjectCard = mount(
+          <SimilarProjectCard link={ withTargetLinkProps } />
+        )
+        const content = similarProjectCard.find('.k-ProjectSimilarCard__content')
 
-        expect(content.props()).to.contains(expectedProps)
+        it('passes the right props to the <a> tag', () => {
+          const expectedProps = {
+            href: 'custom-link',
+            target: '_self',
+          }
+
+          expect(content.props()).to.contains(expectedProps)
+        })
       })
-    })
-  })
 
-  describe('with linkTitle prop', () => {
-    describe('with linkHref prop', () => {
-      const similarProjectCard = mount(
-        <SimilarProjectCard linkHref="custom-link" linkTitle="custom-title" />
-      )
-      const content = similarProjectCard.find('.k-ProjectSimilarCard__content')
+      describe('with link className', () => {
+        const withClassNameLinkProps = {
+          href: 'custom-link',
+          className: 'custom-classname',
+        }
+        const similarProjectCard = mount(
+          <SimilarProjectCard link={ withClassNameLinkProps } />
+        )
+        const content = similarProjectCard.find('.k-ProjectSimilarCard__content')
 
-      it('passes the title to the content link', () => {
-        expect(content.props().title).to.eq('custom-title')
+        it('passes the right props to the <a> tag', () => {
+          const expectedProps = {
+            href: 'custom-link',
+            className: 'k-ProjectSimilarCard__content custom-classname',
+          }
+
+          expect(content.props()).to.contains(expectedProps)
+        })
       })
-    })
 
-    describe('without linkHref prop', () => {
-      const similarProjectCard = mount(
-        <SimilarProjectCard linkTitle="custom-title" />
-      )
-      const content = similarProjectCard.find('.k-ProjectSimilarCard__content')
+      describe('with link custom prop', () => {
+        const withTitleLinkProps = {
+          href: 'custom-link',
+          title: 'custom-title',
+        }
+        const similarProjectCard = mount(
+          <SimilarProjectCard link={ withTitleLinkProps } />
+        )
+        const content = similarProjectCard.find('.k-ProjectSimilarCard__content')
 
-      it('passes an empty title to the content tag', () => {
-        expect(content.props().title).to.be.null
-      })
-    })
-  })
+        it('passes the right props to the <a> tag', () => {
+          const expectedProps = {
+            href: 'custom-link',
+            title: 'custom-title',
+          }
 
-  describe('with linkTarget prop', () => {
-    describe('with linkHref prop', () => {
-      const similarProjectCard = mount(
-        <SimilarProjectCard linkHref="custom-link" linkTarget="_self" />
-      )
-      const content = similarProjectCard.find('.k-ProjectSimilarCard__content')
-
-      it('passes the target to the content link', () => {
-        expect(content.props().target).to.eq('_self')
-      })
-    })
-
-    describe('without linkHref prop', () => {
-      const similarProjectCard = mount(
-        <SimilarProjectCard linkTarget="_self" />
-      )
-      const content = similarProjectCard.find('.k-ProjectSimilarCard__content')
-
-      it('passes an empty target to the content tag', () => {
-        expect(content.props().target).to.be.null
+          expect(content.props()).to.contains(expectedProps)
+        })
       })
     })
   })

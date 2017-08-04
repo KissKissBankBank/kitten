@@ -235,7 +235,20 @@ class SimilarProjectCardComponent extends Component {
   }
 
   hasLink() {
-    return !this.props.loading && !!this.props.linkHref
+    return !this.props.loading && !!this.props.link.href
+  }
+
+  contentTagProps() {
+    const { className, target, ...linkProps } = this.props.link
+    const tagClassName = 'k-ProjectSimilarCard__content'
+
+    if (!this.hasLink()) return { className: tagClassName }
+
+    return {
+      ...linkProps,
+      target: target || '_blank',
+      className: classNames(tagClassName, className),
+    }
   }
 
   render() {
@@ -249,19 +262,12 @@ class SimilarProjectCardComponent extends Component {
     )
 
     const Tag = this.hasLink() ? 'a' : 'div'
-    const href = this.hasLink() ? this.props.linkHref : null
-    const title = this.hasLink() ? this.props.linkTitle : null
-    const target = this.hasLink() ? this.props.linkTarget : null
 
     return (
       <div className={ ProjectSimilarCardClassName }>
         { this.renderHeader() }
         <Separator />
-        <Tag
-          className="k-ProjectSimilarCard__content"
-          href={ href }
-          target={ target }
-          title={ title }>
+        <Tag { ...this.contentTagProps() }>
           { this.renderProject() }
           { this.renderLoader() }
         </Tag>
@@ -285,9 +291,10 @@ SimilarProjectCardComponent.defaultProps = {
   loading: false,
   leftArrowDisabled: true,
   rightArrowDisabled: true,
-  linkHref: null,
-  linkTitle: '',
-  linkTarget: '_blank',
+  link: {
+    href: null,
+    target: '_blank',
+  },
 }
 
 // Add generic card styles.
