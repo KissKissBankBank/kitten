@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `InfoLines` example with `withoutResponsive` prop.
 - Feature: Add new `Progress` example with custom color.
 - Fix: Add link props to `KarlProjectSimilarCard` and
   `KarlProjectSimilarCardInfos` examples.
