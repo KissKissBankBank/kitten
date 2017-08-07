@@ -4,12 +4,17 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `withoutResponsive` prop to `InfoLines` component.
-- Feature: Add `color` prop to `Progress` component.
-- Fix: Add link props to `SimilarProjectCard` component.
-- Fix: Pass `onRefreshClick` prop correctly to `SimilarProjectCard` component in
+## [13.7.0] - 2017-08-07
+
+Features:
+- Add `withoutResponsive` prop to `InfoLines` component.
+- Add `color` prop to `Progress` component.
+
+Fixes:
+- Add link props to `SimilarProjectCard` component.
+- Pass `onRefreshClick` prop correctly to `SimilarProjectCard` component in
   `SimilarProjectsCard` component.
-- Fix: Set current index to 0 when `projects` props is updated in
+- Set current index to 0 when `projects` props is updated in
   `SimilarProjectsCard` component.
 
 ## [13.6.1] - 2017-08-03
