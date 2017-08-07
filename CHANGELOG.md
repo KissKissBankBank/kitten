@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `color` prop to `Progress` component.
 - Fix: Add link props to `SimilarProjectCard` component.
 - Fix: Pass `onRefreshClick` prop correctly to `SimilarProjectCard` component in
   `SimilarProjectsCard` component.

@@ -28,4 +28,13 @@ describe('<Progress />', () => {
     const slider = component.find('.k-Progress__slider')
     expect(slider).to.have.style('width', '42%')
   })
+
+  describe('with color prop', () => {
+    const component = shallow(<Progress color="red" />)
+    const slider = component.find('.k-Progress__slider')
+
+    it('renders a progress bar with red color', () => {
+      expect(slider).to.have.style('background-color', 'red')
+    })
+  })
 })
