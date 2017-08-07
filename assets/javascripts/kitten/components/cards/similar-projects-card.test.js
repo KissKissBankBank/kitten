@@ -91,7 +91,7 @@ describe('<SimilarProjectsCard />', () => {
   })
 
   describe('with projects props', () => {
-    describe('on ComponentDidMount', () => {
+    describe('on componentDidMount', () => {
       describe('with one basic project', () => {
         const similarProjectsCard = shallow(
           <SimilarProjectsCard projects={ [project1] } />
@@ -150,6 +150,33 @@ describe('<SimilarProjectsCard />', () => {
 
           expect(staticSimilarProjectCard.props()).to.contains(projectProps)
         })
+      })
+    })
+
+    describe('on componentWillReceiveProps', () => {
+      let similarProjectsCard
+
+      before(() => {
+        similarProjectsCard = mount(
+          <SimilarProjectsCard
+            projects={ [project1, project2, project3] }
+          />
+        )
+
+        similarProjectsCard.setState({ currentIndex: 2 })
+      })
+
+      it('updates the current index to 0', () => {
+        expect(similarProjectsCard.state('currentIndex')).to.eq(2)
+
+        similarProjectsCard.setProps({
+          projects: [
+            project2,
+            project1,
+          ]
+        })
+
+        expect(similarProjectsCard.state('currentIndex')).to.eq(0)
       })
     })
 
@@ -276,7 +303,8 @@ describe('<SimilarProjectsCard />', () => {
         before(() => {
           similarProjectsCard = mount(
             <SimilarProjectsCard
-              projects={ [project1, project2, project3] } />
+              projects={ [project1, project2, project3] }
+            />
           )
           staticSimilarProjectCard = similarProjectsCard
             .find(SimilarProjectCard)

@@ -5,7 +5,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add new `Progress` example with custom color.
+- Fix: Add link props to `KarlProjectSimilarCard` and
+  `KarlProjectSimilarCardInfos` examples.
 - Fix: Reorder components imports.
+- Fix: Add `onRefreshClick` handler to `KarlSimilarProjectsCard` and
+  `KarlSimilarProjectsWithInfosCard` examples.
 
 ## [13.6.0] - 2017-08-01
 
