@@ -22,12 +22,12 @@ export class Progress extends Component {
 
     return (
       <div
+        { ...others }
         role="progressbar"
         aria-valuemin="0"
         aria-valuemax="100"
         aria-valuenow={ this.props.value }
-        className={ progressClassName }
-        { ...others }>
+        className={ progressClassName }>
         <div className="k-Progress__ramp">
           <div
             className="k-Progress__slider"
