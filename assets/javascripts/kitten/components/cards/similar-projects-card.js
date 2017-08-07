@@ -11,6 +11,12 @@ export class SimilarProjectsCard extends Component {
     }
   }
 
+  componentWillReceiveProps(nextProps) {
+    if (this.props.projects != nextProps.projects) {
+      this.setState({ currentIndex: 0 })
+    }
+  }
+
   curryHandleArrowClick(newCurrentIndex, callback) {
     return () => {
       this.setState({ currentIndex: newCurrentIndex })
@@ -45,12 +51,11 @@ export class SimilarProjectsCard extends Component {
 
     if (!project) return
 
+    const { description, ...otherProjectProps } = project
+
     return {
-      imageSrc: project.imageSrc,
-      title: project.title,
-      paragraph: project.description,
-      tags: project.tags,
-      infos: project.infos,
+      ...otherProjectProps,
+      paragraph: description,
     }
   }
 
@@ -63,7 +68,6 @@ export class SimilarProjectsCard extends Component {
   render() {
     const {
       projects,
-      onRefreshClick,
       onLeftArrowClick,
       onRightArrowClick,
       ...others,
