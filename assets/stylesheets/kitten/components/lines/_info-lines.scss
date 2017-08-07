@@ -46,7 +46,7 @@
     }
   }
 
-  .k-InfoLines--withoutResponsiveVersion {
+  .k-InfoLines--withoutResponsive {
     .k-InfoLines__line {
       @include k-media-max('s') {
         flex-direction: row;

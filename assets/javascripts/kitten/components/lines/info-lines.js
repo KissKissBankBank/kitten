@@ -48,7 +48,7 @@ export class InfoLines extends Component {
       className,
       infos,
       withoutTopBottomBorder,
-      withoutResponsiveVersion,
+      withoutResponsive,
       style,
       ...others,
     } = this.props
@@ -57,7 +57,7 @@ export class InfoLines extends Component {
       'k-InfoLines',
       {
         'k-InfoLines--withoutTopBottomBorder': withoutTopBottomBorder,
-        'k-InfoLines--withoutResponsiveVersion': withoutResponsiveVersion,
+        'k-InfoLines--withoutResponsive': withoutResponsive,
       },
       className,
     )
@@ -83,5 +83,5 @@ InfoLines.defaultProps = {
   className: null,
   infos: [], // Eg: [{ key: …, value: …, id: … }]
   withoutTopBottomBorder: false,
-  withoutResponsiveVersion: false,
+  withoutResponsive: false,
 }

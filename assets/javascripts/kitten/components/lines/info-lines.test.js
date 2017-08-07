@@ -53,11 +53,11 @@ describe('<InfoLines />', () => {
     })
   })
 
-  describe('with withoutResponsiveVersion prop', () => {
-    const infoLines = shallow(<InfoLines withoutResponsiveVersion />)
+  describe('with withoutResponsive prop', () => {
+    const infoLines = shallow(<InfoLines withoutResponsive />)
 
     it('has a good class', () => {
-      expect(infoLines).to.have.className('k-InfoLines--withoutResponsiveVersion')
+      expect(infoLines).to.have.className('k-InfoLines--withoutResponsive')
     })
   })
 
