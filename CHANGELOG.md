@@ -7,19 +7,52 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Add `Text` component.
 - Feature: Add `align`, `color`, `decoration`, `line-height`, `size`, `style`,   
   `transform` and `weight` utilities.
-- Feature: Accept other props to `GridCol` component.
-- Feature: Add `Modal` component.
-- Feature: Add `withoutTopBottomBorder`, `borderColor` and other props
+
+## [13.7.0] - 2017-08-07
+
+Features:
+- Add `withoutResponsive` prop to `InfoLines` component.
+- Add `color` prop to `Progress` component.
+
+Fixes:
+- Add link props to `SimilarProjectCard` component.
+- Pass `onRefreshClick` prop correctly to `SimilarProjectCard` component in
+  `SimilarProjectsCard` component.
+- Set current index to 0 when `projects` props is updated in
+  `SimilarProjectsCard` component.
+
+## [13.6.1] - 2017-08-03
+
+Fix:
+- Add `type` attribute to navigation buttons in `SimilarProjectCard`
+  component.
+
+## [13.6.0] - 2017-08-01
+
+Features:
+- Add external trigger to `Modal` component.
+- Add responsive mixin `k-u-margin(…)`.
+- Add `Loader` on `ProjectSimilarCard` component.
+- Add `leftArrowDisabled`, `rightArrowDisabled`, `onLeftArrowClick` and
+  `onRightArrowClick` props to `ProjectSimilarCard` component.
+- Add `SimilarProjectsCard` component.
+
+## [13.5.0] - 2017-07-28
+
+Features:
+- Accept other props to `GridCol` component.
+- Add `Modal` component.
+- Add `withoutTopBottomBorder`, `borderColor` and other props
   to `InfoLines` component.
-- Feature: `LinkList` responsive.
-- Feature: Add new modifier `k-LinkList--withoutMargin` in `LinkList`.
-- Feature: Add `withoutPointerEvents` prop to `Label` component.
-- Feature: Add `Loader` and `LoaderWithParagraph` components.
-- Feature: Add `icon` and `iconWithMinWidth` props to `Button` component.
-- Feature: Add social button icon components (`FacebookButtonIcon`, …).
-- Feature: Add border utilities (`k-u-border-left-line1`, …).
-- Feature: Add new `ProjectSimilarCard` component.
-- Feature: Add new `RefreshIcon` component.
+- `LinkList` responsive.
+- Add new modifier `k-LinkList--withoutMargin` in `LinkList`.
+- Add `withoutPointerEvents` prop to `Label` component.
+- Add `Loader` and `LoaderWithParagraph` components.
+- Add `icon` and `iconWithMinWidth` props to `Button` component.
+- Add social button icon components (`FacebookButtonIcon`, …).
+- Add border utilities (`k-u-border-left-line1`, …).
+- Add new `ProjectSimilarCard` component.
+- Add new `RefreshIcon` component.
 
 ## [13.4.0] - 2017-07-20
 

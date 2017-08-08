@@ -10,8 +10,9 @@ import { Separator } from 'kitten/components/layout/separator'
 import { TagList } from 'kitten/components/lists/tag-list'
 import { RightArrowIcon } from 'kitten/components/icons/right-arrow-icon'
 import { LockIcon } from 'kitten/components/icons/lock-icon'
+import { Loader } from 'kitten/components/loaders/loader'
 
-class ProjectSimilarCardComponent extends Component {
+class SimilarProjectCardComponent extends Component {
   constructor() {
     super()
 
@@ -35,6 +36,34 @@ class ProjectSimilarCardComponent extends Component {
     )
   }
 
+  renderLeftArrow() {
+    return(
+      <ButtonIcon
+        size="tiny"
+        type="button"
+        verticalArrow
+        disabled={ this.props.leftArrowDisabled }
+        onClick={ this.props.onLeftArrowClick }>
+        <RightArrowIcon
+          className={ classNames('k-ButtonIcon__svg',
+                                 'k-ButtonIcon__svg--mirror') } />
+      </ButtonIcon>
+    )
+  }
+
+  renderRightArrow() {
+    return (
+      <ButtonIcon
+        size="tiny"
+        type="button"
+        verticalArrow
+        disabled={ this.props.rightArrowDisabled }
+        onClick={ this.props.onRightArrowClick }>
+        <RightArrowIcon className="k-ButtonIcon__svg" />
+      </ButtonIcon>
+    )
+  }
+
   renderHeader() {
     const {
       step,
@@ -50,18 +79,8 @@ class ProjectSimilarCardComponent extends Component {
                 { step }
               </div>
               <div className="k-ProjectSimilarCard__header--button">
-                <ButtonIcon
-                  size="tiny"
-                  verticalArrow>
-                  <RightArrowIcon
-                    className={ classNames('k-ButtonIcon__svg',
-                                           'k-ButtonIcon__svg--mirror') } />
-                </ButtonIcon>
-                <ButtonIcon
-                  size="tiny"
-                  verticalArrow>
-                  <RightArrowIcon className="k-ButtonIcon__svg" />
-                </ButtonIcon>
+                { this.renderLeftArrow() }
+                { this.renderRightArrow() }
               </div>
             </div>
           </div>
@@ -185,6 +204,54 @@ class ProjectSimilarCardComponent extends Component {
     )
   }
 
+  renderLoader() {
+    const {
+      loading,
+    } = this.props
+
+    if (!loading) return
+
+    return (
+      <Marger top="9" bottom="9">
+        <div className="k-ProjectSimilarCard__grid">
+          <Loader className="k-ProjectSimilarCard__loading" />
+        </div>
+      </Marger>
+    )
+  }
+
+  renderProject() {
+    const {
+      loading,
+    } = this.props
+
+    if (loading) return
+
+    return [
+      this.renderImage(),
+      this.renderDescription(),
+      this.renderInfos(),
+    ]
+  }
+
+  hasLink() {
+    return !this.props.loading && !!this.props.link && !!this.props.link.href
+  }
+
+  contentTagProps() {
+    const tagClassName = 'k-ProjectSimilarCard__content'
+
+    if (!this.hasLink()) return { className: tagClassName }
+
+    const { className, target, ...linkProps } = this.props.link
+
+    return {
+      ...linkProps,
+      target: target || '_blank',
+      className: classNames(tagClassName, className),
+    }
+  }
+
   render() {
     const {
       className,
@@ -195,34 +262,54 @@ class ProjectSimilarCardComponent extends Component {
       className,
     )
 
+    const Tag = this.hasLink() ? 'a' : 'div'
+
     return (
       <div className={ ProjectSimilarCardClassName }>
         { this.renderHeader() }
         <Separator />
-        { this.renderImage() }
-        { this.renderDescription() }
-        { this.renderInfos() }
+        <Tag { ...this.contentTagProps() }>
+          { this.renderProject() }
+          { this.renderLoader() }
+        </Tag>
       </div>
     )
   }
 }
 
-ProjectSimilarCardComponent.defaultProps = {
-  step: "",
+SimilarProjectCardComponent.defaultProps = {
+  step: '',
   imageSrc: null,
-  title: "",
-  paragraph: "",
+  title: '',
+  paragraph: '',
   tags: null, // Eg: [{ key: …, item: … }]
   infos: false, // Eg: [{ key: …, text: …, value: …, locked: … }]
   coloredInfosValues: false,
   refresh: "Refresh",
   onRefreshClick: () => {},
+  onLeftArrowClick: () => {},
+  onRightArrowClick: () => {},
+  loading: false,
+  leftArrowDisabled: true,
+  rightArrowDisabled: true,
+
+  // `link` prop should be formatted as follow:
+  // {
+  //   href: 'link-url',
+  //   target: '_blank',
+  //   className: 'link-custom-classname',
+  //   …
+  // }
+  link: null,
 }
 
 // Add generic card styles.
-export const ProjectSimilarCard = card(ProjectSimilarCardComponent, {
+export const SimilarProjectCard = card(SimilarProjectCardComponent, {
   light: true,
   withBorder: true,
   withShadow: true,
   translateOnHover: true,
 })
+
+// DEPRECATED
+export const ProjectSimilarCard = SimilarProjectCard

@@ -5,8 +5,8 @@ import { InfoLines } from 'kitten/components/lines/info-lines'
 
 describe('<InfoLines />', () => {
   const infos = [
-    { key: 'Lorem', value: 'Ipsum' },
-    { key: 'Dolor', value: 'Sit amet' },
+    { id: '1', key: 'Lorem', value: 'Ipsum' },
+    { id: '2', key: 'Dolor', value: 'Sit amet' },
   ]
 
   describe('by default', () => {
@@ -50,6 +50,14 @@ describe('<InfoLines />', () => {
 
     it('has a good class', () => {
       expect(infoLines).to.have.className('k-InfoLines--withoutTopBottomBorder')
+    })
+  })
+
+  describe('with withoutResponsive prop', () => {
+    const infoLines = shallow(<InfoLines withoutResponsive />)
+
+    it('has a good class', () => {
+      expect(infoLines).to.have.className('k-InfoLines--withoutResponsive')
     })
   })
 

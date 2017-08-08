@@ -4,16 +4,39 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `KarlModal` example.
-- Feature: Add `InfoLines` examples with new modifiers
+## [13.7.0] - 2017-08-07
+
+Features:
+- Add `InfoLines` example with `withoutResponsive` prop.
+- Add new `Progress` example with custom color.
+
+Fixes:
+- Add link props to `KarlProjectSimilarCard` and `KarlProjectSimilarCardInfos`
+  examples.
+- Reorder components imports.
+- Add `onRefreshClick` handler to `KarlSimilarProjectsCard` and
+  `KarlSimilarProjectsWithInfosCard` examples.
+
+## [13.6.0] - 2017-08-01
+
+Features:
+- Add `KarlProjectSimilarLoader` example.
+- Replace `KarlProjectSimilarCard` and `KarlProjectSimilarCardInfos`
+  examples with `KarlSimilarProjectsCard` and
+  `KarlSimilarProjectsWithInfosCard`.
+
+## [13.5.0] - 2017-07-28
+
+Feature:
+- Add `KarlModal` example.
+- Add `InfoLines` examples with new modifiers.
   (`withoutTopBottomBorder`, `borderColor`).
-- Feature: Add new `KarlProjectSimilarCard` and `KarlProjectSimilarCardInfos`
-  component
-- Feature: Add new `ProjectSimilarCard` component.
-- Feature: Add new `Contextual elements` group.
-- Feature: Add `Loader`, `LoaderWithParagraph`
+- Add new `KarlProjectSimilarCard` and `KarlProjectSimilarCardInfos` component.
+- Add new `ProjectSimilarCard` component.
+- Add new `Contextual elements` group.
+- Add `Loader`, `LoaderWithParagraph`
   and `KarlLoaderInButton` examples.
-- Feature: Replace `KarlButtonIconFacebookIcon` by `FacebookButtonIcon`,
+- Replace `KarlButtonIconFacebookIcon` by `FacebookButtonIcon`,
   `KarlButtonIconTwitterIcon` by `TwitterButtonIcon` and
   `KarlButtonIconLinkedinIcon` by `LinkedinButtonIcon`.
 
