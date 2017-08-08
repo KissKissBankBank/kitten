@@ -76,14 +76,6 @@ describe('<Text />', () => {
     })
   })
 
-  describe('with align prop', () => {
-    const component = shallow(<Text align="center" />)
-
-    it('has a good utility class', () => {
-      expect(component).to.have.className('k-u-align-center')
-    })
-  })
-
   describe('with transform prop', () => {
     const component = shallow(<Text transform="uppercase" />)
 
