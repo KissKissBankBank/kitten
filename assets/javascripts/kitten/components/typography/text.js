@@ -22,11 +22,6 @@ export class Text extends Component {
 
     const textClassName = classNames(
       {
-        // Align.
-        'k-u-align-left': align == 'left',
-        'k-u-align-center': align == 'center',
-        'k-u-align-right': align == 'right',
-
         // Color.
         'k-u-color-font1': color == 'font1',
         'k-u-color-primary1': color == 'primary1',
