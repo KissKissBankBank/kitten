@@ -5,7 +5,6 @@ import PropTypes from 'prop-types'
 export class Text extends Component {
   render() {
     const {
-      align,
       className,
       color,
       decoration,
@@ -63,7 +62,6 @@ export class Text extends Component {
 }
 
 Text.propTypes = {
-  align: PropTypes.oneOf(['left', 'center', 'right']),
   color: PropTypes.oneOf(['font1', 'primary1', 'error']),
   decoration: PropTypes.oneOf(['underline']),
   lineHeight: PropTypes.oneOf(['normal']),
@@ -74,7 +72,6 @@ Text.propTypes = {
 }
 
 Text.defaultProps = {
-  align: null,
   className: null,
   color: null,
   decoration: null,
