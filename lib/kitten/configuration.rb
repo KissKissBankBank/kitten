@@ -59,6 +59,7 @@ module Kitten
           components: [
             { path: 'components/typography/title', name: 'Title' },
             { path: 'components/typography/paragraph', name: 'Paragraph' },
+            { path: 'components/typography/text', name: 'Text' },
           ],
         },
         {
