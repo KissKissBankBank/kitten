@@ -47,8 +47,10 @@ export class InfoLines extends Component {
       borderColor,
       className,
       infos,
-      withoutTopBottomBorder,
+      withBorderRadius,
+      withLeftRightBorder,
       withoutResponsive,
+      withoutTopBottomBorder,
       style,
       ...others,
     } = this.props
@@ -56,8 +58,10 @@ export class InfoLines extends Component {
     const infoLinesClassName = classNames(
       'k-InfoLines',
       {
-        'k-InfoLines--withoutTopBottomBorder': withoutTopBottomBorder,
+        'k-InfoLines--withBorderRadius': withBorderRadius,
+        'k-InfoLines--withLeftRightBorder': withLeftRightBorder,
         'k-InfoLines--withoutResponsive': withoutResponsive,
+        'k-InfoLines--withoutTopBottomBorder': withoutTopBottomBorder,
       },
       className,
     )
@@ -82,6 +86,8 @@ InfoLines.defaultProps = {
   borderColor: null,
   className: null,
   infos: [], // Eg: [{ key: …, value: …, id: … }]
-  withoutTopBottomBorder: false,
+  withBorderRadius: false,
+  withLeftRightBorder: false,
   withoutResponsive: false,
+  withoutTopBottomBorder: false,
 }
