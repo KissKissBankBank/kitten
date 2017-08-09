@@ -230,6 +230,7 @@ import TourStep from 'kitten/components/tours/tour-step'
 // Typography
 import { Paragraph } from 'kitten/components/typography/paragraph'
 import { SupTitle } from 'kitten/components/typography/sup-title'
+import { Text } from 'kitten/components/typography/text'
 import { Title } from 'kitten/components/typography/title'
 import {
   KarlParagraph,
@@ -434,6 +435,7 @@ ReactOnRails.register({
   // Typography
   Paragraph,
   SupTitle,
+  Text,
   Title,
   KarlParagraph,
   KarlParagraphQuaternary,
