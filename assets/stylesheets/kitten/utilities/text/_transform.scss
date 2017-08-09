@@ -1,0 +1,17 @@
+/// Text transform utilities.
+///
+/// @group text
+///
+/// @example scss - Usage
+///
+///     @include k-utilities-transform;
+///
+/// @example html
+///
+///     <p class="k-u-transform-uppercase">…</p>
+
+@mixin k-utilities-transform {
+  .k-u-transform-uppercase {
+    text-transform: uppercase;
+  }
+}

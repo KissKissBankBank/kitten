@@ -5,6 +5,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: Remove unknown props in `others` prop to `GridCol` component.
+- Feature: Add `Text` component.
+- Feature: Add `align`, `color`, `decoration`, `line-height`, `size`, `style`,   
+  `transform` and `weight` utilities.
 
 ## [13.7.0] - 2017-08-07
 

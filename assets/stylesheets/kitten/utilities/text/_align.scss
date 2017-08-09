@@ -19,6 +19,10 @@
 ///    <div class="k-u-centered">…</div>
 
 @mixin k-utilities-align {
+  .k-u-align-left {
+    text-align: left;
+  }
+
   .k-u-align-center,
   .k-u-centered { // DEPRECATED
     text-align: center;
