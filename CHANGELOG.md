@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `spreadOutAt` props to `FormActions` component.
 - Fix: Pass `onRefreshClick` prop correctly to `SimilarProjectCard` component in
   `SimilarProjectsCard` component.
 
