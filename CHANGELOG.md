@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Add `withBorderRadius` and `withLeftRightBorder` props
   to `InfoLines` component.
+- Feature: Add `k-u-background-color-background1` utility.
 - Fix: Remove unknown props in `others` prop to `GridCol` component.
 - Feature: Add `Text` component.
 - Feature: Add `align`, `color`, `decoration`, `line-height`, `size`, `style`,   
