@@ -8,7 +8,7 @@ export class FormActions extends Component {
       'k-FormActions',
       className,
       {
-        [`k-FormActions--spreadOut@${spreadOutAt}`]: spreadOutAt
+        [`k-FormActions--spreadOut@${spreadOutAt}`]: spreadOutAt,
       },
     )
 
@@ -21,9 +21,9 @@ export class FormActions extends Component {
 }
 
 FormActions.propTypes = {
-  spreadOutAt: PropTypes.oneOf(['s-up'])
+  spreadOutAt: PropTypes.oneOf(['s-up']),
 }
 
 FormActions.defaultProps = {
-  spreadOutAt: 's-up'
+  spreadOutAt: 's-up',
 }
