@@ -44,6 +44,16 @@ describe('<FormActions.Item />', () => {
     })
   })
 
+  describe('className prop', () => {
+    const component = shallow(
+      <FormActions.Item className="k-FormActions__item--test" />
+    )
+
+    it('has a custom class', () => {
+      expect(component).to.have.className('k-FormActions__item--test')
+    })
+  })
+
   describe('children prop', () => {
     const component = shallow(
       <FormActions.Item>
