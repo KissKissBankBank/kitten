@@ -38,6 +38,15 @@
 
   // Modifiers.
 
+  .k-InfoLines--withLeftRightBorder {
+    border-left: 1px solid map-get($k-colors, 'line-1');
+    border-right: 1px solid map-get($k-colors, 'line-1');
+  }
+
+  .k-InfoLines--withBorderRadius {
+    border-radius: k-px-to-rem(8px);
+  }
+
   .k-InfoLines--withoutTopBottomBorder {
     border-top: none;
 

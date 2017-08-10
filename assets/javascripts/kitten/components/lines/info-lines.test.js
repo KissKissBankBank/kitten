@@ -94,4 +94,20 @@ describe('<InfoLines />', () => {
       expect(element).to.have.attr('aria-hidden', 'true')
     })
   })
+
+  describe('with withBorderRadius prop', () => {
+    const infoLines = shallow(<InfoLines withBorderRadius />)
+
+    it('has a good class', () => {
+      expect(infoLines).to.have.className('k-InfoLines--withBorderRadius')
+    })
+  })
+
+  describe('with withLeftRightBorder prop', () => {
+    const infoLines = shallow(<InfoLines withLeftRightBorder />)
+
+    it('has a good class', () => {
+      expect(infoLines).to.have.className('k-InfoLines--withLeftRightBorder')
+    })
+  })
 })
