@@ -5,7 +5,31 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add `spreadOutAt` props to `FormActions` component.
-- Fix: Pass `onRefreshClick` prop correctly to `SimilarProjectCard` component in
+
+## [13.8.0] - 2017-08-10
+
+Features:
+- Add `withBorderRadius` and `withLeftRightBorder` props
+  to `InfoLines` component.
+- Add `k-u-background-color-background1` utility.
+- Add `Text` component.
+- Add `align`, `color`, `decoration`, `line-height`, `size`, `style`,   
+  `transform` and `weight` utilities.
+
+Fix:
+- Remove unknown props in `others` prop to `GridCol` component.
+
+## [13.7.0] - 2017-08-07
+
+Features:
+- Add `withoutResponsive` prop to `InfoLines` component.
+- Add `color` prop to `Progress` component.
+
+Fixes:
+- Add link props to `SimilarProjectCard` component.
+- Pass `onRefreshClick` prop correctly to `SimilarProjectCard` component in
+  `SimilarProjectsCard` component.
+- Set current index to 0 when `projects` props is updated in
   `SimilarProjectsCard` component.
 
 ## [13.6.1] - 2017-08-03

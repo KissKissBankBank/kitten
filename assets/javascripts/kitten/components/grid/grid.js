@@ -46,6 +46,12 @@ export class GridCol extends React.Component {
       className,
     )
 
+    // Remove unknown props in others.
+    mediaQueries.map(mediaQuery => {
+      delete(others[`col-${mediaQuery}`])
+      delete(others[`offset-${mediaQuery}`])
+    })
+
     return (
       <div { ...others } className={ gridClassNames } />
     )

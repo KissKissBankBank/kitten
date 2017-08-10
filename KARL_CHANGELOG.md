@@ -4,7 +4,24 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Reorder components imports.
+## [13.8.0] - 2017-08-10
+
+Feature:
+- Add `InfoLines` examples with `withBorderRadius`
+  and `withLeftRightBorder` props.
+
+## [13.7.0] - 2017-08-07
+
+Features:
+- Add `InfoLines` example with `withoutResponsive` prop.
+- Add new `Progress` example with custom color.
+
+Fixes:
+- Add link props to `KarlProjectSimilarCard` and `KarlProjectSimilarCardInfos`
+  examples.
+- Reorder components imports.
+- Add `onRefreshClick` handler to `KarlSimilarProjectsCard` and
+  `KarlSimilarProjectsWithInfosCard` examples.
 
 ## [13.6.0] - 2017-08-01
 

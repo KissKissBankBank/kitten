@@ -1,0 +1,17 @@
+/// Text decoration utilities.
+///
+/// @group text
+///
+/// @example scss - Usage
+///
+///     @include k-utilities-decoration;
+///
+/// @example html
+///
+///     <p class="k-u-decoration-underline">…</p>
+
+@mixin k-utilities-decoration {
+  .k-u-decoration-underline {
+    text-decoration: underline;
+  }
+}
