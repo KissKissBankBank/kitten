@@ -4,7 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `InfoLines` examples with `withBorderRadius`
+## [13.8.0] - 2017-08-10
+
+Feature:
+- Add `InfoLines` examples with `withBorderRadius`
   and `withLeftRightBorder` props.
 
 ## [13.7.0] - 2017-08-07

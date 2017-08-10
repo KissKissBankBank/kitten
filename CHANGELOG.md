@@ -4,13 +4,18 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `withBorderRadius` and `withLeftRightBorder` props
+## [13.8.0] - 2017-08-10
+
+Features:
+- Add `withBorderRadius` and `withLeftRightBorder` props
   to `InfoLines` component.
-- Feature: Add `k-u-background-color-background1` utility.
-- Fix: Remove unknown props in `others` prop to `GridCol` component.
-- Feature: Add `Text` component.
-- Feature: Add `align`, `color`, `decoration`, `line-height`, `size`, `style`,   
+- Add `k-u-background-color-background1` utility.
+- Add `Text` component.
+- Add `align`, `color`, `decoration`, `line-height`, `size`, `style`,   
   `transform` and `weight` utilities.
+
+Fix:
+- Remove unknown props in `others` prop to `GridCol` component.
 
 ## [13.7.0] - 2017-08-07
 
