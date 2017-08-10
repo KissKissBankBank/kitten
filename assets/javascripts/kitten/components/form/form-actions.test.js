@@ -30,3 +30,29 @@ describe('<FormActions />', () => {
     expect(component).to.have.text('Lorem ipsum…')
   })
 })
+
+describe('<FormActions.Item />', () => {
+  describe('by default', () => {
+    const component = shallow(<FormActions.Item />)
+
+    it('renders a <div />', () => {
+      expect(component).to.have.tagName('div')
+    })
+
+    it('has "k-FormActions__item" class', () => {
+      expect(component).to.have.className('k-FormActions__item')
+    })
+  })
+
+  describe('children prop', () => {
+    const component = shallow(
+      <FormActions.Item>
+        <p>Lorem ipsum…</p>
+      </FormActions.Item>
+    ).children()
+
+    it('renders a <p>', () => {
+      expect(component).to.have.tagName('p')
+    })
+  })
+})
