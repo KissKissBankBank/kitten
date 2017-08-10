@@ -1,6 +1,6 @@
 import React from 'react'
 import { expect } from 'chai'
-import { shallow } from 'enzyme'
+import { shallow, mount } from 'enzyme'
 import { FormActions } from 'kitten/components/form/form-actions'
 
 describe('<FormActions />', () => {
@@ -28,6 +28,14 @@ describe('<FormActions />', () => {
     )
 
     expect(component).to.have.text('Lorem ipsum…')
+  })
+
+  it('with spreadOutAt prop', () => {
+    const component = mount(
+      <FormActions spreadOutAt="s-up" />
+    )
+
+    expect(component).to.have.prop('spreadOutAt').equal('s-up')
   })
 })
 
