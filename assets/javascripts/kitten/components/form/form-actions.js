@@ -1,23 +1,28 @@
 import React, { Component, PropTypes } from 'react'
 import classNames from 'classnames'
 
-export class FormActions extends Component {
-  render() {
-    const { className, children, spreadOutAt, ...others } = this.props
-    const formActionsClassName = classNames(
-      'k-FormActions',
-      className,
-      {
-        [`k-FormActions--spreadOut@${spreadOutAt}`]: spreadOutAt,
-      },
-    )
+export const FormActions = props => {
+  const { className, children, spreadOutAt, ...others } = props
+  const formActionsClassName = classNames(
+    'k-FormActions',
+    className,
+    {
+      [`k-FormActions--spreadOut@${spreadOutAt}`]: spreadOutAt,
+    },
+  )
 
-    return (
-      <div className={ formActionsClassName } { ...others }>
-        { children }
-      </div>
-    )
-  }
+  return (
+    <div { ...props } className={ formActionsClassName } { ...others } />
+  )
+}
+
+FormActions.Item = props => {
+  return (
+    <div
+      { ...props }
+      className={ classNames('k-FormActions__item', props.className) }
+    />
+  )
 }
 
 FormActions.propTypes = {
@@ -26,4 +31,10 @@ FormActions.propTypes = {
 
 FormActions.defaultProps = {
   spreadOutAt: 's-up',
+  children: null,
+}
+
+FormActions.Item.defaultProps = {
+  className: null,
+  children: null,
 }
