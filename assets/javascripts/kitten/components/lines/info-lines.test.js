@@ -103,7 +103,6 @@ describe('<InfoLines />', () => {
     })
   })
 
-
   describe('with withLeftRightBorder prop', () => {
     const infoLines = shallow(<InfoLines withLeftRightBorder />)
 
