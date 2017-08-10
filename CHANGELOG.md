@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add `spreadOutAt` prop to `FormActions` component.
+- Feature: Add `FormActions.Item` component.
 
 ## [13.8.0] - 2017-08-10
 
