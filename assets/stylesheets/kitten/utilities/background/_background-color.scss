@@ -8,9 +8,14 @@
 ///
 /// @example html
 ///
+///   <span class="k-u-background-color-background1">…</span>
 ///   <span class="k-u-background-color-background2">…</span>
 
 @mixin k-utilities-background-color {
+  .k-u-background-color-background1 {
+    background-color: map-get($k-colors, 'background-1');
+  }
+
   .k-u-background-color-background2 {
     background-color: map-get($k-colors, 'background-2');
   }
