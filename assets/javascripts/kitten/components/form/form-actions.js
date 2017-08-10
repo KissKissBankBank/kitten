@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react'
 import classNames from 'classnames'
 
 export const FormActions = props => {
-  const { className, children, spreadOutAt, ...others } = props
+  const { className, spreadOutAt, ...others } = props
   const formActionsClassName = classNames(
     'k-FormActions',
     className,
@@ -12,7 +12,7 @@ export const FormActions = props => {
   )
 
   return (
-    <div { ...props } className={ formActionsClassName } { ...others } />
+    <div className={ formActionsClassName } { ...others } />
   )
 }
 
