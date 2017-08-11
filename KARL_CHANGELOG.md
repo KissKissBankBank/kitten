@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `FormActions` example with & without `spreadOutAt` prop.
+
 ## [13.8.0] - 2017-08-10
 
 Feature:
