@@ -1,14 +1,40 @@
-import React from 'react'
+import React, { Component, PropTypes } from 'react'
 import classNames from 'classnames'
 
-export class FormActions extends React.Component {
-  render() {
-    const { className, children, ...others } = this.props
+export const FormActions = props => {
+  const { className, spreadOutAt, ...others } = props
+  const formActionsClassName = classNames(
+    'k-FormActions',
+    className,
+    {
+      [`k-FormActions--spreadOut@${spreadOutAt}`]: spreadOutAt,
+    },
+  )
 
-    return (
-      <div className={ classNames('k-FormActions', className) } { ...others }>
-        { children }
-      </div>
-    )
-  }
+  return (
+    <div className={ formActionsClassName } { ...others } />
+  )
+}
+
+FormActions.Item = props => {
+  return (
+    <div
+      { ...props }
+      className={ classNames('k-FormActions__item', props.className) }
+    />
+  )
+}
+
+FormActions.propTypes = {
+  spreadOutAt: PropTypes.oneOf(['s-up']),
+}
+
+FormActions.defaultProps = {
+  spreadOutAt: 's-up',
+  children: null,
+}
+
+FormActions.Item.defaultProps = {
+  className: null,
+  children: null,
 }
