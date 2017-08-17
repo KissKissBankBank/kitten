@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [13.9.1] - 2017-08-17
+
+- Fix: Add `pointer-events: none` to `.k-ButtonIcon__svg` for analytics purpose.
+
 ## [13.9.0] - 2017-08-11
 
 Features:
