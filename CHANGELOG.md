@@ -6,6 +6,48 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: `LinkList` responsive.
 - Feature: Add `mangopay.svg` logo.
 
+## [13.9.1] - 2017-08-17
+
+- Fix: Add `pointer-events: none` to `.k-ButtonIcon__svg` for analytics purpose.
+
+## [13.9.0] - 2017-08-11
+
+Features:
+- Add `spreadOutAt` prop to `FormActions` component.
+- Add `FormActions.Item` component.
+
+## [13.8.0] - 2017-08-10
+
+Features:
+- Add `withBorderRadius` and `withLeftRightBorder` props
+  to `InfoLines` component.
+- Add `k-u-background-color-background1` utility.
+- Add `Text` component.
+- Add `align`, `color`, `decoration`, `line-height`, `size`, `style`,   
+  `transform` and `weight` utilities.
+
+Fix:
+- Remove unknown props in `others` prop to `GridCol` component.
+
+## [13.7.0] - 2017-08-07
+
+Features:
+- Add `withoutResponsive` prop to `InfoLines` component.
+- Add `color` prop to `Progress` component.
+
+Fixes:
+- Add link props to `SimilarProjectCard` component.
+- Pass `onRefreshClick` prop correctly to `SimilarProjectCard` component in
+  `SimilarProjectsCard` component.
+- Set current index to 0 when `projects` props is updated in
+  `SimilarProjectsCard` component.
+
+## [13.6.1] - 2017-08-03
+
+Fix:
+- Add `type` attribute to navigation buttons in `SimilarProjectCard`
+  component.
+
 ## [13.6.0] - 2017-08-01
 
 Features:
