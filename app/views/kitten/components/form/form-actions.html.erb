@@ -4,7 +4,15 @@
       <%= react_component 'KarlFormActions', props: {
           className: 'karl-u-align-center@xs-down',
         }
-       %>
+      %>
+    <% end %>
+
+    <%= example 'Form actions without spread out at' do %>
+      <%= react_component 'KarlFormActions', props: {
+          className: 'karl-u-align-center@xs-down',
+          spreadOutAt: nil,
+        }
+      %>
     <% end %>
   </div>
 </div>
