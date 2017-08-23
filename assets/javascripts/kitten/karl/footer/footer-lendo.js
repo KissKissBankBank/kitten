@@ -25,7 +25,7 @@ export class KarlFooterLendo extends Component {
               <Grid>
                 <GridCol col-m="12" col-l="5">
                   <Paragraph
-                    className="k-FooterLendo__network__text"
+                    className="karl-FooterLendo__network__text"
                     modifier="tertiary"
                     margin={ false }>
                     Inscrivez-vous à notre Newsletter&nbsp;
@@ -34,34 +34,42 @@ export class KarlFooterLendo extends Component {
                     </span>
                   </Paragraph>
                 </GridCol>
+
                 <GridCol
                   col-m="12" col-l="7"
                   className="k-u-margin-top-single@m-down">
                   <TextInputWithButton
-                    value="Envoyer" />
+                    value="Envoyer"
+                  />
                 </GridCol>
               </Grid>
             </GridCol>
+
             <GridCol
               col-m="6" col-l="5"
-              className={classNames('k-u-margin-top-triple@s-down',
-                                    'k-FooterLendo__network__follow') }>
-              <div className="k-FooterLendo__network__logo">
-                <div className="k-FooterLendo__network__follow">
+              className={ classNames('karl-FooterLendo__network__follow',
+                                     'k-u-margin-top-triple@s-down') }>
+              <div className="karl-FooterLendo__network__logo">
+                <div className="karl-FooterLendo__network__follow">
                   <Paragraph
                     modifier="tertiary"
                     margin={ false }
-                    className="k-FooterLendo__network__followText">
+                    className="karl-FooterLendo__network__followText">
                     Suivez nous
                   </Paragraph>
                 </div>
+
                 <div
-                  className={classNames('k-u-align-center',
-                                        'k-u-margin-top-single@m-down') }>
+                  className={ classNames('k-u-align-center',
+                                         'k-u-margin-top-single@m-down') }>
                   <FacebookButtonIcon
-                    className="k-u-margin-right-single" />
+                    className="k-u-margin-right-single"
+                  />
+
                   <TwitterButtonIcon
-                    className="k-u-margin-right-single" />
+                    className="k-u-margin-right-single"
+                  />
+
                   <LinkedinButtonIcon />
                 </div>
               </div>
@@ -124,35 +132,44 @@ export class KarlFooterLendo extends Component {
         <Marger top="5" bottom="5">
           <Grid>
             <GridCol col-l="2">
-              <div className={classNames('k-FooterLendo__logo__img',
-                                         'k-u-margin-bottom-triple',
-                                         'k-FooterLendo__logo__imgLendo') }>
+              <div className={ classNames('karl-FooterLendo__logo__img',
+                                          'karl-FooterLendo__logo__imgLendo',
+                                          'k-u-margin-bottom-triple') }>
                 <img
                   src="/assets/brand/new-lendopolis.svg"
-                  alt="" />
-                </div>
+                  alt=""
+                />
+              </div>
             </GridCol>
+
             <GridCol col-l="10">
               <Grid>
                 <GridCol col-m="3" col-l="3">
                   <LinkList
                     margin={ false }
-                    items={ items } />
+                    items={ items }
+                  />
                 </GridCol>
+
                 <GridCol col-m="3" col-l="3">
                   <LinkList
                     margin={ false }
-                    items={ items2 } />
+                    items={ items2 }
+                  />
                 </GridCol>
+
                 <GridCol col-m="3" col-l="3">
                   <LinkList
                     margin={ false }
-                    items={ items3 } />
+                    items={ items3 }
+                  />
                 </GridCol>
+
                 <GridCol col-m="3" col-l="3">
                   <LinkList
                     margin={ false }
-                    items={ items4 } />
+                    items={ items4 }
+                  />
                 </GridCol>
               </Grid>
             </GridCol>
@@ -167,14 +184,15 @@ export class KarlFooterLendo extends Component {
       <Row>
         <Grid>
           <GridCol col-xs="8" offset-xs="2" col-s="10" offset-s="1" col-m="6" offset-m="0" col-l="4">
-            <div className="k-FooterLendo__notice__logo">
-              <div className={classNames('k-FooterLendo__logo__img',
-                                         'k-u-margin-bottom-single') }>
+            <div className="karl-FooterLendo__notice__logo">
+              <div className={ classNames('karl-FooterLendo__logo__img',
+                                          'k-u-margin-bottom-single') }>
                 <img
                   src="/assets/partners/french-authorities.svg"
                   alt="Autorités Française"
                 />
               </div>
+
               <Paragraph
                 modifier="quaternary"
                 className="k-u-align-left"
@@ -183,18 +201,20 @@ export class KarlFooterLendo extends Component {
               </Paragraph>
             </div>
           </GridCol>
+
           <GridCol
             col-xs="8" offset-xs="2" col-s="10" offset-s="1" col-m="6" offset-m="0" col-l="4"
             className="k-u-margin-top-triple@s-down">
-            <div className="k-FooterLendo__notice__logo">
-              <div className={classNames('k-FooterLendo__logo__img',
-                                         'k-u-margin-bottom-single') }>
+            <div className="karl-FooterLendo__notice__logo">
+              <div className={ classNames('karl-FooterLendo__logo__img',
+                                          'k-u-margin-bottom-single') }>
                 <img
                   src="/assets/partners/mangopay.svg"
                   alt="MANGOPAY"
-                  className="k-FooterLendo__logo__imgMangopay"
+                  className="karl-FooterLendo__logo__imgMangopay"
                 />
               </div>
+
               <Paragraph
                 modifier="quaternary"
                 className="k-u-align-left"
@@ -207,16 +227,17 @@ export class KarlFooterLendo extends Component {
               </Paragraph>
             </div>
           </GridCol>
+
           <GridCol
             col-l="4"
-            className={classNames('k-FooterLendo__notice__copyright',
-                                  'k-u-margin-top-triple') }>
+            className={ classNames('karl-FooterLendo__notice__copyright',
+                                   'k-u-margin-top-triple') }>
             <div>
               <Paragraph
                 modifier="quaternary"
                 className= "k-u-strong"
                 margin={ false }>
-                © 2016 KissKissBankBank & Co
+                © 2017 KissKissBankBank & Co
               </Paragraph>
             </div>
           </GridCol>
@@ -227,7 +248,7 @@ export class KarlFooterLendo extends Component {
 
   render() {
     return (
-      <div className="k-FooterLendo">
+      <div className="karl-FooterLendo">
         { this.renderNetwork() }
         { this.renderQuote() }
         { this.renderList() }
