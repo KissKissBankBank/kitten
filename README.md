@@ -134,7 +134,15 @@ $ bin/kitten install
 
 ### Dummy style guide
 
-To launch the style guide on the dummy app:
+To launch the style guide on the dummy app with hot-reloading:
+
+```sh
+$ foreman start
+```
+
+Then visit http://localhost:3003
+
+To launch the style guide on the dummy app without hot-reloading:
 
 ```sh
 $ bin/kitten start
