@@ -3,7 +3,6 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
-- Feature: Add new `KarlFooterLendo` component.
 - Feature: `LinkList` responsive.
 - Feature: Add `mangopay.svg` logo.
 
