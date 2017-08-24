@@ -6,7 +6,6 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: `LinkList` responsive.
 - Feature: Add `mangopay.svg` logo.
-- Fix: Align left `LinkList` component.
 
 ## [13.9.1] - 2017-08-17
 
