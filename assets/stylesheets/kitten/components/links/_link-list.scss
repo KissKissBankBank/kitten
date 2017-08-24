@@ -28,9 +28,13 @@
 
   .k-LinkList {
     // override ul defaults
-    text-align: left;
+    text-align: center;
     list-style-type: none;
     padding: 0;
+
+    @include k-media-min('l') {
+      text-align: left;
+    }
   }
 
   .k-LinkList__item {

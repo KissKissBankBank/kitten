@@ -3,7 +3,6 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
-- Fix: Align left `LinkList` component.
 
 ## [13.9.1] - 2017-08-17
 
