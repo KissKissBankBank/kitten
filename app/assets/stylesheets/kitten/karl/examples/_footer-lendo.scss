@@ -46,18 +46,7 @@
 .karl-FooterLendo__logo__img {
   text-align: center;
 
-  > img,
-  > svg {
-    vertical-align: middle;
-  }
-
   @include k-media-min('l') {
-    > img,
-    > svg {
-      display: block;
-      vertical-align: top;
-    }
-
     line-height: 4rem;
     margin-bottom: 0;
     margin-right: k-px-to-rem(16px);
@@ -69,5 +58,14 @@
 
   @include k-media-max('m') {
     height: k-px-to-rem(50px);
+  }
+}
+
+.karl-FooterLendo__logo__img__imgTag {
+  vertical-align: middle;
+
+   @include k-media-min('l') {
+    display: block;
+    vertical-align: top;
   }
 }
