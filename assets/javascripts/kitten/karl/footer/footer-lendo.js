@@ -137,7 +137,7 @@ export class KarlFooterLendo extends Component {
                                           'k-u-margin-bottom-triple') }>
                 <img
                   src="/assets/brand/new-lendopolis.svg"
-                  alt=""
+                  alt="Logo Lendopolis"
                   className="karl-FooterLendo__logo__img__imgTag"
                 />
               </div>
@@ -145,24 +145,27 @@ export class KarlFooterLendo extends Component {
 
             <GridCol col-l="10">
               <Grid>
-                <GridCol col-m="3" col-l="3"
-                         className="k-u-margin-bottom-triple@s-down">
+                <GridCol
+                  col-m="3" col-l="3"
+                  className="k-u-margin-bottom-triple@s-down">
                   <LinkList
                     margin={ false }
                     items={ items }
                   />
                 </GridCol>
 
-                <GridCol col-m="3" col-l="3"
-                         className="k-u-margin-bottom-triple@s-down">
+                <GridCol
+                  col-m="3" col-l="3"
+                  className="k-u-margin-bottom-triple@s-down">
                   <LinkList
                     margin={ false }
                     items={ items2 }
                   />
                 </GridCol>
 
-                <GridCol col-m="3" col-l="3"
-                         className="k-u-margin-bottom-triple@s-down">
+                <GridCol
+                  col-m="3" col-l="3"
+                  className="k-u-margin-bottom-triple@s-down">
                   <LinkList
                     margin={ false }
                     items={ items3 }
