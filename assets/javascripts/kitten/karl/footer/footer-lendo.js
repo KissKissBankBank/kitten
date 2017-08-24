@@ -145,21 +145,24 @@ export class KarlFooterLendo extends Component {
 
             <GridCol col-l="10">
               <Grid>
-                <GridCol col-m="3" col-l="3">
+                <GridCol col-m="3" col-l="3"
+                         className="k-u-margin-bottom-triple@s-down">
                   <LinkList
                     margin={ false }
                     items={ items }
                   />
                 </GridCol>
 
-                <GridCol col-m="3" col-l="3">
+                <GridCol col-m="3" col-l="3"
+                         className="k-u-margin-bottom-triple@s-down">
                   <LinkList
                     margin={ false }
                     items={ items2 }
                   />
                 </GridCol>
 
-                <GridCol col-m="3" col-l="3">
+                <GridCol col-m="3" col-l="3"
+                         className="k-u-margin-bottom-triple@s-down">
                   <LinkList
                     margin={ false }
                     items={ items3 }
@@ -187,8 +190,8 @@ export class KarlFooterLendo extends Component {
           <GridCol
             col-xs="8" offset-xs="2"
             col-s="10" offset-s="1"
-            col-m="6" offset-m="0"
-            col-l="4">
+            col-m="4" offset-m="1"
+            col-l="4" offset-l="0">
             <div className="karl-FooterLendo__notice__logo">
               <div className={ classNames('karl-FooterLendo__logo__img',
                                           'k-u-margin-bottom-single') }>
@@ -201,7 +204,7 @@ export class KarlFooterLendo extends Component {
 
               <Paragraph
                 modifier="quaternary"
-                className="k-u-align-left"
+                className="karl-FooterLendo__notice__text"
                 margin={ false }>
                 LENDOPOLIS est une plateforme de financement participatif régulée
                 par les autorités françaises. Immatriculation&nbsp;: 14007218
@@ -212,8 +215,8 @@ export class KarlFooterLendo extends Component {
           <GridCol
             col-xs="8" offset-xs="2"
             col-s="10" offset-s="1"
-            col-m="6" offset-m="0"
-            col-l="4"
+            col-m="4" offset-m="2"
+            col-l="4" offset-l="0"
             className="k-u-margin-top-triple@s-down">
             <div className="karl-FooterLendo__notice__logo">
               <div className={ classNames('karl-FooterLendo__logo__img',
@@ -228,7 +231,7 @@ export class KarlFooterLendo extends Component {
 
               <Paragraph
                 modifier="quaternary"
-                className="k-u-align-left"
+                className="karl-FooterLendo__notice__text"
                 margin={ false }>
                 KissKissBankBank &amp; Co est agent de l’institution financière
                 {' '}

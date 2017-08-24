@@ -26,6 +26,14 @@
   }
 }
 
+.karl-FooterLendo__notice__text {
+  text-align: center;
+
+  @include k-media-min('l') {
+    text-align: left;
+  }
+}
+
 .karl-FooterLendo__notice__copyright {
   text-align: center;
 
