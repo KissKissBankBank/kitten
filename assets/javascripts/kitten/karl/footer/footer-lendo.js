@@ -40,6 +40,7 @@ export class KarlFooterLendo extends Component {
                   className="k-u-margin-top-single@m-down">
                   <TextInputWithButton
                     value="Envoyer"
+                    textInputProps={ { tiny: true } }
                   />
                 </GridCol>
               </Grid>
