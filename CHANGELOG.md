@@ -3,8 +3,10 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
+
 - Feature: `LinkList` responsive.
 - Feature: Add `mangopay.svg` logo.
+- Fix: Align left `LinkList` component.
 
 ## [13.9.1] - 2017-08-17
 
@@ -23,7 +25,7 @@ Features:
   to `InfoLines` component.
 - Add `k-u-background-color-background1` utility.
 - Add `Text` component.
-- Add `align`, `color`, `decoration`, `line-height`, `size`, `style`,   
+- Add `align`, `color`, `decoration`, `line-height`, `size`, `style`,
   `transform` and `weight` utilities.
 
 Fix:
