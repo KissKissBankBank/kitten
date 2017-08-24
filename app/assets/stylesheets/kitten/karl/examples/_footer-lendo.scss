@@ -19,6 +19,10 @@
   align-self: center;
 }
 
+.karl-FooterLendo__network__input {
+  align-self: center;
+}
+
 .karl-FooterLendo__network__logo {
   @include k-media-min('l') {
     display: flex;

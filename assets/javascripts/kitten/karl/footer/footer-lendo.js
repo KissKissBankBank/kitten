@@ -37,7 +37,8 @@ export class KarlFooterLendo extends Component {
                 </GridCol>
 
                 <GridCol col-m="12" col-l="7"
-                  className="k-u-margin-top-single@m-down">
+                  className={ ('k-u-margin-top-single@m-down',
+                               'karl-FooterLendo__network__input') }>
                   <TextInputWithButton
                     value="Envoyer"
                     textInputProps={ { tiny: true } }
