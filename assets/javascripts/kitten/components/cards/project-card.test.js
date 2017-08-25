@@ -155,12 +155,40 @@ describe('<ProjectCard />', () => {
     })
   })
 
-  describe('with infos props', () => {
+  describe('with normal infos props', () => {
     const projectCard = mount(
       <ProjectCard
         info1={ { value: 'Custom value 1', text: 'Custom text 1' } }
         info2={ { value: 'Custom value 2', text: 'Custom text 2', locked: true } }
         info3={ { value: 'Custom value 3', text: 'Custom text 3' } } />
+    )
+    const infos = projectCard.find('.k-ProjectCard__info')
+
+    it('renders 3 blocks', () => {
+      expect(infos).to.have.length(3)
+    })
+
+    it('has a first block with good values', () => {
+      const firstInfo = infos.at(0)
+
+      expect(firstInfo).to.contain.text('Custom value 1')
+      expect(firstInfo).to.contain.text('Custom text 1')
+    })
+
+    it('has second block with locked value', () => {
+      const secondInfo = infos.at(1)
+
+      expect(secondInfo).to.have.descendants(LockIcon)
+      expect(secondInfo).to.contain.text('Custom text 2')
+    })
+  })
+
+  describe('with reversed infos props', () => {
+    const projectCard = mount(
+      <ProjectCard
+        info1={ { value: 'Custom value 1', text: 'Custom text 1', reverse: true } }
+        info2={ { value: 'Custom value 2', text: 'Custom text 2', locked: true, reverse: true} }
+        info3={ { value: 'Custom value 3', text: 'Custom text 3', reverse: true } } />
     )
     const infos = projectCard.find('.k-ProjectCard__info')
 
