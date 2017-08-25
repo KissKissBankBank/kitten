@@ -38,7 +38,7 @@ export class KarlFooterLendo extends Component {
 
                 <GridCol col-m="12" col-l="7"
                   className={ ('k-u-margin-top-single@m-down',
-                               'karl-FooterLendo__network__input') }>
+                               'k-u-blockAlign-center') }>
                   <TextInputWithButton
                     value="Envoyer"
                     textInputProps={ { tiny: true } }
@@ -48,10 +48,9 @@ export class KarlFooterLendo extends Component {
             </GridCol>
 
             <GridCol col-m="6" col-l="5"
-              className={ classNames('karl-FooterLendo__network__follow',
-                                     'k-u-margin-top-triple@s-down') }>
+              className="k-u-margin-top-triple@s-down">
               <div className="karl-FooterLendo__network__logo">
-                <div className="karl-FooterLendo__network__follow">
+                <div className="k-u-blockAlign-center">
                   <Paragraph
                     modifier="tertiary"
                     margin={ false }
