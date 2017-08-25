@@ -144,17 +144,23 @@ class ProjectCardComponent extends React.Component {
   }
 
   renderInfo(info) {
-    const infoClassName = classNames(
+    const valueClassName = classNames(
       'k-ProjectCard__info__value',
       { 'k-u-color-primary1': this.props.coloredInfosValues },
     )
 
+    const renderValue =
+      <span className={ valueClassName }>
+        { info.locked ? <LockIcon width="12" /> : info.value }
+      </span>
+
+    const renderLabel = info.text
+
     return (
       <div className="k-u-align-center k-ProjectCard__info">
-        { info.text }<br />
-        <span className={ infoClassName }>
-          { info.locked ? <LockIcon width="12" /> : info.value }
-        </span>
+        { info.reverse ? renderValue : renderLabel }
+        <br />
+        { info.reverse ? renderLabel : renderValue }
       </div>
     )
   }
@@ -238,9 +244,9 @@ ProjectCardComponent.defaultProps = {
   imageSrc: null,
   progress: false,
   coloredInfosValues: false,
-  info1: { value: 'xx', text: 'Info 1', locked: false },
-  info2: { value: 'xx', text: 'Info 2', locked: false },
-  info3: { value: 'xx', text: 'Info 3', locked: false },
+  info1: { value: 'xx', text: 'Info 1', locked: false, reverse: false },
+  info2: { value: 'xx', text: 'Info 2', locked: false, reverse: false },
+  info3: { value: 'xx', text: 'Info 3', locked: false, reverse: false },
   disabled: false,
   statusContent: null,
   statusPrimaryBackground: false,
