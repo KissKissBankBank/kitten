@@ -22,8 +22,6 @@
 ///   <div class="k-u-align-center@l-up">…</div>
 ///   <div class="k-u-align-center@xl-up">…</div>
 ///
-///   …
-///
 ///   <div class="k-u-align-center">…</div>
 ///   <div class="k-u-align-left">…</div>
 ///   <div class="k-u-align-right">…</div>
@@ -45,7 +43,6 @@
   }
 
   @each $name, $query in $k-media-queries {
-
     @if $name != "xl" {
       .k-u-align-#{$position}\@#{$name}-down {
         @include k-media-max($name) {
