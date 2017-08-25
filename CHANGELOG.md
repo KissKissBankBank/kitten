@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add new align utility ('k-u-margin') with breakpoint.
 - Feature: Add new `blockAlign` utility to align blocks.
 
 ## [13.10.0] - 2017-08-25
