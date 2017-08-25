@@ -1,0 +1,27 @@
+/// Block alignment utilities, with FlexBox.
+///
+/// @group align
+///
+/// @example scss - Usage
+///
+///   @include k-utilities-blockAlign;
+///
+/// @example html
+///
+///   <div class="k-u-blockAlign-center">…</div>
+///   <div class="k-u-blockAlign-start">…</div>
+///   <div class="k-u-blockAlign-end">…</div>
+
+@mixin k-utilities-blockAlign {
+  .k-u-blockAlign-center {
+    align-self: center;
+  }
+
+  .k-u-blockAlign-start {
+    align-self: flex-start;
+  }
+
+  .k-u-blockAlign-end {
+    align-self: flex-end;
+  }
+}
