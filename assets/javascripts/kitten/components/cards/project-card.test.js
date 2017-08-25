@@ -160,7 +160,7 @@ describe('<ProjectCard />', () => {
       <ProjectCard
         info1={ { value: 'Custom value 1', text: 'Custom text 1' } }
         info2={ { value: 'Custom value 2', text: 'Custom text 2', locked: true } }
-        info3={ { value: 'Custom value 3', text: 'Custom text 3' } } />
+        info3={ { value: 'Custom value 3', text: 'Custom text 3', reverse: true } } />
     )
     const infos = projectCard.find('.k-ProjectCard__info')
 
@@ -168,18 +168,25 @@ describe('<ProjectCard />', () => {
       expect(infos).to.have.length(3)
     })
 
-    it('has a first block with good values', () => {
+    it('has a first block with text then displayed value', () => {
       const firstInfo = infos.at(0)
 
-      expect(firstInfo).to.contain.text('Custom value 1')
-      expect(firstInfo).to.contain.text('Custom text 1')
+      expect(firstInfo.props().children[0]).to.be.equal('Custom text 1')
+      expect(firstInfo.props().children[2].props.children).to.be.equal('Custom value 1')
     })
 
-    it('has second block with locked value', () => {
+    it('has second block with text then locked value', () => {
       const secondInfo = infos.at(1)
 
+      expect(secondInfo.props().children[0]).to.be.equal('Custom text 2')
       expect(secondInfo).to.have.descendants(LockIcon)
-      expect(secondInfo).to.contain.text('Custom text 2')
+    })
+
+    it('has a third block with reversed displayed items', () => {
+      const firstInfo = infos.at(2)
+
+      expect(firstInfo.props().children[0].props.children).to.be.equal('Custom value 3')
+      expect(firstInfo.props().children[2]).to.be.equal('Custom text 3')
     })
   })
 

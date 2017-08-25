@@ -6,6 +6,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Add new `blockAlign` utility to align blocks.
 
+## [13.10.0] - 2017-08-25
+
+Features:
+  - Add reverse prop to `ProjectCard` component.
+
+Fixes:
+  - Align left `LinkList` component.
+
 ## [13.9.1] - 2017-08-17
 
 - Fix: Add `pointer-events: none` to `.k-ButtonIcon__svg` for analytics purpose.

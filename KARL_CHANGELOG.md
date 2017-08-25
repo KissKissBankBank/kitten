@@ -4,6 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [13.10.0] - 2017-08-25
+
+Feature:
+- Add `ProjectCardWithReverseInfos` example
+
 ## [13.9.1] - 2017-08-17
 
 No changes.

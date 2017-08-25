@@ -225,7 +225,7 @@ $ bin/kitten test
 
 # OR
 
-$ bin/kitten test {PATH}/{FILE}.test.js
+$ bin/test {PATH}/{FILE}.test.js
 ```
 
 Check out the [guidelines](../../wiki/Component-testing) to know how to test kitten.
