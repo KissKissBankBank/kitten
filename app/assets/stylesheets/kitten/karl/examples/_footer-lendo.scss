@@ -1,16 +1,5 @@
-.karl-FooterLendo__network__text {
-  text-align: center;
-
-  @include k-media-min('l') {
-    text-align: left;
-  }
-}
-
 .karl-FooterLendo__network__followText {
-  text-align: center;
-
   @include k-media-min('l') {
-    text-align: right;
     margin-right: k-px-to-rem(15px);
   }
 }
@@ -22,19 +11,8 @@
   }
 }
 
-.karl-FooterLendo__notice__text {
-  text-align: center;
-
-  @include k-media-min('l') {
-    text-align: left;
-  }
-}
-
 .karl-FooterLendo__notice__copyright {
-  text-align: center;
-
   @include k-media-min('l') {
-    text-align: right;
     align-self: flex-end;
     margin-top: 0;
   }
@@ -43,13 +21,10 @@
 .karl-FooterLendo__notice__logo {
   @include k-media-min('l') {
     display: flex;
-    text-align: left;
   }
 }
 
 .karl-FooterLendo__logo__img {
-  text-align: center;
-
   @include k-media-min('l') {
     line-height: 4rem;
     margin-bottom: 0;
