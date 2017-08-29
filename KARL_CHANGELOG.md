@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Delete `.svg` files not used.
+- Feature: Delete unused `.svg` files.
 
 ## [13.10.0] - 2017-08-25
 
