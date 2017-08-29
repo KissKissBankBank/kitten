@@ -114,8 +114,14 @@ import { KarlGithubRibbon } from 'kitten/karl/headers/karl-github-ribbon'
 import { KarlMenuHeader } from 'kitten/karl/headers/karl-header'
 
 // Icons
+import { ArrowIcon } from 'kitten/components/icons/arrow-icon'
 import { CbIcon } from 'kitten/components/icons/cb-icon'
+import { CheckedCircleIcon } from 'kitten/components/icons/checked-circle-icon'
+import { CheckedIcon } from 'kitten/components/icons/checked-icon'
+import { ClockCircleIcon } from 'kitten/components/icons/clock-circle-icon'
 import { ClockIcon } from 'kitten/components/icons/clock-icon'
+import { CrossCircleIcon } from 'kitten/components/icons/cross-circle-icon'
+import { CrossIcon } from 'kitten/components/icons/cross-icon'
 import { FacebookIcon } from 'kitten/components/icons/facebook-icon'
 import GrabberIcon from 'kitten/components/icons/grabber-icon'
 import { HeartIcon } from 'kitten/components/icons/heart-icon'
@@ -125,11 +131,15 @@ import { KissKissBankBankLogoIcon }
   from 'kitten/components/icons/kisskissbankbanklogo-icon'
 import { LinkedinIcon } from 'kitten/components/icons/linkedin-icon'
 import { LocationIcon } from 'kitten/components/icons/location-icon'
+import { LockIcon } from 'kitten/components/icons/lock-icon'
 import { MasterCardIcon } from 'kitten/components/icons/mastercard-icon'
 import { MenuIcon } from 'kitten/components/icons/menu-icon'
 import { RightArrowIcon } from 'kitten/components/icons/right-arrow-icon'
+import { TagIcon } from 'kitten/components/icons/tag-icon'
+import { TooltipIcon } from 'kitten/components/icons/tooltip-icon'
 import { TwitterIcon } from 'kitten/components/icons/twitter-icon'
 import { VisaIcon } from 'kitten/components/icons/visa-icon'
+import { WarningCircleIcon } from 'kitten/components/icons/warning-circle-icon'
 
 // Images
 import { KarlImageCropper } from 'kitten/karl/images/image-cropper'
@@ -334,8 +344,14 @@ ReactOnRails.register({
   KarlUnloggedHeaderPlatformSwitch,
 
   // Icons
+  ArrowIcon,
   CbIcon,
+  CheckedCircleIcon,
+  CheckedIcon,
+  ClockCircleIcon,
   ClockIcon,
+  CrossCircleIcon,
+  CrossIcon,
   FacebookIcon,
   GrabberIcon,
   HeartIcon,
@@ -344,11 +360,15 @@ ReactOnRails.register({
   KissKissBankBankLogoIcon,
   LinkedinIcon,
   LocationIcon,
+  LockIcon,
   MasterCardIcon,
   MenuIcon,
   RightArrowIcon,
+  TagIcon,
+  TooltipIcon,
   TwitterIcon,
   VisaIcon,
+  WarningCircleIcon,
 
   // Images
   KarlImageCropper,
