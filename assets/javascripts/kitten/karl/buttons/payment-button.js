@@ -32,15 +32,18 @@ export const KarlPaymentButtons = () => (
 
 const KarlPaymentButtonVisa = paymentButtonWrapper(VisaIcon, {
   name: 'payment-button-1',
+  width: '36px',
 })
 
 const KarlPaymentButtonMasterCard = paymentButtonWrapper(MasterCardIcon, {
   name: 'payment-button-1',
   defaultChecked: true,
+  width: '36px',
 })
 
 const KarlPaymentButtonCb = paymentButtonWrapper(CbIcon, {
   name: 'payment-button-1',
+  width: '36px',
 })
 
 const KarlPaymentButtonBankTransfer = props => {

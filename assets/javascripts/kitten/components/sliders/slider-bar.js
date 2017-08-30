@@ -99,7 +99,9 @@ export class SliderBar extends React.Component {
                onTouchStart={ this.handleStart }
                onClick={ this.handleClick }
                onFocus={ this.props.onAction }>
-            <GrabberIcon className="k-Slider__handleIcon" />
+            <GrabberIcon className="k-Slider__handleIcon"
+                         width="32px"
+                         height="32px" />
           </div>
         </div>
         { this.renderInput() }

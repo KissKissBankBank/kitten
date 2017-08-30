@@ -53,7 +53,10 @@ export class LocationInput extends React.Component {
 
     const autocompleteItem = ({ formattedSuggestion }) => (
       <div className="k-LocationInput__suggestionItem">
-        <LocationIcon />
+        <LocationIcon
+          width="10px"
+          height="16px"
+        />
         <span className="k-LocationInput__suggestionItem__mainText">
           { formattedSuggestion.mainText }
         </span>

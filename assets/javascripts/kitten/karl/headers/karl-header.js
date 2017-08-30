@@ -29,7 +29,8 @@ export const KarlMenuHeader = props => (
           </HeaderItem>
           <HeaderItem>
             <KissKissBankBankLogoIcon className={ classNames('k-Header__logo',
-                                                             'karl-Menu__header__logo') } />
+                                                             'karl-Menu__header__logo') }
+                                      width="135px" />
           </HeaderItem>
           <HeaderTitles title="Styleguide"
                         className="karl-Menu__header__title" />

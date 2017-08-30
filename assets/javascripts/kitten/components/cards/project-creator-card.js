@@ -14,7 +14,7 @@ class ProjectCreatorCardComponent extends React.Component {
 
     return (
       <div className="k-ProjectCreatorCard__content">
-        <ClockIcon />
+        <ClockIcon width="10px" height="10px"/>
         <span className="k-ProjectCreatorCard__date">
           { this.props.date }
         </span>

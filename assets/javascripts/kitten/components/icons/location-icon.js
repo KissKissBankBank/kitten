@@ -2,8 +2,6 @@ import React from 'react'
 
 export const LocationIcon = props => (
   <svg xmlns="http://www.w3.org/2000/svg"
-       width="10"
-       height="16"
        viewBox="0 0 10 16"
        fill="#333"
        { ...props }>
