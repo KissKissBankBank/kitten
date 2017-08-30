@@ -13,7 +13,7 @@ import { ButtonIcon } from 'kitten/components/buttons/button-icon'
 import { ButtonImage } from 'kitten/components/buttons/button-image'
 import ButtonImageWithTextAndBadge
   from 'kitten/components/buttons/button-image-with-text-and-badge'
-import ButtonTooltipIcon from 'kitten/components/buttons/button-tooltip-icon'
+import { ButtonQuestionMarkIcon } from 'kitten/components/buttons/button-question-mark-icon'
 import {
   FacebookButtonIcon,
   LinkedinButtonIcon,
@@ -125,7 +125,6 @@ import { CrossIcon } from 'kitten/components/icons/cross-icon'
 import { FacebookIcon } from 'kitten/components/icons/facebook-icon'
 import GrabberIcon from 'kitten/components/icons/grabber-icon'
 import { HeartIcon } from 'kitten/components/icons/heart-icon'
-import { InfoIcon } from 'kitten/components/icons/info-icon'
 import { InformationIcon } from 'kitten/components/icons/information-icon'
 import { KissKissBankBankLogoIcon }
   from 'kitten/components/icons/kisskissbankbanklogo-icon'
@@ -134,9 +133,9 @@ import { LocationIcon } from 'kitten/components/icons/location-icon'
 import { LockIcon } from 'kitten/components/icons/lock-icon'
 import { MasterCardIcon } from 'kitten/components/icons/mastercard-icon'
 import { MenuIcon } from 'kitten/components/icons/menu-icon'
+import { QuestionMarkIcon } from 'kitten/components/icons/question-mark-icon'
 import { RightArrowIcon } from 'kitten/components/icons/right-arrow-icon'
 import { TagIcon } from 'kitten/components/icons/tag-icon'
-import { TooltipIcon } from 'kitten/components/icons/tooltip-icon'
 import { TwitterIcon } from 'kitten/components/icons/twitter-icon'
 import { VisaIcon } from 'kitten/components/icons/visa-icon'
 import { WarningCircleIcon } from 'kitten/components/icons/warning-circle-icon'
@@ -225,7 +224,7 @@ import {
 import { Stepper } from 'kitten/components/steppers/stepper'
 
 // Tooltips
-import { InfoWithTooltip } from 'kitten/components/tooltips/info-with-tooltip'
+import { QuestionMarkWithTooltip } from 'kitten/components/tooltips/question-mark-with-tooltip'
 import { StaticTooltip } from 'kitten/components/tooltips/static-tooltip'
 import Tooltip from 'kitten/components/tooltips/tooltip'
 import { TooltipNew } from 'kitten/components/tooltips/tooltip-new'
@@ -261,7 +260,7 @@ ReactOnRails.register({
   ButtonIcon,
   ButtonImage,
   ButtonImageWithTextAndBadge,
-  ButtonTooltipIcon,
+  ButtonQuestionMarkIcon,
   FacebookButtonIcon,
   LinkedinButtonIcon,
   TagButton,
@@ -355,7 +354,6 @@ ReactOnRails.register({
   FacebookIcon,
   GrabberIcon,
   HeartIcon,
-  InfoIcon,
   InformationIcon,
   KissKissBankBankLogoIcon,
   LinkedinIcon,
@@ -363,9 +361,9 @@ ReactOnRails.register({
   LockIcon,
   MasterCardIcon,
   MenuIcon,
+  QuestionMarkIcon,
   RightArrowIcon,
   TagIcon,
-  TooltipIcon,
   TwitterIcon,
   VisaIcon,
   WarningCircleIcon,
@@ -440,7 +438,7 @@ ReactOnRails.register({
   Stepper,
 
   // Tooltips
-  InfoWithTooltip,
+  QuestionMarkWithTooltip,
   StaticTooltip,
   Tooltip,
   TooltipNew,

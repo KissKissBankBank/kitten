@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const InfoIcon = props => (
+export const QuestionMarkIcon = props => (
   <svg xmlns="http://www.w3.org/2000/svg"
        viewBox="0 0 4.32 8.32"
        { ...props }>

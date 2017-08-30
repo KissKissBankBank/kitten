@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking change: Rename `ButtonInfoIcon`, `ButtonTooltipIcon` to `ButtonQuestionMarkIcon` and `InfoIcon`, `TooltipIcon` to `QuestionMarkIcon`.
 - Feature: Show list `icons` component.
 - Feature: Delete `RefreshIcon` component.
 - Feature: Handle breakpoints with `k-utilities-align`.
