@@ -263,7 +263,7 @@ export class KarlFooterLendo extends Component {
               >
                 KissKissBankBank &amp; Co est agent de l’institution financière
                 {' '}
-                <a href="https://www.nbb.be/fr/supervision-financiere/controle-prudentiel/domaines-de-controle/etablissements-de-paiement-et-9"
+                <a href="https://www.mangopay.com/fr/"
                    target="_blank"
                    className={ classNames('k-u-color-font1',
                                           'karl-FooterLendo__notice__link') }
