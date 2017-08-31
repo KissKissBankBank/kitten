@@ -7,6 +7,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Handle breakpoints with `k-utilities-align`.
 - Feature: Add `k-u-align` helper mixin.
 - Feature: Add new `blockAlign` utility to align blocks.
+= Feature : Add icon prop to 'TagList' component.
+- Feature : Change `ProjectCard` component to accept multiple `Taglist`.
+- Feature : Change `SimilarProjectCard` component to accept multiple `Taglist`.
+- Feature : Add `k-separatorBase` helper.
 
 ## [13.10.0] - 2017-08-25
 
