@@ -52,7 +52,7 @@ export class TagList extends React.Component {
     )
 
     return (
-      <ul key={ Math.random(1) } className={ listClassName } { ...others }>
+      <ul key={ `tag-${Math.random(1)}` } className={ listClassName } { ...others }>
         { this.renderItems() }
       </ul>
     )
