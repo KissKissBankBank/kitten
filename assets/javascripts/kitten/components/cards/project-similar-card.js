@@ -136,7 +136,7 @@ class SimilarProjectCardComponent extends Component {
     return(
       <div className="k-ProjectSimilarCard__grid">
         { this.renderTitle() }
-        { this.renderTags() }
+        { this.renderTagLists() }
         <Marger top="1" bottom="2">
           <Paragraph
             modifier="tertiary"
@@ -148,17 +148,17 @@ class SimilarProjectCardComponent extends Component {
     )
   }
 
-  renderTags() {
-    const {
-      tags,
-    } = this.props
+  renderTagLists() {
+    if (!this.props.tags) return
 
-    if (!tags) return
+    return this.props.tags.map(this.renderTags)
+  }
 
+  renderTags(tags) {
     return (
       <Marger top="1" bottom="1">
         <TagList
-          items={ tags }
+          tags={ tags }
           tiny />
       </Marger>
     )

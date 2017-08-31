@@ -30,8 +30,13 @@ const projectsWithImage = [
 ]
 
 const tags = [
-  { key: 'tag-1', item: 'Tag 1' },
-  { key: 'tag-2', item: 'Tag 2' },
+  {
+    icon: 'TypologyTagIcon',
+    items: [
+      { key: 'tag-1', item: 'Tag 1' },
+      { key: 'tag-2', item: 'Tag 2' },
+    ],
+  },
 ]
 
 const infos = [
