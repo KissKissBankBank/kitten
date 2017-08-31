@@ -24,6 +24,16 @@
   }
 }
 
+.karl-FooterLendo__notice__link {
+  &:active {
+    color: map-get($k-colors, 'primary-3');
+  }
+
+  &:hover {
+    color: map-get($k-colors, 'primary-1');
+  }
+}
+
 .karl-FooterLendo__logo__img {
   @include k-media-min('l') {
     line-height: 4rem;

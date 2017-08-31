@@ -28,7 +28,8 @@ export class KarlFooterLendo extends Component {
                     className={ classNames('k-u-align-center@l-down',
                                            'k-u-align-left@l-up') }
                     modifier="tertiary"
-                    margin={ false }>
+                    margin={ false }
+                  >
                     Inscrivez-vous à notre Newsletter
                     {' '}
                     <span className="k-u-hidden@m-down">
@@ -57,14 +58,16 @@ export class KarlFooterLendo extends Component {
                     margin={ false }
                     className={ classNames('k-u-align-center@l-down',
                                            'k-u-align-right@l-up',
-                                           'karl-FooterLendo__network__followText') }>
+                                           'karl-FooterLendo__network__followText') }
+                  >
                     Suivez-nous
                   </Paragraph>
                 </div>
 
                 <div
                   className={ classNames('k-u-align-center',
-                                         'k-u-margin-top-single@m-down') }>
+                                         'k-u-margin-top-single@m-down') }
+                >
                   <FacebookButtonIcon
                     className="k-u-margin-right-single"
                   />
@@ -91,7 +94,8 @@ export class KarlFooterLendo extends Component {
           <Paragraph
             italic
             modifier="tertiary"
-            className="k-u-align-center">
+            className="k-u-align-center"
+          >
             Attention&nbsp;: Investir présente un risque d’illiquidité et de perte
             partielle ou totale en capital.<br/>
             Vérifiez vos capacités financières avant d’investir.
@@ -139,7 +143,8 @@ export class KarlFooterLendo extends Component {
               <div className={ classNames('k-u-align-center@l-down',
                                           'k-u-margin-bottom-triple',
                                           'karl-FooterLendo__logo__img',
-                                          'karl-FooterLendo__logo__imgLendo') }>
+                                          'karl-FooterLendo__logo__imgLendo') }
+              >
                 <img
                   src="/assets/brand/new-lendopolis.svg"
                   alt="Logo Lendopolis"
@@ -152,7 +157,8 @@ export class KarlFooterLendo extends Component {
               <Grid>
                 <GridCol
                   col-m="3" col-l="3"
-                  className="k-u-margin-bottom-triple@s-down">
+                  className="k-u-margin-bottom-triple@s-down"
+                >
                   <LinkList
                     margin={ false }
                     items={ items }
@@ -161,7 +167,8 @@ export class KarlFooterLendo extends Component {
 
                 <GridCol
                   col-m="3" col-l="3"
-                  className="k-u-margin-bottom-triple@s-down">
+                  className="k-u-margin-bottom-triple@s-down"
+                >
                   <LinkList
                     margin={ false }
                     items={ items2 }
@@ -170,7 +177,8 @@ export class KarlFooterLendo extends Component {
 
                 <GridCol
                   col-m="3" col-l="3"
-                  className="k-u-margin-bottom-triple@s-down">
+                  className="k-u-margin-bottom-triple@s-down"
+                >
                   <LinkList
                     margin={ false }
                     items={ items3 }
@@ -199,12 +207,15 @@ export class KarlFooterLendo extends Component {
             col-xs="8" offset-xs="2"
             col-s="10" offset-s="1"
             col-m="4" offset-m="1"
-            col-l="4" offset-l="0">
+            col-l="4" offset-l="0"
+          >
             <div className={ classNames('k-u-align-left@l-up',
-                                        'karl-FooterLendo__notice__logo') }>
+                                        'karl-FooterLendo__notice__logo') }
+            >
               <div className={ classNames('k-u-align-center@l-down',
                                           'k-u-margin-bottom-single',
-                                          'karl-FooterLendo__logo__img') }>
+                                          'karl-FooterLendo__logo__img') }
+              >
                 <img
                   src="/assets/partners/french-authorities.svg"
                   alt="Autorités Française"
@@ -216,7 +227,8 @@ export class KarlFooterLendo extends Component {
                 modifier="quaternary"
                 className={ classNames('k-u-align-center@l-down',
                                        'k-u-align-left@l-up') }
-                margin={ false }>
+                margin={ false }
+              >
                 LENDOPOLIS est une plateforme de financement participatif régulée
                 par les autorités françaises. Immatriculation&nbsp;: 14007218
               </Paragraph>
@@ -228,11 +240,13 @@ export class KarlFooterLendo extends Component {
             col-s="10" offset-s="1"
             col-m="4" offset-m="2"
             col-l="4" offset-l="0"
-            className="k-u-margin-top-triple@s-down">
+            className="k-u-margin-top-triple@s-down"
+          >
             <div className="karl-FooterLendo__notice__logo">
               <div className={ classNames('k-u-align-center@l-down',
                                           'k-u-margin-bottom-single',
-                                          'karl-FooterLendo__logo__img') }>
+                                          'karl-FooterLendo__logo__img') }
+              >
                 <img
                   src="/assets/partners/mangopay.svg"
                   alt="MANGOPAY"
@@ -245,12 +259,17 @@ export class KarlFooterLendo extends Component {
                 modifier="quaternary"
                 className={ classNames('k-u-align-center@l-down',
                                        'k-u-align-left@l-up') }
-                margin={ false }>
+                margin={ false }
+              >
                 KissKissBankBank &amp; Co est agent de l’institution financière
                 {' '}
-                <span className="k-u-decoration-underline">
+                <a href="https://www.mangopay.com/fr/"
+                   target="_blank"
+                   className={ classNames('k-u-color-font1',
+                                          'karl-FooterLendo__notice__link') }
+                >
                   MANGOPAY SA.
-                </span>
+                </a>
                 {' '}
                 Paiements sécurisés avec MANGOPAY SA.
               </Paragraph>
@@ -262,12 +281,14 @@ export class KarlFooterLendo extends Component {
             className={ classNames('k-u-align-center@l-down',
                                    'k-u-align-right@l-up',
                                    'k-u-margin-top-triple',
-                                   'karl-FooterLendo__notice__copyright') }>
+                                   'karl-FooterLendo__notice__copyright') }
+          >
             <div>
               <Paragraph
                 modifier="quaternary"
                 className= "k-u-strong"
-                margin={ false }>
+                margin={ false }
+              >
                 © 2017 KissKissBankBank &amp; Co
               </Paragraph>
             </div>
