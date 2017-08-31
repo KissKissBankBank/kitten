@@ -175,4 +175,11 @@
     height: k-px-to-rem(20px);
     margin-right: k-px-to-rem(10px);
   }
+
+  .k-ProjectCard__tagLists__separator {
+    @include k-separatorBase;
+
+    width: 1px;
+    height: 7px;
+  }
 }

@@ -10,15 +10,10 @@
 ///
 ///   <hr class="k-Separator" />
 
-@mixin k-Separator {
+@mixin k-Separator($width: auto, $height: 1px) {
   .k-Separator {
-    margin: 0;
-    border: none;
-    height: 1px;
-    background: map-get($k-colors, 'line-1');
-  }
+    @include k-separatorBase;
 
-  .k-Separator--darker {
-    background-color: map-get($k-colors, 'line-2');
+    height: 1px;
   }
 }
