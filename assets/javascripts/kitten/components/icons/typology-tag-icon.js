@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const TagIcon = props => (
+export const TypologyTagIcon = props => (
   <svg xmlns="http://www.w3.org/2000/svg"
        viewBox="0 0 10.5 10.5"
        { ...props }>
