@@ -119,13 +119,35 @@ class ProjectCardComponent extends React.Component {
     )
   }
 
-  renderTags() {
+  renderTags(tags, index) {
+    const renderSeparator =
+      <div className="k-u-margin-left-single">
+        <hr className="k-ProjectCard__tagLists__separator k-Separator--darker"/>
+      </div>
+
+    const renderLeftAlignedTagList =
+      <div className="k-u-margin-left-single">
+        <TagList tags={ tags } tiny />
+      </div>
+
+    const renderBlock = (index != 0)
+      ? [renderSeparator, renderLeftAlignedTagList]
+      : <TagList tags={ tags } tiny />
+
+    return (
+      <div className="k-ProjectCard__grid--flex">
+        { renderBlock }
+      </div>
+    )
+  }
+
+  renderTagLists() {
     if (!this.props.tags) return
 
     return (
       <div className="k-ProjectCard__grid">
-        <Marger top="1.3" bottom="1.3">
-          <TagList items={ this.props.tags } tiny />
+        <Marger top="1.3" bottom="1.3" className="k-ProjectCard__grid--flex">
+          { this.props.tags.map(this.renderTags) }
         </Marger>
       </div>
     )
@@ -219,7 +241,7 @@ class ProjectCardComponent extends React.Component {
            className={ projectCardClassName }>
         { this.renderDescription() }
         { this.renderImage() }
-        { this.renderTags() }
+        { this.renderTagLists() }
         { this.renderProgress() }
         { this.renderInfos() }
         { this.renderStatus() }
@@ -235,7 +257,13 @@ ProjectCardComponent.defaultProps = {
   ownerAvatarSrc: null,
   ownerName: 'Name',
   ownerLocation: 'Location',
-  tags: [{ key: 'tag-1', item: 'Tag 1' }, { key: 'tag-2', item: 'Tag 2' }],
+  tags: [{
+    icon: 'TypologyTagIcon',
+    items: [
+      { key: 'tag-1', item: 'Tag 1' },
+      { key: 'tag-2', item: 'Tag 2' }
+    ],
+  }],
   tooltipText: null,
   tooltipIconColor: '#4a84ff',
   scoreValue: null,
