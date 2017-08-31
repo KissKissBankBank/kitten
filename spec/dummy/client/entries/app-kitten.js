@@ -131,6 +131,10 @@ import { RightArrowIcon } from 'kitten/components/icons/right-arrow-icon'
 import { TwitterIcon } from 'kitten/components/icons/twitter-icon'
 import { VisaIcon } from 'kitten/components/icons/visa-icon'
 
+// Illustrations
+import { LoudspeakerIllustration } from 'kitten/components/illustrations/loudspeaker-illustration'
+import { PhoneIllustration } from 'kitten/components/illustrations/phone-illustration'
+
 // Images
 import { KarlImageCropper } from 'kitten/karl/images/image-cropper'
 
@@ -349,6 +353,10 @@ ReactOnRails.register({
   RightArrowIcon,
   TwitterIcon,
   VisaIcon,
+
+  // Illustrations
+   LoudspeakerIllustration,
+   PhoneIllustration,
 
   // Images
   KarlImageCropper,
