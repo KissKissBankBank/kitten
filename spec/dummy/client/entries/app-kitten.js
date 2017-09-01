@@ -132,7 +132,9 @@ import { TwitterIcon } from 'kitten/components/icons/twitter-icon'
 import { VisaIcon } from 'kitten/components/icons/visa-icon'
 
 // Illustrations
+import { LinkBoxIllustration } from 'kitten/components/illustrations/link-box-illustration'
 import { LoudspeakerIllustration } from 'kitten/components/illustrations/loudspeaker-illustration'
+import { MixIllustration } from 'kitten/components/illustrations/mix-illustration'
 import { PhoneIllustration } from 'kitten/components/illustrations/phone-illustration'
 
 // Images
@@ -355,8 +357,10 @@ ReactOnRails.register({
   VisaIcon,
 
   // Illustrations
-   LoudspeakerIllustration,
-   PhoneIllustration,
+  LinkBoxIllustration,
+  LoudspeakerIllustration,
+  MixIllustration,
+  PhoneIllustration,
 
   // Images
   KarlImageCropper,

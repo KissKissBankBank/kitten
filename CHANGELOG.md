@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add new `MixIllustration` and `LinkBoxIllustration` component.
 - Feature: Handle breakpoints with `k-utilities-align`.
 - Feature: Add `k-u-align` helper mixin.
 - Feature: Add new `blockAlign` utility to align blocks.
