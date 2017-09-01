@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking change: Add `LinkBoxIllustration` and used to `DocLinkBox`.
 - Feature: Add new `MixIllustration` and `LinkBoxIllustration` component.
 - Feature: Handle breakpoints with `k-utilities-align`.
 - Feature: Add `k-u-align` helper mixin.
