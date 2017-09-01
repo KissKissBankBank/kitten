@@ -71,7 +71,7 @@ export class TagList extends React.Component {
 TagList.defaultProps = {
   className: null,
   tiny: false,
-  tags: null,
+  tags: null, // Eg: [{ icon: 'TypologyIconTag', items: {key: …, item: … }}]
 }
 
 TagList.propTypes = {

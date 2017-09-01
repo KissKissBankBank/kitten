@@ -187,7 +187,7 @@ class SimilarProjectCardComponent extends Component {
   }
 
   renderTagsArea() {
-    if (!this.props.tagsList && !this.props.tags) return
+    if (!this.props.tagLists && !this.props.tags) return
 
     return this.props.tagLists ? this.renderTagLists() : this.renderTags()
   }
@@ -310,7 +310,8 @@ SimilarProjectCardComponent.defaultProps = {
   imageSrc: null,
   title: '',
   paragraph: '',
-  tags: null, // Eg: [{ key: …, item: … }]
+  tagLists: null,
+  tags: null,
   infos: false, // Eg: [{ key: …, text: …, value: …, locked: … }]
   coloredInfosValues: false,
   refresh: "Refresh",
