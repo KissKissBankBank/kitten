@@ -3,6 +3,7 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
+
 - Feature: Add analytics.
 - Fix: Reorder text component.
 - Feature: Delete unused `.svg` files.
