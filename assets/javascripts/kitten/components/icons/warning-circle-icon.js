@@ -4,7 +4,8 @@ export const WarningCircleIcon = ({ circleColor, warningColor, ...props }) => {
   return (
     <svg xmlns="http://www.w3.org/2000/svg"
          viewBox="0 0 20 20"
-         { ...props }>
+         { ...props }
+    >
       <circle fill={ circleColor } cx="10" cy="10" r="10"/>
       <path fill={ warningColor }
             d="M9.034 7.088l-.07-1.862h2.072l-.07 1.862-.294

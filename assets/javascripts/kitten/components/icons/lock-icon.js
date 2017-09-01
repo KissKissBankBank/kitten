@@ -4,7 +4,8 @@ export const LockIcon = ({ color, ...props }) => {
   return (
     <svg xmlns="http://www.w3.org/2000/svg"
          viewBox="0 0 16 19"
-         { ...props }>
+         { ...props }
+    >
       <path fill={ color }
             d="M1 9.01v7.98c0 .56.448 1.01.994 1.01h12.012c.546 0
                .994-.45.994-1.01V9.01c0-.56-.448-1.01-.994-1.01H1.994C1.448 8 1
