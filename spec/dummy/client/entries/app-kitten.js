@@ -135,6 +135,7 @@ import { MasterCardIcon } from 'kitten/components/icons/mastercard-icon'
 import { MenuIcon } from 'kitten/components/icons/menu-icon'
 import { QuestionMarkIcon } from 'kitten/components/icons/question-mark-icon'
 import { RightArrowIcon } from 'kitten/components/icons/right-arrow-icon'
+import { SearchIcon } from 'kitten/components/icons/search-icon'
 import { TagIcon } from 'kitten/components/icons/tag-icon'
 import { TwitterIcon } from 'kitten/components/icons/twitter-icon'
 import { VisaIcon } from 'kitten/components/icons/visa-icon'
@@ -363,6 +364,7 @@ ReactOnRails.register({
   MenuIcon,
   QuestionMarkIcon,
   RightArrowIcon,
+  SearchIcon,
   TagIcon,
   TwitterIcon,
   VisaIcon,
