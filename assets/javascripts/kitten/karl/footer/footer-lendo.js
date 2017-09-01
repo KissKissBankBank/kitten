@@ -38,9 +38,11 @@ export class KarlFooterLendo extends Component {
                   </Paragraph>
                 </GridCol>
 
-                <GridCol col-m="12" col-l="7"
+                <GridCol
+                  col-m="12" col-l="7"
                   className={ classNames('k-u-margin-top-single@m-down',
-                                         'k-u-blockAlign-center') }>
+                                         'k-u-blockAlign-center') }
+                >
                   <TextInputWithButton
                     value="Envoyer"
                     textInputProps={ { tiny: true } }
@@ -49,8 +51,10 @@ export class KarlFooterLendo extends Component {
               </Grid>
             </GridCol>
 
-            <GridCol col-m="6" col-l="5"
-              className="k-u-margin-top-triple@s-down">
+            <GridCol
+              col-m="6" col-l="5"
+              className="k-u-margin-top-triple@s-down"
+            >
               <div className="karl-FooterLendo__network__logo">
                 <div className="k-u-blockAlign-center">
                   <Paragraph
@@ -88,8 +92,7 @@ export class KarlFooterLendo extends Component {
 
   renderQuote() {
     return (
-      <Row
-        lightTopBorder>
+      <Row lightTopBorder>
         <Marger top="2" bottom="2">
           <Paragraph
             italic
@@ -135,8 +138,7 @@ export class KarlFooterLendo extends Component {
     ]
 
     return (
-      <Row
-        lightTopBorder>
+      <Row lightTopBorder>
         <Marger top="5" bottom="5">
           <Grid>
             <GridCol col-l="2">
@@ -263,10 +265,11 @@ export class KarlFooterLendo extends Component {
               >
                 KissKissBankBank &amp; Co est agent de l’institution financière
                 {' '}
-                <a href="https://www.mangopay.com/fr/"
-                   target="_blank"
-                   className={ classNames('k-u-color-font1',
-                                          'karl-FooterLendo__notice__link') }
+                <a
+                  href="https://www.mangopay.com/fr/"
+                  target="_blank"
+                  className={ classNames('k-u-color-font1',
+                                         'karl-FooterLendo__notice__link') }
                 >
                   MANGOPAY SA.
                 </a>
