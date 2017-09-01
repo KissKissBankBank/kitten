@@ -1,5 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
+import PropTypes from 'prop-types'
+import deprecated from 'prop-types-extra/lib/deprecated'
 import { card } from 'kitten/hoc/card'
 import { Grid, GridCol } from 'kitten/components/grid/grid'
 import { Marger } from 'kitten/components/layout/marger'
@@ -11,6 +13,7 @@ import { IconBadge } from 'kitten/components/notifications/icon-badge'
 import { LockIcon } from 'kitten/components/icons/lock-icon'
 import { CheckedCircleIcon } from 'kitten/components/icons/checked-circle-icon'
 import { TagList } from 'kitten/components/lists/tag-list'
+
 
 class ProjectCardComponent extends React.Component {
   renderDescription() {
@@ -119,38 +122,56 @@ class ProjectCardComponent extends React.Component {
     )
   }
 
-  renderTags(tags, index) {
+  renderTags() {
+    return (
+      <div key={ `tag-list-${Math.random(1)}` } className="k-ProjectCard__grid">
+        <Marger top="1.3" bottom="1.3">
+          <TagList items={ this.props.tags } tiny />
+        </Marger>
+      </div>
+    )
+  }
+
+  renderTagsInList(tags, index) {
     const renderSeparator =
       <div className="k-u-margin-left-single">
         <hr className="k-ProjectCard__tagLists__separator k-Separator--darker"/>
       </div>
 
-    const renderLeftAlignedTagList =
-      <div className="k-u-margin-left-single">
+    const renderTagListWithMargin =
+      <div
+        key={ `tag-with-separator-${Math.random(1)}`}
+        className="k-u-margin-left-single">
         <TagList tags={ tags } tiny />
       </div>
 
     const renderBlock = (index != 0)
-      ? [renderSeparator, renderLeftAlignedTagList]
+      ? [renderSeparator, renderTagListWithMargin]
       : <TagList tags={ tags } tiny />
 
     return (
-      <div className="k-ProjectCard__grid--flex">
+      <div
+        key={ `tag-list-block-${Math.random(1)}` }
+        className="k-ProjectCard__grid--flex">
         { renderBlock }
       </div>
     )
   }
 
   renderTagLists() {
-    if (!this.props.tags) return
-
     return (
       <div className="k-ProjectCard__grid">
         <Marger top="1.3" bottom="1.3" className="k-ProjectCard__grid--flex">
-          { this.props.tags.map(this.renderTags) }
+          { this.props.tagLists.map(this.renderTagsInList) }
         </Marger>
       </div>
     )
+  }
+
+  renderTagsArea() {
+    if (!this.props.tagLists && !this.props.tags) return
+
+    return this.props.tagLists ? this.renderTagLists() : this.renderTags()
   }
 
   renderInfos() {
@@ -241,7 +262,7 @@ class ProjectCardComponent extends React.Component {
            className={ projectCardClassName }>
         { this.renderDescription() }
         { this.renderImage() }
-        { this.renderTagLists() }
+        { this.renderTagsArea() }
         { this.renderProgress() }
         { this.renderInfos() }
         { this.renderStatus() }
@@ -257,13 +278,8 @@ ProjectCardComponent.defaultProps = {
   ownerAvatarSrc: null,
   ownerName: 'Name',
   ownerLocation: 'Location',
-  tags: [{
-    icon: 'TypologyTagIcon',
-    items: [
-      { key: 'tag-1', item: 'Tag 1' },
-      { key: 'tag-2', item: 'Tag 2' }
-    ],
-  }],
+  tagLists: null,
+  tags: null,
   tooltipText: null,
   tooltipIconColor: '#4a84ff',
   scoreValue: null,
@@ -283,6 +299,12 @@ ProjectCardComponent.defaultProps = {
   statusErrorBackground: false,
   statusErrorReverseBackground: false,
   statusWithoutTopBorder: false,
+}
+
+// Deprecated props
+
+ProjectCardComponent.propTypes = {
+  tags: deprecated(PropTypes.array, 'Use `tagLists` prop instead')
 }
 
 // Add card generic styles.

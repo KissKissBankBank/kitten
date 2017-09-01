@@ -136,7 +136,7 @@ class SimilarProjectCardComponent extends Component {
     return(
       <div className="k-ProjectSimilarCard__grid">
         { this.renderTitle() }
-        { this.renderTagLists() }
+        { this.renderTagsArea() }
         <Marger top="1" bottom="2">
           <Paragraph
             modifier="tertiary"
@@ -148,20 +148,48 @@ class SimilarProjectCardComponent extends Component {
     )
   }
 
-  renderTagLists() {
-    if (!this.props.tags) return
-
-    return this.props.tags.map(this.renderTags)
-  }
-
   renderTags(tags) {
     return (
       <Marger top="1" bottom="1">
-        <TagList
-          tags={ tags }
-          tiny />
+        <TagList items={ this.props.tags } tiny />
       </Marger>
     )
+  }
+
+  renderTagsInList(tags, index) {
+    const renderSeparator =
+      <div className="k-u-margin-left-single">
+        <hr className="k-ProjectCard__tagLists__separator k-Separator--darker"/>
+      </div>
+
+    const renderTagListWithMargin =
+      <div className="k-u-margin-left-single">
+        <TagList tags={ tags } tiny />
+      </div>
+
+    const renderBlock = (index != 0)
+      ? [renderSeparator, renderTagListWithMargin]
+      : <TagList tags={ tags } tiny />
+
+    return (
+      <div className="k-ProjectCard__grid--flex">
+        { renderBlock }
+      </div>
+    )
+  }
+
+  renderTagLists() {
+    return (
+      <Marger top="1" bottom="1" className="k-ProjectCard__grid--flex">
+        { this.props.tagLists.map(this.renderTagsInList) }
+      </Marger>
+    )
+  }
+
+  renderTagsArea() {
+    if (!this.props.tagsList && !this.props.tags) return
+
+    return this.props.tagLists ? this.renderTagLists() : this.renderTags()
   }
 
   renderInfos() {

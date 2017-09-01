@@ -10,7 +10,7 @@
 ///
 ///   <hr class="k-Separator" />
 
-@mixin k-Separator($width: auto, $height: 1px) {
+@mixin k-Separator {
   .k-Separator {
     @include k-separatorBase;
 
