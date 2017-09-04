@@ -13,9 +13,16 @@ import { IconBadge } from 'kitten/components/notifications/icon-badge'
 import { LockIcon } from 'kitten/components/icons/lock-icon'
 import { CheckedCircleIcon } from 'kitten/components/icons/checked-circle-icon'
 import { TagList } from 'kitten/components/lists/tag-list'
-
+import { TypologyTagIcon } from 'kitten/components/icons/typology-tag-icon'
+import { InstrumentTagIcon } from 'kitten/components/icons/instrument-tag-icon'
 
 class ProjectCardComponent extends React.Component {
+  constructor() {
+    super()
+
+    this.renderTagsInList = this.renderTagsInList.bind(this)
+  }
+
   renderDescription() {
     const {
       ownerAvatarSrc,
@@ -59,7 +66,7 @@ class ProjectCardComponent extends React.Component {
   }
 
   renderTooltip() {
-    if (!this.props.tooltipText) return
+    if (!this.props.tooltipText) return null
 
     return (
       <div className="k-ProjectCard__tooltip">
@@ -75,7 +82,7 @@ class ProjectCardComponent extends React.Component {
   }
 
   renderScore() {
-    if (!this.props.scoreValue) return
+    if (!this.props.scoreValue) return null
 
     const scoreStyles = {
       backgroundColor: this.props.scoreBackgroundColor,
@@ -89,7 +96,7 @@ class ProjectCardComponent extends React.Component {
   }
 
   renderImage() {
-    if (!this.props.imageSrc) return
+    if (!this.props.imageSrc) return null
 
     return (
       <div className="k-ProjectCard__grid">
@@ -103,7 +110,7 @@ class ProjectCardComponent extends React.Component {
   }
 
   renderProgress() {
-    if (this.props.progress === false) return
+    if (this.props.progress === false) return null
 
     return (
       <div className="k-ProjectCard__grid k-ProjectCard__grid--withBorderTop">
@@ -126,36 +133,50 @@ class ProjectCardComponent extends React.Component {
     return (
       <div key={ `tag-list-${Math.random(1)}` } className="k-ProjectCard__grid">
         <Marger top="1.3" bottom="1.3">
-          <TagList items={ this.props.tags } tiny />
+          <TagList
+            icon={ TypologyTagIcon }
+            items={ this.props.tags }
+            tiny
+          />
         </Marger>
       </div>
     )
   }
 
-  renderTagsInList(tags, index) {
-    const renderSeparator =
+  renderTagsInList(tagList, index) {
+    const icon = this.convertToClass(tagList.icon)
+    const list = <TagList icon={ icon } items={ tagList.items } tiny />
+
+    const separator =
       <div className="k-u-margin-left-single">
         <hr className="k-ProjectCard__tagLists__separator k-Separator--darker"/>
       </div>
 
-    const renderTagListWithMargin =
+    const tagListWithMargin =
       <div
         key={ `tag-with-separator-${Math.random(1)}`}
         className="k-u-margin-left-single">
-        <TagList tags={ tags } tiny />
+        { list }
       </div>
 
-    const renderBlock = (index != 0)
-      ? [renderSeparator, renderTagListWithMargin]
-      : <TagList tags={ tags } tiny />
+    const block = (index != 0)
+      ? [separator, tagListWithMargin]
+      : list
 
     return (
       <div
         key={ `tag-list-block-${Math.random(1)}` }
         className="k-ProjectCard__grid--flex">
-        { renderBlock }
+        { block }
       </div>
     )
+  }
+
+  convertToClass(stringClassName) {
+    switch (stringClassName) {
+      case 'InstrumentTagIcon': return InstrumentTagIcon
+      default: return TypologyTagIcon
+    }
   }
 
   renderTagLists() {

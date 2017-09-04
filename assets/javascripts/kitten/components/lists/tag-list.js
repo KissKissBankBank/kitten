@@ -1,9 +1,5 @@
 import React from 'react'
 import classNames from 'classnames'
-import PropTypes from 'prop-types'
-import deprecated from 'prop-types-extra/lib/deprecated'
-import { TypologyTagIcon } from 'kitten/components/icons/typology-tag-icon'
-import { InstrumentTagIcon } from 'kitten/components/icons/instrument-tag-icon'
 
 export class TagList extends React.Component {
   constructor(props) {
@@ -12,15 +8,11 @@ export class TagList extends React.Component {
     this.renderItem = this.renderItem.bind(this)
   }
 
-  renderItems(props) {
-    return props.map(this.renderItem)
-  }
-
   renderItem(element, index) {
-    const TagIcon = this.convertToClass((this.props.tags || {}).icon)
+    const TagIcon = this.props.icon
 
     const { key, item } = element
-    const isFirstItem = index == 0
+    const isFirstItem = (index == 0)
     const itemClassName = classNames(
       'k-TagList__item',
       { 'k-TagList__item--first': isFirstItem },
@@ -41,19 +33,10 @@ export class TagList extends React.Component {
     )
   }
 
-  convertToClass(stringName) {
-    switch (stringName) {
-      case 'InstrumentTagIcon':
-        return InstrumentTagIcon
-      default:
-        return TypologyTagIcon
-    }
-  }
-
   render() {
-    if (!this.props.tags && !this.props.items) return
-    const { className, tiny, tags, items, ...others } = this.props
-    const propsToRender = tags ? tags.items : items
+    if (!this.props.items) return null
+
+    const { className, tiny, icon, items, ...others } = this.props
     const listClassName = classNames(
       'k-TagList',
       { 'k-TagList--tiny': tiny },
@@ -62,7 +45,7 @@ export class TagList extends React.Component {
 
     return (
       <ul key={ `tag-${Math.random(1)}` } className={ listClassName } { ...others }>
-        { this.renderItems(propsToRender) }
+        { items.map(this.renderItem) }
       </ul>
     )
   }
@@ -71,9 +54,5 @@ export class TagList extends React.Component {
 TagList.defaultProps = {
   className: null,
   tiny: false,
-  tags: null, // Eg: [{ icon: 'TypologyIconTag', items: {key: …, item: … }}]
-}
-
-TagList.propTypes = {
-  items: deprecated(PropTypes.array, 'Use `tags` prop instead')
+  items: null,
 }

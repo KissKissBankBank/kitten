@@ -11,12 +11,15 @@ import { TagList } from 'kitten/components/lists/tag-list'
 import { RightArrowIcon } from 'kitten/components/icons/right-arrow-icon'
 import { LockIcon } from 'kitten/components/icons/lock-icon'
 import { Loader } from 'kitten/components/loaders/loader'
+import { TypologyTagIcon } from 'kitten/components/icons/typology-tag-icon'
+import { InstrumentTagIcon } from 'kitten/components/icons/instrument-tag-icon'
 
 class SimilarProjectCardComponent extends Component {
   constructor() {
     super()
 
     this.renderInfo = this.renderInfo.bind(this)
+    this.renderTagsInList = this.renderTagsInList.bind(this)
   }
 
   renderRefresh() {
@@ -148,34 +151,52 @@ class SimilarProjectCardComponent extends Component {
     )
   }
 
-  renderTags(tags) {
+  renderTags() {
     return (
       <Marger top="1" bottom="1">
-        <TagList items={ this.props.tags } tiny />
+        <TagList
+            icon={ TypologyTagIcon }
+            items={ this.props.tags }
+            tiny
+          />
       </Marger>
     )
   }
 
-  renderTagsInList(tags, index) {
-    const renderSeparator =
+  renderTagsInList(tagList, index) {
+    const icon = this.convertToClass(tagList.icon)
+    const list = <TagList icon={ icon } items={ tagList.items } tiny />
+
+    const separator =
       <div className="k-u-margin-left-single">
         <hr className="k-ProjectCard__tagLists__separator k-Separator--darker"/>
       </div>
 
-    const renderTagListWithMargin =
-      <div className="k-u-margin-left-single">
-        <TagList tags={ tags } tiny />
+    const tagListWithMargin =
+      <div
+        key={ `tag-with-separator-${Math.random(1)}`}
+        className="k-u-margin-left-single">
+        { list }
       </div>
 
-    const renderBlock = (index != 0)
-      ? [renderSeparator, renderTagListWithMargin]
-      : <TagList tags={ tags } tiny />
+    const block = (index != 0)
+      ? [separator, tagListWithMargin]
+      : list
 
     return (
-      <div className="k-ProjectCard__grid--flex">
-        { renderBlock }
+      <div
+        key={ `tag-list-block-${Math.random(1)}` }
+        className="k-ProjectCard__grid--flex">
+        { block }
       </div>
     )
+  }
+
+  convertToClass(stringClassName) {
+    switch (stringClassName) {
+      case 'InstrumentTagIcon': return InstrumentTagIcon
+      default: return TypologyTagIcon
+    }
   }
 
   renderTagLists() {
