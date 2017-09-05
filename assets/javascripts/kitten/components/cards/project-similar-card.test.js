@@ -90,7 +90,7 @@ describe('<SimilarProjectCard />', () => {
   describe('with tags props', () => {
     const similarProjectCard = mount(
       <SimilarProjectCard
-        tags={ [
+        tagLists={ [
           {
             items: [
               { key: 'custom-tag', item: 'Custom tag' }

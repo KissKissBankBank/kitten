@@ -97,12 +97,8 @@ describe('<ProjectCard />', () => {
   describe('with tags props', () => {
     const tags = [ { items: [ { key: 'custom-tag', item: 'Custom tag' } ] } ]
     const tagLists = [
-      {
-        items: [ { key: 'custom-tag', item: 'Custom tag' } ]
-      },
-      {
-        items: [ { key: 'custom-tag-1', item: 'Custom tag 1' } ]
-      }
+      { items: [ { key: 'custom-tag', item: 'Custom tag' } ] },
+      { items: [ { key: 'custom-tag-1', item: 'Custom tag 1' } ] },
     ]
 
     const projectCard = mount(
@@ -110,7 +106,7 @@ describe('<ProjectCard />', () => {
     )
 
     const projectCardWithTwoLists = mount(
-      <ProjectCard tags={ tagLists } />
+      <ProjectCard tagLists={ tagLists } />
     )
 
     it('renders a <TagList />', () => {
