@@ -96,7 +96,8 @@ describe('<SimilarProjectCard />', () => {
               { key: 'custom-tag', item: 'Custom tag' }
             ]
           }
-        ] }/>
+        ] }
+      />
     )
 
     const tags = similarProjectCard.find('.k-TagList')
