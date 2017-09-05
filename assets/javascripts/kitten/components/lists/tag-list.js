@@ -1,5 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
+import { TypologyTagIcon } from 'kitten/components/icons/typology-tag-icon'
 
 export class TagList extends React.Component {
   constructor(props) {
@@ -21,17 +22,12 @@ export class TagList extends React.Component {
       { 'k-TagList__item--last': isLastItem },
     )
 
-    const children =
-      (isFirstItem && [
-        <TagIcon
-          key={ `tag-icon-${Math.random(1)}` }
-          className="k-TagList__icon" />,
-        item
-      ]) || item
+    const icon = isFirstItem && <TagIcon className="k-TagList__icon" />
 
     return (
       <li key={ key } className={ itemClassName }>
-        { children }
+        { icon }
+        { item }
       </li>
     )
   }
@@ -47,7 +43,7 @@ export class TagList extends React.Component {
     )
 
     return (
-      <ul key={ `tag-${Math.random(1)}` } className={ listClassName } { ...others }>
+      <ul className={ listClassName } { ...others }>
         { items.map(this.renderItem) }
       </ul>
     )
@@ -55,6 +51,7 @@ export class TagList extends React.Component {
 }
 
 TagList.defaultProps = {
+  icon: TypologyTagIcon,
   className: null,
   tiny: false,
   items: null,

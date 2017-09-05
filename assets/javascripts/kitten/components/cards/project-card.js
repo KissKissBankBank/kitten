@@ -149,7 +149,7 @@ class ProjectCardComponent extends React.Component {
 
     const separator =
       <div className="k-u-margin-left-single">
-        <hr className="k-ProjectCard__tagLists__separator k-Separator--darker"/>
+        <hr className="k-VerticalSeparator k-VerticalSeparator--darker"/>
       </div>
 
     const tagListWithMargin =

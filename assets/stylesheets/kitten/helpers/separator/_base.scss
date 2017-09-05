@@ -20,8 +20,4 @@
   margin: 0;
   border: none;
   background: map-get($k-colors, 'line-1');
-
-  &.k-Separator--darker {
-    background: map-get($k-colors, 'line-2');
-  }
 }
