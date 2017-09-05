@@ -153,21 +153,15 @@ class ProjectCardComponent extends React.Component {
       </div>
 
     const tagListWithMargin =
-      <div
-        key={ `tag-with-separator-${Math.random(1)}`}
-        className="k-u-margin-left-single">
+      <div className="k-u-margin-left-single">
         { list }
       </div>
 
-    const block = (index != 0)
-      ? [separator, tagListWithMargin]
-      : list
-
     return (
-      <div
-        key={ `tag-list-block-${Math.random(1)}` }
-        className="k-ProjectCard__grid--flex">
-        { block }
+      <div key={ `tag-list-${index}` } className="k-ProjectCard__grid--flex">
+        { index != 0 && separator }
+        { index != 0 && tagListWithMargin }
+        { index == 0 && list }
       </div>
     )
   }
