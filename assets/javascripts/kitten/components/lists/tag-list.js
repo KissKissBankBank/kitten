@@ -13,9 +13,12 @@ export class TagList extends React.Component {
 
     const { key, item } = element
     const isFirstItem = (index == 0)
+    const isLastItem = (index == this.props.items.length - 1)
+
     const itemClassName = classNames(
       'k-TagList__item',
       { 'k-TagList__item--first': isFirstItem },
+      { 'k-TagList__item--last': isLastItem },
     )
 
     const children =
