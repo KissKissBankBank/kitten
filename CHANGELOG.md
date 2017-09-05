@@ -13,7 +13,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Add `k-separatorBase` helper.
 - Feature: Add `k-VerticalSeparator`.
 - Feature: Add `InstrumentTagIcon`.
-- Breaking change : Rename `TagIcon` to `TypologyTagIcon`.
+- Feature: Add `TypologyTagIcon`.
 
 ## [13.10.0] - 2017-08-25
 
