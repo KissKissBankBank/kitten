@@ -1,11 +1,15 @@
 import React from 'react'
 
 export const InstrumentTagIcon = props => (
-  <svg xmlns="http://www.w3.org/2000/svg"
-       viewBox="0 0 11 8"
-       { ...props }
+  <svg
+    version="1.1"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 13 17"
+    fill="#333"
+    { ...props }
   >
-    <path d="M4.44 7.596L3.024 6.182 8.682.525l1.414 1.414z"/>
-    <path d="M4.44 7.596L.903 4.06l1.414-1.414 3.536 3.536z"/>
+    <polygon points="13,17 0,17 0,0 6,0 6,5 13,5 "/>
+    <polygon points="13,3 8,3 8,0 "/>
+    <path class="st0" d="M5,0"/>
   </svg>
 )
