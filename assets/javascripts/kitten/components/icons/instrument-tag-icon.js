@@ -4,12 +4,12 @@ export const InstrumentTagIcon = props => (
   <svg
     version="1.1"
     xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 13 17"
+    viewBox="0 0 9 11"
     fill="#333"
     { ...props }
   >
-    <polygon points="13,17 0,17 0,0 6,0 6,5 13,5 "/>
-    <polygon points="13,3 8,3 8,0 "/>
-    <path class="st0" d="M5,0"/>
+    <polygon points="9,11 0,11 0,0 5,0 5,4 9,4 "/>
+    <polygon points="9,3 6,3 6,0 "/>
+    <path d="M5,0"/>
   </svg>
 )

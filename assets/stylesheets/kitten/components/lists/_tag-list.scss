@@ -21,7 +21,7 @@
   $color: map-get($k-colors, 'font-1');
   $spacing: k-px-to-rem(5px);
   $icon-height: k-px-to-rem(10px);
-  $icon-height-tiny: k-px-to-rem(8px);
+  $icon-height-tiny: k-px-to-rem(11px);
 
   .k-TagList {
     margin: 0;
