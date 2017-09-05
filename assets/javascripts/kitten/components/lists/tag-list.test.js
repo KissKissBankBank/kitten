@@ -2,7 +2,8 @@ import React from 'react'
 import { expect } from 'chai'
 import { shallow } from 'enzyme'
 import { TagList } from 'kitten/components/lists/tag-list'
-import { TagIcon } from 'kitten/components/icons/tag-icon'
+import { TypologyTagIcon } from 'kitten/components/icons/typology-tag-icon'
+import { InstrumentTagIcon } from 'kitten/components/icons/instrument-tag-icon'
 
 describe('<TagList />', () => {
   const items = [
@@ -11,10 +12,14 @@ describe('<TagList />', () => {
   ]
 
   describe('by default', () => {
-    const tagList = shallow(<TagList items={ items } />)
+    const tagList =
+      shallow(<TagList icon={ TypologyTagIcon } items={ items } />)
+
+    const tagListWithInstrument =
+      shallow(<TagList icon={ InstrumentTagIcon } items={ items } />)
 
     it('is a <ul />', () => {
-      expect(tagList).to.have.tagName('ul')
+      expect(tagList.type()).to.eq('ul')
     })
 
     it('has default class', () => {
@@ -27,28 +32,44 @@ describe('<TagList />', () => {
 
     it('has a first child with good class', () => {
       const firstItem = tagList.children().first()
+
       expect(firstItem).to.have.className('k-TagList__item--first')
     })
 
-    it('renders a <TagIcon /> in first child', () => {
-      expect(tagList.children().first()).to.have.descendants(TagIcon)
-      expect(tagList.children().last()).not.to.have.descendants(TagIcon)
+    it('has a last child with good class', () => {
+      const firstItem = tagList.children().last()
+      expect(firstItem).to.have.className('k-TagList__item--last')
+    })
+
+    it('renders a <TypologyTagIcon /> in first child', () => {
+      expect(tagList.children().first()).to.have.descendants(TypologyTagIcon)
+    })
+
+    it('renders a <InstrumentTagIcon /> in first child', () => {
+      const firstItem = tagListWithInstrument.children().first()
+
+      expect(firstItem).to.have.descendants(InstrumentTagIcon)
     })
   })
 
   describe('with className prop', () => {
     const tagList = shallow(
-      <TagList items={ items } className="custom__class" />
+      <TagList
+        icon={ TypologyTagIcon }
+        items={ items }
+        className="custom__class"
+      />
     )
 
     it('has a custom class', () => {
       expect(tagList).to.have.className('custom__class')
     })
+
   })
 
   describe('with tiny prop', () => {
     const tagList = shallow(
-      <TagList tiny />
+      <TagList items={ [] } tiny />
     )
 
     it('has a good class', () => {
