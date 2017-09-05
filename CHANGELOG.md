@@ -11,6 +11,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Add multiple `Taglist` management `ProjectCard` component.
 - Feature: Add multiple `Taglist` to `SimilarProjectCard` component.
 - Feature: Add `k-separatorBase` helper.
+- Feature: Add `k-VerticalSeparator`.
 - Feature: Add `InstrumentTagIcon`.
 - Breaking change : Rename `TagIcon` to `TypologyTagIcon`.
 
