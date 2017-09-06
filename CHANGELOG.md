@@ -8,9 +8,20 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   by `MixIllustration` and `LoudspeakerIllustration` component in `Tour`.
 - Breaking change: Add `LinkBoxIllustration` and used to `DocLinkBox`.
 - Feature: Add new `MixIllustration` and `LinkBoxIllustration` component.
-- Feature: Handle breakpoints with `k-utilities-align`.
-- Feature: Add `k-u-align` helper mixin.
-- Feature: Add new `blockAlign` utility to align blocks.
+
+## [13.11.0] - 2017-09-05
+
+Features:
+  - Handle breakpoints with `k-utilities-align`.
+  - Add `k-u-align` helper mixin.
+  - Add new `blockAlign` utility to align blocks.
+  - Add icon prop to 'TagList' component.
+  - Add multiple `Taglist` management to `ProjectCard` component.
+  - Add multiple `Taglist` management to `SimilarProjectCard` component.
+  - Add `k-separatorBase` helper.
+  - Add `k-VerticalSeparator`.
+  - Add `InstrumentTagIcon`.
+  - Add `TypologyTagIcon`.
 
 ## [13.10.0] - 2017-08-25
 
