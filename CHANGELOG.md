@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `ArrowIcon` component in `LinkBox` component.
 - Feature: Delete `InformationIcon` component.
 - Feature: Remplace `RightArrowIcon` to `ArrowIcon`.
 - Breaking change: Rename `ButtonInfoIcon`, `ButtonTooltipIcon` to `ButtonQuestionMarkIcon` and `InfoIcon`, `TooltipIcon` to `QuestionMarkIcon`.
