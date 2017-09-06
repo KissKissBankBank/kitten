@@ -2,9 +2,10 @@ import React from 'react'
 
 export const CrossCircleIcon = ({ circleColor, crossColor, ...props }) => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg"
-         viewBox="0 0 20 20"
-         { ...props }
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 20 20"
+      { ...props }
     >
       <circle fill={ circleColor } cx="10" cy="10" r="10"/>
       <path fill={ crossColor }

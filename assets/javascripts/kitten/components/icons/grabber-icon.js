@@ -9,8 +9,9 @@ class GrabberIcon extends React.Component {
 
   render() {
     return (
-      <svg viewBox='0 0 100 100'
-           {...this.props}
+      <svg
+        viewBox='0 0 100 100'
+        {...this.props}
       >
         <path d='M0 0 v100 h20 v-100 z' />
         <path d='M40 0 v100 h20 v-100 z' />

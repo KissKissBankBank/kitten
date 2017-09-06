@@ -1,9 +1,10 @@
 import React from 'react'
 
 export const SearchIcon = props => (
-  <svg viewBox="-0.7 -0.7 18 18"
-       xmlns="http://www.w3.org/2000/svg"
-       { ...props }
+  <svg
+    viewBox="-0.7 -0.7 18 18"
+    xmlns="http://www.w3.org/2000/svg"
+    { ...props }
   >
     <circle className="k-SearchInput__submit__svgCircle"
             cx="7"

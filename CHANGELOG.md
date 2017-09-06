@@ -4,10 +4,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Breaking change: Add `ArrowIcon` component in `LinkBox` component.
+- Feature: Add `ArrowIcon` component in `LinkBox` component.
 - Feature: Delete `InformationIcon` component.
-- Feature: Remplace `RightArrowIcon` to `ArrowIcon`.
-- Breaking change: Rename `ButtonInfoIcon`, `ButtonTooltipIcon` to `ButtonQuestionMarkIcon` and `InfoIcon`, `TooltipIcon` to `QuestionMarkIcon`.
+- Feature: Replace `RightArrowIcon` to `ArrowIcon`.
+- Breaking change: Rename `ButtonInfoIcon` to `ButtonQuestionMarkIcon`.
+- Breaking chnage: Rename `ButtonTooltipIcon` to `InfoIcon`.
+- Breaking chnage: Rename `TooltipIcon` to `QuestionMarkIcon`.
 - Feature: Show list `icons` component.
 - Feature: Delete `RefreshIcon` component.
 - Feature: Handle breakpoints with `k-utilities-align`.
