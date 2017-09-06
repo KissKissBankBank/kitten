@@ -5,6 +5,15 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add analytics.
+
+## [13.11.0] - 2017-09-05
+
+Features:
+  - Add multiple tagLists example to `ProjectCard`.
+  - Add multiple tagLists example to `SimilarProjectCard`.
+  - Add example with InstrumentTagIcon icon to `TagList`.
+
+Fix:
 - Fix: Reorder text component.
 - Feature: Delete unused `.svg` files.
 
