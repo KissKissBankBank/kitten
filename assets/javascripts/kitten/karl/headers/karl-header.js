@@ -1,6 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
-import { KissKissBankBankLogoIcon } from 'kitten/components/icons/kisskissbankbanklogo-icon'
+import { KissKissBankBankLogo } from 'kitten/karl/logos/kisskissbankbanklogo'
 import { CrossIcon } from 'kitten/components/icons/cross-icon'
 import { MenuIcon } from 'kitten/components/icons/menu-icon'
 import { ButtonIcon } from 'kitten/components/buttons/button-icon'
@@ -28,8 +28,8 @@ export const KarlMenuHeader = props => (
             </ButtonIcon>
           </HeaderItem>
           <HeaderItem>
-            <KissKissBankBankLogoIcon className={ classNames('k-Header__logo',
-                                                             'karl-Menu__header__logo') }
+            <KissKissBankBankLogo className={ classNames('k-Header__logo',
+                                                         'karl-Menu__header__logo') }
                                       width="135px" />
           </HeaderItem>
           <HeaderTitles title="Styleguide"
