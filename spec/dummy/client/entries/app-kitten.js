@@ -125,16 +125,12 @@ import { CrossIcon } from 'kitten/components/icons/cross-icon'
 import { FacebookIcon } from 'kitten/components/icons/facebook-icon'
 import GrabberIcon from 'kitten/components/icons/grabber-icon'
 import { HeartIcon } from 'kitten/components/icons/heart-icon'
-import { InformationIcon } from 'kitten/components/icons/information-icon'
-import { KissKissBankBankLogoIcon }
-  from 'kitten/components/icons/kisskissbankbanklogo-icon'
 import { LinkedinIcon } from 'kitten/components/icons/linkedin-icon'
 import { LocationIcon } from 'kitten/components/icons/location-icon'
 import { LockIcon } from 'kitten/components/icons/lock-icon'
 import { MasterCardIcon } from 'kitten/components/icons/mastercard-icon'
 import { MenuIcon } from 'kitten/components/icons/menu-icon'
 import { QuestionMarkIcon } from 'kitten/components/icons/question-mark-icon'
-import { RightArrowIcon } from 'kitten/components/icons/right-arrow-icon'
 import { SearchIcon } from 'kitten/components/icons/search-icon'
 import { TagIcon } from 'kitten/components/icons/tag-icon'
 import { TwitterIcon } from 'kitten/components/icons/twitter-icon'
@@ -355,15 +351,12 @@ ReactOnRails.register({
   FacebookIcon,
   GrabberIcon,
   HeartIcon,
-  InformationIcon,
-  KissKissBankBankLogoIcon,
   LinkedinIcon,
   LocationIcon,
   LockIcon,
   MasterCardIcon,
   MenuIcon,
   QuestionMarkIcon,
-  RightArrowIcon,
   SearchIcon,
   TagIcon,
   TwitterIcon,
