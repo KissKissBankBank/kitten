@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking change: Delete `icon-tour-1.svg` and `icon-tour-2.svg` and remplace
+  by `MixIllustration` and `LoudspeakerIllustration` component in `Tour`.
 - Breaking change: Add `LinkBoxIllustration` and used to `DocLinkBox`.
 - Feature: Add new `MixIllustration` and `LinkBoxIllustration` component.
 - Feature: Handle breakpoints with `k-utilities-align`.
