@@ -281,7 +281,7 @@ $ yarn login
 
 ### Prepare the release
 
-- Inform on Slack channel #kit-ui about the release with the related CHANGELOG.
+- Inform the #kit-ui Slack channel about the release with the related CHANGELOG.
 - Pull `master`
 - Update the `CHANGELOG.md` file:
   * Update the version following the [Semantic Versioning](http://semver.org/).
@@ -304,9 +304,6 @@ $ bundle exec rake kitten_release
 ```
 
 ### Update GitHub
-
-**Only for [KissKissBankBank](https://github.com/KissKissBankBank)
-collaborators**
 
 Update
 [our private project kanban](https://github.com/orgs/KissKissBankBank/projects/5):
