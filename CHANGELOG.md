@@ -4,26 +4,20 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Breaking chance: Remove `TagIcon` component.
-- Feature: Add `ArrowIcon` component in `LinkBox` component.
-- Feature: Delete `InformationIcon` component.
-- Feature: Replace `RightArrowIcon` to `ArrowIcon`.
-- Breaking change: Rename `ButtonInfoIcon` to `ButtonQuestionMarkIcon`.
-- Breaking change: Rename `ButtonTooltipIcon` to `InfoIcon`.
-- Breaking change: Rename `TooltipIcon` to `QuestionMarkIcon`.
-- Feature: Show list `icons` component.
-- Feature: Delete `RefreshIcon` component.
-- Fix: fix unworking loader animation.
-- Breaking change: Remove deprecated `content` prop from `RadioButton`.
+## [14.0.0] - 2017-09-07
+
+Breaking changes:
+- Remove `TagIcon` component.
+- Rename `ButtonInfoIcon` to `ButtonQuestionMarkIcon`.
+- Rename `ButtonTooltipIcon` to `InfoIcon`.
+- Rename `TooltipIcon` to `QuestionMarkIcon`.
+- Remove deprecated `content` prop from `RadioButton`.
   Prefer the `children` prop.
-- Breaking change: Remove deprecated `text` prop on `Checkbox`.
-  Use the `children` prop instead.
-- Breaking change: Add generic keys for fonts.
+- Add generic keys for fonts.
   For CSS mixins with configuration maps, replace `font` with the new key.
   Replace your previous fonts definition by:
   `$k-fonts: k-merge($k-fonts, ( …your-own-font-definitions-here… );`.
-- Feature: Add `withoutTopBottomBorder`, `borderColor` and other props
-- Breaking change: Replace the deprecated `commissionRate` prop by a list of
+- Replace the deprecated `commissionRate` prop by a list of
   `commissionRules`. To upgrade you should replace for example:
 
       function commissionRate(duration) {
@@ -41,11 +35,23 @@ This project adheres to [Semantic Versioning](http://semver.org/).
         { rate: 0.1 }
       ]
       <LoanSimulator commissionRules={ commissionRules } />
-- Fix: Fix unworking loader animation.
-- Fix: Delete `icon-tour-1.svg` and `icon-tour-2.svg`.
-- Fix: Replace `MixIllustration` and `LoudspeakerIllustration` component in `Tour`.
-- Breaking change: Add `LinkBoxIllustration` and used to `DocLinkBox`.
-- Feature: Add new `MixIllustration` and `LinkBoxIllustration` component.
+- Add `LinkBoxIllustration` and used to `DocLinkBox`.
+- Remove deprecated `text` prop on `Checkbox`.
+  Use the `children` prop instead.
+
+Features:
+- Show list `icons` component.
+- Add `ArrowIcon` component in `LinkBox` component.
+- Delete `InformationIcon` component.
+- Replace `RightArrowIcon` to `ArrowIcon`.
+- Delete `RefreshIcon` component.
+- Add `withoutTopBottomBorder`, `borderColor` and other props
+- Add new `MixIllustration` and `LinkBoxIllustration` component.
+
+Fixes:
+- Fix unworking loader animation.
+- Delete `icon-tour-1.svg` and `icon-tour-2.svg`.
+- Replace `MixIllustration` and `LoudspeakerIllustration` component in `Tour`.
 
 ## [13.11.0] - 2017-09-05
 
