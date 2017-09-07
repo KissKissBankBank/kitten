@@ -4,6 +4,54 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Show list `illustrations` component.
+- Feature: Add new `KarlFooterLendo` component.
+- Feature: Add analytics.
+
+## [13.11.0] - 2017-09-05
+
+Features:
+- Add multiple tagLists example to `ProjectCard`.
+- Add multiple tagLists example to `SimilarProjectCard`.
+- Add example with InstrumentTagIcon icon to `TagList`.
+
+Fix:
+- Reorder text component.
+- Delete unused `.svg` files.
+
+## [13.10.0] - 2017-08-25
+
+Feature:
+- Add `ProjectCardWithReverseInfos` example
+
+## [13.9.1] - 2017-08-17
+
+No changes.
+
+## [13.9.0] - 2017-08-11
+
+Feature:
+- Add `FormActions` example with & without `spreadOutAt` prop.
+
+## [13.8.0] - 2017-08-10
+
+Feature:
+- Add `InfoLines` examples with `withBorderRadius`
+  and `withLeftRightBorder` props.
+
+## [13.7.0] - 2017-08-07
+
+Features:
+- Add `InfoLines` example with `withoutResponsive` prop.
+- Add new `Progress` example with custom color.
+
+Fixes:
+- Add link props to `KarlProjectSimilarCard` and `KarlProjectSimilarCardInfos`
+  examples.
+- Reorder components imports.
+- Add `onRefreshClick` handler to `KarlSimilarProjectsCard` and
+  `KarlSimilarProjectsWithInfosCard` examples.
+
 ## [13.6.0] - 2017-08-01
 
 Features:

@@ -9,8 +9,9 @@
         <div class="k-Popover__container k-Tour__popover__container">
 
           <div class="k-Tour__popover__illustration">
-            <%= inline_svg "icons/icon-tour-1.svg",
-                           class: "k-Tour__popover__svg--primary" %>
+            <%= react_component 'MixIllustration', props: {
+              class: "k-Tour__popover__svg--primary"
+            } %>
           </div>
 
           <div class="k-Tour__popover__content">
@@ -80,8 +81,9 @@
         <div class="k-Popover__container k-Tour__popover__container">
 
           <div class="k-Tour__popover__illustration">
-            <%= inline_svg "icons/icon-tour-2.svg",
-                           class: "k-Tour__popover__svg--primary" %>
+            <%= react_component 'LoudspeakerIllustration', props: {
+              class: "k-Tour__popover__svg--primary"
+            } %>
           </div>
 
           <div class="k-Tour__popover__content">

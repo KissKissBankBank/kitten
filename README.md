@@ -134,7 +134,15 @@ $ bin/kitten install
 
 ### Dummy style guide
 
-To launch the style guide on the dummy app:
+To launch the style guide on the dummy app with hot-reloading:
+
+```sh
+$ foreman start
+```
+
+Then visit http://localhost:3003
+
+To launch the style guide on the dummy app without hot-reloading:
 
 ```sh
 $ bin/kitten start
@@ -217,7 +225,7 @@ $ bin/kitten test
 
 # OR
 
-$ bin/kitten test {PATH}/{FILE}.test.js
+$ bin/test {PATH}/{FILE}.test.js
 ```
 
 Check out the [guidelines](../../wiki/Component-testing) to know how to test kitten.
@@ -259,6 +267,9 @@ $ bin/kitten buildstatic
 
 ## Release
 
+**Only for [KissKissBankBank](https://github.com/KissKissBankBank)
+collaborators**
+
 ### Login
 
 If this is your first release, start by saving your npm credentials in
@@ -270,6 +281,7 @@ $ yarn login
 
 ### Prepare the release
 
+- Inform the #kit-ui Slack channel about the release with the related CHANGELOG.
 - Pull `master`
 - Update the `CHANGELOG.md` file:
   * Update the version following the [Semantic Versioning](http://semver.org/).
@@ -292,9 +304,6 @@ $ bundle exec rake kitten_release
 ```
 
 ### Update GitHub
-
-**Only for [KissKissBankBank](https://github.com/KissKissBankBank)
-collaborators**
 
 Update
 [our private project kanban](https://github.com/orgs/KissKissBankBank/projects/5):

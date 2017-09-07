@@ -1,0 +1,17 @@
+/// Line height utilities.
+///
+/// @group text
+///
+/// @example scss - Usage
+///
+///     @include k-utilities-line-height;
+///
+/// @example html
+///
+///     <p class="k-u-line-height-normal">…</p>
+
+@mixin k-utilities-line-height {
+  .k-u-line-height-normal {
+    line-height: normal;
+  }
+}

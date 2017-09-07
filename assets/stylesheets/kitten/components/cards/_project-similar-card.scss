@@ -18,15 +18,17 @@
 ///         </div>
 ///       </div>
 ///     </div>
-///     <div>
-///       <div class="k-ProjectSimilarCard__grid">
-///         <img class="k-ProjectSimilarCard__img" />
+///     <a class="k-ProjectSimilarCard__content">
+///       <div>
+///         <div class="k-ProjectSimilarCard__grid">
+///           <img class="k-ProjectSimilarCard__img" />
+///         </div>
 ///       </div>
-///     </div>
-///     <div class="k-ProjectSimilarCard__grid"> … </div>
-///     <div class="k-ProjectSimilarCard__grid">
-///       <div class="k-ProjectSimilarCard__info"> … </div>
-///     </div>
+///       <div class="k-ProjectSimilarCard__grid"> … </div>
+///       <div class="k-ProjectSimilarCard__grid">
+///         <div class="k-ProjectSimilarCard__info"> … </div>
+///       </div>
+///     </a>
 ///   </div>
 
 @mixin k-ProjectSimilarCard {
@@ -97,5 +99,10 @@
 
   .k-ProjectSimilarCard__loading {
     justify-content: center;
+  }
+
+  a.k-ProjectSimilarCard__content {
+    color: inherit;
+    text-decoration: inherit;
   }
 }
