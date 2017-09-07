@@ -6,6 +6,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Show list `icons` component.
 - Feature: Delete `RefreshIcon` component.
+- Fix: fix unworking loader animation.
+- Fix: Delete `icon-tour-1.svg` and `icon-tour-2.svg`.
+- Fix: Replace `MixIllustration` and `LoudspeakerIllustration` component in `Tour`.
+- Breaking change: Add `LinkBoxIllustration` and used to `DocLinkBox`.
+- Feature: Add new `MixIllustration` and `LinkBoxIllustration` component.
 
 ## [13.11.0] - 2017-09-05
 
@@ -24,10 +29,7 @@ Features:
 ## [13.10.0] - 2017-08-25
 
 Features:
-  - Add reverse prop to `ProjectCard` component.
-
-Fixes:
-  - Align left `LinkList` component.
+- Add reverse prop to `ProjectCard` component.
 
 ## [13.9.1] - 2017-08-17
 

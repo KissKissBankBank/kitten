@@ -35,7 +35,7 @@
     border-radius: $circle-size;
     fill: $color;
 
-    animation: 'k-Loader-animation-scale' $duration 0s infinite $easing;
+    animation: k-Loader-animation-scale $duration 0s infinite $easing;
     animation-fill-mode: both;
 
     &:nth-child(1) {
