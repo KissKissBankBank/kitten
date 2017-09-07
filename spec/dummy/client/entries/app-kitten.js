@@ -133,6 +133,7 @@ import { MenuIcon } from 'kitten/components/icons/menu-icon'
 import { QuestionMarkIcon } from 'kitten/components/icons/question-mark-icon'
 import { SearchIcon } from 'kitten/components/icons/search-icon'
 import { TagIcon } from 'kitten/components/icons/tag-icon'
+import { TypologyTagIcon } from 'kitten/components/icons/typology-tag-icon'
 import { TwitterIcon } from 'kitten/components/icons/twitter-icon'
 import { VisaIcon } from 'kitten/components/icons/visa-icon'
 import { WarningCircleIcon } from 'kitten/components/icons/warning-circle-icon'
@@ -359,6 +360,7 @@ ReactOnRails.register({
   QuestionMarkIcon,
   SearchIcon,
   TagIcon,
+  TypologyTagIcon,
   TwitterIcon,
   VisaIcon,
   WarningCircleIcon,

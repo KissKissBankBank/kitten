@@ -17,8 +17,8 @@ Features:
 - Add example with InstrumentTagIcon icon to `TagList`.
 
 Fix:
-- Fix: Reorder text component.
-- Feature: Delete unused `.svg` files.
+- Reorder text component.
+- Delete unused `.svg` files.
 
 ## [13.10.0] - 2017-08-25
 
