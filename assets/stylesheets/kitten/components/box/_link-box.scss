@@ -121,14 +121,14 @@
   }
 
   .k-LinkBox__title {
-    @include k-typographyFont('source-sans-semi-bold');
+    @include k-typographyFont('bold');
     @include k-typographyFontSize(0);
 
     margin: 0;
   }
 
   .k-LinkBox__text {
-    @include k-typographyFont('source-sans-light');
+    @include k-typographyFont('light');
     @include k-typographyFontSize(-1, 1.3);
 
     margin: 0;

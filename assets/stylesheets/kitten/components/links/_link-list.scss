@@ -42,7 +42,7 @@
   }
 
   .k-LinkList__link {
-    @include k-typographyFont('source-sans-light');
+    @include k-typographyFont('light');
     @include k-typographyFontSize(2);
 
     text-decoration: none;

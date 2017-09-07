@@ -78,7 +78,7 @@
 @include k-TextInput;
 @include k-TextInputWithLimit;
 @include k-TextInputWithButton((
-  font: 'source-sans-semi-bold',
+  font: 'bold',
   font-size: -4,
   color: map-get($k-colors, 'background-1'),
   button-background: map-get($k-colors, 'primary-1'),
@@ -88,20 +88,20 @@
 // DEPRECATED
 @include k-TextInputWithInfo((
   label: (
-    font: 'source-sans-semi-bold',
+    font: 'bold',
     font-size: -2,
     color: map-get($k-colors, 'font-1'),
   ),
   error: (
-    font: 'source-sans',
+    font: 'regular',
     font-size: -2,
     color: map-get($k-colors, 'error'),
   )
 ));
 
 @include k-TextInputWithUnit((
-  input-font: 'source-sans',
-  unit-font: 'source-sans-semi-bold',
+  input-font: 'regular',
+  unit-font: 'bold',
   border-color: map-get($k-colors, 'line-2'),
   color: map-get($k-colors, 'font-1'),
   unit-color: map-get($k-colors, 'primary-1'),
@@ -131,7 +131,7 @@
 // Hero
 
 @include k-Hero((
-  font: 'source-sans-light',
+  font: 'light',
 ));
 
 // Images
@@ -194,7 +194,7 @@
 @include k-TabBar((z-index: 50));
 
 @include k-UserMenu((
-  font: 'source-sans-semi-bold',
+  font: 'bold',
   font-step: -2,
   colors: (
     default: (
@@ -248,7 +248,7 @@
 @include k-TestimonyList;
 
 @include k-Testimony((
-  font: 'source-sans-light',
+  font: 'light',
 ));
 
 // Titles

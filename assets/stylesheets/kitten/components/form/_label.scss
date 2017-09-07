@@ -22,7 +22,7 @@
 ///   <label><input type="radio" name="sex" value="n" /> Non-binary</label>
 
 @mixin k-Label {
-  $font: 'source-sans-semi-bold';
+  $font: 'bold';
   $font-step-tiny: -1;
   $line-height-tiny: 1.3;
 

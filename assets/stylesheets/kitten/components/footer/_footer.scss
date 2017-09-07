@@ -23,7 +23,7 @@
   }
 
   .k-Footer__brand {
-    @include k-typographyFont('source-sans-light');
+    @include k-typographyFont('light');
     @include k-typographyFontSize(-1);
 
     @include k-grid-col(12);
@@ -102,7 +102,7 @@
       @include k-grid-col(8);
     }
 
-    @include k-typographyFont('source-sans-light');
+    @include k-typographyFont('light');
     @include k-typographyFontSize(-1, 1.4);
   }
 
@@ -129,7 +129,7 @@
 
     align-self: flex-end;
 
-    @include k-typographyFont('source-sans-semi-bold');
+    @include k-typographyFont('bold');
     @include k-typographyFontSize(-1);
 
     @include k-grid-col(12);
