@@ -38,11 +38,32 @@
 
   // Modifiers.
 
+  .k-InfoLines--withLeftRightBorder {
+    border-left: 1px solid map-get($k-colors, 'line-1');
+    border-right: 1px solid map-get($k-colors, 'line-1');
+  }
+
+  .k-InfoLines--withBorderRadius {
+    border-radius: k-px-to-rem(8px);
+  }
+
   .k-InfoLines--withoutTopBottomBorder {
     border-top: none;
 
     .k-InfoLines__line:last-child {
       border-bottom: none;
+    }
+  }
+
+  .k-InfoLines--withoutResponsive {
+    .k-InfoLines__line {
+      @include k-media-max('s') {
+        flex-direction: row;
+      }
+    }
+
+    .k-InfoLines__line__value {
+      margin-left: auto;
     }
   }
 }

@@ -40,7 +40,7 @@ describe('<SimilarProjectsCard />', () => {
     imageSrc: 'image-1',
     title: 'Title 1',
     description: 'This is the description of project 1.',
-    tags: emptyArray,
+    tags: null,
     infos: emptyArray,
   }
 
@@ -56,7 +56,7 @@ describe('<SimilarProjectsCard />', () => {
     imageSrc: 'image-3',
     title: 'Title 3',
     description: 'This is the description of project 3.',
-    tags: emptyArray,
+    tags: null,
     infos: infos,
   }
 
@@ -91,7 +91,7 @@ describe('<SimilarProjectsCard />', () => {
   })
 
   describe('with projects props', () => {
-    describe('on ComponentDidMount', () => {
+    describe('on componentDidMount', () => {
       describe('with one basic project', () => {
         const similarProjectsCard = shallow(
           <SimilarProjectsCard projects={ [project1] } />
@@ -104,7 +104,7 @@ describe('<SimilarProjectsCard />', () => {
             imageSrc: 'image-1',
             title: 'Title 1',
             paragraph: 'This is the description of project 1.',
-            tags: emptyArray,
+            tags: null,
             infos: emptyArray,
           }
 
@@ -144,12 +144,39 @@ describe('<SimilarProjectsCard />', () => {
             imageSrc: 'image-3',
             title: 'Title 3',
             paragraph: 'This is the description of project 3.',
-            tags: emptyArray,
+            tags: null,
             infos: infos,
           }
 
           expect(staticSimilarProjectCard.props()).to.contains(projectProps)
         })
+      })
+    })
+
+    describe('on componentWillReceiveProps', () => {
+      let similarProjectsCard
+
+      before(() => {
+        similarProjectsCard = mount(
+          <SimilarProjectsCard
+            projects={ [project1, project2, project3] }
+          />
+        )
+
+        similarProjectsCard.setState({ currentIndex: 2 })
+      })
+
+      it('updates the current index to 0', () => {
+        expect(similarProjectsCard.state('currentIndex')).to.eq(2)
+
+        similarProjectsCard.setProps({
+          projects: [
+            project2,
+            project1,
+          ]
+        })
+
+        expect(similarProjectsCard.state('currentIndex')).to.eq(0)
       })
     })
 
@@ -213,7 +240,7 @@ describe('<SimilarProjectsCard />', () => {
             imageSrc: 'image-1',
             title: 'Title 1',
             paragraph: 'This is the description of project 1.',
-            tags: emptyArray,
+            tags: null,
             infos: emptyArray,
           }
 
@@ -276,7 +303,8 @@ describe('<SimilarProjectsCard />', () => {
         before(() => {
           similarProjectsCard = mount(
             <SimilarProjectsCard
-              projects={ [project1, project2, project3] } />
+              projects={ [project1, project2, project3] }
+            />
           )
           staticSimilarProjectCard = similarProjectsCard
             .find(SimilarProjectCard)
@@ -291,7 +319,7 @@ describe('<SimilarProjectsCard />', () => {
             imageSrc: 'image-3',
             title: 'Title 3',
             paragraph: 'This is the description of project 3.',
-            tags: emptyArray,
+            tags: null,
             infos: infos,
           }
 

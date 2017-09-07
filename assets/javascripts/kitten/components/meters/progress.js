@@ -1,11 +1,14 @@
-import React from 'react'
+import React, { Component } from 'react'
 import classNames from 'classnames'
 
-export class Progress extends React.Component {
+export class Progress extends Component {
   render() {
-    const { className,
-            value,
-            ...others } = this.props
+    const {
+      className,
+      color,
+      value,
+      ...others,
+    } = this.props
 
     const progressClassName = classNames(
       'k-Progress',
@@ -13,18 +16,23 @@ export class Progress extends React.Component {
     )
 
     const style = {
+      backgroundColor: `${color}`,
       width: `${value}%`,
     }
 
     return (
-      <div role="progressbar"
-           aria-valuemin="0"
-           aria-valuemax="100"
-           aria-valuenow={ this.props.value }
-           className={ progressClassName }
-           { ...others }>
+      <div
+        { ...others }
+        role="progressbar"
+        aria-valuemin="0"
+        aria-valuemax="100"
+        aria-valuenow={ this.props.value }
+        className={ progressClassName }>
         <div className="k-Progress__ramp">
-          <div className="k-Progress__slider" style={ style }></div>
+          <div
+            className="k-Progress__slider"
+            style={ style }
+          />
         </div>
       </div>
     )
@@ -32,5 +40,7 @@ export class Progress extends React.Component {
 }
 
 Progress.defaultProps = {
+  className: null,
+  color: null,
   value: 50,
 }

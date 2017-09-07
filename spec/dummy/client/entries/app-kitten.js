@@ -11,21 +11,35 @@ import LinkBox from 'kitten/components/box/link-box'
 import { Button } from 'kitten/components/buttons/button'
 import { ButtonIcon } from 'kitten/components/buttons/button-icon'
 import { ButtonImage } from 'kitten/components/buttons/button-image'
-import ButtonImageWithTextAndBadge from 'kitten/components/buttons/button-image-with-text-and-badge'
+import ButtonImageWithTextAndBadge
+  from 'kitten/components/buttons/button-image-with-text-and-badge'
 import ButtonTooltipIcon from 'kitten/components/buttons/button-tooltip-icon'
 import {
   FacebookButtonIcon,
-  TwitterButtonIcon,
   LinkedinButtonIcon,
+  TwitterButtonIcon,
 } from 'kitten/components/buttons/social-button-icon'
 import { TagButton } from 'kitten/components/buttons/tag-button'
+import { KarlButtonAndText } from 'kitten/karl/buttons/button'
+import {
+  KarlButtonIconHeart,
+  KarlButtonIconMicro,
+} from 'kitten/karl/buttons/button-icon'
+import {
+  KarlButtonIconWordsLeft,
+  KarlButtonIconWordsRight,
+} from 'kitten/karl/buttons/button-with-icon-words'
+import { KarlPaymentButtons } from 'kitten/karl/buttons/payment-button'
 
 // Cards
 import { ProjectCard } from 'kitten/components/cards/project-card'
 import { ProjectCreatorCard } from 'kitten/components/cards/project-creator-card'
 import { ProjectSimilarCard } from 'kitten/components/cards/project-similar-card'
-import { SimilarProjectsCard }
-  from 'kitten/components/cards/similar-projects-card'
+import { KarlCard } from 'kitten/karl/cards/card'
+import { KarlSimilarProjectsCard,
+         KarlSimilarProjectsWithInfosCard }
+  from 'kitten/karl/cards/similar-projects-card'
+import { KarlProjectSimilarLoader } from 'kitten/karl/cards/project-similar-card'
 
 // Dev
 import { DevGrid } from 'kitten/components/dev/dev-grid'
@@ -33,13 +47,22 @@ import { DevGrid } from 'kitten/components/dev/dev-grid'
 // Dropdowns
 import Dropdown from 'kitten/components/dropdowns/dropdown'
 import DropdownButton from 'kitten/components/dropdowns/dropdown-button'
+import {
+  KarlPlatformSwitch,
+  KarlUserMenuDropdown,
+} from 'kitten/karl/organisms/dropdown'
+
+// Footer
+import { KarlFooterLendo } from 'kitten/karl/footer/footer-lendo'
 
 // Form
 import { Checkbox } from 'kitten/components/form/checkbox'
 import { CheckboxSet } from 'kitten/components/form/checkbox-set'
-import { FormAmountAndCurrency } from 'kitten/components/form/form-amount-and-currency'
+import { FormAmountAndCurrency }
+  from 'kitten/components/form/form-amount-and-currency'
 import { FormPhoneNumber } from 'kitten/components/form/form-phone-number'
 import { Label } from 'kitten/components/form/label'
+import { LocationInput } from 'kitten/components/form/location-input'
 import { RadioButton } from 'kitten/components/form/radio-button'
 import { RadioButtonSet } from 'kitten/components/form/radio-button-set'
 import { RichTextInput } from 'kitten/components/form/rich-text-input'
@@ -49,36 +72,84 @@ import SelectWithState from 'kitten/components/form/select-with-state'
 import Slider from 'kitten/components/form/slider'
 import Switch from 'kitten/components/form/switch'
 import { TextInput } from 'kitten/components/form/text-input'
-import { LocationInput } from 'kitten/components/form/location-input'
-import { TextInputWithLimit } from 'kitten/components/form/text-input-with-limit'
-import { TextInputWithUnit } from 'kitten/components/form/text-input-with-unit'
 import { TextInputWithButton } from 'kitten/components/form/text-input-with-button'
+import { TextInputWithLimit }
+  from 'kitten/components/form/text-input-with-limit'
+import { TextInputWithUnit } from 'kitten/components/form/text-input-with-unit'
+import { KarlCheckboxError } from 'kitten/karl/form/checkbox'
+import { KarlFormActions } from 'kitten/karl/form/form-actions'
+import { KarlFormRow } from 'kitten/karl/form/form-row'
+import { KarlLocationInput } from 'kitten/karl/form/location-input'
+import {
+  KarlRadioButtonContentError,
+  KarlRadioButtonError,
+} from 'kitten/karl/form/radio-button'
 
 // Grid
 import { Container } from 'kitten/components/grid/container'
 import { Grid, GridCol } from 'kitten/components/grid/grid'
+import {
+  KarlGridInGrid,
+  KarlGridSmall,
+  KarlGridTwelveColumns,
+  KarlGridWithOffset,
+} from 'kitten/karl/grid/grid'
+import { KarlLegoGrid } from 'kitten/karl/grid/lego-grid'
 import { KarlRow } from 'kitten/karl/grid/row'
+import {
+  KarlSideGridWithLeftAsideAndSmallSize,
+  KarlSideGridWithRightAside,
+} from 'kitten/karl/grid/side-grid'
 import { KarlSideLayout } from 'kitten/karl/layout/side-layout'
 
+// Header
+import {
+  KarlHeader,
+  KarlHeaderWithSearchInput,
+  KarlHeaderWithTitles,
+  KarlHeaderWhenLogged,
+  KarlLoggedHeaderPlatformSwitch,
+  KarlLoggedHeaderUserMenu,
+  KarlPhoneDropdown,
+  KarlUnloggedHeaderPlatformSwitch,
+} from 'kitten/karl/headers/header'
+import { KarlGithubRibbon } from 'kitten/karl/headers/karl-github-ribbon'
+import { KarlMenuHeader } from 'kitten/karl/headers/karl-header'
+
 // Icons
-import GrabberIcon from 'kitten/components/icons/grabber-icon'
-import { RightArrowIcon } from 'kitten/components/icons/right-arrow-icon'
 import { CbIcon } from 'kitten/components/icons/cb-icon'
-import { MenuIcon } from 'kitten/components/icons/menu-icon'
+import { ClockIcon } from 'kitten/components/icons/clock-icon'
+import { FacebookIcon } from 'kitten/components/icons/facebook-icon'
+import GrabberIcon from 'kitten/components/icons/grabber-icon'
 import { HeartIcon } from 'kitten/components/icons/heart-icon'
 import { InfoIcon } from 'kitten/components/icons/info-icon'
 import { InformationIcon } from 'kitten/components/icons/information-icon'
-import { KissKissBankBankLogoIcon } from 'kitten/components/icons/kisskissbankbanklogo-icon'
-import { FacebookIcon } from 'kitten/components/icons/facebook-icon'
+import { KissKissBankBankLogoIcon }
+  from 'kitten/components/icons/kisskissbankbanklogo-icon'
 import { LinkedinIcon } from 'kitten/components/icons/linkedin-icon'
-import { ClockIcon } from 'kitten/components/icons/clock-icon'
 import { LocationIcon } from 'kitten/components/icons/location-icon'
 import { MasterCardIcon } from 'kitten/components/icons/mastercard-icon'
+import { MenuIcon } from 'kitten/components/icons/menu-icon'
+import { RightArrowIcon } from 'kitten/components/icons/right-arrow-icon'
 import { TwitterIcon } from 'kitten/components/icons/twitter-icon'
 import { VisaIcon } from 'kitten/components/icons/visa-icon'
 
+// Illustrations
+import { LinkBoxIllustration } from 'kitten/components/illustrations/link-box-illustration'
+import { LoudspeakerIllustration } from 'kitten/components/illustrations/loudspeaker-illustration'
+import { MixIllustration } from 'kitten/components/illustrations/mix-illustration'
+import { PhoneIllustration } from 'kitten/components/illustrations/phone-illustration'
+
+// Images
+import { KarlImageCropper } from 'kitten/karl/images/image-cropper'
+
 // Layout
 import { Separator } from 'kitten/components/layout/separator'
+import {
+  KarlLineWithBigHeart,
+  KarlLineWithTooltip,
+} from 'kitten/karl/layout/line'
+import { KarlSeparator } from 'kitten/karl/layout/separator'
 
 // Lines
 import { InfoLines } from 'kitten/components/lines/info-lines'
@@ -90,15 +161,22 @@ import { LinkList } from 'kitten/components/links/link-list'
 // Lists
 import { BulletList } from 'kitten/components/lists/bullet-list'
 import NavList from 'kitten/components/lists/nav-list'
+import { KarlTagList } from 'kitten/karl/lists/tag-list'
 
 // Loaders
-import { KarlLoaderInButton } from 'kitten/karl/loaders/karl-loaders'
 import { Loader } from 'kitten/components/loaders/loader'
 import { LoaderWithParagraph }
   from 'kitten/components/loaders/loader-with-paragraph'
+import { KarlLoaderInButton } from 'kitten/karl/loaders/karl-loaders'
 
 // Meters
 import { Progress } from 'kitten/components/meters/progress'
+import { KarlRandomProgress } from 'kitten/karl/meters/random-progress'
+
+// Modals
+import { KarlModal,
+         KarlModalExternalTrigger,
+} from 'kitten/karl/modals/modal'
 
 // Navigation
 import { TabBar } from 'kitten/components/navigation/tab-bar'
@@ -107,23 +185,50 @@ import { TabBar } from 'kitten/components/navigation/tab-bar'
 import { Alert } from 'kitten/components/notifications/alert'
 import { Badge } from 'kitten/components/notifications/badge'
 import { IconBadge } from 'kitten/components/notifications/icon-badge'
+import {
+  KarlAlert,
+  KarlAlertWithButton,
+  KarlAlertWithMarkdown,
+} from 'kitten/karl/notifications/alert'
+import { KarlIconBadgeWithSvg } from 'kitten/karl/notifications/icon-badge'
 
 // Popovers
+import { CallToActionPopover }
+  from 'kitten/components/popovers/call-to-action-popover'
 import { Popover } from 'kitten/components/popovers/popover'
-import { CallToActionPopover } from 'kitten/components/popovers/call-to-action-popover'
+import { KarlAutoTriggerCallToActionPopover }
+  from 'karl/components/popovers/auto-trigger-call-to-action-popover'
+import { KarlAutoTriggerPopover }
+  from 'karl/components/popovers/auto-trigger-popover'
+import { KarlLoudspeakerPopover }
+  from 'karl/components/popovers/loudspeaker-popover'
+
+// Pages
+import { KarlBrowsing } from 'app/browsing/browsing'
+import { KarlMakerWhoAmIStep } from 'app/maker/who-am-i/components/container'
+import {
+  KarlMenu,
+  KarlMenuContent
+} from 'kitten/karl/menus/karl-menu'
 
 // Simulators
 import LoanSimulator from 'kitten/components/simulators/loan-simulator'
+import {
+  KarlLoanSimulator,
+  KarlLoanSimulatorWithCommission,
+  KarlLoanSimulatorWithError,
+  KarlLoanSimulatorWithfeesExemption,
+} from 'kitten/karl/organisms/loan-simulator'
 
 // Steppers
 import { Stepper } from 'kitten/components/steppers/stepper'
 
 // Tooltips
-import ReactTooltip from 'react-tooltip'
+import { InfoWithTooltip } from 'kitten/components/tooltips/info-with-tooltip'
 import { StaticTooltip } from 'kitten/components/tooltips/static-tooltip'
 import Tooltip from 'kitten/components/tooltips/tooltip'
 import { TooltipNew } from 'kitten/components/tooltips/tooltip-new'
-import { InfoWithTooltip } from 'kitten/components/tooltips/info-with-tooltip'
+import { KarlStaticTooltip } from 'kitten/karl/tooltips/static-tooltip'
 
 // Tours
 import HeaderTour from 'kitten/components/tours/header-tour'
@@ -134,83 +239,15 @@ import TourStep from 'kitten/components/tours/tour-step'
 // Typography
 import { Paragraph } from 'kitten/components/typography/paragraph'
 import { SupTitle } from 'kitten/components/typography/sup-title'
+import { Text } from 'kitten/components/typography/text'
 import { Title } from 'kitten/components/typography/title'
-
-// Karl composed components
-
-import { KarlAutoTriggerPopover }
-  from 'karl/components/popovers/auto-trigger-popover'
-import { KarlAutoTriggerCallToActionPopover }
-  from 'karl/components/popovers/auto-trigger-call-to-action-popover'
-import { KarlLoudspeakerPopover } from 'karl/components/popovers/loudspeaker-popover'
-import { KarlPlatformSwitch,
-         KarlUserMenuDropdown } from 'kitten/karl/organisms/dropdown'
-import { KarlHeader,
-         KarlHeaderWithSearchInput,
-         KarlHeaderWithTitles,
-         KarlHeaderWhenLogged,
-         KarlUnloggedHeaderPlatformSwitch,
-         KarlLoggedHeaderPlatformSwitch,
-         KarlLoggedHeaderUserMenu,
-         KarlPhoneDropdown } from 'kitten/karl/headers/header'
-import { KarlLoanSimulator,
-         KarlLoanSimulatorWithCommission,
-         KarlLoanSimulatorWithfeesExemption,
-         KarlLoanSimulatorWithError,
-       } from 'kitten/karl/organisms/loan-simulator'
-import { KarlSideGridWithRightAside,
-         KarlSideGridWithLeftAsideAndSmallSize
-       } from 'kitten/karl/grid/side-grid'
-import { KarlFormActions } from 'kitten/karl/form/form-actions'
-import { KarlFormRow } from 'kitten/karl/form/form-row'
-import { KarlRadioButtonError,
-         KarlRadioButtonContentError} from 'kitten/karl/form/radio-button'
-import { KarlCheckboxError } from 'kitten/karl/form/checkbox'
-import { KarlLocationInput } from 'kitten/karl/form/location-input'
-import { KarlGridTwelveColumns,
-         KarlGridInGrid,
-         KarlGridSmall,
-         KarlGridWithOffset
-       } from 'kitten/karl/grid/grid'
-import { KarlParagraph,
-         KarlParagraphSecondary,
-         KarlParagraphTertiary,
-         KarlParagraphQuaternary,
-         KarlParagraphWithLink,
-       } from 'kitten/karl/typography/paragraph'
-import { KarlButtonIconWordsRight,
-         KarlButtonIconWordsLeft
-       } from 'kitten/karl/buttons/button-with-icon-words'
-import { KarlButtonAndText } from 'kitten/karl/buttons/button'
-import { KarlButtonIconHeart,
-         KarlButtonIconMicro
-       } from 'kitten/karl/buttons/button-icon'
-import { KarlLineWithTooltip,
-         KarlLineWithBigHeart } from 'kitten/karl/layout/line'
-import { KarlPaymentButtons } from 'kitten/karl/buttons/payment-button'
-import { KarlStaticTooltip } from 'kitten/karl/tooltips/static-tooltip'
-import { KarlRandomProgress } from 'kitten/karl/meters/random-progress'
-import { KarlMakerWhoAmIStep } from 'app/maker/who-am-i/components/container'
-import { KarlAlert,
-         KarlAlertWithButton,
-         KarlAlertWithMarkdown } from 'kitten/karl/notifications/alert'
-import { KarlIconBadgeWithSvg } from 'kitten/karl/notifications/icon-badge'
-import { KarlLegoGrid } from 'kitten/karl/grid/lego-grid'
-import { KarlTagList } from 'kitten/karl/lists/tag-list'
-import { KarlCard } from 'kitten/karl/cards/card'
-import { KarlProjectSimilarLoader } from 'kitten/karl/cards/project-similar-card'
-import { KarlMenuHeader } from 'kitten/karl/headers/karl-header'
-import { KarlGithubRibbon } from 'kitten/karl/headers/karl-github-ribbon'
-import { KarlMenu,
-         KarlMenuContent } from 'kitten/karl/menus/karl-menu'
-import { KarlBrowsing } from 'app/browsing/browsing'
-import { KarlSeparator } from 'kitten/karl/layout/separator'
-import { KarlImageCropper } from 'kitten/karl/images/image-cropper'
-import { KarlModal,
-         KarlModalExternalTrigger } from 'kitten/karl/modals/modal'
-import { KarlSimilarProjectsCard,
-         KarlSimilarProjectsWithInfosCard }
-  from 'kitten/karl/cards/similar-projects-card'
+import {
+  KarlParagraph,
+  KarlParagraphQuaternary,
+  KarlParagraphSecondary,
+  KarlParagraphTertiary,
+  KarlParagraphWithLink,
+} from 'kitten/karl/typography/paragraph'
 
 ReactOnRails.register({
   // Box
@@ -228,68 +265,117 @@ ReactOnRails.register({
   LinkedinButtonIcon,
   TagButton,
   TwitterButtonIcon,
+  KarlButtonAndText,
+  KarlButtonIconHeart,
+  KarlButtonIconMicro,
+  KarlButtonIconWordsLeft,
+  KarlButtonIconWordsRight,
+  KarlPaymentButtons,
 
   // Cards
   ProjectCard,
   ProjectCreatorCard,
   ProjectSimilarCard,
+  KarlCard,
+  KarlSimilarProjectsCard,
+  KarlSimilarProjectsWithInfosCard,
+  KarlProjectSimilarLoader,
 
   // Dev
-  Checkbox,
-  CheckboxSet,
   DevGrid,
 
   // Dropdowns
   Dropdown,
   DropdownButton,
+  KarlPlatformSwitch,
+  KarlUserMenuDropdown,
+
+  // Footer
+  KarlFooterLendo,
 
   // Form
+  Checkbox,
+  CheckboxSet,
   FormAmountAndCurrency,
   FormPhoneNumber,
-  GrabberIcon,
-  HeaderTour,
   Label,
   LocationInput,
   RadioButton,
   RadioButtonSet,
-  ReactTooltip,
   RichTextInput,
-  Slider,
   Search,
   Select,
   SelectWithState,
   Slider,
   Switch,
   TextInput,
+  TextInputWithButton,
   TextInputWithLimit,
   TextInputWithUnit,
-  TextInputWithButton,
+  KarlCheckboxError,
+  KarlFormActions,
+  KarlFormRow,
+  KarlLocationInput,
+  KarlRadioButtonContentError,
+  KarlRadioButtonError,
 
   // Grid
   Container,
   Grid,
   GridCol,
+  KarlGridInGrid,
+  KarlGridSmall,
+  KarlGridTwelveColumns,
+  KarlGridWithOffset,
+  KarlLegoGrid,
   KarlRow,
+  KarlSideGridWithLeftAsideAndSmallSize,
+  KarlSideGridWithRightAside,
+  KarlSideLayout,
+
+  // Header
+  KarlGithubRibbon,
+  KarlHeader,
+  KarlHeaderWithSearchInput,
+  KarlHeaderWithTitles,
+  KarlHeaderWhenLogged,
+  KarlLoggedHeaderPlatformSwitch,
+  KarlLoggedHeaderUserMenu,
+  KarlMenuHeader,
+  KarlPhoneDropdown,
+  KarlUnloggedHeaderPlatformSwitch,
 
   // Icons
-  RightArrowIcon,
   CbIcon,
-  MenuIcon,
+  ClockIcon,
+  FacebookIcon,
   GrabberIcon,
+  HeartIcon,
   InfoIcon,
   InformationIcon,
   KissKissBankBankLogoIcon,
-  HeartIcon,
-  FacebookIcon,
   LinkedinIcon,
-  ClockIcon,
   LocationIcon,
   MasterCardIcon,
+  MenuIcon,
+  RightArrowIcon,
   TwitterIcon,
   VisaIcon,
 
+  // Illustrations
+  LinkBoxIllustration,
+  LoudspeakerIllustration,
+  MixIllustration,
+  PhoneIllustration,
+
+  // Images
+  KarlImageCropper,
+
   // Layout
   Separator,
+  KarlLineWithBigHeart,
+  KarlLineWithTooltip,
+  KarlSeparator,
 
   // Lines
   InfoLines,
@@ -301,14 +387,20 @@ ReactOnRails.register({
   // Lists
   BulletList,
   NavList,
+  KarlTagList,
 
   // Loader
-  KarlLoaderInButton,
   Loader,
   LoaderWithParagraph,
+  KarlLoaderInButton,
 
   // Meters
   Progress,
+  KarlRandomProgress,
+
+  // Modals
+  KarlModal,
+  KarlModalExternalTrigger,
 
   // Navigation
   TabBar,
@@ -317,23 +409,40 @@ ReactOnRails.register({
   Alert,
   Badge,
   IconBadge,
+  KarlAlert,
+  KarlAlertWithButton,
+  KarlAlertWithMarkdown,
+  KarlIconBadgeWithSvg,
 
   // Popovers
   CallToActionPopover,
   Popover,
+  KarlAutoTriggerCallToActionPopover,
+  KarlAutoTriggerPopover,
+  KarlLoudspeakerPopover,
+
+  // Pages
+  KarlBrowsing,
+  KarlMakerWhoAmIStep,
+  KarlMenu,
+  KarlMenuContent,
 
   // Simulators
   LoanSimulator,
+  KarlLoanSimulator,
+  KarlLoanSimulatorWithCommission,
+  KarlLoanSimulatorWithError,
+  KarlLoanSimulatorWithfeesExemption,
 
   // Steppers
   Stepper,
 
   // Tooltips
-  ReactTooltip,
+  InfoWithTooltip,
+  StaticTooltip,
   Tooltip,
   TooltipNew,
-  StaticTooltip,
-  InfoWithTooltip,
+  KarlStaticTooltip,
 
   // Tours
   HeaderTour,
@@ -344,72 +453,11 @@ ReactOnRails.register({
   // Typography
   Paragraph,
   SupTitle,
+  Text,
   Title,
-
-  // Karl composed components
-  KarlAlert,
-  KarlAlertWithButton,
-  KarlAlertWithMarkdown,
-  KarlAutoTriggerCallToActionPopover,
-  KarlAutoTriggerPopover,
-  KarlLoudspeakerPopover,
-  KarlButtonIconHeart,
-  KarlButtonIconMicro,
-  KarlButtonIconWordsRight,
-  KarlButtonIconWordsLeft,
-  KarlButtonAndText,
-  KarlLineWithTooltip,
-  KarlLineWithBigHeart,
-  KarlIconBadgeWithSvg,
-  KarlPlatformSwitch,
-  KarlUserMenuDropdown,
-  KarlHeader,
-  KarlHeaderWithSearchInput,
-  KarlHeaderWithTitles,
-  KarlHeaderWhenLogged,
-  KarlUnloggedHeaderPlatformSwitch,
-  KarlLoggedHeaderPlatformSwitch,
-  KarlLoggedHeaderUserMenu,
-  KarlPhoneDropdown,
-  KarlLoanSimulator,
-  KarlLoanSimulatorWithCommission,
-  KarlLoanSimulatorWithfeesExemption,
-  KarlLoanSimulatorWithError,
-  KarlSideGridWithRightAside,
-  KarlSideGridWithLeftAsideAndSmallSize,
-  KarlSimilarProjectsCard,
-  KarlSimilarProjectsWithInfosCard,
-  KarlStaticTooltip,
-  KarlCheckboxError,
-  KarlLocationInput,
-  KarlFormActions,
-  KarlFormRow,
-  KarlRadioButtonError,
-  KarlRadioButtonContentError,
-  KarlGridTwelveColumns,
-  KarlGridInGrid,
-  KarlGridSmall,
-  KarlGridWithOffset,
-  KarlSideLayout,
   KarlParagraph,
+  KarlParagraphQuaternary,
   KarlParagraphSecondary,
   KarlParagraphTertiary,
-  KarlParagraphQuaternary,
   KarlParagraphWithLink,
-  KarlPaymentButtons,
-  KarlRandomProgress,
-  KarlMakerWhoAmIStep,
-  KarlLegoGrid,
-  KarlTagList,
-  KarlCard,
-  KarlProjectSimilarLoader,
-  KarlMenuHeader,
-  KarlMenu,
-  KarlMenuContent,
-  KarlBrowsing,
-  KarlGithubRibbon,
-  KarlSeparator,
-  KarlImageCropper,
-  KarlModal,
-  KarlModalExternalTrigger,
 })
