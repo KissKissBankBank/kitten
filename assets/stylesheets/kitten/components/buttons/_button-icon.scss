@@ -365,6 +365,8 @@
     height: $icon-height;
     transition: fill $transition-speed;
 
+    pointer-events: none;
+
     .k-ButtonIcon__svg__stroke {
       transition: stroke $transition-speed;
     }

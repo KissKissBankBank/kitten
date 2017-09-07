@@ -5,8 +5,8 @@ import { InfoLines } from 'kitten/components/lines/info-lines'
 
 describe('<InfoLines />', () => {
   const infos = [
-    { key: 'Lorem', value: 'Ipsum' },
-    { key: 'Dolor', value: 'Sit amet' },
+    { id: '1', key: 'Lorem', value: 'Ipsum' },
+    { id: '2', key: 'Dolor', value: 'Sit amet' },
   ]
 
   describe('by default', () => {
@@ -53,6 +53,14 @@ describe('<InfoLines />', () => {
     })
   })
 
+  describe('with withoutResponsive prop', () => {
+    const infoLines = shallow(<InfoLines withoutResponsive />)
+
+    it('has a good class', () => {
+      expect(infoLines).to.have.className('k-InfoLines--withoutResponsive')
+    })
+  })
+
   describe('with borderColor prop', () => {
     const infoLines = shallow(<InfoLines borderColor="red" />)
 
@@ -84,6 +92,22 @@ describe('<InfoLines />', () => {
 
     it('has an aria-hidden attribute', () => {
       expect(element).to.have.attr('aria-hidden', 'true')
+    })
+  })
+
+  describe('with withBorderRadius prop', () => {
+    const infoLines = shallow(<InfoLines withBorderRadius />)
+
+    it('has a good class', () => {
+      expect(infoLines).to.have.className('k-InfoLines--withBorderRadius')
+    })
+  })
+
+  describe('with withLeftRightBorder prop', () => {
+    const infoLines = shallow(<InfoLines withLeftRightBorder />)
+
+    it('has a good class', () => {
+      expect(infoLines).to.have.className('k-InfoLines--withLeftRightBorder')
     })
   })
 })
