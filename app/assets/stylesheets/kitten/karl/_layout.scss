@@ -28,7 +28,7 @@ $karl-color-4: map-get($k-colors, 'primary-4');
 
 .karl-Link {
   @include k-typographyFontSize(-1, k-px-to-rem(40px));
-  @include k-typographyFont('source-sans');
+  @include k-typographyFont('regular');
   text-decoration: none;
   color: map-get($k-colors, 'primary-1');
 

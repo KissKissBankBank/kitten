@@ -79,7 +79,7 @@
     }
 
     .k-LoanSimulator__feesExemption {
-      @include k-typographyFont('source-sans-light');
+      @include k-typographyFont('light');
       @include k-typographyFontSize(-2);
     }
   }

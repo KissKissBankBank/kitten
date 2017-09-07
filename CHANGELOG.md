@@ -4,6 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking change: Add generic keys for fonts.
+  For CSS mixins with configuration maps, replace `font` with the new key.
+  Replace your previous fonts definition by:
+  `$k-fonts: k-merge($k-fonts, ( …your-own-font-definitions-here… );`.
+- Feature: Add `withoutTopBottomBorder`, `borderColor` and other props
 - Breaking change: Replace the deprecated `commissionRate` prop by a list of
   `commissionRules`. To upgrade you should replace for example:
 

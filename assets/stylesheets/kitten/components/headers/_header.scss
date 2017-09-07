@@ -198,11 +198,11 @@
 
   .k-Header__title {
     margin: 0;
-    @include k-typographyFont('source-sans-semi-bold-uppercase');
+    @include k-typographyFont('bold-uppercase');
   }
 
   .k-Header__subtitle {
     margin: 0;
-    @include k-typographyFont('source-sans-light');
+    @include k-typographyFont('light');
   }
 }
