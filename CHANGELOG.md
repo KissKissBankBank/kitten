@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking change: Remove deprecated `text` prop on `Checkbox`.
+  Use the `children` prop instead.
 - Breaking change: Add generic keys for fonts.
   For CSS mixins with configuration maps, replace `font` with the new key.
   Replace your previous fonts definition by:
