@@ -8,18 +8,100 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   For CSS mixins with configuration maps, replace `font` with the new key.
   Replace your previous fonts definition by:
   `$k-fonts: k-merge($k-fonts, ( …your-own-font-definitions-here… );`.
-
 - Feature: Add `withoutTopBottomBorder`, `borderColor` and other props
+- Fix: Fix unworking loader animation.
+- Fix: Delete `icon-tour-1.svg` and `icon-tour-2.svg`.
+- Fix: Replace `MixIllustration` and `LoudspeakerIllustration` component in `Tour`.
+- Breaking change: Add `LinkBoxIllustration` and used to `DocLinkBox`.
+- Feature: Add new `MixIllustration` and `LinkBoxIllustration` component.
+
+## [13.11.0] - 2017-09-05
+
+Features:
+- Handle breakpoints with `k-utilities-align`.
+- Add `k-u-align` helper mixin.
+- Add new `blockAlign` utility to align blocks.
+- Add icon prop to 'TagList' component.
+- Add multiple `Taglist` management to `ProjectCard` component.
+- Add multiple `Taglist` management to `SimilarProjectCard` component.
+- Add `k-separatorBase` helper.
+- Add `k-VerticalSeparator`.
+- Add `InstrumentTagIcon`.
+- Add `TypologyTagIcon`.
+
+## [13.10.0] - 2017-08-25
+
+Features:
+- Add reverse prop to `ProjectCard` component.
+
+## [13.9.1] - 2017-08-17
+
+- Fix: Add `pointer-events: none` to `.k-ButtonIcon__svg` for analytics purpose.
+
+## [13.9.0] - 2017-08-11
+
+Features:
+- Add `spreadOutAt` prop to `FormActions` component.
+- Add `FormActions.Item` component.
+
+## [13.8.0] - 2017-08-10
+
+Features:
+- Add `withBorderRadius` and `withLeftRightBorder` props
   to `InfoLines` component.
-- Feature: `LinkList` responsive.
-- Feature: Add new modifier `k-LinkList--withoutMargin` in `LinkList`.
-- Feature: Add `withoutPointerEvents` prop to `Label` component.
-- Feature: Add `Loader` and `LoaderWithParagraph` components.
-- Feature: Add `icon` and `iconWithMinWidth` props to `Button` component.
-- Feature: Add social button icon components (`FacebookButtonIcon`, …).
-- Feature: Add border utilities (`k-u-border-left-line1`, …).
-- Feature: Add new `ProjectSimilarCard` component.
-- Feature: Add new `RefreshIcon` component.
+- Add `k-u-background-color-background1` utility.
+- Add `Text` component.
+- Add `align`, `color`, `decoration`, `line-height`, `size`, `style`,
+  `transform` and `weight` utilities.
+
+Fix:
+- Remove unknown props in `others` prop to `GridCol` component.
+
+## [13.7.0] - 2017-08-07
+
+Features:
+- Add `withoutResponsive` prop to `InfoLines` component.
+- Add `color` prop to `Progress` component.
+
+Fixes:
+- Add link props to `SimilarProjectCard` component.
+- Pass `onRefreshClick` prop correctly to `SimilarProjectCard` component in
+  `SimilarProjectsCard` component.
+- Set current index to 0 when `projects` props is updated in
+  `SimilarProjectsCard` component.
+
+## [13.6.1] - 2017-08-03
+
+Fix:
+- Add `type` attribute to navigation buttons in `SimilarProjectCard`
+  component.
+
+## [13.6.0] - 2017-08-01
+
+Features:
+- Add external trigger to `Modal` component.
+- Add responsive mixin `k-u-margin(…)`.
+- Add `Loader` on `ProjectSimilarCard` component.
+- Add `leftArrowDisabled`, `rightArrowDisabled`, `onLeftArrowClick` and
+  `onRightArrowClick` props to `ProjectSimilarCard` component.
+- Add `SimilarProjectsCard` component.
+
+## [13.5.0] - 2017-07-28
+
+Features:
+- Accept other props to `GridCol` component.
+- Add `Modal` component.
+- Add `withoutTopBottomBorder`, `borderColor` and other props
+  to `InfoLines` component.
+- `LinkList` responsive.
+- Add new modifier `k-LinkList--withoutMargin` in `LinkList`.
+- Add `withoutPointerEvents` prop to `Label` component.
+- Add `Loader` and `LoaderWithParagraph` components.
+- Add `icon` and `iconWithMinWidth` props to `Button` component.
+- Add social button icon components (`FacebookButtonIcon`, …).
+- Add border utilities (`k-u-border-left-line1`, …).
+- Add new `ProjectSimilarCard` component.
+- Add new `RefreshIcon` component.
 
 ## [13.4.0] - 2017-07-20
 

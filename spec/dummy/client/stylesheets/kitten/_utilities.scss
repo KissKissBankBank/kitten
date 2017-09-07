@@ -1,13 +1,30 @@
-// Text
+// Align
+@include k-utilities-blockAlign;
 
+// Background
+@include k-utilities-background-color;
+
+// Border
+@include k-utilities-border;
+
+// Display
+@include k-utilities-hidden;
+
+
+// Image
+@include k-utilities-responsive;
+
+// Spacing
+@include k-utilities-margin;
+
+// Text
 @include k-utilities-active;
 @include k-utilities-align;
-@include k-utilities-background-color;
-@include k-utilities-border;
 @include k-utilities-color;
-@include k-utilities-hidden;
+@include k-utilities-decoration;
 @include k-utilities-inactive;
-@include k-utilities-margin;
-@include k-utilities-responsive;
+@include k-utilities-line-height;
 @include k-utilities-size;
+@include k-utilities-style;
+@include k-utilities-transform;
 @include k-utilities-weight;

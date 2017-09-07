@@ -59,6 +59,7 @@ module Kitten
           components: [
             { path: 'components/typography/title', name: 'Title' },
             { path: 'components/typography/paragraph', name: 'Paragraph' },
+            { path: 'components/typography/text', name: 'Text' },
           ],
         },
         {
@@ -72,6 +73,13 @@ module Kitten
             { path: 'components/buttons/image-button-with-text', name: 'Image button with text' },
             { path: 'components/buttons/tag-button', name: 'Tag button' },
             { path: 'components/buttons/button-with-badge', name: 'Button with badge' },
+          ],
+        },
+        {
+          id: 'illustrations',
+          label: 'Illustrations',
+          components: [
+            { path: 'components/illustrations/illustrations', name: 'Illustrations' },
           ],
         },
         {
@@ -114,6 +122,7 @@ module Kitten
             { path: 'components/notifications/alert', name: 'Alert' },
             { path: 'components/notifications/badge', name: 'Badge' },
             { path: 'components/notifications/icon-badge', name: 'Icon badge' },
+            { path: 'components/modals/modal', name: 'Modal' },
             { path: 'components/tours/tour', name: 'Tour', hidden_on_s: true },
           ],
         },

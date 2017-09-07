@@ -11,6 +11,10 @@
 ///   // 1.25rem
 
 @function k-px-to-rem($px) {
+  @if $px == 0 {
+    @return 0
+  }
+
   $root-font-size: map-get($k-typography, 'root');
   @return ($px / $root-font-size) * 1rem;
 }

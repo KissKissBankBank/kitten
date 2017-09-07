@@ -72,6 +72,7 @@
 @import 'kitten/components/layout/line';
 @import 'kitten/components/layout/responsive-iframe-container';
 @import 'kitten/components/layout/separator';
+@import 'kitten/components/layout/vertical-separator';
 
 // Lines
 @import 'kitten/components/lines/info-lines';
@@ -90,6 +91,9 @@
 
 // Meters
 @import 'kitten/components/meters/progress';
+
+// Modals
+@import 'kitten/components/modals/modal';
 
 // Navigation
 @import 'kitten/components/navigation/horizontal-nav';

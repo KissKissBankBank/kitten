@@ -35,19 +35,25 @@ export class GridCol extends React.Component {
   }
 
   render() {
+    const { col, offset, className, ...others } = this.props
+
     const gridClassNames = classNames(
       {
-        [`k-Grid__col--${this.props.col}`]: this.props.col,
-        [`k-Grid__col--offset-${this.props.offset}`]: this.props.offset,
+        [`k-Grid__col--${col}`]: col,
+        [`k-Grid__col--offset-${offset}`]: offset,
       },
       this.classByMediaQuery(),
-      this.props.className,
+      className,
     )
 
+    // Remove unknown props in others.
+    mediaQueries.map(mediaQuery => {
+      delete(others[`col-${mediaQuery}`])
+      delete(others[`offset-${mediaQuery}`])
+    })
+
     return (
-      <div className={ gridClassNames }>
-        { this.props.children }
-      </div>
+      <div { ...others } className={ gridClassNames } />
     )
   }
 }

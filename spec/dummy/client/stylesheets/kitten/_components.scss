@@ -143,6 +143,7 @@
 @include k-Line;
 @include k-ResponsiveIframeContainer;
 @include k-Separator;
+@include k-VerticalSeparator;
 
 // Lines
 
@@ -173,6 +174,9 @@
 // Meters
 
 @include k-Progress;
+
+// Modals
+@include k-Modal((z-index: 10));
 
 // Navigation
 
