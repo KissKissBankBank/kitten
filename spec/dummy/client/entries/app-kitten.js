@@ -52,6 +52,9 @@ import {
   KarlUserMenuDropdown,
 } from 'kitten/karl/organisms/dropdown'
 
+// Footer
+import { KarlFooterLendo } from 'kitten/karl/footer/footer-lendo'
+
 // Form
 import { Checkbox } from 'kitten/components/form/checkbox'
 import { CheckboxSet } from 'kitten/components/form/checkbox-set'
@@ -286,6 +289,9 @@ ReactOnRails.register({
   DropdownButton,
   KarlPlatformSwitch,
   KarlUserMenuDropdown,
+
+  // Footer
+  KarlFooterLendo,
 
   // Form
   Checkbox,
