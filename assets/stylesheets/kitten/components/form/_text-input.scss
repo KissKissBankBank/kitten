@@ -16,7 +16,7 @@
 
 @mixin k-TextInput {
   $border-width: 1px;
-  $font: 'source-sans';
+  $font: 'regular';
   $font-size: -1;
   $line-height: 1.3;
   $height: k-px-to-rem(50px);

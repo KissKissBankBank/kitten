@@ -19,7 +19,7 @@
     background-color: $background-color;
     border-radius: k-px-to-rem(10px);
     color: $color;
-    @include k-typographyFont('source-sans');
+    @include k-typographyFont('regular');
     @include k-typographyFontSize(-4, 1);
   }
 

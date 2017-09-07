@@ -6,6 +6,29 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Breaking change: Remove deprecated `text` prop on `Checkbox`.
   Use the `children` prop instead.
+- Breaking change: Add generic keys for fonts.
+  For CSS mixins with configuration maps, replace `font` with the new key.
+  Replace your previous fonts definition by:
+  `$k-fonts: k-merge($k-fonts, ( …your-own-font-definitions-here… );`.
+- Feature: Add `withoutTopBottomBorder`, `borderColor` and other props
+- Breaking change: Replace the deprecated `commissionRate` prop by a list of
+  `commissionRules`. To upgrade you should replace for example:
+
+      function commissionRate(duration) {
+        if (duration >= 20) return 0.2
+        if (duration >= 12) return 0.3
+        return 0.1
+      }
+      <LoanSimulator commissionRate={ commissionRate } />
+
+  By:
+
+      const commissionRules = [
+        { durationMax: 12, rate: 0.3 },
+        { durationMax: 20, rate: 0.2 },
+        { rate: 0.1 }
+      ]
+      <LoanSimulator commissionRules={ commissionRules } />
 - Fix: Fix unworking loader animation.
 - Fix: Delete `icon-tour-1.svg` and `icon-tour-2.svg`.
 - Fix: Replace `MixIllustration` and `LoudspeakerIllustration` component in `Tour`.

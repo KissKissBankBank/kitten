@@ -11,12 +11,12 @@
 ///
 /// @include k-FormInfo((
 ///  label: (
-///    font: 'source-sans-semi-bold',
+///    font: 'bold',
 ///    font-size: -1,
 ///    color: #333,
 ///  ),
 ///  error: (
-///    font: 'source-sans',
+///    font: 'regular',
 ///    font-size: -2,
 ///    color: #ff4146,
 ///  )
@@ -33,12 +33,12 @@
 @mixin k-FormInfo {
 
   // Label
-  $font-label: 'source-sans-semi-bold';
+  $font-label: 'bold';
   $font-size-label: -1;
   $color-label: map-get($k-colors, 'font-1');
 
   // Error
-  $font-error: 'source-sans';
+  $font-error: 'regular';
   $font-size-error: -2;
   $color-error: map-get($k-colors, 'error');
 
