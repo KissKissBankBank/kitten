@@ -1,5 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
+import PropTypes from 'prop-types'
+import deprecated from 'prop-types-extra/lib/deprecated'
 import { card } from 'kitten/hoc/card'
 import { Grid, GridCol } from 'kitten/components/grid/grid'
 import { Marger } from 'kitten/components/layout/marger'
@@ -11,8 +13,16 @@ import { IconBadge } from 'kitten/components/notifications/icon-badge'
 import { LockIcon } from 'kitten/components/icons/lock-icon'
 import { CheckedCircleIcon } from 'kitten/components/icons/checked-circle-icon'
 import { TagList } from 'kitten/components/lists/tag-list'
+import { TypologyTagIcon } from 'kitten/components/icons/typology-tag-icon'
+import { InstrumentTagIcon } from 'kitten/components/icons/instrument-tag-icon'
 
 class ProjectCardComponent extends React.Component {
+  constructor() {
+    super()
+
+    this.renderTagsInList = this.renderTagsInList.bind(this)
+  }
+
   renderDescription() {
     const {
       ownerAvatarSrc,
@@ -56,7 +66,7 @@ class ProjectCardComponent extends React.Component {
   }
 
   renderTooltip() {
-    if (!this.props.tooltipText) return
+    if (!this.props.tooltipText) return null
 
     return (
       <div className="k-ProjectCard__tooltip">
@@ -72,7 +82,7 @@ class ProjectCardComponent extends React.Component {
   }
 
   renderScore() {
-    if (!this.props.scoreValue) return
+    if (!this.props.scoreValue) return null
 
     const scoreStyles = {
       backgroundColor: this.props.scoreBackgroundColor,
@@ -86,7 +96,7 @@ class ProjectCardComponent extends React.Component {
   }
 
   renderImage() {
-    if (!this.props.imageSrc) return
+    if (!this.props.imageSrc) return null
 
     return (
       <div className="k-ProjectCard__grid">
@@ -100,7 +110,7 @@ class ProjectCardComponent extends React.Component {
   }
 
   renderProgress() {
-    if (this.props.progress === false) return
+    if (this.props.progress === false) return null
 
     return (
       <div className="k-ProjectCard__grid k-ProjectCard__grid--withBorderTop">
@@ -120,15 +130,63 @@ class ProjectCardComponent extends React.Component {
   }
 
   renderTags() {
-    if (!this.props.tags) return
-
     return (
-      <div className="k-ProjectCard__grid">
+      <div key={ `tag-list-${Math.random(1)}` } className="k-ProjectCard__grid">
         <Marger top="1.3" bottom="1.3">
-          <TagList items={ this.props.tags } tiny />
+          <TagList
+            icon={ TypologyTagIcon }
+            items={ this.props.tags }
+            tiny
+          />
         </Marger>
       </div>
     )
+  }
+
+  renderTagsInList(tagList, index) {
+    const icon = this.convertToClass(tagList.icon)
+    const list = <TagList icon={ icon } items={ tagList.items } tiny />
+
+    const separator =
+      <div className="k-u-margin-left-single">
+        <hr className="k-VerticalSeparator k-VerticalSeparator--darker"/>
+      </div>
+
+    const tagListWithMargin =
+      <div className="k-u-margin-left-single">
+        { list }
+      </div>
+
+    return (
+      <div key={ `tag-list-${index}` } className="k-ProjectCard__grid--flex">
+        { index != 0 && separator }
+        { index != 0 && tagListWithMargin }
+        { index == 0 && list }
+      </div>
+    )
+  }
+
+  convertToClass(stringClassName) {
+    switch (stringClassName) {
+      case 'InstrumentTagIcon': return InstrumentTagIcon
+      default: return TypologyTagIcon
+    }
+  }
+
+  renderTagLists() {
+    return (
+      <div className="k-ProjectCard__grid">
+        <Marger top="1.3" bottom="1.3" className="k-ProjectCard__grid--flex">
+          { this.props.tagLists.map(this.renderTagsInList) }
+        </Marger>
+      </div>
+    )
+  }
+
+  renderTagsArea() {
+    if (!this.props.tagLists && !this.props.tags) return
+
+    return this.props.tagLists ? this.renderTagLists() : this.renderTags()
   }
 
   renderInfos() {
@@ -219,7 +277,7 @@ class ProjectCardComponent extends React.Component {
            className={ projectCardClassName }>
         { this.renderDescription() }
         { this.renderImage() }
-        { this.renderTags() }
+        { this.renderTagsArea() }
         { this.renderProgress() }
         { this.renderInfos() }
         { this.renderStatus() }
@@ -235,7 +293,8 @@ ProjectCardComponent.defaultProps = {
   ownerAvatarSrc: null,
   ownerName: 'Name',
   ownerLocation: 'Location',
-  tags: [{ key: 'tag-1', item: 'Tag 1' }, { key: 'tag-2', item: 'Tag 2' }],
+  tagLists: null,
+  tags: null,
   tooltipText: null,
   tooltipIconColor: '#4a84ff',
   scoreValue: null,
@@ -255,6 +314,12 @@ ProjectCardComponent.defaultProps = {
   statusErrorBackground: false,
   statusErrorReverseBackground: false,
   statusWithoutTopBorder: false,
+}
+
+// Deprecated props
+
+ProjectCardComponent.propTypes = {
+  tags: deprecated(PropTypes.array, 'Use `tagLists` prop instead')
 }
 
 // Add card generic styles.

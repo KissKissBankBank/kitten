@@ -95,12 +95,26 @@ describe('<ProjectCard />', () => {
   })
 
   describe('with tags props', () => {
+    const tags = [ { items: [ { key: 'custom-tag', item: 'Custom tag' } ] } ]
+    const tagLists = [
+      { items: [ { key: 'custom-tag', item: 'Custom tag' } ] },
+      { items: [ { key: 'custom-tag-1', item: 'Custom tag 1' } ] },
+    ]
+
     const projectCard = mount(
-      <ProjectCard tags={ [ { key: 'custom-tag', item: 'Custom tag' } ] } />
+      <ProjectCard tags={ tags } />
+    )
+
+    const projectCardWithTwoLists = mount(
+      <ProjectCard tagLists={ tagLists } />
     )
 
     it('renders a <TagList />', () => {
       expect(projectCard).to.have.descendants(TagList)
+    })
+
+    it('renders two <TagList />', () => {
+      expect(projectCardWithTwoLists).to.have.exactly(2).descendants(TagList)
     })
   })
 

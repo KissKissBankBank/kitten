@@ -34,6 +34,21 @@ const tags = [
   { key: 'tag-2', item: 'Tag 2' },
 ]
 
+const tagLists = [
+  {
+    items: [
+      { key: 'tag-1', item: 'Tag 1' },
+      { key: 'tag-2', item: 'Tag 2' },
+    ],
+  },
+  {
+    items: [
+      { key: 'tag-3', item: 'Tag 3' },
+      { key: 'tag-4', item: 'Tag 4' },
+    ],
+  }
+]
+
 const infos = [
   { key: 'info-1', text: 'Info 1', value: 'xx', locked: false },
   { key: 'info-2', text: 'Info 2', value: 'xx', locked: false },
@@ -56,7 +71,7 @@ const projectsWithInfos = [
     link: {
       href: 'http://www.hellomerci.com',
     },
-    tags: tags,
+    tagLists: tagLists,
     infos: infos,
   },
   {
