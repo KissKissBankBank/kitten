@@ -40,7 +40,7 @@ describe('<SimilarProjectsCard />', () => {
     imageSrc: 'image-1',
     title: 'Title 1',
     description: 'This is the description of project 1.',
-    tags: emptyArray,
+    tags: null,
     infos: emptyArray,
   }
 
@@ -56,7 +56,7 @@ describe('<SimilarProjectsCard />', () => {
     imageSrc: 'image-3',
     title: 'Title 3',
     description: 'This is the description of project 3.',
-    tags: emptyArray,
+    tags: null,
     infos: infos,
   }
 
@@ -104,7 +104,7 @@ describe('<SimilarProjectsCard />', () => {
             imageSrc: 'image-1',
             title: 'Title 1',
             paragraph: 'This is the description of project 1.',
-            tags: emptyArray,
+            tags: null,
             infos: emptyArray,
           }
 
@@ -144,7 +144,7 @@ describe('<SimilarProjectsCard />', () => {
             imageSrc: 'image-3',
             title: 'Title 3',
             paragraph: 'This is the description of project 3.',
-            tags: emptyArray,
+            tags: null,
             infos: infos,
           }
 
@@ -240,7 +240,7 @@ describe('<SimilarProjectsCard />', () => {
             imageSrc: 'image-1',
             title: 'Title 1',
             paragraph: 'This is the description of project 1.',
-            tags: emptyArray,
+            tags: null,
             infos: emptyArray,
           }
 
@@ -319,7 +319,7 @@ describe('<SimilarProjectsCard />', () => {
             imageSrc: 'image-3',
             title: 'Title 3',
             paragraph: 'This is the description of project 3.',
-            tags: emptyArray,
+            tags: null,
             infos: infos,
           }
 
