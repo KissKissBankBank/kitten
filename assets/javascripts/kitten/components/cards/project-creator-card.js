@@ -6,7 +6,7 @@ import { ClockIcon } from 'kitten/components/icons/clock-icon'
 import { Paragraph } from 'kitten/components/typography/paragraph'
 import { ButtonIcon } from 'kitten/components/buttons/button-icon'
 import { Separator } from 'kitten/components/layout/separator'
-import { RightArrowIcon } from 'kitten/components/icons/right-arrow-icon'
+import { ArrowIcon } from 'kitten/components/icons/arrow-icon'
 
 class ProjectCreatorCardComponent extends React.Component {
   renderDate() {
@@ -14,7 +14,10 @@ class ProjectCreatorCardComponent extends React.Component {
 
     return (
       <div className="k-ProjectCreatorCard__content">
-        <ClockIcon />
+        <ClockIcon
+          width="10px"
+          height="10px"
+        />
         <span className="k-ProjectCreatorCard__date">
           { this.props.date }
         </span>
@@ -89,7 +92,7 @@ class ProjectCreatorCardComponent extends React.Component {
               size="tiny"
               withoutHover
               verticalArrow>
-              <RightArrowIcon className="k-ButtonIcon__svg" />
+              <ArrowIcon className="k-ButtonIcon__svg" />
             </ButtonIcon>
           </Marger>
         </div>

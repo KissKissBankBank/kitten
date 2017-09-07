@@ -1,20 +1,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
-import deprecated from 'prop-types-extra/lib/deprecated'
 
 export class RadioButton extends React.Component {
   renderContent() {
-    // `content` prop is DEPRECATED.
-    const content = this.props.children || this.props.content
-    if (!content) return
+    const { children, largeContent } = this.props
+
+    if (!children) return
 
     const labelContentsClassNames = classNames(
       'k-RadioButton__labelContents',
-      { 'k-RadioButton__labelContents--large': this.props.largeContent }
+      { 'k-RadioButton__labelContents--large': largeContent }
     )
     return (
-      <div className={ labelContentsClassNames }>{ content }</div>
+      <div className={ labelContentsClassNames }>{ children }</div>
     )
   }
 
@@ -62,8 +61,4 @@ RadioButton.defaultProps = {
   text: null,
   large: false,
   largeContent: false,
-}
-
-RadioButton.propTypes = {
-  content: deprecated(PropTypes.string, 'Use `children` prop instead')
 }

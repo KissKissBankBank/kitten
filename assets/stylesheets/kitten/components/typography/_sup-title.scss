@@ -11,7 +11,7 @@
 ///   <div class='k-SupTitle'>Step 1</div>
 
 @mixin k-SupTitle {
-  $font: 'source-sans-semi-bold';
+  $font: 'bold';
 
   .k-SupTitle {
     @include k-typographyFont($font);

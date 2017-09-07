@@ -1,6 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
-import { KissKissBankBankLogoIcon } from 'kitten/components/icons/kisskissbankbanklogo-icon'
+import { KissKissBankBankLogo } from 'kitten/karl/logos/kisskissbankbanklogo'
 import { CrossIcon } from 'kitten/components/icons/cross-icon'
 import { MenuIcon } from 'kitten/components/icons/menu-icon'
 import { ButtonIcon } from 'kitten/components/buttons/button-icon'
@@ -13,12 +13,16 @@ import { HeaderTitles } from 'kitten/components/headers/header-titles'
 export const KarlMenuHeader = props => (
   <Grid>
     <GridCol col="12">
-      <Header className="karl-Header karl-Menu__header"
-              fixed>
+      <Header
+        className="karl-Header karl-Menu__header"
+        fixed
+      >
         <HeaderItems>
           <HeaderItem>
-            <ButtonIcon onClick={ props.onButtonClick }
-                        className="karl-Menu__header__button">
+            <ButtonIcon
+              onClick={ props.onButtonClick }
+              className="karl-Menu__header__button"
+            >
               <MenuIcon className={ classNames('k-ButtonIcon__svg',
                                                'karl-Menu__header__icon',
                                                'karl-Menu__header__icon--closed') } />
@@ -28,11 +32,16 @@ export const KarlMenuHeader = props => (
             </ButtonIcon>
           </HeaderItem>
           <HeaderItem>
-            <KissKissBankBankLogoIcon className={ classNames('k-Header__logo',
-                                                             'karl-Menu__header__logo') } />
+            <KissKissBankBankLogo
+              className={ classNames('k-Header__logo',
+                                     'karl-Menu__header__logo') }
+              width="135"
+            />
           </HeaderItem>
-          <HeaderTitles title="Styleguide"
-                        className="karl-Menu__header__title" />
+          <HeaderTitles
+            title="Styleguide"
+            className="karl-Menu__header__title"
+          />
         </HeaderItems>
       </Header>
     </GridCol>

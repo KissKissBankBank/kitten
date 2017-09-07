@@ -16,7 +16,7 @@
 
 @mixin k-BulletList {
   // Font
-  $font: 'source-sans-light';
+  $font: 'light';
   $font-step: -1;
   $font-step-on-media: 0;
   $line-height: 1.5;
@@ -27,7 +27,7 @@
   $border-radius: 50%;
 
   // Link
-  $link-font: 'source-sans';
+  $link-font: 'regular';
   $link-color: map-get($k-colors, 'primary-1');
   $link-hover-color: map-get($k-colors, 'primary-2');
   $link-active-color: map-get($k-colors, 'primary-3');

@@ -28,8 +28,8 @@
 ///   </div>
 
 @mixin k-ProjectCreatorCard {
-  $font: 'source-sans-light';
-  $boldFont: 'source-sans-semi-bold';
+  $font: 'light';
+  $boldFont: 'bold';
 
   $statusSize: k-px-to-rem(10px);
   $transition-duration: .2s;

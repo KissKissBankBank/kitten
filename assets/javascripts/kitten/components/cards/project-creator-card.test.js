@@ -6,7 +6,7 @@ import { ClockIcon } from 'kitten/components/icons/clock-icon'
 import { Paragraph } from 'kitten/components/typography/paragraph'
 import { ButtonIcon } from 'kitten/components/buttons/button-icon'
 import { Separator } from 'kitten/components/layout/separator'
-import { RightArrowIcon } from 'kitten/components/icons/right-arrow-icon'
+import { ArrowIcon } from 'kitten/components/icons/arrow-icon'
 
 describe('<ProjectCreatorCard />', () => {
   describe('by default', () => {

@@ -1,5 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
+import { ArrowIcon } from 'kitten/components/icons/arrow-icon'
 
 export default class LinkBox extends React.Component {
   renderIcon() {
@@ -39,12 +40,7 @@ export default class LinkBox extends React.Component {
                                          'k-ButtonIcon--tiny',
                                          'k-ButtonIcon--withoutHover',
                                          'k-ButtonIcon--verticalArrow') }>
-              <svg className="k-ButtonIcon__svg"
-                   xmlns="http://www.w3.org/2000/svg"
-                   viewBox="0 0 10 10">
-                <path d="M7.828,5L6.414,6.413L2.172,2.172l1.414-1.415L7.828,5z"/>
-                <path d="M7.828,5L3.586,9.243L2.172,7.827l4.242-4.241L7.828,5z"/>
-              </svg>
+              <ArrowIcon className="k-ButtonIcon__svg" />
             </span>
           </div>
         </div>
