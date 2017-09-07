@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking change: Remove deprecated `content` prop from `RadioButton`.
+  Prefer the `children` prop.
 - Breaking change: Remove deprecated `text` prop on `Checkbox`.
   Use the `children` prop instead.
 - Breaking change: Add generic keys for fonts.
