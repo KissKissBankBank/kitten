@@ -14,6 +14,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Show list `icons` component.
 - Feature: Delete `RefreshIcon` component.
 - Fix: fix unworking loader animation.
+- Breaking change: Remove deprecated `content` prop from `RadioButton`.
+  Prefer the `children` prop.
 - Breaking change: Remove deprecated `text` prop on `Checkbox`.
   Use the `children` prop instead.
 - Breaking change: Add generic keys for fonts.
