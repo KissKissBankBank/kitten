@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: fix unworking loader animation.
 - Fix: Delete `icon-tour-1.svg` and `icon-tour-2.svg`.
 - Fix: Replace `MixIllustration` and `LoudspeakerIllustration` component in `Tour`.
 - Breaking change: Add `LinkBoxIllustration` and used to `DocLinkBox`.
