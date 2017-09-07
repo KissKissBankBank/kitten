@@ -110,8 +110,8 @@ export class SliderBar extends React.Component {
           >
             <GrabberIcon
               className="k-Slider__handleIcon"
-              width="32px"
-              height="32px"
+              width="32"
+              height="32"
             />
           </div>
         </div>

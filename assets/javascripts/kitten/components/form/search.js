@@ -70,8 +70,8 @@ class Search extends React.Component {
                 onMouseOver={ this.handleSubmitMouseOver }
                 onMouseOut={ this.handleSubmitMouseOut }>
           <SearchIcon
-            width="14px"
-            heigth="14px"
+            width="14"
+            heigth="14"
           />
         </button>
       </form>)
