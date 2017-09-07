@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: fix unworking loader animation.
+
 ## [13.11.0] - 2017-09-05
 
 Features:
