@@ -83,6 +83,13 @@ module Kitten
           ],
         },
         {
+          id: 'illustrations',
+          label: 'Illustrations',
+          components: [
+            { path: 'components/illustrations/illustrations', name: 'Illustrations' },
+          ],
+        },
+        {
           id: 'form-elements',
           label: 'Form elements',
           components: [

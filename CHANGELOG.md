@@ -12,28 +12,30 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Breaking chnage: Rename `TooltipIcon` to `QuestionMarkIcon`.
 - Feature: Show list `icons` component.
 - Feature: Delete `RefreshIcon` component.
+- Fix: fix unworking loader animation.
+- Fix: Delete `icon-tour-1.svg` and `icon-tour-2.svg`.
+- Fix: Replace `MixIllustration` and `LoudspeakerIllustration` component in `Tour`.
+- Breaking change: Add `LinkBoxIllustration` and used to `DocLinkBox`.
+- Feature: Add new `MixIllustration` and `LinkBoxIllustration` component.
 
 ## [13.11.0] - 2017-09-05
 
 Features:
-  - Handle breakpoints with `k-utilities-align`.
-  - Add `k-u-align` helper mixin.
-  - Add new `blockAlign` utility to align blocks.
-  - Add icon prop to 'TagList' component.
-  - Add multiple `Taglist` management to `ProjectCard` component.
-  - Add multiple `Taglist` management to `SimilarProjectCard` component.
-  - Add `k-separatorBase` helper.
-  - Add `k-VerticalSeparator`.
-  - Add `InstrumentTagIcon`.
-  - Add `TypologyTagIcon`.
+- Handle breakpoints with `k-utilities-align`.
+- Add `k-u-align` helper mixin.
+- Add new `blockAlign` utility to align blocks.
+- Add icon prop to 'TagList' component.
+- Add multiple `Taglist` management to `ProjectCard` component.
+- Add multiple `Taglist` management to `SimilarProjectCard` component.
+- Add `k-separatorBase` helper.
+- Add `k-VerticalSeparator`.
+- Add `InstrumentTagIcon`.
+- Add `TypologyTagIcon`.
 
 ## [13.10.0] - 2017-08-25
 
 Features:
-  - Add reverse prop to `ProjectCard` component.
-
-Fixes:
-  - Align left `LinkList` component.
+- Add reverse prop to `ProjectCard` component.
 
 ## [13.9.1] - 2017-08-17
 
