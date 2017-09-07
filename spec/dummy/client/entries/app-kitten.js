@@ -52,6 +52,9 @@ import {
   KarlUserMenuDropdown,
 } from 'kitten/karl/organisms/dropdown'
 
+// Footer
+import { KarlFooterLendo } from 'kitten/karl/footer/footer-lendo'
+
 // Form
 import { Checkbox } from 'kitten/components/form/checkbox'
 import { CheckboxSet } from 'kitten/components/form/checkbox-set'
@@ -130,6 +133,12 @@ import { MenuIcon } from 'kitten/components/icons/menu-icon'
 import { RightArrowIcon } from 'kitten/components/icons/right-arrow-icon'
 import { TwitterIcon } from 'kitten/components/icons/twitter-icon'
 import { VisaIcon } from 'kitten/components/icons/visa-icon'
+
+// Illustrations
+import { LinkBoxIllustration } from 'kitten/components/illustrations/link-box-illustration'
+import { LoudspeakerIllustration } from 'kitten/components/illustrations/loudspeaker-illustration'
+import { MixIllustration } from 'kitten/components/illustrations/mix-illustration'
+import { PhoneIllustration } from 'kitten/components/illustrations/phone-illustration'
 
 // Images
 import { KarlImageCropper } from 'kitten/karl/images/image-cropper'
@@ -281,6 +290,9 @@ ReactOnRails.register({
   KarlPlatformSwitch,
   KarlUserMenuDropdown,
 
+  // Footer
+  KarlFooterLendo,
+
   // Form
   Checkbox,
   CheckboxSet,
@@ -349,6 +361,12 @@ ReactOnRails.register({
   RightArrowIcon,
   TwitterIcon,
   VisaIcon,
+
+  // Illustrations
+  LinkBoxIllustration,
+  LoudspeakerIllustration,
+  MixIllustration,
+  PhoneIllustration,
 
   // Images
   KarlImageCropper,
