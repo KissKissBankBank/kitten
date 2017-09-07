@@ -4,7 +4,25 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: fix unworking loader animation.
+- Breaking change: Replace the deprecated `commissionRate` prop by a list of
+  `commissionRules`. To upgrade you should replace for example:
+
+      function commissionRate(duration) {
+        if (duration >= 20) return 0.2
+        if (duration >= 12) return 0.3
+        return 0.1
+      }
+      <LoanSimulator commissionRate={ commissionRate } />
+
+  By:
+
+      const commissionRules = [
+        { durationMax: 12, rate: 0.3 },
+        { durationMax: 20, rate: 0.2 },
+        { rate: 0.1 }
+      ]
+      <LoanSimulator commissionRules={ commissionRules } />
+- Fix: Fix unworking loader animation.
 - Fix: Delete `icon-tour-1.svg` and `icon-tour-2.svg`.
 - Fix: Replace `MixIllustration` and `LoudspeakerIllustration` component in `Tour`.
 - Breaking change: Add `LinkBoxIllustration` and used to `DocLinkBox`.
