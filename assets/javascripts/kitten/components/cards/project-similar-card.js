@@ -11,12 +11,15 @@ import { TagList } from 'kitten/components/lists/tag-list'
 import { RightArrowIcon } from 'kitten/components/icons/right-arrow-icon'
 import { LockIcon } from 'kitten/components/icons/lock-icon'
 import { Loader } from 'kitten/components/loaders/loader'
+import { TypologyTagIcon } from 'kitten/components/icons/typology-tag-icon'
+import { InstrumentTagIcon } from 'kitten/components/icons/instrument-tag-icon'
 
 class SimilarProjectCardComponent extends Component {
   constructor() {
     super()
 
     this.renderInfo = this.renderInfo.bind(this)
+    this.renderTagsInList = this.renderTagsInList.bind(this)
   }
 
   renderRefresh() {
@@ -97,7 +100,7 @@ class SimilarProjectCardComponent extends Component {
     if (!imageSrc) return
 
     return (
-      <Marger top="2" bottom="1">
+      <Marger key="image" top="2" bottom="1">
         <div className="k-ProjectSimilarCard__grid">
           <img
             className="k-ProjectSimilarCard__img"
@@ -134,9 +137,9 @@ class SimilarProjectCardComponent extends Component {
     } = this.props
 
     return(
-      <div className="k-ProjectSimilarCard__grid">
+      <div key="description" className="k-ProjectSimilarCard__grid">
         { this.renderTitle() }
-        { this.renderTags() }
+        { this.renderTagsArea() }
         <Marger top="1" bottom="2">
           <Paragraph
             modifier="tertiary"
@@ -149,19 +152,59 @@ class SimilarProjectCardComponent extends Component {
   }
 
   renderTags() {
-    const {
-      tags,
-    } = this.props
-
-    if (!tags) return
-
     return (
       <Marger top="1" bottom="1">
         <TagList
-          items={ tags }
-          tiny />
+          icon={ TypologyTagIcon }
+          items={ this.props.tags }
+          tiny
+        />
       </Marger>
     )
+  }
+
+  renderTagsInList(tagList, index) {
+    const icon = this.convertToClass(tagList.icon)
+    const list = <TagList icon={ icon } items={ tagList.items } tiny />
+
+    const separator =
+      <div className="k-u-margin-left-single">
+        <hr className="k-VerticalSeparator k-VerticalSeparator--darker"/>
+      </div>
+
+    const tagListWithMargin =
+      <div className="k-u-margin-left-single">
+        { list }
+      </div>
+
+    return (
+      <div key={ `tag-list-${index}` } className="k-ProjectCard__grid--flex">
+        { index != 0 && separator }
+        { index != 0 && tagListWithMargin }
+        { index == 0 && list }
+      </div>
+    )
+  }
+
+  convertToClass(stringClassName) {
+    switch (stringClassName) {
+      case 'InstrumentTagIcon': return InstrumentTagIcon
+      default: return TypologyTagIcon
+    }
+  }
+
+  renderTagLists() {
+    return (
+      <Marger top="1" bottom="1" className="k-ProjectCard__grid--flex">
+        { this.props.tagLists.map(this.renderTagsInList) }
+      </Marger>
+    )
+  }
+
+  renderTagsArea() {
+    if (!this.props.tagLists && !this.props.tags) return
+
+    return this.props.tagLists ? this.renderTagLists() : this.renderTags()
   }
 
   renderInfos() {
@@ -172,7 +215,7 @@ class SimilarProjectCardComponent extends Component {
     if (!infos) return
 
     return (
-      <div>
+      <div key="infos">
         <Separator />
         <Marger
           top="1.5"
@@ -195,7 +238,10 @@ class SimilarProjectCardComponent extends Component {
     )
 
     return (
-      <div className="k-u-align-center k-ProjectSimilarCard__info">
+      <div
+        key={ info.text }
+        className="k-u-align-center k-ProjectSimilarCard__info"
+      >
         { info.text }<br />
         <span className={ infoClassName }>
           { info.locked ? <LockIcon width='12' /> : info.value }
@@ -282,7 +328,8 @@ SimilarProjectCardComponent.defaultProps = {
   imageSrc: null,
   title: '',
   paragraph: '',
-  tags: null, // Eg: [{ key: …, item: … }]
+  tagLists: null,
+  tags: null,
   infos: false, // Eg: [{ key: …, text: …, value: …, locked: … }]
   coloredInfosValues: false,
   refresh: "Refresh",

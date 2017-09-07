@@ -1,6 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
-import { TagIcon } from 'kitten/components/icons/tag-icon'
+import { TypologyTagIcon } from 'kitten/components/icons/typology-tag-icon'
 
 export class TagList extends React.Component {
   constructor(props) {
@@ -9,31 +9,33 @@ export class TagList extends React.Component {
     this.renderItem = this.renderItem.bind(this)
   }
 
-  renderItems() {
-    return this.props.items.map(this.renderItem)
-  }
-
   renderItem(element, index) {
+    const TagIcon = this.props.icon
+
     const { key, item } = element
-    const isFirstItem = index == 0
+    const isFirstItem = (index == 0)
+    const isLastItem = (index == this.props.items.length - 1)
+
     const itemClassName = classNames(
       'k-TagList__item',
       { 'k-TagList__item--first': isFirstItem },
+      { 'k-TagList__item--last': isLastItem },
     )
 
-    const children = isFirstItem
-      ? [<TagIcon key="tag-icon" className="k-TagList__icon" />, item]
-      : item
+    const icon = isFirstItem && <TagIcon className="k-TagList__icon" />
 
     return (
       <li key={ key } className={ itemClassName }>
-        { children }
+        { icon }
+        { item }
       </li>
     )
   }
 
   render() {
-    const { className, tiny, items, ...others } = this.props
+    if (!this.props.items) return null
+
+    const { className, tiny, icon, items, ...others } = this.props
     const listClassName = classNames(
       'k-TagList',
       { 'k-TagList--tiny': tiny },
@@ -42,14 +44,15 @@ export class TagList extends React.Component {
 
     return (
       <ul className={ listClassName } { ...others }>
-        { this.renderItems() }
+        { items.map(this.renderItem) }
       </ul>
     )
   }
 }
 
 TagList.defaultProps = {
+  icon: TypologyTagIcon,
   className: null,
   tiny: false,
-  items: [], // Eg: [{ key: …, item: … }]
+  items: null,
 }

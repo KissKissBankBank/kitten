@@ -1,104 +1,117 @@
 <div class="k-Grid">
-  <div class="k-Grid__col k-Grid__col--2">
-    <%= example 'Text with color option' do %>
-      <%= react_component 'Text', props: {
-        children: 'Lorem ipsum…',
-        color: 'primary1',
-      } %>
+  <div class="k-Grid__col k-Grid__col--12 k-Grid__col--4@l">
+    <div class="k-Grid">
+      <div class="k-Grid__col k-Grid__col--12 k-Grid__col--3@s k-Grid__col--12@l">
+        <%= example 'Text with normal line-height' do %>
+          <%= react_component 'Text', props: {
+            children: 'Lorem ipsum…',
+            lineHeight: 'normal',
+          } %>
+        <% end %>
+      </div>
 
-      <%= react_component 'Text', props: {
-        children: 'Lorem ipsum…',
-        color: 'error',
-      } %>
-    <% end %>
+      <div class="k-Grid__col k-Grid__col--12 k-Grid__col--3@s k-Grid__col--12@l">
+        <%= example 'Text with underline decoration' do %>
+          <%= react_component 'Text', props: {
+            children: 'Lorem ipsum…',
+            decoration: 'underline',
+          } %>
+        <% end %>
+      </div>
+
+      <div class="k-Grid__col k-Grid__col--12 k-Grid__col--3@s k-Grid__col--12@l">
+        <%= example 'Text with italic style' do %>
+          <%= react_component 'Text', props: {
+            children: 'Lorem ipsum…',
+            style: 'italic',
+          } %>
+        <% end %>
+      </div>
+
+      <div class="k-Grid__col k-Grid__col--12 k-Grid__col--3@s k-Grid__col--12@l">
+        <%= example 'Text with uppercase transformation' do %>
+          <%= react_component 'Text', props: {
+            children: 'Lorem ipsum…',
+            transform: 'uppercase',
+          } %>
+        <% end %>
+      </div>
+    </div>
   </div>
 
-  <div class="k-Grid__col k-Grid__col--2">
-    <%= example 'Text with underline decoration' do %>
-      <%= react_component 'Text', props: {
-        children: 'Lorem ipsum…',
-        decoration: 'underline',
-      } %>
-    <% end %>
+  <div class="k-Grid__col k-Grid__col--12 k-Grid__col--4@l">
+    <div class="k-Grid">
+
+      <div class="k-Grid__col k-Grid__col--12 k-Grid__col--3@s k-Grid__col--12@l">
+        <%= example 'Text with different weights' do %>
+          <%= react_component 'Text', props: {
+            children: 'Lorem ipsum…',
+            weight: 'light',
+          } %>
+
+          <%= react_component 'Text', props: {
+            children: 'Lorem ipsum…',
+            weight: 'regular',
+          } %>
+
+          <%= react_component 'Text', props: {
+            children: 'Lorem ipsum…',
+            weight: 'bold',
+          } %>
+        <% end %>
+      </div>
+
+      <div class="k-Grid__col k-Grid__col--12 k-Grid__col--3@s k-Grid__col--12@l">
+        <%= example 'Text with color option' do %>
+          <%= react_component 'Text', props: {
+            children: 'Lorem ipsum…',
+            color: 'primary1',
+          } %>
+
+          <%= react_component 'Text', props: {
+            children: 'Lorem ipsum…',
+            color: 'error',
+          } %>
+        <% end %>
+      </div>
+    </div>
   </div>
 
-  <div class="k-Grid__col k-Grid__col--2">
-    <%= example 'Text with normal line-height' do %>
-      <%= react_component 'Text', props: {
-        children: 'Lorem ipsum…',
-        lineHeight: 'normal',
-      } %>
-    <% end %>
-  </div>
+  <div class="k-Grid__col k-Grid__col--12 k-Grid__col--4@l">
+    <div class="k-Grid">
+      <div class="k-Grid__col k-Grid__col--12 k-Grid__col--3s k-Grid__col--12@l">
+        <%= example 'Text with different sizes' do %>
+          <%= react_component 'Text', props: {
+            children: 'Lorem ipsum…',
+            size: 'huge',
+          } %>
 
-  <div class="k-Grid__col k-Grid__col--2">
-    <%= example 'Text with different sizes' do %>
-      <%= react_component 'Text', props: {
-        children: 'Lorem ipsum…',
-        size: 'huge',
-      } %>
+          <%= react_component 'Text', props: {
+            children: 'Lorem ipsum…',
+            size: 'big',
+          } %>
 
-      <%= react_component 'Text', props: {
-        children: 'Lorem ipsum…',
-        size: 'big',
-      } %>
+          <%= react_component 'Text', props: {
+            children: 'Lorem ipsum…',
+            size: 'default',
+          } %>
 
-      <%= react_component 'Text', props: {
-        children: 'Lorem ipsum…',
-        size: 'default',
-      } %>
+          <%= react_component 'Text', props: {
+            children: 'Lorem ipsum…',
+            size: 'tiny',
+          } %>
 
-      <%= react_component 'Text', props: {
-        children: 'Lorem ipsum…',
-        size: 'tiny',
-      } %>
+          <%= react_component 'Text', props: {
+            children: 'Lorem ipsum…',
+            size: 'micro',
+          } %>
 
-      <%= react_component 'Text', props: {
-        children: 'Lorem ipsum…',
-        size: 'micro',
-      } %>
-
-      <%= react_component 'Text', props: {
-        children: 'Lorem ipsum…',
-        size: 'nano',
-      } %>
-    <% end %>
-  </div>
-
-  <div class="k-Grid__col k-Grid__col--2">
-    <%= example 'Text with italic style' do %>
-      <%= react_component 'Text', props: {
-        children: 'Lorem ipsum…',
-        style: 'italic',
-      } %>
-    <% end %>
-  </div>
-
-  <div class="k-Grid__col k-Grid__col--2">
-    <%= example 'Text with uppercase transformation' do %>
-      <%= react_component 'Text', props: {
-        children: 'Lorem ipsum…',
-        transform: 'uppercase',
-      } %>
-    <% end %>
-  </div>
-
-  <div class="k-Grid__col k-Grid__col--2">
-    <%= example 'Text with different weights' do %>
-      <%= react_component 'Text', props: {
-        children: 'Lorem ipsum…',
-        weight: 'light',
-      } %>
-
-      <%= react_component 'Text', props: {
-        children: 'Lorem ipsum…',
-        weight: 'regular',
-      } %>
-
-      <%= react_component 'Text', props: {
-        children: 'Lorem ipsum…',
-        weight: 'bold',
-      } %>
-    <% end %>
+          <%= react_component 'Text', props: {
+            children: 'Lorem ipsum…',
+            size: 'nano',
+          } %>
+        <% end %>
+      </div>
+    </div>
   </div>
 </div>
