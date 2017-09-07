@@ -32,9 +32,9 @@
 ///   </div>
 
 @mixin k-ProjectSimilarCard {
-  $lightFont: 'source-sans-light';
-  $font: 'source-sans';
-  $boldFont: 'source-sans-semi-bold';
+  $lightFont: 'light';
+  $font: 'regular';
+  $boldFont: 'bold';
 
   .k-ProjectSimilarCard {
     overflow: visible;

@@ -21,7 +21,7 @@
 
   .k-titleWithActions__title {
     @include k-grid-col(12);
-    @include k-typographyFont('source-sans-light');
+    @include k-typographyFont('light');
     @include k-typographyFontSize(5);
     margin-bottom: k-px-to-rem(30px);
 

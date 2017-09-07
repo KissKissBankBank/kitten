@@ -33,8 +33,8 @@
   $border-size: 1px;
   $border-radius: k-px-to-rem(15px);
   $margin-container: k-px-to-rem(10px);
-  $font: 'source-sans-light';
-  $title-font: 'source-sans-semi-bold';
+  $font: 'light';
+  $title-font: 'bold';
 
   .k-Popover {
     @include k-typographyFont($font);

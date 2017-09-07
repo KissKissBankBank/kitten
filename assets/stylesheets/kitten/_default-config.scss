@@ -54,33 +54,29 @@ $susy: (
 // Fonts
 
 $k-fonts: (
-  source-sans-light: (
+  light: (
     family: ("Source Sans Pro", Helvetica, Arial, sans-serif),
     weight: 300
   ),
-  source-sans: (
+  regular: (
     family: ("Source Sans Pro", Helvetica, Arial, sans-serif),
     weight: 400
   ),
-  source-sans-semi-bold: (
+  bold: (
     family: ("Source Sans Pro", Helvetica, Arial, sans-serif),
     weight: 600
   ),
-  source-sans-uppercase: (
+  regular-uppercase: (
     family: ("Source Sans Pro", Helvetica, Arial, sans-serif),
     weight: 400,
     transform: uppercase
   ),
-  source-sans-semi-bold-uppercase: (
+  bold-uppercase: (
     family: ("Source Sans Pro", Helvetica, Arial, sans-serif),
     weight: 600,
     letter-spacing: .1rem,
     transform: uppercase
   ),
-  dosis: (
-    family: ("Dosis", Helvetica, Arial, sans-serif),
-    weight: 400
-  )
 ) !default;
 
 // Colors
