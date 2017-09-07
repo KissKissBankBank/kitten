@@ -4,6 +4,16 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking chance: Remove `TagIcon` component.
+- Feature: Add `ArrowIcon` component in `LinkBox` component.
+- Feature: Delete `InformationIcon` component.
+- Feature: Replace `RightArrowIcon` to `ArrowIcon`.
+- Breaking change: Rename `ButtonInfoIcon` to `ButtonQuestionMarkIcon`.
+- Breaking chnage: Rename `ButtonTooltipIcon` to `InfoIcon`.
+- Breaking chnage: Rename `TooltipIcon` to `QuestionMarkIcon`.
+- Feature: Show list `icons` component.
+- Feature: Delete `RefreshIcon` component.
+- Fix: fix unworking loader animation.
 - Breaking change: Remove deprecated `content` prop from `RadioButton`.
   Prefer the `children` prop.
 - Breaking change: Remove deprecated `text` prop on `Checkbox`.

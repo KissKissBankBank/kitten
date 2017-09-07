@@ -80,26 +80,39 @@ export class SliderBar extends React.Component {
     const grabbingClass = this.state.grabbing ? 'is-grabbing' : null
 
     return (
-      <div className={ classNames("k-Slider", grabbingClass) }
-           onClick={ this.handleClick }>
-        <div className="k-Slider__ramp"
-             ref="track">
-          <div className="k-Slider__progress"
-               style={ trackStyles }></div>
-          <div className="k-Slider__handle"
-               ref="thumb"
-               style={ thumbStyles }
-               role="slider"
-               tabIndex="0"
-               aria-valuemin={ this.props.min }
-               aria-valuemax={ this.props.max }
-               aria-valuenow={ this.props.value }
-               onKeyDown={ this.props.onKeyDown }
-               onMouseDown={ this.handleStart }
-               onTouchStart={ this.handleStart }
-               onClick={ this.handleClick }
-               onFocus={ this.props.onAction }>
-            <GrabberIcon className="k-Slider__handleIcon" />
+      <div
+        className={ classNames("k-Slider", grabbingClass) }
+        onClick={ this.handleClick }
+      >
+        <div
+          className="k-Slider__ramp"
+          ref="track"
+        >
+          <div
+            className="k-Slider__progress"
+            style={ trackStyles }
+          >
+          </div>
+          <div
+            className="k-Slider__handle"
+            ref="thumb"
+            style={ thumbStyles }
+            role="slider"
+            tabIndex="0"
+            aria-valuemin={ this.props.min }
+            aria-valuemax={ this.props.max }
+            aria-valuenow={ this.props.value }
+            onKeyDown={ this.props.onKeyDown }
+            onMouseDown={ this.handleStart }
+            onTouchStart={ this.handleStart }
+            onClick={ this.handleClick }
+            onFocus={ this.props.onAction }
+          >
+            <GrabberIcon
+              className="k-Slider__handleIcon"
+              width="32"
+              height="32"
+            />
           </div>
         </div>
         { this.renderInput() }

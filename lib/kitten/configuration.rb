@@ -76,6 +76,13 @@ module Kitten
           ],
         },
         {
+          id: 'icons',
+          label: 'Icons',
+          components: [
+            { path: 'components/icons/icons', name: 'Icons' },
+          ],
+        },
+        {
           id: 'illustrations',
           label: 'Illustrations',
           components: [

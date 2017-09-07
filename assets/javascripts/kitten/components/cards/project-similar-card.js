@@ -8,7 +8,7 @@ import { Paragraph } from 'kitten/components/typography/paragraph'
 import { ButtonIcon } from 'kitten/components/buttons/button-icon'
 import { Separator } from 'kitten/components/layout/separator'
 import { TagList } from 'kitten/components/lists/tag-list'
-import { RightArrowIcon } from 'kitten/components/icons/right-arrow-icon'
+import { ArrowIcon } from 'kitten/components/icons/arrow-icon'
 import { LockIcon } from 'kitten/components/icons/lock-icon'
 import { Loader } from 'kitten/components/loaders/loader'
 import { TypologyTagIcon } from 'kitten/components/icons/typology-tag-icon'
@@ -47,7 +47,7 @@ class SimilarProjectCardComponent extends Component {
         verticalArrow
         disabled={ this.props.leftArrowDisabled }
         onClick={ this.props.onLeftArrowClick }>
-        <RightArrowIcon
+        <ArrowIcon
           className={ classNames('k-ButtonIcon__svg',
                                  'k-ButtonIcon__svg--mirror') } />
       </ButtonIcon>
@@ -62,7 +62,7 @@ class SimilarProjectCardComponent extends Component {
         verticalArrow
         disabled={ this.props.rightArrowDisabled }
         onClick={ this.props.onRightArrowClick }>
-        <RightArrowIcon className="k-ButtonIcon__svg" />
+        <ArrowIcon className="k-ButtonIcon__svg" />
       </ButtonIcon>
     )
   }
