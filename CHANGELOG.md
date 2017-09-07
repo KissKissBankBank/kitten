@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking chance: Remove `TagIcon` component.
 - Feature: Add `ArrowIcon` component in `LinkBox` component.
 - Feature: Delete `InformationIcon` component.
 - Feature: Replace `RightArrowIcon` to `ArrowIcon`.
