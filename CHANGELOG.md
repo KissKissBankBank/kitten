@@ -21,7 +21,7 @@ Features:
 ## [13.10.0] - 2017-08-25
 
 Features:
-  - Add reverse prop to `ProjectCard` component.
+- Add reverse prop to `ProjectCard` component.
 
 ## [13.9.1] - 2017-08-17
 

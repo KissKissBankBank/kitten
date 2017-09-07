@@ -3,8 +3,8 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
-- Feature: Add new `KarlFooterLendo` component.
 
+- Feature: Add new `KarlFooterLendo` component.
 - Feature: Add analytics.
 
 ## [13.11.0] - 2017-09-05
