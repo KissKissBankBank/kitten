@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Show list `illustrations` component.
+- Feature: Add analytics.
 
 ## [13.11.0] - 2017-09-05
 
@@ -15,6 +16,7 @@ Features:
 
 Fix:
 - Reorder text component.
+- Fix: Reorder text component.
 - Feature: Delete unused `.svg` files.
 
 ## [13.10.0] - 2017-08-25
