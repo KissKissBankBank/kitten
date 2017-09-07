@@ -1,0 +1,60 @@
+.karl-FooterLendo__network__followText {
+  @include k-media-min('l') {
+    margin-right: k-px-to-rem(15px);
+  }
+}
+
+.karl-FooterLendo__network__logo {
+  @include k-media-min('l') {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.karl-FooterLendo__notice__copyright {
+  @include k-media-min('l') {
+    align-self: flex-end;
+    margin-top: 0;
+  }
+}
+
+.karl-FooterLendo__notice__logo {
+  @include k-media-min('l') {
+    display: flex;
+  }
+}
+
+.karl-FooterLendo__notice__link {
+  &:active {
+    color: map-get($k-colors, 'primary-3');
+  }
+
+  &:hover {
+    color: map-get($k-colors, 'primary-1');
+  }
+}
+
+.karl-FooterLendo__logo__img {
+  @include k-media-min('l') {
+    line-height: 4rem;
+    margin-bottom: 0;
+    margin-right: k-px-to-rem(16px);
+  }
+}
+
+.karl-FooterLendo__logo__imgMangopay {
+  width: k-px-to-rem(100px);
+
+  @include k-media-max('m') {
+    height: k-px-to-rem(50px);
+  }
+}
+
+.karl-FooterLendo__logo__img__imgTag {
+  vertical-align: middle;
+
+   @include k-media-min('l') {
+    display: block;
+    vertical-align: top;
+  }
+}
