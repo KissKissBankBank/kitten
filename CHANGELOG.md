@@ -4,8 +4,6 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: `LinkList` responsive.
-- Feature: Add `mangopay.svg` logo.
 - Feature: Handle breakpoints with `k-utilities-align`.
 - Feature: Add `k-u-align` helper mixin.
 - Feature: Add new `blockAlign` utility to align blocks.

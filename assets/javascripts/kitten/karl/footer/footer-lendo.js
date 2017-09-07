@@ -39,7 +39,8 @@ export class KarlFooterLendo extends Component {
                 </GridCol>
 
                 <GridCol
-                  col-m="12" col-l="7"
+                  col-m="12"
+                  col-l="7"
                   className={ classNames('k-u-margin-top-single@m-down',
                                          'k-u-blockAlign-center') }
                 >
@@ -52,7 +53,8 @@ export class KarlFooterLendo extends Component {
             </GridCol>
 
             <GridCol
-              col-m="6" col-l="5"
+              col-m="6"
+              col-l="5"
               className="k-u-margin-top-triple@s-down"
             >
               <div className="karl-FooterLendo__network__logo">
@@ -158,7 +160,8 @@ export class KarlFooterLendo extends Component {
             <GridCol col-l="10">
               <Grid>
                 <GridCol
-                  col-m="3" col-l="3"
+                  col-m="3"
+                  col-l="3"
                   className="k-u-margin-bottom-triple@s-down"
                 >
                   <LinkList
@@ -168,7 +171,8 @@ export class KarlFooterLendo extends Component {
                 </GridCol>
 
                 <GridCol
-                  col-m="3" col-l="3"
+                  col-m="3"
+                  col-l="3"
                   className="k-u-margin-bottom-triple@s-down"
                 >
                   <LinkList
@@ -178,7 +182,8 @@ export class KarlFooterLendo extends Component {
                 </GridCol>
 
                 <GridCol
-                  col-m="3" col-l="3"
+                  col-m="3"
+                  col-l="3"
                   className="k-u-margin-bottom-triple@s-down"
                 >
                   <LinkList
