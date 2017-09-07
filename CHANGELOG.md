@@ -4,6 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Delete `icon-tour-1.svg` and `icon-tour-2.svg`.
+- Fix: Replace `MixIllustration` and `LoudspeakerIllustration` component in `Tour`.
+- Breaking change: Add `LinkBoxIllustration` and used to `DocLinkBox`.
+- Feature: Add new `MixIllustration` and `LinkBoxIllustration` component.
+
 ## [13.11.0] - 2017-09-05
 
 Features:
