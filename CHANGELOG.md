@@ -9,8 +9,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Delete `InformationIcon` component.
 - Feature: Replace `RightArrowIcon` to `ArrowIcon`.
 - Breaking change: Rename `ButtonInfoIcon` to `ButtonQuestionMarkIcon`.
-- Breaking chnage: Rename `ButtonTooltipIcon` to `InfoIcon`.
-- Breaking chnage: Rename `TooltipIcon` to `QuestionMarkIcon`.
+- Breaking change: Rename `ButtonTooltipIcon` to `InfoIcon`.
+- Breaking change: Rename `TooltipIcon` to `QuestionMarkIcon`.
 - Feature: Show list `icons` component.
 - Feature: Delete `RefreshIcon` component.
 - Fix: fix unworking loader animation.

@@ -87,6 +87,7 @@ module Kitten
           label: 'Illustrations',
           components: [
             { path: 'components/illustrations/illustrations', name: 'Illustrations' },
+
           ],
         },
         {
