@@ -16,8 +16,7 @@ Features:
 
 Fix:
 - Reorder text component.
-- Fix: Reorder text component.
-- Feature: Delete unused `.svg` files.
+- Delete unused `.svg` files.
 
 ## [13.10.0] - 2017-08-25
 

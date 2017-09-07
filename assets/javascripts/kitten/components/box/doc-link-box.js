@@ -8,8 +8,6 @@ export default class DocLinkBox extends React.Component {
       <LinkBox { ...this.props } displayIcon>
         <LinkBoxIllustration
           className="k-LinkBox__icon--svg"
-          width="40px"
-          height="50px"
         />
       </LinkBox>
     )
