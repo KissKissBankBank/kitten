@@ -14,23 +14,27 @@
 ///     <svg class="k-ArrowIcon__top" … />
 ///   </div>
 
-.k-ArrowIcon__top {
+.k-ArrowIcon--top {
   -moz-transform:rotate(270deg);
   -webkit-transform:rotate(270deg);
   -o-transform:rotate(270deg);
   -ms-transform:rotate(270deg);
 }
 
-.k-ArrowIcon__bottom {
+.k-ArrowIcon--bottom {
   -moz-transform:rotate(90deg);
   -webkit-transform:rotate(90deg);
   -o-transform:rotate(90deg);
   -ms-transform:rotate(90deg);
 }
 
-.k-ArrowIcon__left {
+.k-ArrowIcon--left {
   -moz-transform:rotate(180deg);
   -webkit-transform:rotate(180deg);
   -o-transform:rotate(180deg);
   -ms-transform:rotate(180deg);
+}
+
+.k-ArrowIcon--disabled {
+  fill: #b8b8b8;
 }

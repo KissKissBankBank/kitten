@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add rotate on `ArrowIcon` component.
+- Feature: Add direction on `ArrowIcon` component.
 
 ## [14.0.1] - 2017-09-08
 
