@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Remove undefined variable.
+
 ## [14.0.0] - 2017-09-07
 
 Breaking changes:
