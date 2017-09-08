@@ -1,0 +1,36 @@
+/// Setup a arrow icon element.
+///
+/// @group icons
+///
+///   ArrowIcon is positionned on the right by default.
+///
+/// @example scss - Usage
+///
+///   @include k-ArrowIcon;
+///
+/// @example html
+///
+///   <div>
+///     <svg class="k-ArrowIcon__top" … />
+///   </div>
+
+.k-ArrowIcon__top {
+  -moz-transform:rotate(270deg);
+  -webkit-transform:rotate(270deg);
+  -o-transform:rotate(270deg);
+  -ms-transform:rotate(270deg);
+}
+
+.k-ArrowIcon__bottom {
+  -moz-transform:rotate(90deg);
+  -webkit-transform:rotate(90deg);
+  -o-transform:rotate(90deg);
+  -ms-transform:rotate(90deg);
+}
+
+.k-ArrowIcon__left {
+  -moz-transform:rotate(180deg);
+  -webkit-transform:rotate(180deg);
+  -o-transform:rotate(180deg);
+  -ms-transform:rotate(180deg);
+}

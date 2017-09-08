@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add rotate on `ArrowIcon` component.
+
 ## [14.0.1] - 2017-09-08
 
 - Fix: Remove undefined variable.
