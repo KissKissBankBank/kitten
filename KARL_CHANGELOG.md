@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [14.0.1] - 2017-09-08
+
 ## [14.0.0] - 2017-09-07
 
 Features:
