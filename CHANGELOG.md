@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Scroll problem on opened modal.
 - Fix: Repair `PhoneIllustration` background.
 
 ## [14.0.1] - 2017-09-08
