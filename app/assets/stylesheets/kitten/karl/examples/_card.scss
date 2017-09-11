@@ -54,13 +54,11 @@ $karl-card-layout: (
   border-radius: k-px-to-rem(8px);
 }
 
-.karl-Illustrations__size {
-  margin-bottom: k-px-to-rem(20px);
+.karl-Illustrations--normalSize {
   height: k-px-to-rem(150px);
 }
 
-.karl-Icons__size {
-  margin-bottom: k-px-to-rem(10px);
+.karl-Icons--tiny {
   height: k-px-to-rem(100px);
 }
 
