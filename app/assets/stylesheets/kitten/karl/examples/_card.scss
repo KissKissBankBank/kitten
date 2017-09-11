@@ -44,28 +44,24 @@ $karl-card-layout: (
   box-shadow: 0 5px 10px map-get($k-colors, 'line-2');
 }
 
-.karl-Illustrations {
+.karl-Illustrations,
+.karl-Icons, {
   display: flex;
   flex-direction: row;
   align-items: center;
-
-  margin-bottom: k-px-to-rem(20px);
-  height: k-px-to-rem(150px);
 
   background-color: map-get($k-colors, 'background-1');
   border-radius: k-px-to-rem(8px);
 }
 
-.karl-Icons {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+.karl-Illustrations__size {
+  margin-bottom: k-px-to-rem(20px);
+  height: k-px-to-rem(150px);
+}
 
+.karl-Icons__size {
   margin-bottom: k-px-to-rem(10px);
   height: k-px-to-rem(100px);
-
-  background-color: map-get($k-colors, 'background-1');
-  border-radius: k-px-to-rem(8px);
 }
 
 .karl-Illustrations__card,
