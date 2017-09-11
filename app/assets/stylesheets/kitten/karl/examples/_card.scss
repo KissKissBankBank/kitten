@@ -56,7 +56,20 @@ $karl-card-layout: (
   border-radius: k-px-to-rem(8px);
 }
 
-.karl-Illustrations__card {
+.karl-Icons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  margin-bottom: k-px-to-rem(10px);
+  height: k-px-to-rem(100px);
+
+  background-color: map-get($k-colors, 'background-1');
+  border-radius: k-px-to-rem(8px);
+}
+
+.karl-Illustrations__card,
+.karl-Icons__card {
   margin: 0 auto;
   border-radius: k-px-to-rem(50px);
   border: k-px-to-rem(1px) solid transparent;
