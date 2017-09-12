@@ -105,14 +105,9 @@ class ProjectCreatorCardComponent extends React.Component {
       'k-ProjectCreatorCard',
       this.props.className,
       {
-        'k-Card--withBorder': this.props.withBorder,
-        'k-Card--withBorderDark': this.props.withBorderDark,
+        'k-Card--withBorderDark': this.props.href,
       }
     )
-
-    if (this.props.href) {
-       withBorderDark: true
-    }
 
     return (
       <div className={ ProjectCreatorCardClassName }>
@@ -136,7 +131,7 @@ ProjectCreatorCardComponent.defaultProps = {
 
 export const ProjectCreatorCard = card(ProjectCreatorCardComponent, {
   light: true,
-  //withBorder: true,
+  withBorder: true,
   withShadow: false,
   translateOnHover: true,
   rounded: 'tiny',
