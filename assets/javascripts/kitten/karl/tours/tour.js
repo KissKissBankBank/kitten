@@ -1,73 +1,149 @@
 import React from 'react'
 import classNames from 'classnames'
+import { Button } from 'kitten/components/buttons/button'
+import { CloseButton } from 'kitten/components/buttons/close-button'
 import { ArrowIcon } from 'kitten/components/icons/arrow-icon'
-import { CrossCircleIcon } from 'kitten/components/icons/cross-circle-icon'
 import { MixIllustration } from 'kitten/components/illustrations/mix-illustration'
 import { LoudspeakerIllustration } from 'kitten/components/illustrations/loudspeaker-illustration'
 
-export const KarlHeaderTour1 = props => {
-  return (
-      <div class="k-Popover"
-           role="dialog"
-           aria-hidden="true"
-           aria-labelledby="dialogtitle">
+export const KarlHeaderTour1 = props => (
+  <div className="k-Popover"
+       role="dialog"
+       aria-hidden="true"
+       aria-labelledby="dialogtitle">
 
-        <div class="k-Popover__container k-Tour__popover__container">
+    <div
+      className={ classNames('k-Popover__container',
+                             'k-Tour__popover__container') }
+    >
 
-          <div class="k-Tour__popover__illustration">
-            <MixIllustration className="k-Tour__popover__svg--primary" />
-
-          <div class="k-Tour__popover__content">
-            <p id="dialogtitle" class="k-Tour__popover__title">What's new</p>
-            <p class="k-Tour__popover__text">Lorem ipsum dolor sit amet, consectetur
-              adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.</p>
-            <div class="k-Tour__popover__navigation">
-              <p class="k-Tour__popover__numbering">1 on 2</p>
-              <div class="k-Tour__popover__buttons">
-                <button title="Précédent" class="k-Tour__popover__button
-                                                 k-Button
-                                                 k-Button--hydrogen
-                                                 k-Button--tiny
-                                                 k-Button--icon"
-                                                 disabled>
-                  <ArrowIcon
-                    direction="left"
-                    className="k-Button__icon"
-                  />
-                  Back
-                </button>
-                <button title="Suivant" class="k-Tour__popover__button
-                                               k-Tour__popover__button--right
-                                               k-Button
-                                               k-Button--helium
-                                               k-Button--tiny
-                                               k-Button--icon
-                                               k-Button--iconRight">
-                  Next
-                  <ArrowIcon
-                    direction="right"
-                    className="k-Button__icon"
-                  />
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="k-Popover__close">
-            <button class="k-ButtonIcon
-                           k-ButtonIcon--hydrogen
-                           k-ButtonIcon--tiny">
-              <CrossCircleIcon
-                className={ classNames('k-ButtonIcon__svg',
-                                       'k-ButtonIcon__svg--rotate') }
+      <div className="k-Tour__popover__illustration">
+        <MixIllustration className="k-Tour__popover__svg--primary" />
+      </div>
+      <div className="k-Tour__popover__content">
+        <p
+          id="dialogtitle"
+          className="k-Tour__popover__title">
+          What's new
+        </p>
+        <p
+          className="k-Tour__popover__text">
+          Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua.
+        </p>
+        <div className="k-Tour__popover__navigation">
+          <p className="k-Tour__popover__numbering">
+            1 on 2
+          </p>
+          <div className="k-Tour__popover__buttons">
+            <Button
+              title="Précédent"
+              className="k-Tour__popover__button"
+              modifier="hydrogen"
+              size="tiny"
+              icon
+              disabled
+            >
+              <ArrowIcon
+                direction="left"
+                className="k-Button__icon"
               />
-            </button>
+              Back
+            </Button>
+            <Button
+              title="Suivant"
+              className={ classNames('k-Tour__popover__button',
+                                     'k-Tour__popover__button--right') }
+              modifier="helium"
+              size="tiny"
+              icon
+              iconOnRight
+            >
+              Next
+              <ArrowIcon
+                direction="right"
+                className="k-Button__icon"
+              />
+            </Button>
           </div>
         </div>
       </div>
+      <div className="k-Popover__close">
+        <CloseButton
+          modifier="hydrogen"
+        />
+      </div>
+    </div>
   </div>
+)
 
+export const KarlHeaderTour2 = props => (
+  <div className="k-Popover"
+       role="dialog"
+       aria-hidden="true"
+       aria-labelledby="dialogtitle">
 
+    <div
+      className={ classNames('k-Popover__container',
+                             'k-Tour__popover__container') }
+    >
 
-          )
-}
+      <div className="k-Tour__popover__illustration">
+        <LoudspeakerIllustration className="k-Tour__popover__svg--primary" />
+      </div>
+      <div className="k-Tour__popover__content">
+        <p
+          id="dialogtitle"
+          className="k-Tour__popover__title">
+          What's new
+        </p>
+        <p
+          className="k-Tour__popover__text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+        </p>
+        <div className="k-Tour__popover__navigation">
+          <p className="k-Tour__popover__numbering">
+            1 on 2
+          </p>
+          <div className="k-Tour__popover__buttons">
+            <Button
+              title="Précédent"
+              className="k-Tour__popover__button"
+              modifier="helium"
+              size="tiny"
+              icon
+            >
+              <ArrowIcon
+                direction="left"
+                className="k-Button__icon"
+              />
+              Back
+            </Button>
+            <Button
+              title="Suivant"
+              className={ classNames('k-Tour__popover__button',
+                                     'k-Tour__popover__button--right') }
+              modifier="hydrogen"
+              size="tiny"
+              icon
+              disabled
+              iconOnRight
+            >
+              Next
+              <ArrowIcon
+                direction="right"
+                className="k-Button__icon"
+              />
+            </Button>
+          </div>
+        </div>
+      </div>
+      <div className="k-Popover__close">
+        <CloseButton
+          modifier="hydrogen"
+        />
+      </div>
+    </div>
+  </div>
+)
