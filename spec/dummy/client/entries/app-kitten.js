@@ -242,6 +242,7 @@ import HeaderTour from 'kitten/components/tours/header-tour'
 import Tour from 'kitten/components/tours/tour'
 import TourPopover from 'kitten/components/tours/tour-popover'
 import TourStep from 'kitten/components/tours/tour-step'
+import { KarlHeaderTour1 } from 'kitten/karl/tours/tour'
 
 // Typography
 import { Paragraph } from 'kitten/components/typography/paragraph'
@@ -464,6 +465,7 @@ ReactOnRails.register({
   Tour,
   TourPopover,
   TourStep,
+  KarlHeaderTour1,
 
   // Typography
   Paragraph,
