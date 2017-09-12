@@ -40,7 +40,10 @@ export default class LinkBox extends React.Component {
                                          'k-ButtonIcon--tiny',
                                          'k-ButtonIcon--withoutHover',
                                          'k-ButtonIcon--verticalArrow') }>
-              <ArrowIcon className="k-ButtonIcon__svg" />
+              <ArrowIcon
+                direction="right"
+                className="k-ButtonIcon__svg"
+              />
             </span>
           </div>
         </div>
