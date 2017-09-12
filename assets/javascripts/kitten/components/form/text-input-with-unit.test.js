@@ -85,7 +85,13 @@ describe('<TextInputWithUnit />', () => {
   describe('digits prop', () => {
     const component = mount(<TextInputWithUnit digits={ 2 } />)
 
-    expect(component).not.to.have.className('k-TextInputWithUnit--fullWidth')
+    it('has not have "k-TextInputWithUnit--fullWidth" class', () => {
+      expect(component).not.to.have.className('k-TextInputWithUnit--fullWidth')
+    })
+
+    it('has a <TextInput /> with digits prop', () => {
+      expect(component.find('TextInput')).to.have.prop('digits', 2)
+    })
   })
 
   describe('disabled prop', () => {
