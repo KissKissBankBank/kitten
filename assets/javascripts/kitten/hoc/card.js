@@ -9,6 +9,7 @@ export const card = (WrappedComponent, wrappedProps) => {
     rounded: false,
     translateOnHover: false,
     withBorder: false,
+    withBorderDark: false,
     withShadow: false,
     withVerticalPadding: false,
   }
@@ -21,6 +22,7 @@ export const card = (WrappedComponent, wrappedProps) => {
       rounded,
       translateOnHover,
       withBorder,
+      withBorderDark,
       withShadow,
       withVerticalPadding,
       ...others,
@@ -36,6 +38,7 @@ export const card = (WrappedComponent, wrappedProps) => {
         'k-Card--rounded': rounded == true,
         'k-Card--translateOnHover': translateOnHover,
         'k-Card--withBorder': withBorder,
+        'k-Card--withBorderDark': withBorderDark,
         'k-Card--withShadow': withShadow,
         'k-Card--withVerticalPadding': withVerticalPadding,
       },
