@@ -49,6 +49,7 @@ $karl-card-layout: (
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin-bottom: k-px-to-rem(20px);
 
   background-color: map-get($k-colors, 'background-1');
   border-radius: k-px-to-rem(8px);
