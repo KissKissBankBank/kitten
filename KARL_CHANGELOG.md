@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: List icon components.
+- Fix: Reorder `Loader` component.
 
 ## [14.0.3] - 2017-09-13
 
