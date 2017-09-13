@@ -81,7 +81,7 @@ class ProjectCreatorCardComponent extends React.Component {
       <a className="k-ProjectCreatorCard__link"
          href={ this.props.href }
          { ...target }>
-        <Separator darker={ this.props.darker } />
+        <Separator darker />
         <div className="k-ProjectCreatorCard__grid">
           <Marger
             top="1.2"
@@ -115,7 +115,22 @@ class ProjectCreatorCardComponent extends React.Component {
   }
 }
 
-ProjectCreatorCardComponent.defaultProps = {
+export const ProjectCreatorCard = props => {
+  const ProjectCreatorCardContent = card(ProjectCreatorCardComponent)
+  return (
+    <ProjectCreatorCardContent
+      withDarkBorder={ !!props.href }
+      light
+      withBorder
+      withShadow={ false }
+      translateOnHover
+      rounded={ 'tiny' }
+      { ...props }
+    />
+  )
+}
+
+ProjectCreatorCard.defaultProps = {
   date: null,
   children: null,
   href: null,
@@ -125,11 +140,3 @@ ProjectCreatorCardComponent.defaultProps = {
   statusBorderColor: null,
   statusText: 'Status',
 }
-
-export const ProjectCreatorCard = card(ProjectCreatorCardComponent, {
-  light: true,
-  withBorder: true,
-  withShadow: false,
-  translateOnHover: true,
-  rounded: 'tiny',
-})

@@ -89,11 +89,16 @@ describe('<ProjectCreatorCard />', () => {
       />
     )
     const link = projectCreatorCard.find('.k-ProjectCreatorCard__link')
+    const separator = link.find('.k-Separator')
 
     it('renders href attributes', () => {
       expect(link).to.have.tagName('a')
       expect(link).to.have.attr('href', '#')
       expect(link).to.have.attr('target', '_blank')
+    })
+
+    it('renders darker attributes', () => {
+      expect(separator).to.have.className('k-Separator--darker')
     })
   })
 

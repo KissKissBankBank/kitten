@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add option `withDarkBorder` in `hoc/card`.
 - Feature: Change `border-color` in `hoc/card` when prop `href: true`.
 - Feature: Add default icon sizes.
 
