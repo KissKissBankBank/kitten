@@ -4,7 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: fix `TextInputWithUnit` missing unit prop.
+- Fix: fix `TextInputWithUnit` missing unit prop and update width for
+  iOS devices.
 
 ## [14.0.2] - 2017-09-11
 
