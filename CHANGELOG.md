@@ -6,6 +6,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Add `direction` on all `ArrowIcon` component.
 
+## [14.0.3] - 2017-09-13
+
+Fix:
+- Fix `TextInputWithUnit` missing unit prop and update width for
+  iOS devices.
+
 ## [14.0.2] - 2017-09-11
 
 Fixes:
