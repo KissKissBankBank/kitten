@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Change `border-color` in `hoc/card` when prop `href: true`.
+- Feature: Add default icon sizes.
 
 ## [14.0.3] - 2017-09-13
 
