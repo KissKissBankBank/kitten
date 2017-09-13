@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add `direction` on all `ArrowIcon` component.
+- Feature: Add default icon sizes.
 
 ## [14.0.3] - 2017-09-13
 

@@ -3,6 +3,7 @@ import React from 'react'
 export const KissKissBankBankLogo = props => (
   <svg xmlns="http://www.w3.org/2000/svg"
        viewBox="0 0 134 30"
+       width="135"
        { ...props }
   >
     <title>KissKissBankBank</title>
