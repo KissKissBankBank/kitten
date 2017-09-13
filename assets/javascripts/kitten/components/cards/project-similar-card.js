@@ -63,10 +63,7 @@ class SimilarProjectCardComponent extends Component {
         verticalArrow
         disabled={ this.props.rightArrowDisabled }
         onClick={ this.props.onRightArrowClick }>
-        <ArrowIcon
-          direction="right"
-          className="k-ButtonIcon__svg"
-        />
+        <ArrowIcon className="k-ButtonIcon__svg" />
       </ButtonIcon>
     )
   }

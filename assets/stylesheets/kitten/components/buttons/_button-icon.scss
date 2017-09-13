@@ -372,6 +372,13 @@
     }
   }
 
+  // Mirror rotate
+  // DEPRECATEF
+  .k-ButtonIcon__svg--mirror {
+    transform : rotate(-180deg);
+    webkit-transform : rotate(-180deg);
+  }
+
   // Animate rotate
   .k-ButtonIcon__svg--rotate {
     transition: all $animation-duration ease;

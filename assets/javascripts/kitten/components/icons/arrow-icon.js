@@ -10,12 +10,10 @@ export class ArrowIcon extends Component {
       ...others,
     } = this.props
 
-    if (!direction) return null
-
     const arrowIconClassNames = classNames(
       className,
-      `k-ArrowIcon--${direction}`,
       {
+        [`k-ArrowIcon--${direction}`]: direction,
         'k-ArrowIcon--disabled': disabled,
       },
     )
@@ -35,6 +33,6 @@ export class ArrowIcon extends Component {
 }
 
 ArrowIcon. defaultProps = {
-  direction: null,
+  direction: 'right',
   disabled: false,
 }

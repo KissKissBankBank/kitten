@@ -7,10 +7,11 @@ import { MixIllustration } from 'kitten/components/illustrations/mix-illustratio
 import { LoudspeakerIllustration } from 'kitten/components/illustrations/loudspeaker-illustration'
 
 export const KarlHeaderTour1 = props => (
-  <div className="k-Popover"
-       role="dialog"
-       aria-hidden="true"
-       aria-labelledby="dialogtitle">
+  <div
+    className="k-Popover"
+    role="dialog"
+    aria-hidden="true"
+    aria-labelledby="dialogtitle">
 
     <div
       className={ classNames('k-Popover__container',
@@ -23,11 +24,11 @@ export const KarlHeaderTour1 = props => (
       <div className="k-Tour__popover__content">
         <p
           id="dialogtitle"
-          className="k-Tour__popover__title">
+          className="k-Tour__popover__title"
+        >
           What‘s new
         </p>
-        <p
-          className="k-Tour__popover__text">
+        <p className="k-Tour__popover__text">
           Lorem ipsum dolor sit amet, consectetur
           adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
           magna aliqua.
@@ -61,10 +62,7 @@ export const KarlHeaderTour1 = props => (
               iconOnRight
             >
               Next
-              <ArrowIcon
-                direction="right"
-                className="k-Button__icon"
-              />
+              <ArrowIcon className="k-Button__icon" />
             </Button>
           </div>
         </div>
@@ -79,10 +77,11 @@ export const KarlHeaderTour1 = props => (
 )
 
 export const KarlHeaderTour2 = props => (
-  <div className="k-Popover"
-       role="dialog"
-       aria-hidden="true"
-       aria-labelledby="dialogtitle">
+  <div
+    className="k-Popover"
+    role="dialog"
+    aria-hidden="true"
+    aria-labelledby="dialogtitle">
 
     <div
       className={ classNames('k-Popover__container',
@@ -95,11 +94,11 @@ export const KarlHeaderTour2 = props => (
       <div className="k-Tour__popover__content">
         <p
           id="dialogtitle"
-          className="k-Tour__popover__title">
+          className="k-Tour__popover__title"
+        >
           What‘s new
         </p>
-        <p
-          className="k-Tour__popover__text">
+        <p className="k-Tour__popover__text">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
         </p>
         <div className="k-Tour__popover__navigation">
@@ -131,18 +130,13 @@ export const KarlHeaderTour2 = props => (
               iconOnRight
             >
               Next
-              <ArrowIcon
-                direction="right"
-                className="k-Button__icon"
-              />
+              <ArrowIcon className="k-Button__icon" />
             </Button>
           </div>
         </div>
       </div>
       <div className="k-Popover__close">
-        <CloseButton
-          modifier="hydrogen"
-        />
+        <CloseButton modifier="hydrogen" />
       </div>
     </div>
   </div>

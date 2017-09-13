@@ -93,7 +93,6 @@ class ProjectCreatorCardComponent extends React.Component {
               withoutHover
               verticalArrow>
               <ArrowIcon
-                direction="right"
                 className="k-ButtonIcon__svg" />
             </ButtonIcon>
           </Marger>
