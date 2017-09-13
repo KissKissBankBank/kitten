@@ -24,7 +24,7 @@ export const KarlHeaderTour1 = props => (
         <p
           id="dialogtitle"
           className="k-Tour__popover__title">
-          What's new
+          What‘s new
         </p>
         <p
           className="k-Tour__popover__text">
@@ -96,7 +96,7 @@ export const KarlHeaderTour2 = props => (
         <p
           id="dialogtitle"
           className="k-Tour__popover__title">
-          What's new
+          What‘s new
         </p>
         <p
           className="k-Tour__popover__text">
