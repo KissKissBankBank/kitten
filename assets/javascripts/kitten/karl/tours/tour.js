@@ -11,7 +11,8 @@ export const KarlHeaderTour1 = props => (
     className="k-Popover"
     role="dialog"
     aria-hidden="true"
-    aria-labelledby="dialogtitle">
+    aria-labelledby="dialogtitle"
+  >
 
     <div
       className={ classNames('k-Popover__container',
@@ -81,7 +82,8 @@ export const KarlHeaderTour2 = props => (
     className="k-Popover"
     role="dialog"
     aria-hidden="true"
-    aria-labelledby="dialogtitle">
+    aria-labelledby="dialogtitle"
+  >
 
     <div
       className={ classNames('k-Popover__container',
