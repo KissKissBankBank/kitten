@@ -82,8 +82,8 @@ describe('card()', () => {
     })
   })
 
-  describe('with href prop', () => {
-    const component = shallow(<ExampleCard href />)
+  describe('with withDarkBorder prop', () => {
+    const component = shallow(<ExampleCard withDarkBorder />)
 
     it('has a good class', () => {
       expect(component).to.have.className('k-Card--withDarkBorder')
