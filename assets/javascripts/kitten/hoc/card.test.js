@@ -82,6 +82,14 @@ describe('card()', () => {
     })
   })
 
+  describe('with href prop', () => {
+    const component = shallow(<ExampleCard href />)
+
+    it('has a good class', () => {
+      expect(component).to.have.className('k-Card--withBorderDark')
+    })
+  })
+
   describe('with withShadow prop', () => {
     const component = shallow(<ExampleCard withShadow />)
 

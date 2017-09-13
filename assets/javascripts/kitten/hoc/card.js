@@ -28,6 +28,8 @@ export const card = (WrappedComponent, wrappedProps) => {
       ...others,
     } = { ...defaultProps, ...wrappedProps, ...props }
 
+    const darker = withBorderDark || props.href
+
     const cardClassName = classNames(
       'k-Card',
       {
@@ -38,7 +40,7 @@ export const card = (WrappedComponent, wrappedProps) => {
         'k-Card--rounded': rounded == true,
         'k-Card--translateOnHover': translateOnHover,
         'k-Card--withBorder': withBorder,
-        'k-Card--withBorderDark': withBorderDark,
+        'k-Card--withBorderDark': darker,
         'k-Card--withShadow': withShadow,
         'k-Card--withVerticalPadding': withVerticalPadding,
       },
@@ -46,7 +48,11 @@ export const card = (WrappedComponent, wrappedProps) => {
     )
 
     return (
-      <WrappedComponent className={ cardClassName } { ...others } />
+      <WrappedComponent
+        className={ cardClassName }
+        darker={ darker }
+        { ...others }
+      />
     )
   }
 

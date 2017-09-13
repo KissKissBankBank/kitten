@@ -81,7 +81,7 @@ class ProjectCreatorCardComponent extends React.Component {
       <a className="k-ProjectCreatorCard__link"
          href={ this.props.href }
          { ...target }>
-        <Separator darker />
+        <Separator darker={ this.props.darked } />
         <div className="k-ProjectCreatorCard__grid">
           <Marger
             top="1.2"
@@ -104,9 +104,6 @@ class ProjectCreatorCardComponent extends React.Component {
     const ProjectCreatorCardClassName = classNames(
       'k-ProjectCreatorCard',
       this.props.className,
-      {
-        'k-Card--withBorderDark': this.props.href,
-      }
     )
 
     return (
