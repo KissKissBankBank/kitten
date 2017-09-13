@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Change `border-color` in `ProjectCreatorCard` when prop `href: true`.
+- Feature: Change `border-color` in `hoc/card` when prop `href: true`.
 
 ## [14.0.3] - 2017-09-13
 
