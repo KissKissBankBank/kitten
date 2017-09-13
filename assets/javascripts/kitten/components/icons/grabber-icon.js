@@ -13,7 +13,7 @@ class GrabberIcon extends React.Component {
         viewBox="0 0 100 100"
         width="32"
         height="32"
-        {...this.props}
+        { ...this.props }
       >
         <path d="M0 0 v100 h20 v-100 z" />
         <path d="M40 0 v100 h20 v-100 z" />
