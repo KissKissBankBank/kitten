@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Show list `icons` component.
+- Feature: List icon components.
 
 ## [14.0.2] - 2017-09-11
 
