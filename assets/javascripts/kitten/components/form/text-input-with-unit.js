@@ -48,6 +48,7 @@ export class TextInputWithUnit extends React.Component {
                    error={ error }
                    tiny={ tiny }
                    disabled={ disabled }
+                   digits={ digits }
                    ref={ input => this.input = input }
                    { ...others }
                    tag="input" />
