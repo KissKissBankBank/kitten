@@ -32,7 +32,7 @@ export class ArrowIcon extends Component {
   }
 }
 
-ArrowIcon. defaultProps = {
+ArrowIcon.defaultProps = {
   direction: 'right',
   disabled: false,
 }
