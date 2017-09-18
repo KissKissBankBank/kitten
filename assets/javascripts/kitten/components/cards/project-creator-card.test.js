@@ -10,14 +10,14 @@ import { ArrowIcon } from 'kitten/components/icons/arrow-icon'
 
 describe('<ProjectCreatorCard />', () => {
   describe('by default', () => {
-    const projectCreatorCard = shallow(<ProjectCreatorCard />)
+    const projectCreatorCard = mount(<ProjectCreatorCard />)
 
     it('is a <div />', () => {
       expect(projectCreatorCard).to.have.tagName('div')
     })
 
     it('has a default class', () => {
-      expect(projectCreatorCard.dive()).to.have.className('k-ProjectCreatorCard')
+      expect(projectCreatorCard).to.have.className('k-ProjectCreatorCard')
     })
   })
 
