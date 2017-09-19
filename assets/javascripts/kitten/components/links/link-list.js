@@ -23,12 +23,14 @@ export class LinkList extends Component {
     )
 
     return (
-      <li className="k-LinkList__item">
+      <li
+        className="k-LinkList__item"
+        key={ key }
+      >
         <a
           href={ href }
-          key={ key }
           className={ linkListClassName }
-          active={ active }>
+        >
           { item }
         </a>
       </li>
@@ -39,6 +41,7 @@ export class LinkList extends Component {
     const {
       className,
       margin,
+      items,
       ...others,
     } = this.props
 

@@ -53,10 +53,11 @@ export class TextInputWithButton extends Component {
 }
 
 TextInputWithButton.defaultProps = {
-  tag: 'input',
   valid: false,
   error: false,
   value: 'Button',
-  textInputProps: {},
+  textInputProps: {
+    tag: 'input',
+  },
   buttonProps: {},
 }
