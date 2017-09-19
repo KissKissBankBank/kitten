@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Fix console warnings from `ProjectCard` and `LinkList` rendering.
+- Fix: Fix console warnings from `ProjectCard`, `LinkList` and `Tour` rendering.
 - Fix: IconSearch prop in Search component.
 - Feature: Add default icon sizes.
 
