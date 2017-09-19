@@ -92,7 +92,8 @@ class ProjectCreatorCardComponent extends React.Component {
               size="tiny"
               withoutHover
               verticalArrow>
-              <ArrowIcon className="k-ButtonIcon__svg" />
+              <ArrowIcon
+                className="k-ButtonIcon__svg" />
             </ButtonIcon>
           </Marger>
         </div>
