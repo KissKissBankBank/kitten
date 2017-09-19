@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import classNames from 'classnames'
+import PropTypes from 'prop-types'
 
 export class ArrowIcon extends Component {
   render() {
@@ -30,6 +31,10 @@ export class ArrowIcon extends Component {
       </svg>
     )
   }
+}
+
+ArrowIcon.propTypes = {
+  direction: PropTypes.oneOf(['top', 'bottom', 'left', 'right']),
 }
 
 ArrowIcon.defaultProps = {
