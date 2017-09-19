@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Console errors: `tagLists` on `ProjectCard` and `items`, `key`, `tag`
+  on `LinkList`.
 - Fix: IconSearch prop in Search component.
 - Feature: Add default icon sizes.
 
