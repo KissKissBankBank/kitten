@@ -138,6 +138,10 @@
 
 @include k-Cropper;
 
+// Icons
+
+@include k-ArrowIcon;
+
 // Layout
 
 @include k-Line;
@@ -176,6 +180,7 @@
 @include k-Progress;
 
 // Modals
+
 @include k-Modal((z-index: 10));
 
 // Navigation

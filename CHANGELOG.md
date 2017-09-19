@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `direction` on all `ArrowIcon` component.
 - Fix: IconSearch prop in Search component.
 - Feature: Add default icon sizes.
 
