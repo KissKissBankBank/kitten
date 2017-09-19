@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Remove illustration components list.
 - Fix: Reorder `Loader` component.
 
 ## [14.0.3] - 2017-09-13
