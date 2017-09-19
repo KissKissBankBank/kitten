@@ -7,6 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Add option `withDarkBorder` in `hoc/card`.
 - Feature: Add `withDarkBorder` prop when prop `href` is true on
   `ProjectCreatorCard` component.
+- Fix: IconSearch prop in Search component.
 - Feature: Add default icon sizes.
 
 ## [14.0.3] - 2017-09-13
