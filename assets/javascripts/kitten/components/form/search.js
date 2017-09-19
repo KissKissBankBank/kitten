@@ -71,7 +71,7 @@ class Search extends React.Component {
                 onMouseOut={ this.handleSubmitMouseOut }>
           <SearchIcon
             width="14"
-            heigth="14"
+            height="14"
           />
         </button>
       </form>)
