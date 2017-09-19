@@ -22,6 +22,7 @@
   $light-text-color: map-get($k-colors, 'font-1');
 
   $border-color: map-get($k-colors, 'line-1');
+  $border-color-dark: map-get($k-colors, 'line-2');
   $border-size: k-px-to-rem(1px);
 
   $box-shadow-values: 0 5px 15px;
@@ -61,6 +62,11 @@
   .k-Card--withBorder {
     box-sizing: border-box;
     border: $border-size solid $border-color;
+  }
+
+  .k-Card--withDarkBorder {
+    box-sizing: border-box;
+    border: $border-size solid $border-color-dark;
   }
 
   .k-Card--withShadow {

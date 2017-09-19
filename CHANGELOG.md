@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add option `withDarkBorder` in `hoc/card`.
+- Feature: Add `withDarkBorder` prop when prop `href` is true on
+  `ProjectCreatorCard` component.
 - Fix: Change `RadioButton` and `CheckBox` label click.
 - Feature: Add `direction` on all `ArrowIcon` component.
 - Fix: IconSearch prop in Search component.

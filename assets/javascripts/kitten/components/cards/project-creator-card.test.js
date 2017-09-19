@@ -10,14 +10,14 @@ import { ArrowIcon } from 'kitten/components/icons/arrow-icon'
 
 describe('<ProjectCreatorCard />', () => {
   describe('by default', () => {
-    const projectCreatorCard = shallow(<ProjectCreatorCard />)
+    const projectCreatorCard = mount(<ProjectCreatorCard />)
 
     it('is a <div />', () => {
       expect(projectCreatorCard).to.have.tagName('div')
     })
 
     it('has a default class', () => {
-      expect(projectCreatorCard.dive()).to.have.className('k-ProjectCreatorCard')
+      expect(projectCreatorCard).to.have.className('k-ProjectCreatorCard')
     })
   })
 
@@ -89,11 +89,16 @@ describe('<ProjectCreatorCard />', () => {
       />
     )
     const link = projectCreatorCard.find('.k-ProjectCreatorCard__link')
+    const separator = link.find('.k-Separator')
 
     it('renders href attributes', () => {
       expect(link).to.have.tagName('a')
       expect(link).to.have.attr('href', '#')
       expect(link).to.have.attr('target', '_blank')
+    })
+
+    it('renders darker attributes', () => {
+      expect(separator).to.have.className('k-Separator--darker')
     })
   })
 
