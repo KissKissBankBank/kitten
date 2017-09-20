@@ -45,7 +45,7 @@
   }
 
   .k-Checkbox__label {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     align-self: flex-start;
 
@@ -55,7 +55,7 @@
     &:before {
       box-sizing: border-box;
       display: inline-block;
-      flex: 0 0 $checkbox-size;
+      width: $checkbox-size;
       height: $checkbox-size;
       margin-right: k-px-to-rem(10px);
 
