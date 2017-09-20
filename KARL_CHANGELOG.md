@@ -4,10 +4,15 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: List icon components.
-- Feature: Add `KarlHeaderTour1` and `KarlHeaderTour2` examples.
-- Feature: Remove illustration components list.
-- Fix: Reorder `Loader` component.
+## [14.1.3] - 2017-09-20
+
+Features:
+- List icon components.
+- Add `KarlHeaderTour1` and `KarlHeaderTour2` examples.
+- Remove illustration components list.
+
+Fix:
+- Reorder `Loader` component.
 
 ## [14.0.3] - 2017-09-13
 

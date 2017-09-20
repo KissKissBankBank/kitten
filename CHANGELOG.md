@@ -4,14 +4,19 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Fix console warnings from `ProjectCard`, `LinkList` and `Tour` rendering.
-- Feature: Add option `withDarkBorder` in `hoc/card`.
-- Feature: Add `withDarkBorder` prop when prop `href` is true on
+## [14.1.3] - 2017-09-20
+
+Features:
+- Add option `withDarkBorder` in `hoc/card`.
+- Add `withDarkBorder` prop when prop `href` is true on
   `ProjectCreatorCard` component.
-- Fix: Change `RadioButton` and `CheckBox` label click.
-- Feature: Add `direction` on all `ArrowIcon` component.
-- Fix: IconSearch prop in Search component.
-- Feature: Add default icon sizes.
+- Add `direction` on all `ArrowIcon` component.
+- Add default icon sizes.
+
+Fixes:
+- Fix console warnings from `ProjectCard`, `LinkList` and `Tour` rendering.
+- Change `RadioButton` and `CheckBox` label click.
+- IconSearch prop in Search component.
 
 ## [14.0.3] - 2017-09-13
 
