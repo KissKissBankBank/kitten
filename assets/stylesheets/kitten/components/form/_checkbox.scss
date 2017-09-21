@@ -55,6 +55,7 @@
     &:before {
       box-sizing: border-box;
       display: inline-block;
+      flex-shrink: 0;
       width: $checkbox-size;
       height: $checkbox-size;
       margin-right: k-px-to-rem(10px);
