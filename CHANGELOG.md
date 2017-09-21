@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Error deprecated weight class.
+- Fix: Error deprecated weight classes.
 
 ## [14.1.3] - 2017-09-20
 
