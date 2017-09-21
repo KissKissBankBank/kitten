@@ -70,6 +70,7 @@
     &:before {
       box-sizing: border-box;
       display: inline-block;
+      flex-shrink: 0;
       width: $radio-button-size;
       height: $radio-button-size;
       margin-right: $space-button-label;
