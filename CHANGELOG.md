@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Change syntax on `ButtonIcon` component.
+
 ## [14.1.4] - 2017-09-22
 
 Fixes:
