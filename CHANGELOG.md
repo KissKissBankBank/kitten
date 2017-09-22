@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Change font-size `Tooltip`.
+- Fix: Change `Tooltip` font-size.
 - Fix: Add `flex-shrink` property on `RadioButton` and `Checkbox`.
 - Fix: Error deprecated weight classes.
 
