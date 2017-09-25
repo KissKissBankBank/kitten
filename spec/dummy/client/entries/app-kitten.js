@@ -2,6 +2,9 @@ require('../stylesheets/app-kitten.scss');
 
 import ReactOnRails from 'react-on-rails';
 
+// About
+import { KarlAbout } from 'kitten/karl/about/karl-about'
+
 // Box
 import DocLinkBox from 'kitten/components/box/doc-link-box'
 import { InformationBox } from 'kitten/components/box/information-box'
@@ -113,7 +116,6 @@ import {
   KarlPhoneDropdown,
   KarlUnloggedHeaderPlatformSwitch,
 } from 'kitten/karl/headers/header'
-import { KarlGithubRibbon } from 'kitten/karl/headers/karl-github-ribbon'
 import { KarlMenuHeader } from 'kitten/karl/headers/karl-header'
 
 // Icons
@@ -142,9 +144,12 @@ import { VisaIcon } from 'kitten/components/icons/visa-icon'
 import { WarningCircleIcon } from 'kitten/components/icons/warning-circle-icon'
 
 // Illustrations
+import { GithubAboutIllustration } from 'kitten/components/illustrations/github-about-illustration'
+import { KittenAboutIllustration } from 'kitten/components/illustrations/kitten-about-illustration'
 import { LinkBoxIllustration } from 'kitten/components/illustrations/link-box-illustration'
 import { LoudspeakerIllustration } from 'kitten/components/illustrations/loudspeaker-illustration'
 import { MixIllustration } from 'kitten/components/illustrations/mix-illustration'
+import { NetworkAboutIllustration } from 'kitten/components/illustrations/network-about-illustration'
 import { PhoneIllustration } from 'kitten/components/illustrations/phone-illustration'
 
 // Images
@@ -259,6 +264,9 @@ import {
 } from 'kitten/karl/typography/paragraph'
 
 ReactOnRails.register({
+  // About
+  KarlAbout,
+
   // Box
   DocLinkBox,
   InformationBox,
@@ -343,7 +351,6 @@ ReactOnRails.register({
   KarlSideLayout,
 
   // Header
-  KarlGithubRibbon,
   KarlHeader,
   KarlHeaderWithSearchInput,
   KarlHeaderWithTitles,

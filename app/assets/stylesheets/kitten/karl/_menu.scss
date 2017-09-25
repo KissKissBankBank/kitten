@@ -9,6 +9,9 @@ $menu-width: 14rem;
 $arrowBottom-path: '~icons/arrow-bottom.svg';
 $arrowTop-path: '~icons/arrow-top.svg';
 
+// Fonts.
+$font: 'bold-uppercase';
+
 // Shadow
 .karl-MenuShadow {
   position: fixed;
@@ -101,11 +104,70 @@ $arrowTop-path: '~icons/arrow-top.svg';
   }
 }
 
-.karl-Menu__header__title {
-  position: absolute;
+.karl-Menu__header__list {
+  display: flex;
+  justify-content: flex-end;
+  list-style-type: none;
   width: 100%;
+}
+
+.karl-Menu__header__element {
+  flex-shrink: 0;
+}
+
+.karl-Menu__header__item {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: k-px-to-rem(15px);
+
+  padding: 0 k-px-to-rem(20px);
+  border-bottom: k-px-to-rem(2px) solid transparent;
+
+  @include k-typographyFont($font);
+  font-size: k-px-to-rem(12px);
+  line-height: normal;
 
   color: map-get($k-colors, 'background-1');
+  text-decoration: none;
+
+  cursor: pointer;
+  transition: color .2s, border-color .2s;
+
+  @include k-media-within('m') {
+    padding: 0 k-px-to-rem(10px);
+  }
+
+  &:hover {
+    color: map-get($k-colors, 'background-2');
+    text-decoration: none;
+  }
+
+  &:active {
+    border-color: map-get($k-colors, 'background-2');
+    color: map-get($k-colors, 'background-2');
+  }
+
+  &.is-selected {
+    border-color: map-get($k-colors, 'font-1');
+    color: map-get($k-colors, 'font-1');
+  }
+
+  &:focus {
+    color: map-get($k-colors, 'background-2');
+    text-decoration: none;
+
+    outline: 0;
+    box-shadow: 0 0 1rem map-get($k-colors, 'primary-1');
+  }
+}
+
+.karl-Menu__header__title {
+  text-align: center;
+}
+
+.karl-Menu__header__about {
+  text-align: right;
 }
 
 .karl-Menu__content {

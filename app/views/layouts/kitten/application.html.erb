@@ -31,14 +31,10 @@
 
 <% if @groups || controller_name == "branding" %>
 
- <%= react_component 'KarlGithubRibbon', props: {
-      className: 'karl-GithubRibbon',
-  } %>
-
   <%= react_component 'KarlMenu', props: {
-        brandingCategories: Kitten.configuration.branding_categories,
-        componentCategories: Kitten.configuration.component_categories,
-    } %>
+    brandingCategories: Kitten.configuration.branding_categories,
+    componentCategories: Kitten.configuration.component_categories,
+  } %>
 
   <div class="k-Row">
     <div class="k-Row__content">
