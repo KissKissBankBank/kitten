@@ -30,7 +30,7 @@ export class KarlMenu extends React.Component {
     return (
       <div>
         <div className={ karlMenuHeaderClassName }>
-          <KarlMenuHeader onButtonClick={ this.handleClick } />
+          <KarlMenuHeader onButtonClick={ this.handleClick } currentPage={ this.props.currentPage } />
           <KarlMenuContent
             onMenuItemClick={ this.handleClick }
             brandingCategories={ this.props.brandingCategories }

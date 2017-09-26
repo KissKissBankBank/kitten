@@ -9,9 +9,6 @@ $menu-width: 14rem;
 $arrowBottom-path: '~icons/arrow-bottom.svg';
 $arrowTop-path: '~icons/arrow-top.svg';
 
-// Fonts.
-$font: 'bold-uppercase';
-
 // Shadow
 .karl-MenuShadow {
   position: fixed;
@@ -112,23 +109,22 @@ $font: 'bold-uppercase';
 }
 
 .karl-Menu__header__element {
-  flex-shrink: 0;
+
 }
 
 .karl-Menu__header__item {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  height: k-px-to-rem(15px);
 
+  height: k-px-to-rem(60px);
   padding: 0 k-px-to-rem(20px);
   border-bottom: k-px-to-rem(2px) solid transparent;
 
-  @include k-typographyFont($font);
-  font-size: k-px-to-rem(12px);
-  line-height: normal;
+  @include k-typographyFont('bold-uppercase');
+  @include k-typographyFontSize($step: -1, $line-height: 1.3)
 
-  color: map-get($k-colors, 'background-1');
+  color: map-get($k-colors, 'primary-5');
   text-decoration: none;
 
   cursor: pointer;
@@ -139,35 +135,26 @@ $font: 'bold-uppercase';
   }
 
   &:hover {
-    color: map-get($k-colors, 'background-2');
+    color: map-get($k-colors, 'background-1');
     text-decoration: none;
   }
 
   &:active {
-    border-color: map-get($k-colors, 'background-2');
-    color: map-get($k-colors, 'background-2');
+    border-color: map-get($k-colors, 'background-1');
+    color: map-get($k-colors, 'background-1');
   }
 
   &.is-selected {
-    border-color: map-get($k-colors, 'font-1');
-    color: map-get($k-colors, 'font-1');
+    border-color: map-get($k-colors, 'background-1');
+    color: map-get($k-colors, 'background-1');
   }
 
   &:focus {
-    color: map-get($k-colors, 'background-2');
-    text-decoration: none;
+    color: map-get($k-colors, 'background-1');
+    border-color: map-get($k-colors, 'background-1');
 
     outline: 0;
-    box-shadow: 0 0 1rem map-get($k-colors, 'primary-1');
   }
-}
-
-.karl-Menu__header__title {
-  text-align: center;
-}
-
-.karl-Menu__header__about {
-  text-align: right;
 }
 
 .karl-Menu__content {

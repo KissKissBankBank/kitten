@@ -29,11 +29,12 @@
 </head>
 <body class="k-VerticalGrid__page karl-Main">
 
-<% if @groups || controller_name == "branding" %>
+<% if @groups || controller_name == "about" %>
 
   <%= react_component 'KarlMenu', props: {
     brandingCategories: Kitten.configuration.branding_categories,
     componentCategories: Kitten.configuration.component_categories,
+    currentPage: controller_name,
   } %>
 
   <div class="k-Row">

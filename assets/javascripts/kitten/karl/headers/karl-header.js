@@ -12,6 +12,9 @@ import { HeaderTitles } from 'kitten/components/headers/header-titles'
 
 export class KarlMenuHeader extends Component {
   renderMenuList() {
+
+    if( this.props.currentPage == 'about' ) return
+
     return (
       <HeaderItem>
         <ButtonIcon
@@ -44,15 +47,44 @@ export class KarlMenuHeader extends Component {
   }
 
   renderMenu() {
+    const componentsClassNames = classNames(
+      'karl-Menu__header__item',
+      {
+        'is-selected': this.props.currentPage == 'components',
+      },
+    )
+
+    const aboutClassNames = classNames(
+      'karl-Menu__header__item',
+      {
+        'is-selected': this.props.currentPage == 'about',
+      },
+    )
+
     return (
-      <ul className="karl-Menu__header__list">
-        <li className="karl-Menu__header__element">
-          <a className="karl-Menu__header__item karl-Menu__header__title" href="#">
+      <ul
+        className="karl-Menu__header__list"
+        role="menubar"
+      >
+        <li
+          className="karl-Menu__header__element"
+          role="menuitem"
+        >
+          <a
+            className={ componentsClassNames }
+            href="/kitten/components"
+          >
             Styleguide
           </a>
         </li>
-        <li className="karl-Menu__header__element">
-          <a className="karl-Menu__header__item karl-Menu__header__about" href="#">
+        <li
+          className="karl-Menu__header__element"
+          role="menuitem"
+        >
+          <a
+            className={ aboutClassNames }
+            href="/kitten/about"
+          >
             About
           </a>
         </li>
