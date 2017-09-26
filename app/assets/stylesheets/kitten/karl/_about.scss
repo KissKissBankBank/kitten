@@ -1,0 +1,32 @@
+.karl-About {
+  margin-top: k-px-to-rem(100px);
+}
+
+.karl-About__items {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  margin-top: k-px-to-rem(60px);
+}
+
+.karl-About__illustrations {
+  display: flex;
+}
+// .karl-About__intro {
+//   line-height: k-px-to-rem(24px);
+// }
+
+.karl-About__title {
+  color: map-get($k-colors, 'primary-3');
+
+  // @include k-media-min('l') {
+  //   display: flex;
+  //   align-items: center;
+  // }
+}
+
+// .karl-About__text {
+//   @include k-typographyFontSize(-1);
+//   line-height: k-px-to-rem(18px);
+// }
