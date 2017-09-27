@@ -30,12 +30,14 @@
 }
 
 .karl-About__svg {
+  height: k-px-to-rem(80px);
+
   @include k-media-max('s') {
     margin: 0 auto;
   }
 }
 
-.karl-About__margerNone {
+.karl-About__bloc {
   margin-top: k-px-to-rem(50px);
 
   @include k-media-max('s') {
