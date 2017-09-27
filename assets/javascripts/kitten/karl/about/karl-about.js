@@ -140,7 +140,7 @@ export class KarlAbout extends Component {
                       margin={ false }
                       modifier="quaternary"
                     >
-                      Il est important pour nous de contribuer à la communauté Tech en partageant notre librairie et en vous apportant la possibilité de collaborer à l\'évolution de Kitten.
+                      Il est important pour nous de contribuer à la communauté Tech en partageant notre librairie et en vous apportant la possibilité de collaborer à l'\évolution de Kitten.
                     </Paragraph>
                   </Marger>
                 </div>
@@ -175,7 +175,7 @@ export class KarlAbout extends Component {
                       margin={ false }
                       modifier="quaternary"
                     >
-                      Tous nos partenaires peuvent utiliser l\'ensemble du kit UI.
+                      Tous nos partenaires peuvent utiliser l'\ensemble du kit UI.
                     </Paragraph>
                   </Marger>
                 </div>
