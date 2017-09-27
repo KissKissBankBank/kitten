@@ -28,7 +28,7 @@ export class KarlAbout extends Component {
 
   renderBloc1() {
     return (
-      <Marger top="5">
+      <div className="karl-About__margerNone">
         <Grid className="karl-About__items">
           <GridCol col-s="12" col-m="5">
             <Grid>
@@ -50,9 +50,11 @@ export class KarlAbout extends Component {
                       Comment utilise-t-on Kitten ?
                     </Text>
                   </Marger>
-                  <Marger top="1">
+                  <Marger
+                    top="1"
+                    className="karl-About__text"
+                  >
                     <Paragraph
-                      className="k-u-align-center@s-down"
                       margin={ false }
                       modifier="quaternary"
                     >
@@ -84,9 +86,11 @@ export class KarlAbout extends Component {
                       Pourquoi a-t-on besoin de Kitten ?
                     </Text>
                   </Marger>
-                  <Marger top="1">
+                  <Marger
+                    top="1"
+                    className="karl-About__text"
+                  >
                     <Paragraph
-                      className="k-u-align-center@s-down"
                       margin={ false }
                       modifier="quaternary"
                     >
@@ -99,15 +103,13 @@ export class KarlAbout extends Component {
             </Grid>
           </GridCol>
         </Grid>
-      </Marger>
+      </div>
     )
   }
 
   renderBloc2() {
     return (
-      <Marger
-        top="5"
-        className="karl-About__margerNone">
+      <div className="karl-About__margerNone">
         <Grid className="karl-About__items">
           <GridCol col-s="12" col-m="5">
             <Grid>
@@ -127,9 +129,11 @@ export class KarlAbout extends Component {
                       Pourquoi nous avons décidé d’OpenSourcer ?
                     </Text>
                   </Marger>
-                  <Marger top="1">
+                  <Marger
+                    top="1"
+                    className="karl-About__text"
+                  >
                     <Paragraph
-                      className="k-u-align-center@s-down"
                       margin={ false }
                       modifier="quaternary"
                     >
@@ -159,9 +163,11 @@ export class KarlAbout extends Component {
                       Comment utiliser Kitten ?
                     </Text>
                   </Marger>
-                  <Marger top="1">
+                  <Marger
+                    top="1"
+                    className="karl-About__text"
+                  >
                     <Paragraph
-                      className="k-u-align-center@s-down"
                       margin={ false }
                       modifier="quaternary"
                     >
@@ -173,7 +179,7 @@ export class KarlAbout extends Component {
             </Grid>
           </GridCol>
         </Grid>
-      </Marger>
+      </div>
     )
   }
 

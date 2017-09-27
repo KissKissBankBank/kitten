@@ -17,7 +17,15 @@
   align-self: center;
   color: map-get($k-colors, 'primary-3');
 
-  @include k-media-min('l') {
+  @include k-media-min('m') {
+    align-self: left;
+  }
+}
+
+.karl-About__text {
+  align-self: center;
+
+  @include k-media-min('m') {
     align-self: left;
   }
 }
@@ -29,6 +37,8 @@
 }
 
 .karl-About__margerNone {
+  margin-top: k-px-to-rem(50px);
+
   @include k-media-max('s') {
     margin-top: 0;
   }
