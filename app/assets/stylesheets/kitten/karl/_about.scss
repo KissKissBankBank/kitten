@@ -15,7 +15,6 @@
 
 .karl-About__title {
   align-self: center;
-  color: map-get($k-colors, 'primary-3');
 
   @include k-media-min('m') {
     align-self: left;

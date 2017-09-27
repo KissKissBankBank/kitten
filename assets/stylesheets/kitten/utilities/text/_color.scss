@@ -8,7 +8,10 @@
 ///
 /// @example html
 ///
+///   <span class="k-u-color-font1">…</span>
 ///   <span class="k-u-color-primary1">…</span>
+///   <span class="k-u-color-primary3">…</span>
+///   <span class="k-u-color-error">…</span>
 
 @mixin k-utilities-color {
   .k-u-color-font1 {
@@ -17,6 +20,10 @@
 
   .k-u-color-primary1 {
     color: map-get($k-colors, 'primary-1');
+  }
+
+  .k-u-color-primary3 {
+    color: map-get($k-colors, 'primary-3');
   }
 
   .k-u-color-error {
