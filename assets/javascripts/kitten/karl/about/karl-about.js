@@ -14,43 +14,45 @@ import { NetworkAboutIllustration } from 'kitten/components/illustrations/networ
 export class KarlAbout extends Component {
   renderIntro() {
     return (
-      <Row>
-        <Marger top="12" bottom="3">
-          <Grid>
-            <GridCol col-m="12" col-l="10" offset-l="1">
-              <Paragraph
-                modifier="tertiary"
-                margin={ false }
-              >
-                Chez KissKissBankBank, nous opérons trois services de financement participatif (KissKissBankBank, LENDOPOLIS, hellomerci) avec une seule équipe technique et produit.
-                Aujourd’hui, notre volonté d’unifier les expériences et la charte graphique sur les trois services nous a naturellement poussés vers la démarche d’une bibliothèque de composants réutilisables. Cette bibliothèque s'accompagne d'un styleguide vivant qui liste les composants existants et définit un langage commun pour les développeurs et les designers.
-                  Nous avons donc imaginé Kitten, le premier Kit UI du crowdfunding, ie.
-              </Paragraph>
-            </GridCol>
-          </Grid>
-        </Marger>
-      </Row>
+      <Paragraph
+        className="k-u-align-center@s-down"
+        modifier="tertiary"
+        margin={ false }
+      >
+        Chez KissKissBankBank, nous opérons trois services de financement participatif (KissKissBankBank, LENDOPOLIS, hellomerci) avec une seule équipe technique et produit.
+        Aujourd’hui, notre volonté d’unifier les expériences et la charte graphique sur les trois services nous a naturellement poussés vers la démarche d’une bibliothèque de composants réutilisables. Cette bibliothèque s'accompagne d'un styleguide vivant qui liste les composants existants et définit un langage commun pour les développeurs et les designers.
+          Nous avons donc imaginé Kitten, le premier Kit UI du crowdfunding, ie.
+      </Paragraph>
     )
   }
 
-  renderBloc() {
+  renderBloc1() {
     return (
-      <Row>
-        <Marger>
-          <Grid>
-            <GridCol col-l="5" offset-l="1">
-              <Grid>
-                <GridCol>
-                  <div className="karl-About__items">
-                    <MixIllustration className="karl-About__illustrations"/>
+      <Marger top="5">
+        <Grid className="karl-About__items">
+          <GridCol col-s="12" col-m="5">
+            <Grid>
+              <GridCol>
+                <div className="karl-About__itemsList">
+                  <MixIllustration
+                    className="karl-About__svg"
+                    lightColor="#cadbfd"
+                    darkColor="#4a84ff"
+                  />
+                  <Marger
+                    top="1.2"
+                    className="karl-About__title"
+                  >
                     <Text
-                      className="karl-About__title"
                       weight="bold"
                       size="default"
                     >
                       Comment utilise-t-on Kitten ?
                     </Text>
+                  </Marger>
+                  <Marger top="1">
                     <Paragraph
+                      className="k-u-align-center@s-down"
                       margin={ false }
                       modifier="quaternary"
                     >
@@ -58,22 +60,138 @@ export class KarlAbout extends Component {
                       les différents composants utilisés sur nos 3 services.
                       Chaque membre de l’équipe peut être au courant des derniers composants crées.
                     </Paragraph>
-                  </div>
-                </GridCol>
-              </Grid>
-            </GridCol>
-          </Grid>
-        </Marger>
-      </Row>
+                  </Marger>
+                </div>
+              </GridCol>
+            </Grid>
+          </GridCol>
+
+          <GridCol col-s="12" col-m="5">
+            <Grid>
+              <GridCol>
+                <div className="karl-About__itemsList">
+                  <KittenAboutIllustration
+                    className="karl-About__svg"
+                  />
+                  <Marger
+                    top="1.2"
+                    className="karl-About__title"
+                  >
+                    <Text
+                      weight="bold"
+                      size="default"
+                    >
+                      Pourquoi a-t-on besoin de Kitten ?
+                    </Text>
+                  </Marger>
+                  <Marger top="1">
+                    <Paragraph
+                      className="k-u-align-center@s-down"
+                      margin={ false }
+                      modifier="quaternary"
+                    >
+                      Kitten nous permet de garder une cohérence d’unification lors de la création et de la modification de composants.
+                      L’unité globale de kitten nous apporte une certaine clarté, une utilité et un gain de temps.
+                    </Paragraph>
+                  </Marger>
+                </div>
+              </GridCol>
+            </Grid>
+          </GridCol>
+        </Grid>
+      </Marger>
+    )
+  }
+
+  renderBloc2() {
+    return (
+      <Marger
+        top="5"
+        className="karl-About__margerNone">
+        <Grid className="karl-About__items">
+          <GridCol col-s="12" col-m="5">
+            <Grid>
+              <GridCol>
+                <div className="karl-About__itemsList">
+                  <GithubAboutIllustration
+                    className="karl-About__svg"
+                  />
+                  <Marger
+                    top="1.2"
+                    className="karl-About__title"
+                  >
+                    <Text
+                      weight="bold"
+                      size="default"
+                    >
+                      Pourquoi nous avons décidé d’OpenSourcer ?
+                    </Text>
+                  </Marger>
+                  <Marger top="1">
+                    <Paragraph
+                      className="k-u-align-center@s-down"
+                      margin={ false }
+                      modifier="quaternary"
+                    >
+                      Il est important pour nous de contribuer à la communauté Tech en partageant notre librairie et en vous apportant la possibilité de collaborer à l'évolution de Kitten.
+                    </Paragraph>
+                  </Marger>
+                </div>
+              </GridCol>
+            </Grid>
+          </GridCol>
+
+          <GridCol col-s="12" col-m="5">
+            <Grid>
+              <GridCol>
+                <div className="karl-About__itemsList">
+                  <NetworkAboutIllustration
+                    className="karl-About__svg"
+                  />
+                  <Marger
+                    top="1.2"
+                    className="karl-About__title"
+                  >
+                    <Text
+                      weight="bold"
+                      size="default"
+                    >
+                      Comment utiliser Kitten ?
+                    </Text>
+                  </Marger>
+                  <Marger top="1">
+                    <Paragraph
+                      className="k-u-align-center@s-down"
+                      margin={ false }
+                      modifier="quaternary"
+                    >
+                      Tous nos partenaires peuvent utiliser l’ensemble du kit UI.
+                    </Paragraph>
+                  </Marger>
+                </div>
+              </GridCol>
+            </Grid>
+          </GridCol>
+        </Grid>
+      </Marger>
     )
   }
 
   render() {
     return (
-      <div className="karl-About">
-        { this.renderIntro() }
-        { this.renderBloc() }
-      </div>
+      <Row>
+        <Marger top="12" bottom="10">
+          <Grid>
+            <GridCol col-l="10" offset-l="1">
+              <div>
+                { this.renderIntro() }
+                { this.renderBloc1() }
+                { this.renderBloc2() }
+              </div>
+            </GridCol>
+          </Grid>
+        </Marger>
+      </Row>
     )
   }
 }
