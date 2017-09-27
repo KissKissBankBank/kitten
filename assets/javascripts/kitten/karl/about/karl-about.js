@@ -26,7 +26,7 @@ export class KarlAbout extends Component {
           className="k-u-align-center@s-down"
           modifier="tertiary"
         >
-          Aujourd‘hui, notre volonté d’unifier les expériences et la charte graphique sur les trois services nous a naturellement poussés vers la démarche d’une bibliothèque de composants réutilisables. Cette bibliothèque s‘accompagne d'un styleguide vivant qui liste les composants existants et définit un langage commun pour les développeurs et les designers.
+          Aujourd‘hui, notre volonté d’unifier les expériences et la charte graphique sur les trois services nous a naturellement poussés vers la démarche d’une bibliothèque de composants réutilisables. Cette bibliothèque s‘accompagne d‘un styleguide vivant qui liste les composants existants et définit un langage commun pour les développeurs et les designers.
             Nous avons donc imaginé Kitten, le premier Kit UI du crowdfunding, ie.
         </Paragraph>
       </div>
