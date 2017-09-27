@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add new `about` page.
+
 ## [14.1.4] - 2017-09-22
 
 No changes.
