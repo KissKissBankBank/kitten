@@ -387,9 +387,12 @@ ReactOnRails.register({
   WarningCircleIcon,
 
   // Illustrations
+  GithubAboutIllustration,
+  KittenAboutIllustration,
   LinkBoxIllustration,
   LoudspeakerIllustration,
   MixIllustration,
+  NetworkAboutIllustration,
   PhoneIllustration,
 
   // Images
