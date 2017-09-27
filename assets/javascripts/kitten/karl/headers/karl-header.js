@@ -66,10 +66,7 @@ export class KarlMenuHeader extends Component {
         className="karl-Menu__header__list"
         role="menubar"
       >
-        <li
-          className="karl-Menu__header__element"
-          role="menuitem"
-        >
+        <li role="menuitem">
           <a
             className={ componentsClassNames }
             href="/kitten/components"
@@ -77,10 +74,7 @@ export class KarlMenuHeader extends Component {
             Styleguide
           </a>
         </li>
-        <li
-          className="karl-Menu__header__element"
-          role="menuitem"
-        >
+        <li role="menuitem">
           <a
             className={ aboutClassNames }
             href="/kitten/about"
