@@ -51,6 +51,11 @@
 }
 
 @mixin k-utilities-blockAlign {
+
+  @include k-u-blockAlign('center', center);
+  @include k-u-blockAlign('start', flex-start);
+  @include k-u-blockAlign('end', flex-end);
+
   .k-u-blockAlign-center {
     align-self: center;
   }
