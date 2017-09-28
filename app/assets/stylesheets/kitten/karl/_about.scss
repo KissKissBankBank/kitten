@@ -44,3 +44,13 @@
     margin-top: 0;
   }
 }
+
+.karl-About__link {
+  &:active {
+    color: map-get($k-colors, 'primary-3');
+  }
+
+  &:hover {
+    color: map-get($k-colors, 'primary-1');
+  }
+}

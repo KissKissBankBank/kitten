@@ -184,6 +184,15 @@ export class KarlAbout extends Component {
                     >
                       Tous nos partenaires peuvent utiliser l‘ensemble du kit UI.
                     </Paragraph>
+                    <a
+                      href="https://github.com/KissKissBankBank/kitten"
+                      target="_blank"
+                      className={ classNames('k-u-color-font-1',
+                                             'k-u-size-tiny',
+                                             'karl-About__link') }
+                    >
+                      Fork me !
+                    </a>
                   </Marger>
                 </div>
               </GridCol>
