@@ -55,16 +55,4 @@
   @include k-u-blockAlign('center', center);
   @include k-u-blockAlign('start', flex-start);
   @include k-u-blockAlign('end', flex-end);
-
-  .k-u-blockAlign-center {
-    align-self: center;
-  }
-
-  .k-u-blockAlign-start {
-    align-self: flex-start;
-  }
-
-  .k-u-blockAlign-end {
-    align-self: flex-end;
-  }
 }
