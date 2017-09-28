@@ -144,12 +144,9 @@ import { VisaIcon } from 'kitten/components/icons/visa-icon'
 import { WarningCircleIcon } from 'kitten/components/icons/warning-circle-icon'
 
 // Illustrations
-import { GithubAboutIllustration } from 'kitten/components/illustrations/github-about-illustration'
-import { KittenAboutIllustration } from 'kitten/components/illustrations/kitten-about-illustration'
 import { LinkBoxIllustration } from 'kitten/components/illustrations/link-box-illustration'
 import { LoudspeakerIllustration } from 'kitten/components/illustrations/loudspeaker-illustration'
 import { MixIllustration } from 'kitten/components/illustrations/mix-illustration'
-import { NetworkAboutIllustration } from 'kitten/components/illustrations/network-about-illustration'
 import { PhoneIllustration } from 'kitten/components/illustrations/phone-illustration'
 
 // Images
@@ -387,12 +384,9 @@ ReactOnRails.register({
   WarningCircleIcon,
 
   // Illustrations
-  GithubAboutIllustration,
-  KittenAboutIllustration,
   LinkBoxIllustration,
   LoudspeakerIllustration,
   MixIllustration,
-  NetworkAboutIllustration,
   PhoneIllustration,
 
   // Images

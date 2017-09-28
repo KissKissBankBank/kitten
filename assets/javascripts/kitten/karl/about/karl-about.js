@@ -36,11 +36,11 @@ export class KarlAbout extends Component {
   renderBloc1() {
     return (
       <div className="karl-About__bloc">
-        <Grid className="karl-About__items">
+        <Grid className="karl-About__content">
           <GridCol col-s="12" col-m="5">
             <Grid>
               <GridCol>
-                <div className="karl-About__itemsList">
+                <div className="karl-About__content__item">
                   <MixIllustration
                     className="karl-About__svg"
                     lightColor="#cadbfd"
@@ -68,7 +68,7 @@ export class KarlAbout extends Component {
                     >
                       Kitten nous sert avant tout à centraliser
                       les différents composants utilisés sur nos 3 services.
-                      Chaque membre de l’équipe peut être au courant des derniers composants crées.
+                      Chaque membre de l’équipe peut être au courant des derniers composants créés.
                     </Paragraph>
                   </Marger>
                 </div>
@@ -79,7 +79,7 @@ export class KarlAbout extends Component {
           <GridCol col-s="12" col-m="5">
             <Grid>
               <GridCol>
-                <div className="karl-About__itemsList">
+                <div className="karl-About__content__item">
                   <KittenAboutIllustration
                     className="karl-About__svg"
                   />
@@ -119,11 +119,11 @@ export class KarlAbout extends Component {
   renderBloc2() {
     return (
       <div className="karl-About__bloc">
-        <Grid className="karl-About__items">
+        <Grid className="karl-About__content">
           <GridCol col-s="12" col-m="5">
             <Grid>
               <GridCol>
-                <div className="karl-About__itemsList">
+                <div className="karl-About__content__item">
                   <GithubAboutIllustration
                     className="karl-About__svg"
                   />
@@ -158,7 +158,7 @@ export class KarlAbout extends Component {
           <GridCol col-s="12" col-m="5">
             <Grid>
               <GridCol>
-                <div className="karl-About__itemsList">
+                <div className="karl-About__content__item">
                   <NetworkAboutIllustration
                     className="karl-About__svg"
                   />
