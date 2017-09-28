@@ -52,7 +52,7 @@
     }
 
     @if $name != "xxs" {
-      .k-u-align-#{$position}\@#{$name}-up{
+      .k-u-align-#{$position}\@#{$name}-up {
         @include k-media-min($name) {
           text-align: $value;
         }
@@ -67,17 +67,9 @@
   @include k-u-align('left', left);
   @include k-u-align('right', right);
 
-  .k-u-align-center,
-  .k-u-centered { // DEPRECATED
+  // DEPRECATED
+  .k-u-centered {
     text-align: center;
-  }
-
-  .k-u-align-left {
-    text-align: left;
-  }
-
-  .k-u-align-right {
-    text-align: right;
   }
 
   .k-u-spacedHorizontally {

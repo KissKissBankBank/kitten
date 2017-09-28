@@ -28,9 +28,11 @@ export class ButtonIcon extends React.Component {
     const Tag = tag
 
     return (
-      <Tag className={ buttonIconClassNames }
-           tabIndex={ tabindex }
-           { ...others } />
+      <Tag
+        className={ buttonIconClassNames }
+        tabIndex={ tabindex }
+        { ...others }
+      />
     )
   }
 }
