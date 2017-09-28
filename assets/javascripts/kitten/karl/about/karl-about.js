@@ -22,6 +22,7 @@ export class KarlAbout extends Component {
         >
           Chez KissKissBankBank, nous opérons trois services de financement participatif (KissKissBankBank, LENDOPOLIS, hellomerci) avec une seule équipe technique et produit.
         </Paragraph>
+
         <Paragraph
           className="k-u-align-center@s-down"
           modifier="tertiary"
@@ -38,78 +39,66 @@ export class KarlAbout extends Component {
       <div className="karl-About__bloc">
         <Grid className="karl-About__content">
           <GridCol col-s="12" col-m="5">
-            <Grid>
-              <GridCol>
-                <div className="karl-About__content__item">
-                  <MixIllustration
-                    className="karl-About__svg"
-                    lightColor="#cadbfd"
-                    darkColor="#4a84ff"
-                  />
-                  <Marger
-                    top="1.2"
-                    className="karl-About__title"
-                  >
-                    <Text
-                      className="k-u-color-primary3"
-                      weight="bold"
-                      size="default"
-                    >
-                      Comment utilise-t-on Kitten ?
-                    </Text>
-                  </Marger>
-                  <Marger
-                    top="1"
-                    className="karl-About__text"
-                  >
-                    <Paragraph
-                      margin={ false }
-                      modifier="quaternary"
-                    >
-                      Kitten nous sert avant tout à centraliser
-                      les différents composants utilisés sur nos 3 services.
-                      Chaque membre de l’équipe peut être au courant des derniers composants créés.
-                    </Paragraph>
-                  </Marger>
-                </div>
-              </GridCol>
-            </Grid>
+            <div className="karl-About__content__item">
+              <MixIllustration
+                className="karl-About__svg"
+                lightColor="#cadbfd"
+                darkColor="#4a84ff"
+              />
+              <div className="karl-About__title">
+                <Text
+                  tag="p"
+                  weight="bold"
+                  size="default"
+                  className="k-u-color-primary3 k-u-align-center@s-down"
+                >
+                  Comment utilise-t-on Kitten ?
+                </Text>
+              </div>
+              <div className="karl-About__text">
+                <Paragraph
+                  margin={ false }
+                  modifier="quaternary"
+                  className="k-u-align-center@s-down"
+                >
+                  Kitten nous sert avant tout à centraliser
+                  les différents composants utilisés sur nos 3 services.
+                  Chaque membre de l’équipe peut être au courant des derniers composants créés.
+                </Paragraph>
+              </div>
+            </div>
           </GridCol>
 
           <GridCol col-s="12" col-m="5">
-            <Grid>
-              <GridCol>
-                <div className="karl-About__content__item">
-                  <KittenAboutIllustration
-                    className="karl-About__svg"
-                  />
-                  <Marger
-                    top="1.2"
-                    className="karl-About__title"
-                  >
-                    <Text
-                      className="k-u-color-primary3"
-                      weight="bold"
-                      size="default"
-                    >
-                      Pourquoi a-t-on besoin de Kitten ?
-                    </Text>
-                  </Marger>
-                  <Marger
-                    top="1"
-                    className="karl-About__text"
-                  >
-                    <Paragraph
-                      margin={ false }
-                      modifier="quaternary"
-                    >
-                      Kitten nous permet de garder une cohérence d’unification lors de la création et de la modification de composants.
-                      L‘unité globale de kitten nous apporte une certaine clarté, une utilité et un gain de temps.
-                    </Paragraph>
-                  </Marger>
-                </div>
-              </GridCol>
-            </Grid>
+            <div className="karl-About__content__item">
+              <KittenAboutIllustration
+                className="karl-About__svg"
+              />
+              <div
+                className="karl-About__title"
+              >
+                <Text
+                  tag="p"
+                  weight="bold"
+                  size="default"
+                  className="k-u-color-primary3 k-u-align-center@s-down"
+                >
+                  Pourquoi a-t-on besoin de Kitten ?
+                </Text>
+              </div>
+              <div
+                className="karl-About__text"
+              >
+                <Paragraph
+                  margin={ false }
+                  modifier="quaternary"
+                  className="k-u-align-center@s-down"
+                >
+                  Kitten nous permet de garder une cohérence d’unification lors de la création et de la modification de composants.
+                  L‘unité globale de kitten nous apporte une certaine clarté, une utilité et un gain de temps.
+                </Paragraph>
+              </div>
+            </div>
           </GridCol>
         </Grid>
       </div>
@@ -121,82 +110,71 @@ export class KarlAbout extends Component {
       <div className="karl-About__bloc">
         <Grid className="karl-About__content">
           <GridCol col-s="12" col-m="5">
-            <Grid>
-              <GridCol>
-                <div className="karl-About__content__item">
-                  <GithubAboutIllustration
-                    className="karl-About__svg"
-                  />
-                  <Marger
-                    top="1.2"
-                    className="karl-About__title"
-                  >
-                    <Text
-                      className="k-u-color-primary3"
-                      weight="bold"
-                      size="default"
-                    >
-                      Pourquoi nous avons décidé de le rendre open-source ?
-                    </Text>
-                  </Marger>
-                  <Marger
-                    top="1"
-                    className="karl-About__text"
-                  >
-                    <Paragraph
-                      margin={ false }
-                      modifier="quaternary"
-                    >
-                      Il est important pour nous de contribuer à la communauté Tech en partageant notre librairie et en vous apportant la possibilité de collaborer à l‘évolution de Kitten.
-                    </Paragraph>
-                  </Marger>
-                </div>
-              </GridCol>
-            </Grid>
+            <div className="karl-About__content__item">
+              <GithubAboutIllustration
+                className="karl-About__svg"
+              />
+              <div
+                className="karl-About__title"
+              >
+                <Text
+                  tag="p"
+                  weight="bold"
+                  size="default"
+                  className="k-u-color-primary3 k-u-align-center@s-down"
+                >
+                  Pourquoi nous avons décidé de le rendre open-source ?
+                </Text>
+              </div>
+              <div className="karl-About__text">
+                <Paragraph
+                  margin={ false }
+                  modifier="quaternary"
+                  className="k-u-align-center@s-down"
+                >
+                  Il est important pour nous de contribuer à la communauté Tech en partageant notre librairie et en vous apportant la possibilité de collaborer à l‘évolution de Kitten.
+                </Paragraph>
+              </div>
+            </div>
           </GridCol>
 
           <GridCol col-s="12" col-m="5">
-            <Grid>
-              <GridCol>
-                <div className="karl-About__content__item">
-                  <NetworkAboutIllustration
-                    className="karl-About__svg"
-                  />
-                  <Marger
-                    top="1.2"
-                    className="karl-About__title"
-                  >
-                    <Text
-                      className="k-u-color-primary3"
-                      weight="bold"
-                      size="default"
-                    >
-                      Comment utiliser Kitten ?
-                    </Text>
-                  </Marger>
-                  <Marger
-                    top="1"
-                    className="karl-About__text"
-                  >
-                    <Paragraph
-                      margin={ false }
-                      modifier="quaternary"
-                    >
-                      Tous nos partenaires peuvent utiliser l‘ensemble du kit UI.
-                    </Paragraph>
-                    <a
-                      href="https://github.com/KissKissBankBank/kitten"
-                      target="_blank"
-                      className={ classNames('k-u-color-font-1',
-                                             'k-u-size-tiny',
-                                             'karl-About__link') }
-                    >
-                      Fork me !
-                    </a>
-                  </Marger>
-                </div>
-              </GridCol>
-            </Grid>
+            <div className="karl-About__content__item">
+              <NetworkAboutIllustration
+                className="karl-About__svg"
+              />
+              <div
+                className="karl-About__title"
+              >
+                <Text
+                  tag="p"
+                  weight="bold"
+                  size="default"
+                  className="k-u-color-primary3 k-u-align-center@s-down"
+                >
+                  Comment utiliser Kitten ?
+                </Text>
+              </div>
+              <div className="karl-About__text">
+                <Paragraph
+                  margin={ false }
+                  modifier="quaternary"
+                  className="k-u-align-center@s-down"
+                >
+                  Tous nos partenaires peuvent utiliser l‘ensemble du kit UI.
+                </Paragraph>
+                <a
+                  href="https://github.com/KissKissBankBank/kitten"
+                  target="_blank"
+                  className={ classNames('k-u-color-font-1',
+                                         'k-u-size-tiny',
+                                         'k-u-align-center@s-down',
+                                         'karl-About__link') }
+                >
+                  Fork me !
+                </a>
+              </div>
+            </div>
           </GridCol>
         </Grid>
       </div>
