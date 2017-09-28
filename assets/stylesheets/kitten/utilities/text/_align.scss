@@ -52,7 +52,7 @@
     }
 
     @if $name != "xxs" {
-      .k-u-align-#{$position}\@#{$name}-up{
+      .k-u-align-#{$position}\@#{$name}-up {
         @include k-media-min($name) {
           text-align: $value;
         }
