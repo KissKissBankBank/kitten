@@ -12,11 +12,13 @@ import { MixIllustration } from 'kitten/components/illustrations/mix-illustratio
 import { NetworkAboutIllustration } from 'kitten/components/illustrations/network-about-illustration'
 
 class KarlAboutInfoBlock extends Component {
-  // renderIllustration() {
-  //   return (
-
-  //   )
-  // }
+  renderIllustration() {
+    return (
+      <div className="karl-About__svg">
+        { this.props.illustration }
+      </div>
+    )
+  }
 
   renderTitle() {
     return (
@@ -50,30 +52,29 @@ class KarlAboutInfoBlock extends Component {
   }
 
   renderParagraph() {
+    return (
+      <Paragraph
+         margin={ false }
+         modifier="quaternary"
+       >
+         { this.props.paragraph }
+      </Paragraph>
+    )
+  }
+
+  renderContent() {
     if (this.props.href) {
       return (
         <div className="karl-About__text">
-          <Paragraph
-            margin={ false }
-            modifier="quaternary"
-          >
-            { this.props.paragraph }
-          </Paragraph>
+          { this.renderParagraph() }
           { this.renderLink() }
         </div>
       )
     }
-
     else
-
     return (
       <div className="karl-About__text">
-        <Paragraph
-          margin={ false }
-          modifier="quaternary"
-        >
-          { this.props.paragraph }
-        </Paragraph>
+        { this.renderParagraph() }
       </div>
     )
   }
@@ -82,13 +83,9 @@ class KarlAboutInfoBlock extends Component {
     return (
       <GridCol col-s="12" col-m="5">
         <div className="karl-About__content__item">
-          <MixIllustration
-            className="karl-About__svg"
-            lightColor="#cadbfd"
-            darkColor="#4a84ff"
-          />
+          { this.renderIllustration() }
           { this.renderTitle() }
-          { this.renderParagraph() }
+          { this.renderContent() }
         </div>
       </GridCol>
     )
@@ -129,6 +126,12 @@ export class KarlAbout extends Component {
                 <div className="karl-About__bloc">
                   <Grid className="karl-About__content">
                     <KarlAboutInfoBlock
+                      illustration={
+                        <MixIllustration
+                          lightColor="#cadbfd"
+                          darkColor="#4a84ff"
+                        />
+                      }
                       title="Comment utilise-t-on Kitten ?"
                       paragraph="Kitten nous sert avant tout à centraliser
                                  les différents composants utilisés sur nos
@@ -137,6 +140,9 @@ export class KarlAbout extends Component {
                                  courant des derniers composants créés."
                     />
                     <KarlAboutInfoBlock
+                      illustration={
+                        <KittenAboutIllustration />
+                      }
                       title="Pourquoi a-t-on besoin de Kitten ?"
                       paragraph="Kitten nous permet de garder une cohérence
                                  d’unification lors de la création et de la
@@ -151,6 +157,9 @@ export class KarlAbout extends Component {
                 <div className="karl-About__bloc">
                   <Grid className="karl-About__content">
                     <KarlAboutInfoBlock
+                      illustration={
+                        <GithubAboutIllustration />
+                      }
                       title="Pourquoi nous avons décidé de le rendre open-source ?"
                       paragraph="Il est important pour nous de contribuer à
                                  la communauté Tech en partageant notre
@@ -158,6 +167,9 @@ export class KarlAbout extends Component {
                                  de collaborer à l‘évolution de Kitten."
                     />
                     <KarlAboutInfoBlock
+                      illustration={
+                        <NetworkAboutIllustration />
+                      }
                       title="Comment utiliser Kitten ?"
                       paragraph="Tous nos partenaires peuvent utiliser
                                  l‘ensemble du kit UI."
