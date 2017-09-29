@@ -10,6 +10,7 @@
 
   @include k-media-max('s') {
     margin-top: k-px-to-rem(50px);
+    align-items: center;
   }
 }
 
@@ -17,15 +18,17 @@
   align-self: center;
 
   @include k-media-min('m') {
-    align-self: left;
+    align-self: flex-start;
   }
 }
 
 .karl-About__text {
   align-self: center;
+  text-align: center;
 
   @include k-media-min('m') {
-    align-self: left;
+    align-self: flex-start;
+    text-align: left;
   }
 }
 
