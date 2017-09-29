@@ -5,7 +5,6 @@ import { Grid, GridCol } from 'kitten/components/grid/grid'
 import { Marger } from 'kitten/components/layout/marger'
 import { Paragraph } from 'kitten/components/typography/paragraph'
 import { Text } from 'kitten/components/typography/text'
-import { Title } from 'kitten/components/typography/title'
 import { GithubAboutIllustration } from 'kitten/components/illustrations/github-about-illustration'
 import { KittenAboutIllustration } from 'kitten/components/illustrations/kitten-about-illustration'
 import { MixIllustration } from 'kitten/components/illustrations/mix-illustration'
@@ -136,7 +135,7 @@ export class KarlAbout extends Component {
                       paragraph="Kitten nous sert avant tout à centraliser
                                  les différents composants utilisés sur nos
                                  3 services.
-                                 Chaque membre de l’équipe peut être au
+                                 Chaque membre de l‘équipe peut être au
                                  courant des derniers composants créés."
                     />
                     <KarlAboutInfoBlock
@@ -145,7 +144,7 @@ export class KarlAbout extends Component {
                       }
                       title="Pourquoi a-t-on besoin de Kitten ?"
                       paragraph="Kitten nous permet de garder une cohérence
-                                 d’unification lors de la création et de la
+                                 d‘unification lors de la création et de la
                                  modification de composants.
                                  L‘unité globale de kitten nous apporte une
                                  certaine clarté, une utilité et un gain de
