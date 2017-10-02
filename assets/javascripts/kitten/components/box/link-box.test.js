@@ -67,11 +67,11 @@ describe('<LinkBox />', () => {
     })
   })
 
-  describe('with others props', () => {
-    const otherComponent = shallow(<LinkBox aria-hidden />)
+  describe('with linkProps props', () => {
+    const linkPropsComponent = shallow(<LinkBox linkProps={ { title: "Lorem ipsum" } } />)
 
-    it('has a other prop', () => {
-      expect(otherComponent).to.have.attr('aria-hidden', 'true')
+    it('has a linkProps prop', () => {
+      expect(linkPropsComponent).to.have.attr('title', 'Lorem ipsum')
     })
   })
 

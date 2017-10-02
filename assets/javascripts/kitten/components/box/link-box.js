@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { Component } from 'react'
 import classNames from 'classnames'
 import { ArrowIcon } from 'kitten/components/icons/arrow-icon'
 
-export default class LinkBox extends React.Component {
+export default class LinkBox extends Component {
   renderIcon() {
     if (this.props.displayIcon) {
       return (
@@ -21,7 +21,7 @@ export default class LinkBox extends React.Component {
       href,
       title,
       text,
-      ...others } = this.props
+      linkProps } = this.props
 
     let linkBoxClassNames = classNames(
       'k-LinkBox',
@@ -33,7 +33,7 @@ export default class LinkBox extends React.Component {
 
     return (
       <a
-        { ...others }
+        { ...linkProps }
         className={ linkBoxClassNames }
         href={ href }
         { ...target }
@@ -46,13 +46,15 @@ export default class LinkBox extends React.Component {
           </div>
 
           <div className={ classNames('k-LinkBox__navigation',
-                                      'k-LinkBox__navigation--withAnimation') }>
+                                      'k-LinkBox__navigation--withAnimation') }
+          >
             <span className={ classNames('k-LinkBox__button',
                                          'k-ButtonIcon',
                                          'k-ButtonIcon--hydrogen',
                                          'k-ButtonIcon--tiny',
                                          'k-ButtonIcon--withoutHover',
-                                         'k-ButtonIcon--verticalArrow') }>
+                                         'k-ButtonIcon--verticalArrow') }
+            >
               <ArrowIcon className="k-ButtonIcon__svg" />
             </span>
           </div>
