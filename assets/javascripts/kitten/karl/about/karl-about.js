@@ -21,7 +21,8 @@ class KarlAboutInfoBlock extends Component {
 
   renderTitle() {
     return (
-      <div className="karl-About__title">
+      <div className={ classNames('k-u-blockAlign-center@m-down',
+                                  'k-u-blockAlign-start@m-up') }>
         <Text
           tag="p"
           weight="bold"
@@ -62,18 +63,14 @@ class KarlAboutInfoBlock extends Component {
   }
 
   renderContent() {
-    if (this.props.href) {
-      return (
-        <div className="karl-About__text">
-          { this.renderParagraph() }
-          { this.renderLink() }
-        </div>
-      )
-    }
-    else
     return (
-      <div className="karl-About__text">
+      <div className={ classNames('k-u-align-center@m-down',
+                                  'k-u-align-left@m-up',
+                                  'k-u-blockAlign-center@m-down',
+                                  'k-u-blockAlign-start@m-up') }
+      >
         { this.renderParagraph() }
+        { this.props.href ? this.renderLink() : null }
       </div>
     )
   }

@@ -14,24 +14,6 @@
   }
 }
 
-.karl-About__title {
-  align-self: center;
-
-  @include k-media-min('m') {
-    align-self: flex-start;
-  }
-}
-
-.karl-About__text {
-  align-self: center;
-  text-align: center;
-
-  @include k-media-min('m') {
-    align-self: flex-start;
-    text-align: left;
-  }
-}
-
 .karl-About__svg {
   height: k-px-to-rem(80px);
 
