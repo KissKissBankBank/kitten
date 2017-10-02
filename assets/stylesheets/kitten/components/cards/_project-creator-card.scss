@@ -49,9 +49,16 @@
     align-items: center;
   }
 
+  .k-ProjectCreatorCard__grid--flex--description {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
   .k-ProjectCreatorCard__content {
     display: flex;
     align-items: center;
+    flex: 1;
   }
 
   .k-ProjectCreatorCard__date {
