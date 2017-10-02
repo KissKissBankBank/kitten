@@ -66,4 +66,20 @@ describe('<LinkBox />', () => {
       expect(defaultComponent.find('.k-LinkBox__icon')).to.have.length(0)
     })
   })
+
+  describe('with others props', () => {
+    const otherComponent = shallow(<LinkBox aria-hidden />)
+
+    it('has a other prop', () => {
+      expect(otherComponent).to.have.attr('aria-hidden', 'true')
+    })
+  })
+
+  describe('with classNames props', () => {
+    const linkBox = shallow(<LinkBox className="custom_class" />)
+
+    it('has custom class', () => {
+      expect(linkBox).to.have.className('custom_class')
+    })
+  })
 })

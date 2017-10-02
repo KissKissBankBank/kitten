@@ -32,9 +32,12 @@ export default class LinkBox extends React.Component {
     const target = isExternal ? { target: '_blank' } : {}
 
     return (
-      <a className= { linkBoxClassNames }
-         href={ href }
-         { ...target }>
+      <a
+        { ...others }
+        className={ linkBoxClassNames }
+        href={ href }
+        { ...target }
+      >
         <div className="k-LinkBox__container">
           { this.renderIcon() }
           <div className="k-LinkBox__paragraph">
