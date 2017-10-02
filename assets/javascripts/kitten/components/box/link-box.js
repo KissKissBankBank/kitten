@@ -14,22 +14,32 @@ export default class LinkBox extends React.Component {
   }
 
   render() {
+    const {
+      className,
+      displayIcon,
+      isExternal,
+      href,
+      title,
+      text,
+      ...others } = this.props
+
     let linkBoxClassNames = classNames(
       'k-LinkBox',
-      { 'k-LinkBox--withIcon': this.props.displayIcon },
+      className,
+      { 'k-LinkBox--withIcon': displayIcon },
     )
 
-    const target = this.props.isExternal ? { target: '_blank' } : {}
+    const target = isExternal ? { target: '_blank' } : {}
 
     return (
       <a className= { linkBoxClassNames }
-         href={ this.props.href }
+         href={ href }
          { ...target }>
         <div className="k-LinkBox__container">
           { this.renderIcon() }
           <div className="k-LinkBox__paragraph">
-            <p className="k-LinkBox__title">{ this.props.title }</p>
-            <p className="k-LinkBox__text">{ this.props.text }</p>
+            <p className="k-LinkBox__title">{ title }</p>
+            <p className="k-LinkBox__text">{ text }</p>
           </div>
 
           <div className={ classNames('k-LinkBox__navigation',
