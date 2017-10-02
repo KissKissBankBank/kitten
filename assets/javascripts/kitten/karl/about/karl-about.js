@@ -26,6 +26,7 @@ class KarlAboutInfoBlock extends Component {
         <Text
           tag="p"
           weight="bold"
+          margin={ false }
           size="default"
           className={ classNames('k-u-color-primary3',
                                  'k-u-align-center@s-down') }
@@ -92,21 +93,26 @@ export class KarlAbout extends Component {
   renderIntro() {
     return (
       <div>
-        <Paragraph
-          className="k-u-align-center@s-down"
-          modifier="tertiary"
-          margin={ false }
-        >
-          Chez KissKissBankBank, nous opérons trois services de financement participatif (KissKissBankBank, LENDOPOLIS, hellomerci) avec une seule équipe technique et produit.
-        </Paragraph>
+        <Marger top="1.5" bottom="1.5">
+          <Paragraph
+            className="k-u-align-center@s-down"
+            modifier="tertiary"
+            margin={ false }
+          >
+            Chez KissKissBankBank, nous opérons trois services de financement participatif (KissKissBankBank, LENDOPOLIS, hellomerci) avec une seule équipe technique et produit.
+          </Paragraph>
+        </Marger>
 
-        <Paragraph
-          className="k-u-align-center@s-down"
-          modifier="tertiary"
-        >
-          Aujourd‘hui, notre volonté d’unifier les expériences et la charte graphique sur les trois services nous a naturellement poussés vers la démarche d’une bibliothèque de composants réutilisables. Cette bibliothèque s‘accompagne d‘un styleguide vivant qui liste les composants existants et définit un langage commun pour les développeurs et les designers.
-            Nous avons donc imaginé Kitten, le premier Kit UI du crowdfunding, ie.
-        </Paragraph>
+        <Marger top="1.5" bottom="1.5">
+          <Paragraph
+            className="k-u-align-center@s-down"
+            modifier="tertiary"
+            margin={ false }
+          >
+            Aujourd‘hui, notre volonté d’unifier les expériences et la charte graphique sur les trois services nous a naturellement poussés vers la démarche d’une bibliothèque de composants réutilisables. Cette bibliothèque s‘accompagne d‘un styleguide vivant qui liste les composants existants et définit un langage commun pour les développeurs et les designers.
+              Nous avons donc imaginé Kitten, le premier Kit UI du crowdfunding, ie.
+          </Paragraph>
+        </Marger>
       </div>
     )
   }
@@ -114,7 +120,7 @@ export class KarlAbout extends Component {
   render() {
     return (
       <Container>
-        <Marger top="12" bottom="10">
+        <Marger top="10" bottom="10">
           <Grid>
             <GridCol col-l="10" offset-l="1">
               <div>

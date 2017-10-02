@@ -37,11 +37,13 @@ export class KarlMenuHeader extends Component {
   renderMenuLogo() {
     return (
       <HeaderItem>
-        <KissKissBankBankLogo
-          className={ classNames('k-Header__logo',
-                                 'karl-Menu__header__logo') }
-          width="135"
-        />
+        <a href="/kitten/components">
+          <KissKissBankBankLogo
+            className={ classNames('k-Header__logo',
+                                   'karl-Menu__header__logo') }
+            width="135"
+          />
+        </a>
       </HeaderItem>
     )
   }
