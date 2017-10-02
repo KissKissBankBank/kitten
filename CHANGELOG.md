@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Add `className` prop on the link `LinkBox`.
 - Feature: Handle breakpoints on the `k-u-blockAlign` utility class.
 
 ## [14.1.4] - 2017-09-22
