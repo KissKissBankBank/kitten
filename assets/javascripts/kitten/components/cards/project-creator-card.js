@@ -56,7 +56,7 @@ class ProjectCreatorCardComponent extends React.Component {
         <Marger
           top="2"
           bottom="1">
-          <div className="k-ProjectCreatorCard__grid--flex">
+          <div className="k-ProjectCreatorCard__grid--flexEnd">
             { this.renderDate() }
             { this.renderStatus() }
           </div>
