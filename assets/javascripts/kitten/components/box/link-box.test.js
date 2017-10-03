@@ -68,7 +68,9 @@ describe('<LinkBox />', () => {
   })
 
   describe('with linkProps props', () => {
-    const linkPropsComponent = shallow(<LinkBox linkProps={ { title: "Lorem ipsum" } } />)
+    const linkPropsComponent = shallow(
+      <LinkBox linkProps={ { title: "Lorem ipsum" } } />
+    )
 
     it('has a linkProps prop', () => {
       expect(linkPropsComponent).to.have.attr('title', 'Lorem ipsum')
