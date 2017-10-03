@@ -9,6 +9,7 @@ export class Text extends Component {
       color,
       decoration,
       lineHeight,
+      margin,
       size,
       style,
       tag,
@@ -51,6 +52,10 @@ export class Text extends Component {
         'k-u-weight-light': weight == 'light',
         'k-u-weight-regular': weight == 'regular',
         'k-u-weight-bold': weight == 'bold',
+
+        // Margin
+        'k-u-margin-top-none': !margin,
+        'k-u-margin-bottom-none': !margin,
       },
       className,
     )
@@ -76,6 +81,7 @@ Text.defaultProps = {
   color: null,
   decoration: null,
   lineHeight: null,
+  margin: true,
   size: null,
   style: null,
   tag: 'span',

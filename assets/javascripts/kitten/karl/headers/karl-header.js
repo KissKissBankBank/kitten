@@ -13,7 +13,7 @@ import { HeaderTitles } from 'kitten/components/headers/header-titles'
 export class KarlMenuHeader extends Component {
   renderMenuList() {
 
-    if( this.props.currentPage == 'about' ) return
+    if (this.props.currentPage == 'about') return
 
     return (
       <HeaderItem>
@@ -21,13 +21,15 @@ export class KarlMenuHeader extends Component {
           onClick={ this.props.onButtonClick }
           className="karl-Menu__header__button"
         >
-          <MenuIcon className={ classNames('k-ButtonIcon__svg',
-                                           'karl-Menu__header__icon',
-                                           'karl-Menu__header__icon--closed') }
+          <MenuIcon
+            className={ classNames('k-ButtonIcon__svg',
+                                   'karl-Menu__header__icon',
+                                   'karl-Menu__header__icon--closed') }
           />
-          <CrossIcon className={ classNames('k-ButtonIcon__svg',
-                                            'karl-Menu__header__icon',
-                                            'karl-Menu__header__icon--opened') }
+          <CrossIcon
+            className={ classNames('k-ButtonIcon__svg',
+                                   'karl-Menu__header__icon',
+                                   'karl-Menu__header__icon--opened') }
           />
         </ButtonIcon>
       </HeaderItem>

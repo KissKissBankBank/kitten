@@ -3,33 +3,6 @@
   justify-content: space-between;
 }
 
-.karl-About__content__item {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-
-  @include k-media-max('s') {
-    margin-top: k-px-to-rem(50px);
-    align-items: center;
-  }
-}
-
-.karl-About__svg {
-  height: k-px-to-rem(80px);
-
-  @include k-media-max('s') {
-    margin: 0 auto;
-  }
-}
-
-.karl-About__bloc {
-  margin-top: k-px-to-rem(70px);
-
-  @include k-media-max('s') {
-    margin-top: 0;
-  }
-}
-
 .karl-About__link {
   &:active {
     color: map-get($k-colors, 'primary-3');
