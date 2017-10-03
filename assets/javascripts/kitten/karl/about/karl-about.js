@@ -162,7 +162,7 @@ export class KarlAbout extends Component {
                       illustration={
                         <GithubAboutIllustration />
                       }
-                      title="Pourquoi nous avons décidé de le rendre open-source ?"
+                      title="Pourquoi avons-nous décidé de le rendre open source?"
                       paragraph="Il est important pour nous de contribuer à
                                  la communauté Tech en partageant notre
                                  librairie et en vous apportant la possibilité
