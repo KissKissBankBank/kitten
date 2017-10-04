@@ -33,6 +33,10 @@ export class Text extends Component {
         // Line height.
         'k-u-line-height-normal': lineHeight == 'normal',
 
+        // Margin
+        'k-u-margin-top-none': !margin,
+        'k-u-margin-bottom-none': !margin,
+
         // Size.
         'k-u-size-huge': size == 'huge',
         'k-u-size-big': size == 'big',
@@ -52,10 +56,6 @@ export class Text extends Component {
         'k-u-weight-light': weight == 'light',
         'k-u-weight-regular': weight == 'regular',
         'k-u-weight-bold': weight == 'bold',
-
-        // Margin
-        'k-u-margin-top-none': !margin,
-        'k-u-margin-bottom-none': !margin,
       },
       className,
     )

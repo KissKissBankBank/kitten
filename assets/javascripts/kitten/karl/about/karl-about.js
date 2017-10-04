@@ -28,7 +28,7 @@ class KarlAboutInfoBlock extends Component {
         top="1.5"
         bottom="1.5"
         className={ classNames('k-u-blockAlign-center@m-down',
-                                'k-u-blockAlign-start@m-up') }
+                               'k-u-blockAlign-start@m-up') }
       >
         <Text
           tag="p"
@@ -77,9 +77,9 @@ class KarlAboutInfoBlock extends Component {
         top="1.5"
         bottom="1.5"
         className={ classNames('k-u-align-center@m-down',
-                                  'k-u-align-left@m-up',
-                                  'k-u-blockAlign-center@m-down',
-                                  'k-u-blockAlign-start@m-up') }
+                               'k-u-align-left@m-up',
+                               'k-u-blockAlign-center@m-down',
+                               'k-u-blockAlign-start@m-up') }
       >
         { this.renderParagraph() }
         { this.props.href ? this.renderLink() : null }
@@ -128,7 +128,7 @@ export class KarlAbout extends Component {
             Cette bibliothèque s‘accompagne d‘un styleguide vivant qui liste les
             composants existants et définit un langage commun pour les
             développeurs et les designers.
-            Nous avons donc imaginé Kitten, le premier Kit UI du
+            Nous avons donc imaginé Kitten, le premier Kit&nbsp;UI du
             crowdfunding,&nbsp;ie.
           </Paragraph>
         </Marger>

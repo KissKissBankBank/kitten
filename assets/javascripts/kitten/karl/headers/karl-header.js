@@ -95,7 +95,8 @@ export class KarlMenuHeader extends Component {
       <Grid>
         <GridCol col="12">
           <Header
-            className="karl-Header karl-Menu__header"
+            className={ classNames('karl-Header',
+                                   'karl-Menu__header') }
             fixed
           >
             <HeaderItems>
