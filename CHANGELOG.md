@@ -4,9 +4,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Update flexbox on `ProjectCreatorCard`.
-- Fix: Add `className` prop on the link `LinkBox`.
-- Feature: Handle breakpoints on the `k-u-blockAlign` utility class.
+## [14.2.0] - 2017-10-04
+
+Feature:
+- Handle breakpoints on the `k-u-blockAlign` utility class.
+
+Fixes:
+- Update flexbox on `ProjectCreatorCard`.
+- Add `className` prop on the link `LinkBox`.
 
 ## [14.1.4] - 2017-09-22
 
