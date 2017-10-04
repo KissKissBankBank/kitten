@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { Component } from 'react'
 import classNames from 'classnames'
 import { ArrowIcon } from 'kitten/components/icons/arrow-icon'
 
-export default class LinkBox extends React.Component {
+export default class LinkBox extends Component {
   renderIcon() {
     if (this.props.displayIcon) {
       return (
@@ -14,32 +14,47 @@ export default class LinkBox extends React.Component {
   }
 
   render() {
+    const {
+      className,
+      displayIcon,
+      isExternal,
+      href,
+      title,
+      text,
+      linkProps } = this.props
+
     let linkBoxClassNames = classNames(
       'k-LinkBox',
-      { 'k-LinkBox--withIcon': this.props.displayIcon },
+      className,
+      { 'k-LinkBox--withIcon': displayIcon },
     )
 
-    const target = this.props.isExternal ? { target: '_blank' } : {}
+    const target = isExternal ? { target: '_blank' } : {}
 
     return (
-      <a className= { linkBoxClassNames }
-         href={ this.props.href }
-         { ...target }>
+      <a
+        { ...linkProps }
+        className={ linkBoxClassNames }
+        href={ href }
+        { ...target }
+      >
         <div className="k-LinkBox__container">
           { this.renderIcon() }
           <div className="k-LinkBox__paragraph">
-            <p className="k-LinkBox__title">{ this.props.title }</p>
-            <p className="k-LinkBox__text">{ this.props.text }</p>
+            <p className="k-LinkBox__title">{ title }</p>
+            <p className="k-LinkBox__text">{ text }</p>
           </div>
 
           <div className={ classNames('k-LinkBox__navigation',
-                                      'k-LinkBox__navigation--withAnimation') }>
+                                      'k-LinkBox__navigation--withAnimation') }
+          >
             <span className={ classNames('k-LinkBox__button',
                                          'k-ButtonIcon',
                                          'k-ButtonIcon--hydrogen',
                                          'k-ButtonIcon--tiny',
                                          'k-ButtonIcon--withoutHover',
-                                         'k-ButtonIcon--verticalArrow') }>
+                                         'k-ButtonIcon--verticalArrow') }
+            >
               <ArrowIcon className="k-ButtonIcon__svg" />
             </span>
           </div>
