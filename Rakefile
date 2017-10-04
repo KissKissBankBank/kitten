@@ -33,8 +33,7 @@ desc "Generate documentation and commit v#{Kitten::VERSION} " \
      '(make sure you update version.rb, package.json, ' \
      'CHANGELOG.md and KARL_CHANGELOG.md beforehand)'
 task :kitten_prepare_release do
-  sh 'git fetch origin'
-  sh "git checkout release/v#{Kitten::VERSION} origin/master"
+  sh "git checkout release/v#{Kitten::VERSION}"
   sh 'bin/install'
   sh 'bundle exec rake sassdoc build'
 
