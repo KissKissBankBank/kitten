@@ -5,9 +5,6 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Update colors and introduce new valid-2 and error-2 colors.
-- Fix: Update flexbox on `ProjectCreatorCard`.
-- Fix: Add `className` prop on the link `LinkBox`.
-- Feature: Handle breakpoints on the `k-u-blockAlign` utility class.
 
 ## [14.2.0] - 2017-10-04
 
