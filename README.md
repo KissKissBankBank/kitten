@@ -279,7 +279,7 @@ your `~/.npmrc` by calling:
 $ yarn login
 ```
 
-### Prepare the release
+### Prepare the release pull request
 
 - Pull `master`.
 - Update the `CHANGELOG.md` file:
