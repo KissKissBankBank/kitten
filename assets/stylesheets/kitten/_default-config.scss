@@ -81,8 +81,37 @@ $k-fonts: (
 
 // Colors
 
+//$k-colors: (
+  //'font-1': #333,
+  //'font-2': #b8b8b8,
+  //'background-1': #fff,
+  //'background-2': #fbfbfb,
+  //'background-3': #f6f6f6,
+  //'line-1': #eee,
+  //'line-2': #d8d8d8,
+
+  //'primary-1': #4a84ff,
+  //'primary-2': #3b75f0,
+  //'primary-3': #2c66e1,
+  //'primary-4': #cadbfd,
+  //'primary-5': #ecf2ff,
+  //'primary-6': #f6f9ff,
+
+  //'secondary-1': #4bfffa,
+  //'secondary-2': #3cf0eb,
+  //'secondary-3': #2de1dc,
+
+  //'tertiary-1': #68ffa0,
+  //'tertiary-2': #59f091,
+  //'tertiary-3': #4ae191,
+
+  //'valid': #70c050,
+  //'error': #ff4146,
+  //'error-2': #ffecec,
+//) !default;
+
 $k-colors: (
-  'font-1': #333,
+  'font-1': #222,
   'font-2': #b8b8b8,
   'background-1': #fff,
   'background-2': #fbfbfb,
@@ -90,22 +119,23 @@ $k-colors: (
   'line-1': #eee,
   'line-2': #d8d8d8,
 
-  'primary-1': #4a84ff,
-  'primary-2': #3b75f0,
-  'primary-3': #2c66e1,
-  'primary-4': #cadbfd,
-  'primary-5': #ecf2ff,
-  'primary-6': #f6f9ff,
+  'primary-1': #19bbff,
+  'primary-2': #0aacf0,
+  'primary-3': #009de1,
+  'primary-4': #baeaff,
+  'primary-5': #e8f8ff,
+  'primary-6': #f3fbff,
 
   'secondary-1': #4bfffa,
   'secondary-2': #3cf0eb,
   'secondary-3': #2de1dc,
 
-  'tertiary-1': #68ffa0,
+  'tertiary-1': #effaf1,
   'tertiary-2': #59f091,
   'tertiary-3': #4ae191,
 
-  'valid': #70c050,
-  'error': #ff4146,
-  'error-2': #ffecec,
+  'valid': #5fcd78,
+  'valid-2': #61d079,
+  'error': #ff0046,
+  'error-2': #ffe5ec,
 ) !default;
