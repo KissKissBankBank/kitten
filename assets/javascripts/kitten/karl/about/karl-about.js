@@ -129,7 +129,7 @@ export class KarlAbout extends Component {
             composants existants et définit un langage commun pour les
             développeurs et les designers.
             Nous avons donc imaginé Kitten, le premier Kit UI du
-            crowdfunding, ie.
+            crowdfunding,&nbsp;ie.
           </Paragraph>
         </Marger>
       </div>
@@ -153,7 +153,7 @@ export class KarlAbout extends Component {
                         darkColor="#4a84ff"
                       />
                     }
-                    title="Comment utilise-t-on Kitten ?"
+                    title="Comment utilise-t-on Kitten&nbsp;?"
                     paragraph="Kitten nous sert avant tout à centraliser
                                les différents composants utilisés sur nos
                                3 services.
@@ -166,7 +166,7 @@ export class KarlAbout extends Component {
                         height="80"
                       />
                     }
-                    title="Pourquoi a-t-on besoin de Kitten ?"
+                    title="Pourquoi a-t-on besoin de Kitten&nbsp;?"
                     paragraph="Kitten nous permet de garder une cohérence
                                d‘unification lors de la création et de la
                                modification de composants.
@@ -180,7 +180,7 @@ export class KarlAbout extends Component {
                         height="80"
                       />
                     }
-                    title="Pourquoi avons-nous décidé de le rendre open source ?"
+                    title="Pourquoi avons-nous décidé de le rendre open source&nbsp;?"
                     paragraph="Il est important pour nous de contribuer à
                                la communauté Tech en partageant notre
                                librairie et en vous apportant la possibilité
@@ -192,9 +192,9 @@ export class KarlAbout extends Component {
                         height="80"
                       />
                     }
-                    title="Comment utiliser Kitten ?"
+                    title="Comment utiliser Kitten&nbsp;?"
                     paragraph="Tous nos partenaires peuvent utiliser
-                               l‘ensemble du kit UI."
+                               l‘ensemble du kit&nbsp;UI."
                     href="Fork me!"
                   />
                 </Grid>
