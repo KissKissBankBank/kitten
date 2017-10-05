@@ -300,6 +300,8 @@ $ bundle exec rake kitten_prepare_release
 ```
 
 - Follow the link to create the pull request on Github.
+- Announce the release on KissKissBankBank's #kit-ui Slack channel with the
+  related CHANGELOG.
 
 ### Release!
 
@@ -313,8 +315,6 @@ Once the pull request is accepted:
 $ bundle exec rake kitten_release
 ```
 
-- Announce the release on KissKissBankBank's #kit-ui Slack channel with the
-  related CHANGELOG.
 - Update
   [our private project kanban](https://github.com/orgs/KissKissBankBank/projects/5):
   move cards that are released from `done` column to `released` column.
