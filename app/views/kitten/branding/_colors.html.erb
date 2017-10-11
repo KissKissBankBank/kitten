@@ -1,19 +1,17 @@
-<div class="k-Grid">
-  <div class="k-Grid__col k-Grid__col--12">
-    <div class="k-Grid">
+<div class="k-Grid karl-Colors">
+  <div class="k-Grid__col">
+    <div class="k-Grid k-Grid__col--10">
       <% colors.each do |color| %>
-        <div class="k-Grid__col k-Grid__col--12 k-Grid__col--4@l k-Grid__col--6@m">
+        <div
+          class="karl-Colors__container"
+          style="background-color: <%= color[:hexa] %>"
+        >
           <div
-            class="karl-Colors"
-            style="background-color: <%= color[:hexa] %>"
+            class="karl-Colors__cardDescription"
+            style="color: <%= color[:colorName] %>"
           >
-            <div
-              class="karl-Colors__cardDescription"
-              style="color: <%= color[:colorName] %>"
-            >
-              <p class="k-u-size-default k-u-weight-bold karl-Colors__cardColorName"><%= color[:name] %></p>
-              <p class="k-u-size-micro k-u-weight-bold karl-Colors__cardHexaName"><%= color[:hexa] %></p>
-            </div>
+            <p class="k-u-size-default k-u-weight-bold karl-Colors__cardColorName"><%= color[:name] %></p>
+            <p class="k-u-size-micro k-u-weight-bold karl-Colors__cardHexaName"><%= color[:hexa] %></p>
           </div>
         </div>
       <% end %>

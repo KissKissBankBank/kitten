@@ -1,6 +1,10 @@
 $card-size: k-px-to-rem(48px);
 
 .karl-Colors {
+  margin-bottom: k-px-to-rem(40px);
+}
+
+.karl-Colors__container {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
