@@ -58,7 +58,7 @@ desc "Create tag v#{Kitten::VERSION}, build and push"
 task kitten_release: [:sassdoc, :build] do
   sh 'git fetch origin'
   sh 'git checkout master'
-  sh 'git pull origin/master'
+  sh 'git pull origin master'
 
   # Create tag
   sh "git tag -a v#{Kitten::VERSION} -m 'Version #{Kitten::VERSION}'"
