@@ -113,6 +113,7 @@
   .k-LinkBox__paragraph {
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
     justify-content: center;
     padding: k-px-to-rem(10px)
              k-px-to-rem(10px)

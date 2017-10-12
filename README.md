@@ -279,10 +279,9 @@ your `~/.npmrc` by calling:
 $ yarn login
 ```
 
-### Prepare the release
+### Prepare the release pull request
 
-- Inform the #kit-ui Slack channel about the release with the related CHANGELOG.
-- Pull `master`
+- Pull `master`.
 - Update the `CHANGELOG.md` file:
   * Update the version following the [Semantic Versioning](http://semver.org/).
   * Add a new `[unreleased]` section.
@@ -294,17 +293,28 @@ $ yarn login
   * Add a new `[unreleased]` section.
 - Update the version in `lib/kitten/version.rb`.
 - Update the version in `package.json`.
+- Run this command:
+
+```sh
+$ bundle exec rake kitten_prepare_release
+```
+
+- Follow the link to create the pull request on Github.
+- Announce the release on KissKissBankBank's #kit-ui Slack channel with the
+  related CHANGELOG.
 
 ### Release!
 
-Run this command:
+Once the pull request is accepted:
+
+- Merge the pull request into master.
+- Delete the release branch.
+- Run this command:
 
 ```sh
 $ bundle exec rake kitten_release
 ```
 
-### Update GitHub
-
-Update
-[our private project kanban](https://github.com/orgs/KissKissBankBank/projects/5):
-move cards that are released from `done` column to `released` column.
+- Update
+  [our private project kanban](https://github.com/orgs/KissKissBankBank/projects/5):
+  move cards that are released from `done` column to `released` column.

@@ -29,22 +29,43 @@ task :sassdoc do
   `yarn sassdoc`
 end
 
-desc "Generate documentation, commit, create tag v#{Kitten::VERSION}, " \
-     'build and push (make sure you update version.rb, package.json, ' \
+desc "Generate documentation and commit v#{Kitten::VERSION} " \
+     '(make sure you update version.rb, package.json, ' \
      'CHANGELOG.md and KARL_CHANGELOG.md beforehand)'
-task kitten_release: [:sassdoc, :build] do
-  sh 'bundle install'
-  sh 'yarn install'
+task :kitten_prepare_release do
+  sh "git checkout -b release/v#{Kitten::VERSION}"
+  sh 'bin/install'
+  sh 'bundle exec rake sassdoc build'
 
   # Commit a new version
-  sh 'git add lib/kitten/version.rb *CHANGELOG.md public/sassdoc/index.html ' \
-     'package.json spec/dummy/client/yarn.lock Gemfile.lock'
+  sh 'git add ' \
+     'lib/kitten/version.rb ' \
+     '*CHANGELOG.md ' \
+     'public/sassdoc/index.html ' \
+     'package.json ' \
+     'spec/dummy/client/yarn.lock ' \
+     'Gemfile.lock'
   sh "git commit -m v#{Kitten::VERSION}"
+  sh 'git push origin release/v#{Kitten::VERSION}'
+
+  puts
+  puts 'Done! You can now create a release PR:'
+  puts 'https://github.com/KissKissBankBank/kitten/compare/' \
+       'release/v#{version}?expand=1 😸'
+end
+
+desc "Create tag v#{Kitten::VERSION}, build and push"
+task kitten_release: [:sassdoc, :build] do
+  sh 'git fetch origin'
+  sh 'git checkout master'
+  sh 'git pull origin master'
+
+  # Create tag
   sh "git tag -a v#{Kitten::VERSION} -m 'Version #{Kitten::VERSION}'"
-  sh 'git push origin master'
   sh 'git push origin --tags'
 
-  # Publish on npm
+  # Publish
+  sh 'bin/install'
   sh 'npm publish'
 
   # Move the styleguide branch to the latest version
@@ -54,7 +75,7 @@ task kitten_release: [:sassdoc, :build] do
   sh 'git checkout master'
 
   puts
-  puts "Done! kitten-components #{Kitten::VERSION} is published! 🚀"
+  puts "Done! kitten-components v#{Kitten::VERSION} is published! 🚀"
 end
 
 task default: ['app/views/layouts/kitten/playground.html.erb',

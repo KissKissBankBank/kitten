@@ -7,6 +7,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Update colors and introduce new valid-2 and error-2 colors.
 - Feature: Add `k-u-margin-none` utility.
 
+## [14.2.1] - 2017-10-12
+
+- Fix `LinkBox` paragraph container size.
+
 ## [14.2.0] - 2017-10-04
 
 Feature:
