@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix `LinkBox` paragraph container size.
+
 ## [14.2.0] - 2017-10-04
 
 Feature:
