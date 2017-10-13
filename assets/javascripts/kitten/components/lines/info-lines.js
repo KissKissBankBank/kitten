@@ -35,7 +35,9 @@ export class InfoLines extends Component {
           { key }
         </div>
 
-        <div className="k-InfoLines__line__value">
+        <div className={ classNames('k-InfoLines__line__value',
+                                    'k-u-align-right') }
+        >
           { value }
         </div>
       </div>
