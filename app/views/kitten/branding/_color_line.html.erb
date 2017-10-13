@@ -3,17 +3,23 @@
     <div class="karl-Colors">
       <% colors.each do |color| %>
         <div
-          class="karl-Colors__container <%= color[:className] %>"
+          class="karl-Colors__container
+                <%= color[:className] %>"
           style="background-color: <%= color[:hexa] %>"
         >
           <div
-            class="k-u-margin-bottom-triple k-u-margin-left-double"
+            class="k-u-margin-bottom-triple
+                   k-u-margin-left-double"
             style="color: <%= color[:colorName] %>"
           >
-            <p class="k-u-size-default k-u-weight-bold k-u-margin-none">
+            <p class="k-u-size-default
+                      k-u-weight-bold
+                      k-u-margin-none">
               <%= color[:name] %>
             </p>
-            <p class="k-u-size-micro k-u-weight-bold k-u-margin-none">
+            <p class="k-u-size-micro
+                      k-u-weight-bold
+                      k-u-margin-none">
               <%= color[:hexa] %>
             </p>
           </div>
