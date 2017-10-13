@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add new font.
+
 ## [14.2.1] - 2017-10-12
 
 - Fix `LinkBox` paragraph container size.
