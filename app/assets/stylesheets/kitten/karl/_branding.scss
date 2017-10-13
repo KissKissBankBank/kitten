@@ -1,7 +1,5 @@
 .karl-Colors {
-  display: display;
-
-  @include k-media-min('l') {
+  @include k-media-min('m') {
     display: flex;
   }
 }
@@ -13,7 +11,7 @@
 
   height: k-px-to-rem(340px);
 
-  @include k-media-min('l') {
+  @include k-media-min('m') {
     width: 25%;
   }
 }
@@ -21,8 +19,8 @@
 .karl-Colors__cardDescription {
   @include k-typographyFont('regular');
 
-  margin-left: k-px-to-rem(20px);
   margin-bottom: k-px-to-rem(30px);
+  margin-left: k-px-to-rem(20px);
 }
 
 .karl-Colors__separator {
