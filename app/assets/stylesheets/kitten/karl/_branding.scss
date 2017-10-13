@@ -15,14 +15,3 @@
     width: 25%;
   }
 }
-
-.karl-Colors__cardDescription {
-  @include k-typographyFont('regular');
-
-  margin-bottom: k-px-to-rem(30px);
-  margin-left: k-px-to-rem(20px);
-}
-
-.karl-Colors__separator {
-  margin-bottom: k-px-to-rem(40px);
-}
