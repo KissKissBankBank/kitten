@@ -4,7 +4,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
-import numberUtils from 'kitten/helpers/utils/number'
+import { numberUtils } from 'kitten/helpers/utils/number'
 import { SliderWithTooltipAndPower }
   from 'kitten/components/sliders/slider-with-tooltip-and-power'
 import { TextInputWithUnit } from 'kitten/components/form/text-input-with-unit'

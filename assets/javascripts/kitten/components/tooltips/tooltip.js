@@ -1,8 +1,9 @@
 import React from 'react'
 import ReactTooltip from 'react-tooltip'
-import { ButtonQuestionMarkIcon } from 'kitten/components/buttons/button-question-mark-icon'
+import { ButtonQuestionMarkIcon }
+  from 'kitten/components/buttons/button-question-mark-icon'
 
-export default class Tooltip extends React.Component {
+export class Tooltip extends React.Component {
   render() {
     const { place,
             children,
@@ -41,3 +42,6 @@ Tooltip.defaultProps = {
   place: 'right',
   children: null,
 }
+
+// DEPRECATED: do not use default export.
+export default Tooltip

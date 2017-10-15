@@ -1,8 +1,9 @@
 import React from 'react'
 import { expect } from 'chai'
 import { shallow } from 'enzyme'
-import Tooltip from 'kitten/components/tooltips/tooltip'
-import { ButtonQuestionMarkIcon } from 'kitten/components/buttons/button-question-mark-icon'
+import { Tooltip } from 'kitten/components/tooltips/tooltip'
+import { ButtonQuestionMarkIcon }
+  from 'kitten/components/buttons/button-question-mark-icon'
 import ReactTooltip from 'react-tooltip'
 
 const component = shallow(

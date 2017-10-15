@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import classNames from 'classnames'
 import { ArrowIcon } from 'kitten/components/icons/arrow-icon'
 
-export default class LinkBox extends Component {
+export class LinkBox extends Component {
   renderIcon() {
     if (this.props.displayIcon) {
       return (
@@ -69,3 +69,6 @@ LinkBox.defaultProps = {
   href: '#',
   isExternal: false,
 }
+
+// DEPRECATED: do not use default export.
+export default LinkBox

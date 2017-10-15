@@ -1,9 +1,11 @@
 import React from 'react'
 import { expect } from 'chai'
 import { shallow } from 'enzyme'
-import { SideGrid,
-         SideGridContent,
-         SideGridAside } from 'kitten/components/grid/side-grid'
+import {
+  SideGrid,
+  SideGridContent,
+  SideGridAside,
+} from 'kitten/components/grid/side-grid'
 
 describe('<SideGrid />', () => {
   const component = shallow(

@@ -2,7 +2,7 @@
  * @module 'kitten/helpers/dom/events'
  */
 
-const domEvents = {
+export const domEvents = {
   /**
    * Object for mapping keyboard keys to browser's keyCode
    */
@@ -18,4 +18,5 @@ const domEvents = {
   }
 }
 
+// DEPRECATED: do not use default export.
 export default domEvents
