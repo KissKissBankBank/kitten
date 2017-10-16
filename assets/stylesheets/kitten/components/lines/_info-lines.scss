@@ -31,6 +31,8 @@
   }
 
   .k-InfoLines__line__value {
+    text-align: right;
+
     @include k-media-min('m') {
       margin-left: auto;
     }
