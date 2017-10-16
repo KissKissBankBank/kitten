@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking change: default colors have changed. To keep the original default colors:
+  $k-colors: map-merge($k-colors, (
+    toutes-les-anciennes-couleurs-ici
+  ));
 - Feature: Add new font.
 
 ## [14.2.1] - 2017-10-12

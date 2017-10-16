@@ -76,13 +76,13 @@
   font-style: normal;
 }
 /* Maax-Regular */
-@font-face {
-  font-family: 'maaxregular';
-  src: url('assets/fonts/maax-regular/Maax-Regular.eot') format('eot'),
-       url('assets/fonts/maax-regular/Maax-Regular.svg') format('svg'),
-       url('assets/fonts/maax-regular/Maax-Regular.ttf') format('ttf'),
-       url('assets/fonts/maax-regular/Maax-Regular.woff2') format('woff2'),
-       url('assets/fonts/maax-regular/Maax-Regular.woff') format('woff');
+ @font-face {
+font-family: 'maaxregular';
+  src: url('maax-regular/Maax-Regular.eot') format('eot'),
+       url('maax-regular/Maax-Regular.svg') format('svg'),
+       url('maax-regular/Maax-Regular.ttf') format('ttf'),
+       url('maax-regular/Maax-Regular.woff2') format('woff2'),
+       url('maax-regular/Maax-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
