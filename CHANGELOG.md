@@ -4,6 +4,22 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking change: default colors have changed. To keep the original default colors:
+  $k-colors: map-merge($k-colors, (
+    'font-1': #333,
+
+    'primary-1': #4a84ff,
+    'primary-2': #3b75f0,
+    'primary-3': #2c66e1,
+    'primary-4': #cadbfd,
+    'primary-5': #ecf2ff,
+    'primary-6': #f6f9ff,
+
+    'valid': #70c050,
+    'error': #ff4146,
+    'error-2': #ffecec,
+  ));
+
 - Feature: Update colors and introduce new valid-2 and error-2 colors.
 - Feature: Add `k-u-margin-none` utility.
 
