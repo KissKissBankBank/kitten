@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add new fonts.
+- Feature: Add new `Maax` fonts.
 
 ## [14.2.1] - 2017-10-12
 
