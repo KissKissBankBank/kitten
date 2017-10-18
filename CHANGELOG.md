@@ -22,6 +22,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Update colors and introduce new valid-2 and error-2 colors.
 - Feature: Add `k-u-margin-none` utility.
+- Fix: Update alignment on `InfoLines`.
 
 ## [14.2.1] - 2017-10-12
 
