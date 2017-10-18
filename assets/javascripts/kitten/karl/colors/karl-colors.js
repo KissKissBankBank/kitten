@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { Marger } from 'kitten/components/layout/marger'
-import { Title } from 'kitten/components/typography/title'
-import { Paragraph } from 'kitten/components/typography/paragraph'
+import { Text } from 'kitten/components/typography/text'
 
 export class KarlColors extends Component {
   constructor() {
@@ -14,8 +13,8 @@ export class KarlColors extends Component {
     return this.props.colors.map(this.renderColor)
   }
 
-  renderColor(element) {
-    const { name, hexa, colorName } = element
+  renderColor(color) {
+    const { name, hexa, colorName } = color
 
     const hexaStyles = {
       backgroundColor: hexa,
@@ -30,31 +29,37 @@ export class KarlColors extends Component {
         className="karl-Colors__container"
         style={ hexaStyles }
       >
-        <div
-          className="k-u-margin-bottom-triple
-                     k-u-margin-left-double"
+        <Marger
+          bottom="3"
+          className="k-u-margin-left-double"
           style={ colorNameStyles }
         >
-          <p class="k-u-size-default
-                    k-u-weight-bold
-                    k-u-margin-none">
+          <Text
+            tag="p"
+            size="default"
+            weight="bold"
+            className="k-u-margin-none">
             { name }
-          </p>
-          <p class="k-u-size-micro
-                    k-u-weight-bold
-                    k-u-margin-none">
+          </Text>
+          <Text
+            tag="p"
+            size="micro"
+            weight="bold"
+            className="k-u-margin-none">
             { hexa }
-          </p>
-        </div>
+          </Text>
+        </Marger>
       </div>
     )
   }
 
   render() {
     return (
-      <div class="k-Grid">
-        <div class="k-Grid__col k-Grid__col--12">
-          { this.renderColors() }
+      <div className="k-Grid">
+        <div className="k-Grid__col k-Grid__col--12">
+          <div className="karl-Colors">
+            { this.renderColors() }
+          </div>
         </div>
       </div>
     )
