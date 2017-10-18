@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Add named export for components. Default export for these components
   is now deprecated.
+- Fix: Update alignment on `InfoLines`.
 
 ## [14.2.1] - 2017-10-12
 
