@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add named export for components. Default export for these components
+  is now deprecated.
+
 ## [14.2.1] - 2017-10-12
 
 - Fix `LinkBox` paragraph container size.
