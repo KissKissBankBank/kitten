@@ -41,6 +41,7 @@ export class KarlColors extends Component {
             className="k-u-margin-none">
             { name }
           </Text>
+
           <Text
             tag="p"
             size="micro"

@@ -20,7 +20,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
     'error-2': #ffecec,
   ));
 
-- Feature: Update colors and introduce new valid-2 and error-2 colors.
+- Feature: Add `KarlColors` component.
+- Feature: Update colors and introduce new `valid-2` and `error-2`
+ colors.
 - Feature: Add `k-u-margin-none` utility.
 - Fix: Update alignment on `InfoLines`.
 

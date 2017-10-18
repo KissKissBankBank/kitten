@@ -30,7 +30,7 @@ module Kitten
           id: 'brand-colors',
           label: 'Brand colors',
           components: [
-            { path: 'branding/colors', name: ' ' },
+            { path: 'branding/colors', name: '' },
           ],
         }
       ]
