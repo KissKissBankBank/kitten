@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Marger } from 'kitten/components/layout/marger'
 import { Text } from 'kitten/components/typography/text'
+import { Grid, GridCol } from 'kitten/components/grid/grid'
 
 export class KarlColors extends Component {
   constructor() {
@@ -38,7 +39,8 @@ export class KarlColors extends Component {
             tag="p"
             size="default"
             weight="bold"
-            className="k-u-margin-none">
+            className="k-u-margin-none"
+          >
             { name }
           </Text>
 
@@ -46,7 +48,8 @@ export class KarlColors extends Component {
             tag="p"
             size="micro"
             weight="bold"
-            className="k-u-margin-none">
+            className="k-u-margin-none"
+          >
             { hexa }
           </Text>
         </Marger>
@@ -56,13 +59,13 @@ export class KarlColors extends Component {
 
   render() {
     return (
-      <div className="k-Grid">
-        <div className="k-Grid__col k-Grid__col--12">
+      <Grid>
+        <GridCol>
           <div className="karl-Colors">
             { this.renderColors() }
           </div>
-        </div>
-      </div>
+        </GridCol>
+      </Grid>
     )
   }
 }
