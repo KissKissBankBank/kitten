@@ -4,7 +4,54 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add new `Maax` fonts.
+- Breaking change: Add new `Maax` fonts.
+  You need to update your webpack client :
+
+```sh
+# Add this line in cleanup file
+rm -f app/assets/webpack/fonts/*
+```
+
+```js
+// Add headers in devServ.
+const devServer = new WebpackDevServer(compiler, {
+  …
+  headers: {
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
+    "Access-Control-Allow-Headers": "X-Requested-With, content-type, Authorization",
+  }
+});
+```
+
+```js
+// Update module loaders in base.config.js.
+module: {
+  loaders: [
+    {
+      test: /\.(svg|png|jpe?g)$/,
+      loader: 'file?name=images/[name].[ext]',
+      include: /icons/, // Add images folders.
+    },
+    {
+      test: /\.(woff|woff2|eot|ttf|svg)$/,
+      loader: 'file?name=fonts/[name].[ext]',
+      include: /maax/, // Add fonts folders.
+    },
+    …
+  ]
+}
+```
+
+```js
+// Add fonts path.
+const resolvingPaths = kittenComponents.jsPaths
+                       .concat(appJsPath)
+                       .concat(nodeModulesPath)
+                       .concat(kittenComponents.imagesPaths)
+                       .concat(kittenComponents.fontsPaths)
+```
+
 - Fix: Update alignment on `InfoLines`.
 
 ## [14.2.1] - 2017-10-12

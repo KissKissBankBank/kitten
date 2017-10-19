@@ -11,5 +11,5 @@ Rails.application.config.assets.precompile += [
   "application_#{type}.js",
   "application_#{type}.css",
   "favicon.ico",
-  /\.svg$/,
+  /\.(woff|woff2|eot|ttf|svg)$/,
 ]
