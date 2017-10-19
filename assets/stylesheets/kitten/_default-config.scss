@@ -55,7 +55,7 @@ $susy: (
 
 $k-fonts: (
   light: (
-    family: ("Maax", Helvetica, Arial, sans-serif),
+    family: ("MaaxLight", Helvetica, Arial, sans-serif),
     weight: 300
   ),
   regular: (
@@ -63,16 +63,16 @@ $k-fonts: (
     weight: 400
   ),
   bold: (
-    family: ("Maax", Helvetica, Arial, sans-serif),
+    family: ("MaaxBold", Helvetica, Arial, sans-serif),
     weight: 600
   ),
   regular-uppercase: (
-    family: ("Maax", Helvetica, Arial, sans-serif),
+    family: ("MaaxRegular", Helvetica, Arial, sans-serif),
     weight: 400,
     transform: uppercase
   ),
   bold-uppercase: (
-    family: ("Maax", Helvetica, Arial, sans-serif),
+    family: ("MaaxBold", Helvetica, Arial, sans-serif),
     weight: 600,
     letter-spacing: .1rem,
     transform: uppercase
