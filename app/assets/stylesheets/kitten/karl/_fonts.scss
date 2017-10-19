@@ -1,6 +1,6 @@
 /* Maax-Light */
 @font-face {
-  font-family: 'MaaxLight';
+  font-family: 'Maax';
   font-weight: 300;
   font-style: normal;
   src: url('maax/Maax-Regular.eot') format('eot'),
@@ -12,7 +12,7 @@
 
 /* Maax-Regular */
 @font-face {
-  font-family: 'MaaxRegular';
+  font-family: 'Maax';
   font-weight: 400;
   font-style: normal;
   src: url('maax/Maax-Regular.eot') format('eot'),
@@ -24,12 +24,12 @@
 
 /* Maax-Bold */
 @font-face {
-  font-family: 'MaaxBold';
+  font-family: 'Maax';
   font-weight: 600;
   font-style: normal;
-  src: url('maax/Maax-Bold.eot') format('eot'),
-       url('maax/Maax-Bold.svg') format('svg'),
-       url('maax/Maax-Bold.ttf') format('ttf'),
-       url('maax/Maax-Bold.woff2') format('woff2'),
-       url('maax/Maax-Bold.woff') format('woff');
+  src: url('maax/Maax-Medium.eot') format('eot'),
+       url('maax/Maax-Medium.svg') format('svg'),
+       url('maax/Maax-Medium.ttf') format('ttf'),
+       url('maax/Maax-Medium.woff2') format('woff2'),
+       url('maax/Maax-Medium.woff') format('woff');
 }
