@@ -24,7 +24,7 @@
 /// @example css - CSS output
 ///   font-size:   4.236rem;
 ///   line-height: 4.5rem;
-@mixin k-typographyFontSize($step: 0, $line-height: null, $paragraph: false) {
+@mixin k-typographyFontSize($step: 0, $line-height: null, $paragraph: false, $title: false) {
   // Modular scale multiplier
   $multiplier: k-map-fetch($k-typography, 'scale-multiplier');
 

@@ -15,22 +15,22 @@
 ///   <h5 class='k-Title k-Title--quinary'>Title 5</h5>
 
 @mixin k-Title {
-  $font: 'light';
+  $font: 'bold';
 
   .k-Title {
     @include k-typographyFont($font);
   }
 
   .k-Title--primary {
-    @include k-typographyFontScale($font-step: 7,
+    @include k-typographyFontScale($font-step: 9,
                                    $font-step-on-media: 12,
-                                   $line-height: normal);
+                                   $title: true);
   }
 
   .k-Title--secondary {
-    @include k-typographyFontScale($font-step: 6,
+    @include k-typographyFontScale($font-step: 7,
                                    $font-step-on-media: 9,
-                                   $line-height: normal);
+                                   $title: true);
   }
 
   .k-Title--tertiary {
@@ -40,14 +40,14 @@
   }
 
   .k-Title--quaternary {
-    @include k-typographyFontScale($font-step: 4,
-                                   $font-step-on-media: 5,
+    @include k-typographyFontScale($font-step: 3,
+                                   $font-step-on-media: 4,
                                    $line-height: normal);
   }
 
   .k-Title--quinary {
-    @include k-typographyFontScale($font-step: 2,
-                                   $font-step-on-media: 4,
+    @include k-typographyFontScale($font-step: 1,
+                                   $font-step-on-media: 2,
                                    $line-height: normal);
   }
 
