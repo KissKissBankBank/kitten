@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Remove `k-Button--boron`, `k-ButtonIcon--boron` and replace `Boronss`
+- Feature: Remove `k-Button--boron`, `k-ButtonIcon--boron` and replace `Boron`
  by `Helium`.
 - Fix: Update alignment on `InfoLines`.
 
