@@ -9,7 +9,7 @@ import { SliderWithTooltipAndPower }
   from 'kitten/components/sliders/slider-with-tooltip-and-power'
 import { TextInputWithUnit } from 'kitten/components/form/text-input-with-unit'
 
-class LoanSimulator extends React.Component {
+export class LoanSimulator extends React.Component {
   constructor(props) {
     super(props)
 
@@ -464,4 +464,5 @@ LoanSimulator.defaultProps = {
   actionLabel: null,
 }
 
+// DEPRECATED: do not use default export.
 export default LoanSimulator
