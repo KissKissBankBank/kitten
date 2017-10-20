@@ -29,7 +29,7 @@
 /// </form>
 
 @mixin k-TextInputWithButton {
-  $font: 'bold';
+  $font: 'regular';
   $font-size: -1;
 
   $color: map-get($k-colors, 'background-1');
@@ -70,7 +70,6 @@
     border-bottom-right-radius: $border-text-input;
     border: none;
 
-    letter-spacing: k-px-to-rem(1px);
     line-height: normal;
     color: $color;
 
