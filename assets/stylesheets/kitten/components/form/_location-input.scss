@@ -106,8 +106,8 @@
     }
 
     .k-LocationInput__autocomplete {
-      border-color: $border-color-autocomplete !important;
-      border-radius: 2px;
+      border: 1px solid $border-color-autocomplete !important;
+      border-radius: k-px-to-rem(2px);
     }
 
     .k-LocationInput__suggestionItem {

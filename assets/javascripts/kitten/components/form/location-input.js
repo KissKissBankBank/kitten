@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 // Via "https://github.com/kenny-hibino/react-places-autocomplete"
 import PlacesAutocomplete, { geocodeByPlaceId } from 'react-places-autocomplete'
 import { LocationIcon } from 'kitten/components/icons/location-icon'
@@ -7,7 +7,7 @@ import { LocationIcon } from 'kitten/components/icons/location-icon'
 // For example:
 //   <script src="https://maps.googleapis.com/maps/api/js?key=…&libraries=places"></script>
 
-export class LocationInput extends React.Component {
+export class LocationInput extends Component {
   constructor(props) {
     super(props)
 
