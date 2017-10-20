@@ -230,7 +230,7 @@ import {
 } from 'kitten/karl/menus/karl-menu'
 
 // Simulators
-import LoanSimulator from 'kitten/components/simulators/loan-simulator'
+import { LoanSimulator } from 'kitten/components/simulators/loan-simulator'
 import {
   KarlLoanSimulator,
   KarlLoanSimulatorWithCommission,
@@ -250,10 +250,10 @@ import { TooltipNew } from 'kitten/components/tooltips/tooltip-new'
 import { KarlStaticTooltip } from 'kitten/karl/tooltips/static-tooltip'
 
 // Tours
-import HeaderTour from 'kitten/components/tours/header-tour'
-import Tour from 'kitten/components/tours/tour'
-import TourPopover from 'kitten/components/tours/tour-popover'
-import TourStep from 'kitten/components/tours/tour-step'
+import { HeaderTour } from 'kitten/components/tours/header-tour'
+import { Tour } from 'kitten/components/tours/tour'
+import { TourPopover } from 'kitten/components/tours/tour-popover'
+import { TourStep } from 'kitten/components/tours/tour-step'
 import {
   KarlHeaderTour1,
   KarlHeaderTour2,
