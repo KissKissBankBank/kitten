@@ -77,14 +77,8 @@
 @include k-TextAreaWrapper;
 @include k-TextInput;
 @include k-TextInputWithLimit;
-@include k-TextInputWithButton((
-  font: 'bold',
-  font-size: -4,
-  color: map-get($k-colors, 'background-1'),
-  button-background: map-get($k-colors, 'primary-1'),
-  button-background-is-valid: map-get($k-colors, 'valid'),
-  button-background-is-error: map-get($k-colors, 'error'),
-));
+@include k-TextInputWithButton;
+
 // DEPRECATED
 @include k-TextInputWithInfo((
   label: (

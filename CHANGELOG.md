@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Update `TextInputWithButton` component with kitten V2.
 - Fix: Update alignment on `InfoLines`.
 
 ## [14.2.1] - 2017-10-12
