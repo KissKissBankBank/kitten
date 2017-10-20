@@ -14,7 +14,6 @@
 /// - `.k-Button--helium`
 /// - `.k-Button--lithium`
 /// - `.k-Button--beryllium`
-/// - `.k-Button--boron`
 /// - `.k-Button--carbon`
 ///
 /// Available size modifiers:
@@ -39,7 +38,7 @@
 ///  </button>
 
 @mixin k-Button {
-  $font: 'bold-uppercase';
+  $font: 'bold';
   $border-size: 1px;
 
   // Colors.
@@ -175,39 +174,6 @@
     ),
   );
 
-  $boron-colors: (
-    base: (
-      color: map-get($k-colors, 'font-1'),
-      border-color: map-get($k-colors, 'tertiary-1'),
-      background-color: map-get($k-colors, 'tertiary-1'),
-    ),
-    hover: (
-      color: map-get($k-colors, 'font-1'),
-      border-color: map-get($k-colors, 'tertiary-2'),
-      background-color: map-get($k-colors, 'tertiary-2'),
-    ),
-    focus: (
-      color: map-get($k-colors, 'font-1'),
-      border-color: map-get($k-colors, 'tertiary-2'),
-      background-color: map-get($k-colors, 'tertiary-2'),
-    ),
-    active: (
-      color: map-get($k-colors, 'font-1'),
-      border-color: map-get($k-colors, 'tertiary-3'),
-      background-color: map-get($k-colors, 'tertiary-3'),
-    ),
-    is-selected: (
-      color: map-get($k-colors, 'font-1'),
-      border-color: map-get($k-colors, 'tertiary-3'),
-      background-color: map-get($k-colors, 'tertiary-3'),
-    ),
-    disabled: (
-      color: map-get($k-colors, 'font-2'),
-      border-color: map-get($k-colors, 'line-2'),
-      background-color: map-get($k-colors, 'line-1'),
-    ),
-  );
-
   $carbon-colors: (
     base: (
       color: map-get($k-colors, 'font-1'),
@@ -261,7 +227,7 @@
 
   // Button font-size is computed using a modular scale and a defined step of this
   // scale.
-  $button-step: -2;
+  $button-step: -1;
 
   // SVG element default settings.
   $icon-width: k-px-to-rem(12px);
@@ -316,12 +282,6 @@
   .k-Button--beryllium {
     @include k-buttonColorBase($beryllium-colors);
     @include k-buttonSvg($beryllium-colors);
-  }
-
-  // TODO: rename all buttons name following the same naming strategy.
-  .k-Button--boron {
-    @include k-buttonColorBase($boron-colors);
-    @include k-buttonSvg($boron-colors);
   }
 
   .k-Button--carbon {
