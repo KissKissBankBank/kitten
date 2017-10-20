@@ -33,21 +33,21 @@
   .k-Paragraph--primary {
     @include k-typographyFontScale($font-step: 1,
                                    $font-step-on-media: 2,
-                                   $paragraph: true);
+                                   $line-height: 1.6);
   }
 
   .k-Paragraph--secondary {
     @include k-typographyFontScale($font-step-on-media: 1,
-                                   $paragraph: true);
+                                   $line-height: 1.6);
   }
 
   .k-Paragraph--tertiary {
-    @include k-typographyFontScale($paragraph: true);
+    @include k-typographyFontScale($line-height: 1.6);
   }
 
   .k-Paragraph--quaternary {
     @include k-typographyFontScale($font-step: -1,
-                                   $paragraph: true);
+                                   $line-height: 1.6);
   }
 
   .k-Paragraph__link {
