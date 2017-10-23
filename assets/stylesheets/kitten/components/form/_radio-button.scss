@@ -149,7 +149,6 @@
 
   .k-RadioButton__labelContents {
     display: block;
-    margin-top: k-px-to-rem(10px);
     margin-left: $radio-button-size + $space-button-label;
 
     @include k-typographyFontSize($font-step-content);
