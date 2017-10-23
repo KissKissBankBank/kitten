@@ -24,11 +24,11 @@
 
 @mixin k-RadioButton {
   // Font
-  $font: 'light';
-  $font-step: 0;
-  $font-step-on-media: 3;
-  $font-step-content: -1;
-  $font-step-content-large: 0;
+  $font: 'regular';
+  $font-step: -1;
+  $font-step-on-media: 2;
+  $font-step-content: -2;
+  $font-step-content-large: -1;
   $line-height: normal;
 
   // Error
