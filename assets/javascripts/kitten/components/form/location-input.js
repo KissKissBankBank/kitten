@@ -49,19 +49,21 @@ export class LocationInput extends Component {
       root: 'k-LocationInput__group',
       input: 'k-LocationInput__input',
       autocompleteContainer: 'k-LocationInput__autocomplete',
+      autocompleteItem: "k-LocationInput__autocompleteItem",
+      autocompleteItemActive: "k-LocationInput__autocompleteItem--active",
     }
 
     const autocompleteItem = ({ formattedSuggestion }) => (
-      <div className="k-LocationInput__suggestionItem">
+      <div>
         <LocationIcon
           width="10px"
           height="16px"
         />
-        <span className="k-LocationInput__suggestionItem__mainText">
+        <span className="k-LocationInput__autocompleteItem__mainText">
           { formattedSuggestion.mainText }
         </span>
         {' '}
-        <span className="k-LocationInput__suggestionItem__secondaryText">
+        <span className="k-LocationInput__autocompleteItem__secondaryText">
           { formattedSuggestion.secondaryText }
         </span>
       </div>
