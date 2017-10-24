@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Update `Title` and `Paragraph` with Kitten V2.
+- Fix: Fix `TextInput` length for Firefox.
 - Fix: Update alignment on `InfoLines`.
 
 ## [14.2.1] - 2017-10-12
