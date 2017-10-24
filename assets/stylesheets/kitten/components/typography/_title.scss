@@ -22,33 +22,33 @@
   }
 
   .k-Title--primary {
-    @include k-typographyFontScale($font-step: 9,
+    @include k-typographyFontScale($font-step: 7,
                                    $font-step-on-media: 12,
-                                   $line-height: 1.2);
+                                   $line-height: normal);
   }
 
   .k-Title--secondary {
-    @include k-typographyFontScale($font-step: 7,
+    @include k-typographyFontScale($font-step: 6,
                                    $font-step-on-media: 9,
-                                   $line-height: 1.2);
+                                   $line-height: normal);
   }
 
   .k-Title--tertiary {
     @include k-typographyFontScale($font-step: 5,
                                    $font-step-on-media: 7,
-                                   $line-height: 1.2);
+                                   $line-height: normal);
   }
 
   .k-Title--quaternary {
-    @include k-typographyFontScale($font-step: 3,
-                                   $font-step-on-media: 4,
-                                   $line-height: 1.2);
+    @include k-typographyFontScale($font-step: 5,
+                                   $font-step-on-media: 5,
+                                   $line-height: normal);
   }
 
   .k-Title--quinary {
-    @include k-typographyFontScale($font-step: 1,
-                                   $font-step-on-media: 2,
-                                   $line-height: 1.2);
+    @include k-typographyFontScale($font-step: 2,
+                                   $font-step-on-media: 4,
+                                   $line-height: normal);
   }
 
   .k-Title--withoutMargin {
