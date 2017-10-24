@@ -40,7 +40,7 @@
   }
 
   .k-Title--quaternary {
-    @include k-typographyFontScale($font-step: 5,
+    @include k-typographyFontScale($font-step: 4,
                                    $font-step-on-media: 5,
                                    $line-height: normal);
   }
