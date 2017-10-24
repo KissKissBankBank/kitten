@@ -50,7 +50,7 @@ export class LocationInput extends Component {
       input: 'k-LocationInput__input',
       autocompleteContainer: 'k-LocationInput__autocomplete',
       autocompleteItem: "k-LocationInput__autocompleteItem",
-      autocompleteItemActive: "k-LocationInput__autocompleteItem--active",
+      autocompleteItemActive: "k-LocationInput__autocompleteItem--active"
     }
 
     const autocompleteItem = ({ formattedSuggestion }) => (
