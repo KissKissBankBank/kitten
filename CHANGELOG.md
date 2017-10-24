@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `strong` prop to `radioButton` and `Checkbox` components.
 - Fix: Update alignment on `InfoLines`.
 
 ## [14.2.1] - 2017-10-12
