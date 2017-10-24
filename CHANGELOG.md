@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Remove `k-Button--boron`, `k-ButtonIcon--boron` and replace `Boron`
  by `Helium`.
+- Fix: Fix `TextInput` length for Firefox.
 - Fix: Update alignment on `InfoLines`.
 
 ## [14.2.1] - 2017-10-12
