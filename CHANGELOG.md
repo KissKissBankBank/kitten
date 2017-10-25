@@ -6,7 +6,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Add `k-u-color-valid` utility.
 - Feature: Add `valid` color in `Text` component.
-- Fix: Remove `line-height` in size utilities.
+- Feature: Add `without-line-height` option to `k-typographyFontSize` method.
+- Fix: Remove `line-height` from size utilities.
 - Fix: Fix `TextInput` length for Firefox.
 - Fix: Update alignment on `InfoLines`.
 
