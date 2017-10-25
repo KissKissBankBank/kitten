@@ -9,13 +9,13 @@
 /// @parameter {Color} $border-color [transparent] - button border color
 ///
 /// @example scss - Usage
-///   @include k-buttonBorder(#d8d8d8);
+///   @include k-buttonBorder(#eee);
 ///
 /// @example css - CSS output
-///    border: 1px solid #d8d8d8;
+///    border: 2px solid #eee;
 
 @mixin k-buttonBorder($border-color) {
-  $button-border-width: 1px;
+  $button-border-width: 2px;
 
   $border-color: transparent !default; // Default value.
   $border-color: k-color-definition($border-color);

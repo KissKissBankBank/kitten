@@ -39,173 +39,7 @@
 
 @mixin k-Button {
   $font: 'regular';
-  $border-size: 1px;
-
-  // Colors.
-  $hydrogen-colors: (
-    base: (
-      color: map-get($k-colors, 'font-1'),
-      border-color: map-get($k-colors, 'line-2'),
-      background-color: map-get($k-colors, 'background-1'),
-    ),
-    hover: (
-      color: map-get($k-colors, 'primary-1'),
-      border-color: map-get($k-colors, 'primary-1'),
-      background-color: map-get($k-colors, 'background-1'),
-    ),
-    focus: (
-      color: map-get($k-colors, 'primary-1'),
-      border-color: map-get($k-colors, 'primary-1'),
-      background-color: map-get($k-colors, 'background-1'),
-    ),
-    active: (
-      color: map-get($k-colors, 'primary-3'),
-      border-color: map-get($k-colors, 'primary-3'),
-      background-color: map-get($k-colors, 'background-1'),
-    ),
-    is-selected: (
-      color: map-get($k-colors, 'primary-3'),
-      border-color: map-get($k-colors, 'primary-3'),
-      background-color: map-get($k-colors, 'background-1'),
-    ),
-    disabled: (
-      color: map-get($k-colors, 'font-2'),
-      border-color: map-get($k-colors, 'line-2'),
-      background-color: map-get($k-colors, 'line-1'),
-    ),
-  );
-
-  $helium-colors: (
-    base: (
-      color: #fff,
-      border-color: map-get($k-colors, 'primary-1'),
-      background-color: map-get($k-colors, 'primary-1'),
-    ),
-    hover: (
-      color: #fff,
-      border-color: map-get($k-colors, 'primary-2'),
-      background-color: map-get($k-colors, 'primary-2'),
-    ),
-    focus: (
-      color: #fff,
-      border-color: map-get($k-colors, 'primary-2'),
-      background-color: map-get($k-colors, 'primary-2'),
-    ),
-    active: (
-      color: #fff,
-      border-color: map-get($k-colors, 'primary-3'),
-      background-color: map-get($k-colors, 'primary-3'),
-    ),
-    is-selected: (
-      color: #fff,
-      border-color: map-get($k-colors, 'primary-3'),
-      background-color: map-get($k-colors, 'primary-3'),
-    ),
-    disabled: (
-      color: map-get($k-colors, 'font-2'),
-      border-color: map-get($k-colors, 'line-2'),
-      background-color: map-get($k-colors, 'line-1'),
-    ),
-  );
-
-  $lithium-colors: (
-    base: (
-      color: map-get($k-colors, 'primary-1'),
-      border-color: map-get($k-colors, 'primary-4'),
-      background-color: map-get($k-colors, 'background-1'),
-    ),
-    hover: (
-      color: map-get($k-colors, 'primary-1'),
-      border-color: map-get($k-colors, 'primary-1'),
-      background-color: map-get($k-colors, 'background-1'),
-    ),
-    focus: (
-      color: map-get($k-colors, 'primary-1'),
-      border-color: map-get($k-colors, 'primary-1'),
-      background-color: map-get($k-colors, 'background-1'),
-    ),
-    active: (
-      color: map-get($k-colors, 'primary-3'),
-      border-color: map-get($k-colors, 'primary-3'),
-      background-color: map-get($k-colors, 'background-1'),
-    ),
-    is-selected: (
-      color: map-get($k-colors, 'primary-3'),
-      border-color: map-get($k-colors, 'primary-3'),
-      background-color: map-get($k-colors, 'background-1'),
-    ),
-    disabled: (
-      color: map-get($k-colors, 'font-2'),
-      border-color: map-get($k-colors, 'line-2'),
-      background-color: map-get($k-colors, 'line-1'),
-    ),
-  );
-
-  $beryllium-colors: (
-    base: (
-      color: map-get($k-colors, 'primary-1'),
-      border-color: map-get($k-colors, 'primary-4'),
-      background-color: map-get($k-colors, 'primary-5'),
-    ),
-    hover: (
-      color: map-get($k-colors, 'primary-1'),
-      border-color: map-get($k-colors, 'primary-1'),
-      background-color: map-get($k-colors, 'primary-5'),
-    ),
-    focus: (
-      color: map-get($k-colors, 'primary-1'),
-      border-color: map-get($k-colors, 'primary-1'),
-      background-color: map-get($k-colors, 'primary-5'),
-    ),
-    active: (
-      color: map-get($k-colors, 'primary-3'),
-      border-color: map-get($k-colors, 'primary-3'),
-      background-color: map-get($k-colors, 'primary-5'),
-    ),
-    is-selected: (
-      color: map-get($k-colors, 'primary-3'),
-      border-color: map-get($k-colors, 'primary-3'),
-      background-color: map-get($k-colors, 'primary-5'),
-    ),
-    disabled: (
-      color: map-get($k-colors, 'font-2'),
-      border-color: map-get($k-colors, 'line-2'),
-      background-color: map-get($k-colors, 'line-1'),
-    ),
-  );
-
-  $carbon-colors: (
-    base: (
-      color: map-get($k-colors, 'font-1'),
-      border-color: map-get($k-colors, 'background-1'),
-      background-color: map-get($k-colors, 'background-1'),
-    ),
-    hover: (
-      color: map-get($k-colors, 'font-1'),
-      border-color: map-get($k-colors, 'background-2'),
-      background-color: map-get($k-colors, 'background-2'),
-    ),
-    focus: (
-      color: map-get($k-colors, 'font-1'),
-      border-color: map-get($k-colors, 'background-2'),
-      background-color: map-get($k-colors, 'background-2'),
-    ),
-    active: (
-      color: map-get($k-colors, 'font-1'),
-      border-color: map-get($k-colors, 'background-3'),
-      background-color: map-get($k-colors, 'background-3'),
-    ),
-    is-selected: (
-      color: map-get($k-colors, 'font-1'),
-      border-color: map-get($k-colors, 'background-3'),
-      background-color: map-get($k-colors, 'background-3'),
-    ),
-    disabled: (
-      color: map-get($k-colors, 'font-2'),
-      border-color: map-get($k-colors, 'line-2'),
-      background-color: map-get($k-colors, 'line-1'),
-    ),
-  );
+  $border-size: 2px;
 
   // Size settings button.
   $button-size-tiny: 30px - ($border-size * 2);
@@ -242,7 +76,6 @@
   $buttonBigOptions: (
     typography-step: $button-step,
     line-height: $button-big-line-height,
-    radius: $button-big-radius,
     width: $button-big-min-width,
     icon-size: $button-size-big,
     icon-width: $icon-width,
@@ -255,9 +88,10 @@
     @include k-typographyFont($font);
 
     padding: 0 $button-radius;
-    border-radius: $button-radius;
     min-width: $button-min-width;
+    min-height: $button-line-height;
 
+    vertical-align: middle;
     text-align: center;
     text-decoration: none;
   }
@@ -298,6 +132,7 @@
     );
 
     min-width: $button-tiny-min-width;
+    min-height: $button-tiny-line-height;
 
     &.k-Button--icon {
       .k-Button__icon {
@@ -317,7 +152,6 @@
   }
 
   // Button--icon
-
   .k-Button--icon {
     padding: 0 $button-radius 0 0;
     min-width: 0;
