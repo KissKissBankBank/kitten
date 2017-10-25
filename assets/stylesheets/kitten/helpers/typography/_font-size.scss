@@ -10,6 +10,8 @@
 /// @parameter {Number} $step               - the modular scale step to compute
 /// @parameter {Number} $line-height [null] - the line-height
 /// @parameter {Boolean} $paragraph [false] - the boolean that lets the line height to be set from font-size
+/// @parameter {Boolean} $without-line-height [false]
+///   - the boolean that lets the line height to be use
 ///
 /// @example scss - Usage
 ///   $k-typography: (
