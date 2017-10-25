@@ -6,13 +6,14 @@ import { Marger } from 'kitten/components/layout/marger'
 export const KarlLocationInput = () => {
   return (
     <Marger bottom="1">
-      <Label
-        className="k-u-margin-bottom-single"
-        size="tiny"
-      >
-        Localisation
-      </Label>
-      <LocationInput />
+      <Marger bottom="1">
+        <Label size="tiny">
+          Localisation
+        </Label>
+      </Marger>
+      <Marger top="1">
+        <LocationInput />
+      </Marger>
     </Marger>
   )
 }
