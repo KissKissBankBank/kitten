@@ -24,7 +24,12 @@
 /// @example css - CSS output
 ///   font-size:   4.236rem;
 ///   line-height: 4.5rem;
-@mixin k-typographyFontSize($step: 0, $line-height: null, $paragraph: false) {
+@mixin k-typographyFontSize(
+  $step: 0,
+  $line-height: null,
+  $paragraph: false,
+  $without-line-height: false
+) {
   // Modular scale multiplier
   $multiplier: k-map-fetch($k-typography, 'scale-multiplier');
 
@@ -61,5 +66,8 @@
 
   // Apply font size and line height.
   font-size: $font-size;
-  line-height: $line-height;
+
+  @if not $without-line-height {
+    line-height: $line-height;
+  }
 }
