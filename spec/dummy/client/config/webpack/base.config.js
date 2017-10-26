@@ -23,7 +23,7 @@ const baseConfig = {
   },
 
   output: {
-    path: path.join(__dirname, '..', 'app', 'assets','webpack')
+    path: path.join(__dirname, '..', 'app', 'assets', 'webpack')
   },
 
   resolve: {
@@ -41,12 +41,17 @@ const baseConfig = {
       },
     }),
   ],
-
   module: {
     loaders: [
       {
         test: /\.(svg|png|jpe?g)$/,
-        loaders: ['file?name=images/[name].[ext]'],
+        loader: 'file?name=images/[name].[ext]',
+        include: /icons/, // Add images folders.
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|svg)$/,
+        loader: 'file?name=fonts/[name].[ext]',
+        include: /maax/, // Add fonts folders.
       },
       {
         test: /\.json$/,
