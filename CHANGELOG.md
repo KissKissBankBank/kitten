@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Update `TextInputWithButton` component with kitten V2.
+- Feature: Update all `TextInput` component with kitten V2.
 - Breaking change: Add new `Maax` fonts.
   You need to update your webpack client :
 
