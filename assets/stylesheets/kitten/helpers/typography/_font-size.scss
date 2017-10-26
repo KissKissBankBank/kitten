@@ -9,6 +9,8 @@
 ///
 /// @parameter {Number} $step               - the modular scale step to compute
 /// @parameter {Number} $line-height [null] - the line-height
+/// @parameter {Boolean} $without-line-height [false]
+///   - the boolean that lets the line height to be use
 ///
 /// @example scss - Usage
 ///   $k-typography: (
@@ -24,7 +26,12 @@
 ///   font-size:   4.236rem;
 ///   line-height: 4.5rem;
 
-@mixin k-typographyFontSize($step: 0, $line-height: null) {
+@mixin k-typographyFontSize(
+  $step: 0,
+  $line-height: null,
+  $without-line-height: false
+) {
+
   // Modular scale multiplier
   $multiplier: k-map-fetch($k-typography, 'scale-multiplier');
 
@@ -51,5 +58,8 @@
 
   // Apply font size and line height.
   font-size: $font-size;
-  line-height: $line-height;
+
+  @if not $without-line-height {
+    line-height: $line-height;
+  }
 }

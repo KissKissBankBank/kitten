@@ -5,6 +5,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Update `Title` and `Paragraph` with Kitten V2.
+- Fix: Update styles on `LocationInput`.
+- Feature: Add `k-u-color-valid` utility.
+- Feature: Add `valid` color in `Text` component.
+- Feature: Add `without-line-height` option to `k-typographyFontSize` method.
+- Fix: Remove `line-height` from size utilities.
 - Fix: Fix `TextInput` length for Firefox.
 - Fix: Update alignment on `InfoLines`.
 
