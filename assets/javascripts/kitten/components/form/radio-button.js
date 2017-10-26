@@ -32,14 +32,12 @@ export class RadioButton extends React.Component {
     )
 
     return (
-      <div>
-        <label
-          htmlFor={ id }
-          className={ radioButtonLabelClassNames }
-        >
-          { text }
-        </label>
-      </div>
+      <label
+        htmlFor={ id }
+        className={ radioButtonLabelClassNames }
+      >
+        { text }
+      </label>
     )
   }
 
