@@ -24,7 +24,7 @@
 
 @mixin k-RadioButton {
   // Font
-  $font: 'regular';
+  $font: 'light';
   $font-step: -1;
   $font-step-on-media: 2;
   $font-step-content: -2;
@@ -151,6 +151,7 @@
     display: block;
     margin-left: $radio-button-size + $space-button-label;
 
+    @include k-typographyFont($font);
     @include k-typographyFontSize($font-step-content);
   }
 
