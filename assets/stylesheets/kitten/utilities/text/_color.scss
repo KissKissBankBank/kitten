@@ -22,4 +22,8 @@
   .k-u-color-error {
     color: map-get($k-colors, 'error');
   }
+
+  .k-u-color-valid {
+    color: map-get($k-colors, 'valid');
+  }
 }
