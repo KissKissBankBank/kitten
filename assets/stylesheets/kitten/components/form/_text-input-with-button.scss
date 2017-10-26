@@ -6,14 +6,7 @@
 ///
 /// @example scss - Usage
 ///
-/// @include k-TextInputWithButton((
-///   font: 'bold',
-///   font-size: -4,
-///   color: #fff,
-///   button-background: #4a84ff,
-///   button-background-is-valid: #70c050,
-///   button-background-is-error: #ff4146,
-/// ));
+/// @include k-TextInputWithButton;
 ///
 /// <form role="button">
 ///   <div class="k-TextInputWithButton">
