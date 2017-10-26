@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add named export for all components. Default export for
+  these components is now deprecated.
 - Fix: Update styles on `LocationInput`.
 - Feature: Add `k-u-color-valid` utility.
 - Feature: Add `valid` color in `Text` component.

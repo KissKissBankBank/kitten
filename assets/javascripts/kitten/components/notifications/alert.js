@@ -1,7 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 import { CloseButton } from 'kitten/components/buttons/close-button'
-import domElementHelper from 'kitten/helpers/dom/element-helper'
+import { domElementHelper } from 'kitten/helpers/dom/element-helper'
 
 export class Alert extends React.Component {
   constructor(props) {

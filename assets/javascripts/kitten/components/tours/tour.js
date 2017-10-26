@@ -1,9 +1,9 @@
 import React from 'react'
 import classNames from 'classnames'
-import domElementHelper from 'kitten/helpers/dom/element-helper'
-import TourStep from 'kitten/components/tours/tour-step'
+import { domElementHelper } from 'kitten/helpers/dom/element-helper'
+import { TourStep } from 'kitten/components/tours/tour-step'
 
-class Tour extends React.Component {
+export class Tour extends React.Component {
   constructor(props) {
     super(props)
 
@@ -181,4 +181,5 @@ Tour.defaultProps = {
   useStore: true,
 }
 
+// DEPRECATED: do not use default export.
 export default Tour

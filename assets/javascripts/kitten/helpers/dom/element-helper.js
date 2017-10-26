@@ -2,7 +2,7 @@
  * @module 'kitten/helpers/dom/element-helper'
  */
 
-const domElementHelper = {
+export const domElementHelper = {
   /**
    * Return element computed height with or without borders included.
    *
@@ -61,4 +61,5 @@ const domElementHelper = {
   },
 }
 
+// DEPRECATED: do not use default export.
 export default domElementHelper
