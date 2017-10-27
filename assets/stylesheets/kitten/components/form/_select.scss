@@ -35,7 +35,6 @@
   ));
 
   $font: 'regular';
-  $bold: 'bold';
 
   .k-Select {
     @include k-typographyFont($font);
@@ -50,7 +49,7 @@
   }
 
   .k-Select__option--level1 {
-    @include k-typographyFont($bold);
+    @include k-typographyFont($font);
   }
 
   .k-Select__option--level2 {
@@ -61,7 +60,7 @@
     display: inline-block;
     margin-bottom: k-px-to-rem(10px);
 
-    @include k-typographyFont($bold);
+    @include k-typographyFont($font);
     @include k-typographyFontSize(-1);
   }
 
@@ -129,6 +128,7 @@
     width: $arrow-zone-width;
     padding-right: 0;
 
+    border: none;
     border-left: 1px solid map-get($k-colors, 'line-2');
     background: map-get($options, 'select-input-bg')
                 url('~icons/arrow-bottom-black.svg')
