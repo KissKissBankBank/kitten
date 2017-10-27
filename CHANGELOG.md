@@ -4,7 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `strong` prop to `radioButton` and `Checkbox` components.
+- Fix: Add missing input checked disabled background-image for `RadioButton`
+  component.
+- Feature: Add `regular` font on `radioButton` and `Checkbox` components.
 - Breaking change: Add new `Maax` fonts.
   You need to update your webpack client :
 
