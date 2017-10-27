@@ -69,8 +69,8 @@
       background-color: map-get($k-colors, 'background-1'),
     ),
     disabled: (
-        color: map-get($k-colors, 'font-2'),
-      border-color: map-get($k-colors, 'line-2'),
+      color: map-get($k-colors, 'font-2'),
+      border-color: map-get($k-colors, 'line-1'),
       background-color: map-get($k-colors, 'line-1'),
     ),
   );
@@ -103,7 +103,7 @@
     ),
     disabled: (
       color: map-get($k-colors, 'font-2'),
-      border-color: map-get($k-colors, 'line-2'),
+      border-color: map-get($k-colors, 'line-1'),
       background-color: map-get($k-colors, 'line-1'),
     ),
   );
@@ -136,7 +136,7 @@
     ),
     disabled: (
       color: map-get($k-colors, 'font-2'),
-      border-color: map-get($k-colors, 'line-2'),
+      border-color: map-get($k-colors, 'line-1'),
       background-color: map-get($k-colors, 'line-1'),
     ),
   );
@@ -169,7 +169,7 @@
     ),
     disabled: (
       color: map-get($k-colors, 'font-2'),
-      border-color: map-get($k-colors, 'line-2'),
+      border-color: map-get($k-colors, 'line-1'),
       background-color: map-get($k-colors, 'line-1'),
     ),
   );
@@ -202,7 +202,7 @@
     ),
     disabled: (
       color: map-get($k-colors, 'font-2'),
-      border-color: map-get($k-colors, 'line-2'),
+      border-color: map-get($k-colors, 'line-1'),
       background-color: map-get($k-colors, 'line-1'),
     ),
   );
@@ -234,8 +234,8 @@
       background-color: map-get($k-colors, 'background-3'),
     ),
     disabled: (
-        color: map-get($k-colors, 'font-2'),
-      border-color: map-get($k-colors, 'line-2'),
+      color: map-get($k-colors, 'font-2'),
+      border-color: map-get($k-colors, 'line-1'),
       background-color: map-get($k-colors, 'line-1'),
     ),
   );
@@ -359,7 +359,7 @@
 
   // Button font-size is computed using a modular scale and a defined step of this
   // scale.
-  $button-step: -2;
+  $button-step: -1;
 
   // SVG element default settings.
   $icon-width: k-px-to-rem(12px);

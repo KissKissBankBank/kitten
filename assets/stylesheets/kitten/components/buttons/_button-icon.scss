@@ -66,7 +66,7 @@ $hydrogen-colors: (
     ),
     disabled: (
       color: map-get($k-colors, 'font-2'),
-      border-color: map-get($k-colors, 'line-2'),
+      border-color: map-get($k-colors, 'line-1'),
       background-color: map-get($k-colors, 'line-1'),
     ),
   );
@@ -99,7 +99,7 @@ $hydrogen-colors: (
     ),
     disabled: (
       color: map-get($k-colors, 'font-2'),
-      border-color: map-get($k-colors, 'line-2'),
+      border-color: map-get($k-colors, 'line-1'),
       background-color: map-get($k-colors, 'line-1'),
     ),
   );
@@ -132,7 +132,7 @@ $hydrogen-colors: (
     ),
     disabled: (
       color: map-get($k-colors, 'font-2'),
-      border-color: map-get($k-colors, 'line-2'),
+      border-color: map-get($k-colors, 'line-1'),
       background-color: map-get($k-colors, 'line-1'),
     ),
   );
@@ -165,7 +165,7 @@ $hydrogen-colors: (
     ),
     disabled: (
       color: map-get($k-colors, 'font-2'),
-      border-color: map-get($k-colors, 'line-2'),
+      border-color: map-get($k-colors, 'line-1'),
       background-color: map-get($k-colors, 'line-1'),
     ),
   );
@@ -198,7 +198,7 @@ $hydrogen-colors: (
     ),
     disabled: (
       color: map-get($k-colors, 'font-2'),
-      border-color: map-get($k-colors, 'line-2'),
+      border-color: map-get($k-colors, 'line-1'),
       background-color: map-get($k-colors, 'line-1'),
     ),
   );
@@ -231,7 +231,7 @@ $hydrogen-colors: (
     ),
     disabled: (
       color: map-get($k-colors, 'font-2'),
-      border-color: map-get($k-colors, 'line-2'),
+      border-color: map-get($k-colors, 'line-1'),
       background-color: map-get($k-colors, 'line-1'),
     ),
   );
@@ -359,7 +359,6 @@ $hydrogen-colors: (
     @include k-buttonBase;
     @include k-buttonRounded($button-size, $icon-width, $icon-height);
 
-    padding: 0;
     text-align: center;
     text-decoration: none;
   }
