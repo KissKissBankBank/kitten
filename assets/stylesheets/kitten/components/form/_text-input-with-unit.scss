@@ -67,6 +67,8 @@
     &:disabled + .k-TextInputWithUnit__unit {
       background: $background-disabled;
       border-color: $border-disabled;
+      border: none;
+      border-left: 1px solid $border-disabled
     }
   }
 
