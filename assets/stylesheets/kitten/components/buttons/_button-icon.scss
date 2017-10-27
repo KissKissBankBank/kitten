@@ -358,9 +358,6 @@ $hydrogen-colors: (
   .k-ButtonIcon {
     @include k-buttonBase;
     @include k-buttonRounded($button-size, $icon-width, $icon-height);
-
-    text-align: center;
-    text-decoration: none;
   }
 
   .k-ButtonIcon__svg {

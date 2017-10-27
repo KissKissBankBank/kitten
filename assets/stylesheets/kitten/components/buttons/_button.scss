@@ -389,9 +389,7 @@
     padding: 0 $button-radius;
     border-radius: $button-radius;
     min-width: $button-min-width;
-    min-height: $button-line-height;
 
-    vertical-align: middle;
     text-align: center;
     text-decoration: none;
   }
@@ -432,7 +430,6 @@
     );
 
     min-width: $button-tiny-min-width;
-    min-height: $button-tiny-line-height;
 
     &.k-Button--icon {
       .k-Button__icon {

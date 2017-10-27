@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Update colors buttons.
 - Feature: Remove `k-Button--boron`, `k-ButtonIcon--boron` and replace `Boron`
  by `Helium`.
 - Breaking change: Add new `Maax` fonts.
