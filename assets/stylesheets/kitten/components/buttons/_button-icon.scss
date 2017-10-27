@@ -510,9 +510,11 @@ $hydrogen-colors: (
 
   .k-ButtonIcon--checked--micro {
     $micro-size: k-px-to-rem(10px);
+    @include k-buttonRounded($button-size-micro, $micro-size, $micro-size);
 
     .k-ButtonIcon__svg {
-      @include k-buttonRounded($button-size-micro, $micro-size, $micro-size);
+      width: $micro-size;
+      height: $micro-size;
     }
   }
 
