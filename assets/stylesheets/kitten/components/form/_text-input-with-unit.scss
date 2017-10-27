@@ -68,7 +68,7 @@
       background: $background-disabled;
       border-color: $border-disabled;
       border: none;
-      border-left: 1px solid $border-disabled
+      border-left: k-px-to-rem(1px) solid $border-disabled;
     }
   }
 
