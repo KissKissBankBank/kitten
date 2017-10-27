@@ -55,7 +55,7 @@ $hydrogen-colors: (
       background-color: map-get($k-colors, 'background-1'),
     ),
     active: (
-        color: map-get($k-colors, 'primary-3'),
+      color: map-get($k-colors, 'primary-3'),
       border-color: map-get($k-colors, 'primary-3'),
       background-color: map-get($k-colors, 'background-1'),
     ),
@@ -65,7 +65,7 @@ $hydrogen-colors: (
       background-color: map-get($k-colors, 'background-1'),
     ),
     disabled: (
-        color: map-get($k-colors, 'font-2'),
+      color: map-get($k-colors, 'font-2'),
       border-color: map-get($k-colors, 'line-2'),
       background-color: map-get($k-colors, 'line-1'),
     ),
@@ -88,7 +88,7 @@ $hydrogen-colors: (
       background-color: map-get($k-colors, 'primary-2'),
     ),
     active: (
-        color: #fff,
+      color: #fff,
       border-color: map-get($k-colors, 'primary-3'),
       background-color: map-get($k-colors, 'primary-3'),
     ),
@@ -357,8 +357,7 @@ $hydrogen-colors: (
 
   .k-ButtonIcon {
     @include k-buttonBase;
-    min-width: $button-min-width;
-    min-height: $button-min-width;
+    @include k-buttonRounded($button-size, $icon-width, $icon-height);
 
     padding: 0;
     text-align: center;
@@ -367,7 +366,7 @@ $hydrogen-colors: (
 
   .k-ButtonIcon__svg {
     display: block;
-    margin: 0 auto;
+    margin: 0;
     padding: 0;
     width: $icon-width;
     height: $icon-height;
@@ -513,8 +512,7 @@ $hydrogen-colors: (
     $micro-size: k-px-to-rem(10px);
 
     .k-ButtonIcon__svg {
-      width: $micro-size;
-      height: $micro-size;
+      @include k-buttonRounded($button-size-micro, $micro-size, $micro-size);
     }
   }
 
