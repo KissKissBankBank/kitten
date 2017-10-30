@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Update `TagList` component with Kitten V2.
 - Breaking change: Add new `Maax` fonts.
   You need to update your webpack client :
 
