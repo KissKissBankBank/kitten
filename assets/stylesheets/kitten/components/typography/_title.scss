@@ -16,15 +16,15 @@
 
 @mixin k-Title {
   $font-bold: 'bold';
-  $font-medium: 'regular';
+  $font-regular: 'regular';
   $font-light: 'light';
 
   .k-Title {
     @include k-typographyFont($font-bold);
   }
 
-  .k-Title--medium {
-    @include k-typographyFont($font-medium);
+  .k-Title--regular {
+    @include k-typographyFont($font-regular);
   }
 
   .k-Title--light {
