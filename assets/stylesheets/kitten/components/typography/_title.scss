@@ -12,13 +12,23 @@
 ///   <h2 class='k-Title k-Title--secondary'>Title 2</h2>
 ///   <h3 class='k-Title k-Title--tertiary'>Title 3</h3>
 ///   <h4 class='k-Title k-Title--quaternary'>Title 4</h4>
-///   <h5 class='k-Title k-Title--quinary'>Title 5</h5>
+///   <h5 class='k-Title k-Title--light k-Title--quinary'>Title 5</h5>
 
 @mixin k-Title {
-  $font: 'bold';
+  $font-bold: 'bold';
+  $font-medium: 'regular';
+  $font-light: 'light';
 
   .k-Title {
-    @include k-typographyFont($font);
+    @include k-typographyFont($font-bold);
+  }
+
+  .k-Title--medium {
+    @include k-typographyFont($font-medium);
+  }
+
+  .k-Title--light {
+    @include k-typographyFont($font-light);
   }
 
   .k-Title--primary {
