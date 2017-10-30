@@ -4,7 +4,6 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `weight` props on `Title`.
 - Feature: Update `Title` and `Paragraph` with Kitten V2.
 - Fix: Update styles on `LocationInput`.
 - Breaking change: Add new `Maax` fonts.
