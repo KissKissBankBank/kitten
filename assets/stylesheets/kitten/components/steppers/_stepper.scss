@@ -35,16 +35,23 @@
 ///   </nav>
 
 @mixin k-Stepper {
-  $font: 'bold-uppercase';
-  $font-step: -3;
+  $font: 'regular';
+  $font-step: -1;
   $line-height: 1.3;
 
   $color: map-get($k-colors, 'font-1');
   $color-inactive: map-get($k-colors, 'font-2');
   $color-hover: map-get($k-colors, 'primary-1');
   $color-active: map-get($k-colors, 'primary-3');
+  $color-valid: map-get($k-colors, 'valid');
+
   $line: map-get($k-colors, 'line-2');
+
   $background: map-get($k-colors, 'background-1');
+  $background-valid: map-get($k-colors, 'valid');
+  $background-progress: map-get($k-colors, 'primary-1');
+
+  $icon-valid: map-get($k-colors, 'background-1');
 
   $margin: k-px-to-rem(20px);
   $margin-tiny: k-px-to-rem(15px);
@@ -150,20 +157,20 @@
   }
 
   .k-Stepper__icon--inProgress {
-    background: $background;
-    border-color: $color-hover;
+    background-color: $background-valid;
+    border-color: $color-valid;
 
     .k-Stepper__svg {
-      fill: $color-hover;
+      fill: $background-valid;
     }
   }
 
   .k-Stepper__icon--validated {
-    background: $color-hover;
-    border-color: $color-hover;
+    background-color: $background-valid;
+    border-color: $color-valid;
 
     .k-Stepper__svg {
-      fill: $background;
+      fill: $icon-valid;
     }
   }
 
