@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Update `k-Button--beryllium` and `k-ButtonIcon--beryllium` colors
+  with Kitten V2.
 - Feature: Update `ButtonImageWithText` component with Kitten V2.
 - Feature: Update colors buttons.
 - Feature: Remove `k-Button--boron`, `k-ButtonIcon--boron` and replace `Boron`
