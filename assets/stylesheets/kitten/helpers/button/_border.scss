@@ -12,7 +12,7 @@
 ///   @include k-buttonBorder(#eee);
 ///
 /// @example css - CSS output
-///    border: 1px solid #eee;
+///   border: 1px solid #eee;
 
 @mixin k-buttonBorder($border-color) {
   $button-border-width: 1px;
