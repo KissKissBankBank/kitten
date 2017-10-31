@@ -27,6 +27,11 @@
 ///         </a>
 ///       </li>
 ///       <li class="k-Stepper__item">
+///         <a class="k-Stepper__link k-Stepper__link--active" href="#">
+///           …
+///         </a>
+///       </li>
+///       <li class="k-Stepper__item">
 ///         <span class="k-Stepper__link k-Stepper__link--inactive">
 ///           …
 ///         </span>
@@ -42,13 +47,14 @@
   $color: map-get($k-colors, 'font-1');
   $color-hover: map-get($k-colors, 'primary-1');
 
-  $color: map-get($k-colors, 'font-1');
   $color-active: map-get($k-colors, 'primary-1');
+  $color-active-hover: map-get($k-colors, 'primary-2');
+  $color-active-active: map-get($k-colors, 'primary-3');
+
   $color-inactive: map-get($k-colors, 'font-2');
 
-  $line: map-get($k-colors, 'line-2');
+  // $line: map-get($k-colors, 'line-2');
 
-  $background: map-get($k-colors, 'background-1');
   $background-valid: map-get($k-colors, 'valid');
   $background-active: map-get($k-colors, 'primary-1');
 
@@ -122,11 +128,13 @@
     }
   }
 
+  // Link
   .k-Stepper__link {
     display: flex;
     align-items: center;
     color: $color;
     text-decoration: none;
+    cursor: pointer;
 
     transition: $transition-duration color;
 
@@ -143,7 +151,7 @@
 
   .k-Stepper__link--inactive {
     color: $color-inactive;
-    cursor: default;
+    cursor: not-allowed;
 
     &:hover,
     &:active {
@@ -151,37 +159,37 @@
     }
   }
 
-  .k-Stepper__link--inProgress {
-    color: $color;
-    cursor: default;
-  }
-
   .k-Stepper__link--active {
     color: $color-active;
-    cursor: default;
+
+    &:hover {
+      color: $color-active-hover;
+      text-decoration: none;
+    }
+
+    &:active {
+      color: $color-active-active;
+      text-decoration: none;
+    }
   }
 
-  .k-Stepper__link--validated {
-    color: $color;
-    cursor: default;
-  }
-
+  // Icon
   .k-Stepper__icon {
     margin-right: $margin / 2;
   }
 
-  .k-Stepper__icon--inProgress {
-    background-color: $background;
-    border-color: $border-disabled;
+  .k-Stepper__icon--validated {
+    background-color: $background-valid;
+    border-color: $background-valid;
 
     .k-Stepper__svg {
       fill: $icon;
     }
   }
 
-  .k-Stepper__icon--validated {
-    background-color: $background-valid;
-    border-color: $background-valid;
+  .k-Stepper__icon--active {
+    background-color: $background-active;
+    border-color: $background-active;
 
     .k-Stepper__svg {
       fill: $icon;

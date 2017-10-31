@@ -3,14 +3,12 @@ import classNames from 'classnames'
 import {
   StepperIconDefault,
   StepperIconActive,
-  StepperIconInProgress,
   StepperIconValidated,
 } from 'kitten/components/steppers/stepper-icon'
 
 const iconTypeComponents = {
   default: StepperIconDefault,
   active: StepperIconActive,
-  inProgress: StepperIconInProgress,
   validated: StepperIconValidated,
 }
 
