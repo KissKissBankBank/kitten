@@ -4,7 +4,7 @@ import { shallow } from 'enzyme'
 import { Stepper } from 'kitten/components/steppers/stepper'
 import {
   StepperIconDefault,
-  StepperIconInProgress,
+  StepperIconActive,
   StepperIconValidated,
 } from 'kitten/components/steppers/stepper-icon'
 
@@ -18,14 +18,20 @@ const items = [
   {
     text: "Prionaelurus\n planiceps",
     href: "#",
-    linkClassNames: "k-Stepper__link--inProgress",
-    iconType: "inProgress",
+    linkClassNames: "k-Stepper__link",
+    iconType: "default",
   },
   {
     text: "Serval",
     href: "#",
-    linkClassNames: "k-Stepper__link--validated",
+    linkClassNames: "k-Stepper__link",
     iconType: "validated",
+  },
+  {
+    text: "Idea of",
+    href: "#",
+    linkClassNames: "k-Stepper__link--active",
+    iconType: "active",
   },
   {
     text: "Lynx\n pardinus",
@@ -57,7 +63,7 @@ describe('<Stepper />', () => {
     const links = component.find('.k-Stepper__link')
 
     expect(links).to.have.length(4)
-    expect(links.find('.k-Stepper__link--inProgress')).to.have.length(1)
+    expect(links.find('.k-Stepper__link--active')).to.have.length(1)
     expect(links.find('.k-Stepper__link--inactive')).to.have.length(1)
     expect(links.first()).to.have.attr('href', 'http://…')
     expect(links.first().props().onClick).to.be.a('function')
@@ -109,7 +115,7 @@ describe('<Stepper />', () => {
       expect(icon).to.have.type(StepperIconDefault)
     })
 
-    it('renders a <StepperIconInProgress />', () => {
+    it('renders a <StepperIconActive />', () => {
       const icon = component.find('.k-Stepper__link').at(1).children().first()
 
       expect(icon).to.have.type(StepperIconInProgress)

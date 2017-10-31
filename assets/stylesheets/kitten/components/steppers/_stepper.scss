@@ -149,16 +149,6 @@
     }
   }
 
-  .k-Stepper__link--inactive {
-    color: $color-inactive;
-    cursor: not-allowed;
-
-    &:hover,
-    &:active {
-      color: $color-inactive;
-    }
-  }
-
   .k-Stepper__link--active {
     color: $color-active;
 
@@ -170,6 +160,16 @@
     &:active {
       color: $color-active-active;
       text-decoration: none;
+    }
+  }
+
+  .k-Stepper__link--inactive {
+    color: $color-inactive;
+    cursor: not-allowed;
+
+    &:hover,
+    &:active {
+      color: $color-inactive;
     }
   }
 
