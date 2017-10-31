@@ -40,18 +40,21 @@
   $line-height: 1.3;
 
   $color: map-get($k-colors, 'font-1');
-  $color-inactive: map-get($k-colors, 'font-2');
   $color-hover: map-get($k-colors, 'primary-1');
-  $color-active: map-get($k-colors, 'primary-3');
-  $color-valid: map-get($k-colors, 'valid');
+
+  $color: map-get($k-colors, 'font-1');
+  $color-active: map-get($k-colors, 'primary-1');
+  $color-inactive: map-get($k-colors, 'font-2');
 
   $line: map-get($k-colors, 'line-2');
 
   $background: map-get($k-colors, 'background-1');
   $background-valid: map-get($k-colors, 'valid');
-  $background-progress: map-get($k-colors, 'primary-1');
+  $background-active: map-get($k-colors, 'primary-1');
 
-  $icon-valid: map-get($k-colors, 'background-1');
+  $border-disabled: map-get($k-colors, 'line-1');
+
+  $icon: map-get($k-colors, 'background-1');
 
   $margin: k-px-to-rem(20px);
   $margin-tiny: k-px-to-rem(15px);
@@ -149,7 +152,18 @@
   }
 
   .k-Stepper__link--inProgress {
-    color: $color-hover;
+    color: $color;
+    cursor: default;
+  }
+
+  .k-Stepper__link--active {
+    color: $color-active;
+    cursor: default;
+  }
+
+  .k-Stepper__link--validated {
+    color: $color;
+    cursor: default;
   }
 
   .k-Stepper__icon {
@@ -157,20 +171,20 @@
   }
 
   .k-Stepper__icon--inProgress {
-    background-color: $background-valid;
-    border-color: $color-valid;
+    background-color: $background;
+    border-color: $border-disabled;
 
     .k-Stepper__svg {
-      fill: $background-valid;
+      fill: $icon;
     }
   }
 
   .k-Stepper__icon--validated {
     background-color: $background-valid;
-    border-color: $color-valid;
+    border-color: $background-valid;
 
     .k-Stepper__svg {
-      fill: $icon-valid;
+      fill: $icon;
     }
   }
 

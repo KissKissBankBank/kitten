@@ -1,18 +1,20 @@
-import React from 'react'
+import React, { Component } from 'react'
 import classNames from 'classnames'
 import {
   StepperIconDefault,
+  StepperIconActive,
   StepperIconInProgress,
   StepperIconValidated,
 } from 'kitten/components/steppers/stepper-icon'
 
 const iconTypeComponents = {
   default: StepperIconDefault,
+  active: StepperIconActive,
   inProgress: StepperIconInProgress,
   validated: StepperIconValidated,
 }
 
-export class Stepper extends React.Component {
+export class Stepper extends Component {
   lineBreaks(text) {
     const regex = /(\n)/i
     const brClassNames = classNames(
@@ -39,7 +41,8 @@ export class Stepper extends React.Component {
       <Tag
         className={ className }
         href={ href }
-        { ...other }>
+        { ...other }
+      >
         <IconType />
         { this.lineBreaks(text) }
       </Tag>
