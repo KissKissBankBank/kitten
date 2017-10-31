@@ -1,12 +1,13 @@
 <div class="k-Grid">
   <div class="k-Grid__col k-Grid__col--12">
-    <%= example 'Normal' do %>
+    <%= example 'Beginning' do %>
       <%= react_component("Stepper", props: {
         items: [
           {
             text: "Catopuma\n Temminckii",
             href: "#",
-            iconType: "default",
+            linkClassNames: "k-Stepper__link--active",
+            iconType: "active",
           },
           {
             text: "Prionaelurus\n planiceps",
