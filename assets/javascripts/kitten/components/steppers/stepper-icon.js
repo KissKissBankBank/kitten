@@ -31,7 +31,7 @@ export const StepperIconActive = () => {
   )
 
   return (
-    <StepperIcon className={ activeClassNames} >
+    <StepperIcon className={ activeClassNames }>
       <ArrowIcon className="k-ButtonIcon__svg k-Stepper__svg" />
     </StepperIcon>
   )
