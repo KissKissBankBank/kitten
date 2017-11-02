@@ -14,7 +14,9 @@ const StepperIcon = ({ className, children }) => {
   )
 
   return (
-    <span className={ iconClassNames }>{ children }</span>
+    <span className={ iconClassNames }>
+      { children }
+    </span>
   )
 }
 
@@ -32,7 +34,9 @@ export const StepperIconActive = () => {
 
   return (
     <StepperIcon className={ activeClassNames }>
-      <ArrowIcon className="k-ButtonIcon__svg k-Stepper__svg" />
+      <ArrowIcon className={ classNames('k-ButtonIcon__svg',
+                                        'k-Stepper__svg') }
+      />
     </StepperIcon>
   )
 }
@@ -45,7 +49,9 @@ export const StepperIconValidated = () => {
 
   return (
     <StepperIcon className={ validatedClassNames }>
-      <CheckedIcon className="k-ButtonIcon__svg k-Stepper__svg" />
+      <CheckedIcon className={ classNames('k-ButtonIcon__svg',
+                                          'k-Stepper__svg') }
+      />
     </StepperIcon>
   )
 }
