@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Update `Title` and `Paragraph` with Kitten V2.
+- Fix: Update styles on `LocationInput`.
 - Fix: Add missing input checked disabled background-image for `RadioButton`
   component.
 - Feature: Add `regular` font on `radioButton` and `Checkbox` components.
