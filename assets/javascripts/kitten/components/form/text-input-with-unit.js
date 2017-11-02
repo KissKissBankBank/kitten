@@ -28,7 +28,7 @@ export class TextInputWithUnit extends Component {
       'k-TextInputWithUnit__unit',
       {
         'k-TextInputWithUnit__unit--tiny': tiny,
-        'k-TextInoutWithUnit__unitWord': unitWord,
+        'k-TextInputWithUnit__unitWord': unitWord,
         'is-valid': valid,
         'is-error': error,
         'is-inactive': disabled,

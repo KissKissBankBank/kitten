@@ -10,8 +10,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   by `@include k-TextInputWithButton;`.
   Replace `@include k-TextInputWithUnit(( inputFont: 'regular', … ))`
   by `@include k-TextInputWithUnit;`
-- Breaking change: Change button width in `k.TextInputWithButton__button`.
-- Feature: Update all `TextInput` component with kitten V2.
+- Breaking change: Change button width in `k-TextInputWithButton__button`.
+- Feature: Update all `TextInput` component with Kitten V2.
 - Feature: Update `ButtonImageWithText` component with Kitten V2.
 - Feature: Update colors buttons.
 - Breaking change: Remove `boron` modifier in `Button`, `ButtonIcon` components

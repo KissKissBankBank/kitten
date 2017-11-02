@@ -127,7 +127,7 @@
     padding: 0 k-px-to-rem(15px);
   }
 
-  .k-TextInoutWithUnit__unitWord {
+  .k-TextInputWithUnit__unitWord {
     @include k-typographyFontSize($unit-word);
   }
 }

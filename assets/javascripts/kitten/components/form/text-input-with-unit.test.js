@@ -82,6 +82,16 @@ describe('<TextInputWithUnit />', () => {
     })
   })
 
+  describe('unitWord prop', () => {
+    const component = mount(<TextInputWithUnit unitWord={ true } />)
+    const span = component.find('span')
+    const spanExpectation = span.hasClass('k-TextInputWithUnit__unitWord')
+
+    it('has a <span /> with "k-TextInputWithUnit__unitWord" class', () => {
+      expect(spanExpectation).to.equal(true)
+    })
+  })
+
   describe('digits prop', () => {
     const component = mount(<TextInputWithUnit digits={ 2 } />)
 
