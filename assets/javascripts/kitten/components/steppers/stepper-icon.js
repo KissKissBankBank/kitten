@@ -28,7 +28,6 @@ export const StepperIconActive = () => {
   const activeClassNames = classNames(
     'k-Stepper__icon--active',
     'k-ButtonIcon--active--micro',
-    '',
   )
 
   return (
