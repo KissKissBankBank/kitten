@@ -19,6 +19,10 @@
 @mixin k-TextInputWithUnit {
   $input-font: 'light';
   $unit-font: 'regular';
+
+  $unit: 0; // 16px
+  $unit-word: -1; // 14px
+
   $border-color: map-get($k-colors, 'line-2');
   $color: map-get($k-colors, 'font-1');
   $unit-background-color: map-get($k-colors, 'background-1');
@@ -102,7 +106,7 @@
     transition: all $transition-speed;
 
     @include k-typographyFont($unit-font);
-    @include k-typographyFontSize(-1);
+    @include k-typographyFontSize($unit);
 
     &.is-valid {
       border-color: $unit-color-is-valid;
@@ -122,5 +126,9 @@
 
   .k-TextInputWithUnit__unit--tiny {
     padding: 0 k-px-to-rem(15px);
+  }
+
+  .k-TextInoutWithUnit__unit__word {
+    @include k-typographyFontSize($unit-word);
   }
 }

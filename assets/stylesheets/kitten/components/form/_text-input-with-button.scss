@@ -23,7 +23,7 @@
 
 @mixin k-TextInputWithButton {
   $font: 'regular';
-  $font-size: -1;
+  $font-size: -1; // 14px
 
   $color: map-get($k-colors, 'background-1');
 

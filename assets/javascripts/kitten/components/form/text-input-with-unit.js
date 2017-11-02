@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { Component } from 'react'
 import classNames from 'classnames'
 import { TextInput } from 'kitten/components/form/text-input'
 
-export class TextInputWithUnit extends React.Component {
+export class TextInputWithUnit extends Component {
   blur() {
     this.input.blur()
   }
@@ -13,6 +13,7 @@ export class TextInputWithUnit extends React.Component {
             error,
             type,
             unit,
+            unitWord,
             tiny,
             disabled,
             digits,
@@ -27,6 +28,7 @@ export class TextInputWithUnit extends React.Component {
       'k-TextInputWithUnit__unit',
       {
         'k-TextInputWithUnit__unit--tiny': tiny,
+        'k-TextInoutWithUnit__unit__word': unitWord,
         'is-valid': valid,
         'is-error': error,
         'is-inactive': disabled,
@@ -42,17 +44,21 @@ export class TextInputWithUnit extends React.Component {
 
     return (
       <div className={ textInputWithUnitClassName }>
-        <TextInput type={ type }
-                   className={ textInputClassName }
-                   valid={ valid }
-                   error={ error }
-                   tiny={ tiny }
-                   disabled={ disabled }
-                   digits={ digits }
-                   ref={ input => this.input = input }
-                   { ...others }
-                   tag="input" />
-        <span className={ unitClassName }>{ unit }</span>
+        <TextInput
+          type={ type }
+          className={ textInputClassName }
+          valid={ valid }
+          error={ error }
+          tiny={ tiny }
+          disabled={ disabled }
+          digits={ digits }
+          ref={ input => this.input = input }
+          { ...others }
+          tag="input"
+        />
+        <span className={ unitClassName }>
+          { unit }
+        </span>
       </div>
     )
   }
@@ -60,6 +66,7 @@ export class TextInputWithUnit extends React.Component {
 
 TextInputWithUnit.defaultProps = {
   unit: 'λ',
+  unitWord: false,
   type: 'number',
   placeholder: null,
   valid: false,
