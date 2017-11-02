@@ -4,11 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Update `k-Button--beryllium` and `k-ButtonIcon--beryllium` colors
-  with Kitten V2.
 - Feature: Update `ButtonImageWithText` component with Kitten V2.
 - Feature: Update colors buttons.
-- Breaking change: Remove `boron` modifier and replace `boron` by `helium`.
+- Breaking change: Remove `boron` modifier in `Button`, `ButtonIcon` components
+  and replace `boron` by `helium`.
 - Breaking change: Add new `Maax` fonts.
   You need to update your webpack client :
 
