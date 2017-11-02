@@ -4,10 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Update `ProjectCard, `ProjectSimilarCard` and `ProjectCreatorCard`
+- Feature: Update `ProjectCard`, `ProjectSimilarCard` and `ProjectCreatorCard`
   components with Kitten V2.
-- Feature: Update `Title` and `Paragraph` with Kitten V2.
-- Fix: Update styles on `LocationInput`.
 - Feature: Update `Tooltip` and `StaticTooltip` components with Kitten V2.
 - Feature: Update `Alert` component with Kitten V2.
 - Breaking change: `TextInputWithButton` and `TextInputWithUnit` mixins don't
