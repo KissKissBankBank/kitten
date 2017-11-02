@@ -20,7 +20,11 @@ export class TooltipNew extends Component {
     )
 
     return (
-      <div className={ tooltipNewClassName } role="tooltip" { ...others }>
+      <div
+        className={ tooltipNewClassName }
+        role="tooltip"
+        { ...others }
+      >
         <Marger top="2" bottom="2">
           { children }
           { this.renderArrow() }

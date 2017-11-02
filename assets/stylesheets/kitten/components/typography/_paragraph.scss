@@ -19,6 +19,7 @@
 @mixin k-Paragraph {
   // Font
   $font: 'light';
+  $line-height: 1.6;
 
   // Link
   $link-font: 'regular';

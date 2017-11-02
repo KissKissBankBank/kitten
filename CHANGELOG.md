@@ -8,6 +8,26 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   components with Kitten V2.
 - Feature: Update `Title` and `Paragraph` with Kitten V2.
 - Fix: Update styles on `LocationInput`.
+- Feature: Update `Tooltip` and `StaticTooltip` components with Kitten V2.
+- Feature: Update `Alert` component with Kitten V2.
+- Breaking change: `TextInputWithButton` and `TextInputWithUnit` mixins don't
+  use options params.
+  Replace `@include k-TextInputWithButton(( font: 'bold', … ))`
+  by `@include k-TextInputWithButton;`.
+  Replace `@include k-TextInputWithUnit(( inputFont: 'regular', … ))`
+  by `@include k-TextInputWithUnit;`
+- Breaking change: Change button width in `k-TextInputWithButton__button`.
+- Feature: Update all `TextInput` component with Kitten V2.
+- Feature: Update `ButtonImageWithText` component with Kitten V2.
+- Feature: Update colors buttons.
+- Breaking change: Remove `boron` modifier in `Button`, `ButtonIcon` components
+  and replace `boron` by `helium`.
+- Feature: Update `Title` and `Paragraph` with Kitten V2.
+- Fix: Update styles on `LocationInput`.
+- Fix: Add missing input checked disabled background-image for `RadioButton`
+  component.
+- Feature: Add `regular` font on `radioButton` and `Checkbox` components.
+- Feature: Update `TagList` component with Kitten V2.
 - Breaking change: Add new `Maax` fonts.
   You need to update your webpack client :
 
