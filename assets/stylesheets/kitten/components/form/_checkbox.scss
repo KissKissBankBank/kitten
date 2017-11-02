@@ -16,7 +16,7 @@
 @mixin k-Checkbox {
   // Font
   $font: 'light';
-  $font-step: -1;
+  $font-step: -1; // 14px
   $line-height: normal;
 
   // Error

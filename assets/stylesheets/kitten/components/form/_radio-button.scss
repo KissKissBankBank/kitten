@@ -26,10 +26,10 @@
   // Font
   $font-light: 'light';
   $font-regular: 'regular';
-  $font-step: -1;
-  $font-step-on-media: 2;
-  $font-step-content: -2;
-  $font-step-content-large: -1;
+  $font-step: -1; // 14px
+  $font-step-on-media: 2; // 20px
+  $font-step-content: -2; // 12px
+  $font-step-content-large: -1; // 14px
   $line-height: normal;
 
   // Error
