@@ -26,14 +26,14 @@ export const StepperIconDefault = () => {
   )
 }
 
-export const StepperIconActive = () => {
-  const activeClassNames = classNames(
-    'k-Stepper__icon--active',
-    'k-ButtonIcon--active--micro',
+export const StepperIconInProgress = () => {
+  const inProgressClassNames = classNames(
+    'k-Stepper__icon--inProgress',
+    'k-ButtonIcon--inProgress--micro',
   )
 
   return (
-    <StepperIcon className={ activeClassNames }>
+    <StepperIcon className={ inProgressClassNames }>
       <ArrowIcon className={ classNames('k-ButtonIcon__svg',
                                         'k-Stepper__svg') }
       />
