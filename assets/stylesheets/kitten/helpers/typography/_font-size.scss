@@ -56,6 +56,12 @@
   // Given the requested step on our modular scale, compute font size.
   $font-size: ms($step, $base-font-size, $multiplier);
 
+  @if not $line-height {
+   // If line-height is not defined, we use the vertical rhythm rule to compute
+   // if. Line height should be the closest multiple of the base line height.
+    $line-height: ceil($font-size / $base-line-height) * $base-line-height;
+  }
+
   // Apply font size and line height.
   font-size: $font-size;
 
