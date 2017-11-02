@@ -55,7 +55,10 @@ export class Stepper extends Component {
     )
 
     return items.map((item, index) =>
-      <li className={ itemClassNames } key={ index }>
+      <li
+        className={ itemClassNames }
+        key={ index }
+      >
         { this.renderLink(item, index) }
       </li>
     )
@@ -68,7 +71,10 @@ export class Stepper extends Component {
     )
 
     return (
-      <nav className="k-Stepper" role="navigation">
+      <nav
+        className="k-Stepper"
+        role="navigation"
+      >
         <ul className={ listClassNames }>
           { this.renderItems() }
         </ul>
