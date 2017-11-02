@@ -50,7 +50,7 @@
 
   .k-TextInputWithButton__button {
     @include k-typographyFont($font);
-    @include k-typographyFontSize($font-size);
+    @include k-typographyFontSize($font-size, $line-height: normal);
 
     position: absolute;
     right: 0;
@@ -63,7 +63,6 @@
     border-bottom-right-radius: $border-text-input;
     border: none;
 
-    line-height: normal;
     color: $color;
 
     outline: none;
