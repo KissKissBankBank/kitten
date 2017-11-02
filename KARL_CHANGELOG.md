@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Update `KarlAlert` example with Kitten V2.
+
 ## [14.2.1] - 2017-10-12
 
 No changes.

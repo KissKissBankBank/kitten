@@ -12,14 +12,11 @@ const markdownRenderers = {
   Strong: props => {
     return (<strong className="k-Alert__strong">{ props.children }</strong>)
   },
-  Regular: props => {
-    return (<span className="k-Alert__regular">{ props.children }</span>)
-  },
   Link: props => {
     return (
       <a
         className={ classNames('k-Alert__link',
-                               'k-Alert__regular') }
+                               'k-Alert__strong') }
         href={ props.href }>{ props.children }</a>
     )
   },

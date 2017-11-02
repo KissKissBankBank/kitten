@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Update `KarlAlert` component with Kitten V2.
+- Feature: Update `Alert` component with Kitten V2.
 - Feature: Update `ButtonImageWithText` component with Kitten V2.
 - Feature: Update colors buttons.
 - Breaking change: Remove `boron` modifier in `Button`, `ButtonIcon` components
