@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking change: Change button width in `TextInputWithButton__button`.
 - Feature: Update all `TextInput` component with kitten V2.
 - Breaking change: Add new `Maax` fonts.
   You need to update your webpack client :

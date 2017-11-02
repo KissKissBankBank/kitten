@@ -17,7 +17,6 @@
 /// </div>
 
 @mixin k-TextInputWithUnit {
-  $input-font: 'light';
   $unit-font: 'regular';
 
   $unit: 0; // 16px
