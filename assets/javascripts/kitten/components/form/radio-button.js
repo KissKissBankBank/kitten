@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 
-export class RadioButton extends React.Component {
+export class RadioButton extends Component {
   renderContent() {
     const { children, largeContent } = this.props
 
@@ -28,7 +28,7 @@ export class RadioButton extends React.Component {
     const radioButtonLabelClassNames = classNames(
       'k-RadioButton__label',
       { 'k-RadioButton__label--large': large },
-      { 'k-u-weight-regular': !!children },
+      { 'k-RadioButton__label--withContents': !!children },
     )
 
     return (
@@ -44,7 +44,6 @@ export class RadioButton extends React.Component {
   render() {
     const { className,
             id,
-            content,
             children,
             inputClassName,
             large,
