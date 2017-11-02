@@ -25,6 +25,7 @@ export class Text extends Component {
         'k-u-color-font1': color == 'font1',
         'k-u-color-primary1': color == 'primary1',
         'k-u-color-error': color == 'error',
+        'k-u-color-valid': color == 'valid',
 
         // Decoration.
         'k-u-decoration-underline': decoration == 'underline',
@@ -62,7 +63,7 @@ export class Text extends Component {
 }
 
 Text.propTypes = {
-  color: PropTypes.oneOf(['font1', 'primary1', 'error']),
+  color: PropTypes.oneOf(['font1', 'primary1', 'error', 'valid']),
   decoration: PropTypes.oneOf(['underline']),
   lineHeight: PropTypes.oneOf(['normal']),
   size: PropTypes.oneOf(['huge', 'big', 'default', 'tiny', 'micro', 'nano']),
