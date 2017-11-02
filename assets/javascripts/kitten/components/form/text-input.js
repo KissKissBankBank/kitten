@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { Component } from 'react'
 import classNames from 'classnames'
 
-export class TextInput extends React.Component {
+export class TextInput extends Component {
   blur() {
     this.input.blur()
   }
@@ -33,19 +33,23 @@ export class TextInput extends React.Component {
     if (tag == 'textarea') {
       return (
         <div className="k-TextAreaWrapper">
-          <textarea className={ textInputClassName }
-                    ref={ input => this.input = input }
-                    disabled={ disabled }
-                    { ...others } />
+          <textarea
+            className={ textInputClassName }
+            ref={ input => this.input = input }
+            disabled={ disabled }
+            { ...others }
+          />
           <div className="k-TextAreaWrapper__gradient" />
         </div>
       )
     } else {
-      return <input className={ textInputClassName }
-                    ref={ input => this.input = input }
-                    disabled={ disabled }
-                    type="text"
-                    { ...others } />
+      return <input
+               className={ textInputClassName }
+               ref={ input => this.input = input }
+               disabled={ disabled }
+               type="text"
+               { ...others }
+             />
     }
   }
 }

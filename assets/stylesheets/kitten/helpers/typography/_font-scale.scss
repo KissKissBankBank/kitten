@@ -16,9 +16,6 @@
 /// `line-height-on-media` is optional and set to line-height value if not
 /// defined. It will be applied only if the minimum media size is reached.
 ///
-/// `paragraph` is optional and set to false if not explicitely defined. If
-/// set to true, the line height is set up to the font size value.
-///
 /// @group typography
 ///
 /// @parameter {Number} $font-step                   - the modular scale step to compute
@@ -26,7 +23,6 @@
 /// @parameter {String} $media-size ['s']            - the minimum media to be considered as large
 /// @parameter {Number} $line-height [null]          - the regular line height to be set
 /// @parameter {Number} $line-height-on-media [null] - the line height to be considered as large
-/// @parameter {Boolean} $paragraph [false]          - the boolean that lets the line height to be set from font-size
 ///
 /// @example scss - Usage
 ///   $k-typography: (
@@ -58,16 +54,14 @@
                              $font-step-on-media: null,
                              $media-size: 's',
                              $line-height: null,
-                             $line-height-on-media: null,
-                             $paragraph: false) {
-  @include k-typographyFontSize($font-step, $line-height, $paragraph);
+                             $line-height-on-media: null) {
+  @include k-typographyFontSize($font-step, $line-height);
 
   @if $font-step-on-media {
     $line-height-on-media: $line-height !default;
     @include k-media-min($media-size) {
       @include k-typographyFontSize($font-step-on-media,
-                                    $line-height-on-media,
-                                    $paragraph);
+                                    $line-height-on-media);
     }
   }
 }
