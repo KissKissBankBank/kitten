@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Update `Alert` component with Kitten V2.
 - Breaking change: `TextInputWithButton` and `TextInputWithUnit` mixins don't
   use options params.
   Replace `@include k-TextInputWithButton(( font: 'bold', … ))`
