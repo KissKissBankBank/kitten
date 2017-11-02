@@ -49,7 +49,7 @@
     text-align: left;
 
     @include k-typographyFontSize(-1, 1);
-    @include k-typographyFont('bold');
+    @include k-typographyFont('regular');
 
     .k-ButtonImageWithText:hover &,
     &:hover {

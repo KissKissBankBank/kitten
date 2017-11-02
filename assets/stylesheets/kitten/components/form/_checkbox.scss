@@ -16,7 +16,7 @@
 @mixin k-Checkbox {
   // Font
   $font: 'light';
-  $font-step: 0;
+  $font-step: -1; // 14px
   $line-height: normal;
 
   // Error
@@ -62,7 +62,7 @@
 
       content: '';
       background-color: $background-color;
-      border: 1px solid $border-color;
+      border: k-px-to-rem(1px) solid $border-color;
       border-radius: $border-radius;
 
       transition: border-color .2s, background-color .2s;
