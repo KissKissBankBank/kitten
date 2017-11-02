@@ -6,6 +6,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Update `Title` and `Paragraph` with Kitten V2.
 - Fix: Update styles on `LocationInput`.
+- Fix: Add missing input checked disabled background-image for `RadioButton`
+  component.
+- Feature: Add `regular` font on `radioButton` and `Checkbox` components.
+- Feature: Update `TagList` component with Kitten V2.
 - Breaking change: Add new `Maax` fonts.
   You need to update your webpack client :
 
