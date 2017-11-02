@@ -19,7 +19,7 @@ export const KarlAutoTriggerCallToActionPopover = triggerEnhancer(
     popoverClassName: 'karl-AutoTriggerCallToActionPopover',
     buttons: [{
       label: 'Check this out!',
-      modifier: 'boron',
+      modifier: 'helium',
       tag: 'a',
       clickOptions: {
         closeOnClick: true,
