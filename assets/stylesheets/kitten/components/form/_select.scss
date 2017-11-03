@@ -87,6 +87,7 @@
   .k-Select.is-disabled .Select:not(.is-open):not(.is-focused) {
     .Select-control {
       background-color: map-get($options, 'select-input-bg-disabled');
+      border-color: map-get($options, 'select-input-bg-disabled');
     }
 
     .Select-arrow-zone {
