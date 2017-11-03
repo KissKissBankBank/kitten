@@ -38,7 +38,7 @@ describe('<CallToActionPopover />', () => {
       it('renders a <Button /> component', () => {
         const buttonComponent = (
           <Button onClick={ undefined }
-                 modifier="boron"
+                 modifier="helium"
                  size="big">
             Ok
           </Button>
