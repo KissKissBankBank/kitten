@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { Component } from 'react'
 import classNames from 'classnames'
 import domElementHelper from 'kitten/helpers/dom/element-helper'
 
-export class Label extends React.Component {
+export class Label extends Component {
   constructor(props) {
     super(props)
 
