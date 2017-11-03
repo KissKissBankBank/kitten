@@ -15,7 +15,7 @@
 ///   </ul>
 
 @mixin k-TagList {
-  $font: 'bold';
+  $font: 'regular';
   $font-step: -1; // 14px.
   $font-step-tiny: -2; // 12px.
   $color: map-get($k-colors, 'font-1');

@@ -1,4 +1,5 @@
 import React from 'react'
+import classNames from 'classnames'
 import { Alert } from 'kitten/components/notifications/alert'
 import { Button } from 'kitten/components/buttons/button'
 import Markdown from 'react-markdown'
@@ -13,7 +14,10 @@ const markdownRenderers = {
   },
   Link: props => {
     return (
-      <a className="k-Alert__link" href={ props.href }>{ props.children }</a>
+      <a
+        className={ classNames('k-Alert__link',
+                               'k-Alert__strong') }
+        href={ props.href }>{ props.children }</a>
     )
   },
   List: props => {
@@ -45,7 +49,11 @@ export const KarlAlertWithButton = props => {
     <Alert { ...props }>
       <Markdown renderers={ markdownRenderers }
                 source="Lorem ipsum dolor sit amet,
-                        [consectetuer adipiscing](#) elit." />
+                        consectetuer adipiscing elit. Sed ut perspiciatis
+                        unde omnis iste natus error sit voluptatem accusantium
+                        doloremque laudantium, totam rem aperiam, eaque ipsa
+                        quae ab illo inventore veritatis et quasi architecto
+                        beatae vitae dicta sunt explicabo." />
       <Button modifier="carbon" className="k-u-margin-top-double">
         Button
       </Button>

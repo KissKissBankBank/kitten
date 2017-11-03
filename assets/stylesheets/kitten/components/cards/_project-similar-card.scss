@@ -71,7 +71,7 @@
   }
 
   .k-ProjectSimilarCard__header--step {
-    @include k-typographyFont($boldFont);
+    @include k-typographyFont($font);
     @include k-typographyFontSize(-1, normal);
 
     margin-right: k-px-to-rem(10px);
