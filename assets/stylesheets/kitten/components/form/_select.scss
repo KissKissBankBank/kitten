@@ -16,7 +16,6 @@
 ///   </div>
 ///
 @mixin k-Select {
-
   $options: (
     error-color: map-get($k-colors, 'error'),
     valid-color: map-get($k-colors, 'valid'),
@@ -34,7 +33,8 @@
     select-input-height: k-px-to-rem(40px),
   ));
 
-  $font: 'regular';
+  $font: 'light';
+  $font-label: 'regular';
 
   .k-Select {
     @include k-typographyFont($font);
@@ -60,7 +60,7 @@
     display: inline-block;
     margin-bottom: k-px-to-rem(10px);
 
-    @include k-typographyFont($font);
+    @include k-typographyFont($font-label);
     @include k-typographyFontSize(-1);
   }
 
