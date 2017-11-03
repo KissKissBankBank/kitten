@@ -4,8 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `activateDelete` prop to display delete button
-  in `SimpleUploader`.
+- Feature: Add `deletable` prop to display delete button in `SimpleUploader`.
 
 ## [14.3.0] - 2017-10-26
 

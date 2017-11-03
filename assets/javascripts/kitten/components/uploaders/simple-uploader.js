@@ -6,7 +6,7 @@ import { CrossIcon } from 'kitten/components/icons/cross-icon'
 
 const Theme = props => {
   const handleClick = props.disabled ? null : props.onCancel
-  const deleteButton = props.activateDelete && props.fileName
+  const deleteButton = props.deletable && props.fileName
     ? <ButtonIcon
         className="k-SimpleUploader__buttonIcon"
         size="micro"
@@ -44,7 +44,7 @@ Theme.defaultProps = {
   onClick: () => {},
   onCancel: () => {},
   disabled: false,
-  activateDelete: true,
+  deletable: true,
 }
 
 export const SimpleUploader = props => {

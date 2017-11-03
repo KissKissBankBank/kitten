@@ -262,7 +262,7 @@ export class ImageCropper extends React.Component {
         buttonLabel={ this.props.buttonLabel }
         fileName={ this.props.fileName }
         disabled={ this.props.disabled }
-        activateDelete={ this.props.activateDelete }
+        deletable={ this.props.deletable }
       />
     )
   }

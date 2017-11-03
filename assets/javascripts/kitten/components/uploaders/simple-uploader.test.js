@@ -95,14 +95,14 @@ describe('<SimpleUploader />', () => {
     })
   })
 
-  describe('with activateDelete prop at false', () => {
+  describe('with deletable prop at false', () => {
     const component = mount(<SimpleUploader
       fileName="custom-filename.png"
-      activateDelete={ false }
+      deletable={ false }
     />)
     const deleteButton = component.find(ButtonIcon)
 
-    it('has not delete button', () => {
+    it('does not have a delete button', () => {
       expect(deleteButton).to.have.length(0)
     })
   })
