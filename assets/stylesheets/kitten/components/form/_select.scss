@@ -35,6 +35,7 @@
 
   $font: 'light';
   $font-label: 'regular';
+  $font-step: -1; // 14px
 
   .k-Select {
     @include k-typographyFont($font);
@@ -61,7 +62,7 @@
     margin-bottom: k-px-to-rem(10px);
 
     @include k-typographyFont($font-label);
-    @include k-typographyFontSize(-1);
+    @include k-typographyFontSize($font-step);
   }
 
   .k-Select.is-error .Select:not(.is-open):not(.is-focused) {
