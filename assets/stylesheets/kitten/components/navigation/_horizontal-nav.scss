@@ -23,49 +23,26 @@
 ///   </ul>
 
 @mixin k-HorizontalNav {
-  // Fonts.
-  $font: 'bold-uppercase';
+  // Font
+  $font: 'regular';
 
-  // Colors.
-  $colors: (
-    base: (
-      background-color: map-get($k-colors, 'background-1'),
-      color: map-get($k-colors, 'font-1'),
-    ),
-    hover: (
-      color: map-get($k-colors, 'primary-1'),
-    ),
-    focus: (
-      border-color: map-get($k-colors, 'primary-1'),
-      color: map-get($k-colors, 'primary-1'),
-    ),
-    is-selected: (
-      color: map-get($k-colors, 'primary-1'),
-      border-color: map-get($k-colors, 'primary-1'),
-    ),
-  );
+  // Colors
+  $base-color: map-get($k-colors, 'font-1');
+  $base-background-color: map-get($k-colors, 'background-1');
 
-  // base colors
-  $base: k-colors-definition(k-map-fetch($colors, 'base'));
-  $base-color: map-get($base, 'color');
-  $base-background-color: map-get($base, 'background-color');
+  // Hover
+  $hover-color: map-get($k-colors, 'primary-1');
 
-  // hover colors
-  $hover-color: k-color-definition(k-map-fetch($colors, ('hover', 'color')));
+  // Focus
+  $focus-color: map-get($k-colors, 'primary-1');
 
-  // focus colors
-  $focus-color: k-color-definition(k-map-fetch($colors, ('focus', 'color')));
-  $focus-border-color: k-color-definition(
-    k-map-fetch($colors, ('focus', 'border-color')));
+  // State 'is-selected'
+  $is-selected-color: map-get($k-colors, 'primary-1');
 
-  // state 'is-selected' colors
-  $is-selected-color: k-color-definition(
-    k-map-fetch($colors, ('is-selected', 'color')));
-  $is-selected-border-color: k-color-definition(
-    k-map-fetch($colors, ('is-selected', 'border-color')));
+  $border-width: k-px-to-rem(2px);
+  $padding: k-px-to-rem(27px);
 
-  $border-width: 2px;
-  $padding: k-px-to-rem(20px);
+  $transition-speed: .2s;
 
   .k-HorizontalNav {
     display: flex;
@@ -76,6 +53,7 @@
 
   .k-HorizontalNav__element {
     -ms-overflow-x: hidden;
+    padding: 0 $padding;
   }
 
   .k-HorizontalNav__element--fixedSize {
@@ -87,19 +65,17 @@
     justify-content: center;
     flex-direction: column;
 
-    padding: 0 $padding;
     border-bottom: $border-width solid transparent;
 
     @include k-typographyFont($font);
-    font-size: k-px-to-rem(12px);
-    line-height: normal;
+    @include k-typographyFontSize(-1, $line-height: normal);
 
     color: $base-color;
     text-align: center;
     text-decoration: none;
 
     cursor: pointer;
-    transition: color .2s, border-color .2s;
+    transition: color $transition-speed, border-color $transition-speed;
 
     @include k-media-within('m') {
       padding: 0 k-px-to-rem(10px);
@@ -111,12 +87,12 @@
     }
 
     &:active {
-      border-color: $focus-border-color;
+      border-color: $focus-color;
       color: $focus-color;
     }
 
     &.is-selected {
-      border-color: $is-selected-border-color;
+      border-color: $is-selected-color;
       color: $is-selected-color;
     }
 
@@ -125,7 +101,7 @@
       text-decoration: none;
 
       outline: 0;
-      box-shadow: 0 0 1rem $hover-color;
+      box-shadow: 0 0 k-px-to-rem(16px) $hover-color;
     }
   }
 }
