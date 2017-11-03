@@ -8,6 +8,7 @@ export class TagButton extends Component {
             modifier,
             children,
             selected,
+            tiny,
             big,
             icon,
             ...others } = this.props
@@ -18,6 +19,7 @@ export class TagButton extends Component {
       `k-TagButton--${modifier}`,
       {
         'is-selected': selected,
+        'k-TagButton--tiny': tiny,
         'k-TagButton--big': big,
         'k-TagButton--icon': icon,
       },
@@ -42,5 +44,6 @@ TagButton.defaultProps = {
   children: 'Tag',
   selected: false,
   icon: false,
+  tiny: false,
   big: false,
 }

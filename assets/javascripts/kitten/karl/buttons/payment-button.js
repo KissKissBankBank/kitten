@@ -10,7 +10,7 @@ const paymentButtonWrapper = (WrappedComponent, props) => {
   return class PaymentButtonWrapper extends Component {
     render() {
       const text = <TagButton
-                     big
+                     tiny
                      icon
                      tag="span"
                    >
@@ -54,7 +54,6 @@ const KarlPaymentButtonCb = paymentButtonWrapper(CbIcon, {
 
 const KarlPaymentButtonBankTransfer = props => {
   const text = <TagButton
-                 big
                  tag="span"
                >
                  Virement
