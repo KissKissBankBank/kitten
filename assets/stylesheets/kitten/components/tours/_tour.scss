@@ -46,6 +46,16 @@
     k-number-definition(map-get($options, 'popover-z-index')),
     10
   );
+
+  $font-light: 'light';
+  $font-regular: 'regular';
+  $font-bold: 'bold';
+
+  $title-size: 2; // 20px
+  $text-size: -1; // 14px
+
+  $color: map-get($k-colors, 'font-1');
+
   $tour-animation-duration: 1s;
   $tour-animation-delay: .7s;
 
@@ -61,13 +71,16 @@
   );
 
   .k-Tour {
-    color: map-get($k-colors, 'font-1');
+    color: $color;
   }
 
   .k-Tour__popover {
     z-index: $popover-z-index;
 
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, .3);
+    box-shadow: k-px-to-rem(4px)
+                k-px-to-rem(4px)
+                k-px-to-rem(4px)
+                rgba(0, 0, 0, .3);
 
     transition: opacity $tour-animation-duration ease $tour-animation-delay;
 
@@ -102,18 +115,18 @@
   }
 
   .k-Tour__popover__title {
-    @include k-typographyFont('bold');
-    @include k-typographyFontSize(2);
+    @include k-typographyFont($font-bold);
+    @include k-typographyFontSize($title-size);
 
     margin-top: 0;
     margin-bottom: 0;
   }
 
   .k-Tour__popover__text {
-    @include k-typographyFont('light');
-    @include k-typographyFontSize(-1);
+    @include k-typographyFont($font-light);
+    @include k-typographyFontSize($text-size, $line-height: 1.4rem);
 
-    margin: k-px-to-rem(3px) 0 0 0;
+    margin: k-px-to-rem(5px) 0 0 0;
   }
 
   .k-Tour__popover__navigation {
@@ -128,8 +141,8 @@
   }
 
   .k-Tour__popover__numbering {
-    @include k-typographyFont('regular');
-    @include k-typographyFontSize(-1);
+    @include k-typographyFont($font-regular);
+    @include k-typographyFontSize($text-size);
 
     margin: 0;
   }

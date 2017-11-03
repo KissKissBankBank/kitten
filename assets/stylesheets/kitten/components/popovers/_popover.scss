@@ -28,13 +28,17 @@
 /// </div>
 
 @mixin k-Popover {
-  $background-color: #fff;
-  $border-color: #eee;
-  $border-size: 1px;
+  $background-color: map-get($k-colors, 'background-1');
+  $border-color: map-get($k-colors, 'line-1');
+  $border-size: k-px-to-rem(1px);
   $border-radius: k-px-to-rem(15px);
   $margin-container: k-px-to-rem(10px);
+
   $font: 'light';
   $title-font: 'bold';
+
+  $title-size: 2; // 20px
+  $text-size: 0; // 16px
 
   .k-Popover {
     @include k-typographyFont($font);
@@ -86,7 +90,7 @@
 
   .k-Popover__title {
     @include k-typographyFont($title-font);
-    @include k-typographyFontSize(2);
+    @include k-typographyFontSize($title-size);
 
     margin-top: 0;
     margin-bottom: 0;
@@ -94,7 +98,7 @@
 
   .k-Popover__text {
     @include k-typographyFont($font);
-    @include k-typographyFontSize(0);
+    @include k-typographyFontSize($text-size);
 
     margin: 1em 0;
   }
