@@ -166,4 +166,17 @@ describe('<ImageCropper />', () => {
       })
     })
   })
+  describe('with activateDelete prop at false', () => {
+    const component = mount(
+      <ImageCropper
+        activateDelete={ false }
+        imageSrc="custom-file.jpg"
+      />
+    )
+
+    it('doesn\'t render the cancel button', () => {
+      const deleteButton = component.find('.k-SimpleUploader__buttonIcon')
+      expect(deleteButton).to.have.length(0)
+    })
+  })
 })

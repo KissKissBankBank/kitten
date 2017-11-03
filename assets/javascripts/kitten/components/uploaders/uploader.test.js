@@ -46,6 +46,7 @@ describe('<Uploader />', () => {
         buttonLabel="Custom label"
         disabled
         fileName="custom-filename.jpg"
+        activateDelete={ false }
       />
     )
     const theme = component.find(CustomTheme).first()
@@ -63,6 +64,12 @@ describe('<Uploader />', () => {
     describe('with a disabled prop', () => {
       it('passes disabled prop to the custom theme', () => {
         expect(theme).to.have.prop('disabled', true)
+      })
+    })
+
+    describe('with a activateDelete prop', () => {
+      it('passes activateDelete prop to the custom theme', () => {
+        expect(theme).to.have.prop('activateDelete', false)
       })
     })
   })
