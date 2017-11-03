@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { Component } from 'react'
 import classNames from 'classnames'
 
-export class TagButton extends React.Component {
+export class TagButton extends Component {
   render() {
     const { className,
             tag,
@@ -26,7 +26,10 @@ export class TagButton extends React.Component {
     const Tag = tag
 
     return (
-      <Tag className={ tagButtonClassNames } { ...others }>
+      <Tag
+        className={ tagButtonClassNames }
+        { ...others }
+      >
         { children }
       </Tag>
     )
