@@ -15,25 +15,25 @@ export class KarlColors extends Component {
   }
 
   renderColor(color) {
-    const { name, hexa, colorName } = color
+    const { name, backgroundHexa, nameHexa } = color
 
-    const hexaStyles = {
-      backgroundColor: hexa,
+    const backgroundHexaStyles = {
+      backgroundColor: backgroundHexa,
     }
 
-    const colorNameStyles = {
-      color: colorName,
+    const nameHexaStyles = {
+      color: nameHexa,
     }
 
     return (
       <div
         className="karl-Colors__container"
-        style={ hexaStyles }
+        style={ backgroundHexaStyles }
       >
         <Marger
           bottom="3"
           className="k-u-margin-left-double"
-          style={ colorNameStyles }
+          style={ nameHexaStyles }
         >
           <Text
             tag="p"
@@ -41,7 +41,7 @@ export class KarlColors extends Component {
             weight="bold"
             className="k-u-margin-none"
           >
-            { name }
+            { nameHexa }
           </Text>
 
           <Text
@@ -50,7 +50,7 @@ export class KarlColors extends Component {
             weight="bold"
             className="k-u-margin-none"
           >
-            { hexa }
+            { backgroundHexa }
           </Text>
         </Marger>
       </div>

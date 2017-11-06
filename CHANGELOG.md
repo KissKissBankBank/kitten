@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add new colors "MDC".
 - Breaking change: default colors have changed. To keep the original default colors:
   $k-colors: map-merge($k-colors, (
     'font-1': #333,
