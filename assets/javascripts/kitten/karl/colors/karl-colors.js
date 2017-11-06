@@ -41,7 +41,7 @@ export class KarlColors extends Component {
             weight="bold"
             className="k-u-margin-none"
           >
-            { nameHexa }
+            { name }
           </Text>
 
           <Text
