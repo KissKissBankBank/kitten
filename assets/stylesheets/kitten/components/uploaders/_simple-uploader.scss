@@ -17,14 +17,34 @@
   .k-SimpleUploader {
     display: flex;
     align-items: center;
+
+    @include k-media-max('s') {
+      flex-wrap: wrap;
+      text-align: center;
+    }
   }
 
   .k-SimpleUploader__button {
     flex-shrink: 0;
     cursor: pointer;
+
+    @include k-media-max('s') {
+      margin: 0 auto;
+    }
+  }
+
+  .k-SimpleUploader__link {
+    @include k-media-max('s') {
+      display: flex;
+      overflow: hidden;
+      max-width: k-px-to-rem(140px);
+      margin-left: k-px-to-rem(10px);
+      margin: 5px auto;
+    }
   }
 
   .k-SimpleUploader__text {
+    display: flex;
     overflow: hidden;
     max-width: k-px-to-rem(140px);
     margin-left: k-px-to-rem(10px);

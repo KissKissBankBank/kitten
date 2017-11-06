@@ -25,11 +25,13 @@ const Theme = props => {
         { props.buttonLabel }
       </Button>
 
-      <span className="k-SimpleUploader__text">
-        { props.fileName }
-      </span>
+      <div className="k-SimpleUploader__link">
+        <span className="k-SimpleUploader__text">
+          { props.fileName }
+        </span>
 
-      { deleteButton }
+        { deleteButton }
+      </div>
     </div>
   )
 }
