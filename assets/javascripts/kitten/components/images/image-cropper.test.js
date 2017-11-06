@@ -173,10 +173,10 @@ describe('<ImageCropper />', () => {
         imageSrc="custom-file.jpg"
       />
     )
+    const uploader = component.find(SimpleUploader)
 
     it('doesn\'t render the delete button', () => {
-      const deleteButton = component.find('.k-SimpleUploader__buttonIcon')
-      expect(deleteButton).to.have.length(0)
+      expect(uploader.props()).to.contain({ deletable: false })
     })
   })
 })
