@@ -16,6 +16,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
     'primary-5': #ecf2ff,
     'primary-6': #f6f9ff,
 
+    'tertiary-1': #68ffa0,
+
     'valid': #70c050,
     'error': #ff4146,
     'error-2': #ffecec,
