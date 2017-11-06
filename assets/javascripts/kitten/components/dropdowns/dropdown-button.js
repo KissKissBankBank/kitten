@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 
-class DropdownButton extends React.Component {
+export class DropdownButton extends React.Component {
   render() {
     const { className, isExpanded, ...rest } = this.props
     const buttonClassName = classNames('k-Dropdown__button', className)
@@ -29,4 +29,5 @@ DropdownButton.defaultProps = {
   isExpanded: false,
 }
 
+// DEPRECATED: do not use default export.
 export default DropdownButton

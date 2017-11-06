@@ -1,7 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 
-class TourPopover extends React.Component {
+export class TourPopover extends React.Component {
   constructor(props) {
     super(props)
 
@@ -149,4 +149,5 @@ class TourPopover extends React.Component {
   }
 }
 
+// DEPRECATED: do not use default export.
 export default TourPopover

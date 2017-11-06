@@ -1,7 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 
-export default class Switch extends React.Component {
+export class Switch extends React.Component {
   render() {
     let switchClassNames = classNames(
       'k-Switch__label',
@@ -24,3 +24,6 @@ export default class Switch extends React.Component {
     )
   }
 }
+
+// DEPRECATED: do not use default export.
+export default Switch

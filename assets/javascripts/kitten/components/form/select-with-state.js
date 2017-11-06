@@ -14,7 +14,7 @@ import React from 'react'
 import classNames from 'classnames'
 import Select from 'react-select'
 
-class SelectWithState extends React.Component {
+export class SelectWithState extends React.Component {
   constructor(props) {
     super(props)
 
@@ -128,4 +128,5 @@ SelectWithState.defaultProps = {
   inputProps: {},
 }
 
+// DEPRECATED: do not use default export.
 export default SelectWithState

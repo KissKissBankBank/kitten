@@ -35,6 +35,7 @@
   $color: map-get($k-colors, 'font-1');
   $border-color: map-get($k-colors, 'line-2');
   $background-color: map-get($k-colors, 'background-1');
+  $background-color-active: map-get($k-colors, 'background-3');
 
   // Focus
   $border-color-focus: map-get($k-colors, 'primary-1');
@@ -51,15 +52,15 @@
   $border-text-input: k-px-to-rem(4px);
 
   .k-LocationInput {
-    @include k-typographyFont($font);
-    @include k-typographyFontSize($font-size, $line-height);
-
     .k-LocationInput__group {
       position: relative;
       width: 100%;
     }
 
     .k-LocationInput__input {
+      @include k-typographyFont($font);
+      @include k-typographyFontSize($font-size, $line-height);
+
       position: relative;
       display: block;
       box-sizing: border-box;
@@ -106,23 +107,26 @@
     }
 
     .k-LocationInput__autocomplete {
-      border-color: $border-color-autocomplete !important;
-      border-radius: 2px;
+      background-color: $background-color;
+      border: k-px-to-rem(1px) solid $border-color-autocomplete;
     }
 
-    .k-LocationInput__suggestionItem {
-      padding: k-px-to-rem(4px);
-
+    .k-LocationInput__autocompleteItem {
+      padding: k-px-to-rem(10px);
       color: $color-placeholder;
+    }
 
-      .k-LocationInput__suggestionItem__mainText {
-        color: $color-main-text;
-        margin-left: k-px-to-rem(10px);
-      }
+    .k-LocationInput__autocompleteItem--active {
+      background-color: $background-color-active;
+    }
 
-      .k-LocationInput__suggestionItem__secondaryText {
-        color: $color-secondary-text;
-      }
+    .k-LocationInput__autocompleteItem__mainText {
+      margin-left: k-px-to-rem(10px);
+      color: $color-main-text;
+    }
+
+    .k-LocationInput__autocompleteItem__secondaryText {
+      color: $color-secondary-text;
     }
 
     .k-LocationInput__icon {

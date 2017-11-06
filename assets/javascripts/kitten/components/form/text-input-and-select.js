@@ -1,6 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
-import SelectWithState from 'kitten/components/form/select-with-state'
+import { SelectWithState } from 'kitten/components/form/select-with-state'
 import { TextInput } from 'kitten/components/form/text-input'
 
 export const TextInputAndSelect = props => {

@@ -1,19 +1,20 @@
-require('../stylesheets/app-kitten.scss');
+require('../stylesheets/app-kitten.scss')
 
-import ReactOnRails from 'react-on-rails';
+import ReactOnRails from 'react-on-rails'
 
 // Box
-import DocLinkBox from 'kitten/components/box/doc-link-box'
+import { DocLinkBox } from 'kitten/components/box/doc-link-box'
 import { InformationBox } from 'kitten/components/box/information-box'
-import LinkBox from 'kitten/components/box/link-box'
+import { LinkBox } from 'kitten/components/box/link-box'
 
 // Buttons
 import { Button } from 'kitten/components/buttons/button'
 import { ButtonIcon } from 'kitten/components/buttons/button-icon'
 import { ButtonImage } from 'kitten/components/buttons/button-image'
-import ButtonImageWithTextAndBadge
+import { ButtonImageWithTextAndBadge }
   from 'kitten/components/buttons/button-image-with-text-and-badge'
-import { ButtonQuestionMarkIcon } from 'kitten/components/buttons/button-question-mark-icon'
+import { ButtonQuestionMarkIcon }
+  from 'kitten/components/buttons/button-question-mark-icon'
 import {
   FacebookButtonIcon,
   LinkedinButtonIcon,
@@ -33,13 +34,17 @@ import { KarlPaymentButtons } from 'kitten/karl/buttons/payment-button'
 
 // Cards
 import { ProjectCard } from 'kitten/components/cards/project-card'
-import { ProjectCreatorCard } from 'kitten/components/cards/project-creator-card'
-import { ProjectSimilarCard } from 'kitten/components/cards/project-similar-card'
+import { ProjectCreatorCard }
+  from 'kitten/components/cards/project-creator-card'
+import { ProjectSimilarCard }
+  from 'kitten/components/cards/project-similar-card'
 import { KarlCard } from 'kitten/karl/cards/card'
-import { KarlSimilarProjectsCard,
-         KarlSimilarProjectsWithInfosCard }
-  from 'kitten/karl/cards/similar-projects-card'
-import { KarlProjectSimilarLoader } from 'kitten/karl/cards/project-similar-card'
+import {
+  KarlSimilarProjectsCard,
+  KarlSimilarProjectsWithInfosCard,
+} from 'kitten/karl/cards/similar-projects-card'
+import { KarlProjectSimilarLoader }
+  from 'kitten/karl/cards/project-similar-card'
 
 // Colors
 import { KarlColors } from 'kitten/karl/colors/karl-colors'
@@ -48,8 +53,8 @@ import { KarlColors } from 'kitten/karl/colors/karl-colors'
 import { DevGrid } from 'kitten/components/dev/dev-grid'
 
 // Dropdowns
-import Dropdown from 'kitten/components/dropdowns/dropdown'
-import DropdownButton from 'kitten/components/dropdowns/dropdown-button'
+import { Dropdown } from 'kitten/components/dropdowns/dropdown'
+import { DropdownButton } from 'kitten/components/dropdowns/dropdown-button'
 import {
   KarlPlatformSwitch,
   KarlUserMenuDropdown,
@@ -69,13 +74,14 @@ import { LocationInput } from 'kitten/components/form/location-input'
 import { RadioButton } from 'kitten/components/form/radio-button'
 import { RadioButtonSet } from 'kitten/components/form/radio-button-set'
 import { RichTextInput } from 'kitten/components/form/rich-text-input'
-import Search from 'kitten/components/form/search'
+import { Search } from 'kitten/components/form/search'
 import Select from 'react-select'
-import SelectWithState from 'kitten/components/form/select-with-state'
-import Slider from 'kitten/components/form/slider'
-import Switch from 'kitten/components/form/switch'
+import { SelectWithState } from 'kitten/components/form/select-with-state'
+import { Slider } from 'kitten/components/form/slider'
+import { Switch } from 'kitten/components/form/switch'
 import { TextInput } from 'kitten/components/form/text-input'
-import { TextInputWithButton } from 'kitten/components/form/text-input-with-button'
+import { TextInputWithButton }
+  from 'kitten/components/form/text-input-with-button'
 import { TextInputWithLimit }
   from 'kitten/components/form/text-input-with-limit'
 import { TextInputWithUnit } from 'kitten/components/form/text-input-with-unit'
@@ -129,7 +135,7 @@ import { ClockIcon } from 'kitten/components/icons/clock-icon'
 import { CrossCircleIcon } from 'kitten/components/icons/cross-circle-icon'
 import { CrossIcon } from 'kitten/components/icons/cross-icon'
 import { FacebookIcon } from 'kitten/components/icons/facebook-icon'
-import GrabberIcon from 'kitten/components/icons/grabber-icon'
+import { GrabberIcon } from 'kitten/components/icons/grabber-icon'
 import { HeartIcon } from 'kitten/components/icons/heart-icon'
 import { InstrumentTagIcon } from 'kitten/components/icons/instrument-tag-icon'
 import { LinkedinIcon } from 'kitten/components/icons/linkedin-icon'
@@ -145,10 +151,14 @@ import { VisaIcon } from 'kitten/components/icons/visa-icon'
 import { WarningCircleIcon } from 'kitten/components/icons/warning-circle-icon'
 
 // Illustrations
-import { LinkBoxIllustration } from 'kitten/components/illustrations/link-box-illustration'
-import { LoudspeakerIllustration } from 'kitten/components/illustrations/loudspeaker-illustration'
-import { MixIllustration } from 'kitten/components/illustrations/mix-illustration'
-import { PhoneIllustration } from 'kitten/components/illustrations/phone-illustration'
+import { LinkBoxIllustration }
+  from 'kitten/components/illustrations/link-box-illustration'
+import { LoudspeakerIllustration }
+  from 'kitten/components/illustrations/loudspeaker-illustration'
+import { MixIllustration }
+  from 'kitten/components/illustrations/mix-illustration'
+import { PhoneIllustration }
+  from 'kitten/components/illustrations/phone-illustration'
 
 // Images
 import { KarlImageCropper } from 'kitten/karl/images/image-cropper'
@@ -165,12 +175,12 @@ import { KarlSeparator } from 'kitten/karl/layout/separator'
 import { InfoLines } from 'kitten/components/lines/info-lines'
 
 // Links
-import ExternalRichLink from 'kitten/components/links/external-rich-link'
+import { ExternalRichLink } from 'kitten/components/links/external-rich-link'
 import { LinkList } from 'kitten/components/links/link-list'
 
 // Lists
 import { BulletList } from 'kitten/components/lists/bullet-list'
-import NavList from 'kitten/components/lists/nav-list'
+import { NavList } from 'kitten/components/lists/nav-list'
 import { KarlTagList } from 'kitten/karl/lists/tag-list'
 
 // Loaders
@@ -184,8 +194,9 @@ import { Progress } from 'kitten/components/meters/progress'
 import { KarlRandomProgress } from 'kitten/karl/meters/random-progress'
 
 // Modals
-import { KarlModal,
-         KarlModalExternalTrigger,
+import {
+  KarlModal,
+  KarlModalExternalTrigger,
 } from 'kitten/karl/modals/modal'
 
 // Navigation
@@ -218,11 +229,11 @@ import { KarlBrowsing } from 'app/browsing/browsing'
 import { KarlMakerWhoAmIStep } from 'app/maker/who-am-i/components/container'
 import {
   KarlMenu,
-  KarlMenuContent
+  KarlMenuContent,
 } from 'kitten/karl/menus/karl-menu'
 
 // Simulators
-import LoanSimulator from 'kitten/components/simulators/loan-simulator'
+import { LoanSimulator } from 'kitten/components/simulators/loan-simulator'
 import {
   KarlLoanSimulator,
   KarlLoanSimulatorWithCommission,
@@ -234,19 +245,22 @@ import {
 import { Stepper } from 'kitten/components/steppers/stepper'
 
 // Tooltips
-import { QuestionMarkWithTooltip } from 'kitten/components/tooltips/question-mark-with-tooltip'
+import { QuestionMarkWithTooltip }
+  from 'kitten/components/tooltips/question-mark-with-tooltip'
 import { StaticTooltip } from 'kitten/components/tooltips/static-tooltip'
-import Tooltip from 'kitten/components/tooltips/tooltip'
+import { Tooltip } from 'kitten/components/tooltips/tooltip'
 import { TooltipNew } from 'kitten/components/tooltips/tooltip-new'
 import { KarlStaticTooltip } from 'kitten/karl/tooltips/static-tooltip'
 
 // Tours
-import HeaderTour from 'kitten/components/tours/header-tour'
-import Tour from 'kitten/components/tours/tour'
-import TourPopover from 'kitten/components/tours/tour-popover'
-import TourStep from 'kitten/components/tours/tour-step'
-import { KarlHeaderTour1,
-         KarlHeaderTour2 } from 'kitten/karl/tours/tour'
+import { HeaderTour } from 'kitten/components/tours/header-tour'
+import { Tour } from 'kitten/components/tours/tour'
+import { TourPopover } from 'kitten/components/tours/tour-popover'
+import { TourStep } from 'kitten/components/tours/tour-step'
+import {
+  KarlHeaderTour1,
+  KarlHeaderTour2,
+} from 'kitten/karl/tours/tour'
 
 // Typography
 import { Paragraph } from 'kitten/components/typography/paragraph'
