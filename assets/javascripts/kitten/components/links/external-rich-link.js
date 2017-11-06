@@ -1,7 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 
-class ExternalRichLink extends React.Component {
+export class ExternalRichLink extends React.Component {
   constructor(props) {
     super(props)
   }
@@ -43,4 +43,5 @@ ExternalRichLink.defaultProps = {
   children: 'I am a rich link!',
 }
 
+// DEPRECATED: do not use default export.
 export default ExternalRichLink

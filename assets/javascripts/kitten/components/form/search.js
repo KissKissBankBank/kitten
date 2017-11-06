@@ -1,10 +1,10 @@
 import React from 'react'
 import classNames from 'classnames'
-import domElementHelper from 'kitten/helpers/dom/element-helper'
+import { domElementHelper } from 'kitten/helpers/dom/element-helper'
 import { TextInput } from 'kitten/components/form/text-input'
 import { SearchIcon } from 'kitten/components/icons/search-icon'
 
-class Search extends React.Component {
+export class Search extends React.Component {
   constructor(props) {
     super(props)
 
@@ -78,4 +78,5 @@ class Search extends React.Component {
   }
 }
 
+// DEPRECATED: do not use default export.
 export default Search
