@@ -4,7 +4,7 @@ Kitten is a components library based on Sass and React. It provides mixins to
 create flexible components based on your own brand elements (colors, fonts,
 typographic scale, etc.).
 
-For show Kitten, it's here => [Styleguide](https://styleguide.kisskissbankbank.com/)
+You can check out Kitten's components on [KissKissBankBank's styleguide](https://styleguide.kisskissbankbank.com/).
 
 It is an npm module coupled with a Rails engine that provides an integrated
 styleguide. It should eventually be separated into two different repositories.
