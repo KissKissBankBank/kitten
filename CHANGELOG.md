@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Update `font-size` comment on `Text` component.
+- Fix: Littles fixes.
 - Feature: Update `ProjectCard`, `ProjectSimilarCard` and `ProjectCreatorCard`
   components with Kitten V2.
 - Feature: Update `Tooltip` and `StaticTooltip` components with Kitten V2.
