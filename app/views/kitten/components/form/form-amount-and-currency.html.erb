@@ -3,7 +3,7 @@
     <div class="k-Grid">
       <div class="k-Grid__col k-Grid__col--12 k-Grid__col--6@m k-Grid__col--12@l">
         <%= example 'Tiny' do %>
-          <%= react_component('FormAmountAndCurrency', props: {
+          <%= react_component 'FormAmountAndCurrency', props: {
               currencyOptions: [
                 { value: 'usd', label: 'USD' },
                 { value: 'cad', label: 'CAD' },
@@ -15,13 +15,12 @@
               placeholder: '500',
               tiny: true,
               digits: 12,
-            }
-          ) %>
+            } %>
         <% end %>
       </div>
       <div class="k-Grid__col k-Grid__col--12 k-Grid__col--6@m k-Grid__col--12@l">
         <%= example 'Normal' do %>
-          <%= react_component('FormAmountAndCurrency', props: {
+          <%= react_component 'FormAmountAndCurrency', props: {
               currencyOptions: [
                 { value: 'usd', label: 'USD' },
                 { value: 'cad', label: 'CAD' },
@@ -32,8 +31,7 @@
               currencyValue: 'usd',
               placeholder: '100',
               digits: 12,
-            }
-          ) %>
+            } %>
         <% end %>
       </div>
     </div>
@@ -43,7 +41,7 @@
     <div class="k-Grid">
       <div class="k-Grid__col k-Grid__col--12 k-Grid__col--6@m k-Grid__col--12@l">
         <%= example 'Valid' do %>
-          <%= react_component('FormAmountAndCurrency', props: {
+          <%= react_component 'FormAmountAndCurrency', props: {
               currencyOptions: [
                 { value: 'usd', label: 'USD' },
                 { value: 'cad', label: 'CAD' },
@@ -56,14 +54,13 @@
               valid: true,
               validOnSelect: true,
               digits: 12,
-            }
-          ) %>
+            } %>
         <% end %>
       </div>
 
       <div class="k-Grid__col k-Grid__col--12 k-Grid__col--6@m k-Grid__col--12@l">
         <%= example 'Error' do %>
-          <%= react_component('FormAmountAndCurrency', props: {
+          <%= react_component 'FormAmountAndCurrency', props: {
               currencyOptions: [
                 { value: 'usd', label: 'USD' },
                 { value: 'cad', label: 'CAD' },
@@ -76,14 +73,13 @@
               error: true,
               errorOnSelect: true,
               digits: 12,
-            }
-          ) %>
+            } %>
         <% end %>
       </div>
 
       <div class="k-Grid__col k-Grid__col--12 k-Grid__col--6@m k-Grid__col--12@l">
         <%= example 'Disabled' do %>
-          <%= react_component('FormAmountAndCurrency', props: {
+          <%= react_component 'FormAmountAndCurrency', props: {
               currencyOptions: [
                 { value: 'usd', label: 'USD' },
                 { value: 'cad', label: 'CAD' },
@@ -95,8 +91,7 @@
               placeholder: '400',
               disabled: true,
               digits: 12,
-            }
-          ) %>
+            } %>
         <% end %>
       </div>
     </div>
