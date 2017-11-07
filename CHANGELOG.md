@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Update styles on `imageCropper` in mobile.
+- Feature: Update styles on `imageCropper` on small screens.
 - Feature: Add `deletable` prop to display delete button in `SimpleUploader`.
 
 ## [14.3.0] - 2017-10-26
