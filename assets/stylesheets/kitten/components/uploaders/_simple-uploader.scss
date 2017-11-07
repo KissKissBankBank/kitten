@@ -17,40 +17,32 @@
   .k-SimpleUploader {
     display: flex;
     align-items: center;
+    text-align: left;
 
     @include k-media-max('s') {
       flex-wrap: wrap;
-      text-align: center;
     }
   }
 
   .k-SimpleUploader__button {
     flex-shrink: 0;
     cursor: pointer;
-
-    @include k-media-max('s') {
-      margin: 0 auto;
-    }
   }
 
   .k-SimpleUploader__link {
+    display: flex;
+    max-width: 100%;
+
     @include k-media-max('s') {
-      display: flex;
-      overflow: hidden;
-      max-width: k-px-to-rem(140px);
-      margin-left: k-px-to-rem(10px);
-      margin: 5px auto;
+      margin-top: 5px;
     }
   }
 
   .k-SimpleUploader__text {
-    display: flex;
-    overflow: hidden;
-    max-width: k-px-to-rem(140px);
-    margin-left: k-px-to-rem(10px);
-
     @include k-typographyFont('light');
     @include k-typographyFontSize(-1, normal);
+
+    overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
   }

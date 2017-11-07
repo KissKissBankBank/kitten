@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Update styles on `imageCropper` in mobile.
+
 ## [14.3.0] - 2017-10-26
 
 Features:
