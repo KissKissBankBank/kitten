@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Update `README.md`.
 - Feature: Add `deletable` prop to display delete button in `SimpleUploader`.
 - Fix: Add default type `button` to the `CloseButton` component
 
