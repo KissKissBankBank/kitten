@@ -506,8 +506,7 @@
     }
   }
 
-  .k-ButtonIcon--checked--micro,
-  .k-ButtonIcon--active--micro {
+  .k-ButtonIcon--checked--micro {
     $micro-size: k-px-to-rem(10px);
     @include k-buttonRounded($button-size-micro, $micro-size, $micro-size);
 
