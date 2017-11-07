@@ -8,30 +8,41 @@
 ///
 /// @example html
 ///
-///     <p class="k-u-small">…</p>
+///     <p class="k-u-size-huge">…</p>
+///     <p class="k-u-size-big">…</p>
+///     <p class="k-u-size-default">…</p>
+///     <p class="k-u-size-tiny">…</p>
+///     <p class="k-u-size-micro">…</p>
+///     <p class="k-u-size-nano">…</p>
 
 @mixin k-utilities-size {
+  // 20px
   .k-u-size-huge {
     @include k-typographyFontSize(2, $without-line-height: true);
   }
 
+  // 18px
   .k-u-size-big {
     @include k-typographyFontSize(1, $without-line-height: true);
   }
 
+  // 16px
   .k-u-size-default {
     @include k-typographyFontSize(0, $without-line-height: true);
   }
 
+  // 14px
   .k-u-size-tiny {
     @include k-typographyFontSize(-1, $without-line-height: true);
   }
 
+  // 12px
   .k-u-size-micro,
   .k-u-small {
     @include k-typographyFontSize(-2, $without-line-height: true);
   }
 
+  // 11px
   .k-u-size-nano {
     @include k-typographyFontSize(-3, $without-line-height: true);
   }
