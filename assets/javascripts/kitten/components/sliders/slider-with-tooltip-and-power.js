@@ -2,7 +2,7 @@ import React from 'react'
 import { SliderBar } from 'kitten/components/sliders/slider-bar'
 import { sliderKeyDownHandler }
   from 'kitten/handlers/sliders/slider-key-down-handler'
-import SliderTooltip from 'kitten/components/sliders/slider-tooltip'
+import { SliderTooltip } from 'kitten/components/sliders/slider-tooltip'
 
 export class SliderWithTooltipAndPower extends React.Component {
   constructor(props) {

@@ -1,5 +1,6 @@
 import EventEmitter from 'event-emitter'
 
-const emitter = EventEmitter()
+export const emitter = EventEmitter()
 
+// DEPRECATED: do not use default export.
 export default emitter

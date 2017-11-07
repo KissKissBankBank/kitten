@@ -2,8 +2,10 @@ import React from 'react'
 import { expect } from 'chai'
 import { shallow, mount } from 'enzyme'
 import { Popover } from 'kitten/components/popovers/popover'
-import { CallToActionPopover } from 'kitten/components/popovers/call-to-action-popover'
-import { LoudspeakerIllustration } from 'kitten/components/illustrations/loudspeaker-illustration'
+import { CallToActionPopover }
+  from 'kitten/components/popovers/call-to-action-popover'
+import { LoudspeakerIllustration }
+  from 'kitten/components/illustrations/loudspeaker-illustration'
 import { Button } from 'kitten/components/buttons/button'
 
 describe('<CallToActionPopover />', () => {
@@ -38,7 +40,7 @@ describe('<CallToActionPopover />', () => {
       it('renders a <Button /> component', () => {
         const buttonComponent = (
           <Button onClick={ undefined }
-                 modifier="boron"
+                 modifier="helium"
                  size="big">
             Ok
           </Button>

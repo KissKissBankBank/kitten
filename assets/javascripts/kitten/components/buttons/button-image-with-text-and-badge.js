@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 
-class ButtonImageWithTextAndBadge extends React.Component {
+export class ButtonImageWithTextAndBadge extends React.Component {
   renderNotificationBadge() {
     return(
       <span className="k-ButtonWithBadge__badge k-Badge">
@@ -71,4 +71,5 @@ ButtonImageWithTextAndBadge.defaultProps = {
   onClick: () => {},
 }
 
+// DEPRECATED: do not use default export.
 export default ButtonImageWithTextAndBadge

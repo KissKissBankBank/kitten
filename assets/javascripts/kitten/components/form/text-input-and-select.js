@@ -1,6 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
-import SelectWithState from 'kitten/components/form/select-with-state'
+import { SelectWithState } from 'kitten/components/form/select-with-state'
 import { TextInput } from 'kitten/components/form/text-input'
 
 export const TextInputAndSelect = props => {
@@ -29,25 +29,35 @@ export const TextInputAndSelect = props => {
   // TODO: handle key without currencyName prop
   const renderTextInputWrapper = () => {
     return (
-      <div className={ inputWrapperClassName } key={ `${props.currencyName}1` }>
-        <TextInput tiny={ tiny }
-                   disabled={ disabled }
-                   { ...textInputProps } />
+      <div
+        className={ inputWrapperClassName }
+        key={ `${props.currencyName}1` }
+      >
+        <TextInput
+          tiny={ tiny }
+          disabled={ disabled }
+          { ...textInputProps }
+        />
       </div>
     )
   }
 
   const renderSelectWrapper = () => {
     return (
-      <div className="k-FormComposer__element" key={ `${props.currencyName}2` }>
-        <SelectWithState name={ selectName }
-                         options={ selectOptions }
-                         value={ selectValue }
-                         tiny={ tiny }
-                         onInputChange={ onSelectChange }
-                         error={ errorOnSelect }
-                         valid={ validOnSelect }
-                         disabled={ disabled } />
+      <div
+        className="k-FormComposer__element"
+        key={ `${props.currencyName}2` }
+      >
+        <SelectWithState
+          name={ selectName }
+          options={ selectOptions }
+          value={ selectValue }
+          tiny={ tiny }
+          onInputChange={ onSelectChange }
+          error={ errorOnSelect }
+          valid={ validOnSelect }
+          disabled={ disabled }
+        />
       </div>
     )
   }

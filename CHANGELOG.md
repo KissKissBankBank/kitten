@@ -4,7 +4,90 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Update alignment on `InfoLines`.
+- Feature: Update `ProjectCard`, `ProjectSimilarCard` and `ProjectCreatorCard`
+  components with Kitten V2.
+- Feature: Update `Tooltip` and `StaticTooltip` components with Kitten V2.
+- Feature: Update `Alert` component with Kitten V2.
+- Breaking change: `TextInputWithButton` and `TextInputWithUnit` mixins don't
+  use options params.
+  Replace `@include k-TextInputWithButton(( font: 'bold', … ))`
+  by `@include k-TextInputWithButton;`.
+  Replace `@include k-TextInputWithUnit(( inputFont: 'regular', … ))`
+  by `@include k-TextInputWithUnit;`
+- Breaking change: Change button width in `k-TextInputWithButton__button`.
+- Feature: Update all `TextInput` component with Kitten V2.
+- Feature: Update `ButtonImageWithText` component with Kitten V2.
+- Feature: Update colors buttons.
+- Breaking change: Remove `boron` modifier in `Button`, `ButtonIcon` components
+  and replace `boron` by `helium`.
+- Feature: Update `Title` and `Paragraph` with Kitten V2.
+- Fix: Update styles on `LocationInput`.
+- Fix: Add missing input checked disabled background-image for `RadioButton`
+  component.
+- Feature: Add `regular` font on `radioButton` and `Checkbox` components.
+- Feature: Update `TagList` component with Kitten V2.
+- Breaking change: Add new `Maax` fonts.
+  You need to update your webpack client :
+
+```sh
+# Add this line in cleanup file
+rm -f app/assets/webpack/fonts/*
+```
+
+```js
+// Add headers in devServ.
+const devServer = new WebpackDevServer(compiler, {
+  …
+  headers: {
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
+    "Access-Control-Allow-Headers": "X-Requested-With, content-type, Authorization",
+  }
+});
+```
+
+```js
+// Update module loaders in base.config.js.
+module: {
+  loaders: [
+    {
+      test: /\.(svg|png|jpe?g)$/,
+      loader: 'file?name=images/[name].[ext]',
+      include: /icons/, // Add images folders.
+    },
+    {
+      test: /\.(woff|woff2|eot|ttf|svg)$/,
+      loader: 'file?name=fonts/[name].[ext]',
+      include: /maax/, // Add fonts folders.
+    },
+    …
+  ]
+}
+```
+
+```js
+// Add fonts path.
+const resolvingPaths = kittenComponents.jsPaths
+                       .concat(appJsPath)
+                       .concat(nodeModulesPath)
+                       .concat(kittenComponents.imagesPaths)
+                       .concat(kittenComponents.fontsPaths)
+```
+
+## [14.3.0] - 2017-10-26
+
+Features:
+- Add named export for all components. Default export for these components
+  is now deprecated.
+- Add `k-u-color-valid` utility.
+- Add `valid` color in `Text` component.
+- Add `without-line-height` option to `k-typographyFontSize` method.
+
+Fixes:
+- Update styles on `LocationInput`.
+- Remove `line-height` from size utilities.
+- Fix `TextInput` length for Firefox.
+- Update alignment on `InfoLines`.
 
 ## [14.2.1] - 2017-10-12
 

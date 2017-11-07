@@ -1,9 +1,11 @@
 import React from 'react'
 import classNames from 'classnames'
 import bowser from 'bowser'
-import { SideGrid,
-         SideGridContent,
-         SideGridAside } from 'kitten/components/grid/side-grid'
+import {
+  SideGrid,
+  SideGridContent,
+  SideGridAside,
+} from 'kitten/components/grid/side-grid'
 import { Grid, GridCol } from 'kitten/components/grid/grid'
 
 export class SideLayout extends React.Component {

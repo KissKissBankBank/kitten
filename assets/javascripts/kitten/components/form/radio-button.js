@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 
-export class RadioButton extends React.Component {
+export class RadioButton extends Component {
   renderContent() {
     const { children, largeContent } = this.props
 
@@ -13,26 +13,44 @@ export class RadioButton extends React.Component {
       { 'k-RadioButton__labelContents--large': largeContent }
     )
     return (
-      <div className={ labelContentsClassNames }>{ children }</div>
+      <div className={ labelContentsClassNames }>
+        { children }
+      </div>
+    )
+  }
+
+  renderLabel() {
+    const { children,
+            id,
+            large,
+            text } = this.props
+
+    const radioButtonLabelClassNames = classNames(
+      'k-RadioButton__label',
+      { 'k-RadioButton__label--large': large },
+      { 'k-RadioButton__label--withContents': !!children },
+    )
+
+    return (
+      <label
+        htmlFor={ id }
+        className={ radioButtonLabelClassNames }
+      >
+        { text }
+      </label>
     )
   }
 
   render() {
     const { className,
             id,
-            text,
+            children,
+            inputClassName,
             large,
             largeContent,
-            children,
-            content,
-            inputClassName,
+            text,
             error,
             ...inputProps } = this.props
-
-    const radioButtonLabelClassNames = classNames(
-      'k-RadioButton__label',
-      { 'k-RadioButton__label--large': large },
-    )
 
     const radioButtonInputClassNames = classNames(
       'k-RadioButton__input',
@@ -42,15 +60,13 @@ export class RadioButton extends React.Component {
 
     return (
       <div className={ classNames('k-RadioButton', className) }>
-        <input id={ id }
-               type="radio"
-               className={ radioButtonInputClassNames }
-               { ...inputProps } />
-
-        <label htmlFor={ id }
-               className={ radioButtonLabelClassNames } >
-          { text }
-        </label>
+        <input
+          id={ id }
+          type="radio"
+          className={ radioButtonInputClassNames }
+          { ...inputProps }
+        />
+        { this.renderLabel() }
         { this.renderContent() }
       </div>
     )
