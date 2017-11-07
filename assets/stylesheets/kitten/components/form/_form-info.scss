@@ -20,14 +20,13 @@
 /// </div>
 
 @mixin k-FormInfo {
-
   // Label
   $font: 'regular';
   $font-size-label: 0; // 16px
   $color-label: map-get($k-colors, 'font-1');
 
   // Error
-  $font-size-error: -2;
+  $font-size-error: -2; // 12px
   $color-error: map-get($k-colors, 'error');
 
   .k-FormInfo__label {

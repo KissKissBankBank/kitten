@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Update `Label`, `FormInfo` component.
+- Feature: Update `Label` and `FormInfo` components.
 - Feature: Update `ProjectCard`, `ProjectSimilarCard` and `ProjectCreatorCard`
   components with Kitten V2.
 - Feature: Update `Tooltip` and `StaticTooltip` components with Kitten V2.
