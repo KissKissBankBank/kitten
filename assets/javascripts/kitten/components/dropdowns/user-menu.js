@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { Dropdown } from 'kitten/components/dropdowns/dropdown'
 import { ButtonImageWithTextAndBadge } from
@@ -8,7 +8,7 @@ import domElementHelper from 'kitten/helpers/dom/element-helper'
 import emitter from 'kitten/helpers/utils/emitter'
 import objectAssign from 'core-js/library/fn/object/assign'
 
-export class UserMenu extends React.Component {
+export class UserMenu extends Component {
   constructor(props) {
     super(props)
 
