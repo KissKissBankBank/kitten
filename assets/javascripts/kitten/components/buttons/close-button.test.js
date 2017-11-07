@@ -34,7 +34,7 @@ describe('<CloseButton />', () => {
       expect(closeButton).to.have.attr('aria-label', 'Close')
     })
 
-    it('has a type button', () => {
+    it('has a button type', () => {
       expect(closeButton).to.have.type('button')
     })
   })
