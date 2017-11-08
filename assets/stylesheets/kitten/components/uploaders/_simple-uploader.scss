@@ -44,11 +44,11 @@
   }
 
   .k-SimpleUploader__text {
+    overflow: hidden;
+    max-width: k-px-to-rem(140px);
+
     @include k-typographyFont('light');
     @include k-typographyFontSize(-1, normal);
-
-    max-width: k-px-to-rem(140px);
-    overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 
