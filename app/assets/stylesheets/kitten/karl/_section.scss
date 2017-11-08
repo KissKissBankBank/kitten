@@ -1,12 +1,12 @@
 // Section
 .karl-Section__title {
-  margin-top: 2rem;
-  margin-bottom: 1rem;
+  margin-top: k-px-to-rem(32px);
+  margin-bottom: k-px-to-rem(16px);
 
-  @include k-typographyFont('light');
-  @include k-typographyFontSize(6);
+  @include k-typographyFont('bold');
+  @include k-typographyFontSize(5); // 28px
 
-  color: #333;
+  color: map-get($k-colors, 'font-1');
 
   @include k-media-max('xs') {
     text-align: center;
@@ -23,12 +23,12 @@
 }
 
 .karl-Example__title {
-  @include k-typographyFont('bold');
+  @include k-typographyFont('regular');
+  @include k-typographyFontSize(0); // 16px
+  font-style: italic;
 
   color: map-get($k-colors, 'font-2');
-  font-size: 0.75rem;
   text-align: left;
-  font-style: italic;
 
   @include k-media-max('xs') {
     text-align: center;
