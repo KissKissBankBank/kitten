@@ -29,7 +29,6 @@ export const StepperIconDefault = () => {
 export const StepperIconInProgress = () => {
   const inProgressClassNames = classNames(
     'k-Stepper__icon--inProgress',
-    'k-ButtonIcon--inProgress--micro',
   )
 
   return (

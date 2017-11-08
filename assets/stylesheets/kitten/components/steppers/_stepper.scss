@@ -22,7 +22,7 @@
 ///         </a>
 ///       </li>
 ///       <li class="k-Stepper__item">
-///         <a class="k-Stepper__link k-Stepper__link--validated" href="#">
+///         <a class="k-Stepper__link" href="#">
 ///           …
 ///         </a>
 ///       </li>
@@ -35,8 +35,8 @@
 ///   </nav>
 
 @mixin k-Stepper {
-  $font: 'regular';
-  $font-step: -1; // 14px
+  $font: 'bold-uppercase';
+  $font-step: -3; // 11px
   $line-height: 1.3;
 
   $color: map-get($k-colors, 'font-1');

@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Update `Stepper` examples.
 - Fix: Remove `font-weight` duplicate in `body` class.
 
 ## [14.3.0] - 2017-10-26
