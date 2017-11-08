@@ -2,17 +2,16 @@
   <div class="k-Grid__col k-Grid__col--12 k-Grid__col--3@l">
     <div class="k-Grid">
       <div class="k-Grid__col k-Grid__col--12 k-Grid__col--3@m k-Grid__col--12@l">
-        <%= example 'Normal' do %>
-          <%= react_component('TagButton') %>
+        <%= example 'Tiny' do %>
+          <%= react_component 'TagButton', props: {
+              tiny: true,
+          } %>
         <% end %>
       </div>
 
       <div class="k-Grid__col k-Grid__col--12 k-Grid__col--3@m k-Grid__col--12@l">
-        <%= example 'Big' do %>
-          <%= react_component('TagButton', props: {
-              big: true,
-            }
-          ) %>
+        <%= example 'Normal' do %>
+          <%= react_component 'TagButton' %>
         <% end %>
       </div>
     </div>
@@ -22,11 +21,10 @@
     <div class="k-Grid">
       <div class="k-Grid__col k-Grid__col--12 k-Grid__col--3@m k-Grid__col--12@l">
         <%= example 'With large word' do %>
-          <%= react_component('TagButton', props: {
+          <%= react_component 'TagButton', props: {
               children: 'Large word',
-              big: true,
             }
-          ) %>
+          %>
         <% end %>
       </div>
     </div>
@@ -36,10 +34,10 @@
     <div class="k-Grid">
       <div class="k-Grid__col k-Grid__col--12 k-Grid__col--3@m k-Grid__col--12@l">
         <%= example 'Selected' do %>
-          <%= react_component('TagButton', props: {
+          <%= react_component 'TagButton', props: {
               selected: true,
             }
-          ) %>
+          %>
         <% end %>
       </div>
     </div>
@@ -50,7 +48,7 @@
 <div class="k-Grid">
   <div class="k-Grid__col k-Grid__col--12">
     <%= example 'Payment buttons' do %>
-      <%= react_component('KarlPaymentButtons') %>
+      <%= react_component 'KarlPaymentButtons' %>
     <% end %>
   </div>
 </div>

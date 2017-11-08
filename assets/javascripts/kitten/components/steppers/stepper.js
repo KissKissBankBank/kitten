@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import classNames from 'classnames'
 import {
   StepperIconDefault,
@@ -12,7 +12,7 @@ const iconTypeComponents = {
   validated: StepperIconValidated,
 }
 
-export class Stepper extends React.Component {
+export class Stepper extends Component {
   lineBreaks(text) {
     const regex = /(\n)/i
     const brClassNames = classNames(
@@ -39,7 +39,8 @@ export class Stepper extends React.Component {
       <Tag
         className={ className }
         href={ href }
-        { ...other }>
+        { ...other }
+      >
         <IconType />
         { this.lineBreaks(text) }
       </Tag>
@@ -54,7 +55,10 @@ export class Stepper extends React.Component {
     )
 
     return items.map((item, index) =>
-      <li className={ itemClassNames } key={ index }>
+      <li
+        className={ itemClassNames }
+        key={ index }
+      >
         { this.renderLink(item, index) }
       </li>
     )
@@ -67,7 +71,10 @@ export class Stepper extends React.Component {
     )
 
     return (
-      <nav className="k-Stepper" role="navigation">
+      <nav
+        className="k-Stepper"
+        role="navigation"
+      >
         <ul className={ listClassNames }>
           { this.renderItems() }
         </ul>

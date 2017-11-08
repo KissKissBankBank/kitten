@@ -18,14 +18,20 @@ const items = [
   {
     text: "Prionaelurus\n planiceps",
     href: "#",
-    linkClassNames: "k-Stepper__link--inProgress",
-    iconType: "inProgress",
+    linkClassNames: "k-Stepper__link",
+    iconType: "default",
   },
   {
     text: "Serval",
     href: "#",
-    linkClassNames: "k-Stepper__link--validated",
+    linkClassNames: "k-Stepper__link",
     iconType: "validated",
+  },
+  {
+    text: "Idea of",
+    href: "#",
+    linkClassNames: "k-Stepper__link--inProgress",
+    iconType: "inProgress",
   },
   {
     text: "Lynx\n pardinus",
@@ -50,13 +56,13 @@ describe('<Stepper />', () => {
   })
 
   it('renders items', () => {
-    expect(component.find('li.k-Stepper__item')).to.have.length(4)
+    expect(component.find('li.k-Stepper__item')).to.have.length(5)
   })
 
   it('renders links', () => {
     const links = component.find('.k-Stepper__link')
 
-    expect(links).to.have.length(4)
+    expect(links).to.have.length(5)
     expect(links.find('.k-Stepper__link--inProgress')).to.have.length(1)
     expect(links.find('.k-Stepper__link--inactive')).to.have.length(1)
     expect(links.first()).to.have.attr('href', 'http://…')
@@ -110,7 +116,7 @@ describe('<Stepper />', () => {
     })
 
     it('renders a <StepperIconInProgress />', () => {
-      const icon = component.find('.k-Stepper__link').at(1).children().first()
+      const icon = component.find('.k-Stepper__link--inProgress').at(0).children().first()
 
       expect(icon).to.have.type(StepperIconInProgress)
     })

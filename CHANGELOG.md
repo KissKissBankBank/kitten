@@ -7,6 +7,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Breaking change: Update `UserMenu` component with Kitten V2.
   Replace `@include k-UserMenu(( font: 'bold', … ))`
   by `@include k-UserMenu;`.
+- Feature: Add `tiny` props in `TagButton` component.
+- Feature: Update `TagButton` and `PaymentButton` components with Kitten V2.
+- Feature: Update `Select` component with Kitten V2.
 - Feature: Update `ProjectCard`, `ProjectSimilarCard` and `ProjectCreatorCard`
   components with Kitten V2.
 - Feature: Update `Tooltip` and `StaticTooltip` components with Kitten V2.
@@ -76,6 +79,16 @@ const resolvingPaths = kittenComponents.jsPaths
                        .concat(kittenComponents.imagesPaths)
                        .concat(kittenComponents.fontsPaths)
 ```
+
+## [14.4.0] - 2017-11-08
+
+Features:
+- Update `Stepper` component with Kitten V2.
+- Update styles on `imageCropper` on small screens.
+- Add `deletable` prop to display delete button in `SimpleUploader`.
+
+Fix:
+- Add default type `button` to the `CloseButton` component
 
 ## [14.3.0] - 2017-10-26
 
