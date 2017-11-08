@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Update `HorizontalNav` component with Kitten V2.
 - Feature: Add `tiny` props in `TagButton` component.
 - Feature: Update `TagButton` and `PaymentButton` components with Kitten V2.
 - Feature: Update `Select` component with Kitten V2.
