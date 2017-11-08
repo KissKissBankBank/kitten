@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Update `font` on `Stepper` component with Kitten V2.
 - Breaking change: Update `UserMenu` component with Kitten V2.
   Replace `@include k-UserMenu(( font: 'bold', … ))`
   by `@include k-UserMenu;`.
