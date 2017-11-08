@@ -395,7 +395,6 @@
   }
 
   // Colors modifiers.
-
   .k-Button--hydrogen {
     @include k-buttonColorBase($hydrogen-colors);
     @include k-buttonSvg($hydrogen-colors);
@@ -422,7 +421,6 @@
   }
 
   // Size modifiers.
-
   .k-Button--tiny {
     @include k-typographyFontSize(
       $button-step,
