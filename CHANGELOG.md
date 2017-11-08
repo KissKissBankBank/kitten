@@ -5,6 +5,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Update `font` on `Stepper` component with Kitten V2.
+- Breaking change: Update `UserMenu` component with Kitten V2.
+  Replace `@include k-UserMenu(( font: 'bold', … ))`
+  by `@include k-UserMenu;`.
+- Feature: Update `HorizontalNav` component with Kitten V2.
+- Feature: Add `tiny` props in `TagButton` component.
+- Feature: Update `TagButton` and `PaymentButton` components with Kitten V2.
+- Feature: Update `Select` component with Kitten V2.
 - Feature: Update `ProjectCard`, `ProjectSimilarCard` and `ProjectCreatorCard`
   components with Kitten V2.
 - Feature: Update `Tooltip` and `StaticTooltip` components with Kitten V2.
