@@ -7,9 +7,11 @@ import { TextInputWithButton } from 'kitten/components/form/text-input-with-butt
 import { Paragraph } from 'kitten/components/typography/paragraph'
 import { Title } from 'kitten/components/typography/title'
 import { ButtonIcon } from 'kitten/components/buttons/button-icon'
-import { FacebookButtonIcon,
-         TwitterButtonIcon,
-         LinkedinButtonIcon } from 'kitten/components/buttons/social-button-icon'
+import {
+  FacebookButtonIcon,
+  TwitterButtonIcon,
+  LinkedinButtonIcon,
+} from 'kitten/components/buttons/social-button-icon'
 import { Separator } from 'kitten/components/layout/separator'
 import { LinkList } from 'kitten/components/links/link-list'
 import { Line } from 'kitten/components/layout/line'

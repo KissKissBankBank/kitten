@@ -1,9 +1,9 @@
 import React from 'react'
 import objectAssign from 'core-js/library/fn/object/assign'
-import domElementHelper from 'kitten/helpers/dom/element-helper'
-import TourPopover from 'kitten/components/tours/tour-popover'
+import { domElementHelper } from 'kitten/helpers/dom/element-helper'
+import { TourPopover } from 'kitten/components/tours/tour-popover'
 
-class TourStep extends React.Component {
+export class TourStep extends React.Component {
   constructor(props) {
     super(props)
 
@@ -144,4 +144,5 @@ TourStep.defaultProps = {
   position: null, // 'left' | 'right'
 }
 
+// DEPRECATED: do not use default export.
 export default TourStep

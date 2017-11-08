@@ -1,7 +1,7 @@
 import React from 'react'
 import { expect } from 'chai'
 import { shallow } from 'enzyme'
-import LinkBox from '../../components/box/link-box'
+import { LinkBox } from 'kitten/components/box/link-box'
 
 describe('<LinkBox />', () => {
   const component = shallow(

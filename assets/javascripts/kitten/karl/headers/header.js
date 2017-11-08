@@ -1,17 +1,19 @@
 import React from 'react'
 import classNames from 'classnames'
-import defaultProps from 'kitten/hoc/default-props'
+import { defaultProps } from 'kitten/hoc/default-props'
 import objectAssign from 'core-js/library/fn/object/assign'
 
-import Dropdown from 'kitten/components/dropdowns/dropdown'
-import ExternalRichLink from 'kitten/components/links/external-rich-link'
-import NavList from 'kitten/components/lists/nav-list'
-import UserMenu from 'kitten/components/dropdowns/user-menu'
-import PhoneDropdown from 'kitten/components/dropdowns/phone-dropdown'
-import Search from 'kitten/components/form/search'
-import { Header,
-         HeaderItems,
-         HeaderItem } from 'kitten/components/headers/header'
+import { Dropdown } from 'kitten/components/dropdowns/dropdown'
+import { ExternalRichLink } from 'kitten/components/links/external-rich-link'
+import { NavList } from 'kitten/components/lists/nav-list'
+import { UserMenu } from 'kitten/components/dropdowns/user-menu'
+import { PhoneDropdown } from 'kitten/components/dropdowns/phone-dropdown'
+import { Search } from 'kitten/components/form/search'
+import {
+  Header,
+  HeaderItems,
+  HeaderItem,
+} from 'kitten/components/headers/header'
 import { HeaderTitles } from 'kitten/components/headers/header-titles'
 import { HeaderLogo } from 'kitten/components/headers/header-logo'
 

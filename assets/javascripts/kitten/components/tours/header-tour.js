@@ -1,13 +1,13 @@
 import React from 'react'
 import objectAssign from 'core-js/library/fn/object/assign'
-import Tour from 'kitten/components/tours/tour'
+import { Tour } from 'kitten/components/tours/tour'
 
 // We directly use svg-react loader for the moment.
 // TODO: update webpack config to manage svg in jsx files.
 import { MixIllustration } from 'kitten/components/illustrations/mix-illustration'
 import { LoudspeakerIllustration } from 'kitten/components/illustrations/loudspeaker-illustration'
 
-class HeaderTour extends React.Component {
+export class HeaderTour extends React.Component {
   constructor(props) {
     super(props)
   }
@@ -60,4 +60,5 @@ HeaderTour.defaultProps = {
   storeName: 'kitten.HeaderTour',
 }
 
+// DEPRECATED: do not use default export.
 export default HeaderTour

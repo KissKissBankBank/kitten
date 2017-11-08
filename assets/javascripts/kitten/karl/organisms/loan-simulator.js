@@ -1,6 +1,6 @@
 import defaultProps from 'kitten/hoc/default-props'
 import React from 'react'
-import LoanSimulator from 'kitten/components/simulators/loan-simulator'
+import { LoanSimulator } from 'kitten/components/simulators/loan-simulator'
 import { card } from 'kitten/hoc/card'
 import { Marger } from 'kitten/components/layout/marger'
 

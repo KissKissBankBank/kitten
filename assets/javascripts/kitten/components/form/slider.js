@@ -7,7 +7,7 @@ import { sliderKeyDownHandler }
   from 'kitten/handlers/sliders/slider-key-down-handler'
 
 // Slider input to choose an integer value between two bounds
-export default class Slider extends React.Component {
+export class Slider extends React.Component {
   constructor(props) {
     super(props)
 
@@ -114,3 +114,6 @@ Slider.defaultProps = {
   onChange: function() {},
   onChangeEnd: function() {},
 }
+
+// DEPRECATED: do not use default export.
+export default Slider

@@ -1,9 +1,10 @@
 import React from 'react'
 import { expect } from 'chai'
 import { shallow, mount } from 'enzyme'
-import SelectWithState from 'kitten/components/form/select-with-state'
+import { SelectWithState } from 'kitten/components/form/select-with-state'
 import { TextInput } from 'kitten/components/form/text-input'
-import { FormAmountAndCurrency } from 'kitten/components/form/form-amount-and-currency'
+import { FormAmountAndCurrency }
+  from 'kitten/components/form/form-amount-and-currency'
 
 describe('<FormAmountAndCurrency />', () => {
   describe('valid prop', () => {
