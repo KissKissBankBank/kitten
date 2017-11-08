@@ -17,6 +17,7 @@ describe('<SimpleUploader />', () => {
     it('has children with good classes', () => {
       expect(component.find('.k-SimpleUploader')).to.be.present()
       expect(component.find('.k-SimpleUploader__button')).to.be.present()
+      expect(component.find('.k-SimpleUploader__link')).to.be.present()
       expect(component.find('.k-SimpleUploader__text')).to.be.present()
     })
 
