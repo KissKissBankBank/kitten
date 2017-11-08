@@ -102,7 +102,6 @@
 
   .k-Tour__popover__container {
     display: flex;
-    min-height: k-px-to-rem(205px);
   }
 
   .k-Tour__popover__content {
@@ -110,8 +109,8 @@
     flex-direction: column;
     flex: 1;
 
-    margin-top: k-px-to-rem(20px);
-    margin-left: k-px-to-rem(20px);
+    margin-top: k-px-to-rem(16px);
+    margin-left: k-px-to-rem(16px);
   }
 
   .k-Tour__popover__title {
@@ -126,12 +125,12 @@
     @include k-typographyFont($font-light);
     @include k-typographyFontSize($text-size, $line-height: 1.4rem);
 
-    margin: k-px-to-rem(5px) 0 0 0;
+    margin: k-px-to-rem(16px) 0;
   }
 
   .k-Tour__popover__navigation {
     position: absolute;
-    bottom: k-px-to-rem(30px);
+    bottom: k-px-to-rem(20px);
 
     display: flex;
     justify-content: space-between;
