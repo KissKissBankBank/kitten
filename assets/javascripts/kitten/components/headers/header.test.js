@@ -1,9 +1,11 @@
 import React from 'react'
 import { expect } from 'chai'
 import { shallow } from 'enzyme'
-import { Header,
-         HeaderItems,
-         HeaderItem } from 'kitten/components/headers/header'
+import {
+  Header,
+  HeaderItems,
+  HeaderItem,
+} from 'kitten/components/headers/header'
 
 describe('<Header />', () => {
   const header = shallow(

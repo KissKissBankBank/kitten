@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import { expect } from 'chai'
 import { shallow, mount } from 'enzyme'
 import { TextInput } from 'kitten/components/form/text-input'
-import { TextInputWithButton } from 'kitten/components/form/text-input-with-button'
+import { TextInputWithButton }
+  from 'kitten/components/form/text-input-with-button'
 
 describe('<TextInputWithButton />', () => {
   describe('by default', () => {

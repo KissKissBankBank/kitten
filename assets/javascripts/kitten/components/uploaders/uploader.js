@@ -61,6 +61,7 @@ export class Uploader extends React.Component {
         onClick={ this.handleClick }
         onCancel={ this.handleCancel }
         disabled={ this.props.disabled }
+        deletable={ this.props.deletable }
       />
     )
   }

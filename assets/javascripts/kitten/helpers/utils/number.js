@@ -1,4 +1,4 @@
-const numberUtils = {
+export const numberUtils = {
   /**
    * Returns if a variable is a number or not.
    */
@@ -8,4 +8,5 @@ const numberUtils = {
   }
 }
 
+// DEPRECATED: do not use default export.
 export default numberUtils

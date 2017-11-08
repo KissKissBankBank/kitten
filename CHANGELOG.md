@@ -5,6 +5,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Update `HorizontalNav` component with Kitten V2.
+- Feature: Add `tiny` props in `TagButton` component.
+- Feature: Update `TagButton` and `PaymentButton` components with Kitten V2.
+- Feature: Update `Select` component with Kitten V2.
 - Feature: Update `ProjectCard`, `ProjectSimilarCard` and `ProjectCreatorCard`
   components with Kitten V2.
 - Feature: Update `Tooltip` and `StaticTooltip` components with Kitten V2.
@@ -75,12 +78,30 @@ const resolvingPaths = kittenComponents.jsPaths
                        .concat(kittenComponents.fontsPaths)
 ```
 
-- Feature: Add `k-u-color-valid` utility.
-- Feature: Add `valid` color in `Text` component.
-- Feature: Add `without-line-height` option to `k-typographyFontSize` method.
-- Fix: Remove `line-height` from size utilities.
-- Fix: Fix `TextInput` length for Firefox.
-- Fix: Update alignment on `InfoLines`.
+## [14.4.0] - 2017-11-08
+
+Features:
+- Update `Stepper` component with Kitten V2.
+- Update styles on `imageCropper` on small screens.
+- Add `deletable` prop to display delete button in `SimpleUploader`.
+
+Fix:
+- Add default type `button` to the `CloseButton` component
+
+## [14.3.0] - 2017-10-26
+
+Features:
+- Add named export for all components. Default export for these components
+  is now deprecated.
+- Add `k-u-color-valid` utility.
+- Add `valid` color in `Text` component.
+- Add `without-line-height` option to `k-typographyFontSize` method.
+
+Fixes:
+- Update styles on `LocationInput`.
+- Remove `line-height` from size utilities.
+- Fix `TextInput` length for Firefox.
+- Update alignment on `InfoLines`.
 
 ## [14.2.1] - 2017-10-12
 

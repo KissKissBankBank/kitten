@@ -1,8 +1,8 @@
 import React from 'react'
 import { expect } from 'chai'
 import { shallow } from 'enzyme'
-import { ResponsiveIframeContainer } from
-  'kitten/components/layout/responsive-iframe-container'
+import { ResponsiveIframeContainer }
+  from 'kitten/components/layout/responsive-iframe-container'
 
 describe('<ResponsiveIframeContainer />', () => {
   describe('by default', () => {

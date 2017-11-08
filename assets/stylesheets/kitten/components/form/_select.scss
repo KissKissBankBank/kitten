@@ -16,7 +16,6 @@
 ///   </div>
 ///
 @mixin k-Select {
-
   $options: (
     error-color: map-get($k-colors, 'error'),
     valid-color: map-get($k-colors, 'valid'),
@@ -34,8 +33,9 @@
     select-input-height: k-px-to-rem(40px),
   ));
 
-  $font: 'regular';
-  $bold: 'bold';
+  $font: 'light';
+  $font-label: 'regular';
+  $font-step: -1; // 14px
 
   .k-Select {
     @include k-typographyFont($font);
@@ -50,7 +50,7 @@
   }
 
   .k-Select__option--level1 {
-    @include k-typographyFont($bold);
+    @include k-typographyFont($font);
   }
 
   .k-Select__option--level2 {
@@ -61,8 +61,8 @@
     display: inline-block;
     margin-bottom: k-px-to-rem(10px);
 
-    @include k-typographyFont($bold);
-    @include k-typographyFontSize(-1);
+    @include k-typographyFont($font-label);
+    @include k-typographyFontSize($font-step);
   }
 
   .k-Select.is-error .Select:not(.is-open):not(.is-focused) {
@@ -88,6 +88,7 @@
   .k-Select.is-disabled .Select:not(.is-open):not(.is-focused) {
     .Select-control {
       background-color: map-get($options, 'select-input-bg-disabled');
+      border-color: map-get($options, 'select-input-bg-disabled');
     }
 
     .Select-arrow-zone {
@@ -129,6 +130,7 @@
     width: $arrow-zone-width;
     padding-right: 0;
 
+    border: none;
     border-left: 1px solid map-get($k-colors, 'line-2');
     background: map-get($options, 'select-input-bg')
                 url('~icons/arrow-bottom-black.svg')
