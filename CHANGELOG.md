@@ -4,7 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Breaking change: Replace `@include k-UserMenu(( font: 'bold', … ))`
+- Breaking change: Update `UserMenu` component with Kitten V2.
+  Replace `@include k-UserMenu(( font: 'bold', … ))`
   by `@include k-UserMenu;`.
 - Feature: Update `ProjectCard`, `ProjectSimilarCard` and `ProjectCreatorCard`
   components with Kitten V2.

@@ -10,8 +10,8 @@ import emitter from 'kitten/helpers/utils/emitter'
 import objectAssign from 'core-js/library/fn/object/assign'
 
 export class UserMenu extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
 
     this.state = {
       isExpanded: false,

@@ -35,6 +35,10 @@
   $color-active: map-get($k-colors, 'primary-1');
   $border-color-active: map-get($k-colors, 'primary-1');
 
+  $secondary-color: map-get($k-colors, 'font-2');
+  $secondary-background-color: map-get($k-colors, 'background-2');
+  $secondary-border-color: map-get($k-colors, 'line-1');
+
   $arrow-size: k-px-to-rem(9px);
   $border-size: k-px-to-rem(1px);
 
@@ -102,17 +106,10 @@
     }
   }
 
-  @if {
-    $secondary-color: map-get($k-colors, 'font-2');
-    $secondary-background-color: map-get($k-colors, 'background-2');
-    $secondary-border-color: map-get($k-colors, 'line-1');
-
-    .k-UserMenu__item--secondary {
-      border-left-color: $secondary-border-color;
-      background-color: $secondary-background-color;
-
-      color: $secondary-color;
-    }
+  .k-UserMenu__item--secondary {
+    border-left-color: $secondary-border-color;
+    background-color: $secondary-background-color;
+    color: $secondary-color;
   }
 
   // Manage items border.
