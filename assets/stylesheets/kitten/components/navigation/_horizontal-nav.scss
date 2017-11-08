@@ -54,7 +54,6 @@
 
   .k-HorizontalNav__element {
     -ms-overflow-x: hidden;
-    padding: 0 $padding;
   }
 
   .k-HorizontalNav__element--fixedSize {
@@ -66,6 +65,7 @@
     justify-content: center;
     flex-direction: column;
 
+    padding: 0 $padding;
     border-bottom: $border-width solid transparent;
 
     @include k-typographyFont($font);
