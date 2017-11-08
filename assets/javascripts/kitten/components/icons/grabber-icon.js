@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-class GrabberIcon extends React.Component {
+export class GrabberIcon extends React.Component {
   componentDidMount() {
     const element = ReactDOM.findDOMNode(this)
     element.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
@@ -23,4 +23,5 @@ class GrabberIcon extends React.Component {
   }
 }
 
-export default GrabberIcon;
+// DEPRECATED: do not use default export.
+export default GrabberIcon

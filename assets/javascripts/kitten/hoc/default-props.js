@@ -1,6 +1,6 @@
 import React from 'react'
 
-const defaultProps = (WrappedComponent, props) => {
+export const defaultProps = (WrappedComponent, props) => {
   return class defaultProps extends React.Component {
     render() {
       return(
@@ -11,4 +11,5 @@ const defaultProps = (WrappedComponent, props) => {
   }
 }
 
-export default defaultProps;
+// DEPRECATED: do not use default export.
+export default defaultProps

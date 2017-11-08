@@ -1,14 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Dropdown from 'kitten/components/dropdowns/dropdown'
-import ButtonImageWithTextAndBadge from
+import { Dropdown } from 'kitten/components/dropdowns/dropdown'
+import { ButtonImageWithTextAndBadge } from
   'kitten/components/buttons/button-image-with-text-and-badge'
-import NavList from 'kitten/components/lists/nav-list'
+import { NavList } from 'kitten/components/lists/nav-list'
 import domElementHelper from 'kitten/helpers/dom/element-helper'
 import emitter from 'kitten/helpers/utils/emitter'
 import objectAssign from 'core-js/library/fn/object/assign'
 
-class UserMenu extends React.Component {
+export class UserMenu extends React.Component {
   constructor(props) {
     super(props)
 
@@ -238,4 +238,5 @@ UserMenu.defaultProps = {
   buttonNotifications: 0,
 }
 
+// DEPRECATED: do not use default export.
 export default UserMenu

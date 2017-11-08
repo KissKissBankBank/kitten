@@ -5,8 +5,8 @@ import { Grid, GridCol } from 'kitten/components/grid/grid'
 import { Label } from 'kitten/components/form/label'
 import { Paragraph } from 'kitten/components/typography/paragraph'
 import { SimpleUploader } from 'kitten/components/uploaders/simple-uploader'
-import Slider from 'kitten/components/form/slider'
-import domElementHelper from 'kitten/helpers/dom/element-helper'
+import { Slider } from 'kitten/components/form/slider'
+import { domElementHelper } from 'kitten/helpers/dom/element-helper'
 
 export class ImageCropper extends React.Component {
   constructor(props) {
@@ -262,6 +262,7 @@ export class ImageCropper extends React.Component {
         buttonLabel={ this.props.buttonLabel }
         fileName={ this.props.fileName }
         disabled={ this.props.disabled }
+        deletable={ this.props.deletable }
       />
     )
   }

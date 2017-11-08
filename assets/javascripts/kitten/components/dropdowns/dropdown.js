@@ -2,11 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import emitter from 'kitten/helpers/utils/emitter'
-import DropdownButton from 'kitten/components/dropdowns/dropdown-button'
+import { DropdownButton } from 'kitten/components/dropdowns/dropdown-button'
 import domElementHelper from 'kitten/helpers/dom/element-helper'
 import objectAssign from 'core-js/library/fn/object/assign'
 
-class Dropdown extends React.Component {
+export class Dropdown extends React.Component {
   constructor(props) {
     super(props)
 
@@ -264,4 +264,5 @@ Dropdown.defaultProps = {
   onToggle: function() {},
 }
 
+// DEPRECATED: do not use default export.
 export default Dropdown
