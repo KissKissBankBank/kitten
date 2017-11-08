@@ -1,12 +1,11 @@
 <div class="k-Row k-Row--centered k-Row--lightBottomBorder">
   <div class="k-Row__content">
-    <%= react_component("Stepper", props: {
+    <%= react_component "Stepper", props: {
       items: [
         {
           text: "Statut\n du créateur",
           href: "#",
-          linkClassNames: "k-Stepper__link--inProgress",
-          iconType: "inProgress",
+          iconType: "default",
         },
         {
           text: "Description\n du créateur",
@@ -24,25 +23,23 @@
           iconType: "default",
         },
       ]
-    }) %>
+    } %>
   </div>
 </div>
 
 <div class="k-Row k-Row--centered k-Row--lightBottomBorder k-u-margin-top-double">
   <div class="k-Row__content">
-    <%= react_component("Stepper", props: {
+    <%= react_component "Stepper", props: {
       items: [
         {
           text: "Statut\n du créateur",
           href: "#",
-          linkClassNames: "k-Stepper__link--validated",
           iconType: "validated",
         },
         {
           text: "Description\n du créateur",
           href: "#",
-          linkClassNames: "k-Stepper__link--inProgress",
-          iconType: "inProgress",
+          iconType: "default",
         },
         {
           text: "Le projet",
@@ -55,18 +52,17 @@
           iconType: "default",
         },
       ]
-    }) %>
+    } %>
   </div>
 </div>
 
 <div class="k-Row k-Row--centered k-Row--lightBottomBorder k-u-margin-top-double">
   <div class="k-Row__content">
-    <%= react_component("Stepper", props: {
+    <%= react_component "Stepper", props: {
       items: [
         {
           text: "Description\n détaillée",
           href: "#",
-          linkClassNames: "k-Stepper__link--validated",
           iconType: "validated",
         },
         {
@@ -77,11 +73,10 @@
         {
           text: "Informations\n bancaires",
           href: "#",
-          linkClassNames: "k-Stepper__link--inProgress",
-          iconType: "inProgress",
+          iconType: "default",
         },
       ]
-    }) %>
+    } %>
   </div>
 </div>
 
@@ -95,7 +90,7 @@
           Cette étape permettra à notre équipe de comprendre votre projet et de
           mieux vous accompagner sur l’étape 2.
         </p>
-        <%= react_component("Stepper", props: {
+        <%= react_component "Stepper", props: {
           withAlignStart: true,
           withTinySpacing: true,
           items: [
@@ -120,7 +115,7 @@
               iconType: "default",
             },
           ]
-        }) %>
+        } %>
       </div>
       <div class="k-Grid__col--6">
         <p class="k-Title k-Title--tertiary">L'essentiel</p>
@@ -129,14 +124,13 @@
           Cette étape permettra à notre équipe de comprendre votre projet et de
           mieux vous accompagner sur l’étape 2.
         </p>
-        <%= react_component("Stepper", props: {
+        <%= react_component "Stepper", props: {
           withAlignStart: true,
           withTinySpacing: true,
           items: [
             {
               text: "Statut\n du créateur",
               href: "#",
-              linkClassNames: "k-Stepper__link--validated",
               iconType: "validated",
             },
             {
@@ -155,7 +149,7 @@
               iconType: "default",
             },
           ]
-        }) %>
+        } %>
       </div>
     </div>
   </div>
@@ -171,7 +165,7 @@
           (don contre don, préventes, contreparties, …)
           et renseignez vos informations bancaires.
         </p>
-        <%= react_component("Stepper", props: {
+        <%= react_component "Stepper", props: {
           withAlignStart: true,
           withTinySpacing: true,
           items: [
@@ -191,7 +185,7 @@
               iconType: "default",
             },
           ]
-        }) %>
+        } %>
       </div>
       <div class="k-Grid__col--6">
         <p class="k-Title k-Title--tertiary">Peaufinez votre projet</p>
@@ -200,14 +194,13 @@
           (don contre don, préventes, contreparties, …)
           et renseignez vos informations bancaires.
         </p>
-        <%= react_component("Stepper", props: {
+        <%= react_component "Stepper", props: {
           withAlignStart: true,
           withTinySpacing: true,
           items: [
             {
               text: "Description\n détaillée",
               href: "#",
-              linkClassNames: "k-Stepper__link--validated",
               iconType: "validated",
             },
             {
@@ -221,7 +214,7 @@
               iconType: "default",
             },
           ]
-        }) %>
+        } %>
       </div>
     </div>
   </div>
