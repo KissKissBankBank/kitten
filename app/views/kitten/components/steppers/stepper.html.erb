@@ -1,12 +1,42 @@
 <div class="k-Grid">
   <div class="k-Grid__col k-Grid__col--12">
-    <%= example 'Normal' do %>
+    <%= example 'Beginning' do %>
       <%= react_component("Stepper", props: {
         items: [
           {
             text: "Catopuma\n Temminckii",
             href: "#",
+            linkClassNames: "k-Stepper__link--inProgress",
+            iconType: "inProgress",
+          },
+          {
+            text: "Prionaelurus\n planiceps",
+            linkClassNames: "k-Stepper__link--inactive",
             iconType: "default",
+          },
+          {
+            text: "Serval",
+            linkClassNames: "k-Stepper__link--inactive",
+            iconType: "default",
+          },
+          {
+            text: "Lynx\n pardinus",
+            linkClassNames: "k-Stepper__link--inactive",
+            iconType: "default",
+          },
+        ]
+      }) %>
+    <% end %>
+  </div>
+
+  <div class="k-Grid__col k-Grid__col--12">
+    <%= example 'In progress' do %>
+      <%= react_component("Stepper", props: {
+        items: [
+          {
+            text: "Catopuma\n Temminckii",
+            href: "#",
+            iconType: "validated",
           },
           {
             text: "Prionaelurus\n planiceps",
@@ -16,9 +46,38 @@
           },
           {
             text: "Serval",
+            linkClassNames: "k-Stepper__link--inactive",
+            iconType: "default",
+          },
+          {
+            text: "Lynx\n pardinus",
+            linkClassNames: "k-Stepper__link--inactive",
+            iconType: "default",
+          },
+        ]
+      }) %>
+    <% end %>
+  </div>
+
+  <div class="k-Grid__col k-Grid__col--12">
+    <%= example 'Draft' do %>
+      <%= react_component("Stepper", props: {
+        items: [
+          {
+            text: "Catopuma\n Temminckii",
             href: "#",
-            linkClassNames: "k-Stepper__link--validated",
             iconType: "validated",
+          },
+          {
+            text: "Serval",
+            href: "#",
+            iconType: "default",
+          },
+          {
+            text: "Prionaelurus\n planiceps",
+            href: "#",
+            linkClassNames: "k-Stepper__link--inProgress",
+            iconType: "inProgress",
           },
           {
             text: "Lynx\n pardinus",
@@ -39,6 +98,11 @@
           {
             text: "Catopuma\n Temminckii",
             href: "#",
+            iconType: "validated",
+          },
+          {
+            text: "Serval",
+            href: "#",
             iconType: "default",
           },
           {
@@ -46,12 +110,6 @@
             href: "#",
             linkClassNames: "k-Stepper__link--inProgress",
             iconType: "inProgress",
-          },
-          {
-            text: "Serval",
-            href: "#",
-            linkClassNames: "k-Stepper__link--validated",
-            iconType: "validated",
           },
           {
             text: "Lynx\n pardinus",

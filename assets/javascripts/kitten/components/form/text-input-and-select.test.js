@@ -3,7 +3,7 @@ import { expect } from 'chai'
 import { shallow } from 'enzyme'
 import { TextInputAndSelect } from
   'kitten/components/form/text-input-and-select'
-import SelectWithState from 'kitten/components/form/select-with-state'
+import { SelectWithState } from 'kitten/components/form/select-with-state'
 import { TextInput } from 'kitten/components/form/text-input'
 
 describe('<TextInputWithSelect />', () => {

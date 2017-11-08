@@ -1,5 +1,6 @@
 import React from 'react'
-import { TextInputAndSelect } from 'kitten/components/form/text-input-and-select'
+import { TextInputAndSelect }
+  from 'kitten/components/form/text-input-and-select'
 
 export const FormPhoneNumber = props => {
   const { areaOptions,

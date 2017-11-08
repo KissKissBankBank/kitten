@@ -1,5 +1,5 @@
 import React from 'react'
-import domElementHelper from 'kitten/helpers/dom/element-helper'
+import { domElementHelper } from 'kitten/helpers/dom/element-helper'
 
 export const triggerEnhancer = (WrappedComponent, wrappedComponentProps) => {
   class TriggerWrapper extends React.Component {

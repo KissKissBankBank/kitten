@@ -17,6 +17,7 @@ export class CloseButton extends React.Component {
       <button className={ buttonClassName }
               title={ closeButtonLabel }
               aria-label={ closeButtonLabel }
+              type="button"
               { ...others }>
         <CrossIcon className="k-ButtonIcon__svg k-ButtonIcon__svgRotate" />
       </button>
