@@ -25,7 +25,6 @@
 ///   </ul>
 
 @mixin k-UserMenu {
-
   $font: 'regular';
   $font-step: -2; // 12px
 
@@ -42,8 +41,10 @@
   .k-UserMenu {
     position: relative;
     width: 100%;
+
     margin: 0;
     padding: 0;
+
     border: $border-size solid $border-color;
     border-left: none;
     list-style-type: none;
@@ -66,6 +67,7 @@
   .k-UserMenu__item {
     display: block;
     padding: k-px-to-rem(15px) k-px-to-rem(20px);
+
     outline: none;
     border-left: $border-size solid $border-color;
     background-color: $background-color;
@@ -75,7 +77,7 @@
     text-decoration: none;
     color: $color;
 
-    transition: color .2s, background-color .2s, border-color .2s;
+    transition: $color .2s, $background-color .2s, $border-color .2s;
 
     &:hover {
       background-color: $background-color-hover;
