@@ -4,10 +4,15 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Update `Stepper` component with Kitten V2.
-- Feature: Update styles on `imageCropper` on small screens.
-- Feature: Add `deletable` prop to display delete button in `SimpleUploader`.
-- Fix: Add default type `button` to the `CloseButton` component
+## [14.4.0] - 2017-11-08
+
+Features:
+- Update `Stepper` component with Kitten V2.
+- Update styles on `imageCropper` on small screens.
+- Add `deletable` prop to display delete button in `SimpleUploader`.
+
+Fix:
+- Add default type `button` to the `CloseButton` component
 
 ## [14.3.0] - 2017-10-26
 
