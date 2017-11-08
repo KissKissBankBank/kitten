@@ -13,6 +13,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Add `tiny` props in `TagButton` component.
 - Feature: Update `TagButton` and `PaymentButton` components with Kitten V2.
 - Feature: Update `Select` component with Kitten V2.
+- Feature: Update `Label` and `FormInfo` components.
+- Feature: Update `TabBar` component with Kitten V2.
 - Feature: Update `ProjectCard`, `ProjectSimilarCard` and `ProjectCreatorCard`
   components with Kitten V2.
 - Feature: Update `Tooltip` and `StaticTooltip` components with Kitten V2.
