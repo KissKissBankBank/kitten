@@ -74,6 +74,16 @@ const resolvingPaths = kittenComponents.jsPaths
                        .concat(kittenComponents.fontsPaths)
 ```
 
+## [14.4.0] - 2017-11-08
+
+Features:
+- Update `Stepper` component with Kitten V2.
+- Update styles on `imageCropper` on small screens.
+- Add `deletable` prop to display delete button in `SimpleUploader`.
+
+Fix:
+- Add default type `button` to the `CloseButton` component
+
 ## [14.3.0] - 2017-10-26
 
 Features:
