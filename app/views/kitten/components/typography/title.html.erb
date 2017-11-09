@@ -1,46 +1,48 @@
 <div class="k-Grid">
-  <div class="k-Grid__col k-Grid__col--12">
+  <div class="k-Grid__col k-Grid__col--8">
     <%= example 'Title 1' do %>
       <%= react_component('Title') %>
     <% end %>
   </div>
 
-  <div class="k-Grid__col k-Grid__col--12">
+  <div class="k-Grid__col k-Grid__col--8">
     <%= example 'Title 2' do %>
       <%= react_component('Title', props: {
         modifier: "secondary",
         tag: "h2",
-        children: "Lorem ipsum dolor sit amet…",
+        children: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
       }) %>
     <% end %>
   </div>
 
-  <div class="k-Grid__col k-Grid__col--12">
+  <div class="k-Grid__col k-Grid__col--8">
     <%= example 'Title 3' do %>
       <%= react_component('Title', props: {
         modifier: "tertiary",
         tag: "h3",
-        children: "Lorem ipsum dolor sit amet…",
+        children: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
       }) %>
     <% end %>
   </div>
 
-  <div class="k-Grid__col k-Grid__col--12">
+  <div class="k-Grid__col k-Grid__col--8">
     <%= example 'Title 4' do %>
       <%= react_component('Title', props: {
         modifier: "quaternary",
         tag: "h4",
-        children: "Lorem ipsum dolor sit amet…",
+        children: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+        do eiusmod tempor",
       }) %>
     <% end %>
   </div>
 
-  <div class="k-Grid__col k-Grid__col--12">
+  <div class="k-Grid__col k-Grid__col--6">
     <%= example 'Title 5' do %>
       <%= react_component('Title', props: {
         modifier: "quinary",
         tag: "h5",
-        children: "Lorem ipsum dolor sit amet…",
+        children: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+        do eiusmod tempor",
       }) %>
     <% end %>
   </div>
