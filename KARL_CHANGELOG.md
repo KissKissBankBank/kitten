@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Sort colors all buttons.
+
 ## [14.4.0] - 2017-11-08
 
 Feature:
