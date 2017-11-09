@@ -414,13 +414,13 @@ export const KarlPhoneDropdown = defaultProps(PhoneDropdown, {
   dropdownContent: (
     <div className="k-PhoneDropdown k-Dropdown__content--large">
       <p className="k-PhoneDropdown__text
-                    k-u-small
-                    k-u-strong">
+                    k-u-size-micro
+                    k-u-weight-regular">
         Vous avez une question&nbsp;?
       </p>
       <p className="k-PhoneDropdown__text">
         Notre équipe vous répond au&nbsp;: <br/>
-        <strong className="k-u-strong">
+        <strong className="k-u-weight-regular">
           <a className="k-PhoneDropdown__link" href="tel:+33972324942">09 72 32 49 42</a>
         </strong>
       </p>
