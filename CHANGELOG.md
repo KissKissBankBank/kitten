@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Handle `onChange` prop in reset event in `ImageCropper` component.
 - Feature: Add `parseHtml` helper to transform HTML to React.
 
 ## [14.4.0] - 2017-11-08
