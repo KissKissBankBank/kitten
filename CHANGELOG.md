@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Handle `onChange` prop in reset event in `ImageCropper` component.
+
 ## [14.4.0] - 2017-11-08
 
 Features:
