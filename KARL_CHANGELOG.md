@@ -4,8 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Remove `body-copy` and `font-scale` files.
-- Feature: Update `font` on `body` class with Kitten V2.
+## [14.5.0] - 2017-11-10
+
+Features:
+- Remove `body-copy` and `font-scale` files.
+- Update `font` on `body` class with Kitten V2.
 
 ## [14.4.0] - 2017-11-08
 
