@@ -28,9 +28,8 @@
 ///   </div>
 
 @mixin k-ProjectCreatorCard {
-  $lightFont: 'light';
-  $regularFont: 'regular';
-  $boldFont: 'bold';
+  $font-date: 'light';
+  $font-text: 'regular';
 
   $statusSize: k-px-to-rem(10px);
   $transition-duration: .2s;
@@ -66,7 +65,7 @@
     margin-left: k-px-to-rem(5px);
 
     @include k-typographyFontSize(-3);
-    @include k-typographyFont($lightFont);
+    @include k-typographyFont($font-date);
   }
 
   .k-ProjectCreatorCard__link {
@@ -75,7 +74,7 @@
     color: map-get($k-colors, 'font-1');
 
     @include k-typographyFontSize(-1);
-    @include k-typographyFont($regularFont);
+    @include k-typographyFont($font-text);
 
     &:hover {
       background-color: map-get($k-colors, 'background-2');
@@ -109,7 +108,7 @@
   }
 
   .k-ProjectCreatorCard__status--text {
-    @include k-typographyFont($regularFont);
+    @include k-typographyFont($font-text);
     @include k-typographyFontSize(-3);
   }
 
