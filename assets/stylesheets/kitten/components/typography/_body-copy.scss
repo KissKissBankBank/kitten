@@ -25,9 +25,9 @@
 ///   );
 ///
 ///   $k-fonts: (
-///     regular: (
+///     light: (
 ///       family: (Maax, sans-serif),
-///       weight: 500,
+///       weight: 400,
 ///     )
 ///   );
 ///
@@ -51,7 +51,7 @@
 ///     ...;
 ///   }
 @mixin k-TypographyBodyCopy {
-  $font: 'regular';
+  $font: 'light';
   $color: map-get($k-colors, 'font-1');
 
   // The root font size applied to the HTML document.
