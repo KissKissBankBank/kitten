@@ -34,11 +34,11 @@
 ///   </a>
 
 @mixin k-LinkBox {
-$font-title: 'regular';
-$font-text: 'light';
+  $font-title: 'regular';
+  $font-text: 'light';
 
-$size-title: 0; // 16px
-$size-text: -1; // 14px
+  $size-title: 0; // 16px
+  $size-text: -1; // 14px
 
   // Base
   $color: map-get($k-colors, 'font-1');
