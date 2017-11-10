@@ -6,7 +6,7 @@ export class SupTitle extends React.Component {
     const { className, tag, ...supTitleProps } = this.props
 
     const supTitleClassName = classNames(
-      'kSupTitle',
+      'k-SupTitle',
       className,
     )
 
@@ -19,6 +19,6 @@ export class SupTitle extends React.Component {
 }
 
 SupTitle.defaultProps = {
- tag: 'div',
- children: 'Sup Title',
+  tag: 'div',
+  children: 'Sup Title',
 }

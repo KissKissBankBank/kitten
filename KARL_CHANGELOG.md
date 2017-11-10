@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Remove `body-copy`, `font-scale` and `sup-title` files.
+- Feature: Remove `body-copy` and `font-scale` files.
 - Feature: Update `font` on `body` class with Kitten V2.
 
 ## [14.4.0] - 2017-11-08
