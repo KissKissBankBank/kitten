@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `parseHtml` helper to transform HTML to React.
+
 ## [14.4.0] - 2017-11-08
 
 Features:
