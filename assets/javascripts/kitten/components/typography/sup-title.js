@@ -2,20 +2,20 @@ import React from 'react'
 import classNames from 'classnames'
 
 export class SupTitle extends React.Component {
- render() {
-   const { className, tag, ...supTitleProps } = this.props
+  render() {
+    const { className, tag, ...supTitleProps } = this.props
 
-   const supTitleClassName = classNames(
-     'kSupTitle',
-     className,
-   )
+    const supTitleClassName = classNames(
+      'kSupTitle',
+      className,
+    )
 
-   const Tag = tag
+    const Tag = tag
 
-   return (
-     <Tag className={ supTitleClassName } { ...supTitleProps } />
-   )
- }
+    return (
+      <Tag className={ supTitleClassName } { ...supTitleProps } />
+    )
+  }
 }
 
 SupTitle.defaultProps = {
