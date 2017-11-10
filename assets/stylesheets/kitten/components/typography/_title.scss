@@ -24,31 +24,31 @@
   .k-Title--primary {
     @include k-typographyFontScale($font-step: 7,
                                    $font-step-on-media: 12,
-                                   $line-height: normal);
+                                   $line-height: 1.2);
   }
 
   .k-Title--secondary {
     @include k-typographyFontScale($font-step: 6,
                                    $font-step-on-media: 9,
-                                   $line-height: normal);
+                                   $line-height: 1.2);
   }
 
   .k-Title--tertiary {
     @include k-typographyFontScale($font-step: 5,
                                    $font-step-on-media: 7,
-                                   $line-height: normal);
+                                   $line-height: 1.2);
   }
 
   .k-Title--quaternary {
     @include k-typographyFontScale($font-step: 4,
                                    $font-step-on-media: 5,
-                                   $line-height: normal);
+                                   $line-height: 1.2);
   }
 
   .k-Title--quinary {
     @include k-typographyFontScale($font-step: 2,
                                    $font-step-on-media: 4,
-                                   $line-height: normal);
+                                   $line-height: 1.2);
   }
 
   .k-Title--withoutMargin {
