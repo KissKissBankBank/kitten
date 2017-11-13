@@ -5,7 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Update `modifier` on `ButtonQuestionMarkIcon` component with
-  Kitten V2
+  styleguide V2
 - Feature: Update `Tour` component with Kitten V2.
 - Feature: Update `font` on `Stepper` component with Kitten V2.
 - Breaking change: Update `UserMenu` component with Kitten V2.
