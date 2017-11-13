@@ -6,7 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Add `tiny` prop on `TagButton` example.
 - Feature: Update `karl-Title` and `karl-Section__title` class.
-- Feature: Update `KarlAlert` example with Kitten V2.
+- Feature: Update `KarlAlert` example with Styleguide V2.
 - Feature: Update `TextInputWithUnit` example.
 
 ## [14.4.0] - 2017-11-08
