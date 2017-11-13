@@ -77,6 +77,11 @@ export class ImageCropper extends React.Component {
 
   handleUploaderReset() {
     this.setState(this.initialState())
+
+    this.props.onChange({
+      value: null,
+      name: null,
+    })
   }
 
   handleSliderChange(value) {
