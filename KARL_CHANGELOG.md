@@ -9,6 +9,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Update `KarlAlert` example with Kitten V2.
 - Feature: Update `TextInputWithUnit` example.
 
+## [14.5.0] - 2017-11-10
+
+Features:
+- Remove `body-copy` and `font-scale` files.
+- Update `font` on `body` class with Kitten V2.
+
 ## [14.4.0] - 2017-11-08
 
 Feature:

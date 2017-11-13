@@ -21,3 +21,4 @@ spec/dummy/kitten.run
 app/views/layouts/kitten/playground.html.erb
 
 .DS_Store
+package-lock.json

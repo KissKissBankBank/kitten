@@ -85,6 +85,12 @@ const resolvingPaths = kittenComponents.jsPaths
                        .concat(kittenComponents.fontsPaths)
 ```
 
+## [14.5.0] - 2017-11-10
+
+Features:
+- Handle `onChange` prop in reset event in `ImageCropper` component.
+- Add `parseHtml` helper to transform HTML to React.
+
 ## [14.4.0] - 2017-11-08
 
 Features:
