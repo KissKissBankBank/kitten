@@ -27,7 +27,23 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Update colors and introduce new `valid-2` and `error-2`
  colors.
 - Feature: Add `k-u-margin-none` utility.
-- Fix: Update alignment on `InfoLines`.
+
+## [14.5.0] - 2017-11-10
+
+Features:
+- Handle `onChange` prop in reset event in `ImageCropper` component.
+- Add `parseHtml` helper to transform HTML to React.
+
+## [14.4.0] - 2017-11-08
+
+Features:
+- Update `Stepper` component with Kitten V2.
+- Update styles on `imageCropper` on small screens.
+- Add `deletable` prop to display delete button in `SimpleUploader`.
+
+Fix:
+- Add default type `button` to the `CloseButton` component
+
 
 ## [14.3.0] - 2017-10-26
 

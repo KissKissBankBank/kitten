@@ -166,4 +166,17 @@ describe('<ImageCropper />', () => {
       })
     })
   })
+  describe('with deletable prop at false', () => {
+    const component = mount(
+      <ImageCropper
+        deletable={ false }
+        imageSrc="custom-file.jpg"
+      />
+    )
+    const uploader = component.find(SimpleUploader)
+
+    it('doesn\'t render the delete button', () => {
+      expect(uploader.props()).to.contain({ deletable: false })
+    })
+  })
 })
