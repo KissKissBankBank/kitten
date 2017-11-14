@@ -4,8 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Replace `k-u-small` by `k-u-size-micro` and `k-u-strong` by
-  `k-u-weight-regular`.
+- Fix: Use `k-u-weight-regular` instead of `k-u-strong` in `ProjectCard` component.
 
 ## [14.5.0] - 2017-11-10
 
