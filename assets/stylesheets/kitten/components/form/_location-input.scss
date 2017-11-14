@@ -19,7 +19,7 @@
 ///   </div>
 
 @mixin k-LocationInput {
-  $font: 'regular';
+  $font: 'light';
   $font-size: -1;
   $line-height: 1.3;
   $height: k-px-to-rem(50px);
@@ -121,11 +121,13 @@
     }
 
     .k-LocationInput__autocompleteItem__mainText {
+      @include k-typographyFont($font);
       margin-left: k-px-to-rem(10px);
       color: $color-main-text;
     }
 
     .k-LocationInput__autocompleteItem__secondaryText {
+      @include k-typographyFont($font);
       color: $color-secondary-text;
     }
 

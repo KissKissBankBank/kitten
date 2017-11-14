@@ -296,7 +296,7 @@ export class KarlFooterLendo extends Component {
             <div>
               <Paragraph
                 modifier="quaternary"
-                className= "k-u-strong"
+                className= "k-u-weight-regular"
                 margin={ false }
               >
                 © 2017 KissKissBankBank &amp; Co
