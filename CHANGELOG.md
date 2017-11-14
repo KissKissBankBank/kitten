@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Update placeholder `font-weight` on `LocationInput` component.
 - Feature: Update `font-weight` on `LinkBox` component.
 
 ## [14.5.0] - 2017-11-10
