@@ -21,6 +21,8 @@ export class Alert extends React.Component {
 
       // The css animation on the close button requires a fixed height.
       height: domElementHelper.getComputedHeight(this.container),
+    }, () => {
+      this.props.onClose()
     })
   }
 
@@ -46,6 +48,7 @@ export class Alert extends React.Component {
       closeButton,
       closeButtonLabel,
       children,
+      onClose,
       ...others,
     } = this.props
 
@@ -86,4 +89,5 @@ Alert.defaultProps = {
   success: false,
   closeButton: false,
   closeButtonLabel: 'Close',
+  onClose: () => {},
 }

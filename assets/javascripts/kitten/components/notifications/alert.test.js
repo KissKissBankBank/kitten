@@ -2,6 +2,7 @@ import React from 'react'
 import classNames from 'classnames'
 import { expect } from 'chai'
 import { shallow, mount } from 'enzyme'
+import sinon from 'sinon'
 import { Alert } from 'kitten/components/notifications/alert'
 
 describe('<Alert />', () => {
@@ -100,6 +101,31 @@ describe('<Alert />', () => {
       expect(alert).to.have.text(
         'Lorem ipsum dolor sit amet, consectetur adipisicing elit…'
       )
+    })
+  })
+
+  describe('with onClose prop', () => {
+    const sandbox = sinon.sandbox.create()
+    const handleClose = () => {}
+    const onCloseSpy = sandbox.spy(handleClose)
+    const alert = mount(
+      <Alert
+        closeButton
+        onClose={ onCloseSpy }
+      />
+    )
+
+    before(() => {
+      const closeButton = alert.find('CloseButton')
+      closeButton.simulate('click')
+    })
+
+    after(() => {
+      sandbox.restore()
+    })
+
+    it('calls onClose prop callback', () => {
+      expect(onCloseSpy.calledOnce).to.equal(true)
     })
   })
 
