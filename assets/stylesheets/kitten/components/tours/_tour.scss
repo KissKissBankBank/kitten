@@ -47,12 +47,13 @@
     10
   );
 
-  $font-light: 'light';
-  $font-regular: 'regular';
-  $font-bold: 'bold';
-
-  $title-size: 2; // 20px
+  $text-font: 'light';
   $text-size: -1; // 14px
+
+  $numbering-font: 'regular';
+
+  $title-font: 'bold';
+  $title-size: 2; // 20px
 
   $color: map-get($k-colors, 'font-1');
 
@@ -114,7 +115,7 @@
   }
 
   .k-Tour__popover__title {
-    @include k-typographyFont($font-bold);
+    @include k-typographyFont($title-font);
     @include k-typographyFontSize($title-size);
 
     margin-top: 0;
@@ -122,7 +123,7 @@
   }
 
   .k-Tour__popover__text {
-    @include k-typographyFont($font-light);
+    @include k-typographyFont($text-font);
     @include k-typographyFontSize($text-size, $line-height: 1.4rem);
 
     margin: k-px-to-rem(16px) 0;
@@ -140,7 +141,7 @@
   }
 
   .k-Tour__popover__numbering {
-    @include k-typographyFont($font-regular);
+    @include k-typographyFont($numbering-font);
     @include k-typographyFontSize($text-size);
 
     margin: 0;

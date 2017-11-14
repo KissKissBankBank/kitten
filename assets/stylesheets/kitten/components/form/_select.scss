@@ -34,7 +34,8 @@
   ));
 
   $font: 'light';
-  $font-label: 'regular';
+
+  $label-font: 'regular';
   $font-step: -1; // 14px
 
   .k-Select {
@@ -61,7 +62,7 @@
     display: inline-block;
     margin-bottom: k-px-to-rem(10px);
 
-    @include k-typographyFont($font-label);
+    @include k-typographyFont($label-font);
     @include k-typographyFontSize($font-step);
   }
 

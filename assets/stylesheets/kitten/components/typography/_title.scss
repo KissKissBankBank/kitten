@@ -15,10 +15,10 @@
 ///   <h5 class='k-Title k-Title--quinary'>Title 5</h5>
 
 @mixin k-Title {
-  $font-bold: 'bold';
+  $font: 'bold';
 
   .k-Title {
-    @include k-typographyFont($font-bold);
+    @include k-typographyFont($font);
   }
 
   .k-Title--primary {

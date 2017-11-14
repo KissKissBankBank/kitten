@@ -22,29 +22,30 @@
 @mixin k-FormInfo {
   // Label
   $font: 'regular';
-  $font-size-label: 0; // 16px
-  $color-label: map-get($k-colors, 'font-1');
+
+  $label-size: 0; // 16px
+  $label-color: map-get($k-colors, 'font-1');
 
   // Error
-  $font-size-error: -2; // 12px
-  $color-error: map-get($k-colors, 'error');
+  $error-size: -2; // 12px
+  $error-color: map-get($k-colors, 'error');
 
   .k-FormInfo__label {
     @include k-typographyFont($font);
-    @include k-typographyFontSize($font-size-label);
+    @include k-typographyFontSize($label-size);
 
     display: block;
     padding-bottom: k-px-to-rem(10px);
 
-    color: $color-label;
+    color: $label-color;
   }
 
   .k-FormInfo__error {
     @include k-typographyFont($font);
-    @include k-typographyFontSize($font-size-error);
+    @include k-typographyFontSize($error-size);
 
     margin-top: k-px-to-rem(5px);
 
-    color: $color-error;
+    color: $error-color;
   }
 }

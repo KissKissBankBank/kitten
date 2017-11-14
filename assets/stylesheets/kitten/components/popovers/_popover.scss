@@ -34,14 +34,14 @@
   $border-radius: k-px-to-rem(15px);
   $margin-container: k-px-to-rem(10px);
 
-  $font: 'light';
-  $title-font: 'bold';
-
-  $title-size: 2; // 20px
+  $text-font: 'light';
   $text-size: 0; // 16px
 
+  $title-font: 'bold';
+  $title-size: 2; // 20px
+
   .k-Popover {
-    @include k-typographyFont($font);
+    @include k-typographyFont($text-font);
     position: relative;
 
     width: k-px-to-rem(465px);
@@ -78,7 +78,7 @@
   }
 
   .k-Popover__content {
-    @include k-typographyFont($font);
+    @include k-typographyFont($text-font);
 
     display: flex;
     flex-direction: column;
@@ -97,7 +97,7 @@
   }
 
   .k-Popover__text {
-    @include k-typographyFont($font);
+    @include k-typographyFont($text-font);
     @include k-typographyFontSize($text-size);
 
     margin: 1em 0;

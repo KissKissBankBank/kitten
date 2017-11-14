@@ -1,10 +1,16 @@
 // Section
+$title-section-font: 'bold';
+$title-section-size: 5; //28px
+
+$title-example-font: 'regular';
+$title-example-size: 0; //16px
+
 .karl-Section__title {
   margin-top: k-px-to-rem(32px);
   margin-bottom: k-px-to-rem(16px);
 
-  @include k-typographyFont('bold');
-  @include k-typographyFontSize(5); // 28px
+  @include k-typographyFont($title-section-font);
+  @include k-typographyFontSize($title-section-size);
 
   color: map-get($k-colors, 'font-1');
 
@@ -23,8 +29,8 @@
 }
 
 .karl-Example__title {
-  @include k-typographyFont('regular');
-  @include k-typographyFontSize(0); // 16px
+  @include k-typographyFont($title-example-font);
+  @include k-typographyFontSize($title-example-size);
   font-style: italic;
 
   color: map-get($k-colors, 'font-2');
