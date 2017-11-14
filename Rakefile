@@ -46,12 +46,12 @@ task :kitten_prepare_release do
      'spec/dummy/client/yarn.lock ' \
      'Gemfile.lock'
   sh "git commit -m v#{Kitten::VERSION}"
-  sh 'git push origin release/v#{Kitten::VERSION}'
+  sh "git push origin release/v#{Kitten::VERSION}"
 
   puts
   puts 'Done! You can now create a release PR:'
   puts 'https://github.com/KissKissBankBank/kitten/compare/' \
-       'release/v#{version}?expand=1 😸'
+       "release/v#{Kitten::VERSION}?expand=1 😸"
 end
 
 desc "Create tag v#{Kitten::VERSION}, build and push"
