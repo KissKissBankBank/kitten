@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Update grid and text for `Title` examples.
+
 ## [14.5.0] - 2017-11-10
 
 Features:
