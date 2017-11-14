@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Sort colors all buttons.
+- Feature: Separate button colors in a configuration file.
 
 ## [14.5.0] - 2017-11-10
 

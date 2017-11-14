@@ -1,4 +1,4 @@
-/// Apply `Button`, `ButtonIcon` and `TagButton` buttons colors.
+/// Buttons colors configuration.
 ///
 /// Available color modifiers:
 /// - `hydrogen`
@@ -12,9 +12,6 @@
 ///
 /// @group buttons
 ///
-/// @parameter {Map} $button - a map of colors
-///
-/// @example scss - Usage
 ///  $colors: (
 ///    base: (
 ///      color: #333,
