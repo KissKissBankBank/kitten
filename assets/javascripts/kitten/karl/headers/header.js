@@ -308,10 +308,13 @@ const platformSwitchProps = {
 
   refreshEvents: ['resize', 'karl:element#header:classToggled'],
   dropdownListClassName: 'k-PlatformSwitch k-PlatformSwitch--withoutBorderTop',
-  dropdownContent: <NavList className="k-PlatformSwitch
-                                       k-PlatformSwitch--withoutBorderTop"
-                               role="menubar"
-                               list={ platformSwitchDropdownList } />,
+  dropdownContent:
+    <NavList
+      className={ classNames('k-PlatformSwitch',
+                             'k-PlatformSwitch--withoutBorderTop') }
+      role="menubar"
+      list={ platformSwitchDropdownList }
+    />,
   onToggle: function() {
     // Example event to trigger
     const event = document.createEvent('Event')
@@ -413,9 +416,9 @@ export const KarlPhoneDropdown = defaultProps(PhoneDropdown, {
   // Content
   dropdownContent: (
     <div className="k-PhoneDropdown k-Dropdown__content--large">
-      <p className="k-PhoneDropdown__text
-                    k-u-size-micro
-                    k-u-weight-regular">
+      <p className={ classNames('k-PhoneDropdown__text',
+                                'k-u-size-micro',
+                                'k-u-weight-regular') }>
         Vous avez une question&nbsp;?
       </p>
       <p className="k-PhoneDropdown__text">

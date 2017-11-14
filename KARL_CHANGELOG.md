@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Use `k-u-size-micro` instead of `k-u-small` and `k-u-weight-regular` instead of `k-u-strong` in examples.
+
 ## [14.5.0] - 2017-11-10
 
 Features:
