@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { RadioButton } from 'kitten/components/form/radio-button'
 import { TagButton } from 'kitten/components/buttons/tag-button'
 import { VisaIcon } from 'kitten/components/icons/visa-icon'
@@ -7,11 +7,11 @@ import { CbIcon } from 'kitten/components/icons/cb-icon'
 import { Line } from 'kitten/components/layout/line'
 
 const paymentButtonWrapper = (WrappedComponent, props) => {
-  return class PaymentButtonWrapper extends React.Component {
+  return class PaymentButtonWrapper extends Component {
     render() {
       const text = <TagButton
-                     big
                      icon
+                     big
                      tag="span"
                    >
                      <WrappedComponent className="k-TagButton__icon" />

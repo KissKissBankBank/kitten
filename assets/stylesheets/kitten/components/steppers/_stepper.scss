@@ -35,8 +35,8 @@
 ///   </nav>
 
 @mixin k-Stepper {
-  $font: 'bold-uppercase';
-  $font-step: -3; // 11px
+  $font: 'regular';
+  $font-step: -1; // 14px
   $line-height: 1.3;
 
   $color: map-get($k-colors, 'font-1');

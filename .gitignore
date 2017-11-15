@@ -20,4 +20,5 @@ spec/dummy/kitten.run
 # Changes are ignored so that you can play in it.
 app/views/layouts/kitten/playground.html.erb
 
+.DS_Store
 package-lock.json

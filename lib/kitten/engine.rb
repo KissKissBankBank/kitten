@@ -10,6 +10,7 @@ module Kitten
 
       # Kitten assets
       app.config.assets.paths += [
+        root.join('assets', 'fonts').to_s,
         root.join('assets', 'images').to_s,
         root.join('assets', 'javascripts').to_s,
       ]
@@ -19,6 +20,9 @@ module Kitten
         kitten/dropdown.js
         kitten/karl.js
       )
+
+      Rails.application.config.assets.precompile <<
+        /\.(?:svg|eot|woff|woff2|ttf)$/
     end
 
     # Merge kitten /public directory to app /public directory at runtime.

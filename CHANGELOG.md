@@ -5,6 +5,91 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Update all `Button` with new design styleguide V2.
+- Feature: Update `modifier` on `ButtonQuestionMarkIcon` component with
+  styleguide V2
+- Feature: Update `Tour` component with styleguide V2.
+- Feature: Update `font` on `Stepper` component with styleguide V2.
+- Breaking change: Update `UserMenu` component with styleguide V2.
+  Replace `@include k-UserMenu(( font: 'bold', … ))`
+  by `@include k-UserMenu;`.
+- Feature: Update `HorizontalNav` component with styleguide V2.
+- Feature: Add `tiny` props in `TagButton` component.
+- Feature: Update `TagButton` and `PaymentButton` components with styleguide V2.
+- Feature: Update `Select` component with styleguide V2.
+- Feature: Update `Label` and `FormInfo` components.
+- Feature: Update `TabBar` component with styleguide V2.
+- Feature: Update `ProjectCard`, `ProjectSimilarCard` and `ProjectCreatorCard`
+  components with styleguide V2.
+- Feature: Update `Tooltip` and `StaticTooltip` components with styleguide V2.
+- Feature: Update `Alert` component with styleguide V2.
+- Breaking change: `TextInputWithButton` and `TextInputWithUnit` mixins don't
+  use options params.
+  Replace `@include k-TextInputWithButton(( font: 'bold', … ))`
+  by `@include k-TextInputWithButton;`.
+  Replace `@include k-TextInputWithUnit(( inputFont: 'regular', … ))`
+  by `@include k-TextInputWithUnit;`
+- Breaking change: Change button width in `k-TextInputWithButton__button`.
+- Feature: Update all `TextInput` component with styleguide V2.
+- Feature: Update `ButtonImageWithText` component with styleguide V2.
+- Feature: Update colors buttons.
+- Breaking change: Remove `boron` modifier in `Button`, `ButtonIcon` components
+  and replace `boron` by `helium`.
+- Feature: Update `Title` and `Paragraph` with styleguide V2.
+- Fix: Update styles on `LocationInput`.
+- Fix: Add missing input checked disabled background-image for `RadioButton`
+  component.
+- Feature: Add `regular` font on `radioButton` and `Checkbox` components.
+- Feature: Update `TagList` component with styleguide V2.
+- Breaking change: Add new `Maax` fonts.
+
+  If you use hot-dev-server, update the headers in your configuration file:
+
+```js
+// For example, with Webpack:
+const devServer = new WebpackDevServer(compiler, {
+  …
+  headers: {
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
+    "Access-Control-Allow-Headers": "X-Requested-With, content-type, Authorization",
+  }
+});
+```
+
+  `kitten-components` exposes now its fonts paths:
+
+```js
+import kittenComponents from 'kitten-components'
+
+const resolvingPaths = kittenComponents.jsPaths
+                       .concat(appJsPath)
+                       .concat(nodeModulesPath)
+                       .concat(kittenComponents.imagesPaths)
+                       .concat(kittenComponents.fontsPaths)
+```
+
+  Include the fonts path in your loaders:
+
+```js
+// Update module loaders.
+module: {
+  loaders: [
+    {
+      test: /\.(svg|png|jpe?g)$/,
+      loader: 'file?name=images/[name].[ext]',
+      include: /icons/, // Add images folders.
+    },
+    {
+      test: /\.(woff|woff2|eot|ttf|svg)$/,
+      loader: 'file?name=fonts/[name].[ext]',
+      include: /maax/, // Add fonts folders.
+    },
+    …
+  ]
+}
+```
+
+- Fix: Use `k-u-weight-regular` instead of `k-u-strong` in `ProjectCard` component.
 - Feature: Add new "MDC" colors.
 - Breaking change: Default colors have changed.
   To keep the original default colors:

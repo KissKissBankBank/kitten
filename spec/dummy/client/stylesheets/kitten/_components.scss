@@ -77,14 +77,9 @@
 @include k-TextAreaWrapper;
 @include k-TextInput;
 @include k-TextInputWithLimit;
-@include k-TextInputWithButton((
-  font: 'bold',
-  font-size: -4,
-  color: map-get($k-colors, 'background-1'),
-  button-background: map-get($k-colors, 'primary-1'),
-  button-background-is-valid: map-get($k-colors, 'valid'),
-  button-background-is-error: map-get($k-colors, 'error'),
-));
+@include k-TextInputWithButton;
+@include k-TextInputWithUnit;
+
 // DEPRECATED
 @include k-TextInputWithInfo((
   label: (
@@ -97,17 +92,6 @@
     font-size: -2,
     color: map-get($k-colors, 'error'),
   )
-));
-
-@include k-TextInputWithUnit((
-  input-font: 'regular',
-  unit-font: 'bold',
-  border-color: map-get($k-colors, 'line-2'),
-  color: map-get($k-colors, 'font-1'),
-  unit-color: map-get($k-colors, 'primary-1'),
-  unit-colors-is-valid: map-get($k-colors, 'valid'),
-  unit-colors-is-error: map-get($k-colors, 'error'),
-  unit-colors-is-inactive: map-get($k-colors, 'font-2'),
 ));
 
 // Footer
@@ -198,25 +182,7 @@
 
 @include k-TabBar((z-index: 50));
 
-@include k-UserMenu((
-  font: 'bold',
-  font-step: -2,
-  colors: (
-    default: (
-      base: map-get($k-colors, 'font-1'),
-      background: map-get($k-colors, 'background-2'),
-      border: map-get($k-colors, 'line-1'),
-      background-hover: map-get($k-colors, 'line-1'),
-      color-active: map-get($k-colors, 'primary-1'),
-      border-active: map-get($k-colors, 'primary-1'),
-    ),
-    secondary: (
-      base: map-get($k-colors, 'font-2'),
-      background: map-get($k-colors, 'background-2'),
-      border: map-get($k-colors, 'line-1'),
-    ),
-  ),
-));
+@include k-UserMenu;
 
 // Notifications
 

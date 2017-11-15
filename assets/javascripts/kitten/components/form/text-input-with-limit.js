@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { Component } from 'react'
 import classNames from 'classnames'
 import { TextInput } from 'kitten/components/form/text-input'
 
-export class TextInputWithLimit extends React.Component {
+export class TextInputWithLimit extends Component {
   constructor(props) {
     super(props)
 
@@ -43,11 +43,13 @@ export class TextInputWithLimit extends React.Component {
 
     return (
       <div className={ textInputLimitClassName }>
-        <TextInput className="k-TextInputLimit__input"
-                   value={ this.state.value }
-                   onChange={ this.handleChange }
-                   disabled={ disabled }
-                   { ...others } />
+        <TextInput
+          className="k-TextInputLimit__input"
+          value={ this.state.value }
+          onChange={ this.handleChange }
+          disabled={ disabled }
+          { ...others }
+        />
         <div className={ counterClassName }>
           { limit - length }
         </div>
