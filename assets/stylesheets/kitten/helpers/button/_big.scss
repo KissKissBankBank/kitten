@@ -9,7 +9,7 @@
 ///   $buttonBigOptions: (
 ///     typography-step: -2,
 ///     line-height: 50px,
-///     radius: 25px,
+///     radius: 0px,
 ///     width: 200px,
 ///     icon-size: 50px,
 ///     icon-width: 12px,
@@ -25,7 +25,7 @@
 ///     @include k-typographyFontSize(-2, 50px);
 ///
 ///     padding: 0 25px;
-///     border-radius: 25px;
+///     border-radius: 0px;
 ///     min-width: 200px;
 ///   }
 ///
