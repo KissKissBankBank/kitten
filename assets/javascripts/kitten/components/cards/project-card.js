@@ -121,7 +121,7 @@ class ProjectCardComponent extends React.Component {
                      modifier="quaternary"
                      className={ classNames('k-u-margin-left-double',
                                             'k-u-color-primary1',
-                                            'k-u-strong') }>
+                                            'k-u-weight-regular') }>
             { this.props.progress }&nbsp;%
           </Paragraph>
         </Marger>
