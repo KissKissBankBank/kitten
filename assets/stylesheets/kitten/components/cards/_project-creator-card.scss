@@ -29,13 +29,13 @@
 
 @mixin k-ProjectCreatorCard {
   $date-font: 'light';
-  $date-size: -3; //11px
+  $date-size: -3; // 11px
 
   $link-font: 'regular';
-  $link-size: -1; //14px
+  $link-size: -1; // 14px
 
   $status-font: 'regular';
-  $status-size: -3; //11px
+  $status-size: -3; // 11px
 
   $status-icon-size: k-px-to-rem(10px);
   $transition-duration: .2s;

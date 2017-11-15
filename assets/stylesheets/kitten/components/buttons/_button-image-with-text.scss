@@ -22,7 +22,7 @@
 
 @mixin k-ButtonImageWithText {
   $text-font: 'regular';
-  $text-size: -1; //14px
+  $text-size: -1; // 14px
   $text-line-height: 1;
 
   $color: map-get($k-colors, 'font-1');
