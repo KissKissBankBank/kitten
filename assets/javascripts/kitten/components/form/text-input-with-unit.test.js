@@ -35,7 +35,7 @@ describe('<TextInputWithUnit />', () => {
   })
 
   describe('tiny prop', () => {
-    const component = mount(<TextInputWithUnit tiny={ true } />)
+    const component = mount(<TextInputWithUnit tiny />)
     const textInput = component.find('input')
     const span = component.find('span')
     const textInputExpectation = textInput.hasClass('k-TextInput--tiny')
@@ -51,7 +51,7 @@ describe('<TextInputWithUnit />', () => {
   })
 
   describe('valid prop', () => {
-    const component = mount(<TextInputWithUnit valid={ true } />)
+    const component = mount(<TextInputWithUnit valid />)
     const textInput = component.find('input')
     const span = component.find('span')
     const textInputExpectation = textInput.hasClass('is-valid')
@@ -67,7 +67,7 @@ describe('<TextInputWithUnit />', () => {
   })
 
   describe('error prop', () => {
-    const component = mount(<TextInputWithUnit error={ true } />)
+    const component = mount(<TextInputWithUnit error />)
     const textInput = component.find('input')
     const span = component.find('span')
     const textInputExpectation = textInput.hasClass('is-error')
@@ -78,6 +78,16 @@ describe('<TextInputWithUnit />', () => {
     })
 
     it('has a <span /> with "is-error" class', () => {
+      expect(spanExpectation).to.equal(true)
+    })
+  })
+
+  describe('unitWord prop', () => {
+    const component = mount(<TextInputWithUnit unitWord />)
+    const span = component.find('span')
+    const spanExpectation = span.hasClass('k-TextInputWithUnit__unitWord')
+
+    it('has a <span /> with "k-TextInputWithUnit__unitWord" class', () => {
       expect(spanExpectation).to.equal(true)
     })
   })
@@ -95,7 +105,7 @@ describe('<TextInputWithUnit />', () => {
   })
 
   describe('disabled prop', () => {
-    const component = mount(<TextInputWithUnit disabled={ true } />)
+    const component = mount(<TextInputWithUnit disabled />)
     const textInput = component.find('TextInput')
     const span = component.find('span')
     const spanExpectation = span.hasClass('is-inactive')
