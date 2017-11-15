@@ -40,7 +40,8 @@
   $button-size-big: map-get($options,'icon-size');
   $button-big-min-width: map-get($options, 'width');
   $button-big-line-height: map-get($options, 'icon-size');
-  $button-big-radius: map-get($options, 'radius');
+  $button-big-height: map-get($options, 'height');
+  $button-radius: map-get($options, 'radius');
   $icon-width: map-get($options, 'icon-width');
   $icon-height: map-get($options, 'icon-height');
 
@@ -49,8 +50,8 @@
     $button-big-line-height
   );
 
-  padding: 0 $button-big-radius;
-  border-radius: $button-big-radius;
+  padding: 0 $button-big-height;
+  // border-radius: $button-big-radius;
   min-width: $button-big-min-width;
 
   &.k-Button--icon {

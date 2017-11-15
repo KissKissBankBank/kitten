@@ -40,7 +40,7 @@
 
 @mixin k-Button {
   $font: 'bold-uppercase';
-  $border-size: 1px;
+  $border-size: 2px;
 
   // Colors.
   $hydrogen-colors: (
@@ -242,9 +242,9 @@
   );
 
   // Size settings button.
-  $button-size-tiny: 30px - ($border-size * 2);
-  $button-size: 40px - ($border-size * 2);
-  $button-size-big: 50px - ($border-size * 2);
+  $button-size-tiny: 40px - ($border-size * 2);
+  $button-size: 50px - ($border-size * 2);
+  $button-size-big: 70px - ($border-size * 2);
 
   $button-tiny-min-width: k-px-to-rem(110px);
   $button-tiny-line-height: k-px-to-rem($button-size-tiny);
@@ -255,9 +255,12 @@
   $button-big-min-width: k-px-to-rem(200px);
   $button-big-line-height: k-px-to-rem($button-size-big);
 
-  // Button radius settings.
-  $button-radius: k-px-to-rem(20px);
-  $button-big-radius: k-px-to-rem(25px);
+  // Heigth settings button.
+  $button-height: k-px-to-rem(20px);
+  $button-big-height: k-px-to-rem(25px);
+
+  // Button radius
+  $button-radius: 0px;
 
   // Button font-size is computed using a modular scale and a defined step of this
   // scale.
@@ -276,7 +279,8 @@
   $buttonBigOptions: (
     typography-step: $button-step,
     line-height: $button-big-line-height,
-    radius: $button-big-radius,
+    height: $button-big-height,
+    radius: $button-radius,
     width: $button-big-min-width,
     icon-size: $button-size-big,
     icon-width: $icon-width,
@@ -288,8 +292,8 @@
     @include k-typographyFontSize($button-step, $button-line-height);
     @include k-typographyFont($font);
 
-    padding: 0 $button-radius;
     border-radius: $button-radius;
+    padding: 0 $button-height;
     min-width: $button-min-width;
 
     text-align: center;
@@ -357,7 +361,7 @@
   // Button--icon
 
   .k-Button--icon {
-    padding: 0 $button-radius 0 0;
+    padding: 0 $button-height 0 0;
     min-width: 0;
 
     .k-Button__icon {
@@ -396,7 +400,7 @@
   }
 
   .k-Button--iconRight {
-    padding: 0 0 0 $button-radius;
+    padding: 0 0 0 $button-height;
   }
 
   .k-Button--iconWithMinWidth {

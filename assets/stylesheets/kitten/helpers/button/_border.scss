@@ -15,7 +15,7 @@
 ///    border: 1px solid #d8d8d8;
 
 @mixin k-buttonBorder($border-color) {
-  $button-border-width: 1px;
+  $button-border-width: 2px;
 
   $border-color: transparent !default; // Default value.
   $border-color: k-color-definition($border-color);

@@ -33,7 +33,7 @@
 
   // The button element is rounded.
   // So the radius is the button size / 2.
-  $button-radius: ($button-size + $border-size) / 2;
+  $button-radius: 0;
 
   padding: $button-padding-y $button-padding-x;
   border-radius: $button-radius;
