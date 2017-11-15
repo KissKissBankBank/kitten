@@ -4,42 +4,20 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Update `modifier` on `ButtonQuestionMarkIcon` component with
-  styleguide V2
-- Feature: Update `Tour` component with styleguide V2.
-- Feature: Update `font` on `Stepper` component with styleguide V2.
-- Breaking change: Update `UserMenu` component with styleguide V2.
-  Replace `@include k-UserMenu(( font: 'bold', … ))`
-  by `@include k-UserMenu;`.
-- Feature: Update `HorizontalNav` component with styleguide V2.
-- Feature: Add `tiny` props in `TagButton` component.
-- Feature: Update `TagButton` and `PaymentButton` components with styleguide V2.
-- Feature: Update `Select` component with styleguide V2.
-- Feature: Update `Label` and `FormInfo` components.
-- Feature: Update `TabBar` component with styleguide V2.
-- Feature: Update `ProjectCard`, `ProjectSimilarCard` and `ProjectCreatorCard`
-  components with styleguide V2.
-- Feature: Update `Tooltip` and `StaticTooltip` components with styleguide V2.
-- Feature: Update `Alert` component with styleguide V2.
-- Breaking change: `TextInputWithButton` and `TextInputWithUnit` mixins don't
-  use options params.
+## [15.0.0] - 2017-11-15
+
+Breaking changes: `
+- Update `UserMenu` component with styleguide V2.
+  Replace `@include k-UserMenu(( font: 'bold', … ))` by `@include k-UserMenu;`.
+- `TextInputWithButton` and `TextInputWithUnit` mixins don't use options params.
   Replace `@include k-TextInputWithButton(( font: 'bold', … ))`
   by `@include k-TextInputWithButton;`.
   Replace `@include k-TextInputWithUnit(( inputFont: 'regular', … ))`
   by `@include k-TextInputWithUnit;`
-- Breaking change: Change button width in `k-TextInputWithButton__button`.
-- Feature: Update all `TextInput` component with styleguide V2.
-- Feature: Update `ButtonImageWithText` component with styleguide V2.
-- Feature: Update colors buttons.
-- Breaking change: Remove `boron` modifier in `Button`, `ButtonIcon` components
-  and replace `boron` by `helium`.
-- Feature: Update `Title` and `Paragraph` with styleguide V2.
-- Fix: Update styles on `LocationInput`.
-- Fix: Add missing input checked disabled background-image for `RadioButton`
-  component.
-- Feature: Add `regular` font on `radioButton` and `Checkbox` components.
-- Feature: Update `TagList` component with styleguide V2.
-- Breaking change: Add new `Maax` fonts.
+- Change button width in `k-TextInputWithButton__button`.
+- Remove `boron` modifier in `Button`, `ButtonIcon` components and
+  replace `boron` by `helium`.
+- Add new `Maax` fonts.
 
   If you use hot-dev-server, update the headers in your configuration file:
 
@@ -88,12 +66,7 @@ module: {
 }
 ```
 
-- Fix: Use `k-u-weight-regular` instead of `k-u-strong` in `ProjectCard` component.
-- Feature: Update placeholder `font-weight` on `LocationInput` component.
-- Feature: Update `font-weight` on `LinkBox` component.
-- Feature: Add new "MDC" colors.
-- Breaking change: Default colors have changed.
-  To keep the original default colors:
+- Default colors have changed. To keep the original default colors:
 
 ```css
 $k-colors: map-merge($k-colors, (
@@ -114,8 +87,35 @@ $k-colors: map-merge($k-colors, (
 ));
 ```
 
-- Feature: Introduce new `valid-2` and `error-2` colors.
-- Feature: Add `k-u-margin-none` utility.
+Features:
+- Update `modifier` on `ButtonQuestionMarkIcon` component with styleguide V2.
+- Update `Tour` component with styleguide V2.
+- Update `font` on `Stepper` component with styleguide V2.
+- Update `HorizontalNav` component with styleguide V2.
+- Add `tiny` props in `TagButton` component.
+- Update `TagButton` and `PaymentButton` components with styleguide V2.
+- Update `Select` component with styleguide V2.
+- Update `Label` and `FormInfo` components.
+- Update `TabBar` component with styleguide V2.
+- Update `ProjectCard`, `ProjectSimilarCard` and `ProjectCreatorCard`
+  components with styleguide V2.
+- Update `Tooltip` and `StaticTooltip` components with styleguide V2.
+- Update `Alert` component with styleguide V2.
+- Update all `TextInput` component with styleguide V2.
+- Update `ButtonImageWithText` component with styleguide V2.
+- Update colors buttons.
+- Update `Title` and `Paragraph` with styleguide V2.
+- Add `regular` font on `radioButton` and `Checkbox` components.
+- Update `TagList` component with styleguide V2.
+- Add new "MDC" colors.
+- Introduce new `valid-2` and `error-2` colors.
+- Add `k-u-margin-none` utility.
+
+Fixes:
+- Update styles on `LocationInput`.
+- Add missing input checked disabled background-image for `RadioButton`
+  component.
+- Use `k-u-weight-regular` instead of `k-u-strong` in `ProjectCard` component.
 
 ## [14.6.0] - 2017-11-15
 
