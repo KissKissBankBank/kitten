@@ -8,6 +8,8 @@
 ///
 /// @example html
 ///
+///   <div class="k-u-margin-none">…</div>
+///
 ///   <div class="k-u-margin-top-single">…</div>
 ///
 ///   <div class="k-u-margin-top-single@xxs-down">…</div>
@@ -70,6 +72,10 @@
 }
 
 @mixin k-utilities-margin {
+  .k-u-margin-none {
+    margin: 0;
+  }
+
   $k-sizes: (
     none: 0,
     single: 10px,
