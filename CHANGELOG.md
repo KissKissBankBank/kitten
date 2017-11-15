@@ -4,28 +4,30 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add new colors "MDC".
-- Breaking change: default colors have changed. To keep the original default colors:
-  $k-colors: map-merge($k-colors, (
-    'font-1': #333,
+- Feature: Add new "MDC" colors.
+- Breaking change: Default colors have changed.
+  To keep the original default colors:
 
-    'primary-1': #4a84ff,
-    'primary-2': #3b75f0,
-    'primary-3': #2c66e1,
-    'primary-4': #cadbfd,
-    'primary-5': #ecf2ff,
-    'primary-6': #f6f9ff,
+```css
+$k-colors: map-merge($k-colors, (
+  'font-1': #333,
 
-    'tertiary-1': #68ffa0,
+  'primary-1': #4a84ff,
+  'primary-2': #3b75f0,
+  'primary-3': #2c66e1,
+  'primary-4': #cadbfd,
+  'primary-5': #ecf2ff,
+  'primary-6': #f6f9ff,
 
-    'valid': #70c050,
-    'error': #ff4146,
-    'error-2': #ffecec,
-  ));
+  'tertiary-1': #68ffa0,
 
-- Feature: Add `KarlColors` component.
-- Feature: Update colors and introduce new `valid-2` and `error-2`
- colors.
+  'valid': #70c050,
+  'error': #ff4146,
+  'error-2': #ffecec,
+));
+```
+
+- Feature: Introduce new `valid-2` and `error-2` colors.
 - Feature: Add `k-u-margin-none` utility.
 
 ## [14.5.0] - 2017-11-10
@@ -43,7 +45,6 @@ Features:
 
 Fix:
 - Add default type `button` to the `CloseButton` component
-
 
 ## [14.3.0] - 2017-10-26
 
