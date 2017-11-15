@@ -30,6 +30,17 @@ $k-colors: map-merge($k-colors, (
 - Feature: Introduce new `valid-2` and `error-2` colors.
 - Feature: Add `k-u-margin-none` utility.
 
+## [14.6.0] - 2017-11-15
+
+Features:
+- Add `onClose` prop to `Alert` component.
+- Update placeholder `font-weight` on `LocationInput` component.
+- Update `font-weight` on `LinkBox` component.
+- Update error `line-height` on `FormInfo` component.
+
+Fix:
+- Use `k-u-weight-regular` instead of `k-u-strong` in `ProjectCard` component.
+
 ## [14.5.0] - 2017-11-10
 
 Features:
