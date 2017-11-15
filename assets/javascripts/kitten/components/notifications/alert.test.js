@@ -113,7 +113,6 @@ describe('<Alert />', () => {
   describe('with onClose prop', () => {
     let onCloseSpy
     let alertComponent
-    let handleAnimationEnd
 
     before(() => {
       onCloseSpy = sandbox.spy()
