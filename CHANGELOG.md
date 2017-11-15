@@ -90,6 +90,42 @@ const resolvingPaths = kittenComponents.jsPaths
 - Fix: Use `k-u-weight-regular` instead of `k-u-strong` in `ProjectCard` component.
 - Feature: Update placeholder `font-weight` on `LocationInput` component.
 - Feature: Update `font-weight` on `LinkBox` component.
+- Feature: Add new "MDC" colors.
+- Breaking change: Default colors have changed.
+  To keep the original default colors:
+
+```css
+$k-colors: map-merge($k-colors, (
+  'font-1': #333,
+
+  'primary-1': #4a84ff,
+  'primary-2': #3b75f0,
+  'primary-3': #2c66e1,
+  'primary-4': #cadbfd,
+  'primary-5': #ecf2ff,
+  'primary-6': #f6f9ff,
+
+  'tertiary-1': #68ffa0,
+
+  'valid': #70c050,
+  'error': #ff4146,
+  'error-2': #ffecec,
+));
+```
+
+- Feature: Introduce new `valid-2` and `error-2` colors.
+- Feature: Add `k-u-margin-none` utility.
+
+## [14.6.0] - 2017-11-15
+
+Features:
+- Add `onClose` prop to `Alert` component.
+- Update placeholder `font-weight` on `LocationInput` component.
+- Update `font-weight` on `LinkBox` component.
+- Update error `line-height` on `FormInfo` component.
+
+Fix:
+- Use `k-u-weight-regular` instead of `k-u-strong` in `ProjectCard` component.
 
 ## [14.5.0] - 2017-11-10
 

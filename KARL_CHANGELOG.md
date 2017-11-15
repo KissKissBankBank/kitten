@@ -9,6 +9,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Update `KarlAlert` example with styleguide V2.
 - Feature: Update `TextInputWithUnit` example.
 - Fix: Use `k-u-size-micro` instead of `k-u-small` and `k-u-weight-regular`
+- Feature: Add `KarlColors` component.
+
+## [14.6.0] - 2017-11-15
+
+Fix:
+- Use `k-u-size-micro` instead of `k-u-small` and `k-u-weight-regular`
   instead of `k-u-strong` in examples.
 
 ## [14.5.0] - 2017-11-10

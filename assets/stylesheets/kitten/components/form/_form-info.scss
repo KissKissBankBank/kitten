@@ -27,8 +27,10 @@
   $label-color: map-get($k-colors, 'font-1');
 
   // Error
-  $error-size: -2; // 12px
-  $error-color: map-get($k-colors, 'error');
+  $font-error: 'regular';
+  $font-size-error: -2;
+  $color-error: map-get($k-colors, 'error');
+  $error-line-height: normal;
 
   .k-FormInfo__label {
     @include k-typographyFont($font);
@@ -41,8 +43,8 @@
   }
 
   .k-FormInfo__error {
-    @include k-typographyFont($font);
-    @include k-typographyFontSize($error-size);
+    @include k-typographyFont($font-error);
+    @include k-typographyFontSize($font-size-error, $error-line-height);
 
     margin-top: k-px-to-rem(5px);
 
