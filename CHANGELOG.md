@@ -10,6 +10,7 @@ Features:
 - Add `onClose` prop to `Alert` component.
 - Update placeholder `font-weight` on `LocationInput` component.
 - Update `font-weight` on `LinkBox` component.
+- Update error `line-height` on `FormInfo` component.
 
 Fix:
 - Use `k-u-weight-regular` instead of `k-u-strong` in `ProjectCard` component.
