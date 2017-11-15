@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Update all `Button` with new design styleguide V2.
 - Feature: Add new "MDC" colors.
 - Breaking change: Default colors have changed.
   To keep the original default colors:
