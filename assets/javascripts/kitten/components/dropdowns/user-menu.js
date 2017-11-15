@@ -124,10 +124,12 @@ export class UserMenu extends Component {
 
   getDropdownContent() {
     return (
-      <NavList className={ classNames('k-UserMenu',
-                                      'k-UserMenu--withoutBorderTop') }
-               role="menubar"
-               list={ this.props.dropdownList } />
+      <NavList
+        className={ classNames('k-UserMenu',
+                               'k-UserMenu--withoutBorderTop') }
+        role="menubar"
+        list={ this.props.dropdownList }
+      />
     )
   }
 
@@ -194,22 +196,24 @@ export class UserMenu extends Component {
     const { dropdownList, ...otherProps } = this.props
 
     return (
-      <Dropdown ref="dropdown"
-                button={ this.getDropdownButton() }
-                dropdownContent={ this.getDropdownContent() }
-                dropdownListArrow={ this.getDropdownArrow() }
-                contentHorizontalPosition={
-                  this.state.contentHorizontalPosition
-                }
-                arrowHorizontalPosition={
-                  this.state.arrowHorizontalPosition
-                }
-                isExpanded={ this.state.isExpanded }
-                buttonId={ this.getButtonId() }
-                onPositionUpdate={
-                  this.handlePositionUpdate
-                }
-                { ...otherProps } />
+      <Dropdown
+        ref="dropdown"
+        button={ this.getDropdownButton() }
+        dropdownContent={ this.getDropdownContent() }
+        dropdownListArrow={ this.getDropdownArrow() }
+        contentHorizontalPosition={
+          this.state.contentHorizontalPosition
+        }
+        arrowHorizontalPosition={
+          this.state.arrowHorizontalPosition
+        }
+        isExpanded={ this.state.isExpanded }
+        buttonId={ this.getButtonId() }
+        onPositionUpdate={
+          this.handlePositionUpdate
+        }
+        { ...otherProps }
+      />
     )
   }
 }
