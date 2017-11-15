@@ -6,21 +6,21 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Update `modifier` on `ButtonQuestionMarkIcon` component with
   styleguide V2
-- Feature: Update `Tour` component with Kitten V2.
-- Feature: Update `font` on `Stepper` component with Kitten V2.
-- Breaking change: Update `UserMenu` component with Kitten V2.
+- Feature: Update `Tour` component with styleguide V2.
+- Feature: Update `font` on `Stepper` component with styleguide V2.
+- Breaking change: Update `UserMenu` component with styleguide V2.
   Replace `@include k-UserMenu(( font: 'bold', … ))`
   by `@include k-UserMenu;`.
-- Feature: Update `HorizontalNav` component with Kitten V2.
+- Feature: Update `HorizontalNav` component with styleguide V2.
 - Feature: Add `tiny` props in `TagButton` component.
-- Feature: Update `TagButton` and `PaymentButton` components with Kitten V2.
-- Feature: Update `Select` component with Kitten V2.
+- Feature: Update `TagButton` and `PaymentButton` components with styleguide V2.
+- Feature: Update `Select` component with styleguide V2.
 - Feature: Update `Label` and `FormInfo` components.
-- Feature: Update `TabBar` component with Kitten V2.
+- Feature: Update `TabBar` component with styleguide V2.
 - Feature: Update `ProjectCard`, `ProjectSimilarCard` and `ProjectCreatorCard`
-  components with Kitten V2.
-- Feature: Update `Tooltip` and `StaticTooltip` components with Kitten V2.
-- Feature: Update `Alert` component with Kitten V2.
+  components with styleguide V2.
+- Feature: Update `Tooltip` and `StaticTooltip` components with styleguide V2.
+- Feature: Update `Alert` component with styleguide V2.
 - Breaking change: `TextInputWithButton` and `TextInputWithUnit` mixins don't
   use options params.
   Replace `@include k-TextInputWithButton(( font: 'bold', … ))`
@@ -28,17 +28,17 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   Replace `@include k-TextInputWithUnit(( inputFont: 'regular', … ))`
   by `@include k-TextInputWithUnit;`
 - Breaking change: Change button width in `k-TextInputWithButton__button`.
-- Feature: Update all `TextInput` component with Kitten V2.
-- Feature: Update `ButtonImageWithText` component with Kitten V2.
+- Feature: Update all `TextInput` component with styleguide V2.
+- Feature: Update `ButtonImageWithText` component with styleguide V2.
 - Feature: Update colors buttons.
 - Breaking change: Remove `boron` modifier in `Button`, `ButtonIcon` components
   and replace `boron` by `helium`.
-- Feature: Update `Title` and `Paragraph` with Kitten V2.
+- Feature: Update `Title` and `Paragraph` with styleguide V2.
 - Fix: Update styles on `LocationInput`.
 - Fix: Add missing input checked disabled background-image for `RadioButton`
   component.
 - Feature: Add `regular` font on `radioButton` and `Checkbox` components.
-- Feature: Update `TagList` component with Kitten V2.
+- Feature: Update `TagList` component with styleguide V2.
 - Breaking change: Add new `Maax` fonts.
   You need to update your webpack client :
 
