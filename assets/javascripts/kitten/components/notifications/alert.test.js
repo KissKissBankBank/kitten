@@ -6,6 +6,12 @@ import sinon from 'sinon'
 import { Alert } from 'kitten/components/notifications/alert'
 
 describe('<Alert />', () => {
+  const sandbox = sinon.sandbox.create()
+
+  afterEach(() => {
+    sandbox.restore()
+  })
+
   describe('by default', () => {
     const alert = shallow(<Alert />)
 
@@ -105,26 +111,39 @@ describe('<Alert />', () => {
   })
 
   describe('with onClose prop', () => {
-    const sandbox = sinon.sandbox.create()
-    const handleClose = () => {}
-    const onCloseSpy = sandbox.spy(handleClose)
-    const alert = mount(
-      <Alert
-        closeButton
-        onClose={ onCloseSpy }
-      />
-    )
+    let onCloseSpy
+    let alertComponent
+    let handleAnimationEnd
 
     before(() => {
-      const closeButton = alert.find('CloseButton')
-      closeButton.simulate('click')
-    })
+      onCloseSpy = sandbox.spy()
+      alertComponent = mount(
+        <Alert
+          closeButton
+          onClose={ onCloseSpy }
+        />
+      )
 
-    after(() => {
-      sandbox.restore()
+      alertComponent.instance().handleAnimationEnd()
     })
 
     it('calls onClose prop callback', () => {
+      expect(onCloseSpy.calledOnce).to.equal(true)
+    })
+  })
+
+  describe('simulates onAnimationEnd event', () => {
+    let onCloseSpy
+    let alertComponent
+
+    before(() => {
+      onCloseSpy = sandbox.spy()
+      alertComponent = mount(<Alert onClose={ onCloseSpy } />)
+
+      alertComponent.simulate('animationEnd')
+    })
+
+    it('has handleAnimationEnd in onAnimationEnd attribute', () => {
       expect(onCloseSpy.calledOnce).to.equal(true)
     })
   })
@@ -133,7 +152,9 @@ describe('<Alert />', () => {
     const alert = mount(<Alert closeButton />)
     const closeButton = alert.find('CloseButton')
 
-    closeButton.simulate('click')
+    before(() => {
+      closeButton.simulate('click')
+    })
 
     it('changes state', () => {
       expect(alert.state().show).to.be.false
