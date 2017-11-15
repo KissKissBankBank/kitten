@@ -40,15 +40,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Add `regular` font on `radioButton` and `Checkbox` components.
 - Feature: Update `TagList` component with styleguide V2.
 - Breaking change: Add new `Maax` fonts.
-  You need to update your webpack client :
 
-```sh
-# Add this line in cleanup file
-rm -f app/assets/webpack/fonts/*
-```
+  If you use hot-dev-server, update the headers in your configuration file:
 
 ```js
-// Add headers in devServ.
+// For example, with Webpack:
 const devServer = new WebpackDevServer(compiler, {
   …
   headers: {
@@ -59,8 +55,22 @@ const devServer = new WebpackDevServer(compiler, {
 });
 ```
 
+  `kitten-components` exposes now its fonts paths:
+
 ```js
-// Update module loaders in base.config.js.
+import kittenComponents from 'kitten-components'
+
+const resolvingPaths = kittenComponents.jsPaths
+                       .concat(appJsPath)
+                       .concat(nodeModulesPath)
+                       .concat(kittenComponents.imagesPaths)
+                       .concat(kittenComponents.fontsPaths)
+```
+
+  Include the fonts path in your loaders:
+
+```js
+// Update module loaders.
 module: {
   loaders: [
     {
@@ -76,15 +86,6 @@ module: {
     …
   ]
 }
-```
-
-```js
-// Add fonts path.
-const resolvingPaths = kittenComponents.jsPaths
-                       .concat(appJsPath)
-                       .concat(nodeModulesPath)
-                       .concat(kittenComponents.imagesPaths)
-                       .concat(kittenComponents.fontsPaths)
 ```
 
 - Fix: Use `k-u-weight-regular` instead of `k-u-strong` in `ProjectCard` component.
