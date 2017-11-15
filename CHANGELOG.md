@@ -6,7 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [15.0.0] - 2017-11-15
 
-Breaking changes: `
+Breaking changes:
 - Update `UserMenu` component with styleguide V2.
   Replace `@include k-UserMenu(( font: 'bold', … ))` by `@include k-UserMenu;`.
 - `TextInputWithButton` and `TextInputWithUnit` mixins don't use options params.
