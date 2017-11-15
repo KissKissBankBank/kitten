@@ -4,10 +4,15 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `onClose` prop to `Alert` component.
-- Fix: Use `k-u-weight-regular` instead of `k-u-strong` in `ProjectCard` component.
-- Feature: Update placeholder `font-weight` on `LocationInput` component.
-- Feature: Update `font-weight` on `LinkBox` component.
+## [14.6.0] - 2017-11-15
+
+Features:
+- Add `onClose` prop to `Alert` component.
+- Update placeholder `font-weight` on `LocationInput` component.
+- Update `font-weight` on `LinkBox` component.
+
+Fix:
+- Use `k-u-weight-regular` instead of `k-u-strong` in `ProjectCard` component.
 
 ## [14.5.0] - 2017-11-10
 
