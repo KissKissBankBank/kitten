@@ -26,17 +26,12 @@ describe('<InformationBox />', () => {
   })
 
   describe('children prop', () => {
-    const component = shallow(
-      <InformationBox className="custom_class">
-        Example content
-      </InformationBox>
+    const component = mount(
+      <InformationBox>Example content</InformationBox>
     )
 
     it('adds a children element', () => {
-      const children = component.find('.custom_class')
-      expect(children).to.have.length(1)
-      expect(children).to.have.text('Example content')
-      expect(children).to.have.className('custom_class')
+      expect(component).to.have.text('Example content')
     })
   })
 })

@@ -21,7 +21,7 @@ export class InformationBox extends Component {
           >
             { title }
           </Title>
-          <div>{ children }</div>
+          { children }
         </div>
       </div>
     )
