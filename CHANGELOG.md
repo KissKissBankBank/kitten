@@ -5,10 +5,23 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: Littles fixes.
+- Feature: Update `modifier` on `ButtonQuestionMarkIcon` component with
+  styleguide V2
+- Feature: Update `Tour` component with styleguide V2.
+- Feature: Update `font` on `Stepper` component with styleguide V2.
+- Breaking change: Update `UserMenu` component with styleguide V2.
+  Replace `@include k-UserMenu(( font: 'bold', … ))`
+  by `@include k-UserMenu;`.
+- Feature: Update `HorizontalNav` component with styleguide V2.
+- Feature: Add `tiny` props in `TagButton` component.
+- Feature: Update `TagButton` and `PaymentButton` components with styleguide V2.
+- Feature: Update `Select` component with styleguide V2.
+- Feature: Update `Label` and `FormInfo` components.
+- Feature: Update `TabBar` component with styleguide V2.
 - Feature: Update `ProjectCard`, `ProjectSimilarCard` and `ProjectCreatorCard`
-  components with Kitten V2.
-- Feature: Update `Tooltip` and `StaticTooltip` components with Kitten V2.
-- Feature: Update `Alert` component with Kitten V2.
+  components with styleguide V2.
+- Feature: Update `Tooltip` and `StaticTooltip` components with styleguide V2.
+- Feature: Update `Alert` component with styleguide V2.
 - Breaking change: `TextInputWithButton` and `TextInputWithUnit` mixins don't
   use options params.
   Replace `@include k-TextInputWithButton(( font: 'bold', … ))`
@@ -16,27 +29,23 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   Replace `@include k-TextInputWithUnit(( inputFont: 'regular', … ))`
   by `@include k-TextInputWithUnit;`
 - Breaking change: Change button width in `k-TextInputWithButton__button`.
-- Feature: Update all `TextInput` component with Kitten V2.
-- Feature: Update `ButtonImageWithText` component with Kitten V2.
+- Feature: Update all `TextInput` component with styleguide V2.
+- Feature: Update `ButtonImageWithText` component with styleguide V2.
 - Feature: Update colors buttons.
 - Breaking change: Remove `boron` modifier in `Button`, `ButtonIcon` components
   and replace `boron` by `helium`.
-- Feature: Update `Title` and `Paragraph` with Kitten V2.
+- Feature: Update `Title` and `Paragraph` with styleguide V2.
 - Fix: Update styles on `LocationInput`.
 - Fix: Add missing input checked disabled background-image for `RadioButton`
   component.
 - Feature: Add `regular` font on `radioButton` and `Checkbox` components.
-- Feature: Update `TagList` component with Kitten V2.
+- Feature: Update `TagList` component with styleguide V2.
 - Breaking change: Add new `Maax` fonts.
-  You need to update your webpack client :
 
-```sh
-# Add this line in cleanup file
-rm -f app/assets/webpack/fonts/*
-```
+  If you use hot-dev-server, update the headers in your configuration file:
 
 ```js
-// Add headers in devServ.
+// For example, with Webpack:
 const devServer = new WebpackDevServer(compiler, {
   …
   headers: {
@@ -47,8 +56,22 @@ const devServer = new WebpackDevServer(compiler, {
 });
 ```
 
+  `kitten-components` exposes now its fonts paths:
+
 ```js
-// Update module loaders in base.config.js.
+import kittenComponents from 'kitten-components'
+
+const resolvingPaths = kittenComponents.jsPaths
+                       .concat(appJsPath)
+                       .concat(nodeModulesPath)
+                       .concat(kittenComponents.imagesPaths)
+                       .concat(kittenComponents.fontsPaths)
+```
+
+  Include the fonts path in your loaders:
+
+```js
+// Update module loaders.
 module: {
   loaders: [
     {
@@ -66,14 +89,61 @@ module: {
 }
 ```
 
-```js
-// Add fonts path.
-const resolvingPaths = kittenComponents.jsPaths
-                       .concat(appJsPath)
-                       .concat(nodeModulesPath)
-                       .concat(kittenComponents.imagesPaths)
-                       .concat(kittenComponents.fontsPaths)
+- Fix: Use `k-u-weight-regular` instead of `k-u-strong` in `ProjectCard` component.
+- Feature: Update placeholder `font-weight` on `LocationInput` component.
+- Feature: Update `font-weight` on `LinkBox` component.
+- Feature: Add new "MDC" colors.
+- Breaking change: Default colors have changed.
+  To keep the original default colors:
+
+```css
+$k-colors: map-merge($k-colors, (
+  'font-1': #333,
+
+  'primary-1': #4a84ff,
+  'primary-2': #3b75f0,
+  'primary-3': #2c66e1,
+  'primary-4': #cadbfd,
+  'primary-5': #ecf2ff,
+  'primary-6': #f6f9ff,
+
+  'tertiary-1': #68ffa0,
+
+  'valid': #70c050,
+  'error': #ff4146,
+  'error-2': #ffecec,
+));
 ```
+
+- Feature: Introduce new `valid-2` and `error-2` colors.
+- Feature: Add `k-u-margin-none` utility.
+
+## [14.6.0] - 2017-11-15
+
+Features:
+- Add `onClose` prop to `Alert` component.
+- Update placeholder `font-weight` on `LocationInput` component.
+- Update `font-weight` on `LinkBox` component.
+- Update error `line-height` on `FormInfo` component.
+
+Fix:
+- Use `k-u-weight-regular` instead of `k-u-strong` in `ProjectCard` component.
+
+## [14.5.0] - 2017-11-10
+
+Features:
+- Handle `onChange` prop in reset event in `ImageCropper` component.
+- Add `parseHtml` helper to transform HTML to React.
+
+## [14.4.0] - 2017-11-08
+
+Features:
+- Update `Stepper` component with Kitten V2.
+- Update styles on `imageCropper` on small screens.
+- Add `deletable` prop to display delete button in `SimpleUploader`.
+
+Fix:
+- Add default type `button` to the `CloseButton` component
 
 ## [14.3.0] - 2017-10-26
 

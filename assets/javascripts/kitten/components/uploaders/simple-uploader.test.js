@@ -17,6 +17,7 @@ describe('<SimpleUploader />', () => {
     it('has children with good classes', () => {
       expect(component.find('.k-SimpleUploader')).to.be.present()
       expect(component.find('.k-SimpleUploader__button')).to.be.present()
+      expect(component.find('.k-SimpleUploader__link')).to.be.present()
       expect(component.find('.k-SimpleUploader__text')).to.be.present()
     })
 
@@ -92,6 +93,18 @@ describe('<SimpleUploader />', () => {
       it('adds a disabled attribute to the upload button', () => {
         expect(uploadButton).to.have.attr('disabled')
       })
+    })
+  })
+
+  describe('with deletable prop at false', () => {
+    const component = mount(<SimpleUploader
+      fileName="custom-filename.png"
+      deletable={ false }
+    />)
+    const deleteButton = component.find(ButtonIcon)
+
+    it('does not have a delete button', () => {
+      expect(deleteButton).to.have.length(0)
     })
   })
 })

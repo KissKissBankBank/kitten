@@ -77,6 +77,11 @@ export class ImageCropper extends React.Component {
 
   handleUploaderReset() {
     this.setState(this.initialState())
+
+    this.props.onChange({
+      value: null,
+      name: null,
+    })
   }
 
   handleSliderChange(value) {
@@ -262,6 +267,7 @@ export class ImageCropper extends React.Component {
         buttonLabel={ this.props.buttonLabel }
         fileName={ this.props.fileName }
         disabled={ this.props.disabled }
+        deletable={ this.props.deletable }
       />
     )
   }

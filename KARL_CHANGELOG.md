@@ -4,8 +4,32 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Update `KarlAlert` example with Kitten V2.
+- Feature: Add `tiny` prop on `TagButton` example.
+- Feature: Update `karl-Title` and `karl-Section__title` class.
+- Feature: Update `KarlAlert` example with styleguide V2.
 - Feature: Update `TextInputWithUnit` example.
+- Fix: Use `k-u-size-micro` instead of `k-u-small` and `k-u-weight-regular`
+- Feature: Add `KarlColors` component.
+
+## [14.6.0] - 2017-11-15
+
+Fix:
+- Use `k-u-size-micro` instead of `k-u-small` and `k-u-weight-regular`
+  instead of `k-u-strong` in examples.
+
+## [14.5.0] - 2017-11-10
+
+Features:
+- Remove `body-copy` and `font-scale` files.
+- Update `font` on `body` class with Kitten V2.
+
+## [14.4.0] - 2017-11-08
+
+Feature:
+- Update `Stepper` examples.
+
+Fix:
+- Remove `font-weight` duplicate in `body` class.
 
 ## [14.3.0] - 2017-10-26
 

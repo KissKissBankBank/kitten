@@ -13,6 +13,7 @@ export class Alert extends Component {
     }
 
     this.handleCloseClick = this.handleCloseClick.bind(this)
+    this.handleAnimationEnd = this.handleAnimationEnd.bind(this)
   }
 
   handleCloseClick() {
@@ -22,6 +23,10 @@ export class Alert extends Component {
       // The css animation on the close button requires a fixed height.
       height: domElementHelper.getComputedHeight(this.container),
     })
+  }
+
+  handleAnimationEnd() {
+    this.props.onClose()
   }
 
   renderCloseButton() {
@@ -46,6 +51,7 @@ export class Alert extends Component {
       closeButton,
       closeButtonLabel,
       children,
+      onClose,
       ...others,
     } = this.props
 
@@ -64,6 +70,7 @@ export class Alert extends Component {
            role="alert"
            style={ { height: this.state.height } }
            className={ alertClassName }
+           onAnimationEnd={ this.handleAnimationEnd }
            { ...others }>
         <div className="k-Alert__container">
           <div className="k-Alert__row">
@@ -86,4 +93,5 @@ Alert.defaultProps = {
   success: false,
   closeButton: false,
   closeButtonLabel: 'Close',
+  onClose: () => {},
 }

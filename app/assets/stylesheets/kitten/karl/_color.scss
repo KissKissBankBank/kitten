@@ -1,0 +1,17 @@
+.karl-Colors {
+  @include k-media-min('m') {
+    display: flex;
+  }
+}
+
+.karl-Colors__container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+
+  height: k-px-to-rem(340px);
+
+  @include k-media-min('m') {
+    width: 25%;
+  }
+}

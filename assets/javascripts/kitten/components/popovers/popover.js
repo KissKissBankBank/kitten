@@ -15,8 +15,10 @@ export class Popover extends React.Component {
 
   renderCloseButton() {
     return (
-      <CloseButton closeButtonLabel={ this.props.closeButtonLabel }
-                   onClick={ this.handleCloseClick } />
+      <CloseButton
+        closeButtonLabel={ this.props.closeButtonLabel }
+        onClick={ this.handleCloseClick }
+      />
     )
   }
 
@@ -26,7 +28,9 @@ export class Popover extends React.Component {
     }
 
     return (
-      <div className="k-Popover__content">{ this.props.children }</div>
+      <div className="k-Popover__content">
+        { this.props.children }
+      </div>
     )
   }
 
@@ -51,15 +55,19 @@ export class Popover extends React.Component {
     )
 
     return (
-      <div ref="popover"
-           className={ popoverClassNames }
-           role="dialog"
-           aria-hidden="true"
-           aria-labelledby={ titleAriaLabelId }
-           { ...popoverAttributes }>
+      <div
+        ref="popover"
+        className={ popoverClassNames }
+        role="dialog"
+        aria-hidden="true"
+        aria-labelledby={ titleAriaLabelId }
+        { ...popoverAttributes }
+      >
         <div className={ containerClassNames }>
           { this.renderContent() }
-          <div className="k-Popover__close">{ this.renderCloseButton() }</div>
+          <div className="k-Popover__close">
+            { this.renderCloseButton() }
+          </div>
         </div>
       </div>
     )
