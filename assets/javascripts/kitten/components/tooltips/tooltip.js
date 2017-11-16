@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { Component } from 'react'
 import ReactTooltip from 'react-tooltip'
 import { ButtonQuestionMarkIcon }
   from 'kitten/components/buttons/button-question-mark-icon'
 
-export class Tooltip extends React.Component {
+export class Tooltip extends Component {
+
   render() {
     const { place,
             children,

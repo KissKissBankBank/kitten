@@ -6,6 +6,21 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Update grid and text for `Title` examples.
 
+## [15.0.0] - 2017-11-15
+
+Features:
+- Add `tiny` prop on `TagButton` example.
+- Update `karl-Title` and `karl-Section__title` class.
+- Update `KarlAlert` example with styleguide V2.
+- Update `TextInputWithUnit` example.
+- Add `KarlColors` component.
+
+## [14.6.0] - 2017-11-15
+
+Fix:
+- Use `k-u-size-micro` instead of `k-u-small` and `k-u-weight-regular`
+  instead of `k-u-strong` in examples.
+
 ## [14.5.0] - 2017-11-10
 
 Features:

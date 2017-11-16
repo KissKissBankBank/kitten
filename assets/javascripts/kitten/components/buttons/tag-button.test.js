@@ -33,6 +33,26 @@ describe('TagButton', () => {
         expect(component).to.have.className('k-TagButton--hydrogen')
       })
 
+      describe('with tiny prop', () => {
+        const component = shallow(
+          <TagButton tiny />
+        )
+
+        it('renders a <Button class="k-TagButton--tiny" />', () => {
+          expect(component).to.have.className('k-TagButton--tiny')
+        })
+      })
+
+      describe('with big prop', () => {
+        const component = shallow(
+          <TagButton big />
+        )
+
+        it('renders a <Button class="k-TagButton--big" />', () => {
+          expect(component).to.have.className('k-TagButton--big')
+        })
+      })
+
       describe('tag prop', () => {
         const component = shallow(
           <a className="k-TagButton" />)

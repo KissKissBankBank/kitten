@@ -24,26 +24,30 @@
 
 @mixin k-RadioButton {
   // Font
-  $font: 'light';
-  $font-step: 0;
-  $font-step-on-media: 3;
-  $font-step-content: -1;
-  $font-step-content-large: 0;
+  $label-font: 'light';
+  $label-large-font: 'regular';
+
+  $font-step: -1; // 14px
+  $font-step-on-media: 2; // 20px
+  $font-step-content: -2; // 12px
+  $font-step-content-large: -1; // 14px
+
   $line-height: normal;
 
   // Error
-  $color-error: map-get($k-colors, 'error');
+  $error-color: map-get($k-colors, 'error');
 
   // Colors
   $background-color: map-get($k-colors, 'background-1');
-  $background-color-checked: map-get($k-colors, 'primary-1');
-  $background-color-active: map-get($k-colors, 'primary-3');
-  $background-color-disabled: map-get($k-colors, 'line-1');
+  $checked-background-color: map-get($k-colors, 'primary-1');
+  $active-background-color: map-get($k-colors, 'primary-3');
+  $disabled-background-color: map-get($k-colors, 'line-1');
   $border-color: map-get($k-colors, 'line-2');
   $border-color-hover: map-get($k-colors, 'primary-1');
 
   // Background-image
-  $background-image: '~icons/input-checked.svg';
+  $input-checked: '~icons/input-checked.svg';
+  $disabled-input-checked: '~icons/input-checked-disabled.svg';
   $background-size: k-px-to-rem(6px);
 
   $radio-button-size: k-px-to-rem(16px);
@@ -57,7 +61,7 @@
   }
 
   .k-RadioButton__label {
-    @include k-typographyFont($font);
+    @include k-typographyFont($label-font);
     @include k-typographyFontSize($font-step, $line-height);
 
     display: inline-flex;
@@ -77,14 +81,14 @@
 
       content: '';
       background-color: $background-color;
-      border: 1px solid $border-color;
+      border: k-px-to-rem(1px) solid $border-color;
       border-radius: $border-radius;
 
       transition: border $transition-duration;
     }
 
     &:active {
-      color: $background-color-active;
+      color: $active-background-color;
     }
 
     .k-RadioButton__input:focus + &:before {
@@ -92,71 +96,76 @@
     }
 
     .k-RadioButton__input:checked:focus + &:before {
-      box-shadow: 0 0 k-px-to-rem(3px) $background-color-checked;
+      box-shadow: 0 0 k-px-to-rem(3px) $checked-background-color;
     }
 
     .k-RadioButton__input:checked + &:before {
       position: relative;
 
-      background: $background-color-checked
-                  url($background-image)
+      background: $checked-background-color
+                  url($input-checked)
                   no-repeat
                   center center;
       background-size: $background-size;
-      border: k-px-to-rem(1px) solid $background-color-checked;
+      border: k-px-to-rem(1px) solid $checked-background-color;
     }
 
     .k-RadioButton__input:checked:disabled + &:before {
-      background-color: white;
+      background-image: url($disabled-input-checked);
     }
 
     .k-RadioButton__input:disabled + & {
       cursor: not-allowed;
 
       &:before {
-        background-color: $background-color-disabled;
+        background-color: $disabled-background-color;
         border-color: $border-color;
       }
     }
 
     .k-RadioButton__input.is-error + & {
-      border-color: $color-error;
+      border-color: $error-color;
 
       &:before {
-        border-color: $color-error;
+        border-color: $error-color;
       }
     }
 
     .k-RadioButton__input.is-error:checked:focus + &:before {
-      box-shadow: 0 0 k-px-to-rem(3px) $color-error;
+      box-shadow: 0 0 k-px-to-rem(3px) $error-color;
     }
 
     .k-RadioButton__input.is-error:checked + &:before {
       position: relative;
 
-      background: $color-error
-                  url($background-image)
+      background: $error-color
+                  url($input-checked)
                   no-repeat
                   center center;
       background-size: $background-size;
-      border: k-px-to-rem(1px) solid $color-error;
+      border: k-px-to-rem(1px) solid $error-color;
     }
   }
 
   .k-RadioButton__label--large {
+    @include k-typographyFont($label-large-font);
     @include k-typographyFontSize($font-step-on-media);
   }
 
   .k-RadioButton__labelContents {
     display: block;
-    margin-top: k-px-to-rem(10px);
     margin-left: $radio-button-size + $space-button-label;
 
+    @include k-typographyFont($label-font);
     @include k-typographyFontSize($font-step-content);
   }
 
   .k-RadioButton__labelContents--large {
     @include k-typographyFontSize($font-step-content-large);
+  }
+
+  .k-RadioButton__label--withContents {
+    @include k-typographyFont($label-large-font);
   }
 
   .k-RadioButton__input {

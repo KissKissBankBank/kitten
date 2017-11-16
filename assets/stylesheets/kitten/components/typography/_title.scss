@@ -15,7 +15,7 @@
 ///   <h5 class='k-Title k-Title--quinary'>Title 5</h5>
 
 @mixin k-Title {
-  $font: 'light';
+  $font: 'bold';
 
   .k-Title {
     @include k-typographyFont($font);

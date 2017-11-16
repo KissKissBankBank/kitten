@@ -6,6 +6,130 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Update `line-height` on `Title` component.
 
+## [15.0.0] - 2017-11-15
+
+Breaking changes:
+- Update `UserMenu` component with styleguide V2.
+  Replace `@include k-UserMenu(( font: 'bold', … ))` by `@include k-UserMenu;`.
+- `TextInputWithButton` and `TextInputWithUnit` mixins don't use options params.
+  Replace `@include k-TextInputWithButton(( font: 'bold', … ))`
+  by `@include k-TextInputWithButton;`.
+  Replace `@include k-TextInputWithUnit(( inputFont: 'regular', … ))`
+  by `@include k-TextInputWithUnit;`
+- Change button width in `k-TextInputWithButton__button`.
+- Remove `boron` modifier in `Button`, `ButtonIcon` components and
+  replace `boron` by `helium`.
+- Add new `Maax` fonts.
+
+  If you use hot-dev-server, update the headers in your configuration file:
+
+```js
+// For example, with Webpack:
+const devServer = new WebpackDevServer(compiler, {
+  …
+  headers: {
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
+    "Access-Control-Allow-Headers": "X-Requested-With, content-type, Authorization",
+  }
+});
+```
+
+  `kitten-components` exposes now its fonts paths:
+
+```js
+import kittenComponents from 'kitten-components'
+
+const resolvingPaths = kittenComponents.jsPaths
+                       .concat(appJsPath)
+                       .concat(nodeModulesPath)
+                       .concat(kittenComponents.imagesPaths)
+                       .concat(kittenComponents.fontsPaths)
+```
+
+  Include the fonts path in your loaders:
+
+```js
+// Update module loaders.
+module: {
+  loaders: [
+    {
+      test: /\.(svg|png|jpe?g)$/,
+      loader: 'file?name=images/[name].[ext]',
+      include: /icons/, // Add images folders.
+    },
+    {
+      test: /\.(woff|woff2|eot|ttf|svg)$/,
+      loader: 'file?name=fonts/[name].[ext]',
+      include: /maax/, // Add fonts folders.
+    },
+    …
+  ]
+}
+```
+
+- Default colors have changed. To keep the original default colors:
+
+```css
+$k-colors: map-merge($k-colors, (
+  'font-1': #333,
+
+  'primary-1': #4a84ff,
+  'primary-2': #3b75f0,
+  'primary-3': #2c66e1,
+  'primary-4': #cadbfd,
+  'primary-5': #ecf2ff,
+  'primary-6': #f6f9ff,
+
+  'tertiary-1': #68ffa0,
+
+  'valid': #70c050,
+  'error': #ff4146,
+  'error-2': #ffecec,
+));
+```
+
+Features:
+- Update `modifier` on `ButtonQuestionMarkIcon` component with styleguide V2.
+- Update `Tour` component with styleguide V2.
+- Update `font` on `Stepper` component with styleguide V2.
+- Update `HorizontalNav` component with styleguide V2.
+- Add `tiny` props in `TagButton` component.
+- Update `TagButton` and `PaymentButton` components with styleguide V2.
+- Update `Select` component with styleguide V2.
+- Update `Label` and `FormInfo` components.
+- Update `TabBar` component with styleguide V2.
+- Update `ProjectCard`, `ProjectSimilarCard` and `ProjectCreatorCard`
+  components with styleguide V2.
+- Update `Tooltip` and `StaticTooltip` components with styleguide V2.
+- Update `Alert` component with styleguide V2.
+- Update all `TextInput` component with styleguide V2.
+- Update `ButtonImageWithText` component with styleguide V2.
+- Update colors buttons.
+- Update `Title` and `Paragraph` with styleguide V2.
+- Add `regular` font on `radioButton` and `Checkbox` components.
+- Update `TagList` component with styleguide V2.
+- Add new "MDC" colors.
+- Introduce new `valid-2` and `error-2` colors.
+- Add `k-u-margin-none` utility.
+
+Fixes:
+- Update styles on `LocationInput`.
+- Add missing input checked disabled background-image for `RadioButton`
+  component.
+- Use `k-u-weight-regular` instead of `k-u-strong` in `ProjectCard` component.
+
+## [14.6.0] - 2017-11-15
+
+Features:
+- Add `onClose` prop to `Alert` component.
+- Update placeholder `font-weight` on `LocationInput` component.
+- Update `font-weight` on `LinkBox` component.
+- Update error `line-height` on `FormInfo` component.
+
+Fix:
+- Use `k-u-weight-regular` instead of `k-u-strong` in `ProjectCard` component.
+
 ## [14.5.0] - 2017-11-10
 
 Features:

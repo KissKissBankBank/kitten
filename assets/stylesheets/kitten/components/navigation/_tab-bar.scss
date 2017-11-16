@@ -33,20 +33,20 @@
 
 @mixin k-TabBar($options) {
   // Fonts.
-  $font: 'bold-uppercase';
-  $font-step: -4;
+  $font: 'regular';
+  $font-step: -2; // 12px
   $line-height: 1.5;
 
   // Colors.
   $color: map-get($k-colors, 'primary-5');
-  $current-color: #fff;
+  $current-color: map-get($k-colors, 'background-1');
   $background-color: map-get($k-colors, 'primary-1');
   $border-color: map-get($k-colors, 'primary-4');
 
   // Size.
   $round-size: k-px-to-rem(25px);
-  $border-width: 1px;
-  $current-border-width: 2px;
+  $border-width: k-px-to-rem(1px);
+  $current-border-width: k-px-to-rem(2px);
   $gutter: k-px-to-rem(10px);
 
   .k-TabBar__nav {

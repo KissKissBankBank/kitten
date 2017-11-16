@@ -44,7 +44,7 @@ class ProjectCardComponent extends React.Component {
                      margin={ false }
                      normalLineHeight
                      modifier="quaternary">
-            <span className="k-u-strong">{ ownerName }</span><br />
+            <span className="k-u-weight-regular">{ ownerName }</span><br />
             { ownerLocation }
           </Paragraph>
 
@@ -54,7 +54,7 @@ class ProjectCardComponent extends React.Component {
         <Marger top="1" bottom="1.5" className="k-ProjectCard__grid--flex">
           <Title className="k-ProjectCard__grid--flex__item-fluid"
                  margin={ false }
-                 modifier="quaternary"
+                 modifier="quinary"
                  tag="p">
             { title }
           </Title>
@@ -121,7 +121,7 @@ class ProjectCardComponent extends React.Component {
                      modifier="quaternary"
                      className={ classNames('k-u-margin-left-double',
                                             'k-u-color-primary1',
-                                            'k-u-strong') }>
+                                            'k-u-weight-regular') }>
             { this.props.progress }&nbsp;%
           </Paragraph>
         </Marger>

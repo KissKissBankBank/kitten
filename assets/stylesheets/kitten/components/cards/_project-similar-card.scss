@@ -32,9 +32,16 @@
 ///   </div>
 
 @mixin k-ProjectSimilarCard {
-  $lightFont: 'light';
-  $font: 'regular';
-  $boldFont: 'bold';
+  $info-font: 'light';
+  $info-size: -1; // 14px
+
+  $header-font: 'regular';
+  $header-size: -1; // 14px
+
+  $info-value-font: 'bold';
+  $info-value-size: 0; // 16px
+
+  $line-height: normal;
 
   .k-ProjectSimilarCard {
     overflow: visible;
@@ -59,8 +66,10 @@
   .k-ProjectSimilarCard__refresh__link {
     text-decoration: none;
     color: map-get($k-colors, 'primary-1');
-    @include k-typographyFont($font);
-    @include k-typographyFontSize(-1, normal);
+
+    @include k-typographyFont($header-font);
+    @include k-typographyFontSize($header-size, $line-height);
+
     cursor: pointer;
   }
 
@@ -71,8 +80,8 @@
   }
 
   .k-ProjectSimilarCard__header--step {
-    @include k-typographyFont($boldFont);
-    @include k-typographyFontSize(-1, normal);
+    @include k-typographyFont($header-font);
+    @include k-typographyFontSize($header-size, $line-height);
 
     margin-right: k-px-to-rem(10px);
   }
@@ -88,13 +97,14 @@
 
   .k-ProjectSimilarCard__info {
     width: percentage(1/3);
-    @include k-typographyFont($lightFont);
-    @include k-typographyFontSize(-1, normal);
+
+    @include k-typographyFont($info-font);
+    @include k-typographyFontSize($info-size, $line-height);
   }
 
   .k-ProjectSimilarCard__info__value {
-    @include k-typographyFont($boldFont);
-    @include k-typographyFontSize(0, normal);
+    @include k-typographyFont($info-value-font);
+    @include k-typographyFontSize($info-value-size, $line-height);
   }
 
   .k-ProjectSimilarCard__loading {
