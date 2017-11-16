@@ -137,6 +137,7 @@ const config = {
     // Make sure `node_modules` directory is declared with an absolute path.
     root: nodeModulesPath.concat(kittenComponents.jsPaths)
                          .concat(kittenComponents.imagesPaths)
+                         .concat(kittenComponents.fontsPaths)
   },
   resolveLoader: {
     // Add the absolute path to the `node_modules` directory to make sure
@@ -163,7 +164,13 @@ const config = {
     loaders: [
       {
         test: /\.(svg|png|jpe?g)$/,
-        loaders: ['file?name=images/[name].[ext]'],
+        loader: 'file?name=images/[name].[ext]',
+        include: /icons/, // Add images folders.
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|svg)$/,
+        loader: 'file?name=fonts/[name].[ext]',
+        include: /maax/, // Add fonts folders.
       },
       {
         test: /\.jsx?$/,

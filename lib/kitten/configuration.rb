@@ -30,10 +30,7 @@ module Kitten
           id: 'brand-colors',
           label: 'Brand colors',
           components: [
-            { path: 'branding/colors/common', name: 'Common' },
-            { path: 'branding/colors/kisskissbankbank', name: 'KissKissBankBank' },
-            { path: 'branding/colors/hellomerci', name: 'hellomerci' },
-            { path: 'branding/colors/lendopolis', name: 'LENDOPOLIS' },
+            { path: 'branding/colors', name: '' },
           ],
         }
       ]

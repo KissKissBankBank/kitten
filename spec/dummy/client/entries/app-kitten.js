@@ -46,6 +46,9 @@ import {
 import { KarlProjectSimilarLoader }
   from 'kitten/karl/cards/project-similar-card'
 
+// Colors
+import { KarlColors } from 'kitten/karl/colors/karl-colors'
+
 // Dev
 import { DevGrid } from 'kitten/components/dev/dev-grid'
 
@@ -294,6 +297,9 @@ ReactOnRails.register({
   KarlButtonIconWordsLeft,
   KarlButtonIconWordsRight,
   KarlPaymentButtons,
+
+  // Colors
+  KarlColors,
 
   // Cards
   ProjectCard,

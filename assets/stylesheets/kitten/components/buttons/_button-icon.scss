@@ -10,7 +10,6 @@
 /// - `.k-ButtonIcon--helium`
 /// - `.k-ButtonIcon--lithium`
 /// - `.k-ButtonIcon--beryllium`
-/// - `.k-ButtonIcon--boron`
 /// - `.k-ButtonIcon--carbon`
 /// - `.k-ButtonIcon--facebook`
 /// - `.k-ButtonIcon--twitter`
@@ -113,11 +112,6 @@
   .k-ButtonIcon--beryllium {
     @include k-buttonColorBase($beryllium-colors);
     @include k-buttonSvg($beryllium-colors);
-  }
-
-  .k-ButtonIcon--boron {
-    @include k-buttonColorBase($boron-colors);
-    @include k-buttonSvg($boron-colors);
   }
 
   .k-ButtonIcon--carbon {

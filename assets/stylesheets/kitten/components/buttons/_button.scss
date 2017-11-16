@@ -14,7 +14,6 @@
 /// - `.k-Button--helium`
 /// - `.k-Button--lithium`
 /// - `.k-Button--beryllium`
-/// - `.k-Button--boron`
 /// - `.k-Button--carbon`
 ///
 /// Available size modifiers:
@@ -41,7 +40,7 @@
 @import 'default-buttons-colors';
 
 @mixin k-Button {
-  $font: 'bold-uppercase';
+  $font: 'regular';
   $border-size: 1px;
 
   // Size settings button.
@@ -64,7 +63,7 @@
 
   // Button font-size is computed using a modular scale and a defined step of this
   // scale.
-  $button-step: -2;
+  $button-step: -1; // 14px
 
   // SVG element default settings.
   $icon-width: k-px-to-rem(12px);
@@ -120,12 +119,6 @@
     @include k-buttonSvg($beryllium-colors);
   }
 
-  // TODO: rename all buttons name following the same naming strategy.
-  .k-Button--boron {
-    @include k-buttonColorBase($boron-colors);
-    @include k-buttonSvg($boron-colors);
-  }
-
   .k-Button--carbon {
     @include k-buttonColorBase($carbon-colors);
     @include k-buttonSvg($carbon-colors);
@@ -158,7 +151,6 @@
   }
 
   // Button--icon
-
   .k-Button--icon {
     padding: 0 $button-radius 0 0;
     min-width: 0;
