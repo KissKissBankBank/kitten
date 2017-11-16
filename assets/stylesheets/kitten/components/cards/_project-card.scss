@@ -63,7 +63,7 @@
   $status-primary-color: map-get($k-colors, 'background-1');
 
   // Staus tertiary background
-  $status-tertiary-background: map-get($k-colors, 'tertiary-1');
+  $status-tertiary-background: map-get($k-colors, 'valid');
   $status-tertiary-color: map-get($k-colors, 'font-1');
 
   // Staus grey background
