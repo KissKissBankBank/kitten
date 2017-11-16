@@ -22,6 +22,9 @@
 
   $font: 'light';
 
+  $text-size: -1; // 14px
+  $line-height: 1.56;
+
   $border-size: 1px;
   $border-radius: k-px-to-rem(8px);
 
@@ -39,5 +42,10 @@
     background-color: $background-color;
     border-radius: $border-radius;
     border: $border-size solid $border-color;
+  }
+  .k-InformationBox__content {
+   @include k-typographyFontSize($text-size, $line-height);
+
+    margin: 0;
   }
 }
