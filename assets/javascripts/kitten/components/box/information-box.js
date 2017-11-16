@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { Component } from 'react'
+import { Marger } from 'kitten/components/layout/marger'
+import { Title } from 'kitten/components/typography/title'
+import { Paragraph } from 'kitten/components/typography/paragraph'
 import classNames from 'classnames'
 
-export class InformationBox extends React.Component {
+export class InformationBox extends Component {
   render() {
     const {
       title,
@@ -10,12 +13,22 @@ export class InformationBox extends React.Component {
     } = this.props
 
     return (
-      <div className="k-InformationBox" { ...other }>
+      <div className="k-InformationBox">
         <div className="k-InformationBox__container">
-          <p className="k-InformationBox__title">{ title }</p>
-          <div className="k-InformationBox__content">
+          <Title
+            margin={ false }
+            modifier="quaternary"
+            tag="p"
+          >
+            { title }
+          </Title>
+          <Paragraph
+            margin={ false }
+            modifier="quaternary"
+            tag="p"
+          >
             { children }
-          </div>
+          </Paragraph>
         </div>
       </div>
     )

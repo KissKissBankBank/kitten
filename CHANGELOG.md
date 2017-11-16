@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Update `InformationBox` component with new components.
+
 ## [15.0.0] - 2017-11-15
 
 Breaking changes:
