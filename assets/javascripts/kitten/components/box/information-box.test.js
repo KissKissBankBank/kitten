@@ -2,7 +2,6 @@ import React from 'react'
 import { expect } from 'chai'
 import { shallow, mount } from 'enzyme'
 import { Title } from 'kitten/components/typography/title'
-import { Paragraph } from 'kitten/components/typography/paragraph'
 import { InformationBox } from 'kitten/components/box/information-box'
 
 describe('<InformationBox />', () => {
