@@ -38,12 +38,6 @@
 @mixin k-ButtonIcon {
   $border-size: 2px;
 
-  // Size settings.
-  $button-size-micro: 30px - ($border-size * 2);
-  $button-size-tiny: 40px - ($border-size * 2);
-  $button-size: 50px - ($border-size * 2);
-  $button-size-big: 70px - ($border-size * 2);
-
   // Colors.
   $hydrogen-colors: (
     base: (
@@ -344,9 +338,9 @@
 
   // Size settings.
   $button-size-micro: 20px - ($border-size * 2);
-  $button-size-tiny: 30px - ($border-size * 2);
-  $button-size: 40px - ($border-size * 2);
-  $button-size-big: 50px - ($border-size * 2);
+  $button-size-tiny: 40px - ($border-size * 2);
+  $button-size: 50px - ($border-size * 2);
+  $button-size-big: 70px - ($border-size * 2);
 
   // SVG element default settings.
   $icon-width: k-px-to-rem(12px);
@@ -360,6 +354,7 @@
   .k-ButtonIcon {
     @include k-buttonBase;
     @include k-buttonRounded($button-size, $icon-width, $icon-height);
+
   }
 
   .k-ButtonIcon__svg {
@@ -375,6 +370,10 @@
     .k-ButtonIcon__svg__stroke {
       transition: stroke $transition-speed;
     }
+  }
+
+  .k-ButtonIcon__rounded {
+    @include k-buttonRounded($button-size, $icon-width, $icon-height);
   }
 
   // Mirror rotate
