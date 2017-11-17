@@ -118,6 +118,7 @@
     flex-direction: column;
     border-left: $aside-border-width solid $aside-border-color;
     background-color: $aside-background;
+    width: 100%;
 
     .k-SideGrid--asideStart & {
       border-left: none;
