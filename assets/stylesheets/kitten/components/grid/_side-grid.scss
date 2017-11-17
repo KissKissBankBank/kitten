@@ -116,9 +116,9 @@
   .k-SideGrid__asideContent {
     display: flex;
     flex-direction: column;
+    flex: 1;
     border-left: $aside-border-width solid $aside-border-color;
     background-color: $aside-background;
-    flex: 1;
 
     .k-SideGrid--asideStart & {
       border-left: none;
