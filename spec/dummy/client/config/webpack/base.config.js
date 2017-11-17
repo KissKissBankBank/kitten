@@ -46,12 +46,6 @@ const baseConfig = {
       {
         test: /\.(svg|png|jpe?g)$/,
         loader: 'file?name=images/[name].[ext]',
-        include: /icons/, // Add images folders.
-      },
-      {
-        test: /\.(woff|woff2|eot|ttf|svg)$/,
-        loader: 'file?name=fonts/[name].[ext]',
-        include: /maax/, // Add fonts folders.
       },
       {
         test: /\.json$/,
