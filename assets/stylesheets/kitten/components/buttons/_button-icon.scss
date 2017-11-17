@@ -35,8 +35,6 @@
 ///          7 2.927z"/></svg>
 ///   </button>
 
-@import 'default-buttons-colors';
-
 @mixin k-ButtonIcon {
   $border-size: 1px;
 
@@ -94,44 +92,37 @@
   }
 
   // Colors modifiers.
+
   .k-ButtonIcon--hydrogen {
-    @include k-buttonColorBase($hydrogen-colors);
-    @include k-buttonSvg($hydrogen-colors);
+    @include k-buttonColors('hydrogen');
   }
 
   .k-ButtonIcon--helium {
-    @include k-buttonColorBase($helium-colors);
-    @include k-buttonSvg($helium-colors);
+    @include k-buttonColors('helium');
   }
 
   .k-ButtonIcon--lithium {
-    @include k-buttonColorBase($lithium-colors);
-    @include k-buttonSvg($lithium-colors);
+    @include k-buttonColors('lithium');
   }
 
   .k-ButtonIcon--beryllium {
-    @include k-buttonColorBase($beryllium-colors);
-    @include k-buttonSvg($beryllium-colors);
+    @include k-buttonColors('beryllium');
   }
 
   .k-ButtonIcon--carbon {
-    @include k-buttonColorBase($carbon-colors);
-    @include k-buttonSvg($carbon-colors);
+    @include k-buttonColors('carbon');
   }
 
   .k-ButtonIcon--facebook {
-    @include k-buttonColorBase($facebook-colors);
-    @include k-buttonSvg($facebook-colors);
+    @include k-buttonColors('facebook');
   }
 
   .k-ButtonIcon--twitter {
-    @include k-buttonColorBase($twitter-colors);
-    @include k-buttonSvg($twitter-colors);
+    @include k-buttonColors('twitter');
   }
 
   .k-ButtonIcon--linkedin {
-    @include k-buttonColorBase($linkedin-colors);
-    @include k-buttonSvg($linkedin-colors);
+    @include k-buttonColors('linkedin');
   }
 
   // Sizes modifiers.

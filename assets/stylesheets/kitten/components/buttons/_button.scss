@@ -37,8 +37,6 @@
 ///    My button
 ///  </button>
 
-@import 'default-buttons-colors';
-
 @mixin k-Button {
   $font: 'regular';
   $border-size: 1px;
@@ -100,28 +98,23 @@
 
   // Colors modifiers.
   .k-Button--hydrogen {
-    @include k-buttonColorBase($hydrogen-colors);
-    @include k-buttonSvg($hydrogen-colors);
+    @include k-buttonColors('hydrogen');
   }
 
   .k-Button--helium {
-    @include k-buttonColorBase($helium-colors);
-    @include k-buttonSvg($helium-colors);
+    @include k-buttonColors('helium');
   }
 
   .k-Button--lithium {
-    @include k-buttonColorBase($lithium-colors);
-    @include k-buttonSvg($lithium-colors);
+    @include k-buttonColors('lithium');
   }
 
   .k-Button--beryllium {
-    @include k-buttonColorBase($beryllium-colors);
-    @include k-buttonSvg($beryllium-colors);
+    @include k-buttonColors('beryllium');
   }
 
   .k-Button--carbon {
-    @include k-buttonColorBase($carbon-colors);
-    @include k-buttonSvg($carbon-colors);
+    @include k-buttonColors('carbon');
   }
 
   // Size modifiers.
