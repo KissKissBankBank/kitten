@@ -5,6 +5,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Breaking change: Replace `valid-2` by `valid`.
+- Feature: Update `line-height` on `Title` component.
+- Breaking change: The fonts folder has been removed.
+  Use external CSS to load fonts. You can revert the previously breaking change
+  (`Add new Maax fonts.`).
 
 ## [15.0.0] - 2017-11-15
 

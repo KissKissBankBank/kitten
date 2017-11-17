@@ -8,5 +8,4 @@ rm -fr public/assets
 rm -f app/assets/webpack/*.js
 rm -f app/assets/webpack/*.css
 rm -f app/assets/webpack/images/*
-rm -f app/assets/webpack/fonts/*
 rm -f client/npm-debug.log.*
