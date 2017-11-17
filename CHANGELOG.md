@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Update `InformationBox` component with `Title` component.
 - Breaking change: Replace `valid-2` by `valid`.
 - Feature: Update `line-height` on `Title` component.
 - Breaking change: The fonts folder has been removed.

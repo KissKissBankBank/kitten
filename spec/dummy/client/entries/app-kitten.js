@@ -6,6 +6,7 @@ import ReactOnRails from 'react-on-rails'
 import { DocLinkBox } from 'kitten/components/box/doc-link-box'
 import { InformationBox } from 'kitten/components/box/information-box'
 import { LinkBox } from 'kitten/components/box/link-box'
+import { KarlInformationBox } from 'kitten/karl/box/information-box'
 
 // Buttons
 import { Button } from 'kitten/components/buttons/button'
@@ -280,6 +281,7 @@ ReactOnRails.register({
   DocLinkBox,
   InformationBox,
   LinkBox,
+  KarlInformationBox,
 
   // Buttons
   Button,

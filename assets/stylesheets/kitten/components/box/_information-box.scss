@@ -9,8 +9,6 @@
 /// example html
 ///   <div class="k-InformationBox">
 ///     <div className="k-InformationBox__container">
-///       <p className="k-InformationBox__title"> … </p>
-///       <div className="k-InformationBox__content">
 ///         …
 ///       </div>
 ///     </div>
@@ -36,22 +34,9 @@
              k-px-to-rem(20px)
              k-px-to-rem(20px)
              k-px-to-rem(20px);
-
     color: $color;
     background-color: $background-color;
     border-radius: $border-radius;
     border: $border-size solid $border-color;
-  }
-
-  .k-InformationBox__title {
-    @include k-typographyFontSize(4);
-
-    margin: 0;
-  }
-
-  .k-InformationBox__content {
-    @include k-typographyFontSize(-1, 1.56);
-
-    margin: 0;
   }
 }

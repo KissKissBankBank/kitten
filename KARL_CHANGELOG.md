@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `KarlInformationBox` example.
 - Feature: Extract button colors into a specific configuration file.
 - Feature: Update grid and text for `Title` examples.
 
