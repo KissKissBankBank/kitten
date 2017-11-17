@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Update `line-height` on `Title` component.
 - Breaking change: The fonts folder has been removed.
   Use external CSS to load fonts. You can revert the previously breaking change
   (`Add new Maax fonts.`).
