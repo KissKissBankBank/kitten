@@ -4,7 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Fix `k-SideGrid__asideContent` size to make children get the
+## [16.0.1] - 2017-11-17
+
+Fix:
+- Fix `k-SideGrid__asideContent` size to make children get the
   proper width.
 
 ## [16.0.0] - 2017-11-17
