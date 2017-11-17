@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [16.0.1] - 2017-11-17
+
+No changes.
+
 ## [16.0.0] - 2017-11-17
 
 Features:
