@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Replace `valid-2` by `valid`.
+- Breaking change: Replace `valid-2` by `valid`.
 
 ## [15.0.0] - 2017-11-15
 
