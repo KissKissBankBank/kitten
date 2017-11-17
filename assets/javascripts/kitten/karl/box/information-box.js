@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { Marger } from 'kitten/components/layout/marger'
 import { Title } from 'kitten/components/typography/title'
 import { Paragraph } from 'kitten/components/typography/paragraph'
 import { InformationBox } from 'kitten/components/box/information-box'

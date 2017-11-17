@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { Marger } from 'kitten/components/layout/marger'
 import { Title } from 'kitten/components/typography/title'
 import classNames from 'classnames'
 
