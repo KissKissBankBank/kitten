@@ -31,8 +31,6 @@
 ///     <svg class="k-TagButton__icon" />
 ///   </button>
 
-@import 'default-buttons-colors';
-
 @mixin k-TagButton {
   $font: 'regular';
   $border-size: 1px;
@@ -71,7 +69,7 @@
   }
 
   .k-TagButton--hydrogen {
-    @include k-buttonColorBase($hydrogen-colors);
+    @include k-buttonColors('hydrogen', (svg: false));
   }
 
   // Size modifier.
@@ -91,7 +89,7 @@
 
   // Icon modifier.
   .k-TagButton--icon {
-    @include k-buttonColorBase($hydrogen-colors);
+    @include k-buttonColors('hydrogen', (svg: false));
   }
 
   // svg modifier.

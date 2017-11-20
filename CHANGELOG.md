@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Update `ProjectCard` component with styleguide V2.
+- Feature: Add `k-buttonColors` helper to manage button colors by modifier.
 
 ## [16.0.1] - 2017-11-17
 
