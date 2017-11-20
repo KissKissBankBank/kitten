@@ -4,7 +4,6 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Littles fixes.
 - Feature: Update `modifier` on `ButtonQuestionMarkIcon` component with
   styleguide V2
 - Feature: Update `Tour` component with styleguide V2.

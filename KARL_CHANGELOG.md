@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Clean examples syntaxe.
 - Feature: Add `tiny` prop on `TagButton` example.
 - Feature: Update `karl-Title` and `karl-Section__title` class.
 - Feature: Update `KarlAlert` example with styleguide V2.
