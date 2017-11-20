@@ -34,11 +34,6 @@ const devServer = new WebpackDevServer(compiler, {
     chunks: false,
     children: false,
   },
-  headers: {
-    "Access-Control-Allow-Origin": "*",
-    "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
-    "Access-Control-Allow-Headers": "X-Requested-With, content-type, Authorization",
-  }
 });
 
 // Start node server on `devServerPort`.

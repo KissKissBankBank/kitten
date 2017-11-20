@@ -83,31 +83,30 @@ $k-fonts: (
 // Colors
 
 $k-colors: (
-  'font-1': #222,
-  'font-2': #b8b8b8,
-  'background-1': #fff,
-  'background-2': #fbfbfb,
-  'background-3': #f6f6f6,
-  'line-1': #eee,
-  'line-2': #d8d8d8,
+  'font-1': #222, // Dark Grey
+  'font-2': #b8b8b8, // Semi Dark Grey
+  'background-1': #fff, // White
+  'background-2': #fbfbfb, // Extra Light Grey
+  'background-3': #f6f6f6, // Light Grey
+  'line-1': #eee, // Semi Light Grey
+  'line-2': #d8d8d8, // Grey
 
-  'primary-1': #19bbff,
-  'primary-2': #0aacf0,
-  'primary-3': #009de1,
-  'primary-4': #baeaff,
-  'primary-5': #e8f8ff,
-  'primary-6': #f3fbff,
+  'primary-1': #19bbff, // Primary
+  'primary-2': #0aacf0, // Semi Dark Primary
+  'primary-3': #009de1, // Dark Primary
+  'primary-4': #baeaff, // Light Primary
+  'primary-5': #e8f8ff, // Extra Light Primary
+  'primary-6': #f3fbff, // Thin Primary
 
-  'secondary-1': #4bfffa,
-  'secondary-2': #3cf0eb,
-  'secondary-3': #2de1dc,
+  'secondary-1': #4bfffa, // #4bfffa
+  'secondary-2': #3cf0eb, // #3cf0eb
+  'secondary-3': #2de1dc, // #2de1dc
 
-  'tertiary-1': #effaf1,
+  'tertiary-1': #effaf1, // Light Green
   'tertiary-2': #59f091,
   'tertiary-3': #4ae191,
 
-  'valid': #5fcd78,
-  'valid-2': #61d079,
-  'error': #ff0046,
-  'error-2': #ffe5ec,
+  'valid': #61d079, // Green
+  'error': #ff0046, // Red
+  'error-2': #ffe5ec, // Light Red
 ) !default;

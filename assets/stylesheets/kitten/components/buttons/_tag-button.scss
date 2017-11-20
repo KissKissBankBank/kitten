@@ -44,44 +44,9 @@
   $tag-button-line-height-tiny: k-px-to-rem($tag-button-size-tiny);
   $tag-button-line-height: k-px-to-rem($tag-button-size);
 
-
   // Deprecated
   $tag-button-min-width-big: 80px - ($border-size * 2);
   $tag-button-line-height-big: 50px - ($border-size * 2);
-
-  // Colors.
-  $hydrogen-colors: (
-    base: (
-      color: map-get($k-colors, 'font-1'),
-      border-color: map-get($k-colors, 'line-2'),
-      background-color: map-get($k-colors, 'background-1'),
-    ),
-    hover: (
-      color: map-get($k-colors, 'primary-1'),
-      border-color: map-get($k-colors, 'primary-4'),
-      background-color: map-get($k-colors, 'background-1'),
-    ),
-    focus: (
-      color: map-get($k-colors, 'primary-1'),
-      border-color: map-get($k-colors, 'primary-4'),
-      background-color: map-get($k-colors, 'background-1'),
-    ),
-    active: (
-      color: map-get($k-colors, 'background-1'),
-      border-color: map-get($k-colors, 'primary-3'),
-      background-color: map-get($k-colors, 'primary-3'),
-    ),
-    is-selected: (
-      color: map-get($k-colors, 'background-1'),
-      border-color: map-get($k-colors, 'primary-1'),
-      background-color: map-get($k-colors, 'primary-1'),
-    ),
-    disabled: (
-      color: map-get($k-colors, 'font-2'),
-      border-color: map-get($k-colors, 'line-2'),
-      background-color: map-get($k-colors, 'line-1'),
-    ),
-  );
 
   // The tag button has a radius of .25rem
   $tag-button-radius: .25rem;
@@ -104,7 +69,7 @@
   }
 
   .k-TagButton--hydrogen {
-    @include k-buttonColorBase($hydrogen-colors);
+    @include k-buttonColors('hydrogen', (svg: false));
   }
 
   // Size modifier.
@@ -124,7 +89,7 @@
 
   // Icon modifier.
   .k-TagButton--icon {
-    @include k-buttonColorBase($hydrogen-colors);
+    @include k-buttonColors('hydrogen', (svg: false));
   }
 
   // svg modifier.

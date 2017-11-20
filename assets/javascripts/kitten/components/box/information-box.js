@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { Component } from 'react'
+import { Title } from 'kitten/components/typography/title'
 import classNames from 'classnames'
 
-export class InformationBox extends React.Component {
+export class InformationBox extends Component {
   render() {
     const {
       title,
@@ -12,10 +13,14 @@ export class InformationBox extends React.Component {
     return (
       <div className="k-InformationBox" { ...other }>
         <div className="k-InformationBox__container">
-          <p className="k-InformationBox__title">{ title }</p>
-          <div className="k-InformationBox__content">
-            { children }
-          </div>
+          <Title
+            margin={ false }
+            modifier="quaternary"
+            tag="p"
+          >
+            { title }
+          </Title>
+          { children }
         </div>
       </div>
     )
