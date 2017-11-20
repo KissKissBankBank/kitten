@@ -10,6 +10,7 @@ $k-module: null;
 @import 'kitten/helpers';
 
 // Default config
+@import 'kitten/fonts';
 @import 'kitten/default-config';
 
 // Dependencies that have te be loaded after the default config

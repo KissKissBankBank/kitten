@@ -54,7 +54,6 @@ const devServer = new WebpackDevServer(compiler, {
   }
 });
 ```
-
   `kitten-components` exposes now its fonts paths:
 
 ```js
@@ -66,7 +65,6 @@ const resolvingPaths = kittenComponents.jsPaths
                        .concat(kittenComponents.imagesPaths)
                        .concat(kittenComponents.fontsPaths)
 ```
-
   Include the fonts path in your loaders:
 
 ```js
@@ -87,7 +85,6 @@ module: {
   ]
 }
 ```
-
 - Default colors have changed. To keep the original default colors:
 
 ```css

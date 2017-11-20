@@ -18,7 +18,7 @@
   $font: 'bold';
 
   .k-Title {
-    @include k-typographyFont($font);
+    @include k-typographyFont($font-bold);
   }
 
   .k-Title--primary {

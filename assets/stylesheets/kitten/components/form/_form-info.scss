@@ -22,13 +22,11 @@
 @mixin k-FormInfo {
   // Label
   $font: 'regular';
-
   $label-size: 0; // 16px
   $label-color: map-get($k-colors, 'font-1');
 
   // Error
-  $font-error: 'regular';
-  $font-size-error: -2;
+  $font-size-error: -2; // 12px
   $color-error: map-get($k-colors, 'error');
   $error-line-height: normal;
 

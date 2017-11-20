@@ -137,7 +137,7 @@
 
     .k-RadioButton__input.is-error:checked + &:before {
       position: relative;
-
+      
       background: $error-color
                   url($input-checked)
                   no-repeat
