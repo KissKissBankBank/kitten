@@ -4,7 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `k-buttonColors` helper to manage button colors by modifier.
+## [16.1.0] - 2017-11-20
+
+Feature:
+- Add `k-buttonColors` helper to manage button colors by modifier.
 
 ## [16.0.1] - 2017-11-17
 
