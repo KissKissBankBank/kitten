@@ -296,7 +296,7 @@ ProjectCardComponent.defaultProps = {
   tagLists: null,
   tags: null,
   tooltipText: null,
-  tooltipIconColor: '#4a84ff',
+  tooltipIconColor: '#19bbff',
   scoreValue: null,
   scoreBackgroundColor: null,
   title: 'Title',
