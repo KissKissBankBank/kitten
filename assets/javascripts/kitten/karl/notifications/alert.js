@@ -17,7 +17,8 @@ const markdownRenderers = {
       <a
         className={ classNames('k-Alert__link',
                                'k-Alert__strong') }
-        href={ props.href }>{ props.children }</a>
+        href={ props.href }>{ props.children }
+      </a>
     )
   },
   List: props => {

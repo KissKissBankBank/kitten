@@ -6,6 +6,7 @@ import ReactOnRails from 'react-on-rails'
 import { DocLinkBox } from 'kitten/components/box/doc-link-box'
 import { InformationBox } from 'kitten/components/box/information-box'
 import { LinkBox } from 'kitten/components/box/link-box'
+import { KarlInformationBox } from 'kitten/karl/box/information-box'
 
 // Buttons
 import { Button } from 'kitten/components/buttons/button'
@@ -45,6 +46,9 @@ import {
 } from 'kitten/karl/cards/similar-projects-card'
 import { KarlProjectSimilarLoader }
   from 'kitten/karl/cards/project-similar-card'
+
+// Colors
+import { KarlColors } from 'kitten/karl/colors/karl-colors'
 
 // Dev
 import { DevGrid } from 'kitten/components/dev/dev-grid'
@@ -277,6 +281,7 @@ ReactOnRails.register({
   DocLinkBox,
   InformationBox,
   LinkBox,
+  KarlInformationBox,
 
   // Buttons
   Button,
@@ -294,6 +299,9 @@ ReactOnRails.register({
   KarlButtonIconWordsLeft,
   KarlButtonIconWordsRight,
   KarlPaymentButtons,
+
+  // Colors
+  KarlColors,
 
   // Cards
   ProjectCard,

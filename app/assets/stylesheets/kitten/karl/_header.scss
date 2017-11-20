@@ -1,4 +1,6 @@
 // Header
+$title-font: 'bold';
+$title-size: 9; // 46px
 
 $header-height: k-px-to-rem(64px);
 $border-bottom: map-get($k-colors, 'font-1');
@@ -13,8 +15,8 @@ $border-bottom: map-get($k-colors, 'font-1');
 }
 
 .karl-Title {
-  @include k-typographyFont('bold');
-  @include k-typographyFontSize(9); // 46px
+  @include k-typographyFont($title-font);
+  @include k-typographyFontSize($title-size);
 
   text-align: center;
   margin-top: k-px-to-rem(80px);
