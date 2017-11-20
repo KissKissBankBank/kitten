@@ -4,6 +4,17 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [16.0.1] - 2017-11-17
+
+No changes.
+
+## [16.0.0] - 2017-11-17
+
+Features:
+- Add `KarlInformationBox` example.
+- Extract button colors into a specific configuration file.
+- Update grid and text for `Title` examples.
+
 ## [15.0.0] - 2017-11-15
 
 Features:

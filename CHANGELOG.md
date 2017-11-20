@@ -6,6 +6,23 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Update `ProjectCard` component with styleguide V2.
 
+## [16.0.1] - 2017-11-17
+
+Fix:
+- Fix `k-SideGrid__asideContent` size to make children get the
+  proper width.
+
+## [16.0.0] - 2017-11-17
+
+Breaking changes:
+- Replace `valid-2` by `valid`.
+- The fonts folder has been removed. Use external CSS to load fonts.
+  You can revert the previously breaking change (`Add new Maax fonts.`).
+
+Features:
+- Update `InformationBox` component with `Title` component.
+- Update `line-height` on `Title` component.
+
 ## [15.0.0] - 2017-11-15
 
 Breaking changes:

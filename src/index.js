@@ -42,15 +42,8 @@ var getImagesPaths = function() {
   ]
 }
 
-var getFontsPaths = function() {
-  return [
-    path.join(__dirname, '../assets/fonts'),
-  ]
-}
-
 module.exports = {
   scssPaths: getScssPaths(),
   jsPaths: getJsPaths(),
   imagesPaths: getImagesPaths(),
-  fontsPaths: getFontsPaths(),
 }
