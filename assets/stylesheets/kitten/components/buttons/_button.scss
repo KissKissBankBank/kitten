@@ -132,7 +132,7 @@
 
     &.k-Button--icon {
       .k-Button__icon {
-        @include k-buttonRounded($button-size-tiny, $icon-width, $icon-height);
+        @include k-buttonPadding($button-size, $icon-width, $icon-height);
       }
     }
   }
@@ -153,7 +153,7 @@
     min-width: 0;
 
     .k-Button__icon {
-      @include k-buttonRounded($button-size, $icon-width, $icon-height);
+      @include k-buttonPadding($button-size, $icon-width, $icon-height);
 
       box-sizing: content-box;
       display: inline-block;
@@ -168,11 +168,10 @@
     }
 
     .k-Button__icon--tiny {
-      @include k-buttonRounded(
-        $button-size-tiny,
-        $icon-width-tiny,
-        $icon-height-tiny
-      );
+      @include k-buttonPadding($button-size-tiny,
+                               $icon-width-tiny,
+                               $icon-height-tiny);
+
 
       box-sizing: content-box;
       display: inline-block;

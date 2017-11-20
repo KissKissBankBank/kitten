@@ -48,6 +48,9 @@
   $icon-width: k-px-to-rem(12px);
   $icon-height: k-px-to-rem(14px);
 
+  // Button radius
+  $button-radius: 0px;
+
   $transition-speed: .2s;
 
   // Btn animate transition
@@ -55,8 +58,9 @@
 
   .k-ButtonIcon {
     @include k-buttonBase;
-    @include k-buttonRounded($button-size, $icon-width, $icon-height);
+    @include k-buttonPadding($button-size, $icon-width, $icon-height);
 
+    border-radius: $button-radius;
   }
 
   .k-ButtonIcon__svg {
@@ -75,7 +79,7 @@
   }
 
   .k-ButtonIcon__rounded {
-    @include k-buttonRounded($button-size, $icon-width, $icon-height);
+    @include k-buttonPadding($button-size, $icon-width, $icon-height);
   }
 
   // Mirror rotate
@@ -132,8 +136,9 @@
 
   // Sizes modifiers.
   .k-ButtonIcon--micro {
-    $micro-size: k-px-to-rem(8px);
-    @include k-buttonRounded($button-size-micro, $micro-size, $micro-size);
+    $micro-size: k-px-to-rem(9px);
+    @include k-buttonRounded($button-size-micro);
+    @include k-buttonPadding($button-size-micro, $micro-size, $micro-size);
 
     .k-ButtonIcon__svg {
       width: $micro-size;
@@ -142,17 +147,17 @@
   }
 
   .k-ButtonIcon--tiny {
-    @include k-buttonRounded($button-size-tiny, $icon-width, $icon-height);
+    @include k-buttonPadding($button-size-tiny, $icon-width, $icon-height);
   }
 
   .k-ButtonIcon--big {
-    @include k-buttonRounded($button-size-big, $icon-width, $icon-height);
+    @include k-buttonPadding($button-size-big, $icon-width, $icon-height);
   }
 
   // Icon modifiers.
   .k-ButtonIcon--heart {
     $heart-size: k-px-to-rem(14px);
-    @include k-buttonRounded($button-size-tiny, $heart-size, $heart-size);
+    @include k-buttonPadding($button-size-tiny, $icon-width, $icon-height);
 
     .k-ButtonIcon__svg {
       width: $heart-size;
@@ -163,7 +168,7 @@
   .k-ButtonIcon--signup,
   .k-ButtonIcon--phone {
     $signup-size: k-px-to-rem(18px);
-    @include k-buttonRounded($button-size, $signup-size, $signup-size);
+    @include k-buttonPadding($button-size, $signup-size, $signup-size);
 
     .k-ButtonIcon__svg {
       width: $signup-size;
@@ -175,10 +180,9 @@
   .k-ButtonIcon--horizontalArrow {
     $horizontalArrow-width: k-px-to-rem(10px);
     $horizontalArrow-height: k-px-to-rem(7px);
-    @include k-buttonRounded($button-size-tiny,
+    @include k-buttonPadding($button-size-tiny,
                              $horizontalArrow-width,
-                             $horizontalArrow-height
-                            );
+                             $horizontalArrow-height);
 
     .k-ButtonIcon__svg {
       width: $horizontalArrow-width;
@@ -189,10 +193,10 @@
   .k-ButtonIcon--verticalArrow {
     $verticalArrow-width: k-px-to-rem(9px);
     $verticalArrow-height: k-px-to-rem(12px);
-    @include k-buttonRounded($button-size-tiny,
+    @include k-buttonPadding($button-size-tiny,
                              $verticalArrow-width,
-                             $verticalArrow-height
-                            );
+                             $verticalArrow-height);
+
 
     .k-ButtonIcon__svg {
       width: $verticalArrow-width;
@@ -202,7 +206,8 @@
 
   .k-ButtonIcon--checked--micro {
     $micro-size: k-px-to-rem(10px);
-    @include k-buttonRounded($button-size-micro, $micro-size, $micro-size);
+    @include k-buttonRounded($button-size-micro);
+    @include k-buttonPadding($button-size-micro, $micro-size, $micro-size);
 
     .k-ButtonIcon__svg {
       width: $micro-size;
@@ -212,7 +217,8 @@
 
   .k-ButtonIcon--cross {
     $cross-size: k-px-to-rem(8px);
-    @include k-buttonRounded($button-size-tiny, $cross-size, $cross-size);
+    @include k-buttonPadding($button-size-tiny, $cross-size, $cross-size);
+
 
     .k-ButtonIcon__svg {
       width: $cross-size;
@@ -221,7 +227,7 @@
   }
 
   .k-ButtonIcon--empty--micro {
-    @include k-buttonRounded($button-size-micro, 0, 0);
+    @include k-buttonPadding($button-size-micro, 0, 0);
   }
 
   // Misc modifiers.

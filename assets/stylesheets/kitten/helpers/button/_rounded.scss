@@ -15,13 +15,14 @@
 /// @example css - CSS output
 ///    border-radius: 1.25rem;
 
-@mixin k-buttonRounded($rounded) {
+@mixin k-buttonRounded($button-size) {
   // The button element is rounded.
   // So the radius is the button size / 2.
-  $button-radius: ($button-size + $border-size) / 2;
+  $button-size: k-px-to-rem($button-size);
+  $border-size: k-px-to-rem(2px);
 
-  @include k-buttonPadding($button-radius);
-  padding: $button-padding-y $button-padding-x;
+  $button-radius: ($button-size + $border-size * 2 ) / 2;
+
   border-radius: $button-radius;
 }
 
