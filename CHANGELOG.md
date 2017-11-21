@@ -5,6 +5,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Update all `Button` with new design styleguide V2.
+- Breaking change: Replace `k-ProjectCard__status--tertiaryBackground` by
+  `k-ProjectCard__status--validBackground`.
+- Feature: Update `ProjectCard` component with styleguide V2.
 
 ## [16.1.0] - 2017-11-20
 
