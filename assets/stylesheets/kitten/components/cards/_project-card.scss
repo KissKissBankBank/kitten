@@ -58,19 +58,19 @@
   $status-font: 'regular';
   $status-size: -1; // 14px
 
-  // Staus primary background
+  // Status primary background
   $status-primary-background: map-get($k-colors, 'primary-1');
   $status-primary-color: map-get($k-colors, 'background-1');
 
-  // Staus tertiary background
-  $status-tertiary-background: map-get($k-colors, 'valid');
-  $status-tertiary-color: map-get($k-colors, 'font-1');
+  // Status valid background
+  $status-valid-background: map-get($k-colors, 'valid');
+  $status-valid-color: map-get($k-colors, 'font-1');
 
-  // Staus grey background
+  // Status grey background
   $status-grey-background: map-get($k-colors, 'line-2');
   $status-grey-color: map-get($k-colors, 'background-1');
 
-  // Staus error background
+  // Status error background
   $status-error-background: map-get($k-colors, 'error');
   $status-error-color: map-get($k-colors, 'background-1');
 
@@ -177,9 +177,11 @@
     color: $status-primary-color;
   }
 
+  // DEPRECATED
+  .k-ProjectCard__status--validBackground,
   .k-ProjectCard__status--tertiaryBackground {
-    background-color: $status-tertiary-background;
-    color: $status-tertiary-color;
+    background-color: $status-valid-background;
+    color: $status-valid-color;
   }
 
   .k-ProjectCard__status--greyBackground {

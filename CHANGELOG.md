@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking change: Replace `k-ProjectCard__status--tertiaryBackground` by
+  `k-ProjectCard__status--validBackground`.
 - Feature: Update `ProjectCard` component with styleguide V2.
 - Feature: Add `k-buttonColors` helper to manage button colors by modifier.
 
