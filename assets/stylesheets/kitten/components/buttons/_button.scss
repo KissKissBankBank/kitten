@@ -41,18 +41,23 @@
   $font: 'regular';
   $border-size: 2px;
 
-  // Size settings button.
+  // Size settings with border.
+  $button-size-tiny-with-border: 40px;
+  $button-size-with-border: 50px;
+  $button-size-big-with-border: 70px;
+
+  // Size settings button without border.
   $button-size-tiny: 40px - ($border-size * 2);
   $button-size: 50px - ($border-size * 2);
   $button-size-big: 70px - ($border-size * 2);
 
-  $button-tiny-min-width: k-px-to-rem(110px);
+  $button-tiny-min-width: k-px-to-rem(160px);
   $button-tiny-line-height: k-px-to-rem($button-size-tiny);
 
-  $button-min-width: k-px-to-rem(160px);
+  $button-min-width: k-px-to-rem(200px);
   $button-line-height: k-px-to-rem($button-size);
 
-  $button-big-min-width: k-px-to-rem(200px);
+  $button-big-min-width: k-px-to-rem(220px);
   $button-big-line-height: k-px-to-rem($button-size-big);
 
   // Heigth settings button.
@@ -83,6 +88,7 @@
     radius: $button-radius,
     width: $button-big-min-width,
     icon-size: $button-size-big,
+    icon-size-with-border: $button-size-big-with-border,
     icon-width: $icon-width,
     icon-height: $icon-height,
   );

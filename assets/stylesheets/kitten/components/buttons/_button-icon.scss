@@ -38,7 +38,13 @@
 @mixin k-ButtonIcon {
   $border-size: 2px;
 
-  // Size settings.
+  // Size settings with border.
+  $button-size-micro-with-border: 20px;
+  $button-size-tiny-with-border: 40px;
+  $button-size-with-border: 50px;
+  $button-size-big-with-border: 70px;
+
+  // Size settings without border.
   $button-size-micro: 20px - ($border-size * 2);
   $button-size-tiny: 40px - ($border-size * 2);
   $button-size: 50px - ($border-size * 2);
@@ -137,7 +143,7 @@
   // Sizes modifiers.
   .k-ButtonIcon--micro {
     $micro-size: k-px-to-rem(9px);
-    @include k-buttonRounded($button-size-micro);
+    @include k-buttonRounded($button-size-micro-with-border);
     @include k-buttonPadding($button-size-micro, $micro-size, $micro-size);
 
     .k-ButtonIcon__svg {
@@ -206,7 +212,7 @@
 
   .k-ButtonIcon--checked--micro {
     $micro-size: k-px-to-rem(10px);
-    @include k-buttonRounded($button-size-micro);
+    @include k-buttonRounded($button-size-micro-with-border);
     @include k-buttonPadding($button-size-micro, $micro-size, $micro-size);
 
     .k-ButtonIcon__svg {
