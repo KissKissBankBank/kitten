@@ -301,6 +301,7 @@
   .is-searchable {
     &.is-open > .Select-control {
       cursor: text;
+      line-height: k-px-to-rem(46px);
     }
   }
 
@@ -324,6 +325,7 @@
   .is-searchable {
     &.is-focused:not(.is-open) > .Select-control {
       cursor: text;
+      line-height: k-px-to-rem(46px);
     }
   }
 
