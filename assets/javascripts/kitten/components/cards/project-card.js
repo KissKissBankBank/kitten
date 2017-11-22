@@ -54,7 +54,7 @@ class ProjectCardComponent extends React.Component {
         <Marger top="1" bottom="1.5" className="k-ProjectCard__grid--flex">
           <Title className="k-ProjectCard__grid--flex__item-fluid"
                  margin={ false }
-                 modifier="quinary"
+                 modifier="senary"
                  tag="p">
             { title }
           </Title>

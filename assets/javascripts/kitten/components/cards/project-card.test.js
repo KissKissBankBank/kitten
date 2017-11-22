@@ -245,16 +245,16 @@ describe('<ProjectCard />', () => {
     })
   })
 
-  describe('with statusTertiaryBackground prop', () => {
+  describe('with statusValidBackground prop', () => {
     const projectCard = mount(
       <ProjectCard statusContent="Custom status"
-                   statusTertiaryBackground />
+                   statusValidBackground />
     )
     const status = projectCard.find('.k-ProjectCard__status').first()
 
     it('has a good class', () => {
       expect(status)
-        .to.have.className('k-ProjectCard__status--tertiaryBackground')
+        .to.have.className('k-ProjectCard__status--validBackground')
     })
   })
 

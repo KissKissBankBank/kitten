@@ -13,6 +13,7 @@
 ///   <h3 class='k-Title k-Title--tertiary'>Title 3</h3>
 ///   <h4 class='k-Title k-Title--quaternary'>Title 4</h4>
 ///   <h5 class='k-Title k-Title--quinary'>Title 5</h5>
+///   <h6 class='k-Title k-Title--senary'>Title 6</h6>
 
 @mixin k-Title {
   $font: 'bold';
@@ -48,6 +49,11 @@
   .k-Title--quinary {
     @include k-typographyFontScale($font-step: 2,
                                    $font-step-on-media: 4,
+                                   $line-height: 1.2);
+  }
+  .k-Title--senary {
+    @include k-typographyFontScale($font-step: 2,
+                                   $font-step-on-media: 3,
                                    $line-height: 1.2);
   }
 
