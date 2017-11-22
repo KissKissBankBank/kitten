@@ -13,7 +13,7 @@ export const KarlButtonIconWordsLeft = (props) => {
 
 export const KarlButtonIconWordsRight = (props) => {
   return (
-    <Button className="k-Button--icon" iconOnRight={ true } { ...props }>
+    <Button className="k-Button--icon" iconOnRight { ...props }>
       Button
       <HeartIcon className="k-Button__icon" />
     </Button>

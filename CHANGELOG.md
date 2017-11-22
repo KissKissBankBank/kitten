@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `k-buttonPadding` helper to manage button paddings.
 - Feature: Update all `Button` with new design styleguide V2.
 - Breaking change: Replace `k-ProjectCard__status--tertiaryBackground` by
   `k-ProjectCard__status--validBackground`.

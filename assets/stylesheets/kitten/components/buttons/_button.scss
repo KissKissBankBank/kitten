@@ -42,14 +42,6 @@
   $border-size: 2px;
 
   // Size settings with border.
-  $button-size-micro-with-border: 20px;
-  $button-size-tiny-with-border: 40px;
-  $button-size-with-border: 50px;
-  $button-size-big-with-border: 70px;
-
-  // Size settings with border.
-  $button-size-tiny-with-border: 40px;
-  $button-size-with-border: 50px;
   $button-size-big-with-border: 70px;
 
   // Size settings button without border.
@@ -79,9 +71,6 @@
   // SVG element default settings.
   $icon-width: k-px-to-rem(12px);
   $icon-height: k-px-to-rem(14px);
-
-  $icon-width-tiny: k-px-to-rem(10px);
-  $icon-height-tiny: k-px-to-rem(12px);
 
   $transition-speed: .2s;
 
@@ -134,16 +123,18 @@
 
   // Size modifiers.
   .k-Button--tiny {
-    @include k-typographyFontSize(
-      $button-step,
-      $button-tiny-line-height
+    @include k-typographyFontSize($button-step,
+                                  $button-tiny-line-height
     );
 
     min-width: $button-tiny-min-width;
 
     &.k-Button--icon {
       .k-Button__icon {
-        @include k-buttonPadding($button-size, $icon-width, $icon-height);
+        @include k-buttonPadding($button-size-tiny,
+                                 $icon-width,
+                                 $icon-height
+        );
       }
     }
   }
@@ -164,7 +155,10 @@
     min-width: 0;
 
     .k-Button__icon {
-      @include k-buttonPadding($button-size, $icon-width, $icon-height);
+      @include k-buttonPadding($button-size,
+                               $icon-width,
+                               $icon-height
+      );
 
       box-sizing: content-box;
       display: inline-block;
@@ -180,14 +174,14 @@
 
     .k-Button__icon--tiny {
       @include k-buttonPadding($button-size-tiny,
-                               $icon-width-tiny,
-                               $icon-height-tiny);
-
+                               $icon-width,
+                               $icon-height
+      );
 
       box-sizing: content-box;
       display: inline-block;
-      width: $icon-width-tiny;
-      height: $icon-height-tiny;
+      width: $icon-width;
+      height: $icon-height;
       vertical-align: bottom;
       transition: fill $transition-speed;
 

@@ -188,7 +188,8 @@
     $horizontalArrow-height: k-px-to-rem(7px);
     @include k-buttonPadding($button-size-tiny,
                              $horizontalArrow-width,
-                             $horizontalArrow-height);
+                             $horizontalArrow-height
+    );
 
     .k-ButtonIcon__svg {
       width: $horizontalArrow-width;
@@ -201,7 +202,8 @@
     $verticalArrow-height: k-px-to-rem(12px);
     @include k-buttonPadding($button-size-tiny,
                              $verticalArrow-width,
-                             $verticalArrow-height);
+                             $verticalArrow-height
+    );
 
 
     .k-ButtonIcon__svg {

@@ -15,10 +15,9 @@
 /// @example css - CSS output
 ///   padding: 0.875rem 0.8125rem;
 
-@mixin k-buttonPadding (
-  $button-size-with-border,
-  $icon-width,
-  $icon-height)
+@mixin k-buttonPadding ($button-size-with-border,
+                        $icon-width,
+                        $icon-height)
 {
   // Button element default settings.
   $button-size-with-border: k-px-to-rem($button-size-with-border);
