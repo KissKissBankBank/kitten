@@ -40,7 +40,7 @@
 
   .k-Select {
     @include k-typographyFont($font);
-    @include k-typographyFontSize(-1);
+    @include k-typographyFontSize($font-step);
     @include _k-Select-ReactSelect($options);
     @include _k-Select-Overrides($options);
   }
@@ -301,7 +301,7 @@
   .is-searchable {
     &.is-open > .Select-control {
       cursor: text;
-      line-height: k-px-to-rem(46px);
+      line-height: k-px-to-rem(44px);
     }
   }
 
@@ -325,7 +325,7 @@
   .is-searchable {
     &.is-focused:not(.is-open) > .Select-control {
       cursor: text;
-      line-height: k-px-to-rem(46px);
+      line-height: k-px-to-rem(44px);
     }
   }
 
@@ -398,7 +398,7 @@
       font-size: inherit;
       margin: 0;
       outline: none;
-      line-height: 14px; // For IE 8 compatibility
+      line-height: k-px-to-rem(14px); // For IE 8 compatibility
       padding:
         (($select-input-internal-height - 14) / 2 - 2)
         0

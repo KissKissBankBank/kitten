@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Add `line-height` on `searchable` of `Select` component.
 - Breaking change: Replace `k-ProjectCard__status--tertiaryBackground` by
   `k-ProjectCard__status--validBackground`.
 - Feature: Update `ProjectCard` component with styleguide V2.
