@@ -6,9 +6,15 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Add `k-buttonPadding` helper to manage button paddings.
 - Feature: Update all `Button` with new design styleguide V2.
-- Breaking change: Replace `k-ProjectCard__status--tertiaryBackground` by
+
+## [16.2.0] - 2017-11-22
+
+Features:
+- Replace `k-ProjectCard__status--tertiaryBackground` by
   `k-ProjectCard__status--validBackground`.
-- Feature: Update `ProjectCard` component with styleguide V2.
+- Update `ProjectCard` component with styleguide V2.
+- Update `react-places-autocomplete` module to add `autocomplete="off"`
+  on `LocationInput` component.
 
 ## [16.1.0] - 2017-11-20
 
