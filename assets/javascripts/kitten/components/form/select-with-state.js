@@ -115,6 +115,7 @@ class SelectWithMultiLevel extends React.Component {
 SelectWithState.defaultProps = {
   onChange: function() {},
   onInputChange: function() {},
+  backspaceRemoves: false,
   clearable: false,
   searchable: false,
   deleteRemoves: false,
