@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Update `focusId` on `Label` component.
+
 ## [16.2.0] - 2017-11-22
 
 Features:
