@@ -42,6 +42,12 @@
   $border-size: 2px;
 
   // Size settings with border.
+  $button-size-micro-with-border: 20px;
+  $button-size-tiny-with-border: 40px;
+  $button-size-with-border: 50px;
+  $button-size-big-with-border: 70px;
+
+  // Size settings with border.
   $button-size-tiny-with-border: 40px;
   $button-size-with-border: 50px;
   $button-size-big-with-border: 70px;
@@ -61,8 +67,7 @@
   $button-big-line-height: k-px-to-rem($button-size-big);
 
   // Heigth settings button.
-  $button-height: k-px-to-rem(20px);
-  $button-big-height: k-px-to-rem(25px);
+  $button-height: k-px-to-rem(30px);
 
   // Button radius
   $button-radius: 0px;
@@ -84,7 +89,7 @@
   $buttonBigOptions: (
     typography-step: $button-step,
     line-height: $button-big-line-height,
-    height: $button-big-height,
+    height: $button-height,
     radius: $button-radius,
     width: $button-big-min-width,
     icon-size: $button-size-big,

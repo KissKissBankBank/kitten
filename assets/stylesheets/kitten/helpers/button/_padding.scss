@@ -15,13 +15,17 @@
 /// @example css - CSS output
 ///   padding: 0.875rem 0.8125rem;
 
-@mixin k-buttonPadding ($button-size, $icon-width, $icon-height) {
+@mixin k-buttonPadding (
+  $button-size-with-border,
+  $icon-width,
+  $icon-height)
+{
   // Button element default settings.
-  $button-size: k-px-to-rem($button-size);
+  $button-size-with-border: k-px-to-rem($button-size-with-border);
 
   // Calculate padding around svg picto.
-  $button-padding-x: ($button-size - $icon-width) / 2;
-  $button-padding-y: ($button-size - $icon-height) / 2;
+  $button-padding-x: ($button-size-with-border - $icon-width) / 2;
+  $button-padding-y: ($button-size-with-border - $icon-height) / 2;
 
   padding: $button-padding-y $button-padding-x;
 }
