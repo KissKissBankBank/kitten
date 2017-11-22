@@ -1,6 +1,6 @@
 {
   "name": "kitten-components",
-  "version": "16.1.0",
+  "version": "16.2.0",
   "license": "MIT",
   "description": "Front-end components library",
   "main": "src/index.js",
@@ -63,7 +63,7 @@
     "react-markdown": "^2.4.4",
     "react-masonry-component": "^5.0.3",
     "react-modal": "^2.1.0",
-    "react-places-autocomplete": "^5.0.0",
+    "react-places-autocomplete": "^5.4.3",
     "react-prop-types": "^0.4.0",
     "react-select": "^1.0.0-rc.1",
     "react-tooltip": "^3.2.2",
