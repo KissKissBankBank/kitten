@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Push empty object when selection is removed in `SelectWithState`.
 - Fix: Update marge on `FormComposer` component.
 
 ## [16.2.0] - 2017-11-22
