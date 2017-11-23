@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add `senary` prop on `Title` example.
+- Feature: Add `with searchable` select example.
 
 ## [16.2.0] - 2017-11-22
 
