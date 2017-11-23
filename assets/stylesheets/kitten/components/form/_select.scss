@@ -208,6 +208,7 @@
   $select-input-placeholder: map-get($k-colors, 'font-2');
   $select-text-color: map-get($k-colors, 'font-1');
   $select-link-hover-color: $select-input-border-focus;
+  $select-input-seacrchable-height: k-px-to-rem(44px);
 
   $select-padding-vertical: 10px;
   $select-padding-horizontal: 15px;
@@ -301,7 +302,7 @@
   .is-searchable {
     &.is-open > .Select-control {
       cursor: text;
-      line-height: k-px-to-rem(44px);
+      line-height: $select-input-seacrchable-height;
     }
   }
 
@@ -325,7 +326,7 @@
   .is-searchable {
     &.is-focused:not(.is-open) > .Select-control {
       cursor: text;
-      line-height: k-px-to-rem(44px);
+      line-height: $select-input-seacrchable-height;
     }
   }
 
