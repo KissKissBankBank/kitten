@@ -9,7 +9,7 @@
 ///   @include k-buttonColors('helium');
 ///
 /// @example css - CSS output
-///   background-color: #4a84ff;
+///   background-color: #19bbff;
 ///   color: #fff;
 ///   …
 
@@ -311,6 +311,26 @@
         color: map-get($k-colors, 'background-1'),
         border-color: #d8d8d8,
         background-color: #d8d8d8,
+      ),
+    )
+    'instagram': (
+      base: (
+        background-url:
+      ),
+      hover: (
+        background-url:
+      ),
+      focus: (
+        background-url:
+      ),
+      active: (
+        background-url:
+      ),
+      is-selected: (
+        background-url:
+      ),
+      disabled: (
+        background-url:
       ),
     )
   );

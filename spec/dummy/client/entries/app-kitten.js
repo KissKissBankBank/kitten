@@ -138,6 +138,7 @@ import { CrossIcon } from 'kitten/components/icons/cross-icon'
 import { FacebookIcon } from 'kitten/components/icons/facebook-icon'
 import { GrabberIcon } from 'kitten/components/icons/grabber-icon'
 import { HeartIcon } from 'kitten/components/icons/heart-icon'
+import { InstagramIcon } from 'kitten/components/icons/instagram-icon'
 import { InstrumentTagIcon } from 'kitten/components/icons/instrument-tag-icon'
 import { LinkedinIcon } from 'kitten/components/icons/linkedin-icon'
 import { LocationIcon } from 'kitten/components/icons/location-icon'
@@ -388,6 +389,7 @@ ReactOnRails.register({
   FacebookIcon,
   GrabberIcon,
   HeartIcon,
+  InstagramIcon,
   InstrumentTagIcon,
   LinkedinIcon,
   LocationIcon,

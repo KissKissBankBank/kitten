@@ -57,36 +57,42 @@
   $base-color: map-get($base, 'color');
   $base-border-color: map-get($base, 'border-color');
   $base-background-color: map-get($base, 'background-color');
+  $base-background-url: map-get($base, 'background-url');
 
   // hover colors
   $hover: k-colors-definition(k-map-fetch($colors, 'hover'));
   $hover-color: map-get($hover, 'color');
   $hover-border-color: map-get($hover, 'border-color');
   $hover-background-color: map-get($hover, 'background-color');
+  $hover-background-url: map-get($hover, 'background-url');
 
   // focus colors
   $focus: k-colors-definition(k-map-fetch($colors, 'focus'));
   $focus-color: map-get($focus, 'color');
   $focus-border-color: map-get($focus, 'border-color');
   $focus-background-color: map-get($focus, 'background-color');
+  $focus-background-url: map-get($focus, 'background-url');
 
   // active colors
   $active: k-colors-definition(k-map-fetch($colors, 'active'));
   $active-color: map-get($active, 'color');
   $active-border-color: map-get($active, 'border-color');
   $active-background-color: map-get($active, 'background-color');
+  $active-background-url: map-get($active, 'background-url');
 
   // is-selected colors (optional)
   $is-selected: k-colors-definition(map-get($colors, 'is-selected'));
   $is-selected-color: map-get($is-selected, 'color');
   $is-selected-border-color: map-get($is-selected, 'border-color');
   $is-selected-background-color: map-get($is-selected, 'background-color');
+  $is-selected-background-url: map-get($is-selected, 'background-url');
 
   // disabled colors (optional)
   $disabled: k-colors-definition(map-get($colors, 'disabled'));
   $disabled-color: map-get($disabled, 'color');
   $disabled-border-color: map-get($disabled, 'border-color');
   $disabled-background-color: map-get($disabled, 'background-color');
+  $disabled-background-url: map-get($disabled, 'background-url');
 
   // transition
   $transition-speed: .2s;
@@ -94,6 +100,9 @@
   @include k-buttonBorder($base-border-color);
   background-color: $base-background-color;
   color: $base-color;
+  @if $base-background-url {
+    background-url: $base-background-url
+  }
   transition: background-color $transition-speed,
               color $transition-speed,
               border-color $transition-speed;
