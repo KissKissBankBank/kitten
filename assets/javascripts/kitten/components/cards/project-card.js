@@ -33,29 +33,44 @@ class ProjectCardComponent extends React.Component {
 
     return (
       <div className="k-ProjectCard__grid">
-        <Marger top="2" bottom="1" className="k-ProjectCard__grid--flex">
-          <ButtonImage tag="span"
-                       img={ { src: ownerAvatarSrc } }
-                       withBorder
-                       withoutPointerEvents />
-          <Paragraph className={ classNames('k-ProjectCard__grid--flex__item-fluid',
-                                            'k-u-margin-left-single',
-                                            'k-u-margin-right-single') }
-                     margin={ false }
-                     normalLineHeight
-                     modifier="quaternary">
-            <span className="k-u-weight-regular">{ ownerName }</span><br />
+        <Marger
+          top="2" bottom="1"
+          className="k-ProjectCard__grid--flex"
+        >
+          <ButtonImage
+            tag="span"
+            img={ { src: ownerAvatarSrc } }
+            withBorder
+            withoutPointerEvents
+          />
+          <Paragraph
+            className={ classNames('k-ProjectCard__grid--flex__item-fluid',
+                                   'k-u-margin-left-single',
+                                   'k-u-margin-right-single') }
+            margin={ false }
+            normalLineHeight
+            modifier="quaternary"
+          >
+            <span className="k-u-weight-regular">
+              { ownerName }
+            </span>
+            <br />
             { ownerLocation }
           </Paragraph>
 
           { this.renderTooltip() }
         </Marger>
 
-        <Marger top="1" bottom="1.5" className="k-ProjectCard__grid--flex">
-          <Title className="k-ProjectCard__grid--flex__item-fluid"
-                 margin={ false }
-                 modifier="senary"
-                 tag="p">
+        <Marger
+          top="1" bottom="1.5"
+          className="k-ProjectCard__grid--flex"
+        >
+          <Title
+            className="k-ProjectCard__grid--flex__item-fluid"
+            margin={ false }
+            modifier="senary"
+            tag="p"
+          >
             { title }
           </Title>
 
@@ -76,7 +91,8 @@ class ProjectCardComponent extends React.Component {
         <CheckedCircleIcon
           style={ { width: '20px', height: '20px' } }
           circleColor={ this.props.tooltipIconColor }
-          checkedColor="#fff" />
+          checkedColor="#fff"
+        />
       </div>
     )
   }
@@ -89,7 +105,10 @@ class ProjectCardComponent extends React.Component {
     }
 
     return (
-      <IconBadge style={ scoreStyles } className="k-u-margin-left-single">
+      <IconBadge
+        style={ scoreStyles }
+        className="k-u-margin-left-single"
+      >
         { this.props.scoreValue }
       </IconBadge>
     )
@@ -101,9 +120,11 @@ class ProjectCardComponent extends React.Component {
     return (
       <div className="k-ProjectCard__grid">
         <Marger top="1.5" bottom="1.3">
-          <img className="k-ProjectCard__img"
-               src={ this.props.imageSrc }
-               alt="" />
+          <img
+            className="k-ProjectCard__img"
+            src={ this.props.imageSrc }
+            alt=""
+          />
         </Marger>
       </div>
     )
@@ -113,15 +134,24 @@ class ProjectCardComponent extends React.Component {
     if (this.props.progress === false) return null
 
     return (
-      <div className="k-ProjectCard__grid k-ProjectCard__grid--withBorderTop">
-        <Marger top="1.3" bottom="1.5" className="k-ProjectCard__grid--flex">
-          <Progress className="k-ProjectCard__grid--flex__item-fluid"
-                    value={ this.props.progress } />
-          <Paragraph margin={ false }
-                     modifier="quaternary"
-                     className={ classNames('k-u-margin-left-double',
-                                            'k-u-color-primary1',
-                                            'k-u-weight-regular') }>
+      <div className={ classNames('k-ProjectCard__grid',
+                                  'k-ProjectCard__grid--withBorderTop') }
+      >
+        <Marger
+          top="1.3" bottom="1.5"
+          className="k-ProjectCard__grid--flex"
+        >
+          <Progress
+            className="k-ProjectCard__grid--flex__item-fluid"
+            value={ this.props.progress }
+          />
+          <Paragraph
+            margin={ false }
+            modifier="quaternary"
+            className={ classNames('k-u-margin-left-double',
+                                   'k-u-color-primary1',
+                                   'k-u-weight-regular') }
+          >
             { this.props.progress }&nbsp;%
           </Paragraph>
         </Marger>
@@ -131,7 +161,10 @@ class ProjectCardComponent extends React.Component {
 
   renderTags() {
     return (
-      <div key={ `tag-list-${Math.random(1)}` } className="k-ProjectCard__grid">
+      <div
+        key={ `tag-list-${Math.random(1)}` }
+        className="k-ProjectCard__grid"
+      >
         <Marger top="1.3" bottom="1.3">
           <TagList
             icon={ TypologyTagIcon }
@@ -149,7 +182,9 @@ class ProjectCardComponent extends React.Component {
 
     const separator =
       <div className="k-u-margin-left-single">
-        <hr className="k-VerticalSeparator k-VerticalSeparator--darker"/>
+        <hr className={classNames ('k-VerticalSeparator',
+                                   'k-VerticalSeparator--darker') }
+        />
       </div>
 
     const tagListWithMargin =
@@ -158,7 +193,10 @@ class ProjectCardComponent extends React.Component {
       </div>
 
     return (
-      <div key={ `tag-list-${index}` } className="k-ProjectCard__grid--flex">
+      <div
+        key={ `tag-list-${index}` }
+        className="k-ProjectCard__grid--flex"
+      >
         { index != 0 && separator }
         { index != 0 && tagListWithMargin }
         { index == 0 && list }
@@ -176,7 +214,10 @@ class ProjectCardComponent extends React.Component {
   renderTagLists() {
     return (
       <div className="k-ProjectCard__grid">
-        <Marger top="1.3" bottom="1.3" className="k-ProjectCard__grid--flex">
+        <Marger
+          top="1.3" bottom="1.3"
+          className="k-ProjectCard__grid--flex"
+        >
           { this.props.tagLists.map(this.renderTagsInList) }
         </Marger>
       </div>
@@ -192,7 +233,10 @@ class ProjectCardComponent extends React.Component {
   renderInfos() {
     return (
       <div className="k-ProjectCard__grid--withBorderTop">
-        <Marger top="1.5" bottom="1.5" className="k-ProjectCard__grid--flex">
+        <Marger
+          top="1.5" bottom="1.5"
+          className="k-ProjectCard__grid--flex"
+        >
           { this.renderInfo(this.props.info1) }
           { this.renderInfo(this.props.info2) }
           { this.renderInfo(this.props.info3) }
@@ -228,6 +272,7 @@ class ProjectCardComponent extends React.Component {
       statusContent,
       statusPrimaryBackground,
       statusValidBackground,
+      statusTertiaryBackground,
       statusGreyBackground,
       statusErrorBackground,
       statusErrorReverseBackground,
@@ -243,6 +288,7 @@ class ProjectCardComponent extends React.Component {
         'k-ProjectCard__grid--withBorderTop': !statusWithoutTopBorder,
         'k-ProjectCard__status--primaryBackground': statusPrimaryBackground,
         'k-ProjectCard__status--validBackground': statusValidBackground,
+        'k-ProjectCard__status--tertiaryBackground': statusTertiaryBackground,
         'k-ProjectCard__status--greyBackground': statusGreyBackground,
         'k-ProjectCard__status--errorBackground': statusErrorBackground,
         'k-ProjectCard__status--errorReverseBackground':
@@ -252,7 +298,10 @@ class ProjectCardComponent extends React.Component {
 
     return (
       <div className={ statusClassName }>
-        <Marger top="1" bottom="1" className="k-ProjectCard__status__content">
+        <Marger
+          top="1" bottom="1"
+          className="k-ProjectCard__status__content"
+        >
           { statusContent }
         </Marger>
       </div>
@@ -310,6 +359,7 @@ ProjectCardComponent.defaultProps = {
   statusContent: null,
   statusPrimaryBackground: false,
   statusValidBackground: false,
+  statusTertiaryBackground: false,
   statusGreyBackground: false,
   statusErrorBackground: false,
   statusErrorReverseBackground: false,

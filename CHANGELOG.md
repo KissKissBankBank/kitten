@@ -6,7 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Change `quinary` to `senary` modifier of `Title` on `ProjectCard` and
   `ProjectSimilarCard`.
-- Feature: Add `k-Title--senary` class on `Title` component.
+- Feature: Add `senary` modifier of `Title` component.
 
 ## [16.2.0] - 2017-11-22
 
