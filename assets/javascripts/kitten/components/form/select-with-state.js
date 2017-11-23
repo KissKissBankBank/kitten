@@ -111,11 +111,11 @@ class SelectWithMultiLevel extends React.Component {
       inputProps['aria-labelledby'] = this.props.id
 
     return <Select
-            optionRenderer={ this.optionRenderer }
-            { ...this.props }
-            inputProps={ inputProps }
-            options={ this.flattenedOptions() }
-          />
+             optionRenderer={ this.optionRenderer }
+             { ...this.props }
+             inputProps={ inputProps }
+             options={ this.flattenedOptions() }
+           />
   }
 }
 
