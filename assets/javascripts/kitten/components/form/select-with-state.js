@@ -35,7 +35,10 @@ export class SelectWithState extends React.Component {
     if (!this.props.labelText) return ''
 
     return (
-      <label className="k-Select__label" id={ this.props.id }>
+      <label
+        className="k-Select__label"
+        id={ this.props.id }
+      >
         { this.props.labelText }
       </label>
     )
@@ -57,10 +60,12 @@ export class SelectWithState extends React.Component {
     return (
       <div className={ selectClassName }>
         { this.renderLabel() }
-        <SelectWithMultiLevel value={ this.state.value }
-                              onChange={ this.handleChange }
-                              disabled={ disabled }
-                              { ...other } />
+        <SelectWithMultiLevel
+          value={ this.state.value }
+          onChange={ this.handleChange }
+          disabled={ disabled }
+          { ...other }
+        />
       </div>
     )
   }
@@ -105,10 +110,12 @@ class SelectWithMultiLevel extends React.Component {
     if (this.props.labelText && !inputProps['aria-labelledby'])
       inputProps['aria-labelledby'] = this.props.id
 
-    return <Select optionRenderer={ this.optionRenderer }
-                   { ...this.props }
-                   inputProps={ inputProps }
-                   options={ this.flattenedOptions() } />
+    return <Select
+            optionRenderer={ this.optionRenderer }
+            { ...this.props }
+            inputProps={ inputProps }
+            options={ this.flattenedOptions() }
+          />
   }
 }
 
