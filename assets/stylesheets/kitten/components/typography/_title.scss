@@ -51,6 +51,7 @@
                                    $font-step-on-media: 4,
                                    $line-height: 1.2);
   }
+
   .k-Title--senary {
     @include k-typographyFontScale($font-step: 1,
                                    $font-step-on-media: 2,
