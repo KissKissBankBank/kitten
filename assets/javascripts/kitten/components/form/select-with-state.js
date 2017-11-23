@@ -28,7 +28,18 @@ export class SelectWithState extends React.Component {
   handleChange(val) {
     this.setState({ value: val })
     this.props.onChange(val)
-    this.props.onInputChange({ value: val, name: this.props.name })
+    this.props.onInputChange(this.currentValue(val))
+  }
+
+  // TODO: deprecate the way to return an event
+  // with the method onInputChange to standardise with react-select gem
+  currentValue(val){
+    if(this.props.eventReturnValueDeprecated) return {
+      value: val,
+      name: this.props.name
+    }
+
+    return val
   }
 
   renderLabel() {
@@ -132,6 +143,7 @@ SelectWithState.defaultProps = {
   disabled: false,
   tiny: false,
   name: null,
+  eventReturnValueDeprecated: true,
   inputProps: {},
 }
 
