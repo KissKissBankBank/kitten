@@ -242,7 +242,7 @@ class ProjectCardComponent extends React.Component {
       {
         'k-ProjectCard__grid--withBorderTop': !statusWithoutTopBorder,
         'k-ProjectCard__status--primaryBackground': statusPrimaryBackground,
-        'k-ProjectCard__status--ValidBackground': statusValidBackground,
+        'k-ProjectCard__status--validBackground': statusValidBackground,
         'k-ProjectCard__status--greyBackground': statusGreyBackground,
         'k-ProjectCard__status--errorBackground': statusErrorBackground,
         'k-ProjectCard__status--errorReverseBackground':
