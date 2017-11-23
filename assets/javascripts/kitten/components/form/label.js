@@ -41,10 +41,12 @@ export class Label extends Component {
     const htmlFor = (tag == 'label' && focusId) ? focusId : null
 
     return (
-      <Tag className={ labelClassName }
-           htmlFor={ htmlFor }
-           onClick={ this.handleClick }
-           { ...other }>
+      <Tag
+        className={ labelClassName }
+        htmlFor={ htmlFor }
+        onClick={ this.handleClick }
+        { ...other }
+      >
         { children }
       </Tag>
     )
