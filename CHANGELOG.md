@@ -4,7 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `instagram` modifier in `buttonIcon` component.
+- Feature: Add `instagram` modifier in `buttonIcon` component,
+  `InstagramButtonIcon` and `InstagramIcon` component.
 - Feature: Add `k-buttonPadding` helper to manage button paddings.
 - Feature: Update all `Button` with new design styleguide V2.
 - Fix: Update marge on `FormComposer` component.
