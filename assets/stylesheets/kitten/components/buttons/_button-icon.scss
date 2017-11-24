@@ -142,6 +142,7 @@
   }
 
   .k-ButtonIcon--instagram {
+    @include k-buttonPadding($button-size-with-border, $icon-width, $icon-height);
     @include k-buttonColors('instagram');
   }
 

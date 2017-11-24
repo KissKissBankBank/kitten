@@ -5,11 +5,13 @@ import {
   FacebookButtonIcon,
   TwitterButtonIcon,
   LinkedinButtonIcon,
+  InstagramButtonIcon,
 } from 'kitten/components/buttons/social-button-icon'
 import { ButtonIcon } from 'kitten/components/buttons/button-icon'
 import { FacebookIcon } from 'kitten/components/icons/facebook-icon'
 import { TwitterIcon } from 'kitten/components/icons/twitter-icon'
 import { LinkedinIcon } from 'kitten/components/icons/linkedin-icon'
+import { InstagramIcon } from 'kitten/components/icons/instagram-icon'
 
 describe('<FacebookButtonIcon />', () => {
   describe('by default', () => {
@@ -73,6 +75,29 @@ describe('<LinkedinButtonIcon />', () => {
 
   describe('with other props', () => {
     const button = shallow(<LinkedinButtonIcon className="custom__class" />)
+
+    it('has custom class', () => {
+      expect(button).to.have.className('custom__class')
+    })
+  })
+})
+
+describe('<InstagramButtonIcon />', () => {
+  describe('by default', () => {
+    const button = shallow(<InstagramButtonIcon />)
+
+    it('is a <ButtonIcon modifier="instagram" />', () => {
+      expect(button).to.have.descendants(ButtonIcon)
+      expect(button).to.have.prop('modifier', 'instagram')
+    })
+
+    it('has a <InstagramIcon />', () => {
+      expect(button).to.have.descendants(InstagramIcon)
+    })
+  })
+
+  describe('with other props', () => {
+    const button = shallow(<InstagramButtonIcon className="custom__class" />)
 
     it('has custom class', () => {
       expect(button).to.have.className('custom__class')
