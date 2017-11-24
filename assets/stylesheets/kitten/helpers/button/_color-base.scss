@@ -22,8 +22,8 @@
 ///    ),
 ///    hover: (
 ///      color: #fff,
-///      border-color: #4a84ff,
-///      background-color: #4a84ff,
+///      border-color: #19bbff,
+///      background-color: #19bbff,
 ///    ),
 ///    focus: (…),
 ///    active: (…),
@@ -47,7 +47,7 @@
 ///
 ///   .k-MyButton:hover {
 ///     …
-///     background-color: #4a84ff;
+///     background-color: #19bbff;
 ///     color: #fff;
 ///   }
 
@@ -114,14 +114,14 @@
   &:hover {
     @include k-buttonBorder($hover-border-color);
 
-    @if $base-background-color {
-      background-color: $base-background-color;
+    @if $hover-background-color {
+      background-color: $hover-background-color;
     }
-    @if $base-color {
-      color: $base-color;
+    @if $hover-color {
+      color: $hover-color;
     }
-    @if $base-background-image {
-      background-image: $base-background-image;
+    @if $hover-background-image {
+      background-image: $hover-background-image;
     }
   }
 
