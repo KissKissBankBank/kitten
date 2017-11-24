@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `k-u-anti-aliasing` helper mixin.
 - Feature: Update `Tour` component with Kitten V2.
 - Feature: Update `font` on `Stepper` component with Kitten V2.
 - Breaking change: Update `UserMenu` component with Kitten V2.
