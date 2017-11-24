@@ -151,7 +151,9 @@ export class ImageCropper extends React.Component {
     const dragMode = this.props.disabled ? 'none' : 'move'
 
     return (
-      <Marger key="cropper" top="2" bottom="2">
+      <Marger
+        top="2" bottom="2"
+        key="cropper">
         <div ref={ node => { this.cropperContainer = node } }>
           { (this.state.cropperWidth && this.state.cropperHeight) &&
             <Cropper
@@ -185,7 +187,10 @@ export class ImageCropper extends React.Component {
   renderCropperInfo() {
     return (
       <Marger top="2" bottom="2">
-        <Paragraph modifier="quaternary" margin={ false }>
+        <Paragraph
+          modifier="quaternary"
+          margin={ false }
+        >
           { this.props.cropperInfo }
         </Paragraph>
       </Marger>
@@ -290,7 +295,10 @@ export class ImageCropper extends React.Component {
             { this.renderError() }
 
             <Marger top="1" bottom="1">
-              <Paragraph modifier="quaternary" margin={ false }>
+              <Paragraph
+                modifier="quaternary"
+                margin={ false }
+              >
                 { this.props.description }
               </Paragraph>
             </Marger>
