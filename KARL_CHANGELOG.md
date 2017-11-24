@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `InstagramButtonIcon` example
+
 ## [16.2.0] - 2017-11-22
 
 No changes.
