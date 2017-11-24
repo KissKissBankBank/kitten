@@ -10,11 +10,11 @@
 //        children: [{ label: 'A' }, { label: 'B' }]
 //      } />
 //
-import React from 'react'
+import React, { Component } from 'react'
 import classNames from 'classnames'
 import Select from 'react-select'
 
-export class SelectWithState extends React.Component {
+export class SelectWithState extends Component {
   constructor(props) {
     super(props)
 
@@ -26,13 +26,17 @@ export class SelectWithState extends React.Component {
   }
 
   handleChange(val) {
-    this.setState({ value: val })
-    this.props.onChange(val)
-    this.props.onInputChange({ value: val, name: this.props.name })
+    const value = val.value
+      ? val
+      : { value: null, label: null }
+
+    this.setState({ value: value })
+    this.props.onChange(value)
+    this.props.onInputChange({ value: value, name: this.props.name })
   }
 
   renderLabel() {
-    if (!this.props.labelText) return ''
+    if (!this.props.labelText) return
 
     return (
       <label
@@ -45,7 +49,17 @@ export class SelectWithState extends React.Component {
   }
 
   render() {
-    const { value, onChange, className, tiny, error, valid, disabled, ...other } = this.props
+    const {
+      value,
+      onChange,
+      className,
+      tiny,
+      error,
+      valid,
+      disabled,
+      ...other,
+    } = this.props
+
     const selectClassName = classNames(
       'k-Select',
       className,
@@ -71,7 +85,7 @@ export class SelectWithState extends React.Component {
   }
 }
 
-class SelectWithMultiLevel extends React.Component {
+class SelectWithMultiLevel extends Component {
   // Turns a hierarchy of options with `children` into a flat array
   // of options with a `level` of 1, 2 or null.
   flattenedOptions() {
@@ -111,11 +125,11 @@ class SelectWithMultiLevel extends React.Component {
       inputProps['aria-labelledby'] = this.props.id
 
     return <Select
-             optionRenderer={ this.optionRenderer }
-             { ...this.props }
-             inputProps={ inputProps }
-             options={ this.flattenedOptions() }
-           />
+      optionRenderer={ this.optionRenderer }
+      { ...this.props }
+      inputProps={ inputProps }
+      options={ this.flattenedOptions() }
+    />
   }
 }
 
