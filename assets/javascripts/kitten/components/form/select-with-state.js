@@ -39,7 +39,10 @@ export class SelectWithState extends Component {
     if (!this.props.labelText) return
 
     return (
-      <label className="k-Select__label" id={ this.props.id }>
+      <label
+        className="k-Select__label"
+        id={ this.props.id }
+      >
         { this.props.labelText }
       </label>
     )
