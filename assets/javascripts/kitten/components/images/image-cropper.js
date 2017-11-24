@@ -152,7 +152,10 @@ export class ImageCropper extends React.Component {
     const dragMode = this.props.disabled ? 'none' : 'move'
 
     return (
-      <Marger key="cropper" top="2" bottom="2">
+      <Marger
+        top="2"
+        key="cropper"
+      >
         <div ref={ node => { this.cropperContainer = node } }>
           { (this.state.cropperWidth && this.state.cropperHeight) &&
             <Cropper
@@ -185,7 +188,7 @@ export class ImageCropper extends React.Component {
 
   renderCropperInfo() {
     return (
-      <Marger top="2" bottom="2">
+      <Marger top="2" bottom="1.5">
         <Paragraph
           modifier="quaternary"
           margin={ false }
@@ -198,7 +201,7 @@ export class ImageCropper extends React.Component {
 
   renderSlider() {
     return (
-      <Marger top="1" bottom="2">
+      <Marger top="1">
         <Slider
           name="zoom"
           min={ this.state.sliderMin }
@@ -213,7 +216,7 @@ export class ImageCropper extends React.Component {
 
   renderSliderTitle() {
     return (
-      <Marger top="2" bottom="1">
+      <Marger top="1.5" bottom="1">
         <Label size="tiny">
           { this.props.sliderTitle }
         </Label>
