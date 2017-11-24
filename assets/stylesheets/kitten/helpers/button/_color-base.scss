@@ -179,39 +179,39 @@
 
   @if map-has-key($colors, 'disabled') {
     &:disabled {
-      @if $active-border-color {
-        @include k-buttonBorder($active-border-color);
+      @if $disabled-border-color {
+        @include k-buttonBorder($disabled-border-color);
       }
 
       @else {
         border: none;
       }
 
-      @if $active-background-image {
-        background-image: $active-background-image;
+      @if $disabled-background-image {
+        background-image: $disabled-background-image;
       }
 
-      background-color: $active-background-color;
-      color: $active-color;
+      background-color: $disabled-background-color;
+      color: $disabled-color;
     }
   }
 
   @if map-has-key($colors, 'is-selected') {
     &.is-selected {
-      @if $active-border-color {
-        @include k-buttonBorder($active-border-color);
+      @if $is-selected-border-color {
+        @include k-buttonBorder($is-selected-border-color);
       }
 
       @else {
         border: none;
       }
 
-      @if $active-background-image {
-        background-image: $active-background-image;
+      @if $is-selected-background-image {
+        background-image: $is-selected-background-image;
       }
 
-      background-color: $active-background-color;
-      color: $active-color;
+      background-color: $is-selected-background-color;
+      color: $is-selected-color;
     }
   }
 }
