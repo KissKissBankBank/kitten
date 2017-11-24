@@ -57,51 +57,55 @@
   $base-color: map-get($base, 'color');
   $base-border-color: map-get($base, 'border-color');
   $base-background-color: map-get($base, 'background-color');
-  $base-background-url: map-get($base, 'background-url');
+  $base-background-image: map-get($base, 'background-image');
 
   // hover colors
   $hover: k-colors-definition(k-map-fetch($colors, 'hover'));
   $hover-color: map-get($hover, 'color');
   $hover-border-color: map-get($hover, 'border-color');
   $hover-background-color: map-get($hover, 'background-color');
-  $hover-background-url: map-get($hover, 'background-url');
+  $hover-background-image: map-get($hover, 'background-image');
 
   // focus colors
   $focus: k-colors-definition(k-map-fetch($colors, 'focus'));
   $focus-color: map-get($focus, 'color');
   $focus-border-color: map-get($focus, 'border-color');
   $focus-background-color: map-get($focus, 'background-color');
-  $focus-background-url: map-get($focus, 'background-url');
+  $focus-background-image: map-get($focus, 'background-image');
 
   // active colors
   $active: k-colors-definition(k-map-fetch($colors, 'active'));
   $active-color: map-get($active, 'color');
   $active-border-color: map-get($active, 'border-color');
   $active-background-color: map-get($active, 'background-color');
-  $active-background-url: map-get($active, 'background-url');
+  $active-background-image: map-get($active, 'background-image');
 
   // is-selected colors (optional)
   $is-selected: k-colors-definition(map-get($colors, 'is-selected'));
   $is-selected-color: map-get($is-selected, 'color');
   $is-selected-border-color: map-get($is-selected, 'border-color');
   $is-selected-background-color: map-get($is-selected, 'background-color');
-  $is-selected-background-url: map-get($is-selected, 'background-url');
+  $is-selected-background-image: map-get($is-selected, 'background-image');
 
   // disabled colors (optional)
   $disabled: k-colors-definition(map-get($colors, 'disabled'));
   $disabled-color: map-get($disabled, 'color');
   $disabled-border-color: map-get($disabled, 'border-color');
   $disabled-background-color: map-get($disabled, 'background-color');
-  $disabled-background-url: map-get($disabled, 'background-url');
+  $disabled-background-image: map-get($disabled, 'background-image');
 
   // transition
   $transition-speed: .2s;
 
   @include k-buttonBorder($base-border-color);
-  background-color: $base-background-color;
-  color: $base-color;
-  @if $base-background-url {
-    background-url: $base-background-url
+  @if $base-background-color {
+    background-color: $base-background-color;
+  }
+  @if $base-color {
+    color: $base-color;
+  }
+  @if $base-background-image {
+    background-image: $base-background-image;
   }
   transition: background-color $transition-speed,
               color $transition-speed,
@@ -110,16 +114,30 @@
   &:hover {
     @include k-buttonBorder($hover-border-color);
 
-    background-color: $hover-background-color;
-    color: $hover-color;
+    @if $base-background-color {
+      background-color: $base-background-color;
+    }
+    @if $base-color {
+      color: $base-color;
+    }
+    @if $base-background-image {
+      background-image: $base-background-image;
+    }
   }
 
   &:focus {
     @if map-has-key($colors, 'focus') {
       @include k-buttonBorder($focus-border-color);
 
-      background-color: $focus-background-color;
-      color: $focus-color;
+      @if $focus-background-color {
+        background-color: $focus-background-color;
+      }
+      @if $focus-color {
+        color: $focus-color;
+      }
+      @if $focus-background-image {
+        background-image: $focus-background-image;
+      }
     }
     @else {
       @include k-buttonBorder($hover-border-color);
@@ -134,16 +152,30 @@
   &:active {
     @include k-buttonBorder($active-border-color);
 
-    background-color: $active-background-color;
-    color: $active-color;
+    @if $active-background-color {
+      background-color: $active-background-color;
+    }
+    @if $active-color {
+      color: $active-color;
+    }
+    @if $active-background-image {
+      background-image: $active-background-image;
+    }
   }
 
   @if map-has-key($colors, 'disabled') {
     &:disabled {
       @include k-buttonBorder($disabled-border-color);
 
-      background-color: $disabled-background-color;
-      color: $disabled-color;
+      @if $disabled-background-color {
+        background-color: $disabled-background-color;
+      }
+      @if $disabled-color {
+        color: $disabled-color;
+      }
+      @if $disabled-background-image {
+        background-image: $disabled-background-image;
+      }
     }
   }
 
@@ -151,8 +183,15 @@
     &.is-selected {
       @include k-buttonBorder($is-selected-border-color);
 
-      background-color: $is-selected-background-color;
-      color: $is-selected-color;
+      @if $is-selected-background-color {
+        background-color: $is-selected-background-color;
+      }
+      @if $is-selected-color {
+        color: $is-selected-color;
+      }
+      @if $is-selected-background-image {
+        background-image: $is-selected-background-image;
+      }
     }
   }
 }
