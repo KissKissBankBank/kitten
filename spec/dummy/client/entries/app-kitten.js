@@ -201,6 +201,7 @@ import {
 } from 'kitten/karl/modals/modal'
 
 // Navigation
+import { HorizontalNav } from 'kitten/components/navigation/horizontal-nav'
 import { TabBar } from 'kitten/components/navigation/tab-bar'
 
 // Notifications
@@ -442,6 +443,7 @@ ReactOnRails.register({
   KarlModalExternalTrigger,
 
   // Navigation
+  HorizontalNav,
   TabBar,
 
   // Notifications
