@@ -105,7 +105,8 @@ class SimilarProjectCardComponent extends Component {
 
     return (
       <Marger
-        top="2" bottom="1"
+        top="2"
+        bottom="1"
         key="image"
       >
         <div className="k-ProjectSimilarCard__grid">
@@ -214,7 +215,8 @@ class SimilarProjectCardComponent extends Component {
   renderTagLists() {
     return (
       <Marger
-        top="1" bottom="1"
+        top="1"
+        bottom="1"
         className="k-ProjectCard__grid--flex"
       >
         { this.props.tagLists.map(this.renderTagsInList) }
