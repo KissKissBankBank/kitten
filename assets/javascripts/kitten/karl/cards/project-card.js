@@ -64,7 +64,7 @@ export class KarlProjectCard extends React.Component {
 
       case 'succeed':
         data = {
-          statusTertiaryBackground: true,
+          statusValidBackground: true,
           statusContent: [
             <CheckedCircleIcon
               key={ `succeed-icon-${ this.props.id }` }

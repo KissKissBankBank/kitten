@@ -131,7 +131,7 @@ class SimilarProjectCardComponent extends Component {
     return(
       <Marger top={ top } bottom="1">
         <Title
-          modifier="quinary"
+          modifier="senary"
           margin={ false }
           tag="p"
         >
