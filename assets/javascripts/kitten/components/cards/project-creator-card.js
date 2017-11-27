@@ -83,7 +83,8 @@ class ProjectCreatorCardComponent extends React.Component {
         <Separator darker />
         <div className="k-ProjectCreatorCard__grid">
           <Marger
-            top="1.2" bottom="1.2"
+            top="1.2"
+            bottom="1.2"
             className="k-ProjectCreatorCard__grid--flex"
           >
             { this.props.linkText }
