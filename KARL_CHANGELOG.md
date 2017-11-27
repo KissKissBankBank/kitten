@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Update `ProjectCard` colors in examples.
+- Feature: Use `k-u-anti-aliasing` on `Kitten`.
+- Feature: Add `with searchable` select example.
 
 ## [16.2.0] - 2017-11-22
 
