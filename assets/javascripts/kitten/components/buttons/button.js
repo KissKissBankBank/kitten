@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { Component } from 'react'
 import classNames from 'classnames'
 
-export class Button extends React.Component {
+export class Button extends Component {
   render() {
     const {
       className,
