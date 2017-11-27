@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add `senary` prop on `Title` example.
+- Feature: Update `ProjectCard` colors in examples.
 - Fix: Update `react-select` version.
 - Feature: Use `k-u-anti-aliasing` on `Kitten`.
 - Feature: Add `with searchable` select example.
