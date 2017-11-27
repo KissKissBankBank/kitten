@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Update `HorizontalNav` with new design.
+- Feature: Update `HorizontalNav` with styleguide V2.
 - Fix: Update margin on `ImageCropper` component.
 - Fix: Update margin on `FormComposer` component.
 - Feature: Add `k-u-anti-aliasing` helper mixin.
