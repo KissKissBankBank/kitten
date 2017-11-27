@@ -26,6 +26,7 @@
   // Font
   $font: 'regular';
   $font-step: -1; // 14px
+  $line-height: normal;
 
   // Colors
   $base-color: map-get($k-colors, 'font-1');
@@ -54,6 +55,7 @@
 
   .k-HorizontalNav__element {
     -ms-overflow-x: hidden;
+    padding: 0 $padding;
   }
 
   .k-HorizontalNav__element--fixedSize {
@@ -65,11 +67,13 @@
     justify-content: center;
     flex-direction: column;
 
-    padding: 0 $padding;
     border-bottom: $border-width solid transparent;
 
     @include k-typographyFont($font);
-    @include k-typographyFontSize($font-step, $line-height: normal);
+    @include k-typographyFontSize(
+      $font-step,
+      $line-height: $line-height
+    );
 
     color: $base-color;
     text-align: center;
