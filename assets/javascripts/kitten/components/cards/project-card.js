@@ -34,7 +34,8 @@ class ProjectCardComponent extends React.Component {
     return (
       <div className="k-ProjectCard__grid">
         <Marger
-          top="2" bottom="1"
+          top="2"
+          bottom="1"
           className="k-ProjectCard__grid--flex"
         >
           <ButtonImage
@@ -62,7 +63,8 @@ class ProjectCardComponent extends React.Component {
         </Marger>
 
         <Marger
-          top="1" bottom="1.5"
+          top="1"
+          bottom="1.5"
           className="k-ProjectCard__grid--flex"
         >
           <Title
@@ -138,7 +140,8 @@ class ProjectCardComponent extends React.Component {
                                   'k-ProjectCard__grid--withBorderTop') }
       >
         <Marger
-          top="1.3" bottom="1.5"
+          top="1.3"
+          bottom="1.5"
           className="k-ProjectCard__grid--flex"
         >
           <Progress
@@ -215,7 +218,8 @@ class ProjectCardComponent extends React.Component {
     return (
       <div className="k-ProjectCard__grid">
         <Marger
-          top="1.3" bottom="1.3"
+          top="1.3"
+          bottom="1.3"
           className="k-ProjectCard__grid--flex"
         >
           { this.props.tagLists.map(this.renderTagsInList) }
@@ -234,7 +238,8 @@ class ProjectCardComponent extends React.Component {
     return (
       <div className="k-ProjectCard__grid--withBorderTop">
         <Marger
-          top="1.5" bottom="1.5"
+          top="1.5"
+          bottom="1.5"
           className="k-ProjectCard__grid--flex"
         >
           { this.renderInfo(this.props.info1) }
@@ -299,7 +304,8 @@ class ProjectCardComponent extends React.Component {
     return (
       <div className={ statusClassName }>
         <Marger
-          top="1" bottom="1"
+          top="1"
+          bottom="1"
           className="k-ProjectCard__status__content"
         >
           { statusContent }
