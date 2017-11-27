@@ -81,7 +81,8 @@ describe('<ProjectCard />', () => {
   describe('with ownerName and ownerLocation props', () => {
     const projectCard = mount(
       <ProjectCard ownerName="Custom name"
-                   ownerLocation="Custom location" />
+                   ownerLocation="Custom location"
+      />
     )
     const paragraph = projectCard.find(Paragraph).first()
 
@@ -174,7 +175,8 @@ describe('<ProjectCard />', () => {
       <ProjectCard
         info1={ { value: 'Custom value 1', text: 'Custom text 1' } }
         info2={ { value: 'Custom value 2', text: 'Custom text 2', locked: true } }
-        info3={ { value: 'Custom value 3', text: 'Custom text 3', reverse: true } } />
+        info3={ { value: 'Custom value 3', text: 'Custom text 3', reverse: true } }
+      />
     )
     const infos = projectCard.find('.k-ProjectCard__info')
 
@@ -208,7 +210,8 @@ describe('<ProjectCard />', () => {
     const projectCard = mount(
       <ProjectCard
         coloredInfosValues
-        info1={ { value: 'Custom value 1', text: 'Custom text 1' } } />
+        info1={ { value: 'Custom value 1', text: 'Custom text 1' } }
+      />
     )
     const info = projectCard.find('.k-ProjectCard__info').first()
     const value = info.find('.k-ProjectCard__info__value')
@@ -221,7 +224,8 @@ describe('<ProjectCard />', () => {
   describe('with status props', () => {
     const projectCard = mount(
       <ProjectCard statusContent="Custom status"
-                   statusWithoutTopBorder />
+                   statusWithoutTopBorder
+      />
     )
     const status = projectCard.find('.k-ProjectCard__status')
 
@@ -235,7 +239,8 @@ describe('<ProjectCard />', () => {
   describe('with statusPrimaryBackground prop', () => {
     const projectCard = mount(
       <ProjectCard statusContent="Custom status"
-                   statusPrimaryBackground />
+                   statusPrimaryBackground
+      />
     )
     const status = projectCard.find('.k-ProjectCard__status').first()
 
@@ -248,7 +253,8 @@ describe('<ProjectCard />', () => {
   describe('with statusValidBackground prop', () => {
     const projectCard = mount(
       <ProjectCard statusContent="Custom status"
-                   statusValidBackground />
+                   statusValidBackground
+      />
     )
     const status = projectCard.find('.k-ProjectCard__status').first()
 
@@ -261,7 +267,8 @@ describe('<ProjectCard />', () => {
   describe('with statusGreyBackground prop', () => {
     const projectCard = mount(
       <ProjectCard statusContent="Custom status"
-                   statusGreyBackground />
+                   statusGreyBackground
+      />
     )
     const status = projectCard.find('.k-ProjectCard__status').first()
 
@@ -274,7 +281,8 @@ describe('<ProjectCard />', () => {
   describe('with statusErrorBackground prop', () => {
     const projectCard = mount(
       <ProjectCard statusContent="Custom status"
-                   statusErrorBackground />
+                   statusErrorBackground
+      />
     )
     const status = projectCard.find('.k-ProjectCard__status').first()
 
@@ -287,7 +295,8 @@ describe('<ProjectCard />', () => {
   describe('with statusErrorReverseBackground prop', () => {
     const projectCard = mount(
       <ProjectCard statusContent="Custom status"
-                   statusErrorReverseBackground />
+                   statusErrorReverseBackground
+      />
     )
     const status = projectCard.find('.k-ProjectCard__status').first()
 
