@@ -118,7 +118,6 @@
     @if $hover-border-color {
       @include k-buttonBorder($hover-border-color);
     }
-
     @else {
       border: none;
     }
@@ -137,7 +136,6 @@
       @if $focus-border-color {
         @include k-buttonBorder($focus-border-color);
       }
-
       @else {
         border: none;
       }
