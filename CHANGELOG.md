@@ -7,6 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Change `quinary` to `senary` modifier of `Title` on `ProjectCard` and
   `ProjectSimilarCard`.
 - Feature: Add `senary` modifier of `Title` component.
+- Fix: Push empty object when selection is removed in `SelectWithState`.
 - Feature: Update `focusId` on `Label` component.
 - Fix: Add `line-height` on `searchable` of `Select` component.
 - Fix: Update marge on `FormComposer` component.

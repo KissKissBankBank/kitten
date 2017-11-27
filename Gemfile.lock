@@ -87,7 +87,6 @@ GEM
       nokogiri (~> 1.6)
     json (1.8.3)
     libv8 (3.16.14.19)
-    libv8 (3.16.14.19-x86_64-darwin-16)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
     mail (2.7.0)

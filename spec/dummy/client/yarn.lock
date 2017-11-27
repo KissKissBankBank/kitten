@@ -2664,7 +2664,7 @@ kind-of@^3.0.2:
     is-buffer "^1.1.5"
 
 "kitten-components@file:../../..":
-  version "14.4.0"
+  version "16.2.0"
   dependencies:
     autoprefixer "^6.5.3"
     babel-cli "^6.14.0"
@@ -2699,7 +2699,7 @@ kind-of@^3.0.2:
     react-markdown "^2.4.4"
     react-masonry-component "^5.0.3"
     react-modal "^2.1.0"
-    react-places-autocomplete "^5.0.0"
+    react-places-autocomplete "^5.4.3"
     react-prop-types "^0.4.0"
     react-select "^1.0.0-rc.1"
     react-tooltip "^3.2.2"
@@ -4023,13 +4023,12 @@ react-on-rails@~6.10.1:
   version "6.10.1"
   resolved "https://registry.yarnpkg.com/react-on-rails/-/react-on-rails-6.10.1.tgz#fea46416d138b56472f1ea753c58ecfe5ebaab41"
 
-react-places-autocomplete@^5.0.0:
-  version "5.3.1"
-  resolved "https://registry.yarnpkg.com/react-places-autocomplete/-/react-places-autocomplete-5.3.1.tgz#f37e737eec05c53d8a9ba38b0106bac522f3ee99"
+react-places-autocomplete@^5.4.3:
+  version "5.4.3"
+  resolved "https://registry.yarnpkg.com/react-places-autocomplete/-/react-places-autocomplete-5.4.3.tgz#321166247a9279b93ff21ee59112836058dda0ba"
   dependencies:
     lodash.debounce "^4.0.8"
     prop-types "^15.5.8"
-    react "^15.3.0"
 
 react-prop-types@^0.4.0:
   version "0.4.0"
@@ -4051,7 +4050,7 @@ react-tooltip@^3.2.2:
     classnames "^2.2.0"
     prop-types "^15.5.8"
 
-react@^15.3.0, react@^15.3.1:
+react@^15.3.1:
   version "15.5.4"
   resolved "https://registry.yarnpkg.com/react/-/react-15.5.4.tgz#fa83eb01506ab237cdc1c8c3b1cea8de012bf047"
   dependencies:
