@@ -32,7 +32,8 @@ class SimilarProjectCardComponent extends Component {
       <div className="k-ProjectSimilarCard__refresh">
         <span
           className="k-ProjectSimilarCard__refresh__link"
-          onClick={ onRefreshClick }>
+          onClick={ onRefreshClick }
+        >
           { refresh }
         </span>
       </div>
@@ -46,7 +47,8 @@ class SimilarProjectCardComponent extends Component {
         type="button"
         verticalArrow
         disabled={ this.props.leftArrowDisabled }
-        onClick={ this.props.onLeftArrowClick }>
+        onClick={ this.props.onLeftArrowClick }
+      >
         <ArrowIcon
           direction="left"
           className="k-ButtonIcon__svg"
@@ -62,7 +64,8 @@ class SimilarProjectCardComponent extends Component {
         type="button"
         verticalArrow
         disabled={ this.props.rightArrowDisabled }
-        onClick={ this.props.onRightArrowClick }>
+        onClick={ this.props.onRightArrowClick }
+      >
         <ArrowIcon className="k-ButtonIcon__svg" />
       </ButtonIcon>
     )
@@ -101,12 +104,17 @@ class SimilarProjectCardComponent extends Component {
     if (!imageSrc) return
 
     return (
-      <Marger key="image" top="2" bottom="1">
+      <Marger
+        top="2"
+        bottom="1"
+        key="image"
+      >
         <div className="k-ProjectSimilarCard__grid">
           <img
             className="k-ProjectSimilarCard__img"
             src={ imageSrc }
-            alt="" />
+            alt=""
+          />
         </div>
       </Marger>
     )
@@ -125,7 +133,8 @@ class SimilarProjectCardComponent extends Component {
         <Title
           modifier="quinary"
           margin={ false }
-          tag="p">
+          tag="p"
+        >
           { title }
         </Title>
       </Marger>
@@ -138,13 +147,17 @@ class SimilarProjectCardComponent extends Component {
     } = this.props
 
     return(
-      <div key="description" className="k-ProjectSimilarCard__grid">
+      <div
+        key="description"
+        className="k-ProjectSimilarCard__grid"
+      >
         { this.renderTitle() }
         { this.renderTagsArea() }
         <Marger top="1" bottom="2">
           <Paragraph
             modifier="tertiary"
-            margin={ false }>
+            margin={ false }
+          >
             { paragraph }
           </Paragraph>
         </Marger>
@@ -170,7 +183,9 @@ class SimilarProjectCardComponent extends Component {
 
     const separator =
       <div className="k-u-margin-left-single">
-        <hr className="k-VerticalSeparator k-VerticalSeparator--darker"/>
+        <hr className={ classNames('k-VerticalSeparator',
+                                   'k-VerticalSeparator--darker') }
+        />
       </div>
 
     const tagListWithMargin =
@@ -179,7 +194,10 @@ class SimilarProjectCardComponent extends Component {
       </div>
 
     return (
-      <div key={ `tag-list-${index}` } className="k-ProjectCard__grid--flex">
+      <div
+        key={ `tag-list-${index}` }
+        className="k-ProjectCard__grid--flex"
+      >
         { index != 0 && separator }
         { index != 0 && tagListWithMargin }
         { index == 0 && list }
@@ -196,7 +214,11 @@ class SimilarProjectCardComponent extends Component {
 
   renderTagLists() {
     return (
-      <Marger top="1" bottom="1" className="k-ProjectCard__grid--flex">
+      <Marger
+        top="1"
+        bottom="1"
+        className="k-ProjectCard__grid--flex"
+      >
         { this.props.tagLists.map(this.renderTagsInList) }
       </Marger>
     )
@@ -221,7 +243,8 @@ class SimilarProjectCardComponent extends Component {
         <Marger
           top="1.5"
           bottom="1.5"
-          className="k-ProjectCard__grid--flex">
+          className="k-ProjectCard__grid--flex"
+        >
           { infos.map(this.renderInfo) }
         </Marger>
       </div>
@@ -241,9 +264,11 @@ class SimilarProjectCardComponent extends Component {
     return (
       <div
         key={ info.text }
-        className="k-u-align-center k-ProjectSimilarCard__info"
+        className= { classNames('k-u-align-center',
+                                'k-ProjectSimilarCard__info') }
       >
-        { info.text }<br />
+        { info.text }
+        <br />
         <span className={ infoClassName }>
           { info.locked ? <LockIcon width='12' /> : info.value }
         </span>
