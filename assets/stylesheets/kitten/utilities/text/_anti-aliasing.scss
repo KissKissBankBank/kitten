@@ -1,0 +1,18 @@
+/// Text anti-aliasing utilities.
+///
+/// @group text
+///
+/// @example scss - Usage
+///
+///   @include k-utilities-aliasing;
+///
+/// @example html
+///
+///   <p class="k-u-anti-aliasing">…</p>
+
+@mixin k-utilities-aliasing {
+  .k-u-anti-aliasing {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
