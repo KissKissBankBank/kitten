@@ -18,11 +18,22 @@ export class HorizontalNav extends Component {
 
     return (
       <li key={ key }>
-        <a className={ itemClassName } { }
+        <a className={ itemClassName } { ...linkProps }>
+          <Markdown softBreak="br" source={ text } />
+        </a>
       </li>
     )
   }
+
+  render() {
+    return (
+      <div id={ this.props.id }
+           className={ classNames("k-HorizontalNav", this.props.className) }>
+      </div>
+    )
+  }
 }
+
 
 
 
