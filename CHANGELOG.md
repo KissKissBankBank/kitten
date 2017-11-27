@@ -4,8 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Update marge on `ImageCropper` component.
-- Fix: Update marge on `FormComposer` component.
+- Fix: Update margin on `ImageCropper` component.
+- Fix: Update margin on `FormComposer` component.
 
 ## [16.2.0] - 2017-11-22
 
