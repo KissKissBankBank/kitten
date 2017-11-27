@@ -15,8 +15,10 @@
 
   .k-SupTitle {
     @include k-typographyFont($font);
-    @include k-typographyFontScale($font-step: -1,
-                                   $line-height: normal);
+    @include k-typographyFontScale(
+      $font-step: -1,
+      $line-height: normal
+    );
     text-transform: uppercase;
   }
 }
