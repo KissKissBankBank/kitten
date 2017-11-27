@@ -30,15 +30,17 @@ describe('<TabBar />', () => {
 
   describe('with custom classes/id', () => {
     const component = shallow(
-      <TabBar id="custom-id"
-              className="custom-class"
-              navClassName="nav-custom-class"
-              listClassName="list-custom-class"
-              items={ [
-                { text: 'Item 1', className: 'item-custom-class' },
-                { text: 'Item 2', className: 'item-custom-class' },
-                { text: 'Item 3', className: 'item-custom-class' },
-              ] } />
+      <TabBar
+        id="custom-id"
+        className="custom-class"
+        navClassName="nav-custom-class"
+        listClassName="list-custom-class"
+        items={ [
+          { text: 'Item 1', className: 'item-custom-class' },
+          { text: 'Item 2', className: 'item-custom-class' },
+          { text: 'Item 3', className: 'item-custom-class' },
+        ] }
+      />
     )
 
     it('renders the right classes', () => {
