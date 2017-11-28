@@ -4,9 +4,20 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Update `react-select` version.
-- Feature: Use `k-u-anti-aliasing` on `Kitten`.
-- Feature: Add `with searchable` select example.
+## [16.3.1] - 2017-11-28
+
+No changes.
+
+## [16.3.0] - 2017-11-27
+
+Features:
+- Add `senary` prop on `Title` example.
+- Update `ProjectCard` colors in examples.
+- Use `k-u-anti-aliasing` on `Kitten`.
+- Add `with searchable` select example.
+
+Fix:
+- Update `react-select` version.
 
 ## [16.2.0] - 2017-11-22
 

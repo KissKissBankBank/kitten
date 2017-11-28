@@ -5,13 +5,25 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Update `HorizontalNav` with styleguide V2.
-- Fix: Update margin on `ImageCropper` component.
-- Fix: Update margin on `FormComposer` component.
-- Feature: Add `k-u-anti-aliasing` helper mixin.
-- Fix: Push empty object when selection is removed in `SelectWithState`.
-- Feature: Update `focusId` on `Label` component.
-- Fix: Add `line-height` on `searchable` of `Select` component.
-- Fix: Update marge on `FormComposer` component.
+## [16.3.1] - 2017-11-28
+
+Fix:
+- Fix `null` value in `SelectWithState` component.
+
+## [16.3.0] - 2017-11-27
+
+Features:
+- Change `quinary` to `senary` modifier of `Title` on `ProjectCard` and
+  `ProjectSimilarCard`.
+- Add `senary` modifier of `Title` component.
+- Add `k-u-anti-aliasing` helper mixin.
+- Update `focusId` on `Label` component.
+
+Fixes:
+- Update margin on `ImageCropper` component.
+- Update margin on `FormComposer` component.
+- Push empty object when selection is removed in `SelectWithState`.
+- Add `line-height` on `searchable` of `Select` component.
 
 ## [16.2.0] - 2017-11-22
 

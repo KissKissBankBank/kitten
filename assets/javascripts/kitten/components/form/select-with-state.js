@@ -26,7 +26,7 @@ export class SelectWithState extends Component {
   }
 
   handleChange(val) {
-    const value = val.value
+    const value = val && val.value
       ? val
       : { value: null, label: null }
 
