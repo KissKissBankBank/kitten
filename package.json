@@ -1,6 +1,6 @@
 {
   "name": "kitten-components",
-  "version": "16.3.0",
+  "version": "16.3.1",
   "license": "MIT",
   "description": "Front-end components library",
   "main": "src/index.js",
