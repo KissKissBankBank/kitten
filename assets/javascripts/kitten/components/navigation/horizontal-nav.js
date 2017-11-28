@@ -18,10 +18,7 @@ export class HorizontalNav extends Component {
     )
 
     return (
-      <li key={ key }
-          className={ classNames("k-HorizontalNav__element",
-                                 this.props.elementClassName) }
-      >
+      <li key={ key }>
         <a className={ itemClassName } { ...linkProps }>
           <Markdown softBreak="br" source={ text } />
         </a>
@@ -31,10 +28,16 @@ export class HorizontalNav extends Component {
 
   render() {
     return (
-      <ul id={ this.props.id }
-          className={ classNames("k-HorizontalNav", this.props.className) }>
-        { this.renderItems() }
-      </ul>
+      <div id={ this.props.id }>
+        <nav className={ classNames("k-HorizontalNav", this.props.className) }
+        >
+          <ul className={ classNames("k-HorizontalNav__element",
+                                     this.props.elemnentClassName) }
+          >
+            { this.renderItems() }
+          </ul>
+        </nav>
+      </div>
     )
   }
 }
