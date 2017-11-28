@@ -3,7 +3,10 @@ import classNames from 'classnames'
 
 export class SupTitle extends React.Component {
   render() {
-    const { className, tag, ...supTitleProps } = this.props
+    const {
+      className,
+      tag,
+      ...supTitleProps } = this.props
 
     const supTitleClassName = classNames(
       'k-SupTitle',

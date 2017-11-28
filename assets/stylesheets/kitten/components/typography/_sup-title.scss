@@ -12,12 +12,14 @@
 
 @mixin k-SupTitle {
   $font: 'bold';
+  $font-size: -1; // 14px
+  $line-height: normal;
 
   .k-SupTitle {
     @include k-typographyFont($font);
     @include k-typographyFontScale(
-      $font-step: -1,
-      $line-height: normal
+      $font-step: $font-size,
+      $line-height: $line-height
     );
     text-transform: uppercase;
   }
