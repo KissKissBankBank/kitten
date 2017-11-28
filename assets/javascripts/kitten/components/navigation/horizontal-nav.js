@@ -28,15 +28,15 @@ export class HorizontalNav extends Component {
 
   render() {
     return (
-      <div id={ this.props.id }>
-        <nav className={ classNames("k-HorizontalNav", this.props.className) }
+      <div
+        id={ this.props.id }
+        className={ classNames("k-HorizontalNav", this.props.className) }
+      >
+        <ul className={ classNames("k-HorizontalNav__element",
+                                   this.props.elementClassName) }
         >
-          <ul className={ classNames("k-HorizontalNav__element",
-                                     this.props.elemnentClassName) }
-          >
-            { this.renderItems() }
-          </ul>
-        </nav>
+          { this.renderItems() }
+        </ul>
       </div>
     )
   }

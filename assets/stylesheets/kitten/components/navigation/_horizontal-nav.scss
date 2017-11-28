@@ -26,7 +26,7 @@
   // Font
   $font: 'regular';
   $font-step: -1; // 14px
-  $line-height: normal;
+  $line-height: 1.7;
 
   // Colors
   $base-color: map-get($k-colors, 'font-1');
@@ -42,7 +42,7 @@
   $is-selected-color: map-get($k-colors, 'primary-1');
 
   $border-width: k-px-to-rem(4px);
-  $padding: k-px-to-rem(25px);
+  $margin: k-px-to-rem(25px);
 
   $transition-speed: .2s;
 
@@ -58,19 +58,11 @@
 
   .k-HorizontalNav__element {
     display: flex;
-    justify-content: space-around;
 
     margin: 0;
+    padding: 0;
     list-style-type: none;
-
-    //width: k-px-to-rem(375px);
-
     -ms-overflow-x: hidden;
-    padding: 0 $padding;
-  }
-
-  .k-HorizontalNav__element--fixedSize {
-    flex-shrink: 0;
   }
 
   .k-HorizontalNav__item {
@@ -78,6 +70,8 @@
     justify-content: center;
     flex-direction: column;
 
+    padding-top: 1rem;
+    margin: 0 $margin;
     border-bottom: $border-width solid transparent;
 
     @include k-typographyFont($font);

@@ -18,11 +18,11 @@ describe('<HorizontalNav />', () => {
   })
 
   it('has a element', () => {
-    expect(component.find('li.k-HorizontalNav__element')).to.lenght(1)
+    expect(component.find('ul.k-HorizontalNav__element')).to.have.length(1)
   })
 
   it('renders items', () => {
-    expect(component.find('.k-HorizontalNav__item')).to.lenght(4)
+    expect(component.find('.k-HorizontalNav__item')).to.have.length(4)
   })
 
   describe('with custom classes/id', () => {
@@ -32,37 +32,35 @@ describe('<HorizontalNav />', () => {
         className="custom-class"
         elementClassName="element-custom-class"
         items={ [
-          { text: 'Nav link 1', className: 'nav-custom-class' },
-          { text: 'Nav link 2', className: 'nav-custom-class' },
-          { text: 'Nav link 3', className: 'nav-custom-class' },
-          { text: 'Nav link 4', className: 'nav-custom-class' },
+          { text: 'Nav link 1', className: 'item-custom-class' },
+          { text: 'Nav link 2', className: 'item-custom-class' },
+          { text: 'Nav link 3', className: 'item-custom-class' },
+          { text: 'Nav link 4', className: 'item-custom-class' },
         ] }
       />
     )
 
     it('renders the right classes', () => {
       expect(component).to.have.id('custom-id')
-
-      expect(component.find('.k-Horizontal__nav'))
-        .to.have.className('custom-class')
+      expect(component).to.have.className('custom-class')
 
       expect(component.find('.k-HorizontalNav__element'))
         .to.have.className('element-custom-class')
 
       expect(component.find('.k-HorizontalNav__item').first())
-        .to.have.className('nav-custom-class')
+        .to.have.className('item-custom-class')
     })
 
-    // describe('with HTML in items', () => {
-    //   const component = shallow(
-    //     <HorizontalNav items={ [
-    //       { text: 'Item\n1', className: 'item-1' },
-    //     ] } />
-    //   )
+    describe('with HTML in items', () => {
+      const component = shallow(
+        <HorizontalNav items={ [
+          { text: 'Nav\n1', className: 'item-1' },
+        ] } />
+      )
 
-    //   it('transforms line break with <br/>', () => {
-    //     expect(component.find('.item-1')).to.have.html().match(/Item<br\/>1/)
-    //   })
-    // })
+      it('transforms line break with <br/>', () => {
+        expect(component.find('.item-1')).to.have.html().match(/Nav<br\/>1/)
+      })
+    })
   })
 })
