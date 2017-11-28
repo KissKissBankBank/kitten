@@ -32,8 +32,9 @@ export class HorizontalNav extends Component {
         id={ this.props.id }
         className={ classNames("k-HorizontalNav", this.props.className) }
       >
-        <ul className={ classNames("k-HorizontalNav__element",
-                                   this.props.elementClassName) }
+        <ul
+          className={ classNames("k-HorizontalNav__element",
+                                 this.props.elementClassName) }
         >
           { this.renderItems() }
         </ul>

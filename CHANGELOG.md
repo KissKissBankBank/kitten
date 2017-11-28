@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Update `HorizontalNav` with styleguide V2.
+
 ## [16.3.1] - 2017-11-28
 
 Fix:
