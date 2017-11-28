@@ -4,7 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Fix `null` value in `SelectWithState` component.
+## [16.3.1] - 2017-11-28
+
+Fix:
+- Fix `null` value in `SelectWithState` component.
 
 ## [16.3.0] - 2017-11-27
 
