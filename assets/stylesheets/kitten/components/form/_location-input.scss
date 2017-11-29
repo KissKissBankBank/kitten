@@ -28,7 +28,7 @@
 
   // Autocomplete color
   $color-main-text: map-get($k-colors, 'font-1');
-  $color-secondary-text: map-get($k-colors, 'font-2');
+  $color-secondary-text: map-get($k-colors, 'font-1');
   $border-color-autocomplete: map-get($k-colors, 'line-2');
 
   // Base
@@ -43,13 +43,15 @@
   // Disabled
   $color-disabled: #fff;
   $border-color-disabled: #fff;
-  $background-color-disabled: map-get($k-colors, 'line-2');
+  $background-color-disabled: map-get($k-colors, 'line-1');
 
   // Placeholder
   $color-placeholder: map-get($k-colors, 'font-2');
 
   // Border radius Text - input
-  $border-text-input: k-px-to-rem(4px);
+  $border-text-input: k-px-to-rem(0px);
+
+  $border-size: k-px-to-rem(2px);
 
   .k-LocationInput {
     .k-LocationInput__group {
@@ -70,7 +72,7 @@
       width: 100%;
       height: $height;
       background: $background-color;
-      border: 1px solid $border-color;
+      border: $border-size solid $border-color;
       border-radius: $border-text-input;
       color: $color;
 
@@ -108,7 +110,7 @@
 
     .k-LocationInput__autocomplete {
       background-color: $background-color;
-      border: k-px-to-rem(1px) solid $border-color-autocomplete;
+      border: $border-size solid $border-color-autocomplete;
     }
 
     .k-LocationInput__autocompleteItem {
