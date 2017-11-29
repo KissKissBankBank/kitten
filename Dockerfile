@@ -1,4 +1,4 @@
-FROM ruby:2.3.3
+FROM ruby:2.3.4
 MAINTAINER Morad Igmir morad.igmir@kisskissbankbank.com
 
 # Throw errors if Gemfile has been modified since Gemfile.lock
