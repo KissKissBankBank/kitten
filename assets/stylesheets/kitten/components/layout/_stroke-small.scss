@@ -1,0 +1,35 @@
+/// Display a stroke small
+///
+/// @group layout
+///
+/// @example scss - Usage
+///
+///   @include k-StrokeSmall;
+///
+/// @example html
+///
+///   <span class="k-StrokeSmall" />
+
+@mixin k-StrokeSmall {
+  .k-StrokeSmall {
+    @include k-strokeSmallBase;
+
+    height: k-px-to-rem(4px);
+    width: k-px-to-rem(30px);
+  }
+
+  .k-StrokeSmall--tiny {
+    height: k-px-to-rem(2px);
+    width: k-px-to-rem(20px);
+  }
+
+  .k-StrokeSmall--medium {
+    height: k-px-to-rem(4px);
+    width: k-px-to-rem(50px);
+  }
+
+  .k-StrokeSmall--big {
+    height: k-px-to-rem(6px);
+    width: k-px-to-rem(100px);
+  }
+}
