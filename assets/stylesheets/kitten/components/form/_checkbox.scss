@@ -28,7 +28,6 @@
   $background-color-active: map-get($k-colors, 'primary-3');
   $background-color-disabled: map-get($k-colors, 'line-1');
   $border-color: map-get($k-colors, 'line-1');
-  $border-color-disabled: map-get($k-colors, 'line-1');
   $border-color-hover: map-get($k-colors, 'primary-1');
   $link-color: map-get($k-colors, 'primary-1');
 
@@ -111,7 +110,7 @@
 
       &:before {
         background-color: $background-color-disabled;
-        border-color: $border-color-disabled;
+        border-color: $border-color;
       }
     }
 
