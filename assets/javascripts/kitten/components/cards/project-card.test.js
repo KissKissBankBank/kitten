@@ -80,8 +80,10 @@ describe('<ProjectCard />', () => {
 
   describe('with ownerName and ownerLocation props', () => {
     const projectCard = mount(
-      <ProjectCard ownerName="Custom name"
-                   ownerLocation="Custom location" />
+      <ProjectCard
+        ownerName="Custom name"
+        ownerLocation="Custom location"
+      />
     )
     const paragraph = projectCard.find(Paragraph).first()
 
@@ -95,12 +97,26 @@ describe('<ProjectCard />', () => {
   })
 
   describe('with tags props', () => {
+    const tags = [ { items: [ { key: 'custom-tag', item: 'Custom tag' } ] } ]
+    const tagLists = [
+      { items: [ { key: 'custom-tag', item: 'Custom tag' } ] },
+      { items: [ { key: 'custom-tag-1', item: 'Custom tag 1' } ] },
+    ]
+
     const projectCard = mount(
-      <ProjectCard tags={ [ { key: 'custom-tag', item: 'Custom tag' } ] } />
+      <ProjectCard tags={ tags } />
+    )
+
+    const projectCardWithTwoLists = mount(
+      <ProjectCard tagLists={ tagLists } />
     )
 
     it('renders a <TagList />', () => {
       expect(projectCard).to.have.descendants(TagList)
+    })
+
+    it('renders two <TagList />', () => {
+      expect(projectCardWithTwoLists).to.have.exactly(2).descendants(TagList)
     })
   })
 
@@ -160,7 +176,8 @@ describe('<ProjectCard />', () => {
       <ProjectCard
         info1={ { value: 'Custom value 1', text: 'Custom text 1' } }
         info2={ { value: 'Custom value 2', text: 'Custom text 2', locked: true } }
-        info3={ { value: 'Custom value 3', text: 'Custom text 3' } } />
+        info3={ { value: 'Custom value 3', text: 'Custom text 3', reverse: true } }
+      />
     )
     const infos = projectCard.find('.k-ProjectCard__info')
 
@@ -168,18 +185,25 @@ describe('<ProjectCard />', () => {
       expect(infos).to.have.length(3)
     })
 
-    it('has a first block with good values', () => {
+    it('has a first block with text then displayed value', () => {
       const firstInfo = infos.at(0)
 
-      expect(firstInfo).to.contain.text('Custom value 1')
-      expect(firstInfo).to.contain.text('Custom text 1')
+      expect(firstInfo.props().children[0]).to.be.equal('Custom text 1')
+      expect(firstInfo.props().children[2].props.children).to.be.equal('Custom value 1')
     })
 
-    it('has second block with locked value', () => {
+    it('has second block with text then locked value', () => {
       const secondInfo = infos.at(1)
 
+      expect(secondInfo.props().children[0]).to.be.equal('Custom text 2')
       expect(secondInfo).to.have.descendants(LockIcon)
-      expect(secondInfo).to.contain.text('Custom text 2')
+    })
+
+    it('has a third block with reversed displayed items', () => {
+      const firstInfo = infos.at(2)
+
+      expect(firstInfo.props().children[0].props.children).to.be.equal('Custom value 3')
+      expect(firstInfo.props().children[2]).to.be.equal('Custom text 3')
     })
   })
 
@@ -187,7 +211,8 @@ describe('<ProjectCard />', () => {
     const projectCard = mount(
       <ProjectCard
         coloredInfosValues
-        info1={ { value: 'Custom value 1', text: 'Custom text 1' } } />
+        info1={ { value: 'Custom value 1', text: 'Custom text 1' } }
+      />
     )
     const info = projectCard.find('.k-ProjectCard__info').first()
     const value = info.find('.k-ProjectCard__info__value')
@@ -199,8 +224,10 @@ describe('<ProjectCard />', () => {
 
   describe('with status props', () => {
     const projectCard = mount(
-      <ProjectCard statusContent="Custom status"
-                   statusWithoutTopBorder />
+      <ProjectCard
+        statusContent="Custom status"
+        statusWithoutTopBorder
+      />
     )
     const status = projectCard.find('.k-ProjectCard__status')
 
@@ -213,8 +240,10 @@ describe('<ProjectCard />', () => {
 
   describe('with statusPrimaryBackground prop', () => {
     const projectCard = mount(
-      <ProjectCard statusContent="Custom status"
-                   statusPrimaryBackground />
+      <ProjectCard
+        statusContent="Custom status"
+        statusPrimaryBackground
+      />
     )
     const status = projectCard.find('.k-ProjectCard__status').first()
 
@@ -224,23 +253,27 @@ describe('<ProjectCard />', () => {
     })
   })
 
-  describe('with statusTertiaryBackground prop', () => {
+  describe('with statusValidBackground prop', () => {
     const projectCard = mount(
-      <ProjectCard statusContent="Custom status"
-                   statusTertiaryBackground />
+      <ProjectCard
+        statusContent="Custom status"
+        statusValidBackground
+      />
     )
     const status = projectCard.find('.k-ProjectCard__status').first()
 
     it('has a good class', () => {
       expect(status)
-        .to.have.className('k-ProjectCard__status--tertiaryBackground')
+        .to.have.className('k-ProjectCard__status--validBackground')
     })
   })
 
   describe('with statusGreyBackground prop', () => {
     const projectCard = mount(
-      <ProjectCard statusContent="Custom status"
-                   statusGreyBackground />
+      <ProjectCard
+        statusContent="Custom status"
+        statusGreyBackground
+      />
     )
     const status = projectCard.find('.k-ProjectCard__status').first()
 
@@ -252,8 +285,10 @@ describe('<ProjectCard />', () => {
 
   describe('with statusErrorBackground prop', () => {
     const projectCard = mount(
-      <ProjectCard statusContent="Custom status"
-                   statusErrorBackground />
+      <ProjectCard
+        statusContent="Custom status"
+        statusErrorBackground
+      />
     )
     const status = projectCard.find('.k-ProjectCard__status').first()
 
@@ -265,8 +300,10 @@ describe('<ProjectCard />', () => {
 
   describe('with statusErrorReverseBackground prop', () => {
     const projectCard = mount(
-      <ProjectCard statusContent="Custom status"
-                   statusErrorReverseBackground />
+      <ProjectCard
+        statusContent="Custom status"
+        statusErrorReverseBackground
+      />
     )
     const status = projectCard.find('.k-ProjectCard__status').first()
 

@@ -1,4 +1,6 @@
 /// Text alignment utilities.
+/// Utilities to align items according to media-queries
+///   (aligns : center, left, right).
 ///
 /// @group text
 ///
@@ -8,24 +10,66 @@
 ///
 /// @example html
 ///
+///   <div class="k-u-align-center@xxs-down">…</div>
+///   <div class="k-u-align-center@xs-down">…</div>
+///   <div class="k-u-align-center@s-down">…</div>
+///   <div class="k-u-align-center@m-down">…</div>
+///   <div class="k-u-align-center@l-down">…</div>
+///
+///   <div class="k-u-align-center@xs-up">…</div>
+///   <div class="k-u-align-center@s-up">…</div>
+///   <div class="k-u-align-center@m-up">…</div>
+///   <div class="k-u-align-center@l-up">…</div>
+///   <div class="k-u-align-center@xl-up">…</div>
+///
 ///   <div class="k-u-align-center">…</div>
+///   <div class="k-u-align-left">…</div>
 ///   <div class="k-u-align-right">…</div>
+///
 ///   <div class="k-u-spacedHorizontally">…</div>
 ///   <div class="k-u-spacedVertically">…</div>
 ///   <div class="k-u-spaced">…</div>
+///   <div class="k-u-align-center-block">…</div>
 ///
 ///  @example html - Deprecated
 ///
 ///    <div class="k-u-centered">…</div>
 
-@mixin k-utilities-align {
-  .k-u-align-center,
-  .k-u-centered { // DEPRECATED
-    text-align: center;
+@mixin k-u-align($position, $align) {
+  $value: $align;
+
+  .k-u-align-#{$position} {
+    text-align: $value;
   }
 
-  .k-u-align-right {
-    text-align: right;
+  @each $name, $query in $k-media-queries {
+    @if $name != "xl" {
+      .k-u-align-#{$position}\@#{$name}-down {
+        @include k-media-max($name) {
+          text-align: $value;
+        }
+      }
+    }
+
+    @if $name != "xxs" {
+      .k-u-align-#{$position}\@#{$name}-up {
+        @include k-media-min($name) {
+          text-align: $value;
+        }
+      }
+    }
+  }
+}
+
+@mixin k-utilities-align {
+
+  @include k-u-align('center', center);
+  @include k-u-align('left', left);
+  @include k-u-align('right', right);
+
+  // DEPRECATED
+  .k-u-centered {
+    text-align: center;
   }
 
   .k-u-spacedHorizontally {
@@ -38,5 +82,10 @@
 
   .k-u-spaced {
     margin: k-px-to-rem(10px);
+  }
+
+  .k-u-align-center-block {
+    margin-left: auto;
+    margin-right: auto;
   }
 }

@@ -6,23 +6,44 @@ import { ClockIcon } from 'kitten/components/icons/clock-icon'
 import { Paragraph } from 'kitten/components/typography/paragraph'
 import { ButtonIcon } from 'kitten/components/buttons/button-icon'
 import { Separator } from 'kitten/components/layout/separator'
-import { RightArrowIcon } from 'kitten/components/icons/right-arrow-icon'
+import { ArrowIcon } from 'kitten/components/icons/arrow-icon'
 
 describe('<ProjectCreatorCard />', () => {
   describe('by default', () => {
-    const projectCreatorCard = shallow(<ProjectCreatorCard />)
+    const projectCreatorCard = mount(<ProjectCreatorCard />)
 
     it('is a <div />', () => {
       expect(projectCreatorCard).to.have.tagName('div')
     })
 
     it('has a default class', () => {
-      expect(projectCreatorCard.dive()).to.have.className('k-ProjectCreatorCard')
+      expect(projectCreatorCard).to.have.className('k-ProjectCreatorCard')
+    })
+  })
+
+  describe('with withoutHover prop', () => {
+    const projectCreatorCard = mount(
+      <ProjectCreatorCard href="#" withoutHover />)
+    const buttonIcon = projectCreatorCard.find('.k-ButtonIcon--withoutHover')
+
+    it('renders a ButtonIcon with withoutHover class', () => {
+      expect(buttonIcon).to.have.length(1)
+    })
+  })
+
+  describe('with verticalArrow props', () => {
+    const projectCreatorCard = mount(
+      <ProjectCreatorCard href="#" verticalArrow />)
+    const buttonIcon = projectCreatorCard.find('.k-ButtonIcon--verticalArrow')
+
+    it('renders a ButtonIcon with vertical arrow', () => {
+      expect(buttonIcon).to.have.length(1)
     })
   })
 
   describe('with date prop', () => {
-    const projectCreatorCard = mount(<ProjectCreatorCard date="Custom date" />)
+    const projectCreatorCard = mount(
+      <ProjectCreatorCard date="Custom date" />)
     const icon = projectCreatorCard.find(ClockIcon)
 
     it('renders a <ClockIcon />', () => {
@@ -36,9 +57,11 @@ describe('<ProjectCreatorCard />', () => {
 
   describe('with status props', () => {
     const projectCreatorCard = mount(
-      <ProjectCreatorCard statusBackgroundColor="#e6f5fb"
-                          statusBorderColor="#cbe8f9"
-                          statusText="Custom status" />
+      <ProjectCreatorCard
+        statusBackgroundColor="#e6f5fb"
+        statusBorderColor="#cbe8f9"
+        statusText="Custom status"
+      />
     )
     const status = projectCreatorCard.find('.k-ProjectCreatorCard__status')
     const icon = status.find('.k-ProjectCreatorCard__status--icon')
@@ -60,22 +83,32 @@ describe('<ProjectCreatorCard />', () => {
 
   describe('with href props', () => {
     const projectCreatorCard = mount(
-      <ProjectCreatorCard href="#"
-                          isExternal="true" />
+      <ProjectCreatorCard
+        href="#"
+        isExternal="true"
+      />
     )
     const link = projectCreatorCard.find('.k-ProjectCreatorCard__link')
+    const separator = link.find('.k-Separator')
 
     it('renders href attributes', () => {
       expect(link).to.have.tagName('a')
       expect(link).to.have.attr('href', '#')
       expect(link).to.have.attr('target', '_blank')
     })
+
+    it('renders darker attributes', () => {
+      expect(separator).to.have.className('k-Separator--darker')
+    })
   })
 
   describe('with linkText prop', () => {
     const projectCreatorCard = mount(
-      <ProjectCreatorCard href="#"
-                          linkText="Custom text" />)
+      <ProjectCreatorCard
+        href="#"
+        linkText="Custom text"
+      />
+    )
 
     it('renders a text content', () => {
       expect(projectCreatorCard).to.contain.text('Custom text')

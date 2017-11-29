@@ -20,6 +20,7 @@
 ///       <a class="k-LinkList__link" href="#">Link B</a>
 ///      </li>
 ///   </ul>
+
 @mixin k-LinkList($link-list) {
   $link-color: k-default(map-get-deep($link-list, ('colors', 'link')), inherit);
   $active-color: map-get-deep($link-list, ('colors', 'link-active'));
@@ -27,9 +28,13 @@
 
   .k-LinkList {
     // override ul defaults
-    text-align: left;
+    text-align: center;
     list-style-type: none;
     padding: 0;
+
+    @include k-media-min('l') {
+      text-align: left;
+    }
   }
 
   .k-LinkList__item {
@@ -37,7 +42,7 @@
   }
 
   .k-LinkList__link {
-    @include k-typographyFont('source-sans-light');
+    @include k-typographyFont('light');
     @include k-typographyFontSize(2);
 
     text-decoration: none;
@@ -54,5 +59,10 @@
     }
 
     transition: color .2s;
+  }
+
+  .k-LinkList--withoutMargin {
+    margin-top: 0;
+    margin-bottom: 0;
   }
 }

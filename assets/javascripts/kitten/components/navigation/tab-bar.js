@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { Component } from 'react'
 import classNames from 'classnames'
 import Markdown from 'react-markdown'
 
-export class TabBar extends React.Component {
+export class TabBar extends Component {
   renderItems() {
     const { items } = this.props
 

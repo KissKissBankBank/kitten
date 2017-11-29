@@ -1,7 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 
-class TourPopover extends React.Component {
+export class TourPopover extends React.Component {
   constructor(props) {
     super(props)
 
@@ -49,7 +49,7 @@ class TourPopover extends React.Component {
       'k-Button--icon',
       'k-Button--iconRight',
       {
-        'k-Button--boron': !isDisabled,
+        'k-Button--helium': !isDisabled,
         'k-Button--hydrogen': isDisabled,
       }
     )
@@ -78,7 +78,7 @@ class TourPopover extends React.Component {
       'k-Button--tiny',
       'k-Button--icon',
       {
-        'k-Button--boron': !isDisabled,
+        'k-Button--helium': !isDisabled,
         'k-Button--hydrogen': isDisabled,
       }
     )
@@ -149,4 +149,5 @@ class TourPopover extends React.Component {
   }
 }
 
+// DEPRECATED: do not use default export.
 export default TourPopover

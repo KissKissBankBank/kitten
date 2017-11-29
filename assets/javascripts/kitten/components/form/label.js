@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { Component } from 'react'
 import classNames from 'classnames'
 import domElementHelper from 'kitten/helpers/dom/element-helper'
 
-export class Label extends React.Component {
+export class Label extends Component {
   constructor(props) {
     super(props)
 
@@ -18,19 +18,35 @@ export class Label extends React.Component {
   }
 
   render() {
-    const { tag, className, children, focusId, size, ...other } = this.props
+    const {
+      tag,
+      className,
+      children,
+      focusId,
+      size,
+      withoutPointerEvents,
+      ...other,
+    } = this.props
+
     const Tag = tag
+
     const labelClassName = classNames(
       "k-Label",
       className,
-      { [`k-Label--${size}`]: size },
+      {
+        [`k-Label--${size}`]: size,
+        'k-Label--withoutPointerEvents': withoutPointerEvents,
+      },
     )
+    const htmlFor = (tag == 'label' && focusId) ? focusId : null
 
     return (
-      <Tag className={ labelClassName }
-           htmlFor={ tag == 'label' ? focusId : null }
-           onClick={ this.handleClick }
-           { ...other }>
+      <Tag
+        className={ labelClassName }
+        htmlFor={ htmlFor }
+        onClick={ this.handleClick }
+        { ...other }
+      >
         { children }
       </Tag>
     )
@@ -43,4 +59,5 @@ Label.defaultProps = {
   children: 'Label',
   focusId: null,
   size: null, // `tiny`
+  withoutPointerEvents: false,
 }

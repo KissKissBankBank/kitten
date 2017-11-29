@@ -1,15 +1,13 @@
 import React from 'react'
 import objectAssign from 'core-js/library/fn/object/assign'
-import Tour from 'kitten/components/tours/tour'
+import { Tour } from 'kitten/components/tours/tour'
 
 // We directly use svg-react loader for the moment.
 // TODO: update webpack config to manage svg in jsx files.
-import PlatformSwitchIllustration from
-  'babel?presets[]=babel-preset-es2015,presets[]=babel-preset-react!svg-react!icons/icon-tour-1.svg?name=PlatformSwitchIllustration'
-import CrowdIllustration from
-  'babel?presets[]=babel-preset-es2015,presets[]=babel-preset-react!svg-react!icons/icon-tour-2.svg?name=CrowdIllustration'
+import { MixIllustration } from 'kitten/components/illustrations/mix-illustration'
+import { LoudspeakerIllustration } from 'kitten/components/illustrations/loudspeaker-illustration'
 
-class HeaderTour extends React.Component {
+export class HeaderTour extends React.Component {
   constructor(props) {
     super(props)
   }
@@ -23,7 +21,7 @@ class HeaderTour extends React.Component {
   platformSwitchStep() {
     const content = this.props.platformSwitchStep
     const illustration = {
-      illustration: <PlatformSwitchIllustration
+      illustration: <MixIllustration
                          className="k-Tour__popover__svg--primary"/>
     }
 
@@ -33,7 +31,7 @@ class HeaderTour extends React.Component {
   crowdStep() {
     const content = this.props.crowdStep
     const illustration = {
-      illustration: <CrowdIllustration
+      illustration: <LoudspeakerIllustration
                          className="k-Tour__popover__svg--primary" />
     }
 
@@ -62,4 +60,5 @@ HeaderTour.defaultProps = {
   storeName: 'kitten.HeaderTour',
 }
 
+// DEPRECATED: do not use default export.
 export default HeaderTour

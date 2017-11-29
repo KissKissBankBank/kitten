@@ -21,6 +21,10 @@
 ///   </button>
 
 @mixin k-ButtonImageWithText {
+  $text-font: 'regular';
+  $text-size: -1; // 14px
+  $text-line-height: 1;
+
   $color: map-get($k-colors, 'font-1');
   $color-hover: map-get($k-colors, 'primary-1');
   $color-active: map-get($k-colors, 'primary-3');
@@ -48,8 +52,8 @@
     margin: 0;
     text-align: left;
 
-    @include k-typographyFontSize(-1, 1);
-    @include k-typographyFont('source-sans-semi-bold');
+    @include k-typographyFont($text-font);
+    @include k-typographyFontSize($text-size, $text-line-height);
 
     .k-ButtonImageWithText:hover &,
     &:hover {

@@ -1,7 +1,7 @@
 import React from 'react'
 import { expect } from 'chai'
 import { shallow } from 'enzyme'
-import LinkBox from '../../components/box/link-box'
+import { LinkBox } from 'kitten/components/box/link-box'
 
 describe('<LinkBox />', () => {
   const component = shallow(
@@ -64,6 +64,24 @@ describe('<LinkBox />', () => {
 
     it('has no icon', () => {
       expect(defaultComponent.find('.k-LinkBox__icon')).to.have.length(0)
+    })
+  })
+
+  describe('with linkProps props', () => {
+    const linkPropsComponent = shallow(
+      <LinkBox linkProps={ { title: "Lorem ipsum" } } />
+    )
+
+    it('has a linkProps prop', () => {
+      expect(linkPropsComponent).to.have.attr('title', 'Lorem ipsum')
+    })
+  })
+
+  describe('with classNames props', () => {
+    const linkBox = shallow(<LinkBox className="custom_class" />)
+
+    it('has custom class', () => {
+      expect(linkBox).to.have.className('custom_class')
     })
   })
 })

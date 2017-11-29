@@ -17,6 +17,7 @@
 @include k-Card;
 @include k-ProjectCard;
 @include k-ProjectCreatorCard;
+@include k-ProjectSimilarCard;
 
 // Dev
 
@@ -76,37 +77,21 @@
 @include k-TextAreaWrapper;
 @include k-TextInput;
 @include k-TextInputWithLimit;
-@include k-TextInputWithButton((
-  font: 'source-sans-semi-bold',
-  font-size: -4,
-  color: map-get($k-colors, 'background-1'),
-  button-background: map-get($k-colors, 'primary-1'),
-  button-background-is-valid: map-get($k-colors, 'valid'),
-  button-background-is-error: map-get($k-colors, 'error'),
-));
+@include k-TextInputWithButton;
+@include k-TextInputWithUnit;
+
 // DEPRECATED
 @include k-TextInputWithInfo((
   label: (
-    font: 'source-sans-semi-bold',
+    font: 'bold',
     font-size: -2,
     color: map-get($k-colors, 'font-1'),
   ),
   error: (
-    font: 'source-sans',
+    font: 'regular',
     font-size: -2,
     color: map-get($k-colors, 'error'),
   )
-));
-
-@include k-TextInputWithUnit((
-  input-font: 'source-sans',
-  unit-font: 'source-sans-semi-bold',
-  border-color: map-get($k-colors, 'line-2'),
-  color: map-get($k-colors, 'font-1'),
-  unit-color: map-get($k-colors, 'primary-1'),
-  unit-colors-is-valid: map-get($k-colors, 'valid'),
-  unit-colors-is-error: map-get($k-colors, 'error'),
-  unit-colors-is-inactive: map-get($k-colors, 'font-2'),
 ));
 
 // Footer
@@ -130,18 +115,23 @@
 // Hero
 
 @include k-Hero((
-  font: 'source-sans-light',
+  font: 'light',
 ));
 
 // Images
 
 @include k-Cropper;
 
+// Icons
+
+@include k-ArrowIcon;
+
 // Layout
 
 @include k-Line;
 @include k-ResponsiveIframeContainer;
 @include k-Separator;
+@include k-VerticalSeparator;
 
 // Lines
 
@@ -164,9 +154,18 @@
 @include k-BulletList;
 @include k-TagList;
 
+// Loaders
+
+@include k-Loader;
+@include k-LoaderWithParagraph;
+
 // Meters
 
 @include k-Progress;
+
+// Modals
+
+@include k-Modal((z-index: 10));
 
 // Navigation
 
@@ -183,25 +182,7 @@
 
 @include k-TabBar((z-index: 50));
 
-@include k-UserMenu((
-  font: 'source-sans-semi-bold',
-  font-step: -2,
-  colors: (
-    default: (
-      base: map-get($k-colors, 'font-1'),
-      background: map-get($k-colors, 'background-2'),
-      border: map-get($k-colors, 'line-1'),
-      background-hover: map-get($k-colors, 'line-1'),
-      color-active: map-get($k-colors, 'primary-1'),
-      border-active: map-get($k-colors, 'primary-1'),
-    ),
-    secondary: (
-      base: map-get($k-colors, 'font-2'),
-      background: map-get($k-colors, 'background-2'),
-      border: map-get($k-colors, 'line-1'),
-    ),
-  ),
-));
+@include k-UserMenu;
 
 // Notifications
 
@@ -238,7 +219,7 @@
 @include k-TestimonyList;
 
 @include k-Testimony((
-  font: 'source-sans-light',
+  font: 'light',
 ));
 
 // Titles
@@ -248,6 +229,7 @@
 // Tooltips
 
 @include k-Tooltip;
+@include k-TooltipNew;
 @include k-StaticTooltip;
 
 // Tours

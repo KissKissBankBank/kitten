@@ -6,24 +6,7 @@
 ///
 /// @example scss - usage
 ///
-///   @include k-UserMenu((
-///     font: 'source-sans-semi-bold',
-///     font-step: -2,
-///     colors: (
-///       default: (
-///         base: #333,
-///         background: #fbfbfb,
-///         border: #eee,
-///         background-hover: #f8f8f8,
-///         border-hover: #333,
-///      ),
-///       secondary: (
-///         base: #b8b8b8,
-///         background: #fbfbfb,
-///         border: #eee,
-///      ),
-///     ),
-///   ));
+///   @include k-UserMenu;
 ///
 /// @example html
 ///
@@ -41,113 +24,98 @@
 ///     …
 ///   </ul>
 
-@mixin k-UserMenu($menu) {
-  @include k-with-module('k-UserMenu: $menu') {
+@mixin k-UserMenu {
+  $font: 'regular';
+  $font-step: -2; // 12px
 
-    $font: k-map-fetch($menu, 'font');
-    $default: k-map-fetch($menu, ('colors', 'default'));
-    $secondary: map-get-deep($menu, ('colors', 'secondary'));
+  $color: map-get($k-colors, 'font-1');
+  $background-color: map-get($k-colors, 'background-2');
+  $border-color: map-get($k-colors, 'line-1');
+  $background-color-hover: map-get($k-colors, 'line-1');
+  $color-active: map-get($k-colors, 'primary-1');
+  $border-color-active: map-get($k-colors, 'primary-1');
 
-    $font-step: k-number-definition(
-      k-map-fetch($menu, 'font-step'), $unit: none);
-    $color: k-color-definition(
-      k-map-fetch($default, 'base'));
-    $background-color: k-color-definition(
-      k-map-fetch($default, 'background'));
-    $border-color: k-color-definition(
-      k-map-fetch($default, 'border'));
-    $background-color-hover: k-color-definition(
-      k-map-fetch($default, 'background-hover'));
-    $color-active: k-color-definition(
-      k-map-fetch($default, 'color-active'));
-    $border-color-active: k-color-definition(
-      k-map-fetch($default, 'border-active'));
+  $secondary-color: map-get($k-colors, 'font-2');
+  $secondary-background-color: map-get($k-colors, 'background-2');
+  $secondary-border-color: map-get($k-colors, 'line-1');
 
-    $arrow-size: 9px;
-    $border-size: 1px;
+  $arrow-size: k-px-to-rem(9px);
+  $border-size: k-px-to-rem(1px);
 
-    .k-UserMenu {
-      position: relative;
-      width: 100%;
-      margin: 0;
-      padding: 0;
-      border: $border-size solid $border-color;
-      border-left: none;
-      list-style-type: none;
+  .k-UserMenu {
+    position: relative;
+    width: 100%;
 
-      @include k-media-xs {
-        border-right: none;
-      }
+    margin: 0;
+    padding: 0;
+
+    border: $border-size solid $border-color;
+    border-left: none;
+    list-style-type: none;
+
+    @include k-media-xs {
+      border-right: none;
     }
+  }
 
-    .k-UserMenu--withoutBorderTop {
-      border-top: none;
+  .k-UserMenu--withoutBorderTop {
+    border-top: none;
+  }
+
+  .k-UserMenu__arrow {
+    @include k-media-min('xs') {
+      @include k-dropdownArrow((without-border-top: true));
     }
+  }
 
-    .k-UserMenu__arrow {
-      @include k-media-min('xs') {
-        @include k-dropdownArrow((without-border-top: true));
-      }
-    }
+  .k-UserMenu__item {
+    display: block;
+    padding: k-px-to-rem(15px) k-px-to-rem(20px);
 
-    .k-UserMenu__item {
-      display: block;
-      padding: k-px-to-rem(15px) k-px-to-rem(20px);
-      outline: none;
-      border-left: $border-size solid $border-color;
-      background-color: $background-color;
+    outline: none;
+    border-left: $border-size solid $border-color;
+    background-color: $background-color;
 
-      @include k-typographyFont($font);
-      @include k-typographyFontSize($font-step, 1);
+    @include k-typographyFont($font);
+    @include k-typographyFontSize($font-step, 1);
+    text-decoration: none;
+    color: $color;
+
+    transition: $color .2s, $background-color .2s, $border-color .2s;
+
+    &:hover {
+      background-color: $background-color-hover;
+      color: $color-active;
       text-decoration: none;
-      color: $color;
-
-      transition: color .2s, background-color .2s, border-color .2s;
-
-      &:hover {
-        background-color: $background-color-hover;
-        color: $color-active;
-        text-decoration: none;
-      }
-
-      &:focus {
-        background-color: $background-color-hover;
-        border-left-color: $border-color-active;
-        color: $color-active;
-        text-decoration: none;
-      }
-
-      &.is-selected {
-        border-left-color: $border-color-active;
-        color: $color-active;
-      }
-
-      @include k-media-xs {
-        border-left: none;
-      }
     }
 
-    @if $secondary {
-      $secondary-color: k-color-definition(
-        k-map-fetch($secondary, 'base'));
-      $secondary-background-color: k-color-definition(
-        k-map-fetch($secondary, 'background'));
-      $secondary-border-color: k-color-definition(
-        k-map-fetch($secondary, 'border'));
-
-      .k-UserMenu__item--secondary {
-        border-left-color: $secondary-border-color;
-        background-color: $secondary-background-color;
-
-        color: $secondary-color;
-      }
+    &:focus {
+      background-color: $background-color-hover;
+      border-left-color: $border-color-active;
+      color: $color-active;
+      text-decoration: none;
     }
 
-    // Manage items border.
-    @each $position in (Top Bottom) {
-      .k-UserMenu__border#{$position} {
-        border-#{to_lower_case($position)}: $border-size solid $border-color;
-      }
+    &.is-selected {
+      border-left-color: $border-color-active;
+      color: $color-active;
+    }
+
+    @include k-media-xs {
+      border-left: none;
+    }
+  }
+
+  .k-UserMenu__item--secondary {
+    border-left-color: $secondary-border-color;
+    background-color: $secondary-background-color;
+    color: $secondary-color;
+  }
+
+  // Manage items border.
+  @each $position in (Top Bottom) {
+    .k-UserMenu__border#{$position} {
+      border-#{to_lower_case($position)}: $border-size solid $border-color;
     }
   }
 }

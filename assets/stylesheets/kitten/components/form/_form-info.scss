@@ -9,18 +9,7 @@
 ///
 /// @example scss - Usage
 ///
-/// @include k-FormInfo((
-///  label: (
-///    font: 'source-sans-semi-bold',
-///    font-size: -1,
-///    color: #333,
-///  ),
-///  error: (
-///    font: 'source-sans',
-///    font-size: -2,
-///    color: #ff4146,
-///  )
-/// ));
+/// @include k-FormInfo;
 ///
 /// <div class="k-FormInfo">
 ///   <label class="k-FormInfo__label">Nom du label</label>
@@ -31,30 +20,31 @@
 /// </div>
 
 @mixin k-FormInfo {
-
   // Label
-  $font-label: 'source-sans-semi-bold';
-  $font-size-label: -1;
-  $color-label: map-get($k-colors, 'font-1');
+  $font: 'regular';
+
+  $label-size: 0; // 16px
+  $label-color: map-get($k-colors, 'font-1');
 
   // Error
-  $font-error: 'source-sans';
+  $font-error: 'regular';
   $font-size-error: -2;
   $color-error: map-get($k-colors, 'error');
+  $error-line-height: normal;
 
   .k-FormInfo__label {
-    @include k-typographyFont($font-label);
-    @include k-typographyFontSize($font-size-label);
+    @include k-typographyFont($font);
+    @include k-typographyFontSize($label-size);
 
     display: block;
     padding-bottom: k-px-to-rem(10px);
 
-    color: $color-label;
+    color: $label-color;
   }
 
   .k-FormInfo__error {
     @include k-typographyFont($font-error);
-    @include k-typographyFontSize($font-size-error);
+    @include k-typographyFontSize($font-size-error, $error-line-height);
 
     margin-top: k-px-to-rem(5px);
 

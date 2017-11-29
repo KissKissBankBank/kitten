@@ -4,16 +4,7 @@
 ///
 /// @example scss - usage
 ///
-///   @include k-TextInputWithUnit((
-///     input-font: 'source-sans',
-///     unit-font: 'source-sans-semi-bold',
-///     border-color: #d8d8d8,
-///     color: #333;
-///     unit-color: #4a84ff,
-///     unit-colors-is-valid: #70c050,
-///     unit-colors-is-error: #ff4146,
-///     unit-colors-is-inactive: #b8b8b8,
-///   ));
+///   @include k-TextInputWithUnit;
 ///
 /// @example html
 ///
@@ -25,28 +16,23 @@
 ///   <span class="k-TextInputWithUnit__unit">€</span>
 /// </div>
 
-@mixin k-TextInputWithUnit($input) {
-  $input-font: k-string-definition(k-map-fetch($input, 'input-font'));
-  $unit-font: k-string-definition(k-map-fetch($input, 'unit-font'));
-  $border-color: k-color-definition(k-map-fetch($input, 'border-color'));
-  $color: k-color-definition(k-map-fetch($input, 'color'));
+@mixin k-TextInputWithUnit {
+  $unit-font: 'regular';
+
+  $unit: 0; // 16px
+  $unit-word: -1; // 14px
+
+  $border-color: map-get($k-colors, 'line-2');
+  $color: map-get($k-colors, 'font-1');
+  $unit-background-color: map-get($k-colors, 'background-1');
 
   // Border
-  $unit-color: k-color-definition(k-map-fetch($input, 'unit-color'));
+  $unit-color: map-get($k-colors, 'primary-1');
+  $unit-color-is-valid: map-get($k-colors, 'valid');
+  $unit-color-is-error: map-get($k-colors, 'error');
+  $unit-color-is-inactive: map-get($k-colors, 'font-2');
 
-  // Valid
-  $unit-color-is-valid: k-color-definition(
-    k-map-fetch($input, 'unit-colors-is-valid'));
-
-  // Error
-  $unit-color-is-error: k-color-definition(
-    k-map-fetch($input, 'unit-colors-is-error'));
-
-  // Inactive
-  $unit-color-is-inactive: k-color-definition(
-    k-map-fetch($input, 'unit-colors-is-inactive'));
-
-  // Disable
+  // Disabled
   $background-disabled: map-get($k-colors, 'line-1');
   $border-disabled: map-get($k-colors, 'line-2');
 
@@ -70,12 +56,10 @@
 
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
-    box-sizing: border-box;
     outline: none; // since we introduce our own focus styles
 
     transition: all $transition-speed;
 
-    @include k-typographyFont($input-font);
     @include k-formRemoveNumberSpinner;
 
     &:focus ~ .k-TextInputWithUnit__unit {
@@ -86,6 +70,8 @@
     &:disabled + .k-TextInputWithUnit__unit {
       background: $background-disabled;
       border-color: $border-disabled;
+      border: none;
+      border-left: k-px-to-rem(1px) solid $border-disabled;
     }
   }
 
@@ -103,13 +89,14 @@
     position: relative;
     vertical-align: middle;
 
+    background-color: $unit-background-color;
     border-top-right-radius: $border-text-input;
     border-bottom-right-radius: $border-text-input;
     border: 1px solid $border-color;
     border-left: 0;
     box-sizing: border-box;
     height: 100%;
-    padding: k-px-to-rem(11px) k-px-to-rem(14px);
+    padding: 0 k-px-to-rem(15px);
 
     color: $color;
 
@@ -118,7 +105,7 @@
     transition: all $transition-speed;
 
     @include k-typographyFont($unit-font);
-    @include k-typographyFontSize(-1);
+    @include k-typographyFontSize($unit);
 
     &.is-valid {
       border-color: $unit-color-is-valid;
@@ -137,6 +124,10 @@
   }
 
   .k-TextInputWithUnit__unit--tiny {
-    padding: k-px-to-rem(7px) k-px-to-rem(9px);
+    padding: 0 k-px-to-rem(15px);
+  }
+
+  .k-TextInputWithUnit__unitWord {
+    @include k-typographyFontSize($unit-word);
   }
 }

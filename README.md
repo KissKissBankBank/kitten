@@ -4,6 +4,9 @@ Kitten is a components library based on Sass and React. It provides mixins to
 create flexible components based on your own brand elements (colors, fonts,
 typographic scale, etc.).
 
+You can check out Kitten's components on
+[KissKissBankBank's styleguide](https://styleguide.kisskissbankbank.com/).
+
 It is an npm module coupled with a Rails engine that provides an integrated
 styleguide. It should eventually be separated into two different repositories.
 
@@ -134,7 +137,15 @@ $ bin/kitten install
 
 ### Dummy style guide
 
-To launch the style guide on the dummy app:
+To launch the style guide on the dummy app with hot-reloading:
+
+```sh
+$ foreman start
+```
+
+Then visit http://localhost:3003
+
+To launch the style guide on the dummy app without hot-reloading:
 
 ```sh
 $ bin/kitten start
@@ -217,7 +228,7 @@ $ bin/kitten test
 
 # OR
 
-$ bin/kitten test {PATH}/{FILE}.test.js
+$ bin/test {PATH}/{FILE}.test.js
 ```
 
 Check out the [guidelines](../../wiki/Component-testing) to know how to test kitten.
@@ -227,7 +238,8 @@ Check out the [guidelines](../../wiki/Component-testing) to know how to test kit
 To contribute code:
 
 - Create a pull request on GitHub with a clear title in English.
-- Tag it with the right labels: `Needs reviews`, `Needs testing` or `Work in progress`.
+- [Tag it](https://github.com/KissKissBankBank/kitten/wiki/Contribution-guidelines#labels-on-pull-request)
+  with the right labels: `Needs reviews`, `Needs testing` or `Work in progress`.
 - Don't forget to update the `CHANGELOG.md` under the `[unreleased]` section
   with the following syntax:
 
@@ -236,12 +248,15 @@ To contribute code:
   - Feature: a new feature.
   - Fix: a fix.
   ```
+- Update the `KARL_CHANGELOG.md` under the [unreleased] section if you added some
+  updates to the styleguide.
 
 To merge code into master:
 
 - Make sure the code has been reviewed by someone.
 - Make sure it has been tested.
 - Merge using `Squash and merge` on GitHub.
+- Delete the branch.
 
 ## Static Dump
 
@@ -255,6 +270,9 @@ $ bin/kitten buildstatic
 
 ## Release
 
+**Only for [KissKissBankBank](https://github.com/KissKissBankBank)
+collaborators**
+
 ### Login
 
 If this is your first release, start by saving your npm credentials in
@@ -264,9 +282,9 @@ your `~/.npmrc` by calling:
 $ yarn login
 ```
 
-### Prepare the release
+### Prepare the release pull request
 
-- Pull `master`
+- Pull `master`.
 - Update the `CHANGELOG.md` file:
   * Update the version following the [Semantic Versioning](http://semver.org/).
   * Add a new `[unreleased]` section.
@@ -278,20 +296,28 @@ $ yarn login
   * Add a new `[unreleased]` section.
 - Update the version in `lib/kitten/version.rb`.
 - Update the version in `package.json`.
+- Run this command:
+
+```sh
+$ bundle exec rake kitten_prepare_release
+```
+
+- Follow the link to create the pull request on Github.
+- Announce the release on KissKissBankBank's #kit-ui Slack channel with the
+  related CHANGELOG.
 
 ### Release!
 
-Run this command:
+Once the pull request is accepted:
+
+- Merge the pull request into master.
+- Delete the release branch.
+- Run this command:
 
 ```sh
 $ bundle exec rake kitten_release
 ```
 
-### Update GitHub
-
-**Only for [KissKissBankBank](https://github.com/KissKissBankBank)
-collaborators**
-
-Update
-[our private project kanban](https://github.com/orgs/KissKissBankBank/projects/5):
-move cards that are released from `done` column to `released` column.
+- Update
+  [our private project kanban](https://github.com/orgs/KissKissBankBank/projects/5):
+  move cards that are released from `done` column to `released` column.

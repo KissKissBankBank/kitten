@@ -4,7 +4,198 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add italic paragraph example.
+## [16.3.1] - 2017-11-28
+
+No changes.
+
+## [16.3.0] - 2017-11-27
+
+Features:
+- Add `senary` prop on `Title` example.
+- Update `ProjectCard` colors in examples.
+- Use `k-u-anti-aliasing` on `Kitten`.
+- Add `with searchable` select example.
+
+Fix:
+- Update `react-select` version.
+
+## [16.2.0] - 2017-11-22
+
+No changes.
+
+## [16.1.0] - 2017-11-20
+
+No changes.
+
+## [16.0.1] - 2017-11-17
+
+No changes.
+
+## [16.0.0] - 2017-11-17
+
+Features:
+- Add `KarlInformationBox` example.
+- Extract button colors into a specific configuration file.
+- Update grid and text for `Title` examples.
+
+## [15.0.0] - 2017-11-15
+
+Features:
+- Add `tiny` prop on `TagButton` example.
+- Update `karl-Title` and `karl-Section__title` class.
+- Update `KarlAlert` example with styleguide V2.
+- Update `TextInputWithUnit` example.
+- Add `KarlColors` component.
+
+## [14.6.0] - 2017-11-15
+
+Fix:
+- Use `k-u-size-micro` instead of `k-u-small` and `k-u-weight-regular`
+  instead of `k-u-strong` in examples.
+
+## [14.5.0] - 2017-11-10
+
+Features:
+- Remove `body-copy` and `font-scale` files.
+- Update `font` on `body` class with Kitten V2.
+
+## [14.4.0] - 2017-11-08
+
+Feature:
+- Update `Stepper` examples.
+
+Fix:
+- Remove `font-weight` duplicate in `body` class.
+
+## [14.3.0] - 2017-10-26
+
+No changes.
+
+## [14.2.1] - 2017-10-12
+
+No changes.
+
+## [14.2.0] - 2017-10-04
+
+No changes.
+
+## [14.1.4] - 2017-09-22
+
+No changes.
+
+## [14.1.3] - 2017-09-20
+
+Features:
+- List icon components.
+- Add `KarlHeaderTour1` and `KarlHeaderTour2` examples.
+- Remove illustration components list.
+
+Fix:
+- Reorder `Loader` component.
+
+## [14.0.3] - 2017-09-13
+
+No changes.
+
+## [14.0.2] - 2017-09-11
+
+No changes.
+
+## [14.0.1] - 2017-09-08
+
+No changes.
+
+## [14.0.0] - 2017-09-07
+
+Features:
+- Move `components/icons/kisskissbankbanklogo.js` to
+ `karl/logos/kisskissbankbanklogo.js`.
+- Rename `KissKissbankBankLogoIcon` to `KissKissBankBankLogo`.
+- Show list `illustrations` component.
+- Add new `KarlFooterLendo` component.
+- Add analytics.
+
+## [13.11.0] - 2017-09-05
+
+Features:
+- Add multiple tagLists example to `ProjectCard`.
+- Add multiple tagLists example to `SimilarProjectCard`.
+- Add example with InstrumentTagIcon icon to `TagList`.
+
+Fix:
+- Reorder text component.
+- Delete unused `.svg` files.
+
+## [13.10.0] - 2017-08-25
+
+Feature:
+- Add `ProjectCardWithReverseInfos` example
+
+## [13.9.1] - 2017-08-17
+
+No changes.
+
+## [13.9.0] - 2017-08-11
+
+Feature:
+- Add `FormActions` example with & without `spreadOutAt` prop.
+
+## [13.8.0] - 2017-08-10
+
+Feature:
+- Add `InfoLines` examples with `withBorderRadius`
+  and `withLeftRightBorder` props.
+
+## [13.7.0] - 2017-08-07
+
+Features:
+- Add `InfoLines` example with `withoutResponsive` prop.
+- Add new `Progress` example with custom color.
+
+Fixes:
+- Add link props to `KarlProjectSimilarCard` and `KarlProjectSimilarCardInfos`
+  examples.
+- Reorder components imports.
+- Add `onRefreshClick` handler to `KarlSimilarProjectsCard` and
+  `KarlSimilarProjectsWithInfosCard` examples.
+
+## [13.6.0] - 2017-08-01
+
+Features:
+- Add `KarlProjectSimilarLoader` example.
+- Replace `KarlProjectSimilarCard` and `KarlProjectSimilarCardInfos`
+  examples with `KarlSimilarProjectsCard` and
+  `KarlSimilarProjectsWithInfosCard`.
+
+## [13.5.0] - 2017-07-28
+
+Feature:
+- Add `KarlModal` example.
+- Add `InfoLines` examples with new modifiers.
+  (`withoutTopBottomBorder`, `borderColor`).
+- Add new `KarlProjectSimilarCard` and `KarlProjectSimilarCardInfos` component.
+- Add new `ProjectSimilarCard` component.
+- Add new `Contextual elements` group.
+- Add `Loader`, `LoaderWithParagraph`
+  and `KarlLoaderInButton` examples.
+- Replace `KarlButtonIconFacebookIcon` by `FacebookButtonIcon`,
+  `KarlButtonIconTwitterIcon` by `TwitterButtonIcon` and
+  `KarlButtonIconLinkedinIcon` by `LinkedinButtonIcon`.
+
+## [13.4.0] - 2017-07-20
+
+No changes.
+
+## [13.3.1] - 2017-07-06
+
+No changes.
+
+## [13.2.1] - 2017-07-04
+
+Features:
+- Add `KarlRow` example.
+- Update the tooltip examples.
+- Add italic paragraph example.
 
 ## [13.1.1] - 2017-06-30
 

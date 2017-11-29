@@ -16,7 +16,6 @@
 ///   </div>
 ///
 @mixin k-Select {
-
   $options: (
     error-color: map-get($k-colors, 'error'),
     valid-color: map-get($k-colors, 'valid'),
@@ -34,12 +33,14 @@
     select-input-height: k-px-to-rem(40px),
   ));
 
-  $font: 'source-sans';
-  $bold: 'source-sans-semi-bold';
+  $font: 'light';
+
+  $label-font: 'regular';
+  $font-step: -1; // 14px
 
   .k-Select {
     @include k-typographyFont($font);
-    @include k-typographyFontSize(-1);
+    @include k-typographyFontSize($font-step);
     @include _k-Select-ReactSelect($options);
     @include _k-Select-Overrides($options);
   }
@@ -50,7 +51,7 @@
   }
 
   .k-Select__option--level1 {
-    @include k-typographyFont($bold);
+    @include k-typographyFont($font);
   }
 
   .k-Select__option--level2 {
@@ -61,8 +62,8 @@
     display: inline-block;
     margin-bottom: k-px-to-rem(10px);
 
-    @include k-typographyFont($bold);
-    @include k-typographyFontSize(-1);
+    @include k-typographyFont($label-font);
+    @include k-typographyFontSize($font-step);
   }
 
   .k-Select.is-error .Select:not(.is-open):not(.is-focused) {
@@ -88,6 +89,7 @@
   .k-Select.is-disabled .Select:not(.is-open):not(.is-focused) {
     .Select-control {
       background-color: map-get($options, 'select-input-bg-disabled');
+      border-color: map-get($options, 'select-input-bg-disabled');
     }
 
     .Select-arrow-zone {
@@ -129,6 +131,7 @@
     width: $arrow-zone-width;
     padding-right: 0;
 
+    border: none;
     border-left: 1px solid map-get($k-colors, 'line-2');
     background: map-get($options, 'select-input-bg')
                 url('~icons/arrow-bottom-black.svg')
@@ -205,6 +208,7 @@
   $select-input-placeholder: map-get($k-colors, 'font-2');
   $select-text-color: map-get($k-colors, 'font-1');
   $select-link-hover-color: $select-input-border-focus;
+  $select-input-searchable-height: k-px-to-rem(44px);
 
   $select-padding-vertical: 10px;
   $select-padding-horizontal: 15px;
@@ -298,6 +302,7 @@
   .is-searchable {
     &.is-open > .Select-control {
       cursor: text;
+      line-height: $select-input-searchable-height;
     }
   }
 
@@ -321,6 +326,7 @@
   .is-searchable {
     &.is-focused:not(.is-open) > .Select-control {
       cursor: text;
+      line-height: $select-input-searchable-height;
     }
   }
 
@@ -393,7 +399,7 @@
       font-size: inherit;
       margin: 0;
       outline: none;
-      line-height: 14px; // For IE 8 compatibility
+      line-height: k-px-to-rem(14px); // For IE 8 compatibility
       padding:
         (($select-input-internal-height - 14) / 2 - 2)
         0

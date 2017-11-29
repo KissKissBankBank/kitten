@@ -1,17 +1,19 @@
 import React from 'react'
 import classNames from 'classnames'
-import defaultProps from 'kitten/hoc/default-props'
+import { defaultProps } from 'kitten/hoc/default-props'
 import objectAssign from 'core-js/library/fn/object/assign'
 
-import Dropdown from 'kitten/components/dropdowns/dropdown'
-import ExternalRichLink from 'kitten/components/links/external-rich-link'
-import NavList from 'kitten/components/lists/nav-list'
-import UserMenu from 'kitten/components/dropdowns/user-menu'
-import PhoneDropdown from 'kitten/components/dropdowns/phone-dropdown'
-import Search from 'kitten/components/form/search'
-import { Header,
-         HeaderItems,
-         HeaderItem } from 'kitten/components/headers/header'
+import { Dropdown } from 'kitten/components/dropdowns/dropdown'
+import { ExternalRichLink } from 'kitten/components/links/external-rich-link'
+import { NavList } from 'kitten/components/lists/nav-list'
+import { UserMenu } from 'kitten/components/dropdowns/user-menu'
+import { PhoneDropdown } from 'kitten/components/dropdowns/phone-dropdown'
+import { Search } from 'kitten/components/form/search'
+import {
+  Header,
+  HeaderItems,
+  HeaderItem,
+} from 'kitten/components/headers/header'
 import { HeaderTitles } from 'kitten/components/headers/header-titles'
 import { HeaderLogo } from 'kitten/components/headers/header-logo'
 
@@ -306,10 +308,13 @@ const platformSwitchProps = {
 
   refreshEvents: ['resize', 'karl:element#header:classToggled'],
   dropdownListClassName: 'k-PlatformSwitch k-PlatformSwitch--withoutBorderTop',
-  dropdownContent: <NavList className="k-PlatformSwitch
-                                       k-PlatformSwitch--withoutBorderTop"
-                               role="menubar"
-                               list={ platformSwitchDropdownList } />,
+  dropdownContent:
+    <NavList
+      className={ classNames('k-PlatformSwitch',
+                             'k-PlatformSwitch--withoutBorderTop') }
+      role="menubar"
+      list={ platformSwitchDropdownList }
+    />,
   onToggle: function() {
     // Example event to trigger
     const event = document.createEvent('Event')
@@ -411,14 +416,14 @@ export const KarlPhoneDropdown = defaultProps(PhoneDropdown, {
   // Content
   dropdownContent: (
     <div className="k-PhoneDropdown k-Dropdown__content--large">
-      <p className="k-PhoneDropdown__text
-                    k-u-small
-                    k-u-strong">
+      <p className={ classNames('k-PhoneDropdown__text',
+                                'k-u-size-micro',
+                                'k-u-weight-regular') }>
         Vous avez une question&nbsp;?
       </p>
       <p className="k-PhoneDropdown__text">
         Notre équipe vous répond au&nbsp;: <br/>
-        <strong className="k-u-strong">
+        <strong className="k-u-weight-regular">
           <a className="k-PhoneDropdown__link" href="tel:+33972324942">09 72 32 49 42</a>
         </strong>
       </p>

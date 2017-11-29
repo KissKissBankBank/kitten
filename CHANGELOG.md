@@ -4,7 +4,435 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `italic` prop to `Paragraph` component.
+## [16.3.1] - 2017-11-28
+
+Fix:
+- Fix `null` value in `SelectWithState` component.
+
+## [16.3.0] - 2017-11-27
+
+Features:
+- Change `quinary` to `senary` modifier of `Title` on `ProjectCard` and
+  `ProjectSimilarCard`.
+- Add `senary` modifier of `Title` component.
+- Add `k-u-anti-aliasing` helper mixin.
+- Update `focusId` on `Label` component.
+
+Fixes:
+- Update margin on `ImageCropper` component.
+- Update margin on `FormComposer` component.
+- Push empty object when selection is removed in `SelectWithState`.
+- Add `line-height` on `searchable` of `Select` component.
+
+## [16.2.0] - 2017-11-22
+
+Features:
+- Replace `k-ProjectCard__status--tertiaryBackground` by
+  `k-ProjectCard__status--validBackground`.
+- Update `ProjectCard` component with styleguide V2.
+- Update `react-places-autocomplete` module to add `autocomplete="off"`
+  on `LocationInput` component.
+
+## [16.1.0] - 2017-11-20
+
+Feature:
+- Add `k-buttonColors` helper to manage button colors by modifier.
+
+## [16.0.1] - 2017-11-17
+
+Fix:
+- Fix `k-SideGrid__asideContent` size to make children get the
+  proper width.
+
+## [16.0.0] - 2017-11-17
+
+Breaking changes:
+- Replace `valid-2` by `valid`.
+- The fonts folder has been removed. Use external CSS to load fonts.
+  You can revert the previously breaking change (`Add new Maax fonts.`).
+
+Features:
+- Update `InformationBox` component with `Title` component.
+- Update `line-height` on `Title` component.
+
+## [15.0.0] - 2017-11-15
+
+Breaking changes:
+- Update `UserMenu` component with styleguide V2.
+  Replace `@include k-UserMenu(( font: 'bold', … ))` by `@include k-UserMenu;`.
+- `TextInputWithButton` and `TextInputWithUnit` mixins don't use options params.
+  Replace `@include k-TextInputWithButton(( font: 'bold', … ))`
+  by `@include k-TextInputWithButton;`.
+  Replace `@include k-TextInputWithUnit(( inputFont: 'regular', … ))`
+  by `@include k-TextInputWithUnit;`
+- Change button width in `k-TextInputWithButton__button`.
+- Remove `boron` modifier in `Button`, `ButtonIcon` components and
+  replace `boron` by `helium`.
+- Add new `Maax` fonts.
+
+  If you use hot-dev-server, update the headers in your configuration file:
+
+```js
+// For example, with Webpack:
+const devServer = new WebpackDevServer(compiler, {
+  …
+  headers: {
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
+    "Access-Control-Allow-Headers": "X-Requested-With, content-type, Authorization",
+  }
+});
+```
+
+  `kitten-components` exposes now its fonts paths:
+
+```js
+import kittenComponents from 'kitten-components'
+
+const resolvingPaths = kittenComponents.jsPaths
+                       .concat(appJsPath)
+                       .concat(nodeModulesPath)
+                       .concat(kittenComponents.imagesPaths)
+                       .concat(kittenComponents.fontsPaths)
+```
+
+  Include the fonts path in your loaders:
+
+```js
+// Update module loaders.
+module: {
+  loaders: [
+    {
+      test: /\.(svg|png|jpe?g)$/,
+      loader: 'file?name=images/[name].[ext]',
+      include: /icons/, // Add images folders.
+    },
+    {
+      test: /\.(woff|woff2|eot|ttf|svg)$/,
+      loader: 'file?name=fonts/[name].[ext]',
+      include: /maax/, // Add fonts folders.
+    },
+    …
+  ]
+}
+```
+
+- Default colors have changed. To keep the original default colors:
+
+```css
+$k-colors: map-merge($k-colors, (
+  'font-1': #333,
+
+  'primary-1': #4a84ff,
+  'primary-2': #3b75f0,
+  'primary-3': #2c66e1,
+  'primary-4': #cadbfd,
+  'primary-5': #ecf2ff,
+  'primary-6': #f6f9ff,
+
+  'tertiary-1': #68ffa0,
+
+  'valid': #70c050,
+  'error': #ff4146,
+  'error-2': #ffecec,
+));
+```
+
+Features:
+- Update `modifier` on `ButtonQuestionMarkIcon` component with styleguide V2.
+- Update `Tour` component with styleguide V2.
+- Update `font` on `Stepper` component with styleguide V2.
+- Update `HorizontalNav` component with styleguide V2.
+- Add `tiny` props in `TagButton` component.
+- Update `TagButton` and `PaymentButton` components with styleguide V2.
+- Update `Select` component with styleguide V2.
+- Update `Label` and `FormInfo` components.
+- Update `TabBar` component with styleguide V2.
+- Update `ProjectCard`, `ProjectSimilarCard` and `ProjectCreatorCard`
+  components with styleguide V2.
+- Update `Tooltip` and `StaticTooltip` components with styleguide V2.
+- Update `Alert` component with styleguide V2.
+- Update all `TextInput` component with styleguide V2.
+- Update `ButtonImageWithText` component with styleguide V2.
+- Update colors buttons.
+- Update `Title` and `Paragraph` with styleguide V2.
+- Add `regular` font on `radioButton` and `Checkbox` components.
+- Update `TagList` component with styleguide V2.
+- Add new "MDC" colors.
+- Introduce new `valid-2` and `error-2` colors.
+- Add `k-u-margin-none` utility.
+
+Fixes:
+- Update styles on `LocationInput`.
+- Add missing input checked disabled background-image for `RadioButton`
+  component.
+- Use `k-u-weight-regular` instead of `k-u-strong` in `ProjectCard` component.
+
+## [14.6.0] - 2017-11-15
+
+Features:
+- Add `onClose` prop to `Alert` component.
+- Update placeholder `font-weight` on `LocationInput` component.
+- Update `font-weight` on `LinkBox` component.
+- Update error `line-height` on `FormInfo` component.
+
+Fix:
+- Use `k-u-weight-regular` instead of `k-u-strong` in `ProjectCard` component.
+
+## [14.5.0] - 2017-11-10
+
+Features:
+- Handle `onChange` prop in reset event in `ImageCropper` component.
+- Add `parseHtml` helper to transform HTML to React.
+
+## [14.4.0] - 2017-11-08
+
+Features:
+- Update `Stepper` component with Kitten V2.
+- Update styles on `imageCropper` on small screens.
+- Add `deletable` prop to display delete button in `SimpleUploader`.
+
+Fix:
+- Add default type `button` to the `CloseButton` component
+
+## [14.3.0] - 2017-10-26
+
+Features:
+- Add named export for all components. Default export for these components
+  is now deprecated.
+- Add `k-u-color-valid` utility.
+- Add `valid` color in `Text` component.
+- Add `without-line-height` option to `k-typographyFontSize` method.
+
+Fixes:
+- Update styles on `LocationInput`.
+- Remove `line-height` from size utilities.
+- Fix `TextInput` length for Firefox.
+- Update alignment on `InfoLines`.
+
+## [14.2.1] - 2017-10-12
+
+- Fix `LinkBox` paragraph container size.
+
+## [14.2.0] - 2017-10-04
+
+Feature:
+- Handle breakpoints on the `k-u-blockAlign` utility class.
+
+Fixes:
+- Update flexbox on `ProjectCreatorCard`.
+- Add `className` prop on the link `LinkBox`.
+
+## [14.1.4] - 2017-09-22
+
+Fixes:
+- Change `Tooltip` font-size.
+- Add `flex-shrink` property on `RadioButton` and `Checkbox`.
+- Error deprecated weight classes.
+
+## [14.1.3] - 2017-09-20
+
+Features:
+- Add option `withDarkBorder` in `hoc/card`.
+- Add `withDarkBorder` prop when prop `href` is true on
+  `ProjectCreatorCard` component.
+- Add `direction` on all `ArrowIcon` component.
+- Add default icon sizes.
+
+Fixes:
+- Fix console warnings from `ProjectCard`, `LinkList` and `Tour` rendering.
+- Change `RadioButton` and `CheckBox` label click.
+- IconSearch prop in Search component.
+
+## [14.0.3] - 2017-09-13
+
+Fix:
+- Fix `TextInputWithUnit` missing unit prop and update width for
+  iOS devices.
+
+## [14.0.2] - 2017-09-11
+
+Fixes:
+- Scroll problem on opened modal.
+- Repair `PhoneIllustration` background.
+
+## [14.0.1] - 2017-09-08
+
+- Fix: Remove undefined variable.
+
+## [14.0.0] - 2017-09-07
+
+Breaking changes:
+- Remove `TagIcon` component.
+- Rename `ButtonInfoIcon` to `ButtonQuestionMarkIcon`.
+- Rename `ButtonTooltipIcon` to `InfoIcon`.
+- Rename `TooltipIcon` to `QuestionMarkIcon`.
+- Remove deprecated `content` prop from `RadioButton`.
+  Prefer the `children` prop.
+- Add generic keys for fonts.
+  For CSS mixins with configuration maps, replace `font` with the new key.
+  Replace your previous fonts definition by:
+  `$k-fonts: k-merge($k-fonts, ( …your-own-font-definitions-here… );`.
+- Replace the deprecated `commissionRate` prop by a list of
+  `commissionRules`. To upgrade you should replace for example:
+
+      function commissionRate(duration) {
+        if (duration >= 20) return 0.2
+        if (duration >= 12) return 0.3
+        return 0.1
+      }
+      <LoanSimulator commissionRate={ commissionRate } />
+
+  By:
+
+      const commissionRules = [
+        { durationMax: 12, rate: 0.3 },
+        { durationMax: 20, rate: 0.2 },
+        { rate: 0.1 }
+      ]
+      <LoanSimulator commissionRules={ commissionRules } />
+- Add `LinkBoxIllustration` and used to `DocLinkBox`.
+- Remove deprecated `text` prop on `Checkbox`.
+  Use the `children` prop instead.
+
+Features:
+- Show list `icons` component.
+- Add `ArrowIcon` component in `LinkBox` component.
+- Delete `InformationIcon` component.
+- Replace `RightArrowIcon` to `ArrowIcon`.
+- Delete `RefreshIcon` component.
+- Add `withoutTopBottomBorder`, `borderColor` and other props
+- Add new `MixIllustration` and `LinkBoxIllustration` component.
+
+Fixes:
+- Fix unworking loader animation.
+- Delete `icon-tour-1.svg` and `icon-tour-2.svg`.
+- Replace `MixIllustration` and `LoudspeakerIllustration` component in `Tour`.
+
+## [13.11.0] - 2017-09-05
+
+Features:
+- Handle breakpoints with `k-utilities-align`.
+- Add `k-u-align` helper mixin.
+- Add new `blockAlign` utility to align blocks.
+- Add icon prop to 'TagList' component.
+- Add multiple `Taglist` management to `ProjectCard` component.
+- Add multiple `Taglist` management to `SimilarProjectCard` component.
+- Add `k-separatorBase` helper.
+- Add `k-VerticalSeparator`.
+- Add `InstrumentTagIcon`.
+- Add `TypologyTagIcon`.
+
+## [13.10.0] - 2017-08-25
+
+Features:
+- Add reverse prop to `ProjectCard` component.
+
+## [13.9.1] - 2017-08-17
+
+- Fix: Add `pointer-events: none` to `.k-ButtonIcon__svg` for analytics purpose.
+
+## [13.9.0] - 2017-08-11
+
+Features:
+- Add `spreadOutAt` prop to `FormActions` component.
+- Add `FormActions.Item` component.
+
+## [13.8.0] - 2017-08-10
+
+Features:
+- Add `withBorderRadius` and `withLeftRightBorder` props
+  to `InfoLines` component.
+- Add `k-u-background-color-background1` utility.
+- Add `Text` component.
+- Add `align`, `color`, `decoration`, `line-height`, `size`, `style`,
+  `transform` and `weight` utilities.
+
+Fix:
+- Remove unknown props in `others` prop to `GridCol` component.
+
+## [13.7.0] - 2017-08-07
+
+Features:
+- Add `withoutResponsive` prop to `InfoLines` component.
+- Add `color` prop to `Progress` component.
+
+Fixes:
+- Add link props to `SimilarProjectCard` component.
+- Pass `onRefreshClick` prop correctly to `SimilarProjectCard` component in
+  `SimilarProjectsCard` component.
+- Set current index to 0 when `projects` props is updated in
+  `SimilarProjectsCard` component.
+
+## [13.6.1] - 2017-08-03
+
+Fix:
+- Add `type` attribute to navigation buttons in `SimilarProjectCard`
+  component.
+
+## [13.6.0] - 2017-08-01
+
+Features:
+- Add external trigger to `Modal` component.
+- Add responsive mixin `k-u-margin(…)`.
+- Add `Loader` on `ProjectSimilarCard` component.
+- Add `leftArrowDisabled`, `rightArrowDisabled`, `onLeftArrowClick` and
+  `onRightArrowClick` props to `ProjectSimilarCard` component.
+- Add `SimilarProjectsCard` component.
+
+## [13.5.0] - 2017-07-28
+
+Features:
+- Accept other props to `GridCol` component.
+- Add `Modal` component.
+- Add `withoutTopBottomBorder`, `borderColor` and other props
+  to `InfoLines` component.
+- `LinkList` responsive.
+- Add new modifier `k-LinkList--withoutMargin` in `LinkList`.
+- Add `withoutPointerEvents` prop to `Label` component.
+- Add `Loader` and `LoaderWithParagraph` components.
+- Add `icon` and `iconWithMinWidth` props to `Button` component.
+- Add social button icon components (`FacebookButtonIcon`, …).
+- Add border utilities (`k-u-border-left-line1`, …).
+- Add new `ProjectSimilarCard` component.
+- Add new `RefreshIcon` component.
+
+## [13.4.0] - 2017-07-20
+
+Features:
+- Add `other` props to `Stepper` component.
+- Add new `LinkList` component.
+- Add new `TextInputWithButton` component.
+- Add `k-u-align-center-block` utility to center blocks.
+
+Fixes:
+- Add `withoutHover` and `verticalArrow` options on `ButtonIcon` component.
+- Add `ButtonIcon` animation on `ProjectCreatorCard`.
+
+## [13.3.1] - 2017-07-06
+
+Fix:
+- Add missing `key` prop in `InfoLines` component & rename attribute in
+  defaultProps.
+
+## [13.3.0] - 2017-07-05
+
+Feature:
+- Add `disabled` prop to `ImageCropper`, `SimpleUploader` and `Uploader`
+components.
+
+## [13.2.1] - 2017-07-04
+
+Features:
+- Add `Row` component.
+- Add new `TooltipNew` component.
+- Add new `InfoWithTooltip` component.
+- Add new `ButtonInfoIcon` component.
+- Add new `InfoIcon` component.
+- Add `italic` prop to `Paragraph` component.
+
+Fix:
+- Fix `SimpleUploader` responsive.
 
 ## [13.1.1] - 2017-06-30
 

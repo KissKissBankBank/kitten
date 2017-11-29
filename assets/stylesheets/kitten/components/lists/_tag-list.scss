@@ -15,13 +15,13 @@
 ///   </ul>
 
 @mixin k-TagList {
-  $font: 'source-sans-semi-bold';
+  $font: 'regular';
   $font-step: -1; // 14px.
   $font-step-tiny: -2; // 12px.
   $color: map-get($k-colors, 'font-1');
   $spacing: k-px-to-rem(5px);
   $icon-height: k-px-to-rem(10px);
-  $icon-height-tiny: k-px-to-rem(8px);
+  $icon-height-tiny: k-px-to-rem(11px);
 
   .k-TagList {
     margin: 0;
@@ -54,6 +54,10 @@
       margin-right: 0;
       content: '';
     }
+  }
+
+  .k-TagList__item--last {
+    margin-right: 0;
   }
 
   .k-TagList__icon {

@@ -54,62 +54,59 @@ $susy: (
 // Fonts
 
 $k-fonts: (
-  source-sans-light: (
-    family: ("Source Sans Pro", Helvetica, Arial, sans-serif),
-    weight: 300
-  ),
-  source-sans: (
-    family: ("Source Sans Pro", Helvetica, Arial, sans-serif),
+  light: (
+    family: ("Maax", Helvetica, Arial, sans-serif),
     weight: 400
   ),
-  source-sans-semi-bold: (
-    family: ("Source Sans Pro", Helvetica, Arial, sans-serif),
+  regular: (
+    family: ("Maax", Helvetica, Arial, sans-serif),
+    weight: 500
+  ),
+  bold: (
+    family: ("Maax", Helvetica, Arial, sans-serif),
+    letter-spacing: .01rem,
     weight: 600
   ),
-  source-sans-uppercase: (
-    family: ("Source Sans Pro", Helvetica, Arial, sans-serif),
-    weight: 400,
+  regular-uppercase: (
+    family: ("Maax", Helvetica, Arial, sans-serif),
+    weight: 500,
     transform: uppercase
   ),
-  source-sans-semi-bold-uppercase: (
-    family: ("Source Sans Pro", Helvetica, Arial, sans-serif),
+  bold-uppercase: (
+    family: ("Maax", Helvetica, Arial, sans-serif),
     weight: 600,
     letter-spacing: .1rem,
     transform: uppercase
   ),
-  dosis: (
-    family: ("Dosis", Helvetica, Arial, sans-serif),
-    weight: 400
-  )
 ) !default;
 
 // Colors
 
 $k-colors: (
-  'font-1': #333,
-  'font-2': #b8b8b8,
-  'background-1': #fff,
-  'background-2': #fbfbfb,
-  'background-3': #f6f6f6,
-  'line-1': #eee,
-  'line-2': #d8d8d8,
+  'font-1': #222, // Dark Grey
+  'font-2': #b8b8b8, // Semi Dark Grey
+  'background-1': #fff, // White
+  'background-2': #fbfbfb, // Extra Light Grey
+  'background-3': #f6f6f6, // Light Grey
+  'line-1': #eee, // Semi Light Grey
+  'line-2': #d8d8d8, // Grey
 
-  'primary-1': #4a84ff,
-  'primary-2': #3b75f0,
-  'primary-3': #2c66e1,
-  'primary-4': #cadbfd,
-  'primary-5': #ecf2ff,
-  'primary-6': #f6f9ff,
+  'primary-1': #19bbff, // Primary
+  'primary-2': #0aacf0, // Semi Dark Primary
+  'primary-3': #009de1, // Dark Primary
+  'primary-4': #baeaff, // Light Primary
+  'primary-5': #e8f8ff, // Extra Light Primary
+  'primary-6': #f3fbff, // Thin Primary
 
-  'secondary-1': #4bfffa,
-  'secondary-2': #3cf0eb,
-  'secondary-3': #2de1dc,
+  'secondary-1': #4bfffa, // #4bfffa
+  'secondary-2': #3cf0eb, // #3cf0eb
+  'secondary-3': #2de1dc, // #2de1dc
 
-  'tertiary-1': #68ffa0,
+  'tertiary-1': #effaf1, // Light Green
   'tertiary-2': #59f091,
   'tertiary-3': #4ae191,
 
-  'valid': #70c050,
-  'error': #ff4146,
-  'error-2': #ffecec,
+  'valid': #61d079, // Green
+  'error': #ff0046, // Red
+  'error-2': #ffe5ec, // Light Red
 ) !default;

@@ -18,10 +18,11 @@
 
 @mixin k-Paragraph {
   // Font
-  $font: 'source-sans-light';
+  $font: 'light';
+  $line-height: 1.6;
 
   // Link
-  $link-font: 'source-sans';
+  $link-font: 'regular';
   $link-color: map-get($k-colors, 'primary-1');
   $link-hover-color: map-get($k-colors, 'primary-2');
   $link-active-color: map-get($k-colors, 'primary-3');
@@ -33,19 +34,21 @@
   .k-Paragraph--primary {
     @include k-typographyFontScale($font-step: 1,
                                    $font-step-on-media: 2,
-                                   $paragraph: true);
+                                   $line-height: $line-height);
   }
 
   .k-Paragraph--secondary {
-    @include k-typographyFontScale($font-step-on-media: 1, $paragraph: true);
+    @include k-typographyFontScale($font-step-on-media: 1,
+                                   $line-height: $line-height);
   }
 
   .k-Paragraph--tertiary {
-    @include k-typographyFontScale($paragraph: true);
+    @include k-typographyFontScale($line-height: $line-height);
   }
 
   .k-Paragraph--quaternary {
-    @include k-typographyFontScale($font-step: -1, $paragraph: true);
+    @include k-typographyFontScale($font-step: -1,
+                                   $line-height: $line-height);
   }
 
   .k-Paragraph__link {

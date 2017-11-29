@@ -7,6 +7,8 @@ export class ButtonIcon extends React.Component {
             tag,
             modifier,
             size,
+            withoutHover,
+            verticalArrow,
             ...others } = this.props
 
     const buttonIconClassNames = classNames(
@@ -15,6 +17,8 @@ export class ButtonIcon extends React.Component {
       {
         [`k-ButtonIcon--${modifier}`]: modifier,
         [`k-ButtonIcon--${size}`]: size,
+        'k-ButtonIcon--withoutHover': withoutHover,
+        'k-ButtonIcon--verticalArrow': verticalArrow,
       },
     )
 
@@ -24,9 +28,11 @@ export class ButtonIcon extends React.Component {
     const Tag = tag
 
     return (
-      <Tag className={ buttonIconClassNames }
-           tabIndex={ tabindex }
-           { ...others } />
+      <Tag
+        className={ buttonIconClassNames }
+        tabIndex={ tabindex }
+        { ...others }
+      />
     )
   }
 }
@@ -35,4 +41,6 @@ ButtonIcon.defaultProps = {
   tag: 'button',
   size: null,
   modifier: 'hydrogen',
+  withoutHover: false,
+  verticalArrow: false,
 }

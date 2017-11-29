@@ -1,14 +1,15 @@
-import React from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import Dropdown from 'kitten/components/dropdowns/dropdown'
-import ButtonImageWithTextAndBadge from
+import classNames from 'classnames'
+import { Dropdown } from 'kitten/components/dropdowns/dropdown'
+import { ButtonImageWithTextAndBadge } from
   'kitten/components/buttons/button-image-with-text-and-badge'
-import NavList from 'kitten/components/lists/nav-list'
+import { NavList } from 'kitten/components/lists/nav-list'
 import domElementHelper from 'kitten/helpers/dom/element-helper'
 import emitter from 'kitten/helpers/utils/emitter'
 import objectAssign from 'core-js/library/fn/object/assign'
 
-class UserMenu extends React.Component {
+export class UserMenu extends Component {
   constructor(props) {
     super(props)
 
@@ -123,9 +124,12 @@ class UserMenu extends React.Component {
 
   getDropdownContent() {
     return (
-      <NavList className="k-UserMenu k-UserMenu--withoutBorderTop"
-               role="menubar"
-               list={ this.props.dropdownList } />
+      <NavList
+        className={ classNames('k-UserMenu',
+                               'k-UserMenu--withoutBorderTop') }
+        role="menubar"
+        list={ this.props.dropdownList }
+      />
     )
   }
 
@@ -192,22 +196,24 @@ class UserMenu extends React.Component {
     const { dropdownList, ...otherProps } = this.props
 
     return (
-      <Dropdown ref="dropdown"
-                button={ this.getDropdownButton() }
-                dropdownContent={ this.getDropdownContent() }
-                dropdownListArrow={ this.getDropdownArrow() }
-                contentHorizontalPosition={
-                  this.state.contentHorizontalPosition
-                }
-                arrowHorizontalPosition={
-                  this.state.arrowHorizontalPosition
-                }
-                isExpanded={ this.state.isExpanded }
-                buttonId={ this.getButtonId() }
-                onPositionUpdate={
-                  this.handlePositionUpdate
-                }
-                { ...otherProps } />
+      <Dropdown
+        ref="dropdown"
+        button={ this.getDropdownButton() }
+        dropdownContent={ this.getDropdownContent() }
+        dropdownListArrow={ this.getDropdownArrow() }
+        contentHorizontalPosition={
+          this.state.contentHorizontalPosition
+        }
+        arrowHorizontalPosition={
+          this.state.arrowHorizontalPosition
+        }
+        isExpanded={ this.state.isExpanded }
+        buttonId={ this.getButtonId() }
+        onPositionUpdate={
+          this.handlePositionUpdate
+        }
+        { ...otherProps }
+      />
     )
   }
 }
@@ -238,4 +244,5 @@ UserMenu.defaultProps = {
   buttonNotifications: 0,
 }
 
+// DEPRECATED: do not use default export.
 export default UserMenu

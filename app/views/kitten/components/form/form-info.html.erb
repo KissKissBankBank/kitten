@@ -8,10 +8,10 @@
               Label name
             </label>
 
-            <%= react_component('TextInput', props: {
+            <%= react_component 'TextInput', props: {
               id: 'input-form-info',
               placeholder: 'Lorem ipsum dolor sit amet',
-            }) %>
+            } %>
           </div>
         <% end %>
       </div>
@@ -23,11 +23,11 @@
               Label name
             </label>
 
-            <%= react_component('TextInput', props: {
+            <%= react_component 'TextInput', props: {
               id: 'input-form-info-error',
               error: true,
               placeholder: 'Lorem ipsum dolor sit amet',
-            }) %>
+            } %>
 
             <p class="k-FormInfo__error">Cum sociis natoque penatibus et magnis</p>
           </div>
@@ -45,7 +45,7 @@
               Label name
             </label>
 
-            <%= react_component('RadioButtonSet', props: {
+            <%= react_component 'RadioButtonSet', props: {
               error: true,
               name: 'formInfoRadioButtonSetError',
               items: [{
@@ -57,7 +57,7 @@
                 defaultChecked: true,
                 id: 'radioButtonSet2',
               }],
-            }) %>
+            } %>
 
             <p class="k-FormInfo__error">Cum sociis natoque penatibus et magnis</p>
           </div>
@@ -71,7 +71,7 @@
               Label name
             </label>
 
-            <%= react_component('CheckboxSet', props: {
+            <%= react_component 'CheckboxSet', props: {
               error: true,
               name: 'checkboxSet[]',
               items: [{
@@ -82,7 +82,7 @@
                 defaultChecked: true,
                 id: 'checkboxSet2',
               }],
-            }) %>
+            } %>
 
             <p class="k-FormInfo__error">Cum sociis natoque penatibus et magnis</p>
           </div>

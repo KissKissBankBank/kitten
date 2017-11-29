@@ -4,12 +4,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
-import numberUtils from 'kitten/helpers/utils/number'
+import { numberUtils } from 'kitten/helpers/utils/number'
 import { SliderWithTooltipAndPower }
   from 'kitten/components/sliders/slider-with-tooltip-and-power'
 import { TextInputWithUnit } from 'kitten/components/form/text-input-with-unit'
 
-class LoanSimulator extends React.Component {
+export class LoanSimulator extends React.Component {
   constructor(props) {
     super(props)
 
@@ -66,24 +66,6 @@ class LoanSimulator extends React.Component {
   }
 
   commissionRate() {
-    if (this.props.commissionRules.length > 0)
-      return this.commissionRateFromRules()
-
-    // DEPRECATED in favor of commissionRules
-    return this.props.commissionRate(this.duration())
-  }
-
-  // The `commissionRules` prop has to be an array containing a `durationMax`
-  // rule. This will return the first `rate` which matches the rule for the
-  // current `duration`.
-  //
-  // Example `commissionRules` prop:
-  //     [
-  //       { durationMax: 12, rate: 0.3 },
-  //       { durationMax: 20, rate: 0.2 },
-  //       { rate: 0.1 }
-  //     ]
-  commissionRateFromRules() {
     const duration = this.duration()
     for (let i = 0, len = this.props.commissionRules.length; i < len; i++) {
       let rule = this.props.commissionRules[i]
@@ -409,9 +391,6 @@ LoanSimulator.propTypes = {
   commissionLabel: PropTypes.string,
   commissionRules: PropTypes.array,
 
-  // DEPRECATED in favor of commissionRules
-  commissionRate: PropTypes.func,
-
   // Label before the slider
   installmentLabel: PropTypes.string,
 
@@ -456,10 +435,18 @@ LoanSimulator.defaultProps = {
   feesExemption: false,
   feesExemptionLabel: 'instead of',
   commissionLabel: 'Fees:',
-  commissionRules: [],
 
-  // DEPRECATED in favor of commissionRules
-  commissionRate: function() { return 0 },
+  // The `commissionRules` prop has to be an array containing a `durationMax`
+  // rule. This will return the first `rate` which matches the rule for the
+  // current `duration`.
+  //
+  // Example `commissionRules` prop:
+  //     [
+  //       { durationMax: 12, rate: 0.3 },
+  //       { durationMax: 20, rate: 0.2 },
+  //       { rate: 0.1 }
+  //     ]
+  commissionRules: [],
 
   installmentLabel: "I'd like to reimburse",
   initialInstallment: null,
@@ -477,4 +464,5 @@ LoanSimulator.defaultProps = {
   actionLabel: null,
 }
 
+// DEPRECATED: do not use default export.
 export default LoanSimulator

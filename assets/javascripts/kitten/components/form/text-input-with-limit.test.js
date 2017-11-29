@@ -3,7 +3,8 @@ import sinon from 'sinon'
 import { expect } from 'chai'
 import { shallow, mount } from 'enzyme'
 import { TextInput } from 'kitten/components/form/text-input'
-import { TextInputWithLimit } from 'kitten/components/form/text-input-with-limit'
+import { TextInputWithLimit }
+  from 'kitten/components/form/text-input-with-limit'
 
 describe('<TextInputWithLimit />', () => {
   const sandbox = sinon.sandbox.create()

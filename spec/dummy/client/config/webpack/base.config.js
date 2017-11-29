@@ -23,7 +23,7 @@ const baseConfig = {
   },
 
   output: {
-    path: path.join(__dirname, '..', 'app', 'assets','webpack')
+    path: path.join(__dirname, '..', 'app', 'assets', 'webpack')
   },
 
   resolve: {
@@ -41,12 +41,11 @@ const baseConfig = {
       },
     }),
   ],
-
   module: {
     loaders: [
       {
         test: /\.(svg|png|jpe?g)$/,
-        loaders: ['file?name=images/[name].[ext]'],
+        loader: 'file?name=images/[name].[ext]',
       },
       {
         test: /\.json$/,

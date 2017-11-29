@@ -64,13 +64,6 @@
         <% end %>
       </div>
       <div class="k-Grid__col k-Grid__col--12 k-Grid__col--3@s k-Grid__col--12@l">
-        <%= example 'Boron' do %>
-          <%= react_component('KarlButtonIconHeart', props: {
-              modifier: 'boron',
-          }) %>
-        <% end %>
-      </div>
-      <div class="k-Grid__col k-Grid__col--12 k-Grid__col--3@s k-Grid__col--12@l">
         <%= example 'Carbon' do %>
           <%= react_component('KarlButtonIconHeart', props: {
               modifier: 'carbon',
@@ -92,17 +85,17 @@
     <div class="k-Grid">
       <div class="k-Grid__col k-Grid__col--12 k-Grid__col--3@s k-Grid__col--12@l">
         <%= example 'Social' do %>
-          <%= react_component('KarlButtonIconFacebookIcon', props: {
-              modifier: 'facebook',
-          }) %>
+          <%= react_component 'FacebookButtonIcon', props: {
+            className: 'k-u-margin-bottom-single',
+          } %>
 
-          <%= react_component('KarlButtonIconTwitterIcon', props: {
-              modifier: 'twitter',
-          }) %>
+          <%= react_component 'TwitterButtonIcon', props: {
+            className: 'k-u-margin-bottom-single',
+          } %>
 
-          <%= react_component('KarlButtonIconLinkedinIcon', props: {
-              modifier: 'linkedin',
-          }) %>
+          <%= react_component 'LinkedinButtonIcon', props: {
+            className: 'k-u-margin-bottom-single',
+          } %>
         <% end %>
       </div>
     </div>

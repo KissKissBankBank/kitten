@@ -3,7 +3,6 @@ import { expect } from 'chai'
 import { shallow } from 'enzyme'
 import { TagButton } from 'kitten/components/buttons/tag-button'
 
-
 describe('TagButton', () => {
   const defaultComponent = shallow(
     <TagButton />)
@@ -32,6 +31,26 @@ describe('TagButton', () => {
         expect(component).to.have.text('Tag')
         expect(component).to.have.className('k-TagButton--custom')
         expect(component).to.have.className('k-TagButton--hydrogen')
+      })
+
+      describe('with tiny prop', () => {
+        const component = shallow(
+          <TagButton tiny />
+        )
+
+        it('renders a <Button class="k-TagButton--tiny" />', () => {
+          expect(component).to.have.className('k-TagButton--tiny')
+        })
+      })
+
+      describe('with big prop', () => {
+        const component = shallow(
+          <TagButton big />
+        )
+
+        it('renders a <Button class="k-TagButton--big" />', () => {
+          expect(component).to.have.className('k-TagButton--big')
+        })
       })
 
       describe('tag prop', () => {

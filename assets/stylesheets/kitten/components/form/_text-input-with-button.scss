@@ -6,14 +6,7 @@
 ///
 /// @example scss - Usage
 ///
-/// @include k-TextInputWithButton((
-///   font: 'source-sans-semi-bold',
-///   font-size: -4,
-///   color: #fff,
-///   button-background: #4a84ff,
-///   button-background-is-valid: #70c050,
-///   button-background-is-error: #ff4146,
-/// ));
+/// @include k-TextInputWithButton;
 ///
 /// <form role="button">
 ///   <div class="k-TextInputWithButton">
@@ -28,23 +21,16 @@
 ///   </div>
 /// </form>
 
-@mixin k-TextInputWithButton($input) {
+@mixin k-TextInputWithButton {
+  $font: 'regular';
+  $font-size: -1; // 14px
 
-  $font: k-string-definition(k-map-fetch($input, 'font'));
-  $font-size: k-number-definition(k-map-fetch($input, 'font-size'));
-  $color: k-color-definition(k-map-fetch($input, 'color'));
+  $color: map-get($k-colors, 'background-1');
 
-  // Button
-  $button-background: k-color-definition(
-    k-map-fetch($input, 'button-background'));
-
-  // Valid
-  $button-background-is-valid: k-color-definition(
-    k-map-fetch($input, 'button-background-is-valid'));
-
-  // Error
-  $button-background-is-error: k-color-definition(
-    k-map-fetch($input, 'button-background-is-error'));
+  // Background-color
+  $button-background: map-get($k-colors, 'primary-1');
+  $button-background-is-valid: map-get($k-colors, 'valid');
+  $button-background-is-error: map-get($k-colors, 'error');
 
   // Border radius Text - input
   $border-text-input: k-px-to-rem(4px);
@@ -64,21 +50,19 @@
 
   .k-TextInputWithButton__button {
     @include k-typographyFont($font);
-    @include k-typographyFontSize($font-size);
+    @include k-typographyFontSize($font-size, $line-height: normal);
 
     position: absolute;
     right: 0;
 
     height: 100%;
-    width: k-px-to-rem(86px);
+    width: k-px-to-rem(104px);
 
     background-color: $button-background;
     border-top-right-radius: $border-text-input;
     border-bottom-right-radius: $border-text-input;
     border: none;
 
-    text-transform: uppercase;
-    letter-spacing: k-px-to-rem(1px);
     color: $color;
 
     outline: none;

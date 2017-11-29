@@ -9,14 +9,15 @@
 ///
 /// @parameter {Number} $step               - the modular scale step to compute
 /// @parameter {Number} $line-height [null] - the line-height
-/// @parameter {Boolean} $paragraph [false] - the boolean that lets the line height to be set from font-size
+/// @parameter {Boolean} $without-line-height [false]
+///   - the boolean that lets the line height to be use
 ///
 /// @example scss - Usage
 ///   $k-typography: (
 ///     font-size:   1rem,
 ///     line-height: 1.5rem,
-///     scale-multiplier: 1.618
-///     ...
+///     scale-multiplier: 1.618,
+///     …
 ///   );
 ///
 ///   @include k-typographyFontSize(3);
@@ -24,7 +25,13 @@
 /// @example css - CSS output
 ///   font-size:   4.236rem;
 ///   line-height: 4.5rem;
-@mixin k-typographyFontSize($step: 0, $line-height: null, $paragraph: false) {
+
+@mixin k-typographyFontSize(
+  $step: 0,
+  $line-height: null,
+  $without-line-height: false
+) {
+
   // Modular scale multiplier
   $multiplier: k-map-fetch($k-typography, 'scale-multiplier');
 
@@ -50,16 +57,15 @@
   $font-size: ms($step, $base-font-size, $multiplier);
 
   @if not $line-height {
-    // If line-height is not defined, we use the vertical rhythm rule to compute
-    // if. Line height should be the closest multiple of the base line height.
-    @if $paragraph == true {
-      $line-height: $font-size * 1.6;
-    } @else {
-      $line-height: ceil($font-size / $base-line-height) * $base-line-height;
-    }
+   // If line-height is not defined, we use the vertical rhythm rule to compute
+   // if. Line height should be the closest multiple of the base line height.
+    $line-height: ceil($font-size / $base-line-height) * $base-line-height;
   }
 
   // Apply font size and line height.
   font-size: $font-size;
-  line-height: $line-height;
+
+  @if not $without-line-height {
+    line-height: $line-height;
+  }
 }

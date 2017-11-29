@@ -1,29 +1,14 @@
 #!/usr/bin/env bash
 set -e
 
-# Install ruby with brew and rbenv
-if hash brew 2> /dev/null && hash rbenv 2> /dev/null; then
-
-  # Install or upgrade rbenv
-  if brew list -1 | grep -q '^ruby-build'; then
-    if brew outdated -1 | grep -q '^ruby-build'; then
-      brew upgrade ruby-build
-    fi
-  else
-    brew install ruby-build
-  fi
-
-  # Install ruby
-  rbenv install --skip-existing
-
-# Install ruby with rvm
-elif hash rvm 2> /dev/null; then
-  rvm use `cat .ruby-version`
+# Force node version
+if hash nvm 2> /dev/null; then
+  nvm use 6.9.5
 fi
 
 # Install yarn with npm
 if ! hash yarn 2> /dev/null; then
-  npm install -g yarn
+  npm install -g yarn@1.0.2
 fi
 
 # Install dependencies

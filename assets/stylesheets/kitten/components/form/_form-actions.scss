@@ -9,18 +9,35 @@
 /// @example html
 ///
 ///   <div class="k-FormActions">
-///     <button>…</button>
-///     <button>…</button>
+///     <div class="k-FormActions__item">…</div>
+///     <div class="k-FormActions__item">…</div>
 ///   </div>
 
 @mixin k-FormActions {
   .k-FormActions {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
-    @include k-media-max('xs') {
-      flex-direction: column;
-      align-items: flex-start;
+  .k-FormActions--spreadOut\@s-up {
+    @include k-media-min('s') {
+      justify-content: space-between;
+
+      .k-FormActions__item {
+        &:first-child {
+          margin-left: 0;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
     }
+  }
+
+  .k-FormActions__item {
+    margin-left: k-px-to-rem(5px);
+    margin-right: k-px-to-rem(5px);
   }
 }

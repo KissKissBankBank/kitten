@@ -14,6 +14,7 @@
 @import 'kitten/components/cards/card';
 @import 'kitten/components/cards/project-card';
 @import 'kitten/components/cards/project-creator-card';
+@import 'kitten/components/cards/project-similar-card';
 
 // Dev
 @import 'kitten/components/dev/dev-breakpoint';
@@ -64,6 +65,9 @@
 // Heroes
 @import "kitten/components/heroes/hero";
 
+// Icons
+@import "kitten/components/icons/arrow-icon";
+
 // Images
 @import "kitten/components/images/cropper";
 
@@ -71,6 +75,7 @@
 @import 'kitten/components/layout/line';
 @import 'kitten/components/layout/responsive-iframe-container';
 @import 'kitten/components/layout/separator';
+@import 'kitten/components/layout/vertical-separator';
 
 // Lines
 @import 'kitten/components/lines/info-lines';
@@ -83,8 +88,15 @@
 @import 'kitten/components/lists/bullet-list';
 @import 'kitten/components/lists/tag-list';
 
+// Loaders
+@import 'kitten/components/loaders/loader';
+@import 'kitten/components/loaders/loader-with-paragraph';
+
 // Meters
 @import 'kitten/components/meters/progress';
+
+// Modals
+@import 'kitten/components/modals/modal';
 
 // Navigation
 @import 'kitten/components/navigation/horizontal-nav';
@@ -121,6 +133,7 @@
 
 // Tooltips
 @import 'kitten/components/tooltips/tooltip';
+@import 'kitten/components/tooltips/tooltip-new';
 @import 'kitten/components/tooltips/static-tooltip';
 
 // Tours

@@ -1,6 +1,9 @@
 // Header
+$title-font: 'bold';
+$title-size: 9; // 46px
 
-$header-height: 4rem;
+$header-height: k-px-to-rem(64px);
+$border-bottom: map-get($k-colors, 'font-1');
 
 .karl-Header {
   position: fixed;
@@ -12,17 +15,17 @@ $header-height: 4rem;
 }
 
 .karl-Title {
-  @include k-typographyFont('source-sans-light');
-  @include k-typographyFontSize(9);
+  @include k-typographyFont($title-font);
+  @include k-typographyFontSize($title-size);
 
   text-align: center;
-  margin-top: 5rem;
+  margin-top: k-px-to-rem(80px);
 
   &:after {
     display: block;
     margin: k-px-to-rem(30px) auto 0;
-    width: 50px;
-    border-bottom: 1px solid map-get($k-colors, 'line-2') ;
+    width: k-px-to-rem(50px);
+    border-bottom: k-px-to-rem(4px) solid $border-bottom;
     content: '';
   }
 }

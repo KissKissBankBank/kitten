@@ -6,7 +6,7 @@ import { ClockIcon } from 'kitten/components/icons/clock-icon'
 import { Paragraph } from 'kitten/components/typography/paragraph'
 import { ButtonIcon } from 'kitten/components/buttons/button-icon'
 import { Separator } from 'kitten/components/layout/separator'
-import { RightArrowIcon } from 'kitten/components/icons/right-arrow-icon'
+import { ArrowIcon } from 'kitten/components/icons/arrow-icon'
 
 class ProjectCreatorCardComponent extends React.Component {
   renderDate() {
@@ -14,7 +14,10 @@ class ProjectCreatorCardComponent extends React.Component {
 
     return (
       <div className="k-ProjectCreatorCard__content">
-        <ClockIcon />
+        <ClockIcon
+          width="10px"
+          height="10px"
+        />
         <span className="k-ProjectCreatorCard__date">
           { this.props.date }
         </span>
@@ -36,8 +39,10 @@ class ProjectCreatorCardComponent extends React.Component {
 
     return (
       <div className="k-ProjectCreatorCard__status">
-        <span className="k-ProjectCreatorCard__status--icon"
-              style={ statusStyles }>
+        <span
+          className="k-ProjectCreatorCard__status--icon"
+          style={ statusStyles }
+        >
         </span>
         <div className="k-ProjectCreatorCard__status--text">
           { statusText }
@@ -49,15 +54,13 @@ class ProjectCreatorCardComponent extends React.Component {
   renderDescription() {
     return (
       <div className="k-ProjectCreatorCard__grid">
-        <Marger top="2"
-                bottom="1">
-          <div className="k-ProjectCreatorCard__grid--flex">
+        <Marger top="2" bottom="1">
+          <div className="k-ProjectCreatorCard__grid--flexEnd">
             { this.renderDate() }
             { this.renderStatus() }
           </div>
         </Marger>
-        <Marger top="1"
-                bottom="2">
+        <Marger top="1" bottom="2">
           <Paragraph margin={ false }>
             { this.props.children }
           </Paragraph>
@@ -72,19 +75,26 @@ class ProjectCreatorCardComponent extends React.Component {
     const target = this.props.isExternal ? { target: '_blank' } : {}
 
     return (
-      <a className="k-ProjectCreatorCard__link"
-         href={ this.props.href }
-         { ...target }>
-        <Separator />
+      <a
+        className="k-ProjectCreatorCard__link"
+        href={ this.props.href }
+        { ...target }
+      >
+        <Separator darker />
         <div className="k-ProjectCreatorCard__grid">
-          <Marger top="1.2"
-                  bottom="1.2"
-                  className="k-ProjectCreatorCard__grid--flex">
+          <Marger
+            top="1.2"
+            bottom="1.2"
+            className="k-ProjectCreatorCard__grid--flex"
+          >
             { this.props.linkText }
-            <ButtonIcon className={ classNames('k-ButtonIcon--withoutHover',
-                                               'k-ButtonIcon--verticalArrow') }
-                        size="tiny">
-              <RightArrowIcon className="k-ButtonIcon__svg" />
+            <ButtonIcon
+              size="tiny"
+              withoutHover
+              verticalArrow
+            >
+              <ArrowIcon
+                className="k-ButtonIcon__svg" />
             </ButtonIcon>
           </Marger>
         </div>
@@ -107,7 +117,22 @@ class ProjectCreatorCardComponent extends React.Component {
   }
 }
 
-ProjectCreatorCardComponent.defaultProps = {
+export const ProjectCreatorCard = props => {
+  const ProjectCreatorCardContent = card(ProjectCreatorCardComponent)
+  return (
+    <ProjectCreatorCardContent
+      withDarkBorder={ !!props.href }
+      light
+      withBorder
+      withShadow={ false }
+      translateOnHover
+      rounded={ 'tiny' }
+      { ...props }
+    />
+  )
+}
+
+ProjectCreatorCard.defaultProps = {
   date: null,
   children: null,
   href: null,
@@ -117,11 +142,3 @@ ProjectCreatorCardComponent.defaultProps = {
   statusBorderColor: null,
   statusText: 'Status',
 }
-
-export const ProjectCreatorCard = card(ProjectCreatorCardComponent, {
-  light: true,
-  withBorder: true,
-  withShadow: false,
-  translateOnHover: true,
-  rounded: 'tiny',
-})

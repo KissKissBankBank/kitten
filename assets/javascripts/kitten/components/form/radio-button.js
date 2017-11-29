@@ -1,39 +1,56 @@
-import React from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
-import deprecated from 'prop-types-extra/lib/deprecated'
 
-export class RadioButton extends React.Component {
+export class RadioButton extends Component {
   renderContent() {
-    // `content` prop is DEPRECATED.
-    const content = this.props.children || this.props.content
-    if (!content) return
+    const { children, largeContent } = this.props
+
+    if (!children) return
 
     const labelContentsClassNames = classNames(
       'k-RadioButton__labelContents',
-      { 'k-RadioButton__labelContents--large': this.props.largeContent }
+      { 'k-RadioButton__labelContents--large': largeContent }
     )
     return (
-      <div className={ labelContentsClassNames }>{ content }</div>
+      <div className={ labelContentsClassNames }>
+        { children }
+      </div>
+    )
+  }
+
+  renderLabel() {
+    const { children,
+            id,
+            large,
+            text } = this.props
+
+    const radioButtonLabelClassNames = classNames(
+      'k-RadioButton__label',
+      { 'k-RadioButton__label--large': large },
+      { 'k-RadioButton__label--withContents': !!children },
+    )
+
+    return (
+      <label
+        htmlFor={ id }
+        className={ radioButtonLabelClassNames }
+      >
+        { text }
+      </label>
     )
   }
 
   render() {
     const { className,
             id,
-            text,
+            children,
+            inputClassName,
             large,
             largeContent,
-            children,
-            content,
-            inputClassName,
+            text,
             error,
             ...inputProps } = this.props
-
-    const radioButtonLabelClassNames = classNames(
-      'k-RadioButton__label',
-      { 'k-RadioButton__label--large': large },
-    )
 
     const radioButtonInputClassNames = classNames(
       'k-RadioButton__input',
@@ -43,15 +60,13 @@ export class RadioButton extends React.Component {
 
     return (
       <div className={ classNames('k-RadioButton', className) }>
-        <input id={ id }
-               type="radio"
-               className={ radioButtonInputClassNames }
-               { ...inputProps } />
-
-        <label htmlFor={ id }
-               className={ radioButtonLabelClassNames } >
-          { text }
-        </label>
+        <input
+          id={ id }
+          type="radio"
+          className={ radioButtonInputClassNames }
+          { ...inputProps }
+        />
+        { this.renderLabel() }
         { this.renderContent() }
       </div>
     )
@@ -62,8 +77,4 @@ RadioButton.defaultProps = {
   text: null,
   large: false,
   largeContent: false,
-}
-
-RadioButton.propTypes = {
-  content: deprecated(PropTypes.string, 'Use `children` prop instead')
 }

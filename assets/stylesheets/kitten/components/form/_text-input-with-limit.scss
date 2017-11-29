@@ -18,8 +18,8 @@
 ///   </div>
 
 @mixin k-TextInputWithLimit {
-  $font: 'source-sans';
-  $font-size: -2;
+  $font: 'regular';
+  $font-size: -2; // 12px
   $line-height: 1.3;
 
   // Margin limit

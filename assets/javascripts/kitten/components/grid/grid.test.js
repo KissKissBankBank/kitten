@@ -85,4 +85,12 @@ describe('<GridCol />', () => {
       expect(gridCol).to.have.className('custom__class')
     })
   })
+
+  describe('with other prop', () => {
+    const gridCol = shallow(<GridCol aria-hidden />)
+
+    it('has an aria-hidden attribute', () => {
+      expect(gridCol).to.have.attr('aria-hidden', 'true')
+    })
+  })
 })

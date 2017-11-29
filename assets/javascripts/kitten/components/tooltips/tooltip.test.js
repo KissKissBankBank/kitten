@@ -1,8 +1,9 @@
 import React from 'react'
 import { expect } from 'chai'
 import { shallow } from 'enzyme'
-import Tooltip from 'kitten/components/tooltips/tooltip'
-import ButtonTooltipIcon from 'kitten/components/buttons/button-tooltip-icon'
+import { Tooltip } from 'kitten/components/tooltips/tooltip'
+import { ButtonQuestionMarkIcon }
+  from 'kitten/components/buttons/button-question-mark-icon'
 import ReactTooltip from 'react-tooltip'
 
 const component = shallow(
@@ -16,10 +17,10 @@ describe('<Tooltip />', () => {
     expect(component.find('.k-Tooltip')).to.have.length(1)
   })
 
-  it('renders ButtonTooltipIcon', () => {
+  it('renders ButtonQuestionMarkIcon', () => {
     const button = component.children().first()
 
-    expect(button).to.have.type(ButtonTooltipIcon)
+    expect(button).to.have.type(ButtonQuestionMarkIcon)
     expect(button).to.have.attr('data-tip')
     expect(button).to.have.attr('data-for', 'tooltip-right')
     expect(button).to.have.attr('data-event', 'click')

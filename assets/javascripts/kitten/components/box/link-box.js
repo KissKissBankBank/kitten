@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { Component } from 'react'
 import classNames from 'classnames'
+import { ArrowIcon } from 'kitten/components/icons/arrow-icon'
 
-export default class LinkBox extends React.Component {
+export class LinkBox extends Component {
   renderIcon() {
     if (this.props.displayIcon) {
       return (
@@ -13,38 +14,48 @@ export default class LinkBox extends React.Component {
   }
 
   render() {
+    const {
+      className,
+      displayIcon,
+      isExternal,
+      href,
+      title,
+      text,
+      linkProps } = this.props
+
     let linkBoxClassNames = classNames(
       'k-LinkBox',
-      { 'k-LinkBox--withIcon': this.props.displayIcon },
+      className,
+      { 'k-LinkBox--withIcon': displayIcon },
     )
 
-    const target = this.props.isExternal ? { target: '_blank' } : {}
+    const target = isExternal ? { target: '_blank' } : {}
 
     return (
-      <a className= { linkBoxClassNames }
-         href={ this.props.href }
-         { ...target }>
+      <a
+        { ...linkProps }
+        className={ linkBoxClassNames }
+        href={ href }
+        { ...target }
+      >
         <div className="k-LinkBox__container">
           { this.renderIcon() }
           <div className="k-LinkBox__paragraph">
-            <p className="k-LinkBox__title">{ this.props.title }</p>
-            <p className="k-LinkBox__text">{ this.props.text }</p>
+            <p className="k-LinkBox__title">{ title }</p>
+            <p className="k-LinkBox__text">{ text }</p>
           </div>
 
           <div className={ classNames('k-LinkBox__navigation',
-                                      'k-LinkBox__navigation--withAnimation') }>
+                                      'k-LinkBox__navigation--withAnimation') }
+          >
             <span className={ classNames('k-LinkBox__button',
                                          'k-ButtonIcon',
                                          'k-ButtonIcon--hydrogen',
                                          'k-ButtonIcon--tiny',
                                          'k-ButtonIcon--withoutHover',
-                                         'k-ButtonIcon--verticalArrow') }>
-              <svg className="k-ButtonIcon__svg"
-                   xmlns="http://www.w3.org/2000/svg"
-                   viewBox="0 0 10 10">
-                <path d="M7.828,5L6.414,6.413L2.172,2.172l1.414-1.415L7.828,5z"/>
-                <path d="M7.828,5L3.586,9.243L2.172,7.827l4.242-4.241L7.828,5z"/>
-              </svg>
+                                         'k-ButtonIcon--verticalArrow') }
+            >
+              <ArrowIcon className="k-ButtonIcon__svg" />
             </span>
           </div>
         </div>
@@ -58,3 +69,6 @@ LinkBox.defaultProps = {
   href: '#',
   isExternal: false,
 }
+
+// DEPRECATED: do not use default export.
+export default LinkBox

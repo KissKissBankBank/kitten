@@ -30,10 +30,7 @@ module Kitten
           id: 'brand-colors',
           label: 'Brand colors',
           components: [
-            { path: 'branding/colors/common', name: 'Common' },
-            { path: 'branding/colors/kisskissbankbank', name: 'KissKissBankBank' },
-            { path: 'branding/colors/hellomerci', name: 'hellomerci' },
-            { path: 'branding/colors/lendopolis', name: 'LENDOPOLIS' },
+            { path: 'branding/colors', name: '' },
           ],
         }
       ]
@@ -59,6 +56,7 @@ module Kitten
           components: [
             { path: 'components/typography/title', name: 'Title' },
             { path: 'components/typography/paragraph', name: 'Paragraph' },
+            { path: 'components/typography/text', name: 'Text' },
           ],
         },
         {
@@ -72,6 +70,13 @@ module Kitten
             { path: 'components/buttons/image-button-with-text', name: 'Image button with text' },
             { path: 'components/buttons/tag-button', name: 'Tag button' },
             { path: 'components/buttons/button-with-badge', name: 'Button with badge' },
+          ],
+        },
+        {
+          id: 'icons',
+          label: 'Icons',
+          components: [
+            { path: 'components/icons/icons', name: 'Icons' },
           ],
         },
         {
@@ -114,6 +119,7 @@ module Kitten
             { path: 'components/notifications/alert', name: 'Alert' },
             { path: 'components/notifications/badge', name: 'Badge' },
             { path: 'components/notifications/icon-badge', name: 'Icon badge' },
+            { path: 'components/modals/modal', name: 'Modal' },
             { path: 'components/tours/tour', name: 'Tour', hidden_on_s: true },
           ],
         },
@@ -133,6 +139,7 @@ module Kitten
           components: [
             { path: 'components/cards/card', name: 'Card' },
             { path: 'components/cards/project-card', name: 'Project card' },
+            { path: 'components/cards/project-similar-card', name: 'Project similar card' },
             { path: 'components/heroes/hero', name: 'Hero' },
             { path: 'components/press/press-quotes', name: 'Press quotes' },
             { path: 'components/testimonies/testimony', name: 'Testimony' },
@@ -145,14 +152,21 @@ module Kitten
           ],
         },
         {
+          id: 'contextual-elements',
+          label: 'Contextual elements',
+          components: [
+            { path: 'components/loaders/loader', name: 'Loader' },
+          ],
+        },
+        {
           id: 'contextual-content',
           label: 'Contextual content',
           components: [
             { path: 'components/box/information-box', name: 'Information box' },
             { path: 'components/box/link-box', name: 'Link box' },
             { path: 'components/box/link-box-with-icon', name: 'Link box with icon' },
-            { path: 'components/tooltips/tooltip', name: 'Tooltip' },
             { path: 'components/tooltips/static-tooltip', name: 'Static tooltip' },
+            { path: 'components/tooltips/tooltip', name: 'Tooltip' },
             { path: 'components/cards/project-creator-card', name: 'Project creator card' },
           ],
         },

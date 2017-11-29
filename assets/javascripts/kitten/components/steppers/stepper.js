@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import classNames from 'classnames'
 import {
   StepperIconDefault,
@@ -12,7 +12,7 @@ const iconTypeComponents = {
   validated: StepperIconValidated,
 }
 
-export class Stepper extends React.Component {
+export class Stepper extends Component {
   lineBreaks(text) {
     const regex = /(\n)/i
     const brClassNames = classNames(
@@ -27,17 +27,24 @@ export class Stepper extends React.Component {
   }
 
   renderLink(item) {
-    const Tag = item.href ? 'a' : 'span'
-    const IconType = iconTypeComponents[item.iconType]
-    const linkClassNames = classNames(
+    const { href, iconType, linkClassNames, text, ...other } = item
+    const Tag = href ? 'a' : 'span'
+    const IconType = iconTypeComponents[iconType]
+    const className = classNames(
       'k-Stepper__link',
-      item.linkClassNames,
+      linkClassNames,
     )
 
-    return <Tag className={ linkClassNames } href={ item.href }>
-      <IconType />
-      { this.lineBreaks(item.text) }
-    </Tag>
+    return (
+      <Tag
+        className={ className }
+        href={ href }
+        { ...other }
+      >
+        <IconType />
+        { this.lineBreaks(text) }
+      </Tag>
+    )
   }
 
   renderItems() {
@@ -48,7 +55,10 @@ export class Stepper extends React.Component {
     )
 
     return items.map((item, index) =>
-      <li className={ itemClassNames } key={ index }>
+      <li
+        className={ itemClassNames }
+        key={ index }
+      >
         { this.renderLink(item, index) }
       </li>
     )
@@ -61,7 +71,10 @@ export class Stepper extends React.Component {
     )
 
     return (
-      <nav className="k-Stepper" role="navigation">
+      <nav
+        className="k-Stepper"
+        role="navigation"
+      >
         <ul className={ listClassNames }>
           { this.renderItems() }
         </ul>
