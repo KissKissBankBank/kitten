@@ -70,7 +70,8 @@ export const KarlHeaderTour1 = props => (
       </div>
       <div className="k-Popover__close">
         <CloseButton
-          modifier="hydrogen"
+          modifier="beryllium"
+          size="tiny"
         />
       </div>
     </div>
@@ -138,7 +139,10 @@ export const KarlHeaderTour2 = props => (
         </div>
       </div>
       <div className="k-Popover__close">
-        <CloseButton modifier="hydrogen" />
+        <CloseButton
+          modifier="beryllium"
+          size="tiny"
+        />
       </div>
     </div>
   </div>

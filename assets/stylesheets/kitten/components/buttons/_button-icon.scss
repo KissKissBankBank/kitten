@@ -260,16 +260,24 @@
   .k-ButtonIcon--cross {
     $cross-size: k-px-to-rem(8px);
     @include k-buttonPadding(
-      $button-size-tiny,
+      $button-size,
       $cross-size,
       $cross-size
     );
-
 
     .k-ButtonIcon__svg {
       width: $cross-size;
       height: $cross-size;
     }
+  }
+
+  .k-ButtonIcon--cross--tiny {
+    $cross-size: k-px-to-rem(8px);
+    @include k-buttonPadding(
+      $button-size-tiny,
+      $cross-size,
+      $cross-size
+    );
   }
 
   .k-ButtonIcon--empty--micro {
