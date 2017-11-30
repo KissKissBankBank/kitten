@@ -52,28 +52,27 @@ describe('<TextInputWithButton />', () => {
 
   describe('valid prop', () => {
     const component = mount(<TextInputWithButton valid />)
-    const textInput = component.find('input')
+    const button = component.find('button')
 
-    it('has an <input /> with "is-valid" class', () => {
-      expect(textInput).to.have.className('is-valid')
+    it('has an <button /> with "is-valid" class', () => {
+      expect(button).to.have.className('is-valid')
     })
   })
 
   describe('error prop', () => {
     const component = mount(<TextInputWithButton error />)
-    const textInput = component.find('input')
+    const button = component.find('button')
 
-    it('has an <input /> with "is-error" class', () => {
-      expect(textInput).to.have.className('is-error')
+    it('has an <button /> with "is-error" class', () => {
+      expect(button).to.have.className('is-error')
     })
   })
 
   describe('disabled prop', () => {
     const component = mount(<TextInputWithButton disabled />)
-    const textInput = component.find('input')
     const button = component.find('button')
 
-    it('has an <input /> with "disabled" class', () => {
+    it('has an <button /> with "disabled" class', () => {
       expect(button).to.have.className('is-disabled')
     })
   })
