@@ -23,8 +23,8 @@
     select-input-bg-disabled: map-get($k-colors, 'line-1'),
     select-item-disabled-color: map-get($k-colors, 'font-2'),
     arrow-zone-width: k-px-to-rem(40px),
-    select-input-border-radius: k-px-to-rem(4px),
-    select-input-border-width: k-px-to-rem(1px),
+    select-input-border-radius: k-px-to-rem(0px),
+    select-input-border-width: k-px-to-rem(2px),
     select-input-height: k-px-to-rem(50px),
   );
 
@@ -132,7 +132,7 @@
     padding-right: 0;
 
     border: none;
-    border-left: 1px solid map-get($k-colors, 'line-2');
+    border-left: k-px-to-rem(2px) solid map-get($k-colors, 'line-1');
     background: map-get($options, 'select-input-bg')
                 url('~icons/arrow-bottom-black.svg')
                 no-repeat
@@ -193,7 +193,7 @@
 
   // control options
 
-  $select-input-border-color: map-get($k-colors, 'line-2');
+  $select-input-border-color: map-get($k-colors, 'line-1');
   $select-input-border-radius: k-map-fetch($options,
                                            'select-input-border-radius');
 
@@ -529,7 +529,7 @@
     border-bottom-right-radius: $select-input-border-radius;
     border-bottom-left-radius: $select-input-border-radius;
     background-color: map-get($options, 'select-input-bg');
-    border: 1px solid $select-input-border-color;
+    border: k-px-to-rem(2px) solid $select-input-border-color;
     border-top-color: mix(map-get($options, 'select-input-bg'), $select-input-border-color, 50%);
     box-sizing: border-box;
     margin-top: -1px;
