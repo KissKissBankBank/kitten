@@ -29,11 +29,11 @@
   // Autocomplete color
   $color-main-text: map-get($k-colors, 'font-1');
   $color-secondary-text: map-get($k-colors, 'font-1');
-  $border-color-autocomplete: map-get($k-colors, 'line-2');
+  $border-color-autocomplete: map-get($k-colors, 'line-1');
 
   // Base
   $color: map-get($k-colors, 'font-1');
-  $border-color: map-get($k-colors, 'line-2');
+  $border-color: map-get($k-colors, 'line-1');
   $background-color: map-get($k-colors, 'background-1');
   $background-color-active: map-get($k-colors, 'background-3');
 

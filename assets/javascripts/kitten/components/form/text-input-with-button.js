@@ -7,6 +7,7 @@ export class TextInputWithButton extends Component {
     const {
       valid,
       error,
+      disabled,
       value,
       className,
       textInputProps,
@@ -30,6 +31,7 @@ export class TextInputWithButton extends Component {
       {
         'is-valid': valid,
         'is-error': error,
+        'disabled': disabled,
       }
     )
 
@@ -39,6 +41,7 @@ export class TextInputWithButton extends Component {
           { ...textInputProps }
           valid={ valid }
           error={ error }
+          disabled={ disabled }
           className={ textInputWithButtonInputClassName }
         />
         <button
@@ -55,6 +58,7 @@ export class TextInputWithButton extends Component {
 TextInputWithButton.defaultProps = {
   valid: false,
   error: false,
+  disabled:false,
   value: 'Button',
   textInputProps: {
     tag: 'input',
