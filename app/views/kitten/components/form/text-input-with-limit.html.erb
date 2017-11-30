@@ -3,15 +3,15 @@
     <div class="k-Grid">
       <div class="k-Grid__col k-Grid__col--12 k-Grid__col--4@m k-Grid__col--12@l">
         <%= example 'Tiny' do %>
-          <%= react_component('TextInputWithLimit', props: {
+          <%= react_component 'TextInputWithLimit', props: {
             tiny: true,
             placeholder: 'Lorem ipsum dolor'
-           }) %>
+           } %>
         <% end %>
       </div>
       <div class="k-Grid__col k-Grid__col--12 k-Grid__col--4@m k-Grid__col--12@l">
         <%= example 'Input' do %>
-          <%= react_component('TextInputWithLimit') %>
+          <%= react_component 'TextInputWithLimit' %>
         <% end %>
       </div>
       <div class="k-Grid__col k-Grid__col--12 k-Grid__col--4@m k-Grid__col--12@l">
@@ -29,23 +29,23 @@
     <div class="k-Grid">
       <div class="k-Grid__col k-Grid__col--12 k-Grid__col--4@m k-Grid__col--12@l">
         <%= example 'Textarea' do %>
-          <%= react_component('TextInputWithLimit', props: {
+          <%= react_component 'TextInputWithLimit', props: {
             tag: 'textarea',
             rows: 4,
             placeholder: 'Lorem ipsum dolor sit amet',
             limit: 128,
-          }) %>
+          } %>
         <% end %>
       </div>
       <div class="k-Grid__col k-Grid__col--12 k-Grid__col--4@m k-Grid__col--12@l">
         <%= example 'Disabled textarea' do %>
-          <%= react_component('TextInputWithLimit', props: {
+          <%= react_component 'TextInputWithLimit', props: {
             tag: 'textarea',
             rows: 4,
             placeholder: 'Lorem ipsum dolor sit amet',
             limit: 128,
             disabled: true,
-          }) %>
+          } %>
         <% end %>
       </div>
     </div>

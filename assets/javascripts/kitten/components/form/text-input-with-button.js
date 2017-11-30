@@ -31,7 +31,7 @@ export class TextInputWithButton extends Component {
       {
         'is-valid': valid,
         'is-error': error,
-        'disabled': disabled,
+        'is-disabled': disabled,
       }
     )
 
@@ -58,7 +58,7 @@ export class TextInputWithButton extends Component {
 TextInputWithButton.defaultProps = {
   valid: false,
   error: false,
-  disabled:false,
+  disabled: false,
   value: 'Button',
   textInputProps: {
     tag: 'input',

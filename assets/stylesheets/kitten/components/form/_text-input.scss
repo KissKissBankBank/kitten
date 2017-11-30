@@ -15,7 +15,7 @@
 ///          placeholder="Lorem ipsum dolor sit amet" />
 
 @mixin k-TextInput {
-  $border-width: 2px;
+  $border-width: k-px-to-rem(2px);
   $font: 'light';
   $font-size: -1; // 14px
   $line-height: 1.3;

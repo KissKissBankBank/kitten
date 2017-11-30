@@ -41,8 +41,8 @@
   $border-color-focus: map-get($k-colors, 'primary-1');
 
   // Disabled
-  $color-disabled: #fff;
-  $border-color-disabled: #fff;
+  $color-disabled: map-get($k-colors, 'background-1');
+  $border-color-disabled: map-get($k-colors, 'background-1');
   $background-color-disabled: map-get($k-colors, 'line-1');
 
   // Placeholder
