@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { Component } from 'react'
 import classNames from 'classnames'
 import { CrossIcon } from 'kitten/components/icons/cross-icon'
 
-export class CloseButton extends React.Component {
+export class CloseButton extends Component {
   render() {
     const { className, closeButtonLabel, modifier, ...others } = this.props
 
