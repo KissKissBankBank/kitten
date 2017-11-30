@@ -58,7 +58,11 @@
   &.k-Button--icon {
     .k-Button__icon {
       @include k-buttonRounded($button-size-big-with-border);
-      @include k-buttonPadding($button-size-big, $icon-width, $icon-height);
+      @include k-buttonPadding(
+        $button-size-big,
+        $icon-width,
+        $icon-height
+      );
     }
   }
 }
