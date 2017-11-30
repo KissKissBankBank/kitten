@@ -2,10 +2,6 @@
   "name": "kitten-example",
   "license": "MIT",
   "version": "1.0.0",
-  "engines": {
-    "node": "^6.9.5",
-    "npm": "3.10.8"
-  },
   "cacheDirectories": [
     "node_modules",
     "client/node_modules"

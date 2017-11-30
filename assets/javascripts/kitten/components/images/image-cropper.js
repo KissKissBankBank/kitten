@@ -2,6 +2,7 @@ import React from 'react'
 import Cropper from 'react-cropper'
 import { Marger } from 'kitten/components/layout/marger'
 import { Grid, GridCol } from 'kitten/components/grid/grid'
+import { Text } from 'kitten/components/typography/text'
 import { Label } from 'kitten/components/form/label'
 import { Paragraph } from 'kitten/components/typography/paragraph'
 import { SimpleUploader } from 'kitten/components/uploaders/simple-uploader'
@@ -151,7 +152,10 @@ export class ImageCropper extends React.Component {
     const dragMode = this.props.disabled ? 'none' : 'move'
 
     return (
-      <Marger key="cropper" top="2" bottom="2">
+      <Marger
+        top="2"
+        key="cropper"
+      >
         <div ref={ node => { this.cropperContainer = node } }>
           { (this.state.cropperWidth && this.state.cropperHeight) &&
             <Cropper
@@ -184,8 +188,11 @@ export class ImageCropper extends React.Component {
 
   renderCropperInfo() {
     return (
-      <Marger top="2" bottom="2">
-        <Paragraph modifier="quaternary" margin={ false }>
+      <Marger top="2" bottom="1.5">
+        <Paragraph
+          modifier="quaternary"
+          margin={ false }
+        >
           { this.props.cropperInfo }
         </Paragraph>
       </Marger>
@@ -194,7 +201,7 @@ export class ImageCropper extends React.Component {
 
   renderSlider() {
     return (
-      <Marger top="1" bottom="2">
+      <Marger top="1">
         <Slider
           name="zoom"
           min={ this.state.sliderMin }
@@ -209,7 +216,7 @@ export class ImageCropper extends React.Component {
 
   renderSliderTitle() {
     return (
-      <Marger top="2" bottom="1">
+      <Marger top="1.5" bottom="1">
         <Label size="tiny">
           { this.props.sliderTitle }
         </Label>
@@ -248,9 +255,13 @@ export class ImageCropper extends React.Component {
 
     return (
       <Marger top="1" bottom="1">
-        <span className="k-FormInfo__error">
+        <Text
+          color="error"
+          size="tiny"
+          weight="regular"
+        >
           { this.props.uploaderErrorLabel }
-        </span>
+        </Text>
       </Marger>
     )
   }
@@ -277,20 +288,23 @@ export class ImageCropper extends React.Component {
       <section>
         <Grid>
           <GridCol col="12">
-            <Marger top="1" bottom="1">
+            <Marger bottom="1.5">
               <Label size="tiny">
                 { this.props.label }
               </Label>
             </Marger>
 
-            <Marger top="1" bottom="1">
+            <Marger top="1.5" bottom="1">
               { this.renderUploader() }
             </Marger>
 
             { this.renderError() }
 
-            <Marger top="1" bottom="1">
-              <Paragraph modifier="quaternary" margin={ false }>
+            <Marger top="1">
+              <Paragraph
+                modifier="quaternary"
+                margin={ false }
+              >
                 { this.props.description }
               </Paragraph>
             </Marger>

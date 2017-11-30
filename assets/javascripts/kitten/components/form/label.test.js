@@ -54,6 +54,16 @@ describe('<Label />', () => {
     })
   })
 
+  describe('with false `focusId` prop', () => {
+    const wrapper = mount(
+      <Label focusId={ false } />
+    )
+
+    it('do not render for attribute', () => {
+      expect(wrapper).to.not.have.attr('for')
+    })
+  })
+
   describe('with withoutPointerEvents prop', () => {
     const component = shallow(<Label withoutPointerEvents />)
 
