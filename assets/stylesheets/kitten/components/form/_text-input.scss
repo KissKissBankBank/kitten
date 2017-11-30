@@ -39,12 +39,12 @@
   $color-placeholder: map-get($k-colors, 'font-2');
 
   // Is-valid
-  $color-is-valid: map-get($k-colors, 'valid');
-  $border-is-valid: map-get($k-colors, 'valid');
+  $color-is-valid: map-get($k-colors, 'valid-3');
+  $border-is-valid: map-get($k-colors, 'valid-3');
 
   // Is-error
-  $color-is-error: map-get($k-colors, 'error');
-  $border-is-error: map-get($k-colors, 'error');
+  $color-is-error: map-get($k-colors, 'error-3');
+  $border-is-error: map-get($k-colors, 'error-3');
 
   // Border radius Text - input
   $border-text-input: k-px-to-rem(0px);

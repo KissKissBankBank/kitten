@@ -29,7 +29,7 @@
   $color: map-get($k-colors, 'background-1');
 
   // Background-color
-  $button-background: map-get($k-colors, 'primary-1');
+  $button-background: map-get($k-colors, 'font-1');
   $button-background-is-valid: map-get($k-colors, 'valid');
   $button-background-is-error: map-get($k-colors, 'error');
   $button-background-disabled: map-get($k-colors, 'line-2');

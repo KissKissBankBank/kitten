@@ -26,10 +26,14 @@
   $color: map-get($k-colors, 'font-1');
   $unit-background-color: map-get($k-colors, 'background-1');
 
+  // color
+  $valid-color: map-get($k-colors, 'valid');
+  $error-color: map-get($k-colors, 'error');
+
   // Border
   $unit-color: map-get($k-colors, 'primary-1');
-  $unit-color-is-valid: map-get($k-colors, 'valid');
-  $unit-color-is-error: map-get($k-colors, 'error');
+  $unit-color-is-valid: map-get($k-colors, 'valid-3');
+  $unit-color-is-error: map-get($k-colors, 'error-3');
   $unit-color-is-inactive: map-get($k-colors, 'font-2');
 
   // Disabled
@@ -108,12 +112,12 @@
 
     &.is-valid {
       border-color: $unit-color-is-valid;
-      color: $unit-color-is-valid;
+      color: $valid-color;
     }
 
     &.is-error {
       border-color: $unit-color-is-error;
-      color: $unit-color-is-error;
+      color: $error-color;
     }
 
     &.is-inactive {
