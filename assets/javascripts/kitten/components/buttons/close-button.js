@@ -4,7 +4,11 @@ import { CrossIcon } from 'kitten/components/icons/cross-icon'
 
 export class CloseButton extends Component {
   render() {
-    const { className, closeButtonLabel, modifier, ...others } = this.props
+    const {
+      className,
+      closeButtonLabel,
+      modifier,
+      ...others } = this.props
 
     const buttonClassName = classNames(
       'k-ButtonIcon',
@@ -14,12 +18,16 @@ export class CloseButton extends Component {
     )
 
     return (
-      <button className={ buttonClassName }
-              title={ closeButtonLabel }
-              aria-label={ closeButtonLabel }
-              type="button"
-              { ...others }>
-        <CrossIcon className="k-ButtonIcon__svg k-ButtonIcon__svgRotate" />
+      <button
+        className={ buttonClassName }
+        title={ closeButtonLabel }
+        aria-label={ closeButtonLabel }
+        type="button"
+        { ...others }
+      >
+        <CrossIcon className={ classNames('k-ButtonIcon__svg',
+                                          'k-ButtonIcon__svgRotate') }
+        />
       </button>
     )
   }
