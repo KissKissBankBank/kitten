@@ -68,6 +68,15 @@ describe('<TextInputWithButton />', () => {
     })
   })
 
+  describe('disabled prop', () => {
+    const component = mount(<TextInputWithButton disabled />)
+    const textInput = component.find('input')
+
+    it('has an <input /> with "disabled" class', () => {
+      expect(textInput).to.have.className('is-disabled')
+    })
+  })
+
   describe('value prop', () => {
     const component = mount(<TextInputWithButton value="custom-button" />)
     const button = component.find('.k-TextInputWithButton__button')
