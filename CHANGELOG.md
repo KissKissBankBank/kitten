@@ -4,7 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add new colors `error`.
+- Feature: Update colors.
+- Feature: Add new `error` and `valid` colors.
 
 ## [16.3.1] - 2017-11-28
 
