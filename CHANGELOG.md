@@ -7,6 +7,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Add `k-buttonPadding` helper to manage button paddings.
 - Feature: Update all `Button` components with new design styleguide V2.
 - Fix: Update marge on `FormComposer` component.
+- Feature: Remove `boron` buttons colors.
+- Feature: Update colors.
+- Feature: Add new `error` and `valid` colors.
 
 ## [16.3.1] - 2017-11-28
 
