@@ -38,6 +38,8 @@
 
   // Error
   $error-color: map-get($k-colors, 'error');
+  $error-border-color: map-get($k-colors, 'error-3');
+
 
   // Colors
   $background-color: map-get($k-colors, 'background-1');
@@ -126,10 +128,10 @@
     }
 
     .k-RadioButton__input.is-error + & {
-      border-color: $error-color;
+      border-color: $error-border-color;
 
       &:before {
-        border-color: $error-color;
+        border-color: $error-border-color;
       }
     }
 
