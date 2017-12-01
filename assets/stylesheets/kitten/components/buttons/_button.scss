@@ -155,11 +155,6 @@
     }
   }
 
-  // Padding size
-  .k-Button--icon--tiny {
-    padding: 0 $button-tiny-height 0 0;
-  }
-
   // Button--icon
   .k-Button--icon {
     padding: 0 $button-height 0 0;
@@ -202,6 +197,11 @@
         transition: stroke $transition-speed;
       }
     }
+  }
+
+  // Padding size
+  .k-Button--icon--tiny {
+    padding: 0 $button-tiny-height 0 0;
   }
 
   .k-Button--iconRight {
