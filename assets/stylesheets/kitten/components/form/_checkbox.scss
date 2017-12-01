@@ -34,7 +34,6 @@
 
   $checkbox-size: k-px-to-rem(20px);
   $border-size: k-px-to-rem(2px);
-  $border-radius: k-px-to-rem(0px);
   $icon: '~icons/checked.svg';
   $icon-disabled: '~icons/checked-disabled.svg';
 
@@ -64,7 +63,6 @@
       content: '';
       background-color: $background-color;
       border: $border-size solid $border-color;
-      border-radius: $border-radius;
 
       transition: border-color .2s, background-color .2s;
     }
