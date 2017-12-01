@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Remove `boron` map.
+- Feature: Remove `boron` buttons colors.
 - Feature: Update colors.
 - Feature: Add new `error` and `valid` colors.
 
