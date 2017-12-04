@@ -21,12 +21,10 @@
 ///         <p class="k-LinkBox__text"> … </p>
 ///       </div>
 ///       <div class="k-LinkBox__navigation k-LinkBox__navigation--withAnimation">
-///         <span title="Suivant" class="k-LinkBox__button
-///                                      k-ButtonIcon
+///         <span title="Suivant" class="k-ButtonIcon
 ///                                      k-ButtonIcon--hydrogen
 ///                                      k-ButtonIcon--tiny
-///                                      k-ButtonIcon--withoutHover
-///                                      k-ButtonIcon--verticalArrow">
+///                                      k-ButtonIcon--withoutHover">
 ///           <svg> … </svg>
 ///         </span>
 ///       </div>
@@ -44,7 +42,7 @@
   // Base
   $color: map-get($k-colors, 'font-1');
   $background-color: map-get($k-colors, 'background-1');
-  $border-color: map-get($k-colors, 'line-2');
+  $border-color: map-get($k-colors, 'line-1');
 
   // Active
   $background-color-active: map-get($k-colors, 'line-1');
@@ -55,8 +53,7 @@
   // Color icon
   $background-color-icon: map-get($k-colors, 'primary-4');
 
-  $border-size: 1px;
-  $border-radius: k-px-to-rem(8px);
+  $border-size: 2px;
   $transition-duration: .2s;
 
   .k-LinkBox {
@@ -78,7 +75,6 @@
 
     color: $color;
     background-color: $background-color;
-    border-radius: $border-radius;
     border: $border-size solid $border-color;
 
     transition: background $transition-duration;
@@ -103,8 +99,6 @@
     justify-content: center;
     min-width: k-px-to-rem(90px);
     background-color: $background-color-icon;
-    border-top-left-radius: $border-radius;
-    border-bottom-left-radius: $border-radius;
 
     @include k-media-max('m') {
       display: none;

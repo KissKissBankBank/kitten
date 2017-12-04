@@ -21,8 +21,7 @@
 
   $font: 'light';
 
-  $border-size: 1px;
-  $border-radius: k-px-to-rem(8px);
+  $border-size: 2px;
 
   .k-InformationBox {
     display: inline-block;
@@ -36,7 +35,6 @@
              k-px-to-rem(20px);
     color: $color;
     background-color: $background-color;
-    border-radius: $border-radius;
     border: $border-size solid $border-color;
   }
 }
