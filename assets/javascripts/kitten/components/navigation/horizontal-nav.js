@@ -10,7 +10,12 @@ export class HorizontalNav extends Component {
   }
 
   renderItem(item, key) {
-    const { className, selected, text, ...linkProps } = item
+    const {
+      className,
+      selected,
+      text,
+      ...linkProps } = item
+
     const itemClassName = classNames(
       "k-HorizontalNav__item",
       className,
@@ -18,7 +23,10 @@ export class HorizontalNav extends Component {
     )
 
     return (
-      <li key={ key }>
+      <li
+        key={ key }
+        role= menuitem
+      >
         <a className={ itemClassName } { ...linkProps }>
           <Markdown softBreak="br" source={ text } />
         </a>
@@ -35,6 +43,7 @@ export class HorizontalNav extends Component {
         <ul
           className={ classNames("k-HorizontalNav__element",
                                  this.props.elementClassName) }
+          role="menubar"
         >
           { this.renderItems() }
         </ul>

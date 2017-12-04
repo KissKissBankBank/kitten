@@ -10,7 +10,12 @@ export class TabBar extends Component {
   }
 
   renderItem(item, key) {
-    const { className, selected, text, ...linkProps } = item
+    const {
+      className,
+      selected,
+      text,
+       ...linkProps } = item
+
     const itemClassName = classNames(
       "k-TabBar__item",
       className,
