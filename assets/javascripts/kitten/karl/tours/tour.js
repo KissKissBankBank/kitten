@@ -1,6 +1,10 @@
 import React from 'react'
 import classNames from 'classnames'
 import { Button } from 'kitten/components/buttons/button'
+import { Marger } from 'kitten/components/layout/marger'
+import { Title } from 'kitten/components/typography/title'
+import { Paragraph } from 'kitten/components/typography/paragraph'
+import { Text } from 'kitten/components/typography/text'
 import { CloseButton } from 'kitten/components/buttons/close-button'
 import { ArrowIcon } from 'kitten/components/icons/arrow-icon'
 import { MixIllustration } from 'kitten/components/illustrations/mix-illustration'
@@ -22,22 +26,34 @@ export const KarlHeaderTour1 = props => (
       <div className="k-Tour__popover__illustration">
         <MixIllustration className="k-Tour__popover__svg--primary" />
       </div>
-      <div className="k-Tour__popover__content">
-        <p
-          id="dialogtitle"
-          className="k-Tour__popover__title"
+      <Marger
+        top="4"
+        className="k-Tour__popover__content"
+      >
+        <Marger bottom="1">
+          <Title
+            modifier= "senary"
+            id="dialogtitle"
+            margin={ false }
+            tag="p"
+          >
+            What‘s new
+          </Title>
+        </Marger>
+        <Paragraph
+          margin={ false }
+          modifier="quaternary"
         >
-          What‘s new
-        </p>
-        <p className="k-Tour__popover__text">
           Lorem ipsum dolor sit amet, consectetur
           adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
           magna aliqua.
-        </p>
+        </Paragraph>
         <div className="k-Tour__popover__navigation">
-          <p className="k-Tour__popover__numbering">
+          <Text className={ classNames('k-u-weight-regular',
+                                       'k-u-size-tiny') }
+          >
             1 on 2
-          </p>
+          </Text>
           <div className="k-Tour__popover__buttons">
             <Button
               title="Précédent"
@@ -67,8 +83,8 @@ export const KarlHeaderTour1 = props => (
             </Button>
           </div>
         </div>
-      </div>
-      <div className="k-Popover__close">
+      </Marger>
+      <div>
         <CloseButton
           modifier="beryllium"
           size="tiny"
@@ -94,20 +110,31 @@ export const KarlHeaderTour2 = props => (
       <div className="k-Tour__popover__illustration">
         <LoudspeakerIllustration className="k-Tour__popover__svg--primary" />
       </div>
-      <div className="k-Tour__popover__content">
-        <p
-          id="dialogtitle"
-          className="k-Tour__popover__title"
+      <Marger
+        top="4"
+        className="k-Tour__popover__content"
+      >
+        <Marger bottom="1">
+          <Title
+            modifier="senary"
+            margin={ false }
+            id="dialogtitle"
+          >
+            What‘s new
+          </Title>
+        </Marger>
+        <Paragraph
+          modifier= "quaternary"
+          margin={ false }
         >
-          What‘s new
-        </p>
-        <p className="k-Tour__popover__text">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
-        </p>
+        </Paragraph>
         <div className="k-Tour__popover__navigation">
-          <p className="k-Tour__popover__numbering">
+          <Text className={ classNames('k-u-weight-regular',
+                                       'k-u-size-tiny') }
+          >
             1 on 2
-          </p>
+          </Text>
           <div className="k-Tour__popover__buttons">
             <Button
               title="Précédent"
@@ -137,8 +164,8 @@ export const KarlHeaderTour2 = props => (
             </Button>
           </div>
         </div>
-      </div>
-      <div className="k-Popover__close">
+      </Marger>
+      <div>
         <CloseButton
           modifier="beryllium"
           size="tiny"

@@ -47,15 +47,6 @@
     10
   );
 
-  $text-font: 'light';
-  $text-size: -1; // 14px
-  $line-height: normal;
-
-  $numbering-font: 'regular';
-
-  $title-font: 'bold';
-  $title-size: 2; // 20px
-
   $color: map-get($k-colors, 'font-1');
 
   // Target hightlight.
@@ -103,23 +94,7 @@
     flex-direction: column;
     flex: 1;
 
-    margin-top: k-px-to-rem(40px);
-    margin-left: k-px-to-rem(30px);
-  }
-
-  .k-Tour__popover__title {
-    @include k-typographyFont($title-font);
-    @include k-typographyFontSize($title-size);
-
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-
-  .k-Tour__popover__text {
-    @include k-typographyFont($text-font);
-    @include k-typographyFontSize($text-size, $line-height: $line-height);
-
-    margin: k-px-to-rem(16px) 0;
+    margin-left: k-px-to-rem(40px);
   }
 
   .k-Tour__popover__navigation {
@@ -131,13 +106,6 @@
     margin-top: auto;
 
     width: k-px-to-rem(305px);
-  }
-
-  .k-Tour__popover__numbering {
-    @include k-typographyFont($numbering-font);
-    @include k-typographyFontSize($text-size);
-
-    margin: 0;
   }
 
   .k-Tour__popover__buttons {

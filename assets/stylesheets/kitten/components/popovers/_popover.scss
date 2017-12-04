@@ -14,7 +14,7 @@
 ///     …
 ///     <div class="k-Popover__close">
 ///       <button class="k-ButtonIcon
-///                      k-ButtonIcon--hydrogen
+///                      k-ButtonIcon--beryllium
 ///                      k-ButtonIcon--tiny">
 ///         <svg class="k-ButtonIcon__svg k-ButtonIcon__svg--rotate"
 ///              xmlns="http://www.w3.org/2000/svg"
@@ -34,14 +34,7 @@
   $border-radius: k-px-to-rem(0px);
   $margin-left: k-px-to-rem(40px);
 
-  $text-font: 'light';
-  $text-size: 0; // 16px
-
-  $title-font: 'bold';
-  $title-size: 2; // 20px
-
   .k-Popover {
-    @include k-typographyFont($text-font);
     position: relative;
 
     width: k-px-to-rem(520px);
@@ -49,16 +42,11 @@
 
     background-color: $background-color;
     border-radius: $border-radius;
-    // border: $border-size solid $border-color;
   }
 
   .k-Popover__container {
     min-height: k-px-to-rem(245px);
     box-sizing: border-box;
-    margin-left: $margin-left;
-  }
-
-  .k-Popover__close {
     margin-left: $margin-left;
   }
 
@@ -78,33 +66,15 @@
   }
 
   .k-Popover__content {
-    @include k-typographyFont($text-font);
-
     display: flex;
     flex-direction: column;
     flex: 1;
 
-    margin-top: 1rem;
-    margin-left: 1rem;
-  }
-
-  .k-Popover__title {
-    @include k-typographyFont($title-font);
-    @include k-typographyFontSize($title-size);
-
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-
-  .k-Popover__text {
-    @include k-typographyFont($text-font);
-    @include k-typographyFontSize($text-size);
-
-    margin: 1em 0;
+    margin-left: k-px-to-rem(40px);
   }
 
   .k-Popover__navigation {
-    bottom: k-px-to-rem(20px);
+    bottom: k-px-to-rem(40px);
 
     display: flex;
     justify-content: space-between;

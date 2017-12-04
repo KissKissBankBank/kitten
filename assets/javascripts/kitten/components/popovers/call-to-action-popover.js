@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { Component } from 'react'
+import { Marger } from 'kitten/components/layout/marger'
+import { Title } from 'kitten/components/typography/title'
+import { Paragraph } from 'kitten/components/typography/paragraph'
 import { Popover } from 'kitten/components/popovers/popover'
 import { Button } from 'kitten/components/buttons/button'
 
-export class CallToActionPopover extends React.Component {
+export class CallToActionPopover extends Component {
   constructor(props) {
     super(props)
 
@@ -54,20 +57,31 @@ export class CallToActionPopover extends React.Component {
     return (
       <Popover titleAriaLabelId={ titleAriaLabelId } { ...popoverProps }>
         { this.renderIllustration() }
-        <div className="k-Popover__content">
-          <p id={ titleAriaLabelId }
-             className="k-Popover__title">
-            { title }
-          </p>
-          <p className="k-Popover__text">
+        <Marger
+          top="4"
+          className="k-Popover__content"
+        >
+          <Marger bottom="1">
+            <Title
+              id={ titleAriaLabelId }
+              modifier="senary"
+              margin={ false }
+            >
+              { title }
+            </Title>
+          </Marger>
+          <Paragraph
+            modifier="tertiary"
+            margin={ false }
+          >
             { text }
-          </p>
+          </Paragraph>
           <div className="k-Popover__navigation">
             <div className="k-Popover__buttons">
               { this.renderButtonsList() }
             </div>
           </div>
-        </div>
+        </Marger>
       </Popover>
     )
   }
