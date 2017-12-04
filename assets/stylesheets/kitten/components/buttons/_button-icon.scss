@@ -54,6 +54,19 @@
   $icon-width: k-px-to-rem(12px);
   $icon-height: k-px-to-rem(14px);
 
+  // Differents sizes
+  $cross-size: k-px-to-rem(8px);
+  $micro-size: k-px-to-rem(9px);
+  $checked-micro-size: k-px-to-rem(10px);
+  $heart-size: k-px-to-rem(14px);
+  $signup-size: k-px-to-rem(18px);
+
+  // Arrow size
+  $horizontalArrow-width: k-px-to-rem(10px);
+  $horizontalArrow-height: k-px-to-rem(7px);
+  $verticalArrow-width: k-px-to-rem(9px);
+  $verticalArrow-height: k-px-to-rem(12px);
+
   // Button radius
   $button-radius: 0px;
 
@@ -150,7 +163,6 @@
 
   // Sizes modifiers.
   .k-ButtonIcon--micro {
-    $micro-size: k-px-to-rem(9px);
     @include k-buttonRounded($button-size-micro-with-border);
     @include k-buttonPadding(
       $button-size-micro,
@@ -182,7 +194,6 @@
 
   // Icon modifiers.
   .k-ButtonIcon--heart {
-    $heart-size: k-px-to-rem(14px);
     @include k-buttonPadding(
       $button-size-tiny,
       $icon-width,
@@ -197,7 +208,6 @@
 
   .k-ButtonIcon--signup,
   .k-ButtonIcon--phone {
-    $signup-size: k-px-to-rem(18px);
     @include k-buttonPadding(
       $button-size,
       $signup-size,
@@ -212,8 +222,6 @@
 
   .k-ButtonIcon--dropdown,
   .k-ButtonIcon--horizontalArrow {
-    $horizontalArrow-width: k-px-to-rem(10px);
-    $horizontalArrow-height: k-px-to-rem(7px);
     @include k-buttonPadding(
       $button-size-tiny,
       $horizontalArrow-width,
@@ -227,8 +235,6 @@
   }
 
   .k-ButtonIcon--verticalArrow {
-    $verticalArrow-width: k-px-to-rem(9px);
-    $verticalArrow-height: k-px-to-rem(12px);
     @include k-buttonPadding(
       $button-size-tiny,
       $verticalArrow-width,
@@ -243,28 +249,25 @@
   }
 
   .k-ButtonIcon--checked--micro {
-    $micro-size: k-px-to-rem(10px);
     @include k-buttonRounded($button-size-micro-with-border);
     @include k-buttonPadding(
       $button-size-micro,
-      $micro-size,
-      $micro-size
+      $checked-micro-size,
+      $checked-micro-size
     );
 
     .k-ButtonIcon__svg {
-      width: $micro-size;
-      height: $micro-size;
+      width: $checked-micro-size;
+      height: $checked-micro-size;
     }
   }
 
   .k-ButtonIcon--cross {
-    $cross-size: k-px-to-rem(8px);
     @include k-buttonPadding(
       $button-size,
       $cross-size,
       $cross-size
     );
-
 
     .k-ButtonIcon__svg {
       width: $cross-size;
