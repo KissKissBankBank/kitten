@@ -22,6 +22,8 @@ export class Button extends Component {
         'k-Button--icon': icon,
         'k-Button--iconRight': iconOnRight,
         'k-Button--iconWithMinWidth': iconWithMinWidth,
+        'k-Button--icon--tiny': size == "tiny" && icon,
+        'k-Button--iconRight--tiny': size == "tiny" && iconOnRight,
       },
       className,
     )

@@ -60,6 +60,7 @@
 
   // Heigth settings button.
   $button-height: k-px-to-rem(30px);
+  $button-tiny-height: k-px-to-rem(20px);
 
   // Button radius
   $button-radius: 0px;
@@ -198,8 +199,17 @@
     }
   }
 
+  // Padding size
+  .k-Button--icon--tiny {
+    padding: 0 $button-tiny-height 0 0;
+  }
+
   .k-Button--iconRight {
     padding: 0 0 0 $button-height;
+  }
+
+  .k-Button--iconRight--tiny {
+    padding: 0 0 0 $button-tiny-height;
   }
 
   .k-Button--iconWithMinWidth {
