@@ -39,8 +39,8 @@
   $color-placeholder: map-get($k-colors, 'font-2');
 
   // Is-valid
-  $color-is-valid: map-get($k-colors, 'valid-3');
-  $border-is-valid: map-get($k-colors, 'valid-3');
+  $color-is-valid: map-get($k-colors, 'tertiary-2');
+  $border-is-valid: map-get($k-colors, 'tertiary-2');
 
   // Is-error
   $color-is-error: map-get($k-colors, 'error-3');
