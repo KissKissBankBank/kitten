@@ -17,8 +17,8 @@
 ///
 @mixin k-Select {
   $options: (
-    error-color: map-get($k-colors, 'error'),
-    valid-color: map-get($k-colors, 'valid'),
+    error-color: map-get($k-colors, 'error-3'),
+    valid-color: map-get($k-colors, 'tertiary-2'),
     select-input-bg: map-get($k-colors, 'background-1'),
     select-input-bg-disabled: map-get($k-colors, 'line-1'),
     select-item-disabled-color: map-get($k-colors, 'font-2'),
