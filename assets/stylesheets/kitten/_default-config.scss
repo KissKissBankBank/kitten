@@ -98,15 +98,20 @@ $k-colors: (
   'primary-5': #e8f8ff, // Extra Light Primary
   'primary-6': #f3fbff, // Thin Primary
 
-  'secondary-1': #4bfffa, // #4bfffa
-  'secondary-2': #3cf0eb, // #3cf0eb
-  'secondary-3': #2de1dc, // #2de1dc
+  // DEPRECATED: colors.
+  'secondary-1': #4bfffa,
+  'secondary-2': #3cf0eb,
+  'secondary-3': #2de1dc,
 
   'tertiary-1': #effaf1, // Light Green
-  'tertiary-2': #59f091,
+  'tertiary-2': #cff0d6, // Semi Light Green
+
+   // DEPRECATED: colors.
   'tertiary-3': #4ae191,
 
   'valid': #61d079, // Green
+
   'error': #ff0046, // Red
   'error-2': #ffe5ec, // Light Red
+  'error-3': #ffb2c7, // Semi Light Red
 ) !default;
