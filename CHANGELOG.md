@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Update `Popover` and `CallToActionPopover` components with new design
+  styleguide V2.
 - Feature: Update `Tour` component with new design styleguide V2.
 - Feature: Add `k-buttonPadding` helper to manage button paddings.
 - Feature: Update all `Button` components with new design styleguide V2.
