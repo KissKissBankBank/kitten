@@ -160,7 +160,7 @@
     z-index: $target-highlight-z-index;
 
     border-radius: 100%;
-    border: 2px solid rgba(map-get($k-colors, 'secondary-1'), .8);
+    border: 2px solid rgba(map-get($k-colors, 'tertiary-1'), .8);
 
     pointer-events: none;
 
