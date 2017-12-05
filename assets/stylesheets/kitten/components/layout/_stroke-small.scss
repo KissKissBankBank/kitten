@@ -12,6 +12,8 @@
 
 @mixin k-StrokeSmall {
   .k-StrokeSmall {
+    @include k-strokeSmallBase;
+
     border: none;
     background: map-get($k-colors, 'font-1');
 

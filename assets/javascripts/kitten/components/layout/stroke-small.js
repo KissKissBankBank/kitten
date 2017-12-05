@@ -3,15 +3,15 @@ import classNames from 'classnames'
 
 export const StrokeSmall = ({ tiny, medium, big, className, ... props }) => {
   const strokeSmallClassName = classNames(
-    'k-SkrokeSmall',
-    {'k-SkrokeSmall--tiny': tiny },
-    {'k-SkrokeSmall--medium': medium },
-    {'k-SkrokeSmall--big': big },
+    'k-StrokeSmall',
+    {'k-StrokeSmall--tiny': tiny },
+    {'k-StrokeSmall--medium': medium },
+    {'k-StrokeSmall--big': big },
     className
   )
 
   return (
-    <span className={ strokeSmallClassName } { ...props } />
+    <div className={ strokeSmallClassName } { ...props } />
   )
 }
 
