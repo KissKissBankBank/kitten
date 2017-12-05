@@ -5,7 +5,6 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Show `SupTitle` component.
-- Fix: Update `react-select` version.
 
 ## [16.3.1] - 2017-11-28
 

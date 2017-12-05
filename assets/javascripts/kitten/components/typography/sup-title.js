@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { Component } from 'react'
 import classNames from 'classnames'
 
-export class SupTitle extends React.Component {
+export class SupTitle extends Component {
   render() {
     const {
       className,
