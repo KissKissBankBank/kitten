@@ -41,7 +41,8 @@ class ProjectCreatorCardComponent extends React.Component {
       <div className="k-ProjectCreatorCard__status">
         <span
           className="k-ProjectCreatorCard__status--icon"
-          style={ statusStyles }>
+          style={ statusStyles }
+        >
         </span>
         <div className="k-ProjectCreatorCard__status--text">
           { statusText }
@@ -53,17 +54,13 @@ class ProjectCreatorCardComponent extends React.Component {
   renderDescription() {
     return (
       <div className="k-ProjectCreatorCard__grid">
-        <Marger
-          top="2"
-          bottom="1">
+        <Marger top="2" bottom="1">
           <div className="k-ProjectCreatorCard__grid--flexEnd">
             { this.renderDate() }
             { this.renderStatus() }
           </div>
         </Marger>
-        <Marger
-          top="1"
-          bottom="2">
+        <Marger top="1" bottom="2">
           <Paragraph margin={ false }>
             { this.props.children }
           </Paragraph>
@@ -78,20 +75,24 @@ class ProjectCreatorCardComponent extends React.Component {
     const target = this.props.isExternal ? { target: '_blank' } : {}
 
     return (
-      <a className="k-ProjectCreatorCard__link"
-         href={ this.props.href }
-         { ...target }>
+      <a
+        className="k-ProjectCreatorCard__link"
+        href={ this.props.href }
+        { ...target }
+      >
         <Separator darker />
         <div className="k-ProjectCreatorCard__grid">
           <Marger
             top="1.2"
             bottom="1.2"
-            className="k-ProjectCreatorCard__grid--flex">
+            className="k-ProjectCreatorCard__grid--flex"
+          >
             { this.props.linkText }
             <ButtonIcon
               size="tiny"
               withoutHover
-              verticalArrow>
+              verticalArrow
+            >
               <ArrowIcon
                 className="k-ButtonIcon__svg" />
             </ButtonIcon>

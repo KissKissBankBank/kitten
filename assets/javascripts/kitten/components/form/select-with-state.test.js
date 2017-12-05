@@ -161,7 +161,7 @@ describe('<SelectWithState />', () => {
         />
       )
 
-      select.instance().handleChange([])
+      select.instance().handleChange(null)
     })
 
     it('calls onChange prop with empty value', () => {
