@@ -25,7 +25,7 @@ export class HorizontalNav extends Component {
     return (
       <li
         key={ key }
-        role= menuitem
+        role="menuitem"
       >
         <a className={ itemClassName } { ...linkProps }>
           <Markdown softBreak="br" source={ text } />
