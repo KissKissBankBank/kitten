@@ -88,14 +88,6 @@
     }
   }
 
-  .k-ButtonIcon__rounded {
-    @include k-buttonPadding(
-      $button-size,
-      $icon-width,
-      $icon-height
-    );
-  }
-
   // Mirror rotate
   // DEPRECATED
   .k-ButtonIcon__svg--mirror {
@@ -273,7 +265,12 @@
   }
 
   .k-ButtonIcon--empty--micro {
-    @include k-buttonPadding($button-size-micro, 0, 0);
+    @include k-buttonRounded($button-size-micro-with-border);
+    @include k-buttonPadding(
+      $button-size-micro,
+      0,
+      0
+    );
   }
 
   // Misc modifiers.
