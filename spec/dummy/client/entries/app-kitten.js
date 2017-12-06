@@ -227,6 +227,7 @@ import { KarlLoudspeakerPopover }
 
 // Pages
 import { KarlBrowsing } from 'app/browsing/browsing'
+import { KarlLandingPage } from 'app/landing-page/landing-page'
 import { KarlMakerWhoAmIStep } from 'app/maker/who-am-i/components/container'
 import {
   KarlMenu,
@@ -462,6 +463,7 @@ ReactOnRails.register({
 
   // Pages
   KarlBrowsing,
+  KarlLandingPage,
   KarlMakerWhoAmIStep,
   KarlMenu,
   KarlMenuContent,

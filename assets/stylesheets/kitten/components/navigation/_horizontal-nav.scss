@@ -101,8 +101,8 @@
       color: $hover-color;
       text-decoration: none;
 
-      outline: 0;
-      box-shadow: 0 0 k-px-to-rem(16px) $hover-color;
+      outline: none;
+      box-shadow: none;
     }
   }
 }

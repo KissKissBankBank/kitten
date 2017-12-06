@@ -17,6 +17,8 @@ import {
 import { HeaderTitles } from 'kitten/components/headers/header-titles'
 import { HeaderLogo } from 'kitten/components/headers/header-logo'
 
+import { Button } from 'kitten/components/buttons/button'
+
 export const KarlHeader = () => {
   return (
     <Header id="header">
@@ -261,6 +263,58 @@ export const KarlHeaderWithTitles = () => {
     </Header>
   )
 }
+
+export const KarlLandingPageHeader = () => (
+  <Header id="header">
+    <HeaderItems>
+      <HeaderItem fixedSize id="k-Header__platformSwitchDropdown">
+        <KarlUnloggedHeaderPlatformSwitch />
+      </HeaderItem>
+
+      <HeaderItem tag="p" fixedSize>
+        <HeaderLogo
+          href="/pages/landing-page"
+          src="/assets/brand/kisskissbankbank.svg"
+          alt="KissKissBankBank"
+          lightOnM
+          lightOnXxs
+        />
+      </HeaderItem>
+
+      <HeaderItem tag="nav" className="k-Header__nav">
+        <ul className="k-HorizontalNav" role="menubar">
+          <li className="k-HorizontalNav__element" role="menuitem">
+            <a className="k-HorizontalNav__item k-Header__nav__item" href="#">
+              Comment ça marche&nbsp;?
+            </a>
+          </li>
+        </ul>
+      </HeaderItem>
+    </HeaderItems>
+
+    <HeaderItems fixedSize>
+      <HeaderItem>
+        <Button
+          modifier="helium"
+          tag="a"
+          className="k-Header__button"
+        >
+          Financer mon projet
+        </Button>
+      </HeaderItem>
+
+      <HeaderItem>
+        <Button
+          modifier="hydrogen"
+          tag="a"
+          className="k-Header__button"
+        >
+          S'identifier
+        </Button>
+      </HeaderItem>
+    </HeaderItems>
+  </Header>
+)
 
 // Header platform switch common props
 const platformSwitchDropdownList = [
