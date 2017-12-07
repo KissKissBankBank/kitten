@@ -317,28 +317,58 @@
     'instagram': (
       base: (
         color: map-get($k-colors, 'background-1'),
-        background-color: transparent,
-        background-image: radial-gradient(circle at 30% 100%, #fed373 9%, #f15245 30%, #d92e7f 62%, #515ecf 85%, #9b36b7),
+        background-image: radial-gradient(
+          circle at 30% 100%,
+                    #fed373 9%,
+                    #f15245 30%,
+                    #d92e7f 62%,
+                    #515ecf 85%,
+                    #9b36b7
+        ),
       ),
       hover: (
         color: map-get($k-colors, 'background-1'),
-        background-color: transparent,
-        background-image: radial-gradient(circle at 30% 100%, #efc464 9%, #e24336 30%, #ca1f70 62%, #4c4fc0 85%, #8c27a8),
+        background-image: radial-gradient(
+          circle at 30% 100%,
+                    #efc464 9%,
+                    #e24336 30%,
+                    #ca1f70 62%,
+                    #4c4fc0 85%,
+                    #8c27a8
+        ),
       ),
       focus: (
         color: map-get($k-colors, 'background-1'),
-        background-color: transparent,
-        background-image: radial-gradient(circle at 30% 100%, #efc464 9%, #e24336 30%, #ca1f70 62%, #4c4fc0 85%, #8c27a8),
+        background-image: radial-gradient(
+          circle at 30% 100%,
+                    #efc464 9%,
+                    #e24336 30%,
+                    #ca1f70 62%,
+                    #4c4fc0 85%,
+                    #8c27a8
+        ),
       ),
       active: (
         color: map-get($k-colors, 'background-1'),
-        background-color: transparent,
-        background-image: radial-gradient(circle at 30% 100%, #d1a646 9%, #c42518 30%, #ac0152 62%, #2e31a2 85%, #6e098a),
+        background-image: radial-gradient(
+          circle at 30% 100%,
+                    #d1a646 9%,
+                    #c42518 30%,
+                    #ac0152 62%,
+                    #2e31a2 85%,
+                    #6e098a
+        ),
       ),
       is-selected: (
         color: map-get($k-colors, 'background-1'),
-        background-color: transparent,
-        background-image: radial-gradient(circle at 30% 100%, #d1a646 9%, #c42518 30%, #ac0152 62%, #2e31a2 85%, #6e098a),
+        background-image: radial-gradient(
+          circle at 30% 100%,
+                    #d1a646 9%,
+                    #c42518 30%,
+                    #ac0152 62%,
+                    #2e31a2 85%,
+                    #6e098a
+        ),
       ),
       disabled: (
         color: map-get($k-colors, 'background-1'),
