@@ -149,39 +149,6 @@
       ),
     ),
 
-    'boron': (
-      base: (
-        color: map-get($k-colors, 'font-1'),
-        border-color: map-get($k-colors, 'tertiary-1'),
-        background-color: map-get($k-colors, 'tertiary-1'),
-      ),
-      hover: (
-        color: map-get($k-colors, 'font-1'),
-        border-color: map-get($k-colors, 'tertiary-2'),
-        background-color: map-get($k-colors, 'tertiary-2'),
-      ),
-      focus: (
-        color: map-get($k-colors, 'font-1'),
-        border-color: map-get($k-colors, 'tertiary-2'),
-        background-color: map-get($k-colors, 'tertiary-2'),
-      ),
-      active: (
-        color: map-get($k-colors, 'font-1'),
-        border-color: map-get($k-colors, 'tertiary-3'),
-        background-color: map-get($k-colors, 'tertiary-3'),
-      ),
-      is-selected: (
-        color: map-get($k-colors, 'font-1'),
-        border-color: map-get($k-colors, 'tertiary-3'),
-        background-color: map-get($k-colors, 'tertiary-3'),
-      ),
-      disabled: (
-        color: map-get($k-colors, 'font-2'),
-        border-color: map-get($k-colors, 'line-1'),
-        background-color: map-get($k-colors, 'line-1'),
-      ),
-    ),
-
     'carbon': (
       base: (
         color: map-get($k-colors, 'font-1'),
