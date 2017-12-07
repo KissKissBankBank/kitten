@@ -29,10 +29,12 @@ describe('<FacebookButtonIcon />', () => {
   })
 
   describe('with other props', () => {
-    const button = shallow(<FacebookButtonIcon
-                             className={ classNames('k-ButtonIcon__svg',
-                                                    'custom__class') }
-                           />)
+    const button = shallow(
+      <FacebookButtonIcon
+        className={ classNames('k-ButtonIcon__svg',
+                               'custom__class') }
+      />
+    )
 
     it('has a default classes', () => {
       expect(button).to.have.className('k-ButtonIcon__svg')
@@ -56,10 +58,12 @@ describe('<TwitterButtonIcon />', () => {
   })
 
   describe('with other props', () => {
-    const button = shallow(<TwitterButtonIcon
-                             className={ classNames('k-ButtonIcon__svg',
-                                                    'custom__class') }
-                           />)
+    const button = shallow(
+      <TwitterButtonIcon
+        className={ classNames('k-ButtonIcon__svg',
+                               'custom__class') }
+      />
+    )
 
     it('has a default classes', () => {
       expect(button).to.have.className('k-ButtonIcon__svg')
@@ -83,10 +87,12 @@ describe('<LinkedinButtonIcon />', () => {
   })
 
   describe('with other props', () => {
-    const button = shallow(<LinkedinButtonIcon
-                             className={ classNames('k-ButtonIcon__svg',
-                                                    'custom__class') }
-                           />)
+    const button = shallow(
+      <LinkedinButtonIcon
+        className={ classNames('k-ButtonIcon__svg',
+                               'custom__class') }
+      />
+    )
 
     it('has a default classes', () => {
       expect(button).to.have.className('k-ButtonIcon__svg')
@@ -110,10 +116,12 @@ describe('<InstagramButtonIcon />', () => {
   })
 
   describe('with other props', () => {
-    const button = shallow(<InstagramButtonIcon
-                             className={ classNames('k-ButtonIcon__svg',
-                                                    'custom__class') }
-                           />)
+    const button = shallow(
+      <InstagramButtonIcon
+        className={ classNames('k-ButtonIcon__svg',
+                               'custom__class') }
+      />
+    )
 
     it('has a default classes', () => {
       expect(button).to.have.className('k-ButtonIcon__svg')

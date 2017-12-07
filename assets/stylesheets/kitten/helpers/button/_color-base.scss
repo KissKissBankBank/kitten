@@ -162,7 +162,6 @@
     @if $active-border-color {
       @include k-buttonBorder($active-border-color);
     }
-
     @else {
       border: none;
     }
@@ -180,7 +179,6 @@
       @if $disabled-border-color {
         @include k-buttonBorder($disabled-border-color);
       }
-
       @else {
         border: none;
       }
@@ -199,7 +197,6 @@
       @if $is-selected-border-color {
         @include k-buttonBorder($is-selected-border-color);
       }
-
       @else {
         border: none;
       }
