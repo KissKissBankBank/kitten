@@ -65,6 +65,7 @@
   $button-tiny-height: k-px-to-rem(20px);
 
   // Button radius
+  // Chrome forced a default `border-radius: 4px`, we have to set it to 0px.
   $button-radius: 0px;
 
   // Button font-size is computed using a modular scale and a defined step of this

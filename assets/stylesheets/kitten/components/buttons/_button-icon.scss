@@ -55,6 +55,7 @@
   $icon-height: k-px-to-rem(14px);
 
   // Button radius
+  // Chrome forced a default `border-radius: 4px`, we have to set it to 0px.
   $button-radius: 0px;
 
   $transition-speed: .2s;
