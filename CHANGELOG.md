@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Update `Tooltip`, `TooltipNew` and `StaticTooltip` components with styleguide V2.
 - Fix: Update ruby version.
 - Feature: Remove `boron` buttons colors.
 - Feature: Update colors.

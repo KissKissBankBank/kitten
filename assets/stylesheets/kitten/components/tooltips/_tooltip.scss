@@ -25,7 +25,7 @@
   $background-color-helium: map-get($k-colors, 'primary-1');
 
   $font: 'regular';
-  $font-size: -1;
+  $font-size: -1; // 14px
   $line-height: 1.3;
 
   $arrow-size: k-px-to-rem(8px);
@@ -47,7 +47,9 @@
     padding: k-px-to-rem(20px) !important;
 
     max-width: k-px-to-rem(340px) !important;
-    border-radius: k-px-to-rem(8px) !important;
+    // ReactTooltip forced a default `border-radius: 3px`, we have to set it
+    // to 0px.
+    border-radius: k-px-to-rem(0px) !important;
 
     &.place-top {
       margin-bottom: $tooltip-margin !important;
