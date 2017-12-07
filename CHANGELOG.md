@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Update `HorizontalNav` with styleguide V2.
+- Fix: Update ruby version.
 - Feature: Remove `boron` buttons colors.
 - Feature: Update colors.
 - Feature: Add new `error` and `valid` colors.
