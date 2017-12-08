@@ -16,11 +16,13 @@
 
 @mixin k-TextInput {
   $border-width: k-px-to-rem(2px);
+
   $font: 'light';
   $font-size: -1; // 14px
   $line-height: 1.3;
-  $height: k-px-to-rem(50px);
+
   $tiny-height: k-px-to-rem(40px);
+  $height: k-px-to-rem(50px);
 
   // Base
   $color: map-get($k-colors, 'font-1');
@@ -46,9 +48,6 @@
   $color-is-error: map-get($k-colors, 'error-3');
   $border-is-error: map-get($k-colors, 'error-3');
 
-  // Border radius Text - input
-  $border-text-input: k-px-to-rem(0px);
-
   // Others
   $horizontal-padding: 15px;
   $vertical-padding: 10px;
@@ -60,7 +59,6 @@
 
     box-sizing: border-box;
     border: $border-width solid $border-color;
-    border-radius: $border-text-input;
     background: $background;
 
     width: 100%;

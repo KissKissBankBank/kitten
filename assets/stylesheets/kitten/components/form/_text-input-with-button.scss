@@ -35,7 +35,7 @@
   $button-background-disabled: map-get($k-colors, 'line-2');
 
   // Border radius Text - input
-  $border-text-input: k-px-to-rem(0px);
+  $border-text-input: 0px;
 
   .k-TextInputWithButton {
     display: flex;

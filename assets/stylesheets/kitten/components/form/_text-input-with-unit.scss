@@ -39,9 +39,6 @@
   // Disabled
   $background-disabled: map-get($k-colors, 'line-1');
 
-  // Border radius Text - input
-  $border-text-input: k-px-to-rem(0px);
-
   $border-size: k-px-to-rem(2px);
 
   // Transition
@@ -58,9 +55,6 @@
   // Input
   .k-TextInputWithUnit__input {
     display: table-cell;
-
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
     outline: none; // since we introduce our own focus styles
 
     transition: all $transition-speed;
@@ -93,8 +87,6 @@
     vertical-align: middle;
 
     background-color: $unit-background-color;
-    border-top-right-radius: $border-text-input;
-    border-bottom-right-radius: $border-text-input;
     border: $border-size solid $border-color;
     border-left: 0;
     box-sizing: border-box;

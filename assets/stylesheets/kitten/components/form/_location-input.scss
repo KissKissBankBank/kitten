@@ -48,9 +48,6 @@
   // Placeholder
   $color-placeholder: map-get($k-colors, 'font-2');
 
-  // Border radius Text - input
-  $border-text-input: k-px-to-rem(0px);
-
   $border-size: k-px-to-rem(2px);
 
   .k-LocationInput {
@@ -73,7 +70,6 @@
       height: $height;
       background: $background-color;
       border: $border-size solid $border-color;
-      border-radius: $border-text-input;
       color: $color;
 
       transition: color .2s, border-color .2s;
