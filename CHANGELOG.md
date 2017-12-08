@@ -4,12 +4,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+<<<<<<< HEAD
 - Feature: Update `Popover` and `CallToActionPopover` components with new design
   styleguide V2.
 - Feature: Update `Tour` component with new design styleguide V2.
 - Feature: Add `k-buttonPadding` helper to manage button paddings.
 - Feature: Update all `Button` components with new design styleguide V2.
-- Fix: Update marge on `FormComposer` component.
+- Fix: Update ruby version.
 - Feature: Remove `boron` buttons colors.
 - Feature: Update colors.
 - Feature: Add new `error` and `valid` colors.
