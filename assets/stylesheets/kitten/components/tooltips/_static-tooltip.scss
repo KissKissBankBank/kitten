@@ -22,13 +22,13 @@
 
   $font: 'regular';
   $font-size: -1; // 14px
-  $line-height: 1.3;
+  $line-height: 1.25;
 
-  $border-radius: k-px-to-rem(2px);
+  $border-size: 2px;
 
   $arrow-size: k-px-to-rem(8px);
 
-  $padding-tooltip: k-px-to-rem(20px);
+  $padding-tooltip: 20px - $border-size;
 
   .k-StaticTooltip {
     display: flex;
@@ -51,7 +51,7 @@
     position: relative;
 
     background-color: $background-color;
-    border: $border-radius solid $border-color;
+    border: $border-size solid $border-color;
     color: $color;
   }
 
