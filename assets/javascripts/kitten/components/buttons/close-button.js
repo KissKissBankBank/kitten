@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import classNames from 'classnames'
+import { ButtonIcon } from 'kitten/components/buttons/button-icon'
 import { CrossIcon } from 'kitten/components/icons/cross-icon'
 
 export class CloseButton extends Component {
@@ -9,28 +10,31 @@ export class CloseButton extends Component {
       closeButtonLabel,
       size,
       modifier,
-      ...others } = this.props
+      ...others,
+    } = this.props
 
     const buttonClassName = classNames(
       'k-ButtonIcon',
       'k-ButtonIcon--cross',
+      {
+        [`k-ButtonIcon--${modifier}`]: modifier,
+        [`k-ButtonIcon--cross--${size}`]: size,
+      },
       className,
-      { [`k-ButtonIcon--${modifier}`]: modifier },
-      { [`k-ButtonIcon--cross--${size}`]: size },
     )
 
     return (
-      <button
-        className={ buttonClassName }
+      <ButtonIcon
+       className={ buttonClassName }
         title={ closeButtonLabel }
         aria-label={ closeButtonLabel }
-        type="button"
         { ...others }
       >
-        <CrossIcon className={ classNames('k-ButtonIcon__svg',
-                                          'k-ButtonIcon__svgRotate') }
+        <CrossIcon
+          className={ classNames('k-ButtonIcon__svg',
+                                 'k-ButtonIcon__svgRotate') }
         />
-      </button>
+      </ButtonIcon>
     )
   }
 }

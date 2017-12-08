@@ -4,7 +4,6 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-<<<<<<< HEAD
 - Feature: Update `Popover` and `CallToActionPopover` components with new design
   styleguide V2.
 - Feature: Update `Tour` component with new design styleguide V2.
