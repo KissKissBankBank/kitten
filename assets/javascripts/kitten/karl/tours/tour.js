@@ -49,8 +49,10 @@ export const KarlHeaderTour1 = props => (
           magna aliqua.
         </Paragraph>
         <div className="k-Tour__popover__navigation">
-          <Text className={ classNames('k-u-weight-regular',
-                                       'k-u-size-tiny') }
+          <Text
+            className="k-Tour__popover__step"
+            size="tiny"
+            weight="regular"
           >
             1 on 2
           </Text>
@@ -130,8 +132,10 @@ export const KarlHeaderTour2 = props => (
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
         </Paragraph>
         <div className="k-Tour__popover__navigation">
-          <Text className={ classNames('k-u-weight-regular',
-                                       'k-u-size-tiny') }
+          <Text
+            className="k-Tour__popover__step"
+            size="tiny"
+            weight="regular"
           >
             1 on 2
           </Text>

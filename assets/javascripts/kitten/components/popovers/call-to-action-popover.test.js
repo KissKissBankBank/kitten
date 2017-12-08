@@ -12,6 +12,18 @@ describe('<CallToActionPopover />', () => {
   describe('by default', () => {
     const defaultComponent = shallow(<CallToActionPopover />)
 
+    it('renders a title element', () => {
+      const titleElement = defaultComponent.find('Title')
+
+      expect(titleElement).to.have.length(1)
+    })
+
+    it('renders a text element', () => {
+      const textElement = defaultComponent.find('Paragraph')
+
+      expect(textElement).to.have.length(1)
+    })
+
     describe('navigation', () => {
       it('renders a navigation element', () => {
         const navigationElement = defaultComponent.find('.k-Popover__navigation')
@@ -28,14 +40,37 @@ describe('<CallToActionPopover />', () => {
       it('renders a <Button /> component', () => {
         const buttonComponent = (
           <Button onClick={ undefined }
-                 modifier="helium"
-                 size="big">
+                  modifier="helium"
+                  size="big"
+          >
             Ok
           </Button>
         )
 
         expect(defaultComponent).to.contain(buttonComponent)
       })
+    })
+  })
+
+  describe('title prop', () => {
+    const title = "Instantly break out"
+    const component = mount(<CallToActionPopover title={ title } />)
+    const titleElement= component.find('Title')
+
+    it('renders a title element', () => {
+      expect(titleElement).to.have.length(1)
+      expect(titleElement).to.have.text(title)
+    })
+  })
+
+  describe('text prop', () => {
+    const text = "Spend all night ensuring people don't sleep"
+    const component = mount(<CallToActionPopover text={ text } />)
+    const textElement = component.find('Paragraph')
+
+    it('renders a text element', () => {
+      expect(textElement).to.have.length(1)
+      expect(textElement).to.have.text(text)
     })
   })
 
@@ -95,10 +130,12 @@ describe('<CallToActionPopover />', () => {
       }]
       const onCloseClick = () => { return }
 
-      const component = mount(<CallToActionPopover
-        buttons={ buttons }
-        onCloseClick={ onCloseClick }
-      />)
+      const component = mount(
+        <CallToActionPopover
+          buttons={ buttons }
+          onCloseClick={ onCloseClick }
+        />
+      )
 
       it('passes a onClick prop to the <Button />', () => {
         const buttonComponent = buttonComponents.first()
@@ -108,6 +145,17 @@ describe('<CallToActionPopover />', () => {
 
         expect(buttonComponent.props()).to.contain.all.keys(expectedProps)
       })
+    })
+  })
+
+  describe('titleAriaLabelId prop', () => {
+    const component = mount(
+      <CallToActionPopover titleAriaLabelId="custom-aria-label" />
+    )
+    const titleElement = component.find('Title')
+
+    it('assigns custom id for aria label', () => {
+      expect(titleElement).to.have.attr('id', 'custom-aria-label')
     })
   })
 

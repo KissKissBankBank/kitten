@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking change: Replace `k-Popover__title` and `k-Tour__popover__title`
+  by `Title` component.
+  Replace `k-Tour__popover__numbering` by `Text` component.
 - Feature: Update `Popover` and `CallToActionPopover` components with new design
   styleguide V2.
 - Feature: Update `Tour` component with new design styleguide V2.
