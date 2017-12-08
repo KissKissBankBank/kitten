@@ -28,6 +28,8 @@
 
   $arrow-size: k-px-to-rem(8px);
 
+  $padding-tooltip: k-px-to-rem(20px);
+
   .k-StaticTooltip {
     display: flex;
     flex-direction: column;
@@ -39,9 +41,12 @@
 
   .k-StaticTooltip__content {
     @include k-typographyFont($font);
-    @include k-typographyFontSize($font-size, $line-height);
+    @include k-typographyFontSize(
+      $font-size,
+      $line-height
+    );
 
-    padding: k-px-to-rem(20px);
+    padding: $padding-tooltip;
     margin-top: $arrow-size;
     position: relative;
 
