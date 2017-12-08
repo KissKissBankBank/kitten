@@ -178,7 +178,7 @@ module Kitten
             { path: 'components/form/form-actions', name: 'Form actions' },
             { path: 'components/form/form-row', name: 'Form row' },
             { path: 'components/layout/separator', name: 'Separator' },
-            { path: 'components/layout/stroke-small', name: 'Stroke small'},
+            { path: 'components/layout/stroke-small', name: 'Stroke small' },
           ],
         }
       ]
