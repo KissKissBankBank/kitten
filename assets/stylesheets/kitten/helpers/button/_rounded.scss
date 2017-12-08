@@ -3,9 +3,10 @@
 /// Given a size of button and a size of picto, this mixin will calculate
 /// automaticaly the paddings and the border-radius.
 ///
+/// @group buttons
 ///
 /// @example scss - Usage
-///   @include k-buttonRounded(40px, 14px, 12px);
+///   @include k-buttonRounded(40px);
 ///
 /// @example css - CSS output
 ///    border-radius: 1.25rem;
