@@ -23,7 +23,6 @@
     select-input-bg-disabled: map-get($k-colors, 'line-1'),
     select-item-disabled-color: map-get($k-colors, 'font-2'),
     arrow-zone-width: k-px-to-rem(40px),
-    select-input-border-radius: k-px-to-rem(0px),
     select-input-border-width: k-px-to-rem(2px),
     select-input-height: k-px-to-rem(50px),
   );
@@ -116,16 +115,14 @@
 // TODO: Merge with _ReactSelect. Not possible to keep both separated.
 @mixin _k-Select-Overrides($options) {
   $arrow-zone-width: k-map-fetch($options, 'arrow-zone-width');
-  $select-input-border-radius: k-map-fetch($options,
-                                           'select-input-border-radius');
   $select-input-border-width: k-map-fetch($options,
                                           'select-input-border-width');
 
-  .Select-menu {
-    // Fix that the background on the options goes over the radius
-    border-bottom-right-radius: $select-input-border-radius;
-    border-bottom-left-radius: $select-input-border-radius;
-  }
+  // .Select-menu {
+  //   // Fix that the background on the options goes over the radius
+  //   border-bottom-right-radius: $select-input-border-radius;
+  //   border-bottom-left-radius: $select-input-border-radius;
+  // }
 
   .Select-arrow-zone {
     width: $arrow-zone-width;
@@ -144,7 +141,7 @@
   }
 
   .Select-menu-outer {
-    border-top-color: map-get($k-colors, 'line-2');
+    border-top-color: map-get($k-colors, 'line-1');
 
     // When the select is open, hide the arrow-zone's bottom border
     &:before {
@@ -194,9 +191,6 @@
   // control options
 
   $select-input-border-color: map-get($k-colors, 'line-1');
-  $select-input-border-radius: k-map-fetch($options,
-                                           'select-input-border-radius');
-
   $select-input-border-focus: map-get($k-colors, 'primary-1');
   $select-input-border-width: k-map-fetch($options,
                                           'select-input-border-width');
@@ -244,7 +238,7 @@
   $select-loading-color-bg: $select-input-border-color;
 
   // multi-select item
-  $select-item-border-radius: 2px;
+  //$select-item-border-radius: 2px;
   $select-item-gutter: 5px;
   $select-item-padding-vertical: 2px;
   $select-item-padding-horizontal: 5px;
@@ -277,7 +271,6 @@
       lighten($select-input-border-color, 5%)
       $select-input-border-color
       darken($select-input-border-color, 10%);
-    border-radius: $select-input-border-radius;
     border: $select-input-border-width solid $select-input-border-color;
     color: $select-text-color;
     cursor: default;
@@ -307,12 +300,9 @@
   }
 
   .is-open > .Select-control {
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-
-    background: map-get($options, 'select-input-bg');
+    background-color: map-get($options, 'select-input-bg');
     border-color:
-      darken($select-input-border-color, 10%)
+      $select-input-border-color
       $select-input-border-color
       lighten($select-input-border-color, 5%);
 
@@ -526,8 +516,6 @@
     // scroll.  However, if these definitions are split into an outer and an
     // inner element, the browser is able to optimize the scrolling behavior
     // and does not have to repaint on scroll.
-    border-bottom-right-radius: $select-input-border-radius;
-    border-bottom-left-radius: $select-input-border-radius;
     background-color: map-get($options, 'select-input-bg');
     border: k-px-to-rem(2px) solid $select-input-border-color;
     border-top-color: mix(map-get($options, 'select-input-bg'), $select-input-border-color, 50%);
@@ -558,10 +546,10 @@
     display: block;
     padding: $select-padding-vertical $select-padding-horizontal;
 
-    &:last-child {
-      border-bottom-right-radius: $select-input-border-radius;
-      border-bottom-left-radius: $select-input-border-radius;
-    }
+    // &:last-child {
+    //   border-bottom-right-radius: $select-input-border-radius;
+    //   border-bottom-left-radius: $select-input-border-radius;
+    // }
 
     &.is-selected {
       background-color: $select-option-selected-bg;
@@ -613,7 +601,6 @@
     // Items
     .Select-value {
       background-color: $select-item-bg;
-      border-radius: $select-item-border-radius;
       border: 1px solid $select-item-border-color;
       color: $select-item-color;
       display: inline-block;
@@ -632,8 +619,8 @@
 
     // label
     .Select-value-label {
-      border-bottom-right-radius: $select-item-border-radius;
-      border-top-right-radius: $select-item-border-radius;
+      // border-bottom-right-radius: $select-item-border-radius;
+      // border-top-right-radius: $select-item-border-radius;
       cursor: default;
       padding: $select-item-padding-vertical $select-item-padding-horizontal;
     }
@@ -650,8 +637,6 @@
     // icon
     .Select-value-icon {
       cursor: pointer;
-      border-bottom-left-radius: $select-item-border-radius;
-      border-top-left-radius: $select-item-border-radius;
       border-right: 1px solid $select-item-border-color;
 
       // move the baseline up by 1px
