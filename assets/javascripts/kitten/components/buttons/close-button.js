@@ -25,8 +25,9 @@ export class CloseButton extends Component {
         type="button"
         { ...others }
       >
-        <CrossIcon className={ classNames('k-ButtonIcon__svg',
-                                          'k-ButtonIcon__svgRotate') }
+        <CrossIcon
+          className={ classNames('k-ButtonIcon__svg',
+                                 'k-ButtonIcon__svgRotate') }
         />
       </button>
     )
