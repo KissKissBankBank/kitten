@@ -1,19 +1,59 @@
 import React from 'react'
+import ResizeObserver from 'resize-observer-polyfill'
 
 import FakeCard from 'kitten/components/carousel/fake-card'
 import CarouselPage from 'kitten/components/carousel/carousel-page'
-
-const WIDTH = 1080
 
 const getDataForPage = (data, indexPage, numColumns) => {
   const startIndex = indexPage * numColumns
   return data.slice(startIndex, startIndex + numColumns)
 }
 
+const getNumColumnsForWidth = (width) => {
+  const widthWithOneCard = (width - FakeCard.MIN_WIDTH)
+  const numColumns = Math.floor(widthWithOneCard / (FakeCard.MIN_WIDTH + CarouselPage.MARGIN)) + 1
+  return numColumns
+}
+
+const getNumPagesForColumnsAndDataLength = (dataLength, numColumns) => {
+  const numPages = Math.ceil(dataLength / numColumns)
+  return numPages
+}
+
 export default class Carousel extends React.Component {
 
   state = {
     indexPageVisible: 0,
+    numColumns: 0,
+    numPages: 0,
+  }
+
+  constructor(props) {
+    super(props)
+
+    this.observer = new ResizeObserver(this.onObserve)
+  }
+
+  onObserve = (entries) => {
+    const { data } = this.props
+
+    const widthInner = entries.reduce((result, entry) => entry.contentRect.width, 0)
+
+    const numColumns = getNumColumnsForWidth(widthInner)
+    const numPages = getNumPagesForColumnsAndDataLength(data.length, numColumns)
+
+    if(this.state.numColumns !== numColumns || this.state.numPages !== numPages) {
+      const indexPageVisible = this.state.indexPageVisible > (numPages - 1) ? (numPages - 1) : this.state.indexPageVisible
+      this.setState({ numColumns, numPages, indexPageVisible })
+    }
+  }
+
+  componentDidMount () {
+    this.observer.observe(this.refs.carouselInner)
+  }
+
+  componentWillUnmount () {
+    this.observer.disconnect()
   }
 
   goNextPage = () => {
@@ -26,29 +66,23 @@ export default class Carousel extends React.Component {
 
   render() {
     const { data } = this.props
-    const { indexPageVisible } = this.state
+    const { indexPageVisible, numColumns, numPages } = this.state
 
-    const widthWithOneCard = (WIDTH - FakeCard.MIN_WIDTH)
-    const numColums = Math.floor(widthWithOneCard / (FakeCard.MIN_WIDTH + CarouselPage.MARGIN)) + 1
-
-    const numPages = Math.ceil(data.length / numColums)
     const rangePage = [...Array(numPages).keys()]
 
     return (
       <div style={styles.carousel}>
-        <div>WIDTH : {WIDTH}</div>
-
-        <div style={styles.carouselInner}>
+        <div style={styles.carouselInner} ref="carouselInner">
           {
             rangePage.map((index) =>
               <div key={index} style={{
                 ...styles.carouselPageContainer,
                 marginLeft: index ? CarouselPage.MARGIN : 0,
-                transform: `translateX(-${ indexPageVisible * (WIDTH + CarouselPage.MARGIN) }px)`,
+                transform: `translateX(calc(-${indexPageVisible * 100}% - ${indexPageVisible * CarouselPage.MARGIN}px) )`,
               }}>
                 <CarouselPage
-                  data={getDataForPage(data, index, numColums)}
-                  numColumns={numColums}
+                  data={getDataForPage(data, index, numColumns)}
+                  numColumns={numColumns}
                   ItemComponent={FakeCard}
                 />
               </div>
@@ -77,14 +111,13 @@ const styles = {
   carouselInner: {
     display: 'flex',
     flexDirect: 'row',
-    width: WIDTH,
     overflow: 'hidden',
 
     backgroundColor: 'blue',
   },
   carouselPageContainer: {
-    width: WIDTH,
+    width: '100%',
     flexShrink: 0,
-    transition: 'transform ease-in-out 600ms'
+    transition: 'transform ease-in-out 600ms',
   },
 }
