@@ -118,12 +118,6 @@
   $select-input-border-width: k-map-fetch($options,
                                           'select-input-border-width');
 
-  // .Select-menu {
-  //   // Fix that the background on the options goes over the radius
-  //   border-bottom-right-radius: $select-input-border-radius;
-  //   border-bottom-left-radius: $select-input-border-radius;
-  // }
-
   .Select-arrow-zone {
     width: $arrow-zone-width;
     padding-right: 0;
@@ -238,7 +232,6 @@
   $select-loading-color-bg: $select-input-border-color;
 
   // multi-select item
-  //$select-item-border-radius: 2px;
   $select-item-gutter: 5px;
   $select-item-padding-vertical: 2px;
   $select-item-padding-horizontal: 5px;
@@ -546,11 +539,6 @@
     display: block;
     padding: $select-padding-vertical $select-padding-horizontal;
 
-    // &:last-child {
-    //   border-bottom-right-radius: $select-input-border-radius;
-    //   border-bottom-left-radius: $select-input-border-radius;
-    // }
-
     &.is-selected {
       background-color: $select-option-selected-bg;
       color: $select-option-selected-color;
@@ -619,8 +607,6 @@
 
     // label
     .Select-value-label {
-      // border-bottom-right-radius: $select-item-border-radius;
-      // border-top-right-radius: $select-item-border-radius;
       cursor: default;
       padding: $select-item-padding-vertical $select-item-padding-horizontal;
     }
