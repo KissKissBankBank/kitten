@@ -24,16 +24,18 @@
 @mixin k-TextInputWithButton {
   $font: 'regular';
   $font-size: -1; // 14px
+  $line-height: normal;
 
   $color: map-get($k-colors, 'background-1');
 
   // Background-color
-  $button-background: map-get($k-colors, 'primary-1');
+  $button-background: map-get($k-colors, 'font-1');
   $button-background-is-valid: map-get($k-colors, 'valid');
   $button-background-is-error: map-get($k-colors, 'error');
+  $button-background-disabled: map-get($k-colors, 'line-2');
 
   // Border radius Text - input
-  $border-text-input: k-px-to-rem(4px);
+  $border-text-input: 0px;
 
   .k-TextInputWithButton {
     display: flex;
@@ -50,7 +52,10 @@
 
   .k-TextInputWithButton__button {
     @include k-typographyFont($font);
-    @include k-typographyFontSize($font-size, $line-height: normal);
+    @include k-typographyFontSize(
+      $font-size,
+      $line-height: $line-height
+    );
 
     position: absolute;
     right: 0;
@@ -59,8 +64,7 @@
     width: k-px-to-rem(104px);
 
     background-color: $button-background;
-    border-top-right-radius: $border-text-input;
-    border-bottom-right-radius: $border-text-input;
+    border-radius: $border-text-input;
     border: none;
 
     color: $color;
@@ -76,6 +80,10 @@
 
     &.is-error {
       background-color: $button-background-is-error;
+    }
+
+    &.is-disabled {
+      background-color: $button-background-disabled;
     }
   }
 }
