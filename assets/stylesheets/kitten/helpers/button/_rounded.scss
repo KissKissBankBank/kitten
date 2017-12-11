@@ -13,9 +13,9 @@
 /// @example css - CSS output
 ///    border-radius: 1.25rem;
 
-@mixin k-buttonRounded($button-size-with-border) {
+@mixin k-buttonRounded($button-size) {
 
-  $button-radius: $button-size-with-border / 2;
+  $button-radius: $button-size / 2;
 
   border-radius: $button-radius;
 }
