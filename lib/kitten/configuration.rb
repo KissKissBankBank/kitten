@@ -179,7 +179,14 @@ module Kitten
             { path: 'components/form/form-row', name: 'Form row' },
             { path: 'components/layout/separator', name: 'Separator' },
           ],
-        }
+        },
+        {
+          id: 'carousel',
+          label: 'Carousel',
+          components: [
+            { path: 'components/carousel/carousel', name: 'Carousel with FakeCard' },
+          ],
+        },
       ]
     end
   end
