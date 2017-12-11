@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `disabled` prop on `TextInputWithButton`.
+- Feature: Update all `Input` components with new design styleguide V2.
 - Feature: Update `k-buttonRounded` helper to manage button radius.
 - Feature: Add `k-buttonPadding` helper to manage button paddings.
 - Feature: Update all `Button` components with new design styleguide V2.
