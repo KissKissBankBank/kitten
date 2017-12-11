@@ -1,0 +1,26 @@
+<div class="k-Grid">
+  <div class="k-Grid__col k-Grid__col--12 k-Grid__col--3@m">
+    <%= example 'Simple card' do %>
+      <%= react_component 'SimpleCard', props: {
+          imageProps: {
+            src: 'https://placehold.it/100x100/4a84ff/4a84ff',
+          },
+          title: 'Alimentation Générale',
+          subtitle: 'Agriculture',
+        } %>
+    <% end %>
+  </div>
+
+  <div class="k-Grid__col k-Grid__col--12 k-Grid__col--3@m">
+    <%= example 'Simple card with link' do %>
+      <%= react_component 'SimpleCard', props: {
+          imageProps: {
+            src: 'http://lorempixel.com/100/100/business/2',
+          },
+          title: 'Alimentation Générale',
+          subtitle: 'Agriculture',
+          href: '#',
+        } %>
+    <% end %>
+  </div>
+</div>
