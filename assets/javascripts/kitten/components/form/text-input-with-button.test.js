@@ -87,7 +87,7 @@ describe('<TextInputWithButton />', () => {
       expect(textInput).to.have.className('is-disabled')
     })
 
-    it('has an <button /> with "disabled" class', () => {
+    it('has an <button /> with "is-disabled" class', () => {
       expect(button).to.have.className('is-disabled')
     })
   })
