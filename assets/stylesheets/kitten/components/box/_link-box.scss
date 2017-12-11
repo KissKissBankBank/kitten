@@ -53,7 +53,7 @@
   // Color icon
   $background-color-icon: map-get($k-colors, 'primary-4');
 
-  $border-size: 2px;
+  $border-size: k-px-to-rem(2px);
   $transition-duration: .2s;
 
   .k-LinkBox {

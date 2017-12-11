@@ -21,7 +21,7 @@
 
   $font: 'light';
 
-  $border-size: 2px;
+  $border-size: k-px-to-rem(2px);
 
   .k-InformationBox {
     display: inline-block;
