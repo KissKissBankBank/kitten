@@ -3,15 +3,18 @@ import classNames from 'classnames'
 import { Text } from 'kitten/components/typography/text'
 
 export class ImagewithLegend extends Component {
-  render() {
+  renderLegend() {
     const {
     children,
-    className
+    className,
     ...others } = this.props
 
-  return (
-    <div>
+    return (
+      <div className>
 
-    </div>
-  )
+      </div>
+    )
+  }
+
+  render()
 }
