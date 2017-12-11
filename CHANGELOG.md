@@ -6,9 +6,16 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Update `Checkbox` and `RadioButton` components with new design
   styleguide V2.
+- Feature: Add `disabled` prop on `TextInputWithButton`.
+- Feature: Update all `Input` components with new design styleguide V2.
+- Feature: Update `k-buttonRounded` helper to manage button radius.
 - Feature: Add `k-buttonPadding` helper to manage button paddings.
 - Feature: Update all `Button` components with new design styleguide V2.
-- Fix: Update marge on `FormComposer` component.
+- Fix: Update ruby version.
+- Feature: Remove `boron` buttons colors.
+- Feature: Update colors.
+- Feature: Add new `error` and `valid` colors.
+>>>>>>> origin/feature/styleguide-v2
 
 ## [16.3.1] - 2017-11-28
 
