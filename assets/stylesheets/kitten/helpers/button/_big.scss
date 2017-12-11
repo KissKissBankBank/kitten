@@ -9,7 +9,7 @@
 ///   $buttonBigOptions: (
 ///     typography-step: -2,
 ///     line-height: 50px,
-///     radius: 25px,
+///     radius: 0px,
 ///     width: 200px,
 ///     icon-size: 50px,
 ///     icon-width: 12px,
@@ -25,7 +25,7 @@
 ///     @include k-typographyFontSize(-2, 50px);
 ///
 ///     padding: 0 25px;
-///     border-radius: 25px;
+///     border-radius: 0px;
 ///     min-width: 200px;
 ///   }
 ///
@@ -38,8 +38,10 @@
 @mixin k-buttonBig($options) {
   $button-step: map-get($options, 'typography-step');
   $button-size-big: map-get($options,'icon-size');
+  $button-size-big-with-border: map-get($options, 'icon-size-with-border');
   $button-big-min-width: map-get($options, 'width');
   $button-big-line-height: map-get($options, 'icon-size');
+  $button-big-height: map-get($options, 'height');
   $button-big-radius: map-get($options, 'radius');
   $icon-width: map-get($options, 'icon-width');
   $icon-height: map-get($options, 'icon-height');
@@ -49,13 +51,18 @@
     $button-big-line-height
   );
 
-  padding: 0 $button-big-radius;
+  padding: 0 $button-big-height;
   border-radius: $button-big-radius;
   min-width: $button-big-min-width;
 
   &.k-Button--icon {
     .k-Button__icon {
-      @include k-buttonRounded($button-size-big, $icon-width, $icon-height);
+      @include k-buttonRounded($button-size-big-with-border);
+      @include k-buttonPadding(
+        $button-size-big,
+        $icon-width,
+        $icon-height
+      );
     }
   }
 }
