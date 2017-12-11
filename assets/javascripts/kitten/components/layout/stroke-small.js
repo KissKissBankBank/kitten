@@ -13,7 +13,7 @@ export const StrokeSmall = ({ tiny, medium, big, className, ... props }) => {
   )
 
   return (
-    <div className={ strokeSmallClassName } { ...props } />
+    <span className={ strokeSmallClassName } { ...props } />
   )
 }
 
