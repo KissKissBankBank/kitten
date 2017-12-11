@@ -1,7 +1,7 @@
 @mixin k-TextAreaWrapper {
   // Same as variable from _text_input.scss
-  $vertical-padding: 10px;
-  $border-width: 1px;
+  $vertical-padding: k-px-to-rem(10px);
+  $border-width: k-px-to-rem(2px);
 
   .k-TextAreaWrapper {
     position: relative;
@@ -27,9 +27,11 @@
 
     height: k-px-to-rem($vertical-padding);
 
-    background-image: linear-gradient(to bottom,
-                                      rgba(255, 255, 255, 0),
-                                      #fff);
+    background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0),
+      #fff
+    );
 
     pointer-events: none;
 
