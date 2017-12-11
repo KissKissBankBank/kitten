@@ -10,6 +10,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Update `Popover` and `CallToActionPopover` components with new design
   styleguide V2.
 - Feature: Update `Tour` component with new design styleguide V2.
+- Feature: Add `disabled` prop on `TextInputWithButton`.
+- Feature: Update all `Input` components with new design styleguide V2.
+- Feature: Update `k-buttonRounded` helper to manage button radius.
 - Feature: Add `k-buttonPadding` helper to manage button paddings.
 - Feature: Update all `Button` components with new design styleguide V2.
 - Fix: Update ruby version.

@@ -55,6 +55,7 @@
   $icon-height: k-px-to-rem(14px);
 
   // Button radius
+  // Chrome forced a default `border-radius: 4px`, we have to set it to 0px.
   $button-radius: 0px;
 
   $transition-speed: .2s;
@@ -260,7 +261,7 @@
   .k-ButtonIcon--cross {
     $cross-size: k-px-to-rem(8px);
     @include k-buttonPadding(
-      $button-size,
+      $button-size-tiny,
       $cross-size,
       $cross-size
     );
@@ -281,7 +282,12 @@
   }
 
   .k-ButtonIcon--empty--micro {
-    @include k-buttonPadding($button-size-micro, 0, 0);
+    @include k-buttonRounded($button-size-micro-with-border);
+    @include k-buttonPadding(
+      $button-size-micro,
+      0,
+      0
+    );
   }
 
   // Misc modifiers.
