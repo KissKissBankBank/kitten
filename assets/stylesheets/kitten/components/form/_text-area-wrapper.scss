@@ -25,7 +25,7 @@
     right: $vertical-padding;
     bottom: $border-width;
 
-    height: k-px-to-rem($vertical-padding);
+    height: $vertical-padding;
 
     background-image: linear-gradient(
       to bottom,
