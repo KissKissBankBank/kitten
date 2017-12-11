@@ -1,6 +1,8 @@
 import React from 'react'
 import ResizeObserver from 'resize-observer-polyfill'
 
+import { Grid, GridCol } from 'kitten/components/grid/grid'
+import { Container } from 'kitten/components/grid/container'
 import FakeCard from 'kitten/components/carousel/fake-card'
 import CarouselPage from 'kitten/components/carousel/carousel-page'
 
@@ -71,34 +73,41 @@ export default class Carousel extends React.Component {
     const rangePage = [...Array(numPages).keys()]
 
     return (
-      <div style={styles.carousel}>
-        <div style={styles.carouselInner} ref="carouselInner">
-          {
-            rangePage.map((index) =>
-              <div key={index} style={{
-                ...styles.carouselPageContainer,
-                marginLeft: index ? CarouselPage.MARGIN : 0,
-                transform: `translateX(calc(-${indexPageVisible * 100}% - ${indexPageVisible * CarouselPage.MARGIN}px) )`,
-              }}>
-                <CarouselPage
-                  data={getDataForPage(data, index, numColumns)}
-                  numColumns={numColumns}
-                  ItemComponent={FakeCard}
-                />
-              </div>
-            )
-          }
-        </div>
-        <div>
-          <button type="button" disabled={indexPageVisible < 1 || numPages < 1} onClick={this.goPrevPage}>
-            prev
-          </button>
-          <button type="button" disabled={indexPageVisible >= (numPages - 1)} onClick={this.goNextPage}>
-            next
-          </button>
-          <span>{indexPageVisible}, {numPages}</span>
-        </div>
-      </div>
+      <Container>
+        <Grid style={styles.carousel}>
+          <GridCol col-s="1"></GridCol>
+
+          <GridCol col-s="10">
+            <div style={styles.carouselInner} ref="carouselInner">
+              {
+                rangePage.map((index) =>
+                  <div key={index} style={{
+                    ...styles.carouselPageContainer,
+                    marginLeft: index ? CarouselPage.MARGIN : 0,
+                    transform: `translateX(calc(-${indexPageVisible * 100}% - ${indexPageVisible * CarouselPage.MARGIN}px) )`,
+                  }}>
+                    <CarouselPage
+                      data={getDataForPage(data, index, numColumns)}
+                      numColumns={numColumns}
+                      ItemComponent={FakeCard}
+                    />
+                  </div>
+                )
+              }
+            </div>
+          </GridCol>
+
+          <GridCol col-s="1">
+            <button type="button" disabled={indexPageVisible < 1 || numPages < 1} onClick={this.goPrevPage}>
+              prev
+            </button>
+            <button type="button" disabled={indexPageVisible >= (numPages - 1)} onClick={this.goNextPage}>
+              next
+            </button>
+            <span>{indexPageVisible}, {numPages}</span>
+          </GridCol>
+        </Grid>
+      </Container>
     )
   }
 }
@@ -106,7 +115,6 @@ export default class Carousel extends React.Component {
 const styles = {
   carousel: {
     backgroundColor: 'yellow',
-    padding: 20,
   },
   carouselInner: {
     display: 'flex',
