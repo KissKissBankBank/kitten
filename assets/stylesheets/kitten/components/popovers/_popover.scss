@@ -31,7 +31,6 @@
   $background-color: map-get($k-colors, 'background-1');
   $border-color: map-get($k-colors, 'line-1');
   $border-size: k-px-to-rem(2px);
-  $border-radius: k-px-to-rem(0px);
   $margin-left: k-px-to-rem(40px);
 
   .k-Popover {
@@ -41,7 +40,6 @@
     box-sizing: border-box;
 
     background-color: $background-color;
-    border-radius: $border-radius;
   }
 
   .k-Popover__container {
