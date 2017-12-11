@@ -98,6 +98,7 @@ module Kitten
             { path: 'components/form/form-amount-and-currency', name: 'Form amount and currency' },
             { path: 'components/form/form-phone-number', name: 'Form phone number' },
             { path: 'components/images/image-cropper', name: 'Image cropper' },
+            { path: 'components/images/image-with-legende', name: 'Image with legende' },
           ],
         },
         {
