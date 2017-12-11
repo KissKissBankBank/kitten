@@ -22,8 +22,8 @@
 ///    ),
 ///    hover: (
 ///      color: #fff,
-///      border-color: #4a84ff,
-///      background-color: #4a84ff,
+///      border-color: #19bbff,
+///      background-color: #19bbff,
 ///    ),
 ///    focus: (…),
 ///    active: (…),
@@ -47,59 +47,84 @@
 ///
 ///   .k-MyButton:hover {
 ///     …
-///     background-color: #4a84ff;
+///     background-color: #19bbff;
 ///     color: #fff;
 ///   }
 
 @mixin k-buttonColorBase($colors) {
   // base colors
-  $base: k-colors-definition(k-map-fetch($colors, 'base'));
+  $base: k-map-fetch($colors, 'base');
   $base-color: map-get($base, 'color');
   $base-border-color: map-get($base, 'border-color');
   $base-background-color: map-get($base, 'background-color');
+  $base-background-image: map-get($base, 'background-image');
 
   // hover colors
-  $hover: k-colors-definition(k-map-fetch($colors, 'hover'));
+  $hover: k-map-fetch($colors, 'hover');
   $hover-color: map-get($hover, 'color');
   $hover-border-color: map-get($hover, 'border-color');
   $hover-background-color: map-get($hover, 'background-color');
+  $hover-background-image: map-get($hover, 'background-image');
 
   // focus colors
-  $focus: k-colors-definition(k-map-fetch($colors, 'focus'));
+  $focus: k-map-fetch($colors, 'focus');
   $focus-color: map-get($focus, 'color');
   $focus-border-color: map-get($focus, 'border-color');
   $focus-background-color: map-get($focus, 'background-color');
+  $focus-background-image: map-get($focus, 'background-image');
 
   // active colors
-  $active: k-colors-definition(k-map-fetch($colors, 'active'));
+  $active: k-map-fetch($colors, 'active');
   $active-color: map-get($active, 'color');
   $active-border-color: map-get($active, 'border-color');
   $active-background-color: map-get($active, 'background-color');
+  $active-background-image: map-get($active, 'background-image');
 
   // is-selected colors (optional)
-  $is-selected: k-colors-definition(map-get($colors, 'is-selected'));
+  $is-selected: map-get($colors, 'is-selected');
   $is-selected-color: map-get($is-selected, 'color');
   $is-selected-border-color: map-get($is-selected, 'border-color');
   $is-selected-background-color: map-get($is-selected, 'background-color');
+  $is-selected-background-image: map-get($is-selected, 'background-image');
 
   // disabled colors (optional)
-  $disabled: k-colors-definition(map-get($colors, 'disabled'));
+  $disabled: map-get($colors, 'disabled');
   $disabled-color: map-get($disabled, 'color');
   $disabled-border-color: map-get($disabled, 'border-color');
   $disabled-background-color: map-get($disabled, 'background-color');
+  $disabled-background-image: map-get($disabled, 'background-image');
 
   // transition
   $transition-speed: .2s;
 
-  @include k-buttonBorder($base-border-color);
-  background-color: $base-background-color;
   color: $base-color;
+  background-color: $base-background-color;
   transition: background-color $transition-speed,
               color $transition-speed,
               border-color $transition-speed;
 
+  @if $base-border-color {
+    @include k-buttonBorder($base-border-color);
+  }
+  @else {
+    border: none;
+  }
+
+  @if $base-background-image {
+    background-image: $base-background-image;
+  }
+
   &:hover {
-    @include k-buttonBorder($hover-border-color);
+    @if $hover-border-color {
+      @include k-buttonBorder($hover-border-color);
+    }
+    @else {
+      border: none;
+    }
+
+    @if $hover-background-image {
+      background-image: $hover-background-image;
+    }
 
     background-color: $hover-background-color;
     color: $hover-color;
@@ -107,11 +132,22 @@
 
   &:focus {
     @if map-has-key($colors, 'focus') {
-      @include k-buttonBorder($focus-border-color);
+
+      @if $focus-border-color {
+        @include k-buttonBorder($focus-border-color);
+      }
+      @else {
+        border: none;
+      }
+
+      @if $focus-background-image {
+        background-image: $focus-background-image;
+      }
 
       background-color: $focus-background-color;
       color: $focus-color;
     }
+
     @else {
       @include k-buttonBorder($hover-border-color);
 
@@ -123,7 +159,16 @@
   }
 
   &:active {
-    @include k-buttonBorder($active-border-color);
+    @if $active-border-color {
+      @include k-buttonBorder($active-border-color);
+    }
+    @else {
+      border: none;
+    }
+
+    @if $active-background-image {
+      background-image: $active-background-image;
+    }
 
     background-color: $active-background-color;
     color: $active-color;
@@ -131,7 +176,16 @@
 
   @if map-has-key($colors, 'disabled') {
     &:disabled {
-      @include k-buttonBorder($disabled-border-color);
+      @if $disabled-border-color {
+        @include k-buttonBorder($disabled-border-color);
+      }
+      @else {
+        border: none;
+      }
+
+      @if $disabled-background-image {
+        background-image: $disabled-background-image;
+      }
 
       background-color: $disabled-background-color;
       color: $disabled-color;
@@ -140,7 +194,16 @@
 
   @if map-has-key($colors, 'is-selected') {
     &.is-selected {
-      @include k-buttonBorder($is-selected-border-color);
+      @if $is-selected-border-color {
+        @include k-buttonBorder($is-selected-border-color);
+      }
+      @else {
+        border: none;
+      }
+
+      @if $is-selected-background-image {
+        background-image: $is-selected-background-image;
+      }
 
       background-color: $is-selected-background-color;
       color: $is-selected-color;
