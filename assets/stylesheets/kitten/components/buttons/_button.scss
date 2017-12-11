@@ -39,25 +39,34 @@
 
 @mixin k-Button {
   $font: 'regular';
-  $border-size: 1px;
+  $border-size: 2px;
 
-  // Size settings button.
-  $button-size-tiny: 30px - ($border-size * 2);
-  $button-size: 40px - ($border-size * 2);
-  $button-size-big: 50px - ($border-size * 2);
+  // Size settings with border.
+  $button-size-tiny-with-border: 40px;
+  $button-size-with-border: 50px;
+  $button-size-big-with-border: 70px;
 
-  $button-tiny-min-width: k-px-to-rem(110px);
+  // Size settings button without border.
+  $button-size-tiny: $button-size-tiny-with-border - ($border-size * 2);
+  $button-size: $button-size-with-border - ($border-size * 2);
+  $button-size-big: $button-size-big-with-border - ($border-size * 2);
+
+  $button-tiny-min-width: k-px-to-rem(160px);
   $button-tiny-line-height: k-px-to-rem($button-size-tiny);
 
-  $button-min-width: k-px-to-rem(160px);
+  $button-min-width: k-px-to-rem(200px);
   $button-line-height: k-px-to-rem($button-size);
 
-  $button-big-min-width: k-px-to-rem(200px);
+  $button-big-min-width: k-px-to-rem(220px);
   $button-big-line-height: k-px-to-rem($button-size-big);
 
-  // Button radius settings.
-  $button-radius: k-px-to-rem(20px);
-  $button-big-radius: k-px-to-rem(25px);
+  // Heigth settings button.
+  $button-height: k-px-to-rem(30px);
+  $button-tiny-height: k-px-to-rem(20px);
+
+  // Button radius
+  // Chrome forced a default `border-radius: 4px`, we have to set it to 0px.
+  $button-radius: 0px;
 
   // Button font-size is computed using a modular scale and a defined step of this
   // scale.
@@ -67,29 +76,31 @@
   $icon-width: k-px-to-rem(12px);
   $icon-height: k-px-to-rem(14px);
 
-  $icon-width-tiny: k-px-to-rem(10px);
-  $icon-height-tiny: k-px-to-rem(12px);
-
   $transition-speed: .2s;
 
   // Big size options button.
   $buttonBigOptions: (
     typography-step: $button-step,
     line-height: $button-big-line-height,
-    radius: $button-big-radius,
+    height: $button-height,
+    radius: $button-radius,
     width: $button-big-min-width,
     icon-size: $button-size-big,
+    icon-size-with-border: $button-size-big-with-border,
     icon-width: $icon-width,
     icon-height: $icon-height,
   );
 
   .k-Button {
     @include k-buttonBase;
-    @include k-typographyFontSize($button-step, $button-line-height);
+    @include k-typographyFontSize(
+      $button-step,
+      $button-line-height
+    );
     @include k-typographyFont($font);
 
-    padding: 0 $button-radius;
     border-radius: $button-radius;
+    padding: 0 $button-height;
     min-width: $button-min-width;
 
     text-align: center;
@@ -128,7 +139,11 @@
 
     &.k-Button--icon {
       .k-Button__icon {
-        @include k-buttonRounded($button-size-tiny, $icon-width, $icon-height);
+        @include k-buttonPadding(
+          $button-size-tiny,
+          $icon-width,
+          $icon-height
+        );
       }
     }
   }
@@ -145,11 +160,15 @@
 
   // Button--icon
   .k-Button--icon {
-    padding: 0 $button-radius 0 0;
+    padding: 0 $button-height 0 0;
     min-width: 0;
 
     .k-Button__icon {
-      @include k-buttonRounded($button-size, $icon-width, $icon-height);
+      @include k-buttonPadding(
+        $button-size,
+        $icon-width,
+        $icon-height
+      );
 
       box-sizing: content-box;
       display: inline-block;
@@ -164,16 +183,16 @@
     }
 
     .k-Button__icon--tiny {
-      @include k-buttonRounded(
+      @include k-buttonPadding(
         $button-size-tiny,
-        $icon-width-tiny,
-        $icon-height-tiny
+        $icon-width,
+        $icon-height
       );
 
       box-sizing: content-box;
       display: inline-block;
-      width: $icon-width-tiny;
-      height: $icon-height-tiny;
+      width: $icon-width;
+      height: $icon-height;
       vertical-align: bottom;
       transition: fill $transition-speed;
 
@@ -183,8 +202,17 @@
     }
   }
 
+  // Padding size
+  .k-Button--icon--tiny {
+    padding: 0 $button-tiny-height 0 0;
+  }
+
   .k-Button--iconRight {
-    padding: 0 0 0 $button-radius;
+    padding: 0 0 0 $button-height;
+  }
+
+  .k-Button--iconRight--tiny {
+    padding: 0 0 0 $button-tiny-height;
   }
 
   .k-Button--iconWithMinWidth {
