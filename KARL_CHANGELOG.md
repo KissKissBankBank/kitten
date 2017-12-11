@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add `InstagramButtonIcon` example.
+- Feature: Add `disabled` prop on `TextInputWithButton` and `tiny` prop on
+  `TextInputWithLimit` examples.
 
 ## [16.3.1] - 2017-11-28
 
