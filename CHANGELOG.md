@@ -15,7 +15,6 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Remove `boron` buttons colors.
 - Feature: Update colors.
 - Feature: Add new `error` and `valid` colors.
->>>>>>> origin/feature/styleguide-v2
 
 ## [16.3.1] - 2017-11-28
 
