@@ -3,8 +3,12 @@ import ResizeObserver from 'resize-observer-polyfill'
 
 import { Grid, GridCol } from 'kitten/components/grid/grid'
 import { Container } from 'kitten/components/grid/container'
+import { ButtonIcon } from 'kitten/components/buttons/button-icon'
+import { ArrowIcon } from 'kitten/components/icons/arrow-icon'
+
 import FakeCard from 'kitten/components/carousel/fake-card'
 import CarouselPage from 'kitten/components/carousel/carousel-page'
+
 
 const getDataForPage = (data, indexPage, numColumns) => {
   const startIndex = indexPage * numColumns
@@ -12,8 +16,8 @@ const getDataForPage = (data, indexPage, numColumns) => {
 }
 
 const getNumColumnsForWidth = (width) => {
-  const widthWithOneCard = (width - FakeCard.MIN_WIDTH)
-  const numColumns = Math.floor(widthWithOneCard / (FakeCard.MIN_WIDTH + CarouselPage.MARGIN)) + 1
+  const remainingWidthWithOneCard = (width - FakeCard.MIN_WIDTH)
+  const numColumns = Math.floor(remainingWidthWithOneCard / (FakeCard.MIN_WIDTH + CarouselPage.MARGIN)) + 1
   return numColumns
 }
 
@@ -30,27 +34,25 @@ export default class Carousel extends React.Component {
     numPages: 0,
   }
 
-  constructor(props) {
-    super(props)
-
-    this.observer = new ResizeObserver(this.onObserve)
-  }
-
-  onObserve = (entries) => {
+  onObserve = ([entry]) => {
     const { data } = this.props
 
-    const widthInner = entries.reduce((result, entry) => entry.contentRect.width, 0)
+    const widthInner = entry.contentRect.width
 
     const numColumns = getNumColumnsForWidth(widthInner)
     const numPages = getNumPagesForColumnsAndDataLength(data.length, numColumns)
 
     if(this.state.numColumns !== numColumns || this.state.numPages !== numPages) {
-      const indexPageVisible = this.state.indexPageVisible > (numPages - 1) ? (numPages - 1) : this.state.indexPageVisible
+      const indexPageVisible = this.state.indexPageVisible > (numPages - 1)
+        ? (numPages - 1)
+        : this.state.indexPageVisible
+
       this.setState({ numColumns, numPages, indexPageVisible })
     }
   }
 
   componentDidMount () {
+    this.observer = new ResizeObserver(this.onObserve)
     this.observer.observe(this.refs.carouselInner)
   }
 
@@ -74,8 +76,8 @@ export default class Carousel extends React.Component {
 
     return (
       <Container>
-        <Grid style={styles.carousel}>
-          <GridCol col-s="1"></GridCol>
+        <Grid>
+          <GridCol col-s="1" />
 
           <GridCol col-s="10">
             <div style={styles.carouselInner} ref="carouselInner">
@@ -98,13 +100,25 @@ export default class Carousel extends React.Component {
           </GridCol>
 
           <GridCol col-s="1">
-            <button type="button" disabled={indexPageVisible < 1 || numPages < 1} onClick={this.goPrevPage}>
-              prev
-            </button>
-            <button type="button" disabled={indexPageVisible >= (numPages - 1)} onClick={this.goNextPage}>
-              next
-            </button>
-            <span>{indexPageVisible}, {numPages}</span>
+
+            <ButtonIcon
+              modifier="beryllium"
+              onClick={this.goNextPage}
+              disabled={indexPageVisible >= (numPages - 1)}
+              style={styles.carouselButtonPagination}
+            >
+              <ArrowIcon className="k-ButtonIcon__svg" direction="right" />
+            </ButtonIcon>
+
+            <ButtonIcon
+              modifier="beryllium"
+              onClick={this.goPrevPage}
+              disabled={indexPageVisible < 1 || numPages < 1}
+              style={styles.carouselButtonPagination}
+            >
+              <ArrowIcon className="k-ButtonIcon__svg" direction="left" />
+            </ButtonIcon>
+
           </GridCol>
         </Grid>
       </Container>
@@ -113,19 +127,17 @@ export default class Carousel extends React.Component {
 }
 
 const styles = {
-  carousel: {
-    backgroundColor: 'yellow',
-  },
   carouselInner: {
     display: 'flex',
     flexDirect: 'row',
     overflow: 'hidden',
-
-    backgroundColor: 'blue',
   },
   carouselPageContainer: {
     width: '100%',
     flexShrink: 0,
     transition: 'transform ease-in-out 600ms',
+  },
+  carouselButtonPagination: {
+    marginBottom: 2,
   },
 }

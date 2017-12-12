@@ -38,8 +38,6 @@ const styles = {
   page: {
     display: 'flex',
     flexDirect: 'row',
-
-    backgroundColor: 'red',
   },
   itemEmpty: {
     flexGrow: 1,
