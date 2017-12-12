@@ -14,17 +14,19 @@ export default class CarouselPage extends React.Component {
       <div style={styles.page}>
         {
           rangeCard.map((index) =>
-            data[index]
-              ? renderItem({
-                  index,
-                  item: data[index],
-                  style: { marginLeft: index ? MARGIN : 0 },
-                })
-              : <div key={index} style={{
-                  ...styles.itemEmpty,
-                  minWidth: itemMinWidth,
-                  marginLeft: index ? MARGIN : 0
-                }} />
+            <div
+              key={index}
+              style={{
+                ...styles.item,
+                minWidth: itemMinWidth,
+                marginLeft: index ? MARGIN : 0
+              }}
+            >
+              {
+                data[index] &&
+                  renderItem({ item: data[index] })
+              }
+            </div>
           )
         }
       </div>
@@ -37,7 +39,7 @@ const styles = {
     display: 'flex',
     flexDirect: 'row',
   },
-  itemEmpty: {
+  item: {
     flexGrow: 1,
     flexShrink: 1,
   },

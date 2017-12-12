@@ -128,7 +128,7 @@ const styles = {
   carouselInner: {
     display: 'flex',
     flexDirect: 'row',
-    overflow: 'hidden',
+    overflowX: 'hidden',
   },
   carouselPageContainer: {
     width: '100%',
