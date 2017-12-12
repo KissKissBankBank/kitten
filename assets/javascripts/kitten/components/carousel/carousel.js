@@ -6,18 +6,16 @@ import { Container } from 'kitten/components/grid/container'
 import { ButtonIcon } from 'kitten/components/buttons/button-icon'
 import { ArrowIcon } from 'kitten/components/icons/arrow-icon'
 
-import FakeCard from 'kitten/components/carousel/fake-card'
 import CarouselPage from 'kitten/components/carousel/carousel-page'
-
 
 const getDataForPage = (data, indexPage, numColumns) => {
   const startIndex = indexPage * numColumns
   return data.slice(startIndex, startIndex + numColumns)
 }
 
-const getNumColumnsForWidth = (width) => {
-  const remainingWidthWithOneCard = (width - FakeCard.MIN_WIDTH)
-  const numColumns = Math.floor(remainingWidthWithOneCard / (FakeCard.MIN_WIDTH + CarouselPage.MARGIN)) + 1
+const getNumColumnsForWidth = (width, itemMinWidth) => {
+  const remainingWidthWithOneCard = (width - itemMinWidth)
+  const numColumns = Math.floor(remainingWidthWithOneCard / (itemMinWidth + CarouselPage.MARGIN)) + 1
   return numColumns
 }
 
@@ -35,11 +33,10 @@ export default class Carousel extends React.Component {
   }
 
   onObserve = ([entry]) => {
-    const { data } = this.props
-
+    const { data, itemMinWidth } = this.props
     const widthInner = entry.contentRect.width
 
-    const numColumns = getNumColumnsForWidth(widthInner)
+    const numColumns = getNumColumnsForWidth(widthInner, itemMinWidth)
     const numPages = getNumPagesForColumnsAndDataLength(data.length, numColumns)
 
     if(this.state.numColumns !== numColumns || this.state.numPages !== numPages) {
@@ -69,7 +66,7 @@ export default class Carousel extends React.Component {
   }
 
   render() {
-    const { data } = this.props
+    const { data, itemMinWidth, renderItem } = this.props
     const { indexPageVisible, numColumns, numPages } = this.state
 
     const rangePage = [...Array(numPages).keys()]
@@ -91,7 +88,8 @@ export default class Carousel extends React.Component {
                     <CarouselPage
                       data={getDataForPage(data, index, numColumns)}
                       numColumns={numColumns}
-                      ItemComponent={FakeCard}
+                      itemMinWidth={itemMinWidth}
+                      renderItem={renderItem}
                     />
                   </div>
                 )

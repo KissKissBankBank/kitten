@@ -7,7 +7,7 @@ export default class CarouselPage extends React.Component {
   static MARGIN = MARGIN
 
   render() {
-    const { ItemComponent, numColumns, data } = this.props
+    const { data, numColumns, itemMinWidth, renderItem } = this.props
     const rangeCard = [...Array(numColumns).keys()]
 
     return (
@@ -15,16 +15,14 @@ export default class CarouselPage extends React.Component {
         {
           rangeCard.map((index) =>
             data[index]
-              ? <ItemComponent
-                  key={index}
-                  style={{
-                    marginLeft: index ? MARGIN : 0
-                  }}
-                  title={data[index].title}
-                />
+              ? renderItem({
+                  index,
+                  item: data[index],
+                  style: { marginLeft: index ? MARGIN : 0 },
+                })
               : <div key={index} style={{
                   ...styles.itemEmpty,
-                  minWidth: ItemComponent.MIN_WIDTH,
+                  minWidth: itemMinWidth,
                   marginLeft: index ? MARGIN : 0
                 }} />
           )
