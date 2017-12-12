@@ -1,0 +1,11 @@
+@mixin k-ImageWithLegend {
+  .k-ImageWithLegend {
+    position: relative;
+  }
+
+  .k-ImageWithLegend__legend {
+    position: absolute;
+    background-color: white;
+    top: -1rem;
+  }
+}
