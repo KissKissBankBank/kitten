@@ -1,11 +1,13 @@
 @mixin k-ImageWithLegend {
   .k-ImageWithLegend {
     position: relative;
+    background-image: url("https://placehold.it/40x40/4a84ff/4a84ff");
   }
 
   .k-ImageWithLegend__legend {
     position: absolute;
     background-color: white;
-    top: -1rem;
+    bottom: 0;
+    right: 0;
   }
 }

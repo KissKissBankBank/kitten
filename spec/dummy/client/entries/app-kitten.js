@@ -163,6 +163,7 @@ import { PhoneIllustration }
 
 // Images
 import { ImageWithLegend } from 'kitten/components/images/image-with-legend'
+import { KarlImageWithLegend } from 'kitten/karl/images/image-with-legend'
 import { KarlImageCropper } from 'kitten/karl/images/image-cropper'
 
 // Layout
@@ -410,6 +411,7 @@ ReactOnRails.register({
 
   // Images
   ImageWithLegend,
+  KarlImageWithLegend,
   KarlImageCropper,
 
   // Layout

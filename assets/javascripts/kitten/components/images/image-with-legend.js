@@ -12,7 +12,6 @@ export class ImageWithLegend extends Component {
 
     return (
       <figure className="k-ImageWithLegend">
-        <img src="https://placehold.it/300X400/4a84ff/4a84ff" />
         <figcaption className="k-ImageWithLegend__legend">
           <Text
             size="default"
