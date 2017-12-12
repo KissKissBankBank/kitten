@@ -13,9 +13,9 @@ const getDataForPage = (data, indexPage, numColumns) => {
   return data.slice(startIndex, startIndex + numColumns)
 }
 
-const getNumColumnsForWidth = (width, itemMinWidth) => {
+const getNumColumnsForWidth = (width, itemMinWidth, itemMarginBetween) => {
   const remainingWidthWithOneCard = (width - itemMinWidth)
-  const numColumns = Math.floor(remainingWidthWithOneCard / (itemMinWidth + CarouselPage.MARGIN)) + 1
+  const numColumns = Math.floor(remainingWidthWithOneCard / (itemMinWidth + itemMarginBetween)) + 1
   return numColumns
 }
 
@@ -33,10 +33,10 @@ export default class Carousel extends React.Component {
   }
 
   onObserve = ([entry]) => {
-    const { data, itemMinWidth } = this.props
+    const { data, itemMinWidth, itemMarginBetween } = this.props
     const widthInner = entry.contentRect.width
 
-    const numColumns = getNumColumnsForWidth(widthInner, itemMinWidth)
+    const numColumns = getNumColumnsForWidth(widthInner, itemMinWidth, itemMarginBetween)
     const numPages = getNumPagesForColumnsAndDataLength(data.length, numColumns)
 
     if(this.state.numColumns !== numColumns || this.state.numPages !== numPages) {
@@ -66,7 +66,7 @@ export default class Carousel extends React.Component {
   }
 
   render() {
-    const { data, itemMinWidth, renderItem } = this.props
+    const { data, itemMinWidth, itemMarginBetween, renderItem } = this.props
     const { indexPageVisible, numColumns, numPages } = this.state
 
     const rangePage = [...Array(numPages).keys()]
@@ -82,13 +82,14 @@ export default class Carousel extends React.Component {
                 rangePage.map((index) =>
                   <div key={index} style={{
                     ...styles.carouselPageContainer,
-                    marginLeft: index ? CarouselPage.MARGIN : 0,
-                    transform: `translateX(calc(-${indexPageVisible * 100}% - ${indexPageVisible * CarouselPage.MARGIN}px) )`,
+                    marginLeft: index ? itemMarginBetween : 0,
+                    transform: `translateX(calc(-${indexPageVisible * 100}% - ${indexPageVisible * itemMarginBetween}px) )`,
                   }}>
                     <CarouselPage
                       data={getDataForPage(data, index, numColumns)}
                       numColumns={numColumns}
                       itemMinWidth={itemMinWidth}
+                      itemMarginBetween={itemMarginBetween}
                       renderItem={renderItem}
                     />
                   </div>

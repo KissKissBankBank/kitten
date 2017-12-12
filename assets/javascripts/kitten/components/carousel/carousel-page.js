@@ -1,13 +1,9 @@
 import React from 'react'
 
-const MARGIN = 40
-
 export default class CarouselPage extends React.Component {
 
-  static MARGIN = MARGIN
-
   render() {
-    const { data, numColumns, itemMinWidth, renderItem } = this.props
+    const { data, numColumns, itemMinWidth, itemMarginBetween, renderItem } = this.props
     const rangeCard = [...Array(numColumns).keys()]
 
     return (
@@ -19,7 +15,7 @@ export default class CarouselPage extends React.Component {
               style={{
                 ...styles.item,
                 minWidth: itemMinWidth,
-                marginLeft: index ? MARGIN : 0
+                marginLeft: index ? itemMarginBetween : 0
               }}
             >
               {

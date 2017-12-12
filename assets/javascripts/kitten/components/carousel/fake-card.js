@@ -2,6 +2,7 @@ import React from 'react'
 
 //const MAX_WIDTH = 350
 const MIN_WIDTH = 280
+const MARGIN_BETWEEN = 30
 
 const RATIO_WIDTH = 4
 const RATIO_HEIGHT = 3
@@ -10,6 +11,7 @@ export default class FakeCard extends React.Component {
 
   //static MAX_WIDTH = MAX_WIDTH
   static MIN_WIDTH = MIN_WIDTH
+  static MARGIN_BETWEEN = MARGIN_BETWEEN
 
   render() {
     const {style, title} = this.props
