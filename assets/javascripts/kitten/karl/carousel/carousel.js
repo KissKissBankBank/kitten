@@ -1,4 +1,5 @@
 import React from 'react'
+import { Container } from 'kitten/components/grid/container'
 import Carousel from 'kitten/components/carousel/carousel'
 
 import FakeCard from 'kitten/components/carousel/fake-card'
@@ -10,35 +11,39 @@ import {
 
 export const KarlCarouselFakeCard = (props) => {
   return (
-    <Carousel
-      itemMinWidth={FakeCard.MIN_WIDTH}
-      itemMarginBetween={FakeCard.MARGIN_BETWEEN}
-      renderItem={({item}) => {
-        return (
-          <FakeCard
-            title={item.title}
-          />
-        )
-      }}
-      { ...props }
-    />
+    <Container>
+      <Carousel
+        itemMinWidth={FakeCard.MIN_WIDTH}
+        itemMarginBetween={FakeCard.MARGIN_BETWEEN}
+        renderItem={({item}) => {
+          return (
+            <FakeCard
+              title={item.title}
+            />
+          )
+        }}
+        { ...props }
+      />
+    </Container>
   )
 }
 
 export const KarlCarouselProjectCard = (props) => {
   return (
-    <Carousel
-      itemMinWidth={ProjectCardMinWidth}
-      itemMarginBetween={ProjectCardMarginBetween}
-      renderItem={({item}) => {
-        return (
-          <ProjectCard
-            title={item.title}
-          />
-        )
-      }}
-      { ...props }
-    />
+    <Container>
+      <Carousel
+        itemMinWidth={ProjectCardMinWidth}
+        itemMarginBetween={ProjectCardMarginBetween}
+        renderItem={({item}) => {
+          return (
+            <ProjectCard
+              title={item.title}
+            />
+          )
+        }}
+        { ...props }
+      />
+    </Container>
   )
 }
 
