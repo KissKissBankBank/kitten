@@ -8,7 +8,7 @@ import { parseHtml } from 'kitten/helpers/utils/parser'
 
 class SimpleCardComponent extends Component {
   render() {
-    const { imageProps, title, subtitle, ...others } = this.props
+    const { imageProps, title, subtitle, paragraph, ...others } = this.props
     const Tag = this.props.href ? 'a' : 'div'
 
     return (
@@ -21,17 +21,33 @@ class SimpleCardComponent extends Component {
           />
         </Marger>
 
-        <Marger top="2" bottom=".5">
-          <Title modifier="senary" margin={ false } className="k-Card__title">
-            { parseHtml(title) }
-          </Title>
-        </Marger>
+        { title &&
+          <Marger top="2" bottom=".5">
+            <Title modifier="senary" margin={ false } className="k-Card__title">
+              { parseHtml(title) }
+            </Title>
+          </Marger>
+        }
 
-        <Marger top=".5" bottom="1.5">
-          <Text weight="regular" size="micro">
-            { parseHtml(subtitle) }
-          </Text>
-        </Marger>
+        { subtitle &&
+          <Marger top=".5" bottom=".5">
+            <Text weight="regular" size="micro">
+              { parseHtml(subtitle) }
+            </Text>
+          </Marger>
+        }
+
+        { paragraph &&
+          <Marger top=".5" bottom=".5">
+            <Text
+              size="micro"
+              weight="light"
+              lineHeight="normal"
+            >
+              { parseHtml(paragraph) }
+            </Text>
+          </Marger>
+        }
 
         <Marger top="1.5">
           —
@@ -53,8 +69,9 @@ SimpleCardComponent.defaultProps = {
     src: 'https://placehold.it/200x200/4a84ff/4a84ff',
     alt: '',
   },
-  title: 'Lorem ipsum…',
-  subtitle: 'Lorem ipsum…',
+  title: null,
+  subtitle: null,
+  paragraph: null,
 }
 
 export const SimpleCard = card(SimpleCardComponent, {

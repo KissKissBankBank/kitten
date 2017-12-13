@@ -26,21 +26,12 @@ describe('<SimpleCard />', () => {
       expect(component).to.have.descendants('.k-Card__image')
     })
 
-    it('has a <Title /> component', () => {
-      expect(component).to.have.descendants(Title)
-      expect(component.find(Title)).to.have.props({
-        modifier: 'senary',
-        margin: false,
-        className: 'k-Card__title',
-      })
+    it('has not a <Title /> component', () => {
+      expect(component).to.have.not.descendants(Title)
     })
 
-    it('has a <Text /> component', () => {
-      expect(component).to.have.descendants(Text)
-      expect(component.find(Text)).to.have.props({
-        weight: 'regular',
-        size: 'micro',
-      })
+    it('has not <Text /> components', () => {
+      expect(component).to.have.not.descendants(Text)
     })
   })
 
@@ -86,6 +77,11 @@ describe('<SimpleCard />', () => {
 
     it('has a <Title /> with good content', () => {
       expect(component.find(Title)).to.have.text('Simple card title')
+      expect(component.find(Title)).to.have.props({
+        modifier: 'senary',
+        margin: false,
+        className: 'k-Card__title',
+      })
     })
   })
 
@@ -94,8 +90,27 @@ describe('<SimpleCard />', () => {
       component = mount(<SimpleCard subtitle="Simple card subtitle" />)
     })
 
-    it('has a <Title /> with good content', () => {
+    it('has a <Text /> with good content', () => {
       expect(component.find(Text)).to.have.text('Simple card subtitle')
+      expect(component.find(Text)).to.have.props({
+        weight: 'regular',
+        size: 'micro',
+      })
+    })
+  })
+
+  describe('with paragraph prop', () => {
+    beforeEach(() => {
+      component = mount(<SimpleCard paragraph="Simple card subtitle" />)
+    })
+
+    it('has a <Text /> with good content', () => {
+      expect(component.find(Text)).to.have.text('Simple card subtitle')
+      expect(component.find(Text)).to.have.props({
+        weight: 'light',
+        size: 'micro',
+        lineHeight: 'normal',
+      })
     })
   })
 })
