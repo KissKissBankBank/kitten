@@ -10,9 +10,6 @@ import { ArrowIcon } from 'kitten/components/icons/arrow-icon'
 
 import CarouselInner from 'kitten/components/carousel/carousel-inner'
 
-const mqMobile = createMatchMediaMax(SCREEN_SIZE_XS)
-const mqTabletteOrLess = createMatchMediaMax(SCREEN_SIZE_M)
-
 const getNumColumnsForWidth = (width, itemMinWidth, itemMarginBetween) => {
   const remainingWidthWithOneCard = (width - itemMinWidth)
   const numColumns = Math.floor(remainingWidthWithOneCard / (itemMinWidth + itemMarginBetween)) + 1
@@ -36,12 +33,19 @@ const getMarginBetweenAccordingToViewport = (baseItemMarginBetween, viewportIsMo
 
 export default class Carousel extends React.Component {
 
-  state = {
-    indexPageVisible: 0,
-    numColumns: 0,
-    numPages: 0,
-    viewportIsMobile: mqMobile ? mqMobile.matches : false,
-    viewportIsTabletteOrLess: mqTabletteOrLess ? mqTabletteOrLess.matches : false,
+  constructor(props, context) {
+    super(props, context)
+
+    this.mqMobile = createMatchMediaMax(SCREEN_SIZE_XS)
+    this.mqTabletteOrLess = createMatchMediaMax(SCREEN_SIZE_M)
+
+    this.state = {
+      indexPageVisible: 0,
+      numColumns: 0,
+      numPages: 0,
+      viewportIsMobile: this.mqMobile ? this.mqMobile.matches : false,
+      viewportIsTabletteOrLess: this.mqTabletteOrLess ? this.mqTabletteOrLess.matches : false,
+    }
   }
 
   onResizeInner = (widthInner) => {
@@ -70,13 +74,13 @@ export default class Carousel extends React.Component {
   }
 
   componentDidMount () {
-    this.mqMobileListener = mqMobile && mqMobile.addListener(this.onMobileMQ)
-    this.mqTabletteListener = mqTabletteOrLess && mqTabletteOrLess.addListener(this.onTabletteMQ)
+    this.mqMobile && this.mqMobile.addListener(this.onMobileMQ)
+    this.mqTabletteOrLess && this.mqTabletteOrLess.addListener(this.onTabletteMQ)
   }
 
   componentWillUnmount () {
-    this.mqMobileListener && mqMobile.removeListener(this.onMobileMQ)
-    this.mqTabletteListener && mqTabletteOrLess.removeListener(this.onTabletteMQ)
+    this.mqMobile && this.mqMobile.removeListener(this.onMobileMQ)
+    this.mqTabletteOrLess && this.mqTabletteOrLess.removeListener(this.onTabletteMQ)
   }
 
   goNextPage = () => {
@@ -103,48 +107,75 @@ export default class Carousel extends React.Component {
         numColumns={numColumns}
         numPages={numPages}
         itemMarginBetween={itemMarginBetween}
+        siblingPageVisible={viewportIsTabletteOrLess}
         onResizeInner={this.onResizeInner}
       />
     )
   }
 
-  render() {
-    const { indexPageVisible, numPages, viewportIsTabletteOrLess } = this.state
+  renderPagination = () => {
+    const { baseItemMarginBetween } = this.props
+    const { indexPageVisible, numPages, viewportIsTabletteOrLess, viewportIsMobile } = this.state
+    const itemMarginBetween = getMarginBetweenAccordingToViewport(baseItemMarginBetween, viewportIsMobile, viewportIsTabletteOrLess)
 
-    if(viewportIsTabletteOrLess) {
-      return this.renderCarouselInner()
+    if(numPages <= 1) {
+      return
     }
 
     return (
-      <Grid style={{backgroundColor: 'yellow'}}>
+      <div
+        style={Object.assign(
+          {
+            marginTop: viewportIsTabletteOrLess ? itemMarginBetween : 0,
+            marginLeft: viewportIsTabletteOrLess ? (itemMarginBetween * 2) : 0,
+          },
+          styles.carouselPagination,
+          viewportIsTabletteOrLess && styles.carouselPaginationTablette,
+        )}
+      >
+        <ButtonIcon
+          modifier="beryllium"
+          onClick={this.goPrevPage}
+          disabled={indexPageVisible < 1 || numPages < 1}
+          style={styles.carouselButtonPagination}
+        >
+          <ArrowIcon className="k-ButtonIcon__svg" direction="left" />
+        </ButtonIcon>
+
+        <ButtonIcon
+          modifier="beryllium"
+          onClick={this.goNextPage}
+          disabled={indexPageVisible >= (numPages - 1)}
+          style={styles.carouselButtonPagination}
+        >
+          <ArrowIcon className="k-ButtonIcon__svg" direction="right" />
+        </ButtonIcon>
+      </div>
+    )
+  }
+
+  render() {
+    const { viewportIsTabletteOrLess } = this.state
+
+    if(viewportIsTabletteOrLess) {
+      return (
+        <div>
+          { this.renderCarouselInner() }
+          { this.renderPagination() }
+        </div>
+      )
+    }
+
+    return (
+      <Grid>
         <GridCol col-s="1" />
 
         <GridCol col-s="10">
-          {
-            this.renderCarouselInner()
-          }
+          { this.renderCarouselInner() }
         </GridCol>
 
         <GridCol col-s="1">
-
-          <ButtonIcon
-            modifier="beryllium"
-            onClick={this.goNextPage}
-            disabled={indexPageVisible >= (numPages - 1)}
-            style={styles.carouselButtonPagination}
-          >
-            <ArrowIcon className="k-ButtonIcon__svg" direction="right" />
-          </ButtonIcon>
-
-          <ButtonIcon
-            modifier="beryllium"
-            onClick={this.goPrevPage}
-            disabled={indexPageVisible < 1 || numPages < 1}
-            style={styles.carouselButtonPagination}
-          >
-            <ArrowIcon className="k-ButtonIcon__svg" direction="left" />
-          </ButtonIcon>
-
+          { this.renderPagination() }
         </GridCol>
       </Grid>
     )
@@ -152,7 +183,16 @@ export default class Carousel extends React.Component {
 }
 
 const styles = {
+  carouselPagination: {
+    display: 'flex',
+    flexDirection: 'column-reverse',
+    alignItems: 'flex-start',
+  },
+  carouselPaginationTablette: {
+    flexDirection: 'row',
+  },
   carouselButtonPagination: {
     marginBottom: 2,
+    marginRight: 2,
   },
 }

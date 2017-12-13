@@ -25,19 +25,29 @@ export default class CarouselInner extends React.Component {
   }
 
   render() {
-    const { data, itemMinWidth, renderItem, indexPageVisible, numColumns, numPages, itemMarginBetween } = this.props
+    const { data, itemMinWidth, renderItem, indexPageVisible, numColumns, numPages, itemMarginBetween, siblingPageVisible } = this.props
 
     const rangePage = [...Array(numPages).keys()]
 
     return (
-      <div style={styles.carouselInner} ref="carouselInner">
+      <div
+        ref="carouselInner"
+        style={{
+          ...styles.carouselInner,
+          paddingLeft: siblingPageVisible ? (itemMarginBetween * 2) : 0,
+          paddingRight: siblingPageVisible ? (itemMarginBetween * 2) : 0,
+        }}
+      >
         {
           rangePage.map((index) =>
-            <div key={index} style={{
-              ...styles.carouselPageContainer,
-              marginLeft: index ? itemMarginBetween : 0,
-              transform: `translateX(calc(-${indexPageVisible * 100}% - ${indexPageVisible * itemMarginBetween}px) )`,
-            }}>
+            <div
+              key={index}
+              style={{
+                ...styles.carouselPageContainer,
+                marginLeft: index ? itemMarginBetween : 0,
+                transform: `translateX(calc(-${indexPageVisible * 100}% - ${indexPageVisible * itemMarginBetween}px) )`,
+              }}
+            >
               <CarouselPage
                 data={getDataForPage(data, index, numColumns)}
                 numColumns={numColumns}
