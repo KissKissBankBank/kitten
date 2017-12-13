@@ -34,7 +34,9 @@ $k-grid: (
   columns: 12,
   container: 1440px,
   gutter-width: 20px,
-  thin-gutter-width: 15px,
+
+  container-padding: 40px,
+  container-padding-thin: 20px,
 ) !default;
 
 // Susy

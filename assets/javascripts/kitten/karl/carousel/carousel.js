@@ -9,12 +9,14 @@ import {
   MARGIN_BETWEEN as ProjectCardMarginBetween,
 } from 'kitten/components/cards/project-card'
 
+import { SCREEN_SIZE_M } from 'kitten/constants/screen-config'
+
 export const KarlCarouselFakeCard = (props) => {
   return (
-    <Container>
+    <Container fullWidthBelowScreenSize={SCREEN_SIZE_M}>
       <Carousel
         itemMinWidth={FakeCard.MIN_WIDTH}
-        itemMarginBetween={FakeCard.MARGIN_BETWEEN}
+        baseItemMarginBetween={FakeCard.MARGIN_BETWEEN}
         renderItem={({item}) => {
           return (
             <FakeCard
@@ -30,10 +32,10 @@ export const KarlCarouselFakeCard = (props) => {
 
 export const KarlCarouselProjectCard = (props) => {
   return (
-    <Container>
+    <Container fullWidthBelowScreenSize={SCREEN_SIZE_M}>
       <Carousel
         itemMinWidth={ProjectCardMinWidth}
-        itemMarginBetween={ProjectCardMarginBetween}
+        baseItemMarginBetween={ProjectCardMarginBetween}
         renderItem={({item}) => {
           return (
             <ProjectCard
