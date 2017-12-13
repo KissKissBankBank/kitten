@@ -21,19 +21,19 @@
 
   // Error
   $error-color: map-get($k-colors, 'error');
+  $error-border-color: map-get($k-colors, 'error-3');
 
   // Colors
   $background-color: map-get($k-colors, 'background-1');
   $background-color-checked: map-get($k-colors, 'primary-1');
   $background-color-active: map-get($k-colors, 'primary-3');
   $background-color-disabled: map-get($k-colors, 'line-1');
-  $border-color: map-get($k-colors, 'font-2');
-  $border-color-disabled: map-get($k-colors, 'line-2');
+  $border-color: map-get($k-colors, 'line-1');
   $border-color-hover: map-get($k-colors, 'primary-1');
   $link-color: map-get($k-colors, 'primary-1');
 
   $checkbox-size: k-px-to-rem(20px);
-  $border-radius: k-px-to-rem(4px);
+  $border-size: k-px-to-rem(2px);
   $icon: '~icons/checked.svg';
   $icon-disabled: '~icons/checked-disabled.svg';
 
@@ -62,8 +62,7 @@
 
       content: '';
       background-color: $background-color;
-      border: k-px-to-rem(1px) solid $border-color;
-      border-radius: $border-radius;
+      border: $border-size solid $border-color;
 
       transition: border-color .2s, background-color .2s;
     }
@@ -89,10 +88,10 @@
     }
 
     .k-Checkbox__input.is-error + & {
-      border-color: $error-color;
+      border-color: $error-border-color;
 
       &:before {
-        border-color: $error-color;
+        border-color: $error-border-color;
       }
     }
 
@@ -110,7 +109,7 @@
 
       &:before {
         background-color: $background-color-disabled;
-        border-color: $border-color-disabled;
+        border-color: $border-color;
       }
     }
 
