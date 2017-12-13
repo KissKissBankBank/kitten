@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `center`, `height` props on `HorizontalNav`.
 - Feature: Update `HorizontalNav` with styleguide V2.
 - Feature: Add `disabled` prop on `TextInputWithButton`.
 - Feature: Update all `Input` components with new design styleguide V2.

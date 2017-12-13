@@ -26,11 +26,11 @@
   // Font
   $font: 'regular';
   $font-step: -1; // 14px
-  $line-height: 1.7;
+  $line-height: normal;
+  $line-height-big: k-px-to-rem(68px);
 
   // Colors
   $base-color: map-get($k-colors, 'font-1');
-  $base-background-color: map-get($k-colors, 'background-1');
 
   // Hover
   $hover-color: map-get($k-colors, 'primary-1');
@@ -48,21 +48,22 @@
 
   .k-HorizontalNav {
     display: flex;
-    justify-content: center;
-
-    list-style-type: none;
-    width: 100%;
-
-    background-color: $base-background-color;
-  }
-
-  .k-HorizontalNav__element {
-    display: flex;
-
     margin: 0;
     padding: 0;
     list-style-type: none;
+    width: 100%;
+  }
+
+  .k-HorizontalNav--center {
+    justify-content: center;
+  }
+
+  .k-HorizontalNav__element {
     -ms-overflow-x: hidden;
+  }
+
+  .k-HorizontalNav__element--fixedSize {
+    flex-shrink: 0;
   }
 
   .k-HorizontalNav__item {
@@ -70,7 +71,6 @@
     justify-content: center;
     flex-direction: column;
 
-    padding-top: 1rem;
     margin: 0 $margin;
     border-bottom: $border-width solid transparent;
 
@@ -89,6 +89,10 @@
 
     @include k-media-within('m') {
       padding: 0 k-px-to-rem(10px);
+    }
+
+    @include k-media-max('s') {
+      margin: 0 k-px-to-rem(12px);
     }
 
     &:hover {

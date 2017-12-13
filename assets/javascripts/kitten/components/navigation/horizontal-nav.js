@@ -14,7 +14,7 @@ export class HorizontalNav extends Component {
       className,
       selected,
       text,
-      ...linkProps } = item
+      ...others } = item
 
     const itemClassName = classNames(
       "k-HorizontalNav__item",
@@ -24,10 +24,18 @@ export class HorizontalNav extends Component {
 
     return (
       <li
+        className={ classNames("k-HorizontalNav__element",
+                               this.props.elementClassName) }
         key={ key }
         role="menuitem"
+        { ...others }
       >
-        <a className={ itemClassName } { ...linkProps }>
+        <a
+          className={ itemClassName }
+          style={ {
+            height: this.props.height,
+          } }
+        >
           <Markdown softBreak="br" source={ text } />
         </a>
       </li>
@@ -35,19 +43,24 @@ export class HorizontalNav extends Component {
   }
 
   render() {
+    const {
+      className,
+      center,
+    } = this.props
+
+    const navClassNames = classNames(
+      "k-HorizontalNav", className,
+      { "k-HorizontalNav--center": center },
+    )
+
     return (
-      <div
+      <ul
+        role="menubar"
         id={ this.props.id }
-        className={ classNames("k-HorizontalNav", this.props.className) }
+        className={ navClassNames }
       >
-        <ul
-          className={ classNames("k-HorizontalNav__element",
-                                 this.props.elementClassName) }
-          role="menubar"
-        >
-          { this.renderItems() }
-        </ul>
-      </div>
+        { this.renderItems() }
+      </ul>
     )
   }
 }
@@ -57,4 +70,6 @@ HorizontalNav.defaultProps = {
   className: null,
   elementClassName: null,
   items: [],
+  height: "auto",
+  center: false,
 }
