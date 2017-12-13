@@ -15,6 +15,7 @@ export default class CarouselPage extends React.Component {
               style={{
                 ...styles.item,
                 minWidth: itemMinWidth,
+                flexBasis: itemMinWidth,
                 marginLeft: index ? itemMarginBetween : 0
               }}
             >
