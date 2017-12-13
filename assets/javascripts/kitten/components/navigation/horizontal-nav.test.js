@@ -18,7 +18,7 @@ describe('<HorizontalNav />', () => {
   })
 
   it('has a element', () => {
-    expect(component.find('ul.k-HorizontalNav__element')).to.have.length(1)
+    expect(component.find('li.k-HorizontalNav__element')).to.have.length(4)
   })
 
   it('renders items', () => {
@@ -42,9 +42,10 @@ describe('<HorizontalNav />', () => {
 
     it('renders the right classes', () => {
       expect(component).to.have.id('custom-id')
+
       expect(component).to.have.className('custom-class')
 
-      expect(component.find('.k-HorizontalNav__element'))
+      expect(component.find('.k-HorizontalNav__element').first())
         .to.have.className('element-custom-class')
 
       expect(component.find('.k-HorizontalNav__item').first())

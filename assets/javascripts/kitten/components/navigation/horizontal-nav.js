@@ -14,6 +14,7 @@ export class HorizontalNav extends Component {
       className,
       selected,
       text,
+      height,
       ...others } = item
 
     const itemClassName = classNames(
@@ -33,7 +34,7 @@ export class HorizontalNav extends Component {
         <a
           className={ itemClassName }
           style={ {
-            height: this.props.height,
+            height: height,
           } }
         >
           <Markdown softBreak="br" source={ text } />
@@ -46,7 +47,7 @@ export class HorizontalNav extends Component {
     const {
       className,
       center,
-    } = this.props
+      ... others } = this.props
 
     const navClassNames = classNames(
       "k-HorizontalNav", className,
@@ -68,8 +69,8 @@ export class HorizontalNav extends Component {
 HorizontalNav.defaultProps = {
   id: null,
   className: null,
-  elementClassName: null,
-  items: [],
   height: "auto",
   center: false,
+  elementClassName: null,
+  items: [],
 }
