@@ -45,7 +45,7 @@ export default class CarouselInner extends React.Component {
               style={{
                 ...styles.carouselPageContainer,
                 marginLeft: index ? itemMarginBetween : 0,
-                transform: `translateX(calc(-${indexPageVisible * 100}% - ${indexPageVisible * itemMarginBetween}px) )`,
+                transform: `translateX(-${indexPageVisible * 100}%) translateX(-${indexPageVisible * itemMarginBetween}px)`,
               }}
             >
               <CarouselPage
