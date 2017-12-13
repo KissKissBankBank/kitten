@@ -14,6 +14,7 @@
 /// - `.k-ButtonIcon--facebook`
 /// - `.k-ButtonIcon--twitter`
 /// - `.k-ButtonIcon--linkedin`
+/// - `.k-ButtonIcon--instagram`
 ///
 /// Available size modifiers:
 /// - `k-ButtonIcon--micro`
@@ -152,6 +153,11 @@
 
   .k-ButtonIcon--linkedin {
     @include k-buttonColors('linkedin');
+  }
+
+  .k-ButtonIcon--instagram {
+    @include k-buttonPadding($button-size-with-border, $icon-width, $icon-height);
+    @include k-buttonColors('instagram');
   }
 
   // Sizes modifiers.
