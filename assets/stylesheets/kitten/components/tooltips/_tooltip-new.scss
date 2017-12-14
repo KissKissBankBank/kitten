@@ -23,11 +23,11 @@
   $font-size: -1; // 14px
   $line-height: 1.25;
 
-  $border-size: 2px;
+  $border-size: k-px-to-rem(2px);
 
   $arrow-size: k-px-to-rem(8px);
 
-  $tooltip-padding: 20px - $border-size;
+  $tooltip-padding: k-px-to-rem(20px) - $border-size;
 
   .k-TooltipNew {
     @include k-typographyFont($font);

@@ -54,7 +54,7 @@
     max-width: k-px-to-rem(340px) !important;
     // ReactTooltip forces a default `border-radius: 3px`, we have to set it
     // to 0px.
-    border-radius: k-px-to-rem(0px) !important;
+    border-radius: 0 !important;
 
     &.place-top {
       margin-bottom: $tooltip-margin !important;
