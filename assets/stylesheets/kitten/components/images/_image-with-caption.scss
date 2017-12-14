@@ -1,0 +1,16 @@
+@mixin k-ImageWithCaption {
+  .k-ImageWithCaption {
+    position: relative;
+  }
+
+  .k-ImageWithCaption__caption {
+    position: absolute;
+    background-color: white;
+    bottom: 0;
+    right: 0;
+  }
+
+  .k-ImageWithCaption__img {
+    width: 100%;
+  }
+}

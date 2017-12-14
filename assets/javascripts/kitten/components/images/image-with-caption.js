@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import classNames from 'classnames'
 import { Text } from 'kitten/components/typography/text'
 
-export class ImageWithLegend extends Component {
+export class ImageWithCaption extends Component {
   render() {
     const {
     children,
@@ -11,8 +11,11 @@ export class ImageWithLegend extends Component {
     ...others } = this.props
 
     return (
-      <figure className="k-ImageWithLegend">
-        <figcaption className="k-ImageWithLegend__legend">
+      <figure className="k-ImageWithCaption">
+        <img
+          src="https://pixabay.com/photo-1435590/"
+        />
+        <figcaption className="k-ImageWithCaption__caption">
           <Text
             size="default"
             color="font-1"
@@ -25,6 +28,6 @@ export class ImageWithLegend extends Component {
   }
 }
 
-ImageWithLegend.defaultProps = {
+ImageWithCaption.defaultProps = {
   text: "Hello word",
 }
