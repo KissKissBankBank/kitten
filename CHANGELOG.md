@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Update `LinkBox` and `InformationBox` components with new design
   styleguide V2.
+- Feature: Update `:focus` `border-color` on `TextInput` component.
 - Feature: Update `Checkbox` and `RadioButton` components with new design
   styleguide V2.
 - Feature: Add `instagram` modifier in `ButtonIcon` component,
