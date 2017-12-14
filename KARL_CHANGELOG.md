@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Create `KarlStrokeSmall` example.
+- Feature: Create `KarlHorizontalStroke` example.
 
 ## [16.3.1] - 2017-11-28
 

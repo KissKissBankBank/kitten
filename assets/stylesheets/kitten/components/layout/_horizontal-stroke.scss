@@ -1,18 +1,18 @@
-/// Display a stroke small
+/// Display a horizontal stroke
 ///
 /// @group layout
 ///
 /// @example scss - Usage
 ///
-///   @include k-StrokeSmall;
+///   @include k-HorizontalStroke;
 ///
 /// @example html
 ///
-///   <span class="k-StrokeSmall" />
+///   <span class="k-HorizontalStroke" />
 
-@mixin k-StrokeSmall {
-  .k-StrokeSmall {
-    @include k-strokeSmallBase;
+@mixin k-HorizontalStroke {
+  .k-HorizontalStroke {
+    @include k-horizontalStrokeBase;
 
     display: block;
     border: none;
@@ -22,17 +22,17 @@
     width: k-px-to-rem(30px);
   }
 
-  .k-StrokeSmall--tiny {
+  .k-HorizontalStroke--tiny {
     height: k-px-to-rem(2px);
     width: k-px-to-rem(20px);
   }
 
-  .k-StrokeSmall--medium {
+  .k-HorizontalStroke--medium {
     height: k-px-to-rem(4px);
     width: k-px-to-rem(50px);
   }
 
-  .k-StrokeSmall--big {
+  .k-HorizontalStroke--big {
     height: k-px-to-rem(6px);
     width: k-px-to-rem(100px);
   }

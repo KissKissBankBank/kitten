@@ -1,23 +1,23 @@
-/// Apply stroke small basic display.
+/// Apply horizontal stroke basic display.
 ///
 /// @group stroke-small
 ///
 /// @example scss - Usage
-///   .k-MyStrokeSmall {
-///     @include strokeSmallBase;
+///   .k-MyHorizontalStroke {
+///     @include horizontalStrokeBase;
 ///   }
 ///
 /// @example css - CSS output
 ///
 /// @example html
-///   .k-MyStrokeSmall {
+///   .k-MyHorizontalStroke {
 ///     margin-top: 20px;
 ///     margin-bottom: 30px;
 ///     border: none;
 ///     background-color: map-get($k-colors, 'font-1');
 ///   }
 
-@mixin k-strokeSmallBase {
+@mixin k-horizontalStrokeBase {
   margin-top: k-px-to-rem(20px);
   margin-bottom: k-px-to-rem(30px);
 }

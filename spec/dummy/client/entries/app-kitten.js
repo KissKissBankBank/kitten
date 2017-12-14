@@ -165,14 +165,14 @@ import { PhoneIllustration }
 import { KarlImageCropper } from 'kitten/karl/images/image-cropper'
 
 // Layout
+import { HorizontalStroke } from 'kitten/components/layout/horizontal-stroke'
 import { Separator } from 'kitten/components/layout/separator'
-import { StrokeSmall } from 'kitten/components/layout/stroke-small'
 import {
   KarlLineWithBigHeart,
   KarlLineWithTooltip,
 } from 'kitten/karl/layout/line'
+import { KarlHorizontalStroke } from 'kitten/karl/layout/horizontal-stroke'
 import { KarlSeparator } from 'kitten/karl/layout/separator'
-import { KarlStrokeSmall } from 'kitten/karl/layout/stroke-small'
 
 // Lines
 import { InfoLines } from 'kitten/components/lines/info-lines'
@@ -413,12 +413,12 @@ ReactOnRails.register({
   KarlImageCropper,
 
   // Layout
+  HorizontalStroke,
   Separator,
-  StrokeSmall,
   KarlLineWithBigHeart,
   KarlLineWithTooltip,
   KarlSeparator,
-  KarlStrokeSmall,
+  KarlHorizontalStroke,
 
   // Lines
   InfoLines,

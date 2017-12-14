@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Create `StrokeSmall` component.
+- Feature: Create `HorizontalStroke` component.
 - Fix: Update ruby version.
 - Feature: Remove `boron` buttons colors.
 - Feature: Update colors.
