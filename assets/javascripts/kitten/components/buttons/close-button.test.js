@@ -9,7 +9,7 @@ describe('<CloseButton />', () => {
   describe('by default', () => {
     const closeButton = shallow(<CloseButton />)
 
-    it('is a <ButtonIcon />', () => {
+    it('is a <Button />', () => {
       expect(closeButton).to.have.tagName('button')
     })
 
