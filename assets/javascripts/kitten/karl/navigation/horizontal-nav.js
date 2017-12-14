@@ -31,7 +31,7 @@ export const KarlHorizontalNavBrowsing = props => {
     <Row style={ rowStyles }>
       <HorizontalNav
         items={ horizontalNavItems }
-        height="100px"
+        height="96px"
         center
       />
     </Row>
