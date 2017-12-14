@@ -25,6 +25,16 @@ describe('<HorizontalNav />', () => {
     expect(component.find('.k-HorizontalNav__item')).to.have.length(4)
   })
 
+  describe('center props', () => {
+    const component = shallow(
+      <HorizontalNav center />
+    )
+
+    it('renders a className', () => {
+      expect(component).to.have.className('k-HorizontalNav--center')
+    })
+  })
+
   describe('with custom classes/id', () => {
     const component = shallow(
       <HorizontalNav

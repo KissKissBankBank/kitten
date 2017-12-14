@@ -24,7 +24,10 @@ export class TabBar extends Component {
 
     return (
       <li key={ key }>
-        <a className={ itemClassName } { ...linkProps }>
+        <a
+          className={ itemClassName }
+          { ...linkProps }
+        >
           <Markdown softBreak="br" source={ text } />
         </a>
       </li>
@@ -38,8 +41,10 @@ export class TabBar extends Component {
         className={ classNames("k-TabBar", this.props.className) }
       >
         <nav className={ classNames("k-TabBar__nav", this.props.navClassName) }>
-          <ul className={ classNames("k-TabBar__list",
-                                     this.props.listClassName) }>
+          <ul
+            className={ classNames("k-TabBar__list",
+                                   this.props.listClassName) }
+          >
             { this.renderItems() }
           </ul>
         </nav>
