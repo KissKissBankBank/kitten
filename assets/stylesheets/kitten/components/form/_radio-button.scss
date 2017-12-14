@@ -34,15 +34,19 @@
 
   $line-height: normal;
 
+  $border-size: k-px-to-rem(2px);
+
   // Error
   $error-color: map-get($k-colors, 'error');
+  $error-border-color: map-get($k-colors, 'error-3');
+
 
   // Colors
   $background-color: map-get($k-colors, 'background-1');
   $checked-background-color: map-get($k-colors, 'primary-1');
   $active-background-color: map-get($k-colors, 'primary-3');
   $disabled-background-color: map-get($k-colors, 'line-1');
-  $border-color: map-get($k-colors, 'line-2');
+  $border-color: map-get($k-colors, 'line-1');
   $border-color-hover: map-get($k-colors, 'primary-1');
 
   // Background-image
@@ -81,7 +85,7 @@
 
       content: '';
       background-color: $background-color;
-      border: k-px-to-rem(1px) solid $border-color;
+      border: $border-size solid $border-color;
       border-radius: $border-radius;
 
       transition: border $transition-duration;
@@ -107,7 +111,7 @@
                   no-repeat
                   center center;
       background-size: $background-size;
-      border: k-px-to-rem(1px) solid $checked-background-color;
+      border: $border-size solid $checked-background-color;
     }
 
     .k-RadioButton__input:checked:disabled + &:before {
@@ -124,10 +128,10 @@
     }
 
     .k-RadioButton__input.is-error + & {
-      border-color: $error-color;
+      border-color: $error-border-color;
 
       &:before {
-        border-color: $error-color;
+        border-color: $error-border-color;
       }
     }
 
@@ -143,7 +147,7 @@
                   no-repeat
                   center center;
       background-size: $background-size;
-      border: k-px-to-rem(1px) solid $error-color;
+      border: $border-size solid $error-color;
     }
   }
 
