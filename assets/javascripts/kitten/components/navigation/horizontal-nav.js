@@ -14,7 +14,8 @@ export class HorizontalNav extends Component {
       className,
       selected,
       text,
-      ...others } = item
+      ...others
+    } = item
 
     const itemClassName = classNames(
       "k-HorizontalNav__item",
@@ -46,7 +47,8 @@ export class HorizontalNav extends Component {
     const {
       className,
       center,
-      ... others } = this.props
+      ...others
+    } = this.props
 
     const navClassNames = classNames(
       "k-HorizontalNav", className,

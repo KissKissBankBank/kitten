@@ -14,7 +14,8 @@ export class TabBar extends Component {
       className,
       selected,
       text,
-       ...linkProps } = item
+       ...linkProps
+    } = item
 
     const itemClassName = classNames(
       "k-TabBar__item",
