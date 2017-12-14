@@ -28,7 +28,7 @@
 
   $arrow-size: k-px-to-rem(8px);
 
-  $padding-tooltip: k-px-to-rem(20px) - $border-size;
+  $tooltip-padding: k-px-to-rem(20px) - $border-size;
 
   .k-StaticTooltip {
     display: flex;
@@ -46,7 +46,7 @@
       $line-height
     );
 
-    padding: $padding-tooltip;
+    padding: $tooltip-padding;
     margin-top: $arrow-size;
     position: relative;
 

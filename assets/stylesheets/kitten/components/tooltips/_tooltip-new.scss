@@ -27,7 +27,7 @@
 
   $arrow-size: k-px-to-rem(8px);
 
-  $padding-tooltip: 20px - $border-size;
+  $tooltip-padding: 20px - $border-size;
 
   .k-TooltipNew {
     @include k-typographyFont($font);
@@ -37,8 +37,8 @@
     );
 
     position: absolute;
-    padding-right: $padding-tooltip;
-    padding-left: $padding-tooltip;
+    padding-right: $tooltip-padding;
+    padding-left: $tooltip-padding;
 
     background-color: $background-color-helium;
     border: $border-size solid $border-color-helium;

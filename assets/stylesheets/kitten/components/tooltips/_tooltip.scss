@@ -33,7 +33,7 @@
   // DEPRECATED
   $tooltip-margin: k-px-to-rem(18px);
 
-  $padding-tooltip: k-px-to-rem(20px);
+  $tooltip-padding: k-px-to-rem(20px);
 
   // To override __react_component_tooltip style.
   .k-Tooltip .k-Tooltip__content {
@@ -49,10 +49,10 @@
     color: $color-helium !important;
     opacity: 1 !important;
 
-    padding: $padding-tooltip !important;
+    padding: $tooltip-padding !important;
 
     max-width: k-px-to-rem(340px) !important;
-    // ReactTooltip forced a default `border-radius: 3px`, we have to set it
+    // ReactTooltip forces a default `border-radius: 3px`, we have to set it
     // to 0px.
     border-radius: k-px-to-rem(0px) !important;
 
