@@ -1,24 +1,37 @@
-import React from 'react'
+import React, { Component } from 'react'
 import classNames from 'classnames'
+import PropTypes from 'prop-types'
 
-export const HorizontalStroke  = ({ tiny, medium, big, className, ... props }) => {
-  const horizontalStrokeClassName = classNames(
-    'k-HorizontalStroke ',
-    {
-      'k-HorizontalStroke--tiny': tiny,
-      'k-HorizontalStroke--medium': medium,
-      'k-HorizontalStroke--big': big,
-    },
-    className
-  )
+export class HorizontalStroke extends Component {
+  render() {
+    const {
+      className,
+      size,
+      ...others,
+    } = this.props
 
-  return (
-    <span className={ horizontalStrokeClassName } { ...props } />
-  )
+    const horizontalStrokeClassName = classNames(
+      'k-HorizontalStroke ',
+      {
+        'k-HorizontalStroke--tiny': size == 'tiny',
+        'k-HorizontalStroke--medium': size == 'medium',
+        'k-HorizontalStroke--big': size == 'big',
+      },
+      className,
+    )
+
+    return (
+      <span className={ horizontalStrokeClassName } { ...others } />
+    )
+  }
+}
+
+HorizontalStroke.propTypes = {
+  size: PropTypes.oneOf(['tiny', 'medium', 'big'])
 }
 
 HorizontalStroke .defaultProps = {
-  tiny: false,
-  medium: false,
-  big: false,
+  tiny: null,
+  medium: null,
+  big: null,
 }
