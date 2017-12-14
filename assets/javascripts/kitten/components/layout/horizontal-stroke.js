@@ -2,7 +2,7 @@ import React from 'react'
 import classNames from 'classnames'
 
 export const HorizontalStroke  = ({ tiny, medium, big, className, ... props }) => {
-  const horizontalstrokeClassName = classNames(
+  const horizontalStrokeClassName = classNames(
     'k-HorizontalStroke ',
     {
       'k-HorizontalStroke--tiny': tiny,
