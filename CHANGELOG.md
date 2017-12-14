@@ -5,6 +5,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Update `Tooltip`, `TooltipNew` and `StaticTooltip` components with styleguide V2.
+- Feature: Update `:focus` `border-color` on `TextInput` component.
+- Feature: Update `Checkbox` and `RadioButton` components with new design
+  styleguide V2.
+- Feature: Add `instagram` modifier in `ButtonIcon` component,
+  `InstagramButtonIcon` and `InstagramIcon` components.
 - Feature: Add `disabled` prop on `TextInputWithButton`.
 - Feature: Update all `Input` components with new design styleguide V2.
 - Feature: Update `k-buttonRounded` helper to manage button radius.
