@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { createMatchMediaMax } from 'kitten/helpers/utils/media-queries'
+import { createMatchMedia, createMatchMediaMax } from 'kitten/helpers/utils/media-queries'
 import { SCREEN_SIZE_XS, SCREEN_SIZE_M } from 'kitten/constants/screen-config'
 import { CONTAINER_PADDING, CONTAINER_PADDING_MOBILE } from 'kitten/constants/grid-config'
 
@@ -9,6 +9,9 @@ import { ButtonIcon } from 'kitten/components/buttons/button-icon'
 import { ArrowIcon } from 'kitten/components/icons/arrow-icon'
 
 import CarouselInner from 'kitten/components/carousel/carousel-inner'
+
+const mqPointerCoarse = createMatchMedia('(pointer: coarse)')
+const pointerIsCoarse = mqPointerCoarse ? mqPointerCoarse.matches : false
 
 const getNumColumnsForWidth = (width, itemMinWidth, itemMarginBetween) => {
   const remainingWidthWithOneCard = (width - itemMinWidth)
@@ -108,6 +111,7 @@ export default class Carousel extends React.Component {
         numPages={numPages}
         itemMarginBetween={itemMarginBetween}
         siblingPageVisible={viewportIsTabletteOrLess}
+        pointerIsCoarse={pointerIsCoarse}
         onResizeInner={this.onResizeInner}
       />
     )
@@ -118,7 +122,7 @@ export default class Carousel extends React.Component {
     const { indexPageVisible, numPages, viewportIsTabletteOrLess, viewportIsMobile } = this.state
     const itemMarginBetween = getMarginBetweenAccordingToViewport(baseItemMarginBetween, viewportIsMobile, viewportIsTabletteOrLess)
 
-    if(numPages <= 1) {
+    if(numPages <= 1 || pointerIsCoarse) {
       return
     }
 

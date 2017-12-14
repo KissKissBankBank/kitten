@@ -25,28 +25,30 @@ export default class CarouselInner extends React.Component {
   }
 
   render() {
-    const { data, itemMinWidth, renderItem, indexPageVisible, numColumns, numPages, itemMarginBetween, siblingPageVisible } = this.props
+    const {
+      data,
+      itemMinWidth,
+      renderItem,
+      indexPageVisible,
+      numColumns,
+      numPages,
+      itemMarginBetween,
+      siblingPageVisible,
+      pointerIsCoarse,
+    } = this.props
 
     const rangePage = [...Array(numPages).keys()]
 
     return (
       <div
         ref="carouselInner"
-        style={{
-          ...styles.carouselInner,
-          paddingLeft: siblingPageVisible ? (itemMarginBetween * 2) : 0,
-          paddingRight: siblingPageVisible ? (itemMarginBetween * 2) : 0,
-        }}
+        style={getStyleInner(itemMarginBetween, siblingPageVisible, pointerIsCoarse)}
       >
         {
           rangePage.map((index) =>
             <div
               key={index}
-              style={{
-                ...styles.carouselPageContainer,
-                marginLeft: index ? itemMarginBetween : 0,
-                transform: `translateX(-${indexPageVisible * 100}%) translateX(-${indexPageVisible * itemMarginBetween}px)`,
-              }}
+              style={getStylePageContainer(index, itemMarginBetween, indexPageVisible, pointerIsCoarse)}
             >
               <CarouselPage
                 data={getDataForPage(data, index, numColumns)}
@@ -58,10 +60,36 @@ export default class CarouselInner extends React.Component {
             </div>
           )
         }
+        {
+          pointerIsCoarse &&
+            <div style={{ minWidth: (itemMarginBetween * 2) }} />
+        }
       </div>
     )
   }
+}
 
+const getStyleInner = (itemMarginBetween, siblingPageVisible, pointerIsCoarse) => {
+  return Object.assign(
+    {
+      paddingLeft: siblingPageVisible ? (itemMarginBetween * 2) : 0,
+      paddingRight: siblingPageVisible ? (itemMarginBetween * 2) : 0,
+    },
+    styles.carouselInner,
+    pointerIsCoarse && styles.carouselInnerScroll,
+  )
+}
+
+const getStylePageContainer = (index, itemMarginBetween, indexPageVisible, pointerIsCoarse) => {
+  return Object.assign(
+    {
+      marginLeft: index ? itemMarginBetween : 0,
+    },
+    styles.carouselPageContainer,
+    !pointerIsCoarse && {
+      transform: `translateX(-${indexPageVisible * 100}%) translateX(-${indexPageVisible * itemMarginBetween}px)`,
+    },
+  )
 }
 
 const styles = {
@@ -70,9 +98,15 @@ const styles = {
     flexDirect: 'row',
     overflowX: 'hidden',
   },
+  carouselInnerScroll: {
+    overflowX: 'scroll',
+    WebkitOverflowScrolling: 'touch',
+    scrollSnapType: 'mandatory',
+  },
   carouselPageContainer: {
     width: '100%',
     flexShrink: 0,
     transition: 'transform ease-in-out 600ms',
+    scrollSnapAlign: 'center',
   },
 }
