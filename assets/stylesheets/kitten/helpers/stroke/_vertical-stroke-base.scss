@@ -1,0 +1,23 @@
+/// Apply vertical stroke basic display.
+///
+/// @group stroke
+///
+/// @example scss - Usage
+///   .k-MyVerticalStroke {
+///     @include VerticalStrokeBase;
+///   }
+///
+/// @example css - CSS output
+///
+/// @example html
+///   .k-MyVerticalStroke {
+///     margin-top: 20px;
+///     margin-bottom: 30px;
+///     border: none;
+///     background-color: map-get($k-colors, 'font-1');
+///   }
+
+@mixin k-VerticalStrokeBase {
+  margin-top: k-px-to-rem(30px);
+  margin-bottom: k-px-to-rem(20px);
+}
