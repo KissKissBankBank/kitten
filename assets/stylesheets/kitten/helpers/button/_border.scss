@@ -1,4 +1,4 @@
-/// Set a border of 1px on a button.
+/// Set a border of 2px on a button.
 ///
 /// Given a border color, this mixin will use the passed color to set the
 /// `border` CSS rule. If the color is not `null`, it will use the color passed
@@ -12,10 +12,11 @@
 ///   @include k-buttonBorder(#eee);
 ///
 /// @example css - CSS output
-///   border: 1px solid #eee;
+///   border: 2px solid #eee;
 
 @mixin k-buttonBorder($border-color) {
-  $button-border-width: 1px;
+  // Border size
+  $button-border-width: 2px;
 
   $border-color: transparent !default; // Default value.
   $border-color: k-color-definition($border-color);
