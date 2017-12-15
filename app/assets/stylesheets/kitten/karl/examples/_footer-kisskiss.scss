@@ -1,0 +1,28 @@
+// .karl-FooterKisskiss {
+//   display: flex;
+// }
+
+.karl-FooterKisskiss__network {
+  padding: 50px 0;
+  background-color: map-get($k-colors, 'background-3');
+}
+
+.karl-FooterKisskiss--center {
+  align-self: center;
+}
+
+.karl-FooterKisskiss__network__logo {
+  @include k-media-min('l') {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+
+.karl-FooterKisskiss__background {
+  background-color: map-get($k-colors, 'font-1');
+}
+
+.karl-FooterKisskiss__padding {
+  padding-top: 100px;
+}

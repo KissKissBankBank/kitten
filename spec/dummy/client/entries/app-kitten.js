@@ -64,6 +64,7 @@ import {
 
 // Footer
 import { KarlFooterLendo } from 'kitten/karl/footer/footer-lendo'
+import { KarlFooterKisskiss } from 'kitten/karl/footer/footer-kisskiss'
 
 // Form
 import { Checkbox } from 'kitten/components/form/checkbox'
@@ -325,6 +326,7 @@ ReactOnRails.register({
 
   // Footer
   KarlFooterLendo,
+  KarlFooterKisskiss,
 
   // Form
   Checkbox,
