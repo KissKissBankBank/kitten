@@ -3,31 +3,37 @@ import classNames from 'classnames'
 import { Text } from 'kitten/components/typography/text'
 
 export class ImageWithCaption extends Component {
-  render() {
+  renderCaption() {
     const {
-    children,
-    text,
-    className,
-    ...others } = this.props
+      children,
+      ...others
+    } = this.props
 
+    return (
+      <figcaption className="k-ImageWithCaption__caption">
+        <Text
+          size="default"
+          color="font-1"
+        >
+          { children }
+        </Text>
+      </figcaption>
+    )
+  }
+
+  render() {
     return (
       <figure className="k-ImageWithCaption">
         <img
-          src="https://pixabay.com/photo-1435590/"
+          src="https://placehold.it/300x400/4a84ff/4a84ff"
+          className="k-ImageWithCaption__img"
         />
-        <figcaption className="k-ImageWithCaption__caption">
-          <Text
-            size="default"
-            color="font-1"
-          >
-            { text }
-          </Text>
-        </figcaption>
+        { this.renderCaption() }
       </figure>
     )
   }
 }
 
 ImageWithCaption.defaultProps = {
-  text: "Hello word",
+  children: "Hello word",
 }

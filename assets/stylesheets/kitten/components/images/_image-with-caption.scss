@@ -1,16 +1,27 @@
+/// Image with caption styles
+///
+/// @example scss - Usage
+///
+///   @include k-ImageWithCaption;
+
 @mixin k-ImageWithCaption {
   .k-ImageWithCaption {
     position: relative;
+    margin: 0;
   }
 
   .k-ImageWithCaption__caption {
     position: absolute;
-    background-color: white;
     bottom: 0;
     right: 0;
+    padding: k-px-to-rem(25px) k-px-to-rem(30px) 0;
+    max-width: 65%;
+
+    background-color: map-get($k-colors, 'background-1');
   }
 
   .k-ImageWithCaption__img {
+    display: block;
     width: 100%;
   }
 }

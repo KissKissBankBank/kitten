@@ -162,7 +162,6 @@ import { PhoneIllustration }
   from 'kitten/components/illustrations/phone-illustration'
 
 // Images
-import { ImageWithCaption } from 'kitten/components/images/image-with-caption'
 import { KarlImageWithCaption } from 'kitten/karl/images/image-with-caption'
 import { KarlImageCropper } from 'kitten/karl/images/image-cropper'
 
@@ -410,7 +409,6 @@ ReactOnRails.register({
   PhoneIllustration,
 
   // Images
-  ImageWithCaption,
   KarlImageWithCaption,
   KarlImageCropper,
 
