@@ -12,7 +12,7 @@
 
 @mixin k-VerticalStroke {
   .k-VerticalStroke {
-    @include k-VerticalStrokeBase;
+    @include k-verticalStrokeBase;
 
     display: block;
     border: none;
