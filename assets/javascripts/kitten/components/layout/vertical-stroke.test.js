@@ -1,7 +1,7 @@
 import React from 'react'
 import { expect } from 'chai'
 import { shallow } from 'enzyme'
-import { VerticalStroke } from 'kitten/components/layout/Vertical-stroke'
+import { VerticalStroke } from 'kitten/components/layout/vertical-stroke'
 
 describe('<VerticalStroke />', () => {
   describe('by default', () => {
