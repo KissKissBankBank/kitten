@@ -17,7 +17,7 @@
 ///     background-color: map-get($k-colors, 'font-1');
 ///   }
 
-@mixin k-HorizontalStrokeBase {
+@mixin k-horizontalStrokeBase {
   margin-top: k-px-to-rem(20px);
   margin-bottom: k-px-to-rem(30px);
 }
