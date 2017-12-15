@@ -11,12 +11,7 @@ export class ImageWithCaption extends Component {
 
     return (
       <figcaption className="k-ImageWithCaption__caption">
-        <Text
-          size="default"
-          color="font-1"
-        >
-          { children }
-        </Text>
+        { children }
       </figcaption>
     )
   }
@@ -35,5 +30,5 @@ export class ImageWithCaption extends Component {
 }
 
 ImageWithCaption.defaultProps = {
-  children: "Hello word",
+  children: "Lorem ipsum dolor",
 }

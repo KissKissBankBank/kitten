@@ -14,9 +14,9 @@
     position: absolute;
     bottom: 0;
     right: 0;
+
     padding: k-px-to-rem(25px) k-px-to-rem(30px) 0;
     max-width: 65%;
-
     background-color: map-get($k-colors, 'background-1');
   }
 
