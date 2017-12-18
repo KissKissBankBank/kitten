@@ -101,8 +101,6 @@ export default class Carousel extends React.Component {
     const { indexPageVisible, numColumns, numPages, viewportIsMobile, viewportIsTabletOrLess } = this.state
     const itemMarginBetween = getMarginBetweenAccordingToViewport(baseItemMarginBetween, viewportIsMobile, viewportIsTabletOrLess)
 
-    const rangePage = [...Array(numPages).keys()]
-
     return (
       <CarouselInner
         data={data}

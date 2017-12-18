@@ -1,10 +1,11 @@
 import React from 'react'
+import { createRangeFromZeroTo } from 'kitten/helpers/utils/range'
 
 export default class CarouselPage extends React.Component {
 
   render() {
     const { data, numColumns, itemMinWidth, itemMarginBetween, renderItem } = this.props
-    const rangeCard = [...Array(numColumns).keys()]
+    const rangeCard = createRangeFromZeroTo(numColumns)
 
     return (
       <div style={styles.page}>

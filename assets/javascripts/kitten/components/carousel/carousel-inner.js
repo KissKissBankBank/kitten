@@ -6,6 +6,7 @@ if(typeof window !== 'undefined') {
   require('smoothscroll-polyfill').polyfill()
 }
 
+import { createRangeFromZeroTo } from 'kitten/helpers/utils/range'
 import { cssSupports } from 'kitten/helpers/utils/feature-detection'
 
 import CarouselPage from 'kitten/components/carousel/carousel-page'
@@ -125,7 +126,7 @@ export default class CarouselInner extends React.Component {
       siblingPageVisible,
     } = this.props
 
-    const rangePage = [...Array(numPages).keys()]
+    const rangePage = createRangeFromZeroTo(numPages)
 
     return (
       <div
