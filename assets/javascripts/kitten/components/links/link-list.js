@@ -13,11 +13,19 @@ export class LinkList extends Component {
   }
 
   renderItem(element) {
-    const { key, item, href, active } = element
+    const {
+      key,
+      item,
+      href,
+      active,
+    } = element
+
+    const { color } = this.props
 
     const linkListClassName = classNames(
       'k-LinkList__link',
       {
+        [`k-LinkList__link--${color}`]: color,
         'is-active': active,
       },
     )
@@ -65,4 +73,5 @@ LinkList.defaultProps = {
   className: null,
   margin: true,
   items: [], // Eg: [{ key: …, item: …, href: … }]
+  color: "lightBackground",
 }
