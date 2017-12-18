@@ -68,6 +68,7 @@
     "react-select": "^1.0.0",
     "react-tooltip": "^3.2.2",
     "resize-observer-polyfill": "^1.5.0",
+    "smoothscroll-polyfill": "^0.4.0",
     "susy": "^2.2.12",
     "webpack": "^2.5.1"
   },

@@ -1,6 +1,10 @@
 import React from 'react'
 import ResizeObserver from 'resize-observer-polyfill'
 
+if(typeof window !== 'undefined') {
+  require('smoothscroll-polyfill').polyfill()
+}
+
 import { cssSupports } from 'kitten/helpers/utils/feature-detection'
 
 import CarouselPage from 'kitten/components/carousel/carousel-page'
@@ -86,8 +90,8 @@ export default class CarouselInner extends React.Component {
     } else {
       // if the user doesn't scroll enought to change page
       // we need to scroll back to the fake snap page
-      if(/*supportScrollSmooth && */ closest !== scrollLeft) {
-        target.scrollTo(closest, 0)
+      if(closest !== scrollLeft) {
+        target.scrollTo({ top: 0, left: closest, behavior: 'smooth' })
       }
     }
 
@@ -103,8 +107,8 @@ export default class CarouselInner extends React.Component {
 
     const closest = rangePageScrollLeft[indexPageToScroll]
 
-    if(/*supportScrollSmooth && */closest !== scrollLeft) {
-      target.scrollTo(closest, 0)
+    if(closest !== scrollLeft) {
+      target.scrollTo({ top: 0, left: closest, behavior: 'smooth' })
     }
   }
 
@@ -127,7 +131,7 @@ export default class CarouselInner extends React.Component {
         ref="carouselInner"
         className="k-CarouselInner"
         style={getStyleInner(itemMarginBetween, siblingPageVisible)}
-        onScroll={/*supportScrollSmooth && */this.handleInnerScroll}
+        onScroll={this.handleInnerScroll}
       >
         {
           rangePage.map((index) =>
