@@ -3,13 +3,7 @@
 /// @group links
 ///
 /// @example scss - usage
-///   @include k-LinkList((
-///     colors: (
-///       link: black,
-///       link-active: grey,
-///       link-hover: blue,
-///     ),
-///   ));
+///   @include k-LinkList;
 ///
 /// @example html
 ///   <ul class="k-LinkList">
@@ -21,10 +15,17 @@
 ///      </li>
 ///   </ul>
 
-@mixin k-LinkList($link-list) {
-  $link-color: k-default(map-get-deep($link-list, ('colors', 'link')), inherit);
-  $active-color: map-get-deep($link-list, ('colors', 'link-active'));
-  $hover-color: map-get-deep($link-list, ('colors', 'link-hover'));
+@mixin k-LinkList {
+  $font: 'regular';
+  $font-size: -1;
+
+  // With light backgroundColor
+  $link-color: map-get($k-colors, 'font-1');
+  $active-color: map-get($k-colors, 'primary-3');
+  $hover-color: map-get($k-colors, 'primary-1');
+
+  // With dark backgroundColor
+  $dark-link-color: map-get($k-colors, 'background-1');
 
   .k-LinkList {
     // override ul defaults
@@ -42,12 +43,10 @@
   }
 
   .k-LinkList__link {
-    @include k-typographyFont('light');
-    @include k-typographyFontSize(2);
+    @include k-typographyFont($font);
+    @include k-typographyFontSize($font-size);
 
     text-decoration: none;
-
-    color: $link-color;
 
     &:active,
     &.is-active {
@@ -59,6 +58,14 @@
     }
 
     transition: color .2s;
+  }
+
+  .k-LinkList__link--lightBackground {
+    color: $link-color;
+  }
+
+  .k-LinkList__link--darkBackground {
+    color: $dark-link-color;
   }
 
   .k-LinkList--withoutMargin {
