@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { Component } from 'react'
 import classNames from 'classnames'
 import { stringUtils } from 'kitten/helpers/utils/string'
 
-export class SideGrid extends React.Component {
+export class SideGrid extends Component {
   render() {
     const { className, containerClassName, rowClassName } = this.props
     let { asidePosition, asideSize } = this.props
@@ -30,7 +30,7 @@ export class SideGrid extends React.Component {
   }
 }
 
-export class SideGridContent extends React.Component {
+export class SideGridContent extends Component {
   render() {
     return (
       <div className={ classNames('k-SideGrid__content',
@@ -41,7 +41,7 @@ export class SideGridContent extends React.Component {
   }
 }
 
-export class SideGridAside extends React.Component {
+export class SideGridAside extends Component {
   render() {
     return (
       <div className={ classNames('k-SideGrid__aside', this.props.className) }>

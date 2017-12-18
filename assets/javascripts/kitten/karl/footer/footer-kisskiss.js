@@ -19,10 +19,13 @@ import { LinkList } from 'kitten/components/links/link-list'
 export class KarlFooterKisskiss extends Component {
   renderNetwork() {
     return (
-      <Row>
+      <Row style= { {
+        background:'linear-gradient(to right, #f6f6f6 0%, #f6f6f6 50%, #fff 50%, #fff 100%)'
+        } }
+      >
         <Grid>
           <GridCol col-m="6" col-l="9">
-            <div className="karl-FooterKisskiss__network">
+            <div className="karl-FooterKisskiss__newsletter">
               <Grid>
                 <GridCol
                   col-m="12"
@@ -54,10 +57,13 @@ export class KarlFooterKisskiss extends Component {
           <GridCol
             col-m="6"
             col-l="3"
-            className="k-u-margin-top-triple@s-down karl-FooterKisskiss--center k-u-blockAlign-right"
+            className="k-u-margin-top-triple@s-down karl-FooterKisskiss--center"
           >
             <div className="karl-FooterKisskiss__network__logo">
-              <div className="k-u-blockAlign-center">
+              <div style= {{ alignSelf: 'center',
+                             marginRight: '15px',
+                }}
+              >
                 <Text
                   size="tiny"
                   weight="regular"
@@ -113,7 +119,7 @@ export class KarlFooterKisskiss extends Component {
     ]
 
     return (
-      <Row className="karl-FooterKisskiss__background">
+      <Row style= {{ background: '#222' }}>
         <Grid>
           <GridCol
             col-l="2"
@@ -130,6 +136,44 @@ export class KarlFooterKisskiss extends Component {
               />
             </div>
           </GridCol>
+
+          <GridCol col-l="10">
+              <Grid>
+                <GridCol
+                  col-m="3"
+                  col-l="3"
+                  className="k-u-margin-bottom-triple@s-down"
+                >
+                  <LinkList
+                    margin={ false }
+                    items={ items }
+                    className= "karl-FooterKissKiss__linkList"
+                  />
+                </GridCol>
+
+                <GridCol
+                  col-m="3"
+                  col-l="3"
+                  className="k-u-margin-bottom-triple@s-down"
+                >
+                  <LinkList
+                    margin={ false }
+                    items={ items2 }
+                  />
+                </GridCol>
+
+                <GridCol
+                  col-m="3"
+                  col-l="3"
+                  className="k-u-margin-bottom-triple@s-down"
+                >
+                  <LinkList
+                    margin={ false }
+                    items={ items3 }
+                  />
+                </GridCol>
+              </Grid>
+            </GridCol>
         </Grid>
       </Row>
     )
