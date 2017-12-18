@@ -1,4 +1,5 @@
 import React from 'react'
+import { StyleSheet, css } from 'aphrodite'
 import { createRangeFromZeroTo } from 'kitten/helpers/utils/range'
 
 export default class CarouselPage extends React.Component {
@@ -8,13 +9,13 @@ export default class CarouselPage extends React.Component {
     const rangeCard = createRangeFromZeroTo(numColumns)
 
     return (
-      <div style={styles.page}>
+      <div className={css(styles.page)}>
         {
           rangeCard.map((index) =>
             <div
               key={index}
+              className={css(styles.item)}
               style={{
-                ...styles.item,
                 minWidth: itemMinWidth,
                 flexBasis: itemMinWidth,
                 marginLeft: index ? itemMarginBetween : 0
@@ -32,7 +33,7 @@ export default class CarouselPage extends React.Component {
   }
 }
 
-const styles = {
+const styles = StyleSheet.create({
   page: {
     display: 'flex',
     flexDirect: 'row',
@@ -41,4 +42,4 @@ const styles = {
     flexGrow: 1,
     flexShrink: 1,
   },
-}
+})

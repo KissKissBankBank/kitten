@@ -1,6 +1,7 @@
 import React from 'react'
+import { StyleSheet, css } from 'aphrodite'
+import classNames from 'classnames'
 import ResizeObserver from 'resize-observer-polyfill'
-import objectAssign from 'core-js/library/fn/object/assign'
 
 if(typeof window !== 'undefined') {
   require('smoothscroll-polyfill').polyfill()
@@ -131,15 +132,24 @@ export default class CarouselInner extends React.Component {
     return (
       <div
         ref="carouselInner"
-        className="k-CarouselInner"
-        style={getStyleInner(itemMarginBetween, siblingPageVisible)}
+        className={classNames(
+          'k-CarouselInner',
+          css(styles.carouselInner),
+        )}
+        style={{
+          paddingLeft: siblingPageVisible ? (itemMarginBetween * 2) : 0,
+          paddingRight: siblingPageVisible ? (itemMarginBetween * 2) : 0,
+        }}
         onScroll={this.handleInnerScroll}
       >
         {
           rangePage.map((index) =>
             <div
               key={index}
-              style={getStylePageContainer(index, itemMarginBetween, indexPageVisible)}
+              className={css(styles.carouselPageContainer)}
+              style={{
+                marginLeft: index ? itemMarginBetween : 0,
+              }}
             >
               <CarouselPage
                 data={getDataForPage(data, index, numColumns)}
@@ -160,27 +170,7 @@ export default class CarouselInner extends React.Component {
   }
 }
 
-const getStyleInner = (itemMarginBetween, siblingPageVisible) => {
-  return objectAssign(
-    {
-      paddingLeft: siblingPageVisible ? (itemMarginBetween * 2) : 0,
-      paddingRight: siblingPageVisible ? (itemMarginBetween * 2) : 0,
-    },
-    styles.carouselInner,
-    styles.carouselInnerScroll,
-  )
-}
-
-const getStylePageContainer = (index, itemMarginBetween, indexPageVisible) => {
-  return objectAssign(
-    {
-      marginLeft: index ? itemMarginBetween : 0,
-    },
-    styles.carouselPageContainer,
-  )
-}
-
-const styles = {
+const styles = StyleSheet.create({
   carouselInner: {
     display: 'flex',
     flexDirect: 'row',
@@ -194,4 +184,4 @@ const styles = {
     flexShrink: 0,
     scrollSnapAlign: 'center',
   },
-}
+})
