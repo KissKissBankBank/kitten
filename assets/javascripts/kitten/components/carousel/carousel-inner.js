@@ -125,6 +125,7 @@ export default class CarouselInner extends React.Component {
     return (
       <div
         ref="carouselInner"
+        className="k-CarouselInner"
         style={getStyleInner(itemMarginBetween, siblingPageVisible)}
         onScroll={/*supportScrollSmooth && */this.handleInnerScroll}
       >
@@ -185,7 +186,6 @@ const styles = {
   carouselPageContainer: {
     width: '100%',
     flexShrink: 0,
-    transition: 'transform ease-in-out 600ms',
     scrollSnapAlign: 'center',
   },
 }
