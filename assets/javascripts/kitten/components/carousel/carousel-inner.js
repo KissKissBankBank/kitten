@@ -1,5 +1,6 @@
 import React from 'react'
 import ResizeObserver from 'resize-observer-polyfill'
+import objectAssign from 'core-js/library/fn/object/assign'
 
 if(typeof window !== 'undefined') {
   require('smoothscroll-polyfill').polyfill()
@@ -159,7 +160,7 @@ export default class CarouselInner extends React.Component {
 }
 
 const getStyleInner = (itemMarginBetween, siblingPageVisible) => {
-  return Object.assign(
+  return objectAssign(
     {
       paddingLeft: siblingPageVisible ? (itemMarginBetween * 2) : 0,
       paddingRight: siblingPageVisible ? (itemMarginBetween * 2) : 0,
@@ -170,7 +171,7 @@ const getStyleInner = (itemMarginBetween, siblingPageVisible) => {
 }
 
 const getStylePageContainer = (index, itemMarginBetween, indexPageVisible) => {
-  return Object.assign(
+  return objectAssign(
     {
       marginLeft: index ? itemMarginBetween : 0,
     },

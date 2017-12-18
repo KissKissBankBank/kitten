@@ -1,4 +1,5 @@
 import React from 'react'
+import objectAssign from 'core-js/library/fn/object/assign'
 
 import { createMatchMedia, createMatchMediaMax } from 'kitten/helpers/utils/media-queries'
 import { SCREEN_SIZE_XS, SCREEN_SIZE_M } from 'kitten/constants/screen-config'
@@ -129,7 +130,7 @@ export default class Carousel extends React.Component {
 
     return (
       <div
-        style={Object.assign(
+        style={objectAssign(
           {
             marginTop: viewportIsTabletOrLess ? itemMarginBetween : 0,
             marginLeft: viewportIsTabletOrLess ? (itemMarginBetween * 2) : 0,
