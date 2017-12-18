@@ -26,7 +26,9 @@ const scrollStop = ( callback ) => {
         // Run the callback
         callback(target)
       },
-      66
+      // wait more for scrollStop if browser support snap
+      // because of the momentum on ios
+      supportScrollSnap ? 132 : 66
     )
   }
 }
@@ -39,6 +41,13 @@ const getClosest = (counts, goal) => {
 const getDataForPage = (data, indexPage, numColumns) => {
   const startIndex = indexPage * numColumns
   return data.slice(startIndex, startIndex + numColumns)
+}
+
+const getRangePageScrollLeft = (targetClientWidth, numPages, siblingPageVisible, itemMarginBetween) => {
+  const innerWidth = targetClientWidth - (siblingPageVisible ? (itemMarginBetween * 2 * 2) : 0)
+
+  return [...Array(numPages).keys()]
+    .map((numPage) => numPage * (innerWidth + itemMarginBetween) )
 }
 
 export default class CarouselInner extends React.Component {
@@ -57,21 +66,47 @@ export default class CarouselInner extends React.Component {
     this.observer.disconnect()
   }
 
+  componentWillReceiveProps(nextProps) {
+    if(nextProps.indexPageVisible !== this.props.indexPageVisible) {
+      this.scrollToPage(nextProps.indexPageVisible)
+    }
+  }
+
   handleInnerScroll = scrollStop((target) => {
-    const { numPages, siblingPageVisible, itemMarginBetween } = this.props
-    const { scrollLeft } = target
+    const { numPages, siblingPageVisible, itemMarginBetween, indexPageVisible, goToPage } = this.props
+    const { scrollLeft, clientWidth } = target
 
-    const innerWidth = target.clientWidth - (siblingPageVisible ? (itemMarginBetween * 2 * 2) : 0)
-
-    const rangePageScrollLeft = [...Array(numPages).keys()]
-      .map((numPage) => numPage * (innerWidth + itemMarginBetween) )
+    const rangePageScrollLeft = getRangePageScrollLeft(clientWidth, numPages, siblingPageVisible, itemMarginBetween)
 
     const closest = getClosest(rangePageScrollLeft, scrollLeft)
+    const indexClosest = rangePageScrollLeft.indexOf(closest)
 
-    if(supportScrollSmooth && closest !== scrollLeft) {
+    if(indexClosest !== indexPageVisible) {
+      goToPage(indexClosest)
+    } else {
+      // if the user doesn't scroll enought to change page
+      // we need to scroll back to the fake snap page
+      if(/*supportScrollSmooth && */ closest !== scrollLeft) {
+        target.scrollTo(closest, 0)
+      }
+    }
+
+  })
+
+  scrollToPage = (indexPageToScroll) => {
+    const { numPages, siblingPageVisible, itemMarginBetween } = this.props
+
+    const target = this.refs.carouselInner
+    const { scrollLeft, clientWidth } = target
+
+    const rangePageScrollLeft = getRangePageScrollLeft(clientWidth, numPages, siblingPageVisible, itemMarginBetween)
+
+    const closest = rangePageScrollLeft[indexPageToScroll]
+
+    if(/*supportScrollSmooth && */closest !== scrollLeft) {
       target.scrollTo(closest, 0)
     }
-  })
+  }
 
   render() {
     const {
@@ -83,7 +118,6 @@ export default class CarouselInner extends React.Component {
       numPages,
       itemMarginBetween,
       siblingPageVisible,
-      pointerIsCoarse,
     } = this.props
 
     const rangePage = [...Array(numPages).keys()]
@@ -91,14 +125,14 @@ export default class CarouselInner extends React.Component {
     return (
       <div
         ref="carouselInner"
-        style={getStyleInner(itemMarginBetween, siblingPageVisible, pointerIsCoarse)}
-        onScroll={supportScrollSmooth && this.handleInnerScroll}
+        style={getStyleInner(itemMarginBetween, siblingPageVisible)}
+        onScroll={/*supportScrollSmooth && */this.handleInnerScroll}
       >
         {
           rangePage.map((index) =>
             <div
               key={index}
-              style={getStylePageContainer(index, itemMarginBetween, indexPageVisible, pointerIsCoarse)}
+              style={getStylePageContainer(index, itemMarginBetween, indexPageVisible)}
             >
               <CarouselPage
                 data={getDataForPage(data, index, numColumns)}
@@ -111,7 +145,7 @@ export default class CarouselInner extends React.Component {
           )
         }
         {
-          (pointerIsCoarse && siblingPageVisible) &&
+          siblingPageVisible &&
             <div style={{ minWidth: (itemMarginBetween * 2) }} />
         }
       </div>
@@ -119,26 +153,23 @@ export default class CarouselInner extends React.Component {
   }
 }
 
-const getStyleInner = (itemMarginBetween, siblingPageVisible, pointerIsCoarse) => {
+const getStyleInner = (itemMarginBetween, siblingPageVisible) => {
   return Object.assign(
     {
       paddingLeft: siblingPageVisible ? (itemMarginBetween * 2) : 0,
       paddingRight: siblingPageVisible ? (itemMarginBetween * 2) : 0,
     },
     styles.carouselInner,
-    pointerIsCoarse && styles.carouselInnerScroll,
+    styles.carouselInnerScroll,
   )
 }
 
-const getStylePageContainer = (index, itemMarginBetween, indexPageVisible, pointerIsCoarse) => {
+const getStylePageContainer = (index, itemMarginBetween, indexPageVisible) => {
   return Object.assign(
     {
       marginLeft: index ? itemMarginBetween : 0,
     },
     styles.carouselPageContainer,
-    !pointerIsCoarse && {
-      transform: `translateX(-${indexPageVisible * 100}%) translateX(-${indexPageVisible * itemMarginBetween}px)`,
-    },
   )
 }
 
@@ -146,11 +177,8 @@ const styles = {
   carouselInner: {
     display: 'flex',
     flexDirect: 'row',
-    overflowX: 'hidden',
-    scrollBehavior: 'smooth',
-  },
-  carouselInnerScroll: {
     overflowX: 'scroll',
+    scrollBehavior: 'smooth',
     WebkitOverflowScrolling: 'touch',
     scrollSnapType: 'mandatory',
   },

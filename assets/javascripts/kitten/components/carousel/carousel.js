@@ -10,9 +10,6 @@ import { ArrowIcon } from 'kitten/components/icons/arrow-icon'
 
 import CarouselInner from 'kitten/components/carousel/carousel-inner'
 
-const mqPointerCoarse = createMatchMedia('(pointer: coarse)')
-const pointerIsCoarse = mqPointerCoarse ? mqPointerCoarse.matches : false
-
 const getNumColumnsForWidth = (width, itemMinWidth, itemMarginBetween) => {
   const remainingWidthWithOneCard = (width - itemMinWidth)
   const numColumns = Math.floor(remainingWidthWithOneCard / (itemMinWidth + itemMarginBetween)) + 1
@@ -94,6 +91,10 @@ export default class Carousel extends React.Component {
     this.setState({ indexPageVisible: this.state.indexPageVisible - 1 })
   }
 
+  goToPage = (indexPageToGo) => {
+    this.setState({ indexPageVisible: indexPageToGo })
+  }
+
   renderCarouselInner = () => {
     const { data, itemMinWidth, renderItem, baseItemMarginBetween } = this.props
     const { indexPageVisible, numColumns, numPages, viewportIsMobile, viewportIsTabletteOrLess } = this.state
@@ -111,8 +112,8 @@ export default class Carousel extends React.Component {
         numPages={numPages}
         itemMarginBetween={itemMarginBetween}
         siblingPageVisible={viewportIsTabletteOrLess}
-        pointerIsCoarse={pointerIsCoarse}
         onResizeInner={this.onResizeInner}
+        goToPage={this.goToPage}
       />
     )
   }
@@ -122,7 +123,7 @@ export default class Carousel extends React.Component {
     const { indexPageVisible, numPages, viewportIsTabletteOrLess, viewportIsMobile } = this.state
     const itemMarginBetween = getMarginBetweenAccordingToViewport(baseItemMarginBetween, viewportIsMobile, viewportIsTabletteOrLess)
 
-    if(numPages <= 1 || pointerIsCoarse) {
+    if(numPages <= 1 || viewportIsMobile) {
       return
     }
 
@@ -198,5 +199,7 @@ const styles = {
   carouselButtonPagination: {
     marginBottom: 2,
     marginRight: 2,
+    marginLeft: 0,
+    marginTop: 0,
   },
 }
