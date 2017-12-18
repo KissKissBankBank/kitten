@@ -1,6 +1,7 @@
 import React from 'react'
 import objectAssign from 'core-js/library/fn/object/assign'
 
+import { createRangeFromZeroTo } from 'kitten/helpers/utils/range'
 import { createMatchMedia, createMatchMediaMax } from 'kitten/helpers/utils/media-queries'
 import { SCREEN_SIZE_XS, SCREEN_SIZE_M } from 'kitten/constants/screen-config'
 import { CONTAINER_PADDING, CONTAINER_PADDING_MOBILE } from 'kitten/constants/grid-config'
@@ -122,8 +123,25 @@ export default class Carousel extends React.Component {
     const { indexPageVisible, numPages, viewportIsTabletOrLess, viewportIsMobile } = this.state
     const itemMarginBetween = getMarginBetweenAccordingToViewport(baseItemMarginBetween, viewportIsMobile, viewportIsTabletOrLess)
 
-    if(numPages <= 1 || viewportIsMobile) {
+    if(numPages <= 1) {
       return
+    }
+
+    if(viewportIsMobile) {
+      const rangePage = createRangeFromZeroTo(numPages)
+      return (
+        <div style={styles.pageControl}>
+          {
+            rangePage.map((index) =>
+              <div style={objectAssign(
+                {},
+                styles.pageDot,
+                (indexPageVisible === index) && styles.pageDotActive,
+              )}/>
+            )
+          }
+        </div>
+      )
     }
 
     return (
@@ -200,5 +218,25 @@ const styles = {
     marginRight: 2,
     marginLeft: 0,
     marginTop: 0,
+  },
+
+  pageControl: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    paddingTop: CONTAINER_PADDING_MOBILE / 2,
+    paddingBottom: CONTAINER_PADDING_MOBILE / 2,
+  },
+  pageDot: {
+    width: 8,
+    height: 8,
+    marginLeft: 4,
+    marginRight: 4,
+    borderRadius: 4,
+    backgroundColor: 'black',
+    opacity: 0.1,
+  },
+  pageDotActive: {
+    opacity: 0.4,
   },
 }
