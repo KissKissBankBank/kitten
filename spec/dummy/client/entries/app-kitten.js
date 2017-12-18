@@ -64,6 +64,7 @@ import {
 
 // Footer
 import { KarlFooterLendo } from 'kitten/karl/footer/footer-lendo'
+import { KarlFooterKisskiss } from 'kitten/karl/footer/footer-kisskiss'
 
 // Form
 import { Checkbox } from 'kitten/components/form/checkbox'
@@ -179,6 +180,11 @@ import { InfoLines } from 'kitten/components/lines/info-lines'
 // Links
 import { ExternalRichLink } from 'kitten/components/links/external-rich-link'
 import { LinkList } from 'kitten/components/links/link-list'
+import {
+  KarlLinkList,
+  KarlLinkListSelectedItem,
+  KarlLinkListDarkBackground
+} from 'kitten/karl/links/link-list'
 
 // Lists
 import { BulletList } from 'kitten/components/lists/bullet-list'
@@ -325,6 +331,7 @@ ReactOnRails.register({
 
   // Footer
   KarlFooterLendo,
+  KarlFooterKisskiss,
 
   // Form
   Checkbox,
@@ -424,6 +431,9 @@ ReactOnRails.register({
   // Links
   ExternalRichLink,
   LinkList,
+  KarlLinkList,
+  KarlLinkListSelectedItem,
+  KarlLinkListDarkBackground,
 
   // Lists
   BulletList,

@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking changes: Update `LinkList` component with styleguide V2.
+  Replace `@include k-LinkList(( colors: ( ))` by `@include k-LinkList;`.
 - Feature: Update `:focus` `border-color` on `TextInput` component.
 - Feature: Update `Checkbox` and `RadioButton` components with new design
   styleguide V2.
