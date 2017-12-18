@@ -21,10 +21,10 @@ const getNumPagesForColumnsAndDataLength = (dataLength, numColumns) => {
   return numPages
 }
 
-const getMarginBetweenAccordingToViewport = (baseItemMarginBetween, viewportIsMobile, viewportIsTabletteOrLess) => {
+const getMarginBetweenAccordingToViewport = (baseItemMarginBetween, viewportIsMobile, viewportIsTabletOrLess) => {
   if(viewportIsMobile) {
     return CONTAINER_PADDING_MOBILE / 2
-  } else if (viewportIsTabletteOrLess) {
+  } else if (viewportIsTabletOrLess) {
     return CONTAINER_PADDING / 2
   } else {
     return baseItemMarginBetween
@@ -37,21 +37,21 @@ export default class Carousel extends React.Component {
     super(props, context)
 
     this.mqMobile = createMatchMediaMax(SCREEN_SIZE_XS)
-    this.mqTabletteOrLess = createMatchMediaMax(SCREEN_SIZE_M)
+    this.mqTabletOrLess = createMatchMediaMax(SCREEN_SIZE_M)
 
     this.state = {
       indexPageVisible: 0,
       numColumns: 0,
       numPages: 0,
       viewportIsMobile: this.mqMobile ? this.mqMobile.matches : false,
-      viewportIsTabletteOrLess: this.mqTabletteOrLess ? this.mqTabletteOrLess.matches : false,
+      viewportIsTabletOrLess: this.mqTabletOrLess ? this.mqTabletOrLess.matches : false,
     }
   }
 
   onResizeInner = (widthInner) => {
     const { data, itemMinWidth, baseItemMarginBetween } = this.props
-    const { viewportIsMobile, viewportIsTabletteOrLess } = this.state
-    const itemMarginBetween = getMarginBetweenAccordingToViewport(baseItemMarginBetween, viewportIsMobile, viewportIsTabletteOrLess)
+    const { viewportIsMobile, viewportIsTabletOrLess } = this.state
+    const itemMarginBetween = getMarginBetweenAccordingToViewport(baseItemMarginBetween, viewportIsMobile, viewportIsTabletOrLess)
 
     const numColumns = getNumColumnsForWidth(widthInner, itemMinWidth, itemMarginBetween)
     const numPages = getNumPagesForColumnsAndDataLength(data.length, numColumns)
@@ -69,18 +69,18 @@ export default class Carousel extends React.Component {
     this.setState({ viewportIsMobile: event.matches })
   }
 
-  onTabletteMQ = (event) => {
-    this.setState({ viewportIsTabletteOrLess: event.matches })
+  onTabletMQ = (event) => {
+    this.setState({ viewportIsTabletOrLess: event.matches })
   }
 
   componentDidMount () {
     this.mqMobile && this.mqMobile.addListener(this.onMobileMQ)
-    this.mqTabletteOrLess && this.mqTabletteOrLess.addListener(this.onTabletteMQ)
+    this.mqTabletOrLess && this.mqTabletOrLess.addListener(this.onTabletMQ)
   }
 
   componentWillUnmount () {
     this.mqMobile && this.mqMobile.removeListener(this.onMobileMQ)
-    this.mqTabletteOrLess && this.mqTabletteOrLess.removeListener(this.onTabletteMQ)
+    this.mqTabletOrLess && this.mqTabletOrLess.removeListener(this.onTabletMQ)
   }
 
   goNextPage = () => {
@@ -97,8 +97,8 @@ export default class Carousel extends React.Component {
 
   renderCarouselInner = () => {
     const { data, itemMinWidth, renderItem, baseItemMarginBetween } = this.props
-    const { indexPageVisible, numColumns, numPages, viewportIsMobile, viewportIsTabletteOrLess } = this.state
-    const itemMarginBetween = getMarginBetweenAccordingToViewport(baseItemMarginBetween, viewportIsMobile, viewportIsTabletteOrLess)
+    const { indexPageVisible, numColumns, numPages, viewportIsMobile, viewportIsTabletOrLess } = this.state
+    const itemMarginBetween = getMarginBetweenAccordingToViewport(baseItemMarginBetween, viewportIsMobile, viewportIsTabletOrLess)
 
     const rangePage = [...Array(numPages).keys()]
 
@@ -111,7 +111,7 @@ export default class Carousel extends React.Component {
         numColumns={numColumns}
         numPages={numPages}
         itemMarginBetween={itemMarginBetween}
-        siblingPageVisible={viewportIsTabletteOrLess}
+        siblingPageVisible={viewportIsTabletOrLess}
         onResizeInner={this.onResizeInner}
         goToPage={this.goToPage}
       />
@@ -120,8 +120,8 @@ export default class Carousel extends React.Component {
 
   renderPagination = () => {
     const { baseItemMarginBetween } = this.props
-    const { indexPageVisible, numPages, viewportIsTabletteOrLess, viewportIsMobile } = this.state
-    const itemMarginBetween = getMarginBetweenAccordingToViewport(baseItemMarginBetween, viewportIsMobile, viewportIsTabletteOrLess)
+    const { indexPageVisible, numPages, viewportIsTabletOrLess, viewportIsMobile } = this.state
+    const itemMarginBetween = getMarginBetweenAccordingToViewport(baseItemMarginBetween, viewportIsMobile, viewportIsTabletOrLess)
 
     if(numPages <= 1 || viewportIsMobile) {
       return
@@ -131,11 +131,11 @@ export default class Carousel extends React.Component {
       <div
         style={Object.assign(
           {
-            marginTop: viewportIsTabletteOrLess ? itemMarginBetween : 0,
-            marginLeft: viewportIsTabletteOrLess ? (itemMarginBetween * 2) : 0,
+            marginTop: viewportIsTabletOrLess ? itemMarginBetween : 0,
+            marginLeft: viewportIsTabletOrLess ? (itemMarginBetween * 2) : 0,
           },
           styles.carouselPagination,
-          viewportIsTabletteOrLess && styles.carouselPaginationTablette,
+          viewportIsTabletOrLess && styles.carouselPaginationTablet,
         )}
       >
         <ButtonIcon
@@ -160,9 +160,9 @@ export default class Carousel extends React.Component {
   }
 
   render() {
-    const { viewportIsTabletteOrLess } = this.state
+    const { viewportIsTabletOrLess } = this.state
 
-    if(viewportIsTabletteOrLess) {
+    if(viewportIsTabletOrLess) {
       return (
         <div>
           { this.renderCarouselInner() }
@@ -193,7 +193,7 @@ const styles = {
     flexDirection: 'column-reverse',
     alignItems: 'flex-start',
   },
-  carouselPaginationTablette: {
+  carouselPaginationTablet: {
     flexDirection: 'row',
   },
   carouselButtonPagination: {
