@@ -14,12 +14,14 @@ export default class CarouselPage extends React.Component {
           rangeCard.map((index) =>
             <div
               key={index}
-              className={css(styles.item)}
-              style={{
-                minWidth: itemMinWidth,
-                flexBasis: itemMinWidth,
-                marginLeft: index ? itemMarginBetween : 0
-              }}
+              className={css(
+                styles.item,
+                StyleSheet.create({inlineStyle: {
+                  minWidth: itemMinWidth,
+                  flexBasis: itemMinWidth,
+                  marginLeft: index ? itemMarginBetween : 0,
+                }}).inlineStyle
+              )}
             >
               {
                 data[index] &&

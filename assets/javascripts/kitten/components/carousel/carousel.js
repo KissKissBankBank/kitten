@@ -148,11 +148,11 @@ export default class Carousel extends React.Component {
         className={css(
           styles.carouselPagination,
           viewportIsTabletOrLess && styles.carouselPaginationTablet,
+          StyleSheet.create({inlineStyle: {
+            marginTop: viewportIsTabletOrLess ? itemMarginBetween : 0,
+            marginLeft: viewportIsTabletOrLess ? (itemMarginBetween * 2) : 0,
+          }}).inlineStyle
         )}
-        style={{
-          marginTop: viewportIsTabletOrLess ? itemMarginBetween : 0,
-          marginLeft: viewportIsTabletOrLess ? (itemMarginBetween * 2) : 0,
-        }}
       >
         <ButtonIcon
           modifier="beryllium"

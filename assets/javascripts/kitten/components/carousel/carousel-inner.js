@@ -53,7 +53,7 @@ const getDataForPage = (data, indexPage, numColumns) => {
 const getRangePageScrollLeft = (targetClientWidth, numPages, siblingPageVisible, itemMarginBetween) => {
   const innerWidth = targetClientWidth - (siblingPageVisible ? (itemMarginBetween * 2 * 2) : 0)
 
-  return [...Array(numPages).keys()]
+  return createRangeFromZeroTo(numPages)
     .map((numPage) => numPage * (innerWidth + itemMarginBetween) )
 }
 
@@ -66,7 +66,7 @@ export default class CarouselInner extends React.Component {
 
   componentDidMount () {
     this.observer = new ResizeObserver(this.onResizeObserve)
-    this.observer.observe(this.refs.carouselInner)
+    this.observer.observe(this.carouselInner)
   }
 
   componentWillUnmount () {
@@ -103,7 +103,7 @@ export default class CarouselInner extends React.Component {
   scrollToPage = (indexPageToScroll) => {
     const { numPages, siblingPageVisible, itemMarginBetween } = this.props
 
-    const target = this.refs.carouselInner
+    const target = this.carouselInner
     const { scrollLeft, clientWidth } = target
 
     const rangePageScrollLeft = getRangePageScrollLeft(clientWidth, numPages, siblingPageVisible, itemMarginBetween)
@@ -131,15 +131,17 @@ export default class CarouselInner extends React.Component {
 
     return (
       <div
-        ref="carouselInner"
+        ref={(div) => { this.carouselInner = div }}
         className={classNames(
           'k-CarouselInner',
-          css(styles.carouselInner),
+          css(
+            styles.carouselInner,
+            StyleSheet.create({inlineStyle: {
+              paddingLeft: siblingPageVisible ? (itemMarginBetween * 2) : 0,
+              paddingRight: siblingPageVisible ? (itemMarginBetween * 2) : 0,
+            }}).inlineStyle
+          ),
         )}
-        style={{
-          paddingLeft: siblingPageVisible ? (itemMarginBetween * 2) : 0,
-          paddingRight: siblingPageVisible ? (itemMarginBetween * 2) : 0,
-        }}
         onScroll={this.handleInnerScroll}
       >
         {
@@ -178,6 +180,7 @@ const styles = StyleSheet.create({
     scrollBehavior: 'smooth',
     WebkitOverflowScrolling: 'touch',
     scrollSnapType: 'mandatory',
+    minHeight: 1, // Fix bug IE11 ResizeObserver + Aphrodite, to trigger a first resize
   },
   carouselPageContainer: {
     width: '100%',
