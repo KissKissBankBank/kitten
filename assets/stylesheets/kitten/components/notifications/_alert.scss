@@ -21,7 +21,7 @@
 @mixin k-Alert {
   $font: 'light';
   $strong-font: 'regular';
-  $font-step: -1;
+  $font-step: -1; // 14px
 
   $color: map-get($k-colors, 'primary-1');
   $colorError: map-get($k-colors, 'error');
@@ -94,8 +94,8 @@
 
   .k-Alert__close {
     position: absolute;
-    top: k-px-to-rem(10px);
-    right: k-px-to-rem(20px);
+    top: 0;
+    right: 0;
   }
 
   // Modifiers.
