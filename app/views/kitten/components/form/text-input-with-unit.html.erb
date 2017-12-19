@@ -3,19 +3,19 @@
     <div class="k-Grid">
       <div class="k-Grid__col k-Grid__col--12 k-Grid__col--4@m k-Grid__col--12@l">
         <%= example 'Tiny' do %>
-          <%= react_component('TextInputWithUnit', props: {
+          <%= react_component 'TextInputWithUnit', props: {
             placeholder: 'Lorem ipsum dolor sit amet',
             unit: '€',
             tiny: true,
-          }) %>
+          } %>
         <% end %>
       </div>
       <div class="k-Grid__col k-Grid__col--12 k-Grid__col--4@m k-Grid__col--12@l">
         <%= example 'Normal' do %>
-          <%= react_component('TextInputWithUnit', props: {
+          <%= react_component 'TextInputWithUnit', props: {
             placeholder: 'Lorem ipsum dolor sit amet',
             unit: '€',
-          }) %>
+          } %>
         <% end %>
       </div>
     </div>
@@ -25,21 +25,21 @@
     <div class="k-Grid">
       <div class="k-Grid__col k-Grid__col--12 k-Grid__col--4@m k-Grid__col--12@l">
         <%= example 'Valid' do %>
-          <%= react_component('TextInputWithUnit', props: {
+          <%= react_component 'TextInputWithUnit', props: {
             placeholder: 'Lorem ipsum dolor sit amet',
             unit: '$',
             valid: true,
-          }) %>
+          } %>
         <% end %>
       </div>
 
       <div class="k-Grid__col k-Grid__col--12 k-Grid__col--4@m k-Grid__col--12@l">
         <%= example 'Error' do %>
-          <%= react_component('TextInputWithUnit', props: {
+          <%= react_component 'TextInputWithUnit', props: {
             placeholder: 'Lorem ipsum dolor sit amet',
             unit: '£',
             error: true,
-          }) %>
+          } %>
         <% end %>
       </div>
     </div>
@@ -49,11 +49,11 @@
     <div class="k-Grid">
       <div class="k-Grid__col k-Grid__col--12 k-Grid__col--4@m k-Grid__col--12@l">
       <%= example 'Disabled' do %>
-          <%= react_component('TextInputWithUnit', props: {
+          <%= react_component 'TextInputWithUnit', props: {
             placeholder: 'Lorem ipsum dolor sit amet',
             disabled: true,
             unit: '€',
-          }) %>
+          } %>
         <% end %>
       </div>
     </div>
@@ -63,7 +63,7 @@
     <div class="k-Grid">
       <div class="k-Grid__col k-Grid__col--12 k-Grid__col--4@m k-Grid__col--12@l">
         <%= example 'Tiny with small input' do %>
-          <%= react_component('TextInputWithUnit', props: {
+          <%= react_component 'TextInputWithUnit', props: {
             placeholder: '30',
             max: 60,
             min: 1,
@@ -72,13 +72,13 @@
             unitWord: true,
             tiny: true,
             digits: 2,
-          }) %>
+          } %>
         <% end %>
       </div>
 
       <div class="k-Grid__col k-Grid__col--12 k-Grid__col--4@m k-Grid__col--12@l">
         <%= example 'With small input' do %>
-          <%= react_component('TextInputWithUnit', props: {
+          <%= react_component 'TextInputWithUnit', props: {
             placeholder: '30',
             max: 60,
             min: 1,
@@ -86,7 +86,7 @@
             unit: 'days',
             unitWord: true,
             digits: 2,
-          }) %>
+          } %>
         <% end %>
       </div>
     </div>

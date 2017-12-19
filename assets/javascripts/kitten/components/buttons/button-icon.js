@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { Component } from 'react'
 import classNames from 'classnames'
 
-export class ButtonIcon extends React.Component {
+export class ButtonIcon extends Component {
   render() {
     const { className,
             tag,

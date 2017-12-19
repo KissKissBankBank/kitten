@@ -20,6 +20,7 @@ import {
   FacebookButtonIcon,
   LinkedinButtonIcon,
   TwitterButtonIcon,
+  InstagramButtonIcon,
 } from 'kitten/components/buttons/social-button-icon'
 import { TagButton } from 'kitten/components/buttons/tag-button'
 import { KarlButtonAndText } from 'kitten/karl/buttons/button'
@@ -296,6 +297,7 @@ ReactOnRails.register({
   ButtonQuestionMarkIcon,
   FacebookButtonIcon,
   LinkedinButtonIcon,
+  InstagramButtonIcon,
   TagButton,
   TwitterButtonIcon,
   KarlButtonAndText,

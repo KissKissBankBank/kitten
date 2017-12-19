@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { Component } from 'react'
 import classNames from 'classnames'
 
-export class Button extends React.Component {
+export class Button extends Component {
   render() {
     const {
       className,
@@ -22,6 +22,8 @@ export class Button extends React.Component {
         'k-Button--icon': icon,
         'k-Button--iconRight': iconOnRight,
         'k-Button--iconWithMinWidth': iconWithMinWidth,
+        'k-Button--icon--tiny': size == 'tiny' && icon,
+        'k-Button--iconRight--tiny': size == 'tiny' && iconOnRight,
       },
       className,
     )
