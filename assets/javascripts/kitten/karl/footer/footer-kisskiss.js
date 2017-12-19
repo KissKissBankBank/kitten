@@ -15,6 +15,7 @@ import {
 } from 'kitten/components/buttons/social-button-icon'
 import { Separator } from 'kitten/components/layout/separator'
 import { LinkList } from 'kitten/components/links/link-list'
+import { SelectWithState } from 'kitten/components/form/select-with-state'
 
 export class KarlFooterKisskiss extends Component {
   renderNetwork() {
@@ -95,6 +96,24 @@ export class KarlFooterKisskiss extends Component {
     )
   }
 
+  renderLanguageSelect() {
+    const options = [
+      { value: 'fr', label: 'Français' },
+      { value: 'en', label: 'English' },
+      { value: 'nl', label: 'Nederlands' },
+    ]
+
+    return (
+      <GridCol col="4">
+        <Grid>
+          <SelectWithState
+            options= { options }
+          />
+        </Grid>
+      </GridCol>
+    )
+  }
+
   renderList() {
     const items = [
       { key: 'key1', item: 'L’équipe', href: '#' },
@@ -137,11 +156,11 @@ export class KarlFooterKisskiss extends Component {
             </div>
           </GridCol>
 
-          <GridCol col-l="10">
+          <GridCol col-l="6">
               <Grid>
                 <GridCol
                   col-m="3"
-                  col-l="3"
+                  col-l="2"
                   className="k-u-margin-bottom-triple@s-down"
                 >
                   <LinkList
@@ -153,7 +172,7 @@ export class KarlFooterKisskiss extends Component {
 
                 <GridCol
                   col-m="3"
-                  col-l="3"
+                  col-l="2"
                   className="k-u-margin-bottom-triple@s-down"
                 >
                   <LinkList
@@ -164,7 +183,7 @@ export class KarlFooterKisskiss extends Component {
 
                 <GridCol
                   col-m="3"
-                  col-l="3"
+                  col-l="2"
                   className="k-u-margin-bottom-triple@s-down"
                 >
                   <LinkList
@@ -174,6 +193,8 @@ export class KarlFooterKisskiss extends Component {
                 </GridCol>
               </Grid>
             </GridCol>
+
+            { this.renderLanguageSelect() }
         </Grid>
       </Row>
     )
