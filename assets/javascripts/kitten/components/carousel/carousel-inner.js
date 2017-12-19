@@ -1,6 +1,5 @@
 import React from 'react'
-import { StyleSheet, css } from 'aphrodite'
-import classNames from 'classnames'
+import Radium from 'radium'
 import ResizeObserver from 'resize-observer-polyfill'
 
 if(typeof window !== 'undefined') {
@@ -57,7 +56,7 @@ const getRangePageScrollLeft = (targetClientWidth, numPages, siblingPageVisible,
     .map((numPage) => numPage * (innerWidth + itemMarginBetween) )
 }
 
-export default class CarouselInner extends React.Component {
+class CarouselInner extends React.Component {
 
   onResizeObserve = ([entry]) => {
     const widthInner = entry.contentRect.width
@@ -132,26 +131,26 @@ export default class CarouselInner extends React.Component {
     return (
       <div
         ref={(div) => { this.carouselInner = div }}
-        className={classNames(
-          'k-CarouselInner',
-          css(
-            styles.carouselInner,
-            StyleSheet.create({inlineStyle: {
-              paddingLeft: siblingPageVisible ? (itemMarginBetween * 2) : 0,
-              paddingRight: siblingPageVisible ? (itemMarginBetween * 2) : 0,
-            }}).inlineStyle
-          ),
-        )}
+        className='k-CarouselInner'
+        style={[
+          styles.carouselInner,
+          {
+            paddingLeft: siblingPageVisible ? (itemMarginBetween * 2) : 0,
+            paddingRight: siblingPageVisible ? (itemMarginBetween * 2) : 0,
+          }
+        ]}
         onScroll={this.handleInnerScroll}
       >
         {
           rangePage.map((index) =>
             <div
               key={index}
-              className={css(styles.carouselPageContainer)}
-              style={{
-                marginLeft: index ? itemMarginBetween : 0,
-              }}
+              style={[
+                styles.carouselPageContainer,
+                {
+                  marginLeft: index ? itemMarginBetween : 0,
+                }
+              ]}
             >
               <CarouselPage
                 data={getDataForPage(data, index, numColumns)}
@@ -172,7 +171,7 @@ export default class CarouselInner extends React.Component {
   }
 }
 
-const styles = StyleSheet.create({
+const styles = {
   carouselInner: {
     display: 'flex',
     flexDirect: 'row',
@@ -180,11 +179,13 @@ const styles = StyleSheet.create({
     scrollBehavior: 'smooth',
     WebkitOverflowScrolling: 'touch',
     scrollSnapType: supportScrollSnap ? 'mandatory' : 'none',
-    minHeight: 1, // Fix bug IE11 ResizeObserver + Aphrodite, to trigger a first resize
+    minHeight: 1, // Fix bug IE11 ResizeObserver, to trigger a first resize
   },
   carouselPageContainer: {
     width: '100%',
     flexShrink: 0,
     scrollSnapAlign: supportScrollSnap ? 'center' : 'none',
   },
-})
+}
+
+export default Radium(CarouselInner)

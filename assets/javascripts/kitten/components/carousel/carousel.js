@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, css } from 'aphrodite'
+import Radium from 'radium'
 
 import { createRangeFromZeroTo } from 'kitten/helpers/utils/range'
 import { createMatchMedia, createMatchMediaMax } from 'kitten/helpers/utils/media-queries'
@@ -33,7 +33,7 @@ const getMarginBetweenAccordingToViewport = (baseItemMarginBetween, viewportIsMo
   }
 }
 
-export default class Carousel extends React.Component {
+class Carousel extends React.Component {
 
   constructor(props, context) {
     super(props, context)
@@ -130,13 +130,13 @@ export default class Carousel extends React.Component {
     if(viewportIsMobile) {
       const rangePage = createRangeFromZeroTo(numPages)
       return (
-        <div className={css(styles.pageControl)}>
+        <div style={styles.pageControl}>
           {
             rangePage.map((index) =>
-              <div className={css(
+              <div style={[
                 styles.pageDot,
                 (indexPageVisible === index) && styles.pageDotActive,
-              )}/>
+              ]}/>
             )
           }
         </div>
@@ -145,20 +145,20 @@ export default class Carousel extends React.Component {
 
     return (
       <div
-        className={css(
+        style={[
           styles.carouselPagination,
           viewportIsTabletOrLess && styles.carouselPaginationTablet,
-          StyleSheet.create({inlineStyle: {
+          {
             marginTop: viewportIsTabletOrLess ? itemMarginBetween : 0,
             marginLeft: viewportIsTabletOrLess ? (itemMarginBetween * 2) : 0,
-          }}).inlineStyle
-        )}
+          },
+        ]}
       >
         <ButtonIcon
           modifier="beryllium"
           onClick={this.goPrevPage}
           disabled={indexPageVisible < 1 || numPages < 1}
-          className={css(styles.carouselButtonPagination)}
+          style={styles.carouselButtonPagination}
         >
           <ArrowIcon className="k-ButtonIcon__svg" direction="left" />
         </ButtonIcon>
@@ -167,7 +167,7 @@ export default class Carousel extends React.Component {
           modifier="beryllium"
           onClick={this.goNextPage}
           disabled={indexPageVisible >= (numPages - 1)}
-          className={css(styles.carouselButtonPagination)}
+          style={styles.carouselButtonPagination}
         >
           <ArrowIcon className="k-ButtonIcon__svg" direction="right" />
         </ButtonIcon>
@@ -203,7 +203,7 @@ export default class Carousel extends React.Component {
   }
 }
 
-const styles = StyleSheet.create({
+const styles = {
   carouselPagination: {
     display: 'flex',
     flexDirection: 'column-reverse',
@@ -238,4 +238,6 @@ const styles = StyleSheet.create({
   pageDotActive: {
     opacity: 0.4,
   },
-})
+}
+
+export default Radium(Carousel)

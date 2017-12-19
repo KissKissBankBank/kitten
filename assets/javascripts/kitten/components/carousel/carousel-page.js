@@ -1,27 +1,27 @@
 import React from 'react'
-import { StyleSheet, css } from 'aphrodite'
+import Radium from 'radium'
 import { createRangeFromZeroTo } from 'kitten/helpers/utils/range'
 
-export default class CarouselPage extends React.Component {
+class CarouselPage extends React.Component {
 
   render() {
     const { data, numColumns, itemMinWidth, itemMarginBetween, renderItem } = this.props
     const rangeCard = createRangeFromZeroTo(numColumns)
 
     return (
-      <div className={css(styles.page)}>
+      <div style={styles.page}>
         {
           rangeCard.map((index) =>
             <div
               key={index}
-              className={css(
+              style={[
                 styles.item,
-                StyleSheet.create({inlineStyle: {
+                {
                   minWidth: itemMinWidth,
                   flexBasis: itemMinWidth,
                   marginLeft: index ? itemMarginBetween : 0,
-                }}).inlineStyle
-              )}
+                }
+              ]}
             >
               {
                 data[index] &&
@@ -35,7 +35,7 @@ export default class CarouselPage extends React.Component {
   }
 }
 
-const styles = StyleSheet.create({
+const styles = {
   page: {
     display: 'flex',
     flexDirect: 'row',
@@ -44,4 +44,6 @@ const styles = StyleSheet.create({
     flexGrow: 1,
     flexShrink: 1,
   },
-})
+}
+
+export default Radium(CarouselPage)
