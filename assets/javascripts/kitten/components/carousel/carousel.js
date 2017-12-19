@@ -176,6 +176,10 @@ class Carousel extends React.Component {
   }
 
   render() {
+    if(!this.props.data || !this.props.data.length) {
+      return null
+    }
+
     const { viewportIsTabletOrLess } = this.state
 
     if(viewportIsTabletOrLess) {

@@ -280,7 +280,6 @@ import {
 // Carousel
 import Carousel from 'kitten/components/carousel/carousel'
 import {
-  KarlCarouselFakeCard,
   KarlCarouselProjectCard,
 } from 'kitten/karl/carousel/carousel'
 
@@ -513,6 +512,5 @@ ReactOnRails.register({
 
   // Carousel
   Carousel,
-  KarlCarouselFakeCard,
   KarlCarouselProjectCard,
 })

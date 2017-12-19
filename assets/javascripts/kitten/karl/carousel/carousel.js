@@ -2,7 +2,6 @@ import React from 'react'
 import { Container } from 'kitten/components/grid/container'
 import Carousel from 'kitten/components/carousel/carousel'
 
-import FakeCard from 'kitten/components/carousel/fake-card'
 import {
   ProjectCard,
   MIN_WIDTH as ProjectCardMinWidth,
@@ -10,25 +9,6 @@ import {
 } from 'kitten/components/cards/project-card'
 
 import { SCREEN_SIZE_M } from 'kitten/constants/screen-config'
-
-export const KarlCarouselFakeCard = (props) => {
-  return (
-    <Container fullWidthBelowScreenSize={SCREEN_SIZE_M}>
-      <Carousel
-        itemMinWidth={FakeCard.MIN_WIDTH}
-        baseItemMarginBetween={FakeCard.MARGIN_BETWEEN}
-        renderItem={({item}) => {
-          return (
-            <FakeCard
-              title={item.title}
-            />
-          )
-        }}
-        { ...props }
-      />
-    </Container>
-  )
-}
 
 export const KarlCarouselProjectCard = (props) => {
   return (
