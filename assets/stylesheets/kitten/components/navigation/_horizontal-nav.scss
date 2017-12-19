@@ -27,7 +27,6 @@
   $font: 'regular';
   $font-step: -1; // 14px
   $line-height: normal;
-  $line-height-big: k-px-to-rem(68px);
 
   // Colors
   $base-color: map-get($k-colors, 'font-1');

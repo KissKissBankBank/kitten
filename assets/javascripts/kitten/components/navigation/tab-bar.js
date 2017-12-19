@@ -14,13 +14,13 @@ export class TabBar extends Component {
       className,
       selected,
       text,
-       ...linkProps
+       ...linkProps,
     } = item
 
     const itemClassName = classNames(
-      "k-TabBar__item",
+      'k-TabBar__item',
       className,
-      { "is-selected": selected },
+      { 'is-selected': selected },
     )
 
     return (

@@ -1,16 +1,18 @@
 import React from 'react'
 import { expect } from 'chai'
-import { shallow } from 'enzyme'
+import { shallow, mount } from 'enzyme'
 import { HorizontalNav } from 'kitten/components/navigation/horizontal-nav'
 
 describe('<HorizontalNav />', () => {
   const component = shallow(
-    <HorizontalNav items={ [
-      { text: 'Nav link 1' },
-      { text: 'Nav link 2' },
-      { text: 'Nav link 3' },
-      { text: 'Nav link 4' },
-    ] } />
+    <HorizontalNav
+      items={ [
+        { text: 'Nav link 1' },
+        { text: 'Nav link 2' },
+        { text: 'Nav link 3' },
+        { text: 'Nav link 4' },
+      ] }
+    />
   )
 
   it('renders a <div class="k-HorizontalNav" />', () => {
@@ -34,6 +36,22 @@ describe('<HorizontalNav />', () => {
       expect(component).to.have.className('k-HorizontalNav--center')
     })
   })
+
+  describe('height props', () => {
+    const component = mount(
+      <HorizontalNav
+        items={ [
+          { text: 'Nav link 1' },
+        ] }
+        height="auto" />
+    )
+    const item = component.find('.k-HorizontalNav__item')
+
+    it('renders a horizontalNav with auto height', () => {
+      expect(item).to.have.style('height', 'auto')
+    })
+  })
+
 
   describe('with custom classes/id', () => {
     const component = shallow(
@@ -64,9 +82,11 @@ describe('<HorizontalNav />', () => {
 
     describe('with HTML in items', () => {
       const component = shallow(
-        <HorizontalNav items={ [
-          { text: 'Nav\n1', className: 'item-1' },
-        ] } />
+        <HorizontalNav
+          items={ [
+            { text: 'Nav\n1', className: 'item-1' },
+          ] }
+        />
       )
 
       it('transforms line break with <br/>', () => {

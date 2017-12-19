@@ -6,21 +6,22 @@ export class HorizontalNav extends Component {
   renderItems() {
     const { items } = this.props
 
-    return items.map((item, key) => this.renderItem(item, key))
+    return items.map((item) => this.renderItem(item))
   }
 
-  renderItem(item, key) {
+  renderItem(item) {
     const {
       className,
       selected,
       text,
-      ...others
+      key,
+      ...others,
     } = item
 
     const itemClassName = classNames(
-      "k-HorizontalNav__item",
+      'k-HorizontalNav__item',
       className,
-      { "is-selected": selected },
+      { 'is-selected': selected },
     )
 
     return (
@@ -47,12 +48,13 @@ export class HorizontalNav extends Component {
     const {
       className,
       center,
-      ...others
+      ...others,
     } = this.props
 
     const navClassNames = classNames(
-      "k-HorizontalNav", className,
-      { "k-HorizontalNav--center": center },
+      'k-HorizontalNav',
+       className,
+      { 'k-HorizontalNav--center': center },
     )
 
     return (
@@ -70,7 +72,7 @@ export class HorizontalNav extends Component {
 HorizontalNav.defaultProps = {
   id: null,
   className: null,
-  height: "auto",
+  height: 'auto',
   center: false,
   elementClassName: null,
   items: [],
