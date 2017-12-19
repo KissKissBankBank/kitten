@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Create new `ImageWithCaption` component.
+- Feature: Update `Alert` component with new design styleguide V2.
 - Feature: Update `:focus` `border-color` on `TextInput` component.
 - Feature: Update `Checkbox` and `RadioButton` components with new design
   styleguide V2.
