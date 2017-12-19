@@ -179,12 +179,12 @@ const styles = StyleSheet.create({
     overflowX: 'scroll',
     scrollBehavior: 'smooth',
     WebkitOverflowScrolling: 'touch',
-    scrollSnapType: 'mandatory',
+    scrollSnapType: supportScrollSnap ? 'mandatory' : 'none',
     minHeight: 1, // Fix bug IE11 ResizeObserver + Aphrodite, to trigger a first resize
   },
   carouselPageContainer: {
     width: '100%',
     flexShrink: 0,
-    scrollSnapAlign: 'center',
+    scrollSnapAlign: supportScrollSnap ? 'center' : 'none',
   },
 })
