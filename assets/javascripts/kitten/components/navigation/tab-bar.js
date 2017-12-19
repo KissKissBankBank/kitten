@@ -39,11 +39,11 @@ export class TabBar extends Component {
     return (
       <div
         id={ this.props.id }
-        className={ classNames("k-TabBar", this.props.className) }
+        className={ classNames('k-TabBar', this.props.className) }
       >
-        <nav className={ classNames("k-TabBar__nav", this.props.navClassName) }>
+        <nav className={ classNames('k-TabBar__nav', this.props.navClassName) }>
           <ul
-            className={ classNames("k-TabBar__list",
+            className={ classNames('k-TabBar__list',
                                    this.props.listClassName) }
           >
             { this.renderItems() }
