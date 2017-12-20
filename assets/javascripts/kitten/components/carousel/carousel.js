@@ -169,6 +169,16 @@ class Carousel extends React.Component {
               ]}/>
             )
           }
+          <div
+            key="prev"
+            style={styles.pageControlButtonPrev}
+            onClick={this.goPrevPage}
+          />
+          <div
+            key="next"
+            style={styles.pageControlButtonNext}
+            onClick={this.goNextPage}
+          />
         </div>
       )
     }
@@ -259,8 +269,25 @@ const styles = {
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'center',
+    position: 'relative',
     paddingTop: CONTAINER_PADDING_MOBILE / 2,
     paddingBottom: CONTAINER_PADDING_MOBILE / 2,
+  },
+  pageControlButtonPrev: {
+    position: 'absolute',
+    top: CONTAINER_PADDING_MOBILE / 4,
+    bottom: CONTAINER_PADDING_MOBILE / 4,
+    left: CONTAINER_PADDING_MOBILE,
+    right: '50%',
+    WebkitTapHighlightColor: 'transparent',
+  },
+  pageControlButtonNext: {
+    position: 'absolute',
+    top: CONTAINER_PADDING_MOBILE / 4,
+    bottom: CONTAINER_PADDING_MOBILE / 4,
+    right: CONTAINER_PADDING_MOBILE,
+    left: '50%',
+    WebkitTapHighlightColor: 'transparent',
   },
   pageDot: {
     width: 8,
