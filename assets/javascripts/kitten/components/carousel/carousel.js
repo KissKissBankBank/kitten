@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Radium from 'radium'
 
 import { createRangeFromZeroTo } from 'kitten/helpers/utils/range'
@@ -12,15 +13,37 @@ import { ArrowIcon } from 'kitten/components/icons/arrow-icon'
 
 import CarouselInner from 'kitten/components/carousel/carousel-inner'
 
-const getNumColumnsForWidth = (width, itemMinWidth, itemMarginBetween) => {
+export const getNumColumnsForWidth = (width, itemMinWidth, itemMarginBetween) => {
+  if(width === 0 || itemMinWidth === 0) {
+    return 0
+  }
   const remainingWidthWithOneCard = (width - itemMinWidth)
-  const numColumns = Math.floor(remainingWidthWithOneCard / (itemMinWidth + itemMarginBetween)) + 1
+  const itemWidthAndMargin = itemMinWidth + itemMarginBetween
+
+  const numColumns = Math.floor(remainingWidthWithOneCard / itemWidthAndMargin) + 1
   return numColumns
 }
 
-const getNumPagesForColumnsAndDataLength = (dataLength, numColumns) => {
+export const getNumPagesForColumnsAndDataLength = (dataLength, numColumns) => {
+  if(dataLength === 0 || numColumns === 0) {
+    return 0
+  }
   const numPages = Math.ceil(dataLength / numColumns)
   return numPages
+}
+
+export const checkPage = (numPages, newPage) => {
+  if(numPages < 1) {
+    return 0
+  }
+
+  if(newPage < 0) {
+    return 0
+  } else if(newPage >= numPages) {
+    return numPages - 1
+  } else {
+    return newPage
+  }
 }
 
 const getMarginBetweenAccordingToViewport = (baseItemMarginBetween, viewportIsMobile, viewportIsTabletOrLess) => {
@@ -86,15 +109,21 @@ class Carousel extends React.Component {
   }
 
   goNextPage = () => {
-    this.setState({ indexPageVisible: this.state.indexPageVisible + 1 })
+    const { numPages, indexPageVisible } = this.state
+    const newPage = checkPage(numPages, indexPageVisible + 1)
+    this.setState({ indexPageVisible: newPage })
   }
 
   goPrevPage = () => {
-    this.setState({ indexPageVisible: this.state.indexPageVisible - 1 })
+    const { numPages, indexPageVisible } = this.state
+    const newPage = checkPage(numPages, indexPageVisible - 1)
+    this.setState({ indexPageVisible: newPage })
   }
 
   goToPage = (indexPageToGo) => {
-    this.setState({ indexPageVisible: indexPageToGo })
+    const { numPages } = this.state
+    const newPage = checkPage(numPages, indexPageToGo)
+    this.setState({ indexPageVisible: newPage })
   }
 
   renderCarouselInner = () => {
@@ -180,9 +209,10 @@ class Carousel extends React.Component {
       return null
     }
 
+    const { alwaysFullWidth } = this.props
     const { viewportIsTabletOrLess } = this.state
 
-    if(viewportIsTabletOrLess) {
+    if(viewportIsTabletOrLess || alwaysFullWidth) {
       return (
         <div>
           { this.renderCarouselInner() }
@@ -242,6 +272,16 @@ const styles = {
   pageDotActive: {
     opacity: 0.4,
   },
+}
+
+Carousel.defaultProps = {
+  alwaysFullWidth: false,
+}
+
+Carousel.propTypes = {
+  itemMinWidth: PropTypes.number.isRequired,
+  baseItemMarginBetween: PropTypes.number.isRequired,
+  renderItem: PropTypes.func.isRequired,
 }
 
 export default Radium(Carousel)

@@ -1,5 +1,5 @@
 import React from 'react'
-import Radium from 'radium'
+import Radium, { Style } from 'radium'
 import ResizeObserver from 'resize-observer-polyfill'
 
 if(typeof window !== 'undefined') {
@@ -166,6 +166,12 @@ class CarouselInner extends React.Component {
           siblingPageVisible &&
             <div style={{ minWidth: (itemMarginBetween * 2) }} />
         }
+
+        { /* hide scrollbar on Chrome and Safari */ }
+        <Style
+          scopeSelector=".k-CarouselInner::-webkit-scrollbar"
+          rules={{ display: 'none' }}
+        />
       </div>
     )
   }
@@ -177,13 +183,19 @@ const styles = {
     flexDirect: 'row',
     overflowX: 'scroll',
     scrollBehavior: 'smooth',
+    // hide scrollbar on IE and Edge
+    MsOverflowStyle: 'none',
+    // mandatory to combine scroll with this property on iOS
     WebkitOverflowScrolling: 'touch',
+    // snap only for browser that support snap without prefixes
     scrollSnapType: supportScrollSnap ? 'mandatory' : 'none',
-    minHeight: 1, // Fix bug IE11 ResizeObserver, to trigger a first resize
+    // Fix bug IE11 ResizeObserver, to trigger a first resize
+    minHeight: 1,
   },
   carouselPageContainer: {
     width: '100%',
     flexShrink: 0,
+    // snap only for browser that support snap without prefixes
     scrollSnapAlign: supportScrollSnap ? 'center' : 'none',
   },
 }
