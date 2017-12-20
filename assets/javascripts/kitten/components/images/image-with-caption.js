@@ -14,7 +14,6 @@ export class ImageWithCaption extends Component {
       className,
     )
 
-    console.log(children);
     return (
       <figcaption className={ figcaptionClassName } { ...captionProps }>
         { children }
