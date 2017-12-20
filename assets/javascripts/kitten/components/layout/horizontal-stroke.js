@@ -21,7 +21,10 @@ export class HorizontalStroke extends Component {
     )
 
     return (
-      <span className={ horizontalStrokeClassName } { ...others } />
+      <span
+        className={ horizontalStrokeClassName }
+        { ...others }
+      />
     )
   }
 }

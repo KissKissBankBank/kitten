@@ -5,7 +5,9 @@ import { HorizontalStroke } from 'kitten/components/layout/horizontal-stroke'
 
 describe('<HorizontalStroke />', () => {
   describe('by default', () => {
-    const horizontalStroke = shallow(<HorizontalStroke />)
+    const horizontalStroke = shallow(
+      <HorizontalStroke />
+    )
 
     it('renders a <span />', () => {
       expect(horizontalStroke).to.have.tagName('span')
@@ -27,7 +29,9 @@ describe('<HorizontalStroke />', () => {
   })
 
   describe('with size prop', () => {
-    const horizontalStroke = shallow(<HorizontalStroke size="tiny" />)
+    const horizontalStroke = shallow(
+      <HorizontalStroke size="tiny" />
+    )
 
     it('has a good utility class', () => {
       expect(horizontalStroke).to.have.className('k-HorizontalStroke--tiny')

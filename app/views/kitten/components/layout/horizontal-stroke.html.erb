@@ -1,21 +1,27 @@
 <div class="k-Grid">
   <div class="k-Grid__col k-Grid__col--6">
     <%= example 'Normal' do %>
-      <%= react_component 'HorizontalStroke' %>
+      <%= react_component 'KarlHorizontalStroke' %>
     <% end %>
 
     <%= example 'Tiny' do %>
-      <%= react_component 'HorizontalStroke', props: { size: 'tiny' } %>
+      <%= react_component 'KarlHorizontalStroke', props: {
+        size: 'tiny'
+      } %>
     <% end %>
   </div>
 
   <div class="k-Grid__col k-Grid__col--6">
     <%= example 'Medium' do %>
-      <%= react_component 'HorizontalStroke', props: { size: 'medium' } %>
+      <%= react_component 'KarlHorizontalStroke', props: {
+        size: 'medium'
+      } %>
     <% end %>
 
     <%= example 'Big' do %>
-      <%= react_component 'HorizontalStroke', props: { size: 'big' } %>
+      <%= react_component 'KarlHorizontalStroke', props: {
+        size: 'big'
+      } %>
     <% end %>
   </div>
 </div>

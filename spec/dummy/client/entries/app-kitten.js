@@ -166,7 +166,6 @@ import { PhoneIllustration }
 import { KarlImageCropper } from 'kitten/karl/images/image-cropper'
 
 // Layout
-import { HorizontalStroke } from 'kitten/components/layout/horizontal-stroke'
 import { Separator } from 'kitten/components/layout/separator'
 import {
   KarlLineWithBigHeart,
@@ -415,7 +414,6 @@ ReactOnRails.register({
   KarlImageCropper,
 
   // Layout
-  HorizontalStroke,
   Separator,
   KarlLineWithBigHeart,
   KarlLineWithTooltip,
