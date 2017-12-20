@@ -14,8 +14,9 @@ export class HorizontalStroke extends Component {
       'k-HorizontalStroke',
       {
         'k-HorizontalStroke--tiny': size == 'tiny',
-        'k-HorizontalStroke--medium': size == 'medium',
+        'k-HorizontalStroke--default': size == 'default',
         'k-HorizontalStroke--big': size == 'big',
+        'k-HorizontalStroke--huge': size == 'huge',
       },
       className,
     )
@@ -30,11 +31,9 @@ export class HorizontalStroke extends Component {
 }
 
 HorizontalStroke.propTypes = {
-  size: PropTypes.oneOf(['tiny', 'medium', 'big'])
+  size: PropTypes.oneOf(['tiny', 'default', 'big', 'huge']),
 }
 
 HorizontalStroke.defaultProps = {
-  tiny: null,
-  medium: null,
-  big: null,
+  size: 'default',
 }

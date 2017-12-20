@@ -17,9 +17,6 @@
     display: block;
     border: none;
     background: map-get($k-colors, 'font-1');
-
-    height: k-px-to-rem(4px);
-    width: k-px-to-rem(30px);
   }
 
   .k-HorizontalStroke--tiny {
@@ -27,12 +24,17 @@
     width: k-px-to-rem(20px);
   }
 
-  .k-HorizontalStroke--medium {
+  .k-HorizontalStroke--default {
+    height: k-px-to-rem(4px);
+    width: k-px-to-rem(30px);
+  }
+
+  .k-HorizontalStroke--big {
     height: k-px-to-rem(4px);
     width: k-px-to-rem(50px);
   }
 
-  .k-HorizontalStroke--big {
+  .k-HorizontalStroke--huge {
     height: k-px-to-rem(6px);
     width: k-px-to-rem(100px);
   }

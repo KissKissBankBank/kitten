@@ -13,7 +13,7 @@ describe('<HorizontalStroke />', () => {
       expect(horizontalStroke).to.have.tagName('span')
     })
 
-    it('has good class', () => {
+    it('has a good class', () => {
       expect(horizontalStroke).to.have.className('k-HorizontalStroke')
     })
   })
@@ -28,13 +28,43 @@ describe('<HorizontalStroke />', () => {
     })
   })
 
-  describe('with size prop', () => {
+  describe('with size="tiny" prop', () => {
     const horizontalStroke = shallow(
       <HorizontalStroke size="tiny" />
     )
 
-    it('has a good utility class', () => {
+    it('has a good class', () => {
       expect(horizontalStroke).to.have.className('k-HorizontalStroke--tiny')
+    })
+  })
+
+  describe('with size="default" prop', () => {
+    const horizontalStroke = shallow(
+      <HorizontalStroke size="default" />
+    )
+
+    it('has a good class', () => {
+      expect(horizontalStroke).to.have.className('k-HorizontalStroke--default')
+    })
+  })
+
+  describe('with size="big" prop', () => {
+    const horizontalStroke = shallow(
+      <HorizontalStroke size="big" />
+    )
+
+    it('has a good class', () => {
+      expect(horizontalStroke).to.have.className('k-HorizontalStroke--big')
+    })
+  })
+
+  describe('with size="huge" prop', () => {
+    const horizontalStroke = shallow(
+      <HorizontalStroke size="huge" />
+    )
+
+    it('has a good class', () => {
+      expect(horizontalStroke).to.have.className('k-HorizontalStroke--huge')
     })
   })
 })
