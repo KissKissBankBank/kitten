@@ -6,6 +6,7 @@ import { createRangeFromZeroTo } from 'kitten/helpers/utils/range'
 import { createMatchMedia, createMatchMediaMax } from 'kitten/helpers/utils/media-queries'
 import { SCREEN_SIZE_XS, SCREEN_SIZE_M } from 'kitten/constants/screen-config'
 import { CONTAINER_PADDING, CONTAINER_PADDING_MOBILE } from 'kitten/constants/grid-config'
+import ColorsConfig from 'kitten/constants/colors-config'
 
 import { Grid, GridCol } from 'kitten/components/grid/grid'
 import { ButtonIcon } from 'kitten/components/buttons/button-icon'
@@ -267,11 +268,10 @@ const styles = {
     marginLeft: 4,
     marginRight: 4,
     borderRadius: 4,
-    backgroundColor: 'black',
-    opacity: 0.1,
+    backgroundColor: ColorsConfig.font1,
   },
   pageDotActive: {
-    opacity: 0.4,
+    backgroundColor: ColorsConfig.primary2,
   },
 }
 
