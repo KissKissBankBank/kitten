@@ -43,7 +43,8 @@ describe('<HorizontalNav />', () => {
         items={ [
           { text: 'Nav link 1' },
         ] }
-        height="auto" />
+        height="auto"
+      />
     )
     const item = component.find('.k-HorizontalNav__item')
 
