@@ -177,8 +177,8 @@ module Kitten
             { path: 'components/layout/line', name: 'Line' },
             { path: 'components/form/form-actions', name: 'Form actions' },
             { path: 'components/form/form-row', name: 'Form row' },
-            { path: 'components/layout/separator', name: 'Separator' },
             { path: 'components/layout/horizontal-stroke', name: 'Horizontal stroke' },
+            { path: 'components/layout/separator', name: 'Separator' },
           ],
         }
       ]
