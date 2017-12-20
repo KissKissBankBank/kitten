@@ -26,11 +26,43 @@ describe('<VerticalStroke />', () => {
     })
   })
 
-  describe('with size prop', () => {
-    const verticalStroke = shallow(<VerticalStroke size="tiny" />)
+  describe('with size="tiny" prop', () => {
+    const verticalStroke = shallow(
+      <VerticalStroke size="tiny" />
+    )
 
-    it('has a good utility class', () => {
+    it('has a good class', () => {
       expect(verticalStroke).to.have.className('k-VerticalStroke--tiny')
+    })
+  })
+
+  describe('with size="default" prop', () => {
+    const verticalStroke = shallow(
+      <VerticalStroke size="default" />
+    )
+
+    it('has a good class', () => {
+      expect(verticalStroke).to.have.className('k-VerticalStroke--default')
+    })
+  })
+
+  describe('with size="big" prop', () => {
+    const verticalStroke = shallow(
+      <VerticalStroke size="big" />
+    )
+
+    it('has a good class', () => {
+      expect(verticalStroke).to.have.className('k-VerticalStroke--big')
+    })
+  })
+
+  describe('with size="huge" prop', () => {
+    const verticalStroke = shallow(
+      <VerticalStroke size="huge" />
+    )
+
+    it('has a good class', () => {
+      expect(verticalStroke).to.have.className('k-VerticalStroke--huge')
     })
   })
 })

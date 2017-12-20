@@ -175,8 +175,8 @@ import { KarlSeparator } from 'kitten/karl/layout/separator'
 import {
   KarlVerticalStroke,
   KarlTinyVerticalStroke,
-  KarlMediumVerticalStroke,
   KarlBigVerticalStroke,
+  KarlHugeVerticalStroke,
 } from 'kitten/karl/layout/vertical-stroke'
 
 // Lines
@@ -425,8 +425,8 @@ ReactOnRails.register({
   KarlSeparator,
   KarlVerticalStroke,
   KarlTinyVerticalStroke,
-  KarlMediumVerticalStroke,
   KarlBigVerticalStroke,
+  KarlHugeVerticalStroke,
 
   // Lines
   InfoLines,

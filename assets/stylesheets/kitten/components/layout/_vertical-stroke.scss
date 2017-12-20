@@ -12,14 +12,9 @@
 
 @mixin k-VerticalStroke {
   .k-VerticalStroke {
-    @include k-verticalStrokeBase;
-
     display: block;
     border: none;
     background: map-get($k-colors, 'font-1');
-
-    height: k-px-to-rem(30px);
-    width: k-px-to-rem(4px);
   }
 
   .k-VerticalStroke--tiny {
@@ -27,12 +22,17 @@
     width: k-px-to-rem(2px);
   }
 
-  .k-VerticalStroke--medium {
-    height: k-px-to-rem(50px);
+  .k-VerticalStroke--default {
+    height: k-px-to-rem(30px);
     width: k-px-to-rem(4px);
   }
 
   .k-VerticalStroke--big {
+    height: k-px-to-rem(50px);
+    width: k-px-to-rem(4px);
+  }
+
+  .k-VerticalStroke--huge {
     height: k-px-to-rem(100px);
     width: k-px-to-rem(6px);
   }

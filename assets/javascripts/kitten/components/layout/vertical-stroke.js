@@ -14,8 +14,9 @@ export class VerticalStroke extends Component {
       'k-VerticalStroke',
       {
         'k-VerticalStroke--tiny': size == 'tiny',
-        'k-VerticalStroke--medium': size == 'medium',
+        'k-VerticalStroke--default': size == 'default',
         'k-VerticalStroke--big': size == 'big',
+        'k-VerticalStroke--huge': size == 'huge',
       },
       className,
     )
@@ -30,11 +31,9 @@ export class VerticalStroke extends Component {
 }
 
 VerticalStroke.propTypes = {
-  size: PropTypes.oneOf(['tiny', 'medium', 'big'])
+  size: PropTypes.oneOf(['tiny', 'default', 'big', 'huge']),
 }
 
 VerticalStroke.defaultProps = {
-  tiny: null,
-  medium: null,
-  big: null,
+  size: 'default',
 }

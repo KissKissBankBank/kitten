@@ -1,24 +1,39 @@
 import React from 'react'
 import { VerticalStroke } from 'kitten/components/layout/vertical-stroke'
+import { Marger } from 'kitten/components/layout/marger'
 
 export const KarlVerticalStroke = () => (
-  <VerticalStroke />
+  <Marger
+    top="3"
+    bottom="2"
+  >
+    <VerticalStroke />
+  </Marger>
 )
 
 export const KarlTinyVerticalStroke = () => (
-  <VerticalStroke
-    size="tiny"
-  />
-)
-
-export const KarlMediumVerticalStroke = () => (
-  <VerticalStroke
-    size="medium"
-  />
+  <Marger
+    top="3"
+    bottom="2"
+  >
+    <VerticalStroke size="tiny" />
+  </Marger>
 )
 
 export const KarlBigVerticalStroke = () => (
-  <VerticalStroke
-    size="big"
-  />
+  <Marger
+    top="3"
+    bottom="2"
+  >
+    <VerticalStroke size="big" />
+  </Marger>
+)
+
+export const KarlHugeVerticalStroke = () => (
+  <Marger
+    top="3"
+    bottom="2"
+  >
+    <VerticalStroke size="huge" />
+  </Marger>
 )
