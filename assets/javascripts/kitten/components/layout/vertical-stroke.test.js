@@ -11,7 +11,7 @@ describe('<VerticalStroke />', () => {
       expect(verticalStroke).to.have.tagName('span')
     })
 
-    it('has good class', () => {
+    it('has a good class', () => {
       expect(verticalStroke).to.have.className('k-VerticalStroke')
     })
   })
