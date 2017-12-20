@@ -11,7 +11,7 @@ export class HorizontalStroke extends Component {
     } = this.props
 
     const horizontalStrokeClassName = classNames(
-      'k-HorizontalStroke ',
+      'k-HorizontalStroke',
       {
         'k-HorizontalStroke--tiny': size == 'tiny',
         'k-HorizontalStroke--medium': size == 'medium',
@@ -33,7 +33,7 @@ HorizontalStroke.propTypes = {
   size: PropTypes.oneOf(['tiny', 'medium', 'big'])
 }
 
-HorizontalStroke .defaultProps = {
+HorizontalStroke.defaultProps = {
   tiny: null,
   medium: null,
   big: null,
