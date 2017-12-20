@@ -24,7 +24,7 @@ describe ('<ImageWithCaption />', () => {
 
     it('renders a <figcaption />', () => {
       expect(figcaption).to.have.tagName('figcaption')
-       expect(figcaption.hasClass('k-ImageWithCaption__caption')).to.equal(true)
+      expect(figcaption.hasClass('k-ImageWithCaption__caption')).to.equal(true)
     })
   })
 
@@ -37,6 +37,26 @@ describe ('<ImageWithCaption />', () => {
 
     it('adds a children element', () => {
       expect(component).to.have.text('Example content')
+    })
+  })
+
+  describe('with <img /> props', () => {
+    const component = mount(
+      <ImageWithCaption
+        imageSrc="test"
+        imageAlt
+        imageWidth
+        imageHeight
+      />
+    )
+    const image = component.find('.k-ImageWithCaption__img')
+
+    it('renders an image with good href', () => {
+      expect(image).to.have.length(1)
+      expect(image).to.have.attr('src', 'test')
+      expect(image).to.have.attr('alt')
+      expect(image).to.have.attr('width')
+      expect(image).to.have.attr('height')
     })
   })
 })
