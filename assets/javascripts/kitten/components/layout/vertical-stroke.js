@@ -11,7 +11,7 @@ export class VerticalStroke extends Component {
     } = this.props
 
     const verticalStrokeClassName = classNames(
-      'k-VerticalStroke ',
+      'k-VerticalStroke',
       {
         'k-VerticalStroke--tiny': size == 'tiny',
         'k-VerticalStroke--medium': size == 'medium',
@@ -21,7 +21,10 @@ export class VerticalStroke extends Component {
     )
 
     return (
-      <span className={ verticalStrokeClassName } { ...others } />
+      <span
+        className={ verticalStrokeClassName }
+        { ...others }
+      />
     )
   }
 }
@@ -30,7 +33,7 @@ VerticalStroke.propTypes = {
   size: PropTypes.oneOf(['tiny', 'medium', 'big'])
 }
 
-VerticalStroke .defaultProps = {
+VerticalStroke.defaultProps = {
   tiny: null,
   medium: null,
   big: null,

@@ -4,7 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Create `KarlVerticalStroke` example.
+- Feature: Create `KarlVerticalStroke`, `KarlTinyVerticalStroke`,
+  `KarlMediumVerticalStroke` and `KarlBigVerticalStroke` example.
 - Feature: Add `InstagramButtonIcon` example.
 - Feature: Add `disabled` prop on `TextInputWithButton` and `tiny` prop on
   `TextInputWithLimit` examples.
