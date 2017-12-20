@@ -5,7 +5,9 @@ import { ImageWithCaption } from 'kitten/components/images/image-with-caption'
 
 describe ('<ImageWithCaption />', () => {
   describe('by default', () => {
-    const component = shallow(<ImageWithCaption />)
+    const component = shallow(
+      <ImageWithCaption />
+    )
     const figure = component.find('figure')
     const image = figure.find('img')
     const figcaption = figure.find('figcaption')

@@ -5,6 +5,12 @@
 ///   @include k-ImageWithCaption;
 
 @mixin k-ImageWithCaption {
+
+  $paddingTop: k-px-to-rem(25px);
+  $paddingSide: k-px-to-rem(30px);
+
+  $captionBackgroundColor: map-get($k-colors, 'background-1');
+
   .k-ImageWithCaption {
     position: relative;
     margin: 0;
@@ -15,9 +21,9 @@
     bottom: 0;
     right: 0;
 
-    padding: k-px-to-rem(25px) k-px-to-rem(30px) 0;
+    padding: $paddingTop $paddingSide 0;
     max-width: 65%;
-    background-color: map-get($k-colors, 'background-1');
+    background-color: $captionBackgroundColor;
   }
 
   .k-ImageWithCaption__img {

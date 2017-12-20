@@ -10,7 +10,7 @@ export const KarlImageWithCaption = () => {
         color="font-1"
       >
         <span className="k-u-weight-bold">
-          Lorem ipsum dolor
+          Lorem ipsum dolor{' '}
         </span>
         sit amet, consectetur adipiscing elit, sed do eiusmod
       </Text>

@@ -5,7 +5,7 @@ export class ImageWithCaption extends Component {
   renderCaption() {
     const {
       children,
-      ...others
+      ...others,
     } = this.props
 
     return (
@@ -16,10 +16,21 @@ export class ImageWithCaption extends Component {
   }
 
   render() {
+    const {
+      srcImage,
+      altImage,
+      widthImage,
+      heightImage,
+      ...others,
+    } = this.props
+
     return (
       <figure className="k-ImageWithCaption">
         <img
-          src="https://placehold.it/300x400/4a84ff/4a84ff"
+          src={ srcImage }
+          alt={ altImage }
+          width={ widthImage }
+          height={ heightImage }
           className="k-ImageWithCaption__img"
         />
         { this.renderCaption() }
@@ -30,4 +41,8 @@ export class ImageWithCaption extends Component {
 
 ImageWithCaption.defaultProps = {
   children: "Lorem ipsum dolor",
+  srcImage: "https://placehold.it/300x400/4a84ff/4a84ff",
+  altImage: "",
+  widthImage: "",
+  heightImage: "",
 }
