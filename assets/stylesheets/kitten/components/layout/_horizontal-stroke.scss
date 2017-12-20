@@ -12,8 +12,6 @@
 
 @mixin k-HorizontalStroke {
   .k-HorizontalStroke {
-    @include k-horizontalStrokeBase;
-
     display: block;
     border: none;
     background: map-get($k-colors, 'font-1');

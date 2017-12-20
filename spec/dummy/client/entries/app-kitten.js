@@ -170,8 +170,8 @@ import { Separator } from 'kitten/components/layout/separator'
 import {
   KarlHorizontalStroke,
   KarlTinyHorizontalStroke,
-  KarlMediumHorizontalStroke,
   KarlBigHorizontalStroke,
+  KarlHugeHorizontalStroke,
 } from 'kitten/karl/layout/horizontal-stroke'
 import {
   KarlLineWithBigHeart,
@@ -422,8 +422,8 @@ ReactOnRails.register({
   Separator,
   KarlHorizontalStroke,
   KarlTinyHorizontalStroke,
-  KarlMediumHorizontalStroke,
   KarlBigHorizontalStroke,
+  KarlHugeHorizontalStroke,
   KarlLineWithBigHeart,
   KarlLineWithTooltip,
   KarlSeparator,
