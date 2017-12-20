@@ -209,10 +209,10 @@ class Carousel extends React.Component {
       return null
     }
 
-    const { alwaysFullWidth } = this.props
+    const { withoutLeftOffset } = this.props
     const { viewportIsTabletOrLess } = this.state
 
-    if(viewportIsTabletOrLess || alwaysFullWidth) {
+    if(viewportIsTabletOrLess) {
       return (
         <div>
           { this.renderCarouselInner() }
@@ -223,13 +223,14 @@ class Carousel extends React.Component {
 
     return (
       <Grid>
-        <GridCol col-s="1" />
-
-        <GridCol col-s="10">
+        <GridCol
+          col={ withoutLeftOffset ? '11' : '10' }
+          offset={ withoutLeftOffset ? '0' : '1' }
+        >
           { this.renderCarouselInner() }
         </GridCol>
 
-        <GridCol col-s="1">
+        <GridCol col="1">
           { this.renderPagination() }
         </GridCol>
       </Grid>
@@ -275,7 +276,7 @@ const styles = {
 }
 
 Carousel.defaultProps = {
-  alwaysFullWidth: false,
+  withoutLeftOffset: false,
 }
 
 Carousel.propTypes = {

@@ -54,14 +54,14 @@ describe('<Carousel />', () => {
 
   })
 
-  describe('with alwaysFullWidth on desktop', () => {
+  describe('with withoutLeftOffset on desktop', () => {
     window.matchMedia = createMockMediaMatcher(false) // desktop
     const carousel = shallow(
       <Carousel
         data={[{title: 'A'}]}
         itemMinWidth={ProjectCardMinWidth}
         baseItemMarginBetween={ProjectCardMarginBetween}
-        alwaysFullWidth={true}
+        withoutLeftOffset={true}
         renderItem={({item}) => {
           return (
             <ProjectCard
@@ -73,8 +73,8 @@ describe('<Carousel />', () => {
       {}
     )
 
-    it('is not a <Grid />', () => {
-      expect(carousel).to.not.have.className('k-Grid')
+    it('is a <Grid />', () => {
+      expect(carousel.dive()).to.have.className('k-Grid')
     })
 
   })
