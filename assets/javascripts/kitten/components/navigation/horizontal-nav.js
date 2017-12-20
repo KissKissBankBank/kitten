@@ -26,7 +26,7 @@ export class HorizontalNav extends Component {
 
     return (
       <li
-        className={ classNames("k-HorizontalNav__element",
+        className={ classNames('k-HorizontalNav__element',
                                this.props.elementClassName) }
         key={ key }
         role="menuitem"
