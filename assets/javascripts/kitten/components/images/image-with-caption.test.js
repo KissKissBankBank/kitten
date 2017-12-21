@@ -60,16 +60,16 @@ describe ('<ImageWithCaption />', () => {
     })
   })
 
-  describe('with captionProps attribute', () => {
+  describe('with captionProps prop', () => {
     const component = mount(
       <ImageWithCaption
-        captionProps={{ title: "custom" }}
+        captionProps={{ title: 'custom' }}
       />
     )
 
     const caption = component.find('.k-ImageWithCaption__caption')
 
-    it('renders captionProps', () => {
+    it('renders a title attribute', () => {
       expect(caption).to.have.attr('title', 'custom')
     })
   })
