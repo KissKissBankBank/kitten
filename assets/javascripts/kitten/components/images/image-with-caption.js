@@ -48,7 +48,8 @@ export class ImageWithCaption extends Component {
 ImageWithCaption.defaultProps = {
   children: 'Lorem ipsum dolor',
   imageSrc: 'https://placehold.it/300x400/4a84ff/4a84ff',
-  imageAlt: null,
+  imageAlt: '',
   imageWidth: null,
   imageHeight: null,
+  captionProps: null,
 }
