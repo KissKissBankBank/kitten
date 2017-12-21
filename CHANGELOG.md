@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Create new `ImageWithCaption` component.
+- Feature: Add `font2` prop in `Text` component.
+- Feature: Create `HorizontalStroke` component.
 - Feature: Create `HorizontalNav` React component with styleguide V2 brand config.
 - Feature: Create `VerticalStroke` component.
 - Feature: Update all `Select` components with styleguide V2 new design.

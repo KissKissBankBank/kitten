@@ -168,6 +168,7 @@ import { KarlImageWithCaption } from 'kitten/karl/images/image-with-caption'
 
 // Layout
 import { Separator } from 'kitten/components/layout/separator'
+import { KarlHorizontalStrokes } from 'kitten/karl/layout/horizontal-stroke'
 import {
   KarlLineWithBigHeart,
   KarlLineWithTooltip,
@@ -426,6 +427,7 @@ ReactOnRails.register({
 
   // Layout
   Separator,
+  KarlHorizontalStrokes,
   KarlLineWithBigHeart,
   KarlLineWithTooltip,
   KarlSeparator,
