@@ -12,12 +12,12 @@ export class KarlExampleTitle extends Component {
         color="font2"
         lineHeight="normal"
       >
-        { this.props.title }
+        { this.props.children }
       </Text>
     )
   }
 }
 
 KarlExampleTitle.defaultProps = {
-  title: "Default",
+  children: 'Default',
 }
