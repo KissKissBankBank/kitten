@@ -20,9 +20,9 @@ import { SelectWithState } from 'kitten/components/form/select-with-state'
 export class KarlFooterKisskiss extends Component {
   renderNetwork() {
     return (
-      <Row style= { {
-        background:'linear-gradient(to right, #f6f6f6 0%, #f6f6f6 50%, #fff 50%, #fff 100%)'
-        } }
+      <Row style= {{
+        background: 'linear-gradient(to right, #f6f6f6 0%, #f6f6f6 50%, #fff 50%, #fff 100%)'
+      }}
       >
         <Grid>
           <GridCol col-m="6" col-l="9">
@@ -61,8 +61,10 @@ export class KarlFooterKisskiss extends Component {
             className="k-u-margin-top-triple@s-down karl-FooterKisskiss--center"
           >
             <div className="karl-FooterKisskiss__network__logo">
-              <div style= {{ alignSelf: 'center',
-                             marginRight: '15px',
+              <div
+                style= {{
+                  alignSelf: 'center',
+                  marginRight: '15px',
                 }}
               >
                 <Text
