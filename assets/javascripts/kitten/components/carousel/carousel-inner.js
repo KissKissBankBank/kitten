@@ -67,6 +67,10 @@ const getRangePageScrollLeft =
 
 class CarouselInner extends React.Component {
 
+  state = {
+    isTouched: false,
+  }
+
   onResizeObserve = ([entry]) => {
     const widthInner = entry.contentRect.width
     this.props.onResizeInner(widthInner)
@@ -88,6 +92,10 @@ class CarouselInner extends React.Component {
   }
 
   handleInnerScroll = scrollStop((target) => {
+    if(this.state.isTouched){
+      return
+    }
+
     const {
       numPages,
       siblingPageVisible,
@@ -139,6 +147,9 @@ class CarouselInner extends React.Component {
     }
   }
 
+  handleTouchStart = () => this.setState({ isTouched: true })
+  handleTouchEnd = () => this.setState({ isTouched: false })
+
   render() {
     const {
       data,
@@ -165,6 +176,8 @@ class CarouselInner extends React.Component {
           }
         ]}
         onScroll={this.handleInnerScroll}
+        onTouchStart={this.handleTouchStart}
+        onTouchEnd={this.handleTouchEnd}
       >
         {
           rangePage.map((index) =>
