@@ -51,12 +51,26 @@ describe ('<ImageWithCaption />', () => {
     )
     const image = component.find('.k-ImageWithCaption__img')
 
-    it('renders an image with good href', () => {
+    it('renders an image with good attributes', () => {
       expect(image).to.have.length(1)
       expect(image).to.have.attr('src', 'test')
       expect(image).to.have.attr('alt')
       expect(image).to.have.attr('width')
       expect(image).to.have.attr('height')
+    })
+  })
+
+  describe('with captionProps attribute', () => {
+    const component = mount(
+      <ImageWithCaption
+        captionProps={{ title: "custom" }}
+      />
+    )
+
+    const caption = component.find('.k-ImageWithCaption__caption')
+
+    it('renders captionProps', () => {
+      expect(caption).to.have.attr('title', 'custom')
     })
   })
 })
