@@ -164,6 +164,7 @@ import { PhoneIllustration }
 
 // Images
 import { KarlImageCropper } from 'kitten/karl/images/image-cropper'
+import { KarlImageWithCaption } from 'kitten/karl/images/image-with-caption'
 
 // Layout
 import { Separator } from 'kitten/components/layout/separator'
@@ -427,6 +428,7 @@ ReactOnRails.register({
 
   // Images
   KarlImageCropper,
+  KarlImageWithCaption,
 
   // Layout
   Separator,
