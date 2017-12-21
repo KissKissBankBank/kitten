@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Create `KarlLinkList`, `KarlLinkListSelectedItem` and
+  `KarlLinkListDark`.
 - Feature: Create new `KarlImageWithCaption` example.
 - Feature: Create `KarlExampleTitle` example.
 - Feature: Create `KarlHorizontalStrokes` example.

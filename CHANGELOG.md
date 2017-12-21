@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking change: Update `LinkList` component with styleguide V2.
+  Replace `@include k-LinkList(( colors: ( ))` by `@include k-LinkList;`.
 - Feature: Create new `ImageWithCaption` component.
 - Feature: Add `font2` prop in `Text` component.
 - Feature: Create `HorizontalStroke` component.
