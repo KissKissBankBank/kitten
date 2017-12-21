@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Create `KarlExampleTitle` example.
+- Feature: Create `KarlHorizontalStrokes` example.
 - Feature: Add `KarlHorizontalNav` and `KarlHorizontalNavBrowsing` examples.
 - Feature: Create `KarlVerticalStroke`, `KarlTinyVerticalStroke`,
   `KarlBigVerticalStroke` and `KarlHugeVerticalStroke` examples.
