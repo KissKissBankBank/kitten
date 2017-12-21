@@ -105,6 +105,10 @@ module Kitten
           label: 'Navigation',
           components: [
             { path: 'components/navigation/horizontal-nav', name: 'Horizontal nav' },
+            {
+              path: 'components/navigation/scrollable-horizontal-nav',
+              name: 'Scrollable horizontal nav'
+            },
             { path: 'components/navigation/tab-bar', name: 'Tab bar' },
             { path: 'components/navigation/user-menu', name: 'User menu' },
             { path: 'components/navigation/platform-switch', name: 'Plateform switch' },

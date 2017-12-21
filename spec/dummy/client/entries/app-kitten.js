@@ -202,6 +202,10 @@ import {
 } from 'kitten/karl/modals/modal'
 
 // Navigation
+import ScrollableHorizontalNav from 'kitten/components/navigation/scrollable-horizontal-nav'
+import {
+  KarlScrollableHorizontalNav,
+} from 'kitten/karl/navigation/scrollable-horizontal-nav'
 import { TabBar } from 'kitten/components/navigation/tab-bar'
 
 // Notifications
@@ -451,6 +455,8 @@ ReactOnRails.register({
 
   // Navigation
   TabBar,
+  ScrollableHorizontalNav,
+  KarlScrollableHorizontalNav,
 
   // Notifications
   Alert,
