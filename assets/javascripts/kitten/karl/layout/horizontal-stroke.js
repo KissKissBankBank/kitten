@@ -2,21 +2,12 @@ import React from 'react'
 import { Grid, GridCol } from 'kitten/components/grid/grid'
 import { Marger } from 'kitten/components/layout/marger'
 import { HorizontalStroke } from 'kitten/components/layout/horizontal-stroke'
-import { Text } from 'kitten/components/typography/text'
+import { KarlExampleTitle } from 'kitten/karl/examples/title'
 
 export const KarlHorizontalStrokes = () => (
   <Grid>
     <GridCol col="6">
-      <Text
-        tag="p"
-        weight="regular"
-        size="default"
-        style="italic"
-        color="font2"
-        lineHeight="normal"
-      >
-        Default
-      </Text>
+      <KarlExampleTitle />
       <Marger
         top="2"
         bottom="3"
@@ -24,63 +15,30 @@ export const KarlHorizontalStrokes = () => (
         <HorizontalStroke />
       </Marger>
 
-      <Text
-        tag="p"
-        weight="regular"
-        size="default"
-        style="italic"
-        color="font2"
-        lineHeight="normal"
-      >
-        Tiny
-      </Text>
+      <KarlExampleTitle title="Tiny" />
       <Marger
         top="2"
         bottom="3"
       >
-        <HorizontalStroke
-          size="tiny"
-        />
+        <HorizontalStroke size="tiny" />
       </Marger>
     </GridCol>
 
     <GridCol col="6">
-      <Text
-        tag="p"
-        weight="regular"
-        size="default"
-        style="italic"
-        color="font2"
-        lineHeight="normal"
-      >
-        Big
-      </Text>
+      <KarlExampleTitle title="Big" />
       <Marger
         top="2"
         bottom="3"
       >
-        <HorizontalStroke
-          size="big"
-        />
+        <HorizontalStroke size="big" />
       </Marger>
 
-      <Text
-        tag="p"
-        weight="regular"
-        size="default"
-        style="italic"
-        color="font2"
-        lineHeight="normal"
-      >
-        Huge
-      </Text>
+      <KarlExampleTitle title="Huge" />
       <Marger
         top="2"
         bottom="3"
       >
-        <HorizontalStroke
-          size="huge"
-        />
+        <HorizontalStroke size="huge" />
       </Marger>
     </GridCol>
   </Grid>
