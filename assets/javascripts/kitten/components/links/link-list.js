@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import classNames from 'classnames'
+import PropTypes from 'prop-types'
 
 export class LinkList extends Component {
   constructor() {
@@ -25,8 +26,9 @@ export class LinkList extends Component {
     const linkListClassName = classNames(
       'k-LinkList__link',
       {
-        [`k-LinkList__link--${color}`]: color,
         'is-active': active,
+        'k-LinkList__link--lightBackground': color ==  'lightBackground',
+        'k-LinkList__link--darkBackground': color ==  'darkBackground',
       },
     )
 
@@ -67,6 +69,10 @@ export class LinkList extends Component {
       </ul>
     )
   }
+}
+
+LinkList.defaultProps = {
+  color: PropTypes.oneOf(['lightBackground', 'darkBackground']),
 }
 
 LinkList.defaultProps = {
