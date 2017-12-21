@@ -31,7 +31,7 @@ export const KarlLinkListSelectedItem = () => {
   )
 }
 
-export const KarlLinkListDarkBackground = () => {
+export const KarlLinkListDark = () => {
   const linkListItems = [
     { key: 'key1', item: 'Litterae', href: '#' },
     { key: 'key2', item: 'Notae', href: '#', active: true },
@@ -42,7 +42,7 @@ export const KarlLinkListDarkBackground = () => {
   return (
     <LinkList
       style= {{ backgroundColor: '#222' }}
-      color="darkBackground"
+      color="light"
       items={ linkListItems }
     />
   )

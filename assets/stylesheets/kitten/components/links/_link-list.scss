@@ -20,12 +20,12 @@
   $font-size: -1;
 
   // With light backgroundColor
-  $link-color: map-get($k-colors, 'font-1');
+  $dark-link-color: map-get($k-colors, 'font-1');
   $active-color: map-get($k-colors, 'primary-3');
   $hover-color: map-get($k-colors, 'primary-1');
 
   // With dark backgroundColor
-  $dark-link-color: map-get($k-colors, 'background-1');
+  $light-link-color: map-get($k-colors, 'background-1');
 
   .k-LinkList {
     // override ul defaults
@@ -60,11 +60,11 @@
     transition: color .2s;
   }
 
-  .k-LinkList__link--lightBackground {
-    color: $link-color;
+  .k-LinkList__link--light {
+    color: $light-link-color;
   }
 
-  .k-LinkList__link--darkBackground {
+  .k-LinkList__link--dark {
     color: $dark-link-color;
   }
 

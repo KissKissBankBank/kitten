@@ -69,12 +69,12 @@ describe('<LinkList />', () => {
     const linkList = shallow(
       <LinkList
         items={ items }
-        color="darkBackground"
+        color="dark"
       />
     )
 
     it('has a good class', () => {
-      expect(linkList).to.have.prop('color')
+      expect(linkList).to.have.className('k-LinkList__link--dark')
     })
   })
 })

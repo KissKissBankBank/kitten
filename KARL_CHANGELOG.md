@@ -5,7 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Create `KarlLinkList`, `KarlLinkListSelectedItem` and
-  `KarlLinkListDarkBackground`.
+  `KarlLinkListDark`.
 - Feature: Create `KarlExampleTitle` example.
 - Feature: Create `KarlHorizontalStrokes` example.
 - Feature: Add `KarlHorizontalNav` and `KarlHorizontalNavBrowsing` examples.

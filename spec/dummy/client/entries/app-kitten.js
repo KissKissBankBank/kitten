@@ -188,8 +188,8 @@ import { ExternalRichLink } from 'kitten/components/links/external-rich-link'
 import { LinkList } from 'kitten/components/links/link-list'
 import {
   KarlLinkList,
+  KarlLinkListDark,
   KarlLinkListSelectedItem,
-  KarlLinkListDarkBackground
 } from 'kitten/karl/links/link-list'
 
 // Lists
@@ -446,8 +446,8 @@ ReactOnRails.register({
   ExternalRichLink,
   LinkList,
   KarlLinkList,
+  KarlLinkListDark,
   KarlLinkListSelectedItem,
-  KarlLinkListDarkBackground,
 
   // Lists
   BulletList,

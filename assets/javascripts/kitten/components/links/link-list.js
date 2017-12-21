@@ -27,8 +27,8 @@ export class LinkList extends Component {
       'k-LinkList__link',
       {
         'is-active': active,
-        'k-LinkList__link--lightBackground': color ==  'lightBackground',
-        'k-LinkList__link--darkBackground': color ==  'darkBackground',
+        'k-LinkList__link--light': color ==  'light',
+        'k-LinkList__link--dark': color ==  'dark',
       },
     )
 
@@ -72,12 +72,12 @@ export class LinkList extends Component {
 }
 
 LinkList.defaultProps = {
-  color: PropTypes.oneOf(['lightBackground', 'darkBackground']),
+  color: PropTypes.oneOf(['light', 'dark']),
 }
 
 LinkList.defaultProps = {
   className: null,
   margin: true,
   items: [], // Eg: [{ key: …, item: …, href: … }]
-  color: 'lightBackground',
+  color: 'dark',
 }
