@@ -7,7 +7,9 @@ import { KarlExampleTitle } from 'kitten/karl/examples/title'
 export const KarlHorizontalStrokes = () => (
   <Grid>
     <GridCol col="6">
-      <KarlExampleTitle />
+      <KarlExampleTitle>
+        Default
+      </KarlExampleTitle>
       <Marger
         top="2"
         bottom="3"
@@ -15,7 +17,9 @@ export const KarlHorizontalStrokes = () => (
         <HorizontalStroke />
       </Marger>
 
-      <KarlExampleTitle title="Tiny" />
+      <KarlExampleTitle>
+        Tiny
+      </KarlExampleTitle>
       <Marger
         top="2"
         bottom="3"
@@ -25,7 +29,9 @@ export const KarlHorizontalStrokes = () => (
     </GridCol>
 
     <GridCol col="6">
-      <KarlExampleTitle title="Big" />
+      <KarlExampleTitle>
+        Big
+      </KarlExampleTitle>
       <Marger
         top="2"
         bottom="3"
@@ -33,7 +39,9 @@ export const KarlHorizontalStrokes = () => (
         <HorizontalStroke size="big" />
       </Marger>
 
-      <KarlExampleTitle title="Huge" />
+      <KarlExampleTitle>
+        Huge
+      </KarlExampleTitle>
       <Marger
         top="2"
         bottom="3"

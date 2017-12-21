@@ -17,7 +17,3 @@ export class KarlExampleTitle extends Component {
     )
   }
 }
-
-KarlExampleTitle.defaultProps = {
-  children: 'Default',
-}
