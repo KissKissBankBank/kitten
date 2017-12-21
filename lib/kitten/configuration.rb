@@ -238,6 +238,7 @@ module Kitten
               path: 'components/layout/horizontal-stroke',
               name: 'Horizontal stroke',
             },
+            { path: 'components/layout/vertical-stroke', name: 'Vertical stroke' },
             { path: 'components/layout/separator', name: 'Separator' },
           ],
         }
