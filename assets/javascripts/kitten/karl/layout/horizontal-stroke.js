@@ -1,39 +1,87 @@
 import React from 'react'
-import { HorizontalStroke } from 'kitten/components/layout/horizontal-stroke'
+import { Grid, GridCol } from 'kitten/components/grid/grid'
 import { Marger } from 'kitten/components/layout/marger'
+import { HorizontalStroke } from 'kitten/components/layout/horizontal-stroke'
+import { Text } from 'kitten/components/typography/text'
 
-export const KarlHorizontalStroke = () => (
-  <Marger
-    top="2"
-    bottom="3"
-  >
-    <HorizontalStroke />
-  </Marger>
-)
+export const KarlHorizontalStrokes = () => (
+  <Grid>
+    <GridCol col="6">
+      <Text
+        tag="p"
+        weight="regular"
+        size="default"
+        style="italic"
+        color="font2"
+        lineHeight="normal"
+      >
+        Default
+      </Text>
+      <Marger
+        top="2"
+        bottom="3"
+      >
+        <HorizontalStroke />
+      </Marger>
 
-export const KarlTinyHorizontalStroke = () => (
-  <Marger
-    top="2"
-    bottom="3"
-  >
-    <HorizontalStroke size="tiny" />
-  </Marger>
-)
+      <Text
+        tag="p"
+        weight="regular"
+        size="default"
+        style="italic"
+        color="font2"
+        lineHeight="normal"
+      >
+        Tiny
+      </Text>
+      <Marger
+        top="2"
+        bottom="3"
+      >
+        <HorizontalStroke
+          size="tiny"
+        />
+      </Marger>
+    </GridCol>
 
-export const KarlBigHorizontalStroke = () => (
-  <Marger
-    top="2"
-    bottom="3"
-  >
-    <HorizontalStroke size="big" />
-  </Marger>
-)
+    <GridCol col="6">
+      <Text
+        tag="p"
+        weight="regular"
+        size="default"
+        style="italic"
+        color="font2"
+        lineHeight="normal"
+      >
+        Big
+      </Text>
+      <Marger
+        top="2"
+        bottom="3"
+      >
+        <HorizontalStroke
+          size="big"
+        />
+      </Marger>
 
-export const KarlHugeHorizontalStroke = () => (
-  <Marger
-    top="2"
-    bottom="3"
-  >
-    <HorizontalStroke size="huge" />
-  </Marger>
+      <Text
+        tag="p"
+        weight="regular"
+        size="default"
+        style="italic"
+        color="font2"
+        lineHeight="normal"
+      >
+        Huge
+      </Text>
+      <Marger
+        top="2"
+        bottom="3"
+      >
+        <HorizontalStroke
+          size="huge"
+        />
+      </Marger>
+    </GridCol>
+  </Grid>
 )
