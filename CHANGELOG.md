@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Fix `LinkList` test.
 - Breaking change: Update `LinkList` component with styleguide V2.
   Replace `@include k-LinkList(( colors: ( ))` by `@include k-LinkList;`.
 - Feature: Create new `ImageWithCaption` component.
