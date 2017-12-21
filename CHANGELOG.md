@@ -5,6 +5,15 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Update `Tooltip`, `TooltipNew` and `StaticTooltip` components with styleguide V2.
+- Fix: Fix `LinkList` test.
+- Breaking change: Update `LinkList` component with styleguide V2.
+  Replace `@include k-LinkList(( colors: ( ))` by `@include k-LinkList;`.
+- Feature: Create new `ImageWithCaption` component.
+- Feature: Add `font2` prop in `Text` component.
+- Feature: Create `HorizontalStroke` component.
+- Feature: Create `HorizontalNav` React component with styleguide V2 brand config.
+- Feature: Create `VerticalStroke` component.
+- Feature: Update all `Select` components with styleguide V2 new design.
 - Feature: Update `Alert` component with new design styleguide V2.
 - Feature: Update `:focus` `border-color` on `TextInput` component.
 - Feature: Update `Checkbox` and `RadioButton` components with new design
