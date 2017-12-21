@@ -79,5 +79,5 @@ LinkList.defaultProps = {
   className: null,
   margin: true,
   items: [], // Eg: [{ key: …, item: …, href: … }]
-  color: "lightBackground",
+  color: 'lightBackground',
 }
