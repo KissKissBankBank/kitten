@@ -209,6 +209,10 @@ import {
 
 // Navigation
 import { TabBar } from 'kitten/components/navigation/tab-bar'
+import {
+  KarlHorizontalNav,
+  KarlBrowsingHorizontalNav,
+} from 'kitten/karl/navigation/horizontal-nav'
 
 // Notifications
 import { Alert } from 'kitten/components/notifications/alert'
@@ -455,6 +459,8 @@ ReactOnRails.register({
 
   // Navigation
   TabBar,
+  KarlHorizontalNav,
+  KarlBrowsingHorizontalNav,
 
   // Notifications
   Alert,
