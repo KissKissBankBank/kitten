@@ -6,6 +6,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Add `font2` propType in `Text` component.
 - Feature: Create `HorizontalStroke` component.
+- Feature: Create `HorizontalNav` React component with styleguide V2 brand config.
+- Feature: Create `VerticalStroke` component.
 - Feature: Update all `Select` components with styleguide V2 new design.
 - Feature: Update `Alert` component with new design styleguide V2.
 - Feature: Update `:focus` `border-color` on `TextInput` component.
