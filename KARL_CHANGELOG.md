@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Create new `KarlImageWithCaption` example.
 - Feature: Create `KarlExampleTitle` example.
 - Feature: Create `KarlHorizontalStrokes` example.
 - Feature: Add `KarlHorizontalNav` and `KarlHorizontalNavBrowsing` examples.
