@@ -172,6 +172,12 @@ import {
   KarlLineWithTooltip,
 } from 'kitten/karl/layout/line'
 import { KarlSeparator } from 'kitten/karl/layout/separator'
+import {
+  KarlVerticalStroke,
+  KarlTinyVerticalStroke,
+  KarlBigVerticalStroke,
+  KarlHugeVerticalStroke,
+} from 'kitten/karl/layout/vertical-stroke'
 
 // Lines
 import { InfoLines } from 'kitten/components/lines/info-lines'
@@ -208,6 +214,10 @@ import {
 
 // Navigation
 import { TabBar } from 'kitten/components/navigation/tab-bar'
+import {
+  KarlHorizontalNav,
+  KarlBrowsingHorizontalNav,
+} from 'kitten/karl/navigation/horizontal-nav'
 
 // Notifications
 import { Alert } from 'kitten/components/notifications/alert'
@@ -422,6 +432,10 @@ ReactOnRails.register({
   KarlLineWithBigHeart,
   KarlLineWithTooltip,
   KarlSeparator,
+  KarlVerticalStroke,
+  KarlTinyVerticalStroke,
+  KarlBigVerticalStroke,
+  KarlHugeVerticalStroke,
 
   // Lines
   InfoLines,
@@ -453,6 +467,8 @@ ReactOnRails.register({
 
   // Navigation
   TabBar,
+  KarlHorizontalNav,
+  KarlBrowsingHorizontalNav,
 
   // Notifications
   Alert,
