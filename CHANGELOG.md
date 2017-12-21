@@ -4,8 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Update `LinkBox` and `InformationBox` components with new design
-  styleguide V2.
+- Feature: Update `LinkBox` and `InformationBox` components with styleguide V2
+  new design.
 - Feature: Update `:focus` `border-color` on `TextInput` component.
 - Feature: Update `Checkbox` and `RadioButton` components with new design
   styleguide V2.
