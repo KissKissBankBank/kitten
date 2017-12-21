@@ -72,9 +72,10 @@ describe('<LinkList />', () => {
         color="dark"
       />
     )
+    const item = linkList.find('.k-LinkList__link').at(0)
 
     it('has a good class', () => {
-      expect(linkList).to.have.className('k-LinkList__link--dark')
+      expect(item).to.have.className('k-LinkList__link--dark')
     })
   })
 })
