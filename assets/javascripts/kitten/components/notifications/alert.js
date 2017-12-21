@@ -33,10 +33,12 @@ export class Alert extends Component {
     if (!this.props.closeButton) return
 
     return (
-      <CloseButton modifier="carbon"
-                   className="k-Alert__close"
-                   closeButtonLabel={ this.props.closeButtonLabel }
-                   onClick={ this.handleCloseClick } />
+      <CloseButton
+        modifier="carbon"
+        className="k-Alert__close"
+        closeButtonLabel={ this.props.closeButtonLabel }
+        onClick={ this.handleCloseClick }
+      />
     )
   }
 
@@ -66,12 +68,14 @@ export class Alert extends Component {
     )
 
     return (
-      <div ref={ div => this.container = div }
-           role="alert"
-           style={ { height: this.state.height } }
-           className={ alertClassName }
-           onAnimationEnd={ this.handleAnimationEnd }
-           { ...others }>
+      <div
+        ref={ div => this.container = div }
+        role="alert"
+        style={ { height: this.state.height } }
+        className={ alertClassName }
+        onAnimationEnd={ this.handleAnimationEnd }
+        { ...others }
+      >
         <div className="k-Alert__container">
           <div className="k-Alert__row">
             <div className="k-Alert__content">
