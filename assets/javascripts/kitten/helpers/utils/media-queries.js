@@ -3,7 +3,8 @@ import { ScreenConfig } from 'kitten/constants/screen-config'
 export const getMinQuery = (num) => `(min-width: ${num}px)`
 export const getMaxQuery = (num) => `(max-width: ${num}px)`
 
-export const getJoinedQueries = (queries) => queries.filter((q) => q).join(' and ')
+export const getJoinedQueries =
+  (queries) => queries.filter((q) => q).join(' and ')
 
 export const createMatchMedia = (mediaQueryString) => {
   if (typeof window === 'undefined' || !mediaQueryString) return

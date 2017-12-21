@@ -2,7 +2,7 @@ import React from 'react'
 import Radium, { Style } from 'radium'
 import ResizeObserver from 'resize-observer-polyfill'
 
-if(typeof window !== 'undefined') {
+if (typeof window !== 'undefined') {
   require('smoothscroll-polyfill').polyfill()
 }
 
@@ -40,8 +40,12 @@ const scrollStop = ( callback ) => {
 }
 
 const getClosest = (counts, goal) => {
-  return counts
-    .reduce((prev, curr) => Math.abs(curr - goal) < Math.abs(prev - goal) ? curr : prev)
+  return counts.reduce(
+    (prev, curr) =>
+      Math.abs(curr - goal) < Math.abs(prev - goal)
+        ? curr
+        : prev
+  )
 }
 
 const getDataForPage = (data, indexPage, numColumns) => {
@@ -49,12 +53,17 @@ const getDataForPage = (data, indexPage, numColumns) => {
   return data.slice(startIndex, startIndex + numColumns)
 }
 
-const getRangePageScrollLeft = (targetClientWidth, numPages, siblingPageVisible, itemMarginBetween) => {
-  const innerWidth = targetClientWidth - (siblingPageVisible ? (itemMarginBetween * 2 * 2) : 0)
+const getRangePageScrollLeft =
+  (targetClientWidth, numPages, siblingPageVisible, itemMarginBetween) => {
+    const partSiblingItemExceedWidth = itemMarginBetween
+    const marginForSibling = siblingPageVisible
+      ? (itemMarginBetween + partSiblingItemExceedWidth) * 2
+      : 0
+    const innerWidth = targetClientWidth - marginForSibling
 
-  return createRangeFromZeroTo(numPages)
-    .map((numPage) => numPage * (innerWidth + itemMarginBetween) )
-}
+    return createRangeFromZeroTo(numPages)
+      .map((numPage) => numPage * (innerWidth + itemMarginBetween))
+  }
 
 class CarouselInner extends React.Component {
 
@@ -73,26 +82,37 @@ class CarouselInner extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if(nextProps.indexPageVisible !== this.props.indexPageVisible) {
+    if (nextProps.indexPageVisible !== this.props.indexPageVisible) {
       this.scrollToPage(nextProps.indexPageVisible)
     }
   }
 
   handleInnerScroll = scrollStop((target) => {
-    const { numPages, siblingPageVisible, itemMarginBetween, indexPageVisible, goToPage } = this.props
+    const {
+      numPages,
+      siblingPageVisible,
+      itemMarginBetween,
+      indexPageVisible,
+      goToPage
+    } = this.props
     const { scrollLeft, clientWidth } = target
 
-    const rangePageScrollLeft = getRangePageScrollLeft(clientWidth, numPages, siblingPageVisible, itemMarginBetween)
+    const rangePageScrollLeft = getRangePageScrollLeft(
+      clientWidth,
+      numPages,
+      siblingPageVisible,
+      itemMarginBetween
+    )
 
     const closest = getClosest(rangePageScrollLeft, scrollLeft)
     const indexClosest = rangePageScrollLeft.indexOf(closest)
 
-    if(indexClosest !== indexPageVisible) {
+    if (indexClosest !== indexPageVisible) {
       goToPage(indexClosest)
     } else {
-      // if the user doesn't scroll enought to change page
+      // if the user doesn't scroll enough to change page
       // we need to scroll back to the fake snap page
-      if(closest !== scrollLeft) {
+      if (closest !== scrollLeft) {
         target.scrollTo({ top: 0, left: closest, behavior: 'smooth' })
       }
     }
@@ -105,11 +125,16 @@ class CarouselInner extends React.Component {
     const target = this.carouselInner
     const { scrollLeft, clientWidth } = target
 
-    const rangePageScrollLeft = getRangePageScrollLeft(clientWidth, numPages, siblingPageVisible, itemMarginBetween)
+    const rangePageScrollLeft = getRangePageScrollLeft(
+      clientWidth,
+      numPages,
+      siblingPageVisible,
+      itemMarginBetween
+    )
 
     const closest = rangePageScrollLeft[indexPageToScroll]
 
-    if(closest !== scrollLeft) {
+    if (closest !== scrollLeft) {
       target.scrollTo({ top: 0, left: closest, behavior: 'smooth' })
     }
   }

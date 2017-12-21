@@ -20,7 +20,6 @@ export const MIN_WIDTH = 280
 export const MARGIN_BETWEEN = 40
 
 class ProjectCardComponent extends React.Component {
-
   constructor() {
     super()
 

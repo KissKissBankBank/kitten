@@ -5,7 +5,13 @@ import { createRangeFromZeroTo } from 'kitten/helpers/utils/range'
 class CarouselPage extends React.Component {
 
   render() {
-    const { data, numColumns, itemMinWidth, itemMarginBetween, renderItem } = this.props
+    const {
+      data,
+      numColumns,
+      itemMinWidth,
+      itemMarginBetween,
+      renderItem
+    } = this.props
     const rangeCard = createRangeFromZeroTo(numColumns)
 
     return (

@@ -184,7 +184,10 @@ module Kitten
           id: 'carousel',
           label: 'Carousel',
           components: [
-            { path: 'components/carousel/carousel', name: 'Carousel with ProjectCard' },
+            {
+              path: 'components/carousel/carousel',
+              name: 'Carousel with ProjectCard'
+            },
           ],
         },
       ]

@@ -38,7 +38,9 @@ describe('utils MediaQueries', () => {
     })
 
     describe('return joined queries strings', () => {
-      const query = getJoinedQueries(['(min-width: 800px)', '(max-width: 1280px)'])
+      const query = getJoinedQueries(
+        ['(min-width: 800px)', '(max-width: 1280px)']
+      )
 
       it('by passing two queries', () => {
         expect(query).to.equal('(min-width: 800px) and (max-width: 1280px)')

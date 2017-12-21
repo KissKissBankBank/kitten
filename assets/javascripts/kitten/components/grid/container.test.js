@@ -60,7 +60,9 @@ describe('<Container />', () => {
 
     describe('and media match', () => {
       window.matchMedia = createMockMediaMatcher(true)
-      const container = shallow(<Container fullWidthBelowScreenSize={SCREEN_SIZE_M} />)
+      const container = shallow(
+        <Container fullWidthBelowScreenSize={SCREEN_SIZE_M} />
+      )
 
       it('has class no-padding', () => {
         expect(container).to.have.className('k-Container--no-padding')
@@ -69,7 +71,9 @@ describe('<Container />', () => {
 
     describe('and media don\'t match', () => {
       window.matchMedia = createMockMediaMatcher(false)
-      const container = shallow(<Container fullWidthBelowScreenSize={SCREEN_SIZE_M} />)
+      const container = shallow(
+        <Container fullWidthBelowScreenSize={SCREEN_SIZE_M} />
+      )
 
       it('has not class no-padding', () => {
         expect(container).to.not.have.className('k-Container--no-padding')

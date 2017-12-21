@@ -8,19 +8,23 @@ export class Container extends React.PureComponent {
   constructor(props, context) {
     super(props, context)
 
-    this.mqBelowScreenSize = props.fullWidthBelowScreenSize && createMatchMediaMax(props.fullWidthBelowScreenSize)
+    this.mqBelowScreenSize = props.fullWidthBelowScreenSize &&
+      createMatchMediaMax(props.fullWidthBelowScreenSize)
 
     this.state = {
-      isBelowScreenSize: this.mqBelowScreenSize && this.mqBelowScreenSize.matches
+      isBelowScreenSize: this.mqBelowScreenSize &&
+        this.mqBelowScreenSize.matches
     }
   }
 
   componentDidMount () {
-    this.mqBelowScreenSize && this.mqBelowScreenSize.addListener(this.onScreenSizeChange)
+    this.mqBelowScreenSize &&
+      this.mqBelowScreenSize.addListener(this.onScreenSizeChange)
   }
 
   componentWillUnmount () {
-    this.mqBelowScreenSize && this.mqBelowScreenSize.removeListener(this.onScreenSizeChange)
+    this.mqBelowScreenSize &&
+      this.mqBelowScreenSize.removeListener(this.onScreenSizeChange)
   }
 
   onScreenSizeChange = (event) => {

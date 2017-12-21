@@ -84,8 +84,10 @@ describe('<SimilarProjectsCard />', () => {
 
       expect(staticSimilarProjectCard.props()).to.contains(expectedProps)
       expect(staticSimilarProjectCard.props()).not.to.contains(projectProps)
-      expect(staticSimilarProjectCard.props().onLeftArrowClick).to.be.a('function')
-      expect(staticSimilarProjectCard.props().onRightArrowClick).to.be.a('function')
+      expect(staticSimilarProjectCard.props().onLeftArrowClick)
+        .to.be.a('function')
+      expect(staticSimilarProjectCard.props().onRightArrowClick)
+        .to.be.a('function')
     })
   })
 
