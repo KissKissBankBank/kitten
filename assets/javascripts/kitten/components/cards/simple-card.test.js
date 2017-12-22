@@ -61,6 +61,9 @@ describe('<SimpleCard />', () => {
           imageProps={ {
             src: '#foobar',
             alt: 'FooBar',
+            style: {
+              cursor: 'crosshair',
+            }
           } }
         />
       )
@@ -72,6 +75,10 @@ describe('<SimpleCard />', () => {
 
     it('has an image with alt description', () => {
       expect(component.find('img')).to.have.prop('alt', 'FooBar')
+    })
+
+    it('has an image with a custom style', () => {
+      expect(component.find('img')).to.have.style('cursor', 'crosshair')
     })
   })
 
