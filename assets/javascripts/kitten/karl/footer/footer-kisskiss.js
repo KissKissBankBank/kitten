@@ -21,12 +21,12 @@ import { KissKissBankBankLogo } from 'kitten/karl/logos/kisskissbankbanklogo'
 export class KarlFooterKisskiss extends Component {
   renderNetwork() {
     return (
-      <Row style= {{
+      <Row style={{
         background: 'linear-gradient(to right, #f6f6f6 0%, #f6f6f6 50%, #fff 50%, #fff 100%)'
       }}
       >
         <Grid>
-          <GridCol col-l="9">
+          <GridCol col-l="8">
             <div
               style={{
                 padding: '35px 0',
@@ -65,6 +65,9 @@ export class KarlFooterKisskiss extends Component {
                     >
                       <TextInputWithButton
                         value="Envoyer"
+                        textInputProps={{
+                          placeholder:"Entrez votre e-mail"
+                        }}
                       />
                     </GridCol>
                   </Grid>
@@ -74,7 +77,7 @@ export class KarlFooterKisskiss extends Component {
           </GridCol>
 
           <GridCol
-            col-l="3"
+            col-l="4"
             style={{
               alignSelf: 'center',
             }}
@@ -144,6 +147,7 @@ export class KarlFooterKisskiss extends Component {
           options= { options }
           value="FR"
           onInputChange
+          placeholder="Français"
         />
       </GridCol>
     )

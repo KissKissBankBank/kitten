@@ -22,7 +22,7 @@
 .karl-FooterKisskiss__paddingList {
   padding: k-px-to-rem(50px) 0;
 
-  @include k-media-min('l') {
+  @include k-media-min('m') {
     padding-top: k-px-to-rem(100px);
     padding-bottom: k-px-to-rem(80px);
   }
