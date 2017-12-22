@@ -25,18 +25,23 @@
   $background-color-helium: map-get($k-colors, 'primary-1');
 
   $font: 'regular';
-  $font-size: -1;
-  $line-height: 1.3;
+  $font-size: -1; // 14px
+  $line-height: 1.25;
 
   $arrow-size: k-px-to-rem(8px);
 
   // DEPRECATED
   $tooltip-margin: k-px-to-rem(18px);
 
+  $tooltip-padding: k-px-to-rem(20px);
+
   // To override __react_component_tooltip style.
   .k-Tooltip .k-Tooltip__content {
     @include k-typographyFont($font);
-    @include k-typographyFontSize($font-size, $line-height);
+    @include k-typographyFontSize(
+      $font-size,
+      $line-height
+    );
   }
 
   .k-Tooltip__content {
@@ -44,10 +49,12 @@
     color: $color-helium !important;
     opacity: 1 !important;
 
-    padding: k-px-to-rem(20px) !important;
+    padding: $tooltip-padding !important;
 
     max-width: k-px-to-rem(340px) !important;
-    border-radius: k-px-to-rem(8px) !important;
+    // ReactTooltip forces a default `border-radius: 3px`, we have to set it
+    // to 0px.
+    border-radius: 0 !important;
 
     &.place-top {
       margin-bottom: $tooltip-margin !important;

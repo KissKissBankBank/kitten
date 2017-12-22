@@ -5,6 +5,17 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add `SimpleCard` examples.
+- Feature: Create `KarlLinkList`, `KarlLinkListSelectedItem` and
+  `KarlLinkListDark`.
+- Feature: Create new `KarlImageWithCaption` example.
+- Feature: Create `KarlExampleTitle` example.
+- Feature: Create `KarlHorizontalStrokes` example.
+- Feature: Add `KarlHorizontalNav` and `KarlHorizontalNavBrowsing` examples.
+- Feature: Create `KarlVerticalStroke`, `KarlTinyVerticalStroke`,
+  `KarlBigVerticalStroke` and `KarlHugeVerticalStroke` examples.
+- Feature: Add `InstagramButtonIcon` example.
+- Feature: Add `disabled` prop on `TextInputWithButton` and `tiny` prop on
+  `TextInputWithLimit` examples.
 
 ## [16.3.1] - 2017-11-28
 

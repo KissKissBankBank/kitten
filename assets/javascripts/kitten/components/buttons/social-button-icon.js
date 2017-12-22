@@ -3,6 +3,7 @@ import { ButtonIcon } from 'kitten/components/buttons/button-icon'
 import { FacebookIcon } from 'kitten/components/icons/facebook-icon'
 import { TwitterIcon } from 'kitten/components/icons/twitter-icon'
 import { LinkedinIcon } from 'kitten/components/icons/linkedin-icon'
+import { InstagramIcon } from 'kitten/components/icons/instagram-icon'
 
 export const FacebookButtonIcon = props => (
   <ButtonIcon { ...props } modifier="facebook">
@@ -19,5 +20,11 @@ export const TwitterButtonIcon = props => (
 export const LinkedinButtonIcon = props => (
   <ButtonIcon { ...props } modifier="linkedin">
     <LinkedinIcon className="k-ButtonIcon__svg" />
+  </ButtonIcon>
+)
+
+export const InstagramButtonIcon = props => (
+  <ButtonIcon { ...props } modifier="instagram">
+    <InstagramIcon className="k-ButtonIcon__svg" />
   </ButtonIcon>
 )
