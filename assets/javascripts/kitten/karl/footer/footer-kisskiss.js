@@ -1,19 +1,15 @@
 import React, { Component } from 'react'
 import classNames from 'classnames'
-import { Marger } from 'kitten/components/layout/marger'
 import { Row } from 'kitten/components/grid/row'
 import { Grid, GridCol } from 'kitten/components/grid/grid'
 import { TextInputWithButton } from 'kitten/components/form/text-input-with-button'
 import { Paragraph } from 'kitten/components/typography/paragraph'
-import { Title } from 'kitten/components/typography/title'
 import { Text } from 'kitten/components/typography/text'
-import { ButtonIcon } from 'kitten/components/buttons/button-icon'
 import {
   FacebookButtonIcon,
   TwitterButtonIcon,
   InstagramButtonIcon,
 } from 'kitten/components/buttons/social-button-icon'
-import { Separator } from 'kitten/components/layout/separator'
 import { LinkList } from 'kitten/components/links/link-list'
 import { SelectWithState } from 'kitten/components/form/select-with-state'
 import { KissKissBankBankLogo } from 'kitten/karl/logos/kisskissbankbanklogo'
