@@ -1,16 +1,3 @@
-// .karl-FooterKisskiss {
-//   display: flex;
-// }
-
-.karl-FooterKisskiss__newsletter {
-  padding: 35px 0;
-  background-color: map-get($k-colors, 'background-3');
-}
-
-.karl-FooterKisskiss--center {
-  align-self: center;
-}
-
 .karl-FooterKisskiss__network__logo {
   @include k-media-min('l') {
     display: flex;
@@ -18,6 +5,66 @@
   }
 }
 
-.karl-FooterKisskiss__padding {
-  padding-top: 100px;
+.karl-FooterKisskiss__notice__logo {
+  @include k-media-min('l') {
+    display: flex;
+  }
 }
+
+.karl-FooterKisskiss__logo__img {
+  @include k-media-min('l') {
+    line-height: 4rem;
+    margin-bottom: 0;
+    margin-right: k-px-to-rem(16px);
+  }
+}
+
+.karl-FooterKisskiss__paddingList {
+  padding: k-px-to-rem(50px) 0;
+
+  @include k-media-min('l') {
+    padding-top: k-px-to-rem(100px);
+    padding-bottom: k-px-to-rem(80px);
+  }
+}
+
+.karl-FooterKisskiss__paddingLinkList {
+  @include k-media-max('m') {
+    padding-bottom: k-px-to-rem(70px);
+  }
+}
+
+.karl-FooterKisskiss__logo__img__imgTag {
+  vertical-align: middle;
+
+   @include k-media-min('l') {
+    display: block;
+    vertical-align: top;
+  }
+}
+
+.karl-FooterKisskiss__logo__imgMangopay {
+  width: k-px-to-rem(100px);
+
+  @include k-media-max('m') {
+    height: k-px-to-rem(50px);
+  }
+}
+
+.karl-FooterKisskiss__notice__link {
+  &:active {
+    color: map-get($k-colors, 'primary-3');
+  }
+
+  &:hover {
+    color: map-get($k-colors, 'primary-1');
+  }
+}
+
+.karl-FooterKisskiss__notice__copyright {
+  @include k-media-min('l') {
+    align-self: flex-end;
+    margin-top: 0;
+  }
+}
+

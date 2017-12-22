@@ -23,6 +23,10 @@
     color: map-get($k-colors, 'primary-1');
   }
 
+  .k-u-color-background1 {
+    color: map-get($k-colors, 'background-1');
+  }
+
   .k-u-color-error {
     color: map-get($k-colors, 'error');
   }

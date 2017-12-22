@@ -16,6 +16,7 @@ import {
 import { Separator } from 'kitten/components/layout/separator'
 import { LinkList } from 'kitten/components/links/link-list'
 import { SelectWithState } from 'kitten/components/form/select-with-state'
+import { KissKissBankBankLogo } from 'kitten/karl/logos/kisskissbankbanklogo'
 
 export class KarlFooterKisskiss extends Component {
   renderNetwork() {
@@ -25,13 +26,21 @@ export class KarlFooterKisskiss extends Component {
       }}
       >
         <Grid>
-          <GridCol col-m="6" col-l="9">
-            <div className="karl-FooterKisskiss__newsletter">
+          <GridCol col-l="9">
+            <div
+              style={{
+                padding: '35px 0',
+                backgroundColor: '#f6f6f6',
+              }}
+            >
               <Grid>
                 <GridCol
-                  col-m="12"
                   col-l="3"
-                  className="karl-FooterKisskiss--center"
+                  col-m="12"
+                  style={{
+                    alignSelf: 'center'
+                  }}
+                  className="k-u-align-center@m-up"
                 >
                   <Text
                     size="tiny"
@@ -42,27 +51,40 @@ export class KarlFooterKisskiss extends Component {
                 </GridCol>
 
                 <GridCol
-                  col-m="12"
                   col-l="5"
-                  className={ classNames('k-u-margin-top-single@m-down',
-                                         'karl-FooterKisskiss--center') }
+                  col-m="12"
+                  style={{
+                    alignSelf: 'center',
+                  }}
+                  className="k-u-margin-top-single@m-down"
                 >
-                  <TextInputWithButton
-                    value="Envoyer"
-                  />
+                  <Grid>
+                    <GridCol
+                      col-l="12"
+                      col-m="5"
+                    >
+                      <TextInputWithButton
+                        value="Envoyer"
+                      />
+                    </GridCol>
+                  </Grid>
                 </GridCol>
               </Grid>
             </div>
           </GridCol>
 
           <GridCol
-            col-m="6"
             col-l="3"
-            className="k-u-margin-top-triple@s-down karl-FooterKisskiss--center"
+            style={{
+              alignSelf: 'center',
+            }}
+            className="k-u-margin-top-triple@s-down"
           >
-            <div className="karl-FooterKisskiss__network__logo">
+            <div className={ classNames('karl-FooterKisskiss__network__logo',
+                                        'k-u-align-center@m-up') }
+            >
               <div
-                style= {{
+                style={{
                   alignSelf: 'center',
                   marginRight: '15px',
                 }}
@@ -70,7 +92,7 @@ export class KarlFooterKisskiss extends Component {
                 <Text
                   size="tiny"
                   weight="regular"
-                  className={ classNames('k-u-align-center@l-down',
+                  className={ classNames('k-u-align-center@m-up',
                                          'k-u-align-right@l-up') }
                 >
                   Suivez-nous
@@ -78,15 +100,21 @@ export class KarlFooterKisskiss extends Component {
               </div>
 
               <div
-                className={ classNames('k-u-align-center',
-                                       'k-u-margin-top-single@m-down') }
+                style={{
+                  textAlign: 'center'
+                }}
+                className="k-u-margin-top-single@m-down"
               >
                 <FacebookButtonIcon
-                  className="k-u-margin-right-single"
+                  style={{
+                    marginRight: '15px',
+                  }}
                 />
 
                 <TwitterButtonIcon
-                  className="k-u-margin-right-single"
+                  style={{
+                    marginRight: '15px',
+                  }}
                 />
 
                 <InstagramButtonIcon />
@@ -106,12 +134,17 @@ export class KarlFooterKisskiss extends Component {
     ]
 
     return (
-      <GridCol col="4">
-        <Grid>
-          <SelectWithState
-            options= { options }
-          />
-        </Grid>
+      <GridCol
+        col-l="2" offset-l="2"
+        col-m="4" offset-m="4"
+        col-xs="8" offset-xs="2"
+      >
+        <SelectWithState
+          name=""
+          options= { options }
+          value="FR"
+          onInputChange
+        />
       </GridCol>
     )
   }
@@ -140,63 +173,167 @@ export class KarlFooterKisskiss extends Component {
     ]
 
     return (
-      <Row style= {{ background: '#222' }}>
-        <Grid>
-          <GridCol
-            col-l="2"
-            className="karl-FooterKisskiss__padding">
+      <Row style={{ background: '#222' }}>
+        <Grid className="karl-FooterKisskiss__paddingList">
+          <GridCol col-l="2">
             <div className={ classNames('k-u-align-center@l-down',
                                         'k-u-margin-bottom-triple',
-                                        'karl-FooterLendo__logo__img',
-                                        'karl-FooterLendo__logo__imgLendo') }
+                                        'karl-FooterKisskiss__logo__img') }
             >
-              <img
-                src="/assets/brand/kisskissbankbank.svg"
-                alt="Logo Lendopolis"
-                className="karl-FooterLendo__logo__img__imgTag"
+              <KissKissBankBankLogo
+                color="#fff"
+                className="karl-FooterKisskiss__logo__img__imgTag"
               />
             </div>
           </GridCol>
 
-          <GridCol col-l="6">
+          <GridCol
+            col-l="6"
+            className="karl-FooterKisskiss__paddingLinkList"
+          >
               <Grid>
                 <GridCol
-                  col-m="3"
-                  col-l="2"
+                  col-m="4"
                   className="k-u-margin-bottom-triple@s-down"
                 >
                   <LinkList
                     margin={ false }
                     items={ items }
-                    className= "karl-FooterKissKiss__linkList"
+                    color= 'light'
                   />
                 </GridCol>
 
                 <GridCol
-                  col-m="3"
-                  col-l="2"
+                  col-m="4"
                   className="k-u-margin-bottom-triple@s-down"
                 >
                   <LinkList
                     margin={ false }
                     items={ items2 }
+                    color= 'light'
                   />
                 </GridCol>
 
                 <GridCol
-                  col-m="3"
-                  col-l="2"
+                  col-m="4"
                   className="k-u-margin-bottom-triple@s-down"
                 >
                   <LinkList
                     margin={ false }
                     items={ items3 }
+                    color= 'light'
                   />
                 </GridCol>
               </Grid>
             </GridCol>
 
             { this.renderLanguageSelect() }
+
+        </Grid>
+      </Row>
+    )
+  }
+
+  renderNotice() {
+    return(
+      <Row>
+        <Grid style={{ paddingBottom: '80px' }}>
+          <GridCol
+            col-xs="8" offset-xs="2"
+            col-s="10" offset-s="1"
+            col-m="4" offset-m="1"
+            col-l="4" offset-l="0"
+          >
+            <div className={ classNames('k-u-align-left@l-up',
+                                        'karl-FooterKisskiss__notice__logo') }
+              >
+                <div className={ classNames('k-u-align-center@l-down',
+                                            'k-u-margin-bottom-single',
+                                            'karl-FooterKisskiss__logo__img') }
+                >
+                  <img
+                    src="/assets/partners/french-authorities.svg"
+                    alt="Autorités Française"
+                    className="karl-FooterKisskiss__logo__img__imgTag"
+                  />
+                </div>
+
+                <Paragraph
+                  modifier="quaternary"
+                  className={ classNames('k-u-align-center@l-down',
+                                         'k-u-align-left@l-up',
+                                         'k-u-color-background1') }
+                  margin={ false }
+                >
+                  KissKissBankBank est une plateforme de financement participatif
+                  régulée par les autorités françaises. Immatriculation&nbsp: 14007218
+                </Paragraph>
+              </div>
+            </GridCol>
+
+            <GridCol
+              col-xs="8" offset-xs="2"
+              col-s="10" offset-s="1"
+              col-m="4" offset-m="2"
+              col-l="4" offset-l="0"
+              className="k-u-margin-top-triple@s-down"
+            >
+              <div className="karl-FooterKisskiss__notice__logo">
+                <div className={ classNames('k-u-align-center@l-down',
+                                            'k-u-margin-bottom-single',
+                                            'karl-FooterKisskiss__logo__img') }
+                >
+                  <img
+                    src="/assets/partners/mangopay.svg"
+                    alt="MANGOPAY"
+                    className={
+                      classNames('karl-FooterKisskiss__logo__imgMangopay',
+                                 'karl-FooterKisskiss__logo__img__imgTag')
+                    }
+                  />
+                </div>
+
+                <Paragraph
+                  modifier="quaternary"
+                  className={ classNames('k-u-align-center@l-down',
+                                         'k-u-align-left@l-up',
+                                         'k-u-color-background1') }
+                  margin={ false }
+                >
+                  KissKissBankBank &amp; Co est agent de l’institution financière
+                  {' '}
+                  <a
+                    href="https://www.mangopay.com/fr/"
+                    target="_blank"
+                    className={ classNames('k-u-color-background1',
+                                           'karl-FooterKisskiss__notice__link') }
+                  >
+                    Mangopay SA.
+                  </a>
+                  {' '}
+                  Paiements sécurisés avec Mangopay Payment Services
+                </Paragraph>
+              </div>
+            </GridCol>
+
+            <GridCol
+              col-l="4"
+              className={ classNames('k-u-align-center@l-down',
+                                     'k-u-align-right@l-up',
+                                     'k-u-margin-top-triple',
+                                     'karl-FooterKisskiss__notice__copyright') }
+            >
+              <div>
+                <Paragraph
+                  modifier="quaternary"
+                  className={ classNames('k-u-weight-regular',
+                                         'k-u-color-background1') }
+                  margin={ false }
+                >
+                  © 2017 KissKissBankBank &amp; Co
+                </Paragraph>
+              </div>
+          </GridCol>
         </Grid>
       </Row>
     )
@@ -206,7 +343,10 @@ export class KarlFooterKisskiss extends Component {
     return (
       <div className="karl-FooterKisskiss">
         { this.renderNetwork() }
-        { this.renderList() }
+        <div style= {{ background: '#222' }}>
+          { this.renderList() }
+          { this.renderNotice() }
+        </div>
       </div>
     )
   }
