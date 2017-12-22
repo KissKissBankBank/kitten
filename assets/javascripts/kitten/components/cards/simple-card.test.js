@@ -63,7 +63,7 @@ describe('<SimpleCard />', () => {
             alt: 'FooBar',
             style: {
               cursor: 'crosshair',
-            }
+            },
           } }
         />
       )
