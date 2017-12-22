@@ -18,7 +18,7 @@ export class TextInputWithUnit extends Component {
       tiny,
       disabled,
       digits,
-      ...others
+      ...others,
     } = this.props
 
     const textInputClassName = classNames(
