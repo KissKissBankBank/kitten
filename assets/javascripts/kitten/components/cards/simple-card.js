@@ -5,6 +5,7 @@ import { Marger } from 'kitten/components/layout/marger'
 import { Title } from 'kitten/components/typography/title'
 import { Text } from 'kitten/components/typography/text'
 import { parseHtml } from 'kitten/helpers/utils/parser'
+import { HorizontalStroke } from 'kitten/components/layout/horizontal-stroke'
 
 class SimpleCardComponent extends Component {
   render() {
@@ -38,7 +39,7 @@ class SimpleCardComponent extends Component {
         }
 
         { paragraph &&
-          <Marger top=".5" bottom=".5">
+          <Marger top="1" bottom=".5">
             <Text
               size="micro"
               weight="light"
@@ -50,7 +51,7 @@ class SimpleCardComponent extends Component {
         }
 
         <Marger top="1.5">
-          —
+          <HorizontalStroke size="tiny" />
         </Marger>
       </Tag>
     )

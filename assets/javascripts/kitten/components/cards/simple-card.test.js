@@ -4,6 +4,7 @@ import { shallow, mount } from 'enzyme'
 import { SimpleCard } from 'kitten/components/cards/simple-card'
 import { Title } from 'kitten/components/typography/title'
 import { Text } from 'kitten/components/typography/text'
+import { HorizontalStroke } from 'kitten/components/layout/horizontal-stroke'
 
 describe('<SimpleCard />', () => {
   let component
@@ -30,8 +31,12 @@ describe('<SimpleCard />', () => {
       expect(component).to.have.not.descendants(Title)
     })
 
-    it('has not <Text /> components', () => {
+    it('has not <Text /> component', () => {
       expect(component).to.have.not.descendants(Text)
+    })
+
+    it('has <HorizontalStroke /> component', () => {
+      expect(component).to.have.descendants(HorizontalStroke)
     })
   })
 
