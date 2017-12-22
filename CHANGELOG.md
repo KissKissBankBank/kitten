@@ -5,7 +5,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add `SimpleCard` component.
-- Feature: Update `Tooltip`, `TooltipNew` and `StaticTooltip` components with styleguide V2.
+- Feature: Add `withoutBoxShadowOnHover` prop to `card` HOC.
+- Feature: Add new `:hover` styles to `k-Card`.
+- Feature: Update `Tooltip`, `TooltipNew` and `StaticTooltip` components
+  with styleguide V2.
 - Feature: Update `LinkBox` and `InformationBox` components with styleguide V2
   new design.
 - Fix: Fix `LinkList` test.
@@ -14,7 +17,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Create new `ImageWithCaption` component.
 - Feature: Add `font2` prop in `Text` component.
 - Feature: Create `HorizontalStroke` component.
-- Feature: Create `HorizontalNav` React component with styleguide V2 brand config.
+- Feature: Create `HorizontalNav` React component with styleguide V2
+  brand config.
 - Feature: Create `VerticalStroke` component.
 - Feature: Update all `Select` components with styleguide V2 new design.
 - Feature: Update `Alert` component with new design styleguide V2.
