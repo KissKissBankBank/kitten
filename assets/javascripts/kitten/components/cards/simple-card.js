@@ -9,12 +9,22 @@ import { HorizontalStroke } from 'kitten/components/layout/horizontal-stroke'
 
 class SimpleCardComponent extends Component {
   render() {
-    const { imageProps, title, subtitle, paragraph, ...others } = this.props
+    const {
+      imageProps,
+      title,
+      subtitle,
+      paragraph,
+      ...others,
+    } = this.props
+
     const Tag = this.props.href ? 'a' : 'div'
 
     return (
       <Tag { ...others }>
-        <Marger bottom="2" className="k-Card__imageContainer">
+        <Marger
+          bottom="2"
+          className="k-Card__imageContainer"
+        >
           <img
             { ...imageProps }
             className="k-Card__image"
@@ -24,7 +34,11 @@ class SimpleCardComponent extends Component {
 
         { title &&
           <Marger top="2" bottom=".5">
-            <Title modifier="senary" margin={ false } className="k-Card__title">
+            <Title
+              className="k-Card__title"
+              margin={ false }
+              modifier="senary"
+            >
               { parseHtml(title) }
             </Title>
           </Marger>
@@ -32,7 +46,10 @@ class SimpleCardComponent extends Component {
 
         { subtitle &&
           <Marger top=".5" bottom=".5">
-            <Text weight="regular" size="micro">
+            <Text
+              size="micro"
+              weight="regular"
+            >
               { parseHtml(subtitle) }
             </Text>
           </Marger>
@@ -41,9 +58,9 @@ class SimpleCardComponent extends Component {
         { paragraph &&
           <Marger top="1" bottom=".5">
             <Text
+              lineHeight="normal"
               size="micro"
               weight="light"
-              lineHeight="normal"
             >
               { parseHtml(paragraph) }
             </Text>
