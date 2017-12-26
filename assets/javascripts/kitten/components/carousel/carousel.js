@@ -33,6 +33,7 @@ export const getNumColumnsForWidth =
 
     const numColumns =
       Math.floor(remainingWidthWithOneCard / itemWidthAndMargin) + 1
+
     return numColumns
   }
 
@@ -41,13 +42,12 @@ export const getNumPagesForColumnsAndDataLength = (dataLength, numColumns) => {
     return 0
   }
   const numPages = Math.ceil(dataLength / numColumns)
+
   return numPages
 }
 
 export const checkPage = (numPages, newPage) => {
-  if (numPages < 1) {
-    return 0
-  }
+  if (numPages < 1) return 0
 
   if (newPage < 0) {
     return 0
@@ -70,7 +70,6 @@ const getMarginBetweenAccordingToViewport =
   }
 
 class Carousel extends React.Component {
-
   constructor(props, context) {
     super(props, context)
 
@@ -90,7 +89,7 @@ class Carousel extends React.Component {
     }
   }
 
-  onResizeInner = (widthInner) => {
+  onResizeInner = widthInner => {
     const { data, itemMinWidth, baseItemMarginBetween } = this.props
     const { viewportIsMobile, viewportIsTabletOrLess } = this.state
     const itemMarginBetween = getMarginBetweenAccordingToViewport(
@@ -121,20 +120,20 @@ class Carousel extends React.Component {
     }
   }
 
-  onMobileMQ = (event) => {
+  onMobileMQ = event => {
     this.setState({ viewportIsMobile: event.matches })
   }
 
-  onTabletMQ = (event) => {
+  onTabletMQ = event => {
     this.setState({ viewportIsTabletOrLess: event.matches })
   }
 
-  componentDidMount () {
+  componentDidMount() {
     this.mqMobile && this.mqMobile.addListener(this.onMobileMQ)
     this.mqTabletOrLess && this.mqTabletOrLess.addListener(this.onTabletMQ)
   }
 
-  componentWillUnmount () {
+  componentWillUnmount() {
     this.mqMobile && this.mqMobile.removeListener(this.onMobileMQ)
     this.mqTabletOrLess && this.mqTabletOrLess.removeListener(this.onTabletMQ)
   }
@@ -151,7 +150,7 @@ class Carousel extends React.Component {
     this.setState({ indexPageVisible: newPage })
   }
 
-  goToPage = (indexPageToGo) => {
+  goToPage = indexPageToGo => {
     const { numPages } = this.state
     const newPage = checkPage(numPages, indexPageToGo)
     this.setState({ indexPageVisible: newPage })
@@ -177,16 +176,16 @@ class Carousel extends React.Component {
 
     return (
       <CarouselInner
-        data={data}
-        itemMinWidth={itemMinWidth}
-        renderItem={renderItem}
-        indexPageVisible={indexPageVisible}
-        numColumns={numColumns}
-        numPages={numPages}
-        itemMarginBetween={itemMarginBetween}
-        siblingPageVisible={viewportIsTabletOrLess}
-        onResizeInner={this.onResizeInner}
-        goToPage={this.goToPage}
+        data={ data }
+        itemMinWidth={ itemMinWidth }
+        renderItem={ renderItem }
+        indexPageVisible={ indexPageVisible }
+        numColumns={ numColumns }
+        numPages={ numPages }
+        itemMarginBetween={ itemMarginBetween }
+        siblingPageVisible={ viewportIsTabletOrLess }
+        onResizeInner={ this.onResizeInner }
+        goToPage={ this.goToPage }
       />
     )
   }
@@ -205,16 +204,15 @@ class Carousel extends React.Component {
       viewportIsTabletOrLess
     )
 
-    if (numPages <= 1) {
-      return
-    }
+    if (numPages <= 1) return
 
     if (viewportIsMobile) {
       const rangePage = createRangeFromZeroTo(numPages)
+
       return (
-        <div style={styles.pageControl}>
+        <div style={ styles.pageControl }>
           {
-            rangePage.map((index) =>
+            rangePage.map(index =>
               <div style={[
                 styles.pageDot,
                 (indexPageVisible === index) && styles.pageDotActive,
@@ -223,13 +221,13 @@ class Carousel extends React.Component {
           }
           <div
             key="prev"
-            style={styles.pageControlButtonPrev}
-            onClick={this.goPrevPage}
+            style={ styles.pageControlButtonPrev }
+            onClick={ this.goPrevPage }
           />
           <div
             key="next"
-            style={styles.pageControlButtonNext}
-            onClick={this.goNextPage}
+            style={ styles.pageControlButtonNext }
+            onClick={ this.goNextPage }
           />
         </div>
       )
@@ -248,18 +246,18 @@ class Carousel extends React.Component {
       >
         <ButtonIcon
           modifier="beryllium"
-          onClick={this.goPrevPage}
-          disabled={indexPageVisible < 1 || numPages < 1}
-          style={styles.carouselButtonPagination}
+          onClick={ this.goPrevPage }
+          disabled={ indexPageVisible < 1 || numPages < 1 }
+          style={ styles.carouselButtonPagination }
         >
           <ArrowIcon className="k-ButtonIcon__svg" direction="left" />
         </ButtonIcon>
 
         <ButtonIcon
           modifier="beryllium"
-          onClick={this.goNextPage}
-          disabled={indexPageVisible >= (numPages - 1)}
-          style={styles.carouselButtonPagination}
+          onClick={ this.goNextPage }
+          disabled={ indexPageVisible >= (numPages - 1) }
+          style={ styles.carouselButtonPagination }
         >
           <ArrowIcon className="k-ButtonIcon__svg" direction="right" />
         </ButtonIcon>
@@ -268,9 +266,7 @@ class Carousel extends React.Component {
   }
 
   render() {
-    if (!this.props.data || !this.props.data.length) {
-      return null
-    }
+    if (!this.props.data || !this.props.data.length) return null
 
     const { withoutLeftOffset } = this.props
     const { viewportIsTabletOrLess } = this.state

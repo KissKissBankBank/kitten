@@ -3,7 +3,6 @@ import Radium from 'radium'
 import { createRangeFromZeroTo } from 'kitten/helpers/utils/range'
 
 class CarouselPage extends React.Component {
-
   render() {
     const {
       data,
@@ -15,11 +14,11 @@ class CarouselPage extends React.Component {
     const rangeCard = createRangeFromZeroTo(numColumns)
 
     return (
-      <div style={styles.page}>
+      <div style={ styles.page }>
         {
-          rangeCard.map((index) =>
+          rangeCard.map(index =>
             <div
-              key={index}
+              key={ index }
               style={[
                 styles.item,
                 {

@@ -3,7 +3,6 @@ import { expect } from 'chai'
 import { createRangeFromZeroTo } from 'kitten/helpers/utils/range'
 
 describe('utils range', () => {
-
   describe('createRangeFromZeroTo range 2', () => {
     const range = createRangeFromZeroTo(2)
 
@@ -51,5 +50,4 @@ describe('utils range', () => {
       expect(range).to.eql([])
     })
   })
-
 })

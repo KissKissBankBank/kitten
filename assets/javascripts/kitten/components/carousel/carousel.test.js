@@ -21,6 +21,7 @@ const createMockMediaMatcher = matches => () => ({
 
 describe('<Carousel />', () => {
   let originalMatchMedia
+
   beforeEach(() => {
     originalMatchMedia = window.matchMedia
   })
@@ -28,7 +29,6 @@ describe('<Carousel />', () => {
   afterEach(() => {
     window.matchMedia = originalMatchMedia
   })
-
 
   describe('by default on desktop', () => {
     window.matchMedia = createMockMediaMatcher(false) // desktop
@@ -51,7 +51,6 @@ describe('<Carousel />', () => {
     it('is a <Grid />', () => {
       expect(carousel.dive()).to.have.className('k-Grid')
     })
-
   })
 
   describe('with withoutLeftOffset on desktop', () => {
@@ -76,7 +75,6 @@ describe('<Carousel />', () => {
     it('is a <Grid />', () => {
       expect(carousel.dive()).to.have.className('k-Grid')
     })
-
   })
 
   describe('by default on mobile', () => {
@@ -104,7 +102,6 @@ describe('<Carousel />', () => {
   })
 
   describe('getNumColumnsForWidth', () => {
-
     it('5 columns', () => {
       expect( getNumColumnsForWidth(1000, 150, 50) ).to.equal(5)
     })
@@ -124,11 +121,9 @@ describe('<Carousel />', () => {
     it('NaN if not number', () => {
       expect( getNumColumnsForWidth('0', '0', '0') ).to.be.NaN
     })
-
   })
 
   describe('getNumPagesForColumnsAndDataLength', () => {
-
     it('3 pages', () => {
       expect( getNumPagesForColumnsAndDataLength(7, 3) ).to.equal(3)
     })
@@ -148,11 +143,9 @@ describe('<Carousel />', () => {
     it('NaN if not number', () => {
       expect( getNumPagesForColumnsAndDataLength('0', '0') ).to.be.NaN
     })
-
   })
 
   describe('checkPage', () => {
-
     it('to page number 2', () => {
       expect( checkPage(4, 2) ).to.equal(2)
     })
@@ -184,7 +177,5 @@ describe('<Carousel />', () => {
     it('stay page 0 if not number', () => {
       expect( checkPage('0', '0') ).to.equal(0)
     })
-
   })
-
 })

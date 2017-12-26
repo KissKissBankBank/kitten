@@ -6,7 +6,6 @@ const fetch = require('isomorphic-fetch')
 
 chai.use(chaiEnzyme())
 
-
 const jsdom = require('jsdom')
 const { JSDOM } = jsdom
 

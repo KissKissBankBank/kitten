@@ -6,5 +6,6 @@ export const cssSupports = (supportCondition) => {
   ) {
     return false
   }
+
   return window.CSS.supports(supportCondition)
 }

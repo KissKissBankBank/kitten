@@ -2,7 +2,6 @@ import React from 'react'
 import { expect } from 'chai'
 import { shallow } from 'enzyme'
 import { Container } from 'kitten/components/grid/container'
-
 import { SCREEN_SIZE_M } from 'kitten/constants/screen-config'
 
 const createMockMediaMatcher = matches => () => ({
@@ -79,6 +78,5 @@ describe('<Container />', () => {
         expect(container).to.not.have.className('k-Container--no-padding')
       })
     })
-
   })
 })

@@ -10,7 +10,7 @@ import {
 
 import { SCREEN_SIZE_M } from 'kitten/constants/screen-config'
 
-export const KarlCarouselProjectCard = (props) => {
+export const KarlCarouselProjectCard = props => {
   return (
     <Container fullWidthBelowScreenSize={SCREEN_SIZE_M}>
       <Carousel

@@ -15,14 +15,14 @@ const supportScrollSnap = cssSupports('scroll-snap-type: mandatory')
 const supportScrollSmooth = cssSupports('scroll-behavior: smooth')
 
 // inspired by https://github.com/cferdinandi/scrollStop
-const scrollStop = ( callback ) => {
+const scrollStop = callback => {
   // Make sure a valid callback was provided
   if (!callback) return
 
   let isScrolling
   let target
 
-  return (event) => {
+  return event => {
     clearTimeout(isScrolling)
 
     target = event.target
@@ -50,6 +50,7 @@ const getClosest = (counts, goal) => {
 
 const getDataForPage = (data, indexPage, numColumns) => {
   const startIndex = indexPage * numColumns
+
   return data.slice(startIndex, startIndex + numColumns)
 }
 
@@ -66,7 +67,6 @@ const getRangePageScrollLeft =
   }
 
 class CarouselInner extends React.Component {
-
   state = {
     isTouched: false,
   }
@@ -91,10 +91,8 @@ class CarouselInner extends React.Component {
     }
   }
 
-  handleInnerScroll = scrollStop((target) => {
-    if(this.state.isTouched){
-      return
-    }
+  handleInnerScroll = scrollStop(target => {
+    if(this.state.isTouched) return
 
     const {
       numPages,
@@ -127,7 +125,7 @@ class CarouselInner extends React.Component {
 
   })
 
-  scrollToPage = (indexPageToScroll) => {
+  scrollToPage = indexPageToScroll => {
     const { numPages, siblingPageVisible, itemMarginBetween } = this.props
 
     const target = this.carouselInner
@@ -166,7 +164,7 @@ class CarouselInner extends React.Component {
 
     return (
       <div
-        ref={(div) => { this.carouselInner = div }}
+        ref={ div => { this.carouselInner = div } }
         className='k-CarouselInner'
         style={[
           styles.carouselInner,
@@ -175,14 +173,14 @@ class CarouselInner extends React.Component {
             paddingRight: siblingPageVisible ? (itemMarginBetween * 2) : 0,
           }
         ]}
-        onScroll={this.handleInnerScroll}
-        onTouchStart={this.handleTouchStart}
-        onTouchEnd={this.handleTouchEnd}
+        onScroll={ this.handleInnerScroll }
+        onTouchStart={ this.handleTouchStart }
+        onTouchEnd={ this.handleTouchEnd }
       >
         {
-          rangePage.map((index) =>
+          rangePage.map(index =>
             <div
-              key={index}
+              key={ index }
               style={[
                 styles.carouselPageContainer,
                 {
@@ -191,11 +189,11 @@ class CarouselInner extends React.Component {
               ]}
             >
               <CarouselPage
-                data={getDataForPage(data, index, numColumns)}
-                numColumns={numColumns}
-                itemMinWidth={itemMinWidth}
-                itemMarginBetween={itemMarginBetween}
-                renderItem={renderItem}
+                data={ getDataForPage(data, index, numColumns) }
+                numColumns={ numColumns }
+                itemMinWidth={ itemMinWidth }
+                itemMarginBetween={ itemMarginBetween }
+                renderItem={ renderItem }
               />
             </div>
           )

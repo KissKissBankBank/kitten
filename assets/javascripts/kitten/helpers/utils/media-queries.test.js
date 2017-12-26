@@ -18,6 +18,7 @@ const createMockMediaMatcher = matches => () => ({
 
 describe('utils MediaQueries', () => {
   let originalMatchMedia
+
   beforeEach(() => {
     originalMatchMedia = window.matchMedia
   })
@@ -28,7 +29,6 @@ describe('utils MediaQueries', () => {
 
 
   describe('getJoinedQueries', () => {
-
     describe('return the only query string', () => {
       const query = getJoinedQueries(['(min-width: 800px)'])
 
@@ -66,7 +66,6 @@ describe('utils MediaQueries', () => {
 
 
   describe('createMatchMedia', () => {
-
     describe('return an object', () => {
       window.matchMedia = createMockMediaMatcher(true)
       const mq = createMatchMedia('(max-width: 800px)')
@@ -97,7 +96,6 @@ describe('utils MediaQueries', () => {
 
 
   describe('createMatchMediaMin', () => {
-
     describe('return an object', () => {
       window.matchMedia = createMockMediaMatcher(true)
       const mq = createMatchMediaMin(SCREEN_SIZE_S)
@@ -128,7 +126,6 @@ describe('utils MediaQueries', () => {
 
 
   describe('createMatchMediaMax', () => {
-
     describe('return an object', () => {
       window.matchMedia = createMockMediaMatcher(true)
       const mq = createMatchMediaMax(SCREEN_SIZE_M)
@@ -159,7 +156,6 @@ describe('utils MediaQueries', () => {
 
 
   describe('createMatchMediaWithin', () => {
-
     describe('return an object', () => {
       window.matchMedia = createMockMediaMatcher(true)
       const mq = createMatchMediaWithin(SCREEN_SIZE_S, SCREEN_SIZE_M)
@@ -187,6 +183,4 @@ describe('utils MediaQueries', () => {
       })
     })
   })
-
-
 })
