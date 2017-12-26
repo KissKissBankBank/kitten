@@ -1,23 +1,15 @@
 <div class="k-Grid">
   <div class="k-Grid__col k-Grid__col--12">
-    <%= example 'Hero' do %>
-      <div class="k-Row karl-Row--catBackground">
-        <div class="k-Row__content">
-          <div class="k-Hero k-Hero--onDark">
-            <div class="k-Hero__text">
-              <h1 class="k-Hero__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
-              <p class="k-Hero__subtitle">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.</p>
-            </div>
-            <div class="k-Hero__action">
-              <div class="k-Card k-Card--light k-Card--padded k-Card--withVerticalPadding k-Card--rounded">
-                <img class="k-u-image-responsive"
-                     src="https://placehold.it/300x400/fff/fff"
-                     alt="" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <%= example 'Hero left' do %>
+      <%= react_component 'KarlHero' %>
+    <% end %>
+  </div>
+
+  <div class="k-Grid__col k-Grid__col--12">
+    <%= example 'Hero right' do %>
+      <%= react_component 'KarlHero', props: {
+        direction: 'right',
+      } %>
     <% end %>
   </div>
 </div>
