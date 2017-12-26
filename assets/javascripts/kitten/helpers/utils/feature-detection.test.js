@@ -11,7 +11,7 @@ describe('cssSupports', () => {
       before(() => { global.window = undefined })
       after(() => { global.window = initialWindow })
 
-      it('return false', () => {
+      it('returns false', () => {
         expect(cssSupports(supportCondition)).to.eq(false)
       })
     })
@@ -20,7 +20,7 @@ describe('cssSupports', () => {
       before(() => { global.window = {} })
       after(() => { global.window = initialWindow })
 
-      it('return false', () => {
+      it('returns false', () => {
         expect(cssSupports(supportCondition)).to.eq(false)
       })
     })
@@ -29,7 +29,7 @@ describe('cssSupports', () => {
       before(() => { global.window = { CSS: {} } })
       after(() => { global.window = initialWindow })
 
-      it('return false', () => {
+      it('returns false', () => {
         expect(cssSupports(supportCondition)).to.eq(false)
       })
     })
