@@ -1,7 +1,6 @@
 import React from 'react'
 import { Container } from 'kitten/components/grid/container'
-import Carousel from 'kitten/components/carousel/carousel'
-
+import { Carousel } from 'kitten/components/carousel/carousel'
 import {
   ProjectCard,
   MIN_WIDTH as ProjectCardMinWidth,

@@ -21,7 +21,7 @@ import { Grid, GridCol } from 'kitten/components/grid/grid'
 import { ButtonIcon } from 'kitten/components/buttons/button-icon'
 import { ArrowIcon } from 'kitten/components/icons/arrow-icon'
 
-import CarouselInner from 'kitten/components/carousel/carousel-inner'
+import { CarouselInner } from 'kitten/components/carousel/carousel-inner'
 
 export const getNumColumnsForWidth =
   (width, itemMinWidth, itemMarginBetween) => {
@@ -69,7 +69,7 @@ const getMarginBetweenAccordingToViewport =
     }
   }
 
-class Carousel extends React.Component {
+class CarouselBase extends React.Component {
   constructor(props, context) {
     super(props, context)
 
@@ -360,4 +360,4 @@ Carousel.propTypes = {
   renderItem: PropTypes.func.isRequired,
 }
 
-export default Radium(Carousel)
+export const Carousel = Radium(CarouselBase)

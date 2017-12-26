@@ -8,8 +8,7 @@ if (typeof window !== 'undefined') {
 
 import { createRangeFromZeroTo } from 'kitten/helpers/utils/range'
 import { cssSupports } from 'kitten/helpers/utils/feature-detection'
-
-import CarouselPage from 'kitten/components/carousel/carousel-page'
+import { CarouselPage } from 'kitten/components/carousel/carousel-page'
 
 const supportScrollSnap = cssSupports('scroll-snap-type: mandatory')
 const supportScrollSmooth = cssSupports('scroll-behavior: smooth')
@@ -66,7 +65,7 @@ const getRangePageScrollLeft =
       .map((numPage) => numPage * (innerWidth + itemMarginBetween))
   }
 
-class CarouselInner extends React.Component {
+class CarouselInnerBase extends React.Component {
   state = {
     isTouched: false,
   }
@@ -236,4 +235,4 @@ const styles = {
   },
 }
 
-export default Radium(CarouselInner)
+export const CarouselInner = Radium(CarouselInnerBase)

@@ -2,7 +2,8 @@ import React from 'react'
 import { expect } from 'chai'
 import { shallow } from 'enzyme'
 
-import Carousel, {
+import {
+  Carousel,
   getNumColumnsForWidth,
   getNumPagesForColumnsAndDataLength,
   checkPage,

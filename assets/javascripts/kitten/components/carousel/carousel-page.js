@@ -2,7 +2,7 @@ import React from 'react'
 import Radium from 'radium'
 import { createRangeFromZeroTo } from 'kitten/helpers/utils/range'
 
-class CarouselPage extends React.Component {
+class CarouselPageBase extends React.Component {
   render() {
     const {
       data,
@@ -51,4 +51,4 @@ const styles = {
   },
 }
 
-export default Radium(CarouselPage)
+export const CarouselPage = Radium(CarouselPageBase)
