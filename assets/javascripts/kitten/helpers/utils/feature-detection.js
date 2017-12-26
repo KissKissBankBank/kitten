@@ -1,4 +1,4 @@
-export const cssSupports = (supportCondition) => {
+export const cssSupports = supportCondition => {
   if (
     typeof window === 'undefined' ||
     typeof window.CSS === 'undefined' ||
