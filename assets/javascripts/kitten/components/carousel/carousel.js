@@ -350,11 +350,11 @@ const styles = {
   },
 }
 
-Carousel.defaultProps = {
+CarouselBase.defaultProps = {
   withoutLeftOffset: false,
 }
 
-Carousel.propTypes = {
+CarouselBase.propTypes = {
   itemMinWidth: PropTypes.number.isRequired,
   baseItemMarginBetween: PropTypes.number.isRequired,
   renderItem: PropTypes.func.isRequired,
