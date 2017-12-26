@@ -5,7 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Update webpack configuration with appropriate babel presets.
-- Feature: Add `KarlCarouselProjectCard` example.
+- Feature: Add `KarlCarouselProjectCard` examples.
 - Feature: Add `InstagramButtonIcon` example.
 - Feature: Add `disabled` prop on `TextInputWithButton` and `tiny` prop on
   `TextInputWithLimit` examples.
