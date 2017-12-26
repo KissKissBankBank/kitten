@@ -3,6 +3,12 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
+- Feature: Add `Carousel` components and its helpers.
+- Feature: Update grid 'Container' component with screen sizing handlers.
+- Feature: Add screen and grid JavaScript configuration files.
+- Feature: Add feature detection utility.
+- Feature: Add media-query utility.
+- Feature: Add range utility.
 - Feature: Update `Checkbox` and `RadioButton` components with new design
   styleguide V2.
 - Feature: Add `instagram` modifier in `ButtonIcon` component,
