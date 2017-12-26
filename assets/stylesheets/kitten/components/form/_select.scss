@@ -152,7 +152,7 @@
   }
 
   .Select.is-focused:not(.is-open) .Select-arrow-zone {
-    border-left-color: map-get($k-colors, 'primary-1');
+    border-left-color: map-get($k-colors, 'line-2');
   }
 
   .Select.is-open .Select-arrow-zone {
@@ -185,7 +185,7 @@
   // control options
 
   $select-input-border-color: map-get($k-colors, 'line-1');
-  $select-input-border-focus: map-get($k-colors, 'primary-1');
+  $select-input-border-focus: map-get($k-colors, 'line-2');
   $select-input-border-width: k-map-fetch($options,
                                           'select-input-border-width');
   $select-input-height: k-default(map-get($options,

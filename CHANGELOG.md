@@ -9,6 +9,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Add new `:hover` styles to `k-Card`.
 - Feature: Update `Tooltip`, `TooltipNew` and `StaticTooltip` components
   with styleguide V2.
+- Fix: Fix `:focus` `border-color` on `TextInputWithUnit`, `Select` and
+  `LocationInput` component.
+- Feature: Update `Tooltip`, `TooltipNew` and `StaticTooltip` components with styleguide V2.
 - Feature: Update `LinkBox` and `InformationBox` components with styleguide V2
   new design.
 - Fix: Fix `LinkList` test.
