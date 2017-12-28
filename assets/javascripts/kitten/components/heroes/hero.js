@@ -9,6 +9,7 @@ import {
   CONTAINER_PADDING,
   CONTAINER_PADDING_MOBILE,
 } from 'kitten/constants/grid-config'
+import { COLORS } from 'kitten/constants/colors-config'
 
 class HeroBase extends Component {
   render() {
@@ -73,8 +74,8 @@ class HeroBase extends Component {
 const styles = {
   content: {
     padding: '100px 115px',
-    backgroundColor: '#333', // TODO: Use configuration.
-    color: '#fff',
+    backgroundColor: COLORS.font1,
+    color: COLORS.background1,
 
     [`@media (max-width: ${ScreenConfig['M'].max}px)`]: {
       padding: '100px 85px',
@@ -162,7 +163,9 @@ HeroBase.propTypes = {
 HeroBase.defaultProps = {
   direction: 'left',
   tiny: false,
-  imageSrc: 'https://placehold.it/40x40/4a84ff/4a84ff',
+  imageSrc: 'https://placehold.it/40x40/'
+    + `${COLORS.primary1.replace('#', '')}/`
+    + `${COLORS.primary1.replace('#', '')}`,
 }
 
 export const Hero = Radium(HeroBase)
