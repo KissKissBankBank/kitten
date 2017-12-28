@@ -32,7 +32,6 @@ class HeroBase extends Component {
 
     return (
       <GridCol
-        key="hero-content"
         col="12"
         col-s="10"
         col-l="6"
@@ -53,7 +52,6 @@ class HeroBase extends Component {
 
     return (
       <GridCol
-        key="hero-image"
         col="12"
         col-l="7"
         style={ gridStyles }
