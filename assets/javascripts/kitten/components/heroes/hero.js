@@ -26,8 +26,9 @@ class HeroBase extends Component {
 
   renderContent() {
     const gridStyles = [
-      styles.grid[this.props.direction].content,
-      this.props.tiny && styles.grid.tiny.content,
+      styles.content.grid,
+      this.props.direction == 'right' && styles.content.grid.right,
+      this.props.tiny && styles.content.grid.tiny,
     ]
 
     return (
@@ -46,8 +47,15 @@ class HeroBase extends Component {
 
   renderImage() {
     const gridStyles = [
-      styles.grid[this.props.direction].image,
-      this.props.tiny && styles.grid.tiny.image,
+      styles.image.grid,
+      this.props.direction == 'right' && styles.image.grid.right,
+      this.props.tiny && styles.image.grid.tiny,
+    ]
+
+    const imageStyles = [
+      styles.image,
+      this.props.direction == 'right' && styles.image.right,
+      { backgroundImage: `url(${ this.props.imageSrc })` },
     ]
 
     return (
@@ -56,84 +64,13 @@ class HeroBase extends Component {
         col-l="7"
         style={ gridStyles }
       >
-        <div
-          style={[
-            styles.image[this.props.direction],
-            { backgroundImage: `url(${ this.props.imageSrc })` },
-          ]}
-        />
+        <div style={ imageStyles } />
       </GridCol>
     )
   }
 }
 
 const styles = {
-  grid: {
-    left: {
-      content: {
-        position: 'relative',
-        zIndex: '1',
-        marginTop: `${1 / NUM_COLUMNS * 100}%`,
-        marginLeft: `${1 / NUM_COLUMNS * 100}%`,
-
-        [`@media (max-width: ${ScreenConfig['M'].max}px)`]: {
-          marginTop: `${8 / NUM_COLUMNS * 100}%`,
-          marginLeft: 0,
-        },
-      },
-      image: {
-        marginLeft: `-${2 / NUM_COLUMNS * 100}%`,
-        marginBottom: `${1 / 2 / NUM_COLUMNS * 100}%`,
-
-        [`@media (max-width: ${ScreenConfig['M'].max}px)`]: {
-          marginLeft: `-${10 / NUM_COLUMNS * 100}%`,
-          marginBottom: '0',
-        },
-
-        [`@media (max-width: ${ScreenConfig['XS'].max}px)`]: {
-          marginLeft: `-100%`,
-        },
-      },
-    },
-    right: {
-      content: {
-        position: 'relative',
-        zIndex: '1',
-        marginTop: `${1 / NUM_COLUMNS * 100}%`,
-        marginLeft: `${5 / NUM_COLUMNS * 100}%`,
-
-        [`@media (max-width: ${ScreenConfig['M'].max}px)`]: {
-          marginTop: `${8 / NUM_COLUMNS * 100}%`,
-          marginLeft: 0,
-        },
-      },
-      image: {
-        marginLeft: `-${11 / NUM_COLUMNS * 100}%`,
-        marginBottom: `${1 / 2 / NUM_COLUMNS * 100}%`,
-
-        [`@media (max-width: ${ScreenConfig['M'].max}px)`]: {
-          marginLeft: `-${10 / NUM_COLUMNS * 100}%`,
-          marginBottom: '0',
-        },
-
-        [`@media (max-width: ${ScreenConfig['XS'].max}px)`]: {
-          marginLeft: `-100%`,
-        },
-      },
-    },
-    tiny: {
-      content: {
-        [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
-          paddingBottom: `${1 / 2 / NUM_COLUMNS * 100}%`,
-        },
-      },
-      image: {
-        [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
-          marginBottom: '0',
-        },
-      },
-    },
-  },
   content: {
     padding: '100px 115px',
     backgroundColor: '#333', // TODO: Use configuration.
@@ -147,42 +84,72 @@ const styles = {
       padding: '50px 20px',
       marginLeft: `-${CONTAINER_PADDING_MOBILE}px`,
     },
-  },
-  image: {
-    left: {
-      width: `calc(100% + ${CONTAINER_PADDING}px)`,
-      height: '100%',
-      backgroundSize: 'cover',
-      backgroundRepeat: 'no-repeat',
+
+    grid: {
+      position: 'relative',
+      zIndex: 1,
+      marginTop: `${1 / NUM_COLUMNS * 100}%`,
+      marginLeft: `${1 / NUM_COLUMNS * 100}%`,
 
       [`@media (max-width: ${ScreenConfig['M'].max}px)`]: {
-        width: `calc(100% + ${CONTAINER_PADDING * 2}px)`,
-        height: '100vw',
-        marginLeft: `-${CONTAINER_PADDING}px`,
+        marginTop: `${8 / NUM_COLUMNS * 100}%`,
+        marginLeft: 0,
       },
 
-      [`@media (max-width: ${ScreenConfig['XS'].max}px)`]: {
-        width: `calc(100% + ${CONTAINER_PADDING_MOBILE * 2}px)`,
-        marginLeft: `-${CONTAINER_PADDING_MOBILE}px`,
+      tiny: {
+        [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
+          paddingBottom: `${1 / 2 / NUM_COLUMNS * 100}%`,
+        },
       },
+
+      right: {
+        marginLeft: `${5 / NUM_COLUMNS * 100}%`,
+      },
+    },
+  },
+
+  image: {
+    width: `calc(100% + ${CONTAINER_PADDING}px)`,
+    height: '100%',
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+
+    [`@media (max-width: ${ScreenConfig['M'].max}px)`]: {
+      width: `calc(100% + ${CONTAINER_PADDING * 2}px)`,
+      height: '100vw',
+      marginLeft: `-${CONTAINER_PADDING}px`,
+    },
+
+    [`@media (max-width: ${ScreenConfig['XS'].max}px)`]: {
+      width: `calc(100% + ${CONTAINER_PADDING_MOBILE * 2}px)`,
+      marginLeft: `-${CONTAINER_PADDING_MOBILE}px`,
     },
 
     right: {
       marginLeft: `-${CONTAINER_PADDING}px`,
-      width: `calc(100% + ${CONTAINER_PADDING}px)`,
-      height: '100%',
-      backgroundSize: 'cover',
-      backgroundRepeat: 'no-repeat',
+    },
+
+    grid: {
+      marginLeft: `-${2 / NUM_COLUMNS * 100}%`,
+      marginBottom: `${1 / 2 / NUM_COLUMNS * 100}%`,
 
       [`@media (max-width: ${ScreenConfig['M'].max}px)`]: {
-        width: `calc(100% + ${CONTAINER_PADDING * 2}px)`,
-        height: '100vw',
-        marginLeft: `-${CONTAINER_PADDING}px`,
+        marginLeft: `-${10 / NUM_COLUMNS * 100}%`,
+        marginBottom: 0,
       },
 
       [`@media (max-width: ${ScreenConfig['XS'].max}px)`]: {
-        width: `calc(100% + ${CONTAINER_PADDING_MOBILE * 2}px)`,
-        marginLeft: `-${CONTAINER_PADDING_MOBILE}px`,
+        marginLeft: `-100%`,
+      },
+
+      tiny: {
+        [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
+          marginBottom: '0',
+        },
+      },
+
+      right: {
+        marginLeft: `-${11 / NUM_COLUMNS * 100}%`,
       },
     },
   },
