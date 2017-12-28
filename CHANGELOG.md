@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add `Hero` component.
+- Breaking change: Remove `k-Hero` mixin.
 - Fix: Update ruby version.
 - Feature: Remove `boron` buttons colors.
 - Feature: Update colors.
