@@ -4,6 +4,11 @@ import PropTypes from 'prop-types'
 import { Container } from 'kitten/components/grid/container'
 import { Grid, GridCol } from 'kitten/components/grid/grid'
 import { ScreenConfig } from 'kitten/constants/screen-config'
+import {
+  NUM_COLUMNS,
+  CONTAINER_PADDING,
+  CONTAINER_PADDING_MOBILE,
+} from 'kitten/constants/grid-config'
 
 class HeroBase extends Component {
   render() {
@@ -62,35 +67,31 @@ class HeroBase extends Component {
   }
 }
 
-const COLUMN_WIDTH_PERCENT = 1 / 12 * 100
-const TWO_COLUMNS_WIDTH_PERCENT = 2 / 12 * 100
-const SEMI_COLUMN_WIDTH_PERCENT = COLUMN_WIDTH_PERCENT / 2
-
 const styles = {
   grid: {
     left: {
       content: {
         position: 'relative',
         zIndex: '1',
-        marginTop: `${COLUMN_WIDTH_PERCENT}%`,
-        marginLeft: `${COLUMN_WIDTH_PERCENT}%`,
+        marginTop: `${1 / NUM_COLUMNS * 100}%`,
+        marginLeft: `${1 / NUM_COLUMNS * 100}%`,
 
         [`@media (max-width: ${ScreenConfig['M'].max}px)`]: {
+          marginTop: `${8 / NUM_COLUMNS * 100}%`,
           marginLeft: 0,
-          marginTop: `${8 / 12 * 100}%`,
         },
       },
       image: {
-        marginLeft: `-${TWO_COLUMNS_WIDTH_PERCENT}%`,
-        marginBottom: `${SEMI_COLUMN_WIDTH_PERCENT}%`,
+        marginLeft: `-${2 / NUM_COLUMNS * 100}%`,
+        marginBottom: `${1 / 2 / NUM_COLUMNS * 100}%`,
 
         [`@media (max-width: ${ScreenConfig['M'].max}px)`]: {
-          marginLeft: `-${10 / 12 * 100}%`,
+          marginLeft: `-${10 / NUM_COLUMNS * 100}%`,
           marginBottom: '0',
         },
 
         [`@media (max-width: ${ScreenConfig['XS'].max}px)`]: {
-          marginLeft: `-${12 / 12 * 100}%`,
+          marginLeft: `-100%`,
         },
       },
     },
@@ -98,32 +99,32 @@ const styles = {
       content: {
         position: 'relative',
         zIndex: '1',
-        marginTop: `${COLUMN_WIDTH_PERCENT}%`,
-        marginLeft: `${5 / 12 * 100}%`,
+        marginTop: `${1 / NUM_COLUMNS * 100}%`,
+        marginLeft: `${5 / NUM_COLUMNS * 100}%`,
 
         [`@media (max-width: ${ScreenConfig['M'].max}px)`]: {
+          marginTop: `${8 / NUM_COLUMNS * 100}%`,
           marginLeft: 0,
-          marginTop: `${8 / 12 * 100}%`,
         },
       },
       image: {
-        marginLeft: `-${11 / 12 * 100}%`,
-        marginBottom: `${SEMI_COLUMN_WIDTH_PERCENT}%`,
+        marginLeft: `-${11 / NUM_COLUMNS * 100}%`,
+        marginBottom: `${1 / 2 / NUM_COLUMNS * 100}%`,
 
         [`@media (max-width: ${ScreenConfig['M'].max}px)`]: {
-          marginLeft: `-${10 / 12 * 100}%`,
+          marginLeft: `-${10 / NUM_COLUMNS * 100}%`,
           marginBottom: '0',
         },
 
         [`@media (max-width: ${ScreenConfig['XS'].max}px)`]: {
-          marginLeft: `-${12 / 12 * 100}%`,
+          marginLeft: `-100%`,
         },
       },
     },
     tiny: {
       content: {
         [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
-          paddingBottom: `${SEMI_COLUMN_WIDTH_PERCENT}%`,
+          paddingBottom: `${1 / 2 / NUM_COLUMNS * 100}%`,
         },
       },
       image: {
@@ -144,34 +145,44 @@ const styles = {
 
     [`@media (max-width: ${ScreenConfig['XS'].max}px)`]: {
       padding: '50px 20px',
-      marginLeft: '-20px',
+      marginLeft: `-${CONTAINER_PADDING_MOBILE}px`,
     },
   },
   image: {
     left: {
-      width: 'calc(100% + 20px)',
+      width: `calc(100% + ${CONTAINER_PADDING}px)`,
       height: '100%',
       backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat',
 
       [`@media (max-width: ${ScreenConfig['M'].max}px)`]: {
-        width: 'calc(100% + 40px)',
+        width: `calc(100% + ${CONTAINER_PADDING * 2}px)`,
         height: '100vw',
-        marginLeft: '-20px',
+        marginLeft: `-${CONTAINER_PADDING}px`,
+      },
+
+      [`@media (max-width: ${ScreenConfig['XS'].max}px)`]: {
+        width: `calc(100% + ${CONTAINER_PADDING_MOBILE * 2}px)`,
+        marginLeft: `-${CONTAINER_PADDING_MOBILE}px`,
       },
     },
 
     right: {
-      marginLeft: '-20px',
-      width: 'calc(100% + 20px)',
+      marginLeft: `-${CONTAINER_PADDING}px`,
+      width: `calc(100% + ${CONTAINER_PADDING}px)`,
       height: '100%',
       backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat',
 
       [`@media (max-width: ${ScreenConfig['M'].max}px)`]: {
-        width: 'calc(100% + 40px)',
+        width: `calc(100% + ${CONTAINER_PADDING * 2}px)`,
         height: '100vw',
-        marginLeft: '-20px',
+        marginLeft: `-${CONTAINER_PADDING}px`,
+      },
+
+      [`@media (max-width: ${ScreenConfig['XS'].max}px)`]: {
+        width: `calc(100% + ${CONTAINER_PADDING_MOBILE * 2}px)`,
+        marginLeft: `-${CONTAINER_PADDING_MOBILE}px`,
       },
     },
   },
