@@ -28,6 +28,7 @@ class HeroBase extends Component {
   renderContent() {
     const gridStyles = [
       styles.content.grid,
+      this.props.direction == 'left' && styles.content.grid.left,
       this.props.direction == 'right' && styles.content.grid.right,
       this.props.tiny && styles.content.grid.tiny,
     ]
@@ -49,6 +50,7 @@ class HeroBase extends Component {
   renderImage() {
     const gridStyles = [
       styles.image.grid,
+      this.props.direction == 'left' && styles.image.grid.left,
       this.props.direction == 'right' && styles.image.grid.right,
       this.props.tiny && styles.image.grid.tiny,
     ]
@@ -92,19 +94,30 @@ const styles = {
       marginTop: `${1 / NUM_COLUMNS * 100}%`,
       marginLeft: `${1 / NUM_COLUMNS * 100}%`,
 
-      [`@media (max-width: ${ScreenConfig['M'].max}px)`]: {
-        marginTop: `${8 / NUM_COLUMNS * 100}%`,
-        marginLeft: 0,
+      left: {
+        [`@media (max-width: ${ScreenConfig['M'].max}px)`]: {
+          marginTop: `${8 / NUM_COLUMNS * 100}%`,
+          marginLeft: 0,
+        },
+      },
+
+      right: {
+        marginLeft: `${5 / NUM_COLUMNS * 100}%`,
+
+        [`@media (max-width: ${ScreenConfig['M'].max}px)`]: {
+          marginTop: `${8 / NUM_COLUMNS * 100}%`,
+          marginLeft: `${2 / NUM_COLUMNS * 100}%`,
+        },
+
+        [`@media (max-width: ${ScreenConfig['XS'].max}px)`]: {
+          marginLeft: 0,
+        },
       },
 
       tiny: {
         [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
           paddingBottom: `${1 / 2 / NUM_COLUMNS * 100}%`,
         },
-      },
-
-      right: {
-        marginLeft: `${5 / NUM_COLUMNS * 100}%`,
       },
     },
   },
@@ -134,23 +147,33 @@ const styles = {
       marginLeft: `-${2 / NUM_COLUMNS * 100}%`,
       marginBottom: `${1 / 2 / NUM_COLUMNS * 100}%`,
 
-      [`@media (max-width: ${ScreenConfig['M'].max}px)`]: {
-        marginLeft: `-${10 / NUM_COLUMNS * 100}%`,
-        marginBottom: 0,
-      },
+      left: {
+        [`@media (max-width: ${ScreenConfig['M'].max}px)`]: {
+          marginLeft: `-${10 / NUM_COLUMNS * 100}%`,
+          marginBottom: 0,
+        },
 
-      [`@media (max-width: ${ScreenConfig['XS'].max}px)`]: {
-        marginLeft: `-100%`,
-      },
-
-      tiny: {
-        [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
-          marginBottom: '0',
+        [`@media (max-width: ${ScreenConfig['XS'].max}px)`]: {
+          marginLeft: `-100%`,
         },
       },
 
       right: {
         marginLeft: `-${11 / NUM_COLUMNS * 100}%`,
+
+        [`@media (max-width: ${ScreenConfig['M'].max}px)`]: {
+          marginLeft: `-${12 / NUM_COLUMNS * 100}%`,
+        },
+
+        [`@media (max-width: ${ScreenConfig['XS'].max}px)`]: {
+          marginLeft: `-100%`,
+        },
+      },
+
+      tiny: {
+        [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
+          marginBottom: 0,
+        },
       },
     },
   },
