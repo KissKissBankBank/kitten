@@ -58,10 +58,12 @@ class HeroBase extends Component {
         col-l="7"
         style={ gridStyles }
       >
-        <div style={[
-          styles.image[this.props.direction],
-          { backgroundImage: `url(${ this.props.imageSrc })` },
-        ]} />
+        <div
+          style={[
+            styles.image[this.props.direction],
+            { backgroundImage: `url(${ this.props.imageSrc })` },
+          ]}
+        />
       </GridCol>
     )
   }
@@ -195,7 +197,7 @@ HeroBase.propTypes = {
 HeroBase.defaultProps = {
   direction: 'left',
   tiny: false,
-  imageSrc: 'https://placeimg.com/640/480/any',
+  imageSrc: 'https://placehold.it/40x40/4a84ff/4a84ff',
 }
 
 export const Hero = Radium(HeroBase)
