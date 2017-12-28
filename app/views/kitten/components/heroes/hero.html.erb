@@ -1,7 +1,9 @@
 <div class="k-Grid">
   <div class="k-Grid__col k-Grid__col--12">
     <%= example 'Hero left' do %>
-      <%= react_component 'KarlHero' %>
+      <%= react_component 'KarlHero', props: {
+        direction: 'left',
+      } %>
     <% end %>
   </div>
 
@@ -9,6 +11,15 @@
     <%= example 'Hero right' do %>
       <%= react_component 'KarlHero', props: {
         direction: 'right',
+      } %>
+    <% end %>
+  </div>
+
+  <div class="k-Grid__col k-Grid__col--12">
+    <%= example 'Hero with small text' do %>
+      <%= react_component 'KarlHero', props: {
+        direction: 'left',
+        tiny: true,
       } %>
     <% end %>
   </div>

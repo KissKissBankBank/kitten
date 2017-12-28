@@ -6,6 +6,16 @@ import { Marger } from 'kitten/components/layout/marger'
 import { Button } from 'kitten/components/buttons/button'
 
 export const KarlHero = props => {
+  const text = !props.tiny
+    ? 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean \
+      commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus \
+      et magnis dis parturient montes, nascetur ridiculus mus. Donec quam \
+      felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla \
+      consequat massa quis enim. Donec pede justo, fringilla vel, aliquet \
+      nec, vulputate eget, arcu enim justo, rhoncus ut.'
+    : 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean \
+      commodo ligula eget dolor. Aenean massa.'
+
   return (
     <Hero { ...props }>
       <Marger bottom="5">
@@ -14,20 +24,17 @@ export const KarlHero = props => {
         </Title>
       </Marger>
 
-      <Marger top="5" bottom="4">
+      <Marger top="5" bottom={ props.tiny ? 0 : 4 }>
         <Paragraph modifier="primary" margin={ false }>
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-          commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus
-          et magnis dis parturient montes, nascetur ridiculus mus. Donec quam
-          felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla
-          consequat massa quis enim. Donec pede justo, fringilla vel, aliquet
-          nec, vulputate eget, arcu enim justo, rhoncus ut.
+          { text }
         </Paragraph>
       </Marger>
 
-      <Marger top="4">
-        <Button modifier="helium">Button</Button>
-      </Marger>
+      { !props.tiny &&
+        <Marger top="4">
+          <Button modifier="helium">Button</Button>
+        </Marger>
+      }
     </Hero>
   )
 }
