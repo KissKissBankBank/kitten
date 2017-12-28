@@ -91,12 +91,12 @@ const styles = {
     grid: {
       position: 'relative',
       zIndex: 1,
-      marginTop: `${1 / NUM_COLUMNS * 100}%`,
+      paddingTop: `${1 / NUM_COLUMNS * 100}vw`,
       marginLeft: `${1 / NUM_COLUMNS * 100}%`,
 
       left: {
         [`@media (max-width: ${ScreenConfig['M'].max}px)`]: {
-          marginTop: `${8 / NUM_COLUMNS * 100}%`,
+          paddingTop: `${8 / NUM_COLUMNS * 100}vw`,
           marginLeft: 0,
         },
       },
@@ -105,7 +105,7 @@ const styles = {
         marginLeft: `${5 / NUM_COLUMNS * 100}%`,
 
         [`@media (max-width: ${ScreenConfig['M'].max}px)`]: {
-          marginTop: `${8 / NUM_COLUMNS * 100}%`,
+          paddingTop: `${8 / NUM_COLUMNS * 100}vw`,
           marginLeft: `${2 / NUM_COLUMNS * 100}%`,
         },
 
@@ -116,7 +116,7 @@ const styles = {
 
       tiny: {
         [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
-          paddingBottom: `${1 / 2 / NUM_COLUMNS * 100}%`,
+          paddingBottom: `${1 / 2 / NUM_COLUMNS * 100}vw`,
         },
       },
     },
@@ -145,12 +145,12 @@ const styles = {
 
     grid: {
       marginLeft: `-${2 / NUM_COLUMNS * 100}%`,
-      marginBottom: `${1 / 2 / NUM_COLUMNS * 100}%`,
+      paddingBottom: `${1 / 2 / NUM_COLUMNS * 100}vw`,
 
       left: {
         [`@media (max-width: ${ScreenConfig['M'].max}px)`]: {
           marginLeft: `-${10 / NUM_COLUMNS * 100}%`,
-          marginBottom: 0,
+          paddingBottom: 0,
         },
 
         [`@media (max-width: ${ScreenConfig['XS'].max}px)`]: {
@@ -172,7 +172,7 @@ const styles = {
 
       tiny: {
         [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
-          marginBottom: 0,
+          paddingBottom: 0,
         },
       },
     },
