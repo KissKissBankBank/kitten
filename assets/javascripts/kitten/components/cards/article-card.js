@@ -7,6 +7,7 @@ import { Text } from 'kitten/components/typography/text'
 import { parseHtml } from 'kitten/helpers/utils/parser'
 import { HorizontalStroke } from 'kitten/components/layout/horizontal-stroke'
 import { ButtonImage } from 'kitten/components/buttons/button-image'
+import COLORS from 'kitten/constants/colors-config'
 
 class ArticleCardComponent extends Component {
   render() {
@@ -92,7 +93,11 @@ class ArticleCardComponent extends Component {
   renderTitle() {
     return (
       <Marger bottom="1" style={ styles.title }>
-        <Title modifier="senary" margin={ false }>
+        <Title
+          modifier="senary"
+          margin={ false }
+          className="k-Card__title"
+        >
           { parseHtml(this.props.articleTitle) }
         </Title>
       </Marger>
@@ -114,6 +119,8 @@ class ArticleCardComponent extends Component {
   }
 }
 
+const COMPONENT_GUTTER = 10
+
 const styles = {
   image: {
     width: '100%',
@@ -121,35 +128,34 @@ const styles = {
   },
   header: {
     grid: {
-      display: 'flex',
+      display: 'inline-flex',
       alignItems: 'center',
       position: 'relative',
       top: '0',
       marginTop: '-30px',
-      width: '65%',
-      backgroundColor: '#fff', // TODO: Use `background1` color value.
+      backgroundColor: COLORS.background1,
     },
     avatar: {
-      marginLeft: '10px',
+      marginLeft: `${COMPONENT_GUTTER}px`,
     },
     owner: {
-      marginLeft: '10px',
-      marginRight: '20px',
+      marginLeft: `${COMPONENT_GUTTER}px`,
+      marginRight: `${COMPONENT_GUTTER * 2}px`,
       lineHeight: '1.2',
     },
   },
   title: {
-    padding: '0 10px',
+    padding: `0 ${COMPONENT_GUTTER}px`,
     lineHeight: '1',
   },
   subtitle: {
     display: 'flex',
     alignItems: 'center',
     lineHeight: '1',
-    padding: '0 10px',
+    padding: `0 ${COMPONENT_GUTTER}px`,
   },
   stroke: {
-    marginRight: '10px',
+    marginRight: `${COMPONENT_GUTTER}px`,
   },
 }
 
@@ -171,5 +177,5 @@ ArticleCardComponent.defaultProps = {
 
 export const ArticleCard = card(ArticleCardComponent, {
   light: true,
-  // withoutBoxShadowOnHover: true, // TODO
+  withoutBoxShadowOnHover: true,
 })
