@@ -37,6 +37,10 @@ class HeroBase extends Component {
       styles.content,
       this.props.direction == 'left' && styles.content.left,
       this.props.direction == 'right' && styles.content.right,
+      {
+        backgroundColor: this.props.contentBackgroundColor,
+        color: this.props.contentColor,
+      },
     ]
 
     return (
@@ -82,8 +86,6 @@ class HeroBase extends Component {
 const styles = {
   content: {
     padding: '100px 115px',
-    backgroundColor: COLORS.font1,
-    color: COLORS.background1,
 
     [`@media (max-width: ${ScreenConfig['M'].max}px)`]: {
       padding: '100px 85px',
@@ -206,6 +208,8 @@ HeroBase.defaultProps = {
   imageSrc: 'https://placehold.it/40x40/'
     + `${COLORS.primary1.replace('#', '')}/`
     + `${COLORS.primary1.replace('#', '')}`,
+  contentBackgroundColor: COLORS.font1,
+  contentColor: COLORS.background1,
 }
 
 export const Hero = Radium(HeroBase)
