@@ -1,4 +1,4 @@
-export const COLORS = {
+export default {
   font1: '#222', // Dark Grey
   font2: '#b8b8b8', // Semi Dark Grey
 

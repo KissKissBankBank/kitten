@@ -67,12 +67,15 @@
 
 // Images
 @import "kitten/components/images/cropper";
+@import "kitten/components/images/image-with-caption";
 
 // Layout
+@import 'kitten/components/layout/horizontal-stroke';
 @import 'kitten/components/layout/line';
 @import 'kitten/components/layout/responsive-iframe-container';
 @import 'kitten/components/layout/separator';
 @import 'kitten/components/layout/vertical-separator';
+@import 'kitten/components/layout/vertical-stroke';
 
 // Lines
 @import 'kitten/components/lines/info-lines';

@@ -60,7 +60,7 @@ describe('<SimpleUploader />', () => {
       }
 
       expect(deleteButton.props()).to.contains(expectedProps)
-      expect(deleteButton.props().onClick).to.be.function
+      expect(deleteButton.props().onClick).to.be.a('function')
     })
   })
 

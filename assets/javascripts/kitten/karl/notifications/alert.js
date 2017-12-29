@@ -38,9 +38,11 @@ const markdownExample = 'It\'s very easy to make some words **bold** and ' +
 export const KarlAlert = props => {
   return (
     <Alert { ...props }>
-      <Markdown renderers={ markdownRenderers }
-                source="Lorem ipsum dolor sit amet,
-                        [consectetuer adipiscing](#) elit." />
+      <Markdown
+        renderers={ markdownRenderers }
+        source="Lorem ipsum dolor sit amet,
+               [consectetuer adipiscing](#) elit."
+      />
     </Alert>
   )
 }
@@ -48,14 +50,19 @@ export const KarlAlert = props => {
 export const KarlAlertWithButton = props => {
   return (
     <Alert { ...props }>
-      <Markdown renderers={ markdownRenderers }
-                source="Lorem ipsum dolor sit amet,
-                        consectetuer adipiscing elit. Sed ut perspiciatis
-                        unde omnis iste natus error sit voluptatem accusantium
-                        doloremque laudantium, totam rem aperiam, eaque ipsa
-                        quae ab illo inventore veritatis et quasi architecto
-                        beatae vitae dicta sunt explicabo." />
-      <Button modifier="carbon" className="k-u-margin-top-double">
+      <Markdown
+        renderers={ markdownRenderers }
+        source="Lorem ipsum dolor sit amet,
+                consectetuer adipiscing elit. Sed ut perspiciatis
+                unde omnis iste natus error sit voluptatem accusantium
+                doloremque laudantium, totam rem aperiam, eaque ipsa
+                quae ab illo inventore veritatis et quasi architecto
+                beatae vitae dicta sunt explicabo."
+      />
+      <Button
+        modifier="carbon"
+        className="k-u-margin-top-double"
+      >
         Button
       </Button>
     </Alert>
@@ -65,8 +72,10 @@ export const KarlAlertWithButton = props => {
 export const KarlAlertWithMarkdown = props => {
   return (
     <Alert>
-      <Markdown renderers={ markdownRenderers }
-                source={ markdownExample } />
+      <Markdown
+        renderers={ markdownRenderers }
+        source={ markdownExample }
+      />
     </Alert>
   )
 }

@@ -9,7 +9,7 @@ import {
   CONTAINER_PADDING,
   CONTAINER_PADDING_MOBILE,
 } from 'kitten/constants/grid-config'
-import { COLORS } from 'kitten/constants/colors-config'
+import COLORS from 'kitten/constants/colors-config'
 
 class HeroBase extends Component {
   render() {

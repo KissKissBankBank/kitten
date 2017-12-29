@@ -64,4 +64,18 @@ describe('<LinkList />', () => {
       expect(secondItem).to.contain.text('Bar')
     })
   })
+
+  describe('with color item', () => {
+    const linkList = shallow(
+      <LinkList
+        items={ items }
+        color="dark"
+      />
+    )
+    const item = linkList.find('.k-LinkList__link').at(0)
+
+    it('has a good class', () => {
+      expect(item).to.have.className('k-LinkList__link--dark')
+    })
+  })
 })
