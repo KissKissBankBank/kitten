@@ -25,6 +25,7 @@ export const card = (WrappedComponent, wrappedProps) => {
       withDarkBorder,
       withShadow,
       withVerticalPadding,
+      withoutBoxShadowOnHover,
       ...others,
     } = { ...defaultProps, ...wrappedProps, ...props }
 
@@ -41,6 +42,7 @@ export const card = (WrappedComponent, wrappedProps) => {
         'k-Card--withDarkBorder': withDarkBorder,
         'k-Card--withShadow': withShadow,
         'k-Card--withVerticalPadding': withVerticalPadding,
+        'k-Card--withoutBoxShadowOnHover': withoutBoxShadowOnHover,
       },
       className,
     )

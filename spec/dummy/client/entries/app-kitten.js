@@ -40,6 +40,7 @@ import { ProjectCreatorCard }
   from 'kitten/components/cards/project-creator-card'
 import { ProjectSimilarCard }
   from 'kitten/components/cards/project-similar-card'
+import { SimpleCard } from 'kitten/components/cards/simple-card'
 import { KarlCard } from 'kitten/karl/cards/card'
 import {
   KarlSimilarProjectsCard,
@@ -326,6 +327,7 @@ ReactOnRails.register({
   ProjectCard,
   ProjectCreatorCard,
   ProjectSimilarCard,
+  SimpleCard,
   KarlCard,
   KarlSimilarProjectsCard,
   KarlSimilarProjectsWithInfosCard,
