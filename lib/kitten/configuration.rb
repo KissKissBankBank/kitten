@@ -175,6 +175,7 @@ module Kitten
           label: 'Presentation elements',
           components: [
             { path: 'components/cards/card', name: 'Card' },
+            { path: 'components/cards/simple-card', name: 'Simple card' },
             { path: 'components/cards/project-card', name: 'Project card' },
             {
               path: 'components/cards/project-similar-card',
