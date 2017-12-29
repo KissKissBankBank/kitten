@@ -32,7 +32,10 @@ export const Row = ({
   )
 
   return (
-    <div className={ rowClassName } { ...others }>
+    <div
+      className={ rowClassName }
+      { ...others }
+    >
       <div className={ rowContentClassName }>
         { children }
       </div>

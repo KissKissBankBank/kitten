@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import classNames from 'classnames'
+import PropTypes from 'prop-types'
 
 export class LinkList extends Component {
   constructor() {
@@ -13,12 +14,21 @@ export class LinkList extends Component {
   }
 
   renderItem(element) {
-    const { key, item, href, active } = element
+    const {
+      key,
+      item,
+      href,
+      active,
+    } = element
+
+    const { color } = this.props
 
     const linkListClassName = classNames(
       'k-LinkList__link',
       {
         'is-active': active,
+        'k-LinkList__link--light': color ==  'light',
+        'k-LinkList__link--dark': color ==  'dark',
       },
     )
 
@@ -62,7 +72,12 @@ export class LinkList extends Component {
 }
 
 LinkList.defaultProps = {
+  color: PropTypes.oneOf(['light', 'dark']),
+}
+
+LinkList.defaultProps = {
   className: null,
   margin: true,
   items: [], // Eg: [{ key: …, item: …, href: … }]
+  color: 'dark',
 }

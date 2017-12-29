@@ -3,6 +3,7 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
+
 - Breaking change: Update grid configuration.
 - Feature: Add `Carousel` components and its helpers.
 - Feature: Update grid 'Container' component with screen sizing handlers.
@@ -10,6 +11,22 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Add feature detection utility.
 - Feature: Add media-query utility.
 - Feature: Add range utility.
+- Fix: Fix `:focus` `border-color` on `TextInputWithUnit`, `Select` and
+  `LocationInput` component.
+- Feature: Update `Tooltip`, `TooltipNew` and `StaticTooltip` components with styleguide V2.
+- Feature: Update `LinkBox` and `InformationBox` components with styleguide V2
+  new design.
+- Fix: Fix `LinkList` test.
+- Breaking change: Update `LinkList` component with styleguide V2.
+  Replace `@include k-LinkList(( colors: ( ))` by `@include k-LinkList;`.
+- Feature: Create new `ImageWithCaption` component.
+- Feature: Add `font2` prop in `Text` component.
+- Feature: Create `HorizontalStroke` component.
+- Feature: Create `HorizontalNav` React component with styleguide V2 brand config.
+- Feature: Create `VerticalStroke` component.
+- Feature: Update all `Select` components with styleguide V2 new design.
+- Feature: Update `Alert` component with new design styleguide V2.
+- Feature: Update `:focus` `border-color` on `TextInput` component.
 - Feature: Update `Checkbox` and `RadioButton` components with new design
   styleguide V2.
 - Feature: Add `instagram` modifier in `ButtonIcon` component,

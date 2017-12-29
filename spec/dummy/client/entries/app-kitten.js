@@ -164,14 +164,22 @@ import { PhoneIllustration }
 
 // Images
 import { KarlImageCropper } from 'kitten/karl/images/image-cropper'
+import { KarlImageWithCaption } from 'kitten/karl/images/image-with-caption'
 
 // Layout
 import { Separator } from 'kitten/components/layout/separator'
+import { KarlHorizontalStrokes } from 'kitten/karl/layout/horizontal-stroke'
 import {
   KarlLineWithBigHeart,
   KarlLineWithTooltip,
 } from 'kitten/karl/layout/line'
 import { KarlSeparator } from 'kitten/karl/layout/separator'
+import {
+  KarlVerticalStroke,
+  KarlTinyVerticalStroke,
+  KarlBigVerticalStroke,
+  KarlHugeVerticalStroke,
+} from 'kitten/karl/layout/vertical-stroke'
 
 // Lines
 import { InfoLines } from 'kitten/components/lines/info-lines'
@@ -179,6 +187,11 @@ import { InfoLines } from 'kitten/components/lines/info-lines'
 // Links
 import { ExternalRichLink } from 'kitten/components/links/external-rich-link'
 import { LinkList } from 'kitten/components/links/link-list'
+import {
+  KarlLinkList,
+  KarlLinkListDark,
+  KarlLinkListSelectedItem,
+} from 'kitten/karl/links/link-list'
 
 // Lists
 import { BulletList } from 'kitten/components/lists/bullet-list'
@@ -203,6 +216,10 @@ import {
 
 // Navigation
 import { TabBar } from 'kitten/components/navigation/tab-bar'
+import {
+  KarlHorizontalNav,
+  KarlBrowsingHorizontalNav,
+} from 'kitten/karl/navigation/horizontal-nav'
 
 // Notifications
 import { Alert } from 'kitten/components/notifications/alert'
@@ -416,12 +433,18 @@ ReactOnRails.register({
 
   // Images
   KarlImageCropper,
+  KarlImageWithCaption,
 
   // Layout
   Separator,
+  KarlHorizontalStrokes,
   KarlLineWithBigHeart,
   KarlLineWithTooltip,
   KarlSeparator,
+  KarlVerticalStroke,
+  KarlTinyVerticalStroke,
+  KarlBigVerticalStroke,
+  KarlHugeVerticalStroke,
 
   // Lines
   InfoLines,
@@ -429,6 +452,9 @@ ReactOnRails.register({
   // Links
   ExternalRichLink,
   LinkList,
+  KarlLinkList,
+  KarlLinkListDark,
+  KarlLinkListSelectedItem,
 
   // Lists
   BulletList,
@@ -450,6 +476,8 @@ ReactOnRails.register({
 
   // Navigation
   TabBar,
+  KarlHorizontalNav,
+  KarlBrowsingHorizontalNav,
 
   // Notifications
   Alert,
