@@ -112,12 +112,6 @@
 
 @include k-Header;
 
-// Hero
-
-@include k-Hero((
-  font: 'light',
-));
-
 // Images
 
 @include k-Cropper;

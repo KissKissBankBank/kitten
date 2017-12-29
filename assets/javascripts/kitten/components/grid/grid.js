@@ -1,9 +1,9 @@
 import React from 'react'
 import classNames from 'classnames'
+import Radium, { StyleRoot } from 'radium'
+import { ScreenConfig } from 'kitten/constants/screen-config'
 
-const mediaQueries = ['xxs', 'xs', 's', 'm', 'l', 'xl']
-
-export class Grid extends React.Component {
+class GridBase extends React.Component {
   render() {
     const { className, ...others } = this.props
     const gridClassName = classNames('k-Grid', className)
@@ -14,11 +14,12 @@ export class Grid extends React.Component {
   }
 }
 
-export class GridCol extends React.Component {
+class GridColBase extends React.Component {
   classByMediaQuery() {
     const props = this.props
 
-    const classNamesByMediaQuery = mediaQueries.map(mediaQuery => {
+    const classNamesByMediaQuery = Object.keys(ScreenConfig).map(size => {
+      const mediaQuery = size.toLowerCase()
       const col = props[`col-${mediaQuery}`]
       const offset = props[`offset-${mediaQuery}`]
 
@@ -47,7 +48,8 @@ export class GridCol extends React.Component {
     )
 
     // Remove unknown props in others.
-    mediaQueries.map(mediaQuery => {
+    Object.keys(ScreenConfig).map(size => {
+      const mediaQuery = size.toLowerCase()
       delete(others[`col-${mediaQuery}`])
       delete(others[`offset-${mediaQuery}`])
     })
@@ -58,12 +60,15 @@ export class GridCol extends React.Component {
   }
 }
 
-Grid.defaultProps = {
+GridBase.defaultProps = {
   className: null,
 }
 
-GridCol.defaultProps = {
+GridColBase.defaultProps = {
   col: '12',
   offset: null,
   className: null,
 }
+
+export const Grid = Radium(GridBase)
+export const GridCol = Radium(GridColBase)
