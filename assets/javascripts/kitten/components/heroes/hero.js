@@ -33,6 +33,12 @@ class HeroBase extends Component {
       this.props.tiny && styles.content.grid.tiny,
     ]
 
+    const contentStyles = [
+      styles.content,
+      this.props.direction == 'left' && styles.content.left,
+      this.props.direction == 'right' && styles.content.right,
+    ]
+
     return (
       <GridCol
         col="12"
@@ -40,7 +46,7 @@ class HeroBase extends Component {
         col-l="6"
         style={ gridStyles }
       >
-        <div style={ styles.content }>
+        <div style={ contentStyles }>
           { this.props.children }
         </div>
       </GridCol>
@@ -85,7 +91,18 @@ const styles = {
 
     [`@media (max-width: ${ScreenConfig['XS'].max}px)`]: {
       padding: '50px 20px',
-      marginLeft: `-${CONTAINER_PADDING_MOBILE}px`,
+    },
+
+    left: {
+      [`@media (max-width: ${ScreenConfig['XS'].max}px)`]: {
+        marginLeft: `-${CONTAINER_PADDING_MOBILE}px`,
+      },
+    },
+
+    right: {
+      [`@media (max-width: ${ScreenConfig['XS'].max}px)`]: {
+        marginRight: `-${CONTAINER_PADDING_MOBILE}px`,
+      },
     },
 
     grid: {
