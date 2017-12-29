@@ -41,6 +41,7 @@ import { ProjectCreatorCard }
   from 'kitten/components/cards/project-creator-card'
 import { ProjectSimilarCard }
   from 'kitten/components/cards/project-similar-card'
+import { SimpleCard } from 'kitten/components/cards/simple-card'
 import { KarlCard } from 'kitten/karl/cards/card'
 import {
   KarlSimilarProjectsCard,
@@ -295,6 +296,11 @@ import {
   KarlParagraphWithLink,
 } from 'kitten/karl/typography/paragraph'
 
+// Carousel
+import {
+  KarlCarouselProjectCard,
+} from 'kitten/karl/carousel/carousel'
+
 ReactOnRails.register({
   // Box
   DocLinkBox,
@@ -328,6 +334,7 @@ ReactOnRails.register({
   ProjectCard,
   ProjectCreatorCard,
   ProjectSimilarCard,
+  SimpleCard,
   KarlCard,
   KarlSimilarProjectsCard,
   KarlSimilarProjectsWithInfosCard,
@@ -533,4 +540,7 @@ ReactOnRails.register({
   KarlParagraphSecondary,
   KarlParagraphTertiary,
   KarlParagraphWithLink,
+
+  // Carousel
+  KarlCarouselProjectCard,
 })
