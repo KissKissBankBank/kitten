@@ -8,6 +8,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Breaking change: Remove `k-Hero` mixin.
 - Feature: Update grid 'Container' component with screen sizing handlers.
 - Feature: Add screen and grid JavaScript configuration files.
+- Breaking change: Update grid configuration.
 - Fix: Update ruby version.
 - Feature: Remove `boron` buttons colors.
 - Feature: Update colors.
