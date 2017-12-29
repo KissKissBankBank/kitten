@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `ArticleCard` component.
 - Feature: Add `Hero` component.
 - Breaking change: Remove `k-Hero` mixin.
 - Breaking change: Update grid configuration.

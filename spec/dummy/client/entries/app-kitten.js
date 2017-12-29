@@ -35,6 +35,7 @@ import {
 import { KarlPaymentButtons } from 'kitten/karl/buttons/payment-button'
 
 // Cards
+import { ArticleCard } from 'kitten/components/cards/article-card'
 import { ProjectCard } from 'kitten/components/cards/project-card'
 import { ProjectCreatorCard }
   from 'kitten/components/cards/project-creator-card'
@@ -332,6 +333,7 @@ ReactOnRails.register({
   KarlColors,
 
   // Cards
+  ArticleCard,
   ProjectCard,
   ProjectCreatorCard,
   ProjectSimilarCard,
