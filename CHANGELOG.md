@@ -3,6 +3,7 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
+- Breaking change: Update grid configuration.
 - Feature: Add `Carousel` components and its helpers.
 - Feature: Update grid 'Container' component with screen sizing handlers.
 - Feature: Add screen and grid JavaScript configuration files.
