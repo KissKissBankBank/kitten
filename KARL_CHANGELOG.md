@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Update `Hero` examples.
 - Feature: Update webpack configuration with appropriate babel presets.
 - Feature: Add `KarlCarouselProjectCard` examples.
 - Feature: Add `SimpleCard` examples.
