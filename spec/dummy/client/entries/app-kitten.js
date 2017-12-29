@@ -278,7 +278,6 @@ import {
 } from 'kitten/karl/typography/paragraph'
 
 // Carousel
-import Carousel from 'kitten/components/carousel/carousel'
 import {
   KarlCarouselProjectCard,
 } from 'kitten/karl/carousel/carousel'
@@ -511,6 +510,5 @@ ReactOnRails.register({
   KarlParagraphWithLink,
 
   // Carousel
-  Carousel,
   KarlCarouselProjectCard,
 })
