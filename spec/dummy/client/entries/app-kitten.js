@@ -295,6 +295,11 @@ import {
   KarlParagraphWithLink,
 } from 'kitten/karl/typography/paragraph'
 
+// Carousel
+import {
+  KarlCarouselProjectCard,
+} from 'kitten/karl/carousel/carousel'
+
 ReactOnRails.register({
   // Box
   DocLinkBox,
@@ -533,4 +538,7 @@ ReactOnRails.register({
   KarlParagraphSecondary,
   KarlParagraphTertiary,
   KarlParagraphWithLink,
+
+  // Carousel
+  KarlCarouselProjectCard,
 })

@@ -243,7 +243,17 @@ module Kitten
             { path: 'components/layout/vertical-stroke', name: 'Vertical stroke' },
             { path: 'components/layout/separator', name: 'Separator' },
           ],
-        }
+        },
+        {
+          id: 'carousel',
+          label: 'Carousel',
+          components: [
+            {
+              path: 'components/carousel/carousel',
+              name: 'Carousel with ProjectCard'
+            },
+          ],
+        },
       ]
     end
   end

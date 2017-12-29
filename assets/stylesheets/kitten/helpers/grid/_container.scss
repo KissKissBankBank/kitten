@@ -13,11 +13,11 @@
 
   box-sizing: border-box;
   max-width: k-map-fetch($k-grid, 'container');
-  padding-left: k-map-fetch($k-grid, 'thin-gutter-width');
-  padding-right: k-map-fetch($k-grid, 'thin-gutter-width');
+  padding-left: k-map-fetch($k-grid, 'container-padding-thin');
+  padding-right: k-map-fetch($k-grid, 'container-padding-thin');
 
-  @include k-media-min('xs') {
-    padding-left: k-map-fetch($k-grid, 'gutter-width');
-    padding-right: k-map-fetch($k-grid, 'gutter-width');
+  @include k-media-min('s') {
+    padding-left: k-map-fetch($k-grid, 'container-padding');
+    padding-right: k-map-fetch($k-grid, 'container-padding');
   }
 }

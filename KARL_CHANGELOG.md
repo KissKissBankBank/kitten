@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Update webpack configuration with appropriate babel presets.
+- Feature: Add `KarlCarouselProjectCard` examples.
 - Feature: Add `SimpleCard` examples.
 - Feature: Create `KarlLinkList`, `KarlLinkListSelectedItem` and
   `KarlLinkListDark`.

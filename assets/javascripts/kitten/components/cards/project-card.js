@@ -16,6 +16,9 @@ import { TagList } from 'kitten/components/lists/tag-list'
 import { TypologyTagIcon } from 'kitten/components/icons/typology-tag-icon'
 import { InstrumentTagIcon } from 'kitten/components/icons/instrument-tag-icon'
 
+export const MIN_WIDTH = 280
+export const MARGIN_BETWEEN = 40
+
 class ProjectCardComponent extends React.Component {
   constructor() {
     super()
