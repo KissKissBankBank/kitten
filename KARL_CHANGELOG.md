@@ -8,20 +8,20 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 Features:
 - Add `ArticleCard` examples.
-- Update `Hero` examples.
-- Update webpack configuration with appropriate babel presets.
 - Add `KarlCarouselProjectCard` examples.
 - Add `SimpleCard` examples.
-- Create `KarlLinkList`, `KarlLinkListSelectedItem` and `KarlLinkListDark`.
-- Create new `KarlImageWithCaption` example.
-- Create `KarlExampleTitle` example.
-- Create `KarlHorizontalStrokes` example.
+- Add `KarlLinkList`, `KarlLinkListSelectedItem` and `KarlLinkListDark`.
+- Add new `KarlImageWithCaption` example.
+- Add `KarlExampleTitle` example.
+- Add `KarlHorizontalStrokes` example.
 - Add `KarlHorizontalNav` and `KarlHorizontalNavBrowsing` examples.
-- Create `KarlVerticalStroke`, `KarlTinyVerticalStroke`, `KarlBigVerticalStroke`
+- Add `KarlVerticalStroke`, `KarlTinyVerticalStroke`, `KarlBigVerticalStroke`
   and `KarlHugeVerticalStroke` examples.
 - Add `InstagramButtonIcon` example.
 - Add `disabled` prop on `TextInputWithButton` and `tiny` prop on
   `TextInputWithLimit` examples.
+- Update `Hero` examples.
+- Update webpack configuration with appropriate babel presets.
 
 ## [16.3.1] - 2017-11-28
 
