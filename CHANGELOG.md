@@ -17,7 +17,6 @@ Features:
 - Add `ArticleCard` component.
 - Add `Hero` component.
 - Add `Carousel` components and its helpers.
-- Update grid 'Container' component with screen sizing handlers.
 - Add screen and grid JavaScript configuration files.
 - Add feature detection utility.
 - Add media-query utility.
@@ -25,28 +24,29 @@ Features:
 - Add `SimpleCard` component.
 - Add `withoutBoxShadowOnHover` prop to `card` HOC.
 - Add new `:hover` styles to `k-Card`.
+- Add `font2` prop in `Text` component.
+- Add `instagram` modifier in `ButtonIcon` component, `InstagramButtonIcon`
+  and `InstagramIcon` components.
+- Add `disabled` prop on `TextInputWithButton`.
+- Add `k-buttonPadding` helper to manage button paddings.
+- Add new `error` and `valid` colors.
+- Add `ImageWithCaption` component.
+- Add `HorizontalStroke` component.
+- Add `HorizontalNav` React component with styleguide V2 brand config.
+- Add `VerticalStroke` component.
+- Update grid 'Container' component with screen sizing handlers.
 - Update `Tooltip`, `TooltipNew` and `StaticTooltip` components
   with styleguide V2.
 - Update `LinkBox` and `InformationBox` components with styleguide V2
   new design.
-- Create new `ImageWithCaption` component.
-- Add `font2` prop in `Text` component.
-- Create `HorizontalStroke` component.
-- Create `HorizontalNav` React component with styleguide V2 brand config.
-- Create `VerticalStroke` component.
 - Update all `Select` components with styleguide V2 new design.
 - Update `Alert` component with new design styleguide V2.
 - Update `:focus` `border-color` on `TextInput` component.
 - Update `Checkbox` and `RadioButton` components with new design styleguide V2.
-- Add `instagram` modifier in `ButtonIcon` component, `InstagramButtonIcon`
-  and `InstagramIcon` components.
-- Add `disabled` prop on `TextInputWithButton`.
 - Update all `Input` components with new design styleguide V2.
 - Update `k-buttonRounded` helper to manage button radius.
-- Add `k-buttonPadding` helper to manage button paddings.
-- Remove `boron` buttons colors.
 - Update colors.
-- Add new `error` and `valid` colors.
+- Remove `boron` buttons colors.
 
 Fixes:
 - Fix `:focus` `border-color` on `TextInputWithUnit`, `Select` and
