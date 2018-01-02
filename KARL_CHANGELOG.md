@@ -4,22 +4,24 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `ArticleCard` examples.
-- Feature: Update `Hero` examples.
-- Feature: Update webpack configuration with appropriate babel presets.
-- Feature: Add `KarlCarouselProjectCard` examples.
-- Feature: Add `SimpleCard` examples.
-- Feature: Create `KarlLinkList`, `KarlLinkListSelectedItem` and
-  `KarlLinkListDark`.
-- Feature: Create new `KarlImageWithCaption` example.
-- Feature: Create `KarlExampleTitle` example.
-- Feature: Create `KarlHorizontalStrokes` example.
-- Feature: Add `KarlHorizontalNav` and `KarlHorizontalNavBrowsing` examples.
-- Feature: Create `KarlVerticalStroke`, `KarlTinyVerticalStroke`,
-  `KarlBigVerticalStroke` and `KarlHugeVerticalStroke` examples.
-- Feature: Add `InstagramButtonIcon` example.
-- Feature: Add `disabled` prop on `TextInputWithButton` and `tiny` prop on
+## [17.0.0] - 2018-01-02
+
+Features:
+- Add `ArticleCard` examples.
+- Add `KarlCarouselProjectCard` examples.
+- Add `SimpleCard` examples.
+- Add `KarlLinkList`, `KarlLinkListSelectedItem` and `KarlLinkListDark`.
+- Add new `KarlImageWithCaption` example.
+- Add `KarlExampleTitle` example.
+- Add `KarlHorizontalStrokes` example.
+- Add `KarlHorizontalNav` and `KarlHorizontalNavBrowsing` examples.
+- Add `KarlVerticalStroke`, `KarlTinyVerticalStroke`, `KarlBigVerticalStroke`
+  and `KarlHugeVerticalStroke` examples.
+- Add `InstagramButtonIcon` example.
+- Add `disabled` prop on `TextInputWithButton` and `tiny` prop on
   `TextInputWithLimit` examples.
+- Update `Hero` examples.
+- Update webpack configuration with appropriate babel presets.
 
 ## [16.3.1] - 2017-11-28
 

@@ -4,50 +4,55 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `ArticleCard` component.
-- Feature: Add `Hero` component.
-- Breaking change: Remove `k-Hero` mixin.
-- Breaking change: Update grid configuration.
-- Feature: Add `Carousel` components and its helpers.
-- Feature: Update grid 'Container' component with screen sizing handlers.
-- Feature: Add screen and grid JavaScript configuration files.
-- Feature: Add feature detection utility.
-- Feature: Add media-query utility.
-- Feature: Add range utility.
-- Feature: Add `SimpleCard` component.
-- Feature: Add `withoutBoxShadowOnHover` prop to `card` HOC.
-- Feature: Add new `:hover` styles to `k-Card`.
-- Fix: Fix `:focus` `border-color` on `TextInputWithUnit`, `Select` and
-  `LocationInput` component.
-- Feature: Update `Tooltip`, `TooltipNew` and `StaticTooltip` components
-  with styleguide V2.
-- Feature: Update `LinkBox` and `InformationBox` components with styleguide V2
-  new design.
-- Fix: Fix `LinkList` test.
-- Breaking change: Update `LinkList` component with styleguide V2.
+## [17.0.0] - 2018-01-02
+
+Breaking changes:
+- Remove `k-Hero` mixin.
+- Update grid configuration.
+- Update `LinkList` component with styleguide V2.
   Replace `@include k-LinkList(( colors: ( ))` by `@include k-LinkList;`.
-- Feature: Create new `ImageWithCaption` component.
-- Feature: Add `font2` prop in `Text` component.
-- Feature: Create `HorizontalStroke` component.
-- Feature: Create `HorizontalNav` React component with styleguide V2
-  brand config.
-- Feature: Create `VerticalStroke` component.
-- Feature: Update all `Select` components with styleguide V2 new design.
-- Feature: Update `Alert` component with new design styleguide V2.
-- Feature: Update `:focus` `border-color` on `TextInput` component.
-- Feature: Update `Checkbox` and `RadioButton` components with new design
-  styleguide V2.
-- Feature: Add `instagram` modifier in `ButtonIcon` component,
-  `InstagramButtonIcon` and `InstagramIcon` components.
-- Feature: Add `disabled` prop on `TextInputWithButton`.
-- Feature: Update all `Input` components with new design styleguide V2.
-- Feature: Update `k-buttonRounded` helper to manage button radius.
-- Feature: Add `k-buttonPadding` helper to manage button paddings.
-- Breaking change: Update all `Button` components with new design styleguide V2.
-- Fix: Update ruby version.
-- Feature: Remove `boron` buttons colors.
-- Feature: Update colors.
-- Feature: Add new `error` and `valid` colors.
+- Update all `Button` components with new design styleguide V2.
+
+Features:
+- Add `ArticleCard` component.
+- Add `Hero` component.
+- Add `Carousel` components and its helpers.
+- Add screen and grid JavaScript configuration files.
+- Add feature detection utility.
+- Add media-query utility.
+- Add range utility.
+- Add `SimpleCard` component.
+- Add `withoutBoxShadowOnHover` prop to `card` HOC.
+- Add new `:hover` styles to `k-Card`.
+- Add `font2` prop in `Text` component.
+- Add `instagram` modifier in `ButtonIcon` component, `InstagramButtonIcon`
+  and `InstagramIcon` components.
+- Add `disabled` prop on `TextInputWithButton`.
+- Add `k-buttonPadding` helper to manage button paddings.
+- Add new `error` and `valid` colors.
+- Add `ImageWithCaption` component.
+- Add `HorizontalStroke` component.
+- Add `HorizontalNav` React component with styleguide V2 brand config.
+- Add `VerticalStroke` component.
+- Update grid 'Container' component with screen sizing handlers.
+- Update `Tooltip`, `TooltipNew` and `StaticTooltip` components
+  with styleguide V2.
+- Update `LinkBox` and `InformationBox` components with styleguide V2
+  new design.
+- Update all `Select` components with styleguide V2 new design.
+- Update `Alert` component with new design styleguide V2.
+- Update `:focus` `border-color` on `TextInput` component.
+- Update `Checkbox` and `RadioButton` components with new design styleguide V2.
+- Update all `Input` components with new design styleguide V2.
+- Update `k-buttonRounded` helper to manage button radius.
+- Update colors.
+- Remove `boron` buttons colors.
+
+Fixes:
+- Fix `:focus` `border-color` on `TextInputWithUnit`, `Select` and
+  `LocationInput` component.
+- Fix `LinkList` test.
+- Update ruby version.
 
 ## [16.3.1] - 2017-11-28
 
