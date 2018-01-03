@@ -15,6 +15,7 @@ export class HorizontalNav extends Component {
       selected,
       text,
       key,
+      href,
       ...others,
     } = item
 
@@ -33,6 +34,7 @@ export class HorizontalNav extends Component {
         { ...others }
       >
         <a
+          href={ href }
           className={ itemClassName }
           style={ {
             height: this.props.height,

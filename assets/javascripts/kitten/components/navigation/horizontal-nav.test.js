@@ -7,13 +7,14 @@ describe('<HorizontalNav />', () => {
   const component = shallow(
     <HorizontalNav
       items={ [
-        { text: 'Nav link 1' },
-        { text: 'Nav link 2' },
-        { text: 'Nav link 3' },
-        { text: 'Nav link 4' },
+        { text: 'Nav link 1', href: '#foobar' },
+        { text: 'Nav link 2', href: '#foobar' },
+        { text: 'Nav link 3', href: '#foobar' },
+        { text: 'Nav link 4', href: '#foobar' },
       ] }
     />
   )
+  const link = component.find('.k-HorizontalNav__item').first()
 
   it('renders a <div class="k-HorizontalNav" />', () => {
     expect(component).to.have.className('k-HorizontalNav')
@@ -25,6 +26,10 @@ describe('<HorizontalNav />', () => {
 
   it('renders items', () => {
     expect(component.find('.k-HorizontalNav__item')).to.have.length(4)
+  })
+
+  it('has an item with clickable link', () => {
+    expect(link).to.have.attr('href', '#foobar')
   })
 
   describe('center props', () => {

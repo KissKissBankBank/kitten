@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Add `href` prop on link items in `HorizontalNav` component.
+
 ## [17.0.0] - 2018-01-02
 
 Breaking changes:
