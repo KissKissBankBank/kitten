@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-Feature: Update `Header` style with the new border size of `HorizontalNav`.
+- Feature: Update `Header` style with the new border size of `HorizontalNav`.
 
 ## [17.0.0] - 2018-01-02
 
