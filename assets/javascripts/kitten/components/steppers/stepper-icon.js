@@ -6,7 +6,7 @@ import { CheckedIcon } from 'kitten/components/icons/checked-icon'
 const StepperIcon = ({ className, children }) => {
   const iconClassNames = classNames(
     'k-ButtonIcon',
-    'k-ButtonIcon--micro',
+    'k-ButtonIcon--nano',
     'k-ButtonIcon--hydrogen',
     'k-ButtonIcon--withoutHover',
     'k-Stepper__icon',
@@ -22,7 +22,7 @@ const StepperIcon = ({ className, children }) => {
 
 export const StepperIconDefault = () => {
   return (
-    <StepperIcon className="k-ButtonIcon--empty--micro" />
+    <StepperIcon className="k-ButtonIcon--empty--nano" />
   )
 }
 
@@ -43,7 +43,7 @@ export const StepperIconInProgress = () => {
 export const StepperIconValidated = () => {
   const validatedClassNames = classNames(
     'k-Stepper__icon--validated',
-    'k-ButtonIcon--checked--micro',
+    'k-ButtonIcon--checked--nano',
   )
 
   return (

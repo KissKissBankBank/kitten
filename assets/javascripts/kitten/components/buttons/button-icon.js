@@ -3,13 +3,15 @@ import classNames from 'classnames'
 
 export class ButtonIcon extends Component {
   render() {
-    const { className,
-            tag,
-            modifier,
-            size,
-            withoutHover,
-            verticalArrow,
-            ...others } = this.props
+    const {
+     className,
+     tag,
+     modifier,
+     size,
+     withoutHover,
+     verticalArrow,
+     ...others
+   } = this.props
 
     const buttonIconClassNames = classNames(
       'k-ButtonIcon',

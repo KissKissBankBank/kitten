@@ -2,8 +2,15 @@
   <div class="k-Grid__col k-Grid__col--12 k-Grid__col--2@l">
     <div class="k-Grid">
       <div class="k-Grid__col k-Grid__col--12 k-Grid__col--3@s k-Grid__col--12@l">
+        <%= example 'Nano' do %>
+          <%= react_component('KarlButtonIconNano', props: {
+              size: 'nano',
+          }) %>
+        <% end %>
+      </div>
+      <div class="k-Grid__col k-Grid__col--12 k-Grid__col--3@s k-Grid__col--12@l">
         <%= example 'Micro' do %>
-          <%= react_component('KarlButtonIconMicro', props: {
+          <%= react_component('KarlButtonIconHeart', props: {
               size: 'micro',
           }) %>
         <% end %>

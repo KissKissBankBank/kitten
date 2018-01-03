@@ -5,8 +5,9 @@ import { ButtonIcon } from 'kitten/components/buttons/button-icon'
 export const ButtonQuestionMarkIcon = props => (
   <ButtonIcon
     modifier="helium"
-    size="micro"
-    { ...props }>
+    size="nano"
+    { ...props }
+  >
     <QuestionMarkIcon className="k-ButtonIcon__svg" />
   </ButtonIcon>
 )
