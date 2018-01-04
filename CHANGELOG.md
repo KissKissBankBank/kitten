@@ -5,8 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Update `QuestionMarkIcon` component with styleguide V2.
-- Feature: Add `nano` and replace `micro`  props on `ButtonIcon` component.
-- Breaking change: Rename `ButtonIconMicro` to `ButtonIconNano`.
+- Feature: Add `nano` and replace `micro` props on `ButtonIcon` component.
+- Breaking change: Replace `size: micro` by `nano` on `ButtonIcon` component.
 
 ## [17.1.0] - 2018-01-03
 
