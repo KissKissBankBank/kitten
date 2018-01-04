@@ -35,32 +35,39 @@
   // Size
   $icon-size: k-px-to-rem(14px);
   $submit-horizontal-padding: k-px-to-rem(13px);
+  $border-width: k-px-to-rem(2px);
+
+  // Button radius
+  // Chrome forced a default `border-radius: 4px`, we have to set it to 0px.
+  $button-radius: 0px;
 
   // Colors
 
   // Base
-  $border: map-get($k-colors, 'line-2');
+  $border: map-get($k-colors, 'line-1');
+  $background-color: map-get($k-colors, 'background-1');
+
   $search-submit-width: $submit-horizontal-padding * 2 + $icon-size;
   $search-input-width: k-px-to-rem(160px);
   $search-width: $search-input-width + $search-submit-width;
 
   // Focus
-  $submit-focus-color: #fff;
-  $border-focus: map-get($k-colors, 'primary-1');
-  $submit-focus-background: map-get($k-colors, 'primary-1');
+  $submit-focus-color: map-get($k-colors, 'background-1');
+  $border-focus: map-get($k-colors, 'line-2');
+  $submit-focus-background: map-get($k-colors, 'primary-2');
 
   // Hover
-  $submit-hover-color: #fff;
-  $border-hover: map-get($k-colors, 'primary-1');
-  $submit-hover-background: map-get($k-colors, 'primary-1');
+  $submit-hover-color: map-get($k-colors, 'background-1');
+  $border-hover: map-get($k-colors, 'primary-2');
+  $submit-hover-background: map-get($k-colors, 'primary-2');
 
   // Active
-  $submit-active-color: #fff;
-  $border-active: map-get($k-colors, 'primary-2');
-  $submit-active-background: map-get($k-colors, 'primary-2');
+  $submit-active-color: map-get($k-colors, 'background-1');
+  $border-active: map-get($k-colors, 'primary-3');
+  $submit-active-background: map-get($k-colors, 'primary-3');
 
   // Border radius Text - input
-  $submit-border-radius: k-px-to-rem(4px);
+  $submit-border-radius: $button-radius;
 
   // Tiny height from k-TextInput
   $submit-tiny-height: k-px-to-rem(40px);
@@ -80,7 +87,6 @@
   }
 
   .k-SearchInput__input {
-    display: table-cell;
     vertical-align: middle;
 
     border-top-right-radius: 0 !important;
@@ -114,10 +120,10 @@
     width: $search-submit-width;
     height: 100%;
 
-    background-color: transparent;
+    background-color: $background-color;
     border-top-right-radius: $submit-border-radius;
     border-bottom-right-radius: $submit-border-radius;
-    border: 1px solid $border;
+    border: $border-width solid $border;
     outline: none; // since we introduce our own focus styles
 
     color: transparent;
