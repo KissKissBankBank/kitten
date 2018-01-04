@@ -21,6 +21,7 @@ export class ButtonIcon extends Component {
         [`k-ButtonIcon--${size}`]: size,
         'k-ButtonIcon--withoutHover': withoutHover,
         'k-ButtonIcon--verticalArrow': verticalArrow,
+        'k-ButtonIcon--rounded--nano': size == 'nano',
       },
     )
 

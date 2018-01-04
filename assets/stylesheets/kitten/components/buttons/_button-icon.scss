@@ -164,7 +164,6 @@
 
   // Sizes modifiers.
   .k-ButtonIcon--nano {
-    @include k-buttonRounded($button-size-nano-with-border);
     @include k-buttonPadding(
       $button-size-nano,
       $nano-size,
@@ -258,7 +257,6 @@
   }
 
   .k-ButtonIcon--checked--nano {
-    @include k-buttonRounded($button-size-nano-with-border);
     @include k-buttonPadding(
       $button-size-nano,
       $checked-nano-size,
@@ -285,12 +283,15 @@
   }
 
   .k-ButtonIcon--empty--nano {
-    @include k-buttonRounded($button-size-nano-with-border);
     @include k-buttonPadding(
       $button-size-nano,
       0,
       0
     );
+  }
+
+  .k-ButtonIcon--rounded--nano {
+    @include k-buttonRounded($button-size-nano-with-border);
   }
 
   // Misc modifiers.
