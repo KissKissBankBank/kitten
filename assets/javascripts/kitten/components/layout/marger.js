@@ -1,6 +1,7 @@
 import React from 'react'
+import Radium from 'radium'
 
-export const Marger = ({ top, bottom, style, ...props }) => {
+const MargerBase = ({ top, bottom, style, ...props }) => {
   const gutter = 10/16 // Transform 10 to .625 for have rem unit.
   const styles = {
     ...style,
@@ -13,7 +14,9 @@ export const Marger = ({ top, bottom, style, ...props }) => {
   )
 }
 
-Marger.defaultProps = {
+MargerBase.defaultProps = {
   top: 0,
   bottom: 0,
 }
+
+export const Marger = Radium(MargerBase)
