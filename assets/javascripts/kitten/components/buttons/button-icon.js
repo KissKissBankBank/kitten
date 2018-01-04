@@ -10,7 +10,7 @@ export class ButtonIcon extends Component {
      size,
      withoutHover,
      verticalArrow,
-     ...others
+     ...others,
    } = this.props
 
     const buttonIconClassNames = classNames(
