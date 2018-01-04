@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add Radium on `Marger` component.
+
 ## [17.1.0] - 2018-01-03
 
 Feature:
