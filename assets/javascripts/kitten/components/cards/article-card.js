@@ -108,12 +108,15 @@ class ArticleCardComponent extends Component {
     return (
       <Marger top="1" bottom="3" style={ styles.subtitle }>
         <HorizontalStroke size="tiny" style={ styles.stroke } />
-        <Text
-          size="micro"
-          weight="regular"
-        >
-          { parseHtml(this.props.articleSubTitle) }
-        </Text>
+
+        { this.props.articleSubTitle &&
+          <Text
+            size="micro"
+            weight="regular"
+          >
+            { parseHtml(this.props.articleSubTitle) }
+          </Text>
+        }
       </Marger>
     )
   }
@@ -172,7 +175,7 @@ ArticleCardComponent.defaultProps = {
   ownerTitle: 'Owner title',
   ownerDescription: 'Owner description',
   articleTitle: 'Title',
-  articleSubTitle: 'Subtitle',
+  articleSubTitle: '',
 }
 
 export const ArticleCard = card(ArticleCardComponent, {

@@ -177,6 +177,7 @@ module Kitten
             { path: 'components/cards/card', name: 'Card' },
             { path: 'components/cards/simple-card', name: 'Simple card' },
             { path: 'components/cards/project-card', name: 'Project card' },
+            { path: 'components/cards/article-card', name: 'Article card' },
             {
               path: 'components/cards/project-similar-card',
               name: 'Project similar card',

@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Remove subtitle part if `articleSubTitle` prop is empty.
+  By default, the default value is empty.
+
 ## [17.1.0] - 2018-01-03
 
 Feature:
