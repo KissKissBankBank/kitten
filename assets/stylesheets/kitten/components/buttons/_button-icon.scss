@@ -175,6 +175,10 @@
       width: $nano-size;
       height: $nano-size;
     }
+
+    &.k-ButtonIcon--rounded {
+      @include k-buttonRounded($button-size-nano-with-border);
+    }
   }
 
   .k-ButtonIcon--micro {
@@ -183,6 +187,10 @@
       $icon-width,
       $icon-height
     );
+
+    &.k-ButtonIcon--rounded {
+      @include k-buttonRounded($button-size-micro-with-border);
+    }
   }
 
   .k-ButtonIcon--tiny {
@@ -191,6 +199,10 @@
       $icon-width,
       $icon-height
     );
+
+    &.k-ButtonIcon--rounded {
+      @include k-buttonRounded($button-size-with-border);
+    }
   }
 
   .k-ButtonIcon--big {
@@ -199,6 +211,10 @@
       $icon-width,
       $icon-height
     );
+
+    &.k-ButtonIcon--rounded {
+      @include k-buttonRounded($button-size-big-with-border);
+    }
   }
 
   // Icon modifiers.

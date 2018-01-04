@@ -6,6 +6,7 @@ export const ButtonQuestionMarkIcon = props => (
   <ButtonIcon
     modifier="helium"
     size="nano"
+    rounded
     { ...props }
   >
     <QuestionMarkIcon className="k-ButtonIcon__svg" />

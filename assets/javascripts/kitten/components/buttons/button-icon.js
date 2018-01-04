@@ -10,6 +10,7 @@ export class ButtonIcon extends Component {
      size,
      withoutHover,
      verticalArrow,
+     rounded,
      ...others,
    } = this.props
 
@@ -21,7 +22,7 @@ export class ButtonIcon extends Component {
         [`k-ButtonIcon--${size}`]: size,
         'k-ButtonIcon--withoutHover': withoutHover,
         'k-ButtonIcon--verticalArrow': verticalArrow,
-        'k-ButtonIcon--rounded--nano': size == 'nano',
+        'k-ButtonIcon--rounded': rounded,
       },
     )
 
@@ -46,4 +47,5 @@ ButtonIcon.defaultProps = {
   modifier: 'hydrogen',
   withoutHover: false,
   verticalArrow: false,
+  rounded: false,
 }
