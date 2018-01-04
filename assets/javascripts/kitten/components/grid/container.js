@@ -1,8 +1,9 @@
 import React from 'react'
+import Radium from 'radium'
 import classNames from 'classnames'
 import { createMatchMediaMax } from 'kitten/helpers/utils/media-queries'
 
-export class Container extends React.PureComponent {
+class ContainerBase extends React.PureComponent {
   constructor(props, context) {
     super(props, context)
 
@@ -43,7 +44,9 @@ export class Container extends React.PureComponent {
   }
 }
 
-Container.defaultProps = {
+ContainerBase.defaultProps = {
   className: null,
   fullWidthBelowScreenSize: null,
 }
+
+export const Container = Radium(ContainerBase)
