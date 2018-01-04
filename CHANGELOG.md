@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `rounded` prop in `ButtonIcon` component.
 - Feature: Update `QuestionMarkIcon` component with styleguide V2.
 - Breaking change:
   Replace `size="micro"` modifier `size="nano"` in `ButtonIcon` component.
