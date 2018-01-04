@@ -24,7 +24,9 @@ class ArticleCardComponent extends Component {
     const Tag = this.props.href ? 'a' : 'div'
 
     return (
-      <Tag { ...others }>
+      <Tag
+        { ...others }
+      >
         { this.renderImage() }
         { this.renderHeader() }
         { this.renderTitle() }
@@ -45,7 +47,9 @@ class ArticleCardComponent extends Component {
     )
 
     return (
-      <Marger className="k-Card__imageContainer">
+      <Marger
+        className="k-Card__imageContainer"
+      >
         <img
           { ...imageProps }
           alt={ alt || '' }
@@ -59,7 +63,10 @@ class ArticleCardComponent extends Component {
   renderHeader() {
     return (
       <div style={ styles.header.grid }>
-        <Marger top="1" bottom="1">
+        <Marger
+          top="1"
+          bottom="1"
+        >
           <ButtonImage
             tag="span"
             img={ this.props.avatarProps }
@@ -69,7 +76,9 @@ class ArticleCardComponent extends Component {
           />
         </Marger>
 
-        <div style={ styles.header.owner }>
+        <div
+          style={ styles.header.owner }
+        >
           <Text
             tag="div"
             size="micro"
@@ -92,7 +101,10 @@ class ArticleCardComponent extends Component {
 
   renderTitle() {
     return (
-      <Marger bottom="1" style={ styles.title }>
+      <Marger
+        bottom="1"
+        style={ styles.title }
+      >
         <Title
           modifier="senary"
           margin={ false }
@@ -106,8 +118,15 @@ class ArticleCardComponent extends Component {
 
   renderSubtitle() {
     return (
-      <Marger top="1" bottom="3" style={ styles.subtitle }>
-        <HorizontalStroke size="tiny" style={ styles.stroke } />
+      <Marger
+        top="1"
+        bottom="3"
+        style={ styles.subtitle }
+      >
+        <HorizontalStroke
+          size="tiny"
+          style={ styles.stroke }
+        />
 
         { this.props.articleSubTitle &&
           <Text
