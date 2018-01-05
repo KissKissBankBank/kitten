@@ -23,14 +23,16 @@ describe('TagButton', () => {
 
     describe('basic props', () => {
       const component = shallow(
-        <TagButton className="k-TagButton--custom"
-                   selected={ false } />)
+        <TagButton
+          className="k-TagButton--custom"
+          selected={ false }
+        />
+      )
 
       it('renders a <Button class="k-TagButton" />', () => {
         expect(component).to.have.tagName('button')
         expect(component).to.have.text('Tag')
         expect(component).to.have.className('k-TagButton--custom')
-        expect(component).to.have.className('k-TagButton--hydrogen')
       })
 
       describe('with tiny prop', () => {
