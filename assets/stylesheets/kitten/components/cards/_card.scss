@@ -100,8 +100,6 @@
 
     &:hover,
     &:focus {
-      box-shadow: $box-shadow-values $box-shadow-color;
-
       &.k-Card--withShadow {
         box-shadow: $box-shadow-values $box-shadow-color-hover;
       }
