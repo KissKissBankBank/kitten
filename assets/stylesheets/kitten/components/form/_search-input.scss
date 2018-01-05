@@ -135,14 +135,6 @@
       margin: 0 auto;
     }
 
-    .k-SearchInput__submit__svgPath {
-      fill: $submit-color;
-    }
-
-    .k-SearchInput__submit__svgCircle {
-      stroke: $submit-color;
-    }
-
     &:focus {
       background-color: $submit-focus-background;
       border-left-color: $border-focus;
@@ -181,6 +173,14 @@
         stroke: $submit-active-color;
       }
     }
+  }
+
+  .k-SearchInput__submit__svgPath {
+    fill: $submit-color;
+  }
+
+  .k-SearchInput__submit__svgCircle {
+    stroke: $submit-color;
   }
 
   .k-SearchInput__submit--tiny {
