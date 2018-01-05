@@ -42,6 +42,10 @@
 
   $border-size: k-px-to-rem(2px);
 
+  // Input radius
+  // Chrome forced a default `border-radius: 4px`, we have to set it to 0px.
+  $input-radius: 0;
+
   // Transition
   $transition-speed: .2s;
 
@@ -90,6 +94,7 @@
     background-color: $unit-background-color;
     border: $border-size solid $border-color;
     border-left: 0;
+    border-radius: $input-radius;
     box-sizing: border-box;
     height: 100%;
     padding: 0 k-px-to-rem(15px);
