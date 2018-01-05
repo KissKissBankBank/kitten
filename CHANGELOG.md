@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Center `k-TextInput--twoDigits` classname.
+- Feature: Text centered on `k-TextInput--twoDigits` classname.
 - Feature: Update `ProjectCard` with the new design.
 - Fix: Cleaning the use of Radium.
 - Feature: Update all `TextInput` to manage input radius.
