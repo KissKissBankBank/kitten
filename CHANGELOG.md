@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Text centered on `k-TextInput--twoDigits` classname.
+- Feature: Text centered on `k-TextInput--twoDigits` class.
 - Breaking change: Remove `modifier` prop on `TagButton`.
 - Feature: Update `TagButton` component with new design styleguide V2.
 - Feature: Update `ProjectCard` with the new design.
