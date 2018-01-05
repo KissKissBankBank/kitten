@@ -50,6 +50,10 @@
 
   $border-size: k-px-to-rem(2px);
 
+  // Input radius
+  // Chrome forced a default `border-radius: 4px`, we have to set it to 0px.
+  $input-radius: 0;
+
   .k-LocationInput {
     .k-LocationInput__group {
       position: relative;
@@ -70,6 +74,7 @@
       height: $height;
       background: $background-color;
       border: $border-size solid $border-color;
+      border-radius: $input-radius;
       color: $color;
 
       transition: color .2s, border-color .2s;
