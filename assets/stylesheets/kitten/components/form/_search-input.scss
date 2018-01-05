@@ -37,15 +37,12 @@
   $submit-horizontal-padding: k-px-to-rem(13px);
   $border-width: k-px-to-rem(2px);
 
-  // Button radius
-  // Chrome forced a default `border-radius: 4px`, we have to set it to 0px.
-  $button-radius: 0px;
-
   // Colors
 
   // Base
-  $border: map-get($k-colors, 'line-1');
-  $background-color: map-get($k-colors, 'background-1');
+  $border: map-get($k-colors, 'font-1');
+  $background-color: map-get($k-colors, 'font-1');
+  $submit-color: map-get($k-colors, 'background-1');
 
   $search-submit-width: $submit-horizontal-padding * 2 + $icon-size;
   $search-input-width: k-px-to-rem(160px);
@@ -53,8 +50,8 @@
 
   // Focus
   $submit-focus-color: map-get($k-colors, 'background-1');
-  $border-focus: map-get($k-colors, 'line-2');
-  $submit-focus-background: map-get($k-colors, 'primary-2');
+  $border-focus: map-get($k-colors, 'font-1');
+  $submit-focus-background: map-get($k-colors, 'font-1');
 
   // Hover
   $submit-hover-color: map-get($k-colors, 'background-1');
@@ -67,7 +64,7 @@
   $submit-active-background: map-get($k-colors, 'primary-3');
 
   // Border radius Text - input
-  $submit-border-radius: $button-radius;
+  $submit-border-radius: 0;
 
   // Tiny height from k-TextInput
   $submit-tiny-height: k-px-to-rem(40px);
@@ -109,6 +106,7 @@
     // active style depending on a following sibling active state.
     &.is-active ~ .k-SearchInput__submit {
       border-color: $border-active;
+      background-color: $submit-active-background;
     }
   }
 
@@ -131,6 +129,14 @@
 
     cursor: pointer;
     transition: all $transition-speed;
+
+    & .k-SearchInput__submit__svgPath {
+      fill: $submit-color;
+    }
+
+    & .k-SearchInput__submit__svgCircle {
+      stroke: $submit-color;
+    }
 
     svg {
       display: block;
