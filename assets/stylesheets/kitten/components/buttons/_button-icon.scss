@@ -266,7 +266,6 @@
       $verticalArrow-height
     );
 
-
     .k-ButtonIcon__svg {
       width: $verticalArrow-width;
       height: $verticalArrow-height;
@@ -305,10 +304,6 @@
       0,
       0
     );
-  }
-
-  .k-ButtonIcon--rounded--nano {
-    @include k-buttonRounded($button-size-nano-with-border);
   }
 
   // Misc modifiers.

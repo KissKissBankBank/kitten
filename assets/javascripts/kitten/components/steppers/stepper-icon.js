@@ -9,7 +9,7 @@ const StepperIcon = ({ className, children }) => {
     'k-ButtonIcon--nano',
     'k-ButtonIcon--hydrogen',
     'k-ButtonIcon--withoutHover',
-    'k-ButtonIcon--rounded--nano',
+    'k-ButtonIcon--rounded',
     'k-Stepper__icon',
     className,
   )
