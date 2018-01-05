@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Breakinh change: Remove `modifier` prop on `TagButton`.
+- Breaking change: Remove `modifier` prop on `TagButton`.
 - Feature: Update `TagButton` component with new design styleguide V2.
 - Feature: Update `SearchInput` component with new design styleguide V2.
 
