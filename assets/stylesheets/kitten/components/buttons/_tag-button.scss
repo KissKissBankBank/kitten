@@ -103,12 +103,7 @@
       border-color: $border-color-hover;
     }
 
-    &:active {
-      color: $color-active;
-      background-color: $background-color-active;
-      border-color: $border-color-active;
-    }
-
+    &:active,
     &.is-selected {
       color: $color-active;
       background-color: $background-color-active;
