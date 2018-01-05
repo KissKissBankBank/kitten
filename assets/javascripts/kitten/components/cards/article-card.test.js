@@ -10,6 +10,7 @@ import { ButtonImage } from 'kitten/components/buttons/button-image'
 describe('<ArticleCard />', () => {
   let component
   let buttonImage
+  let title
 
   describe('by default', () => {
     beforeEach(() => {
@@ -115,6 +116,22 @@ describe('<ArticleCard />', () => {
             cursor: 'crosshair',
           },
         })
+    })
+  })
+
+  describe('with title props', () => {
+    beforeEach(() => {
+      component = mount(
+        <ArticleCard
+          titleProps={{ tag: 'h2' }}
+        />
+      )
+
+      title = component.find(Title).first()
+    })
+
+    it('has a title with h2 tag', () => {
+      expect(title).to.have.prop('tag', 'h2')
     })
   })
 })

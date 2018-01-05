@@ -91,12 +91,19 @@ class ArticleCardComponent extends Component {
   }
 
   renderTitle() {
+    const className = classNames(
+      'k-Card__title',
+      this.props.articleTitle.className,
+    )
+
     return (
       <Marger bottom="1" style={ styles.title }>
         <Title
+          tag="p"
+          { ...this.props.titleProps }
           modifier="senary"
           margin={ false }
-          className="k-Card__title"
+          className={ className }
         >
           { parseHtml(this.props.articleTitle) }
         </Title>
@@ -169,6 +176,7 @@ ArticleCardComponent.defaultProps = {
     src: 'https://placehold.it/100x100/4a84ff/4a84ff',
     alt: '',
   },
+  titleProps: {},
   ownerTitle: 'Owner title',
   ownerDescription: 'Owner description',
   articleTitle: 'Title',

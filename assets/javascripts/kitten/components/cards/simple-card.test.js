@@ -125,4 +125,19 @@ describe('<SimpleCard />', () => {
       })
     })
   })
+
+  describe('with title props', () => {
+    beforeEach(() => {
+      component = mount(
+        <SimpleCard
+          title="Simple card title"
+          titleProps={{ tag: 'h2' }}
+        />
+      )
+    })
+
+    it('has a title with h2 tag', () => {
+      expect(component.find(Title)).to.have.prop('tag', 'h2')
+    })
+  })
 })
