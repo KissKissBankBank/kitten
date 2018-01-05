@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Update `ProjectCard` with the new design.
 - Fix: Cleaning the use of Radium.
 - Feature: Update all `TextInput` to manage input radius.
 - Feature: Add `rounded` prop in `ButtonIcon` component.
