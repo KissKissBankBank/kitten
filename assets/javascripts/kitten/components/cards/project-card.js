@@ -71,7 +71,7 @@ class ProjectCardComponent extends React.Component {
           className="k-ProjectCard__grid--flex"
         >
           <Title
-            className="k-ProjectCard__grid--flex__item-fluid"
+            className="k-ProjectCard__grid--flex__item-fluid k-Card__title"
             margin={ false }
             modifier="senary"
             tag="p"
@@ -124,9 +124,13 @@ class ProjectCardComponent extends React.Component {
 
     return (
       <div className="k-ProjectCard__grid">
-        <Marger top="1.5" bottom="1.3">
+        <Marger
+          top="1.5"
+          bottom="1.3"
+          className="k-Card__imageContainer"
+        >
           <img
-            className="k-ProjectCard__img"
+            className="k-ProjectCard__img k-Card__image"
             src={ this.props.imageSrc }
             alt=""
           />
@@ -385,7 +389,4 @@ ProjectCardComponent.propTypes = {
 
 export const ProjectCard = card(ProjectCardComponent, {
   light: true,
-  withBorder: true,
-  withShadow: true,
-  translateOnHover: true,
 })
