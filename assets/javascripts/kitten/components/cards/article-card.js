@@ -93,7 +93,7 @@ class ArticleCardComponent extends Component {
   renderTitle() {
     const className = classNames(
       'k-Card__title',
-      this.props.articleTitle.className,
+      this.props.titleProps.className,
     )
 
     return (
