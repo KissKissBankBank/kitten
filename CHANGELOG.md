@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Breakinh change: Remove `modifier` prop on `TagButton`.
 - Feature: Update `TagButton` component with new design styleguide V2.
+- Feature: Update all `TextInput` to manage input radius.
 - Feature: Add `rounded` prop in `ButtonIcon` component.
 - Feature: Update `QuestionMarkIcon` component with styleguide V2.
 - Breaking change:
