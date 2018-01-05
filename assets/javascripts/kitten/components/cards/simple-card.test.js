@@ -131,13 +131,20 @@ describe('<SimpleCard />', () => {
       component = mount(
         <SimpleCard
           title="Simple card title"
-          titleProps={{ tag: 'h2' }}
+          titleProps={{
+            tag: 'h2',
+            className: 'custom-class',
+          }}
         />
       )
     })
 
     it('has a title with h2 tag', () => {
       expect(component.find(Title)).to.have.prop('tag', 'h2')
+    })
+
+    it('has a custom class on Title', () => {
+      expect(component.find(Title)).to.have.className('custom-class')
     })
   })
 })

@@ -123,7 +123,10 @@ describe('<ArticleCard />', () => {
     beforeEach(() => {
       component = mount(
         <ArticleCard
-          titleProps={{ tag: 'h2' }}
+          titleProps={{
+            tag: 'h2',
+            className: 'custom-class',
+          }}
         />
       )
 
@@ -132,6 +135,10 @@ describe('<ArticleCard />', () => {
 
     it('has a title with h2 tag', () => {
       expect(title).to.have.prop('tag', 'h2')
+    })
+
+    it('has a custom class on Title', () => {
+      expect(title).to.have.className('custom-class')
     })
   })
 })
