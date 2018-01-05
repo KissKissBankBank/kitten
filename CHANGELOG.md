@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Update all `TextInput` to manage input radius.
+
 ## [17.1.0] - 2018-01-03
 
 Feature:
