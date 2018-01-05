@@ -1,17 +1,17 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+
 import { ButtonImage } from 'kitten/components/buttons/button-image'
 
 describe('<ButtonImage />', () => {
   describe('by default', () => {
     const button = shallow(<ButtonImage />)
 
-    it('is a <button />', () => {
+    test('is a <button />', () => {
       expect(button).to.have.tagName('button')
     })
 
-    it('has default classes', () => {
-      expect(button).to.have.className('k-ButtonImage')
+    test('has default classes', () => {
+      expect(button.hasClass('k-ButtonImage')).to.equal(true)
       expect(button).to.have.descendants('.k-ButtonImage__img')
     })
   })
@@ -19,11 +19,11 @@ describe('<ButtonImage />', () => {
   describe('with custom tag', () => {
     const button = shallow(<ButtonImage tag="a" />)
 
-    it('has a custom tag', () => {
+    test('has a custom tag', () => {
       expect(button).to.have.tagName('a')
     })
 
-    it('has a tabindex attribute', () => {
+    test('has a tabindex attribute', () => {
       expect(button).to.have.attr('tabindex', '0')
     })
   })
@@ -31,31 +31,31 @@ describe('<ButtonImage />', () => {
   describe('with custom class', () => {
     const button = shallow(<ButtonImage className="custom__class" />)
 
-    it('has a custom class', () => {
-      expect(button).to.have.className('custom__class')
+    test('has a custom class', () => {
+      expect(button.hasClass('custom__class')).to.equal(true)
     })
   })
 
   describe('with tiny prop', () => {
     const button = shallow(<ButtonImage tiny />)
 
-    it('has a tiny class', () => {
-      expect(button).to.have.className('k-ButtonImage--tiny')
+    test('has a tiny class', () => {
+      expect(button.hasClass('k-ButtonImage--tiny')).to.equal(true)
     })
   })
 
   describe('with big prop', () => {
     const button = shallow(<ButtonImage big />)
 
-    it('has a big class', () => {
-      expect(button).to.have.className('k-ButtonImage--big')
+    test('has a big class', () => {
+      expect(button.hasClass('k-ButtonImage--big')).to.equal(true)
     })
   })
 
   describe('with other prop', () => {
     const button = shallow(<ButtonImage aria-hidden="true" />)
 
-    it('has an aria-hidden attribute', () => {
+    test('has an aria-hidden attribute', () => {
       expect(button).to.have.attr('aria-hidden', 'true')
     })
   })
@@ -69,15 +69,15 @@ describe('<ButtonImage />', () => {
     const button = shallow(<ButtonImage img={ imgProps } />)
     const image = button.find('img')
 
-    it('renders an image with src', () => {
+    test('renders an image with src', () => {
       expect(image).to.have.attr('src', '#')
     })
 
-    it('renders an image with custom class', () => {
-      expect(image).to.have.className('custom__class')
+    test('renders an image with custom class', () => {
+      expect(image.hasClass('custom__class')).to.equal(true)
     })
 
-    it('renders an image with custom attribute', () => {
+    test('renders an image with custom attribute', () => {
       expect(image).to.have.attr('width', '140')
     })
   })
@@ -85,16 +85,16 @@ describe('<ButtonImage />', () => {
   describe('with withoutPointerEvents prop', () => {
     const button = shallow(<ButtonImage withoutPointerEvents />)
 
-    it('has a good class', () => {
-      expect(button).to.have.className('k-ButtonImage--withoutPointerEvents')
+    test('has a good class', () => {
+      expect(button.hasClass('k-ButtonImage--withoutPointerEvents')).to.equal(true)
     })
   })
 
   describe('with withBorder prop', () => {
     const button = shallow(<ButtonImage withBorder />)
 
-    it('has a good class', () => {
-      expect(button).to.have.className('k-ButtonImage--withBorder')
+    test('has a good class', () => {
+      expect(button.hasClass('k-ButtonImage--withBorder')).to.equal(true)
     })
   })
 })

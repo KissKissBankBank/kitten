@@ -14,26 +14,26 @@ describe('<Alert />', () => {
   describe('by default', () => {
     const alert = shallow(<Alert />)
 
-    it('is a <div />', () => {
+    test('is a <div />', () => {
       expect(alert).to.have.tagName('div')
     })
 
-    it('has a default classes', () => {
-      expect(alert).to.have.className('k-Alert')
+    test('has a default classes', () => {
+      expect(alert.hasClass('k-Alert')).to.equal(true)
       expect(alert).to.have.descendants('.k-Alert__container')
       expect(alert).to.have.descendants('.k-Alert__row')
       expect(alert).to.have.descendants('.k-Alert__content')
     })
 
-    it('has a role alert', () => {
+    test('has a role alert', () => {
       expect(alert).to.have.attr('role', 'alert')
     })
 
-    it('has not a <CloseButton />', () => {
+    test('has not a <CloseButton />', () => {
       expect(alert).not.to.have.descendants('CloseButton')
     })
 
-    it('has initial state', () => {
+    test('has initial state', () => {
       expect(alert.state().show).toBe(true)
       expect(alert.state().height).toBe('auto')
     })
@@ -42,7 +42,7 @@ describe('<Alert />', () => {
   describe('with show prop at false', () => {
     const alert = shallow(<Alert show={ false } />)
 
-    it('don\'t show the alert', () => {
+    test('don\'t show the alert', () => {
       expect(Object.keys(alert)).toHaveLength(0)
     })
   })
@@ -50,31 +50,31 @@ describe('<Alert />', () => {
   describe('with error prop', () => {
     const alert = shallow(<Alert error />)
 
-    it('has a error class', () => {
-      expect(alert).to.have.className('k-Alert--error')
+    test('has a error class', () => {
+      expect(alert.hasClass('k-Alert--error')).to.equal(true)
     })
   })
 
   describe('with success prop', () => {
     const alert = shallow(<Alert success />)
 
-    it('has a success class', () => {
-      expect(alert).to.have.className('k-Alert--success')
+    test('has a success class', () => {
+      expect(alert.hasClass('k-Alert--success')).to.equal(true)
     })
   })
 
   describe('with custom class', () => {
     const alert = shallow(<Alert className="custom__class" />)
 
-    it('has a custom class', () => {
-      expect(alert).to.have.className('custom__class')
+    test('has a custom class', () => {
+      expect(alert.hasClass('custom__class')).to.equal(true)
     })
   })
 
   describe('with other prop', () => {
     const alert = shallow(<Alert aria-hidden="true" />)
 
-    it('has an aria-hidden attribute', () => {
+    test('has an aria-hidden attribute', () => {
       expect(alert).to.have.attr('aria-hidden', 'true')
     })
   })
@@ -84,11 +84,11 @@ describe('<Alert />', () => {
       <Alert closeButton closeButtonLabel="Close this alert" />
     )
 
-    it('has a <CloseButton />', () => {
+    test('has a <CloseButton />', () => {
       expect(alert).to.have.descendants('CloseButton')
     })
 
-    it('has a label', () => {
+    test('has a label', () => {
       const closeButton = alert.find('CloseButton')
 
       expect(closeButton).to.have.prop('closeButtonLabel', 'Close this alert')
@@ -102,7 +102,7 @@ describe('<Alert />', () => {
       </Alert>
     )
 
-    it('has text', () => {
+    test('has text', () => {
       expect(alert).to.have.text(
         'Lorem ipsum dolor sit amet, consectetur adipisicing elit…'
       )
@@ -113,7 +113,7 @@ describe('<Alert />', () => {
     let onCloseSpy
     let alertComponent
 
-    before(() => {
+    beforeAll(() => {
       onCloseSpy = sandbox.spy()
       alertComponent = mount(
         <Alert
@@ -125,7 +125,7 @@ describe('<Alert />', () => {
       alertComponent.instance().handleAnimationEnd()
     })
 
-    it('calls onClose prop callback', () => {
+    test('calls onClose prop callback', () => {
       expect(onCloseSpy.calledOnce).toBe(true)
     })
   })
@@ -134,14 +134,14 @@ describe('<Alert />', () => {
     let onCloseSpy
     let alertComponent
 
-    before(() => {
+    beforeAll(() => {
       onCloseSpy = sandbox.spy()
       alertComponent = mount(<Alert onClose={ onCloseSpy } />)
 
       alertComponent.simulate('animationEnd')
     })
 
-    it('has handleAnimationEnd in onAnimationEnd attribute', () => {
+    test('has handleAnimationEnd in onAnimationEnd attribute', () => {
       expect(onCloseSpy.calledOnce).toBe(true)
     })
   })
@@ -150,17 +150,17 @@ describe('<Alert />', () => {
     const alert = mount(<Alert closeButton />)
     const closeButton = alert.find('CloseButton')
 
-    before(() => {
+    beforeAll(() => {
       closeButton.simulate('click')
     })
 
-    it('changes state', () => {
+    test('changes state', () => {
       expect(alert.state().show).toBe(false)
       expect(alert.state().height).not.toBe('auto')
     })
 
-    it('has a hidden class', () => {
-      expect(alert).to.have.className('k-Alert--hidden')
+    test('has a hidden class', () => {
+      expect(alert.hasClass('k-Alert--hidden')).to.equal(true)
     })
   })
 })

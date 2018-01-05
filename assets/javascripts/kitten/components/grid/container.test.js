@@ -1,5 +1,5 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+
 import { Container } from 'kitten/components/grid/container'
 import { SCREEN_SIZE_M } from 'kitten/constants/screen-config'
 
@@ -13,27 +13,27 @@ describe('<Container />', () => {
   describe('by default', () => {
     const container = shallow(<Container />)
 
-    it('is a <div />', () => {
+    test('is a <div />', () => {
       expect(container).to.have.tagName('div')
     })
 
-    it('has a default class', () => {
-      expect(container).to.have.className('k-Container')
+    test('has a default class', () => {
+      expect(container.hasClass('k-Container')).to.equal(true)
     })
   })
 
   describe('with a custom class', () => {
     const container = shallow(<Container className="custom__class" />)
 
-    it('has a custom class', () => {
-      expect(container).to.have.className('custom__class')
+    test('has a custom class', () => {
+      expect(container.hasClass('custom__class')).to.equal(true)
     })
   })
 
   describe('with other props', () => {
     const container = shallow(<Container aria-hidden />)
 
-    it('has aria-hidden attribute', () => {
+    test('has aria-hidden attribute', () => {
       expect(container).to.have.attr('aria-hidden', 'true')
     })
   })
@@ -41,7 +41,7 @@ describe('<Container />', () => {
   describe('with children', () => {
     const container = shallow(<Container>Lorem ipsum…</Container>)
 
-    it('has text', () => {
+    test('has text', () => {
       expect(container).to.have.text('Lorem ipsum…')
     })
   })
@@ -62,8 +62,8 @@ describe('<Container />', () => {
         <Container fullWidthBelowScreenSize={SCREEN_SIZE_M} />
       )
 
-      it('has class no-padding', () => {
-        expect(container).to.have.className('k-Container--no-padding')
+      test('has class no-padding', () => {
+        expect(container.hasClass('k-Container--no-padding')).to.equal(true)
       })
     })
 
@@ -73,7 +73,7 @@ describe('<Container />', () => {
         <Container fullWidthBelowScreenSize={SCREEN_SIZE_M} />
       )
 
-      it('has not class no-padding', () => {
+      test('has not class no-padding', () => {
         expect(container).to.not.have.className('k-Container--no-padding')
       })
     })

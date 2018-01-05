@@ -1,5 +1,5 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+
 import { Popover } from 'kitten/components/popovers/popover'
 import { Button } from 'kitten/components/buttons/button'
 
@@ -8,18 +8,18 @@ describe('<Popover />', () => {
     <Popover />)
 
   describe('with default props', () => {
-    it('renders <div class="k-Popover">', () => {
+    test('renders <div class="k-Popover">', () => {
       expect(defaultComponent.find('.k-Popover')).toHaveLength(1)
     })
 
-    it('renders aria attributes', () => {
+    test('renders aria attributes', () => {
       const popoverComponent = defaultComponent.find('.k-Popover')
 
       expect(popoverComponent).to.have.attr('role', 'dialog')
       expect(popoverComponent).to.have.attr('aria-hidden', 'true')
     })
 
-    it('renders close button', () => {
+    test('renders close button', () => {
       const buttonIconComponent = defaultComponent.find('CloseButton')
 
       expect(buttonIconComponent).toHaveLength(1)
@@ -33,22 +33,22 @@ describe('<Popover />', () => {
                closeButtonLabel="Custom close"
                titleAriaLabelId="custom-aria-label" />)
 
-    it('renders custom aria-labelledby attribute', () => {
+    test('renders custom aria-labelledby attribute', () => {
       const popoverComponent = component.find('.k-Popover')
 
       expect(popoverComponent).to.have
         .attr('aria-labelledby', 'custom-aria-label')
     })
 
-    it('renders <div className="k-Popover--custom" />', () => {
+    test('renders <div className="k-Popover--custom" />', () => {
       expect(component.find('.k-Popover--custom')).toHaveLength(1)
      })
 
-    it('renders <div className="k-Popover__container--custom" />', () => {
+    test('renders <div className="k-Popover__container--custom" />', () => {
       expect(component.find('.k-Popover__container--custom')).toHaveLength(1)
     })
 
-    it('renders close button with a specific label', () => {
+    test('renders close button with a specific label', () => {
       const closeButtonComponent = component.find('CloseButton')
 
       expect(closeButtonComponent).to.have.prop('closeButtonLabel').toBe('Custom close')

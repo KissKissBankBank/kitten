@@ -1,5 +1,5 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+
 import {
   SideGrid,
   SideGridContent,
@@ -13,11 +13,11 @@ describe('<SideGrid />', () => {
     </SideGrid>
   )
 
-  it('renders a <div class="k-SideGrid" />', () => {
-    expect(component).to.have.className('k-SideGrid')
+  test('renders a <div class="k-SideGrid" />', () => {
+    expect(component.hasClass('k-SideGrid')).to.equal(true)
   })
 
-  it('renders children', () => {
+  test('renders children', () => {
     expect(component).to.have.text('Test')
   })
 
@@ -26,9 +26,9 @@ describe('<SideGrid />', () => {
       <SideGrid asidePosition="start" asideSize="large" />
     )
 
-    it('has the right classes', () => {
-      expect(component).to.have.className('k-SideGrid--asideStart')
-      expect(component).to.have.className('k-SideGrid--asideLarge')
+    test('has the right classes', () => {
+      expect(component.hasClass('k-SideGrid--asideStart')).to.equal(true)
+      expect(component.hasClass('k-SideGrid--asideLarge')).to.equal(true)
     })
   })
 
@@ -39,8 +39,8 @@ describe('<SideGrid />', () => {
                 rowClassName="row-custom-class" />
     )
 
-    it('has the right classes', () => {
-      expect(component).to.have.className('custom-class')
+    test('has the right classes', () => {
+      expect(component.hasClass('custom-class')).to.equal(true)
       expect(component).to.have.descendants('.container-custom-class')
       expect(component).to.have.descendants('.row-custom-class')
     })
@@ -54,11 +54,11 @@ describe('<SideGridContent />', () => {
     </SideGridContent>
   )
 
-  it('renders a <div class="k-SideGrid__content" />', () => {
-    expect(component).to.have.className('k-SideGrid__content')
+  test('renders a <div class="k-SideGrid__content" />', () => {
+    expect(component.hasClass('k-SideGrid__content')).to.equal(true)
   })
 
-  it('renders children', () => {
+  test('renders children', () => {
     expect(component).to.have.text('Test')
   })
 })
@@ -70,16 +70,16 @@ describe('<SideGridAside />', () => {
     </SideGridAside>
   )
 
-  it('renders a <div class="k-SideGrid__content" />', () => {
-    expect(component).to.have.className('k-SideGrid__aside')
+  test('renders a <div class="k-SideGrid__content" />', () => {
+    expect(component.hasClass('k-SideGrid__aside')).to.equal(true)
   })
 
-  it('renders children', () => {
+  test('renders children', () => {
     expect(component).to.have.text('Test')
   })
 
-  it('renders a child <div class="k-SideGrid__asideContent" />', () => {
+  test('renders a child <div class="k-SideGrid__asideContent" />', () => {
     const child = component.children().first()
-    expect(child).to.have.className('k-SideGrid__asideContent')
+    expect(child.hasClass('k-SideGrid__asideContent')).to.equal(true)
   })
 })

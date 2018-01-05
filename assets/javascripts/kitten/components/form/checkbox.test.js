@@ -1,5 +1,5 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+
 import { Checkbox } from 'kitten/components/form/checkbox'
 
 describe('<Checkbox />', () => {
@@ -8,12 +8,12 @@ describe('<Checkbox />', () => {
     const input = component.find('input')
     const label = component.find('label')
 
-    it('renders an input.k-Checkbox__input', () => {
+    test('renders an input.k-Checkbox__input', () => {
       expect(input).to.tagName('input')
       expect(input.hasClass('k-Checkbox__input')).toBe(true)
     })
 
-    it('renders a label.k-Checkbox__label', () => {
+    test('renders a label.k-Checkbox__label', () => {
       expect(label).to.tagName('label')
       expect(label.hasClass('k-Checkbox__label')).toBe(true)
     })
@@ -23,8 +23,8 @@ describe('<Checkbox />', () => {
     const component = shallow(<Checkbox error />)
     const input = component.find('input')
 
-    it('passes the right props to the `input` component', () => {
-      expect(input).to.have.className('is-error')
+    test('passes the right props to the `input` component', () => {
+      expect(input.hasClass('is-error')).to.equal(true)
     })
   })
 
@@ -32,7 +32,7 @@ describe('<Checkbox />', () => {
     const component = shallow(<Checkbox disabled />)
     const input = component.find('input')
 
-    it('passes the right props to the `input` component', () => {
+    test('passes the right props to the `input` component', () => {
       expect(input.props()).toEqual(expect.arrayContaining(Object.keys({ disabled: true })))
     })
   })
@@ -45,7 +45,7 @@ describe('<Checkbox />', () => {
     )
     const labelChildren = component.find('label').children()
 
-    it('passes the right props to the `label` component', () => {
+    test('passes the right props to the `label` component', () => {
       expect(labelChildren).to.have.tagName('svg')
     })
   })

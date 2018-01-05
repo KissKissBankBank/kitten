@@ -11,12 +11,12 @@ describe('<ProjectCreatorCard />', () => {
   describe('by default', () => {
     const projectCreatorCard = mount(<ProjectCreatorCard />)
 
-    it('is a <div />', () => {
+    test('is a <div />', () => {
       expect(projectCreatorCard).to.have.tagName('div')
     })
 
-    it('has a default class', () => {
-      expect(projectCreatorCard).to.have.className('k-ProjectCreatorCard')
+    test('has a default class', () => {
+      expect(projectCreatorCard.hasClass('k-ProjectCreatorCard')).to.equal(true)
     })
   })
 
@@ -25,7 +25,7 @@ describe('<ProjectCreatorCard />', () => {
       <ProjectCreatorCard href="#" withoutHover />)
     const buttonIcon = projectCreatorCard.find('.k-ButtonIcon--withoutHover')
 
-    it('renders a ButtonIcon with withoutHover class', () => {
+    test('renders a ButtonIcon with withoutHover class', () => {
       expect(buttonIcon).toHaveLength(1)
     })
   })
@@ -35,7 +35,7 @@ describe('<ProjectCreatorCard />', () => {
       <ProjectCreatorCard href="#" verticalArrow />)
     const buttonIcon = projectCreatorCard.find('.k-ButtonIcon--verticalArrow')
 
-    it('renders a ButtonIcon with vertical arrow', () => {
+    test('renders a ButtonIcon with vertical arrow', () => {
       expect(buttonIcon).toHaveLength(1)
     })
   })
@@ -45,11 +45,11 @@ describe('<ProjectCreatorCard />', () => {
       <ProjectCreatorCard date="Custom date" />)
     const icon = projectCreatorCard.find(ClockIcon)
 
-    it('renders a <ClockIcon />', () => {
+    test('renders a <ClockIcon />', () => {
       expect(icon).toHaveLength(1)
     })
 
-    it('renders a date value', () => {
+    test('renders a date value', () => {
       expect(projectCreatorCard).to.contain.text('Custom date')
     })
   })
@@ -66,15 +66,15 @@ describe('<ProjectCreatorCard />', () => {
     const icon = status.find('.k-ProjectCreatorCard__status--icon')
     const text = status.find('.k-ProjectCreatorCard__status--text')
 
-    it('renders a status value', () => {
+    test('renders a status value', () => {
       expect(status).toHaveLength(1)
     })
 
-    it('renders an icon with a style attribute', () => {
+    test('renders an icon with a style attribute', () => {
       expect(icon).to.have.prop( 'style' ).toEqual({ backgroundColor: '#e6f5fb', borderColor: '#cbe8f9' })
     })
 
-    it('renders a text value', () => {
+    test('renders a text value', () => {
       expect(text).to.contain.text('Custom status')
     })
   })
@@ -89,14 +89,14 @@ describe('<ProjectCreatorCard />', () => {
     const link = projectCreatorCard.find('.k-ProjectCreatorCard__link')
     const separator = link.find('.k-Separator')
 
-    it('renders href attributes', () => {
+    test('renders href attributes', () => {
       expect(link).to.have.tagName('a')
       expect(link).to.have.attr('href', '#')
       expect(link).to.have.attr('target', '_blank')
     })
 
-    it('renders darker attributes', () => {
-      expect(separator).to.have.className('k-Separator--darker')
+    test('renders darker attributes', () => {
+      expect(separator.hasClass('k-Separator--darker')).to.equal(true)
     })
   })
 
@@ -108,7 +108,7 @@ describe('<ProjectCreatorCard />', () => {
       />
     )
 
-    it('renders a text content', () => {
+    test('renders a text content', () => {
       expect(projectCreatorCard).to.contain.text('Custom text')
     })
   })

@@ -1,17 +1,17 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+
 import { Line } from 'kitten/components/layout/line'
 
 describe('<Line />', () => {
   describe('by default', () => {
     const component = shallow(<Line />)
 
-    it('renders a <div />', () => {
+    test('renders a <div />', () => {
       expect(component).to.have.tagName('div')
     })
 
-    it('has "k-Line" class', () => {
-      expect(component).to.have.className('k-Line')
+    test('has "k-Line" class', () => {
+      expect(component.hasClass('k-Line')).to.equal(true)
     })
   })
 
@@ -20,8 +20,8 @@ describe('<Line />', () => {
       <Line className="test-Line--lorem" />
     )
 
-    it('has a custom class', () => {
-      expect(component).to.have.className('test-Line--lorem')
+    test('has a custom class', () => {
+      expect(component.hasClass('test-Line--lorem')).to.equal(true)
     })
   })
 
@@ -32,7 +32,7 @@ describe('<Line />', () => {
       </Line>
     ).children()
 
-    it('renders a <p>', () => {
+    test('renders a <p>', () => {
       expect(component).to.have.tagName('p')
     })
   })
@@ -42,12 +42,12 @@ describe('<Line.Item />', () => {
   describe('by default', () => {
     const component = shallow(<Line.Item />)
 
-    it('renders a <div />', () => {
+    test('renders a <div />', () => {
       expect(component).to.have.tagName('div')
     })
 
-    it('has "k-Line__item" class', () => {
-      expect(component).to.have.className('k-Line__item')
+    test('has "k-Line__item" class', () => {
+      expect(component.hasClass('k-Line__item')).to.equal(true)
     })
   })
 
@@ -56,8 +56,8 @@ describe('<Line.Item />', () => {
       <Line className="test-Line__item--lorem" />
     )
 
-    it('has a custom class', () => {
-      expect(component).to.have.className('test-Line__item--lorem')
+    test('has a custom class', () => {
+      expect(component.hasClass('test-Line__item--lorem')).to.equal(true)
     })
   })
 
@@ -68,7 +68,7 @@ describe('<Line.Item />', () => {
       </Line>
     ).children()
 
-    it('renders a <p>', () => {
+    test('renders a <p>', () => {
       expect(component).to.have.tagName('p')
     })
   })

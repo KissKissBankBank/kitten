@@ -11,17 +11,17 @@ describe ('<ImageWithCaption />', () => {
     const image = figure.find('img')
     const figcaption = figure.find('figcaption')
 
-    it('renders a <figure />', () => {
+    test('renders a <figure />', () => {
       expect(figure).to.have.tagName('figure')
       expect(figure.hasClass('k-ImageWithCaption')).toBe(true)
     })
 
-    it('renders a <img />', () => {
+    test('renders a <img />', () => {
       expect(image).to.have.tagName('img')
       expect(image.hasClass('k-ImageWithCaption__img')).toBe(true)
     })
 
-    it('renders a <figcaption />', () => {
+    test('renders a <figcaption />', () => {
       expect(figcaption).to.have.tagName('figcaption')
       expect(figcaption.hasClass('k-ImageWithCaption__caption')).toBe(true)
     })
@@ -34,7 +34,7 @@ describe ('<ImageWithCaption />', () => {
       </ImageWithCaption>
     )
 
-    it('adds a children element', () => {
+    test('adds a children element', () => {
       expect(component).to.have.text('Example content')
     })
   })
@@ -50,7 +50,7 @@ describe ('<ImageWithCaption />', () => {
     )
     const image = component.find('.k-ImageWithCaption__img')
 
-    it('renders an image with good attributes', () => {
+    test('renders an image with good attributes', () => {
       expect(image).toHaveLength(1)
       expect(image).to.have.attr('src', 'test')
       expect(image).to.have.attr('alt')
@@ -68,7 +68,7 @@ describe ('<ImageWithCaption />', () => {
 
     const caption = component.find('.k-ImageWithCaption__caption')
 
-    it('renders a title attribute', () => {
+    test('renders a title attribute', () => {
       expect(caption).to.have.attr('title', 'custom')
     })
   })

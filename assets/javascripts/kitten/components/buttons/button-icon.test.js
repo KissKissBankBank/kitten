@@ -1,14 +1,14 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+
 import { ButtonIcon } from 'kitten/components/buttons/button-icon'
 
 describe('<ButtonIcon />', () => {
   describe('by default', () => {
     const component = shallow(<ButtonIcon />)
 
-    it('it a <ButtonIcon />', () => {
+    test('it a <ButtonIcon />', () => {
       expect(component).to.have.tagName('button')
-      expect(component).to.have.className('k-ButtonIcon')
+      expect(component.hasClass('k-ButtonIcon')).to.equal(true)
       expect(component).not.to.have.attr('tabindex')
     })
   })
@@ -16,31 +16,31 @@ describe('<ButtonIcon />', () => {
   describe('modifier prop', () => {
     const component = shallow(<ButtonIcon modifier="helium" />)
 
-    it('has className', () => {
-      expect(component).to.have.className('k-ButtonIcon--helium')
+    test('has className', () => {
+      expect(component.hasClass('k-ButtonIcon--helium')).to.equal(true)
     })
   })
 
   describe('className prop', () => {
     const component = shallow(<ButtonIcon className="customClass" />)
 
-    it('has customClass', () => {
-      expect(component).to.have.className('customClass')
+    test('has customClass', () => {
+      expect(component.hasClass('customClass')).to.equal(true)
     })
   })
 
   describe('size prop', () => {
     const component = shallow(<ButtonIcon size="tiny" />)
 
-    it('has size', () => {
-      expect(component).to.have.className('k-ButtonIcon--tiny')
+    test('has size', () => {
+      expect(component.hasClass('k-ButtonIcon--tiny')).to.equal(true)
     })
   })
 
   describe('tag prop', () => {
     const component = shallow(<ButtonIcon tag="a" />)
 
-    it('changes the tag', () => {
+    test('changes the tag', () => {
       expect(component).to.have.tagName('a')
     })
   })
@@ -48,7 +48,7 @@ describe('<ButtonIcon />', () => {
   describe('with tag="a" and no href', () => {
     const component = shallow(<ButtonIcon tag="a" />)
 
-    it('adds a tabindex', () => {
+    test('adds a tabindex', () => {
       expect(component).to.have.attr('tabindex', '0')
     })
   })
@@ -56,7 +56,7 @@ describe('<ButtonIcon />', () => {
   describe('with tag="a" href="foo"', () => {
     const component = shallow(<ButtonIcon tag="a" href="foo" />)
 
-    it('does not add a tabindex', () => {
+    test('does not add a tabindex', () => {
       expect(component).not.to.have.attr('tabindex')
     })
   })
@@ -68,7 +68,7 @@ describe('<ButtonIcon />', () => {
       </ButtonIcon>
     )
 
-    it('has children', () => {
+    test('has children', () => {
       expect(component.children()).to.have.tagName('svg')
     })
   })

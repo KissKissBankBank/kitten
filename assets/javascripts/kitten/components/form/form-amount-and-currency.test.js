@@ -9,7 +9,7 @@ describe('<FormAmountAndCurrency />', () => {
   describe('valid prop', () => {
     const component = shallow(<FormAmountAndCurrency valid={ true } />)
 
-    it('passes the right props to the `FormAmountAndCurrency` component', () => {
+    test('passes the right props to the `FormAmountAndCurrency` component', () => {
       expect(component.props()).toEqual(expect.arrayContaining(Object.keys({ valid: true })))
     })
   })
@@ -17,7 +17,7 @@ describe('<FormAmountAndCurrency />', () => {
   describe('error prop', () => {
     const component = shallow(<FormAmountAndCurrency error={ true } />)
 
-    it('passes the right props to the `FormAmountAndCurrency` component', () => {
+    test('passes the right props to the `FormAmountAndCurrency` component', () => {
       expect(component.props()).toEqual(expect.arrayContaining(Object.keys({ error: true })))
     })
   })
@@ -25,7 +25,7 @@ describe('<FormAmountAndCurrency />', () => {
   describe('tiny prop', () => {
     const component = shallow(<FormAmountAndCurrency tiny={ true } />)
 
-    it('passes the right props to the `FormAmountAndCurrency` component', () => {
+    test('passes the right props to the `FormAmountAndCurrency` component', () => {
       expect(component.props()).toEqual(expect.arrayContaining(Object.keys({ tiny: true })))
     })
   })
@@ -33,7 +33,7 @@ describe('<FormAmountAndCurrency />', () => {
   describe('disabled prop', () => {
     const component = shallow(<FormAmountAndCurrency disabled />)
 
-    it('passes the right props to the `FormAmountAndCurrency` component', () => {
+    test('passes the right props to the `FormAmountAndCurrency` component', () => {
       expect(component.props()).toEqual(expect.arrayContaining(Object.keys({ disabled: true })))
     })
   })

@@ -1,5 +1,5 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+
 import { BulletList } from 'kitten/components/lists/bullet-list'
 
 describe('<BulletList />', () => {
@@ -11,21 +11,21 @@ describe('<BulletList />', () => {
   describe('by default', () => {
     const bulletList = shallow(<BulletList items={ items } />)
 
-    it('is a <ul />', () => {
+    test('is a <ul />', () => {
       expect(bulletList).to.have.tagName('ul')
     })
 
-    it('has default class', () => {
-      expect(bulletList).to.have.className('k-BulletList')
+    test('has default class', () => {
+      expect(bulletList.hasClass('k-BulletList')).to.equal(true)
     })
 
-    it('renders 2 items', () => {
+    test('renders 2 items', () => {
       expect(bulletList.children()).toHaveLength(2)
     })
 
-    it('has a good class on item', () => {
+    test('has a good class on item', () => {
       const firstItem = bulletList.children().first()
-      expect(firstItem).to.have.className('k-BulletList__item')
+      expect(firstItem.hasClass('k-BulletList__item')).to.equal(true)
     })
   })
 
@@ -34,8 +34,8 @@ describe('<BulletList />', () => {
       <BulletList items={ items } className="custom__class" />
     )
 
-    it('has a custom class', () => {
-      expect(bulletList).to.have.className('custom__class')
+    test('has a custom class', () => {
+      expect(bulletList.hasClass('custom__class')).to.equal(true)
     })
   })
 
@@ -44,9 +44,9 @@ describe('<BulletList />', () => {
       <BulletList items={ items } large />
     )
 
-    it('has a good class', () => {
+    test('has a good class', () => {
       const item = bulletList.children().first()
-      expect(item).to.have.className('k-BulletList__item--large')
+      expect(item.hasClass('k-BulletList__item--large')).to.equal(true)
     })
   })
 
@@ -55,9 +55,9 @@ describe('<BulletList />', () => {
       <BulletList items={ items } big />
     )
 
-    it('has a good class', () => {
+    test('has a good class', () => {
       const item = bulletList.children().first()
-      expect(item).to.have.className('k-BulletList__item--big')
+      expect(item.hasClass('k-BulletList__item--big')).to.equal(true)
     })
   })
 })

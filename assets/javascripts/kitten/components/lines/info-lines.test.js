@@ -1,5 +1,5 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+
 import { InfoLines } from 'kitten/components/lines/info-lines'
 
 describe('<InfoLines />', () => {
@@ -11,17 +11,17 @@ describe('<InfoLines />', () => {
   describe('by default', () => {
     const infoLines = shallow(<InfoLines infos={ infos } />)
 
-    it('has a default class', () => {
-      expect(infoLines).to.have.className('k-InfoLines')
+    test('has a default class', () => {
+      expect(infoLines.hasClass('k-InfoLines')).to.equal(true)
     })
 
-    it('has a good class on info', () => {
+    test('has a good class on info', () => {
       const firstInfo = infoLines.children().first()
 
-      expect(firstInfo).to.have.className('k-InfoLines__line')
+      expect(firstInfo.hasClass('k-InfoLines__line')).to.equal(true)
     })
 
-    it('has 2 elements', () => {
+    test('has 2 elements', () => {
       const infos = infoLines.children()
 
       expect(infos).toHaveLength(2)
@@ -31,15 +31,15 @@ describe('<InfoLines />', () => {
   describe('with className prop', () => {
     const infoLines = shallow(<InfoLines className="custom__class" />)
 
-    it('has a good class', () => {
-      expect(infoLines).to.have.className('custom__class')
+    test('has a good class', () => {
+      expect(infoLines.hasClass('custom__class')).to.equal(true)
     })
   })
 
   describe('with other prop', () => {
     const infoLines = shallow(<InfoLines aria-hidden />)
 
-    it('has an aria-hidden attibute', () => {
+    test('has an aria-hidden attibute', () => {
       expect(infoLines).to.have.attr('aria-hidden', 'true')
     })
   })
@@ -47,23 +47,23 @@ describe('<InfoLines />', () => {
   describe('with withoutTopBottomBorder prop', () => {
     const infoLines = shallow(<InfoLines withoutTopBottomBorder />)
 
-    it('has a good class', () => {
-      expect(infoLines).to.have.className('k-InfoLines--withoutTopBottomBorder')
+    test('has a good class', () => {
+      expect(infoLines.hasClass('k-InfoLines--withoutTopBottomBorder')).to.equal(true)
     })
   })
 
   describe('with withoutResponsive prop', () => {
     const infoLines = shallow(<InfoLines withoutResponsive />)
 
-    it('has a good class', () => {
-      expect(infoLines).to.have.className('k-InfoLines--withoutResponsive')
+    test('has a good class', () => {
+      expect(infoLines.hasClass('k-InfoLines--withoutResponsive')).to.equal(true)
     })
   })
 
   describe('with borderColor prop', () => {
     const infoLines = shallow(<InfoLines borderColor="red" />)
 
-    it('has a red border color', () => {
+    test('has a red border color', () => {
       expect(infoLines).to.have.style('border-color', 'red')
     })
   })
@@ -85,11 +85,11 @@ describe('<InfoLines />', () => {
 
     const element = infoLines.children().first()
 
-    it('has a good class', () => {
-      expect(element).to.have.className('custom__class')
+    test('has a good class', () => {
+      expect(element.hasClass('custom__class')).to.equal(true)
     })
 
-    it('has an aria-hidden attribute', () => {
+    test('has an aria-hidden attribute', () => {
       expect(element).to.have.attr('aria-hidden', 'true')
     })
   })
@@ -97,16 +97,16 @@ describe('<InfoLines />', () => {
   describe('with withBorderRadius prop', () => {
     const infoLines = shallow(<InfoLines withBorderRadius />)
 
-    it('has a good class', () => {
-      expect(infoLines).to.have.className('k-InfoLines--withBorderRadius')
+    test('has a good class', () => {
+      expect(infoLines.hasClass('k-InfoLines--withBorderRadius')).to.equal(true)
     })
   })
 
   describe('with withLeftRightBorder prop', () => {
     const infoLines = shallow(<InfoLines withLeftRightBorder />)
 
-    it('has a good class', () => {
-      expect(infoLines).to.have.className('k-InfoLines--withLeftRightBorder')
+    test('has a good class', () => {
+      expect(infoLines.hasClass('k-InfoLines--withLeftRightBorder')).to.equal(true)
     })
   })
 })

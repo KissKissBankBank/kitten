@@ -15,19 +15,19 @@ describe('<HorizontalNav />', () => {
   )
   const link = component.find('.k-HorizontalNav__item').first()
 
-  it('renders a <div class="k-HorizontalNav" />', () => {
-    expect(component).to.have.className('k-HorizontalNav')
+  test('renders a <div class="k-HorizontalNav" />', () => {
+    expect(component.hasClass('k-HorizontalNav')).to.equal(true)
   })
 
-  it('has a element', () => {
+  test('has a element', () => {
     expect(component.find('li.k-HorizontalNav__element')).toHaveLength(4)
   })
 
-  it('renders items', () => {
+  test('renders items', () => {
     expect(component.find('.k-HorizontalNav__item')).toHaveLength(4)
   })
 
-  it('has an item with clickable link', () => {
+  test('has an item with clickable link', () => {
     expect(link).to.have.attr('href', '#foobar')
   })
 
@@ -36,8 +36,8 @@ describe('<HorizontalNav />', () => {
       <HorizontalNav center />
     )
 
-    it('renders a className', () => {
-      expect(component).to.have.className('k-HorizontalNav--center')
+    test('renders a className', () => {
+      expect(component.hasClass('k-HorizontalNav--center')).to.equal(true)
     })
   })
 
@@ -52,7 +52,7 @@ describe('<HorizontalNav />', () => {
     )
     const item = component.find('.k-HorizontalNav__item')
 
-    it('renders a horizontalNav with auto height', () => {
+    test('renders a horizontalNav with auto height', () => {
       expect(item).to.have.style('height', 'auto')
     })
   })
@@ -73,10 +73,10 @@ describe('<HorizontalNav />', () => {
       />
     )
 
-    it('renders the right classes', () => {
+    test('renders the right classes', () => {
       expect(component).to.have.id('custom-id')
 
-      expect(component).to.have.className('custom-class')
+      expect(component.hasClass('custom-class')).to.equal(true)
 
       expect(component.find('.k-HorizontalNav__element').first())
         .to.have.className('element-custom-class')
@@ -94,7 +94,7 @@ describe('<HorizontalNav />', () => {
         />
       )
 
-      it('transforms line break with <br/>', () => {
+      test('transforms line break with <br/>', () => {
         expect(component.find('.item-1')).to.have.html().toMatch(/Nav<br\/>1/)
       })
     })

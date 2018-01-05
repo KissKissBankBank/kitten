@@ -9,7 +9,7 @@ describe('<Uploader />', () => {
   describe('by default', () => {
     const component = mount(<Uploader />)
 
-    it('has default props', () => {
+    test('has default props', () => {
       expect(component).to.have.props({
         name: null,
         acceptedFiles: 'image/*',
@@ -21,11 +21,11 @@ describe('<Uploader />', () => {
       })
     })
 
-    it('has a default state', () => {
+    test('has a default state', () => {
       expect(component).to.have.state('fileName', null)
     })
 
-    it('has a <Dropzone /> with default props', () => {
+    test('has a <Dropzone /> with default props', () => {
       const dropzone = component.find(Dropzone).first()
 
       expect(dropzone).toHaveLength(1)
@@ -50,24 +50,24 @@ describe('<Uploader />', () => {
     )
     const theme = component.find(CustomTheme).first()
 
-    it('renders a custom theme', () => {
+    test('renders a custom theme', () => {
       expect(component).to.have.descendants('.custom-theme')
     })
 
     describe('with a buttonLabel prop', () => {
-      it('passes buttonLabel prop to the custom theme', () => {
+      test('passes buttonLabel prop to the custom theme', () => {
         expect(theme).to.have.prop('buttonLabel', 'Custom label')
       })
     })
 
     describe('with a disabled prop', () => {
-      it('passes disabled prop to the custom theme', () => {
+      test('passes disabled prop to the custom theme', () => {
         expect(theme).to.have.prop('disabled', true)
       })
     })
 
     describe('with a deletable prop', () => {
-      it('passes deletable prop to the custom theme', () => {
+      test('passes deletable prop to the custom theme', () => {
         expect(theme).to.have.prop('deletable', false)
       })
     })

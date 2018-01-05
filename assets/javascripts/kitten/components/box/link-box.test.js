@@ -1,5 +1,5 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+
 import { LinkBox } from 'kitten/components/box/link-box'
 
 describe('<LinkBox />', () => {
@@ -10,21 +10,21 @@ describe('<LinkBox />', () => {
              isExternal="true" />
   )
 
-  it('renders a <a class="k-LinkBox" />', () => {
+  test('renders a <a class="k-LinkBox" />', () => {
     expect(component).to.have.tagName('a')
-    expect(component).to.have.className('k-LinkBox')
+    expect(component.hasClass('k-LinkBox')).to.equal(true)
     expect(component).to.have.attr('href', 'http://…/history.pdf')
     expect(component).to.have.attr('target', '_blank')
   })
 
-  it('renders a title', () => {
+  test('renders a title', () => {
     const title = component.find('.k-LinkBox__title')
 
     expect(title).toHaveLength(1)
     expect(title).to.have.text('Your history')
   })
 
-  it('renders text', () => {
+  test('renders text', () => {
     const text = component.find('.k-LinkBox__text')
 
     expect(text).toHaveLength(1)
@@ -38,11 +38,11 @@ describe('<LinkBox />', () => {
       </LinkBox>
     )
 
-    it('has an icon class', () => {
-      expect(componentWithIcon).to.have.className('k-LinkBox--withIcon')
+    test('has an icon class', () => {
+      expect(componentWithIcon.hasClass('k-LinkBox--withIcon')).to.equal(true)
     })
 
-    it('renders an icon', () => {
+    test('renders an icon', () => {
       const icon = componentWithIcon.find('.k-LinkBox__icon')
 
       expect(icon).toHaveLength(1)
@@ -53,15 +53,15 @@ describe('<LinkBox />', () => {
   describe('with default props', () => {
     const defaultComponent = shallow(<LinkBox />)
 
-    it('has a default href', () => {
+    test('has a default href', () => {
       expect(defaultComponent).attr('href', '#')
     })
 
-    it('has no target', () => {
+    test('has no target', () => {
       expect(defaultComponent).not.to.have.attr('target')
     })
 
-    it('has no icon', () => {
+    test('has no icon', () => {
       expect(defaultComponent.find('.k-LinkBox__icon')).toHaveLength(0)
     })
   })
@@ -71,7 +71,7 @@ describe('<LinkBox />', () => {
       <LinkBox linkProps={ { title: "Lorem ipsum" } } />
     )
 
-    it('has a linkProps prop', () => {
+    test('has a linkProps prop', () => {
       expect(linkPropsComponent).to.have.attr('title', 'Lorem ipsum')
     })
   })
@@ -79,8 +79,8 @@ describe('<LinkBox />', () => {
   describe('with classNames props', () => {
     const linkBox = shallow(<LinkBox className="custom_class" />)
 
-    it('has custom class', () => {
-      expect(linkBox).to.have.className('custom_class')
+    test('has custom class', () => {
+      expect(linkBox.hasClass('custom_class')).to.equal(true)
     })
   })
 })

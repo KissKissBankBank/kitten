@@ -1,6 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
-import { shallow } from 'enzyme'
+
 import {
   FacebookButtonIcon,
   TwitterButtonIcon,
@@ -17,12 +17,12 @@ describe('<FacebookButtonIcon />', () => {
   describe('by default', () => {
     const button = shallow(<FacebookButtonIcon />)
 
-    it('is a <ButtonIcon modifier="facebook" />', () => {
+    test('is a <ButtonIcon modifier="facebook" />', () => {
       expect(button).to.have.descendants(ButtonIcon)
       expect(button).to.have.prop('modifier', 'facebook')
     })
 
-    it('has a <FacebookIcon />', () => {
+    test('has a <FacebookIcon />', () => {
       expect(button).to.have.descendants(FacebookIcon)
     })
   })
@@ -35,9 +35,9 @@ describe('<FacebookButtonIcon />', () => {
       />
     )
 
-    it('has a default classes', () => {
-      expect(button).to.have.className('k-ButtonIcon__svg')
-      expect(button).to.have.className('custom__class')
+    test('has a default classes', () => {
+      expect(button.hasClass('k-ButtonIcon__svg')).to.equal(true)
+      expect(button.hasClass('custom__class')).to.equal(true)
     })
   })
 })
@@ -46,12 +46,12 @@ describe('<TwitterButtonIcon />', () => {
   describe('by default', () => {
     const button = shallow(<TwitterButtonIcon />)
 
-    it('is a <ButtonIcon modifier="facebook" />', () => {
+    test('is a <ButtonIcon modifier="facebook" />', () => {
       expect(button).to.have.descendants(ButtonIcon)
       expect(button).to.have.prop('modifier', 'twitter')
     })
 
-    it('has a <TwitterIcon />', () => {
+    test('has a <TwitterIcon />', () => {
       expect(button).to.have.descendants(TwitterIcon)
     })
   })
@@ -64,9 +64,9 @@ describe('<TwitterButtonIcon />', () => {
       />
     )
 
-    it('has a default classes', () => {
-      expect(button).to.have.className('k-ButtonIcon__svg')
-      expect(button).to.have.className('custom__class')
+    test('has a default classes', () => {
+      expect(button.hasClass('k-ButtonIcon__svg')).to.equal(true)
+      expect(button.hasClass('custom__class')).to.equal(true)
     })
   })
 })
@@ -75,12 +75,12 @@ describe('<LinkedinButtonIcon />', () => {
   describe('by default', () => {
     const button = shallow(<LinkedinButtonIcon />)
 
-    it('is a <ButtonIcon modifier="linkedin" />', () => {
+    test('is a <ButtonIcon modifier="linkedin" />', () => {
       expect(button).to.have.descendants(ButtonIcon)
       expect(button).to.have.prop('modifier', 'linkedin')
     })
 
-    it('has a <LinkedinIcon />', () => {
+    test('has a <LinkedinIcon />', () => {
       expect(button).to.have.descendants(LinkedinIcon)
     })
   })
@@ -93,9 +93,9 @@ describe('<LinkedinButtonIcon />', () => {
       />
     )
 
-    it('has a default classes', () => {
-      expect(button).to.have.className('k-ButtonIcon__svg')
-      expect(button).to.have.className('custom__class')
+    test('has a default classes', () => {
+      expect(button.hasClass('k-ButtonIcon__svg')).to.equal(true)
+      expect(button.hasClass('custom__class')).to.equal(true)
     })
   })
 })
@@ -104,12 +104,12 @@ describe('<InstagramButtonIcon />', () => {
   describe('by default', () => {
     const button = shallow(<InstagramButtonIcon />)
 
-    it('is a <ButtonIcon modifier="instagram" />', () => {
+    test('is a <ButtonIcon modifier="instagram" />', () => {
       expect(button).to.have.descendants(ButtonIcon)
       expect(button).to.have.prop('modifier', 'instagram')
     })
 
-    it('has a <InstagramIcon />', () => {
+    test('has a <InstagramIcon />', () => {
       expect(button).to.have.descendants(InstagramIcon)
     })
   })
@@ -122,9 +122,9 @@ describe('<InstagramButtonIcon />', () => {
       />
     )
 
-    it('has a default classes', () => {
-      expect(button).to.have.className('k-ButtonIcon__svg')
-      expect(button).to.have.className('custom__class')
+    test('has a default classes', () => {
+      expect(button.hasClass('k-ButtonIcon__svg')).to.equal(true)
+      expect(button.hasClass('custom__class')).to.equal(true)
     })
   })
 })

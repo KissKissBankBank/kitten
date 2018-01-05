@@ -1,5 +1,5 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+
 import { Tooltip } from 'kitten/components/tooltips/tooltip'
 import { ButtonQuestionMarkIcon }
   from 'kitten/components/buttons/button-question-mark-icon'
@@ -12,11 +12,11 @@ const component = shallow(
 )
 
 describe('<Tooltip />', () => {
-  it('has a .k-Tooltip', () => {
+  test('has a .k-Tooltip', () => {
     expect(component.find('.k-Tooltip')).toHaveLength(1)
   })
 
-  it('renders ButtonQuestionMarkIcon', () => {
+  test('renders ButtonQuestionMarkIcon', () => {
     const button = component.children().first()
 
     expect(button).to.have.type(ButtonQuestionMarkIcon)
@@ -27,7 +27,7 @@ describe('<Tooltip />', () => {
     expect(button).to.have.attr('aria-describedby', 'tooltip-right')
   })
 
-  it('renders ReactTooltip', () => {
+  test('renders ReactTooltip', () => {
     const tooltip = component.children().last()
 
     expect(tooltip).to.have.type(ReactTooltip)

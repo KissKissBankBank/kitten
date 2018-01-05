@@ -1,17 +1,17 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+
 import { VerticalStroke } from 'kitten/components/layout/vertical-stroke'
 
 describe('<VerticalStroke />', () => {
   describe('by default', () => {
     const verticalStroke = shallow(<VerticalStroke />)
 
-    it('renders a <span />', () => {
+    test('renders a <span />', () => {
       expect(verticalStroke).to.have.tagName('span')
     })
 
-    it('has a good class', () => {
-      expect(verticalStroke).to.have.className('k-VerticalStroke')
+    test('has a good class', () => {
+      expect(verticalStroke.hasClass('k-VerticalStroke')).to.equal(true)
     })
   })
 
@@ -20,8 +20,8 @@ describe('<VerticalStroke />', () => {
       <VerticalStroke className="custom__class" />
     )
 
-    it('has a good class', () => {
-      expect(verticalStroke).to.have.className('custom__class')
+    test('has a good class', () => {
+      expect(verticalStroke.hasClass('custom__class')).to.equal(true)
     })
   })
 
@@ -30,8 +30,8 @@ describe('<VerticalStroke />', () => {
       <VerticalStroke size="tiny" />
     )
 
-    it('has a good class', () => {
-      expect(verticalStroke).to.have.className('k-VerticalStroke--tiny')
+    test('has a good class', () => {
+      expect(verticalStroke.hasClass('k-VerticalStroke--tiny')).to.equal(true)
     })
   })
 
@@ -40,8 +40,8 @@ describe('<VerticalStroke />', () => {
       <VerticalStroke size="default" />
     )
 
-    it('has a good class', () => {
-      expect(verticalStroke).to.have.className('k-VerticalStroke--default')
+    test('has a good class', () => {
+      expect(verticalStroke.hasClass('k-VerticalStroke--default')).to.equal(true)
     })
   })
 
@@ -50,8 +50,8 @@ describe('<VerticalStroke />', () => {
       <VerticalStroke size="big" />
     )
 
-    it('has a good class', () => {
-      expect(verticalStroke).to.have.className('k-VerticalStroke--big')
+    test('has a good class', () => {
+      expect(verticalStroke.hasClass('k-VerticalStroke--big')).to.equal(true)
     })
   })
 
@@ -60,8 +60,8 @@ describe('<VerticalStroke />', () => {
       <VerticalStroke size="huge" />
     )
 
-    it('has a good class', () => {
-      expect(verticalStroke).to.have.className('k-VerticalStroke--huge')
+    test('has a good class', () => {
+      expect(verticalStroke.hasClass('k-VerticalStroke--huge')).to.equal(true)
     })
   })
 })

@@ -9,7 +9,7 @@ describe('<Modal />', () => {
       <Modal trigger={ <span className="trigger-example" /> } />
     )
 
-    it('contains the trigger', () => {
+    test('contains the trigger', () => {
       expect(component).to.have.descendants('.trigger-example')
     })
   })
@@ -19,9 +19,9 @@ describe('<Modal />', () => {
       <Modal className="content-example" />
     )
 
-    it('contains the content', () => {
-      expect(component).to.have.className('content-example')
-      expect(component).to.have.className('k-Modal')
+    test('contains the content', () => {
+      expect(component.hasClass('content-example')).to.equal(true)
+      expect(component.hasClass('k-Modal')).to.equal(true)
     })
   })
 })

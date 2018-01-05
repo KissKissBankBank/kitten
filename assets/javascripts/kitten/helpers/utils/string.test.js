@@ -1,17 +1,17 @@
 import { stringUtils } from 'kitten/helpers/utils/string'
 
 describe('upcaseFirst()', () => {
-  it('converts a first character to uppercase', () => {
+  test('converts a first character to uppercase', () => {
     const string = stringUtils.upcaseFirst('lorem ipsum…')
     expect(string).toBe('Lorem ipsum…')
   })
 
-  it('preserves the capital on the first character', () => {
+  test('preserves the capital on the first character', () => {
     const string = stringUtils.upcaseFirst('Lorem ipsum…')
     expect(string).toBe('Lorem ipsum…')
   })
 
-  it('returns the same value when the string is not valid', () => {
+  test('returns the same value when the string is not valid', () => {
     const string = stringUtils.upcaseFirst({ text: 'lorem ipsum…' })
     expect(typeof string).toBe('object')
     expect(string.text).toBe('lorem ipsum…')

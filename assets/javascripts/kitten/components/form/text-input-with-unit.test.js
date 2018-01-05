@@ -6,30 +6,30 @@ describe('<TextInputWithUnit />', () => {
   describe('by default', () => {
     const component = shallow(<TextInputWithUnit />)
 
-    it('renders a <div />', () => {
+    test('renders a <div />', () => {
       expect(component).to.have.tagName('div')
     })
 
-    it('has a "k-TextInputWithUnit" class', () => {
-      expect(component).to.have.className('k-TextInputWithUnit')
+    test('has a "k-TextInputWithUnit" class', () => {
+      expect(component.hasClass('k-TextInputWithUnit')).to.equal(true)
     })
 
-    it('has a "k-TextInputWithUnit--fullWidth" class', () => {
-      expect(component).to.have.className('k-TextInputWithUnit--fullWidth')
+    test('has a "k-TextInputWithUnit--fullWidth" class', () => {
+      expect(component.hasClass('k-TextInputWithUnit--fullWidth')).to.equal(true)
     })
 
-    it('renders an input.k-TextInputWithUnit__input', () => {
+    test('renders an input.k-TextInputWithUnit__input', () => {
       const textInput = component.find('TextInput')
 
       expect(textInput).to.have.tagName('input')
-      expect(textInput).to.have.className('k-TextInputWithUnit__input')
+      expect(textInput.hasClass('k-TextInputWithUnit__input')).to.equal(true)
     })
 
-    it('renders a span.k-TextInputWithUnit__unit', () => {
+    test('renders a span.k-TextInputWithUnit__unit', () => {
       const span = component.find('span')
 
       expect(span).to.have.tagName('span')
-      expect(span).to.have.className('k-TextInputWithUnit__unit')
+      expect(span.hasClass('k-TextInputWithUnit__unit')).to.equal(true)
     })
   })
 
@@ -40,11 +40,11 @@ describe('<TextInputWithUnit />', () => {
     const textInputExpectation = textInput.hasClass('k-TextInput--tiny')
     const spanExpectation = span.hasClass('k-TextInputWithUnit__unit--tiny')
 
-    it('has an <input /> with "k-TextInput--tiny" class', () => {
+    test('has an <input /> with "k-TextInput--tiny" class', () => {
       expect(textInputExpectation).toBe(true)
     })
 
-    it('has a <span /> with "k-TextInputWithUnit__unit--tiny" class', () => {
+    test('has a <span /> with "k-TextInputWithUnit__unit--tiny" class', () => {
       expect(spanExpectation).toBe(true)
     })
   })
@@ -56,11 +56,11 @@ describe('<TextInputWithUnit />', () => {
     const textInputExpectation = textInput.hasClass('is-valid')
     const spanExpectation = span.hasClass('is-valid')
 
-    it('has an <input /> with "is-valid" class', () => {
+    test('has an <input /> with "is-valid" class', () => {
       expect(textInputExpectation).toBe(true)
     })
 
-    it('has a <span /> with "is-valid" class', () => {
+    test('has a <span /> with "is-valid" class', () => {
       expect(spanExpectation).toBe(true)
     })
   })
@@ -72,11 +72,11 @@ describe('<TextInputWithUnit />', () => {
     const textInputExpectation = textInput.hasClass('is-error')
     const spanExpectation = span.hasClass('is-error')
 
-    it('has an <input /> with "is-error" class', () => {
+    test('has an <input /> with "is-error" class', () => {
       expect(textInputExpectation).toBe(true)
     })
 
-    it('has a <span /> with "is-error" class', () => {
+    test('has a <span /> with "is-error" class', () => {
       expect(spanExpectation).toBe(true)
     })
   })
@@ -86,7 +86,7 @@ describe('<TextInputWithUnit />', () => {
     const span = component.find('span')
     const spanExpectation = span.hasClass('k-TextInputWithUnit__unitWord')
 
-    it('has a <span /> with "k-TextInputWithUnit__unitWord" class', () => {
+    test('has a <span /> with "k-TextInputWithUnit__unitWord" class', () => {
       expect(spanExpectation).toBe(true)
     })
   })
@@ -94,11 +94,11 @@ describe('<TextInputWithUnit />', () => {
   describe('digits prop', () => {
     const component = mount(<TextInputWithUnit digits={ 2 } />)
 
-    it('does not have "k-TextInputWithUnit--fullWidth" class', () => {
+    test('does not have "k-TextInputWithUnit--fullWidth" class', () => {
       expect(component).not.to.have.className('k-TextInputWithUnit--fullWidth')
     })
 
-    it('has a <TextInput /> with digits prop', () => {
+    test('has a <TextInput /> with digits prop', () => {
       expect(component.find('TextInput')).to.have.prop('digits', 2)
     })
   })
@@ -109,11 +109,11 @@ describe('<TextInputWithUnit />', () => {
     const span = component.find('span')
     const spanExpectation = span.hasClass('is-inactive')
 
-    it('has a disabled <input />', () => {
+    test('has a disabled <input />', () => {
       expect(textInput).to.have.attr('disabled')
     })
 
-    it('has a <span /> with "is-inactive" class', () => {
+    test('has a <span /> with "is-inactive" class', () => {
       expect(spanExpectation).toBe(true)
     })
   })

@@ -4,22 +4,22 @@ import { FormActions } from 'kitten/components/form/form-actions'
 
 describe('<FormActions />', () => {
 
-  it('renders a <div class="k-FormActions" />', () => {
+  test('renders a <div class="k-FormActions" />', () => {
     const component = shallow(<FormActions />)
 
     expect(component).to.have.tagName('div')
-    expect(component).to.have.className('k-FormActions')
+    expect(component.hasClass('k-FormActions')).to.equal(true)
   })
 
-  it('has a custom class', () => {
+  test('has a custom class', () => {
     const component = shallow(
       <FormActions className="test-FormActions--lorem" />
     )
 
-    expect(component).to.have.className('test-FormActions--lorem')
+    expect(component.hasClass('test-FormActions--lorem')).to.equal(true)
   })
 
-  it('renders children', () => {
+  test('renders children', () => {
     const component = shallow(
       <FormActions>
         <p>Lorem ipsum…</p>
@@ -29,7 +29,7 @@ describe('<FormActions />', () => {
     expect(component).to.have.text('Lorem ipsum…')
   })
 
-  it('with spreadOutAt prop', () => {
+  test('with spreadOutAt prop', () => {
     const component = mount(
       <FormActions spreadOutAt="s-up" />
     )
@@ -42,12 +42,12 @@ describe('<FormActions.Item />', () => {
   describe('by default', () => {
     const component = shallow(<FormActions.Item />)
 
-    it('renders a <div />', () => {
+    test('renders a <div />', () => {
       expect(component).to.have.tagName('div')
     })
 
-    it('has "k-FormActions__item" class', () => {
-      expect(component).to.have.className('k-FormActions__item')
+    test('has "k-FormActions__item" class', () => {
+      expect(component.hasClass('k-FormActions__item')).to.equal(true)
     })
   })
 
@@ -56,8 +56,8 @@ describe('<FormActions.Item />', () => {
       <FormActions.Item className="k-FormActions__item--test" />
     )
 
-    it('has a custom class', () => {
-      expect(component).to.have.className('k-FormActions__item--test')
+    test('has a custom class', () => {
+      expect(component.hasClass('k-FormActions__item--test')).to.equal(true)
     })
   })
 
@@ -68,7 +68,7 @@ describe('<FormActions.Item />', () => {
       </FormActions.Item>
     ).children()
 
-    it('renders a <p>', () => {
+    test('renders a <p>', () => {
       expect(component).to.have.tagName('p')
     })
   })

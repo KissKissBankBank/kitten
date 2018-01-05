@@ -6,14 +6,14 @@ describe('<RichTextInput />', () => {
   describe('By default', () => {
     const component = shallow(<RichTextInput />)
 
-    it('renders a div', () => {
+    test('renders a div', () => {
       expect(component).to.tagName('div')
     })
 
   })
 
   describe('with config prop', () => {
-    it('pass the config prop to <RichTextInput />', () => {
+    test('pass the config prop to <RichTextInput />', () => {
       const locale = { locale: 'fr' }
       const component = shallow(
         <RichTextInput config={ locale } />
@@ -25,7 +25,7 @@ describe('<RichTextInput />', () => {
   })
 
   describe('with toolbar prop', () => {
-    it('pass the toolbar prop to <RichTextInput />', () => {
+    test('pass the toolbar prop to <RichTextInput />', () => {
       const toolbar =
         [{
           name: 'basicstyles',

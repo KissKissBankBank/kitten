@@ -1,24 +1,24 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+
 import { Progress } from 'kitten/components/meters/progress'
 
 describe('<Progress />', () => {
   describe('by default', () => {
     const defaultComponent = shallow(<Progress />)
 
-    it('renders <div class="k-Progress">', () => {
+    test('renders <div class="k-Progress">', () => {
       expect(defaultComponent.find('.k-Progress')).toHaveLength(1)
     })
   })
 
-  it('renders a <Progress class="k-Progress" />', () => {
+  test('renders a <Progress class="k-Progress" />', () => {
     const component = shallow(
       <Progress className="k-Progress--custom" />
     )
-    expect(component).to.have.className('k-Progress--custom')
+    expect(component.hasClass('k-Progress--custom')).to.equal(true)
   })
 
-  it('renders a value', () => {
+  test('renders a value', () => {
     const component = shallow(
       <Progress value={ 42 } />
     )
@@ -32,7 +32,7 @@ describe('<Progress />', () => {
     const component = shallow(<Progress color="red" />)
     const slider = component.find('.k-Progress__slider')
 
-    it('renders a progress bar with red color', () => {
+    test('renders a progress bar with red color', () => {
       expect(slider).to.have.style('background-color', 'red')
     })
   })

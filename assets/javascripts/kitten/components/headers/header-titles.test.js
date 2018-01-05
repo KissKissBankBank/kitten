@@ -1,15 +1,15 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+
 import { HeaderTitles } from 'kitten/components/headers/header-titles'
 
 describe('<HeaderTitles />', () => {
   const titles = shallow(<HeaderTitles />)
 
-  it('renders a <div class="k-Header__titles" />', () => {
-    expect(titles).to.have.className('k-Header__titles')
+  test('renders a <div class="k-Header__titles" />', () => {
+    expect(titles.hasClass('k-Header__titles')).to.equal(true)
   })
 
-  it('renders a default title', () => {
+  test('renders a default title', () => {
     const title = titles.find('.k-Header__title')
 
     expect(title).to.have.text('You forgot the title!')
@@ -20,14 +20,14 @@ describe('<HeaderTitles />', () => {
       <HeaderTitles title="Custom title" subtitle="Custom subtitle" />
     )
 
-    it('renders a title', () => {
+    test('renders a title', () => {
       const title = titles.find('.k-Header__title')
 
       expect(title).toHaveLength(1)
       expect(title).to.have.text('Custom title')
     })
 
-    it('renders a subtitle', () => {
+    test('renders a subtitle', () => {
       const subtitle = titles.find('.k-Header__subtitle')
 
       expect(subtitle).toHaveLength(1)
@@ -43,8 +43,8 @@ describe('<HeaderTitles />', () => {
                     subtitle="Custom subtitle" />
     )
 
-    it('has the right classes', () => {
-      expect(titles).to.have.className('custom-class')
+    test('has the right classes', () => {
+      expect(titles.hasClass('custom-class')).to.equal(true)
       expect(titles).to.have.descendants('.title-custom-class')
       expect(titles).to.have.descendants('.subtitle-custom-class')
     })

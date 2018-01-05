@@ -63,11 +63,11 @@ describe('<SimilarProjectsCard />', () => {
     const similarProjectsCard = shallow(<SimilarProjectsCard />)
     const staticSimilarProjectCard = similarProjectsCard.find(SimilarProjectCard)
 
-    it('is renders <SimilarProjectCard />', () => {
+    test('is renders <SimilarProjectCard />', () => {
       expect(staticSimilarProjectCard).toHaveLength(1)
     })
 
-    it('passes the right props', () => {
+    test('passes the right props', () => {
       const expectedProps = {
         leftArrowDisabled: false,
         rightArrowDisabled: false,
@@ -97,7 +97,7 @@ describe('<SimilarProjectsCard />', () => {
         const staticSimilarProjectCard = similarProjectsCard
           .find(SimilarProjectCard)
 
-        it('passes the right props for the project', () => {
+        test('passes the right props for the project', () => {
           const projectProps = {
             imageSrc: 'image-1',
             title: 'Title 1',
@@ -117,7 +117,7 @@ describe('<SimilarProjectsCard />', () => {
         const staticSimilarProjectCard = similarProjectsCard
           .find(SimilarProjectCard)
 
-        it('passes the right props for the project', () => {
+        test('passes the right props for the project', () => {
           const projectProps = {
             imageSrc: 'image-2',
             title: 'Title 2',
@@ -137,7 +137,7 @@ describe('<SimilarProjectsCard />', () => {
         const staticSimilarProjectCard = similarProjectsCard
           .find(SimilarProjectCard)
 
-        it('passes the right props for the project', () => {
+        test('passes the right props for the project', () => {
           const projectProps = {
             imageSrc: 'image-3',
             title: 'Title 3',
@@ -154,7 +154,7 @@ describe('<SimilarProjectsCard />', () => {
     describe('on componentWillReceiveProps', () => {
       let similarProjectsCard
 
-      before(() => {
+      beforeAll(() => {
         similarProjectsCard = mount(
           <SimilarProjectsCard
             projects={ [project1, project2, project3] }
@@ -164,7 +164,7 @@ describe('<SimilarProjectsCard />', () => {
         similarProjectsCard.setState({ currentIndex: 2 })
       })
 
-      it('updates the current index to 0', () => {
+      test('updates the current index to 0', () => {
         expect(similarProjectsCard.state('currentIndex')).to.eq(2)
 
         similarProjectsCard.setProps({
@@ -184,7 +184,7 @@ describe('<SimilarProjectsCard />', () => {
         let staticSimilarProjectCard
         let leftArrowButton
 
-        before(() => {
+        beforeAll(() => {
           similarProjectsCard = mount(
             <SimilarProjectsCard
               projects={ [project1, project2, project3] } />
@@ -197,7 +197,7 @@ describe('<SimilarProjectsCard />', () => {
           leftArrowButton.simulate('click')
         })
 
-        it('passes the previous project props to <SimilarProjectCard>', () => {
+        test('passes the previous project props to <SimilarProjectCard>', () => {
           const projectProps = {
             imageSrc: 'image-2',
             title: 'Title 2',
@@ -209,7 +209,7 @@ describe('<SimilarProjectsCard />', () => {
           expect(staticSimilarProjectCard.props()).to.contains(projectProps)
         })
 
-        it('updates correctly the step information', () => {
+        test('updates correctly the step information', () => {
           expect(staticSimilarProjectCard.props())
             .to.contains({ step: '2/3' })
         })
@@ -220,7 +220,7 @@ describe('<SimilarProjectsCard />', () => {
         let staticSimilarProjectCard
         let leftArrowButton
 
-        before(() => {
+        beforeAll(() => {
           similarProjectsCard = mount(
             <SimilarProjectsCard
               projects={ [project1, project2, project3] } />
@@ -233,7 +233,7 @@ describe('<SimilarProjectsCard />', () => {
           leftArrowButton.simulate('click')
         })
 
-        it('passes the first project props to <SimilarProjectCard>', () => {
+        test('passes the first project props to <SimilarProjectCard>', () => {
           const projectProps = {
             imageSrc: 'image-1',
             title: 'Title 1',
@@ -245,12 +245,12 @@ describe('<SimilarProjectsCard />', () => {
           expect(staticSimilarProjectCard.props()).to.contains(projectProps)
         })
 
-        it('updates correctly the step information', () => {
+        test('updates correctly the step information', () => {
           expect(staticSimilarProjectCard.props())
             .to.contains({ step: '1/3' })
         })
 
-        it('disables the left arrow button', () => {
+        test('disables the left arrow button', () => {
           expect(staticSimilarProjectCard.props())
             .to.contains({ leftArrowDisabled: true })
         })
@@ -263,7 +263,7 @@ describe('<SimilarProjectsCard />', () => {
         let staticSimilarProjectCard
         let rightArrowButton
 
-        before(() => {
+        beforeAll(() => {
           similarProjectsCard = mount(
             <SimilarProjectsCard
               projects={ [project1, project2, project3] } />
@@ -275,7 +275,7 @@ describe('<SimilarProjectsCard />', () => {
           rightArrowButton.simulate('click')
         })
 
-        it('passes the next project props to <SimilarProjectCard>', () => {
+        test('passes the next project props to <SimilarProjectCard>', () => {
           const projectProps = {
             imageSrc: 'image-2',
             title: 'Title 2',
@@ -287,7 +287,7 @@ describe('<SimilarProjectsCard />', () => {
           expect(staticSimilarProjectCard.props()).to.contains(projectProps)
         })
 
-        it('updates correctly the step information', () => {
+        test('updates correctly the step information', () => {
           expect(staticSimilarProjectCard.props())
             .to.contains({ step: '2/3' })
         })
@@ -298,7 +298,7 @@ describe('<SimilarProjectsCard />', () => {
         let staticSimilarProjectCard
         let rightArrowButton
 
-        before(() => {
+        beforeAll(() => {
           similarProjectsCard = mount(
             <SimilarProjectsCard
               projects={ [project1, project2, project3] }
@@ -312,7 +312,7 @@ describe('<SimilarProjectsCard />', () => {
           rightArrowButton.simulate('click')
         })
 
-        it('passes the last project props to <SimilarProjectCard>', () => {
+        test('passes the last project props to <SimilarProjectCard>', () => {
           const projectProps = {
             imageSrc: 'image-3',
             title: 'Title 3',
@@ -324,12 +324,12 @@ describe('<SimilarProjectsCard />', () => {
           expect(staticSimilarProjectCard.props()).to.contains(projectProps)
         })
 
-        it('updates correctly the step information', () => {
+        test('updates correctly the step information', () => {
           expect(staticSimilarProjectCard.props())
             .to.contains({ step: '3/3' })
         })
 
-        it('disables the right arrow button', () => {
+        test('disables the right arrow button', () => {
           expect(staticSimilarProjectCard.props())
             .to.contains({ rightArrowDisabled: true })
         })
@@ -343,7 +343,7 @@ describe('<SimilarProjectsCard />', () => {
     )
     const staticSimilarProjectCard = similarProjectsCard.find(SimilarProjectCard)
 
-    it('passes the right props', () => {
+    test('passes the right props', () => {
       expect(staticSimilarProjectCard.props())
         .to.contains({ className: 'custom-className' })
     })

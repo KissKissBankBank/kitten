@@ -1,17 +1,17 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+
 import { Row } from 'kitten/components/grid/row'
 
 describe('<Row />', () => {
   describe('by default', () => {
     const row = shallow(<Row />)
 
-    it('is a <div />', () => {
+    test('is a <div />', () => {
       expect(row).to.have.tagName('div')
     })
 
-    it('has a default class', () => {
-      expect(row).to.have.className('k-Row')
+    test('has a default class', () => {
+      expect(row.hasClass('k-Row')).to.equal(true)
       expect(row).to.have.descendants('.k-Row__content')
     })
   })
@@ -19,15 +19,15 @@ describe('<Row />', () => {
   describe('with a custom class', () => {
     const row = shallow(<Row className="custom__class" />)
 
-    it('has a custom class', () => {
-      expect(row).to.have.className('custom__class')
+    test('has a custom class', () => {
+      expect(row.hasClass('custom__class')).to.equal(true)
     })
   })
 
   describe('with other props', () => {
     const row = shallow(<Row aria-hidden />)
 
-    it('has aria-hidden attribute', () => {
+    test('has aria-hidden attribute', () => {
       expect(row).to.have.attr('aria-hidden', 'true')
     })
   })
@@ -35,7 +35,7 @@ describe('<Row />', () => {
   describe('with children', () => {
     const row = shallow(<Row>Lorem ipsum…</Row>)
 
-    it('has text', () => {
+    test('has text', () => {
       expect(row).to.have.text('Lorem ipsum…')
     })
   })
@@ -43,63 +43,63 @@ describe('<Row />', () => {
   describe('with centered prop', () => {
     const row = shallow(<Row centered />)
 
-    it('has a specific class', () => {
-      expect(row).to.have.className('k-Row--centered')
+    test('has a specific class', () => {
+      expect(row.hasClass('k-Row--centered')).to.equal(true)
     })
   })
 
   describe('with centered prop', () => {
     const row = shallow(<Row centered />)
 
-    it('has a specific class', () => {
-      expect(row).to.have.className('k-Row--centered')
+    test('has a specific class', () => {
+      expect(row.hasClass('k-Row--centered')).to.equal(true)
     })
   })
 
   describe('with light prop', () => {
     const row = shallow(<Row light />)
 
-    it('has a specific class', () => {
-      expect(row).to.have.className('k-Row--light')
+    test('has a specific class', () => {
+      expect(row.hasClass('k-Row--light')).to.equal(true)
     })
   })
 
   describe('with dark prop', () => {
     const row = shallow(<Row dark />)
 
-    it('has a specific class', () => {
-      expect(row).to.have.className('k-Row--dark')
+    test('has a specific class', () => {
+      expect(row.hasClass('k-Row--dark')).to.equal(true)
     })
   })
 
   describe('with lightTopBorder prop', () => {
     const row = shallow(<Row lightTopBorder />)
 
-    it('has a specific class', () => {
-      expect(row).to.have.className('k-Row--lightTopBorder')
+    test('has a specific class', () => {
+      expect(row.hasClass('k-Row--lightTopBorder')).to.equal(true)
     })
   })
 
   describe('with lightBottomBorder prop', () => {
     const row = shallow(<Row lightBottomBorder />)
 
-    it('has a specific class', () => {
-      expect(row).to.have.className('k-Row--lightBottomBorder')
+    test('has a specific class', () => {
+      expect(row.hasClass('k-Row--lightBottomBorder')).to.equal(true)
     })
   })
 
   describe('with padded prop', () => {
     const row = shallow(<Row padded />)
 
-    it('has a specific class', () => {
-      expect(row).to.have.className('k-Row--padded')
+    test('has a specific class', () => {
+      expect(row.hasClass('k-Row--padded')).to.equal(true)
     })
   })
 
   describe('with contentClassName prop', () => {
     const row = shallow(<Row contentClassName="content-custom-class" />)
 
-    it('has a custom class on content selector', () => {
+    test('has a custom class on content selector', () => {
       expect(row).to.have.descendants('.content-custom-class')
     })
   })

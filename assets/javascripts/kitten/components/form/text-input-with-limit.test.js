@@ -15,17 +15,17 @@ describe('<TextInputWithLimit />', () => {
   describe('by default', () => {
     const defaultComponent = shallow(<TextInputWithLimit />)
 
-    it('renders a .k-TextInputLimit', () => {
+    test('renders a .k-TextInputLimit', () => {
       expect(defaultComponent.find('.k-TextInputLimit')).toHaveLength(1)
     })
 
-    it('renders a .k-TextInputLimit__input', () => {
+    test('renders a .k-TextInputLimit__input', () => {
       expect(defaultComponent.find('.k-TextInputLimit__input')).toHaveLength(1)
     })
   })
 
   describe('defaultValue prop', () => {
-    it('sets the counter to the limit when empty', () => {
+    test('sets the counter to the limit when empty', () => {
       const component = shallow(
         <TextInputWithLimit defaultValue="" limit={ 15 } />
       )
@@ -33,7 +33,7 @@ describe('<TextInputWithLimit />', () => {
       expect(counter).to.have.text('15')
     })
 
-    it('changes the counter when set', () => {
+    test('changes the counter when set', () => {
       const component = shallow(
         <TextInputWithLimit defaultValue="Test" limit={ 15 } />
       )
@@ -41,13 +41,13 @@ describe('<TextInputWithLimit />', () => {
       expect(counter).to.have.text('11')
     })
 
-    it('adds an error when over the limit', () => {
+    test('adds an error when over the limit', () => {
       const component = shallow(
         <TextInputWithLimit defaultValue="Test" limit={ 3 } />
       )
       const counter = component.find('.k-TextInputLimit__counter')
       expect(counter).to.have.text('-1')
-      expect(counter).to.have.className('is-error')
+      expect(counter.hasClass('is-error')).to.equal(true)
     })
   })
 
@@ -56,14 +56,14 @@ describe('<TextInputWithLimit />', () => {
       <TextInputWithLimit disabled />
     )
 
-    it('is disabled', () => {
-      expect(component).to.have.className('is-disabled')
+    test('is disabled', () => {
+      expect(component.hasClass('is-disabled')).to.equal(true)
       expect(component.find('TextInput')).to.have.attr('disabled')
     })
   })
 
   describe('on onChange event', () => {
-    it('updates the TextInput value', () => {
+    test('updates the TextInput value', () => {
       const component = mount(
         <TextInputWithLimit limit={ 15 } />
       )
@@ -84,12 +84,12 @@ describe('<TextInputWithLimit />', () => {
       <TextInputWithLimit onChange={ onChangeSpy } />
     )
 
-    before(() => {
+    beforeAll(() => {
       const input = component.find('input')
       input.simulate('change')
     })
 
-    it('calls the onChange prop callback', () => {
+    test('calls the onChange prop callback', () => {
       expect(onChangeSpy.calledOnce).toBe(true)
     })
   })

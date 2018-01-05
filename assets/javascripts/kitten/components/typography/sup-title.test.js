@@ -8,11 +8,11 @@ describe('<SupTitle />', () => {
       <SupTitle />
     )
 
-    it('renders a <div class="k-SupTitle" />', () => {
-      expect(component).to.have.className('k-SupTitle')
+    test('renders a <div class="k-SupTitle" />', () => {
+      expect(component.hasClass('k-SupTitle')).to.equal(true)
     })
 
-    it('with default children', () => {
+    test('with default children', () => {
       expect(component).to.have.text('Sup Title')
     })
   })
@@ -22,8 +22,8 @@ describe('<SupTitle />', () => {
       <SupTitle className='customClass' />
     )
 
-    it('adds the customClass to the component', () => {
-      expect(component).to.have.className('customClass')
+    test('adds the customClass to the component', () => {
+      expect(component.hasClass('customClass')).to.equal(true)
     })
   })
 
@@ -32,7 +32,7 @@ describe('<SupTitle />', () => {
       <SupTitle tag='h1' />
     )
 
-    it('changes the tag of the component', () => {
+    test('changes the tag of the component', () => {
       expect(component).to.have.tagName('h1')
     })
   })
@@ -44,7 +44,7 @@ describe('<SupTitle />', () => {
       </SupTitle>
     )
 
-    it('has a content', () => {
+    test('has a content', () => {
       expect(component).to.have.text('Lorem ipsum…')
     })
   })

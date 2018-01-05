@@ -15,32 +15,32 @@ describe('<ArticleCard />', () => {
       component = mount(<ArticleCard />)
     })
 
-    it('is a <div />', () => {
+    test('is a <div />', () => {
       expect(component).to.have.tagName('div')
     })
 
-    it('has an image container', () => {
+    test('has an image container', () => {
       expect(component).to.have.descendants('.k-Card__imageContainer')
     })
 
-    it('has a <img /> with good class', () => {
+    test('has a <img /> with good class', () => {
       expect(component).to.have.descendants('img')
       expect(component).to.have.descendants('.k-Card__image')
     })
 
-    it('has a <ButtonImage /> component', () => {
+    test('has a <ButtonImage /> component', () => {
       expect(component).to.have.descendants(ButtonImage)
     })
 
-    it('has not a <Title /> component', () => {
+    test('has not a <Title /> component', () => {
       expect(component).to.have.descendants(Title)
     })
 
-    it('has 3 <Text /> components', () => {
+    test('has 3 <Text /> components', () => {
       expect(component).to.have.exactly(3).descendants(Text)
     })
 
-    it('has <HorizontalStroke /> component', () => {
+    test('has <HorizontalStroke /> component', () => {
       expect(component).to.have.descendants(HorizontalStroke)
     })
   })
@@ -50,11 +50,11 @@ describe('<ArticleCard />', () => {
       component = mount(<ArticleCard href="#" />)
     })
 
-    it('is a <a />', () => {
+    test('is a <a />', () => {
       expect(component).to.have.tagName('a')
     })
 
-    it('has a href attribute', () => {
+    test('has a href attribute', () => {
       expect(component).to.have.attr('href', '#')
     })
   })
@@ -74,15 +74,15 @@ describe('<ArticleCard />', () => {
       )
     })
 
-    it('has an image with `#` src', () => {
+    test('has an image with `#` src', () => {
       expect(component.find('.k-Card__image')).to.have.prop('src', '#foobar')
     })
 
-    it('has an image with alt description', () => {
+    test('has an image with alt description', () => {
       expect(component.find('.k-Card__image')).to.have.prop('alt', 'FooBar')
     })
 
-    it('has an image with a custom style', () => {
+    test('has an image with a custom style', () => {
       expect(component.find('.k-Card__image'))
         .to.have.style('cursor', 'crosshair')
     })
@@ -105,7 +105,7 @@ describe('<ArticleCard />', () => {
       buttonImage = component.find(ButtonImage).first()
     })
 
-    it('has good props on <ButtonImage />', () => {
+    test('has good props on <ButtonImage />', () => {
       expect(buttonImage)
         .to.have.prop('img').toEqual({
           src: '#foobar',

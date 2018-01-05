@@ -13,23 +13,23 @@ describe('<ProjectCard />', () => {
   describe('by default', () => {
     const projectCard = shallow(<ProjectCard />)
 
-    it('is a <div />', () => {
+    test('is a <div />', () => {
       expect(projectCard).to.have.tagName('div')
     })
 
-    it('has default class', () => {
-      expect(projectCard.dive()).to.have.className('k-ProjectCard')
+    test('has default class', () => {
+      expect(projectCard.dive().hasClass('k-ProjectCard')).to.equal(true)
     })
   })
 
   describe('with linkHref prop', () => {
     const projectCard = shallow(<ProjectCard linkHref="#" />)
 
-    it('is a <a />', () => {
+    test('is a <a />', () => {
       expect(projectCard).to.have.tagName('a')
     })
 
-    it('has a href attribute', () => {
+    test('has a href attribute', () => {
       expect(projectCard).to.have.attr('href', '#')
     })
   })
@@ -37,7 +37,7 @@ describe('<ProjectCard />', () => {
   describe('with linkTitle prop', () => {
     const projectCard = shallow(<ProjectCard linkTitle="Custom link title" />)
 
-    it('has a title attribute', () => {
+    test('has a title attribute', () => {
       expect(projectCard).to.have.attr('title', 'Custom link title')
     })
   })
@@ -45,11 +45,11 @@ describe('<ProjectCard />', () => {
   describe('with disabled prop', () => {
     const projectCard = shallow(<ProjectCard href="#" disabled />)
 
-    it('has a disabled class', () => {
-      expect(projectCard.dive()).to.have.className('is-disabled')
+    test('has a disabled class', () => {
+      expect(projectCard.dive().hasClass('is-disabled')).to.equal(true)
     })
 
-    it('removes href attribute and <a> tag', () => {
+    test('removes href attribute and <a> tag', () => {
       expect(projectCard).to.have.tagName('div')
       expect(projectCard).not.to.have.attr('href')
     })
@@ -58,8 +58,8 @@ describe('<ProjectCard />', () => {
   describe('with className prop', () => {
     const projectCard = shallow(<ProjectCard className="custom__class" />)
 
-    it('has a custom class', () => {
-      expect(projectCard.dive()).to.have.className('custom__class')
+    test('has a custom class', () => {
+      expect(projectCard.dive().hasClass('custom__class')).to.equal(true)
     })
   })
 
@@ -70,7 +70,7 @@ describe('<ProjectCard />', () => {
     const buttonImage = projectCard.find(ButtonImage)
     const buttonImageImgProps = { src: '#avatar' }
 
-    it('has a <ButtonImage /> with img prop', () => {
+    test('has a <ButtonImage /> with img prop', () => {
       expect(buttonImage).toHaveLength(1)
       expect(buttonImage.first())
         .to.have.prop('img').toEqual(buttonImageImgProps)
@@ -86,11 +86,11 @@ describe('<ProjectCard />', () => {
     )
     const paragraph = projectCard.find(Paragraph).first()
 
-    it('renders a name value', () => {
+    test('renders a name value', () => {
       expect(paragraph).to.contain.text('Custom name')
     })
 
-    it('renders a location value', () => {
+    test('renders a location value', () => {
       expect(paragraph).to.contain.text('Custom location')
     })
   })
@@ -110,11 +110,11 @@ describe('<ProjectCard />', () => {
       <ProjectCard tagLists={ tagLists } />
     )
 
-    it('renders a <TagList />', () => {
+    test('renders a <TagList />', () => {
       expect(projectCard).to.have.descendants(TagList)
     })
 
-    it('renders two <TagList />', () => {
+    test('renders two <TagList />', () => {
       expect(projectCardWithTwoLists).to.have.exactly(2).descendants(TagList)
     })
   })
@@ -125,11 +125,11 @@ describe('<ProjectCard />', () => {
     )
     const icon = projectCard.find(IconBadge)
 
-    it('renders a <IconBadge />', () => {
+    test('renders a <IconBadge />', () => {
       expect(icon).toHaveLength(1)
     })
 
-    it('has good props', () => {
+    test('has good props', () => {
       expect(icon).to.have.props([ 'children', 'style' ]).toEqual([ 'A', { backgroundColor: '#FF0000' } ])
     })
   })
@@ -140,11 +140,11 @@ describe('<ProjectCard />', () => {
     )
     const title = projectCard.find(Title)
 
-    it('renders a <Title />', () => {
+    test('renders a <Title />', () => {
       expect(title).toHaveLength(1)
     })
 
-    it('renders a good text', () => {
+    test('renders a good text', () => {
       expect(title).to.have.text('Custom title')
     })
   })
@@ -153,7 +153,7 @@ describe('<ProjectCard />', () => {
     const projectCard = mount(<ProjectCard imageSrc="test" />)
     const image = projectCard.find('.k-ProjectCard__img')
 
-    it('renders an image with good href', () => {
+    test('renders an image with good href', () => {
       expect(image).toHaveLength(1)
       expect(image).to.have.attr('src', 'test')
     })
@@ -163,7 +163,7 @@ describe('<ProjectCard />', () => {
     const projectCard = mount(<ProjectCard progress="42" />)
     const progress = projectCard.find(Progress)
 
-    it('renders a <Progress value="42" />', () => {
+    test('renders a <Progress value="42" />', () => {
       expect(progress).toHaveLength(1)
       expect(progress).to.have.prop('value', '42')
     })
@@ -179,25 +179,25 @@ describe('<ProjectCard />', () => {
     )
     const infos = projectCard.find('.k-ProjectCard__info')
 
-    it('renders 3 blocks', () => {
+    test('renders 3 blocks', () => {
       expect(infos).toHaveLength(3)
     })
 
-    it('has a first block with text then displayed value', () => {
+    test('has a first block with text then displayed value', () => {
       const firstInfo = infos.at(0)
 
       expect(firstInfo.props().children[0]).toBe('Custom text 1')
       expect(firstInfo.props().children[2].props.children).toBe('Custom value 1')
     })
 
-    it('has second block with text then locked value', () => {
+    test('has second block with text then locked value', () => {
       const secondInfo = infos.at(1)
 
       expect(secondInfo.props().children[0]).toBe('Custom text 2')
       expect(secondInfo).to.have.descendants(LockIcon)
     })
 
-    it('has a third block with reversed displayed items', () => {
+    test('has a third block with reversed displayed items', () => {
       const firstInfo = infos.at(2)
 
       expect(firstInfo.props().children[0].props.children).toBe('Custom value 3')
@@ -215,8 +215,8 @@ describe('<ProjectCard />', () => {
     const info = projectCard.find('.k-ProjectCard__info').first()
     const value = info.find('.k-ProjectCard__info__value')
 
-    it('renders an info value with color modifier', () => {
-      expect(value).to.have.className('k-u-color-primary1')
+    test('renders an info value with color modifier', () => {
+      expect(value.hasClass('k-u-color-primary1')).to.equal(true)
     })
   })
 
@@ -229,7 +229,7 @@ describe('<ProjectCard />', () => {
     )
     const status = projectCard.find('.k-ProjectCard__status')
 
-    it('renders a status block', () => {
+    test('renders a status block', () => {
       expect(status).toHaveLength(1)
       expect(status).to.have.descendants('.k-ProjectCard__status__content')
       expect(status).to.contain.text('Custom status')
@@ -245,7 +245,7 @@ describe('<ProjectCard />', () => {
     )
     const status = projectCard.find('.k-ProjectCard__status').first()
 
-    it('has a good class', () => {
+    test('has a good class', () => {
       expect(status)
         .to.have.className('k-ProjectCard__status--primaryBackground')
     })
@@ -260,7 +260,7 @@ describe('<ProjectCard />', () => {
     )
     const status = projectCard.find('.k-ProjectCard__status').first()
 
-    it('has a good class', () => {
+    test('has a good class', () => {
       expect(status)
         .to.have.className('k-ProjectCard__status--validBackground')
     })
@@ -275,7 +275,7 @@ describe('<ProjectCard />', () => {
     )
     const status = projectCard.find('.k-ProjectCard__status').first()
 
-    it('has a good class', () => {
+    test('has a good class', () => {
       expect(status)
         .to.have.className('k-ProjectCard__status--greyBackground')
     })
@@ -290,7 +290,7 @@ describe('<ProjectCard />', () => {
     )
     const status = projectCard.find('.k-ProjectCard__status').first()
 
-    it('has a good class', () => {
+    test('has a good class', () => {
       expect(status)
         .to.have.className('k-ProjectCard__status--errorBackground')
     })
@@ -305,7 +305,7 @@ describe('<ProjectCard />', () => {
     )
     const status = projectCard.find('.k-ProjectCard__status').first()
 
-    it('has a good class', () => {
+    test('has a good class', () => {
       expect(status)
         .to.have.className('k-ProjectCard__status--errorReverseBackground')
     })
@@ -316,13 +316,13 @@ describe('<ProjectCard />', () => {
       <ProjectCard tooltipText="Custom text" />
     )
 
-    it('has good classes', () => {
+    test('has good classes', () => {
       expect(projectCard).to.have.descendants('.k-ProjectCard__tooltip')
       expect(projectCard)
         .to.have.descendants('.k-ProjectCard__tooltip__content')
     })
 
-    it('has a good text', () => {
+    test('has a good text', () => {
       const content =
         projectCard.find('.k-ProjectCard__tooltip__content').first()
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+
 import { TabBar } from 'kitten/components/navigation/tab-bar'
 
 describe('<TabBar />', () => {
@@ -11,19 +11,19 @@ describe('<TabBar />', () => {
     ] } />
   )
 
-  it('renders a <div class="k-TabBar" />', () => {
-    expect(component).to.have.className('k-TabBar')
+  test('renders a <div class="k-TabBar" />', () => {
+    expect(component.hasClass('k-TabBar')).to.equal(true)
   })
 
-  it('has a nav', () => {
+  test('has a nav', () => {
     expect(component.find('.k-TabBar__nav')).toHaveLength(1)
   })
 
-  it('has a list', () => {
+  test('has a list', () => {
     expect(component.find('ul.k-TabBar__list')).toHaveLength(1)
   })
 
-  it('renders items', () => {
+  test('renders items', () => {
     expect(component.find('.k-TabBar__item')).toHaveLength(3)
   })
 
@@ -42,9 +42,9 @@ describe('<TabBar />', () => {
       />
     )
 
-    it('renders the right classes', () => {
+    test('renders the right classes', () => {
       expect(component).to.have.id('custom-id')
-      expect(component).to.have.className('custom-class')
+      expect(component.hasClass('custom-class')).to.equal(true)
       expect(component.find('.k-TabBar__nav'))
         .to.have.className('nav-custom-class')
       expect(component.find('.k-TabBar__list'))
@@ -60,7 +60,7 @@ describe('<TabBar />', () => {
         ] } />
       )
 
-      it('transforms line break with <br/>', () => {
+      test('transforms line break with <br/>', () => {
         expect(component.find('.item-1')).to.have.html().toMatch(/Item<br\/>1/)
       })
     })

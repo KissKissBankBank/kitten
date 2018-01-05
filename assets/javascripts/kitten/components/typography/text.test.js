@@ -1,12 +1,12 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+
 import { Text } from 'kitten/components/typography/text'
 
 describe('<Text />', () => {
   describe('by default', () => {
     const component = shallow(<Text />)
 
-    it('renders a <span />', () => {
+    test('renders a <span />', () => {
       expect(component).to.have.tagName('span')
     })
   })
@@ -14,7 +14,7 @@ describe('<Text />', () => {
   describe('with tag prop', () => {
     const component = shallow(<Text tag="div" />)
 
-    it('renders a <div />', () => {
+    test('renders a <div />', () => {
       expect(component).to.have.tagName('div')
     })
   })
@@ -22,15 +22,15 @@ describe('<Text />', () => {
   describe('with className prop', () => {
     const component = shallow(<Text className="custom__class" />)
 
-    it('has a good class', () => {
-      expect(component).to.have.className('custom__class')
+    test('has a good class', () => {
+      expect(component.hasClass('custom__class')).to.equal(true)
     })
   })
 
   describe('with other prop', () => {
     const component = shallow(<Text aria-hidden={ true } />)
 
-    it('has an aria-hidden attribute', () => {
+    test('has an aria-hidden attribute', () => {
       expect(component).to.have.attr('aria-hidden', 'true')
     })
   })
@@ -38,56 +38,56 @@ describe('<Text />', () => {
   describe('with weight prop', () => {
     const component = shallow(<Text weight="light" />)
 
-    it('has a good utility class', () => {
-      expect(component).to.have.className('k-u-weight-light')
+    test('has a good utility class', () => {
+      expect(component.hasClass('k-u-weight-light')).to.equal(true)
     })
   })
 
   describe('with size prop', () => {
     const component = shallow(<Text size="nano" />)
 
-    it('has a good utility class', () => {
-      expect(component).to.have.className('k-u-size-nano')
+    test('has a good utility class', () => {
+      expect(component.hasClass('k-u-size-nano')).to.equal(true)
     })
   })
 
   describe('with lineHeight prop', () => {
     const component = shallow(<Text lineHeight="normal" />)
 
-    it('has a good utility class', () => {
-      expect(component).to.have.className('k-u-line-height-normal')
+    test('has a good utility class', () => {
+      expect(component.hasClass('k-u-line-height-normal')).to.equal(true)
     })
   })
 
   describe('with color prop', () => {
     const component = shallow(<Text color="error" />)
 
-    it('has a good utility class', () => {
-      expect(component).to.have.className('k-u-color-error')
+    test('has a good utility class', () => {
+      expect(component.hasClass('k-u-color-error')).to.equal(true)
     })
   })
 
   describe('with style prop', () => {
     const component = shallow(<Text style="italic" />)
 
-    it('has a good utility class', () => {
-      expect(component).to.have.className('k-u-style-italic')
+    test('has a good utility class', () => {
+      expect(component.hasClass('k-u-style-italic')).to.equal(true)
     })
   })
 
   describe('with transform prop', () => {
     const component = shallow(<Text transform="uppercase" />)
 
-    it('has a good utility class', () => {
-      expect(component).to.have.className('k-u-transform-uppercase')
+    test('has a good utility class', () => {
+      expect(component.hasClass('k-u-transform-uppercase')).to.equal(true)
     })
   })
 
   describe('with decoration prop', () => {
     const component = shallow(<Text decoration="underline" />)
 
-    it('has a good utility class', () => {
-      expect(component).to.have.className('k-u-decoration-underline')
+    test('has a good utility class', () => {
+      expect(component.hasClass('k-u-decoration-underline')).to.equal(true)
     })
   })
 })

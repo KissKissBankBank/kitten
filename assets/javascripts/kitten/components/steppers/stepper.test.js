@@ -1,5 +1,5 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+
 import { Stepper } from 'kitten/components/steppers/stepper'
 import {
   StepperIconDefault,
@@ -45,20 +45,20 @@ describe('<Stepper />', () => {
     <Stepper items={ items } />
   )
 
-  it('renders a <nav class="k-Stepper" />', () => {
+  test('renders a <nav class="k-Stepper" />', () => {
     expect(component).to.have.tagName('nav')
-    expect(component).to.have.className('k-Stepper')
+    expect(component.hasClass('k-Stepper')).to.equal(true)
   })
 
-  it('has a list', () => {
+  test('has a list', () => {
     expect(component.find('ul.k-Stepper__list')).toHaveLength(1)
   })
 
-  it('renders items', () => {
+  test('renders items', () => {
     expect(component.find('li.k-Stepper__item')).toHaveLength(5)
   })
 
-  it('renders links', () => {
+  test('renders links', () => {
     const links = component.find('.k-Stepper__link')
 
     expect(links).toHaveLength(5)
@@ -68,14 +68,14 @@ describe('<Stepper />', () => {
     expect(typeof links.first().props().onClick).toBe('function')
   })
 
-  it('renders an unfocusable link', () => {
+  test('renders an unfocusable link', () => {
     const spanLink = component.find('span.k-Stepper__link')
 
     expect(spanLink).toHaveLength(1)
     expect(spanLink).not.to.have.attr('href')
   })
 
-  it('replaces line feed by <br class"k-Stepper__break" />', () => {
+  test('replaces line feed by <br class"k-Stepper__break" />', () => {
     expect(component.find('br.k-Stepper__break')).toHaveLength(3)
   })
 
@@ -85,10 +85,10 @@ describe('<Stepper />', () => {
                withAlignStart={ true } />
     )
 
-    it('renders a list with `.k-Stepper__list--alignStart`', () => {
+    test('renders a list with `.k-Stepper__list--alignStart`', () => {
       const list = componentWithAlignStart.find('.k-Stepper__list')
 
-      expect(list).to.have.className('k-Stepper__list--alignStart')
+      expect(list.hasClass('k-Stepper__list--alignStart')).to.equal(true)
     })
   })
 
@@ -98,29 +98,29 @@ describe('<Stepper />', () => {
                withTinySpacing={ true } />
     )
 
-    it('renders items with `.k-Stepper__item--tinySpacing`', () => {
+    test('renders items with `.k-Stepper__item--tinySpacing`', () => {
       const items = componentWithTinySpacing.find('.k-Stepper__item')
 
       items.map(item => {
-        expect(item).to.have.className('k-Stepper__item--tinySpacing')
+        expect(item.hasClass('k-Stepper__item--tinySpacing')).to.equal(true)
       })
     })
   })
 
   describe('with different icon types', () => {
-    it('renders a <StepperIconDefault />', () => {
+    test('renders a <StepperIconDefault />', () => {
       const icon = component.find('.k-Stepper__link').at(0).children().first()
 
       expect(icon).to.have.type(StepperIconDefault)
     })
 
-    it('renders a <StepperIconInProgress />', () => {
+    test('renders a <StepperIconInProgress />', () => {
       const icon = component.find('.k-Stepper__link--inProgress').at(0).children().first()
 
       expect(icon).to.have.type(StepperIconInProgress)
     })
 
-    it('renders a <StepperIconValidated />', () => {
+    test('renders a <StepperIconValidated />', () => {
       const icon = component.find('.k-Stepper__link').at(2).children().first()
 
       expect(icon).to.have.type(StepperIconValidated)

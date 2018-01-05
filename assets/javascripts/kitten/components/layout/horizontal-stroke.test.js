@@ -1,5 +1,5 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+
 import { HorizontalStroke } from 'kitten/components/layout/horizontal-stroke'
 
 describe('<HorizontalStroke />', () => {
@@ -8,12 +8,12 @@ describe('<HorizontalStroke />', () => {
       <HorizontalStroke />
     )
 
-    it('renders a <span />', () => {
+    test('renders a <span />', () => {
       expect(horizontalStroke).to.have.tagName('span')
     })
 
-    it('has a good class', () => {
-      expect(horizontalStroke).to.have.className('k-HorizontalStroke')
+    test('has a good class', () => {
+      expect(horizontalStroke.hasClass('k-HorizontalStroke')).to.equal(true)
     })
   })
 
@@ -22,8 +22,8 @@ describe('<HorizontalStroke />', () => {
       <HorizontalStroke className="custom__class" />
     )
 
-    it('has a good class', () => {
-      expect(horizontalStroke).to.have.className('custom__class')
+    test('has a good class', () => {
+      expect(horizontalStroke.hasClass('custom__class')).to.equal(true)
     })
   })
 
@@ -32,8 +32,8 @@ describe('<HorizontalStroke />', () => {
       <HorizontalStroke size="tiny" />
     )
 
-    it('has a good class', () => {
-      expect(horizontalStroke).to.have.className('k-HorizontalStroke--tiny')
+    test('has a good class', () => {
+      expect(horizontalStroke.hasClass('k-HorizontalStroke--tiny')).to.equal(true)
     })
   })
 
@@ -42,8 +42,8 @@ describe('<HorizontalStroke />', () => {
       <HorizontalStroke size="default" />
     )
 
-    it('has a good class', () => {
-      expect(horizontalStroke).to.have.className('k-HorizontalStroke--default')
+    test('has a good class', () => {
+      expect(horizontalStroke.hasClass('k-HorizontalStroke--default')).to.equal(true)
     })
   })
 
@@ -52,8 +52,8 @@ describe('<HorizontalStroke />', () => {
       <HorizontalStroke size="big" />
     )
 
-    it('has a good class', () => {
-      expect(horizontalStroke).to.have.className('k-HorizontalStroke--big')
+    test('has a good class', () => {
+      expect(horizontalStroke.hasClass('k-HorizontalStroke--big')).to.equal(true)
     })
   })
 
@@ -62,8 +62,8 @@ describe('<HorizontalStroke />', () => {
       <HorizontalStroke size="huge" />
     )
 
-    it('has a good class', () => {
-      expect(horizontalStroke).to.have.className('k-HorizontalStroke--huge')
+    test('has a good class', () => {
+      expect(horizontalStroke.hasClass('k-HorizontalStroke--huge')).to.equal(true)
     })
   })
 })
