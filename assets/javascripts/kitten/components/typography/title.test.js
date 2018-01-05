@@ -1,5 +1,4 @@
 import React from 'react'
-import { expect } from 'chai'
 import { shallow } from 'enzyme'
 import { Title } from 'kitten/components/typography/title'
 
@@ -8,7 +7,7 @@ describe('Title with default props', () => {
     <Title />)
 
   it('has a default title attribute', () => {
-    expect(defaultComponent.find('.k-Title')).to.have.length(1)
+    expect(defaultComponent.find('.k-Title')).toHaveLength(1)
   })
 
   it('has a default tag', () => {

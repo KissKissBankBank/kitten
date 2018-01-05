@@ -1,5 +1,4 @@
 import React from 'react'
-import { expect } from 'chai'
 import { shallow, mount } from 'enzyme'
 import { Popover } from 'kitten/components/popovers/popover'
 import { CallToActionPopover }
@@ -15,26 +14,26 @@ describe('<CallToActionPopover />', () => {
     it('renders a title element', () => {
       const titleElement = defaultComponent.find('.k-Popover__title')
 
-      expect(titleElement).to.have.length(1)
+      expect(titleElement).toHaveLength(1)
     })
 
     it('renders a text element', () => {
       const textElement = defaultComponent.find('.k-Popover__text')
 
-      expect(textElement).to.have.length(1)
+      expect(textElement).toHaveLength(1)
     })
 
     describe('navigation', () => {
       it('renders a navigation element', () => {
         const navigationElement = defaultComponent.find('.k-Popover__navigation')
 
-        expect(navigationElement).to.have.length(1)
+        expect(navigationElement).toHaveLength(1)
       })
 
       it('renders buttons list', () => {
         const buttonsList = defaultComponent.find('.k-Popover__buttons')
 
-        expect(buttonsList).to.have.length(1)
+        expect(buttonsList).toHaveLength(1)
       })
 
       it('renders a <Button /> component', () => {
@@ -46,7 +45,7 @@ describe('<CallToActionPopover />', () => {
           </Button>
         )
 
-        expect(defaultComponent).to.contain(buttonComponent)
+        expect(defaultComponent).toContain(buttonComponent)
       })
     })
   })
@@ -57,7 +56,7 @@ describe('<CallToActionPopover />', () => {
     const titleElement= component.find('.k-Popover__title')
 
     it('renders a title element', () => {
-      expect(titleElement).to.have.length(1)
+      expect(titleElement).toHaveLength(1)
       expect(titleElement).to.have.text(title)
     })
   })
@@ -68,7 +67,7 @@ describe('<CallToActionPopover />', () => {
     const textElement = component.find('.k-Popover__text')
 
     it('renders a text element', () => {
-      expect(textElement).to.have.length(1)
+      expect(textElement).toHaveLength(1)
       expect(textElement).to.have.text(text)
     })
   })
@@ -96,7 +95,7 @@ describe('<CallToActionPopover />', () => {
     const buttonComponents = component.find(Button)
 
     it('renders 2 <Button /> components', () => {
-      expect(buttonComponents).to.have.length(2)
+      expect(buttonComponents).toHaveLength(2)
     })
 
     it('passes the right props to the first <Button />', () => {
@@ -109,7 +108,7 @@ describe('<CallToActionPopover />', () => {
         target: button1Target,
       }
 
-      expect(buttonComponent.props()).to.contain.all.keys(expectedProps)
+      expect(buttonComponent.props()).toEqual(expect.arrayContaining(expectedProps))
     })
 
     it('passes the right props to the second <Button />', () => {
@@ -118,7 +117,7 @@ describe('<CallToActionPopover />', () => {
         children: button2Label,
       }
 
-      expect(buttonComponent.props()).to.contain.all.keys(expectedProps)
+      expect(buttonComponent.props()).toEqual(expect.arrayContaining(expectedProps))
     })
 
     describe('with close callback on a button', () => {
@@ -140,7 +139,7 @@ describe('<CallToActionPopover />', () => {
           onClick: onCloseClick,
         }
 
-        expect(buttonComponent.props()).to.contain.all.keys(expectedProps)
+        expect(buttonComponent.props()).toEqual(expect.arrayContaining(expectedProps))
       })
     })
   })
@@ -164,13 +163,13 @@ describe('<CallToActionPopover />', () => {
       const illustration = componentWithIllustration
         .find('.k-Popover__illustration')
 
-      expect(illustration).to.have.length(1)
+      expect(illustration).toHaveLength(1)
     })
 
     it('renders illustration component', () => {
       const illustration = <LoudspeakerIllustration />
 
-      expect(componentWithIllustration).to.contain(illustration)
+      expect(componentWithIllustration).toContain(illustration)
     })
   })
 
@@ -182,7 +181,7 @@ describe('<CallToActionPopover />', () => {
     it('propagates props to <Popover />', () => {
       const popoverComponent = component.find('.custom-popover')
 
-      expect(popoverComponent).to.have.length(1)
+      expect(popoverComponent).toHaveLength(1)
     })
   })
 })

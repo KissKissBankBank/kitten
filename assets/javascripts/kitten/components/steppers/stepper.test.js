@@ -1,5 +1,4 @@
 import React from 'react'
-import { expect } from 'chai'
 import { shallow } from 'enzyme'
 import { Stepper } from 'kitten/components/steppers/stepper'
 import {
@@ -52,32 +51,32 @@ describe('<Stepper />', () => {
   })
 
   it('has a list', () => {
-    expect(component.find('ul.k-Stepper__list')).to.have.length(1)
+    expect(component.find('ul.k-Stepper__list')).toHaveLength(1)
   })
 
   it('renders items', () => {
-    expect(component.find('li.k-Stepper__item')).to.have.length(5)
+    expect(component.find('li.k-Stepper__item')).toHaveLength(5)
   })
 
   it('renders links', () => {
     const links = component.find('.k-Stepper__link')
 
-    expect(links).to.have.length(5)
-    expect(links.find('.k-Stepper__link--inProgress')).to.have.length(1)
-    expect(links.find('.k-Stepper__link--inactive')).to.have.length(1)
+    expect(links).toHaveLength(5)
+    expect(links.find('.k-Stepper__link--inProgress')).toHaveLength(1)
+    expect(links.find('.k-Stepper__link--inactive')).toHaveLength(1)
     expect(links.first()).to.have.attr('href', 'http://…')
-    expect(links.first().props().onClick).to.be.a('function')
+    expect(typeof links.first().props().onClick).toBe('function')
   })
 
   it('renders an unfocusable link', () => {
     const spanLink = component.find('span.k-Stepper__link')
 
-    expect(spanLink).to.have.length(1)
+    expect(spanLink).toHaveLength(1)
     expect(spanLink).not.to.have.attr('href')
   })
 
   it('replaces line feed by <br class"k-Stepper__break" />', () => {
-    expect(component.find('br.k-Stepper__break')).to.have.length(3)
+    expect(component.find('br.k-Stepper__break')).toHaveLength(3)
   })
 
   describe('with align start', () => {

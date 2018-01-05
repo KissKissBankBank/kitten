@@ -1,5 +1,4 @@
 import React from 'react'
-import { expect } from 'chai'
 import { shallow, mount } from 'enzyme'
 import { ProjectCreatorCard } from 'kitten/components/cards/project-creator-card'
 import { ClockIcon } from 'kitten/components/icons/clock-icon'
@@ -27,7 +26,7 @@ describe('<ProjectCreatorCard />', () => {
     const buttonIcon = projectCreatorCard.find('.k-ButtonIcon--withoutHover')
 
     it('renders a ButtonIcon with withoutHover class', () => {
-      expect(buttonIcon).to.have.length(1)
+      expect(buttonIcon).toHaveLength(1)
     })
   })
 
@@ -37,7 +36,7 @@ describe('<ProjectCreatorCard />', () => {
     const buttonIcon = projectCreatorCard.find('.k-ButtonIcon--verticalArrow')
 
     it('renders a ButtonIcon with vertical arrow', () => {
-      expect(buttonIcon).to.have.length(1)
+      expect(buttonIcon).toHaveLength(1)
     })
   })
 
@@ -47,7 +46,7 @@ describe('<ProjectCreatorCard />', () => {
     const icon = projectCreatorCard.find(ClockIcon)
 
     it('renders a <ClockIcon />', () => {
-      expect(icon).to.have.length(1)
+      expect(icon).toHaveLength(1)
     })
 
     it('renders a date value', () => {
@@ -68,12 +67,11 @@ describe('<ProjectCreatorCard />', () => {
     const text = status.find('.k-ProjectCreatorCard__status--text')
 
     it('renders a status value', () => {
-      expect(status).to.have.length(1)
+      expect(status).toHaveLength(1)
     })
 
     it('renders an icon with a style attribute', () => {
-      expect(icon).to.have.prop( 'style' )
-                  .deep.equal({ backgroundColor: '#e6f5fb', borderColor: '#cbe8f9' })
+      expect(icon).to.have.prop( 'style' ).toEqual({ backgroundColor: '#e6f5fb', borderColor: '#cbe8f9' })
     })
 
     it('renders a text value', () => {

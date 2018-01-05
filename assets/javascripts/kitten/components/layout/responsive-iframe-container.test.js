@@ -1,5 +1,4 @@
 import React from 'react'
-import { expect } from 'chai'
 import { shallow } from 'enzyme'
 import { ResponsiveIframeContainer }
   from 'kitten/components/layout/responsive-iframe-container'
@@ -19,7 +18,7 @@ describe('<ResponsiveIframeContainer />', () => {
     it('has a ratio of 67.5%', () => {
       const ratioProp = { paddingBottom: '67.5%' }
 
-      expect(component).to.have.prop('style').deep.equal(ratioProp)
+      expect(component).to.have.prop('style').toEqual(ratioProp)
     })
   })
 
@@ -41,7 +40,7 @@ describe('<ResponsiveIframeContainer />', () => {
     )
 
     it('has an iframe as child', () => {
-      expect(component.find('iframe')).to.have.length(1)
+      expect(component.find('iframe')).toHaveLength(1)
     })
   })
 
@@ -53,7 +52,7 @@ describe('<ResponsiveIframeContainer />', () => {
     it('has a ratio of 42%', () => {
       const ratioProp = { paddingBottom: '42%' }
 
-      expect(component).to.have.prop('style').deep.equal(ratioProp)
+      expect(component).to.have.prop('style').toEqual(ratioProp)
     })
   })
 })

@@ -1,5 +1,4 @@
 import React from 'react'
-import { expect } from 'chai'
 import { shallow, mount } from 'enzyme'
 import { RadioButton } from 'kitten/components/form/radio-button'
 
@@ -11,12 +10,12 @@ describe('<RadioButton />', () => {
 
     it('renders an input.k-RadioButton__input">', () => {
       expect(input).to.tagName('input')
-      expect(input.hasClass('k-RadioButton__input')).to.equal(true)
+      expect(input.hasClass('k-RadioButton__input')).toBe(true)
     })
 
     it('renders a label.k-RadioButton__label">', () => {
       expect(label).to.tagName('label')
-      expect(label.hasClass('k-RadioButton__label')).to.equal(true)
+      expect(label.hasClass('k-RadioButton__label')).toBe(true)
     })
   })
 

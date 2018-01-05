@@ -1,5 +1,4 @@
 import React from 'react'
-import { expect } from 'chai'
 import { shallow } from 'enzyme'
 import { Paragraph } from 'kitten/components/typography/paragraph'
 
@@ -9,7 +8,7 @@ describe('Paragraph with default props', () => {
   )
 
   it('has a default paragraph attribute', () => {
-    expect(defaultComponent.find('.k-Paragraph')).to.have.length(1)
+    expect(defaultComponent.find('.k-Paragraph')).toHaveLength(1)
   })
 
   it('has a default tag', () => {

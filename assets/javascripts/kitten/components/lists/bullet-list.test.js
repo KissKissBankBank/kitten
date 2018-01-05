@@ -1,5 +1,4 @@
 import React from 'react'
-import { expect } from 'chai'
 import { shallow } from 'enzyme'
 import { BulletList } from 'kitten/components/lists/bullet-list'
 
@@ -21,7 +20,7 @@ describe('<BulletList />', () => {
     })
 
     it('renders 2 items', () => {
-      expect(bulletList.children()).to.have.length(2)
+      expect(bulletList.children()).toHaveLength(2)
     })
 
     it('has a good class on item', () => {

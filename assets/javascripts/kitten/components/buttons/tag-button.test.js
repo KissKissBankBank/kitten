@@ -1,5 +1,4 @@
 import React from 'react'
-import { expect } from 'chai'
 import { shallow } from 'enzyme'
 import { TagButton } from 'kitten/components/buttons/tag-button'
 
@@ -8,7 +7,7 @@ describe('TagButton', () => {
     <TagButton />)
 
   it('renders <div class="k-TagButton">', () => {
-    expect(defaultComponent.find('.k-TagButton')).to.have.length(1)
+    expect(defaultComponent.find('.k-TagButton')).toHaveLength(1)
   })
 
   it('has a default tag', () => {

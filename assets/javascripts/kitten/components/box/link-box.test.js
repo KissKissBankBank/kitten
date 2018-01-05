@@ -1,5 +1,4 @@
 import React from 'react'
-import { expect } from 'chai'
 import { shallow } from 'enzyme'
 import { LinkBox } from 'kitten/components/box/link-box'
 
@@ -21,14 +20,14 @@ describe('<LinkBox />', () => {
   it('renders a title', () => {
     const title = component.find('.k-LinkBox__title')
 
-    expect(title).to.have.length(1)
+    expect(title).toHaveLength(1)
     expect(title).to.have.text('Your history')
   })
 
   it('renders text', () => {
     const text = component.find('.k-LinkBox__text')
 
-    expect(text).to.have.length(1)
+    expect(text).toHaveLength(1)
     expect(text).to.have.text('Download your history (pdf - 8Mo)')
   })
 
@@ -46,7 +45,7 @@ describe('<LinkBox />', () => {
     it('renders an icon', () => {
       const icon = componentWithIcon.find('.k-LinkBox__icon')
 
-      expect(icon).to.have.length(1)
+      expect(icon).toHaveLength(1)
       expect(icon).to.have.text('My icon')
     })
   })
@@ -63,7 +62,7 @@ describe('<LinkBox />', () => {
     })
 
     it('has no icon', () => {
-      expect(defaultComponent.find('.k-LinkBox__icon')).to.have.length(0)
+      expect(defaultComponent.find('.k-LinkBox__icon')).toHaveLength(0)
     })
   })
 

@@ -1,5 +1,4 @@
 import React from 'react'
-import { expect } from 'chai'
 import { shallow } from 'enzyme'
 import { Tooltip } from 'kitten/components/tooltips/tooltip'
 import { ButtonQuestionMarkIcon }
@@ -14,7 +13,7 @@ const component = shallow(
 
 describe('<Tooltip />', () => {
   it('has a .k-Tooltip', () => {
-    expect(component.find('.k-Tooltip')).to.have.length(1)
+    expect(component.find('.k-Tooltip')).toHaveLength(1)
   })
 
   it('renders ButtonQuestionMarkIcon', () => {

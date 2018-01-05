@@ -1,5 +1,4 @@
 import React from 'react'
-import { expect } from 'chai'
 import { shallow, mount } from 'enzyme'
 import { TextInputWithUnit } from 'kitten/components/form/text-input-with-unit'
 
@@ -42,11 +41,11 @@ describe('<TextInputWithUnit />', () => {
     const spanExpectation = span.hasClass('k-TextInputWithUnit__unit--tiny')
 
     it('has an <input /> with "k-TextInput--tiny" class', () => {
-      expect(textInputExpectation).to.equal(true)
+      expect(textInputExpectation).toBe(true)
     })
 
     it('has a <span /> with "k-TextInputWithUnit__unit--tiny" class', () => {
-      expect(spanExpectation).to.equal(true)
+      expect(spanExpectation).toBe(true)
     })
   })
 
@@ -58,11 +57,11 @@ describe('<TextInputWithUnit />', () => {
     const spanExpectation = span.hasClass('is-valid')
 
     it('has an <input /> with "is-valid" class', () => {
-      expect(textInputExpectation).to.equal(true)
+      expect(textInputExpectation).toBe(true)
     })
 
     it('has a <span /> with "is-valid" class', () => {
-      expect(spanExpectation).to.equal(true)
+      expect(spanExpectation).toBe(true)
     })
   })
 
@@ -74,11 +73,11 @@ describe('<TextInputWithUnit />', () => {
     const spanExpectation = span.hasClass('is-error')
 
     it('has an <input /> with "is-error" class', () => {
-      expect(textInputExpectation).to.equal(true)
+      expect(textInputExpectation).toBe(true)
     })
 
     it('has a <span /> with "is-error" class', () => {
-      expect(spanExpectation).to.equal(true)
+      expect(spanExpectation).toBe(true)
     })
   })
 
@@ -88,7 +87,7 @@ describe('<TextInputWithUnit />', () => {
     const spanExpectation = span.hasClass('k-TextInputWithUnit__unitWord')
 
     it('has a <span /> with "k-TextInputWithUnit__unitWord" class', () => {
-      expect(spanExpectation).to.equal(true)
+      expect(spanExpectation).toBe(true)
     })
   })
 
@@ -115,7 +114,7 @@ describe('<TextInputWithUnit />', () => {
     })
 
     it('has a <span /> with "is-inactive" class', () => {
-      expect(spanExpectation).to.equal(true)
+      expect(spanExpectation).toBe(true)
     })
   })
 })

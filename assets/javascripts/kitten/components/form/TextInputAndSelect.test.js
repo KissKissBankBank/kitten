@@ -1,5 +1,4 @@
 import React from 'react'
-import { expect } from 'chai'
 import { shallow, mount } from 'enzyme'
 import { TextInputAndSelect } from 'kitten/components/form/text-input-and-select'
 
@@ -11,12 +10,12 @@ describe('<TextInputAndSelect />', () => {
 
     it('renders an input.k-TextInput', () => {
       expect(input).to.tagName('input')
-      expect(input.hasClass('k-TextInput')).to.equal(true)
+      expect(input.hasClass('k-TextInput')).toBe(true)
     })
 
     it('renders a div.k-Select', () => {
       expect(select).to.have.tagName('div')
-      expect(select.hasClass('k-Select')).to.equal(true)
+      expect(select.hasClass('k-Select')).toBe(true)
     })
   })
 
@@ -26,11 +25,11 @@ describe('<TextInputAndSelect />', () => {
     const select = component.find('SelectWithState')
 
     it('passes the right props to the `TextInput` component', () => {
-      expect(input.props()).to.contains.all.keys({ tiny: true })
+      expect(input.props()).toEqual(expect.arrayContaining(Object.keys({ tiny: true })))
     })
 
     it('passes the right props to the `SelectWithState` component', () => {
-      expect(select.props()).to.contains.all.keys({ tiny: true })
+      expect(select.props()).toEqual(expect.arrayContaining(Object.keys({ tiny: true })))
     })
   })
 
@@ -40,11 +39,11 @@ describe('<TextInputAndSelect />', () => {
     const select = component.find('SelectWithState')
 
     it('passes the right props to the `TextInput` component', () => {
-      expect(input.props()).to.contains.all.keys({ disabled: true })
+      expect(input.props()).toEqual(expect.arrayContaining(Object.keys({ disabled: true })))
     })
 
     it('passes the right props to the `SelectWithState` component', () => {
-      expect(select.props()).to.contains.all.keys({ disabled: true })
+      expect(select.props()).toEqual(expect.arrayContaining(Object.keys({ disabled: true })))
     })
   })
 
@@ -53,11 +52,11 @@ describe('<TextInputAndSelect />', () => {
     const input = component.find('TextInput')
 
     it('passes the right props to the `SelectWithState` component', () => {
-      expect(input.props()).to.contains.all.keys({ digits: 12 })
+      expect(input.props()).toEqual(expect.arrayContaining(Object.keys({ digits: 12 })))
     })
 
     it('renders input.k-TextInput--twelveDigits', () => {
-      expect(input.hasClass('k-TextInput--twelveDigits')).to.equal(true)
+      expect(input.hasClass('k-TextInput--twelveDigits')).toBe(true)
     })
   })
 })

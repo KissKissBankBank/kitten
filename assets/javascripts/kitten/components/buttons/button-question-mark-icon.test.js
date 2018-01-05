@@ -1,5 +1,4 @@
 import React from 'react'
-import { expect } from 'chai'
 import { shallow } from 'enzyme'
 import { QuestionMarkIcon } from 'kitten/components/icons/question-mark-icon'
 import { ButtonIcon } from 'kitten/components/buttons/button-icon'

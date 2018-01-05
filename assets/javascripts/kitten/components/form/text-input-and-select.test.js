@@ -1,5 +1,4 @@
 import React from 'react'
-import { expect } from 'chai'
 import { shallow } from 'enzyme'
 import { TextInputAndSelect } from
   'kitten/components/form/text-input-and-select'
@@ -12,14 +11,14 @@ describe('<TextInputWithSelect />', () => {
       const component = shallow(<TextInputAndSelect />)
       const wrapper = component.find('.k-FormComposer__element')
 
-      expect(wrapper).to.have.length(2)
+      expect(wrapper).toHaveLength(2)
     })
 
     it('renders a <div class="k-FormComposer__element--main">', () => {
       const component = shallow(<TextInputAndSelect />)
       const wrapper = component.find('.k-FormComposer__element--main')
 
-      expect(wrapper).to.have.length(1)
+      expect(wrapper).toHaveLength(1)
     })
 
 
@@ -27,7 +26,7 @@ describe('<TextInputWithSelect />', () => {
       const component = shallow(<TextInputAndSelect />)
       const textInput = component.find(TextInput)
 
-      expect(textInput).to.have.length(1)
+      expect(textInput).toHaveLength(1)
     })
 
 
@@ -35,7 +34,7 @@ describe('<TextInputWithSelect />', () => {
       const component = shallow(<TextInputAndSelect />)
       const selectWithState = component.find(SelectWithState)
 
-      expect(selectWithState).to.have.length(1)
+      expect(selectWithState).toHaveLength(1)
     })
   })
 
@@ -45,7 +44,7 @@ describe('<TextInputWithSelect />', () => {
       const textInput = component.find(TextInput)
       const expectedProps = { tiny: true }
 
-      expect(textInput.props()).to.contain.all.keys(expectedProps)
+      expect(textInput.props()).toEqual(expect.arrayContaining(expectedProps))
     })
   })
 
@@ -125,7 +124,7 @@ describe('<TextInputWithSelect />', () => {
       const component = shallow(<TextInputAndSelect digits="2" />)
       const input = component.find('.k-FormComposer__element--main')
 
-      expect(input).to.have.length(0)
+      expect(input).toHaveLength(0)
     })
   })
 
@@ -159,7 +158,7 @@ describe('<TextInputWithSelect />', () => {
       )
       const inputWrapper = component.find('.k-TextInput--custom')
 
-      expect(inputWrapper).to.have.length(1)
+      expect(inputWrapper).toHaveLength(1)
     })
   })
 

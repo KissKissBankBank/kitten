@@ -1,5 +1,4 @@
 import React from 'react'
-import { expect } from 'chai'
 import { shallow } from 'enzyme'
 import { TextInput } from 'kitten/components/form/text-input'
 
@@ -8,7 +7,7 @@ describe('Text-input with default props', () => {
     <TextInput />)
 
   it('has a default text-input attributes', () => {
-    expect(defaultComponent.find('.k-TextInput')).to.have.length(1)
+    expect(defaultComponent.find('.k-TextInput')).toHaveLength(1)
   })
 
   it('has a default tag', () => {
@@ -16,15 +15,15 @@ describe('Text-input with default props', () => {
   })
 
   it('does not contain a is-valid element', () => {
-    expect(defaultComponent.find('.is-valid')).to.have.length(0)
+    expect(defaultComponent.find('.is-valid')).toHaveLength(0)
   })
 
   it('does not contain a is-error element', () => {
-    expect(defaultComponent.find('.is-error')).to.have.length(0)
+    expect(defaultComponent.find('.is-error')).toHaveLength(0)
   })
 
   it('does not contain a tiny element', () => {
-    expect(defaultComponent.find('.k-TextInput--tiny')).to.have.length(0)
+    expect(defaultComponent.find('.k-TextInput--tiny')).toHaveLength(0)
   })
 
   describe('<TextInput />', () => {

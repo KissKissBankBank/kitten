@@ -1,5 +1,4 @@
 import React from 'react'
-import { expect } from 'chai'
 import { mount } from 'enzyme'
 import { SimpleUploader } from 'kitten/components/uploaders/simple-uploader'
 import { Uploader } from 'kitten/components/uploaders/uploader'
@@ -11,7 +10,7 @@ describe('<SimpleUploader />', () => {
     const theme = component.find('.k-SimpleUploader')
 
     it('it has an <Uploader />', () => {
-      expect(component.find(Uploader)).to.have.length(1)
+      expect(component.find(Uploader)).toHaveLength(1)
     })
 
     it('has children with good classes', () => {
@@ -60,7 +59,7 @@ describe('<SimpleUploader />', () => {
       }
 
       expect(deleteButton.props()).to.contains(expectedProps)
-      expect(deleteButton.props().onClick).to.be.a('function')
+      expect(typeof deleteButton.props().onClick).toBe('function')
     })
   })
 
@@ -78,7 +77,7 @@ describe('<SimpleUploader />', () => {
       })
 
       it('doesn\'t pass a onClick prop to the delete button', () => {
-        expect(buttonIcon.props().onClick).to.be.null
+        expect(buttonIcon.props().onClick).toBeNull()
       })
 
       it('adds a disabled attribute to the upload button', () => {
@@ -104,7 +103,7 @@ describe('<SimpleUploader />', () => {
     const deleteButton = component.find(ButtonIcon)
 
     it('does not have a delete button', () => {
-      expect(deleteButton).to.have.length(0)
+      expect(deleteButton).toHaveLength(0)
     })
   })
 })

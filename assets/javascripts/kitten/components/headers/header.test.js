@@ -1,5 +1,4 @@
 import React from 'react'
-import { expect } from 'chai'
 import { shallow } from 'enzyme'
 import {
   Header,
@@ -22,12 +21,12 @@ describe('<Header />', () => {
 
   it('renders a container', () => {
     const container = header.find('.k-Header__container')
-    expect(container).to.have.length(1)
+    expect(container).toHaveLength(1)
   })
 
   it('renders a row', () => {
     const row = header.find('.k-Header__row')
-    expect(row).to.have.length(1)
+    expect(row).toHaveLength(1)
   })
 
   it('renders children', () => {

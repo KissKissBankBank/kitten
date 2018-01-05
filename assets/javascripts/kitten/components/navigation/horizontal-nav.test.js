@@ -1,5 +1,4 @@
 import React from 'react'
-import { expect } from 'chai'
 import { shallow, mount } from 'enzyme'
 import { HorizontalNav } from 'kitten/components/navigation/horizontal-nav'
 
@@ -21,11 +20,11 @@ describe('<HorizontalNav />', () => {
   })
 
   it('has a element', () => {
-    expect(component.find('li.k-HorizontalNav__element')).to.have.length(4)
+    expect(component.find('li.k-HorizontalNav__element')).toHaveLength(4)
   })
 
   it('renders items', () => {
-    expect(component.find('.k-HorizontalNav__item')).to.have.length(4)
+    expect(component.find('.k-HorizontalNav__item')).toHaveLength(4)
   })
 
   it('has an item with clickable link', () => {
@@ -96,7 +95,7 @@ describe('<HorizontalNav />', () => {
       )
 
       it('transforms line break with <br/>', () => {
-        expect(component.find('.item-1')).to.have.html().match(/Nav<br\/>1/)
+        expect(component.find('.item-1')).to.have.html().toMatch(/Nav<br\/>1/)
       })
     })
   })

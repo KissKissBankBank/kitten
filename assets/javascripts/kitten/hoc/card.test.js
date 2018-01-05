@@ -1,6 +1,5 @@
 import React from 'react'
 import classNames from 'classnames'
-import { expect } from 'chai'
 import { shallow } from 'enzyme'
 import { card } from 'kitten/hoc/card'
 

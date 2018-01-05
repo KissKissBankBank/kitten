@@ -1,5 +1,4 @@
 import React from 'react'
-import { expect } from 'chai'
 import { mount, shallow } from 'enzyme'
 import { ImageWithCaption } from 'kitten/components/images/image-with-caption'
 
@@ -14,17 +13,17 @@ describe ('<ImageWithCaption />', () => {
 
     it('renders a <figure />', () => {
       expect(figure).to.have.tagName('figure')
-      expect(figure.hasClass('k-ImageWithCaption')).to.equal(true)
+      expect(figure.hasClass('k-ImageWithCaption')).toBe(true)
     })
 
     it('renders a <img />', () => {
       expect(image).to.have.tagName('img')
-      expect(image.hasClass('k-ImageWithCaption__img')).to.equal(true)
+      expect(image.hasClass('k-ImageWithCaption__img')).toBe(true)
     })
 
     it('renders a <figcaption />', () => {
       expect(figcaption).to.have.tagName('figcaption')
-      expect(figcaption.hasClass('k-ImageWithCaption__caption')).to.equal(true)
+      expect(figcaption.hasClass('k-ImageWithCaption__caption')).toBe(true)
     })
   })
 
@@ -52,7 +51,7 @@ describe ('<ImageWithCaption />', () => {
     const image = component.find('.k-ImageWithCaption__img')
 
     it('renders an image with good attributes', () => {
-      expect(image).to.have.length(1)
+      expect(image).toHaveLength(1)
       expect(image).to.have.attr('src', 'test')
       expect(image).to.have.attr('alt')
       expect(image).to.have.attr('width')

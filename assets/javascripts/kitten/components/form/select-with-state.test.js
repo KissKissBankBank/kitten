@@ -1,6 +1,5 @@
 import React from 'react'
 import sinon from 'sinon'
-import { expect } from 'chai'
 import { mount } from 'enzyme'
 import { SelectWithState } from 'kitten/components/form/select-with-state'
 import Select from 'react-select'
@@ -131,15 +130,15 @@ describe('<SelectWithState />', () => {
     })
 
     it('calls onChange prop callback', () => {
-      expect(onChangeSpy.calledOnce).to.equal(true)
-      expect(onChangeSpy.calledWith(defaultValue)).to.equal(true)
+      expect(onChangeSpy.calledOnce).toBe(true)
+      expect(onChangeSpy.calledWith(defaultValue)).toBe(true)
     })
 
     it('calls onInputChange prop callback', () => {
       const onInputChangeValue = { value: defaultValue, name: 'foobar' }
 
-      expect(onInputChangeSpy.calledOnce).to.equal(true)
-      expect(onInputChangeSpy.calledWith(onInputChangeValue)).to.equal(true)
+      expect(onInputChangeSpy.calledOnce).toBe(true)
+      expect(onInputChangeSpy.calledWith(onInputChangeValue)).toBe(true)
     })
   })
 
@@ -165,13 +164,13 @@ describe('<SelectWithState />', () => {
     })
 
     it('calls onChange prop with empty value', () => {
-      expect(onChangeSpy.calledWith(emptyValue)).to.equal(true)
+      expect(onChangeSpy.calledWith(emptyValue)).toBe(true)
     })
 
     it('calls onInputChange prop with empty value', () => {
       const onInputChangeValue = { value: emptyValue, name: 'foobar' }
 
-      expect(onInputChangeSpy.calledWith(onInputChangeValue)).to.equal(true)
+      expect(onInputChangeSpy.calledWith(onInputChangeValue)).toBe(true)
     })
   })
 })

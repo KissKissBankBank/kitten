@@ -1,6 +1,5 @@
 import React from 'react'
 import classNames from 'classnames'
-import { expect } from 'chai'
 import { shallow } from 'enzyme'
 import { LegoGrid } from 'kitten/components/grid/lego-grid'
 import Masonry from 'react-masonry-component'

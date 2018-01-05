@@ -1,5 +1,4 @@
 import React from 'react'
-import { expect } from 'chai'
 import { shallow } from 'enzyme'
 import { Checkbox } from 'kitten/components/form/checkbox'
 
@@ -11,12 +10,12 @@ describe('<Checkbox />', () => {
 
     it('renders an input.k-Checkbox__input', () => {
       expect(input).to.tagName('input')
-      expect(input.hasClass('k-Checkbox__input')).to.equal(true)
+      expect(input.hasClass('k-Checkbox__input')).toBe(true)
     })
 
     it('renders a label.k-Checkbox__label', () => {
       expect(label).to.tagName('label')
-      expect(label.hasClass('k-Checkbox__label')).to.equal(true)
+      expect(label.hasClass('k-Checkbox__label')).toBe(true)
     })
   })
 
@@ -34,7 +33,7 @@ describe('<Checkbox />', () => {
     const input = component.find('input')
 
     it('passes the right props to the `input` component', () => {
-      expect(input.props()).to.contains.all.keys({ disabled: true })
+      expect(input.props()).toEqual(expect.arrayContaining(Object.keys({ disabled: true })))
     })
   })
 

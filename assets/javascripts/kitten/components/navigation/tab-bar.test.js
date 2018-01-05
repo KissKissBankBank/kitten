@@ -1,5 +1,4 @@
 import React from 'react'
-import { expect } from 'chai'
 import { shallow } from 'enzyme'
 import { TabBar } from 'kitten/components/navigation/tab-bar'
 
@@ -17,15 +16,15 @@ describe('<TabBar />', () => {
   })
 
   it('has a nav', () => {
-    expect(component.find('.k-TabBar__nav')).to.have.length(1)
+    expect(component.find('.k-TabBar__nav')).toHaveLength(1)
   })
 
   it('has a list', () => {
-    expect(component.find('ul.k-TabBar__list')).to.have.length(1)
+    expect(component.find('ul.k-TabBar__list')).toHaveLength(1)
   })
 
   it('renders items', () => {
-    expect(component.find('.k-TabBar__item')).to.have.length(3)
+    expect(component.find('.k-TabBar__item')).toHaveLength(3)
   })
 
   describe('with custom classes/id', () => {
@@ -62,7 +61,7 @@ describe('<TabBar />', () => {
       )
 
       it('transforms line break with <br/>', () => {
-        expect(component.find('.item-1')).to.have.html().match(/Item<br\/>1/)
+        expect(component.find('.item-1')).to.have.html().toMatch(/Item<br\/>1/)
       })
     })
   })

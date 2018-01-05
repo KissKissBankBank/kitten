@@ -1,5 +1,4 @@
 import React from 'react'
-import { expect } from 'chai'
 import { shallow, mount } from 'enzyme'
 import { FormActions } from 'kitten/components/form/form-actions'
 
@@ -35,7 +34,7 @@ describe('<FormActions />', () => {
       <FormActions spreadOutAt="s-up" />
     )
 
-    expect(component).to.have.prop('spreadOutAt').equal('s-up')
+    expect(component).to.have.prop('spreadOutAt').toBe('s-up')
   })
 })
 

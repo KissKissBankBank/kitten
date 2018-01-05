@@ -1,5 +1,4 @@
 import React from 'react'
-import { expect } from 'chai'
 import { shallow, mount } from 'enzyme'
 import { ProjectCard } from 'kitten/components/cards/project-card'
 import { ButtonImage } from 'kitten/components/buttons/button-image'
@@ -72,9 +71,9 @@ describe('<ProjectCard />', () => {
     const buttonImageImgProps = { src: '#avatar' }
 
     it('has a <ButtonImage /> with img prop', () => {
-      expect(buttonImage).to.have.length(1)
+      expect(buttonImage).toHaveLength(1)
       expect(buttonImage.first())
-        .to.have.prop('img').deep.equal(buttonImageImgProps)
+        .to.have.prop('img').toEqual(buttonImageImgProps)
     })
   })
 
@@ -127,12 +126,11 @@ describe('<ProjectCard />', () => {
     const icon = projectCard.find(IconBadge)
 
     it('renders a <IconBadge />', () => {
-      expect(icon).to.have.length(1)
+      expect(icon).toHaveLength(1)
     })
 
     it('has good props', () => {
-      expect(icon).to.have.props([ 'children', 'style' ])
-                  .deep.equal([ 'A', { backgroundColor: '#FF0000' } ])
+      expect(icon).to.have.props([ 'children', 'style' ]).toEqual([ 'A', { backgroundColor: '#FF0000' } ])
     })
   })
 
@@ -143,7 +141,7 @@ describe('<ProjectCard />', () => {
     const title = projectCard.find(Title)
 
     it('renders a <Title />', () => {
-      expect(title).to.have.length(1)
+      expect(title).toHaveLength(1)
     })
 
     it('renders a good text', () => {
@@ -156,7 +154,7 @@ describe('<ProjectCard />', () => {
     const image = projectCard.find('.k-ProjectCard__img')
 
     it('renders an image with good href', () => {
-      expect(image).to.have.length(1)
+      expect(image).toHaveLength(1)
       expect(image).to.have.attr('src', 'test')
     })
   })
@@ -166,7 +164,7 @@ describe('<ProjectCard />', () => {
     const progress = projectCard.find(Progress)
 
     it('renders a <Progress value="42" />', () => {
-      expect(progress).to.have.length(1)
+      expect(progress).toHaveLength(1)
       expect(progress).to.have.prop('value', '42')
     })
   })
@@ -182,28 +180,28 @@ describe('<ProjectCard />', () => {
     const infos = projectCard.find('.k-ProjectCard__info')
 
     it('renders 3 blocks', () => {
-      expect(infos).to.have.length(3)
+      expect(infos).toHaveLength(3)
     })
 
     it('has a first block with text then displayed value', () => {
       const firstInfo = infos.at(0)
 
-      expect(firstInfo.props().children[0]).to.be.equal('Custom text 1')
-      expect(firstInfo.props().children[2].props.children).to.be.equal('Custom value 1')
+      expect(firstInfo.props().children[0]).toBe('Custom text 1')
+      expect(firstInfo.props().children[2].props.children).toBe('Custom value 1')
     })
 
     it('has second block with text then locked value', () => {
       const secondInfo = infos.at(1)
 
-      expect(secondInfo.props().children[0]).to.be.equal('Custom text 2')
+      expect(secondInfo.props().children[0]).toBe('Custom text 2')
       expect(secondInfo).to.have.descendants(LockIcon)
     })
 
     it('has a third block with reversed displayed items', () => {
       const firstInfo = infos.at(2)
 
-      expect(firstInfo.props().children[0].props.children).to.be.equal('Custom value 3')
-      expect(firstInfo.props().children[2]).to.be.equal('Custom text 3')
+      expect(firstInfo.props().children[0].props.children).toBe('Custom value 3')
+      expect(firstInfo.props().children[2]).toBe('Custom text 3')
     })
   })
 
@@ -232,7 +230,7 @@ describe('<ProjectCard />', () => {
     const status = projectCard.find('.k-ProjectCard__status')
 
     it('renders a status block', () => {
-      expect(status).to.have.length(1)
+      expect(status).toHaveLength(1)
       expect(status).to.have.descendants('.k-ProjectCard__status__content')
       expect(status).to.contain.text('Custom status')
     })

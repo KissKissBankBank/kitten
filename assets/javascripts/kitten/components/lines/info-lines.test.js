@@ -1,5 +1,4 @@
 import React from 'react'
-import { expect } from 'chai'
 import { shallow } from 'enzyme'
 import { InfoLines } from 'kitten/components/lines/info-lines'
 
@@ -25,7 +24,7 @@ describe('<InfoLines />', () => {
     it('has 2 elements', () => {
       const infos = infoLines.children()
 
-      expect(infos).to.have.length(2)
+      expect(infos).toHaveLength(2)
     })
   })
 

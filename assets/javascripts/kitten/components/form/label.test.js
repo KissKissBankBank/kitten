@@ -1,5 +1,4 @@
 import React from 'react'
-import { expect } from 'chai'
 import { mount, shallow } from 'enzyme'
 import { Label } from 'kitten/components/form/label'
 
@@ -50,7 +49,7 @@ describe('<Label />', () => {
 
       label.simulate('click')
 
-      expect(input).to.be.equal(document.activeElement)
+      expect(input).toBe(document.activeElement)
     })
   })
 

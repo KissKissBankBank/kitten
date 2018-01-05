@@ -1,5 +1,4 @@
 import React from 'react'
-import { expect } from 'chai'
 import { shallow } from 'enzyme'
 import { Container } from 'kitten/components/grid/container'
 import { SCREEN_SIZE_M } from 'kitten/constants/screen-config'

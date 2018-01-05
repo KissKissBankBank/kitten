@@ -1,5 +1,4 @@
 import React from 'react'
-import { expect } from 'chai'
 import { mount } from 'enzyme'
 import { Uploader } from 'kitten/components/uploaders/uploader'
 import Dropzone from 'react-dropzone'
@@ -29,7 +28,7 @@ describe('<Uploader />', () => {
     it('has a <Dropzone /> with default props', () => {
       const dropzone = component.find(Dropzone).first()
 
-      expect(dropzone).to.have.length(1)
+      expect(dropzone).toHaveLength(1)
       expect(dropzone).to.have.props({
         accept: 'image/*',
         maxSize: null,

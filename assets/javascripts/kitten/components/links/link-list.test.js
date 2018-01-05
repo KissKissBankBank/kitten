@@ -1,5 +1,4 @@
 import React from 'react'
-import { expect } from 'chai'
 import { shallow, mount } from 'enzyme'
 import { LinkList } from 'kitten/components/links/link-list'
 
@@ -21,7 +20,7 @@ describe('<LinkList />', () => {
     })
 
     it('renders 2 items', () => {
-      expect(linkList.children()).to.have.length(2)
+      expect(linkList.children()).toHaveLength(2)
     })
 
     it('has a good class on item', () => {

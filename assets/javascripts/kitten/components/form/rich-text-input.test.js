@@ -1,5 +1,4 @@
 import React from 'react'
-import { expect } from 'chai'
 import { shallow, mount } from 'enzyme'
 import { RichTextInput } from 'kitten/components/form/rich-text-input'
 

@@ -1,6 +1,5 @@
 import React from 'react'
 import sinon from 'sinon'
-import { expect } from 'chai'
 import { shallow, mount } from 'enzyme'
 import { TextInput } from 'kitten/components/form/text-input'
 import { TextInputWithLimit }
@@ -17,11 +16,11 @@ describe('<TextInputWithLimit />', () => {
     const defaultComponent = shallow(<TextInputWithLimit />)
 
     it('renders a .k-TextInputLimit', () => {
-      expect(defaultComponent.find('.k-TextInputLimit')).to.have.length(1)
+      expect(defaultComponent.find('.k-TextInputLimit')).toHaveLength(1)
     })
 
     it('renders a .k-TextInputLimit__input', () => {
-      expect(defaultComponent.find('.k-TextInputLimit__input')).to.have.length(1)
+      expect(defaultComponent.find('.k-TextInputLimit__input')).toHaveLength(1)
     })
   })
 
@@ -91,7 +90,7 @@ describe('<TextInputWithLimit />', () => {
     })
 
     it('calls the onChange prop callback', () => {
-      expect(onChangeSpy.calledOnce).to.equal(true)
+      expect(onChangeSpy.calledOnce).toBe(true)
     })
   })
 })

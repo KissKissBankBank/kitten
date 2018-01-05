@@ -1,5 +1,4 @@
 import React from 'react'
-import { expect } from 'chai'
 import { shallow } from 'enzyme'
 import { TagList } from 'kitten/components/lists/tag-list'
 import { TypologyTagIcon } from 'kitten/components/icons/typology-tag-icon'
@@ -27,7 +26,7 @@ describe('<TagList />', () => {
     })
 
     it('renders 2 items', () => {
-      expect(tagList.children()).to.have.length(2)
+      expect(tagList.children()).toHaveLength(2)
     })
 
     it('has a first child with good class', () => {

@@ -1,5 +1,4 @@
 import React from 'react'
-import { expect } from 'chai'
 import { shallow } from 'enzyme'
 import { Progress } from 'kitten/components/meters/progress'
 
@@ -8,7 +7,7 @@ describe('<Progress />', () => {
     const defaultComponent = shallow(<Progress />)
 
     it('renders <div class="k-Progress">', () => {
-      expect(defaultComponent.find('.k-Progress')).to.have.length(1)
+      expect(defaultComponent.find('.k-Progress')).toHaveLength(1)
     })
   })
 

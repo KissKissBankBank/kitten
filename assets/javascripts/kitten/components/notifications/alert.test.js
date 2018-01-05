@@ -1,6 +1,5 @@
 import React from 'react'
 import classNames from 'classnames'
-import { expect } from 'chai'
 import { shallow, mount } from 'enzyme'
 import sinon from 'sinon'
 import { Alert } from 'kitten/components/notifications/alert'
@@ -35,8 +34,8 @@ describe('<Alert />', () => {
     })
 
     it('has initial state', () => {
-      expect(alert.state().show).to.be.true
-      expect(alert.state().height).to.be.equal('auto')
+      expect(alert.state().show).toBe(true)
+      expect(alert.state().height).toBe('auto')
     })
   })
 
@@ -44,7 +43,7 @@ describe('<Alert />', () => {
     const alert = shallow(<Alert show={ false } />)
 
     it('don\'t show the alert', () => {
-      expect(alert).to.be.empty
+      expect(Object.keys(alert)).toHaveLength(0)
     })
   })
 
@@ -127,7 +126,7 @@ describe('<Alert />', () => {
     })
 
     it('calls onClose prop callback', () => {
-      expect(onCloseSpy.calledOnce).to.equal(true)
+      expect(onCloseSpy.calledOnce).toBe(true)
     })
   })
 
@@ -143,7 +142,7 @@ describe('<Alert />', () => {
     })
 
     it('has handleAnimationEnd in onAnimationEnd attribute', () => {
-      expect(onCloseSpy.calledOnce).to.equal(true)
+      expect(onCloseSpy.calledOnce).toBe(true)
     })
   })
 
@@ -156,8 +155,8 @@ describe('<Alert />', () => {
     })
 
     it('changes state', () => {
-      expect(alert.state().show).to.be.false
-      expect(alert.state().height).not.to.be.equal('auto')
+      expect(alert.state().show).toBe(false)
+      expect(alert.state().height).not.toBe('auto')
     })
 
     it('has a hidden class', () => {

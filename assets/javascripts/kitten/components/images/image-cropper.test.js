@@ -1,6 +1,5 @@
 import React from 'react'
 import sinon from 'sinon'
-import { expect } from 'chai'
 import { mount } from 'enzyme'
 import { ImageCropper } from 'kitten/components/images/image-cropper'
 import Cropper from 'react-cropper'
@@ -17,7 +16,7 @@ describe('<ImageCropper />', () => {
     const component = mount(<ImageCropper />)
 
     it('has an <ImageCropper />', () => {
-      expect(component.find(ImageCropper)).to.have.length(1)
+      expect(component.find(ImageCropper)).toHaveLength(1)
     })
 
     it('has default props', () => {
@@ -40,7 +39,7 @@ describe('<ImageCropper />', () => {
       }
 
       expect(component.props()).to.contains(expectedProps)
-      expect(component.props().onChange).to.be.a('function')
+      expect(typeof component.props().onChange).toBe('function')
     })
 
     it('has a default state', () => {
@@ -59,19 +58,19 @@ describe('<ImageCropper />', () => {
         fileName: null,
       }
 
-      expect(component.state()).to.eql(defaultState)
+      expect(component.state()).toEqual(defaultState)
     })
 
     it('doesn\'t render a Cropper', () => {
       const cropper = component.find(Cropper)
 
-      expect(cropper).to.have.length(0)
+      expect(cropper).toHaveLength(0)
     })
 
     it('renders a SimpleUploader', () => {
       const uploader = component.find(SimpleUploader)
 
-      expect(uploader).to.have.length(1)
+      expect(uploader).toHaveLength(1)
     })
 
     it('passes the right props to SimpleUploader', () => {
@@ -86,9 +85,9 @@ describe('<ImageCropper />', () => {
       }
 
       expect(uploader.props()).to.contains(expectedProps)
-      expect(uploader.props().onSuccess).to.be.a('function')
-      expect(uploader.props().onError).to.be.a('function')
-      expect(uploader.props().onReset).to.be.a('function')
+      expect(typeof uploader.props().onSuccess).toBe('function')
+      expect(typeof uploader.props().onError).toBe('function')
+      expect(typeof uploader.props().onReset).toBe('function')
     })
   })
 
@@ -99,7 +98,7 @@ describe('<ImageCropper />', () => {
       it('doesn\'t render a Cropper component', () => {
         const cropper = component.find(Cropper)
 
-        expect(cropper).to.have.length(0)
+        expect(cropper).toHaveLength(0)
       })
     })
 
@@ -110,7 +109,7 @@ describe('<ImageCropper />', () => {
       const cropper = component.find(Cropper)
 
       it(' renders a Cropper component', () => {
-        expect(cropper).to.have.length(1)
+        expect(cropper).toHaveLength(1)
       })
 
       it('passes the right props to the Cropper component', () => {
@@ -131,13 +130,13 @@ describe('<ImageCropper />', () => {
         }
 
         expect(cropper.props()).to.contains(expectedProps)
-        expect(cropper.props().style).to.eql({ width: 200, height: 100 })
+        expect(cropper.props().style).toEqual({ width: 200, height: 100 })
       })
 
       it('renders the slider and the cropper info', () => {
         const slider = component.find('.k-Slider')
 
-        expect(slider).to.have.length(1)
+        expect(slider).toHaveLength(1)
         expect(component.text()).to.contains('Zoom…')
         expect(component.text()).to.contains('Move the image…')
       })
@@ -153,13 +152,13 @@ describe('<ImageCropper />', () => {
         const cropper = component.find(Cropper)
 
         it('passes dragMode prop to `none` to the Cropper component', () => {
-          expect(cropper.props().dragMode).to.eql('none')
+          expect(cropper.props().dragMode).toEqual('none')
         })
 
         it('doesn\'t render the slider and the cropper info', () => {
           const slider = component.find('.k-Slider')
 
-          expect(slider).to.have.length(0)
+          expect(slider).toHaveLength(0)
           expect(component.text()).not.to.contains('Zoom…')
           expect(component.text()).not.to.contains('Move the image…')
         })
@@ -176,7 +175,7 @@ describe('<ImageCropper />', () => {
     const uploader = component.find(SimpleUploader)
 
     it('doesn\'t render the delete button', () => {
-      expect(uploader.props()).to.contain({ deletable: false })
+      expect(uploader.props()).toMatchObject({ deletable: false })
     })
   })
 })

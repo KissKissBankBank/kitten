@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { expect } from 'chai'
 import { shallow, mount } from 'enzyme'
 import { SimilarProjectsCard } from
   'kitten/components/cards/similar-projects-card'
@@ -65,7 +64,7 @@ describe('<SimilarProjectsCard />', () => {
     const staticSimilarProjectCard = similarProjectsCard.find(SimilarProjectCard)
 
     it('is renders <SimilarProjectCard />', () => {
-      expect(staticSimilarProjectCard).to.have.length(1)
+      expect(staticSimilarProjectCard).toHaveLength(1)
     })
 
     it('passes the right props', () => {
@@ -84,10 +83,8 @@ describe('<SimilarProjectsCard />', () => {
 
       expect(staticSimilarProjectCard.props()).to.contains(expectedProps)
       expect(staticSimilarProjectCard.props()).not.to.contains(projectProps)
-      expect(staticSimilarProjectCard.props().onLeftArrowClick)
-        .to.be.a('function')
-      expect(staticSimilarProjectCard.props().onRightArrowClick)
-        .to.be.a('function')
+      expect(typeof staticSimilarProjectCard.props().onLeftArrowClick).toBe('function')
+      expect(typeof staticSimilarProjectCard.props().onRightArrowClick).toBe('function')
     })
   })
 

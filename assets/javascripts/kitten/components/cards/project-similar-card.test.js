@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { expect } from 'chai'
 import { shallow, mount } from 'enzyme'
 import { SimilarProjectCard }
   from 'kitten/components/cards/project-similar-card'
@@ -31,7 +30,7 @@ describe('<SimilarProjectCard />', () => {
 
       const content = similarProjectCard.find('.k-ProjectSimilarCard__content')
 
-      expect(content).to.have.length(1)
+      expect(content).toHaveLength(1)
     })
 
     describe('left arrow', () => {
@@ -60,7 +59,7 @@ describe('<SimilarProjectCard />', () => {
     const image = similarProjectCard.find('.k-ProjectSimilarCard__img')
 
     it('renders an image with good href', () => {
-      expect(image).to.have.length(1)
+      expect(image).toHaveLength(1)
       expect(image).to.have.attr('src', 'test')
     })
   })
@@ -72,7 +71,7 @@ describe('<SimilarProjectCard />', () => {
 
     it('renders a <Title />', () => {
       expect(similarProjectCard).to.have.descendants(Title)
-      expect(title.text()).to.equal("Custom title")
+      expect(title.text()).toBe("Custom title")
     })
   })
 
@@ -83,7 +82,7 @@ describe('<SimilarProjectCard />', () => {
 
     it('renders a <Paragraph />', () => {
       expect(similarProjectCard).to.have.descendants(Paragraph)
-      expect(paragraph.text()).to.equal("Custom paragraph")
+      expect(paragraph.text()).toBe("Custom paragraph")
     })
   })
 
@@ -131,7 +130,7 @@ describe('<SimilarProjectCard />', () => {
     const infos = similarProjectCard.find('.k-ProjectSimilarCard__info')
 
     it('renders 3 blocks', () => {
-      expect(infos).to.have.length(3)
+      expect(infos).toHaveLength(3)
     })
 
     it('has a first block with good values', () => {
@@ -172,7 +171,7 @@ describe('<SimilarProjectCard />', () => {
 
     it('render <Loader />', () => {
       expect(similarProjectCard).to.have.descendants(Loader)
-      expect(loader).to.have.length(1)
+      expect(loader).toHaveLength(1)
     })
   })
 
@@ -182,7 +181,7 @@ describe('<SimilarProjectCard />', () => {
 
     it('render <Loader />', () => {
       expect(similarProjectCard).to.have.descendants(Loader)
-      expect(loader).to.have.length(1)
+      expect(loader).toHaveLength(1)
     })
   })
 
@@ -209,7 +208,7 @@ describe('<SimilarProjectCard />', () => {
     )
 
     it('attaches the right handler to refresh link onClick prop', () => {
-      expect(refreshLink.props().onClick).to.equal(handleRefreshClick)
+      expect(refreshLink.props().onClick).toBe(handleRefreshClick)
     })
   })
 
@@ -239,7 +238,7 @@ describe('<SimilarProjectCard />', () => {
     const leftArrowButton = similarProjectCard.find('.k-ButtonIcon').first()
 
     it('attaches the right handler to left arrow button onClick prop', () => {
-      expect(leftArrowButton.props().onClick).to.equal(handleOnLeftArrowClick)
+      expect(leftArrowButton.props().onClick).toBe(handleOnLeftArrowClick)
     })
   })
 
@@ -251,7 +250,7 @@ describe('<SimilarProjectCard />', () => {
     const rightArrowButton = similarProjectCard.find('.k-ButtonIcon').last()
 
     it('attaches the right handler to right arrow button onClick prop', () => {
-      expect(rightArrowButton.props().onClick).to.equal(handleOnRightArrowClick)
+      expect(rightArrowButton.props().onClick).toBe(handleOnRightArrowClick)
     })
   })
 

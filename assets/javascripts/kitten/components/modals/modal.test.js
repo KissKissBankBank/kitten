@@ -1,6 +1,5 @@
 import React from 'react'
 import classNames from 'classnames'
-import { expect } from 'chai'
 import { shallow, mount } from 'enzyme'
 import { Modal } from 'kitten/components/modals/modal'
 

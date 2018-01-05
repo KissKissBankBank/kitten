@@ -1,5 +1,4 @@
 import React from 'react'
-import { expect } from 'chai'
 import {
   getJoinedQueries,
   createMatchMedia,
@@ -33,7 +32,7 @@ describe('utils MediaQueries', () => {
       const query = getJoinedQueries(['(min-width: 800px)'])
 
       it('by passing one query', () => {
-        expect(query).to.equal('(min-width: 800px)')
+        expect(query).toBe('(min-width: 800px)')
       })
     })
 
@@ -43,7 +42,7 @@ describe('utils MediaQueries', () => {
       )
 
       it('by passing two queries', () => {
-        expect(query).to.equal('(min-width: 800px) and (max-width: 1280px)')
+        expect(query).toBe('(min-width: 800px) and (max-width: 1280px)')
       })
     })
 
@@ -51,7 +50,7 @@ describe('utils MediaQueries', () => {
       const query = getJoinedQueries([])
 
       it('by passing empty array', () => {
-        expect(query).to.equal('')
+        expect(query).toBe('')
       })
     })
 
@@ -59,7 +58,7 @@ describe('utils MediaQueries', () => {
       const query = getJoinedQueries(['(min-width: 800px)', null])
 
       it('by passing one good query and a null', () => {
-        expect(query).to.equal('(min-width: 800px)')
+        expect(query).toBe('(min-width: 800px)')
       })
     })
   })
@@ -71,7 +70,7 @@ describe('utils MediaQueries', () => {
       const mq = createMatchMedia('(max-width: 800px)')
 
       it('by passing a mediaQueryString', () => {
-        expect(mq).to.not.be.undefined
+        expect(mq).toBeDefined()
       })
     })
 
@@ -80,7 +79,7 @@ describe('utils MediaQueries', () => {
       const mq = createMatchMedia()
 
       it('by ommiting mediaQueryString', () => {
-        expect(mq).to.be.undefined
+        expect(mq).toBeUndefined()
       })
     })
 
@@ -89,7 +88,7 @@ describe('utils MediaQueries', () => {
       const mq = createMatchMedia('')
 
       it('by passing empty mediaQueryString', () => {
-        expect(mq).to.be.undefined
+        expect(mq).toBeUndefined()
       })
     })
   })
@@ -101,7 +100,7 @@ describe('utils MediaQueries', () => {
       const mq = createMatchMediaMin(SCREEN_SIZE_S)
 
       it('by passing a valid config name', () => {
-        expect(mq).to.not.be.undefined
+        expect(mq).toBeDefined()
       })
     })
 
@@ -110,7 +109,7 @@ describe('utils MediaQueries', () => {
       const mq = createMatchMediaMin('TOTO')
 
       it('by passing an invalid config name', () => {
-        expect(mq).to.be.undefined
+        expect(mq).toBeUndefined()
       })
     })
 
@@ -119,7 +118,7 @@ describe('utils MediaQueries', () => {
       const mq = createMatchMediaMin()
 
       it('by ommiting a config name', () => {
-        expect(mq).to.be.undefined
+        expect(mq).toBeUndefined()
       })
     })
   })
@@ -131,7 +130,7 @@ describe('utils MediaQueries', () => {
       const mq = createMatchMediaMax(SCREEN_SIZE_M)
 
       it('by passing a valid config name', () => {
-        expect(mq).to.not.be.undefined
+        expect(mq).toBeDefined()
       })
     })
 
@@ -140,7 +139,7 @@ describe('utils MediaQueries', () => {
       const mq = createMatchMediaMax('TOTO')
 
       it('by passing an invalid config name', () => {
-        expect(mq).to.be.undefined
+        expect(mq).toBeUndefined()
       })
     })
 
@@ -149,7 +148,7 @@ describe('utils MediaQueries', () => {
       const mq = createMatchMediaMax()
 
       it('by ommiting a config name', () => {
-        expect(mq).to.be.undefined
+        expect(mq).toBeUndefined()
       })
     })
   })
@@ -161,7 +160,7 @@ describe('utils MediaQueries', () => {
       const mq = createMatchMediaWithin(SCREEN_SIZE_S, SCREEN_SIZE_M)
 
       it('by passing a valid config name', () => {
-        expect(mq).to.not.be.undefined
+        expect(mq).toBeDefined()
       })
     })
 
@@ -170,7 +169,7 @@ describe('utils MediaQueries', () => {
       const mq = createMatchMediaWithin(SCREEN_SIZE_S, 'TOTO')
 
       it('by passing at least one good config name', () => {
-        expect(mq).to.not.be.undefined
+        expect(mq).toBeDefined()
       })
     })
 
@@ -179,7 +178,7 @@ describe('utils MediaQueries', () => {
       const mq = createMatchMediaWithin()
 
       it('by ommiting a config name', () => {
-        expect(mq).to.be.undefined
+        expect(mq).toBeUndefined()
       })
     })
   })

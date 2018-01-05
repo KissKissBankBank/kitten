@@ -1,5 +1,4 @@
 import React from 'react'
-import { expect } from 'chai'
 import { mount } from 'enzyme'
 import { Loader } from 'kitten/components/loaders/loader'
 
@@ -16,7 +15,7 @@ describe('<Loader />', () => {
     })
 
     it('has 3 circles', () => {
-      expect(loader.find('.k-Loader__circle')).to.have.length(3)
+      expect(loader.find('.k-Loader__circle')).toHaveLength(3)
     })
   })
 

@@ -1,5 +1,4 @@
 import React from 'react'
-import { expect } from 'chai'
 import { shallow, mount } from 'enzyme'
 import { Title } from 'kitten/components/typography/title'
 import { InformationBox } from 'kitten/components/box/information-box'
@@ -9,7 +8,7 @@ describe('<InformationBox />', () => {
     const defaultComponent = shallow(<InformationBox />)
 
     it('renders .k-InformationBox', () => {
-      expect(defaultComponent.find('.k-InformationBox')).to.have.length(1)
+      expect(defaultComponent.find('.k-InformationBox')).toHaveLength(1)
     })
   })
 
@@ -20,7 +19,7 @@ describe('<InformationBox />', () => {
     const title = component.find(Title)
 
     it('renders a <Title />', () => {
-      expect(title).to.have.length(1)
+      expect(title).toHaveLength(1)
     })
   })
 

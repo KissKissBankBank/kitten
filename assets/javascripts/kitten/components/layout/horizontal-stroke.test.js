@@ -1,5 +1,4 @@
 import React from 'react'
-import { expect } from 'chai'
 import { shallow } from 'enzyme'
 import { HorizontalStroke } from 'kitten/components/layout/horizontal-stroke'
 

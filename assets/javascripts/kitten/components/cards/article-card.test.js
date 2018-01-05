@@ -1,5 +1,4 @@
 import React from 'react'
-import { expect } from 'chai'
 import { shallow, mount } from 'enzyme'
 import { ArticleCard } from 'kitten/components/cards/article-card'
 import { Title } from 'kitten/components/typography/title'
@@ -108,7 +107,7 @@ describe('<ArticleCard />', () => {
 
     it('has good props on <ButtonImage />', () => {
       expect(buttonImage)
-        .to.have.prop('img').deep.equal({
+        .to.have.prop('img').toEqual({
           src: '#foobar',
           alt: 'FooBar',
           style: {
