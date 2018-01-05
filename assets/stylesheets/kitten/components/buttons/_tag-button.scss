@@ -33,7 +33,7 @@
 
 @mixin k-TagButton {
   $font: 'regular';
-  $border-size: 1px;
+  $border-size: 2px;
 
   // Size settings tag-button.
   $tag-button-size-tiny: 30px - ($border-size * 2);
@@ -48,8 +48,28 @@
   $tag-button-min-width-big: 80px - ($border-size * 2);
   $tag-button-line-height-big: 50px - ($border-size * 2);
 
-  // The tag button has a radius of .25rem
-  $tag-button-radius: .25rem;
+  // The tag button has a radius of 4px
+  $tag-button-radius: k-px-to-rem(4px);
+
+  // Base
+  $color: map-get($k-colors,'font-1');
+  $border-color: map-get($k-colors,'line-1');
+  $background-color: map-get($k-colors,'background-1');
+
+  // Focus
+  $color-focus: map-get($k-colors,'primary-1');
+  $border-color-focus: map-get($k-colors,'primary-1');
+  $background-color-focus: map-get($k-colors,'background-1');
+
+  // Hover
+  $color-hover: map-get($k-colors,'primary-1');
+  $border-color-hover: map-get($k-colors,'primary-1');
+  $background-color-hover: map-get($k-colors,'background-1');
+
+  // Active and `is-selected`
+  $color-active: map-get($k-colors,'background-1');
+  $border-color-active: map-get($k-colors,'primary-1');
+  $background-color-active: map-get($k-colors,'primary-1');
 
   // Button font-size is computed using a modular scale and a defined step of
   // this scale.
@@ -66,10 +86,34 @@
     border-radius: $tag-button-radius;
     min-height: $tag-button-line-height;
     min-width: $tag-button-min-width;
-  }
 
-  .k-TagButton--hydrogen {
-    @include k-buttonColors('hydrogen', (svg: false));
+    color: $color;
+    background-color: $background-color;
+    border-color: $border-color;
+
+    &:focus {
+      color: $color-focus;
+      background-color: $background-color-focus;
+      border-color: $border-color-focus;
+    }
+
+    &:hover {
+      color: $color-hover;
+      background-color: $background-color-hover;
+      border-color: $border-color-hover;
+    }
+
+    &:active {
+      color: $color-active;
+      background-color: $background-color-active;
+      border-color: $border-color-active;
+    }
+
+    &.is-selected {
+      color: $color-active;
+      background-color: $background-color-active;
+      border-color: $border-color-active;
+    }
   }
 
   // Size modifier.
