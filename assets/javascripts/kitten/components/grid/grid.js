@@ -1,20 +1,22 @@
-import React from 'react'
+import React, { Component } from 'react'
 import classNames from 'classnames'
-import Radium, { StyleRoot } from 'radium'
 import { ScreenConfig } from 'kitten/constants/screen-config'
 
-class GridBase extends React.Component {
+export class Grid extends Component {
   render() {
     const { className, ...others } = this.props
     const gridClassName = classNames('k-Grid', className)
 
     return (
-      <div className={ gridClassName } { ...others } />
+      <div
+        className={ gridClassName }
+        { ...others }
+      />
     )
   }
 }
 
-class GridColBase extends React.Component {
+export class GridCol extends React.Component {
   classByMediaQuery() {
     const props = this.props
 
@@ -55,20 +57,20 @@ class GridColBase extends React.Component {
     })
 
     return (
-      <div { ...others } className={ gridClassNames } />
+      <div
+        { ...others }
+        className={ gridClassNames }
+      />
     )
   }
 }
 
-GridBase.defaultProps = {
+Grid.defaultProps = {
   className: null,
 }
 
-GridColBase.defaultProps = {
+GridCol.defaultProps = {
   col: '12',
   offset: null,
   className: null,
 }
-
-export const Grid = Radium(GridBase)
-export const GridCol = Radium(GridColBase)
