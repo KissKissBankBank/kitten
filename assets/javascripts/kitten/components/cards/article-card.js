@@ -177,7 +177,7 @@ const styles = {
     padding: `0 ${COMPONENT_GUTTER}px`,
   },
   stroke: {
-    marginRight: `${COMPONENT_GUTTER}px`,
+    margin: `5px ${COMPONENT_GUTTER}px 5px 0`,
   },
 }
 
