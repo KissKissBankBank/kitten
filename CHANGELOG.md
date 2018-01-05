@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Center `k-TextInput--twoDigits` classname.
+- Feature: Update `ProjectCard` with the new design.
+- Fix: Cleaning the use of Radium.
 - Feature: Update all `TextInput` to manage input radius.
 - Feature: Add `rounded` prop in `ButtonIcon` component.
 - Feature: Update `QuestionMarkIcon` component with styleguide V2.
