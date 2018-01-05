@@ -130,17 +130,17 @@
     cursor: pointer;
     transition: all $transition-speed;
 
-    & .k-SearchInput__submit__svgPath {
-      fill: $submit-color;
-    }
-
-    & .k-SearchInput__submit__svgCircle {
-      stroke: $submit-color;
-    }
-
     svg {
       display: block;
       margin: 0 auto;
+    }
+
+    .k-SearchInput__submit__svgPath {
+      fill: $submit-color;
+    }
+
+    .k-SearchInput__submit__svgCircle {
+      stroke: $submit-color;
     }
 
     &:focus {
