@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Update all `TextInput` to manage input radius.
 - Feature: Add `rounded` prop in `ButtonIcon` component.
 - Feature: Update `QuestionMarkIcon` component with styleguide V2.
 - Breaking change:
