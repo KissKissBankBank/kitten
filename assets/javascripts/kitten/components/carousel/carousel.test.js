@@ -49,7 +49,7 @@ describe('<Carousel />', () => {
     )
 
     test('is a <Grid />', () => {
-      expect(carousel.dive().hasClass('k-Grid')).to.equal(true)
+      expect(carousel.dive().hasClass('k-Grid')).toBe(true)
     })
   })
 
@@ -73,7 +73,7 @@ describe('<Carousel />', () => {
     )
 
     test('is a <Grid />', () => {
-      expect(carousel.dive().hasClass('k-Grid')).to.equal(true)
+      expect(carousel.dive().hasClass('k-Grid')).toBe(true)
     })
   })
 

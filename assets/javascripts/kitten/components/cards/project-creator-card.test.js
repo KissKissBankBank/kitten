@@ -16,7 +16,7 @@ describe('<ProjectCreatorCard />', () => {
     })
 
     test('has a default class', () => {
-      expect(projectCreatorCard.hasClass('k-ProjectCreatorCard')).to.equal(true)
+      expect(projectCreatorCard.hasClass('k-ProjectCreatorCard')).toBe(true)
     })
   })
 
@@ -96,7 +96,7 @@ describe('<ProjectCreatorCard />', () => {
     })
 
     test('renders darker attributes', () => {
-      expect(separator.hasClass('k-Separator--darker')).to.equal(true)
+      expect(separator.hasClass('k-Separator--darker')).toBe(true)
     })
   })
 

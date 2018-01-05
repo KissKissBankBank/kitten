@@ -23,7 +23,7 @@ describe('ButtonQuestionMarkIcon />', () => {
     const button = shallow(<QuestionMarkIcon className="custom__class" />)
 
     test('has custom class', () => {
-      expect(button.hasClass('custom__class')).to.equal(true)
+      expect(button.hasClass('custom__class')).toBe(true)
     })
   })
 })

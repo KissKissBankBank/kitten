@@ -6,7 +6,7 @@ describe('<DocLinkBox />', () => {
   const component = shallow(<DocLinkBox />)
 
   test('renders a <LinkBox />', () => {
-    expect(component).toContain(LinkBox)
+    expect(component.find('LinkBox')).toHaveLength(1)
   })
 
   test('renders an svg icon', () => {

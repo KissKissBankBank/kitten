@@ -23,7 +23,7 @@ describe('<Text />', () => {
     const component = shallow(<Text className="custom__class" />)
 
     test('has a good class', () => {
-      expect(component.hasClass('custom__class')).to.equal(true)
+      expect(component.hasClass('custom__class')).toBe(true)
     })
   })
 
@@ -39,7 +39,7 @@ describe('<Text />', () => {
     const component = shallow(<Text weight="light" />)
 
     test('has a good utility class', () => {
-      expect(component.hasClass('k-u-weight-light')).to.equal(true)
+      expect(component.hasClass('k-u-weight-light')).toBe(true)
     })
   })
 
@@ -47,7 +47,7 @@ describe('<Text />', () => {
     const component = shallow(<Text size="nano" />)
 
     test('has a good utility class', () => {
-      expect(component.hasClass('k-u-size-nano')).to.equal(true)
+      expect(component.hasClass('k-u-size-nano')).toBe(true)
     })
   })
 
@@ -55,7 +55,7 @@ describe('<Text />', () => {
     const component = shallow(<Text lineHeight="normal" />)
 
     test('has a good utility class', () => {
-      expect(component.hasClass('k-u-line-height-normal')).to.equal(true)
+      expect(component.hasClass('k-u-line-height-normal')).toBe(true)
     })
   })
 
@@ -63,7 +63,7 @@ describe('<Text />', () => {
     const component = shallow(<Text color="error" />)
 
     test('has a good utility class', () => {
-      expect(component.hasClass('k-u-color-error')).to.equal(true)
+      expect(component.hasClass('k-u-color-error')).toBe(true)
     })
   })
 
@@ -71,7 +71,7 @@ describe('<Text />', () => {
     const component = shallow(<Text style="italic" />)
 
     test('has a good utility class', () => {
-      expect(component.hasClass('k-u-style-italic')).to.equal(true)
+      expect(component.hasClass('k-u-style-italic')).toBe(true)
     })
   })
 
@@ -79,7 +79,7 @@ describe('<Text />', () => {
     const component = shallow(<Text transform="uppercase" />)
 
     test('has a good utility class', () => {
-      expect(component.hasClass('k-u-transform-uppercase')).to.equal(true)
+      expect(component.hasClass('k-u-transform-uppercase')).toBe(true)
     })
   })
 
@@ -87,7 +87,7 @@ describe('<Text />', () => {
     const component = shallow(<Text decoration="underline" />)
 
     test('has a good utility class', () => {
-      expect(component.hasClass('k-u-decoration-underline')).to.equal(true)
+      expect(component.hasClass('k-u-decoration-underline')).toBe(true)
     })
   })
 })

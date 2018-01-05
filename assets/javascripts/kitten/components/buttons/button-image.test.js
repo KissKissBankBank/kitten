@@ -11,7 +11,7 @@ describe('<ButtonImage />', () => {
     })
 
     test('has default classes', () => {
-      expect(button.hasClass('k-ButtonImage')).to.equal(true)
+      expect(button.hasClass('k-ButtonImage')).toBe(true)
       expect(button).to.have.descendants('.k-ButtonImage__img')
     })
   })
@@ -32,7 +32,7 @@ describe('<ButtonImage />', () => {
     const button = shallow(<ButtonImage className="custom__class" />)
 
     test('has a custom class', () => {
-      expect(button.hasClass('custom__class')).to.equal(true)
+      expect(button.hasClass('custom__class')).toBe(true)
     })
   })
 
@@ -40,7 +40,7 @@ describe('<ButtonImage />', () => {
     const button = shallow(<ButtonImage tiny />)
 
     test('has a tiny class', () => {
-      expect(button.hasClass('k-ButtonImage--tiny')).to.equal(true)
+      expect(button.hasClass('k-ButtonImage--tiny')).toBe(true)
     })
   })
 
@@ -48,7 +48,7 @@ describe('<ButtonImage />', () => {
     const button = shallow(<ButtonImage big />)
 
     test('has a big class', () => {
-      expect(button.hasClass('k-ButtonImage--big')).to.equal(true)
+      expect(button.hasClass('k-ButtonImage--big')).toBe(true)
     })
   })
 
@@ -74,7 +74,7 @@ describe('<ButtonImage />', () => {
     })
 
     test('renders an image with custom class', () => {
-      expect(image.hasClass('custom__class')).to.equal(true)
+      expect(image.hasClass('custom__class')).toBe(true)
     })
 
     test('renders an image with custom attribute', () => {
@@ -86,7 +86,7 @@ describe('<ButtonImage />', () => {
     const button = shallow(<ButtonImage withoutPointerEvents />)
 
     test('has a good class', () => {
-      expect(button.hasClass('k-ButtonImage--withoutPointerEvents')).to.equal(true)
+      expect(button.hasClass('k-ButtonImage--withoutPointerEvents')).toBe(true)
     })
   })
 
@@ -94,7 +94,7 @@ describe('<ButtonImage />', () => {
     const button = shallow(<ButtonImage withBorder />)
 
     test('has a good class', () => {
-      expect(button.hasClass('k-ButtonImage--withBorder')).to.equal(true)
+      expect(button.hasClass('k-ButtonImage--withBorder')).toBe(true)
     })
   })
 })

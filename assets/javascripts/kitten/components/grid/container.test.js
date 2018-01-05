@@ -18,7 +18,7 @@ describe('<Container />', () => {
     })
 
     test('has a default class', () => {
-      expect(container.hasClass('k-Container')).to.equal(true)
+      expect(container.hasClass('k-Container')).toBe(true)
     })
   })
 
@@ -26,7 +26,7 @@ describe('<Container />', () => {
     const container = shallow(<Container className="custom__class" />)
 
     test('has a custom class', () => {
-      expect(container.hasClass('custom__class')).to.equal(true)
+      expect(container.hasClass('custom__class')).toBe(true)
     })
   })
 
@@ -63,7 +63,7 @@ describe('<Container />', () => {
       )
 
       test('has class no-padding', () => {
-        expect(container.hasClass('k-Container--no-padding')).to.equal(true)
+        expect(container.hasClass('k-Container--no-padding')).toBe(true)
       })
     })
 

@@ -16,7 +16,7 @@ describe('<LinkList />', () => {
     })
 
     test('has default class', () => {
-      expect(linkList.hasClass('k-LinkList')).to.equal(true)
+      expect(linkList.hasClass('k-LinkList')).toBe(true)
     })
 
     test('renders 2 items', () => {
@@ -25,7 +25,7 @@ describe('<LinkList />', () => {
 
     test('has a good class on item', () => {
       const firstItem = linkList.children().first()
-      expect(firstItem.hasClass('k-LinkList__item')).to.equal(true)
+      expect(firstItem.hasClass('k-LinkList__item')).toBe(true)
     })
   })
 
@@ -35,7 +35,7 @@ describe('<LinkList />', () => {
     )
 
     test('has a custom class', () => {
-      expect(linkList.hasClass('custom__class')).to.equal(true)
+      expect(linkList.hasClass('custom__class')).toBe(true)
     })
   })
 
@@ -43,7 +43,7 @@ describe('<LinkList />', () => {
     const linkList = shallow(<LinkList margin={ false } />)
 
     test('has a good class', () => {
-      expect(linkList.hasClass('k-LinkList--withoutMargin')).to.equal(true)
+      expect(linkList.hasClass('k-LinkList--withoutMargin')).toBe(true)
     })
   })
 
@@ -59,7 +59,7 @@ describe('<LinkList />', () => {
     test('has second block with active link', () => {
       const secondItem = linkList.find('.k-LinkList__link').at(1)
 
-      expect(secondItem.hasClass('is-active')).to.equal(true)
+      expect(secondItem.hasClass('is-active')).toBe(true)
       expect(secondItem).to.contain.text('Bar')
     })
   })
@@ -74,7 +74,7 @@ describe('<LinkList />', () => {
     const item = linkList.find('.k-LinkList__link').at(0)
 
     test('has a good class', () => {
-      expect(item.hasClass('k-LinkList__link--dark')).to.equal(true)
+      expect(item.hasClass('k-LinkList__link--dark')).toBe(true)
     })
   })
 })

@@ -15,7 +15,7 @@ describe('<Header />', () => {
 
   test('renders a <header class="k-Header" />', () => {
     expect(header).to.have.tagName('header')
-    expect(header.hasClass('k-Header')).to.equal(true)
+    expect(header.hasClass('k-Header')).toBe(true)
     expect(header).to.have.attr('role', 'banner')
   })
 
@@ -37,7 +37,7 @@ describe('<Header />', () => {
     const header = shallow(<Header fixed={ true } />)
 
     test('has `.is-fixed` class', () => {
-      expect(header.hasClass('is-fixed')).to.equal(true)
+      expect(header.hasClass('is-fixed')).toBe(true)
     })
   })
 })
@@ -50,7 +50,7 @@ describe('<HeaderItems />', () => {
   )
 
   test('renders a <div class="k-Header__items" />', () => {
-    expect(headerItems.hasClass('k-Header__items')).to.equal(true)
+    expect(headerItems.hasClass('k-Header__items')).toBe(true)
   })
 
   test('renders children', () => {
@@ -61,7 +61,7 @@ describe('<HeaderItems />', () => {
     const headerItems = shallow(<HeaderItems fixedSize={ true } />)
 
     test('has a custom class', () => {
-      expect(headerItems.hasClass('k-Header__items--fixedSize')).to.equal(true)
+      expect(headerItems.hasClass('k-Header__items--fixedSize')).toBe(true)
     })
   })
 })
@@ -74,7 +74,7 @@ describe('<HeaderItem />', () => {
   )
 
   test('renders a <div class="k-Header__item" />', () => {
-    expect(headerItem.hasClass('k-Header__item')).to.equal(true)
+    expect(headerItem.hasClass('k-Header__item')).toBe(true)
   })
 
   test('renders children', () => {
@@ -85,7 +85,7 @@ describe('<HeaderItem />', () => {
     const headerItem = shallow(<HeaderItem fixedSize={ true } />)
 
     test('has a custom class', () => {
-      expect(headerItem.hasClass('k-Header__item--fixedSize')).to.equal(true)
+      expect(headerItem.hasClass('k-Header__item--fixedSize')).toBe(true)
     })
   })
 
@@ -93,7 +93,7 @@ describe('<HeaderItem />', () => {
     const headerItem = shallow(<HeaderItem centered={ true } />)
 
     test('has a custom class', () => {
-      expect(headerItem.hasClass('k-Header__item--centered')).to.equal(true)
+      expect(headerItem.hasClass('k-Header__item--centered')).toBe(true)
     })
   })
 

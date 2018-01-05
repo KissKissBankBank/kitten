@@ -8,7 +8,7 @@ describe('<ButtonIcon />', () => {
 
     test('it a <ButtonIcon />', () => {
       expect(component).to.have.tagName('button')
-      expect(component.hasClass('k-ButtonIcon')).to.equal(true)
+      expect(component.hasClass('k-ButtonIcon')).toBe(true)
       expect(component).not.to.have.attr('tabindex')
     })
   })
@@ -17,7 +17,7 @@ describe('<ButtonIcon />', () => {
     const component = shallow(<ButtonIcon modifier="helium" />)
 
     test('has className', () => {
-      expect(component.hasClass('k-ButtonIcon--helium')).to.equal(true)
+      expect(component.hasClass('k-ButtonIcon--helium')).toBe(true)
     })
   })
 
@@ -25,7 +25,7 @@ describe('<ButtonIcon />', () => {
     const component = shallow(<ButtonIcon className="customClass" />)
 
     test('has customClass', () => {
-      expect(component.hasClass('customClass')).to.equal(true)
+      expect(component.hasClass('customClass')).toBe(true)
     })
   })
 
@@ -33,7 +33,7 @@ describe('<ButtonIcon />', () => {
     const component = shallow(<ButtonIcon size="tiny" />)
 
     test('has size', () => {
-      expect(component.hasClass('k-ButtonIcon--tiny')).to.equal(true)
+      expect(component.hasClass('k-ButtonIcon--tiny')).toBe(true)
     })
   })
 

@@ -24,7 +24,7 @@ describe('<Checkbox />', () => {
     const input = component.find('input')
 
     test('passes the right props to the `input` component', () => {
-      expect(input.hasClass('is-error')).to.equal(true)
+      expect(input.hasClass('is-error')).toBe(true)
     })
   })
 

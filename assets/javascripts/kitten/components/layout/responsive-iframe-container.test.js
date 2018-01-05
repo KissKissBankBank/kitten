@@ -12,7 +12,7 @@ describe('<ResponsiveIframeContainer />', () => {
     })
 
     test('has good class', () => {
-      expect(component.hasClass('k-ResponsiveIframeContainer')).to.equal(true)
+      expect(component.hasClass('k-ResponsiveIframeContainer')).toBe(true)
     })
 
     test('has a ratio of 67.5%', () => {
@@ -28,7 +28,7 @@ describe('<ResponsiveIframeContainer />', () => {
     )
 
     test('has a custom class', () => {
-      expect(component.hasClass('custom__class')).to.equal(true)
+      expect(component.hasClass('custom__class')).toBe(true)
     })
   })
 

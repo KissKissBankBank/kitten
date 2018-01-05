@@ -20,7 +20,7 @@ describe('<SimilarProjectCard />', () => {
     })
 
     test('has a default class', () => {
-      expect(similarProjectCard.hasClass('k-ProjectSimilarCard')).to.equal(true)
+      expect(similarProjectCard.hasClass('k-ProjectSimilarCard')).toBe(true)
     })
 
     test('adds the right class to the content tag', () => {
@@ -161,7 +161,7 @@ describe('<SimilarProjectCard />', () => {
     const value = info.find('.k-ProjectSimilarCard__info__value')
 
     test('renders an info value with color modifier', () => {
-      expect(value.hasClass('k-u-color-primary1')).to.equal(true)
+      expect(value.hasClass('k-u-color-primary1')).toBe(true)
     })
   })
 

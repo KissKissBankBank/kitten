@@ -7,7 +7,7 @@ describe('<FormRow />', () => {
     const component = shallow(<FormRow />)
 
     expect(component).to.have.tagName('div')
-    expect(component.hasClass('k-FormRow')).to.equal(true)
+    expect(component.hasClass('k-FormRow')).toBe(true)
   })
 
   test('has a custom class', () => {
@@ -15,7 +15,7 @@ describe('<FormRow />', () => {
       <FormRow className="test-FormRow--lorem" />
     )
 
-    expect(component.hasClass('test-FormRow--lorem')).to.equal(true)
+    expect(component.hasClass('test-FormRow--lorem')).toBe(true)
   })
 
   test('renders children', () => {

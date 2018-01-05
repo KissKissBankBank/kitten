@@ -13,7 +13,7 @@ describe('<HorizontalStroke />', () => {
     })
 
     test('has a good class', () => {
-      expect(horizontalStroke.hasClass('k-HorizontalStroke')).to.equal(true)
+      expect(horizontalStroke.hasClass('k-HorizontalStroke')).toBe(true)
     })
   })
 
@@ -23,7 +23,7 @@ describe('<HorizontalStroke />', () => {
     )
 
     test('has a good class', () => {
-      expect(horizontalStroke.hasClass('custom__class')).to.equal(true)
+      expect(horizontalStroke.hasClass('custom__class')).toBe(true)
     })
   })
 
@@ -33,7 +33,7 @@ describe('<HorizontalStroke />', () => {
     )
 
     test('has a good class', () => {
-      expect(horizontalStroke.hasClass('k-HorizontalStroke--tiny')).to.equal(true)
+      expect(horizontalStroke.hasClass('k-HorizontalStroke--tiny')).toBe(true)
     })
   })
 
@@ -43,7 +43,7 @@ describe('<HorizontalStroke />', () => {
     )
 
     test('has a good class', () => {
-      expect(horizontalStroke.hasClass('k-HorizontalStroke--default')).to.equal(true)
+      expect(horizontalStroke.hasClass('k-HorizontalStroke--default')).toBe(true)
     })
   })
 
@@ -53,7 +53,7 @@ describe('<HorizontalStroke />', () => {
     )
 
     test('has a good class', () => {
-      expect(horizontalStroke.hasClass('k-HorizontalStroke--big')).to.equal(true)
+      expect(horizontalStroke.hasClass('k-HorizontalStroke--big')).toBe(true)
     })
   })
 
@@ -63,7 +63,7 @@ describe('<HorizontalStroke />', () => {
     )
 
     test('has a good class', () => {
-      expect(horizontalStroke.hasClass('k-HorizontalStroke--huge')).to.equal(true)
+      expect(horizontalStroke.hasClass('k-HorizontalStroke--huge')).toBe(true)
     })
   })
 })

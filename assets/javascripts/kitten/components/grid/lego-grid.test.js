@@ -13,7 +13,7 @@ describe('<LegoGrid />', () => {
     })
 
     test('has a default class', () => {
-      expect(legoGrid.hasClass('k-LegoGrid')).to.equal(true)
+      expect(legoGrid.hasClass('k-LegoGrid')).toBe(true)
     })
 
     test('has a <Masonry /> component', () => {
@@ -40,7 +40,7 @@ describe('<LegoGrid />', () => {
     const legoGrid = shallow(<LegoGrid className="custom__class" />)
 
     test('has a custom class', () => {
-      expect(legoGrid.hasClass('custom__class')).to.equal(true)
+      expect(legoGrid.hasClass('custom__class')).toBe(true)
     })
   })
 })
@@ -54,7 +54,7 @@ describe('<LegoGrid.Item />', () => {
     })
 
     test('has default classes', () => {
-      expect(legoGridItem.hasClass('k-LegoGrid__item')).to.equal(true)
+      expect(legoGridItem.hasClass('k-LegoGrid__item')).toBe(true)
       expect(legoGridItem).to.have.descendants('.k-LegoGrid__item__content')
     })
   })
@@ -63,7 +63,7 @@ describe('<LegoGrid.Item />', () => {
     const legoGridItem = shallow(<LegoGrid.Item className="custom__class" />)
 
     test('has a custom class', () => {
-      expect(legoGridItem.hasClass('custom__class')).to.equal(true)
+      expect(legoGridItem.hasClass('custom__class')).toBe(true)
     })
   })
 

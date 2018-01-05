@@ -22,7 +22,7 @@ describe('<TagList />', () => {
     })
 
     test('has default class', () => {
-      expect(tagList.hasClass('k-TagList')).to.equal(true)
+      expect(tagList.hasClass('k-TagList')).toBe(true)
     })
 
     test('renders 2 items', () => {
@@ -32,12 +32,12 @@ describe('<TagList />', () => {
     test('has a first child with good class', () => {
       const firstItem = tagList.children().first()
 
-      expect(firstItem.hasClass('k-TagList__item--first')).to.equal(true)
+      expect(firstItem.hasClass('k-TagList__item--first')).toBe(true)
     })
 
     test('has a last child with good class', () => {
       const firstItem = tagList.children().last()
-      expect(firstItem.hasClass('k-TagList__item--last')).to.equal(true)
+      expect(firstItem.hasClass('k-TagList__item--last')).toBe(true)
     })
 
     test('renders a <TypologyTagIcon /> in first child', () => {
@@ -61,7 +61,7 @@ describe('<TagList />', () => {
     )
 
     test('has a custom class', () => {
-      expect(tagList.hasClass('custom__class')).to.equal(true)
+      expect(tagList.hasClass('custom__class')).toBe(true)
     })
 
   })
@@ -72,7 +72,7 @@ describe('<TagList />', () => {
     )
 
     test('has a good class', () => {
-      expect(tagList.hasClass('k-TagList--tiny')).to.equal(true)
+      expect(tagList.hasClass('k-TagList--tiny')).toBe(true)
     })
   })
 })

@@ -6,7 +6,7 @@ describe('<HeaderTitles />', () => {
   const titles = shallow(<HeaderTitles />)
 
   test('renders a <div class="k-Header__titles" />', () => {
-    expect(titles.hasClass('k-Header__titles')).to.equal(true)
+    expect(titles.hasClass('k-Header__titles')).toBe(true)
   })
 
   test('renders a default title', () => {
@@ -44,7 +44,7 @@ describe('<HeaderTitles />', () => {
     )
 
     test('has the right classes', () => {
-      expect(titles.hasClass('custom-class')).to.equal(true)
+      expect(titles.hasClass('custom-class')).toBe(true)
       expect(titles).to.have.descendants('.title-custom-class')
       expect(titles).to.have.descendants('.subtitle-custom-class')
     })

@@ -32,7 +32,7 @@ describe('Text-input with default props', () => {
 
     test('renders a <TextInput class="k-TextInput" />', () => {
       expect(component).to.have.tagName('input')
-      expect(component.hasClass('k-TextInput--custom')).to.equal(true)
+      expect(component.hasClass('k-TextInput--custom')).toBe(true)
     })
 
     describe('text-input with valid class', () => {
@@ -41,7 +41,7 @@ describe('Text-input with default props', () => {
       )
 
       test('has a valid class', () => {
-        expect(componentWithValidClass.hasClass('is-valid')).to.equal(true)
+        expect(componentWithValidClass.hasClass('is-valid')).toBe(true)
       })
     })
 
@@ -51,7 +51,7 @@ describe('Text-input with default props', () => {
       )
 
       test('has a error class', () => {
-        expect(componentWithErrorClass.hasClass('is-error')).to.equal(true)
+        expect(componentWithErrorClass.hasClass('is-error')).toBe(true)
       })
     })
 
@@ -61,7 +61,7 @@ describe('Text-input with default props', () => {
       )
 
       test('has a tiny class', () => {
-        expect(componentWithTinyClass.hasClass('k-TextInput--tiny')).to.equal(true)
+        expect(componentWithTinyClass.hasClass('k-TextInput--tiny')).toBe(true)
       })
     })
 

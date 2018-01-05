@@ -29,7 +29,7 @@ describe('<SelectWithState />', () => {
     })
 
     test('has `.k-Select` class', () => {
-      expect(select.hasClass('k-Select')).to.equal(true)
+      expect(select.hasClass('k-Select')).toBe(true)
     })
 
     test('has a good props', () => {
@@ -103,10 +103,10 @@ describe('<SelectWithState />', () => {
     })
 
     test('has all classes', () => {
-      expect(select.hasClass('k-Select--tiny')).to.equal(true)
-      expect(select.hasClass('is-error')).to.equal(true)
-      expect(select.hasClass('is-valid')).to.equal(true)
-      expect(select.hasClass('is-disabled')).to.equal(true)
+      expect(select.hasClass('k-Select--tiny')).toBe(true)
+      expect(select.hasClass('is-error')).toBe(true)
+      expect(select.hasClass('is-valid')).toBe(true)
+      expect(select.hasClass('is-disabled')).toBe(true)
     })
   })
 

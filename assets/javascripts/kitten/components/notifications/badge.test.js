@@ -11,7 +11,7 @@ describe('<Badge />', () => {
     })
 
     test('has a default class', () => {
-      expect(badge.hasClass('k-Badge')).to.equal(true)
+      expect(badge.hasClass('k-Badge')).toBe(true)
     })
   })
 
@@ -19,7 +19,7 @@ describe('<Badge />', () => {
     const badge = shallow(<Badge className="custom__class" />)
 
     test('has a custom class', () => {
-      expect(badge.hasClass('custom__class')).to.equal(true)
+      expect(badge.hasClass('custom__class')).toBe(true)
     })
   })
 
@@ -27,7 +27,7 @@ describe('<Badge />', () => {
     const badge = shallow(<Badge spaced />)
 
     test('has a good class', () => {
-      expect(badge.hasClass('k-Badge--spaced')).to.equal(true)
+      expect(badge.hasClass('k-Badge--spaced')).toBe(true)
     })
   })
 

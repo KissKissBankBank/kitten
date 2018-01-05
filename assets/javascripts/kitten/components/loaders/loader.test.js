@@ -11,7 +11,7 @@ describe('<Loader />', () => {
     })
 
     test('has a default class', () => {
-      expect(loader.hasClass('k-Loader')).to.equal(true)
+      expect(loader.hasClass('k-Loader')).toBe(true)
     })
 
     test('has 3 circles', () => {
@@ -31,7 +31,7 @@ describe('<Loader />', () => {
     const loader = mount(<Loader className="custom__class" />)
 
     test('is a good class', () => {
-      expect(loader.hasClass('custom__class')).to.equal(true)
+      expect(loader.hasClass('custom__class')).toBe(true)
     })
   })
 

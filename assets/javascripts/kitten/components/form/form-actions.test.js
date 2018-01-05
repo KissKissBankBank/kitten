@@ -8,7 +8,7 @@ describe('<FormActions />', () => {
     const component = shallow(<FormActions />)
 
     expect(component).to.have.tagName('div')
-    expect(component.hasClass('k-FormActions')).to.equal(true)
+    expect(component.hasClass('k-FormActions')).toBe(true)
   })
 
   test('has a custom class', () => {
@@ -16,7 +16,7 @@ describe('<FormActions />', () => {
       <FormActions className="test-FormActions--lorem" />
     )
 
-    expect(component.hasClass('test-FormActions--lorem')).to.equal(true)
+    expect(component.hasClass('test-FormActions--lorem')).toBe(true)
   })
 
   test('renders children', () => {
@@ -47,7 +47,7 @@ describe('<FormActions.Item />', () => {
     })
 
     test('has "k-FormActions__item" class', () => {
-      expect(component.hasClass('k-FormActions__item')).to.equal(true)
+      expect(component.hasClass('k-FormActions__item')).toBe(true)
     })
   })
 
@@ -57,7 +57,7 @@ describe('<FormActions.Item />', () => {
     )
 
     test('has a custom class', () => {
-      expect(component.hasClass('k-FormActions__item--test')).to.equal(true)
+      expect(component.hasClass('k-FormActions__item--test')).toBe(true)
     })
   })
 

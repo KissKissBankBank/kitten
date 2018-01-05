@@ -11,7 +11,7 @@ describe('<Line />', () => {
     })
 
     test('has "k-Line" class', () => {
-      expect(component.hasClass('k-Line')).to.equal(true)
+      expect(component.hasClass('k-Line')).toBe(true)
     })
   })
 
@@ -21,7 +21,7 @@ describe('<Line />', () => {
     )
 
     test('has a custom class', () => {
-      expect(component.hasClass('test-Line--lorem')).to.equal(true)
+      expect(component.hasClass('test-Line--lorem')).toBe(true)
     })
   })
 
@@ -47,7 +47,7 @@ describe('<Line.Item />', () => {
     })
 
     test('has "k-Line__item" class', () => {
-      expect(component.hasClass('k-Line__item')).to.equal(true)
+      expect(component.hasClass('k-Line__item')).toBe(true)
     })
   })
 
@@ -57,7 +57,7 @@ describe('<Line.Item />', () => {
     )
 
     test('has a custom class', () => {
-      expect(component.hasClass('test-Line__item--lorem')).to.equal(true)
+      expect(component.hasClass('test-Line__item--lorem')).toBe(true)
     })
   })
 

@@ -11,7 +11,7 @@ describe('<SideLayout />', () => {
     )
 
     test('renders a <div class="myAwesomeClass" />', () => {
-      expect(component.hasClass('myAwesomeClass')).to.equal(true)
+      expect(component.hasClass('myAwesomeClass')).toBe(true)
     })
   })
 

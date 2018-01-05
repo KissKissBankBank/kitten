@@ -47,7 +47,7 @@ describe('<Stepper />', () => {
 
   test('renders a <nav class="k-Stepper" />', () => {
     expect(component).to.have.tagName('nav')
-    expect(component.hasClass('k-Stepper')).to.equal(true)
+    expect(component.hasClass('k-Stepper')).toBe(true)
   })
 
   test('has a list', () => {
@@ -88,7 +88,7 @@ describe('<Stepper />', () => {
     test('renders a list with `.k-Stepper__list--alignStart`', () => {
       const list = componentWithAlignStart.find('.k-Stepper__list')
 
-      expect(list.hasClass('k-Stepper__list--alignStart')).to.equal(true)
+      expect(list.hasClass('k-Stepper__list--alignStart')).toBe(true)
     })
   })
 
@@ -102,7 +102,7 @@ describe('<Stepper />', () => {
       const items = componentWithTinySpacing.find('.k-Stepper__item')
 
       items.map(item => {
-        expect(item.hasClass('k-Stepper__item--tinySpacing')).to.equal(true)
+        expect(item.hasClass('k-Stepper__item--tinySpacing')).toBe(true)
       })
     })
   })

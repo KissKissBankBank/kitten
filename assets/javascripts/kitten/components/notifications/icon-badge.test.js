@@ -11,7 +11,7 @@ describe('<IconBadge />', () => {
     })
 
     test('has default classes', () => {
-      expect(iconBadge.hasClass('k-IconBadge')).to.equal(true)
+      expect(iconBadge.hasClass('k-IconBadge')).toBe(true)
       expect(iconBadge).to.have.descendants('.k-IconBadge__content')
     })
   })
@@ -20,7 +20,7 @@ describe('<IconBadge />', () => {
     const iconBadge = shallow(<IconBadge className="custom__class" />)
 
     test('has a custom class', () => {
-      expect(iconBadge.hasClass('custom__class')).to.equal(true)
+      expect(iconBadge.hasClass('custom__class')).toBe(true)
     })
   })
 

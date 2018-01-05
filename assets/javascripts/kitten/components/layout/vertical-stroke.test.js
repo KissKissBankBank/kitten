@@ -11,7 +11,7 @@ describe('<VerticalStroke />', () => {
     })
 
     test('has a good class', () => {
-      expect(verticalStroke.hasClass('k-VerticalStroke')).to.equal(true)
+      expect(verticalStroke.hasClass('k-VerticalStroke')).toBe(true)
     })
   })
 
@@ -21,7 +21,7 @@ describe('<VerticalStroke />', () => {
     )
 
     test('has a good class', () => {
-      expect(verticalStroke.hasClass('custom__class')).to.equal(true)
+      expect(verticalStroke.hasClass('custom__class')).toBe(true)
     })
   })
 
@@ -31,7 +31,7 @@ describe('<VerticalStroke />', () => {
     )
 
     test('has a good class', () => {
-      expect(verticalStroke.hasClass('k-VerticalStroke--tiny')).to.equal(true)
+      expect(verticalStroke.hasClass('k-VerticalStroke--tiny')).toBe(true)
     })
   })
 
@@ -41,7 +41,7 @@ describe('<VerticalStroke />', () => {
     )
 
     test('has a good class', () => {
-      expect(verticalStroke.hasClass('k-VerticalStroke--default')).to.equal(true)
+      expect(verticalStroke.hasClass('k-VerticalStroke--default')).toBe(true)
     })
   })
 
@@ -51,7 +51,7 @@ describe('<VerticalStroke />', () => {
     )
 
     test('has a good class', () => {
-      expect(verticalStroke.hasClass('k-VerticalStroke--big')).to.equal(true)
+      expect(verticalStroke.hasClass('k-VerticalStroke--big')).toBe(true)
     })
   })
 
@@ -61,7 +61,7 @@ describe('<VerticalStroke />', () => {
     )
 
     test('has a good class', () => {
-      expect(verticalStroke.hasClass('k-VerticalStroke--huge')).to.equal(true)
+      expect(verticalStroke.hasClass('k-VerticalStroke--huge')).toBe(true)
     })
   })
 })

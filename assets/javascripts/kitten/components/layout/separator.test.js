@@ -11,7 +11,7 @@ describe('<Separator />', () => {
     })
 
     test('has good class', () => {
-      expect(separator.hasClass('k-Separator')).to.equal(true)
+      expect(separator.hasClass('k-Separator')).toBe(true)
     })
   })
 
@@ -19,7 +19,7 @@ describe('<Separator />', () => {
     const separator = shallow(<Separator darker />)
 
     test('has good class', () => {
-      expect(separator.hasClass('k-Separator--darker')).to.equal(true)
+      expect(separator.hasClass('k-Separator--darker')).toBe(true)
     })
   })
 
@@ -27,7 +27,7 @@ describe('<Separator />', () => {
     const separator = shallow(<Separator className="custom__class" />)
 
     test('has a custom class', () => {
-      expect(separator.hasClass('custom__class')).to.equal(true)
+      expect(separator.hasClass('custom__class')).toBe(true)
     })
   })
 

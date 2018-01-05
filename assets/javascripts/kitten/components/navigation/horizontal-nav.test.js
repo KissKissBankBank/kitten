@@ -16,7 +16,7 @@ describe('<HorizontalNav />', () => {
   const link = component.find('.k-HorizontalNav__item').first()
 
   test('renders a <div class="k-HorizontalNav" />', () => {
-    expect(component.hasClass('k-HorizontalNav')).to.equal(true)
+    expect(component.hasClass('k-HorizontalNav')).toBe(true)
   })
 
   test('has a element', () => {
@@ -37,7 +37,7 @@ describe('<HorizontalNav />', () => {
     )
 
     test('renders a className', () => {
-      expect(component.hasClass('k-HorizontalNav--center')).to.equal(true)
+      expect(component.hasClass('k-HorizontalNav--center')).toBe(true)
     })
   })
 
@@ -76,7 +76,7 @@ describe('<HorizontalNav />', () => {
     test('renders the right classes', () => {
       expect(component).to.have.id('custom-id')
 
-      expect(component.hasClass('custom-class')).to.equal(true)
+      expect(component.hasClass('custom-class')).toBe(true)
 
       expect(component.find('.k-HorizontalNav__element').first())
         .to.have.className('element-custom-class')

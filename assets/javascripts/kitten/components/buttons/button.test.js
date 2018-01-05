@@ -11,11 +11,11 @@ describe('Button with default props', () => {
     })
 
     test('has a k-Button class', () => {
-      expect(component.hasClass('k-Button')).to.equal(true)
+      expect(component.hasClass('k-Button')).toBe(true)
     })
 
     test('has the hydrogen modifier class', () => {
-      expect(component.hasClass('k-Button--hydrogen')).to.equal(true)
+      expect(component.hasClass('k-Button--hydrogen')).toBe(true)
     })
 
     test('does not have the iconRight modifier class', () => {
@@ -30,21 +30,21 @@ describe('Button with default props', () => {
   describe('className prop', () => {
     test('adds the class to the element', () => {
       const component = shallow(<Button className="meaow" />)
-      expect(component.hasClass('meaow')).to.equal(true)
+      expect(component.hasClass('meaow')).toBe(true)
     })
   })
 
   describe('modifier prop', () => {
     test('adds a class to the component', () => {
       const component = shallow(<Button modifier="helium" />)
-      expect(component.hasClass('k-Button--helium')).to.equal(true)
+      expect(component.hasClass('k-Button--helium')).toBe(true)
     })
   })
 
   describe('iconRight prop', () => {
     test('adds the iconRight modifier class', () => {
       const component = shallow(<Button iconOnRight />)
-      expect(component.hasClass('k-Button--iconRight')).to.equal(true)
+      expect(component.hasClass('k-Button--iconRight')).toBe(true)
     })
   })
 

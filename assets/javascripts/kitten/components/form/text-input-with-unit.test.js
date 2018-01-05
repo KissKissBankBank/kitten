@@ -11,25 +11,25 @@ describe('<TextInputWithUnit />', () => {
     })
 
     test('has a "k-TextInputWithUnit" class', () => {
-      expect(component.hasClass('k-TextInputWithUnit')).to.equal(true)
+      expect(component.hasClass('k-TextInputWithUnit')).toBe(true)
     })
 
     test('has a "k-TextInputWithUnit--fullWidth" class', () => {
-      expect(component.hasClass('k-TextInputWithUnit--fullWidth')).to.equal(true)
+      expect(component.hasClass('k-TextInputWithUnit--fullWidth')).toBe(true)
     })
 
     test('renders an input.k-TextInputWithUnit__input', () => {
       const textInput = component.find('TextInput')
 
       expect(textInput).to.have.tagName('input')
-      expect(textInput.hasClass('k-TextInputWithUnit__input')).to.equal(true)
+      expect(textInput.hasClass('k-TextInputWithUnit__input')).toBe(true)
     })
 
     test('renders a span.k-TextInputWithUnit__unit', () => {
       const span = component.find('span')
 
       expect(span).to.have.tagName('span')
-      expect(span.hasClass('k-TextInputWithUnit__unit')).to.equal(true)
+      expect(span.hasClass('k-TextInputWithUnit__unit')).toBe(true)
     })
   })
 

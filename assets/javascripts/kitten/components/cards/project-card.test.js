@@ -18,7 +18,7 @@ describe('<ProjectCard />', () => {
     })
 
     test('has default class', () => {
-      expect(projectCard.dive().hasClass('k-ProjectCard')).to.equal(true)
+      expect(projectCard.dive().hasClass('k-ProjectCard')).toBe(true)
     })
   })
 
@@ -46,7 +46,7 @@ describe('<ProjectCard />', () => {
     const projectCard = shallow(<ProjectCard href="#" disabled />)
 
     test('has a disabled class', () => {
-      expect(projectCard.dive().hasClass('is-disabled')).to.equal(true)
+      expect(projectCard.dive().hasClass('is-disabled')).toBe(true)
     })
 
     test('removes href attribute and <a> tag', () => {
@@ -59,7 +59,7 @@ describe('<ProjectCard />', () => {
     const projectCard = shallow(<ProjectCard className="custom__class" />)
 
     test('has a custom class', () => {
-      expect(projectCard.dive().hasClass('custom__class')).to.equal(true)
+      expect(projectCard.dive().hasClass('custom__class')).toBe(true)
     })
   })
 
@@ -216,7 +216,7 @@ describe('<ProjectCard />', () => {
     const value = info.find('.k-ProjectCard__info__value')
 
     test('renders an info value with color modifier', () => {
-      expect(value.hasClass('k-u-color-primary1')).to.equal(true)
+      expect(value.hasClass('k-u-color-primary1')).toBe(true)
     })
   })
 

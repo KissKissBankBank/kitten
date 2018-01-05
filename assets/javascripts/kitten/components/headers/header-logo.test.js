@@ -7,7 +7,7 @@ describe('<HeaderLogo />', () => {
 
   test('renders a <a class="k-Header__logo" />', () => {
     expect(logo).to.have.tagName('a')
-    expect(logo.hasClass('k-Header__logo')).to.equal(true)
+    expect(logo.hasClass('k-Header__logo')).toBe(true)
   })
 
   test('renders a default href', () => {
@@ -29,7 +29,7 @@ describe('<HeaderLogo />', () => {
     })
 
     test('has a custom class', () => {
-      expect(logo.hasClass('test-Header__logo')).to.equal(true)
+      expect(logo.hasClass('test-Header__logo')).toBe(true)
     })
 
     test('has an image', () => {

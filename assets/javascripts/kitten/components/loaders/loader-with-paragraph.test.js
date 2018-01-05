@@ -14,7 +14,7 @@ describe('<LoaderWithParagraph />', () => {
     })
 
     test('has a default class', () => {
-      expect(loader.hasClass('k-LoaderWithParagraph')).to.equal(true)
+      expect(loader.hasClass('k-LoaderWithParagraph')).toBe(true)
     })
 
     test('has a default text', () => {
@@ -52,7 +52,7 @@ describe('<LoaderWithParagraph />', () => {
     const loader = mount(<LoaderWithParagraph className="custom__class" />)
 
     test('is a good class', () => {
-      expect(loader.hasClass('custom__class')).to.equal(true)
+      expect(loader.hasClass('custom__class')).toBe(true)
     })
   })
 
@@ -80,7 +80,7 @@ describe('<LoaderWithParagraph />', () => {
     })
 
     test('has a class to manage columns version', () => {
-      expect(loader.hasClass('k-LoaderWithParagraph--column')).to.equal(true)
+      expect(loader.hasClass('k-LoaderWithParagraph--column')).toBe(true)
     })
   })
 
@@ -96,7 +96,7 @@ describe('<LoaderWithParagraph />', () => {
     })
 
     test('has a class to manage columns version', () => {
-      expect(loader.hasClass('k-LoaderWithParagraph--column')).to.equal(true)
+      expect(loader.hasClass('k-LoaderWithParagraph--column')).toBe(true)
     })
   })
 

@@ -12,7 +12,7 @@ describe('<LinkBox />', () => {
 
   test('renders a <a class="k-LinkBox" />', () => {
     expect(component).to.have.tagName('a')
-    expect(component.hasClass('k-LinkBox')).to.equal(true)
+    expect(component.hasClass('k-LinkBox')).toBe(true)
     expect(component).to.have.attr('href', 'http://…/history.pdf')
     expect(component).to.have.attr('target', '_blank')
   })
@@ -39,7 +39,7 @@ describe('<LinkBox />', () => {
     )
 
     test('has an icon class', () => {
-      expect(componentWithIcon.hasClass('k-LinkBox--withIcon')).to.equal(true)
+      expect(componentWithIcon.hasClass('k-LinkBox--withIcon')).toBe(true)
     })
 
     test('renders an icon', () => {
@@ -80,7 +80,7 @@ describe('<LinkBox />', () => {
     const linkBox = shallow(<LinkBox className="custom_class" />)
 
     test('has custom class', () => {
-      expect(linkBox.hasClass('custom_class')).to.equal(true)
+      expect(linkBox.hasClass('custom_class')).toBe(true)
     })
   })
 })

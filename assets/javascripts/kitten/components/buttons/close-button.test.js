@@ -18,7 +18,7 @@ describe('<CloseButton />', () => {
         'k-ButtonIcon--hydrogen',
       )
 
-      expect(closeButton.hasClass(className)).to.equal(true)
+      expect(closeButton.hasClass(className)).toBe(true)
     })
 
     test('has a <CrossIcon />', () => {
@@ -56,7 +56,7 @@ describe('<CloseButton />', () => {
     const closeButton = shallow(<CloseButton modifier='carbon' />)
 
     test('has a class', () => {
-      expect(closeButton.hasClass('k-ButtonIcon--carbon')).to.equal(true)
+      expect(closeButton.hasClass('k-ButtonIcon--carbon')).toBe(true)
     })
   })
 

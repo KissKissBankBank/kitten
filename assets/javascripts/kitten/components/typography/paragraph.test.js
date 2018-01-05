@@ -16,7 +16,7 @@ describe('Paragraph with default props', () => {
   })
 
   test('has a default class', () => {
-    expect(defaultComponent.hasClass('k-Paragraph--primary')).to.equal(true)
+    expect(defaultComponent.hasClass('k-Paragraph--primary')).toBe(true)
   })
 
   describe('<Paragraph />', () => {
@@ -26,8 +26,8 @@ describe('Paragraph with default props', () => {
 
     test('renders a <p class="k-Paragraph" />', () => {
       expect(component).to.have.tagName('p')
-      expect(component.hasClass('k-Paragraph--custom')).to.equal(true)
-      expect(component.hasClass('k-Paragraph--primary')).to.equal(true)
+      expect(component.hasClass('k-Paragraph--custom')).toBe(true)
+      expect(component.hasClass('k-Paragraph--primary')).toBe(true)
       expect(component).to.have.text('Loren ipsum…')
     })
 
@@ -36,7 +36,7 @@ describe('Paragraph with default props', () => {
         const component = shallow(
           <Paragraph modifier="secondary" />
         )
-        expect(component.hasClass('k-Paragraph--secondary')).to.equal(true)
+        expect(component.hasClass('k-Paragraph--secondary')).toBe(true)
       })
     })
   })
@@ -45,7 +45,7 @@ describe('Paragraph with default props', () => {
     const component = shallow(<Paragraph margin={ false } />)
 
     test('has a good class', () => {
-      expect(component.hasClass('k-Paragraph--withoutMargin')).to.equal(true)
+      expect(component.hasClass('k-Paragraph--withoutMargin')).toBe(true)
     })
   })
 
@@ -53,7 +53,7 @@ describe('Paragraph with default props', () => {
     const component = shallow(<Paragraph normalLineHeight />)
 
     test('has a good class', () => {
-      expect(component.hasClass('k-Paragraph--normalLineHeight')).to.equal(true)
+      expect(component.hasClass('k-Paragraph--normalLineHeight')).toBe(true)
     })
   })
 
@@ -61,7 +61,7 @@ describe('Paragraph with default props', () => {
     const component = shallow(<Paragraph italic />)
 
     test('has a good class', () => {
-      expect(component.hasClass('k-Paragraph--italic')).to.equal(true)
+      expect(component.hasClass('k-Paragraph--italic')).toBe(true)
     })
   })
 })

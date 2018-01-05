@@ -12,7 +12,7 @@ describe('<TabBar />', () => {
   )
 
   test('renders a <div class="k-TabBar" />', () => {
-    expect(component.hasClass('k-TabBar')).to.equal(true)
+    expect(component.hasClass('k-TabBar')).toBe(true)
   })
 
   test('has a nav', () => {
@@ -44,7 +44,7 @@ describe('<TabBar />', () => {
 
     test('renders the right classes', () => {
       expect(component).to.have.id('custom-id')
-      expect(component.hasClass('custom-class')).to.equal(true)
+      expect(component.hasClass('custom-class')).toBe(true)
       expect(component.find('.k-TabBar__nav'))
         .to.have.className('nav-custom-class')
       expect(component.find('.k-TabBar__list'))

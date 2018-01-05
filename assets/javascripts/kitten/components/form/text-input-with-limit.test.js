@@ -47,7 +47,7 @@ describe('<TextInputWithLimit />', () => {
       )
       const counter = component.find('.k-TextInputLimit__counter')
       expect(counter).to.have.text('-1')
-      expect(counter.hasClass('is-error')).to.equal(true)
+      expect(counter.hasClass('is-error')).toBe(true)
     })
   })
 
@@ -57,7 +57,7 @@ describe('<TextInputWithLimit />', () => {
     )
 
     test('is disabled', () => {
-      expect(component.hasClass('is-disabled')).to.equal(true)
+      expect(component.hasClass('is-disabled')).toBe(true)
       expect(component.find('TextInput')).to.have.attr('disabled')
     })
   })

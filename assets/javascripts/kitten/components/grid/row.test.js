@@ -11,7 +11,7 @@ describe('<Row />', () => {
     })
 
     test('has a default class', () => {
-      expect(row.hasClass('k-Row')).to.equal(true)
+      expect(row.hasClass('k-Row')).toBe(true)
       expect(row).to.have.descendants('.k-Row__content')
     })
   })
@@ -20,7 +20,7 @@ describe('<Row />', () => {
     const row = shallow(<Row className="custom__class" />)
 
     test('has a custom class', () => {
-      expect(row.hasClass('custom__class')).to.equal(true)
+      expect(row.hasClass('custom__class')).toBe(true)
     })
   })
 
@@ -44,7 +44,7 @@ describe('<Row />', () => {
     const row = shallow(<Row centered />)
 
     test('has a specific class', () => {
-      expect(row.hasClass('k-Row--centered')).to.equal(true)
+      expect(row.hasClass('k-Row--centered')).toBe(true)
     })
   })
 
@@ -52,7 +52,7 @@ describe('<Row />', () => {
     const row = shallow(<Row centered />)
 
     test('has a specific class', () => {
-      expect(row.hasClass('k-Row--centered')).to.equal(true)
+      expect(row.hasClass('k-Row--centered')).toBe(true)
     })
   })
 
@@ -60,7 +60,7 @@ describe('<Row />', () => {
     const row = shallow(<Row light />)
 
     test('has a specific class', () => {
-      expect(row.hasClass('k-Row--light')).to.equal(true)
+      expect(row.hasClass('k-Row--light')).toBe(true)
     })
   })
 
@@ -68,7 +68,7 @@ describe('<Row />', () => {
     const row = shallow(<Row dark />)
 
     test('has a specific class', () => {
-      expect(row.hasClass('k-Row--dark')).to.equal(true)
+      expect(row.hasClass('k-Row--dark')).toBe(true)
     })
   })
 
@@ -76,7 +76,7 @@ describe('<Row />', () => {
     const row = shallow(<Row lightTopBorder />)
 
     test('has a specific class', () => {
-      expect(row.hasClass('k-Row--lightTopBorder')).to.equal(true)
+      expect(row.hasClass('k-Row--lightTopBorder')).toBe(true)
     })
   })
 
@@ -84,7 +84,7 @@ describe('<Row />', () => {
     const row = shallow(<Row lightBottomBorder />)
 
     test('has a specific class', () => {
-      expect(row.hasClass('k-Row--lightBottomBorder')).to.equal(true)
+      expect(row.hasClass('k-Row--lightBottomBorder')).toBe(true)
     })
   })
 
@@ -92,7 +92,7 @@ describe('<Row />', () => {
     const row = shallow(<Row padded />)
 
     test('has a specific class', () => {
-      expect(row.hasClass('k-Row--padded')).to.equal(true)
+      expect(row.hasClass('k-Row--padded')).toBe(true)
     })
   })
 

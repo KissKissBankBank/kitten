@@ -13,21 +13,21 @@ describe('<TextInputWithButton />', () => {
     })
 
     test('has a "k-TextInputWithButton" class', () => {
-      expect(component.hasClass('k-TextInputWithButton')).to.equal(true)
+      expect(component.hasClass('k-TextInputWithButton')).toBe(true)
     })
 
     test('renders an input.k-TextInputWithButton__input', () => {
       const textInput = component.find('TextInput')
 
       expect(textInput).to.have.tagName('input')
-      expect(textInput.hasClass('k-TextInputWithButton__input')).to.equal(true)
+      expect(textInput.hasClass('k-TextInputWithButton__input')).toBe(true)
     })
 
     test('renders a button.k-TextInputWithButton__button', () => {
       const button = component.find('button')
 
       expect(button).to.have.tagName('button')
-      expect(button.hasClass('k-TextInputWithButton__button')).to.equal(true)
+      expect(button.hasClass('k-TextInputWithButton__button')).toBe(true)
     })
   })
 
@@ -44,7 +44,7 @@ describe('<TextInputWithButton />', () => {
     const textInput = component.find('input')
 
     test('renders textInput with className prop', () => {
-      expect(textInput.hasClass('custom-class')).to.equal(true)
+      expect(textInput.hasClass('custom-class')).toBe(true)
       expect(textInput).to.have.attr('aria-hidden', 'true')
     })
   })
@@ -55,11 +55,11 @@ describe('<TextInputWithButton />', () => {
     const button = component.find('button')
 
     test('has an <input /> with "is-valid" class', () => {
-      expect(textInput.hasClass('is-valid')).to.equal(true)
+      expect(textInput.hasClass('is-valid')).toBe(true)
     })
 
     test('has an <button /> with "is-valid" class', () => {
-      expect(button.hasClass('is-valid')).to.equal(true)
+      expect(button.hasClass('is-valid')).toBe(true)
     })
   })
 
@@ -69,11 +69,11 @@ describe('<TextInputWithButton />', () => {
     const button = component.find('button')
 
     test('has an <input /> with "is-error" class', () => {
-      expect(textInput.hasClass('is-error')).to.equal(true)
+      expect(textInput.hasClass('is-error')).toBe(true)
     })
 
     test('has an <button /> with "is-error" class', () => {
-      expect(button.hasClass('is-error')).to.equal(true)
+      expect(button.hasClass('is-error')).toBe(true)
     })
   })
 
@@ -83,11 +83,11 @@ describe('<TextInputWithButton />', () => {
     const button = component.find('button')
 
     test('has an <input /> with "is-disabled" class', () => {
-      expect(textInput.hasClass('is-disabled')).to.equal(true)
+      expect(textInput.hasClass('is-disabled')).toBe(true)
     })
 
     test('has an <button /> with "is-disabled" class', () => {
-      expect(button.hasClass('is-disabled')).to.equal(true)
+      expect(button.hasClass('is-disabled')).toBe(true)
     })
   })
 

@@ -15,7 +15,7 @@ describe('Title with default props', () => {
   })
 
   test('has a default class', () => {
-    expect(defaultComponent.hasClass('k-Title--primary')).to.equal(true)
+    expect(defaultComponent.hasClass('k-Title--primary')).toBe(true)
   })
 
   describe('<Title />', () => {
@@ -25,8 +25,8 @@ describe('Title with default props', () => {
 
     test('renders a <Title class="k-Title" />', () => {
       expect(component).to.have.tagName('h1')
-      expect(component.hasClass('k-Title--custom')).to.equal(true)
-      expect(component.hasClass('k-Title--primary')).to.equal(true)
+      expect(component.hasClass('k-Title--custom')).toBe(true)
+      expect(component.hasClass('k-Title--primary')).toBe(true)
       expect(component).to.have.text('Felis…')
     })
 
@@ -35,7 +35,7 @@ describe('Title with default props', () => {
         const component = shallow(
           <Title modifier="secondary" />
         )
-        expect(component.hasClass('k-Title--secondary')).to.equal(true)
+        expect(component.hasClass('k-Title--secondary')).toBe(true)
       })
     })
 
@@ -52,7 +52,7 @@ describe('Title with default props', () => {
       const component = shallow(<Title margin={ false } />)
 
       test('has a good class', () => {
-        expect(component.hasClass('k-Title--withoutMargin')).to.equal(true)
+        expect(component.hasClass('k-Title--withoutMargin')).toBe(true)
       })
     })
   })

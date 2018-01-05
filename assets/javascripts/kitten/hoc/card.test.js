@@ -21,7 +21,7 @@ describe('card()', () => {
     const component = shallow(<ExampleCard />)
 
     test('has default class', () => {
-      expect(component.hasClass('k-Card')).to.equal(true)
+      expect(component.hasClass('k-Card')).toBe(true)
     })
   })
 
@@ -29,7 +29,7 @@ describe('card()', () => {
     const component = shallow(<ExampleCard light />)
 
     test('has a good class', () => {
-      expect(component.hasClass('k-Card--light')).to.equal(true)
+      expect(component.hasClass('k-Card--light')).toBe(true)
     })
   })
 
@@ -37,7 +37,7 @@ describe('card()', () => {
     const component = shallow(<ExampleCard padded />)
 
     test('has a good class', () => {
-      expect(component.hasClass('k-Card--padded')).to.equal(true)
+      expect(component.hasClass('k-Card--padded')).toBe(true)
     })
   })
 
@@ -45,7 +45,7 @@ describe('card()', () => {
     const component = shallow(<ExampleCard rounded="micro" />)
 
     test('has a good class', () => {
-      expect(component.hasClass('k-Card--microRounded')).to.equal(true)
+      expect(component.hasClass('k-Card--microRounded')).toBe(true)
     })
   })
 
@@ -53,7 +53,7 @@ describe('card()', () => {
     const component = shallow(<ExampleCard rounded="tiny" />)
 
     test('has a good class', () => {
-      expect(component.hasClass('k-Card--tinyRounded')).to.equal(true)
+      expect(component.hasClass('k-Card--tinyRounded')).toBe(true)
     })
   })
 
@@ -61,7 +61,7 @@ describe('card()', () => {
     const component = shallow(<ExampleCard rounded />)
 
     test('has a good class', () => {
-      expect(component.hasClass('k-Card--rounded')).to.equal(true)
+      expect(component.hasClass('k-Card--rounded')).toBe(true)
     })
   })
 
@@ -69,7 +69,7 @@ describe('card()', () => {
     const component = shallow(<ExampleCard translateOnHover />)
 
     test('has a good class', () => {
-      expect(component.hasClass('k-Card--translateOnHover')).to.equal(true)
+      expect(component.hasClass('k-Card--translateOnHover')).toBe(true)
     })
   })
 
@@ -77,7 +77,7 @@ describe('card()', () => {
     const component = shallow(<ExampleCard withBorder />)
 
     test('has a good class', () => {
-      expect(component.hasClass('k-Card--withBorder')).to.equal(true)
+      expect(component.hasClass('k-Card--withBorder')).toBe(true)
     })
   })
 
@@ -85,7 +85,7 @@ describe('card()', () => {
     const component = shallow(<ExampleCard withDarkBorder />)
 
     test('has a good class', () => {
-      expect(component.hasClass('k-Card--withDarkBorder')).to.equal(true)
+      expect(component.hasClass('k-Card--withDarkBorder')).toBe(true)
     })
   })
 
@@ -93,7 +93,7 @@ describe('card()', () => {
     const component = shallow(<ExampleCard withShadow />)
 
     test('has a good class', () => {
-      expect(component.hasClass('k-Card--withShadow')).to.equal(true)
+      expect(component.hasClass('k-Card--withShadow')).toBe(true)
     })
   })
 
@@ -101,7 +101,7 @@ describe('card()', () => {
     const component = shallow(<ExampleCard withVerticalPadding />)
 
     test('has a good class', () => {
-      expect(component.hasClass('k-Card--withVerticalPadding')).to.equal(true)
+      expect(component.hasClass('k-Card--withVerticalPadding')).toBe(true)
     })
   })
 
@@ -109,7 +109,7 @@ describe('card()', () => {
     const component = shallow(<ExampleCard withoutBoxShadowOnHover />)
 
     test('has a good class', () => {
-      expect(component.hasClass('k-Card--withoutBoxShadowOnHover')).to.equal(true)
+      expect(component.hasClass('k-Card--withoutBoxShadowOnHover')).toBe(true)
     })
   })
 

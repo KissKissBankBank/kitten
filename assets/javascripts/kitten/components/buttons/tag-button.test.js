@@ -28,8 +28,8 @@ describe('TagButton', () => {
       test('renders a <Button class="k-TagButton" />', () => {
         expect(component).to.have.tagName('button')
         expect(component).to.have.text('Tag')
-        expect(component.hasClass('k-TagButton--custom')).to.equal(true)
-        expect(component.hasClass('k-TagButton--hydrogen')).to.equal(true)
+        expect(component.hasClass('k-TagButton--custom')).toBe(true)
+        expect(component.hasClass('k-TagButton--hydrogen')).toBe(true)
       })
 
       describe('with tiny prop', () => {
@@ -38,7 +38,7 @@ describe('TagButton', () => {
         )
 
         test('renders a <Button class="k-TagButton--tiny" />', () => {
-          expect(component.hasClass('k-TagButton--tiny')).to.equal(true)
+          expect(component.hasClass('k-TagButton--tiny')).toBe(true)
         })
       })
 
@@ -48,7 +48,7 @@ describe('TagButton', () => {
         )
 
         test('renders a <Button class="k-TagButton--big" />', () => {
-          expect(component.hasClass('k-TagButton--big')).to.equal(true)
+          expect(component.hasClass('k-TagButton--big')).toBe(true)
         })
       })
 

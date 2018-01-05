@@ -19,7 +19,7 @@ describe('<Alert />', () => {
     })
 
     test('has a default classes', () => {
-      expect(alert.hasClass('k-Alert')).to.equal(true)
+      expect(alert.hasClass('k-Alert')).toBe(true)
       expect(alert).to.have.descendants('.k-Alert__container')
       expect(alert).to.have.descendants('.k-Alert__row')
       expect(alert).to.have.descendants('.k-Alert__content')
@@ -51,7 +51,7 @@ describe('<Alert />', () => {
     const alert = shallow(<Alert error />)
 
     test('has a error class', () => {
-      expect(alert.hasClass('k-Alert--error')).to.equal(true)
+      expect(alert.hasClass('k-Alert--error')).toBe(true)
     })
   })
 
@@ -59,7 +59,7 @@ describe('<Alert />', () => {
     const alert = shallow(<Alert success />)
 
     test('has a success class', () => {
-      expect(alert.hasClass('k-Alert--success')).to.equal(true)
+      expect(alert.hasClass('k-Alert--success')).toBe(true)
     })
   })
 
@@ -67,7 +67,7 @@ describe('<Alert />', () => {
     const alert = shallow(<Alert className="custom__class" />)
 
     test('has a custom class', () => {
-      expect(alert.hasClass('custom__class')).to.equal(true)
+      expect(alert.hasClass('custom__class')).toBe(true)
     })
   })
 
@@ -160,7 +160,7 @@ describe('<Alert />', () => {
     })
 
     test('has a hidden class', () => {
-      expect(alert.hasClass('k-Alert--hidden')).to.equal(true)
+      expect(alert.hasClass('k-Alert--hidden')).toBe(true)
     })
   })
 })

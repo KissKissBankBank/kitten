@@ -39,7 +39,7 @@ describe('<Marger />', () => {
     const marger = shallow(<Marger className="custom__class">Lorem…</Marger>)
 
     test('has a custom class', () => {
-      expect(marger.hasClass('custom__class')).to.equal(true)
+      expect(marger.hasClass('custom__class')).toBe(true)
     })
 
     test('renders children', () => {

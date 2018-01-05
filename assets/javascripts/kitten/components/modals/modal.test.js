@@ -20,8 +20,8 @@ describe('<Modal />', () => {
     )
 
     test('contains the content', () => {
-      expect(component.hasClass('content-example')).to.equal(true)
-      expect(component.hasClass('k-Modal')).to.equal(true)
+      expect(component.hasClass('content-example')).toBe(true)
+      expect(component.hasClass('k-Modal')).toBe(true)
     })
   })
 })

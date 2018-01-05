@@ -9,7 +9,7 @@ describe('<SupTitle />', () => {
     )
 
     test('renders a <div class="k-SupTitle" />', () => {
-      expect(component.hasClass('k-SupTitle')).to.equal(true)
+      expect(component.hasClass('k-SupTitle')).toBe(true)
     })
 
     test('with default children', () => {
@@ -23,7 +23,7 @@ describe('<SupTitle />', () => {
     )
 
     test('adds the customClass to the component', () => {
-      expect(component.hasClass('customClass')).to.equal(true)
+      expect(component.hasClass('customClass')).toBe(true)
     })
   })
 

@@ -12,13 +12,13 @@ describe('<InfoLines />', () => {
     const infoLines = shallow(<InfoLines infos={ infos } />)
 
     test('has a default class', () => {
-      expect(infoLines.hasClass('k-InfoLines')).to.equal(true)
+      expect(infoLines.hasClass('k-InfoLines')).toBe(true)
     })
 
     test('has a good class on info', () => {
       const firstInfo = infoLines.children().first()
 
-      expect(firstInfo.hasClass('k-InfoLines__line')).to.equal(true)
+      expect(firstInfo.hasClass('k-InfoLines__line')).toBe(true)
     })
 
     test('has 2 elements', () => {
@@ -32,7 +32,7 @@ describe('<InfoLines />', () => {
     const infoLines = shallow(<InfoLines className="custom__class" />)
 
     test('has a good class', () => {
-      expect(infoLines.hasClass('custom__class')).to.equal(true)
+      expect(infoLines.hasClass('custom__class')).toBe(true)
     })
   })
 
@@ -48,7 +48,7 @@ describe('<InfoLines />', () => {
     const infoLines = shallow(<InfoLines withoutTopBottomBorder />)
 
     test('has a good class', () => {
-      expect(infoLines.hasClass('k-InfoLines--withoutTopBottomBorder')).to.equal(true)
+      expect(infoLines.hasClass('k-InfoLines--withoutTopBottomBorder')).toBe(true)
     })
   })
 
@@ -56,7 +56,7 @@ describe('<InfoLines />', () => {
     const infoLines = shallow(<InfoLines withoutResponsive />)
 
     test('has a good class', () => {
-      expect(infoLines.hasClass('k-InfoLines--withoutResponsive')).to.equal(true)
+      expect(infoLines.hasClass('k-InfoLines--withoutResponsive')).toBe(true)
     })
   })
 
@@ -86,7 +86,7 @@ describe('<InfoLines />', () => {
     const element = infoLines.children().first()
 
     test('has a good class', () => {
-      expect(element.hasClass('custom__class')).to.equal(true)
+      expect(element.hasClass('custom__class')).toBe(true)
     })
 
     test('has an aria-hidden attribute', () => {
@@ -98,7 +98,7 @@ describe('<InfoLines />', () => {
     const infoLines = shallow(<InfoLines withBorderRadius />)
 
     test('has a good class', () => {
-      expect(infoLines.hasClass('k-InfoLines--withBorderRadius')).to.equal(true)
+      expect(infoLines.hasClass('k-InfoLines--withBorderRadius')).toBe(true)
     })
   })
 
@@ -106,7 +106,7 @@ describe('<InfoLines />', () => {
     const infoLines = shallow(<InfoLines withLeftRightBorder />)
 
     test('has a good class', () => {
-      expect(infoLines.hasClass('k-InfoLines--withLeftRightBorder')).to.equal(true)
+      expect(infoLines.hasClass('k-InfoLines--withLeftRightBorder')).toBe(true)
     })
   })
 })

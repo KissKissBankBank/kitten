@@ -24,7 +24,7 @@ describe('<RadioButton />', () => {
     const label = component.find('label')
 
     test('passes the right props to the `label` component', () => {
-      expect(label.hasClass("k-RadioButton__label--large")).to.equal(true)
+      expect(label.hasClass("k-RadioButton__label--large")).toBe(true)
     })
   })
 
@@ -47,7 +47,7 @@ describe('<RadioButton />', () => {
     const input = component.find('input')
 
     test('passes the right props to the `input`component', () => {
-      expect(input.hasClass('is-error')).to.equal(true)
+      expect(input.hasClass('is-error')).toBe(true)
     })
   })
 })

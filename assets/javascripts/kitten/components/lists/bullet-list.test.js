@@ -16,7 +16,7 @@ describe('<BulletList />', () => {
     })
 
     test('has default class', () => {
-      expect(bulletList.hasClass('k-BulletList')).to.equal(true)
+      expect(bulletList.hasClass('k-BulletList')).toBe(true)
     })
 
     test('renders 2 items', () => {
@@ -25,7 +25,7 @@ describe('<BulletList />', () => {
 
     test('has a good class on item', () => {
       const firstItem = bulletList.children().first()
-      expect(firstItem.hasClass('k-BulletList__item')).to.equal(true)
+      expect(firstItem.hasClass('k-BulletList__item')).toBe(true)
     })
   })
 
@@ -35,7 +35,7 @@ describe('<BulletList />', () => {
     )
 
     test('has a custom class', () => {
-      expect(bulletList.hasClass('custom__class')).to.equal(true)
+      expect(bulletList.hasClass('custom__class')).toBe(true)
     })
   })
 
@@ -46,7 +46,7 @@ describe('<BulletList />', () => {
 
     test('has a good class', () => {
       const item = bulletList.children().first()
-      expect(item.hasClass('k-BulletList__item--large')).to.equal(true)
+      expect(item.hasClass('k-BulletList__item--large')).toBe(true)
     })
   })
 
@@ -57,7 +57,7 @@ describe('<BulletList />', () => {
 
     test('has a good class', () => {
       const item = bulletList.children().first()
-      expect(item.hasClass('k-BulletList__item--big')).to.equal(true)
+      expect(item.hasClass('k-BulletList__item--big')).toBe(true)
     })
   })
 })

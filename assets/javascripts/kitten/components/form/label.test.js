@@ -9,7 +9,7 @@ describe('<Label />', () => {
 
   test('renders a <label class="k-Label" />', () => {
     expect(component).to.have.tagName('label')
-    expect(component.hasClass('k-Label')).to.equal(true)
+    expect(component.hasClass('k-Label')).toBe(true)
   })
 
   test('renders default children', () => {
@@ -28,8 +28,8 @@ describe('<Label />', () => {
 
     test('renders a span with options', () => {
       expect(component).to.have.tagName('span')
-      expect(component.hasClass('custom-class')).to.equal(true)
-      expect(component.hasClass('k-Label--tiny')).to.equal(true)
+      expect(component.hasClass('custom-class')).toBe(true)
+      expect(component.hasClass('k-Label--tiny')).toBe(true)
       expect(component).not.to.have.attr('for', 'custom-id')
     })
   })
@@ -67,7 +67,7 @@ describe('<Label />', () => {
     const component = shallow(<Label withoutPointerEvents />)
 
     test('has a good class', () => {
-      expect(component.hasClass('k-Label--withoutPointerEvents')).to.equal(true)
+      expect(component.hasClass('k-Label--withoutPointerEvents')).toBe(true)
     })
   })
 })

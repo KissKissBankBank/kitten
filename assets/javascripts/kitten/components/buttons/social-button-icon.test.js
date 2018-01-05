@@ -36,8 +36,8 @@ describe('<FacebookButtonIcon />', () => {
     )
 
     test('has a default classes', () => {
-      expect(button.hasClass('k-ButtonIcon__svg')).to.equal(true)
-      expect(button.hasClass('custom__class')).to.equal(true)
+      expect(button.hasClass('k-ButtonIcon__svg')).toBe(true)
+      expect(button.hasClass('custom__class')).toBe(true)
     })
   })
 })
@@ -65,8 +65,8 @@ describe('<TwitterButtonIcon />', () => {
     )
 
     test('has a default classes', () => {
-      expect(button.hasClass('k-ButtonIcon__svg')).to.equal(true)
-      expect(button.hasClass('custom__class')).to.equal(true)
+      expect(button.hasClass('k-ButtonIcon__svg')).toBe(true)
+      expect(button.hasClass('custom__class')).toBe(true)
     })
   })
 })
@@ -94,8 +94,8 @@ describe('<LinkedinButtonIcon />', () => {
     )
 
     test('has a default classes', () => {
-      expect(button.hasClass('k-ButtonIcon__svg')).to.equal(true)
-      expect(button.hasClass('custom__class')).to.equal(true)
+      expect(button.hasClass('k-ButtonIcon__svg')).toBe(true)
+      expect(button.hasClass('custom__class')).toBe(true)
     })
   })
 })
@@ -123,8 +123,8 @@ describe('<InstagramButtonIcon />', () => {
     )
 
     test('has a default classes', () => {
-      expect(button.hasClass('k-ButtonIcon__svg')).to.equal(true)
-      expect(button.hasClass('custom__class')).to.equal(true)
+      expect(button.hasClass('k-ButtonIcon__svg')).toBe(true)
+      expect(button.hasClass('custom__class')).toBe(true)
     })
   })
 })

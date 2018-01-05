@@ -12,7 +12,7 @@ describe('<Switch />', () => {
 
   test('has a <div class="k-Switch" />', () => {
     expect(component).to.have.tagName('div')
-    expect(component.hasClass('k-Switch')).to.equal(true)
+    expect(component.hasClass('k-Switch')).toBe(true)
   })
 
   test('renders input', () => {
@@ -20,7 +20,7 @@ describe('<Switch />', () => {
 
     expect(input).to.have.attr('id', 'switch-input-1')
     expect(input).to.have.attr('type', 'checkbox')
-    expect(input.hasClass('k-Switch__input')).to.equal(true)
+    expect(input.hasClass('k-Switch__input')).toBe(true)
     expect(input).to.have.attr('checked')
     expect(input).to.have.attr('disabled')
   })
@@ -29,7 +29,7 @@ describe('<Switch />', () => {
     const label = component.find('label')
 
     expect(label).to.have.attr('for', 'switch-input-1')
-    expect(label.hasClass('k-Switch__label')).to.equal(true)
+    expect(label.hasClass('k-Switch__label')).toBe(true)
     expect(label).to.have.text('label')
   })
 
@@ -41,7 +41,7 @@ describe('<Switch />', () => {
     test('has a big class', () => {
       const label = componentBig.find('label')
 
-      expect(label.hasClass('k-Switch__label--big')).to.equal(true)
+      expect(label.hasClass('k-Switch__label--big')).toBe(true)
     })
   })
 })

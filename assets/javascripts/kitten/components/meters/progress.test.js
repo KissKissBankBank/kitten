@@ -15,7 +15,7 @@ describe('<Progress />', () => {
     const component = shallow(
       <Progress className="k-Progress--custom" />
     )
-    expect(component.hasClass('k-Progress--custom')).to.equal(true)
+    expect(component.hasClass('k-Progress--custom')).toBe(true)
   })
 
   test('renders a value', () => {

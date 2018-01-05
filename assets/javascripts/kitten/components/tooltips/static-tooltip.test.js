@@ -7,7 +7,7 @@ describe('<StaticTooltip />', () => {
     const component = shallow(<StaticTooltip />)
 
     test('has the k-StaticTooltip class', () => {
-      expect(component.hasClass('k-StaticTooltip')).to.equal(true)
+      expect(component.hasClass('k-StaticTooltip')).toBe(true)
     })
   })
 
@@ -15,7 +15,7 @@ describe('<StaticTooltip />', () => {
     const component = shallow(<StaticTooltip className="customClass" />)
 
     test('adds the customClass to the component', () => {
-      expect(component.hasClass('customClass')).to.equal(true)
+      expect(component.hasClass('customClass')).toBe(true)
     })
   })
 
