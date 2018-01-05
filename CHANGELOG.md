@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Update all `TextInput` to manage input radius.
+- Feature: Update `SearchInput` component with new design styleguide V2.
 
 ## [17.1.0] - 2018-01-03
 
