@@ -2,7 +2,10 @@ import React, { Component } from 'react'
 import Radium, { StyleRoot } from 'radium'
 import PropTypes from 'prop-types'
 import { Container } from 'kitten/components/grid/container'
-import { Grid, GridCol } from 'kitten/components/grid/grid'
+import {
+  Grid as GridBase,
+  GridCol as GridColBase,
+} from 'kitten/components/grid/grid'
 import { ScreenConfig } from 'kitten/constants/screen-config'
 import {
   NUM_COLUMNS,
@@ -11,7 +14,10 @@ import {
 } from 'kitten/constants/grid-config'
 import COLORS from 'kitten/constants/colors-config'
 
-class HeroBase extends Component {
+const Grid = Radium(GridBase)
+const GridCol = Radium(GridColBase)
+
+export class Hero extends Component {
   render() {
     return (
       <StyleRoot>
@@ -198,11 +204,11 @@ const styles = {
   },
 }
 
-HeroBase.propTypes = {
+Hero.propTypes = {
   direction: PropTypes.oneOf(['left', 'right']),
 }
 
-HeroBase.defaultProps = {
+Hero.defaultProps = {
   direction: 'left',
   tiny: false,
   imageSrc: 'https://placehold.it/40x40/'
@@ -211,5 +217,3 @@ HeroBase.defaultProps = {
   contentBackgroundColor: COLORS.font1,
   contentColor: COLORS.background1,
 }
-
-export const Hero = Radium(HeroBase)

@@ -26,7 +26,7 @@ import { TagButton } from 'kitten/components/buttons/tag-button'
 import { KarlButtonAndText } from 'kitten/karl/buttons/button'
 import {
   KarlButtonIconHeart,
-  KarlButtonIconMicro,
+  KarlButtonIconNano,
 } from 'kitten/karl/buttons/button-icon'
 import {
   KarlButtonIconWordsLeft,
@@ -324,7 +324,7 @@ ReactOnRails.register({
   TwitterButtonIcon,
   KarlButtonAndText,
   KarlButtonIconHeart,
-  KarlButtonIconMicro,
+  KarlButtonIconNano,
   KarlButtonIconWordsLeft,
   KarlButtonIconWordsRight,
   KarlPaymentButtons,
