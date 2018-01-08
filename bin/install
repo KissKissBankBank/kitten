@@ -14,7 +14,9 @@ fi
 # Install dependencies
 gem install --no-document bundler
 bundle install
+echo "----------------- npm install"
 npm install
+echo "----------------- yarn install"
 yarn install
 
 cd spec/dummy
