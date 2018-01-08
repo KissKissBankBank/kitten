@@ -24,7 +24,9 @@ class ArticleCardComponent extends Component {
     const Tag = this.props.href ? 'a' : 'div'
 
     return (
-      <Tag { ...others }>
+      <Tag
+        { ...others }
+      >
         { this.renderImage() }
         { this.renderHeader() }
         { this.renderTitle() }
@@ -45,7 +47,9 @@ class ArticleCardComponent extends Component {
     )
 
     return (
-      <Marger className="k-Card__imageContainer">
+      <Marger
+        className="k-Card__imageContainer"
+      >
         <img
           { ...imageProps }
           alt={ alt || '' }
@@ -59,7 +63,10 @@ class ArticleCardComponent extends Component {
   renderHeader() {
     return (
       <div style={ styles.header.grid }>
-        <Marger top="1" bottom="1">
+        <Marger
+          top="1"
+          bottom="1"
+        >
           <ButtonImage
             tag="span"
             img={ this.props.avatarProps }
@@ -69,7 +76,9 @@ class ArticleCardComponent extends Component {
           />
         </Marger>
 
-        <div style={ styles.header.owner }>
+        <div
+          style={ styles.header.owner }
+        >
           <Text
             tag="div"
             size="micro"
@@ -125,12 +134,15 @@ class ArticleCardComponent extends Component {
           size="tiny"
           style={ styles.stroke }
         />
-        <Text
-          size="micro"
-          weight="regular"
-        >
-          { parseHtml(this.props.articleSubTitle) }
-        </Text>
+
+        { this.props.articleSubTitle &&
+          <Text
+            size="micro"
+            weight="regular"
+          >
+            { parseHtml(this.props.articleSubTitle) }
+          </Text>
+        }
       </Marger>
     )
   }
@@ -172,7 +184,7 @@ const styles = {
     padding: `0 ${COMPONENT_GUTTER}px`,
   },
   stroke: {
-    marginRight: `${COMPONENT_GUTTER}px`,
+    margin: `5px ${COMPONENT_GUTTER}px 5px 0`,
   },
 }
 
@@ -190,7 +202,7 @@ ArticleCardComponent.defaultProps = {
   ownerTitle: 'Owner title',
   ownerDescription: 'Owner description',
   articleTitle: 'Title',
-  articleSubTitle: 'Subtitle',
+  articleSubTitle: '',
 }
 
 export const ArticleCard = card(ArticleCardComponent, {
