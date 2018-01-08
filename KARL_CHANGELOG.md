@@ -4,8 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Remove `borderTop` in `KarlBrowsingHorizontalNav` example.
-- Feature: Rename `KarlButtonIconMicro` to `KarlButtonIconNano` examples.
+## [18.0.0] - 2018-01-08
+
+Features:
+- Remove `borderTop` in `KarlBrowsingHorizontalNav` example.
+- Rename `KarlButtonIconMicro` to `KarlButtonIconNano` examples.
 
 ## [17.1.0] - 2018-01-03
 

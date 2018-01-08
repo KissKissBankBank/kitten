@@ -4,22 +4,28 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `titleProps` prop to `ArticleCard` and `SimpleCard` components.
-- Feature: Remove subtitle part if `articleSubTitle` prop is empty.
+## [18.0.0] - 2018-01-08
+
+Breaking changes:
+- Remove `modifier` prop on `TagButton`.
+- Replace `size="micro"` modifier `size="nano"` in `ButtonIcon` component.
+- Replace `.k-ButtonIcon--checked--micro` by `.k-ButtonIcon--checked--nano`.
+- Replace `.k-ButtonIcon--empty--micro` by `.k-ButtonIcon--empty--nano`.
+
+Features:
+- Add `titleProps` prop to `ArticleCard` and `SimpleCard` components.
+- Remove subtitle part if `articleSubTitle` prop is empty.
   By default, the value is empty.
-- Feature: Text centered on `k-TextInput--twoDigits` class.
-- Breaking change: Remove `modifier` prop on `TagButton`.
-- Feature: Update `TagButton` component with new design styleguide V2.
-- Feature: Update `ProjectCard` with the new design.
-- Fix: Cleaning the use of Radium.
-- Feature: Update all `TextInput` to manage input radius.
-- Feature: Add `rounded` prop in `ButtonIcon` component.
-- Feature: Update `QuestionMarkIcon` component with styleguide V2.
-- Breaking change:
-  Replace `size="micro"` modifier `size="nano"` in `ButtonIcon` component.
-  Replace `.k-ButtonIcon--checked--micro` by `.k-ButtonIcon--checked--nano`.
-  Replace `.k-ButtonIcon--empty--micro` by `.k-ButtonIcon--empty--nano`.
-- Feature: Update `SearchInput` component with new design styleguide V2.
+- Text centered on `k-TextInput--twoDigits` class.
+- Update `TagButton` component with new design styleguide V2.
+- Update `ProjectCard` with the new design.
+- Update all `TextInput` to manage input radius.
+- Add `rounded` prop in `ButtonIcon` component.
+- Update `QuestionMarkIcon` component with styleguide V2.
+- Update `SearchInput` component with new design styleguide V2.
+
+Fix:
+- Cleaning the use of Radium.
 
 ## [17.1.0] - 2018-01-03
 
