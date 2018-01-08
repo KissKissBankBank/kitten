@@ -8,15 +8,12 @@ fi
 
 # Install yarn with npm
 if ! hash yarn 2> /dev/null; then
-  npm install -g yarn@0.24.4
+  npm install -g yarn@1.0.2
 fi
 
 # Install dependencies
 gem install --no-document bundler
 bundle install
-echo "----------------- npm install"
-npm install
-echo "----------------- yarn install"
 yarn install
 
 cd spec/dummy
