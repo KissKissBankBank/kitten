@@ -231,10 +231,11 @@
     }
   }
 
+  // Used `ButtonIcon` signup and phone only `tiny` version.
   .k-ButtonIcon--signup,
   .k-ButtonIcon--phone {
     @include k-buttonPadding(
-      $button-size,
+      $button-size-tiny,
       $signup-size,
       $signup-size
     );
