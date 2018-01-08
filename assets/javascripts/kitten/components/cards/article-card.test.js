@@ -37,8 +37,8 @@ describe('<ArticleCard />', () => {
       expect(component).to.have.descendants(Title)
     })
 
-    it('has 3 <Text /> components', () => {
-      expect(component).to.have.exactly(3).descendants(Text)
+    it('has 2 <Text /> components', () => {
+      expect(component).to.have.exactly(2).descendants(Text)
     })
 
     it('has <HorizontalStroke /> component', () => {
