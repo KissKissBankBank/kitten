@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add 16:9 format to the `ArticleCard` image.
+
 ## [18.0.0] - 2018-01-08
 
 Breaking changes:
