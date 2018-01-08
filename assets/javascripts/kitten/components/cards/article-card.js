@@ -97,7 +97,10 @@ class ArticleCardComponent extends Component {
     )
 
     return (
-      <Marger bottom="1" style={ styles.title }>
+      <Marger
+        bottom="1"
+        style={ styles.title }
+      >
         <Title
           tag="p"
           { ...this.props.titleProps }
@@ -113,8 +116,15 @@ class ArticleCardComponent extends Component {
 
   renderSubtitle() {
     return (
-      <Marger top="1" bottom="3" style={ styles.subtitle }>
-        <HorizontalStroke size="tiny" style={ styles.stroke } />
+      <Marger
+        top="1"
+        bottom="3"
+        style={ styles.subtitle }
+      >
+        <HorizontalStroke
+          size="tiny"
+          style={ styles.stroke }
+        />
         <Text
           size="micro"
           weight="regular"
