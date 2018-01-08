@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add 16:9 format to the `ProjectCard` image.
 - Feature: Add `titleProps` prop to `ArticleCard` and `SimpleCard` components.
 - Feature: Remove subtitle part if `articleSubTitle` prop is empty.
   By default, the value is empty.
