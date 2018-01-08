@@ -49,6 +49,7 @@ class ArticleCardComponent extends Component {
     return (
       <Marger
         className="k-Card__imageContainer"
+        style={ styles.imageContainer }
       >
         <img
           { ...imageProps }
@@ -70,7 +71,6 @@ class ArticleCardComponent extends Component {
           <ButtonImage
             tag="span"
             img={ this.props.avatarProps }
-            withBorder
             withoutPointerEvents
             style={ styles.header.avatar }
           />
@@ -151,7 +151,14 @@ class ArticleCardComponent extends Component {
 const COMPONENT_GUTTER = 10
 
 const styles = {
+  imageContainer: {
+    overflow: 'hidden',
+    position: 'relative',
+    paddingTop: `${9 / 16 * 100}%`,
+  },
   image: {
+    position: 'absolute',
+    top: 0,
     width: '100%',
     display: 'block',
   },
