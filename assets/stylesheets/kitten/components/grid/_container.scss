@@ -14,4 +14,9 @@
   .k-Container {
     @include k-container;
   }
+
+  .k-Container--no-padding {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }

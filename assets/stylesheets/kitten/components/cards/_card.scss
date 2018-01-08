@@ -36,6 +36,10 @@
     overflow: auto;
   }
 
+  .k-Card__imageContainer {
+    overflow: hidden;
+  }
+
   // Modifiers.
   .k-Card--light {
     background: $light-background-color;
@@ -86,15 +90,34 @@
 
     transition: transform $transition-duration, box-shadow $transition-duration;
 
-    &:hover {
-      box-shadow: $box-shadow-values $box-shadow-color;
+    .k-Card__image {
+      transition: transform $transition-duration;
+    }
 
+    .k-Card__title {
+      transition: color $transition-duration;
+    }
+
+    &:hover,
+    &:focus {
       &.k-Card--withShadow {
         box-shadow: $box-shadow-values $box-shadow-color-hover;
       }
 
       &.k-Card--translateOnHover {
         transform: translateY($translate-y);
+      }
+
+      &.k-Card--withoutBoxShadowOnHover {
+        box-shadow: initial;
+      }
+
+      .k-Card__image {
+        transform: scale(1.1);
+      }
+
+      .k-Card__title {
+        color: map-get($k-colors, 'primary-1');
       }
     }
   }

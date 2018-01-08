@@ -11,7 +11,7 @@ export const KarlButtonIconHeart = props => {
   )
 }
 
-export const KarlButtonIconMicro = props => {
+export const KarlButtonIconNano = props => {
   return (
     <ButtonIcon { ...props }>
       <ArrowIcon className="k-ButtonIcon__svg" />

@@ -26,7 +26,7 @@ import { TagButton } from 'kitten/components/buttons/tag-button'
 import { KarlButtonAndText } from 'kitten/karl/buttons/button'
 import {
   KarlButtonIconHeart,
-  KarlButtonIconMicro,
+  KarlButtonIconNano,
 } from 'kitten/karl/buttons/button-icon'
 import {
   KarlButtonIconWordsLeft,
@@ -35,11 +35,13 @@ import {
 import { KarlPaymentButtons } from 'kitten/karl/buttons/payment-button'
 
 // Cards
+import { ArticleCard } from 'kitten/components/cards/article-card'
 import { ProjectCard } from 'kitten/components/cards/project-card'
 import { ProjectCreatorCard }
   from 'kitten/components/cards/project-creator-card'
 import { ProjectSimilarCard }
   from 'kitten/components/cards/project-similar-card'
+import { SimpleCard } from 'kitten/components/cards/simple-card'
 import { KarlCard } from 'kitten/karl/cards/card'
 import {
   KarlSimilarProjectsCard,
@@ -127,6 +129,9 @@ import {
 } from 'kitten/karl/headers/header'
 import { KarlGithubRibbon } from 'kitten/karl/headers/karl-github-ribbon'
 import { KarlMenuHeader } from 'kitten/karl/headers/karl-header'
+
+// heroes.
+import { KarlHero } from 'kitten/karl/heroes/hero'
 
 // Icons
 import { ArrowIcon } from 'kitten/components/icons/arrow-icon'
@@ -295,6 +300,11 @@ import {
   KarlParagraphWithLink,
 } from 'kitten/karl/typography/paragraph'
 
+// Carousel
+import {
+  KarlCarouselProjectCard,
+} from 'kitten/karl/carousel/carousel'
+
 ReactOnRails.register({
   // Box
   DocLinkBox,
@@ -315,7 +325,7 @@ ReactOnRails.register({
   TwitterButtonIcon,
   KarlButtonAndText,
   KarlButtonIconHeart,
-  KarlButtonIconMicro,
+  KarlButtonIconNano,
   KarlButtonIconWordsLeft,
   KarlButtonIconWordsRight,
   KarlPaymentButtons,
@@ -324,9 +334,11 @@ ReactOnRails.register({
   KarlColors,
 
   // Cards
+  ArticleCard,
   ProjectCard,
   ProjectCreatorCard,
   ProjectSimilarCard,
+  SimpleCard,
   KarlCard,
   KarlSimilarProjectsCard,
   KarlSimilarProjectsWithInfosCard,
@@ -396,6 +408,9 @@ ReactOnRails.register({
   KarlMenuHeader,
   KarlPhoneDropdown,
   KarlUnloggedHeaderPlatformSwitch,
+
+  // Heroes.
+  KarlHero,
 
   // Icons
   ArrowIcon,
@@ -533,4 +548,7 @@ ReactOnRails.register({
   KarlParagraphSecondary,
   KarlParagraphTertiary,
   KarlParagraphWithLink,
+
+  // Carousel
+  KarlCarouselProjectCard,
 })

@@ -5,17 +5,35 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add `KarlFooterKissKiss` example.
-- Feature: Create `KarlLinkList`, `KarlLinkListSelectedItem` and
-  `KarlLinkListDark`.
-- Feature: Create new `KarlImageWithCaption` example.
-- Feature: Create `KarlExampleTitle` example.
-- Feature: Create `KarlHorizontalStrokes` example.
-- Feature: Add `KarlHorizontalNav` and `KarlHorizontalNavBrowsing` examples.
-- Feature: Create `KarlVerticalStroke`, `KarlTinyVerticalStroke`,
-  `KarlBigVerticalStroke` and `KarlHugeVerticalStroke` examples.
-- Feature: Add `InstagramButtonIcon` example.
-- Feature: Add `disabled` prop on `TextInputWithButton` and `tiny` prop on
+
+## [18.0.0] - 2018-01-08
+
+Features:
+- Remove `borderTop` in `KarlBrowsingHorizontalNav` example.
+- Rename `KarlButtonIconMicro` to `KarlButtonIconNano` examples.
+
+## [17.1.0] - 2018-01-03
+
+No changes.
+
+## [17.0.0] - 2018-01-02
+
+Features:
+- Add `ArticleCard` examples.
+- Add `KarlCarouselProjectCard` examples.
+- Add `SimpleCard` examples.
+- Add `KarlLinkList`, `KarlLinkListSelectedItem` and `KarlLinkListDark`.
+- Add new `KarlImageWithCaption` example.
+- Add `KarlExampleTitle` example.
+- Add `KarlHorizontalStrokes` example.
+- Add `KarlHorizontalNav` and `KarlHorizontalNavBrowsing` examples.
+- Add `KarlVerticalStroke`, `KarlTinyVerticalStroke`, `KarlBigVerticalStroke`
+  and `KarlHugeVerticalStroke` examples.
+- Add `InstagramButtonIcon` example.
+- Add `disabled` prop on `TextInputWithButton` and `tiny` prop on
   `TextInputWithLimit` examples.
+- Update `Hero` examples.
+- Update webpack configuration with appropriate babel presets.
 
 ## [16.3.1] - 2017-11-28
 

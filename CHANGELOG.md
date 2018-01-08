@@ -5,33 +5,89 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add `k-u-color-background1` utility.
-- Feature: Update `Tooltip`, `TooltipNew` and `StaticTooltip` components with styleguide V2.
-- Feature: Update `LinkBox` and `InformationBox` components with styleguide V2
-  new design.
-- Fix: Fix `LinkList` test.
-- Breaking change: Update `LinkList` component with styleguide V2.
+- Fix: Add `tiny` size on `k-ButtonIcon--signup` and `k-ButtonIcon--phone`.
+- Feature: Add 16:9 format to the `ArticleCard` image.
+
+## [18.0.0] - 2018-01-08
+
+Breaking changes:
+- Remove `modifier` prop on `TagButton`.
+- Replace `size="micro"` modifier `size="nano"` in `ButtonIcon` component.
+- Replace `.k-ButtonIcon--checked--micro` by `.k-ButtonIcon--checked--nano`.
+- Replace `.k-ButtonIcon--empty--micro` by `.k-ButtonIcon--empty--nano`.
+
+Features:
+- Add `titleProps` prop to `ArticleCard` and `SimpleCard` components.
+- Remove subtitle part if `articleSubTitle` prop is empty.
+  By default, the value is empty.
+- Text centered on `k-TextInput--twoDigits` class.
+- Update `TagButton` component with new design styleguide V2.
+- Update `ProjectCard` with the new design.
+- Update all `TextInput` to manage input radius.
+- Add `rounded` prop in `ButtonIcon` component.
+- Update `QuestionMarkIcon` component with styleguide V2.
+- Update `SearchInput` component with new design styleguide V2.
+
+Fix:
+- Cleaning the use of Radium.
+
+## [17.1.0] - 2018-01-03
+
+Feature:
+- Update `Header` style with the new border size of `HorizontalNav`.
+
+Fix:
+- Add `href` prop on link items in `HorizontalNav` component.
+
+## [17.0.0] - 2018-01-02
+
+Breaking changes:
+- Remove `k-Hero` mixin.
+- Update grid configuration.
+- Update `LinkList` component with styleguide V2.
   Replace `@include k-LinkList(( colors: ( ))` by `@include k-LinkList;`.
-- Feature: Create new `ImageWithCaption` component.
-- Feature: Add `font2` prop in `Text` component.
-- Feature: Create `HorizontalStroke` component.
-- Feature: Create `HorizontalNav` React component with styleguide V2 brand config.
-- Feature: Create `VerticalStroke` component.
-- Feature: Update all `Select` components with styleguide V2 new design.
-- Feature: Update `Alert` component with new design styleguide V2.
-- Feature: Update `:focus` `border-color` on `TextInput` component.
-- Feature: Update `Checkbox` and `RadioButton` components with new design
-  styleguide V2.
-- Feature: Add `instagram` modifier in `ButtonIcon` component,
-  `InstagramButtonIcon` and `InstagramIcon` components.
-- Feature: Add `disabled` prop on `TextInputWithButton`.
-- Feature: Update all `Input` components with new design styleguide V2.
-- Feature: Update `k-buttonRounded` helper to manage button radius.
-- Feature: Add `k-buttonPadding` helper to manage button paddings.
-- Feature: Update all `Button` components with new design styleguide V2.
-- Fix: Update ruby version.
-- Feature: Remove `boron` buttons colors.
-- Feature: Update colors.
-- Feature: Add new `error` and `valid` colors.
+- Update all `Button` components with new design styleguide V2.
+
+Features:
+- Add `ArticleCard` component.
+- Add `Hero` component.
+- Add `Carousel` components and its helpers.
+- Add screen and grid JavaScript configuration files.
+- Add feature detection utility.
+- Add media-query utility.
+- Add range utility.
+- Add `SimpleCard` component.
+- Add `withoutBoxShadowOnHover` prop to `card` HOC.
+- Add new `:hover` styles to `k-Card`.
+- Add `font2` prop in `Text` component.
+- Add `instagram` modifier in `ButtonIcon` component, `InstagramButtonIcon`
+  and `InstagramIcon` components.
+- Add `disabled` prop on `TextInputWithButton`.
+- Add `k-buttonPadding` helper to manage button paddings.
+- Add new `error` and `valid` colors.
+- Add `ImageWithCaption` component.
+- Add `HorizontalStroke` component.
+- Add `HorizontalNav` React component with styleguide V2 brand config.
+- Add `VerticalStroke` component.
+- Update grid 'Container' component with screen sizing handlers.
+- Update `Tooltip`, `TooltipNew` and `StaticTooltip` components
+  with styleguide V2.
+- Update `LinkBox` and `InformationBox` components with styleguide V2
+  new design.
+- Update all `Select` components with styleguide V2 new design.
+- Update `Alert` component with new design styleguide V2.
+- Update `:focus` `border-color` on `TextInput` component.
+- Update `Checkbox` and `RadioButton` components with new design styleguide V2.
+- Update all `Input` components with new design styleguide V2.
+- Update `k-buttonRounded` helper to manage button radius.
+- Update colors.
+- Remove `boron` buttons colors.
+
+Fixes:
+- Fix `:focus` `border-color` on `TextInputWithUnit`, `Select` and
+  `LocationInput` component.
+- Fix `LinkList` test.
+- Update ruby version.
 
 ## [16.3.1] - 2017-11-28
 

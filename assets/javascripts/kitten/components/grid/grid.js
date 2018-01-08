@@ -1,15 +1,17 @@
-import React from 'react'
+import React, { Component } from 'react'
 import classNames from 'classnames'
+import { ScreenConfig } from 'kitten/constants/screen-config'
 
-const mediaQueries = ['xxs', 'xs', 's', 'm', 'l', 'xl']
-
-export class Grid extends React.Component {
+export class Grid extends Component {
   render() {
     const { className, ...others } = this.props
     const gridClassName = classNames('k-Grid', className)
 
     return (
-      <div className={ gridClassName } { ...others } />
+      <div
+        className={ gridClassName }
+        { ...others }
+      />
     )
   }
 }
@@ -18,7 +20,8 @@ export class GridCol extends React.Component {
   classByMediaQuery() {
     const props = this.props
 
-    const classNamesByMediaQuery = mediaQueries.map(mediaQuery => {
+    const classNamesByMediaQuery = Object.keys(ScreenConfig).map(size => {
+      const mediaQuery = size.toLowerCase()
       const col = props[`col-${mediaQuery}`]
       const offset = props[`offset-${mediaQuery}`]
 
@@ -47,13 +50,17 @@ export class GridCol extends React.Component {
     )
 
     // Remove unknown props in others.
-    mediaQueries.map(mediaQuery => {
+    Object.keys(ScreenConfig).map(size => {
+      const mediaQuery = size.toLowerCase()
       delete(others[`col-${mediaQuery}`])
       delete(others[`offset-${mediaQuery}`])
     })
 
     return (
-      <div { ...others } className={ gridClassNames } />
+      <div
+        { ...others }
+        className={ gridClassNames }
+      />
     )
   }
 }

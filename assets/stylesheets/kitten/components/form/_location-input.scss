@@ -38,7 +38,7 @@
   $background-color-active: map-get($k-colors, 'background-3');
 
   // Focus
-  $border-color-focus: map-get($k-colors, 'primary-1');
+  $border-color-focus: map-get($k-colors, 'line-2');
 
   // Disabled
   $color-disabled: map-get($k-colors, 'background-1');
@@ -49,6 +49,10 @@
   $color-placeholder: map-get($k-colors, 'font-2');
 
   $border-size: k-px-to-rem(2px);
+
+  // Input radius
+  // Chrome forced a default `border-radius: 4px`, we have to set it to 0px.
+  $input-radius: 0;
 
   .k-LocationInput {
     .k-LocationInput__group {
@@ -70,6 +74,7 @@
       height: $height;
       background: $background-color;
       border: $border-size solid $border-color;
+      border-radius: $input-radius;
       color: $color;
 
       transition: color .2s, border-color .2s;
