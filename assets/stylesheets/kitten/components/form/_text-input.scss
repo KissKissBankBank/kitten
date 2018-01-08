@@ -127,6 +127,7 @@
 
   .k-TextInput--twoDigits {
     width: k-px-to-rem($horizontal-padding * 2 + $digit-length * 2);
+    text-align: center;
   }
 
   .k-TextInput--twelveDigits {
