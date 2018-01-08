@@ -18,7 +18,6 @@ export const KarlHorizontalNav = props => {
 export const KarlBrowsingHorizontalNav = props => {
   const rowStyles = {
     backgroundColor: '#f6f6f6',
-    borderTop: '1px solid #eee',
   }
 
   const horizontalNavItems = [

@@ -6,6 +6,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Remove subtitle part if `articleSubTitle` prop is empty.
   By default, the value is empty.
+- Feature: Text centered on `k-TextInput--twoDigits` class.
+- Breaking change: Remove `modifier` prop on `TagButton`.
+- Feature: Update `TagButton` component with new design styleguide V2.
 - Feature: Update `ProjectCard` with the new design.
 - Fix: Cleaning the use of Radium.
 - Feature: Update all `TextInput` to manage input radius.
