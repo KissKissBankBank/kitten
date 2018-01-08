@@ -8,7 +8,7 @@ fi
 
 # Install yarn with npm
 if ! hash yarn 2> /dev/null; then
-  npm install -g yarn@1.0.2
+  npm install -g yarn@0.24.4
 fi
 
 # Install dependencies
