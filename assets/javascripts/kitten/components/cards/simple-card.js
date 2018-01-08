@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import classNames from 'classnames'
 import { card } from 'kitten/hoc/card'
 import { Grid, GridCol } from 'kitten/components/grid/grid'
 import { Marger } from 'kitten/components/layout/marger'
@@ -11,6 +12,7 @@ class SimpleCardComponent extends Component {
   render() {
     const {
       imageProps,
+      titleProps,
       title,
       subtitle,
       paragraph,
@@ -18,6 +20,11 @@ class SimpleCardComponent extends Component {
     } = this.props
 
     const Tag = this.props.href ? 'a' : 'div'
+
+    const titleClassName = classNames(
+      'k-Card__title',
+      titleProps.className,
+    )
 
     return (
       <Tag { ...others }>
@@ -35,7 +42,9 @@ class SimpleCardComponent extends Component {
         { title &&
           <Marger top="2" bottom=".5">
             <Title
-              className="k-Card__title"
+              tag="p"
+              { ...titleProps }
+              className={ titleClassName }
               margin={ false }
               modifier="senary"
             >
@@ -87,6 +96,7 @@ SimpleCardComponent.defaultProps = {
     src: 'https://placehold.it/200x200/4a84ff/4a84ff',
     alt: '',
   },
+  titleProps: {},
   title: null,
   subtitle: null,
   paragraph: null,
