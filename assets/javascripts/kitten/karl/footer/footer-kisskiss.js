@@ -1,9 +1,21 @@
 import React, { Component } from 'react'
 import classNames from 'classnames'
-import { Row } from 'kitten/components/grid/row'
-import { Grid, GridCol } from 'kitten/components/grid/grid'
+import Radium, { StyleRoot } from 'radium'
+import { Row as RowBase } from 'kitten/components/grid/row'
+import { Container } from 'kitten/components/grid/container'
+import {
+  Grid as GridBase,
+  GridCol as GridColBase,
+} from 'kitten/components/grid/grid'
+import { ScreenConfig } from 'kitten/constants/screen-config'
+import {
+  NUM_COLUMNS,
+  CONTAINER_PADDING,
+  CONTAINER_PADDING_MOBILE,
+} from 'kitten/constants/grid-config'
+import COLORS from 'kitten/constants/colors-config'
 import { TextInputWithButton } from 'kitten/components/form/text-input-with-button'
-import { Paragraph } from 'kitten/components/typography/paragraph'
+import { Paragraph  as ParagraphBase } from 'kitten/components/typography/paragraph'
 import { Text } from 'kitten/components/typography/text'
 import {
   FacebookButtonIcon,
@@ -14,110 +26,93 @@ import { LinkList } from 'kitten/components/links/link-list'
 import { SelectWithState } from 'kitten/components/form/select-with-state'
 import { KissKissBankBankLogo } from 'kitten/karl/logos/kisskissbankbanklogo'
 
+const Grid = Radium(GridBase)
+const GridCol = Radium(GridColBase)
+const Row = Radium(RowBase)
+const Paragraph = Radium(ParagraphBase)
+
 export class KarlFooterKisskiss extends Component {
-  renderNetwork() {
+  render() {
     return (
-      <Row style={{
-        background: 'linear-gradient(to right, #f6f6f6 0%, #f6f6f6 50%, #fff 50%, #fff 100%)'
-      }}
-      >
+      <StyleRoot>
+        <div className="karl-FooterKisskiss">
+          { this.renderNetwork() }
+          <div style= {{ background: '#222' }}>
+            { this.renderList() }
+            { this.renderNotice() }
+          </div>
+        </div>
+      </StyleRoot>
+    )
+  }
+
+  renderNetwork() {
+    return(
+      <Row style={ styles.network }>
         <Grid>
-          <GridCol col-l="8">
-            <div
-              style={{
-                padding: '35px 0',
-                backgroundColor: '#f6f6f6',
-              }}
-            >
-              <Grid>
-                <GridCol
-                  col-l="3"
-                  col-m="12"
-                  style={{
-                    alignSelf: 'center'
-                  }}
-                  className="k-u-align-center@m-up"
-                >
-                  <Text
-                    size="tiny"
-                    weight="regular"
-                  >
-                    Inscrivez-vous à notre Newsletter
-                  </Text>
-                </GridCol>
-
-                <GridCol
-                  col-l="5"
-                  col-m="12"
-                  style={{
-                    alignSelf: 'center',
-                  }}
-                  className="k-u-margin-top-single@m-down"
-                >
-                  <Grid>
-                    <GridCol
-                      col-l="12"
-                      col-m="5"
-                    >
-                      <TextInputWithButton
-                        value="Envoyer"
-                        textInputProps={{
-                          placeholder:"Entrez votre e-mail"
-                        }}
-                      />
-                    </GridCol>
-                  </Grid>
-                </GridCol>
-              </Grid>
-            </div>
-          </GridCol>
-
           <GridCol
-            col-l="4"
-            style={{
-              alignSelf: 'center',
-            }}
-            className="k-u-margin-top-triple@s-down"
+            col-l="8"
+            col-m="12"
+            style={ styles.network.subscribe }
           >
-            <div className={ classNames('karl-FooterKisskiss__network__logo',
-                                        'k-u-align-center@m-up') }
-            >
-              <div
-                style={{
-                  alignSelf: 'center',
-                  marginRight: '15px',
-                }}
+            <Grid>
+              <GridCol
+                col-l="4"
+                col-m="12"
+                style={ styles.network.subscribe.newsletter.label }
               >
                 <Text
                   size="tiny"
                   weight="regular"
-                  className={ classNames('k-u-align-center@m-up',
-                                         'k-u-align-right@l-up') }
                 >
-                  Suivez-nous
+                  Inscrivez-vous à notre Newsletter
                 </Text>
-              </div>
+              </GridCol>
 
-              <div
-                style={{
-                  textAlign: 'center'
-                }}
-                className="k-u-margin-top-single@m-down"
+              <GridCol
+                col-l="5"
+                col-m="12"
+                style={ styles.network.subscribe.newsletter.form }
               >
-                <FacebookButtonIcon
-                  style={{
-                    marginRight: '15px',
-                  }}
-                />
+                <Grid>
+                  <GridCol
+                    col-l="12"
+                    col-m="5"
+                  >
+                    <TextInputWithButton
+                      value="Envoyer"
+                      textInputProps={{
+                        placeholder:"Entrez votre e-mail"
+                      }}
+                    />
+                  </GridCol>
+                </Grid>
+              </GridCol>
+            </Grid>
+          </GridCol>
 
-                <TwitterButtonIcon
-                  style={{
-                    marginRight: '15px',
-                  }}
-                />
+          <GridCol
+            col-l="4"
+            col-m="12"
+            style={ styles.network.social }
+          >
+            <div style={ styles.network.social.text }>
+              <Text
+                size="tiny"
+                weight="regular"
+              >
+                Suivez-nous
+              </Text>
+            </div>
 
-                <InstagramButtonIcon />
-              </div>
+            <div style={ styles.network.social.buttons }>
+              <FacebookButtonIcon
+                style={ styles.network.social.buttons.buttonIcon }
+              />
+              <TwitterButtonIcon
+                style={ styles.network.social.buttons.buttonIcon }
+              />
+              <InstagramButtonIcon />
             </div>
           </GridCol>
         </Grid>
@@ -173,28 +168,24 @@ export class KarlFooterKisskiss extends Component {
     ]
 
     return (
-      <Row style={{ background: '#222' }}>
-        <Grid className="karl-FooterKisskiss__paddingList">
+      <Row>
+        <Grid style={ styles.list }>
           <GridCol col-l="2">
-            <div className={ classNames('k-u-align-center@l-down',
-                                        'k-u-margin-bottom-triple',
-                                        'karl-FooterKisskiss__logo__img') }
-            >
+            <div style={ styles.list.logo }>
               <KissKissBankBankLogo
                 color="#fff"
-                className="karl-FooterKisskiss__logo__img__imgTag"
-              />
+                style={ styles.list.logo.img } />
             </div>
           </GridCol>
 
           <GridCol
             col-l="6"
-            className="karl-FooterKisskiss__paddingLinkList"
+            style={ styles.list.linkList }
           >
               <Grid>
                 <GridCol
                   col-m="4"
-                  className="k-u-margin-bottom-triple@s-down"
+                  style={ styles.list.linkList.items }
                 >
                   <LinkList
                     margin={ false }
@@ -205,7 +196,7 @@ export class KarlFooterKisskiss extends Component {
 
                 <GridCol
                   col-m="4"
-                  className="k-u-margin-bottom-triple@s-down"
+                  style={ styles.list.linkList.items }
                 >
                   <LinkList
                     margin={ false }
@@ -216,7 +207,7 @@ export class KarlFooterKisskiss extends Component {
 
                 <GridCol
                   col-m="4"
-                  className="k-u-margin-bottom-triple@s-down"
+                  style={ styles.list.linkList.items }
                 >
                   <LinkList
                     margin={ false }
@@ -237,117 +228,234 @@ export class KarlFooterKisskiss extends Component {
   renderNotice() {
     return(
       <Row>
-        <Grid style={{ paddingBottom: '80px' }}>
+        <Grid style={ styles.notice }>
           <GridCol
             col-xs="8" offset-xs="2"
             col-s="10" offset-s="1"
             col-m="4" offset-m="1"
             col-l="4" offset-l="0"
           >
-            <div className={ classNames('k-u-align-left@l-up',
-                                        'karl-FooterKisskiss__notice__logo') }
+            <div style={ styles.notice.block }>
+              <div style={ styles.notice.block.logo }>
+                <img
+                  src="/assets/partners/french-authorities.svg"
+                  alt="Autorités Française"
+                  style={ styles.notice.block.logo.img }
+                />
+              </div>
+
+              <Paragraph
+                modifier="quaternary"
+                style={ styles.notice.block.paragraph }
+                margin={ false }
               >
-                <div className={ classNames('k-u-align-center@l-down',
-                                            'k-u-margin-bottom-single',
-                                            'karl-FooterKisskiss__logo__img') }
-                >
-                  <img
-                    src="/assets/partners/french-authorities.svg"
-                    alt="Autorités Française"
-                    className="karl-FooterKisskiss__logo__img__imgTag"
-                  />
-                </div>
+                KissKissBankBank est une plateforme de financement participatif
+                régulée par les autorités françaises. Immatriculation&nbsp: 14007218
+              </Paragraph>
+            </div>
+          </GridCol>
 
-                <Paragraph
-                  modifier="quaternary"
-                  className={ classNames('k-u-align-center@l-down',
-                                         'k-u-align-left@l-up',
-                                         'k-u-color-background1') }
-                  margin={ false }
-                >
-                  KissKissBankBank est une plateforme de financement participatif
-                  régulée par les autorités françaises. Immatriculation&nbsp: 14007218
-                </Paragraph>
+          <GridCol
+            col-xs="8" offset-xs="2"
+            col-s="10" offset-s="1"
+            col-m="4" offset-m="2"
+            col-l="4" offset-l="0"
+            className="k-u-margin-top-triple@s-down"
+          >
+            <div style={ styles.notice.block }>
+              <div style={ styles.notice.block.logo }>
+                <img
+                  src="/assets/partners/mangopay.svg"
+                  alt="MANGOPAY"
+                  style={ styles.notice.block.logo.img }
+                />
               </div>
-            </GridCol>
 
-            <GridCol
-              col-xs="8" offset-xs="2"
-              col-s="10" offset-s="1"
-              col-m="4" offset-m="2"
-              col-l="4" offset-l="0"
-              className="k-u-margin-top-triple@s-down"
-            >
-              <div className="karl-FooterKisskiss__notice__logo">
-                <div className={ classNames('k-u-align-center@l-down',
-                                            'k-u-margin-bottom-single',
-                                            'karl-FooterKisskiss__logo__img') }
+              <Paragraph
+                modifier="quaternary"
+                style={ styles.notice.block.paragraph }
+                margin={ false }
+              >
+                KissKissBankBank &amp; Co est agent de l’institution financière
+                {' '}
+                <a
+                  href="https://www.mangopay.com/fr/"
+                  target="_blank"
+                  className={ classNames('k-u-color-background1',
+                                         'karl-FooterKisskiss__notice__link') }
                 >
-                  <img
-                    src="/assets/partners/mangopay.svg"
-                    alt="MANGOPAY"
-                    className={
-                      classNames('karl-FooterKisskiss__logo__imgMangopay',
-                                 'karl-FooterKisskiss__logo__img__imgTag')
-                    }
-                  />
-                </div>
+                  Mangopay SA.
+                </a>
+                {' '}
+                Paiements sécurisés avec Mangopay Payment Services
+              </Paragraph>
+            </div>
+          </GridCol>
 
-                <Paragraph
-                  modifier="quaternary"
-                  className={ classNames('k-u-align-center@l-down',
-                                         'k-u-align-left@l-up',
-                                         'k-u-color-background1') }
-                  margin={ false }
-                >
-                  KissKissBankBank &amp; Co est agent de l’institution financière
-                  {' '}
-                  <a
-                    href="https://www.mangopay.com/fr/"
-                    target="_blank"
-                    className={ classNames('k-u-color-background1',
-                                           'karl-FooterKisskiss__notice__link') }
-                  >
-                    Mangopay SA.
-                  </a>
-                  {' '}
-                  Paiements sécurisés avec Mangopay Payment Services
-                </Paragraph>
-              </div>
-            </GridCol>
-
-            <GridCol
-              col-l="4"
-              className={ classNames('k-u-align-center@l-down',
-                                     'k-u-align-right@l-up',
-                                     'k-u-margin-top-triple',
-                                     'karl-FooterKisskiss__notice__copyright') }
-            >
-              <div>
-                <Paragraph
-                  modifier="quaternary"
-                  className={ classNames('k-u-weight-regular',
-                                         'k-u-color-background1') }
-                  margin={ false }
-                >
-                  © 2017 KissKissBankBank &amp; Co
-                </Paragraph>
-              </div>
+          <GridCol
+            col-l="4"
+            style={ }
+            className={ classNames('k-u-align-center@l-down',
+                                   'k-u-align-right@l-up',
+                                   'k-u-margin-top-triple',
+                                   'karl-FooterKisskiss__notice__copyright') }
+          >
+            <div>
+              <Paragraph
+                modifier="quaternary"
+                className={ classNames('k-u-weight-regular',
+                                       'k-u-color-background1') }
+                margin={ false }
+              >
+                © 2017 KissKissBankBank &amp; Co
+              </Paragraph>
+            </div>
           </GridCol>
         </Grid>
       </Row>
     )
   }
+}
 
-  render() {
-    return (
-      <div className="karl-FooterKisskiss">
-        { this.renderNetwork() }
-        <div style= {{ background: '#222' }}>
-          { this.renderList() }
-          { this.renderNotice() }
-        </div>
-      </div>
-    )
-  }
+const styles = {
+  network: {
+    background: 'linear-gradient(to right, '
+    + `${COLORS.background3} 0%, `
+    + `${COLORS.background3} 50%, `
+    + `${COLORS.background1} 50%, `
+    + `${COLORS.background1} 100%)`,
+
+    subscribe: {
+      padding: '35px 0',
+      backgroundColor: `${COLORS.background3}`,
+
+      newsletter: {
+        label: {
+          alignSelf: 'center',
+          [`@media (min-width: ${ScreenConfig['M'].min}px)`]: {
+            textAlign: 'center',
+          },
+        },
+        form: {
+          alignSelf: 'center',
+          [`@media (max-width: ${ScreenConfig['M'].max}px)`]: {
+            marginTop: '10px',
+          },
+        },
+      },
+    },
+
+    social: {
+      alignSelf: 'center',
+      [`@media (max-width: ${ScreenConfig['S'].max}px)`]: {
+        marginTop: '30px',
+      },
+      [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
+        display: 'flex',
+        justifyContent: 'flex-end',
+      },
+
+      text: {
+        alignSelf: 'center',
+        marginRight: '15px',
+        [`@media (max-width: ${ScreenConfig['S'].max}px)`]: {
+          textAlign: 'center',
+        },
+        [`@media (min-width: ${ScreenConfig['M'].min}px)`]: {
+          textAlign: 'center',
+        },
+        [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
+          textAlign: 'right',
+        },
+      },
+
+      buttons: {
+        textAlign: 'center',
+        [`@media (max-width: ${ScreenConfig['M'].max}px)`]: {
+          marginTop: '10px',
+        },
+        buttonIcon: {
+          marginRight: '15px',
+        },
+      },
+    },
+  },
+
+  list: {
+    padding: '50px 0',
+
+    [`@media (min-width: ${ScreenConfig['M'].min}px)`]: {
+      paddingTop: '100px',
+      paddingBottom: '80px',
+    },
+
+    logo: {
+      marginBottom: '30px',
+      [`@media (max-width: ${ScreenConfig['L'].max}px)`]: {
+        textAlign: 'center',
+        lineHeight: '4rem',
+        marginBottom: 0,
+        marginRight: '16px',
+      },
+
+      img: {
+        verticalAlign: 'middle',
+        [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
+          display: 'block',
+          verticalAlign: 'top',
+        },
+      },
+    },
+
+    linkList: {
+      [`@media (max-width: ${ScreenConfig['M'].max}px)`]: {
+        paddingBottom: '70px',
+      },
+
+      items: {
+        [`@media (max-width: ${ScreenConfig['S'].max}px)`]: {
+          marginBottom: '30px',
+      },
+      }
+    },
+  },
+
+  notice: {
+    paddingBottom: '80px',
+
+    block: {
+      [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
+        textAlign: 'left',
+        display: 'flex',
+      },
+
+      logo: {
+        marginBottom:'10px',
+        [`@media (max-width: ${ScreenConfig['L'].max}px)`]: {
+          textAlign: 'center',
+          lineHeight: '4rem',
+          marginBottom: 0,
+          marginRight: '16px',
+        },
+
+        img: {
+          verticalAlign: 'middle',
+          [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
+            display: 'block',
+            verticalAlign: 'top',
+          },
+        },
+      },
+      paragraph: {
+        color: `${COLORS.background1}`,
+        [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
+          textAlign: 'center',
+        },
+
+        [`@media (max-width: ${ScreenConfig['L'].max}px)`]: {
+          textAlign: 'left',
+        },
+      }
+    },
+  },
 }
