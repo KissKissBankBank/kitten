@@ -14,8 +14,6 @@ describe('parseHtml()', () => {
     const html_parsed = parseHtml(html)
     const nbsp = '\xa0'
 
-    console.log(html_parsed);
-
     expect(html_parsed).toBe(`FooBar${nbsp}!`)
   })
 })

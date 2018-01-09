@@ -36,8 +36,8 @@ describe('<SimpleUploader />', () => {
     const component = mount(<SimpleUploader buttonLabel="Custom label" />)
 
     it('has a custom label', () => {
-      expect(component.find('.k-SimpleUploader__button').text('Custom label'))
-        .toBe(true)
+      expect(component.find('.k-SimpleUploader__button').text())
+        .toBe('Custom label')
     })
   })
 
@@ -46,8 +46,8 @@ describe('<SimpleUploader />', () => {
     const deleteButton = component.find(ButtonIcon)
 
     it('has a custom filename', () => {
-      expect(component.find('.k-SimpleUploader__text').text('custom-filename.png'))
-        .toBe(true)
+      expect(component.find('.k-SimpleUploader__text').text())
+        .toBe('custom-filename.png')
     })
 
     it('has a delete button', () => {

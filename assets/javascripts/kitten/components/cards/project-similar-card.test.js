@@ -49,7 +49,7 @@ describe('<SimilarProjectCard />', () => {
       })
 
       it('has a button type', () => {
-        expect(rightArrowButton).to.have.attr('type', 'button')
+        expect(rightArrowButton.props().type).toBe('button')
       })
     })
   })

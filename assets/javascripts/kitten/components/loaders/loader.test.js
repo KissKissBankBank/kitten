@@ -7,7 +7,7 @@ describe('<Loader />', () => {
     const loader = mount(<Loader />)
 
     it('is a <div />', () => {
-      expect(loader.is('div').exists()).toBe(true)
+      expect(loader.render().is('div')).toBe(true)
     })
 
     it('has a default class', () => {
@@ -23,7 +23,7 @@ describe('<Loader />', () => {
     const loader = mount(<Loader tag="span" />)
 
     it('is a <span />', () => {
-      expect(loader.is('span').exists()).toBe(true)
+      expect(loader.render().is('span')).toBe(true)
     })
   })
 
