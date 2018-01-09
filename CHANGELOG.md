@@ -4,9 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Fix `overflow` style to` ProjectSimilarCard` component.
-- Fix: Add `tiny` size on `k-ButtonIcon--signup` and `k-ButtonIcon--phone`.
+- Feature: Add 16:9 format to the `ProjectCard` image.
 - Feature: Add 16:9 format to the `ArticleCard` image.
+- Fix: Add `tiny` size on `k-ButtonIcon--signup` and `k-ButtonIcon--phone`.
+- Fix: Fix `overflow` style to` ProjectSimilarCard` component.
 
 ## [18.0.0] - 2018-01-08
 
