@@ -9,18 +9,18 @@ describe('<Grid />', () => {
     </Grid>
   )
 
-  test('renders a <div class="k-Grid" />', () => {
+  it('renders a <div class="k-Grid" />', () => {
     expect(grid.hasClass('k-Grid')).toBe(true)
   })
 
-  test('renders children', () => {
-    expect(grid).to.have.text('Test')
+  it('renders children', () => {
+    expect(grid.text()).toBe('Test')
   })
 
   describe('with className prop', () => {
     const grid = shallow(<Grid className="custom__class" />)
 
-    test('has good class', () => {
+    it('has good class', () => {
       expect(grid.hasClass('custom__class')).toBe(true)
     })
   })
@@ -28,8 +28,8 @@ describe('<Grid />', () => {
   describe('with other prop', () => {
     const grid = shallow(<Grid aria-hidden="true" />)
 
-    test('has an aria-hidden attribute', () => {
-      expect(grid).to.have.attr('aria-hidden', 'true')
+    it('has an aria-hidden attribute', () => {
+      expect(grid.props()['aria-hidden']).toBe('true')
     })
   })
 })
@@ -41,12 +41,12 @@ describe('<GridCol />', () => {
     </GridCol>
   )
 
-  test('renders a default grid with 12 columns', () => {
+  it('renders a default grid with 12 columns', () => {
     expect(gridCol.hasClass('k-Grid__col--12')).toBe(true)
   })
 
-  test('renders children', () => {
-    expect(gridCol).to.have.text('Test')
+  it('renders children', () => {
+    expect(gridCol.text()).toBe('Test')
   })
 
   describe('with more options', () => {
@@ -61,7 +61,7 @@ describe('<GridCol />', () => {
                offset-l="4" />
     )
 
-    test('renders the right column classes', () => {
+    it('renders the right column classes', () => {
       expect(gridCol.hasClass('k-Grid__col--12')).toBe(true)
       expect(gridCol.hasClass('k-Grid__col--10@xs')).toBe(true)
       expect(gridCol.hasClass('k-Grid__col--8@s')).toBe(true)
@@ -69,7 +69,7 @@ describe('<GridCol />', () => {
       expect(gridCol.hasClass('k-Grid__col--4@l')).toBe(true)
     })
 
-    test('renders the right offset classes', () => {
+    it('renders the right offset classes', () => {
       expect(gridCol.hasClass('k-Grid__col--offset-1@xs')).toBe(true)
       expect(gridCol.hasClass('k-Grid__col--offset-2@s')).toBe(true)
       expect(gridCol.hasClass('k-Grid__col--offset-3@m')).toBe(true)
@@ -80,7 +80,7 @@ describe('<GridCol />', () => {
   describe('with className prop', () => {
     const gridCol = shallow(<GridCol className="custom__class" />)
 
-    test('has good class', () => {
+    it('has good class', () => {
       expect(gridCol.hasClass('custom__class')).toBe(true)
     })
   })
@@ -88,8 +88,8 @@ describe('<GridCol />', () => {
   describe('with other prop', () => {
     const gridCol = shallow(<GridCol aria-hidden />)
 
-    test('has an aria-hidden attribute', () => {
-      expect(gridCol).to.have.attr('aria-hidden', 'true')
+    it('has an aria-hidden attribute', () => {
+      expect(gridCol.props()['aria-hidden']).toBeTruthy()
     })
   })
 })

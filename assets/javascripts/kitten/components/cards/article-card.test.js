@@ -1,5 +1,4 @@
 import React from 'react'
-import { shallow, mount } from 'enzyme'
 import { ArticleCard } from 'kitten/components/cards/article-card'
 import { Title } from 'kitten/components/typography/title'
 import { Text } from 'kitten/components/typography/text'
@@ -9,39 +8,40 @@ import { ButtonImage } from 'kitten/components/buttons/button-image'
 describe('<ArticleCard />', () => {
   let component
   let buttonImage
+  let cardImage
 
   describe('by default', () => {
     beforeEach(() => {
       component = mount(<ArticleCard />)
     })
 
-    test('is a <div />', () => {
-      expect(component).to.have.tagName('div')
+    it('is a <div />', () => {
+      expect(component.render().is('div')).toBe(true)
     })
 
-    test('has an image container', () => {
-      expect(component).to.have.descendants('.k-Card__imageContainer')
+    it('has an image container', () => {
+      expect(component.find('.k-Card__imageContainer').exists()).toBe(true)
     })
 
-    test('has a <img /> with good class', () => {
-      expect(component).to.have.descendants('img')
-      expect(component).to.have.descendants('.k-Card__image')
+    it('has a <img /> with good class', () => {
+      expect(component.find('img').exists()).toBe(true)
+      expect(component.find('.k-Card__image').exists()).toBe(true)
     })
 
-    test('has a <ButtonImage /> component', () => {
-      expect(component).to.have.descendants(ButtonImage)
+    it('has a <ButtonImage /> component', () => {
+      expect(component.find(ButtonImage)).toHaveLength(1)
     })
 
-    test('has not a <Title /> component', () => {
-      expect(component).to.have.descendants(Title)
+    it('has not a <Title /> component', () => {
+      expect(component.find(Title)).toHaveLength(1)
     })
 
-    test('has 3 <Text /> components', () => {
-      expect(component).to.have.exactly(3).descendants(Text)
+    it('has 3 <Text /> components', () => {
+      expect(component.find(Text)).toHaveLength(3)
     })
 
-    test('has <HorizontalStroke /> component', () => {
-      expect(component).to.have.descendants(HorizontalStroke)
+    it('has <HorizontalStroke /> component', () => {
+      expect(component.find(HorizontalStroke)).toHaveLength(1)
     })
   })
 
@@ -50,12 +50,12 @@ describe('<ArticleCard />', () => {
       component = mount(<ArticleCard href="#" />)
     })
 
-    test('is a <a />', () => {
-      expect(component).to.have.tagName('a')
+    it('is a <a />', () => {
+      expect(component.render().is('a')).toBe(true)
     })
 
-    test('has a href attribute', () => {
-      expect(component).to.have.attr('href', '#')
+    it('has a href attribute', () => {
+      expect(component.props().href).toBe('#')
     })
   })
 
@@ -72,19 +72,21 @@ describe('<ArticleCard />', () => {
           } }
         />
       )
+
+      cardImage = component.find('.k-Card__image')
     })
 
-    test('has an image with `#` src', () => {
-      expect(component.find('.k-Card__image')).to.have.prop('src', '#foobar')
+
+    it('has an image with `#` src', () => {
+      expect(cardImage.props().src).toBe('#foobar')
     })
 
-    test('has an image with alt description', () => {
-      expect(component.find('.k-Card__image')).to.have.prop('alt', 'FooBar')
+    it('has an image with alt description', () => {
+      expect(cardImage.props().alt).toBe('FooBar')
     })
 
-    test('has an image with a custom style', () => {
-      expect(component.find('.k-Card__image'))
-        .to.have.style('cursor', 'crosshair')
+    it('has an image with a custom style', () => {
+      expect(cardImage.props().style).toMatchObject({ cursor: 'crosshair' })
     })
   })
 
@@ -105,15 +107,14 @@ describe('<ArticleCard />', () => {
       buttonImage = component.find(ButtonImage).first()
     })
 
-    test('has good props on <ButtonImage />', () => {
-      expect(buttonImage)
-        .to.have.prop('img').toEqual({
-          src: '#foobar',
-          alt: 'FooBar',
-          style: {
-            cursor: 'crosshair',
-          },
-        })
+    it('has good props on <ButtonImage />', () => {
+      expect(buttonImage.props().img).toMatchObject({
+        src: '#foobar',
+        alt: 'FooBar',
+        style: {
+          cursor: 'crosshair',
+        },
+      })
     })
   })
 })

@@ -5,13 +5,13 @@ import { HeaderLogo } from 'kitten/components/headers/header-logo'
 describe('<HeaderLogo />', () => {
   const logo = shallow(<HeaderLogo />)
 
-  test('renders a <a class="k-Header__logo" />', () => {
-    expect(logo).to.have.tagName('a')
+  it('renders a <a class="k-Header__logo" />', () => {
+    expect(logo.is('a')).toBe(true)
     expect(logo.hasClass('k-Header__logo')).toBe(true)
   })
 
-  test('renders a default href', () => {
-    expect(logo).to.have.attr('href', '#')
+  it('renders a default href', () => {
+    expect(logo.props().href).toBe('#')
   })
 
   describe('with props', () => {
@@ -24,21 +24,21 @@ describe('<HeaderLogo />', () => {
                   height="42" />
     )
 
-    test('has a href', () => {
-      expect(logo).to.have.attr('href', 'http://…')
+    it('has a href', () => {
+      expect(logo.props().href).toBe('http://…')
     })
 
-    test('has a custom class', () => {
+    it('has a custom class', () => {
       expect(logo.hasClass('test-Header__logo')).toBe(true)
     })
 
-    test('has an image', () => {
+    it('has an image', () => {
       const image = logo.find('img')
 
-      expect(image).to.have.attr('src', 'http://…/assets/…')
-      expect(image).to.have.attr('alt', 'Logo')
-      expect(image).to.have.attr('width', '420')
-      expect(image).to.have.attr('height', '42')
+      expect(image.props().src).toBe('http://…/assets/…')
+      expect(image.props().alt).toBe('Logo')
+      expect(image.props().width).toBe('420')
+      expect(image.props().height).toBe('42')
     })
   })
 })

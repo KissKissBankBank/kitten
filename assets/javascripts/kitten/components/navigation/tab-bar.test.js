@@ -11,19 +11,19 @@ describe('<TabBar />', () => {
     ] } />
   )
 
-  test('renders a <div class="k-TabBar" />', () => {
+  it('renders a <div class="k-TabBar" />', () => {
     expect(component.hasClass('k-TabBar')).toBe(true)
   })
 
-  test('has a nav', () => {
+  it('has a nav', () => {
     expect(component.find('.k-TabBar__nav')).toHaveLength(1)
   })
 
-  test('has a list', () => {
+  it('has a list', () => {
     expect(component.find('ul.k-TabBar__list')).toHaveLength(1)
   })
 
-  test('renders items', () => {
+  it('renders items', () => {
     expect(component.find('.k-TabBar__item')).toHaveLength(3)
   })
 
@@ -42,15 +42,12 @@ describe('<TabBar />', () => {
       />
     )
 
-    test('renders the right classes', () => {
-      expect(component).to.have.id('custom-id')
+    it('renders the right classes', () => {
+      expect(component.props().id).toBe('custom-id')
       expect(component.hasClass('custom-class')).toBe(true)
-      expect(component.find('.k-TabBar__nav'))
-        .to.have.className('nav-custom-class')
-      expect(component.find('.k-TabBar__list'))
-        .to.have.className('list-custom-class')
-      expect(component.find('.k-TabBar__item').first())
-        .to.have.className('item-custom-class')
+      expect(component.find('.k-TabBar__nav').hasClass('nav-custom-class')).toBe(true)
+      expect(component.find('.k-TabBar__list').hasClass('list-custom-class')).toBe(true)
+      expect(component.find('.k-TabBar__item').first().hasClass('item-custom-class')).toBe(true)
     })
 
     describe('with HTML in items', () => {
@@ -60,8 +57,8 @@ describe('<TabBar />', () => {
         ] } />
       )
 
-      test('transforms line break with <br/>', () => {
-        expect(component.find('.item-1')).to.have.html().toMatch(/Item<br\/>1/)
+      it('transforms line break with <br/>', () => {
+        expect(component.find('.item-1').html()).toMatch(/Item<br\/>1/)
       })
     })
   })

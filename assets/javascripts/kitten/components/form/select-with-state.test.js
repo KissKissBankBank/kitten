@@ -24,16 +24,16 @@ describe('<SelectWithState />', () => {
       )
     })
 
-    test('renders a <Select />', () => {
-      expect(select).to.have.descendants(Select)
+    it('renders a <Select />', () => {
+      expect(select.find(Select).exists()).toBe(true)
     })
 
-    test('has `.k-Select` class', () => {
-      expect(select.hasClass('k-Select')).toBe(true)
+    it('has `.k-Select` class', () => {
+      expect(select.render().hasClass('k-Select')).toBe(true)
     })
 
-    test('has a good props', () => {
-      expect(select).to.have.props(
+    it('has a good props', () => {
+      expect(select.props()).toMatchObject(
         {
           clearable: false,
           searchable: false,
@@ -48,13 +48,13 @@ describe('<SelectWithState />', () => {
         }
       )
 
-      expect(select).to.have.prop('onChange')
-      expect(select).to.have.prop('onInputChange')
-      expect(select).to.have.prop('inputProps')
+      expect(select.props().onChange).toBeTruthy()
+      expect(select.props().onInputChange).toBeTruthy()
+      expect(select.props().inputProps).toBeTruthy()
     })
 
-    test('has a good options', () => {
-      expect(select).to.have.prop('options', options)
+    it('has a good options', () => {
+      expect(select.props().options).toBe(options)
     })
   })
 
@@ -68,8 +68,8 @@ describe('<SelectWithState />', () => {
       )
     })
 
-    test('has value prop in state', () => {
-      expect(select).to.have.state('value', defaultValue)
+    it('has value prop in state', () => {
+      expect(select.state().value).toBe(defaultValue)
     })
   })
 
@@ -83,9 +83,8 @@ describe('<SelectWithState />', () => {
       )
     })
 
-    test('renders a label with labelText prop', () => {
-      expect(select.find('.k-Select__label'))
-        .to.have.text('FooBar')
+    it('renders a label with labelText prop', () => {
+      expect(select.find('.k-Select__label').text()).toBe('FooBar')
     })
   })
 
@@ -102,11 +101,11 @@ describe('<SelectWithState />', () => {
       )
     })
 
-    test('has all classes', () => {
-      expect(select.hasClass('k-Select--tiny')).toBe(true)
-      expect(select.hasClass('is-error')).toBe(true)
-      expect(select.hasClass('is-valid')).toBe(true)
-      expect(select.hasClass('is-disabled')).toBe(true)
+    it('has all classes', () => {
+      expect(select.render().hasClass('k-Select--tiny')).toBe(true)
+      expect(select.render().hasClass('is-error')).toBe(true)
+      expect(select.render().hasClass('is-valid')).toBe(true)
+      expect(select.render().hasClass('is-disabled')).toBe(true)
     })
   })
 
@@ -129,12 +128,12 @@ describe('<SelectWithState />', () => {
       select.instance().handleChange(defaultValue)
     })
 
-    test('calls onChange prop callback', () => {
+    it('calls onChange prop callback', () => {
       expect(onChangeSpy.calledOnce).toBe(true)
       expect(onChangeSpy.calledWith(defaultValue)).toBe(true)
     })
 
-    test('calls onInputChange prop callback', () => {
+    it('calls onInputChange prop callback', () => {
       const onInputChangeValue = { value: defaultValue, name: 'foobar' }
 
       expect(onInputChangeSpy.calledOnce).toBe(true)
@@ -163,11 +162,11 @@ describe('<SelectWithState />', () => {
       select.instance().handleChange(null)
     })
 
-    test('calls onChange prop with empty value', () => {
+    it('calls onChange prop with empty value', () => {
       expect(onChangeSpy.calledWith(emptyValue)).toBe(true)
     })
 
-    test('calls onInputChange prop with empty value', () => {
+    it('calls onInputChange prop with empty value', () => {
       const onInputChangeValue = { value: emptyValue, name: 'foobar' }
 
       expect(onInputChangeSpy.calledWith(onInputChangeValue)).toBe(true)

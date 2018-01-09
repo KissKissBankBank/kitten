@@ -6,15 +6,15 @@ describe('Title with default props', () => {
   const defaultComponent = shallow(
     <Title />)
 
-  test('has a default title attribute', () => {
+  it('has a default title attribute', () => {
     expect(defaultComponent.find('.k-Title')).toHaveLength(1)
   })
 
-  test('has a default tag', () => {
-    expect(defaultComponent).to.have.tagName('h1')
+  it('has a default tag', () => {
+    expect(defaultComponent.type()).toBe('h1')
   })
 
-  test('has a default class', () => {
+  it('has a default class', () => {
     expect(defaultComponent.hasClass('k-Title--primary')).toBe(true)
   })
 
@@ -23,15 +23,15 @@ describe('Title with default props', () => {
       <Title className="k-Title--custom">Felis…</Title>
     )
 
-    test('renders a <Title class="k-Title" />', () => {
-      expect(component).to.have.tagName('h1')
+    it('renders a <Title class="k-Title" />', () => {
+      expect(component.type()).toBe('h1')
       expect(component.hasClass('k-Title--custom')).toBe(true)
       expect(component.hasClass('k-Title--primary')).toBe(true)
-      expect(component).to.have.text('Felis…')
+      expect(component.text()).toBe('Felis…')
     })
 
     describe('modifier', () => {
-      test('accepts secondary', () => {
+      it('accepts secondary', () => {
         const component = shallow(
           <Title modifier="secondary" />
         )
@@ -40,18 +40,18 @@ describe('Title with default props', () => {
     })
 
     describe('with custom tag', () => {
-      test('renders h2', () => {
+      it('renders h2', () => {
         const component = shallow(
           <Title tag="h2" />
         )
-        expect(component).to.have.tagName('h2')
+        expect(component.type()).toBe('h2')
       })
     })
 
     describe('with margin prop', () => {
       const component = shallow(<Title margin={ false } />)
 
-      test('has a good class', () => {
+      it('has a good class', () => {
         expect(component.hasClass('k-Title--withoutMargin')).toBe(true)
       })
     })

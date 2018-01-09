@@ -12,20 +12,20 @@ describe('<Hero />', () => {
       component = mount(<Hero>FooBar</Hero>)
     })
 
-    test('has a <Container /> component', () => {
-      expect(component).to.have.descendants(Container)
+    it('has a <Container /> component', () => {
+      expect(component.find(Container).exists()).toBe(true)
     })
 
-    test('has a <Grid /> component', () => {
-      expect(component).to.have.descendants(Grid)
+    it('has a <Grid /> component', () => {
+      expect(component.find(Grid).exists()).toBe(true)
     })
 
-    test('has two <GridCol /> components', () => {
-      expect(component).to.have.exactly(2).descendants(GridCol)
+    it('has two <GridCol /> components', () => {
+      expect(component.find(GridCol)).toHaveLength(2)
     })
 
-    test('renders children value in the first GridCol', () => {
-      expect(component.find(GridCol).first()).to.have.text('FooBar')
+    it('renders children value in the first GridCol', () => {
+      expect(component.find(GridCol).first().text()).toBe('FooBar')
     })
   })
 })

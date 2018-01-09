@@ -15,20 +15,20 @@ describe('<HorizontalNav />', () => {
   )
   const link = component.find('.k-HorizontalNav__item').first()
 
-  test('renders a <div class="k-HorizontalNav" />', () => {
+  it('renders a <div class="k-HorizontalNav" />', () => {
     expect(component.hasClass('k-HorizontalNav')).toBe(true)
   })
 
-  test('has a element', () => {
+  it('has a element', () => {
     expect(component.find('li.k-HorizontalNav__element')).toHaveLength(4)
   })
 
-  test('renders items', () => {
+  it('renders items', () => {
     expect(component.find('.k-HorizontalNav__item')).toHaveLength(4)
   })
 
-  test('has an item with clickable link', () => {
-    expect(link).to.have.attr('href', '#foobar')
+  it('has an item with clickable link', () => {
+    expect(link.props().href).toBe('#foobar')
   })
 
   describe('center props', () => {
@@ -36,7 +36,7 @@ describe('<HorizontalNav />', () => {
       <HorizontalNav center />
     )
 
-    test('renders a className', () => {
+    it('renders a className', () => {
       expect(component.hasClass('k-HorizontalNav--center')).toBe(true)
     })
   })
@@ -52,8 +52,8 @@ describe('<HorizontalNav />', () => {
     )
     const item = component.find('.k-HorizontalNav__item')
 
-    test('renders a horizontalNav with auto height', () => {
-      expect(item).to.have.style('height', 'auto')
+    it('renders a horizontalNav with auto height', () => {
+      expect(item.props().style).toMatchObject({ height: 'auto' })
     })
   })
 
@@ -73,16 +73,17 @@ describe('<HorizontalNav />', () => {
       />
     )
 
-    test('renders the right classes', () => {
-      expect(component).to.have.id('custom-id')
-
+    it('renders the right classes', () => {
+      expect(component.props().id).toBe('custom-id')
       expect(component.hasClass('custom-class')).toBe(true)
+      expect(
+        component.find('.k-HorizontalNav__element').first()
+          .hasClass('element-custom-class')
+      ).toBe(true)
 
-      expect(component.find('.k-HorizontalNav__element').first())
-        .to.have.className('element-custom-class')
-
-      expect(component.find('.k-HorizontalNav__item').first())
-        .to.have.className('item-custom-class')
+      expect(component.find('.k-HorizontalNav__item').first()
+        .hasClass('item-custom-class')
+      ).toBe(true)
     })
 
     describe('with HTML in items', () => {
@@ -94,8 +95,8 @@ describe('<HorizontalNav />', () => {
         />
       )
 
-      test('transforms line break with <br/>', () => {
-        expect(component.find('.item-1')).to.have.html().toMatch(/Nav<br\/>1/)
+      it('transforms line break with <br/>', () => {
+        expect(component.find('.item-1').html()).toMatch(/Nav<br\/>1/)
       })
     })
   })

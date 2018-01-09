@@ -5,12 +5,12 @@ import { LinkBox } from 'kitten/components/box/link-box'
 describe('<DocLinkBox />', () => {
   const component = shallow(<DocLinkBox />)
 
-  test('renders a <LinkBox />', () => {
+  it('renders a <LinkBox />', () => {
     expect(component.find('LinkBox')).toHaveLength(1)
   })
 
-  test('renders an svg icon', () => {
-    expect(component).to.have.prop('displayIcon', true)
+  it('renders an svg icon', () => {
+    expect(component.props().displayIcon).toBe(true)
     expect(component.find('.k-LinkBox__icon--svg')).toHaveLength(1)
   })
 })

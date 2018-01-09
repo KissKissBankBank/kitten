@@ -17,37 +17,37 @@ describe('<TagList />', () => {
     const tagListWithInstrument =
       shallow(<TagList icon={ InstrumentTagIcon } items={ items } />)
 
-    test('is a <ul />', () => {
-      expect(tagList.type()).to.eq('ul')
+    it('is a <ul />', () => {
+      expect(tagList.type()).toBe('ul')
     })
 
-    test('has default class', () => {
+    it('has default class', () => {
       expect(tagList.hasClass('k-TagList')).toBe(true)
     })
 
-    test('renders 2 items', () => {
+    it('renders 2 items', () => {
       expect(tagList.children()).toHaveLength(2)
     })
 
-    test('has a first child with good class', () => {
+    it('has a first child with good class', () => {
       const firstItem = tagList.children().first()
 
       expect(firstItem.hasClass('k-TagList__item--first')).toBe(true)
     })
 
-    test('has a last child with good class', () => {
+    it('has a last child with good class', () => {
       const firstItem = tagList.children().last()
       expect(firstItem.hasClass('k-TagList__item--last')).toBe(true)
     })
 
-    test('renders a <TypologyTagIcon /> in first child', () => {
-      expect(tagList.children().first()).to.have.descendants(TypologyTagIcon)
+    it('renders a <TypologyTagIcon /> in first child', () => {
+      expect(tagList.children().first().find(TypologyTagIcon).exists()).toBe(true)
     })
 
-    test('renders a <InstrumentTagIcon /> in first child', () => {
+    it('renders a <InstrumentTagIcon /> in first child', () => {
       const firstItem = tagListWithInstrument.children().first()
 
-      expect(firstItem).to.have.descendants(InstrumentTagIcon)
+      expect(firstItem.find(InstrumentTagIcon).exists()).toBe(true)
     })
   })
 
@@ -60,7 +60,7 @@ describe('<TagList />', () => {
       />
     )
 
-    test('has a custom class', () => {
+    it('has a custom class', () => {
       expect(tagList.hasClass('custom__class')).toBe(true)
     })
 
@@ -71,7 +71,7 @@ describe('<TagList />', () => {
       <TagList items={ [] } tiny />
     )
 
-    test('has a good class', () => {
+    it('has a good class', () => {
       expect(tagList.hasClass('k-TagList--tiny')).toBe(true)
     })
   })

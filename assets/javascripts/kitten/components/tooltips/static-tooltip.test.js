@@ -6,7 +6,7 @@ describe('<StaticTooltip />', () => {
   describe('by default', () => {
     const component = shallow(<StaticTooltip />)
 
-    test('has the k-StaticTooltip class', () => {
+    it('has the k-StaticTooltip class', () => {
       expect(component.hasClass('k-StaticTooltip')).toBe(true)
     })
   })
@@ -14,7 +14,7 @@ describe('<StaticTooltip />', () => {
   describe('className prop', () => {
     const component = shallow(<StaticTooltip className="customClass" />)
 
-    test('adds the customClass to the component', () => {
+    it('adds the customClass to the component', () => {
       expect(component.hasClass('customClass')).toBe(true)
     })
   })
@@ -23,16 +23,16 @@ describe('<StaticTooltip />', () => {
     const component = shallow(<StaticTooltip arrowLeftPosition="150px" />)
     const arrow = component.find('.k-StaticTooltip__arrow')
 
-    test('assigns a left style to the arrow', () => {
-      expect(arrow).to.have.style('left', '150px')
+    it('assigns a left style to the arrow', () => {
+      expect(arrow.props().style).toMatchObject({ left: '150px' })
     })
   })
 
   describe('children prop', () => {
     const component = shallow(<StaticTooltip>Lorem ipsum</StaticTooltip>)
 
-    test('assigns children', () => {
-      expect(component).to.have.text('Lorem ipsum')
+    it('assigns children', () => {
+      expect(component.text()).toBe('Lorem ipsum')
     })
   })
 })

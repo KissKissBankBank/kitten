@@ -17,13 +17,13 @@ describe('<FacebookButtonIcon />', () => {
   describe('by default', () => {
     const button = shallow(<FacebookButtonIcon />)
 
-    test('is a <ButtonIcon modifier="facebook" />', () => {
-      expect(button).to.have.descendants(ButtonIcon)
-      expect(button).to.have.prop('modifier', 'facebook')
+    it('is a <ButtonIcon modifier="facebook" />', () => {
+      expect(button.find('ButtonIcon')).toHaveLength(1)
+      expect(button.props().modifier).toBe('facebook')
     })
 
-    test('has a <FacebookIcon />', () => {
-      expect(button).to.have.descendants(FacebookIcon)
+    it('has a <FacebookIcon />', () => {
+      expect(button.find('FacebookIcon')).toHaveLength(1)
     })
   })
 
@@ -35,7 +35,7 @@ describe('<FacebookButtonIcon />', () => {
       />
     )
 
-    test('has a default classes', () => {
+    it('has a default classes', () => {
       expect(button.hasClass('k-ButtonIcon__svg')).toBe(true)
       expect(button.hasClass('custom__class')).toBe(true)
     })
@@ -46,13 +46,13 @@ describe('<TwitterButtonIcon />', () => {
   describe('by default', () => {
     const button = shallow(<TwitterButtonIcon />)
 
-    test('is a <ButtonIcon modifier="facebook" />', () => {
-      expect(button).to.have.descendants(ButtonIcon)
-      expect(button).to.have.prop('modifier', 'twitter')
+    it('is a <ButtonIcon modifier="facebook" />', () => {
+      expect(button.find('ButtonIcon')).toHaveLength(1)
+      expect(button.props().modifier).toBe('twitter')
     })
 
-    test('has a <TwitterIcon />', () => {
-      expect(button).to.have.descendants(TwitterIcon)
+    it('has a <TwitterIcon />', () => {
+      expect(button.find('TwitterIcon')).toHaveLength(1)
     })
   })
 
@@ -64,7 +64,7 @@ describe('<TwitterButtonIcon />', () => {
       />
     )
 
-    test('has a default classes', () => {
+    it('has a default classes', () => {
       expect(button.hasClass('k-ButtonIcon__svg')).toBe(true)
       expect(button.hasClass('custom__class')).toBe(true)
     })
@@ -75,13 +75,13 @@ describe('<LinkedinButtonIcon />', () => {
   describe('by default', () => {
     const button = shallow(<LinkedinButtonIcon />)
 
-    test('is a <ButtonIcon modifier="linkedin" />', () => {
-      expect(button).to.have.descendants(ButtonIcon)
-      expect(button).to.have.prop('modifier', 'linkedin')
+    it('is a <ButtonIcon modifier="linkedin" />', () => {
+      expect(button.find(ButtonIcon)).toHaveLength(1)
+      expect(button.props().modifier).toBe('linkedin')
     })
 
-    test('has a <LinkedinIcon />', () => {
-      expect(button).to.have.descendants(LinkedinIcon)
+    it('has a <LinkedinIcon />', () => {
+      expect(button.find('LinkedinIcon')).toHaveLength(1)
     })
   })
 
@@ -93,7 +93,7 @@ describe('<LinkedinButtonIcon />', () => {
       />
     )
 
-    test('has a default classes', () => {
+    it('has a default classes', () => {
       expect(button.hasClass('k-ButtonIcon__svg')).toBe(true)
       expect(button.hasClass('custom__class')).toBe(true)
     })
@@ -104,13 +104,13 @@ describe('<InstagramButtonIcon />', () => {
   describe('by default', () => {
     const button = shallow(<InstagramButtonIcon />)
 
-    test('is a <ButtonIcon modifier="instagram" />', () => {
-      expect(button).to.have.descendants(ButtonIcon)
-      expect(button).to.have.prop('modifier', 'instagram')
+    it('is a <ButtonIcon modifier="instagram" />', () => {
+      expect(button.find('ButtonIcon')).toHaveLength(1)
+      expect(button.props().modifier).toBe('instagram')
     })
 
-    test('has a <InstagramIcon />', () => {
-      expect(button).to.have.descendants(InstagramIcon)
+    it('has a <InstagramIcon />', () => {
+      expect(button.find('InstagramIcon')).toHaveLength(1)
     })
   })
 
@@ -122,7 +122,7 @@ describe('<InstagramButtonIcon />', () => {
       />
     )
 
-    test('has a default classes', () => {
+    it('has a default classes', () => {
       expect(button.hasClass('k-ButtonIcon__svg')).toBe(true)
       expect(button.hasClass('custom__class')).toBe(true)
     })

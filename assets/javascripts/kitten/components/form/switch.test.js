@@ -1,5 +1,4 @@
 import React from 'react'
-
 import { Switch } from 'kitten/components/form/switch'
 
 describe('<Switch />', () => {
@@ -10,27 +9,27 @@ describe('<Switch />', () => {
             label="label" />
   )
 
-  test('has a <div class="k-Switch" />', () => {
-    expect(component).to.have.tagName('div')
+  it('has a <div class="k-Switch" />', () => {
+    expect(component.is('div')).toBe(true)
     expect(component.hasClass('k-Switch')).toBe(true)
   })
 
-  test('renders input', () => {
+  it('renders input', () => {
     const input = component.find('input')
 
-    expect(input).to.have.attr('id', 'switch-input-1')
-    expect(input).to.have.attr('type', 'checkbox')
     expect(input.hasClass('k-Switch__input')).toBe(true)
-    expect(input).to.have.attr('checked')
-    expect(input).to.have.attr('disabled')
+    expect(input.props().id).toBe('switch-input-1')
+    expect(input.props().type).toBe('checkbox')
+    expect(input.props().defaultChecked).toBe('true')
+    expect(input.props().disabled).toBe('true')
   })
 
-  test('renders label', () => {
+  it('renders label', () => {
     const label = component.find('label')
 
-    expect(label).to.have.attr('for', 'switch-input-1')
+    expect(label.props().htmlFor).toBe('switch-input-1')
     expect(label.hasClass('k-Switch__label')).toBe(true)
-    expect(label).to.have.text('label')
+    expect(label.text()).toBe('label')
   })
 
   describe('big', () => {
@@ -38,7 +37,7 @@ describe('<Switch />', () => {
       <Switch big="true" />
     )
 
-    test('has a big class', () => {
+    it('has a big class', () => {
       const label = componentBig.find('label')
 
       expect(label.hasClass('k-Switch__label--big')).toBe(true)

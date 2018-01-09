@@ -9,32 +9,32 @@ describe('<LoaderWithParagraph />', () => {
   describe('by default', () => {
     const loader = mount(<LoaderWithParagraph />)
 
-    test('is a <div />', () => {
-      expect(loader).to.have.tagName('div')
+    it('is a <div />', () => {
+      expect(loader.render().is('div')).toBe(true)
     })
 
-    test('has a default class', () => {
-      expect(loader.hasClass('k-LoaderWithParagraph')).toBe(true)
+    it('has a default class', () => {
+      expect(loader.render().hasClass('k-LoaderWithParagraph')).toBe(true)
     })
 
-    test('has a default text', () => {
-      expect(loader).to.have.text('Loading')
+    it('has a default text', () => {
+      expect(loader.text()).toBe('Loading')
     })
 
-    test('has a paragraph component', () => {
-      expect(loader).to.have.descendants(Paragraph)
+    it('has a paragraph component', () => {
+      expect(loader.find(Paragraph).exists()).toBe(true)
     })
 
-    test('has a loader component', () => {
-      expect(loader).to.have.descendants(Loader)
+    it('has a loader component', () => {
+      expect(loader.find(Loader).exists()).toBe(true)
     })
 
-    test('has a loader to right of paragraph', () => {
+    it('has a loader to right of paragraph', () => {
       const first = loader.children().first()
       const last = loader.children().last()
 
-      expect(first).to.have.descendants(Loader)
-      expect(last).to.have.descendants(Paragraph)
+      expect(first.find(Loader).exists()).toBe(true)
+      expect(last.find(Paragraph).exists()).toBe(true)
     })
   })
 
@@ -43,15 +43,15 @@ describe('<LoaderWithParagraph />', () => {
       <LoaderWithParagraph>Lorem ipsum…</LoaderWithParagraph>
     )
 
-    test('has a good text', () => {
-      expect(loader).to.have.text('Lorem ipsum…')
+    it('has a good text', () => {
+      expect(loader.text()).toBe('Lorem ipsum…')
     })
   })
 
   describe('with a custom class', () => {
     const loader = mount(<LoaderWithParagraph className="custom__class" />)
 
-    test('is a good class', () => {
+    it('is a good class', () => {
       expect(loader.hasClass('custom__class')).toBe(true)
     })
   })
@@ -59,44 +59,44 @@ describe('<LoaderWithParagraph />', () => {
   describe('with a loaderPosition prop to left', () => {
     const loader = mount(<LoaderWithParagraph loaderPosition="left" />)
 
-    test('has a loader to left of paragraph', () => {
+    it('has a loader to left of paragraph', () => {
       const first = loader.children().first()
       const last = loader.children().last()
 
-      expect(first).to.have.descendants(Loader)
-      expect(last).to.have.descendants(Paragraph)
+      expect(first.find(Loader).exists()).toBe(true)
+      expect(last.find(Paragraph).exists()).toBe(true)
     })
   })
 
   describe('with a loaderPosition prop to top', () => {
     const loader = mount(<LoaderWithParagraph loaderPosition="top" />)
 
-    test('has a loader to top of paragraph', () => {
+    it('has a loader to top of paragraph', () => {
       const first = loader.children().first()
       const last = loader.children().last()
 
-      expect(first).to.have.descendants(Loader)
-      expect(last).to.have.descendants(Paragraph)
+      expect(first.find(Loader).exists()).toBe(true)
+      expect(last.find(Paragraph).exists()).toBe(true)
     })
 
-    test('has a class to manage columns version', () => {
-      expect(loader.hasClass('k-LoaderWithParagraph--column')).toBe(true)
+    it('has a class to manage columns version', () => {
+      expect(loader.render().hasClass('k-LoaderWithParagraph--column')).toBe(true)
     })
   })
 
   describe('with a loaderPosition prop to bottom', () => {
     const loader = mount(<LoaderWithParagraph loaderPosition="bottom" />)
 
-    test('has a loader to top of paragraph', () => {
+    it('has a loader to top of paragraph', () => {
       const first = loader.children().first()
       const last = loader.children().last()
 
-      expect(first).to.have.descendants(Paragraph)
-      expect(last).to.have.descendants(Loader)
+      expect(first.find(Paragraph).exists()).toBe(true)
+      expect(last.find(Loader).exists()).toBe(true)
     })
 
-    test('has a class to manage columns version', () => {
-      expect(loader.hasClass('k-LoaderWithParagraph--column')).toBe(true)
+    it('has a class to manage columns version', () => {
+      expect(loader.render().hasClass('k-LoaderWithParagraph--column')).toBe(true)
     })
   })
 
@@ -105,8 +105,8 @@ describe('<LoaderWithParagraph />', () => {
       <LoaderWithParagraph loaderProps={ { className: 'custom__class' } } />
     )
 
-    test('has a custom class on Loader component', () => {
-      expect(loader).to.have.descendants('.custom__class')
+    it('has a custom class on Loader component', () => {
+      expect(loader.find('.custom__class').exists()).toBe(true)
     })
   })
 
@@ -115,8 +115,8 @@ describe('<LoaderWithParagraph />', () => {
       <LoaderWithParagraph paragraphProps={ { className: 'custom__class' } } />
     )
 
-    test('has a custom class on Paragraph component', () => {
-      expect(loader).to.have.descendants('.custom__class')
+    it('has a custom class on Paragraph component', () => {
+      expect(loader.find('.custom__class').exists()).toBe(true)
     })
   })
 })

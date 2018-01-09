@@ -6,20 +6,20 @@ describe('<IconBadge />', () => {
   describe('by default', () => {
     const iconBadge = shallow(<IconBadge />)
 
-    test('is a <span />', () => {
-      expect(iconBadge).to.have.tagName('span')
+    it('is a <span />', () => {
+      expect(iconBadge.type()).toBe('span')
     })
 
-    test('has default classes', () => {
+    it('has default classes', () => {
       expect(iconBadge.hasClass('k-IconBadge')).toBe(true)
-      expect(iconBadge).to.have.descendants('.k-IconBadge__content')
+      expect(iconBadge.find('.k-IconBadge__content').exists()).toBe(true)
     })
   })
 
   describe('with custom class', () => {
     const iconBadge = shallow(<IconBadge className="custom__class" />)
 
-    test('has a custom class', () => {
+    it('has a custom class', () => {
       expect(iconBadge.hasClass('custom__class')).toBe(true)
     })
   })
@@ -27,16 +27,16 @@ describe('<IconBadge />', () => {
   describe('with other prop', () => {
     const iconBadge = shallow(<IconBadge aria-hidden="true" />)
 
-    test('has an aria-hidden attribute', () => {
-      expect(iconBadge).to.have.attr('aria-hidden', 'true')
+    it('has an aria-hidden attribute', () => {
+      expect(iconBadge.props()['aria-hidden']).toBe('true')
     })
   })
 
   describe('with children', () => {
     const iconBadge = shallow(<IconBadge>A+</IconBadge>)
 
-    test('has text', () => {
-      expect(iconBadge).to.have.text('A+')
+    it('has text', () => {
+      expect(iconBadge.text()).toBe('A+')
     })
   })
 })

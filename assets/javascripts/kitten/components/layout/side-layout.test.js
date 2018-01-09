@@ -10,7 +10,7 @@ describe('<SideLayout />', () => {
       </SideLayout>
     )
 
-    test('renders a <div class="myAwesomeClass" />', () => {
+    it('renders a <div class="myAwesomeClass" />', () => {
       expect(component.hasClass('myAwesomeClass')).toBe(true)
     })
   })
@@ -24,8 +24,8 @@ describe('<SideLayout />', () => {
 
     const sideGridAside = component.find('.k-SideGrid__aside')
 
-    test('has a sidebar content', () => {
-      expect(sideGridAside).to.have.text('Sidebar content')
+    it('has a sidebar content', () => {
+      expect(sideGridAside.text()).toBe('Sidebar content')
     })
   })
 
@@ -36,8 +36,8 @@ describe('<SideLayout />', () => {
       </SideLayout>
     )
 
-    test('has a content', () => {
-      expect(component).to.have.text('Lorem ipsum…')
+    it('has a content', () => {
+      expect(component.text()).toBe('Lorem ipsum…')
     })
   })
 })

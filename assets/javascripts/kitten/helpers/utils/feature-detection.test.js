@@ -10,8 +10,8 @@ describe('cssSupports', () => {
       beforeAll(() => { global.window = undefined })
       afterAll(() => { global.window = initialWindow })
 
-      test('returns false', () => {
-        expect(cssSupports(supportCondition)).to.eq(false)
+      it('returns false', () => {
+        expect(cssSupports(supportCondition)).toBe(false)
       })
     })
 
@@ -19,8 +19,8 @@ describe('cssSupports', () => {
       beforeAll(() => { global.window = {} })
       afterAll(() => { global.window = initialWindow })
 
-      test('returns false', () => {
-        expect(cssSupports(supportCondition)).to.eq(false)
+      it('returns false', () => {
+        expect(cssSupports(supportCondition)).toBe(false)
       })
     })
 
@@ -28,8 +28,8 @@ describe('cssSupports', () => {
       beforeAll(() => { global.window = { CSS: {} } })
       afterAll(() => { global.window = initialWindow })
 
-      test('returns false', () => {
-        expect(cssSupports(supportCondition)).to.eq(false)
+      it('returns false', () => {
+        expect(cssSupports(supportCondition)).toBe(false)
       })
     })
   })
@@ -51,8 +51,8 @@ describe('cssSupports', () => {
 
     afterAll(() => { global.window = initialWindow })
 
-    test('calls `window.CSS.supports` with the correct parameter', () => {
-      expect(supportSpy.calledWith(supportCondition)).to.eq(true)
+    it('calls `window.CSS.supports` with the correct parameter', () => {
+      expect(supportSpy.calledWith(supportCondition)).toBe(true)
     })
   })
 })

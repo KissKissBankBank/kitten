@@ -6,26 +6,25 @@ describe('<RichTextInput />', () => {
   describe('By default', () => {
     const component = shallow(<RichTextInput />)
 
-    test('renders a div', () => {
-      expect(component).to.tagName('div')
+    it('renders a div', () => {
+      expect(component.render().is('div')).toBe(true)
     })
-
   })
 
   describe('with config prop', () => {
-    test('pass the config prop to <RichTextInput />', () => {
+    it('pass the config prop to <RichTextInput />', () => {
       const locale = { locale: 'fr' }
       const component = shallow(
         <RichTextInput config={ locale } />
       )
       const expectedProps = { config: locale }
 
-      expect(component.instance().props).to.contains.any.keys(expectedProps)
+      expect(component.props()).toMatchObject(expectedProps)
     })
   })
 
   describe('with toolbar prop', () => {
-    test('pass the toolbar prop to <RichTextInput />', () => {
+    it('pass the toolbar prop to <RichTextInput />', () => {
       const toolbar =
         [{
           name: 'basicstyles',
@@ -38,7 +37,7 @@ describe('<RichTextInput />', () => {
       )
       const expectedProps = { toolbar: toolbar }
 
-      expect(component.instance().props).to.contains.any.keys(expectedProps)
+      expect(component.props().config).toMatchObject(expectedProps)
     })
   })
 })

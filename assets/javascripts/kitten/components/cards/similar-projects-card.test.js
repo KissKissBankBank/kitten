@@ -63,11 +63,11 @@ describe('<SimilarProjectsCard />', () => {
     const similarProjectsCard = shallow(<SimilarProjectsCard />)
     const staticSimilarProjectCard = similarProjectsCard.find(SimilarProjectCard)
 
-    test('is renders <SimilarProjectCard />', () => {
+    it('is renders <SimilarProjectCard />', () => {
       expect(staticSimilarProjectCard).toHaveLength(1)
     })
 
-    test('passes the right props', () => {
+    it('passes the right props', () => {
       const expectedProps = {
         leftArrowDisabled: false,
         rightArrowDisabled: false,
@@ -81,8 +81,8 @@ describe('<SimilarProjectsCard />', () => {
         infos: false,
       }
 
-      expect(staticSimilarProjectCard.props()).to.contains(expectedProps)
-      expect(staticSimilarProjectCard.props()).not.to.contains(projectProps)
+      expect(staticSimilarProjectCard.props()).toMatchObject(expectedProps)
+      expect(staticSimilarProjectCard.props()).not.toMatchObject(projectProps)
       expect(typeof staticSimilarProjectCard.props().onLeftArrowClick).toBe('function')
       expect(typeof staticSimilarProjectCard.props().onRightArrowClick).toBe('function')
     })
@@ -97,7 +97,7 @@ describe('<SimilarProjectsCard />', () => {
         const staticSimilarProjectCard = similarProjectsCard
           .find(SimilarProjectCard)
 
-        test('passes the right props for the project', () => {
+        it('passes the right props for the project', () => {
           const projectProps = {
             imageSrc: 'image-1',
             title: 'Title 1',
@@ -106,7 +106,7 @@ describe('<SimilarProjectsCard />', () => {
             infos: emptyArray,
           }
 
-          expect(staticSimilarProjectCard.props()).to.contains(projectProps)
+          expect(staticSimilarProjectCard.props()).toMatchObject(projectProps)
         })
       })
 
@@ -117,7 +117,7 @@ describe('<SimilarProjectsCard />', () => {
         const staticSimilarProjectCard = similarProjectsCard
           .find(SimilarProjectCard)
 
-        test('passes the right props for the project', () => {
+        it('passes the right props for the project', () => {
           const projectProps = {
             imageSrc: 'image-2',
             title: 'Title 2',
@@ -126,7 +126,7 @@ describe('<SimilarProjectsCard />', () => {
             infos: emptyArray,
           }
 
-          expect(staticSimilarProjectCard.props()).to.contains(projectProps)
+          expect(staticSimilarProjectCard.props()).toMatchObject(projectProps)
         })
       })
 
@@ -137,7 +137,7 @@ describe('<SimilarProjectsCard />', () => {
         const staticSimilarProjectCard = similarProjectsCard
           .find(SimilarProjectCard)
 
-        test('passes the right props for the project', () => {
+        it('passes the right props for the project', () => {
           const projectProps = {
             imageSrc: 'image-3',
             title: 'Title 3',
@@ -146,7 +146,7 @@ describe('<SimilarProjectsCard />', () => {
             infos: infos,
           }
 
-          expect(staticSimilarProjectCard.props()).to.contains(projectProps)
+          expect(staticSimilarProjectCard.props()).toMatchObject(projectProps)
         })
       })
     })
@@ -164,8 +164,8 @@ describe('<SimilarProjectsCard />', () => {
         similarProjectsCard.setState({ currentIndex: 2 })
       })
 
-      test('updates the current index to 0', () => {
-        expect(similarProjectsCard.state('currentIndex')).to.eq(2)
+      it('updates the current index to 0', () => {
+        expect(similarProjectsCard.state('currentIndex')).toBe(2)
 
         similarProjectsCard.setProps({
           projects: [
@@ -174,7 +174,7 @@ describe('<SimilarProjectsCard />', () => {
           ]
         })
 
-        expect(similarProjectsCard.state('currentIndex')).to.eq(0)
+        expect(similarProjectsCard.state('currentIndex')).toBe(0)
       })
     })
 
@@ -197,7 +197,7 @@ describe('<SimilarProjectsCard />', () => {
           leftArrowButton.simulate('click')
         })
 
-        test('passes the previous project props to <SimilarProjectCard>', () => {
+        it('passes the previous project props to <SimilarProjectCard>', () => {
           const projectProps = {
             imageSrc: 'image-2',
             title: 'Title 2',
@@ -206,12 +206,12 @@ describe('<SimilarProjectsCard />', () => {
             infos: emptyArray,
           }
 
-          expect(staticSimilarProjectCard.props()).to.contains(projectProps)
+          expect(staticSimilarProjectCard.props()).toMatchObject(projectProps)
         })
 
-        test('updates correctly the step information', () => {
+        it('updates correctly the step information', () => {
           expect(staticSimilarProjectCard.props())
-            .to.contains({ step: '2/3' })
+            .toMatchObject({ step: '2/3' })
         })
       })
 
@@ -233,7 +233,7 @@ describe('<SimilarProjectsCard />', () => {
           leftArrowButton.simulate('click')
         })
 
-        test('passes the first project props to <SimilarProjectCard>', () => {
+        it('passes the first project props to <SimilarProjectCard>', () => {
           const projectProps = {
             imageSrc: 'image-1',
             title: 'Title 1',
@@ -242,17 +242,17 @@ describe('<SimilarProjectsCard />', () => {
             infos: emptyArray,
           }
 
-          expect(staticSimilarProjectCard.props()).to.contains(projectProps)
+          expect(staticSimilarProjectCard.props()).toMatchObject(projectProps)
         })
 
-        test('updates correctly the step information', () => {
+        it('updates correctly the step information', () => {
           expect(staticSimilarProjectCard.props())
-            .to.contains({ step: '1/3' })
+            .toMatchObject({ step: '1/3' })
         })
 
-        test('disables the left arrow button', () => {
+        it('disables the left arrow button', () => {
           expect(staticSimilarProjectCard.props())
-            .to.contains({ leftArrowDisabled: true })
+            .toMatchObject({ leftArrowDisabled: true })
         })
       })
     })
@@ -275,7 +275,7 @@ describe('<SimilarProjectsCard />', () => {
           rightArrowButton.simulate('click')
         })
 
-        test('passes the next project props to <SimilarProjectCard>', () => {
+        it('passes the next project props to <SimilarProjectCard>', () => {
           const projectProps = {
             imageSrc: 'image-2',
             title: 'Title 2',
@@ -284,12 +284,12 @@ describe('<SimilarProjectsCard />', () => {
             infos: emptyArray,
           }
 
-          expect(staticSimilarProjectCard.props()).to.contains(projectProps)
+          expect(staticSimilarProjectCard.props()).toMatchObject(projectProps)
         })
 
-        test('updates correctly the step information', () => {
+        it('updates correctly the step information', () => {
           expect(staticSimilarProjectCard.props())
-            .to.contains({ step: '2/3' })
+            .toMatchObject({ step: '2/3' })
         })
       })
 
@@ -312,7 +312,7 @@ describe('<SimilarProjectsCard />', () => {
           rightArrowButton.simulate('click')
         })
 
-        test('passes the last project props to <SimilarProjectCard>', () => {
+        it('passes the last project props to <SimilarProjectCard>', () => {
           const projectProps = {
             imageSrc: 'image-3',
             title: 'Title 3',
@@ -321,17 +321,17 @@ describe('<SimilarProjectsCard />', () => {
             infos: infos,
           }
 
-          expect(staticSimilarProjectCard.props()).to.contains(projectProps)
+          expect(staticSimilarProjectCard.props()).toMatchObject(projectProps)
         })
 
-        test('updates correctly the step information', () => {
+        it('updates correctly the step information', () => {
           expect(staticSimilarProjectCard.props())
-            .to.contains({ step: '3/3' })
+            .toMatchObject({ step: '3/3' })
         })
 
-        test('disables the right arrow button', () => {
+        it('disables the right arrow button', () => {
           expect(staticSimilarProjectCard.props())
-            .to.contains({ rightArrowDisabled: true })
+            .toMatchObject({ rightArrowDisabled: true })
         })
       })
     })
@@ -343,9 +343,9 @@ describe('<SimilarProjectsCard />', () => {
     )
     const staticSimilarProjectCard = similarProjectsCard.find(SimilarProjectCard)
 
-    test('passes the right props', () => {
+    it('passes the right props', () => {
       expect(staticSimilarProjectCard.props())
-        .to.contains({ className: 'custom-className' })
+        .toMatchObject({ className: 'custom-className' })
     })
   })
 })

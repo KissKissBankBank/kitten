@@ -13,12 +13,12 @@ describe('<SideGrid />', () => {
     </SideGrid>
   )
 
-  test('renders a <div class="k-SideGrid" />', () => {
+  it('renders a <div class="k-SideGrid" />', () => {
     expect(component.hasClass('k-SideGrid')).toBe(true)
   })
 
-  test('renders children', () => {
-    expect(component).to.have.text('Test')
+  it('renders children', () => {
+    expect(component.text()).toBe('Test')
   })
 
   describe('with aside options', () => {
@@ -26,7 +26,7 @@ describe('<SideGrid />', () => {
       <SideGrid asidePosition="start" asideSize="large" />
     )
 
-    test('has the right classes', () => {
+    it('has the right classes', () => {
       expect(component.hasClass('k-SideGrid--asideStart')).toBe(true)
       expect(component.hasClass('k-SideGrid--asideLarge')).toBe(true)
     })
@@ -39,10 +39,10 @@ describe('<SideGrid />', () => {
                 rowClassName="row-custom-class" />
     )
 
-    test('has the right classes', () => {
+    it('has the right classes', () => {
       expect(component.hasClass('custom-class')).toBe(true)
-      expect(component).to.have.descendants('.container-custom-class')
-      expect(component).to.have.descendants('.row-custom-class')
+      expect(component.find('.container-custom-class').exists()).toBe(true)
+      expect(component.find('.row-custom-class').exists()).toBe(true)
     })
   })
 })
@@ -54,12 +54,12 @@ describe('<SideGridContent />', () => {
     </SideGridContent>
   )
 
-  test('renders a <div class="k-SideGrid__content" />', () => {
+  it('renders a <div class="k-SideGrid__content" />', () => {
     expect(component.hasClass('k-SideGrid__content')).toBe(true)
   })
 
-  test('renders children', () => {
-    expect(component).to.have.text('Test')
+  it('renders children', () => {
+    expect(component.text()).toBe('Test')
   })
 })
 
@@ -70,15 +70,15 @@ describe('<SideGridAside />', () => {
     </SideGridAside>
   )
 
-  test('renders a <div class="k-SideGrid__content" />', () => {
+  it('renders a <div class="k-SideGrid__content" />', () => {
     expect(component.hasClass('k-SideGrid__aside')).toBe(true)
   })
 
-  test('renders children', () => {
-    expect(component).to.have.text('Test')
+  it('renders children', () => {
+    expect(component.text()).toBe('Test')
   })
 
-  test('renders a child <div class="k-SideGrid__asideContent" />', () => {
+  it('renders a child <div class="k-SideGrid__asideContent" />', () => {
     const child = component.children().first()
     expect(child.hasClass('k-SideGrid__asideContent')).toBe(true)
   })

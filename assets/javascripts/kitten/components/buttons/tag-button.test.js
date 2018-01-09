@@ -6,16 +6,16 @@ describe('TagButton', () => {
   const defaultComponent = shallow(
     <TagButton />)
 
-  test('renders <div class="k-TagButton">', () => {
+  it('renders <div class="k-TagButton">', () => {
     expect(defaultComponent.find('.k-TagButton')).toHaveLength(1)
   })
 
-  test('has a default tag', () => {
-    expect(defaultComponent).to.have.tagName('button')
+  it('has a default tag', () => {
+    expect(defaultComponent.type()).toBe('button')
   })
 
-  test('with children', () => {
-    expect(defaultComponent).to.have.text('Tag')
+  it('with children', () => {
+    expect(defaultComponent.text()).toBe('Tag')
   })
 
   describe('<TagButton />', () => {
@@ -25,9 +25,9 @@ describe('TagButton', () => {
         <TagButton className="k-TagButton--custom"
                    selected={ false } />)
 
-      test('renders a <Button class="k-TagButton" />', () => {
-        expect(component).to.have.tagName('button')
-        expect(component).to.have.text('Tag')
+      it('renders a <Button class="k-TagButton" />', () => {
+        expect(component.type()).toBe('button')
+        expect(component.text()).toBe('Tag')
         expect(component.hasClass('k-TagButton--custom')).toBe(true)
         expect(component.hasClass('k-TagButton--hydrogen')).toBe(true)
       })
@@ -37,7 +37,7 @@ describe('TagButton', () => {
           <TagButton tiny />
         )
 
-        test('renders a <Button class="k-TagButton--tiny" />', () => {
+        it('renders a <Button class="k-TagButton--tiny" />', () => {
           expect(component.hasClass('k-TagButton--tiny')).toBe(true)
         })
       })
@@ -47,7 +47,7 @@ describe('TagButton', () => {
           <TagButton big />
         )
 
-        test('renders a <Button class="k-TagButton--big" />', () => {
+        it('renders a <Button class="k-TagButton--big" />', () => {
           expect(component.hasClass('k-TagButton--big')).toBe(true)
         })
       })
@@ -56,8 +56,8 @@ describe('TagButton', () => {
         const component = shallow(
           <a className="k-TagButton" />)
 
-        test('accepts <a className"k-TagButton" />', () => {
-          expect(component).to.have.tagName('a')
+        it('accepts <a className"k-TagButton" />', () => {
+          expect(component.type()).toBe('a')
         })
       })
 
@@ -67,8 +67,8 @@ describe('TagButton', () => {
             <svg />
           </TagButton>)
 
-        test('has children', () => {
-          expect(component.children()).to.have.tagName('svg')
+        it('has children', () => {
+          expect(component.children().type()).toBe('svg')
         })
       })
     })

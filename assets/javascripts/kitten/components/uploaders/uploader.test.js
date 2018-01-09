@@ -9,8 +9,8 @@ describe('<Uploader />', () => {
   describe('by default', () => {
     const component = mount(<Uploader />)
 
-    test('has default props', () => {
-      expect(component).to.have.props({
+    it('has default props', () => {
+      expect(component.props()).toMatchObject({
         name: null,
         acceptedFiles: 'image/*',
         maxSize: null,
@@ -21,15 +21,15 @@ describe('<Uploader />', () => {
       })
     })
 
-    test('has a default state', () => {
-      expect(component).to.have.state('fileName', null)
+    it('has a default state', () => {
+      expect(component.state().fileName).toBeNull()
     })
 
-    test('has a <Dropzone /> with default props', () => {
+    it('has a <Dropzone /> with default props', () => {
       const dropzone = component.find(Dropzone).first()
 
       expect(dropzone).toHaveLength(1)
-      expect(dropzone).to.have.props({
+      expect(dropzone.props()).toMatchObject({
         accept: 'image/*',
         maxSize: null,
         disableClick: true,
@@ -50,25 +50,25 @@ describe('<Uploader />', () => {
     )
     const theme = component.find(CustomTheme).first()
 
-    test('renders a custom theme', () => {
-      expect(component).to.have.descendants('.custom-theme')
+    it('renders a custom theme', () => {
+      expect(component.find('.custom-theme').exists()).toBe(true)
     })
 
     describe('with a buttonLabel prop', () => {
-      test('passes buttonLabel prop to the custom theme', () => {
-        expect(theme).to.have.prop('buttonLabel', 'Custom label')
+      it('passes buttonLabel prop to the custom theme', () => {
+        expect(theme.props().buttonLabel).toBe('Custom label')
       })
     })
 
     describe('with a disabled prop', () => {
-      test('passes disabled prop to the custom theme', () => {
-        expect(theme).to.have.prop('disabled', true)
+      it('passes disabled prop to the custom theme', () => {
+        expect(theme.props().disabled).toBe(true)
       })
     })
 
     describe('with a deletable prop', () => {
-      test('passes deletable prop to the custom theme', () => {
-        expect(theme).to.have.prop('deletable', false)
+      it('passes deletable prop to the custom theme', () => {
+        expect(theme.props().deletable).toBe(false)
       })
     })
   })

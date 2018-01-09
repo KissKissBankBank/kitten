@@ -5,14 +5,14 @@ import { HeaderTitles } from 'kitten/components/headers/header-titles'
 describe('<HeaderTitles />', () => {
   const titles = shallow(<HeaderTitles />)
 
-  test('renders a <div class="k-Header__titles" />', () => {
+  it('renders a <div class="k-Header__titles" />', () => {
     expect(titles.hasClass('k-Header__titles')).toBe(true)
   })
 
-  test('renders a default title', () => {
+  it('renders a default title', () => {
     const title = titles.find('.k-Header__title')
 
-    expect(title).to.have.text('You forgot the title!')
+    expect(title.text()).toBe('You forgot the title!')
   })
 
   describe('with title and subtitle', () => {
@@ -20,18 +20,18 @@ describe('<HeaderTitles />', () => {
       <HeaderTitles title="Custom title" subtitle="Custom subtitle" />
     )
 
-    test('renders a title', () => {
+    it('renders a title', () => {
       const title = titles.find('.k-Header__title')
 
       expect(title).toHaveLength(1)
-      expect(title).to.have.text('Custom title')
+      expect(title.text()).toBe('Custom title')
     })
 
-    test('renders a subtitle', () => {
+    it('renders a subtitle', () => {
       const subtitle = titles.find('.k-Header__subtitle')
 
       expect(subtitle).toHaveLength(1)
-      expect(subtitle).to.have.text('Custom subtitle')
+      expect(subtitle.text()).toBe('Custom subtitle')
     })
   })
 
@@ -43,10 +43,10 @@ describe('<HeaderTitles />', () => {
                     subtitle="Custom subtitle" />
     )
 
-    test('has the right classes', () => {
+    it('has the right classes', () => {
       expect(titles.hasClass('custom-class')).toBe(true)
-      expect(titles).to.have.descendants('.title-custom-class')
-      expect(titles).to.have.descendants('.subtitle-custom-class')
+      expect(titles.find('.title-custom-class').exists()).toBe(true)
+      expect(titles.find('.subtitle-custom-class').exists()).toBe(true)
     })
   })
 })

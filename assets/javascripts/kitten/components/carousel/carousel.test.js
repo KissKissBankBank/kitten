@@ -1,6 +1,4 @@
 import React from 'react'
-
-
 import {
   Carousel,
   getNumColumnsForWidth,
@@ -32,6 +30,7 @@ describe('<Carousel />', () => {
 
   describe('by default on desktop', () => {
     window.matchMedia = createMockMediaMatcher(false) // desktop
+
     const carousel = shallow(
       <Carousel
         data={[{title: 'A'}]}
@@ -48,7 +47,7 @@ describe('<Carousel />', () => {
       {}
     )
 
-    test('is a <Grid />', () => {
+    it('is a <Grid />', () => {
       expect(carousel.dive().hasClass('k-Grid')).toBe(true)
     })
   })
@@ -72,7 +71,7 @@ describe('<Carousel />', () => {
       {}
     )
 
-    test('is a <Grid />', () => {
+    it('is a <Grid />', () => {
       expect(carousel.dive().hasClass('k-Grid')).toBe(true)
     })
   })
@@ -95,86 +94,86 @@ describe('<Carousel />', () => {
       {}
     )
 
-    test('is not a <Grid />', () => {
-      expect(carousel).to.not.have.className('k-Grid')
+    it('is not a <Grid />', () => {
+      expect(carousel.hasClass('k-Grid')).not.toBe(true)
     })
 
   })
 
   describe('getNumColumnsForWidth', () => {
-    test('5 columns', () => {
+    it('5 columns', () => {
       expect( getNumColumnsForWidth(1000, 150, 50) ).toBe(5)
     })
 
-    test('1 column', () => {
+    it('1 column', () => {
       expect( getNumColumnsForWidth(300, 150, 20) ).toBe(1)
     })
 
-    test('0 column if no width', () => {
+    it('0 column if no width', () => {
       expect( getNumColumnsForWidth(0, 100, 10) ).toBe(0)
     })
 
-    test('0 column if no itemWidth', () => {
+    it('0 column if no itemWidth', () => {
       expect( getNumColumnsForWidth(800, 0, 0) ).toBe(0)
     })
 
-    test('NaN if not number', () => {
+    it('NaN if not number', () => {
       expect( getNumColumnsForWidth('0', '0', '0') ).toBeNaN()
     })
   })
 
   describe('getNumPagesForColumnsAndDataLength', () => {
-    test('3 pages', () => {
+    it('3 pages', () => {
       expect( getNumPagesForColumnsAndDataLength(7, 3) ).toBe(3)
     })
 
-    test('1 page', () => {
+    it('1 page', () => {
       expect( getNumPagesForColumnsAndDataLength(2, 2) ).toBe(1)
     })
 
-    test('0 page if no dataLength', () => {
+    it('0 page if no dataLength', () => {
       expect( getNumPagesForColumnsAndDataLength(0, 3) ).toBe(0)
     })
 
-    test('0 page if no numColumns', () => {
+    it('0 page if no numColumns', () => {
       expect( getNumPagesForColumnsAndDataLength(5, 0) ).toBe(0)
     })
 
-    test('NaN if not number', () => {
+    it('NaN if not number', () => {
       expect( getNumPagesForColumnsAndDataLength('0', '0') ).toBeNaN()
     })
   })
 
   describe('checkPage', () => {
-    test('to page number 2', () => {
+    it('to page number 2', () => {
       expect( checkPage(4, 2) ).toBe(2)
     })
 
-    test('to page number 3', () => {
+    it('to page number 3', () => {
       expect( checkPage(4, 3) ).toBe(3)
     })
 
-    test('stay page number 3', () => {
+    it('stay page number 3', () => {
       expect( checkPage(4, 4) ).toBe(3)
     })
 
-    test('to page number 1', () => {
+    it('to page number 1', () => {
       expect( checkPage(4, 1) ).toBe(1)
     })
 
-    test('to page number 0', () => {
+    it('to page number 0', () => {
       expect( checkPage(4, 0) ).toBe(0)
     })
 
-    test('stay page number 0 if newPage negative', () => {
+    it('stay page number 0 if newPage negative', () => {
       expect( checkPage(4, -1) ).toBe(0)
     })
 
-    test('stay page number 0 if no numPages', () => {
+    it('stay page number 0 if no numPages', () => {
       expect( checkPage(0, 3) ).toBe(0)
     })
 
-    test('stay page 0 if not number', () => {
+    it('stay page 0 if not number', () => {
       expect( checkPage('0', '0') ).toBe(0)
     })
   })

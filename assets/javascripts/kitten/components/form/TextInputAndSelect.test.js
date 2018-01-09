@@ -8,14 +8,14 @@ describe('<TextInputAndSelect />', () => {
     const input = component.find('TextInput')
     const select = component.find('SelectWithState')
 
-    test('renders an input.k-TextInput', () => {
-      expect(input).to.tagName('input')
-      expect(input.hasClass('k-TextInput')).toBe(true)
+    it('renders an input.k-TextInput', () => {
+      expect(input.render().is('input')).toBe(true)
+      expect(input.render().hasClass('k-TextInput')).toBe(true)
     })
 
-    test('renders a div.k-Select', () => {
-      expect(select).to.have.tagName('div')
-      expect(select.hasClass('k-Select')).toBe(true)
+    it('renders a div.k-Select', () => {
+      expect(select.render().is('div')).toBe(true)
+      expect(select.render().hasClass('k-Select')).toBe(true)
     })
   })
 
@@ -24,12 +24,12 @@ describe('<TextInputAndSelect />', () => {
     const input = component.find('TextInput')
     const select = component.find('SelectWithState')
 
-    test('passes the right props to the `TextInput` component', () => {
-      expect(input.props()).toEqual(expect.arrayContaining(Object.keys({ tiny: true })))
+    it('passes the right props to the `TextInput` component', () => {
+      expect(input.props()).toMatchObject({ tiny: true })
     })
 
-    test('passes the right props to the `SelectWithState` component', () => {
-      expect(select.props()).toEqual(expect.arrayContaining(Object.keys({ tiny: true })))
+    it('passes the right props to the `SelectWithState` component', () => {
+      expect(select.props()).toMatchObject({ tiny: true })
     })
   })
 
@@ -38,12 +38,12 @@ describe('<TextInputAndSelect />', () => {
     const input = component.find('TextInput')
     const select = component.find('SelectWithState')
 
-    test('passes the right props to the `TextInput` component', () => {
-      expect(input.props()).toEqual(expect.arrayContaining(Object.keys({ disabled: true })))
+    it('passes the right props to the `TextInput` component', () => {
+      expect(input.props()).toMatchObject({ disabled: true })
     })
 
-    test('passes the right props to the `SelectWithState` component', () => {
-      expect(select.props()).toEqual(expect.arrayContaining(Object.keys({ disabled: true })))
+    it('passes the right props to the `SelectWithState` component', () => {
+      expect(select.props()).toMatchObject({ disabled: true })
     })
   })
 
@@ -51,12 +51,12 @@ describe('<TextInputAndSelect />', () => {
     const component = mount(<TextInputAndSelect digits="12" />)
     const input = component.find('TextInput')
 
-    test('passes the right props to the `SelectWithState` component', () => {
-      expect(input.props()).toEqual(expect.arrayContaining(Object.keys({ digits: 12 })))
+    it('passes the right props to the `SelectWithState` component', () => {
+      expect(input.props()).toMatchObject({ digits: "12" })
     })
 
-    test('renders input.k-TextInput--twelveDigits', () => {
-      expect(input.hasClass('k-TextInput--twelveDigits')).toBe(true)
+    it('renders input.k-TextInput--twelveDigits', () => {
+      expect(input.render().hasClass('k-TextInput--twelveDigits')).toBe(true)
     })
   })
 })

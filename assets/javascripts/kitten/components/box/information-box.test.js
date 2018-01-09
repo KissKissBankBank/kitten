@@ -7,7 +7,7 @@ describe('<InformationBox />', () => {
   describe('by default', () => {
     const defaultComponent = shallow(<InformationBox />)
 
-    test('renders .k-InformationBox', () => {
+    it('renders .k-InformationBox', () => {
       expect(defaultComponent.find('.k-InformationBox')).toHaveLength(1)
     })
   })
@@ -16,10 +16,9 @@ describe('<InformationBox />', () => {
     const component = shallow(
       <InformationBox title="Lorem ipsum" />
     )
-    const title = component.find(Title)
 
-    test('renders a <Title />', () => {
-      expect(title).toHaveLength(1)
+    it('renders a <Title />', () => {
+      expect(component.find(Title)).toHaveLength(1)
     })
   })
 
@@ -28,8 +27,8 @@ describe('<InformationBox />', () => {
       <InformationBox>Example content</InformationBox>
     )
 
-    test('adds a children element', () => {
-      expect(component).to.have.text('Example content')
+    it('adds a children element', () => {
+      expect(component.props().children).toEqual('Example content')
     })
   })
 })

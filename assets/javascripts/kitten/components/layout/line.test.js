@@ -6,11 +6,11 @@ describe('<Line />', () => {
   describe('by default', () => {
     const component = shallow(<Line />)
 
-    test('renders a <div />', () => {
-      expect(component).to.have.tagName('div')
+    it('renders a <div />', () => {
+      expect(component.is('div')).toBe(true)
     })
 
-    test('has "k-Line" class', () => {
+    it('has "k-Line" class', () => {
       expect(component.hasClass('k-Line')).toBe(true)
     })
   })
@@ -20,7 +20,7 @@ describe('<Line />', () => {
       <Line className="test-Line--lorem" />
     )
 
-    test('has a custom class', () => {
+    it('has a custom class', () => {
       expect(component.hasClass('test-Line--lorem')).toBe(true)
     })
   })
@@ -32,8 +32,8 @@ describe('<Line />', () => {
       </Line>
     ).children()
 
-    test('renders a <p>', () => {
-      expect(component).to.have.tagName('p')
+    it('renders a <p>', () => {
+      expect(component.is('p')).toBe(true)
     })
   })
 })
@@ -42,11 +42,11 @@ describe('<Line.Item />', () => {
   describe('by default', () => {
     const component = shallow(<Line.Item />)
 
-    test('renders a <div />', () => {
-      expect(component).to.have.tagName('div')
+    it('renders a <div />', () => {
+      expect(component.is('div')).toBe(true)
     })
 
-    test('has "k-Line__item" class', () => {
+    it('has "k-Line__item" class', () => {
       expect(component.hasClass('k-Line__item')).toBe(true)
     })
   })
@@ -56,7 +56,7 @@ describe('<Line.Item />', () => {
       <Line className="test-Line__item--lorem" />
     )
 
-    test('has a custom class', () => {
+    it('has a custom class', () => {
       expect(component.hasClass('test-Line__item--lorem')).toBe(true)
     })
   })
@@ -68,8 +68,8 @@ describe('<Line.Item />', () => {
       </Line>
     ).children()
 
-    test('renders a <p>', () => {
-      expect(component).to.have.tagName('p')
+    it('renders a <p>', () => {
+      expect(component.is('p')).toBe(true)
     })
   })
 })

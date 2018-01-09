@@ -3,14 +3,14 @@ import React from 'react'
 import { FormRow } from 'kitten/components/form/form-row'
 
 describe('<FormRow />', () => {
-  test('renders a <div class="k-FormRow" />', () => {
+  it('renders a <div class="k-FormRow" />', () => {
     const component = shallow(<FormRow />)
 
-    expect(component).to.have.tagName('div')
+    expect(component.is('div')).toBe(true)
     expect(component.hasClass('k-FormRow')).toBe(true)
   })
 
-  test('has a custom class', () => {
+  it('has a custom class', () => {
     const component = shallow(
       <FormRow className="test-FormRow--lorem" />
     )
@@ -18,13 +18,13 @@ describe('<FormRow />', () => {
     expect(component.hasClass('test-FormRow--lorem')).toBe(true)
   })
 
-  test('renders children', () => {
+  it('renders children', () => {
     const component = shallow(
       <FormRow>
         <p>Lorem ipsum…</p>
       </FormRow>
     )
 
-    expect(component).to.have.text('Lorem ipsum…')
+    expect(component.text()).toBe('Lorem ipsum…')
   })
 })

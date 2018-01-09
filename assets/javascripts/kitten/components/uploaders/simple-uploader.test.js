@@ -9,33 +9,35 @@ describe('<SimpleUploader />', () => {
     const component = mount(<SimpleUploader />)
     const theme = component.find('.k-SimpleUploader')
 
-    test('it has an <Uploader />', () => {
+    it('it has an <Uploader />', () => {
       expect(component.find(Uploader)).toHaveLength(1)
     })
 
-    test('has children with good classes', () => {
-      expect(component.find('.k-SimpleUploader')).to.be.present()
-      expect(component.find('.k-SimpleUploader__button')).to.be.present()
-      expect(component.find('.k-SimpleUploader__link')).to.be.present()
-      expect(component.find('.k-SimpleUploader__text')).to.be.present()
+    it('has children with good classes', () => {
+      expect(component.find('.k-SimpleUploader').exists()).toBeTruthy()
+      expect(component.find('.k-SimpleUploader__button').exists()).toBeTruthy()
+      expect(component.find('.k-SimpleUploader__link').exists()).toBeTruthy()
+      expect(component.find('.k-SimpleUploader__text').exists()).toBeTruthy()
     })
 
-    test('has a default button label', () => {
-      expect(component.find('.k-SimpleUploader__button'))
-        .to.have.text('Choose a file')
+    it('has a default button label', () => {
+      const button = component.find('.k-SimpleUploader__button')
+
+      expect(button.exists()).toBeTruthy()
+      expect(button.text()).toBe('Choose a file')
     })
 
-    test('doesn\'t have a delete button', () => {
-      expect(component.find('.k-SimpleUploader__buttonIcon')).to.be.blank()
+    it('doesn\'t have a delete button', () => {
+      expect(component.find('.k-SimpleUploader__buttonIcon')).toHaveLength(0)
     })
   })
 
   describe('with buttonLabel prop', () => {
     const component = mount(<SimpleUploader buttonLabel="Custom label" />)
 
-    test('has a custom label', () => {
-      expect(component.find('.k-SimpleUploader__button'))
-        .to.have.text('Custom label')
+    it('has a custom label', () => {
+      expect(component.find('.k-SimpleUploader__button').text('Custom label'))
+        .toBe(true)
     })
   })
 
@@ -43,22 +45,22 @@ describe('<SimpleUploader />', () => {
     const component = mount(<SimpleUploader fileName="custom-filename.png" />)
     const deleteButton = component.find(ButtonIcon)
 
-    test('has a custom filename', () => {
-      expect(component.find('.k-SimpleUploader__text'))
-        .to.have.text('custom-filename.png')
+    it('has a custom filename', () => {
+      expect(component.find('.k-SimpleUploader__text').text('custom-filename.png'))
+        .toBe(true)
     })
 
-    test('has a delete button', () => {
-      expect(deleteButton).to.be.present()
+    it('has a delete button', () => {
+      expect(deleteButton.exists()).toBe(true)
     })
 
-    test('passes the right props to the delete button', () => {
+    it('passes the right props to the delete button', () => {
       const expectedProps = {
         className: 'k-SimpleUploader__buttonIcon',
         size: 'micro',
       }
 
-      expect(deleteButton.props()).to.contains(expectedProps)
+      expect(deleteButton.props()).toMatchObject(expectedProps)
       expect(typeof deleteButton.props().onClick).toBe('function')
     })
   })
@@ -72,16 +74,16 @@ describe('<SimpleUploader />', () => {
       const buttonIcon = component.find(ButtonIcon)
       const uploadButton = component.find('.k-SimpleUploader__button')
 
-      test('adds a disabled attribute to the delete button', () => {
-        expect(buttonIcon).to.have.attr('disabled')
+      it('adds a disabled attribute to the delete button', () => {
+        expect(buttonIcon.props().disabled).toBeTruthy()
       })
 
-      test('doesn\'t pass a onClick prop to the delete button', () => {
+      it('doesn\'t pass a onClick prop to the delete button', () => {
         expect(buttonIcon.props().onClick).toBeNull()
       })
 
-      test('adds a disabled attribute to the upload button', () => {
-        expect(uploadButton).to.have.attr('disabled')
+      it('adds a disabled attribute to the upload button', () => {
+        expect(uploadButton.props().disabled).toBeTruthy()
       })
     })
 
@@ -89,8 +91,8 @@ describe('<SimpleUploader />', () => {
       const component = mount(<SimpleUploader disabled />)
       const uploadButton = component.find('.k-SimpleUploader__button')
 
-      test('adds a disabled attribute to the upload button', () => {
-        expect(uploadButton).to.have.attr('disabled')
+      it('adds a disabled attribute to the upload button', () => {
+        expect(uploadButton.props().disabled).toBeTruthy()
       })
     })
   })
@@ -102,7 +104,7 @@ describe('<SimpleUploader />', () => {
     />)
     const deleteButton = component.find(ButtonIcon)
 
-    test('does not have a delete button', () => {
+    it('does not have a delete button', () => {
       expect(deleteButton).toHaveLength(0)
     })
   })

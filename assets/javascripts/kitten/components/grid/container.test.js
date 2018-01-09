@@ -13,11 +13,11 @@ describe('<Container />', () => {
   describe('by default', () => {
     const container = shallow(<Container />)
 
-    test('is a <div />', () => {
-      expect(container).to.have.tagName('div')
+    it('is a <div />', () => {
+      expect(container.is('div')).toBe(true)
     })
 
-    test('has a default class', () => {
+    it('has a default class', () => {
       expect(container.hasClass('k-Container')).toBe(true)
     })
   })
@@ -25,7 +25,7 @@ describe('<Container />', () => {
   describe('with a custom class', () => {
     const container = shallow(<Container className="custom__class" />)
 
-    test('has a custom class', () => {
+    it('has a custom class', () => {
       expect(container.hasClass('custom__class')).toBe(true)
     })
   })
@@ -33,16 +33,16 @@ describe('<Container />', () => {
   describe('with other props', () => {
     const container = shallow(<Container aria-hidden />)
 
-    test('has aria-hidden attribute', () => {
-      expect(container).to.have.attr('aria-hidden', 'true')
+    it('has aria-hidden attribute', () => {
+      expect(container.props()['aria-hidden']).toBeTruthy()
     })
   })
 
   describe('with children', () => {
     const container = shallow(<Container>Lorem ipsum…</Container>)
 
-    test('has text', () => {
-      expect(container).to.have.text('Lorem ipsum…')
+    it('has text', () => {
+      expect(container.text()).toBe('Lorem ipsum…')
     })
   })
 
@@ -62,7 +62,7 @@ describe('<Container />', () => {
         <Container fullWidthBelowScreenSize={SCREEN_SIZE_M} />
       )
 
-      test('has class no-padding', () => {
+      it('has class no-padding', () => {
         expect(container.hasClass('k-Container--no-padding')).toBe(true)
       })
     })
@@ -73,8 +73,8 @@ describe('<Container />', () => {
         <Container fullWidthBelowScreenSize={SCREEN_SIZE_M} />
       )
 
-      test('has not class no-padding', () => {
-        expect(container).to.not.have.className('k-Container--no-padding')
+      it('has not class no-padding', () => {
+        expect(container.hasClass('k-Container--no-padding')).toBe(false)
       })
     })
   })

@@ -31,7 +31,7 @@ describe('utils MediaQueries', () => {
     describe('return the only query string', () => {
       const query = getJoinedQueries(['(min-width: 800px)'])
 
-      test('by passing one query', () => {
+      it('by passing one query', () => {
         expect(query).toBe('(min-width: 800px)')
       })
     })
@@ -41,7 +41,7 @@ describe('utils MediaQueries', () => {
         ['(min-width: 800px)', '(max-width: 1280px)']
       )
 
-      test('by passing two queries', () => {
+      it('by passing two queries', () => {
         expect(query).toBe('(min-width: 800px) and (max-width: 1280px)')
       })
     })
@@ -49,7 +49,7 @@ describe('utils MediaQueries', () => {
     describe('return empty string', () => {
       const query = getJoinedQueries([])
 
-      test('by passing empty array', () => {
+      it('by passing empty array', () => {
         expect(query).toBe('')
       })
     })
@@ -57,7 +57,7 @@ describe('utils MediaQueries', () => {
     describe('return the only good query', () => {
       const query = getJoinedQueries(['(min-width: 800px)', null])
 
-      test('by passing one good query and a null', () => {
+      it('by passing one good query and a null', () => {
         expect(query).toBe('(min-width: 800px)')
       })
     })
@@ -69,7 +69,7 @@ describe('utils MediaQueries', () => {
       window.matchMedia = createMockMediaMatcher(true)
       const mq = createMatchMedia('(max-width: 800px)')
 
-      test('by passing a mediaQueryString', () => {
+      it('by passing a mediaQueryString', () => {
         expect(mq).toBeDefined()
       })
     })
@@ -78,7 +78,7 @@ describe('utils MediaQueries', () => {
       window.matchMedia = createMockMediaMatcher(true)
       const mq = createMatchMedia()
 
-      test('by ommiting mediaQueryString', () => {
+      it('by ommiting mediaQueryString', () => {
         expect(mq).toBeUndefined()
       })
     })
@@ -87,7 +87,7 @@ describe('utils MediaQueries', () => {
       window.matchMedia = createMockMediaMatcher(true)
       const mq = createMatchMedia('')
 
-      test('by passing empty mediaQueryString', () => {
+      it('by passing empty mediaQueryString', () => {
         expect(mq).toBeUndefined()
       })
     })
@@ -99,7 +99,7 @@ describe('utils MediaQueries', () => {
       window.matchMedia = createMockMediaMatcher(true)
       const mq = createMatchMediaMin(SCREEN_SIZE_S)
 
-      test('by passing a valid config name', () => {
+      it('by passing a valid config name', () => {
         expect(mq).toBeDefined()
       })
     })
@@ -108,7 +108,7 @@ describe('utils MediaQueries', () => {
       window.matchMedia = createMockMediaMatcher(true)
       const mq = createMatchMediaMin('TOTO')
 
-      test('by passing an invalid config name', () => {
+      it('by passing an invalid config name', () => {
         expect(mq).toBeUndefined()
       })
     })
@@ -117,7 +117,7 @@ describe('utils MediaQueries', () => {
       window.matchMedia = createMockMediaMatcher(true)
       const mq = createMatchMediaMin()
 
-      test('by ommiting a config name', () => {
+      it('by ommiting a config name', () => {
         expect(mq).toBeUndefined()
       })
     })
@@ -129,7 +129,7 @@ describe('utils MediaQueries', () => {
       window.matchMedia = createMockMediaMatcher(true)
       const mq = createMatchMediaMax(SCREEN_SIZE_M)
 
-      test('by passing a valid config name', () => {
+      it('by passing a valid config name', () => {
         expect(mq).toBeDefined()
       })
     })
@@ -138,7 +138,7 @@ describe('utils MediaQueries', () => {
       window.matchMedia = createMockMediaMatcher(true)
       const mq = createMatchMediaMax('TOTO')
 
-      test('by passing an invalid config name', () => {
+      it('by passing an invalid config name', () => {
         expect(mq).toBeUndefined()
       })
     })
@@ -147,7 +147,7 @@ describe('utils MediaQueries', () => {
       window.matchMedia = createMockMediaMatcher(true)
       const mq = createMatchMediaMax()
 
-      test('by ommiting a config name', () => {
+      it('by ommiting a config name', () => {
         expect(mq).toBeUndefined()
       })
     })
@@ -159,7 +159,7 @@ describe('utils MediaQueries', () => {
       window.matchMedia = createMockMediaMatcher(true)
       const mq = createMatchMediaWithin(SCREEN_SIZE_S, SCREEN_SIZE_M)
 
-      test('by passing a valid config name', () => {
+      it('by passing a valid config name', () => {
         expect(mq).toBeDefined()
       })
     })
@@ -168,7 +168,7 @@ describe('utils MediaQueries', () => {
       window.matchMedia = createMockMediaMatcher(true)
       const mq = createMatchMediaWithin(SCREEN_SIZE_S, 'TOTO')
 
-      test('by passing at least one good config name', () => {
+      it('by passing at least one good config name', () => {
         expect(mq).toBeDefined()
       })
     })
@@ -177,7 +177,7 @@ describe('utils MediaQueries', () => {
       window.matchMedia = createMockMediaMatcher(true)
       const mq = createMatchMediaWithin()
 
-      test('by ommiting a config name', () => {
+      it('by ommiting a config name', () => {
         expect(mq).toBeUndefined()
       })
     })

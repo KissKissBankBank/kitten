@@ -9,20 +9,20 @@ describe('ButtonQuestionMarkIcon />', () => {
   describe('by default', () => {
     const button = shallow(<ButtonQuestionMarkIcon />)
 
-    test('is a <ButtonIcon modifier="helium />', () => {
-      expect(button).to.have.descendants(ButtonIcon)
-      expect(button).to.have.prop('modifier', 'helium')
+    it('is a <ButtonIcon modifier="helium />', () => {
+      expect(button.find('ButtonIcon')).toHaveLength(1)
+      expect(button.props().modifier).toBe('helium')
     })
 
-    test('has a <QuestionMarkIcon />', () => {
-      expect(button).to.have.descendants(QuestionMarkIcon)
+    it('has a <QuestionMarkIcon />', () => {
+      expect(button.find('QuestionMarkIcon')).toHaveLength(1)
     })
   })
 
   describe('with other props', () => {
     const button = shallow(<QuestionMarkIcon className="custom__class" />)
 
-    test('has custom class', () => {
+    it('has custom class', () => {
       expect(button.hasClass('custom__class')).toBe(true)
     })
   })

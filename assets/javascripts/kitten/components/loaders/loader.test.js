@@ -6,32 +6,32 @@ describe('<Loader />', () => {
   describe('by default', () => {
     const loader = mount(<Loader />)
 
-    test('is a <div />', () => {
-      expect(loader).to.have.tagName('div')
+    it('is a <div />', () => {
+      expect(loader.is('div').exists()).toBe(true)
     })
 
-    test('has a default class', () => {
-      expect(loader.hasClass('k-Loader')).toBe(true)
+    it('has a default class', () => {
+      expect(loader.render().hasClass('k-Loader')).toBe(true)
     })
 
-    test('has 3 circles', () => {
-      expect(loader.find('.k-Loader__circle')).toHaveLength(3)
+    it('has 3 circles', () => {
+      expect(loader.render().find('.k-Loader__circle')).toHaveLength(3)
     })
   })
 
   describe('with a span tag', () => {
     const loader = mount(<Loader tag="span" />)
 
-    test('is a <span />', () => {
-      expect(loader).to.have.tagName('span')
+    it('is a <span />', () => {
+      expect(loader.is('span').exists()).toBe(true)
     })
   })
 
   describe('with a custom class', () => {
     const loader = mount(<Loader className="custom__class" />)
 
-    test('is a good class', () => {
-      expect(loader.hasClass('custom__class')).toBe(true)
+    it('is a good class', () => {
+      expect(loader.render().hasClass('custom__class')).toBe(true)
     })
   })
 
@@ -39,8 +39,8 @@ describe('<Loader />', () => {
     const loader = mount(<Loader color="red" />)
     const circle = loader.find('.k-Loader__circle').first().find('circle')
 
-    test('has circles with red color', () => {
-      expect(circle).to.have.attr('fill', 'red')
+    it('has circles with red color', () => {
+      expect(circle.props().fill).toBe('red')
     })
   })
 })

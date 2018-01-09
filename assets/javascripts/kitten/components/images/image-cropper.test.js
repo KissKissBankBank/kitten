@@ -15,11 +15,11 @@ describe('<ImageCropper />', () => {
   describe('by default', () => {
     const component = mount(<ImageCropper />)
 
-    test('has an <ImageCropper />', () => {
+    it('has an <ImageCropper />', () => {
       expect(component.find(ImageCropper)).toHaveLength(1)
     })
 
-    test('has default props', () => {
+    it('has default props', () => {
       const expectedProps = {
         name: 'picture',
         imageSrc: null,
@@ -38,11 +38,11 @@ describe('<ImageCropper />', () => {
         disabled: false,
       }
 
-      expect(component.props()).to.contains(expectedProps)
+      expect(component.props()).toMatchObject(expectedProps)
       expect(typeof component.props().onChange).toBe('function')
     })
 
-    test('has a default state', () => {
+    it('has a default state', () => {
       const defaultState = {
         imageSrc: null,
         imageCropSrc: null,
@@ -61,19 +61,19 @@ describe('<ImageCropper />', () => {
       expect(component.state()).toEqual(defaultState)
     })
 
-    test('doesn\'t render a Cropper', () => {
+    it('doesn\'t render a Cropper', () => {
       const cropper = component.find(Cropper)
 
       expect(cropper).toHaveLength(0)
     })
 
-    test('renders a SimpleUploader', () => {
+    it('renders a SimpleUploader', () => {
       const uploader = component.find(SimpleUploader)
 
       expect(uploader).toHaveLength(1)
     })
 
-    test('passes the right props to SimpleUploader', () => {
+    it('passes the right props to SimpleUploader', () => {
       const uploader = component.find(SimpleUploader)
       const expectedProps = {
         name: 'picture',
@@ -84,7 +84,7 @@ describe('<ImageCropper />', () => {
         disabled: false,
       }
 
-      expect(uploader.props()).to.contains(expectedProps)
+      expect(uploader.props()).toMatchObject(expectedProps)
       expect(typeof uploader.props().onSuccess).toBe('function')
       expect(typeof uploader.props().onError).toBe('function')
       expect(typeof uploader.props().onReset).toBe('function')
@@ -95,7 +95,7 @@ describe('<ImageCropper />', () => {
     const component = mount(<ImageCropper imageSrc="custom-file.jpg" />)
 
     describe('without cropperHeight and cropperWidth set in state', () => {
-      test('doesn\'t render a Cropper component', () => {
+      it('doesn\'t render a Cropper component', () => {
         const cropper = component.find(Cropper)
 
         expect(cropper).toHaveLength(0)
@@ -108,11 +108,11 @@ describe('<ImageCropper />', () => {
       component.setState({ cropperHeight: 100, cropperWidth: 200 })
       const cropper = component.find(Cropper)
 
-      test(' renders a Cropper component', () => {
+      it(' renders a Cropper component', () => {
         expect(cropper).toHaveLength(1)
       })
 
-      test('passes the right props to the Cropper component', () => {
+      it('passes the right props to the Cropper component', () => {
         const expectedProps = {
           className: 'k-Cropper',
           src: 'custom-file.jpg',
@@ -129,16 +129,16 @@ describe('<ImageCropper />', () => {
           dragMode: 'move',
         }
 
-        expect(cropper.props()).to.contains(expectedProps)
-        expect(cropper.props().style).toEqual({ width: 200, height: 100 })
+        expect(cropper.props()).toMatchObject(expectedProps)
+        expect(cropper.props().style).toMatchObject({ width: 200, height: 100 })
       })
 
-      test('renders the slider and the cropper info', () => {
+      it('renders the slider and the cropper info', () => {
         const slider = component.find('.k-Slider')
 
         expect(slider).toHaveLength(1)
-        expect(component.text()).to.contains('Zoom…')
-        expect(component.text()).to.contains('Move the image…')
+        expect(component.find('Label').at(1).text()).toBe('Zoom…')
+        expect(component.find('Paragraph').at(1).text()).toBe('Move the image…')
       })
 
       describe('with disabled prop', () => {
@@ -151,16 +151,18 @@ describe('<ImageCropper />', () => {
         component.setState({ cropperHeight: 100, cropperWidth: 200 })
         const cropper = component.find(Cropper)
 
-        test('passes dragMode prop to `none` to the Cropper component', () => {
+        it('passes dragMode prop to `none` to the Cropper component', () => {
           expect(cropper.props().dragMode).toEqual('none')
         })
 
-        test('doesn\'t render the slider and the cropper info', () => {
+        it('doesn\'t render the slider and the cropper info', () => {
           const slider = component.find('.k-Slider')
 
           expect(slider).toHaveLength(0)
-          expect(component.text()).not.to.contains('Zoom…')
-          expect(component.text()).not.to.contains('Move the image…')
+          expect(component.find('Label').text())
+            .not.toEqual(expect.stringMatching(/Zoom…/))
+          expect(component.find('Paragraph').text())
+            .not.toEqual(expect.stringMatching(/Move the image…/))
         })
       })
     })
@@ -174,7 +176,7 @@ describe('<ImageCropper />', () => {
     )
     const uploader = component.find(SimpleUploader)
 
-    test('doesn\'t render the delete button', () => {
+    it('doesn\'t render the delete button', () => {
       expect(uploader.props()).toMatchObject({ deletable: false })
     })
   })

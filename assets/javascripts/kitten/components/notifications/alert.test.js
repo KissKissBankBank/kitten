@@ -14,26 +14,26 @@ describe('<Alert />', () => {
   describe('by default', () => {
     const alert = shallow(<Alert />)
 
-    test('is a <div />', () => {
-      expect(alert).to.have.tagName('div')
+    it('is a <div />', () => {
+      expect(alert.type()).toBe('div')
     })
 
-    test('has a default classes', () => {
+    it('has a default classes', () => {
       expect(alert.hasClass('k-Alert')).toBe(true)
-      expect(alert).to.have.descendants('.k-Alert__container')
-      expect(alert).to.have.descendants('.k-Alert__row')
-      expect(alert).to.have.descendants('.k-Alert__content')
+      expect(alert.find('.k-Alert__container').exists()).toBe(true)
+      expect(alert.find('.k-Alert__row').exists()).toBe(true)
+      expect(alert.find('.k-Alert__content').exists()).toBe(true)
     })
 
-    test('has a role alert', () => {
-      expect(alert).to.have.attr('role', 'alert')
+    it('has a role alert', () => {
+      expect(alert.props().role).toBe('alert')
     })
 
-    test('has not a <CloseButton />', () => {
-      expect(alert).not.to.have.descendants('CloseButton')
+    it('has not a <CloseButton />', () => {
+      expect(alert.find('CloseButton').exists()).toBe(false)
     })
 
-    test('has initial state', () => {
+    it('has initial state', () => {
       expect(alert.state().show).toBe(true)
       expect(alert.state().height).toBe('auto')
     })
@@ -42,15 +42,15 @@ describe('<Alert />', () => {
   describe('with show prop at false', () => {
     const alert = shallow(<Alert show={ false } />)
 
-    test('don\'t show the alert', () => {
-      expect(Object.keys(alert)).toHaveLength(0)
+    it('don\'t show the alert', () => {
+      expect(alert.type()).toBeNull()
     })
   })
 
   describe('with error prop', () => {
     const alert = shallow(<Alert error />)
 
-    test('has a error class', () => {
+    it('has a error class', () => {
       expect(alert.hasClass('k-Alert--error')).toBe(true)
     })
   })
@@ -58,7 +58,7 @@ describe('<Alert />', () => {
   describe('with success prop', () => {
     const alert = shallow(<Alert success />)
 
-    test('has a success class', () => {
+    it('has a success class', () => {
       expect(alert.hasClass('k-Alert--success')).toBe(true)
     })
   })
@@ -66,7 +66,7 @@ describe('<Alert />', () => {
   describe('with custom class', () => {
     const alert = shallow(<Alert className="custom__class" />)
 
-    test('has a custom class', () => {
+    it('has a custom class', () => {
       expect(alert.hasClass('custom__class')).toBe(true)
     })
   })
@@ -74,8 +74,8 @@ describe('<Alert />', () => {
   describe('with other prop', () => {
     const alert = shallow(<Alert aria-hidden="true" />)
 
-    test('has an aria-hidden attribute', () => {
-      expect(alert).to.have.attr('aria-hidden', 'true')
+    it('has an aria-hidden attribute', () => {
+      expect(alert.props()['aria-hidden']).toBe('true')
     })
   })
 
@@ -84,14 +84,14 @@ describe('<Alert />', () => {
       <Alert closeButton closeButtonLabel="Close this alert" />
     )
 
-    test('has a <CloseButton />', () => {
-      expect(alert).to.have.descendants('CloseButton')
+    it('has a <CloseButton />', () => {
+      expect(alert.find('CloseButton').exists()).toBe(true)
     })
 
-    test('has a label', () => {
+    it('has a label', () => {
       const closeButton = alert.find('CloseButton')
 
-      expect(closeButton).to.have.prop('closeButtonLabel', 'Close this alert')
+      expect(closeButton.props().closeButtonLabel).toBe('Close this alert')
     })
   })
 
@@ -102,8 +102,8 @@ describe('<Alert />', () => {
       </Alert>
     )
 
-    test('has text', () => {
-      expect(alert).to.have.text(
+    it('has text', () => {
+      expect(alert.text()).toBe(
         'Lorem ipsum dolor sit amet, consectetur adipisicing elit…'
       )
     })
@@ -125,7 +125,7 @@ describe('<Alert />', () => {
       alertComponent.instance().handleAnimationEnd()
     })
 
-    test('calls onClose prop callback', () => {
+    it('calls onClose prop callback', () => {
       expect(onCloseSpy.calledOnce).toBe(true)
     })
   })
@@ -141,7 +141,7 @@ describe('<Alert />', () => {
       alertComponent.simulate('animationEnd')
     })
 
-    test('has handleAnimationEnd in onAnimationEnd attribute', () => {
+    it('has handleAnimationEnd in onAnimationEnd attribute', () => {
       expect(onCloseSpy.calledOnce).toBe(true)
     })
   })
@@ -154,13 +154,13 @@ describe('<Alert />', () => {
       closeButton.simulate('click')
     })
 
-    test('changes state', () => {
+    it('changes state', () => {
       expect(alert.state().show).toBe(false)
       expect(alert.state().height).not.toBe('auto')
     })
 
-    test('has a hidden class', () => {
-      expect(alert.hasClass('k-Alert--hidden')).toBe(true)
+    it('has a hidden class', () => {
+      expect(alert.render().hasClass('k-Alert--hidden')).toBe(true)
     })
   })
 })

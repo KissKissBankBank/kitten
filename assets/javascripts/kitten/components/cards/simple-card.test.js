@@ -13,29 +13,29 @@ describe('<SimpleCard />', () => {
       component = mount(<SimpleCard />)
     })
 
-    test('is a <div />', () => {
-      expect(component).to.have.tagName('div')
+    it('is a <div />', () => {
+      expect(component.render().is('div')).toBe(true)
     })
 
-    test('has an image container', () => {
-      expect(component).to.have.descendants('.k-Card__imageContainer')
+    it('has an image container', () => {
+      expect(component.render().find('.k-Card__imageContainer')).toHaveLength(1)
     })
 
-    test('has a <img /> with good class', () => {
-      expect(component).to.have.descendants('img')
-      expect(component).to.have.descendants('.k-Card__image')
+    it('has a <img /> with good class', () => {
+      expect(component.find('img')).toHaveLength(1)
+      expect(component.find('img').hasClass('k-Card__image')).toBe(true)
     })
 
-    test('has not a <Title /> component', () => {
-      expect(component).to.have.not.descendants(Title)
+    it('has not a <Title /> component', () => {
+      expect(component.find(Title).exists()).toBeFalsy()
     })
 
-    test('has not <Text /> component', () => {
-      expect(component).to.have.not.descendants(Text)
+    it('has not <Text /> component', () => {
+      expect(component.find(Text).exists()).toBeFalsy()
     })
 
-    test('has <HorizontalStroke /> component', () => {
-      expect(component).to.have.descendants(HorizontalStroke)
+    it('has <HorizontalStroke /> component', () => {
+      expect(component.find(HorizontalStroke).exists()).toBeTruthy()
     })
   })
 
@@ -44,12 +44,12 @@ describe('<SimpleCard />', () => {
       component = mount(<SimpleCard href="#" />)
     })
 
-    test('is a <a />', () => {
-      expect(component).to.have.tagName('a')
+    it('is a <a />', () => {
+      expect(component.render().is('a')).toBe(true)
     })
 
-    test('has a href attribute', () => {
-      expect(component).to.have.attr('href', '#')
+    it('has a href attribute', () => {
+      expect(component.props().href).toBe('#')
     })
   })
 
@@ -68,16 +68,18 @@ describe('<SimpleCard />', () => {
       )
     })
 
-    test('has an image with `#` src', () => {
-      expect(component.find('img')).to.have.prop('src', '#foobar')
+    it('has an image with `#` src', () => {
+      expect(component.find('img').props().src).toBe('#foobar')
     })
 
-    test('has an image with alt description', () => {
-      expect(component.find('img')).to.have.prop('alt', 'FooBar')
+    it('has an image with alt description', () => {
+      expect(component.find('img').props().alt).toBe('FooBar')
     })
 
-    test('has an image with a custom style', () => {
-      expect(component.find('img')).to.have.style('cursor', 'crosshair')
+    it('has an image with a custom style', () => {
+      expect(component.find('img').props().style).toMatchObject({
+        cursor: 'crosshair'
+      })
     })
   })
 
@@ -86,9 +88,9 @@ describe('<SimpleCard />', () => {
       component = mount(<SimpleCard title="Simple card title" />)
     })
 
-    test('has a <Title /> with good content', () => {
-      expect(component.find(Title)).to.have.text('Simple card title')
-      expect(component.find(Title)).to.have.props({
+    it('has a <Title /> with good content', () => {
+      expect(component.find(Title).text()).toBe('Simple card title')
+      expect(component.find(Title).props()).toMatchObject({
         modifier: 'senary',
         margin: false,
         className: 'k-Card__title',
@@ -101,9 +103,9 @@ describe('<SimpleCard />', () => {
       component = mount(<SimpleCard subtitle="Simple card subtitle" />)
     })
 
-    test('has a <Text /> with good content', () => {
-      expect(component.find(Text)).to.have.text('Simple card subtitle')
-      expect(component.find(Text)).to.have.props({
+    it('has a <Text /> with good content', () => {
+      expect(component.render().find(Text).text()).toBe('Simple card subtitle')
+      expect(component.find(Text).props()).toMatchObject({
         weight: 'regular',
         size: 'micro',
       })
@@ -115,9 +117,9 @@ describe('<SimpleCard />', () => {
       component = mount(<SimpleCard paragraph="Simple card subtitle" />)
     })
 
-    test('has a <Text /> with good content', () => {
-      expect(component.find(Text)).to.have.text('Simple card subtitle')
-      expect(component.find(Text)).to.have.props({
+    it('has a <Text /> with good content', () => {
+      // expect(component.find(Text).text()).toBe('Simple card subtitle')
+      expect(component.find(Text).props()).toMatchObject({
         weight: 'light',
         size: 'micro',
         lineHeight: 'normal',

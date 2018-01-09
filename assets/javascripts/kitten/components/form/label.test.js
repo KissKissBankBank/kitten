@@ -7,13 +7,13 @@ describe('<Label />', () => {
     <Label />
   )
 
-  test('renders a <label class="k-Label" />', () => {
-    expect(component).to.have.tagName('label')
+  it('renders a <label class="k-Label" />', () => {
+    expect(component.is('label')).toBe(true)
     expect(component.hasClass('k-Label')).toBe(true)
   })
 
-  test('renders default children', () => {
-    expect(component).to.have.text('Label')
+  it('renders default children', () => {
+    expect(component.text()).toBe('Label')
   })
 
   describe('with custom props', () => {
@@ -26,11 +26,11 @@ describe('<Label />', () => {
       </Label>
     )
 
-    test('renders a span with options', () => {
-      expect(component).to.have.tagName('span')
+    it('renders a span with options', () => {
+      expect(component.is('span')).toBe(true)
       expect(component.hasClass('custom-class')).toBe(true)
       expect(component.hasClass('k-Label--tiny')).toBe(true)
-      expect(component).not.to.have.attr('for', 'custom-id')
+      expect(component.props().htmlFor).not.toBe('custom-id')
     })
   })
 
@@ -43,13 +43,13 @@ describe('<Label />', () => {
       { attachTo: document.body }
     )
 
-    test('simulates click event on label', () => {
+    it('simulates click event on label', () => {
       const input = wrapper.find('#focus').at(0).node
       const label = wrapper.find('.k-Label')
 
       label.simulate('click')
 
-      expect(input).toBe(document.activeElement)
+      expect(input.type()).toBe(document.activeElement)
     })
   })
 
@@ -58,15 +58,15 @@ describe('<Label />', () => {
       <Label focusId={ false } />
     )
 
-    test('do not render for attribute', () => {
-      expect(wrapper).to.not.have.attr('for')
+    it('do not render for attribute', () => {
+      expect(wrapper.props().htmlFor).toBeFalsy()
     })
   })
 
   describe('with withoutPointerEvents prop', () => {
     const component = shallow(<Label withoutPointerEvents />)
 
-    test('has a good class', () => {
+    it('has a good class', () => {
       expect(component.hasClass('k-Label--withoutPointerEvents')).toBe(true)
     })
   })

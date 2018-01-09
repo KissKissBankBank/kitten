@@ -8,11 +8,11 @@ describe('<HorizontalStroke />', () => {
       <HorizontalStroke />
     )
 
-    test('renders a <span />', () => {
-      expect(horizontalStroke).to.have.tagName('span')
+    it('renders a <span />', () => {
+      expect(horizontalStroke.is('span')).toBe(true)
     })
 
-    test('has a good class', () => {
+    it('has a good class', () => {
       expect(horizontalStroke.hasClass('k-HorizontalStroke')).toBe(true)
     })
   })
@@ -22,7 +22,7 @@ describe('<HorizontalStroke />', () => {
       <HorizontalStroke className="custom__class" />
     )
 
-    test('has a good class', () => {
+    it('has a good class', () => {
       expect(horizontalStroke.hasClass('custom__class')).toBe(true)
     })
   })
@@ -32,7 +32,7 @@ describe('<HorizontalStroke />', () => {
       <HorizontalStroke size="tiny" />
     )
 
-    test('has a good class', () => {
+    it('has a good class', () => {
       expect(horizontalStroke.hasClass('k-HorizontalStroke--tiny')).toBe(true)
     })
   })
@@ -42,7 +42,7 @@ describe('<HorizontalStroke />', () => {
       <HorizontalStroke size="default" />
     )
 
-    test('has a good class', () => {
+    it('has a good class', () => {
       expect(horizontalStroke.hasClass('k-HorizontalStroke--default')).toBe(true)
     })
   })
@@ -52,7 +52,7 @@ describe('<HorizontalStroke />', () => {
       <HorizontalStroke size="big" />
     )
 
-    test('has a good class', () => {
+    it('has a good class', () => {
       expect(horizontalStroke.hasClass('k-HorizontalStroke--big')).toBe(true)
     })
   })
@@ -62,7 +62,7 @@ describe('<HorizontalStroke />', () => {
       <HorizontalStroke size="huge" />
     )
 
-    test('has a good class', () => {
+    it('has a good class', () => {
       expect(horizontalStroke.hasClass('k-HorizontalStroke--huge')).toBe(true)
     })
   })

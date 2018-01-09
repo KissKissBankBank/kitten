@@ -11,18 +11,18 @@ describe ('<ImageWithCaption />', () => {
     const image = figure.find('img')
     const figcaption = figure.find('figcaption')
 
-    test('renders a <figure />', () => {
-      expect(figure).to.have.tagName('figure')
+    it('renders a <figure />', () => {
+      expect(figure.is('figure')).toBe(true)
       expect(figure.hasClass('k-ImageWithCaption')).toBe(true)
     })
 
-    test('renders a <img />', () => {
-      expect(image).to.have.tagName('img')
+    it('renders a <img />', () => {
+      expect(image.is('img')).toBe(true)
       expect(image.hasClass('k-ImageWithCaption__img')).toBe(true)
     })
 
-    test('renders a <figcaption />', () => {
-      expect(figcaption).to.have.tagName('figcaption')
+    it('renders a <figcaption />', () => {
+      expect(figcaption.is('figcaption')).toBe(true)
       expect(figcaption.hasClass('k-ImageWithCaption__caption')).toBe(true)
     })
   })
@@ -34,8 +34,8 @@ describe ('<ImageWithCaption />', () => {
       </ImageWithCaption>
     )
 
-    test('adds a children element', () => {
-      expect(component).to.have.text('Example content')
+    it('adds a children element', () => {
+      expect(component.text()).toBe('Example content')
     })
   })
 
@@ -50,12 +50,12 @@ describe ('<ImageWithCaption />', () => {
     )
     const image = component.find('.k-ImageWithCaption__img')
 
-    test('renders an image with good attributes', () => {
+    it('renders an image with good attributes', () => {
       expect(image).toHaveLength(1)
-      expect(image).to.have.attr('src', 'test')
-      expect(image).to.have.attr('alt')
-      expect(image).to.have.attr('width')
-      expect(image).to.have.attr('height')
+      expect(image.props().src).toBe('test')
+      expect(image.props().alt).toBeTruthy()
+      expect(image.props().width).toBeTruthy()
+      expect(image.props().height).toBeTruthy()
     })
   })
 
@@ -68,8 +68,8 @@ describe ('<ImageWithCaption />', () => {
 
     const caption = component.find('.k-ImageWithCaption__caption')
 
-    test('renders a title attribute', () => {
-      expect(caption).to.have.attr('title', 'custom')
+    it('renders a title attribute', () => {
+      expect(caption.props().title).toBe('custom')
     })
   })
 })
