@@ -1,5 +1,4 @@
 import React from 'react'
-
 import { Checkbox } from 'kitten/components/form/checkbox'
 
 describe('<Checkbox />', () => {

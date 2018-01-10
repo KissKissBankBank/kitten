@@ -1,5 +1,4 @@
 import React from 'react'
-
 import { TagButton } from 'kitten/components/buttons/tag-button'
 
 describe('TagButton', () => {

@@ -1,5 +1,4 @@
 import React from 'react'
-
 import { HeaderTitles } from 'kitten/components/headers/header-titles'
 
 describe('<HeaderTitles />', () => {

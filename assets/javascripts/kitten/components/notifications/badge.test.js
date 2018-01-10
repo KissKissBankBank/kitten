@@ -1,5 +1,4 @@
 import React from 'react'
-
 import { Badge } from 'kitten/components/notifications/badge'
 
 describe('<Badge />', () => {

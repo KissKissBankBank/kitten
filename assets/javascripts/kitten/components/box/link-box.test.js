@@ -1,5 +1,4 @@
 import React from 'react'
-
 import { LinkBox } from 'kitten/components/box/link-box'
 
 describe('<LinkBox />', () => {

@@ -1,5 +1,4 @@
 import React from 'react'
-
 import { Paragraph } from 'kitten/components/typography/paragraph'
 
 describe('Paragraph with default props', () => {

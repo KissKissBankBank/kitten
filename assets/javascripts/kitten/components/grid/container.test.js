@@ -1,5 +1,4 @@
 import React from 'react'
-
 import { Container } from 'kitten/components/grid/container'
 import { SCREEN_SIZE_M } from 'kitten/constants/screen-config'
 

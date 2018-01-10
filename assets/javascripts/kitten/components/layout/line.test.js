@@ -1,5 +1,4 @@
 import React from 'react'
-
 import { Line } from 'kitten/components/layout/line'
 
 describe('<Line />', () => {

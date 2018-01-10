@@ -1,5 +1,4 @@
 import React from 'react'
-
 import { BulletList } from 'kitten/components/lists/bullet-list'
 
 describe('<BulletList />', () => {

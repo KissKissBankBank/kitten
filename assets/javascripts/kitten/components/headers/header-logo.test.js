@@ -1,5 +1,4 @@
 import React from 'react'
-
 import { HeaderLogo } from 'kitten/components/headers/header-logo'
 
 describe('<HeaderLogo />', () => {

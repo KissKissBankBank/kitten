@@ -1,5 +1,4 @@
 import React from 'react'
-
 import { StaticTooltip } from 'kitten/components/tooltips/static-tooltip'
 
 describe('<StaticTooltip />', () => {

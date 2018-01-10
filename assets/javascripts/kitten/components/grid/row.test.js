@@ -1,5 +1,4 @@
 import React from 'react'
-
 import { Row } from 'kitten/components/grid/row'
 
 describe('<Row />', () => {

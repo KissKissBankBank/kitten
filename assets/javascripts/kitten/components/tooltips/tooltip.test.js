@@ -1,5 +1,4 @@
 import React from 'react'
-
 import { Tooltip } from 'kitten/components/tooltips/tooltip'
 import { ButtonQuestionMarkIcon }
   from 'kitten/components/buttons/button-question-mark-icon'

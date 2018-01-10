@@ -1,5 +1,4 @@
 import React from 'react'
-
 import { Text } from 'kitten/components/typography/text'
 
 describe('<Text />', () => {

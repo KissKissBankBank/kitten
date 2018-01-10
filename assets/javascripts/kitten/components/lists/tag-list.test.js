@@ -1,5 +1,4 @@
 import React from 'react'
-
 import { TagList } from 'kitten/components/lists/tag-list'
 import { TypologyTagIcon } from 'kitten/components/icons/typology-tag-icon'
 import { InstrumentTagIcon } from 'kitten/components/icons/instrument-tag-icon'

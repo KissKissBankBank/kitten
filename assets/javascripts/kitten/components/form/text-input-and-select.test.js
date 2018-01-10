@@ -1,5 +1,4 @@
 import React from 'react'
-
 import { TextInputAndSelect } from
   'kitten/components/form/text-input-and-select'
 import { SelectWithState } from 'kitten/components/form/select-with-state'

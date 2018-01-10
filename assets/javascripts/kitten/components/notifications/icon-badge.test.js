@@ -1,5 +1,4 @@
 import React from 'react'
-
 import { IconBadge } from 'kitten/components/notifications/icon-badge'
 
 describe('<IconBadge />', () => {

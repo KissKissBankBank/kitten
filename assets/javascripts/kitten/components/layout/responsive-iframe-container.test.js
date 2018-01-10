@@ -1,5 +1,4 @@
 import React from 'react'
-
 import { ResponsiveIframeContainer }
   from 'kitten/components/layout/responsive-iframe-container'
 

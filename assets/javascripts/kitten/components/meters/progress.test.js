@@ -1,5 +1,4 @@
 import React from 'react'
-
 import { Progress } from 'kitten/components/meters/progress'
 
 describe('<Progress />', () => {

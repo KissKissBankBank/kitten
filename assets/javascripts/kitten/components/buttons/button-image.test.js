@@ -1,5 +1,4 @@
 import React from 'react'
-
 import { ButtonImage } from 'kitten/components/buttons/button-image'
 
 describe('<ButtonImage />', () => {

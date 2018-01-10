@@ -1,5 +1,4 @@
 import React from 'react'
-
 import { TextInput } from 'kitten/components/form/text-input'
 
 describe('Text-input with default props', () => {

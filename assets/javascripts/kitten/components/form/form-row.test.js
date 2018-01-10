@@ -1,5 +1,4 @@
 import React from 'react'
-
 import { FormRow } from 'kitten/components/form/form-row'
 
 describe('<FormRow />', () => {

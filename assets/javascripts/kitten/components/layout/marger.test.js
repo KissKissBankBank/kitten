@@ -1,5 +1,4 @@
 import React from 'react'
-
 import { Marger } from 'kitten/components/layout/marger'
 
 describe('<Marger />', () => {

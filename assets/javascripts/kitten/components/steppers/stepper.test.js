@@ -1,5 +1,4 @@
 import React from 'react'
-
 import { Stepper } from 'kitten/components/steppers/stepper'
 import {
   StepperIconDefault,

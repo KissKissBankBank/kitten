@@ -1,5 +1,4 @@
 import React from 'react'
-
 import { Button } from 'kitten/components/buttons/button'
 
 describe('Button with default props', () => {

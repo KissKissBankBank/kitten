@@ -1,5 +1,4 @@
 import React from 'react'
-
 import { TabBar } from 'kitten/components/navigation/tab-bar'
 
 describe('<TabBar />', () => {
