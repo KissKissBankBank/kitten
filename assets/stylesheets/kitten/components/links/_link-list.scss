@@ -39,7 +39,11 @@
   }
 
   .k-LinkList__item {
-    margin: 0 0 k-px-to-rem(10px);
+    margin-bottom: k-px-to-rem(10px);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   .k-LinkList__link {

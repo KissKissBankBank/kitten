@@ -14,30 +14,37 @@ import {
   CONTAINER_PADDING_MOBILE,
 } from 'kitten/constants/grid-config'
 import COLORS from 'kitten/constants/colors-config'
+import FONTS from 'kitten/constants/fonts-config'
 import { TextInputWithButton } from 'kitten/components/form/text-input-with-button'
 import { Paragraph  as ParagraphBase } from 'kitten/components/typography/paragraph'
 import { Text } from 'kitten/components/typography/text'
 import {
-  FacebookButtonIcon,
-  TwitterButtonIcon,
+  FacebookButtonIcon as FacebookButtonIconBase,
+  TwitterButtonIcon as TwitterButtonIconBase,
   InstagramButtonIcon,
 } from 'kitten/components/buttons/social-button-icon'
 import { LinkList } from 'kitten/components/links/link-list'
 import { SelectWithState } from 'kitten/components/form/select-with-state'
-import { KissKissBankBankLogo } from 'kitten/karl/logos/kisskissbankbanklogo'
+import {
+  KissKissBankBankLogo as KissKissBankBankLogoBase
+} from 'kitten/karl/logos/kisskissbankbanklogo'
 
 const Grid = Radium(GridBase)
 const GridCol = Radium(GridColBase)
 const Row = Radium(RowBase)
 const Paragraph = Radium(ParagraphBase)
+const FacebookButtonIcon = Radium(FacebookButtonIconBase)
+const TwitterButtonIcon = Radium(TwitterButtonIconBase)
+const KissKissBankBankLogo = Radium(KissKissBankBankLogoBase)
+
 
 export class KarlFooterKisskiss extends Component {
   render() {
     return (
       <StyleRoot>
-        <div className="karl-FooterKisskiss">
+        <div>
           { this.renderNetwork() }
-          <div style= {{ background: '#222' }}>
+          <div style={ styles.darkBackground }>
             { this.renderList() }
             { this.renderNotice() }
           </div>
@@ -51,14 +58,14 @@ export class KarlFooterKisskiss extends Component {
       <Row style={ styles.network }>
         <Grid>
           <GridCol
-            col-l="8"
             col-m="12"
+            col-l="8"
             style={ styles.network.subscribe }
           >
             <Grid>
               <GridCol
-                col-l="4"
                 col-m="12"
+                col-l="4"
                 style={ styles.network.subscribe.newsletter.label }
               >
                 <Text
@@ -70,14 +77,15 @@ export class KarlFooterKisskiss extends Component {
               </GridCol>
 
               <GridCol
-                col-l="5"
                 col-m="12"
+                col-l="6"
                 style={ styles.network.subscribe.newsletter.form }
               >
                 <Grid>
                   <GridCol
-                    col-l="12"
-                    col-m="5"
+                    col="10" offset="1"
+                    col-m="6" offset-m="3"
+                    col-l="12" offset-l="0"
                   >
                     <TextInputWithButton
                       value="Envoyer"
@@ -92,8 +100,8 @@ export class KarlFooterKisskiss extends Component {
           </GridCol>
 
           <GridCol
-            col-l="4"
             col-m="12"
+            col-l="4"
             style={ styles.network.social }
           >
             <div style={ styles.network.social.text }>
@@ -129,9 +137,9 @@ export class KarlFooterKisskiss extends Component {
 
     return (
       <GridCol
-        col-l="2" offset-l="2"
+        col="8" offset="2"
         col-m="4" offset-m="4"
-        col-xs="8" offset-xs="2"
+        col-l="2" offset-l="2"
       >
         <SelectWithState
           name=""
@@ -174,7 +182,8 @@ export class KarlFooterKisskiss extends Component {
             <div style={ styles.list.logo }>
               <KissKissBankBankLogo
                 color="#fff"
-                style={ styles.list.logo.img } />
+                style={ styles.list.logo.img }
+              />
             </div>
           </GridCol>
 
@@ -182,43 +191,43 @@ export class KarlFooterKisskiss extends Component {
             col-l="6"
             style={ styles.list.linkList }
           >
-              <Grid>
-                <GridCol
-                  col-m="4"
-                  style={ styles.list.linkList.items }
-                >
-                  <LinkList
-                    margin={ false }
-                    items={ items }
-                    color= 'light'
-                  />
-                </GridCol>
+            <Grid>
+              <GridCol
+                col-m="4"
+                style={ styles.list.linkList.items }
+              >
+                <LinkList
+                  margin={ false }
+                  items={ items }
+                  color= 'light'
+                />
+              </GridCol>
 
-                <GridCol
-                  col-m="4"
-                  style={ styles.list.linkList.items }
-                >
-                  <LinkList
-                    margin={ false }
-                    items={ items2 }
-                    color= 'light'
-                  />
-                </GridCol>
+              <GridCol
+                col-m="4"
+                style={ styles.list.linkList.items }
+              >
+                <LinkList
+                  margin={ false }
+                  items={ items2 }
+                  color= 'light'
+                />
+              </GridCol>
 
-                <GridCol
-                  col-m="4"
-                  style={ styles.list.linkList.items }
-                >
-                  <LinkList
-                    margin={ false }
-                    items={ items3 }
-                    color= 'light'
-                  />
-                </GridCol>
-              </Grid>
-            </GridCol>
+              <GridCol
+                col-m="4"
+                style={ styles.list.linkList.items }
+              >
+                <LinkList
+                  margin={ false }
+                  items={ items3 }
+                  color= 'light'
+                />
+              </GridCol>
+            </Grid>
+          </GridCol>
 
-            { this.renderLanguageSelect() }
+          { this.renderLanguageSelect() }
 
         </Grid>
       </Row>
@@ -232,7 +241,7 @@ export class KarlFooterKisskiss extends Component {
           <GridCol
             col-xs="8" offset-xs="2"
             col-s="10" offset-s="1"
-            col-m="4" offset-m="1"
+            col-m="5" offset-m="0"
             col-l="4" offset-l="0"
           >
             <div style={ styles.notice.block }>
@@ -246,11 +255,11 @@ export class KarlFooterKisskiss extends Component {
 
               <Paragraph
                 modifier="quaternary"
-                style={ styles.notice.block.paragraph }
                 margin={ false }
+                style={ styles.notice.block.paragraph }
               >
                 KissKissBankBank est une plateforme de financement participatif
-                régulée par les autorités françaises. Immatriculation&nbsp: 14007218
+                régulée par les autorités françaises. Immatriculation &nbsp;: 14007218
               </Paragraph>
             </div>
           </GridCol>
@@ -258,7 +267,7 @@ export class KarlFooterKisskiss extends Component {
           <GridCol
             col-xs="8" offset-xs="2"
             col-s="10" offset-s="1"
-            col-m="4" offset-m="2"
+            col-m="5" offset-m="1"
             col-l="4" offset-l="0"
             className="k-u-margin-top-triple@s-down"
           >
@@ -267,22 +276,21 @@ export class KarlFooterKisskiss extends Component {
                 <img
                   src="/assets/partners/mangopay.svg"
                   alt="MANGOPAY"
-                  style={ styles.notice.block.logo.img }
+                  style={ styles.notice.block.logo.img.mangopay }
                 />
               </div>
 
               <Paragraph
                 modifier="quaternary"
-                style={ styles.notice.block.paragraph }
                 margin={ false }
+                style={ styles.notice.block.paragraph }
               >
                 KissKissBankBank &amp; Co est agent de l’institution financière
                 {' '}
                 <a
                   href="https://www.mangopay.com/fr/"
                   target="_blank"
-                  className={ classNames('k-u-color-background1',
-                                         'karl-FooterKisskiss__notice__link') }
+                  style={ styles.notice.block.paragraph.link }
                 >
                   Mangopay SA.
                 </a>
@@ -294,18 +302,13 @@ export class KarlFooterKisskiss extends Component {
 
           <GridCol
             col-l="4"
-            style={ }
-            className={ classNames('k-u-align-center@l-down',
-                                   'k-u-align-right@l-up',
-                                   'k-u-margin-top-triple',
-                                   'karl-FooterKisskiss__notice__copyright') }
+            style={ styles.notice.block.copyright }
           >
             <div>
               <Paragraph
                 modifier="quaternary"
-                className={ classNames('k-u-weight-regular',
-                                       'k-u-color-background1') }
                 margin={ false }
+                style={ styles.notice.block.copyright.text }
               >
                 © 2017 KissKissBankBank &amp; Co
               </Paragraph>
@@ -318,26 +321,32 @@ export class KarlFooterKisskiss extends Component {
 }
 
 const styles = {
+  darkBackground: {
+    backgroundColor: `${COLORS.font1}`,
+  },
+
   network: {
-    background: 'linear-gradient(to right, '
-    + `${COLORS.background3} 0%, `
-    + `${COLORS.background3} 50%, `
-    + `${COLORS.background1} 50%, `
-    + `${COLORS.background1} 100%)`,
+    [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
+      background: 'linear-gradient(to right, '
+      + `${COLORS.background3} 0%, `
+      + `${COLORS.background3} 50%, `
+      + `${COLORS.background1} 50%, `
+      + `${COLORS.background1} 100%)`,
+    },
 
     subscribe: {
-      padding: '35px 0',
+      padding: '30px 0',
       backgroundColor: `${COLORS.background3}`,
 
       newsletter: {
         label: {
           alignSelf: 'center',
-          [`@media (min-width: ${ScreenConfig['M'].min}px)`]: {
+          [`@media (max-width: ${ScreenConfig['M'].max}px)`]: {
             textAlign: 'center',
           },
         },
+
         form: {
-          alignSelf: 'center',
           [`@media (max-width: ${ScreenConfig['M'].max}px)`]: {
             marginTop: '10px',
           },
@@ -347,8 +356,9 @@ const styles = {
 
     social: {
       alignSelf: 'center',
-      [`@media (max-width: ${ScreenConfig['S'].max}px)`]: {
+      [`@media (max-width: ${ScreenConfig['M'].max}px)`]: {
         marginTop: '30px',
+        order: '-1',
       },
       [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
         display: 'flex',
@@ -361,9 +371,6 @@ const styles = {
         [`@media (max-width: ${ScreenConfig['S'].max}px)`]: {
           textAlign: 'center',
         },
-        [`@media (min-width: ${ScreenConfig['M'].min}px)`]: {
-          textAlign: 'center',
-        },
         [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
           textAlign: 'right',
         },
@@ -373,7 +380,9 @@ const styles = {
         textAlign: 'center',
         [`@media (max-width: ${ScreenConfig['M'].max}px)`]: {
           marginTop: '10px',
+          marginBottom: '30px',
         },
+
         buttonIcon: {
           marginRight: '15px',
         },
@@ -382,20 +391,19 @@ const styles = {
   },
 
   list: {
-    padding: '50px 0',
+    paddingTop: '50px',
+    paddingBottom: '80px',
 
     [`@media (min-width: ${ScreenConfig['M'].min}px)`]: {
       paddingTop: '100px',
-      paddingBottom: '80px',
+      paddingBottom: '50px',
     },
 
     logo: {
       marginBottom: '30px',
       [`@media (max-width: ${ScreenConfig['L'].max}px)`]: {
         textAlign: 'center',
-        lineHeight: '4rem',
-        marginBottom: 0,
-        marginRight: '16px',
+        marginBottom: '50px',
       },
 
       img: {
@@ -408,20 +416,22 @@ const styles = {
     },
 
     linkList: {
-      [`@media (max-width: ${ScreenConfig['M'].max}px)`]: {
-        paddingBottom: '70px',
+      paddingBottom: 0,
+
+      [`@media (min-width: ${ScreenConfig['M'].min}px)`]: {
+        paddingBottom: '50px',
       },
 
       items: {
         [`@media (max-width: ${ScreenConfig['S'].max}px)`]: {
           marginBottom: '30px',
+        },
       },
-      }
     },
   },
 
   notice: {
-    paddingBottom: '80px',
+    paddingBottom: '100px',
 
     block: {
       [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
@@ -430,12 +440,12 @@ const styles = {
       },
 
       logo: {
+        textAlign: 'center',
         marginBottom:'10px',
-        [`@media (max-width: ${ScreenConfig['L'].max}px)`]: {
-          textAlign: 'center',
-          lineHeight: '4rem',
-          marginBottom: 0,
-          marginRight: '16px',
+        lineHeight: 0,
+
+        [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
+          marginRight: '14px',
         },
 
         img: {
@@ -443,19 +453,52 @@ const styles = {
           [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
             display: 'block',
             verticalAlign: 'top',
+            marginBottom: '10px',
+          },
+
+          mangopay: {
+            width: '100px',
+            marginBottom: 0,
+            [`@media (max-width: ${ScreenConfig['M'].max}px)`]: {
+              height: '50px',
+            },
           },
         },
       },
+
       paragraph: {
         color: `${COLORS.background1}`,
-        [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
+
+        [`@media (max-width: ${ScreenConfig['M'].max}px)`]: {
           textAlign: 'center',
         },
 
-        [`@media (max-width: ${ScreenConfig['L'].max}px)`]: {
-          textAlign: 'left',
+        link: {
+          color: `${COLORS.background1}`,
+          ':active': {
+            color: `${COLORS.primary3}`,
+          },
+          ':hover': {
+            color: `${COLORS.primary1}`,
+          },
         },
-      }
+      },
+      copyright: {
+        marginTop: '50px',
+        [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
+          alignSelf: 'flex-end',
+          marginTop: 0,
+          textAlign: 'right',
+        },
+        [`@media (max-width: ${ScreenConfig['M'].max}px)`]: {
+          textAlign: 'center',
+        },
+
+        text: {
+          color: `${COLORS.background1}`,
+          font: `${FONTS.regular}`,
+        },
+      },
     },
   },
 }
