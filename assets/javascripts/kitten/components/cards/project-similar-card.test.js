@@ -270,8 +270,6 @@ describe('<SimilarProjectCard />', () => {
           expect(content.render().is('div')).toBe(true)
         })
 
-        console.log(content.props());
-
         it('passes the right props to the <div> tag', () => {
           expect(content.props()).not.toMatchObject({ href: 'target' })
         })
