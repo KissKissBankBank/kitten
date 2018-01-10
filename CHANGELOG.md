@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add fonts JavaScript configuration files.
 - Feature: Add `k-u-color-background1` utility.
 - Fix: Add `tiny` size on `k-ButtonIcon--signup` and `k-ButtonIcon--phone`.
 - Feature: Add 16:9 format to the `ArticleCard` image.
