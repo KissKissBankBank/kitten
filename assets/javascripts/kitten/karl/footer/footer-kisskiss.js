@@ -13,7 +13,6 @@ import {
   CONTAINER_PADDING_MOBILE,
 } from 'kitten/constants/grid-config'
 import COLORS from 'kitten/constants/colors-config'
-import FONTS from 'kitten/constants/fonts-config'
 import { TextInputWithButton } from 'kitten/components/form/text-input-with-button'
 import { Paragraph  as ParagraphBase } from 'kitten/components/typography/paragraph'
 import { Text } from 'kitten/components/typography/text'
@@ -35,7 +34,6 @@ const Paragraph = Radium(ParagraphBase)
 const FacebookButtonIcon = Radium(FacebookButtonIconBase)
 const TwitterButtonIcon = Radium(TwitterButtonIconBase)
 const KissKissBankBankLogo = Radium(KissKissBankBankLogoBase)
-
 
 export class KarlFooterKisskiss extends Component {
   render() {
@@ -84,7 +82,7 @@ export class KarlFooterKisskiss extends Component {
                   <GridCol
                     col="10" offset="1"
                     col-m="6" offset-m="3"
-                    col-l="12" offset-l="0"
+                    col-l="12"
                   >
                     <TextInputWithButton
                       value="Envoyer"
