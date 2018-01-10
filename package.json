@@ -84,7 +84,7 @@
     "build:dev": "(cd spec/dummy/client && yarn build:dev)",
     "build": "(cd spec/dummy/client && yarn build --silent)",
     "hot-assets": "(cd spec/dummy/client && yarn hot-assets)",
-    "test": "NODE_PATH=assets/javascripts mocha assets/javascripts/kitten/config/test-setup.js"
+    "test": "jest"
   },
   "jest": {
     "modulePaths": [
