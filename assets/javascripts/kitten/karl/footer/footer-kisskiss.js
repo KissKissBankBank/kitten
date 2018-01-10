@@ -331,7 +331,8 @@ const styles = {
     },
 
     subscribe: {
-      padding: '30px 0',
+      paddingTop: '30px',
+      paddingBottom: '30px',
       backgroundColor: `${COLORS.background3}`,
 
       newsletter: {
