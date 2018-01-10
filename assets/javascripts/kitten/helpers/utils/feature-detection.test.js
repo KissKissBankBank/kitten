@@ -7,7 +7,7 @@ describe('cssSupports', () => {
 
   describe('when method is not supported', () => {
     describe('when `window` is not defined', () => {
-      beforeAll(() => { global.window = undefined })
+      beforeAll(() => { global.window = void(0) })
       afterAll(() => { global.window = initialWindow })
 
       it('returns false', () => {
