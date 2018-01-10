@@ -35,24 +35,13 @@ describe('cssSupports', () => {
   })
 
   describe('when methods is supported', () => {
-    const sandbox = sinon.sandbox.create()
-    let supportSpy
-
-    beforeAll(() => {
-      supportSpy = sandbox.spy()
-      global.window = {
-        CSS: {
-          supports: supportSpy
-        },
-      }
-
-      cssSupports(supportCondition)
-    })
-
     afterAll(() => { global.window = initialWindow })
 
     it('calls `window.CSS.supports` with the correct parameter', () => {
-      expect(supportSpy.calledWith(supportCondition)).toBe(true)
+      global.window.CSS = { supports: jest.fn() }
+      cssSupports(supportCondition)
+
+      expect(global.window.CSS.supports).toHaveBeenCalled()
     })
   })
 })
