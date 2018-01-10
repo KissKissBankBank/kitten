@@ -104,7 +104,7 @@ describe('<SimpleCard />', () => {
     })
 
     it('has a <Text /> with good content', () => {
-      expect(component.render().find(Text).text()).toBe('Simple card subtitle')
+      expect(component.render().text()).toBe('Simple card subtitle')
       expect(component.find(Text).props()).toMatchObject({
         weight: 'regular',
         size: 'micro',
