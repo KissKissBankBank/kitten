@@ -38,18 +38,18 @@ describe('<Label />', () => {
     const wrapper = mount(
       <div>
         <Label tag="span" focusId="focus" children="Label" />
-        <input type="text" id="focus" />
+        <input type="text" id="focus" onFocus={ jest.fn() } />
       </div>,
       { attachTo: document.body }
     )
 
     it('simulates click event on label', () => {
-      const input = wrapper.find('#focus').at(0).node
+      const input = wrapper.find('#focus')
       const label = wrapper.find('.k-Label')
 
       label.simulate('click')
 
-      expect(input.type()).toBe(document.activeElement)
+      expect(input.props().onFocus).toBeCalled()
     })
   })
 
