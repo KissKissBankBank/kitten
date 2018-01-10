@@ -303,13 +303,13 @@ export class KarlFooterKisskiss extends Component {
             style={ styles.notice.block.copyright }
           >
             <div>
-              <Paragraph
-                modifier="quaternary"
-                margin={ false }
-                style={ styles.notice.block.copyright.text }
+              <Text
+                size="tiny"
+                weight="regular"
+                color="background1"
               >
                 © 2017 KissKissBankBank &amp; Co
-              </Paragraph>
+              </Text>
             </div>
           </GridCol>
         </Grid>
@@ -498,11 +498,6 @@ const styles = {
         },
         [`@media (max-width: ${ScreenConfig['M'].max}px)`]: {
           textAlign: 'center',
-        },
-
-        text: {
-          color: `${COLORS.background1}`,
-          font: `${FONTS.regular}`,
         },
       },
     },
