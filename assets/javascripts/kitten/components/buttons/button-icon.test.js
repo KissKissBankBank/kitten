@@ -48,7 +48,7 @@ describe('<ButtonIcon />', () => {
     const component = shallow(<ButtonIcon rounded />)
 
     it('has rounded', () => {
-      expect(component).to.have.className('k-ButtonIcon--rounded')
+      expect(component.hasClass('k-ButtonIcon--rounded')).toBe(true)
     })
   })
 

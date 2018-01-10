@@ -141,11 +141,11 @@ describe('<SimpleCard />', () => {
     })
 
     it('has a title with h2 tag', () => {
-      expect(component.find(Title)).to.have.prop('tag', 'h2')
+      expect(component.find(Title).props().tag).toBe('h2')
     })
 
     it('has a custom class on Title', () => {
-      expect(component.find(Title)).to.have.className('custom-class')
+      expect(component.find(Title).hasClass('custom-class')).toBe(true)
     })
   })
 })
