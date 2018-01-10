@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import classNames from 'classnames'
 import Radium, { StyleRoot } from 'radium'
 import { Row as RowBase } from 'kitten/components/grid/row'
 import { Container } from 'kitten/components/grid/container'
@@ -269,7 +268,6 @@ export class KarlFooterKisskiss extends Component {
             col-s="10" offset-s="1"
             col-m="5" offset-m="1"
             col-l="4" offset-l="0"
-            className="k-u-margin-top-triple@s-down"
           >
             <div style={ styles.notice.block }>
               <div style={ styles.notice.block.logo }>
@@ -434,6 +432,10 @@ const styles = {
     paddingBottom: '100px',
 
     block: {
+      marginTop: '30px',
+      [`@media (max-width: ${ScreenConfig['S'].max}px)`]: {
+        marginTop: 0,
+      },
       [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
         textAlign: 'left',
         display: 'flex',
@@ -459,7 +461,11 @@ const styles = {
           mangopay: {
             width: '100px',
             marginBottom: 0,
-            [`@media (max-width: ${ScreenConfig['M'].max}px)`]: {
+            [`@media (max-width: ${ScreenConfig['S'].max}px)`]: {
+              marginTop: '30px',
+              width: '130px',
+            },
+            [`@media (min-width: ${ScreenConfig['M'].min}px)`]: {
               height: '50px',
             },
           },
