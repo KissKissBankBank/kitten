@@ -50,7 +50,7 @@
     "core-js": "^2.4.1",
     "es5-shim": "^4.5.7",
     "event-emitter": "^0.3.4",
-    "html-to-react": "^1.3.1",
+    "html-to-react": "^1.3.2",
     "isomorphic-fetch": "^2.2.1",
     "jest-cli": "^22.0.4",
     "json-loader": "^0.5.4",
@@ -87,14 +87,16 @@
     "test": "NODE_PATH=assets/javascripts mocha assets/javascripts/kitten/config/test-setup.js"
   },
   "jest": {
-    "modulePaths": ["assets/javascripts"],
+    "modulePaths": [
+      "assets/javascripts"
+    ],
     "setupFiles": [
       "./assets/javascripts/kitten/config/jest-setup.js"
     ],
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
     ],
-      "moduleNameMapper": {
+    "moduleNameMapper": {
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
       "\\.(css|less)$": "./assets/javascripts/kitten/__mocks__/styleMock.js"
     }
