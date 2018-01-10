@@ -21,9 +21,9 @@ describe('<SimpleUploader />', () => {
     })
 
     it('has a default button label', () => {
-      const button = component.find('.k-SimpleUploader__button')
+      const button = component.render().find('.k-SimpleUploader__button')
 
-      expect(button.exists()).toBeTruthy()
+      expect(button).toHaveLength(1)
       expect(button.text()).toBe('Choose a file')
     })
 
@@ -36,7 +36,7 @@ describe('<SimpleUploader />', () => {
     const component = mount(<SimpleUploader buttonLabel="Custom label" />)
 
     it('has a custom label', () => {
-      expect(component.find('.k-SimpleUploader__button').text())
+      expect(component.render().find('.k-SimpleUploader__button').text())
         .toBe('Custom label')
     })
   })
@@ -83,7 +83,7 @@ describe('<SimpleUploader />', () => {
       })
 
       it('adds a disabled attribute to the upload button', () => {
-        expect(uploadButton.props().disabled).toBeTruthy()
+        expect(uploadButton.find('[disabled]')).toBeTruthy()
       })
     })
 
@@ -92,7 +92,7 @@ describe('<SimpleUploader />', () => {
       const uploadButton = component.find('.k-SimpleUploader__button')
 
       it('adds a disabled attribute to the upload button', () => {
-        expect(uploadButton.props().disabled).toBeTruthy()
+        expect(uploadButton.find('[disabled]')).toBeTruthy()
       })
     })
   })
