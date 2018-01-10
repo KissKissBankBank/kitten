@@ -196,7 +196,7 @@ export class KarlFooterKisskiss extends Component {
                 <LinkList
                   margin={ false }
                   items={ items }
-                  color= 'light'
+                  color="light"
                 />
               </GridCol>
 
@@ -207,7 +207,7 @@ export class KarlFooterKisskiss extends Component {
                 <LinkList
                   margin={ false }
                   items={ items2 }
-                  color= 'light'
+                  color="light"
                 />
               </GridCol>
 
@@ -218,7 +218,7 @@ export class KarlFooterKisskiss extends Component {
                 <LinkList
                   margin={ false }
                   items={ items3 }
-                  color= 'light'
+                  color="light"
                 />
               </GridCol>
             </Grid>
@@ -352,6 +352,7 @@ const styles = {
 
     social: {
       alignSelf: 'center',
+
       [`@media (max-width: ${ScreenConfig['M'].max}px)`]: {
         marginTop: '30px',
         order: '-1',
@@ -364,6 +365,7 @@ const styles = {
       text: {
         alignSelf: 'center',
         marginRight: '15px',
+
         [`@media (max-width: ${ScreenConfig['S'].max}px)`]: {
           textAlign: 'center',
         },
@@ -397,6 +399,7 @@ const styles = {
 
     logo: {
       marginBottom: '30px',
+
       [`@media (max-width: ${ScreenConfig['L'].max}px)`]: {
         textAlign: 'center',
         marginBottom: '50px',
@@ -404,6 +407,7 @@ const styles = {
 
       img: {
         verticalAlign: 'middle',
+
         [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
           display: 'block',
           verticalAlign: 'top',
@@ -450,6 +454,7 @@ const styles = {
 
         img: {
           verticalAlign: 'middle',
+
           [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
             display: 'block',
             verticalAlign: 'top',
@@ -459,6 +464,7 @@ const styles = {
           mangopay: {
             width: '100px',
             marginBottom: 0,
+
             [`@media (max-width: ${ScreenConfig['S'].max}px)`]: {
               marginTop: '30px',
               width: '130px',
@@ -489,6 +495,7 @@ const styles = {
       },
       copyright: {
         marginTop: '50px',
+
         [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
           alignSelf: 'flex-end',
           marginTop: 0,

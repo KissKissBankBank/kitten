@@ -71,7 +71,7 @@ Text.propTypes = {
     'primary1',
     'background1',
     'error',
-    'valid'
+    'valid',
   ]),
   decoration: PropTypes.oneOf(['underline']),
   lineHeight: PropTypes.oneOf(['normal']),
