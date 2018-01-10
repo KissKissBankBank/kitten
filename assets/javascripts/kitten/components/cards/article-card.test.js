@@ -8,6 +8,7 @@ import { ButtonImage } from 'kitten/components/buttons/button-image'
 describe('<ArticleCard />', () => {
   let component
   let buttonImage
+  let cardImage
   let title
 
   describe('by default', () => {
@@ -76,7 +77,6 @@ describe('<ArticleCard />', () => {
       cardImage = component.find('.k-Card__image')
     })
 
-
     it('has an image with `#` src', () => {
       expect(cardImage.props().src).toBe('#foobar')
     })
@@ -133,11 +133,11 @@ describe('<ArticleCard />', () => {
     })
 
     it('has a title with h2 tag', () => {
-      expect(title).to.have.prop('tag', 'h2')
+      expect(title.props().tag).toBe('h2')
     })
 
     it('has a custom class on Title', () => {
-      expect(title).to.have.className('custom-class')
+      expect(title.hasClass('custom-class')).toBe(true)
     })
   })
 })
