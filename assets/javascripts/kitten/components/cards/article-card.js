@@ -24,7 +24,9 @@ class ArticleCardComponent extends Component {
     const Tag = this.props.href ? 'a' : 'div'
 
     return (
-      <Tag { ...others }>
+      <Tag
+        { ...others }
+      >
         { this.renderImage() }
         { this.renderHeader() }
         { this.renderTitle() }
@@ -45,7 +47,10 @@ class ArticleCardComponent extends Component {
     )
 
     return (
-      <Marger className="k-Card__imageContainer">
+      <Marger
+        className="k-Card__imageContainer"
+        style={ styles.imageContainer }
+      >
         <img
           { ...imageProps }
           alt={ alt || '' }
@@ -59,17 +64,21 @@ class ArticleCardComponent extends Component {
   renderHeader() {
     return (
       <div style={ styles.header.grid }>
-        <Marger top="1" bottom="1">
+        <Marger
+          top="1"
+          bottom="1"
+        >
           <ButtonImage
             tag="span"
             img={ this.props.avatarProps }
-            withBorder
             withoutPointerEvents
             style={ styles.header.avatar }
           />
         </Marger>
 
-        <div style={ styles.header.owner }>
+        <div
+          style={ styles.header.owner }
+        >
           <Text
             tag="div"
             size="micro"
@@ -91,12 +100,22 @@ class ArticleCardComponent extends Component {
   }
 
   renderTitle() {
+    const className = classNames(
+      'k-Card__title',
+      this.props.titleProps.className,
+    )
+
     return (
-      <Marger bottom="1" style={ styles.title }>
+      <Marger
+        bottom="1"
+        style={ styles.title }
+      >
         <Title
+          tag="p"
+          { ...this.props.titleProps }
           modifier="senary"
           margin={ false }
-          className="k-Card__title"
+          className={ className }
         >
           { parseHtml(this.props.articleTitle) }
         </Title>
@@ -106,14 +125,24 @@ class ArticleCardComponent extends Component {
 
   renderSubtitle() {
     return (
-      <Marger top="1" bottom="3" style={ styles.subtitle }>
-        <HorizontalStroke size="tiny" style={ styles.stroke } />
-        <Text
-          size="micro"
-          weight="regular"
-        >
-          { parseHtml(this.props.articleSubTitle) }
-        </Text>
+      <Marger
+        top="1"
+        bottom="3"
+        style={ styles.subtitle }
+      >
+        <HorizontalStroke
+          size="tiny"
+          style={ styles.stroke }
+        />
+
+        { this.props.articleSubTitle &&
+          <Text
+            size="micro"
+            weight="regular"
+          >
+            { parseHtml(this.props.articleSubTitle) }
+          </Text>
+        }
       </Marger>
     )
   }
@@ -122,7 +151,14 @@ class ArticleCardComponent extends Component {
 const COMPONENT_GUTTER = 10
 
 const styles = {
+  imageContainer: {
+    overflow: 'hidden',
+    position: 'relative',
+    paddingTop: `${9 / 16 * 100}%`,
+  },
   image: {
+    position: 'absolute',
+    top: 0,
     width: '100%',
     display: 'block',
   },
@@ -155,7 +191,7 @@ const styles = {
     padding: `0 ${COMPONENT_GUTTER}px`,
   },
   stroke: {
-    marginRight: `${COMPONENT_GUTTER}px`,
+    margin: `5px ${COMPONENT_GUTTER}px 5px 0`,
   },
 }
 
@@ -169,10 +205,11 @@ ArticleCardComponent.defaultProps = {
     src: 'https://placehold.it/100x100/4a84ff/4a84ff',
     alt: '',
   },
+  titleProps: {},
   ownerTitle: 'Owner title',
   ownerDescription: 'Owner description',
   articleTitle: 'Title',
-  articleSubTitle: 'Subtitle',
+  articleSubTitle: '',
 }
 
 export const ArticleCard = card(ArticleCardComponent, {

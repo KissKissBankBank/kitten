@@ -21,14 +21,16 @@ describe('TagButton', () => {
 
     describe('basic props', () => {
       const component = shallow(
-        <TagButton className="k-TagButton--custom"
-                   selected={ false } />)
+        <TagButton
+          className="k-TagButton--custom"
+          selected={ false }
+        />
+      )
 
       it('renders a <Button class="k-TagButton" />', () => {
         expect(component.type()).toBe('button')
         expect(component.text()).toBe('Tag')
         expect(component.hasClass('k-TagButton--custom')).toBe(true)
-        expect(component.hasClass('k-TagButton--hydrogen')).toBe(true)
       })
 
       describe('with tiny prop', () => {

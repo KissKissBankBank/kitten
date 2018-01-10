@@ -44,7 +44,6 @@ class ProjectCardComponent extends React.Component {
           <ButtonImage
             tag="span"
             img={ { src: ownerAvatarSrc } }
-            withBorder
             withoutPointerEvents
           />
           <Paragraph
@@ -71,7 +70,7 @@ class ProjectCardComponent extends React.Component {
           className="k-ProjectCard__grid--flex"
         >
           <Title
-            className="k-ProjectCard__grid--flex__item-fluid"
+            className="k-ProjectCard__grid--flex__item-fluid k-Card__title"
             margin={ false }
             modifier="senary"
             tag="p"
@@ -124,9 +123,15 @@ class ProjectCardComponent extends React.Component {
 
     return (
       <div className="k-ProjectCard__grid">
-        <Marger top="1.5" bottom="1.3">
+        <Marger
+          top="1.5"
+          bottom="1.3"
+          className="k-Card__imageContainer"
+          style={ styles.imageContainer }
+        >
           <img
-            className="k-ProjectCard__img"
+            className="k-ProjectCard__img k-Card__image"
+            style={ styles.image }
             src={ this.props.imageSrc }
             alt=""
           />
@@ -344,6 +349,20 @@ class ProjectCardComponent extends React.Component {
   }
 }
 
+const styles = {
+  imageContainer: {
+    overflow: 'hidden',
+    position: 'relative',
+    paddingTop: `${9 / 16 * 100}%`,
+  },
+  image: {
+    position: 'absolute',
+    top: 0,
+    display: 'block',
+    width: '100%',
+  },
+}
+
 ProjectCardComponent.defaultProps = {
   id: null,
   linkHref: null,
@@ -385,7 +404,4 @@ ProjectCardComponent.propTypes = {
 
 export const ProjectCard = card(ProjectCardComponent, {
   light: true,
-  withBorder: true,
-  withShadow: true,
-  translateOnHover: true,
 })

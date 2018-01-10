@@ -44,6 +44,14 @@ describe('<ButtonIcon />', () => {
     })
   })
 
+  describe('rounded prop', () => {
+    const component = shallow(<ButtonIcon rounded />)
+
+    it('has rounded', () => {
+      expect(component).to.have.className('k-ButtonIcon--rounded')
+    })
+  })
+
   describe('with tag="a" and no href', () => {
     const component = shallow(<ButtonIcon tag="a" />)
 

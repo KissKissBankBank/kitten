@@ -2,7 +2,6 @@ import React from 'react'
 import { mount } from 'enzyme'
 import { Hero } from 'kitten/components/heroes/hero'
 import { Container } from 'kitten/components/grid/container'
-import { Grid, GridCol } from 'kitten/components/grid/grid'
 
 describe('<Hero />', () => {
   let component
@@ -17,15 +16,15 @@ describe('<Hero />', () => {
     })
 
     it('has a <Grid /> component', () => {
-      expect(component.find(Grid).exists()).toBe(true)
+      expect(component.find('.k-Grid').exists()).toBe(true)
     })
 
     it('has two <GridCol /> components', () => {
-      expect(component.find(GridCol)).toHaveLength(2)
+      expect(component.find('.k-Grid__col--12')).toHaveLength(2)
     })
 
     it('renders children value in the first GridCol', () => {
-      expect(component.find(GridCol).first().text()).toBe('FooBar')
+      expect(component.find('.k-Grid__col--12').first().text()).toBe('FooBar')
     })
   })
 })

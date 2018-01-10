@@ -4,6 +4,39 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [18.1.0] - 2018-01-09
+
+Features:
+- Add 16:9 format to the `ProjectCard` image.
+- Add 16:9 format to the `ArticleCard` image.
+
+Fixes:
+- Add `tiny` size on `k-ButtonIcon--signup` and `k-ButtonIcon--phone`.
+- Fix `overflow` style to` ProjectSimilarCard` component.
+
+## [18.0.0] - 2018-01-08
+
+Breaking changes:
+- Remove `modifier` prop on `TagButton`.
+- Replace `size="micro"` modifier `size="nano"` in `ButtonIcon` component.
+- Replace `.k-ButtonIcon--checked--micro` by `.k-ButtonIcon--checked--nano`.
+- Replace `.k-ButtonIcon--empty--micro` by `.k-ButtonIcon--empty--nano`.
+
+Features:
+- Add `titleProps` prop to `ArticleCard` and `SimpleCard` components.
+- Remove subtitle part if `articleSubTitle` prop is empty.
+  By default, the value is empty.
+- Text centered on `k-TextInput--twoDigits` class.
+- Update `TagButton` component with new design styleguide V2.
+- Update `ProjectCard` with the new design.
+- Update all `TextInput` to manage input radius.
+- Add `rounded` prop in `ButtonIcon` component.
+- Update `QuestionMarkIcon` component with styleguide V2.
+- Update `SearchInput` component with new design styleguide V2.
+
+Fix:
+- Cleaning the use of Radium.
+
 ## [17.1.0] - 2018-01-03
 
 Feature:

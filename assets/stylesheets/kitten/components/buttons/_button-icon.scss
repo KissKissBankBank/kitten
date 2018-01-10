@@ -17,7 +17,8 @@
 /// - `.k-ButtonIcon--instagram`
 ///
 /// Available size modifiers:
-/// - `k-ButtonIcon--micro`
+/// - `k-ButtonIcon--nano`
+/// - `k-ButtonIcon--micro
 /// - `k-ButtonIcon--tiny`
 /// - `k-ButtonIcon--big`
 ///
@@ -40,12 +41,14 @@
   $border-size: 2px;
 
   // Size settings with border.
-  $button-size-micro-with-border: 20px;
+  $button-size-nano-with-border: 20px;
+  $button-size-micro-with-border: 30px;
   $button-size-tiny-with-border: 40px;
   $button-size-with-border: 50px;
   $button-size-big-with-border: 70px;
 
   // Size settings without border.
+  $button-size-nano: $button-size-nano-with-border - ($border-size * 2);
   $button-size-micro: $button-size-micro-with-border - ($border-size * 2);
   $button-size-tiny: $button-size-tiny-with-border - ($border-size * 2);
   $button-size: $button-size-with-border - ($border-size * 2);
@@ -57,8 +60,8 @@
 
   // Sizes
   $cross-size: k-px-to-rem(8px);
-  $micro-size: k-px-to-rem(9px);
-  $checked-micro-size: k-px-to-rem(10px);
+  $nano-size: k-px-to-rem(9px);
+  $checked-nano-size: k-px-to-rem(10px);
   $heart-size: k-px-to-rem(14px);
   $signup-size: k-px-to-rem(18px);
 
@@ -161,17 +164,32 @@
   }
 
   // Sizes modifiers.
-  .k-ButtonIcon--micro {
-    @include k-buttonRounded($button-size-micro-with-border);
+  .k-ButtonIcon--nano {
     @include k-buttonPadding(
-      $button-size-micro,
-      $micro-size,
-      $micro-size
+      $button-size-nano,
+      $nano-size,
+      $nano-size
     );
 
     .k-ButtonIcon__svg {
-      width: $micro-size;
-      height: $micro-size;
+      width: $nano-size;
+      height: $nano-size;
+    }
+
+    &.k-ButtonIcon--rounded {
+      @include k-buttonRounded($button-size-nano-with-border);
+    }
+  }
+
+  .k-ButtonIcon--micro {
+    @include k-buttonPadding(
+      $button-size-micro,
+      $icon-width,
+      $icon-height
+    );
+
+    &.k-ButtonIcon--rounded {
+      @include k-buttonRounded($button-size-micro-with-border);
     }
   }
 
@@ -181,6 +199,10 @@
       $icon-width,
       $icon-height
     );
+
+    &.k-ButtonIcon--rounded {
+      @include k-buttonRounded($button-size-with-border);
+    }
   }
 
   .k-ButtonIcon--big {
@@ -189,6 +211,10 @@
       $icon-width,
       $icon-height
     );
+
+    &.k-ButtonIcon--rounded {
+      @include k-buttonRounded($button-size-big-with-border);
+    }
   }
 
   // Icon modifiers.
@@ -205,10 +231,11 @@
     }
   }
 
+  // Used `ButtonIcon` signup and phone only `tiny` version.
   .k-ButtonIcon--signup,
   .k-ButtonIcon--phone {
     @include k-buttonPadding(
-      $button-size,
+      $button-size-tiny,
       $signup-size,
       $signup-size
     );
@@ -240,24 +267,22 @@
       $verticalArrow-height
     );
 
-
     .k-ButtonIcon__svg {
       width: $verticalArrow-width;
       height: $verticalArrow-height;
     }
   }
 
-  .k-ButtonIcon--checked--micro {
-    @include k-buttonRounded($button-size-micro-with-border);
+  .k-ButtonIcon--checked--nano {
     @include k-buttonPadding(
-      $button-size-micro,
-      $checked-micro-size,
-      $checked-micro-size
+      $button-size-nano,
+      $checked-nano-size,
+      $checked-nano-size
     );
 
     .k-ButtonIcon__svg {
-      width: $checked-micro-size;
-      height: $checked-micro-size;
+      width: $checked-nano-size;
+      height: $checked-nano-size;
     }
   }
 
@@ -274,10 +299,9 @@
     }
   }
 
-  .k-ButtonIcon--empty--micro {
-    @include k-buttonRounded($button-size-micro-with-border);
+  .k-ButtonIcon--empty--nano {
     @include k-buttonPadding(
-      $button-size-micro,
+      $button-size-nano,
       0,
       0
     );
