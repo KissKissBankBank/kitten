@@ -112,7 +112,7 @@ describe('<CallToActionPopover />', () => {
     })
 
     it('passes the right props to the second <Button />', () => {
-      const buttonComponent = buttonComponents.first()
+      const buttonComponent = buttonComponents.last()
       const expectedProps = {
         children: button2Label,
       }
@@ -134,7 +134,7 @@ describe('<CallToActionPopover />', () => {
       />)
 
       it('passes a onClick prop to the <Button />', () => {
-        const buttonComponent = buttonComponents.first()
+        const buttonComponent = component.find('button').first()
         const expectedProps = {
           onClick: onCloseClick,
         }
