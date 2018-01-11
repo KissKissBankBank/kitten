@@ -364,14 +364,12 @@ const styles = {
       },
 
       text: {
-        alignSelf: 'center',
-        marginRight: '15px',
+        textAlign: 'center',
 
-        [`@media (max-width: ${ScreenConfig['S'].max}px)`]: {
-          textAlign: 'center',
-        },
         [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
           textAlign: 'right',
+          marginRight: '15px',
+          alignSelf: 'center',
         },
       },
 
@@ -391,9 +389,13 @@ const styles = {
 
   list: {
     paddingTop: '50px',
-    paddingBottom: '80px',
+    // paddingBottom: '50px',
 
-    [`@media (min-width: ${ScreenConfig['M'].min}px)`]: {
+    [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
+      paddingTop: '100px',
+      paddingBottom: '80px',
+    },
+    [`@media (min-width: ${ScreenConfig['S'].min}px)`]: {
       paddingTop: '100px',
       paddingBottom: '50px',
     },
@@ -435,9 +437,9 @@ const styles = {
     paddingBottom: '100px',
 
     block: {
-      marginTop: '30px',
+      marginTop: 0,
       [`@media (max-width: ${ScreenConfig['S'].max}px)`]: {
-        marginTop: 0,
+        marginTop: '30px',
       },
       [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
         textAlign: 'left',
