@@ -7,11 +7,6 @@ import {
   GridCol as GridColBase,
 } from 'kitten/components/grid/grid'
 import { ScreenConfig } from 'kitten/constants/screen-config'
-import {
-  NUM_COLUMNS,
-  CONTAINER_PADDING,
-  CONTAINER_PADDING_MOBILE,
-} from 'kitten/constants/grid-config'
 import COLORS from 'kitten/constants/colors-config'
 import { TextInputWithButton } from 'kitten/components/form/text-input-with-button'
 import { Paragraph  as ParagraphBase } from 'kitten/components/typography/paragraph'
