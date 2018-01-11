@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Features: Add [Jest](https://facebook.github.io/jest/) as our new
+  testing framework instead of [Mocha](https://mochajs.org/).
+
 ## [18.1.0] - 2018-01-09
 
 Features:
