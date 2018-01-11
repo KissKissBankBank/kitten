@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Change `font-size: 1rem` on big `Button`.
+
 ## [18.1.0] - 2018-01-09
 
 Features:
@@ -12,7 +14,7 @@ Features:
 
 Fixes:
 - Add `tiny` size on `k-ButtonIcon--signup` and `k-ButtonIcon--phone`.
-- Fix `overflow` style to` ProjectSimilarCard` component.
+- Fix `overflow` style to `ProjectSimilarCard` component.
 
 ## [18.0.0] - 2018-01-08
 
