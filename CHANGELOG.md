@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Change `font-size: 1rem` on big `Button`.
+- Feature: Change `font-size: 1rem` on `k-Button--big`.
 
 ## [18.1.0] - 2018-01-09
 
