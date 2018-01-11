@@ -1,5 +1,4 @@
 import React from 'react'
-import { shallow, mount } from 'enzyme'
 import { SupTitle } from 'kitten/components/typography/sup-title'
 
 describe('<SupTitle />', () => {

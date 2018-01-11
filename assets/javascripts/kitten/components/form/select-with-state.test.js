@@ -1,6 +1,5 @@
 import React from 'react'
 import sinon from 'sinon'
-import { mount } from 'enzyme'
 import { SelectWithState } from 'kitten/components/form/select-with-state'
 import Select from 'react-select'
 

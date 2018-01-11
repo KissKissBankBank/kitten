@@ -1,5 +1,4 @@
 import React from 'react'
-import { shallow, mount } from 'enzyme'
 import { TextInputWithUnit } from 'kitten/components/form/text-input-with-unit'
 
 describe('<TextInputWithUnit />', () => {

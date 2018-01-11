@@ -1,5 +1,4 @@
 import React from 'react'
-import { shallow, mount } from 'enzyme'
 import { LocationInput } from 'kitten/components/form/location-input'
 
 describe('<LocationInput />', () => {

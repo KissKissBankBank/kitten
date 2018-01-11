@@ -1,5 +1,4 @@
 import React from 'react'
-import { mount } from 'enzyme'
 import { Uploader } from 'kitten/components/uploaders/uploader'
 import Dropzone from 'react-dropzone'
 

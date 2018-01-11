@@ -1,6 +1,5 @@
 import React from 'react'
 import sinon from 'sinon'
-import { shallow, mount } from 'enzyme'
 import { TextInput } from 'kitten/components/form/text-input'
 import { TextInputWithLimit }
   from 'kitten/components/form/text-input-with-limit'

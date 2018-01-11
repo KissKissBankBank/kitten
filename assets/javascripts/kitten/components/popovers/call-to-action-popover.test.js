@@ -1,5 +1,4 @@
 import React from 'react'
-import { shallow, mount } from 'enzyme'
 import { Popover } from 'kitten/components/popovers/popover'
 import { CallToActionPopover }
   from 'kitten/components/popovers/call-to-action-popover'

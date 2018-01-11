@@ -1,5 +1,4 @@
 import React from 'react'
-import { mount, shallow } from 'enzyme'
 import { Label } from 'kitten/components/form/label'
 
 describe('<Label />', () => {

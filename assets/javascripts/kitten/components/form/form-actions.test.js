@@ -1,5 +1,4 @@
 import React from 'react'
-import { shallow, mount } from 'enzyme'
 import { FormActions } from 'kitten/components/form/form-actions'
 
 describe('<FormActions />', () => {

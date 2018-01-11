@@ -1,5 +1,4 @@
 import React from 'react'
-import { mount, shallow } from 'enzyme'
 import { ImageWithCaption } from 'kitten/components/images/image-with-caption'
 
 describe ('<ImageWithCaption />', () => {

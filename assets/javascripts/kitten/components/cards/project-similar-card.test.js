@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { shallow, mount } from 'enzyme'
 import { SimilarProjectCard }
   from 'kitten/components/cards/project-similar-card'
 import { Title } from 'kitten/components/typography/title'

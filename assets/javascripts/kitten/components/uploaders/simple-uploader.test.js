@@ -1,5 +1,4 @@
 import React from 'react'
-import { mount } from 'enzyme'
 import { SimpleUploader } from 'kitten/components/uploaders/simple-uploader'
 import { Uploader } from 'kitten/components/uploaders/uploader'
 import { ButtonIcon } from 'kitten/components/buttons/button-icon'

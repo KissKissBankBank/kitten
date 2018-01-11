@@ -1,6 +1,5 @@
 import React from 'react'
 import sinon from 'sinon'
-import { mount } from 'enzyme'
 import { ImageCropper } from 'kitten/components/images/image-cropper'
 import Cropper from 'react-cropper'
 import { SimpleUploader } from 'kitten/components/uploaders/simple-uploader'

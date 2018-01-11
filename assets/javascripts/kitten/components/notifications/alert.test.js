@@ -1,6 +1,5 @@
 import React from 'react'
 import classNames from 'classnames'
-import { shallow, mount } from 'enzyme'
 import sinon from 'sinon'
 import { Alert } from 'kitten/components/notifications/alert'
 

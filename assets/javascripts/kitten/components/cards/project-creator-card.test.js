@@ -1,5 +1,4 @@
 import React from 'react'
-import { shallow, mount } from 'enzyme'
 import { ProjectCreatorCard } from 'kitten/components/cards/project-creator-card'
 import { ClockIcon } from 'kitten/components/icons/clock-icon'
 import { Paragraph } from 'kitten/components/typography/paragraph'

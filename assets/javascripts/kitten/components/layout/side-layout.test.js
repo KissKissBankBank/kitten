@@ -1,5 +1,4 @@
 import React from 'react'
-import { shallow, mount } from 'enzyme'
 import { SideLayout } from 'kitten/components/layout/side-layout'
 
 describe('<SideLayout />', () => {

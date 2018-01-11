@@ -1,5 +1,4 @@
 import React from 'react'
-import { mount } from 'enzyme'
 import { Hero } from 'kitten/components/heroes/hero'
 import { Container } from 'kitten/components/grid/container'
 

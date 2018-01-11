@@ -1,5 +1,4 @@
 import React from 'react'
-import { shallow, mount } from 'enzyme'
 import { Title } from 'kitten/components/typography/title'
 import { InformationBox } from 'kitten/components/box/information-box'
 

@@ -1,5 +1,4 @@
 import React from 'react'
-import { shallow, mount } from 'enzyme'
 import { RichTextInput } from 'kitten/components/form/rich-text-input'
 
 describe('<RichTextInput />', () => {

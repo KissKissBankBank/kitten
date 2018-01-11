@@ -1,5 +1,4 @@
 import React from 'react'
-import { shallow, mount } from 'enzyme'
 import { LinkList } from 'kitten/components/links/link-list'
 
 describe('<LinkList />', () => {
