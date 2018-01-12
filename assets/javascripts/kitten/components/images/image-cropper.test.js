@@ -40,7 +40,7 @@ describe('<ImageCropper />', () => {
       }
 
       expect(component.props()).to.contains(expectedProps)
-      expect(component.props().onChange).to.be.function
+      expect(component.props().onChange).to.be.a('function')
     })
 
     it('has a default state', () => {
@@ -86,9 +86,9 @@ describe('<ImageCropper />', () => {
       }
 
       expect(uploader.props()).to.contains(expectedProps)
-      expect(uploader.props().onSuccess).to.be.function
-      expect(uploader.props().onError).to.be.function
-      expect(uploader.props().onReset).to.be.function
+      expect(uploader.props().onSuccess).to.be.a('function')
+      expect(uploader.props().onError).to.be.a('function')
+      expect(uploader.props().onReset).to.be.a('function')
     })
   })
 

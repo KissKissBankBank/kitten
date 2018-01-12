@@ -56,11 +56,11 @@ describe('<SimpleUploader />', () => {
     it('passes the right props to the delete button', () => {
       const expectedProps = {
         className: 'k-SimpleUploader__buttonIcon',
-        size: 'micro',
+        size: 'nano',
       }
 
       expect(deleteButton.props()).to.contains(expectedProps)
-      expect(deleteButton.props().onClick).to.be.function
+      expect(deleteButton.props().onClick).to.be.a('function')
     })
   })
 

@@ -9,7 +9,7 @@ const Theme = props => {
   const deleteButton = props.deletable && props.fileName
     ? <ButtonIcon
         className="k-SimpleUploader__buttonIcon"
-        size="micro"
+        size="nano"
         disabled={ props.disabled }
         onClick={ handleClick }
       >

@@ -20,25 +20,31 @@
   $background-color-helium: map-get($k-colors, 'primary-1');
 
   $font: 'regular';
-  $font-size: -1;
-  $line-height: 1.3;
+  $font-size: -1; // 14px
+  $line-height: 1.25;
+
+  $border-size: k-px-to-rem(2px);
 
   $arrow-size: k-px-to-rem(8px);
 
+  $tooltip-padding: k-px-to-rem(20px) - $border-size;
+
   .k-TooltipNew {
     @include k-typographyFont($font);
-    @include k-typographyFontSize($font-size, $line-height);
+    @include k-typographyFontSize(
+      $font-size,
+      $line-height
+    );
 
     position: absolute;
-    padding-right: k-px-to-rem(20px);
-    padding-left: k-px-to-rem(20px);
+    padding-right: $tooltip-padding;
+    padding-left: $tooltip-padding;
 
     background-color: $background-color-helium;
-    border: 1px solid $border-color-helium;
+    border: $border-size solid $border-color-helium;
     color: $color-helium;
 
     @include k-media-min('s') {
-      border-radius: k-px-to-rem(8px);
       width: k-px-to-rem(280px);
     }
   }

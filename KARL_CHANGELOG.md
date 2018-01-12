@@ -4,9 +4,38 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `InstagramButtonIcon` example.
-- Feature: Add `disabled` prop on `TextInputWithButton` and `tiny` prop on
+## [18.1.0] - 2018-01-09
+
+No changes.
+
+## [18.0.0] - 2018-01-08
+
+Features:
+- Remove `borderTop` in `KarlBrowsingHorizontalNav` example.
+- Rename `KarlButtonIconMicro` to `KarlButtonIconNano` examples.
+
+## [17.1.0] - 2018-01-03
+
+No changes.
+
+## [17.0.0] - 2018-01-02
+
+Features:
+- Add `ArticleCard` examples.
+- Add `KarlCarouselProjectCard` examples.
+- Add `SimpleCard` examples.
+- Add `KarlLinkList`, `KarlLinkListSelectedItem` and `KarlLinkListDark`.
+- Add new `KarlImageWithCaption` example.
+- Add `KarlExampleTitle` example.
+- Add `KarlHorizontalStrokes` example.
+- Add `KarlHorizontalNav` and `KarlHorizontalNavBrowsing` examples.
+- Add `KarlVerticalStroke`, `KarlTinyVerticalStroke`, `KarlBigVerticalStroke`
+  and `KarlHugeVerticalStroke` examples.
+- Add `InstagramButtonIcon` example.
+- Add `disabled` prop on `TextInputWithButton` and `tiny` prop on
   `TextInputWithLimit` examples.
+- Update `Hero` examples.
+- Update webpack configuration with appropriate babel presets.
 
 ## [16.3.1] - 2017-11-28
 
