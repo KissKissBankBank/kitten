@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Breaking change: Update `Modal` component with styleguide V2.
   Replace `@include k-Modal((z-index: 10))` by `@include k-Modal;`.
+- Feature: Change `font-size: 1rem` on `k-Button--big`.
 
 ## [18.1.0] - 2018-01-09
 
@@ -15,7 +16,7 @@ Features:
 
 Fixes:
 - Add `tiny` size on `k-ButtonIcon--signup` and `k-ButtonIcon--phone`.
-- Fix `overflow` style to` ProjectSimilarCard` component.
+- Fix `overflow` style to `ProjectSimilarCard` component.
 
 ## [18.0.0] - 2018-01-08
 
