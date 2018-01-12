@@ -6,7 +6,11 @@ import {
   Grid as GridBase,
   GridCol as GridColBase,
 } from 'kitten/components/grid/grid'
-import { ScreenConfig } from 'kitten/constants/screen-config'
+import { createMatchMediaMax } from 'kitten/helpers/utils/media-queries'
+import { ScreenConfig,
+  SCREEN_SIZE_XS,
+  SCREEN_SIZE_M,
+} from 'kitten/constants/screen-config'
 import COLORS from 'kitten/constants/colors-config'
 import { TextInputWithButton } from 'kitten/components/form/text-input-with-button'
 import { Paragraph  as ParagraphBase } from 'kitten/components/typography/paragraph'
