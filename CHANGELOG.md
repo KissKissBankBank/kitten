@@ -4,8 +4,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Features: Add [Jest](https://facebook.github.io/jest/) as our new
-  testing framework instead of [Mocha](https://mochajs.org/).
+- Feature: Add [Jest](https://facebook.github.io/jest/) as our new
+  testing framework instead of [Mocha](https://mochajs.org/) and
+  [Chai](http://chaijs.com/).
+- Breaking change: Update React/React-Dom to v16.x version which
+  needs `babel-polyfill` to work properly with `Map` and `Set`.
+  You need to [install babel-polyfill](https://babeljs.io/docs/usage/polyfill/)
+  and add it to your webpack config to make it work.
 
 ## [18.1.0] - 2018-01-09
 
