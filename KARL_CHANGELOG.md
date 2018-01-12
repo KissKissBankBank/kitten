@@ -6,6 +6,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Add `KarlFooterKissKiss` example.
 
+## [18.1.0] - 2018-01-09
+
+No changes.
+
 ## [18.0.0] - 2018-01-08
 
 Features:

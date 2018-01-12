@@ -5,8 +5,17 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add `k-u-color-background1` utility.
-- Fix: Add `tiny` size on `k-ButtonIcon--signup` and `k-ButtonIcon--phone`.
-- Feature: Add 16:9 format to the `ArticleCard` image.
+- Feature: Change `font-size: 1rem` on `k-Button--big`.
+
+## [18.1.0] - 2018-01-09
+
+Features:
+- Add 16:9 format to the `ProjectCard` image.
+- Add 16:9 format to the `ArticleCard` image.
+
+Fixes:
+- Add `tiny` size on `k-ButtonIcon--signup` and `k-ButtonIcon--phone`.
+- Fix `overflow` style to `ProjectSimilarCard` component.
 
 ## [18.0.0] - 2018-01-08
 

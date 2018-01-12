@@ -71,6 +71,7 @@
   // Button font-size is computed using a modular scale and a defined step of this
   // scale.
   $button-step: -1; // 14px
+  $big-button-step: 0; // 16px
 
   // SVG element default settings.
   $icon-width: k-px-to-rem(12px);
@@ -80,7 +81,7 @@
 
   // Big size options button.
   $buttonBigOptions: (
-    typography-step: $button-step,
+    typography-step: $big-button-step,
     line-height: $button-big-line-height,
     height: $button-height,
     radius: $button-radius,

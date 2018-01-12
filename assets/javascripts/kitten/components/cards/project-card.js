@@ -44,7 +44,6 @@ class ProjectCardComponent extends React.Component {
           <ButtonImage
             tag="span"
             img={ { src: ownerAvatarSrc } }
-            withBorder
             withoutPointerEvents
           />
           <Paragraph
@@ -128,9 +127,11 @@ class ProjectCardComponent extends React.Component {
           top="1.5"
           bottom="1.3"
           className="k-Card__imageContainer"
+          style={ styles.imageContainer }
         >
           <img
             className="k-ProjectCard__img k-Card__image"
+            style={ styles.image }
             src={ this.props.imageSrc }
             alt=""
           />
@@ -346,6 +347,20 @@ class ProjectCardComponent extends React.Component {
       </Tag>
     )
   }
+}
+
+const styles = {
+  imageContainer: {
+    overflow: 'hidden',
+    position: 'relative',
+    paddingTop: `${9 / 16 * 100}%`,
+  },
+  image: {
+    position: 'absolute',
+    top: 0,
+    display: 'block',
+    width: '100%',
+  },
 }
 
 ProjectCardComponent.defaultProps = {
