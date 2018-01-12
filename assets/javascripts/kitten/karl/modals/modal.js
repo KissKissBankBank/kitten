@@ -8,7 +8,6 @@ import { createMatchMediaMax } from 'kitten/helpers/utils/media-queries'
 import {
   ScreenConfig,
   SCREEN_SIZE_XS,
-  SCREEN_SIZE_M,
 } from 'kitten/constants/screen-config'
 
 class KarlModalComponent extends Component {
