@@ -11,6 +11,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   needs `babel-polyfill` to work properly with `Map` and `Set`.
   You need to [install babel-polyfill](https://babeljs.io/docs/usage/polyfill/)
   and add it to your webpack config to make it work.
+- Feature: Change `font-size: 1rem` on `k-Button--big`.
 
 ## [18.1.0] - 2018-01-09
 
@@ -20,7 +21,7 @@ Features:
 
 Fixes:
 - Add `tiny` size on `k-ButtonIcon--signup` and `k-ButtonIcon--phone`.
-- Fix `overflow` style to` ProjectSimilarCard` component.
+- Fix `overflow` style to `ProjectSimilarCard` component.
 
 ## [18.0.0] - 2018-01-08
 
