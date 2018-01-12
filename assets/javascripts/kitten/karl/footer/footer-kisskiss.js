@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Radium, { StyleRoot } from 'radium'
 import { Row as RowBase } from 'kitten/components/grid/row'
 import { Container } from 'kitten/components/grid/container'
+import { Marger } from 'kitten/components/layout/marger'
 import {
   Grid as GridBase,
   GridCol as GridColBase,
@@ -35,6 +36,40 @@ const TwitterButtonIcon = Radium(TwitterButtonIconBase)
 const KissKissBankBankLogo = Radium(KissKissBankBankLogoBase)
 
 export class KarlFooterKisskiss extends Component {
+  constructor(props, context) {
+    super(props, context)
+
+    this.mqMobile = createMatchMediaMax(SCREEN_SIZE_XS)
+    this.mqTabletOrLess = createMatchMediaMax(SCREEN_SIZE_M)
+
+    this.state = {
+      viewportIsMobile: this.mqMobile
+        ? this.mqMobile.matches
+        : false,
+      viewportIsTabletOrLess: this.mqTabletOrLess
+        ? this.mqTabletOrLess.matches
+        : false,
+    }
+  }
+
+  onMobileMQ = (event) => {
+    this.setState({ viewportIsMobile: event.matches })
+  }
+
+  onTabletMQ = (event) => {
+    this.setState({ viewportIsTabletOrLess: event.matches })
+  }
+
+  componentDidMount() {
+    if (this.mqMobile) this.mqMobile.addListener(this.onMobileMQ)
+    if (this.mqTabletOrLess) this.mqTabletOrLess.addListener(this.onTabletMQ)
+  }
+
+  componentWillUnmount() {
+    if (this.mqMobile) this.mqMobile.removeListener(this.onMobileMQ)
+    if (this.mqTabletOrLess) this.mqTabletOrLess.removeListener(this.onTabletMQ)
+  }
+
   render() {
     return (
       <StyleRoot>
@@ -388,15 +423,14 @@ const styles = {
 
   list: {
     paddingTop: '50px',
-    // paddingBottom: '50px',
+    paddingBottom: '50px',
 
+    [`@media (min-width: ${ScreenConfig['M'].min}px)`]: {
+      paddingTop: '100px',
+    },
     [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
       paddingTop: '100px',
-      paddingBottom: '80px',
-    },
-    [`@media (min-width: ${ScreenConfig['S'].min}px)`]: {
-      paddingTop: '100px',
-      paddingBottom: '50px',
+      paddingBottom: 0,
     },
 
     logo: {
@@ -423,6 +457,9 @@ const styles = {
       [`@media (min-width: ${ScreenConfig['M'].min}px)`]: {
         paddingBottom: '50px',
       },
+      [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
+        paddingBottom: '80px',
+      },
 
       items: {
         [`@media (max-width: ${ScreenConfig['S'].max}px)`]: {
@@ -437,9 +474,9 @@ const styles = {
 
     block: {
       marginTop: 0,
-      [`@media (max-width: ${ScreenConfig['S'].max}px)`]: {
-        marginTop: '30px',
-      },
+      // [`@media (max-width: ${ScreenConfig['S'].max}px)`]: {
+      //   marginTop: '30px',
+      // },
       [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
         textAlign: 'left',
         display: 'flex',
