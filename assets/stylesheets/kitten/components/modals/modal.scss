@@ -15,7 +15,7 @@
 ///   </div>
 
 @mixin k-Modal {
-  $options: 10;
+  $z-index: 10;
   $outer-gutters-size: k-px-to-rem(16px);
 
   $background-color: map-get($k-colors, 'background-1');
@@ -49,7 +49,7 @@
 
   .k-Modal__overlay {
     position: fixed;
-    z-index: $options;
+    z-index: $z-index;
     top: 0;
     left: 0;
     right: 0;
