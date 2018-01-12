@@ -45,18 +45,8 @@ export class LinkBox extends Component {
             <p className="k-LinkBox__text">{ text }</p>
           </div>
 
-          <div className={ classNames('k-LinkBox__navigation',
-                                      'k-LinkBox__navigation--withAnimation') }
-          >
-            <span className={ classNames('k-LinkBox__button',
-                                         'k-ButtonIcon',
-                                         'k-ButtonIcon--hydrogen',
-                                         'k-ButtonIcon--tiny',
-                                         'k-ButtonIcon--withoutHover',
-                                         'k-ButtonIcon--verticalArrow') }
-            >
-              <ArrowIcon className="k-ButtonIcon__svg" />
-            </span>
+          <div className="k-LinkBox__navigation">
+            <ArrowIcon className="k-ButtonIcon__svg" />
           </div>
         </div>
       </a>

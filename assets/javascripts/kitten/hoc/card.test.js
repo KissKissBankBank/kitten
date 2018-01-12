@@ -106,6 +106,14 @@ describe('card()', () => {
     })
   })
 
+  describe('with withoutBoxShadowOnHover prop', () => {
+    const component = shallow(<ExampleCard withoutBoxShadowOnHover />)
+
+    it('has a good class', () => {
+      expect(component).to.have.className('k-Card--withoutBoxShadowOnHover')
+    })
+  })
+
   describe('with custom prop', () => {
     const ExampleCard = card(ExampleCardComponent, { 'title': 'Foo' })
     const component = shallow(<ExampleCard title="Bar" />)

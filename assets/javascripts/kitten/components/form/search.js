@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { Component } from 'react'
 import classNames from 'classnames'
 import { domElementHelper } from 'kitten/helpers/dom/element-helper'
 import { TextInput } from 'kitten/components/form/text-input'
 import { SearchIcon } from 'kitten/components/icons/search-icon'
 
-export class Search extends React.Component {
+export class Search extends Component {
   constructor(props) {
     super(props)
 
@@ -42,6 +42,17 @@ export class Search extends React.Component {
   // Rendering.
 
   render() {
+    const {
+      className,
+      actionUrl,
+      inputId,
+      inputName,
+      inputPlaceholder,
+      inputLabel,
+      submitLabel,
+      ...others,
+    } = this.props
+
     let inputClassName = classNames(
       'k-TextInput',
       'k-TextInput--tiny',
@@ -51,30 +62,38 @@ export class Search extends React.Component {
     )
 
     return (
-      <form className="k-SearchInput"
-                  role="search"
-                  action={ this.props.actionUrl }
-                  acceptCharset="UTF-8"
-                  method="get">
-        <TextInput className={ inputClassName }
-                   type="text"
-                   id={ this.props.inputId }
-                   name={ this.props.inputName }
-                   placeholder={ this.props.inputPlaceholder } />
+      <form
+        className="k-SearchInput"
+        role="search"
+        action={ actionUrl }
+        acceptCharset="UTF-8"
+        method="get"
+      >
+        <TextInput
+          className={ inputClassName }
+          type="search"
+          id={ inputId }
+          name={ inputName }
+          placeholder={ inputPlaceholder }
+          aria-label={ inputLabel }
+        />
 
-        <button type="submit"
-                aria-label={ this.props.submitLabel }
-                className="k-SearchInput__submit k-SearchInput__submit--tiny"
-                onFocus={ this.handleSubmitFocus }
-                onBlur={ this.handleSubmitBlur }
-                onMouseOver={ this.handleSubmitMouseOver }
-                onMouseOut={ this.handleSubmitMouseOut }>
+        <button
+          type="submit"
+          aria-label={ submitLabel }
+          className="k-SearchInput__submit k-SearchInput__submit--tiny"
+          onFocus={ this.handleSubmitFocus }
+          onBlur={ this.handleSubmitBlur }
+          onMouseOver={ this.handleSubmitMouseOver }
+          onMouseOut={ this.handleSubmitMouseOut }
+        >
           <SearchIcon
             width="14"
             height="14"
           />
         </button>
-      </form>)
+      </form>
+    )
   }
 }
 

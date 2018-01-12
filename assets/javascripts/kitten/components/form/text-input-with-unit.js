@@ -8,16 +8,18 @@ export class TextInputWithUnit extends Component {
   }
 
   render() {
-    const { className,
-            valid,
-            error,
-            type,
-            unit,
-            unitWord,
-            tiny,
-            disabled,
-            digits,
-            ...others } = this.props
+    const {
+      className,
+      valid,
+      error,
+      type,
+      unit,
+      unitWord,
+      tiny,
+      disabled,
+      digits,
+      ...others,
+    } = this.props
 
     const textInputClassName = classNames(
       'k-TextInputWithUnit__input',
