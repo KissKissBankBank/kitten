@@ -18,10 +18,8 @@ export const KarlHeaderTour1 = props => (
     aria-labelledby="dialogtitle"
   >
 
-    <div
-      className={ classNames('k-Popover__container',
-                             'k-Tour__popover__container') }
-    >
+    <div className={ classNames('k-Popover__container',
+                                'k-Tour__popover__container') }>
 
       <div className="k-Tour__popover__illustration">
         <MixIllustration className="k-Tour__popover__svg--primary" />
@@ -104,10 +102,8 @@ export const KarlHeaderTour2 = props => (
     aria-labelledby="dialogtitle"
   >
 
-    <div
-      className={ classNames('k-Popover__container',
-                             'k-Tour__popover__container') }
-    >
+    <div className={ classNames('k-Popover__container',
+                                'k-Tour__popover__container') }>
 
       <div className="k-Tour__popover__illustration">
         <LoudspeakerIllustration className="k-Tour__popover__svg--primary" />

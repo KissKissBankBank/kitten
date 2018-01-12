@@ -28,6 +28,7 @@ export class CloseButton extends Component {
        className={ buttonClassName }
         title={ closeButtonLabel }
         aria-label={ closeButtonLabel }
+        type="button"
         { ...others }
       >
         <CrossIcon
