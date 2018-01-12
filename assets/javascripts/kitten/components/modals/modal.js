@@ -3,6 +3,7 @@ import classNames from 'classnames'
 // Via "https://github.com/reactjs/react-modal"
 import ReactModal from 'react-modal'
 import { CloseButton } from 'kitten/components/buttons/close-button'
+import { Marger } from 'kitten/components/layout/marger'
 
 export class Modal extends Component {
   constructor(props) {
@@ -16,7 +17,6 @@ export class Modal extends Component {
     this.close = this.close.bind(this)
   }
 
-
   open() {
     this.setState({ showModal: true })
   }
@@ -29,7 +29,7 @@ export class Modal extends Component {
     return (
       <CloseButton
         className="k-Modal__close"
-        modifier="hydrogen"
+        modifier="beryllium"
         onClick={ this.close }
       />
     )
