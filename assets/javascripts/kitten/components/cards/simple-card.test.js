@@ -77,7 +77,7 @@ describe('<SimpleCard />', () => {
 
     it('has an image with a custom style', () => {
       expect(component.find('img').props().style).toMatchObject({
-        cursor: 'crosshair'
+        cursor: 'crosshair',
       })
     })
   })

@@ -64,7 +64,7 @@ describe('<InfoLines />', () => {
 
     it('has a red border color', () => {
       expect(infoLines.props().style).toMatchObject({
-        borderColor: 'red'
+        borderColor: 'red',
       })
     })
   })

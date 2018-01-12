@@ -95,9 +95,8 @@ describe('<Carousel />', () => {
     )
 
     it('is not a <Grid />', () => {
-      expect(carousel.hasClass('k-Grid')).not.toBe(true)
+      expect(carousel.hasClass('k-Grid')).toBe(false)
     })
-
   })
 
   describe('getNumColumnsForWidth', () => {

@@ -44,9 +44,13 @@ describe('<TabBar />', () => {
     it('renders the right classes', () => {
       expect(component.props().id).toBe('custom-id')
       expect(component.hasClass('custom-class')).toBe(true)
-      expect(component.find('.k-TabBar__nav').hasClass('nav-custom-class')).toBe(true)
-      expect(component.find('.k-TabBar__list').hasClass('list-custom-class')).toBe(true)
-      expect(component.find('.k-TabBar__item').first().hasClass('item-custom-class')).toBe(true)
+      expect(component.find('.k-TabBar__nav').hasClass('nav-custom-class'))
+        .toBe(true)
+      expect(component.find('.k-TabBar__list').hasClass('list-custom-class'))
+        .toBe(true)
+      expect(
+        component.find('.k-TabBar__item').first().hasClass('item-custom-class')
+      ).toBe(true)
     })
 
     describe('with HTML in items', () => {

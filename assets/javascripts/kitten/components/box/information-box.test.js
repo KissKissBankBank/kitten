@@ -27,7 +27,7 @@ describe('<InformationBox />', () => {
     )
 
     it('adds a children element', () => {
-      expect(component.props().children).toEqual('Example content')
+      expect(component.text()).toBe('Example content')
     })
   })
 })

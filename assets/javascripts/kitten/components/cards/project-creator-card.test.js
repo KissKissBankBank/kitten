@@ -71,7 +71,8 @@ describe('<ProjectCreatorCard />', () => {
 
     it('renders an icon with a style attribute', () => {
       expect(icon.props().style).toMatchObject({
-        backgroundColor: '#e6f5fb', borderColor: '#cbe8f9'
+        backgroundColor: '#e6f5fb',
+        borderColor: '#cbe8f9'
       })
     })
 

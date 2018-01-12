@@ -1,6 +1,5 @@
 import React from 'react'
 import classNames from 'classnames'
-
 import { card } from 'kitten/hoc/card'
 
 const ExampleCardComponent = props => {

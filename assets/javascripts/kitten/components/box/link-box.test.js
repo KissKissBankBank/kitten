@@ -3,14 +3,16 @@ import { LinkBox } from 'kitten/components/box/link-box'
 
 describe('<LinkBox />', () => {
   const component = shallow(
-    <LinkBox href="http://…/history.pdf"
-             title="Your history"
-             text="Download your history (pdf - 8Mo)"
-             isExternal="true" />
+    <LinkBox
+      href="http://…/history.pdf"
+      title="Your history"
+      text="Download your history (pdf - 8Mo)"
+      isExternal="true"
+    />
   )
 
   it('renders a <a class="k-LinkBox" />', () => {
-    expect(component.find('a')).toHaveLength(1)
+    expect(component.find('a').exists()).toBe(true)
     expect(component.hasClass('k-LinkBox')).toBe(true)
     expect(component.props().href).toBe('http://…/history.pdf')
     expect(component.props().target).toBe('_blank')
@@ -57,7 +59,7 @@ describe('<LinkBox />', () => {
     })
 
     it('has no target', () => {
-      expect(defaultComponent.props().target).toBe(void(0))
+      expect(defaultComponent.props().target).toBeUndefined()
     })
 
     it('has no icon', () => {
