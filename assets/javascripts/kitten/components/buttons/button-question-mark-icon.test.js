@@ -9,12 +9,12 @@ describe('ButtonQuestionMarkIcon />', () => {
     const button = shallow(<ButtonQuestionMarkIcon />)
 
     it('is a <ButtonIcon modifier="helium />', () => {
-      expect(button.find('ButtonIcon')).toHaveLength(1)
+      expect(button.find(ButtonIcon).exists()).toBe(true)
       expect(button.props().modifier).toBe('helium')
     })
 
     it('has a <QuestionMarkIcon />', () => {
-      expect(button.find('QuestionMarkIcon')).toHaveLength(1)
+      expect(button.find(QuestionMarkIcon).exists()).toBe(true)
     })
   })
 
