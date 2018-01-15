@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Update `KarlModalComponent` example.
+- Fix: Fix warnings to `ImageWithCaption` examples.
 
 ## [18.1.0] - 2018-01-09
 
