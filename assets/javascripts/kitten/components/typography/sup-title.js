@@ -24,5 +24,5 @@ export class SupTitle extends Component {
 
 SupTitle.defaultProps = {
   tag: 'div',
-  children: 'Sup Title',
+  children: 'Lorem ipsum',
 }
