@@ -6,7 +6,8 @@ export class SupTitle extends Component {
     const {
       className,
       tag,
-      ...supTitleProps } = this.props
+      ...supTitleProps
+    } = this.props
 
     const supTitleClassName = classNames(
       'k-SupTitle',
