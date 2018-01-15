@@ -12,6 +12,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Update `Tour` component with new design styleguide V2.
 - Feature: Add `size` prop to `CloseButton` component.
 - Feature: Add `k-ButtonIcon__rounded` class.
+- Feature: Change `font-size: 1rem` on `k-Button--big`.
+- Fix: Fix `captionProps` prop warning to `ImageWithCaption`.
+- Fix: Fix `titleProps` prop warning to `ArticleCard`.
 
 ## [18.1.0] - 2018-01-09
 
@@ -21,7 +24,7 @@ Features:
 
 Fixes:
 - Add `tiny` size on `k-ButtonIcon--signup` and `k-ButtonIcon--phone`.
-- Fix `overflow` style to` ProjectSimilarCard` component.
+- Fix `overflow` style to `ProjectSimilarCard` component.
 
 ## [18.0.0] - 2018-01-08
 
