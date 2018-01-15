@@ -29,7 +29,7 @@ class KarlModalComponent extends Component {
 
   componentDidMount() {
     if (this.mqMobile) this.mqMobile.addListener(this.onMobileMQ)
-    }
+  }
 
   componentWillUnmount() {
     if (this.mqMobile) this.mqMobile.removeListener(this.onMobileMQ)

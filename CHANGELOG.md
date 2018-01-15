@@ -4,8 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Breaking change: Update `Modal` component with styleguide V2.
-  Replace `@include k-Modal((z-index: 10))` by `@include k-Modal;`.
+- Feature: Update `Modal` component with styleguide V2.
 - Feature: Change `font-size: 1rem` on `k-Button--big`.
 
 ## [18.1.0] - 2018-01-09

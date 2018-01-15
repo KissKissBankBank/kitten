@@ -3,7 +3,6 @@ import classNames from 'classnames'
 // Via "https://github.com/reactjs/react-modal"
 import ReactModal from 'react-modal'
 import { CloseButton } from 'kitten/components/buttons/close-button'
-import { Marger } from 'kitten/components/layout/marger'
 
 export class Modal extends Component {
   constructor(props) {
