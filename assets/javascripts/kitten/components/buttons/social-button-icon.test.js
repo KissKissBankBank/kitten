@@ -17,12 +17,12 @@ describe('<FacebookButtonIcon />', () => {
     const button = shallow(<FacebookButtonIcon />)
 
     it('is a <ButtonIcon modifier="facebook" />', () => {
-      expect(button.find('ButtonIcon')).toHaveLength(1)
+      expect(button.find(ButtonIcon).exists()).toBe(true)
       expect(button.props().modifier).toBe('facebook')
     })
 
     it('has a <FacebookIcon />', () => {
-      expect(button.find('FacebookIcon')).toHaveLength(1)
+      expect(button.find(FacebookIcon).exists()).toBe(true)
     })
   })
 
@@ -46,12 +46,12 @@ describe('<TwitterButtonIcon />', () => {
     const button = shallow(<TwitterButtonIcon />)
 
     it('is a <ButtonIcon modifier="facebook" />', () => {
-      expect(button.find('ButtonIcon')).toHaveLength(1)
+      expect(button.find(ButtonIcon).exists()).toBe(true)
       expect(button.props().modifier).toBe('twitter')
     })
 
     it('has a <TwitterIcon />', () => {
-      expect(button.find('TwitterIcon')).toHaveLength(1)
+      expect(button.find(TwitterIcon).exists()).toBe(true)
     })
   })
 
@@ -75,12 +75,12 @@ describe('<LinkedinButtonIcon />', () => {
     const button = shallow(<LinkedinButtonIcon />)
 
     it('is a <ButtonIcon modifier="linkedin" />', () => {
-      expect(button.find(ButtonIcon)).toHaveLength(1)
+      expect(button.find(ButtonIcon).exists()).toBe(true)
       expect(button.props().modifier).toBe('linkedin')
     })
 
     it('has a <LinkedinIcon />', () => {
-      expect(button.find('LinkedinIcon')).toHaveLength(1)
+      expect(button.find(LinkedinIcon).exists()).toBe(true)
     })
   })
 
@@ -104,12 +104,12 @@ describe('<InstagramButtonIcon />', () => {
     const button = shallow(<InstagramButtonIcon />)
 
     it('is a <ButtonIcon modifier="instagram" />', () => {
-      expect(button.find('ButtonIcon')).toHaveLength(1)
+      expect(button.find(ButtonIcon).exists()).toBe(true)
       expect(button.props().modifier).toBe('instagram')
     })
 
     it('has a <InstagramIcon />', () => {
-      expect(button.find('InstagramIcon')).toHaveLength(1)
+      expect(button.find(InstagramIcon).exists()).toBe(true)
     })
   })
 
