@@ -14,6 +14,7 @@ class ArticleCardComponent extends Component {
     const {
       imageProps,
       avatarProps,
+      titleProps,
       ownerTitle,
       ownerDescription,
       articleTitle,
