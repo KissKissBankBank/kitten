@@ -15,9 +15,7 @@ export class CloseButton extends Component {
 
     const buttonClassName = classNames(
       'k-ButtonIcon--cross',
-      {
-        [`k-ButtonIcon--cross--${size}`]: size,
-      },
+      [`k-ButtonIcon--cross--${size}`]: size,
       className,
     )
 

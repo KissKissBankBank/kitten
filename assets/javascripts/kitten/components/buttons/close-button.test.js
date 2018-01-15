@@ -3,13 +3,12 @@ import classNames from 'classnames'
 import { expect } from 'chai'
 import { shallow } from 'enzyme'
 import { CloseButton } from 'kitten/components/buttons/close-button'
-import { ButtonIcon } from 'kitten/components/buttons/button-icon'
 
 describe('<CloseButton />', () => {
   describe('by default', () => {
     const closeButton = shallow(<CloseButton />)
 
-    it('is a <ButtonIcon />', () => {
+    it('is a <button />', () => {
       expect(closeButton).to.have.tagName('button')
     })
 

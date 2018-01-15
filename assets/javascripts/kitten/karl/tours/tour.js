@@ -30,10 +30,10 @@ export const KarlHeaderTour1 = props => (
       >
         <Marger bottom="1">
           <Title
+            tag="p"
             modifier= "senary"
             id="dialogtitle"
             margin={ false }
-            tag="p"
           >
             What‘s new
           </Title>
