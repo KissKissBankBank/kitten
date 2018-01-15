@@ -27,6 +27,7 @@ export class ImageWithCaption extends Component {
       imageAlt,
       imageWidth,
       imageHeight,
+      captionProps,
       ...others,
     } = this.props
 
