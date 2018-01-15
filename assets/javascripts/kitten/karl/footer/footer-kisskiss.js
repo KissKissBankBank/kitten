@@ -91,43 +91,44 @@ export class KarlFooterKisskiss extends Component {
           <GridCol
             col-m="12"
             col-l="8"
-            style={ styles.network.subscribe }
           >
-            <Grid>
-              <GridCol
-                col-m="12"
-                col-l="4"
-                style={ styles.network.subscribe.newsletter.label }
-              >
-                <Text
-                  size="tiny"
-                  weight="regular"
+            <Marger top="3" bottom="3">
+              <Grid>
+                <GridCol
+                  col-m="12"
+                  col-l="4"
+                  style={ styles.network.subscribe.newsletter.label }
                 >
-                  Inscrivez-vous à notre Newsletter
-                </Text>
-              </GridCol>
-
-              <GridCol
-                col-m="12"
-                col-l="6"
-                style={ styles.network.subscribe.newsletter.form }
-              >
-                <Grid>
-                  <GridCol
-                    col="10" offset="1"
-                    col-m="6" offset-m="3"
-                    col-l="12"
+                  <Text
+                    size="tiny"
+                    weight="regular"
                   >
-                    <TextInputWithButton
-                      value="Envoyer"
-                      textInputProps={{
-                        placeholder:"Entrez votre e-mail"
-                      }}
-                    />
-                  </GridCol>
-                </Grid>
-              </GridCol>
-            </Grid>
+                    Inscrivez-vous à notre Newsletter
+                  </Text>
+                </GridCol>
+
+                <GridCol
+                  col-m="12"
+                  col-l="6"
+                  style={ styles.network.subscribe.newsletter.form }
+                >
+                  <Grid>
+                    <GridCol
+                      col="10" offset="1"
+                      col-m="6" offset-m="3"
+                      col-l="12"
+                    >
+                      <TextInputWithButton
+                        value="Envoyer"
+                        textInputProps={{
+                          placeholder:"Entrez votre e-mail"
+                        }}
+                      />
+                    </GridCol>
+                  </Grid>
+                </GridCol>
+              </Grid>
+            </Marger>
           </GridCol>
 
           <GridCol
@@ -170,7 +171,7 @@ export class KarlFooterKisskiss extends Component {
       <GridCol
         col="8" offset="2"
         col-m="4" offset-m="4"
-        col-l="2" offset-l="2"
+        col-l="3" offset-l="1"
       >
         <SelectWithState
           name=""
@@ -210,12 +211,14 @@ export class KarlFooterKisskiss extends Component {
       <Row>
         <Grid style={ styles.list }>
           <GridCol col-l="2">
-            <div style={ styles.list.logo }>
+            <Marger
+              bottom={ this.state.viewportIsMobile ? 4 : 5 }
+              style={ styles.list.logo }>
               <KissKissBankBankLogo
                 color="#fff"
                 style={ styles.list.logo.img }
               />
-            </div>
+            </Marger>
           </GridCol>
 
           <GridCol
@@ -334,15 +337,15 @@ export class KarlFooterKisskiss extends Component {
             col-l="4"
             style={ styles.notice.block.copyright }
           >
-            <div>
+            <Marger top={ this.state.viewportIsTabletOrLess ? 5 : 0 }>
               <Text
                 size="tiny"
                 weight="regular"
                 color="background1"
               >
-                © 2017 KissKissBankBank &amp; Co
+                © 2018 KissKissBankBank &amp; Co
               </Text>
-            </div>
+            </Marger>
           </GridCol>
         </Grid>
       </Row>
@@ -353,22 +356,26 @@ export class KarlFooterKisskiss extends Component {
 const styles = {
   darkBackground: {
     backgroundColor: `${COLORS.font1}`,
+    // paddingTop: '30px',
+    // paddingBottom: '30px',
   },
 
   network: {
+    background: 'linear-gradient(to top, '
+    + `${COLORS.background3} 0%, `
+    + `${COLORS.background3} 50%, `
+    + `${COLORS.background1} 50%, `
+    + `${COLORS.background1} 100%)`,
+
     [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
       background: 'linear-gradient(to right, '
       + `${COLORS.background3} 0%, `
-      + `${COLORS.background3} 50%, `
-      + `${COLORS.background1} 50%, `
+      + `${COLORS.background3} 70%, `
+      + `${COLORS.background1} 70%, `
       + `${COLORS.background1} 100%)`,
     },
 
     subscribe: {
-      paddingTop: '30px',
-      paddingBottom: '30px',
-      backgroundColor: `${COLORS.background3}`,
-
       newsletter: {
         label: {
           alignSelf: 'center',
@@ -387,9 +394,9 @@ const styles = {
 
     social: {
       alignSelf: 'center',
-
       [`@media (max-width: ${ScreenConfig['M'].max}px)`]: {
         marginTop: '30px',
+        marginBottom: '30px',
         order: '-1',
       },
       [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
@@ -399,7 +406,6 @@ const styles = {
 
       text: {
         textAlign: 'center',
-
         [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
           textAlign: 'right',
           marginRight: '15px',
@@ -411,7 +417,6 @@ const styles = {
         textAlign: 'center',
         [`@media (max-width: ${ScreenConfig['M'].max}px)`]: {
           marginTop: '10px',
-          marginBottom: '30px',
         },
 
         buttonIcon: {
@@ -424,7 +429,6 @@ const styles = {
   list: {
     paddingTop: '50px',
     paddingBottom: '50px',
-
     [`@media (min-width: ${ScreenConfig['M'].min}px)`]: {
       paddingTop: '100px',
     },
@@ -434,16 +438,10 @@ const styles = {
     },
 
     logo: {
-      marginBottom: '30px',
-
-      [`@media (max-width: ${ScreenConfig['L'].max}px)`]: {
-        textAlign: 'center',
-        marginBottom: '50px',
-      },
+      textAlign: 'center',
 
       img: {
         verticalAlign: 'middle',
-
         [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
           display: 'block',
           verticalAlign: 'top',
@@ -453,7 +451,6 @@ const styles = {
 
     linkList: {
       paddingBottom: 0,
-
       [`@media (min-width: ${ScreenConfig['M'].min}px)`]: {
         paddingBottom: '50px',
       },
@@ -473,10 +470,6 @@ const styles = {
     paddingBottom: '100px',
 
     block: {
-      marginTop: 0,
-      // [`@media (max-width: ${ScreenConfig['S'].max}px)`]: {
-      //   marginTop: '30px',
-      // },
       [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
         textAlign: 'left',
         display: 'flex',
@@ -486,14 +479,12 @@ const styles = {
         textAlign: 'center',
         marginBottom:'10px',
         lineHeight: 0,
-
         [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
           marginRight: '14px',
         },
 
         img: {
           verticalAlign: 'middle',
-
           [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
             display: 'block',
             verticalAlign: 'top',
@@ -502,14 +493,9 @@ const styles = {
 
           mangopay: {
             width: '100px',
-            marginBottom: 0,
-
             [`@media (max-width: ${ScreenConfig['S'].max}px)`]: {
               marginTop: '30px',
               width: '130px',
-            },
-            [`@media (min-width: ${ScreenConfig['M'].min}px)`]: {
-              height: '50px',
             },
           },
         },
@@ -517,7 +503,6 @@ const styles = {
 
       paragraph: {
         color: `${COLORS.background1}`,
-
         [`@media (max-width: ${ScreenConfig['M'].max}px)`]: {
           textAlign: 'center',
         },
@@ -533,15 +518,10 @@ const styles = {
         },
       },
       copyright: {
-        marginTop: '50px',
-
+        textAlign: 'center',
         [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
           alignSelf: 'flex-end',
-          marginTop: 0,
           textAlign: 'right',
-        },
-        [`@media (max-width: ${ScreenConfig['M'].max}px)`]: {
-          textAlign: 'center',
         },
       },
     },
