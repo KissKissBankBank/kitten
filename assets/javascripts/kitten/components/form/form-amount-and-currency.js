@@ -3,10 +3,12 @@ import classNames from 'classnames'
 import { TextInputAndSelect } from 'kitten/components/form/text-input-and-select'
 
 export const FormAmountAndCurrency = props => {
-  const { currencyOptions,
-          currencyName,
-          currencyValue,
-          ...textInputAndSelectProps } = props
+  const {
+    currencyOptions,
+    currencyName,
+    currencyValue,
+    ...textInputAndSelectProps
+  } = props
 
   return (
     <TextInputAndSelect
@@ -15,7 +17,8 @@ export const FormAmountAndCurrency = props => {
       selectValue={ currencyValue }
       key={ currencyName }
       type="number"
-      { ...textInputAndSelectProps } />
+      { ...textInputAndSelectProps }
+    />
   )
 }
 

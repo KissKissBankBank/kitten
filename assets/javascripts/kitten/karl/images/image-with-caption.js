@@ -7,7 +7,7 @@ export const KarlImageWithCaption = () => {
     <ImageWithCaption>
       <Text
         size="default"
-        color="font-1"
+        color="font1"
       >
         <span className="k-u-weight-bold">
           Lorem ipsum dolor{' '}
