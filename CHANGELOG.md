@@ -10,6 +10,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Update `Popover` and `CallToActionPopover` components with new design
   styleguide V2.
 - Feature: Update `Tour` component with new design styleguide V2.
+- Feature: Add `size` prop to `CloseButton` component.
+- Feature: Add `k-ButtonIcon__rounded` class.
 
 ## [18.1.0] - 2018-01-09
 

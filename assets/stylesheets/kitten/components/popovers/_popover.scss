@@ -64,7 +64,6 @@
   }
 
   .k-Popover__content {
-    display: flex;
     flex-direction: column;
     flex: 1;
 
@@ -72,10 +71,7 @@
   }
 
   .k-Popover__navigation {
-    display: flex;
     justify-content: space-between;
-    margin-top: k-px-to-rem(30px);
-    margin-bottom: k-px-to-rem(40px);
   }
 
   .k-Popover__buttons {

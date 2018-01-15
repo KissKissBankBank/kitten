@@ -9,15 +9,13 @@ export class CloseButton extends Component {
       className,
       closeButtonLabel,
       size,
-      modifier,
+      buttonModifier,
       ...others,
     } = this.props
 
     const buttonClassName = classNames(
-      'k-ButtonIcon',
       'k-ButtonIcon--cross',
       {
-        [`k-ButtonIcon--${modifier}`]: modifier,
         [`k-ButtonIcon--cross--${size}`]: size,
       },
       className,
@@ -25,10 +23,11 @@ export class CloseButton extends Component {
 
     return (
       <ButtonIcon
-       className={ buttonClassName }
+        type="button"
+        className={ buttonClassName }
         title={ closeButtonLabel }
         aria-label={ closeButtonLabel }
-        type="button"
+        modifier={ buttonModifier }
         { ...others }
       >
         <CrossIcon
@@ -41,7 +40,7 @@ export class CloseButton extends Component {
 }
 
 CloseButton.defaultProps = {
-  closeButtonLabel: "Close",
-  modifier: "hydrogen",
+  closeButtonLabel: 'Close',
+  buttonModifier: 'hydrogen',
   size: null,
 }

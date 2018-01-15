@@ -38,14 +38,16 @@ export const KarlHeaderTour1 = props => (
             What‘s new
           </Title>
         </Marger>
-        <Paragraph
-          margin={ false }
-          modifier="quaternary"
-        >
-          Lorem ipsum dolor sit amet, consectetur
-          adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua.
-        </Paragraph>
+        <Marger top="1">
+          <Paragraph
+            margin={ false }
+            modifier="quaternary"
+          >
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua.
+          </Paragraph>
+        </Marger>
         <div className="k-Tour__popover__navigation">
           <Text
             className="k-Tour__popover__step"
@@ -121,12 +123,14 @@ export const KarlHeaderTour2 = props => (
             What‘s new
           </Title>
         </Marger>
-        <Paragraph
-          modifier= "quaternary"
-          margin={ false }
-        >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
-        </Paragraph>
+        <Marger top="1">
+          <Paragraph
+            modifier= "quaternary"
+            margin={ false }
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+          </Paragraph>
+        </Marger>
         <div className="k-Tour__popover__navigation">
           <Text
             className="k-Tour__popover__step"

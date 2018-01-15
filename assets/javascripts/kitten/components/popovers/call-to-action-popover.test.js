@@ -7,19 +7,21 @@ import { CallToActionPopover }
 import { LoudspeakerIllustration }
   from 'kitten/components/illustrations/loudspeaker-illustration'
 import { Button } from 'kitten/components/buttons/button'
+import { Title } from 'kitten/components/typography/title'
+import { Paragraph } from 'kitten/components/typography/paragraph'
 
 describe('<CallToActionPopover />', () => {
   describe('by default', () => {
     const defaultComponent = shallow(<CallToActionPopover />)
 
     it('renders a title element', () => {
-      const titleElement = defaultComponent.find('Title')
+      const titleElement = defaultComponent.find(Title)
 
       expect(titleElement).to.have.length(1)
     })
 
     it('renders a text element', () => {
-      const textElement = defaultComponent.find('Paragraph')
+      const textElement = defaultComponent.find(Paragraph)
 
       expect(textElement).to.have.length(1)
     })

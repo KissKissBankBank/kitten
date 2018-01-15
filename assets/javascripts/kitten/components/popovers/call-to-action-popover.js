@@ -31,13 +31,22 @@ export class CallToActionPopover extends Component {
   }
 
   renderButton(options, i) {
-    const { label, clickOptions, ...others } = options
+    const {
+      label,
+      clickOptions,
+       ...others,
+     } = options
+
     const clickHandler = this.getButtonClickHandler(clickOptions)
 
-    return <Button onClick={ clickHandler }
-                   key={ i }
-                   { ...others }
-                   children={ label } />
+    return (
+      <Button
+        onClick={ clickHandler }
+        key={ i }
+        children={ label }
+        { ...others }
+      />
+    )
   }
 
   renderButtonsList() {
@@ -59,6 +68,7 @@ export class CallToActionPopover extends Component {
         { this.renderIllustration() }
         <Marger
           top="4"
+          bottom="4"
           className="k-Popover__content"
         >
           <Marger bottom="1">
@@ -70,17 +80,21 @@ export class CallToActionPopover extends Component {
               { title }
             </Title>
           </Marger>
-          <Paragraph
-            modifier="tertiary"
-            margin={ false }
-          >
-            { text }
-          </Paragraph>
-          <div className="k-Popover__navigation">
-            <div className="k-Popover__buttons">
-              { this.renderButtonsList() }
+          <Marger top="1" bottom="3">
+            <Paragraph
+              modifier="tertiary"
+              margin={ false }
+            >
+              { text }
+            </Paragraph>
+          </Marger>
+          <Marger top="3">
+            <div className="k-Popover__navigation">
+              <div className="k-Popover__buttons">
+                { this.renderButtonsList() }
+              </div>
             </div>
-          </div>
+          </Marger>
         </Marger>
       </Popover>
     )
