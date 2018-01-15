@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-Feature: Update `KarlModalComponent` example.
+- Feature: Update `KarlModalComponent` example.
 
 ## [18.1.0] - 2018-01-09
 
