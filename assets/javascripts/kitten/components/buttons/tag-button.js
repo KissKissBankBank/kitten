@@ -3,20 +3,20 @@ import classNames from 'classnames'
 
 export class TagButton extends Component {
   render() {
-    const { className,
-            tag,
-            modifier,
-            children,
-            selected,
-            tiny,
-            big,
-            icon,
-            ...others } = this.props
+    const {
+      className,
+      tag,
+      children,
+      selected,
+      tiny,
+      big,
+      icon,
+      ...others,
+    } = this.props
 
     const tagButtonClassNames = classNames(
       'k-TagButton',
       className,
-      `k-TagButton--${modifier}`,
       {
         'is-selected': selected,
         'k-TagButton--tiny': tiny,
@@ -40,7 +40,6 @@ export class TagButton extends Component {
 
 TagButton.defaultProps = {
   tag: 'button',
-  modifier: 'hydrogen',
   children: 'Tag',
   selected: false,
   icon: false,

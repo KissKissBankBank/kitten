@@ -77,9 +77,6 @@
   $line-height: normal;
 
   .k-ProjectCard {
-    // Change overflow for negative margins on .k-ProjectCard__status.
-    overflow: visible;
-
     &.is-disabled {
       filter: grayscale(1) opacity(.4);
     }
@@ -167,7 +164,6 @@
 
   .k-ProjectCard__status {
     overflow: auto;
-    margin: 0 -1px -1px;
     @include k-typographyFont($status-font);
     @include k-typographyFontSize($status-size, $line-height);
   }

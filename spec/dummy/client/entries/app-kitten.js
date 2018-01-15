@@ -20,12 +20,13 @@ import {
   FacebookButtonIcon,
   LinkedinButtonIcon,
   TwitterButtonIcon,
+  InstagramButtonIcon,
 } from 'kitten/components/buttons/social-button-icon'
 import { TagButton } from 'kitten/components/buttons/tag-button'
 import { KarlButtonAndText } from 'kitten/karl/buttons/button'
 import {
   KarlButtonIconHeart,
-  KarlButtonIconMicro,
+  KarlButtonIconNano,
 } from 'kitten/karl/buttons/button-icon'
 import {
   KarlButtonIconWordsLeft,
@@ -34,11 +35,13 @@ import {
 import { KarlPaymentButtons } from 'kitten/karl/buttons/payment-button'
 
 // Cards
+import { ArticleCard } from 'kitten/components/cards/article-card'
 import { ProjectCard } from 'kitten/components/cards/project-card'
 import { ProjectCreatorCard }
   from 'kitten/components/cards/project-creator-card'
 import { ProjectSimilarCard }
   from 'kitten/components/cards/project-similar-card'
+import { SimpleCard } from 'kitten/components/cards/simple-card'
 import { KarlCard } from 'kitten/karl/cards/card'
 import {
   KarlSimilarProjectsCard,
@@ -126,6 +129,9 @@ import {
 import { KarlGithubRibbon } from 'kitten/karl/headers/karl-github-ribbon'
 import { KarlMenuHeader } from 'kitten/karl/headers/karl-header'
 
+// heroes.
+import { KarlHero } from 'kitten/karl/heroes/hero'
+
 // Icons
 import { ArrowIcon } from 'kitten/components/icons/arrow-icon'
 import { CbIcon } from 'kitten/components/icons/cb-icon'
@@ -163,14 +169,22 @@ import { PhoneIllustration }
 
 // Images
 import { KarlImageCropper } from 'kitten/karl/images/image-cropper'
+import { KarlImageWithCaption } from 'kitten/karl/images/image-with-caption'
 
 // Layout
 import { Separator } from 'kitten/components/layout/separator'
+import { KarlHorizontalStrokes } from 'kitten/karl/layout/horizontal-stroke'
 import {
   KarlLineWithBigHeart,
   KarlLineWithTooltip,
 } from 'kitten/karl/layout/line'
 import { KarlSeparator } from 'kitten/karl/layout/separator'
+import {
+  KarlVerticalStroke,
+  KarlTinyVerticalStroke,
+  KarlBigVerticalStroke,
+  KarlHugeVerticalStroke,
+} from 'kitten/karl/layout/vertical-stroke'
 
 // Lines
 import { InfoLines } from 'kitten/components/lines/info-lines'
@@ -178,6 +192,11 @@ import { InfoLines } from 'kitten/components/lines/info-lines'
 // Links
 import { ExternalRichLink } from 'kitten/components/links/external-rich-link'
 import { LinkList } from 'kitten/components/links/link-list'
+import {
+  KarlLinkList,
+  KarlLinkListDark,
+  KarlLinkListSelectedItem,
+} from 'kitten/karl/links/link-list'
 
 // Lists
 import { BulletList } from 'kitten/components/lists/bullet-list'
@@ -202,6 +221,10 @@ import {
 
 // Navigation
 import { TabBar } from 'kitten/components/navigation/tab-bar'
+import {
+  KarlHorizontalNav,
+  KarlBrowsingHorizontalNav,
+} from 'kitten/karl/navigation/horizontal-nav'
 
 // Notifications
 import { Alert } from 'kitten/components/notifications/alert'
@@ -276,6 +299,11 @@ import {
   KarlParagraphWithLink,
 } from 'kitten/karl/typography/paragraph'
 
+// Carousel
+import {
+  KarlCarouselProjectCard,
+} from 'kitten/karl/carousel/carousel'
+
 ReactOnRails.register({
   // Box
   DocLinkBox,
@@ -291,11 +319,12 @@ ReactOnRails.register({
   ButtonQuestionMarkIcon,
   FacebookButtonIcon,
   LinkedinButtonIcon,
+  InstagramButtonIcon,
   TagButton,
   TwitterButtonIcon,
   KarlButtonAndText,
   KarlButtonIconHeart,
-  KarlButtonIconMicro,
+  KarlButtonIconNano,
   KarlButtonIconWordsLeft,
   KarlButtonIconWordsRight,
   KarlPaymentButtons,
@@ -304,9 +333,11 @@ ReactOnRails.register({
   KarlColors,
 
   // Cards
+  ArticleCard,
   ProjectCard,
   ProjectCreatorCard,
   ProjectSimilarCard,
+  SimpleCard,
   KarlCard,
   KarlSimilarProjectsCard,
   KarlSimilarProjectsWithInfosCard,
@@ -376,6 +407,9 @@ ReactOnRails.register({
   KarlPhoneDropdown,
   KarlUnloggedHeaderPlatformSwitch,
 
+  // Heroes.
+  KarlHero,
+
   // Icons
   ArrowIcon,
   CbIcon,
@@ -409,12 +443,18 @@ ReactOnRails.register({
 
   // Images
   KarlImageCropper,
+  KarlImageWithCaption,
 
   // Layout
   Separator,
+  KarlHorizontalStrokes,
   KarlLineWithBigHeart,
   KarlLineWithTooltip,
   KarlSeparator,
+  KarlVerticalStroke,
+  KarlTinyVerticalStroke,
+  KarlBigVerticalStroke,
+  KarlHugeVerticalStroke,
 
   // Lines
   InfoLines,
@@ -422,6 +462,9 @@ ReactOnRails.register({
   // Links
   ExternalRichLink,
   LinkList,
+  KarlLinkList,
+  KarlLinkListDark,
+  KarlLinkListSelectedItem,
 
   // Lists
   BulletList,
@@ -443,6 +486,8 @@ ReactOnRails.register({
 
   // Navigation
   TabBar,
+  KarlHorizontalNav,
+  KarlBrowsingHorizontalNav,
 
   // Notifications
   Alert,
@@ -501,4 +546,7 @@ ReactOnRails.register({
   KarlParagraphSecondary,
   KarlParagraphTertiary,
   KarlParagraphWithLink,
+
+  // Carousel
+  KarlCarouselProjectCard,
 })

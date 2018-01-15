@@ -112,15 +112,10 @@
 
 @include k-Header;
 
-// Hero
-
-@include k-Hero((
-  font: 'light',
-));
-
 // Images
 
 @include k-Cropper;
+@include k-ImageWithCaption;
 
 // Icons
 
@@ -128,10 +123,12 @@
 
 // Layout
 
+@include k-HorizontalStroke;
 @include k-Line;
 @include k-ResponsiveIframeContainer;
 @include k-Separator;
 @include k-VerticalSeparator;
+@include k-VerticalStroke;
 
 // Lines
 
@@ -141,13 +138,7 @@
 
 @include k-ExternalRichLink;
 
-@include k-LinkList((
-  colors: (
-    link: map-get($k-colors, 'font-1'),
-    link-active: map-get($k-colors, 'primary-3'),
-    link-hover: map-get($k-colors, 'primary-1'),
-  ),
-));
+@include k-LinkList;
 
 // Lists
 
