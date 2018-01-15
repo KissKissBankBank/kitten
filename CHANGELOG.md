@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Change `font-size: 1rem` on `k-Button--big`.
 - Fix: Fix `captionProps` prop warning to `ImageWithCaption`.
+- Fix: Fix `titleProps` prop warning to `ArticleCard`.
 
 ## [18.1.0] - 2018-01-09
 
