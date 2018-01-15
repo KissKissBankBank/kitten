@@ -7,12 +7,6 @@ import {
   Grid as GridBase,
   GridCol as GridColBase,
 } from 'kitten/components/grid/grid'
-import { createMatchMediaMax } from 'kitten/helpers/utils/media-queries'
-import { ScreenConfig,
-  SCREEN_SIZE_XS,
-  SCREEN_SIZE_M,
-} from 'kitten/constants/screen-config'
-import COLORS from 'kitten/constants/colors-config'
 import { TextInputWithButton } from 'kitten/components/form/text-input-with-button'
 import { Paragraph  as ParagraphBase } from 'kitten/components/typography/paragraph'
 import { Text } from 'kitten/components/typography/text'
@@ -26,6 +20,12 @@ import { SelectWithState } from 'kitten/components/form/select-with-state'
 import {
   KissKissBankBankLogo as KissKissBankBankLogoBase
 } from 'kitten/karl/logos/kisskissbankbanklogo'
+import { createMatchMediaMax } from 'kitten/helpers/utils/media-queries'
+import { ScreenConfig,
+  SCREEN_SIZE_XS,
+  SCREEN_SIZE_M,
+} from 'kitten/constants/screen-config'
+import COLORS from 'kitten/constants/colors-config'
 
 const Grid = Radium(GridBase)
 const GridCol = Radium(GridColBase)
@@ -73,12 +73,10 @@ export class KarlFooterKisskiss extends Component {
   render() {
     return (
       <StyleRoot>
-        <div>
-          { this.renderNetwork() }
-          <div style={ styles.darkBackground }>
-            { this.renderList() }
-            { this.renderNotice() }
-          </div>
+        { this.renderNetwork() }
+        <div style={ styles.darkBackground }>
+          { this.renderList() }
+          { this.renderNotice() }
         </div>
       </StyleRoot>
     )
@@ -97,7 +95,7 @@ export class KarlFooterKisskiss extends Component {
                 <GridCol
                   col-m="12"
                   col-l="4"
-                  style={ styles.network.subscribe.newsletter.label }
+                  style={ styles.network.subscribe.label }
                 >
                   <Text
                     size="tiny"
@@ -110,7 +108,7 @@ export class KarlFooterKisskiss extends Component {
                 <GridCol
                   col-m="12"
                   col-l="6"
-                  style={ styles.network.subscribe.newsletter.form }
+                  style={ styles.network.subscribe.form }
                 >
                   <Grid>
                     <GridCol
@@ -356,8 +354,6 @@ export class KarlFooterKisskiss extends Component {
 const styles = {
   darkBackground: {
     backgroundColor: `${COLORS.font1}`,
-    // paddingTop: '30px',
-    // paddingBottom: '30px',
   },
 
   network: {
@@ -376,18 +372,16 @@ const styles = {
     },
 
     subscribe: {
-      newsletter: {
-        label: {
-          alignSelf: 'center',
-          [`@media (max-width: ${ScreenConfig['M'].max}px)`]: {
-            textAlign: 'center',
-          },
+      label: {
+        alignSelf: 'center',
+        [`@media (max-width: ${ScreenConfig['M'].max}px)`]: {
+          textAlign: 'center',
         },
+      },
 
-        form: {
-          [`@media (max-width: ${ScreenConfig['M'].max}px)`]: {
-            marginTop: '10px',
-          },
+      form: {
+        [`@media (max-width: ${ScreenConfig['M'].max}px)`]: {
+          marginTop: '10px',
         },
       },
     },
@@ -492,10 +486,11 @@ const styles = {
           },
 
           mangopay: {
-            width: '100px',
-            [`@media (max-width: ${ScreenConfig['S'].max}px)`]: {
-              marginTop: '30px',
-              width: '130px',
+            width: '130px',
+            marginTop: '30px',
+            [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
+              width: '100px',
+              marginTop: 0,
             },
           },
         },
