@@ -83,6 +83,14 @@ export class KarlFooterKisskiss extends Component {
   }
 
   renderNetwork() {
+    const {
+      subscribeLabel,
+      socialText,
+      inputValue,
+      textInputProps,
+      ...others,
+    } = this.props
+
     return(
       <Row style={ styles.network }>
         <Grid>
@@ -101,7 +109,7 @@ export class KarlFooterKisskiss extends Component {
                     size="tiny"
                     weight="regular"
                   >
-                    Inscrivez-vous à notre Newsletter
+                    { subscribeLabel }
                   </Text>
                 </GridCol>
 
@@ -117,10 +125,8 @@ export class KarlFooterKisskiss extends Component {
                       col-l="12"
                     >
                       <TextInputWithButton
-                        value="Envoyer"
-                        textInputProps={{
-                          placeholder:"Entrez votre e-mail"
-                        }}
+                        { ...textInputProps }
+                        value={ inputValue }
                       />
                     </GridCol>
                   </Grid>
@@ -139,7 +145,7 @@ export class KarlFooterKisskiss extends Component {
                 size="tiny"
                 weight="regular"
               >
-                Suivez-nous
+                { socialText }
               </Text>
             </div>
 
@@ -182,27 +188,6 @@ export class KarlFooterKisskiss extends Component {
   }
 
   renderList() {
-    const items = [
-      { key: 'key1', item: 'L’équipe', href: '#' },
-      { key: 'key2', item: 'Presse', href: '#' },
-      { key: 'key3', item: 'Conditions générales', href: '#' },
-      { key: 'key4', item: 'Nos valeurs', href: '#' },
-    ]
-
-    const items2 = [
-      { key: 'key1', item: 'Crowd', href: '#' },
-      { key: 'key2', item: 'Les Mentors', href: '#' },
-      { key: 'key3', item: 'Pop My Project', href: '#' },
-      { key: 'key4', item: 'Les StaKissTiques', href: '#' },
-      { key: 'key5', item: 'KissKiss Cinéma', href: '#' },
-    ]
-
-    const items3 = [
-      { key: 'key1', item: 'Réussir sa collecte', href: '#' },
-      { key: 'key2', item: 'Questions fréquentes', href: '#' },
-      { key: 'key3', item: 'Conditions générales', href: '#' },
-      { key: 'key4', item: 'Nous contacter', href: '#' },
-    ]
 
     return (
       <Row>
@@ -229,7 +214,7 @@ export class KarlFooterKisskiss extends Component {
               >
                 <LinkList
                   margin={ false }
-                  items={ items }
+                  items={ this.props.items1 }
                   color="light"
                 />
               </GridCol>
@@ -240,7 +225,7 @@ export class KarlFooterKisskiss extends Component {
               >
                 <LinkList
                   margin={ false }
-                  items={ items2 }
+                  items={ this.props.items2 }
                   color="light"
                 />
               </GridCol>
@@ -251,7 +236,7 @@ export class KarlFooterKisskiss extends Component {
               >
                 <LinkList
                   margin={ false }
-                  items={ items3 }
+                  items={ this.props.items3 }
                   color="light"
                 />
               </GridCol>
@@ -266,6 +251,10 @@ export class KarlFooterKisskiss extends Component {
   }
 
   renderNotice() {
+    const {
+      noticeParagraph,
+    } = this.props
+
     return(
       <Row>
         <Grid style={ styles.notice }>
@@ -289,8 +278,8 @@ export class KarlFooterKisskiss extends Component {
                 margin={ false }
                 style={ styles.notice.block.paragraph }
               >
-                KissKissBankBank est une plateforme de financement participatif
-                régulée par les autorités françaises. Immatriculation &nbsp;: 14007218
+                { noticeParagraph }
+
               </Paragraph>
             </div>
           </GridCol>
@@ -520,4 +509,40 @@ const styles = {
       },
     },
   },
+}
+
+KarlFooterKisskiss.defaultProps = {
+  // Network
+  subscribeLabel: 'Inscrivez-vous à notre Newsletter',
+  textInputProps: {
+    placeholder: 'Entrez votre e-mail',
+  },
+  inputValue: 'Envoyer',
+  socialText: 'Suivez-nous',
+
+  // List
+  items1: [
+    { key: 'key1', item: 'L\'équipe', href: '#', title: 'Aller à la page l\'équipe' },
+    { key: 'key2', item: 'Presse', href: '#', title: 'Aller à la page presse' },
+    { key: 'key3', item: 'Conditions générales', href: '#', title: 'Aller à la page conditions générales' },
+    { key: 'key4', item: 'Nos valeurs', href: '#', title: 'Aller à la page nos valeurs' },
+  ],
+  items2: [
+    { key: 'key1', item: 'Crowd' , href: '#', title: 'Aller à la page crowd' },
+    { key: 'key2', item: 'Les Mentors', href: '#', title: 'Aller à la page les Mentors' },
+    { key: 'key3', item: 'Pop My Project', href: '#', title: 'Aller à la page Pop My Project' },
+    { key: 'key4', item: 'Les StaKissTiques', href: '#', title: 'Aller à la page les StaKissTiques' },
+    { key: 'key5', item: 'KissKiss Cinéma', href: '#', title: 'Aller à la page KissKiss Cinéma' },
+  ],
+  items3: [
+    { key: 'key1', item: 'Réussir sa collecte', href: '#', title: 'Aller à la page réussir sa collecte' },
+    { key: 'key2', item: 'Questions fréquentes', href: '#', title: 'Aller à la page questions fréquentes' },
+    { key: 'key3', item: 'Conditions générales', href: '#', title: 'Aller à la page conditions générales' },
+    { key: 'key4', item: 'Nous contacter', href: '#', title: 'Aller à la page nous contacter' },
+  ],
+
+  // Notice
+  noticeParagraph:'KissKissBankBank est une plateforme de financement \
+  participatif régulée par les autorités françaises.\
+  Immatriculation &nbsp;: 14007218',
 }

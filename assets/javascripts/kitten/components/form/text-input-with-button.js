@@ -9,6 +9,7 @@ export class TextInputWithButton extends Component {
       error,
       disabled,
       value,
+      placeholder,
       className,
       textInputProps,
       buttonProps,
@@ -39,6 +40,7 @@ export class TextInputWithButton extends Component {
       <div className={ TextInputWithButtonClassName } { ...others }>
         <TextInput
           { ...textInputProps }
+          placeholder={ placeholder }
           valid={ valid }
           error={ error }
           disabled={ disabled }

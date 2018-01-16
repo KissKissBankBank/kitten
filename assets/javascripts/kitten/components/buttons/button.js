@@ -35,6 +35,7 @@ export class Button extends Component {
 
     return (
       <Tag
+        role="button"
         className={ buttonClassNames }
         tabIndex={ tabindex }
         { ...others }
