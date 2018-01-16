@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { Component } from 'react'
 import classNames from 'classnames'
 import { domElementHelper } from 'kitten/helpers/dom/element-helper'
 import { TourStep } from 'kitten/components/tours/tour-step'
 
-export class Tour extends React.Component {
+export class Tour extends Component {
   constructor(props) {
     super(props)
 
@@ -140,18 +140,20 @@ export class Tour extends React.Component {
     if (!this.state.play) return
 
     return(
-      <TourStep onNextClick={ this.handleClickOnNext }
-                onPrevClick={ this.handleClickOnPrev }
-                onCloseClick={ this.handleClickOnClose }
-                name={ this.state.currentStep.name }
-                title={ this.state.currentStep.title }
-                content={ this.state.currentStep.content }
-                targetElement={ this.state.currentStep.targetElement }
-                popoverPosition={ this.state.currentStep.popoverPosition }
-                illustration={ this.state.currentStep.illustration }
-                buttons={ this.getButtonsList() }
-                onTargetHighlightPosition={ this.handleTargetHighlightPosition }
-                progress={ this.getProgress() } />
+      <TourStep
+        onNextClick={ this.handleClickOnNext }
+        onPrevClick={ this.handleClickOnPrev }
+        onCloseClick={ this.handleClickOnClose }
+        name={ this.state.currentStep.name }
+        title={ this.state.currentStep.title }
+        content={ this.state.currentStep.content }
+        targetElement={ this.state.currentStep.targetElement }
+        popoverPosition={ this.state.currentStep.popoverPosition }
+        illustration={ this.state.currentStep.illustration }
+        buttons={ this.getButtonsList() }
+        onTargetHighlightPosition={ this.handleTargetHighlightPosition }
+        progress={ this.getProgress() }
+      />
     )
   }
 

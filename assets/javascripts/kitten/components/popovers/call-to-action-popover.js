@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { Component } from 'react'
+import { Marger } from 'kitten/components/layout/marger'
+import { Title } from 'kitten/components/typography/title'
+import { Paragraph } from 'kitten/components/typography/paragraph'
 import { Popover } from 'kitten/components/popovers/popover'
 import { Button } from 'kitten/components/buttons/button'
 
-export class CallToActionPopover extends React.Component {
+export class CallToActionPopover extends Component {
   constructor(props) {
     super(props)
 
@@ -28,13 +31,22 @@ export class CallToActionPopover extends React.Component {
   }
 
   renderButton(options, i) {
-    const { label, clickOptions, ...others } = options
+    const {
+      label,
+      clickOptions,
+       ...others,
+     } = options
+
     const clickHandler = this.getButtonClickHandler(clickOptions)
 
-    return <Button onClick={ clickHandler }
-                   key={ i }
-                   { ...others }
-                   children={ label } />
+    return (
+      <Button
+        onClick={ clickHandler }
+        key={ i }
+        children={ label }
+        { ...others }
+      />
+    )
   }
 
   renderButtonsList() {
@@ -54,20 +66,36 @@ export class CallToActionPopover extends React.Component {
     return (
       <Popover titleAriaLabelId={ titleAriaLabelId } { ...popoverProps }>
         { this.renderIllustration() }
-        <div className="k-Popover__content">
-          <p id={ titleAriaLabelId }
-             className="k-Popover__title">
-            { title }
-          </p>
-          <p className="k-Popover__text">
-            { text }
-          </p>
-          <div className="k-Popover__navigation">
-            <div className="k-Popover__buttons">
-              { this.renderButtonsList() }
+        <Marger
+          top="4"
+          bottom="4"
+          className="k-Popover__content"
+        >
+          <Marger bottom="1">
+            <Title
+              id={ titleAriaLabelId }
+              modifier="senary"
+              margin={ false }
+            >
+              { title }
+            </Title>
+          </Marger>
+          <Marger top="1" bottom="3">
+            <Paragraph
+              modifier="tertiary"
+              margin={ false }
+            >
+              { text }
+            </Paragraph>
+          </Marger>
+          <Marger top="3">
+            <div className="k-Popover__navigation">
+              <div className="k-Popover__buttons">
+                { this.renderButtonsList() }
+              </div>
             </div>
-          </div>
-        </div>
+          </Marger>
+        </Marger>
       </Popover>
     )
   }

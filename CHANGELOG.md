@@ -11,7 +11,18 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   needs `babel-polyfill` to work properly with `Map` and `Set`.
   You need to [install babel-polyfill](https://babeljs.io/docs/usage/polyfill/)
   and add it to your webpack config to make it work.
+- Feature: Update `Modal` component with styleguide V2.
+- Breaking change: Replace `k-Popover__title` and `k-Tour__popover__title`
+  by `Title` component.
+  Replace `k-Tour__popover__numbering` by `Text` component.
+- Feature: Update `Popover` and `CallToActionPopover` components with new design
+  styleguide V2.
+- Feature: Update `Tour` component with new design styleguide V2.
+- Feature: Add `size` prop to `CloseButton` component.
+- Feature: Add `k-ButtonIcon__rounded` class.
 - Feature: Change `font-size: 1rem` on `k-Button--big`.
+- Fix: Fix `captionProps` prop warning to `ImageWithCaption`.
+- Fix: Fix `titleProps` prop warning to `ArticleCard`.
 
 ## [18.1.0] - 2018-01-09
 
@@ -240,7 +251,6 @@ $k-colors: map-merge($k-colors, (
 
 Features:
 - Update `modifier` on `ButtonQuestionMarkIcon` component with styleguide V2.
-- Update `Tour` component with styleguide V2.
 - Update `font` on `Stepper` component with styleguide V2.
 - Update `HorizontalNav` component with styleguide V2.
 - Add `tiny` props in `TagButton` component.

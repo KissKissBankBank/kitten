@@ -13,9 +13,7 @@ describe('<CloseButton />', () => {
 
     it('has a default classes', () => {
       const className = classNames(
-        'k-ButtonIcon',
         'k-ButtonIcon--cross',
-        'k-ButtonIcon--hydrogen',
       )
 
       expect(closeButton.hasClass(className)).toBe(true)
