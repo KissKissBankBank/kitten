@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Update `Modal` component with styleguide V2.
 - Breaking change: Replace `k-Popover__title` and `k-Tour__popover__title`
   by `Title` component.
   Replace `k-Tour__popover__numbering` by `Text` component.
