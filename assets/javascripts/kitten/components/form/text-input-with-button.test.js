@@ -1,6 +1,4 @@
 import React, { Component } from 'react'
-import { expect } from 'chai'
-import { shallow, mount } from 'enzyme'
 import { TextInput } from 'kitten/components/form/text-input'
 import { TextInputWithButton }
   from 'kitten/components/form/text-input-with-button'
@@ -10,25 +8,25 @@ describe('<TextInputWithButton />', () => {
     const component = shallow(<TextInputWithButton />)
 
     it('renders a <div />', () => {
-      expect(component).to.have.tagName('div')
+      expect(component.is('div')).toBe(true)
     })
 
     it('has a "k-TextInputWithButton" class', () => {
-      expect(component).to.have.className('k-TextInputWithButton')
+      expect(component.hasClass('k-TextInputWithButton')).toBe(true)
     })
 
     it('renders an input.k-TextInputWithButton__input', () => {
       const textInput = component.find('TextInput')
 
-      expect(textInput).to.have.tagName('input')
-      expect(textInput).to.have.className('k-TextInputWithButton__input')
+      expect(textInput.dive().is('input')).toBe(true)
+      expect(textInput.dive().hasClass('k-TextInputWithButton__input')).toBe(true)
     })
 
     it('renders a button.k-TextInputWithButton__button', () => {
       const button = component.find('button')
 
-      expect(button).to.have.tagName('button')
-      expect(button).to.have.className('k-TextInputWithButton__button')
+      expect(button.is('button')).toBe(true)
+      expect(button.hasClass('k-TextInputWithButton__button')).toBe(true)
     })
   })
 
@@ -45,8 +43,8 @@ describe('<TextInputWithButton />', () => {
     const textInput = component.find('input')
 
     it('renders textInput with className prop', () => {
-      expect(textInput).to.have.className('custom-class')
-      expect(textInput).to.have.attr('aria-hidden', 'true')
+      expect(textInput.hasClass('custom-class')).toBe(true)
+      expect(textInput.props()['aria-hidden']).toBe(true)
     })
   })
 
@@ -56,11 +54,11 @@ describe('<TextInputWithButton />', () => {
     const button = component.find('button')
 
     it('has an <input /> with "is-valid" class', () => {
-      expect(textInput).to.have.className('is-valid')
+      expect(textInput.hasClass('is-valid')).toBe(true)
     })
 
     it('has an <button /> with "is-valid" class', () => {
-      expect(button).to.have.className('is-valid')
+      expect(button.hasClass('is-valid')).toBe(true)
     })
   })
 
@@ -70,11 +68,11 @@ describe('<TextInputWithButton />', () => {
     const button = component.find('button')
 
     it('has an <input /> with "is-error" class', () => {
-      expect(textInput).to.have.className('is-error')
+      expect(textInput.hasClass('is-error')).toBe(true)
     })
 
     it('has an <button /> with "is-error" class', () => {
-      expect(button).to.have.className('is-error')
+      expect(button.hasClass('is-error')).toBe(true)
     })
   })
 
@@ -84,11 +82,11 @@ describe('<TextInputWithButton />', () => {
     const button = component.find('button')
 
     it('has an <input /> with "is-disabled" class', () => {
-      expect(textInput).to.have.className('is-disabled')
+      expect(textInput.hasClass('is-disabled')).toBe(true)
     })
 
     it('has an <button /> with "is-disabled" class', () => {
-      expect(button).to.have.className('is-disabled')
+      expect(button.hasClass('is-disabled')).toBe(true)
     })
   })
 
@@ -97,7 +95,7 @@ describe('<TextInputWithButton />', () => {
     const button = component.find('.k-TextInputWithButton__button')
 
     it('renders value', () => {
-      expect(button).to.contain.text('custom-button')
+      expect(button.text()).toBe('custom-button')
     })
   })
 })

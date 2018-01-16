@@ -1,6 +1,4 @@
 import React from 'react'
-import { expect } from 'chai'
-import { shallow } from 'enzyme'
 import { Text } from 'kitten/components/typography/text'
 
 describe('<Text />', () => {
@@ -8,7 +6,7 @@ describe('<Text />', () => {
     const component = shallow(<Text />)
 
     it('renders a <span />', () => {
-      expect(component).to.have.tagName('span')
+      expect(component.type()).toBe('span')
     })
   })
 
@@ -16,7 +14,7 @@ describe('<Text />', () => {
     const component = shallow(<Text tag="div" />)
 
     it('renders a <div />', () => {
-      expect(component).to.have.tagName('div')
+      expect(component.type()).toBe('div')
     })
   })
 
@@ -24,7 +22,7 @@ describe('<Text />', () => {
     const component = shallow(<Text className="custom__class" />)
 
     it('has a good class', () => {
-      expect(component).to.have.className('custom__class')
+      expect(component.hasClass('custom__class')).toBe(true)
     })
   })
 
@@ -32,7 +30,7 @@ describe('<Text />', () => {
     const component = shallow(<Text aria-hidden={ true } />)
 
     it('has an aria-hidden attribute', () => {
-      expect(component).to.have.attr('aria-hidden', 'true')
+      expect(component.props()['aria-hidden']).toBe(true)
     })
   })
 
@@ -40,7 +38,7 @@ describe('<Text />', () => {
     const component = shallow(<Text weight="light" />)
 
     it('has a good utility class', () => {
-      expect(component).to.have.className('k-u-weight-light')
+      expect(component.hasClass('k-u-weight-light')).toBe(true)
     })
   })
 
@@ -48,7 +46,7 @@ describe('<Text />', () => {
     const component = shallow(<Text size="nano" />)
 
     it('has a good utility class', () => {
-      expect(component).to.have.className('k-u-size-nano')
+      expect(component.hasClass('k-u-size-nano')).toBe(true)
     })
   })
 
@@ -56,7 +54,7 @@ describe('<Text />', () => {
     const component = shallow(<Text lineHeight="normal" />)
 
     it('has a good utility class', () => {
-      expect(component).to.have.className('k-u-line-height-normal')
+      expect(component.hasClass('k-u-line-height-normal')).toBe(true)
     })
   })
 
@@ -64,7 +62,7 @@ describe('<Text />', () => {
     const component = shallow(<Text color="error" />)
 
     it('has a good utility class', () => {
-      expect(component).to.have.className('k-u-color-error')
+      expect(component.hasClass('k-u-color-error')).toBe(true)
     })
   })
 
@@ -72,7 +70,7 @@ describe('<Text />', () => {
     const component = shallow(<Text style="italic" />)
 
     it('has a good utility class', () => {
-      expect(component).to.have.className('k-u-style-italic')
+      expect(component.hasClass('k-u-style-italic')).toBe(true)
     })
   })
 
@@ -80,7 +78,7 @@ describe('<Text />', () => {
     const component = shallow(<Text transform="uppercase" />)
 
     it('has a good utility class', () => {
-      expect(component).to.have.className('k-u-transform-uppercase')
+      expect(component.hasClass('k-u-transform-uppercase')).toBe(true)
     })
   })
 
@@ -88,7 +86,7 @@ describe('<Text />', () => {
     const component = shallow(<Text decoration="underline" />)
 
     it('has a good utility class', () => {
-      expect(component).to.have.className('k-u-decoration-underline')
+      expect(component.hasClass('k-u-decoration-underline')).toBe(true)
     })
   })
 })

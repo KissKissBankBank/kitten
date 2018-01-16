@@ -1,6 +1,4 @@
 import React from 'react'
-import { expect } from 'chai'
-import { mount } from 'enzyme'
 import { Hero } from 'kitten/components/heroes/hero'
 import { Container } from 'kitten/components/grid/container'
 
@@ -13,19 +11,19 @@ describe('<Hero />', () => {
     })
 
     it('has a <Container /> component', () => {
-      expect(component).to.have.descendants(Container)
+      expect(component.find(Container).exists()).toBe(true)
     })
 
     it('has a <Grid /> component', () => {
-      expect(component).to.have.descendants('.k-Grid')
+      expect(component.find('.k-Grid').exists()).toBe(true)
     })
 
     it('has two <GridCol /> components', () => {
-      expect(component).to.have.exactly(2).descendants('.k-Grid__col--12')
+      expect(component.find('.k-Grid__col--12')).toHaveLength(2)
     })
 
     it('renders children value in the first GridCol', () => {
-      expect(component.find('.k-Grid__col--12').first()).to.have.text('FooBar')
+      expect(component.find('.k-Grid__col--12').first().text()).toBe('FooBar')
     })
   })
 })

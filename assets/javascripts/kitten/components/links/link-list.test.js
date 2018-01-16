@@ -1,6 +1,4 @@
 import React from 'react'
-import { expect } from 'chai'
-import { shallow, mount } from 'enzyme'
 import { LinkList } from 'kitten/components/links/link-list'
 
 describe('<LinkList />', () => {
@@ -13,20 +11,20 @@ describe('<LinkList />', () => {
     const linkList = shallow(<LinkList items={ items } />)
 
     it('is a <ul />', () => {
-      expect(linkList).to.have.tagName('ul')
+      expect(linkList.type()).toBe('ul')
     })
 
     it('has default class', () => {
-      expect(linkList).to.have.className('k-LinkList')
+      expect(linkList.hasClass('k-LinkList')).toBe(true)
     })
 
     it('renders 2 items', () => {
-      expect(linkList.children()).to.have.length(2)
+      expect(linkList.children()).toHaveLength(2)
     })
 
     it('has a good class on item', () => {
       const firstItem = linkList.children().first()
-      expect(firstItem).to.have.className('k-LinkList__item')
+      expect(firstItem.hasClass('k-LinkList__item')).toBe(true)
     })
   })
 
@@ -36,7 +34,7 @@ describe('<LinkList />', () => {
     )
 
     it('has a custom class', () => {
-      expect(linkList).to.have.className('custom__class')
+      expect(linkList.hasClass('custom__class')).toBe(true)
     })
   })
 
@@ -44,7 +42,7 @@ describe('<LinkList />', () => {
     const linkList = shallow(<LinkList margin={ false } />)
 
     it('has a good class', () => {
-      expect(linkList).to.have.className('k-LinkList--withoutMargin')
+      expect(linkList.hasClass('k-LinkList--withoutMargin')).toBe(true)
     })
   })
 
@@ -54,14 +52,14 @@ describe('<LinkList />', () => {
     it('has a first block with good item', () => {
       const firstItem = linkList.find('.k-LinkList__link').at(0)
 
-      expect(firstItem).to.contain.text('Foo')
+      expect(firstItem.text()).toBe('Foo')
     })
 
     it('has second block with active link', () => {
       const secondItem = linkList.find('.k-LinkList__link').at(1)
 
-      expect(secondItem).to.have.className('is-active')
-      expect(secondItem).to.contain.text('Bar')
+      expect(secondItem.hasClass('is-active')).toBe(true)
+      expect(secondItem.text()).toBe('Bar')
     })
   })
 
@@ -75,7 +73,7 @@ describe('<LinkList />', () => {
     const item = linkList.find('.k-LinkList__link').at(0)
 
     it('has a good class', () => {
-      expect(item).to.have.className('k-LinkList__link--dark')
+      expect(item.hasClass('k-LinkList__link--dark')).toBe(true)
     })
   })
 })

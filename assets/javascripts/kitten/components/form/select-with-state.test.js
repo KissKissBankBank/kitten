@@ -1,7 +1,5 @@
 import React from 'react'
 import sinon from 'sinon'
-import { expect } from 'chai'
-import { mount } from 'enzyme'
 import { SelectWithState } from 'kitten/components/form/select-with-state'
 import Select from 'react-select'
 
@@ -19,22 +17,22 @@ describe('<SelectWithState />', () => {
   })
 
   describe('with default props', () => {
-    before(() => {
+    beforeAll(() => {
       select = mount(
         <SelectWithState options={ options } />
       )
     })
 
     it('renders a <Select />', () => {
-      expect(select).to.have.descendants(Select)
+      expect(select.find(Select).exists()).toBe(true)
     })
 
     it('has `.k-Select` class', () => {
-      expect(select).to.have.className('k-Select')
+      expect(select.render().hasClass('k-Select')).toBe(true)
     })
 
     it('has a good props', () => {
-      expect(select).to.have.props(
+      expect(select.props()).toMatchObject(
         {
           clearable: false,
           searchable: false,
@@ -49,18 +47,18 @@ describe('<SelectWithState />', () => {
         }
       )
 
-      expect(select).to.have.prop('onChange')
-      expect(select).to.have.prop('onInputChange')
-      expect(select).to.have.prop('inputProps')
+      expect(select.props().onChange).toBeTruthy()
+      expect(select.props().onInputChange).toBeTruthy()
+      expect(select.props().inputProps).toBeTruthy()
     })
 
     it('has a good options', () => {
-      expect(select).to.have.prop('options', options)
+      expect(select.props().options).toBe(options)
     })
   })
 
   describe('with default value', () => {
-    before(() => {
+    beforeAll(() => {
       select = mount(
         <SelectWithState
           options={ options }
@@ -70,12 +68,12 @@ describe('<SelectWithState />', () => {
     })
 
     it('has value prop in state', () => {
-      expect(select).to.have.state('value', defaultValue)
+      expect(select.state().value).toBe(defaultValue)
     })
   })
 
   describe('with label', () => {
-    before(() => {
+    beforeAll(() => {
       select = mount(
         <SelectWithState
           options={ options }
@@ -85,13 +83,12 @@ describe('<SelectWithState />', () => {
     })
 
     it('renders a label with labelText prop', () => {
-      expect(select.find('.k-Select__label'))
-        .to.have.text('FooBar')
+      expect(select.find('.k-Select__label').text()).toBe('FooBar')
     })
   })
 
   describe('with classes props', () => {
-    before(() => {
+    beforeAll(() => {
       select = mount(
         <SelectWithState
           options={ options }
@@ -104,10 +101,10 @@ describe('<SelectWithState />', () => {
     })
 
     it('has all classes', () => {
-      expect(select).to.have.className('k-Select--tiny')
-      expect(select).to.have.className('is-error')
-      expect(select).to.have.className('is-valid')
-      expect(select).to.have.className('is-disabled')
+      expect(select.render().hasClass('k-Select--tiny')).toBe(true)
+      expect(select.render().hasClass('is-error')).toBe(true)
+      expect(select.render().hasClass('is-valid')).toBe(true)
+      expect(select.render().hasClass('is-disabled')).toBe(true)
     })
   })
 
@@ -115,7 +112,7 @@ describe('<SelectWithState />', () => {
     let onChangeSpy
     let onInputChangeSpy
 
-    before(() => {
+    beforeAll(() => {
       onChangeSpy = sandbox.spy()
       onInputChangeSpy = sandbox.spy()
       select = mount(
@@ -131,15 +128,15 @@ describe('<SelectWithState />', () => {
     })
 
     it('calls onChange prop callback', () => {
-      expect(onChangeSpy.calledOnce).to.equal(true)
-      expect(onChangeSpy.calledWith(defaultValue)).to.equal(true)
+      expect(onChangeSpy.calledOnce).toBe(true)
+      expect(onChangeSpy.calledWith(defaultValue)).toBe(true)
     })
 
     it('calls onInputChange prop callback', () => {
       const onInputChangeValue = { value: defaultValue, name: 'foobar' }
 
-      expect(onInputChangeSpy.calledOnce).to.equal(true)
-      expect(onInputChangeSpy.calledWith(onInputChangeValue)).to.equal(true)
+      expect(onInputChangeSpy.calledOnce).toBe(true)
+      expect(onInputChangeSpy.calledWith(onInputChangeValue)).toBe(true)
     })
   })
 
@@ -148,7 +145,7 @@ describe('<SelectWithState />', () => {
     let onInputChangeSpy
     let emptyValue
 
-    before(() => {
+    beforeAll(() => {
       onChangeSpy = sandbox.spy()
       onInputChangeSpy = sandbox.spy()
       emptyValue = { value: null, label: null }
@@ -165,13 +162,13 @@ describe('<SelectWithState />', () => {
     })
 
     it('calls onChange prop with empty value', () => {
-      expect(onChangeSpy.calledWith(emptyValue)).to.equal(true)
+      expect(onChangeSpy.calledWith(emptyValue)).toBe(true)
     })
 
     it('calls onInputChange prop with empty value', () => {
       const onInputChangeValue = { value: emptyValue, name: 'foobar' }
 
-      expect(onInputChangeSpy.calledWith(onInputChangeValue)).to.equal(true)
+      expect(onInputChangeSpy.calledWith(onInputChangeValue)).toBe(true)
     })
   })
 })

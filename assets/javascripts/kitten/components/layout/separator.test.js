@@ -1,6 +1,4 @@
 import React from 'react'
-import { expect } from 'chai'
-import { shallow } from 'enzyme'
 import { Separator } from 'kitten/components/layout/separator'
 
 describe('<Separator />', () => {
@@ -8,11 +6,11 @@ describe('<Separator />', () => {
     const separator = shallow(<Separator />)
 
     it('is a <hr />', () => {
-      expect(separator).to.have.tagName('hr')
+      expect(separator.is('hr')).toBe(true)
     })
 
     it('has good class', () => {
-      expect(separator).to.have.className('k-Separator')
+      expect(separator.hasClass('k-Separator')).toBe(true)
     })
   })
 
@@ -20,7 +18,7 @@ describe('<Separator />', () => {
     const separator = shallow(<Separator darker />)
 
     it('has good class', () => {
-      expect(separator).to.have.className('k-Separator--darker')
+      expect(separator.hasClass('k-Separator--darker')).toBe(true)
     })
   })
 
@@ -28,7 +26,7 @@ describe('<Separator />', () => {
     const separator = shallow(<Separator className="custom__class" />)
 
     it('has a custom class', () => {
-      expect(separator).to.have.className('custom__class')
+      expect(separator.hasClass('custom__class')).toBe(true)
     })
   })
 
@@ -36,7 +34,7 @@ describe('<Separator />', () => {
     const separator = shallow(<Separator aria-hidden="true" />)
 
     it('has an aria-hidden attribute', () => {
-      expect(separator).to.have.attr('aria-hidden', 'true')
+      expect(separator.props()['aria-hidden']).toBe('true')
     })
   })
 })

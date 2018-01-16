@@ -1,7 +1,4 @@
 import React from 'react'
-import { expect } from 'chai'
-import { shallow } from 'enzyme'
-
 import {
   Carousel,
   getNumColumnsForWidth,
@@ -33,6 +30,7 @@ describe('<Carousel />', () => {
 
   describe('by default on desktop', () => {
     window.matchMedia = createMockMediaMatcher(false) // desktop
+
     const carousel = shallow(
       <Carousel
         data={[{title: 'A'}]}
@@ -50,7 +48,7 @@ describe('<Carousel />', () => {
     )
 
     it('is a <Grid />', () => {
-      expect(carousel.dive()).to.have.className('k-Grid')
+      expect(carousel.dive().hasClass('k-Grid')).toBe(true)
     })
   })
 
@@ -74,7 +72,7 @@ describe('<Carousel />', () => {
     )
 
     it('is a <Grid />', () => {
-      expect(carousel.dive()).to.have.className('k-Grid')
+      expect(carousel.dive().hasClass('k-Grid')).toBe(true)
     })
   })
 
@@ -97,86 +95,85 @@ describe('<Carousel />', () => {
     )
 
     it('is not a <Grid />', () => {
-      expect(carousel).to.not.have.className('k-Grid')
+      expect(carousel.hasClass('k-Grid')).toBe(false)
     })
-
   })
 
   describe('getNumColumnsForWidth', () => {
     it('5 columns', () => {
-      expect( getNumColumnsForWidth(1000, 150, 50) ).to.equal(5)
+      expect( getNumColumnsForWidth(1000, 150, 50) ).toBe(5)
     })
 
     it('1 column', () => {
-      expect( getNumColumnsForWidth(300, 150, 20) ).to.equal(1)
+      expect( getNumColumnsForWidth(300, 150, 20) ).toBe(1)
     })
 
     it('0 column if no width', () => {
-      expect( getNumColumnsForWidth(0, 100, 10) ).to.equal(0)
+      expect( getNumColumnsForWidth(0, 100, 10) ).toBe(0)
     })
 
     it('0 column if no itemWidth', () => {
-      expect( getNumColumnsForWidth(800, 0, 0) ).to.equal(0)
+      expect( getNumColumnsForWidth(800, 0, 0) ).toBe(0)
     })
 
     it('NaN if not number', () => {
-      expect( getNumColumnsForWidth('0', '0', '0') ).to.be.NaN
+      expect( getNumColumnsForWidth('0', '0', '0') ).toBeNaN()
     })
   })
 
   describe('getNumPagesForColumnsAndDataLength', () => {
     it('3 pages', () => {
-      expect( getNumPagesForColumnsAndDataLength(7, 3) ).to.equal(3)
+      expect( getNumPagesForColumnsAndDataLength(7, 3) ).toBe(3)
     })
 
     it('1 page', () => {
-      expect( getNumPagesForColumnsAndDataLength(2, 2) ).to.equal(1)
+      expect( getNumPagesForColumnsAndDataLength(2, 2) ).toBe(1)
     })
 
     it('0 page if no dataLength', () => {
-      expect( getNumPagesForColumnsAndDataLength(0, 3) ).to.equal(0)
+      expect( getNumPagesForColumnsAndDataLength(0, 3) ).toBe(0)
     })
 
     it('0 page if no numColumns', () => {
-      expect( getNumPagesForColumnsAndDataLength(5, 0) ).to.equal(0)
+      expect( getNumPagesForColumnsAndDataLength(5, 0) ).toBe(0)
     })
 
     it('NaN if not number', () => {
-      expect( getNumPagesForColumnsAndDataLength('0', '0') ).to.be.NaN
+      expect( getNumPagesForColumnsAndDataLength('0', '0') ).toBeNaN()
     })
   })
 
   describe('checkPage', () => {
     it('to page number 2', () => {
-      expect( checkPage(4, 2) ).to.equal(2)
+      expect( checkPage(4, 2) ).toBe(2)
     })
 
     it('to page number 3', () => {
-      expect( checkPage(4, 3) ).to.equal(3)
+      expect( checkPage(4, 3) ).toBe(3)
     })
 
     it('stay page number 3', () => {
-      expect( checkPage(4, 4) ).to.equal(3)
+      expect( checkPage(4, 4) ).toBe(3)
     })
 
     it('to page number 1', () => {
-      expect( checkPage(4, 1) ).to.equal(1)
+      expect( checkPage(4, 1) ).toBe(1)
     })
 
     it('to page number 0', () => {
-      expect( checkPage(4, 0) ).to.equal(0)
+      expect( checkPage(4, 0) ).toBe(0)
     })
 
     it('stay page number 0 if newPage negative', () => {
-      expect( checkPage(4, -1) ).to.equal(0)
+      expect( checkPage(4, -1) ).toBe(0)
     })
 
     it('stay page number 0 if no numPages', () => {
-      expect( checkPage(0, 3) ).to.equal(0)
+      expect( checkPage(0, 3) ).toBe(0)
     })
 
     it('stay page 0 if not number', () => {
-      expect( checkPage('0', '0') ).to.equal(0)
+      expect( checkPage('0', '0') ).toBe(0)
     })
   })
 })

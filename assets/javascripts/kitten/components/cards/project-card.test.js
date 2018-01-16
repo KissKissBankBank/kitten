@@ -1,6 +1,4 @@
 import React from 'react'
-import { expect } from 'chai'
-import { shallow, mount } from 'enzyme'
 import { ProjectCard } from 'kitten/components/cards/project-card'
 import { ButtonImage } from 'kitten/components/buttons/button-image'
 import { Paragraph } from 'kitten/components/typography/paragraph'
@@ -15,11 +13,11 @@ describe('<ProjectCard />', () => {
     const projectCard = shallow(<ProjectCard />)
 
     it('is a <div />', () => {
-      expect(projectCard).to.have.tagName('div')
+      expect(projectCard.dive().is('div')).toBe(true)
     })
 
     it('has default class', () => {
-      expect(projectCard.dive()).to.have.className('k-ProjectCard')
+      expect(projectCard.dive().hasClass('k-ProjectCard')).toBe(true)
     })
   })
 
@@ -27,11 +25,11 @@ describe('<ProjectCard />', () => {
     const projectCard = shallow(<ProjectCard linkHref="#" />)
 
     it('is a <a />', () => {
-      expect(projectCard).to.have.tagName('a')
+      expect(projectCard.dive().is('a')).toBe(true)
     })
 
     it('has a href attribute', () => {
-      expect(projectCard).to.have.attr('href', '#')
+      expect(projectCard.props().linkHref).toBe('#')
     })
   })
 
@@ -39,7 +37,7 @@ describe('<ProjectCard />', () => {
     const projectCard = shallow(<ProjectCard linkTitle="Custom link title" />)
 
     it('has a title attribute', () => {
-      expect(projectCard).to.have.attr('title', 'Custom link title')
+      expect(projectCard.props().linkTitle).toBe('Custom link title')
     })
   })
 
@@ -47,12 +45,12 @@ describe('<ProjectCard />', () => {
     const projectCard = shallow(<ProjectCard href="#" disabled />)
 
     it('has a disabled class', () => {
-      expect(projectCard.dive()).to.have.className('is-disabled')
+      expect(projectCard.dive().hasClass('is-disabled')).toBe(true)
     })
 
     it('removes href attribute and <a> tag', () => {
-      expect(projectCard).to.have.tagName('div')
-      expect(projectCard).not.to.have.attr('href')
+      expect(projectCard.dive().is('div')).toBe(true)
+      expect(projectCard.dive().props().href).toBeFalsy()
     })
   })
 
@@ -60,7 +58,7 @@ describe('<ProjectCard />', () => {
     const projectCard = shallow(<ProjectCard className="custom__class" />)
 
     it('has a custom class', () => {
-      expect(projectCard.dive()).to.have.className('custom__class')
+      expect(projectCard.dive().hasClass('custom__class')).toBe(true)
     })
   })
 
@@ -72,9 +70,10 @@ describe('<ProjectCard />', () => {
     const buttonImageImgProps = { src: '#avatar' }
 
     it('has a <ButtonImage /> with img prop', () => {
-      expect(buttonImage).to.have.length(1)
-      expect(buttonImage.first())
-        .to.have.prop('img').deep.equal(buttonImageImgProps)
+      expect(buttonImage.exists()).toBe(true)
+      expect(buttonImage.first().props().img).toMatchObject(
+        buttonImageImgProps
+      )
     })
   })
 
@@ -88,11 +87,11 @@ describe('<ProjectCard />', () => {
     const paragraph = projectCard.find(Paragraph).first()
 
     it('renders a name value', () => {
-      expect(paragraph).to.contain.text('Custom name')
+      expect(paragraph.contains('Custom name')).toBe(true)
     })
 
     it('renders a location value', () => {
-      expect(paragraph).to.contain.text('Custom location')
+      expect(paragraph.contains('Custom location')).toBe(true)
     })
   })
 
@@ -112,11 +111,11 @@ describe('<ProjectCard />', () => {
     )
 
     it('renders a <TagList />', () => {
-      expect(projectCard).to.have.descendants(TagList)
+      expect(projectCard.find(TagList)).toHaveLength(1)
     })
 
     it('renders two <TagList />', () => {
-      expect(projectCardWithTwoLists).to.have.exactly(2).descendants(TagList)
+      expect(projectCardWithTwoLists.find(TagList)).toHaveLength(2)
     })
   })
 
@@ -127,12 +126,12 @@ describe('<ProjectCard />', () => {
     const icon = projectCard.find(IconBadge)
 
     it('renders a <IconBadge />', () => {
-      expect(icon).to.have.length(1)
+      expect(icon.exists()).toBe(true)
     })
 
     it('has good props', () => {
-      expect(icon).to.have.props([ 'children', 'style' ])
-                  .deep.equal([ 'A', { backgroundColor: '#FF0000' } ])
+      expect(icon.text()).toBe('A')
+      expect(icon.props().style).toMatchObject({ backgroundColor: '#FF0000' })
     })
   })
 
@@ -143,11 +142,11 @@ describe('<ProjectCard />', () => {
     const title = projectCard.find(Title)
 
     it('renders a <Title />', () => {
-      expect(title).to.have.length(1)
+      expect(title).toHaveLength(1)
     })
 
     it('renders a good text', () => {
-      expect(title).to.have.text('Custom title')
+      expect(title.text()).toBe('Custom title')
     })
   })
 
@@ -156,8 +155,8 @@ describe('<ProjectCard />', () => {
     const image = projectCard.find('.k-ProjectCard__img')
 
     it('renders an image with good href', () => {
-      expect(image).to.have.length(1)
-      expect(image).to.have.attr('src', 'test')
+      expect(image.exists()).toBe(true)
+      expect(image.props().src).toBe('test')
     })
   })
 
@@ -166,8 +165,8 @@ describe('<ProjectCard />', () => {
     const progress = projectCard.find(Progress)
 
     it('renders a <Progress value="42" />', () => {
-      expect(progress).to.have.length(1)
-      expect(progress).to.have.prop('value', '42')
+      expect(progress.exists()).toBe(true)
+      expect(progress.props().value).toBe('42')
     })
   })
 
@@ -182,28 +181,28 @@ describe('<ProjectCard />', () => {
     const infos = projectCard.find('.k-ProjectCard__info')
 
     it('renders 3 blocks', () => {
-      expect(infos).to.have.length(3)
+      expect(infos).toHaveLength(3)
     })
 
     it('has a first block with text then displayed value', () => {
       const firstInfo = infos.at(0)
 
-      expect(firstInfo.props().children[0]).to.be.equal('Custom text 1')
-      expect(firstInfo.props().children[2].props.children).to.be.equal('Custom value 1')
+      expect(firstInfo.props().children[0]).toBe('Custom text 1')
+      expect(firstInfo.props().children[2].props.children).toBe('Custom value 1')
     })
 
     it('has second block with text then locked value', () => {
       const secondInfo = infos.at(1)
 
-      expect(secondInfo.props().children[0]).to.be.equal('Custom text 2')
-      expect(secondInfo).to.have.descendants(LockIcon)
+      expect(secondInfo.props().children[0]).toBe('Custom text 2')
+      expect(secondInfo.find(LockIcon)).toHaveLength(1)
     })
 
     it('has a third block with reversed displayed items', () => {
       const firstInfo = infos.at(2)
 
-      expect(firstInfo.props().children[0].props.children).to.be.equal('Custom value 3')
-      expect(firstInfo.props().children[2]).to.be.equal('Custom text 3')
+      expect(firstInfo.props().children[0].props.children).toBe('Custom value 3')
+      expect(firstInfo.props().children[2]).toBe('Custom text 3')
     })
   })
 
@@ -218,7 +217,7 @@ describe('<ProjectCard />', () => {
     const value = info.find('.k-ProjectCard__info__value')
 
     it('renders an info value with color modifier', () => {
-      expect(value).to.have.className('k-u-color-primary1')
+      expect(value.hasClass('k-u-color-primary1')).toBe(true)
     })
   })
 
@@ -232,9 +231,9 @@ describe('<ProjectCard />', () => {
     const status = projectCard.find('.k-ProjectCard__status')
 
     it('renders a status block', () => {
-      expect(status).to.have.length(1)
-      expect(status).to.have.descendants('.k-ProjectCard__status__content')
-      expect(status).to.contain.text('Custom status')
+      expect(status).toHaveLength(1)
+      expect(status.find('.k-ProjectCard__status__content').exists()).toBeTruthy()
+      expect(status.contains('Custom status')).toBeTruthy()
     })
   })
 
@@ -248,8 +247,7 @@ describe('<ProjectCard />', () => {
     const status = projectCard.find('.k-ProjectCard__status').first()
 
     it('has a good class', () => {
-      expect(status)
-        .to.have.className('k-ProjectCard__status--primaryBackground')
+      expect(status.hasClass('k-ProjectCard__status--primaryBackground')).toBe(true)
     })
   })
 
@@ -263,8 +261,7 @@ describe('<ProjectCard />', () => {
     const status = projectCard.find('.k-ProjectCard__status').first()
 
     it('has a good class', () => {
-      expect(status)
-        .to.have.className('k-ProjectCard__status--validBackground')
+      expect(status.hasClass('k-ProjectCard__status--validBackground')).toBe(true)
     })
   })
 
@@ -278,8 +275,7 @@ describe('<ProjectCard />', () => {
     const status = projectCard.find('.k-ProjectCard__status').first()
 
     it('has a good class', () => {
-      expect(status)
-        .to.have.className('k-ProjectCard__status--greyBackground')
+      expect(status.hasClass('k-ProjectCard__status--greyBackground')).toBe(true)
     })
   })
 
@@ -293,8 +289,8 @@ describe('<ProjectCard />', () => {
     const status = projectCard.find('.k-ProjectCard__status').first()
 
     it('has a good class', () => {
-      expect(status)
-        .to.have.className('k-ProjectCard__status--errorBackground')
+      expect(status.hasClass('k-ProjectCard__status--errorBackground'))
+        .toBe(true)
     })
   })
 
@@ -308,8 +304,8 @@ describe('<ProjectCard />', () => {
     const status = projectCard.find('.k-ProjectCard__status').first()
 
     it('has a good class', () => {
-      expect(status)
-        .to.have.className('k-ProjectCard__status--errorReverseBackground')
+      expect(status.hasClass('k-ProjectCard__status--errorReverseBackground'))
+        .toBe(true)
     })
   })
 
@@ -319,16 +315,15 @@ describe('<ProjectCard />', () => {
     )
 
     it('has good classes', () => {
-      expect(projectCard).to.have.descendants('.k-ProjectCard__tooltip')
-      expect(projectCard)
-        .to.have.descendants('.k-ProjectCard__tooltip__content')
+      expect(projectCard.find('.k-ProjectCard__tooltip').exists()).toBeTruthy()
+      expect(projectCard.find('.k-ProjectCard__tooltip__content').exists()).toBeTruthy()
     })
 
     it('has a good text', () => {
       const content =
         projectCard.find('.k-ProjectCard__tooltip__content').first()
 
-      expect(content).to.have.text('Custom text')
+      expect(content.text()).toBe('Custom text')
     })
   })
 })

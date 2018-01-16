@@ -1,6 +1,4 @@
 import React from 'react'
-import { expect } from 'chai'
-import { shallow } from 'enzyme'
 import { TextInputAndSelect } from
   'kitten/components/form/text-input-and-select'
 import { SelectWithState } from 'kitten/components/form/select-with-state'
@@ -12,14 +10,14 @@ describe('<TextInputWithSelect />', () => {
       const component = shallow(<TextInputAndSelect />)
       const wrapper = component.find('.k-FormComposer__element')
 
-      expect(wrapper).to.have.length(2)
+      expect(wrapper).toHaveLength(2)
     })
 
     it('renders a <div class="k-FormComposer__element--main">', () => {
       const component = shallow(<TextInputAndSelect />)
       const wrapper = component.find('.k-FormComposer__element--main')
 
-      expect(wrapper).to.have.length(1)
+      expect(wrapper).toHaveLength(1)
     })
 
 
@@ -27,7 +25,7 @@ describe('<TextInputWithSelect />', () => {
       const component = shallow(<TextInputAndSelect />)
       const textInput = component.find(TextInput)
 
-      expect(textInput).to.have.length(1)
+      expect(textInput).toHaveLength(1)
     })
 
 
@@ -35,7 +33,7 @@ describe('<TextInputWithSelect />', () => {
       const component = shallow(<TextInputAndSelect />)
       const selectWithState = component.find(SelectWithState)
 
-      expect(selectWithState).to.have.length(1)
+      expect(selectWithState).toHaveLength(1)
     })
   })
 
@@ -45,7 +43,7 @@ describe('<TextInputWithSelect />', () => {
       const textInput = component.find(TextInput)
       const expectedProps = { tiny: true }
 
-      expect(textInput.props()).to.contain.all.keys(expectedProps)
+      expect(textInput.props()).toMatchObject(expectedProps)
     })
   })
 
@@ -55,7 +53,7 @@ describe('<TextInputWithSelect />', () => {
       const textInput = component.find(TextInput)
       const expectedProps = { disabled: true }
 
-      expect(textInput.props()).to.contain.any.keys(expectedProps)
+      expect(textInput.props()).toMatchObject(expectedProps)
     })
 
     it('pass the disabled prop to <SelectWithState />', () => {
@@ -63,7 +61,7 @@ describe('<TextInputWithSelect />', () => {
       const selectWithState = component.find(SelectWithState)
       const expectedProps = { disabled: true }
 
-      expect(selectWithState.props()).to.contain.any.keys(expectedProps)
+      expect(selectWithState.props()).toMatchObject(expectedProps)
     })
 
   })
@@ -74,7 +72,7 @@ describe('<TextInputWithSelect />', () => {
       const textInput = component.find(TextInput)
       const expectedProps = { error: true }
 
-      expect(textInput.props()).to.contain.any.keys(expectedProps)
+      expect(textInput.props()).toMatchObject(expectedProps)
     })
   })
 
@@ -84,7 +82,7 @@ describe('<TextInputWithSelect />', () => {
       const textInput = component.find(TextInput)
       const expectedProps = { valid: true }
 
-      expect(textInput.props()).to.contain.any.keys(expectedProps)
+      expect(textInput.props()).toMatchObject(expectedProps)
     })
   })
 
@@ -94,7 +92,7 @@ describe('<TextInputWithSelect />', () => {
       const selectWithState = component.find(SelectWithState)
       const expectedProps = { valid: true }
 
-      expect(selectWithState.props()).to.contain.any.keys(expectedProps)
+      expect(selectWithState.props()).toMatchObject(expectedProps)
     })
   })
 
@@ -105,7 +103,7 @@ describe('<TextInputWithSelect />', () => {
       const selectWithState = component.find(SelectWithState)
       const expectedProps = { name: selectName }
 
-      expect(selectWithState.props()).to.contain.any.keys(expectedProps)
+      expect(selectWithState.props()).toMatchObject(expectedProps)
     })
   })
 
@@ -116,17 +114,20 @@ describe('<TextInputWithSelect />', () => {
       const selectWithState = component.find(SelectWithState)
       const expectedProps = { value: selectValue }
 
-      expect(selectWithState.props()).to.contain.any.keys(expectedProps)
+      expect(selectWithState.props()).toMatchObject(expectedProps)
     })
   })
 
   describe('with digits prop', () => {
-    it('removes k-FormComposer__element--main class from the input wrapper', () => {
-      const component = shallow(<TextInputAndSelect digits="2" />)
-      const input = component.find('.k-FormComposer__element--main')
+    it(
+      'removes k-FormComposer__element--main class from the input wrapper',
+      () => {
+        const component = shallow(<TextInputAndSelect digits="2" />)
+        const input = component.find('.k-FormComposer__element--main')
 
-      expect(input).to.have.length(0)
-    })
+        expect(input).toHaveLength(0)
+      }
+    )
   })
 
   describe('with onSelectChange prop', () => {
@@ -138,7 +139,7 @@ describe('<TextInputWithSelect />', () => {
       const selectWithState = component.find(SelectWithState)
       const expectedProps = { onInputChange: handleSelectChange }
 
-      expect(selectWithState.props()).to.contain.any.keys(expectedProps)
+      expect(selectWithState.props()).toMatchObject(expectedProps)
     })
   })
 
@@ -148,7 +149,7 @@ describe('<TextInputWithSelect />', () => {
       const selectWithState = component.find(SelectWithState)
       const expectedProps = { error: true }
 
-      expect(selectWithState.props()).to.contain.any.keys(expectedProps)
+      expect(selectWithState.props()).toMatchObject(expectedProps)
     })
   })
 
@@ -159,7 +160,7 @@ describe('<TextInputWithSelect />', () => {
       )
       const inputWrapper = component.find('.k-TextInput--custom')
 
-      expect(inputWrapper).to.have.length(1)
+      expect(inputWrapper).toHaveLength(1)
     })
   })
 
@@ -169,7 +170,7 @@ describe('<TextInputWithSelect />', () => {
       const textInput = component.find(TextInput)
       const expectedProps = { ['data-custom']: 'Alice' }
 
-      expect(textInput.props()).to.contain.any.keys(expectedProps)
+      expect(textInput.props()).toMatchObject(expectedProps)
     })
   })
 

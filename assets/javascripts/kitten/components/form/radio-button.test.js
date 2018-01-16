@@ -1,6 +1,4 @@
 import React from 'react'
-import { expect } from 'chai'
-import { shallow, mount } from 'enzyme'
 import { RadioButton } from 'kitten/components/form/radio-button'
 
 describe('<RadioButton />', () => {
@@ -10,13 +8,13 @@ describe('<RadioButton />', () => {
     const label = component.find('label')
 
     it('renders an input.k-RadioButton__input">', () => {
-      expect(input).to.tagName('input')
-      expect(input.hasClass('k-RadioButton__input')).to.equal(true)
+      expect(input.is('input')).toBe(true)
+      expect(input.hasClass('k-RadioButton__input')).toBe(true)
     })
 
     it('renders a label.k-RadioButton__label">', () => {
-      expect(label).to.tagName('label')
-      expect(label.hasClass('k-RadioButton__label')).to.equal(true)
+      expect(label.is('label')).toBe(true)
+      expect(label.hasClass('k-RadioButton__label')).toBe(true)
     })
   })
 
@@ -25,7 +23,7 @@ describe('<RadioButton />', () => {
     const label = component.find('label')
 
     it('passes the right props to the `label` component', () => {
-      expect(label).to.have.className("k-RadioButton__label--large")
+      expect(label.hasClass("k-RadioButton__label--large")).toBe(true)
     })
   })
 
@@ -37,9 +35,8 @@ describe('<RadioButton />', () => {
     const labelContents = component.find('.k-RadioButton__labelContents')
 
     it('passes the right props to the `contentLarge` component', () => {
-      expect(labelContents).to.have.className(
-        'k-RadioButton__labelContents--large'
-      )
+      expect(labelContents.hasClass('k-RadioButton__labelContents--large'))
+        .toBe(true)
     })
   })
 
@@ -48,7 +45,7 @@ describe('<RadioButton />', () => {
     const input = component.find('input')
 
     it('passes the right props to the `input`component', () => {
-      expect(input).to.have.className('is-error')
+      expect(input.hasClass('is-error')).toBe(true)
     })
   })
 })

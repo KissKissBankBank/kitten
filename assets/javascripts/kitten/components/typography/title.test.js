@@ -1,6 +1,4 @@
 import React from 'react'
-import { expect } from 'chai'
-import { shallow } from 'enzyme'
 import { Title } from 'kitten/components/typography/title'
 
 describe('Title with default props', () => {
@@ -8,15 +6,15 @@ describe('Title with default props', () => {
     <Title />)
 
   it('has a default title attribute', () => {
-    expect(defaultComponent.find('.k-Title')).to.have.length(1)
+    expect(defaultComponent.find('.k-Title')).toHaveLength(1)
   })
 
   it('has a default tag', () => {
-    expect(defaultComponent).to.have.tagName('h1')
+    expect(defaultComponent.type()).toBe('h1')
   })
 
   it('has a default class', () => {
-    expect(defaultComponent).to.have.className('k-Title--primary')
+    expect(defaultComponent.hasClass('k-Title--primary')).toBe(true)
   })
 
   describe('<Title />', () => {
@@ -25,10 +23,10 @@ describe('Title with default props', () => {
     )
 
     it('renders a <Title class="k-Title" />', () => {
-      expect(component).to.have.tagName('h1')
-      expect(component).to.have.className('k-Title--custom')
-      expect(component).to.have.className('k-Title--primary')
-      expect(component).to.have.text('Felis…')
+      expect(component.type()).toBe('h1')
+      expect(component.hasClass('k-Title--custom')).toBe(true)
+      expect(component.hasClass('k-Title--primary')).toBe(true)
+      expect(component.text()).toBe('Felis…')
     })
 
     describe('modifier', () => {
@@ -36,7 +34,7 @@ describe('Title with default props', () => {
         const component = shallow(
           <Title modifier="secondary" />
         )
-        expect(component).to.have.className('k-Title--secondary')
+        expect(component.hasClass('k-Title--secondary')).toBe(true)
       })
     })
 
@@ -45,7 +43,7 @@ describe('Title with default props', () => {
         const component = shallow(
           <Title tag="h2" />
         )
-        expect(component).to.have.tagName('h2')
+        expect(component.type()).toBe('h2')
       })
     })
 
@@ -53,7 +51,7 @@ describe('Title with default props', () => {
       const component = shallow(<Title margin={ false } />)
 
       it('has a good class', () => {
-        expect(component).to.have.className('k-Title--withoutMargin')
+        expect(component.hasClass('k-Title--withoutMargin')).toBe(true)
       })
     })
   })

@@ -1,7 +1,5 @@
 import React from 'react'
 import classNames from 'classnames'
-import { expect } from 'chai'
-import { shallow, mount } from 'enzyme'
 import { Modal } from 'kitten/components/modals/modal'
 
 describe('<Modal />', () => {
@@ -11,7 +9,7 @@ describe('<Modal />', () => {
     )
 
     it('contains the trigger', () => {
-      expect(component).to.have.descendants('.trigger-example')
+      expect(component.find('.trigger-example').exists()).toBe(true)
     })
   })
 
@@ -21,8 +19,8 @@ describe('<Modal />', () => {
     )
 
     it('contains the content', () => {
-      expect(component).to.have.className('content-example')
-      expect(component).to.have.className('k-Modal')
+      expect(component.render().hasClass('content-example')).toBe(true)
+      expect(component.render().hasClass('k-Modal')).toBe(true)
     })
   })
 })

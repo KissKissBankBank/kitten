@@ -1,15 +1,14 @@
 import React from 'react'
 import classNames from 'classnames'
-import { expect } from 'chai'
-import { shallow } from 'enzyme'
 import { CloseButton } from 'kitten/components/buttons/close-button'
+import { ButtonIcon } from 'kitten/components/buttons/button-icon'
 
 describe('<CloseButton />', () => {
   describe('by default', () => {
     const closeButton = shallow(<CloseButton />)
 
-    it('is a <button />', () => {
-      expect(closeButton).to.have.tagName('button')
+    it('is a <ButtonIcon />', () => {
+      expect(closeButton.type()).toBe(ButtonIcon)
     })
 
     it('has a default classes', () => {
@@ -17,19 +16,23 @@ describe('<CloseButton />', () => {
         'k-ButtonIcon--cross',
       )
 
-      expect(closeButton).to.have.className(className)
+      expect(closeButton.hasClass(className)).toBe(true)
     })
 
     it('has a <CrossIcon />', () => {
-      expect(closeButton).to.have.descendants('CrossIcon')
+      expect(closeButton.find('CrossIcon')).toHaveLength(1)
     })
 
     it('has a title', () => {
-      expect(closeButton).to.have.attr('title', 'Close')
+      expect(closeButton.props().title).toBe('Close')
     })
 
     it('has an aria-label', () => {
-      expect(closeButton).to.have.attr('aria-label', 'Close')
+      expect(closeButton.props()['aria-label']).toBe('Close')
+    })
+
+    it('has a button type', () => {
+      expect(closeButton.props().type).toBe('button')
     })
   })
 
@@ -39,11 +42,19 @@ describe('<CloseButton />', () => {
     )
 
     it('has a title', () => {
-      expect(closeButton).to.have.attr('title', 'Close this alert')
+      expect(closeButton.props().title).toBe('Close this alert')
     })
 
     it('has an aria-label', () => {
-      expect(closeButton).to.have.attr('aria-label', 'Close this alert')
+      expect(closeButton.props()['aria-label']).toBe('Close this alert')
+    })
+  })
+
+  describe('with modifier prop', () => {
+    const closeButton = shallow(<CloseButton modifier='carbon' />)
+
+    it('has a class', () => {
+      expect(closeButton.render().hasClass('k-ButtonIcon--carbon')).toBe(true)
     })
   })
 
@@ -51,8 +62,8 @@ describe('<CloseButton />', () => {
     const closeButton = shallow(<CloseButton disabled name='CustomName' />)
 
     it('has custom props', () => {
-      expect(closeButton).to.have.attr('disabled')
-      expect(closeButton).to.have.attr('name', 'CustomName')
+      expect(closeButton.props().disabled).toBe(true)
+      expect(closeButton.props().name).toBe('CustomName')
     })
   })
 })

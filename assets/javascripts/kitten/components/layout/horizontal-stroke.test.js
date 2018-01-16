@@ -1,6 +1,4 @@
 import React from 'react'
-import { expect } from 'chai'
-import { shallow } from 'enzyme'
 import { HorizontalStroke } from 'kitten/components/layout/horizontal-stroke'
 
 describe('<HorizontalStroke />', () => {
@@ -10,11 +8,11 @@ describe('<HorizontalStroke />', () => {
     )
 
     it('renders a <span />', () => {
-      expect(horizontalStroke).to.have.tagName('span')
+      expect(horizontalStroke.is('span')).toBe(true)
     })
 
     it('has a good class', () => {
-      expect(horizontalStroke).to.have.className('k-HorizontalStroke')
+      expect(horizontalStroke.hasClass('k-HorizontalStroke')).toBe(true)
     })
   })
 
@@ -24,7 +22,7 @@ describe('<HorizontalStroke />', () => {
     )
 
     it('has a good class', () => {
-      expect(horizontalStroke).to.have.className('custom__class')
+      expect(horizontalStroke.hasClass('custom__class')).toBe(true)
     })
   })
 
@@ -34,7 +32,7 @@ describe('<HorizontalStroke />', () => {
     )
 
     it('has a good class', () => {
-      expect(horizontalStroke).to.have.className('k-HorizontalStroke--tiny')
+      expect(horizontalStroke.hasClass('k-HorizontalStroke--tiny')).toBe(true)
     })
   })
 
@@ -44,7 +42,7 @@ describe('<HorizontalStroke />', () => {
     )
 
     it('has a good class', () => {
-      expect(horizontalStroke).to.have.className('k-HorizontalStroke--default')
+      expect(horizontalStroke.hasClass('k-HorizontalStroke--default')).toBe(true)
     })
   })
 
@@ -54,7 +52,7 @@ describe('<HorizontalStroke />', () => {
     )
 
     it('has a good class', () => {
-      expect(horizontalStroke).to.have.className('k-HorizontalStroke--big')
+      expect(horizontalStroke.hasClass('k-HorizontalStroke--big')).toBe(true)
     })
   })
 
@@ -64,7 +62,7 @@ describe('<HorizontalStroke />', () => {
     )
 
     it('has a good class', () => {
-      expect(horizontalStroke).to.have.className('k-HorizontalStroke--huge')
+      expect(horizontalStroke.hasClass('k-HorizontalStroke--huge')).toBe(true)
     })
   })
 })
