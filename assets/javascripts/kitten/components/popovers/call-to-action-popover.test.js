@@ -7,19 +7,21 @@ import { CallToActionPopover }
 import { LoudspeakerIllustration }
   from 'kitten/components/illustrations/loudspeaker-illustration'
 import { Button } from 'kitten/components/buttons/button'
+import { Title } from 'kitten/components/typography/title'
+import { Paragraph } from 'kitten/components/typography/paragraph'
 
 describe('<CallToActionPopover />', () => {
   describe('by default', () => {
     const defaultComponent = shallow(<CallToActionPopover />)
 
     it('renders a title element', () => {
-      const titleElement = defaultComponent.find('.k-Popover__title')
+      const titleElement = defaultComponent.find(Title)
 
       expect(titleElement).to.have.length(1)
     })
 
     it('renders a text element', () => {
-      const textElement = defaultComponent.find('.k-Popover__text')
+      const textElement = defaultComponent.find(Paragraph)
 
       expect(textElement).to.have.length(1)
     })
@@ -39,9 +41,11 @@ describe('<CallToActionPopover />', () => {
 
       it('renders a <Button /> component', () => {
         const buttonComponent = (
-          <Button onClick={ undefined }
-                 modifier="helium"
-                 size="big">
+          <Button
+            onClick={ undefined }
+            modifier="helium"
+            size="big"
+          >
             Ok
           </Button>
         )
@@ -54,7 +58,7 @@ describe('<CallToActionPopover />', () => {
   describe('title prop', () => {
     const title = "Instantly break out"
     const component = mount(<CallToActionPopover title={ title } />)
-    const titleElement= component.find('.k-Popover__title')
+    const titleElement= component.find('Title')
 
     it('renders a title element', () => {
       expect(titleElement).to.have.length(1)
@@ -65,7 +69,7 @@ describe('<CallToActionPopover />', () => {
   describe('text prop', () => {
     const text = "Spend all night ensuring people don't sleep"
     const component = mount(<CallToActionPopover text={ text } />)
-    const textElement = component.find('.k-Popover__text')
+    const textElement = component.find('Paragraph')
 
     it('renders a text element', () => {
       expect(textElement).to.have.length(1)
@@ -129,10 +133,12 @@ describe('<CallToActionPopover />', () => {
       }]
       const onCloseClick = () => { return }
 
-      const component = mount(<CallToActionPopover
-        buttons={ buttons }
-        onCloseClick={ onCloseClick }
-      />)
+      const component = mount(
+        <CallToActionPopover
+          buttons={ buttons }
+          onCloseClick={ onCloseClick }
+        />
+      )
 
       it('passes a onClick prop to the <Button />', () => {
         const buttonComponent = buttonComponents.first()
@@ -149,7 +155,7 @@ describe('<CallToActionPopover />', () => {
     const component = mount(
       <CallToActionPopover titleAriaLabelId="custom-aria-label" />
     )
-    const titleElement = component.find('.k-Popover__title')
+    const titleElement = component.find('Title')
 
     it('assigns custom id for aria label', () => {
       expect(titleElement).to.have.attr('id', 'custom-aria-label')

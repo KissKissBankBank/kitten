@@ -14,9 +14,7 @@ describe('<CloseButton />', () => {
 
     it('has a default classes', () => {
       const className = classNames(
-        'k-ButtonIcon',
         'k-ButtonIcon--cross',
-        'k-ButtonIcon--hydrogen',
       )
 
       expect(closeButton).to.have.className(className)
@@ -33,10 +31,6 @@ describe('<CloseButton />', () => {
     it('has an aria-label', () => {
       expect(closeButton).to.have.attr('aria-label', 'Close')
     })
-
-    it('has a button type', () => {
-      expect(closeButton).to.have.type('button')
-    })
   })
 
   describe('with closeButtonLabel prop', () => {
@@ -50,14 +44,6 @@ describe('<CloseButton />', () => {
 
     it('has an aria-label', () => {
       expect(closeButton).to.have.attr('aria-label', 'Close this alert')
-    })
-  })
-
-  describe('with modifier prop', () => {
-    const closeButton = shallow(<CloseButton modifier='carbon' />)
-
-    it('has a class', () => {
-      expect(closeButton).to.have.className('k-ButtonIcon--carbon')
     })
   })
 

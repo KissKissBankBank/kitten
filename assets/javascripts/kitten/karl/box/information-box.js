@@ -6,7 +6,10 @@ import { InformationBox } from 'kitten/components/box/information-box'
 export const KarlInformationBox = () => {
   return (
     <InformationBox title="Lorem ipsum dolor sit amet">
-      <Paragraph modifier="quaternary">
+      <Paragraph
+        modifier="quaternary"
+        margin={ false }
+      >
         Consectetur adipiscing elit, sed do eiusmod tempor
         incididunt ut labore et dolore magna aliqua. Ut
         enim ad minim veniam, quis nostrud exercitation
