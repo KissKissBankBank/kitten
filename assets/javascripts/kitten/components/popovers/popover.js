@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { Component } from 'react'
 import classNames from 'classnames'
+import { Marger } from 'kitten/components/layout/marger'
 import { CloseButton } from 'kitten/components/buttons/close-button'
 
-export class Popover extends React.Component {
+export class Popover extends Component {
   constructor(props) {
     super(props)
 
@@ -16,6 +17,7 @@ export class Popover extends React.Component {
   renderCloseButton() {
     return (
       <CloseButton
+        modifier="beryllium"
         closeButtonLabel={ this.props.closeButtonLabel }
         onClick={ this.handleCloseClick }
       />
@@ -28,9 +30,13 @@ export class Popover extends React.Component {
     }
 
     return (
-      <div className="k-Popover__content">
+      <Marger
+        top="6"
+        bottom="3"
+        className="k-Popover__content"
+      >
         { this.props.children }
-      </div>
+      </Marger>
     )
   }
 
@@ -65,7 +71,7 @@ export class Popover extends React.Component {
       >
         <div className={ containerClassNames }>
           { this.renderContent() }
-          <div className="k-Popover__close">
+          <div>
             { this.renderCloseButton() }
           </div>
         </div>

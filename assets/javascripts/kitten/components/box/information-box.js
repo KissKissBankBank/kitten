@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-import { Title } from 'kitten/components/typography/title'
 import classNames from 'classnames'
+import { Title } from 'kitten/components/typography/title'
+import { Marger } from 'kitten/components/layout/marger'
 
 export class InformationBox extends Component {
   render() {
@@ -13,14 +14,18 @@ export class InformationBox extends Component {
     return (
       <div className="k-InformationBox" { ...other }>
         <div className="k-InformationBox__container">
-          <Title
-            margin={ false }
-            modifier="quaternary"
-            tag="p"
-          >
-            { title }
-          </Title>
-          { children }
+          <Marger bottom="1">
+            <Title
+              tag="p"
+              margin={ false }
+              modifier="quaternary"
+            >
+              { title }
+            </Title>
+          </Marger>
+          <Marger top="1">
+            { children }
+          </Marger>
         </div>
       </div>
     )

@@ -5,9 +5,33 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add `k-u-color-background1` utility.
-- Feature: Change `font-size: 1rem` on `k-Button--big`.
-- Fix: Fix `captionProps` prop warning to `ImageWithCaption`.
-- Fix: Fix `titleProps` prop warning to `ArticleCard`.
+
+## [19.0.0] - 2018-01-16
+
+Breaking changes:
+- Replace `k-Popover__title` and `k-Tour__popover__title`
+  by `Title` component.
+- Replace `k-Tour__popover__numbering` by `Text` component.
+- Update React/React-Dom to v16.x version which
+  needs `babel-polyfill` to work properly with `Map` and `Set`.
+  You need to [install babel-polyfill](https://babeljs.io/docs/usage/polyfill/)
+  and add it to your webpack config to make it work.
+
+Features:
+- Add [Jest](https://facebook.github.io/jest/) as our new
+  testing framework instead of [Mocha](https://mochajs.org/) and
+  [Chai](http://chaijs.com/).
+- Update `Modal` component with styleguide V2.
+- Update `Popover` and `CallToActionPopover` components with new design
+  styleguide V2.
+- Update `Tour` component with new design styleguide V2.
+- Add `size` prop to `CloseButton` component.
+- Add `k-ButtonIcon__rounded` class.
+- Change `font-size: 1rem` on `k-Button--big`.
+
+Fixes:
+- Fix `captionProps` prop warning to `ImageWithCaption`.
+- Fix `titleProps` prop warning to `ArticleCard`.
 
 ## [18.1.0] - 2018-01-09
 
@@ -236,7 +260,6 @@ $k-colors: map-merge($k-colors, (
 
 Features:
 - Update `modifier` on `ButtonQuestionMarkIcon` component with styleguide V2.
-- Update `Tour` component with styleguide V2.
 - Update `font` on `Stepper` component with styleguide V2.
 - Update `HorizontalNav` component with styleguide V2.
 - Add `tiny` props in `TagButton` component.

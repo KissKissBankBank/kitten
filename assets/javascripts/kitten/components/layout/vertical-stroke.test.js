@@ -1,6 +1,4 @@
 import React from 'react'
-import { expect } from 'chai'
-import { shallow } from 'enzyme'
 import { VerticalStroke } from 'kitten/components/layout/vertical-stroke'
 
 describe('<VerticalStroke />', () => {
@@ -8,11 +6,11 @@ describe('<VerticalStroke />', () => {
     const verticalStroke = shallow(<VerticalStroke />)
 
     it('renders a <span />', () => {
-      expect(verticalStroke).to.have.tagName('span')
+      expect(verticalStroke.is('span')).toBe(true)
     })
 
     it('has a good class', () => {
-      expect(verticalStroke).to.have.className('k-VerticalStroke')
+      expect(verticalStroke.hasClass('k-VerticalStroke')).toBe(true)
     })
   })
 
@@ -22,7 +20,7 @@ describe('<VerticalStroke />', () => {
     )
 
     it('has a good class', () => {
-      expect(verticalStroke).to.have.className('custom__class')
+      expect(verticalStroke.hasClass('custom__class')).toBe(true)
     })
   })
 
@@ -32,7 +30,7 @@ describe('<VerticalStroke />', () => {
     )
 
     it('has a good class', () => {
-      expect(verticalStroke).to.have.className('k-VerticalStroke--tiny')
+      expect(verticalStroke.hasClass('k-VerticalStroke--tiny')).toBe(true)
     })
   })
 
@@ -42,7 +40,7 @@ describe('<VerticalStroke />', () => {
     )
 
     it('has a good class', () => {
-      expect(verticalStroke).to.have.className('k-VerticalStroke--default')
+      expect(verticalStroke.hasClass('k-VerticalStroke--default')).toBe(true)
     })
   })
 
@@ -52,7 +50,7 @@ describe('<VerticalStroke />', () => {
     )
 
     it('has a good class', () => {
-      expect(verticalStroke).to.have.className('k-VerticalStroke--big')
+      expect(verticalStroke.hasClass('k-VerticalStroke--big')).toBe(true)
     })
   })
 
@@ -62,7 +60,7 @@ describe('<VerticalStroke />', () => {
     )
 
     it('has a good class', () => {
-      expect(verticalStroke).to.have.className('k-VerticalStroke--huge')
+      expect(verticalStroke.hasClass('k-VerticalStroke--huge')).toBe(true)
     })
   })
 })

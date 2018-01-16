@@ -16,7 +16,6 @@ export class Modal extends Component {
     this.close = this.close.bind(this)
   }
 
-
   open() {
     this.setState({ showModal: true })
   }
@@ -29,7 +28,7 @@ export class Modal extends Component {
     return (
       <CloseButton
         className="k-Modal__close"
-        modifier="hydrogen"
+        modifier="beryllium"
         onClick={ this.close }
       />
     )

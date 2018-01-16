@@ -1,52 +1,54 @@
 import React from 'react'
-import { expect } from 'chai'
-import { shallow, mount } from 'enzyme'
 import { Popover } from 'kitten/components/popovers/popover'
 import { CallToActionPopover }
   from 'kitten/components/popovers/call-to-action-popover'
 import { LoudspeakerIllustration }
   from 'kitten/components/illustrations/loudspeaker-illustration'
 import { Button } from 'kitten/components/buttons/button'
+import { Title } from 'kitten/components/typography/title'
+import { Paragraph } from 'kitten/components/typography/paragraph'
 
 describe('<CallToActionPopover />', () => {
   describe('by default', () => {
     const defaultComponent = shallow(<CallToActionPopover />)
 
     it('renders a title element', () => {
-      const titleElement = defaultComponent.find('.k-Popover__title')
+      const titleElement = defaultComponent.find(Title)
 
-      expect(titleElement).to.have.length(1)
+      expect(titleElement).toHaveLength(1)
     })
 
     it('renders a text element', () => {
-      const textElement = defaultComponent.find('.k-Popover__text')
+      const textElement = defaultComponent.find(Paragraph)
 
-      expect(textElement).to.have.length(1)
+      expect(textElement).toHaveLength(1)
     })
 
     describe('navigation', () => {
       it('renders a navigation element', () => {
         const navigationElement = defaultComponent.find('.k-Popover__navigation')
 
-        expect(navigationElement).to.have.length(1)
+        expect(navigationElement).toHaveLength(1)
       })
 
       it('renders buttons list', () => {
         const buttonsList = defaultComponent.find('.k-Popover__buttons')
 
-        expect(buttonsList).to.have.length(1)
+        expect(buttonsList).toHaveLength(1)
       })
 
       it('renders a <Button /> component', () => {
         const buttonComponent = (
-          <Button onClick={ undefined }
-                 modifier="helium"
-                 size="big">
+          <Button
+            onClick={ undefined }
+            modifier="helium"
+            size="big"
+          >
             Ok
           </Button>
         )
 
-        expect(defaultComponent).to.contain(buttonComponent)
+        expect(defaultComponent.contains(buttonComponent)).toBe(true)
       })
     })
   })
@@ -54,22 +56,22 @@ describe('<CallToActionPopover />', () => {
   describe('title prop', () => {
     const title = "Instantly break out"
     const component = mount(<CallToActionPopover title={ title } />)
-    const titleElement= component.find('.k-Popover__title')
+    const titleElement = component.find(Title)
 
     it('renders a title element', () => {
-      expect(titleElement).to.have.length(1)
-      expect(titleElement).to.have.text(title)
+      expect(titleElement).toHaveLength(1)
+      expect(titleElement.render().text()).toBe(title)
     })
   })
 
   describe('text prop', () => {
     const text = "Spend all night ensuring people don't sleep"
     const component = mount(<CallToActionPopover text={ text } />)
-    const textElement = component.find('.k-Popover__text')
+    const textElement = component.find('Paragraph')
 
     it('renders a text element', () => {
-      expect(textElement).to.have.length(1)
-      expect(textElement).to.have.text(text)
+      expect(textElement).toHaveLength(1)
+      expect(textElement.text()).toBe(text)
     })
   })
 
@@ -96,7 +98,7 @@ describe('<CallToActionPopover />', () => {
     const buttonComponents = component.find(Button)
 
     it('renders 2 <Button /> components', () => {
-      expect(buttonComponents).to.have.length(2)
+      expect(buttonComponents).toHaveLength(2)
     })
 
     it('passes the right props to the first <Button />', () => {
@@ -109,16 +111,16 @@ describe('<CallToActionPopover />', () => {
         target: button1Target,
       }
 
-      expect(buttonComponent.props()).to.contain.all.keys(expectedProps)
+      expect(buttonComponent.props()).toMatchObject(expectedProps)
     })
 
     it('passes the right props to the second <Button />', () => {
-      const buttonComponent = buttonComponents.first()
+      const buttonComponent = buttonComponents.last()
       const expectedProps = {
         children: button2Label,
       }
 
-      expect(buttonComponent.props()).to.contain.all.keys(expectedProps)
+      expect(buttonComponent.props()).toMatchObject(expectedProps)
     })
 
     describe('with close callback on a button', () => {
@@ -129,18 +131,20 @@ describe('<CallToActionPopover />', () => {
       }]
       const onCloseClick = () => { return }
 
-      const component = mount(<CallToActionPopover
-        buttons={ buttons }
-        onCloseClick={ onCloseClick }
-      />)
+      const component = mount(
+        <CallToActionPopover
+          buttons={ buttons }
+          onCloseClick={ onCloseClick }
+        />
+      )
 
       it('passes a onClick prop to the <Button />', () => {
-        const buttonComponent = buttonComponents.first()
+        const buttonComponent = component.find('button').first()
         const expectedProps = {
           onClick: onCloseClick,
         }
 
-        expect(buttonComponent.props()).to.contain.all.keys(expectedProps)
+        expect(buttonComponent.props()).toMatchObject(expectedProps)
       })
     })
   })
@@ -149,10 +153,10 @@ describe('<CallToActionPopover />', () => {
     const component = mount(
       <CallToActionPopover titleAriaLabelId="custom-aria-label" />
     )
-    const titleElement = component.find('.k-Popover__title')
+    const titleElement = component.find('Title')
 
     it('assigns custom id for aria label', () => {
-      expect(titleElement).to.have.attr('id', 'custom-aria-label')
+      expect(titleElement.props().id).toBe('custom-aria-label')
     })
   })
 
@@ -164,13 +168,13 @@ describe('<CallToActionPopover />', () => {
       const illustration = componentWithIllustration
         .find('.k-Popover__illustration')
 
-      expect(illustration).to.have.length(1)
+      expect(illustration).toHaveLength(1)
     })
 
     it('renders illustration component', () => {
       const illustration = <LoudspeakerIllustration />
 
-      expect(componentWithIllustration).to.contain(illustration)
+      expect(componentWithIllustration.contains(illustration)).toBe(true)
     })
   })
 
@@ -182,7 +186,7 @@ describe('<CallToActionPopover />', () => {
     it('propagates props to <Popover />', () => {
       const popoverComponent = component.find('.custom-popover')
 
-      expect(popoverComponent).to.have.length(1)
+      expect(popoverComponent).toHaveLength(1)
     })
   })
 })

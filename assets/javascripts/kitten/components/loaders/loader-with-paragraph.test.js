@@ -1,6 +1,4 @@
 import React from 'react'
-import { expect } from 'chai'
-import { mount } from 'enzyme'
 import { LoaderWithParagraph }
   from 'kitten/components/loaders/loader-with-paragraph'
 import { Loader } from 'kitten/components/loaders/loader'
@@ -11,31 +9,31 @@ describe('<LoaderWithParagraph />', () => {
     const loader = mount(<LoaderWithParagraph />)
 
     it('is a <div />', () => {
-      expect(loader).to.have.tagName('div')
+      expect(loader.render().is('div')).toBe(true)
     })
 
     it('has a default class', () => {
-      expect(loader).to.have.className('k-LoaderWithParagraph')
+      expect(loader.render().hasClass('k-LoaderWithParagraph')).toBe(true)
     })
 
     it('has a default text', () => {
-      expect(loader).to.have.text('Loading')
+      expect(loader.text()).toBe('Loading')
     })
 
     it('has a paragraph component', () => {
-      expect(loader).to.have.descendants(Paragraph)
+      expect(loader.find(Paragraph).exists()).toBe(true)
     })
 
     it('has a loader component', () => {
-      expect(loader).to.have.descendants(Loader)
+      expect(loader.find(Loader).exists()).toBe(true)
     })
 
     it('has a loader to right of paragraph', () => {
       const first = loader.children().first()
       const last = loader.children().last()
 
-      expect(first).to.have.descendants(Loader)
-      expect(last).to.have.descendants(Paragraph)
+      expect(first.find(Loader).exists()).toBe(true)
+      expect(last.find(Paragraph).exists()).toBe(true)
     })
   })
 
@@ -45,7 +43,7 @@ describe('<LoaderWithParagraph />', () => {
     )
 
     it('has a good text', () => {
-      expect(loader).to.have.text('Lorem ipsum…')
+      expect(loader.text()).toBe('Lorem ipsum…')
     })
   })
 
@@ -53,7 +51,7 @@ describe('<LoaderWithParagraph />', () => {
     const loader = mount(<LoaderWithParagraph className="custom__class" />)
 
     it('is a good class', () => {
-      expect(loader).to.have.className('custom__class')
+      expect(loader.hasClass('custom__class')).toBe(true)
     })
   })
 
@@ -64,8 +62,8 @@ describe('<LoaderWithParagraph />', () => {
       const first = loader.children().first()
       const last = loader.children().last()
 
-      expect(first).to.have.descendants(Loader)
-      expect(last).to.have.descendants(Paragraph)
+      expect(first.find(Loader).exists()).toBe(true)
+      expect(last.find(Paragraph).exists()).toBe(true)
     })
   })
 
@@ -76,12 +74,12 @@ describe('<LoaderWithParagraph />', () => {
       const first = loader.children().first()
       const last = loader.children().last()
 
-      expect(first).to.have.descendants(Loader)
-      expect(last).to.have.descendants(Paragraph)
+      expect(first.find(Loader).exists()).toBe(true)
+      expect(last.find(Paragraph).exists()).toBe(true)
     })
 
     it('has a class to manage columns version', () => {
-      expect(loader).to.have.className('k-LoaderWithParagraph--column')
+      expect(loader.render().hasClass('k-LoaderWithParagraph--column')).toBe(true)
     })
   })
 
@@ -92,12 +90,12 @@ describe('<LoaderWithParagraph />', () => {
       const first = loader.children().first()
       const last = loader.children().last()
 
-      expect(first).to.have.descendants(Paragraph)
-      expect(last).to.have.descendants(Loader)
+      expect(first.find(Paragraph).exists()).toBe(true)
+      expect(last.find(Loader).exists()).toBe(true)
     })
 
     it('has a class to manage columns version', () => {
-      expect(loader).to.have.className('k-LoaderWithParagraph--column')
+      expect(loader.render().hasClass('k-LoaderWithParagraph--column')).toBe(true)
     })
   })
 
@@ -107,7 +105,7 @@ describe('<LoaderWithParagraph />', () => {
     )
 
     it('has a custom class on Loader component', () => {
-      expect(loader).to.have.descendants('.custom__class')
+      expect(loader.find('.custom__class').exists()).toBe(true)
     })
   })
 
@@ -117,7 +115,7 @@ describe('<LoaderWithParagraph />', () => {
     )
 
     it('has a custom class on Paragraph component', () => {
-      expect(loader).to.have.descendants('.custom__class')
+      expect(loader.find('.custom__class').exists()).toBe(true)
     })
   })
 })

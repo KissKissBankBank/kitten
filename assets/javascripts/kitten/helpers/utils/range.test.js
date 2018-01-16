@@ -1,5 +1,4 @@
 import React from 'react'
-import { expect } from 'chai'
 import { createRangeFromZeroTo } from 'kitten/helpers/utils/range'
 
 describe('utils range', () => {
@@ -7,7 +6,7 @@ describe('utils range', () => {
     const range = createRangeFromZeroTo(2)
 
     it('return the array 0 to 1', () => {
-      expect(range).to.eql([0, 1])
+      expect(range).toEqual([0, 1])
     })
   })
 
@@ -15,7 +14,7 @@ describe('utils range', () => {
     const range = createRangeFromZeroTo(7)
 
     it('return the array 0 to 6', () => {
-      expect(range).to.eql([0, 1, 2, 3, 4, 5, 6])
+      expect(range).toEqual([0, 1, 2, 3, 4, 5, 6])
     })
   })
 
@@ -23,7 +22,7 @@ describe('utils range', () => {
     const range = createRangeFromZeroTo(1)
 
     it('return the array 0', () => {
-      expect(range).to.eql([0])
+      expect(range).toEqual([0])
     })
   })
 
@@ -31,7 +30,7 @@ describe('utils range', () => {
     const range = createRangeFromZeroTo(0)
 
     it('return the array empty', () => {
-      expect(range).to.eql([])
+      expect(range).toEqual([])
     })
   })
 
@@ -39,7 +38,7 @@ describe('utils range', () => {
     const range = createRangeFromZeroTo()
 
     it('return the array empty', () => {
-      expect(range).to.eql([])
+      expect(range).toEqual([])
     })
   })
 
@@ -47,7 +46,7 @@ describe('utils range', () => {
     const range = createRangeFromZeroTo('toto')
 
     it('return the array empty', () => {
-      expect(range).to.eql([])
+      expect(range).toEqual([])
     })
   })
 })

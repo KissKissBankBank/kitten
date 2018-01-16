@@ -1,6 +1,4 @@
 import React from 'react'
-import { expect } from 'chai'
-import { shallow, mount } from 'enzyme'
 import { ArticleCard } from 'kitten/components/cards/article-card'
 import { Title } from 'kitten/components/typography/title'
 import { Text } from 'kitten/components/typography/text'
@@ -10,6 +8,7 @@ import { ButtonImage } from 'kitten/components/buttons/button-image'
 describe('<ArticleCard />', () => {
   let component
   let buttonImage
+  let cardImage
   let title
 
   describe('by default', () => {
@@ -18,32 +17,32 @@ describe('<ArticleCard />', () => {
     })
 
     it('is a <div />', () => {
-      expect(component).to.have.tagName('div')
+      expect(component.render().is('div')).toBe(true)
     })
 
     it('has an image container', () => {
-      expect(component).to.have.descendants('.k-Card__imageContainer')
+      expect(component.find('.k-Card__imageContainer').exists()).toBe(true)
     })
 
     it('has a <img /> with good class', () => {
-      expect(component).to.have.descendants('img')
-      expect(component).to.have.descendants('.k-Card__image')
+      expect(component.find('img').exists()).toBe(true)
+      expect(component.find('.k-Card__image').exists()).toBe(true)
     })
 
     it('has a <ButtonImage /> component', () => {
-      expect(component).to.have.descendants(ButtonImage)
+      expect(component.find(ButtonImage)).toHaveLength(1)
     })
 
     it('has not a <Title /> component', () => {
-      expect(component).to.have.descendants(Title)
+      expect(component.find(Title)).toHaveLength(1)
     })
 
     it('has 2 <Text /> components', () => {
-      expect(component).to.have.exactly(2).descendants(Text)
+      expect(component.find(Text)).toHaveLength(2)
     })
 
     it('has <HorizontalStroke /> component', () => {
-      expect(component).to.have.descendants(HorizontalStroke)
+      expect(component.find(HorizontalStroke)).toHaveLength(1)
     })
   })
 
@@ -53,11 +52,11 @@ describe('<ArticleCard />', () => {
     })
 
     it('is a <a />', () => {
-      expect(component).to.have.tagName('a')
+      expect(component.render().is('a')).toBe(true)
     })
 
     it('has a href attribute', () => {
-      expect(component).to.have.attr('href', '#')
+      expect(component.props().href).toBe('#')
     })
   })
 
@@ -74,19 +73,20 @@ describe('<ArticleCard />', () => {
           } }
         />
       )
+
+      cardImage = component.find('.k-Card__image')
     })
 
     it('has an image with `#` src', () => {
-      expect(component.find('.k-Card__image')).to.have.prop('src', '#foobar')
+      expect(cardImage.props().src).toBe('#foobar')
     })
 
     it('has an image with alt description', () => {
-      expect(component.find('.k-Card__image')).to.have.prop('alt', 'FooBar')
+      expect(cardImage.props().alt).toBe('FooBar')
     })
 
     it('has an image with a custom style', () => {
-      expect(component.find('.k-Card__image'))
-        .to.have.style('cursor', 'crosshair')
+      expect(cardImage.props().style).toMatchObject({ cursor: 'crosshair' })
     })
   })
 
@@ -108,14 +108,13 @@ describe('<ArticleCard />', () => {
     })
 
     it('has good props on <ButtonImage />', () => {
-      expect(buttonImage)
-        .to.have.prop('img').deep.equal({
-          src: '#foobar',
-          alt: 'FooBar',
-          style: {
-            cursor: 'crosshair',
-          },
-        })
+      expect(buttonImage.props().img).toMatchObject({
+        src: '#foobar',
+        alt: 'FooBar',
+        style: {
+          cursor: 'crosshair',
+        },
+      })
     })
   })
 
@@ -134,11 +133,11 @@ describe('<ArticleCard />', () => {
     })
 
     it('has a title with h2 tag', () => {
-      expect(title).to.have.prop('tag', 'h2')
+      expect(title.props().tag).toBe('h2')
     })
 
     it('has a custom class on Title', () => {
-      expect(title).to.have.className('custom-class')
+      expect(title.hasClass('custom-class')).toBe(true)
     })
   })
 })
