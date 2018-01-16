@@ -56,7 +56,7 @@ describe('<CallToActionPopover />', () => {
   describe('title prop', () => {
     const title = "Instantly break out"
     const component = mount(<CallToActionPopover title={ title } />)
-    const titleElement = component.find('.k-Popover__title')
+    const titleElement = component.find(Title)
 
     it('renders a title element', () => {
       expect(titleElement).toHaveLength(1)
