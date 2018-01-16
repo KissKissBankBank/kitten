@@ -1,6 +1,4 @@
 import React, { Component } from 'react'
-import { expect } from 'chai'
-import { shallow, mount } from 'enzyme'
 import { SimilarProjectCard }
   from 'kitten/components/cards/project-similar-card'
 import { Title } from 'kitten/components/typography/title'
@@ -17,11 +15,11 @@ describe('<SimilarProjectCard />', () => {
     const rightArrowButton = arrowButtons.last()
 
     it('is a <div />', () => {
-      expect(similarProjectCard).to.have.tagName('div')
+      expect(similarProjectCard.render().is('div')).toBe(true)
     })
 
     it('has a default class', () => {
-      expect(similarProjectCard).to.have.className('k-ProjectSimilarCard')
+      expect(similarProjectCard.render().hasClass('k-ProjectSimilarCard')).toBe(true)
     })
 
     it('adds the right class to the content tag', () => {
@@ -31,26 +29,26 @@ describe('<SimilarProjectCard />', () => {
 
       const content = similarProjectCard.find('.k-ProjectSimilarCard__content')
 
-      expect(content).to.have.length(1)
+      expect(content).toHaveLength(1)
     })
 
     describe('left arrow', () => {
       it('is disabled', () => {
-        expect(leftArrowButton).to.have.attr('disabled')
+        expect(leftArrowButton.props().disabled).toBeTruthy()
       })
 
       it('has a button type', () => {
-        expect(leftArrowButton).to.have.attr('type', 'button')
+        expect(leftArrowButton.props().type).toBe('button')
       })
     })
 
     describe('right arrow', () => {
       it('is disabled', () => {
-        expect(rightArrowButton).to.have.attr('disabled')
+        expect(rightArrowButton.props().disabled).toBeTruthy()
       })
 
       it('has a button type', () => {
-        expect(rightArrowButton).to.have.attr('type', 'button')
+        expect(rightArrowButton.props().type).toBe('button')
       })
     })
   })
@@ -60,8 +58,8 @@ describe('<SimilarProjectCard />', () => {
     const image = similarProjectCard.find('.k-ProjectSimilarCard__img')
 
     it('renders an image with good href', () => {
-      expect(image).to.have.length(1)
-      expect(image).to.have.attr('src', 'test')
+      expect(image.exists()).toBe(true)
+      expect(image.props().src).toBe('test')
     })
   })
 
@@ -71,8 +69,8 @@ describe('<SimilarProjectCard />', () => {
     const title = similarProjectCard.find('.k-Title')
 
     it('renders a <Title />', () => {
-      expect(similarProjectCard).to.have.descendants(Title)
-      expect(title.text()).to.equal("Custom title")
+      expect(similarProjectCard.find(Title)).toHaveLength(1)
+      expect(title.text()).toBe('Custom title')
     })
   })
 
@@ -82,8 +80,8 @@ describe('<SimilarProjectCard />', () => {
     const paragraph = similarProjectCard.find('.k-Paragraph')
 
     it('renders a <Paragraph />', () => {
-      expect(similarProjectCard).to.have.descendants(Paragraph)
-      expect(paragraph.text()).to.equal("Custom paragraph")
+      expect(similarProjectCard.find(Paragraph)).toHaveLength(1)
+      expect(paragraph.text()).toBe('Custom paragraph')
     })
   })
 
@@ -103,13 +101,13 @@ describe('<SimilarProjectCard />', () => {
     const tags = similarProjectCard.find('.k-TagList')
 
     it('renders a <TagList />', () => {
-      expect(similarProjectCard).to.have.descendants(TagList)
+      expect(similarProjectCard.find(TagList)).toHaveLength(1)
     })
 
     it('has a first block with good item', () => {
       const firstTag = tags.at(0)
 
-      expect(firstTag).to.contain.text('Custom tag')
+      expect(firstTag.contains('Custom tag')).toBe(true)
     })
   })
 
@@ -131,21 +129,21 @@ describe('<SimilarProjectCard />', () => {
     const infos = similarProjectCard.find('.k-ProjectSimilarCard__info')
 
     it('renders 3 blocks', () => {
-      expect(infos).to.have.length(3)
+      expect(infos).toHaveLength(3)
     })
 
     it('has a first block with good values', () => {
       const firstInfo = infos.at(0)
 
-      expect(firstInfo).to.contain.text('Custom value 1')
-      expect(firstInfo).to.contain.text('Custom text 1')
+      expect(firstInfo.contains('Custom value 1')).toBe(true)
+      expect(firstInfo.contains('Custom text 1')).toBe(true)
     })
 
     it('has second block with locked value', () => {
       const secondInfo = infos.at(1)
 
-      expect(secondInfo).to.have.descendants(LockIcon)
-      expect(secondInfo).to.contain.text('Custom text 2')
+      expect(secondInfo.find(LockIcon)).toHaveLength(1)
+      expect(secondInfo.contains('Custom text 2')).toBe(true)
     })
   })
 
@@ -162,7 +160,7 @@ describe('<SimilarProjectCard />', () => {
     const value = info.find('.k-ProjectSimilarCard__info__value')
 
     it('renders an info value with color modifier', () => {
-      expect(value).to.have.className('k-u-color-primary1')
+      expect(value.hasClass('k-u-color-primary1')).toBe(true)
     })
   })
 
@@ -171,8 +169,8 @@ describe('<SimilarProjectCard />', () => {
     const loader = similarProjectCard.find('.k-ProjectSimilarCard__loading')
 
     it('render <Loader />', () => {
-      expect(similarProjectCard).to.have.descendants(Loader)
-      expect(loader).to.have.length(1)
+      expect(similarProjectCard.find(Loader)).toHaveLength(1)
+      expect(loader.exists()).toBe(true)
     })
   })
 
@@ -181,8 +179,8 @@ describe('<SimilarProjectCard />', () => {
     const loader = similarProjectCard.find('.k-ProjectSimilarCard__loading')
 
     it('render <Loader />', () => {
-      expect(similarProjectCard).to.have.descendants(Loader)
-      expect(loader).to.have.length(1)
+      expect(similarProjectCard.find(Loader)).toHaveLength(1)
+      expect(loader.exists()).toBe(true)
     })
   })
 
@@ -195,7 +193,7 @@ describe('<SimilarProjectCard />', () => {
     )
 
     it('renders a refresh link with the right text', () => {
-      expect(refreshLink).to.contain.text('Custom refresh')
+      expect(refreshLink.contains('Custom refresh')).toBe(true)
     })
   })
 
@@ -209,7 +207,7 @@ describe('<SimilarProjectCard />', () => {
     )
 
     it('attaches the right handler to refresh link onClick prop', () => {
-      expect(refreshLink.props().onClick).to.equal(handleRefreshClick)
+      expect(refreshLink.props().onClick).toBe(handleRefreshClick)
     })
   })
 
@@ -218,7 +216,7 @@ describe('<SimilarProjectCard />', () => {
     const leftArrowButton = similarProjectCard.find('.k-ButtonIcon').first()
 
     it('disables the left arrow button', () => {
-      expect(leftArrowButton).to.have.attr('disabled')
+      expect(leftArrowButton.props().disabled).toBeTruthy()
     })
   })
 
@@ -227,7 +225,7 @@ describe('<SimilarProjectCard />', () => {
     const rightArrowButton = similarProjectCard.find('.k-ButtonIcon').last()
 
     it('disables the right arrow button', () => {
-      expect(rightArrowButton).to.have.attr('disabled')
+      expect(rightArrowButton.props().disabled).toBeTruthy()
     })
   })
 
@@ -239,7 +237,7 @@ describe('<SimilarProjectCard />', () => {
     const leftArrowButton = similarProjectCard.find('.k-ButtonIcon').first()
 
     it('attaches the right handler to left arrow button onClick prop', () => {
-      expect(leftArrowButton.props().onClick).to.equal(handleOnLeftArrowClick)
+      expect(leftArrowButton.props().onClick).toBe(handleOnLeftArrowClick)
     })
   })
 
@@ -251,7 +249,7 @@ describe('<SimilarProjectCard />', () => {
     const rightArrowButton = similarProjectCard.find('.k-ButtonIcon').last()
 
     it('attaches the right handler to right arrow button onClick prop', () => {
-      expect(rightArrowButton.props().onClick).to.equal(handleOnRightArrowClick)
+      expect(rightArrowButton.props().onClick).toBe(handleOnRightArrowClick)
     })
   })
 
@@ -268,11 +266,11 @@ describe('<SimilarProjectCard />', () => {
         const content = similarProjectCard.find('.k-ProjectSimilarCard__content')
 
         it('renders a <div> tag for the content', () => {
-          expect(content).to.have.tagName('div')
+          expect(content.render().is('div')).toBe(true)
         })
 
         it('passes the right props to the <div> tag', () => {
-          expect(content.props()).not.to.any.keys('href', 'target')
+          expect(content.props()).not.toMatchObject({ href: 'target' })
         })
       })
 
@@ -287,7 +285,7 @@ describe('<SimilarProjectCard />', () => {
         const content = similarProjectCard.find('.k-ProjectSimilarCard__content')
 
         it('passes the right props to the <div> tag', () => {
-          expect(content.props()).not.to.any.keys('href', 'target')
+          expect(content.props()).not.toMatchObject({ href: 'target' })
         })
       })
 
@@ -302,11 +300,11 @@ describe('<SimilarProjectCard />', () => {
         const content = similarProjectCard.find('.k-ProjectSimilarCard__content')
 
         it('passes the right props to the <div> tag', () => {
-          expect(content.props()).not.to.any.keys('href', 'target')
+          expect(content.props()).not.toMatchObject({ href: 'target' })
         })
 
         it('does not pass custom className to tag content', () => {
-          expect(content).not.to.have.className('custom-classname')
+          expect(content.hasClass('custom-classname')).toBe(false)
         })
       })
 
@@ -321,7 +319,7 @@ describe('<SimilarProjectCard />', () => {
         const content = similarProjectCard.find('.k-ProjectSimilarCard__content')
 
         it('passes the right props to the <div> tag', () => {
-          expect(content.props()).not.to.any.keys('href', 'title')
+          expect(content.props()).not.toMatchObject({ href: 'title' })
         })
       })
     })
@@ -334,7 +332,7 @@ describe('<SimilarProjectCard />', () => {
         const content = similarProjectCard.find('.k-ProjectSimilarCard__content')
 
         it('renders a <a> tag for the content', () => {
-          expect(content).to.have.tagName('a')
+          expect(content.render().is('a')).toBe(true)
         })
 
         it('passes the right props to the <a> tag', () => {
@@ -343,7 +341,7 @@ describe('<SimilarProjectCard />', () => {
             target: '_blank',
           }
 
-          expect(content.props()).to.contains(expectedProps)
+          expect(content.props()).toMatchObject(expectedProps)
         })
       })
 
@@ -363,7 +361,7 @@ describe('<SimilarProjectCard />', () => {
             target: '_self',
           }
 
-          expect(content.props()).to.contains(expectedProps)
+          expect(content.props()).toMatchObject(expectedProps)
         })
       })
 
@@ -383,7 +381,7 @@ describe('<SimilarProjectCard />', () => {
             className: 'k-ProjectSimilarCard__content custom-classname',
           }
 
-          expect(content.props()).to.contains(expectedProps)
+          expect(content.props()).toMatchObject(expectedProps)
         })
       })
 
@@ -403,7 +401,7 @@ describe('<SimilarProjectCard />', () => {
             title: 'custom-title',
           }
 
-          expect(content.props()).to.contains(expectedProps)
+          expect(content.props()).toMatchObject(expectedProps)
         })
       })
     })

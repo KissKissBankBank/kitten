@@ -1,6 +1,4 @@
 import React from 'react'
-import { expect } from 'chai'
-import { shallow } from 'enzyme'
 import {
   Header,
   HeaderItems,
@@ -15,30 +13,30 @@ describe('<Header />', () => {
   )
 
   it('renders a <header class="k-Header" />', () => {
-    expect(header).to.have.tagName('header')
-    expect(header).to.have.className('k-Header')
-    expect(header).to.have.attr('role', 'banner')
+    expect(header.is('header')).toBe(true)
+    expect(header.hasClass('k-Header')).toBe(true)
+    expect(header.props().role).toBe('banner')
   })
 
   it('renders a container', () => {
     const container = header.find('.k-Header__container')
-    expect(container).to.have.length(1)
+    expect(container).toHaveLength(1)
   })
 
   it('renders a row', () => {
     const row = header.find('.k-Header__row')
-    expect(row).to.have.length(1)
+    expect(row).toHaveLength(1)
   })
 
   it('renders children', () => {
-    expect(header).to.have.text('Test')
+    expect(header.text()).toBe('Test')
   })
 
   describe('with fixed version', () => {
     const header = shallow(<Header fixed={ true } />)
 
     it('has `.is-fixed` class', () => {
-      expect(header).to.have.className('is-fixed')
+      expect(header.hasClass('is-fixed')).toBe(true)
     })
   })
 })
@@ -51,18 +49,18 @@ describe('<HeaderItems />', () => {
   )
 
   it('renders a <div class="k-Header__items" />', () => {
-    expect(headerItems).to.have.className('k-Header__items')
+    expect(headerItems.hasClass('k-Header__items')).toBe(true)
   })
 
   it('renders children', () => {
-    expect(headerItems).to.have.text('Test')
+    expect(headerItems.text()).toBe('Test')
   })
 
   describe('with fixed size version', () => {
     const headerItems = shallow(<HeaderItems fixedSize={ true } />)
 
     it('has a custom class', () => {
-      expect(headerItems).to.have.className('k-Header__items--fixedSize')
+      expect(headerItems.hasClass('k-Header__items--fixedSize')).toBe(true)
     })
   })
 })
@@ -75,18 +73,18 @@ describe('<HeaderItem />', () => {
   )
 
   it('renders a <div class="k-Header__item" />', () => {
-    expect(headerItem).to.have.className('k-Header__item')
+    expect(headerItem.hasClass('k-Header__item')).toBe(true)
   })
 
   it('renders children', () => {
-    expect(headerItem).to.have.text('Test')
+    expect(headerItem.text()).toBe('Test')
   })
 
   describe('with fixed size version', () => {
     const headerItem = shallow(<HeaderItem fixedSize={ true } />)
 
     it('has a custom class', () => {
-      expect(headerItem).to.have.className('k-Header__item--fixedSize')
+      expect(headerItem.hasClass('k-Header__item--fixedSize')).toBe(true)
     })
   })
 
@@ -94,7 +92,7 @@ describe('<HeaderItem />', () => {
     const headerItem = shallow(<HeaderItem centered={ true } />)
 
     it('has a custom class', () => {
-      expect(headerItem).to.have.className('k-Header__item--centered')
+      expect(headerItem.hasClass('k-Header__item--centered')).toBe(true)
     })
   })
 
@@ -102,7 +100,7 @@ describe('<HeaderItem />', () => {
     const headerItem = shallow(<HeaderItem tag="nav" />)
 
     it('renders a <nav />', () => {
-      expect(headerItem).to.have.tagName('nav')
+      expect(headerItem.is('nav')).toBe(true)
     })
   })
 })

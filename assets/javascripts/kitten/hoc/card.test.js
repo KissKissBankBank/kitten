@@ -1,7 +1,5 @@
 import React from 'react'
 import classNames from 'classnames'
-import { expect } from 'chai'
-import { shallow } from 'enzyme'
 import { card } from 'kitten/hoc/card'
 
 const ExampleCardComponent = props => {
@@ -22,7 +20,7 @@ describe('card()', () => {
     const component = shallow(<ExampleCard />)
 
     it('has default class', () => {
-      expect(component).to.have.className('k-Card')
+      expect(component.hasClass('k-Card')).toBe(true)
     })
   })
 
@@ -30,7 +28,7 @@ describe('card()', () => {
     const component = shallow(<ExampleCard light />)
 
     it('has a good class', () => {
-      expect(component).to.have.className('k-Card--light')
+      expect(component.hasClass('k-Card--light')).toBe(true)
     })
   })
 
@@ -38,7 +36,7 @@ describe('card()', () => {
     const component = shallow(<ExampleCard padded />)
 
     it('has a good class', () => {
-      expect(component).to.have.className('k-Card--padded')
+      expect(component.hasClass('k-Card--padded')).toBe(true)
     })
   })
 
@@ -46,7 +44,7 @@ describe('card()', () => {
     const component = shallow(<ExampleCard rounded="micro" />)
 
     it('has a good class', () => {
-      expect(component).to.have.className('k-Card--microRounded')
+      expect(component.hasClass('k-Card--microRounded')).toBe(true)
     })
   })
 
@@ -54,7 +52,7 @@ describe('card()', () => {
     const component = shallow(<ExampleCard rounded="tiny" />)
 
     it('has a good class', () => {
-      expect(component).to.have.className('k-Card--tinyRounded')
+      expect(component.hasClass('k-Card--tinyRounded')).toBe(true)
     })
   })
 
@@ -62,7 +60,7 @@ describe('card()', () => {
     const component = shallow(<ExampleCard rounded />)
 
     it('has a good class', () => {
-      expect(component).to.have.className('k-Card--rounded')
+      expect(component.hasClass('k-Card--rounded')).toBe(true)
     })
   })
 
@@ -70,7 +68,7 @@ describe('card()', () => {
     const component = shallow(<ExampleCard translateOnHover />)
 
     it('has a good class', () => {
-      expect(component).to.have.className('k-Card--translateOnHover')
+      expect(component.hasClass('k-Card--translateOnHover')).toBe(true)
     })
   })
 
@@ -78,7 +76,7 @@ describe('card()', () => {
     const component = shallow(<ExampleCard withBorder />)
 
     it('has a good class', () => {
-      expect(component).to.have.className('k-Card--withBorder')
+      expect(component.hasClass('k-Card--withBorder')).toBe(true)
     })
   })
 
@@ -86,7 +84,7 @@ describe('card()', () => {
     const component = shallow(<ExampleCard withDarkBorder />)
 
     it('has a good class', () => {
-      expect(component).to.have.className('k-Card--withDarkBorder')
+      expect(component.hasClass('k-Card--withDarkBorder')).toBe(true)
     })
   })
 
@@ -94,7 +92,7 @@ describe('card()', () => {
     const component = shallow(<ExampleCard withShadow />)
 
     it('has a good class', () => {
-      expect(component).to.have.className('k-Card--withShadow')
+      expect(component.hasClass('k-Card--withShadow')).toBe(true)
     })
   })
 
@@ -102,7 +100,7 @@ describe('card()', () => {
     const component = shallow(<ExampleCard withVerticalPadding />)
 
     it('has a good class', () => {
-      expect(component).to.have.className('k-Card--withVerticalPadding')
+      expect(component.hasClass('k-Card--withVerticalPadding')).toBe(true)
     })
   })
 
@@ -110,7 +108,7 @@ describe('card()', () => {
     const component = shallow(<ExampleCard withoutBoxShadowOnHover />)
 
     it('has a good class', () => {
-      expect(component).to.have.className('k-Card--withoutBoxShadowOnHover')
+      expect(component.hasClass('k-Card--withoutBoxShadowOnHover')).toBe(true)
     })
   })
 
@@ -119,7 +117,7 @@ describe('card()', () => {
     const component = shallow(<ExampleCard title="Bar" />)
 
     it('has a component custom prop', () => {
-      expect(component).to.have.attr('title', 'Bar')
+      expect(component.props().title).toBe('Bar')
     })
   })
 })

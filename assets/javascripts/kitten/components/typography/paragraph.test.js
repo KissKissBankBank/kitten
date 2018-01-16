@@ -1,6 +1,4 @@
 import React from 'react'
-import { expect } from 'chai'
-import { shallow } from 'enzyme'
 import { Paragraph } from 'kitten/components/typography/paragraph'
 
 describe('Paragraph with default props', () => {
@@ -9,15 +7,15 @@ describe('Paragraph with default props', () => {
   )
 
   it('has a default paragraph attribute', () => {
-    expect(defaultComponent.find('.k-Paragraph')).to.have.length(1)
+    expect(defaultComponent.find('.k-Paragraph')).toHaveLength(1)
   })
 
   it('has a default tag', () => {
-    expect(defaultComponent).to.have.tagName('p')
+    expect(defaultComponent.type()).toBe('p')
   })
 
   it('has a default class', () => {
-    expect(defaultComponent).to.have.className('k-Paragraph--primary')
+    expect(defaultComponent.hasClass('k-Paragraph--primary')).toBe(true)
   })
 
   describe('<Paragraph />', () => {
@@ -26,10 +24,10 @@ describe('Paragraph with default props', () => {
     )
 
     it('renders a <p class="k-Paragraph" />', () => {
-      expect(component).to.have.tagName('p')
-      expect(component).to.have.className('k-Paragraph--custom')
-      expect(component).to.have.className('k-Paragraph--primary')
-      expect(component).to.have.text('Loren ipsum…')
+      expect(component.type()).toBe('p')
+      expect(component.hasClass('k-Paragraph--custom')).toBe(true)
+      expect(component.hasClass('k-Paragraph--primary')).toBe(true)
+      expect(component.text()).toBe('Loren ipsum…')
     })
 
     describe('modifier', () => {
@@ -37,7 +35,7 @@ describe('Paragraph with default props', () => {
         const component = shallow(
           <Paragraph modifier="secondary" />
         )
-        expect(component).to.have.className('k-Paragraph--secondary')
+        expect(component.hasClass('k-Paragraph--secondary')).toBe(true)
       })
     })
   })
@@ -46,7 +44,7 @@ describe('Paragraph with default props', () => {
     const component = shallow(<Paragraph margin={ false } />)
 
     it('has a good class', () => {
-      expect(component).to.have.className('k-Paragraph--withoutMargin')
+      expect(component.hasClass('k-Paragraph--withoutMargin')).toBe(true)
     })
   })
 
@@ -54,7 +52,7 @@ describe('Paragraph with default props', () => {
     const component = shallow(<Paragraph normalLineHeight />)
 
     it('has a good class', () => {
-      expect(component).to.have.className('k-Paragraph--normalLineHeight')
+      expect(component.hasClass('k-Paragraph--normalLineHeight')).toBe(true)
     })
   })
 
@@ -62,7 +60,7 @@ describe('Paragraph with default props', () => {
     const component = shallow(<Paragraph italic />)
 
     it('has a good class', () => {
-      expect(component).to.have.className('k-Paragraph--italic')
+      expect(component.hasClass('k-Paragraph--italic')).toBe(true)
     })
   })
 })

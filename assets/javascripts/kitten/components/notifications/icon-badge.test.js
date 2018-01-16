@@ -1,6 +1,4 @@
 import React from 'react'
-import { expect } from 'chai'
-import { shallow } from 'enzyme'
 import { IconBadge } from 'kitten/components/notifications/icon-badge'
 
 describe('<IconBadge />', () => {
@@ -8,12 +6,12 @@ describe('<IconBadge />', () => {
     const iconBadge = shallow(<IconBadge />)
 
     it('is a <span />', () => {
-      expect(iconBadge).to.have.tagName('span')
+      expect(iconBadge.type()).toBe('span')
     })
 
     it('has default classes', () => {
-      expect(iconBadge).to.have.className('k-IconBadge')
-      expect(iconBadge).to.have.descendants('.k-IconBadge__content')
+      expect(iconBadge.hasClass('k-IconBadge')).toBe(true)
+      expect(iconBadge.find('.k-IconBadge__content').exists()).toBe(true)
     })
   })
 
@@ -21,7 +19,7 @@ describe('<IconBadge />', () => {
     const iconBadge = shallow(<IconBadge className="custom__class" />)
 
     it('has a custom class', () => {
-      expect(iconBadge).to.have.className('custom__class')
+      expect(iconBadge.hasClass('custom__class')).toBe(true)
     })
   })
 
@@ -29,7 +27,7 @@ describe('<IconBadge />', () => {
     const iconBadge = shallow(<IconBadge aria-hidden="true" />)
 
     it('has an aria-hidden attribute', () => {
-      expect(iconBadge).to.have.attr('aria-hidden', 'true')
+      expect(iconBadge.props()['aria-hidden']).toBe('true')
     })
   })
 
@@ -37,7 +35,7 @@ describe('<IconBadge />', () => {
     const iconBadge = shallow(<IconBadge>A+</IconBadge>)
 
     it('has text', () => {
-      expect(iconBadge).to.have.text('A+')
+      expect(iconBadge.text()).toBe('A+')
     })
   })
 })

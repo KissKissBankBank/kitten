@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import classNames from 'classnames'
 
 export const card = (WrappedComponent, wrappedProps) => {
@@ -59,5 +60,5 @@ export const card = (WrappedComponent, wrappedProps) => {
 }
 
 card.propTypes = {
-  rounded: React.PropTypes.oneOf(['micro', 'tiny']),
+  rounded: PropTypes.oneOf(['micro', 'tiny']),
 }

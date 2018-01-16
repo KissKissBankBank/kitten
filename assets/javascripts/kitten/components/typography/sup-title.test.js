@@ -1,6 +1,4 @@
 import React from 'react'
-import { expect } from 'chai'
-import { shallow, mount } from 'enzyme'
 import { SupTitle } from 'kitten/components/typography/sup-title'
 
 describe('<SupTitle />', () => {
@@ -10,11 +8,11 @@ describe('<SupTitle />', () => {
     )
 
     it('renders a <div class="k-SupTitle" />', () => {
-      expect(component).to.have.className('k-SupTitle')
+      expect(component.hasClass('k-SupTitle')).toBe(true)
     })
 
     it('with default children', () => {
-      expect(component).to.have.text('Sup Title')
+      expect(component.text()).toBe('Sup Title')
     })
   })
 
@@ -24,7 +22,7 @@ describe('<SupTitle />', () => {
     )
 
     it('adds the customClass to the component', () => {
-      expect(component).to.have.className('customClass')
+      expect(component.hasClass('customClass')).toBe(true)
     })
   })
 
@@ -34,7 +32,7 @@ describe('<SupTitle />', () => {
     )
 
     it('changes the tag of the component', () => {
-      expect(component).to.have.tagName('h1')
+      expect(component.render().is('h1')).toBe(true)
     })
   })
 
@@ -46,7 +44,7 @@ describe('<SupTitle />', () => {
     )
 
     it('has a content', () => {
-      expect(component).to.have.text('Lorem ipsum…')
+      expect(component.text()).toBe('Lorem ipsum…')
     })
   })
 })

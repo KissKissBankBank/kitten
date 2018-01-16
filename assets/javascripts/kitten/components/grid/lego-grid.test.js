@@ -1,7 +1,5 @@
 import React from 'react'
 import classNames from 'classnames'
-import { expect } from 'chai'
-import { shallow } from 'enzyme'
 import { LegoGrid } from 'kitten/components/grid/lego-grid'
 import Masonry from 'react-masonry-component'
 
@@ -10,15 +8,15 @@ describe('<LegoGrid />', () => {
     const legoGrid = shallow(<LegoGrid />)
 
     it('is a <div />', () => {
-      expect(legoGrid).to.have.tagName('div')
+      expect(legoGrid.is('div')).toBe(true)
     })
 
     it('has a default class', () => {
-      expect(legoGrid).to.have.className('k-LegoGrid')
+      expect(legoGrid.hasClass('k-LegoGrid')).toBe(true)
     })
 
     it('has a <Masonry /> component', () => {
-      expect(legoGrid).to.have.descendants(Masonry)
+      expect(legoGrid.find(Masonry).exists()).toBe(true)
     })
   })
 
@@ -33,7 +31,7 @@ describe('<LegoGrid />', () => {
     const masonry = legoGrid.find(Masonry).first()
 
     it('sends props to Masonry component', () => {
-      expect(masonry).to.have.props(masonryProps)
+      expect(masonry.props()).toMatchObject(masonryProps)
     })
   })
 
@@ -41,7 +39,7 @@ describe('<LegoGrid />', () => {
     const legoGrid = shallow(<LegoGrid className="custom__class" />)
 
     it('has a custom class', () => {
-      expect(legoGrid).to.have.className('custom__class')
+      expect(legoGrid.hasClass('custom__class')).toBe(true)
     })
   })
 })
@@ -51,12 +49,12 @@ describe('<LegoGrid.Item />', () => {
     const legoGridItem = shallow(<LegoGrid.Item />)
 
     it('is a <div />', () => {
-      expect(legoGridItem).to.have.tagName('div')
+      expect(legoGridItem.is('div')).toBe(true)
     })
 
     it('has default classes', () => {
-      expect(legoGridItem).to.have.className('k-LegoGrid__item')
-      expect(legoGridItem).to.have.descendants('.k-LegoGrid__item__content')
+      expect(legoGridItem.hasClass('k-LegoGrid__item')).toBe(true)
+      expect(legoGridItem.find('.k-LegoGrid__item__content').exists()).toBe(true)
     })
   })
 
@@ -64,7 +62,7 @@ describe('<LegoGrid.Item />', () => {
     const legoGridItem = shallow(<LegoGrid.Item className="custom__class" />)
 
     it('has a custom class', () => {
-      expect(legoGridItem).to.have.className('custom__class')
+      expect(legoGridItem.hasClass('custom__class')).toBe(true)
     })
   })
 
@@ -72,7 +70,7 @@ describe('<LegoGrid.Item />', () => {
     const legoGridItem = shallow(<LegoGrid.Item>Lorem ipsum…</LegoGrid.Item>)
 
     it('has text', () => {
-      expect(legoGridItem).to.have.text('Lorem ipsum…')
+      expect(legoGridItem.text()).toBe('Lorem ipsum…')
     })
   })
 })

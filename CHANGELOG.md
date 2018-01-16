@@ -10,8 +10,15 @@ Breaking changes:
 - Replace `k-Popover__title` and `k-Tour__popover__title`
   by `Title` component.
 - Replace `k-Tour__popover__numbering` by `Text` component.
-
+- Update React/React-Dom to v16.x version which
+  needs `babel-polyfill` to work properly with `Map` and `Set`.
+  You need to [install babel-polyfill](https://babeljs.io/docs/usage/polyfill/)
+  and add it to your webpack config to make it work.
+  
 Features:
+- Add [Jest](https://facebook.github.io/jest/) as our new
+  testing framework instead of [Mocha](https://mochajs.org/) and
+  [Chai](http://chaijs.com/).
 - Update `Modal` component with styleguide V2.
 - Update `Popover` and `CallToActionPopover` components with new design
   styleguide V2.
@@ -23,6 +30,7 @@ Features:
 Fixes:
 - Fix `captionProps` prop warning to `ImageWithCaption`.
 - Fix `titleProps` prop warning to `ArticleCard`.
+
 ## [18.1.0] - 2018-01-09
 
 Features:

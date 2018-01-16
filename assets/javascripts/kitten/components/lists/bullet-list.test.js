@@ -1,6 +1,4 @@
 import React from 'react'
-import { expect } from 'chai'
-import { shallow } from 'enzyme'
 import { BulletList } from 'kitten/components/lists/bullet-list'
 
 describe('<BulletList />', () => {
@@ -13,20 +11,20 @@ describe('<BulletList />', () => {
     const bulletList = shallow(<BulletList items={ items } />)
 
     it('is a <ul />', () => {
-      expect(bulletList).to.have.tagName('ul')
+      expect(bulletList.type()).toBe('ul')
     })
 
     it('has default class', () => {
-      expect(bulletList).to.have.className('k-BulletList')
+      expect(bulletList.hasClass('k-BulletList')).toBe(true)
     })
 
     it('renders 2 items', () => {
-      expect(bulletList.children()).to.have.length(2)
+      expect(bulletList.children()).toHaveLength(2)
     })
 
     it('has a good class on item', () => {
       const firstItem = bulletList.children().first()
-      expect(firstItem).to.have.className('k-BulletList__item')
+      expect(firstItem.hasClass('k-BulletList__item')).toBe(true)
     })
   })
 
@@ -36,7 +34,7 @@ describe('<BulletList />', () => {
     )
 
     it('has a custom class', () => {
-      expect(bulletList).to.have.className('custom__class')
+      expect(bulletList.hasClass('custom__class')).toBe(true)
     })
   })
 
@@ -47,7 +45,7 @@ describe('<BulletList />', () => {
 
     it('has a good class', () => {
       const item = bulletList.children().first()
-      expect(item).to.have.className('k-BulletList__item--large')
+      expect(item.hasClass('k-BulletList__item--large')).toBe(true)
     })
   })
 
@@ -58,7 +56,7 @@ describe('<BulletList />', () => {
 
     it('has a good class', () => {
       const item = bulletList.children().first()
-      expect(item).to.have.className('k-BulletList__item--big')
+      expect(item.hasClass('k-BulletList__item--big')).toBe(true)
     })
   })
 })

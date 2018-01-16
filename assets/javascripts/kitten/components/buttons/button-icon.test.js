@@ -1,6 +1,4 @@
 import React from 'react'
-import { expect } from 'chai'
-import { shallow } from 'enzyme'
 import { ButtonIcon } from 'kitten/components/buttons/button-icon'
 
 describe('<ButtonIcon />', () => {
@@ -8,9 +6,9 @@ describe('<ButtonIcon />', () => {
     const component = shallow(<ButtonIcon />)
 
     it('it a <ButtonIcon />', () => {
-      expect(component).to.have.tagName('button')
-      expect(component).to.have.className('k-ButtonIcon')
-      expect(component).not.to.have.attr('tabindex')
+      expect(component.find('button')).toHaveLength(1)
+      expect(component.hasClass('k-ButtonIcon')).toBe(true)
+      expect(component.props.tabindex).toBe(void(0))
     })
   })
 
@@ -18,7 +16,7 @@ describe('<ButtonIcon />', () => {
     const component = shallow(<ButtonIcon modifier="helium" />)
 
     it('has className', () => {
-      expect(component).to.have.className('k-ButtonIcon--helium')
+      expect(component.hasClass('k-ButtonIcon--helium')).toBe(true)
     })
   })
 
@@ -26,7 +24,7 @@ describe('<ButtonIcon />', () => {
     const component = shallow(<ButtonIcon className="customClass" />)
 
     it('has customClass', () => {
-      expect(component).to.have.className('customClass')
+      expect(component.hasClass('customClass')).toBe(true)
     })
   })
 
@@ -34,7 +32,7 @@ describe('<ButtonIcon />', () => {
     const component = shallow(<ButtonIcon size="tiny" />)
 
     it('has size', () => {
-      expect(component).to.have.className('k-ButtonIcon--tiny')
+      expect(component.hasClass('k-ButtonIcon--tiny')).toBe(true)
     })
   })
 
@@ -42,7 +40,7 @@ describe('<ButtonIcon />', () => {
     const component = shallow(<ButtonIcon tag="a" />)
 
     it('changes the tag', () => {
-      expect(component).to.have.tagName('a')
+      expect(component.find('a')).toHaveLength(1)
     })
   })
 
@@ -50,7 +48,7 @@ describe('<ButtonIcon />', () => {
     const component = shallow(<ButtonIcon rounded />)
 
     it('has rounded', () => {
-      expect(component).to.have.className('k-ButtonIcon--rounded')
+      expect(component.hasClass('k-ButtonIcon--rounded')).toBe(true)
     })
   })
 
@@ -58,7 +56,7 @@ describe('<ButtonIcon />', () => {
     const component = shallow(<ButtonIcon tag="a" />)
 
     it('adds a tabindex', () => {
-      expect(component).to.have.attr('tabindex', '0')
+      expect(component.props().tabIndex).toBe(0)
     })
   })
 
@@ -66,7 +64,7 @@ describe('<ButtonIcon />', () => {
     const component = shallow(<ButtonIcon tag="a" href="foo" />)
 
     it('does not add a tabindex', () => {
-      expect(component).not.to.have.attr('tabindex')
+      expect(component.props().tabIndex).toBeFalsy()
     })
   })
 
@@ -78,7 +76,7 @@ describe('<ButtonIcon />', () => {
     )
 
     it('has children', () => {
-      expect(component.children()).to.have.tagName('svg')
+      expect(component.find('svg')).toHaveLength(1)
     })
   })
 })

@@ -1,6 +1,4 @@
 import React from 'react'
-import { expect } from 'chai'
-import { mount, shallow } from 'enzyme'
 import { ImageWithCaption } from 'kitten/components/images/image-with-caption'
 
 describe ('<ImageWithCaption />', () => {
@@ -13,18 +11,18 @@ describe ('<ImageWithCaption />', () => {
     const figcaption = figure.find('figcaption')
 
     it('renders a <figure />', () => {
-      expect(figure).to.have.tagName('figure')
-      expect(figure.hasClass('k-ImageWithCaption')).to.equal(true)
+      expect(figure.is('figure')).toBe(true)
+      expect(figure.hasClass('k-ImageWithCaption')).toBe(true)
     })
 
     it('renders a <img />', () => {
-      expect(image).to.have.tagName('img')
-      expect(image.hasClass('k-ImageWithCaption__img')).to.equal(true)
+      expect(image.is('img')).toBe(true)
+      expect(image.hasClass('k-ImageWithCaption__img')).toBe(true)
     })
 
     it('renders a <figcaption />', () => {
-      expect(figcaption).to.have.tagName('figcaption')
-      expect(figcaption.hasClass('k-ImageWithCaption__caption')).to.equal(true)
+      expect(figcaption.is('figcaption')).toBe(true)
+      expect(figcaption.hasClass('k-ImageWithCaption__caption')).toBe(true)
     })
   })
 
@@ -36,7 +34,7 @@ describe ('<ImageWithCaption />', () => {
     )
 
     it('adds a children element', () => {
-      expect(component).to.have.text('Example content')
+      expect(component.text()).toBe('Example content')
     })
   })
 
@@ -52,11 +50,11 @@ describe ('<ImageWithCaption />', () => {
     const image = component.find('.k-ImageWithCaption__img')
 
     it('renders an image with good attributes', () => {
-      expect(image).to.have.length(1)
-      expect(image).to.have.attr('src', 'test')
-      expect(image).to.have.attr('alt')
-      expect(image).to.have.attr('width')
-      expect(image).to.have.attr('height')
+      expect(image).toHaveLength(1)
+      expect(image.props().src).toBe('test')
+      expect(image.props().alt).toBeTruthy()
+      expect(image.props().width).toBeTruthy()
+      expect(image.props().height).toBeTruthy()
     })
   })
 
@@ -70,7 +68,7 @@ describe ('<ImageWithCaption />', () => {
     const caption = component.find('.k-ImageWithCaption__caption')
 
     it('renders a title attribute', () => {
-      expect(caption).to.have.attr('title', 'custom')
+      expect(caption.props().title).toBe('custom')
     })
   })
 })

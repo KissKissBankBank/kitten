@@ -1,6 +1,4 @@
 import React from 'react'
-import { expect } from 'chai'
-import { shallow } from 'enzyme'
 import { Row } from 'kitten/components/grid/row'
 
 describe('<Row />', () => {
@@ -8,12 +6,12 @@ describe('<Row />', () => {
     const row = shallow(<Row />)
 
     it('is a <div />', () => {
-      expect(row).to.have.tagName('div')
+      expect(row.is('div')).toBe(true)
     })
 
     it('has a default class', () => {
-      expect(row).to.have.className('k-Row')
-      expect(row).to.have.descendants('.k-Row__content')
+      expect(row.hasClass('k-Row')).toBe(true)
+      expect(row.find('.k-Row__content').exists()).toBe(true)
     })
   })
 
@@ -21,7 +19,7 @@ describe('<Row />', () => {
     const row = shallow(<Row className="custom__class" />)
 
     it('has a custom class', () => {
-      expect(row).to.have.className('custom__class')
+      expect(row.hasClass('custom__class')).toBe(true)
     })
   })
 
@@ -29,7 +27,7 @@ describe('<Row />', () => {
     const row = shallow(<Row aria-hidden />)
 
     it('has aria-hidden attribute', () => {
-      expect(row).to.have.attr('aria-hidden', 'true')
+      expect(row.props()['aria-hidden']).toBeTruthy()
     })
   })
 
@@ -37,7 +35,7 @@ describe('<Row />', () => {
     const row = shallow(<Row>Lorem ipsum…</Row>)
 
     it('has text', () => {
-      expect(row).to.have.text('Lorem ipsum…')
+      expect(row.text()).toBe('Lorem ipsum…')
     })
   })
 
@@ -45,7 +43,7 @@ describe('<Row />', () => {
     const row = shallow(<Row centered />)
 
     it('has a specific class', () => {
-      expect(row).to.have.className('k-Row--centered')
+      expect(row.hasClass('k-Row--centered')).toBe(true)
     })
   })
 
@@ -53,7 +51,7 @@ describe('<Row />', () => {
     const row = shallow(<Row centered />)
 
     it('has a specific class', () => {
-      expect(row).to.have.className('k-Row--centered')
+      expect(row.hasClass('k-Row--centered')).toBe(true)
     })
   })
 
@@ -61,7 +59,7 @@ describe('<Row />', () => {
     const row = shallow(<Row light />)
 
     it('has a specific class', () => {
-      expect(row).to.have.className('k-Row--light')
+      expect(row.hasClass('k-Row--light')).toBe(true)
     })
   })
 
@@ -69,7 +67,7 @@ describe('<Row />', () => {
     const row = shallow(<Row dark />)
 
     it('has a specific class', () => {
-      expect(row).to.have.className('k-Row--dark')
+      expect(row.hasClass('k-Row--dark')).toBe(true)
     })
   })
 
@@ -77,7 +75,7 @@ describe('<Row />', () => {
     const row = shallow(<Row lightTopBorder />)
 
     it('has a specific class', () => {
-      expect(row).to.have.className('k-Row--lightTopBorder')
+      expect(row.hasClass('k-Row--lightTopBorder')).toBe(true)
     })
   })
 
@@ -85,7 +83,7 @@ describe('<Row />', () => {
     const row = shallow(<Row lightBottomBorder />)
 
     it('has a specific class', () => {
-      expect(row).to.have.className('k-Row--lightBottomBorder')
+      expect(row.hasClass('k-Row--lightBottomBorder')).toBe(true)
     })
   })
 
@@ -93,7 +91,7 @@ describe('<Row />', () => {
     const row = shallow(<Row padded />)
 
     it('has a specific class', () => {
-      expect(row).to.have.className('k-Row--padded')
+      expect(row.hasClass('k-Row--padded')).toBe(true)
     })
   })
 
@@ -101,7 +99,7 @@ describe('<Row />', () => {
     const row = shallow(<Row contentClassName="content-custom-class" />)
 
     it('has a custom class on content selector', () => {
-      expect(row).to.have.descendants('.content-custom-class')
+      expect(row.find('.content-custom-class').exists()).toBe(true)
     })
   })
 })

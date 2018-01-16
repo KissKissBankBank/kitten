@@ -1,6 +1,4 @@
 import React from 'react'
-import { expect } from 'chai'
-import { shallow } from 'enzyme'
 import { StaticTooltip } from 'kitten/components/tooltips/static-tooltip'
 
 describe('<StaticTooltip />', () => {
@@ -8,7 +6,7 @@ describe('<StaticTooltip />', () => {
     const component = shallow(<StaticTooltip />)
 
     it('has the k-StaticTooltip class', () => {
-      expect(component).to.have.className('k-StaticTooltip')
+      expect(component.hasClass('k-StaticTooltip')).toBe(true)
     })
   })
 
@@ -16,7 +14,7 @@ describe('<StaticTooltip />', () => {
     const component = shallow(<StaticTooltip className="customClass" />)
 
     it('adds the customClass to the component', () => {
-      expect(component).to.have.className('customClass')
+      expect(component.hasClass('customClass')).toBe(true)
     })
   })
 
@@ -25,7 +23,7 @@ describe('<StaticTooltip />', () => {
     const arrow = component.find('.k-StaticTooltip__arrow')
 
     it('assigns a left style to the arrow', () => {
-      expect(arrow).to.have.style('left', '150px')
+      expect(arrow.props().style).toMatchObject({ left: '150px' })
     })
   })
 
@@ -33,7 +31,7 @@ describe('<StaticTooltip />', () => {
     const component = shallow(<StaticTooltip>Lorem ipsum</StaticTooltip>)
 
     it('assigns children', () => {
-      expect(component).to.have.text('Lorem ipsum')
+      expect(component.text()).toBe('Lorem ipsum')
     })
   })
 })
