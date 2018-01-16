@@ -175,7 +175,6 @@ export class KarlFooterKisskiss extends Component {
           name=""
           options= { options }
           value="FR"
-          onInputChange
           placeholder="Français"
         />
       </GridCol>
