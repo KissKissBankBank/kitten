@@ -1,14 +1,14 @@
 import React from 'react'
 import classNames from 'classnames'
-
 import { CloseButton } from 'kitten/components/buttons/close-button'
+import { ButtonIcon } from 'kitten/components/buttons/button-icon'
 
 describe('<CloseButton />', () => {
   describe('by default', () => {
     const closeButton = shallow(<CloseButton />)
 
-    it('is a <button />', () => {
-      expect(closeButton.type()).toBe('button')
+    it('is a <ButtonIcon />', () => {
+      expect(closeButton.type()).toBe(ButtonIcon)
     })
 
     it('has a default classes', () => {
@@ -32,7 +32,7 @@ describe('<CloseButton />', () => {
     })
 
     it('has a button type', () => {
-      expect(closeButton.type()).toBe('button')
+      expect(closeButton.props().type).toBe('button')
     })
   })
 
@@ -54,7 +54,7 @@ describe('<CloseButton />', () => {
     const closeButton = shallow(<CloseButton modifier='carbon' />)
 
     it('has a class', () => {
-      expect(closeButton.hasClass('k-ButtonIcon--carbon')).toBe(true)
+      expect(closeButton.render().hasClass('k-ButtonIcon--carbon')).toBe(true)
     })
   })
 
