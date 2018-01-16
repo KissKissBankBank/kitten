@@ -4,19 +4,25 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Update `Modal` component with styleguide V2.
-- Breaking change: Replace `k-Popover__title` and `k-Tour__popover__title`
-  by `Title` component.
-  Replace `k-Tour__popover__numbering` by `Text` component.
-- Feature: Update `Popover` and `CallToActionPopover` components with new design
-  styleguide V2.
-- Feature: Update `Tour` component with new design styleguide V2.
-- Feature: Add `size` prop to `CloseButton` component.
-- Feature: Add `k-ButtonIcon__rounded` class.
-- Feature: Change `font-size: 1rem` on `k-Button--big`.
-- Fix: Fix `captionProps` prop warning to `ImageWithCaption`.
-- Fix: Fix `titleProps` prop warning to `ArticleCard`.
+## [19.0.0] - 2018-01-16
 
+Breaking changes:
+- Replace `k-Popover__title` and `k-Tour__popover__title`
+  by `Title` component.
+- Replace `k-Tour__popover__numbering` by `Text` component.
+
+Features:
+- Update `Modal` component with styleguide V2.
+- Update `Popover` and `CallToActionPopover` components with new design
+  styleguide V2.
+- Update `Tour` component with new design styleguide V2.
+- Add `size` prop to `CloseButton` component.
+- Add `k-ButtonIcon__rounded` class.
+- Change `font-size: 1rem` on `k-Button--big`.
+
+Fixes:
+- Fix `captionProps` prop warning to `ImageWithCaption`.
+- Fix `titleProps` prop warning to `ArticleCard`.
 ## [18.1.0] - 2018-01-09
 
 Features:
