@@ -47,21 +47,7 @@
     10
   );
 
-  $text-font: 'light';
-  $text-size: -1; // 14px
-
-  $numbering-font: 'regular';
-
-  $title-font: 'bold';
-  $title-size: 2; // 20px
-
   $color: map-get($k-colors, 'font-1');
-
-  $tour-animation-duration: 1s;
-  $tour-animation-delay: .7s;
-
-  // Button transition animation.
-  $button-animation-duration: .4s;
 
   // Target hightlight.
   $target-highlight-width: k-px-to-rem(50px);
@@ -82,8 +68,6 @@
                 k-px-to-rem(4px)
                 k-px-to-rem(4px)
                 rgba(0, 0, 0, .3);
-
-    transition: opacity $tour-animation-duration ease $tour-animation-delay;
 
     .k-Tour.is-hidden & {
       opacity: 0;
@@ -106,32 +90,15 @@
   }
 
   .k-Tour__popover__content {
-    display: flex;
     flex-direction: column;
     flex: 1;
 
-    margin-top: k-px-to-rem(16px);
-    margin-left: k-px-to-rem(16px);
-  }
-
-  .k-Tour__popover__title {
-    @include k-typographyFont($title-font);
-    @include k-typographyFontSize($title-size);
-
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-
-  .k-Tour__popover__text {
-    @include k-typographyFont($text-font);
-    @include k-typographyFontSize($text-size, $line-height: 1.4rem);
-
-    margin: k-px-to-rem(16px) 0;
+    margin-left: k-px-to-rem(40px);
   }
 
   .k-Tour__popover__navigation {
     position: absolute;
-    bottom: k-px-to-rem(20px);
+    bottom: k-px-to-rem(40px);
 
     display: flex;
     justify-content: space-between;
@@ -140,11 +107,8 @@
     width: k-px-to-rem(305px);
   }
 
-  .k-Tour__popover__numbering {
-    @include k-typographyFont($numbering-font);
-    @include k-typographyFontSize($text-size);
-
-    margin: 0;
+  .k-Tour__popover__step {
+    align-self: center;
   }
 
   .k-Tour__popover__buttons {
@@ -152,37 +116,11 @@
   }
 
   .k-Tour__popover__button {
-    margin-right: k-px-to-rem(10px);
-
-    transition: all $button-animation-duration ease;
-    -webkit-transition: all $button-animation-duration ease;
-
-    &:hover {
-      transform: translateX(-2px);
-      -webkit-transform: translateX(-2px);
-    }
-
-    &:disabled {
-      transform: none;
-      -webkit-transform: none;
-    }
+    margin-right: k-px-to-rem(30px);
   }
 
   .k-Tour__popover__button--right {
     margin-right: 0;
-
-    transition: all $button-animation-duration ease;
-    -webkit-transition: all $button-animation-duration ease;
-
-    &:hover {
-      transform: translateX(2px);
-      -webkit-transform: translateX(2px);
-    }
-
-    &:disabled {
-      transform: none;
-      -webkit-transform: none;
-    }
   }
 
   .k-Tour__step__targetHighlight {
@@ -196,7 +134,6 @@
     border: 2px solid rgba(map-get($k-colors, 'tertiary-1'), .8);
 
     pointer-events: none;
-    transition: opacity $tour-animation-duration ease $tour-animation-delay;
 
     .k-Tour.is-hidden & {
       opacity: 0;
