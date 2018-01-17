@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: Update styles on `Tour`, `Popover` and `Modal` components.
+- Feature: Add `k-ButtonIcon--cross--tiny` class.
 
 ## [19.0.0] - 2018-01-16
 

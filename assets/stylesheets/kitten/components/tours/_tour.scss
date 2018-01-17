@@ -57,6 +57,8 @@
     10
   );
 
+  $marger: k-px-to-rem(40px);
+
   .k-Tour {
     color: $color;
   }
@@ -79,6 +81,7 @@
     align-items: center;
     justify-content: center;
     width: k-px-to-rem(80px);
+    margin-left: $marger;
   }
 
   .k-Tour__popover__svg--primary {
@@ -93,12 +96,12 @@
     flex-direction: column;
     flex: 1;
 
-    margin-left: k-px-to-rem(40px);
+    margin-left: $marger;
   }
 
   .k-Tour__popover__navigation {
     position: absolute;
-    bottom: k-px-to-rem(40px);
+    bottom: $marger;
 
     display: flex;
     justify-content: space-between;
