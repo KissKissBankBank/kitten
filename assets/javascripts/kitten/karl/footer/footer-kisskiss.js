@@ -91,7 +91,7 @@ export class KarlFooterKisskiss extends Component {
       ...others,
     } = this.props
 
-    return(
+    return (
       <Row style={ styles.network }>
         <Grid>
           <GridCol
