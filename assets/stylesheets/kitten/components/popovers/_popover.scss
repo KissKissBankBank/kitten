@@ -45,7 +45,6 @@
   .k-Popover__container {
     min-height: k-px-to-rem(245px);
     box-sizing: border-box;
-    margin-left: $margin-left;
   }
 
   .k-Popover__illustration {
@@ -53,6 +52,7 @@
     align-items: center;
     justify-content: center;
     width: k-px-to-rem(80px);
+    margin-left: $margin-left;
   }
 
   .k-Popover__svg--primary {
