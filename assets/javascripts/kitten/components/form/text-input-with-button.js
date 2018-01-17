@@ -64,7 +64,5 @@ TextInputWithButton.defaultProps = {
   textInputProps: {
     tag: 'input',
   },
-  buttonProps: {
-    modifier: 'Beryllium'
-  },
+  buttonProps: {},
 }
