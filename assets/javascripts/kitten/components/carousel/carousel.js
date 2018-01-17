@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Radium from 'radium'
+import Prefixer from 'inline-style-prefixer'
 import { createRangeFromZeroTo } from 'kitten/helpers/utils/range'
 import {
   createMatchMedia,
@@ -15,11 +16,9 @@ import {
   CONTAINER_PADDING_MOBILE
 } from 'kitten/constants/grid-config'
 import ColorsConfig from 'kitten/constants/colors-config'
-
 import { Grid, GridCol } from 'kitten/components/grid/grid'
 import { ButtonIcon } from 'kitten/components/buttons/button-icon'
 import { ArrowIcon } from 'kitten/components/icons/arrow-icon'
-
 import { CarouselInner } from 'kitten/components/carousel/carousel-inner'
 
 export const getNumColumnsForWidth =
@@ -67,6 +66,10 @@ const getMarginBetweenAccordingToViewport =
       return baseItemMarginBetween
     }
   }
+
+const prefixer = new Prefixer({
+  keepUnprefixed: true,
+})
 
 class CarouselBase extends React.Component {
   constructor(props, context) {
@@ -297,14 +300,14 @@ class CarouselBase extends React.Component {
 }
 
 const styles = {
-  carouselPagination: {
+  carouselPagination: prefixer.prefix({
     display: 'flex',
     flexDirection: 'column-reverse',
     alignItems: 'flex-start',
-  },
-  carouselPaginationTablet: {
+  }),
+  carouselPaginationTablet: prefixer.prefix({
     flexDirection: 'row',
-  },
+  }),
   carouselButtonPagination: {
     marginBottom: 2,
     marginRight: 2,
@@ -312,30 +315,30 @@ const styles = {
     marginTop: 0,
   },
 
-  pageControl: {
+  pageControl: prefixer.prefix({
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'center',
     position: 'relative',
     paddingTop: CONTAINER_PADDING_MOBILE / 2,
     paddingBottom: CONTAINER_PADDING_MOBILE / 2,
-  },
-  pageControlButtonPrev: {
+  }),
+  pageControlButtonPrev: prefixer.prefix({
     position: 'absolute',
     top: CONTAINER_PADDING_MOBILE / 4,
     bottom: CONTAINER_PADDING_MOBILE / 4,
     left: CONTAINER_PADDING_MOBILE,
     right: '50%',
     WebkitTapHighlightColor: 'transparent',
-  },
-  pageControlButtonNext: {
+  }),
+  pageControlButtonNext: prefixer.prefix({
     position: 'absolute',
     top: CONTAINER_PADDING_MOBILE / 4,
     bottom: CONTAINER_PADDING_MOBILE / 4,
     right: CONTAINER_PADDING_MOBILE,
     left: '50%',
     WebkitTapHighlightColor: 'transparent',
-  },
+  }),
   pageDot: {
     width: 8,
     height: 8,
