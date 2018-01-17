@@ -1,6 +1,4 @@
 import React from 'react'
-import { expect } from 'chai'
-import { shallow } from 'enzyme'
 import { Line } from 'kitten/components/layout/line'
 
 describe('<Line />', () => {
@@ -8,11 +6,11 @@ describe('<Line />', () => {
     const component = shallow(<Line />)
 
     it('renders a <div />', () => {
-      expect(component).to.have.tagName('div')
+      expect(component.is('div')).toBe(true)
     })
 
     it('has "k-Line" class', () => {
-      expect(component).to.have.className('k-Line')
+      expect(component.hasClass('k-Line')).toBe(true)
     })
   })
 
@@ -22,7 +20,7 @@ describe('<Line />', () => {
     )
 
     it('has a custom class', () => {
-      expect(component).to.have.className('test-Line--lorem')
+      expect(component.hasClass('test-Line--lorem')).toBe(true)
     })
   })
 
@@ -34,7 +32,7 @@ describe('<Line />', () => {
     ).children()
 
     it('renders a <p>', () => {
-      expect(component).to.have.tagName('p')
+      expect(component.is('p')).toBe(true)
     })
   })
 })
@@ -44,11 +42,11 @@ describe('<Line.Item />', () => {
     const component = shallow(<Line.Item />)
 
     it('renders a <div />', () => {
-      expect(component).to.have.tagName('div')
+      expect(component.is('div')).toBe(true)
     })
 
     it('has "k-Line__item" class', () => {
-      expect(component).to.have.className('k-Line__item')
+      expect(component.hasClass('k-Line__item')).toBe(true)
     })
   })
 
@@ -58,7 +56,7 @@ describe('<Line.Item />', () => {
     )
 
     it('has a custom class', () => {
-      expect(component).to.have.className('test-Line__item--lorem')
+      expect(component.hasClass('test-Line__item--lorem')).toBe(true)
     })
   })
 
@@ -70,7 +68,7 @@ describe('<Line.Item />', () => {
     ).children()
 
     it('renders a <p>', () => {
-      expect(component).to.have.tagName('p')
+      expect(component.is('p')).toBe(true)
     })
   })
 })

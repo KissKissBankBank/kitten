@@ -1,6 +1,4 @@
 import React from 'react'
-import { expect } from 'chai'
-import { shallow, mount } from 'enzyme'
 import { SimpleCard } from 'kitten/components/cards/simple-card'
 import { Title } from 'kitten/components/typography/title'
 import { Text } from 'kitten/components/typography/text'
@@ -15,28 +13,28 @@ describe('<SimpleCard />', () => {
     })
 
     it('is a <div />', () => {
-      expect(component).to.have.tagName('div')
+      expect(component.render().is('div')).toBe(true)
     })
 
     it('has an image container', () => {
-      expect(component).to.have.descendants('.k-Card__imageContainer')
+      expect(component.render().find('.k-Card__imageContainer')).toHaveLength(1)
     })
 
     it('has a <img /> with good class', () => {
-      expect(component).to.have.descendants('img')
-      expect(component).to.have.descendants('.k-Card__image')
+      expect(component.find('img')).toHaveLength(1)
+      expect(component.find('img').hasClass('k-Card__image')).toBe(true)
     })
 
     it('has not a <Title /> component', () => {
-      expect(component).to.have.not.descendants(Title)
+      expect(component.find(Title).exists()).toBeFalsy()
     })
 
     it('has not <Text /> component', () => {
-      expect(component).to.have.not.descendants(Text)
+      expect(component.find(Text).exists()).toBeFalsy()
     })
 
     it('has <HorizontalStroke /> component', () => {
-      expect(component).to.have.descendants(HorizontalStroke)
+      expect(component.find(HorizontalStroke).exists()).toBeTruthy()
     })
   })
 
@@ -46,11 +44,11 @@ describe('<SimpleCard />', () => {
     })
 
     it('is a <a />', () => {
-      expect(component).to.have.tagName('a')
+      expect(component.render().is('a')).toBe(true)
     })
 
     it('has a href attribute', () => {
-      expect(component).to.have.attr('href', '#')
+      expect(component.props().href).toBe('#')
     })
   })
 
@@ -70,15 +68,17 @@ describe('<SimpleCard />', () => {
     })
 
     it('has an image with `#` src', () => {
-      expect(component.find('img')).to.have.prop('src', '#foobar')
+      expect(component.find('img').props().src).toBe('#foobar')
     })
 
     it('has an image with alt description', () => {
-      expect(component.find('img')).to.have.prop('alt', 'FooBar')
+      expect(component.find('img').props().alt).toBe('FooBar')
     })
 
     it('has an image with a custom style', () => {
-      expect(component.find('img')).to.have.style('cursor', 'crosshair')
+      expect(component.find('img').props().style).toMatchObject({
+        cursor: 'crosshair',
+      })
     })
   })
 
@@ -88,8 +88,8 @@ describe('<SimpleCard />', () => {
     })
 
     it('has a <Title /> with good content', () => {
-      expect(component.find(Title)).to.have.text('Simple card title')
-      expect(component.find(Title)).to.have.props({
+      expect(component.find(Title).text()).toBe('Simple card title')
+      expect(component.find(Title).props()).toMatchObject({
         modifier: 'senary',
         margin: false,
         className: 'k-Card__title',
@@ -103,8 +103,8 @@ describe('<SimpleCard />', () => {
     })
 
     it('has a <Text /> with good content', () => {
-      expect(component.find(Text)).to.have.text('Simple card subtitle')
-      expect(component.find(Text)).to.have.props({
+      expect(component.find(Text).render().text()).toBe('Simple card subtitle')
+      expect(component.find(Text).props()).toMatchObject({
         weight: 'regular',
         size: 'micro',
       })
@@ -117,8 +117,8 @@ describe('<SimpleCard />', () => {
     })
 
     it('has a <Text /> with good content', () => {
-      expect(component.find(Text)).to.have.text('Simple card subtitle')
-      expect(component.find(Text)).to.have.props({
+      expect(component.find(Text).text()).toBe('Simple card subtitle')
+      expect(component.find(Text).props()).toMatchObject({
         weight: 'light',
         size: 'micro',
         lineHeight: 'normal',
@@ -140,11 +140,11 @@ describe('<SimpleCard />', () => {
     })
 
     it('has a title with h2 tag', () => {
-      expect(component.find(Title)).to.have.prop('tag', 'h2')
+      expect(component.find(Title).props().tag).toBe('h2')
     })
 
     it('has a custom class on Title', () => {
-      expect(component.find(Title)).to.have.className('custom-class')
+      expect(component.find(Title).hasClass('custom-class')).toBe(true)
     })
   })
 })

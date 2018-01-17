@@ -14,7 +14,7 @@
 ///     …
 ///     <div class="k-Popover__close">
 ///       <button class="k-ButtonIcon
-///                      k-ButtonIcon--hydrogen
+///                      k-ButtonIcon--beryllium
 ///                      k-ButtonIcon--tiny">
 ///         <svg class="k-ButtonIcon__svg k-ButtonIcon__svg--rotate"
 ///              xmlns="http://www.w3.org/2000/svg"
@@ -30,36 +30,22 @@
 @mixin k-Popover {
   $background-color: map-get($k-colors, 'background-1');
   $border-color: map-get($k-colors, 'line-1');
-  $border-size: k-px-to-rem(1px);
-  $border-radius: k-px-to-rem(15px);
-  $margin-container: k-px-to-rem(10px);
-
-  $text-font: 'light';
-  $text-size: 0; // 16px
-
-  $title-font: 'bold';
-  $title-size: 2; // 20px
+  $border-size: k-px-to-rem(2px);
+  $margin-left: k-px-to-rem(40px);
 
   .k-Popover {
-    @include k-typographyFont($text-font);
     position: relative;
 
-    width: k-px-to-rem(465px);
+    width: k-px-to-rem(520px);
     box-sizing: border-box;
 
     background-color: $background-color;
-    border-radius: $border-radius;
-    border: $border-size solid $border-color;
   }
 
   .k-Popover__container {
-    min-height: k-px-to-rem(220px);
+    min-height: k-px-to-rem(245px);
     box-sizing: border-box;
-    margin: $margin-container;
-  }
-
-  .k-Popover__close {
-    margin-left: $margin-container;
+    margin-left: $margin-left;
   }
 
   .k-Popover__illustration {
@@ -78,40 +64,14 @@
   }
 
   .k-Popover__content {
-    @include k-typographyFont($text-font);
-
-    display: flex;
     flex-direction: column;
     flex: 1;
 
-    margin-top: 1rem;
-    margin-left: 1rem;
-  }
-
-  .k-Popover__title {
-    @include k-typographyFont($title-font);
-    @include k-typographyFontSize($title-size);
-
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-
-  .k-Popover__text {
-    @include k-typographyFont($text-font);
-    @include k-typographyFontSize($text-size);
-
-    margin: 1em 0;
+    margin-left: k-px-to-rem(40px);
   }
 
   .k-Popover__navigation {
-    bottom: k-px-to-rem(20px);
-
-    display: flex;
     justify-content: space-between;
-    margin-top: auto;
-    margin-bottom: k-px-to-rem(15px);
-
-    width: k-px-to-rem(305px);
   }
 
   .k-Popover__buttons {

@@ -1,6 +1,4 @@
 import React from 'react'
-import { expect } from 'chai'
-import { shallow } from 'enzyme'
 import { Button } from 'kitten/components/buttons/button'
 
 describe('Button with default props', () => {
@@ -8,65 +6,65 @@ describe('Button with default props', () => {
 
   describe('by default', () => {
     it('is a <button>', () => {
-      expect(component).to.have.tagName('button')
+      expect(component.type()).toBe('button')
     })
 
     it('has a k-Button class', () => {
-      expect(component).to.have.className('k-Button')
+      expect(component.hasClass('k-Button')).toBe(true)
     })
 
     it('has the hydrogen modifier class', () => {
-      expect(component).to.have.className('k-Button--hydrogen')
+      expect(component.hasClass('k-Button--hydrogen')).toBe(true)
     })
 
     it('does not have the iconRight modifier class', () => {
-      expect(component).not.to.have.className('k-Button--iconRight')
+      expect(component.hasClass('k-Button--iconRight')).toBeFalsy()
     })
 
     it('does not have a tabindex attribute', () => {
-      expect(component).not.to.have.attr('tabindex')
+      expect(component.props().tabindex).toBeFalsy()
     })
   })
 
   describe('className prop', () => {
     it('adds the class to the element', () => {
       const component = shallow(<Button className="meaow" />)
-      expect(component).to.have.className('meaow')
+      expect(component.hasClass('meaow')).toBe(true)
     })
   })
 
   describe('modifier prop', () => {
     it('adds a class to the component', () => {
       const component = shallow(<Button modifier="helium" />)
-      expect(component).to.have.className('k-Button--helium')
+      expect(component.hasClass('k-Button--helium')).toBe(true)
     })
   })
 
   describe('iconRight prop', () => {
     it('adds the iconRight modifier class', () => {
       const component = shallow(<Button iconOnRight />)
-      expect(component).to.have.className('k-Button--iconRight')
+      expect(component.hasClass('k-Button--iconRight')).toBe(true)
     })
   })
 
   describe('tag prop', () => {
     it('changes the tag', () => {
       const component = shallow(<Button tag="a" />)
-      expect(component).to.have.tagName('a')
+      expect(component.type()).toBe('a')
     })
   })
 
   describe('with tag="a" and no href', () => {
     it('adds a tabindex', () => {
       const component = shallow(<Button tag="a" />)
-      expect(component).to.have.attr('tabindex', '0')
+      expect(component.props().tabIndex).toBe(0)
     })
   })
 
   describe('with tag="a" href="foo"', () => {
     it('does not add a tabindex', () => {
       const component = shallow(<Button tag="a" href="foo" />)
-      expect(component).not.to.have.attr('tabindex')
+      expect(component.props().tabIndex).toBeFalsy()
     })
   })
 })

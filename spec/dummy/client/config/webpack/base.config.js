@@ -15,6 +15,7 @@ const baseConfig = {
   entry: {
     // Entry name will determine the name of the output bundle.
     'app-kitten': [
+      'babel-polyfill',
       './entries/app-kitten',
     ],
     'app-dummy': [

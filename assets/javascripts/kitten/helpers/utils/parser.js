@@ -1,3 +1,6 @@
 import HtmlToReact from 'html-to-react'
 
-export const parseHtml = value => new HtmlToReact.Parser().parse(value)
+// We add a span to make parseHtml works with strings.
+export const parseHtml = value => (
+  new HtmlToReact.Parser().parse(`<span>${value}</span>`).props.children
+)

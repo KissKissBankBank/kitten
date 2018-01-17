@@ -1,14 +1,12 @@
 import React from 'react'
-import { expect } from 'chai'
-import { shallow } from 'enzyme'
 import { FormRow } from 'kitten/components/form/form-row'
 
 describe('<FormRow />', () => {
   it('renders a <div class="k-FormRow" />', () => {
     const component = shallow(<FormRow />)
 
-    expect(component).to.have.tagName('div')
-    expect(component).to.have.className('k-FormRow')
+    expect(component.is('div')).toBe(true)
+    expect(component.hasClass('k-FormRow')).toBe(true)
   })
 
   it('has a custom class', () => {
@@ -16,7 +14,7 @@ describe('<FormRow />', () => {
       <FormRow className="test-FormRow--lorem" />
     )
 
-    expect(component).to.have.className('test-FormRow--lorem')
+    expect(component.hasClass('test-FormRow--lorem')).toBe(true)
   })
 
   it('renders children', () => {
@@ -26,6 +24,6 @@ describe('<FormRow />', () => {
       </FormRow>
     )
 
-    expect(component).to.have.text('Lorem ipsum…')
+    expect(component.text()).toBe('Lorem ipsum…')
   })
 })

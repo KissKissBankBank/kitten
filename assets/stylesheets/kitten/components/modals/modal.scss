@@ -19,32 +19,33 @@
 @mixin k-Modal($options) {
   $outer-gutters-size: k-px-to-rem(16px);
 
+  $background-color: map-get($k-colors, 'background-1');
+
   .k-Modal__content {
     position: relative;
     max-height: calc(100vh - #{$outer-gutters-size} * 2);
     max-width: calc(100vw - #{$outer-gutters-size} * 2);
-    padding: k-px-to-rem(40px) k-px-to-rem(20px);
 
-    background-color: map-get($k-colors, 'background-1');
-    border: 1px solid map-get($k-colors, 'line-1');
-    border-radius: k-px-to-rem(16px);
+    background-color: $background-color;
     text-align: center;
+    padding-left: k-px-to-rem(20px);
+    padding-right: k-px-to-rem(20px);
 
     outline: none;
     box-sizing: border-box;
     overflow: scroll;
 
     @include k-media-min('s') {
-      width: k-px-to-rem(550px);
-      padding-right: k-px-to-rem(70px);
-      padding-left: k-px-to-rem(70px);
+      max-width: k-px-to-rem(690px);
+      padding-left: k-px-to-rem(110px);
+      padding-right: k-px-to-rem(110px);
     }
   }
 
   .k-Modal__close {
     position: absolute;
-    top: k-px-to-rem(10px);
-    right: k-px-to-rem(10px);
+    top: 0;
+    right: 0;
   }
 
   .k-Modal__overlay {
@@ -59,6 +60,6 @@
     justify-content: center;
     align-items: center;
 
-    background-color: rgba(0, 0, 0, .5);
+    background-color: rgba(34, 34, 34, .9); // font-1
   }
 }

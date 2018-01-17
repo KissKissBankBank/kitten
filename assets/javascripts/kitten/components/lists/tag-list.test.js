@@ -1,6 +1,4 @@
 import React from 'react'
-import { expect } from 'chai'
-import { shallow } from 'enzyme'
 import { TagList } from 'kitten/components/lists/tag-list'
 import { TypologyTagIcon } from 'kitten/components/icons/typology-tag-icon'
 import { InstrumentTagIcon } from 'kitten/components/icons/instrument-tag-icon'
@@ -19,36 +17,36 @@ describe('<TagList />', () => {
       shallow(<TagList icon={ InstrumentTagIcon } items={ items } />)
 
     it('is a <ul />', () => {
-      expect(tagList.type()).to.eq('ul')
+      expect(tagList.type()).toBe('ul')
     })
 
     it('has default class', () => {
-      expect(tagList).to.have.className('k-TagList')
+      expect(tagList.hasClass('k-TagList')).toBe(true)
     })
 
     it('renders 2 items', () => {
-      expect(tagList.children()).to.have.length(2)
+      expect(tagList.children()).toHaveLength(2)
     })
 
     it('has a first child with good class', () => {
       const firstItem = tagList.children().first()
 
-      expect(firstItem).to.have.className('k-TagList__item--first')
+      expect(firstItem.hasClass('k-TagList__item--first')).toBe(true)
     })
 
     it('has a last child with good class', () => {
       const firstItem = tagList.children().last()
-      expect(firstItem).to.have.className('k-TagList__item--last')
+      expect(firstItem.hasClass('k-TagList__item--last')).toBe(true)
     })
 
     it('renders a <TypologyTagIcon /> in first child', () => {
-      expect(tagList.children().first()).to.have.descendants(TypologyTagIcon)
+      expect(tagList.children().first().find(TypologyTagIcon).exists()).toBe(true)
     })
 
     it('renders a <InstrumentTagIcon /> in first child', () => {
       const firstItem = tagListWithInstrument.children().first()
 
-      expect(firstItem).to.have.descendants(InstrumentTagIcon)
+      expect(firstItem.find(InstrumentTagIcon).exists()).toBe(true)
     })
   })
 
@@ -62,7 +60,7 @@ describe('<TagList />', () => {
     )
 
     it('has a custom class', () => {
-      expect(tagList).to.have.className('custom__class')
+      expect(tagList.hasClass('custom__class')).toBe(true)
     })
 
   })
@@ -73,7 +71,7 @@ describe('<TagList />', () => {
     )
 
     it('has a good class', () => {
-      expect(tagList).to.have.className('k-TagList--tiny')
+      expect(tagList.hasClass('k-TagList--tiny')).toBe(true)
     })
   })
 })

@@ -1,6 +1,4 @@
 import React from 'react'
-import { expect } from 'chai'
-import { mount } from 'enzyme'
 import { Loader } from 'kitten/components/loaders/loader'
 
 describe('<Loader />', () => {
@@ -8,15 +6,15 @@ describe('<Loader />', () => {
     const loader = mount(<Loader />)
 
     it('is a <div />', () => {
-      expect(loader).to.have.tagName('div')
+      expect(loader.render().is('div')).toBe(true)
     })
 
     it('has a default class', () => {
-      expect(loader).to.have.className('k-Loader')
+      expect(loader.render().hasClass('k-Loader')).toBe(true)
     })
 
     it('has 3 circles', () => {
-      expect(loader.find('.k-Loader__circle')).to.have.length(3)
+      expect(loader.render().find('.k-Loader__circle')).toHaveLength(3)
     })
   })
 
@@ -24,7 +22,7 @@ describe('<Loader />', () => {
     const loader = mount(<Loader tag="span" />)
 
     it('is a <span />', () => {
-      expect(loader).to.have.tagName('span')
+      expect(loader.render().is('span')).toBe(true)
     })
   })
 
@@ -32,7 +30,7 @@ describe('<Loader />', () => {
     const loader = mount(<Loader className="custom__class" />)
 
     it('is a good class', () => {
-      expect(loader).to.have.className('custom__class')
+      expect(loader.render().hasClass('custom__class')).toBe(true)
     })
   })
 
@@ -41,7 +39,7 @@ describe('<Loader />', () => {
     const circle = loader.find('.k-Loader__circle').first().find('circle')
 
     it('has circles with red color', () => {
-      expect(circle).to.have.attr('fill', 'red')
+      expect(circle.props().fill).toBe('red')
     })
   })
 })

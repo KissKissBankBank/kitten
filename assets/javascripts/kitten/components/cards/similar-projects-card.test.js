@@ -1,6 +1,4 @@
 import React, { Component } from 'react'
-import { expect } from 'chai'
-import { shallow, mount } from 'enzyme'
 import { SimilarProjectsCard } from
   'kitten/components/cards/similar-projects-card'
 import { SimilarProjectCard } from
@@ -62,10 +60,10 @@ describe('<SimilarProjectsCard />', () => {
 
   describe('by default', () => {
     const similarProjectsCard = shallow(<SimilarProjectsCard />)
-    const staticSimilarProjectCard = similarProjectsCard.find(SimilarProjectCard)
+    const currentCard = similarProjectsCard.find(SimilarProjectCard)
 
     it('is renders <SimilarProjectCard />', () => {
-      expect(staticSimilarProjectCard).to.have.length(1)
+      expect(currentCard).toHaveLength(1)
     })
 
     it('passes the right props', () => {
@@ -82,12 +80,10 @@ describe('<SimilarProjectsCard />', () => {
         infos: false,
       }
 
-      expect(staticSimilarProjectCard.props()).to.contains(expectedProps)
-      expect(staticSimilarProjectCard.props()).not.to.contains(projectProps)
-      expect(staticSimilarProjectCard.props().onLeftArrowClick)
-        .to.be.a('function')
-      expect(staticSimilarProjectCard.props().onRightArrowClick)
-        .to.be.a('function')
+      expect(currentCard.props()).toMatchObject(expectedProps)
+      expect(currentCard.props()).not.toMatchObject(projectProps)
+      expect(typeof currentCard.props().onLeftArrowClick).toBe('function')
+      expect(typeof currentCard.props().onRightArrowClick).toBe('function')
     })
   })
 
@@ -97,7 +93,7 @@ describe('<SimilarProjectsCard />', () => {
         const similarProjectsCard = shallow(
           <SimilarProjectsCard projects={ [project1] } />
         )
-        const staticSimilarProjectCard = similarProjectsCard
+        const currentCard = similarProjectsCard
           .find(SimilarProjectCard)
 
         it('passes the right props for the project', () => {
@@ -109,7 +105,7 @@ describe('<SimilarProjectsCard />', () => {
             infos: emptyArray,
           }
 
-          expect(staticSimilarProjectCard.props()).to.contains(projectProps)
+          expect(currentCard.props()).toMatchObject(projectProps)
         })
       })
 
@@ -117,7 +113,7 @@ describe('<SimilarProjectsCard />', () => {
         const similarProjectsCard = shallow(
           <SimilarProjectsCard projects={ [project2] } />
         )
-        const staticSimilarProjectCard = similarProjectsCard
+        const currentCard = similarProjectsCard
           .find(SimilarProjectCard)
 
         it('passes the right props for the project', () => {
@@ -129,7 +125,7 @@ describe('<SimilarProjectsCard />', () => {
             infos: emptyArray,
           }
 
-          expect(staticSimilarProjectCard.props()).to.contains(projectProps)
+          expect(currentCard.props()).toMatchObject(projectProps)
         })
       })
 
@@ -137,7 +133,7 @@ describe('<SimilarProjectsCard />', () => {
         const similarProjectsCard = shallow(
           <SimilarProjectsCard projects={ [project3] } />
         )
-        const staticSimilarProjectCard = similarProjectsCard
+        const currentCard = similarProjectsCard
           .find(SimilarProjectCard)
 
         it('passes the right props for the project', () => {
@@ -149,7 +145,7 @@ describe('<SimilarProjectsCard />', () => {
             infos: infos,
           }
 
-          expect(staticSimilarProjectCard.props()).to.contains(projectProps)
+          expect(currentCard.props()).toMatchObject(projectProps)
         })
       })
     })
@@ -157,7 +153,7 @@ describe('<SimilarProjectsCard />', () => {
     describe('on componentWillReceiveProps', () => {
       let similarProjectsCard
 
-      before(() => {
+      beforeAll(() => {
         similarProjectsCard = mount(
           <SimilarProjectsCard
             projects={ [project1, project2, project3] }
@@ -168,7 +164,7 @@ describe('<SimilarProjectsCard />', () => {
       })
 
       it('updates the current index to 0', () => {
-        expect(similarProjectsCard.state('currentIndex')).to.eq(2)
+        expect(similarProjectsCard.state('currentIndex')).toBe(2)
 
         similarProjectsCard.setProps({
           projects: [
@@ -177,27 +173,28 @@ describe('<SimilarProjectsCard />', () => {
           ]
         })
 
-        expect(similarProjectsCard.state('currentIndex')).to.eq(0)
+        expect(similarProjectsCard.state('currentIndex')).toBe(0)
       })
     })
 
     describe('on left arrow clicked', () => {
       describe('by default', () => {
         let similarProjectsCard
-        let staticSimilarProjectCard
+        let currentCard
         let leftArrowButton
 
-        before(() => {
+        beforeAll(() => {
           similarProjectsCard = mount(
             <SimilarProjectsCard
               projects={ [project1, project2, project3] } />
           )
-          staticSimilarProjectCard = similarProjectsCard
-            .find(SimilarProjectCard)
-          leftArrowButton = similarProjectsCard.find('.k-ButtonIcon').first()
 
           similarProjectsCard.setState({ currentIndex: 2 })
+          leftArrowButton = similarProjectsCard.find('.k-ButtonIcon').first()
           leftArrowButton.simulate('click')
+
+          currentCard = similarProjectsCard
+            .find(SimilarProjectCard)
         })
 
         it('passes the previous project props to <SimilarProjectCard>', () => {
@@ -209,26 +206,26 @@ describe('<SimilarProjectsCard />', () => {
             infos: emptyArray,
           }
 
-          expect(staticSimilarProjectCard.props()).to.contains(projectProps)
+          expect(currentCard.props()).toMatchObject(projectProps)
         })
 
         it('updates correctly the step information', () => {
-          expect(staticSimilarProjectCard.props())
-            .to.contains({ step: '2/3' })
+          expect(currentCard.props())
+            .toMatchObject({ step: '2/3' })
         })
       })
 
       describe('when new current project is the first of the list', () => {
         let similarProjectsCard
-        let staticSimilarProjectCard
+        let currentCard
         let leftArrowButton
 
-        before(() => {
+        beforeAll(() => {
           similarProjectsCard = mount(
             <SimilarProjectsCard
               projects={ [project1, project2, project3] } />
           )
-          staticSimilarProjectCard = similarProjectsCard
+          currentCard = similarProjectsCard
             .find(SimilarProjectCard)
           leftArrowButton = similarProjectsCard.find('.k-ButtonIcon').first()
 
@@ -245,17 +242,17 @@ describe('<SimilarProjectsCard />', () => {
             infos: emptyArray,
           }
 
-          expect(staticSimilarProjectCard.props()).to.contains(projectProps)
+          expect(currentCard.props()).toMatchObject(projectProps)
         })
 
         it('updates correctly the step information', () => {
-          expect(staticSimilarProjectCard.props())
-            .to.contains({ step: '1/3' })
+          expect(currentCard.props())
+            .toMatchObject({ step: '1/3' })
         })
 
         it('disables the left arrow button', () => {
-          expect(staticSimilarProjectCard.props())
-            .to.contains({ leftArrowDisabled: true })
+          expect(currentCard.props())
+            .toMatchObject({ leftArrowDisabled: true })
         })
       })
     })
@@ -263,19 +260,18 @@ describe('<SimilarProjectsCard />', () => {
     describe('on right arrow clicked', () => {
       describe('by default', () => {
         let similarProjectsCard
-        let staticSimilarProjectCard
+        let currentCard
         let rightArrowButton
 
-        before(() => {
+        beforeAll(() => {
           similarProjectsCard = mount(
             <SimilarProjectsCard
               projects={ [project1, project2, project3] } />
           )
-          staticSimilarProjectCard = similarProjectsCard
-            .find(SimilarProjectCard)
           rightArrowButton = similarProjectsCard.find('.k-ButtonIcon').last()
-
           rightArrowButton.simulate('click')
+
+          currentCard = similarProjectsCard.find(SimilarProjectCard)
         })
 
         it('passes the next project props to <SimilarProjectCard>', () => {
@@ -287,32 +283,33 @@ describe('<SimilarProjectsCard />', () => {
             infos: emptyArray,
           }
 
-          expect(staticSimilarProjectCard.props()).to.contains(projectProps)
+          expect(currentCard.props()).toMatchObject(projectProps)
         })
 
         it('updates correctly the step information', () => {
-          expect(staticSimilarProjectCard.props())
-            .to.contains({ step: '2/3' })
+          expect(currentCard.props())
+            .toMatchObject({ step: '2/3' })
         })
       })
 
       describe('when new current project is the last of the list', () => {
         let similarProjectsCard
-        let staticSimilarProjectCard
+        let currentCard
         let rightArrowButton
 
-        before(() => {
+        beforeAll(() => {
           similarProjectsCard = mount(
             <SimilarProjectsCard
               projects={ [project1, project2, project3] }
             />
           )
-          staticSimilarProjectCard = similarProjectsCard
-            .find(SimilarProjectCard)
           rightArrowButton = similarProjectsCard.find('.k-ButtonIcon').last()
 
           similarProjectsCard.setState({ currentIndex: 1 })
           rightArrowButton.simulate('click')
+
+          currentCard = similarProjectsCard
+            .find(SimilarProjectCard)
         })
 
         it('passes the last project props to <SimilarProjectCard>', () => {
@@ -324,17 +321,17 @@ describe('<SimilarProjectsCard />', () => {
             infos: infos,
           }
 
-          expect(staticSimilarProjectCard.props()).to.contains(projectProps)
+          expect(currentCard.props()).toMatchObject(projectProps)
         })
 
         it('updates correctly the step information', () => {
-          expect(staticSimilarProjectCard.props())
-            .to.contains({ step: '3/3' })
+          expect(currentCard.props())
+            .toMatchObject({ step: '3/3' })
         })
 
         it('disables the right arrow button', () => {
-          expect(staticSimilarProjectCard.props())
-            .to.contains({ rightArrowDisabled: true })
+          expect(currentCard.props())
+            .toMatchObject({ rightArrowDisabled: true })
         })
       })
     })
@@ -344,11 +341,11 @@ describe('<SimilarProjectsCard />', () => {
     const similarProjectsCard = shallow(
       <SimilarProjectsCard className="custom-className" />
     )
-    const staticSimilarProjectCard = similarProjectsCard.find(SimilarProjectCard)
+    const currentCard = similarProjectsCard.find(SimilarProjectCard)
 
     it('passes the right props', () => {
-      expect(staticSimilarProjectCard.props())
-        .to.contains({ className: 'custom-className' })
+      expect(currentCard.props())
+        .toMatchObject({ className: 'custom-className' })
     })
   })
 })

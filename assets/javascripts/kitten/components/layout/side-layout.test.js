@@ -1,6 +1,4 @@
 import React from 'react'
-import { expect } from 'chai'
-import { shallow, mount } from 'enzyme'
 import { SideLayout } from 'kitten/components/layout/side-layout'
 
 describe('<SideLayout />', () => {
@@ -12,7 +10,7 @@ describe('<SideLayout />', () => {
     )
 
     it('renders a <div class="myAwesomeClass" />', () => {
-      expect(component).to.have.className('myAwesomeClass')
+      expect(component.hasClass('myAwesomeClass')).toBe(true)
     })
   })
 
@@ -26,7 +24,7 @@ describe('<SideLayout />', () => {
     const sideGridAside = component.find('.k-SideGrid__aside')
 
     it('has a sidebar content', () => {
-      expect(sideGridAside).to.have.text('Sidebar content')
+      expect(sideGridAside.text()).toBe('Sidebar content')
     })
   })
 
@@ -38,7 +36,7 @@ describe('<SideLayout />', () => {
     )
 
     it('has a content', () => {
-      expect(component).to.have.text('Lorem ipsum…')
+      expect(component.text()).toBe('Lorem ipsum…')
     })
   })
 })

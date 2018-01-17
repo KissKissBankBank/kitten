@@ -1,6 +1,4 @@
 import React from 'react'
-import { expect } from 'chai'
-import { shallow } from 'enzyme'
 import { TextInput } from 'kitten/components/form/text-input'
 
 describe('Text-input with default props', () => {
@@ -8,23 +6,23 @@ describe('Text-input with default props', () => {
     <TextInput />)
 
   it('has a default text-input attributes', () => {
-    expect(defaultComponent.find('.k-TextInput')).to.have.length(1)
+    expect(defaultComponent.find('.k-TextInput')).toHaveLength(1)
   })
 
   it('has a default tag', () => {
-    expect(defaultComponent).to.have.tagName('input')
+    expect(defaultComponent.is('input')).toBe(true)
   })
 
   it('does not contain a is-valid element', () => {
-    expect(defaultComponent.find('.is-valid')).to.have.length(0)
+    expect(defaultComponent.find('.is-valid')).toHaveLength(0)
   })
 
   it('does not contain a is-error element', () => {
-    expect(defaultComponent.find('.is-error')).to.have.length(0)
+    expect(defaultComponent.find('.is-error')).toHaveLength(0)
   })
 
   it('does not contain a tiny element', () => {
-    expect(defaultComponent.find('.k-TextInput--tiny')).to.have.length(0)
+    expect(defaultComponent.find('.k-TextInput--tiny')).toHaveLength(0)
   })
 
   describe('<TextInput />', () => {
@@ -32,8 +30,8 @@ describe('Text-input with default props', () => {
       <TextInput className="k-TextInput--custom" />)
 
     it('renders a <TextInput class="k-TextInput" />', () => {
-      expect(component).to.have.tagName('input')
-      expect(component).to.have.className('k-TextInput--custom')
+      expect(component.is('input')).toBe(true)
+      expect(component.hasClass('k-TextInput--custom')).toBe(true)
     })
 
     describe('text-input with valid class', () => {
@@ -42,7 +40,7 @@ describe('Text-input with default props', () => {
       )
 
       it('has a valid class', () => {
-        expect(componentWithValidClass).to.have.className('is-valid')
+        expect(componentWithValidClass.hasClass('is-valid')).toBe(true)
       })
     })
 
@@ -52,7 +50,7 @@ describe('Text-input with default props', () => {
       )
 
       it('has a error class', () => {
-        expect(componentWithErrorClass).to.have.className('is-error')
+        expect(componentWithErrorClass.hasClass('is-error')).toBe(true)
       })
     })
 
@@ -62,7 +60,7 @@ describe('Text-input with default props', () => {
       )
 
       it('has a tiny class', () => {
-        expect(componentWithTinyClass).to.have.className('k-TextInput--tiny')
+        expect(componentWithTinyClass.hasClass('k-TextInput--tiny')).toBe(true)
       })
     })
 
@@ -72,11 +70,11 @@ describe('Text-input with default props', () => {
       ).find('textarea')
 
       it('has a textarea tag', () => {
-        expect(textArea).to.have.tagName('textarea')
+        expect(textArea.is('textarea')).toBe(true)
       })
 
       it('has 7 rows', () => {
-        expect(textArea).to.have.attr('rows', '7')
+        expect(textArea.props().rows).toBe('7')
       })
     })
   })

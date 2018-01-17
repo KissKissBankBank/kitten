@@ -1,6 +1,4 @@
 import React from 'react'
-import { expect } from 'chai'
-import { shallow } from 'enzyme'
 import { Checkbox } from 'kitten/components/form/checkbox'
 
 describe('<Checkbox />', () => {
@@ -10,13 +8,13 @@ describe('<Checkbox />', () => {
     const label = component.find('label')
 
     it('renders an input.k-Checkbox__input', () => {
-      expect(input).to.tagName('input')
-      expect(input.hasClass('k-Checkbox__input')).to.equal(true)
+      expect(input.type()).toBe('input')
+      expect(input.hasClass('k-Checkbox__input')).toBe(true)
     })
 
     it('renders a label.k-Checkbox__label', () => {
-      expect(label).to.tagName('label')
-      expect(label.hasClass('k-Checkbox__label')).to.equal(true)
+      expect(label.type()).toBe('label')
+      expect(label.hasClass('k-Checkbox__label')).toBe(true)
     })
   })
 
@@ -25,7 +23,7 @@ describe('<Checkbox />', () => {
     const input = component.find('input')
 
     it('passes the right props to the `input` component', () => {
-      expect(input).to.have.className('is-error')
+      expect(input.hasClass('is-error')).toBe(true)
     })
   })
 
@@ -34,7 +32,7 @@ describe('<Checkbox />', () => {
     const input = component.find('input')
 
     it('passes the right props to the `input` component', () => {
-      expect(input.props()).to.contains.all.keys({ disabled: true })
+      expect(input.props()).toMatchObject({ disabled: true })
     })
   })
 
@@ -47,7 +45,7 @@ describe('<Checkbox />', () => {
     const labelChildren = component.find('label').children()
 
     it('passes the right props to the `label` component', () => {
-      expect(labelChildren).to.have.tagName('svg')
+      expect(labelChildren.type()).toBe('svg')
     })
   })
 })

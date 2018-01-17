@@ -1,6 +1,4 @@
 import React from 'react'
-import { expect } from 'chai'
-import { shallow } from 'enzyme'
 import { Container } from 'kitten/components/grid/container'
 import { SCREEN_SIZE_M } from 'kitten/constants/screen-config'
 
@@ -15,11 +13,11 @@ describe('<Container />', () => {
     const container = shallow(<Container />)
 
     it('is a <div />', () => {
-      expect(container).to.have.tagName('div')
+      expect(container.is('div')).toBe(true)
     })
 
     it('has a default class', () => {
-      expect(container).to.have.className('k-Container')
+      expect(container.hasClass('k-Container')).toBe(true)
     })
   })
 
@@ -27,7 +25,7 @@ describe('<Container />', () => {
     const container = shallow(<Container className="custom__class" />)
 
     it('has a custom class', () => {
-      expect(container).to.have.className('custom__class')
+      expect(container.hasClass('custom__class')).toBe(true)
     })
   })
 
@@ -35,7 +33,7 @@ describe('<Container />', () => {
     const container = shallow(<Container aria-hidden />)
 
     it('has aria-hidden attribute', () => {
-      expect(container).to.have.attr('aria-hidden', 'true')
+      expect(container.props()['aria-hidden']).toBeTruthy()
     })
   })
 
@@ -43,7 +41,7 @@ describe('<Container />', () => {
     const container = shallow(<Container>Lorem ipsum…</Container>)
 
     it('has text', () => {
-      expect(container).to.have.text('Lorem ipsum…')
+      expect(container.text()).toBe('Lorem ipsum…')
     })
   })
 
@@ -64,7 +62,7 @@ describe('<Container />', () => {
       )
 
       it('has class no-padding', () => {
-        expect(container).to.have.className('k-Container--no-padding')
+        expect(container.hasClass('k-Container--no-padding')).toBe(true)
       })
     })
 
@@ -75,7 +73,7 @@ describe('<Container />', () => {
       )
 
       it('has not class no-padding', () => {
-        expect(container).to.not.have.className('k-Container--no-padding')
+        expect(container.hasClass('k-Container--no-padding')).toBe(false)
       })
     })
   })

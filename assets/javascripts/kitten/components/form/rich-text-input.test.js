@@ -1,6 +1,4 @@
 import React from 'react'
-import { expect } from 'chai'
-import { shallow, mount } from 'enzyme'
 import { RichTextInput } from 'kitten/components/form/rich-text-input'
 
 describe('<RichTextInput />', () => {
@@ -8,9 +6,8 @@ describe('<RichTextInput />', () => {
     const component = shallow(<RichTextInput />)
 
     it('renders a div', () => {
-      expect(component).to.tagName('div')
+      expect(component.render().is('div')).toBe(true)
     })
-
   })
 
   describe('with config prop', () => {
@@ -21,7 +18,7 @@ describe('<RichTextInput />', () => {
       )
       const expectedProps = { config: locale }
 
-      expect(component.instance().props).to.contains.any.keys(expectedProps)
+      expect(component.props()).toMatchObject(expectedProps)
     })
   })
 
@@ -39,7 +36,7 @@ describe('<RichTextInput />', () => {
       )
       const expectedProps = { toolbar: toolbar }
 
-      expect(component.instance().props).to.contains.any.keys(expectedProps)
+      expect(component.props().config).toMatchObject(expectedProps)
     })
   })
 })

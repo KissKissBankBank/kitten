@@ -1,6 +1,6 @@
 {
   "name": "kitten-components",
-  "version": "18.1.0",
+  "version": "19.0.0",
   "license": "MIT",
   "description": "Front-end components library",
   "main": "src/index.js",
@@ -18,13 +18,17 @@
   "author": "KissKissBankBank & Co",
   "homepage": "https://github.com/KissKissBankBank/kitten#readme",
   "devDependencies": {
+    "babel-jest": "^22.0.4",
     "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
     "chai": "^4.1.2",
     "chai-enzyme": "^0.8.0",
-    "enzyme": "^2.9.1",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-to-json": "^3.3.0",
+    "jest": "^22.0.4",
     "jsdom": "^11.5.1",
     "mocha": "^4.0.1",
-    "react-addons-test-utils": "^15.4.1",
     "sassdoc": "^2.1.20",
     "sinon": "^4.1.3",
     "stylelint": "^6.7.1",
@@ -36,6 +40,7 @@
     "babel-core": "^6.13.2",
     "babel-plugin-add-module-exports": "^0.2.1",
     "babel-plugin-transform-object-assign": "^6.22.0",
+    "babel-polyfill": "^6.26.0",
     "babel-preset-react": "^6.11.1",
     "babel-preset-stage-2": "^6.13.0",
     "babel-register": "^6.18.0",
@@ -45,26 +50,27 @@
     "core-js": "^2.4.1",
     "es5-shim": "^4.5.7",
     "event-emitter": "^0.3.4",
-    "html-to-react": "^1.3.1",
+    "html-to-react": "^1.3.2",
     "isomorphic-fetch": "^2.2.1",
+    "jest-cli": "^22.0.4",
     "json-loader": "^0.5.4",
     "modularscale-sass": "^2.1.1",
     "node-sass": "^3.8.0",
-    "prop-types": "^15.5.10",
+    "prop-types": "^15.6.0",
     "prop-types-extra": "^1.0.1",
     "pubsub-js": "^1.5.3",
     "radium": "^0.19.6",
-    "react": "^15.3.1",
+    "react": "^16.2.0",
     "react-ckeditor-wrapper": "^1.0.22",
     "react-cropper": "^0.12.0",
-    "react-dom": "^15.3.1",
+    "react-dom": "^16.2.0",
     "react-dropzone": "^3.13.1",
     "react-markdown": "^2.4.4",
     "react-masonry-component": "^5.0.3",
     "react-modal": "^2.1.0",
     "react-places-autocomplete": "^5.4.3",
-    "react-prop-types": "^0.4.0",
     "react-select": "^1.0.0",
+    "react-test-renderer": "^16.2.0",
     "react-tooltip": "^3.2.2",
     "resize-observer-polyfill": "^1.5.0",
     "smoothscroll-polyfill": "^0.4.0",
@@ -78,6 +84,21 @@
     "build:dev": "(cd spec/dummy/client && yarn build:dev)",
     "build": "(cd spec/dummy/client && yarn build --silent)",
     "hot-assets": "(cd spec/dummy/client && yarn hot-assets)",
-    "test": "NODE_PATH=assets/javascripts mocha assets/javascripts/kitten/config/test-setup.js"
+    "test": "jest"
+  },
+  "jest": {
+    "modulePaths": [
+      "assets/javascripts"
+    ],
+    "setupFiles": [
+      "./assets/javascripts/kitten/config/jest-setup.js"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "./assets/javascripts/kitten/config/__mocks__/fileMock.js",
+      "\\.(css|less)$": "./assets/javascripts/kitten/config/__mocks__/styleMock.js"
+    }
   }
 }
