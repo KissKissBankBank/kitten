@@ -47,7 +47,8 @@ export class TextInputWithButton extends Component {
         <button
           { ...buttonProps }
           className={ textInputWithButtonButtonClassName }
-          type="button">
+          type="button"
+        >
           { value }
         </button>
       </div>
@@ -63,5 +64,7 @@ TextInputWithButton.defaultProps = {
   textInputProps: {
     tag: 'input',
   },
-  buttonProps: {},
+  buttonProps: {
+    modifier: 'Beryllium'
+  },
 }
