@@ -77,8 +77,8 @@ class CarouselBase extends React.Component {
 
     this.state = {
       indexPageVisible: 0,
-      numColumns: 0,
-      numPages: 0,
+      numColumns: this.props.data.length,
+      numPages: this.props.data.length,
       viewportIsMobile: this.mqMobile
         ? this.mqMobile.matches
         : false,
