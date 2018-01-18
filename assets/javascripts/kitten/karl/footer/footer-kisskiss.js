@@ -128,8 +128,8 @@ export class KarlFooterKisskiss extends Component {
                     >
                       <TextInputWithButton
                         { ...textInputProps }
+                        textInputProps={ { id: "subscribe" } }
                         value={ inputValue }
-                        id="subscribe"
                       />
                     </GridCol>
                   </Grid>
@@ -182,9 +182,9 @@ export class KarlFooterKisskiss extends Component {
         col-l="3" offset-l="1"
       >
         <SelectWithState
-          name=""
+          name="language"
           options= { options }
-          value="FR"
+          value="fr"
           placeholder="Français"
         />
       </GridCol>
@@ -194,7 +194,7 @@ export class KarlFooterKisskiss extends Component {
   renderList() {
 
     return (
-      <Row>
+      <Row role="navigation">
         <Grid style={ styles.list }>
           <GridCol col-l="2">
             <Marger
@@ -260,7 +260,7 @@ export class KarlFooterKisskiss extends Component {
     } = this.props
 
     return(
-      <Row>
+      <Row role="contentinfo">
         <Grid style={ styles.notice }>
           <GridCol
             col-xs="8" offset-xs="2"
@@ -327,11 +327,14 @@ export class KarlFooterKisskiss extends Component {
             col-l="4"
             style={ styles.notice.block.copyright }
           >
-            <Marger top={ this.state.viewportIsTabletOrLess ? 5 : 0 }>
+            <Marger
+              top={ this.state.viewportIsTabletOrLess ? 5 : 0 }
+            >
               <Text
                 size="tiny"
                 weight="regular"
                 color="background1"
+                tag="p"
               >
                 © 2018 KissKissBankBank &amp; Co
               </Text>
@@ -521,6 +524,7 @@ KarlFooterKisskiss.defaultProps = {
   subscribeLabel: 'Inscrivez-vous à notre Newsletter',
   textInputProps: {
     placeholder: 'Entrez votre e-mail',
+
   },
   inputValue: 'Envoyer',
   socialText: 'Suivez-nous',
