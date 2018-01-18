@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Radium from 'radium'
+import { ConfiguredRadium } from 'kitten/config/configured-radium'
 import { createRangeFromZeroTo } from 'kitten/helpers/utils/range'
 import {
   createMatchMedia,
@@ -359,4 +359,4 @@ CarouselBase.propTypes = {
   renderItem: PropTypes.func.isRequired,
 }
 
-export const Carousel = Radium(CarouselBase)
+export const Carousel = ConfiguredRadium(CarouselBase)

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import Radium, { StyleRoot } from 'radium'
+import { StyleRoot } from 'radium'
+import { ConfiguredRadium } from 'kitten/config/configured-radium'
 import PropTypes from 'prop-types'
 import { Container } from 'kitten/components/grid/container'
 import {
@@ -14,8 +15,8 @@ import {
 } from 'kitten/constants/grid-config'
 import COLORS from 'kitten/constants/colors-config'
 
-const Grid = Radium(GridBase)
-const GridCol = Radium(GridColBase)
+const Grid = ConfiguredRadium(GridBase)
+const GridCol = ConfiguredRadium(GridColBase)
 
 export class Hero extends Component {
   render() {

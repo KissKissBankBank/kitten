@@ -1,5 +1,5 @@
 import React from 'react'
-import Radium from 'radium'
+import { ConfiguredRadium } from 'kitten/config/configured-radium'
 import { createRangeFromZeroTo } from 'kitten/helpers/utils/range'
 
 class CarouselPageBase extends React.Component {
@@ -43,7 +43,7 @@ class CarouselPageBase extends React.Component {
 const styles = {
   page: {
     display: 'flex',
-    flexDirect: 'row',
+    flexDirection: 'row',
   },
   item: {
     flexGrow: 1,
@@ -51,4 +51,4 @@ const styles = {
   },
 }
 
-export const CarouselPage = Radium(CarouselPageBase)
+export const CarouselPage = ConfiguredRadium(CarouselPageBase)
