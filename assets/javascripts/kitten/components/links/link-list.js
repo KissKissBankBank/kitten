@@ -37,6 +37,7 @@ export class LinkList extends Component {
       <li
         className="k-LinkList__item"
         key={ key }
+        role="listitem"
       >
         <a
           href={ href }
@@ -66,7 +67,11 @@ export class LinkList extends Component {
     )
 
     return (
-      <ul className={ listClassName } { ...others }>
+      <ul
+        className={ listClassName }
+        role="group"
+        { ...others }
+      >
         { this.renderItems() }
       </ul>
     )

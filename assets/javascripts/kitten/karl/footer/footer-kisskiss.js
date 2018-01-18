@@ -108,6 +108,8 @@ export class KarlFooterKisskiss extends Component {
                   <Text
                     size="tiny"
                     weight="regular"
+                    for="subscribe"
+                    tag="label"
                   >
                     { subscribeLabel }
                   </Text>
@@ -127,6 +129,7 @@ export class KarlFooterKisskiss extends Component {
                       <TextInputWithButton
                         { ...textInputProps }
                         value={ inputValue }
+                        id="subscribe"
                       />
                     </GridCol>
                   </Grid>
@@ -144,6 +147,7 @@ export class KarlFooterKisskiss extends Component {
               <Text
                 size="tiny"
                 weight="regular"
+                tag="p"
               >
                 { socialText }
               </Text>
@@ -362,6 +366,7 @@ const styles = {
     subscribe: {
       label: {
         alignSelf: 'center',
+        pointerEvents: 'auto',
         [`@media (max-width: ${ScreenConfig['M'].max}px)`]: {
           textAlign: 'center',
         },

@@ -2,6 +2,7 @@ import React from 'react'
 
 export const TwitterIcon = props => (
   <svg
+    id="twitter"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 15 14"
     aria-labelledby="twitter"

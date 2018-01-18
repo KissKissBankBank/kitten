@@ -29,6 +29,7 @@ export class TagButton extends Component {
 
     return (
       <Tag
+        type="button"
         className={ tagButtonClassNames }
         { ...others }
       >

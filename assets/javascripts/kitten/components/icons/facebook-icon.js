@@ -2,6 +2,7 @@ import React from 'react'
 
 export const FacebookIcon = props => (
   <svg
+    id="facebook"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 8 15"
     aria-labelledby="facebook"
