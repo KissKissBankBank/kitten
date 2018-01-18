@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Update colors to `TextInputWithButton` component.
+- Fix: Update colors to `TextInputWithButton` component.
 
 ## [19.0.0] - 2018-01-16
 
