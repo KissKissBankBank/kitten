@@ -1,6 +1,11 @@
 import React from 'react'
 import Radium from 'radium'
 import { createRangeFromZeroTo } from 'kitten/helpers/utils/range'
+import Prefixer from 'inline-style-prefixer'
+
+const prefixer = new Prefixer({
+  keepUnprefixed: true,
+})
 
 class CarouselPageBase extends React.Component {
   render() {
@@ -41,14 +46,14 @@ class CarouselPageBase extends React.Component {
 }
 
 const styles = {
-  page: {
+  page: prefixer.prefix({
     display: 'flex',
     flexDirect: 'row',
-  },
-  item: {
+  }),
+  item: prefixer.prefix({
     flexGrow: 1,
     flexShrink: 1,
-  },
+  }),
 }
 
 export const CarouselPage = Radium(CarouselPageBase)

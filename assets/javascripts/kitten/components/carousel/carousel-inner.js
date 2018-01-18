@@ -1,6 +1,7 @@
 import React from 'react'
 import Radium, { Style } from 'radium'
 import ResizeObserver from 'resize-observer-polyfill'
+import Prefixer from 'inline-style-prefixer'
 
 if (typeof window !== 'undefined') {
   require('smoothscroll-polyfill').polyfill()
@@ -64,6 +65,10 @@ const getRangePageScrollLeft =
     return createRangeFromZeroTo(numPages)
       .map((numPage) => numPage * (innerWidth + itemMarginBetween))
   }
+
+const prefixer = new Prefixer({
+  keepUnprefixed: true,
+})
 
 class CarouselInnerBase extends React.Component {
   state = {
@@ -213,7 +218,7 @@ class CarouselInnerBase extends React.Component {
 }
 
 const styles = {
-  carouselInner: {
+  carouselInner: prefixer.prefix({
     display: 'flex',
     flexDirect: 'row',
     overflowX: 'scroll',
@@ -226,13 +231,13 @@ const styles = {
     scrollSnapType: supportScrollSnap ? 'mandatory' : 'none',
     // Fix bug IE11 ResizeObserver, to trigger a first resize
     minHeight: 1,
-  },
-  carouselPageContainer: {
+  }),
+  carouselPageContainer: prefixer.prefix({
     width: '100%',
     flexShrink: 0,
     // snap only for browser that support snap without prefixes
     scrollSnapAlign: supportScrollSnap ? 'center' : 'none',
-  },
+  }),
 }
 
 export const CarouselInner = Radium(CarouselInnerBase)
