@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import Radium, { StyleRoot } from 'radium'
 import { Row as RowBase } from 'kitten/components/grid/row'
-import { Container } from 'kitten/components/grid/container'
 import { Marger } from 'kitten/components/layout/marger'
 import {
   Grid as GridBase,
@@ -26,6 +25,7 @@ import { ScreenConfig,
   SCREEN_SIZE_M,
 } from 'kitten/constants/screen-config'
 import COLORS from 'kitten/constants/colors-config'
+import { parseHtml } from 'kitten/helpers/utils/parser'
 
 const Grid = Radium(GridBase)
 const GridCol = Radium(GridColBase)
@@ -256,7 +256,11 @@ export class KarlFooterKisskiss extends Component {
 
   renderNotice() {
     const {
-      noticeParagraph,
+      noticeParagraphAutorite,
+      noticeParagraphMangopayText1,
+      noticeParagraphMangopayLink,
+      noticeParagraphMangopayText2,
+      noticeCopyright,
     } = this.props
 
     return(
@@ -282,7 +286,7 @@ export class KarlFooterKisskiss extends Component {
                 margin={ false }
                 style={ styles.notice.block.paragraph }
               >
-                { noticeParagraph }
+                { parseHtml(noticeParagraphAutorite) }
 
               </Paragraph>
             </div>
@@ -308,17 +312,17 @@ export class KarlFooterKisskiss extends Component {
                 margin={ false }
                 style={ styles.notice.block.paragraph }
               >
-                KissKissBankBank &amp; Co est agent de l’institution financière
+                { noticeParagraphMangopayText1 }
                 {' '}
                 <a
                   href="https://www.mangopay.com/fr/"
                   target="_blank"
                   style={ styles.notice.block.paragraph.link }
                 >
-                  Mangopay SA.
+                  { noticeParagraphMangopayLink }
                 </a>
                 {' '}
-                Paiements sécurisés avec Mangopay Payment Services
+                { noticeParagraphMangopayText2 }
               </Paragraph>
             </div>
           </GridCol>
@@ -327,16 +331,13 @@ export class KarlFooterKisskiss extends Component {
             col-l="4"
             style={ styles.notice.block.copyright }
           >
-            <Marger
-              top={ this.state.viewportIsTabletOrLess ? 5 : 0 }
-            >
+            <Marger top={ this.state.viewportIsTabletOrLess ? 5 : 0 }>
               <Text
                 size="tiny"
                 weight="regular"
                 color="background1"
-                tag="p"
               >
-                © 2018 KissKissBankBank &amp; Co
+                { noticeCopyright }
               </Text>
             </Marger>
           </GridCol>
@@ -551,7 +552,12 @@ KarlFooterKisskiss.defaultProps = {
   ],
 
   // Notice
-  noticeParagraph:'KissKissBankBank est une plateforme de financement \
-  participatif régulée par les autorités françaises.\
-  Immatriculation &nbsp;: 14007218',
+  noticeParagraphAutorite: 'KissKissBankBank est une plateforme de financement \
+    participatif régulée par les autorités françaises.\
+    Immatriculation&nbsp; : 14007218',
+  noticeParagraphMangopayText1: 'KissKissBankBank&amp; Co est agent de l’institution \
+    financière',
+  noticeParagraphMangopayLink: 'Mangopay SA.',
+  noticeParagraphMangopayText2: 'Paiements sécurisés avec Mangopay Payment Services',
+  noticeCopyright: '© 2018 KissKissBankBank&amp; Co',
 }

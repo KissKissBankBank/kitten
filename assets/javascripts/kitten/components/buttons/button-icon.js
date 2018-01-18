@@ -35,7 +35,7 @@ export class ButtonIcon extends Component {
       <Tag
         className={ buttonIconClassNames }
         tabIndex={ tabindex }
-        role="button"
+        type="button"
         { ...others }
       />
     )

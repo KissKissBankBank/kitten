@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add A11Y on `LinkList`, `InstagramIcon`, `FacebookIcon`, `TwitterIcon`.
+- Feature: Add A11Y on components's `KarlFooterKissKiss` examples
 - Feature: Add `placeholder` prop to `TextInputWithButton` component.
 - Feature: Add `k-u-color-background1` utility.
 
