@@ -49,7 +49,8 @@ export class TextInputWithButton extends Component {
         <button
           { ...buttonProps }
           className={ textInputWithButtonButtonClassName }
-          type="button">
+          type="button"
+        >
           { value }
         </button>
       </div>

@@ -31,13 +31,15 @@ export class Button extends Component {
     // Adds keyboard accessibility to `<a>`
     const tabindex = (tag == "a" && !this.props.href) ? 0 : null
 
+    const type = (tag == "button") ? "button" : null
+
     const Tag = tag
 
     return (
       <Tag
         className={ buttonClassNames }
         tabIndex={ tabindex }
-        type="button"
+        type={ type }
         { ...others }
       />
     )

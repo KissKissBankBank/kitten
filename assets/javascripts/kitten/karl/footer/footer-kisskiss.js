@@ -88,6 +88,9 @@ export class KarlFooterKisskiss extends Component {
       socialText,
       inputValue,
       textInputProps,
+      hrefFacebook,
+      hrefTwitter,
+      hrefInstagram,
       ...others,
     } = this.props
 
@@ -108,10 +111,10 @@ export class KarlFooterKisskiss extends Component {
                   <Text
                     size="tiny"
                     weight="regular"
-                    for="subscribe"
+                    htmlFor="subscribe"
                     tag="label"
                   >
-                    { subscribeLabel }
+                    { parseHtml(subscribeLabel) }
                   </Text>
                 </GridCol>
 
@@ -149,18 +152,21 @@ export class KarlFooterKisskiss extends Component {
                 weight="regular"
                 tag="p"
               >
-                { socialText }
+                { parseHtml(socialText) }
               </Text>
             </div>
 
             <div style={ styles.network.social.buttons }>
               <FacebookButtonIcon
                 style={ styles.network.social.buttons.buttonIcon }
+                href={ hrefFacebook }
+
               />
               <TwitterButtonIcon
                 style={ styles.network.social.buttons.buttonIcon }
+                href={ hrefTwitter }
               />
-              <InstagramButtonIcon />
+              <InstagramButtonIcon href={ hrefInstagram } />
             </div>
           </GridCol>
         </Grid>
@@ -169,11 +175,9 @@ export class KarlFooterKisskiss extends Component {
   }
 
   renderLanguageSelect() {
-    const options = [
-      { value: 'fr', label: 'Français' },
-      { value: 'en', label: 'English' },
-      { value: 'nl', label: 'Nederlands' },
-    ]
+    const {
+      options,
+    } = this.props
 
     return (
       <GridCol
@@ -192,6 +196,11 @@ export class KarlFooterKisskiss extends Component {
   }
 
   renderList() {
+    const {
+      items1,
+      items2,
+      items3,
+    } = this.props
 
     return (
       <Row role="navigation">
@@ -218,7 +227,7 @@ export class KarlFooterKisskiss extends Component {
               >
                 <LinkList
                   margin={ false }
-                  items={ this.props.items1 }
+                  items={ items1 }
                   color="light"
                 />
               </GridCol>
@@ -229,7 +238,7 @@ export class KarlFooterKisskiss extends Component {
               >
                 <LinkList
                   margin={ false }
-                  items={ this.props.items2 }
+                  items={ items2 }
                   color="light"
                 />
               </GridCol>
@@ -240,7 +249,7 @@ export class KarlFooterKisskiss extends Component {
               >
                 <LinkList
                   margin={ false }
-                  items={ this.props.items3 }
+                  items={ items3 }
                   color="light"
                 />
               </GridCol>
@@ -248,7 +257,6 @@ export class KarlFooterKisskiss extends Component {
           </GridCol>
 
           { this.renderLanguageSelect() }
-
         </Grid>
       </Row>
     )
@@ -256,7 +264,9 @@ export class KarlFooterKisskiss extends Component {
 
   renderNotice() {
     const {
+      noticeAltAutorite,
       noticeParagraphAutorite,
+      noticeAltMangopay,
       noticeParagraphMangopayText1,
       noticeParagraphMangopayLink,
       noticeParagraphMangopayText2,
@@ -276,7 +286,7 @@ export class KarlFooterKisskiss extends Component {
               <div style={ styles.notice.block.logo }>
                 <img
                   src="/assets/partners/french-authorities.svg"
-                  alt="Autorités Française"
+                  alt={ noticeAltAutorite }
                   style={ styles.notice.block.logo.img }
                 />
               </div>
@@ -287,7 +297,6 @@ export class KarlFooterKisskiss extends Component {
                 style={ styles.notice.block.paragraph }
               >
                 { parseHtml(noticeParagraphAutorite) }
-
               </Paragraph>
             </div>
           </GridCol>
@@ -302,7 +311,7 @@ export class KarlFooterKisskiss extends Component {
               <div style={ styles.notice.block.logo }>
                 <img
                   src="/assets/partners/mangopay.svg"
-                  alt="MANGOPAY"
+                  alt={ noticeAltMangopay }
                   style={ styles.notice.block.logo.img.mangopay }
                 />
               </div>
@@ -312,17 +321,17 @@ export class KarlFooterKisskiss extends Component {
                 margin={ false }
                 style={ styles.notice.block.paragraph }
               >
-                { noticeParagraphMangopayText1 }
+                { parseHtml(noticeParagraphMangopayText1) }
                 {' '}
                 <a
                   href="https://www.mangopay.com/fr/"
                   target="_blank"
                   style={ styles.notice.block.paragraph.link }
                 >
-                  { noticeParagraphMangopayLink }
+                  { parseHtml(noticeParagraphMangopayLink) }
                 </a>
                 {' '}
-                { noticeParagraphMangopayText2 }
+                { parseHtml(noticeParagraphMangopayText2) }
               </Paragraph>
             </div>
           </GridCol>
@@ -337,7 +346,7 @@ export class KarlFooterKisskiss extends Component {
                 weight="regular"
                 color="background1"
               >
-                { noticeCopyright }
+                { parseHtml(noticeCopyright) }
               </Text>
             </Marger>
           </GridCol>
@@ -354,17 +363,17 @@ const styles = {
 
   network: {
     background: 'linear-gradient(to top, '
-    + `${COLORS.background3} 0%, `
-    + `${COLORS.background3} 50%, `
-    + `${COLORS.background1} 50%, `
-    + `${COLORS.background1} 100%)`,
+      + `${COLORS.background3} 0%, `
+      + `${COLORS.background3} 50%, `
+      + `${COLORS.background1} 50%, `
+      + `${COLORS.background1} 100%)`,
 
     [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
       background: 'linear-gradient(to right, '
-      + `${COLORS.background3} 0%, `
-      + `${COLORS.background3} 70%, `
-      + `${COLORS.background1} 70%, `
-      + `${COLORS.background1} 100%)`,
+        + `${COLORS.background3} 0%, `
+        + `${COLORS.background3} 70%, `
+        + `${COLORS.background1} 70%, `
+        + `${COLORS.background1} 100%)`,
     },
 
     subscribe: {
@@ -525,7 +534,6 @@ KarlFooterKisskiss.defaultProps = {
   subscribeLabel: 'Inscrivez-vous à notre Newsletter',
   textInputProps: {
     placeholder: 'Entrez votre e-mail',
-
   },
   inputValue: 'Envoyer',
   socialText: 'Suivez-nous',
@@ -551,13 +559,22 @@ KarlFooterKisskiss.defaultProps = {
     { key: 'key4', item: 'Nous contacter', href: '#', title: 'Aller à la page nous contacter' },
   ],
 
+  // LanguageSelect
+  options: [
+    { value: 'fr', label: 'Français' },
+    { value: 'en', label: 'English' },
+    { value: 'nl', label: 'Nederlands' },
+  ],
+
   // Notice
+  noticeAltAutorite: 'Autorités Française',
   noticeParagraphAutorite: 'KissKissBankBank est une plateforme de financement \
     participatif régulée par les autorités françaises.\
     Immatriculation&nbsp; : 14007218',
+  noticeAltMangopay: 'Mangopay',
   noticeParagraphMangopayText1: 'KissKissBankBank&amp; Co est agent de l’institution \
     financière',
   noticeParagraphMangopayLink: 'Mangopay SA.',
   noticeParagraphMangopayText2: 'Paiements sécurisés avec Mangopay Payment Services',
-  noticeCopyright: '© 2018 KissKissBankBank&amp; Co',
+  noticeCopyright: '&copy; 2018 KissKissBankBank&amp; Co',
 }
