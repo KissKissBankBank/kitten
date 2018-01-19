@@ -6,7 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Add `ConfiguredRadium` HOC to use Radium with custom configuration.
 - Fix: Update Radium version and add a custom plugin to fix `prefixer` data.
-- Fix: `Carousel` prerender.
+- Fix: Fix `Carousel` prerender.
 
 ## [19.0.0] - 2018-01-16
 
