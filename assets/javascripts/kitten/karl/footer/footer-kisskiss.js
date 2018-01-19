@@ -540,23 +540,88 @@ KarlFooterKisskiss.defaultProps = {
 
   // List
   items1: [
-    { key: 'key1', item: 'L\'équipe', href: '#', title: 'Aller à la page l\'équipe' },
-    { key: 'key2', item: 'Presse', href: '#', title: 'Aller à la page presse' },
-    { key: 'key3', item: 'Conditions générales', href: '#', title: 'Aller à la page conditions générales' },
-    { key: 'key4', item: 'Nos valeurs', href: '#', title: 'Aller à la page nos valeurs' },
+    {
+      key: 'key1',
+      item: 'L\'équipe',
+      href: '#',
+      title: 'Aller à la page l\'équipe'
+    },
+    {
+      key: 'key2',
+      item: 'Presse',
+      href: '#',
+      title: 'Aller à la page presse'
+    },
+    {
+      key: 'key3',
+      item: 'Conditions générales',
+      href: '#',
+      title: 'Aller à la page conditions générales'
+    },
+    {
+      key: 'key4',
+      item: 'Nos valeurs',
+      href: '#',
+      title: 'Aller à la page nos valeurs'
+    },
   ],
   items2: [
-    { key: 'key1', item: 'Crowd' , href: '#', title: 'Aller à la page crowd' },
-    { key: 'key2', item: 'Les Mentors', href: '#', title: 'Aller à la page les Mentors' },
-    { key: 'key3', item: 'Pop My Project', href: '#', title: 'Aller à la page Pop My Project' },
-    { key: 'key4', item: 'Les StaKissTiques', href: '#', title: 'Aller à la page les StaKissTiques' },
-    { key: 'key5', item: 'KissKiss Cinéma', href: '#', title: 'Aller à la page KissKiss Cinéma' },
+    {
+      key: 'key1',
+      item: 'Crowd',
+      href: '#',
+      title: 'Aller à la page crowd'
+    },
+    {
+      key: 'key2',
+      item: 'Les Mentors',
+      href: '#',
+      title: 'Aller à la page les Mentors'
+    },
+    {
+      key: 'key3',
+      item: 'Pop My Project',
+      href: '#',
+      title: 'Aller à la page Pop My Project'
+    },
+    {
+      key: 'key4',
+      item: 'Les StaKissTiques',
+      href: '#',
+      title: 'Aller à la page les StaKissTiques'
+    },
+    {
+      key: 'key5',
+      item: 'KissKiss Cinéma',
+      href: '#',
+      title: 'Aller à la page KissKiss Cinéma'
+    },
   ],
   items3: [
-    { key: 'key1', item: 'Réussir sa collecte', href: '#', title: 'Aller à la page réussir sa collecte' },
-    { key: 'key2', item: 'Questions fréquentes', href: '#', title: 'Aller à la page questions fréquentes' },
-    { key: 'key3', item: 'Conditions générales', href: '#', title: 'Aller à la page conditions générales' },
-    { key: 'key4', item: 'Nous contacter', href: '#', title: 'Aller à la page nous contacter' },
+    {
+      key: 'key1',
+      item: 'Réussir sa collecte',
+      href: '#',
+      title: 'Aller à la page réussir sa collecte'
+    },
+    {
+      key: 'key2',
+      item: 'Questions fréquentes',
+      href: '#',
+      title: 'Aller à la page questions fréquentes'
+    },
+    {
+      key: 'key3',
+      item: 'Conditions générales',
+      href: '#',
+      title: 'Aller à la page conditions générales'
+    },
+    {
+      key: 'key4',
+      item: 'Nous contacter',
+      href: '#',
+      title: 'Aller à la page nous contacter'
+    },
   ],
 
   // LanguageSelect
@@ -572,8 +637,8 @@ KarlFooterKisskiss.defaultProps = {
     participatif régulée par les autorités françaises.\
     Immatriculation&nbsp; : 14007218',
   noticeAltMangopay: 'Mangopay',
-  noticeParagraphMangopayText1: 'KissKissBankBank&amp; Co est agent de l’institution \
-    financière',
+  noticeParagraphMangopayText1: 'KissKissBankBank&amp; Co est agent de \
+  l’institution financière',
   noticeParagraphMangopayLink: 'Mangopay SA.',
   noticeParagraphMangopayText2: 'Paiements sécurisés avec Mangopay Payment Services',
   noticeCopyright: '&copy; 2018 KissKissBankBank&amp; Co',
