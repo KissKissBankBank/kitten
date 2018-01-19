@@ -34,17 +34,19 @@ describe('<TextInputWithButton />', () => {
     const textInputProps = {
       'aria-hidden': true,
       className: 'custom-class',
+      placeholder: 'bar',
     }
-    const component = mount(
+    const component = shallow(
       <TextInputWithButton
         textInputProps={ textInputProps }
       />
     )
-    const textInput = component.find('input')
+    const textInput = component.find(TextInput)
 
     it('renders textInput with className prop', () => {
       expect(textInput.hasClass('custom-class')).toBe(true)
       expect(textInput.props()['aria-hidden']).toBe(true)
+      expect(textInput.props().placeholder).toBe('bar')
     })
   })
 

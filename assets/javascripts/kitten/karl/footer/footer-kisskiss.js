@@ -130,8 +130,9 @@ export class KarlFooterKisskiss extends Component {
                       col-l="12"
                     >
                       <TextInputWithButton
-                        { ...textInputProps }
-                        textInputProps={ { id: "subscribe" } }
+                        textInputProps={
+                          { ...textInputProps, id: "subscribe" }
+                        }
                         value={ inputValue }
                       />
                     </GridCol>
