@@ -4,8 +4,6 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Update `SupTitle` component.
-
 ## [19.0.0] - 2018-01-16
 
 Breaking changes:
