@@ -36,7 +36,7 @@ describe('<TextInputWithButton />', () => {
       className: 'custom-class',
       placeholder: 'bar',
     }
-    const component = shallow(
+    const component = mount(
       <TextInputWithButton
         textInputProps={ textInputProps }
       />
