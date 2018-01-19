@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { Component } from 'react'
 import classNames from 'classnames'
 
-export class SupTitle extends React.Component {
+export class SupTitle extends Component {
   render() {
-    const { className, tag, ...supTitleProps } = this.props
+    const {
+      className,
+      tag,
+      ...supTitleProps
+    } = this.props
 
     const supTitleClassName = classNames(
       'k-SupTitle',
@@ -20,5 +24,5 @@ export class SupTitle extends React.Component {
 
 SupTitle.defaultProps = {
   tag: 'div',
-  children: 'Sup Title',
+  children: 'Lorem ipsum',
 }
