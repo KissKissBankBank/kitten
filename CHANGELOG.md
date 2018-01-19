@@ -7,6 +7,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Add A11Y on components's `KarlFooterKissKiss` examples
 - Feature: Add `placeholder` prop to `TextInputWithButton` component.
 - Feature: Add `k-u-color-background1` utility for `Text` component.
+- Fix: Update styles on `Tour`, `Popover` and `Modal` components.
+- Feature: Add `k-ButtonIcon--cross--tiny` class.
 
 ## [19.0.0] - 2018-01-16
 
