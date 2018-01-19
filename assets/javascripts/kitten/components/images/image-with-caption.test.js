@@ -42,9 +42,9 @@ describe ('<ImageWithCaption />', () => {
     const component = mount(
       <ImageWithCaption
         imageSrc="test"
-        imageAlt
-        imageWidth
-        imageHeight
+        imageAlt="FooBar"
+        imageWidth="42"
+        imageHeight="42"
       />
     )
     const image = component.find('.k-ImageWithCaption__img')
@@ -52,9 +52,9 @@ describe ('<ImageWithCaption />', () => {
     it('renders an image with good attributes', () => {
       expect(image).toHaveLength(1)
       expect(image.props().src).toBe('test')
-      expect(image.props().alt).toBeTruthy()
-      expect(image.props().width).toBeTruthy()
-      expect(image.props().height).toBeTruthy()
+      expect(image.props().alt).toBe('FooBar')
+      expect(image.props().width).toBe('42')
+      expect(image.props().height).toBe('42')
     })
   })
 
