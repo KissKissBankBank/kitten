@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Update `SupTitle` component.
+
 ## [19.0.0] - 2018-01-16
 
 Breaking changes:
@@ -14,7 +16,7 @@ Breaking changes:
   needs `babel-polyfill` to work properly with `Map` and `Set`.
   You need to [install babel-polyfill](https://babeljs.io/docs/usage/polyfill/)
   and add it to your webpack config to make it work.
-  
+
 Features:
 - Add [Jest](https://facebook.github.io/jest/) as our new
   testing framework instead of [Mocha](https://mochajs.org/) and
