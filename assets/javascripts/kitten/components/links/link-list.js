@@ -85,5 +85,4 @@ LinkList.defaultProps = {
   margin: true,
   items: [], // Eg: [{ key: …, item: …, href: …, title: … }]
   color: 'dark',
-  title: '',
 }
