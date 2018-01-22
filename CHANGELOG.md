@@ -4,11 +4,16 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `ConfiguredRadium` HOC to use Radium with custom configuration.
-- Fix: Update Radium version and add a custom plugin to fix `prefixer` data.
-- Fix: Fix `Carousel` prerender.
-- Fix: Update styles on `Tour`, `Popover` and `Modal` components.
-- Feature: Add `k-ButtonIcon--cross--tiny` class.
+## [19.1.0] - 2018-01-22
+
+Features:
+- Add `ConfiguredRadium` HOC to use Radium with custom configuration.
+- Add `k-ButtonIcon--cross--tiny` class.
+
+Fixes:
+- Update Radium version and add a custom plugin to fix `prefixer` data.
+- Fix `Carousel` prerender.
+- Update styles on `Tour`, `Popover` and `Modal` components.
 
 ## [19.0.0] - 2018-01-16
 
