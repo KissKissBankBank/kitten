@@ -44,9 +44,9 @@
         background-color: map-get($k-colors, 'background-1'),
       ),
       disabled: (
-        color: map-get($k-colors, 'font-2'),
-        border-color: map-get($k-colors, 'line-1'),
-        background-color: map-get($k-colors, 'line-1'),
+        color: map-get($k-colors, 'background-1'),
+        border-color: map-get($k-colors, 'line-2'),
+        background-color: map-get($k-colors, 'line-2'),
       ),
     ),
 
@@ -77,9 +77,9 @@
         background-color: map-get($k-colors, 'primary-3'),
       ),
       disabled: (
-        color: map-get($k-colors, 'font-2'),
-        border-color: map-get($k-colors, 'line-1'),
-        background-color: map-get($k-colors, 'line-1'),
+        color: map-get($k-colors, 'background-1'),
+        border-color: map-get($k-colors, 'line-2'),
+        background-color: map-get($k-colors, 'line-2'),
       ),
     ),
 
@@ -110,9 +110,9 @@
         background-color: map-get($k-colors, 'background-1'),
       ),
       disabled: (
-        color: map-get($k-colors, 'font-2'),
-        border-color: map-get($k-colors, 'line-1'),
-        background-color: map-get($k-colors, 'line-1'),
+        color: map-get($k-colors, 'background-1'),
+        border-color: map-get($k-colors, 'line-2'),
+        background-color: map-get($k-colors, 'line-2'),
       ),
     ),
 
@@ -143,9 +143,9 @@
         background-color: map-get($k-colors, 'primary-3'),
       ),
       disabled: (
-        color: map-get($k-colors, 'font-2'),
-        border-color: map-get($k-colors, 'line-1'),
-        background-color: map-get($k-colors, 'line-1'),
+        color: map-get($k-colors, 'background-1'),
+        border-color: map-get($k-colors, 'line-2'),
+        background-color: map-get($k-colors, 'line-2'),
       ),
     ),
 
@@ -176,9 +176,9 @@
         background-color: map-get($k-colors, 'primary-3'),
       ),
       disabled: (
-        color: map-get($k-colors, 'font-2'),
-        border-color: map-get($k-colors, 'line-1'),
-        background-color: map-get($k-colors, 'line-1'),
+        color: map-get($k-colors, 'background-1'),
+        border-color: map-get($k-colors, 'line-2'),
+        background-color: map-get($k-colors, 'line-2'),
       ),
     ),
 
@@ -209,9 +209,9 @@
         background-color: #1d3b7a,
       ),
       disabled: (
-        color: map-get($k-colors, 'font-2'),
-        border-color: map-get($k-colors, 'line-1'),
-        background-color: map-get($k-colors, 'line-1'),
+        color: map-get($k-colors, 'background-1'),
+        border-color: map-get($k-colors, 'line-2'),
+        background-color: map-get($k-colors, 'line-2'),
       ),
     ),
 
@@ -242,9 +242,9 @@
         background-color: #388ed0,
       ),
       disabled: (
-        color: map-get($k-colors, 'font-2'),
-        border-color: map-get($k-colors, 'line-1'),
-        background-color: map-get($k-colors, 'line-1'),
+        color: map-get($k-colors, 'background-1'),
+        border-color: map-get($k-colors, 'line-2'),
+        background-color: map-get($k-colors, 'line-2'),
       ),
     ),
 
@@ -275,9 +275,9 @@
         background-color: #004880,
       ),
       disabled: (
-        color: map-get($k-colors, 'font-2'),
-        border-color: map-get($k-colors, 'line-1'),
-        background-color: map-get($k-colors, 'line-1'),
+        color: map-get($k-colors, 'background-1'),
+        border-color: map-get($k-colors, 'line-2'),
+        background-color: map-get($k-colors, 'line-2'),
       ),
     ),
 
@@ -343,8 +343,8 @@
         ),
       ),
       disabled: (
-        color: map-get($k-colors, 'font-2'),
-        background-color: map-get($k-colors, 'line-1'),
+        color: map-get($k-colors, 'background-1'),
+        background-color: map-get($k-colors, 'line-2'),
         background-image: none,
       ),
     )

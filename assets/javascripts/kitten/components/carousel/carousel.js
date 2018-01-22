@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Radium from 'radium'
+import { ConfiguredRadium } from 'kitten/config/configured-radium'
 import { createRangeFromZeroTo } from 'kitten/helpers/utils/range'
 import {
   createMatchMedia,
@@ -77,8 +77,8 @@ class CarouselBase extends React.Component {
 
     this.state = {
       indexPageVisible: 0,
-      numColumns: 0,
-      numPages: 0,
+      numColumns: 3,
+      numPages: getNumPagesForColumnsAndDataLength(this.props.data.length, 3),
       viewportIsMobile: this.mqMobile
         ? this.mqMobile.matches
         : false,
@@ -359,4 +359,4 @@ CarouselBase.propTypes = {
   renderItem: PropTypes.func.isRequired,
 }
 
-export const Carousel = Radium(CarouselBase)
+export const Carousel = ConfiguredRadium(CarouselBase)

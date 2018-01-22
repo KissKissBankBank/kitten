@@ -31,8 +31,8 @@ export class Popover extends Component {
 
     return (
       <Marger
-        top="6"
-        bottom="3"
+        top="5"
+        bottom="5"
         className="k-Popover__content"
       >
         { this.props.children }

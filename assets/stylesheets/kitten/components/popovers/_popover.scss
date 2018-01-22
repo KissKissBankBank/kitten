@@ -31,7 +31,7 @@
   $background-color: map-get($k-colors, 'background-1');
   $border-color: map-get($k-colors, 'line-1');
   $border-size: k-px-to-rem(2px);
-  $margin-left: k-px-to-rem(40px);
+  $margin-left: k-px-to-rem(50px);
 
   .k-Popover {
     position: relative;
@@ -45,7 +45,6 @@
   .k-Popover__container {
     min-height: k-px-to-rem(245px);
     box-sizing: border-box;
-    margin-left: $margin-left;
   }
 
   .k-Popover__illustration {
@@ -53,6 +52,7 @@
     align-items: center;
     justify-content: center;
     width: k-px-to-rem(80px);
+    margin-left: $margin-left;
   }
 
   .k-Popover__svg--primary {
@@ -67,7 +67,7 @@
     flex-direction: column;
     flex: 1;
 
-    margin-left: k-px-to-rem(40px);
+    margin-left: $margin-left;
   }
 
   .k-Popover__navigation {

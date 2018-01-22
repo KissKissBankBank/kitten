@@ -12,7 +12,7 @@ describe('<SupTitle />', () => {
     })
 
     it('with default children', () => {
-      expect(component.text()).toBe('Sup Title')
+      expect(component.text()).toBe('Lorem ipsum')
     })
   })
 
