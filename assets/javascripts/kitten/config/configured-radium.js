@@ -30,4 +30,4 @@ const config = {
   ],
 }
 
-export const ConfiguredRadium = (component) => Radium(config)(component)
+export const ConfiguredRadium = component => Radium(config)(component)
