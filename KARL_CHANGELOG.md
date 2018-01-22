@@ -4,7 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Update `TextInputWithButton` example.
+## [19.2.0] - 2018-01-22
+
+Fix:
+- Update `TextInputWithButton` example.
 
 ## [19.1.0] - 2018-01-22
 
