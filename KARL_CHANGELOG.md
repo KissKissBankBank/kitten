@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Update `Blue Light MDC` color.
+
 ## [19.0.0] - 2018-01-16
 
 Feature:

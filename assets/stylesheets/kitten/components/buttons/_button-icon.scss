@@ -106,14 +106,6 @@
     }
   }
 
-  .k-ButtonIcon__rounded {
-    @include k-buttonPadding(
-      $button-size,
-      $icon-width,
-      $icon-height
-    );
-  }
-
   // Mirror rotate
   // DEPRECATED
   .k-ButtonIcon__svg--mirror {
@@ -167,7 +159,11 @@
   }
 
   .k-ButtonIcon--instagram {
-    @include k-buttonPadding($button-size-with-border, $icon-width, $icon-height);
+    @include k-buttonPadding(
+      $button-size-with-border,
+      $icon-width,
+      $icon-height
+    );
     @include k-buttonColors('instagram');
   }
 
@@ -297,6 +293,19 @@
   .k-ButtonIcon--cross {
     @include k-buttonPadding(
       $button-size,
+      $cross-size,
+      $cross-size
+    );
+
+    .k-ButtonIcon__svg {
+      width: $cross-size;
+      height: $cross-size;
+    }
+  }
+
+  .k-ButtonIcon--cross--tiny {
+    @include k-buttonPadding(
+      $button-size-tiny,
       $cross-size,
       $cross-size
     );
