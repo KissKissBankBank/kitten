@@ -10,14 +10,18 @@
 ///
 /// <form role="button">
 ///   <div class="k-TextInputWithButton">
-///     <input class="k-TextInput k-TextInputWithButton__input"
-///            type="text"
-///            name=""
-///            placeholder="Lorem ipsum dolor sit amet" />
+///     <input
+///       class="k-TextInput k-TextInputWithButton__input"
+///       type="text"
+///       name=""
+///       placeholder="Lorem ipsum dolor sit amet"
+///     />
 ///
-///     <input class="k-TextInputWithButton__button"
-///            type="submit"
-///            value="Button" />
+///     <button
+///       class="k-TextInputWithButton__button"
+///       type="submit"
+///       value="Button"
+///     />
 ///   </div>
 /// </form>
 
@@ -26,13 +30,9 @@
   $font-size: -1; // 14px
   $line-height: normal;
 
-  $color: map-get($k-colors, 'background-1');
-
   // Background-color
-  $button-background: map-get($k-colors, 'font-1');
-  $button-background-is-valid: map-get($k-colors, 'valid');
-  $button-background-is-error: map-get($k-colors, 'error');
-  $button-background-disabled: map-get($k-colors, 'line-2');
+  $button-is-valid: map-get($k-colors, 'valid');
+  $button-is-error: map-get($k-colors, 'error');
 
   // Border radius Text - input
   $border-text-input: 0px;
@@ -44,10 +44,6 @@
 
   .k-TextInputWithButton__input {
     outline: none; // since we introduce our own focus styles
-
-    &:focus ~ .k-TextInputWithButton__button {
-      background-color: $button-background;
-    }
   }
 
   .k-TextInputWithButton__button {
@@ -57,17 +53,15 @@
       $line-height: $line-height
     );
 
+    @include k-buttonColors('beryllium');
+
     position: absolute;
     right: 0;
 
     height: 100%;
     width: k-px-to-rem(104px);
 
-    background-color: $button-background;
     border-radius: $border-text-input;
-    border: none;
-
-    color: $color;
 
     outline: none;
     cursor: pointer;
@@ -75,15 +69,17 @@
     appearance: none;
 
     &.is-valid {
-      background-color: $button-background-is-valid;
+      background-color: $button-is-valid;
+      border-color: $button-is-valid;
     }
 
     &.is-error {
-      background-color: $button-background-is-error;
+      background-color: $button-is-error;
+      border-color: $button-is-error;
     }
 
     &.is-disabled {
-      background-color: $button-background-disabled;
+      cursor: not-allowed;
     }
   }
 }

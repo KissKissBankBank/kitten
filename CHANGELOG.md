@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Update colors to `TextInputWithButton` component.
 - Feature: Update styles `disabled` prop on `Button` and `ButtonIcon`.
 - Fix: Add `assets/javascripts/kitten/config` folder to published package.
 
