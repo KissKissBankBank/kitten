@@ -103,7 +103,7 @@ describe('<ProjectCard />', () => {
     ]
 
     const projectCard = mount(
-      <ProjectCard tags={ tags } />
+      <ProjectCard tagLists={ tags } />
     )
 
     const projectCardWithTwoLists = mount(

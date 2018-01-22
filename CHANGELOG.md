@@ -7,8 +7,26 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Add A11Y on components's `KarlFooterKissKiss` examples
 - Feature: Add `placeholder` prop to `TextInputWithButton` component.
 - Feature: Add `k-u-color-background1` utility for `Text` component.
-- Fix: Update styles on `Tour`, `Popover` and `Modal` components.
-- Feature: Add `k-ButtonIcon--cross--tiny` class.
+
+## [19.2.0] - 2018-01-22
+
+Feature:
+- Update styles `disabled` prop on `Button` and `ButtonIcon`.
+
+Fixes:
+- Update colors to `TextInputWithButton` component.
+- Add `assets/javascripts/kitten/config` folder to published package.
+
+## [19.1.0] - 2018-01-22
+
+Features:
+- Add `ConfiguredRadium` HOC to use Radium with custom configuration.
+- Add `k-ButtonIcon--cross--tiny` class.
+
+Fixes:
+- Update Radium version and add a custom plugin to fix `prefixer` data.
+- Fix `Carousel` prerender.
+- Update styles on `Tour`, `Popover` and `Modal` components.
 
 ## [19.0.0] - 2018-01-16
 
