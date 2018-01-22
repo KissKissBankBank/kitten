@@ -5,10 +5,10 @@ describe('<HorizontalNav />', () => {
   const component = shallow(
     <HorizontalNav
       items={ [
-        { text: 'Nav link 1', href: '#foobar' },
-        { text: 'Nav link 2', href: '#foobar' },
-        { text: 'Nav link 3', href: '#foobar' },
-        { text: 'Nav link 4', href: '#foobar' },
+        { key: 'item-1', text: 'Nav link 1', href: '#foobar' },
+        { key: 'item-2', text: 'Nav link 2', href: '#foobar' },
+        { key: 'item-3', text: 'Nav link 3', href: '#foobar' },
+        { key: 'item-4', text: 'Nav link 4', href: '#foobar' },
       ] }
     />
   )
@@ -44,7 +44,7 @@ describe('<HorizontalNav />', () => {
     const component = mount(
       <HorizontalNav
         items={ [
-          { text: 'Nav link 1' },
+          { key: 'item-1', text: 'Nav link 1' },
         ] }
         height="auto"
       />
@@ -64,10 +64,10 @@ describe('<HorizontalNav />', () => {
         className="custom-class"
         elementClassName="element-custom-class"
         items={ [
-          { text: 'Nav link 1', className: 'item-custom-class' },
-          { text: 'Nav link 2', className: 'item-custom-class' },
-          { text: 'Nav link 3', className: 'item-custom-class' },
-          { text: 'Nav link 4', className: 'item-custom-class' },
+          { key: 'item-1', text: 'Nav link 1', className: 'item-custom-class' },
+          { key: 'item-2', text: 'Nav link 2', className: 'item-custom-class' },
+          { key: 'item-3', text: 'Nav link 3', className: 'item-custom-class' },
+          { key: 'item-4', text: 'Nav link 4', className: 'item-custom-class' },
         ] }
       />
     )
@@ -89,7 +89,7 @@ describe('<HorizontalNav />', () => {
       const component = shallow(
         <HorizontalNav
           items={ [
-            { text: 'Nav\n1', className: 'item-1' },
+            { key: 'item-1', text: 'Nav\n1', className: 'item-1' },
           ] }
         />
       )

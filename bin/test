@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -e
 
-FILES=${1:-assets/javascripts/kitten/**/*.test.js}
+FILES=${1:-\\.test\\.js$}
 
 npm test -- "$FILES"
