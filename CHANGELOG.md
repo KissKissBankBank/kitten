@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Add `assets/javascripts/kitten/config` folder to package published.
+- Fix: Add `assets/javascripts/kitten/config` folder to published package.
 
 ## [19.1.0] - 2018-01-22
 
