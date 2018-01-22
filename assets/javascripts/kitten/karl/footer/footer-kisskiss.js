@@ -184,7 +184,7 @@ export class KarlFooterKisskiss extends Component {
       <GridCol
         col="8" offset="2"
         col-m="4" offset-m="4"
-        col-l="3" offset-l="1"
+        col-l="2" offset-l="2"
       >
         <SelectWithState
           name="language"
@@ -543,85 +543,103 @@ KarlFooterKisskiss.defaultProps = {
   items1: [
     {
       key: 'key1',
-      item: 'L\'équipe',
+      item: 'Réussir ma collecte',
       href: '#',
-      title: 'Aller à la page l\'équipe'
+      title: 'Aller à la page Réussir ma collecte'
     },
     {
       key: 'key2',
-      item: 'Presse',
+      item: 'Financer mon projet food ou agricole',
       href: '#',
-      title: 'Aller à la page presse'
+      title: 'Aller à la page Un projet food ou agricole ?'
     },
     {
       key: 'key3',
-      item: 'Conditions générales',
+      item: 'Crowdfunding : Questions fréquentes',
       href: '#',
-      title: 'Aller à la page conditions générales'
+      title: 'Aller à la page Crowdfunding : Questions fréquentes'
     },
     {
       key: 'key4',
-      item: 'Nos valeurs',
+      item: 'Les Mentors',
       href: '#',
-      title: 'Aller à la page nos valeurs'
+      title: 'Aller à la page les Mentors'
     },
   ],
   items2: [
     {
       key: 'key1',
-      item: 'Crowd',
+      item: 'Blog',
       href: '#',
-      title: 'Aller à la page crowd'
+      title: 'Aller à la page Blog'
     },
     {
       key: 'key2',
-      item: 'Les Mentors',
+      item: 'Maison de Crowdfunding',
       href: '#',
-      title: 'Aller à la page les Mentors'
+      title: 'Aller à la page les Maison de Crowdfunding'
     },
     {
       key: 'key3',
-      item: 'Pop My Project',
+      item: 'Les StaKissTiques',
       href: '#',
-      title: 'Aller à la page Pop My Project'
+      title: 'Aller à la page Les StaKissTiques'
     },
     {
       key: 'key4',
-      item: 'Les StaKissTiques',
+      item: 'KissKiss Cinéma',
       href: '#',
-      title: 'Aller à la page les StaKissTiques'
+      title: 'Aller à la page les KissKiss Cinéma'
     },
     {
       key: 'key5',
-      item: 'KissKiss Cinéma',
+      item: 'API',
       href: '#',
-      title: 'Aller à la page KissKiss Cinéma'
+      title: 'Aller à la page API'
+    },
+    {
+      key: 'key6',
+      item: 'Partenariats',
+      href: '#',
+      title: 'Aller à la page Partenariats'
     },
   ],
   items3: [
     {
       key: 'key1',
-      item: 'Réussir sa collecte',
+      item: 'L\'équipe',
       href: '#',
-      title: 'Aller à la page réussir sa collecte'
+      title: 'Aller à la page L\'équipe'
     },
     {
       key: 'key2',
-      item: 'Questions fréquentes',
+      item: 'Jobs',
       href: '#',
-      title: 'Aller à la page questions fréquentes'
+      title: 'Aller à la page Jobs'
     },
     {
       key: 'key3',
-      item: 'Conditions générales',
+      item: 'Presse',
       href: '#',
-      title: 'Aller à la page conditions générales'
+      title: 'Aller à la page Presse'
     },
     {
       key: 'key4',
+      item: 'Conditions générales',
+      href: '#',
+      title: 'Aller à la page Conditions générales'
+    },
+    {
+      key: 'key5',
+      item: 'Nos valeurs',
+      href: '#',
+      title: 'Aller à la page Nos valeurs'
+    },
+    {
+      key: 'key6',
       item: 'Nous contacter',
       href: '#',
-      title: 'Aller à la page nous contacter'
+      title: 'Aller à la page Nous contacter'
     },
   ],
 
