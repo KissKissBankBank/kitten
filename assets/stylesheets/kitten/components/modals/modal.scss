@@ -17,7 +17,7 @@
 ///   </div>
 
 @mixin k-Modal($options) {
-  $outer-gutters-size: k-px-to-rem(16px);
+  $outer-gutters-size: k-px-to-rem(20px);
 
   $background-color: map-get($k-colors, 'background-1');
 
@@ -35,7 +35,7 @@
     box-sizing: border-box;
     overflow: scroll;
 
-    @include k-media-min('s') {
+    @include k-media-min('m') {
       max-width: k-px-to-rem(690px);
       padding-left: k-px-to-rem(110px);
       padding-right: k-px-to-rem(110px);
