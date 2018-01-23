@@ -16,5 +16,5 @@ export const KissKissBankBankLogo = ({ color, ...props}) => (
 )
 
 KissKissBankBankLogo.defaultProps = {
-  color:'#000',
+  color: '#000',
 }

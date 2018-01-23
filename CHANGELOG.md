@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Fix `margin-bottom` on `LinkList` with `margin` prop.
+- Fix: `ButtonIcon`, `TagButton` and `Button` add `type="button"`
+  when the tag is a `button`.
 - Feature: Add A11Y on components's `KarlFooterKissKiss` examples
 - Feature: Add `placeholder` prop to `TextInputWithButton` component.
 - Feature: Add `k-u-color-background1` utility for `Text` component.

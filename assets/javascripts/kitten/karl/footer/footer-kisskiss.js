@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import Radium, { StyleRoot } from 'radium'
+import { StyleRoot } from 'radium'
+import { ConfiguredRadium } from 'kitten/config/configured-radium'
 import { Row as RowBase } from 'kitten/components/grid/row'
 import { Marger } from 'kitten/components/layout/marger'
 import {
@@ -27,13 +28,13 @@ import { ScreenConfig,
 import COLORS from 'kitten/constants/colors-config'
 import { parseHtml } from 'kitten/helpers/utils/parser'
 
-const Grid = Radium(GridBase)
-const GridCol = Radium(GridColBase)
-const Row = Radium(RowBase)
-const Paragraph = Radium(ParagraphBase)
-const FacebookButtonIcon = Radium(FacebookButtonIconBase)
-const TwitterButtonIcon = Radium(TwitterButtonIconBase)
-const KissKissBankBankLogo = Radium(KissKissBankBankLogoBase)
+const Grid = ConfiguredRadium(GridBase)
+const GridCol = ConfiguredRadium(GridColBase)
+const Row = ConfiguredRadium(RowBase)
+const Paragraph = ConfiguredRadium(ParagraphBase)
+const FacebookButtonIcon = ConfiguredRadium(FacebookButtonIconBase)
+const TwitterButtonIcon = ConfiguredRadium(TwitterButtonIconBase)
+const KissKissBankBankLogo = ConfiguredRadium(KissKissBankBankLogoBase)
 
 export class KarlFooterKisskiss extends Component {
   constructor(props, context) {
@@ -52,11 +53,11 @@ export class KarlFooterKisskiss extends Component {
     }
   }
 
-  onMobileMQ = (event) => {
+  onMobileMQ = event => {
     this.setState({ viewportIsMobile: event.matches })
   }
 
-  onTabletMQ = (event) => {
+  onTabletMQ = event => {
     this.setState({ viewportIsTabletOrLess: event.matches })
   }
 
@@ -86,8 +87,8 @@ export class KarlFooterKisskiss extends Component {
     const {
       subscribeLabel,
       socialText,
-      inputValue,
-      textInputProps,
+      newsletterSubmitValue,
+      newsletterInputProps,
       hrefFacebook,
       hrefTwitter,
       hrefInstagram,
@@ -130,10 +131,10 @@ export class KarlFooterKisskiss extends Component {
                       col-l="12"
                     >
                       <TextInputWithButton
-                        textInputProps={
-                          { ...textInputProps, id: "subscribe" }
+                        newsletterInputProps={
+                          { ...newsletterInputProps, id: "subscribe" }
                         }
-                        value={ inputValue }
+                        value={ newsletterSubmitValue }
                       />
                     </GridCol>
                   </Grid>
@@ -178,6 +179,7 @@ export class KarlFooterKisskiss extends Component {
   renderLanguageSelect() {
     const {
       options,
+      initialLanguage,
     } = this.props
 
     return (
@@ -188,9 +190,8 @@ export class KarlFooterKisskiss extends Component {
       >
         <SelectWithState
           name="language"
-          options= { options }
-          value="fr"
-          placeholder="Français"
+          options={ options }
+          value={ initialLanguage }
         />
       </GridCol>
     )
@@ -323,7 +324,7 @@ export class KarlFooterKisskiss extends Component {
                 style={ styles.notice.block.paragraph }
               >
                 { parseHtml(noticeParagraphMangopayText1) }
-                {' '}
+                { ' ' }
                 <a
                   href="https://www.mangopay.com/fr/"
                   target="_blank"
@@ -331,7 +332,7 @@ export class KarlFooterKisskiss extends Component {
                 >
                   { parseHtml(noticeParagraphMangopayLink) }
                 </a>
-                {' '}
+                { ' ' }
                 { parseHtml(noticeParagraphMangopayText2) }
               </Paragraph>
             </div>
@@ -533,10 +534,10 @@ const styles = {
 KarlFooterKisskiss.defaultProps = {
   // Network
   subscribeLabel: 'Inscrivez-vous à notre Newsletter',
-  textInputProps: {
+  newsletterInputProps: {
     placeholder: 'Entrez votre e-mail',
   },
-  inputValue: 'Envoyer',
+  newsletterSubmitValue: 'Envoyer',
   socialText: 'Suivez-nous',
 
   // List
@@ -649,9 +650,10 @@ KarlFooterKisskiss.defaultProps = {
     { value: 'en', label: 'English' },
     { value: 'nl', label: 'Nederlands' },
   ],
+  initialLanguage: 'fr',
 
   // Notice
-  noticeAltAutorite: 'Autorités Française',
+  noticeAltAutorite: 'Autorités françaises',
   noticeParagraphAutorite: 'KissKissBankBank est une plateforme de financement \
     participatif régulée par les autorités françaises.\
     Immatriculation&nbsp; : 14007218',

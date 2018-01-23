@@ -74,4 +74,12 @@ describe('TagButton', () => {
       })
     })
   })
+
+  describe('with tag="button" type="button"', () => {
+    const component = shallow(<TagButton tag="button" type="button" />)
+
+    it('adds a type', () => {
+      expect(component.find('button')).toHaveLength(1)
+    })
+  })
 })

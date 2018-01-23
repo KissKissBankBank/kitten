@@ -68,6 +68,14 @@ describe('<ButtonIcon />', () => {
     })
   })
 
+  describe('with tag="button" type="button"', () => {
+    const component = shallow(<ButtonIcon tag="button" type="button" />)
+
+    it('adds a type', () => {
+      expect(component.find('button')).toHaveLength(1)
+    })
+  })
+
   describe('children prop', () => {
     const component = shallow(
       <ButtonIcon>

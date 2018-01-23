@@ -9,7 +9,7 @@ export const FacebookButtonIcon = props => (
   <ButtonIcon
     { ...props }
     modifier="facebook"
-    aria-label="facebook"
+    aria-label="Facebook"
   >
     <FacebookIcon className="k-ButtonIcon__svg" />
   </ButtonIcon>
@@ -19,7 +19,7 @@ export const TwitterButtonIcon = props => (
   <ButtonIcon
     { ...props }
     modifier="twitter"
-    aria-label="twitter"
+    aria-label="Twitter"
   >
     <TwitterIcon className="k-ButtonIcon__svg" />
   </ButtonIcon>
@@ -29,7 +29,7 @@ export const LinkedinButtonIcon = props => (
   <ButtonIcon
     { ...props }
     modifier="linkedin"
-    aria-label="linkedin"
+    aria-label="Linkedin"
   >
     <LinkedinIcon className="k-ButtonIcon__svg" />
   </ButtonIcon>
@@ -39,7 +39,7 @@ export const InstagramButtonIcon = props => (
   <ButtonIcon
     { ...props }
     modifier="instagram"
-    aria-label="instagram"
+    aria-label="Instagram"
   >
     <InstagramIcon className="k-ButtonIcon__svg" />
   </ButtonIcon>
