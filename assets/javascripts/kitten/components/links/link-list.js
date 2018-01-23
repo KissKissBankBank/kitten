@@ -19,7 +19,6 @@ export class LinkList extends Component {
       item,
       href,
       active,
-      title,
     } = element
 
     const { color } = this.props
@@ -41,7 +40,6 @@ export class LinkList extends Component {
         <a
           href={ href }
           className={ linkListClassName }
-          title={ title }
         >
           { item }
         </a>
@@ -83,6 +81,6 @@ LinkList.defaultProps = {
 LinkList.defaultProps = {
   className: null,
   margin: true,
-  items: [], // Eg: [{ key: …, item: …, href: …, title: … }]
+  items: [], // Eg: [{ key: …, item: …, href: … }]
   color: 'dark',
 }
