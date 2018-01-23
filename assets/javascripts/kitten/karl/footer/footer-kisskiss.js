@@ -88,7 +88,7 @@ export class KarlFooterKisskiss extends Component {
       subscribeLabel,
       socialText,
       newsletterSubmitValue,
-      newsletterInputProps,
+      textInputProps,
       hrefFacebook,
       hrefTwitter,
       hrefInstagram,
@@ -131,8 +131,8 @@ export class KarlFooterKisskiss extends Component {
                       col-l="12"
                     >
                       <TextInputWithButton
-                        newsletterInputProps={
-                          { ...newsletterInputProps, id: "subscribe" }
+                        textInputProps={
+                          { ...textInputProps, id: "subscribe" }
                         }
                         value={ newsletterSubmitValue }
                       />
@@ -534,7 +534,7 @@ const styles = {
 KarlFooterKisskiss.defaultProps = {
   // Network
   subscribeLabel: 'Inscrivez-vous à notre Newsletter',
-  newsletterInputProps: {
+  textInputProps: {
     placeholder: 'Entrez votre e-mail',
   },
   newsletterSubmitValue: 'Envoyer',
