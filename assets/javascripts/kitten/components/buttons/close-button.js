@@ -21,6 +21,7 @@ export class CloseButton extends Component {
 
     return (
       <ButtonIcon
+        type="button"
         className={ buttonClassName }
         title={ closeButtonLabel }
         aria-label={ closeButtonLabel }
