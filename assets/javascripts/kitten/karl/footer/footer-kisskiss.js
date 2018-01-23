@@ -126,9 +126,11 @@ export class KarlFooterKisskiss extends Component {
                 >
                   <Grid>
                     <GridCol
-                      col="10" offset="1"
-                      col-m="6" offset-m="3"
+                      col="10"
+                      col-m="6"
                       col-l="12"
+                      offset="1"
+                      offset-m="3"
                     >
                       <TextInputWithButton
                         textInputProps={
@@ -184,9 +186,12 @@ export class KarlFooterKisskiss extends Component {
 
     return (
       <GridCol
-        col="8" offset="2"
-        col-m="4" offset-m="4"
-        col-l="2" offset-l="2"
+        col="8"
+        col-m="4"
+        col-l="2"
+        offset="2"
+        offset-m="4"
+        offset-l="2"
       >
         <SelectWithState
           name="language"
@@ -271,6 +276,7 @@ export class KarlFooterKisskiss extends Component {
       noticeAltMangopay,
       noticeParagraphMangopayText1,
       noticeParagraphMangopayLink,
+      noticeParagraphMangopayLinkAcronym,
       noticeParagraphMangopayText2,
       noticeCopyright,
     } = this.props
@@ -279,10 +285,14 @@ export class KarlFooterKisskiss extends Component {
       <Row role="contentinfo">
         <Grid style={ styles.notice }>
           <GridCol
-            col-xs="8" offset-xs="2"
-            col-s="10" offset-s="1"
-            col-m="5" offset-m="0"
-            col-l="4" offset-l="0"
+            col-xs="8"
+            col-s="10"
+            col-m="5"
+            col-l="4"
+            offset-xs="2"
+            offset-s="1"
+            offset-m="0"
+            offset-l="0"
           >
             <div style={ styles.notice.block }>
               <div style={ styles.notice.block.logo }>
@@ -304,10 +314,14 @@ export class KarlFooterKisskiss extends Component {
           </GridCol>
 
           <GridCol
-            col-xs="8" offset-xs="2"
-            col-s="10" offset-s="1"
-            col-m="5" offset-m="1"
-            col-l="4" offset-l="0"
+            col-xs="8"
+            col-s="10"
+            col-m="5"
+            col-l="4"
+            offset-xs="2"
+            offset-s="1"
+            offset-m="1"
+            offset-l="0"
           >
             <div style={ styles.notice.block }>
               <div style={ styles.notice.block.logo }>
@@ -331,6 +345,10 @@ export class KarlFooterKisskiss extends Component {
                   style={ styles.notice.block.paragraph.link }
                 >
                   { parseHtml(noticeParagraphMangopayLink) }
+                  <abbr>
+                    { ' ' }
+                    { parseHtml(noticeParagraphMangopayLinkAcronym) }
+                  </abbr>
                 </a>
                 { ' ' }
                 { parseHtml(noticeParagraphMangopayText2) }
@@ -546,25 +564,21 @@ KarlFooterKisskiss.defaultProps = {
       key: 'key1',
       item: 'Réussir ma collecte',
       href: '#',
-      title: 'Aller à la page Réussir ma collecte'
     },
     {
       key: 'key2',
       item: 'Financer mon projet food ou agricole',
       href: '#',
-      title: 'Aller à la page Un projet food ou agricole ?'
     },
     {
       key: 'key3',
       item: 'Crowdfunding : Questions fréquentes',
       href: '#',
-      title: 'Aller à la page Crowdfunding : Questions fréquentes'
     },
     {
       key: 'key4',
       item: 'Les Mentors',
       href: '#',
-      title: 'Aller à la page les Mentors'
     },
   ],
   items2: [
@@ -572,37 +586,31 @@ KarlFooterKisskiss.defaultProps = {
       key: 'key1',
       item: 'Blog',
       href: '#',
-      title: 'Aller à la page Blog'
     },
     {
       key: 'key2',
       item: 'Maison de Crowdfunding',
       href: '#',
-      title: 'Aller à la page les Maison de Crowdfunding'
     },
     {
       key: 'key3',
       item: 'Les StaKissTiques',
       href: '#',
-      title: 'Aller à la page Les StaKissTiques'
     },
     {
       key: 'key4',
       item: 'KissKiss Cinéma',
       href: '#',
-      title: 'Aller à la page les KissKiss Cinéma'
     },
     {
       key: 'key5',
       item: 'API',
       href: '#',
-      title: 'Aller à la page API'
     },
     {
       key: 'key6',
       item: 'Partenariats',
       href: '#',
-      title: 'Aller à la page Partenariats'
     },
   ],
   items3: [
@@ -610,37 +618,31 @@ KarlFooterKisskiss.defaultProps = {
       key: 'key1',
       item: 'L\'équipe',
       href: '#',
-      title: 'Aller à la page L\'équipe'
     },
     {
       key: 'key2',
       item: 'Jobs',
       href: '#',
-      title: 'Aller à la page Jobs'
     },
     {
       key: 'key3',
       item: 'Presse',
       href: '#',
-      title: 'Aller à la page Presse'
     },
     {
       key: 'key4',
       item: 'Conditions générales',
       href: '#',
-      title: 'Aller à la page Conditions générales'
     },
     {
       key: 'key5',
       item: 'Nos valeurs',
       href: '#',
-      title: 'Aller à la page Nos valeurs'
     },
     {
       key: 'key6',
       item: 'Nous contacter',
       href: '#',
-      title: 'Aller à la page Nous contacter'
     },
   ],
 
@@ -658,9 +660,10 @@ KarlFooterKisskiss.defaultProps = {
     participatif régulée par les autorités françaises.\
     Immatriculation&nbsp; : 14007218',
   noticeAltMangopay: 'Mangopay',
-  noticeParagraphMangopayText1: 'KissKissBankBank&amp; Co est agent de \
+  noticeParagraphMangopayText1: 'KissKissBankBank &amp; Co est agent de \
   l’institution financière',
-  noticeParagraphMangopayLink: 'Mangopay SA.',
+  noticeParagraphMangopayLink: 'Mangopay',
+  noticeParagraphMangopayLinkAcronym: 'SA.',
   noticeParagraphMangopayText2: 'Paiements sécurisés avec Mangopay Payment Services',
-  noticeCopyright: '&copy; 2018 KissKissBankBank&amp; Co',
+  noticeCopyright: '&copy; 2018 KissKissBankBank &amp; Co',
 }
