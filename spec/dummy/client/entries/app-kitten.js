@@ -18,12 +18,14 @@ import { ButtonQuestionMarkIcon }
   from 'kitten/components/buttons/button-question-mark-icon'
 import {
   FacebookButtonIcon,
+  InstagramButtonIcon,
   LinkedinButtonIcon,
   TwitterButtonIcon,
-  InstagramButtonIcon,
 } from 'kitten/components/buttons/social-button-icon'
 import {
   FacebookButtonIconWords,
+  LinkedinButtonIconWords,
+  TwitterButtonIconWords,
 } from 'kitten/components/buttons/social-button-icon-words'
 import { TagButton } from 'kitten/components/buttons/tag-button'
 import { KarlButtonAndText } from 'kitten/karl/buttons/button'
@@ -321,11 +323,13 @@ ReactOnRails.register({
   ButtonImageWithTextAndBadge,
   ButtonQuestionMarkIcon,
   FacebookButtonIcon,
-  LinkedinButtonIcon,
-  InstagramButtonIcon,
   FacebookButtonIconWords,
+  InstagramButtonIcon,
+  LinkedinButtonIcon,
+  LinkedinButtonIconWords,
   TagButton,
   TwitterButtonIcon,
+  TwitterButtonIconWords,
   KarlButtonAndText,
   KarlButtonIconHeart,
   KarlButtonIconNano,

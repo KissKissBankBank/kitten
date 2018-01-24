@@ -8,6 +8,9 @@
 /// k-Button--icon is different to k-ButtonIcon. This class is only used on
 /// button-with-icon-words.
 /// - `.k-Button--icon`
+/// - `.k-Button--icon--facebook`
+/// - `.k-Button--icon--twitter`
+/// - `.k-Button--icon--linkedin`
 ///
 /// Available color modifiers:
 /// - `.k-Button--hydrogen`
@@ -205,6 +208,14 @@
 
   .k-Button--icon--facebook {
     @include k-buttonColors('facebook');
+  }
+
+  .k-Button--icon--twitter {
+    @include k-buttonColors('twitter');
+  }
+
+  .k-Button--icon--linkedin {
+    @include k-buttonColors('linkedin');
   }
 
   // Padding size

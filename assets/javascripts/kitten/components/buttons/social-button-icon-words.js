@@ -16,3 +16,27 @@ export const FacebookButtonIconWords = props => (
     Continuer avec Facebook
   </Button>
 )
+
+export const TwitterButtonIconWords = props => (
+  <Button
+    icon
+    size="big"
+    modifier="twitter"
+    { ...props }
+  >
+    <TwitterIcon className="k-Button__icon" />
+    Continuer avec Twitter
+  </Button>
+)
+
+export const LinkedinButtonIconWords = props => (
+  <Button
+    icon
+    size="big"
+    modifier="linkedin"
+    { ...props }
+  >
+    <LinkedinIcon className="k-Button__icon" />
+    Continuer avec Linkedin
+  </Button>
+)

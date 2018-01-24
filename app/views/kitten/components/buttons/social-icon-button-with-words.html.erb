@@ -1,11 +1,22 @@
 <div class="k-Grid">
-  <div class="k-Grid__col k-Grid__col--12 k-Grid__col--4@l">
+  <div class="k-Grid__col k-Grid__col--12">
     <div class="k-Grid">
-      <div class="k-Grid__col k-Grid__col--12 k-Grid__col--4@m k-Grid__col--12@l">
+      <div class="k-Grid__col k-Grid__col--12 k-Grid__col--6@m k-Grid__col--12@l">
         <%= example 'Social' do %>
-          <%= react_component 'FacebookButtonIconWords' %>
+          <%= react_component 'FacebookButtonIconWords', props: {
+            className: 'k-u-margin-bottom-single',
+          } %>
+
+          <%= react_component 'TwitterButtonIconWords', props: {
+            className: 'k-u-margin-bottom-single',
+          } %>
+
+          <%= react_component 'LinkedinButtonIconWords', props: {
+            className: 'k-u-margin-bottom-single',
+          } %>
         <% end %>
       </div>
+
     </div>
   </div>
 </div>
