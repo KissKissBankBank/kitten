@@ -23,7 +23,7 @@
 ///   </div>
 
 @mixin k-Header {
-  $background-color:map-get($k-colors, 'background-1');
+  $background-color: map-get($k-colors, 'background-1');
   $border-color: map-get($k-colors, 'line-1');
 
   $border-width: 1px;
