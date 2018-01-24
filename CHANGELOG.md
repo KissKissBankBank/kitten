@@ -7,6 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [19.2.0] - 2018-01-22
 
 Feature:
+- Add `focus()` to `TextInput`.
 - Update styles `disabled` prop on `Button` and `ButtonIcon`.
 
 Fixes:
