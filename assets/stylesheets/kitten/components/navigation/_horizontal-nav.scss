@@ -87,7 +87,8 @@
     transition: color $transition-speed, border-color $transition-speed;
 
     @include k-media-within('m') {
-      padding: 0 k-px-to-rem(10px);
+      margin: 0 k-px-to-rem(7px);
+      padding: 0;
     }
 
     @include k-media-max('s') {

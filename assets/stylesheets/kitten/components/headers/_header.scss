@@ -23,8 +23,9 @@
 ///   </div>
 
 @mixin k-Header {
-  $background-color: #fff;
-  $border-color: #eee;
+  $background-color:map-get($k-colors, 'background-1');
+  $border-color: map-get($k-colors, 'line-1');
+
   $border-width: 1px;
   $nav-border-width: 4px;
 
