@@ -203,6 +203,10 @@
     }
   }
 
+  .k-Button--icon--facebook {
+    @include k-buttonColors('facebook');
+  }
+
   // Padding size
   .k-Button--icon--tiny {
     padding: 0 $button-tiny-height 0 0;
