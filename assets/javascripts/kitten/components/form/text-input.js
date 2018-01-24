@@ -7,14 +7,16 @@ export class TextInput extends Component {
   }
 
   render() {
-    const { className,
-            tag,
-            valid,
-            error,
-            disabled,
-            tiny,
-            digits,
-            ...others } = this.props
+    const {
+      className,
+      tag,
+      valid,
+      error,
+      disabled,
+      tiny,
+      digits,
+      ...others
+    } = this.props
 
     const textInputClassName = classNames(
       'k-TextInput',
@@ -47,7 +49,6 @@ export class TextInput extends Component {
                className={ textInputClassName }
                ref={ input => this.input = input }
                disabled={ disabled }
-               type="text"
                { ...others }
              />
     }

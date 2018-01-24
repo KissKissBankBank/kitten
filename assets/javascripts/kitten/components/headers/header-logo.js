@@ -11,7 +11,7 @@ export class HeaderLogo extends React.Component {
             lightOnM,
             lightOnXxs,
             ...other } = this.props
-    const imgProps = { src, alt, width, height }
+    const imgProps = { src, width, height }
     const linkClassName = classNames(
       'k-Header__logo',
       className,
