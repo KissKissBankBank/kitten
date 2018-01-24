@@ -8,6 +8,7 @@ import { InstagramIcon } from 'kitten/components/icons/instagram-icon'
 export const FacebookButtonIconWords = props => (
   <Button
     icon
+    size="big"
     modifier="facebook"
     { ...props }
   >
