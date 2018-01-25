@@ -4,7 +4,10 @@ import { HeartIcon } from 'kitten/components/icons/heart-icon'
 
 export const KarlButtonIconWordsLeft = props => {
   return (
-    <Button icon { ...props }>
+    <Button
+      icon
+      { ...props }
+    >
       <HeartIcon className="k-Button__icon" />
       Button
     </Button>
@@ -13,7 +16,11 @@ export const KarlButtonIconWordsLeft = props => {
 
 export const KarlButtonIconWordsRight = props => {
   return (
-    <Button icon iconOnRight { ...props }>
+    <Button
+      icon
+      iconOnRight
+      { ...props }
+    >
       Button
       <HeartIcon className="k-Button__icon" />
     </Button>
