@@ -131,6 +131,7 @@ export class KarlFooterKisskiss extends Component {
                       col-l="12"
                       offset="1"
                       offset-m="3"
+                      offset-l="0"
                     >
                       <TextInputWithButton
                         textInputProps={
@@ -214,7 +215,7 @@ export class KarlFooterKisskiss extends Component {
         <Grid style={ styles.list }>
           <GridCol col-l="2">
             <Marger
-              bottom={ this.state.viewportIsMobile ? 4 : 5 }
+              bottom="4"
               style={ styles.list.logo }>
               <KissKissBankBankLogo
                 color="#fff"
@@ -447,7 +448,7 @@ const styles = {
   },
 
   list: {
-    paddingTop: '50px',
+    paddingTop: '80px',
     paddingBottom: '50px',
     [`@media (min-width: ${ScreenConfig['M'].min}px)`]: {
       paddingTop: '100px',
