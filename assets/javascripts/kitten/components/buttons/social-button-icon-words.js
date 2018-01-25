@@ -13,7 +13,7 @@ export const FacebookButtonIconWords = props => (
     { ...props }
   >
     <FacebookIcon className="k-Button__icon" />
-    Continuer avec Facebook
+    { props.children }
   </Button>
 )
 
@@ -25,7 +25,7 @@ export const TwitterButtonIconWords = props => (
     { ...props }
   >
     <TwitterIcon className="k-Button__icon" />
-    Continuer avec Twitter
+    { props.children }
   </Button>
 )
 
@@ -37,6 +37,6 @@ export const LinkedinButtonIconWords = props => (
     { ...props }
   >
     <LinkedinIcon className="k-Button__icon" />
-    Continuer avec Linkedin
+    { props.children }
   </Button>
 )

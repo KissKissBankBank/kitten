@@ -23,10 +23,10 @@ import {
   TwitterButtonIcon,
 } from 'kitten/components/buttons/social-button-icon'
 import {
-  FacebookButtonIconWords,
-  LinkedinButtonIconWords,
-  TwitterButtonIconWords,
-} from 'kitten/components/buttons/social-button-icon-words'
+  KarlFacebookButtonIconWords,
+  KarlLinkedinButtonIconWords,
+  KarlTwitterButtonIconWords,
+} from 'kitten/karl/buttons/social-button-icon-words'
 import { TagButton } from 'kitten/components/buttons/tag-button'
 import { KarlButtonAndText } from 'kitten/karl/buttons/button'
 import {
@@ -323,19 +323,19 @@ ReactOnRails.register({
   ButtonImageWithTextAndBadge,
   ButtonQuestionMarkIcon,
   FacebookButtonIcon,
-  FacebookButtonIconWords,
   InstagramButtonIcon,
   LinkedinButtonIcon,
-  LinkedinButtonIconWords,
   TagButton,
   TwitterButtonIcon,
-  TwitterButtonIconWords,
   KarlButtonAndText,
   KarlButtonIconHeart,
   KarlButtonIconNano,
   KarlButtonIconWordsLeft,
   KarlButtonIconWordsRight,
   KarlPaymentButtons,
+  KarlFacebookButtonIconWords,
+  KarlLinkedinButtonIconWords,
+  KarlTwitterButtonIconWords,
 
   // Colors
   KarlColors,
