@@ -568,17 +568,17 @@ KarlFooterKisskiss.defaultProps = {
     },
     {
       key: 'key2',
-      item: 'Financer mon projet food ou agricole',
-      href: '#',
-    },
-    {
-      key: 'key3',
       item: 'Crowdfunding : Questions fréquentes',
       href: '#',
     },
     {
-      key: 'key4',
+      key: 'key3',
       item: 'Les Mentors',
+      href: '#',
+    },
+    {
+      key: 'key4',
+      item: 'Financer mon projet food ou agricole',
       href: '#',
     },
   ],
