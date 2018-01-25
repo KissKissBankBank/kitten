@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix : Fix margin on HorizontalNav component.
+- Fix : Fix margin on `HorizontalNav` component.
 
 ## [19.2.0] - 2018-01-22
 
