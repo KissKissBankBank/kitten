@@ -56,6 +56,9 @@
   min-width: $button-big-min-width;
 
   &.k-Button--icon {
+    padding: 0 $button-big-height 0 0;
+    min-width: 0;
+
     .k-Button__icon {
       @include k-buttonRounded($button-big-radius);
       @include k-buttonPadding(

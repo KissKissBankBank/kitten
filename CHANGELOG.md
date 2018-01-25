@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add `Twitter`, `Facebook` and `Linkedin` social button icon words.
+- Fix: Update `padding-right` on `k-Button--icon` big.
 
 ## [19.2.0] - 2018-01-22
 
