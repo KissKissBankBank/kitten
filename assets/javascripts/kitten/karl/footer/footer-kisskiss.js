@@ -162,15 +162,19 @@ export class KarlFooterKisskiss extends Component {
 
             <div style={ styles.network.social.buttons }>
               <FacebookButtonIcon
+                tag="a"
                 style={ styles.network.social.buttons.buttonIcon }
                 href={ hrefFacebook }
-
               />
               <TwitterButtonIcon
+                tag="a"
                 style={ styles.network.social.buttons.buttonIcon }
                 href={ hrefTwitter }
               />
-              <InstagramButtonIcon href={ hrefInstagram } />
+              <InstagramButtonIcon
+                tag="a"
+                href={ hrefInstagram }
+              />
             </div>
           </GridCol>
         </Grid>
@@ -215,7 +219,8 @@ export class KarlFooterKisskiss extends Component {
           <GridCol col-l="2">
             <Marger
               bottom="4"
-              style={ styles.list.logo }>
+              style={ styles.list.logo }
+            >
               <KissKissBankBankLogo
                 color="#fff"
                 style={ styles.list.logo.img }
@@ -557,6 +562,9 @@ KarlFooterKisskiss.defaultProps = {
   },
   newsletterSubmitValue: 'Envoyer',
   socialText: 'Suivez-nous',
+  hrefFacebook: '#',
+  hrefTwitter: '#',
+  hrefInstagram: '#',
 
   // List
   items1: [
