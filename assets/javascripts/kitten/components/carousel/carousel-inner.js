@@ -1,6 +1,5 @@
 import React from 'react'
-import { Style } from 'radium'
-import { ConfiguredRadium } from 'kitten/config/configured-radium'
+import Radium, { Style } from 'radium'
 import ResizeObserver from 'resize-observer-polyfill'
 
 if (typeof window !== 'undefined') {
@@ -236,4 +235,4 @@ const styles = {
   },
 }
 
-export const CarouselInner = ConfiguredRadium(CarouselInnerBase)
+export const CarouselInner = Radium(CarouselInnerBase)
