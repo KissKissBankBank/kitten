@@ -23,7 +23,7 @@ export class SelectWithState extends Component {
     }
 
     this.handleChange = this.handleChange.bind(this)
-    this.onKeyDown = this.onKeyDown (this)
+    this.onKeyDown = this.onKeyDown.bind(this)
   }
 
   handleChange(val) {

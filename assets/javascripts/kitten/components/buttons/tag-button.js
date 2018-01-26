@@ -25,7 +25,7 @@ export class TagButton extends Component {
       },
     )
 
-    const type = (tag == "button") ? "button" : null
+    const type = (tag == 'button') ? 'button' : null
 
     const Tag = tag
 
