@@ -32,7 +32,7 @@ describe('<FacebookButtonIconWords />', () => {
       </FacebookButtonIconWords>
     )
 
-    it('renders a <p>', () => {
+    it('renders the right children', () => {
       expect(component.text()).toEqual('Lorem ipsum…')
     })
   })
@@ -61,7 +61,7 @@ describe('<TwitterButtonIconWords />', () => {
       </TwitterButtonIconWords>
     )
 
-    it('renders a <p>', () => {
+    it('renders the right children', () => {
       expect(component.text()).toEqual('Lorem ipsum…')
     })
   })
@@ -90,7 +90,7 @@ describe('<LinkedinButtonIconWords />', () => {
       </LinkedinButtonIconWords>
     )
 
-    it('renders a <p>', () => {
+    it('renders the right children', () => {
       expect(component.text()).toEqual('Lorem ipsum…')
     })
   })

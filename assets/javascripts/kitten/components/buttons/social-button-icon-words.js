@@ -5,7 +5,7 @@ import { TwitterIcon } from 'kitten/components/icons/twitter-icon'
 import { LinkedinIcon } from 'kitten/components/icons/linkedin-icon'
 import { InstagramIcon } from 'kitten/components/icons/instagram-icon'
 
-export const FacebookButtonIconWords = props => (
+export const FacebookButtonIconWords = ({ children, ...props }) => (
   <Button
     icon
     size="big"
@@ -13,11 +13,11 @@ export const FacebookButtonIconWords = props => (
     { ...props }
   >
     <FacebookIcon className="k-Button__icon" />
-    { props.children }
+    { children }
   </Button>
 )
 
-export const TwitterButtonIconWords = props => (
+export const TwitterButtonIconWords = ({ children, ...props }) => (
   <Button
     icon
     size="big"
@@ -25,11 +25,11 @@ export const TwitterButtonIconWords = props => (
     { ...props }
   >
     <TwitterIcon className="k-Button__icon" />
-    { props.children }
+    { children }
   </Button>
 )
 
-export const LinkedinButtonIconWords = props => (
+export const LinkedinButtonIconWords = ({ children, ...props }) => (
   <Button
     icon
     size="big"
@@ -37,6 +37,6 @@ export const LinkedinButtonIconWords = props => (
     { ...props }
   >
     <LinkedinIcon className="k-Button__icon" />
-    { props.children }
+    { children }
   </Button>
 )

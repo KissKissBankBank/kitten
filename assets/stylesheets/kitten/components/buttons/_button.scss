@@ -66,7 +66,6 @@
   // Heigth settings button.
   $button-tiny-height: k-px-to-rem(20px);
   $button-height: k-px-to-rem(30px);
-  $button-big-height: k-px-to-rem(40px);
 
   // Button radius
   // Chrome forced a default `border-radius: 4px`, we have to set it to 0px.
@@ -87,7 +86,7 @@
   $buttonBigOptions: (
     typography-step: $big-button-step,
     line-height: $button-big-line-height,
-    height: $button-big-height,
+    height: $button-height,
     radius: $button-radius,
     width: $button-big-min-width,
     icon-size: $button-size-big,
