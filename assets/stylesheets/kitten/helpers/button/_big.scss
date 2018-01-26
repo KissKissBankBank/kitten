@@ -54,6 +54,7 @@
   border-radius: $button-big-radius;
   min-width: $button-big-min-width;
 
+  &.k-Button--icon {
     .k-Button__icon {
       @include k-buttonRounded($button-big-radius);
       @include k-buttonPadding(
