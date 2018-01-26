@@ -8,9 +8,6 @@
 /// k-Button--icon is different to k-ButtonIcon. This class is only used on
 /// button-with-icon-words.
 /// - `.k-Button--icon`
-/// - `.k-Button--icon--facebook`
-/// - `.k-Button--icon--twitter`
-/// - `.k-Button--icon--linkedin`
 ///
 /// Available color modifiers:
 /// - `.k-Button--hydrogen`
@@ -18,6 +15,9 @@
 /// - `.k-Button--lithium`
 /// - `.k-Button--beryllium`
 /// - `.k-Button--carbon`
+/// - `.k-Button--facebook`
+/// - `.k-Button--twitter`
+/// - `.k-Button--linkedin`
 ///
 /// Available size modifiers:
 /// - `.k-Button--tiny`
@@ -132,6 +132,19 @@
     @include k-buttonColors('carbon');
   }
 
+  .k-Button--facebook {
+    @include k-buttonColors('facebook');
+  }
+
+  .k-Button--twitter {
+    @include k-buttonColors('twitter');
+  }
+
+  .k-Button--linkedin {
+    @include k-buttonColors('linkedin');
+  }
+
+
   // Size modifiers.
   .k-Button--tiny {
     @include k-typographyFontSize(
@@ -204,18 +217,6 @@
         transition: stroke $transition-speed;
       }
     }
-  }
-
-  .k-Button--icon--facebook {
-    @include k-buttonColors('facebook');
-  }
-
-  .k-Button--icon--twitter {
-    @include k-buttonColors('twitter');
-  }
-
-  .k-Button--icon--linkedin {
-    @include k-buttonColors('linkedin');
   }
 
   // Padding size

@@ -18,7 +18,6 @@ export class Button extends Component {
       'k-Button',
       {
         [`k-Button--${modifier}`]: modifier,
-        [`k-Button--icon--${modifier}`]: modifier,
         [`k-Button--${size}`]: size,
         'k-Button--icon': icon,
         'k-Button--iconRight': iconOnRight,
