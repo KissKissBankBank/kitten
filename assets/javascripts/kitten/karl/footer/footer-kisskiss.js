@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import { StyleRoot } from 'radium'
-import { ConfiguredRadium } from 'kitten/config/configured-radium'
+import Radium, { StyleRoot } from 'radium'
 import { Row as RowBase } from 'kitten/components/grid/row'
 import { Marger } from 'kitten/components/layout/marger'
 import {
@@ -28,13 +27,13 @@ import { ScreenConfig,
 import COLORS from 'kitten/constants/colors-config'
 import { parseHtml } from 'kitten/helpers/utils/parser'
 
-const Grid = ConfiguredRadium(GridBase)
-const GridCol = ConfiguredRadium(GridColBase)
-const Row = ConfiguredRadium(RowBase)
-const Paragraph = ConfiguredRadium(ParagraphBase)
-const FacebookButtonIcon = ConfiguredRadium(FacebookButtonIconBase)
-const TwitterButtonIcon = ConfiguredRadium(TwitterButtonIconBase)
-const KissKissBankBankLogo = ConfiguredRadium(KissKissBankBankLogoBase)
+const Grid = Radium(GridBase)
+const GridCol = Radium(GridColBase)
+const Row = Radium(RowBase)
+const Paragraph = Radium(ParagraphBase)
+const FacebookButtonIcon = Radium(FacebookButtonIconBase)
+const TwitterButtonIcon = Radium(TwitterButtonIconBase)
+const KissKissBankBankLogo = Radium(KissKissBankBankLogoBase)
 
 export class KarlFooterKisskiss extends Component {
   constructor(props, context) {
