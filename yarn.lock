@@ -4923,9 +4923,9 @@ querystring@0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/querystring/-/querystring-0.2.0.tgz#b209849203bb25df820da756e747005878521620"
 
-radium@^0.20.1:
-  version "0.20.1"
-  resolved "https://registry.yarnpkg.com/radium/-/radium-0.20.1.tgz#87d4cdfdce834c3423027f87f5c2e7b47632c949"
+radium@^0.21.2:
+  version "0.21.2"
+  resolved "https://registry.yarnpkg.com/radium/-/radium-0.21.2.tgz#b7fbc52a8084a5f1f78c3389e639020507d2dfac"
   dependencies:
     array-find "^1.0.0"
     exenv "^1.2.1"
