@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Update Radium version (v0.21.2).
+
 ## [19.2.0] - 2018-01-22
 
 Feature:
