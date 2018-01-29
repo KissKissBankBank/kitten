@@ -25,13 +25,10 @@ export class TagButton extends Component {
       },
     )
 
-    const type = (tag == 'button') ? 'button' : null
-
     const Tag = tag
 
     return (
       <Tag
-        type={ type }
         className={ tagButtonClassNames }
         { ...others }
       >

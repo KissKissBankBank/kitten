@@ -37,7 +37,12 @@ export class SelectWithState extends Component {
   }
 
   onKeyDown(event) {
-    if (event.keyCode === 13 || event.keyCode === 32) {
+    const {
+      enterKeyCode,
+      spaceKeyCode,
+    } = this.props
+
+    if (event.keyCode === enterKeyCode || event.keyCode === spaceKeyCode) {
       event.preventDefault();
       event.stopPropagation();
       this.onRemove(event);
@@ -158,6 +163,8 @@ SelectWithState.defaultProps = {
   tiny: false,
   name: null,
   inputProps: {},
+  enterKeyCode: 13,
+  spaceKeyCode: 32,
 }
 
 // DEPRECATED: do not use default export.

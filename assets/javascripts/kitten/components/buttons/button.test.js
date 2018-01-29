@@ -67,12 +67,4 @@ describe('Button with default props', () => {
       expect(component.props().tabIndex).toBeFalsy()
     })
   })
-
-  describe('with tag="button" type="button"', () => {
-    const component = shallow(<Button tag="button" type="button" />)
-
-    it('adds a type', () => {
-      expect(component.find('button')).toHaveLength(1)
-    })
-  })
 })
