@@ -38,6 +38,8 @@ export class HorizontalNav extends Component {
           className={ itemClassName }
           style={ {
             height: this.props.height,
+            marginRight: this.props.itemMargin,
+            marginLeft: this.props.itemMargin,
           } }
         >
           <Markdown softBreak="br" source={ text } />

@@ -41,7 +41,11 @@
   $is-selected-color: map-get($k-colors, 'primary-1');
 
   $border-width: k-px-to-rem(4px);
-  $margin: k-px-to-rem(25px);
+
+  // Margin by breakpoints
+  $desktopMargin: k-px-to-rem(15px);
+  $tabletMargin: k-px-to-rem(7px);
+  $mobileMargin: k-px-to-rem(12px);
 
   $transition-speed: .2s;
 
@@ -70,7 +74,7 @@
     justify-content: center;
     flex-direction: column;
 
-    margin: 0 $margin;
+    margin: 0 $desktopMargin;
     border-bottom: $border-width solid transparent;
 
     @include k-typographyFont($font);
@@ -87,11 +91,12 @@
     transition: color $transition-speed, border-color $transition-speed;
 
     @include k-media-within('m') {
-      padding: 0 k-px-to-rem(10px);
+      margin: 0 $tabletMargin;
+      padding: 0;
     }
 
     @include k-media-max('s') {
-      margin: 0 k-px-to-rem(12px);
+      margin: 0 $mobileMargin;
     }
 
     &:hover {

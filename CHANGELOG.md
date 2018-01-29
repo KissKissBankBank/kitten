@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix : Fix margin on `HorizontalNav` component.
 - Feature: Add `focus()` to `TextInput`.
 
 ## [19.2.1] - 2018-01-26
