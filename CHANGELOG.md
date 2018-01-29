@@ -9,6 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   when the tag is a `button`.
 - Feature: Add `placeholder` prop to `TextInputWithButton` component.
 - Feature: Add `k-u-color-background1` utility for `Text` component.
+- Feature: Add `focus()` to `TextInput`.
 
 ## [19.2.1] - 2018-01-26
 

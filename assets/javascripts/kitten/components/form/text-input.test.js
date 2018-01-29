@@ -77,5 +77,16 @@ describe('Text-input with default props', () => {
         expect(textArea.props().rows).toBe('7')
       })
     })
+
+    describe('focus', () => {
+      it('calls focus', () => {
+        const textInput = mount(<TextInput />)
+        const inputTag = textInput.find('input').instance()
+        inputTag.focus = jest.fn().mockName('focus')
+
+        textInput.instance().focus()
+        expect(inputTag.focus).toHaveBeenCalled()
+      })
+    })
   })
 })
