@@ -2,6 +2,10 @@ import React, { Component } from 'react'
 import classNames from 'classnames'
 
 export class TextInput extends Component {
+  focus() {
+    this.input.focus()
+  }
+
   blur() {
     this.input.blur()
   }
