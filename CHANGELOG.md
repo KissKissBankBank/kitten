@@ -6,6 +6,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Add `focus()` to `TextInput`.
 
+## [19.2.1] - 2018-01-26
+
+Fix:
+- Update Radium version (v0.21.2).
+
 ## [19.2.0] - 2018-01-22
 
 Feature:
