@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add `KarlFooterKissKiss` example.
+- Feature: Add A11Y on components's `KarlFooterKissKiss` examples
 
 ## [19.2.1] - 2018-01-26
 
