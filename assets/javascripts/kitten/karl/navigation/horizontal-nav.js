@@ -31,7 +31,7 @@ export const KarlBrowsingHorizontalNav = props => {
       <HorizontalNav
         items={ horizontalNavItems }
         height="96px"
-        margin="25px"
+        itemMargin="25px"
         center
       />
     </Row>
