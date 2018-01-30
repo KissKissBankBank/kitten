@@ -37,14 +37,12 @@ export class SelectWithState extends Component {
   }
 
   onKeyDown(event) {
-    const {
-      enterKeyCode = 13,
-      spaceKeyCode = 32,
-    } = this.props
+    const enterKeyCode = 13
+    const spaceKeyCode = 32
 
     if (event.keyCode === enterKeyCode || event.keyCode === spaceKeyCode) {
-      event.preventDefault();
-      event.stopPropagation();
+      event.preventDefault()
+      event.stopPropagation()
       this.onRemove(event)
     }
   }
