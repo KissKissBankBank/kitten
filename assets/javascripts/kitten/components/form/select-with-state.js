@@ -38,14 +38,14 @@ export class SelectWithState extends Component {
 
   onKeyDown(event) {
     const {
-      enterKeyCode,
-      spaceKeyCode,
+      enterKeyCode = 13,
+      spaceKeyCode = 32,
     } = this.props
 
     if (event.keyCode === enterKeyCode || event.keyCode === spaceKeyCode) {
       event.preventDefault();
       event.stopPropagation();
-      this.onRemove(event);
+      this.onRemove(event)
     }
   }
 
@@ -89,7 +89,6 @@ export class SelectWithState extends Component {
       <div className={ selectClassName }>
         { this.renderLabel() }
         <SelectWithMultiLevel
-          tabIndex="0"
           value={ this.state.value }
           onKeyDown={ this.onKeyDown }
           onChange={ this.handleChange }
@@ -163,8 +162,6 @@ SelectWithState.defaultProps = {
   tiny: false,
   name: null,
   inputProps: {},
-  enterKeyCode: 13,
-  spaceKeyCode: 32,
 }
 
 // DEPRECATED: do not use default export.
