@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `KarlFacebookButtonIconWords`, `KarlLinkedinButtonIconWords` and
+- Feature: Add A11Y and `KarlFacebookButtonIconWords`, `KarlLinkedinButtonIconWords` and
   `KarlTwitterButtonIconWords` examples.
 
 ## [19.2.1] - 2018-01-26
