@@ -8,6 +8,19 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Add `k-u-color-background1` utility for `Text` component.
 - Feature: Add `focus()` to `TextInput`.
 
+## [19.3.1] - 2018-01-31
+
+Fix:
+- Fix viewport states update on `Container` component.
+
+## [19.3.0] - 2018-01-31
+
+Feature:
+- Add `focus()` to `TextInput`.
+
+Fix:
+- Fix viewport states update on `Carousel` and `Modal` components.
+
 ## [19.2.1] - 2018-01-26
 
 Fix:

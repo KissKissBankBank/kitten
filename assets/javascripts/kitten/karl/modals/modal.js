@@ -17,9 +17,7 @@ class KarlModalComponent extends Component {
     this.mqMobile = createMatchMediaMax(SCREEN_SIZE_XS)
 
     this.state = {
-      viewportIsMobile: this.mqMobile
-        ? this.mqMobile.matches
-        : false,
+      viewportIsMobile: false,
     }
   }
 
@@ -28,7 +26,10 @@ class KarlModalComponent extends Component {
   }
 
   componentDidMount() {
-    if (this.mqMobile) this.mqMobile.addListener(this.onMobileMQ)
+    if (this.mqMobile) {
+      this.mqMobile.addListener(this.onMobileMQ)
+      this.onMobileMQ(this.mqMobile)
+    }
   }
 
   componentWillUnmount() {
