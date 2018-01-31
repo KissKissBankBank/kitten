@@ -2,20 +2,6 @@ import React, { Component } from 'react'
 import classNames from 'classnames'
 
 export class Button extends Component {
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      message: this.props.children,
-    }
-
-    this.handleClick = this.handleClick.bind(this)
-  }
-
-  handleClick(message) {
-    this.setState({ message })
-  }
-
   render() {
     const {
       className,
@@ -51,7 +37,6 @@ export class Button extends Component {
       <Tag
         className={ buttonClassNames }
         tabIndex={ tabindex }
-        onClick={ this.handleClick() }
         { ...others }
       />
     )
@@ -64,5 +49,4 @@ Button.defaultProps = {
   icon: false,
   iconOnRight: false,
   iconWithMinWidth: false,
-  onClick: () => {},
 }

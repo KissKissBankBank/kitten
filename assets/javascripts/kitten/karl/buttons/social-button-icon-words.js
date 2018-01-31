@@ -23,6 +23,6 @@ export const KarlTwitterButtonIconWords = props => (
 
 export const KarlLinkedinButtonIconWords = props => (
   <LinkedinButtonIconWords>
-    Continuer avec Linkedin
+    Continuer avec LinkedIn
   </LinkedinButtonIconWords>
 )
