@@ -580,11 +580,6 @@ KarlFooterKisskiss.defaultProps = {
     },
     {
       key: 'key3',
-      item: 'Les Mentors',
-      href: '#',
-    },
-    {
-      key: 'key4',
       item: 'Financer mon projet food ou agricole',
       href: '#',
     },
@@ -592,32 +587,27 @@ KarlFooterKisskiss.defaultProps = {
   items2: [
     {
       key: 'key1',
-      item: 'Blog',
+      item: 'Les Mentors',
       href: '#',
     },
     {
       key: 'key2',
-      item: 'Maison de Crowdfunding',
+      item: 'Blog',
       href: '#',
     },
     {
       key: 'key3',
-      item: 'Les StaKissTiques',
+      item: 'Maison de Crowdfunding',
       href: '#',
     },
     {
       key: 'key4',
-      item: 'KissKiss Cinéma',
+      item: 'Les StaKissTiques',
       href: '#',
     },
     {
       key: 'key5',
-      item: 'API',
-      href: '#',
-    },
-    {
-      key: 'key6',
-      item: 'Partenariats',
+      item: 'KissKiss Cinéma',
       href: '#',
     },
   ],
