@@ -4,8 +4,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `focus()` to `TextInput`.
-- Fix: Fix viewport states update on `Carousel` and `Modal` components.
+## [19.3.0] - 2018-01-31
+
+Feature:
+- Add `focus()` to `TextInput`.
+
+Fix:
+- Fix viewport states update on `Carousel` and `Modal` components.
 
 ## [19.2.1] - 2018-01-26
 
