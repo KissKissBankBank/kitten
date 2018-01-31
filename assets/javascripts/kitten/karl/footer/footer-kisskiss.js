@@ -21,7 +21,6 @@ import {
 } from 'kitten/karl/logos/kisskissbankbanklogo'
 import { createMatchMediaMax } from 'kitten/helpers/utils/media-queries'
 import { ScreenConfig,
-  SCREEN_SIZE_XS,
   SCREEN_SIZE_M,
 } from 'kitten/constants/screen-config'
 import COLORS from 'kitten/constants/colors-config'
@@ -39,21 +38,11 @@ export class KarlFooterKisskiss extends Component {
   constructor(props, context) {
     super(props, context)
 
-    this.mqMobile = createMatchMediaMax(SCREEN_SIZE_XS)
     this.mqTabletOrLess = createMatchMediaMax(SCREEN_SIZE_M)
 
     this.state = {
-      viewportIsMobile: this.mqMobile
-        ? this.mqMobile.matches
-        : false,
-      viewportIsTabletOrLess: this.mqTabletOrLess
-        ? this.mqTabletOrLess.matches
-        : false,
+      viewportIsTabletOrLess: false,
     }
-  }
-
-  onMobileMQ = event => {
-    this.setState({ viewportIsMobile: event.matches })
   }
 
   onTabletMQ = event => {
@@ -61,12 +50,13 @@ export class KarlFooterKisskiss extends Component {
   }
 
   componentDidMount() {
-    if (this.mqMobile) this.mqMobile.addListener(this.onMobileMQ)
-    if (this.mqTabletOrLess) this.mqTabletOrLess.addListener(this.onTabletMQ)
+    if (this.mqTabletOrLess) {
+      this.mqTabletOrLess.addListener(this.onTabletMQ)
+      this.onTabletMQ(this.mqTabletOrLess)
+    }
   }
 
   componentWillUnmount() {
-    if (this.mqMobile) this.mqMobile.removeListener(this.onMobileMQ)
     if (this.mqTabletOrLess) this.mqTabletOrLess.removeListener(this.onTabletMQ)
   }
 
