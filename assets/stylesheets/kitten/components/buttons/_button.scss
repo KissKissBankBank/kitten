@@ -15,6 +15,9 @@
 /// - `.k-Button--lithium`
 /// - `.k-Button--beryllium`
 /// - `.k-Button--carbon`
+/// - `.k-Button--facebook`
+/// - `.k-Button--twitter`
+/// - `.k-Button--linkedin`
 ///
 /// Available size modifiers:
 /// - `.k-Button--tiny`
@@ -127,6 +130,18 @@
 
   .k-Button--carbon {
     @include k-buttonColors('carbon');
+  }
+
+  .k-Button--facebook {
+    @include k-buttonColors('facebook');
+  }
+
+  .k-Button--twitter {
+    @include k-buttonColors('twitter');
+  }
+
+  .k-Button--linkedin {
+    @include k-buttonColors('linkedin');
   }
 
   // Size modifiers.

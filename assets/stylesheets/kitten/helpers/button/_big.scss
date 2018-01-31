@@ -38,7 +38,6 @@
 @mixin k-buttonBig($options) {
   $button-step: map-get($options, 'typography-step');
   $button-size-big: map-get($options,'icon-size');
-  $button-size-big-with-border: map-get($options, 'icon-size-with-border');
   $button-big-min-width: map-get($options, 'width');
   $button-big-line-height: map-get($options, 'icon-size');
   $button-big-height: map-get($options, 'height');
@@ -57,7 +56,7 @@
 
   &.k-Button--icon {
     .k-Button__icon {
-      @include k-buttonRounded($button-size-big-with-border);
+      @include k-buttonRounded($button-big-radius);
       @include k-buttonPadding(
         $button-size-big,
         $icon-width,
