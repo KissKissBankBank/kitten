@@ -79,12 +79,8 @@ class CarouselBase extends React.Component {
       indexPageVisible: 0,
       numColumns: 3,
       numPages: getNumPagesForColumnsAndDataLength(this.props.data.length, 3),
-      viewportIsMobile: this.mqMobile
-        ? this.mqMobile.matches
-        : false,
-      viewportIsTabletOrLess: this.mqTabletOrLess
-        ? this.mqTabletOrLess.matches
-        : false,
+      viewportIsMobile: false,
+      viewportIsTabletOrLess: false,
     }
   }
 
@@ -127,9 +123,16 @@ class CarouselBase extends React.Component {
     this.setState({ viewportIsTabletOrLess: event.matches })
   }
 
+  updateViewportState() {
+    this.mqMobile && this.onMobileMQ(this.mqMobile)
+    this.mqTabletOrLess && this.onTabletMQ(this.mqTabletOrLess)
+  }
+
   componentDidMount() {
     this.mqMobile && this.mqMobile.addListener(this.onMobileMQ)
     this.mqTabletOrLess && this.mqTabletOrLess.addListener(this.onTabletMQ)
+
+    this.updateViewportState()
   }
 
   componentWillUnmount() {

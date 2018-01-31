@@ -10,14 +10,15 @@ export class Container extends React.PureComponent {
       createMatchMediaMax(props.fullWidthBelowScreenSize)
 
     this.state = {
-      isBelowScreenSize: this.mqBelowScreenSize &&
-        this.mqBelowScreenSize.matches
+      isBelowScreenSize: false,
     }
   }
 
   componentDidMount() {
-    this.mqBelowScreenSize &&
+    if (this.mqBelowScreenSize) {
       this.mqBelowScreenSize.addListener(this.onScreenSizeChange)
+      this.onScreenSizeChange(this.mqBelowScreenSize)
+    }
   }
 
   componentWillUnmount() {

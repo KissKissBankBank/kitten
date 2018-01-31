@@ -40,7 +40,7 @@ describe('<TextInputWithButton />', () => {
         textInputProps={ textInputProps }
       />
     )
-    const textInput = component.find('input')
+    const textInput = component.find(TextInput)
 
     it('renders textInput with className prop', () => {
       expect(textInput.hasClass('custom-class')).toBe(true)

@@ -64,7 +64,10 @@ export class LinkList extends Component {
     )
 
     return (
-      <ul className={ listClassName } { ...others }>
+      <ul
+        className={ listClassName }
+        { ...others }
+      >
         { this.renderItems() }
       </ul>
     )
