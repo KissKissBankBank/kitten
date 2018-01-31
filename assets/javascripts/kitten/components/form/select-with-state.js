@@ -23,6 +23,7 @@ export class SelectWithState extends Component {
     }
 
     this.handleChange = this.handleChange.bind(this)
+    this.onKeyDown = this.onKeyDown.bind(this)
   }
 
   handleChange(val) {
@@ -33,6 +34,17 @@ export class SelectWithState extends Component {
     this.setState({ value: value })
     this.props.onChange(value)
     this.props.onInputChange({ value: value, name: this.props.name })
+  }
+
+  onKeyDown(event) {
+    const enterKeyCode = 13
+    const spaceKeyCode = 32
+
+    if (event.keyCode === enterKeyCode || event.keyCode === spaceKeyCode) {
+      event.preventDefault()
+      event.stopPropagation()
+      this.onRemove(event)
+    }
   }
 
   renderLabel() {
@@ -76,6 +88,7 @@ export class SelectWithState extends Component {
         { this.renderLabel() }
         <SelectWithMultiLevel
           value={ this.state.value }
+          onKeyDown={ this.onKeyDown }
           onChange={ this.handleChange }
           disabled={ disabled }
           { ...other }
