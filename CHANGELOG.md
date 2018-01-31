@@ -4,7 +4,6 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add A11Y with `onClick` on `children` props of `Button`.
 - Feature: Add `Twitter`, `Facebook` and `Linkedin` social button icon words.
 - Feature: Add `focus()` to `TextInput`.
 
