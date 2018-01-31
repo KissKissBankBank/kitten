@@ -4,7 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Fix viewport states update on `Container` component.
+## [19.3.1] - 2018-01-31
+
+Fix:
+- Fix viewport states update on `Container` component.
 
 ## [19.3.0] - 2018-01-31
 
