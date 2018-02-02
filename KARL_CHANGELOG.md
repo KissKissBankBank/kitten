@@ -4,10 +4,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `KarlFacebookButtonIconWords`, `KarlLinkedinButtonIconWords` and
+## [19.4.0] - 2018-02-02
+
+Features:
+- Add `KarlFacebookButtonIconWords`, `KarlLinkedinButtonIconWords` and
   `KarlTwitterButtonIconWords` examples.
-- Feature: Add `KarlFooterKissKiss` example.
-- Feature: Add A11Y on components's `KarlFooterKissKiss` examples
+- Add `KarlFooterKissKiss` example.
+- Add A11Y on components's `KarlFooterKissKiss` examples
 
 ## [19.3.1] - 2018-01-31
 

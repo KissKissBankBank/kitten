@@ -4,10 +4,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `Twitter`, `Facebook` and `Linkedin` social button icon words.
-- Fix: Fix `margin-bottom` on `LinkList` with `margin` prop.
-- Feature: Add `k-u-color-background1` utility for `Text` component.
-- Feature: Add `focus()` to `TextInput`.
+## [19.4.0] - 2018-02-02
+
+Features:
+- Add `Twitter`, `Facebook` and `Linkedin` social button icon words.
+- Add `k-u-color-background1` utility for `Text` component.
+
+Fix:
+- Fix `margin-bottom` on `LinkList` with `margin` prop.
 
 ## [19.3.1] - 2018-01-31
 
