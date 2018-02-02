@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Correct `SocialButtonIconWords` test.
 - Feature: Add `Twitter`, `Facebook` and `Linkedin` social button icon words.
 - Fix: Fix `margin-bottom` on `LinkList` with `margin` prop.
 - Feature: Add `k-u-color-background1` utility for `Text` component.

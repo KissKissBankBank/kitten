@@ -33,7 +33,7 @@ describe('<FacebookButtonIconWords />', () => {
     )
 
     it('renders the right children', () => {
-      expect(component.text()).toEqual('Lorem ipsum…')
+      expect(component.props().children).toEqual('Lorem ipsum…')
     })
   })
 })
@@ -62,7 +62,7 @@ describe('<TwitterButtonIconWords />', () => {
     )
 
     it('renders the right children', () => {
-      expect(component.text()).toEqual('Lorem ipsum…')
+      expect(component.props().children).toEqual('Lorem ipsum…')
     })
   })
 })
@@ -91,7 +91,7 @@ describe('<LinkedinButtonIconWords />', () => {
     )
 
     it('renders the right children', () => {
-      expect(component.text()).toEqual('Lorem ipsum…')
+      expect(component.props().children).toEqual('Lorem ipsum…')
     })
   })
 })
