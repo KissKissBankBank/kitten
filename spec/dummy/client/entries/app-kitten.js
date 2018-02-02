@@ -226,6 +226,7 @@ import {
 } from 'kitten/karl/modals/modal'
 
 // Navigation
+import { Pagination } from 'kitten/components/navigation/pagination'
 import { TabBar } from 'kitten/components/navigation/tab-bar'
 import {
   KarlHorizontalNav,
@@ -495,6 +496,7 @@ ReactOnRails.register({
   KarlModalExternalTrigger,
 
   // Navigation
+  Pagination,
   TabBar,
   KarlHorizontalNav,
   KarlBrowsingHorizontalNav,
