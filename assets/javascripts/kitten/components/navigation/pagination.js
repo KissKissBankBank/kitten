@@ -32,13 +32,16 @@ class PaginationBase extends Component {
 
     const styleButtonIcon = [
       styles.group.list.buttonIcon,
-      this.props.disabled && styles.list.buttonIcon.disabled,
+      this.props.disabled && styles.group.list.buttonIcon.disabled,
     ]
 
     return (
       <ul style={ styles.group }>
         <li style={ styles.group.list }>
-          <button style={ styleButtonIcon }>
+          <button
+            key="1"
+            style={ styles.group.list.buttonIcon }
+          >
             <ArrowIcon
               style={ styles.group.list.buttonIcon.svg }
               direction="left"
@@ -47,7 +50,10 @@ class PaginationBase extends Component {
         </li>
 
         <li style={ styles.group.list }>
-          <button style={ styleButtonIcon }>
+          <button
+            key="2"
+            style={ styleButtonIcon }
+          >
             <Text
               weight="regular"
               size="tiny"
@@ -57,7 +63,10 @@ class PaginationBase extends Component {
           </button>
         </li>
         <li style={ styles.group.list }>
-          <button style={ styleButtonIcon }>
+          <button
+            key="3"
+            style={ styleButtonIcon }
+          >
             <Text
               weight="regular"
               size="tiny"
@@ -67,7 +76,10 @@ class PaginationBase extends Component {
           </button>
         </li>
         <li style={ styles.group.list }>
-          <button style={ styleButtonIcon }>
+          <button
+            key="4"
+            style={ styleButtonIcon }
+          >
             <Text
               weight="regular"
               size="tiny"
@@ -77,7 +89,10 @@ class PaginationBase extends Component {
           </button>
         </li>
         <li style={ styles.group.list }>
-          <button style={ styleButtonIcon }>
+          <button
+            key="5"
+            style={ styleButtonIcon }
+          >
             <Text
               weight="regular"
               size="tiny"
@@ -87,7 +102,10 @@ class PaginationBase extends Component {
           </button>
         </li>
         <li style={ styles.group.list }>
-          <button style={ styleButtonIcon }>
+          <button
+            key="6"
+            style={ styleButtonIcon }
+          >
             <Text
               weight="regular"
               size="tiny"
@@ -98,7 +116,10 @@ class PaginationBase extends Component {
         </li>
 
         <li style={ styles.group.list }>
-          <button style={ styleButtonIcon }>
+          <button
+            key="7"
+            style={ styleButtonIcon }
+          >
             <ArrowIcon
               style={ styles.group.list.buttonIcon.svg }
               direction="right"
@@ -117,6 +138,9 @@ const styles = {
     list: {
       listStyleType: 'none',
       marginRight: '15px',
+      lastChild: {
+        marginRight: 0,
+      },
 
       buttonIcon: {
         boxSizing: 'border-box',
@@ -131,18 +155,19 @@ const styles = {
         backgroundColor: `${COLORS.background1}`,
         borderColor: `${COLORS.line1}`,
         color: `${COLORS.font1}`,
-        // ':active': {
-        //   borderColor: `${COLORS.primary3}`,
-        //   color: `${COLORS.primary3}`,
-        // },
-        // ':hover': {
-        //   borderColor: `${COLORS.primary1}`,
-        //   color: `${COLORS.primary1}`,
-        // },
-        // ':focus': {
-        //   borderColor: `${COLORS.primary1}`,
-        //   color: `${COLORS.primary1}`,
-        // },
+        ':hover': {
+          borderColor: `${COLORS.primary1}`,
+          color: `${COLORS.primary1}`,
+        },
+        ':focus': {
+          borderColor: `${COLORS.primary1}`,
+          color: `${COLORS.primary1}`,
+        },
+        ':active': {
+          backgroundColor: `${COLORS.primary1}`,
+          borderColor: `${COLORS.primary1}`,
+          color: `${COLORS.background1}`,
+        },
 
         disabled: {
           color: `${COLORS.background1}`,
@@ -156,6 +181,16 @@ const styles = {
           width: '12px',
           height: '14px',
           pointerEvents: 'none',
+          ':hover': {
+            color: `${COLORS.primary1}`,
+          },
+          ':focus': {
+            color: `${COLORS.primary1}`,
+          },
+          ':active': {
+            color: `${COLORS.background1}`,
+          },
+
         },
       },
     },
