@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Can overwrite button type in `TextInputWithButton`.
+- Fix: Enable button type attribute override on `TextInputWithButton`.
 
 ## [19.4.0] - 2018-02-02
 
