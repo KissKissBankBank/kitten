@@ -98,4 +98,19 @@ describe('<TextInputWithButton />', () => {
       expect(button.text()).toBe('custom-button')
     })
   })
+
+  describe('with buttonProps prop', () => {
+    const component = mount(
+      <TextInputWithButton
+        buttonProps={{
+          type: 'submit',
+        }}
+      />
+    )
+    const button = component.find('.k-TextInputWithButton__button')
+
+    it('renders a button with submit type', () => {
+      expect(button.prop('type')).toBe('submit')
+    })
+  })
 })
