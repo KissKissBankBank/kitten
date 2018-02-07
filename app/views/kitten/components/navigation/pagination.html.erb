@@ -1,3 +1,5 @@
 <%= example 'Pagination' do %>
-  <%= react_component 'Pagination' %>
+  <%= react_component 'Pagination', props: {
+    prevProps: { disabled: true },
+  } %>
 <% end %>

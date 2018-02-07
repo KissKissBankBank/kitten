@@ -1,18 +1,44 @@
 import React, { Component } from 'react'
 import Radium, { StyleRoot } from 'radium'
+import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import { Text } from 'kitten/components/typography/text'
 import { ArrowIcon as ArrowIconBase } from 'kitten/components/icons/arrow-icon'
-// import { createMatchMediaMax } from 'kitten/helpers/utils/media-queries'
-// import { ScreenConfig,
-//   SCREEN_SIZE_M,
-// } from 'kitten/constants/screen-config'
+import { createMatchMediaMax } from 'kitten/helpers/utils/media-queries'
+import { ScreenConfig,
+  SCREEN_SIZE_M,
+} from 'kitten/constants/screen-config'
 import COLORS from 'kitten/constants/colors-config'
 import { parseHtml } from 'kitten/helpers/utils/parser'
 
 const ArrowIcon = Radium(ArrowIconBase)
 
-class PaginationBase extends Component {
+export class Pagination extends Component {
+  constructor(props, context) {
+    super(props, context)
+
+    this.mqTabletOrLess = createMatchMediaMax(SCREEN_SIZE_M)
+
+    this.state = {
+      viewportIsTabletOrLess: false,
+    }
+  }
+
+  onTabletMQ = event => {
+    this.setState({ viewportIsTabletOrLess: event.matches })
+  }
+
+  componentDidMount() {
+    if (this.mqTabletOrLess) {
+      this.mqTabletOrLess.addListener(this.onTabletMQ)
+      this.onTabletMQ(this.mqTabletOrLess)
+    }
+  }
+
+  componentWillUnmount() {
+    if (this.mqTabletOrLess) this.mqTabletOrLess.removeListener(this.onTabletMQ)
+  }
+
   render() {
     return (
       <StyleRoot>
@@ -21,188 +47,232 @@ class PaginationBase extends Component {
     )
   }
 
-  renderList() {
-    const {
-      buttonIconPager,
-      buttonIconPager2,
-      buttonIconPager3,
-      buttonIconPagerPoints,
-      buttonIconPager6,
-    } = this.props
+  renderThreePoints() {
+
+    // const stylePoints = [
+    //   styles.group.list,
+    //   points && styles.group.list.points
+    // ]
+
+    return (
+     <li style={ styles.group.list }>
+      <a
+        href="#"
+        key="points"
+        // points={ points }
+      >
+        …
+      </a>
+     </li>
+    )
+  }
+
+  renderArrowButton(direction) {
+    const disabled = direction == 'left'
+    ? this.props.prevProps.disabled : this.props.nextProps.disabled
+
+    const linkIsHovered =
+      Radium.getState(this.state, `link-${direction}`, ':hover')
+    const linkIsFocused =
+      Radium.getState(this.state, `link-${direction}`, ':focus')
+    const linkIsActived =
+      Radium.getState(this.state, `link-${direction}`, ':active')
+
+    const styleList = [
+      direction == 'left' && styles.group.list.left,
+      direction == 'right' && styles.group.list.right,
+    ]
 
     const styleButtonIcon = [
       styles.group.list.buttonIcon,
-      this.props.disabled && styles.group.list.buttonIcon.disabled,
+      disabled && styles.group.list.buttonIcon.isDisabled,
+    ]
+
+    const styleSvg = [
+      styles.group.list.buttonIcon.svg,
+      (linkIsHovered && !disabled) && styles.group.list.buttonIcon.svg.hover,
+      (linkIsFocused && !disabled) && styles.group.list.buttonIcon.svg.focus,
+      (linkIsActived && !disabled) && styles.group.list.buttonIcon.svg.active,
     ]
 
     return (
-      <ul style={ styles.group }>
-        <li style={ styles.group.list }>
-          <button
-            key="1"
-            style={ styles.group.list.buttonIcon }
-          >
-            <ArrowIcon
-              style={ styles.group.list.buttonIcon.svg }
-              direction="left"
-            />
-          </button>
-        </li>
-
-        <li style={ styles.group.list }>
-          <button
-            key="2"
-            style={ styleButtonIcon }
-          >
-            <Text
-              weight="regular"
-              size="tiny"
-            >
-              { parseHtml(buttonIconPager) }
-            </Text>
-          </button>
-        </li>
-        <li style={ styles.group.list }>
-          <button
-            key="3"
-            style={ styleButtonIcon }
-          >
-            <Text
-              weight="regular"
-              size="tiny"
-            >
-              { parseHtml(buttonIconPager2) }
-            </Text>
-          </button>
-        </li>
-        <li style={ styles.group.list }>
-          <button
-            key="4"
-            style={ styleButtonIcon }
-          >
-            <Text
-              weight="regular"
-              size="tiny"
-            >
-              { parseHtml(buttonIconPager3) }
-            </Text>
-          </button>
-        </li>
-        <li style={ styles.group.list }>
-          <button
-            key="5"
-            style={ styleButtonIcon }
-          >
-            <Text
-              weight="regular"
-              size="tiny"
-            >
-              { parseHtml(buttonIconPagerPoints) }
-            </Text>
-          </button>
-        </li>
-        <li style={ styles.group.list }>
-          <button
-            key="6"
-            style={ styleButtonIcon }
-          >
-            <Text
-              weight="regular"
-              size="tiny"
-            >
-              { parseHtml(buttonIconPager6) }
-            </Text>
-          </button>
-        </li>
-
-        <li style={ styles.group.list }>
-          <button
-            key="7"
-            style={ styleButtonIcon }
-          >
-            <ArrowIcon
-              style={ styles.group.list.buttonIcon.svg }
-              direction="right"
-            />
-          </button>
-        </li>
-      </ul>
+      <li style={ styleList }>
+        <a
+          href="#"
+          key={ `link-${direction}` }
+          style={ styleButtonIcon }
+        >
+          <ArrowIcon
+            direction={ direction }
+            disabled={ disabled }
+            style={ styleSvg }
+          />
+        </a>
+      </li>
     )
   }
+
+  renderList() {
+    const paginations = [
+      '1',
+      '2',
+      '3',
+      '4',
+      '5',
+      '6'
+    ];
+
+    const {
+      pagination
+    } = this.props
+
+    return (
+      <ul style={ styles.group }>
+        { this.renderArrowButton('left') }
+        {
+          paginations.map(pagination =>
+            <li
+              style={ styles.group.list }
+              key={ `item-${pagination}` }
+            >
+              <a
+                href="#"
+                key={ `link-${pagination}` }
+                style={ styles.group.list.buttonIcon }
+              >
+                <Text
+                  weight="regular"
+                  size="tiny"
+                >
+                  { pagination }
+                </Text>
+              </a>
+            </li>
+          )
+        }
+        { this.renderThreePoints() }
+        { this.renderArrowButton('right') }
+      </ul>
+    );
+  }
 }
+
+const linkHoveredAndFocused = [
+  {
+    borderColor: `${COLORS.primary1}`,
+    color: `${COLORS.primary1}`,
+    backgroundColor: COLORS.background1,
+  }
+]
+
+const disabledPseudoClass = [
+  {
+    borderColor: `${COLORS.line2}`,
+    color: `${COLORS.background1}`,
+    backgroundColor: `${COLORS.line2}`,
+  }
+]
 
 const styles = {
   group: {
     display: 'inline-flex',
+    padding: 0,
 
     list: {
-      listStyleType: 'none',
-      marginRight: '15px',
+      listStyle: 'none',
+      marginRight: 0,
+      [`@media (min-width: ${ScreenConfig['S'].min}px)`]: {
+        marginRight: '15px',
+      },
       lastChild: {
+        marginRight: 0,
+      },
+      left: {
+        marginRight: '30px',
+        listStyle: 'none',
+      },
+      right: {
+        marginLeft: '30px',
+        listStyle: 'none',
+        [`@media (min-width: ${ScreenConfig['S'].min}px)`]: {
+          marginLeft: '15px',
+        },
+      },
+      points: {
+        listStyle: 'none',
+        marginLeft: 0,
         marginRight: 0,
       },
 
       buttonIcon: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
         boxSizing: 'border-box',
         cursor: 'pointer',
         width: '40px',
         height: '40px',
         borderRadius: 0,
-        borderWidth: '2px',
+        borderWidth: 0,
         borderStyle: 'solid',
         textDecoration: 'none',
         outline: 'none',
         backgroundColor: `${COLORS.background1}`,
         borderColor: `${COLORS.line1}`,
         color: `${COLORS.font1}`,
-        ':hover': {
-          borderColor: `${COLORS.primary1}`,
-          color: `${COLORS.primary1}`,
-        },
-        ':focus': {
-          borderColor: `${COLORS.primary1}`,
-          color: `${COLORS.primary1}`,
-        },
+        ':hover': linkHoveredAndFocused,
+        ':focus': linkHoveredAndFocused,
         ':active': {
           backgroundColor: `${COLORS.primary1}`,
           borderColor: `${COLORS.primary1}`,
           color: `${COLORS.background1}`,
         },
+        [`@media (min-width: ${ScreenConfig['S'].min}px)`]: {
+          width: '50px',
+          height: '50px',
+          borderWidth: '2px',
+        },
 
-        disabled: {
+        isDisabled: {
           color: `${COLORS.background1}`,
           backgroundColor: `${COLORS.line2}`,
-          borderColor:  `${COLORS.line2}`,
+          borderColor: `${COLORS.line2}`,
+          cursor: 'not-allowed',
+          ':hover': disabledPseudoClass,
+          ':focus': disabledPseudoClass,
+          ':active': disabledPseudoClass,
         },
 
         svg: {
           alignSelf: 'center',
-          margin: '0 auto',
+          margin: '0',
+          padding: '0',
           width: '12px',
           height: '14px',
           pointerEvents: 'none',
-          ':hover': {
-            color: `${COLORS.primary1}`,
+          hover:  {
+            fill: `${COLORS.primary1}`,
           },
-          ':focus': {
-            color: `${COLORS.primary1}`,
+          focus: {
+            fill: `${COLORS.primary1}`,
           },
-          ':active': {
-            color: `${COLORS.background1}`,
+          active: {
+            fill: `${COLORS.background1}`,
           },
-
+          isDisabled: {
+            fill: `${COLORS.background1}`,
+          },
         },
       },
     },
   },
 }
 
-PaginationBase.defaultProps = {
-  buttonIconPager: '1',
-  buttonIconPager2: '2',
-  buttonIconPager3: '3',
-  buttonIconPagerPoints: '…',
-  buttonIconPager6: '6',
+Pagination.defaultProps = {
+  prevProps: {
+    disabled: false,
+  },
+  nextProps: {
+    disabled: false,
+  },
 }
-
-export const Pagination = Radium(PaginationBase)
