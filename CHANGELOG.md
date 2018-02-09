@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `mediaQueries` HOC.
+
 ## [19.4.1] - 2018-02-07
 
 Fix:
