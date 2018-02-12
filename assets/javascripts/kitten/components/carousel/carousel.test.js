@@ -31,7 +31,7 @@ describe('<Carousel />', () => {
   describe('by default on desktop', () => {
     window.matchMedia = createMockMediaMatcher(false) // desktop
 
-    const carousel = shallow(
+    const carousel = mount(
       <Carousel
         data={[{title: 'A'}]}
         itemMinWidth={ProjectCardMinWidth}
@@ -48,13 +48,13 @@ describe('<Carousel />', () => {
     )
 
     it('is a <Grid />', () => {
-      expect(carousel.dive().hasClass('k-Grid')).toBe(true)
+      expect(carousel.find('.k-Grid')).toHaveLength(1)
     })
   })
 
   describe('with withoutLeftOffset on desktop', () => {
     window.matchMedia = createMockMediaMatcher(false) // desktop
-    const carousel = shallow(
+    const carousel = mount(
       <Carousel
         data={[{title: 'A'}]}
         itemMinWidth={ProjectCardMinWidth}
@@ -72,7 +72,7 @@ describe('<Carousel />', () => {
     )
 
     it('is a <Grid />', () => {
-      expect(carousel.dive().hasClass('k-Grid')).toBe(true)
+      expect(carousel.find('.k-Grid')).toHaveLength(1)
     })
   })
 

@@ -68,7 +68,11 @@ export const mediaQueries = (WrappedComponent, hocProps = {}) => (
 
     render() {
       return (
-        <WrappedComponent { ...this.props } { ...this.state } />
+        <WrappedComponent
+          { ...this.props }
+          viewportIsMobile={ this.state.viewportIsMobile }
+          viewportIsTabletOrLess={ this.state.viewportIsTabletOrLess }
+        />
       )
     }
   }
