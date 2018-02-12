@@ -531,6 +531,7 @@ const styles = {
 
         link: {
           color: `${COLORS.background1}`,
+          textDecoration: 'underline',
           ':active': {
             color: `${COLORS.primary3}`,
           },
