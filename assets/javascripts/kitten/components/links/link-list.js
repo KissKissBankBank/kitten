@@ -21,20 +21,32 @@ export class LinkList extends Component {
       active,
     } = element
 
-    const { color } = this.props
+    const {
+      color,
+      lineHeight,
+      itemMargin,
+    } = this.props
 
     const linkListClassName = classNames(
       'k-LinkList__link',
       {
         'is-active': active,
-        'k-LinkList__link--light': color ==  'light',
-        'k-LinkList__link--dark': color ==  'dark',
+        'k-LinkList__link--light': color == 'light',
+        'k-LinkList__link--dark': color == 'dark',
+        'k-LinkList--link--normalLineHeight': lineHeight == 'normalLineHeight',
+      },
+    )
+
+    const linkListItemClassName = classNames(
+      'k-LinkList__item',
+      {
+        'k-LinkList__item--doubleMargin': itemMargin == 'doubleMargin',
       },
     )
 
     return (
       <li
-        className="k-LinkList__item"
+        className={ linkListItemClassName }
         key={ key }
       >
         <a
@@ -83,4 +95,5 @@ LinkList.defaultProps = {
   margin: true,
   items: [], // Eg: [{ key: …, item: …, href: … }]
   color: 'dark',
+
 }

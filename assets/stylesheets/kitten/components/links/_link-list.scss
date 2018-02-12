@@ -19,6 +19,12 @@
   $font: 'regular';
   $font-size: -1;
 
+  // Items margin
+  $double-margin: k-px-to-rem(10px);
+
+  // Links line-height
+  $normalLineHeight: normal;
+
   // With light backgroundColor
   $dark-link-color: map-get($k-colors, 'font-1');
   $active-color: map-get($k-colors, 'primary-3');
@@ -42,6 +48,10 @@
     margin-bottom: k-px-to-rem(5px);
   }
 
+  .k-LinkList__item--doubleMargin {
+    margin-bottom: $double-margin;
+  }
+
   .k-LinkList__link {
     @include k-typographyFont($font);
     @include k-typographyFontSize($font-size);
@@ -58,6 +68,10 @@
     }
 
     transition: color .2s;
+  }
+
+  .k-LinkList--link--normalLineHeight {
+    line-height: $normalLineHeight;
   }
 
   .k-LinkList__link--light {
