@@ -4,8 +4,6 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Add `underline` decoration on paragraph link.
-
 ## [19.4.1] - 2018-02-07
 
 Fix:
