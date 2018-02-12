@@ -231,8 +231,8 @@ export class KarlFooterKisskiss extends Component {
                   margin={ false }
                   items={ items1 }
                   color="light"
-                  itemMargin="doubleMargin"
-                  lineHeight="normalLineHeight"
+                  itemMargin="double"
+                  lineHeight="normal"
                 />
               </GridCol>
 
@@ -244,8 +244,8 @@ export class KarlFooterKisskiss extends Component {
                   margin={ false }
                   items={ items2 }
                   color="light"
-                  itemMargin="doubleMargin"
-                  lineHeight="normalLineHeight"
+                  itemMargin="double"
+                  lineHeight="normal"
                 />
               </GridCol>
 
@@ -257,8 +257,8 @@ export class KarlFooterKisskiss extends Component {
                   margin={ false }
                   items={ items3 }
                   color="light"
-                  itemMargin="doubleMargin"
-                  lineHeight="normalLineHeight"
+                  itemMargin="double"
+                  lineHeight="normal"
                 />
               </GridCol>
             </Grid>

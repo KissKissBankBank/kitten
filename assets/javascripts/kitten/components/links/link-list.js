@@ -33,14 +33,14 @@ export class LinkList extends Component {
         'is-active': active,
         'k-LinkList__link--light': color == 'light',
         'k-LinkList__link--dark': color == 'dark',
-        'k-LinkList--link--normalLineHeight': lineHeight == 'normalLineHeight',
+        'k-LinkList__link--normalLineHeight': lineHeight == 'normal',
       },
     )
 
     const linkListItemClassName = classNames(
       'k-LinkList__item',
       {
-        'k-LinkList__item--doubleMargin': itemMargin == 'doubleMargin',
+        'k-LinkList__item--doubleMargin': itemMargin == 'double',
       },
     )
 
@@ -64,6 +64,8 @@ export class LinkList extends Component {
       className,
       margin,
       items,
+      lineHeight,
+      itemMargin,
       ...others,
     } = this.props
 
@@ -88,6 +90,8 @@ export class LinkList extends Component {
 
 LinkList.defaultProps = {
   color: PropTypes.oneOf(['light', 'dark']),
+  lineHeight: PropTypes.oneOf(['normal']),
+  itemMargin: PropTypes.oneOf(['double']),
 }
 
 LinkList.defaultProps = {
@@ -95,5 +99,6 @@ LinkList.defaultProps = {
   margin: true,
   items: [], // Eg: [{ key: …, item: …, href: … }]
   color: 'dark',
-
+  lineHeight: null,
+  itemMargin: null,
 }

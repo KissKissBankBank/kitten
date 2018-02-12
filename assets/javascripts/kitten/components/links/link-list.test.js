@@ -40,7 +40,7 @@ describe('<LinkList />', () => {
 
   describe('with itemMargin', () => {
     const linkList = shallow(
-      <LinkList items={ items } itemMargin="doubleMargin" />
+      <LinkList items={ items } itemMargin="double" />
     )
     const item = linkList.find('.k-LinkList__item').at(0)
 
@@ -92,13 +92,13 @@ describe('<LinkList />', () => {
     const linkList = shallow(
       <LinkList
         items={ items }
-        lineHeight="normalLineHeight"
+        lineHeight="normal"
       />
     )
     const item = linkList.find('.k-LinkList__link').at(0)
 
     it('has a good class', () => {
-      expect(item.hasClass('k-LinkList--link--normalLineHeight')).toBe(true)
+      expect(item.hasClass('k-LinkList__link--normalLineHeight')).toBe(true)
     })
   })
 })

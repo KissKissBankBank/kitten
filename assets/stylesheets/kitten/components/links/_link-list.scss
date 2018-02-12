@@ -23,7 +23,7 @@
   $double-margin: k-px-to-rem(10px);
 
   // Links line-height
-  $normalLineHeight: normal;
+  $normal-line-height: normal;
 
   // With light backgroundColor
   $dark-link-color: map-get($k-colors, 'font-1');
@@ -70,8 +70,8 @@
     transition: color .2s;
   }
 
-  .k-LinkList--link--normalLineHeight {
-    line-height: $normalLineHeight;
+  .k-LinkList__link--normalLineHeight {
+    line-height: $normal-line-height;
   }
 
   .k-LinkList__link--light {
