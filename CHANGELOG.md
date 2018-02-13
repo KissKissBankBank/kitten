@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add `mediaQueries` HOC.
+- Feature: Add `lineHeight` and `itemMargin` props on `LinkList` component.
 
 ## [19.4.1] - 2018-02-07
 

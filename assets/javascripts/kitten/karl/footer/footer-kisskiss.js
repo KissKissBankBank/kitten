@@ -231,6 +231,8 @@ export class KarlFooterKisskiss extends Component {
                   margin={ false }
                   items={ items1 }
                   color="light"
+                  itemMargin="double"
+                  lineHeight="normal"
                 />
               </GridCol>
 
@@ -242,6 +244,8 @@ export class KarlFooterKisskiss extends Component {
                   margin={ false }
                   items={ items2 }
                   color="light"
+                  itemMargin="double"
+                  lineHeight="normal"
                 />
               </GridCol>
 
@@ -253,6 +257,8 @@ export class KarlFooterKisskiss extends Component {
                   margin={ false }
                   items={ items3 }
                   color="light"
+                  itemMargin="double"
+                  lineHeight="normal"
                 />
               </GridCol>
             </Grid>
@@ -525,6 +531,7 @@ const styles = {
 
         link: {
           color: `${COLORS.background1}`,
+          textDecoration: 'underline',
           ':active': {
             color: `${COLORS.primary3}`,
           },
@@ -593,11 +600,6 @@ KarlFooterKisskiss.defaultProps = {
     {
       key: 'key4',
       item: 'Les StaKissTiques',
-      href: '#',
-    },
-    {
-      key: 'key5',
-      item: 'KissKiss Cinéma',
       href: '#',
     },
   ],

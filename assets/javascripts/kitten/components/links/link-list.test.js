@@ -38,6 +38,17 @@ describe('<LinkList />', () => {
     })
   })
 
+  describe('with itemMargin', () => {
+    const linkList = shallow(
+      <LinkList items={ items } itemMargin="double" />
+    )
+    const item = linkList.find('.k-LinkList__item').at(0)
+
+    it('has a good class', () => {
+      expect(item.hasClass('k-LinkList__item--doubleMargin')).toBe(true)
+    })
+  })
+
   describe('with margin prop', () => {
     const linkList = shallow(<LinkList margin={ false } />)
 
@@ -74,6 +85,20 @@ describe('<LinkList />', () => {
 
     it('has a good class', () => {
       expect(item.hasClass('k-LinkList__link--dark')).toBe(true)
+    })
+  })
+
+  describe('with lineHeight', () => {
+    const linkList = shallow(
+      <LinkList
+        items={ items }
+        lineHeight="normal"
+      />
+    )
+    const item = linkList.find('.k-LinkList__link').at(0)
+
+    it('has a good class', () => {
+      expect(item.hasClass('k-LinkList__link--normalLineHeight')).toBe(true)
     })
   })
 })
