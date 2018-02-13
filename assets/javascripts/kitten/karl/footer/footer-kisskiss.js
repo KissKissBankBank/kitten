@@ -135,7 +135,6 @@ export class KarlFooterKisskiss extends Component {
               <Text
                 size="tiny"
                 weight="regular"
-                tag="p"
               >
                 { parseHtml(socialText) }
               </Text>
@@ -437,9 +436,9 @@ const styles = {
       },
 
       buttons: {
-        marginTop: '10px',
-        [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
-          textAlign: 'center',
+        textAlign: 'center',
+        [`@media (max-width: ${ScreenConfig['M'].max}px)`]: {
+          marginTop: '10px',
         },
 
         buttonIcon: {
