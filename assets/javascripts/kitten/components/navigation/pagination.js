@@ -47,22 +47,60 @@ export class Pagination extends Component {
     )
   }
 
-  renderThreePoints() {
+  renderList() {
+    const paginations = [
+      '1',
+      '2',
+      '3',
+      '4',
+      '5',
+      '6'
+    ];
 
-    // const stylePoints = [
-    //   styles.group.list,
-    //   points && styles.group.list.points
-    // ]
+    const {
+      pagination
+    } = this.props
 
     return (
-     <li style={ styles.group.list }>
-      <a
-        href="#"
-        key="points"
-        // points={ points }
+      <ul style={ styles.group }>
+        { this.renderArrowButton('left') }
+        {
+          paginations.map(pagination =>
+            <li
+              style={ styles.group.list }
+              key={ `item-${pagination}` }
+            >
+              <a
+                href="#"
+                key={ `link-${pagination}` }
+                style={ styles.group.list.buttonIcon }
+              >
+                <Text
+                  weight="regular"
+                  size="tiny"
+                >
+                  { pagination }
+                </Text>
+              </a>
+            </li>
+          )
+        }
+        { this.renderThreePoints() }
+        { this.renderArrowButton('right') }
+      </ul>
+    );
+  }
+
+  renderThreePoints() {
+    return (
+     <li
+      style={ styles.group.list.points }
+    >
+      <span
+        style={ styles.group.list.point }
       >
         …
-      </a>
+      </span>
      </li>
     )
   }
@@ -111,50 +149,6 @@ export class Pagination extends Component {
       </li>
     )
   }
-
-  renderList() {
-    const paginations = [
-      '1',
-      '2',
-      '3',
-      '4',
-      '5',
-      '6'
-    ];
-
-    const {
-      pagination
-    } = this.props
-
-    return (
-      <ul style={ styles.group }>
-        { this.renderArrowButton('left') }
-        {
-          paginations.map(pagination =>
-            <li
-              style={ styles.group.list }
-              key={ `item-${pagination}` }
-            >
-              <a
-                href="#"
-                key={ `link-${pagination}` }
-                style={ styles.group.list.buttonIcon }
-              >
-                <Text
-                  weight="regular"
-                  size="tiny"
-                >
-                  { pagination }
-                </Text>
-              </a>
-            </li>
-          )
-        }
-        { this.renderThreePoints() }
-        { this.renderArrowButton('right') }
-      </ul>
-    );
-  }
 }
 
 const linkHoveredAndFocused = [
@@ -202,6 +196,8 @@ const styles = {
         listStyle: 'none',
         marginLeft: 0,
         marginRight: 0,
+        textDecoration: 'none',
+        alignSelf: 'center',
       },
 
       buttonIcon: {
