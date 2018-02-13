@@ -93,15 +93,11 @@ export class Pagination extends Component {
 
   renderThreePoints() {
     return (
-     <li
-      style={ styles.group.list.points }
-    >
-      <span
-        style={ styles.group.list.point }
+      <li
+        style={ styles.group.list.points }
       >
         …
-      </span>
-     </li>
+      </li>
     )
   }
 
@@ -176,7 +172,8 @@ const styles = {
       listStyle: 'none',
       marginRight: 0,
       [`@media (min-width: ${ScreenConfig['S'].min}px)`]: {
-        marginRight: '15px',
+        marginRight: '8px',
+        marginLeft: '8px',
       },
       lastChild: {
         marginRight: 0,
@@ -184,12 +181,15 @@ const styles = {
       left: {
         marginRight: '30px',
         listStyle: 'none',
+        [`@media (min-width: ${ScreenConfig['S'].min}px)`]: {
+          marginRight: '22px',
+        },
       },
       right: {
         marginLeft: '30px',
         listStyle: 'none',
         [`@media (min-width: ${ScreenConfig['S'].min}px)`]: {
-          marginLeft: '15px',
+          marginLeft: '22px',
         },
       },
       points: {
@@ -198,6 +198,12 @@ const styles = {
         marginRight: 0,
         textDecoration: 'none',
         alignSelf: 'center',
+        marginLeft: '14px',
+        marginRight: '14px',
+        [`@media (min-width: ${ScreenConfig['S'].min}px)`]: {
+          marginLeft: '10px',
+          marginRight: '10px',
+        },
       },
 
       buttonIcon: {
