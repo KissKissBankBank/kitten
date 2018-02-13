@@ -4,6 +4,16 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [19.5.0] - 2018-02-13
+
+Feature:
+- Add `lineHeight` and `itemMargin` props on `LinkList` component.
+
+## [19.4.1] - 2018-02-07
+
+Fix:
+- Enable button type attribute override on `TextInputWithButton`.
+
 ## [19.4.0] - 2018-02-02
 
 Features:

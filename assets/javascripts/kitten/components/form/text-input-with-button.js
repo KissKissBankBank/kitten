@@ -45,10 +45,10 @@ export class TextInputWithButton extends Component {
           className={ textInputWithButtonInputClassName }
         />
         <button
+          type="button"
           { ...buttonProps }
           disabled={ disabled }
           className={ textInputWithButtonButtonClassName }
-          type="button"
         >
           { value }
         </button>

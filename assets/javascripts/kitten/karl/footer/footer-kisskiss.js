@@ -94,42 +94,33 @@ export class KarlFooterKisskiss extends Component {
             <Marger top="3" bottom="3">
               <Grid>
                 <GridCol
-                  col-m="12"
-                  col-l="4"
-                  style={ styles.network.subscribe.label }
+                  col-l="12"
+                  offset-l="0"
+                  col-m="6"
+                  offset-m="3"
+                  col-s="10"
+                  offset-s="1"
+                  style={ styles.network.subscribe }
                 >
-                  <Text
-                    size="tiny"
-                    weight="regular"
-                    htmlFor="subscribe"
-                    tag="label"
-                  >
-                    { parseHtml(subscribeLabel) }
-                  </Text>
-                </GridCol>
-
-                <GridCol
-                  col-m="12"
-                  col-l="6"
-                  style={ styles.network.subscribe.form }
-                >
-                  <Grid>
-                    <GridCol
-                      col="10"
-                      col-m="6"
-                      col-l="12"
-                      offset="1"
-                      offset-m="3"
-                      offset-l="0"
+                  <div style={ styles.network.subscribe.label }>
+                    <Text
+                      size="tiny"
+                      weight="regular"
+                      htmlFor="subscribe"
+                      tag="label"
                     >
-                      <TextInputWithButton
-                        textInputProps={
-                          { ...textInputProps, id: "subscribe" }
-                        }
-                        value={ newsletterSubmitValue }
-                      />
-                    </GridCol>
-                  </Grid>
+                      { parseHtml(subscribeLabel) }
+                    </Text>
+                  </div>
+
+                  <div style={ styles.network.subscribe.form }>
+                    <TextInputWithButton
+                      textInputProps={
+                        { ...textInputProps, id: "subscribe" }
+                      }
+                      value={ newsletterSubmitValue }
+                    />
+                  </div>
                 </GridCol>
               </Grid>
             </Marger>
@@ -144,7 +135,6 @@ export class KarlFooterKisskiss extends Component {
               <Text
                 size="tiny"
                 weight="regular"
-                tag="p"
               >
                 { parseHtml(socialText) }
               </Text>
@@ -231,6 +221,8 @@ export class KarlFooterKisskiss extends Component {
                   margin={ false }
                   items={ items1 }
                   color="light"
+                  itemMargin="double"
+                  lineHeight="normal"
                 />
               </GridCol>
 
@@ -242,6 +234,8 @@ export class KarlFooterKisskiss extends Component {
                   margin={ false }
                   items={ items2 }
                   color="light"
+                  itemMargin="double"
+                  lineHeight="normal"
                 />
               </GridCol>
 
@@ -253,6 +247,8 @@ export class KarlFooterKisskiss extends Component {
                   margin={ false }
                   items={ items3 }
                   color="light"
+                  itemMargin="double"
+                  lineHeight="normal"
                 />
               </GridCol>
             </Grid>
@@ -392,17 +388,28 @@ const styles = {
     },
 
     subscribe: {
+      alignSelf: 'center',
+      [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
+        display: 'flex',
+        justifyContent: 'flex-end',
+      },
+
       label: {
-        alignSelf: 'center',
-        pointerEvents: 'auto',
-        [`@media (max-width: ${ScreenConfig['M'].max}px)`]: {
-          textAlign: 'center',
+        textAlign: 'center',
+        [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
+          alignSelf: 'center',
+          pointerEvents: 'auto',
+          marginRight: '15px',
         },
       },
 
       form: {
-        [`@media (max-width: ${ScreenConfig['M'].max}px)`]: {
-          marginTop: '10px',
+        marginTop: '10px',
+        marginRight: 0,
+        [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
+          textAlign: 'center',
+          flex: '1',
+          marginRight: '50px',
         },
       },
     },
@@ -525,6 +532,7 @@ const styles = {
 
         link: {
           color: `${COLORS.background1}`,
+          textDecoration: 'underline',
           ':active': {
             color: `${COLORS.primary3}`,
           },
@@ -593,11 +601,6 @@ KarlFooterKisskiss.defaultProps = {
     {
       key: 'key4',
       item: 'Les StaKissTiques',
-      href: '#',
-    },
-    {
-      key: 'key5',
-      item: 'KissKiss Cinéma',
       href: '#',
     },
   ],
