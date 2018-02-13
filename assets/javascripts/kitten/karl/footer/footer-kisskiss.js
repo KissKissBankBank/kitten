@@ -112,6 +112,7 @@ export class KarlFooterKisskiss extends Component {
                       { parseHtml(subscribeLabel) }
                     </Text>
                   </div>
+
                   <div style={ styles.network.subscribe.form }>
                     <TextInputWithButton
                       textInputProps={
