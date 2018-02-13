@@ -24,8 +24,7 @@ const createMockMediaMatcher = matches => () => {
 }
 
 describe('mediaQueries()', () => {
-  const initialWindow = Object.assign({}, global.window)
-  const originalMatchMedia = global.window.matchMedia
+  const originalMatchMedia = window.matchMedia
   let SimpleComponentWithMediaQueries
   let component
   let componentSnapshot
@@ -35,7 +34,7 @@ describe('mediaQueries()', () => {
   })
 
   afterEach(() => {
-    window.matchMedia = initialWindow.matchMedia
+    window.matchMedia = originalMatchMedia
   })
 
   describe('by default', () => {
