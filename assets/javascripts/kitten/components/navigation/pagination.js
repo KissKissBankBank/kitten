@@ -62,32 +62,35 @@ export class Pagination extends Component {
     } = this.props
 
     return (
-      <ul style={ styles.group }>
-        { this.renderArrowButton('left') }
-        {
-          paginations.map(pagination =>
-            <li
-              style={ styles.group.list }
-              key={ `item-${pagination}` }
-            >
-              <a
-                href="#"
-                key={ `link-${pagination}` }
-                style={ styles.group.list.buttonIcon }
+      <nav role="navigation" aria-label="Navigation par pagination">
+        <ul style={ styles.group }>
+          { this.renderArrowButton('left') }
+          {
+            paginations.map(pagination =>
+              <li
+                style={ styles.group.list }
+                key={ `item-${pagination}` }
               >
-                <Text
-                  weight="regular"
-                  size="tiny"
+                <a
+                  href="#"
+                  key={ `link-${pagination}` }
+                  style={ styles.group.list.buttonIcon }
+                  aria-label="Aller à la page #{pagination}"
                 >
-                  { pagination }
-                </Text>
-              </a>
-            </li>
-          )
-        }
-        { this.renderThreePoints() }
-        { this.renderArrowButton('right') }
-      </ul>
+                  <Text
+                    weight="regular"
+                    size="tiny"
+                  >
+                    { pagination }
+                  </Text>
+                </a>
+              </li>
+            )
+          }
+          { this.renderThreePoints() }
+          { this.renderArrowButton('right') }
+        </ul>
+      </nav>
     );
   }
 
@@ -135,6 +138,7 @@ export class Pagination extends Component {
           href="#"
           key={ `link-${direction}` }
           style={ styleButtonIcon }
+          aria-label="Aller à la page #{direction}"
         >
           <ArrowIcon
             direction={ direction }
@@ -175,9 +179,11 @@ const styles = {
         marginRight: '8px',
         marginLeft: '8px',
       },
+
       lastChild: {
         marginRight: 0,
       },
+
       left: {
         marginRight: '30px',
         listStyle: 'none',
@@ -185,6 +191,7 @@ const styles = {
           marginRight: '22px',
         },
       },
+
       right: {
         marginLeft: '30px',
         listStyle: 'none',
@@ -192,6 +199,7 @@ const styles = {
           marginLeft: '22px',
         },
       },
+
       points: {
         listStyle: 'none',
         marginLeft: 0,
