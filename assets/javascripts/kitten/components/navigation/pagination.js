@@ -105,6 +105,13 @@ export class Pagination extends Component {
   }
 
   renderArrowButton(direction) {
+    const {
+      arrowButtonPrev,
+      arrowButtonNext,
+    } = this.props
+
+    const prev = direction == 'left'
+
     const disabled = direction == 'left'
     ? this.props.prevProps.disabled : this.props.nextProps.disabled
 
