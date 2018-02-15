@@ -75,7 +75,7 @@ export class Pagination extends Component {
                   href="#"
                   key={ `link-${pagination}` }
                   style={ styles.group.list.buttonIcon }
-                  aria-label="Aller à la page #{pagination}"
+                  aria-label={ `Aller à la page ${pagination}` }
                 >
                   <Text
                     weight="regular"
@@ -145,7 +145,7 @@ export class Pagination extends Component {
           href="#"
           key={ `link-${direction}` }
           style={ styleButtonIcon }
-          aria-label="Aller à la page #{direction}"
+          aria-label={ `Aller à la page ${direction}` }
         >
           <ArrowIcon
             direction={ direction }
