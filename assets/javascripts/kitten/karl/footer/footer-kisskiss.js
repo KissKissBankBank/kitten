@@ -412,7 +412,6 @@ const styles = {
         flex: '1',
         [`@media (max-width: ${ScreenConfig['M'].max}px)`]: {
           marginTop: '10px',
-          marginRight: 0,
         },
 
         textInput: {
