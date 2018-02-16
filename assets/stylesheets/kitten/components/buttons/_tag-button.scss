@@ -148,6 +148,9 @@
     color: $color-nav;
     background-color: $background-color-nav;
     border-color: $border-color-nav;
+    min-height: $tag-button-line-height-big;
+
+    // min-width: $tag-button-min-width-big;
 
     &:focus {
       color: $color-focus-nav;
@@ -167,8 +170,6 @@
       background-color: $background-color-active-nav;
       border-color: $border-color-active-nav;
     }
-    // min-width: $tag-button-min-width-big;
-    min-height: $tag-button-line-height-big;
   }
 
   // Icon modifier.
