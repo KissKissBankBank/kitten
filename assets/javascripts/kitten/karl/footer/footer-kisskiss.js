@@ -6,7 +6,9 @@ import {
   Grid as GridBase,
   GridCol as GridColBase,
 } from 'kitten/components/grid/grid'
-import { TextInputWithButton } from 'kitten/components/form/text-input-with-button'
+import {
+  TextInputWithButton as TextInputWithButtonBase
+} from 'kitten/components/form/text-input-with-button'
 import { Paragraph  as ParagraphBase } from 'kitten/components/typography/paragraph'
 import { Text } from 'kitten/components/typography/text'
 import {
@@ -33,6 +35,7 @@ const Paragraph = Radium(ParagraphBase)
 const FacebookButtonIcon = Radium(FacebookButtonIconBase)
 const TwitterButtonIcon = Radium(TwitterButtonIconBase)
 const KissKissBankBankLogo = Radium(KissKissBankBankLogoBase)
+const TextInputWithButton = Radium(TextInputWithButtonBase)
 
 export class KarlFooterKisskiss extends Component {
   constructor(props, context) {
@@ -119,6 +122,7 @@ export class KarlFooterKisskiss extends Component {
                         { ...textInputProps, id: "subscribe" }
                       }
                       value={ newsletterSubmitValue }
+                      style={ styles.network.subscribe.form.textInput }
                     />
                   </div>
                 </GridCol>
@@ -404,12 +408,16 @@ const styles = {
       },
 
       form: {
-        marginTop: '10px',
-        marginRight: 0,
-        [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
-          textAlign: 'center',
-          flex: '1',
-          marginRight: '50px',
+        textAlign: 'center',
+        flex: '1',
+        [`@media (max-width: ${ScreenConfig['M'].max}px)`]: {
+          marginTop: '10px',
+        },
+
+        textInput: {
+          [`@media (min-width: ${ScreenConfig['L'].min}px)`] : {
+            maxWidth: '450px',
+          },
         },
       },
     },
