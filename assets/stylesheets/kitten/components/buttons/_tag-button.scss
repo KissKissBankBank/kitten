@@ -91,9 +91,9 @@
   $background-color-active-nav: map-get($k-colors, 'primary-1');
 
   // Hover
-  $color-active-nav: map-get($k-colors, 'primary-1');
-  $border-color-active-nav: map-get($k-colors, 'background-1');
-  $background-color-active-nav: map-get($k-colors, 'background-1');
+  $color-hover-nav: map-get($k-colors, 'primary-1');
+  $border-color-hover-nav: map-get($k-colors, 'background-1');
+  $background-color-hover-nav: map-get($k-colors, 'background-1');
 
   // Button font-size is computed using a modular scale and a defined step of
   // this scale.
@@ -145,6 +145,28 @@
   .k-TagButton--big {
     @include k-typographyFontSize($button-step, $tag-button-line-height-big);
 
+    color: $color-nav;
+    background-color: $background-color-nav;
+    border-color: $border-color-nav;
+
+    &:focus {
+      color: $color-focus-nav;
+      background-color: $background-color-focus-nav;
+      border-color: $border-color-focus-nav;
+    }
+
+    &:hover {
+      color: $color-hover-nav;
+      background-color: $background-color-hover-nav;
+      border-color: $border-color-hover-nav;
+    }
+
+    &:active,
+    &.is-selected {
+      color: $color-active-nav;
+      background-color: $background-color-active-nav;
+      border-color: $border-color-active-nav;
+    }
     // min-width: $tag-button-min-width-big;
     min-height: $tag-button-line-height-big;
   }
