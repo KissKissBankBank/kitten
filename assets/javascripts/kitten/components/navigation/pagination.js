@@ -55,7 +55,7 @@ export class Pagination extends Component {
       '4',
       '5',
       '6'
-    ];
+    ]
 
     const {
       pagination
@@ -112,8 +112,11 @@ export class Pagination extends Component {
 
     const prev = direction == 'left'
 
+    const ariaLabel = direction == 'left'
+      ? parseHtml(arrowButtonPrev) : parseHtml(arrowButtonNext)
+
     const disabled = direction == 'left'
-    ? this.props.prevProps.disabled : this.props.nextProps.disabled
+      ? this.props.prevProps.disabled : this.props.nextProps.disabled
 
     const linkIsHovered =
       Radium.getState(this.state, `link-${direction}`, ':hover')
@@ -145,7 +148,7 @@ export class Pagination extends Component {
           href="#"
           key={ `link-${direction}` }
           style={ styleButtonIcon }
-          aria-label={ `Aller à la page ${direction}` }
+          aria-label={ `Aller à la page ${ariaLabel}` }
         >
           <ArrowIcon
             direction={ direction }
@@ -285,6 +288,10 @@ const styles = {
   },
 }
 
+Pagination.PropTypes = {
+  direction: PropTypes.oneOf(['left', 'right']),
+}
+
 Pagination.defaultProps = {
   prevProps: {
     disabled: false,
@@ -292,4 +299,6 @@ Pagination.defaultProps = {
   nextProps: {
     disabled: false,
   },
+  arrowButtonPrev: 'précédente',
+  arrowButtonNext: 'suivante',
 }
