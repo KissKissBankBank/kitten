@@ -11,6 +11,8 @@ export class TagButton extends Component {
       tiny,
       big,
       icon,
+      withoutBorder,
+      padding,
       ...others,
     } = this.props
 
@@ -20,9 +22,18 @@ export class TagButton extends Component {
       {
         'is-selected': selected,
         'k-TagButton--tiny': tiny,
-        'k-TagButton--big': big,
         'k-TagButton--icon': icon,
+
       },
+    )
+
+    const tagButtonNavigationClassNames = classNames(
+      'k-TagButton--big',
+      className,
+      {
+        'k-TagButton--withoutBorder--big': big == true && withoutBorder,
+        'k-TagButton--padding--big': big == true && padding,
+      }
     )
 
     const Tag = tag
@@ -45,4 +56,6 @@ TagButton.defaultProps = {
   icon: false,
   tiny: false,
   big: false,
+  withoutBorder: false,
+  padding: false,
 }
