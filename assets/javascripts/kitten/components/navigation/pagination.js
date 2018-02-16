@@ -48,17 +48,9 @@ export class Pagination extends Component {
   }
 
   renderList() {
-    const paginations = [
-      '1',
-      '2',
-      '3',
-      '4',
-      '5',
-      '6'
-    ]
-
     const {
-      pagination
+      pagination,
+      paginations
     } = this.props
 
     return (
@@ -95,11 +87,15 @@ export class Pagination extends Component {
   }
 
   renderThreePoints() {
+    const {
+      threePoints,
+    } = this.props
+
     return (
       <li
         style={ styles.group.list.points }
       >
-        …
+        { parseHtml(threePoints) }
       </li>
     )
   }
@@ -301,4 +297,13 @@ Pagination.defaultProps = {
   },
   arrowButtonPrev: 'précédente',
   arrowButtonNext: 'suivante',
+  threePoints: '…',
+  paginations: [
+    '1',
+    '2',
+    '3',
+    '4',
+    '5',
+    '6'
+  ],
 }
