@@ -50,7 +50,7 @@ export class Pagination extends Component {
   renderList() {
     const {
       pagination,
-      paginations
+      pages
     } = this.props
 
     return (
@@ -58,7 +58,7 @@ export class Pagination extends Component {
         <ul style={ styles.group }>
           { this.renderArrowButton('left') }
           {
-            paginations.map(pagination =>
+            pages.map(pagination =>
               <li
                 style={ styles.group.list }
                 key={ `item-${pagination}` }
@@ -106,13 +106,13 @@ export class Pagination extends Component {
       arrowButtonNext,
     } = this.props
 
-    const prev = direction == 'left'
-
     const ariaLabel = direction == 'left'
-      ? parseHtml(arrowButtonPrev) : parseHtml(arrowButtonNext)
+      ? parseHtml(arrowButtonPrev)
+      : parseHtml(arrowButtonNext)
 
     const disabled = direction == 'left'
-      ? this.props.prevProps.disabled : this.props.nextProps.disabled
+      ? this.props.prevProps.disabled
+      : this.props.nextProps.disabled
 
     const linkIsHovered =
       Radium.getState(this.state, `link-${direction}`, ':hover')
@@ -157,13 +157,11 @@ export class Pagination extends Component {
   }
 }
 
-const linkHoveredAndFocused = [
-  {
-    borderColor: `${COLORS.primary1}`,
-    color: `${COLORS.primary1}`,
-    backgroundColor: COLORS.background1,
-  }
-]
+const linkHoveredAndFocused = {
+  borderColor: `${COLORS.primary1}`,
+  color: `${COLORS.primary1}`,
+  backgroundColor: `${COLORS.background1}`,
+}
 
 const disabledPseudoClass = [
   {
@@ -266,7 +264,7 @@ const styles = {
           width: '12px',
           height: '14px',
           pointerEvents: 'none',
-          hover:  {
+          hover: {
             fill: `${COLORS.primary1}`,
           },
           focus: {
@@ -298,7 +296,7 @@ Pagination.defaultProps = {
   arrowButtonPrev: 'précédente',
   arrowButtonNext: 'suivante',
   threePoints: '…',
-  paginations: [
+  pages: [
     '1',
     '2',
     '3',
