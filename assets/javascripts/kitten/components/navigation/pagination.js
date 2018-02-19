@@ -4,7 +4,6 @@ import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import { Text } from 'kitten/components/typography/text'
 import { ArrowIcon as ArrowIconBase } from 'kitten/components/icons/arrow-icon'
-import { createMatchMediaMax } from 'kitten/helpers/utils/media-queries'
 import { ScreenConfig,
   SCREEN_SIZE_M,
 } from 'kitten/constants/screen-config'
@@ -13,37 +12,12 @@ import { parseHtml } from 'kitten/helpers/utils/parser'
 
 const ArrowIcon = Radium(ArrowIconBase)
 
-export class Pagination extends Component {
-  constructor(props, context) {
-    super(props, context)
-
-    this.mqTabletOrLess = createMatchMediaMax(SCREEN_SIZE_M)
-
-    this.state = {
-      viewportIsTabletOrLess: false,
-    }
-  }
-
-  onTabletMQ = event => {
-    this.setState({ viewportIsTabletOrLess: event.matches })
-  }
-
-  componentDidMount() {
-    if (this.mqTabletOrLess) {
-      this.mqTabletOrLess.addListener(this.onTabletMQ)
-      this.onTabletMQ(this.mqTabletOrLess)
-    }
-  }
-
-  componentWillUnmount() {
-    if (this.mqTabletOrLess) this.mqTabletOrLess.removeListener(this.onTabletMQ)
-  }
-
+class PaginationBase extends Component {
   render() {
     return (
-      <StyleRoot>
+      <div>
         { this.renderList() }
-      </StyleRoot>
+      </div>
     )
   }
 
@@ -163,13 +137,11 @@ const linkHoveredAndFocused = {
   backgroundColor: `${COLORS.background1}`,
 }
 
-const disabledPseudoClass = [
-  {
-    borderColor: `${COLORS.line2}`,
-    color: `${COLORS.background1}`,
-    backgroundColor: `${COLORS.line2}`,
-  }
-]
+const disabledPseudoClass = {
+  borderColor: `${COLORS.line2}`,
+  color: `${COLORS.background1}`,
+  backgroundColor: `${COLORS.line2}`,
+}
 
 const styles = {
   group: {
@@ -282,11 +254,11 @@ const styles = {
   },
 }
 
-Pagination.PropTypes = {
+PaginationBase.propTypes = {
   direction: PropTypes.oneOf(['left', 'right']),
 }
 
-Pagination.defaultProps = {
+PaginationBase.defaultProps = {
   prevProps: {
     disabled: false,
   },
@@ -305,3 +277,16 @@ Pagination.defaultProps = {
     '6'
   ],
 }
+
+const PaginationRadium = Radium(PaginationBase)
+
+export class Pagination extends Component {
+  render() {
+    return(
+      <StyleRoot>
+        <PaginationRadium { ...this.props } />
+      </StyleRoot>
+    )
+  }
+}
+
