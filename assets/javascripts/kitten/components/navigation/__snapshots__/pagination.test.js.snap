@@ -4,465 +4,469 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
 <div
   data-radium={true}
 >
-  <nav
-    aria-label="Navigation par pagination"
+  <div
     data-radium={true}
-    role="navigation"
   >
-    <ul
+    <nav
+      aria-label="Navigation par pagination"
       data-radium={true}
-      style={
-        Object {
-          "display": "inline-flex",
-          "padding": 0,
-        }
-      }
+      role="navigation"
     >
-      <li
-        className="rmq-3376e0da"
+      <ul
         data-radium={true}
         style={
           Object {
-            "listStyle": "none",
-            "marginRight": "30px",
+            "display": "inline-flex",
+            "padding": 0,
           }
         }
       >
-        <a
-          aria-label="Aller à la page #{direction}"
-          className="rmq-e4506d25"
+        <li
+          className="rmq-3376e0da"
           data-radium={true}
-          href="#"
-          onBlur={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
           style={
             Object {
-              "alignItems": "center",
-              "backgroundColor": "#fff",
-              "borderColor": "#eee",
-              "borderRadius": 0,
-              "borderStyle": "solid",
-              "borderWidth": 0,
-              "boxSizing": "border-box",
-              "color": "#222",
-              "cursor": "pointer",
-              "display": "flex",
-              "height": "40px",
-              "justifyContent": "center",
-              "outline": "none",
-              "textDecoration": "none",
-              "width": "40px",
+              "listStyle": "none",
+              "marginRight": "30px",
             }
           }
         >
-          <svg
-            className="k-ArrowIcon--left"
+          <a
+            aria-label="Aller à la page précédente"
+            className="rmq-e4506d25"
             data-radium={true}
+            href="#"
+            onBlur={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
             style={
               Object {
-                "alignSelf": "center",
-                "height": "14px",
-                "margin": "0",
-                "padding": "0",
-                "pointerEvents": "none",
-                "width": "12px",
+                "alignItems": "center",
+                "backgroundColor": "#fff",
+                "borderColor": "#eee",
+                "borderRadius": 0,
+                "borderStyle": "solid",
+                "borderWidth": 0,
+                "boxSizing": "border-box",
+                "color": "#222",
+                "cursor": "pointer",
+                "display": "flex",
+                "height": "40px",
+                "justifyContent": "center",
+                "outline": "none",
+                "textDecoration": "none",
+                "width": "40px",
               }
             }
-            viewBox="0 0 10 10"
-            xmlns="http://www.w3.org/2000/svg"
           >
-            <path
-              d="M7.828,5L6.414,6.413L2.172,2.172l1.414-1.415L7.828,5z"
-            />
-            <path
-              d="M7.828,5L3.586,9.243L2.172,7.827l4.242-4.241L7.828,5z"
-            />
-          </svg>
-        </a>
-      </li>
-      <li
-        className="rmq-51af0236"
-        data-radium={true}
-        style={
-          Object {
-            "listStyle": "none",
-            "marginRight": 0,
-          }
-        }
-      >
-        <a
-          aria-label="Aller à la page #{pagination}"
-          className="rmq-e4506d25"
+            <svg
+              className="k-ArrowIcon--left"
+              data-radium={true}
+              style={
+                Object {
+                  "alignSelf": "center",
+                  "height": "14px",
+                  "margin": "0",
+                  "padding": "0",
+                  "pointerEvents": "none",
+                  "width": "12px",
+                }
+              }
+              viewBox="0 0 10 10"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7.828,5L6.414,6.413L2.172,2.172l1.414-1.415L7.828,5z"
+              />
+              <path
+                d="M7.828,5L3.586,9.243L2.172,7.827l4.242-4.241L7.828,5z"
+              />
+            </svg>
+          </a>
+        </li>
+        <li
+          className="rmq-51af0236"
           data-radium={true}
-          href="#"
-          onBlur={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
           style={
             Object {
-              "alignItems": "center",
-              "backgroundColor": "#fff",
-              "borderColor": "#eee",
-              "borderRadius": 0,
-              "borderStyle": "solid",
-              "borderWidth": 0,
-              "boxSizing": "border-box",
-              "color": "#222",
-              "cursor": "pointer",
-              "display": "flex",
-              "height": "40px",
-              "justifyContent": "center",
-              "outline": "none",
-              "textDecoration": "none",
-              "width": "40px",
+              "listStyle": "none",
+              "marginRight": 0,
             }
           }
         >
-          <span
-            className="k-u-size-big k-u-weight-regular"
-          >
-            1
-          </span>
-        </a>
-      </li>
-      <li
-        className="rmq-51af0236"
-        data-radium={true}
-        style={
-          Object {
-            "listStyle": "none",
-            "marginRight": 0,
-          }
-        }
-      >
-        <a
-          aria-label="Aller à la page #{pagination}"
-          className="rmq-e4506d25"
-          data-radium={true}
-          href="#"
-          onBlur={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          style={
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "#fff",
-              "borderColor": "#eee",
-              "borderRadius": 0,
-              "borderStyle": "solid",
-              "borderWidth": 0,
-              "boxSizing": "border-box",
-              "color": "#222",
-              "cursor": "pointer",
-              "display": "flex",
-              "height": "40px",
-              "justifyContent": "center",
-              "outline": "none",
-              "textDecoration": "none",
-              "width": "40px",
-            }
-          }
-        >
-          <span
-            className="k-u-size-big k-u-weight-regular"
-          >
-            2
-          </span>
-        </a>
-      </li>
-      <li
-        className="rmq-51af0236"
-        data-radium={true}
-        style={
-          Object {
-            "listStyle": "none",
-            "marginRight": 0,
-          }
-        }
-      >
-        <a
-          aria-label="Aller à la page #{pagination}"
-          className="rmq-e4506d25"
-          data-radium={true}
-          href="#"
-          onBlur={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          style={
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "#fff",
-              "borderColor": "#eee",
-              "borderRadius": 0,
-              "borderStyle": "solid",
-              "borderWidth": 0,
-              "boxSizing": "border-box",
-              "color": "#222",
-              "cursor": "pointer",
-              "display": "flex",
-              "height": "40px",
-              "justifyContent": "center",
-              "outline": "none",
-              "textDecoration": "none",
-              "width": "40px",
-            }
-          }
-        >
-          <span
-            className="k-u-size-big k-u-weight-regular"
-          >
-            3
-          </span>
-        </a>
-      </li>
-      <li
-        className="rmq-51af0236"
-        data-radium={true}
-        style={
-          Object {
-            "listStyle": "none",
-            "marginRight": 0,
-          }
-        }
-      >
-        <a
-          aria-label="Aller à la page #{pagination}"
-          className="rmq-e4506d25"
-          data-radium={true}
-          href="#"
-          onBlur={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          style={
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "#fff",
-              "borderColor": "#eee",
-              "borderRadius": 0,
-              "borderStyle": "solid",
-              "borderWidth": 0,
-              "boxSizing": "border-box",
-              "color": "#222",
-              "cursor": "pointer",
-              "display": "flex",
-              "height": "40px",
-              "justifyContent": "center",
-              "outline": "none",
-              "textDecoration": "none",
-              "width": "40px",
-            }
-          }
-        >
-          <span
-            className="k-u-size-big k-u-weight-regular"
-          >
-            4
-          </span>
-        </a>
-      </li>
-      <li
-        className="rmq-51af0236"
-        data-radium={true}
-        style={
-          Object {
-            "listStyle": "none",
-            "marginRight": 0,
-          }
-        }
-      >
-        <a
-          aria-label="Aller à la page #{pagination}"
-          className="rmq-e4506d25"
-          data-radium={true}
-          href="#"
-          onBlur={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          style={
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "#fff",
-              "borderColor": "#eee",
-              "borderRadius": 0,
-              "borderStyle": "solid",
-              "borderWidth": 0,
-              "boxSizing": "border-box",
-              "color": "#222",
-              "cursor": "pointer",
-              "display": "flex",
-              "height": "40px",
-              "justifyContent": "center",
-              "outline": "none",
-              "textDecoration": "none",
-              "width": "40px",
-            }
-          }
-        >
-          <span
-            className="k-u-size-big k-u-weight-regular"
-          >
-            5
-          </span>
-        </a>
-      </li>
-      <li
-        className="rmq-51af0236"
-        data-radium={true}
-        style={
-          Object {
-            "listStyle": "none",
-            "marginRight": 0,
-          }
-        }
-      >
-        <a
-          aria-label="Aller à la page #{pagination}"
-          className="rmq-e4506d25"
-          data-radium={true}
-          href="#"
-          onBlur={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          style={
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "#fff",
-              "borderColor": "#eee",
-              "borderRadius": 0,
-              "borderStyle": "solid",
-              "borderWidth": 0,
-              "boxSizing": "border-box",
-              "color": "#222",
-              "cursor": "pointer",
-              "display": "flex",
-              "height": "40px",
-              "justifyContent": "center",
-              "outline": "none",
-              "textDecoration": "none",
-              "width": "40px",
-            }
-          }
-        >
-          <span
-            className="k-u-size-big k-u-weight-regular"
-          >
-            6
-          </span>
-        </a>
-      </li>
-      <li
-        className="rmq-8af9b4d6"
-        data-radium={true}
-        style={
-          Object {
-            "alignSelf": "center",
-            "listStyle": "none",
-            "marginLeft": "14px",
-            "marginRight": "14px",
-            "textDecoration": "none",
-          }
-        }
-      >
-        …
-      </li>
-      <li
-        className="rmq-17778861"
-        data-radium={true}
-        style={
-          Object {
-            "listStyle": "none",
-            "marginLeft": "30px",
-          }
-        }
-      >
-        <a
-          aria-label="Aller à la page #{direction}"
-          className="rmq-e4506d25"
-          data-radium={true}
-          href="#"
-          onBlur={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          style={
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "#fff",
-              "borderColor": "#eee",
-              "borderRadius": 0,
-              "borderStyle": "solid",
-              "borderWidth": 0,
-              "boxSizing": "border-box",
-              "color": "#222",
-              "cursor": "pointer",
-              "display": "flex",
-              "height": "40px",
-              "justifyContent": "center",
-              "outline": "none",
-              "textDecoration": "none",
-              "width": "40px",
-            }
-          }
-        >
-          <svg
-            className="k-ArrowIcon--right"
+          <a
+            aria-label="Aller à la page 1"
+            className="rmq-e4506d25"
             data-radium={true}
+            href="#"
+            onBlur={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
             style={
               Object {
-                "alignSelf": "center",
-                "height": "14px",
-                "margin": "0",
-                "padding": "0",
-                "pointerEvents": "none",
-                "width": "12px",
+                "alignItems": "center",
+                "backgroundColor": "#fff",
+                "borderColor": "#eee",
+                "borderRadius": 0,
+                "borderStyle": "solid",
+                "borderWidth": 0,
+                "boxSizing": "border-box",
+                "color": "#222",
+                "cursor": "pointer",
+                "display": "flex",
+                "height": "40px",
+                "justifyContent": "center",
+                "outline": "none",
+                "textDecoration": "none",
+                "width": "40px",
               }
             }
-            viewBox="0 0 10 10"
-            xmlns="http://www.w3.org/2000/svg"
           >
-            <path
-              d="M7.828,5L6.414,6.413L2.172,2.172l1.414-1.415L7.828,5z"
-            />
-            <path
-              d="M7.828,5L3.586,9.243L2.172,7.827l4.242-4.241L7.828,5z"
-            />
-          </svg>
-        </a>
-      </li>
-    </ul>
-  </nav>
+            <span
+              className="k-u-size-tiny k-u-weight-regular"
+            >
+              1
+            </span>
+          </a>
+        </li>
+        <li
+          className="rmq-51af0236"
+          data-radium={true}
+          style={
+            Object {
+              "listStyle": "none",
+              "marginRight": 0,
+            }
+          }
+        >
+          <a
+            aria-label="Aller à la page 2"
+            className="rmq-e4506d25"
+            data-radium={true}
+            href="#"
+            onBlur={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "#fff",
+                "borderColor": "#eee",
+                "borderRadius": 0,
+                "borderStyle": "solid",
+                "borderWidth": 0,
+                "boxSizing": "border-box",
+                "color": "#222",
+                "cursor": "pointer",
+                "display": "flex",
+                "height": "40px",
+                "justifyContent": "center",
+                "outline": "none",
+                "textDecoration": "none",
+                "width": "40px",
+              }
+            }
+          >
+            <span
+              className="k-u-size-tiny k-u-weight-regular"
+            >
+              2
+            </span>
+          </a>
+        </li>
+        <li
+          className="rmq-51af0236"
+          data-radium={true}
+          style={
+            Object {
+              "listStyle": "none",
+              "marginRight": 0,
+            }
+          }
+        >
+          <a
+            aria-label="Aller à la page 3"
+            className="rmq-e4506d25"
+            data-radium={true}
+            href="#"
+            onBlur={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "#fff",
+                "borderColor": "#eee",
+                "borderRadius": 0,
+                "borderStyle": "solid",
+                "borderWidth": 0,
+                "boxSizing": "border-box",
+                "color": "#222",
+                "cursor": "pointer",
+                "display": "flex",
+                "height": "40px",
+                "justifyContent": "center",
+                "outline": "none",
+                "textDecoration": "none",
+                "width": "40px",
+              }
+            }
+          >
+            <span
+              className="k-u-size-tiny k-u-weight-regular"
+            >
+              3
+            </span>
+          </a>
+        </li>
+        <li
+          className="rmq-51af0236"
+          data-radium={true}
+          style={
+            Object {
+              "listStyle": "none",
+              "marginRight": 0,
+            }
+          }
+        >
+          <a
+            aria-label="Aller à la page 4"
+            className="rmq-e4506d25"
+            data-radium={true}
+            href="#"
+            onBlur={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "#fff",
+                "borderColor": "#eee",
+                "borderRadius": 0,
+                "borderStyle": "solid",
+                "borderWidth": 0,
+                "boxSizing": "border-box",
+                "color": "#222",
+                "cursor": "pointer",
+                "display": "flex",
+                "height": "40px",
+                "justifyContent": "center",
+                "outline": "none",
+                "textDecoration": "none",
+                "width": "40px",
+              }
+            }
+          >
+            <span
+              className="k-u-size-tiny k-u-weight-regular"
+            >
+              4
+            </span>
+          </a>
+        </li>
+        <li
+          className="rmq-51af0236"
+          data-radium={true}
+          style={
+            Object {
+              "listStyle": "none",
+              "marginRight": 0,
+            }
+          }
+        >
+          <a
+            aria-label="Aller à la page 5"
+            className="rmq-e4506d25"
+            data-radium={true}
+            href="#"
+            onBlur={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "#fff",
+                "borderColor": "#eee",
+                "borderRadius": 0,
+                "borderStyle": "solid",
+                "borderWidth": 0,
+                "boxSizing": "border-box",
+                "color": "#222",
+                "cursor": "pointer",
+                "display": "flex",
+                "height": "40px",
+                "justifyContent": "center",
+                "outline": "none",
+                "textDecoration": "none",
+                "width": "40px",
+              }
+            }
+          >
+            <span
+              className="k-u-size-tiny k-u-weight-regular"
+            >
+              5
+            </span>
+          </a>
+        </li>
+        <li
+          className="rmq-51af0236"
+          data-radium={true}
+          style={
+            Object {
+              "listStyle": "none",
+              "marginRight": 0,
+            }
+          }
+        >
+          <a
+            aria-label="Aller à la page 6"
+            className="rmq-e4506d25"
+            data-radium={true}
+            href="#"
+            onBlur={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "#fff",
+                "borderColor": "#eee",
+                "borderRadius": 0,
+                "borderStyle": "solid",
+                "borderWidth": 0,
+                "boxSizing": "border-box",
+                "color": "#222",
+                "cursor": "pointer",
+                "display": "flex",
+                "height": "40px",
+                "justifyContent": "center",
+                "outline": "none",
+                "textDecoration": "none",
+                "width": "40px",
+              }
+            }
+          >
+            <span
+              className="k-u-size-tiny k-u-weight-regular"
+            >
+              6
+            </span>
+          </a>
+        </li>
+        <li
+          className="rmq-8af9b4d6"
+          data-radium={true}
+          style={
+            Object {
+              "alignSelf": "center",
+              "listStyle": "none",
+              "marginLeft": "14px",
+              "marginRight": "14px",
+              "textDecoration": "none",
+            }
+          }
+        >
+          …
+        </li>
+        <li
+          className="rmq-17778861"
+          data-radium={true}
+          style={
+            Object {
+              "listStyle": "none",
+              "marginLeft": "30px",
+            }
+          }
+        >
+          <a
+            aria-label="Aller à la page suivante"
+            className="rmq-e4506d25"
+            data-radium={true}
+            href="#"
+            onBlur={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "#fff",
+                "borderColor": "#eee",
+                "borderRadius": 0,
+                "borderStyle": "solid",
+                "borderWidth": 0,
+                "boxSizing": "border-box",
+                "color": "#222",
+                "cursor": "pointer",
+                "display": "flex",
+                "height": "40px",
+                "justifyContent": "center",
+                "outline": "none",
+                "textDecoration": "none",
+                "width": "40px",
+              }
+            }
+          >
+            <svg
+              className="k-ArrowIcon--right"
+              data-radium={true}
+              style={
+                Object {
+                  "alignSelf": "center",
+                  "height": "14px",
+                  "margin": "0",
+                  "padding": "0",
+                  "pointerEvents": "none",
+                  "width": "12px",
+                }
+              }
+              viewBox="0 0 10 10"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7.828,5L6.414,6.413L2.172,2.172l1.414-1.415L7.828,5z"
+              />
+              <path
+                d="M7.828,5L3.586,9.243L2.172,7.827l4.242-4.241L7.828,5z"
+              />
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
   <style
     dangerouslySetInnerHTML={
       Object {
