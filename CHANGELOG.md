@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add `Pagination` component.
+- Feature: Update styles `disabled` prop on `ArrowIcon` component.
 
 ## [19.5.0] - 2018-02-13
 
