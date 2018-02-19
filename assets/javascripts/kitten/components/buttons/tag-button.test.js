@@ -66,10 +66,21 @@ describe('TagButton', () => {
         const component = shallow(
           <TagButton>
             <svg />
-          </TagButton>)
+          </TagButton>
+        )
 
         it('has children', () => {
           expect(component.children().type()).toBe('svg')
+        })
+      })
+
+      describe('withoutBorder', () => {
+        const component = shallow(
+          <TagButton withoutBorder />
+        )
+
+        it('adds the withoutBorder modifier class', () => {
+          expect(component.hasClass('k-TagButton--withoutBorder--big')).toBe(true)
         })
       })
     })
