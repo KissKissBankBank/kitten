@@ -3,8 +3,8 @@ import { CrowdfundingCard } from 'kitten/components/cards/crowdfunding-card'
 
 export const ArticleCard = ({ articleTitle, articleSubTitle, ...props }) => (
   <CrowdfundingCard
-    cardTitle={ props.articleTitle }
-    cardSubTitle={ props.articleSubTitle }
+    cardTitle={ articleTitle }
+    cardSubTitle={ articleSubTitle }
     { ...props }
     info1={ false }
     info2={ false }
