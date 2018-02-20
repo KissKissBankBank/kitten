@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking change: Rename `style` prop to `fontStyle` in `Text` component.
+- Feature: Add `rampProps` prop to `Progress` component.
+- Feature: Add `CrowdfundingCard` component.
+
 ## [19.5.0] - 2018-02-13
 
 Feature:
