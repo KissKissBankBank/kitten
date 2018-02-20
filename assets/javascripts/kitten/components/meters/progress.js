@@ -21,6 +21,11 @@ export class Progress extends Component {
       width: `${value}%`,
     }
 
+    const rampClassName = classNames(
+      'k-Progress__ramp',
+      rampProps.className,
+    )
+
     return (
       <div
         { ...others }
@@ -29,7 +34,7 @@ export class Progress extends Component {
         aria-valuemax="100"
         aria-valuenow={ this.props.value }
         className={ progressClassName }>
-        <div className="k-Progress__ramp" { ...rampProps }>
+        <div { ...rampProps } className={ rampClassName }>
           <div
             className="k-Progress__slider"
             style={ style }
