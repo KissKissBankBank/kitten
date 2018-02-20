@@ -7,6 +7,7 @@ export const ClockCircleIcon = ({ circleColor, clockColor, ...props }) => {
       viewBox="0 0 20 20"
       { ...props }
     >
+      <title>Clock circle</title>
       <circle fill={ circleColor } cx="10" cy="10" r="10" />
       <path fill={ clockColor } d="M11 9h3v2H9V4h2v5z" />
     </svg>

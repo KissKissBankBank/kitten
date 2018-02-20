@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: A11Y and update example colors.
+
 ## [19.5.0] - 2018-02-13
 
 No changes.

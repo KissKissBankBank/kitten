@@ -6,6 +6,7 @@ export const SearchIcon = props => (
     xmlns="http://www.w3.org/2000/svg"
     { ...props }
   >
+    <title>Search</title>
     <circle
       className="k-SearchInput__submit__svgCircle"
       cx="7"

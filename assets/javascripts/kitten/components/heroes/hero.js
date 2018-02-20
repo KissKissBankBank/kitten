@@ -211,9 +211,7 @@ Hero.propTypes = {
 Hero.defaultProps = {
   direction: 'left',
   tiny: false,
-  imageSrc: 'https://placehold.it/40x40/'
-    + `${COLORS.primary1.replace('#', '')}/`
-    + `${COLORS.primary1.replace('#', '')}`,
+  imageSrc: 'https://placehold.it/40x40/caf4fe/caf4fe',
   contentBackgroundColor: COLORS.font1,
   contentColor: COLORS.background1,
 }
