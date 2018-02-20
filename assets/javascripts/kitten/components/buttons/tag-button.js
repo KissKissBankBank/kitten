@@ -12,7 +12,7 @@ export class TagButton extends Component {
       big,
       icon,
       withoutBorder,
-      padding,
+      navigationStates,
       ...others,
     } = this.props
 
@@ -24,8 +24,8 @@ export class TagButton extends Component {
         'k-TagButton--tiny': tiny,
         'k-TagButton--big': big,
         'k-TagButton--icon': icon,
-        'k-TagButton--withoutBorder--big': big == true && withoutBorder,
-        'k-TagButton--padding--big': big == true && padding,
+        'k-TagButton--withoutBorder': withoutBorder,
+        'k-TagButton--navigationStates': navigationStates,
       },
     )
 
@@ -51,5 +51,5 @@ TagButton.defaultProps = {
   tiny: false,
   big: false,
   withoutBorder: false,
-  padding: false,
+  navigationStates: false,
 }

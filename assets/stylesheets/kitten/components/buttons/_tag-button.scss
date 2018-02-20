@@ -18,13 +18,19 @@
 /// Available svg modifier:
 /// - `.k-TagButton__svg`
 ///
+/// Available withoutBorder modifier:
+/// - `.k-TagButton--withoutBorder`
+///
+/// Available navigationStates modifier:
+/// - `.k-TagButton--navigationStates`
+///
 /// @group buttons
 ///
 /// @example scss - Usage
 ///   @include k-TagButton;
 ///
 /// @example html
-///   <button class="k-TagButton k-TagButton--hydrogen">Tag</button>
+///   <button class="k-TagButton k-TagButton--tiny">Tag</button>
 ///
 /// @example html
 ///   <button class="k-TagButton k-TagButton--icon">
@@ -40,14 +46,14 @@
   $tag-button-size: 40px - ($border-size * 2);
   $tag-button-size-big: 50px - ($border-size * 2);
 
-  $tag-button-min-width:k-px-to-rem(60px);
+  $tag-button-min-width: k-px-to-rem(60px);
 
   $tag-button-line-height-tiny: k-px-to-rem($tag-button-size-tiny);
   $tag-button-line-height: k-px-to-rem($tag-button-size);
   $tag-button-line-height-big: k-px-to-rem($tag-button-size-big);
 
   // Deprecated
-  // $tag-button-min-width-big: 80px - ($border-size * 2);
+  $tag-button-min-width-big: 80px - ($border-size * 2);
   $tag-button-line-height-big: 50px - ($border-size * 2);
 
   // The tag button has a radius of 4px
@@ -74,7 +80,7 @@
   $background-color-active: map-get($k-colors,'primary-1');
 
 
-  // Nav TagButton
+  // NavigationStates TagButton
   // Base
   $color-nav: map-get($k-colors, 'font-1');
   $border-color-nav: map-get($k-colors, 'background-1');
@@ -135,22 +141,11 @@
     }
   }
 
-  // Size modifier.
-  .k-TagButton--tiny {
-    @include k-typographyFontSize($button-step, $tag-button-line-height-tiny);
-
-    min-height: $tag-button-line-height-tiny;
-  }
-
-  .k-TagButton--big {
-    @include k-typographyFontSize($button-step, $tag-button-line-height-big);
-
+  // NavigationStates modifier
+  .k-TagButton--navigationStates {
     color: $color-nav;
     background-color: $background-color-nav;
     border-color: $border-color-nav;
-    min-height: $tag-button-line-height-big;
-
-    // min-width: $tag-button-min-width-big;
 
     &:focus {
       color: $color-focus-nav;
@@ -172,6 +167,20 @@
     }
   }
 
+  // Size modifier.
+  .k-TagButton--tiny {
+    @include k-typographyFontSize($button-step, $tag-button-line-height-tiny);
+
+    min-height: $tag-button-line-height-tiny;
+  }
+
+  .k-TagButton--big {
+    @include k-typographyFontSize($button-step, $tag-button-line-height-big);
+
+    padding: 0 k-px-to-rem(30px);
+    min-height: $tag-button-line-height-big;
+  }
+
   // Icon modifier.
   .k-TagButton--icon {
     @include k-buttonColors('hydrogen', (svg: false));
@@ -182,12 +191,8 @@
     vertical-align: middle;
   }
 
-  // Nav TagButton Big
-  .k-TagButton--withoutBorder--big {
+  // withoutBorder modifier.
+  .k-TagButton--withoutBorder {
     border-color: $background-color;
-  }
-
-  .k-TagButton--padding--big {
-    padding: 0 k-px-to-rem(30px);
   }
 }

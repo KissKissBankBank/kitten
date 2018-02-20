@@ -75,13 +75,23 @@ describe('TagButton', () => {
       })
     })
 
+    describe('with navigationStates prop', () => {
+      const component = shallow(
+        <TagButton navigationStates />
+      )
+
+      it('renders ', () => {
+        expect(component.hasClass('k-TagButton--navigationStates')).toBe(true)
+      })
+    })
+
     describe('with withoutBorder prop', () => {
       const component = shallow(
         <TagButton withoutBorder />
       )
 
       it('renders ', () => {
-        expect(component.hasClass('k-TagButton--withoutBorder--big')).toBe(true)
+        expect(component.hasClass('k-TagButton--withoutBorder')).toBe(true)
       })
     })
   })
