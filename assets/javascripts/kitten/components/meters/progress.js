@@ -7,6 +7,7 @@ export class Progress extends Component {
       className,
       color,
       value,
+      rampProps,
       ...others,
     } = this.props
 
@@ -28,7 +29,7 @@ export class Progress extends Component {
         aria-valuemax="100"
         aria-valuenow={ this.props.value }
         className={ progressClassName }>
-        <div className="k-Progress__ramp">
+        <div className="k-Progress__ramp" { ...rampProps }>
           <div
             className="k-Progress__slider"
             style={ style }
@@ -43,4 +44,5 @@ Progress.defaultProps = {
   className: null,
   color: null,
   value: 50,
+  rampProps: {},
 }

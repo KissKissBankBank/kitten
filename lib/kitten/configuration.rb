@@ -183,6 +183,10 @@ module Kitten
             { path: 'components/cards/project-card', name: 'Project card' },
             { path: 'components/cards/article-card', name: 'Article card' },
             {
+              path: 'components/cards/crowdfunding-card',
+              name: 'Crowdfunding card',
+            },
+            {
               path: 'components/cards/project-similar-card',
               name: 'Project similar card',
             },

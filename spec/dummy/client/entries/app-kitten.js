@@ -41,6 +41,7 @@ import { KarlPaymentButtons } from 'kitten/karl/buttons/payment-button'
 
 // Cards
 import { ArticleCard } from 'kitten/components/cards/article-card'
+import { CrowdfundingCard } from 'kitten/components/cards/crowdfunding-card'
 import { ProjectCard } from 'kitten/components/cards/project-card'
 import { ProjectCreatorCard }
   from 'kitten/components/cards/project-creator-card'
@@ -343,6 +344,7 @@ ReactOnRails.register({
 
   // Cards
   ArticleCard,
+  CrowdfundingCard,
   ProjectCard,
   ProjectCreatorCard,
   ProjectSimilarCard,

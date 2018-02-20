@@ -10,7 +10,7 @@ export class Text extends Component {
       decoration,
       lineHeight,
       size,
-      style,
+      fontStyle,
       tag,
       transform,
       weight,
@@ -44,8 +44,8 @@ export class Text extends Component {
         'k-u-size-nano': size == 'nano',
 
         // Style.
-        'k-u-style-normal': style == 'normal',
-        'k-u-style-italic': style == 'italic',
+        'k-u-style-normal': fontStyle == 'normal',
+        'k-u-style-italic': fontStyle == 'italic',
 
         // Transform.
         'k-u-transform-uppercase': transform == 'uppercase',
@@ -76,7 +76,7 @@ Text.propTypes = {
   decoration: PropTypes.oneOf(['underline']),
   lineHeight: PropTypes.oneOf(['normal']),
   size: PropTypes.oneOf(['huge', 'big', 'default', 'tiny', 'micro', 'nano']),
-  style: PropTypes.oneOf(['normal', 'italic']),
+  fontStyle: PropTypes.oneOf(['normal', 'italic']),
   transform: PropTypes.oneOf(['uppercase']),
   weight: PropTypes.oneOf(['light', 'regular', 'bold']),
 }
@@ -87,7 +87,7 @@ Text.defaultProps = {
   decoration: null,
   lineHeight: null,
   size: null,
-  style: null,
+  fontStyle: null,
   tag: 'span',
   transform: null,
   weight: null,
