@@ -13,27 +13,27 @@ export const mediaQueries = (WrappedComponent, hocProps = {}) => (
 
       this.state = {}
 
-      if (this.mobileMediaQueryEnabled) {
+      if (this.mobileMediaQueryEnabled()) {
         this.mqMobile = createMatchMediaMax(SCREEN_SIZE_XS)
         this.state = { ...this.state, viewportIsMobile: false }
       }
 
-      if (this.tabletOrLessMediaQueryEnabled) {
+      if (this.tabletOrLessMediaQueryEnabled()) {
         this.mqTabletOrLess = createMatchMediaMax(SCREEN_SIZE_M)
         this.state = { ...this.state, viewportIsTabletOrLess: false }
       }
     }
 
     mobileMediaQueryEnabled = () => (
-      typeof(hocProps.mqMobile) !== 'undefined'
-        ? hocProps.mqMobile
-        : true
+      typeof(hocProps.viewportIsMobile) !== 'undefined'
+        ? hocProps.viewportIsMobile
+        : false
     )
 
     tabletOrLessMediaQueryEnabled = () => (
-      typeof(hocProps.mqTabletOrLess) !== 'undefined'
-        ? hocProps.mqTabletOrLess
-        : true
+      typeof(hocProps.viewportIsTabletOrLess) !== 'undefined'
+        ? hocProps.viewportIsTabletOrLess
+        : false
     )
 
     componentDidMount() {

@@ -333,4 +333,10 @@ CarouselBase.propTypes = {
   viewportIsMobile: PropTypes.bool.isRequired,
 }
 
-export const Carousel = mediaQueries(Radium(CarouselBase))
+export const Carousel = mediaQueries(
+  Radium(CarouselBase),
+  {
+    viewportIsMobile: true,
+    viewportIsTabletOrLess: true,
+  },
+)

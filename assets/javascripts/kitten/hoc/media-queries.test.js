@@ -39,7 +39,13 @@ describe('mediaQueries()', () => {
 
   describe('by default', () => {
     beforeEach(() => {
-      SimpleComponentWithMediaQueries = mediaQueries(SimpleComponent)
+      SimpleComponentWithMediaQueries = mediaQueries(
+        SimpleComponent,
+        {
+          viewportIsMobile: true,
+          viewportIsTabletOrLess: true,
+        },
+      )
       component = mount(<SimpleComponentWithMediaQueries />)
       componentSnapshot = renderer
         .create(<SimpleComponentWithMediaQueries />)
@@ -50,7 +56,7 @@ describe('mediaQueries()', () => {
       expect(componentSnapshot).toMatchSnapshot()
     })
 
-    it('push media queries props to wrapped component', () => {
+    it('pushes media queries props to wrapped component', () => {
       const wrappedComponent = component.find(SimpleComponent).first()
 
       expect(wrappedComponent.prop('viewportIsMobile')).toBeFalsy()
@@ -70,14 +76,19 @@ describe('mediaQueries()', () => {
   describe('with tablet or less version', () => {
     beforeEach(() => {
       window.matchMedia = createMockMediaMatcher(true)
-
+      SimpleComponentWithMediaQueries = mediaQueries(
+        SimpleComponent,
+        {
+          viewportIsTabletOrLess: true,
+        },
+      )
       component = mount(<SimpleComponentWithMediaQueries />)
     })
 
-    it('push media queries props to wrapped component', () => {
+    it('pushes media queries props to wrapped component', () => {
       const wrappedComponent = component.find(SimpleComponent).first()
 
-      expect(wrappedComponent.prop('viewportIsMobile')).toBeTruthy()
+      expect(wrappedComponent.prop('viewportIsMobile')).toBeFalsy()
       expect(wrappedComponent.prop('viewportIsTabletOrLess')).toBeTruthy()
     })
   })
