@@ -11,46 +11,49 @@ export const mediaQueries = (WrappedComponent, hocProps = {}) => (
     constructor(props) {
       super(props)
 
-      this.state = {
-        mqMobile: typeof(hocProps.mqMobile) !== 'undefined'
-          ? hocProps.mqMobile
-          : true,
-        mqTabletOrLess: typeof(hocProps.mqTabletOrLess) !== 'undefined'
-          ? hocProps.mqMobile
-          : true,
-      }
-    }
+      this.state = {}
 
-    componentWillMount() {
-      if (this.state.mqMobile) {
+      if (this.mobileMediaQueryEnabled) {
         this.mqMobile = createMatchMediaMax(SCREEN_SIZE_XS)
-        this.setState({ viewportIsMobile: false })
+        this.state = { ...this.state, viewportIsMobile: false }
       }
 
-      if (this.state.mqTabletOrLess) {
+      if (this.tabletOrLessMediaQueryEnabled) {
         this.mqTabletOrLess = createMatchMediaMax(SCREEN_SIZE_M)
-        this.setState({ viewportIsTabletOrLess: false })
+        this.state = { ...this.state, viewportIsTabletOrLess: false }
       }
     }
+
+    mobileMediaQueryEnabled = () => (
+      typeof(hocProps.mqMobile) !== 'undefined'
+        ? hocProps.mqMobile
+        : true
+    )
+
+    tabletOrLessMediaQueryEnabled = () => (
+      typeof(hocProps.mqTabletOrLess) !== 'undefined'
+        ? hocProps.mqTabletOrLess
+        : true
+    )
 
     componentDidMount() {
-      if (this.state.mqMobile && this.mqMobile) {
+      if (this.mqMobile) {
         this.mqMobile.addListener(this.onMobileMQ)
         this.onMobileMQ(this.mqMobile)
       }
 
-      if (this.state.mqTabletOrLess && this.mqTabletOrLess) {
+      if (this.mqTabletOrLess) {
         this.mqTabletOrLess.addListener(this.onTabletMQ)
         this.onTabletMQ(this.mqTabletOrLess)
       }
     }
 
     componentWillUnmount() {
-      if (this.state.mqMobile && this.mqMobile) {
+      if (this.mqMobile) {
         this.mqMobile.removeListener(this.onMobileMQ)
       }
 
-      if (this.state.mqTabletOrLess && this.mqTabletOrLess) {
+      if (this.mqTabletOrLess) {
         this.mqTabletOrLess.removeListener(this.onTabletMQ)
       }
     }
