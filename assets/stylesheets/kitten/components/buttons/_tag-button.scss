@@ -19,16 +19,13 @@
 /// Available svg modifier:
 /// - `.k-TagButton__svg`
 ///
-/// Available withoutBorder modifier:
-/// - `.k-TagButton--withoutBorder`
-///
 /// @group buttons
 ///
 /// @example scss - Usage
 ///   @include k-TagButton;
 ///
 /// @example html
-///   <button class="k-TagButton k-TagButton--tiny">Tag</button>
+///   <button class="k-TagButton k-TagButton--mercure">Tag</button>
 ///
 /// @example html
 ///   <button class="k-TagButton k-TagButton--icon">
