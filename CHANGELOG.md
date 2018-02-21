@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `modifier` props on `TagButton` component.
+- Feature: Add `modifier` prop on `TagButton` component.
 
 ## [19.5.0] - 2018-02-13
 
