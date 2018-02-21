@@ -329,6 +329,8 @@ CarouselBase.propTypes = {
   itemMinWidth: PropTypes.number.isRequired,
   baseItemMarginBetween: PropTypes.number.isRequired,
   renderItem: PropTypes.func.isRequired,
+  viewportIsTabletOrLess: PropTypes.bool.isRequired,
+  viewportIsMobile: PropTypes.bool.isRequired,
 }
 
 export const Carousel = mediaQueries(Radium(CarouselBase))
