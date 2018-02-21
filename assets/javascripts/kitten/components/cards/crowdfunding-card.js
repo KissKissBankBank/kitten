@@ -49,7 +49,10 @@ class CrowdfundingCardComponent extends Component {
           { this.renderImage() }
           { this.renderHeader() }
 
-          <Marger bottom="2" style={ titlesMinHeight && styles.titles }>
+          <Marger
+            bottom="2"
+            style={ titlesMinHeight && styles.titles }
+          >
             { this.renderTitle() }
             { this.renderSubtitle() }
           </Marger>
