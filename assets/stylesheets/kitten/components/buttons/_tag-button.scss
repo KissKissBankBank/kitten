@@ -6,8 +6,8 @@
 /// It is computed automatically with these 2 values.
 ///
 /// Available color modifier:
-/// - `.k-TagButton--mercure`
-/// - `.k-TagButton--venus`
+/// - `.k-TagButton--helium`
+/// - `.k-TagButton--carbon`
 ///
 /// Available size modifier:
 /// - `.k-TagButton--tiny`
@@ -25,7 +25,7 @@
 ///   @include k-TagButton;
 ///
 /// @example html
-///   <button class="k-TagButton k-TagButton--mercure">Tag</button>
+///   <button class="k-TagButton k-TagButton--helium">Tag</button>
 ///
 /// @example html
 ///   <button class="k-TagButton k-TagButton--icon">
@@ -47,7 +47,6 @@
   $tag-button-line-height: k-px-to-rem($tag-button-size);
   $tag-button-line-height-big: k-px-to-rem($tag-button-size-big);
 
-  // Deprecated
   $tag-button-min-width-big: 80px - ($border-size * 2);
   $tag-button-line-height-big: 50px - ($border-size * 2);
 
@@ -97,6 +96,7 @@
     );
 
     padding: 0 k-px-to-rem(30px);
+    min-width: $tag-button-min-width-big;
     min-height: $tag-button-line-height-big;
   }
 
