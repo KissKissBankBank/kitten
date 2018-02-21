@@ -78,10 +78,10 @@ describe('TagButton', () => {
     describe('modifier prop', () => {
       it('adds a class to the component', () => {
         const component = shallow(
-          <TagButton modifier="mercure" />
+          <TagButton modifier="helium" />
         )
 
-        expect(component.hasClass('k-TagButton--mercure')).toBe(true)
+        expect(component.hasClass('k-TagButton--helium')).toBe(true)
       })
     })
   })
