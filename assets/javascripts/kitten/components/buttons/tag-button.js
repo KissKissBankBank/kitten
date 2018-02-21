@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import classNames from 'classnames'
+import PropTypes from 'prop-types'
 
 export class TagButton extends Component {
   render() {
@@ -38,6 +39,10 @@ export class TagButton extends Component {
       </Tag>
     )
   }
+}
+
+TagButton.propTypes = {
+  modifier: PropTypes.oneOf(['helium', 'carbon']),
 }
 
 TagButton.defaultProps = {
