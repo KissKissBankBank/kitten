@@ -1,143 +1,51 @@
 import React from 'react'
+import renderer from 'react-test-renderer'
 import { ArticleCard } from 'kitten/components/cards/article-card'
-import { Title } from 'kitten/components/typography/title'
-import { Text } from 'kitten/components/typography/text'
-import { HorizontalStroke } from 'kitten/components/layout/horizontal-stroke'
-import { ButtonImage } from 'kitten/components/buttons/button-image'
 
 describe('<ArticleCard />', () => {
   let component
-  let buttonImage
-  let cardImage
-  let title
 
   describe('by default', () => {
     beforeEach(() => {
-      component = mount(<ArticleCard />)
+      component = renderer.create(
+        <ArticleCard />
+      ).toJSON()
     })
 
-    it('is a <div />', () => {
-      expect(component.render().is('div')).toBe(true)
-    })
-
-    it('has an image container', () => {
-      expect(component.find('.k-Card__imageContainer').exists()).toBe(true)
-    })
-
-    it('has a <img /> with good class', () => {
-      expect(component.find('img').exists()).toBe(true)
-      expect(component.find('.k-Card__image').exists()).toBe(true)
-    })
-
-    it('has a <ButtonImage /> component', () => {
-      expect(component.find(ButtonImage)).toHaveLength(1)
-    })
-
-    it('has not a <Title /> component', () => {
-      expect(component.find(Title)).toHaveLength(1)
-    })
-
-    it('has 2 <Text /> components', () => {
-      expect(component.find(Text)).toHaveLength(2)
-    })
-
-    it('has <HorizontalStroke /> component', () => {
-      expect(component.find(HorizontalStroke)).toHaveLength(1)
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
     })
   })
 
-  describe('with href prop', () => {
+  describe('with articleTitle and articleSubTitle props', () => {
     beforeEach(() => {
-      component = mount(<ArticleCard href="#" />)
-    })
-
-    it('is a <a />', () => {
-      expect(component.render().is('a')).toBe(true)
-    })
-
-    it('has a href attribute', () => {
-      expect(component.props().href).toBe('#')
-    })
-  })
-
-  describe('with image props', () => {
-    beforeEach(() => {
-      component = mount(
+      component = renderer.create(
         <ArticleCard
-          imageProps={ {
-            src: '#foobar',
-            alt: 'FooBar',
-            style: {
-              cursor: 'crosshair',
-            },
-          } }
+          articleTitle="Custom title"
+          articleSubTitle="Custom subtitle"
         />
-      )
-
-      cardImage = component.find('.k-Card__image')
+      ).toJSON()
     })
 
-    it('has an image with `#` src', () => {
-      expect(cardImage.props().src).toBe('#foobar')
-    })
-
-    it('has an image with alt description', () => {
-      expect(cardImage.props().alt).toBe('FooBar')
-    })
-
-    it('has an image with a custom style', () => {
-      expect(cardImage.props().style).toMatchObject({ cursor: 'crosshair' })
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
     })
   })
 
-  describe('with avatar props', () => {
+  describe('with ignored props', () => {
     beforeEach(() => {
-      component = mount(
+      component = renderer.create(
         <ArticleCard
-          avatarProps={ {
-            src: '#foobar',
-            alt: 'FooBar',
-            style: {
-              cursor: 'crosshair',
-            },
-          } }
+          info1="Custom information #1"
+          progress="42"
+          state="Custom state"
+          titlesMinHeight
         />
-      )
-
-      buttonImage = component.find(ButtonImage).first()
+      ).toJSON()
     })
 
-    it('has good props on <ButtonImage />', () => {
-      expect(buttonImage.props().img).toMatchObject({
-        src: '#foobar',
-        alt: 'FooBar',
-        style: {
-          cursor: 'crosshair',
-        },
-      })
-    })
-  })
-
-  describe('with title props', () => {
-    beforeEach(() => {
-      component = mount(
-        <ArticleCard
-          titleProps={{
-            tag: 'h2',
-            className: 'custom-class',
-          }}
-        />
-      )
-
-      title = component.find(Title).first()
-    })
-
-    it('has a title with h2 tag', () => {
-      expect(title.props().tag).toBe('h2')
-    })
-
-    it('has a custom class on Title', () => {
-      expect(title.hasClass('custom-class')).toBe(true)
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
     })
   })
 })
