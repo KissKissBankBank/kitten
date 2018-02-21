@@ -17,7 +17,7 @@
   $options: map-merge((base: true, svg: true), $options);
 
   $colors: (
-    'mercure': (
+    'helium': (
       base: (
         color: map-get($k-colors,'font-1'),
         border-color: map-get($k-colors,'line-1'),
@@ -50,7 +50,7 @@
       ),
     ),
 
-    'venus': (
+    'carbon': (
       base: (
         color-nav: map-get($k-colors, 'font-1'),
         border-color: map-get($k-colors, 'background-1'),
@@ -88,9 +88,5 @@
 
   @if map-get($options, 'base') {
     @include k-buttonColorBase($colorByModifier);
-  }
-
-  @if map-get($options, 'svg') {
-    @include k-buttonSvg($colorByModifier);
   }
 }

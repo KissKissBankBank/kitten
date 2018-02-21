@@ -72,12 +72,12 @@
   }
 
   // Colors modifiers.
-  .k-TagButton--mercure {
-    @include k-tagButtonColors('mercure');
+  .k-TagButton--helium {
+    @include k-tagButtonColors('helium');
   }
 
-  .k-TagButton--venus {
-    @include k-tagButtonColors('venus');
+  .k-TagButton--carbon {
+    @include k-tagButtonColors('carbon');
   }
 
   // Size modifier.

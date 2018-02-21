@@ -43,7 +43,7 @@ export class TagButton extends Component {
 TagButton.defaultProps = {
   tag: 'button',
   children: 'Tag',
-  modifier: 'mercure',
+  modifier: 'helium',
   icon: false,
   tiny: false,
   big: false,
