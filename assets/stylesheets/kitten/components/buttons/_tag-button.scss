@@ -6,7 +6,8 @@
 /// It is computed automatically with these 2 values.
 ///
 /// Available color modifier:
-/// - `.k-ButtonIcon--hydrogen`
+/// - `.k-TagButton--mercure`
+/// - `.k-TagButton--venus`
 ///
 /// Available size modifier:
 /// - `.k-TagButton--tiny`
@@ -20,9 +21,6 @@
 ///
 /// Available withoutBorder modifier:
 /// - `.k-TagButton--withoutBorder`
-///
-/// Available navigationStates modifier:
-/// - `.k-TagButton--navigationStates`
 ///
 /// @group buttons
 ///
@@ -59,48 +57,6 @@
   // The tag button has a radius of 4px
   $tag-button-radius: k-px-to-rem(4px);
 
-  // Base
-  $color: map-get($k-colors,'font-1');
-  $border-color: map-get($k-colors,'line-1');
-  $background-color: map-get($k-colors,'background-1');
-
-  // Focus
-  $color-focus: map-get($k-colors,'primary-1');
-  $border-color-focus: map-get($k-colors,'primary-1');
-  $background-color-focus: map-get($k-colors,'background-1');
-
-  // Hover
-  $color-hover: map-get($k-colors,'primary-1');
-  $border-color-hover: map-get($k-colors,'primary-1');
-  $background-color-hover: map-get($k-colors,'background-1');
-
-  // Active and `is-selected`
-  $color-active: map-get($k-colors,'background-1');
-  $border-color-active: map-get($k-colors,'primary-1');
-  $background-color-active: map-get($k-colors,'primary-1');
-
-
-  // NavigationStates TagButton
-  // Base
-  $color-nav: map-get($k-colors, 'font-1');
-  $border-color-nav: map-get($k-colors, 'background-1');
-  $background-color-nav: map-get($k-colors, 'background-1');
-
-  // Focus
-  $color-focus-nav: map-get($k-colors, 'background-1');
-  $border-color-focus-nav: map-get($k-colors, 'primary-1');
-  $background-color-focus-nav: map-get($k-colors, 'primary-1');
-
-  // Active
-  $color-active-nav: map-get($k-colors, 'background-1');
-  $border-color-active-nav: map-get($k-colors, 'primary-1');
-  $background-color-active-nav: map-get($k-colors, 'primary-1');
-
-  // Hover
-  $color-hover-nav: map-get($k-colors, 'primary-1');
-  $border-color-hover-nav: map-get($k-colors, 'background-1');
-  $background-color-hover-nav: map-get($k-colors, 'background-1');
-
   // Button font-size is computed using a modular scale and a defined step of
   // this scale.
   $button-step: -2; // 12px
@@ -116,66 +72,32 @@
     border-radius: $tag-button-radius;
     min-height: $tag-button-line-height;
     min-width: $tag-button-min-width;
-
-    color: $color;
-    background-color: $background-color;
-    border-color: $border-color;
-
-    &:focus {
-      color: $color-focus;
-      background-color: $background-color-focus;
-      border-color: $border-color-focus;
-    }
-
-    &:hover {
-      color: $color-hover;
-      background-color: $background-color-hover;
-      border-color: $border-color-hover;
-    }
-
-    &:active,
-    &.is-selected {
-      color: $color-active;
-      background-color: $background-color-active;
-      border-color: $border-color-active;
-    }
   }
 
-  // NavigationStates modifier
-  .k-TagButton--navigationStates {
-    color: $color-nav;
-    background-color: $background-color-nav;
-    border-color: $border-color-nav;
+  // Colors modifiers.
+  .k-TagButton--mercure {
+    @include k-tagButtonColors('mercure');
+  }
 
-    &:focus {
-      color: $color-focus-nav;
-      background-color: $background-color-focus-nav;
-      border-color: $border-color-focus-nav;
-    }
-
-    &:hover {
-      color: $color-hover-nav;
-      background-color: $background-color-hover-nav;
-      border-color: $border-color-hover-nav;
-    }
-
-    &:active,
-    &.is-selected {
-      color: $color-active-nav;
-      background-color: $background-color-active-nav;
-      border-color: $border-color-active-nav;
-    }
+  .k-TagButton--venus {
+    @include k-tagButtonColors('venus');
   }
 
   // Size modifier.
   .k-TagButton--tiny {
-    @include k-typographyFontSize($button-step, $tag-button-line-height-tiny);
+    @include k-typographyFontSize(
+      $button-step,
+      $tag-button-line-height-tiny
+    );
 
     min-height: $tag-button-line-height-tiny;
   }
 
   .k-TagButton--big {
-    @include k-typographyFontSize($button-step, $tag-button-line-height-big);
+    @include k-typographyFontSize(
+      $button-step,
+      $tag-button-line-height-big
+    );
 
     padding: 0 k-px-to-rem(30px);
     min-height: $tag-button-line-height-big;
@@ -189,10 +111,5 @@
   // svg modifier.
   .k-TagButton__icon {
     vertical-align: middle;
-  }
-
-  // withoutBorder modifier.
-  .k-TagButton--withoutBorder {
-    border-color: $background-color;
   }
 }
