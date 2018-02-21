@@ -6,7 +6,9 @@ import {
   Grid as GridBase,
   GridCol as GridColBase,
 } from 'kitten/components/grid/grid'
-import { TextInputWithButton } from 'kitten/components/form/text-input-with-button'
+import {
+  TextInputWithButton as TextInputWithButtonBase
+} from 'kitten/components/form/text-input-with-button'
 import { Paragraph  as ParagraphBase } from 'kitten/components/typography/paragraph'
 import { Text } from 'kitten/components/typography/text'
 import {
@@ -33,6 +35,7 @@ const Paragraph = Radium(ParagraphBase)
 const FacebookButtonIcon = Radium(FacebookButtonIconBase)
 const TwitterButtonIcon = Radium(TwitterButtonIconBase)
 const KissKissBankBankLogo = Radium(KissKissBankBankLogoBase)
+const TextInputWithButton = Radium(TextInputWithButtonBase)
 
 export class KarlFooterKisskiss extends Component {
   constructor(props, context) {
@@ -94,42 +97,34 @@ export class KarlFooterKisskiss extends Component {
             <Marger top="3" bottom="3">
               <Grid>
                 <GridCol
-                  col-m="12"
-                  col-l="4"
-                  style={ styles.network.subscribe.label }
+                  col-l="12"
+                  offset-l="0"
+                  col-m="6"
+                  offset-m="3"
+                  col-s="10"
+                  offset-s="1"
+                  style={ styles.network.subscribe }
                 >
-                  <Text
-                    size="tiny"
-                    weight="regular"
-                    htmlFor="subscribe"
-                    tag="label"
-                  >
-                    { parseHtml(subscribeLabel) }
-                  </Text>
-                </GridCol>
-
-                <GridCol
-                  col-m="12"
-                  col-l="6"
-                  style={ styles.network.subscribe.form }
-                >
-                  <Grid>
-                    <GridCol
-                      col="10"
-                      col-m="6"
-                      col-l="12"
-                      offset="1"
-                      offset-m="3"
-                      offset-l="0"
+                  <div style={ styles.network.subscribe.label }>
+                    <Text
+                      size="tiny"
+                      weight="regular"
+                      htmlFor="subscribe"
+                      tag="label"
                     >
-                      <TextInputWithButton
-                        textInputProps={
-                          { ...textInputProps, id: "subscribe" }
-                        }
-                        value={ newsletterSubmitValue }
-                      />
-                    </GridCol>
-                  </Grid>
+                      { parseHtml(subscribeLabel) }
+                    </Text>
+                  </div>
+
+                  <div style={ styles.network.subscribe.form }>
+                    <TextInputWithButton
+                      textInputProps={
+                        { ...textInputProps, id: "subscribe" }
+                      }
+                      value={ newsletterSubmitValue }
+                      style={ styles.network.subscribe.form.textInput }
+                    />
+                  </div>
                 </GridCol>
               </Grid>
             </Marger>
@@ -144,7 +139,6 @@ export class KarlFooterKisskiss extends Component {
               <Text
                 size="tiny"
                 weight="regular"
-                tag="p"
               >
                 { parseHtml(socialText) }
               </Text>
@@ -398,17 +392,32 @@ const styles = {
     },
 
     subscribe: {
+      alignSelf: 'center',
+      [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
+        display: 'flex',
+        justifyContent: 'flex-end',
+      },
+
       label: {
-        alignSelf: 'center',
-        pointerEvents: 'auto',
-        [`@media (max-width: ${ScreenConfig['M'].max}px)`]: {
-          textAlign: 'center',
+        textAlign: 'center',
+        [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
+          alignSelf: 'center',
+          pointerEvents: 'auto',
+          marginRight: '15px',
         },
       },
 
       form: {
+        textAlign: 'center',
+        flex: '1',
         [`@media (max-width: ${ScreenConfig['M'].max}px)`]: {
           marginTop: '10px',
+        },
+
+        textInput: {
+          [`@media (min-width: ${ScreenConfig['L'].min}px)`] : {
+            maxWidth: '450px',
+          },
         },
       },
     },
