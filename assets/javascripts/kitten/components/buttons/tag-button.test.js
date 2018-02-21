@@ -75,23 +75,13 @@ describe('TagButton', () => {
       })
     })
 
-    describe('with navigationStates prop', () => {
-      const component = shallow(
-        <TagButton navigationStates />
-      )
+    describe('modifier prop', () => {
+      it('adds a class to the component', () => {
+        const component = shallow(
+          <TagButton modifier="mercure" />
+        )
 
-      it('renders ', () => {
-        expect(component.hasClass('k-TagButton--navigationStates')).toBe(true)
-      })
-    })
-
-    describe('with withoutBorder prop', () => {
-      const component = shallow(
-        <TagButton withoutBorder />
-      )
-
-      it('renders ', () => {
-        expect(component.hasClass('k-TagButton--withoutBorder')).toBe(true)
+        expect(component.hasClass('k-TagButton--mercure')).toBe(true)
       })
     })
   })
