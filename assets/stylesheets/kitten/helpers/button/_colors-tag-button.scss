@@ -13,8 +13,7 @@
 ///   color: #fff;
 ///   …
 
-@mixin k-tagButtonColors($modifier, $options: ()) {
-  $options: map-merge((base: true, svg: true), $options);
+@mixin k-tagButtonColors($modifier) {
 
   $colors: (
     'helium': (
@@ -85,8 +84,5 @@
   );
 
   $colorByModifier: map-get($colors, $modifier);
-
-  @if map-get($options, 'base') {
-    @include k-buttonColorBase($colorByModifier);
-  }
+  @include k-buttonColorBase($colorByModifier);
 }
