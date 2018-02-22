@@ -83,6 +83,10 @@ module Kitten
               path: 'components/buttons/button-with-badge',
               name: 'Button with badge',
             },
+            {
+              path: 'components/icons/filter-icon',
+              name: 'Filter',
+            },
           ],
         },
         {

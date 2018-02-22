@@ -162,6 +162,7 @@ import { TypologyTagIcon } from 'kitten/components/icons/typology-tag-icon'
 import { TwitterIcon } from 'kitten/components/icons/twitter-icon'
 import { VisaIcon } from 'kitten/components/icons/visa-icon'
 import { WarningCircleIcon } from 'kitten/components/icons/warning-circle-icon'
+import { FilterIcon } from 'kitten/components/icons/filter-icon'
 
 // Illustrations
 import { LinkBoxIllustration }
@@ -444,6 +445,7 @@ ReactOnRails.register({
   TwitterIcon,
   VisaIcon,
   WarningCircleIcon,
+  FilterIcon,
 
   // Illustrations
   LinkBoxIllustration,
