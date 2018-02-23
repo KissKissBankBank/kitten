@@ -1,5 +1,7 @@
 <%= example 'Pagination' do %>
   <%= react_component 'Pagination', props: {
     prevProps: { disabled: true },
+    activeProps: { active: true },
+    currentPage: '3',
   } %>
 <% end %>

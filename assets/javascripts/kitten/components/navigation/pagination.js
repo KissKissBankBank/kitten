@@ -21,10 +21,46 @@ class PaginationBase extends Component {
     )
   }
 
+  constructor(props) {
+    super(props)
+    this.renderPaginationItem = this.renderPaginationItem.bind(this)
+  }
+
+  renderPaginationItem(pagination) {
+    const isCurrentPage = pagination == this.props.currentPage
+
+    const styleButtonIcon = [
+      styles.group.list.buttonIcon,
+      isCurrentPage && styles.group.list.buttonIcon.isActive,
+    ]
+
+    return(
+      <li
+        style={ styles.group.list }
+        key={ `item-${pagination}` }
+      >
+        <a
+          href="#"
+          key={ `link-${pagination}` }
+          style={ styleButtonIcon }
+          aria-label={ `Aller à la page ${pagination}` }
+        >
+          <Text
+            weight="regular"
+            size="tiny"
+          >
+            { pagination }
+          </Text>
+        </a>
+      </li>
+    )
+  }
+
   renderList() {
     const {
       pagination,
-      pages
+      pages,
+      currentPage
     } = this.props
 
     return (
@@ -32,26 +68,7 @@ class PaginationBase extends Component {
         <ul style={ styles.group }>
           { this.renderArrowButton('left') }
           {
-            pages.map(pagination =>
-              <li
-                style={ styles.group.list }
-                key={ `item-${pagination}` }
-              >
-                <a
-                  href="#"
-                  key={ `link-${pagination}` }
-                  style={ styles.group.list.buttonIcon }
-                  aria-label={ `Aller à la page ${pagination}` }
-                >
-                  <Text
-                    weight="regular"
-                    size="tiny"
-                  >
-                    { pagination }
-                  </Text>
-                </a>
-              </li>
-            )
+            pages.map(this.renderPaginationItem)
           }
           { this.renderThreePoints() }
           { this.renderArrowButton('right') }
@@ -178,8 +195,6 @@ const styles = {
 
       points: {
         listStyle: 'none',
-        marginLeft: 0,
-        marginRight: 0,
         textDecoration: 'none',
         alignSelf: 'center',
         marginLeft: '14px',
@@ -217,6 +232,12 @@ const styles = {
           width: '50px',
           height: '50px',
           borderWidth: '2px',
+        },
+
+        isActive: {
+          backgroundColor: `${COLORS.primary1}`,
+          borderColor: `${COLORS.primary1}`,
+          color: `${COLORS.background1}`,
         },
 
         isDisabled: {
