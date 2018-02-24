@@ -39,8 +39,8 @@ export function pages(min, max, page, size) {
 
 class PaginationBase extends Component {
   render() {
-    const { totalPages, currentPage } = this.props
-    const pageNumbers = pages(1, totalPages, currentPage, 7)
+    const { totalPages, currentPage, size } = this.props
+    const pageNumbers = pages(1, totalPages, currentPage, size)
 
     return (
       <nav role="navigation" aria-label={ this.props['aria-label'] }>
@@ -295,6 +295,8 @@ PaginationBase.propTypes = {
   goToPageHref: PropTypes.func,
   totalPages: PropTypes.number,
   currentPage: PropTypes.number,
+  size: PropTypes.oneOf([5, 7]),
+  'aria-label': PropTypes.string,
 }
 
 PaginationBase.defaultProps = {
@@ -304,6 +306,7 @@ PaginationBase.defaultProps = {
   goToPageHref: n => `#${n}`,
   currentPage: 1,
   totalPages: 1,
+  size: 7,
   'aria-label': 'Pagination navigation',
 }
 

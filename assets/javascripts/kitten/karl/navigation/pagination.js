@@ -64,5 +64,35 @@ export const KarlPaginationExamples = () => (
       totalPages={ 42 }
       currentPage={ 42 }
     />
+    <Pagination
+      totalPages={ 42 }
+      currentPage={ 1 }
+      size={ 5 }
+    />
+    <Pagination
+      totalPages={ 42 }
+      currentPage={ 2 }
+      size={ 5 }
+    />
+    <Pagination
+      totalPages={ 42 }
+      currentPage={ 3 }
+      size={ 5 }
+    />
+    <Pagination
+      totalPages={ 42 }
+      currentPage={ 40 }
+      size={ 5 }
+    />
+    <Pagination
+      totalPages={ 42 }
+      currentPage={ 41 }
+      size={ 5 }
+    />
+    <Pagination
+      totalPages={ 42 }
+      currentPage={ 42 }
+      size={ 5 }
+    />
   </Row>
 )
