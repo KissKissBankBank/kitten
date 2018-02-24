@@ -20,19 +20,19 @@ const range = (start, end) => {
 // Returns an array of page numbers and breaks "…" (as nulls) as a pagination
 // that fits in the given array size given the current page number.
 export function pages(min, max, page, size) {
-  // 1, [2], 3
+  // 1, 2, 3
   if (max - min < size)
     return range(min, max)
 
-  // 1, [2], 3, …, 42
+  // 1, 2, 3, …, 42
   if (page - min + 1 < size - 2)
     return [...range(min, min - 1 + size - 2), null, max]
 
-  // 1, …, 40, [41], 42
+  // 1, …, 40, 41, 42
   if (max - page < size - 2)
     return [min, null, ...range(max + 1 - (size - 2), max)]
 
-  // 1, …, [21], …, 42
+  // 1, …, 21, …, 42
   const sides = Math.floor((size - 4) / 2)
   return [min, null, ...range(page - sides, page + sides), null, max]
 }
@@ -42,9 +42,8 @@ class PaginationBase extends Component {
     const { totalPages, currentPage } = this.props
     const pageNumbers = pages(1, totalPages, currentPage, 7)
 
-    // TODO: add prop for aria-label
     return (
-      <nav role="navigation" aria-label="Navigation par pagination">
+      <nav role="navigation" aria-label={ this.props['aria-label'] }>
         <ul style={ styles.group }>
           { this.renderArrowButton('left') }
           { pageNumbers.map(this.renderPage) }
@@ -63,19 +62,17 @@ class PaginationBase extends Component {
         styles.group.list.buttonIcon.isActive,
     ]
 
-    // TODO: Use prop to translate "Aller à la page …"
-    // TODO: Use prop to pass through "href"
-    // TODO: Use prop to allow NavLinks or to handle onClick
+    // TODO: Allow NavLinks or onClicks
     return (
       <li
         style={ styles.group.list }
-        key={ `item-${number}` }
+        key={ `page-${number}` }
       >
         <a
-          href="#"
+          href={ this.props.goToPageHref(number) }
           key={ `link-${number}` }
           style={ styleButtonIcon }
-          aria-label={ `Aller à la page ${number}` }
+          aria-label={ this.props.goToPageLabel(number) }
         >
           <Text
             weight="regular"
@@ -101,15 +98,15 @@ class PaginationBase extends Component {
 
   renderArrowButton(direction) {
     const {
-      arrowButtonPrev,
-      arrowButtonNext,
+      prevButtonLabel,
+      nextButtonLabel,
       currentPage,
       totalPages,
     } = this.props
 
-    const ariaLabel = direction == 'left'
-      ? parseHtml(arrowButtonPrev)
-      : parseHtml(arrowButtonNext)
+    const buttonLabel = direction == 'left'
+      ? parseHtml(prevButtonLabel)
+      : parseHtml(nextButtonLabel)
 
     const disabled = direction == 'left'
       ? currentPage == 1
@@ -139,13 +136,19 @@ class PaginationBase extends Component {
       (linkIsActived && !disabled) && styles.group.list.buttonIcon.svg.active,
     ]
 
+    const number = direction == 'left'
+      ? (currentPage == 1 ? 1 : currentPage - 1)
+      : (currentPage == totalPages ? totalPages : currentPage + 1)
+
+    // TODO: Allow NavLinks or onClicks
     return (
       <li style={ styleList }>
         <a
-          href="#"
+          href={ this.props.goToPageHref(number) }
           key={ `link-${direction}` }
           style={ styleButtonIcon }
-          aria-label={ `Aller à la page ${ariaLabel}` }
+          aria-label={ buttonLabel }
+          title={ buttonLabel }
         >
           <ArrowIcon
             direction={ direction }
@@ -286,15 +289,22 @@ const styles = {
 }
 
 PaginationBase.propTypes = {
-  direction: PropTypes.oneOf(['left', 'right']),
+  prevButtonLabel: PropTypes.string,
+  nextButtonLabel: PropTypes.string,
+  goToPageLabel: PropTypes.func,
+  goToPageHref: PropTypes.func,
+  totalPages: PropTypes.number,
+  currentPage: PropTypes.number,
 }
 
 PaginationBase.defaultProps = {
-  // TODO: Explain that it is a label
-  arrowButtonPrev: 'précédente',
-  arrowButtonNext: 'suivante',
-  totalPages: 1,
+  prevButtonLabel: 'Previous page',
+  nextButtonLabel: 'Next page',
+  goToPageLabel: n => `Go to page ${n}`,
+  goToPageHref: n => `#${n}`,
   currentPage: 1,
+  totalPages: 1,
+  'aria-label': 'Pagination navigation',
 }
 
 const PaginationRadium = Radium(PaginationBase)

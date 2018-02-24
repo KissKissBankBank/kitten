@@ -17,6 +17,10 @@ export const KarlPaginationExamples = () => (
       currentPage={ 2 }
     />
     <Pagination
+      totalPages={ 7 }
+      currentPage={ 1 }
+    />
+    <Pagination
       totalPages={ 42 }
       currentPage={ 1 }
     />

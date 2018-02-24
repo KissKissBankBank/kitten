@@ -5,7 +5,7 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
   data-radium={true}
 >
   <nav
-    aria-label="Navigation par pagination"
+    aria-label="Pagination navigation"
     data-radium={true}
     role="navigation"
   >
@@ -29,10 +29,10 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
         }
       >
         <a
-          aria-label="Aller à la page précédente"
+          aria-label="Previous page"
           className="rmq-e4506d25"
           data-radium={true}
-          href="#"
+          href="#1"
           onBlur={[Function]}
           onFocus={[Function]}
           onKeyDown={[Function]}
@@ -59,6 +59,7 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
               "width": "40px",
             }
           }
+          title="Previous page"
         >
           <svg
             className="k-ArrowIcon--left k-ArrowIcon--disabled"
@@ -96,10 +97,10 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
         }
       >
         <a
-          aria-label="Aller à la page 1"
+          aria-label="Go to page 1"
           className="rmq-e4506d25"
           data-radium={true}
-          href="#"
+          href="#1"
           onBlur={[Function]}
           onFocus={[Function]}
           onKeyDown={[Function]}
@@ -145,10 +146,10 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
         }
       >
         <a
-          aria-label="Aller à la page suivante"
+          aria-label="Next page"
           className="rmq-e4506d25"
           data-radium={true}
-          href="#"
+          href="#1"
           onBlur={[Function]}
           onFocus={[Function]}
           onKeyDown={[Function]}
@@ -175,6 +176,7 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
               "width": "40px",
             }
           }
+          title="Next page"
         >
           <svg
             className="k-ArrowIcon--right k-ArrowIcon--disabled"
