@@ -53,13 +53,16 @@ class PaginationBase extends Component {
     )
   }
 
+  preventClickDefault = e => e.preventDefault()
+
   renderPage = (number, index) => {
     if (!number) return this.renderSpacer(index)
 
+    const isActive = number == this.props.currentPage
+
     const styleButtonIcon = [
       styles.group.list.buttonIcon,
-      number == this.props.currentPage &&
-        styles.group.list.buttonIcon.isActive,
+      isActive && styles.group.list.buttonIcon.isActive,
     ]
 
     // TODO: Allow NavLinks or onClicks
@@ -73,6 +76,8 @@ class PaginationBase extends Component {
           key={ `link-${number}` }
           style={ styleButtonIcon }
           aria-label={ this.props.goToPageLabel(number) }
+          onClick={ isActive ? this.preventClickDefault : null }
+          tabIndex={ isActive ? -1 : null }
         >
           <Text
             weight="regular"
@@ -108,7 +113,7 @@ class PaginationBase extends Component {
       ? parseHtml(prevButtonLabel)
       : parseHtml(nextButtonLabel)
 
-    const disabled = direction == 'left'
+    const isDisabled = direction == 'left'
       ? currentPage == 1
       : currentPage == totalPages
 
@@ -126,14 +131,14 @@ class PaginationBase extends Component {
 
     const styleButtonIcon = [
       styles.group.list.buttonIcon,
-      disabled && styles.group.list.buttonIcon.isDisabled,
+      isDisabled && styles.group.list.buttonIcon.isDisabled,
     ]
 
     const styleSvg = [
       styles.group.list.buttonIcon.svg,
-      (linkIsHovered && !disabled) && styles.group.list.buttonIcon.svg.hover,
-      (linkIsFocused && !disabled) && styles.group.list.buttonIcon.svg.focus,
-      (linkIsActived && !disabled) && styles.group.list.buttonIcon.svg.active,
+      (linkIsHovered && !isDisabled) && styles.group.list.buttonIcon.svg.hover,
+      (linkIsFocused && !isDisabled) && styles.group.list.buttonIcon.svg.focus,
+      (linkIsActived && !isDisabled) && styles.group.list.buttonIcon.svg.active,
     ]
 
     const number = direction == 'left'
@@ -149,10 +154,12 @@ class PaginationBase extends Component {
           style={ styleButtonIcon }
           aria-label={ buttonLabel }
           title={ buttonLabel }
+          tabIndex={ isDisabled ? -1 : null }
+          onClick={ isDisabled ? this.preventClickDefault : null }
         >
           <ArrowIcon
             direction={ direction }
-            disabled={ disabled }
+            disabled={ isDisabled }
             style={ styleSvg }
           />
         </a>
