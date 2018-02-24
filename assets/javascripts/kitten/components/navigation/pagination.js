@@ -12,81 +12,89 @@ import { parseHtml } from 'kitten/helpers/utils/parser'
 
 const ArrowIcon = Radium(ArrowIconBase)
 
+// Returns an array with the given bounds
+const range = (start, end) => {
+  return Array(end - start + 1).fill().map((_, index) => start + index)
+}
+
+// Returns an array of page numbers and breaks "…" (as nulls) as a pagination
+// that fits in the given array size given the current page number.
+export function pages(min, max, page, size) {
+  // 1, [2], 3
+  if (max - min < size)
+    return range(min, max)
+
+  // 1, [2], 3, …, 42
+  if (page - min + 1 < size - 2)
+    return [...range(min, min - 1 + size - 2), null, max]
+
+  // 1, …, 40, [41], 42
+  if (max - page < size - 2)
+    return [min, null, ...range(max + 1 - (size - 2), max)]
+
+  // 1, …, [21], …, 42
+  const sides = Math.floor((size - 4) / 2)
+  return [min, null, ...range(page - sides, page + sides), null, max]
+}
+
 class PaginationBase extends Component {
   render() {
+    const { totalPages, currentPage } = this.props
+    const pageNumbers = pages(1, totalPages, currentPage, 7)
+
+    // TODO: add prop for aria-label
     return (
-      <div>
-        { this.renderList() }
-      </div>
+      <nav role="navigation" aria-label="Navigation par pagination">
+        <ul style={ styles.group }>
+          { this.renderArrowButton('left') }
+          { pageNumbers.map(this.renderPage) }
+          { this.renderArrowButton('right') }
+        </ul>
+      </nav>
     )
   }
 
-  constructor(props) {
-    super(props)
-    this.renderPaginationItem = this.renderPaginationItem.bind(this)
-  }
-
-  renderPaginationItem(pagination) {
-    const isCurrentPage = pagination == this.props.currentPage
+  renderPage = (number, index) => {
+    if (!number) return this.renderSpacer(index)
 
     const styleButtonIcon = [
       styles.group.list.buttonIcon,
-      isCurrentPage && styles.group.list.buttonIcon.isActive,
+      number == this.props.currentPage &&
+        styles.group.list.buttonIcon.isActive,
     ]
 
-    return(
+    // TODO: Use prop to translate "Aller à la page …"
+    // TODO: Use prop to pass through "href"
+    // TODO: Use prop to allow NavLinks or to handle onClick
+    return (
       <li
         style={ styles.group.list }
-        key={ `item-${pagination}` }
+        key={ `item-${number}` }
       >
         <a
           href="#"
-          key={ `link-${pagination}` }
+          key={ `link-${number}` }
           style={ styleButtonIcon }
-          aria-label={ `Aller à la page ${pagination}` }
+          aria-label={ `Aller à la page ${number}` }
         >
           <Text
             weight="regular"
             size="tiny"
           >
-            { pagination }
+            { number }
           </Text>
         </a>
       </li>
     )
   }
 
-  renderList() {
-    const {
-      pagination,
-      pages,
-      currentPage
-    } = this.props
-
-    return (
-      <nav role="navigation" aria-label="Navigation par pagination">
-        <ul style={ styles.group }>
-          { this.renderArrowButton('left') }
-          {
-            pages.map(this.renderPaginationItem)
-          }
-          { this.renderThreePoints() }
-          { this.renderArrowButton('right') }
-        </ul>
-      </nav>
-    );
-  }
-
-  renderThreePoints() {
-    const {
-      threePoints,
-    } = this.props
-
+  renderSpacer(index) {
     return (
       <li
+        key={ `spacer-${index}` }
         style={ styles.group.list.points }
       >
-        { parseHtml(threePoints) }
+        { '…' }
       </li>
     )
   }
@@ -95,6 +103,8 @@ class PaginationBase extends Component {
     const {
       arrowButtonPrev,
       arrowButtonNext,
+      currentPage,
+      totalPages,
     } = this.props
 
     const ariaLabel = direction == 'left'
@@ -102,8 +112,8 @@ class PaginationBase extends Component {
       : parseHtml(arrowButtonNext)
 
     const disabled = direction == 'left'
-      ? this.props.prevProps.disabled
-      : this.props.nextProps.disabled
+      ? currentPage == 1
+      : currentPage == totalPages
 
     const linkIsHovered =
       Radium.getState(this.state, `link-${direction}`, ':hover')
@@ -280,23 +290,11 @@ PaginationBase.propTypes = {
 }
 
 PaginationBase.defaultProps = {
-  prevProps: {
-    disabled: false,
-  },
-  nextProps: {
-    disabled: false,
-  },
+  // TODO: Explain that it is a label
   arrowButtonPrev: 'précédente',
   arrowButtonNext: 'suivante',
-  threePoints: '…',
-  pages: [
-    '1',
-    '2',
-    '3',
-    '4',
-    '5',
-    '6'
-  ],
+  totalPages: 1,
+  currentPage: 1,
 }
 
 const PaginationRadium = Radium(PaginationBase)
