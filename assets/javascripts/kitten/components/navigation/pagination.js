@@ -217,11 +217,11 @@ const styles = {
         listStyle: 'none',
         textDecoration: 'none',
         alignSelf: 'center',
-        marginLeft: '26px',
-        marginRight: '26px',
+        marginLeft: '14px',
+        marginRight: '14px',
         [`@media (min-width: ${ScreenConfig['S'].min}px)`]: {
-          marginLeft: '10px',
-          marginRight: '10px',
+          marginLeft: '26px',
+          marginRight: '26px',
         },
       },
 
