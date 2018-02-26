@@ -8,6 +8,7 @@ exports[`<CrowdfundingCard /> by default matches with snapshot 1`] = `
     className="k-Card k-Card--light k-Card--withoutBoxShadowOnHover"
     data-radium={true}
     href={null}
+    onClick={[Function]}
     style={
       Object {
         "paddingBottom": "10px",
@@ -347,6 +348,7 @@ exports[`<CrowdfundingCard /> with loading prop matches with snapshot 1`] = `
     className="k-Card k-Card--light k-Card--withoutBoxShadowOnHover"
     data-radium={true}
     href={null}
+    onClick={[Function]}
     style={
       Object {
         "paddingBottom": "10px",
@@ -754,6 +756,7 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
     className="k-Card k-Card--light k-Card--withoutBoxShadowOnHover"
     data-radium={true}
     href="#foobar"
+    onClick={[Function]}
     style={
       Object {
         "paddingBottom": "10px",

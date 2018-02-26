@@ -8,6 +8,7 @@ exports[`<ArticleCard /> by default matches with snapshot 1`] = `
     className="k-Card k-Card--light k-Card--withoutBoxShadowOnHover"
     data-radium={true}
     href={null}
+    onClick={[Function]}
     style={
       Object {
         "paddingBottom": "10px",
@@ -185,6 +186,7 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
     className="k-Card k-Card--light k-Card--withoutBoxShadowOnHover"
     data-radium={true}
     href={null}
+    onClick={[Function]}
     style={
       Object {
         "paddingBottom": "10px",
@@ -367,6 +369,7 @@ exports[`<ArticleCard /> with ignored props matches with snapshot 1`] = `
     className="k-Card k-Card--light k-Card--withoutBoxShadowOnHover"
     data-radium={true}
     href={null}
+    onClick={[Function]}
     style={
       Object {
         "paddingBottom": "10px",

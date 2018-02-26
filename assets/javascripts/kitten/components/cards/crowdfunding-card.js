@@ -19,6 +19,10 @@ const HorizontalStroke = Radium(HorizontalStrokeBase)
 const Marger = Radium(MargerBase)
 
 class CrowdfundingCardComponent extends Component {
+  removeCurrentFocus = () => {
+    document.activeElement.blur()
+  }
+
   render() {
     const {
       imageProps,
@@ -47,6 +51,7 @@ class CrowdfundingCardComponent extends Component {
         <Tag
           { ...others }
           style={ styles.card }
+          onClick={ this.removeCurrentFocus }
         >
           { this.renderImage() }
           { this.renderHeader() }
