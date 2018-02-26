@@ -20,6 +20,16 @@ export class FilterIcon extends Component {
           width="2"
           height="6"
           style={ styles.svg.filter1 }
+          id="block1"
+        />
+
+        <animate
+          // xlink:href="#block1"
+          attributName="x"
+          from="2"
+          dur="5"
+          begin
+
         />
 
         <rect
@@ -86,11 +96,11 @@ const styles = {
     ':hover': {
       animationPlayState: 'running',
     },
-    filter1: {
-      animationFillMode: 'forwards',
-      animationTimingFunction: 'linear',
-      animationIterationCount: 'infinite',
-    }
+    // filter1: {
+    //   animationFillMode: 'forwards',
+    //   animationTimingFunction: 'linear',
+    //   animationIterationCount: 'infinite',
+    // }
   }
 }
 
