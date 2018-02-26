@@ -11,6 +11,7 @@ import { HorizontalStroke as HorizontalStrokeBase }
 import { ButtonImage } from 'kitten/components/buttons/button-image'
 import { Progress } from 'kitten/components/meters/progress'
 import COLORS from 'kitten/constants/colors-config'
+import Truncate from 'react-truncate'
 
 const Text = Radium(TextBase)
 const Title = Radium(TitleBase)
@@ -155,7 +156,13 @@ class CrowdfundingCardComponent extends Component {
             margin={ false }
             className={ className }
           >
-            { parseHtml(this.props.cardTitle) }
+            { this.props.titleTruncate &&
+              <Truncate lines={ 2 }>
+                { parseHtml(this.props.cardTitle) }
+              </Truncate>
+            }
+
+            { !this.props.titleTruncate && parseHtml(this.props.cardTitle) }
           </Title>
         }
 
@@ -471,6 +478,7 @@ CrowdfundingCardComponent.defaultProps = {
   cardTitle: 'Lorem ipsum…',
   cardSubTitle: null,
   titlesMinHeight: true,
+  titleTruncate: true,
   info1: '<strong>XX</strong> <br/>lorem ipsum…',
   info2: '<strong>XX</strong> <br/>lorem ipsum…',
   info3: '<strong>XX</strong> <br/>lorem ipsum…',
