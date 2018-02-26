@@ -29,6 +29,7 @@ class CrowdfundingCardComponent extends Component {
       cardTitle,
       cardSubTitle,
       titlesMinHeight,
+      titleTruncate,
       info1,
       info2,
       info3,

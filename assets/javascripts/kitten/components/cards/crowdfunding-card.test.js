@@ -3,7 +3,16 @@ import renderer from 'react-test-renderer'
 import { CrowdfundingCard } from 'kitten/components/cards/crowdfunding-card'
 
 describe('<CrowdfundingCard />', () => {
+  const initialWindow = global.window
   let component
+
+  beforeEach(() => {
+    global.window.HTMLCanvasElement.prototype.getContext = () => {}
+  })
+
+  afterEach(() => {
+    global.window = initialWindow
+  })
 
   describe('by default', () => {
     beforeEach(() => {

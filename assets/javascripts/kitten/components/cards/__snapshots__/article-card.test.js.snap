@@ -134,6 +134,7 @@ exports[`<ArticleCard /> by default matches with snapshot 1`] = `
       >
         <p
           className="k-Title k-Card__title k-Title--senary k-Title--withoutMargin"
+          data-radium={true}
         >
           Lorem ipsum…
         </p>
@@ -310,6 +311,7 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
       >
         <p
           className="k-Title k-Card__title k-Title--senary k-Title--withoutMargin"
+          data-radium={true}
         >
           Custom title
         </p>
@@ -491,6 +493,7 @@ exports[`<ArticleCard /> with ignored props matches with snapshot 1`] = `
       >
         <p
           className="k-Title k-Card__title k-Title--senary k-Title--withoutMargin"
+          data-radium={true}
         >
           Lorem ipsum…
         </p>

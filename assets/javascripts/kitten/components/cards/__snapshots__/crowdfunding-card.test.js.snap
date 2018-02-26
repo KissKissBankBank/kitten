@@ -135,8 +135,26 @@ exports[`<CrowdfundingCard /> by default matches with snapshot 1`] = `
       >
         <p
           className="k-Title k-Card__title k-Title--senary k-Title--withoutMargin"
+          data-radium={true}
         >
-          Lorem ipsum…
+          <span>
+            <span />
+            <span>
+              Lorem ipsum…
+            </span>
+            <span
+              style={
+                Object {
+                  "left": 0,
+                  "position": "fixed",
+                  "top": 0,
+                  "visibility": "hidden",
+                }
+              }
+            >
+              …
+            </span>
+          </span>
         </p>
       </div>
       <div
@@ -863,8 +881,26 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
       >
         <h4
           className="k-Title k-Card__title k-Title--senary k-Title--withoutMargin"
+          data-radium={true}
         >
-          Custom title
+          <span>
+            <span />
+            <span>
+              Custom title
+            </span>
+            <span
+              style={
+                Object {
+                  "left": 0,
+                  "position": "fixed",
+                  "top": 0,
+                  "visibility": "hidden",
+                }
+              }
+            >
+              …
+            </span>
+          </span>
         </h4>
       </div>
       <div

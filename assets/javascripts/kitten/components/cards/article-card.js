@@ -12,5 +12,6 @@ export const ArticleCard = ({ articleTitle, articleSubTitle, ...props }) => (
     progress={ false }
     state={ false }
     titlesMinHeight={ false }
+    titleTruncate={ false }
   />
 )
