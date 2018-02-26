@@ -216,12 +216,14 @@ const styles = {
       points: {
         listStyle: 'none',
         textDecoration: 'none',
-        alignSelf: 'center',
-        marginLeft: '14px',
-        marginRight: '14px',
+        textAlign: 'center',
+        marginLeft: 0,
+        marginRight: 0,
+        width: '40px',
         [`@media (min-width: ${ScreenConfig['S'].min}px)`]: {
-          marginLeft: '26px',
-          marginRight: '26px',
+          marginLeft: '8px',
+          marginRight: '8px',
+          width: '50px',
         },
       },
 
