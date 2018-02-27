@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Radium, { StyleRoot } from 'radium'
+import Radium from 'radium'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import { Text } from 'kitten/components/typography/text'
@@ -43,15 +43,13 @@ class PaginationBase extends Component {
     const pageNumbers = pages(1, totalPages, currentPage, size)
 
     return (
-      <StyleRoot>
-        <nav role="navigation" aria-label={ this.props['aria-label'] }>
-          <ul style={ styles.group }>
-            { this.renderArrowButton('left') }
-            { pageNumbers.map(this.renderPage) }
-            { this.renderArrowButton('right') }
-          </ul>
-        </nav>
-      </StyleRoot>
+      <nav role="navigation" aria-label={ this.props['aria-label'] }>
+        <ul style={ styles.group }>
+          { this.renderArrowButton('left') }
+          { pageNumbers.map(this.renderPage) }
+          { this.renderArrowButton('right') }
+        </ul>
+      </nav>
     )
   }
 
@@ -330,7 +328,7 @@ PaginationBase.defaultProps = {
 }
 
 export const Pagination = mediaQueries(
-  PaginationBase,
+  Radium(PaginationBase),
   {
     viewportIsMobile: true,
   },
