@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Add `Pagination` component.
 - Feature: Update styles for `disabled` prop on `ArrowIcon` component.
+- Fix: Update `primary-light` color.
 - Feature: Add `modifier` prop on `TagButton` component.
 
 ## [19.5.0] - 2018-02-13
