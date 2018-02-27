@@ -217,6 +217,7 @@ const styles = {
         listStyle: 'none',
         textDecoration: 'none',
         textAlign: 'center',
+        alignSelf: 'center',
         width: '40px',
         [`@media (min-width: ${ScreenConfig['S'].min}px)`]: {
           marginLeft: '8px',
