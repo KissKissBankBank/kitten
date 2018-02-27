@@ -66,11 +66,22 @@ describe('TagButton', () => {
         const component = shallow(
           <TagButton>
             <svg />
-          </TagButton>)
+          </TagButton>
+        )
 
         it('has children', () => {
           expect(component.children().type()).toBe('svg')
         })
+      })
+    })
+
+    describe('modifier prop', () => {
+      it('adds a class to the component', () => {
+        const component = shallow(
+          <TagButton modifier="helium" />
+        )
+
+        expect(component.hasClass('k-TagButton--helium')).toBe(true)
       })
     })
   })

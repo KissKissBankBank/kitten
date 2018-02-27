@@ -1,0 +1,88 @@
+/// Set tag button colors.
+///
+/// @group buttons
+///
+/// @parameter {String} $modifier - tagButton modifier.
+/// @parameter {Map} $options - options to add base styles and svg styles.
+///
+/// @example scss - Usage
+///   @include k-tagButtonColors('mercure');
+///
+/// @example css - CSS output
+///   background-color: #19bbff;
+///   color: #fff;
+///   …
+
+@mixin k-tagButtonColors($modifier) {
+
+  $colors: (
+    'helium': (
+      base: (
+        color: map-get($k-colors,'font-1'),
+        border-color: map-get($k-colors,'line-1'),
+        background-color: map-get($k-colors,'background-1'),
+      ),
+      hover: (
+        color: map-get($k-colors,'primary-1'),
+        border-color: map-get($k-colors,'primary-1'),
+        background-color: map-get($k-colors,'background-1'),
+      ),
+      focus: (
+        color: map-get($k-colors,'primary-1'),
+        border-color: map-get($k-colors,'primary-1'),
+        background-color: map-get($k-colors,'background-1'),
+      ),
+      active: (
+        color: map-get($k-colors,'background-1'),
+        border-color: map-get($k-colors,'primary-1'),
+        background-color: map-get($k-colors,'primary-1'),
+      ),
+      is-selected: (
+        color: map-get($k-colors,'background-1'),
+        border-color: map-get($k-colors,'primary-1'),
+        background-color: map-get($k-colors,'primary-1'),
+      ),
+      disabled: (
+        color: map-get($k-colors, 'background-1'),
+        border-color: map-get($k-colors, 'line-2'),
+        background-color: map-get($k-colors, 'line-2'),
+      ),
+    ),
+
+    'carbon': (
+      base: (
+        color-nav: map-get($k-colors, 'font-1'),
+        border-color: map-get($k-colors, 'background-1'),
+        background-color: map-get($k-colors, 'background-1'),
+      ),
+      hover: (
+        color: map-get($k-colors, 'primary-1'),
+        border-color: map-get($k-colors, 'background-1'),
+        background-color: map-get($k-colors, 'background-1'),
+      ),
+      focus: (
+        color: map-get($k-colors, 'background-1'),
+        border-color: map-get($k-colors, 'primary-1'),
+        background-color: map-get($k-colors, 'primary-1'),
+      ),
+      active: (
+        color: map-get($k-colors, 'background-1'),
+        border-color: map-get($k-colors, 'primary-1'),
+        background-color: map-get($k-colors, 'primary-1'),
+      ),
+      is-selected: (
+        color: map-get($k-colors, 'background-1'),
+        border-color: map-get($k-colors, 'primary-1'),
+        background-color: map-get($k-colors, 'primary-1'),
+      ),
+      disabled: (
+        color: map-get($k-colors, 'background-1'),
+        border-color: map-get($k-colors, 'line-2'),
+        background-color: map-get($k-colors, 'line-2'),
+      ),
+    )
+  );
+
+  $colorByModifier: map-get($colors, $modifier);
+  @include k-buttonColorBase($colorByModifier);
+}
