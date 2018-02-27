@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import classNames from 'classnames'
+import PropTypes from 'prop-types'
 
 export class TagButton extends Component {
   render() {
@@ -7,6 +8,7 @@ export class TagButton extends Component {
       className,
       tag,
       children,
+      modifier,
       selected,
       tiny,
       big,
@@ -18,6 +20,7 @@ export class TagButton extends Component {
       'k-TagButton',
       className,
       {
+        [`k-TagButton--${modifier}`]: modifier,
         'is-selected': selected,
         'k-TagButton--tiny': tiny,
         'k-TagButton--big': big,
@@ -38,11 +41,16 @@ export class TagButton extends Component {
   }
 }
 
+TagButton.propTypes = {
+  modifier: PropTypes.oneOf(['helium', 'carbon']),
+}
+
 TagButton.defaultProps = {
   tag: 'button',
   children: 'Tag',
-  selected: false,
+  modifier: 'helium',
   icon: false,
   tiny: false,
   big: false,
+  selected: false,
 }
