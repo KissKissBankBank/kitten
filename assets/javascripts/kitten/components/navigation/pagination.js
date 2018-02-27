@@ -4,11 +4,10 @@ import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import { Text } from 'kitten/components/typography/text'
 import { ArrowIcon as ArrowIconBase } from 'kitten/components/icons/arrow-icon'
-import { ScreenConfig,
-  SCREEN_SIZE_M,
-} from 'kitten/constants/screen-config'
+import { ScreenConfig } from 'kitten/constants/screen-config'
 import COLORS from 'kitten/constants/colors-config'
 import { parseHtml } from 'kitten/helpers/utils/parser'
+import { mediaQueries } from 'kitten/hoc/media-queries'
 
 const ArrowIcon = Radium(ArrowIconBase)
 
@@ -39,17 +38,20 @@ export function pages(min, max, page, size) {
 
 class PaginationBase extends Component {
   render() {
-    const { totalPages, currentPage, size } = this.props
+    const { totalPages, currentPage } = this.props
+    const size = this.props.viewportIsMobile ? 5 : 7
     const pageNumbers = pages(1, totalPages, currentPage, size)
 
     return (
-      <nav role="navigation" aria-label={ this.props['aria-label'] }>
-        <ul style={ styles.group }>
-          { this.renderArrowButton('left') }
-          { pageNumbers.map(this.renderPage) }
-          { this.renderArrowButton('right') }
-        </ul>
-      </nav>
+      <StyleRoot>
+        <nav role="navigation" aria-label={ this.props['aria-label'] }>
+          <ul style={ styles.group }>
+            { this.renderArrowButton('left') }
+            { pageNumbers.map(this.renderPage) }
+            { this.renderArrowButton('right') }
+          </ul>
+        </nav>
+      </StyleRoot>
     )
   }
 
@@ -313,7 +315,6 @@ PaginationBase.propTypes = {
   onPageClick: PropTypes.func,
   totalPages: PropTypes.number,
   currentPage: PropTypes.number,
-  size: PropTypes.oneOf([5, 7]),
   'aria-label': PropTypes.string,
 }
 
@@ -325,19 +326,12 @@ PaginationBase.defaultProps = {
   onPageClick: () => {},
   currentPage: 1,
   totalPages: 1,
-  size: 7,
   'aria-label': 'Pagination navigation',
 }
 
-const PaginationRadium = Radium(PaginationBase)
-
-export class Pagination extends Component {
-  render() {
-    return(
-      <StyleRoot>
-        <PaginationRadium { ...this.props } />
-      </StyleRoot>
-    )
-  }
-}
-
+export const Pagination = mediaQueries(
+  PaginationBase,
+  {
+    viewportIsMobile: true,
+  },
+)
