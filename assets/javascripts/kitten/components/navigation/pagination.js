@@ -55,6 +55,10 @@ class PaginationBase extends Component {
 
   preventClickDefault = e => e.preventDefault()
 
+  pageClickHandler = number => {
+    return () => this.props.onPageClick(number)
+  }
+
   renderPage = (number, index) => {
     if (!number) return this.renderSpacer(index)
 
@@ -65,7 +69,6 @@ class PaginationBase extends Component {
       isActive && styles.group.list.buttonIcon.isActive,
     ]
 
-    // TODO: Allow NavLinks or onClicks
     return (
       <li
         style={ styles.group.list }
@@ -76,7 +79,9 @@ class PaginationBase extends Component {
           key={ `link-${number}` }
           style={ styleButtonIcon }
           aria-label={ this.props.goToPageLabel(number) }
-          onClick={ isActive ? this.preventClickDefault : null }
+          onClick={
+            isActive ? this.preventClickDefault : this.pageClickHandler(number)
+          }
           tabIndex={ isActive ? -1 : null }
         >
           <Text
@@ -155,7 +160,11 @@ class PaginationBase extends Component {
           aria-label={ buttonLabel }
           title={ buttonLabel }
           tabIndex={ isDisabled ? -1 : null }
-          onClick={ isDisabled ? this.preventClickDefault : null }
+          onClick={
+            isDisabled ?
+              this.preventClickDefault :
+              this.pageClickHandler(number)
+          }
         >
           <ArrowIcon
             direction={ direction }
@@ -301,6 +310,7 @@ PaginationBase.propTypes = {
   nextButtonLabel: PropTypes.string,
   goToPageLabel: PropTypes.func,
   goToPageHref: PropTypes.func,
+  onPageClick: PropTypes.func,
   totalPages: PropTypes.number,
   currentPage: PropTypes.number,
   size: PropTypes.oneOf([5, 7]),
@@ -312,6 +322,7 @@ PaginationBase.defaultProps = {
   nextButtonLabel: 'Next page',
   goToPageLabel: n => `Go to page ${n}`,
   goToPageHref: n => `#${n}`,
+  onPageClick: () => {},
   currentPage: 1,
   totalPages: 1,
   size: 7,

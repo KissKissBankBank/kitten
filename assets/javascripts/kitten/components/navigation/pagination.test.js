@@ -1,4 +1,5 @@
 import React from 'react'
+import sinon from 'sinon'
 import { pages, Pagination } from 'kitten/components/navigation/pagination'
 import renderer from 'react-test-renderer'
 
@@ -26,6 +27,24 @@ describe('<Pagination />', () => {
         .toJSON()
 
       expect(tree).toMatchSnapshot()
+    })
+  })
+
+  describe('onPageClick', () => {
+    it('calls the given function when clicking on links', () => {
+      const sandbox = sinon.sandbox.create()
+      const onClickSpy = sandbox.spy()
+      const pagination = mount(
+        <Pagination
+          onPageClick={ onClickSpy }
+          totalPages={ 5 }
+        />
+      )
+
+      pagination.find('a').last().simulate('click')
+
+      expect(onClickSpy.called).toBe(true)
+      expect(onClickSpy.calledWith(2)).toBe(true)
     })
   })
 })
