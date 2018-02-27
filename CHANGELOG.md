@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+Fix: Update `primary-light` color.
 - Feature: Add `modifier` prop on `TagButton` component.
 
 ## [19.5.0] - 2018-02-13
