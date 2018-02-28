@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Radium, { StyleRoot } from 'radium'
+import Radium from 'radium'
 import PropTypes from 'prop-types'
 import { Container } from 'kitten/components/grid/container'
 import {
@@ -20,14 +20,12 @@ const GridCol = Radium(GridColBase)
 export class Hero extends Component {
   render() {
     return (
-      <StyleRoot>
-        <Container>
-          <Grid>
-            { this.renderContent() }
-            { this.renderImage() }
-          </Grid>
-        </Container>
-      </StyleRoot>
+      <Container>
+        <Grid>
+          { this.renderContent() }
+          { this.renderImage() }
+        </Grid>
+      </Container>
     )
   }
 

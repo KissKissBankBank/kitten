@@ -136,7 +136,7 @@ import { KarlGithubRibbon } from 'kitten/karl/headers/karl-github-ribbon'
 import { KarlMenuHeader } from 'kitten/karl/headers/karl-header'
 
 // heroes.
-import { KarlHero } from 'kitten/karl/heroes/hero'
+import { KarlHeroExamples } from 'kitten/karl/heroes/hero'
 
 // Icons
 import { ArrowIcon } from 'kitten/components/icons/arrow-icon'
@@ -418,7 +418,7 @@ ReactOnRails.register({
   KarlUnloggedHeaderPlatformSwitch,
 
   // Heroes.
-  KarlHero,
+  KarlHeroExamples,
 
   // Icons
   ArrowIcon,
