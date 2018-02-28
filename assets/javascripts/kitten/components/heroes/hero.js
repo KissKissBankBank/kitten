@@ -17,7 +17,7 @@ import COLORS from 'kitten/constants/colors-config'
 const Grid = Radium(GridBase)
 const GridCol = Radium(GridColBase)
 
-export class Hero extends Component {
+class HeroBase extends Component {
   render() {
     return (
       <Container>
@@ -202,11 +202,11 @@ const styles = {
   },
 }
 
-Hero.propTypes = {
+HeroBase.propTypes = {
   direction: PropTypes.oneOf(['left', 'right']),
 }
 
-Hero.defaultProps = {
+HeroBase.defaultProps = {
   direction: 'left',
   tiny: false,
   imageSrc: 'https://placehold.it/40x40/'
@@ -215,3 +215,5 @@ Hero.defaultProps = {
   contentBackgroundColor: COLORS.font1,
   contentColor: COLORS.background1,
 }
+
+export const Hero = Radium(HeroBase)

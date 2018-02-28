@@ -5,7 +5,7 @@ import { Paragraph } from 'kitten/components/typography/paragraph'
 import { Marger } from 'kitten/components/layout/marger'
 import { Button } from 'kitten/components/buttons/button'
 import { StyleRoot } from 'radium'
-import { Row } from 'kitten/components/grid/row'
+import { Grid, GridCol } from 'kitten/components/grid/grid'
 
 const lorem =
   'Lorem ipsum dolor sit amet.'
@@ -24,70 +24,67 @@ const loremIpsumSitAmet =
 
 export const KarlHeroExamples = props => (
   <StyleRoot>
-    <div className="karl-Example">
-      <p className="karl-Example__title">Hero left</p>
-    </div>
+    <Grid>
+      <GridCol>
+        <div className="karl-Example">
+          <p className="karl-Example__title">Hero left</p>
+        </div>
+        <Hero direction="left">
+          <Marger bottom="5">
+            <Title modifier="secondary" margin={ false }>
+              { lorem }
+            </Title>
+          </Marger>
 
-    <Row>
-      <Hero direction="left">
-        <Marger bottom="5">
-          <Title modifier="secondary" margin={ false }>
-            { lorem }
-          </Title>
-        </Marger>
+          <Marger top="5" bottom={ 4 }>
+            <Paragraph modifier="primary" margin={ false }>
+              { loremIpsumSitAmet }
+            </Paragraph>
+          </Marger>
 
-        <Marger top="5" bottom={ 4 }>
-          <Paragraph modifier="primary" margin={ false }>
-            { loremIpsumSitAmet }
-          </Paragraph>
-        </Marger>
+          <Marger top="4">
+            <Button modifier="helium">Button</Button>
+          </Marger>
+        </Hero>
 
-        <Marger top="4">
-          <Button modifier="helium">Button</Button>
-        </Marger>
-      </Hero>
-    </Row>
+        <div className="karl-Example">
+          <p className="karl-Example__title">Hero right</p>
+        </div>
+        <Hero direction="right">
+          <Marger bottom="5">
+            <Title modifier="secondary" margin={ false }>
+              { lorem }
+            </Title>
+          </Marger>
 
-    <div className="karl-Example">
-      <p className="karl-Example__title">Hero right</p>
-    </div>
-    <Row>
-      <Hero direction="right">
-        <Marger bottom="5">
-          <Title modifier="secondary" margin={ false }>
-            { lorem }
-          </Title>
-        </Marger>
+          <Marger top="5" bottom={ 4 }>
+            <Paragraph modifier="primary" margin={ false }>
+              { loremIpsumSitAmet }
+            </Paragraph>
+          </Marger>
 
-        <Marger top="5" bottom={ 4 }>
-          <Paragraph modifier="primary" margin={ false }>
-            { loremIpsumSitAmet }
-          </Paragraph>
-        </Marger>
+          <Marger top="4">
+            <Button modifier="helium">Button</Button>
+          </Marger>
+        </Hero>
 
-        <Marger top="4">
-          <Button modifier="helium">Button</Button>
-        </Marger>
-      </Hero>
-    </Row>
+        <div className="karl-Example">
+          <p className="karl-Example__title">Hero with small text</p>
+        </div>
+        <Hero direction="left" tiny>
+          <Marger bottom="5">
+            <Title modifier="secondary" margin={ false }>
+              { lorem }
+            </Title>
+          </Marger>
 
-    <div className="karl-Example">
-      <p className="karl-Example__title">Hero with small text</p>
-    </div>
-    <Row>
-      <Hero direction="left" tiny>
-        <Marger bottom="5">
-          <Title modifier="secondary" margin={ false }>
-            { lorem }
-          </Title>
-        </Marger>
-
-        <Marger top="5">
-          <Paragraph modifier="primary" margin={ false }>
-            { loremIpsum }
-          </Paragraph>
-        </Marger>
-      </Hero>
-    </Row>
+          <Marger top="5">
+            <Paragraph modifier="primary" margin={ false }>
+              { loremIpsum }
+            </Paragraph>
+          </Marger>
+        </Hero>
+      </GridCol>
+    </Grid>
   </StyleRoot>
 )
