@@ -1,4 +1,5 @@
 import React from 'react'
+import renderer from 'react-test-renderer'
 import {
   Carousel,
   getNumColumnsForWidth,
@@ -31,7 +32,7 @@ describe('<Carousel />', () => {
   describe('by default on desktop', () => {
     window.matchMedia = createMockMediaMatcher(false) // desktop
 
-    const carousel = shallow(
+    const carousel = renderer.create(
       <Carousel
         data={[{title: 'A'}]}
         itemMinWidth={ProjectCardMinWidth}
@@ -43,18 +44,17 @@ describe('<Carousel />', () => {
             />
           )
         }}
-      />,
-      {}
-    )
+      />
+    ).toJSON()
 
     it('is a <Grid />', () => {
-      expect(carousel.dive().hasClass('k-Grid')).toBe(true)
+      expect(carousel).toMatchSnapshot()
     })
   })
 
   describe('with withoutLeftOffset on desktop', () => {
     window.matchMedia = createMockMediaMatcher(false) // desktop
-    const carousel = shallow(
+    const carousel = renderer.create(
       <Carousel
         data={[{title: 'A'}]}
         itemMinWidth={ProjectCardMinWidth}
@@ -67,18 +67,17 @@ describe('<Carousel />', () => {
             />
           )
         }}
-      />,
-      {}
-    )
+      />
+    ).toJSON()
 
     it('is a <Grid />', () => {
-      expect(carousel.dive().hasClass('k-Grid')).toBe(true)
+      expect(carousel).toMatchSnapshot()
     })
   })
 
   describe('by default on mobile', () => {
     window.matchMedia = createMockMediaMatcher(true) // mobile
-    const carousel = shallow(
+    const carousel = renderer.create(
       <Carousel
         data={[{title: 'A'}]}
         itemMinWidth={ProjectCardMinWidth}
@@ -90,12 +89,11 @@ describe('<Carousel />', () => {
             />
           )
         }}
-      />,
-      {}
-    )
+      />
+    ).toJSON()
 
     it('is not a <Grid />', () => {
-      expect(carousel.hasClass('k-Grid')).toBe(false)
+      expect(carousel).toMatchSnapshot()
     })
   })
 
