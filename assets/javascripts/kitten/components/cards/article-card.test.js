@@ -17,6 +17,35 @@ describe('<ArticleCard />', () => {
     })
   })
 
+  describe('with some props', () => {
+    beforeEach(() => {
+      component = renderer.create(
+        <ArticleCard
+          href="#foobar"
+          imageProps={{
+            src: '#image',
+            alt: 'Image alt',
+          }}
+          avatarProps={{
+            src: '#avatar',
+            alt: 'Avatar alt',
+          }}
+          ownerTitle="Custom title"
+          ownerDescription="Custom description"
+          titleProps={{
+            tag: 'h4',
+          }}
+          cardTitle="Custom title"
+          cardSubTitle="Custom subtitle"
+        />
+      ).toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
   describe('with articleTitle and articleSubTitle props', () => {
     beforeEach(() => {
       component = renderer.create(
@@ -40,6 +69,7 @@ describe('<ArticleCard />', () => {
           progress="42"
           state="Custom state"
           titlesMinHeight
+          titleTruncate
         />
       ).toJSON()
     })
