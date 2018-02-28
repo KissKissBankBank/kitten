@@ -24,7 +24,14 @@ describe('<Pagination />', () => {
   describe('by default', () => {
     it('should match its empty snapshot', () => {
       const tree = renderer
-        .create(<StyleRoot><Pagination /></StyleRoot>)
+        .create(
+          <StyleRoot>
+            <Pagination
+              currentPage={ 10 }
+              totalPages={ 42 }
+            />
+          </StyleRoot>
+        )
         .toJSON()
 
       expect(tree).toMatchSnapshot()
@@ -57,8 +64,8 @@ describe('pages', () => {
     const expectedPages = [
       // min
       // | max
-      // | |  page
-      // | |  |  places
+      // | |  currentPage
+      // | |  |  available slots
       // | |  |  |   expected result
       [[1, 2, 1, 7], [1, 2]],
       [[1, 2, 2, 7], [1, 2]],

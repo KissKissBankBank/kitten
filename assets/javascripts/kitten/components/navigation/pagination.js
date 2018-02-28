@@ -16,24 +16,30 @@ const range = (start, end) => {
   return Array(end - start + 1).fill().map((_, index) => start + index)
 }
 
-// Returns an array of page numbers and breaks "…" (as nulls) as a pagination
-// that fits in the given array size given the current page number.
-export function pages(min, max, page, size) {
+// Returns an array of size `availableSlots` with page number integers
+// and breaks "…" (represented as nulls).
+export function pages(min, max, currentPage, availableSlots) {
   // 1, 2, 3
-  if (max - min < size)
+  if (max - min < availableSlots)
     return range(min, max)
 
   // 1, 2, 3, …, 42
-  if (page - min + 1 < size - 2)
-    return [...range(min, min - 1 + size - 2), null, max]
+  if (currentPage - min + 1 < availableSlots - 2)
+    return [...range(min, min - 1 + availableSlots - 2), null, max]
 
   // 1, …, 40, 41, 42
-  if (max - page < size - 2)
-    return [min, null, ...range(max + 1 - (size - 2), max)]
+  if (max - currentPage < availableSlots - 2)
+    return [min, null, ...range(max + 1 - (availableSlots - 2), max)]
 
   // 1, …, 21, …, 42
-  const sides = Math.floor((size - 4) / 2)
-  return [min, null, ...range(page - sides, page + sides), null, max]
+  const sides = Math.floor((availableSlots - 4) / 2)
+  return [
+    min,
+    null,
+    ...range(currentPage - sides, currentPage + sides),
+    null,
+    max,
+  ]
 }
 
 class PaginationBase extends Component {
