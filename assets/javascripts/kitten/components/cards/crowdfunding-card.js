@@ -101,6 +101,14 @@ class CrowdfundingCardComponent extends Component {
   }
 
   renderHeader() {
+    const titleStyle = [
+      this.props.loading && styles.header.owner.titleLoading,
+    ]
+
+    const descriptionStyle = [
+      this.props.loading && styles.header.owner.descriptionLoading,
+    ]
+
     return (
       <div style={ styles.header.grid }>
         <Marger
@@ -122,9 +130,8 @@ class CrowdfundingCardComponent extends Component {
             tag="div"
             size="micro"
             weight="regular"
-            style={[ this.props.loading && styles.header.owner.titleLoading ]}
+            style={ titleStyle }
           >
-            { !this.props.loading && parseHtml(this.props.ownerTitle) }
             { !this.props.loading && this.props.ownerTitle }
           </Text>
 
@@ -132,9 +139,7 @@ class CrowdfundingCardComponent extends Component {
             tag="div"
             size="micro"
             weight="light"
-            style={
-              [ this.props.loading && styles.header.owner.descriptionLoading ]
-            }
+            style={ descriptionStyle }
           >
             { !this.props.loading && this.props.ownerDescription }
           </Text>
