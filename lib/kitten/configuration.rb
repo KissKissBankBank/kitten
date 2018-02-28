@@ -145,7 +145,7 @@ module Kitten
             },
             { path: 'components/headers/header', name: 'Header' },
             { path: 'components/steppers/stepper', name: 'Stepper' },
-            { path: 'components/navigation/pagination', name: 'Pagination'},
+            { path: 'components/navigation/pagination', name: 'Pagination' },
           ],
         },
         {

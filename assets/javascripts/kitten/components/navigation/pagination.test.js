@@ -7,7 +7,7 @@ import renderer from 'react-test-renderer'
 const createMockMediaMatcher = matches => () => ({
   matches,
   addListener: () => {},
-  removeListener: () => {}
+  removeListener: () => {},
 })
 
 describe('<Pagination />', () => {
