@@ -5,7 +5,6 @@ import { card } from 'kitten/hoc/card'
 import { Marger as MargerBase } from 'kitten/components/layout/marger'
 import { Title as TitleBase } from 'kitten/components/typography/title'
 import { Text as TextBase } from 'kitten/components/typography/text'
-import { parseHtml } from 'kitten/helpers/utils/parser'
 import { HorizontalStroke as HorizontalStrokeBase }
   from 'kitten/components/layout/horizontal-stroke'
 import { ButtonImage } from 'kitten/components/buttons/button-image'
@@ -126,6 +125,7 @@ class CrowdfundingCardComponent extends Component {
             style={[ this.props.loading && styles.header.owner.titleLoading ]}
           >
             { !this.props.loading && parseHtml(this.props.ownerTitle) }
+            { !this.props.loading && this.props.ownerTitle }
           </Text>
 
           <Text
@@ -136,7 +136,7 @@ class CrowdfundingCardComponent extends Component {
               [ this.props.loading && styles.header.owner.descriptionLoading ]
             }
           >
-            { !this.props.loading && parseHtml(this.props.ownerDescription) }
+            { !this.props.loading && this.props.ownerDescription }
           </Text>
         </div>
       </div>
@@ -164,11 +164,11 @@ class CrowdfundingCardComponent extends Component {
           >
             { this.props.titleTruncate &&
               <Truncate lines={ 2 }>
-                { parseHtml(this.props.cardTitle) }
+                { this.props.cardTitle }
               </Truncate>
             }
 
-            { !this.props.titleTruncate && parseHtml(this.props.cardTitle) }
+            { !this.props.titleTruncate && this.props.cardTitle }
           </Title>
         }
 
@@ -206,7 +206,7 @@ class CrowdfundingCardComponent extends Component {
             size="micro"
             weight="regular"
           >
-            { parseHtml(this.props.cardSubTitle) }
+            { this.props.cardSubTitle }
           </Text>
         }
 
@@ -247,7 +247,7 @@ class CrowdfundingCardComponent extends Component {
             lineHeight="normal"
             weight="light"
           >
-            { parseHtml(text) }
+            { text }
           </Text>
         }
 
