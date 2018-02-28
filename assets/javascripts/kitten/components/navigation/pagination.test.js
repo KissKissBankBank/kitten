@@ -1,5 +1,6 @@
 import React from 'react'
 import sinon from 'sinon'
+import { StyleRoot } from 'radium'
 import { pages, Pagination } from 'kitten/components/navigation/pagination'
 import renderer from 'react-test-renderer'
 
@@ -23,7 +24,7 @@ describe('<Pagination />', () => {
   describe('by default', () => {
     it('should match its empty snapshot', () => {
       const tree = renderer
-        .create(<Pagination />)
+        .create(<StyleRoot><Pagination /></StyleRoot>)
         .toJSON()
 
       expect(tree).toMatchSnapshot()
@@ -35,10 +36,12 @@ describe('<Pagination />', () => {
       const sandbox = sinon.sandbox.create()
       const onClickSpy = sandbox.spy()
       const pagination = mount(
-        <Pagination
-          onPageClick={ onClickSpy }
-          totalPages={ 5 }
-        />
+        <StyleRoot>
+          <Pagination
+            onPageClick={ onClickSpy }
+            totalPages={ 5 }
+          />
+        </StyleRoot>
       )
 
       pagination.find('a').last().simulate('click')
