@@ -13,3 +13,7 @@ gem 'rubocop', '~> 0.49.0', require: false
 gem 'foreman'
 
 gem 'sass'
+
+# Forced version of method_source to match KissKissBankBank's to avoid zeus
+# errors.
+gem 'method_source', '0.8.2'
