@@ -232,6 +232,7 @@ import {
   KarlHorizontalNav,
   KarlBrowsingHorizontalNav,
 } from 'kitten/karl/navigation/horizontal-nav'
+import { KarlPaginationExamples } from 'kitten/karl/navigation/pagination'
 
 // Notifications
 import { Alert } from 'kitten/components/notifications/alert'
@@ -500,6 +501,7 @@ ReactOnRails.register({
   TabBar,
   KarlHorizontalNav,
   KarlBrowsingHorizontalNav,
+  KarlPaginationExamples,
 
   // Notifications
   Alert,

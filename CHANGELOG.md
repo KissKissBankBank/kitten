@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `Pagination` component.
+- Feature: Update styles for `disabled` prop on `ArrowIcon` component.
 - Breaking change: Rename `style` prop to `fontStyle` in `Text` component.
 - Feature: Add `rampProps` prop to `Progress` component.
 - Feature: Add `CrowdfundingCard` component.

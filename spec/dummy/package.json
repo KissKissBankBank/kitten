@@ -1,7 +1,7 @@
 {
-  "name": "kitten-example",
-  "license": "MIT",
+  "name": "kitten-example-dummy",
   "version": "1.0.0",
+  "license": "MIT",
   "cacheDirectories": [
     "node_modules",
     "client/node_modules"

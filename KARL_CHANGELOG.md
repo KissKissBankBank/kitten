@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `Pagination` examples.
 - Feature: Add `CrowdfundingCard` examples.
 
 ## [19.5.0] - 2018-02-13
