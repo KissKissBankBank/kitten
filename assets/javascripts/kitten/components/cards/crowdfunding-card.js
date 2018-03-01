@@ -63,7 +63,7 @@ class CrowdfundingCardComponent extends Component {
             { this.renderSubtitle() }
           </Marger>
 
-          { this.renderInformations() }
+          { this.renderInformation() }
           { this.renderProgress() }
           { this.renderState() }
           { this.renderLoading() }
@@ -222,7 +222,7 @@ class CrowdfundingCardComponent extends Component {
     )
   }
 
-  renderInformations() {
+  renderInformation() {
     if (!this.props.info1 && !this.props.info2 && !this.props.info3) return
 
     return (
