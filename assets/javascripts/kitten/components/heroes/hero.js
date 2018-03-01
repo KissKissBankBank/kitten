@@ -18,6 +18,22 @@ const Grid = Radium(GridBase)
 const GridCol = Radium(GridColBase)
 
 class HeroBase extends Component {
+  static propTypes = {
+    direction: PropTypes.oneOf(['left', 'right']),
+    tiny: PropTypes.bool,
+    imageSrc: PropTypes.string,
+    contentBackgroundColor: PropTypes.string,
+    contentColor: PropTypes.string,
+  }
+
+  static defaultProps = {
+    direction: 'left',
+    tiny: false,
+    imageSrc: '',
+    contentBackgroundColor: COLORS.font1,
+    contentColor: COLORS.background1,
+  }
+
   render() {
     return (
       <Container>
@@ -200,20 +216,6 @@ const styles = {
       },
     },
   },
-}
-
-HeroBase.propTypes = {
-  direction: PropTypes.oneOf(['left', 'right']),
-}
-
-HeroBase.defaultProps = {
-  direction: 'left',
-  tiny: false,
-  imageSrc: 'https://placehold.it/40x40/'
-    + `${COLORS.primary1.replace('#', '')}/`
-    + `${COLORS.primary1.replace('#', '')}`,
-  contentBackgroundColor: COLORS.font1,
-  contentColor: COLORS.background1,
 }
 
 export const Hero = Radium(HeroBase)

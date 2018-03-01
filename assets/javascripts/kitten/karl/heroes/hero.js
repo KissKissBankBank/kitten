@@ -6,21 +6,25 @@ import { Marger } from 'kitten/components/layout/marger'
 import { Button } from 'kitten/components/buttons/button'
 import { StyleRoot } from 'radium'
 import { Grid, GridCol } from 'kitten/components/grid/grid'
+import COLORS from 'kitten/constants/colors-config'
 
-const lorem =
-  'Lorem ipsum dolor sit amet.'
+const lorem = 'Lorem ipsum dolor sit amet.'
 
 const loremIpsum =
-  `${lorem} Consectetuer adipiscing elit. `
-  + 'Aenean commodo ligula eget dolor. Aenean massa.'
+  `${lorem} Consectetuer adipiscing elit. ` +
+  'Aenean commodo ligula eget dolor. Aenean massa.'
 
 const loremIpsumSitAmet =
-  `${loremIpsum} Cum sociis natoque penatibus`
-  + 'et magnis dis parturient montes, nascetur ridiculus '
-  + 'mus. Donec quam  felis, ultricies nec, pellentesque '
-  + 'eu, pretium quis, sem. Nulla consequat massa quis enim.'
-  + ' Donec pede justo, fringilla vel, aliquet nec, '
-  + 'vulputate eget, arcu enim justo, rhoncus ut.'
+  `${loremIpsum} Cum sociis natoque penatibus` +
+  'et magnis dis parturient montes, nascetur ridiculus ' +
+  'mus. Donec quam  felis, ultricies nec, pellentesque ' +
+  'eu, pretium quis, sem. Nulla consequat massa quis enim.' +
+  ' Donec pede justo, fringilla vel, aliquet nec, ' +
+  'vulputate eget, arcu enim justo, rhoncus ut.'
+
+const primaryColor = COLORS.primary1.replace('#', '')
+
+const imageSrc = `https://placehold.it/40x40/${primaryColor}/${primaryColor}`
 
 export const KarlHeroExamples = props => (
   <StyleRoot>
@@ -29,7 +33,7 @@ export const KarlHeroExamples = props => (
         <div className="karl-Example">
           <p className="karl-Example__title">Hero left</p>
         </div>
-        <Hero direction="left">
+        <Hero imageSrc={ imageSrc } direction="left">
           <Marger bottom="5">
             <Title modifier="secondary" margin={ false }>
               { lorem }
@@ -50,7 +54,7 @@ export const KarlHeroExamples = props => (
         <div className="karl-Example">
           <p className="karl-Example__title">Hero right</p>
         </div>
-        <Hero direction="right">
+        <Hero imageSrc={ imageSrc } direction="right">
           <Marger bottom="5">
             <Title modifier="secondary" margin={ false }>
               { lorem }
@@ -71,7 +75,7 @@ export const KarlHeroExamples = props => (
         <div className="karl-Example">
           <p className="karl-Example__title">Hero with small text</p>
         </div>
-        <Hero direction="left" tiny>
+        <Hero imageSrc={ imageSrc } direction="left" tiny>
           <Marger bottom="5">
             <Title modifier="secondary" margin={ false }>
               { lorem }
