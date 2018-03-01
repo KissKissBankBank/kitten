@@ -4,15 +4,22 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `Pagination` component.
-- Feature: Update styles for `disabled` prop on `ArrowIcon` component.
-- Breaking change: Rename `style` prop to `fontStyle` in `Text` component.
-- Feature: Add `rampProps` prop to `Progress` component.
-- Feature: Add `CrowdfundingCard` component.
-- Feature: Add `mediaQueries` HOC.
-- Fix: Update `primary-light` color.
-- Feature: Add `modifier` prop on `TagButton` component.
-- Breaking change: You must now add a `<StyleRoot>` around `<Hero>` components.
+## [20.0.0] - 2018-03-01
+
+Breaking changes:
+- Rename `style` prop to `fontStyle` in `Text` component.
+- You must now add a `<StyleRoot>` around `<Hero>` components.
+
+Features:
+- Add `Pagination` component.
+- Update styles for `disabled` prop on `ArrowIcon` component.
+- Add `rampProps` prop to `Progress` component.
+- Add `CrowdfundingCard` component.
+- Add `mediaQueries` HOC.
+- Add `modifier` prop on `TagButton` component.
+
+Fix:
+- Update `primary-light` color.
 
 ## [19.5.0] - 2018-02-13
 
