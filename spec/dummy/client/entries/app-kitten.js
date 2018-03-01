@@ -41,6 +41,7 @@ import { KarlPaymentButtons } from 'kitten/karl/buttons/payment-button'
 
 // Cards
 import { ArticleCard } from 'kitten/components/cards/article-card'
+import { CrowdfundingCard } from 'kitten/components/cards/crowdfunding-card'
 import { ProjectCard } from 'kitten/components/cards/project-card'
 import { ProjectCreatorCard }
   from 'kitten/components/cards/project-creator-card'
@@ -136,7 +137,7 @@ import { KarlGithubRibbon } from 'kitten/karl/headers/karl-github-ribbon'
 import { KarlMenuHeader } from 'kitten/karl/headers/karl-header'
 
 // heroes.
-import { KarlHero } from 'kitten/karl/heroes/hero'
+import { KarlHeroExamples } from 'kitten/karl/heroes/hero'
 
 // Icons
 import { ArrowIcon } from 'kitten/components/icons/arrow-icon'
@@ -344,6 +345,7 @@ ReactOnRails.register({
 
   // Cards
   ArticleCard,
+  CrowdfundingCard,
   ProjectCard,
   ProjectCreatorCard,
   ProjectSimilarCard,
@@ -419,7 +421,7 @@ ReactOnRails.register({
   KarlUnloggedHeaderPlatformSwitch,
 
   // Heroes.
-  KarlHero,
+  KarlHeroExamples,
 
   // Icons
   ArrowIcon,

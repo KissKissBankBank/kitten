@@ -175,10 +175,6 @@ array-find-index@^1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/array-find-index/-/array-find-index-1.0.2.tgz#df010aa1287e164bbda6f9723b0a96a1ec4187a1"
 
-array-find@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/array-find/-/array-find-1.0.0.tgz#6c8e286d11ed768327f8e62ecee87353ca3e78b8"
-
 array-union@^1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/array-union/-/array-union-1.0.2.tgz#9a34410e4f4e3da23dea375be5be70f24778ec39"
@@ -4923,11 +4919,10 @@ querystring@0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/querystring/-/querystring-0.2.0.tgz#b209849203bb25df820da756e747005878521620"
 
-radium@^0.21.2:
-  version "0.21.2"
-  resolved "https://registry.yarnpkg.com/radium/-/radium-0.21.2.tgz#b7fbc52a8084a5f1f78c3389e639020507d2dfac"
+radium@^0.22.0:
+  version "0.22.0"
+  resolved "https://registry.yarnpkg.com/radium/-/radium-0.22.0.tgz#0127708896a7dc592bdae4768e17054c8f4b29f9"
   dependencies:
-    array-find "^1.0.0"
     exenv "^1.2.1"
     inline-style-prefixer "^4.0.0"
     prop-types "^15.5.8"
@@ -5115,6 +5110,10 @@ react-tooltip@^3.2.2:
   dependencies:
     classnames "^2.2.5"
     prop-types "^15.6.0"
+
+react-truncate@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/react-truncate/-/react-truncate-2.3.0.tgz#d469b355aff1f83ae9e0f2fed0d47dfd061e5d2e"
 
 react@^16.2.0:
   version "16.2.0"

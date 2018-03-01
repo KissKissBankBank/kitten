@@ -1,13 +1,14 @@
 import React from 'react'
 import { Hero } from 'kitten/components/heroes/hero'
 import { Container } from 'kitten/components/grid/container'
+import { StyleRoot } from 'radium'
 
 describe('<Hero />', () => {
   let component
 
   describe('by default', () => {
     beforeEach(() => {
-      component = mount(<Hero>FooBar</Hero>)
+      component = mount(<StyleRoot><Hero>FooBar</Hero></StyleRoot>)
     })
 
     it('has a <Container /> component', () => {
