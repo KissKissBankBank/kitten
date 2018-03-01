@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import Radium, { StyleRoot } from 'radium'
 import PropTypes from 'prop-types'
-import classNames from 'classnames'
 import { Text } from 'kitten/components/typography/text'
 import { ArrowIcon as ArrowIconBase } from 'kitten/components/icons/arrow-icon'
 import { ScreenConfig } from 'kitten/constants/screen-config'
@@ -12,9 +11,9 @@ import { mediaQueries } from 'kitten/hoc/media-queries'
 const ArrowIcon = Radium(ArrowIconBase)
 
 // Returns an array with the given bounds
-const range = (start, end) => {
-  return Array(end - start + 1).fill().map((_, index) => start + index)
-}
+const range = (start, end) => (
+  Array(end - start + 1).fill().map((_, index) => start + index)
+)
 
 // Returns an array of size `availableSlots` with page number integers
 // and breaks "…" (represented as nulls).
@@ -158,7 +157,6 @@ class PaginationBase extends Component {
       ? (currentPage == 1 ? 1 : currentPage - 1)
       : (currentPage == totalPages ? totalPages : currentPage + 1)
 
-    // TODO: Allow NavLinks or onClicks
     return (
       <li style={ styleList }>
         <a
@@ -169,9 +167,9 @@ class PaginationBase extends Component {
           title={ buttonLabel }
           tabIndex={ isDisabled ? -1 : null }
           onClick={
-            isDisabled ?
-              this.preventClickDefault :
-              this.pageClickHandler(number)
+            isDisabled
+              ? this.preventClickDefault
+              : this.pageClickHandler(number)
           }
         >
           <ArrowIcon
