@@ -7,6 +7,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Breaking change: Rename `style` prop to `fontStyle` in `Text` component.
 - Feature: Add `rampProps` prop to `Progress` component.
 - Feature: Add `CrowdfundingCard` component.
+- Feature: Add `mediaQueries` HOC.
+- Fix: Update `primary-light` color.
+- Feature: Add `modifier` prop on `TagButton` component.
 
 ## [19.5.0] - 2018-02-13
 
