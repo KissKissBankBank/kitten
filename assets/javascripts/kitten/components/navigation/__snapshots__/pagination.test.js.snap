@@ -4,48 +4,423 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
 <div
   data-radium={true}
 >
-  <div
-    data-radium={true}
+  <nav
+    aria-label="Pagination navigation"
+    role="navigation"
   >
-    <nav
-      aria-label="Pagination navigation"
-      data-radium={true}
-      role="navigation"
+    <ul
+      style={
+        Object {
+          "display": "inline-flex",
+          "list": Object {
+            "@media (min-width: 640px)": Object {
+              "marginLeft": "8px",
+              "marginRight": "8px",
+            },
+            "buttonIcon": Object {
+              ":active": Object {
+                "backgroundColor": "#19bbff",
+                "borderColor": "#19bbff",
+                "color": "#fff",
+              },
+              ":focus": Object {
+                "backgroundColor": "#fff",
+                "borderColor": "#19bbff",
+                "color": "#19bbff",
+              },
+              ":hover": Object {
+                "backgroundColor": "#fff",
+                "borderColor": "#19bbff",
+                "color": "#19bbff",
+              },
+              "@media (min-width: 640px)": Object {
+                "borderWidth": "2px",
+                "height": "50px",
+                "width": "50px",
+              },
+              "alignItems": "center",
+              "backgroundColor": "#fff",
+              "borderColor": "#eee",
+              "borderRadius": 0,
+              "borderStyle": "solid",
+              "borderWidth": 0,
+              "boxSizing": "border-box",
+              "color": "#222",
+              "cursor": "pointer",
+              "display": "flex",
+              "height": "40px",
+              "isActive": Object {
+                "backgroundColor": "#19bbff",
+                "borderColor": "#19bbff",
+                "color": "#fff",
+              },
+              "isDisabled": Object {
+                ":active": Object {
+                  "backgroundColor": "#d8d8d8",
+                  "borderColor": "#d8d8d8",
+                  "color": "#fff",
+                },
+                ":focus": Object {
+                  "backgroundColor": "#d8d8d8",
+                  "borderColor": "#d8d8d8",
+                  "color": "#fff",
+                },
+                ":hover": Object {
+                  "backgroundColor": "#d8d8d8",
+                  "borderColor": "#d8d8d8",
+                  "color": "#fff",
+                },
+                "backgroundColor": "#d8d8d8",
+                "borderColor": "#d8d8d8",
+                "color": "#fff",
+                "cursor": "not-allowed",
+              },
+              "justifyContent": "center",
+              "outline": "none",
+              "svg": Object {
+                "active": Object {
+                  "fill": "#fff",
+                },
+                "alignSelf": "center",
+                "focus": Object {
+                  "fill": "#19bbff",
+                },
+                "height": "14px",
+                "hover": Object {
+                  "fill": "#19bbff",
+                },
+                "isDisabled": Object {
+                  "fill": "#fff",
+                },
+                "margin": "0",
+                "padding": "0",
+                "pointerEvents": "none",
+                "width": "12px",
+              },
+              "textDecoration": "none",
+              "width": "40px",
+            },
+            "lastChild": Object {
+              "marginRight": 0,
+            },
+            "left": Object {
+              "@media (min-width: 640px)": Object {
+                "marginRight": "22px",
+              },
+              "listStyle": "none",
+              "marginRight": "30px",
+            },
+            "listStyle": "none",
+            "marginRight": 0,
+            "points": Object {
+              "@media (min-width: 640px)": Object {
+                "marginLeft": "8px",
+                "marginRight": "8px",
+                "width": "50px",
+              },
+              "alignSelf": "center",
+              "listStyle": "none",
+              "textAlign": "center",
+              "textDecoration": "none",
+              "width": "40px",
+            },
+            "right": Object {
+              "@media (min-width: 640px)": Object {
+                "marginLeft": "22px",
+              },
+              "listStyle": "none",
+              "marginLeft": "30px",
+            },
+          },
+          "padding": 0,
+        }
+      }
     >
-      <ul
-        data-radium={true}
+      <li
+        style={
+          Array [
+            Object {
+              "@media (min-width: 640px)": Object {
+                "marginRight": "22px",
+              },
+              "listStyle": "none",
+              "marginRight": "30px",
+            },
+            false,
+          ]
+        }
+      >
+        <a
+          aria-label="Previous page"
+          href="#9"
+          onClick={[Function]}
+          style={
+            Array [
+              Object {
+                ":active": Object {
+                  "backgroundColor": "#19bbff",
+                  "borderColor": "#19bbff",
+                  "color": "#fff",
+                },
+                ":focus": Object {
+                  "backgroundColor": "#fff",
+                  "borderColor": "#19bbff",
+                  "color": "#19bbff",
+                },
+                ":hover": Object {
+                  "backgroundColor": "#fff",
+                  "borderColor": "#19bbff",
+                  "color": "#19bbff",
+                },
+                "@media (min-width: 640px)": Object {
+                  "borderWidth": "2px",
+                  "height": "50px",
+                  "width": "50px",
+                },
+                "alignItems": "center",
+                "backgroundColor": "#fff",
+                "borderColor": "#eee",
+                "borderRadius": 0,
+                "borderStyle": "solid",
+                "borderWidth": 0,
+                "boxSizing": "border-box",
+                "color": "#222",
+                "cursor": "pointer",
+                "display": "flex",
+                "height": "40px",
+                "isActive": Object {
+                  "backgroundColor": "#19bbff",
+                  "borderColor": "#19bbff",
+                  "color": "#fff",
+                },
+                "isDisabled": Object {
+                  ":active": Object {
+                    "backgroundColor": "#d8d8d8",
+                    "borderColor": "#d8d8d8",
+                    "color": "#fff",
+                  },
+                  ":focus": Object {
+                    "backgroundColor": "#d8d8d8",
+                    "borderColor": "#d8d8d8",
+                    "color": "#fff",
+                  },
+                  ":hover": Object {
+                    "backgroundColor": "#d8d8d8",
+                    "borderColor": "#d8d8d8",
+                    "color": "#fff",
+                  },
+                  "backgroundColor": "#d8d8d8",
+                  "borderColor": "#d8d8d8",
+                  "color": "#fff",
+                  "cursor": "not-allowed",
+                },
+                "justifyContent": "center",
+                "outline": "none",
+                "svg": Object {
+                  "active": Object {
+                    "fill": "#fff",
+                  },
+                  "alignSelf": "center",
+                  "focus": Object {
+                    "fill": "#19bbff",
+                  },
+                  "height": "14px",
+                  "hover": Object {
+                    "fill": "#19bbff",
+                  },
+                  "isDisabled": Object {
+                    "fill": "#fff",
+                  },
+                  "margin": "0",
+                  "padding": "0",
+                  "pointerEvents": "none",
+                  "width": "12px",
+                },
+                "textDecoration": "none",
+                "width": "40px",
+              },
+              false,
+            ]
+          }
+          tabIndex={null}
+          title="Previous page"
+        >
+          <svg
+            className="k-ArrowIcon--left"
+            data-radium={true}
+            style={
+              Object {
+                "alignSelf": "center",
+                "height": "14px",
+                "margin": "0",
+                "padding": "0",
+                "pointerEvents": "none",
+                "width": "12px",
+              }
+            }
+            viewBox="0 0 10 10"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M7.828,5L6.414,6.413L2.172,2.172l1.414-1.415L7.828,5z"
+            />
+            <path
+              d="M7.828,5L3.586,9.243L2.172,7.827l4.242-4.241L7.828,5z"
+            />
+          </svg>
+        </a>
+      </li>
+      <li
         style={
           Object {
-            "display": "inline-flex",
-            "padding": 0,
+            "@media (min-width: 640px)": Object {
+              "marginLeft": "8px",
+              "marginRight": "8px",
+            },
+            "buttonIcon": Object {
+              ":active": Object {
+                "backgroundColor": "#19bbff",
+                "borderColor": "#19bbff",
+                "color": "#fff",
+              },
+              ":focus": Object {
+                "backgroundColor": "#fff",
+                "borderColor": "#19bbff",
+                "color": "#19bbff",
+              },
+              ":hover": Object {
+                "backgroundColor": "#fff",
+                "borderColor": "#19bbff",
+                "color": "#19bbff",
+              },
+              "@media (min-width: 640px)": Object {
+                "borderWidth": "2px",
+                "height": "50px",
+                "width": "50px",
+              },
+              "alignItems": "center",
+              "backgroundColor": "#fff",
+              "borderColor": "#eee",
+              "borderRadius": 0,
+              "borderStyle": "solid",
+              "borderWidth": 0,
+              "boxSizing": "border-box",
+              "color": "#222",
+              "cursor": "pointer",
+              "display": "flex",
+              "height": "40px",
+              "isActive": Object {
+                "backgroundColor": "#19bbff",
+                "borderColor": "#19bbff",
+                "color": "#fff",
+              },
+              "isDisabled": Object {
+                ":active": Object {
+                  "backgroundColor": "#d8d8d8",
+                  "borderColor": "#d8d8d8",
+                  "color": "#fff",
+                },
+                ":focus": Object {
+                  "backgroundColor": "#d8d8d8",
+                  "borderColor": "#d8d8d8",
+                  "color": "#fff",
+                },
+                ":hover": Object {
+                  "backgroundColor": "#d8d8d8",
+                  "borderColor": "#d8d8d8",
+                  "color": "#fff",
+                },
+                "backgroundColor": "#d8d8d8",
+                "borderColor": "#d8d8d8",
+                "color": "#fff",
+                "cursor": "not-allowed",
+              },
+              "justifyContent": "center",
+              "outline": "none",
+              "svg": Object {
+                "active": Object {
+                  "fill": "#fff",
+                },
+                "alignSelf": "center",
+                "focus": Object {
+                  "fill": "#19bbff",
+                },
+                "height": "14px",
+                "hover": Object {
+                  "fill": "#19bbff",
+                },
+                "isDisabled": Object {
+                  "fill": "#fff",
+                },
+                "margin": "0",
+                "padding": "0",
+                "pointerEvents": "none",
+                "width": "12px",
+              },
+              "textDecoration": "none",
+              "width": "40px",
+            },
+            "lastChild": Object {
+              "marginRight": 0,
+            },
+            "left": Object {
+              "@media (min-width: 640px)": Object {
+                "marginRight": "22px",
+              },
+              "listStyle": "none",
+              "marginRight": "30px",
+            },
+            "listStyle": "none",
+            "marginRight": 0,
+            "points": Object {
+              "@media (min-width: 640px)": Object {
+                "marginLeft": "8px",
+                "marginRight": "8px",
+                "width": "50px",
+              },
+              "alignSelf": "center",
+              "listStyle": "none",
+              "textAlign": "center",
+              "textDecoration": "none",
+              "width": "40px",
+            },
+            "right": Object {
+              "@media (min-width: 640px)": Object {
+                "marginLeft": "22px",
+              },
+              "listStyle": "none",
+              "marginLeft": "30px",
+            },
           }
         }
       >
-        <li
-          className="rmq-3376e0da"
-          data-radium={true}
+        <a
+          aria-label="Go to page 1"
+          href="#1"
+          onClick={[Function]}
           style={
-            Object {
-              "listStyle": "none",
-              "marginRight": "30px",
-            }
-          }
-        >
-          <a
-            aria-label="Previous page"
-            className="rmq-e4506d25"
-            data-radium={true}
-            href="#9"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-            style={
+            Array [
               Object {
+                ":active": Object {
+                  "backgroundColor": "#19bbff",
+                  "borderColor": "#19bbff",
+                  "color": "#fff",
+                },
+                ":focus": Object {
+                  "backgroundColor": "#fff",
+                  "borderColor": "#19bbff",
+                  "color": "#19bbff",
+                },
+                ":hover": Object {
+                  "backgroundColor": "#fff",
+                  "borderColor": "#19bbff",
+                  "color": "#19bbff",
+                },
+                "@media (min-width: 640px)": Object {
+                  "borderWidth": "2px",
+                  "height": "50px",
+                  "width": "50px",
+                },
                 "alignItems": "center",
                 "backgroundColor": "#fff",
                 "borderColor": "#eee",
@@ -57,350 +432,238 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
                 "cursor": "pointer",
                 "display": "flex",
                 "height": "40px",
+                "isActive": Object {
+                  "backgroundColor": "#19bbff",
+                  "borderColor": "#19bbff",
+                  "color": "#fff",
+                },
+                "isDisabled": Object {
+                  ":active": Object {
+                    "backgroundColor": "#d8d8d8",
+                    "borderColor": "#d8d8d8",
+                    "color": "#fff",
+                  },
+                  ":focus": Object {
+                    "backgroundColor": "#d8d8d8",
+                    "borderColor": "#d8d8d8",
+                    "color": "#fff",
+                  },
+                  ":hover": Object {
+                    "backgroundColor": "#d8d8d8",
+                    "borderColor": "#d8d8d8",
+                    "color": "#fff",
+                  },
+                  "backgroundColor": "#d8d8d8",
+                  "borderColor": "#d8d8d8",
+                  "color": "#fff",
+                  "cursor": "not-allowed",
+                },
                 "justifyContent": "center",
                 "outline": "none",
-                "textDecoration": "none",
-                "width": "40px",
-              }
-            }
-            tabIndex={null}
-            title="Previous page"
-          >
-            <svg
-              className="k-ArrowIcon--left"
-              data-radium={true}
-              style={
-                Object {
+                "svg": Object {
+                  "active": Object {
+                    "fill": "#fff",
+                  },
                   "alignSelf": "center",
+                  "focus": Object {
+                    "fill": "#19bbff",
+                  },
                   "height": "14px",
+                  "hover": Object {
+                    "fill": "#19bbff",
+                  },
+                  "isDisabled": Object {
+                    "fill": "#fff",
+                  },
                   "margin": "0",
                   "padding": "0",
                   "pointerEvents": "none",
                   "width": "12px",
-                }
-              }
-              viewBox="0 0 10 10"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M7.828,5L6.414,6.413L2.172,2.172l1.414-1.415L7.828,5z"
-              />
-              <path
-                d="M7.828,5L3.586,9.243L2.172,7.827l4.242-4.241L7.828,5z"
-              />
-            </svg>
-          </a>
-        </li>
-        <li
-          className="rmq-51af0236"
-          data-radium={true}
-          style={
-            Object {
-              "listStyle": "none",
-              "marginRight": 0,
-            }
-          }
-        >
-          <a
-            aria-label="Go to page 1"
-            className="rmq-e4506d25"
-            data-radium={true}
-            href="#1"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-            style={
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "#fff",
-                "borderColor": "#eee",
-                "borderRadius": 0,
-                "borderStyle": "solid",
-                "borderWidth": 0,
-                "boxSizing": "border-box",
-                "color": "#222",
-                "cursor": "pointer",
-                "display": "flex",
-                "height": "40px",
-                "justifyContent": "center",
-                "outline": "none",
+                },
                 "textDecoration": "none",
                 "width": "40px",
-              }
-            }
-            tabIndex={null}
+              },
+              false,
+            ]
+          }
+          tabIndex={null}
+        >
+          <span
+            className="k-u-size-tiny k-u-weight-regular"
           >
-            <span
-              className="k-u-size-tiny k-u-weight-regular"
-            >
-              1
-            </span>
-          </a>
-        </li>
-        <li
-          className="rmq-1abc7c31"
-          data-radium={true}
-          style={
-            Object {
-              "alignSelf": "center",
-              "listStyle": "none",
-              "textAlign": "center",
-              "textDecoration": "none",
-              "width": "40px",
-            }
+            1
+          </span>
+        </a>
+      </li>
+      <li
+        style={
+          Object {
+            "@media (min-width: 640px)": Object {
+              "marginLeft": "8px",
+              "marginRight": "8px",
+              "width": "50px",
+            },
+            "alignSelf": "center",
+            "listStyle": "none",
+            "textAlign": "center",
+            "textDecoration": "none",
+            "width": "40px",
           }
-        >
-          …
-        </li>
-        <li
-          className="rmq-51af0236"
-          data-radium={true}
-          style={
-            Object {
-              "listStyle": "none",
-              "marginRight": 0,
-            }
-          }
-        >
-          <a
-            aria-label="Go to page 9"
-            className="rmq-e4506d25"
-            data-radium={true}
-            href="#9"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-            style={
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "#fff",
-                "borderColor": "#eee",
-                "borderRadius": 0,
-                "borderStyle": "solid",
-                "borderWidth": 0,
-                "boxSizing": "border-box",
-                "color": "#222",
-                "cursor": "pointer",
-                "display": "flex",
-                "height": "40px",
-                "justifyContent": "center",
-                "outline": "none",
-                "textDecoration": "none",
-                "width": "40px",
-              }
-            }
-            tabIndex={null}
-          >
-            <span
-              className="k-u-size-tiny k-u-weight-regular"
-            >
-              9
-            </span>
-          </a>
-        </li>
-        <li
-          className="rmq-51af0236"
-          data-radium={true}
-          style={
-            Object {
-              "listStyle": "none",
-              "marginRight": 0,
-            }
-          }
-        >
-          <a
-            aria-label="Go to page 10"
-            className="rmq-e4506d25"
-            data-radium={true}
-            href="#10"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-            style={
-              Object {
-                "alignItems": "center",
+        }
+      >
+        …
+      </li>
+      <li
+        style={
+          Object {
+            "@media (min-width: 640px)": Object {
+              "marginLeft": "8px",
+              "marginRight": "8px",
+            },
+            "buttonIcon": Object {
+              ":active": Object {
                 "backgroundColor": "#19bbff",
                 "borderColor": "#19bbff",
-                "borderRadius": 0,
-                "borderStyle": "solid",
-                "borderWidth": 0,
-                "boxSizing": "border-box",
                 "color": "#fff",
-                "cursor": "pointer",
-                "display": "flex",
-                "height": "40px",
-                "justifyContent": "center",
-                "outline": "none",
-                "textDecoration": "none",
-                "width": "40px",
-              }
-            }
-            tabIndex={-1}
-          >
-            <span
-              className="k-u-size-tiny k-u-weight-regular"
-            >
-              10
-            </span>
-          </a>
-        </li>
-        <li
-          className="rmq-51af0236"
-          data-radium={true}
-          style={
-            Object {
-              "listStyle": "none",
-              "marginRight": 0,
-            }
-          }
-        >
-          <a
-            aria-label="Go to page 11"
-            className="rmq-e4506d25"
-            data-radium={true}
-            href="#11"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-            style={
-              Object {
-                "alignItems": "center",
+              },
+              ":focus": Object {
                 "backgroundColor": "#fff",
-                "borderColor": "#eee",
-                "borderRadius": 0,
-                "borderStyle": "solid",
-                "borderWidth": 0,
-                "boxSizing": "border-box",
-                "color": "#222",
-                "cursor": "pointer",
-                "display": "flex",
-                "height": "40px",
-                "justifyContent": "center",
-                "outline": "none",
-                "textDecoration": "none",
-                "width": "40px",
-              }
-            }
-            tabIndex={null}
-          >
-            <span
-              className="k-u-size-tiny k-u-weight-regular"
-            >
-              11
-            </span>
-          </a>
-        </li>
-        <li
-          className="rmq-1abc7c31"
-          data-radium={true}
-          style={
-            Object {
+                "borderColor": "#19bbff",
+                "color": "#19bbff",
+              },
+              ":hover": Object {
+                "backgroundColor": "#fff",
+                "borderColor": "#19bbff",
+                "color": "#19bbff",
+              },
+              "@media (min-width: 640px)": Object {
+                "borderWidth": "2px",
+                "height": "50px",
+                "width": "50px",
+              },
+              "alignItems": "center",
+              "backgroundColor": "#fff",
+              "borderColor": "#eee",
+              "borderRadius": 0,
+              "borderStyle": "solid",
+              "borderWidth": 0,
+              "boxSizing": "border-box",
+              "color": "#222",
+              "cursor": "pointer",
+              "display": "flex",
+              "height": "40px",
+              "isActive": Object {
+                "backgroundColor": "#19bbff",
+                "borderColor": "#19bbff",
+                "color": "#fff",
+              },
+              "isDisabled": Object {
+                ":active": Object {
+                  "backgroundColor": "#d8d8d8",
+                  "borderColor": "#d8d8d8",
+                  "color": "#fff",
+                },
+                ":focus": Object {
+                  "backgroundColor": "#d8d8d8",
+                  "borderColor": "#d8d8d8",
+                  "color": "#fff",
+                },
+                ":hover": Object {
+                  "backgroundColor": "#d8d8d8",
+                  "borderColor": "#d8d8d8",
+                  "color": "#fff",
+                },
+                "backgroundColor": "#d8d8d8",
+                "borderColor": "#d8d8d8",
+                "color": "#fff",
+                "cursor": "not-allowed",
+              },
+              "justifyContent": "center",
+              "outline": "none",
+              "svg": Object {
+                "active": Object {
+                  "fill": "#fff",
+                },
+                "alignSelf": "center",
+                "focus": Object {
+                  "fill": "#19bbff",
+                },
+                "height": "14px",
+                "hover": Object {
+                  "fill": "#19bbff",
+                },
+                "isDisabled": Object {
+                  "fill": "#fff",
+                },
+                "margin": "0",
+                "padding": "0",
+                "pointerEvents": "none",
+                "width": "12px",
+              },
+              "textDecoration": "none",
+              "width": "40px",
+            },
+            "lastChild": Object {
+              "marginRight": 0,
+            },
+            "left": Object {
+              "@media (min-width: 640px)": Object {
+                "marginRight": "22px",
+              },
+              "listStyle": "none",
+              "marginRight": "30px",
+            },
+            "listStyle": "none",
+            "marginRight": 0,
+            "points": Object {
+              "@media (min-width: 640px)": Object {
+                "marginLeft": "8px",
+                "marginRight": "8px",
+                "width": "50px",
+              },
               "alignSelf": "center",
               "listStyle": "none",
               "textAlign": "center",
               "textDecoration": "none",
               "width": "40px",
-            }
-          }
-        >
-          …
-        </li>
-        <li
-          className="rmq-51af0236"
-          data-radium={true}
-          style={
-            Object {
-              "listStyle": "none",
-              "marginRight": 0,
-            }
-          }
-        >
-          <a
-            aria-label="Go to page 42"
-            className="rmq-e4506d25"
-            data-radium={true}
-            href="#42"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-            style={
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "#fff",
-                "borderColor": "#eee",
-                "borderRadius": 0,
-                "borderStyle": "solid",
-                "borderWidth": 0,
-                "boxSizing": "border-box",
-                "color": "#222",
-                "cursor": "pointer",
-                "display": "flex",
-                "height": "40px",
-                "justifyContent": "center",
-                "outline": "none",
-                "textDecoration": "none",
-                "width": "40px",
-              }
-            }
-            tabIndex={null}
-          >
-            <span
-              className="k-u-size-tiny k-u-weight-regular"
-            >
-              42
-            </span>
-          </a>
-        </li>
-        <li
-          className="rmq-17778861"
-          data-radium={true}
-          style={
-            Object {
+            },
+            "right": Object {
+              "@media (min-width: 640px)": Object {
+                "marginLeft": "22px",
+              },
               "listStyle": "none",
               "marginLeft": "30px",
-            }
+            },
           }
-        >
-          <a
-            aria-label="Next page"
-            className="rmq-e4506d25"
-            data-radium={true}
-            href="#11"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-            style={
+        }
+      >
+        <a
+          aria-label="Go to page 9"
+          href="#9"
+          onClick={[Function]}
+          style={
+            Array [
               Object {
+                ":active": Object {
+                  "backgroundColor": "#19bbff",
+                  "borderColor": "#19bbff",
+                  "color": "#fff",
+                },
+                ":focus": Object {
+                  "backgroundColor": "#fff",
+                  "borderColor": "#19bbff",
+                  "color": "#19bbff",
+                },
+                ":hover": Object {
+                  "backgroundColor": "#fff",
+                  "borderColor": "#19bbff",
+                  "color": "#19bbff",
+                },
+                "@media (min-width: 640px)": Object {
+                  "borderWidth": "2px",
+                  "height": "50px",
+                  "width": "50px",
+                },
                 "alignItems": "center",
                 "backgroundColor": "#fff",
                 "borderColor": "#eee",
@@ -412,59 +675,902 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
                 "cursor": "pointer",
                 "display": "flex",
                 "height": "40px",
+                "isActive": Object {
+                  "backgroundColor": "#19bbff",
+                  "borderColor": "#19bbff",
+                  "color": "#fff",
+                },
+                "isDisabled": Object {
+                  ":active": Object {
+                    "backgroundColor": "#d8d8d8",
+                    "borderColor": "#d8d8d8",
+                    "color": "#fff",
+                  },
+                  ":focus": Object {
+                    "backgroundColor": "#d8d8d8",
+                    "borderColor": "#d8d8d8",
+                    "color": "#fff",
+                  },
+                  ":hover": Object {
+                    "backgroundColor": "#d8d8d8",
+                    "borderColor": "#d8d8d8",
+                    "color": "#fff",
+                  },
+                  "backgroundColor": "#d8d8d8",
+                  "borderColor": "#d8d8d8",
+                  "color": "#fff",
+                  "cursor": "not-allowed",
+                },
                 "justifyContent": "center",
                 "outline": "none",
-                "textDecoration": "none",
-                "width": "40px",
-              }
-            }
-            tabIndex={null}
-            title="Next page"
-          >
-            <svg
-              className="k-ArrowIcon--right"
-              data-radium={true}
-              style={
-                Object {
+                "svg": Object {
+                  "active": Object {
+                    "fill": "#fff",
+                  },
                   "alignSelf": "center",
+                  "focus": Object {
+                    "fill": "#19bbff",
+                  },
                   "height": "14px",
+                  "hover": Object {
+                    "fill": "#19bbff",
+                  },
+                  "isDisabled": Object {
+                    "fill": "#fff",
+                  },
                   "margin": "0",
                   "padding": "0",
                   "pointerEvents": "none",
                   "width": "12px",
-                }
-              }
-              viewBox="0 0 10 10"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M7.828,5L6.414,6.413L2.172,2.172l1.414-1.415L7.828,5z"
-              />
-              <path
-                d="M7.828,5L3.586,9.243L2.172,7.827l4.242-4.241L7.828,5z"
-              />
-            </svg>
-          </a>
-        </li>
-      </ul>
-    </nav>
-    <style
-      dangerouslySetInnerHTML={
-        Object {
-          "__html": "@media (min-width: 640px){ .rmq-e4506d25{width: 50px !important;
-height: 50px !important;
-border-width: 2px !important;}}
-@media (min-width: 640px){ .rmq-3376e0da{margin-right: 22px !important;}}
-@media (min-width: 640px){ .rmq-51af0236{margin-right: 8px !important;
-margin-left: 8px !important;}}
-@media (min-width: 640px){ .rmq-1abc7c31{margin-left: 8px !important;
-margin-right: 8px !important;
-width: 50px !important;}}
-@media (min-width: 640px){ .rmq-17778861{margin-left: 22px !important;}}",
+                },
+                "textDecoration": "none",
+                "width": "40px",
+              },
+              false,
+            ]
+          }
+          tabIndex={null}
+        >
+          <span
+            className="k-u-size-tiny k-u-weight-regular"
+          >
+            9
+          </span>
+        </a>
+      </li>
+      <li
+        style={
+          Object {
+            "@media (min-width: 640px)": Object {
+              "marginLeft": "8px",
+              "marginRight": "8px",
+            },
+            "buttonIcon": Object {
+              ":active": Object {
+                "backgroundColor": "#19bbff",
+                "borderColor": "#19bbff",
+                "color": "#fff",
+              },
+              ":focus": Object {
+                "backgroundColor": "#fff",
+                "borderColor": "#19bbff",
+                "color": "#19bbff",
+              },
+              ":hover": Object {
+                "backgroundColor": "#fff",
+                "borderColor": "#19bbff",
+                "color": "#19bbff",
+              },
+              "@media (min-width: 640px)": Object {
+                "borderWidth": "2px",
+                "height": "50px",
+                "width": "50px",
+              },
+              "alignItems": "center",
+              "backgroundColor": "#fff",
+              "borderColor": "#eee",
+              "borderRadius": 0,
+              "borderStyle": "solid",
+              "borderWidth": 0,
+              "boxSizing": "border-box",
+              "color": "#222",
+              "cursor": "pointer",
+              "display": "flex",
+              "height": "40px",
+              "isActive": Object {
+                "backgroundColor": "#19bbff",
+                "borderColor": "#19bbff",
+                "color": "#fff",
+              },
+              "isDisabled": Object {
+                ":active": Object {
+                  "backgroundColor": "#d8d8d8",
+                  "borderColor": "#d8d8d8",
+                  "color": "#fff",
+                },
+                ":focus": Object {
+                  "backgroundColor": "#d8d8d8",
+                  "borderColor": "#d8d8d8",
+                  "color": "#fff",
+                },
+                ":hover": Object {
+                  "backgroundColor": "#d8d8d8",
+                  "borderColor": "#d8d8d8",
+                  "color": "#fff",
+                },
+                "backgroundColor": "#d8d8d8",
+                "borderColor": "#d8d8d8",
+                "color": "#fff",
+                "cursor": "not-allowed",
+              },
+              "justifyContent": "center",
+              "outline": "none",
+              "svg": Object {
+                "active": Object {
+                  "fill": "#fff",
+                },
+                "alignSelf": "center",
+                "focus": Object {
+                  "fill": "#19bbff",
+                },
+                "height": "14px",
+                "hover": Object {
+                  "fill": "#19bbff",
+                },
+                "isDisabled": Object {
+                  "fill": "#fff",
+                },
+                "margin": "0",
+                "padding": "0",
+                "pointerEvents": "none",
+                "width": "12px",
+              },
+              "textDecoration": "none",
+              "width": "40px",
+            },
+            "lastChild": Object {
+              "marginRight": 0,
+            },
+            "left": Object {
+              "@media (min-width: 640px)": Object {
+                "marginRight": "22px",
+              },
+              "listStyle": "none",
+              "marginRight": "30px",
+            },
+            "listStyle": "none",
+            "marginRight": 0,
+            "points": Object {
+              "@media (min-width: 640px)": Object {
+                "marginLeft": "8px",
+                "marginRight": "8px",
+                "width": "50px",
+              },
+              "alignSelf": "center",
+              "listStyle": "none",
+              "textAlign": "center",
+              "textDecoration": "none",
+              "width": "40px",
+            },
+            "right": Object {
+              "@media (min-width: 640px)": Object {
+                "marginLeft": "22px",
+              },
+              "listStyle": "none",
+              "marginLeft": "30px",
+            },
+          }
         }
-      }
-    />
-  </div>
+      >
+        <a
+          aria-label="Go to page 10"
+          href="#10"
+          onClick={[Function]}
+          style={
+            Array [
+              Object {
+                ":active": Object {
+                  "backgroundColor": "#19bbff",
+                  "borderColor": "#19bbff",
+                  "color": "#fff",
+                },
+                ":focus": Object {
+                  "backgroundColor": "#fff",
+                  "borderColor": "#19bbff",
+                  "color": "#19bbff",
+                },
+                ":hover": Object {
+                  "backgroundColor": "#fff",
+                  "borderColor": "#19bbff",
+                  "color": "#19bbff",
+                },
+                "@media (min-width: 640px)": Object {
+                  "borderWidth": "2px",
+                  "height": "50px",
+                  "width": "50px",
+                },
+                "alignItems": "center",
+                "backgroundColor": "#fff",
+                "borderColor": "#eee",
+                "borderRadius": 0,
+                "borderStyle": "solid",
+                "borderWidth": 0,
+                "boxSizing": "border-box",
+                "color": "#222",
+                "cursor": "pointer",
+                "display": "flex",
+                "height": "40px",
+                "isActive": Object {
+                  "backgroundColor": "#19bbff",
+                  "borderColor": "#19bbff",
+                  "color": "#fff",
+                },
+                "isDisabled": Object {
+                  ":active": Object {
+                    "backgroundColor": "#d8d8d8",
+                    "borderColor": "#d8d8d8",
+                    "color": "#fff",
+                  },
+                  ":focus": Object {
+                    "backgroundColor": "#d8d8d8",
+                    "borderColor": "#d8d8d8",
+                    "color": "#fff",
+                  },
+                  ":hover": Object {
+                    "backgroundColor": "#d8d8d8",
+                    "borderColor": "#d8d8d8",
+                    "color": "#fff",
+                  },
+                  "backgroundColor": "#d8d8d8",
+                  "borderColor": "#d8d8d8",
+                  "color": "#fff",
+                  "cursor": "not-allowed",
+                },
+                "justifyContent": "center",
+                "outline": "none",
+                "svg": Object {
+                  "active": Object {
+                    "fill": "#fff",
+                  },
+                  "alignSelf": "center",
+                  "focus": Object {
+                    "fill": "#19bbff",
+                  },
+                  "height": "14px",
+                  "hover": Object {
+                    "fill": "#19bbff",
+                  },
+                  "isDisabled": Object {
+                    "fill": "#fff",
+                  },
+                  "margin": "0",
+                  "padding": "0",
+                  "pointerEvents": "none",
+                  "width": "12px",
+                },
+                "textDecoration": "none",
+                "width": "40px",
+              },
+              Object {
+                "backgroundColor": "#19bbff",
+                "borderColor": "#19bbff",
+                "color": "#fff",
+              },
+            ]
+          }
+          tabIndex={-1}
+        >
+          <span
+            className="k-u-size-tiny k-u-weight-regular"
+          >
+            10
+          </span>
+        </a>
+      </li>
+      <li
+        style={
+          Object {
+            "@media (min-width: 640px)": Object {
+              "marginLeft": "8px",
+              "marginRight": "8px",
+            },
+            "buttonIcon": Object {
+              ":active": Object {
+                "backgroundColor": "#19bbff",
+                "borderColor": "#19bbff",
+                "color": "#fff",
+              },
+              ":focus": Object {
+                "backgroundColor": "#fff",
+                "borderColor": "#19bbff",
+                "color": "#19bbff",
+              },
+              ":hover": Object {
+                "backgroundColor": "#fff",
+                "borderColor": "#19bbff",
+                "color": "#19bbff",
+              },
+              "@media (min-width: 640px)": Object {
+                "borderWidth": "2px",
+                "height": "50px",
+                "width": "50px",
+              },
+              "alignItems": "center",
+              "backgroundColor": "#fff",
+              "borderColor": "#eee",
+              "borderRadius": 0,
+              "borderStyle": "solid",
+              "borderWidth": 0,
+              "boxSizing": "border-box",
+              "color": "#222",
+              "cursor": "pointer",
+              "display": "flex",
+              "height": "40px",
+              "isActive": Object {
+                "backgroundColor": "#19bbff",
+                "borderColor": "#19bbff",
+                "color": "#fff",
+              },
+              "isDisabled": Object {
+                ":active": Object {
+                  "backgroundColor": "#d8d8d8",
+                  "borderColor": "#d8d8d8",
+                  "color": "#fff",
+                },
+                ":focus": Object {
+                  "backgroundColor": "#d8d8d8",
+                  "borderColor": "#d8d8d8",
+                  "color": "#fff",
+                },
+                ":hover": Object {
+                  "backgroundColor": "#d8d8d8",
+                  "borderColor": "#d8d8d8",
+                  "color": "#fff",
+                },
+                "backgroundColor": "#d8d8d8",
+                "borderColor": "#d8d8d8",
+                "color": "#fff",
+                "cursor": "not-allowed",
+              },
+              "justifyContent": "center",
+              "outline": "none",
+              "svg": Object {
+                "active": Object {
+                  "fill": "#fff",
+                },
+                "alignSelf": "center",
+                "focus": Object {
+                  "fill": "#19bbff",
+                },
+                "height": "14px",
+                "hover": Object {
+                  "fill": "#19bbff",
+                },
+                "isDisabled": Object {
+                  "fill": "#fff",
+                },
+                "margin": "0",
+                "padding": "0",
+                "pointerEvents": "none",
+                "width": "12px",
+              },
+              "textDecoration": "none",
+              "width": "40px",
+            },
+            "lastChild": Object {
+              "marginRight": 0,
+            },
+            "left": Object {
+              "@media (min-width: 640px)": Object {
+                "marginRight": "22px",
+              },
+              "listStyle": "none",
+              "marginRight": "30px",
+            },
+            "listStyle": "none",
+            "marginRight": 0,
+            "points": Object {
+              "@media (min-width: 640px)": Object {
+                "marginLeft": "8px",
+                "marginRight": "8px",
+                "width": "50px",
+              },
+              "alignSelf": "center",
+              "listStyle": "none",
+              "textAlign": "center",
+              "textDecoration": "none",
+              "width": "40px",
+            },
+            "right": Object {
+              "@media (min-width: 640px)": Object {
+                "marginLeft": "22px",
+              },
+              "listStyle": "none",
+              "marginLeft": "30px",
+            },
+          }
+        }
+      >
+        <a
+          aria-label="Go to page 11"
+          href="#11"
+          onClick={[Function]}
+          style={
+            Array [
+              Object {
+                ":active": Object {
+                  "backgroundColor": "#19bbff",
+                  "borderColor": "#19bbff",
+                  "color": "#fff",
+                },
+                ":focus": Object {
+                  "backgroundColor": "#fff",
+                  "borderColor": "#19bbff",
+                  "color": "#19bbff",
+                },
+                ":hover": Object {
+                  "backgroundColor": "#fff",
+                  "borderColor": "#19bbff",
+                  "color": "#19bbff",
+                },
+                "@media (min-width: 640px)": Object {
+                  "borderWidth": "2px",
+                  "height": "50px",
+                  "width": "50px",
+                },
+                "alignItems": "center",
+                "backgroundColor": "#fff",
+                "borderColor": "#eee",
+                "borderRadius": 0,
+                "borderStyle": "solid",
+                "borderWidth": 0,
+                "boxSizing": "border-box",
+                "color": "#222",
+                "cursor": "pointer",
+                "display": "flex",
+                "height": "40px",
+                "isActive": Object {
+                  "backgroundColor": "#19bbff",
+                  "borderColor": "#19bbff",
+                  "color": "#fff",
+                },
+                "isDisabled": Object {
+                  ":active": Object {
+                    "backgroundColor": "#d8d8d8",
+                    "borderColor": "#d8d8d8",
+                    "color": "#fff",
+                  },
+                  ":focus": Object {
+                    "backgroundColor": "#d8d8d8",
+                    "borderColor": "#d8d8d8",
+                    "color": "#fff",
+                  },
+                  ":hover": Object {
+                    "backgroundColor": "#d8d8d8",
+                    "borderColor": "#d8d8d8",
+                    "color": "#fff",
+                  },
+                  "backgroundColor": "#d8d8d8",
+                  "borderColor": "#d8d8d8",
+                  "color": "#fff",
+                  "cursor": "not-allowed",
+                },
+                "justifyContent": "center",
+                "outline": "none",
+                "svg": Object {
+                  "active": Object {
+                    "fill": "#fff",
+                  },
+                  "alignSelf": "center",
+                  "focus": Object {
+                    "fill": "#19bbff",
+                  },
+                  "height": "14px",
+                  "hover": Object {
+                    "fill": "#19bbff",
+                  },
+                  "isDisabled": Object {
+                    "fill": "#fff",
+                  },
+                  "margin": "0",
+                  "padding": "0",
+                  "pointerEvents": "none",
+                  "width": "12px",
+                },
+                "textDecoration": "none",
+                "width": "40px",
+              },
+              false,
+            ]
+          }
+          tabIndex={null}
+        >
+          <span
+            className="k-u-size-tiny k-u-weight-regular"
+          >
+            11
+          </span>
+        </a>
+      </li>
+      <li
+        style={
+          Object {
+            "@media (min-width: 640px)": Object {
+              "marginLeft": "8px",
+              "marginRight": "8px",
+              "width": "50px",
+            },
+            "alignSelf": "center",
+            "listStyle": "none",
+            "textAlign": "center",
+            "textDecoration": "none",
+            "width": "40px",
+          }
+        }
+      >
+        …
+      </li>
+      <li
+        style={
+          Object {
+            "@media (min-width: 640px)": Object {
+              "marginLeft": "8px",
+              "marginRight": "8px",
+            },
+            "buttonIcon": Object {
+              ":active": Object {
+                "backgroundColor": "#19bbff",
+                "borderColor": "#19bbff",
+                "color": "#fff",
+              },
+              ":focus": Object {
+                "backgroundColor": "#fff",
+                "borderColor": "#19bbff",
+                "color": "#19bbff",
+              },
+              ":hover": Object {
+                "backgroundColor": "#fff",
+                "borderColor": "#19bbff",
+                "color": "#19bbff",
+              },
+              "@media (min-width: 640px)": Object {
+                "borderWidth": "2px",
+                "height": "50px",
+                "width": "50px",
+              },
+              "alignItems": "center",
+              "backgroundColor": "#fff",
+              "borderColor": "#eee",
+              "borderRadius": 0,
+              "borderStyle": "solid",
+              "borderWidth": 0,
+              "boxSizing": "border-box",
+              "color": "#222",
+              "cursor": "pointer",
+              "display": "flex",
+              "height": "40px",
+              "isActive": Object {
+                "backgroundColor": "#19bbff",
+                "borderColor": "#19bbff",
+                "color": "#fff",
+              },
+              "isDisabled": Object {
+                ":active": Object {
+                  "backgroundColor": "#d8d8d8",
+                  "borderColor": "#d8d8d8",
+                  "color": "#fff",
+                },
+                ":focus": Object {
+                  "backgroundColor": "#d8d8d8",
+                  "borderColor": "#d8d8d8",
+                  "color": "#fff",
+                },
+                ":hover": Object {
+                  "backgroundColor": "#d8d8d8",
+                  "borderColor": "#d8d8d8",
+                  "color": "#fff",
+                },
+                "backgroundColor": "#d8d8d8",
+                "borderColor": "#d8d8d8",
+                "color": "#fff",
+                "cursor": "not-allowed",
+              },
+              "justifyContent": "center",
+              "outline": "none",
+              "svg": Object {
+                "active": Object {
+                  "fill": "#fff",
+                },
+                "alignSelf": "center",
+                "focus": Object {
+                  "fill": "#19bbff",
+                },
+                "height": "14px",
+                "hover": Object {
+                  "fill": "#19bbff",
+                },
+                "isDisabled": Object {
+                  "fill": "#fff",
+                },
+                "margin": "0",
+                "padding": "0",
+                "pointerEvents": "none",
+                "width": "12px",
+              },
+              "textDecoration": "none",
+              "width": "40px",
+            },
+            "lastChild": Object {
+              "marginRight": 0,
+            },
+            "left": Object {
+              "@media (min-width: 640px)": Object {
+                "marginRight": "22px",
+              },
+              "listStyle": "none",
+              "marginRight": "30px",
+            },
+            "listStyle": "none",
+            "marginRight": 0,
+            "points": Object {
+              "@media (min-width: 640px)": Object {
+                "marginLeft": "8px",
+                "marginRight": "8px",
+                "width": "50px",
+              },
+              "alignSelf": "center",
+              "listStyle": "none",
+              "textAlign": "center",
+              "textDecoration": "none",
+              "width": "40px",
+            },
+            "right": Object {
+              "@media (min-width: 640px)": Object {
+                "marginLeft": "22px",
+              },
+              "listStyle": "none",
+              "marginLeft": "30px",
+            },
+          }
+        }
+      >
+        <a
+          aria-label="Go to page 42"
+          href="#42"
+          onClick={[Function]}
+          style={
+            Array [
+              Object {
+                ":active": Object {
+                  "backgroundColor": "#19bbff",
+                  "borderColor": "#19bbff",
+                  "color": "#fff",
+                },
+                ":focus": Object {
+                  "backgroundColor": "#fff",
+                  "borderColor": "#19bbff",
+                  "color": "#19bbff",
+                },
+                ":hover": Object {
+                  "backgroundColor": "#fff",
+                  "borderColor": "#19bbff",
+                  "color": "#19bbff",
+                },
+                "@media (min-width: 640px)": Object {
+                  "borderWidth": "2px",
+                  "height": "50px",
+                  "width": "50px",
+                },
+                "alignItems": "center",
+                "backgroundColor": "#fff",
+                "borderColor": "#eee",
+                "borderRadius": 0,
+                "borderStyle": "solid",
+                "borderWidth": 0,
+                "boxSizing": "border-box",
+                "color": "#222",
+                "cursor": "pointer",
+                "display": "flex",
+                "height": "40px",
+                "isActive": Object {
+                  "backgroundColor": "#19bbff",
+                  "borderColor": "#19bbff",
+                  "color": "#fff",
+                },
+                "isDisabled": Object {
+                  ":active": Object {
+                    "backgroundColor": "#d8d8d8",
+                    "borderColor": "#d8d8d8",
+                    "color": "#fff",
+                  },
+                  ":focus": Object {
+                    "backgroundColor": "#d8d8d8",
+                    "borderColor": "#d8d8d8",
+                    "color": "#fff",
+                  },
+                  ":hover": Object {
+                    "backgroundColor": "#d8d8d8",
+                    "borderColor": "#d8d8d8",
+                    "color": "#fff",
+                  },
+                  "backgroundColor": "#d8d8d8",
+                  "borderColor": "#d8d8d8",
+                  "color": "#fff",
+                  "cursor": "not-allowed",
+                },
+                "justifyContent": "center",
+                "outline": "none",
+                "svg": Object {
+                  "active": Object {
+                    "fill": "#fff",
+                  },
+                  "alignSelf": "center",
+                  "focus": Object {
+                    "fill": "#19bbff",
+                  },
+                  "height": "14px",
+                  "hover": Object {
+                    "fill": "#19bbff",
+                  },
+                  "isDisabled": Object {
+                    "fill": "#fff",
+                  },
+                  "margin": "0",
+                  "padding": "0",
+                  "pointerEvents": "none",
+                  "width": "12px",
+                },
+                "textDecoration": "none",
+                "width": "40px",
+              },
+              false,
+            ]
+          }
+          tabIndex={null}
+        >
+          <span
+            className="k-u-size-tiny k-u-weight-regular"
+          >
+            42
+          </span>
+        </a>
+      </li>
+      <li
+        style={
+          Array [
+            false,
+            Object {
+              "@media (min-width: 640px)": Object {
+                "marginLeft": "22px",
+              },
+              "listStyle": "none",
+              "marginLeft": "30px",
+            },
+          ]
+        }
+      >
+        <a
+          aria-label="Next page"
+          href="#11"
+          onClick={[Function]}
+          style={
+            Array [
+              Object {
+                ":active": Object {
+                  "backgroundColor": "#19bbff",
+                  "borderColor": "#19bbff",
+                  "color": "#fff",
+                },
+                ":focus": Object {
+                  "backgroundColor": "#fff",
+                  "borderColor": "#19bbff",
+                  "color": "#19bbff",
+                },
+                ":hover": Object {
+                  "backgroundColor": "#fff",
+                  "borderColor": "#19bbff",
+                  "color": "#19bbff",
+                },
+                "@media (min-width: 640px)": Object {
+                  "borderWidth": "2px",
+                  "height": "50px",
+                  "width": "50px",
+                },
+                "alignItems": "center",
+                "backgroundColor": "#fff",
+                "borderColor": "#eee",
+                "borderRadius": 0,
+                "borderStyle": "solid",
+                "borderWidth": 0,
+                "boxSizing": "border-box",
+                "color": "#222",
+                "cursor": "pointer",
+                "display": "flex",
+                "height": "40px",
+                "isActive": Object {
+                  "backgroundColor": "#19bbff",
+                  "borderColor": "#19bbff",
+                  "color": "#fff",
+                },
+                "isDisabled": Object {
+                  ":active": Object {
+                    "backgroundColor": "#d8d8d8",
+                    "borderColor": "#d8d8d8",
+                    "color": "#fff",
+                  },
+                  ":focus": Object {
+                    "backgroundColor": "#d8d8d8",
+                    "borderColor": "#d8d8d8",
+                    "color": "#fff",
+                  },
+                  ":hover": Object {
+                    "backgroundColor": "#d8d8d8",
+                    "borderColor": "#d8d8d8",
+                    "color": "#fff",
+                  },
+                  "backgroundColor": "#d8d8d8",
+                  "borderColor": "#d8d8d8",
+                  "color": "#fff",
+                  "cursor": "not-allowed",
+                },
+                "justifyContent": "center",
+                "outline": "none",
+                "svg": Object {
+                  "active": Object {
+                    "fill": "#fff",
+                  },
+                  "alignSelf": "center",
+                  "focus": Object {
+                    "fill": "#19bbff",
+                  },
+                  "height": "14px",
+                  "hover": Object {
+                    "fill": "#19bbff",
+                  },
+                  "isDisabled": Object {
+                    "fill": "#fff",
+                  },
+                  "margin": "0",
+                  "padding": "0",
+                  "pointerEvents": "none",
+                  "width": "12px",
+                },
+                "textDecoration": "none",
+                "width": "40px",
+              },
+              false,
+            ]
+          }
+          tabIndex={null}
+          title="Next page"
+        >
+          <svg
+            className="k-ArrowIcon--right"
+            data-radium={true}
+            style={
+              Object {
+                "alignSelf": "center",
+                "height": "14px",
+                "margin": "0",
+                "padding": "0",
+                "pointerEvents": "none",
+                "width": "12px",
+              }
+            }
+            viewBox="0 0 10 10"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M7.828,5L6.414,6.413L2.172,2.172l1.414-1.415L7.828,5z"
+            />
+            <path
+              d="M7.828,5L3.586,9.243L2.172,7.827l4.242-4.241L7.828,5z"
+            />
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </nav>
   <style
     dangerouslySetInnerHTML={
       Object {

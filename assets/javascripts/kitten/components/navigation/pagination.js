@@ -48,15 +48,13 @@ class PaginationBase extends Component {
     const pageNumbers = pages(1, totalPages, currentPage, size)
 
     return (
-      <StyleRoot>
-        <nav role="navigation" aria-label={ this.props['aria-label'] }>
-          <ul style={ styles.group }>
-            { this.renderArrowButton('left') }
-            { pageNumbers.map(this.renderPage) }
-            { this.renderArrowButton('right') }
-          </ul>
-        </nav>
-      </StyleRoot>
+      <nav role="navigation" aria-label={ this.props['aria-label'] }>
+        <ul style={ styles.group }>
+          { this.renderArrowButton('left') }
+          { pageNumbers.map(this.renderPage) }
+          { this.renderArrowButton('right') }
+        </ul>
+      </nav>
     )
   }
 
