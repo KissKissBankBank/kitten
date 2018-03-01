@@ -104,7 +104,10 @@ class PaginationBase extends Component {
         style={ styles.group.list }
         key={ `page-${number}` }
       >
-        <a
+        <Text
+          tag="a"
+          weight="regular"
+          size="tiny"
           href={ this.props.goToPageHref(number) }
           key={ `link-${number}` }
           style={ styleButtonIcon }
@@ -114,13 +117,8 @@ class PaginationBase extends Component {
           }
           tabIndex={ isActive ? -1 : null }
         >
-          <Text
-            weight="regular"
-            size="tiny"
-          >
-            { number }
-          </Text>
-        </a>
+          { number }
+        </Text>
       </li>
     )
   }
