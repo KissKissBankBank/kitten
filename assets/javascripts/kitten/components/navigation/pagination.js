@@ -19,16 +19,19 @@ const range = (start, end) => (
 // and breaks "…" (represented as nulls).
 export function pages(min, max, currentPage, availableSlots) {
   // 1, 2, 3
-  if (max - min < availableSlots)
+  if (max - min < availableSlots) {
     return range(min, max)
+  }
 
   // 1, 2, 3, …, 42
-  if (currentPage - min + 1 < availableSlots - 2)
+  if (currentPage - min + 1 < availableSlots - 2) {
     return [...range(min, min - 1 + availableSlots - 2), null, max]
+  }
 
   // 1, …, 40, 41, 42
-  if (max - currentPage < availableSlots - 2)
+  if (max - currentPage < availableSlots - 2) {
     return [min, null, ...range(max + 1 - (availableSlots - 2), max)]
+  }
 
   // 1, …, 21, …, 42
   const sides = Math.floor((availableSlots - 4) / 2)
@@ -42,6 +45,28 @@ export function pages(min, max, currentPage, availableSlots) {
 }
 
 class PaginationBase extends Component {
+  static propTypes = {
+    prevButtonLabel: PropTypes.string,
+    nextButtonLabel: PropTypes.string,
+    goToPageLabel: PropTypes.func,
+    goToPageHref: PropTypes.func,
+    onPageClick: PropTypes.func,
+    totalPages: PropTypes.number,
+    currentPage: PropTypes.number,
+    'aria-label': PropTypes.string,
+  }
+
+  static defaultProps = {
+    prevButtonLabel: 'Previous page',
+    nextButtonLabel: 'Next page',
+    goToPageLabel: n => `Go to page ${n}`,
+    goToPageHref: n => `#${n}`,
+    onPageClick: () => {},
+    currentPage: 1,
+    totalPages: 1,
+    'aria-label': 'Pagination navigation',
+  }
+
   render() {
     const { totalPages, currentPage } = this.props
     const size = this.props.viewportIsTabletOrLess ? 5 : 7
@@ -60,14 +85,14 @@ class PaginationBase extends Component {
 
   preventClickDefault = e => e.preventDefault()
 
-  pageClickHandler = number => {
-    return () => this.props.onPageClick(number)
-  }
+  pageClickHandler = number => (
+    () => this.props.onPageClick(number)
+  )
 
   renderPage = (number, index) => {
     if (!number) return this.renderSpacer(index)
 
-    const isActive = number == this.props.currentPage
+    const isActive = number === this.props.currentPage
 
     const styleButtonIcon = [
       styles.group.list.buttonIcon,
@@ -307,28 +332,6 @@ const styles = {
       },
     },
   },
-}
-
-PaginationBase.propTypes = {
-  prevButtonLabel: PropTypes.string,
-  nextButtonLabel: PropTypes.string,
-  goToPageLabel: PropTypes.func,
-  goToPageHref: PropTypes.func,
-  onPageClick: PropTypes.func,
-  totalPages: PropTypes.number,
-  currentPage: PropTypes.number,
-  'aria-label': PropTypes.string,
-}
-
-PaginationBase.defaultProps = {
-  prevButtonLabel: 'Previous page',
-  nextButtonLabel: 'Next page',
-  goToPageLabel: n => `Go to page ${n}`,
-  goToPageHref: n => `#${n}`,
-  onPageClick: () => {},
-  currentPage: 1,
-  totalPages: 1,
-  'aria-label': 'Pagination navigation',
 }
 
 export const Pagination = mediaQueries(
