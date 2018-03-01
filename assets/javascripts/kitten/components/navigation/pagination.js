@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Radium, { StyleRoot } from 'radium'
+import Radium from 'radium'
 import PropTypes from 'prop-types'
 import { Text } from 'kitten/components/typography/text'
 import { ArrowIcon as ArrowIconBase } from 'kitten/components/icons/arrow-icon'
@@ -332,7 +332,7 @@ PaginationBase.defaultProps = {
 }
 
 export const Pagination = mediaQueries(
-  PaginationBase,
+  Radium(PaginationBase),
   {
     viewportIsMobile: true,
   },
