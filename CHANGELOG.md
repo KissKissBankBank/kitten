@@ -7,6 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Add `mediaQueries` HOC.
 - Fix: Update `primary-light` color.
 - Feature: Add `modifier` prop on `TagButton` component.
+- Breaking change: You must now add a `<StyleRoot>` around `<Hero>` components.
 
 ## [19.5.0] - 2018-02-13
 
