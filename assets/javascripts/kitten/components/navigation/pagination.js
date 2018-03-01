@@ -44,7 +44,7 @@ export function pages(min, max, currentPage, availableSlots) {
 class PaginationBase extends Component {
   render() {
     const { totalPages, currentPage } = this.props
-    const size = this.props.viewportIsMobile ? 5 : 7
+    const size = this.props.viewportIsTabletOrLess ? 5 : 7
     const pageNumbers = pages(1, totalPages, currentPage, size)
 
     return (
@@ -334,6 +334,6 @@ PaginationBase.defaultProps = {
 export const Pagination = mediaQueries(
   Radium(PaginationBase),
   {
-    viewportIsMobile: true,
+    viewportIsTabletOrLess: true,
   },
 )
