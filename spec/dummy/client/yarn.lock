@@ -3243,7 +3243,7 @@ kind-of@^3.0.2:
     is-buffer "^1.1.5"
 
 "kitten-components@file:../../..":
-  version "19.5.0"
+  version "20.0.0"
   dependencies:
     autoprefixer "^6.5.3"
     babel-cli "^6.14.0"
@@ -3269,7 +3269,7 @@ kind-of@^3.0.2:
     prop-types "^15.6.0"
     prop-types-extra "^1.0.1"
     pubsub-js "^1.5.3"
-    radium "^0.22.0"
+    radium "^0.22.1"
     react "^16.2.0"
     react-ckeditor-wrapper "^1.0.22"
     react-cropper "^0.12.0"
@@ -4702,9 +4702,9 @@ querystringify@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/querystringify/-/querystringify-1.0.0.tgz#6286242112c5b712fa654e526652bf6a13ff05cb"
 
-radium@^0.22.0:
-  version "0.22.0"
-  resolved "https://registry.yarnpkg.com/radium/-/radium-0.22.0.tgz#0127708896a7dc592bdae4768e17054c8f4b29f9"
+radium@^0.22.1:
+  version "0.22.1"
+  resolved "https://registry.yarnpkg.com/radium/-/radium-0.22.1.tgz#75c987a0d13f18a1709e925c89a5a1ec62dc7d1c"
   dependencies:
     exenv "^1.2.1"
     inline-style-prefixer "^4.0.0"
