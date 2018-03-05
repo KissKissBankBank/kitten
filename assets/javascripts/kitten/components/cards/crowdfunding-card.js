@@ -167,7 +167,7 @@ class CrowdfundingCardComponent extends Component {
             className={ className }
           >
             { this.props.titleTruncate &&
-              <Truncate lines={ 2 }>
+              <Truncate lines={ 2 } style={ styles.title.truncate }>
                 { this.props.cardTitle }
               </Truncate>
             }
@@ -382,6 +382,10 @@ const styles = {
   title: {
     padding: `0 ${COMPONENT_GUTTER}px`,
     lineHeight: '1',
+
+    truncate: {
+      whiteSpace: 'nowrap',
+    },
 
     loading: {
       display: 'block',
