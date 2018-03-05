@@ -55,6 +55,7 @@
   // Button font-size is computed using a modular scale and a defined step of
   // this scale.
   $button-step: -2; // 12px
+  $button-big-step: -1; // 14px
 
   $transition-speed: .2s;
 
@@ -90,7 +91,7 @@
 
   .k-TagButton--big {
     @include k-typographyFontSize(
-      $button-step,
+      $button-big-step,
       $tag-button-line-height-big
     );
 
