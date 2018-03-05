@@ -1,13 +1,11 @@
-import React, { Component } from 'react'
-import Radium, { StyleRoot } from 'radium'
-import PropTypes from 'prop-types'
+import React, { Component, Fragment } from 'react'
 
 export class FilterIcon extends Component {
   render() {
     return (
-      <StyleRoot>
+      <Fragment>
         { this.renderAnimation() }
-      </StyleRoot>
+      </Fragment>
     )
   }
 
@@ -19,11 +17,12 @@ export class FilterIcon extends Component {
       name,
       begin,
       isAnimate,
+      ...others,
     } = this.props
 
     const dur = isAnimate ? duration : 0
 
-    const animateIsHovered = Radium.getState(this.state, 'svg', ':hover')
+    // const animateIsHovered = Radium.getState(this.state, 'svg', ':hover')
 
     return (
       <svg
@@ -34,17 +33,16 @@ export class FilterIcon extends Component {
         width="20px"
         height="24px"
         viewBox="0 0 20 24"
-        style="enable-background:new 0 0 20 24;"
+        { ...others }
       >
 
-        // Animation 1
         <rect
           x="2"
           width="2"
           height="10"
           fill={ color }
         >
-          // <animate
+          <animate
             attributeType={ type }
             attributeName={ name }
             values="-4; 0; -4"
@@ -84,7 +82,6 @@ export class FilterIcon extends Component {
           />
         </path>
 
-        // Animation 2
         <rect
           x="9"
           width="2"
@@ -131,7 +128,6 @@ export class FilterIcon extends Component {
           />
         </path>
 
-        // Animation 3
         <rect
           x="16"
           width="2"
