@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Fix truncate title styles at `CrowdfundingCard`.
+- Fix: Fix truncated title styles on `CrowdfundingCard`.
 
 ## [20.0.1] - 2018-03-05
 
