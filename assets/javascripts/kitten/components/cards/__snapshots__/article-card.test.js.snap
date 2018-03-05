@@ -49,13 +49,10 @@ exports[`<ArticleCard /> by default matches with snapshot 1`] = `
       data-radium={true}
       style={
         Object {
-          "WebkitAlignItems": "center",
-          "WebkitBoxAlign": "center",
           "alignItems": "center",
           "backgroundColor": "#fff",
           "display": "inline-flex",
           "marginTop": "-30px",
-          "msFlexAlign": "center",
           "position": "relative",
           "top": "0",
         }
@@ -138,14 +135,11 @@ exports[`<ArticleCard /> by default matches with snapshot 1`] = `
         data-radium={true}
         style={
           Object {
-            "WebkitAlignItems": "center",
-            "WebkitBoxAlign": "center",
             "alignItems": "center",
             "display": "flex",
             "lineHeight": "1",
             "marginBottom": null,
             "marginTop": "0.625rem",
-            "msFlexAlign": "center",
             "padding": "0 10px",
           }
         }
@@ -221,13 +215,10 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
       data-radium={true}
       style={
         Object {
-          "WebkitAlignItems": "center",
-          "WebkitBoxAlign": "center",
           "alignItems": "center",
           "backgroundColor": "#fff",
           "display": "inline-flex",
           "marginTop": "-30px",
-          "msFlexAlign": "center",
           "position": "relative",
           "top": "0",
         }
@@ -312,14 +303,11 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
         data-radium={true}
         style={
           Object {
-            "WebkitAlignItems": "center",
-            "WebkitBoxAlign": "center",
             "alignItems": "center",
             "display": "flex",
             "lineHeight": "1",
             "marginBottom": null,
             "marginTop": "0.625rem",
-            "msFlexAlign": "center",
             "padding": "0 10px",
           }
         }
@@ -400,13 +388,10 @@ exports[`<ArticleCard /> with ignored props matches with snapshot 1`] = `
       data-radium={true}
       style={
         Object {
-          "WebkitAlignItems": "center",
-          "WebkitBoxAlign": "center",
           "alignItems": "center",
           "backgroundColor": "#fff",
           "display": "inline-flex",
           "marginTop": "-30px",
-          "msFlexAlign": "center",
           "position": "relative",
           "top": "0",
         }
@@ -489,14 +474,11 @@ exports[`<ArticleCard /> with ignored props matches with snapshot 1`] = `
         data-radium={true}
         style={
           Object {
-            "WebkitAlignItems": "center",
-            "WebkitBoxAlign": "center",
             "alignItems": "center",
             "display": "flex",
             "lineHeight": "1",
             "marginBottom": null,
             "marginTop": "0.625rem",
-            "msFlexAlign": "center",
             "padding": "0 10px",
           }
         }
@@ -572,13 +554,10 @@ exports[`<ArticleCard /> with some props matches with snapshot 1`] = `
       data-radium={true}
       style={
         Object {
-          "WebkitAlignItems": "center",
-          "WebkitBoxAlign": "center",
           "alignItems": "center",
           "backgroundColor": "#fff",
           "display": "inline-flex",
           "marginTop": "-30px",
-          "msFlexAlign": "center",
           "position": "relative",
           "top": "0",
         }
@@ -667,14 +646,11 @@ exports[`<ArticleCard /> with some props matches with snapshot 1`] = `
         data-radium={true}
         style={
           Object {
-            "WebkitAlignItems": "center",
-            "WebkitBoxAlign": "center",
             "alignItems": "center",
             "display": "flex",
             "lineHeight": "1",
             "marginBottom": null,
             "marginTop": "0.625rem",
-            "msFlexAlign": "center",
             "padding": "0 10px",
           }
         }

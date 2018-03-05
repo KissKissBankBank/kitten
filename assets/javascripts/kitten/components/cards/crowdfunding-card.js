@@ -44,9 +44,8 @@ class CrowdfundingCardComponent extends Component {
 
     const Tag = this.props.href ? 'a' : 'div'
 
-    // TODO: Remove radiumConfig when it is fixed in Radium.
     return (
-      <StyleRoot radiumConfig={{ userAgent: 'all' }}>
+      <StyleRoot>
         <Tag
           { ...others }
           style={ styles.card }

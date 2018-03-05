@@ -59,7 +59,7 @@
     "prop-types": "^15.6.0",
     "prop-types-extra": "^1.0.1",
     "pubsub-js": "^1.5.3",
-    "radium": "^0.22.0",
+    "radium": "^0.22.1",
     "react": "^16.2.0",
     "react-ckeditor-wrapper": "^1.0.22",
     "react-cropper": "^0.12.0",
