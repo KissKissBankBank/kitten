@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+Fix: Add missing `event` parameter ton `Pagination`'s onClick.
+
 ## [20.0.0] - 2018-03-01
 
 Breaking changes:
