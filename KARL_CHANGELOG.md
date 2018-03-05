@@ -6,6 +6,16 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Fix: A11Y and update example colors.
 
+## [20.0.1] - 2018-03-05
+
+No changes.
+
+## [20.0.0] - 2018-03-01
+
+Features:
+- Add `Pagination` examples.
+- Add `CrowdfundingCard` examples.
+
 ## [19.5.0] - 2018-02-13
 
 No changes.

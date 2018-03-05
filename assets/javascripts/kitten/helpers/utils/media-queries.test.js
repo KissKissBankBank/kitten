@@ -26,7 +26,6 @@ describe('utils MediaQueries', () => {
     window.matchMedia = originalMatchMedia
   })
 
-
   describe('getJoinedQueries', () => {
     describe('return the only query string', () => {
       const query = getJoinedQueries(['(min-width: 800px)'])

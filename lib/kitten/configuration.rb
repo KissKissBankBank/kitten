@@ -145,6 +145,7 @@ module Kitten
             },
             { path: 'components/headers/header', name: 'Header' },
             { path: 'components/steppers/stepper', name: 'Stepper' },
+            { path: 'components/navigation/pagination', name: 'Pagination' },
           ],
         },
         {
@@ -182,6 +183,10 @@ module Kitten
             { path: 'components/cards/simple-card', name: 'Simple card' },
             { path: 'components/cards/project-card', name: 'Project card' },
             { path: 'components/cards/article-card', name: 'Article card' },
+            {
+              path: 'components/cards/crowdfunding-card',
+              name: 'Crowdfunding card',
+            },
             {
               path: 'components/cards/project-similar-card',
               name: 'Project similar card',

@@ -6,7 +6,8 @@
 /// It is computed automatically with these 2 values.
 ///
 /// Available color modifier:
-/// - `.k-ButtonIcon--hydrogen`
+/// - `.k-TagButton--helium`
+/// - `.k-TagButton--carbon`
 ///
 /// Available size modifier:
 /// - `.k-TagButton--tiny`
@@ -24,7 +25,7 @@
 ///   @include k-TagButton;
 ///
 /// @example html
-///   <button class="k-TagButton k-TagButton--hydrogen">Tag</button>
+///   <button class="k-TagButton k-TagButton--helium">Tag</button>
 ///
 /// @example html
 ///   <button class="k-TagButton k-TagButton--icon">
@@ -38,42 +39,23 @@
   // Size settings tag-button.
   $tag-button-size-tiny: 30px - ($border-size * 2);
   $tag-button-size: 40px - ($border-size * 2);
+  $tag-button-size-big: 50px - ($border-size * 2);
 
-  $tag-button-min-width:k-px-to-rem(60px);
+  $tag-button-min-width: k-px-to-rem(60px);
 
   $tag-button-line-height-tiny: k-px-to-rem($tag-button-size-tiny);
   $tag-button-line-height: k-px-to-rem($tag-button-size);
+  $tag-button-line-height-big: k-px-to-rem($tag-button-size-big);
 
-  // Deprecated
   $tag-button-min-width-big: 80px - ($border-size * 2);
-  $tag-button-line-height-big: 50px - ($border-size * 2);
 
   // The tag button has a radius of 4px
   $tag-button-radius: k-px-to-rem(4px);
 
-  // Base
-  $color: map-get($k-colors,'font-1');
-  $border-color: map-get($k-colors,'line-1');
-  $background-color: map-get($k-colors,'background-1');
-
-  // Focus
-  $color-focus: map-get($k-colors,'primary-1');
-  $border-color-focus: map-get($k-colors,'primary-1');
-  $background-color-focus: map-get($k-colors,'background-1');
-
-  // Hover
-  $color-hover: map-get($k-colors,'primary-1');
-  $border-color-hover: map-get($k-colors,'primary-1');
-  $background-color-hover: map-get($k-colors,'background-1');
-
-  // Active and `is-selected`
-  $color-active: map-get($k-colors,'background-1');
-  $border-color-active: map-get($k-colors,'primary-1');
-  $background-color-active: map-get($k-colors,'primary-1');
-
   // Button font-size is computed using a modular scale and a defined step of
   // this scale.
   $button-step: -2; // 12px
+  $button-big-step: -1; // 14px
 
   $transition-speed: .2s;
 
@@ -86,42 +68,34 @@
     border-radius: $tag-button-radius;
     min-height: $tag-button-line-height;
     min-width: $tag-button-min-width;
+  }
 
-    color: $color;
-    background-color: $background-color;
-    border-color: $border-color;
+  // Colors modifiers.
+  .k-TagButton--helium {
+    @include k-tagButtonColors('helium');
+  }
 
-    &:focus {
-      color: $color-focus;
-      background-color: $background-color-focus;
-      border-color: $border-color-focus;
-    }
-
-    &:hover {
-      color: $color-hover;
-      background-color: $background-color-hover;
-      border-color: $border-color-hover;
-    }
-
-    &:active,
-    &.is-selected {
-      color: $color-active;
-      background-color: $background-color-active;
-      border-color: $border-color-active;
-    }
+  .k-TagButton--carbon {
+    @include k-tagButtonColors('carbon');
   }
 
   // Size modifier.
   .k-TagButton--tiny {
-    @include k-typographyFontSize($button-step, $tag-button-line-height-tiny);
+    @include k-typographyFontSize(
+      $button-step,
+      $tag-button-line-height-tiny
+    );
 
     min-height: $tag-button-line-height-tiny;
   }
 
-  // Deprecated
   .k-TagButton--big {
-    @include k-typographyFontSize($button-step, $tag-button-line-height-big);
+    @include k-typographyFontSize(
+      $button-big-step,
+      $tag-button-line-height-big
+    );
 
+    padding: 0 k-px-to-rem(30px);
     min-width: $tag-button-min-width-big;
     min-height: $tag-button-line-height-big;
   }

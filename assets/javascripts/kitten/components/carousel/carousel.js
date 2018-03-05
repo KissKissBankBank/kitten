@@ -2,14 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Radium from 'radium'
 import { createRangeFromZeroTo } from 'kitten/helpers/utils/range'
-import {
-  createMatchMedia,
-  createMatchMediaMax
-} from 'kitten/helpers/utils/media-queries'
-import {
-  SCREEN_SIZE_XS,
-  SCREEN_SIZE_M
-} from 'kitten/constants/screen-config'
+import { mediaQueries } from 'kitten/hoc/media-queries'
 import {
   CONTAINER_PADDING,
   CONTAINER_PADDING_MOBILE
@@ -72,21 +65,21 @@ class CarouselBase extends React.Component {
   constructor(props, context) {
     super(props, context)
 
-    this.mqMobile = createMatchMediaMax(SCREEN_SIZE_XS)
-    this.mqTabletOrLess = createMatchMediaMax(SCREEN_SIZE_M)
-
     this.state = {
       indexPageVisible: 0,
       numColumns: 3,
       numPages: getNumPagesForColumnsAndDataLength(this.props.data.length, 3),
-      viewportIsMobile: false,
-      viewportIsTabletOrLess: false,
     }
   }
 
   onResizeInner = widthInner => {
-    const { data, itemMinWidth, baseItemMarginBetween } = this.props
-    const { viewportIsMobile, viewportIsTabletOrLess } = this.state
+    const {
+      data,
+      itemMinWidth,
+      baseItemMarginBetween,
+      viewportIsMobile,
+      viewportIsTabletOrLess,
+    } = this.props
     const itemMarginBetween = getMarginBetweenAccordingToViewport(
       baseItemMarginBetween,
       viewportIsMobile,
@@ -115,31 +108,6 @@ class CarouselBase extends React.Component {
     }
   }
 
-  onMobileMQ = event => {
-    this.setState({ viewportIsMobile: event.matches })
-  }
-
-  onTabletMQ = event => {
-    this.setState({ viewportIsTabletOrLess: event.matches })
-  }
-
-  updateViewportState() {
-    this.mqMobile && this.onMobileMQ(this.mqMobile)
-    this.mqTabletOrLess && this.onTabletMQ(this.mqTabletOrLess)
-  }
-
-  componentDidMount() {
-    this.mqMobile && this.mqMobile.addListener(this.onMobileMQ)
-    this.mqTabletOrLess && this.mqTabletOrLess.addListener(this.onTabletMQ)
-
-    this.updateViewportState()
-  }
-
-  componentWillUnmount() {
-    this.mqMobile && this.mqMobile.removeListener(this.onMobileMQ)
-    this.mqTabletOrLess && this.mqTabletOrLess.removeListener(this.onTabletMQ)
-  }
-
   goNextPage = () => {
     const { numPages, indexPageVisible } = this.state
     const newPage = checkPage(numPages, indexPageVisible + 1)
@@ -163,14 +131,14 @@ class CarouselBase extends React.Component {
       data,
       itemMinWidth,
       renderItem,
-      baseItemMarginBetween
+      baseItemMarginBetween,
+      viewportIsMobile,
+      viewportIsTabletOrLess,
     } = this.props
     const {
       indexPageVisible,
       numColumns,
       numPages,
-      viewportIsMobile,
-      viewportIsTabletOrLess
     } = this.state
     const itemMarginBetween = getMarginBetweenAccordingToViewport(
       baseItemMarginBetween, viewportIsMobile, viewportIsTabletOrLess
@@ -193,12 +161,14 @@ class CarouselBase extends React.Component {
   }
 
   renderPagination = () => {
-    const { baseItemMarginBetween } = this.props
+    const {
+      baseItemMarginBetween,
+      viewportIsTabletOrLess,
+      viewportIsMobile,
+    } = this.props
     const {
       indexPageVisible,
-      numPages,
-      viewportIsTabletOrLess,
-      viewportIsMobile
+      numPages
     } = this.state
     const itemMarginBetween = getMarginBetweenAccordingToViewport(
       baseItemMarginBetween,
@@ -270,8 +240,7 @@ class CarouselBase extends React.Component {
   render() {
     if (!this.props.data || !this.props.data.length) return null
 
-    const { withoutLeftOffset } = this.props
-    const { viewportIsTabletOrLess } = this.state
+    const { withoutLeftOffset, viewportIsTabletOrLess } = this.props
 
     if (viewportIsTabletOrLess) {
       return (
@@ -360,6 +329,14 @@ CarouselBase.propTypes = {
   itemMinWidth: PropTypes.number.isRequired,
   baseItemMarginBetween: PropTypes.number.isRequired,
   renderItem: PropTypes.func.isRequired,
+  viewportIsTabletOrLess: PropTypes.bool.isRequired,
+  viewportIsMobile: PropTypes.bool.isRequired,
 }
 
-export const Carousel = Radium(CarouselBase)
+export const Carousel = mediaQueries(
+  Radium(CarouselBase),
+  {
+    viewportIsMobile: true,
+    viewportIsTabletOrLess: true,
+  },
+)
