@@ -189,36 +189,3 @@ FilterIcon.defaultProps = {
   name: 'y',
   begin: 'begin',
 }
-
-
-// #big {
-//     transform-origin: 138px 118px;
-//     animation-duration: 30s;
-//     animation-name: rotateBig;
-//     animation-fill-mode: forwards;
-//     animation-timing-function: linear;
-//     animation-iteration-count: infinite;
-//     animation-play-state: paused;
-// }
-// #little {
-//     transform-origin: 32px 224px;
-//     animation-duration: 20s;
-//     animation-name: rotateLittle;
-//     animation-fill-mode: forwards;
-//     animation-timing-function: linear;
-//     animation-iteration-count: infinite;
-//     animation-play-state: paused;
-// }
-// #big:hover, #little:hover {
-//     animation-play-state: running;
-// }
-// @keyframes rotateBig {
-//     to {
-//         transform: rotate(360deg);
-//     }
-// }
-// @keyframes rotateLittle {
-//     to {
-//         transform: rotate(-360deg);
-//     }
-// }
