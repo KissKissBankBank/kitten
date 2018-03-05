@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Add missing `event` parameter to `Pagination`'s onClick.
 - Fix: Update `font-size` big on `TagButton` component.
 - Fix: Update Radium.
 
