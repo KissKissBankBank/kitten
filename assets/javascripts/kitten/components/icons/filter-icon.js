@@ -14,11 +14,14 @@ export class FilterIcon extends Component {
   renderAnimation() {
     const {
       color,
-      dur,
+      duration,
       type,
       name,
       begin,
+      isAnimate,
     } = this.props
+
+    const dur = isAnimate ? duration : 0
 
     return (
       <svg
@@ -34,14 +37,14 @@ export class FilterIcon extends Component {
         // xml:space="preserve"
       >
 
-// Animation 1
+        // Animation 1
         <rect
           x="2"
           width="2"
           height="10"
           fill={ color }
         >
-          <animate
+          // <animate
             attributeType={ type }
             attributeName={ name }
             values="-4; 0; -4"
@@ -81,7 +84,7 @@ export class FilterIcon extends Component {
           />
         </path>
 
-  // Animation 2
+        // Animation 2
         <rect
           x="9"
           width="2"
@@ -128,7 +131,7 @@ export class FilterIcon extends Component {
           />
         </path>
 
-  // Animation 3
+        // Animation 3
         <rect
           x="16"
           width="2"
@@ -179,13 +182,11 @@ export class FilterIcon extends Component {
   }
 }
 
-const styles = {
-}
-
 FilterIcon.defaultProps = {
   color: '#222',
-  dur: '1.5s',
+  duration: '1.5s',
+  isAnimate: false,
   type: 'xml',
   name: 'y',
-  begin: 'begin',
+  begin: '0',
 }
