@@ -38,6 +38,7 @@ import {
   KarlButtonIconWordsRight,
 } from 'kitten/karl/buttons/button-with-icon-words'
 import { KarlPaymentButtons } from 'kitten/karl/buttons/payment-button'
+import { KarlButtonIconFilter } from 'kitten/karl/buttons/button-filter'
 
 // Cards
 import { ArticleCard } from 'kitten/components/cards/article-card'
@@ -340,6 +341,7 @@ ReactOnRails.register({
   KarlFacebookButtonIconWords,
   KarlLinkedinButtonIconWords,
   KarlTwitterButtonIconWords,
+  KarlButtonIconFilter,
 
   // Colors
   KarlColors,
