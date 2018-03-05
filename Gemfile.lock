@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    kitten (19.5.0)
+    kitten (20.0.0)
       railties (> 3.0.0, < 5.0.0)
       react_on_rails (~> 6.10.1)
       therubyracer
@@ -90,7 +90,7 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.7.0)
       mini_mime (>= 0.1.1)
-    method_source (0.9.0)
+    method_source (0.8.2)
     mini_mime (1.0.0)
     mini_portile2 (2.3.0)
     minitest (5.11.0)
@@ -103,9 +103,9 @@ GEM
     parser (2.4.0.2)
       ast (~> 2.3)
     powerpack (0.1.1)
-    pry (0.11.3)
+    pry (0.11.0)
       coderay (~> 1.1.0)
-      method_source (~> 0.9.0)
+      method_source (~> 0.8.1)
     public_suffix (3.0.1)
     rack (1.6.8)
     rack-test (0.6.3)
@@ -205,6 +205,7 @@ DEPENDENCIES
   foreman
   gemfury
   kitten!
+  method_source (= 0.8.2)
   pry
   rake (~> 10.0)
   rspec-rails

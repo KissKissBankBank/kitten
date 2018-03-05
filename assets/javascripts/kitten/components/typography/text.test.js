@@ -67,7 +67,7 @@ describe('<Text />', () => {
   })
 
   describe('with style prop', () => {
-    const component = shallow(<Text style="italic" />)
+    const component = shallow(<Text fontStyle="italic" />)
 
     it('has a good utility class', () => {
       expect(component.hasClass('k-u-style-italic')).toBe(true)

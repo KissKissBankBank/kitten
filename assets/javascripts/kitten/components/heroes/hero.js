@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Radium, { StyleRoot } from 'radium'
+import Radium from 'radium'
 import PropTypes from 'prop-types'
 import { Container } from 'kitten/components/grid/container'
 import {
@@ -17,17 +17,31 @@ import COLORS from 'kitten/constants/colors-config'
 const Grid = Radium(GridBase)
 const GridCol = Radium(GridColBase)
 
-export class Hero extends Component {
+class HeroBase extends Component {
+  static propTypes = {
+    direction: PropTypes.oneOf(['left', 'right']),
+    tiny: PropTypes.bool,
+    imageSrc: PropTypes.string,
+    contentBackgroundColor: PropTypes.string,
+    contentColor: PropTypes.string,
+  }
+
+  static defaultProps = {
+    direction: 'left',
+    tiny: false,
+    imageSrc: '',
+    contentBackgroundColor: COLORS.font1,
+    contentColor: COLORS.background1,
+  }
+
   render() {
     return (
-      <StyleRoot>
-        <Container>
-          <Grid>
-            { this.renderContent() }
-            { this.renderImage() }
-          </Grid>
-        </Container>
-      </StyleRoot>
+      <Container>
+        <Grid>
+          { this.renderContent() }
+          { this.renderImage() }
+        </Grid>
+      </Container>
     )
   }
 
@@ -204,16 +218,4 @@ const styles = {
   },
 }
 
-Hero.propTypes = {
-  direction: PropTypes.oneOf(['left', 'right']),
-}
-
-Hero.defaultProps = {
-  direction: 'left',
-  tiny: false,
-  imageSrc: 'https://placehold.it/40x40/'
-    + `${COLORS.primary1.replace('#', '')}/`
-    + `${COLORS.primary1.replace('#', '')}`,
-  contentBackgroundColor: COLORS.font1,
-  contentColor: COLORS.background1,
-}
+export const Hero = Radium(HeroBase)

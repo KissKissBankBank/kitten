@@ -12,7 +12,7 @@ export default {
   primary1: '#19bbff', // Primary
   primary2: '#0aacf0', // Semi Dark Primary
   primary3: '#009de1', // Dark Primary
-  primary4: '#baeaff', // Light Primary
+  primary4: '#bae8fd', // Light Primary
   primary5: '#e8f8ff', // Extra Light Primary
   primary6: '#f3fbff', // Thin Primary
 

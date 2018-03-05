@@ -1,0 +1,55 @@
+<div class="k-Grid">
+  <div class="k-Grid__col k-Grid__col--12 k-Grid__col--3@m">
+    <%= example 'Crowdfunding card' do %>
+      <%= react_component 'CrowdfundingCard', props: {
+        ownerTitle: 'Owner title',
+        ownerDescription: 'Owner description',
+        cardTitle: 'Lorem ipsum…',
+        info1: 'Lorem ipsum…',
+        info2: 'Lorem ipsum…',
+        info3: 'Lorem ipsum…',
+        progress: 42,
+        state: 'Lorem ipsum…',
+      } %>
+    <% end %>
+  </div>
+
+  <div class="k-Grid__col k-Grid__col--12 k-Grid__col--3@m">
+    <%= example 'Clickable crowdfunding card' do %>
+      <%= react_component 'CrowdfundingCard', props: {
+        href: '#',
+        ownerTitle: 'Owner title',
+        ownerDescription: 'Owner description',
+        cardTitle: 'Sed ut perspiciatis unde omnis iste natus error sit
+          voluptatem accusantium doloremque laudantium, totam rem aperiam,
+          eaque ipsa quae ab illo inventore veritatis et quasi architecto
+          beatae vitae dicta sunt explicabo.',
+        info1: 'Lorem ipsum…',
+        info2: 'Lorem ipsum…',
+        info3: 'Lorem ipsum…',
+        progress: 42,
+        state: 'Lorem ipsum…',
+      } %>
+    <% end %>
+  </div>
+
+  <div class="k-Grid__col k-Grid__col--12 k-Grid__col--3@m">
+    <%= example 'Loading crowdfunding card' do %>
+      <%= react_component 'CrowdfundingCard', props: {
+        loading: 'true',
+        href: '#',
+        ownerTitle: 'Owner title',
+        ownerDescription: 'Owner description',
+        cardTitle: 'Sed ut perspiciatis unde omnis iste natus error sit
+          voluptatem accusantium doloremque laudantium, totam rem aperiam,
+          eaque ipsa quae ab illo inventore veritatis et quasi architecto
+          beatae vitae dicta sunt explicabo.',
+        info1: 'Lorem ipsum…',
+        info2: 'Lorem ipsum…',
+        info3: 'Lorem ipsum…',
+        progress: 42,
+        state: 'Lorem ipsum…',
+      } %>
+    <% end %>
+  </div>
+</div>

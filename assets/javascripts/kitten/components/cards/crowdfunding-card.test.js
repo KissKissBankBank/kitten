@@ -1,14 +1,35 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { ArticleCard } from 'kitten/components/cards/article-card'
+import { CrowdfundingCard } from 'kitten/components/cards/crowdfunding-card'
 
-describe('<ArticleCard />', () => {
+describe('<CrowdfundingCard />', () => {
+  const initialWindow = global.window
   let component
+
+  beforeEach(() => {
+    global.window.HTMLCanvasElement.prototype.getContext = () => {}
+  })
+
+  afterEach(() => {
+    global.window = initialWindow
+  })
 
   describe('by default', () => {
     beforeEach(() => {
       component = renderer.create(
-        <ArticleCard />
+        <CrowdfundingCard />
+      ).toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
+  describe('with loading prop', () => {
+    beforeEach(() => {
+      component = renderer.create(
+        <CrowdfundingCard loading />
       ).toJSON()
     })
 
@@ -20,7 +41,7 @@ describe('<ArticleCard />', () => {
   describe('with some props', () => {
     beforeEach(() => {
       component = renderer.create(
-        <ArticleCard
+        <CrowdfundingCard
           href="#foobar"
           imageProps={{
             src: '#image',
@@ -37,39 +58,12 @@ describe('<ArticleCard />', () => {
           }}
           cardTitle="Custom title"
           cardSubTitle="Custom subtitle"
-        />
-      ).toJSON()
-    })
-
-    it('matches with snapshot', () => {
-      expect(component).toMatchSnapshot()
-    })
-  })
-
-  describe('with articleTitle and articleSubTitle props', () => {
-    beforeEach(() => {
-      component = renderer.create(
-        <ArticleCard
-          articleTitle="Custom title"
-          articleSubTitle="Custom subtitle"
-        />
-      ).toJSON()
-    })
-
-    it('matches with snapshot', () => {
-      expect(component).toMatchSnapshot()
-    })
-  })
-
-  describe('with ignored props', () => {
-    beforeEach(() => {
-      component = renderer.create(
-        <ArticleCard
-          info1="Custom information #1"
-          progress="42"
-          state="Custom state"
           titlesMinHeight
-          titleTruncate
+          info1="Custom information #1"
+          info2="Custom information #2"
+          info3="Custom information #3"
+          progress="84"
+          state="Custom state"
         />
       ).toJSON()
     })
