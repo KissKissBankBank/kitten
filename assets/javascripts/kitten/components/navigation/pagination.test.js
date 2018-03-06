@@ -50,11 +50,14 @@ describe('<Pagination />', () => {
           />
         </StyleRoot>
       )
+      const event = {
+        foo: 'bar',
+      }
 
-      pagination.find('a').last().simulate('click')
+      pagination.find('a').last().simulate('click', event)
 
       expect(onClickSpy.called).toBe(true)
-      expect(onClickSpy.calledWith(2)).toBe(true)
+      expect(onClickSpy.calledWithMatch(2, event)).toBe(true)
     })
   })
 })
