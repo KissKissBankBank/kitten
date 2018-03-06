@@ -31,6 +31,7 @@ export class FilterIcon extends Component {
         width="20px"
         height="24px"
         viewBox="0 0 20 24"
+        fill={ color }
         { ...others }
       >
 
@@ -38,7 +39,6 @@ export class FilterIcon extends Component {
           x="2"
           width="2"
           height="10"
-          fill={ color }
         >
           <animate
             attributeType={ type }
@@ -54,7 +54,6 @@ export class FilterIcon extends Component {
           y="14"
           width="2"
           height="10"
-          fill={ color }
         >
           <animate
             attributeType={ type }
@@ -66,7 +65,6 @@ export class FilterIcon extends Component {
           />
         </rect>
         <path
-          fill={ color }
           d="M4,9v2H2V9H4 M6,7H0v6h6V7L6,7z"
         >
           <animateTransform
@@ -84,7 +82,6 @@ export class FilterIcon extends Component {
           x="9"
           width="2"
           height="14"
-          fill={ color }
         >
           <animate
             attributeType={ type }
@@ -100,7 +97,6 @@ export class FilterIcon extends Component {
           y="22"
           width="2"
           height="14"
-          fill={ color }
         >
           <animate
             attributeType={ type }
@@ -112,7 +108,6 @@ export class FilterIcon extends Component {
           />
         </rect>
         <path
-          fill={ color }
           d="M11,17v2H9v-2H11 M13,15H7v6h6V15L13,15z"
         >
           <animateTransform
@@ -130,7 +125,6 @@ export class FilterIcon extends Component {
           x="16"
           width="2"
           height="12"
-          fill={ color }
         >
           <animate
             attributeType={ type }
@@ -146,7 +140,6 @@ export class FilterIcon extends Component {
           y="12"
           width="2"
           height="12"
-          fill={ color }
         >
           <animate
             attributeType={ type }
@@ -158,7 +151,6 @@ export class FilterIcon extends Component {
           />
         </rect>
         <path
-          fill={ color }
           d="M18,7v2h-2V7H18 M20,5h-6v6h6V5L20,5z"
         >
           <animateTransform
