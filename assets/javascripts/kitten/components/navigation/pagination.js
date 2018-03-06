@@ -87,7 +87,7 @@ class PaginationBase extends Component {
   preventClickDefault = e => e.preventDefault()
 
   pageClickHandler = number => (
-    () => this.props.onPageClick(number)
+    (event) => this.props.onPageClick(number, event)
   )
 
   renderPage = (number, index) => {

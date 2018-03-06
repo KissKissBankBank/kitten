@@ -5,7 +5,18 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add new `filterIcon` component.
-- Fix: Update Radium.
+
+## [20.0.2] - 2018-03-05
+
+Fix:
+- Fix truncated title styles on `CrowdfundingCard`.
+
+## [20.0.1] - 2018-03-05
+
+Fixes:
+- Add missing `event` parameter to `Pagination`'s onClick.
+- Update `font-size` big on `TagButton` component.
+- Update Radium.
 
 ## [20.0.0] - 2018-03-01
 
