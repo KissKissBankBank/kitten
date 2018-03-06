@@ -22,8 +22,6 @@ export class FilterIcon extends Component {
 
     const dur = isAnimate ? duration : 0
 
-    // const animateIsHovered = Radium.getState(this.state, 'svg', ':hover')
-
     return (
       <svg
         version="1.1"

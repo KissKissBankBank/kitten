@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `KarlButtonIconFilter` example.
+
 ## [20.0.0] - 2018-03-01
 
 Features:
