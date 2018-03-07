@@ -4,7 +4,7 @@ import { SimilarProjectsCard } from
 
 const projectsWithImage = [
   {
-    imageSrc: 'https://placehold.it/400x200/4a84ff/4a84ff',
+    imageSrc: 'https://placehold.it/400x200/caf4fe/caf4fe',
     title: 'Title 1',
     description: 'Intellectum est enim mihi quidem in multis, et maxime in me ipso',
     link: {
