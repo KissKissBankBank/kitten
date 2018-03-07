@@ -18,20 +18,19 @@ class KarlButtonIconFilterBase extends Component {
 
     const styleSvg = [
       styles.button.icon.svg,
-      animateIsHovered && styles.button.icon.svg.hover,
-      animateIsFocused && styles.button.icon.svg.focus,
-      animateIsActived && styles.button.icon.svg.active,
+      (animateIsHovered && !isDisabled) && styles.button.icon.svg.hover,
+      (animateIsFocused && !isDisabled) && styles.button.icon.svg.focus,
+      (animateIsActived && !isDisabled) && styles.button.icon.svg.active,
     ]
 
-    const isDisabled = [
-      styles.button.icon.svg.disabled
-    ]
+    const isDisabled = styles.button.icon.svg.disabled
 
     return (
       <StyleRoot>
         <span key="button-filter" style={ styles.filter }>
           <Button
             icon="true"
+            disabled="true"
             style={ styles.button }
           >
             <span
@@ -58,7 +57,7 @@ const styles = {
     ':hover': {},
     ':focus': {},
     ':active': {},
-    'disabled': {},
+    ':disabled': {},
   },
 
   button: {
@@ -82,7 +81,7 @@ const styles = {
         active: {
           fill: `${COLORS.primary3}`,
         },
-        isDisabled: {
+        disabled: {
           fill: `${COLORS.background1}`,
         },
       },
