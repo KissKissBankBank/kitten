@@ -8,7 +8,7 @@ export const LinkBoxIllustration = props => (
     height="50"
     { ...props }
   >
-    <title>LinkBox</title>
+    <title>Document</title>
     <path fill="#fff" d="M30 34H6V0h16l8 8v26z"/>
     <path fill="#333" d="M9 3h9v2H9zm0 7h16v2H9zm0 4h10v2H9zm0 4h13v2H9zm0 3.8h5v2H9zM20 29h7v2h-7zm3-3h4v2h-4z"/>
     <path d="M22 8V1.4l-.4-.4H7v26a6.53 6.53 0 0 1 6 6h16V8.4l-.4-.4z" fill="none"/>

@@ -79,6 +79,9 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
             viewBox="0 0 10 10"
             xmlns="http://www.w3.org/2000/svg"
           >
+            <title>
+              Arrow
+            </title>
             <path
               d="M7.828,5L6.414,6.413L2.172,2.172l1.414-1.415L7.828,5z"
             />
@@ -414,6 +417,9 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
             viewBox="0 0 10 10"
             xmlns="http://www.w3.org/2000/svg"
           >
+            <title>
+              Arrow
+            </title>
             <path
               d="M7.828,5L6.414,6.413L2.172,2.172l1.414-1.415L7.828,5z"
             />
