@@ -15,10 +15,22 @@
           } %>
         <% end %>
       </div>
+    </div>
+  </div>
 
+  <div class="k-Grid__col k-Grid__col--12 k-Grid__col--3@l">
+    <div class="k-Grid">
       <div class="k-Grid__col k-Grid__col--12 k-Grid__col--3@m k-Grid__col--12@l">
-        <%= example 'Filter with animation' do %>
+        <%= example 'Filter button' do %>
           <%= react_component 'KarlButtonIconFilter' %>
+        <% end %>
+      </div>
+
+            <div class="k-Grid__col k-Grid__col--12 k-Grid__col--3@m k-Grid__col--12@l">
+        <%= example 'Filter button disabled' do %>
+          <%= react_component 'KarlButtonIconFilter', props: {
+            disabled: true,
+          } %>
         <% end %>
       </div>
     </div>

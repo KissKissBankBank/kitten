@@ -34,7 +34,7 @@ export class FilterIcon extends Component {
         fill={ color }
         { ...others }
       >
-
+        <title>Filter icon</title>
         <rect
           x="2"
           width="2"
