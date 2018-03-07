@@ -6,6 +6,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Fix: A11Y and update example colors.
 
+## [20.0.2] - 2018-03-05
+
+No changes.
+
 ## [20.0.1] - 2018-03-05
 
 No changes.
