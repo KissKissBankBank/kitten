@@ -24,24 +24,24 @@
         background-color: map-get($k-colors, 'background-1'),
       ),
       hover: (
-        color: map-get($k-colors, 'primary-1'),
+        color: map-get($k-colors, 'background-1'),
         border-color: map-get($k-colors, 'primary-1'),
-        background-color: map-get($k-colors, 'background-1'),
+        background-color: map-get($k-colors, 'primary-1'),
       ),
       focus: (
-        color: map-get($k-colors, 'primary-1'),
+        color: map-get($k-colors, 'background-1'),
         border-color: map-get($k-colors, 'primary-1'),
-        background-color: map-get($k-colors, 'background-1'),
+        background-color: map-get($k-colors, 'primary-1'),
       ),
       active: (
-        color: map-get($k-colors, 'primary-3'),
+        color: map-get($k-colors, 'background-1'),
         border-color: map-get($k-colors, 'primary-3'),
-        background-color: map-get($k-colors, 'background-1'),
+        background-color: map-get($k-colors, 'primary-3'),
       ),
       is-selected: (
-        color: map-get($k-colors, 'primary-3'),
+        color: map-get($k-colors, 'background-1'),
         border-color: map-get($k-colors, 'primary-3'),
-        background-color: map-get($k-colors, 'background-1'),
+        background-color: map-get($k-colors, 'primary-3'),
       ),
       disabled: (
         color: map-get($k-colors, 'background-1'),
@@ -90,24 +90,24 @@
         background-color: map-get($k-colors, 'background-1'),
       ),
       hover: (
-        color: map-get($k-colors, 'primary-1'),
+        color: map-get($k-colors, 'background-1'),
         border-color: map-get($k-colors, 'primary-1'),
-        background-color: map-get($k-colors, 'background-1'),
+        background-color: map-get($k-colors, 'primary-1'),
       ),
       focus: (
-        color: map-get($k-colors, 'primary-1'),
+        color: map-get($k-colors, 'background-1'),
         border-color: map-get($k-colors, 'primary-1'),
-        background-color: map-get($k-colors, 'background-1'),
+        background-color: map-get($k-colors, 'primary-1'),
       ),
       active: (
-        color: map-get($k-colors, 'primary-3'),
+        color: map-get($k-colors, 'background-1'),
         border-color: map-get($k-colors, 'primary-3'),
-        background-color: map-get($k-colors, 'background-1'),
+        background-color: map-get($k-colors, 'primary-3'),
       ),
       is-selected: (
-        color: map-get($k-colors, 'primary-3'),
+        color: map-get($k-colors, 'background-1'),
         border-color: map-get($k-colors, 'primary-3'),
-        background-color: map-get($k-colors, 'background-1'),
+        background-color: map-get($k-colors, 'primary-3'),
       ),
       disabled: (
         color: map-get($k-colors, 'background-1'),
@@ -124,13 +124,13 @@
       ),
       hover: (
         color: map-get($k-colors, 'background-1'),
-        border-color: map-get($k-colors, 'primary-2'),
-        background-color: map-get($k-colors, 'primary-2'),
+        border-color: map-get($k-colors, 'primary-1'),
+        background-color: map-get($k-colors, 'primary-1'),
       ),
       focus: (
         color: map-get($k-colors, 'background-1'),
-        border-color: map-get($k-colors, 'primary-2'),
-        background-color: map-get($k-colors, 'primary-2'),
+        border-color: map-get($k-colors, 'primary-1'),
+        background-color: map-get($k-colors, 'primary-1'),
       ),
       active: (
         color: map-get($k-colors, 'background-1'),
@@ -157,13 +157,13 @@
       ),
       hover: (
         color: map-get($k-colors, 'background-1'),
-        border-color: map-get($k-colors, 'primary-2'),
-        background-color: map-get($k-colors, 'primary-2'),
+        border-color: map-get($k-colors, 'primary-1'),
+        background-color: map-get($k-colors, 'primary-1'),
       ),
       focus: (
         color: map-get($k-colors, 'background-1'),
-        border-color: map-get($k-colors, 'primary-2'),
-        background-color: map-get($k-colors, 'primary-2'),
+        border-color: map-get($k-colors, 'primary-1'),
+        background-color: map-get($k-colors, 'primary-1'),
       ),
       active: (
         color: map-get($k-colors, 'background-1'),

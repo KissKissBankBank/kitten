@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Update all buttons colors.
+
 ## [20.0.2] - 2018-03-05
 
 Fix:
