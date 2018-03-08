@@ -2,7 +2,7 @@
 
 exports[`<FilterIcon /> should match its empty snapshot 1`] = `
 <svg
-  fill="#222"
+  fill={null}
   height="24px"
   version="1.1"
   viewBox="0 0 20 24"
