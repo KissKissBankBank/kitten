@@ -106,7 +106,7 @@ view helper in your `.erb` file:
 
 Kitten provides a styleguide interface through a Rails engine.
 You can run see it in your browser by downloading kitten and launching
-the dummy app or by installing the style guide in your Rails app.
+the app or by installing the style guide in your Rails app.
 
 The engine provides some configuration options that can be defined in
 `config/initializers/kitten.rb`:
@@ -135,17 +135,19 @@ creating new components!
 $ bin/kitten install
 ```
 
-### Dummy style guide
+### Style guide
 
-To launch the style guide on the dummy app with hot-reloading:
+To launch the style guide with hot-reloading, install `overmind`, then:
 
 ```sh
-$ foreman start
+$ bin/start
 ```
 
 Then visit http://localhost:3003
 
-To launch the style guide on the dummy app without hot-reloading:
+#### Background app
+
+To launch the style guide in the background without hot-reloading:
 
 ```sh
 $ bin/kitten start
@@ -153,22 +155,19 @@ $ bin/kitten start
 
 Then visit http://localhost:3000
 
-
-To stop the style guide on the dummy app:
+To stop the app:
 
 ```sh
 $ bin/kitten stop
 ```
 
-
-To check wether the dummy app is running or not:
+To check wether it is running or not:
 
 ```sh
 $ bin/kitten status
 ```
 
-
-To tail the dummy app logs in real time:
+To tail the app logs in real time:
 
 ```sh
 $ bin/kitten log
@@ -176,7 +175,9 @@ $ bin/kitten log
 
 Hit `Ctrl+C` to stop the tail.
 
-To share the dummy app with production settings (to share via ngrok for
+#### Production settings
+
+To share the style guide with production settings (to share via ngrok for
 example), you can compile the assets and serve a production server:
 
 ```sh
