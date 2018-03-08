@@ -8,7 +8,7 @@ export class KarlExampleTitle extends Component {
         tag="p"
         weight="regular"
         size="default"
-        style="italic"
+        fontStyle="italic"
         color="font2"
         lineHeight="normal"
       >

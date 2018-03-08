@@ -22,9 +22,7 @@ const loremIpsumSitAmet =
   ' Donec pede justo, fringilla vel, aliquet nec, ' +
   'vulputate eget, arcu enim justo, rhoncus ut.'
 
-const primaryColor = COLORS.primary1.replace('#', '')
-
-const imageSrc = `https://placehold.it/40x40/${primaryColor}/${primaryColor}`
+const imageSrc = 'https://placehold.it/40x40/caf4fe/caf4fe'
 
 export const KarlHeroExamples = props => (
   <StyleRoot>

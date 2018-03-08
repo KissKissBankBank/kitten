@@ -373,7 +373,7 @@ export const KarlLoggedHeaderUserMenu = defaultProps(UserMenu, {
 
   // Button
   buttonId: 'k-UserMenu',
-  buttonImgSrc: 'https://placehold.it/200x200/4a84ff/4a84ff',
+  buttonImgSrc: 'https://placehold.it/200x200/caf4fe/caf4fe',
   buttonImgWidth: 100,
   buttonImgHeight: 100,
   buttonImgAlt: 'Alt Firstname',

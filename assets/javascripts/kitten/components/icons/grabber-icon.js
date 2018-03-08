@@ -15,6 +15,7 @@ export class GrabberIcon extends React.Component {
         height="32"
         { ...this.props }
       >
+        <title>Grabber</title>
         <path d="M0 0 v100 h20 v-100 z" />
         <path d="M40 0 v100 h20 v-100 z" />
         <path d="M80 0 v100 h20 v-100 z" />

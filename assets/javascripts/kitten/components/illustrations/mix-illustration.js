@@ -8,6 +8,7 @@ export const MixIllustration = props => (
     xmlns="http://www.w3.org/2000/svg"
     { ...props }
   >
+    <title>Mix</title>
     <ellipse fill="#59F091" cx="54.843" cy="24.227" rx="1.229" ry="1.237"/>
     <circle fill="#D5FFE4" cx="26.5" cy="36.5" r="9.5"/>
     <circle fill="#D5FFE4" cx="47.5" cy="58.5" r="10.5"/>
