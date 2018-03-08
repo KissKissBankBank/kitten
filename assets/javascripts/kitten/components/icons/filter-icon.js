@@ -16,11 +16,11 @@ export class FilterIcon extends Component {
       type,
       name,
       begin,
-      isAnimated,
+      animated,
       ...others,
     } = this.props
 
-    const dur = isAnimated ? duration : 0
+    const dur = animated ? duration : 0
 
     return (
       <svg
@@ -171,7 +171,7 @@ export class FilterIcon extends Component {
 FilterIcon.defaultProps = {
   color: null,
   duration: '1.5s',
-  isAnimated: false,
+  animated: false,
   type: 'xml',
   name: 'y',
   begin: '0',

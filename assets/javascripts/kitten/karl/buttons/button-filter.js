@@ -43,7 +43,7 @@ class KarlButtonIconFilterBase extends Component {
             >
               <FilterIcon
                 key={ `icon-${animateIsHovered}` } // TODO:
-                isAnimated={ isAnimated }
+                animated={ isAnimated }
                 style={ styles.button.icon.svg }
               />
             </span>
