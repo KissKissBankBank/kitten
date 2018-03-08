@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add `KarlButtonIconFilter` example.
+- Feature: Update `KarlLoaderInButton` example.
 - Fix: A11Y and update example colors.
 
 ## [20.0.2] - 2018-03-05

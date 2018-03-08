@@ -17,7 +17,6 @@
 @mixin k-Loader {
   $circle-size: k-px-to-rem(5px);
   $spacing: k-px-to-rem(2px);
-  $color: map-get($k-colors, 'font-1');
   $easing: cubic-bezier(.2, .68, .18, 1.08);
   $duration: 1.75s;
 
@@ -33,7 +32,6 @@
     width: $circle-size;
     height: $circle-size;
     border-radius: $circle-size;
-    fill: $color;
 
     animation: k-Loader-animation-scale $duration 0s infinite $easing;
     animation-fill-mode: both;
