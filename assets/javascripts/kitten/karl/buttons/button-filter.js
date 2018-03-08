@@ -20,7 +20,7 @@ class KarlButtonIconFilterBase extends Component {
 
     const isModifier = this.props.modifier
 
-    const isAnimate =
+    const isAnimated =
       !isDisabled && (animateIsHovered || animateIsFocused || animateIsActived)
 
     return (
@@ -43,7 +43,7 @@ class KarlButtonIconFilterBase extends Component {
             >
               <FilterIcon
                 key={ `icon-${animateIsHovered}` } // TODO:
-                isAnimate={ isAnimate }
+                isAnimated={ isAnimated }
                 style={ styles.button.icon.svg }
               />
             </span>
