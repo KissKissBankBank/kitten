@@ -17,6 +17,7 @@ class KarlButtonIconFilterBase extends Component {
       Radium.getState(this.state, 'button-filter', ':active')
 
     const isDisabled = this.props.disabled
+
     const isModifier = this.props.modifier
 
     const isAnimate =
