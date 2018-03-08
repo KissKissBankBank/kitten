@@ -169,7 +169,7 @@ export class FilterIcon extends Component {
 }
 
 FilterIcon.defaultProps = {
-  color: '#222',
+  color: null,
   duration: '1.5s',
   isAnimate: false,
   type: 'xml',
