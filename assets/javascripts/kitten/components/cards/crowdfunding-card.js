@@ -479,11 +479,11 @@ const styles = {
 CrowdfundingCardComponent.defaultProps = {
   href: null,
   imageProps: {
-    src: 'https://placehold.it/350x200/4a84ff/4a84ff',
+    src: 'https://placehold.it/350x200/caf4fe/caf4fe',
     alt: '',
   },
   avatarProps: {
-    src: 'https://placehold.it/100x100/4a84ff/4a84ff',
+    src: 'https://placehold.it/100x100/caf4fe/caf4fe',
     alt: '',
   },
   ownerTitle: null,

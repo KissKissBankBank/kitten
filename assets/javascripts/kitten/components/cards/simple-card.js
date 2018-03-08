@@ -93,7 +93,7 @@ const styles = {
 
 SimpleCardComponent.defaultProps = {
   imageProps: {
-    src: 'https://placehold.it/200x200/4a84ff/4a84ff',
+    src: 'https://placehold.it/200x200/caf4fe/caf4fe',
     alt: '',
   },
   titleProps: {},

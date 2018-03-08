@@ -20,6 +20,9 @@
   $button-size: 40px;
   $button-size-big: 50px;
 
+  $border-size: k-px-to-rem(2px);
+  $border-color: map-get($k-colors, 'line-1');
+
   .k-ButtonImage {
     @include k-buttonRoundedImage($button-size);
 
@@ -51,7 +54,7 @@
   }
 
   .k-ButtonImage--withBorder {
-    border: 1px solid map-get($k-colors, 'line-2');
+    border: $border-size solid $border-color;
   }
 
   .k-ButtonImage__img {

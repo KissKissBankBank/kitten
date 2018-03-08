@@ -8,6 +8,7 @@ export const ClockIcon = props => (
     height="10"
     { ...props }
   >
+    <title>Clock</title>
     <circle cx="5.5" cy="5.5" r="5" fill="#fff" stroke="#333" />
     <path d="M6 5h1.5v1H5V2.5h1z" fill="#333" />
   </svg>

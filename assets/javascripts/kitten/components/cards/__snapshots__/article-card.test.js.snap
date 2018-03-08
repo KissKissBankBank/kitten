@@ -34,7 +34,7 @@ exports[`<ArticleCard /> by default matches with snapshot 1`] = `
         alt=""
         className="k-Card__image"
         data-radium={true}
-        src="https://placehold.it/350x200/4a84ff/4a84ff"
+        src="https://placehold.it/350x200/caf4fe/caf4fe"
         style={
           Object {
             "display": "block",
@@ -80,7 +80,7 @@ exports[`<ArticleCard /> by default matches with snapshot 1`] = `
           <img
             alt=""
             className="k-ButtonImage__img"
-            src="https://placehold.it/100x100/4a84ff/4a84ff"
+            src="https://placehold.it/100x100/caf4fe/caf4fe"
           />
         </span>
       </div>
@@ -200,7 +200,7 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
         alt=""
         className="k-Card__image"
         data-radium={true}
-        src="https://placehold.it/350x200/4a84ff/4a84ff"
+        src="https://placehold.it/350x200/caf4fe/caf4fe"
         style={
           Object {
             "display": "block",
@@ -246,7 +246,7 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
           <img
             alt=""
             className="k-ButtonImage__img"
-            src="https://placehold.it/100x100/4a84ff/4a84ff"
+            src="https://placehold.it/100x100/caf4fe/caf4fe"
           />
         </span>
       </div>
@@ -373,7 +373,7 @@ exports[`<ArticleCard /> with ignored props matches with snapshot 1`] = `
         alt=""
         className="k-Card__image"
         data-radium={true}
-        src="https://placehold.it/350x200/4a84ff/4a84ff"
+        src="https://placehold.it/350x200/caf4fe/caf4fe"
         style={
           Object {
             "display": "block",
@@ -419,7 +419,7 @@ exports[`<ArticleCard /> with ignored props matches with snapshot 1`] = `
           <img
             alt=""
             className="k-ButtonImage__img"
-            src="https://placehold.it/100x100/4a84ff/4a84ff"
+            src="https://placehold.it/100x100/caf4fe/caf4fe"
           />
         </span>
       </div>
