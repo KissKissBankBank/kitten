@@ -7,59 +7,56 @@ import { FilterIcon as FilterIconBase } from 'kitten/components/icons/filter-ico
 const FilterIcon = Radium(FilterIconBase)
 const Button = Radium(ButtonBase)
 
-const karlButtonIconFilter = (props) => {
-  return class KarlButtonIconFilter extends Component {
-    render() {
-      const animateIsHovered =
-        Radium.getState(this.state, 'button-filter', ':hover')
-      const animateIsFocused =
-        Radium.getState(this.state, 'button-filter', ':focus')
-      const animateIsActived =
-        Radium.getState(this.state, 'button-filter', ':active')
+class KarlButtonIconFilterBase extends Component {
+  render() {
+    const animateIsHovered =
+      Radium.getState(this.state, 'button-filter', ':hover')
+    const animateIsFocused =
+      Radium.getState(this.state, 'button-filter', ':focus')
+    const animateIsActived =
+      Radium.getState(this.state, 'button-filter', ':active')
 
-      const isAnimate =
-        !isDisabled && (animateIsHovered || animateIsFocused || animateIsActived)
+    const isDisabled = this.props.disabled
+    const isModifier = this.props.modifier
 
-      const styleSvg = [
-        styles.button.icon.svg,
-        (animateIsHovered && !isDisabled) && styles.button.icon.svg.hover,
-        (animateIsFocused && !isDisabled) && styles.button.icon.svg.focus,
-        (animateIsActived && !isDisabled) && styles.button.icon.svg.active,
-        isDisabled && styles.button.icon.svg.disabled,
-      ]
+    const isAnimate =
+      !isDisabled && (animateIsHovered || animateIsFocused || animateIsActived)
 
-      return (
-        <StyleRoot>
-          <span key="button-filter" style={ styles.filter }>
-            <Button
-              icon="true"
-              aria-label="Filter button"
-              title="Filter button"
-              style={ styles.button }
-              { ...props }
+    return (
+      <StyleRoot>
+        <span
+          key="button-filter"
+          style={ styles.filter }
+        >
+          <Button
+            icon="true"
+            aria-label="Filter button"
+            title="Filter button"
+            disabled={ isDisabled }
+            modifier={ isModifier }
+            style={ styles.button }
+          >
+            <span
+              className="k-Button__icon"
+              style={ styles.button.icon }
             >
-              <span
-                className="k-Button__icon"
-                style={ styles.button.icon }
-              >
-                <FilterIcon
-                  key={ `icon-${animateIsHovered}` } // TODO:
-                  isAnimate={ isAnimate }
-                  style={ styleSvg }
-                />
-              </span>
-              Filtrer les projets
-            </Button>
-          </span>
-        </StyleRoot>
-      )
-    }
+              <FilterIcon
+                key={ `icon-${animateIsHovered}` } // TODO:
+                isAnimate={ isAnimate }
+                style={ styles.button.icon.svg }
+              />
+            </span>
+            Filtrer les projets
+          </Button>
+        </span>
+      </StyleRoot>
+    )
   }
 }
 
-// KarlButtonIconFilterBase.defaultProps = {
-//   disabled: false,
-// }
+KarlButtonIconFilterBase.defaultProps = {
+  disabled: false,
+}
 
 const styles = {
   filter: {
@@ -81,21 +78,9 @@ const styles = {
 
       svg: {
         display: 'block',
-        hover: {
-          fill: `${COLORS.primary1}`,
-        },
-        focus: {
-          fill: `${COLORS.primary1}`,
-        },
-        active: {
-          fill: `${COLORS.primary3}`,
-        },
-        disabled: {
-          fill: `${COLORS.background1}`,
-        },
       },
     },
   },
 }
 
-// export const KarlButtonIconFilter = Radium(KarlButtonIconFilterBase)
+export const KarlButtonIconFilter = Radium(KarlButtonIconFilterBase)
