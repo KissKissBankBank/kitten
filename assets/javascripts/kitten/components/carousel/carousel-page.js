@@ -1,6 +1,6 @@
-import React from 'react'
-import Radium from 'radium'
-import { createRangeFromZeroTo } from 'kitten/helpers/utils/range'
+import React from "react";
+import Radium from "radium";
+import { createRangeFromZeroTo } from "kitten/helpers/utils/range";
 
 class CarouselPageBase extends React.Component {
   render() {
@@ -10,45 +10,40 @@ class CarouselPageBase extends React.Component {
       itemMinWidth,
       itemMarginBetween,
       renderItem
-    } = this.props
-    const rangeCard = createRangeFromZeroTo(numColumns)
+    } = this.props;
+    const rangeCard = createRangeFromZeroTo(numColumns);
 
     return (
-      <div style={ styles.page }>
-        {
-          rangeCard.map(index =>
-            <div
-              key={ index }
-              style={[
-                styles.item,
-                {
-                  minWidth: itemMinWidth,
-                  flexBasis: itemMinWidth,
-                  marginLeft: index ? itemMarginBetween : 0,
-                }
-              ]}
-            >
+      <div style={styles.page}>
+        {rangeCard.map(index => (
+          <div
+            key={index}
+            style={[
+              styles.item,
               {
-                data[index] &&
-                  renderItem({ item: data[index] })
+                minWidth: itemMinWidth,
+                flexBasis: itemMinWidth,
+                marginLeft: index ? itemMarginBetween : 0
               }
-            </div>
-          )
-        }
+            ]}
+          >
+            {data[index] && renderItem({ item: data[index] })}
+          </div>
+        ))}
       </div>
-    )
+    );
   }
 }
 
 const styles = {
   page: {
-    display: 'flex',
-    flexDirection: 'row',
+    display: "flex",
+    flexDirection: "row"
   },
   item: {
     flexGrow: 1,
-    flexShrink: 1,
-  },
-}
+    flexShrink: 1
+  }
+};
 
-export const CarouselPage = Radium(CarouselPageBase)
+export const CarouselPage = Radium(CarouselPageBase);

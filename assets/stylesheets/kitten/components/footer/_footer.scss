@@ -23,17 +23,17 @@
   }
 
   .k-Footer__brand {
-    @include k-typographyFont('light');
+    @include k-typographyFont("light");
     @include k-typographyFontSize(-1);
 
     @include k-grid-col(12);
 
-    @include k-media-min('s') {
+    @include k-media-min("s") {
       @include k-grid-col(4);
       @include k-grid-offset(4);
     }
 
-    @include k-media-min('l') {
+    @include k-media-min("l") {
       @include k-grid-col(2);
       @include k-grid-offset(0);
       text-align: left;
@@ -45,7 +45,7 @@
     margin: k-px-to-rem(26px) auto k-px-to-rem(30px); // text is centered
     line-height: 1.4;
 
-    @include k-media-min('l') {
+    @include k-media-min("l") {
       margin-top: 1rem;
       margin-bottom: 1rem;
       margin-left: 0; // text is left-aligned
@@ -55,7 +55,7 @@
   .k-Footer__nav {
     @include k-grid-col(12);
 
-    @include k-media-min('l') {
+    @include k-media-min("l") {
       @include k-grid-col(8);
       text-align: left;
     }
@@ -70,7 +70,7 @@
 
     @include k-grid-col(12);
 
-    @include k-media-min('m') {
+    @include k-media-min("m") {
       @include k-grid-col(4);
     }
   }
@@ -80,7 +80,7 @@
 
     @include k-grid-col(12);
 
-    @include k-media-min('l') {
+    @include k-media-min("l") {
       @include k-grid-col(2);
       @include k-grid-offset(0);
     }
@@ -98,11 +98,11 @@
 
     @include k-grid-col(12);
 
-    @include k-media-min('l') {
+    @include k-media-min("l") {
       @include k-grid-col(8);
     }
 
-    @include k-typographyFont('light');
+    @include k-typographyFont("light");
     @include k-typographyFontSize(-1, 1.4);
   }
 
@@ -113,11 +113,11 @@
   .k-Footer__logo {
     @include k-grid-col(12);
 
-    @include k-media-min('s') {
+    @include k-media-min("s") {
       @include k-grid-col(6);
     }
 
-    @include k-media-min('l') {
+    @include k-media-min("l") {
       display: flex;
       text-align: left;
     }
@@ -129,11 +129,11 @@
 
     align-self: flex-end;
 
-    @include k-typographyFont('bold');
+    @include k-typographyFont("bold");
     @include k-typographyFontSize(-1);
 
     @include k-grid-col(12);
-    @include k-media-min('l') {
+    @include k-media-min("l") {
       padding-bottom: k-px-to-rem(21px);
 
       @include k-grid-col(4);
@@ -152,8 +152,7 @@
       vertical-align: middle;
     }
 
-
-    @include k-media-min('l') {
+    @include k-media-min("l") {
       > img,
       > svg {
         display: block;

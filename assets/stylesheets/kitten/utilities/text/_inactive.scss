@@ -12,6 +12,6 @@
 
 @mixin k-utilities-inactive {
   .k-u-text--inactive {
-    color: map-get($k-colors, 'line-2');
+    color: map-get($k-colors, "line-2");
   }
 }

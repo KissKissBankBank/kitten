@@ -4,10 +4,7 @@
 ///
 /// @type Map
 $k-vertical-padding-schema: (
-  type: 'map',
-
-  properties: (
-    top:    k-number-schema($unit: none),
-    bottom: k-number-schema($unit: none)
-  )
+  type: "map",
+  properties:
+    (top: k-number-schema($unit: none), bottom: k-number-schema($unit: none))
 );

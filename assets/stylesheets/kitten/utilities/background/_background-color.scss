@@ -13,10 +13,10 @@
 
 @mixin k-utilities-background-color {
   .k-u-background-color-background1 {
-    background-color: map-get($k-colors, 'background-1');
+    background-color: map-get($k-colors, "background-1");
   }
 
   .k-u-background-color-background2 {
-    background-color: map-get($k-colors, 'background-2');
+    background-color: map-get($k-colors, "background-2");
   }
 }

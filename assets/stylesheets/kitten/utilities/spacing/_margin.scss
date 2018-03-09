@@ -82,13 +82,13 @@
     double: 20px,
     triple: 30px,
     quadruple: 40px,
-    quintuple: 50px,
+    quintuple: 50px
   );
 
   @each $name, $size in $k-sizes {
-    @include k-u-margin('top', $name, $size);
-    @include k-u-margin('bottom', $name, $size);
-    @include k-u-margin('left', $name, $size);
-    @include k-u-margin('right', $name, $size);
+    @include k-u-margin("top", $name, $size);
+    @include k-u-margin("bottom", $name, $size);
+    @include k-u-margin("left", $name, $size);
+    @include k-u-margin("right", $name, $size);
   }
 }

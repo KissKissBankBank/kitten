@@ -12,12 +12,12 @@
   margin-right: auto;
 
   box-sizing: border-box;
-  max-width: k-map-fetch($k-grid, 'container');
-  padding-left: k-map-fetch($k-grid, 'container-padding-thin');
-  padding-right: k-map-fetch($k-grid, 'container-padding-thin');
+  max-width: k-map-fetch($k-grid, "container");
+  padding-left: k-map-fetch($k-grid, "container-padding-thin");
+  padding-right: k-map-fetch($k-grid, "container-padding-thin");
 
-  @include k-media-min('s') {
-    padding-left: k-map-fetch($k-grid, 'container-padding');
-    padding-right: k-map-fetch($k-grid, 'container-padding');
+  @include k-media-min("s") {
+    padding-left: k-map-fetch($k-grid, "container-padding");
+    padding-right: k-map-fetch($k-grid, "container-padding");
   }
 }

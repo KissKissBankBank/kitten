@@ -1,69 +1,66 @@
-import React from 'react'
-import sinon from 'sinon'
-import { StyleRoot } from 'radium'
-import { pages, Pagination } from 'kitten/components/navigation/pagination'
-import renderer from 'react-test-renderer'
+import React from "react";
+import sinon from "sinon";
+import { StyleRoot } from "radium";
+import { pages, Pagination } from "kitten/components/navigation/pagination";
+import renderer from "react-test-renderer";
 
 const createMockMediaMatcher = matches => () => ({
   matches,
   addListener: () => {},
-  removeListener: () => {},
-})
+  removeListener: () => {}
+});
 
-describe('<Pagination />', () => {
-  const originalMatchMedia = window.matchMedia
+describe("<Pagination />", () => {
+  const originalMatchMedia = window.matchMedia;
 
   beforeEach(() => {
-    window.matchMedia = createMockMediaMatcher(false)
-  })
+    window.matchMedia = createMockMediaMatcher(false);
+  });
 
   afterEach(() => {
-    window.matchMedia = originalMatchMedia
-  })
+    window.matchMedia = originalMatchMedia;
+  });
 
-  describe('by default', () => {
-    it('should match its empty snapshot', () => {
+  describe("by default", () => {
+    it("should match its empty snapshot", () => {
       const tree = renderer
         .create(
           <StyleRoot>
-            <Pagination
-              currentPage={ 10 }
-              totalPages={ 42 }
-            />
+            <Pagination currentPage={10} totalPages={42} />
           </StyleRoot>
         )
-        .toJSON()
+        .toJSON();
 
-      expect(tree).toMatchSnapshot()
-    })
-  })
+      expect(tree).toMatchSnapshot();
+    });
+  });
 
-  describe('onPageClick', () => {
-    it('calls the given function when clicking on links', () => {
-      const sandbox = sinon.sandbox.create()
-      const onClickSpy = sandbox.spy()
+  describe("onPageClick", () => {
+    it("calls the given function when clicking on links", () => {
+      const sandbox = sinon.sandbox.create();
+      const onClickSpy = sandbox.spy();
       const pagination = mount(
         <StyleRoot>
-          <Pagination
-            onPageClick={ onClickSpy }
-            totalPages={ 5 }
-          />
+          <Pagination onPageClick={onClickSpy} totalPages={5} />
         </StyleRoot>
-      )
+      );
       const event = {
-        foo: 'bar',
-      }
+        foo: "bar"
+      };
 
-      pagination.find('a').last().simulate('click', event)
+      pagination
+        .find("a")
+        .last()
+        .simulate("click", event);
 
-      expect(onClickSpy.called).toBe(true)
-      expect(onClickSpy.calledWithMatch(2, event)).toBe(true)
-    })
-  })
-})
+      expect(onClickSpy.called).toBe(true);
+      expect(onClickSpy.calledWithMatch(2, event)).toBe(true);
+    });
+  });
+});
 
-describe('pages', () => {
-  describe('matches our list of expected results', () => {
+describe("pages", () => {
+  describe("matches our list of expected results", () => {
     const expectedPages = [
       // min
       // | max
@@ -117,14 +114,14 @@ describe('pages', () => {
       [[1, 42, 39, 5], [1, null, 39, null, 42]],
       [[1, 42, 40, 5], [1, null, 40, 41, 42]],
       [[1, 42, 41, 5], [1, null, 40, 41, 42]],
-      [[1, 42, 42, 5], [1, null, 40, 41, 42]],
-    ]
+      [[1, 42, 42, 5], [1, null, 40, 41, 42]]
+    ];
 
     expectedPages.forEach(line => {
-      const [args, expectedResult] = line
+      const [args, expectedResult] = line;
       it(`expects ${args} to match ${expectedResult}`, () => {
-        expect(pages(...args)).toEqual(expectedResult)
-      })
-    })
-  })
-})
+        expect(pages(...args)).toEqual(expectedResult);
+      });
+    });
+  });
+});

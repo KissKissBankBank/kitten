@@ -3,10 +3,10 @@
 /// @group typography
 @mixin k-typographyFont($font-name) {
   $font: k-map-fetch($k-fonts, $font-name);
-  $family: map-get($font, 'family');
-  $weight: map-get($font, 'weight');
-  $transform: map-get($font, 'transform');
-  $letter-spacing: map-get($font, 'letter-spacing');
+  $family: map-get($font, "family");
+  $weight: map-get($font, "weight");
+  $transform: map-get($font, "transform");
+  $letter-spacing: map-get($font, "letter-spacing");
 
   font-family: $family;
   @if $weight {

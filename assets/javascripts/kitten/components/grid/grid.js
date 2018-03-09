@@ -1,76 +1,63 @@
-import React, { Component } from 'react'
-import classNames from 'classnames'
-import { ScreenConfig } from 'kitten/constants/screen-config'
+import React, { Component } from "react";
+import classNames from "classnames";
+import { ScreenConfig } from "kitten/constants/screen-config";
 
 export class Grid extends Component {
   render() {
-    const { className, ...others } = this.props
-    const gridClassName = classNames('k-Grid', className)
+    const { className, ...others } = this.props;
+    const gridClassName = classNames("k-Grid", className);
 
-    return (
-      <div
-        className={ gridClassName }
-        { ...others }
-      />
-    )
+    return <div className={gridClassName} {...others} />;
   }
 }
 
 export class GridCol extends React.Component {
   classByMediaQuery() {
-    const props = this.props
+    const props = this.props;
 
     const classNamesByMediaQuery = Object.keys(ScreenConfig).map(size => {
-      const mediaQuery = size.toLowerCase()
-      const col = props[`col-${mediaQuery}`]
-      const offset = props[`offset-${mediaQuery}`]
+      const mediaQuery = size.toLowerCase();
+      const col = props[`col-${mediaQuery}`];
+      const offset = props[`offset-${mediaQuery}`];
 
-      return classNames(
-        classNamesByMediaQuery,
-        {
-          [`k-Grid__col--${col}@${mediaQuery}`]: col,
-          [`k-Grid__col--offset-${offset}@${mediaQuery}`]: offset,
-        },
-      )
-    })
+      return classNames(classNamesByMediaQuery, {
+        [`k-Grid__col--${col}@${mediaQuery}`]: col,
+        [`k-Grid__col--offset-${offset}@${mediaQuery}`]: offset
+      });
+    });
 
-    return classNamesByMediaQuery
+    return classNamesByMediaQuery;
   }
 
   render() {
-    const { col, offset, className, ...others } = this.props
+    const { col, offset, className, ...others } = this.props;
 
     const gridClassNames = classNames(
       {
         [`k-Grid__col--${col}`]: col,
-        [`k-Grid__col--offset-${offset}`]: offset,
+        [`k-Grid__col--offset-${offset}`]: offset
       },
       this.classByMediaQuery(),
-      className,
-    )
+      className
+    );
 
     // Remove unknown props in others.
     Object.keys(ScreenConfig).map(size => {
-      const mediaQuery = size.toLowerCase()
-      delete(others[`col-${mediaQuery}`])
-      delete(others[`offset-${mediaQuery}`])
-    })
+      const mediaQuery = size.toLowerCase();
+      delete others[`col-${mediaQuery}`];
+      delete others[`offset-${mediaQuery}`];
+    });
 
-    return (
-      <div
-        { ...others }
-        className={ gridClassNames }
-      />
-    )
+    return <div {...others} className={gridClassNames} />;
   }
 }
 
 Grid.defaultProps = {
-  className: null,
-}
+  className: null
+};
 
 GridCol.defaultProps = {
-  col: '12',
+  col: "12",
   offset: null,
-  className: null,
-}
+  className: null
+};

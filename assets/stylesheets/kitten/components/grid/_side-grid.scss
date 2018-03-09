@@ -28,14 +28,14 @@
 ///   </div>
 
 @mixin k-SideGrid {
-  $background: map-get($k-colors, 'background-1');
-  $aside-background: map-get($k-colors, 'background-2');
-  $aside-border-color: map-get($k-colors, 'line-1');
+  $background: map-get($k-colors, "background-1");
+  $aside-background: map-get($k-colors, "background-2");
+  $aside-border-color: map-get($k-colors, "line-1");
   $aside-border-width: 1px;
   $half-gutter: k-px-to-rem(10px);
 
   .k-SideGrid {
-    @include k-media-min('m') {
+    @include k-media-min("m") {
       background: linear-gradient(
         to right,
         $background 0%,
@@ -47,7 +47,7 @@
   }
 
   .k-SideGrid--asideStart {
-    @include k-media-min('m') {
+    @include k-media-min("m") {
       background: linear-gradient(
         to left,
         $background 0%,
@@ -71,7 +71,7 @@
     background-color: $background;
     padding-bottom: k-px-to-rem(30px);
 
-    @include k-media-min('m') {
+    @include k-media-min("m") {
       padding-bottom: k-px-to-rem(50px);
 
       @include k-grid-col(8);
@@ -108,7 +108,7 @@
       padding-right: 0;
     }
 
-    @include k-media-max('s') {
+    @include k-media-max("s") {
       display: none;
     }
   }

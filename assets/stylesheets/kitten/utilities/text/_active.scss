@@ -12,6 +12,6 @@
 
 @mixin k-utilities-active {
   .k-u-text--active {
-    color: map-get($k-colors, 'primary-1');
+    color: map-get($k-colors, "primary-1");
   }
 }

@@ -21,7 +21,7 @@
   }
 
   .k-FormActions--spreadOut\@s-up {
-    @include k-media-min('s') {
+    @include k-media-min("s") {
       justify-content: space-between;
 
       .k-FormActions__item {

@@ -19,7 +19,7 @@
 }
 
 @mixin k-grid-colBase {
-  $gutter-width: k-map-fetch($k-grid, 'gutter-width');
+  $gutter-width: k-map-fetch($k-grid, "gutter-width");
 
   box-sizing: border-box;
   flex: 0 0 auto;
@@ -28,14 +28,13 @@
 }
 
 @mixin k-grid-colSize($columns, $flexible: true) {
-  $number-of-columns: k-map-fetch($k-grid, 'columns');
+  $number-of-columns: k-map-fetch($k-grid, "columns");
   $width: (100% / $number-of-columns) * $columns;
 
   @if $flexible {
     flex-basis: $width;
     max-width: $width;
-  }
-  @else {
+  } @else {
     width: $width;
   }
 }

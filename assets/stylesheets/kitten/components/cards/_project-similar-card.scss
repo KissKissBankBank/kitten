@@ -32,13 +32,13 @@
 ///   </div>
 
 @mixin k-ProjectSimilarCard {
-  $info-font: 'light';
+  $info-font: "light";
   $info-size: -1; // 14px
 
-  $header-font: 'regular';
+  $header-font: "regular";
   $header-size: -1; // 14px
 
-  $info-value-font: 'bold';
+  $info-value-font: "bold";
   $info-value-size: 0; // 16px
 
   $line-height: normal;
@@ -65,7 +65,7 @@
 
   .k-ProjectSimilarCard__refresh__link {
     text-decoration: none;
-    color: map-get($k-colors, 'primary-1');
+    color: map-get($k-colors, "primary-1");
 
     @include k-typographyFont($header-font);
     @include k-typographyFontSize($header-size, $line-height);

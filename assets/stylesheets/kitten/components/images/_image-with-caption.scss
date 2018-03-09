@@ -8,7 +8,7 @@
   $paddingTop: k-px-to-rem(25px);
   $paddingSide: k-px-to-rem(30px);
 
-  $captionBackgroundColor: map-get($k-colors, 'background-1');
+  $captionBackgroundColor: map-get($k-colors, "background-1");
 
   .k-ImageWithCaption {
     position: relative;

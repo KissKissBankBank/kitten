@@ -17,7 +17,7 @@
 @mixin k-TextInput {
   $border-width: k-px-to-rem(2px);
 
-  $font: 'light';
+  $font: "light";
   $font-size: -1; // 14px
   $line-height: 1.3;
 
@@ -29,28 +29,28 @@
   $input-radius: 0;
 
   // Base
-  $color: map-get($k-colors, 'font-1');
-  $border-color: map-get($k-colors, 'line-1');
-  $background: map-get($k-colors, 'background-1');
+  $color: map-get($k-colors, "font-1");
+  $border-color: map-get($k-colors, "line-1");
+  $background: map-get($k-colors, "background-1");
 
   // Focus
-  $border-focus: map-get($k-colors, 'line-2');
+  $border-focus: map-get($k-colors, "line-2");
 
   // Disabled
-  $color-disabled: map-get($k-colors, 'font-2');
-  $border-disabled: map-get($k-colors, 'line-1');
-  $background-disabled: map-get($k-colors, 'line-1');
+  $color-disabled: map-get($k-colors, "font-2");
+  $border-disabled: map-get($k-colors, "line-1");
+  $background-disabled: map-get($k-colors, "line-1");
 
   // Placeholder
-  $color-placeholder: map-get($k-colors, 'font-2');
+  $color-placeholder: map-get($k-colors, "font-2");
 
   // Is-valid
-  $color-is-valid: map-get($k-colors, 'tertiary-2');
-  $border-is-valid: map-get($k-colors, 'tertiary-2');
+  $color-is-valid: map-get($k-colors, "tertiary-2");
+  $border-is-valid: map-get($k-colors, "tertiary-2");
 
   // Is-error
-  $color-is-error: map-get($k-colors, 'error-3');
-  $border-is-error: map-get($k-colors, 'error-3');
+  $color-is-error: map-get($k-colors, "error-3");
+  $border-is-error: map-get($k-colors, "error-3");
 
   // Others
   $horizontal-padding: 15px;
@@ -70,7 +70,7 @@
     height: $height;
     padding: k-px-to-rem($vertical-padding) k-px-to-rem($horizontal-padding);
     color: $color;
-    transition: color .2s, border-color .2s;
+    transition: color 0.2s, border-color 0.2s;
 
     appearance: none;
 

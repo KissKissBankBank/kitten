@@ -33,7 +33,7 @@
 ///   </button>
 
 @mixin k-TagButton {
-  $font: 'regular';
+  $font: "regular";
   $border-size: 2px;
 
   // Size settings tag-button.
@@ -57,7 +57,7 @@
   $button-step: -2; // 12px
   $button-big-step: -1; // 14px
 
-  $transition-speed: .2s;
+  $transition-speed: 0.2s;
 
   .k-TagButton {
     @include k-buttonBase;
@@ -72,19 +72,16 @@
 
   // Colors modifiers.
   .k-TagButton--helium {
-    @include k-tagButtonColors('helium');
+    @include k-tagButtonColors("helium");
   }
 
   .k-TagButton--carbon {
-    @include k-tagButtonColors('carbon');
+    @include k-tagButtonColors("carbon");
   }
 
   // Size modifier.
   .k-TagButton--tiny {
-    @include k-typographyFontSize(
-      $button-step,
-      $tag-button-line-height-tiny
-    );
+    @include k-typographyFontSize($button-step, $tag-button-line-height-tiny);
 
     min-height: $tag-button-line-height-tiny;
   }
@@ -102,7 +99,7 @@
 
   // Icon modifier.
   .k-TagButton--icon {
-    @include k-buttonColors('hydrogen', (svg: false));
+    @include k-buttonColors("hydrogen", (svg: false));
   }
 
   // svg modifier.

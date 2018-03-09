@@ -18,7 +18,7 @@
 ///   </div>
 
 @mixin k-TextInputWithLimit {
-  $font: 'regular';
+  $font: "regular";
   $font-size: -2; // 12px
   $line-height: 1.3;
 
@@ -26,9 +26,9 @@
   $margin-limit: k-px-to-rem(5px);
 
   // Limit colors
-  $color: map-get($k-colors, 'font-2');
-  $error-color: map-get($k-colors, 'error');
-  $active-color: map-get($k-colors, 'font-1');
+  $color: map-get($k-colors, "font-2");
+  $error-color: map-get($k-colors, "error");
+  $active-color: map-get($k-colors, "font-1");
 
   .k-TextInputLimit {
     position: relative;
@@ -47,14 +47,8 @@
 
     color: $color;
     // Add a white border around the text.
-    text-shadow: 2px 0 0 #fff,
-                 -2px 0 0 #fff,
-                 0 2px 0 #fff,
-                 0 -2px 0 #fff,
-                 1px 1px #fff,
-                 -1px -1px 0 #fff,
-                 1px -1px 0 #fff,
-                 -1px 1px 0 #fff;
+    text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff,
+      1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
     pointer-events: none;
 
     .k-TextInputLimit.is-disabled & {

@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
-import classNames from 'classnames'
-import { TextInput } from 'kitten/components/form/text-input'
+import React, { Component } from "react";
+import classNames from "classnames";
+import { TextInput } from "kitten/components/form/text-input";
 
 export class TextInputWithButton extends Component {
   render() {
@@ -12,48 +12,48 @@ export class TextInputWithButton extends Component {
       className,
       textInputProps,
       buttonProps,
-      ...others,
-    } = this.props
+      ...others
+    } = this.props;
 
     const TextInputWithButtonClassName = classNames(
-      'k-TextInputWithButton',
-      className,
-    )
+      "k-TextInputWithButton",
+      className
+    );
 
     const textInputWithButtonInputClassName = classNames(
-      'k-TextInputWithButton__input',
-      textInputProps.className,
-    )
+      "k-TextInputWithButton__input",
+      textInputProps.className
+    );
 
     const textInputWithButtonButtonClassName = classNames(
-      'k-TextInputWithButton__button',
+      "k-TextInputWithButton__button",
       buttonProps.className,
       {
-        'is-valid': valid,
-        'is-error': error,
-        'is-disabled': disabled,
+        "is-valid": valid,
+        "is-error": error,
+        "is-disabled": disabled
       }
-    )
+    );
 
     return (
-      <div className={ TextInputWithButtonClassName } { ...others }>
+      <div className={TextInputWithButtonClassName} {...others}>
         <TextInput
-          { ...textInputProps }
-          valid={ valid }
-          error={ error }
-          disabled={ disabled }
-          className={ textInputWithButtonInputClassName }
+          {...textInputProps}
+          valid={valid}
+          error={error}
+          disabled={disabled}
+          className={textInputWithButtonInputClassName}
         />
         <button
           type="button"
-          { ...buttonProps }
-          disabled={ disabled }
-          className={ textInputWithButtonButtonClassName }
+          {...buttonProps}
+          disabled={disabled}
+          className={textInputWithButtonButtonClassName}
         >
-          { value }
+          {value}
         </button>
       </div>
-    )
+    );
   }
 }
 
@@ -61,9 +61,9 @@ TextInputWithButton.defaultProps = {
   valid: false,
   error: false,
   disabled: false,
-  value: 'Button',
+  value: "Button",
   textInputProps: {
-    tag: 'input',
+    tag: "input"
   },
-  buttonProps: {},
-}
+  buttonProps: {}
+};

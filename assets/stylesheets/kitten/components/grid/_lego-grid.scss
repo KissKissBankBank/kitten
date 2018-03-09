@@ -23,11 +23,11 @@
   .k-LegoGrid__item {
     @include k-grid-colSize(12, $flexible: false);
 
-    @include k-media-min('s') {
+    @include k-media-min("s") {
       @include k-grid-colSize(6, $flexible: false);
     }
 
-    @include k-media-min('l') {
+    @include k-media-min("l") {
       @include k-grid-colSize(4, $flexible: false);
     }
   }

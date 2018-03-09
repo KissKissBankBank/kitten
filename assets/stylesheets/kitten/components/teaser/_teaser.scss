@@ -27,13 +27,13 @@
   .k-Teaser__col {
     @include k-grid-col(12);
 
-    @include k-media-min('m') {
+    @include k-media-min("m") {
       // One large col with offsets
       @include k-grid-offset(2);
       @include k-grid-col(8);
     }
 
-    @include k-media-min('l') {
+    @include k-media-min("l") {
       // Two cols with an offset on each side
       @include k-grid-col(4);
 
@@ -46,7 +46,7 @@
     }
   }
 
-  @include k-media-min('l') {
+  @include k-media-min("l") {
     .k-Teaser__col--start\@l-up {
       order: -1;
 
@@ -65,31 +65,32 @@
   }
 
   .k-Teaser__col--text {
-    @include k-typographyFont('light');
+    @include k-typographyFont("light");
     @include k-typographyFontSize(0, 1.6);
     text-align: center;
     margin-bottom: 1rem;
 
-    @include k-media-min('m') {
+    @include k-media-min("m") {
       @include k-typographyFontSize(2, 1.6);
     }
 
-    @include k-media-min('l') {
+    @include k-media-min("l") {
       text-align: left;
     }
   }
 
   .k-Teaser__title {
-    @include k-typographyFont('light');
+    @include k-typographyFont("light");
     @include k-typographyFontSize(6);
 
-    @include k-media-min('m') {
+    @include k-media-min("m") {
       @include k-typographyFontSize(9);
     }
   }
 
   .k-Teaser__col--image {
-    svg, img {
+    svg,
+    img {
       width: 100%;
     }
   }

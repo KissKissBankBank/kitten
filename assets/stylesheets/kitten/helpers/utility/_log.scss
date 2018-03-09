@@ -9,7 +9,7 @@
 ///   k-log('Oops! Something went wrong!');
 ///   // Will throw 'Oops! Something went wrong!'
 @function k-log($message) {
-  @if not feature-exists('at-error') {
+  @if not feature-exists("at-error") {
     @warn $message;
   } @else {
     @error $message;

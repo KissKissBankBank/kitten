@@ -13,16 +13,16 @@
 ///   </div>
 
 @mixin k-PhoneDropdown {
-  $font-color: map-get($k-colors, 'font-1');
+  $font-color: map-get($k-colors, "font-1");
 
   .k-PhoneDropdown {
-    background: map-get($k-colors, 'background-2');
-    border: 1px solid map-get($k-colors, 'line-1');
+    background: map-get($k-colors, "background-2");
+    border: 1px solid map-get($k-colors, "line-1");
     padding: k-px-to-rem(10px) 0;
     text-align: center;
 
     @include k-typographyFontSize(0);
-    @include k-typographyFont('light');
+    @include k-typographyFont("light");
 
     @include k-media-xs {
       border-left: none;

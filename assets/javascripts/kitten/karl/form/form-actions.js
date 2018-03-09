@@ -1,10 +1,10 @@
-import React from 'react'
-import { FormActions } from 'kitten/components/form/form-actions'
-import { Button } from 'kitten/components/buttons/button'
+import React from "react";
+import { FormActions } from "kitten/components/form/form-actions";
+import { Button } from "kitten/components/buttons/button";
 
 export const KarlFormActions = props => {
   return (
-    <FormActions { ...props }>
+    <FormActions {...props}>
       <FormActions.Item>
         <Button
           className="karl-FormActions__button"
@@ -16,13 +16,10 @@ export const KarlFormActions = props => {
         </Button>
       </FormActions.Item>
       <FormActions.Item>
-        <Button
-          className="karl-FormActions__button"
-          modifier="helium"
-        >
+        <Button className="karl-FormActions__button" modifier="helium">
           Button
         </Button>
       </FormActions.Item>
     </FormActions>
-  )
-}
+  );
+};

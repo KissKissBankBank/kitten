@@ -26,7 +26,7 @@
     margin-top: 0;
     margin-bottom: k-px-to-rem(30px);
 
-    @include k-typographyFont('light');
+    @include k-typographyFont("light");
     @include k-typographyFontSize(4, 1.5);
   }
 
@@ -34,13 +34,13 @@
     @include k-grid-col(6);
     @include k-grid-offset(3);
 
-    @include k-media-min('l') {
+    @include k-media-min("l") {
       @include k-grid-col(10);
       @include k-grid-offset(1);
       display: flex;
     }
 
-    @include k-media-min('xl') {
+    @include k-media-min("xl") {
       @include k-grid-col(8);
       @include k-grid-offset(2);
     }
@@ -49,7 +49,7 @@
   .k-PressQuotes__quote {
     margin: 0 k-px-to-rem(20px) k-px-to-rem(30px);
 
-    @include k-media-min('l') {
+    @include k-media-min("l") {
       flex: 1;
     }
   }
@@ -61,11 +61,11 @@
     padding: 0;
     border: 0;
 
-    @include k-typographyFont('light');
+    @include k-typographyFont("light");
     @include k-typographyFontSize;
     font-style: italic;
 
-    @include k-media-min('l') {
+    @include k-media-min("l") {
       // Align on three lines of text, so that content below the quote (for
       // example an image of the source) stays aligned.
       min-height: k-px-to-rem(70px);

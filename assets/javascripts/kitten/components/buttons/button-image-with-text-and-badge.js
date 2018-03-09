@@ -1,14 +1,14 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import classNames from 'classnames'
+import React from "react";
+import PropTypes from "prop-types";
+import classNames from "classnames";
 
 export class ButtonImageWithTextAndBadge extends React.Component {
   renderNotificationBadge() {
-    return(
+    return (
       <span className="k-ButtonWithBadge__badge k-Badge">
-        { this.props.notifications }
+        {this.props.notifications}
       </span>
-    )
+    );
   }
 
   render() {
@@ -24,32 +24,38 @@ export class ButtonImageWithTextAndBadge extends React.Component {
       altImg,
       notifications,
       ...rest
-    } = this.props
+    } = this.props;
 
-    const textClass = classNames('k-ButtonImageWithText__text',
-                                 'k-ButtonImageWithText__text--withoutPaddingRight',
-                                 textClassName)
-    let buttonClassName = classNames('k-ButtonImageWithText', className)
+    const textClass = classNames(
+      "k-ButtonImageWithText__text",
+      "k-ButtonImageWithText__text--withoutPaddingRight",
+      textClassName
+    );
+    let buttonClassName = classNames("k-ButtonImageWithText", className);
 
-    return(
-      <button className={ buttonClassName }
-              aria-haspopup="true"
-              aria-expanded={ isExpanded }
-              title={ title }
-              { ...rest }>
+    return (
+      <button
+        className={buttonClassName}
+        aria-haspopup="true"
+        aria-expanded={isExpanded}
+        title={title}
+        {...rest}
+      >
         <span className="k-ButtonWithBadge">
           <span ref="buttonImage" className="k-ButtonImage">
-            <img className="k-ButtonImage__img"
-                 src={ srcImg }
-                 width={ widthImg }
-                 height={ heightImg }
-                 alt={ altImg } />
+            <img
+              className="k-ButtonImage__img"
+              src={srcImg}
+              width={widthImg}
+              height={heightImg}
+              alt={altImg}
+            />
           </span>
-          { notifications ? this.renderNotificationBadge() : '' }
+          {notifications ? this.renderNotificationBadge() : ""}
         </span>
-        <p className={ textClass }>{ text }</p>
+        <p className={textClass}>{text}</p>
       </button>
-    )
+    );
   }
 }
 
@@ -63,13 +69,13 @@ ButtonImageWithTextAndBadge.propTypes = {
   widthImg: PropTypes.number,
   heightImg: PropTypes.number,
   altImg: PropTypes.string,
-  notifications: PropTypes.number,
-}
+  notifications: PropTypes.number
+};
 
 ButtonImageWithTextAndBadge.defaultProps = {
-  children: 'Toggle button',
-  onClick: () => {},
-}
+  children: "Toggle button",
+  onClick: () => {}
+};
 
 // DEPRECATED: do not use default export.
-export default ButtonImageWithTextAndBadge
+export default ButtonImageWithTextAndBadge;

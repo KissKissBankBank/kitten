@@ -1,47 +1,48 @@
-import React from 'react'
-import classNames from 'classnames'
-import { Checkbox } from 'kitten/components/form/checkbox'
+import React from "react";
+import classNames from "classnames";
+import { Checkbox } from "kitten/components/form/checkbox";
 
 export class CheckboxSet extends React.Component {
   constructor(props) {
-    super(props)
-    this.renderCheckbox = this.renderCheckbox.bind(this)
+    super(props);
+    this.renderCheckbox = this.renderCheckbox.bind(this);
   }
 
   renderCheckbox(item, index) {
-    const { className, ...itemProps } = item
-    const checkboxClassName = classNames('k-CheckboxSet__checkbox', className)
+    const { className, ...itemProps } = item;
+    const checkboxClassName = classNames("k-CheckboxSet__checkbox", className);
 
-    return(
-      <Checkbox className={ checkboxClassName }
-                error={ this.props.error }
-                name={ this.props.name }
-                key={ item.id }
-                { ...itemProps } />
-    )
+    return (
+      <Checkbox
+        className={checkboxClassName}
+        error={this.props.error}
+        name={this.props.name}
+        key={item.id}
+        {...itemProps}
+      />
+    );
   }
 
   render() {
-    const { items, className, name, error, ...checkboxSetProps } = this.props
-    const checkboxSetClassName = classNames(
-      'k-CheckboxSet',
-      className
-    )
+    const { items, className, name, error, ...checkboxSetProps } = this.props;
+    const checkboxSetClassName = classNames("k-CheckboxSet", className);
 
     return (
-      <div className={ checkboxSetClassName } { ...checkboxSetProps }>
-        { this.props.items.map(this.renderCheckbox) }
+      <div className={checkboxSetClassName} {...checkboxSetProps}>
+        {this.props.items.map(this.renderCheckbox)}
       </div>
-    )
+    );
   }
 }
 
 CheckboxSet.defaultProps = {
-  name: 'checkboxSet[]',
+  name: "checkboxSet[]",
   error: false,
-  items: [{
-    label: 'filter 1',
-    defaultChecked: true,
-    id: 'myCheckbox' // Replace by a real value
-  }],
-}
+  items: [
+    {
+      label: "filter 1",
+      defaultChecked: true,
+      id: "myCheckbox" // Replace by a real value
+    }
+  ]
+};

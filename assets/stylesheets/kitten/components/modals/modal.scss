@@ -19,7 +19,7 @@
 @mixin k-Modal($options) {
   $outer-gutters-size: k-px-to-rem(20px);
 
-  $background-color: map-get($k-colors, 'background-1');
+  $background-color: map-get($k-colors, "background-1");
 
   .k-Modal__content {
     position: relative;
@@ -35,7 +35,7 @@
     box-sizing: border-box;
     overflow: scroll;
 
-    @include k-media-min('m') {
+    @include k-media-min("m") {
       max-width: k-px-to-rem(690px);
       padding-left: k-px-to-rem(110px);
       padding-right: k-px-to-rem(110px);
@@ -50,7 +50,7 @@
 
   .k-Modal__overlay {
     position: fixed;
-    z-index: map-get($options, 'z-index');
+    z-index: map-get($options, "z-index");
     top: 0;
     left: 0;
     right: 0;
@@ -60,6 +60,6 @@
     justify-content: center;
     align-items: center;
 
-    background-color: rgba(34, 34, 34, .9); // font-1
+    background-color: rgba(34, 34, 34, 0.9); // font-1
   }
 }

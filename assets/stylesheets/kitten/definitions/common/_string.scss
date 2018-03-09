@@ -9,10 +9,8 @@
 ///   // "10px" is not a valid string in "k-Button: $button"
 
 @function k-string-definition($value) {
-  @if $value and type-of($value) != 'string' {
-    $error-message: k-log(
-      '"#{$value}" is not a valid string "#{$k-module}".'
-    );
+  @if $value and type-of($value) != "string" {
+    $error-message: k-log('"#{$value}" is not a valid string "#{$k-module}".');
   }
 
   @return $value;

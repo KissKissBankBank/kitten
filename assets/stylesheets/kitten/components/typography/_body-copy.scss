@@ -51,17 +51,17 @@
 ///     ...;
 ///   }
 @mixin k-TypographyBodyCopy {
-  $font: 'light';
-  $color: map-get($k-colors, 'font-1');
+  $font: "light";
+  $color: map-get($k-colors, "font-1");
 
   // The root font size applied to the HTML document.
-  $root: k-map-fetch($k-typography, 'root');
+  $root: k-map-fetch($k-typography, "root");
 
   // The starting font size applied to the body element.
-  $base-font-size: k-map-fetch($k-typography, 'font-size');
+  $base-font-size: k-map-fetch($k-typography, "font-size");
 
   // The base line height.
-  $base-line-height: k-map-fetch($k-typography, 'line-height');
+  $base-line-height: k-map-fetch($k-typography, "line-height");
 
   // Start by resetting the document font size to the requested value.
   html {

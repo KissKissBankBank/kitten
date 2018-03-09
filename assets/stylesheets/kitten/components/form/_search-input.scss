@@ -40,28 +40,28 @@
   // Colors
 
   // Base
-  $border: map-get($k-colors, 'font-1');
-  $background-color: map-get($k-colors, 'font-1');
-  $submit-color: map-get($k-colors, 'background-1');
+  $border: map-get($k-colors, "font-1");
+  $background-color: map-get($k-colors, "font-1");
+  $submit-color: map-get($k-colors, "background-1");
 
   $search-submit-width: $submit-horizontal-padding * 2 + $icon-size;
   $search-input-width: k-px-to-rem(160px);
   $search-width: $search-input-width + $search-submit-width;
 
   // Focus
-  $submit-focus-color: map-get($k-colors, 'background-1');
-  $border-focus: map-get($k-colors, 'font-1');
-  $submit-focus-background: map-get($k-colors, 'font-1');
+  $submit-focus-color: map-get($k-colors, "background-1");
+  $border-focus: map-get($k-colors, "font-1");
+  $submit-focus-background: map-get($k-colors, "font-1");
 
   // Hover
-  $submit-hover-color: map-get($k-colors, 'background-1');
-  $border-hover: map-get($k-colors, 'primary-2');
-  $submit-hover-background: map-get($k-colors, 'primary-2');
+  $submit-hover-color: map-get($k-colors, "background-1");
+  $border-hover: map-get($k-colors, "primary-2");
+  $submit-hover-background: map-get($k-colors, "primary-2");
 
   // Active
-  $submit-active-color: map-get($k-colors, 'background-1');
-  $border-active: map-get($k-colors, 'primary-3');
-  $submit-active-background: map-get($k-colors, 'primary-3');
+  $submit-active-color: map-get($k-colors, "background-1");
+  $border-active: map-get($k-colors, "primary-3");
+  $submit-active-background: map-get($k-colors, "primary-3");
 
   // Border radius Text - input
   $submit-border-radius: 0;
@@ -70,7 +70,7 @@
   $submit-tiny-height: k-px-to-rem(40px);
 
   // Transition
-  $transition-speed: .2s;
+  $transition-speed: 0.2s;
 
   .k-SearchInput {
     display: table;

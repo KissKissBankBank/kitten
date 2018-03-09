@@ -18,18 +18,18 @@
   $padded: k-px-to-rem(50px);
   $translate-y: k-px-to-rem(-10px);
 
-  $light-background-color: map-get($k-colors, 'background-1');
-  $light-text-color: map-get($k-colors, 'font-1');
+  $light-background-color: map-get($k-colors, "background-1");
+  $light-text-color: map-get($k-colors, "font-1");
 
-  $border-color: map-get($k-colors, 'line-1');
-  $border-color-dark: map-get($k-colors, 'line-2');
+  $border-color: map-get($k-colors, "line-1");
+  $border-color-dark: map-get($k-colors, "line-2");
   $border-size: k-px-to-rem(1px);
 
   $box-shadow-values: 0 5px 15px;
-  $box-shadow-color: map-get($k-colors, 'line-1');
-  $box-shadow-color-hover: map-get($k-colors, 'line-2');
+  $box-shadow-color: map-get($k-colors, "line-1");
+  $box-shadow-color-hover: map-get($k-colors, "line-2");
 
-  $transition-duration: .4s;
+  $transition-duration: 0.4s;
 
   .k-Card {
     display: block;
@@ -117,7 +117,7 @@
       }
 
       .k-Card__title {
-        color: map-get($k-colors, 'primary-1');
+        color: map-get($k-colors, "primary-1");
       }
     }
   }

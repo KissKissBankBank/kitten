@@ -1,81 +1,79 @@
 // TODO move to the "sliders" group (breaking change)
 
-import React from 'react'
-import PropTypes from 'prop-types'
-import { SliderBar } from 'kitten/components/sliders/slider-bar'
-import { sliderKeyDownHandler }
-  from 'kitten/handlers/sliders/slider-key-down-handler'
+import React from "react";
+import PropTypes from "prop-types";
+import { SliderBar } from "kitten/components/sliders/slider-bar";
+import { sliderKeyDownHandler } from "kitten/handlers/sliders/slider-key-down-handler";
 
 // Slider input to choose an integer value between two bounds
 export class Slider extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
 
-    this.handleMove = this.handleMove.bind(this)
-    this.handleKeyDown = sliderKeyDownHandler.bind(this)
+    this.handleMove = this.handleMove.bind(this);
+    this.handleKeyDown = sliderKeyDownHandler.bind(this);
   }
 
   // Allow other components to focus
   focus() {
-    this.refs.focus()
+    this.refs.focus();
   }
 
   handleMove(ratio) {
-    const { min, max } = this.props
-    const value = Math.round(ratio * (max - min) + min)
-    this.move(value)
+    const { min, max } = this.props;
+    const value = Math.round(ratio * (max - min) + min);
+    this.move(value);
   }
 
   ratio() {
-    return this.ratioForValue(this.props.value)
+    return this.ratioForValue(this.props.value);
   }
 
   ratioForValue(value) {
-    const { min, max } = this.props
+    const { min, max } = this.props;
     return value === null
       ? min
-      : this.ratioInBounds((value - min) / (max - min))
+      : this.ratioInBounds((value - min) / (max - min));
   }
 
   move(to) {
-    const value = this.valueInBounds(to)
-    this.props.onChange(value, this.ratioForValue(value))
+    const value = this.valueInBounds(to);
+    this.props.onChange(value, this.ratioForValue(value));
   }
 
   ratioInBounds(ratio) {
-    return ratio > 1 ? 1 : (ratio < 0 ? 0 : ratio)
+    return ratio > 1 ? 1 : ratio < 0 ? 0 : ratio;
   }
 
   valueInBounds(value) {
-    const { min, max, step } = this.props
+    const { min, max, step } = this.props;
 
-    if (value === null)
-      return min < max ? min : max
+    if (value === null) return min < max ? min : max;
 
     if (min < max) {
-      if (value < min)
-        return min
-      else if (value > max)
-        return max
+      if (value < min) return min;
+      else if (value > max) return max;
     } else {
-      if (value > min)
-        return min
-      else if (value < max)
-        return max
+      if (value > min) return min;
+      else if (value < max) return max;
     }
 
-    return Math.round(value / step) * step
+    return Math.round(value / step) * step;
   }
 
   render() {
-    return <SliderBar ref="contents"
-                      { ...this.props }
-                      { ...this.state }
-                      onMove={ this.handleMove }
-                      onStart={ this.handleStart }
-                      onClick={ this.handleClick }
-                      onAction={ this.props.onAction }
-                      ratio={ this.ratio() } />
+    return (
+      <SliderBar
+        ref="contents"
+        {...this.props}
+        {...this.state}
+        onMove={this.handleMove}
+        onStart={this.handleStart}
+        onClick={this.handleClick}
+        onAction={this.props.onAction}
+        ratio={this.ratio()}
+      />
+    );
   }
 }
 
@@ -103,8 +101,8 @@ Slider.propTypes = {
   onChange: PropTypes.func,
 
   // Callback when we click, touch or focus
-  onAction: PropTypes.func,
-}
+  onAction: PropTypes.func
+};
 
 Slider.defaultProps = {
   value: null,
@@ -112,8 +110,8 @@ Slider.defaultProps = {
   max: 100,
   step: 1,
   onChange: function() {},
-  onChangeEnd: function() {},
-}
+  onChangeEnd: function() {}
+};
 
 // DEPRECATED: do not use default export.
-export default Slider
+export default Slider;

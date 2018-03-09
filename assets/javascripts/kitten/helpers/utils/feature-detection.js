@@ -1,11 +1,11 @@
 export const cssSupports = supportCondition => {
   if (
-    typeof window === 'undefined' ||
-    typeof window.CSS === 'undefined' ||
-    typeof window.CSS.supports === 'undefined'
+    typeof window === "undefined" ||
+    typeof window.CSS === "undefined" ||
+    typeof window.CSS.supports === "undefined"
   ) {
-    return false
+    return false;
   }
 
-  return window.CSS.supports(supportCondition)
-}
+  return window.CSS.supports(supportCondition);
+};

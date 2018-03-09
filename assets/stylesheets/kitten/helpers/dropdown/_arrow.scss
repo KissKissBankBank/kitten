@@ -26,28 +26,27 @@
 ///   }
 
 @mixin k-dropdownArrow($arrow: ()) {
-  $arrow-size: k-default(map-get($arrow, 'size'), 7px);
-  $border-size: k-default(map-get($arrow, 'border-size'), 1px);
+  $arrow-size: k-default(map-get($arrow, "size"), 7px);
+  $border-size: k-default(map-get($arrow, "border-size"), 1px);
   $background-color: k-default(
-    map-get($arrow, 'background-color'),
-    map-get($k-colors, 'background-2')
+    map-get($arrow, "background-color"),
+    map-get($k-colors, "background-2")
   );
   $border-color: k-default(
-    map-get($arrow, 'border-color'),
-    map-get($k-colors, 'line-1')
+    map-get($arrow, "border-color"),
+    map-get($k-colors, "line-1")
   );
   $border-color-hover: k-default(
-    map-get($arrow, 'border-color-hover'),
-    map-get($k-colors, 'line-1')
+    map-get($arrow, "border-color-hover"),
+    map-get($k-colors, "line-1")
   );
-  $without-border-top: k-default(map-get($arrow, 'without-border-top'), false);
+  $without-border-top: k-default(map-get($arrow, "without-border-top"), false);
 
   position: absolute;
 
   @if $without-border-top {
     top: -($arrow-size);
-  }
-  @else {
+  } @else {
     top: -($arrow-size - $border-size);
   }
 

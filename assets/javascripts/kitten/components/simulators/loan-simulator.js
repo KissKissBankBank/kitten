@@ -1,51 +1,51 @@
 // Simulator that lets users select an amount and an installment, to start
 // simulating a loan.
 
-import React from 'react'
-import PropTypes from 'prop-types'
-import classNames from 'classnames'
-import { numberUtils } from 'kitten/helpers/utils/number'
-import { SliderWithTooltipAndPower }
-  from 'kitten/components/sliders/slider-with-tooltip-and-power'
-import { TextInputWithUnit } from 'kitten/components/form/text-input-with-unit'
+import React from "react";
+import PropTypes from "prop-types";
+import classNames from "classnames";
+import { numberUtils } from "kitten/helpers/utils/number";
+import { SliderWithTooltipAndPower } from "kitten/components/sliders/slider-with-tooltip-and-power";
+import { TextInputWithUnit } from "kitten/components/form/text-input-with-unit";
 
 export class LoanSimulator extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
 
     this.state = {
       amount: props.initialAmount * 1,
       installmentAmount: props.initialInstallment,
       dragged: !!props.initialInstallment,
-      touched: props.initialTouched,
-    }
+      touched: props.initialTouched
+    };
 
-    this.handleFocus = this.handleFocus.bind(this)
-    this.handleAmountChange = this.handleAmountChange.bind(this)
-    this.handleEnter = this.handleEnter.bind(this)
-    this.handleInstallmentLabelClick = this.handleInstallmentLabelClick
-                                           .bind(this)
-    this.handleInstallmentChange = this.handleInstallmentChange.bind(this)
-    this.handleInstallmentAction = this.handleInstallmentAction.bind(this)
+    this.handleFocus = this.handleFocus.bind(this);
+    this.handleAmountChange = this.handleAmountChange.bind(this);
+    this.handleEnter = this.handleEnter.bind(this);
+    this.handleInstallmentLabelClick = this.handleInstallmentLabelClick.bind(
+      this
+    );
+    this.handleInstallmentChange = this.handleInstallmentChange.bind(this);
+    this.handleInstallmentAction = this.handleInstallmentAction.bind(this);
   }
 
   handleFocus(e) {
     this.setState({
       touched: false,
-      installmentAmount: null,
-    })
+      installmentAmount: null
+    });
   }
 
   handleAmountChange(e) {
-    this.setState({ amount: e.target.value })
+    this.setState({ amount: e.target.value });
   }
 
   handleEnter(e) {
-    this.setState({ touched: true })
+    this.setState({ touched: true });
   }
 
   handleInstallmentLabelClick() {
-    this.refs.content.focusSlider()
+    this.refs.content.focusSlider();
   }
 
   // on slider click or on grab change
@@ -53,301 +53,310 @@ export class LoanSimulator extends React.Component {
     this.setState({
       installmentAmount: value,
       dragged: true
-    })
+    });
   }
 
   handleInstallmentAction() {
-    this.setState({ touched: true })
+    this.setState({ touched: true });
   }
 
   duration() {
     if (this.state.installmentAmount)
-      return Math.ceil(this.state.amount / this.state.installmentAmount)
+      return Math.ceil(this.state.amount / this.state.installmentAmount);
   }
 
   commissionRate() {
-    const duration = this.duration()
+    const duration = this.duration();
     for (let i = 0, len = this.props.commissionRules.length; i < len; i++) {
-      let rule = this.props.commissionRules[i]
-      if (!rule.durationMax || duration <= rule.durationMax)
-        return rule.rate
+      let rule = this.props.commissionRules[i];
+      if (!rule.durationMax || duration <= rule.durationMax) return rule.rate;
     }
   }
 
   commissionAmount() {
-    return this.commissionRate() * this.state.amount
+    return this.commissionRate() * this.state.amount;
   }
 
   installmentMin() {
-    const installmentStep = this.installmentStep()
-    const value = this.state.amount / this.props.durationMax
-    const min = Math.ceil(value / installmentStep) * installmentStep
+    const installmentStep = this.installmentStep();
+    const value = this.state.amount / this.props.durationMax;
+    const min = Math.ceil(value / installmentStep) * installmentStep;
 
-    if (min > this.state.amount * 1)
-      return this.state.amount
-    else
-      return min
+    if (min > this.state.amount * 1) return this.state.amount;
+    else return min;
   }
 
   installmentMax() {
-    return this.state.amount * 1
+    return this.state.amount * 1;
   }
 
   installmentStep() {
-    if (this.state.installmentAmount > 1000)
-      return 100
-    if (this.state.installmentAmount > 200)
-      return 10
-    return 1
+    if (this.state.installmentAmount > 1000) return 100;
+    if (this.state.installmentAmount > 200) return 10;
+    return 1;
   }
 
   error() {
-    if (!this.state.touched)
-      return null
+    if (!this.state.touched) return null;
 
-    return this.amountError()
+    return this.amountError();
   }
 
   amountError() {
-    if (!this.state.amount)
-      return this.props.amountEmptyError
+    if (!this.state.amount) return this.props.amountEmptyError;
 
-    if (!numberUtils.isNumber(this.state.amount)
-        || this.state.amount < this.props.amountMin
-        || this.state.amount > this.props.amountMax)
-      return this.props.amountOutOfBoundsError
+    if (
+      !numberUtils.isNumber(this.state.amount) ||
+      this.state.amount < this.props.amountMin ||
+      this.state.amount > this.props.amountMax
+    )
+      return this.props.amountOutOfBoundsError;
   }
 
   render() {
     return (
       <LoanSimulatorContent
         ref="content"
-        { ...this.props }
-        { ...this.state }
-        onFocus={ this.handleFocus }
-        onAmountChange={ this.handleAmountChange }
-        onEnter={ this.handleEnter }
-        onInstallmentLabelClick={ this.handleInstallmentLabelClick }
-        onInstallmentChange={ this.handleInstallmentChange }
-        onInstallmentAction={ this.handleInstallmentAction }
-        duration={ this.duration() }
-        commissionAmount={ this.commissionAmount() }
-        commissionRate={ this.commissionRate() }
-        installmentMin={ this.installmentMin() }
-        installmentMax={ this.installmentMax() }
-        installmentStep={ this.installmentStep() }
-        error={ this.error() }
-        amountError={ this.amountError() } />
-    )
+        {...this.props}
+        {...this.state}
+        onFocus={this.handleFocus}
+        onAmountChange={this.handleAmountChange}
+        onEnter={this.handleEnter}
+        onInstallmentLabelClick={this.handleInstallmentLabelClick}
+        onInstallmentChange={this.handleInstallmentChange}
+        onInstallmentAction={this.handleInstallmentAction}
+        duration={this.duration()}
+        commissionAmount={this.commissionAmount()}
+        commissionRate={this.commissionRate()}
+        installmentMin={this.installmentMin()}
+        installmentMax={this.installmentMax()}
+        installmentStep={this.installmentStep()}
+        error={this.error()}
+        amountError={this.amountError()}
+      />
+    );
   }
 }
 
 class LoanSimulatorContent extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
 
-    this.handleAmountKeyDown = this.handleAmountKeyDown.bind(this)
-    this.handleInstallmentChange = this.handleInstallmentChange.bind(this)
+    this.handleAmountKeyDown = this.handleAmountKeyDown.bind(this);
+    this.handleInstallmentChange = this.handleInstallmentChange.bind(this);
   }
 
   // Allow parents to focus the slider
   focusSlider() {
-    this.slider.focus()
+    this.slider.focus();
   }
 
   handleAmountKeyDown(e) {
     // when pressing enter
     if (e.keyCode == 13) {
-      this.focusSlider()
-      this.props.onEnter()
+      this.focusSlider();
+      this.props.onEnter();
     }
   }
 
   handleInstallmentChange(value, ratio) {
-    this.amount.blur()
-    this.props.onInstallmentChange(value, ratio)
+    this.amount.blur();
+    this.props.onInstallmentChange(value, ratio);
   }
 
   toCurrency(cents) {
-    if (isNaN(cents))
-      return null
+    if (isNaN(cents)) return null;
 
-    return (cents / 100).toLocaleString(this.props.locale)
+    return (cents / 100).toLocaleString(this.props.locale);
   }
 
   sliderIsActive() {
-    return !this.props.amountError &&
-           this.props.dragged &&
-           this.props.installmentAmount
+    return (
+      !this.props.amountError &&
+      this.props.dragged &&
+      this.props.installmentAmount
+    );
   }
 
   renderCommission() {
-    if (!this.props.displayCommission)
-      return
+    if (!this.props.displayCommission) return;
 
-    const active = this.sliderIsActive()
+    const active = this.sliderIsActive();
     const amount = active
       ? this.toCurrency(this.props.commissionAmount * 100)
-      : '--'
+      : "--";
 
-    let commissionAmount = ' 0 '
-    let exemptionText = null
+    let commissionAmount = " 0 ";
+    let exemptionText = null;
 
     if (!this.props.feesExemption) {
-      commissionAmount = ` ${ amount } `
+      commissionAmount = ` ${amount} `;
     } else {
       const text = `
-        (${ this.props.feesExemptionLabel }
-        ${ amount }
-        ${ this.props.currencySymbol })
-      `
+        (${this.props.feesExemptionLabel}
+        ${amount}
+        ${this.props.currencySymbol})
+      `;
 
-      exemptionText =
-        <span className="k-LoanSimulator__feesExemption">
-          { text }
-        </span>
+      exemptionText = (
+        <span className="k-LoanSimulator__feesExemption">{text}</span>
+      );
     }
 
-    commissionAmount += ` ${ this.props.currencySymbol }`
+    commissionAmount += ` ${this.props.currencySymbol}`;
 
     return (
       <div className="k-LoanSimulator__commission">
-        { this.props.commissionLabel }
-        <span className={ classNames({ 'k-u-text--active': active,
-                                       'k-u-text--inactive': !active }) }>
-          { commissionAmount }
+        {this.props.commissionLabel}
+        <span
+          className={classNames({
+            "k-u-text--active": active,
+            "k-u-text--inactive": !active
+          })}
+        >
+          {commissionAmount}
         </span>
-        { exemptionText }
+        {exemptionText}
       </div>
-    )
+    );
   }
 
   renderDurationError() {
-    const { duration, touched, requiredDurationError } = this.props
+    const { duration, touched, requiredDurationError } = this.props;
 
-    if (!touched || duration > 0 || !requiredDurationError)
-      return
+    if (!touched || duration > 0 || !requiredDurationError) return;
 
     return (
       <span className="k-LoanSimulator__durationError">
-        { this.props.requiredDurationError }
+        {this.props.requiredDurationError}
       </span>
-    )
+    );
   }
 
   renderButton() {
-    if (!this.props.actionLabel)
-     return
+    if (!this.props.actionLabel) return;
 
     return (
       <div className="k-LoanSimulator__actions">
         <button className="k-Button k-Button--helium k-Button--big">
-          { this.props.actionLabel }
+          {this.props.actionLabel}
         </button>
       </div>
-    )
+    );
   }
 
   render() {
-    const { label, dragged, touched, duration, error } = this.props
-    const amountValid = !this.props.amountError
-    const showResult = !error && touched && duration
-    const installmentMin = amountValid ? this.props.installmentMin : 0
-    const installmentMax = amountValid ? this.props.installmentMax : 0
-    const installmentAmount = amountValid ? this.props.installmentAmount : 0
-    const installmentPercentage = amountValid ?
-      this.props.installmentPercentage : 0
+    const { label, dragged, touched, duration, error } = this.props;
+    const amountValid = !this.props.amountError;
+    const showResult = !error && touched && duration;
+    const installmentMin = amountValid ? this.props.installmentMin : 0;
+    const installmentMax = amountValid ? this.props.installmentMax : 0;
+    const installmentAmount = amountValid ? this.props.installmentAmount : 0;
+    const installmentPercentage = amountValid
+      ? this.props.installmentPercentage
+      : 0;
 
-    let errorClass, errorTag, tooltipClass, tooltipText
+    let errorClass, errorTag, tooltipClass, tooltipText;
 
     if (error) {
-      errorClass = "is-error"
-      errorTag = <p className="k-LoanSimulator__amount__error">{ error }</p>
+      errorClass = "is-error";
+      errorTag = <p className="k-LoanSimulator__amount__error">{error}</p>;
     }
 
     if (this.sliderIsActive()) {
-      const durationSymbol = duration === 1
-        ? this.props.durationSymbol
-        : this.props.durationSymbolPlural
+      const durationSymbol =
+        duration === 1
+          ? this.props.durationSymbol
+          : this.props.durationSymbolPlural;
 
       const installmentText = `
         ${this.toCurrency(installmentAmount * 100)}
         ${this.props.installmentSymbol}
-      `
+      `;
       const durationText = `
         ${this.props.durationText}
         ${duration}
         ${durationSymbol}
-      `
+      `;
 
-      tooltipClass = null
+      tooltipClass = null;
       tooltipText = [
         <div key="1" className="k-LoanSimulator__installment">
-         { installmentText }
+          {installmentText}
         </div>,
         <div key="2" className="k-LoanSimulator__duration">
-          { durationText }
+          {durationText}
         </div>
-      ]
+      ];
     } else {
-      tooltipClass = 'is-inactive'
-      tooltipText = this.props.sliderPlaceholder
+      tooltipClass = "is-inactive";
+      tooltipText = this.props.sliderPlaceholder;
     }
 
-    let durationInput
+    let durationInput;
     if (this.props.durationName)
-      durationInput = <input type="hidden"
-                             name={ this.props.durationName }
-                             value={ this.props.duration || '' } />
+      durationInput = (
+        <input
+          type="hidden"
+          name={this.props.durationName}
+          value={this.props.duration || ""}
+        />
+      );
 
     return (
-      <div className={ classNames('k-LoanSimulator', errorClass) }>
+      <div className={classNames("k-LoanSimulator", errorClass)}>
         <div className="k-LoanSimulator__amount">
-          <label className="k-Label k-LoanSimulator__label"
-                 htmlFor="loan-simulator-amount">
-            { this.props.amountLabel }
+          <label
+            className="k-Label k-LoanSimulator__label"
+            htmlFor="loan-simulator-amount"
+          >
+            {this.props.amountLabel}
           </label>
           <TextInputWithUnit
-            ref={ input => this.amount = input }
-            error={ error }
+            ref={input => (this.amount = input)}
+            error={error}
             id="loan-simulator-amount"
-            name={ this.props.amountName }
+            name={this.props.amountName}
             type="number"
-            min={ this.props.amountMin }
-            max={ this.props.amountMax }
-            defaultValue={ this.props.initialAmount }
-            onFocus={ this.props.onFocus }
-            onChange={ this.props.onAmountChange }
-            onKeyDown={ this.props.onAmountKeyDown }
-            placeholder={ this.props.amountPlaceholder }
-            unit={ this.props.currencySymbol } />
-          { errorTag }
+            min={this.props.amountMin}
+            max={this.props.amountMax}
+            defaultValue={this.props.initialAmount}
+            onFocus={this.props.onFocus}
+            onChange={this.props.onAmountChange}
+            onKeyDown={this.props.onAmountKeyDown}
+            placeholder={this.props.amountPlaceholder}
+            unit={this.props.currencySymbol}
+          />
+          {errorTag}
         </div>
         <div>
-          <label className="k-Label k-LoanSimulator__label"
-                 onClick={ this.props.onInstallmentLabelClick }>
-            { this.props.installmentLabel }
+          <label
+            className="k-Label k-LoanSimulator__label"
+            onClick={this.props.onInstallmentLabelClick}
+          >
+            {this.props.installmentLabel}
           </label>
           <SliderWithTooltipAndPower
-            ref={ input => this.slider = input }
-            step={ this.props.installmentStep }
-            min={ installmentMin }
-            max={ installmentMax }
-            power={ 2 }
-            name={ this.props.installmentName }
-            value={ installmentAmount }
-            onChange={ this.handleInstallmentChange }
-            onAction={ this.props.onInstallmentAction }
-            tooltipClass={ tooltipClass }
-            tooltipText={ tooltipText } />
+            ref={input => (this.slider = input)}
+            step={this.props.installmentStep}
+            min={installmentMin}
+            max={installmentMax}
+            power={2}
+            name={this.props.installmentName}
+            value={installmentAmount}
+            onChange={this.handleInstallmentChange}
+            onAction={this.props.onInstallmentAction}
+            tooltipClass={tooltipClass}
+            tooltipText={tooltipText}
+          />
 
-          { this.renderCommission() }
-          { durationInput }
-          { this.renderDurationError() }
+          {this.renderCommission()}
+          {durationInput}
+          {this.renderDurationError()}
         </div>
-        { this.renderButton() }
+        {this.renderButton()}
       </div>
-    )
+    );
   }
 }
 
@@ -415,26 +424,26 @@ LoanSimulator.propTypes = {
   locale: PropTypes.string,
 
   // Submit button
-  actionLabel: PropTypes.string,
-}
+  actionLabel: PropTypes.string
+};
 
 LoanSimulator.defaultProps = {
-  amountLabel: 'I need',
-  amountPlaceholder: '',
+  amountLabel: "I need",
+  amountPlaceholder: "",
   amountMin: 1,
   amountMax: 10000,
 
   initialAmount: null,
   initialTouched: false,
 
-  amountEmptyError: 'Amount cannot be empty',
-  amountOutOfBoundsError: 'Amount is either too big or too small',
-  requiredDurationError: 'Duration is required',
+  amountEmptyError: "Amount cannot be empty",
+  amountOutOfBoundsError: "Amount is either too big or too small",
+  requiredDurationError: "Duration is required",
 
   displayCommission: false,
   feesExemption: false,
-  feesExemptionLabel: 'instead of',
-  commissionLabel: 'Fees:',
+  feesExemptionLabel: "instead of",
+  commissionLabel: "Fees:",
 
   // The `commissionRules` prop has to be an array containing a `durationMax`
   // rule. This will return the first `rate` which matches the rule for the
@@ -451,18 +460,18 @@ LoanSimulator.defaultProps = {
   installmentLabel: "I'd like to reimburse",
   initialInstallment: null,
 
-  durationText: 'during',
+  durationText: "during",
   durationMin: 1,
   durationMax: 36,
-  durationSymbol: 'month',
-  durationSymbolPlural: 'months',
+  durationSymbol: "month",
+  durationSymbolPlural: "months",
 
-  currencySymbol: '$',
-  installmentSymbol: '$/month',
-  locale: 'en',
+  currencySymbol: "$",
+  installmentSymbol: "$/month",
+  locale: "en",
 
-  actionLabel: null,
-}
+  actionLabel: null
+};
 
 // DEPRECATED: do not use default export.
-export default LoanSimulator
+export default LoanSimulator;

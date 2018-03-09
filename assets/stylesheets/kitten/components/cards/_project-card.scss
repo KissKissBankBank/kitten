@@ -39,46 +39,46 @@
 
 @mixin k-ProjectCard {
   // Tooltip
-  $tooltip-font: 'regular';
+  $tooltip-font: "regular";
   $tooltip-font-size: -2; // 12px
   $tooltip-arrow-size: 5px;
-  $tooltip-background-color: map-get($k-colors, 'primary-1');
-  $tooltip-color-content: map-get($k-colors, 'background-1');
-  $tooltip-transition-duration: .2s;
+  $tooltip-background-color: map-get($k-colors, "primary-1");
+  $tooltip-color-content: map-get($k-colors, "background-1");
+  $tooltip-transition-duration: 0.2s;
 
   // Info
-  $info-font: 'light';
+  $info-font: "light";
   $info-size: -1; // 14px
 
   // Info value
-  $info-value-font: 'regular';
+  $info-value-font: "regular";
   $info-value-size: 0; // 16px
 
   // Status
-  $status-font: 'regular';
+  $status-font: "regular";
   $status-size: -1; // 14px
 
   // Status primary background
-  $status-primary-background: map-get($k-colors, 'primary-1');
-  $status-primary-color: map-get($k-colors, 'background-1');
+  $status-primary-background: map-get($k-colors, "primary-1");
+  $status-primary-color: map-get($k-colors, "background-1");
 
   // Status valid background
-  $status-valid-background: map-get($k-colors, 'valid');
-  $status-valid-color: map-get($k-colors, 'font-1');
+  $status-valid-background: map-get($k-colors, "valid");
+  $status-valid-color: map-get($k-colors, "font-1");
 
   // Status grey background
-  $status-grey-background: map-get($k-colors, 'line-2');
-  $status-grey-color: map-get($k-colors, 'background-1');
+  $status-grey-background: map-get($k-colors, "line-2");
+  $status-grey-color: map-get($k-colors, "background-1");
 
   // Status error background
-  $status-error-background: map-get($k-colors, 'error');
-  $status-error-color: map-get($k-colors, 'background-1');
+  $status-error-background: map-get($k-colors, "error");
+  $status-error-color: map-get($k-colors, "background-1");
 
   $line-height: normal;
 
   .k-ProjectCard {
     &.is-disabled {
-      filter: grayscale(1) opacity(.4);
+      filter: grayscale(1) opacity(0.4);
     }
   }
 
@@ -87,7 +87,7 @@
   }
 
   .k-ProjectCard__grid--withBorderTop {
-    border-top: 1px solid map-get($k-colors, 'line-1');
+    border-top: 1px solid map-get($k-colors, "line-1");
   }
 
   .k-ProjectCard__grid--flex {
@@ -122,7 +122,7 @@
     opacity: 0;
     visibility: hidden;
     transition: opacity $tooltip-transition-duration,
-                visibility $tooltip-transition-duration;
+      visibility $tooltip-transition-duration;
 
     &:after {
       position: absolute;

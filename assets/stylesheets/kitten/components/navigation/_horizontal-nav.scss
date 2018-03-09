@@ -24,26 +24,26 @@
 
 @mixin k-HorizontalNav {
   // Font
-  $font: 'regular';
+  $font: "regular";
   $font-step: -1; // 14px
   $line-height: normal;
 
   // Colors
-  $base-color: map-get($k-colors, 'font-1');
+  $base-color: map-get($k-colors, "font-1");
 
   // Hover
-  $hover-color: map-get($k-colors, 'primary-1');
+  $hover-color: map-get($k-colors, "primary-1");
 
   // Focus
-  $focus-color: map-get($k-colors, 'primary-1');
+  $focus-color: map-get($k-colors, "primary-1");
 
   // State 'is-selected'
-  $is-selected-color: map-get($k-colors, 'primary-1');
+  $is-selected-color: map-get($k-colors, "primary-1");
 
   $border-width: k-px-to-rem(4px);
   $margin: k-px-to-rem(25px);
 
-  $transition-speed: .2s;
+  $transition-speed: 0.2s;
 
   .k-HorizontalNav {
     display: flex;
@@ -74,10 +74,7 @@
     border-bottom: $border-width solid transparent;
 
     @include k-typographyFont($font);
-    @include k-typographyFontSize(
-      $font-step,
-      $line-height: $line-height
-    );
+    @include k-typographyFontSize($font-step, $line-height: $line-height);
 
     color: $base-color;
     text-align: center;
@@ -86,11 +83,11 @@
     cursor: pointer;
     transition: color $transition-speed, border-color $transition-speed;
 
-    @include k-media-within('m') {
+    @include k-media-within("m") {
       padding: 0 k-px-to-rem(10px);
     }
 
-    @include k-media-max('s') {
+    @include k-media-max("s") {
       margin: 0 k-px-to-rem(12px);
     }
 

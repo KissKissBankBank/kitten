@@ -15,11 +15,11 @@
 
 @mixin k-TooltipNew {
   // Colors helium
-  $color-helium: map-get($k-colors, 'background-1');
-  $border-color-helium: map-get($k-colors, 'primary-1');
-  $background-color-helium: map-get($k-colors, 'primary-1');
+  $color-helium: map-get($k-colors, "background-1");
+  $border-color-helium: map-get($k-colors, "primary-1");
+  $background-color-helium: map-get($k-colors, "primary-1");
 
-  $font: 'regular';
+  $font: "regular";
   $font-size: -1; // 14px
   $line-height: 1.25;
 
@@ -31,10 +31,7 @@
 
   .k-TooltipNew {
     @include k-typographyFont($font);
-    @include k-typographyFontSize(
-      $font-size,
-      $line-height
-    );
+    @include k-typographyFontSize($font-size, $line-height);
 
     position: absolute;
     padding-right: $tooltip-padding;
@@ -44,7 +41,7 @@
     border: $border-size solid $border-color-helium;
     color: $color-helium;
 
-    @include k-media-min('s') {
+    @include k-media-min("s") {
       width: k-px-to-rem(280px);
     }
   }

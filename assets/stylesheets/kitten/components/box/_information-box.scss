@@ -15,11 +15,11 @@
 ///   </div>
 
 @mixin k-InformationBox {
-  $color: map-get($k-colors, 'font-1');
-  $background-color: map-get($k-colors, 'background-1');
-  $border-color: map-get($k-colors, 'line-1');
+  $color: map-get($k-colors, "font-1");
+  $background-color: map-get($k-colors, "background-1");
+  $border-color: map-get($k-colors, "line-1");
 
-  $font: 'light';
+  $font: "light";
 
   $border-size: k-px-to-rem(2px);
 
@@ -29,10 +29,8 @@
   }
 
   .k-InformationBox__container {
-    padding: k-px-to-rem(10px)
-             k-px-to-rem(20px)
-             k-px-to-rem(20px)
-             k-px-to-rem(20px);
+    padding: k-px-to-rem(10px) k-px-to-rem(20px) k-px-to-rem(20px)
+      k-px-to-rem(20px);
     color: $color;
     background-color: $background-color;
     border: $border-size solid $border-color;

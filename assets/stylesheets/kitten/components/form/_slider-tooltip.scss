@@ -30,34 +30,28 @@
 ///      </div>
 ///    </div>
 @mixin k-SliderTooltip($slider-tooltip) {
-  @include k-with-module('k-SliderTooltip: $slider-tooltip') {
-    $colors: k-map-fetch($slider-tooltip, 'colors');
+  @include k-with-module("k-SliderTooltip: $slider-tooltip") {
+    $colors: k-map-fetch($slider-tooltip, "colors");
 
-    $border-color: k-color-definition(
-      k-map-fetch($colors, 'border')
-    );
+    $border-color: k-color-definition(k-map-fetch($colors, "border"));
     $border-inactive-color: k-color-definition(
-      k-map-fetch($colors, 'border-inactive')
+      k-map-fetch($colors, "border-inactive")
     );
-    $background-color: k-color-definition(
-      k-map-fetch($colors, 'background')
-    );
+    $background-color: k-color-definition(k-map-fetch($colors, "background"));
     $background-inactive-color: k-color-definition(
-      k-map-fetch($colors, 'background-inactive')
+      k-map-fetch($colors, "background-inactive")
     );
-    $text-color: k-color-definition(
-      k-map-fetch($colors, 'text')
-    );
+    $text-color: k-color-definition(k-map-fetch($colors, "text"));
     $text-inactive-color: k-color-definition(
-      k-map-fetch($colors, 'text-inactive')
+      k-map-fetch($colors, "text-inactive")
     );
 
     $border-width: 1px;
     $arrow-width: 5px; // should be in pixels to be able to substract the border
-    $transition-speed: .2s;
+    $transition-speed: 0.2s;
     $handle-size: 2.5rem;
     $tooltip-width: 10rem;
-    $tooltip-distance: .8rem;
+    $tooltip-distance: 0.8rem;
 
     .k-SliderTooltip__tip {
       // Adjust padding so that "left: 100%" on the child contents fit tightly
@@ -69,7 +63,7 @@
       position: relative; // so that JavaScript can set a percentage on "left"
       box-sizing: border-box;
       width: $tooltip-width;
-      padding: .5rem;
+      padding: 0.5rem;
 
       border: 1px solid $border-color;
       border-radius: 4px;
@@ -79,9 +73,8 @@
       color: $text-color;
       @include k-typographyFontSize(-1, 1.3rem);
 
-      transition: background $transition-speed,
-                  color $transition-speed,
-                  border-top-color $transition-speed;
+      transition: background $transition-speed, color $transition-speed,
+        border-top-color $transition-speed;
 
       .k-SliderTooltip.is-inactive & {
         background: $background-inactive-color;

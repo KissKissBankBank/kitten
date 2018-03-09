@@ -32,16 +32,17 @@
 ///   </ul>
 
 @mixin k-PlatformSwitch($nav) {
-  @include k-with-module('k-PlatformSwitch') {
-
+  @include k-with-module("k-PlatformSwitch") {
     $background-color: k-color-definition(
-      k-map-fetch($nav, ('colors', 'background')));
-    $border-color: k-color-definition(
-      k-map-fetch($nav, ('colors', 'border')));
+      k-map-fetch($nav, ("colors", "background"))
+    );
+    $border-color: k-color-definition(k-map-fetch($nav, ("colors", "border")));
     $background-color-hover: k-color-definition(
-      k-map-fetch($nav, ('colors', 'background-hover')));
+      k-map-fetch($nav, ("colors", "background-hover"))
+    );
     $border-color-active: k-color-definition(
-      k-map-fetch($nav, ('colors', 'border-active')));
+      k-map-fetch($nav, ("colors", "border-active"))
+    );
 
     .k-PlatformSwitch {
       display: block;
@@ -62,7 +63,7 @@
       border: 1px solid $border-color;
       border-top: none;
       background: $background-color;
-      transition: background-color .2s, border-color .2s;
+      transition: background-color 0.2s, border-color 0.2s;
 
       &:focus {
         background-color: $background-color-hover;

@@ -1,7 +1,9 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 // Via "https://github.com/kenny-hibino/react-places-autocomplete"
-import PlacesAutocomplete, { geocodeByPlaceId } from 'react-places-autocomplete'
-import { LocationIcon } from 'kitten/components/icons/location-icon'
+import PlacesAutocomplete, {
+  geocodeByPlaceId
+} from "react-places-autocomplete";
+import { LocationIcon } from "kitten/components/icons/location-icon";
 
 // Make sure you include a script to the Google Maps places API.
 // For example:
@@ -9,31 +11,30 @@ import { LocationIcon } from 'kitten/components/icons/location-icon'
 
 export class LocationInput extends Component {
   constructor(props) {
-    super(props)
+    super(props);
 
     this.state = {
-      address: this.props.defaultValue,
-    }
+      address: this.props.defaultValue
+    };
 
-    this.handleChange = this.handleChange.bind(this)
-    this.handleSelect = this.handleSelect.bind(this)
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSelect = this.handleSelect.bind(this);
   }
 
   handleChange(address) {
-    this.setState({ address })
-    this.props.onChange({ value: address, name: this.props.name })
+    this.setState({ address });
+    this.props.onChange({ value: address, name: this.props.name });
   }
 
   handleSelect(address, placeId) {
-    geocodeByPlaceId(placeId)
-      .then(results => {
-        const place = results[0]
+    geocodeByPlaceId(placeId).then(results => {
+      const place = results[0];
 
-        if (place) {
-          this.setState({ address })
-          this.props.onSelect({ value: address, placeId, place })
-        }
-      })
+      if (place) {
+        this.setState({ address });
+        this.props.onSelect({ value: address, placeId, place });
+      }
+    });
   }
 
   render() {
@@ -42,38 +43,34 @@ export class LocationInput extends Component {
       onSelect,
       defaultValue,
       inputProps,
-      ...others,
-    } = this.props
+      ...others
+    } = this.props;
 
     const placesClassNames = {
-      root: 'k-LocationInput__group',
-      input: 'k-LocationInput__input',
-      autocompleteContainer: 'k-LocationInput__autocomplete',
+      root: "k-LocationInput__group",
+      input: "k-LocationInput__input",
+      autocompleteContainer: "k-LocationInput__autocomplete",
       autocompleteItem: "k-LocationInput__autocompleteItem",
-      autocompleteItemActive: "k-LocationInput__autocompleteItem--active",
-    }
+      autocompleteItemActive: "k-LocationInput__autocompleteItem--active"
+    };
 
     const autocompleteItem = ({ formattedSuggestion }) => (
       <div>
-        <LocationIcon
-          width="10px"
-          height="16px"
-        />
+        <LocationIcon width="10px" height="16px" />
         <span className="k-LocationInput__autocompleteItem__mainText">
-          { formattedSuggestion.mainText }
-        </span>
-        {' '}
+          {formattedSuggestion.mainText}
+        </span>{" "}
         <span className="k-LocationInput__autocompleteItem__secondaryText">
-          { formattedSuggestion.secondaryText }
+          {formattedSuggestion.secondaryText}
         </span>
       </div>
-    )
+    );
 
     const finalInputProps = {
       ...inputProps,
       value: this.state.address,
-      onChange: this.handleChange,
-    }
+      onChange: this.handleChange
+    };
 
     return (
       <div className="k-LocationInput">
@@ -82,20 +79,20 @@ export class LocationInput extends Component {
         </div>
 
         <PlacesAutocomplete
-          classNames={ placesClassNames }
-          autocompleteItem={ autocompleteItem }
-          inputProps={ finalInputProps }
-          onSelect={ this.handleSelect }
+          classNames={placesClassNames}
+          autocompleteItem={autocompleteItem}
+          inputProps={finalInputProps}
+          onSelect={this.handleSelect}
           hideLabel
-          { ...others }
+          {...others}
         />
       </div>
-    )
+    );
   }
 }
 
 LocationInput.defaultProps = {
   onChange: () => {},
   onSelect: () => {},
-  defaultValue: '',
-}
+  defaultValue: ""
+};

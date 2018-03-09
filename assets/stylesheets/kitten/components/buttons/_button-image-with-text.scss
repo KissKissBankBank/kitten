@@ -21,13 +21,13 @@
 ///   </button>
 
 @mixin k-ButtonImageWithText {
-  $text-font: 'regular';
+  $text-font: "regular";
   $text-size: -1; // 14px
   $text-line-height: 1;
 
-  $color: map-get($k-colors, 'font-1');
-  $color-hover: map-get($k-colors, 'primary-1');
-  $color-active: map-get($k-colors, 'primary-3');
+  $color: map-get($k-colors, "font-1");
+  $color-hover: map-get($k-colors, "primary-1");
+  $color-active: map-get($k-colors, "primary-3");
 
   .k-ButtonImageWithText {
     display: flex;
@@ -65,11 +65,11 @@
       color: $color-active;
     }
 
-    @include k-media-max('m') {
+    @include k-media-max("m") {
       display: none;
     }
 
-    @include k-media-within('s') {
+    @include k-media-within("s") {
       display: block;
     }
   }

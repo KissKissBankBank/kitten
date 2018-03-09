@@ -7,7 +7,6 @@
 ///   @include k-buttonBrowserFixes;
 
 @mixin k-buttonBrowserFixes {
-
   // Firefox : fix extra spacing in Firefox.
   &::-moz-focus-inner {
     padding: 0;

@@ -1,66 +1,66 @@
 // Buttons
-@import 'kitten/components/buttons/button-icon';
-@import 'kitten/components/buttons/button-image';
-@import 'kitten/components/buttons/button-image-with-text';
-@import 'kitten/components/buttons/button-with-badge';
-@import 'kitten/components/buttons/button';
-@import 'kitten/components/buttons/tag-button';
+@import "kitten/components/buttons/button-icon";
+@import "kitten/components/buttons/button-image";
+@import "kitten/components/buttons/button-image-with-text";
+@import "kitten/components/buttons/button-with-badge";
+@import "kitten/components/buttons/button";
+@import "kitten/components/buttons/tag-button";
 
 // Box
-@import 'kitten/components/box/link-box';
-@import 'kitten/components/box/information-box';
+@import "kitten/components/box/link-box";
+@import "kitten/components/box/information-box";
 
 // Cards
-@import 'kitten/components/cards/card';
-@import 'kitten/components/cards/project-card';
-@import 'kitten/components/cards/project-creator-card';
-@import 'kitten/components/cards/project-similar-card';
+@import "kitten/components/cards/card";
+@import "kitten/components/cards/project-card";
+@import "kitten/components/cards/project-creator-card";
+@import "kitten/components/cards/project-similar-card";
 
 // Dev
-@import 'kitten/components/dev/dev-breakpoint';
-@import 'kitten/components/dev/dev-grid';
+@import "kitten/components/dev/dev-breakpoint";
+@import "kitten/components/dev/dev-grid";
 
 // Dropdowns
-@import 'kitten/components/dropdowns/dropdown';
-@import 'kitten/components/dropdowns/phone-dropdown';
+@import "kitten/components/dropdowns/dropdown";
+@import "kitten/components/dropdowns/phone-dropdown";
 
 // Footer
-@import 'kitten/components/footer/footer';
+@import "kitten/components/footer/footer";
 
 // Form
-@import 'kitten/components/form/checkbox-set';
-@import 'kitten/components/form/checkbox';
-@import 'kitten/components/form/location-input';
-@import 'kitten/components/form/form-actions';
-@import 'kitten/components/form/form-composer';
-@import 'kitten/components/form/form-info';
-@import 'kitten/components/form/form-row';
-@import 'kitten/components/form/label';
-@import 'kitten/components/form/radio-button-set';
-@import 'kitten/components/form/radio-button';
-@import 'kitten/components/form/search-input';
-@import 'kitten/components/form/select';
-@import 'kitten/components/form/slider-tooltip';
-@import 'kitten/components/form/slider';
-@import 'kitten/components/form/switch';
-@import 'kitten/components/form/text-area-wrapper';
-@import 'kitten/components/form/text-input';
-@import 'kitten/components/form/text-input-with-button';
-@import 'kitten/components/form/text-input-with-limit';
-@import 'kitten/components/form/text-input-with-info';
-@import 'kitten/components/form/text-input-with-unit';
+@import "kitten/components/form/checkbox-set";
+@import "kitten/components/form/checkbox";
+@import "kitten/components/form/location-input";
+@import "kitten/components/form/form-actions";
+@import "kitten/components/form/form-composer";
+@import "kitten/components/form/form-info";
+@import "kitten/components/form/form-row";
+@import "kitten/components/form/label";
+@import "kitten/components/form/radio-button-set";
+@import "kitten/components/form/radio-button";
+@import "kitten/components/form/search-input";
+@import "kitten/components/form/select";
+@import "kitten/components/form/slider-tooltip";
+@import "kitten/components/form/slider";
+@import "kitten/components/form/switch";
+@import "kitten/components/form/text-area-wrapper";
+@import "kitten/components/form/text-input";
+@import "kitten/components/form/text-input-with-button";
+@import "kitten/components/form/text-input-with-limit";
+@import "kitten/components/form/text-input-with-info";
+@import "kitten/components/form/text-input-with-unit";
 
 // Grid
-@import 'kitten/components/grid/container';
-@import 'kitten/components/grid/grid';
-@import 'kitten/components/grid/lego-grid';
+@import "kitten/components/grid/container";
+@import "kitten/components/grid/grid";
+@import "kitten/components/grid/lego-grid";
 @import "kitten/components/grid/row";
 @import "kitten/components/grid/side-grid";
 @import "kitten/components/grid/single-column";
 @import "kitten/components/grid/vertical-grid";
 
 // Headers
-@import 'kitten/components/headers/header';
+@import "kitten/components/headers/header";
 
 // Icons
 @import "kitten/components/icons/arrow-icon";
@@ -70,56 +70,56 @@
 @import "kitten/components/images/image-with-caption";
 
 // Layout
-@import 'kitten/components/layout/horizontal-stroke';
-@import 'kitten/components/layout/line';
-@import 'kitten/components/layout/responsive-iframe-container';
-@import 'kitten/components/layout/separator';
-@import 'kitten/components/layout/vertical-separator';
-@import 'kitten/components/layout/vertical-stroke';
+@import "kitten/components/layout/horizontal-stroke";
+@import "kitten/components/layout/line";
+@import "kitten/components/layout/responsive-iframe-container";
+@import "kitten/components/layout/separator";
+@import "kitten/components/layout/vertical-separator";
+@import "kitten/components/layout/vertical-stroke";
 
 // Lines
-@import 'kitten/components/lines/info-lines';
+@import "kitten/components/lines/info-lines";
 
 // Links
-@import 'kitten/components/links/external-rich-link';
-@import 'kitten/components/links/link-list';
+@import "kitten/components/links/external-rich-link";
+@import "kitten/components/links/link-list";
 
 // Lists
-@import 'kitten/components/lists/bullet-list';
-@import 'kitten/components/lists/tag-list';
+@import "kitten/components/lists/bullet-list";
+@import "kitten/components/lists/tag-list";
 
 // Loaders
-@import 'kitten/components/loaders/loader';
-@import 'kitten/components/loaders/loader-with-paragraph';
+@import "kitten/components/loaders/loader";
+@import "kitten/components/loaders/loader-with-paragraph";
 
 // Meters
-@import 'kitten/components/meters/progress';
+@import "kitten/components/meters/progress";
 
 // Modals
-@import 'kitten/components/modals/modal';
+@import "kitten/components/modals/modal";
 
 // Navigation
-@import 'kitten/components/navigation/horizontal-nav';
-@import 'kitten/components/navigation/platform-switch';
-@import 'kitten/components/navigation/tab-bar';
-@import 'kitten/components/navigation/user-menu';
+@import "kitten/components/navigation/horizontal-nav";
+@import "kitten/components/navigation/platform-switch";
+@import "kitten/components/navigation/tab-bar";
+@import "kitten/components/navigation/user-menu";
 
 // Notifications
-@import 'kitten/components/notifications/alert';
-@import 'kitten/components/notifications/badge';
-@import 'kitten/components/notifications/icon-badge';
+@import "kitten/components/notifications/alert";
+@import "kitten/components/notifications/badge";
+@import "kitten/components/notifications/icon-badge";
 
 // Press
-@import 'kitten/components/press/press-quotes';
+@import "kitten/components/press/press-quotes";
 
 // Popovers
-@import 'kitten/components/popovers/popover';
+@import "kitten/components/popovers/popover";
 
 // Simulators
-@import 'kitten/components/simulators/loan-simulator';
+@import "kitten/components/simulators/loan-simulator";
 
 // Steppers
-@import 'kitten/components/steppers/stepper';
+@import "kitten/components/steppers/stepper";
 
 // Teaser
 @import "kitten/components/teaser/teaser";
@@ -129,22 +129,22 @@
 @import "kitten/components/testimonies/testimony";
 
 // Titles
-@import 'kitten/components/titles/title-with-actions';
+@import "kitten/components/titles/title-with-actions";
 
 // Tooltips
-@import 'kitten/components/tooltips/tooltip';
-@import 'kitten/components/tooltips/tooltip-new';
-@import 'kitten/components/tooltips/static-tooltip';
+@import "kitten/components/tooltips/tooltip";
+@import "kitten/components/tooltips/tooltip-new";
+@import "kitten/components/tooltips/static-tooltip";
 
 // Tours
-@import 'kitten/components/tours/tour';
-@import 'kitten/components/tours/header-tour';
+@import "kitten/components/tours/tour";
+@import "kitten/components/tours/header-tour";
 
 // Typography
-@import 'kitten/components/typography/body-copy';
-@import 'kitten/components/typography/paragraph';
-@import 'kitten/components/typography/sup-title';
-@import 'kitten/components/typography/title';
+@import "kitten/components/typography/body-copy";
+@import "kitten/components/typography/paragraph";
+@import "kitten/components/typography/sup-title";
+@import "kitten/components/typography/title";
 
 // Uploaders
-@import 'kitten/components/uploaders/simple-uploader'
+@import "kitten/components/uploaders/simple-uploader";

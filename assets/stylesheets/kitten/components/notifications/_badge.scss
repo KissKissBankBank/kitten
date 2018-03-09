@@ -12,14 +12,14 @@
 
 @mixin k-Badge {
   $color: #fff;
-  $background-color: map-get($k-colors, 'primary-1');
+  $background-color: map-get($k-colors, "primary-1");
 
   .k-Badge {
     padding: k-px-to-rem(2px) k-px-to-rem(6px);
     background-color: $background-color;
     border-radius: k-px-to-rem(10px);
     color: $color;
-    @include k-typographyFont('regular');
+    @include k-typographyFont("regular");
     @include k-typographyFontSize(-4, 1);
   }
 

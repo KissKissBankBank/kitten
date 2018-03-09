@@ -17,8 +17,8 @@
 ///     </div>
 ///   </div>
 @mixin k-TestimonyList {
-  @include k-with-module('k-TestimonyList') {
-    $gutter: k-map-fetch($k-grid, 'gutter-width');
+  @include k-with-module("k-TestimonyList") {
+    $gutter: k-map-fetch($k-grid, "gutter-width");
 
     .k-TestimonyList {
       @include k-grid;
@@ -32,30 +32,30 @@
       @include k-grid-col(10);
       @include k-grid-offset(1);
 
-      @include k-media-min('xs') {
+      @include k-media-min("xs") {
         @include k-grid-col(8);
         @include k-grid-offset(2);
       }
 
-      @include k-media-min('m') {
+      @include k-media-min("m") {
         @include k-grid-col(12);
         @include k-grid-offset(0);
       }
 
-      @include k-media-min('l') {
+      @include k-media-min("l") {
         @include k-grid-col(10);
         @include k-grid-offset(1);
       }
     }
 
     .k-TestimonyList__item {
-      @include k-media-min('m') {
+      @include k-media-min("m") {
         @include k-grid-col(6);
         padding-left: 5%;
         padding-right: 5%;
       }
 
-      @include k-media-min('l') {
+      @include k-media-min("l") {
         // do not use the padding strategy anymore (use a right margin instead)
         padding-left: 0;
         padding-right: 0;

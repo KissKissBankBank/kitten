@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 export const ClockIcon = props => (
   <svg
@@ -6,10 +6,10 @@ export const ClockIcon = props => (
     viewBox="0 0 11 11"
     width="10"
     height="10"
-    { ...props }
+    {...props}
   >
     <title>Clock</title>
     <circle cx="5.5" cy="5.5" r="5" fill="#fff" stroke="#333" />
     <path d="M6 5h1.5v1H5V2.5h1z" fill="#333" />
   </svg>
-)
+);

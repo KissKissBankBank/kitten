@@ -8,24 +8,21 @@
 /// @parameter {String} $path   - validated variable name, for error reporting
 ///
 /// @return {Boolean}
-@function k-validate($value, $schema, $module, $path: 'root') {
+@function k-validate($value, $schema, $module, $path: "root") {
   // Start by checking what type we expect for the current value.
   $value-type: type-of($value);
-  $expected-type: map-get($schema, 'type');
+  $expected-type: map-get($schema, "type");
 
-  @if $expected-type == 'number' {
-    @if $value-type != 'number' {
-      @return k-schema-error(
-        $module, $path,
-        'should be a Number'
-      );
+  @if $expected-type == "number" {
+    @if $value-type != "number" {
+      @return k-schema-error($module, $path, "should be a Number");
     }
 
     // Should the number have a specific unit?
-    $value-unit: map-get($schema, 'unit');
+    $value-unit: map-get($schema, "unit");
     @if $value-unit != null {
       // A single string may be specified for brevity.
-      @if type-of($value-unit) == 'string' {
+      @if type-of($value-unit) == "string" {
         @if k-unit-or-none($value) != $value-unit {
           @return k-unit-error($module, $path, $value-unit);
         }
@@ -40,45 +37,33 @@
     @return k-validate-enum($value, $schema, $module, $path);
   }
   @elseif $expected-type == 'string' {
-    @if $value-type != 'string' {
-      @return k-schema-error(
-        $module, $path,
-        'should be a String'
-      );
+    @if $value-type != "string" {
+      @return k-schema-error($module, $path, "should be a String");
     }
 
     @return k-validate-enum($value, $schema, $module, $path);
   }
   @elseif $expected-type == 'color' {
-    @if $value-type != 'color' {
-      @return k-schema-error(
-        $module, $path,
-        'should be a Color'
-      );
+    @if $value-type != "color" {
+      @return k-schema-error($module, $path, "should be a Color");
     }
 
     @return k-validate-enum($value, $schema, $module, $path);
   }
   @elseif $expected-type == 'boolean' {
-    @if $value-type != 'boolean' {
-      @return k-schema-error(
-        $module, $path,
-        'should be a Boolean'
-      );
+    @if $value-type != "boolean" {
+      @return k-schema-error($module, $path, "should be a Boolean");
     }
 
     @return k-validate-enum($value, $schema, $module, $path);
   }
   @elseif $expected-type == 'list' {
-    @if $value-type != 'list' {
-      @return k-schema-error(
-        $module, $path,
-        'should be a List'
-      );
+    @if $value-type != "list" {
+      @return k-schema-error($module, $path, "should be a List");
     }
 
     // Is there a schema defined for list items?
-    $item-schema: map-get($schema, 'items');
+    $item-schema: map-get($schema, "items");
     @if $item-schema {
       @for $i from 1 through length($value) {
         $p-value: nth($value, $i);
@@ -93,15 +78,12 @@
     @return true;
   }
   @elseif $expected-type == 'map' {
-    @if $value-type != 'map' {
-      @return k-schema-error(
-        $module, $path,
-        'should be a Map'
-      );
+    @if $value-type != "map" {
+      @return k-schema-error($module, $path, "should be a Map");
     }
 
     // Do we have specific schemas for certain properties?
-    $map-properties: map-get($schema, 'properties');
+    $map-properties: map-get($schema, "properties");
     @if $map-properties != null {
       @each $p-name, $p-schema in $map-properties {
         $p-value: map-get($value, $p-name);
@@ -116,31 +98,29 @@
     }
 
     // Are there any required properties?
-    $required-properties: map-get($schema, 'required');
+    $required-properties: map-get($schema, "required");
     @if $required-properties != null {
       @each $p-name in $required-properties {
         $p-value: map-get($value, $p-name);
         $p-path: "#{$path}.#{$p-name}";
 
         @if $p-value == null {
-          @return k-schema-error(
-            $module, $p-path,
-            'is required'
-          );
+          @return k-schema-error($module, $p-path, "is required");
         }
       }
     }
 
     // Are there any additional properties? Additional properties are not listed
     // exhaustively, and must all validate against a single schema.
-    $additional-properties: map-get($schema, 'additional-properties');
+    $additional-properties: map-get($schema, "additional-properties");
     @if $additional-properties != null {
       @each $p-name, $p-value in $value {
         // Do not validate the property if it is already a regular property.
         @if not map-has-key(k-one-of($map-properties, ()), $p-name) {
           $p-path: "#{$path}.#{$p-name}";
 
-          @if not k-validate($p-value, $additional-properties, $module, $p-path) {
+          @if not k-validate($p-value, $additional-properties, $module, $p-path)
+          {
             @return false;
           }
         }
@@ -152,10 +132,7 @@
 
   // If we end up here, something went wrong.
   // Assume the result should be false.
-  @return k-schema-error(
-    $module, $path,
-    'is invalid'
-  );
+  @return k-schema-error($module, $path, "is invalid");
 }
 
 /// Validate if a value belongs to an enumeration.
@@ -169,12 +146,13 @@
 ///
 /// @return {Boolean}
 @function k-validate-enum($value, $schema, $module, $path) {
-  $expected-values: map-get($schema, 'enum');
+  $expected-values: map-get($schema, "enum");
 
   @if $expected-values != null {
     @if index($expected-values, $value) == null {
       @return k-schema-error(
-        $module, $path,
+        $module,
+        $path,
         "should be a one of #{$expected-values}"
       );
     }
@@ -193,10 +171,9 @@
 @function k-unit-or-none($value) {
   $unit: unit($value);
 
-  @if $unit == '' {
+  @if $unit == "" {
     @return none;
-  }
-  @else {
+  } @else {
     @return unquote($unit);
   }
 }

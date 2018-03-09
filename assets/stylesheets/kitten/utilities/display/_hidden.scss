@@ -28,7 +28,6 @@
   }
 
   @each $name, $query in $k-media-queries {
-
     @if $name != "xl" {
       .k-u-hidden\@#{$name}-down {
         @include k-media-max($name) {

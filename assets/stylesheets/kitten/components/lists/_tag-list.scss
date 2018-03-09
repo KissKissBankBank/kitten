@@ -15,10 +15,10 @@
 ///   </ul>
 
 @mixin k-TagList {
-  $font: 'regular';
+  $font: "regular";
   $font-step: -1; // 14px.
   $font-step-tiny: -2; // 12px.
-  $color: map-get($k-colors, 'font-1');
+  $color: map-get($k-colors, "font-1");
   $spacing: k-px-to-rem(5px);
   $icon-height: k-px-to-rem(10px);
   $icon-height-tiny: k-px-to-rem(11px);
@@ -44,7 +44,7 @@
 
     &:before {
       margin-right: $spacing;
-      content: '•';
+      content: "•";
       color: $color;
     }
   }
@@ -52,7 +52,7 @@
   .k-TagList__item--first {
     &:before {
       margin-right: 0;
-      content: '';
+      content: "";
     }
   }
 

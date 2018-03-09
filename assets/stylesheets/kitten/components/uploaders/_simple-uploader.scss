@@ -21,7 +21,7 @@
     align-items: center;
     text-align: left;
 
-    @include k-media-max('s') {
+    @include k-media-max("s") {
       flex-direction: column;
       align-items: flex-start;
     }
@@ -37,7 +37,7 @@
     align-items: center;
     margin-left: k-px-to-rem(10px);
 
-    @include k-media-max('s') {
+    @include k-media-max("s") {
       margin-left: 0;
       margin-top: k-px-to-rem(5px);
     }
@@ -47,12 +47,12 @@
     overflow: hidden;
     max-width: k-px-to-rem(140px);
 
-    @include k-typographyFont('light');
+    @include k-typographyFont("light");
     @include k-typographyFontSize(-1, normal);
     text-overflow: ellipsis;
     white-space: nowrap;
 
-    @include k-media-max('s') {
+    @include k-media-max("s") {
       max-width: k-px-to-rem(260px);
     }
   }

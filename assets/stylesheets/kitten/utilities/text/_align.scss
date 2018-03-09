@@ -62,10 +62,9 @@
 }
 
 @mixin k-utilities-align {
-
-  @include k-u-align('center', center);
-  @include k-u-align('left', left);
-  @include k-u-align('right', right);
+  @include k-u-align("center", center);
+  @include k-u-align("left", left);
+  @include k-u-align("right", right);
 
   // DEPRECATED
   .k-u-centered {

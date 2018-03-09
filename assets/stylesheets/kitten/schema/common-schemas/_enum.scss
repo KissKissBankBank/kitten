@@ -10,8 +10,5 @@
 ///   k-enum-schema('foo', 'bar', 'baz');
 ///   // Will return a schema expecting one of these three strings.
 @function k-enum-schema($values...) {
-  @return (
-    type: 'string',
-    enum: $values
-  )
+  @return (type: "string", enum: $values);
 }

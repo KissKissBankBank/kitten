@@ -1,223 +1,226 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import classNames from 'classnames'
-import emitter from 'kitten/helpers/utils/emitter'
-import { DropdownButton } from 'kitten/components/dropdowns/dropdown-button'
-import domElementHelper from 'kitten/helpers/dom/element-helper'
-import objectAssign from 'core-js/library/fn/object/assign'
+import React from "react";
+import PropTypes from "prop-types";
+import classNames from "classnames";
+import emitter from "kitten/helpers/utils/emitter";
+import { DropdownButton } from "kitten/components/dropdowns/dropdown-button";
+import domElementHelper from "kitten/helpers/dom/element-helper";
+import objectAssign from "core-js/library/fn/object/assign";
 
 export class Dropdown extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
 
     this.state = {
       isExpanded: false,
-      referenceElementHeight: 0,
-    }
+      referenceElementHeight: 0
+    };
 
-    this.handleDropdownPosition = this.handleDropdownPosition.bind(this)
-    this.revertHandleClickOnLinks = this.revertHandleClickOnLinks.bind(this)
-    this.close = this.close.bind(this)
+    this.handleDropdownPosition = this.handleDropdownPosition.bind(this);
+    this.revertHandleClickOnLinks = this.revertHandleClickOnLinks.bind(this);
+    this.close = this.close.bind(this);
   }
 
   componentDidMount() {
-    const dropdown = this
+    const dropdown = this;
 
     if (domElementHelper.canUseDom()) {
       // Update dropdown content position after DOM is build.
-      let referenceElementHeight = this.getReferenceElementHeight()
+      let referenceElementHeight = this.getReferenceElementHeight();
 
-      this.setState({ referenceElementHeight: referenceElementHeight })
+      this.setState({ referenceElementHeight: referenceElementHeight });
     }
 
     // Handle events.
 
-    this.handleClickOnLinks()
+    this.handleClickOnLinks();
 
-    emitter.on('dropdown:opening:trigger', this.close)
+    emitter.on("dropdown:opening:trigger", this.close);
 
     if (this.props.refreshEvents) {
-      this.props.refreshEvents.forEach((ev) => {
-        window.addEventListener(ev, this.handleDropdownPosition)
-      })
+      this.props.refreshEvents.forEach(ev => {
+        window.addEventListener(ev, this.handleDropdownPosition);
+      });
     }
 
     if (this.props.closeEvents) {
-      this.props.closeEvents.forEach((ev) => {
-        window.addEventListener(ev, this.close)
-      })
+      this.props.closeEvents.forEach(ev => {
+        window.addEventListener(ev, this.close);
+      });
     }
   }
 
   componentWillUnmount() {
-    this.revertHandleClickOnLinks()
+    this.revertHandleClickOnLinks();
 
     if (this.props.refreshEvents) {
-      this.props.refreshEvents.forEach((ev) => {
+      this.props.refreshEvents.forEach(ev => {
         window.removeEventListener(ev, this.handleDropdownPosition);
-      })
+      });
     }
 
     if (this.props.closeEvents) {
-      this.props.closeEvents.forEach((ev) => {
-        window.removeEventListener(ev, this.close)
-      })
+      this.props.closeEvents.forEach(ev => {
+        window.removeEventListener(ev, this.close);
+      });
     }
 
-    emitter.off('dropdown:opening:trigger', this.close)
+    emitter.off("dropdown:opening:trigger", this.close);
   }
 
   componentWillReceiveProps(nextProps) {
     // Enable wrapper component to expand the dropdown.
     if (nextProps.isExpanded != this.state.isExpanded) {
-      this.toggle(nextProps.isExpanded)
+      this.toggle(nextProps.isExpanded);
     }
   }
 
   // Component methods
 
   close() {
-    this.setState({ isExpanded: false })
+    this.setState({ isExpanded: false });
   }
 
   toggle(nextExpandedState) {
     if (nextExpandedState) {
-      emitter.emit('dropdown:opening:trigger', this)
+      emitter.emit("dropdown:opening:trigger", this);
     }
 
-    this.props.onToggle()
+    this.props.onToggle();
 
     this.setState({
       isExpanded: nextExpandedState
-    })
+    });
   }
 
   hasDefaultHorizontalPosition() {
-    return this.props.positionedOn == 'left'
+    return this.props.positionedOn == "left";
   }
 
   isSelfReference() {
-    return typeof this.props.positionedWith == 'undefined'
+    return typeof this.props.positionedWith == "undefined";
   }
 
   getReferenceElement() {
-    if (!this.isSelfReference()) return this.props.positionedWith()
+    if (!this.isSelfReference()) return this.props.positionedWith();
 
-    return this.refs.dropdown
+    return this.refs.dropdown;
   }
 
   getReferenceElementHeight() {
-    let referenceElement = this.getReferenceElement()
+    let referenceElement = this.getReferenceElement();
 
     return domElementHelper.getComputedHeight(
       referenceElement,
       this.props.positionedWithBorder
-    )
+    );
   }
 
   getArrowPosition() {
-    const defaultPosition = { position: 'absolute', top: 0 }
-    const arrowHorizontalPosition = this.props.arrowHorizontalPosition
+    const defaultPosition = { position: "absolute", top: 0 };
+    const arrowHorizontalPosition = this.props.arrowHorizontalPosition;
 
-    return objectAssign(defaultPosition, arrowHorizontalPosition)
+    return objectAssign(defaultPosition, arrowHorizontalPosition);
   }
 
   getContentPosition() {
-    const defaultPosition = { top: this.state.referenceElementHeight }
-    const horizontalPosition = this.props.contentHorizontalPosition
+    const defaultPosition = { top: this.state.referenceElementHeight };
+    const horizontalPosition = this.props.contentHorizontalPosition;
 
-    return objectAssign(defaultPosition, horizontalPosition)
+    return objectAssign(defaultPosition, horizontalPosition);
   }
 
   // Component listener callbacks
 
   revertHandleClickOnLinks() {
-    const links = this.refs.dropdownContent.getElementsByTagName('a')
+    const links = this.refs.dropdownContent.getElementsByTagName("a");
 
     Array.prototype.forEach.call(links, link => {
-      link.removeEventListener('click', this.close)
-    })
+      link.removeEventListener("click", this.close);
+    });
   }
 
   handleClickOnLinks() {
-    const links = this.refs.dropdownContent.getElementsByTagName('a')
+    const links = this.refs.dropdownContent.getElementsByTagName("a");
 
     Array.prototype.forEach.call(links, link => {
-      link.removeEventListener('click', this.close)
-    })
+      link.removeEventListener("click", this.close);
+    });
   }
 
   handleDropdownPosition() {
     if (domElementHelper.canUseDom()) {
-      this.props.onPositionUpdate()
+      this.props.onPositionUpdate();
     }
   }
 
   handleButtonClick(event) {
-    event.stopPropagation()
-    event.preventDefault()
+    event.stopPropagation();
+    event.preventDefault();
 
-    this.toggle(!this.state.isExpanded)
+    this.toggle(!this.state.isExpanded);
   }
 
   // Rendering
 
   renderButtonContentElement() {
     if (this.state.isExpanded) {
-      return this.props.buttonContentOnExpanded
+      return this.props.buttonContentOnExpanded;
     }
 
-    return this.props.buttonContentOnCollapsed
+    return this.props.buttonContentOnCollapsed;
   }
 
   renderButton() {
-    if (this.props.button) return this.props.button
+    if (this.props.button) return this.props.button;
 
     return (
-      <DropdownButton ref="dropdownButton"
-                      className={ this.props.buttonClassName }
-                      id={ this.props.buttonId }
-                      isExpanded={ this.state.isExpanded }
-                      onClick={ this.handleButtonClick.bind(this) }>
-        { this.renderButtonContentElement() }
+      <DropdownButton
+        ref="dropdownButton"
+        className={this.props.buttonClassName}
+        id={this.props.buttonId}
+        isExpanded={this.state.isExpanded}
+        onClick={this.handleButtonClick.bind(this)}
+      >
+        {this.renderButtonContentElement()}
       </DropdownButton>
-    )
+    );
   }
 
   renderArrow() {
-    if (!this.props.dropdownListArrow) return
+    if (!this.props.dropdownListArrow) return;
 
-    const style = this.getArrowPosition()
+    const style = this.getArrowPosition();
 
     return (
-      <span ref="arrow"
-            style={ style }>
-        { this.props.dropdownListArrow }
+      <span ref="arrow" style={style}>
+        {this.props.dropdownListArrow}
       </span>
-    )
+    );
   }
 
   render() {
-    const button = this.renderButton()
+    const button = this.renderButton();
     const dropdownClassName = classNames(
-      'k-Dropdown',
+      "k-Dropdown",
       {
-        'is-expanded': this.state.isExpanded,
-        'k-Dropdown--asReference': this.isSelfReference(),
+        "is-expanded": this.state.isExpanded,
+        "k-Dropdown--asReference": this.isSelfReference()
       },
       this.props.className
-    )
+    );
 
-    return(
-      <div ref="dropdown" className={ dropdownClassName }>
-        { button }
-        <div ref="dropdownContent"
-             className="k-Dropdown__content"
-             style={ this.getContentPosition() }
-             aria-hidden="true"
-             aria-labelledby={ this.props.buttonId }>
-          { this.props.dropdownContent }
-          { this.renderArrow() }
+    return (
+      <div ref="dropdown" className={dropdownClassName}>
+        {button}
+        <div
+          ref="dropdownContent"
+          className="k-Dropdown__content"
+          style={this.getContentPosition()}
+          aria-hidden="true"
+          aria-labelledby={this.props.buttonId}
+        >
+          {this.props.dropdownContent}
+          {this.renderArrow()}
         </div>
       </div>
     );
@@ -232,23 +235,23 @@ Dropdown.propTypes = {
   notifications: PropTypes.number,
   refreshEvents: PropTypes.array,
   closeEvents: PropTypes.array,
-  onPositionUpdate: PropTypes.func,
-}
+  onPositionUpdate: PropTypes.func
+};
 
 Dropdown.defaultProps = {
   // Take border into account to compute reference element height.
   positionedWithBorder: true,
 
   // Fix the dropdown on the left or on the right.
-  positionedOn: 'left', // 'left' | 'right'
+  positionedOn: "left", // 'left' | 'right'
 
   // Custom horizontal position for content and content arrow.
-  contentHorizontalPosition: { left: '0' },
-  arrowHorizontalPosition: { left: '50%' },
+  contentHorizontalPosition: { left: "0" },
+  arrowHorizontalPosition: { left: "50%" },
 
   // Button settings
-  buttonContentOnExpanded: 'Close me',
-  buttonContentOnCollapsed: 'Expand me',
+  buttonContentOnExpanded: "Close me",
+  buttonContentOnCollapsed: "Expand me",
 
   // List of events that will trigger the update of the reference element
   // height.
@@ -261,8 +264,8 @@ Dropdown.defaultProps = {
   onPositionUpdate: function() {},
 
   // Called when the dropdown is opened or closed
-  onToggle: function() {},
-}
+  onToggle: function() {}
+};
 
 // DEPRECATED: do not use default export.
-export default Dropdown
+export default Dropdown;

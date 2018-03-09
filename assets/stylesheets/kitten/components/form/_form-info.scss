@@ -21,15 +21,15 @@
 
 @mixin k-FormInfo {
   // Label
-  $font: 'regular';
+  $font: "regular";
 
   $label-size: 0; // 16px
-  $label-color: map-get($k-colors, 'font-1');
+  $label-color: map-get($k-colors, "font-1");
 
   // Error
-  $font-error: 'regular';
+  $font-error: "regular";
   $font-size-error: -2;
-  $color-error: map-get($k-colors, 'error');
+  $color-error: map-get($k-colors, "error");
   $error-line-height: normal;
 
   .k-FormInfo__label {

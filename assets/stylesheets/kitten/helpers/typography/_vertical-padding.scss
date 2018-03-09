@@ -24,22 +24,23 @@
 ///   padding-top:    1.5rem;
 ///   padding-bottom: 3rem;
 @mixin k-typographyVerticalPadding($paddings) {
-  $valid:
-    k-all(
-      k-validate(
-        $padding, $k-vertical-padding-schema,
-        'k-typographyPadding', '$distance'
-      )
-    );
+  $valid: k-all(
+    k-validate(
+      $padding,
+      $k-vertical-padding-schema,
+      "k-typographyPadding",
+      "$distance"
+    )
+  );
 
   // The base line height.
-  $base-line-height: k-map-fetch($k-typography, 'line-height');
+  $base-line-height: k-map-fetch($k-typography, "line-height");
 
   // Get top padding or set to 0.
-  $top-padding: k-default(map-get($paddings, 'top'), 0);
+  $top-padding: k-default(map-get($paddings, "top"), 0);
 
   // Get bottom padding or set to 0.
-  $bottom-padding: k-default(map-get($paddings, 'bottom'), 0);
+  $bottom-padding: k-default(map-get($paddings, "bottom"), 0);
 
   padding-top: $top-padding * $base-line-height;
   padding-bottom: $bottom-padding * $base-line-height;

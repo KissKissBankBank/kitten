@@ -1,48 +1,49 @@
-import React, { Component } from 'react'
-import Radium from 'radium'
-import PropTypes from 'prop-types'
-import { Text as TextBase } from 'kitten/components/typography/text'
-import { ArrowIcon as ArrowIconBase } from 'kitten/components/icons/arrow-icon'
-import { ScreenConfig } from 'kitten/constants/screen-config'
-import COLORS from 'kitten/constants/colors-config'
-import { parseHtml } from 'kitten/helpers/utils/parser'
-import { mediaQueries } from 'kitten/hoc/media-queries'
+import React, { Component } from "react";
+import Radium from "radium";
+import PropTypes from "prop-types";
+import { Text as TextBase } from "kitten/components/typography/text";
+import { ArrowIcon as ArrowIconBase } from "kitten/components/icons/arrow-icon";
+import { ScreenConfig } from "kitten/constants/screen-config";
+import COLORS from "kitten/constants/colors-config";
+import { parseHtml } from "kitten/helpers/utils/parser";
+import { mediaQueries } from "kitten/hoc/media-queries";
 
-const Text = Radium(TextBase)
-const ArrowIcon = Radium(ArrowIconBase)
+const Text = Radium(TextBase);
+const ArrowIcon = Radium(ArrowIconBase);
 
 // Returns an array with the given bounds
-const range = (start, end) => (
-  Array(end - start + 1).fill().map((_, index) => start + index)
-)
+const range = (start, end) =>
+  Array(end - start + 1)
+    .fill()
+    .map((_, index) => start + index);
 
 // Returns an array of size `availableSlots` with page number integers
 // and breaks "…" (represented as nulls).
 export function pages(min, max, currentPage, availableSlots) {
   // 1, 2, 3
   if (max - min < availableSlots) {
-    return range(min, max)
+    return range(min, max);
   }
 
   // 1, 2, 3, …, 42
   if (currentPage - min + 1 < availableSlots - 2) {
-    return [...range(min, min - 1 + availableSlots - 2), null, max]
+    return [...range(min, min - 1 + availableSlots - 2), null, max];
   }
 
   // 1, …, 40, 41, 42
   if (max - currentPage < availableSlots - 2) {
-    return [min, null, ...range(max + 1 - (availableSlots - 2), max)]
+    return [min, null, ...range(max + 1 - (availableSlots - 2), max)];
   }
 
   // 1, …, 21, …, 42
-  const sides = Math.floor((availableSlots - 4) / 2)
+  const sides = Math.floor((availableSlots - 4) / 2);
   return [
     min,
     null,
     ...range(currentPage - sides, currentPage + sides),
     null,
-    max,
-  ]
+    max
+  ];
 }
 
 class PaginationBase extends Component {
@@ -54,85 +55,77 @@ class PaginationBase extends Component {
     onPageClick: PropTypes.func,
     totalPages: PropTypes.number,
     currentPage: PropTypes.number,
-    'aria-label': PropTypes.string,
-  }
+    "aria-label": PropTypes.string
+  };
 
   static defaultProps = {
-    prevButtonLabel: 'Previous page',
-    nextButtonLabel: 'Next page',
+    prevButtonLabel: "Previous page",
+    nextButtonLabel: "Next page",
     goToPageLabel: n => `Go to page ${n}`,
     goToPageHref: n => `#${n}`,
     onPageClick: () => {},
     currentPage: 1,
     totalPages: 1,
-    'aria-label': 'Pagination navigation',
-  }
+    "aria-label": "Pagination navigation"
+  };
 
   render() {
-    const { totalPages, currentPage } = this.props
-    const size = this.props.viewportIsTabletOrLess ? 5 : 7
-    const pageNumbers = pages(1, totalPages, currentPage, size)
+    const { totalPages, currentPage } = this.props;
+    const size = this.props.viewportIsTabletOrLess ? 5 : 7;
+    const pageNumbers = pages(1, totalPages, currentPage, size);
 
     return (
-      <nav role="navigation" aria-label={ this.props['aria-label'] }>
-        <ul style={ styles.group }>
-          { this.renderArrowButton('left') }
-          { pageNumbers.map(this.renderPage) }
-          { this.renderArrowButton('right') }
+      <nav role="navigation" aria-label={this.props["aria-label"]}>
+        <ul style={styles.group}>
+          {this.renderArrowButton("left")}
+          {pageNumbers.map(this.renderPage)}
+          {this.renderArrowButton("right")}
         </ul>
       </nav>
-    )
+    );
   }
 
-  preventClickDefault = e => e.preventDefault()
+  preventClickDefault = e => e.preventDefault();
 
-  pageClickHandler = number => (
-    (event) => this.props.onPageClick(number, event)
-  )
+  pageClickHandler = number => event => this.props.onPageClick(number, event);
 
   renderPage = (number, index) => {
-    if (!number) return this.renderSpacer(index)
+    if (!number) return this.renderSpacer(index);
 
-    const isActive = number === this.props.currentPage
+    const isActive = number === this.props.currentPage;
 
     const styleButtonIcon = [
       styles.group.list.buttonIcon,
-      isActive && styles.group.list.buttonIcon.isActive,
-    ]
+      isActive && styles.group.list.buttonIcon.isActive
+    ];
 
     return (
-      <li
-        style={ styles.group.list }
-        key={ `page-${number}` }
-      >
+      <li style={styles.group.list} key={`page-${number}`}>
         <Text
           tag="a"
           weight="regular"
           size="tiny"
-          href={ this.props.goToPageHref(number) }
-          key={ `link-${number}` }
-          style={ styleButtonIcon }
-          aria-label={ this.props.goToPageLabel(number) }
+          href={this.props.goToPageHref(number)}
+          key={`link-${number}`}
+          style={styleButtonIcon}
+          aria-label={this.props.goToPageLabel(number)}
           onClick={
             isActive ? this.preventClickDefault : this.pageClickHandler(number)
           }
-          tabIndex={ isActive ? -1 : null }
+          tabIndex={isActive ? -1 : null}
         >
-          { number }
+          {number}
         </Text>
       </li>
-    )
-  }
+    );
+  };
 
   renderSpacer(index) {
     return (
-      <li
-        key={ `spacer-${index}` }
-        style={ styles.group.list.points }
-      >
-        { '…' }
+      <li key={`spacer-${index}`} style={styles.group.list.points}>
+        {"…"}
       </li>
-    )
+    );
   }
 
   renderArrowButton(direction) {
@@ -140,54 +133,64 @@ class PaginationBase extends Component {
       prevButtonLabel,
       nextButtonLabel,
       currentPage,
-      totalPages,
-    } = this.props
+      totalPages
+    } = this.props;
 
-    const buttonLabel = direction == 'left'
-      ? parseHtml(prevButtonLabel)
-      : parseHtml(nextButtonLabel)
+    const buttonLabel =
+      direction == "left"
+        ? parseHtml(prevButtonLabel)
+        : parseHtml(nextButtonLabel);
 
-    const isDisabled = direction == 'left'
-      ? currentPage == 1
-      : currentPage == totalPages
+    const isDisabled =
+      direction == "left" ? currentPage == 1 : currentPage == totalPages;
 
-    const linkIsHovered =
-      Radium.getState(this.state, `link-${direction}`, ':hover')
-    const linkIsFocused =
-      Radium.getState(this.state, `link-${direction}`, ':focus')
-    const linkIsActived =
-      Radium.getState(this.state, `link-${direction}`, ':active')
+    const linkIsHovered = Radium.getState(
+      this.state,
+      `link-${direction}`,
+      ":hover"
+    );
+    const linkIsFocused = Radium.getState(
+      this.state,
+      `link-${direction}`,
+      ":focus"
+    );
+    const linkIsActived = Radium.getState(
+      this.state,
+      `link-${direction}`,
+      ":active"
+    );
 
     const styleList = [
-      direction == 'left' && styles.group.list.left,
-      direction == 'right' && styles.group.list.right,
-    ]
+      direction == "left" && styles.group.list.left,
+      direction == "right" && styles.group.list.right
+    ];
 
     const styleButtonIcon = [
       styles.group.list.buttonIcon,
-      isDisabled && styles.group.list.buttonIcon.isDisabled,
-    ]
+      isDisabled && styles.group.list.buttonIcon.isDisabled
+    ];
 
     const styleSvg = [
       styles.group.list.buttonIcon.svg,
-      (linkIsHovered && !isDisabled) && styles.group.list.buttonIcon.svg.hover,
-      (linkIsFocused && !isDisabled) && styles.group.list.buttonIcon.svg.focus,
-      (linkIsActived && !isDisabled) && styles.group.list.buttonIcon.svg.active,
-    ]
+      linkIsHovered && !isDisabled && styles.group.list.buttonIcon.svg.hover,
+      linkIsFocused && !isDisabled && styles.group.list.buttonIcon.svg.focus,
+      linkIsActived && !isDisabled && styles.group.list.buttonIcon.svg.active
+    ];
 
-    const number = direction == 'left'
-      ? (currentPage == 1 ? 1 : currentPage - 1)
-      : (currentPage == totalPages ? totalPages : currentPage + 1)
+    const number =
+      direction == "left"
+        ? currentPage == 1 ? 1 : currentPage - 1
+        : currentPage == totalPages ? totalPages : currentPage + 1;
 
     return (
-      <li style={ styleList }>
+      <li style={styleList}>
         <a
-          href={ this.props.goToPageHref(number) }
-          key={ `link-${direction}` }
-          style={ styleButtonIcon }
-          aria-label={ buttonLabel }
-          title={ buttonLabel }
-          tabIndex={ isDisabled ? -1 : null }
+          href={this.props.goToPageHref(number)}
+          key={`link-${direction}`}
+          style={styleButtonIcon}
+          aria-label={buttonLabel}
+          title={buttonLabel}
+          tabIndex={isDisabled ? -1 : null}
           onClick={
             isDisabled
               ? this.preventClickDefault
@@ -195,147 +198,144 @@ class PaginationBase extends Component {
           }
         >
           <ArrowIcon
-            direction={ direction }
-            disabled={ isDisabled }
-            style={ styleSvg }
+            direction={direction}
+            disabled={isDisabled}
+            style={styleSvg}
           />
         </a>
       </li>
-    )
+    );
   }
 }
 
 const linkHoveredAndFocused = {
   borderColor: `${COLORS.primary1}`,
   color: `${COLORS.primary1}`,
-  backgroundColor: `${COLORS.background1}`,
-}
+  backgroundColor: `${COLORS.background1}`
+};
 
 const disabledPseudoClass = {
   borderColor: `${COLORS.line2}`,
   color: `${COLORS.background1}`,
-  backgroundColor: `${COLORS.line2}`,
-}
+  backgroundColor: `${COLORS.line2}`
+};
 
 const styles = {
   group: {
-    display: 'inline-flex',
+    display: "inline-flex",
     padding: 0,
 
     list: {
-      listStyle: 'none',
+      listStyle: "none",
       marginRight: 0,
-      [`@media (min-width: ${ScreenConfig['S'].min}px)`]: {
-        marginRight: '8px',
-        marginLeft: '8px',
+      [`@media (min-width: ${ScreenConfig["S"].min}px)`]: {
+        marginRight: "8px",
+        marginLeft: "8px"
       },
 
       lastChild: {
-        marginRight: 0,
+        marginRight: 0
       },
 
       left: {
-        marginRight: '30px',
-        listStyle: 'none',
-        [`@media (min-width: ${ScreenConfig['S'].min}px)`]: {
-          marginRight: '22px',
-        },
+        marginRight: "30px",
+        listStyle: "none",
+        [`@media (min-width: ${ScreenConfig["S"].min}px)`]: {
+          marginRight: "22px"
+        }
       },
 
       right: {
-        marginLeft: '30px',
-        listStyle: 'none',
-        [`@media (min-width: ${ScreenConfig['S'].min}px)`]: {
-          marginLeft: '22px',
-        },
+        marginLeft: "30px",
+        listStyle: "none",
+        [`@media (min-width: ${ScreenConfig["S"].min}px)`]: {
+          marginLeft: "22px"
+        }
       },
 
       points: {
-        listStyle: 'none',
-        textDecoration: 'none',
-        textAlign: 'center',
-        alignSelf: 'center',
-        width: '40px',
-        [`@media (min-width: ${ScreenConfig['S'].min}px)`]: {
-          marginLeft: '8px',
-          marginRight: '8px',
-          width: '50px',
-        },
+        listStyle: "none",
+        textDecoration: "none",
+        textAlign: "center",
+        alignSelf: "center",
+        width: "40px",
+        [`@media (min-width: ${ScreenConfig["S"].min}px)`]: {
+          marginLeft: "8px",
+          marginRight: "8px",
+          width: "50px"
+        }
       },
 
       buttonIcon: {
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        boxSizing: 'border-box',
-        cursor: 'pointer',
-        width: '40px',
-        height: '40px',
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        boxSizing: "border-box",
+        cursor: "pointer",
+        width: "40px",
+        height: "40px",
         borderRadius: 0,
         borderWidth: 0,
-        borderStyle: 'solid',
-        textDecoration: 'none',
-        outline: 'none',
+        borderStyle: "solid",
+        textDecoration: "none",
+        outline: "none",
         backgroundColor: `${COLORS.background1}`,
         borderColor: `${COLORS.line1}`,
         color: `${COLORS.font1}`,
-        ':hover': linkHoveredAndFocused,
-        ':focus': linkHoveredAndFocused,
-        ':active': {
+        ":hover": linkHoveredAndFocused,
+        ":focus": linkHoveredAndFocused,
+        ":active": {
           backgroundColor: `${COLORS.primary1}`,
           borderColor: `${COLORS.primary1}`,
-          color: `${COLORS.background1}`,
+          color: `${COLORS.background1}`
         },
-        [`@media (min-width: ${ScreenConfig['S'].min}px)`]: {
-          width: '50px',
-          height: '50px',
-          borderWidth: '2px',
+        [`@media (min-width: ${ScreenConfig["S"].min}px)`]: {
+          width: "50px",
+          height: "50px",
+          borderWidth: "2px"
         },
 
         isActive: {
           backgroundColor: `${COLORS.primary1}`,
           borderColor: `${COLORS.primary1}`,
-          color: `${COLORS.background1}`,
+          color: `${COLORS.background1}`
         },
 
         isDisabled: {
           color: `${COLORS.background1}`,
           backgroundColor: `${COLORS.line2}`,
           borderColor: `${COLORS.line2}`,
-          cursor: 'not-allowed',
-          ':hover': disabledPseudoClass,
-          ':focus': disabledPseudoClass,
-          ':active': disabledPseudoClass,
+          cursor: "not-allowed",
+          ":hover": disabledPseudoClass,
+          ":focus": disabledPseudoClass,
+          ":active": disabledPseudoClass
         },
 
         svg: {
-          alignSelf: 'center',
-          margin: '0',
-          padding: '0',
-          width: '12px',
-          height: '14px',
-          pointerEvents: 'none',
+          alignSelf: "center",
+          margin: "0",
+          padding: "0",
+          width: "12px",
+          height: "14px",
+          pointerEvents: "none",
           hover: {
-            fill: `${COLORS.primary1}`,
+            fill: `${COLORS.primary1}`
           },
           focus: {
-            fill: `${COLORS.primary1}`,
+            fill: `${COLORS.primary1}`
           },
           active: {
-            fill: `${COLORS.background1}`,
+            fill: `${COLORS.background1}`
           },
           isDisabled: {
-            fill: `${COLORS.background1}`,
-          },
-        },
-      },
-    },
-  },
-}
+            fill: `${COLORS.background1}`
+          }
+        }
+      }
+    }
+  }
+};
 
-export const Pagination = mediaQueries(
-  Radium(PaginationBase),
-  {
-    viewportIsTabletOrLess: true,
-  },
-)
+export const Pagination = mediaQueries(Radium(PaginationBase), {
+  viewportIsTabletOrLess: true
+});
