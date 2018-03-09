@@ -98,8 +98,7 @@
     "build": "(cd spec/dummy/client && yarn build --silent)",
     "hot-assets": "(cd spec/dummy/client && yarn hot-assets)",
     "test": "jest",
-    "precommit": "lint-staged",
-    "eslint": "eslint --fix assets/**/*.js"
+    "precommit": "lint-staged"
   },
   "lint-staged": {
     "assets/**/*.js": [
