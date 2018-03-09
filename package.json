@@ -102,8 +102,12 @@
     "eslint": "eslint --fix assets/**/*.js"
   },
   "lint-staged": {
-    "assets/**/*.{js,scss}": [
+    "assets/**/*.js": [
       "eslint --fix",
+      "git add"
+    ],
+    "assets/**/*.scss": [
+      "prettier --single-quote --write",
       "git add"
     ]
   },
