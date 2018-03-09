@@ -38,6 +38,7 @@ import {
   KarlButtonIconWordsRight,
 } from 'kitten/karl/buttons/button-with-icon-words'
 import { KarlPaymentButtons } from 'kitten/karl/buttons/payment-button'
+import { KarlButtonIconFilter } from 'kitten/karl/buttons/button-filter'
 
 // Cards
 import { ArticleCard } from 'kitten/components/cards/article-card'
@@ -163,6 +164,7 @@ import { TypologyTagIcon } from 'kitten/components/icons/typology-tag-icon'
 import { TwitterIcon } from 'kitten/components/icons/twitter-icon'
 import { VisaIcon } from 'kitten/components/icons/visa-icon'
 import { WarningCircleIcon } from 'kitten/components/icons/warning-circle-icon'
+import { FilterIcon } from 'kitten/components/icons/filter-icon'
 
 // Illustrations
 import { LinkBoxIllustration }
@@ -339,6 +341,7 @@ ReactOnRails.register({
   KarlFacebookButtonIconWords,
   KarlLinkedinButtonIconWords,
   KarlTwitterButtonIconWords,
+  KarlButtonIconFilter,
 
   // Colors
   KarlColors,
@@ -447,6 +450,7 @@ ReactOnRails.register({
   TwitterIcon,
   VisaIcon,
   WarningCircleIcon,
+  FilterIcon,
 
   // Illustrations
   LinkBoxIllustration,
