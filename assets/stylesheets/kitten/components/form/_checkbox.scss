@@ -46,8 +46,7 @@
 
   .k-Checkbox__label {
     display: inline-flex;
-    align-items: center;
-    align-self: flex-start;
+    align-items: flex-start;
 
     cursor: pointer;
     transition: color .2s;
