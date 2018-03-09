@@ -94,7 +94,7 @@
   },
   "lint-staged": {
     "assets/**/*.{js,scss}": [
-      "prettier --write",
+      "prettier --single-quote --write",
       "git add"
     ]
   },
