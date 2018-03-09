@@ -1,43 +1,39 @@
 <div class="k-Grid">
   <div class="k-Grid__col k-Grid__col--12 k-Grid__col--4@m k-Grid__col--4@l">
     <%= example 'With label' do %>
-      <%= react_component('Checkbox', props: {
-          id: "input-1",
-          children: "Item 1",
-        }
-      ) %>
+      <%= react_component 'Checkbox', props: {
+        id: "input-1",
+        children: "Item 1",
+      } %>
 
-      <%= react_component('Checkbox', props: {
-          id: "input-2",
-          children: "Item 2",
-          defaultChecked: true,
-        }
-      ) %>
+      <%= react_component 'Checkbox', props: {
+        id: "input-2",
+        children: "Item 2",
+        defaultChecked: true,
+      } %>
     <% end %>
   </div>
 
   <div class="k-Grid__col k-Grid__col--12 k-Grid__col--4@m k-Grid__col--4@l">
     <%= example 'Error' do %>
-      <%= react_component('KarlCheckboxError') %>
+      <%= react_component 'KarlCheckboxError' %>
     <% end %>
   </div>
 
   <div class="k-Grid__col k-Grid__col--12 k-Grid__col--4@m k-Grid__col--4@l">
     <%= example 'Disabled' do %>
-      <%= react_component('Checkbox', props: {
-          id: "input-3",
-          children: "Item 1",
-          disabled: true,
-        }
-      ) %>
+      <%= react_component 'Checkbox', props: {
+        id: "input-3",
+        children: "Item 1",
+        disabled: true,
+      } %>
 
-      <%= react_component('Checkbox', props: {
-          id: "input-4",
-          children: "Item 2",
-          defaultChecked: true,
-          disabled: true,
-        }
-      ) %>
+      <%= react_component 'Checkbox', props: {
+        id: "input-4",
+        children: "Item 2",
+        defaultChecked: true,
+        disabled: true,
+      } %>
     <% end %>
   </div>
 
