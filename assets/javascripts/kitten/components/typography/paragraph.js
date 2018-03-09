@@ -1,5 +1,5 @@
-import React from 'react'
-import classNames from 'classnames'
+import React from 'react';
+import classNames from 'classnames';
 
 export class Paragraph extends React.Component {
   render() {
@@ -10,8 +10,8 @@ export class Paragraph extends React.Component {
       margin,
       normalLineHeight,
       italic,
-      ...other,
-    } = this.props
+      ...other
+    } = this.props;
 
     const paragraphClassNames = classNames(
       'k-Paragraph',
@@ -20,15 +20,13 @@ export class Paragraph extends React.Component {
       {
         'k-Paragraph--withoutMargin': !margin,
         'k-Paragraph--normalLineHeight': normalLineHeight,
-        'k-Paragraph--italic': italic,
+        'k-Paragraph--italic': italic
       }
-    )
+    );
 
-    const Tag = tag
+    const Tag = tag;
 
-    return (
-      <Tag className={ paragraphClassNames } { ...other } />
-    )
+    return <Tag className={paragraphClassNames} {...other} />;
   }
 }
 
@@ -37,5 +35,5 @@ Paragraph.defaultProps = {
   modifier: 'primary',
   margin: true,
   normalLineHeight: false,
-  italic: false,
-}
+  italic: false
+};

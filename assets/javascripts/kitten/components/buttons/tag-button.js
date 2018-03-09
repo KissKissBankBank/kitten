@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
-import classNames from 'classnames'
-import PropTypes from 'prop-types'
+import React, { Component } from 'react';
+import classNames from 'classnames';
+import PropTypes from 'prop-types';
 
 export class TagButton extends Component {
   render() {
@@ -13,37 +13,30 @@ export class TagButton extends Component {
       tiny,
       big,
       icon,
-      ...others,
-    } = this.props
+      ...others
+    } = this.props;
 
-    const tagButtonClassNames = classNames(
-      'k-TagButton',
-      className,
-      {
-        [`k-TagButton--${modifier}`]: modifier,
-        'is-selected': selected,
-        'k-TagButton--tiny': tiny,
-        'k-TagButton--big': big,
-        'k-TagButton--icon': icon,
-      },
-    )
+    const tagButtonClassNames = classNames('k-TagButton', className, {
+      [`k-TagButton--${modifier}`]: modifier,
+      'is-selected': selected,
+      'k-TagButton--tiny': tiny,
+      'k-TagButton--big': big,
+      'k-TagButton--icon': icon
+    });
 
-    const Tag = tag
+    const Tag = tag;
 
     return (
-      <Tag
-        className={ tagButtonClassNames }
-        { ...others }
-      >
-        { children }
+      <Tag className={tagButtonClassNames} {...others}>
+        {children}
       </Tag>
-    )
+    );
   }
 }
 
 TagButton.propTypes = {
-  modifier: PropTypes.oneOf(['helium', 'carbon']),
-}
+  modifier: PropTypes.oneOf(['helium', 'carbon'])
+};
 
 TagButton.defaultProps = {
   tag: 'button',
@@ -52,5 +45,5 @@ TagButton.defaultProps = {
   icon: false,
   tiny: false,
   big: false,
-  selected: false,
-}
+  selected: false
+};

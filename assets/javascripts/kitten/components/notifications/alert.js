@@ -1,19 +1,19 @@
-import React, { Component } from 'react'
-import classNames from 'classnames'
-import { CloseButton } from 'kitten/components/buttons/close-button'
-import { domElementHelper } from 'kitten/helpers/dom/element-helper'
+import React, { Component } from 'react';
+import classNames from 'classnames';
+import { CloseButton } from 'kitten/components/buttons/close-button';
+import { domElementHelper } from 'kitten/helpers/dom/element-helper';
 
 export class Alert extends Component {
   constructor(props) {
-    super(props)
+    super(props);
 
     this.state = {
       show: props.show,
-      height: 'auto',
-    }
+      height: 'auto'
+    };
 
-    this.handleCloseClick = this.handleCloseClick.bind(this)
-    this.handleAnimationEnd = this.handleAnimationEnd.bind(this)
+    this.handleCloseClick = this.handleCloseClick.bind(this);
+    this.handleAnimationEnd = this.handleAnimationEnd.bind(this);
   }
 
   handleCloseClick() {
@@ -21,29 +21,29 @@ export class Alert extends Component {
       show: false,
 
       // The css animation on the close button requires a fixed height.
-      height: domElementHelper.getComputedHeight(this.container),
-    })
+      height: domElementHelper.getComputedHeight(this.container)
+    });
   }
 
   handleAnimationEnd() {
-    this.props.onClose()
+    this.props.onClose();
   }
 
   renderCloseButton() {
-    if (!this.props.closeButton) return
+    if (!this.props.closeButton) return;
 
     return (
       <CloseButton
         modifier="carbon"
         className="k-Alert__close"
-        closeButtonLabel={ this.props.closeButtonLabel }
-        onClick={ this.handleCloseClick }
+        closeButtonLabel={this.props.closeButtonLabel}
+        onClick={this.handleCloseClick}
       />
-    )
+    );
   }
 
   render() {
-    if (!this.props.show) return null
+    if (!this.props.show) return null;
 
     const {
       className,
@@ -54,39 +54,37 @@ export class Alert extends Component {
       closeButtonLabel,
       children,
       onClose,
-      ...others,
-    } = this.props
+      ...others
+    } = this.props;
 
     const alertClassName = classNames(
       'k-Alert',
       {
         'k-Alert--success': success,
         'k-Alert--error': error,
-        'k-Alert--hidden': !this.state.show,
+        'k-Alert--hidden': !this.state.show
       },
       className
-    )
+    );
 
     return (
       <div
-        ref={ div => this.container = div }
+        ref={div => (this.container = div)}
         role="alert"
-        style={ { height: this.state.height } }
-        className={ alertClassName }
-        onAnimationEnd={ this.handleAnimationEnd }
-        { ...others }
+        style={{ height: this.state.height }}
+        className={alertClassName}
+        onAnimationEnd={this.handleAnimationEnd}
+        {...others}
       >
         <div className="k-Alert__container">
           <div className="k-Alert__row">
-            <div className="k-Alert__content">
-              { children }
-            </div>
+            <div className="k-Alert__content">{children}</div>
           </div>
         </div>
 
-        { this.renderCloseButton() }
+        {this.renderCloseButton()}
       </div>
-    )
+    );
   }
 }
 
@@ -97,5 +95,5 @@ Alert.defaultProps = {
   success: false,
   closeButton: false,
   closeButtonLabel: 'Close',
-  onClose: () => {},
-}
+  onClose: () => {}
+};

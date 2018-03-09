@@ -10,9 +10,7 @@
 
 @function k-string-definition($value) {
   @if $value and type-of($value) != 'string' {
-    $error-message: k-log(
-      '"#{$value}" is not a valid string "#{$k-module}".'
-    );
+    $error-message: k-log('"#{$value}" is not a valid string "#{$k-module}".');
   }
 
   @return $value;

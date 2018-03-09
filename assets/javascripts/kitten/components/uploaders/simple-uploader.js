@@ -1,21 +1,22 @@
-import React from 'react'
-import { Uploader } from 'kitten/components/uploaders/uploader'
-import { Button } from 'kitten/components/buttons/button'
-import { ButtonIcon } from 'kitten/components/buttons/button-icon'
-import { CrossIcon } from 'kitten/components/icons/cross-icon'
+import React from 'react';
+import { Uploader } from 'kitten/components/uploaders/uploader';
+import { Button } from 'kitten/components/buttons/button';
+import { ButtonIcon } from 'kitten/components/buttons/button-icon';
+import { CrossIcon } from 'kitten/components/icons/cross-icon';
 
 const Theme = props => {
-  const handleClick = props.disabled ? null : props.onCancel
-  const deleteButton = props.deletable && props.fileName
-    ? <ButtonIcon
+  const handleClick = props.disabled ? null : props.onCancel;
+  const deleteButton =
+    props.deletable && props.fileName ? (
+      <ButtonIcon
         className="k-SimpleUploader__buttonIcon"
         size="nano"
-        disabled={ props.disabled }
-        onClick={ handleClick }
+        disabled={props.disabled}
+        onClick={handleClick}
       >
         <CrossIcon className="k-ButtonIcon__svg" />
       </ButtonIcon>
-    : null
+    ) : null;
 
   return (
     <div className="k-SimpleUploader">
@@ -23,22 +24,20 @@ const Theme = props => {
         size="tiny"
         type="button"
         className="k-SimpleUploader__button"
-        disabled={ props.disabled }
-        onClick={ props.onClick }
+        disabled={props.disabled}
+        onClick={props.onClick}
       >
-        { props.buttonLabel }
+        {props.buttonLabel}
       </Button>
 
       <div className="k-SimpleUploader__link">
-        <span className="k-SimpleUploader__text">
-          { props.fileName }
-        </span>
+        <span className="k-SimpleUploader__text">{props.fileName}</span>
 
-        { deleteButton }
+        {deleteButton}
       </div>
     </div>
-  )
-}
+  );
+};
 
 Theme.defaultProps = {
   buttonLabel: 'Choose a file',
@@ -46,14 +45,9 @@ Theme.defaultProps = {
   onClick: () => {},
   onCancel: () => {},
   disabled: false,
-  deletable: true,
-}
+  deletable: true
+};
 
 export const SimpleUploader = props => {
-  return (
-    <Uploader
-      { ...props }
-      theme={ Theme }
-    />
-  )
-}
+  return <Uploader {...props} theme={Theme} />;
+};

@@ -1,6 +1,6 @@
 // DEPRECATED: This configuration is the Radium default configuration.
 
-import Radium from 'radium'
+import Radium from 'radium';
 
 const config = {
   userAgent: 'all',
@@ -13,8 +13,8 @@ const config = {
     Radium.Plugins.visited,
     Radium.Plugins.removeNestedStyles,
     Radium.Plugins.prefix,
-    Radium.Plugins.checkProps,
-  ],
-}
+    Radium.Plugins.checkProps
+  ]
+};
 
-export const ConfiguredRadium = component => Radium(config)(component)
+export const ConfiguredRadium = component => Radium(config)(component);

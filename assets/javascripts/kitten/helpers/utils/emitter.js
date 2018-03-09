@@ -1,6 +1,6 @@
-import EventEmitter from 'event-emitter'
+import EventEmitter from 'event-emitter';
 
-export const emitter = EventEmitter()
+export const emitter = EventEmitter();
 
 // DEPRECATED: do not use default export.
-export default emitter
+export default emitter;

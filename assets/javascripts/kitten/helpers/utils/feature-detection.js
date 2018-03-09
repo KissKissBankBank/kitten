@@ -4,8 +4,8 @@ export const cssSupports = supportCondition => {
     typeof window.CSS === 'undefined' ||
     typeof window.CSS.supports === 'undefined'
   ) {
-    return false
+    return false;
   }
 
-  return window.CSS.supports(supportCondition)
-}
+  return window.CSS.supports(supportCondition);
+};

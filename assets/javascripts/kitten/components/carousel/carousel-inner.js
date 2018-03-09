@@ -1,97 +1,100 @@
-import React from 'react'
-import Radium, { Style } from 'radium'
-import ResizeObserver from 'resize-observer-polyfill'
+import React from 'react';
+import Radium, { Style } from 'radium';
+import ResizeObserver from 'resize-observer-polyfill';
 
 if (typeof window !== 'undefined') {
-  require('smoothscroll-polyfill').polyfill()
+  require('smoothscroll-polyfill').polyfill();
 }
 
-import { createRangeFromZeroTo } from 'kitten/helpers/utils/range'
-import { cssSupports } from 'kitten/helpers/utils/feature-detection'
-import { CarouselPage } from 'kitten/components/carousel/carousel-page'
+import { createRangeFromZeroTo } from 'kitten/helpers/utils/range';
+import { cssSupports } from 'kitten/helpers/utils/feature-detection';
+import { CarouselPage } from 'kitten/components/carousel/carousel-page';
 
-const supportScrollSnap = cssSupports('scroll-snap-type: mandatory')
-const supportScrollSmooth = cssSupports('scroll-behavior: smooth')
+const supportScrollSnap = cssSupports('scroll-snap-type: mandatory');
+const supportScrollSmooth = cssSupports('scroll-behavior: smooth');
 
 // inspired by https://github.com/cferdinandi/scrollStop
 const scrollStop = callback => {
   // Make sure a valid callback was provided
-  if (!callback) return
+  if (!callback) return;
 
-  let isScrolling
-  let target
+  let isScrolling;
+  let target;
 
   return event => {
-    clearTimeout(isScrolling)
+    clearTimeout(isScrolling);
 
-    target = event.target
+    target = event.target;
 
     isScrolling = setTimeout(
       () => {
         // Run the callback
-        callback(target)
+        callback(target);
       },
       // wait more for scrollStop if browser support snap
       // because of the momentum on ios
       supportScrollSnap ? 132 : 66
-    )
-  }
-}
+    );
+  };
+};
 
 const getClosest = (counts, goal) => {
   return counts.reduce(
     (prev, curr) =>
-      Math.abs(curr - goal) < Math.abs(prev - goal)
-        ? curr
-        : prev
-  )
-}
+      Math.abs(curr - goal) < Math.abs(prev - goal) ? curr : prev
+  );
+};
 
 const getDataForPage = (data, indexPage, numColumns) => {
-  const startIndex = indexPage * numColumns
+  const startIndex = indexPage * numColumns;
 
-  return data.slice(startIndex, startIndex + numColumns)
-}
+  return data.slice(startIndex, startIndex + numColumns);
+};
 
-const getRangePageScrollLeft =
-  (targetClientWidth, numPages, siblingPageVisible, itemMarginBetween) => {
-    const partSiblingItemExceedWidth = itemMarginBetween
-    const marginForSibling = siblingPageVisible
-      ? (itemMarginBetween + partSiblingItemExceedWidth) * 2
-      : 0
-    const innerWidth = targetClientWidth - marginForSibling
+const getRangePageScrollLeft = (
+  targetClientWidth,
+  numPages,
+  siblingPageVisible,
+  itemMarginBetween
+) => {
+  const partSiblingItemExceedWidth = itemMarginBetween;
+  const marginForSibling = siblingPageVisible
+    ? (itemMarginBetween + partSiblingItemExceedWidth) * 2
+    : 0;
+  const innerWidth = targetClientWidth - marginForSibling;
 
-    return createRangeFromZeroTo(numPages)
-      .map((numPage) => numPage * (innerWidth + itemMarginBetween))
-  }
+  return createRangeFromZeroTo(numPages).map(
+    numPage => numPage * (innerWidth + itemMarginBetween)
+  );
+};
 
 class CarouselInnerBase extends React.Component {
   state = {
-    isTouched: false,
-  }
+    isTouched: false
+  };
 
   onResizeObserve = ([entry]) => {
-    const widthInner = entry.contentRect.width
-    this.props.onResizeInner(widthInner)
+    const widthInner = entry.contentRect.width;
+    this.props.onResizeInner(widthInner);
+  };
+
+  componentDidMount() {
+    this.observer = new ResizeObserver(this.onResizeObserve);
+    this.observer.observe(this.carouselInner);
   }
 
-  componentDidMount () {
-    this.observer = new ResizeObserver(this.onResizeObserve)
-    this.observer.observe(this.carouselInner)
-  }
-
-  componentWillUnmount () {
-    this.observer.disconnect()
+  componentWillUnmount() {
+    this.observer.disconnect();
   }
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.indexPageVisible !== this.props.indexPageVisible) {
-      this.scrollToPage(nextProps.indexPageVisible)
+      this.scrollToPage(nextProps.indexPageVisible);
     }
   }
 
   handleInnerScroll = scrollStop(target => {
-    if(this.state.isTouched) return
+    if (this.state.isTouched) return;
 
     const {
       numPages,
@@ -99,53 +102,52 @@ class CarouselInnerBase extends React.Component {
       itemMarginBetween,
       indexPageVisible,
       goToPage
-    } = this.props
-    const { scrollLeft, clientWidth } = target
+    } = this.props;
+    const { scrollLeft, clientWidth } = target;
 
     const rangePageScrollLeft = getRangePageScrollLeft(
       clientWidth,
       numPages,
       siblingPageVisible,
       itemMarginBetween
-    )
+    );
 
-    const closest = getClosest(rangePageScrollLeft, scrollLeft)
-    const indexClosest = rangePageScrollLeft.indexOf(closest)
+    const closest = getClosest(rangePageScrollLeft, scrollLeft);
+    const indexClosest = rangePageScrollLeft.indexOf(closest);
 
     if (indexClosest !== indexPageVisible) {
-      goToPage(indexClosest)
+      goToPage(indexClosest);
     } else {
       // if the user doesn't scroll enough to change page
       // we need to scroll back to the fake snap page
       if (closest !== scrollLeft) {
-        target.scrollTo({ top: 0, left: closest, behavior: 'smooth' })
+        target.scrollTo({ top: 0, left: closest, behavior: 'smooth' });
       }
     }
-
-  })
+  });
 
   scrollToPage = indexPageToScroll => {
-    const { numPages, siblingPageVisible, itemMarginBetween } = this.props
+    const { numPages, siblingPageVisible, itemMarginBetween } = this.props;
 
-    const target = this.carouselInner
-    const { scrollLeft, clientWidth } = target
+    const target = this.carouselInner;
+    const { scrollLeft, clientWidth } = target;
 
     const rangePageScrollLeft = getRangePageScrollLeft(
       clientWidth,
       numPages,
       siblingPageVisible,
       itemMarginBetween
-    )
+    );
 
-    const closest = rangePageScrollLeft[indexPageToScroll]
+    const closest = rangePageScrollLeft[indexPageToScroll];
 
     if (closest !== scrollLeft) {
-      target.scrollTo({ top: 0, left: closest, behavior: 'smooth' })
+      target.scrollTo({ top: 0, left: closest, behavior: 'smooth' });
     }
-  }
+  };
 
-  handleTouchStart = () => this.setState({ isTouched: true })
-  handleTouchEnd = () => this.setState({ isTouched: false })
+  handleTouchStart = () => this.setState({ isTouched: true });
+  handleTouchEnd = () => this.setState({ isTouched: false });
 
   render() {
     const {
@@ -156,59 +158,58 @@ class CarouselInnerBase extends React.Component {
       numColumns,
       numPages,
       itemMarginBetween,
-      siblingPageVisible,
-    } = this.props
+      siblingPageVisible
+    } = this.props;
 
-    const rangePage = createRangeFromZeroTo(numPages)
+    const rangePage = createRangeFromZeroTo(numPages);
 
     return (
       <div
-        ref={ div => { this.carouselInner = div } }
-        className='k-CarouselInner'
+        ref={div => {
+          this.carouselInner = div;
+        }}
+        className="k-CarouselInner"
         style={[
           styles.carouselInner,
           {
-            paddingLeft: siblingPageVisible ? (itemMarginBetween * 2) : 0,
-            paddingRight: siblingPageVisible ? (itemMarginBetween * 2) : 0,
+            paddingLeft: siblingPageVisible ? itemMarginBetween * 2 : 0,
+            paddingRight: siblingPageVisible ? itemMarginBetween * 2 : 0
           }
         ]}
-        onScroll={ this.handleInnerScroll }
-        onTouchStart={ this.handleTouchStart }
-        onTouchEnd={ this.handleTouchEnd }
+        onScroll={this.handleInnerScroll}
+        onTouchStart={this.handleTouchStart}
+        onTouchEnd={this.handleTouchEnd}
       >
-        {
-          rangePage.map(index =>
-            <div
-              key={ index }
-              style={[
-                styles.carouselPageContainer,
-                {
-                  marginLeft: index ? itemMarginBetween : 0,
-                }
-              ]}
-            >
-              <CarouselPage
-                data={ getDataForPage(data, index, numColumns) }
-                numColumns={ numColumns }
-                itemMinWidth={ itemMinWidth }
-                itemMarginBetween={ itemMarginBetween }
-                renderItem={ renderItem }
-              />
-            </div>
-          )
-        }
-        {
-          siblingPageVisible &&
-            <div style={{ minWidth: (itemMarginBetween * 2) }} />
-        }
+        {rangePage.map(index => (
+          <div
+            key={index}
+            style={[
+              styles.carouselPageContainer,
+              {
+                marginLeft: index ? itemMarginBetween : 0
+              }
+            ]}
+          >
+            <CarouselPage
+              data={getDataForPage(data, index, numColumns)}
+              numColumns={numColumns}
+              itemMinWidth={itemMinWidth}
+              itemMarginBetween={itemMarginBetween}
+              renderItem={renderItem}
+            />
+          </div>
+        ))}
+        {siblingPageVisible && (
+          <div style={{ minWidth: itemMarginBetween * 2 }} />
+        )}
 
-        { /* hide scrollbar on Chrome and Safari */ }
+        {/* hide scrollbar on Chrome and Safari */}
         <Style
           scopeSelector=".k-CarouselInner::-webkit-scrollbar"
           rules={{ display: 'none' }}
         />
       </div>
-    )
+    );
   }
 }
 
@@ -225,14 +226,14 @@ const styles = {
     // snap only for browser that support snap without prefixes
     scrollSnapType: supportScrollSnap ? 'mandatory' : 'none',
     // Fix bug IE11 ResizeObserver, to trigger a first resize
-    minHeight: 1,
+    minHeight: 1
   },
   carouselPageContainer: {
     width: '100%',
     flexShrink: 0,
     // snap only for browser that support snap without prefixes
-    scrollSnapAlign: supportScrollSnap ? 'center' : 'none',
-  },
-}
+    scrollSnapAlign: supportScrollSnap ? 'center' : 'none'
+  }
+};
 
-export const CarouselInner = Radium(CarouselInnerBase)
+export const CarouselInner = Radium(CarouselInnerBase);

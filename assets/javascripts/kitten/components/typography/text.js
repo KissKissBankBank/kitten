@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
-import classNames from 'classnames'
-import PropTypes from 'prop-types'
+import React, { Component } from 'react';
+import classNames from 'classnames';
+import PropTypes from 'prop-types';
 
 export class Text extends Component {
   render() {
@@ -14,10 +14,10 @@ export class Text extends Component {
       tag,
       transform,
       weight,
-      ...others,
-    } = this.props
+      ...others
+    } = this.props;
 
-    const Tag = tag
+    const Tag = tag;
 
     const textClassName = classNames(
       {
@@ -53,14 +53,12 @@ export class Text extends Component {
         // Weight.
         'k-u-weight-light': weight == 'light',
         'k-u-weight-regular': weight == 'regular',
-        'k-u-weight-bold': weight == 'bold',
+        'k-u-weight-bold': weight == 'bold'
       },
-      className,
-    )
+      className
+    );
 
-    return (
-      <Tag { ...others } className={ textClassName } />
-    )
+    return <Tag {...others} className={textClassName} />;
   }
 }
 
@@ -71,15 +69,15 @@ Text.propTypes = {
     'primary1',
     'background1',
     'error',
-    'valid',
+    'valid'
   ]),
   decoration: PropTypes.oneOf(['underline']),
   lineHeight: PropTypes.oneOf(['normal']),
   size: PropTypes.oneOf(['huge', 'big', 'default', 'tiny', 'micro', 'nano']),
   fontStyle: PropTypes.oneOf(['normal', 'italic']),
   transform: PropTypes.oneOf(['uppercase']),
-  weight: PropTypes.oneOf(['light', 'regular', 'bold']),
-}
+  weight: PropTypes.oneOf(['light', 'regular', 'bold'])
+};
 
 Text.defaultProps = {
   className: null,
@@ -90,5 +88,5 @@ Text.defaultProps = {
   fontStyle: null,
   tag: 'span',
   transform: null,
-  weight: null,
-}
+  weight: null
+};

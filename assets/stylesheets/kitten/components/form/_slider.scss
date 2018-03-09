@@ -39,35 +39,25 @@
   @include k-with-module('k-Slider: $slider') {
     $colors: k-map-fetch($slider, 'colors');
 
-    $progress-color: k-color-definition(
-      k-map-fetch($colors, 'progress')
-    );
+    $progress-color: k-color-definition(k-map-fetch($colors, 'progress'));
     $progress-disabled-color: k-color-definition(
       k-map-fetch($colors, 'progress-disabled')
     );
-    $ramp-color: k-color-definition(
-      k-map-fetch($colors, 'ramp')
-    );
-    $handle-color: k-color-definition(
-      k-map-fetch($colors, 'handle')
-    );
+    $ramp-color: k-color-definition(k-map-fetch($colors, 'ramp'));
+    $handle-color: k-color-definition(k-map-fetch($colors, 'handle'));
     $handle-disabled-color: k-color-definition(
       k-map-fetch($colors, 'handle-disabled')
     );
-    $icon-color: k-color-definition(
-      k-map-fetch($colors, 'icon')
-    );
+    $icon-color: k-color-definition(k-map-fetch($colors, 'icon'));
     $icon-disabled-color: k-color-definition(
       k-map-fetch($colors, 'icon-disabled')
     );
-    $border-color: k-color-definition(
-      k-map-fetch($colors, 'border')
-    );
+    $border-color: k-color-definition(k-map-fetch($colors, 'border'));
 
-    $ramp-height: .2rem;
+    $ramp-height: 0.2rem;
     $handle-size: 2.5rem;
-    $transition-speed: .2s;
-    $handle-icon-size: .6rem;
+    $transition-speed: 0.2s;
+    $handle-icon-size: 0.6rem;
 
     .k-Slider {
       padding: ($handle-size / 2);
@@ -162,12 +152,11 @@
       border: 1px solid $border-color;
       border-radius: 50%;
       background: $handle-color;
-      box-shadow: 0 k-px-to-rem(2px) k-px-to-rem(4px) 0 rgba(0, 0, 0, .08);
+      box-shadow: 0 k-px-to-rem(2px) k-px-to-rem(4px) 0 rgba(0, 0, 0, 0.08);
 
       cursor: -webkit-grab;
       cursor: grab;
-      transition: left $transition-speed,
-                  box-shadow $transition-speed;
+      transition: left $transition-speed, box-shadow $transition-speed;
 
       &:focus,
       .k-Slider.is-grabbing & {

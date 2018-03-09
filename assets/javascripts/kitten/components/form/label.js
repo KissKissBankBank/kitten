@@ -1,19 +1,19 @@
-import React, { Component } from 'react'
-import classNames from 'classnames'
-import domElementHelper from 'kitten/helpers/dom/element-helper'
+import React, { Component } from 'react';
+import classNames from 'classnames';
+import domElementHelper from 'kitten/helpers/dom/element-helper';
 
 export class Label extends Component {
   constructor(props) {
-    super(props)
+    super(props);
 
-    this.handleClick = this.handleClick.bind(this)
+    this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick(e) {
     if (domElementHelper.canUseDom() && this.props.focusId) {
-      e.preventDefault()
+      e.preventDefault();
 
-      document.getElementById(this.props.focusId).focus()
+      document.getElementById(this.props.focusId).focus();
     }
   }
 
@@ -25,31 +25,27 @@ export class Label extends Component {
       focusId,
       size,
       withoutPointerEvents,
-      ...other,
-    } = this.props
+      ...other
+    } = this.props;
 
-    const Tag = tag
+    const Tag = tag;
 
-    const labelClassName = classNames(
-      "k-Label",
-      className,
-      {
-        [`k-Label--${size}`]: size,
-        'k-Label--withoutPointerEvents': withoutPointerEvents,
-      },
-    )
-    const htmlFor = (tag == 'label' && focusId) ? focusId : null
+    const labelClassName = classNames('k-Label', className, {
+      [`k-Label--${size}`]: size,
+      'k-Label--withoutPointerEvents': withoutPointerEvents
+    });
+    const htmlFor = tag == 'label' && focusId ? focusId : null;
 
     return (
       <Tag
-        className={ labelClassName }
-        htmlFor={ htmlFor }
-        onClick={ this.handleClick }
-        { ...other }
+        className={labelClassName}
+        htmlFor={htmlFor}
+        onClick={this.handleClick}
+        {...other}
       >
-        { children }
+        {children}
       </Tag>
-    )
+    );
   }
 }
 
@@ -59,5 +55,5 @@ Label.defaultProps = {
   children: 'Label',
   focusId: null,
   size: null, // `tiny`
-  withoutPointerEvents: false,
-}
+  withoutPointerEvents: false
+};

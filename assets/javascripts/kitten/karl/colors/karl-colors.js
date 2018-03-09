@@ -1,39 +1,36 @@
-import React, { Component } from 'react'
-import { Marger } from 'kitten/components/layout/marger'
-import { Text } from 'kitten/components/typography/text'
-import { Grid, GridCol } from 'kitten/components/grid/grid'
+import React, { Component } from 'react';
+import { Marger } from 'kitten/components/layout/marger';
+import { Text } from 'kitten/components/typography/text';
+import { Grid, GridCol } from 'kitten/components/grid/grid';
 
 export class KarlColors extends Component {
   constructor() {
-    super()
+    super();
 
-    this.renderColor = this.renderColor.bind(this)
+    this.renderColor = this.renderColor.bind(this);
   }
 
   renderColors() {
-    return this.props.colors.map(this.renderColor)
+    return this.props.colors.map(this.renderColor);
   }
 
   renderColor(color) {
-    const { name, backgroundHexa, nameHexa } = color
+    const { name, backgroundHexa, nameHexa } = color;
 
     const backgroundHexaStyles = {
-      backgroundColor: backgroundHexa,
-    }
+      backgroundColor: backgroundHexa
+    };
 
     const nameHexaStyles = {
-      color: nameHexa,
-    }
+      color: nameHexa
+    };
 
     return (
-      <div
-        className="karl-Colors__container"
-        style={ backgroundHexaStyles }
-      >
+      <div className="karl-Colors__container" style={backgroundHexaStyles}>
         <Marger
           bottom="3"
           className="k-u-margin-left-double"
-          style={ nameHexaStyles }
+          style={nameHexaStyles}
         >
           <Text
             tag="p"
@@ -41,31 +38,24 @@ export class KarlColors extends Component {
             weight="bold"
             className="k-u-margin-none"
           >
-            { name }
+            {name}
           </Text>
 
-          <Text
-            tag="p"
-            size="micro"
-            weight="bold"
-            className="k-u-margin-none"
-          >
-            { backgroundHexa }
+          <Text tag="p" size="micro" weight="bold" className="k-u-margin-none">
+            {backgroundHexa}
           </Text>
         </Marger>
       </div>
-    )
+    );
   }
 
   render() {
     return (
       <Grid>
         <GridCol>
-          <div className="karl-Colors">
-            { this.renderColors() }
-          </div>
+          <div className="karl-Colors">{this.renderColors()}</div>
         </GridCol>
       </Grid>
-    )
+    );
   }
 }

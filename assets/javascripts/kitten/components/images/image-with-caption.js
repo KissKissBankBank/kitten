@@ -1,24 +1,20 @@
-import React, { Component } from 'react'
-import classNames from 'classnames'
+import React, { Component } from 'react';
+import classNames from 'classnames';
 
 export class ImageWithCaption extends Component {
   renderCaption() {
-    const {
-      children,
-      className,
-      captionProps,
-    } = this.props
+    const { children, className, captionProps } = this.props;
 
     const figcaptionClassName = classNames(
       'k-ImageWithCaption__caption',
-      className,
-    )
+      className
+    );
 
     return (
-      <figcaption className={ figcaptionClassName } { ...captionProps }>
-        { children }
+      <figcaption className={figcaptionClassName} {...captionProps}>
+        {children}
       </figcaption>
-    )
+    );
   }
 
   render() {
@@ -28,21 +24,21 @@ export class ImageWithCaption extends Component {
       imageWidth,
       imageHeight,
       captionProps,
-      ...others,
-    } = this.props
+      ...others
+    } = this.props;
 
     return (
-      <figure className="k-ImageWithCaption" { ...others }>
+      <figure className="k-ImageWithCaption" {...others}>
         <img
-          src={ imageSrc }
-          alt={ imageAlt }
-          width={ imageWidth }
-          height={ imageHeight }
+          src={imageSrc}
+          alt={imageAlt}
+          width={imageWidth}
+          height={imageHeight}
           className="k-ImageWithCaption__img"
         />
-        { this.renderCaption() }
+        {this.renderCaption()}
       </figure>
-    )
+    );
   }
 }
 
@@ -52,5 +48,5 @@ ImageWithCaption.defaultProps = {
   imageAlt: '',
   imageWidth: null,
   imageHeight: null,
-  captionProps: null,
-}
+  captionProps: null
+};

@@ -67,7 +67,7 @@
     box-sizing: border-box;
     height: 100%;
 
-    outline: 1px dotted rgba(black, .2);
+    outline: 1px dotted rgba(black, 0.2);
   }
 
   .k-DevGrid__container--withoutOutline {
@@ -87,6 +87,6 @@
 
   .k-DevGrid__inner {
     height: 100%;
-    background: rgba(black, .1);
+    background: rgba(black, 0.1);
   }
 }

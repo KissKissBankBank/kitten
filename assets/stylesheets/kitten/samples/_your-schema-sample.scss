@@ -9,12 +9,6 @@
 /// @type Map
 $k-your-atom-schema: (
   type: '',
-
-  properties: (
-    // typography: $k-typography-schema
-  ),
-
-  required: (
-    // typography
-  )
+  properties: (/ / typography: $k-typography-schema),
+  required: (/ / typography)
 );

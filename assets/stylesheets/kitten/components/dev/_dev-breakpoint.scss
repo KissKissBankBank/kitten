@@ -24,19 +24,21 @@
 
     width: 2em;
     height: 1.25em;
-    padding: .25em;
+    padding: 0.25em;
 
-    background: rgba(black, .1);
-    border-bottom-right-radius: .25rem;
+    background: rgba(black, 0.1);
+    border-bottom-right-radius: 0.25rem;
 
     text-align: center;
     text-transform: uppercase;
     font-size: 12px;
     line-height: 1.25;
-    color: rgba(black, .5);
+    color: rgba(black, 0.5);
 
     @each $name, $_query in $k-media-queries {
-      @include k-media-min($name) { content: "#{$name}" }
+      @include k-media-min($name) {
+        content: '#{$name}';
+      }
     }
   }
 }

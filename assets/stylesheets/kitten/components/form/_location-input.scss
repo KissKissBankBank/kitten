@@ -77,7 +77,7 @@
       border-radius: $input-radius;
       color: $color;
 
-      transition: color .2s, border-color .2s;
+      transition: color 0.2s, border-color 0.2s;
 
       &::placeholder {
         color: $color-placeholder;

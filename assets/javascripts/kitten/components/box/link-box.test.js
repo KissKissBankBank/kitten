@@ -1,5 +1,5 @@
-import React from 'react'
-import { LinkBox } from 'kitten/components/box/link-box'
+import React from 'react';
+import { LinkBox } from 'kitten/components/box/link-box';
 
 describe('<LinkBox />', () => {
   const component = shallow(
@@ -9,79 +9,79 @@ describe('<LinkBox />', () => {
       text="Download your history (pdf - 8Mo)"
       isExternal="true"
     />
-  )
+  );
 
   it('renders a <a class="k-LinkBox" />', () => {
-    expect(component.find('a').exists()).toBe(true)
-    expect(component.hasClass('k-LinkBox')).toBe(true)
-    expect(component.props().href).toBe('http://…/history.pdf')
-    expect(component.props().target).toBe('_blank')
-  })
+    expect(component.find('a').exists()).toBe(true);
+    expect(component.hasClass('k-LinkBox')).toBe(true);
+    expect(component.props().href).toBe('http://…/history.pdf');
+    expect(component.props().target).toBe('_blank');
+  });
 
   it('renders a title', () => {
-    const title = component.find('.k-LinkBox__title')
+    const title = component.find('.k-LinkBox__title');
 
-    expect(title).toHaveLength(1)
-    expect(title.props().children).toBe('Your history')
-  })
+    expect(title).toHaveLength(1);
+    expect(title.props().children).toBe('Your history');
+  });
 
   it('renders text', () => {
-    const text = component.find('.k-LinkBox__text')
+    const text = component.find('.k-LinkBox__text');
 
-    expect(text).toHaveLength(1)
-    expect(text.props().children).toBe('Download your history (pdf - 8Mo)')
-  })
+    expect(text).toHaveLength(1);
+    expect(text.props().children).toBe('Download your history (pdf - 8Mo)');
+  });
 
   describe('with icon', () => {
     const componentWithIcon = shallow(
       <LinkBox displayIcon="true">
         <span>My icon</span>
       </LinkBox>
-    )
+    );
 
     it('has an icon class', () => {
-      expect(componentWithIcon.hasClass('k-LinkBox--withIcon')).toBe(true)
-    })
+      expect(componentWithIcon.hasClass('k-LinkBox--withIcon')).toBe(true);
+    });
 
     it('renders an icon', () => {
-      const icon = componentWithIcon.find('.k-LinkBox__icon')
+      const icon = componentWithIcon.find('.k-LinkBox__icon');
 
-      expect(icon).toHaveLength(1)
-      expect(icon.text()).toBe('My icon')
-    })
-  })
+      expect(icon).toHaveLength(1);
+      expect(icon.text()).toBe('My icon');
+    });
+  });
 
   describe('with default props', () => {
-    const defaultComponent = shallow(<LinkBox />)
+    const defaultComponent = shallow(<LinkBox />);
 
     it('has a default href', () => {
-      expect(defaultComponent.props().href).toBe('#')
-    })
+      expect(defaultComponent.props().href).toBe('#');
+    });
 
     it('has no target', () => {
-      expect(defaultComponent.props().target).toBeUndefined()
-    })
+      expect(defaultComponent.props().target).toBeUndefined();
+    });
 
     it('has no icon', () => {
-      expect(defaultComponent.find('.k-LinkBox__icon')).toHaveLength(0)
-    })
-  })
+      expect(defaultComponent.find('.k-LinkBox__icon')).toHaveLength(0);
+    });
+  });
 
   describe('with linkProps props', () => {
     const linkPropsComponent = shallow(
-      <LinkBox linkProps={ { title: "Lorem ipsum" } } />
-    )
+      <LinkBox linkProps={{ title: 'Lorem ipsum' }} />
+    );
 
     it('has a linkProps prop', () => {
-      expect(linkPropsComponent.props().title).toBe('Lorem ipsum')
-    })
-  })
+      expect(linkPropsComponent.props().title).toBe('Lorem ipsum');
+    });
+  });
 
   describe('with classNames props', () => {
-    const linkBox = shallow(<LinkBox className="custom_class" />)
+    const linkBox = shallow(<LinkBox className="custom_class" />);
 
     it('has custom class', () => {
-      expect(linkBox.hasClass('custom_class')).toBe(true)
-    })
-  })
-})
+      expect(linkBox.hasClass('custom_class')).toBe(true);
+    });
+  });
+});

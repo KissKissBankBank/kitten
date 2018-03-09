@@ -1,86 +1,89 @@
-import React from 'react'
-import Dropzone from 'react-dropzone'
+import React from 'react';
+import Dropzone from 'react-dropzone';
 
 export class Uploader extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
 
     this.state = {
-      fileName: this.props.fileName,
-    }
+      fileName: this.props.fileName
+    };
 
-    this.handleChangeAcceptedFiles = this.handleChangeAcceptedFiles.bind(this)
-    this.handleChangeRejectedFiles = this.handleChangeRejectedFiles.bind(this)
-    this.handleClick = this.handleClick.bind(this)
-    this.handleCancel = this.handleCancel.bind(this)
+    this.handleChangeAcceptedFiles = this.handleChangeAcceptedFiles.bind(this);
+    this.handleChangeRejectedFiles = this.handleChangeRejectedFiles.bind(this);
+    this.handleClick = this.handleClick.bind(this);
+    this.handleCancel = this.handleCancel.bind(this);
   }
 
   handleChangeAcceptedFiles(acceptedFiles) {
-    const file = acceptedFiles[0]
+    const file = acceptedFiles[0];
 
     this.setState({
-      fileName: file.name,
-    })
+      fileName: file.name
+    });
 
     this.props.onSuccess({
       file: file,
       preview: file.preview,
-      name: file.name,
-    })
+      name: file.name
+    });
 
-    this.props.onError(false)
+    this.props.onError(false);
   }
 
   handleChangeRejectedFiles(rejectedFiles) {
-    this.props.onError(true)
+    this.props.onError(true);
 
-    this.handleCancel()
+    this.handleCancel();
   }
 
   handleClick() {
-    this.dropzoneRef.open()
+    this.dropzoneRef.open();
   }
 
   handleCancel() {
     this.setState({
-      fileName: null,
-    })
+      fileName: null
+    });
 
-    this.props.onReset()
+    this.props.onReset();
   }
 
   renderTheme() {
-    if (!this.props.theme) return
+    if (!this.props.theme) return;
 
-    const Theme = this.props.theme
+    const Theme = this.props.theme;
 
     return (
       <Theme
-        buttonLabel={ this.props.buttonLabel }
-        fileName={ this.state.fileName }
-        onClick={ this.handleClick }
-        onCancel={ this.handleCancel }
-        disabled={ this.props.disabled }
-        deletable={ this.props.deletable }
+        buttonLabel={this.props.buttonLabel}
+        fileName={this.state.fileName}
+        onClick={this.handleClick}
+        onCancel={this.handleCancel}
+        disabled={this.props.disabled}
+        deletable={this.props.deletable}
       />
-    )
+    );
   }
 
   render() {
     return (
       <Dropzone
-        ref={ node => { this.dropzoneRef = node } }
-        name={ this.props.name }
-        accept={ this.props.acceptedFiles }
-        maxSize={ this.props.maxSize }
-        onDropAccepted={ this.handleChangeAcceptedFiles }
-        onDropRejected={ this.handleChangeRejectedFiles }
+        ref={node => {
+          this.dropzoneRef = node;
+        }}
+        name={this.props.name}
+        accept={this.props.acceptedFiles}
+        maxSize={this.props.maxSize}
+        onDropAccepted={this.handleChangeAcceptedFiles}
+        onDropRejected={this.handleChangeRejectedFiles}
         disableClick
-        multiple={ false }
-        style={ {} }>
-        { this.renderTheme() }
+        multiple={false}
+        style={{}}
+      >
+        {this.renderTheme()}
       </Dropzone>
-    )
+    );
   }
 }
 
@@ -94,5 +97,5 @@ Uploader.defaultProps = {
   onSuccess: () => {},
   onError: () => {},
   onReset: () => {},
-  disabled: false,
-}
+  disabled: false
+};

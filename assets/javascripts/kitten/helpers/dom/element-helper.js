@@ -11,10 +11,10 @@ export const domElementHelper = {
    */
   getComputedHeight(element, withBorder) {
     if (withBorder) {
-      return element.getBoundingClientRect().height
+      return element.getBoundingClientRect().height;
     }
 
-    return element.clientHeight
+    return element.clientHeight;
   },
 
   /**
@@ -23,9 +23,9 @@ export const domElementHelper = {
    * @param {HTMLElement} element
    */
   getComputedWidth(element) {
-    if (!element) return
+    if (!element) return;
 
-    return element.getBoundingClientRect().width
+    return element.getBoundingClientRect().width;
   },
 
   /**
@@ -34,9 +34,9 @@ export const domElementHelper = {
    * @param {HTMLElement} element
    */
   getComputedLeft(element) {
-    if (!element) return
+    if (!element) return;
 
-    return element.getBoundingClientRect().left
+    return element.getBoundingClientRect().left;
   },
 
   /**
@@ -46,20 +46,23 @@ export const domElementHelper = {
    * @param {string} property
    */
   getComputedStyle(element, property) {
-    if (!element) return
+    if (!element) return;
 
-    const styles = window.getComputedStyle(element)
-    return styles.getPropertyValue(property)
+    const styles = window.getComputedStyle(element);
+    return styles.getPropertyValue(property);
   },
 
   /**
    * Return if DOM API can be used.
    */
   canUseDom() {
-    return !!(typeof window !== 'undefined' &&
-              window.document && window.document.createElement)
-  },
-}
+    return !!(
+      typeof window !== 'undefined' &&
+      window.document &&
+      window.document.createElement
+    );
+  }
+};
 
 // DEPRECATED: do not use default export.
-export default domElementHelper
+export default domElementHelper;

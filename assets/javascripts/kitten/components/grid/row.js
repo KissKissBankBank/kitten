@@ -1,5 +1,5 @@
-import React from 'react'
-import classNames from 'classnames'
+import React from 'react';
+import classNames from 'classnames';
 
 export const Row = ({
   className,
@@ -11,7 +11,7 @@ export const Row = ({
   lightBottomBorder,
   padded,
   children,
-  ...others,
+  ...others
 }) => {
   const rowClassName = classNames(
     'k-Row',
@@ -21,27 +21,19 @@ export const Row = ({
       'k-Row--dark': dark,
       'k-Row--lightTopBorder': lightTopBorder,
       'k-Row--lightBottomBorder': lightBottomBorder,
-      'k-Row--padded': padded,
+      'k-Row--padded': padded
     },
-    className,
-  )
+    className
+  );
 
-  const rowContentClassName = classNames(
-    'k-Row__content',
-    contentClassName,
-  )
+  const rowContentClassName = classNames('k-Row__content', contentClassName);
 
   return (
-    <div
-      className={ rowClassName }
-      { ...others }
-    >
-      <div className={ rowContentClassName }>
-        { children }
-      </div>
+    <div className={rowClassName} {...others}>
+      <div className={rowContentClassName}>{children}</div>
     </div>
-  )
-}
+  );
+};
 
 Row.defaultProps = {
   className: null,
@@ -51,5 +43,5 @@ Row.defaultProps = {
   dark: false,
   lightTopBorder: false,
   lightBottomBorder: false,
-  padded: false,
-}
+  padded: false
+};

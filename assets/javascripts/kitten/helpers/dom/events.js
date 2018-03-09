@@ -14,9 +14,9 @@ export const domEvents = {
     pageUp: 33,
     pageDown: 34,
     end: 36,
-    home: 36,
+    home: 36
   }
-}
+};
 
 // DEPRECATED: do not use default export.
-export default domEvents
+export default domEvents;

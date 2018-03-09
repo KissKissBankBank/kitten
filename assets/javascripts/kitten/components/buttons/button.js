@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import classNames from 'classnames'
+import React, { Component } from 'react';
+import classNames from 'classnames';
 
 export class Button extends Component {
   render() {
@@ -11,8 +11,8 @@ export class Button extends Component {
       icon,
       iconOnRight,
       iconWithMinWidth,
-      ...others,
-    } = this.props
+      ...others
+    } = this.props;
 
     let buttonClassNames = classNames(
       'k-Button',
@@ -23,23 +23,17 @@ export class Button extends Component {
         'k-Button--iconRight': iconOnRight,
         'k-Button--iconWithMinWidth': iconWithMinWidth,
         'k-Button--icon--tiny': size == 'tiny' && icon,
-        'k-Button--iconRight--tiny': size == 'tiny' && iconOnRight,
+        'k-Button--iconRight--tiny': size == 'tiny' && iconOnRight
       },
-      className,
-    )
+      className
+    );
 
     // Adds keyboard accessibility to `<a>`
-    const tabindex = (tag == 'a' && !this.props.href) ? 0 : null
+    const tabindex = tag == 'a' && !this.props.href ? 0 : null;
 
-    const Tag = tag
+    const Tag = tag;
 
-    return (
-      <Tag
-        className={ buttonClassNames }
-        tabIndex={ tabindex }
-        { ...others }
-      />
-    )
+    return <Tag className={buttonClassNames} tabIndex={tabindex} {...others} />;
   }
 }
 
@@ -48,5 +42,5 @@ Button.defaultProps = {
   modifier: 'hydrogen',
   icon: false,
   iconOnRight: false,
-  iconWithMinWidth: false,
-}
+  iconWithMinWidth: false
+};
