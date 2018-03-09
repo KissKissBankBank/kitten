@@ -1,11 +1,11 @@
-import React from "react";
-import objectAssign from "core-js/library/fn/object/assign";
-import { Tour } from "kitten/components/tours/tour";
+import React from 'react';
+import objectAssign from 'core-js/library/fn/object/assign';
+import { Tour } from 'kitten/components/tours/tour';
 
 // We directly use svg-react loader for the moment.
 // TODO: update webpack config to manage svg in jsx files.
-import { MixIllustration } from "kitten/components/illustrations/mix-illustration";
-import { LoudspeakerIllustration } from "kitten/components/illustrations/loudspeaker-illustration";
+import { MixIllustration } from 'kitten/components/illustrations/mix-illustration';
+import { LoudspeakerIllustration } from 'kitten/components/illustrations/loudspeaker-illustration';
 
 export class HeaderTour extends React.Component {
   constructor(props) {
@@ -15,7 +15,7 @@ export class HeaderTour extends React.Component {
   // Component methods.
 
   isCrowdStep(step) {
-    return step.name == "crowdStep";
+    return step.name == 'crowdStep';
   }
 
   platformSwitchStep() {
@@ -54,7 +54,7 @@ export class HeaderTour extends React.Component {
 }
 
 HeaderTour.defaultProps = {
-  storeName: "kitten.HeaderTour"
+  storeName: 'kitten.HeaderTour'
 };
 
 // DEPRECATED: do not use default export.

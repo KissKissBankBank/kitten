@@ -1,6 +1,6 @@
-import React from "react";
-import { VerticalStroke } from "kitten/components/layout/vertical-stroke";
-import { Marger } from "kitten/components/layout/marger";
+import React from 'react';
+import { VerticalStroke } from 'kitten/components/layout/vertical-stroke';
+import { Marger } from 'kitten/components/layout/marger';
 
 export const KarlVerticalStroke = () => (
   <Marger top="3" bottom="2">

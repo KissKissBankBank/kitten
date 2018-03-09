@@ -1,21 +1,21 @@
-import React from "react";
-import classNames from "classnames";
-import { defaultProps } from "kitten/hoc/default-props";
-import objectAssign from "core-js/library/fn/object/assign";
+import React from 'react';
+import classNames from 'classnames';
+import { defaultProps } from 'kitten/hoc/default-props';
+import objectAssign from 'core-js/library/fn/object/assign';
 
-import { Dropdown } from "kitten/components/dropdowns/dropdown";
-import { ExternalRichLink } from "kitten/components/links/external-rich-link";
-import { NavList } from "kitten/components/lists/nav-list";
-import { UserMenu } from "kitten/components/dropdowns/user-menu";
-import { PhoneDropdown } from "kitten/components/dropdowns/phone-dropdown";
-import { Search } from "kitten/components/form/search";
+import { Dropdown } from 'kitten/components/dropdowns/dropdown';
+import { ExternalRichLink } from 'kitten/components/links/external-rich-link';
+import { NavList } from 'kitten/components/lists/nav-list';
+import { UserMenu } from 'kitten/components/dropdowns/user-menu';
+import { PhoneDropdown } from 'kitten/components/dropdowns/phone-dropdown';
+import { Search } from 'kitten/components/form/search';
 import {
   Header,
   HeaderItems,
   HeaderItem
-} from "kitten/components/headers/header";
-import { HeaderTitles } from "kitten/components/headers/header-titles";
-import { HeaderLogo } from "kitten/components/headers/header-logo";
+} from 'kitten/components/headers/header';
+import { HeaderTitles } from 'kitten/components/headers/header-titles';
+import { HeaderLogo } from 'kitten/components/headers/header-logo';
 
 export const KarlHeader = () => {
   return (
@@ -90,9 +90,9 @@ export const KarlHeader = () => {
           <a
             href="#"
             className={classNames(
-              "k-Button",
-              "k-Button--hydrogen",
-              "k-Header__button"
+              'k-Button',
+              'k-Button--hydrogen',
+              'k-Header__button'
             )}
           >
             S'identifier
@@ -165,9 +165,9 @@ export const KarlHeaderWithSearchInput = () => {
           <a
             href="#"
             className={classNames(
-              "k-Button",
-              "k-Button--hydrogen",
-              "k-Header__button"
+              'k-Button',
+              'k-Button--hydrogen',
+              'k-Header__button'
             )}
           >
             S'identifier
@@ -262,9 +262,9 @@ export const KarlHeaderWithTitles = () => {
         <HeaderItem tag="p" fixedSize="true">
           <a
             className={classNames(
-              "k-Header__logo",
-              "k-Header__logo--lightOnM",
-              "k-Header__logo--lightOnXxs"
+              'k-Header__logo',
+              'k-Header__logo--lightOnM',
+              'k-Header__logo--lightOnXxs'
             )}
             href="pages/header"
           >
@@ -283,9 +283,9 @@ export const KarlHeaderWithTitles = () => {
           <a
             href="#"
             className={classNames(
-              "k-Button",
-              "k-Button--hydrogen",
-              "k-Header__button"
+              'k-Button',
+              'k-Button--hydrogen',
+              'k-Header__button'
             )}
           >
             S'identifier
@@ -350,20 +350,20 @@ const unloggedHeaderPlatformSwitchButton = (
 const platformSwitchProps = {
   positionedWithBorder: true,
 
-  buttonId: "k-PlatformSwitch",
+  buttonId: 'k-PlatformSwitch',
   buttonClassName:
-    "k-ButtonIcon k-ButtonIcon--hydrogen k-ButtonIcon--dropdown " +
-    "k-Dropdown__button--rotationOnExpanded",
+    'k-ButtonIcon k-ButtonIcon--hydrogen k-ButtonIcon--dropdown ' +
+    'k-Dropdown__button--rotationOnExpanded',
   buttonContentOnExpanded: unloggedHeaderPlatformSwitchButton,
   buttonContentOnCollapsed: unloggedHeaderPlatformSwitchButton,
 
-  refreshEvents: ["resize", "karl:element#header:classToggled"],
-  dropdownListClassName: "k-PlatformSwitch k-PlatformSwitch--withoutBorderTop",
+  refreshEvents: ['resize', 'karl:element#header:classToggled'],
+  dropdownListClassName: 'k-PlatformSwitch k-PlatformSwitch--withoutBorderTop',
   dropdownContent: (
     <NavList
       className={classNames(
-        "k-PlatformSwitch",
-        "k-PlatformSwitch--withoutBorderTop"
+        'k-PlatformSwitch',
+        'k-PlatformSwitch--withoutBorderTop'
       )}
       role="menubar"
       list={platformSwitchDropdownList}
@@ -371,15 +371,15 @@ const platformSwitchProps = {
   ),
   onToggle: function() {
     // Example event to trigger
-    const event = document.createEvent("Event");
-    event.initEvent("karl:platformSwitch:toggle", true, true);
+    const event = document.createEvent('Event');
+    event.initEvent('karl:platformSwitch:toggle', true, true);
     window.dispatchEvent(event);
   }
 };
 
 // Unlogged header dropdown
 const unloggedPlatformSwitchProps = objectAssign(
-  { positionedWith: () => document.getElementById("header") },
+  { positionedWith: () => document.getElementById('header') },
   platformSwitchProps
 );
 export const KarlUnloggedHeaderPlatformSwitch = defaultProps(
@@ -389,7 +389,7 @@ export const KarlUnloggedHeaderPlatformSwitch = defaultProps(
 
 // Logged header dropdowns
 const loggedPlatformSwitchProps = objectAssign(
-  { positionedWith: () => document.getElementById("header-logged") },
+  { positionedWith: () => document.getElementById('header-logged') },
   platformSwitchProps
 );
 export const KarlLoggedHeaderPlatformSwitch = defaultProps(
@@ -434,19 +434,19 @@ const userMenuDropdownList = [
 
 export const KarlLoggedHeaderUserMenu = defaultProps(UserMenu, {
   // Position
-  positionedWith: () => document.getElementById("header-logged"),
+  positionedWith: () => document.getElementById('header-logged'),
   positionedWithBorder: true,
-  positionedOn: "right",
+  positionedOn: 'right',
   spaceAroundGrid: 20,
 
   // Button
-  buttonId: "k-UserMenu",
-  buttonImgSrc: "https://placehold.it/200x200/caf4fe/caf4fe",
+  buttonId: 'k-UserMenu',
+  buttonImgSrc: 'https://placehold.it/200x200/caf4fe/caf4fe',
   buttonImgWidth: 100,
   buttonImgHeight: 100,
-  buttonImgAlt: "Alt Firstname",
-  buttonText: "Firstname Lastname",
-  buttonTitle: "Profil",
+  buttonImgAlt: 'Alt Firstname',
+  buttonText: 'Firstname Lastname',
+  buttonTitle: 'Profil',
   buttonNotifications: 42,
 
   // Dropdown content
@@ -486,23 +486,23 @@ export const KarlLoggedHeaderUserMenu = defaultProps(UserMenu, {
   ],
 
   // Settings
-  refreshEvents: ["resize", "karl:element#header:classToggled"]
+  refreshEvents: ['resize', 'karl:element#header:classToggled']
 });
 
 // Phone dropdown.
 
 export const KarlPhoneDropdown = defaultProps(PhoneDropdown, {
   // Position
-  positionedWith: () => document.getElementById("header-logged"),
+  positionedWith: () => document.getElementById('header-logged'),
 
   // Content
   dropdownContent: (
     <div className="k-PhoneDropdown k-Dropdown__content--large">
       <p
         className={classNames(
-          "k-PhoneDropdown__text",
-          "k-u-size-micro",
-          "k-u-weight-regular"
+          'k-PhoneDropdown__text',
+          'k-u-size-micro',
+          'k-u-weight-regular'
         )}
       >
         Vous avez une question&nbsp;?
@@ -519,5 +519,5 @@ export const KarlPhoneDropdown = defaultProps(PhoneDropdown, {
   ),
 
   // Settings
-  refreshEvents: ["resize", "karl:element#header:classToggled"]
+  refreshEvents: ['resize', 'karl:element#header:classToggled']
 });

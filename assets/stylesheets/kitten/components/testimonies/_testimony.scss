@@ -16,8 +16,8 @@
 ///     <blockquote class="k-Testimony__text">…</blockquote>
 ///   </div>
 @mixin k-Testimony($testimony) {
-  @include k-with-module("k-Testimony: $testimony") {
-    $font: k-map-fetch($testimony, "font");
+  @include k-with-module('k-Testimony: $testimony') {
+    $font: k-map-fetch($testimony, 'font');
 
     .k-Testimony {
       margin-bottom: k-px-to-rem(30px);
@@ -29,11 +29,11 @@
       @include k-typographyFont($font);
       @include k-typographyFontSize(5);
 
-      @include k-media-min("m") {
+      @include k-media-min('m') {
         @include k-typographyFontSize(4, 1.25);
       }
 
-      @include k-media-min("l") {
+      @include k-media-min('l') {
         // Forced height to keep testimonies aligned when the title spans
         // two lines.
         min-height: 4rem;

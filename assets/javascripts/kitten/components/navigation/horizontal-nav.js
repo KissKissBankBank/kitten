@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import classNames from "classnames";
-import Markdown from "react-markdown";
+import React, { Component } from 'react';
+import classNames from 'classnames';
+import Markdown from 'react-markdown';
 
 export class HorizontalNav extends Component {
   renderItems() {
@@ -12,14 +12,14 @@ export class HorizontalNav extends Component {
   renderItem(item) {
     const { className, selected, text, key, href, ...others } = item;
 
-    const itemClassName = classNames("k-HorizontalNav__item", className, {
-      "is-selected": selected
+    const itemClassName = classNames('k-HorizontalNav__item', className, {
+      'is-selected': selected
     });
 
     return (
       <li
         className={classNames(
-          "k-HorizontalNav__element",
+          'k-HorizontalNav__element',
           this.props.elementClassName
         )}
         key={key}
@@ -42,8 +42,8 @@ export class HorizontalNav extends Component {
   render() {
     const { className, center, ...others } = this.props;
 
-    const navClassNames = classNames("k-HorizontalNav", className, {
-      "k-HorizontalNav--center": center
+    const navClassNames = classNames('k-HorizontalNav', className, {
+      'k-HorizontalNav--center': center
     });
 
     return (
@@ -57,7 +57,7 @@ export class HorizontalNav extends Component {
 HorizontalNav.defaultProps = {
   id: null,
   className: null,
-  height: "auto",
+  height: 'auto',
   center: false,
   elementClassName: null,
   items: []

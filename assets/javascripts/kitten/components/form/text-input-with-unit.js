@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import classNames from "classnames";
-import { TextInput } from "kitten/components/form/text-input";
+import React, { Component } from 'react';
+import classNames from 'classnames';
+import { TextInput } from 'kitten/components/form/text-input';
 
 export class TextInputWithUnit extends Component {
   blur() {
@@ -22,20 +22,20 @@ export class TextInputWithUnit extends Component {
     } = this.props;
 
     const textInputClassName = classNames(
-      "k-TextInputWithUnit__input",
+      'k-TextInputWithUnit__input',
       className
     );
 
-    const unitClassName = classNames("k-TextInputWithUnit__unit", {
-      "k-TextInputWithUnit__unit--tiny": tiny,
-      "k-TextInputWithUnit__unitWord": unitWord,
-      "is-valid": valid,
-      "is-error": error,
-      "is-inactive": disabled
+    const unitClassName = classNames('k-TextInputWithUnit__unit', {
+      'k-TextInputWithUnit__unit--tiny': tiny,
+      'k-TextInputWithUnit__unitWord': unitWord,
+      'is-valid': valid,
+      'is-error': error,
+      'is-inactive': disabled
     });
 
-    const textInputWithUnitClassName = classNames("k-TextInputWithUnit", {
-      "k-TextInputWithUnit--fullWidth": !digits
+    const textInputWithUnitClassName = classNames('k-TextInputWithUnit', {
+      'k-TextInputWithUnit--fullWidth': !digits
     });
 
     return (
@@ -59,9 +59,9 @@ export class TextInputWithUnit extends Component {
 }
 
 TextInputWithUnit.defaultProps = {
-  unit: "λ",
+  unit: 'λ',
   unitWord: false,
-  type: "number",
+  type: 'number',
   placeholder: null,
   valid: false,
   error: false,

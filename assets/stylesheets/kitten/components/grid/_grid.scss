@@ -28,7 +28,7 @@
 ///       </div>
 ///     </div>
 @mixin k-Grid {
-  $gutter-width: k-map-fetch($k-grid, "gutter-width");
+  $gutter-width: k-map-fetch($k-grid, 'gutter-width');
 
   // Container row
   .k-Grid {
@@ -37,7 +37,7 @@
 
   // k-Grid__col-1 to k-Grid__col-6 helpers
   @each $name, $query in $k-media-queries {
-    $min-width: map-get($query, "min-width");
+    $min-width: map-get($query, 'min-width');
 
     // No media query for the smallest media query (xxs), it's the default
     @if $min-width == null {
@@ -52,7 +52,7 @@
 
 // Helper classes for col-1 to col-12, as well as offsets
 @mixin _k-GridCols($media, $min-width) {
-  $number-of-columns: k-map-fetch($k-grid, "columns");
+  $number-of-columns: k-map-fetch($k-grid, 'columns');
 
   %k-col-#{$media} {
     @include k-grid-colBase;

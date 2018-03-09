@@ -1,16 +1,16 @@
-import React from "react";
-import classNames from "classnames";
-import { ProjectCard } from "kitten/components/cards/project-card";
-import { CheckedCircleIcon } from "kitten/components/icons/checked-circle-icon";
-import { WarningCircleIcon } from "kitten/components/icons/warning-circle-icon";
-import { CrossCircleIcon } from "kitten/components/icons/cross-circle-icon";
-import { ClockCircleIcon } from "kitten/components/icons/clock-circle-icon";
+import React from 'react';
+import classNames from 'classnames';
+import { ProjectCard } from 'kitten/components/cards/project-card';
+import { CheckedCircleIcon } from 'kitten/components/icons/checked-circle-icon';
+import { WarningCircleIcon } from 'kitten/components/icons/warning-circle-icon';
+import { CrossCircleIcon } from 'kitten/components/icons/cross-circle-icon';
+import { ClockCircleIcon } from 'kitten/components/icons/clock-circle-icon';
 
 const colors = {
-  "line-2": "#d8d8d8",
-  "primary-1": "#19bbff",
-  "tertiary-1": "#effaf1",
-  error: "#ff0046"
+  'line-2': '#d8d8d8',
+  'primary-1': '#19bbff',
+  'tertiary-1': '#effaf1',
+  error: '#ff0046'
 };
 
 export class KarlProjectCard extends React.Component {
@@ -18,11 +18,11 @@ export class KarlProjectCard extends React.Component {
     if (!this.props.score) return;
 
     const hexaByScore = {
-      "A+": "#00696e",
-      A: "#009682",
-      "B+": "#009b5f",
-      B: "#04ab2f",
-      C: "#8cc31e"
+      'A+': '#00696e',
+      A: '#009682',
+      'B+': '#009b5f',
+      B: '#04ab2f',
+      C: '#8cc31e'
     };
 
     return hexaByScore[this.props.score];
@@ -38,23 +38,23 @@ export class KarlProjectCard extends React.Component {
   }
 
   getStatusData() {
-    const iconClassName = "k-ProjectCard__status__svg";
+    const iconClassName = 'k-ProjectCard__status__svg';
     let data = {};
 
     switch (this.props.status) {
-      case "collecting":
+      case 'collecting':
         data = {
           coloredInfosValues: true
         };
         break;
 
-      case "closing":
+      case 'closing':
         data = {
           statusContent: [
             <CheckedCircleIcon
               key={`closing-icon-${this.props.id}`}
               className={iconClassName}
-              circleColor={colors["tertiary-1"]}
+              circleColor={colors['tertiary-1']}
             />,
             this.props.labelClosing
           ],
@@ -62,7 +62,7 @@ export class KarlProjectCard extends React.Component {
         };
         break;
 
-      case "succeed":
+      case 'succeed':
         data = {
           statusValidBackground: true,
           statusContent: [
@@ -75,13 +75,13 @@ export class KarlProjectCard extends React.Component {
         };
         break;
 
-      case "defaulted":
+      case 'defaulted':
         data = {
           statusErrorBackground: true,
           statusContent: [
             <WarningCircleIcon
               key={`defaulted-icon-${this.props.id}`}
-              warningColor={colors["error"]}
+              warningColor={colors['error']}
               className={iconClassName}
             />,
             this.props.labelDefaulted
@@ -89,14 +89,14 @@ export class KarlProjectCard extends React.Component {
         };
         break;
 
-      case "delayed":
+      case 'delayed':
         data = {
           statusErrorReverseBackground: true,
           statusContent: [
             <WarningCircleIcon
               key={`delayed-icon-${this.props.id}`}
               warningColor="#fff"
-              circleColor={colors["error"]}
+              circleColor={colors['error']}
               className={iconClassName}
             />,
             this.props.labelDelayed
@@ -104,13 +104,13 @@ export class KarlProjectCard extends React.Component {
         };
         break;
 
-      case "fraudulent":
+      case 'fraudulent':
         data = {
           statusErrorBackground: true,
           statusContent: [
             <WarningCircleIcon
               key={`fraudulent-icon-${this.props.id}`}
-              warningColor={colors["error"]}
+              warningColor={colors['error']}
               className={iconClassName}
             />,
             this.props.labelFraudulent
@@ -118,13 +118,13 @@ export class KarlProjectCard extends React.Component {
         };
         break;
 
-      case "failed":
+      case 'failed':
         data = {
           statusGreyBackground: true,
           statusContent: [
             <CrossCircleIcon
               key={`failed-icon-${this.props.id}`}
-              crossColor={colors["line-2"]}
+              crossColor={colors['line-2']}
               className={iconClassName}
             />,
             this.props.labelFailed
@@ -132,13 +132,13 @@ export class KarlProjectCard extends React.Component {
         };
         break;
 
-      case "studying":
+      case 'studying':
         data = {
           statusPrimaryBackground: true,
           statusContent: [
             <ClockCircleIcon
               key={`studying-icon-${this.props.id}`}
-              clockColor={colors["primary-1"]}
+              clockColor={colors['primary-1']}
               className={iconClassName}
             />,
             this.props.labelStudying
@@ -170,11 +170,11 @@ KarlProjectCard.defaultProps = {
   score: null,
   status: null,
 
-  labelClosing: "Collecte en closing !",
-  labelSucceed: "Collecte réussie !",
-  labelDefaulted: "Projet en défaut de paiement",
-  labelDelayed: "Projet en retard de paiement",
-  labelFraudulent: "Projet frauduleux",
-  labelFailed: "Collecte échouée",
+  labelClosing: 'Collecte en closing !',
+  labelSucceed: 'Collecte réussie !',
+  labelDefaulted: 'Projet en défaut de paiement',
+  labelDelayed: 'Projet en retard de paiement',
+  labelFraudulent: 'Projet frauduleux',
+  labelFailed: 'Collecte échouée',
   labelStudying: "Projet à l'étude"
 };

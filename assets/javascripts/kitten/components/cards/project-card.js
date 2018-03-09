@@ -1,20 +1,20 @@
-import React from "react";
-import classNames from "classnames";
-import PropTypes from "prop-types";
-import deprecated from "prop-types-extra/lib/deprecated";
-import { card } from "kitten/hoc/card";
-import { Grid, GridCol } from "kitten/components/grid/grid";
-import { Marger } from "kitten/components/layout/marger";
-import { Title } from "kitten/components/typography/title";
-import { Paragraph } from "kitten/components/typography/paragraph";
-import { Progress } from "kitten/components/meters/progress";
-import { ButtonImage } from "kitten/components/buttons/button-image";
-import { IconBadge } from "kitten/components/notifications/icon-badge";
-import { LockIcon } from "kitten/components/icons/lock-icon";
-import { CheckedCircleIcon } from "kitten/components/icons/checked-circle-icon";
-import { TagList } from "kitten/components/lists/tag-list";
-import { TypologyTagIcon } from "kitten/components/icons/typology-tag-icon";
-import { InstrumentTagIcon } from "kitten/components/icons/instrument-tag-icon";
+import React from 'react';
+import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import deprecated from 'prop-types-extra/lib/deprecated';
+import { card } from 'kitten/hoc/card';
+import { Grid, GridCol } from 'kitten/components/grid/grid';
+import { Marger } from 'kitten/components/layout/marger';
+import { Title } from 'kitten/components/typography/title';
+import { Paragraph } from 'kitten/components/typography/paragraph';
+import { Progress } from 'kitten/components/meters/progress';
+import { ButtonImage } from 'kitten/components/buttons/button-image';
+import { IconBadge } from 'kitten/components/notifications/icon-badge';
+import { LockIcon } from 'kitten/components/icons/lock-icon';
+import { CheckedCircleIcon } from 'kitten/components/icons/checked-circle-icon';
+import { TagList } from 'kitten/components/lists/tag-list';
+import { TypologyTagIcon } from 'kitten/components/icons/typology-tag-icon';
+import { InstrumentTagIcon } from 'kitten/components/icons/instrument-tag-icon';
 
 export const MIN_WIDTH = 280;
 export const MARGIN_BETWEEN = 40;
@@ -39,9 +39,9 @@ class ProjectCardComponent extends React.Component {
           />
           <Paragraph
             className={classNames(
-              "k-ProjectCard__grid--flex__item-fluid",
-              "k-u-margin-left-single",
-              "k-u-margin-right-single"
+              'k-ProjectCard__grid--flex__item-fluid',
+              'k-u-margin-left-single',
+              'k-u-margin-right-single'
             )}
             margin={false}
             normalLineHeight
@@ -80,7 +80,7 @@ class ProjectCardComponent extends React.Component {
           {this.props.tooltipText}
         </span>
         <CheckedCircleIcon
-          style={{ width: "20px", height: "20px" }}
+          style={{ width: '20px', height: '20px' }}
           circleColor={this.props.tooltipIconColor}
           checkedColor="#fff"
         />
@@ -130,8 +130,8 @@ class ProjectCardComponent extends React.Component {
     return (
       <div
         className={classNames(
-          "k-ProjectCard__grid",
-          "k-ProjectCard__grid--withBorderTop"
+          'k-ProjectCard__grid',
+          'k-ProjectCard__grid--withBorderTop'
         )}
       >
         <Marger top="1.3" bottom="1.5" className="k-ProjectCard__grid--flex">
@@ -143,9 +143,9 @@ class ProjectCardComponent extends React.Component {
             margin={false}
             modifier="quaternary"
             className={classNames(
-              "k-u-margin-left-double",
-              "k-u-color-primary1",
-              "k-u-weight-regular"
+              'k-u-margin-left-double',
+              'k-u-color-primary1',
+              'k-u-weight-regular'
             )}
           >
             {this.props.progress}&nbsp;%
@@ -173,8 +173,8 @@ class ProjectCardComponent extends React.Component {
       <div className="k-u-margin-left-single">
         <hr
           className={classNames(
-            "k-VerticalSeparator",
-            "k-VerticalSeparator--darker"
+            'k-VerticalSeparator',
+            'k-VerticalSeparator--darker'
           )}
         />
       </div>
@@ -195,7 +195,7 @@ class ProjectCardComponent extends React.Component {
 
   convertToClass(stringClassName) {
     switch (stringClassName) {
-      case "InstrumentTagIcon":
+      case 'InstrumentTagIcon':
         return InstrumentTagIcon;
       default:
         return TypologyTagIcon;
@@ -231,8 +231,8 @@ class ProjectCardComponent extends React.Component {
   }
 
   renderInfo(info) {
-    const valueClassName = classNames("k-ProjectCard__info__value", {
-      "k-u-color-primary1": this.props.coloredInfosValues
+    const valueClassName = classNames('k-ProjectCard__info__value', {
+      'k-u-color-primary1': this.props.coloredInfosValues
     });
 
     const renderValue = (
@@ -267,16 +267,16 @@ class ProjectCardComponent extends React.Component {
     if (!statusContent) return;
 
     const statusClassName = classNames(
-      "k-ProjectCard__grid",
-      "k-ProjectCard__status",
+      'k-ProjectCard__grid',
+      'k-ProjectCard__status',
       {
-        "k-ProjectCard__grid--withBorderTop": !statusWithoutTopBorder,
-        "k-ProjectCard__status--primaryBackground": statusPrimaryBackground,
-        "k-ProjectCard__status--validBackground": statusValidBackground,
-        "k-ProjectCard__status--tertiaryBackground": statusTertiaryBackground,
-        "k-ProjectCard__status--greyBackground": statusGreyBackground,
-        "k-ProjectCard__status--errorBackground": statusErrorBackground,
-        "k-ProjectCard__status--errorReverseBackground": statusErrorReverseBackground
+        'k-ProjectCard__grid--withBorderTop': !statusWithoutTopBorder,
+        'k-ProjectCard__status--primaryBackground': statusPrimaryBackground,
+        'k-ProjectCard__status--validBackground': statusValidBackground,
+        'k-ProjectCard__status--tertiaryBackground': statusTertiaryBackground,
+        'k-ProjectCard__status--greyBackground': statusGreyBackground,
+        'k-ProjectCard__status--errorBackground': statusErrorBackground,
+        'k-ProjectCard__status--errorReverseBackground': statusErrorReverseBackground
       }
     );
 
@@ -291,12 +291,12 @@ class ProjectCardComponent extends React.Component {
 
   render() {
     const projectCardClassName = classNames(
-      "k-ProjectCard",
-      { "is-disabled": this.props.disabled },
+      'k-ProjectCard',
+      { 'is-disabled': this.props.disabled },
       this.props.className
     );
 
-    const Tag = this.props.linkHref && !this.props.disabled ? "a" : "div";
+    const Tag = this.props.linkHref && !this.props.disabled ? 'a' : 'div';
     const href = this.props.disabled ? null : this.props.linkHref;
     const title = this.props.disabled ? null : this.props.linkTitle;
 
@@ -320,15 +320,15 @@ class ProjectCardComponent extends React.Component {
 
 const styles = {
   imageContainer: {
-    overflow: "hidden",
-    position: "relative",
+    overflow: 'hidden',
+    position: 'relative',
     paddingTop: `${9 / 16 * 100}%`
   },
   image: {
-    position: "absolute",
+    position: 'absolute',
     top: 0,
-    display: "block",
-    width: "100%"
+    display: 'block',
+    width: '100%'
   }
 };
 
@@ -337,21 +337,21 @@ ProjectCardComponent.defaultProps = {
   linkHref: null,
   linkTitle: null,
   ownerAvatarSrc: null,
-  ownerName: "Name",
-  ownerLocation: "Location",
+  ownerName: 'Name',
+  ownerLocation: 'Location',
   tagLists: null,
   tags: null,
   tooltipText: null,
-  tooltipIconColor: "#19bbff",
+  tooltipIconColor: '#19bbff',
   scoreValue: null,
   scoreBackgroundColor: null,
-  title: "Title",
+  title: 'Title',
   imageSrc: null,
   progress: false,
   coloredInfosValues: false,
-  info1: { value: "xx", text: "Info 1", locked: false, reverse: false },
-  info2: { value: "xx", text: "Info 2", locked: false, reverse: false },
-  info3: { value: "xx", text: "Info 3", locked: false, reverse: false },
+  info1: { value: 'xx', text: 'Info 1', locked: false, reverse: false },
+  info2: { value: 'xx', text: 'Info 2', locked: false, reverse: false },
+  info3: { value: 'xx', text: 'Info 3', locked: false, reverse: false },
   disabled: false,
   statusContent: null,
   statusPrimaryBackground: false,
@@ -366,7 +366,7 @@ ProjectCardComponent.defaultProps = {
 // Deprecated props
 
 ProjectCardComponent.propTypes = {
-  tags: deprecated(PropTypes.array, "Use `tagLists` prop instead")
+  tags: deprecated(PropTypes.array, 'Use `tagLists` prop instead')
 };
 
 // Add card generic styles.

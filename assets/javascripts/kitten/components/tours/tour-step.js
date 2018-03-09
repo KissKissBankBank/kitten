@@ -1,7 +1,7 @@
-import React from "react";
-import objectAssign from "core-js/library/fn/object/assign";
-import { domElementHelper } from "kitten/helpers/dom/element-helper";
-import { TourPopover } from "kitten/components/tours/tour-popover";
+import React from 'react';
+import objectAssign from 'core-js/library/fn/object/assign';
+import { domElementHelper } from 'kitten/helpers/dom/element-helper';
+import { TourPopover } from 'kitten/components/tours/tour-popover';
 
 export class TourStep extends React.Component {
   constructor(props) {
@@ -24,7 +24,7 @@ export class TourStep extends React.Component {
 
   componentDidMount() {
     this.positionTargetHighlight();
-    window.addEventListener("resize", this.handleResize);
+    window.addEventListener('resize', this.handleResize);
   }
 
   componentDidUpdate() {
@@ -34,7 +34,7 @@ export class TourStep extends React.Component {
   }
 
   componentWillUnmount() {
-    window.removeEventListener("resize", this.handleResize);
+    window.removeEventListener('resize', this.handleResize);
   }
 
   // Component listener callbacks.
@@ -69,8 +69,8 @@ export class TourStep extends React.Component {
     const highlightLeft = targetLeft + targetWidth / 2 - highlightWidth / 2;
 
     return {
-      top: highlightTop + "px",
-      left: highlightLeft + "px"
+      top: highlightTop + 'px',
+      left: highlightLeft + 'px'
     };
   }
 
@@ -99,7 +99,7 @@ export class TourStep extends React.Component {
 
     const target = document.querySelector(this.props.targetElement);
 
-    if (position == "right") {
+    if (position == 'right') {
       const left =
         domElementHelper.getComputedLeft(target) -
         domElementHelper.getComputedWidth(popover) +

@@ -10,9 +10,9 @@
 //        children: [{ label: 'A' }, { label: 'B' }]
 //      } />
 //
-import React, { Component } from "react";
-import classNames from "classnames";
-import Select from "react-select";
+import React, { Component } from 'react';
+import classNames from 'classnames';
+import Select from 'react-select';
 
 export class SelectWithState extends Component {
   constructor(props) {
@@ -67,11 +67,11 @@ export class SelectWithState extends Component {
       ...other
     } = this.props;
 
-    const selectClassName = classNames("k-Select", className, {
-      "k-Select--tiny": tiny,
-      "is-error": error,
-      "is-valid": valid,
-      "is-disabled": disabled
+    const selectClassName = classNames('k-Select', className, {
+      'k-Select--tiny': tiny,
+      'is-error': error,
+      'is-valid': valid,
+      'is-disabled': disabled
     });
 
     return (
@@ -115,14 +115,14 @@ class SelectWithMultiLevel extends Component {
   optionRenderer({ level, label }) {
     if (!level) return label;
 
-    return <span className={"k-Select__option--level" + level}>{label}</span>;
+    return <span className={'k-Select__option--level' + level}>{label}</span>;
   }
 
   render() {
     let inputProps = this.props.inputProps;
 
-    if (this.props.labelText && !inputProps["aria-labelledby"])
-      inputProps["aria-labelledby"] = this.props.id;
+    if (this.props.labelText && !inputProps['aria-labelledby'])
+      inputProps['aria-labelledby'] = this.props.id;
 
     return (
       <Select

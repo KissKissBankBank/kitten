@@ -1,5 +1,5 @@
-import React from "react";
-import classNames from "classnames";
+import React from 'react';
+import classNames from 'classnames';
 
 export const ResponsiveIframeContainer = ({
   ratio,
@@ -8,7 +8,7 @@ export const ResponsiveIframeContainer = ({
   ...props
 }) => {
   const componentClassName = classNames(
-    "k-ResponsiveIframeContainer",
+    'k-ResponsiveIframeContainer',
     className
   );
 
@@ -21,6 +21,6 @@ export const ResponsiveIframeContainer = ({
 };
 
 ResponsiveIframeContainer.defaultProps = {
-  ratio: "67.5",
+  ratio: '67.5',
   children: <iframe />
 };

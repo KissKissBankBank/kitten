@@ -1,9 +1,9 @@
 // TODO move to the "sliders" group (breaking change)
 
-import React from "react";
-import PropTypes from "prop-types";
-import { SliderBar } from "kitten/components/sliders/slider-bar";
-import { sliderKeyDownHandler } from "kitten/handlers/sliders/slider-key-down-handler";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { SliderBar } from 'kitten/components/sliders/slider-bar';
+import { sliderKeyDownHandler } from 'kitten/handlers/sliders/slider-key-down-handler';
 
 // Slider input to choose an integer value between two bounds
 export class Slider extends React.Component {

@@ -17,28 +17,28 @@
 /// </div>
 
 @mixin k-TextInputWithUnit {
-  $unit-font: "regular";
+  $unit-font: 'regular';
 
   $unit: 0; // 16px
   $unit-word: -1; // 14px
 
-  $border-color: map-get($k-colors, "line-1");
-  $color: map-get($k-colors, "font-1");
-  $unit-background-color: map-get($k-colors, "background-1");
+  $border-color: map-get($k-colors, 'line-1');
+  $color: map-get($k-colors, 'font-1');
+  $unit-background-color: map-get($k-colors, 'background-1');
 
   // color
-  $valid-color: map-get($k-colors, "valid");
-  $error-color: map-get($k-colors, "error");
+  $valid-color: map-get($k-colors, 'valid');
+  $error-color: map-get($k-colors, 'error');
 
   // Border
-  $unit-color: map-get($k-colors, "primary-1");
-  $unit-color-focus: map-get($k-colors, "line-2");
-  $unit-color-is-valid: map-get($k-colors, "tertiary-2");
-  $unit-color-is-error: map-get($k-colors, "error-3");
-  $unit-color-is-inactive: map-get($k-colors, "font-2");
+  $unit-color: map-get($k-colors, 'primary-1');
+  $unit-color-focus: map-get($k-colors, 'line-2');
+  $unit-color-is-valid: map-get($k-colors, 'tertiary-2');
+  $unit-color-is-error: map-get($k-colors, 'error-3');
+  $unit-color-is-inactive: map-get($k-colors, 'font-2');
 
   // Disabled
-  $background-disabled: map-get($k-colors, "line-1");
+  $background-disabled: map-get($k-colors, 'line-1');
 
   $border-size: k-px-to-rem(2px);
 

@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import ReactTooltip from "react-tooltip";
-import { ButtonQuestionMarkIcon } from "kitten/components/buttons/button-question-mark-icon";
+import React, { Component } from 'react';
+import ReactTooltip from 'react-tooltip';
+import { ButtonQuestionMarkIcon } from 'kitten/components/buttons/button-question-mark-icon';
 
 export class Tooltip extends Component {
   render() {
@@ -34,8 +34,8 @@ export class Tooltip extends Component {
 }
 
 Tooltip.defaultProps = {
-  id: "",
-  place: "right",
+  id: '',
+  place: 'right',
   children: null
 };
 

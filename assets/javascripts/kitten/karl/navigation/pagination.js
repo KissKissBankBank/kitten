@@ -1,7 +1,7 @@
-import React from "react";
-import { Pagination } from "kitten/components/navigation/pagination";
-import { Row } from "kitten/components/grid/row";
-import { StyleRoot } from "radium";
+import React from 'react';
+import { Pagination } from 'kitten/components/navigation/pagination';
+import { Row } from 'kitten/components/grid/row';
+import { StyleRoot } from 'radium';
 
 export const KarlPaginationExamples = () => (
   <StyleRoot>

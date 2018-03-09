@@ -1,79 +1,79 @@
-import React, { Component } from "react";
-import { SimilarProjectsCard } from "kitten/components/cards/similar-projects-card";
+import React, { Component } from 'react';
+import { SimilarProjectsCard } from 'kitten/components/cards/similar-projects-card';
 
 const projectsWithImage = [
   {
-    imageSrc: "https://placehold.it/400x200/caf4fe/caf4fe",
-    title: "Title 1",
+    imageSrc: 'https://placehold.it/400x200/caf4fe/caf4fe',
+    title: 'Title 1',
     description:
-      "Intellectum est enim mihi quidem in multis, et maxime in me ipso",
+      'Intellectum est enim mihi quidem in multis, et maxime in me ipso',
     link: {
-      href: "http://www.kisskissbankbank.com"
+      href: 'http://www.kisskissbankbank.com'
     }
   },
   {
-    imageSrc: "https://placehold.it/400x200/3b75f0/3b75f0",
-    title: "Title 2",
-    description: "Sed paulo ante in omnibus, cum M. Marcellum senatui",
+    imageSrc: 'https://placehold.it/400x200/3b75f0/3b75f0',
+    title: 'Title 2',
+    description: 'Sed paulo ante in omnibus, cum M. Marcellum senatui',
     link: {
-      href: "http://www.hellomerci.com"
+      href: 'http://www.hellomerci.com'
     }
   },
   {
-    imageSrc: "https://placehold.it/400x200/2c66e1/2c66e1",
-    title: "Title 3",
+    imageSrc: 'https://placehold.it/400x200/2c66e1/2c66e1',
+    title: 'Title 3',
     description:
-      "Ille quidem fructum omnis ante actae vitae hodierno die maximum cepit",
+      'Ille quidem fructum omnis ante actae vitae hodierno die maximum cepit',
     link: {
-      href: "http://www.lendopolis.com"
+      href: 'http://www.lendopolis.com'
     }
   }
 ];
 
-const tags = [{ key: "tag-1", item: "Tag 1" }, { key: "tag-2", item: "Tag 2" }];
+const tags = [{ key: 'tag-1', item: 'Tag 1' }, { key: 'tag-2', item: 'Tag 2' }];
 
 const tagLists = [
   {
-    items: [{ key: "tag-1", item: "Tag 1" }, { key: "tag-2", item: "Tag 2" }]
+    items: [{ key: 'tag-1', item: 'Tag 1' }, { key: 'tag-2', item: 'Tag 2' }]
   },
   {
-    items: [{ key: "tag-3", item: "Tag 3" }, { key: "tag-4", item: "Tag 4" }]
+    items: [{ key: 'tag-3', item: 'Tag 3' }, { key: 'tag-4', item: 'Tag 4' }]
   }
 ];
 
 const infos = [
-  { key: "info-1", text: "Info 1", value: "xx", locked: false },
-  { key: "info-2", text: "Info 2", value: "xx", locked: false },
-  { key: "info-3", text: "Info 3", value: "xx", locked: false }
+  { key: 'info-1', text: 'Info 1', value: 'xx', locked: false },
+  { key: 'info-2', text: 'Info 2', value: 'xx', locked: false },
+  { key: 'info-3', text: 'Info 3', value: 'xx', locked: false }
 ];
 
 const projectsWithInfos = [
   {
-    title: "Title 1",
+    title: 'Title 1',
     description:
-      "Excogitatum est super his, ut homines quidam ignoti, vilitate ipsa parum cavendi ad colligendos rumores per Antiochiae latera cuncta destinarentur ",
+      'Excogitatum est super his, ut homines quidam ignoti, vilitate ipsa parum cavendi ad colligendos rumores per Antiochiae latera cuncta destinarentur ',
     link: {
-      href: "http://www.kisskissbankbank.com"
+      href: 'http://www.kisskissbankbank.com'
     },
     tags: tags,
     infos: infos
   },
   {
-    title: "Title 2",
+    title: 'Title 2',
     description:
-      "Relaturi quae audirent. hi peragranter et dissimulanter honoratorum circulis adsistendo pervadendoque divites domus egentium habitu quicquid ",
+      'Relaturi quae audirent. hi peragranter et dissimulanter honoratorum circulis adsistendo pervadendoque divites domus egentium habitu quicquid ',
     link: {
-      href: "http://www.hellomerci.com"
+      href: 'http://www.hellomerci.com'
     },
     tagLists: tagLists,
     infos: infos
   },
   {
-    title: "Title 3",
+    title: 'Title 3',
     description:
-      "Noscere poterant vel audire latenter intromissi per posticas in regiam nuntiabant, id observantes conspiratione concordi, ut fingerent quaedam",
+      'Noscere poterant vel audire latenter intromissi per posticas in regiam nuntiabant, id observantes conspiratione concordi, ut fingerent quaedam',
     link: {
-      href: "http://www.lendopolis.com"
+      href: 'http://www.lendopolis.com'
     },
     tags: tags,
     infos: infos

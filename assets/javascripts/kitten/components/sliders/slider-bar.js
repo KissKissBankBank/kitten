@@ -1,7 +1,7 @@
-import React from "react";
-import classNames from "classnames";
-import { domElementHelper } from "kitten/helpers/dom/element-helper";
-import { GrabberIcon } from "kitten/components/icons/grabber-icon";
+import React from 'react';
+import classNames from 'classnames';
+import { domElementHelper } from 'kitten/helpers/dom/element-helper';
+import { GrabberIcon } from 'kitten/components/icons/grabber-icon';
 
 // DOM for the Slider component. See Slider for state and
 export class SliderBar extends React.Component {
@@ -35,10 +35,10 @@ export class SliderBar extends React.Component {
     e.preventDefault();
 
     if (domElementHelper.canUseDom()) {
-      document.addEventListener("mousemove", this.handleMove);
-      document.addEventListener("touchmove", this.handleMove);
-      document.addEventListener("mouseup", this.handleEnd);
-      document.addEventListener("touchend", this.handleEnd);
+      document.addEventListener('mousemove', this.handleMove);
+      document.addEventListener('touchmove', this.handleMove);
+      document.addEventListener('mouseup', this.handleEnd);
+      document.addEventListener('touchend', this.handleEnd);
     }
 
     this.setState({ grabbing: true });
@@ -46,10 +46,10 @@ export class SliderBar extends React.Component {
 
   handleEnd() {
     if (domElementHelper.canUseDom()) {
-      document.removeEventListener("mousemove", this.handleMove);
-      document.removeEventListener("touchmove", this.handleMove);
-      document.removeEventListener("mouseup", this.handleEnd);
-      document.removeEventListener("touchend", this.handleEnd);
+      document.removeEventListener('mousemove', this.handleMove);
+      document.removeEventListener('touchmove', this.handleMove);
+      document.removeEventListener('mouseup', this.handleEnd);
+      document.removeEventListener('touchend', this.handleEnd);
     }
 
     this.setState({ grabbing: false });
@@ -72,20 +72,20 @@ export class SliderBar extends React.Component {
         <input
           type="hidden"
           name={this.props.name}
-          value={this.props.value || ""}
+          value={this.props.value || ''}
         />
       );
   }
 
   render() {
-    const percentage = this.props.ratio * 100 + "%";
+    const percentage = this.props.ratio * 100 + '%';
     const trackStyles = { width: percentage };
     const thumbStyles = { left: percentage };
-    const grabbingClass = this.state.grabbing ? "is-grabbing" : null;
+    const grabbingClass = this.state.grabbing ? 'is-grabbing' : null;
 
     return (
       <div
-        className={classNames("k-Slider", grabbingClass)}
+        className={classNames('k-Slider', grabbingClass)}
         onClick={this.handleClick}
       >
         <div className="k-Slider__ramp" ref="track">

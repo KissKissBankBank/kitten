@@ -1,18 +1,18 @@
-import React, { Component } from "react";
-import classNames from "classnames";
+import React, { Component } from 'react';
+import classNames from 'classnames';
 
 export class Progress extends Component {
   render() {
     const { className, color, value, rampProps, ...others } = this.props;
 
-    const progressClassName = classNames("k-Progress", className);
+    const progressClassName = classNames('k-Progress', className);
 
     const style = {
       backgroundColor: `${color}`,
       width: `${value}%`
     };
 
-    const rampClassName = classNames("k-Progress__ramp", rampProps.className);
+    const rampClassName = classNames('k-Progress__ramp', rampProps.className);
 
     return (
       <div

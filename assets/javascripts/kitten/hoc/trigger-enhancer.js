@@ -1,5 +1,5 @@
-import React from "react";
-import { domElementHelper } from "kitten/helpers/dom/element-helper";
+import React from 'react';
+import { domElementHelper } from 'kitten/helpers/dom/element-helper';
 
 export const triggerEnhancer = (WrappedComponent, wrappedComponentProps) => {
   class TriggerWrapper extends React.Component {
@@ -28,7 +28,7 @@ export const triggerEnhancer = (WrappedComponent, wrappedComponentProps) => {
     dispatchEvent(eventLabel) {
       if (!domElementHelper.canUseDom()) return;
 
-      const event = document.createEvent("Event");
+      const event = document.createEvent('Event');
 
       event.initEvent(eventLabel, true, true);
       window.dispatchEvent(event);
@@ -91,9 +91,9 @@ export const triggerEnhancer = (WrappedComponent, wrappedComponentProps) => {
 
   TriggerWrapper.defaultProps = {
     autorun: true,
-    stopEventName: "k:auto-trigger:stop",
+    stopEventName: 'k:auto-trigger:stop',
     stopHandlerName: null,
-    storeName: "kitten.AutoTrigger",
+    storeName: 'kitten.AutoTrigger',
     verifyStorageOnStart: true
   };
 

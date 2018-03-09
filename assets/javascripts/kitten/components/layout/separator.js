@@ -1,10 +1,10 @@
-import React from "react";
-import classNames from "classnames";
+import React from 'react';
+import classNames from 'classnames';
 
 export const Separator = ({ darker, className, ...props }) => {
   const separatorClassName = classNames(
-    "k-Separator",
-    { "k-Separator--darker": darker },
+    'k-Separator',
+    { 'k-Separator--darker': darker },
     className
   );
 

@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react';
 import {
   FacebookButtonIconWords,
   TwitterButtonIconWords,
   LinkedinButtonIconWords
-} from "kitten/components/buttons/social-button-icon-words";
+} from 'kitten/components/buttons/social-button-icon-words';
 
 export const KarlFacebookButtonIconWords = props => (
   <FacebookButtonIconWords className="k-u-margin-bottom-single">

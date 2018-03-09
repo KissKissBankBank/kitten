@@ -1,5 +1,5 @@
-import React from "react";
-import classNames from "classnames";
+import React from 'react';
+import classNames from 'classnames';
 
 export class TourPopover extends React.Component {
   constructor(props) {
@@ -12,7 +12,7 @@ export class TourPopover extends React.Component {
 
   componentDidMount() {
     this.props.onPopoverPosition(this.refs.popover);
-    window.addEventListener("resize", this.handleResize);
+    window.addEventListener('resize', this.handleResize);
   }
 
   componentDidUpdate(prevProps) {
@@ -22,7 +22,7 @@ export class TourPopover extends React.Component {
   }
 
   componentWillUnmount() {
-    window.removeEventListener("resize", this.handleResize);
+    window.removeEventListener('resize', this.handleResize);
   }
 
   // Component listener callbacks.
@@ -42,15 +42,15 @@ export class TourPopover extends React.Component {
   renderNextButton() {
     const isDisabled = !this.props.buttons.next.active;
     const buttonClassName = classNames(
-      "k-Tour__popover__button",
-      "k-Tour__popover__button--right",
-      "k-Button",
-      "k-Button--tiny",
-      "k-Button--icon",
-      "k-Button--iconRight",
+      'k-Tour__popover__button',
+      'k-Tour__popover__button--right',
+      'k-Button',
+      'k-Button--tiny',
+      'k-Button--icon',
+      'k-Button--iconRight',
       {
-        "k-Button--helium": !isDisabled,
-        "k-Button--hydrogen": isDisabled
+        'k-Button--helium': !isDisabled,
+        'k-Button--hydrogen': isDisabled
       }
     );
 
@@ -77,13 +77,13 @@ export class TourPopover extends React.Component {
   renderPrevButton() {
     const isDisabled = !this.props.buttons.prev.active;
     const buttonClassName = classNames(
-      "k-Tour__popover__button",
-      "k-Button",
-      "k-Button--tiny",
-      "k-Button--icon",
+      'k-Tour__popover__button',
+      'k-Button',
+      'k-Button--tiny',
+      'k-Button--icon',
       {
-        "k-Button--helium": !isDisabled,
-        "k-Button--hydrogen": isDisabled
+        'k-Button--helium': !isDisabled,
+        'k-Button--hydrogen': isDisabled
       }
     );
 

@@ -1,6 +1,6 @@
-import React from "react";
-import PropTypes from "prop-types";
-import classNames from "classnames";
+import React from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
 export class Checkbox extends React.Component {
   render() {
@@ -14,13 +14,13 @@ export class Checkbox extends React.Component {
     } = this.props;
 
     const checkboxInputClassNames = classNames(
-      "k-Checkbox__input",
+      'k-Checkbox__input',
       inputClassName,
-      { "is-error": error }
+      { 'is-error': error }
     );
 
     return (
-      <div className={classNames("k-Checkbox", className)}>
+      <div className={classNames('k-Checkbox', className)}>
         <input
           id={id}
           type="checkbox"
@@ -37,5 +37,5 @@ export class Checkbox extends React.Component {
 }
 
 Checkbox.defaultProps = {
-  children: "Filter 1"
+  children: 'Filter 1'
 };

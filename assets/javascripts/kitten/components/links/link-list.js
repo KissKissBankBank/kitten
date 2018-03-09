@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import classNames from "classnames";
-import PropTypes from "prop-types";
+import React, { Component } from 'react';
+import classNames from 'classnames';
+import PropTypes from 'prop-types';
 
 export class LinkList extends Component {
   constructor() {
@@ -18,15 +18,15 @@ export class LinkList extends Component {
 
     const { color, lineHeight, itemMargin } = this.props;
 
-    const linkListClassName = classNames("k-LinkList__link", {
-      "is-active": active,
-      "k-LinkList__link--light": color == "light",
-      "k-LinkList__link--dark": color == "dark",
-      "k-LinkList__link--normalLineHeight": lineHeight == "normal"
+    const linkListClassName = classNames('k-LinkList__link', {
+      'is-active': active,
+      'k-LinkList__link--light': color == 'light',
+      'k-LinkList__link--dark': color == 'dark',
+      'k-LinkList__link--normalLineHeight': lineHeight == 'normal'
     });
 
-    const linkListItemClassName = classNames("k-LinkList__item", {
-      "k-LinkList__item--doubleMargin": itemMargin == "double"
+    const linkListItemClassName = classNames('k-LinkList__item', {
+      'k-LinkList__item--doubleMargin': itemMargin == 'double'
     });
 
     return (
@@ -48,8 +48,8 @@ export class LinkList extends Component {
       ...others
     } = this.props;
 
-    const listClassName = classNames("k-LinkList", className, {
-      "k-LinkList--withoutMargin": !margin
+    const listClassName = classNames('k-LinkList', className, {
+      'k-LinkList--withoutMargin': !margin
     });
 
     return (
@@ -61,16 +61,16 @@ export class LinkList extends Component {
 }
 
 LinkList.defaultProps = {
-  color: PropTypes.oneOf(["light", "dark"]),
-  lineHeight: PropTypes.oneOf(["normal"]),
-  itemMargin: PropTypes.oneOf(["double"])
+  color: PropTypes.oneOf(['light', 'dark']),
+  lineHeight: PropTypes.oneOf(['normal']),
+  itemMargin: PropTypes.oneOf(['double'])
 };
 
 LinkList.defaultProps = {
   className: null,
   margin: true,
   items: [], // Eg: [{ key: …, item: …, href: … }]
-  color: "dark",
+  color: 'dark',
   lineHeight: null,
   itemMargin: null
 };

@@ -19,17 +19,17 @@
 ///   </div>
 
 @mixin k-Alert {
-  $font: "light";
-  $strong-font: "regular";
+  $font: 'light';
+  $strong-font: 'regular';
   $font-step: -1; // 14px
 
-  $color: map-get($k-colors, "primary-1");
-  $colorError: map-get($k-colors, "error");
-  $colorSuccess: map-get($k-colors, "valid");
+  $color: map-get($k-colors, 'primary-1');
+  $colorError: map-get($k-colors, 'error');
+  $colorSuccess: map-get($k-colors, 'valid');
 
-  $background: map-get($k-colors, "primary-5");
-  $backgroundError: map-get($k-colors, "error-2");
-  $backgroundSuccess: map-get($k-colors, "tertiary-1");
+  $background: map-get($k-colors, 'primary-5');
+  $backgroundError: map-get($k-colors, 'error-2');
+  $backgroundSuccess: map-get($k-colors, 'tertiary-1');
 
   $easeInQuart: cubic-bezier(0.895, 0.03, 0.685, 0.22);
 
@@ -56,13 +56,13 @@
     @include k-typographyFont($font);
     @include k-typographyFontSize($font-step);
 
-    @include k-media-min("s") {
+    @include k-media-min('s') {
       @include k-grid-col(8);
       @include k-grid-offset(2);
       text-align: center;
     }
 
-    @include k-media-min("m") {
+    @include k-media-min('m') {
       @include k-grid-col(6);
       @include k-grid-offset(3);
     }

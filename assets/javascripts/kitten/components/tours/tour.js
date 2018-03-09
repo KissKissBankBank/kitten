@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import classNames from "classnames";
-import { domElementHelper } from "kitten/helpers/dom/element-helper";
-import { TourStep } from "kitten/components/tours/tour-step";
+import React, { Component } from 'react';
+import classNames from 'classnames';
+import { domElementHelper } from 'kitten/helpers/dom/element-helper';
+import { TourStep } from 'kitten/components/tours/tour-step';
 
 export class Tour extends Component {
   constructor(props) {
@@ -41,7 +41,7 @@ export class Tour extends Component {
 
     this.toggleStep(newIndex);
 
-    this.dispatchEvent("k:tour:next");
+    this.dispatchEvent('k:tour:next');
   }
 
   handleClickOnPrev() {
@@ -49,17 +49,17 @@ export class Tour extends Component {
 
     this.toggleStep(newIndex);
 
-    this.dispatchEvent("k:tour:prev");
+    this.dispatchEvent('k:tour:prev');
   }
 
   handleClickOnClose() {
     this.stop();
 
-    this.dispatchEvent("k:tour:close");
+    this.dispatchEvent('k:tour:close');
   }
 
   dispatchEvent(eventLabel) {
-    const event = document.createEvent("Event");
+    const event = document.createEvent('Event');
     event.initEvent(eventLabel, true, true);
     window.dispatchEvent(event);
   }
@@ -160,8 +160,8 @@ export class Tour extends Component {
 
   render() {
     const tourClassName = classNames(
-      "k-Tour",
-      { "is-hidden": !this.state.visible },
+      'k-Tour',
+      { 'is-hidden': !this.state.visible },
       this.props.className
     );
 
@@ -170,13 +170,13 @@ export class Tour extends Component {
 }
 
 Tour.defaultProps = {
-  nextButtonLabel: "Next",
-  nextButtonTitle: "Next",
-  prevButtonLabel: "Prev",
-  prevButtonTitle: "Previous",
-  closeButtonLabel: "Close",
-  pagingLabel: "on",
-  storeName: "kitten.Tour",
+  nextButtonLabel: 'Next',
+  nextButtonTitle: 'Next',
+  prevButtonLabel: 'Prev',
+  prevButtonTitle: 'Previous',
+  closeButtonLabel: 'Close',
+  pagingLabel: 'on',
+  storeName: 'kitten.Tour',
   useStore: true
 };
 

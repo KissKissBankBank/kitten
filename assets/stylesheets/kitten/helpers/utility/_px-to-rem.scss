@@ -15,6 +15,6 @@
     @return 0;
   }
 
-  $root-font-size: map-get($k-typography, "root");
+  $root-font-size: map-get($k-typography, 'root');
   @return ($px / $root-font-size) * 1rem;
 }

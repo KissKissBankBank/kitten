@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import classNames from "classnames";
+import React, { Component } from 'react';
+import classNames from 'classnames';
 
 export class TextInput extends Component {
   focus() {
@@ -22,17 +22,17 @@ export class TextInput extends Component {
       ...others
     } = this.props;
 
-    const textInputClassName = classNames("k-TextInput", className, {
-      "k-TextInput--tiny": tiny,
-      "k-TextAreaWrapper__input": tag == "textarea",
-      "is-valid": valid,
-      "is-error": error,
-      "is-disabled": disabled,
-      "k-TextInput--twoDigits": digits == 2,
-      "k-TextInput--twelveDigits": digits == 12
+    const textInputClassName = classNames('k-TextInput', className, {
+      'k-TextInput--tiny': tiny,
+      'k-TextAreaWrapper__input': tag == 'textarea',
+      'is-valid': valid,
+      'is-error': error,
+      'is-disabled': disabled,
+      'k-TextInput--twoDigits': digits == 2,
+      'k-TextInput--twelveDigits': digits == 12
     });
 
-    if (tag == "textarea") {
+    if (tag == 'textarea') {
       return (
         <div className="k-TextAreaWrapper">
           <textarea
@@ -59,7 +59,7 @@ export class TextInput extends Component {
 }
 
 TextInput.defaultProps = {
-  tag: "input", // or 'textarea'
+  tag: 'input', // or 'textarea'
   valid: false,
   error: false,
   disabled: false,

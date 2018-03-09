@@ -1,12 +1,12 @@
-import React from "react";
-import { Hero } from "kitten/components/heroes/hero";
-import { Container } from "kitten/components/grid/container";
-import { StyleRoot } from "radium";
+import React from 'react';
+import { Hero } from 'kitten/components/heroes/hero';
+import { Container } from 'kitten/components/grid/container';
+import { StyleRoot } from 'radium';
 
-describe("<Hero />", () => {
+describe('<Hero />', () => {
   let component;
 
-  describe("by default", () => {
+  describe('by default', () => {
     beforeEach(() => {
       component = mount(
         <StyleRoot>
@@ -15,25 +15,25 @@ describe("<Hero />", () => {
       );
     });
 
-    it("has a <Container /> component", () => {
+    it('has a <Container /> component', () => {
       expect(component.find(Container).exists()).toBe(true);
     });
 
-    it("has a <Grid /> component", () => {
-      expect(component.find(".k-Grid").exists()).toBe(true);
+    it('has a <Grid /> component', () => {
+      expect(component.find('.k-Grid').exists()).toBe(true);
     });
 
-    it("has two <GridCol /> components", () => {
-      expect(component.find(".k-Grid__col--12")).toHaveLength(2);
+    it('has two <GridCol /> components', () => {
+      expect(component.find('.k-Grid__col--12')).toHaveLength(2);
     });
 
-    it("renders children value in the first GridCol", () => {
+    it('renders children value in the first GridCol', () => {
       expect(
         component
-          .find(".k-Grid__col--12")
+          .find('.k-Grid__col--12')
           .first()
           .text()
-      ).toBe("FooBar");
+      ).toBe('FooBar');
     });
   });
 });

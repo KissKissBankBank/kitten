@@ -1,12 +1,12 @@
-import React from "react";
-import classNames from "classnames";
-import { card } from "kitten/hoc/card";
-import { Marger } from "kitten/components/layout/marger";
-import { ClockIcon } from "kitten/components/icons/clock-icon";
-import { Paragraph } from "kitten/components/typography/paragraph";
-import { ButtonIcon } from "kitten/components/buttons/button-icon";
-import { Separator } from "kitten/components/layout/separator";
-import { ArrowIcon } from "kitten/components/icons/arrow-icon";
+import React from 'react';
+import classNames from 'classnames';
+import { card } from 'kitten/hoc/card';
+import { Marger } from 'kitten/components/layout/marger';
+import { ClockIcon } from 'kitten/components/icons/clock-icon';
+import { Paragraph } from 'kitten/components/typography/paragraph';
+import { ButtonIcon } from 'kitten/components/buttons/button-icon';
+import { Separator } from 'kitten/components/layout/separator';
+import { ArrowIcon } from 'kitten/components/icons/arrow-icon';
 
 class ProjectCreatorCardComponent extends React.Component {
   renderDate() {
@@ -60,7 +60,7 @@ class ProjectCreatorCardComponent extends React.Component {
   renderLink() {
     if (!this.props.href) return;
 
-    const target = this.props.isExternal ? { target: "_blank" } : {};
+    const target = this.props.isExternal ? { target: '_blank' } : {};
 
     return (
       <a
@@ -87,7 +87,7 @@ class ProjectCreatorCardComponent extends React.Component {
 
   render() {
     const ProjectCreatorCardClassName = classNames(
-      "k-ProjectCreatorCard",
+      'k-ProjectCreatorCard',
       this.props.className
     );
 
@@ -109,7 +109,7 @@ export const ProjectCreatorCard = props => {
       withBorder
       withShadow={false}
       translateOnHover
-      rounded={"tiny"}
+      rounded={'tiny'}
       {...props}
     />
   );
@@ -123,5 +123,5 @@ ProjectCreatorCard.defaultProps = {
   linkText: null,
   statusBackgroundColor: null,
   statusBorderColor: null,
-  statusText: "Status"
+  statusText: 'Status'
 };

@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 export class NavList extends React.Component {
   renderItem(item, i) {
@@ -12,7 +12,7 @@ export class NavList extends React.Component {
   render() {
     const { list, ...others } = this.props;
     const items = list.map(this.renderItem);
-    const defaultItem = "No choice";
+    const defaultItem = 'No choice';
 
     return (
       <nav role="navigation">

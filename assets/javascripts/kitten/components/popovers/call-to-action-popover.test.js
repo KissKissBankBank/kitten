@@ -1,43 +1,43 @@
-import React from "react";
-import { Popover } from "kitten/components/popovers/popover";
-import { CallToActionPopover } from "kitten/components/popovers/call-to-action-popover";
-import { LoudspeakerIllustration } from "kitten/components/illustrations/loudspeaker-illustration";
-import { Button } from "kitten/components/buttons/button";
-import { Title } from "kitten/components/typography/title";
-import { Paragraph } from "kitten/components/typography/paragraph";
+import React from 'react';
+import { Popover } from 'kitten/components/popovers/popover';
+import { CallToActionPopover } from 'kitten/components/popovers/call-to-action-popover';
+import { LoudspeakerIllustration } from 'kitten/components/illustrations/loudspeaker-illustration';
+import { Button } from 'kitten/components/buttons/button';
+import { Title } from 'kitten/components/typography/title';
+import { Paragraph } from 'kitten/components/typography/paragraph';
 
-describe("<CallToActionPopover />", () => {
-  describe("by default", () => {
+describe('<CallToActionPopover />', () => {
+  describe('by default', () => {
     const defaultComponent = shallow(<CallToActionPopover />);
 
-    it("renders a title element", () => {
+    it('renders a title element', () => {
       const titleElement = defaultComponent.find(Title);
 
       expect(titleElement).toHaveLength(1);
     });
 
-    it("renders a text element", () => {
+    it('renders a text element', () => {
       const textElement = defaultComponent.find(Paragraph);
 
       expect(textElement).toHaveLength(1);
     });
 
-    describe("navigation", () => {
-      it("renders a navigation element", () => {
+    describe('navigation', () => {
+      it('renders a navigation element', () => {
         const navigationElement = defaultComponent.find(
-          ".k-Popover__navigation"
+          '.k-Popover__navigation'
         );
 
         expect(navigationElement).toHaveLength(1);
       });
 
-      it("renders buttons list", () => {
-        const buttonsList = defaultComponent.find(".k-Popover__buttons");
+      it('renders buttons list', () => {
+        const buttonsList = defaultComponent.find('.k-Popover__buttons');
 
         expect(buttonsList).toHaveLength(1);
       });
 
-      it("renders a <Button /> component", () => {
+      it('renders a <Button /> component', () => {
         const buttonComponent = (
           <Button onClick={undefined} modifier="helium" size="big">
             Ok
@@ -49,36 +49,36 @@ describe("<CallToActionPopover />", () => {
     });
   });
 
-  describe("title prop", () => {
-    const title = "Instantly break out";
+  describe('title prop', () => {
+    const title = 'Instantly break out';
     const component = mount(<CallToActionPopover title={title} />);
     const titleElement = component.find(Title);
 
-    it("renders a title element", () => {
+    it('renders a title element', () => {
       expect(titleElement).toHaveLength(1);
       expect(titleElement.render().text()).toBe(title);
     });
   });
 
-  describe("text prop", () => {
+  describe('text prop', () => {
     const text = "Spend all night ensuring people don't sleep";
     const component = mount(<CallToActionPopover text={text} />);
-    const textElement = component.find("Paragraph");
+    const textElement = component.find('Paragraph');
 
-    it("renders a text element", () => {
+    it('renders a text element', () => {
       expect(textElement).toHaveLength(1);
       expect(textElement.text()).toBe(text);
     });
   });
 
-  describe("buttons prop", () => {
-    const button1Label = "Découvrir";
-    const button1Modifier = "berryllium";
-    const button1Tag = "a";
-    const button1Href = "http://www.catipsum.com";
-    const button1Target = "_blank";
+  describe('buttons prop', () => {
+    const button1Label = 'Découvrir';
+    const button1Modifier = 'berryllium';
+    const button1Tag = 'a';
+    const button1Href = 'http://www.catipsum.com';
+    const button1Target = '_blank';
 
-    const button2Label = "Retour";
+    const button2Label = 'Retour';
 
     const buttons = [
       {
@@ -96,11 +96,11 @@ describe("<CallToActionPopover />", () => {
     const component = mount(<CallToActionPopover buttons={buttons} />);
     const buttonComponents = component.find(Button);
 
-    it("renders 2 <Button /> components", () => {
+    it('renders 2 <Button /> components', () => {
       expect(buttonComponents).toHaveLength(2);
     });
 
-    it("passes the right props to the first <Button />", () => {
+    it('passes the right props to the first <Button />', () => {
       const buttonComponent = buttonComponents.first();
       const expectedProps = {
         children: button1Label,
@@ -113,7 +113,7 @@ describe("<CallToActionPopover />", () => {
       expect(buttonComponent.props()).toMatchObject(expectedProps);
     });
 
-    it("passes the right props to the second <Button />", () => {
+    it('passes the right props to the second <Button />', () => {
       const buttonComponent = buttonComponents.last();
       const expectedProps = {
         children: button2Label
@@ -122,7 +122,7 @@ describe("<CallToActionPopover />", () => {
       expect(buttonComponent.props()).toMatchObject(expectedProps);
     });
 
-    describe("with close callback on a button", () => {
+    describe('with close callback on a button', () => {
       const buttons = [
         {
           clickOptions: {
@@ -138,8 +138,8 @@ describe("<CallToActionPopover />", () => {
         <CallToActionPopover buttons={buttons} onCloseClick={onCloseClick} />
       );
 
-      it("passes a onClick prop to the <Button />", () => {
-        const buttonComponent = component.find("button").first();
+      it('passes a onClick prop to the <Button />', () => {
+        const buttonComponent = component.find('button').first();
         const expectedProps = {
           onClick: onCloseClick
         };
@@ -149,44 +149,44 @@ describe("<CallToActionPopover />", () => {
     });
   });
 
-  describe("titleAriaLabelId prop", () => {
+  describe('titleAriaLabelId prop', () => {
     const component = mount(
       <CallToActionPopover titleAriaLabelId="custom-aria-label" />
     );
-    const titleElement = component.find("Title");
+    const titleElement = component.find('Title');
 
-    it("assigns custom id for aria label", () => {
-      expect(titleElement.props().id).toBe("custom-aria-label");
+    it('assigns custom id for aria label', () => {
+      expect(titleElement.props().id).toBe('custom-aria-label');
     });
   });
 
-  describe("illustration prop", () => {
+  describe('illustration prop', () => {
     const componentWithIllustration = shallow(
       <CallToActionPopover illustration={LoudspeakerIllustration} />
     );
 
-    it("renders an illustration wrapper", () => {
+    it('renders an illustration wrapper', () => {
       const illustration = componentWithIllustration.find(
-        ".k-Popover__illustration"
+        '.k-Popover__illustration'
       );
 
       expect(illustration).toHaveLength(1);
     });
 
-    it("renders illustration component", () => {
+    it('renders illustration component', () => {
       const illustration = <LoudspeakerIllustration />;
 
       expect(componentWithIllustration.contains(illustration)).toBe(true);
     });
   });
 
-  describe("custom props", () => {
+  describe('custom props', () => {
     const component = mount(
       <CallToActionPopover popoverClassName="custom-popover" />
     );
 
-    it("propagates props to <Popover />", () => {
-      const popoverComponent = component.find(".custom-popover");
+    it('propagates props to <Popover />', () => {
+      const popoverComponent = component.find('.custom-popover');
 
       expect(popoverComponent).toHaveLength(1);
     });

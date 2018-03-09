@@ -1,19 +1,19 @@
-import React from "react";
-import { HeaderLogo } from "kitten/components/headers/header-logo";
+import React from 'react';
+import { HeaderLogo } from 'kitten/components/headers/header-logo';
 
-describe("<HeaderLogo />", () => {
+describe('<HeaderLogo />', () => {
   const logo = shallow(<HeaderLogo />);
 
   it('renders a <a class="k-Header__logo" />', () => {
-    expect(logo.is("a")).toBe(true);
-    expect(logo.hasClass("k-Header__logo")).toBe(true);
+    expect(logo.is('a')).toBe(true);
+    expect(logo.hasClass('k-Header__logo')).toBe(true);
   });
 
-  it("renders a default href", () => {
-    expect(logo.props().href).toBe("#");
+  it('renders a default href', () => {
+    expect(logo.props().href).toBe('#');
   });
 
-  describe("with props", () => {
+  describe('with props', () => {
     const logo = shallow(
       <HeaderLogo
         href="http://…"
@@ -25,21 +25,21 @@ describe("<HeaderLogo />", () => {
       />
     );
 
-    it("has a href", () => {
-      expect(logo.props().href).toBe("http://…");
+    it('has a href', () => {
+      expect(logo.props().href).toBe('http://…');
     });
 
-    it("has a custom class", () => {
-      expect(logo.hasClass("test-Header__logo")).toBe(true);
+    it('has a custom class', () => {
+      expect(logo.hasClass('test-Header__logo')).toBe(true);
     });
 
-    it("has an image", () => {
-      const image = logo.find("img");
+    it('has an image', () => {
+      const image = logo.find('img');
 
-      expect(image.props().src).toBe("http://…/assets/…");
-      expect(image.props().alt).toBe("Logo");
-      expect(image.props().width).toBe("420");
-      expect(image.props().height).toBe("42");
+      expect(image.props().src).toBe('http://…/assets/…');
+      expect(image.props().alt).toBe('Logo');
+      expect(image.props().width).toBe('420');
+      expect(image.props().height).toBe('42');
     });
   });
 });

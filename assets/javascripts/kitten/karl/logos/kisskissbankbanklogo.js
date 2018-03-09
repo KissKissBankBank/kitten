@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 export const KissKissBankBankLogo = ({ color, ...props }) => (
   <svg
@@ -18,5 +18,5 @@ export const KissKissBankBankLogo = ({ color, ...props }) => (
 );
 
 KissKissBankBankLogo.defaultProps = {
-  color: "#000"
+  color: '#000'
 };

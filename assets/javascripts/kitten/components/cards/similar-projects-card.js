@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import classNames from "classnames";
-import { SimilarProjectCard } from "kitten/components/cards/project-similar-card";
+import React, { Component } from 'react';
+import classNames from 'classnames';
+import { SimilarProjectCard } from 'kitten/components/cards/project-similar-card';
 
 export class SimilarProjectsCard extends Component {
   constructor() {

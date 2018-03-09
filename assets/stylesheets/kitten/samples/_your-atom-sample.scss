@@ -1,7 +1,7 @@
 // Your atom should be in kitten/atoms/your-atom-type/_atom-name.scss
 
-@import "kitten/schema";
-@import "kitten/atoms/your-atom-type/your-atom-schema";
+@import 'kitten/schema';
+@import 'kitten/atoms/your-atom-type/your-atom-schema';
 
 /// Describe your atom here for SassDoc.
 ///

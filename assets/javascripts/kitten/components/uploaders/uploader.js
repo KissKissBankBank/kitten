@@ -1,5 +1,5 @@
-import React from "react";
-import Dropzone from "react-dropzone";
+import React from 'react';
+import Dropzone from 'react-dropzone';
 
 export class Uploader extends React.Component {
   constructor(props) {
@@ -89,11 +89,11 @@ export class Uploader extends React.Component {
 
 Uploader.defaultProps = {
   name: null,
-  acceptedFiles: "image/*",
+  acceptedFiles: 'image/*',
   maxSize: null,
   fileName: null,
   theme: null,
-  buttonLabel: "Choose a file",
+  buttonLabel: 'Choose a file',
   onSuccess: () => {},
   onError: () => {},
   onReset: () => {},

@@ -15,20 +15,20 @@
 
 @mixin k-Switch {
   // Font
-  $font: "light";
+  $font: 'light';
   $font-step: 0;
   $line-height: normal;
   $font-step-big: 3;
 
   // Colors
-  $color: map-get($k-colors, "font-1");
-  $color-hover: map-get($k-colors, "primary-1");
-  $color-active: map-get($k-colors, "primary-3");
-  $background-color: map-get($k-colors, "background-1");
-  $background-color-checked: map-get($k-colors, "primary-1");
-  $background-color-disabled: map-get($k-colors, "line-2");
-  $border-color: map-get($k-colors, "line-1");
-  $border-color-hover: map-get($k-colors, "primary-1");
+  $color: map-get($k-colors, 'font-1');
+  $color-hover: map-get($k-colors, 'primary-1');
+  $color-active: map-get($k-colors, 'primary-3');
+  $background-color: map-get($k-colors, 'background-1');
+  $background-color-checked: map-get($k-colors, 'primary-1');
+  $background-color-disabled: map-get($k-colors, 'line-2');
+  $border-color: map-get($k-colors, 'line-1');
+  $border-color-hover: map-get($k-colors, 'primary-1');
 
   $switch-width: 50px;
   $switch-height: 25px;
@@ -72,7 +72,7 @@
       height: k-px-to-rem($switch-height);
       margin-right: k-px-to-rem(10px);
 
-      content: "";
+      content: '';
       background-color: $background-color;
       border: 1px solid $border-color;
       border-radius: k-px-to-rem($border-radius);
@@ -91,7 +91,7 @@
       width: k-px-to-rem($switch-height - $border-size * 2);
       height: k-px-to-rem($switch-height - $border-size * 2);
 
-      content: "";
+      content: '';
       background-color: $background-color;
       border: $border-size solid $border-color;
       border-radius: k-px-to-rem($switch-height);

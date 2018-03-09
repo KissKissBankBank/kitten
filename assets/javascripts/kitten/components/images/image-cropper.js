@@ -1,13 +1,13 @@
-import React from "react";
-import Cropper from "react-cropper";
-import { Marger } from "kitten/components/layout/marger";
-import { Grid, GridCol } from "kitten/components/grid/grid";
-import { Text } from "kitten/components/typography/text";
-import { Label } from "kitten/components/form/label";
-import { Paragraph } from "kitten/components/typography/paragraph";
-import { SimpleUploader } from "kitten/components/uploaders/simple-uploader";
-import { Slider } from "kitten/components/form/slider";
-import { domElementHelper } from "kitten/helpers/dom/element-helper";
+import React from 'react';
+import Cropper from 'react-cropper';
+import { Marger } from 'kitten/components/layout/marger';
+import { Grid, GridCol } from 'kitten/components/grid/grid';
+import { Text } from 'kitten/components/typography/text';
+import { Label } from 'kitten/components/form/label';
+import { Paragraph } from 'kitten/components/typography/paragraph';
+import { SimpleUploader } from 'kitten/components/uploaders/simple-uploader';
+import { Slider } from 'kitten/components/form/slider';
+import { domElementHelper } from 'kitten/helpers/dom/element-helper';
 
 export class ImageCropper extends React.Component {
   constructor(props) {
@@ -51,11 +51,11 @@ export class ImageCropper extends React.Component {
   componentDidMount() {
     this.setCropperHeight();
 
-    window.addEventListener("resize", this.setCropperHeight);
+    window.addEventListener('resize', this.setCropperHeight);
   }
 
   componentWillUnmount() {
-    window.removeEventListener("resize", this.setCropperHeight);
+    window.removeEventListener('resize', this.setCropperHeight);
   }
 
   handleUploaderSuccess(data) {
@@ -152,7 +152,7 @@ export class ImageCropper extends React.Component {
       width: this.state.cropperWidth,
       height: this.state.cropperHeight
     };
-    const dragMode = this.props.disabled ? "none" : "move";
+    const dragMode = this.props.disabled ? 'none' : 'move';
 
     return (
       <Marger top="2" key="cropper">
@@ -309,20 +309,20 @@ export class ImageCropper extends React.Component {
 }
 
 ImageCropper.defaultProps = {
-  name: "picture",
+  name: 'picture',
   imageSrc: null,
   fileName: null,
-  uploaderErrorLabel: "You have an error on upload.",
+  uploaderErrorLabel: 'You have an error on upload.',
   sliderMin: 0,
   sliderMax: 500,
   aspectRatio: 16 / 9,
   maxSize: 5 * 1024 * 1024, // 5 Mo.
-  acceptedFiles: ".jpg,.jpeg,.gif,.png",
-  label: "Lorem ipsum…",
-  cropperInfo: "Move the image…",
-  sliderTitle: "Zoom…",
-  buttonLabel: "Choose a file…",
-  description: "Lorem ipsum…",
+  acceptedFiles: '.jpg,.jpeg,.gif,.png',
+  label: 'Lorem ipsum…',
+  cropperInfo: 'Move the image…',
+  sliderTitle: 'Zoom…',
+  buttonLabel: 'Choose a file…',
+  description: 'Lorem ipsum…',
   disabled: false,
 
   onChange: _fileData => {}

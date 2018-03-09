@@ -1,6 +1,6 @@
-import React from "react";
-import classNames from "classnames";
-import { createMatchMediaMax } from "kitten/helpers/utils/media-queries";
+import React from 'react';
+import classNames from 'classnames';
+import { createMatchMediaMax } from 'kitten/helpers/utils/media-queries';
 
 export class Container extends React.PureComponent {
   constructor(props, context) {
@@ -35,8 +35,8 @@ export class Container extends React.PureComponent {
     const { className, fullWidthBelowScreenSize, ...props } = this.props;
     const { isBelowScreenSize } = this.state;
 
-    const containerClassName = classNames("k-Container", className, {
-      "k-Container--no-padding": isBelowScreenSize
+    const containerClassName = classNames('k-Container', className, {
+      'k-Container--no-padding': isBelowScreenSize
     });
 
     return <div className={containerClassName} {...props} />;

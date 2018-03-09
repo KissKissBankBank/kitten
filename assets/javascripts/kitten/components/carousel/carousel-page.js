@@ -1,6 +1,6 @@
-import React from "react";
-import Radium from "radium";
-import { createRangeFromZeroTo } from "kitten/helpers/utils/range";
+import React from 'react';
+import Radium from 'radium';
+import { createRangeFromZeroTo } from 'kitten/helpers/utils/range';
 
 class CarouselPageBase extends React.Component {
   render() {
@@ -37,8 +37,8 @@ class CarouselPageBase extends React.Component {
 
 const styles = {
   page: {
-    display: "flex",
-    flexDirection: "row"
+    display: 'flex',
+    flexDirection: 'row'
   },
   item: {
     flexGrow: 1,

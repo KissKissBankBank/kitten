@@ -1,10 +1,10 @@
-import React from "react";
-import PropTypes from "prop-types";
-import classNames from "classnames";
-import emitter from "kitten/helpers/utils/emitter";
-import { DropdownButton } from "kitten/components/dropdowns/dropdown-button";
-import domElementHelper from "kitten/helpers/dom/element-helper";
-import objectAssign from "core-js/library/fn/object/assign";
+import React from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
+import emitter from 'kitten/helpers/utils/emitter';
+import { DropdownButton } from 'kitten/components/dropdowns/dropdown-button';
+import domElementHelper from 'kitten/helpers/dom/element-helper';
+import objectAssign from 'core-js/library/fn/object/assign';
 
 export class Dropdown extends React.Component {
   constructor(props) {
@@ -34,7 +34,7 @@ export class Dropdown extends React.Component {
 
     this.handleClickOnLinks();
 
-    emitter.on("dropdown:opening:trigger", this.close);
+    emitter.on('dropdown:opening:trigger', this.close);
 
     if (this.props.refreshEvents) {
       this.props.refreshEvents.forEach(ev => {
@@ -64,7 +64,7 @@ export class Dropdown extends React.Component {
       });
     }
 
-    emitter.off("dropdown:opening:trigger", this.close);
+    emitter.off('dropdown:opening:trigger', this.close);
   }
 
   componentWillReceiveProps(nextProps) {
@@ -82,7 +82,7 @@ export class Dropdown extends React.Component {
 
   toggle(nextExpandedState) {
     if (nextExpandedState) {
-      emitter.emit("dropdown:opening:trigger", this);
+      emitter.emit('dropdown:opening:trigger', this);
     }
 
     this.props.onToggle();
@@ -93,11 +93,11 @@ export class Dropdown extends React.Component {
   }
 
   hasDefaultHorizontalPosition() {
-    return this.props.positionedOn == "left";
+    return this.props.positionedOn == 'left';
   }
 
   isSelfReference() {
-    return typeof this.props.positionedWith == "undefined";
+    return typeof this.props.positionedWith == 'undefined';
   }
 
   getReferenceElement() {
@@ -116,7 +116,7 @@ export class Dropdown extends React.Component {
   }
 
   getArrowPosition() {
-    const defaultPosition = { position: "absolute", top: 0 };
+    const defaultPosition = { position: 'absolute', top: 0 };
     const arrowHorizontalPosition = this.props.arrowHorizontalPosition;
 
     return objectAssign(defaultPosition, arrowHorizontalPosition);
@@ -132,18 +132,18 @@ export class Dropdown extends React.Component {
   // Component listener callbacks
 
   revertHandleClickOnLinks() {
-    const links = this.refs.dropdownContent.getElementsByTagName("a");
+    const links = this.refs.dropdownContent.getElementsByTagName('a');
 
     Array.prototype.forEach.call(links, link => {
-      link.removeEventListener("click", this.close);
+      link.removeEventListener('click', this.close);
     });
   }
 
   handleClickOnLinks() {
-    const links = this.refs.dropdownContent.getElementsByTagName("a");
+    const links = this.refs.dropdownContent.getElementsByTagName('a');
 
     Array.prototype.forEach.call(links, link => {
-      link.removeEventListener("click", this.close);
+      link.removeEventListener('click', this.close);
     });
   }
 
@@ -201,10 +201,10 @@ export class Dropdown extends React.Component {
   render() {
     const button = this.renderButton();
     const dropdownClassName = classNames(
-      "k-Dropdown",
+      'k-Dropdown',
       {
-        "is-expanded": this.state.isExpanded,
-        "k-Dropdown--asReference": this.isSelfReference()
+        'is-expanded': this.state.isExpanded,
+        'k-Dropdown--asReference': this.isSelfReference()
       },
       this.props.className
     );
@@ -243,15 +243,15 @@ Dropdown.defaultProps = {
   positionedWithBorder: true,
 
   // Fix the dropdown on the left or on the right.
-  positionedOn: "left", // 'left' | 'right'
+  positionedOn: 'left', // 'left' | 'right'
 
   // Custom horizontal position for content and content arrow.
-  contentHorizontalPosition: { left: "0" },
-  arrowHorizontalPosition: { left: "50%" },
+  contentHorizontalPosition: { left: '0' },
+  arrowHorizontalPosition: { left: '50%' },
 
   // Button settings
-  buttonContentOnExpanded: "Close me",
-  buttonContentOnCollapsed: "Expand me",
+  buttonContentOnExpanded: 'Close me',
+  buttonContentOnCollapsed: 'Expand me',
 
   // List of events that will trigger the update of the reference element
   // height.

@@ -1,9 +1,9 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 // Via "https://github.com/kenny-hibino/react-places-autocomplete"
 import PlacesAutocomplete, {
   geocodeByPlaceId
-} from "react-places-autocomplete";
-import { LocationIcon } from "kitten/components/icons/location-icon";
+} from 'react-places-autocomplete';
+import { LocationIcon } from 'kitten/components/icons/location-icon';
 
 // Make sure you include a script to the Google Maps places API.
 // For example:
@@ -47,11 +47,11 @@ export class LocationInput extends Component {
     } = this.props;
 
     const placesClassNames = {
-      root: "k-LocationInput__group",
-      input: "k-LocationInput__input",
-      autocompleteContainer: "k-LocationInput__autocomplete",
-      autocompleteItem: "k-LocationInput__autocompleteItem",
-      autocompleteItemActive: "k-LocationInput__autocompleteItem--active"
+      root: 'k-LocationInput__group',
+      input: 'k-LocationInput__input',
+      autocompleteContainer: 'k-LocationInput__autocomplete',
+      autocompleteItem: 'k-LocationInput__autocompleteItem',
+      autocompleteItemActive: 'k-LocationInput__autocompleteItem--active'
     };
 
     const autocompleteItem = ({ formattedSuggestion }) => (
@@ -59,7 +59,7 @@ export class LocationInput extends Component {
         <LocationIcon width="10px" height="16px" />
         <span className="k-LocationInput__autocompleteItem__mainText">
           {formattedSuggestion.mainText}
-        </span>{" "}
+        </span>{' '}
         <span className="k-LocationInput__autocompleteItem__secondaryText">
           {formattedSuggestion.secondaryText}
         </span>
@@ -94,5 +94,5 @@ export class LocationInput extends Component {
 LocationInput.defaultProps = {
   onChange: () => {},
   onSelect: () => {},
-  defaultValue: ""
+  defaultValue: ''
 };

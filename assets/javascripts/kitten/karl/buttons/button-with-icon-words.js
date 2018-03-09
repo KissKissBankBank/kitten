@@ -1,6 +1,6 @@
-import React from "react";
-import { Button } from "kitten/components/buttons/button";
-import { HeartIcon } from "kitten/components/icons/heart-icon";
+import React from 'react';
+import { Button } from 'kitten/components/buttons/button';
+import { HeartIcon } from 'kitten/components/icons/heart-icon';
 
 export const KarlButtonIconWordsLeft = props => (
   <Button icon {...props}>

@@ -1,5 +1,5 @@
-import React from "react";
-import classNames from "classnames";
+import React from 'react';
+import classNames from 'classnames';
 
 export class ExternalRichLink extends React.Component {
   constructor(props) {
@@ -8,7 +8,7 @@ export class ExternalRichLink extends React.Component {
 
   render() {
     const { className, ...rest } = this.props;
-    const linkClassName = classNames("k-ExternalRichLink", className);
+    const linkClassName = classNames('k-ExternalRichLink', className);
 
     return (
       <a className={linkClassName} {...rest}>
@@ -16,17 +16,17 @@ export class ExternalRichLink extends React.Component {
 
         <div
           className={classNames(
-            "k-ExternalRichLink__element",
-            "k-ExternalRichLink__element--animate"
+            'k-ExternalRichLink__element',
+            'k-ExternalRichLink__element--animate'
           )}
         >
           <span
             className={classNames(
-              "k-ButtonIcon",
-              "k-ButtonIcon--hydrogen",
-              "k-ButtonIcon--withoutHover",
-              "k-ButtonIcon--tiny",
-              "k-ButtonIcon--verticalArrow"
+              'k-ButtonIcon',
+              'k-ButtonIcon--hydrogen',
+              'k-ButtonIcon--withoutHover',
+              'k-ButtonIcon--tiny',
+              'k-ButtonIcon--verticalArrow'
             )}
           >
             <svg
@@ -45,8 +45,8 @@ export class ExternalRichLink extends React.Component {
 }
 
 ExternalRichLink.defaultProps = {
-  href: "#",
-  children: "I am a rich link!"
+  href: '#',
+  children: 'I am a rich link!'
 };
 
 // DEPRECATED: do not use default export.

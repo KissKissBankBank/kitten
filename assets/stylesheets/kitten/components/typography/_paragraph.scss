@@ -18,14 +18,14 @@
 
 @mixin k-Paragraph {
   // Font
-  $font: "light";
+  $font: 'light';
   $line-height: 1.6;
 
   // Link
-  $link-font: "regular";
-  $link-color: map-get($k-colors, "primary-1");
-  $link-hover-color: map-get($k-colors, "primary-2");
-  $link-active-color: map-get($k-colors, "primary-3");
+  $link-font: 'regular';
+  $link-color: map-get($k-colors, 'primary-1');
+  $link-hover-color: map-get($k-colors, 'primary-2');
+  $link-active-color: map-get($k-colors, 'primary-3');
 
   .k-Paragraph {
     @include k-typographyFont($font);

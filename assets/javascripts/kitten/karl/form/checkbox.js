@@ -1,5 +1,5 @@
-import React from "react";
-import { Checkbox } from "kitten/components/form/checkbox";
+import React from 'react';
+import { Checkbox } from 'kitten/components/form/checkbox';
 
 export const KarlCheckboxError = () => (
   <div className="k-TextInputWithInfo">

@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 // Via "https://github.com/luigiinred/react-ckeditor-wrapper"
-import CKEditor from "react-ckeditor-wrapper";
+import CKEditor from 'react-ckeditor-wrapper';
 
 // Make sure you include a script to React Ckeditor Wrapper.
 // For example:
@@ -44,20 +44,20 @@ export class RichTextInput extends React.Component {
 
 RichTextInput.defaultProps = {
   onChange: () => {},
-  content: "",
-  locale: "en",
+  content: '',
+  locale: 'en',
   config: {
-    removePlugins: "elementspath",
+    removePlugins: 'elementspath',
     resize_enabled: false
   },
   toolbar: [
     {
-      name: "basicstyles",
-      items: ["Bold", "Italic", "Underline", "Link", "Image"]
+      name: 'basicstyles',
+      items: ['Bold', 'Italic', 'Underline', 'Link', 'Image']
     },
     {
-      name: "clipboard",
-      items: ["Undo", "Redo"]
+      name: 'clipboard',
+      items: ['Undo', 'Redo']
     }
   ]
 };

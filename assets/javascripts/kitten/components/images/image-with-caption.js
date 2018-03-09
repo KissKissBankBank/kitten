@@ -1,12 +1,12 @@
-import React, { Component } from "react";
-import classNames from "classnames";
+import React, { Component } from 'react';
+import classNames from 'classnames';
 
 export class ImageWithCaption extends Component {
   renderCaption() {
     const { children, className, captionProps } = this.props;
 
     const figcaptionClassName = classNames(
-      "k-ImageWithCaption__caption",
+      'k-ImageWithCaption__caption',
       className
     );
 
@@ -43,9 +43,9 @@ export class ImageWithCaption extends Component {
 }
 
 ImageWithCaption.defaultProps = {
-  children: "Lorem ipsum dolor",
-  imageSrc: "https://placehold.it/300x400/caf4fe/caf4fe",
-  imageAlt: "",
+  children: 'Lorem ipsum dolor',
+  imageSrc: 'https://placehold.it/300x400/caf4fe/caf4fe',
+  imageAlt: '',
   imageWidth: null,
   imageHeight: null,
   captionProps: null

@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
-import { createMatchMediaMax } from "kitten/helpers/utils/media-queries";
-import { SCREEN_SIZE_XS, SCREEN_SIZE_M } from "kitten/constants/screen-config";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { createMatchMediaMax } from 'kitten/helpers/utils/media-queries';
+import { SCREEN_SIZE_XS, SCREEN_SIZE_M } from 'kitten/constants/screen-config';
 
 export const mediaQueries = (WrappedComponent, hocProps = {}) =>
   class extends Component {
@@ -22,12 +22,12 @@ export const mediaQueries = (WrappedComponent, hocProps = {}) =>
     }
 
     mobileMediaQueryEnabled = () =>
-      typeof hocProps.viewportIsMobile !== "undefined"
+      typeof hocProps.viewportIsMobile !== 'undefined'
         ? hocProps.viewportIsMobile
         : false;
 
     tabletOrLessMediaQueryEnabled = () =>
-      typeof hocProps.viewportIsTabletOrLess !== "undefined"
+      typeof hocProps.viewportIsTabletOrLess !== 'undefined'
         ? hocProps.viewportIsTabletOrLess
         : false;
 

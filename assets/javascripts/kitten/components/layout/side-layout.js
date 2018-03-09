@@ -1,12 +1,12 @@
-import React from "react";
-import classNames from "classnames";
-import bowser from "bowser";
+import React from 'react';
+import classNames from 'classnames';
+import bowser from 'bowser';
 import {
   SideGrid,
   SideGridContent,
   SideGridAside
-} from "kitten/components/grid/side-grid";
-import { Grid, GridCol } from "kitten/components/grid/grid";
+} from 'kitten/components/grid/side-grid';
+import { Grid, GridCol } from 'kitten/components/grid/grid';
 
 export class SideLayout extends React.Component {
   constructor(props) {
@@ -28,10 +28,10 @@ export class SideLayout extends React.Component {
   render() {
     const { className, ...sideGridProps } = this.props;
     const hasFluidLayout =
-      (className || "").search("k-VerticalGrid__fluid") != -1;
+      (className || '').search('k-VerticalGrid__fluid') != -1;
     const hasFullHeightLayout = hasFluidLayout && this.state.needsFullHeight;
     const sideLayoutClassName = classNames(className, {
-      "k-VerticalGrid__fullHeight": hasFullHeightLayout
+      'k-VerticalGrid__fullHeight': hasFullHeightLayout
     });
 
     return (
@@ -55,7 +55,7 @@ export class SideLayout extends React.Component {
 }
 
 SideLayout.defaultProps = {
-  children: "Children",
+  children: 'Children',
   // sidebar: renderOfWhatYouWant() // Content for aside grid
   // E.g: see assets/javascripts/kitten/karl/layout/side-layout.js
   sidebar: null

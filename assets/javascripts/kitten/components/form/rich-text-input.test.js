@@ -1,18 +1,18 @@
-import React from "react";
-import { RichTextInput } from "kitten/components/form/rich-text-input";
+import React from 'react';
+import { RichTextInput } from 'kitten/components/form/rich-text-input';
 
-describe("<RichTextInput />", () => {
-  describe("By default", () => {
+describe('<RichTextInput />', () => {
+  describe('By default', () => {
     const component = shallow(<RichTextInput />);
 
-    it("renders a div", () => {
-      expect(component.render().is("div")).toBe(true);
+    it('renders a div', () => {
+      expect(component.render().is('div')).toBe(true);
     });
   });
 
-  describe("with config prop", () => {
-    it("pass the config prop to <RichTextInput />", () => {
-      const locale = { locale: "fr" };
+  describe('with config prop', () => {
+    it('pass the config prop to <RichTextInput />', () => {
+      const locale = { locale: 'fr' };
       const component = shallow(<RichTextInput config={locale} />);
       const expectedProps = { config: locale };
 
@@ -20,12 +20,12 @@ describe("<RichTextInput />", () => {
     });
   });
 
-  describe("with toolbar prop", () => {
-    it("pass the toolbar prop to <RichTextInput />", () => {
+  describe('with toolbar prop', () => {
+    it('pass the toolbar prop to <RichTextInput />', () => {
       const toolbar = [
         {
-          name: "basicstyles",
-          items: ["Bold", "Italic", "Underline", "Link", "Image"]
+          name: 'basicstyles',
+          items: ['Bold', 'Italic', 'Underline', 'Link', 'Image']
         }
       ];
       const component = shallow(<RichTextInput toolbar={toolbar} />);

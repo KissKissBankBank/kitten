@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 export const Marger = ({ top, bottom, style, ...props }) => {
   const gutter = 10 / 16; // Transform 10 to .625 for have rem unit.

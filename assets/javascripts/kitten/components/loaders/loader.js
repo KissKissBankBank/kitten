@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import classNames from "classnames";
+import React, { Component } from 'react';
+import classNames from 'classnames';
 
 const Circle = ({ color, ...others }) => {
   const size = 5;
@@ -21,7 +21,7 @@ export class Loader extends Component {
 
     const Tag = tag;
 
-    const loaderClassName = classNames("k-Loader", className);
+    const loaderClassName = classNames('k-Loader', className);
 
     const circle = <Circle className="k-Loader__circle" color={color} />;
 
@@ -36,7 +36,7 @@ export class Loader extends Component {
 }
 
 Loader.defaultProps = {
-  tag: "div",
+  tag: 'div',
   className: null,
   color: null
 };

@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import classNames from "classnames";
+import React, { Component } from 'react';
+import classNames from 'classnames';
 
 export class InfoLines extends Component {
   constructor(props) {
@@ -15,7 +15,7 @@ export class InfoLines extends Component {
   renderInfo(element) {
     const { key, value, id, className, style, ...others } = element;
 
-    const infoClassName = classNames("k-InfoLines__line", className);
+    const infoClassName = classNames('k-InfoLines__line', className);
 
     const infoStyle = {
       ...style,
@@ -45,12 +45,12 @@ export class InfoLines extends Component {
     } = this.props;
 
     const infoLinesClassName = classNames(
-      "k-InfoLines",
+      'k-InfoLines',
       {
-        "k-InfoLines--withBorderRadius": withBorderRadius,
-        "k-InfoLines--withLeftRightBorder": withLeftRightBorder,
-        "k-InfoLines--withoutResponsive": withoutResponsive,
-        "k-InfoLines--withoutTopBottomBorder": withoutTopBottomBorder
+        'k-InfoLines--withBorderRadius': withBorderRadius,
+        'k-InfoLines--withLeftRightBorder': withLeftRightBorder,
+        'k-InfoLines--withoutResponsive': withoutResponsive,
+        'k-InfoLines--withoutTopBottomBorder': withoutTopBottomBorder
       },
       className
     );

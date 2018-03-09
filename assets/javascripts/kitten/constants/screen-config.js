@@ -1,9 +1,9 @@
-export const SCREEN_SIZE_XXS = "XXS";
-export const SCREEN_SIZE_XS = "XS";
-export const SCREEN_SIZE_S = "S";
-export const SCREEN_SIZE_M = "M";
-export const SCREEN_SIZE_L = "L";
-export const SCREEN_SIZE_XL = "XL";
+export const SCREEN_SIZE_XXS = 'XXS';
+export const SCREEN_SIZE_XS = 'XS';
+export const SCREEN_SIZE_S = 'S';
+export const SCREEN_SIZE_M = 'M';
+export const SCREEN_SIZE_L = 'L';
+export const SCREEN_SIZE_XL = 'XL';
 
 export const ScreenConfig = {
   [SCREEN_SIZE_XXS]: {

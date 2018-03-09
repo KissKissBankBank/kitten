@@ -1,38 +1,38 @@
-import React from "react";
-import renderer from "react-test-renderer";
-import { ArticleCard } from "kitten/components/cards/article-card";
+import React from 'react';
+import renderer from 'react-test-renderer';
+import { ArticleCard } from 'kitten/components/cards/article-card';
 
-describe("<ArticleCard />", () => {
+describe('<ArticleCard />', () => {
   let component;
 
-  describe("by default", () => {
+  describe('by default', () => {
     beforeEach(() => {
       component = renderer.create(<ArticleCard />).toJSON();
     });
 
-    it("matches with snapshot", () => {
+    it('matches with snapshot', () => {
       expect(component).toMatchSnapshot();
     });
   });
 
-  describe("with some props", () => {
+  describe('with some props', () => {
     beforeEach(() => {
       component = renderer
         .create(
           <ArticleCard
             href="#foobar"
             imageProps={{
-              src: "#image",
-              alt: "Image alt"
+              src: '#image',
+              alt: 'Image alt'
             }}
             avatarProps={{
-              src: "#avatar",
-              alt: "Avatar alt"
+              src: '#avatar',
+              alt: 'Avatar alt'
             }}
             ownerTitle="Custom title"
             ownerDescription="Custom description"
             titleProps={{
-              tag: "h4"
+              tag: 'h4'
             }}
             cardTitle="Custom title"
             cardSubTitle="Custom subtitle"
@@ -41,12 +41,12 @@ describe("<ArticleCard />", () => {
         .toJSON();
     });
 
-    it("matches with snapshot", () => {
+    it('matches with snapshot', () => {
       expect(component).toMatchSnapshot();
     });
   });
 
-  describe("with articleTitle and articleSubTitle props", () => {
+  describe('with articleTitle and articleSubTitle props', () => {
     beforeEach(() => {
       component = renderer
         .create(
@@ -58,12 +58,12 @@ describe("<ArticleCard />", () => {
         .toJSON();
     });
 
-    it("matches with snapshot", () => {
+    it('matches with snapshot', () => {
       expect(component).toMatchSnapshot();
     });
   });
 
-  describe("with ignored props", () => {
+  describe('with ignored props', () => {
     beforeEach(() => {
       component = renderer
         .create(
@@ -78,7 +78,7 @@ describe("<ArticleCard />", () => {
         .toJSON();
     });
 
-    it("matches with snapshot", () => {
+    it('matches with snapshot', () => {
       expect(component).toMatchSnapshot();
     });
   });

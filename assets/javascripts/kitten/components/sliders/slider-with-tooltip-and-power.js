@@ -1,7 +1,7 @@
-import React from "react";
-import { SliderBar } from "kitten/components/sliders/slider-bar";
-import { sliderKeyDownHandler } from "kitten/handlers/sliders/slider-key-down-handler";
-import { SliderTooltip } from "kitten/components/sliders/slider-tooltip";
+import React from 'react';
+import { SliderBar } from 'kitten/components/sliders/slider-bar';
+import { sliderKeyDownHandler } from 'kitten/handlers/sliders/slider-key-down-handler';
+import { SliderTooltip } from 'kitten/components/sliders/slider-tooltip';
 
 export class SliderWithTooltipAndPower extends React.Component {
   constructor(props) {
@@ -90,7 +90,7 @@ export class SliderWithTooltipAndPower extends React.Component {
       <div>
         <SliderTooltip
           className={this.props.tooltipClass}
-          percentage={this.ratio() * 100 + "%"}
+          percentage={this.ratio() * 100 + '%'}
         >
           {this.props.tooltipText}
         </SliderTooltip>

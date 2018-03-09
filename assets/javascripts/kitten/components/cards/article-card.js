@@ -1,5 +1,5 @@
-import React from "react";
-import { CrowdfundingCard } from "kitten/components/cards/crowdfunding-card";
+import React from 'react';
+import { CrowdfundingCard } from 'kitten/components/cards/crowdfunding-card';
 
 export const ArticleCard = ({ articleTitle, articleSubTitle, ...props }) => (
   <CrowdfundingCard

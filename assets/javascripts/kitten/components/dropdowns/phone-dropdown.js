@@ -1,11 +1,11 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { Dropdown } from "kitten/components/dropdowns/dropdown";
-import { DropdownButton } from "kitten/components/dropdowns/dropdown-button";
-import domElementHelper from "kitten/helpers/dom/element-helper";
-import objectAssign from "core-js/library/fn/object/assign";
-import emitter from "kitten/helpers/utils/emitter";
-import classNames from "classnames";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Dropdown } from 'kitten/components/dropdowns/dropdown';
+import { DropdownButton } from 'kitten/components/dropdowns/dropdown-button';
+import domElementHelper from 'kitten/helpers/dom/element-helper';
+import objectAssign from 'core-js/library/fn/object/assign';
+import emitter from 'kitten/helpers/utils/emitter';
+import classNames from 'classnames';
 
 export class PhoneDropdown extends React.Component {
   constructor(props) {
@@ -15,7 +15,7 @@ export class PhoneDropdown extends React.Component {
       isExpanded: false,
       contentPosition: { top: 0, left: 0 },
       arrowPosition: { top: 0, left: 0 },
-      positionOn: "right"
+      positionOn: 'right'
     };
 
     this.handleButtonClick = this.handleButtonClick.bind(this);
@@ -28,8 +28,8 @@ export class PhoneDropdown extends React.Component {
   componentDidMount() {
     this.handlePositionUpdate();
 
-    emitter.on("dropdown:opening:trigger", this.handleOtherDropdownsOpening);
-    emitter.on("element:update", this.handlePositionUpdate);
+    emitter.on('dropdown:opening:trigger', this.handleOtherDropdownsOpening);
+    emitter.on('element:update', this.handlePositionUpdate);
 
     if (this.props.closeEvents) {
       this.props.closeEvents.forEach(ev => {
@@ -45,18 +45,18 @@ export class PhoneDropdown extends React.Component {
       });
     }
 
-    emitter.off("dropdown:opening:trigger", this.handleOtherDropdownsOpening);
-    emitter.off("element:update", this.handlePositionUpdate);
+    emitter.off('dropdown:opening:trigger', this.handleOtherDropdownsOpening);
+    emitter.off('element:update', this.handlePositionUpdate);
   }
 
   // Component methods.
 
   getButtonId() {
-    return "k-PhoneDropdown";
+    return 'k-PhoneDropdown';
   }
 
   canComputeSize() {
-    return typeof this.refs.dropdown != "undefined";
+    return typeof this.refs.dropdown != 'undefined';
   }
 
   getDropdownContentElement() {
@@ -99,10 +99,10 @@ export class PhoneDropdown extends React.Component {
 
     if (window.innerWidth < space + this.getDropdownContentElementWidth()) {
       return {
-        left: window.innerWidth - this.getDropdownContentElementWidth() + "px"
+        left: window.innerWidth - this.getDropdownContentElementWidth() + 'px'
       };
     } else {
-      return { left: space + "px" };
+      return { left: space + 'px' };
     }
   }
 
@@ -115,14 +115,14 @@ export class PhoneDropdown extends React.Component {
     const space =
       this.getDropdownButtonPositionLeft() - contentHorizontalPositionValue;
 
-    return { left: space + "px" };
+    return { left: space + 'px' };
   }
 
   getDropdownButton() {
     const buttonClassName = classNames(
-      "k-ButtonIcon",
-      "k-ButtonIcon--hydrogen",
-      "k-ButtonIcon--phone",
+      'k-ButtonIcon',
+      'k-ButtonIcon--hydrogen',
+      'k-ButtonIcon--phone',
       this.props.buttonClassName
     );
 
@@ -228,7 +228,7 @@ PhoneDropdown.defaultProps = {
   positionedWithBorder: false,
 
   // Button classes.
-  buttonClassName: "",
+  buttonClassName: '',
 
   // Add custom value to compute horizontal position.
   spaceAroundGrid: 0,

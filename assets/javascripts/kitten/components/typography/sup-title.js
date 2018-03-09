@@ -1,11 +1,11 @@
-import React, { Component } from "react";
-import classNames from "classnames";
+import React, { Component } from 'react';
+import classNames from 'classnames';
 
 export class SupTitle extends Component {
   render() {
     const { className, tag, ...supTitleProps } = this.props;
 
-    const supTitleClassName = classNames("k-SupTitle", className);
+    const supTitleClassName = classNames('k-SupTitle', className);
 
     const Tag = tag;
 
@@ -14,6 +14,6 @@ export class SupTitle extends Component {
 }
 
 SupTitle.defaultProps = {
-  tag: "div",
-  children: "Lorem ipsum"
+  tag: 'div',
+  children: 'Lorem ipsum'
 };

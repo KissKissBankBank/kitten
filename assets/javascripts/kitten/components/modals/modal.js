@@ -1,8 +1,8 @@
-import React, { Component } from "react";
-import classNames from "classnames";
+import React, { Component } from 'react';
+import classNames from 'classnames';
 // Via "https://github.com/reactjs/react-modal"
-import ReactModal from "react-modal";
-import { CloseButton } from "kitten/components/buttons/close-button";
+import ReactModal from 'react-modal';
+import { CloseButton } from 'kitten/components/buttons/close-button';
 
 export class Modal extends Component {
   constructor(props) {
@@ -47,7 +47,7 @@ export class Modal extends Component {
   render() {
     const { trigger, content, label, className, ...others } = this.props;
 
-    const triggerClassNames = classNames("k-Modal", className);
+    const triggerClassNames = classNames('k-Modal', className);
 
     return (
       <div className={triggerClassNames} {...others}>
@@ -55,14 +55,14 @@ export class Modal extends Component {
 
         <ReactModal
           className={{
-            base: "k-Modal__content",
-            afterOpen: "k-Modal--afterOpen",
-            beforeClose: "k-Modal--beforeClose"
+            base: 'k-Modal__content',
+            afterOpen: 'k-Modal--afterOpen',
+            beforeClose: 'k-Modal--beforeClose'
           }}
           overlayClassName={{
-            base: "k-Modal__overlay",
-            afterOpen: "k-Modal__overlay--afterOpen",
-            beforeClose: "k-Modal__overlay--beforeClose"
+            base: 'k-Modal__overlay',
+            afterOpen: 'k-Modal__overlay--afterOpen',
+            beforeClose: 'k-Modal__overlay--beforeClose'
           }}
           isOpen={this.state.showModal}
           onRequestClose={this.close}
@@ -78,5 +78,5 @@ export class Modal extends Component {
 }
 
 Modal.defaultProps = {
-  label: "Modal"
+  label: 'Modal'
 };

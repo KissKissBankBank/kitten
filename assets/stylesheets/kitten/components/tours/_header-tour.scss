@@ -13,7 +13,7 @@
   .k-HeaderTour {
     display: none;
 
-    @include k-media-min("l") {
+    @include k-media-min('l') {
       display: block;
     }
 

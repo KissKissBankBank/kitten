@@ -1,8 +1,8 @@
-import React from "react";
-import classNames from "classnames";
-import { Alert } from "kitten/components/notifications/alert";
-import { Button } from "kitten/components/buttons/button";
-import Markdown from "react-markdown";
+import React from 'react';
+import classNames from 'classnames';
+import { Alert } from 'kitten/components/notifications/alert';
+import { Button } from 'kitten/components/buttons/button';
+import Markdown from 'react-markdown';
 
 // TODO: make helper to manage class.
 const markdownRenderers = {
@@ -15,7 +15,7 @@ const markdownRenderers = {
   Link: props => {
     return (
       <a
-        className={classNames("k-Alert__link", "k-Alert__strong")}
+        className={classNames('k-Alert__link', 'k-Alert__strong')}
         href={props.href}
       >
         {props.children}
@@ -29,13 +29,13 @@ const markdownRenderers = {
 
 const markdownExample =
   "It's very easy to make some words **bold** and " +
-  "other words *italic* with Markdown.\n\nYou can even " +
-  "[link to components!](#)\n\n" +
-  "Sometimes you want numbered lists:\n\n" +
-  "1. One\n2. Two\n3. Three\n\nSometimes you want bullet points:\n\n" +
-  "* Start a line with a star\n* Profit!\n\nAlternatively,\n\n" +
-  "- Dashes work just as well\n- And if you have sub points, put two spaces " +
-  "before the dash or star:\n\t- Like this\n\t- And this";
+  'other words *italic* with Markdown.\n\nYou can even ' +
+  '[link to components!](#)\n\n' +
+  'Sometimes you want numbered lists:\n\n' +
+  '1. One\n2. Two\n3. Three\n\nSometimes you want bullet points:\n\n' +
+  '* Start a line with a star\n* Profit!\n\nAlternatively,\n\n' +
+  '- Dashes work just as well\n- And if you have sub points, put two spaces ' +
+  'before the dash or star:\n\t- Like this\n\t- And this';
 
 export const KarlAlert = props => {
   return (

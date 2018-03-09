@@ -1,6 +1,6 @@
-import React from "react";
-import classNames from "classnames";
-import { HeaderItem } from "kitten/components/headers/header";
+import React from 'react';
+import classNames from 'classnames';
+import { HeaderItem } from 'kitten/components/headers/header';
 
 export class HeaderTitles extends React.Component {
   renderSubtitle() {
@@ -9,7 +9,7 @@ export class HeaderTitles extends React.Component {
     return (
       <p
         className={classNames(
-          "k-Header__subtitle",
+          'k-Header__subtitle',
           this.props.subtitleClassName
         )}
       >
@@ -30,10 +30,10 @@ export class HeaderTitles extends React.Component {
 
     return (
       <HeaderItem
-        className={classNames("k-Header__titles", className)}
+        className={classNames('k-Header__titles', className)}
         {...headerItemProps}
       >
-        <p className={classNames("k-Header__title", titleClassName)}>{title}</p>
+        <p className={classNames('k-Header__title', titleClassName)}>{title}</p>
         {this.renderSubtitle()}
       </HeaderItem>
     );
@@ -41,7 +41,7 @@ export class HeaderTitles extends React.Component {
 }
 
 HeaderTitles.defaultProps = {
-  title: "You forgot the title!",
+  title: 'You forgot the title!',
   subtitle: null,
   className: null,
   titleClassName: null,

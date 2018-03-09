@@ -1,12 +1,12 @@
-import React, { Component } from "react";
-import classNames from "classnames";
-import { card } from "kitten/hoc/card";
-import { Grid, GridCol } from "kitten/components/grid/grid";
-import { Marger } from "kitten/components/layout/marger";
-import { Title } from "kitten/components/typography/title";
-import { Text } from "kitten/components/typography/text";
-import { parseHtml } from "kitten/helpers/utils/parser";
-import { HorizontalStroke } from "kitten/components/layout/horizontal-stroke";
+import React, { Component } from 'react';
+import classNames from 'classnames';
+import { card } from 'kitten/hoc/card';
+import { Grid, GridCol } from 'kitten/components/grid/grid';
+import { Marger } from 'kitten/components/layout/marger';
+import { Title } from 'kitten/components/typography/title';
+import { Text } from 'kitten/components/typography/text';
+import { parseHtml } from 'kitten/helpers/utils/parser';
+import { HorizontalStroke } from 'kitten/components/layout/horizontal-stroke';
 
 class SimpleCardComponent extends Component {
   render() {
@@ -19,9 +19,9 @@ class SimpleCardComponent extends Component {
       ...others
     } = this.props;
 
-    const Tag = this.props.href ? "a" : "div";
+    const Tag = this.props.href ? 'a' : 'div';
 
-    const titleClassName = classNames("k-Card__title", titleProps.className);
+    const titleClassName = classNames('k-Card__title', titleProps.className);
 
     return (
       <Tag {...others}>
@@ -73,15 +73,15 @@ class SimpleCardComponent extends Component {
 
 const styles = {
   image: {
-    width: "100%",
-    display: "block"
+    width: '100%',
+    display: 'block'
   }
 };
 
 SimpleCardComponent.defaultProps = {
   imageProps: {
-    src: "https://placehold.it/200x200/caf4fe/caf4fe",
-    alt: ""
+    src: 'https://placehold.it/200x200/caf4fe/caf4fe',
+    alt: ''
   },
   titleProps: {},
   title: null,

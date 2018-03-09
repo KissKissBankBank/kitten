@@ -1,15 +1,15 @@
-import React, { Component, Fragment } from "react";
-import classNames from "classnames";
-import Radium, { StyleRoot } from "radium";
-import { card } from "kitten/hoc/card";
-import { Marger as MargerBase } from "kitten/components/layout/marger";
-import { Title as TitleBase } from "kitten/components/typography/title";
-import { Text as TextBase } from "kitten/components/typography/text";
-import { HorizontalStroke as HorizontalStrokeBase } from "kitten/components/layout/horizontal-stroke";
-import { ButtonImage } from "kitten/components/buttons/button-image";
-import { Progress } from "kitten/components/meters/progress";
-import COLORS from "kitten/constants/colors-config";
-import Truncate from "react-truncate";
+import React, { Component, Fragment } from 'react';
+import classNames from 'classnames';
+import Radium, { StyleRoot } from 'radium';
+import { card } from 'kitten/hoc/card';
+import { Marger as MargerBase } from 'kitten/components/layout/marger';
+import { Title as TitleBase } from 'kitten/components/typography/title';
+import { Text as TextBase } from 'kitten/components/typography/text';
+import { HorizontalStroke as HorizontalStrokeBase } from 'kitten/components/layout/horizontal-stroke';
+import { ButtonImage } from 'kitten/components/buttons/button-image';
+import { Progress } from 'kitten/components/meters/progress';
+import COLORS from 'kitten/constants/colors-config';
+import Truncate from 'react-truncate';
 
 const Text = Radium(TextBase);
 const Title = Radium(TitleBase);
@@ -41,7 +41,7 @@ class CrowdfundingCardComponent extends Component {
       ...others
     } = this.props;
 
-    const Tag = this.props.href ? "a" : "div";
+    const Tag = this.props.href ? 'a' : 'div';
 
     return (
       <StyleRoot>
@@ -66,14 +66,14 @@ class CrowdfundingCardComponent extends Component {
   renderImage() {
     const { alt, ...imageProps } = this.props.imageProps;
 
-    const imageClassName = classNames("k-Card__image", imageProps.className);
+    const imageClassName = classNames('k-Card__image', imageProps.className);
 
     return (
       <Marger className="k-Card__imageContainer" style={styles.imageContainer}>
         {!this.props.loading && (
           <img
             {...imageProps}
-            alt={alt || ""}
+            alt={alt || ''}
             className={imageClassName}
             style={{ ...imageProps.style, ...styles.image }}
           />
@@ -115,7 +115,7 @@ class CrowdfundingCardComponent extends Component {
 
   renderTitle() {
     const className = classNames(
-      "k-Card__title",
+      'k-Card__title',
       this.props.titleProps.className
     );
 
@@ -226,9 +226,9 @@ class CrowdfundingCardComponent extends Component {
       <Marger top="1.5" bottom="2" style={styles.progress}>
         <Progress
           value={progressValue}
-          className={this.props.loading && "is-disabled"}
+          className={this.props.loading && 'is-disabled'}
           rampProps={{
-            style: { height: "4px" }
+            style: { height: '4px' }
           }}
         />
       </Marger>
@@ -257,34 +257,34 @@ class CrowdfundingCardComponent extends Component {
 const COMPONENT_GUTTER = 10;
 
 const loadingKeyframes = Radium.keyframes({
-  "0%": { transform: "translateX(-100%)" },
-  "100%": { transform: "translateX(100%)" }
+  '0%': { transform: 'translateX(-100%)' },
+  '100%': { transform: 'translateX(100%)' }
 });
 
 const styles = {
   card: {
-    position: "relative",
-    paddingBottom: "10px"
+    position: 'relative',
+    paddingBottom: '10px'
   },
   imageContainer: {
-    overflow: "hidden",
-    position: "relative",
+    overflow: 'hidden',
+    position: 'relative',
     paddingTop: `${9 / 16 * 100}%`,
     backgroundColor: COLORS.line2
   },
   image: {
-    position: "absolute",
+    position: 'absolute',
     top: 0,
-    width: "100%",
-    display: "block"
+    width: '100%',
+    display: 'block'
   },
   header: {
     grid: {
-      display: "inline-flex",
-      alignItems: "center",
-      position: "relative",
-      top: "0",
-      marginTop: "-30px",
+      display: 'inline-flex',
+      alignItems: 'center',
+      position: 'relative',
+      top: '0',
+      marginTop: '-30px',
       backgroundColor: COLORS.background1
     },
     avatar: {
@@ -294,58 +294,58 @@ const styles = {
     owner: {
       marginLeft: `${COMPONENT_GUTTER}px`,
       marginRight: `${COMPONENT_GUTTER * 2}px`,
-      lineHeight: "1.2",
+      lineHeight: '1.2',
 
       titleLoading: {
         backgroundColor: COLORS.line2,
         borderBottom: `1px solid ${COLORS.background1}`,
-        width: "70px",
-        height: "14px"
+        width: '70px',
+        height: '14px'
       },
 
       descriptionLoading: {
         backgroundColor: COLORS.line2,
         borderTop: `1px solid ${COLORS.background1}`,
-        width: "100px",
-        height: "14px"
+        width: '100px',
+        height: '14px'
       }
     }
   },
   titles: {
-    minHeight: "70px"
+    minHeight: '70px'
   },
   title: {
     padding: `0 ${COMPONENT_GUTTER}px`,
-    lineHeight: "1",
+    lineHeight: '1',
 
     truncate: {
-      whiteSpace: "nowrap"
+      whiteSpace: 'nowrap'
     },
 
     loading: {
-      display: "block",
+      display: 'block',
       backgroundColor: COLORS.line2,
       borderBottom: `1px solid ${COLORS.background1}`,
-      height: "24px",
+      height: '24px',
 
       small: {
-        width: "70%",
+        width: '70%',
         borderTop: `1px solid ${COLORS.background1}`,
         borderBottom: 0
       }
     }
   },
   subtitle: {
-    display: "flex",
-    alignItems: "center",
-    lineHeight: "1",
+    display: 'flex',
+    alignItems: 'center',
+    lineHeight: '1',
     padding: `0 ${COMPONENT_GUTTER}px`,
 
     loading: {
-      display: "block",
+      display: 'block',
       backgroundColor: COLORS.line2,
-      width: "80px",
-      height: "12px"
+      width: '80px',
+      height: '12px'
     }
   },
   stroke: {
@@ -356,27 +356,27 @@ const styles = {
     }
   },
   informations: {
-    display: "flex",
-    flexWrap: "wrap",
+    display: 'flex',
+    flexWrap: 'wrap',
     padding: `0 ${COMPONENT_GUTTER}px`,
-    lineHeight: "1",
+    lineHeight: '1',
 
     info: {
-      marginRight: "30px",
+      marginRight: '30px',
 
       lastItem: {
         marginRight: 0
       },
 
       loading: {
-        display: "block",
+        display: 'block',
         backgroundColor: COLORS.line2,
         borderBottom: `1px solid ${COLORS.background1}`,
-        width: "40px",
-        height: "16px",
+        width: '40px',
+        height: '16px',
 
         large: {
-          width: "65px",
+          width: '65px',
           borderTop: `1px solid ${COLORS.background1}`,
           borderBottom: 0
         }
@@ -387,27 +387,27 @@ const styles = {
     padding: `0 ${COMPONENT_GUTTER}px`
   },
   state: {
-    position: "absolute",
-    top: "0",
-    right: "0",
-    display: "inline-flex",
-    alignItems: "center",
+    position: 'absolute',
+    top: '0',
+    right: '0',
+    display: 'inline-flex',
+    alignItems: 'center',
     backgroundColor: COLORS.background1,
     padding: `${COMPONENT_GUTTER}px`,
-    lineHeight: "1"
+    lineHeight: '1'
   },
 
   loading: {
-    position: "absolute",
+    position: 'absolute',
     top: 0,
     bottom: 0,
     left: 0,
     right: 0,
-    transform: "translateX(-100%)",
+    transform: 'translateX(-100%)',
     background:
-      "linear-gradient(90deg, rgba(0, 0, 0, 0), \
-      rgba(255, 255, 255, .3), rgba(0, 0, 0, 0))",
-    animation: "x 1s linear infinite",
+      'linear-gradient(90deg, rgba(0, 0, 0, 0), \
+      rgba(255, 255, 255, .3), rgba(0, 0, 0, 0))',
+    animation: 'x 1s linear infinite',
     animationName: loadingKeyframes
   }
 };
@@ -415,12 +415,12 @@ const styles = {
 CrowdfundingCardComponent.defaultProps = {
   href: null,
   imageProps: {
-    src: "https://placehold.it/350x200/caf4fe/caf4fe",
-    alt: ""
+    src: 'https://placehold.it/350x200/caf4fe/caf4fe',
+    alt: ''
   },
   avatarProps: {
-    src: "https://placehold.it/100x100/caf4fe/caf4fe",
-    alt: ""
+    src: 'https://placehold.it/100x100/caf4fe/caf4fe',
+    alt: ''
   },
   ownerTitle: null,
   ownerDescription: null,

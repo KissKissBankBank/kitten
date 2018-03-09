@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 // See also https://github.com/blog/273-github-ribbons
 

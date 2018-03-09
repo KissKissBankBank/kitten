@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
-import classNames from "classnames";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
 export class RadioButton extends Component {
   renderContent() {
@@ -8,8 +8,8 @@ export class RadioButton extends Component {
 
     if (!children) return;
 
-    const labelContentsClassNames = classNames("k-RadioButton__labelContents", {
-      "k-RadioButton__labelContents--large": largeContent
+    const labelContentsClassNames = classNames('k-RadioButton__labelContents', {
+      'k-RadioButton__labelContents--large': largeContent
     });
     return <div className={labelContentsClassNames}>{children}</div>;
   }
@@ -18,9 +18,9 @@ export class RadioButton extends Component {
     const { children, id, large, text } = this.props;
 
     const radioButtonLabelClassNames = classNames(
-      "k-RadioButton__label",
-      { "k-RadioButton__label--large": large },
-      { "k-RadioButton__label--withContents": !!children }
+      'k-RadioButton__label',
+      { 'k-RadioButton__label--large': large },
+      { 'k-RadioButton__label--withContents': !!children }
     );
 
     return (
@@ -44,13 +44,13 @@ export class RadioButton extends Component {
     } = this.props;
 
     const radioButtonInputClassNames = classNames(
-      "k-RadioButton__input",
+      'k-RadioButton__input',
       inputClassName,
-      { "is-error": error }
+      { 'is-error': error }
     );
 
     return (
-      <div className={classNames("k-RadioButton", className)}>
+      <div className={classNames('k-RadioButton', className)}>
         <input
           id={id}
           type="radio"

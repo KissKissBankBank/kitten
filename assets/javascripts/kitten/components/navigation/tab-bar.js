@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import classNames from "classnames";
-import Markdown from "react-markdown";
+import React, { Component } from 'react';
+import classNames from 'classnames';
+import Markdown from 'react-markdown';
 
 export class TabBar extends Component {
   renderItems() {
@@ -12,8 +12,8 @@ export class TabBar extends Component {
   renderItem(item, key) {
     const { className, selected, text, ...linkProps } = item;
 
-    const itemClassName = classNames("k-TabBar__item", className, {
-      "is-selected": selected
+    const itemClassName = classNames('k-TabBar__item', className, {
+      'is-selected': selected
     });
 
     return (
@@ -29,11 +29,11 @@ export class TabBar extends Component {
     return (
       <div
         id={this.props.id}
-        className={classNames("k-TabBar", this.props.className)}
+        className={classNames('k-TabBar', this.props.className)}
       >
-        <nav className={classNames("k-TabBar__nav", this.props.navClassName)}>
+        <nav className={classNames('k-TabBar__nav', this.props.navClassName)}>
           <ul
-            className={classNames("k-TabBar__list", this.props.listClassName)}
+            className={classNames('k-TabBar__list', this.props.listClassName)}
           >
             {this.renderItems()}
           </ul>

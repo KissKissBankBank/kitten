@@ -1,17 +1,17 @@
-import React from "react";
-import Radium, { Style } from "radium";
-import ResizeObserver from "resize-observer-polyfill";
+import React from 'react';
+import Radium, { Style } from 'radium';
+import ResizeObserver from 'resize-observer-polyfill';
 
-if (typeof window !== "undefined") {
-  require("smoothscroll-polyfill").polyfill();
+if (typeof window !== 'undefined') {
+  require('smoothscroll-polyfill').polyfill();
 }
 
-import { createRangeFromZeroTo } from "kitten/helpers/utils/range";
-import { cssSupports } from "kitten/helpers/utils/feature-detection";
-import { CarouselPage } from "kitten/components/carousel/carousel-page";
+import { createRangeFromZeroTo } from 'kitten/helpers/utils/range';
+import { cssSupports } from 'kitten/helpers/utils/feature-detection';
+import { CarouselPage } from 'kitten/components/carousel/carousel-page';
 
-const supportScrollSnap = cssSupports("scroll-snap-type: mandatory");
-const supportScrollSmooth = cssSupports("scroll-behavior: smooth");
+const supportScrollSnap = cssSupports('scroll-snap-type: mandatory');
+const supportScrollSmooth = cssSupports('scroll-behavior: smooth');
 
 // inspired by https://github.com/cferdinandi/scrollStop
 const scrollStop = callback => {
@@ -121,7 +121,7 @@ class CarouselInnerBase extends React.Component {
       // if the user doesn't scroll enough to change page
       // we need to scroll back to the fake snap page
       if (closest !== scrollLeft) {
-        target.scrollTo({ top: 0, left: closest, behavior: "smooth" });
+        target.scrollTo({ top: 0, left: closest, behavior: 'smooth' });
       }
     }
   });
@@ -142,7 +142,7 @@ class CarouselInnerBase extends React.Component {
     const closest = rangePageScrollLeft[indexPageToScroll];
 
     if (closest !== scrollLeft) {
-      target.scrollTo({ top: 0, left: closest, behavior: "smooth" });
+      target.scrollTo({ top: 0, left: closest, behavior: 'smooth' });
     }
   };
 
@@ -206,7 +206,7 @@ class CarouselInnerBase extends React.Component {
         {/* hide scrollbar on Chrome and Safari */}
         <Style
           scopeSelector=".k-CarouselInner::-webkit-scrollbar"
-          rules={{ display: "none" }}
+          rules={{ display: 'none' }}
         />
       </div>
     );
@@ -215,24 +215,24 @@ class CarouselInnerBase extends React.Component {
 
 const styles = {
   carouselInner: {
-    display: "flex",
-    flexDirect: "row",
-    overflowX: "scroll",
-    scrollBehavior: "smooth",
+    display: 'flex',
+    flexDirect: 'row',
+    overflowX: 'scroll',
+    scrollBehavior: 'smooth',
     // hide scrollbar on IE and Edge
-    MsOverflowStyle: "none",
+    MsOverflowStyle: 'none',
     // mandatory to combine scroll with this property on iOS
-    WebkitOverflowScrolling: "touch",
+    WebkitOverflowScrolling: 'touch',
     // snap only for browser that support snap without prefixes
-    scrollSnapType: supportScrollSnap ? "mandatory" : "none",
+    scrollSnapType: supportScrollSnap ? 'mandatory' : 'none',
     // Fix bug IE11 ResizeObserver, to trigger a first resize
     minHeight: 1
   },
   carouselPageContainer: {
-    width: "100%",
+    width: '100%',
     flexShrink: 0,
     // snap only for browser that support snap without prefixes
-    scrollSnapAlign: supportScrollSnap ? "center" : "none"
+    scrollSnapAlign: supportScrollSnap ? 'center' : 'none'
   }
 };
 

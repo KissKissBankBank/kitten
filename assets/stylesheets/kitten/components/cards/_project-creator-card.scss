@@ -28,13 +28,13 @@
 ///   </div>
 
 @mixin k-ProjectCreatorCard {
-  $date-font: "light";
+  $date-font: 'light';
   $date-size: -3; // 11px
 
-  $link-font: "regular";
+  $link-font: 'regular';
   $link-size: -1; // 14px
 
-  $status-font: "regular";
+  $status-font: 'regular';
   $status-size: -3; // 11px
 
   $status-icon-size: k-px-to-rem(10px);
@@ -77,13 +77,13 @@
   .k-ProjectCreatorCard__link {
     display: block;
     text-decoration: none;
-    color: map-get($k-colors, "font-1");
+    color: map-get($k-colors, 'font-1');
 
     @include k-typographyFont($link-font);
     @include k-typographyFontSize($link-size);
 
     &:hover {
-      background-color: map-get($k-colors, "background-2");
+      background-color: map-get($k-colors, 'background-2');
     }
   }
 

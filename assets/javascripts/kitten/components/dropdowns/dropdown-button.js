@@ -1,11 +1,11 @@
-import React from "react";
-import PropTypes from "prop-types";
-import classNames from "classnames";
+import React from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
 export class DropdownButton extends React.Component {
   render() {
     const { className, isExpanded, ...rest } = this.props;
-    const buttonClassName = classNames("k-Dropdown__button", className);
+    const buttonClassName = classNames('k-Dropdown__button', className);
 
     return (
       <button
@@ -25,7 +25,7 @@ DropdownButton.propTypes = {
 };
 
 DropdownButton.defaultProps = {
-  children: "Toggle button",
+  children: 'Toggle button',
   onClick: () => {},
   isExpanded: false
 };

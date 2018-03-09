@@ -1,12 +1,12 @@
-import React from "react";
-import classNames from "classnames";
+import React from 'react';
+import classNames from 'classnames';
 
 export class Header extends React.Component {
   render() {
     const { className, children, fixed, ...other } = this.props;
     const headerClassName = classNames(
-      "k-Header",
-      { "is-fixed": fixed },
+      'k-Header',
+      { 'is-fixed': fixed },
       className
     );
 
@@ -24,8 +24,8 @@ export class HeaderItems extends React.Component {
   render() {
     const { className, fixedSize, ...other } = this.props;
     const itemsClassName = classNames(
-      "k-Header__items",
-      { "k-Header__items--fixedSize": fixedSize },
+      'k-Header__items',
+      { 'k-Header__items--fixedSize': fixedSize },
       className
     );
 
@@ -38,10 +38,10 @@ export class HeaderItem extends React.Component {
     const { className, fixedSize, centered, tag, ...other } = this.props;
     const Tag = tag;
     const itemClassName = classNames(
-      "k-Header__item",
+      'k-Header__item',
       {
-        "k-Header__item--fixedSize": fixedSize,
-        "k-Header__item--centered": centered
+        'k-Header__item--fixedSize': fixedSize,
+        'k-Header__item--centered': centered
       },
       className
     );
@@ -59,7 +59,7 @@ HeaderItems.defaultProps = {
 };
 
 HeaderItem.defaultProps = {
-  tag: "div", // 'div', 'p', 'nav', …
+  tag: 'div', // 'div', 'p', 'nav', …
   fixedSize: false,
   centered: false
 };

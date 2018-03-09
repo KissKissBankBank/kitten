@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import classNames from "classnames";
-import { Marger } from "kitten/components/layout/marger";
-import { CloseButton } from "kitten/components/buttons/close-button";
+import React, { Component } from 'react';
+import classNames from 'classnames';
+import { Marger } from 'kitten/components/layout/marger';
+import { CloseButton } from 'kitten/components/buttons/close-button';
 
 export class Popover extends Component {
   constructor(props) {
@@ -25,7 +25,7 @@ export class Popover extends Component {
   }
 
   renderContent() {
-    if (typeof this.props.children != "string") {
+    if (typeof this.props.children != 'string') {
       return this.props.children;
     }
 
@@ -47,10 +47,10 @@ export class Popover extends Component {
       ...popoverAttributes
     } = this.props;
 
-    const popoverClassNames = classNames("k-Popover", popoverClassName);
+    const popoverClassNames = classNames('k-Popover', popoverClassName);
 
     const containerClassNames = classNames(
-      "k-Popover__container",
+      'k-Popover__container',
       containerClassName
     );
 
@@ -74,7 +74,7 @@ export class Popover extends Component {
 
 Popover.defaultProps = {
   onCloseClick: null,
-  closeButtonLabel: "Close",
-  popoverClassName: "",
-  containerClassName: ""
+  closeButtonLabel: 'Close',
+  popoverClassName: '',
+  containerClassName: ''
 };

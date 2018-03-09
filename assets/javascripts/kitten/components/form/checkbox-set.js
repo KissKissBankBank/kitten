@@ -1,6 +1,6 @@
-import React from "react";
-import classNames from "classnames";
-import { Checkbox } from "kitten/components/form/checkbox";
+import React from 'react';
+import classNames from 'classnames';
+import { Checkbox } from 'kitten/components/form/checkbox';
 
 export class CheckboxSet extends React.Component {
   constructor(props) {
@@ -10,7 +10,7 @@ export class CheckboxSet extends React.Component {
 
   renderCheckbox(item, index) {
     const { className, ...itemProps } = item;
-    const checkboxClassName = classNames("k-CheckboxSet__checkbox", className);
+    const checkboxClassName = classNames('k-CheckboxSet__checkbox', className);
 
     return (
       <Checkbox
@@ -25,7 +25,7 @@ export class CheckboxSet extends React.Component {
 
   render() {
     const { items, className, name, error, ...checkboxSetProps } = this.props;
-    const checkboxSetClassName = classNames("k-CheckboxSet", className);
+    const checkboxSetClassName = classNames('k-CheckboxSet', className);
 
     return (
       <div className={checkboxSetClassName} {...checkboxSetProps}>
@@ -36,13 +36,13 @@ export class CheckboxSet extends React.Component {
 }
 
 CheckboxSet.defaultProps = {
-  name: "checkboxSet[]",
+  name: 'checkboxSet[]',
   error: false,
   items: [
     {
-      label: "filter 1",
+      label: 'filter 1',
       defaultChecked: true,
-      id: "myCheckbox" // Replace by a real value
+      id: 'myCheckbox' // Replace by a real value
     }
   ]
 };

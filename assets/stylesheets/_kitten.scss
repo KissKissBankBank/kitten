@@ -1,22 +1,22 @@
 $k-module: null;
 
 // Vendor dependencies
-@import "sassy-maps";
-@import "modular-scale";
+@import 'sassy-maps';
+@import 'modular-scale';
 
 // Helpers
-@import "kitten/schema";
-@import "kitten/definitions";
-@import "kitten/helpers";
+@import 'kitten/schema';
+@import 'kitten/definitions';
+@import 'kitten/helpers';
 
 // Default config
-@import "kitten/default-config";
+@import 'kitten/default-config';
 
 // Dependencies that have te be loaded after the default config
-@import "~susy/sass/susy";
+@import '~susy/sass/susy';
 
 // Components
-@import "kitten/components";
+@import 'kitten/components';
 
 // Utilities
-@import "kitten/utilities";
+@import 'kitten/utilities';

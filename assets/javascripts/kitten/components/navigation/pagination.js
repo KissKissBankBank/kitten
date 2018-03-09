@@ -1,12 +1,12 @@
-import React, { Component } from "react";
-import Radium from "radium";
-import PropTypes from "prop-types";
-import { Text as TextBase } from "kitten/components/typography/text";
-import { ArrowIcon as ArrowIconBase } from "kitten/components/icons/arrow-icon";
-import { ScreenConfig } from "kitten/constants/screen-config";
-import COLORS from "kitten/constants/colors-config";
-import { parseHtml } from "kitten/helpers/utils/parser";
-import { mediaQueries } from "kitten/hoc/media-queries";
+import React, { Component } from 'react';
+import Radium from 'radium';
+import PropTypes from 'prop-types';
+import { Text as TextBase } from 'kitten/components/typography/text';
+import { ArrowIcon as ArrowIconBase } from 'kitten/components/icons/arrow-icon';
+import { ScreenConfig } from 'kitten/constants/screen-config';
+import COLORS from 'kitten/constants/colors-config';
+import { parseHtml } from 'kitten/helpers/utils/parser';
+import { mediaQueries } from 'kitten/hoc/media-queries';
 
 const Text = Radium(TextBase);
 const ArrowIcon = Radium(ArrowIconBase);
@@ -55,18 +55,18 @@ class PaginationBase extends Component {
     onPageClick: PropTypes.func,
     totalPages: PropTypes.number,
     currentPage: PropTypes.number,
-    "aria-label": PropTypes.string
+    'aria-label': PropTypes.string
   };
 
   static defaultProps = {
-    prevButtonLabel: "Previous page",
-    nextButtonLabel: "Next page",
+    prevButtonLabel: 'Previous page',
+    nextButtonLabel: 'Next page',
     goToPageLabel: n => `Go to page ${n}`,
     goToPageHref: n => `#${n}`,
     onPageClick: () => {},
     currentPage: 1,
     totalPages: 1,
-    "aria-label": "Pagination navigation"
+    'aria-label': 'Pagination navigation'
   };
 
   render() {
@@ -75,11 +75,11 @@ class PaginationBase extends Component {
     const pageNumbers = pages(1, totalPages, currentPage, size);
 
     return (
-      <nav role="navigation" aria-label={this.props["aria-label"]}>
+      <nav role="navigation" aria-label={this.props['aria-label']}>
         <ul style={styles.group}>
-          {this.renderArrowButton("left")}
+          {this.renderArrowButton('left')}
           {pageNumbers.map(this.renderPage)}
-          {this.renderArrowButton("right")}
+          {this.renderArrowButton('right')}
         </ul>
       </nav>
     );
@@ -123,7 +123,7 @@ class PaginationBase extends Component {
   renderSpacer(index) {
     return (
       <li key={`spacer-${index}`} style={styles.group.list.points}>
-        {"…"}
+        {'…'}
       </li>
     );
   }
@@ -137,32 +137,32 @@ class PaginationBase extends Component {
     } = this.props;
 
     const buttonLabel =
-      direction == "left"
+      direction == 'left'
         ? parseHtml(prevButtonLabel)
         : parseHtml(nextButtonLabel);
 
     const isDisabled =
-      direction == "left" ? currentPage == 1 : currentPage == totalPages;
+      direction == 'left' ? currentPage == 1 : currentPage == totalPages;
 
     const linkIsHovered = Radium.getState(
       this.state,
       `link-${direction}`,
-      ":hover"
+      ':hover'
     );
     const linkIsFocused = Radium.getState(
       this.state,
       `link-${direction}`,
-      ":focus"
+      ':focus'
     );
     const linkIsActived = Radium.getState(
       this.state,
       `link-${direction}`,
-      ":active"
+      ':active'
     );
 
     const styleList = [
-      direction == "left" && styles.group.list.left,
-      direction == "right" && styles.group.list.right
+      direction == 'left' && styles.group.list.left,
+      direction == 'right' && styles.group.list.right
     ];
 
     const styleButtonIcon = [
@@ -178,7 +178,7 @@ class PaginationBase extends Component {
     ];
 
     const number =
-      direction == "left"
+      direction == 'left'
         ? currentPage == 1 ? 1 : currentPage - 1
         : currentPage == totalPages ? totalPages : currentPage + 1;
 
@@ -222,15 +222,15 @@ const disabledPseudoClass = {
 
 const styles = {
   group: {
-    display: "inline-flex",
+    display: 'inline-flex',
     padding: 0,
 
     list: {
-      listStyle: "none",
+      listStyle: 'none',
       marginRight: 0,
-      [`@media (min-width: ${ScreenConfig["S"].min}px)`]: {
-        marginRight: "8px",
-        marginLeft: "8px"
+      [`@media (min-width: ${ScreenConfig['S'].min}px)`]: {
+        marginRight: '8px',
+        marginLeft: '8px'
       },
 
       lastChild: {
@@ -238,61 +238,61 @@ const styles = {
       },
 
       left: {
-        marginRight: "30px",
-        listStyle: "none",
-        [`@media (min-width: ${ScreenConfig["S"].min}px)`]: {
-          marginRight: "22px"
+        marginRight: '30px',
+        listStyle: 'none',
+        [`@media (min-width: ${ScreenConfig['S'].min}px)`]: {
+          marginRight: '22px'
         }
       },
 
       right: {
-        marginLeft: "30px",
-        listStyle: "none",
-        [`@media (min-width: ${ScreenConfig["S"].min}px)`]: {
-          marginLeft: "22px"
+        marginLeft: '30px',
+        listStyle: 'none',
+        [`@media (min-width: ${ScreenConfig['S'].min}px)`]: {
+          marginLeft: '22px'
         }
       },
 
       points: {
-        listStyle: "none",
-        textDecoration: "none",
-        textAlign: "center",
-        alignSelf: "center",
-        width: "40px",
-        [`@media (min-width: ${ScreenConfig["S"].min}px)`]: {
-          marginLeft: "8px",
-          marginRight: "8px",
-          width: "50px"
+        listStyle: 'none',
+        textDecoration: 'none',
+        textAlign: 'center',
+        alignSelf: 'center',
+        width: '40px',
+        [`@media (min-width: ${ScreenConfig['S'].min}px)`]: {
+          marginLeft: '8px',
+          marginRight: '8px',
+          width: '50px'
         }
       },
 
       buttonIcon: {
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        boxSizing: "border-box",
-        cursor: "pointer",
-        width: "40px",
-        height: "40px",
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        boxSizing: 'border-box',
+        cursor: 'pointer',
+        width: '40px',
+        height: '40px',
         borderRadius: 0,
         borderWidth: 0,
-        borderStyle: "solid",
-        textDecoration: "none",
-        outline: "none",
+        borderStyle: 'solid',
+        textDecoration: 'none',
+        outline: 'none',
         backgroundColor: `${COLORS.background1}`,
         borderColor: `${COLORS.line1}`,
         color: `${COLORS.font1}`,
-        ":hover": linkHoveredAndFocused,
-        ":focus": linkHoveredAndFocused,
-        ":active": {
+        ':hover': linkHoveredAndFocused,
+        ':focus': linkHoveredAndFocused,
+        ':active': {
           backgroundColor: `${COLORS.primary1}`,
           borderColor: `${COLORS.primary1}`,
           color: `${COLORS.background1}`
         },
-        [`@media (min-width: ${ScreenConfig["S"].min}px)`]: {
-          width: "50px",
-          height: "50px",
-          borderWidth: "2px"
+        [`@media (min-width: ${ScreenConfig['S'].min}px)`]: {
+          width: '50px',
+          height: '50px',
+          borderWidth: '2px'
         },
 
         isActive: {
@@ -305,19 +305,19 @@ const styles = {
           color: `${COLORS.background1}`,
           backgroundColor: `${COLORS.line2}`,
           borderColor: `${COLORS.line2}`,
-          cursor: "not-allowed",
-          ":hover": disabledPseudoClass,
-          ":focus": disabledPseudoClass,
-          ":active": disabledPseudoClass
+          cursor: 'not-allowed',
+          ':hover': disabledPseudoClass,
+          ':focus': disabledPseudoClass,
+          ':active': disabledPseudoClass
         },
 
         svg: {
-          alignSelf: "center",
-          margin: "0",
-          padding: "0",
-          width: "12px",
-          height: "14px",
-          pointerEvents: "none",
+          alignSelf: 'center',
+          margin: '0',
+          padding: '0',
+          width: '12px',
+          height: '14px',
+          pointerEvents: 'none',
           hover: {
             fill: `${COLORS.primary1}`
           },

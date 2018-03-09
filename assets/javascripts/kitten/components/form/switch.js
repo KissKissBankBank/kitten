@@ -1,10 +1,10 @@
-import React from "react";
-import classNames from "classnames";
+import React from 'react';
+import classNames from 'classnames';
 
 export class Switch extends React.Component {
   render() {
-    let switchClassNames = classNames("k-Switch__label", {
-      "k-Switch__label--big": this.props.big
+    let switchClassNames = classNames('k-Switch__label', {
+      'k-Switch__label--big': this.props.big
     });
 
     return (

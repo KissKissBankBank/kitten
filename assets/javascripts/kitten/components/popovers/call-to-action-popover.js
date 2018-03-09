@@ -1,9 +1,9 @@
-import React, { Component } from "react";
-import { Marger } from "kitten/components/layout/marger";
-import { Title } from "kitten/components/typography/title";
-import { Paragraph } from "kitten/components/typography/paragraph";
-import { Popover } from "kitten/components/popovers/popover";
-import { Button } from "kitten/components/buttons/button";
+import React, { Component } from 'react';
+import { Marger } from 'kitten/components/layout/marger';
+import { Title } from 'kitten/components/typography/title';
+import { Paragraph } from 'kitten/components/typography/paragraph';
+import { Popover } from 'kitten/components/popovers/popover';
+import { Button } from 'kitten/components/buttons/button';
 
 export class CallToActionPopover extends Component {
   constructor(props) {
@@ -84,14 +84,14 @@ export class CallToActionPopover extends Component {
 }
 
 CallToActionPopover.defaultProps = {
-  title: "",
-  text: "",
+  title: '',
+  text: '',
   illustration: null,
   buttons: [
     {
-      label: "Ok",
-      modifier: "helium",
-      size: "big"
+      label: 'Ok',
+      modifier: 'helium',
+      size: 'big'
     }
   ],
   onCloseClick: null

@@ -25,19 +25,19 @@
 ///   </ul>
 
 @mixin k-UserMenu {
-  $font: "regular";
+  $font: 'regular';
   $font-step: -2; // 12px
 
-  $color: map-get($k-colors, "font-1");
-  $background-color: map-get($k-colors, "background-2");
-  $border-color: map-get($k-colors, "line-1");
-  $background-color-hover: map-get($k-colors, "line-1");
-  $color-active: map-get($k-colors, "primary-1");
-  $border-color-active: map-get($k-colors, "primary-1");
+  $color: map-get($k-colors, 'font-1');
+  $background-color: map-get($k-colors, 'background-2');
+  $border-color: map-get($k-colors, 'line-1');
+  $background-color-hover: map-get($k-colors, 'line-1');
+  $color-active: map-get($k-colors, 'primary-1');
+  $border-color-active: map-get($k-colors, 'primary-1');
 
-  $secondary-color: map-get($k-colors, "font-2");
-  $secondary-background-color: map-get($k-colors, "background-2");
-  $secondary-border-color: map-get($k-colors, "line-1");
+  $secondary-color: map-get($k-colors, 'font-2');
+  $secondary-background-color: map-get($k-colors, 'background-2');
+  $secondary-border-color: map-get($k-colors, 'line-1');
 
   $arrow-size: k-px-to-rem(9px);
   $border-size: k-px-to-rem(1px);
@@ -63,7 +63,7 @@
   }
 
   .k-UserMenu__arrow {
-    @include k-media-min("xs") {
+    @include k-media-min('xs') {
       @include k-dropdownArrow((without-border-top: true));
     }
   }

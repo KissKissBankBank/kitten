@@ -1,10 +1,10 @@
-import React, { Component } from "react";
-import classNames from "classnames";
+import React, { Component } from 'react';
+import classNames from 'classnames';
 import {
   StepperIconDefault,
   StepperIconInProgress,
   StepperIconValidated
-} from "kitten/components/steppers/stepper-icon";
+} from 'kitten/components/steppers/stepper-icon';
 
 const iconTypeComponents = {
   default: StepperIconDefault,
@@ -16,7 +16,7 @@ export class Stepper extends Component {
   lineBreaks(text) {
     const regex = /(\n)/i;
     const brClassNames = classNames({
-      "k-Stepper__break": !this.props.withAlignStart
+      'k-Stepper__break': !this.props.withAlignStart
     });
 
     return text
@@ -29,9 +29,9 @@ export class Stepper extends Component {
 
   renderLink(item) {
     const { href, iconType, linkClassNames, text, ...other } = item;
-    const Tag = href ? "a" : "span";
+    const Tag = href ? 'a' : 'span';
     const IconType = iconTypeComponents[iconType];
-    const className = classNames("k-Stepper__link", linkClassNames);
+    const className = classNames('k-Stepper__link', linkClassNames);
 
     return (
       <Tag className={className} href={href} {...other}>
@@ -43,8 +43,8 @@ export class Stepper extends Component {
 
   renderItems() {
     const items = this.props.items;
-    const itemClassNames = classNames("k-Stepper__item", {
-      "k-Stepper__item--tinySpacing": this.props.withTinySpacing
+    const itemClassNames = classNames('k-Stepper__item', {
+      'k-Stepper__item--tinySpacing': this.props.withTinySpacing
     });
 
     return items.map((item, index) => (
@@ -55,8 +55,8 @@ export class Stepper extends Component {
   }
 
   render() {
-    const listClassNames = classNames("k-Stepper__list", {
-      "k-Stepper__list--alignStart": this.props.withAlignStart
+    const listClassNames = classNames('k-Stepper__list', {
+      'k-Stepper__list--alignStart': this.props.withAlignStart
     });
 
     return (

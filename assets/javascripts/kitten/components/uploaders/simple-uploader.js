@@ -1,8 +1,8 @@
-import React from "react";
-import { Uploader } from "kitten/components/uploaders/uploader";
-import { Button } from "kitten/components/buttons/button";
-import { ButtonIcon } from "kitten/components/buttons/button-icon";
-import { CrossIcon } from "kitten/components/icons/cross-icon";
+import React from 'react';
+import { Uploader } from 'kitten/components/uploaders/uploader';
+import { Button } from 'kitten/components/buttons/button';
+import { ButtonIcon } from 'kitten/components/buttons/button-icon';
+import { CrossIcon } from 'kitten/components/icons/cross-icon';
 
 const Theme = props => {
   const handleClick = props.disabled ? null : props.onCancel;
@@ -40,7 +40,7 @@ const Theme = props => {
 };
 
 Theme.defaultProps = {
-  buttonLabel: "Choose a file",
+  buttonLabel: 'Choose a file',
   fileName: null,
   onClick: () => {},
   onCancel: () => {},

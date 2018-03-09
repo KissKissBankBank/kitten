@@ -1,6 +1,6 @@
-import React from "react";
-import classNames from "classnames";
-import { TypologyTagIcon } from "kitten/components/icons/typology-tag-icon";
+import React from 'react';
+import classNames from 'classnames';
+import { TypologyTagIcon } from 'kitten/components/icons/typology-tag-icon';
 
 export class TagList extends React.Component {
   constructor(props) {
@@ -17,9 +17,9 @@ export class TagList extends React.Component {
     const isLastItem = index == this.props.items.length - 1;
 
     const itemClassName = classNames(
-      "k-TagList__item",
-      { "k-TagList__item--first": isFirstItem },
-      { "k-TagList__item--last": isLastItem }
+      'k-TagList__item',
+      { 'k-TagList__item--first': isFirstItem },
+      { 'k-TagList__item--last': isLastItem }
     );
 
     const icon = isFirstItem && <TagIcon className="k-TagList__icon" />;
@@ -37,8 +37,8 @@ export class TagList extends React.Component {
 
     const { className, tiny, icon, items, ...others } = this.props;
     const listClassName = classNames(
-      "k-TagList",
-      { "k-TagList--tiny": tiny },
+      'k-TagList',
+      { 'k-TagList--tiny': tiny },
       className
     );
 

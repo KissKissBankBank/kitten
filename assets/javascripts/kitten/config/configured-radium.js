@@ -1,9 +1,9 @@
 // DEPRECATED: This configuration is the Radium default configuration.
 
-import Radium from "radium";
+import Radium from 'radium';
 
 const config = {
-  userAgent: "all",
+  userAgent: 'all',
   plugins: [
     Radium.Plugins.mergeStyleArray,
     Radium.Plugins.checkProps,

@@ -1,8 +1,8 @@
-import React from "react";
-import sinon from "sinon";
-import { StyleRoot } from "radium";
-import { pages, Pagination } from "kitten/components/navigation/pagination";
-import renderer from "react-test-renderer";
+import React from 'react';
+import sinon from 'sinon';
+import { StyleRoot } from 'radium';
+import { pages, Pagination } from 'kitten/components/navigation/pagination';
+import renderer from 'react-test-renderer';
 
 const createMockMediaMatcher = matches => () => ({
   matches,
@@ -10,7 +10,7 @@ const createMockMediaMatcher = matches => () => ({
   removeListener: () => {}
 });
 
-describe("<Pagination />", () => {
+describe('<Pagination />', () => {
   const originalMatchMedia = window.matchMedia;
 
   beforeEach(() => {
@@ -21,8 +21,8 @@ describe("<Pagination />", () => {
     window.matchMedia = originalMatchMedia;
   });
 
-  describe("by default", () => {
-    it("should match its empty snapshot", () => {
+  describe('by default', () => {
+    it('should match its empty snapshot', () => {
       const tree = renderer
         .create(
           <StyleRoot>
@@ -35,8 +35,8 @@ describe("<Pagination />", () => {
     });
   });
 
-  describe("onPageClick", () => {
-    it("calls the given function when clicking on links", () => {
+  describe('onPageClick', () => {
+    it('calls the given function when clicking on links', () => {
       const sandbox = sinon.sandbox.create();
       const onClickSpy = sandbox.spy();
       const pagination = mount(
@@ -45,13 +45,13 @@ describe("<Pagination />", () => {
         </StyleRoot>
       );
       const event = {
-        foo: "bar"
+        foo: 'bar'
       };
 
       pagination
-        .find("a")
+        .find('a')
         .last()
-        .simulate("click", event);
+        .simulate('click', event);
 
       expect(onClickSpy.called).toBe(true);
       expect(onClickSpy.calledWithMatch(2, event)).toBe(true);
@@ -59,8 +59,8 @@ describe("<Pagination />", () => {
   });
 });
 
-describe("pages", () => {
-  describe("matches our list of expected results", () => {
+describe('pages', () => {
+  describe('matches our list of expected results', () => {
     const expectedPages = [
       // min
       // | max

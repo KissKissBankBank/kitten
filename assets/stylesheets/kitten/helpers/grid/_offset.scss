@@ -14,7 +14,7 @@
 ///     @include k-grid-offset(2); // offset by 2 columns to the left
 ///   }
 @mixin k-grid-offset($columns) {
-  $number-of-columns: k-map-fetch($k-grid, "columns");
+  $number-of-columns: k-map-fetch($k-grid, 'columns');
 
   margin-left: (100% / $number-of-columns) * $columns;
 }

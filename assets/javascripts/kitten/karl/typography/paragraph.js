@@ -1,5 +1,5 @@
-import React from "react";
-import { Paragraph } from "kitten/components/typography/paragraph";
+import React from 'react';
+import { Paragraph } from 'kitten/components/typography/paragraph';
 
 export const KarlParagraph = props => {
   return (
@@ -58,10 +58,10 @@ export const KarlParagraphWithLink = () => {
     <Paragraph modifier="quaternary">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud{" "}
+      veniam, quis nostrud{' '}
       <a href="#" className="k-Paragraph__link">
         exercitation ullamco laboris nisi ut aliquip
-      </a>{" "}
+      </a>{' '}
       ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
       voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
       sint occaecat cupidatat non.

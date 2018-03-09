@@ -16,7 +16,7 @@
 ///   </ul>
 
 @mixin k-LinkList {
-  $font: "regular";
+  $font: 'regular';
   $font-size: -1;
 
   // Items margin
@@ -26,12 +26,12 @@
   $normal-line-height: normal;
 
   // With light backgroundColor
-  $dark-link-color: map-get($k-colors, "font-1");
-  $active-color: map-get($k-colors, "primary-3");
-  $hover-color: map-get($k-colors, "primary-1");
+  $dark-link-color: map-get($k-colors, 'font-1');
+  $active-color: map-get($k-colors, 'primary-3');
+  $hover-color: map-get($k-colors, 'primary-1');
 
   // With dark backgroundColor
-  $light-link-color: map-get($k-colors, "background-1");
+  $light-link-color: map-get($k-colors, 'background-1');
 
   .k-LinkList {
     // override ul defaults
@@ -39,7 +39,7 @@
     list-style-type: none;
     padding: 0;
 
-    @include k-media-min("l") {
+    @include k-media-min('l') {
       text-align: left;
     }
   }

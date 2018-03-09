@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 export const CheckedCircleIcon = ({ circleColor, checkedColor, ...props }) => {
   return (
@@ -14,6 +14,6 @@ export const CheckedCircleIcon = ({ circleColor, checkedColor, ...props }) => {
 };
 
 CheckedCircleIcon.defaultProps = {
-  circleColor: "#fff",
-  checkedColor: "#333"
+  circleColor: '#fff',
+  checkedColor: '#333'
 };

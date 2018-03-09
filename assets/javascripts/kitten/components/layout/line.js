@@ -1,13 +1,13 @@
-import React from "react";
-import classNames from "classnames";
+import React from 'react';
+import classNames from 'classnames';
 
 export const Line = props => {
-  return <div {...props} className={classNames("k-Line", props.className)} />;
+  return <div {...props} className={classNames('k-Line', props.className)} />;
 };
 
 Line.Item = props => {
   return (
-    <div {...props} className={classNames("k-Line__item", props.className)} />
+    <div {...props} className={classNames('k-Line__item', props.className)} />
   );
 };
 

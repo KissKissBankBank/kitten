@@ -1,40 +1,40 @@
-import React from "react";
-import { HeaderTitles } from "kitten/components/headers/header-titles";
+import React from 'react';
+import { HeaderTitles } from 'kitten/components/headers/header-titles';
 
-describe("<HeaderTitles />", () => {
+describe('<HeaderTitles />', () => {
   const titles = shallow(<HeaderTitles />);
 
   it('renders a <div class="k-Header__titles" />', () => {
-    expect(titles.hasClass("k-Header__titles")).toBe(true);
+    expect(titles.hasClass('k-Header__titles')).toBe(true);
   });
 
-  it("renders a default title", () => {
-    const title = titles.find(".k-Header__title");
+  it('renders a default title', () => {
+    const title = titles.find('.k-Header__title');
 
-    expect(title.text()).toBe("You forgot the title!");
+    expect(title.text()).toBe('You forgot the title!');
   });
 
-  describe("with title and subtitle", () => {
+  describe('with title and subtitle', () => {
     const titles = shallow(
       <HeaderTitles title="Custom title" subtitle="Custom subtitle" />
     );
 
-    it("renders a title", () => {
-      const title = titles.find(".k-Header__title");
+    it('renders a title', () => {
+      const title = titles.find('.k-Header__title');
 
       expect(title).toHaveLength(1);
-      expect(title.text()).toBe("Custom title");
+      expect(title.text()).toBe('Custom title');
     });
 
-    it("renders a subtitle", () => {
-      const subtitle = titles.find(".k-Header__subtitle");
+    it('renders a subtitle', () => {
+      const subtitle = titles.find('.k-Header__subtitle');
 
       expect(subtitle).toHaveLength(1);
-      expect(subtitle.text()).toBe("Custom subtitle");
+      expect(subtitle.text()).toBe('Custom subtitle');
     });
   });
 
-  describe("with custom class", () => {
+  describe('with custom class', () => {
     const titles = shallow(
       <HeaderTitles
         className="custom-class"
@@ -44,10 +44,10 @@ describe("<HeaderTitles />", () => {
       />
     );
 
-    it("has the right classes", () => {
-      expect(titles.hasClass("custom-class")).toBe(true);
-      expect(titles.find(".title-custom-class").exists()).toBe(true);
-      expect(titles.find(".subtitle-custom-class").exists()).toBe(true);
+    it('has the right classes', () => {
+      expect(titles.hasClass('custom-class')).toBe(true);
+      expect(titles.find('.title-custom-class').exists()).toBe(true);
+      expect(titles.find('.subtitle-custom-class').exists()).toBe(true);
     });
   });
 });

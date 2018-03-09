@@ -49,7 +49,7 @@
 ///     </div>
 ///   </div>
 @mixin k-DevGrid($options: ()) {
-  $z-index: k-default(map-get($options, "z-index"), 9998);
+  $z-index: k-default(map-get($options, 'z-index'), 9998);
 
   .k-DevGrid {
     position: fixed;

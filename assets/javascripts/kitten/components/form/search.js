@@ -1,8 +1,8 @@
-import React, { Component } from "react";
-import classNames from "classnames";
-import { domElementHelper } from "kitten/helpers/dom/element-helper";
-import { TextInput } from "kitten/components/form/text-input";
-import { SearchIcon } from "kitten/components/icons/search-icon";
+import React, { Component } from 'react';
+import classNames from 'classnames';
+import { domElementHelper } from 'kitten/helpers/dom/element-helper';
+import { TextInput } from 'kitten/components/form/text-input';
+import { SearchIcon } from 'kitten/components/icons/search-icon';
 
 export class Search extends Component {
   constructor(props) {
@@ -54,11 +54,11 @@ export class Search extends Component {
     } = this.props;
 
     let inputClassName = classNames(
-      "k-TextInput",
-      "k-TextInput--tiny",
-      "k-SearchInput__input",
-      { "is-active": this.state.focus },
-      { "is-hover": this.state.hover }
+      'k-TextInput',
+      'k-TextInput--tiny',
+      'k-SearchInput__input',
+      { 'is-active': this.state.focus },
+      { 'is-hover': this.state.hover }
     );
 
     return (

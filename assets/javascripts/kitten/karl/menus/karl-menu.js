@@ -1,6 +1,6 @@
-import React from "react";
-import classNames from "classnames";
-import { KarlMenuHeader } from "kitten/karl/headers/karl-header";
+import React from 'react';
+import classNames from 'classnames';
+import { KarlMenuHeader } from 'kitten/karl/headers/karl-header';
 
 export class KarlMenu extends React.Component {
   constructor(props) {
@@ -20,8 +20,8 @@ export class KarlMenu extends React.Component {
   }
 
   render() {
-    const karlMenuHeaderClassName = classNames("karl-Menu", {
-      "is-opened": this.state.opened
+    const karlMenuHeaderClassName = classNames('karl-Menu', {
+      'is-opened': this.state.opened
     });
 
     return (
@@ -120,12 +120,12 @@ class KarlMenuCategory extends React.Component {
   }
 
   render() {
-    const karlMenuCategoryClassName = classNames("karl-Menu__subList", {
-      "is-opened": this.state.opened
+    const karlMenuCategoryClassName = classNames('karl-Menu__subList', {
+      'is-opened': this.state.opened
     });
 
-    const karlMenuItemClassName = classNames("karl-Menu__listItem with-arrow", {
-      "is-opened": this.state.opened
+    const karlMenuItemClassName = classNames('karl-Menu__listItem with-arrow', {
+      'is-opened': this.state.opened
     });
 
     return (

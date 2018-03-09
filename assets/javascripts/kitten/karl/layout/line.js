@@ -1,9 +1,9 @@
-import React from "react";
-import { Line } from "kitten/components/layout/line";
-import { Tooltip } from "kitten/components/tooltips/tooltip";
-import { Label } from "kitten/components/form/label";
-import { TextInput } from "kitten/components/form/text-input";
-import { HeartIcon } from "kitten/components/icons/heart-icon";
+import React from 'react';
+import { Line } from 'kitten/components/layout/line';
+import { Tooltip } from 'kitten/components/tooltips/tooltip';
+import { Label } from 'kitten/components/form/label';
+import { TextInput } from 'kitten/components/form/text-input';
+import { HeartIcon } from 'kitten/components/icons/heart-icon';
 
 export const KarlLineWithTooltip = props => {
   return (

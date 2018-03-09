@@ -1,6 +1,6 @@
-import React from "react";
-import PropTypes from "prop-types";
-import classNames from "classnames";
+import React from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
 export const card = (WrappedComponent, wrappedProps) => {
   const defaultProps = {
@@ -31,19 +31,19 @@ export const card = (WrappedComponent, wrappedProps) => {
     } = { ...defaultProps, ...wrappedProps, ...props };
 
     const cardClassName = classNames(
-      "k-Card",
+      'k-Card',
       {
-        "k-Card--light": light,
-        "k-Card--padded": padded,
-        "k-Card--microRounded": rounded == "micro",
-        "k-Card--tinyRounded": rounded == "tiny",
-        "k-Card--rounded": rounded == true,
-        "k-Card--translateOnHover": translateOnHover,
-        "k-Card--withBorder": withBorder,
-        "k-Card--withDarkBorder": withDarkBorder,
-        "k-Card--withShadow": withShadow,
-        "k-Card--withVerticalPadding": withVerticalPadding,
-        "k-Card--withoutBoxShadowOnHover": withoutBoxShadowOnHover
+        'k-Card--light': light,
+        'k-Card--padded': padded,
+        'k-Card--microRounded': rounded == 'micro',
+        'k-Card--tinyRounded': rounded == 'tiny',
+        'k-Card--rounded': rounded == true,
+        'k-Card--translateOnHover': translateOnHover,
+        'k-Card--withBorder': withBorder,
+        'k-Card--withDarkBorder': withDarkBorder,
+        'k-Card--withShadow': withShadow,
+        'k-Card--withVerticalPadding': withVerticalPadding,
+        'k-Card--withoutBoxShadowOnHover': withoutBoxShadowOnHover
       },
       className
     );
@@ -55,5 +55,5 @@ export const card = (WrappedComponent, wrappedProps) => {
 };
 
 card.propTypes = {
-  rounded: PropTypes.oneOf(["micro", "tiny"])
+  rounded: PropTypes.oneOf(['micro', 'tiny'])
 };

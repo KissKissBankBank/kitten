@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react';
 import {
   SideGrid,
   SideGridContent,
   SideGridAside
-} from "kitten/components/grid/side-grid";
+} from 'kitten/components/grid/side-grid';
 
 export const KarlSideGridWithRightAside = () => {
   return (

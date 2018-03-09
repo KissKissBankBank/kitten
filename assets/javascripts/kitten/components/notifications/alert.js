@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import classNames from "classnames";
-import { CloseButton } from "kitten/components/buttons/close-button";
-import { domElementHelper } from "kitten/helpers/dom/element-helper";
+import React, { Component } from 'react';
+import classNames from 'classnames';
+import { CloseButton } from 'kitten/components/buttons/close-button';
+import { domElementHelper } from 'kitten/helpers/dom/element-helper';
 
 export class Alert extends Component {
   constructor(props) {
@@ -9,7 +9,7 @@ export class Alert extends Component {
 
     this.state = {
       show: props.show,
-      height: "auto"
+      height: 'auto'
     };
 
     this.handleCloseClick = this.handleCloseClick.bind(this);
@@ -58,11 +58,11 @@ export class Alert extends Component {
     } = this.props;
 
     const alertClassName = classNames(
-      "k-Alert",
+      'k-Alert',
       {
-        "k-Alert--success": success,
-        "k-Alert--error": error,
-        "k-Alert--hidden": !this.state.show
+        'k-Alert--success': success,
+        'k-Alert--error': error,
+        'k-Alert--hidden': !this.state.show
       },
       className
     );
@@ -94,6 +94,6 @@ Alert.defaultProps = {
   error: false,
   success: false,
   closeButton: false,
-  closeButtonLabel: "Close",
+  closeButtonLabel: 'Close',
   onClose: () => {}
 };

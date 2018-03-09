@@ -1,5 +1,5 @@
-import React from "react";
-import { Grid, GridCol } from "kitten/components/grid/grid";
+import React from 'react';
+import { Grid, GridCol } from 'kitten/components/grid/grid';
 
 export const KarlGridTwelveColumns = () => {
   return (

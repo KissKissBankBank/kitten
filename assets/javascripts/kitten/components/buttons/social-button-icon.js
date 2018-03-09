@@ -1,9 +1,9 @@
-import React from "react";
-import { ButtonIcon } from "kitten/components/buttons/button-icon";
-import { FacebookIcon } from "kitten/components/icons/facebook-icon";
-import { TwitterIcon } from "kitten/components/icons/twitter-icon";
-import { LinkedinIcon } from "kitten/components/icons/linkedin-icon";
-import { InstagramIcon } from "kitten/components/icons/instagram-icon";
+import React from 'react';
+import { ButtonIcon } from 'kitten/components/buttons/button-icon';
+import { FacebookIcon } from 'kitten/components/icons/facebook-icon';
+import { TwitterIcon } from 'kitten/components/icons/twitter-icon';
+import { LinkedinIcon } from 'kitten/components/icons/linkedin-icon';
+import { InstagramIcon } from 'kitten/components/icons/instagram-icon';
 
 export const FacebookButtonIcon = props => (
   <ButtonIcon {...props} modifier="facebook" aria-label="Facebook">

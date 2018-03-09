@@ -16,11 +16,11 @@
 ///   </div>
 
 @mixin k-StaticTooltip {
-  $color: map-get($k-colors, "primary-1");
-  $border-color: map-get($k-colors, "line-1");
-  $background-color: map-get($k-colors, "background-1");
+  $color: map-get($k-colors, 'primary-1');
+  $border-color: map-get($k-colors, 'line-1');
+  $background-color: map-get($k-colors, 'background-1');
 
-  $font: "regular";
+  $font: 'regular';
   $font-size: -1; // 14px
   $line-height: 1.25;
 
@@ -63,7 +63,7 @@
     top: -1rem;
 
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       width: 0;
       height: 0;

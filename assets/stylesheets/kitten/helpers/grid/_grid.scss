@@ -12,7 +12,7 @@
 ///     @include k-grid-offset(1);
 ///   }
 @mixin k-grid {
-  $gutter-width: k-map-fetch($k-grid, "gutter-width");
+  $gutter-width: k-map-fetch($k-grid, 'gutter-width');
 
   box-sizing: border-box;
   display: flex;

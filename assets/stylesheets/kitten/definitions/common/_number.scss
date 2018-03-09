@@ -13,7 +13,7 @@
 
 @function k-number-definition($value, $unit: none) {
   @if $value {
-    @if type-of($value) != "number" {
+    @if type-of($value) != 'number' {
       $error-message: k-log(
         '"#{$value}" is not a valid number in "#{$k-module}".'
       );

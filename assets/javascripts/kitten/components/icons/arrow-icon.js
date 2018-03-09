@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import classNames from "classnames";
-import PropTypes from "prop-types";
+import React, { Component } from 'react';
+import classNames from 'classnames';
+import PropTypes from 'prop-types';
 
 export class ArrowIcon extends Component {
   render() {
@@ -8,7 +8,7 @@ export class ArrowIcon extends Component {
 
     const arrowIconClassNames = classNames(className, {
       [`k-ArrowIcon--${direction}`]: direction,
-      "k-ArrowIcon--disabled": disabled
+      'k-ArrowIcon--disabled': disabled
     });
 
     return (
@@ -27,10 +27,10 @@ export class ArrowIcon extends Component {
 }
 
 ArrowIcon.propTypes = {
-  direction: PropTypes.oneOf(["top", "bottom", "left", "right"])
+  direction: PropTypes.oneOf(['top', 'bottom', 'left', 'right'])
 };
 
 ArrowIcon.defaultProps = {
-  direction: "right",
+  direction: 'right',
   disabled: false
 };

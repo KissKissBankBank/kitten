@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import classNames from "classnames";
-import { Marger } from "kitten/components/layout/marger";
+import React, { Component } from 'react';
+import classNames from 'classnames';
+import { Marger } from 'kitten/components/layout/marger';
 
 export class TooltipNew extends Component {
   renderArrow() {
@@ -10,7 +10,7 @@ export class TooltipNew extends Component {
   render() {
     const { children, className, ...others } = this.props;
 
-    const tooltipNewClassName = classNames("k-TooltipNew", className);
+    const tooltipNewClassName = classNames('k-TooltipNew', className);
 
     return (
       <div className={tooltipNewClassName} role="tooltip" {...others}>

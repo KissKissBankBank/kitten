@@ -17,11 +17,11 @@
 ///
 @mixin k-Select {
   $options: (
-    error-color: map-get($k-colors, "error-3"),
-    valid-color: map-get($k-colors, "tertiary-2"),
-    select-input-bg: map-get($k-colors, "background-1"),
-    select-input-bg-disabled: map-get($k-colors, "line-1"),
-    select-item-disabled-color: map-get($k-colors, "font-2"),
+    error-color: map-get($k-colors, 'error-3'),
+    valid-color: map-get($k-colors, 'tertiary-2'),
+    select-input-bg: map-get($k-colors, 'background-1'),
+    select-input-bg-disabled: map-get($k-colors, 'line-1'),
+    select-item-disabled-color: map-get($k-colors, 'font-2'),
     arrow-zone-width: k-px-to-rem(40px),
     select-input-border-width: k-px-to-rem(2px),
     select-input-height: k-px-to-rem(50px)
@@ -35,9 +35,9 @@
     )
   );
 
-  $font: "light";
+  $font: 'light';
 
-  $label-font: "regular";
+  $label-font: 'regular';
   $font-step: -1; // 14px
 
   .k-Select {
@@ -70,33 +70,33 @@
 
   .k-Select.is-error .Select:not(.is-open):not(.is-focused) {
     .Select-control {
-      border-color: map-get($options, "error-color");
+      border-color: map-get($options, 'error-color');
     }
 
     .Select-arrow-zone {
-      border-left-color: map-get($options, "error-color");
+      border-left-color: map-get($options, 'error-color');
     }
   }
 
   .k-Select.is-valid .Select:not(.is-open):not(.is-focused) {
     .Select-control {
-      border-color: map-get($options, "valid-color");
+      border-color: map-get($options, 'valid-color');
     }
 
     .Select-arrow-zone {
-      border-left-color: map-get($options, "valid-color");
+      border-left-color: map-get($options, 'valid-color');
     }
   }
 
   .k-Select.is-disabled .Select:not(.is-open):not(.is-focused) {
     .Select-control {
-      background-color: map-get($options, "select-input-bg-disabled");
-      border-color: map-get($options, "select-input-bg-disabled");
+      background-color: map-get($options, 'select-input-bg-disabled');
+      border-color: map-get($options, 'select-input-bg-disabled');
     }
 
     .Select-arrow-zone {
-      background: map-get($options, "select-input-bg-disabled")
-        url("~icons/arrow-bottom-disabled.svg") no-repeat center;
+      background: map-get($options, 'select-input-bg-disabled')
+        url('~icons/arrow-bottom-disabled.svg') no-repeat center;
       cursor: not-allowed;
     }
 
@@ -105,7 +105,7 @@
     }
 
     .Select-value-label {
-      color: map-get($options, "select-item-disabled-color");
+      color: map-get($options, 'select-item-disabled-color');
     }
   }
 
@@ -115,10 +115,10 @@
 // Our overrides to React Select's default styles
 // TODO: Merge with _ReactSelect. Not possible to keep both separated.
 @mixin _k-Select-Overrides($options) {
-  $arrow-zone-width: k-map-fetch($options, "arrow-zone-width");
+  $arrow-zone-width: k-map-fetch($options, 'arrow-zone-width');
   $select-input-border-width: k-map-fetch(
     $options,
-    "select-input-border-width"
+    'select-input-border-width'
   );
 
   .Select-arrow-zone {
@@ -126,9 +126,9 @@
     padding-right: 0;
 
     border: none;
-    border-left: k-px-to-rem(2px) solid map-get($k-colors, "line-1");
-    background: map-get($options, "select-input-bg")
-      url("~icons/arrow-bottom-black.svg") no-repeat center;
+    border-left: k-px-to-rem(2px) solid map-get($k-colors, 'line-1');
+    background: map-get($options, 'select-input-bg')
+      url('~icons/arrow-bottom-black.svg') no-repeat center;
   }
 
   .Select-arrow {
@@ -136,7 +136,7 @@
   }
 
   .Select-menu-outer {
-    border-top-color: map-get($k-colors, "line-1");
+    border-top-color: map-get($k-colors, 'line-1');
 
     // When the select is open, hide the arrow-zone's bottom border
     &:before {
@@ -147,18 +147,18 @@
       width: $arrow-zone-width - $select-input-border-width;
       height: $select-input-border-width;
 
-      content: "";
-      background: map-get($k-colors, "background-2");
+      content: '';
+      background: map-get($k-colors, 'background-2');
     }
   }
 
   .Select.is-focused:not(.is-open) .Select-arrow-zone {
-    border-left-color: map-get($k-colors, "line-2");
+    border-left-color: map-get($k-colors, 'line-2');
   }
 
   .Select.is-open .Select-arrow-zone {
-    background-color: map-get($k-colors, "background-2");
-    background-image: url("~icons/arrow-top-black.svg");
+    background-color: map-get($k-colors, 'background-2');
+    background-image: url('~icons/arrow-top-black.svg');
   }
 }
 
@@ -184,21 +184,21 @@
 
   // control options
 
-  $select-input-border-color: map-get($k-colors, "line-1");
-  $select-input-border-focus: map-get($k-colors, "line-2");
+  $select-input-border-color: map-get($k-colors, 'line-1');
+  $select-input-border-focus: map-get($k-colors, 'line-2');
   $select-input-border-width: k-map-fetch(
     $options,
-    "select-input-border-width"
+    'select-input-border-width'
   );
   $select-input-height: k-default(
-    map-get($options, "select-input-height"),
+    map-get($options, 'select-input-height'),
     40px
   );
   $select-input-internal-height: (
     $select-input-height - ($select-input-border-width * 2)
   );
-  $select-input-placeholder: map-get($k-colors, "font-2");
-  $select-text-color: map-get($k-colors, "font-1");
+  $select-input-placeholder: map-get($k-colors, 'font-2');
+  $select-text-color: map-get($k-colors, 'font-1');
   $select-link-hover-color: $select-input-border-focus;
   $select-input-searchable-height: k-px-to-rem(44px);
 
@@ -210,12 +210,12 @@
   $select-menu-max-height: 250px;
 
   $select-option-color: $select-text-color;
-  $select-option-bg: map-get($k-colors, "background-2");
+  $select-option-bg: map-get($k-colors, 'background-2');
   $select-option-focused-color: $select-text-color;
-  $select-option-focused-bg: map-get($k-colors, "line-1");
-  $select-option-selected-color: map-get($k-colors, "font-1");
-  $select-option-selected-bg: map-get($k-colors, "line-2");
-  $select-option-disabled-color: map-get($k-colors, "line-2");
+  $select-option-focused-bg: map-get($k-colors, 'line-1');
+  $select-option-selected-color: map-get($k-colors, 'font-1');
+  $select-option-selected-bg: map-get($k-colors, 'line-2');
+  $select-option-disabled-color: map-get($k-colors, 'line-2');
 
   $select-noresults-color: lighten($select-text-color, 40%);
 
@@ -226,8 +226,8 @@
   $select-clear-width: ($select-input-internal-height / 2);
 
   // arrow indicator
-  $select-arrow-color: map-get($k-colors, "font-1");
-  $select-arrow-color-hover: map-get($k-colors, "font-1");
+  $select-arrow-color: map-get($k-colors, 'font-1');
+  $select-arrow-color-hover: map-get($k-colors, 'font-1');
   $select-arrow-width: 5px;
 
   // loading indicator
@@ -240,8 +240,8 @@
   $select-item-padding-vertical: 2px;
   $select-item-padding-horizontal: 5px;
   $select-item-font-size: 1em;
-  $select-item-color: map-get($k-colors, "font-1");
-  $select-item-bg: map-get($k-colors, "line-2");
+  $select-item-color: map-get($k-colors, 'font-1');
+  $select-item-bg: map-get($k-colors, 'line-2');
   $select-item-border-color: darken($select-item-bg, 10%);
   $select-item-hover-color: darken($select-item-color, 5%);
   $select-item-hover-bg: darken($select-item-bg, 5%);
@@ -263,7 +263,7 @@
   // Base
 
   .Select-control {
-    background-color: map-get($options, "select-input-bg");
+    background-color: map-get($options, 'select-input-bg');
     border-color: lighten($select-input-border-color, 5%)
       $select-input-border-color darken($select-input-border-color, 10%);
     border: $select-input-border-width solid $select-input-border-color;
@@ -295,7 +295,7 @@
   }
 
   .is-open > .Select-control {
-    background-color: map-get($options, "select-input-bg");
+    background-color: map-get($options, 'select-input-bg');
     border-color: $select-input-border-color $select-input-border-color
       lighten($select-input-border-color, 5%);
 
@@ -500,10 +500,10 @@
     // scroll.  However, if these definitions are split into an outer and an
     // inner element, the browser is able to optimize the scrolling behavior
     // and does not have to repaint on scroll.
-    background-color: map-get($options, "select-input-bg");
+    background-color: map-get($options, 'select-input-bg');
     border: k-px-to-rem(2px) solid $select-input-border-color;
     border-top-color: mix(
-      map-get($options, "select-input-bg"),
+      map-get($options, 'select-input-bg'),
       $select-input-border-color,
       50%
     );

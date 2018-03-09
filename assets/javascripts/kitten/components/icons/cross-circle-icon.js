@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 export const CrossCircleIcon = ({ circleColor, crossColor, ...props }) => {
   return (
@@ -14,6 +14,6 @@ export const CrossCircleIcon = ({ circleColor, crossColor, ...props }) => {
 };
 
 CrossCircleIcon.defaultProps = {
-  circleColor: "#fff",
-  crossColor: "#333"
+  circleColor: '#fff',
+  crossColor: '#333'
 };

@@ -30,20 +30,20 @@
 ///      </div>
 ///    </div>
 @mixin k-SliderTooltip($slider-tooltip) {
-  @include k-with-module("k-SliderTooltip: $slider-tooltip") {
-    $colors: k-map-fetch($slider-tooltip, "colors");
+  @include k-with-module('k-SliderTooltip: $slider-tooltip') {
+    $colors: k-map-fetch($slider-tooltip, 'colors');
 
-    $border-color: k-color-definition(k-map-fetch($colors, "border"));
+    $border-color: k-color-definition(k-map-fetch($colors, 'border'));
     $border-inactive-color: k-color-definition(
-      k-map-fetch($colors, "border-inactive")
+      k-map-fetch($colors, 'border-inactive')
     );
-    $background-color: k-color-definition(k-map-fetch($colors, "background"));
+    $background-color: k-color-definition(k-map-fetch($colors, 'background'));
     $background-inactive-color: k-color-definition(
-      k-map-fetch($colors, "background-inactive")
+      k-map-fetch($colors, 'background-inactive')
     );
-    $text-color: k-color-definition(k-map-fetch($colors, "text"));
+    $text-color: k-color-definition(k-map-fetch($colors, 'text'));
     $text-inactive-color: k-color-definition(
-      k-map-fetch($colors, "text-inactive")
+      k-map-fetch($colors, 'text-inactive')
     );
 
     $border-width: 1px;
@@ -113,7 +113,7 @@
         height: 0;
 
         border: solid transparent;
-        content: " ";
+        content: ' ';
 
         transition: border-top-color $transition-speed;
         pointer-events: none;

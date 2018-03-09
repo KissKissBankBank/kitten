@@ -1,15 +1,15 @@
-import React from "react";
-import classNames from "classnames";
-import { SideLayout } from "kitten/components/layout/side-layout";
-import { Grid, GridCol } from "kitten/components/grid/grid";
-import { Title } from "kitten/components/typography/title";
-import { Paragraph } from "kitten/components/typography/paragraph";
-import { InformationBox } from "kitten/components/box/information-box";
-import { DocLinkBox } from "kitten/components/box/doc-link-box";
-import { FormActions } from "kitten/components/form/form-actions";
-import { Button } from "kitten/components/buttons/button";
-import { Label } from "kitten/components/form/label";
-import { TextInputWithLimit } from "kitten/components/form/text-input-with-limit";
+import React from 'react';
+import classNames from 'classnames';
+import { SideLayout } from 'kitten/components/layout/side-layout';
+import { Grid, GridCol } from 'kitten/components/grid/grid';
+import { Title } from 'kitten/components/typography/title';
+import { Paragraph } from 'kitten/components/typography/paragraph';
+import { InformationBox } from 'kitten/components/box/information-box';
+import { DocLinkBox } from 'kitten/components/box/doc-link-box';
+import { FormActions } from 'kitten/components/form/form-actions';
+import { Button } from 'kitten/components/buttons/button';
+import { Label } from 'kitten/components/form/label';
+import { TextInputWithLimit } from 'kitten/components/form/text-input-with-limit';
 
 export class KarlSideLayout extends React.Component {
   renderDocLinkBox(item) {
@@ -19,9 +19,9 @@ export class KarlSideLayout extends React.Component {
       <div
         key={id}
         className={classNames(
-          "k-u-margin-top-triple",
-          "k-u-margin-right-double",
-          "k-u-margin-left-quadruple"
+          'k-u-margin-top-triple',
+          'k-u-margin-right-double',
+          'k-u-margin-left-quadruple'
         )}
       >
         <DocLinkBox {...docLinkBoxProps} />
@@ -38,9 +38,9 @@ export class KarlSideLayout extends React.Component {
       <div
         key="karlSideLayoutInformationBox"
         className={classNames(
-          "k-u-margin-top-quadruple",
-          "k-u-margin-right-quadruple",
-          "k-u-margin-left-quadruple"
+          'k-u-margin-top-quadruple',
+          'k-u-margin-right-quadruple',
+          'k-u-margin-left-quadruple'
         )}
       >
         <InformationBox title={this.props.sidebar.informationBox.title}>
@@ -92,8 +92,8 @@ export class KarlSideLayout extends React.Component {
     return (
       <FormActions
         className={classNames(
-          "k-u-margin-top-quadruple",
-          "k-u-margin-bottom-quadruple"
+          'k-u-margin-top-quadruple',
+          'k-u-margin-bottom-quadruple'
         )}
       >
         <Button tag="a" modifier="hydrogen" href={this.props.previousStepUrl}>
@@ -132,6 +132,6 @@ export class KarlSideLayout extends React.Component {
   }
 
   shortDescField() {
-    return this.props.form.fields["project[short_desc]"];
+    return this.props.form.fields['project[short_desc]'];
   }
 }

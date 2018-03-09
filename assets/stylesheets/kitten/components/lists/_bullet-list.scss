@@ -16,21 +16,21 @@
 
 @mixin k-BulletList {
   // Font
-  $font: "light";
+  $font: 'light';
   $font-step: -1;
   $font-step-on-media: 0;
   $line-height: 1.5;
 
   // Bullet properties
-  $bullet-color: map-get($k-colors, "font-1");
+  $bullet-color: map-get($k-colors, 'font-1');
   $bullet-size: 4px;
   $border-radius: 50%;
 
   // Link
-  $link-font: "regular";
-  $link-color: map-get($k-colors, "primary-1");
-  $link-hover-color: map-get($k-colors, "primary-2");
-  $link-active-color: map-get($k-colors, "primary-3");
+  $link-font: 'regular';
+  $link-color: map-get($k-colors, 'primary-1');
+  $link-hover-color: map-get($k-colors, 'primary-2');
+  $link-active-color: map-get($k-colors, 'primary-3');
 
   // Text alignment
   $space-bullet-text: 10px;
@@ -61,7 +61,7 @@
       height: k-px-to-rem($bullet-size);
       display: inline-block;
 
-      content: "";
+      content: '';
       background-color: $bullet-color;
     }
   }

@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 export const defaultProps = (WrappedComponent, props) => {
   return class defaultProps extends React.Component {

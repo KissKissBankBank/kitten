@@ -7,7 +7,7 @@
 ///   @include k-Cropper;
 
 @mixin k-Cropper {
-  $border-color: map-get($k-colors, "line-1");
+  $border-color: map-get($k-colors, 'line-1');
 
   .k-Cropper {
     // CSS originally from the cropper library.
@@ -112,7 +112,7 @@
     .cropper-center:after {
       position: absolute;
       display: block;
-      content: " ";
+      content: ' ';
       background-color: #eee;
     }
 
@@ -274,7 +274,7 @@
       display: block;
       width: 200%;
       height: 200%;
-      content: " ";
+      content: ' ';
       opacity: 0;
       background-color: #39f;
     }

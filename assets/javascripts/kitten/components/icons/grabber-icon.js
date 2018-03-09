@@ -1,10 +1,10 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import React from 'react';
+import ReactDOM from 'react-dom';
 
 export class GrabberIcon extends React.Component {
   componentDidMount() {
     const element = ReactDOM.findDOMNode(this);
-    element.setAttribute("xmlns", "http://www.w3.org/2000/svg");
+    element.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
   }
 
   render() {

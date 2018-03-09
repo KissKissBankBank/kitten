@@ -1,6 +1,6 @@
-import React from "react";
-import PropTypes from "prop-types";
-import classNames from "classnames";
+import React from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
 export class ButtonImageWithTextAndBadge extends React.Component {
   renderNotificationBadge() {
@@ -27,11 +27,11 @@ export class ButtonImageWithTextAndBadge extends React.Component {
     } = this.props;
 
     const textClass = classNames(
-      "k-ButtonImageWithText__text",
-      "k-ButtonImageWithText__text--withoutPaddingRight",
+      'k-ButtonImageWithText__text',
+      'k-ButtonImageWithText__text--withoutPaddingRight',
       textClassName
     );
-    let buttonClassName = classNames("k-ButtonImageWithText", className);
+    let buttonClassName = classNames('k-ButtonImageWithText', className);
 
     return (
       <button
@@ -51,7 +51,7 @@ export class ButtonImageWithTextAndBadge extends React.Component {
               alt={altImg}
             />
           </span>
-          {notifications ? this.renderNotificationBadge() : ""}
+          {notifications ? this.renderNotificationBadge() : ''}
         </span>
         <p className={textClass}>{text}</p>
       </button>
@@ -73,7 +73,7 @@ ButtonImageWithTextAndBadge.propTypes = {
 };
 
 ButtonImageWithTextAndBadge.defaultProps = {
-  children: "Toggle button",
+  children: 'Toggle button',
   onClick: () => {}
 };
 

@@ -53,7 +53,7 @@
 @mixin k-typographyFontScale(
   $font-step: 0,
   $font-step-on-media: null,
-  $media-size: "s",
+  $media-size: 's',
   $line-height: null,
   $line-height-on-media: null
 ) {

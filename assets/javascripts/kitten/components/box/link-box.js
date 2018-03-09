@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import classNames from "classnames";
-import { ArrowIcon } from "kitten/components/icons/arrow-icon";
+import React, { Component } from 'react';
+import classNames from 'classnames';
+import { ArrowIcon } from 'kitten/components/icons/arrow-icon';
 
 export class LinkBox extends Component {
   renderIcon() {
@@ -20,11 +20,11 @@ export class LinkBox extends Component {
       linkProps
     } = this.props;
 
-    let linkBoxClassNames = classNames("k-LinkBox", className, {
-      "k-LinkBox--withIcon": displayIcon
+    let linkBoxClassNames = classNames('k-LinkBox', className, {
+      'k-LinkBox--withIcon': displayIcon
     });
 
-    const target = isExternal ? { target: "_blank" } : {};
+    const target = isExternal ? { target: '_blank' } : {};
 
     return (
       <a {...linkProps} className={linkBoxClassNames} href={href} {...target}>
@@ -46,7 +46,7 @@ export class LinkBox extends Component {
 
 LinkBox.defaultProps = {
   displayIcon: false,
-  href: "#",
+  href: '#',
   isExternal: false
 };
 

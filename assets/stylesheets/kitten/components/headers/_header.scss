@@ -101,7 +101,7 @@
 
     padding: 0 $item-spacing;
 
-    @include k-media-max("s") {
+    @include k-media-max('s') {
       display: none;
     }
   }
@@ -124,7 +124,7 @@
 
     svg,
     img {
-      @include k-media-within("m") {
+      @include k-media-within('m') {
         margin-left: -$graphic-logo-size;
       }
     }
@@ -135,45 +135,45 @@
 
     svg,
     img {
-      @include k-media-within("xxs") {
+      @include k-media-within('xxs') {
         margin-left: -$graphic-logo-size;
       }
     }
   }
 
   .k-Header__search {
-    @include k-media-max("xxs") {
+    @include k-media-max('xxs') {
       display: none;
     }
   }
 
   .k-Header__signup,
   .k-Header__logged {
-    @include k-media-max("xs") {
+    @include k-media-max('xs') {
       display: none;
     }
   }
 
   .k-Header__signup {
-    @include k-media-within("m") {
+    @include k-media-within('m') {
       display: none;
     }
 
-    @include k-media-within("xxs") {
+    @include k-media-within('xxs') {
       padding-left: 0;
     }
   }
 
   .k-Header__signupIcon {
-    @include k-media-min("s") {
+    @include k-media-min('s') {
       display: none;
     }
 
-    @include k-media-within("m") {
+    @include k-media-within('m') {
       display: flex;
     }
 
-    @include k-media-within("xxs") {
+    @include k-media-within('xxs') {
       padding-left: 0;
     }
   }
@@ -200,11 +200,11 @@
 
   .k-Header__title {
     margin: 0;
-    @include k-typographyFont("bold-uppercase");
+    @include k-typographyFont('bold-uppercase');
   }
 
   .k-Header__subtitle {
     margin: 0;
-    @include k-typographyFont("light");
+    @include k-typographyFont('light');
   }
 }

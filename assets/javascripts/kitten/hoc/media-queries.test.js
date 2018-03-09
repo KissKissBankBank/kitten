@@ -1,6 +1,6 @@
-import React from "react";
-import renderer from "react-test-renderer";
-import { mediaQueries } from "kitten/hoc/media-queries";
+import React from 'react';
+import renderer from 'react-test-renderer';
+import { mediaQueries } from 'kitten/hoc/media-queries';
 
 const SimpleComponent = ({
   viewportIsMobile,
@@ -21,7 +21,7 @@ const createMockMediaMatcher = matches => () => {
   };
 };
 
-describe("mediaQueries()", () => {
+describe('mediaQueries()', () => {
   const originalMatchMedia = window.matchMedia;
   let SimpleComponentWithMediaQueries;
   let component;
@@ -35,7 +35,7 @@ describe("mediaQueries()", () => {
     window.matchMedia = originalMatchMedia;
   });
 
-  describe("by default", () => {
+  describe('by default', () => {
     beforeEach(() => {
       SimpleComponentWithMediaQueries = mediaQueries(SimpleComponent, {
         viewportIsMobile: true,
@@ -47,28 +47,28 @@ describe("mediaQueries()", () => {
         .toJSON();
     });
 
-    it("renders the wrapped component", () => {
+    it('renders the wrapped component', () => {
       expect(componentSnapshot).toMatchSnapshot();
     });
 
-    it("pushes media queries props to wrapped component", () => {
+    it('pushes media queries props to wrapped component', () => {
       const wrappedComponent = component.find(SimpleComponent).first();
 
-      expect(wrappedComponent.prop("viewportIsMobile")).toBeFalsy();
-      expect(wrappedComponent.prop("viewportIsTabletOrLess")).toBeFalsy();
+      expect(wrappedComponent.prop('viewportIsMobile')).toBeFalsy();
+      expect(wrappedComponent.prop('viewportIsTabletOrLess')).toBeFalsy();
     });
 
-    it("attaches listeners", () => {
+    it('attaches listeners', () => {
       expect(mockAddListener).toHaveBeenCalled();
     });
 
-    it("removes listeners", () => {
+    it('removes listeners', () => {
       component.instance().componentWillUnmount();
       expect(mockRemoveListener).toHaveBeenCalled();
     });
   });
 
-  describe("with tablet or less version", () => {
+  describe('with tablet or less version', () => {
     beforeEach(() => {
       window.matchMedia = createMockMediaMatcher(true);
       SimpleComponentWithMediaQueries = mediaQueries(SimpleComponent, {
@@ -77,11 +77,11 @@ describe("mediaQueries()", () => {
       component = mount(<SimpleComponentWithMediaQueries />);
     });
 
-    it("pushes media queries props to wrapped component", () => {
+    it('pushes media queries props to wrapped component', () => {
       const wrappedComponent = component.find(SimpleComponent).first();
 
-      expect(wrappedComponent.prop("viewportIsMobile")).toBeFalsy();
-      expect(wrappedComponent.prop("viewportIsTabletOrLess")).toBeTruthy();
+      expect(wrappedComponent.prop('viewportIsMobile')).toBeFalsy();
+      expect(wrappedComponent.prop('viewportIsTabletOrLess')).toBeTruthy();
     });
   });
 });

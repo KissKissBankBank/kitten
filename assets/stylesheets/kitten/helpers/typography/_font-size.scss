@@ -32,28 +32,28 @@
   $without-line-height: false
 ) {
   // Modular scale multiplier
-  $multiplier: k-map-fetch($k-typography, "scale-multiplier");
+  $multiplier: k-map-fetch($k-typography, 'scale-multiplier');
 
   $valid: k-all(
     k-validate(
       $multiplier,
       k-number-schema($unit: none),
-      "k-typographyFontSize",
-      "$multiplier"
+      'k-typographyFontSize',
+      '$multiplier'
     ),
     k-validate(
       $step,
       k-number-schema($unit: none),
-      "k-typographyFontSize",
-      "$step"
+      'k-typographyFontSize',
+      '$step'
     )
   );
 
   // The starting font size applied to the body element.
-  $base-font-size: k-map-fetch($k-typography, "font-size");
+  $base-font-size: k-map-fetch($k-typography, 'font-size');
 
   // The base line height.
-  $base-line-height: k-map-fetch($k-typography, "line-height");
+  $base-line-height: k-map-fetch($k-typography, 'line-height');
 
   // Given the requested step on our modular scale, compute font size.
   $font-size: ms($step, $base-font-size, $multiplier);

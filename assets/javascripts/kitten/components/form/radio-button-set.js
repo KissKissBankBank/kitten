@@ -1,6 +1,6 @@
-import React from "react";
-import classNames from "classnames";
-import { RadioButton } from "kitten/components/form/radio-button";
+import React from 'react';
+import classNames from 'classnames';
+import { RadioButton } from 'kitten/components/form/radio-button';
 
 export class RadioButtonSet extends React.Component {
   constructor(props) {
@@ -11,7 +11,7 @@ export class RadioButtonSet extends React.Component {
   renderRadioButton(item, index) {
     const { className, ...itemProps } = item;
     const radioButtonClassName = classNames(
-      "k-RadioButtonSet__radioButton",
+      'k-RadioButtonSet__radioButton',
       className
     );
 
@@ -34,7 +34,7 @@ export class RadioButtonSet extends React.Component {
       error,
       ...radioButtonSetProps
     } = this.props;
-    const radioButtonSetClassName = classNames("k-RadioButtonSet", className);
+    const radioButtonSetClassName = classNames('k-RadioButtonSet', className);
 
     return (
       <div className={radioButtonSetClassName} {...radioButtonSetProps}>
@@ -45,14 +45,14 @@ export class RadioButtonSet extends React.Component {
 }
 
 RadioButtonSet.defaultProps = {
-  name: "radioButtonSet",
+  name: 'radioButtonSet',
   error: false,
   items: [
     {
-      text: "filter 1",
-      children: "lorem ipsum dolor",
+      text: 'filter 1',
+      children: 'lorem ipsum dolor',
       defaultChecked: true,
-      id: "myRadioButton" // Replace by a real value
+      id: 'myRadioButton' // Replace by a real value
     }
   ]
 };

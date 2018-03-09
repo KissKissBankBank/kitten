@@ -1,8 +1,8 @@
-import React from "react";
-import renderer from "react-test-renderer";
-import { CrowdfundingCard } from "kitten/components/cards/crowdfunding-card";
+import React from 'react';
+import renderer from 'react-test-renderer';
+import { CrowdfundingCard } from 'kitten/components/cards/crowdfunding-card';
 
-describe("<CrowdfundingCard />", () => {
+describe('<CrowdfundingCard />', () => {
   const initialWindow = global.window;
   let component;
 
@@ -14,44 +14,44 @@ describe("<CrowdfundingCard />", () => {
     global.window = initialWindow;
   });
 
-  describe("by default", () => {
+  describe('by default', () => {
     beforeEach(() => {
       component = renderer.create(<CrowdfundingCard />).toJSON();
     });
 
-    it("matches with snapshot", () => {
+    it('matches with snapshot', () => {
       expect(component).toMatchSnapshot();
     });
   });
 
-  describe("with loading prop", () => {
+  describe('with loading prop', () => {
     beforeEach(() => {
       component = renderer.create(<CrowdfundingCard loading />).toJSON();
     });
 
-    it("matches with snapshot", () => {
+    it('matches with snapshot', () => {
       expect(component).toMatchSnapshot();
     });
   });
 
-  describe("with some props", () => {
+  describe('with some props', () => {
     beforeEach(() => {
       component = renderer
         .create(
           <CrowdfundingCard
             href="#foobar"
             imageProps={{
-              src: "#image",
-              alt: "Image alt"
+              src: '#image',
+              alt: 'Image alt'
             }}
             avatarProps={{
-              src: "#avatar",
-              alt: "Avatar alt"
+              src: '#avatar',
+              alt: 'Avatar alt'
             }}
             ownerTitle="Custom title"
             ownerDescription="Custom description"
             titleProps={{
-              tag: "h4"
+              tag: 'h4'
             }}
             cardTitle="Custom title"
             cardSubTitle="Custom subtitle"
@@ -66,7 +66,7 @@ describe("<CrowdfundingCard />", () => {
         .toJSON();
     });
 
-    it("matches with snapshot", () => {
+    it('matches with snapshot', () => {
       expect(component).toMatchSnapshot();
     });
   });

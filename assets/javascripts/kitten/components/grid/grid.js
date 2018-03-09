@@ -1,11 +1,11 @@
-import React, { Component } from "react";
-import classNames from "classnames";
-import { ScreenConfig } from "kitten/constants/screen-config";
+import React, { Component } from 'react';
+import classNames from 'classnames';
+import { ScreenConfig } from 'kitten/constants/screen-config';
 
 export class Grid extends Component {
   render() {
     const { className, ...others } = this.props;
-    const gridClassName = classNames("k-Grid", className);
+    const gridClassName = classNames('k-Grid', className);
 
     return <div className={gridClassName} {...others} />;
   }
@@ -57,7 +57,7 @@ Grid.defaultProps = {
 };
 
 GridCol.defaultProps = {
-  col: "12",
+  col: '12',
   offset: null,
   className: null
 };

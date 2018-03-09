@@ -36,23 +36,23 @@
 ///     </div>
 ///   </div>
 @mixin k-Slider($slider) {
-  @include k-with-module("k-Slider: $slider") {
-    $colors: k-map-fetch($slider, "colors");
+  @include k-with-module('k-Slider: $slider') {
+    $colors: k-map-fetch($slider, 'colors');
 
-    $progress-color: k-color-definition(k-map-fetch($colors, "progress"));
+    $progress-color: k-color-definition(k-map-fetch($colors, 'progress'));
     $progress-disabled-color: k-color-definition(
-      k-map-fetch($colors, "progress-disabled")
+      k-map-fetch($colors, 'progress-disabled')
     );
-    $ramp-color: k-color-definition(k-map-fetch($colors, "ramp"));
-    $handle-color: k-color-definition(k-map-fetch($colors, "handle"));
+    $ramp-color: k-color-definition(k-map-fetch($colors, 'ramp'));
+    $handle-color: k-color-definition(k-map-fetch($colors, 'handle'));
     $handle-disabled-color: k-color-definition(
-      k-map-fetch($colors, "handle-disabled")
+      k-map-fetch($colors, 'handle-disabled')
     );
-    $icon-color: k-color-definition(k-map-fetch($colors, "icon"));
+    $icon-color: k-color-definition(k-map-fetch($colors, 'icon'));
     $icon-disabled-color: k-color-definition(
-      k-map-fetch($colors, "icon-disabled")
+      k-map-fetch($colors, 'icon-disabled')
     );
-    $border-color: k-color-definition(k-map-fetch($colors, "border"));
+    $border-color: k-color-definition(k-map-fetch($colors, 'border'));
 
     $ramp-height: 0.2rem;
     $handle-size: 2.5rem;
@@ -97,7 +97,7 @@
         display: block;
         width: ($handle-size / 2);
         height: 100%;
-        content: "";
+        content: '';
       }
 
       &:before {

@@ -17,21 +17,21 @@
 
 @mixin k-InfoLines {
   .k-InfoLines {
-    border-top: 1px solid map-get($k-colors, "line-1");
+    border-top: 1px solid map-get($k-colors, 'line-1');
   }
 
   .k-InfoLines__line {
     display: flex;
     padding: k-px-to-rem(15px);
-    border-bottom: 1px solid map-get($k-colors, "line-1");
+    border-bottom: 1px solid map-get($k-colors, 'line-1');
 
-    @include k-media-max("s") {
+    @include k-media-max('s') {
       flex-direction: column;
     }
   }
 
   .k-InfoLines__line__value {
-    @include k-media-min("m") {
+    @include k-media-min('m') {
       margin-left: auto;
       text-align: right;
     }
@@ -40,8 +40,8 @@
   // Modifiers.
 
   .k-InfoLines--withLeftRightBorder {
-    border-left: 1px solid map-get($k-colors, "line-1");
-    border-right: 1px solid map-get($k-colors, "line-1");
+    border-left: 1px solid map-get($k-colors, 'line-1');
+    border-right: 1px solid map-get($k-colors, 'line-1');
   }
 
   .k-InfoLines--withBorderRadius {
@@ -58,7 +58,7 @@
 
   .k-InfoLines--withoutResponsive {
     .k-InfoLines__line {
-      @include k-media-max("s") {
+      @include k-media-max('s') {
         flex-direction: row;
       }
     }

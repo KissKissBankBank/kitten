@@ -1,5 +1,5 @@
-import React from "react";
-import classNames from "classnames";
+import React from 'react';
+import classNames from 'classnames';
 
 export const Row = ({
   className,
@@ -14,19 +14,19 @@ export const Row = ({
   ...others
 }) => {
   const rowClassName = classNames(
-    "k-Row",
+    'k-Row',
     {
-      "k-Row--centered": centered,
-      "k-Row--light": light,
-      "k-Row--dark": dark,
-      "k-Row--lightTopBorder": lightTopBorder,
-      "k-Row--lightBottomBorder": lightBottomBorder,
-      "k-Row--padded": padded
+      'k-Row--centered': centered,
+      'k-Row--light': light,
+      'k-Row--dark': dark,
+      'k-Row--lightTopBorder': lightTopBorder,
+      'k-Row--lightBottomBorder': lightBottomBorder,
+      'k-Row--padded': padded
     },
     className
   );
 
-  const rowContentClassName = classNames("k-Row__content", contentClassName);
+  const rowContentClassName = classNames('k-Row__content', contentClassName);
 
   return (
     <div className={rowClassName} {...others}>

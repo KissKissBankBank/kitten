@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import classNames from "classnames";
-import { ButtonIcon } from "kitten/components/buttons/button-icon";
-import { CrossIcon } from "kitten/components/icons/cross-icon";
+import React, { Component } from 'react';
+import classNames from 'classnames';
+import { ButtonIcon } from 'kitten/components/buttons/button-icon';
+import { CrossIcon } from 'kitten/components/icons/cross-icon';
 
 export class CloseButton extends Component {
   render() {
@@ -14,7 +14,7 @@ export class CloseButton extends Component {
     } = this.props;
 
     const buttonClassName = classNames(
-      "k-ButtonIcon--cross",
+      'k-ButtonIcon--cross',
       ([`k-ButtonIcon--cross--${size}`]: size),
       className
     );
@@ -29,7 +29,7 @@ export class CloseButton extends Component {
         {...others}
       >
         <CrossIcon
-          className={classNames("k-ButtonIcon__svg", "k-ButtonIcon__svgRotate")}
+          className={classNames('k-ButtonIcon__svg', 'k-ButtonIcon__svgRotate')}
         />
       </ButtonIcon>
     );
@@ -37,7 +37,7 @@ export class CloseButton extends Component {
 }
 
 CloseButton.defaultProps = {
-  closeButtonLabel: "Close",
-  buttonModifier: "hydrogen",
+  closeButtonLabel: 'Close',
+  buttonModifier: 'hydrogen',
   size: null
 };

@@ -1,12 +1,12 @@
 // Simulator that lets users select an amount and an installment, to start
 // simulating a loan.
 
-import React from "react";
-import PropTypes from "prop-types";
-import classNames from "classnames";
-import { numberUtils } from "kitten/helpers/utils/number";
-import { SliderWithTooltipAndPower } from "kitten/components/sliders/slider-with-tooltip-and-power";
-import { TextInputWithUnit } from "kitten/components/form/text-input-with-unit";
+import React from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
+import { numberUtils } from 'kitten/helpers/utils/number';
+import { SliderWithTooltipAndPower } from 'kitten/components/sliders/slider-with-tooltip-and-power';
+import { TextInputWithUnit } from 'kitten/components/form/text-input-with-unit';
 
 export class LoanSimulator extends React.Component {
   constructor(props) {
@@ -184,9 +184,9 @@ class LoanSimulatorContent extends React.Component {
     const active = this.sliderIsActive();
     const amount = active
       ? this.toCurrency(this.props.commissionAmount * 100)
-      : "--";
+      : '--';
 
-    let commissionAmount = " 0 ";
+    let commissionAmount = ' 0 ';
     let exemptionText = null;
 
     if (!this.props.feesExemption) {
@@ -210,8 +210,8 @@ class LoanSimulatorContent extends React.Component {
         {this.props.commissionLabel}
         <span
           className={classNames({
-            "k-u-text--active": active,
-            "k-u-text--inactive": !active
+            'k-u-text--active': active,
+            'k-u-text--inactive': !active
           })}
         >
           {commissionAmount}
@@ -259,7 +259,7 @@ class LoanSimulatorContent extends React.Component {
     let errorClass, errorTag, tooltipClass, tooltipText;
 
     if (error) {
-      errorClass = "is-error";
+      errorClass = 'is-error';
       errorTag = <p className="k-LoanSimulator__amount__error">{error}</p>;
     }
 
@@ -289,7 +289,7 @@ class LoanSimulatorContent extends React.Component {
         </div>
       ];
     } else {
-      tooltipClass = "is-inactive";
+      tooltipClass = 'is-inactive';
       tooltipText = this.props.sliderPlaceholder;
     }
 
@@ -299,12 +299,12 @@ class LoanSimulatorContent extends React.Component {
         <input
           type="hidden"
           name={this.props.durationName}
-          value={this.props.duration || ""}
+          value={this.props.duration || ''}
         />
       );
 
     return (
-      <div className={classNames("k-LoanSimulator", errorClass)}>
+      <div className={classNames('k-LoanSimulator', errorClass)}>
         <div className="k-LoanSimulator__amount">
           <label
             className="k-Label k-LoanSimulator__label"
@@ -428,22 +428,22 @@ LoanSimulator.propTypes = {
 };
 
 LoanSimulator.defaultProps = {
-  amountLabel: "I need",
-  amountPlaceholder: "",
+  amountLabel: 'I need',
+  amountPlaceholder: '',
   amountMin: 1,
   amountMax: 10000,
 
   initialAmount: null,
   initialTouched: false,
 
-  amountEmptyError: "Amount cannot be empty",
-  amountOutOfBoundsError: "Amount is either too big or too small",
-  requiredDurationError: "Duration is required",
+  amountEmptyError: 'Amount cannot be empty',
+  amountOutOfBoundsError: 'Amount is either too big or too small',
+  requiredDurationError: 'Duration is required',
 
   displayCommission: false,
   feesExemption: false,
-  feesExemptionLabel: "instead of",
-  commissionLabel: "Fees:",
+  feesExemptionLabel: 'instead of',
+  commissionLabel: 'Fees:',
 
   // The `commissionRules` prop has to be an array containing a `durationMax`
   // rule. This will return the first `rate` which matches the rule for the
@@ -460,15 +460,15 @@ LoanSimulator.defaultProps = {
   installmentLabel: "I'd like to reimburse",
   initialInstallment: null,
 
-  durationText: "during",
+  durationText: 'during',
   durationMin: 1,
   durationMax: 36,
-  durationSymbol: "month",
-  durationSymbolPlural: "months",
+  durationSymbol: 'month',
+  durationSymbolPlural: 'months',
 
-  currencySymbol: "$",
-  installmentSymbol: "$/month",
-  locale: "en",
+  currencySymbol: '$',
+  installmentSymbol: '$/month',
+  locale: 'en',
 
   actionLabel: null
 };

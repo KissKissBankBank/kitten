@@ -1,26 +1,26 @@
-import React, { Component } from "react";
-import Radium, { StyleRoot } from "radium";
-import { Row as RowBase } from "kitten/components/grid/row";
-import { Marger } from "kitten/components/layout/marger";
+import React, { Component } from 'react';
+import Radium, { StyleRoot } from 'radium';
+import { Row as RowBase } from 'kitten/components/grid/row';
+import { Marger } from 'kitten/components/layout/marger';
 import {
   Grid as GridBase,
   GridCol as GridColBase
-} from "kitten/components/grid/grid";
-import { TextInputWithButton as TextInputWithButtonBase } from "kitten/components/form/text-input-with-button";
-import { Paragraph as ParagraphBase } from "kitten/components/typography/paragraph";
-import { Text } from "kitten/components/typography/text";
+} from 'kitten/components/grid/grid';
+import { TextInputWithButton as TextInputWithButtonBase } from 'kitten/components/form/text-input-with-button';
+import { Paragraph as ParagraphBase } from 'kitten/components/typography/paragraph';
+import { Text } from 'kitten/components/typography/text';
 import {
   FacebookButtonIcon as FacebookButtonIconBase,
   TwitterButtonIcon as TwitterButtonIconBase,
   InstagramButtonIcon
-} from "kitten/components/buttons/social-button-icon";
-import { LinkList } from "kitten/components/links/link-list";
-import { SelectWithState } from "kitten/components/form/select-with-state";
-import { KissKissBankBankLogo as KissKissBankBankLogoBase } from "kitten/karl/logos/kisskissbankbanklogo";
-import { createMatchMediaMax } from "kitten/helpers/utils/media-queries";
-import { ScreenConfig, SCREEN_SIZE_M } from "kitten/constants/screen-config";
-import COLORS from "kitten/constants/colors-config";
-import { parseHtml } from "kitten/helpers/utils/parser";
+} from 'kitten/components/buttons/social-button-icon';
+import { LinkList } from 'kitten/components/links/link-list';
+import { SelectWithState } from 'kitten/components/form/select-with-state';
+import { KissKissBankBankLogo as KissKissBankBankLogoBase } from 'kitten/karl/logos/kisskissbankbanklogo';
+import { createMatchMediaMax } from 'kitten/helpers/utils/media-queries';
+import { ScreenConfig, SCREEN_SIZE_M } from 'kitten/constants/screen-config';
+import COLORS from 'kitten/constants/colors-config';
+import { parseHtml } from 'kitten/helpers/utils/parser';
 
 const Grid = Radium(GridBase);
 const GridCol = Radium(GridColBase);
@@ -110,7 +110,7 @@ export class KarlFooterKisskiss extends Component {
 
                   <div style={styles.network.subscribe.form}>
                     <TextInputWithButton
-                      textInputProps={{ ...textInputProps, id: "subscribe" }}
+                      textInputProps={{ ...textInputProps, id: 'subscribe' }}
                       value={newsletterSubmitValue}
                       style={styles.network.subscribe.form.textInput}
                     />
@@ -280,7 +280,7 @@ export class KarlFooterKisskiss extends Component {
                 margin={false}
                 style={styles.notice.block.paragraph}
               >
-                {parseHtml(noticeParagraphMangopayText1)}{" "}
+                {parseHtml(noticeParagraphMangopayText1)}{' '}
                 <a
                   href="https://www.mangopay.com/fr/"
                   target="_blank"
@@ -288,7 +288,7 @@ export class KarlFooterKisskiss extends Component {
                 >
                   {parseHtml(noticeParagraphMangopayLink)}
                   <abbr> {parseHtml(noticeParagraphMangopayLinkAcronym)}</abbr>
-                </a>{" "}
+                </a>{' '}
                 {parseHtml(noticeParagraphMangopayText2)}
               </Paragraph>
             </div>
@@ -314,15 +314,15 @@ const styles = {
 
   network: {
     background:
-      "linear-gradient(to top, " +
+      'linear-gradient(to top, ' +
       `${COLORS.background3} 0%, ` +
       `${COLORS.background3} 50%, ` +
       `${COLORS.background1} 50%, ` +
       `${COLORS.background1} 100%)`,
 
-    [`@media (min-width: ${ScreenConfig["L"].min}px)`]: {
+    [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
       background:
-        "linear-gradient(to right, " +
+        'linear-gradient(to right, ' +
         `${COLORS.background3} 0%, ` +
         `${COLORS.background3} 70%, ` +
         `${COLORS.background1} 70%, ` +
@@ -330,140 +330,140 @@ const styles = {
     },
 
     subscribe: {
-      alignSelf: "center",
-      [`@media (min-width: ${ScreenConfig["L"].min}px)`]: {
-        display: "flex",
-        justifyContent: "flex-end"
+      alignSelf: 'center',
+      [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
+        display: 'flex',
+        justifyContent: 'flex-end'
       },
 
       label: {
-        textAlign: "center",
-        [`@media (min-width: ${ScreenConfig["L"].min}px)`]: {
-          alignSelf: "center",
-          pointerEvents: "auto",
-          marginRight: "15px"
+        textAlign: 'center',
+        [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
+          alignSelf: 'center',
+          pointerEvents: 'auto',
+          marginRight: '15px'
         }
       },
 
       form: {
-        textAlign: "center",
-        flex: "1",
-        [`@media (max-width: ${ScreenConfig["M"].max}px)`]: {
-          marginTop: "10px"
+        textAlign: 'center',
+        flex: '1',
+        [`@media (max-width: ${ScreenConfig['M'].max}px)`]: {
+          marginTop: '10px'
         },
 
         textInput: {
-          [`@media (min-width: ${ScreenConfig["L"].min}px)`]: {
-            maxWidth: "450px"
+          [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
+            maxWidth: '450px'
           }
         }
       }
     },
 
     social: {
-      alignSelf: "center",
-      [`@media (max-width: ${ScreenConfig["M"].max}px)`]: {
-        marginTop: "30px",
-        marginBottom: "30px",
-        order: "-1"
+      alignSelf: 'center',
+      [`@media (max-width: ${ScreenConfig['M'].max}px)`]: {
+        marginTop: '30px',
+        marginBottom: '30px',
+        order: '-1'
       },
-      [`@media (min-width: ${ScreenConfig["L"].min}px)`]: {
-        display: "flex",
-        justifyContent: "flex-end"
+      [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
+        display: 'flex',
+        justifyContent: 'flex-end'
       },
 
       text: {
-        textAlign: "center",
-        [`@media (min-width: ${ScreenConfig["L"].min}px)`]: {
-          textAlign: "right",
-          marginRight: "15px",
-          alignSelf: "center"
+        textAlign: 'center',
+        [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
+          textAlign: 'right',
+          marginRight: '15px',
+          alignSelf: 'center'
         }
       },
 
       buttons: {
-        textAlign: "center",
-        [`@media (max-width: ${ScreenConfig["M"].max}px)`]: {
-          marginTop: "10px"
+        textAlign: 'center',
+        [`@media (max-width: ${ScreenConfig['M'].max}px)`]: {
+          marginTop: '10px'
         },
 
         buttonIcon: {
-          marginRight: "15px"
+          marginRight: '15px'
         }
       }
     }
   },
 
   list: {
-    paddingTop: "80px",
-    paddingBottom: "50px",
-    [`@media (min-width: ${ScreenConfig["M"].min}px)`]: {
-      paddingTop: "100px"
+    paddingTop: '80px',
+    paddingBottom: '50px',
+    [`@media (min-width: ${ScreenConfig['M'].min}px)`]: {
+      paddingTop: '100px'
     },
-    [`@media (min-width: ${ScreenConfig["L"].min}px)`]: {
-      paddingTop: "100px",
+    [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
+      paddingTop: '100px',
       paddingBottom: 0
     },
 
     logo: {
-      textAlign: "center",
+      textAlign: 'center',
 
       img: {
-        verticalAlign: "middle",
-        [`@media (min-width: ${ScreenConfig["L"].min}px)`]: {
-          display: "block",
-          verticalAlign: "top"
+        verticalAlign: 'middle',
+        [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
+          display: 'block',
+          verticalAlign: 'top'
         }
       }
     },
 
     linkList: {
       paddingBottom: 0,
-      [`@media (min-width: ${ScreenConfig["M"].min}px)`]: {
-        paddingBottom: "50px"
+      [`@media (min-width: ${ScreenConfig['M'].min}px)`]: {
+        paddingBottom: '50px'
       },
-      [`@media (min-width: ${ScreenConfig["L"].min}px)`]: {
-        paddingBottom: "80px"
+      [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
+        paddingBottom: '80px'
       },
 
       items: {
-        [`@media (max-width: ${ScreenConfig["S"].max}px)`]: {
-          marginBottom: "30px"
+        [`@media (max-width: ${ScreenConfig['S'].max}px)`]: {
+          marginBottom: '30px'
         }
       }
     }
   },
 
   notice: {
-    paddingBottom: "100px",
+    paddingBottom: '100px',
 
     block: {
-      [`@media (min-width: ${ScreenConfig["L"].min}px)`]: {
-        textAlign: "left",
-        display: "flex"
+      [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
+        textAlign: 'left',
+        display: 'flex'
       },
 
       logo: {
-        textAlign: "center",
-        marginBottom: "10px",
+        textAlign: 'center',
+        marginBottom: '10px',
         lineHeight: 0,
-        [`@media (min-width: ${ScreenConfig["L"].min}px)`]: {
-          marginRight: "14px"
+        [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
+          marginRight: '14px'
         },
 
         img: {
-          verticalAlign: "middle",
-          [`@media (min-width: ${ScreenConfig["L"].min}px)`]: {
-            display: "block",
-            verticalAlign: "top",
-            marginBottom: "10px"
+          verticalAlign: 'middle',
+          [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
+            display: 'block',
+            verticalAlign: 'top',
+            marginBottom: '10px'
           },
 
           mangopay: {
-            width: "130px",
-            marginTop: "30px",
-            [`@media (min-width: ${ScreenConfig["L"].min}px)`]: {
-              width: "100px",
+            width: '130px',
+            marginTop: '30px',
+            [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
+              width: '100px',
               marginTop: 0
             }
           }
@@ -472,26 +472,26 @@ const styles = {
 
       paragraph: {
         color: `${COLORS.background1}`,
-        [`@media (max-width: ${ScreenConfig["M"].max}px)`]: {
-          textAlign: "center"
+        [`@media (max-width: ${ScreenConfig['M'].max}px)`]: {
+          textAlign: 'center'
         },
 
         link: {
           color: `${COLORS.background1}`,
-          textDecoration: "underline",
-          ":active": {
+          textDecoration: 'underline',
+          ':active': {
             color: `${COLORS.primary3}`
           },
-          ":hover": {
+          ':hover': {
             color: `${COLORS.primary1}`
           }
         }
       },
       copyright: {
-        textAlign: "center",
-        [`@media (min-width: ${ScreenConfig["L"].min}px)`]: {
-          alignSelf: "flex-end",
-          textAlign: "right"
+        textAlign: 'center',
+        [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
+          alignSelf: 'flex-end',
+          textAlign: 'right'
         }
       }
     }
@@ -500,110 +500,110 @@ const styles = {
 
 KarlFooterKisskiss.defaultProps = {
   // Network
-  subscribeLabel: "Inscrivez-vous à notre Newsletter",
+  subscribeLabel: 'Inscrivez-vous à notre Newsletter',
   textInputProps: {
-    placeholder: "Entrez votre e-mail"
+    placeholder: 'Entrez votre e-mail'
   },
-  newsletterSubmitValue: "Envoyer",
-  socialText: "Suivez-nous",
-  hrefFacebook: "#",
-  hrefTwitter: "#",
-  hrefInstagram: "#",
+  newsletterSubmitValue: 'Envoyer',
+  socialText: 'Suivez-nous',
+  hrefFacebook: '#',
+  hrefTwitter: '#',
+  hrefInstagram: '#',
 
   // List
   items1: [
     {
-      key: "key1",
-      item: "Réussir ma collecte",
-      href: "#"
+      key: 'key1',
+      item: 'Réussir ma collecte',
+      href: '#'
     },
     {
-      key: "key2",
-      item: "Crowdfunding : Questions fréquentes",
-      href: "#"
+      key: 'key2',
+      item: 'Crowdfunding : Questions fréquentes',
+      href: '#'
     },
     {
-      key: "key3",
-      item: "Financer mon projet food ou agricole",
-      href: "#"
+      key: 'key3',
+      item: 'Financer mon projet food ou agricole',
+      href: '#'
     }
   ],
   items2: [
     {
-      key: "key1",
-      item: "Les Mentors",
-      href: "#"
+      key: 'key1',
+      item: 'Les Mentors',
+      href: '#'
     },
     {
-      key: "key2",
-      item: "Blog",
-      href: "#"
+      key: 'key2',
+      item: 'Blog',
+      href: '#'
     },
     {
-      key: "key3",
-      item: "Maison de Crowdfunding",
-      href: "#"
+      key: 'key3',
+      item: 'Maison de Crowdfunding',
+      href: '#'
     },
     {
-      key: "key4",
-      item: "Les StaKissTiques",
-      href: "#"
+      key: 'key4',
+      item: 'Les StaKissTiques',
+      href: '#'
     }
   ],
   items3: [
     {
-      key: "key1",
+      key: 'key1',
       item: "L'équipe",
-      href: "#"
+      href: '#'
     },
     {
-      key: "key2",
-      item: "Jobs",
-      href: "#"
+      key: 'key2',
+      item: 'Jobs',
+      href: '#'
     },
     {
-      key: "key3",
-      item: "Presse",
-      href: "#"
+      key: 'key3',
+      item: 'Presse',
+      href: '#'
     },
     {
-      key: "key4",
-      item: "Conditions générales",
-      href: "#"
+      key: 'key4',
+      item: 'Conditions générales',
+      href: '#'
     },
     {
-      key: "key5",
-      item: "Nos valeurs",
-      href: "#"
+      key: 'key5',
+      item: 'Nos valeurs',
+      href: '#'
     },
     {
-      key: "key6",
-      item: "Nous contacter",
-      href: "#"
+      key: 'key6',
+      item: 'Nous contacter',
+      href: '#'
     }
   ],
 
   // LanguageSelect
   options: [
-    { value: "fr", label: "Français" },
-    { value: "en", label: "English" },
-    { value: "nl", label: "Nederlands" }
+    { value: 'fr', label: 'Français' },
+    { value: 'en', label: 'English' },
+    { value: 'nl', label: 'Nederlands' }
   ],
-  initialLanguage: "fr",
+  initialLanguage: 'fr',
 
   // Notice
-  noticeAltAutorite: "Autorités françaises",
+  noticeAltAutorite: 'Autorités françaises',
   noticeParagraphAutorite:
-    "KissKissBankBank est une plateforme de financement \
+    'KissKissBankBank est une plateforme de financement \
     participatif régulée par les autorités françaises.\
-    Immatriculation&nbsp; : 14007218",
-  noticeAltMangopay: "Mangopay",
+    Immatriculation&nbsp; : 14007218',
+  noticeAltMangopay: 'Mangopay',
   noticeParagraphMangopayText1:
-    "KissKissBankBank &amp; Co est agent de \
-  l’institution financière",
-  noticeParagraphMangopayLink: "Mangopay",
-  noticeParagraphMangopayLinkAcronym: "SA.",
+    'KissKissBankBank &amp; Co est agent de \
+  l’institution financière',
+  noticeParagraphMangopayLink: 'Mangopay',
+  noticeParagraphMangopayLinkAcronym: 'SA.',
   noticeParagraphMangopayText2:
-    "Paiements sécurisés avec Mangopay Payment Services",
-  noticeCopyright: "&copy; 2018 KissKissBankBank &amp; Co"
+    'Paiements sécurisés avec Mangopay Payment Services',
+  noticeCopyright: '&copy; 2018 KissKissBankBank &amp; Co'
 };

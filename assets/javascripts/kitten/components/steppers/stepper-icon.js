@@ -1,16 +1,16 @@
-import React from "react";
-import classNames from "classnames";
-import { ArrowIcon } from "kitten/components/icons/arrow-icon";
-import { CheckedIcon } from "kitten/components/icons/checked-icon";
+import React from 'react';
+import classNames from 'classnames';
+import { ArrowIcon } from 'kitten/components/icons/arrow-icon';
+import { CheckedIcon } from 'kitten/components/icons/checked-icon';
 
 const StepperIcon = ({ className, children }) => {
   const iconClassNames = classNames(
-    "k-ButtonIcon",
-    "k-ButtonIcon--nano",
-    "k-ButtonIcon--hydrogen",
-    "k-ButtonIcon--withoutHover",
-    "k-ButtonIcon--rounded",
-    "k-Stepper__icon",
+    'k-ButtonIcon',
+    'k-ButtonIcon--nano',
+    'k-ButtonIcon--hydrogen',
+    'k-ButtonIcon--withoutHover',
+    'k-ButtonIcon--rounded',
+    'k-Stepper__icon',
     className
   );
 
@@ -22,12 +22,12 @@ export const StepperIconDefault = () => {
 };
 
 export const StepperIconInProgress = () => {
-  const inProgressClassNames = classNames("k-Stepper__icon--inProgress");
+  const inProgressClassNames = classNames('k-Stepper__icon--inProgress');
 
   return (
     <StepperIcon className={inProgressClassNames}>
       <ArrowIcon
-        className={classNames("k-ButtonIcon__svg", "k-Stepper__svg")}
+        className={classNames('k-ButtonIcon__svg', 'k-Stepper__svg')}
       />
     </StepperIcon>
   );
@@ -35,14 +35,14 @@ export const StepperIconInProgress = () => {
 
 export const StepperIconValidated = () => {
   const validatedClassNames = classNames(
-    "k-Stepper__icon--validated",
-    "k-ButtonIcon--checked--nano"
+    'k-Stepper__icon--validated',
+    'k-ButtonIcon--checked--nano'
   );
 
   return (
     <StepperIcon className={validatedClassNames}>
       <CheckedIcon
-        className={classNames("k-ButtonIcon__svg", "k-Stepper__svg")}
+        className={classNames('k-ButtonIcon__svg', 'k-Stepper__svg')}
       />
     </StepperIcon>
   );

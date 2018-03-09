@@ -1,5 +1,5 @@
-import React from "react";
-import classNames from "classnames";
+import React from 'react';
+import classNames from 'classnames';
 
 export class HeaderLogo extends React.Component {
   render() {
@@ -14,9 +14,9 @@ export class HeaderLogo extends React.Component {
       ...other
     } = this.props;
     const imgProps = { src, alt, width, height };
-    const linkClassName = classNames("k-Header__logo", className, {
-      "k-Header__logo--lightOnM": lightOnM,
-      "k-Header__logo--lightOnXxs": lightOnXxs
+    const linkClassName = classNames('k-Header__logo', className, {
+      'k-Header__logo--lightOnM': lightOnM,
+      'k-Header__logo--lightOnXxs': lightOnXxs
     });
 
     return (
@@ -28,8 +28,8 @@ export class HeaderLogo extends React.Component {
 }
 
 HeaderLogo.defaultProps = {
-  href: "#",
-  src: "#",
+  href: '#',
+  src: '#',
   alt: null,
   width: null,
   height: null,

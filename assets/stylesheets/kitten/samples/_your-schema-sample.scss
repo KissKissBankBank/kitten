@@ -1,4 +1,4 @@
-@import "kitten/schema";
+@import 'kitten/schema';
 // Import your schema dependencies.
 
 /// The schema used to validate your atom definitions.
@@ -8,7 +8,7 @@
 ///
 /// @type Map
 $k-your-atom-schema: (
-  type: "",
+  type: '',
   properties: (/ / typography: $k-typography-schema),
   required: (/ / typography)
 );

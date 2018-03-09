@@ -41,7 +41,7 @@
 ///  </button>
 
 @mixin k-Button {
-  $font: "regular";
+  $font: 'regular';
   $border-size: 2px;
 
   // Size settings with border.
@@ -110,35 +110,35 @@
 
   // Colors modifiers.
   .k-Button--hydrogen {
-    @include k-buttonColors("hydrogen");
+    @include k-buttonColors('hydrogen');
   }
 
   .k-Button--helium {
-    @include k-buttonColors("helium");
+    @include k-buttonColors('helium');
   }
 
   .k-Button--lithium {
-    @include k-buttonColors("lithium");
+    @include k-buttonColors('lithium');
   }
 
   .k-Button--beryllium {
-    @include k-buttonColors("beryllium");
+    @include k-buttonColors('beryllium');
   }
 
   .k-Button--carbon {
-    @include k-buttonColors("carbon");
+    @include k-buttonColors('carbon');
   }
 
   .k-Button--facebook {
-    @include k-buttonColors("facebook");
+    @include k-buttonColors('facebook');
   }
 
   .k-Button--twitter {
-    @include k-buttonColors("twitter");
+    @include k-buttonColors('twitter');
   }
 
   .k-Button--linkedin {
-    @include k-buttonColors("linkedin");
+    @include k-buttonColors('linkedin');
   }
 
   // Size modifiers.
@@ -159,7 +159,7 @@
   }
 
   .k-Button--big\@s-up {
-    @include k-media-min("s") {
+    @include k-media-min('s') {
       @include k-buttonBig($buttonBigOptions);
     }
   }

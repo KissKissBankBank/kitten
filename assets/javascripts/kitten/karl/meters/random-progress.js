@@ -1,5 +1,5 @@
-import React from "react";
-import { Progress } from "kitten/components/meters/progress";
+import React from 'react';
+import { Progress } from 'kitten/components/meters/progress';
 
 export class KarlRandomProgress extends React.Component {
   constructor(props) {

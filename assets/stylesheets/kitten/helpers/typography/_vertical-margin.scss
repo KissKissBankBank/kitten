@@ -28,19 +28,19 @@
     k-validate(
       $margins,
       $k-vertical-margin-schema,
-      "k-typographyVerticalMargin",
-      "$margin"
+      'k-typographyVerticalMargin',
+      '$margin'
     )
   );
 
   // The base line height.
-  $base-line-height: k-map-fetch($k-typography, "line-height");
+  $base-line-height: k-map-fetch($k-typography, 'line-height');
 
   // Get top margin or set to 0.
-  $top-margin: k-default(map-get($margins, "top"), 0);
+  $top-margin: k-default(map-get($margins, 'top'), 0);
 
   // Get bottom margin or set to 0.
-  $bottom-margin: k-default(map-get($margins, "bottom"), 0);
+  $bottom-margin: k-default(map-get($margins, 'bottom'), 0);
 
   margin-top: $top-margin * $base-line-height;
   margin-bottom: $bottom-margin * $base-line-height;

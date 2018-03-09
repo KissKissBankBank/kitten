@@ -1,8 +1,8 @@
-import defaultProps from "kitten/hoc/default-props";
-import React from "react";
-import { LoanSimulator } from "kitten/components/simulators/loan-simulator";
-import { card } from "kitten/hoc/card";
-import { Marger } from "kitten/components/layout/marger";
+import defaultProps from 'kitten/hoc/default-props';
+import React from 'react';
+import { LoanSimulator } from 'kitten/components/simulators/loan-simulator';
+import { card } from 'kitten/hoc/card';
+import { Marger } from 'kitten/components/layout/marger';
 
 const KarlLoanSimulatorCardComponent = props => <div {...props} />;
 
@@ -13,21 +13,21 @@ const KarlLoanSimulatorCard = card(KarlLoanSimulatorCardComponent, {
 });
 
 const KarlLoanSimulatorComponent = defaultProps(LoanSimulator, {
-  amountLabel: "I need",
-  amountPlaceholder: "Between $200 and $10,000",
+  amountLabel: 'I need',
+  amountPlaceholder: 'Between $200 and $10,000',
   amountMin: 200,
   amountMax: 10000,
-  amountName: "amount",
+  amountName: 'amount',
 
-  amountOutOfBoundsError: "Please choose an amount between $200 and $10,000",
+  amountOutOfBoundsError: 'Please choose an amount between $200 and $10,000',
 
-  installmentName: "installment",
+  installmentName: 'installment',
 
-  durationName: "duration",
+  durationName: 'duration',
 
-  sliderPlaceholder: "Slide to choose",
+  sliderPlaceholder: 'Slide to choose',
 
-  actionLabel: "OK"
+  actionLabel: 'OK'
 });
 
 const KarlLoanSimulatorComponentWithCommission = defaultProps(LoanSimulator, {

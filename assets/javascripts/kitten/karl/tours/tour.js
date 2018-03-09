@@ -1,14 +1,14 @@
-import React from "react";
-import classNames from "classnames";
-import { Button } from "kitten/components/buttons/button";
-import { Marger } from "kitten/components/layout/marger";
-import { Title } from "kitten/components/typography/title";
-import { Paragraph } from "kitten/components/typography/paragraph";
-import { Text } from "kitten/components/typography/text";
-import { CloseButton } from "kitten/components/buttons/close-button";
-import { ArrowIcon } from "kitten/components/icons/arrow-icon";
-import { MixIllustration } from "kitten/components/illustrations/mix-illustration";
-import { LoudspeakerIllustration } from "kitten/components/illustrations/loudspeaker-illustration";
+import React from 'react';
+import classNames from 'classnames';
+import { Button } from 'kitten/components/buttons/button';
+import { Marger } from 'kitten/components/layout/marger';
+import { Title } from 'kitten/components/typography/title';
+import { Paragraph } from 'kitten/components/typography/paragraph';
+import { Text } from 'kitten/components/typography/text';
+import { CloseButton } from 'kitten/components/buttons/close-button';
+import { ArrowIcon } from 'kitten/components/icons/arrow-icon';
+import { MixIllustration } from 'kitten/components/illustrations/mix-illustration';
+import { LoudspeakerIllustration } from 'kitten/components/illustrations/loudspeaker-illustration';
 
 export const KarlHeaderTour1 = props => (
   <div
@@ -19,8 +19,8 @@ export const KarlHeaderTour1 = props => (
   >
     <div
       className={classNames(
-        "k-Popover__container",
-        "k-Tour__popover__container"
+        'k-Popover__container',
+        'k-Tour__popover__container'
       )}
     >
       <div className="k-Tour__popover__illustration">
@@ -57,8 +57,8 @@ export const KarlHeaderTour1 = props => (
             <Button
               title="Suivant"
               className={classNames(
-                "k-Tour__popover__button",
-                "k-Tour__popover__button--right"
+                'k-Tour__popover__button',
+                'k-Tour__popover__button--right'
               )}
               modifier="helium"
               size="tiny"
@@ -87,8 +87,8 @@ export const KarlHeaderTour2 = props => (
   >
     <div
       className={classNames(
-        "k-Popover__container",
-        "k-Tour__popover__container"
+        'k-Popover__container',
+        'k-Tour__popover__container'
       )}
     >
       <div className="k-Tour__popover__illustration">
@@ -124,8 +124,8 @@ export const KarlHeaderTour2 = props => (
             <Button
               title="Suivant"
               className={classNames(
-                "k-Tour__popover__button",
-                "k-Tour__popover__button--right"
+                'k-Tour__popover__button',
+                'k-Tour__popover__button--right'
               )}
               modifier="hydrogen"
               size="tiny"

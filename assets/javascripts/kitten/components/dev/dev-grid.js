@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 // Grid over all elements that is toggled when calling ctrl+g.
 export class DevGrid extends React.Component {
@@ -13,26 +13,26 @@ export class DevGrid extends React.Component {
   }
 
   componentDidMount() {
-    window.addEventListener("keydown", this.handleKeyDown);
+    window.addEventListener('keydown', this.handleKeyDown);
 
     if (window.sessionStorage.getItem(this.props.storageKey))
       this.setState({ visible: true });
   }
 
   componentWillUnmount() {
-    window.removeEventListener("keydown", this.handleKeyDown);
+    window.removeEventListener('keydown', this.handleKeyDown);
   }
 
   handleKeyDown(e) {
     const char = String.fromCharCode(e.keyCode).toLowerCase();
-    if (!e.ctrlKey || char != "g") return;
+    if (!e.ctrlKey || char != 'g') return;
 
     if (this.state.visible) this.hide();
     else this.show();
   }
 
   show() {
-    window.sessionStorage.setItem(this.props.storageKey, "on");
+    window.sessionStorage.setItem(this.props.storageKey, 'on');
     this.setState({ visible: true });
   }
 
@@ -42,7 +42,7 @@ export class DevGrid extends React.Component {
   }
 
   render() {
-    const style = this.state.visible ? null : { display: "none" };
+    const style = this.state.visible ? null : { display: 'none' };
     return (
       <div style={style}>
         <div className="k-DevBreakpoint" />
@@ -95,5 +95,5 @@ export class DevGrid extends React.Component {
 }
 
 DevGrid.defaultProps = {
-  storageKey: "k-devgrid"
+  storageKey: 'k-devgrid'
 };

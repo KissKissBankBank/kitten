@@ -23,9 +23,9 @@ $k-grid: (
 
 // Susy
 
-$columns: map-get($k-grid, "columns");
-$container: map-get($k-grid, "container");
-$gutter-width: map-get($k-grid, "gutter-width");
+$columns: map-get($k-grid, 'columns');
+$container: map-get($k-grid, 'container');
+$gutter-width: map-get($k-grid, 'gutter-width');
 $column-width: ($container - ($columns - 1) * $gutter-width) / $columns;
 
 $susy: (
@@ -38,23 +38,23 @@ $susy: (
 // Fonts
 
 $k-fonts: (
-  light: (family: ("Maax", Helvetica, Arial, sans-serif), weight: 400),
-  regular: (family: ("Maax", Helvetica, Arial, sans-serif), weight: 500),
+  light: (family: ('Maax', Helvetica, Arial, sans-serif), weight: 400),
+  regular: (family: ('Maax', Helvetica, Arial, sans-serif), weight: 500),
   bold:
     (
-      family: ("Maax", Helvetica, Arial, sans-serif),
+      family: ('Maax', Helvetica, Arial, sans-serif),
       letter-spacing: 0.01rem,
       weight: 600
     ),
   regular-uppercase:
     (
-      family: ("Maax", Helvetica, Arial, sans-serif),
+      family: ('Maax', Helvetica, Arial, sans-serif),
       weight: 500,
       transform: uppercase
     ),
   bold-uppercase:
     (
-      family: ("Maax", Helvetica, Arial, sans-serif),
+      family: ('Maax', Helvetica, Arial, sans-serif),
       weight: 600,
       letter-spacing: 0.1rem,
       transform: uppercase
@@ -64,31 +64,31 @@ $k-fonts: (
 // Colors
 
 $k-colors: (
-  "font-1": #222,
-  / / Dark Grey "font-2": #b8b8b8,
-  / / Semi Dark Grey "background-1": #fff,
-  / / White "background-2": #fbfbfb,
-  / / Extra Light Grey "background-3": #f6f6f6,
-  / / Light Grey "line-1": #eee,
-  / / Semi Light Grey "line-2": #d8d8d8,
-  / / Grey "primary-1": #19bbff,
-  / / Primary "primary-2": #0aacf0,
-  / / Semi Dark Primary "primary-3": #009de1,
-  / / Dark Primary "primary-4": #bae8fd,
-  / / Light Primary "primary-5": #e8f8ff,
-  / / Extra Light Primary "primary-6": #f3fbff,
-  / / Thin Primary / / DEPRECATED: colors. "secondary-1": #4bfffa,
-  "secondary-2": #3cf0eb,
-  "secondary-3": #2de1dc,
-  "tertiary-1": #effaf1,
-  / / Light Green "tertiary-2": #cff0d6,
-  / / Semi Light Green / / DEPRECATED: colors. "tertiary-3": #4ae191,
-  "valid": #61d079,
-  / / Green "error": #ff0046,
-  / / Red "error-2": #ffe5ec,
-  / / Light Red "error-3": #ffb2c7,
-  / / Semi Light Red "red-light-mdc": #ffebe0,
-  "red-mdc": #ff0000,
-  "blue-light-mdc": #caf4fe,
-  "blue-mdc": #0d9ddb
+  'font-1': #222,
+  / / Dark Grey 'font-2': #b8b8b8,
+  / / Semi Dark Grey 'background-1': #fff,
+  / / White 'background-2': #fbfbfb,
+  / / Extra Light Grey 'background-3': #f6f6f6,
+  / / Light Grey 'line-1': #eee,
+  / / Semi Light Grey 'line-2': #d8d8d8,
+  / / Grey 'primary-1': #19bbff,
+  / / Primary 'primary-2': #0aacf0,
+  / / Semi Dark Primary 'primary-3': #009de1,
+  / / Dark Primary 'primary-4': #bae8fd,
+  / / Light Primary 'primary-5': #e8f8ff,
+  / / Extra Light Primary 'primary-6': #f3fbff,
+  / / Thin Primary / / DEPRECATED: colors. 'secondary-1': #4bfffa,
+  'secondary-2': #3cf0eb,
+  'secondary-3': #2de1dc,
+  'tertiary-1': #effaf1,
+  / / Light Green 'tertiary-2': #cff0d6,
+  / / Semi Light Green / / DEPRECATED: colors. 'tertiary-3': #4ae191,
+  'valid': #61d079,
+  / / Green 'error': #ff0046,
+  / / Red 'error-2': #ffe5ec,
+  / / Light Red 'error-3': #ffb2c7,
+  / / Semi Light Red 'red-light-mdc': #ffebe0,
+  'red-mdc': #ff0000,
+  'blue-light-mdc': #caf4fe,
+  'blue-mdc': #0d9ddb
 ) !default;

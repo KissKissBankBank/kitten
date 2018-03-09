@@ -15,27 +15,27 @@
 
 @mixin k-Checkbox {
   // Font
-  $font: "light";
+  $font: 'light';
   $font-step: -1; // 14px
   $line-height: normal;
 
   // Error
-  $error-color: map-get($k-colors, "error");
-  $error-border-color: map-get($k-colors, "error-3");
+  $error-color: map-get($k-colors, 'error');
+  $error-border-color: map-get($k-colors, 'error-3');
 
   // Colors
-  $background-color: map-get($k-colors, "background-1");
-  $background-color-checked: map-get($k-colors, "primary-1");
-  $background-color-active: map-get($k-colors, "primary-3");
-  $background-color-disabled: map-get($k-colors, "line-1");
-  $border-color: map-get($k-colors, "line-1");
-  $border-color-hover: map-get($k-colors, "primary-1");
-  $link-color: map-get($k-colors, "primary-1");
+  $background-color: map-get($k-colors, 'background-1');
+  $background-color-checked: map-get($k-colors, 'primary-1');
+  $background-color-active: map-get($k-colors, 'primary-3');
+  $background-color-disabled: map-get($k-colors, 'line-1');
+  $border-color: map-get($k-colors, 'line-1');
+  $border-color-hover: map-get($k-colors, 'primary-1');
+  $link-color: map-get($k-colors, 'primary-1');
 
   $checkbox-size: k-px-to-rem(20px);
   $border-size: k-px-to-rem(2px);
-  $icon: "~icons/checked.svg";
-  $icon-disabled: "~icons/checked-disabled.svg";
+  $icon: '~icons/checked.svg';
+  $icon-disabled: '~icons/checked-disabled.svg';
 
   .k-Checkbox {
     @include k-typographyFont($font);
@@ -60,7 +60,7 @@
       height: $checkbox-size;
       margin-right: k-px-to-rem(10px);
 
-      content: "";
+      content: '';
       background-color: $background-color;
       border: $border-size solid $border-color;
 

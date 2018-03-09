@@ -1,5 +1,5 @@
-import React from "react";
-import { Button } from "kitten/components/buttons/button";
+import React from 'react';
+import { Button } from 'kitten/components/buttons/button';
 
 export const KarlButtonAndText = () => {
   return (

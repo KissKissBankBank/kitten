@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 export const LockIcon = ({ color, ...props }) => {
   return (
@@ -20,5 +20,5 @@ export const LockIcon = ({ color, ...props }) => {
 };
 
 LockIcon.defaultProps = {
-  color: "#333"
+  color: '#333'
 };

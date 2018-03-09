@@ -26,12 +26,12 @@
   .k-SingleColumn__content {
     @include k-grid-col(12);
 
-    @include k-media-min("s") {
+    @include k-media-min('s') {
       @include k-grid-col(8);
       @include k-grid-offset(2);
     }
 
-    @include k-media-min("m") {
+    @include k-media-min('m') {
       @include k-grid-col(6);
       @include k-grid-offset(3);
     }

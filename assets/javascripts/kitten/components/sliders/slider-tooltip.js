@@ -1,9 +1,9 @@
-import React from "react";
-import classNames from "classnames";
+import React from 'react';
+import classNames from 'classnames';
 
 export const SliderTooltip = ({ className, percentage, children }) => {
   return (
-    <div className={classNames("k-SliderTooltip", className)}>
+    <div className={classNames('k-SliderTooltip', className)}>
       <div className="k-SliderTooltip__tip">
         <div
           className="k-SliderTooltip__tip__content"

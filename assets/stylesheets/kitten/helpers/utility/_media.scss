@@ -19,7 +19,7 @@
 
 @mixin k-media-min($query) {
   $queries: map-get($k-media-queries, $query);
-  $min-width: map-get($queries, "min-width");
+  $min-width: map-get($queries, 'min-width');
 
   @if $min-width == null {
     @content;
@@ -32,7 +32,7 @@
 
 @mixin k-media-max($query) {
   $queries: map-get($k-media-queries, $query);
-  $max-width: map-get($queries, "max-width");
+  $max-width: map-get($queries, 'max-width');
 
   @if $max-width == null {
     @content;
@@ -45,8 +45,8 @@
 
 @mixin k-media-within($query) {
   $queries: map-get($k-media-queries, $query);
-  $min-width: map-get($queries, "min-width");
-  $max-width: map-get($queries, "max-width");
+  $min-width: map-get($queries, 'min-width');
+  $max-width: map-get($queries, 'max-width');
 
   @if $min-width == null {
     @media (max-width: $max-width) {

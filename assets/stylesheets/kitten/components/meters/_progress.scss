@@ -16,13 +16,13 @@
 
 @mixin k-Progress {
   // Base
-  $color: map-get($k-colors, "primary-1");
+  $color: map-get($k-colors, 'primary-1');
 
   // Disabled
-  $disabled-color: map-get($k-colors, "line-2");
+  $disabled-color: map-get($k-colors, 'line-2');
 
   // Ramp
-  $ramp-color: map-get($k-colors, "line-1");
+  $ramp-color: map-get($k-colors, 'line-1');
   $ramp-height: k-px-to-rem(2px);
 
   $transition-speed: 0.2s;

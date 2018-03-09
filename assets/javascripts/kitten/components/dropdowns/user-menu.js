@@ -1,12 +1,12 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
-import classNames from "classnames";
-import { Dropdown } from "kitten/components/dropdowns/dropdown";
-import { ButtonImageWithTextAndBadge } from "kitten/components/buttons/button-image-with-text-and-badge";
-import { NavList } from "kitten/components/lists/nav-list";
-import domElementHelper from "kitten/helpers/dom/element-helper";
-import emitter from "kitten/helpers/utils/emitter";
-import objectAssign from "core-js/library/fn/object/assign";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
+import { Dropdown } from 'kitten/components/dropdowns/dropdown';
+import { ButtonImageWithTextAndBadge } from 'kitten/components/buttons/button-image-with-text-and-badge';
+import { NavList } from 'kitten/components/lists/nav-list';
+import domElementHelper from 'kitten/helpers/dom/element-helper';
+import emitter from 'kitten/helpers/utils/emitter';
+import objectAssign from 'core-js/library/fn/object/assign';
 
 export class UserMenu extends Component {
   constructor(props) {
@@ -28,7 +28,7 @@ export class UserMenu extends Component {
   componentDidMount() {
     this.handlePositionUpdate();
 
-    emitter.on("dropdown:opening:trigger", this.handleOtherDropdownsOpening);
+    emitter.on('dropdown:opening:trigger', this.handleOtherDropdownsOpening);
 
     if (this.props.closeEvents) {
       this.props.closeEvents.forEach(ev => {
@@ -58,12 +58,12 @@ export class UserMenu extends Component {
   }
 
   getButtonId() {
-    return "k-UserMenu";
+    return 'k-UserMenu';
   }
 
   canComputeSize() {
     return (
-      domElementHelper.canUseDom() && typeof this.refs.dropdown != "undefined"
+      domElementHelper.canUseDom() && typeof this.refs.dropdown != 'undefined'
     );
   }
 
@@ -105,7 +105,7 @@ export class UserMenu extends Component {
     // element border.
     space = space < 0 ? 0 : space;
 
-    return { right: space + "px" };
+    return { right: space + 'px' };
   }
 
   getArrowHorizontalPosition() {
@@ -121,13 +121,13 @@ export class UserMenu extends Component {
       this.getButtonImageElementHalfWidth() -
       contentHorizontalPositionValue;
 
-    return { right: space + "px" };
+    return { right: space + 'px' };
   }
 
   getDropdownContent() {
     return (
       <NavList
-        className={classNames("k-UserMenu", "k-UserMenu--withoutBorderTop")}
+        className={classNames('k-UserMenu', 'k-UserMenu--withoutBorderTop')}
         role="menubar"
         list={this.props.dropdownList}
       />

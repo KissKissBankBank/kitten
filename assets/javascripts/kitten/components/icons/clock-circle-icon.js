@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 export const ClockCircleIcon = ({ circleColor, clockColor, ...props }) => {
   return (
@@ -11,6 +11,6 @@ export const ClockCircleIcon = ({ circleColor, clockColor, ...props }) => {
 };
 
 ClockCircleIcon.defaultProps = {
-  circleColor: "#fff",
-  clockColor: "#333"
+  circleColor: '#fff',
+  clockColor: '#333'
 };

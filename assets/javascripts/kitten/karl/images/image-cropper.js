@@ -1,5 +1,5 @@
-import React from "react";
-import { ImageCropper } from "kitten/components/images/image-cropper";
+import React from 'react';
+import { ImageCropper } from 'kitten/components/images/image-cropper';
 
 export const KarlImageCropper = () => {
   return (

@@ -1,6 +1,6 @@
-@import "kitten/schema/common-schemas";
-@import "kitten/schema/error";
-@import "kitten/schema/validate";
+@import 'kitten/schema/common-schemas';
+@import 'kitten/schema/error';
+@import 'kitten/schema/validate';
 
 // TODO: We have to clean all the schemas.
-@import "kitten/schema/typography";
+@import 'kitten/schema/typography';

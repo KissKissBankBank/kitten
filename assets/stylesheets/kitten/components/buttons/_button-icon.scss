@@ -123,35 +123,35 @@
   // Colors modifiers.
 
   .k-ButtonIcon--hydrogen {
-    @include k-buttonColors("hydrogen");
+    @include k-buttonColors('hydrogen');
   }
 
   .k-ButtonIcon--helium {
-    @include k-buttonColors("helium");
+    @include k-buttonColors('helium');
   }
 
   .k-ButtonIcon--lithium {
-    @include k-buttonColors("lithium");
+    @include k-buttonColors('lithium');
   }
 
   .k-ButtonIcon--beryllium {
-    @include k-buttonColors("beryllium");
+    @include k-buttonColors('beryllium');
   }
 
   .k-ButtonIcon--carbon {
-    @include k-buttonColors("carbon");
+    @include k-buttonColors('carbon');
   }
 
   .k-ButtonIcon--facebook {
-    @include k-buttonColors("facebook");
+    @include k-buttonColors('facebook');
   }
 
   .k-ButtonIcon--twitter {
-    @include k-buttonColors("twitter");
+    @include k-buttonColors('twitter');
   }
 
   .k-ButtonIcon--linkedin {
-    @include k-buttonColors("linkedin");
+    @include k-buttonColors('linkedin');
   }
 
   .k-ButtonIcon--instagram {
@@ -160,7 +160,7 @@
       $icon-width,
       $icon-height
     );
-    @include k-buttonColors("instagram");
+    @include k-buttonColors('instagram');
   }
 
   // Sizes modifiers.

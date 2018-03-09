@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import classNames from "classnames";
-import { TextInput } from "kitten/components/form/text-input";
+import React, { Component } from 'react';
+import classNames from 'classnames';
+import { TextInput } from 'kitten/components/form/text-input';
 
 export class TextInputWithLimit extends Component {
   constructor(props) {
@@ -23,12 +23,12 @@ export class TextInputWithLimit extends Component {
 
     const length = this.state.value ? this.state.value.length : 0;
 
-    const textInputLimitClassName = classNames("k-TextInputLimit", {
-      "is-disabled": disabled
+    const textInputLimitClassName = classNames('k-TextInputLimit', {
+      'is-disabled': disabled
     });
 
-    const counterClassName = classNames("k-TextInputLimit__counter", {
-      "is-error": length > limit
+    const counterClassName = classNames('k-TextInputLimit__counter', {
+      'is-error': length > limit
     });
 
     return (
@@ -47,9 +47,9 @@ export class TextInputWithLimit extends Component {
 }
 
 TextInputWithLimit.defaultProps = {
-  tag: "input",
+  tag: 'input',
   limit: 80,
-  defaultValue: "",
+  defaultValue: '',
   disabled: false,
   onChange: function() {}
 };

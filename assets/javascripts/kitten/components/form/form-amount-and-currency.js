@@ -1,6 +1,6 @@
-import React from "react";
-import classNames from "classnames";
-import { TextInputAndSelect } from "kitten/components/form/text-input-and-select";
+import React from 'react';
+import classNames from 'classnames';
+import { TextInputAndSelect } from 'kitten/components/form/text-input-and-select';
 
 export const FormAmountAndCurrency = props => {
   const {
@@ -25,7 +25,7 @@ export const FormAmountAndCurrency = props => {
 FormAmountAndCurrency.defaultProps = {
   tiny: false,
   disabled: false,
-  currencyOptions: [{ value: "eur", label: "EUR" }],
+  currencyOptions: [{ value: 'eur', label: 'EUR' }],
   currencyName: null,
   currencyValue: null,
   digits: null // 2 or 12 for now

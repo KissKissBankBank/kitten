@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import classNames from "classnames";
+import React, { Component } from 'react';
+import classNames from 'classnames';
 
 export class ButtonIcon extends Component {
   render() {
@@ -14,16 +14,16 @@ export class ButtonIcon extends Component {
       ...others
     } = this.props;
 
-    const buttonIconClassNames = classNames("k-ButtonIcon", className, {
+    const buttonIconClassNames = classNames('k-ButtonIcon', className, {
       [`k-ButtonIcon--${modifier}`]: modifier,
       [`k-ButtonIcon--${size}`]: size,
-      "k-ButtonIcon--withoutHover": withoutHover,
-      "k-ButtonIcon--verticalArrow": verticalArrow,
-      "k-ButtonIcon--rounded": rounded
+      'k-ButtonIcon--withoutHover': withoutHover,
+      'k-ButtonIcon--verticalArrow': verticalArrow,
+      'k-ButtonIcon--rounded': rounded
     });
 
     // Adds keyboard accessibility to `<a>`
-    const tabindex = tag == "a" && !this.props.href ? 0 : null;
+    const tabindex = tag == 'a' && !this.props.href ? 0 : null;
 
     const Tag = tag;
 
@@ -34,9 +34,9 @@ export class ButtonIcon extends Component {
 }
 
 ButtonIcon.defaultProps = {
-  tag: "button",
+  tag: 'button',
   size: null,
-  modifier: "hydrogen",
+  modifier: 'hydrogen',
   withoutHover: false,
   verticalArrow: false,
   rounded: false

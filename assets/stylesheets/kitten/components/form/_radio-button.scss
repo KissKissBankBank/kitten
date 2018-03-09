@@ -24,8 +24,8 @@
 
 @mixin k-RadioButton {
   // Font
-  $label-font: "light";
-  $label-large-font: "regular";
+  $label-font: 'light';
+  $label-large-font: 'regular';
 
   $font-step: -1; // 14px
   $font-step-on-media: 2; // 20px
@@ -37,20 +37,20 @@
   $border-size: k-px-to-rem(2px);
 
   // Error
-  $error-color: map-get($k-colors, "error");
-  $error-border-color: map-get($k-colors, "error-3");
+  $error-color: map-get($k-colors, 'error');
+  $error-border-color: map-get($k-colors, 'error-3');
 
   // Colors
-  $background-color: map-get($k-colors, "background-1");
-  $checked-background-color: map-get($k-colors, "primary-1");
-  $active-background-color: map-get($k-colors, "primary-3");
-  $disabled-background-color: map-get($k-colors, "line-1");
-  $border-color: map-get($k-colors, "line-1");
-  $border-color-hover: map-get($k-colors, "primary-1");
+  $background-color: map-get($k-colors, 'background-1');
+  $checked-background-color: map-get($k-colors, 'primary-1');
+  $active-background-color: map-get($k-colors, 'primary-3');
+  $disabled-background-color: map-get($k-colors, 'line-1');
+  $border-color: map-get($k-colors, 'line-1');
+  $border-color-hover: map-get($k-colors, 'primary-1');
 
   // Background-image
-  $input-checked: "~icons/input-checked.svg";
-  $disabled-input-checked: "~icons/input-checked-disabled.svg";
+  $input-checked: '~icons/input-checked.svg';
+  $disabled-input-checked: '~icons/input-checked-disabled.svg';
   $background-size: k-px-to-rem(6px);
 
   $radio-button-size: k-px-to-rem(16px);
@@ -82,7 +82,7 @@
       height: $radio-button-size;
       margin-right: $space-button-label;
 
-      content: "";
+      content: '';
       background-color: $background-color;
       border: $border-size solid $border-color;
       border-radius: $border-radius;

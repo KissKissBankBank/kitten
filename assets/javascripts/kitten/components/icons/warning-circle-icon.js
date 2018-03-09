@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 export const WarningCircleIcon = ({ circleColor, warningColor, ...props }) => {
   return (
@@ -14,6 +14,6 @@ export const WarningCircleIcon = ({ circleColor, warningColor, ...props }) => {
 };
 
 WarningCircleIcon.defaultProps = {
-  circleColor: "#fff",
-  warningColor: "#333"
+  circleColor: '#fff',
+  warningColor: '#333'
 };

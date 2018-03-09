@@ -8,7 +8,7 @@
 /// @example html
 ///   <div className="k-DevBreakpoint"></div>
 @mixin k-DevBreakpoint($options: ()) {
-  $z-index: k-default(map-get($options, "z-index"), 9999);
+  $z-index: k-default(map-get($options, 'z-index'), 9999);
 
   // Show the name of the current breakpoint
 
@@ -37,7 +37,7 @@
 
     @each $name, $_query in $k-media-queries {
       @include k-media-min($name) {
-        content: "#{$name}";
+        content: '#{$name}';
       }
     }
   }

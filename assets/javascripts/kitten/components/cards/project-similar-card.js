@@ -1,18 +1,18 @@
-import React, { Component } from "react";
-import classNames from "classnames";
-import { card } from "kitten/hoc/card";
-import { Grid, GridCol } from "kitten/components/grid/grid";
-import { Marger } from "kitten/components/layout/marger";
-import { Title } from "kitten/components/typography/title";
-import { Paragraph } from "kitten/components/typography/paragraph";
-import { ButtonIcon } from "kitten/components/buttons/button-icon";
-import { Separator } from "kitten/components/layout/separator";
-import { TagList } from "kitten/components/lists/tag-list";
-import { ArrowIcon } from "kitten/components/icons/arrow-icon";
-import { LockIcon } from "kitten/components/icons/lock-icon";
-import { Loader } from "kitten/components/loaders/loader";
-import { TypologyTagIcon } from "kitten/components/icons/typology-tag-icon";
-import { InstrumentTagIcon } from "kitten/components/icons/instrument-tag-icon";
+import React, { Component } from 'react';
+import classNames from 'classnames';
+import { card } from 'kitten/hoc/card';
+import { Grid, GridCol } from 'kitten/components/grid/grid';
+import { Marger } from 'kitten/components/layout/marger';
+import { Title } from 'kitten/components/typography/title';
+import { Paragraph } from 'kitten/components/typography/paragraph';
+import { ButtonIcon } from 'kitten/components/buttons/button-icon';
+import { Separator } from 'kitten/components/layout/separator';
+import { TagList } from 'kitten/components/lists/tag-list';
+import { ArrowIcon } from 'kitten/components/icons/arrow-icon';
+import { LockIcon } from 'kitten/components/icons/lock-icon';
+import { Loader } from 'kitten/components/loaders/loader';
+import { TypologyTagIcon } from 'kitten/components/icons/typology-tag-icon';
+import { InstrumentTagIcon } from 'kitten/components/icons/instrument-tag-icon';
 
 class SimilarProjectCardComponent extends Component {
   constructor() {
@@ -146,8 +146,8 @@ class SimilarProjectCardComponent extends Component {
       <div className="k-u-margin-left-single">
         <hr
           className={classNames(
-            "k-VerticalSeparator",
-            "k-VerticalSeparator--darker"
+            'k-VerticalSeparator',
+            'k-VerticalSeparator--darker'
           )}
         />
       </div>
@@ -168,7 +168,7 @@ class SimilarProjectCardComponent extends Component {
 
   convertToClass(stringClassName) {
     switch (stringClassName) {
-      case "InstrumentTagIcon":
+      case 'InstrumentTagIcon':
         return InstrumentTagIcon;
       default:
         return TypologyTagIcon;
@@ -207,14 +207,14 @@ class SimilarProjectCardComponent extends Component {
   renderInfo(info) {
     const { coloredInfosValues } = this.props;
 
-    const infoClassName = classNames("k-ProjectSimilarCard__info__value", {
-      "k-u-color-primary1": coloredInfosValues
+    const infoClassName = classNames('k-ProjectSimilarCard__info__value', {
+      'k-u-color-primary1': coloredInfosValues
     });
 
     return (
       <div
         key={info.text}
-        className={classNames("k-u-align-center", "k-ProjectSimilarCard__info")}
+        className={classNames('k-u-align-center', 'k-ProjectSimilarCard__info')}
       >
         {info.text}
         <br />
@@ -252,7 +252,7 @@ class SimilarProjectCardComponent extends Component {
   }
 
   contentTagProps() {
-    const tagClassName = "k-ProjectSimilarCard__content";
+    const tagClassName = 'k-ProjectSimilarCard__content';
 
     if (!this.hasLink()) return { className: tagClassName };
 
@@ -260,7 +260,7 @@ class SimilarProjectCardComponent extends Component {
 
     return {
       ...linkProps,
-      target: target || "_blank",
+      target: target || '_blank',
       className: classNames(tagClassName, className)
     };
   }
@@ -269,11 +269,11 @@ class SimilarProjectCardComponent extends Component {
     const { className } = this.props;
 
     const ProjectSimilarCardClassName = classNames(
-      "k-ProjectSimilarCard",
+      'k-ProjectSimilarCard',
       className
     );
 
-    const Tag = this.hasLink() ? "a" : "div";
+    const Tag = this.hasLink() ? 'a' : 'div';
 
     return (
       <div className={ProjectSimilarCardClassName}>
@@ -289,15 +289,15 @@ class SimilarProjectCardComponent extends Component {
 }
 
 SimilarProjectCardComponent.defaultProps = {
-  step: "",
+  step: '',
   imageSrc: null,
-  title: "",
-  paragraph: "",
+  title: '',
+  paragraph: '',
   tagLists: null,
   tags: null,
   infos: false, // Eg: [{ key: …, text: …, value: …, locked: … }]
   coloredInfosValues: false,
-  refresh: "Refresh",
+  refresh: 'Refresh',
   onRefreshClick: () => {},
   onLeftArrowClick: () => {},
   onRightArrowClick: () => {},

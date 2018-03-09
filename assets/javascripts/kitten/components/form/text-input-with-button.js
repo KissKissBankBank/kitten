@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import classNames from "classnames";
-import { TextInput } from "kitten/components/form/text-input";
+import React, { Component } from 'react';
+import classNames from 'classnames';
+import { TextInput } from 'kitten/components/form/text-input';
 
 export class TextInputWithButton extends Component {
   render() {
@@ -16,22 +16,22 @@ export class TextInputWithButton extends Component {
     } = this.props;
 
     const TextInputWithButtonClassName = classNames(
-      "k-TextInputWithButton",
+      'k-TextInputWithButton',
       className
     );
 
     const textInputWithButtonInputClassName = classNames(
-      "k-TextInputWithButton__input",
+      'k-TextInputWithButton__input',
       textInputProps.className
     );
 
     const textInputWithButtonButtonClassName = classNames(
-      "k-TextInputWithButton__button",
+      'k-TextInputWithButton__button',
       buttonProps.className,
       {
-        "is-valid": valid,
-        "is-error": error,
-        "is-disabled": disabled
+        'is-valid': valid,
+        'is-error': error,
+        'is-disabled': disabled
       }
     );
 
@@ -61,9 +61,9 @@ TextInputWithButton.defaultProps = {
   valid: false,
   error: false,
   disabled: false,
-  value: "Button",
+  value: 'Button',
   textInputProps: {
-    tag: "input"
+    tag: 'input'
   },
   buttonProps: {}
 };

@@ -19,12 +19,12 @@
     k-validate(
       $distance,
       k-number-schema($unit: none),
-      "k-typography-distance",
-      "$distance"
+      'k-typography-distance',
+      '$distance'
     )
   );
 
-  $base-line-height: k-map-fetch($k-typography, "line-height");
+  $base-line-height: k-map-fetch($k-typography, 'line-height');
 
   @return $base-line-height * $distance;
 }

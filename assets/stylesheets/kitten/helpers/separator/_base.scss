@@ -19,5 +19,5 @@
 @mixin k-separatorBase {
   margin: 0;
   border: none;
-  background: map-get($k-colors, "line-1");
+  background: map-get($k-colors, 'line-1');
 }

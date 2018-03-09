@@ -1,19 +1,19 @@
-import React from "react";
-import PropTypes from "prop-types";
-import Radium from "radium";
-import { createRangeFromZeroTo } from "kitten/helpers/utils/range";
-import { mediaQueries } from "kitten/hoc/media-queries";
+import React from 'react';
+import PropTypes from 'prop-types';
+import Radium from 'radium';
+import { createRangeFromZeroTo } from 'kitten/helpers/utils/range';
+import { mediaQueries } from 'kitten/hoc/media-queries';
 import {
   CONTAINER_PADDING,
   CONTAINER_PADDING_MOBILE
-} from "kitten/constants/grid-config";
-import ColorsConfig from "kitten/constants/colors-config";
+} from 'kitten/constants/grid-config';
+import ColorsConfig from 'kitten/constants/colors-config';
 
-import { Grid, GridCol } from "kitten/components/grid/grid";
-import { ButtonIcon } from "kitten/components/buttons/button-icon";
-import { ArrowIcon } from "kitten/components/icons/arrow-icon";
+import { Grid, GridCol } from 'kitten/components/grid/grid';
+import { ButtonIcon } from 'kitten/components/buttons/button-icon';
+import { ArrowIcon } from 'kitten/components/icons/arrow-icon';
 
-import { CarouselInner } from "kitten/components/carousel/carousel-inner";
+import { CarouselInner } from 'kitten/components/carousel/carousel-inner';
 
 export const getNumColumnsForWidth = (
   width,
@@ -256,8 +256,8 @@ class CarouselBase extends React.Component {
     return (
       <Grid>
         <GridCol
-          col={withoutLeftOffset ? "11" : "10"}
-          offset={withoutLeftOffset ? "0" : "1"}
+          col={withoutLeftOffset ? '11' : '10'}
+          offset={withoutLeftOffset ? '0' : '1'}
         >
           {this.renderCarouselInner()}
         </GridCol>
@@ -270,12 +270,12 @@ class CarouselBase extends React.Component {
 
 const styles = {
   carouselPagination: {
-    display: "flex",
-    flexDirection: "column-reverse",
-    alignItems: "flex-start"
+    display: 'flex',
+    flexDirection: 'column-reverse',
+    alignItems: 'flex-start'
   },
   carouselPaginationTablet: {
-    flexDirection: "row"
+    flexDirection: 'row'
   },
   carouselButtonPagination: {
     marginBottom: 2,
@@ -285,28 +285,28 @@ const styles = {
   },
 
   pageControl: {
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "center",
-    position: "relative",
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    position: 'relative',
     paddingTop: CONTAINER_PADDING_MOBILE / 2,
     paddingBottom: CONTAINER_PADDING_MOBILE / 2
   },
   pageControlButtonPrev: {
-    position: "absolute",
+    position: 'absolute',
     top: CONTAINER_PADDING_MOBILE / 4,
     bottom: CONTAINER_PADDING_MOBILE / 4,
     left: CONTAINER_PADDING_MOBILE,
-    right: "50%",
-    WebkitTapHighlightColor: "transparent"
+    right: '50%',
+    WebkitTapHighlightColor: 'transparent'
   },
   pageControlButtonNext: {
-    position: "absolute",
+    position: 'absolute',
     top: CONTAINER_PADDING_MOBILE / 4,
     bottom: CONTAINER_PADDING_MOBILE / 4,
     right: CONTAINER_PADDING_MOBILE,
-    left: "50%",
-    WebkitTapHighlightColor: "transparent"
+    left: '50%',
+    WebkitTapHighlightColor: 'transparent'
   },
   pageDot: {
     width: 8,

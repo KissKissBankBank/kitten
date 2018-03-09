@@ -12,26 +12,26 @@
 
 @mixin k-utilities-color {
   .k-u-color-font1 {
-    color: map-get($k-colors, "font-1");
+    color: map-get($k-colors, 'font-1');
   }
 
   .k-u-color-font2 {
-    color: map-get($k-colors, "font-2");
+    color: map-get($k-colors, 'font-2');
   }
 
   .k-u-color-primary1 {
-    color: map-get($k-colors, "primary-1");
+    color: map-get($k-colors, 'primary-1');
   }
 
   .k-u-color-background1 {
-    color: map-get($k-colors, "background-1");
+    color: map-get($k-colors, 'background-1');
   }
 
   .k-u-color-error {
-    color: map-get($k-colors, "error");
+    color: map-get($k-colors, 'error');
   }
 
   .k-u-color-valid {
-    color: map-get($k-colors, "valid");
+    color: map-get($k-colors, 'valid');
   }
 }

@@ -1,9 +1,9 @@
-import React from "react";
-import { defaultProps } from "kitten/hoc/default-props";
-import { ExternalRichLink } from "kitten/components/links/external-rich-link";
-import { Dropdown } from "kitten/components/dropdowns/dropdown";
-import { NavList } from "kitten/components/lists/nav-list";
-import { UserMenu } from "kitten/components/dropdowns/user-menu";
+import React from 'react';
+import { defaultProps } from 'kitten/hoc/default-props';
+import { ExternalRichLink } from 'kitten/components/links/external-rich-link';
+import { Dropdown } from 'kitten/components/dropdowns/dropdown';
+import { NavList } from 'kitten/components/lists/nav-list';
+import { UserMenu } from 'kitten/components/dropdowns/user-menu';
 
 // KarlPlatformSwitch
 const karlPlatformSwitchButtonContent = (
@@ -45,11 +45,11 @@ const platformSwitchDropdownList = [
 ];
 
 const KarlPlatformSwitch = defaultProps(Dropdown, {
-  positionedWith: () => document.getElementById("k-PlatformSwitchDropdown"),
+  positionedWith: () => document.getElementById('k-PlatformSwitchDropdown'),
   positionedWithBorder: false,
 
-  buttonId: "k-PlatformSwitch",
-  buttonClassName: "k-ButtonIcon k-ButtonIcon--hydrogen k-ButtonIcon--dropdown",
+  buttonId: 'k-PlatformSwitch',
+  buttonClassName: 'k-ButtonIcon k-ButtonIcon--hydrogen k-ButtonIcon--dropdown',
   buttonContentOnExpanded: karlPlatformSwitchButtonContent,
   buttonContentOnCollapsed: karlPlatformSwitchButtonContent,
 
@@ -64,18 +64,18 @@ const KarlPlatformSwitch = defaultProps(Dropdown, {
 
 const KarlUserMenuDropdown = defaultProps(UserMenu, {
   // Position
-  positionedWith: () => document.getElementById("k-UserMenuDropdown"),
+  positionedWith: () => document.getElementById('k-UserMenuDropdown'),
   positionedWithBorder: false,
   spaceAroundGrid: 20,
 
   // Button
-  buttonId: "k-UserMenu",
-  buttonImgSrc: "https://placehold.it/100x100/caf4fe/caf4fe",
+  buttonId: 'k-UserMenu',
+  buttonImgSrc: 'https://placehold.it/100x100/caf4fe/caf4fe',
   buttonImgWidth: 100,
   buttonImgHeight: 100,
-  buttonImgAlt: "Alt Firstname",
-  buttonText: "Firstname Lastname",
-  buttonTitle: "Profil",
+  buttonImgAlt: 'Alt Firstname',
+  buttonText: 'Firstname Lastname',
+  buttonTitle: 'Profil',
   buttonNotifications: 42,
 
   // Dropdown content

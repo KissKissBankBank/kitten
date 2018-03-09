@@ -1,7 +1,7 @@
-import React from "react";
-import classNames from "classnames";
-import { SelectWithState } from "kitten/components/form/select-with-state";
-import { TextInput } from "kitten/components/form/text-input";
+import React from 'react';
+import classNames from 'classnames';
+import { SelectWithState } from 'kitten/components/form/select-with-state';
+import { TextInput } from 'kitten/components/form/text-input';
 
 export const TextInputAndSelect = props => {
   const {
@@ -21,9 +21,9 @@ export const TextInputAndSelect = props => {
   // TODO: use another prop that digits to handle
   // `k-FormComposer__element--main` class.
   const inputWrapperClassName = classNames(
-    "k-FormComposer__element",
+    'k-FormComposer__element',
     {
-      "k-FormComposer__element--main": !props.digits
+      'k-FormComposer__element--main': !props.digits
     },
     className
   );
@@ -68,7 +68,7 @@ export const TextInputAndSelect = props => {
 TextInputAndSelect.defaultProps = {
   tiny: false,
   disabled: false,
-  selectOptions: [{ value: "myValue", label: "My label" }],
+  selectOptions: [{ value: 'myValue', label: 'My label' }],
   selectName: null,
   selectValue: null,
   onSelectChange: function() {},
