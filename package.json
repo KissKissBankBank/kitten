@@ -102,12 +102,8 @@
     "eslint": "eslint --fix assets/**/*.js"
   },
   "lint-staged": {
-    "assets/**/*.js": [
+    "assets/**/*.{js,scss}": [
       "eslint --fix",
-      "git add"
-    ],
-    "assets/**/*.scss": [
-      "prettier --write",
       "git add"
     ]
   },
