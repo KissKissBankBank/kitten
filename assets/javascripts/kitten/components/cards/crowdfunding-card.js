@@ -414,6 +414,7 @@ const styles = {
     },
   },
   stroke: {
+    flexShrink: 0,
     margin: `5px ${COMPONENT_GUTTER}px 5px 0`,
 
     loading: {
