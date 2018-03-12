@@ -269,7 +269,7 @@ class CrowdfundingCardComponent extends Component {
   }
 
   renderProgress() {
-    if (!this.props.progress) return
+    if (this.props.progress === false) return
 
     const progressValue = this.props.loading
       ? 65
@@ -496,7 +496,7 @@ CrowdfundingCardComponent.defaultProps = {
   info1: null,
   info2: null,
   info3: null,
-  progress: 0,
+  progress: false,
   state: null,
   loading: false,
 }
