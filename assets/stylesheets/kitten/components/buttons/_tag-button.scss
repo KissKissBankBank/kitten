@@ -102,7 +102,7 @@
     @include k-media-max('s') {
       @include k-typographyFontSize($button-step);
 
-      padding: 0 k-px-to-rem(10px);
+      padding: 0 k-px-to-rem(15px);
     }
   }
 
