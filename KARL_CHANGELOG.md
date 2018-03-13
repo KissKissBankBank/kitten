@@ -4,8 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `azote` modifier on `KarlButtonIconWordsLeft` and
-  `KarlButtonIconHeart` examples.
+- Feature: Add `azote` modifier all buttons examples.
 - Feature: Add `KarlButtonIconFilter` example.
 - Feature: Update `KarlLoaderInButton` example.
 - Fix: A11Y and update example colors.
