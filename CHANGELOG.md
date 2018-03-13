@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: Fix `TagButton` colors.
+- Feature: Add `azote` modifier on `Button` and `ButtonIcon` components.
 - Fix: Update primary colors.
 - Feature: Add new `FilterIcon` component.
 - Feature: Update all buttons colors.
