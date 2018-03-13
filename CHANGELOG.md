@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Add `xs` media-query, on `big` props of `TagButton` component.
+- Fix: Fix `TagButton` colors.
 - Feature: Add new `FilterIcon` component.
 - Feature: Update all buttons colors.
 
