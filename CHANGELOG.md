@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: Update `k-Checkbox__label` with flex.
+- Fix: Update primary colors.
 - Feature: Add new `FilterIcon` component.
 - Feature: Update all buttons colors.
 
