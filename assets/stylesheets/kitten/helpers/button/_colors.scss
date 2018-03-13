@@ -182,6 +182,39 @@
       ),
     ),
 
+    'azote': (
+      base: (
+        color: map-get($k-colors, 'font-1'),
+        border-color: map-get($k-colors, 'line-1'),
+        background-color: map-get($k-colors, 'background-1'),
+      ),
+      hover: (
+        color: map-get($k-colors, 'font-1'),
+        border-color: map-get($k-colors, 'line-2'),
+        background-color: map-get($k-colors, 'background-1'),
+      ),
+      focus: (
+        color: map-get($k-colors, 'font-1'),
+        border-color: map-get($k-colors, 'line-2'),
+        background-color: map-get($k-colors, 'background-1'),
+      ),
+      active: (
+        color: map-get($k-colors, 'primary-1'),
+        border-color: map-get($k-colors, 'primary-4'),
+        background-color: map-get($k-colors, 'background-1'),
+      ),
+      is-selected: (
+        color: map-get($k-colors, 'primary-1'),
+        border-color: map-get($k-colors, 'primary-4'),
+        background-color: map-get($k-colors, 'background-1'),
+      ),
+      disabled: (
+        color: map-get($k-colors, 'background-1'),
+        border-color: map-get($k-colors, 'line-2'),
+        background-color: map-get($k-colors, 'line-2'),
+      ),
+    ),
+
     'facebook': (
       base: (
         color: map-get($k-colors, 'background-1'),
