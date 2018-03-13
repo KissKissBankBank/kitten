@@ -1,16 +1,16 @@
 <%= example "on label" do %>
   <%= react_component 'Label', props: {
-    children: "A label",
-    focusId: "age",
+    children: 'A label',
+    focusId: 'age',
   } %>
 
   <input id="age" name="age" />
 <% end %>
 
 <%= example 'on span' do %>
-  <%= react_component "Label", props: {
-    tag: "span",
-    children: "Another label",
+  <%= react_component 'Label', props: {
+    tag: 'span',
+    children: 'Another label',
     focusId: false,
   } %>
 
@@ -31,10 +31,10 @@
 <% end %>
 
 <%= example 'on tiny label' do %>
-  <%= react_component "Label", props: {
-    children: "A label",
-    focusId: "age2",
-    size: "tiny",
+  <%= react_component 'Label', props: {
+    children: 'A label',
+    focusId: 'age2',
+    size: 'tiny',
   } %>
 
   <input id="age2" name="age2" />
