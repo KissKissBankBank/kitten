@@ -98,12 +98,6 @@
     padding: 0 k-px-to-rem(30px);
     min-width: $tag-button-min-width-big;
     min-height: $tag-button-line-height-big;
-
-    @include k-media-max('s') {
-      @include k-typographyFontSize($button-step);
-
-      padding: 0 k-px-to-rem(15px);
-    }
   }
 
   // Icon modifier.
