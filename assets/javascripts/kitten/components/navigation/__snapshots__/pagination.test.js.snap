@@ -226,8 +226,8 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
           style={
             Object {
               "alignItems": "center",
-              "backgroundColor": "#19bbff",
-              "borderColor": "#19bbff",
+              "backgroundColor": "#19b4fa",
+              "borderColor": "#19b4fa",
               "borderRadius": 0,
               "borderStyle": "solid",
               "borderWidth": 0,
