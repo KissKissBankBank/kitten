@@ -8,7 +8,7 @@ import { ClockCircleIcon } from 'kitten/components/icons/clock-circle-icon'
 
 const colors = {
   'line-2': '#d8d8d8',
-  'primary-1': '#19bbff',
+  'primary-1': '#19b4fa',
   'tertiary-1': '#effaf1',
   'error': '#ff0046',
 }

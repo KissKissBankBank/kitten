@@ -94,11 +94,11 @@ $k-colors: (
   'line-1': #eee, // Semi Light Grey
   'line-2': #d8d8d8, // Grey
 
-  'primary-1': #19bbff, // Primary
-  'primary-2': #0aacf0, // Semi Dark Primary
-  'primary-3': #009de1, // Dark Primary
+  'primary-1': #19b4fa, // Primary
+  'primary-2': #05a8e6, // Semi Dark Primary
+  'primary-3': #0496cc, // Dark Primary
   'primary-4': #bae8fd, // Light Primary
-  'primary-5': #e8f8ff, // Extra Light Primary
+  'primary-5': #e8f7fe, // Extra Light Primary
   'primary-6': #f3fbff, // Thin Primary
 
   // DEPRECATED: colors.
@@ -121,5 +121,4 @@ $k-colors: (
   'red-light-mdc': #ffebe0,
   'red-mdc': #ff0000,
   'blue-light-mdc': #caf4fe,
-  'blue-mdc': #0d9ddb,
 ) !default;
