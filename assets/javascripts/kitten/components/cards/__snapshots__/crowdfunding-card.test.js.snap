@@ -666,6 +666,9 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
       data-radium={true}
       style={
         Object {
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "row",
           "marginBottom": "1.25rem",
           "marginTop": "0.9375rem",
           "padding": "0 10px",
@@ -678,6 +681,11 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
         aria-valuenow="84"
         className="k-Progress"
         role="progressbar"
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
       >
         <div
           className="k-Progress__ramp"
@@ -698,6 +706,18 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
           />
         </div>
       </div>
+      <span
+        className="k-u-size-micro k-u-weight-regular"
+        data-radium={true}
+        style={
+          Object {
+            "flexShrink": 0,
+            "marginLeft": "20px",
+          }
+        }
+      >
+        84 %
+      </span>
     </div>
     <div
       data-radium={true}

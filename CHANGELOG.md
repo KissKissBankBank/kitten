@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add progress percentage in `CrowdfundingCard`.
 - Feature: Add new `FilterIcon` component.
 - Feature: Update all buttons colors.
 
