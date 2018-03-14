@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Fix `CrowdfundingCard` when the progress value is zero.
 - Feature: Add progress percentage in `CrowdfundingCard`.
 - Feature: Add `azote` modifier on `Button` and `ButtonIcon` components.
 - Fix: Update primary colors.
