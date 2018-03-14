@@ -101,6 +101,7 @@ import { KarlCheckboxError } from 'kitten/karl/form/checkbox'
 import { KarlFormActions } from 'kitten/karl/form/form-actions'
 import { KarlFormRow } from 'kitten/karl/form/form-row'
 import { KarlLocationInput } from 'kitten/karl/form/location-input'
+import { PasswordInput } from 'kitten/components/form/password-input'
 import {
   KarlRadioButtonContentError,
   KarlRadioButtonError,
@@ -396,6 +397,7 @@ ReactOnRails.register({
   KarlLocationInput,
   KarlRadioButtonContentError,
   KarlRadioButtonError,
+  PasswordInput,
 
   // Grid
   Container,
