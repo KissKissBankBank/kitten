@@ -9,6 +9,14 @@ const TextInput = Radium(TextInputBase)
 
 export class PasswordInput extends Component {
   render() {
+    return (
+      <Fragment>
+        { this.renderPassword() }
+      </Fragment>
+    )
+  }
+
+  renderPassword() {
     const iconIsHovered =
       Radium.getState(this.state, 'password-input', ':hover')
     const iconIsFocused =
@@ -17,32 +25,22 @@ export class PasswordInput extends Component {
       Radium.getState(this.state, 'password-input', ':active')
 
     return (
-      <StyleRoot>
-        { this.renderPassword() }
-      </StyleRoot>
-    )
-  }
-
-  renderPassword() {
-    return (
       <div
         key="password-input"
         style={ styles.textInput }>
-        <a
-          href="#"
+        <TextInput
+          style={ styles.input }
+          name="password"
+          type="password"
+        />
+        <span
           style={ styles.password }
         >
           <PasswordIcon
             key={ `icon-${iconIsHovered}` }
             style={ styles.password.icon }
           />
-        </a>
-        <div style={ styles.input }>
-          <TextInput
-            name="password"
-            type="password"
-          />
-        </div>
+        </span>
       </div>
     )
   }
@@ -50,18 +48,25 @@ export class PasswordInput extends Component {
 
 const styles = {
   textInput: {
+    position: 'relative',
     ':hover': {},
     ':focus': {},
     ':active': {},
   },
 
+  input: {
+    paddingRight: '40px',
+  },
+
   password: {
+    cursor: 'pointer',
     position: 'absolute',
     zIndex: 1,
     margin: '14px 11px',
+    right: 0,
+    top: 0,
 
     icon: {
-      fill: `${COLORS.font1}`,
       ':hover': {
         fill: `${COLORS.primary1}`,
       },
@@ -69,9 +74,5 @@ const styles = {
         fill: `${COLORS.primary1}`,
       },
     },
-  },
-
-  input: {
-    position: 'relative',
   },
 }
