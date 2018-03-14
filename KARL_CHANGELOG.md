@@ -4,13 +4,18 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `KarlScrollableContainer` example.
-- Fix: Update modifier on `KarlButtonIconFilter` example.
-- Feature: Add `azote` modifier all buttons examples.
-- Fix: Remove old `Blue MDC` color.
-- Feature: Add `KarlButtonIconFilter` example.
-- Feature: Update `KarlLoaderInButton` example.
-- Fix: A11Y and update example colors.
+## [20.1.0] - 2018-03-14
+
+Features:
+- Add `KarlScrollableContainer` example.
+- Add `azote` modifier all buttons examples.
+- Add `KarlButtonIconFilter` example.
+- Update `KarlLoaderInButton` example.
+
+Fixes:
+- Update modifier on `KarlButtonIconFilter` example.
+- Remove old `Blue MDC` color.
+- A11Y and update example colors.
 
 ## [20.0.2] - 2018-03-05
 
