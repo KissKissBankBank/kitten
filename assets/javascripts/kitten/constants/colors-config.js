@@ -9,11 +9,11 @@ export default {
   line1: '#eee', // Semi Light Grey
   line2: '#d8d8d8', // Grey
 
-  primary1: '#19bbff', // Primary
-  primary2: '#0aacf0', // Semi Dark Primary
-  primary3: '#009de1', // Dark Primary
+  primary1: '#19b4fa', // Primary
+  primary2: '#05a8e6', // Semi Dark Primary
+  primary3: '#0496cc', // Dark Primary
   primary4: '#bae8fd', // Light Primary
-  primary5: '#e8f8ff', // Extra Light Primary
+  primary5: '#e8f7fe', // Extra Light Primary
   primary6: '#f3fbff', // Thin Primary
 
   tertiary1: '#effaf1', // Light Green

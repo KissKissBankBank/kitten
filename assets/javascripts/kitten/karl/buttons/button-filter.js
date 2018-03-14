@@ -57,6 +57,7 @@ class KarlButtonIconFilterBase extends Component {
 
 KarlButtonIconFilterBase.defaultProps = {
   disabled: false,
+  modifier: 'azote',
 }
 
 const styles = {
