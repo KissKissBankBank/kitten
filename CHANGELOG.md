@@ -5,10 +5,21 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add `PasswordIcon` component.
-- Feature: Add `azote` modifier on `Button` and `ButtonIcon` components.
-- Fix: Update primary colors.
-- Feature: Add new `FilterIcon` component.
-- Feature: Update all buttons colors.
+
+## [20.1.0] - 2018-03-14
+
+Fixes:
+- Fix `TagButton` colors.
+- Update `k-Checkbox__label` with flex.
+- Fix `CrowdfundingCard` when the progress value is zero.
+- Update primary colors.
+
+Features:
+- Add `ScrollableContainer`.
+- Add progress percentage in `CrowdfundingCard`.
+- Add `azote` modifier on `Button` and `ButtonIcon` components.
+- Add new `FilterIcon` component.
+- Update all buttons colors.
 
 ## [20.0.2] - 2018-03-05
 

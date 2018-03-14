@@ -149,6 +149,7 @@ exports[`<ArticleCard /> by default matches with snapshot 1`] = `
           data-radium={true}
           style={
             Object {
+              "flexShrink": 0,
               "margin": "5px 10px 5px 0",
             }
           }
@@ -317,6 +318,7 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
           data-radium={true}
           style={
             Object {
+              "flexShrink": 0,
               "margin": "5px 10px 5px 0",
             }
           }
@@ -488,6 +490,7 @@ exports[`<ArticleCard /> with ignored props matches with snapshot 1`] = `
           data-radium={true}
           style={
             Object {
+              "flexShrink": 0,
               "margin": "5px 10px 5px 0",
             }
           }
@@ -660,6 +663,7 @@ exports[`<ArticleCard /> with some props matches with snapshot 1`] = `
           data-radium={true}
           style={
             Object {
+              "flexShrink": 0,
               "margin": "5px 10px 5px 0",
             }
           }

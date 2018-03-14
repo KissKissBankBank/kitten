@@ -60,14 +60,14 @@
         background-color: map-get($k-colors, 'background-1'),
       ),
       focus: (
-        color: map-get($k-colors, 'background-1'),
-        border-color: map-get($k-colors, 'primary-1'),
-        background-color: map-get($k-colors, 'primary-1'),
+        color: map-get($k-colors, 'primary-1'),
+        border-color: map-get($k-colors, 'background-1'),
+        background-color: map-get($k-colors, 'background-1'),
       ),
       active: (
-        color: map-get($k-colors, 'background-1'),
-        border-color: map-get($k-colors, 'primary-1'),
-        background-color: map-get($k-colors, 'primary-1'),
+        color: map-get($k-colors, 'primary-1'),
+        border-color: map-get($k-colors, 'background-1'),
+        background-color: map-get($k-colors, 'background-1'),
       ),
       is-selected: (
         color: map-get($k-colors, 'background-1'),
