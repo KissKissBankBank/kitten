@@ -269,7 +269,7 @@ class CrowdfundingCardComponent extends Component {
   }
 
   renderProgress() {
-    if (!this.props.progress) return
+    if (this.props.progress === false) return
 
     const progressValue = this.props.loading
       ? 65
@@ -287,7 +287,20 @@ class CrowdfundingCardComponent extends Component {
           rampProps={{
             style: { height: '4px' },
           }}
+          style={{ flex: 1 }}
         />
+
+        <Text
+          weight="regular"
+          size="micro"
+          style={ styles.progress.percent }
+        >
+          { this.props.loading &&
+            <span style={ styles.informations.info.loading } />
+          }
+
+          { !this.props.loading && `${this.props.progress} %` }
+        </Text>
       </Marger>
     )
   }
@@ -414,6 +427,7 @@ const styles = {
     },
   },
   stroke: {
+    flexShrink: 0,
     margin: `5px ${COMPONENT_GUTTER}px 5px 0`,
 
     loading: {
@@ -449,7 +463,15 @@ const styles = {
     },
   },
   progress: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
     padding: `0 ${COMPONENT_GUTTER}px`,
+
+    percent: {
+      flexShrink: 0,
+      marginLeft: `${COMPONENT_GUTTER * 2}px`,
+    },
   },
   state: {
     position: 'absolute',
@@ -496,7 +518,7 @@ CrowdfundingCardComponent.defaultProps = {
   info1: null,
   info2: null,
   info3: null,
-  progress: 0,
+  progress: false,
   state: null,
   loading: false,
 }
