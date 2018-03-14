@@ -287,7 +287,20 @@ class CrowdfundingCardComponent extends Component {
           rampProps={{
             style: { height: '4px' },
           }}
+          style={{ flex: 1 }}
         />
+
+        <Text
+          weight="regular"
+          size="micro"
+          style={ styles.progress.percent }
+        >
+          { this.props.loading &&
+            <span style={ styles.informations.info.loading } />
+          }
+
+          { !this.props.loading && `${this.props.progress} %` }
+        </Text>
       </Marger>
     )
   }
@@ -450,7 +463,15 @@ const styles = {
     },
   },
   progress: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
     padding: `0 ${COMPONENT_GUTTER}px`,
+
+    percent: {
+      flexShrink: 0,
+      marginLeft: `${COMPONENT_GUTTER * 2}px`,
+    },
   },
   state: {
     position: 'absolute',

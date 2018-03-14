@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Update modifier on `KarlButtonIconFilter` example.
+- Feature: Add `azote` modifier all buttons examples.
+- Fix: Remove old `Blue MDC` color.
 - Feature: Add `KarlButtonIconFilter` example.
 - Feature: Update `KarlLoaderInButton` example.
 - Fix: A11Y and update example colors.
