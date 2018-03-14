@@ -16,10 +16,6 @@ export class PasswordInput extends Component {
     const iconIsActived =
       Radium.getState(this.state, 'password-input', ':active')
 
-    const isHidden =
-    const isVisibled =
-      !
-
     return (
       <StyleRoot>
         { this.renderPassword() }
@@ -63,7 +59,6 @@ const styles = {
     position: 'absolute',
     zIndex: 1,
     margin: '14px 11px',
-    //right: 0,
 
     icon: {
       fill: `${COLORS.font1}`,
@@ -79,5 +74,4 @@ const styles = {
   input: {
     position: 'relative',
   },
-
 }
