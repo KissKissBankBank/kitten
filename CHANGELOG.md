@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Update `k-Checkbox__label` with flex.
 - Feature: Add `ScrollableContainer`.
 - Fix: Fix `CrowdfundingCard` when the progress value is zero.
 - Feature: Add progress percentage in `CrowdfundingCard`.
