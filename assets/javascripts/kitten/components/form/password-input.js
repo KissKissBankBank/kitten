@@ -1,44 +1,58 @@
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
 import { PasswordIcon as PasswordIconBase } from 'kitten/components/icons/password-icon'
 import { TextInput as TextInputBase } from 'kitten/components/form/text-input'
-import Radium, { StyleRoot } from 'radium'
+import Radium from 'radium'
 import COLORS from 'kitten/constants/colors-config'
 
 const PasswordIcon = Radium(PasswordIconBase)
 const TextInput = Radium(TextInputBase)
 
-export class PasswordInput extends Component {
-  render() {
-    return (
-      <Fragment>
-        { this.renderPassword() }
-      </Fragment>
-    )
+class PasswordInputBase extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      isHidden: true
+    };
   }
 
-  renderPassword() {
-    const iconIsHovered =
-      Radium.getState(this.state, 'password-input', ':hover')
-    const iconIsFocused =
-      Radium.getState(this.state, 'password-input', ':focus')
-    const iconIsActived =
-      Radium.getState(this.state, 'password-input', ':active')
+  handleClick = () => {
+    this.setState({ isHidden: !this.state.isHidden })
+  }
+
+  handleKeyDown = (event) => {
+    const enterKeyCode = 13
+
+    if (event.keyCode == enterKeyCode) {
+      this.handleClick()
+    }
+  }
+
+  render() {
+    const { textInputProps } = this.props
+
+    const type = this.state.isHidden ? 'password' : 'text'
+
+    const iconStyle = [
+      styles.icon.svg,
+      !this.state.isHidden && styles.icon.svg.active,
+      // textInputProps == { tiny: true } && styles.icon.tiny,
+    ]
 
     return (
-      <div
-        key="password-input"
-        style={ styles.textInput }>
+      <div style={ styles.textInput }>
         <TextInput
+          { ...textInputProps }
           style={ styles.input }
           name="password"
-          type="password"
+          type={ type }
         />
-        <span
-          style={ styles.password }
-        >
+        <span style={ styles.icon }>
           <PasswordIcon
-            key={ `icon-${iconIsHovered}` }
-            style={ styles.password.icon }
+            tabIndex="0"
+            style={ iconStyle }
+            onClick={ this.handleClick }
+            onKeyDown={ this.handleKeyDown }
           />
         </span>
       </div>
@@ -49,8 +63,7 @@ export class PasswordInput extends Component {
 const styles = {
   textInput: {
     position: 'relative',
-    ':hover': {},
-    ':focus': {},
+    display: 'flex',
     ':active': {},
   },
 
@@ -58,21 +71,26 @@ const styles = {
     paddingRight: '40px',
   },
 
-  password: {
-    cursor: 'pointer',
+  icon: {
+    display: 'flex',
     position: 'absolute',
     zIndex: 1,
-    margin: '14px 11px',
+    marginRight: '11px',
     right: 0,
     top: 0,
+    bottom: 0,
 
-    icon: {
-      ':hover': {
-        fill: `${COLORS.primary1}`,
-      },
-      ':active': {
+    svg: {
+      cursor: 'pointer',
+      active: {
         fill: `${COLORS.primary1}`,
       },
     },
   },
 }
+
+PasswordInputBase.defaultProps = {
+  textInputProps: {},
+}
+
+export const PasswordInput = Radium(PasswordInputBase)
