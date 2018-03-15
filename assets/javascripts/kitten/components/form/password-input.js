@@ -1,13 +1,22 @@
 import React, { Component } from 'react'
-import { PasswordIcon as PasswordIconBase } from 'kitten/components/icons/password-icon'
-import { TextInput as TextInputBase } from 'kitten/components/form/text-input'
+import PropTypes from 'prop-types'
 import Radium from 'radium'
 import COLORS from 'kitten/constants/colors-config'
+import { PasswordIcon as PasswordIconBase } from 'kitten/components/icons/password-icon'
+import { TextInput as TextInputBase } from 'kitten/components/form/text-input'
 
 const PasswordIcon = Radium(PasswordIconBase)
 const TextInput = Radium(TextInputBase)
 
 class PasswordInputBase extends Component {
+  static propTypes = {
+    textInputProps: PropTypes.object,
+  }
+
+  static defaultProps = {
+    textInputProps: {},
+  }
+
   constructor(props) {
     super(props)
 
@@ -63,7 +72,6 @@ const styles = {
   textInput: {
     position: 'relative',
     display: 'flex',
-    ':active': {},
   },
 
   input: {
@@ -86,10 +94,6 @@ const styles = {
       },
     },
   },
-}
-
-PasswordInputBase.defaultProps = {
-  textInputProps: {},
 }
 
 export const PasswordInput = Radium(PasswordInputBase)
