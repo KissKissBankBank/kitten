@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
+import { Text } from 'kitten/components/typography/text'
 
 export class Checkbox extends Component {
   render() {
@@ -32,7 +33,9 @@ export class Checkbox extends Component {
           htmlFor={ id }
           className="k-Checkbox__label"
         >
-          { children }
+          <Text { ...this.props.textProps }>
+            { children }
+          </Text>
         </label>
       </div>
     )
@@ -41,4 +44,5 @@ export class Checkbox extends Component {
 
 Checkbox.defaultProps = {
   children: 'Filter 1',
+  textProps: {},
 }
