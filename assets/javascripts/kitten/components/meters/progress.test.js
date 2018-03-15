@@ -33,4 +33,12 @@ describe('<Progress />', () => {
       expect(slider.props().style).toMatchObject({ backgroundColor: 'red' })
     })
   })
+
+  describe('with a superior value of maximum limit', () => {
+    const component = shallow(<Progress value={ 120 } />)
+    const slider = component.find('.k-Progress__slider')
+
+    expect(component.props()['aria-valuenow']).toBe(100)
+    expect(slider.props().style).toMatchObject({ width: '100%' })
+  })
 })
