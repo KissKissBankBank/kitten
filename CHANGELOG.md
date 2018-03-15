@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `PasswordIcon` component.
+- Feature: Add `PasswordIcon` and `PasswordInput` components.
 
 ## [20.1.0] - 2018-03-14
 
