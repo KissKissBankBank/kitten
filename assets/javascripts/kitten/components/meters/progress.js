@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import classNames from 'classnames'
 
+const valueMax = 100
+
 export class Progress extends Component {
   render() {
     const {
@@ -16,9 +18,11 @@ export class Progress extends Component {
       className,
     )
 
+    const progressValue = value > valueMax ? valueMax : value
+
     const style = {
       backgroundColor: `${color}`,
-      width: `${value}%`,
+      width: `${progressValue}%`,
     }
 
     const rampClassName = classNames(
@@ -31,8 +35,8 @@ export class Progress extends Component {
         { ...others }
         role="progressbar"
         aria-valuemin="0"
-        aria-valuemax="100"
-        aria-valuenow={ this.props.value }
+        aria-valuemax={ `${valueMax}` }
+        aria-valuenow={ progressValue }
         className={ progressClassName }>
         <div { ...rampProps } className={ rampClassName }>
           <div
