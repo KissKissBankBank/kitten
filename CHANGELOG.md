@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `textProps` to `Checkbox`.
+
 ## [20.1.0] - 2018-03-14
 
 Fixes:
