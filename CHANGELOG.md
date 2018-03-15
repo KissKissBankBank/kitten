@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add `PasswordIcon` and `PasswordInput` components.
+- Fix: Fix `Progress` value that should not exceed the maximum limit.
 
 ## [20.1.0] - 2018-03-14
 
