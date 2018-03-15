@@ -36,7 +36,6 @@ class PasswordInputBase extends Component {
     const iconStyle = [
       styles.icon.svg,
       !this.state.isHidden && styles.icon.svg.active,
-      // textInputProps == { tiny: true } && styles.icon.tiny,
     ]
 
     return (

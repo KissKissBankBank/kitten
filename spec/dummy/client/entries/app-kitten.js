@@ -83,6 +83,7 @@ import { FormAmountAndCurrency }
 import { FormPhoneNumber } from 'kitten/components/form/form-phone-number'
 import { Label } from 'kitten/components/form/label'
 import { LocationInput } from 'kitten/components/form/location-input'
+import { PasswordInput } from 'kitten/components/form/password-input'
 import { RadioButton } from 'kitten/components/form/radio-button'
 import { RadioButtonSet } from 'kitten/components/form/radio-button-set'
 import { RichTextInput } from 'kitten/components/form/rich-text-input'
@@ -101,7 +102,6 @@ import { KarlCheckboxError } from 'kitten/karl/form/checkbox'
 import { KarlFormActions } from 'kitten/karl/form/form-actions'
 import { KarlFormRow } from 'kitten/karl/form/form-row'
 import { KarlLocationInput } from 'kitten/karl/form/location-input'
-import { PasswordInput } from 'kitten/components/form/password-input'
 import {
   KarlRadioButtonContentError,
   KarlRadioButtonError,
@@ -380,6 +380,7 @@ ReactOnRails.register({
   FormPhoneNumber,
   Label,
   LocationInput,
+  PasswordInput,
   RadioButton,
   RadioButtonSet,
   RichTextInput,
@@ -398,7 +399,6 @@ ReactOnRails.register({
   KarlLocationInput,
   KarlRadioButtonContentError,
   KarlRadioButtonError,
-  PasswordInput,
 
   // Grid
   Container,
