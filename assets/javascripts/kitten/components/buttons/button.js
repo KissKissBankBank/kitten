@@ -11,6 +11,7 @@ export class Button extends Component {
       icon,
       iconOnRight,
       iconWithMinWidth,
+      border,
       ...others,
     } = this.props
 
@@ -19,6 +20,7 @@ export class Button extends Component {
       {
         [`k-Button--${modifier}`]: modifier,
         [`k-Button--${size}`]: size,
+        [`k-Button--${border}`]: border,
         'k-Button--icon': icon,
         'k-Button--iconRight': iconOnRight,
         'k-Button--iconWithMinWidth': iconWithMinWidth,
@@ -49,4 +51,5 @@ Button.defaultProps = {
   icon: false,
   iconOnRight: false,
   iconWithMinWidth: false,
+  border: 'solid',
 }

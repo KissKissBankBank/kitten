@@ -16,6 +16,7 @@
 /// - `.k-Button--beryllium`
 /// - `.k-Button--carbon`
 /// - `.k-Button--azote`
+/// - `.k-Button--oxygene`
 /// - `.k-Button--facebook`
 /// - `.k-Button--twitter`
 /// - `.k-Button--linkedin`
@@ -24,6 +25,9 @@
 /// - `.k-Button--tiny`
 /// - `.k-Button--big`
 /// - `.k-Button--big@s-up`
+///
+/// Available border modifiers:
+/// - `.k-Button--border`
 ///
 /// @group buttons
 ///
@@ -147,6 +151,11 @@
 
   .k-Button--linkedin {
     @include k-buttonColors('linkedin');
+  }
+
+  // Border style modifiers.
+  .k-Button--dashed {
+    border-style: dashed;
   }
 
   // Size modifiers.
