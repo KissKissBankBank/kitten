@@ -3,7 +3,12 @@ import classNames from 'classnames'
 
 export class Badge extends React.Component {
   render() {
-    const { className, spaced, ...others } = this.props
+    const {
+      className,
+      spaced,
+      ...others,
+    } = this.props
+
     const badgeClassName = classNames(
       'k-Badge',
       className,
@@ -11,7 +16,11 @@ export class Badge extends React.Component {
     )
 
     return (
-      <span className={ badgeClassName } { ...others } />
+      <span
+        role="alert"
+        className={ badgeClassName }
+        { ...others }
+      />
     )
   }
 }
