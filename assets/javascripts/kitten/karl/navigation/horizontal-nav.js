@@ -15,7 +15,7 @@ export const KarlHorizontalNav = props => {
   )
 }
 
-export const KarlBrowsingHorizontalNav = props => {
+export const KarlTouchHorizontalNav = props => {
   const rowStyles = {
     backgroundColor: '#f6f6f6',
   }

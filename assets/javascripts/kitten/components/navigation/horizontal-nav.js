@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Badge } from 'kitten/components/notifications/badge'
 import classNames from 'classnames'
 import Markdown from 'react-markdown'
 
@@ -16,6 +17,7 @@ export class HorizontalNav extends Component {
       text,
       key,
       href,
+      notification,
       ...others,
     } = item
 
