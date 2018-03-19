@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `azote` modifier all buttons examples.
+- Feature: Add `oxygen` modifier all buttons examples.
 
 ## [20.2.0] - 2018-03-15
 
