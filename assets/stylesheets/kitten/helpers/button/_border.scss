@@ -7,21 +7,19 @@
 /// @group buttons
 ///
 /// @parameter {Color} $border-color [transparent] - button border color
-/// @parameter {Style} $border-style [solid] - button border style
 ///
 /// @example scss - Usage
-///   @include k-buttonBorder(#eee, solid);
+///   @include k-buttonBorder(#eee);
 ///
 /// @example css - CSS output
 ///   border: 2px solid #eee;
 
-@mixin k-buttonBorder($border-color, $border-style) {
+@mixin k-buttonBorder($border-color) {
   // Border size
   $button-border-width: k-px-to-rem(2px);
 
   $border-color: transparent !default; // Default value.
   $border-color: k-color-definition($border-color);
-  $border-style: solid;
 
-  border: $button-border-width $border-style $border-color;
+  border: $button-border-width solid $border-color;
 }

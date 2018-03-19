@@ -11,7 +11,6 @@ export class Button extends Component {
       icon,
       iconOnRight,
       iconWithMinWidth,
-      border,
       ...others,
     } = this.props
 

@@ -52,7 +52,6 @@
 ///   }
 
 @mixin k-buttonColorBase($colors) {
-  $border-style: 'solid';
 
   // base colors
   $base: k-map-fetch($colors, 'base');
@@ -106,7 +105,7 @@
               border-color $transition-speed;
 
   @if $base-border-color {
-    @include k-buttonBorder($base-border-color, $border-style);
+    @include k-buttonBorder($base-border-color);
   }
   @else {
     border: none;
@@ -118,7 +117,7 @@
 
   &:hover {
     @if $hover-border-color {
-      @include k-buttonBorder($hover-border-color, $border-style);
+      @include k-buttonBorder($hover-border-color);
     }
     @else {
       border: none;
@@ -136,7 +135,7 @@
     @if map-has-key($colors, 'focus') {
 
       @if $focus-border-color {
-        @include k-buttonBorder($focus-border-color, $border-style);
+        @include k-buttonBorder($focus-border-color);
       }
       @else {
         border: none;
@@ -151,7 +150,7 @@
     }
 
     @else {
-      @include k-buttonBorder($hover-border-color, $border-style);
+      @include k-buttonBorder($hover-border-color);
 
       background-color: $hover-background-color;
       color: $hover-color;
@@ -162,7 +161,7 @@
 
   &:active {
     @if $active-border-color {
-      @include k-buttonBorder($active-border-color, $border-style);
+      @include k-buttonBorder($active-border-color);
     }
     @else {
       border: none;
@@ -179,7 +178,7 @@
   @if map-has-key($colors, 'disabled') {
     &:disabled {
       @if $disabled-border-color {
-        @include k-buttonBorder($disabled-border-color, $border-style);
+        @include k-buttonBorder($disabled-border-color);
       }
       @else {
         border: none;
@@ -197,7 +196,7 @@
   @if map-has-key($colors, 'is-selected') {
     &.is-selected {
       @if $is-selected-border-color {
-        @include k-buttonBorder($is-selected-border-color, $border-style);
+        @include k-buttonBorder($is-selected-border-color);
       }
       @else {
         border: none;
