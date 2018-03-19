@@ -85,11 +85,23 @@
   </div>
 
   <div class="k-Grid__col k-Grid__col--12 k-Grid__col--3@l">
-    <%= example 'Disabled' do %>
-      <%= react_component 'Button', props: {
-        disabled: true,
-        children: 'Button'
-      } %>
-    <% end %>
+    <div class="k-Grid">
+      <div class="k-Grid__col k-Grid__col--12 k-Grid__col--4@s k-Grid__col--12@l">
+        <%= example 'Oxygen' do %>
+          <%= react_component 'Button', props: {
+            modifier: 'oxygen',
+            children: 'Button',
+          } %>
+        <% end %>
+      </div>
+      <div class="k-Grid__col k-Grid__col--12 k-Grid__col--4@s k-Grid__col--12@l">
+        <%= example 'Disabled' do %>
+          <%= react_component 'Button', props: {
+            disabled: true,
+            children: 'Button',
+          } %>
+        <% end %>
+      </div>
+    </div>
   </div>
 </div>
