@@ -6,7 +6,6 @@ import Markdown from 'react-markdown'
 export class HorizontalNav extends Component {
   renderNotification() {
     if (!this.props.notification) return
-
     return (
       <div>
         <Badge />
@@ -53,8 +52,8 @@ export class HorizontalNav extends Component {
           } }
         >
           <Markdown softBreak="br" source={ text } />
+          { this.renderNotification() }
         </a>
-        { this.renderNotification() }
       </li>
     )
   }

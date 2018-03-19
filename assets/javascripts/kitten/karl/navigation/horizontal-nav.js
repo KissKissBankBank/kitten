@@ -36,3 +36,31 @@ export const KarlTouchHorizontalNav = props => {
     </Row>
   )
 }
+
+export const KarlTouchHorizontalNavWithNotification = props => {
+  const rowStyles = {
+    backgroundColor: '#f6f6f6',
+  }
+
+  const horizontalNavItems = [
+    {
+      key: 'key1',
+      text: 'Projet d’entreprise',
+      href: '#',
+      selected: true,
+      notification: true,
+    },
+    { key: 'key2', text: 'Énergies renouvelables', href: '#' },
+    { key: 'key3', text: 'Immobilier', href: '#' },
+  ]
+
+  return (
+    <Row style={ rowStyles }>
+      <HorizontalNav
+        items={ horizontalNavItems }
+        height="96px"
+        center
+      />
+    </Row>
+  )
+}
