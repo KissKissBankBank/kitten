@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Update `CrowdfundingCard` image transition.
 - Feature: Add `oxygen` modifier on all `Button` components.
 
 ## [20.2.0] - 2018-03-15
