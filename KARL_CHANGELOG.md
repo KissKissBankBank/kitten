@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-Fix: Update `background-color` styleguide.
+- Fix: Update `background-color` on the styleguide.
 
 ## [20.2.0] - 2018-03-15
 
