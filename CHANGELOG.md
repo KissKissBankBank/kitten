@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `oxygen` modifier on all `Button` components.
+
 ## [20.2.0] - 2018-03-15
 
 Feature:
