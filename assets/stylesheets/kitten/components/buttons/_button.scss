@@ -141,6 +141,11 @@
     @include k-buttonColors('azote');
   }
 
+  .k-Button--oxygen {
+    @include k-buttonColors('lithium');
+    border-style: dashed;
+  }
+
   .k-Button--facebook {
     @include k-buttonColors('facebook');
   }
@@ -151,11 +156,6 @@
 
   .k-Button--linkedin {
     @include k-buttonColors('linkedin');
-  }
-
-  // Border style modifiers.
-  .k-Button--dashed {
-    border-style: dashed;
   }
 
   // Size modifiers.
