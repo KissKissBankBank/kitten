@@ -10,7 +10,7 @@ const TextInput = Radium(TextInputBase)
 
 class PasswordInputBase extends Component {
   static propTypes = {
-    textInputProps: PropTypes.object,
+    textInputProps: PropTypes.shape({}),
   }
 
   static defaultProps = {
@@ -22,7 +22,7 @@ class PasswordInputBase extends Component {
 
     this.state = {
       isHidden: true
-    };
+    }
   }
 
   handleClick = () => {
