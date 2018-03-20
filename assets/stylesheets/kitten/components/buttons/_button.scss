@@ -16,6 +16,7 @@
 /// - `.k-Button--beryllium`
 /// - `.k-Button--carbon`
 /// - `.k-Button--azote`
+/// - `.k-Button--oxygene`
 /// - `.k-Button--facebook`
 /// - `.k-Button--twitter`
 /// - `.k-Button--linkedin`
@@ -135,6 +136,11 @@
 
   .k-Button--azote {
     @include k-buttonColors('azote');
+  }
+
+  .k-Button--oxygen {
+    @include k-buttonColors('lithium');
+    border-style: dashed;
   }
 
   .k-Button--facebook {

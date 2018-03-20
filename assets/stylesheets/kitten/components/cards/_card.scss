@@ -30,6 +30,7 @@
   $box-shadow-color-hover: map-get($k-colors, 'line-2');
 
   $transition-duration: .4s;
+  $transition-easing: ease-in-out;
 
   .k-Card {
     display: block;
@@ -91,11 +92,11 @@
     transition: transform $transition-duration, box-shadow $transition-duration;
 
     .k-Card__image {
-      transition: transform $transition-duration;
+      transition: transform $transition-duration $transition-easing;
     }
 
     .k-Card__title {
-      transition: color $transition-duration;
+      transition: color $transition-duration $transition-easing;
     }
 
     &:hover,
@@ -113,7 +114,7 @@
       }
 
       .k-Card__image {
-        transform: scale(1.1);
+        transform: scale(1.07);
       }
 
       .k-Card__title {
