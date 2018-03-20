@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add `PasswordIcon` and `PasswordInput` components.
+- Fix: Update `CrowdfundingCard` image transition.
+- Feature: Add `oxygen` modifier on all `Button` components.
 
 ## [20.2.0] - 2018-03-15
 
