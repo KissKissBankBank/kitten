@@ -10,15 +10,14 @@ const TextInput = Radium(TextInputBase)
 
 class PasswordInputBase extends Component {
   static propTypes = {
-    titleIcon: PropTypes.string,
-    name: propTypes.string,
     textInputProps: PropTypes.shape({}),
+    titleIcon: PropTypes.string,
+    name: PropTypes.string,
   }
 
   static defaultProps = {
     textInputProps: {},
     name: 'password',
-}
   }
 
   constructor(props) {
