@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Manage padding on `k-Badge`.
+- Fix: Update `k-Badge` padding.
 
 ## [20.2.0] - 2018-03-15
 
