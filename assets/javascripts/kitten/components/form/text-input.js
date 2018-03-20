@@ -19,6 +19,7 @@ export class TextInput extends Component {
       disabled,
       tiny,
       digits,
+      name,
       ...others
     } = this.props
 
@@ -54,6 +55,7 @@ export class TextInput extends Component {
                ref={ input => this.input = input }
                disabled={ disabled }
                type="text"
+               name={ name }
                { ...others }
              />
     }
@@ -67,4 +69,5 @@ TextInput.defaultProps = {
   disabled: false,
   tiny: false,
   digits: null,
+  name: 'text',
 }

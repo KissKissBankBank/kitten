@@ -38,7 +38,11 @@ class PasswordInputBase extends Component {
   }
 
   render() {
-    const { textInputProps } = this.props
+    const {
+      name,
+      titleIcon,
+      textInputProps,
+    } = this.props
 
     const type = this.state.isHidden ? 'password' : 'text'
 
@@ -52,10 +56,13 @@ class PasswordInputBase extends Component {
         <TextInput
           { ...textInputProps }
           style={ styles.input }
-          name="password"
+          name={ name }
           type={ type }
         />
-        <span style={ styles.icon }>
+        <span
+          style={ styles.icon }
+          title={ titleIcon }
+        >
           <PasswordIcon
             tabIndex="0"
             style={ iconStyle }
@@ -66,6 +73,11 @@ class PasswordInputBase extends Component {
       </div>
     )
   }
+}
+
+PasswordInputBase.defaultProps = {
+  name: 'password',
+  titleIcon: 'Show password',
 }
 
 const styles = {
@@ -90,7 +102,7 @@ const styles = {
     svg: {
       cursor: 'pointer',
       active: {
-        fill: `${COLORS.primary1}`,
+        fill: COLORS.primary1,
       },
     },
   },

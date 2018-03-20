@@ -6,7 +6,9 @@ describe('<PasswordInput />', () => {
   it('should match its empty snapshot', () => {
     const tree = renderer
       .create(
-        <PasswordInput />
+        <PasswordInput
+          textInputProps
+        />
       )
       .toJSON()
 
