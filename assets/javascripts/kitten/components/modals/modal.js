@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import classNames from 'classnames'
 // Via "https://github.com/reactjs/react-modal"
 import ReactModal from 'react-modal'
@@ -51,6 +52,8 @@ export class Modal extends Component {
       trigger,
       content,
       label,
+      labelledby,
+      describedby,
       className,
       ...others,
     } = this.props
@@ -76,8 +79,13 @@ export class Modal extends Component {
             beforeClose: 'k-Modal__overlay--beforeClose',
           }}
           isOpen={ this.state.showModal }
+          aria={{
+            labelledby: { labelledby },
+            describedby: { describedby },
+          }}
           onRequestClose={ this.close }
-          contentLabel={ label }>
+          contentLabel={ label }
+        >
 
           { content }
 
@@ -88,6 +96,14 @@ export class Modal extends Component {
   }
 }
 
+Modal.propTypes = {
+  label: PropTypes.string,
+  labelledby: PropTypes.string,
+  describedby: PropTypes.string,
+}
+
 Modal.defaultProps = {
   label: 'Modal',
+  labelledby: 'heading',
+  describedby: 'full_description',
 }

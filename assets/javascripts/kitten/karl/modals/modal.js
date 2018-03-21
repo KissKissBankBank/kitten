@@ -44,6 +44,7 @@ class KarlModalComponent extends Component {
       >
         <Marger bottom="1">
           <Title
+            id="heading"
             modifier="tertiary"
             margin={ false }
             tag="p"
@@ -54,6 +55,7 @@ class KarlModalComponent extends Component {
 
         <Marger top="1" bottom="4">
           <Paragraph
+            id="full_description"
             modifier="tertiary"
             margin={ false }
             tag="p"
