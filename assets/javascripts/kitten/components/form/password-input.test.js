@@ -8,8 +8,8 @@ describe('<PasswordInput />', () => {
       .create(
         <PasswordInput
           textInputProps={{}}
-          iconLabel="show"
-          hiddenIconLabel="hidden"
+          iconLabel="Custom icon label"
+          hiddenIconLabel="Custom hidden icon label"
         />
       )
       .toJSON()
