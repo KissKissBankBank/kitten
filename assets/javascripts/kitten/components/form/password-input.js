@@ -11,7 +11,8 @@ const TextInput = Radium(TextInputBase)
 class PasswordInputBase extends Component {
   static propTypes = {
     textInputProps: PropTypes.shape({}),
-    titleIcon: PropTypes.string,
+    iconLabel: PropTypes.string.isRequired,
+    hiddenIconLabel: PropTypes.string.isRequired,
     name: PropTypes.string,
   }
 
@@ -45,6 +46,8 @@ class PasswordInputBase extends Component {
       name,
       titleIcon,
       textInputProps,
+      iconLabel,
+      hiddenIconLabel,
     } = this.props
 
     const type = this.state.isHidden ? 'password' : 'text'
@@ -53,6 +56,10 @@ class PasswordInputBase extends Component {
       styles.icon.svg,
       !this.state.isHidden && styles.icon.svg.active,
     ]
+
+    const iconTitle = this.state.isHidden
+      ? iconLabel
+      : hiddenIconLabel
 
     return (
       <div style={ styles.textInput }>
@@ -64,13 +71,14 @@ class PasswordInputBase extends Component {
         />
         <span
           style={ styles.icon }
-          title={ titleIcon }
+          title={ iconTitle }
         >
           <PasswordIcon
             tabIndex="0"
             style={ iconStyle }
             onClick={ this.handleClick }
             onKeyDown={ this.handleKeyDown }
+            title={ iconTitle }
           />
         </span>
       </div>

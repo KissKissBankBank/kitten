@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const PasswordIcon = ({ color, ...props }) => {
+export const PasswordIcon = ({ color, title, ...props }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -9,7 +9,7 @@ export const PasswordIcon = ({ color, ...props }) => {
       width="18"
       { ...props }
     >
-    <title>Show password</title>
+    <title>{ title }</title>
       <path d="M9 0C4 0 0 4 0 6s4 6 9 6 9-4 9-6-4-6-9-6zm0 10c-2.2
         0-4-1.8-4-4s1.8-4 4-4 4 1.8 4 4-1.8 4-4 4z"
       />
