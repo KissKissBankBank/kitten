@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Update A11Y on `Modal` component.
+- Fix: Update `k-Badge` padding.
 - Fix: Update `CrowdfundingCard` image transition.
 - Feature: Add `oxygen` modifier on all `Button` components.
 

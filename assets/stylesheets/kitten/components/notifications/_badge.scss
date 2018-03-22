@@ -11,11 +11,11 @@
 ///   <span class="k-Badge">42</span>
 
 @mixin k-Badge {
-  $color: #fff;
+  $color: map-get($k-colors, 'background-1');
   $background-color: map-get($k-colors, 'primary-1');
 
   .k-Badge {
-    padding: k-px-to-rem(2px) k-px-to-rem(6px);
+    padding: k-px-to-rem(3px) k-px-to-rem(6px);
     background-color: $background-color;
     border-radius: k-px-to-rem(10px);
     color: $color;
