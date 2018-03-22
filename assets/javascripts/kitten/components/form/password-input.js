@@ -44,7 +44,6 @@ class PasswordInputBase extends Component {
   render() {
     const {
       name,
-      titleIcon,
       textInputProps,
       iconLabel,
       hiddenIconLabel,

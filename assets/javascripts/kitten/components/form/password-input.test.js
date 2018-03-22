@@ -7,7 +7,9 @@ describe('<PasswordInput />', () => {
     const tree = renderer
       .create(
         <PasswordInput
-          textInputProps
+          textInputProps={{}}
+          iconLabel="show"
+          hiddenIconLabel="hidden"
         />
       )
       .toJSON()
