@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `PasswordIcon` and `PasswordInput` components.
 - Fix: Update `k-Badge` padding.
 - Fix: Update `CrowdfundingCard` image transition.
 - Feature: Add `oxygen` modifier on all `Button` components.
