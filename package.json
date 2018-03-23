@@ -93,7 +93,7 @@
   },
   "lint-staged": {
     "assets/**/*.{js,scss}": [
-      "prettier --single-quote --no-semi --write",
+      "prettier --single-quote --no-semi --trailing-comma all --write",
       "git add"
     ]
   },
