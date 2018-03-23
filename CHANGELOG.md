@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Fix: Update `CrowdfundingCard` image transition.
 - Feature: Add `oxygen` modifier on all `Button` components.
+- Feature: Add `col-sizeScreen-up` props to `LegoGrid` Component.
 
 ## [20.2.0] - 2018-03-15
 

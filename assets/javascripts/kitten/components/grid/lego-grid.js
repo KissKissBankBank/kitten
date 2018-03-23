@@ -1,6 +1,8 @@
 import React from 'react'
 import classNames from 'classnames'
 import Masonry from 'react-masonry-component'
+import { ScreenConfig } from 'kitten/constants/screen-config'
+import { NUM_COLUMNS } from 'kitten/constants/grid-config'
 
 export const LegoGrid = props => {
   const { className, masonryProps, children, ...others } = props
@@ -16,7 +18,27 @@ export const LegoGrid = props => {
 }
 
 LegoGrid.Item = ({ children, ...props }) => {
-  const itemClassName = classNames('k-LegoGrid__item', props.className)
+  const classByMediaQuery = () => {
+    const classNamesByMediaQuery = Object.keys(ScreenConfig).map(size => {
+      const mediaQuery = size.toLowerCase()
+      const col = props[`col-${mediaQuery}-up`]
+
+      return classNames(
+        classNamesByMediaQuery,
+        {
+          [`k-LegoGrid__item--${NUM_COLUMNS/col}col@${mediaQuery}`]: col,
+        },
+      )
+    })
+
+    return classNamesByMediaQuery
+  }
+
+  const itemClassName = classNames(
+    'k-LegoGrid__item',
+    classByMediaQuery(),
+    props.className,
+  )
 
   return (
     <div { ...props } className={ itemClassName }>

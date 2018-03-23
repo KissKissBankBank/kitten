@@ -2,13 +2,13 @@ import React from 'react'
 import { Grid, GridCol } from 'kitten/components/grid/grid'
 import { LegoGrid } from 'kitten/components/grid/lego-grid'
 
-export const KarlLegoGrid = () => {
-  const masonryProps = {
-    options: {
-      transitionDuration: 0,
-    }
+const masonryProps = {
+  options: {
+    transitionDuration: 0,
   }
+}
 
+export const KarlLegoGrid = () => {
   const cards = [
     { key: 'card-1', height: '100px' },
     { key: 'card-2', height: '200px' },
@@ -29,8 +29,45 @@ export const KarlLegoGrid = () => {
           <LegoGrid masonryProps={ masonryProps }>
             { cards.map(card =>
               <LegoGrid.Item key={ card.key }>
-                <div className="karl-ProjectCard"
-                     style={ { height: card.height } } />
+                <div
+                  className="karl-ProjectCard"
+                  style={ { height: card.height } }
+                />
+              </LegoGrid.Item>
+            ) }
+          </LegoGrid>
+        </GridCol>
+      </Grid>
+    </div>
+  )
+}
+
+export const KarlLegoGrid12items = () => {
+  const cards = Array.apply(null, { length: 12 }).map((_, index) => {
+    return {
+      key: `card-${++index}`,
+      height: '200px'
+    }
+  })
+
+  return (
+    <div className="k-DevGrid__container k-DevGrid__container--withoutOutline">
+      <Grid>
+        <GridCol col="12">
+          <LegoGrid masonryProps={ masonryProps }>
+            { cards.map(card =>
+              <LegoGrid.Item
+                key={ card.key }
+                col-xxs-up='1'
+                col-xs-up='3'
+                col-s-up='4'
+                col-m-up='6'
+                col-l-up='12'
+              >
+                <div
+                  className="karl-ProjectCard"
+                  style={ { height: card.height } }
+                />
               </LegoGrid.Item>
             ) }
           </LegoGrid>
