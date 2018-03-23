@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Remove `textProps` props from `inputProps` Checkbox component.
+
 ## [20.3.0] - 2018-03-22
 
 Features:
