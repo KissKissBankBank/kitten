@@ -4,9 +4,17 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Update `CrowdfundingCard` image transition.
-- Feature: Add `oxygen` modifier on all `Button` components.
 - Feature: Add `col-sizeScreen-up` props to `LegoGrid` Component.
+
+## [20.3.0] - 2018-03-22
+
+Features:
+- Add `PasswordIcon` and `PasswordInput` components.
+- Add `oxygen` modifier on all `Button` components.
+
+Fixes:
+- Update `k-Badge` padding.
+- Update `CrowdfundingCard` image transition.
 
 ## [20.2.0] - 2018-03-15
 

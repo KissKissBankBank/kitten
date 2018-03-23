@@ -83,6 +83,7 @@ import { FormAmountAndCurrency }
 import { FormPhoneNumber } from 'kitten/components/form/form-phone-number'
 import { Label } from 'kitten/components/form/label'
 import { LocationInput } from 'kitten/components/form/location-input'
+import { PasswordInput } from 'kitten/components/form/password-input'
 import { RadioButton } from 'kitten/components/form/radio-button'
 import { RadioButtonSet } from 'kitten/components/form/radio-button-set'
 import { RichTextInput } from 'kitten/components/form/rich-text-input'
@@ -379,6 +380,7 @@ ReactOnRails.register({
   FormPhoneNumber,
   Label,
   LocationInput,
+  PasswordInput,
   RadioButton,
   RadioButtonSet,
   RichTextInput,
