@@ -14,8 +14,9 @@ export class TourStep extends React.Component {
     }
 
     this.handleResize = this.handleResize.bind(this)
-    this.handleTargetHighlightPosition =
-      this.handleTargetHighlightPosition.bind(this)
+    this.handleTargetHighlightPosition = this.handleTargetHighlightPosition.bind(
+      this
+    )
     this.handlePopoverPosition = this.handlePopoverPosition.bind(this)
   }
 
@@ -64,12 +65,8 @@ export class TourStep extends React.Component {
     const highlightStyles = highlight.getBoundingClientRect()
     const highlightHeight = highlightStyles.height
     const highlightWidth = highlightStyles.width
-    const highlightTop = targetTop +
-                         (targetHeight / 2) -
-                         (highlightHeight / 2)
-    const highlightLeft = targetLeft +
-                          (targetWidth / 2) -
-                          (highlightWidth / 2)
+    const highlightTop = targetTop + targetHeight / 2 - highlightHeight / 2
+    const highlightLeft = targetLeft + targetWidth / 2 - highlightWidth / 2
 
     return {
       top: highlightTop + 'px',
@@ -83,15 +80,17 @@ export class TourStep extends React.Component {
 
       this.setState({
         targetHighlightStyles: this.getTargetHighlightPositionStyles(),
-        currentPositionTarget: this.props.targetElement
+        currentPositionTarget: this.props.targetElement,
       })
     }
   }
 
   positionPopover(popover) {
     this.setState({
-      popoverComputedStyles:
-        this.getPopoverPositionStyles(popover, this.props.popoverPosition)
+      popoverComputedStyles: this.getPopoverPositionStyles(
+        popover,
+        this.props.popoverPosition
+      ),
     })
   }
 
@@ -101,14 +100,15 @@ export class TourStep extends React.Component {
     const target = document.querySelector(this.props.targetElement)
 
     if (position == 'right') {
-      const left = domElementHelper.getComputedLeft(target) -
-                   domElementHelper.getComputedWidth(popover) +
-                   domElementHelper.getComputedWidth(target)
+      const left =
+        domElementHelper.getComputedLeft(target) -
+        domElementHelper.getComputedWidth(popover) +
+        domElementHelper.getComputedWidth(target)
 
       return { left: left }
     }
 
-     return { left: domElementHelper.getComputedLeft(target) }
+    return { left: domElementHelper.getComputedLeft(target) }
   }
 
   isTargetHighlightPositionUpdated() {
@@ -117,10 +117,12 @@ export class TourStep extends React.Component {
 
   renderTargetHighlight() {
     return (
-      <div ref="targetHighlight"
-           className="k-Tour__step__targetHighlight"
-           style={ this.state.targetHighlightStyles }>
-        <span className="k-Tour__step__targetHighlightContent"></span>
+      <div
+        ref="targetHighlight"
+        className="k-Tour__step__targetHighlight"
+        style={this.state.targetHighlightStyles}
+      >
+        <span className="k-Tour__step__targetHighlightContent" />
       </div>
     )
   }
@@ -128,13 +130,15 @@ export class TourStep extends React.Component {
   render() {
     const { targetElement, ...popoverProps } = this.props
 
-    return(
+    return (
       <div className="k-Tour__step">
-        { this.renderTargetHighlight() }
-        <TourPopover ref="popover"
-                     onPopoverPosition={ this.handlePopoverPosition }
-                     style={ this.state.popoverComputedStyles }
-                     { ...popoverProps } />
+        {this.renderTargetHighlight()}
+        <TourPopover
+          ref="popover"
+          onPopoverPosition={this.handlePopoverPosition}
+          style={this.state.popoverComputedStyles}
+          {...popoverProps}
+        />
       </div>
     )
   }

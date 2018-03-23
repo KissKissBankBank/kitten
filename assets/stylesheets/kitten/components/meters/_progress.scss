@@ -25,7 +25,7 @@
   $ramp-color: map-get($k-colors, 'line-1');
   $ramp-height: k-px-to-rem(2px);
 
-  $transition-speed: .2s;
+  $transition-speed: 0.2s;
 
   .k-Progress {
     max-width: 100%;

@@ -27,7 +27,7 @@ describe('<Text />', () => {
   })
 
   describe('with other prop', () => {
-    const component = shallow(<Text aria-hidden={ true } />)
+    const component = shallow(<Text aria-hidden={true} />)
 
     it('has an aria-hidden attribute', () => {
       expect(component.props()['aria-hidden']).toBe(true)

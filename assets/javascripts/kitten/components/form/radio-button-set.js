@@ -15,25 +15,24 @@ export class RadioButtonSet extends React.Component {
       className
     )
 
-    return(
-      <RadioButton className={ radioButtonClassName }
-                   error={ this.props.error }
-                   name={ this.props.name }
-                   key={ item.id }
-                   { ...itemProps } />
+    return (
+      <RadioButton
+        className={radioButtonClassName}
+        error={this.props.error}
+        name={this.props.name}
+        key={item.id}
+        {...itemProps}
+      />
     )
   }
 
   render() {
     const { items, className, name, error, ...radioButtonSetProps } = this.props
-    const radioButtonSetClassName = classNames(
-      'k-RadioButtonSet',
-      className
-    )
+    const radioButtonSetClassName = classNames('k-RadioButtonSet', className)
 
     return (
-      <div className={ radioButtonSetClassName } { ...radioButtonSetProps }>
-        { this.props.items.map(this.renderRadioButton) }
+      <div className={radioButtonSetClassName} {...radioButtonSetProps}>
+        {this.props.items.map(this.renderRadioButton)}
       </div>
     )
   }
@@ -42,10 +41,12 @@ export class RadioButtonSet extends React.Component {
 RadioButtonSet.defaultProps = {
   name: 'radioButtonSet',
   error: false,
-  items: [{
-    text: 'filter 1',
-    children: 'lorem ipsum dolor',
-    defaultChecked: true,
-    id: 'myRadioButton' // Replace by a real value
-  }],
+  items: [
+    {
+      text: 'filter 1',
+      children: 'lorem ipsum dolor',
+      defaultChecked: true,
+      id: 'myRadioButton', // Replace by a real value
+    },
+  ],
 }

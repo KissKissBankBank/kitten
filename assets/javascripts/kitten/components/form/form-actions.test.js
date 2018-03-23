@@ -2,7 +2,6 @@ import React from 'react'
 import { FormActions } from 'kitten/components/form/form-actions'
 
 describe('<FormActions />', () => {
-
   it('renders a <div class="k-FormActions" />', () => {
     const component = shallow(<FormActions />)
 
@@ -29,9 +28,7 @@ describe('<FormActions />', () => {
   })
 
   it('with spreadOutAt prop', () => {
-    const component = mount(
-      <FormActions spreadOutAt="s-up" />
-    )
+    const component = mount(<FormActions spreadOutAt="s-up" />)
 
     expect(component.props().spreadOutAt).toBe('s-up')
   })

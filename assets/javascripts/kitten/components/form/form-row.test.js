@@ -10,9 +10,7 @@ describe('<FormRow />', () => {
   })
 
   it('has a custom class', () => {
-    const component = shallow(
-      <FormRow className="test-FormRow--lorem" />
-    )
+    const component = shallow(<FormRow className="test-FormRow--lorem" />)
 
     expect(component.hasClass('test-FormRow--lorem')).toBe(true)
   })

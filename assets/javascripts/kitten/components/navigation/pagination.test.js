@@ -26,10 +26,7 @@ describe('<Pagination />', () => {
       const tree = renderer
         .create(
           <StyleRoot>
-            <Pagination
-              currentPage={ 10 }
-              totalPages={ 42 }
-            />
+            <Pagination currentPage={10} totalPages={42} />
           </StyleRoot>
         )
         .toJSON()
@@ -44,17 +41,17 @@ describe('<Pagination />', () => {
       const onClickSpy = sandbox.spy()
       const pagination = mount(
         <StyleRoot>
-          <Pagination
-            onPageClick={ onClickSpy }
-            totalPages={ 5 }
-          />
+          <Pagination onPageClick={onClickSpy} totalPages={5} />
         </StyleRoot>
       )
       const event = {
         foo: 'bar',
       }
 
-      pagination.find('a').last().simulate('click', event)
+      pagination
+        .find('a')
+        .last()
+        .simulate('click', event)
 
       expect(onClickSpy.called).toBe(true)
       expect(onClickSpy.calledWithMatch(2, event)).toBe(true)

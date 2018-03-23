@@ -10,27 +10,26 @@ export class CloseButton extends Component {
       closeButtonLabel,
       size,
       buttonModifier,
-      ...others,
+      ...others
     } = this.props
 
     const buttonClassName = classNames(
       'k-ButtonIcon--cross',
-      [`k-ButtonIcon--cross--${size}`]: size,
-      className,
+      ([`k-ButtonIcon--cross--${size}`]: size),
+      className
     )
 
     return (
       <ButtonIcon
         type="button"
-        className={ buttonClassName }
-        title={ closeButtonLabel }
-        aria-label={ closeButtonLabel }
-        modifier={ buttonModifier }
-        { ...others }
+        className={buttonClassName}
+        title={closeButtonLabel}
+        aria-label={closeButtonLabel}
+        modifier={buttonModifier}
+        {...others}
       >
         <CrossIcon
-          className={ classNames('k-ButtonIcon__svg',
-                                 'k-ButtonIcon__svgRotate') }
+          className={classNames('k-ButtonIcon__svg', 'k-ButtonIcon__svgRotate')}
         />
       </ButtonIcon>
     )

@@ -8,41 +8,38 @@ import {
 
 const items = [
   {
-    text: "Catopuma\n Temminckii",
-    href: "http://…",
-    iconType: "default",
+    text: 'Catopuma\n Temminckii',
+    href: 'http://…',
+    iconType: 'default',
     onClick: () => {},
   },
   {
-    text: "Prionaelurus\n planiceps",
-    href: "#",
-    linkClassNames: "k-Stepper__link",
-    iconType: "default",
+    text: 'Prionaelurus\n planiceps',
+    href: '#',
+    linkClassNames: 'k-Stepper__link',
+    iconType: 'default',
   },
   {
-    text: "Serval",
-    href: "#",
-    linkClassNames: "k-Stepper__link",
-    iconType: "validated",
+    text: 'Serval',
+    href: '#',
+    linkClassNames: 'k-Stepper__link',
+    iconType: 'validated',
   },
   {
-    text: "Idea of",
-    href: "#",
-    linkClassNames: "k-Stepper__link--inProgress",
-    iconType: "inProgress",
+    text: 'Idea of',
+    href: '#',
+    linkClassNames: 'k-Stepper__link--inProgress',
+    iconType: 'inProgress',
   },
   {
-    text: "Lynx\n pardinus",
-    linkClassNames: "k-Stepper__link--inactive",
-    iconType: "default",
+    text: 'Lynx\n pardinus',
+    linkClassNames: 'k-Stepper__link--inactive',
+    iconType: 'default',
   },
 ]
 
 describe('<Stepper />', () => {
-
-  const component = shallow(
-    <Stepper items={ items } />
-  )
+  const component = shallow(<Stepper items={items} />)
 
   it('renders a <nav class="k-Stepper" />', () => {
     expect(component.type()).toBe('nav')
@@ -80,8 +77,7 @@ describe('<Stepper />', () => {
 
   describe('with align start', () => {
     const componentWithAlignStart = shallow(
-      <Stepper items={ items }
-               withAlignStart={ true } />
+      <Stepper items={items} withAlignStart={true} />
     )
 
     it('renders a list with `.k-Stepper__list--alignStart`', () => {
@@ -93,8 +89,7 @@ describe('<Stepper />', () => {
 
   describe('with tiny spacing', () => {
     const componentWithTinySpacing = shallow(
-      <Stepper items={ items }
-               withTinySpacing={ true } />
+      <Stepper items={items} withTinySpacing={true} />
     )
 
     it('renders items with `.k-Stepper__item--tinySpacing`', () => {
@@ -108,19 +103,31 @@ describe('<Stepper />', () => {
 
   describe('with different icon types', () => {
     it('renders a <StepperIconDefault />', () => {
-      const icon = component.find('.k-Stepper__link').at(0).children().first()
+      const icon = component
+        .find('.k-Stepper__link')
+        .at(0)
+        .children()
+        .first()
 
       expect(icon.type()).toBe(StepperIconDefault)
     })
 
     it('renders a <StepperIconInProgress />', () => {
-      const icon = component.find('.k-Stepper__link--inProgress').at(0).children().first()
+      const icon = component
+        .find('.k-Stepper__link--inProgress')
+        .at(0)
+        .children()
+        .first()
 
       expect(icon.type()).toBe(StepperIconInProgress)
     })
 
     it('renders a <StepperIconValidated />', () => {
-      const icon = component.find('.k-Stepper__link').at(2).children().first()
+      const icon = component
+        .find('.k-Stepper__link')
+        .at(2)
+        .children()
+        .first()
 
       expect(icon.type()).toBe(StepperIconValidated)
     })

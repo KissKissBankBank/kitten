@@ -24,10 +24,10 @@ describe('<LegoGrid />', () => {
     const masonryProps = {
       options: {
         transitionDuration: 0,
-      }
+      },
     }
 
-    const legoGrid = shallow(<LegoGrid masonryProps={ masonryProps } />)
+    const legoGrid = shallow(<LegoGrid masonryProps={masonryProps} />)
     const masonry = legoGrid.find(Masonry).first()
 
     it('sends props to Masonry component', () => {
@@ -54,7 +54,9 @@ describe('<LegoGrid.Item />', () => {
 
     it('has default classes', () => {
       expect(legoGridItem.hasClass('k-LegoGrid__item')).toBe(true)
-      expect(legoGridItem.find('.k-LegoGrid__item__content').exists()).toBe(true)
+      expect(legoGridItem.find('.k-LegoGrid__item__content').exists()).toBe(
+        true
+      )
     })
   })
 

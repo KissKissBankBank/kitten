@@ -7,13 +7,14 @@ export class DropdownButton extends React.Component {
     const { className, isExpanded, ...rest } = this.props
     const buttonClassName = classNames('k-Dropdown__button', className)
 
-    return(
-      <button ref="dropdownButton"
-              className={ buttonClassName }
-              aria-haspopup="true"
-              aria-expanded={ isExpanded }
-              { ...rest }>
-      </button>
+    return (
+      <button
+        ref="dropdownButton"
+        className={buttonClassName}
+        aria-haspopup="true"
+        aria-expanded={isExpanded}
+        {...rest}
+      />
     )
   }
 }

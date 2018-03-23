@@ -17,26 +17,23 @@ export class BulletList extends React.Component {
     const itemClassName = classNames(
       'k-BulletList__item',
       { 'k-BulletList__item--large': this.props.large },
-      { 'k-BulletList__item--big': this.props.big },
+      { 'k-BulletList__item--big': this.props.big }
     )
 
     return (
-      <li key={ key } className={ itemClassName }>
-        { item }
+      <li key={key} className={itemClassName}>
+        {item}
       </li>
     )
   }
 
   render() {
     const { className, large, big, items, ...others } = this.props
-    const listClassName = classNames(
-      'k-BulletList',
-      className,
-    )
+    const listClassName = classNames('k-BulletList', className)
 
     return (
-      <ul className={ listClassName } { ...others }>
-        { this.renderItems() }
+      <ul className={listClassName} {...others}>
+        {this.renderItems()}
       </ul>
     )
   }

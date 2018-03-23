@@ -60,14 +60,14 @@
 
     &:active,
     &.is-active {
-     color: $active-color;
+      color: $active-color;
     }
 
     &:hover {
       color: $hover-color;
     }
 
-    transition: color .2s;
+    transition: color 0.2s;
   }
 
   .k-LinkList__link--normalLineHeight {

@@ -14,7 +14,7 @@ export class Text extends Component {
       tag,
       transform,
       weight,
-      ...others,
+      ...others
     } = this.props
 
     const Tag = tag
@@ -55,12 +55,10 @@ export class Text extends Component {
         'k-u-weight-regular': weight == 'regular',
         'k-u-weight-bold': weight == 'bold',
       },
-      className,
+      className
     )
 
-    return (
-      <Tag { ...others } className={ textClassName } />
-    )
+    return <Tag {...others} className={textClassName} />
   }
 }
 

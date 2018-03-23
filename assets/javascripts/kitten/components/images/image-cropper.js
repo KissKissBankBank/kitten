@@ -59,12 +59,15 @@ export class ImageCropper extends React.Component {
   }
 
   handleUploaderSuccess(data) {
-    this.setState({
-      imageSrc: data.preview,
-      imageCropSrc: null,
-      fileName: data.name,
-      sliderValue: 0,
-    }, this.setCropperHeight)
+    this.setState(
+      {
+        imageSrc: data.preview,
+        imageCropSrc: null,
+        fileName: data.name,
+        sliderValue: 0,
+      },
+      this.setCropperHeight
+    )
   }
 
   handleUploaderError(hasError) {
@@ -152,35 +155,37 @@ export class ImageCropper extends React.Component {
     const dragMode = this.props.disabled ? 'none' : 'move'
 
     return (
-      <Marger
-        top="2"
-        key="cropper"
-      >
-        <div ref={ node => { this.cropperContainer = node } }>
-          { (this.state.cropperWidth && this.state.cropperHeight) &&
-            <Cropper
-              // This helps unmount and remount a new cropper to keep
-              // the component responsive.
-              key={ `cropper-${ this.state.cropperHeight }` }
-              ref="cropper"
-              className="k-Cropper"
-              src={ this.state.imageSrc }
-              style={ styles }
-              aspectRatio={ this.props.aspectRatio }
-              viewMode={ 3 }
-              guides={ false }
-              modal={ false }
-              autoCropArea={ 1 }
-              cropBoxMovable={ false }
-              cropBoxResizable={ false }
-              toggleDragModeOnDblclick={ false }
-              zoomOnTouch={ false }
-              zoomOnWheel={ false }
-              dragMode={ dragMode }
-              crop={ this.handleCrop }
-              ready={ this.handleReady }
-            />
-          }
+      <Marger top="2" key="cropper">
+        <div
+          ref={node => {
+            this.cropperContainer = node
+          }}
+        >
+          {this.state.cropperWidth &&
+            this.state.cropperHeight && (
+              <Cropper
+                // This helps unmount and remount a new cropper to keep
+                // the component responsive.
+                key={`cropper-${this.state.cropperHeight}`}
+                ref="cropper"
+                className="k-Cropper"
+                src={this.state.imageSrc}
+                style={styles}
+                aspectRatio={this.props.aspectRatio}
+                viewMode={3}
+                guides={false}
+                modal={false}
+                autoCropArea={1}
+                cropBoxMovable={false}
+                cropBoxResizable={false}
+                toggleDragModeOnDblclick={false}
+                zoomOnTouch={false}
+                zoomOnWheel={false}
+                dragMode={dragMode}
+                crop={this.handleCrop}
+                ready={this.handleReady}
+              />
+            )}
         </div>
       </Marger>
     )
@@ -189,11 +194,8 @@ export class ImageCropper extends React.Component {
   renderCropperInfo() {
     return (
       <Marger top="2" bottom="1.5">
-        <Paragraph
-          modifier="quaternary"
-          margin={ false }
-        >
-          { this.props.cropperInfo }
+        <Paragraph modifier="quaternary" margin={false}>
+          {this.props.cropperInfo}
         </Paragraph>
       </Marger>
     )
@@ -204,11 +206,11 @@ export class ImageCropper extends React.Component {
       <Marger top="1">
         <Slider
           name="zoom"
-          min={ this.state.sliderMin }
-          max={ this.state.sliderMax }
-          value={ this.state.sliderValue }
-          onChange={ this.handleSliderChange }
-          onAction={ this.handleSliderAction }
+          min={this.state.sliderMin}
+          max={this.state.sliderMax}
+          value={this.state.sliderValue}
+          onChange={this.handleSliderChange}
+          onAction={this.handleSliderAction}
         />
       </Marger>
     )
@@ -217,9 +219,7 @@ export class ImageCropper extends React.Component {
   renderSliderTitle() {
     return (
       <Marger top="1.5" bottom="1">
-        <Label size="tiny">
-          { this.props.sliderTitle }
-        </Label>
+        <Label size="tiny">{this.props.sliderTitle}</Label>
       </Marger>
     )
   }
@@ -227,11 +227,11 @@ export class ImageCropper extends React.Component {
   renderSliderAndCropperInfo() {
     if (this.props.disabled) return
 
-    return(
+    return (
       <GridCol col="12" col-m="6">
-        { this.renderCropperInfo() }
-        { this.renderSliderTitle() }
-        { this.renderSlider() }
+        {this.renderCropperInfo()}
+        {this.renderSliderTitle()}
+        {this.renderSlider()}
       </GridCol>
     )
   }
@@ -242,10 +242,10 @@ export class ImageCropper extends React.Component {
     return (
       <Grid>
         <GridCol col="12" col-m="6">
-          { this.renderCropper() }
+          {this.renderCropper()}
         </GridCol>
 
-        { this.renderSliderAndCropperInfo() }
+        {this.renderSliderAndCropperInfo()}
       </Grid>
     )
   }
@@ -255,12 +255,8 @@ export class ImageCropper extends React.Component {
 
     return (
       <Marger top="1" bottom="1">
-        <Text
-          color="error"
-          size="tiny"
-          weight="regular"
-        >
-          { this.props.uploaderErrorLabel }
+        <Text color="error" size="tiny" weight="regular">
+          {this.props.uploaderErrorLabel}
         </Text>
       </Marger>
     )
@@ -269,16 +265,16 @@ export class ImageCropper extends React.Component {
   renderUploader() {
     return (
       <SimpleUploader
-        name={ this.props.name }
-        maxSize={ this.props.maxSize }
-        acceptedFiles={ this.props.acceptedFiles }
-        onSuccess={ this.handleUploaderSuccess }
-        onError={ this.handleUploaderError }
-        onReset={ this.handleUploaderReset }
-        buttonLabel={ this.props.buttonLabel }
-        fileName={ this.props.fileName }
-        disabled={ this.props.disabled }
-        deletable={ this.props.deletable }
+        name={this.props.name}
+        maxSize={this.props.maxSize}
+        acceptedFiles={this.props.acceptedFiles}
+        onSuccess={this.handleUploaderSuccess}
+        onError={this.handleUploaderError}
+        onReset={this.handleUploaderReset}
+        buttonLabel={this.props.buttonLabel}
+        fileName={this.props.fileName}
+        disabled={this.props.disabled}
+        deletable={this.props.deletable}
       />
     )
   }
@@ -289,29 +285,24 @@ export class ImageCropper extends React.Component {
         <Grid>
           <GridCol col="12">
             <Marger bottom="1.5">
-              <Label size="tiny">
-                { this.props.label }
-              </Label>
+              <Label size="tiny">{this.props.label}</Label>
             </Marger>
 
             <Marger top="1.5" bottom="1">
-              { this.renderUploader() }
+              {this.renderUploader()}
             </Marger>
 
-            { this.renderError() }
+            {this.renderError()}
 
             <Marger top="1">
-              <Paragraph
-                modifier="quaternary"
-                margin={ false }
-              >
-                { this.props.description }
+              <Paragraph modifier="quaternary" margin={false}>
+                {this.props.description}
               </Paragraph>
             </Marger>
           </GridCol>
         </Grid>
 
-        { this.renderCroppingImage() }
+        {this.renderCroppingImage()}
       </section>
     )
   }
@@ -324,7 +315,7 @@ ImageCropper.defaultProps = {
   uploaderErrorLabel: 'You have an error on upload.',
   sliderMin: 0,
   sliderMax: 500,
-  aspectRatio: 16/9,
+  aspectRatio: 16 / 9,
   maxSize: 5 * 1024 * 1024, // 5 Mo.
   acceptedFiles: '.jpg,.jpeg,.gif,.png',
   label: 'Lorem ipsum…',

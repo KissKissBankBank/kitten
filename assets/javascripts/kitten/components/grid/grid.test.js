@@ -50,14 +50,16 @@ describe('<GridCol />', () => {
 
   describe('with more options', () => {
     const gridCol = shallow(
-      <GridCol col-xs="10"
-               offset-xs="1"
-               col-s="8"
-               offset-s="2"
-               col-m="6"
-               offset-m="3"
-               col-l="4"
-               offset-l="4" />
+      <GridCol
+        col-xs="10"
+        offset-xs="1"
+        col-s="8"
+        offset-s="2"
+        col-m="6"
+        offset-m="3"
+        col-l="4"
+        offset-l="4"
+      />
     )
 
     it('renders the right column classes', () => {

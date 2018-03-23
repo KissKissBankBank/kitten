@@ -36,10 +36,7 @@
       )
     );
     $dark-text-color: k-color-definition(
-      k-default(
-        map-get($colors, 'dark-text'),
-        map-get($colors, 'background-1')
-      )
+      k-default(map-get($colors, 'dark-text'), map-get($colors, 'background-1'))
     );
     $light-bottom-border-color: k-color-definition(
       k-default(

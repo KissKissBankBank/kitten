@@ -7,7 +7,7 @@ export const triggerEnhancer = (WrappedComponent, wrappedComponentProps) => {
       super(props)
 
       this.state = {
-        play: false
+        play: false,
       }
 
       this.handleStop = this.handleStop.bind(this)
@@ -37,14 +37,20 @@ export const triggerEnhancer = (WrappedComponent, wrappedComponentProps) => {
     hasPlayed() {
       // TODO: better implementation of localStorage as state store for React
       // component.
-      const componentState = JSON.parse(localStorage.getItem(this.props.storeName))
+      const componentState = JSON.parse(
+        localStorage.getItem(this.props.storeName)
+      )
 
       return componentState && componentState.hasPlayed
     }
 
     shouldStart() {
-      if (!domElementHelper.canUseDom()) { return false }
-      if (!this.props.verifyStorageOnStart) { return true }
+      if (!domElementHelper.canUseDom()) {
+        return false
+      }
+      if (!this.props.verifyStorageOnStart) {
+        return true
+      }
 
       return this.props.autorun && !this.hasPlayed()
     }
@@ -78,9 +84,7 @@ export const triggerEnhancer = (WrappedComponent, wrappedComponentProps) => {
       if (!this.state.play) return null
 
       return (
-        <WrappedComponent
-          { ...this.handlerProps() }
-          { ...wrappedComponentProps } />
+        <WrappedComponent {...this.handlerProps()} {...wrappedComponentProps} />
       )
     }
   }

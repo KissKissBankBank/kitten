@@ -48,10 +48,7 @@
 
   .k-TextInputWithButton__button {
     @include k-typographyFont($font);
-    @include k-typographyFontSize(
-      $font-size,
-      $line-height: $line-height
-    );
+    @include k-typographyFontSize($font-size, $line-height: $line-height);
 
     @include k-buttonColors('beryllium');
 

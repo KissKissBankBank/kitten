@@ -4,9 +4,9 @@ import classNames from 'classnames'
 
 export class ButtonImageWithTextAndBadge extends React.Component {
   renderNotificationBadge() {
-    return(
+    return (
       <span className="k-ButtonWithBadge__badge k-Badge">
-        { this.props.notifications }
+        {this.props.notifications}
       </span>
     )
   }
@@ -26,28 +26,34 @@ export class ButtonImageWithTextAndBadge extends React.Component {
       ...rest
     } = this.props
 
-    const textClass = classNames('k-ButtonImageWithText__text',
-                                 'k-ButtonImageWithText__text--withoutPaddingRight',
-                                 textClassName)
+    const textClass = classNames(
+      'k-ButtonImageWithText__text',
+      'k-ButtonImageWithText__text--withoutPaddingRight',
+      textClassName
+    )
     let buttonClassName = classNames('k-ButtonImageWithText', className)
 
-    return(
-      <button className={ buttonClassName }
-              aria-haspopup="true"
-              aria-expanded={ isExpanded }
-              title={ title }
-              { ...rest }>
+    return (
+      <button
+        className={buttonClassName}
+        aria-haspopup="true"
+        aria-expanded={isExpanded}
+        title={title}
+        {...rest}
+      >
         <span className="k-ButtonWithBadge">
           <span ref="buttonImage" className="k-ButtonImage">
-            <img className="k-ButtonImage__img"
-                 src={ srcImg }
-                 width={ widthImg }
-                 height={ heightImg }
-                 alt={ altImg } />
+            <img
+              className="k-ButtonImage__img"
+              src={srcImg}
+              width={widthImg}
+              height={heightImg}
+              alt={altImg}
+            />
           </span>
-          { notifications ? this.renderNotificationBadge() : '' }
+          {notifications ? this.renderNotificationBadge() : ''}
         </span>
-        <p className={ textClass }>{ text }</p>
+        <p className={textClass}>{text}</p>
       </button>
     )
   }

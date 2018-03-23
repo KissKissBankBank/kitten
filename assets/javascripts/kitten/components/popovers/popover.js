@@ -18,8 +18,8 @@ export class Popover extends Component {
     return (
       <CloseButton
         modifier="beryllium"
-        closeButtonLabel={ this.props.closeButtonLabel }
-        onClick={ this.handleCloseClick }
+        closeButtonLabel={this.props.closeButtonLabel}
+        onClick={this.handleCloseClick}
       />
     )
   }
@@ -30,50 +30,42 @@ export class Popover extends Component {
     }
 
     return (
-      <Marger
-        top="5"
-        bottom="5"
-        className="k-Popover__content"
-      >
-        { this.props.children }
+      <Marger top="5" bottom="5" className="k-Popover__content">
+        {this.props.children}
       </Marger>
     )
   }
 
   render() {
-    const { children,
-            popoverClassName,
-            containerClassName,
-            titleAriaLabelId,
-            onCloseClick,
-            closeButtonLabel,
-            ...popoverAttributes }
-      = this.props
+    const {
+      children,
+      popoverClassName,
+      containerClassName,
+      titleAriaLabelId,
+      onCloseClick,
+      closeButtonLabel,
+      ...popoverAttributes
+    } = this.props
 
-    const popoverClassNames = classNames(
-      "k-Popover",
-      popoverClassName
-    )
+    const popoverClassNames = classNames('k-Popover', popoverClassName)
 
     const containerClassNames = classNames(
-      "k-Popover__container",
+      'k-Popover__container',
       containerClassName
     )
 
     return (
       <div
         ref="popover"
-        className={ popoverClassNames }
+        className={popoverClassNames}
         role="dialog"
         aria-hidden="true"
-        aria-labelledby={ titleAriaLabelId }
-        { ...popoverAttributes }
+        aria-labelledby={titleAriaLabelId}
+        {...popoverAttributes}
       >
-        <div className={ containerClassNames }>
-          { this.renderContent() }
-          <div>
-            { this.renderCloseButton() }
-          </div>
+        <div className={containerClassNames}>
+          {this.renderContent()}
+          <div>{this.renderCloseButton()}</div>
         </div>
       </div>
     )

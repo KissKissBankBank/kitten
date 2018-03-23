@@ -8,7 +8,7 @@ describe('<LinkList />', () => {
   ]
 
   describe('by default', () => {
-    const linkList = shallow(<LinkList items={ items } />)
+    const linkList = shallow(<LinkList items={items} />)
 
     it('is a <ul />', () => {
       expect(linkList.type()).toBe('ul')
@@ -30,7 +30,7 @@ describe('<LinkList />', () => {
 
   describe('with className prop', () => {
     const linkList = shallow(
-      <LinkList items={ items } className="custom__class" />
+      <LinkList items={items} className="custom__class" />
     )
 
     it('has a custom class', () => {
@@ -39,9 +39,7 @@ describe('<LinkList />', () => {
   })
 
   describe('with itemMargin', () => {
-    const linkList = shallow(
-      <LinkList items={ items } itemMargin="double" />
-    )
+    const linkList = shallow(<LinkList items={items} itemMargin="double" />)
     const item = linkList.find('.k-LinkList__item').at(0)
 
     it('has a good class', () => {
@@ -50,7 +48,7 @@ describe('<LinkList />', () => {
   })
 
   describe('with margin prop', () => {
-    const linkList = shallow(<LinkList margin={ false } />)
+    const linkList = shallow(<LinkList margin={false} />)
 
     it('has a good class', () => {
       expect(linkList.hasClass('k-LinkList--withoutMargin')).toBe(true)
@@ -58,7 +56,7 @@ describe('<LinkList />', () => {
   })
 
   describe('with item', () => {
-    const linkList = shallow(<LinkList items={ items } />)
+    const linkList = shallow(<LinkList items={items} />)
 
     it('has a first block with good item', () => {
       const firstItem = linkList.find('.k-LinkList__link').at(0)
@@ -75,12 +73,7 @@ describe('<LinkList />', () => {
   })
 
   describe('with color item', () => {
-    const linkList = shallow(
-      <LinkList
-        items={ items }
-        color="dark"
-      />
-    )
+    const linkList = shallow(<LinkList items={items} color="dark" />)
     const item = linkList.find('.k-LinkList__link').at(0)
 
     it('has a good class', () => {
@@ -89,12 +82,7 @@ describe('<LinkList />', () => {
   })
 
   describe('with lineHeight', () => {
-    const linkList = shallow(
-      <LinkList
-        items={ items }
-        lineHeight="normal"
-      />
-    )
+    const linkList = shallow(<LinkList items={items} lineHeight="normal" />)
     const item = linkList.find('.k-LinkList__link').at(0)
 
     it('has a good class', () => {

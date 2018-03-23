@@ -12,9 +12,10 @@ const Text = Radium(TextBase)
 const ArrowIcon = Radium(ArrowIconBase)
 
 // Returns an array with the given bounds
-const range = (start, end) => (
-  Array(end - start + 1).fill().map((_, index) => start + index)
-)
+const range = (start, end) =>
+  Array(end - start + 1)
+    .fill()
+    .map((_, index) => start + index)
 
 // Returns an array of size `availableSlots` with page number integers
 // and breaks "…" (represented as nulls).
@@ -74,11 +75,11 @@ class PaginationBase extends Component {
     const pageNumbers = pages(1, totalPages, currentPage, size)
 
     return (
-      <nav role="navigation" aria-label={ this.props['aria-label'] }>
-        <ul style={ styles.group }>
-          { this.renderArrowButton('left') }
-          { pageNumbers.map(this.renderPage) }
-          { this.renderArrowButton('right') }
+      <nav role="navigation" aria-label={this.props['aria-label']}>
+        <ul style={styles.group}>
+          {this.renderArrowButton('left')}
+          {pageNumbers.map(this.renderPage)}
+          {this.renderArrowButton('right')}
         </ul>
       </nav>
     )
@@ -86,9 +87,7 @@ class PaginationBase extends Component {
 
   preventClickDefault = e => e.preventDefault()
 
-  pageClickHandler = number => (
-    (event) => this.props.onPageClick(number, event)
-  )
+  pageClickHandler = number => event => this.props.onPageClick(number, event)
 
   renderPage = (number, index) => {
     if (!number) return this.renderSpacer(index)
@@ -101,24 +100,21 @@ class PaginationBase extends Component {
     ]
 
     return (
-      <li
-        style={ styles.group.list }
-        key={ `page-${number}` }
-      >
+      <li style={styles.group.list} key={`page-${number}`}>
         <Text
           tag="a"
           weight="regular"
           size="tiny"
-          href={ this.props.goToPageHref(number) }
-          key={ `link-${number}` }
-          style={ styleButtonIcon }
-          aria-label={ this.props.goToPageLabel(number) }
+          href={this.props.goToPageHref(number)}
+          key={`link-${number}`}
+          style={styleButtonIcon}
+          aria-label={this.props.goToPageLabel(number)}
           onClick={
             isActive ? this.preventClickDefault : this.pageClickHandler(number)
           }
-          tabIndex={ isActive ? -1 : null }
+          tabIndex={isActive ? -1 : null}
         >
-          { number }
+          {number}
         </Text>
       </li>
     )
@@ -126,11 +122,8 @@ class PaginationBase extends Component {
 
   renderSpacer(index) {
     return (
-      <li
-        key={ `spacer-${index}` }
-        style={ styles.group.list.points }
-      >
-        { '…' }
+      <li key={`spacer-${index}`} style={styles.group.list.points}>
+        {'…'}
       </li>
     )
   }
@@ -143,20 +136,29 @@ class PaginationBase extends Component {
       totalPages,
     } = this.props
 
-    const buttonLabel = direction == 'left'
-      ? parseHtml(prevButtonLabel)
-      : parseHtml(nextButtonLabel)
+    const buttonLabel =
+      direction == 'left'
+        ? parseHtml(prevButtonLabel)
+        : parseHtml(nextButtonLabel)
 
-    const isDisabled = direction == 'left'
-      ? currentPage == 1
-      : currentPage == totalPages
+    const isDisabled =
+      direction == 'left' ? currentPage == 1 : currentPage == totalPages
 
-    const linkIsHovered =
-      Radium.getState(this.state, `link-${direction}`, ':hover')
-    const linkIsFocused =
-      Radium.getState(this.state, `link-${direction}`, ':focus')
-    const linkIsActived =
-      Radium.getState(this.state, `link-${direction}`, ':active')
+    const linkIsHovered = Radium.getState(
+      this.state,
+      `link-${direction}`,
+      ':hover'
+    )
+    const linkIsFocused = Radium.getState(
+      this.state,
+      `link-${direction}`,
+      ':focus'
+    )
+    const linkIsActived = Radium.getState(
+      this.state,
+      `link-${direction}`,
+      ':active'
+    )
 
     const styleList = [
       direction == 'left' && styles.group.list.left,
@@ -170,24 +172,25 @@ class PaginationBase extends Component {
 
     const styleSvg = [
       styles.group.list.buttonIcon.svg,
-      (linkIsHovered && !isDisabled) && styles.group.list.buttonIcon.svg.hover,
-      (linkIsFocused && !isDisabled) && styles.group.list.buttonIcon.svg.focus,
-      (linkIsActived && !isDisabled) && styles.group.list.buttonIcon.svg.active,
+      linkIsHovered && !isDisabled && styles.group.list.buttonIcon.svg.hover,
+      linkIsFocused && !isDisabled && styles.group.list.buttonIcon.svg.focus,
+      linkIsActived && !isDisabled && styles.group.list.buttonIcon.svg.active,
     ]
 
-    const number = direction == 'left'
-      ? (currentPage == 1 ? 1 : currentPage - 1)
-      : (currentPage == totalPages ? totalPages : currentPage + 1)
+    const number =
+      direction == 'left'
+        ? currentPage == 1 ? 1 : currentPage - 1
+        : currentPage == totalPages ? totalPages : currentPage + 1
 
     return (
-      <li style={ styleList }>
+      <li style={styleList}>
         <a
-          href={ this.props.goToPageHref(number) }
-          key={ `link-${direction}` }
-          style={ styleButtonIcon }
-          aria-label={ buttonLabel }
-          title={ buttonLabel }
-          tabIndex={ isDisabled ? -1 : null }
+          href={this.props.goToPageHref(number)}
+          key={`link-${direction}`}
+          style={styleButtonIcon}
+          aria-label={buttonLabel}
+          title={buttonLabel}
+          tabIndex={isDisabled ? -1 : null}
           onClick={
             isDisabled
               ? this.preventClickDefault
@@ -195,9 +198,9 @@ class PaginationBase extends Component {
           }
         >
           <ArrowIcon
-            direction={ direction }
-            disabled={ isDisabled }
-            style={ styleSvg }
+            direction={direction}
+            disabled={isDisabled}
+            style={styleSvg}
           />
         </a>
       </li>
@@ -333,9 +336,6 @@ const styles = {
   },
 }
 
-export const Pagination = mediaQueries(
-  Radium(PaginationBase),
-  {
-    viewportIsTabletOrLess: true,
-  },
-)
+export const Pagination = mediaQueries(Radium(PaginationBase), {
+  viewportIsTabletOrLess: true,
+})

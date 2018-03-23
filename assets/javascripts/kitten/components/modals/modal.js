@@ -9,7 +9,7 @@ export class Modal extends Component {
     super(props)
 
     this.state = {
-      showModal: false
+      showModal: false,
     }
 
     this.open = this.open.bind(this)
@@ -29,7 +29,7 @@ export class Modal extends Component {
       <CloseButton
         className="k-Modal__close"
         modifier="beryllium"
-        onClick={ this.close }
+        onClick={this.close}
       />
     )
   }
@@ -38,31 +38,20 @@ export class Modal extends Component {
     if (!this.props.trigger) return
 
     return (
-      <span
-        className="k-Modal__trigger"
-        onClick={ this.open }>
-        { this.props.trigger }
+      <span className="k-Modal__trigger" onClick={this.open}>
+        {this.props.trigger}
       </span>
     )
   }
 
   render() {
-    const {
-      trigger,
-      content,
-      label,
-      className,
-      ...others,
-    } = this.props
+    const { trigger, content, label, className, ...others } = this.props
 
-    const triggerClassNames = classNames(
-      'k-Modal',
-      className,
-    )
+    const triggerClassNames = classNames('k-Modal', className)
 
     return (
-      <div className={ triggerClassNames } { ...others }>
-        { this.renderTriggerAction() }
+      <div className={triggerClassNames} {...others}>
+        {this.renderTriggerAction()}
 
         <ReactModal
           className={{
@@ -75,13 +64,13 @@ export class Modal extends Component {
             afterOpen: 'k-Modal__overlay--afterOpen',
             beforeClose: 'k-Modal__overlay--beforeClose',
           }}
-          isOpen={ this.state.showModal }
-          onRequestClose={ this.close }
-          contentLabel={ label }>
+          isOpen={this.state.showModal}
+          onRequestClose={this.close}
+          contentLabel={label}
+        >
+          {content}
 
-          { content }
-
-          { this.renderCloseModal() }
+          {this.renderCloseModal()}
         </ReactModal>
       </div>
     )

@@ -5,7 +5,7 @@ import { SCREEN_SIZE_M } from 'kitten/constants/screen-config'
 const createMockMediaMatcher = matches => () => ({
   matches,
   addListener: () => {},
-  removeListener: () => {}
+  removeListener: () => {},
 })
 
 describe('<Container />', () => {
@@ -66,7 +66,7 @@ describe('<Container />', () => {
       })
     })
 
-    describe('and media don\'t match', () => {
+    describe("and media don't match", () => {
       window.matchMedia = createMockMediaMatcher(false)
       const container = shallow(
         <Container fullWidthBelowScreenSize={SCREEN_SIZE_M} />

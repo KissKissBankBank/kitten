@@ -44,7 +44,7 @@
   $tooltip-arrow-size: 5px;
   $tooltip-background-color: map-get($k-colors, 'primary-1');
   $tooltip-color-content: map-get($k-colors, 'background-1');
-  $tooltip-transition-duration: .2s;
+  $tooltip-transition-duration: 0.2s;
 
   // Info
   $info-font: 'light';
@@ -78,7 +78,7 @@
 
   .k-ProjectCard {
     &.is-disabled {
-      filter: grayscale(1) opacity(.4);
+      filter: grayscale(1) opacity(0.4);
     }
   }
 
@@ -122,13 +122,13 @@
     opacity: 0;
     visibility: hidden;
     transition: opacity $tooltip-transition-duration,
-                visibility $tooltip-transition-duration;
+      visibility $tooltip-transition-duration;
 
     &:after {
       position: absolute;
       left: 100%;
       top: 50%;
-      content: " ";
+      content: ' ';
       height: 0;
       width: 0;
       margin-top: k-px-to-rem(-$tooltip-arrow-size);

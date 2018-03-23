@@ -8,7 +8,11 @@ describe('<Hero />', () => {
 
   describe('by default', () => {
     beforeEach(() => {
-      component = mount(<StyleRoot><Hero>FooBar</Hero></StyleRoot>)
+      component = mount(
+        <StyleRoot>
+          <Hero>FooBar</Hero>
+        </StyleRoot>
+      )
     })
 
     it('has a <Container /> component', () => {
@@ -24,7 +28,12 @@ describe('<Hero />', () => {
     })
 
     it('renders children value in the first GridCol', () => {
-      expect(component.find('.k-Grid__col--12').first().text()).toBe('FooBar')
+      expect(
+        component
+          .find('.k-Grid__col--12')
+          .first()
+          .text()
+      ).toBe('FooBar')
     })
   })
 })

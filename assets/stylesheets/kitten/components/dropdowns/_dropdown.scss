@@ -34,7 +34,6 @@
 ///   </div>
 
 @mixin k-Dropdown {
-
   .k-Dropdown {
     display: flex;
   }
@@ -45,7 +44,7 @@
 
   .k-Dropdown__button--rotationOnExpanded {
     .k-Dropdown__button__svgPath {
-      transition: transform .2s ease-out;
+      transition: transform 0.2s ease-out;
       transform-origin: 3.5px 50%;
 
       &.k-Dropdown__button__svgPathRight {
@@ -76,7 +75,7 @@
 
     visibility: hidden;
     opacity: 0;
-    transition: margin .2s, visibility .2s, opacity .2s;
+    transition: margin 0.2s, visibility 0.2s, opacity 0.2s;
 
     .k-Dropdown.is-expanded & {
       margin-top: 0;

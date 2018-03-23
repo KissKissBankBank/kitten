@@ -4,17 +4,14 @@ import { TypologyTagIcon } from 'kitten/components/icons/typology-tag-icon'
 import { InstrumentTagIcon } from 'kitten/components/icons/instrument-tag-icon'
 
 describe('<TagList />', () => {
-  const items = [
-    { key: 'foo', item: 'Foo' },
-    { key: 'bar', item: 'Bar' },
-  ]
+  const items = [{ key: 'foo', item: 'Foo' }, { key: 'bar', item: 'Bar' }]
 
   describe('by default', () => {
-    const tagList =
-      shallow(<TagList icon={ TypologyTagIcon } items={ items } />)
+    const tagList = shallow(<TagList icon={TypologyTagIcon} items={items} />)
 
-    const tagListWithInstrument =
-      shallow(<TagList icon={ InstrumentTagIcon } items={ items } />)
+    const tagListWithInstrument = shallow(
+      <TagList icon={InstrumentTagIcon} items={items} />
+    )
 
     it('is a <ul />', () => {
       expect(tagList.type()).toBe('ul')
@@ -40,7 +37,13 @@ describe('<TagList />', () => {
     })
 
     it('renders a <TypologyTagIcon /> in first child', () => {
-      expect(tagList.children().first().find(TypologyTagIcon).exists()).toBe(true)
+      expect(
+        tagList
+          .children()
+          .first()
+          .find(TypologyTagIcon)
+          .exists()
+      ).toBe(true)
     })
 
     it('renders a <InstrumentTagIcon /> in first child', () => {
@@ -52,23 +55,16 @@ describe('<TagList />', () => {
 
   describe('with className prop', () => {
     const tagList = shallow(
-      <TagList
-        icon={ TypologyTagIcon }
-        items={ items }
-        className="custom__class"
-      />
+      <TagList icon={TypologyTagIcon} items={items} className="custom__class" />
     )
 
     it('has a custom class', () => {
       expect(tagList.hasClass('custom__class')).toBe(true)
     })
-
   })
 
   describe('with tiny prop', () => {
-    const tagList = shallow(
-      <TagList items={ [] } tiny />
-    )
+    const tagList = shallow(<TagList items={[]} tiny />)
 
     it('has a good class', () => {
       expect(tagList.hasClass('k-TagList--tiny')).toBe(true)

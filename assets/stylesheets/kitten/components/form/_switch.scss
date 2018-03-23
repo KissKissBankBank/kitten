@@ -35,7 +35,7 @@
   $border-size: 1px;
   $border-radius: 18px;
 
-  $transition-duration: .2s;
+  $transition-duration: 0.2s;
 
   .k-Switch {
     display: flex;
@@ -78,7 +78,7 @@
       border-radius: k-px-to-rem($border-radius);
 
       transition: border-color $transition-duration,
-                  background-color $transition-duration;
+        background-color $transition-duration;
     }
 
     &:after {

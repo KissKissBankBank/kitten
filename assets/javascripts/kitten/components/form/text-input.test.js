@@ -2,8 +2,7 @@ import React from 'react'
 import { TextInput } from 'kitten/components/form/text-input'
 
 describe('Text-input with default props', () => {
-  const defaultComponent = shallow(
-    <TextInput />)
+  const defaultComponent = shallow(<TextInput />)
 
   it('has a default text-input attributes', () => {
     expect(defaultComponent.find('.k-TextInput')).toHaveLength(1)
@@ -26,8 +25,7 @@ describe('Text-input with default props', () => {
   })
 
   describe('<TextInput />', () => {
-    const component = shallow(
-      <TextInput className="k-TextInput--custom" />)
+    const component = shallow(<TextInput className="k-TextInput--custom" />)
 
     it('renders a <TextInput class="k-TextInput" />', () => {
       expect(component.is('input')).toBe(true)
@@ -35,9 +33,7 @@ describe('Text-input with default props', () => {
     })
 
     describe('text-input with valid class', () => {
-      const componentWithValidClass = shallow(
-        <TextInput valid={ true } />
-      )
+      const componentWithValidClass = shallow(<TextInput valid={true} />)
 
       it('has a valid class', () => {
         expect(componentWithValidClass.hasClass('is-valid')).toBe(true)
@@ -45,9 +41,7 @@ describe('Text-input with default props', () => {
     })
 
     describe('text-input with error class', () => {
-      const componentWithErrorClass = shallow(
-        <TextInput error={ true } />
-      )
+      const componentWithErrorClass = shallow(<TextInput error={true} />)
 
       it('has a error class', () => {
         expect(componentWithErrorClass.hasClass('is-error')).toBe(true)
@@ -55,9 +49,7 @@ describe('Text-input with default props', () => {
     })
 
     describe('text-input with tiny class', () => {
-      const componentWithTinyClass = shallow(
-        <TextInput tiny={ true } />
-      )
+      const componentWithTinyClass = shallow(<TextInput tiny={true} />)
 
       it('has a tiny class', () => {
         expect(componentWithTinyClass.hasClass('k-TextInput--tiny')).toBe(true)
@@ -65,9 +57,9 @@ describe('Text-input with default props', () => {
     })
 
     describe('text-input with textarea tag', () => {
-      const textArea = shallow(
-        <TextInput tag='textarea' rows='7' />
-      ).find('textarea')
+      const textArea = shallow(<TextInput tag="textarea" rows="7" />).find(
+        'textarea'
+      )
 
       it('has a textarea tag', () => {
         expect(textArea.is('textarea')).toBe(true)

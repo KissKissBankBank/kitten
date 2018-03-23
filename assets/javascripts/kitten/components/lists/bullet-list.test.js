@@ -2,13 +2,10 @@ import React from 'react'
 import { BulletList } from 'kitten/components/lists/bullet-list'
 
 describe('<BulletList />', () => {
-  const items = [
-    { key: 'foo', item: 'Foo' },
-    { key: 'bar', item: 'Bar' },
-  ]
+  const items = [{ key: 'foo', item: 'Foo' }, { key: 'bar', item: 'Bar' }]
 
   describe('by default', () => {
-    const bulletList = shallow(<BulletList items={ items } />)
+    const bulletList = shallow(<BulletList items={items} />)
 
     it('is a <ul />', () => {
       expect(bulletList.type()).toBe('ul')
@@ -30,7 +27,7 @@ describe('<BulletList />', () => {
 
   describe('with className prop', () => {
     const bulletList = shallow(
-      <BulletList items={ items } className="custom__class" />
+      <BulletList items={items} className="custom__class" />
     )
 
     it('has a custom class', () => {
@@ -39,9 +36,7 @@ describe('<BulletList />', () => {
   })
 
   describe('with large prop', () => {
-    const bulletList = shallow(
-      <BulletList items={ items } large />
-    )
+    const bulletList = shallow(<BulletList items={items} large />)
 
     it('has a good class', () => {
       const item = bulletList.children().first()
@@ -50,9 +45,7 @@ describe('<BulletList />', () => {
   })
 
   describe('with big prop', () => {
-    const bulletList = shallow(
-      <BulletList items={ items } big />
-    )
+    const bulletList = shallow(<BulletList items={items} big />)
 
     it('has a good class', () => {
       const item = bulletList.children().first()

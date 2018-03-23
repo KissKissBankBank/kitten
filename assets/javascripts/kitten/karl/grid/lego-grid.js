@@ -6,7 +6,7 @@ export const KarlLegoGrid = () => {
   const masonryProps = {
     options: {
       transitionDuration: 0,
-    }
+    },
   }
 
   const cards = [
@@ -26,13 +26,15 @@ export const KarlLegoGrid = () => {
     <div className="k-DevGrid__container k-DevGrid__container--withoutOutline">
       <Grid>
         <GridCol col="12">
-          <LegoGrid masonryProps={ masonryProps }>
-            { cards.map(card =>
-              <LegoGrid.Item key={ card.key }>
-                <div className="karl-ProjectCard"
-                     style={ { height: card.height } } />
+          <LegoGrid masonryProps={masonryProps}>
+            {cards.map(card => (
+              <LegoGrid.Item key={card.key}>
+                <div
+                  className="karl-ProjectCard"
+                  style={{ height: card.height }}
+                />
               </LegoGrid.Item>
-            ) }
+            ))}
           </LegoGrid>
         </GridCol>
       </Grid>

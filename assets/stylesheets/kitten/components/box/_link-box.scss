@@ -54,7 +54,7 @@
   $background-color-icon: map-get($k-colors, 'primary-4');
 
   $border-size: k-px-to-rem(2px);
-  $transition-duration: .2s;
+  $transition-duration: 0.2s;
 
   .k-LinkBox {
     display: inline-block;
@@ -115,10 +115,8 @@
     flex-direction: column;
     flex-grow: 1;
     justify-content: center;
-    padding: k-px-to-rem(10px)
-             k-px-to-rem(10px)
-             k-px-to-rem(15px)
-             k-px-to-rem(20px);
+    padding: k-px-to-rem(10px) k-px-to-rem(10px) k-px-to-rem(15px)
+      k-px-to-rem(20px);
   }
 
   .k-LinkBox__title {
@@ -140,10 +138,8 @@
     align-items: center;
     justify-content: center;
 
-    padding: k-px-to-rem(15px)
-             k-px-to-rem(20px)
-             k-px-to-rem(15px)
-             k-px-to-rem(10px);
+    padding: k-px-to-rem(15px) k-px-to-rem(20px) k-px-to-rem(15px)
+      k-px-to-rem(10px);
   }
 
   .k-LinkBox__navigation--withAnimation {

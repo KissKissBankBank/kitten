@@ -1,8 +1,7 @@
 import React from 'react'
 import { QuestionMarkIcon } from 'kitten/components/icons/question-mark-icon'
 import { ButtonIcon } from 'kitten/components/buttons/button-icon'
-import { ButtonQuestionMarkIcon }
-  from 'kitten/components/buttons/button-question-mark-icon'
+import { ButtonQuestionMarkIcon } from 'kitten/components/buttons/button-question-mark-icon'
 
 describe('ButtonQuestionMarkIcon />', () => {
   describe('by default', () => {
