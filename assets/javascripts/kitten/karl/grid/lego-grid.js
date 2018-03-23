@@ -46,7 +46,7 @@ export const KarlLegoGrid12items = () => {
   const cards = Array.apply(null, { length: 12 }).map((_, index) => {
     return {
       key: `card-${++index}`,
-      height: '200px'
+      height: '200px',
     }
   })
 
