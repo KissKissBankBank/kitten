@@ -1,5 +1,5 @@
-import React from 'react';
-import { Paragraph } from 'kitten/components/typography/paragraph';
+import React from 'react'
+import { Paragraph } from 'kitten/components/typography/paragraph'
 
 export const KarlParagraph = props => (
   <Paragraph {...props}>
@@ -10,7 +10,7 @@ export const KarlParagraph = props => (
     cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
     non.
   </Paragraph>
-);
+)
 
 export const KarlParagraphSecondary = () => (
   <Paragraph modifier="secondary">
@@ -21,7 +21,7 @@ export const KarlParagraphSecondary = () => (
     cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
     non.
   </Paragraph>
-);
+)
 
 export const KarlParagraphTertiary = () => (
   <Paragraph modifier="tertiary">
@@ -32,7 +32,7 @@ export const KarlParagraphTertiary = () => (
     cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
     non.
   </Paragraph>
-);
+)
 
 export const KarlParagraphQuaternary = () => (
   <Paragraph modifier="quaternary">
@@ -43,7 +43,7 @@ export const KarlParagraphQuaternary = () => (
     cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
     non.
   </Paragraph>
-);
+)
 
 export const KarlParagraphWithLink = () => (
   <Paragraph modifier="quaternary">
@@ -57,4 +57,4 @@ export const KarlParagraphWithLink = () => (
     velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
     cupidatat non.
   </Paragraph>
-);
+)
