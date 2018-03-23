@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `col-sizeScreen-up` props to `LegoGrid` Component.
+- Feature: Add `col-sizeScreen-up` props to `LegoGrid` component.
 
 ## [20.3.0] - 2018-03-22
 

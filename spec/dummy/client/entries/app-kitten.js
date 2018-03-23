@@ -116,7 +116,10 @@ import {
   KarlGridTwelveColumns,
   KarlGridWithOffset,
 } from 'kitten/karl/grid/grid'
-import { KarlLegoGrid, KarlLegoGrid12items } from 'kitten/karl/grid/lego-grid'
+import {
+  KarlLegoGrid,
+  KarlLegoGrid12Items,
+} from 'kitten/karl/grid/lego-grid'
 import { KarlRow } from 'kitten/karl/grid/row'
 import { KarlScrollableContainer } from 'kitten/karl/grid/scrollable-container'
 import {
@@ -409,7 +412,7 @@ ReactOnRails.register({
   KarlGridTwelveColumns,
   KarlGridWithOffset,
   KarlLegoGrid,
-  KarlLegoGrid12items,
+  KarlLegoGrid12Items,
   KarlRow,
   KarlScrollableContainer,
   KarlSideGridWithLeftAsideAndSmallSize,

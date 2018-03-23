@@ -1,12 +1,18 @@
 import React from 'react'
 import { Grid, GridCol } from 'kitten/components/grid/grid'
 import { LegoGrid } from 'kitten/components/grid/lego-grid'
+import classNames from 'classnames'
 
 const masonryProps = {
   options: {
     transitionDuration: 0,
   }
 }
+
+const karlLegoGridClassName = classNames(
+  'k-DevGrid__container',
+  'k-DevGrid__container--withoutOutline',
+)
 
 export const KarlLegoGrid = () => {
   const cards = [
@@ -23,7 +29,7 @@ export const KarlLegoGrid = () => {
   ]
 
   return (
-    <div className="k-DevGrid__container k-DevGrid__container--withoutOutline">
+    <div className={ karlLegoGridClassName }>
       <Grid>
         <GridCol col="12">
           <LegoGrid masonryProps={ masonryProps }>
@@ -42,7 +48,7 @@ export const KarlLegoGrid = () => {
   )
 }
 
-export const KarlLegoGrid12items = () => {
+export const KarlLegoGrid12Items = () => {
   const cards = Array.apply(null, { length: 12 }).map((_, index) => {
     return {
       key: `card-${++index}`,
@@ -51,7 +57,7 @@ export const KarlLegoGrid12items = () => {
   })
 
   return (
-    <div className="k-DevGrid__container k-DevGrid__container--withoutOutline">
+    <div className={ karlLegoGridClassName }>
       <Grid>
         <GridCol col="12">
           <LegoGrid masonryProps={ masonryProps }>
