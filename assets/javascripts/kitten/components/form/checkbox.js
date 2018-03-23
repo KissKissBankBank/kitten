@@ -11,6 +11,7 @@ export class Checkbox extends Component {
       children,
       inputClassName,
       error,
+      textProps,
       ...inputProps,
     } = this.props
 
