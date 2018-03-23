@@ -16,9 +16,7 @@ export class Title extends React.Component {
 
     const Tag = tag
 
-    return (
-      <Tag className={ titleClassNames } { ...other } />
-    )
+    return <Tag className={titleClassNames} {...other} />
   }
 }
 

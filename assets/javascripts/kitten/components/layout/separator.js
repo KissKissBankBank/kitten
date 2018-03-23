@@ -8,9 +8,7 @@ export const Separator = ({ darker, className, ...props }) => {
     className
   )
 
-  return (
-    <hr className={ separatorClassName } { ...props } />
-  )
+  return <hr className={separatorClassName} {...props} />
 }
 
 Separator.defaultProps = {

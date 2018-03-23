@@ -39,18 +39,16 @@
 ///    …
 
 @mixin k-buttonSvg($colors) {
-  $base-color: k-color-definition(
-    k-map-fetch($colors, ('base', 'color')));
-  $hover-color: k-color-definition(
-    k-map-fetch($colors, ('hover', 'color')));
-  $focus-color: k-color-definition(
-    k-map-fetch($colors, ('focus', 'color')));
-  $active-color: k-color-definition(
-    k-map-fetch($colors, ('active', 'color')));
+  $base-color: k-color-definition(k-map-fetch($colors, ('base', 'color')));
+  $hover-color: k-color-definition(k-map-fetch($colors, ('hover', 'color')));
+  $focus-color: k-color-definition(k-map-fetch($colors, ('focus', 'color')));
+  $active-color: k-color-definition(k-map-fetch($colors, ('active', 'color')));
   $disabled-color: k-color-definition(
-    k-map-fetch($colors, ('disabled', 'color')));
+    k-map-fetch($colors, ('disabled', 'color'))
+  );
   $is-selected-color: k-color-definition(
-    k-map-fetch($colors, ('is-selected', 'color')));
+    k-map-fetch($colors, ('is-selected', 'color'))
+  );
 
   .k-Button__icon,
   .k-ButtonIcon__svg {
@@ -61,7 +59,7 @@
   }
 
   &:hover .k-Button__icon,
-  &:hover .k-ButtonIcon__svg, {
+  &:hover .k-ButtonIcon__svg {
     fill: $hover-color;
     .k-Button__svg__stroke {
       stroke: $hover-color;

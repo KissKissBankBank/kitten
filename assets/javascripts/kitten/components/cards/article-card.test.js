@@ -7,9 +7,7 @@ describe('<ArticleCard />', () => {
 
   describe('by default', () => {
     beforeEach(() => {
-      component = renderer.create(
-        <ArticleCard />
-      ).toJSON()
+      component = renderer.create(<ArticleCard />).toJSON()
     })
 
     it('matches with snapshot', () => {
@@ -19,26 +17,28 @@ describe('<ArticleCard />', () => {
 
   describe('with some props', () => {
     beforeEach(() => {
-      component = renderer.create(
-        <ArticleCard
-          href="#foobar"
-          imageProps={{
-            src: '#image',
-            alt: 'Image alt',
-          }}
-          avatarProps={{
-            src: '#avatar',
-            alt: 'Avatar alt',
-          }}
-          ownerTitle="Custom title"
-          ownerDescription="Custom description"
-          titleProps={{
-            tag: 'h4',
-          }}
-          cardTitle="Custom title"
-          cardSubTitle="Custom subtitle"
-        />
-      ).toJSON()
+      component = renderer
+        .create(
+          <ArticleCard
+            href="#foobar"
+            imageProps={{
+              src: '#image',
+              alt: 'Image alt',
+            }}
+            avatarProps={{
+              src: '#avatar',
+              alt: 'Avatar alt',
+            }}
+            ownerTitle="Custom title"
+            ownerDescription="Custom description"
+            titleProps={{
+              tag: 'h4',
+            }}
+            cardTitle="Custom title"
+            cardSubTitle="Custom subtitle"
+          />
+        )
+        .toJSON()
     })
 
     it('matches with snapshot', () => {
@@ -48,12 +48,14 @@ describe('<ArticleCard />', () => {
 
   describe('with articleTitle and articleSubTitle props', () => {
     beforeEach(() => {
-      component = renderer.create(
-        <ArticleCard
-          articleTitle="Custom title"
-          articleSubTitle="Custom subtitle"
-        />
-      ).toJSON()
+      component = renderer
+        .create(
+          <ArticleCard
+            articleTitle="Custom title"
+            articleSubTitle="Custom subtitle"
+          />
+        )
+        .toJSON()
     })
 
     it('matches with snapshot', () => {
@@ -63,15 +65,17 @@ describe('<ArticleCard />', () => {
 
   describe('with ignored props', () => {
     beforeEach(() => {
-      component = renderer.create(
-        <ArticleCard
-          info1="Custom information #1"
-          progress="42"
-          state="Custom state"
-          titlesMinHeight
-          titleTruncate
-        />
-      ).toJSON()
+      component = renderer
+        .create(
+          <ArticleCard
+            info1="Custom information #1"
+            progress="42"
+            state="Custom state"
+            titlesMinHeight
+            titleTruncate
+          />
+        )
+        .toJSON()
     })
 
     it('matches with snapshot', () => {

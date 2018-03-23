@@ -7,17 +7,13 @@ export class Header extends React.Component {
     const headerClassName = classNames(
       'k-Header',
       { 'is-fixed': fixed },
-      className,
+      className
     )
 
     return (
-      <header className={ headerClassName }
-              role="banner"
-              { ...other }>
+      <header className={headerClassName} role="banner" {...other}>
         <div className="k-Header__container">
-          <div className="k-Header__row">
-            { children }
-          </div>
+          <div className="k-Header__row">{children}</div>
         </div>
       </header>
     )
@@ -30,12 +26,10 @@ export class HeaderItems extends React.Component {
     const itemsClassName = classNames(
       'k-Header__items',
       { 'k-Header__items--fixedSize': fixedSize },
-      className,
+      className
     )
 
-    return (
-      <div className={ itemsClassName } { ...other } />
-    )
+    return <div className={itemsClassName} {...other} />
   }
 }
 
@@ -49,12 +43,10 @@ export class HeaderItem extends React.Component {
         'k-Header__item--fixedSize': fixedSize,
         'k-Header__item--centered': centered,
       },
-      className,
+      className
     )
 
-    return (
-      <Tag className={ itemClassName } { ...other } />
-    )
+    return <Tag className={itemClassName} {...other} />
   }
 }
 

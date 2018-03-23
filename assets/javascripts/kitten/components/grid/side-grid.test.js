@@ -33,9 +33,11 @@ describe('<SideGrid />', () => {
 
   describe('with custom class', () => {
     const component = shallow(
-      <SideGrid className="custom-class"
-                containerClassName="container-custom-class"
-                rowClassName="row-custom-class" />
+      <SideGrid
+        className="custom-class"
+        containerClassName="container-custom-class"
+        rowClassName="row-custom-class"
+      />
     )
 
     it('has the right classes', () => {

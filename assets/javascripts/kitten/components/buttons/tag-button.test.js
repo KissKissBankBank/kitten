@@ -2,8 +2,7 @@ import React from 'react'
 import { TagButton } from 'kitten/components/buttons/tag-button'
 
 describe('TagButton', () => {
-  const defaultComponent = shallow(
-    <TagButton />)
+  const defaultComponent = shallow(<TagButton />)
 
   it('renders <div class="k-TagButton">', () => {
     expect(defaultComponent.find('.k-TagButton')).toHaveLength(1)
@@ -18,13 +17,9 @@ describe('TagButton', () => {
   })
 
   describe('<TagButton />', () => {
-
     describe('basic props', () => {
       const component = shallow(
-        <TagButton
-          className="k-TagButton--custom"
-          selected={ false }
-        />
+        <TagButton className="k-TagButton--custom" selected={false} />
       )
 
       it('renders a <Button class="k-TagButton" />', () => {
@@ -34,9 +29,7 @@ describe('TagButton', () => {
       })
 
       describe('with tiny prop', () => {
-        const component = shallow(
-          <TagButton tiny />
-        )
+        const component = shallow(<TagButton tiny />)
 
         it('renders a <Button class="k-TagButton--tiny" />', () => {
           expect(component.hasClass('k-TagButton--tiny')).toBe(true)
@@ -44,9 +37,7 @@ describe('TagButton', () => {
       })
 
       describe('with big prop', () => {
-        const component = shallow(
-          <TagButton big />
-        )
+        const component = shallow(<TagButton big />)
 
         it('renders a <Button class="k-TagButton--big" />', () => {
           expect(component.hasClass('k-TagButton--big')).toBe(true)
@@ -54,8 +45,7 @@ describe('TagButton', () => {
       })
 
       describe('tag prop', () => {
-        const component = shallow(
-          <a className="k-TagButton" />)
+        const component = shallow(<a className="k-TagButton" />)
 
         it('accepts <a className"k-TagButton" />', () => {
           expect(component.type()).toBe('a')
@@ -77,9 +67,7 @@ describe('TagButton', () => {
 
     describe('modifier prop', () => {
       it('adds a class to the component', () => {
-        const component = shallow(
-          <TagButton modifier="helium" />
-        )
+        const component = shallow(<TagButton modifier="helium" />)
 
         expect(component.hasClass('k-TagButton--helium')).toBe(true)
       })

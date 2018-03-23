@@ -5,7 +5,7 @@ import { Modal } from 'kitten/components/modals/modal'
 describe('<Modal />', () => {
   describe('with trigger', () => {
     const component = mount(
-      <Modal trigger={ <span className="trigger-example" /> } />
+      <Modal trigger={<span className="trigger-example" />} />
     )
 
     it('contains the trigger', () => {
@@ -14,9 +14,7 @@ describe('<Modal />', () => {
   })
 
   describe('with content prop', () => {
-    const component = mount(
-      <Modal className="content-example" />
-    )
+    const component = mount(<Modal className="content-example" />)
 
     it('contains the content', () => {
       expect(component.render().hasClass('content-example')).toBe(true)

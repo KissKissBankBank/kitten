@@ -18,9 +18,7 @@ describe('<SelectWithState />', () => {
 
   describe('with default props', () => {
     beforeAll(() => {
-      select = mount(
-        <SelectWithState options={ options } />
-      )
+      select = mount(<SelectWithState options={options} />)
     })
 
     it('renders a <Select />', () => {
@@ -32,20 +30,18 @@ describe('<SelectWithState />', () => {
     })
 
     it('has a good props', () => {
-      expect(select.props()).toMatchObject(
-        {
-          clearable: false,
-          searchable: false,
-          deleteRemoves: false,
-          multi: false,
-          labelText: null,
-          error: false,
-          valid: false,
-          disabled: false,
-          tiny: false,
-          name: null,
-        }
-      )
+      expect(select.props()).toMatchObject({
+        clearable: false,
+        searchable: false,
+        deleteRemoves: false,
+        multi: false,
+        labelText: null,
+        error: false,
+        valid: false,
+        disabled: false,
+        tiny: false,
+        name: null,
+      })
 
       expect(select.props().onChange).toBeTruthy()
       expect(select.props().onInputChange).toBeTruthy()
@@ -59,12 +55,7 @@ describe('<SelectWithState />', () => {
 
   describe('with default value', () => {
     beforeAll(() => {
-      select = mount(
-        <SelectWithState
-          options={ options }
-          value={ defaultValue }
-        />
-      )
+      select = mount(<SelectWithState options={options} value={defaultValue} />)
     })
 
     it('has value prop in state', () => {
@@ -74,12 +65,7 @@ describe('<SelectWithState />', () => {
 
   describe('with label', () => {
     beforeAll(() => {
-      select = mount(
-        <SelectWithState
-          options={ options }
-          labelText="FooBar"
-        />
-      )
+      select = mount(<SelectWithState options={options} labelText="FooBar" />)
     })
 
     it('renders a label with labelText prop', () => {
@@ -90,13 +76,7 @@ describe('<SelectWithState />', () => {
   describe('with classes props', () => {
     beforeAll(() => {
       select = mount(
-        <SelectWithState
-          options={ options }
-          tiny
-          error
-          valid
-          disabled
-        />
+        <SelectWithState options={options} tiny error valid disabled />
       )
     })
 
@@ -118,9 +98,9 @@ describe('<SelectWithState />', () => {
       select = mount(
         <SelectWithState
           name="foobar"
-          options={ options }
-          onChange={ onChangeSpy }
-          onInputChange={ onInputChangeSpy }
+          options={options}
+          onChange={onChangeSpy}
+          onInputChange={onInputChangeSpy}
         />
       )
 
@@ -152,9 +132,9 @@ describe('<SelectWithState />', () => {
       select = mount(
         <SelectWithState
           name="foobar"
-          options={ options }
-          onChange={ onChangeSpy }
-          onInputChange={ onInputChangeSpy }
+          options={options}
+          onChange={onChangeSpy}
+          onInputChange={onInputChangeSpy}
         />
       )
 

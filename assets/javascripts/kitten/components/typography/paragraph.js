@@ -10,7 +10,7 @@ export class Paragraph extends React.Component {
       margin,
       normalLineHeight,
       italic,
-      ...other,
+      ...other
     } = this.props
 
     const paragraphClassNames = classNames(
@@ -26,9 +26,7 @@ export class Paragraph extends React.Component {
 
     const Tag = tag
 
-    return (
-      <Tag className={ paragraphClassNames } { ...other } />
-    )
+    return <Tag className={paragraphClassNames} {...other} />
   }
 }
 

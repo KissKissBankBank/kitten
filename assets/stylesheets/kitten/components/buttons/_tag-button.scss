@@ -57,7 +57,7 @@
   $button-step: -2; // 12px
   $button-big-step: -1; // 14px
 
-  $transition-speed: .2s;
+  $transition-speed: 0.2s;
 
   .k-TagButton {
     @include k-buttonBase;
@@ -81,10 +81,7 @@
 
   // Size modifier.
   .k-TagButton--tiny {
-    @include k-typographyFontSize(
-      $button-step,
-      $tag-button-line-height-tiny
-    );
+    @include k-typographyFontSize($button-step, $tag-button-line-height-tiny);
 
     min-height: $tag-button-line-height-tiny;
   }

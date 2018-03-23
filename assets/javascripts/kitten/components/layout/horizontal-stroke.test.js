@@ -3,9 +3,7 @@ import { HorizontalStroke } from 'kitten/components/layout/horizontal-stroke'
 
 describe('<HorizontalStroke />', () => {
   describe('by default', () => {
-    const horizontalStroke = shallow(
-      <HorizontalStroke />
-    )
+    const horizontalStroke = shallow(<HorizontalStroke />)
 
     it('renders a <span />', () => {
       expect(horizontalStroke.is('span')).toBe(true)
@@ -27,9 +25,7 @@ describe('<HorizontalStroke />', () => {
   })
 
   describe('with size="tiny" prop', () => {
-    const horizontalStroke = shallow(
-      <HorizontalStroke size="tiny" />
-    )
+    const horizontalStroke = shallow(<HorizontalStroke size="tiny" />)
 
     it('has a good class', () => {
       expect(horizontalStroke.hasClass('k-HorizontalStroke--tiny')).toBe(true)
@@ -37,19 +33,17 @@ describe('<HorizontalStroke />', () => {
   })
 
   describe('with size="default" prop', () => {
-    const horizontalStroke = shallow(
-      <HorizontalStroke size="default" />
-    )
+    const horizontalStroke = shallow(<HorizontalStroke size="default" />)
 
     it('has a good class', () => {
-      expect(horizontalStroke.hasClass('k-HorizontalStroke--default')).toBe(true)
+      expect(horizontalStroke.hasClass('k-HorizontalStroke--default')).toBe(
+        true
+      )
     })
   })
 
   describe('with size="big" prop', () => {
-    const horizontalStroke = shallow(
-      <HorizontalStroke size="big" />
-    )
+    const horizontalStroke = shallow(<HorizontalStroke size="big" />)
 
     it('has a good class', () => {
       expect(horizontalStroke.hasClass('k-HorizontalStroke--big')).toBe(true)
@@ -57,9 +51,7 @@ describe('<HorizontalStroke />', () => {
   })
 
   describe('with size="huge" prop', () => {
-    const horizontalStroke = shallow(
-      <HorizontalStroke size="huge" />
-    )
+    const horizontalStroke = shallow(<HorizontalStroke size="huge" />)
 
     it('has a good class', () => {
       expect(horizontalStroke.hasClass('k-HorizontalStroke--huge')).toBe(true)

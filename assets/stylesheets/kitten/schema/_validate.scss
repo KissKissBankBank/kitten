@@ -15,10 +15,7 @@
 
   @if $expected-type == 'number' {
     @if $value-type != 'number' {
-      @return k-schema-error(
-        $module, $path,
-        'should be a Number'
-      );
+      @return k-schema-error($module, $path, 'should be a Number');
     }
 
     // Should the number have a specific unit?
@@ -41,40 +38,28 @@
   }
   @elseif $expected-type == 'string' {
     @if $value-type != 'string' {
-      @return k-schema-error(
-        $module, $path,
-        'should be a String'
-      );
+      @return k-schema-error($module, $path, 'should be a String');
     }
 
     @return k-validate-enum($value, $schema, $module, $path);
   }
   @elseif $expected-type == 'color' {
     @if $value-type != 'color' {
-      @return k-schema-error(
-        $module, $path,
-        'should be a Color'
-      );
+      @return k-schema-error($module, $path, 'should be a Color');
     }
 
     @return k-validate-enum($value, $schema, $module, $path);
   }
   @elseif $expected-type == 'boolean' {
     @if $value-type != 'boolean' {
-      @return k-schema-error(
-        $module, $path,
-        'should be a Boolean'
-      );
+      @return k-schema-error($module, $path, 'should be a Boolean');
     }
 
     @return k-validate-enum($value, $schema, $module, $path);
   }
   @elseif $expected-type == 'list' {
     @if $value-type != 'list' {
-      @return k-schema-error(
-        $module, $path,
-        'should be a List'
-      );
+      @return k-schema-error($module, $path, 'should be a List');
     }
 
     // Is there a schema defined for list items?
@@ -82,7 +67,7 @@
     @if $item-schema {
       @for $i from 1 through length($value) {
         $p-value: nth($value, $i);
-        $p-path: "#{$path}[#{$i}]";
+        $p-path: '#{$path}[#{$i}]';
 
         @if not k-validate($p-value, $item-schema, $module, $p-path) {
           @return false;
@@ -94,10 +79,7 @@
   }
   @elseif $expected-type == 'map' {
     @if $value-type != 'map' {
-      @return k-schema-error(
-        $module, $path,
-        'should be a Map'
-      );
+      @return k-schema-error($module, $path, 'should be a Map');
     }
 
     // Do we have specific schemas for certain properties?
@@ -105,7 +87,7 @@
     @if $map-properties != null {
       @each $p-name, $p-schema in $map-properties {
         $p-value: map-get($value, $p-name);
-        $p-path: "#{$path}.#{$p-name}";
+        $p-path: '#{$path}.#{$p-name}';
 
         @if $p-value != null {
           @if not k-validate($p-value, $p-schema, $module, $p-path) {
@@ -120,13 +102,10 @@
     @if $required-properties != null {
       @each $p-name in $required-properties {
         $p-value: map-get($value, $p-name);
-        $p-path: "#{$path}.#{$p-name}";
+        $p-path: '#{$path}.#{$p-name}';
 
         @if $p-value == null {
-          @return k-schema-error(
-            $module, $p-path,
-            'is required'
-          );
+          @return k-schema-error($module, $p-path, 'is required');
         }
       }
     }
@@ -138,9 +117,10 @@
       @each $p-name, $p-value in $value {
         // Do not validate the property if it is already a regular property.
         @if not map-has-key(k-one-of($map-properties, ()), $p-name) {
-          $p-path: "#{$path}.#{$p-name}";
+          $p-path: '#{$path}.#{$p-name}';
 
-          @if not k-validate($p-value, $additional-properties, $module, $p-path) {
+          @if not k-validate($p-value, $additional-properties, $module, $p-path)
+          {
             @return false;
           }
         }
@@ -152,10 +132,7 @@
 
   // If we end up here, something went wrong.
   // Assume the result should be false.
-  @return k-schema-error(
-    $module, $path,
-    'is invalid'
-  );
+  @return k-schema-error($module, $path, 'is invalid');
 }
 
 /// Validate if a value belongs to an enumeration.
@@ -174,8 +151,9 @@
   @if $expected-values != null {
     @if index($expected-values, $value) == null {
       @return k-schema-error(
-        $module, $path,
-        "should be a one of #{$expected-values}"
+        $module,
+        $path,
+        'should be a one of #{$expected-values}'
       );
     }
   }
@@ -195,8 +173,7 @@
 
   @if $unit == '' {
     @return none;
-  }
-  @else {
+  } @else {
     @return unquote($unit);
   }
 }

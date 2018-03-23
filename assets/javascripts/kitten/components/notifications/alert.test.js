@@ -39,9 +39,9 @@ describe('<Alert />', () => {
   })
 
   describe('with show prop at false', () => {
-    const alert = shallow(<Alert show={ false } />)
+    const alert = shallow(<Alert show={false} />)
 
-    it('don\'t show the alert', () => {
+    it("don't show the alert", () => {
       expect(alert.type()).toBeNull()
     })
   })
@@ -96,9 +96,7 @@ describe('<Alert />', () => {
 
   describe('with children', () => {
     const alert = shallow(
-      <Alert>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit…
-      </Alert>
+      <Alert>Lorem ipsum dolor sit amet, consectetur adipisicing elit…</Alert>
     )
 
     it('has text', () => {
@@ -114,12 +112,7 @@ describe('<Alert />', () => {
 
     beforeAll(() => {
       onCloseSpy = sandbox.spy()
-      alertComponent = mount(
-        <Alert
-          closeButton
-          onClose={ onCloseSpy }
-        />
-      )
+      alertComponent = mount(<Alert closeButton onClose={onCloseSpy} />)
 
       alertComponent.instance().handleAnimationEnd()
     })
@@ -135,7 +128,7 @@ describe('<Alert />', () => {
 
     beforeAll(() => {
       onCloseSpy = sandbox.spy()
-      alertComponent = mount(<Alert onClose={ onCloseSpy } />)
+      alertComponent = mount(<Alert onClose={onCloseSpy} />)
 
       alertComponent.simulate('animationEnd')
     })

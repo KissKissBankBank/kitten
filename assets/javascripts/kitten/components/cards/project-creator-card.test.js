@@ -15,13 +15,16 @@ describe('<ProjectCreatorCard />', () => {
     })
 
     it('has a default class', () => {
-      expect(projectCreatorCard.render().hasClass('k-ProjectCreatorCard')).toBe(true)
+      expect(projectCreatorCard.render().hasClass('k-ProjectCreatorCard')).toBe(
+        true
+      )
     })
   })
 
   describe('with withoutHover prop', () => {
     const projectCreatorCard = mount(
-      <ProjectCreatorCard href="#" withoutHover />)
+      <ProjectCreatorCard href="#" withoutHover />
+    )
     const buttonIcon = projectCreatorCard.find('.k-ButtonIcon--withoutHover')
 
     it('renders a ButtonIcon with withoutHover class', () => {
@@ -31,7 +34,8 @@ describe('<ProjectCreatorCard />', () => {
 
   describe('with verticalArrow props', () => {
     const projectCreatorCard = mount(
-      <ProjectCreatorCard href="#" verticalArrow />)
+      <ProjectCreatorCard href="#" verticalArrow />
+    )
     const buttonIcon = projectCreatorCard.find('.k-ButtonIcon--verticalArrow')
 
     it('renders a ButtonIcon with vertical arrow', () => {
@@ -40,8 +44,7 @@ describe('<ProjectCreatorCard />', () => {
   })
 
   describe('with date prop', () => {
-    const projectCreatorCard = mount(
-      <ProjectCreatorCard date="Custom date" />)
+    const projectCreatorCard = mount(<ProjectCreatorCard date="Custom date" />)
     const icon = projectCreatorCard.find(ClockIcon)
 
     it('renders a <ClockIcon />', () => {
@@ -72,7 +75,7 @@ describe('<ProjectCreatorCard />', () => {
     it('renders an icon with a style attribute', () => {
       expect(icon.props().style).toMatchObject({
         backgroundColor: '#e6f5fb',
-        borderColor: '#cbe8f9'
+        borderColor: '#cbe8f9',
       })
     })
 
@@ -83,10 +86,7 @@ describe('<ProjectCreatorCard />', () => {
 
   describe('with href props', () => {
     const projectCreatorCard = mount(
-      <ProjectCreatorCard
-        href="#"
-        isExternal="true"
-      />
+      <ProjectCreatorCard href="#" isExternal="true" />
     )
     const link = projectCreatorCard.find('.k-ProjectCreatorCard__link')
     const separator = link.find('.k-Separator')
@@ -104,10 +104,7 @@ describe('<ProjectCreatorCard />', () => {
 
   describe('with linkText prop', () => {
     const projectCreatorCard = mount(
-      <ProjectCreatorCard
-        href="#"
-        linkText="Custom text"
-      />
+      <ProjectCreatorCard href="#" linkText="Custom text" />
     )
 
     it('renders a text content', () => {

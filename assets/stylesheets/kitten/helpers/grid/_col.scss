@@ -34,8 +34,7 @@
   @if $flexible {
     flex-basis: $width;
     max-width: $width;
-  }
-  @else {
+  } @else {
     width: $width;
   }
 }

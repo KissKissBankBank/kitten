@@ -1,8 +1,7 @@
 import React from 'react'
 import sinon from 'sinon'
 import { TextInput } from 'kitten/components/form/text-input'
-import { TextInputWithLimit }
-  from 'kitten/components/form/text-input-with-limit'
+import { TextInputWithLimit } from 'kitten/components/form/text-input-with-limit'
 
 describe('<TextInputWithLimit />', () => {
   const sandbox = sinon.sandbox.create()
@@ -26,7 +25,7 @@ describe('<TextInputWithLimit />', () => {
   describe('defaultValue prop', () => {
     it('sets the counter to the limit when empty', () => {
       const component = shallow(
-        <TextInputWithLimit defaultValue="" limit={ 15 } />
+        <TextInputWithLimit defaultValue="" limit={15} />
       )
       const counter = component.find('.k-TextInputLimit__counter')
       expect(counter.text()).toBe('15')
@@ -34,7 +33,7 @@ describe('<TextInputWithLimit />', () => {
 
     it('changes the counter when set', () => {
       const component = shallow(
-        <TextInputWithLimit defaultValue="Test" limit={ 15 } />
+        <TextInputWithLimit defaultValue="Test" limit={15} />
       )
       const counter = component.find('.k-TextInputLimit__counter')
       expect(counter.text()).toBe('11')
@@ -42,7 +41,7 @@ describe('<TextInputWithLimit />', () => {
 
     it('adds an error when over the limit', () => {
       const component = shallow(
-        <TextInputWithLimit defaultValue="Test" limit={ 3 } />
+        <TextInputWithLimit defaultValue="Test" limit={3} />
       )
       const counter = component.find('.k-TextInputLimit__counter')
       expect(counter.text()).toBe('-1')
@@ -51,9 +50,7 @@ describe('<TextInputWithLimit />', () => {
   })
 
   describe('disabled prop', () => {
-    const component = shallow(
-      <TextInputWithLimit disabled />
-    )
+    const component = shallow(<TextInputWithLimit disabled />)
 
     it('is disabled', () => {
       expect(component.hasClass('is-disabled')).toBe(true)
@@ -63,9 +60,7 @@ describe('<TextInputWithLimit />', () => {
 
   describe('on onChange event', () => {
     it('updates the TextInput value', () => {
-      const component = mount(
-        <TextInputWithLimit limit={ 15 } />
-      )
+      const component = mount(<TextInputWithLimit limit={15} />)
 
       const input = component.find('input')
       component.setState({ value: 'Test' })
@@ -79,9 +74,7 @@ describe('<TextInputWithLimit />', () => {
   describe('with onChange prop', () => {
     const handleChange = () => {}
     const onChangeSpy = sandbox.spy(handleChange)
-    const component = mount(
-      <TextInputWithLimit onChange={ onChangeSpy } />
-    )
+    const component = mount(<TextInputWithLimit onChange={onChangeSpy} />)
 
     beforeAll(() => {
       const input = component.find('input')

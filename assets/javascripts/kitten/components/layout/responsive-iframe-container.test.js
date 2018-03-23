@@ -1,6 +1,5 @@
 import React from 'react'
-import { ResponsiveIframeContainer }
-  from 'kitten/components/layout/responsive-iframe-container'
+import { ResponsiveIframeContainer } from 'kitten/components/layout/responsive-iframe-container'
 
 describe('<ResponsiveIframeContainer />', () => {
   describe('by default', () => {
@@ -44,9 +43,7 @@ describe('<ResponsiveIframeContainer />', () => {
   })
 
   describe('with ratio prop', () => {
-    const component = shallow(
-      <ResponsiveIframeContainer ratio='42'/>
-    )
+    const component = shallow(<ResponsiveIframeContainer ratio="42" />)
 
     it('has a ratio of 42%', () => {
       const ratioProp = { paddingBottom: '42%' }

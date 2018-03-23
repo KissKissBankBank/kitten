@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import { SimilarProjectCard }
-  from 'kitten/components/cards/project-similar-card'
+import { SimilarProjectCard } from 'kitten/components/cards/project-similar-card'
 import { Title } from 'kitten/components/typography/title'
 import { Paragraph } from 'kitten/components/typography/paragraph'
 import { TagList } from 'kitten/components/lists/tag-list'
@@ -19,7 +18,9 @@ describe('<SimilarProjectCard />', () => {
     })
 
     it('has a default class', () => {
-      expect(similarProjectCard.render().hasClass('k-ProjectSimilarCard')).toBe(true)
+      expect(similarProjectCard.render().hasClass('k-ProjectSimilarCard')).toBe(
+        true
+      )
     })
 
     it('adds the right class to the content tag', () => {
@@ -65,7 +66,8 @@ describe('<SimilarProjectCard />', () => {
 
   describe('with title prop', () => {
     const similarProjectCard = mount(
-      <SimilarProjectCard title="Custom title" />)
+      <SimilarProjectCard title="Custom title" />
+    )
     const title = similarProjectCard.find('.k-Title')
 
     it('renders a <Title />', () => {
@@ -76,7 +78,8 @@ describe('<SimilarProjectCard />', () => {
 
   describe('with paragraph prop', () => {
     const similarProjectCard = mount(
-      <SimilarProjectCard paragraph="Custom paragraph" />)
+      <SimilarProjectCard paragraph="Custom paragraph" />
+    )
     const paragraph = similarProjectCard.find('.k-Paragraph')
 
     it('renders a <Paragraph />', () => {
@@ -88,13 +91,11 @@ describe('<SimilarProjectCard />', () => {
   describe('with tags props', () => {
     const similarProjectCard = mount(
       <SimilarProjectCard
-        tagLists={ [
+        tagLists={[
           {
-            items: [
-              { key: 'custom-tag', item: 'Custom tag' }
-            ]
-          }
-        ] }
+            items: [{ key: 'custom-tag', item: 'Custom tag' }],
+          },
+        ]}
       />
     )
 
@@ -114,16 +115,24 @@ describe('<SimilarProjectCard />', () => {
   describe('with infos props', () => {
     const similarProjectCard = mount(
       <SimilarProjectCard
-        infos={ [ { key: 'info-1',
-                    text: 'Custom text 1',
-                    value: 'Custom value 1' },
-                  { key: 'info-2',
-                    text: 'Custom text 2',
-                    value: 'Custom value 2',
-                    locked: true },
-                  { key: 'info-3',
-                    text: 'Custom text 3',
-                    value: 'Custom value 3' } ] }
+        infos={[
+          {
+            key: 'info-1',
+            text: 'Custom text 1',
+            value: 'Custom value 1',
+          },
+          {
+            key: 'info-2',
+            text: 'Custom text 2',
+            value: 'Custom value 2',
+            locked: true,
+          },
+          {
+            key: 'info-3',
+            text: 'Custom text 3',
+            value: 'Custom value 3',
+          },
+        ]}
       />
     )
     const infos = similarProjectCard.find('.k-ProjectSimilarCard__info')
@@ -151,9 +160,13 @@ describe('<SimilarProjectCard />', () => {
     const similarProjectCard = mount(
       <SimilarProjectCard
         coloredInfosValues
-        infos={ [ { key: 'info-1',
-                    text: 'Custom text 1',
-                    value: 'Custom value 1' } ] }
+        infos={[
+          {
+            key: 'info-1',
+            text: 'Custom text 1',
+            value: 'Custom value 1',
+          },
+        ]}
       />
     )
     const info = similarProjectCard.find('.k-ProjectSimilarCard__info').first()
@@ -200,7 +213,7 @@ describe('<SimilarProjectCard />', () => {
   describe('with onRefreshClick prop', () => {
     const handleRefreshClick = () => {}
     const similarProjectCard = mount(
-      <SimilarProjectCard onRefreshClick={ handleRefreshClick } />
+      <SimilarProjectCard onRefreshClick={handleRefreshClick} />
     )
     const refreshLink = similarProjectCard.find(
       '.k-ProjectSimilarCard__refresh__link'
@@ -232,7 +245,7 @@ describe('<SimilarProjectCard />', () => {
   describe('with onLeftArrowClick prop', () => {
     const handleOnLeftArrowClick = () => {}
     const similarProjectCard = mount(
-      <SimilarProjectCard onLeftArrowClick={ handleOnLeftArrowClick } />
+      <SimilarProjectCard onLeftArrowClick={handleOnLeftArrowClick} />
     )
     const leftArrowButton = similarProjectCard.find('.k-ButtonIcon').first()
 
@@ -244,7 +257,7 @@ describe('<SimilarProjectCard />', () => {
   describe('with onRightArrowClick prop', () => {
     const handleOnRightArrowClick = () => {}
     const similarProjectCard = mount(
-      <SimilarProjectCard onRightArrowClick={ handleOnRightArrowClick } />
+      <SimilarProjectCard onRightArrowClick={handleOnRightArrowClick} />
     )
     const rightArrowButton = similarProjectCard.find('.k-ButtonIcon').last()
 
@@ -261,9 +274,11 @@ describe('<SimilarProjectCard />', () => {
     describe('with loading prop', () => {
       describe('by default', () => {
         const similarProjectCard = mount(
-          <SimilarProjectCard link={ linkProps } loading />
+          <SimilarProjectCard link={linkProps} loading />
         )
-        const content = similarProjectCard.find('.k-ProjectSimilarCard__content')
+        const content = similarProjectCard.find(
+          '.k-ProjectSimilarCard__content'
+        )
 
         it('renders a <div> tag for the content', () => {
           expect(content.render().is('div')).toBe(true)
@@ -280,9 +295,11 @@ describe('<SimilarProjectCard />', () => {
           target: '_self',
         }
         const similarProjectCard = mount(
-          <SimilarProjectCard link={ withTargetLinkProps } loading />
+          <SimilarProjectCard link={withTargetLinkProps} loading />
         )
-        const content = similarProjectCard.find('.k-ProjectSimilarCard__content')
+        const content = similarProjectCard.find(
+          '.k-ProjectSimilarCard__content'
+        )
 
         it('passes the right props to the <div> tag', () => {
           expect(content.props()).not.toMatchObject({ href: 'target' })
@@ -295,9 +312,11 @@ describe('<SimilarProjectCard />', () => {
           className: 'custom-classname',
         }
         const similarProjectCard = mount(
-          <SimilarProjectCard link={ withClassNameLinkProps } loading />
+          <SimilarProjectCard link={withClassNameLinkProps} loading />
         )
-        const content = similarProjectCard.find('.k-ProjectSimilarCard__content')
+        const content = similarProjectCard.find(
+          '.k-ProjectSimilarCard__content'
+        )
 
         it('passes the right props to the <div> tag', () => {
           expect(content.props()).not.toMatchObject({ href: 'target' })
@@ -314,9 +333,11 @@ describe('<SimilarProjectCard />', () => {
           title: 'custom-title',
         }
         const similarProjectCard = mount(
-          <SimilarProjectCard link={ withTitleLinkProps } loading />
+          <SimilarProjectCard link={withTitleLinkProps} loading />
         )
-        const content = similarProjectCard.find('.k-ProjectSimilarCard__content')
+        const content = similarProjectCard.find(
+          '.k-ProjectSimilarCard__content'
+        )
 
         it('passes the right props to the <div> tag', () => {
           expect(content.props()).not.toMatchObject({ href: 'title' })
@@ -327,9 +348,11 @@ describe('<SimilarProjectCard />', () => {
     describe('without loading prop', () => {
       describe('by default', () => {
         const similarProjectCard = mount(
-          <SimilarProjectCard link={ linkProps } />
+          <SimilarProjectCard link={linkProps} />
         )
-        const content = similarProjectCard.find('.k-ProjectSimilarCard__content')
+        const content = similarProjectCard.find(
+          '.k-ProjectSimilarCard__content'
+        )
 
         it('renders a <a> tag for the content', () => {
           expect(content.render().is('a')).toBe(true)
@@ -351,9 +374,11 @@ describe('<SimilarProjectCard />', () => {
           target: '_self',
         }
         const similarProjectCard = mount(
-          <SimilarProjectCard link={ withTargetLinkProps } />
+          <SimilarProjectCard link={withTargetLinkProps} />
         )
-        const content = similarProjectCard.find('.k-ProjectSimilarCard__content')
+        const content = similarProjectCard.find(
+          '.k-ProjectSimilarCard__content'
+        )
 
         it('passes the right props to the <a> tag', () => {
           const expectedProps = {
@@ -371,9 +396,11 @@ describe('<SimilarProjectCard />', () => {
           className: 'custom-classname',
         }
         const similarProjectCard = mount(
-          <SimilarProjectCard link={ withClassNameLinkProps } />
+          <SimilarProjectCard link={withClassNameLinkProps} />
         )
-        const content = similarProjectCard.find('.k-ProjectSimilarCard__content')
+        const content = similarProjectCard.find(
+          '.k-ProjectSimilarCard__content'
+        )
 
         it('passes the right props to the <a> tag', () => {
           const expectedProps = {
@@ -391,9 +418,11 @@ describe('<SimilarProjectCard />', () => {
           title: 'custom-title',
         }
         const similarProjectCard = mount(
-          <SimilarProjectCard link={ withTitleLinkProps } />
+          <SimilarProjectCard link={withTitleLinkProps} />
         )
-        const content = similarProjectCard.find('.k-ProjectSimilarCard__content')
+        const content = similarProjectCard.find(
+          '.k-ProjectSimilarCard__content'
+        )
 
         it('passes the right props to the <a> tag', () => {
           const expectedProps = {

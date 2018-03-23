@@ -5,9 +5,6 @@
 /// @type Map
 $k-vertical-margin-schema: (
   type: 'map',
-
-  properties: (
-    top:    k-number-schema($unit: none),
-    bottom: k-number-schema($unit: none)
-  )
+  properties:
+    (top: k-number-schema($unit: none), bottom: k-number-schema($unit: none))
 );

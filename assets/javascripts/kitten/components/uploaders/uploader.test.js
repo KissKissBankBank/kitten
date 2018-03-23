@@ -40,11 +40,11 @@ describe('<Uploader />', () => {
   describe('with theme prop', () => {
     const component = mount(
       <Uploader
-        theme={ CustomTheme }
+        theme={CustomTheme}
         buttonLabel="Custom label"
         disabled
         fileName="custom-filename.jpg"
-        deletable={ false }
+        deletable={false}
       />
     )
     const theme = component.find(CustomTheme).first()

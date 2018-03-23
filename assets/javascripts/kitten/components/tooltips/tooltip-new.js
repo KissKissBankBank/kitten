@@ -4,30 +4,19 @@ import { Marger } from 'kitten/components/layout/marger'
 
 export class TooltipNew extends Component {
   renderArrow() {
-    return (
-      <span className="k-TooltipNew__arrow" />
-    )
+    return <span className="k-TooltipNew__arrow" />
   }
 
   render() {
-    const { children,
-            className,
-            ...others } = this.props
+    const { children, className, ...others } = this.props
 
-    const tooltipNewClassName = classNames(
-      'k-TooltipNew',
-      className,
-    )
+    const tooltipNewClassName = classNames('k-TooltipNew', className)
 
     return (
-      <div
-        className={ tooltipNewClassName }
-        role="tooltip"
-        { ...others }
-      >
+      <div className={tooltipNewClassName} role="tooltip" {...others}>
         <Marger top="2" bottom="2">
-          { children }
-          { this.renderArrow() }
+          {children}
+          {this.renderArrow()}
         </Marger>
       </div>
     )

@@ -68,7 +68,7 @@
         @extend %k-col-#{$media};
       }
 
-    // For all other widths, add breakpoint suffixes (@s, @m, @l, …)
+      // For all other widths, add breakpoint suffixes (@s, @m, @l, …)
     } @else {
       .k-Grid__col--#{$columns}\@#{$media} {
         @include k-grid-colSize($columns);
@@ -86,7 +86,7 @@
         @include k-grid-offset($columns);
       }
 
-    // For all other widths, add breakpoint suffixes (@s, @m, @l, …)
+      // For all other widths, add breakpoint suffixes (@s, @m, @l, …)
     } @else {
       .k-Grid__col--offset-#{$columns}\@#{$media} {
         @include k-grid-offset($columns);

@@ -17,14 +17,8 @@
 ///   // Will return a schema accepting only numbers in ems or rems.
 @function k-number-schema($unit: null) {
   @if $unit != null {
-    @return (
-      type: 'number',
-      unit: $unit
-    );
-  }
-  @else {
-    @return (
-      type: 'number'
-    );
+    @return (type: 'number', unit: $unit);
+  } @else {
+    @return (type: 'number');
   }
 }

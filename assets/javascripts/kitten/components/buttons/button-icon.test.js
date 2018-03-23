@@ -8,7 +8,7 @@ describe('<ButtonIcon />', () => {
     it('it a <ButtonIcon />', () => {
       expect(component.find('button')).toHaveLength(1)
       expect(component.hasClass('k-ButtonIcon')).toBe(true)
-      expect(component.props.tabindex).toBe(void(0))
+      expect(component.props.tabindex).toBe(void 0)
     })
   })
 

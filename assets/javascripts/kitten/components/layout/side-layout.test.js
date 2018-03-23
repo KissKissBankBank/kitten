@@ -4,9 +4,7 @@ import { SideLayout } from 'kitten/components/layout/side-layout'
 describe('<SideLayout />', () => {
   describe('by default', () => {
     const component = mount(
-      <SideLayout className="myAwesomeClass">
-        …
-      </SideLayout>
+      <SideLayout className="myAwesomeClass">…</SideLayout>
     )
 
     it('renders a <div class="myAwesomeClass" />', () => {
@@ -16,9 +14,7 @@ describe('<SideLayout />', () => {
 
   describe('with sidebar prop', () => {
     const component = mount(
-      <SideLayout sidebar='Sidebar content'>
-        …
-      </SideLayout>
+      <SideLayout sidebar="Sidebar content">…</SideLayout>
     )
 
     const sideGridAside = component.find('.k-SideGrid__aside')
@@ -29,11 +25,7 @@ describe('<SideLayout />', () => {
   })
 
   describe('with children', () => {
-    const component = mount(
-      <SideLayout>
-        Lorem ipsum…
-      </SideLayout>
-    )
+    const component = mount(<SideLayout>Lorem ipsum…</SideLayout>)
 
     it('has a content', () => {
       expect(component.text()).toBe('Lorem ipsum…')

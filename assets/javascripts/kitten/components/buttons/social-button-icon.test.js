@@ -29,8 +29,7 @@ describe('<FacebookButtonIcon />', () => {
   describe('with other props', () => {
     const button = shallow(
       <FacebookButtonIcon
-        className={ classNames('k-ButtonIcon__svg',
-                               'custom__class') }
+        className={classNames('k-ButtonIcon__svg', 'custom__class')}
       />
     )
 
@@ -58,8 +57,7 @@ describe('<TwitterButtonIcon />', () => {
   describe('with other props', () => {
     const button = shallow(
       <TwitterButtonIcon
-        className={ classNames('k-ButtonIcon__svg',
-                               'custom__class') }
+        className={classNames('k-ButtonIcon__svg', 'custom__class')}
       />
     )
 
@@ -87,8 +85,7 @@ describe('<LinkedinButtonIcon />', () => {
   describe('with other props', () => {
     const button = shallow(
       <LinkedinButtonIcon
-        className={ classNames('k-ButtonIcon__svg',
-                               'custom__class') }
+        className={classNames('k-ButtonIcon__svg', 'custom__class')}
       />
     )
 
@@ -116,8 +113,7 @@ describe('<InstagramButtonIcon />', () => {
   describe('with other props', () => {
     const button = shallow(
       <InstagramButtonIcon
-        className={ classNames('k-ButtonIcon__svg',
-                               'custom__class') }
+        className={classNames('k-ButtonIcon__svg', 'custom__class')}
       />
     )
 
