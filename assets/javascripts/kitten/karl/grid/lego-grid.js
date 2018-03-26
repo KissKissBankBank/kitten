@@ -55,16 +55,16 @@ export const KarlLegoGrid12Items = () => {
     <div className={ karlLegoGridClassName }>
       <Grid>
         <GridCol col="12">
-          <LegoGrid masonryProps={ masonryProps }>
+          <LegoGrid
+            masonryProps={ masonryProps }
+            items-xxs-up="1"
+            items-xs-up="3"
+            items-s-up="4"
+            items-m-up="6"
+            items-l-up="12"
+          >
             { cards.map(index =>
-              <LegoGrid.Item
-                key={ index }
-                col-xxs-up="1"
-                col-xs-up="3"
-                col-s-up="4"
-                col-m-up="6"
-                col-l-up="12"
-              >
+              <LegoGrid.Item key={ index }>
                 <div
                   className="karl-ProjectCard"
                   style={ { height: '200px' } }

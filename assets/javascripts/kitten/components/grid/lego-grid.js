@@ -6,7 +6,27 @@ import { NUM_COLUMNS } from 'kitten/constants/grid-config'
 
 export const LegoGrid = props => {
   const { className, masonryProps, children, ...others } = props
-  const gridClassName = classNames('k-LegoGrid', className)
+  const classByMediaQuery = () => {
+    const classNamesByMediaQuery = Object.keys(ScreenConfig).map(size => {
+      const mediaQuery = size.toLowerCase()
+      const items = props[`items-${mediaQuery}-up`]
+
+      return classNames(
+        classNamesByMediaQuery,
+        {
+          [`k-LegoGrid--${NUM_COLUMNS/items}col@${mediaQuery}`]: items,
+        },
+      )
+    })
+
+    return classNamesByMediaQuery
+  }
+
+  const gridClassName = classNames(
+    'k-LegoGrid',
+    classByMediaQuery(),
+    className,
+  )
 
   return (
     <div className={ gridClassName } { ...others }>
@@ -18,25 +38,8 @@ export const LegoGrid = props => {
 }
 
 LegoGrid.Item = ({ children, ...props }) => {
-  const classByMediaQuery = () => {
-    const classNamesByMediaQuery = Object.keys(ScreenConfig).map(size => {
-      const mediaQuery = size.toLowerCase()
-      const col = props[`col-${mediaQuery}-up`]
-
-      return classNames(
-        classNamesByMediaQuery,
-        {
-          [`k-LegoGrid__item--${NUM_COLUMNS/col}col@${mediaQuery}`]: col,
-        },
-      )
-    })
-
-    return classNamesByMediaQuery
-  }
-
   const itemClassName = classNames(
     'k-LegoGrid__item',
-    classByMediaQuery(),
     props.className,
   )
 
