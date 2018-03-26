@@ -59,11 +59,11 @@ export const KarlLegoGrid12Items = () => {
             { cards.map(index =>
               <LegoGrid.Item
                 key={ index }
-                col-xxs-up={ 1 }
-                col-xs-up={ 3 }
-                col-s-up={ 4 }
-                col-m-up={ 6 }
-                col-l-up={ 12 }
+                col-xxs-up="1"
+                col-xs-up="3"
+                col-s-up="4"
+                col-m-up="6"
+                col-l-up="12"
               >
                 <div
                   className="karl-ProjectCard"
