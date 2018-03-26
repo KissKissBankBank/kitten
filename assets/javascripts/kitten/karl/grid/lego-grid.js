@@ -49,24 +49,22 @@ export const KarlLegoGrid = () => {
 }
 
 export const KarlLegoGrid12Items = () => {
-  const cards = Array.apply(null, { length: 12 }).map((_, index) => {
-    return {
-      key: `card-${++index}`,
-      'col-xxs-up': 1,
-      'col-xs-up': 3,
-      'col-s-up': 4,
-      'col-m-up': 6,
-      'col-l-up': 12,
-    }
-  })
+  const cards = Array.apply(null, { length: 12 }).map((_, index) => index)
 
   return (
     <div className={ karlLegoGridClassName }>
       <Grid>
         <GridCol col="12">
           <LegoGrid masonryProps={ masonryProps }>
-            { cards.map(cardProps =>
-              <LegoGrid.Item { ...cardProps }>
+            { cards.map(index =>
+              <LegoGrid.Item
+                key={ index }
+                col-xxs-up={ 1 }
+                col-xs-up={ 3 }
+                col-s-up={ 4 }
+                col-m-up={ 6 }
+                col-l-up={ 12 }
+              >
                 <div
                   className="karl-ProjectCard"
                   style={ { height: '200px' } }
