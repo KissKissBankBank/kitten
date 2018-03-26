@@ -52,7 +52,11 @@ export const KarlLegoGrid12Items = () => {
   const cards = Array.apply(null, { length: 12 }).map((_, index) => {
     return {
       key: `card-${++index}`,
-      height: '200px',
+      'col-xxs-up': 1,
+      'col-xs-up': 3,
+      'col-s-up': 4,
+      'col-m-up': 6,
+      'col-l-up': 12,
     }
   })
 
@@ -61,18 +65,11 @@ export const KarlLegoGrid12Items = () => {
       <Grid>
         <GridCol col="12">
           <LegoGrid masonryProps={ masonryProps }>
-            { cards.map(card =>
-              <LegoGrid.Item
-                key={ card.key }
-                col-xxs-up='1'
-                col-xs-up='3'
-                col-s-up='4'
-                col-m-up='6'
-                col-l-up='12'
-              >
+            { cards.map(cardProps =>
+              <LegoGrid.Item { ...cardProps }>
                 <div
                   className="karl-ProjectCard"
-                  style={ { height: card.height } }
+                  style={ { height: '200px' } }
                 />
               </LegoGrid.Item>
             ) }
