@@ -32,7 +32,25 @@
     }
   }
 
+  @each $name, $query in $k-media-queries {
+    @include k-LegoGridCols($name);
+  }
+
   .k-LegoGrid__item__content {
     margin: 0 k-px-to-rem(10px) k-px-to-rem(20px);
+  }
+}
+
+@mixin k-LegoGridCols($media) {
+  $number-of-columns: k-map-fetch($k-grid, 'columns');
+
+  @for $columns from 1 through $number-of-columns {
+    .k-LegoGrid--#{$columns}col\@#{$media} {
+      .k-LegoGrid__item {
+        @include k-media-min($media) {
+          @include k-grid-colSize($columns, $flexible: false);
+        }
+      }
+    }
   }
 }
