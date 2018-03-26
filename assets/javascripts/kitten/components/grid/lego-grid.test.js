@@ -36,6 +36,22 @@ describe('<LegoGrid />', () => {
     })
   })
 
+  describe('with col size prop', () => {
+    const legoGrid = shallow(<LegoGrid items-xxs-up='2' items-l-up='12' />)
+    const lCol = NUM_COLUMNS / 12
+    const xxsCol = NUM_COLUMNS / 2
+    const lClass = `k-LegoGrid--${lCol}col@l`
+    const xssClass = `k-LegoGrid--${xxsCol}col@xxs`
+
+    it(`has .${lClass} has class`, () => {
+      expect(legoGrid.hasClass(lClass)).toBe(true)
+    })
+
+    it(`has .${xssClass} has class`, () => {
+      expect(legoGrid.hasClass(xssClass)).toBe(true)
+    })
+  })
+
   describe('with a custom class', () => {
     const legoGrid = shallow(<LegoGrid className="custom__class" />)
 
@@ -56,22 +72,6 @@ describe('<LegoGrid.Item />', () => {
     it('has default classes', () => {
       expect(legoGridItem.hasClass('k-LegoGrid__item')).toBe(true)
       expect(legoGridItem.find('.k-LegoGrid__item__content').exists()).toBe(true)
-    })
-  })
-
-  describe('with col size prop', () => {
-    const legoGridItem = shallow(<LegoGrid.Item col-xxs-up='2' col-l-up='12' />)
-    const lCol = NUM_COLUMNS / 12
-    const xxsCol = NUM_COLUMNS / 2
-    const lClass = `k-LegoGrid__item--${lCol}col@l`
-    const xssClass = `k-LegoGrid__item--${xxsCol}col@xxs`
-
-    it(`has .${lClass} has class`, () => {
-      expect(legoGridItem.hasClass(lClass)).toBe(true)
-    })
-
-    it(`has .${xssClass} has class`, () => {
-      expect(legoGridItem.hasClass(xssClass)).toBe(true)
     })
   })
 
