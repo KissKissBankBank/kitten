@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Add `backgroundColor` props on `CrowdfundingCard` component.
+
 ## [20.4.0] - 2018-03-26
 
 Feature:
