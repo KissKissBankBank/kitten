@@ -5,6 +5,7 @@ exports[`<CrowdfundingCard /> by default matches with snapshot 1`] = `
   data-radium={true}
 >
   <div
+    backgroundColor="#d8d8d8"
     className="k-Card k-Card--light k-Card--withoutBoxShadowOnHover"
     data-radium={true}
     href={null}
@@ -21,7 +22,7 @@ exports[`<CrowdfundingCard /> by default matches with snapshot 1`] = `
       data-radium={true}
       style={
         Object {
-          "backgroundColor": "#d8d8d8",
+          "backgroundColor": undefined,
           "marginBottom": null,
           "marginTop": null,
           "overflow": "hidden",
@@ -196,6 +197,7 @@ exports[`<CrowdfundingCard /> with loading prop matches with snapshot 1`] = `
   data-radium={true}
 >
   <div
+    backgroundColor="#d8d8d8"
     className="k-Card k-Card--light k-Card--withoutBoxShadowOnHover"
     data-radium={true}
     href={null}
@@ -212,7 +214,7 @@ exports[`<CrowdfundingCard /> with loading prop matches with snapshot 1`] = `
       data-radium={true}
       style={
         Object {
-          "backgroundColor": "#d8d8d8",
+          "backgroundColor": undefined,
           "marginBottom": null,
           "marginTop": null,
           "overflow": "hidden",
@@ -417,6 +419,7 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
   data-radium={true}
 >
   <a
+    backgroundColor="#d8d8d8"
     className="k-Card k-Card--light k-Card--withoutBoxShadowOnHover"
     data-radium={true}
     href="#foobar"
@@ -433,7 +436,7 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
       data-radium={true}
       style={
         Object {
-          "backgroundColor": "#d8d8d8",
+          "backgroundColor": "#eee",
           "marginBottom": null,
           "marginTop": null,
           "overflow": "hidden",

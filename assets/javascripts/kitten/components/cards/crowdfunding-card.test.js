@@ -46,6 +46,7 @@ describe('<CrowdfundingCard />', () => {
           imageProps={{
             src: '#image',
             alt: 'Image alt',
+            backgroundColor: '#eee',
           }}
           avatarProps={{
             src: '#avatar',
