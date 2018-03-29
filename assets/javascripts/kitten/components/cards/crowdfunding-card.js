@@ -89,7 +89,7 @@ class CrowdfundingCardComponent extends Component {
         className="k-Card__imageContainer"
         style={{
           ...styles.imageContainer,
-          backgroundColor: backgroundColor,
+          backgroundColor: this.props.loading ? COLORS.line2 : backgroundColor,
         }}
       >
         { !this.props.loading &&
@@ -100,7 +100,7 @@ class CrowdfundingCardComponent extends Component {
             style={{
               ...imageProps.style,
               ...styles.image,
-              color: color,
+              color,
             }}
           />
         }
@@ -357,6 +357,9 @@ const styles = {
     overflow: 'hidden',
     position: 'relative',
     paddingTop: `${9 / 16 * 100}%`,
+  },
+  imageContainerLoading: {
+    backgroundColor: COLORS.line2,
   },
   image: {
     position: 'absolute',
