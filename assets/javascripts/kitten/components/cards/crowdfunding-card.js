@@ -75,6 +75,7 @@ class CrowdfundingCardComponent extends Component {
     const {
       alt,
       backgroundColor,
+      color,
       ...imageProps,
     } = this.props.imageProps
 
@@ -86,14 +87,21 @@ class CrowdfundingCardComponent extends Component {
     return (
       <Marger
         className="k-Card__imageContainer"
-        style={ { ...styles.imageContainer, backgroundColor: backgroundColor } }
+        style={{
+          ...styles.imageContainer,
+          backgroundColor: backgroundColor,
+        }}
       >
         { !this.props.loading &&
           <img
             { ...imageProps }
             alt={ alt || '' }
             className={ imageClassName }
-            style={ { ...imageProps.style, ...styles.image } }
+            style={{
+              ...imageProps.style,
+              ...styles.image,
+              color: color,
+            }}
           />
         }
       </Marger>
@@ -355,6 +363,7 @@ const styles = {
     top: 0,
     width: '100%',
     display: 'block',
+    textAlign: 'center',
   },
   header: {
     grid: {
@@ -500,8 +509,8 @@ const styles = {
 
 CrowdfundingCardComponent.defaultProps = {
   href: null,
-  backgroundColor: COLORS.line2,
   imageProps: {
+    backgroundColor: COLORS.line2,
     src: 'https://placehold.it/350x200/caf4fe/caf4fe',
     alt: '',
   },
