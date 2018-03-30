@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { Component } from 'react'
 import classNames from 'classnames'
 
-export class Badge extends React.Component {
+export class Badge extends Component {
   render() {
     const { className, spaced, ...others } = this.props
     const badgeClassName = classNames(
