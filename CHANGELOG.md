@@ -5,9 +5,24 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Update A11Y on `Modal` component.
-- Fix: Update `k-Badge` padding.
-- Fix: Update `CrowdfundingCard` image transition.
-- Feature: Add `oxygen` modifier on all `Button` components.
+
+## [20.4.0] - 2018-03-26
+
+Feature:
+- Add `items-sizeScreen-up` props to `LegoGrid` component.
+
+Fix:
+- Remove `textProps` props from `inputProps` Checkbox component.
+
+## [20.3.0] - 2018-03-22
+
+Features:
+- Add `PasswordIcon` and `PasswordInput` components.
+- Add `oxygen` modifier on all `Button` components.
+
+Fixes:
+- Update `k-Badge` padding.
+- Update `CrowdfundingCard` image transition.
 
 ## [20.2.0] - 2018-03-15
 
