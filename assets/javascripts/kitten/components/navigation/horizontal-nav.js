@@ -4,15 +4,6 @@ import classNames from 'classnames'
 import Markdown from 'react-markdown'
 
 export class HorizontalNav extends Component {
-  renderNotification() {
-    if (!this.props.notification) return
-    return (
-      <div>
-        <Badge />
-      </div>
-    )
-  }
-
   renderItems() {
     const { items } = this.props
 
@@ -26,7 +17,6 @@ export class HorizontalNav extends Component {
       text,
       key,
       href,
-      notification,
       ...others,
     } = item
 
@@ -52,7 +42,6 @@ export class HorizontalNav extends Component {
           } }
         >
           <Markdown softBreak="br" source={ text } />
-          { this.renderNotification() }
         </a>
       </li>
     )
@@ -89,6 +78,5 @@ HorizontalNav.defaultProps = {
   height: 'auto',
   center: false,
   elementClassName: null,
-  items: [],
-  notification: false,
+  items: [], // Eg: [{ key: …, text: …, href: …, selected: … }]
 }
