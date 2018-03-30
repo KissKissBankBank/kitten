@@ -535,7 +535,7 @@ exports[`<ArticleCard /> with some props matches with snapshot 1`] = `
       data-radium={true}
       style={
         Object {
-          "backgroundColor": undefined,
+          "backgroundColor": "#d8d8d8",
           "marginBottom": null,
           "marginTop": null,
           "overflow": "hidden",
@@ -551,7 +551,7 @@ exports[`<ArticleCard /> with some props matches with snapshot 1`] = `
         src="#image"
         style={
           Object {
-            "color": undefined,
+            "color": "#333",
             "display": "block",
             "position": "absolute",
             "textAlign": "center",
