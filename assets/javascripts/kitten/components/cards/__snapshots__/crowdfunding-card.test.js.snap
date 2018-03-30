@@ -435,7 +435,7 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
       data-radium={true}
       style={
         Object {
-          "backgroundColor": "#eee",
+          "backgroundColor": "#d8d8d8",
           "marginBottom": null,
           "marginTop": null,
           "overflow": "hidden",

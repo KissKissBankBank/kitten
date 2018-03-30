@@ -357,6 +357,7 @@ const styles = {
     overflow: 'hidden',
     position: 'relative',
     paddingTop: `${9 / 16 * 100}%`,
+    backgroundColor: COLORS.line2,
   },
   imageContainerLoading: {
     backgroundColor: COLORS.line2,
