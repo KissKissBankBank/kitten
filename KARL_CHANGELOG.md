@@ -4,8 +4,18 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `oxygen` modifier all buttons examples.
-- Fix: Update `background-color` on the styleguide.
+## [20.4.0] - 2018-03-26
+
+Feature:
+- Add `KarlLegoGrid12Items` example.
+
+## [20.3.0] - 2018-03-22
+
+Feature:
+- Add `oxygen` modifier all buttons examples.
+
+Fix:
+- Update `background-color` on the styleguide.
 
 ## [20.2.0] - 2018-03-15
 
