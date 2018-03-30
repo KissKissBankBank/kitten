@@ -52,6 +52,7 @@ export class Modal extends Component {
       trigger,
       content,
       label,
+      role,
       labelledby,
       describedby,
       className,
@@ -64,10 +65,16 @@ export class Modal extends Component {
     )
 
     return (
-      <div className={ triggerClassNames } { ...others }>
+      <div
+        className={ triggerClassNames }
+        { ...others }
+      >
         { this.renderTriggerAction() }
 
         <ReactModal
+          role={ role }
+          ariaHidden="true"
+          // ariaHiddenApp={ false }
           className={{
             base: 'k-Modal__content',
             afterOpen: 'k-Modal--afterOpen',
@@ -103,6 +110,7 @@ Modal.propTypes = {
 }
 
 Modal.defaultProps = {
+  role: 'dialog',
   label: 'Modal',
   labelledby: 'heading',
   describedby: 'full_description',
