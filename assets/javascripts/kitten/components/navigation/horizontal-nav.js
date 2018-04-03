@@ -15,6 +15,7 @@ export class HorizontalNav extends Component {
       className,
       selected,
       text,
+      badge,
       key,
       href,
       ...others,
@@ -25,6 +26,17 @@ export class HorizontalNav extends Component {
       className,
       { 'is-selected': selected },
     )
+
+    const renderBadge =
+      <div>
+        { text }
+        <Badge className="k-HorizontalNav__badge">
+          { badge }
+        </Badge>
+      </div>
+
+    const renderMarkdown =
+     <Markdown softBreak="br" source={ text } />
 
     return (
       <li
@@ -41,7 +53,7 @@ export class HorizontalNav extends Component {
             height: this.props.height,
           } }
         >
-          <Markdown softBreak="br" source={ text } />
+          { item.badge ? renderBadge : renderMarkdown }
         </a>
       </li>
     )
@@ -78,5 +90,5 @@ HorizontalNav.defaultProps = {
   height: 'auto',
   center: false,
   elementClassName: null,
-  items: [], // Eg: [{ key: …, text: …, href: …, selected: … }]
+  items: [], // Eg: [{ key: …, text: …, href: …, selected: …, badge: … }]
 }

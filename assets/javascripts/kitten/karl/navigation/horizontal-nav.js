@@ -48,8 +48,9 @@ export const KarlTouchHorizontalNavWithNotification = props => {
       text: 'Projet d’entreprise',
       href: '#',
       selected: true,
+      badge: 3,
     },
-    { key: 'key2', text: 'Énergies renouvelables', href: '#' },
+    { key: 'key2', text: 'Énergies renouvelables', href: '#'},
     { key: 'key3', text: 'Immobilier', href: '#' },
   ]
 
