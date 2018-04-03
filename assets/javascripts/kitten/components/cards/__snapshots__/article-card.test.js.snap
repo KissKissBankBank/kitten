@@ -37,8 +37,10 @@ exports[`<ArticleCard /> by default matches with snapshot 1`] = `
         src="https://placehold.it/350x200/caf4fe/caf4fe"
         style={
           Object {
+            "color": undefined,
             "display": "block",
             "position": "absolute",
+            "textAlign": "center",
             "top": 0,
             "width": "100%",
           }
@@ -204,8 +206,10 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
         src="https://placehold.it/350x200/caf4fe/caf4fe"
         style={
           Object {
+            "color": undefined,
             "display": "block",
             "position": "absolute",
+            "textAlign": "center",
             "top": 0,
             "width": "100%",
           }
@@ -378,8 +382,10 @@ exports[`<ArticleCard /> with ignored props matches with snapshot 1`] = `
         src="https://placehold.it/350x200/caf4fe/caf4fe"
         style={
           Object {
+            "color": undefined,
             "display": "block",
             "position": "absolute",
+            "textAlign": "center",
             "top": 0,
             "width": "100%",
           }
@@ -545,8 +551,10 @@ exports[`<ArticleCard /> with some props matches with snapshot 1`] = `
         src="#image"
         style={
           Object {
+            "color": "#333",
             "display": "block",
             "position": "absolute",
+            "textAlign": "center",
             "top": 0,
             "width": "100%",
           }

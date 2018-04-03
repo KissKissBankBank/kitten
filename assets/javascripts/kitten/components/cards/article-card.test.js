@@ -25,6 +25,8 @@ describe('<ArticleCard />', () => {
           imageProps={{
             src: '#image',
             alt: 'Image alt',
+            backgroundColor: '#d8d8d8',
+            color: '#333',
           }}
           avatarProps={{
             src: '#avatar',
