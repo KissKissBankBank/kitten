@@ -11,6 +11,7 @@ export class Checkbox extends Component {
       children,
       inputClassName,
       error,
+      textProps,
       ...inputProps,
     } = this.props
 
@@ -33,7 +34,7 @@ export class Checkbox extends Component {
           htmlFor={ id }
           className="k-Checkbox__label"
         >
-          <Text { ...this.props.textProps }>
+          <Text { ...textProps }>
             { children }
           </Text>
         </label>

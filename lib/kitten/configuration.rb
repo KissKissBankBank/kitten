@@ -116,6 +116,7 @@ module Kitten
               name: 'Text input with unit',
             },
             { path: 'components/form/location-input', name: 'Location input' },
+            { path: 'components/form/password-input', name: 'Password input' },
             { path: 'components/form/select', name: 'Select' },
             { path: 'components/form/switch', name: 'Switch' },
             { path: 'components/form/slider', name: 'Slider' },
