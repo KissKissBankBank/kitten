@@ -73,7 +73,6 @@ export class Modal extends Component {
 
         <ReactModal
           role="dialog"
-          ariaHidden="true"
           className={{
             base: 'k-Modal__content',
             afterOpen: 'k-Modal--afterOpen',

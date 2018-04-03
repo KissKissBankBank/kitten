@@ -55,7 +55,7 @@ class KarlModalComponent extends Component {
 
         <Marger top="1" bottom="4">
           <Paragraph
-            id="full_description"
+            id="full-description"
             modifier="tertiary"
             margin={ false }
             tag="p"
@@ -90,6 +90,8 @@ export const KarlModal = props => (
   <Modal
     trigger={ <KarlModalButton /> }
     content={ <KarlModalComponent /> }
+    labelledby="heading"
+    describedby="full-description"
   />
 )
 
