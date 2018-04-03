@@ -110,6 +110,6 @@ Modal.propTypes = {
 
 Modal.defaultProps = {
   label: 'Modal',
-  labelledby: 'heading',
-  describedby: 'full_description',
+  labelledby: '',
+  describedby: '',
 }
