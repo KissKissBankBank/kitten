@@ -85,8 +85,8 @@ export class Modal extends Component {
           }}
           isOpen={ this.state.showModal }
           aria={{
-            labelledby: { labelledby },
-            describedby: { describedby },
+            labelledby,
+            describedby,
           }}
           onRequestClose={ this.close }
           contentLabel={ label }

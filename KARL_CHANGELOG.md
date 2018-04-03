@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Update A11Y on `KarlModal` example.
+
 ## [20.4.1] - 2018-04-03
 
 No changes.
