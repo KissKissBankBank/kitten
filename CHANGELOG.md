@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-Fix:
+Feature:
 - Add the `onClose` props to allow new actions when closing a `modal` component.
 
 ## [20.4.1] - 2018-04-03
