@@ -22,6 +22,9 @@ export class Modal extends Component {
 
   close() {
     this.setState({ showModal: false })
+    if(this.props.onClose) {
+      this.props.onClose()
+    }
   }
 
   renderCloseModal() {
@@ -52,6 +55,7 @@ export class Modal extends Component {
       content,
       label,
       className,
+      onClose,
       ...others,
     } = this.props
 

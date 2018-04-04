@@ -1,8 +1,11 @@
 import React from 'react'
 import classNames from 'classnames'
+import sinon from 'sinon'
 import { Modal } from 'kitten/components/modals/modal'
 
 describe('<Modal />', () => {
+  const sandbox = sinon.sandbox.create()
+
   describe('with trigger', () => {
     const component = mount(
       <Modal trigger={ <span className="trigger-example" /> } />
@@ -21,6 +24,27 @@ describe('<Modal />', () => {
     it('contains the content', () => {
       expect(component.render().hasClass('content-example')).toBe(true)
       expect(component.render().hasClass('k-Modal')).toBe(true)
+    })
+
+    describe('with onClose prop', () => {
+      let onCloseSpy
+      let modalComponent
+
+      beforeAll(() => {
+        onCloseSpy = sandbox.spy()
+        modalComponent = mount(
+          <Modal
+            className="content-example"
+            onClose={ onCloseSpy }
+          />
+        )
+
+        modalComponent.instance().close()
+      })
+
+      it('calls onClose prop callback', () => {
+        expect(onCloseSpy.calledOnce).toBe(true)
+      })
     })
   })
 })

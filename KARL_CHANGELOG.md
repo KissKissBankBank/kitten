@@ -7,6 +7,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fix: Rename `KarlBrowsingHorizontalNav` to `KarlTouchHorizontalNav`.
 - Feature: Add `KarlTouchHorizontalNavWithNotification` example.
 
+## [20.5.0] - 2018-04-03
+
+No changes.
+
 ## [20.4.1] - 2018-04-03
 
 No changes.
