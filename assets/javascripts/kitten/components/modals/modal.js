@@ -52,7 +52,6 @@ export class Modal extends Component {
       trigger,
       content,
       label,
-      role,
       labelledby,
       describedby,
       className,
