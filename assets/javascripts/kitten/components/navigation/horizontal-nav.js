@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import { Badge } from 'kitten/components/notifications/badge'
 import classNames from 'classnames'
 import Markdown from 'react-markdown'
@@ -28,12 +28,12 @@ export class HorizontalNav extends Component {
     )
 
     const renderBadge =
-      <div>
+      <Fragment>
         { text }
         <Badge className="k-HorizontalNav__badge">
           { badge }
         </Badge>
-      </div>
+      </Fragment>
 
     const renderMarkdown =
      <Markdown softBreak="br" source={ text } />
