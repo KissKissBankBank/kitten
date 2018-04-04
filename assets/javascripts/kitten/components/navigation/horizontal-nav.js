@@ -53,7 +53,7 @@ export class HorizontalNav extends Component {
             height: this.props.height,
           } }
         >
-          { item.badge ? renderBadge : renderMarkdown }
+          { badge ? renderBadge : renderMarkdown }
         </a>
       </li>
     )

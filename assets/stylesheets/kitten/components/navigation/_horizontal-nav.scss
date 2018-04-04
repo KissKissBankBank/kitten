@@ -61,6 +61,10 @@
     -ms-overflow-x: hidden;
   }
 
+  .k-HorizontalNav__badge {
+    margin-left: k-px-to-rem(5px);
+  }
+
   .k-HorizontalNav__element--fixedSize {
     flex-shrink: 0;
   }
