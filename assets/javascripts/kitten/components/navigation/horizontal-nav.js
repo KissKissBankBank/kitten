@@ -38,6 +38,9 @@ export class HorizontalNav extends Component {
     const renderMarkdown =
      <Markdown softBreak="br" source={ text } />
 
+    const renderTextAndBadge =
+      badge ? renderBadge : renderMarkdown
+
     return (
       <li
         className={ classNames('k-HorizontalNav__element',
@@ -53,7 +56,7 @@ export class HorizontalNav extends Component {
             height: this.props.height,
           } }
         >
-          { badge ? renderBadge : renderMarkdown }
+          { renderTextAndBadge }
         </a>
       </li>
     )
