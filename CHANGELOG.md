@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Allow `CrowdfundingCard` to have truncated `cardSubTitle`.
+
 ## [20.5.0] - 2018-04-03
 
 Feature:
