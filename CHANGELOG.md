@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Allow `CrowdfundingCard` to have truncated `cardSubTitle`.
+- Feature: Add `subTitleTruncate` prop for `CrowdfundingCard`.
 
 ## [20.5.0] - 2018-04-03
 
