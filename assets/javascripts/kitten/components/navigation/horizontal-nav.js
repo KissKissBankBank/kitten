@@ -38,8 +38,7 @@ export class HorizontalNav extends Component {
     const renderMarkdown =
      <Markdown softBreak="br" source={ text } />
 
-    const renderTextAndBadge =
-      badge ? renderBadge : renderMarkdown
+    const renderTextAndBadge = badge ? renderBadge : renderMarkdown
 
     return (
       <li
