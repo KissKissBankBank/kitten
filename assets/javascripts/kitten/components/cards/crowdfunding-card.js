@@ -176,7 +176,7 @@ class CrowdfundingCardComponent extends Component {
             className={ className }
           >
             { this.props.titleTruncate &&
-              <Truncate lines={ 2 } style={ styles.title.truncate }>
+              <Truncate lines={ 2 } style={ styles.truncate }>
                 { this.props.cardTitle }
               </Truncate>
             }
@@ -204,6 +204,8 @@ class CrowdfundingCardComponent extends Component {
       this.props.loading && styles.stroke.loading,
     ]
 
+    const truncateStyle = this.props.subTitleTruncate && styles.subtitle.text
+
     return (
       <Marger
         top="1"
@@ -218,8 +220,16 @@ class CrowdfundingCardComponent extends Component {
           <Text
             size="micro"
             weight="regular"
+            tag="p"
+            style={ truncateStyle }
           >
-            { this.props.cardSubTitle }
+            { this.props.subTitleTruncate &&
+              <Truncate style={ styles.truncate }>
+                { this.props.cardSubTitle }
+              </Truncate>
+            }
+
+            { !this.props.subTitleTruncate && this.props.cardSubTitle }
           </Text>
         }
 
@@ -402,16 +412,15 @@ const styles = {
       },
     },
   },
+  truncate: {
+    whiteSpace: 'nowrap',
+  },
   titles: {
     minHeight: '70px',
   },
   title: {
     padding: `0 ${COMPONENT_GUTTER}px`,
     lineHeight: '1',
-
-    truncate: {
-      whiteSpace: 'nowrap',
-    },
 
     loading: {
       display: 'block',
@@ -437,6 +446,11 @@ const styles = {
       backgroundColor: COLORS.line2,
       width: '80px',
       height: '12px',
+    },
+
+    text: {
+      whiteSpace: 'nowrap',
+      overflow: 'hidden',
     },
   },
   stroke: {
@@ -529,6 +543,7 @@ CrowdfundingCardComponent.defaultProps = {
   cardSubTitle: null,
   titlesMinHeight: true,
   titleTruncate: true,
+  subTitleTruncate: true,
   info1: null,
   info2: null,
   info3: null,
