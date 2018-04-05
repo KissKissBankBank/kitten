@@ -50,19 +50,18 @@
 ///   font-size:   4.236rem;
 ///   line-height: 4.5rem;
 
-@mixin k-typographyFontScale(
-  $font-step: 0,
-  $font-step-on-media: null,
-  $media-size: 's',
-  $line-height: null,
-  $line-height-on-media: null
-) {
+@mixin k-typographyFontScale($font-step: 0,
+                             $font-step-on-media: null,
+                             $media-size: 's',
+                             $line-height: null,
+                             $line-height-on-media: null) {
   @include k-typographyFontSize($font-step, $line-height);
 
   @if $font-step-on-media {
     $line-height-on-media: $line-height !default;
     @include k-media-min($media-size) {
-      @include k-typographyFontSize($font-step-on-media, $line-height-on-media);
+      @include k-typographyFontSize($font-step-on-media,
+                                    $line-height-on-media);
     }
   }
 }

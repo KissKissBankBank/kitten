@@ -38,7 +38,7 @@
   $status-size: -3; // 11px
 
   $status-icon-size: k-px-to-rem(10px);
-  $transition-duration: 0.2s;
+  $transition-duration: .2s;
 
   .k-ProjectCreatorCard {
     text-align: left;
@@ -117,4 +117,5 @@
     @include k-typographyFont($status-font);
     @include k-typographyFontSize($status-size);
   }
+
 }

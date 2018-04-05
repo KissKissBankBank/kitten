@@ -28,7 +28,8 @@
   }
 
   @each $name, $query in $k-media-queries {
-    @if $name != 'xl' {
+
+    @if $name != "xl" {
       .k-u-hidden\@#{$name}-down {
         @include k-media-max($name) {
           display: none;
@@ -36,7 +37,7 @@
       }
     }
 
-    @if $name != 'xxs' {
+    @if $name != "xxs" {
       .k-u-hidden\@#{$name}-up {
         @include k-media-min($name) {
           display: none;

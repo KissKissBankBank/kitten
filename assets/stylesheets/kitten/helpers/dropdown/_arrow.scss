@@ -46,7 +46,8 @@
 
   @if $without-border-top {
     top: -($arrow-size);
-  } @else {
+  }
+  @else {
     top: -($arrow-size - $border-size);
   }
 
@@ -61,7 +62,7 @@
     position: absolute;
     bottom: 0;
     left: 50%;
-    content: ' ';
+    content: " ";
     width: 0;
     height: 0;
     border: solid transparent;

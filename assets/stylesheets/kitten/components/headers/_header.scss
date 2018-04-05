@@ -122,8 +122,7 @@
   .k-Header__logo--lightOnM {
     overflow: hidden;
 
-    svg,
-    img {
+    svg, img {
       @include k-media-within('m') {
         margin-left: -$graphic-logo-size;
       }
@@ -133,8 +132,7 @@
   .k-Header__logo--lightOnXxs {
     overflow: hidden;
 
-    svg,
-    img {
+    svg, img {
       @include k-media-within('xxs') {
         margin-left: -$graphic-logo-size;
       }

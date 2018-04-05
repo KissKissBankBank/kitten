@@ -53,7 +53,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: inset 0 $border-width 0 rgba($current-color, 0.1);
+    box-shadow: inset 0 $border-width 0 rgba($current-color, .1);
 
     list-style-type: none;
     width: 100%;
@@ -103,7 +103,7 @@
     border-top: $current-border-width solid transparent;
     cursor: pointer;
     color: $color;
-    transition: color 0.2s, border-color 0.2s;
+    transition: color .2s, border-color .2s;
 
     &:hover,
     &:focus {

@@ -4,5 +4,7 @@
 ///
 /// @return {Map}
 @function k-color-schema() {
-  @return (type: 'color');
+  @return (
+    type: 'color'
+  );
 }

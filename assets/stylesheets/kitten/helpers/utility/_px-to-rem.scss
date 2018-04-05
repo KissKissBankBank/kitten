@@ -12,7 +12,7 @@
 
 @function k-px-to-rem($px) {
   @if $px == 0 {
-    @return 0;
+    @return 0
   }
 
   $root-font-size: map-get($k-typography, 'root');

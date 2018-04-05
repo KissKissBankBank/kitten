@@ -82,7 +82,7 @@
   $icon-width: k-px-to-rem(12px);
   $icon-height: k-px-to-rem(14px);
 
-  $transition-speed: 0.2s;
+  $transition-speed: .2s;
 
   // Big size options button.
   $buttonBigOptions: (
@@ -94,12 +94,15 @@
     icon-size: $button-size-big,
     icon-size-with-border: $button-size-big-with-border,
     icon-width: $icon-width,
-    icon-height: $icon-height
+    icon-height: $icon-height,
   );
 
   .k-Button {
     @include k-buttonBase;
-    @include k-typographyFontSize($button-step, $button-line-height);
+    @include k-typographyFontSize(
+      $button-step,
+      $button-line-height
+    );
     @include k-typographyFont($font);
 
     border-radius: $button-radius;
@@ -154,13 +157,20 @@
 
   // Size modifiers.
   .k-Button--tiny {
-    @include k-typographyFontSize($button-step, $button-tiny-line-height);
+    @include k-typographyFontSize(
+      $button-step,
+      $button-tiny-line-height
+    );
 
     min-width: $button-tiny-min-width;
 
     &.k-Button--icon {
       .k-Button__icon {
-        @include k-buttonPadding($button-size-tiny, $icon-width, $icon-height);
+        @include k-buttonPadding(
+          $button-size-tiny,
+          $icon-width,
+          $icon-height
+        );
       }
     }
   }
@@ -181,7 +191,11 @@
     min-width: 0;
 
     .k-Button__icon {
-      @include k-buttonPadding($button-size, $icon-width, $icon-height);
+      @include k-buttonPadding(
+        $button-size,
+        $icon-width,
+        $icon-height
+      );
 
       box-sizing: content-box;
       display: inline-block;
@@ -196,7 +210,11 @@
     }
 
     .k-Button__icon--tiny {
-      @include k-buttonPadding($button-size-tiny, $icon-width, $icon-height);
+      @include k-buttonPadding(
+        $button-size-tiny,
+        $icon-width,
+        $icon-height
+      );
 
       box-sizing: content-box;
       display: inline-block;

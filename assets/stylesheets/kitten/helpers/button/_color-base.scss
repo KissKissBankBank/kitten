@@ -95,16 +95,18 @@
   $disabled-background-image: map-get($disabled, 'background-image');
 
   // transition
-  $transition-speed: 0.2s;
+  $transition-speed: .2s;
 
   color: $base-color;
   background-color: $base-background-color;
-  transition: background-color $transition-speed, color $transition-speed,
-    border-color $transition-speed;
+  transition: background-color $transition-speed,
+              color $transition-speed,
+              border-color $transition-speed;
 
   @if $base-border-color {
     @include k-buttonBorder($base-border-color);
-  } @else {
+  }
+  @else {
     border: none;
   }
 
@@ -115,7 +117,8 @@
   &:hover {
     @if $hover-border-color {
       @include k-buttonBorder($hover-border-color);
-    } @else {
+    }
+    @else {
       border: none;
     }
 
@@ -129,9 +132,11 @@
 
   &:focus {
     @if map-has-key($colors, 'focus') {
+
       @if $focus-border-color {
         @include k-buttonBorder($focus-border-color);
-      } @else {
+      }
+      @else {
         border: none;
       }
 
@@ -141,7 +146,9 @@
 
       background-color: $focus-background-color;
       color: $focus-color;
-    } @else {
+    }
+
+    @else {
       @include k-buttonBorder($hover-border-color);
 
       background-color: $hover-background-color;
@@ -154,7 +161,8 @@
   &:active {
     @if $active-border-color {
       @include k-buttonBorder($active-border-color);
-    } @else {
+    }
+    @else {
       border: none;
     }
 
@@ -170,7 +178,8 @@
     &:disabled {
       @if $disabled-border-color {
         @include k-buttonBorder($disabled-border-color);
-      } @else {
+      }
+      @else {
         border: none;
       }
 
@@ -187,7 +196,8 @@
     &.is-selected {
       @if $is-selected-border-color {
         @include k-buttonBorder($is-selected-border-color);
-      } @else {
+      }
+      @else {
         border: none;
       }
 

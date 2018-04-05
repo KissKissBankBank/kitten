@@ -10,5 +10,8 @@
 ///   k-list-schema(string-schema());
 ///   // Will return a schema expecting a list of string items.
 @function k-list-schema($items) {
-  @return (type: 'list', items: $items);
+  @return (
+    type:  'list',
+    items: $items
+  )
 }

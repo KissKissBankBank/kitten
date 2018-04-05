@@ -77,14 +77,18 @@
   // Chrome forced a default `border-radius: 4px`, we have to set it to 0px.
   $button-radius: 0px;
 
-  $transition-speed: 0.2s;
+  $transition-speed: .2s;
 
   // Btn animate transition
-  $animation-duration: 0.4s;
+  $animation-duration: .4s;
 
   .k-ButtonIcon {
     @include k-buttonBase;
-    @include k-buttonPadding($button-size, $icon-width, $icon-height);
+    @include k-buttonPadding(
+      $button-size,
+      $icon-width,
+      $icon-height
+    );
 
     border-radius: $button-radius;
   }
@@ -176,7 +180,11 @@
 
   // Sizes modifiers.
   .k-ButtonIcon--nano {
-    @include k-buttonPadding($button-size-nano, $nano-size, $nano-size);
+    @include k-buttonPadding(
+      $button-size-nano,
+      $nano-size,
+      $nano-size
+    );
 
     .k-ButtonIcon__svg {
       width: $nano-size;
@@ -189,7 +197,11 @@
   }
 
   .k-ButtonIcon--micro {
-    @include k-buttonPadding($button-size-micro, $icon-width, $icon-height);
+    @include k-buttonPadding(
+      $button-size-micro,
+      $icon-width,
+      $icon-height
+    );
 
     &.k-ButtonIcon--rounded {
       @include k-buttonRounded($button-size-micro-with-border);
@@ -197,7 +209,11 @@
   }
 
   .k-ButtonIcon--tiny {
-    @include k-buttonPadding($button-size-tiny, $icon-width, $icon-height);
+    @include k-buttonPadding(
+      $button-size-tiny,
+      $icon-width,
+      $icon-height
+    );
 
     &.k-ButtonIcon--rounded {
       @include k-buttonRounded($button-size-with-border);
@@ -205,7 +221,11 @@
   }
 
   .k-ButtonIcon--big {
-    @include k-buttonPadding($button-size-big, $icon-width, $icon-height);
+    @include k-buttonPadding(
+      $button-size-big,
+      $icon-width,
+      $icon-height
+    );
 
     &.k-ButtonIcon--rounded {
       @include k-buttonRounded($button-size-big-with-border);
@@ -214,7 +234,11 @@
 
   // Icon modifiers.
   .k-ButtonIcon--heart {
-    @include k-buttonPadding($button-size-tiny, $icon-width, $icon-height);
+    @include k-buttonPadding(
+      $button-size-tiny,
+      $icon-width,
+      $icon-height
+    );
 
     .k-ButtonIcon__svg {
       width: $heart-size;
@@ -225,7 +249,11 @@
   // Used `ButtonIcon` signup and phone only `tiny` version.
   .k-ButtonIcon--signup,
   .k-ButtonIcon--phone {
-    @include k-buttonPadding($button-size-tiny, $signup-size, $signup-size);
+    @include k-buttonPadding(
+      $button-size-tiny,
+      $signup-size,
+      $signup-size
+    );
 
     .k-ButtonIcon__svg {
       width: $signup-size;
@@ -274,7 +302,11 @@
   }
 
   .k-ButtonIcon--cross {
-    @include k-buttonPadding($button-size, $cross-size, $cross-size);
+    @include k-buttonPadding(
+      $button-size,
+      $cross-size,
+      $cross-size
+    );
 
     .k-ButtonIcon__svg {
       width: $cross-size;
@@ -283,7 +315,11 @@
   }
 
   .k-ButtonIcon--cross--tiny {
-    @include k-buttonPadding($button-size-tiny, $cross-size, $cross-size);
+    @include k-buttonPadding(
+      $button-size-tiny,
+      $cross-size,
+      $cross-size
+    );
 
     .k-ButtonIcon__svg {
       width: $cross-size;
@@ -292,7 +328,11 @@
   }
 
   .k-ButtonIcon--empty--nano {
-    @include k-buttonPadding($button-size-nano, 0, 0);
+    @include k-buttonPadding(
+      $button-size-nano,
+      0,
+      0
+    );
   }
 
   // Misc modifiers.

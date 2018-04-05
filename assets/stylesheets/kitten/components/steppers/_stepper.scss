@@ -57,7 +57,7 @@
 
   $margin: k-px-to-rem(20px);
   $margin-tiny: k-px-to-rem(15px);
-  $transition-duration: 0.2s;
+  $transition-duration: .2s;
 
   .k-Stepper {
     @include k-typographyFont($font);

@@ -24,14 +24,13 @@
 ///   margin-top:    1.5rem;
 ///   margin-bottom: 3rem;
 @mixin k-typographyVerticalMargin($margins) {
-  $valid: k-all(
-    k-validate(
-      $margins,
-      $k-vertical-margin-schema,
-      'k-typographyVerticalMargin',
-      '$margin'
-    )
-  );
+  $valid:
+    k-all(
+      k-validate(
+        $margins, $k-vertical-margin-schema,
+        'k-typographyVerticalMargin', '$margin'
+      )
+    );
 
   // The base line height.
   $base-line-height: k-map-fetch($k-typography, 'line-height');

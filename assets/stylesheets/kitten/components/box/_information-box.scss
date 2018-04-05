@@ -29,8 +29,10 @@
   }
 
   .k-InformationBox__container {
-    padding: k-px-to-rem(10px) k-px-to-rem(20px) k-px-to-rem(20px)
-      k-px-to-rem(20px);
+    padding: k-px-to-rem(10px)
+             k-px-to-rem(20px)
+             k-px-to-rem(20px)
+             k-px-to-rem(20px);
     color: $color;
     background-color: $background-color;
     border: $border-size solid $border-color;

@@ -32,19 +32,22 @@
 /// </div>
 
 @mixin k-TextInputWithInfo($input) {
-  // Label
-  $font-label: k-string-definition(k-map-fetch($input, ('label', 'font')));
-  $font-size-label: k-number-definition(
-    k-map-fetch($input, ('label', 'font-size'))
-  );
-  $color-label: k-color-definition(k-map-fetch($input, ('label', 'color')));
 
-  // Error
-  $font-error: k-string-definition(k-map-fetch($input, ('error', 'font')));
+  // Label
+  $font-label: k-string-definition(
+    k-map-fetch($input, ('label', 'font')));
+  $font-size-label: k-number-definition(
+    k-map-fetch($input, ('label', 'font-size')));
+  $color-label: k-color-definition(
+    k-map-fetch($input, ('label', 'color')));
+
+ // Error
+  $font-error: k-string-definition(
+    k-map-fetch($input, ('error', 'font')));
   $font-size-error: k-number-definition(
-    k-map-fetch($input, ('error', 'font-size'))
-  );
-  $color-error: k-color-definition(k-map-fetch($input, ('error', 'color')));
+    k-map-fetch($input, ('error', 'font-size')));
+  $color-error: k-color-definition(
+    k-map-fetch($input, ('error', 'color')));
 
   .k-TextInputWithInfo__label {
     @include k-typographyFont($font-label);
@@ -61,4 +64,5 @@
     @include k-typographyFontSize($font-size-error);
     color: $color-error;
   }
+
 }

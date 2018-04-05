@@ -31,7 +31,10 @@
 
   .k-TooltipNew {
     @include k-typographyFont($font);
-    @include k-typographyFontSize($font-size, $line-height);
+    @include k-typographyFontSize(
+      $font-size,
+      $line-height
+    );
 
     position: absolute;
     padding-right: $tooltip-padding;

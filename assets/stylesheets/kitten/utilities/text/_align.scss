@@ -43,7 +43,7 @@
   }
 
   @each $name, $query in $k-media-queries {
-    @if $name != 'xl' {
+    @if $name != "xl" {
       .k-u-align-#{$position}\@#{$name}-down {
         @include k-media-max($name) {
           text-align: $value;
@@ -51,7 +51,7 @@
       }
     }
 
-    @if $name != 'xxs' {
+    @if $name != "xxs" {
       .k-u-align-#{$position}\@#{$name}-up {
         @include k-media-min($name) {
           text-align: $value;
@@ -62,6 +62,7 @@
 }
 
 @mixin k-utilities-align {
+
   @include k-u-align('center', center);
   @include k-u-align('left', left);
   @include k-u-align('right', right);

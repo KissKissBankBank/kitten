@@ -17,7 +17,7 @@
 @mixin k-Loader {
   $circle-size: k-px-to-rem(5px);
   $spacing: k-px-to-rem(2px);
-  $easing: cubic-bezier(0.2, 0.68, 0.18, 1.08);
+  $easing: cubic-bezier(.2, .68, .18, 1.08);
   $duration: 1.75s;
 
   .k-Loader {
@@ -57,8 +57,8 @@
     }
 
     45% {
-      transform: scale(0.1);
-      opacity: 0.7;
+      transform: scale(.1);
+      opacity: .7;
     }
 
     80% {

@@ -38,7 +38,10 @@
   // To override __react_component_tooltip style.
   .k-Tooltip .k-Tooltip__content {
     @include k-typographyFont($font);
-    @include k-typographyFontSize($font-size, $line-height);
+    @include k-typographyFontSize(
+      $font-size,
+      $line-height
+    );
   }
 
   .k-Tooltip__content {
@@ -93,7 +96,7 @@
     }
 
     &.place-left {
-      margin-right: $tooltip-margin !important;
+     margin-right: $tooltip-margin !important;
 
       &:after {
         border-left-color: $background-color-helium !important;

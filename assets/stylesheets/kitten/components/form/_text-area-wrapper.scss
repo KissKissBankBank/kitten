@@ -10,9 +10,7 @@
   }
 
   .k-TextAreaWrapper__input {
-    &.k-TextInput {
-      height: initial;
-    }
+    &.k-TextInput { height: initial; }
 
     resize: vertical;
 
@@ -29,7 +27,11 @@
 
     height: $vertical-padding;
 
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #fff);
+    background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0),
+      #fff
+    );
 
     pointer-events: none;
 

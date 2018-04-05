@@ -22,7 +22,6 @@
   @return (
     color: k-color-definition(k-map-fetch($colors, 'color')),
     border-color: k-color-definition(map-get($colors, 'border-color')),
-    background-color:
-      k-color-definition(k-map-fetch($colors, 'background-color'))
+    background-color: k-color-definition(k-map-fetch($colors, 'background-color'))
   );
 }

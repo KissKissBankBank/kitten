@@ -49,17 +49,11 @@
   $max-width: map-get($queries, 'max-width');
 
   @if $min-width == null {
-    @media (max-width: $max-width) {
-      @content;
-    }
+    @media (max-width: $max-width) { @content; }
   } @else if $max-width == null {
-    @media (min-width: $min-width) {
-      @content;
-    }
+    @media (min-width: $min-width) { @content; }
   } @else {
-    @media (min-width: $min-width) and (max-width: $max-width) {
-      @content;
-    }
+    @media (min-width: $min-width) and (max-width: $max-width) { @content; }
   }
 }
 

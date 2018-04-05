@@ -43,7 +43,7 @@
   .k-ExternalRichLink__element--animate {
     position: relative;
     left: 0;
-    transition: left 0.2s;
+    transition: left .2s;
 
     .k-ExternalRichLink:focus &,
     .k-ExternalRichLink:hover & {

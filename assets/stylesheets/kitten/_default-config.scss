@@ -2,12 +2,30 @@
 
 // Media queries sorted by thinnest to largest
 $k-media-queries: (
-  xxs: (min-width: null, max-width: 479px),
-  xs: (min-width: 480px, max-width: 639px),
-  s: (min-width: 640px, max-width: 767px),
-  m: (min-width: 768px, max-width: 1079px),
-  l: (min-width: 1080px, max-width: 1439px),
-  xl: (min-width: 1440px, max-width: null)
+  xxs: (
+    min-width: null,
+    max-width: 479px,
+  ),
+  xs: (
+    min-width: 480px,
+    max-width: 639px,
+  ),
+  s: (
+    min-width: 640px,
+    max-width: 767px,
+  ),
+  m: (
+    min-width: 768px,
+    max-width: 1079px,
+  ),
+  l: (
+    min-width: 1080px,
+    max-width: 1439px,
+  ),
+  xl: (
+    min-width: 1440px,
+    max-width: null,
+  ),
 ) !default;
 
 // Grid
@@ -17,8 +35,9 @@ $k-grid: (
   container: 1440px,
   gutter-width: 20px,
   thin-gutter-width: 15px,
+
   container-padding: 40px,
-  container-padding-thin: 20px
+  container-padding-thin: 20px,
 ) !default;
 
 // Susy
@@ -32,62 +51,74 @@ $susy: (
   columns: $columns,
   container: $container,
   gutter-position: split,
-  gutters: $gutter-width/$column-width
+  gutters: $gutter-width/$column-width,
 ) !default;
 
 // Fonts
 
 $k-fonts: (
-  light: (family: ('Maax', Helvetica, Arial, sans-serif), weight: 400),
-  regular: (family: ('Maax', Helvetica, Arial, sans-serif), weight: 500),
-  bold:
-    (
-      family: ('Maax', Helvetica, Arial, sans-serif),
-      letter-spacing: 0.01rem,
-      weight: 600
-    ),
-  regular-uppercase:
-    (
-      family: ('Maax', Helvetica, Arial, sans-serif),
-      weight: 500,
-      transform: uppercase
-    ),
-  bold-uppercase:
-    (
-      family: ('Maax', Helvetica, Arial, sans-serif),
-      weight: 600,
-      letter-spacing: 0.1rem,
-      transform: uppercase
-    )
+  light: (
+    family: ("Maax", Helvetica, Arial, sans-serif),
+    weight: 400
+  ),
+  regular: (
+    family: ("Maax", Helvetica, Arial, sans-serif),
+    weight: 500
+  ),
+  bold: (
+    family: ("Maax", Helvetica, Arial, sans-serif),
+    letter-spacing: .01rem,
+    weight: 600
+  ),
+  regular-uppercase: (
+    family: ("Maax", Helvetica, Arial, sans-serif),
+    weight: 500,
+    transform: uppercase
+  ),
+  bold-uppercase: (
+    family: ("Maax", Helvetica, Arial, sans-serif),
+    weight: 600,
+    letter-spacing: .1rem,
+    transform: uppercase
+  ),
 ) !default;
 
 // Colors
 
 $k-colors: (
-  'font-1': #222,
-  / / Dark Grey 'font-2': #b8b8b8,
-  / / Semi Dark Grey 'background-1': #fff,
-  / / White 'background-2': #fbfbfb,
-  / / Extra Light Grey 'background-3': #f6f6f6,
-  / / Light Grey 'line-1': #eee,
-  / / Semi Light Grey 'line-2': #d8d8d8,
-  / / Grey 'primary-1': #19b4fa,
-  / / Primary 'primary-2': #05a8e6,
-  / / Semi Dark Primary 'primary-3': #0496cc,
-  / / Dark Primary 'primary-4': #bae8fd,
-  / / Light Primary 'primary-5': #e8f7fe,
-  / / Extra Light Primary 'primary-6': #f3fbff,
-  / / Thin Primary / / DEPRECATED: colors. 'secondary-1': #4bfffa,
+  'font-1': #222, // Dark Grey
+  'font-2': #b8b8b8, // Semi Dark Grey
+  'background-1': #fff, // White
+  'background-2': #fbfbfb, // Extra Light Grey
+  'background-3': #f6f6f6, // Light Grey
+  'line-1': #eee, // Semi Light Grey
+  'line-2': #d8d8d8, // Grey
+
+  'primary-1': #19b4fa, // Primary
+  'primary-2': #05a8e6, // Semi Dark Primary
+  'primary-3': #0496cc, // Dark Primary
+  'primary-4': #bae8fd, // Light Primary
+  'primary-5': #e8f7fe, // Extra Light Primary
+  'primary-6': #f3fbff, // Thin Primary
+
+  // DEPRECATED: colors.
+  'secondary-1': #4bfffa,
   'secondary-2': #3cf0eb,
   'secondary-3': #2de1dc,
-  'tertiary-1': #effaf1,
-  / / Light Green 'tertiary-2': #cff0d6,
-  / / Semi Light Green / / DEPRECATED: colors. 'tertiary-3': #4ae191,
-  'valid': #61d079,
-  / / Green 'error': #ff0046,
-  / / Red 'error-2': #ffe5ec,
-  / / Light Red 'error-3': #ffb2c7,
-  / / Semi Light Red 'red-light-mdc': #ffebe0,
+
+  'tertiary-1': #effaf1, // Light Green
+  'tertiary-2': #cff0d6, // Semi Light Green
+
+   // DEPRECATED: colors.
+  'tertiary-3': #4ae191,
+
+  'valid': #61d079, // Green
+
+  'error': #ff0046, // Red
+  'error-2': #ffe5ec, // Light Red
+  'error-3': #ffb2c7, // Semi Light Red
+
+  'red-light-mdc': #ffebe0,
   'red-mdc': #ff0000,
-  'blue-light-mdc': #caf4fe
+  'blue-light-mdc': #caf4fe,
 ) !default;

@@ -41,7 +41,10 @@
 
   .k-StaticTooltip__content {
     @include k-typographyFont($font);
-    @include k-typographyFontSize($font-size, $line-height);
+    @include k-typographyFontSize(
+      $font-size,
+      $line-height
+    );
 
     padding: $tooltip-padding;
     margin-top: $arrow-size;
@@ -63,15 +66,15 @@
     top: -1rem;
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       width: 0;
       height: 0;
       margin-left: -$arrow-size;
-      margin-top: 0.2rem;
+      margin-top: .2rem;
       border: $arrow-size solid transparent;
       border-bottom-color: white;
-      top: -0.5rem;
+      top: -.5rem;
     }
   }
 }
