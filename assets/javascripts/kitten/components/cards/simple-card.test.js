@@ -112,12 +112,12 @@ describe('<SimpleCard />', () => {
   })
 
   describe('without horizontalStroke prop', () => {
-    beforeEach(() => {
-      component = mount(<SimpleCard horizontalStroke={false} />)
-    })
+    it('matches snapshot', () => {
+      component = renderer
+        .create(<SimpleCard horizontalStroke={false} />)
+        .toJSON()
 
-    it('has a <Text /> with good content', () => {
-      expect(component.find(HorizontalStroke).exists()).toBeFalsy()
+      expect(component).toMatchSnapshot()
     })
   })
 
