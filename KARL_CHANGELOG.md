@@ -4,6 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [20.4.0] - 2018-03-26
+
+Feature:
+- Add `KarlLegoGrid12Items` example.
+
 ## [20.3.0] - 2018-03-22
 
 Feature:

@@ -2,6 +2,7 @@ import React from 'react'
 import classNames from 'classnames'
 import { LegoGrid } from 'kitten/components/grid/lego-grid'
 import Masonry from 'react-masonry-component'
+import { NUM_COLUMNS } from 'kitten/constants/grid-config'
 
 describe('<LegoGrid />', () => {
   describe('by default', () => {
@@ -32,6 +33,22 @@ describe('<LegoGrid />', () => {
 
     it('sends props to Masonry component', () => {
       expect(masonry.props()).toMatchObject(masonryProps)
+    })
+  })
+
+  describe('with col size prop', () => {
+    const legoGrid = shallow(<LegoGrid items-xxs-up='2' items-l-up='12' />)
+    const lCol = NUM_COLUMNS / 12
+    const xxsCol = NUM_COLUMNS / 2
+    const lClass = `k-LegoGrid--${lCol}col@l`
+    const xssClass = `k-LegoGrid--${xxsCol}col@xxs`
+
+    it(`has .${lClass} has class`, () => {
+      expect(legoGrid.hasClass(lClass)).toBe(true)
+    })
+
+    it(`has .${xssClass} has class`, () => {
+      expect(legoGrid.hasClass(xssClass)).toBe(true)
     })
   })
 
