@@ -69,11 +69,11 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
             style={
               Object {
                 "alignSelf": "center",
-                "height": "14px",
+                "height": "10px",
                 "margin": "0",
                 "padding": "0",
                 "pointerEvents": "none",
-                "width": "12px",
+                "width": "10px",
               }
             }
             viewBox="0 0 10 10"
@@ -407,11 +407,11 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
             style={
               Object {
                 "alignSelf": "center",
-                "height": "14px",
+                "height": "10px",
                 "margin": "0",
                 "padding": "0",
                 "pointerEvents": "none",
-                "width": "12px",
+                "width": "10px",
               }
             }
             viewBox="0 0 10 10"
