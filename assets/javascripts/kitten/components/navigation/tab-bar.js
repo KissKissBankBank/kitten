@@ -10,26 +10,16 @@ export class TabBar extends Component {
   }
 
   renderItem(item, key) {
-    const {
-      className,
-      selected,
-      text,
-       ...linkProps,
-    } = item
+    const { className, selected, text, ...linkProps } = item
 
-    const itemClassName = classNames(
-      'k-TabBar__item',
-      className,
-      { 'is-selected': selected },
-    )
+    const itemClassName = classNames('k-TabBar__item', className, {
+      'is-selected': selected,
+    })
 
     return (
-      <li key={ key }>
-        <a
-          className={ itemClassName }
-          { ...linkProps }
-        >
-          <Markdown softBreak="br" source={ text } />
+      <li key={key}>
+        <a className={itemClassName} {...linkProps}>
+          <Markdown softBreak="br" source={text} />
         </a>
       </li>
     )
@@ -38,15 +28,14 @@ export class TabBar extends Component {
   render() {
     return (
       <div
-        id={ this.props.id }
-        className={ classNames('k-TabBar', this.props.className) }
+        id={this.props.id}
+        className={classNames('k-TabBar', this.props.className)}
       >
-        <nav className={ classNames('k-TabBar__nav', this.props.navClassName) }>
+        <nav className={classNames('k-TabBar__nav', this.props.navClassName)}>
           <ul
-            className={ classNames('k-TabBar__list',
-                                   this.props.listClassName) }
+            className={classNames('k-TabBar__list', this.props.listClassName)}
           >
-            { this.renderItems() }
+            {this.renderItems()}
           </ul>
         </nav>
       </div>

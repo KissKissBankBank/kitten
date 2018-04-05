@@ -66,10 +66,8 @@
   .k-Tour__popover {
     z-index: $popover-z-index;
 
-    box-shadow: k-px-to-rem(4px)
-                k-px-to-rem(4px)
-                k-px-to-rem(4px)
-                rgba(0, 0, 0, .3);
+    box-shadow: k-px-to-rem(4px) k-px-to-rem(4px) k-px-to-rem(4px)
+      rgba(0, 0, 0, 0.3);
 
     .k-Tour.is-hidden & {
       opacity: 0;
@@ -134,7 +132,7 @@
     z-index: $target-highlight-z-index;
 
     border-radius: 100%;
-    border: 2px solid rgba(map-get($k-colors, 'tertiary-1'), .8);
+    border: 2px solid rgba(map-get($k-colors, 'tertiary-1'), 0.8);
 
     pointer-events: none;
 
@@ -145,24 +143,24 @@
     &:before {
       $target-before-options: (
         width: $target-highlight-width,
-        height: $target-highlight-height,
+        height: $target-highlight-height
       );
 
-      content: "";
+      content: '';
 
-      @include k-tour-targetHighlightAnimation($target-before-options)
+      @include k-tour-targetHighlightAnimation($target-before-options);
     }
 
     &:after {
       $target-after-options: (
         width: $target-highlight-width,
         height: $target-highlight-height,
-        animation-delay: 1s,
+        animation-delay: 1s
       );
 
-      content: "";
+      content: '';
 
-      @include k-tour-targetHighlightAnimation($target-after-options)
+      @include k-tour-targetHighlightAnimation($target-after-options);
     }
 
     .k-Tour__step__targetHighlightContent {
@@ -170,17 +168,24 @@
 
       display: block;
 
-      @include k-tour-targetHighlightAnimation($target-options)
+      @include k-tour-targetHighlightAnimation($target-options);
     }
   }
 
   @keyframes k-tour-targetHighlightAnimationKeyframes {
-    0% { transform: scale(1); opacity: 0; }
-    40% { opacity: 1; }
-    100% { transform: scale(2); opacity: 0; }
+    0% {
+      transform: scale(1);
+      opacity: 0;
+    }
+    40% {
+      opacity: 1;
+    }
+    100% {
+      transform: scale(2);
+      opacity: 0;
+    }
   }
 }
-
 
 @mixin k-tour-targetHighlightAnimation($options: ()) {
   $border-width: 6px;
@@ -196,7 +201,7 @@
   width: $width;
   height: $height;
 
-  border: $border-width solid rgba(map-get($k-colors, 'secondary-1'), .6);
+  border: $border-width solid rgba(map-get($k-colors, 'secondary-1'), 0.6);
   border-radius: 100%;
 
   animation-name: k-tour-targetHighlightAnimationKeyframes;

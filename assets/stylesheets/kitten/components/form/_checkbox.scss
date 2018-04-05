@@ -49,7 +49,7 @@
     align-items: flex-start;
 
     cursor: pointer;
-    transition: color .2s;
+    transition: color 0.2s;
 
     &:before {
       box-sizing: border-box;
@@ -63,7 +63,7 @@
       background-color: $background-color;
       border: $border-size solid $border-color;
 
-      transition: border-color .2s, background-color .2s;
+      transition: border-color 0.2s, background-color 0.2s;
     }
 
     .k-Checkbox__input:focus + &:before {
@@ -79,10 +79,7 @@
     }
 
     .k-Checkbox__input:checked + &:before {
-      background: $background-color-checked
-                  url($icon)
-                  no-repeat
-                  center;
+      background: $background-color-checked url($icon) no-repeat center;
       border-color: $border-color-hover;
     }
 

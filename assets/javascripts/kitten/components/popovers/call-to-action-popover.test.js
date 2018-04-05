@@ -1,9 +1,7 @@
 import React from 'react'
 import { Popover } from 'kitten/components/popovers/popover'
-import { CallToActionPopover }
-  from 'kitten/components/popovers/call-to-action-popover'
-import { LoudspeakerIllustration }
-  from 'kitten/components/illustrations/loudspeaker-illustration'
+import { CallToActionPopover } from 'kitten/components/popovers/call-to-action-popover'
+import { LoudspeakerIllustration } from 'kitten/components/illustrations/loudspeaker-illustration'
 import { Button } from 'kitten/components/buttons/button'
 import { Title } from 'kitten/components/typography/title'
 import { Paragraph } from 'kitten/components/typography/paragraph'
@@ -26,7 +24,9 @@ describe('<CallToActionPopover />', () => {
 
     describe('navigation', () => {
       it('renders a navigation element', () => {
-        const navigationElement = defaultComponent.find('.k-Popover__navigation')
+        const navigationElement = defaultComponent.find(
+          '.k-Popover__navigation',
+        )
 
         expect(navigationElement).toHaveLength(1)
       })
@@ -39,11 +39,7 @@ describe('<CallToActionPopover />', () => {
 
       it('renders a <Button /> component', () => {
         const buttonComponent = (
-          <Button
-            onClick={ undefined }
-            modifier="helium"
-            size="big"
-          >
+          <Button onClick={undefined} modifier="helium" size="big">
             Ok
           </Button>
         )
@@ -54,8 +50,8 @@ describe('<CallToActionPopover />', () => {
   })
 
   describe('title prop', () => {
-    const title = "Instantly break out"
-    const component = mount(<CallToActionPopover title={ title } />)
+    const title = 'Instantly break out'
+    const component = mount(<CallToActionPopover title={title} />)
     const titleElement = component.find(Title)
 
     it('renders a title element', () => {
@@ -66,7 +62,7 @@ describe('<CallToActionPopover />', () => {
 
   describe('text prop', () => {
     const text = "Spend all night ensuring people don't sleep"
-    const component = mount(<CallToActionPopover text={ text } />)
+    const component = mount(<CallToActionPopover text={text} />)
     const textElement = component.find('Paragraph')
 
     it('renders a text element', () => {
@@ -84,17 +80,20 @@ describe('<CallToActionPopover />', () => {
 
     const button2Label = 'Retour'
 
-    const buttons = [{
-      label: button1Label,
-      modifier: button1Modifier,
-      tag: button1Tag,
-      href: button1Href,
-      target: button1Target,
-    }, {
-      label: button2Label,
-    }]
+    const buttons = [
+      {
+        label: button1Label,
+        modifier: button1Modifier,
+        tag: button1Tag,
+        href: button1Href,
+        target: button1Target,
+      },
+      {
+        label: button2Label,
+      },
+    ]
 
-    const component = mount(<CallToActionPopover buttons={ buttons } />)
+    const component = mount(<CallToActionPopover buttons={buttons} />)
     const buttonComponents = component.find(Button)
 
     it('renders 2 <Button /> components', () => {
@@ -124,18 +123,19 @@ describe('<CallToActionPopover />', () => {
     })
 
     describe('with close callback on a button', () => {
-      const buttons = [{
-        clickOptions: {
-          closeOnClick: true,
-        }
-      }]
-      const onCloseClick = () => { return }
+      const buttons = [
+        {
+          clickOptions: {
+            closeOnClick: true,
+          },
+        },
+      ]
+      const onCloseClick = () => {
+        return
+      }
 
       const component = mount(
-        <CallToActionPopover
-          buttons={ buttons }
-          onCloseClick={ onCloseClick }
-        />
+        <CallToActionPopover buttons={buttons} onCloseClick={onCloseClick} />,
       )
 
       it('passes a onClick prop to the <Button />', () => {
@@ -151,7 +151,7 @@ describe('<CallToActionPopover />', () => {
 
   describe('titleAriaLabelId prop', () => {
     const component = mount(
-      <CallToActionPopover titleAriaLabelId="custom-aria-label" />
+      <CallToActionPopover titleAriaLabelId="custom-aria-label" />,
     )
     const titleElement = component.find('Title')
 
@@ -162,11 +162,13 @@ describe('<CallToActionPopover />', () => {
 
   describe('illustration prop', () => {
     const componentWithIllustration = shallow(
-      <CallToActionPopover illustration={ LoudspeakerIllustration } />)
+      <CallToActionPopover illustration={LoudspeakerIllustration} />,
+    )
 
     it('renders an illustration wrapper', () => {
-      const illustration = componentWithIllustration
-        .find('.k-Popover__illustration')
+      const illustration = componentWithIllustration.find(
+        '.k-Popover__illustration',
+      )
 
       expect(illustration).toHaveLength(1)
     })
@@ -180,7 +182,7 @@ describe('<CallToActionPopover />', () => {
 
   describe('custom props', () => {
     const component = mount(
-      <CallToActionPopover popoverClassName="custom-popover" />
+      <CallToActionPopover popoverClassName="custom-popover" />,
     )
 
     it('propagates props to <Popover />', () => {

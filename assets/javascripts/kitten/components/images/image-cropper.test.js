@@ -26,7 +26,7 @@ describe('<ImageCropper />', () => {
         uploaderErrorLabel: 'You have an error on upload.',
         sliderMin: 0,
         sliderMax: 500,
-        aspectRatio: 16/9,
+        aspectRatio: 16 / 9,
         maxSize: 5 * 1024 * 1024, // 5 Mo.
         acceptedFiles: '.jpg,.jpeg,.gif,.png',
         label: 'Lorem ipsum…',
@@ -60,7 +60,7 @@ describe('<ImageCropper />', () => {
       expect(component.state()).toEqual(defaultState)
     })
 
-    it('doesn\'t render a Cropper', () => {
+    it("doesn't render a Cropper", () => {
       const cropper = component.find(Cropper)
 
       expect(cropper).toHaveLength(0)
@@ -94,7 +94,7 @@ describe('<ImageCropper />', () => {
     const component = mount(<ImageCropper imageSrc="custom-file.jpg" />)
 
     describe('without cropperHeight and cropperWidth set in state', () => {
-      it('doesn\'t render a Cropper component', () => {
+      it("doesn't render a Cropper component", () => {
         const cropper = component.find(Cropper)
 
         expect(cropper).toHaveLength(0)
@@ -115,8 +115,8 @@ describe('<ImageCropper />', () => {
         const expectedProps = {
           className: 'k-Cropper',
           src: 'custom-file.jpg',
-          aspectRatio: 16/9,
-          viewMode:3,
+          aspectRatio: 16 / 9,
+          viewMode: 3,
           guides: false,
           modal: false,
           autoCropArea: 1,
@@ -136,16 +136,23 @@ describe('<ImageCropper />', () => {
         const slider = component.find('.k-Slider')
 
         expect(slider).toHaveLength(1)
-        expect(component.find('Label').at(1).text()).toBe('Zoom…')
-        expect(component.find('Paragraph').at(1).text()).toBe('Move the image…')
+        expect(
+          component
+            .find('Label')
+            .at(1)
+            .text(),
+        ).toBe('Zoom…')
+        expect(
+          component
+            .find('Paragraph')
+            .at(1)
+            .text(),
+        ).toBe('Move the image…')
       })
 
       describe('with disabled prop', () => {
         const component = mount(
-          <ImageCropper
-            disabled
-            imageSrc="custom-file.jpg"
-          />
+          <ImageCropper disabled imageSrc="custom-file.jpg" />,
         )
         component.setState({ cropperHeight: 100, cropperWidth: 200 })
         const cropper = component.find(Cropper)
@@ -154,28 +161,27 @@ describe('<ImageCropper />', () => {
           expect(cropper.props().dragMode).toEqual('none')
         })
 
-        it('doesn\'t render the slider and the cropper info', () => {
+        it("doesn't render the slider and the cropper info", () => {
           const slider = component.find('.k-Slider')
 
           expect(slider).toHaveLength(0)
-          expect(component.find('Label').text())
-            .not.toEqual(expect.stringMatching(/Zoom…/))
-          expect(component.find('Paragraph').text())
-            .not.toEqual(expect.stringMatching(/Move the image…/))
+          expect(component.find('Label').text()).not.toEqual(
+            expect.stringMatching(/Zoom…/),
+          )
+          expect(component.find('Paragraph').text()).not.toEqual(
+            expect.stringMatching(/Move the image…/),
+          )
         })
       })
     })
   })
   describe('with deletable prop at false', () => {
     const component = mount(
-      <ImageCropper
-        deletable={ false }
-        imageSrc="custom-file.jpg"
-      />
+      <ImageCropper deletable={false} imageSrc="custom-file.jpg" />,
     )
     const uploader = component.find(SimpleUploader)
 
-    it('doesn\'t render the delete button', () => {
+    it("doesn't render the delete button", () => {
       expect(uploader.props()).toMatchObject({ deletable: false })
     })
   })

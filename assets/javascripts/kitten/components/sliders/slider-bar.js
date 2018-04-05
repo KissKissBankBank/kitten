@@ -68,9 +68,13 @@ export class SliderBar extends React.Component {
 
   renderInput() {
     if (this.props.name)
-      return <input type="hidden"
-                    name={ this.props.name }
-                    value={ this.props.value || '' } />
+      return (
+        <input
+          type="hidden"
+          name={this.props.name}
+          value={this.props.value || ''}
+        />
+      )
   }
 
   render() {
@@ -81,32 +85,25 @@ export class SliderBar extends React.Component {
 
     return (
       <div
-        className={ classNames("k-Slider", grabbingClass) }
-        onClick={ this.handleClick }
+        className={classNames('k-Slider', grabbingClass)}
+        onClick={this.handleClick}
       >
-        <div
-          className="k-Slider__ramp"
-          ref="track"
-        >
-          <div
-            className="k-Slider__progress"
-            style={ trackStyles }
-          >
-          </div>
+        <div className="k-Slider__ramp" ref="track">
+          <div className="k-Slider__progress" style={trackStyles} />
           <div
             className="k-Slider__handle"
             ref="thumb"
-            style={ thumbStyles }
+            style={thumbStyles}
             role="slider"
             tabIndex="0"
-            aria-valuemin={ this.props.min }
-            aria-valuemax={ this.props.max }
-            aria-valuenow={ this.props.value }
-            onKeyDown={ this.props.onKeyDown }
-            onMouseDown={ this.handleStart }
-            onTouchStart={ this.handleStart }
-            onClick={ this.handleClick }
-            onFocus={ this.props.onAction }
+            aria-valuemin={this.props.min}
+            aria-valuemax={this.props.max}
+            aria-valuenow={this.props.value}
+            onKeyDown={this.props.onKeyDown}
+            onMouseDown={this.handleStart}
+            onTouchStart={this.handleStart}
+            onClick={this.handleClick}
+            onFocus={this.props.onAction}
           >
             <GrabberIcon
               className="k-Slider__handleIcon"
@@ -115,7 +112,7 @@ export class SliderBar extends React.Component {
             />
           </div>
         </div>
-        { this.renderInput() }
+        {this.renderInput()}
       </div>
     )
   }

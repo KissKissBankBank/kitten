@@ -40,10 +40,9 @@
       .k-LoanSimulator.is-error & {
         // On error, lower the spacing between amount and reimbursing so that
         // one line of error text does not move the spacing.
+        // 1.5rem for error text line height
         margin-bottom: (
-          $spacing-between-amount-and-reimbursing
-          - $error-top-margin
-          - 1.5rem // error text line height
+          $spacing-between-amount-and-reimbursing - $error-top-margin - 1.5rem
         );
       }
     }

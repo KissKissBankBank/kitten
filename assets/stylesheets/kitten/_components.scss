@@ -54,20 +54,20 @@
 @import 'kitten/components/grid/container';
 @import 'kitten/components/grid/grid';
 @import 'kitten/components/grid/lego-grid';
-@import "kitten/components/grid/row";
-@import "kitten/components/grid/side-grid";
-@import "kitten/components/grid/single-column";
-@import "kitten/components/grid/vertical-grid";
+@import 'kitten/components/grid/row';
+@import 'kitten/components/grid/side-grid';
+@import 'kitten/components/grid/single-column';
+@import 'kitten/components/grid/vertical-grid';
 
 // Headers
 @import 'kitten/components/headers/header';
 
 // Icons
-@import "kitten/components/icons/arrow-icon";
+@import 'kitten/components/icons/arrow-icon';
 
 // Images
-@import "kitten/components/images/cropper";
-@import "kitten/components/images/image-with-caption";
+@import 'kitten/components/images/cropper';
+@import 'kitten/components/images/image-with-caption';
 
 // Layout
 @import 'kitten/components/layout/horizontal-stroke';
@@ -122,11 +122,11 @@
 @import 'kitten/components/steppers/stepper';
 
 // Teaser
-@import "kitten/components/teaser/teaser";
+@import 'kitten/components/teaser/teaser';
 
 // Testimonies
-@import "kitten/components/testimonies/testimony-list";
-@import "kitten/components/testimonies/testimony";
+@import 'kitten/components/testimonies/testimony-list';
+@import 'kitten/components/testimonies/testimony';
 
 // Titles
 @import 'kitten/components/titles/title-with-actions';
@@ -147,4 +147,4 @@
 @import 'kitten/components/typography/title';
 
 // Uploaders
-@import 'kitten/components/uploaders/simple-uploader'
+@import 'kitten/components/uploaders/simple-uploader';

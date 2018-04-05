@@ -2,7 +2,6 @@ import React from 'react'
 import { FormActions } from 'kitten/components/form/form-actions'
 
 describe('<FormActions />', () => {
-
   it('renders a <div class="k-FormActions" />', () => {
     const component = shallow(<FormActions />)
 
@@ -12,7 +11,7 @@ describe('<FormActions />', () => {
 
   it('has a custom class', () => {
     const component = shallow(
-      <FormActions className="test-FormActions--lorem" />
+      <FormActions className="test-FormActions--lorem" />,
     )
 
     expect(component.hasClass('test-FormActions--lorem')).toBe(true)
@@ -22,16 +21,14 @@ describe('<FormActions />', () => {
     const component = shallow(
       <FormActions>
         <p>Lorem ipsum…</p>
-      </FormActions>
+      </FormActions>,
     )
 
     expect(component.text()).toBe('Lorem ipsum…')
   })
 
   it('with spreadOutAt prop', () => {
-    const component = mount(
-      <FormActions spreadOutAt="s-up" />
-    )
+    const component = mount(<FormActions spreadOutAt="s-up" />)
 
     expect(component.props().spreadOutAt).toBe('s-up')
   })
@@ -52,7 +49,7 @@ describe('<FormActions.Item />', () => {
 
   describe('className prop', () => {
     const component = shallow(
-      <FormActions.Item className="k-FormActions__item--test" />
+      <FormActions.Item className="k-FormActions__item--test" />,
     )
 
     it('has a custom class', () => {
@@ -64,7 +61,7 @@ describe('<FormActions.Item />', () => {
     const component = shallow(
       <FormActions.Item>
         <p>Lorem ipsum…</p>
-      </FormActions.Item>
+      </FormActions.Item>,
     ).children()
 
     it('renders a <p>', () => {

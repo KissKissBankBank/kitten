@@ -52,8 +52,12 @@
       //    [ x ] [ x ]
       @include k-grid-col(6);
 
-      &.is-first { text-align: right; }
-      &.is-last { text-align: left; }
+      &.is-first {
+        text-align: right;
+      }
+      &.is-last {
+        text-align: left;
+      }
     }
   }
 

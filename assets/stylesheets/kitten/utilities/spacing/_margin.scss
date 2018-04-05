@@ -53,7 +53,7 @@
   }
 
   @each $name, $query in $k-media-queries {
-    @if $name != "xl" {
+    @if $name != 'xl' {
       .k-u-margin-#{$position}-#{$slug}\@#{$name}-down {
         @include k-media-max($name) {
           margin-#{$position}: $value;
@@ -61,7 +61,7 @@
       }
     }
 
-    @if $name != "xxs" {
+    @if $name != 'xxs' {
       .k-u-margin-#{$position}-#{$slug}\@#{$name}-up {
         @include k-media-min($name) {
           margin-#{$position}: $value;
@@ -82,7 +82,7 @@
     double: 20px,
     triple: 30px,
     quadruple: 40px,
-    quintuple: 50px,
+    quintuple: 50px
   );
 
   @each $name, $size in $k-sizes {
