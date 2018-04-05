@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add `subTitleTruncate` prop for `CrowdfundingCard`.
+- Feature: Add `horizontalStroke` prop for `SimpleCard`.
 
 ## [20.5.0] - 2018-04-03
 
