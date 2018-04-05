@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Update A11Y on `Modal` component.
+- Feature: Add `subTitleTruncate` prop for `CrowdfundingCard`.
 
 ## [20.5.0] - 2018-04-03
 
