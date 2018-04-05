@@ -4,23 +4,20 @@ import classNames from 'classnames'
 import { Container } from 'kitten/components/grid/container'
 import ColorsConfig from 'kitten/constants/colors-config'
 
-export const ScrollableContainer = (props) => (
+export const ScrollableContainer = props => (
   <Container
-    { ...props }
-    className={ classNames('k-Container--no-padding', props.className) }
+    {...props}
+    className={classNames('k-Container--no-padding', props.className)}
     style={{ ...styles.container, ...props.style }}
   >
-    <div
-      className="k-ScrollableContainer"
-      style={ styles.scrollable }
-    >
-      { props.children }
+    <div className="k-ScrollableContainer" style={styles.scrollable}>
+      {props.children}
     </div>
 
-    <div style={ styles.gradiantLeft } />
-    <div style={ styles.gradiantRight } />
+    <div style={styles.gradiantLeft} />
+    <div style={styles.gradiantRight} />
 
-    { /* Hide scrollbar on Chrome and Safari. */ }
+    {/* Hide scrollbar on Chrome and Safari. */}
     <Style
       scopeSelector=".k-ScrollableContainer::-webkit-scrollbar"
       rules={{ display: 'none' }}
@@ -52,8 +49,9 @@ const styles = {
     top: 0,
     bottom: 0,
     width: gradiantWidth,
-    background:
-      `linear-gradient(90deg, ${ColorsConfig.background1}, ${transparent})`,
+    background: `linear-gradient(90deg, ${
+      ColorsConfig.background1
+    }, ${transparent})`,
   },
 
   gradiantRight: {
@@ -62,7 +60,8 @@ const styles = {
     top: 0,
     bottom: 0,
     width: gradiantWidth,
-    background:
-      `linear-gradient(90deg, ${transparent}, ${ColorsConfig.background1})`,
+    background: `linear-gradient(90deg, ${transparent}, ${
+      ColorsConfig.background1
+    })`,
   },
 }

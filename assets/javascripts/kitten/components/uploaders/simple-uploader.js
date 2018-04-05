@@ -6,16 +6,17 @@ import { CrossIcon } from 'kitten/components/icons/cross-icon'
 
 const Theme = props => {
   const handleClick = props.disabled ? null : props.onCancel
-  const deleteButton = props.deletable && props.fileName
-    ? <ButtonIcon
+  const deleteButton =
+    props.deletable && props.fileName ? (
+      <ButtonIcon
         className="k-SimpleUploader__buttonIcon"
         size="nano"
-        disabled={ props.disabled }
-        onClick={ handleClick }
+        disabled={props.disabled}
+        onClick={handleClick}
       >
         <CrossIcon className="k-ButtonIcon__svg" />
       </ButtonIcon>
-    : null
+    ) : null
 
   return (
     <div className="k-SimpleUploader">
@@ -23,18 +24,16 @@ const Theme = props => {
         size="tiny"
         type="button"
         className="k-SimpleUploader__button"
-        disabled={ props.disabled }
-        onClick={ props.onClick }
+        disabled={props.disabled}
+        onClick={props.onClick}
       >
-        { props.buttonLabel }
+        {props.buttonLabel}
       </Button>
 
       <div className="k-SimpleUploader__link">
-        <span className="k-SimpleUploader__text">
-          { props.fileName }
-        </span>
+        <span className="k-SimpleUploader__text">{props.fileName}</span>
 
-        { deleteButton }
+        {deleteButton}
       </div>
     </div>
   )
@@ -50,10 +49,5 @@ Theme.defaultProps = {
 }
 
 export const SimpleUploader = props => {
-  return (
-    <Uploader
-      { ...props }
-      theme={ Theme }
-    />
-  )
+  return <Uploader {...props} theme={Theme} />
 }

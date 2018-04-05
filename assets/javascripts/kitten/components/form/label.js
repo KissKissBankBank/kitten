@@ -25,29 +25,25 @@ export class Label extends Component {
       focusId,
       size,
       withoutPointerEvents,
-      ...other,
+      ...other
     } = this.props
 
     const Tag = tag
 
-    const labelClassName = classNames(
-      "k-Label",
-      className,
-      {
-        [`k-Label--${size}`]: size,
-        'k-Label--withoutPointerEvents': withoutPointerEvents,
-      },
-    )
-    const htmlFor = (tag == 'label' && focusId) ? focusId : null
+    const labelClassName = classNames('k-Label', className, {
+      [`k-Label--${size}`]: size,
+      'k-Label--withoutPointerEvents': withoutPointerEvents,
+    })
+    const htmlFor = tag == 'label' && focusId ? focusId : null
 
     return (
       <Tag
-        className={ labelClassName }
-        htmlFor={ htmlFor }
-        onClick={ this.handleClick }
-        { ...other }
+        className={labelClassName}
+        htmlFor={htmlFor}
+        onClick={this.handleClick}
+        {...other}
       >
-        { children }
+        {children}
       </Tag>
     )
   }

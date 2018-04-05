@@ -15,7 +15,9 @@ export class CallToActionPopover extends Component {
   getButtonClickHandler(clickOptions) {
     if (!clickOptions) return
 
-    if (clickOptions.closeOnClick) { return this.props.onCloseClick }
+    if (clickOptions.closeOnClick) {
+      return this.props.onCloseClick
+    }
   }
 
   renderIllustration() {
@@ -25,27 +27,18 @@ export class CallToActionPopover extends Component {
 
     return (
       <div className="k-Popover__illustration">
-         <Illustration />
+        <Illustration />
       </div>
     )
   }
 
   renderButton(options, i) {
-    const {
-      label,
-      clickOptions,
-       ...others,
-     } = options
+    const { label, clickOptions, ...others } = options
 
     const clickHandler = this.getButtonClickHandler(clickOptions)
 
     return (
-      <Button
-        onClick={ clickHandler }
-        key={ i }
-        children={ label }
-        { ...others }
-      />
+      <Button onClick={clickHandler} key={i} children={label} {...others} />
     )
   }
 
@@ -64,34 +57,23 @@ export class CallToActionPopover extends Component {
     } = this.props
 
     return (
-      <Popover titleAriaLabelId={ titleAriaLabelId } { ...popoverProps }>
-        { this.renderIllustration() }
-        <Marger
-          top="4"
-          bottom="4"
-          className="k-Popover__content"
-        >
+      <Popover titleAriaLabelId={titleAriaLabelId} {...popoverProps}>
+        {this.renderIllustration()}
+        <Marger top="4" bottom="4" className="k-Popover__content">
           <Marger bottom="1">
-            <Title
-              id={ titleAriaLabelId }
-              modifier="senary"
-              margin={ false }
-            >
-              { title }
+            <Title id={titleAriaLabelId} modifier="senary" margin={false}>
+              {title}
             </Title>
           </Marger>
           <Marger top="1" bottom="3">
-            <Paragraph
-              modifier="tertiary"
-              margin={ false }
-            >
-              { text }
+            <Paragraph modifier="tertiary" margin={false}>
+              {text}
             </Paragraph>
           </Marger>
           <Marger top="3">
             <div className="k-Popover__navigation">
               <div className="k-Popover__buttons">
-                { this.renderButtonsList() }
+                {this.renderButtonsList()}
               </div>
             </div>
           </Marger>
@@ -102,13 +84,15 @@ export class CallToActionPopover extends Component {
 }
 
 CallToActionPopover.defaultProps = {
-  title: "",
-  text: "",
+  title: '',
+  text: '',
   illustration: null,
-  buttons: [{
-    label: "Ok",
-    modifier: "helium",
-    size: "big",
-  }],
+  buttons: [
+    {
+      label: 'Ok',
+      modifier: 'helium',
+      size: 'big',
+    },
+  ],
   onCloseClick: null,
 }

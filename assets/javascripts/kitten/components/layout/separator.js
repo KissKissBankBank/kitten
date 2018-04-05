@@ -5,12 +5,10 @@ export const Separator = ({ darker, className, ...props }) => {
   const separatorClassName = classNames(
     'k-Separator',
     { 'k-Separator--darker': darker },
-    className
+    className,
   )
 
-  return (
-    <hr className={ separatorClassName } { ...props } />
-  )
+  return <hr className={separatorClassName} {...props} />
 }
 
 Separator.defaultProps = {
