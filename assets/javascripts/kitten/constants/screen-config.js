@@ -35,5 +35,4 @@ export const ScreenConfig = {
     min: 1440,
     max: null,
   },
-
 }

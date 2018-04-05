@@ -17,8 +17,9 @@ export class Tour extends Component {
     this.handleClickOnNext = this.handleClickOnNext.bind(this)
     this.handleClickOnPrev = this.handleClickOnPrev.bind(this)
     this.handleClickOnClose = this.handleClickOnClose.bind(this)
-    this.handleTargetHighlightPosition =
-      this.handleTargetHighlightPosition.bind(this)
+    this.handleTargetHighlightPosition = this.handleTargetHighlightPosition.bind(
+      this,
+    )
   }
 
   // Component lifecycle.
@@ -67,7 +68,7 @@ export class Tour extends Component {
 
   start() {
     this.setState({
-      play: true
+      play: true,
     })
 
     const tourState = JSON.stringify({ hasPlayed: true })
@@ -84,7 +85,7 @@ export class Tour extends Component {
   toggleStep(newIndex) {
     this.setState({
       currentIndex: newIndex,
-      currentStep: this.props.steps[newIndex]
+      currentStep: this.props.steps[newIndex],
     })
   }
 
@@ -132,27 +133,27 @@ export class Tour extends Component {
       close: {
         active: true,
         label: this.props.closeButtonLabel,
-      }
+      },
     }
   }
 
   renderTourStep() {
     if (!this.state.play) return
 
-    return(
+    return (
       <TourStep
-        onNextClick={ this.handleClickOnNext }
-        onPrevClick={ this.handleClickOnPrev }
-        onCloseClick={ this.handleClickOnClose }
-        name={ this.state.currentStep.name }
-        title={ this.state.currentStep.title }
-        content={ this.state.currentStep.content }
-        targetElement={ this.state.currentStep.targetElement }
-        popoverPosition={ this.state.currentStep.popoverPosition }
-        illustration={ this.state.currentStep.illustration }
-        buttons={ this.getButtonsList() }
-        onTargetHighlightPosition={ this.handleTargetHighlightPosition }
-        progress={ this.getProgress() }
+        onNextClick={this.handleClickOnNext}
+        onPrevClick={this.handleClickOnPrev}
+        onCloseClick={this.handleClickOnClose}
+        name={this.state.currentStep.name}
+        title={this.state.currentStep.title}
+        content={this.state.currentStep.content}
+        targetElement={this.state.currentStep.targetElement}
+        popoverPosition={this.state.currentStep.popoverPosition}
+        illustration={this.state.currentStep.illustration}
+        buttons={this.getButtonsList()}
+        onTargetHighlightPosition={this.handleTargetHighlightPosition}
+        progress={this.getProgress()}
       />
     )
   }
@@ -161,14 +162,10 @@ export class Tour extends Component {
     const tourClassName = classNames(
       'k-Tour',
       { 'is-hidden': !this.state.visible },
-      this.props.className
+      this.props.className,
     )
 
-    return(
-      <div className={ tourClassName }>
-        { this.renderTourStep() }
-      </div>
-    )
+    return <div className={tourClassName}>{this.renderTourStep()}</div>
   }
 }
 

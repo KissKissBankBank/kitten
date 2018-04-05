@@ -13,29 +13,22 @@ export class TagButton extends Component {
       tiny,
       big,
       icon,
-      ...others,
+      ...others
     } = this.props
 
-    const tagButtonClassNames = classNames(
-      'k-TagButton',
-      className,
-      {
-        [`k-TagButton--${modifier}`]: modifier,
-        'is-selected': selected,
-        'k-TagButton--tiny': tiny,
-        'k-TagButton--big': big,
-        'k-TagButton--icon': icon,
-      },
-    )
+    const tagButtonClassNames = classNames('k-TagButton', className, {
+      [`k-TagButton--${modifier}`]: modifier,
+      'is-selected': selected,
+      'k-TagButton--tiny': tiny,
+      'k-TagButton--big': big,
+      'k-TagButton--icon': icon,
+    })
 
     const Tag = tag
 
     return (
-      <Tag
-        className={ tagButtonClassNames }
-        { ...others }
-      >
-        { children }
+      <Tag className={tagButtonClassNames} {...others}>
+        {children}
       </Tag>
     )
   }

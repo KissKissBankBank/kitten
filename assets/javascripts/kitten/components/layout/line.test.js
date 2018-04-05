@@ -15,9 +15,7 @@ describe('<Line />', () => {
   })
 
   describe('className prop', () => {
-    const component = shallow(
-      <Line className="test-Line--lorem" />
-    )
+    const component = shallow(<Line className="test-Line--lorem" />)
 
     it('has a custom class', () => {
       expect(component.hasClass('test-Line--lorem')).toBe(true)
@@ -28,7 +26,7 @@ describe('<Line />', () => {
     const component = shallow(
       <Line>
         <p>Lorem ipsum…</p>
-      </Line>
+      </Line>,
     ).children()
 
     it('renders a <p>', () => {
@@ -51,9 +49,7 @@ describe('<Line.Item />', () => {
   })
 
   describe('className prop', () => {
-    const component = shallow(
-      <Line className="test-Line__item--lorem" />
-    )
+    const component = shallow(<Line className="test-Line__item--lorem" />)
 
     it('has a custom class', () => {
       expect(component.hasClass('test-Line__item--lorem')).toBe(true)
@@ -64,7 +60,7 @@ describe('<Line.Item />', () => {
     const component = shallow(
       <Line>
         <p>Lorem ipsum…</p>
-      </Line>
+      </Line>,
     ).children()
 
     it('renders a <p>', () => {

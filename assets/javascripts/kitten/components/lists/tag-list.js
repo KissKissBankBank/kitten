@@ -13,8 +13,8 @@ export class TagList extends React.Component {
     const TagIcon = this.props.icon
 
     const { key, item } = element
-    const isFirstItem = (index == 0)
-    const isLastItem = (index == this.props.items.length - 1)
+    const isFirstItem = index == 0
+    const isLastItem = index == this.props.items.length - 1
 
     const itemClassName = classNames(
       'k-TagList__item',
@@ -25,9 +25,9 @@ export class TagList extends React.Component {
     const icon = isFirstItem && <TagIcon className="k-TagList__icon" />
 
     return (
-      <li key={ key } className={ itemClassName }>
-        { icon }
-        { item }
+      <li key={key} className={itemClassName}>
+        {icon}
+        {item}
       </li>
     )
   }
@@ -43,8 +43,8 @@ export class TagList extends React.Component {
     )
 
     return (
-      <ul className={ listClassName } { ...others }>
-        { items.map(this.renderItem) }
+      <ul className={listClassName} {...others}>
+        {items.map(this.renderItem)}
       </ul>
     )
   }

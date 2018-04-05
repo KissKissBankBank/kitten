@@ -5,7 +5,7 @@ import { SCREEN_SIZE_M } from 'kitten/constants/screen-config'
 const createMockMediaMatcher = matches => () => ({
   matches,
   addListener: () => {},
-  removeListener: () => {}
+  removeListener: () => {},
 })
 
 describe('<Container />', () => {
@@ -58,7 +58,7 @@ describe('<Container />', () => {
     describe('and media match', () => {
       window.matchMedia = createMockMediaMatcher(true)
       const container = shallow(
-        <Container fullWidthBelowScreenSize={SCREEN_SIZE_M} />
+        <Container fullWidthBelowScreenSize={SCREEN_SIZE_M} />,
       )
 
       it('has class no-padding', () => {
@@ -66,10 +66,10 @@ describe('<Container />', () => {
       })
     })
 
-    describe('and media don\'t match', () => {
+    describe("and media don't match", () => {
       window.matchMedia = createMockMediaMatcher(false)
       const container = shallow(
-        <Container fullWidthBelowScreenSize={SCREEN_SIZE_M} />
+        <Container fullWidthBelowScreenSize={SCREEN_SIZE_M} />,
       )
 
       it('has not class no-padding', () => {

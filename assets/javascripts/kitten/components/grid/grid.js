@@ -7,12 +7,7 @@ export class Grid extends Component {
     const { className, ...others } = this.props
     const gridClassName = classNames('k-Grid', className)
 
-    return (
-      <div
-        className={ gridClassName }
-        { ...others }
-      />
-    )
+    return <div className={gridClassName} {...others} />
   }
 }
 
@@ -25,13 +20,10 @@ export class GridCol extends React.Component {
       const col = props[`col-${mediaQuery}`]
       const offset = props[`offset-${mediaQuery}`]
 
-      return classNames(
-        classNamesByMediaQuery,
-        {
-          [`k-Grid__col--${col}@${mediaQuery}`]: col,
-          [`k-Grid__col--offset-${offset}@${mediaQuery}`]: offset,
-        },
-      )
+      return classNames(classNamesByMediaQuery, {
+        [`k-Grid__col--${col}@${mediaQuery}`]: col,
+        [`k-Grid__col--offset-${offset}@${mediaQuery}`]: offset,
+      })
     })
 
     return classNamesByMediaQuery
@@ -52,16 +44,11 @@ export class GridCol extends React.Component {
     // Remove unknown props in others.
     Object.keys(ScreenConfig).map(size => {
       const mediaQuery = size.toLowerCase()
-      delete(others[`col-${mediaQuery}`])
-      delete(others[`offset-${mediaQuery}`])
+      delete others[`col-${mediaQuery}`]
+      delete others[`offset-${mediaQuery}`]
     })
 
-    return (
-      <div
-        { ...others }
-        className={ gridClassNames }
-      />
-    )
+    return <div {...others} className={gridClassNames} />
   }
 }
 

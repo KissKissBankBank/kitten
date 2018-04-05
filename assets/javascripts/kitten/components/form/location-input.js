@@ -25,15 +25,14 @@ export class LocationInput extends Component {
   }
 
   handleSelect(address, placeId) {
-    geocodeByPlaceId(placeId)
-      .then(results => {
-        const place = results[0]
+    geocodeByPlaceId(placeId).then(results => {
+      const place = results[0]
 
-        if (place) {
-          this.setState({ address })
-          this.props.onSelect({ value: address, placeId, place })
-        }
-      })
+      if (place) {
+        this.setState({ address })
+        this.props.onSelect({ value: address, placeId, place })
+      }
+    })
   }
 
   render() {
@@ -42,29 +41,25 @@ export class LocationInput extends Component {
       onSelect,
       defaultValue,
       inputProps,
-      ...others,
+      ...others
     } = this.props
 
     const placesClassNames = {
       root: 'k-LocationInput__group',
       input: 'k-LocationInput__input',
       autocompleteContainer: 'k-LocationInput__autocomplete',
-      autocompleteItem: "k-LocationInput__autocompleteItem",
-      autocompleteItemActive: "k-LocationInput__autocompleteItem--active",
+      autocompleteItem: 'k-LocationInput__autocompleteItem',
+      autocompleteItemActive: 'k-LocationInput__autocompleteItem--active',
     }
 
     const autocompleteItem = ({ formattedSuggestion }) => (
       <div>
-        <LocationIcon
-          width="10px"
-          height="16px"
-        />
+        <LocationIcon width="10px" height="16px" />
         <span className="k-LocationInput__autocompleteItem__mainText">
-          { formattedSuggestion.mainText }
-        </span>
-        {' '}
+          {formattedSuggestion.mainText}
+        </span>{' '}
         <span className="k-LocationInput__autocompleteItem__secondaryText">
-          { formattedSuggestion.secondaryText }
+          {formattedSuggestion.secondaryText}
         </span>
       </div>
     )
@@ -82,12 +77,12 @@ export class LocationInput extends Component {
         </div>
 
         <PlacesAutocomplete
-          classNames={ placesClassNames }
-          autocompleteItem={ autocompleteItem }
-          inputProps={ finalInputProps }
-          onSelect={ this.handleSelect }
+          classNames={placesClassNames}
+          autocompleteItem={autocompleteItem}
+          inputProps={finalInputProps}
+          onSelect={this.handleSelect}
           hideLabel
-          { ...others }
+          {...others}
         />
       </div>
     )

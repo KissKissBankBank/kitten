@@ -16,7 +16,7 @@ describe('<HeaderTitles />', () => {
 
   describe('with title and subtitle', () => {
     const titles = shallow(
-      <HeaderTitles title="Custom title" subtitle="Custom subtitle" />
+      <HeaderTitles title="Custom title" subtitle="Custom subtitle" />,
     )
 
     it('renders a title', () => {
@@ -36,10 +36,12 @@ describe('<HeaderTitles />', () => {
 
   describe('with custom class', () => {
     const titles = shallow(
-      <HeaderTitles className="custom-class"
-                    titleClassName="title-custom-class"
-                    subtitleClassName="subtitle-custom-class"
-                    subtitle="Custom subtitle" />
+      <HeaderTitles
+        className="custom-class"
+        titleClassName="title-custom-class"
+        subtitleClassName="subtitle-custom-class"
+        subtitle="Custom subtitle"
+      />,
     )
 
     it('has the right classes', () => {

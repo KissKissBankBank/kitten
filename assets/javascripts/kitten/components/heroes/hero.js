@@ -38,8 +38,8 @@ class HeroBase extends Component {
     return (
       <Container>
         <Grid>
-          { this.renderContent() }
-          { this.renderImage() }
+          {this.renderContent()}
+          {this.renderImage()}
         </Grid>
       </Container>
     )
@@ -64,15 +64,8 @@ class HeroBase extends Component {
     ]
 
     return (
-      <GridCol
-        col="12"
-        col-s="10"
-        col-l="6"
-        style={ gridStyles }
-      >
-        <div style={ contentStyles }>
-          { this.props.children }
-        </div>
+      <GridCol col="12" col-s="10" col-l="6" style={gridStyles}>
+        <div style={contentStyles}>{this.props.children}</div>
       </GridCol>
     )
   }
@@ -88,16 +81,12 @@ class HeroBase extends Component {
     const imageStyles = [
       styles.image,
       this.props.direction == 'right' && styles.image.right,
-      { backgroundImage: `url(${ this.props.imageSrc })` },
+      { backgroundImage: `url(${this.props.imageSrc})` },
     ]
 
     return (
-      <GridCol
-        col="12"
-        col-l="7"
-        style={ gridStyles }
-      >
-        <div style={ imageStyles } />
+      <GridCol col="12" col-l="7" style={gridStyles}>
+        <div style={imageStyles} />
       </GridCol>
     )
   }
