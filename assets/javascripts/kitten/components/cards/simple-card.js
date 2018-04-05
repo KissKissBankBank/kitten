@@ -17,7 +17,7 @@ class SimpleCardComponent extends Component {
       subtitle,
       paragraph,
       horizontalStroke,
-      ...others,
+      ...others
     } = this.props
 
     const Tag = this.props.href ? 'a' : 'div'
