@@ -8,7 +8,7 @@ describe('<Modal />', () => {
 
   describe('with trigger', () => {
     const component = mount(
-      <Modal trigger={ <span className="trigger-example" /> } />
+      <Modal trigger={<span className="trigger-example" />} />,
     )
 
     it('contains the trigger', () => {
@@ -17,9 +17,7 @@ describe('<Modal />', () => {
   })
 
   describe('with content prop', () => {
-    const component = mount(
-      <Modal className="content-example" />
-    )
+    const component = mount(<Modal className="content-example" />)
 
     it('contains the content', () => {
       expect(component.render().hasClass('content-example')).toBe(true)
@@ -33,10 +31,7 @@ describe('<Modal />', () => {
       beforeAll(() => {
         onCloseSpy = sandbox.spy()
         modalComponent = mount(
-          <Modal
-            className="content-example"
-            onClose={ onCloseSpy }
-          />
+          <Modal className="content-example" onClose={onCloseSpy} />,
         )
 
         modalComponent.instance().close()

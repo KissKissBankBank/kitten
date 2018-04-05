@@ -6,10 +6,8 @@ import {
   Grid as GridBase,
   GridCol as GridColBase,
 } from 'kitten/components/grid/grid'
-import {
-  TextInputWithButton as TextInputWithButtonBase
-} from 'kitten/components/form/text-input-with-button'
-import { Paragraph  as ParagraphBase } from 'kitten/components/typography/paragraph'
+import { TextInputWithButton as TextInputWithButtonBase } from 'kitten/components/form/text-input-with-button'
+import { Paragraph as ParagraphBase } from 'kitten/components/typography/paragraph'
 import { Text } from 'kitten/components/typography/text'
 import {
   FacebookButtonIcon as FacebookButtonIconBase,
@@ -18,13 +16,9 @@ import {
 } from 'kitten/components/buttons/social-button-icon'
 import { LinkList } from 'kitten/components/links/link-list'
 import { SelectWithState } from 'kitten/components/form/select-with-state'
-import {
-  KissKissBankBankLogo as KissKissBankBankLogoBase
-} from 'kitten/karl/logos/kisskissbankbanklogo'
+import { KissKissBankBankLogo as KissKissBankBankLogoBase } from 'kitten/karl/logos/kisskissbankbanklogo'
 import { createMatchMediaMax } from 'kitten/helpers/utils/media-queries'
-import { ScreenConfig,
-  SCREEN_SIZE_M,
-} from 'kitten/constants/screen-config'
+import { ScreenConfig, SCREEN_SIZE_M } from 'kitten/constants/screen-config'
 import COLORS from 'kitten/constants/colors-config'
 import { parseHtml } from 'kitten/helpers/utils/parser'
 
@@ -66,10 +60,10 @@ export class KarlFooterKisskiss extends Component {
   render() {
     return (
       <StyleRoot>
-        { this.renderNetwork() }
-        <div style={ styles.darkBackground }>
-          { this.renderList() }
-          { this.renderNotice() }
+        {this.renderNetwork()}
+        <div style={styles.darkBackground}>
+          {this.renderList()}
+          {this.renderNotice()}
         </div>
       </StyleRoot>
     )
@@ -84,16 +78,13 @@ export class KarlFooterKisskiss extends Component {
       hrefFacebook,
       hrefTwitter,
       hrefInstagram,
-      ...others,
+      ...others
     } = this.props
 
     return (
-      <Row style={ styles.network }>
+      <Row style={styles.network}>
         <Grid>
-          <GridCol
-            col-m="12"
-            col-l="8"
-          >
+          <GridCol col-m="12" col-l="8">
             <Marger top="3" bottom="3">
               <Grid>
                 <GridCol
@@ -103,26 +94,24 @@ export class KarlFooterKisskiss extends Component {
                   offset-m="3"
                   col-s="10"
                   offset-s="1"
-                  style={ styles.network.subscribe }
+                  style={styles.network.subscribe}
                 >
-                  <div style={ styles.network.subscribe.label }>
+                  <div style={styles.network.subscribe.label}>
                     <Text
                       size="tiny"
                       weight="regular"
                       htmlFor="subscribe"
                       tag="label"
                     >
-                      { parseHtml(subscribeLabel) }
+                      {parseHtml(subscribeLabel)}
                     </Text>
                   </div>
 
-                  <div style={ styles.network.subscribe.form }>
+                  <div style={styles.network.subscribe.form}>
                     <TextInputWithButton
-                      textInputProps={
-                        { ...textInputProps, id: "subscribe" }
-                      }
-                      value={ newsletterSubmitValue }
-                      style={ styles.network.subscribe.form.textInput }
+                      textInputProps={{ ...textInputProps, id: 'subscribe' }}
+                      value={newsletterSubmitValue}
+                      style={styles.network.subscribe.form.textInput}
                     />
                   </div>
                 </GridCol>
@@ -130,35 +119,25 @@ export class KarlFooterKisskiss extends Component {
             </Marger>
           </GridCol>
 
-          <GridCol
-            col-m="12"
-            col-l="4"
-            style={ styles.network.social }
-          >
-            <div style={ styles.network.social.text }>
-              <Text
-                size="tiny"
-                weight="regular"
-              >
-                { parseHtml(socialText) }
+          <GridCol col-m="12" col-l="4" style={styles.network.social}>
+            <div style={styles.network.social.text}>
+              <Text size="tiny" weight="regular">
+                {parseHtml(socialText)}
               </Text>
             </div>
 
-            <div style={ styles.network.social.buttons }>
+            <div style={styles.network.social.buttons}>
               <FacebookButtonIcon
                 tag="a"
-                style={ styles.network.social.buttons.buttonIcon }
-                href={ hrefFacebook }
+                style={styles.network.social.buttons.buttonIcon}
+                href={hrefFacebook}
               />
               <TwitterButtonIcon
                 tag="a"
-                style={ styles.network.social.buttons.buttonIcon }
-                href={ hrefTwitter }
+                style={styles.network.social.buttons.buttonIcon}
+                href={hrefTwitter}
               />
-              <InstagramButtonIcon
-                tag="a"
-                href={ hrefInstagram }
-              />
+              <InstagramButtonIcon tag="a" href={hrefInstagram} />
             </div>
           </GridCol>
         </Grid>
@@ -167,89 +146,57 @@ export class KarlFooterKisskiss extends Component {
   }
 
   renderLanguageSelect() {
-    const {
-      options,
-      initialLanguage,
-    } = this.props
+    const { options, initialLanguage } = this.props
 
     return (
-      <GridCol
-        col="8"
-        col-m="4"
-        col-l="2"
-        offset="2"
-        offset-m="4"
-        offset-l="2"
-      >
+      <GridCol col="8" col-m="4" col-l="2" offset="2" offset-m="4" offset-l="2">
         <SelectWithState
           name="language"
-          options={ options }
-          value={ initialLanguage }
+          options={options}
+          value={initialLanguage}
         />
       </GridCol>
     )
   }
 
   renderList() {
-    const {
-      items1,
-      items2,
-      items3,
-    } = this.props
+    const { items1, items2, items3 } = this.props
 
     return (
       <Row role="navigation">
-        <Grid style={ styles.list }>
+        <Grid style={styles.list}>
           <GridCol col-l="2">
-            <Marger
-              bottom="4"
-              style={ styles.list.logo }
-            >
-              <KissKissBankBankLogo
-                color="#fff"
-                style={ styles.list.logo.img }
-              />
+            <Marger bottom="4" style={styles.list.logo}>
+              <KissKissBankBankLogo color="#fff" style={styles.list.logo.img} />
             </Marger>
           </GridCol>
 
-          <GridCol
-            col-l="6"
-            style={ styles.list.linkList }
-          >
+          <GridCol col-l="6" style={styles.list.linkList}>
             <Grid>
-              <GridCol
-                col-m="4"
-                style={ styles.list.linkList.items }
-              >
+              <GridCol col-m="4" style={styles.list.linkList.items}>
                 <LinkList
-                  margin={ false }
-                  items={ items1 }
+                  margin={false}
+                  items={items1}
                   color="light"
                   itemMargin="double"
                   lineHeight="normal"
                 />
               </GridCol>
 
-              <GridCol
-                col-m="4"
-                style={ styles.list.linkList.items }
-              >
+              <GridCol col-m="4" style={styles.list.linkList.items}>
                 <LinkList
-                  margin={ false }
-                  items={ items2 }
+                  margin={false}
+                  items={items2}
                   color="light"
                   itemMargin="double"
                   lineHeight="normal"
                 />
               </GridCol>
 
-              <GridCol
-                col-m="4"
-                style={ styles.list.linkList.items }
-              >
+              <GridCol col-m="4" style={styles.list.linkList.items}>
                 <LinkList
-                  margin={ false }
-                  items={ items3 }
+                  margin={false}
+                  items={items3}
                   color="light"
                   itemMargin="double"
                   lineHeight="normal"
@@ -258,7 +205,7 @@ export class KarlFooterKisskiss extends Component {
             </Grid>
           </GridCol>
 
-          { this.renderLanguageSelect() }
+          {this.renderLanguageSelect()}
         </Grid>
       </Row>
     )
@@ -276,9 +223,9 @@ export class KarlFooterKisskiss extends Component {
       noticeCopyright,
     } = this.props
 
-    return(
+    return (
       <Row role="contentinfo">
-        <Grid style={ styles.notice }>
+        <Grid style={styles.notice}>
           <GridCol
             col-xs="8"
             col-s="10"
@@ -289,21 +236,21 @@ export class KarlFooterKisskiss extends Component {
             offset-m="0"
             offset-l="0"
           >
-            <div style={ styles.notice.block }>
-              <div style={ styles.notice.block.logo }>
+            <div style={styles.notice.block}>
+              <div style={styles.notice.block.logo}>
                 <img
                   src="/assets/partners/french-authorities.svg"
-                  alt={ noticeAltAutorite }
-                  style={ styles.notice.block.logo.img }
+                  alt={noticeAltAutorite}
+                  style={styles.notice.block.logo.img}
                 />
               </div>
 
               <Paragraph
                 modifier="quaternary"
-                margin={ false }
-                style={ styles.notice.block.paragraph }
+                margin={false}
+                style={styles.notice.block.paragraph}
               >
-                { parseHtml(noticeParagraphAutorite) }
+                {parseHtml(noticeParagraphAutorite)}
               </Paragraph>
             </div>
           </GridCol>
@@ -318,50 +265,38 @@ export class KarlFooterKisskiss extends Component {
             offset-m="1"
             offset-l="0"
           >
-            <div style={ styles.notice.block }>
-              <div style={ styles.notice.block.logo }>
+            <div style={styles.notice.block}>
+              <div style={styles.notice.block.logo}>
                 <img
                   src="/assets/partners/mangopay.svg"
-                  alt={ noticeAltMangopay }
-                  style={ styles.notice.block.logo.img.mangopay }
+                  alt={noticeAltMangopay}
+                  style={styles.notice.block.logo.img.mangopay}
                 />
               </div>
 
               <Paragraph
                 modifier="quaternary"
-                margin={ false }
-                style={ styles.notice.block.paragraph }
+                margin={false}
+                style={styles.notice.block.paragraph}
               >
-                { parseHtml(noticeParagraphMangopayText1) }
-                { ' ' }
+                {parseHtml(noticeParagraphMangopayText1)}{' '}
                 <a
                   href="https://www.mangopay.com/fr/"
                   target="_blank"
-                  style={ styles.notice.block.paragraph.link }
+                  style={styles.notice.block.paragraph.link}
                 >
-                  { parseHtml(noticeParagraphMangopayLink) }
-                  <abbr>
-                    { ' ' }
-                    { parseHtml(noticeParagraphMangopayLinkAcronym) }
-                  </abbr>
-                </a>
-                { ' ' }
-                { parseHtml(noticeParagraphMangopayText2) }
+                  {parseHtml(noticeParagraphMangopayLink)}
+                  <abbr> {parseHtml(noticeParagraphMangopayLinkAcronym)}</abbr>
+                </a>{' '}
+                {parseHtml(noticeParagraphMangopayText2)}
               </Paragraph>
             </div>
           </GridCol>
 
-          <GridCol
-            col-l="4"
-            style={ styles.notice.block.copyright }
-          >
-            <Marger top={ this.state.viewportIsTabletOrLess ? 5 : 0 }>
-              <Text
-                size="tiny"
-                weight="regular"
-                color="background1"
-              >
-                { parseHtml(noticeCopyright) }
+          <GridCol col-l="4" style={styles.notice.block.copyright}>
+            <Marger top={this.state.viewportIsTabletOrLess ? 5 : 0}>
+              <Text size="tiny" weight="regular" color="background1">
+                {parseHtml(noticeCopyright)}
               </Text>
             </Marger>
           </GridCol>
@@ -377,18 +312,20 @@ const styles = {
   },
 
   network: {
-    background: 'linear-gradient(to top, '
-      + `${COLORS.background3} 0%, `
-      + `${COLORS.background3} 50%, `
-      + `${COLORS.background1} 50%, `
-      + `${COLORS.background1} 100%)`,
+    background:
+      'linear-gradient(to top, ' +
+      `${COLORS.background3} 0%, ` +
+      `${COLORS.background3} 50%, ` +
+      `${COLORS.background1} 50%, ` +
+      `${COLORS.background1} 100%)`,
 
     [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
-      background: 'linear-gradient(to right, '
-        + `${COLORS.background3} 0%, `
-        + `${COLORS.background3} 70%, `
-        + `${COLORS.background1} 70%, `
-        + `${COLORS.background1} 100%)`,
+      background:
+        'linear-gradient(to right, ' +
+        `${COLORS.background3} 0%, ` +
+        `${COLORS.background3} 70%, ` +
+        `${COLORS.background1} 70%, ` +
+        `${COLORS.background1} 100%)`,
     },
 
     subscribe: {
@@ -415,7 +352,7 @@ const styles = {
         },
 
         textInput: {
-          [`@media (min-width: ${ScreenConfig['L'].min}px)`] : {
+          [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
             maxWidth: '450px',
           },
         },
@@ -507,7 +444,7 @@ const styles = {
 
       logo: {
         textAlign: 'center',
-        marginBottom:'10px',
+        marginBottom: '10px',
         lineHeight: 0,
         [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
           marginRight: '14px',
@@ -615,7 +552,7 @@ KarlFooterKisskiss.defaultProps = {
   items3: [
     {
       key: 'key1',
-      item: 'L\'équipe',
+      item: "L'équipe",
       href: '#',
     },
     {
@@ -655,14 +592,17 @@ KarlFooterKisskiss.defaultProps = {
 
   // Notice
   noticeAltAutorite: 'Autorités françaises',
-  noticeParagraphAutorite: 'KissKissBankBank est une plateforme de financement \
+  noticeParagraphAutorite:
+    'KissKissBankBank est une plateforme de financement \
     participatif régulée par les autorités françaises.\
     Immatriculation&nbsp; : 14007218',
   noticeAltMangopay: 'Mangopay',
-  noticeParagraphMangopayText1: 'KissKissBankBank &amp; Co est agent de \
+  noticeParagraphMangopayText1:
+    'KissKissBankBank &amp; Co est agent de \
   l’institution financière',
   noticeParagraphMangopayLink: 'Mangopay',
   noticeParagraphMangopayLinkAcronym: 'SA.',
-  noticeParagraphMangopayText2: 'Paiements sécurisés avec Mangopay Payment Services',
+  noticeParagraphMangopayText2:
+    'Paiements sécurisés avec Mangopay Payment Services',
   noticeCopyright: '&copy; 2018 KissKissBankBank &amp; Co',
 }

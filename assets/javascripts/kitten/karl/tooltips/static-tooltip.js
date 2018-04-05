@@ -8,10 +8,8 @@ export const KarlStaticTooltip = props => {
     <Grid>
       <GridCol col-s="4">
         <div className="k-u-align-right">
-          <Button modifier="helium">
-            Button
-          </Button>
-          <StaticTooltip { ...props } />
+          <Button modifier="helium">Button</Button>
+          <StaticTooltip {...props} />
         </div>
       </GridCol>
     </Grid>

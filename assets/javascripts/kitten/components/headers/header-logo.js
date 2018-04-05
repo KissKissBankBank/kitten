@@ -3,27 +3,25 @@ import classNames from 'classnames'
 
 export class HeaderLogo extends React.Component {
   render() {
-    const { className,
-            src,
-            alt,
-            width,
-            height,
-            lightOnM,
-            lightOnXxs,
-            ...other } = this.props
-    const imgProps = { src, alt, width, height }
-    const linkClassName = classNames(
-      'k-Header__logo',
+    const {
       className,
-      {
-        'k-Header__logo--lightOnM': lightOnM,
-        'k-Header__logo--lightOnXxs': lightOnXxs,
-      },
-    )
+      src,
+      alt,
+      width,
+      height,
+      lightOnM,
+      lightOnXxs,
+      ...other
+    } = this.props
+    const imgProps = { src, alt, width, height }
+    const linkClassName = classNames('k-Header__logo', className, {
+      'k-Header__logo--lightOnM': lightOnM,
+      'k-Header__logo--lightOnXxs': lightOnXxs,
+    })
 
     return (
-      <a className={ linkClassName } { ...other }>
-        <img { ...imgProps } />
+      <a className={linkClassName} {...other}>
+        <img {...imgProps} />
       </a>
     )
   }

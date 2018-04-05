@@ -15,16 +15,11 @@ export const KarlCarouselProjectCard = props => {
       <Carousel
         itemMinWidth={ProjectCardMinWidth}
         baseItemMarginBetween={ProjectCardMarginBetween}
-        renderItem={({item}) => {
-          return (
-            <ProjectCard
-              title={item.title}
-            />
-          )
+        renderItem={({ item }) => {
+          return <ProjectCard title={item.title} />
         }}
-        { ...props }
+        {...props}
       />
     </Container>
   )
 }
-

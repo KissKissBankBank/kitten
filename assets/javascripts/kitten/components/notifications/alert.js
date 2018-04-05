@@ -36,8 +36,8 @@ export class Alert extends Component {
       <CloseButton
         modifier="carbon"
         className="k-Alert__close"
-        closeButtonLabel={ this.props.closeButtonLabel }
-        onClick={ this.handleCloseClick }
+        closeButtonLabel={this.props.closeButtonLabel}
+        onClick={this.handleCloseClick}
       />
     )
   }
@@ -54,7 +54,7 @@ export class Alert extends Component {
       closeButtonLabel,
       children,
       onClose,
-      ...others,
+      ...others
     } = this.props
 
     const alertClassName = classNames(
@@ -64,27 +64,25 @@ export class Alert extends Component {
         'k-Alert--error': error,
         'k-Alert--hidden': !this.state.show,
       },
-      className
+      className,
     )
 
     return (
       <div
-        ref={ div => this.container = div }
+        ref={div => (this.container = div)}
         role="alert"
-        style={ { height: this.state.height } }
-        className={ alertClassName }
-        onAnimationEnd={ this.handleAnimationEnd }
-        { ...others }
+        style={{ height: this.state.height }}
+        className={alertClassName}
+        onAnimationEnd={this.handleAnimationEnd}
+        {...others}
       >
         <div className="k-Alert__container">
           <div className="k-Alert__row">
-            <div className="k-Alert__content">
-              { children }
-            </div>
+            <div className="k-Alert__content">{children}</div>
           </div>
         </div>
 
-        { this.renderCloseButton() }
+        {this.renderCloseButton()}
       </div>
     )
   }

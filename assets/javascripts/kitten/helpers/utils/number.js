@@ -4,8 +4,8 @@ export const numberUtils = {
    */
   isNumber(number) {
     const float = parseFloat(number)
-    return (!isNaN(float) && float + '' == number + '')
-  }
+    return !isNaN(float) && float + '' == number + ''
+  },
 }
 
 // DEPRECATED: do not use default export.

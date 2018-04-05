@@ -9,11 +9,7 @@ export const KarlLinkList = () => {
     { key: 'key4', item: 'Nexus', href: '#' },
   ]
 
-  return (
-    <LinkList
-      items={ linkListItems }
-    />
-  )
+  return <LinkList items={linkListItems} />
 }
 
 export const KarlLinkListSelectedItem = () => {
@@ -24,11 +20,7 @@ export const KarlLinkListSelectedItem = () => {
     { key: 'key4', item: 'Nexus', href: '#' },
   ]
 
-  return (
-    <LinkList
-      items={ linkListSelectedItem }
-    />
-  )
+  return <LinkList items={linkListSelectedItem} />
 }
 
 export const KarlLinkListDark = () => {
@@ -41,9 +33,9 @@ export const KarlLinkListDark = () => {
 
   return (
     <LinkList
-      style= {{ backgroundColor: '#222' }}
+      style={{ backgroundColor: '#222' }}
       color="light"
-      items={ linkListItems }
+      items={linkListItems}
     />
   )
 }

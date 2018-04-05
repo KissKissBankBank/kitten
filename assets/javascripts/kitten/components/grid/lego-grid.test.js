@@ -25,10 +25,10 @@ describe('<LegoGrid />', () => {
     const masonryProps = {
       options: {
         transitionDuration: 0,
-      }
+      },
     }
 
-    const legoGrid = shallow(<LegoGrid masonryProps={ masonryProps } />)
+    const legoGrid = shallow(<LegoGrid masonryProps={masonryProps} />)
     const masonry = legoGrid.find(Masonry).first()
 
     it('sends props to Masonry component', () => {
@@ -37,7 +37,7 @@ describe('<LegoGrid />', () => {
   })
 
   describe('with col size prop', () => {
-    const legoGrid = shallow(<LegoGrid items-xxs-up='2' items-l-up='12' />)
+    const legoGrid = shallow(<LegoGrid items-xxs-up="2" items-l-up="12" />)
     const lCol = NUM_COLUMNS / 12
     const xxsCol = NUM_COLUMNS / 2
     const lClass = `k-LegoGrid--${lCol}col@l`
@@ -71,7 +71,9 @@ describe('<LegoGrid.Item />', () => {
 
     it('has default classes', () => {
       expect(legoGridItem.hasClass('k-LegoGrid__item')).toBe(true)
-      expect(legoGridItem.find('.k-LegoGrid__item__content').exists()).toBe(true)
+      expect(legoGridItem.find('.k-LegoGrid__item__content').exists()).toBe(
+        true,
+      )
     })
   })
 

@@ -92,7 +92,7 @@
     "precommit": "lint-staged"
   },
   "lint-staged": {
-    "assets/**/*.{js,scss}": [
+    "assets/**/*.js": [
       "prettier --single-quote --no-semi --trailing-comma all --write",
       "git add"
     ]

@@ -6,8 +6,8 @@ export const KarlImageCropper = () => {
     <ImageCropper
       name="picture"
       uploaderErrorLabel="Erreur sur l'upload du fichier."
-      sliderMin={ 0 }
-      sliderMax={ 300 }
+      sliderMin={0}
+      sliderMax={300}
       label="Image de présentation"
       cropperInfo="Déplacez l’image dans le cadre pour obtenir le plan voulu."
       sliderTitle="Zoom de l’image"

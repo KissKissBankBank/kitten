@@ -4,11 +4,7 @@ import PropTypes from 'prop-types'
 
 export class VerticalStroke extends Component {
   render() {
-    const {
-      className,
-      size,
-      ...others,
-    } = this.props
+    const { className, size, ...others } = this.props
 
     const verticalStrokeClassName = classNames(
       'k-VerticalStroke',
@@ -21,12 +17,7 @@ export class VerticalStroke extends Component {
       className,
     )
 
-    return (
-      <span
-        className={ verticalStrokeClassName }
-        { ...others }
-      />
-    )
+    return <span className={verticalStrokeClassName} {...others} />
   }
 }
 
