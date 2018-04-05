@@ -11,14 +11,12 @@ export class Title extends React.Component {
       `k-Title--${modifier}`,
       {
         'k-Title--withoutMargin': !margin,
-      }
+      },
     )
 
     const Tag = tag
 
-    return (
-      <Tag className={ titleClassNames } { ...other } />
-    )
+    return <Tag className={titleClassNames} {...other} />
   }
 }
 

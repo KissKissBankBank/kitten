@@ -1,13 +1,10 @@
 import React from 'react'
 import { Tooltip } from 'kitten/components/tooltips/tooltip'
-import { ButtonQuestionMarkIcon }
-  from 'kitten/components/buttons/button-question-mark-icon'
+import { ButtonQuestionMarkIcon } from 'kitten/components/buttons/button-question-mark-icon'
 import ReactTooltip from 'react-tooltip'
 
 const component = shallow(
-  <Tooltip id="tooltip-right"
-           place="right"
-           children="Lorem …" />
+  <Tooltip id="tooltip-right" place="right" children="Lorem …" />,
 )
 
 describe('<Tooltip />', () => {

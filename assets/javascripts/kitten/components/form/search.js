@@ -10,7 +10,7 @@ export class Search extends Component {
 
     this.state = {
       focus: false,
-      hover: false
+      hover: false,
     }
 
     // These listeners help us to handle the text input display depending on the
@@ -50,7 +50,7 @@ export class Search extends Component {
       inputPlaceholder,
       inputLabel,
       submitLabel,
-      ...others,
+      ...others
     } = this.props
 
     let inputClassName = classNames(
@@ -65,32 +65,29 @@ export class Search extends Component {
       <form
         className="k-SearchInput"
         role="search"
-        action={ actionUrl }
+        action={actionUrl}
         acceptCharset="UTF-8"
         method="get"
       >
         <TextInput
-          className={ inputClassName }
+          className={inputClassName}
           type="search"
-          id={ inputId }
-          name={ inputName }
-          placeholder={ inputPlaceholder }
-          aria-label={ inputLabel }
+          id={inputId}
+          name={inputName}
+          placeholder={inputPlaceholder}
+          aria-label={inputLabel}
         />
 
         <button
           type="submit"
-          aria-label={ submitLabel }
+          aria-label={submitLabel}
           className="k-SearchInput__submit k-SearchInput__submit--tiny"
-          onFocus={ this.handleSubmitFocus }
-          onBlur={ this.handleSubmitBlur }
-          onMouseOver={ this.handleSubmitMouseOver }
-          onMouseOut={ this.handleSubmitMouseOut }
+          onFocus={this.handleSubmitFocus}
+          onBlur={this.handleSubmitBlur}
+          onMouseOver={this.handleSubmitMouseOver}
+          onMouseOut={this.handleSubmitMouseOut}
         >
-          <SearchIcon
-            width="14"
-            height="14"
-          />
+          <SearchIcon width="14" height="14" />
         </button>
       </form>
     )

@@ -11,7 +11,7 @@ export class Button extends Component {
       icon,
       iconOnRight,
       iconWithMinWidth,
-      ...others,
+      ...others
     } = this.props
 
     let buttonClassNames = classNames(
@@ -29,17 +29,11 @@ export class Button extends Component {
     )
 
     // Adds keyboard accessibility to `<a>`
-    const tabindex = (tag == 'a' && !this.props.href) ? 0 : null
+    const tabindex = tag == 'a' && !this.props.href ? 0 : null
 
     const Tag = tag
 
-    return (
-      <Tag
-        className={ buttonClassNames }
-        tabIndex={ tabindex }
-        { ...others }
-      />
-    )
+    return <Tag className={buttonClassNames} tabIndex={tabindex} {...others} />
   }
 }
 

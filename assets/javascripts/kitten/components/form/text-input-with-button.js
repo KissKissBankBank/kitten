@@ -12,7 +12,7 @@ export class TextInputWithButton extends Component {
       className,
       textInputProps,
       buttonProps,
-      ...others,
+      ...others
     } = this.props
 
     const TextInputWithButtonClassName = classNames(
@@ -32,25 +32,25 @@ export class TextInputWithButton extends Component {
         'is-valid': valid,
         'is-error': error,
         'is-disabled': disabled,
-      }
+      },
     )
 
     return (
-      <div className={ TextInputWithButtonClassName } { ...others }>
+      <div className={TextInputWithButtonClassName} {...others}>
         <TextInput
-          { ...textInputProps }
-          valid={ valid }
-          error={ error }
-          disabled={ disabled }
-          className={ textInputWithButtonInputClassName }
+          {...textInputProps}
+          valid={valid}
+          error={error}
+          disabled={disabled}
+          className={textInputWithButtonInputClassName}
         />
         <button
           type="button"
-          { ...buttonProps }
-          disabled={ disabled }
-          className={ textInputWithButtonButtonClassName }
+          {...buttonProps}
+          disabled={disabled}
+          className={textInputWithButtonButtonClassName}
         >
-          { value }
+          {value}
         </button>
       </div>
     )

@@ -27,7 +27,7 @@ export const card = (WrappedComponent, wrappedProps) => {
       withShadow,
       withVerticalPadding,
       withoutBoxShadowOnHover,
-      ...others,
+      ...others
     } = { ...defaultProps, ...wrappedProps, ...props }
 
     const cardClassName = classNames(
@@ -48,12 +48,7 @@ export const card = (WrappedComponent, wrappedProps) => {
       className,
     )
 
-    return (
-      <WrappedComponent
-        className={ cardClassName }
-        { ...others }
-      />
-    )
+    return <WrappedComponent className={cardClassName} {...others} />
   }
 
   return Card

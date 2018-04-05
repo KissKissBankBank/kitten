@@ -6,7 +6,7 @@ import classNames from 'classnames'
 const masonryProps = {
   options: {
     transitionDuration: 0,
-  }
+  },
 }
 
 const karlLegoGridClassName = classNames(
@@ -29,18 +29,18 @@ export const KarlLegoGrid = () => {
   ]
 
   return (
-    <div className={ karlLegoGridClassName }>
+    <div className={karlLegoGridClassName}>
       <Grid>
         <GridCol col="12">
-          <LegoGrid masonryProps={ masonryProps }>
-            { cards.map(card =>
-              <LegoGrid.Item key={ card.key }>
+          <LegoGrid masonryProps={masonryProps}>
+            {cards.map(card => (
+              <LegoGrid.Item key={card.key}>
                 <div
                   className="karl-ProjectCard"
-                  style={ { height: card.height } }
+                  style={{ height: card.height }}
                 />
               </LegoGrid.Item>
-            ) }
+            ))}
           </LegoGrid>
         </GridCol>
       </Grid>
@@ -52,25 +52,22 @@ export const KarlLegoGrid12Items = () => {
   const cards = Array.apply(null, { length: 12 }).map((_, index) => index)
 
   return (
-    <div className={ karlLegoGridClassName }>
+    <div className={karlLegoGridClassName}>
       <Grid>
         <GridCol col="12">
           <LegoGrid
-            masonryProps={ masonryProps }
+            masonryProps={masonryProps}
             items-xxs-up="1"
             items-xs-up="3"
             items-s-up="4"
             items-m-up="6"
             items-l-up="12"
           >
-            { cards.map(index =>
-              <LegoGrid.Item key={ index }>
-                <div
-                  className="karl-ProjectCard"
-                  style={ { height: '200px' } }
-                />
+            {cards.map(index => (
+              <LegoGrid.Item key={index}>
+                <div className="karl-ProjectCard" style={{ height: '200px' }} />
               </LegoGrid.Item>
-            ) }
+            ))}
           </LegoGrid>
         </GridCol>
       </Grid>

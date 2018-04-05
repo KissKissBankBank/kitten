@@ -5,7 +5,7 @@ import { createRangeFromZeroTo } from 'kitten/helpers/utils/range'
 import { mediaQueries } from 'kitten/hoc/media-queries'
 import {
   CONTAINER_PADDING,
-  CONTAINER_PADDING_MOBILE
+  CONTAINER_PADDING_MOBILE,
 } from 'kitten/constants/grid-config'
 import ColorsConfig from 'kitten/constants/colors-config'
 
@@ -15,19 +15,22 @@ import { ArrowIcon } from 'kitten/components/icons/arrow-icon'
 
 import { CarouselInner } from 'kitten/components/carousel/carousel-inner'
 
-export const getNumColumnsForWidth =
-  (width, itemMinWidth, itemMarginBetween) => {
-    if (width === 0 || itemMinWidth === 0) {
-      return 0
-    }
-    const remainingWidthWithOneCard = (width - itemMinWidth)
-    const itemWidthAndMargin = itemMinWidth + itemMarginBetween
-
-    const numColumns =
-      Math.floor(remainingWidthWithOneCard / itemWidthAndMargin) + 1
-
-    return numColumns
+export const getNumColumnsForWidth = (
+  width,
+  itemMinWidth,
+  itemMarginBetween,
+) => {
+  if (width === 0 || itemMinWidth === 0) {
+    return 0
   }
+  const remainingWidthWithOneCard = width - itemMinWidth
+  const itemWidthAndMargin = itemMinWidth + itemMarginBetween
+
+  const numColumns =
+    Math.floor(remainingWidthWithOneCard / itemWidthAndMargin) + 1
+
+  return numColumns
+}
 
 export const getNumPagesForColumnsAndDataLength = (dataLength, numColumns) => {
   if (dataLength === 0 || numColumns === 0) {
@@ -50,16 +53,19 @@ export const checkPage = (numPages, newPage) => {
   }
 }
 
-const getMarginBetweenAccordingToViewport =
-  (baseItemMarginBetween, viewportIsMobile, viewportIsTabletOrLess) => {
-    if (viewportIsMobile) {
-      return CONTAINER_PADDING_MOBILE / 2
-    } else if (viewportIsTabletOrLess) {
-      return CONTAINER_PADDING / 2
-    } else {
-      return baseItemMarginBetween
-    }
+const getMarginBetweenAccordingToViewport = (
+  baseItemMarginBetween,
+  viewportIsMobile,
+  viewportIsTabletOrLess,
+) => {
+  if (viewportIsMobile) {
+    return CONTAINER_PADDING_MOBILE / 2
+  } else if (viewportIsTabletOrLess) {
+    return CONTAINER_PADDING / 2
+  } else {
+    return baseItemMarginBetween
   }
+}
 
 class CarouselBase extends React.Component {
   constructor(props, context) {
@@ -83,26 +89,24 @@ class CarouselBase extends React.Component {
     const itemMarginBetween = getMarginBetweenAccordingToViewport(
       baseItemMarginBetween,
       viewportIsMobile,
-      viewportIsTabletOrLess
+      viewportIsTabletOrLess,
     )
 
     const numColumns = getNumColumnsForWidth(
       widthInner,
       itemMinWidth,
-      itemMarginBetween
+      itemMarginBetween,
     )
-    const numPages = getNumPagesForColumnsAndDataLength(
-      data.length,
-      numColumns
-    )
+    const numPages = getNumPagesForColumnsAndDataLength(data.length, numColumns)
 
     if (
       this.state.numColumns !== numColumns ||
       this.state.numPages !== numPages
     ) {
-      const indexPageVisible = this.state.indexPageVisible > (numPages - 1)
-        ? (numPages - 1)
-        : this.state.indexPageVisible
+      const indexPageVisible =
+        this.state.indexPageVisible > numPages - 1
+          ? numPages - 1
+          : this.state.indexPageVisible
 
       this.setState({ numColumns, numPages, indexPageVisible })
     }
@@ -135,27 +139,25 @@ class CarouselBase extends React.Component {
       viewportIsMobile,
       viewportIsTabletOrLess,
     } = this.props
-    const {
-      indexPageVisible,
-      numColumns,
-      numPages,
-    } = this.state
+    const { indexPageVisible, numColumns, numPages } = this.state
     const itemMarginBetween = getMarginBetweenAccordingToViewport(
-      baseItemMarginBetween, viewportIsMobile, viewportIsTabletOrLess
+      baseItemMarginBetween,
+      viewportIsMobile,
+      viewportIsTabletOrLess,
     )
 
     return (
       <CarouselInner
-        data={ data }
-        itemMinWidth={ itemMinWidth }
-        renderItem={ renderItem }
-        indexPageVisible={ indexPageVisible }
-        numColumns={ numColumns }
-        numPages={ numPages }
-        itemMarginBetween={ itemMarginBetween }
-        siblingPageVisible={ viewportIsTabletOrLess }
-        onResizeInner={ this.onResizeInner }
-        goToPage={ this.goToPage }
+        data={data}
+        itemMinWidth={itemMinWidth}
+        renderItem={renderItem}
+        indexPageVisible={indexPageVisible}
+        numColumns={numColumns}
+        numPages={numPages}
+        itemMarginBetween={itemMarginBetween}
+        siblingPageVisible={viewportIsTabletOrLess}
+        onResizeInner={this.onResizeInner}
+        goToPage={this.goToPage}
       />
     )
   }
@@ -166,14 +168,11 @@ class CarouselBase extends React.Component {
       viewportIsTabletOrLess,
       viewportIsMobile,
     } = this.props
-    const {
-      indexPageVisible,
-      numPages
-    } = this.state
+    const { indexPageVisible, numPages } = this.state
     const itemMarginBetween = getMarginBetweenAccordingToViewport(
       baseItemMarginBetween,
       viewportIsMobile,
-      viewportIsTabletOrLess
+      viewportIsTabletOrLess,
     )
 
     if (numPages <= 1) return
@@ -182,24 +181,24 @@ class CarouselBase extends React.Component {
       const rangePage = createRangeFromZeroTo(numPages)
 
       return (
-        <div style={ styles.pageControl }>
-          {
-            rangePage.map(index =>
-              <div style={[
+        <div style={styles.pageControl}>
+          {rangePage.map(index => (
+            <div
+              style={[
                 styles.pageDot,
-                (indexPageVisible === index) && styles.pageDotActive,
-              ]}/>
-            )
-          }
+                indexPageVisible === index && styles.pageDotActive,
+              ]}
+            />
+          ))}
           <div
             key="prev"
-            style={ styles.pageControlButtonPrev }
-            onClick={ this.goPrevPage }
+            style={styles.pageControlButtonPrev}
+            onClick={this.goPrevPage}
           />
           <div
             key="next"
-            style={ styles.pageControlButtonNext }
-            onClick={ this.goNextPage }
+            style={styles.pageControlButtonNext}
+            onClick={this.goNextPage}
           />
         </div>
       )
@@ -212,24 +211,24 @@ class CarouselBase extends React.Component {
           viewportIsTabletOrLess && styles.carouselPaginationTablet,
           {
             marginTop: viewportIsTabletOrLess ? itemMarginBetween : 0,
-            marginLeft: viewportIsTabletOrLess ? (itemMarginBetween * 2) : 0,
+            marginLeft: viewportIsTabletOrLess ? itemMarginBetween * 2 : 0,
           },
         ]}
       >
         <ButtonIcon
           modifier="beryllium"
-          onClick={ this.goPrevPage }
-          disabled={ indexPageVisible < 1 || numPages < 1 }
-          style={ styles.carouselButtonPagination }
+          onClick={this.goPrevPage}
+          disabled={indexPageVisible < 1 || numPages < 1}
+          style={styles.carouselButtonPagination}
         >
           <ArrowIcon className="k-ButtonIcon__svg" direction="left" />
         </ButtonIcon>
 
         <ButtonIcon
           modifier="beryllium"
-          onClick={ this.goNextPage }
-          disabled={ indexPageVisible >= (numPages - 1) }
-          style={ styles.carouselButtonPagination }
+          onClick={this.goNextPage}
+          disabled={indexPageVisible >= numPages - 1}
+          style={styles.carouselButtonPagination}
         >
           <ArrowIcon className="k-ButtonIcon__svg" direction="right" />
         </ButtonIcon>
@@ -245,8 +244,8 @@ class CarouselBase extends React.Component {
     if (viewportIsTabletOrLess) {
       return (
         <div>
-          { this.renderCarouselInner() }
-          { this.renderPagination() }
+          {this.renderCarouselInner()}
+          {this.renderPagination()}
         </div>
       )
     }
@@ -254,15 +253,13 @@ class CarouselBase extends React.Component {
     return (
       <Grid>
         <GridCol
-          col={ withoutLeftOffset ? '11' : '10' }
-          offset={ withoutLeftOffset ? '0' : '1' }
+          col={withoutLeftOffset ? '11' : '10'}
+          offset={withoutLeftOffset ? '0' : '1'}
         >
-          { this.renderCarouselInner() }
+          {this.renderCarouselInner()}
         </GridCol>
 
-        <GridCol col="1">
-          { this.renderPagination() }
-        </GridCol>
+        <GridCol col="1">{this.renderPagination()}</GridCol>
       </Grid>
     )
   }
@@ -333,10 +330,7 @@ CarouselBase.propTypes = {
   viewportIsMobile: PropTypes.bool.isRequired,
 }
 
-export const Carousel = mediaQueries(
-  Radium(CarouselBase),
-  {
-    viewportIsMobile: true,
-    viewportIsTabletOrLess: true,
-  },
-)
+export const Carousel = mediaQueries(Radium(CarouselBase), {
+  viewportIsMobile: true,
+  viewportIsTabletOrLess: true,
+})

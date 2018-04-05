@@ -5,10 +5,8 @@ import { LinkBoxIllustration } from 'kitten/components/illustrations/link-box-il
 export class DocLinkBox extends React.Component {
   render() {
     return (
-      <LinkBox { ...this.props } displayIcon>
-        <LinkBoxIllustration
-          className="k-LinkBox__icon--svg"
-        />
+      <LinkBox {...this.props} displayIcon>
+        <LinkBoxIllustration className="k-LinkBox__icon--svg" />
       </LinkBox>
     )
   }

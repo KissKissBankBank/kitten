@@ -6,7 +6,7 @@ export const ClockIcon = props => (
     viewBox="0 0 11 11"
     width="10"
     height="10"
-    { ...props }
+    {...props}
   >
     <title>Clock</title>
     <circle cx="5.5" cy="5.5" r="5" fill="#fff" stroke="#333" />

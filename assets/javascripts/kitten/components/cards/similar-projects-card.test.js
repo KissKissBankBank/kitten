@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
-import { SimilarProjectsCard } from
-  'kitten/components/cards/similar-projects-card'
-import { SimilarProjectCard } from
-  'kitten/components/cards/project-similar-card'
+import { SimilarProjectsCard } from 'kitten/components/cards/similar-projects-card'
+import { SimilarProjectCard } from 'kitten/components/cards/project-similar-card'
 
 describe('<SimilarProjectsCard />', () => {
   const emptyArray = []
@@ -14,7 +12,7 @@ describe('<SimilarProjectsCard />', () => {
     {
       key: 'tag-2',
       item: 'Tag 2',
-    }
+    },
   ]
   const infos = [
     {
@@ -32,7 +30,7 @@ describe('<SimilarProjectsCard />', () => {
       key: 'info-3',
       text: 'Custom text 3',
       value: 'Custom value 3',
-    }
+    },
   ]
   const project1 = {
     imageSrc: 'image-1',
@@ -91,10 +89,9 @@ describe('<SimilarProjectsCard />', () => {
     describe('on componentDidMount', () => {
       describe('with one basic project', () => {
         const similarProjectsCard = shallow(
-          <SimilarProjectsCard projects={ [project1] } />
+          <SimilarProjectsCard projects={[project1]} />,
         )
-        const currentCard = similarProjectsCard
-          .find(SimilarProjectCard)
+        const currentCard = similarProjectsCard.find(SimilarProjectCard)
 
         it('passes the right props for the project', () => {
           const projectProps = {
@@ -111,10 +108,9 @@ describe('<SimilarProjectsCard />', () => {
 
       describe('with one project with tags', () => {
         const similarProjectsCard = shallow(
-          <SimilarProjectsCard projects={ [project2] } />
+          <SimilarProjectsCard projects={[project2]} />,
         )
-        const currentCard = similarProjectsCard
-          .find(SimilarProjectCard)
+        const currentCard = similarProjectsCard.find(SimilarProjectCard)
 
         it('passes the right props for the project', () => {
           const projectProps = {
@@ -131,10 +127,9 @@ describe('<SimilarProjectsCard />', () => {
 
       describe('with one project with infos', () => {
         const similarProjectsCard = shallow(
-          <SimilarProjectsCard projects={ [project3] } />
+          <SimilarProjectsCard projects={[project3]} />,
         )
-        const currentCard = similarProjectsCard
-          .find(SimilarProjectCard)
+        const currentCard = similarProjectsCard.find(SimilarProjectCard)
 
         it('passes the right props for the project', () => {
           const projectProps = {
@@ -155,9 +150,7 @@ describe('<SimilarProjectsCard />', () => {
 
       beforeAll(() => {
         similarProjectsCard = mount(
-          <SimilarProjectsCard
-            projects={ [project1, project2, project3] }
-          />
+          <SimilarProjectsCard projects={[project1, project2, project3]} />,
         )
 
         similarProjectsCard.setState({ currentIndex: 2 })
@@ -167,10 +160,7 @@ describe('<SimilarProjectsCard />', () => {
         expect(similarProjectsCard.state('currentIndex')).toBe(2)
 
         similarProjectsCard.setProps({
-          projects: [
-            project2,
-            project1,
-          ]
+          projects: [project2, project1],
         })
 
         expect(similarProjectsCard.state('currentIndex')).toBe(0)
@@ -185,16 +175,14 @@ describe('<SimilarProjectsCard />', () => {
 
         beforeAll(() => {
           similarProjectsCard = mount(
-            <SimilarProjectsCard
-              projects={ [project1, project2, project3] } />
+            <SimilarProjectsCard projects={[project1, project2, project3]} />,
           )
 
           similarProjectsCard.setState({ currentIndex: 2 })
           leftArrowButton = similarProjectsCard.find('.k-ButtonIcon').first()
           leftArrowButton.simulate('click')
 
-          currentCard = similarProjectsCard
-            .find(SimilarProjectCard)
+          currentCard = similarProjectsCard.find(SimilarProjectCard)
         })
 
         it('passes the previous project props to <SimilarProjectCard>', () => {
@@ -210,8 +198,7 @@ describe('<SimilarProjectsCard />', () => {
         })
 
         it('updates correctly the step information', () => {
-          expect(currentCard.props())
-            .toMatchObject({ step: '2/3' })
+          expect(currentCard.props()).toMatchObject({ step: '2/3' })
         })
       })
 
@@ -222,11 +209,9 @@ describe('<SimilarProjectsCard />', () => {
 
         beforeAll(() => {
           similarProjectsCard = mount(
-            <SimilarProjectsCard
-              projects={ [project1, project2, project3] } />
+            <SimilarProjectsCard projects={[project1, project2, project3]} />,
           )
-          currentCard = similarProjectsCard
-            .find(SimilarProjectCard)
+          currentCard = similarProjectsCard.find(SimilarProjectCard)
           leftArrowButton = similarProjectsCard.find('.k-ButtonIcon').first()
 
           similarProjectsCard.setState({ currentIndex: 1 })
@@ -246,13 +231,11 @@ describe('<SimilarProjectsCard />', () => {
         })
 
         it('updates correctly the step information', () => {
-          expect(currentCard.props())
-            .toMatchObject({ step: '1/3' })
+          expect(currentCard.props()).toMatchObject({ step: '1/3' })
         })
 
         it('disables the left arrow button', () => {
-          expect(currentCard.props())
-            .toMatchObject({ leftArrowDisabled: true })
+          expect(currentCard.props()).toMatchObject({ leftArrowDisabled: true })
         })
       })
     })
@@ -265,8 +248,7 @@ describe('<SimilarProjectsCard />', () => {
 
         beforeAll(() => {
           similarProjectsCard = mount(
-            <SimilarProjectsCard
-              projects={ [project1, project2, project3] } />
+            <SimilarProjectsCard projects={[project1, project2, project3]} />,
           )
           rightArrowButton = similarProjectsCard.find('.k-ButtonIcon').last()
           rightArrowButton.simulate('click')
@@ -287,8 +269,7 @@ describe('<SimilarProjectsCard />', () => {
         })
 
         it('updates correctly the step information', () => {
-          expect(currentCard.props())
-            .toMatchObject({ step: '2/3' })
+          expect(currentCard.props()).toMatchObject({ step: '2/3' })
         })
       })
 
@@ -299,17 +280,14 @@ describe('<SimilarProjectsCard />', () => {
 
         beforeAll(() => {
           similarProjectsCard = mount(
-            <SimilarProjectsCard
-              projects={ [project1, project2, project3] }
-            />
+            <SimilarProjectsCard projects={[project1, project2, project3]} />,
           )
           rightArrowButton = similarProjectsCard.find('.k-ButtonIcon').last()
 
           similarProjectsCard.setState({ currentIndex: 1 })
           rightArrowButton.simulate('click')
 
-          currentCard = similarProjectsCard
-            .find(SimilarProjectCard)
+          currentCard = similarProjectsCard.find(SimilarProjectCard)
         })
 
         it('passes the last project props to <SimilarProjectCard>', () => {
@@ -325,13 +303,13 @@ describe('<SimilarProjectsCard />', () => {
         })
 
         it('updates correctly the step information', () => {
-          expect(currentCard.props())
-            .toMatchObject({ step: '3/3' })
+          expect(currentCard.props()).toMatchObject({ step: '3/3' })
         })
 
         it('disables the right arrow button', () => {
-          expect(currentCard.props())
-            .toMatchObject({ rightArrowDisabled: true })
+          expect(currentCard.props()).toMatchObject({
+            rightArrowDisabled: true,
+          })
         })
       })
     })
@@ -339,13 +317,14 @@ describe('<SimilarProjectsCard />', () => {
 
   describe('with custom prop', () => {
     const similarProjectsCard = shallow(
-      <SimilarProjectsCard className="custom-className" />
+      <SimilarProjectsCard className="custom-className" />,
     )
     const currentCard = similarProjectsCard.find(SimilarProjectCard)
 
     it('passes the right props', () => {
-      expect(currentCard.props())
-        .toMatchObject({ className: 'custom-className' })
+      expect(currentCard.props()).toMatchObject({
+        className: 'custom-className',
+      })
     })
   })
 })

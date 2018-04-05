@@ -31,16 +31,16 @@ export const KarlHeroExamples = props => (
         <div className="karl-Example">
           <p className="karl-Example__title">Hero left</p>
         </div>
-        <Hero imageSrc={ imageSrc } direction="left">
+        <Hero imageSrc={imageSrc} direction="left">
           <Marger bottom="5">
-            <Title modifier="secondary" margin={ false }>
-              { lorem }
+            <Title modifier="secondary" margin={false}>
+              {lorem}
             </Title>
           </Marger>
 
-          <Marger top="5" bottom={ 4 }>
-            <Paragraph modifier="primary" margin={ false }>
-              { loremIpsumSitAmet }
+          <Marger top="5" bottom={4}>
+            <Paragraph modifier="primary" margin={false}>
+              {loremIpsumSitAmet}
             </Paragraph>
           </Marger>
 
@@ -52,16 +52,16 @@ export const KarlHeroExamples = props => (
         <div className="karl-Example">
           <p className="karl-Example__title">Hero right</p>
         </div>
-        <Hero imageSrc={ imageSrc } direction="right">
+        <Hero imageSrc={imageSrc} direction="right">
           <Marger bottom="5">
-            <Title modifier="secondary" margin={ false }>
-              { lorem }
+            <Title modifier="secondary" margin={false}>
+              {lorem}
             </Title>
           </Marger>
 
-          <Marger top="5" bottom={ 4 }>
-            <Paragraph modifier="primary" margin={ false }>
-              { loremIpsumSitAmet }
+          <Marger top="5" bottom={4}>
+            <Paragraph modifier="primary" margin={false}>
+              {loremIpsumSitAmet}
             </Paragraph>
           </Marger>
 
@@ -73,16 +73,16 @@ export const KarlHeroExamples = props => (
         <div className="karl-Example">
           <p className="karl-Example__title">Hero with small text</p>
         </div>
-        <Hero imageSrc={ imageSrc } direction="left" tiny>
+        <Hero imageSrc={imageSrc} direction="left" tiny>
           <Marger bottom="5">
-            <Title modifier="secondary" margin={ false }>
-              { lorem }
+            <Title modifier="secondary" margin={false}>
+              {lorem}
             </Title>
           </Marger>
 
           <Marger top="5">
-            <Paragraph modifier="primary" margin={ false }>
-              { loremIpsum }
+            <Paragraph modifier="primary" margin={false}>
+              {loremIpsum}
             </Paragraph>
           </Marger>
         </Hero>

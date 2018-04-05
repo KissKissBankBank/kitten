@@ -14,13 +14,8 @@ class ProjectCreatorCardComponent extends React.Component {
 
     return (
       <div className="k-ProjectCreatorCard__content">
-        <ClockIcon
-          width="10px"
-          height="10px"
-        />
-        <span className="k-ProjectCreatorCard__date">
-          { this.props.date }
-        </span>
+        <ClockIcon width="10px" height="10px" />
+        <span className="k-ProjectCreatorCard__date">{this.props.date}</span>
       </div>
     )
   }
@@ -28,25 +23,22 @@ class ProjectCreatorCardComponent extends React.Component {
   renderStatus() {
     if (!this.props.statusText) return
 
-    const { statusBackgroundColor,
-            statusBorderColor,
-            statusText } = this.props
+    const { statusBackgroundColor, statusBorderColor, statusText } = this.props
 
     const statusStyles = {
       backgroundColor: statusBackgroundColor,
-      borderColor: statusBorderColor ? statusBorderColor : statusBackgroundColor
+      borderColor: statusBorderColor
+        ? statusBorderColor
+        : statusBackgroundColor,
     }
 
     return (
       <div className="k-ProjectCreatorCard__status">
         <span
           className="k-ProjectCreatorCard__status--icon"
-          style={ statusStyles }
-        >
-        </span>
-        <div className="k-ProjectCreatorCard__status--text">
-          { statusText }
-        </div>
+          style={statusStyles}
+        />
+        <div className="k-ProjectCreatorCard__status--text">{statusText}</div>
       </div>
     )
   }
@@ -56,14 +48,12 @@ class ProjectCreatorCardComponent extends React.Component {
       <div className="k-ProjectCreatorCard__grid">
         <Marger top="2" bottom="1">
           <div className="k-ProjectCreatorCard__grid--flexEnd">
-            { this.renderDate() }
-            { this.renderStatus() }
+            {this.renderDate()}
+            {this.renderStatus()}
           </div>
         </Marger>
         <Marger top="1" bottom="2">
-          <Paragraph margin={ false }>
-            { this.props.children }
-          </Paragraph>
+          <Paragraph margin={false}>{this.props.children}</Paragraph>
         </Marger>
       </div>
     )
@@ -77,8 +67,8 @@ class ProjectCreatorCardComponent extends React.Component {
     return (
       <a
         className="k-ProjectCreatorCard__link"
-        href={ this.props.href }
-        { ...target }
+        href={this.props.href}
+        {...target}
       >
         <Separator darker />
         <div className="k-ProjectCreatorCard__grid">
@@ -87,14 +77,9 @@ class ProjectCreatorCardComponent extends React.Component {
             bottom="1.2"
             className="k-ProjectCreatorCard__grid--flex"
           >
-            { this.props.linkText }
-            <ButtonIcon
-              size="tiny"
-              withoutHover
-              verticalArrow
-            >
-              <ArrowIcon
-                className="k-ButtonIcon__svg" />
+            {this.props.linkText}
+            <ButtonIcon size="tiny" withoutHover verticalArrow>
+              <ArrowIcon className="k-ButtonIcon__svg" />
             </ButtonIcon>
           </Marger>
         </div>
@@ -109,9 +94,9 @@ class ProjectCreatorCardComponent extends React.Component {
     )
 
     return (
-      <div className={ ProjectCreatorCardClassName }>
-        { this.renderDescription() }
-        { this.renderLink() }
+      <div className={ProjectCreatorCardClassName}>
+        {this.renderDescription()}
+        {this.renderLink()}
       </div>
     )
   }
@@ -121,13 +106,13 @@ export const ProjectCreatorCard = props => {
   const ProjectCreatorCardContent = card(ProjectCreatorCardComponent)
   return (
     <ProjectCreatorCardContent
-      withDarkBorder={ !!props.href }
+      withDarkBorder={!!props.href}
       light
       withBorder
-      withShadow={ false }
+      withShadow={false}
       translateOnHover
-      rounded={ 'tiny' }
-      { ...props }
+      rounded={'tiny'}
+      {...props}
     />
   )
 }
