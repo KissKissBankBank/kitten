@@ -4,6 +4,18 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `subTitleTruncate` prop for `CrowdfundingCard`.
+
+## [20.5.0] - 2018-04-03
+
+Feature:
+- Add the `onClose` props to allow new actions when closing a `modal` component.
+
+## [20.4.1] - 2018-04-03
+
+Fix:
+- Add `backgroundColor` and `color` props on `CrowdfundingCard` component.
+
 ## [20.4.0] - 2018-03-26
 
 Feature:

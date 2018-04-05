@@ -15,6 +15,7 @@ exports[`<CrowdfundingCard /> by default matches with snapshot 1`] = `
         "position": "relative",
       }
     }
+    subTitleTruncate={true}
   >
     <div
       className="k-Card__imageContainer"
@@ -37,8 +38,10 @@ exports[`<CrowdfundingCard /> by default matches with snapshot 1`] = `
         src="https://placehold.it/350x200/caf4fe/caf4fe"
         style={
           Object {
+            "color": undefined,
             "display": "block",
             "position": "absolute",
+            "textAlign": "center",
             "top": 0,
             "width": "100%",
           }
@@ -206,6 +209,7 @@ exports[`<CrowdfundingCard /> with loading prop matches with snapshot 1`] = `
         "position": "relative",
       }
     }
+    subTitleTruncate={true}
   >
     <div
       className="k-Card__imageContainer"
@@ -427,6 +431,7 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
         "position": "relative",
       }
     }
+    subTitleTruncate={true}
   >
     <div
       className="k-Card__imageContainer"
@@ -449,8 +454,10 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
         src="#image"
         style={
           Object {
+            "color": "#333",
             "display": "block",
             "position": "absolute",
+            "textAlign": "center",
             "top": 0,
             "width": "100%",
           }
@@ -596,11 +603,41 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
             }
           }
         />
-        <span
+        <p
           className="k-u-size-micro k-u-weight-regular"
+          data-radium={true}
+          style={
+            Object {
+              "overflow": "hidden",
+              "whiteSpace": "nowrap",
+            }
+          }
         >
-          Custom subtitle
-        </span>
+          <span
+            style={
+              Object {
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            <span />
+            <span>
+              Custom subtitle
+            </span>
+            <span
+              style={
+                Object {
+                  "left": 0,
+                  "position": "fixed",
+                  "top": 0,
+                  "visibility": "hidden",
+                }
+              }
+            >
+              …
+            </span>
+          </span>
+        </p>
       </div>
     </div>
     <div
