@@ -74,6 +74,8 @@ class CrowdfundingCardComponent extends Component {
   renderImage() {
     const {
       alt,
+      backgroundColor,
+      color,
       ...imageProps,
     } = this.props.imageProps
 
@@ -85,14 +87,21 @@ class CrowdfundingCardComponent extends Component {
     return (
       <Marger
         className="k-Card__imageContainer"
-        style={ styles.imageContainer }
+        style={{
+          ...styles.imageContainer,
+          backgroundColor: this.props.loading ? COLORS.line2 : backgroundColor,
+        }}
       >
         { !this.props.loading &&
           <img
             { ...imageProps }
             alt={ alt || '' }
             className={ imageClassName }
-            style={ { ...imageProps.style, ...styles.image } }
+            style={{
+              ...imageProps.style,
+              ...styles.image,
+              color,
+            }}
           />
         }
       </Marger>
@@ -167,7 +176,7 @@ class CrowdfundingCardComponent extends Component {
             className={ className }
           >
             { this.props.titleTruncate &&
-              <Truncate lines={ 2 } style={ styles.title.truncate }>
+              <Truncate lines={ 2 } style={ styles.truncate }>
                 { this.props.cardTitle }
               </Truncate>
             }
@@ -195,6 +204,8 @@ class CrowdfundingCardComponent extends Component {
       this.props.loading && styles.stroke.loading,
     ]
 
+    const truncateStyle = this.props.subTitleTruncate && styles.subtitle.text
+
     return (
       <Marger
         top="1"
@@ -209,8 +220,16 @@ class CrowdfundingCardComponent extends Component {
           <Text
             size="micro"
             weight="regular"
+            tag="p"
+            style={ truncateStyle }
           >
-            { this.props.cardSubTitle }
+            { this.props.subTitleTruncate &&
+              <Truncate style={ styles.truncate }>
+                { this.props.cardSubTitle }
+              </Truncate>
+            }
+
+            { !this.props.subTitleTruncate && this.props.cardSubTitle }
           </Text>
         }
 
@@ -350,11 +369,15 @@ const styles = {
     paddingTop: `${9 / 16 * 100}%`,
     backgroundColor: COLORS.line2,
   },
+  imageContainerLoading: {
+    backgroundColor: COLORS.line2,
+  },
   image: {
     position: 'absolute',
     top: 0,
     width: '100%',
     display: 'block',
+    textAlign: 'center',
   },
   header: {
     grid: {
@@ -389,16 +412,15 @@ const styles = {
       },
     },
   },
+  truncate: {
+    whiteSpace: 'nowrap',
+  },
   titles: {
     minHeight: '70px',
   },
   title: {
     padding: `0 ${COMPONENT_GUTTER}px`,
     lineHeight: '1',
-
-    truncate: {
-      whiteSpace: 'nowrap',
-    },
 
     loading: {
       display: 'block',
@@ -424,6 +446,11 @@ const styles = {
       backgroundColor: COLORS.line2,
       width: '80px',
       height: '12px',
+    },
+
+    text: {
+      whiteSpace: 'nowrap',
+      overflow: 'hidden',
     },
   },
   stroke: {
@@ -501,6 +528,7 @@ const styles = {
 CrowdfundingCardComponent.defaultProps = {
   href: null,
   imageProps: {
+    backgroundColor: COLORS.line2,
     src: 'https://placehold.it/350x200/caf4fe/caf4fe',
     alt: '',
   },
@@ -515,6 +543,7 @@ CrowdfundingCardComponent.defaultProps = {
   cardSubTitle: null,
   titlesMinHeight: true,
   titleTruncate: true,
+  subTitleTruncate: true,
   info1: null,
   info2: null,
   info3: null,
