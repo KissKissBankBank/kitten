@@ -10,6 +10,7 @@ import {
 } from 'kitten/components/grid/grid'
 import { Button as ButtonBase } from 'kitten/components/buttons/button'
 import { Title as TitleBase } from 'kitten/components/typography/title'
+import { Text as TextBase } from 'kitten/components/typography/text'
 import { Paragraph as ParagraphBase } from 'kitten/components/typography/paragraph'
 import { IconBadge as IconBadgeBase } from 'kitten/components/notifications/icon-badge'
 import { HorizontalStroke as HorizontalStrokeBase }
@@ -27,6 +28,7 @@ const Grid = Radium(GridBase)
 const GridCol = Radium(GridColBase)
 const Button = Radium(ButtonBase)
 const Title = Radium(TitleBase)
+const Text = Radium(TextBase)
 const Paragraph = Radium(ParagraphBase)
 const IconBadge = Radium(IconBadgeBase)
 const HorizontalStroke = Radium(HorizontalStrokeBase)
@@ -36,14 +38,25 @@ class RewardCardBase extends Component {
     titleMount: PropTypes.string.isRequired,
     titleDescription: PropTypes.string.isRequired,
     textDescription: PropTypes.string.isRequired,
+
+    titleKissbanker: PropTypes.string.isRequired,
+    titleDelivery: PropTypes.string.isRequired,
+    titleAvailability: PropTypes.string.isRequired,
+    textKissbanker: PropTypes.string.isRequired,
+    textDelivery: PropTypes.string.isRequired,
+    textAvailability: PropTypes.string.isRequired,
+
+    button: PropTypes.string.isRequired,
   }
 
   render() {
     return (
-      <div style={ styles.card }>
-        { this.renderDescription() }
-        { this.renderImage() }
-      </div>
+      <StyleRoot style={ styles.card }>
+        <Grid>
+          { this.renderDescription() }
+          { this.renderImage() }
+        </Grid>
+      </StyleRoot>
     )
   }
 
@@ -55,11 +68,11 @@ class RewardCardBase extends Component {
     } = this.props
 
     return (
-      <Grid>
+      <Marger top="5" bottom="5">
         <GridCol
           col-l="8"
         >
-          <Marger top="5" bottom="5">
+          <Marger top="5" bottom="2">
             <Title modifier="secondary" tag="h1">
               { titleMount }
             </Title>
@@ -71,21 +84,96 @@ class RewardCardBase extends Component {
               { textDescription }
             </Paragraph>
           </Marger>
+          { this.renderInfos() }
+          { this.renderButton() }
         </GridCol>
-      </Grid>
+      </Marger>
+    )
+  }
+
+  renderInfos() {
+    const {
+      titleKissbanker,
+      titleDelivery,
+      titleAvailability,
+      textKissbanker,
+      textDelivery,
+      textAvailability,
+    } = this.props
+
+    return (
+      <Marger top="2" bottom="4">
+        <Grid>
+          <GridCol
+            col-l="3"
+            style={ styles.infos }
+          >
+            <Text weight="bold">
+              { titleKissbanker }
+            </Text>
+            <Text>
+              { textKissbanker }
+            </Text>
+          </GridCol>
+
+          <GridCol
+            col-l="3"
+            style={ styles.infos }
+          >
+            <Text weight="bold">
+              { titleDelivery }
+            </Text>
+            <Text>
+              { textDelivery }
+            </Text>
+          </GridCol>
+
+          <GridCol
+            col-l="3"
+            style={ styles.infos }
+          >
+            <Text weight="bold">
+              { titleAvailability }
+            </Text>
+            <Text>
+              { textAvailability }
+            </Text>
+          </GridCol>
+        </Grid>
+      </Marger>
+    )
+  }
+
+  renderButton() {
+    return (
+      <Marger top="4" bottom="5">
+        <Button
+          size="big"
+          modifier="helium"
+        >
+          { this.props.button }
+        </Button>
+      </Marger>
     )
   }
 
   renderImage() {
+    const imageStyles = [
+      styles.image,
+      { backgroundImage: `url(${ this.props.imageSrc })` },
+    ]
+
     return (
       <GridCol
         col-l="2"
       >
-        <div style={ styles.image } />
+        <div style={ imageStyles } />
       </GridCol>
     )
   }
 }
+
+const COMPONENT_GUTTER = 10
 
 const styles = {
   card: {
@@ -95,9 +183,15 @@ const styles = {
     paddingLeft: '115px',
   },
 
+  infos: {
+    display: 'flex',
+    flexDirection: 'column',
+    padding: `0 ${COMPONENT_GUTTER}px`,
+  },
+
   image: {
     width: `calc(100% + ${CONTAINER_PADDING}px)`,
-    height: '100%',
+    height: '80%',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
 
