@@ -126,6 +126,16 @@ describe('<SimpleCard />', () => {
     })
   })
 
+  describe('without horizontalStroke prop', () => {
+    beforeEach(() => {
+      component = mount(<SimpleCard horizontalStroke={ false } />)
+    })
+
+    it('has a <Text /> with good content', () => {
+      expect(component.find(HorizontalStroke).exists()).toBeFalsy()
+    })
+  })
+
   describe('with title props', () => {
     beforeEach(() => {
       component = mount(
