@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: Update `ArrowIcon` size on `Pagination` component.
+- Fix: Update `:hover` and `:focus` state on `azote` button.
 - Feature: Add `subTitleTruncate` prop for `CrowdfundingCard`.
 
 ## [20.5.0] - 2018-04-03
