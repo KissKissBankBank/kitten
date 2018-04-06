@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Radium, { StyleRoot } from 'radium'
 import COLORS from 'kitten/constants/colors-config'
-import { Button  as ButtonBase } from 'kitten/components/buttons/button'
+import { Button as ButtonBase } from 'kitten/components/buttons/button'
 import { FilterIcon as FilterIconBase } from 'kitten/components/icons/filter-icon'
 
 const FilterIcon = Radium(FilterIconBase)
@@ -9,12 +9,21 @@ const Button = Radium(ButtonBase)
 
 class KarlButtonIconFilterBase extends Component {
   render() {
-    const animateIsHovered =
-      Radium.getState(this.state, 'button-filter', ':hover')
-    const animateIsFocused =
-      Radium.getState(this.state, 'button-filter', ':focus')
-    const animateIsActived =
-      Radium.getState(this.state, 'button-filter', ':active')
+    const animateIsHovered = Radium.getState(
+      this.state,
+      'button-filter',
+      ':hover',
+    )
+    const animateIsFocused = Radium.getState(
+      this.state,
+      'button-filter',
+      ':focus',
+    )
+    const animateIsActived = Radium.getState(
+      this.state,
+      'button-filter',
+      ':active',
+    )
 
     const isDisabled = this.props.disabled
 
@@ -25,26 +34,20 @@ class KarlButtonIconFilterBase extends Component {
 
     return (
       <StyleRoot>
-        <span
-          key="button-filter"
-          style={ styles.filter }
-        >
+        <span key="button-filter" style={styles.filter}>
           <Button
             icon="true"
             aria-label="Filter button"
             title="Filter button"
-            disabled={ isDisabled }
-            modifier={ isModifier }
-            style={ styles.button }
+            disabled={isDisabled}
+            modifier={isModifier}
+            style={styles.button}
           >
-            <span
-              className="k-Button__icon"
-              style={ styles.button.icon }
-            >
+            <span className="k-Button__icon" style={styles.button.icon}>
               <FilterIcon
-                key={ `icon-${animateIsHovered}` } // TODO:
-                animated={ isAnimated }
-                style={ styles.button.icon.svg }
+                key={`icon-${animateIsHovered}`} // TODO:
+                animated={isAnimated}
+                style={styles.button.icon.svg}
               />
             </span>
             Filtrer les projets

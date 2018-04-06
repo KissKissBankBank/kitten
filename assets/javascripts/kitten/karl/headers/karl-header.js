@@ -15,28 +15,35 @@ import { HeaderTitles } from 'kitten/components/headers/header-titles'
 export const KarlMenuHeader = props => (
   <Grid>
     <GridCol col="12">
-      <Header
-        className="karl-Header karl-Menu__header"
-        fixed
-      >
+      <Header className="karl-Header karl-Menu__header" fixed>
         <HeaderItems>
           <HeaderItem>
             <ButtonIcon
-              onClick={ props.onButtonClick }
+              onClick={props.onButtonClick}
               className="karl-Menu__header__button"
             >
-              <MenuIcon className={ classNames('k-ButtonIcon__svg',
-                                               'karl-Menu__header__icon',
-                                               'karl-Menu__header__icon--closed') } />
-              <CrossIcon className={ classNames('k-ButtonIcon__svg',
-                                                'karl-Menu__header__icon',
-                                                'karl-Menu__header__icon--opened') } />
+              <MenuIcon
+                className={classNames(
+                  'k-ButtonIcon__svg',
+                  'karl-Menu__header__icon',
+                  'karl-Menu__header__icon--closed',
+                )}
+              />
+              <CrossIcon
+                className={classNames(
+                  'k-ButtonIcon__svg',
+                  'karl-Menu__header__icon',
+                  'karl-Menu__header__icon--opened',
+                )}
+              />
             </ButtonIcon>
           </HeaderItem>
           <HeaderItem>
             <KissKissBankBankLogo
-              className={ classNames('k-Header__logo',
-                                     'karl-Menu__header__logo') }
+              className={classNames(
+                'k-Header__logo',
+                'karl-Menu__header__logo',
+              )}
               width="135"
             />
           </HeaderItem>

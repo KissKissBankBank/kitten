@@ -9,7 +9,7 @@ describe('<SideGrid />', () => {
   const component = shallow(
     <SideGrid>
       <p>Test</p>
-    </SideGrid>
+    </SideGrid>,
   )
 
   it('renders a <div class="k-SideGrid" />', () => {
@@ -22,7 +22,7 @@ describe('<SideGrid />', () => {
 
   describe('with aside options', () => {
     const component = shallow(
-      <SideGrid asidePosition="start" asideSize="large" />
+      <SideGrid asidePosition="start" asideSize="large" />,
     )
 
     it('has the right classes', () => {
@@ -33,9 +33,11 @@ describe('<SideGrid />', () => {
 
   describe('with custom class', () => {
     const component = shallow(
-      <SideGrid className="custom-class"
-                containerClassName="container-custom-class"
-                rowClassName="row-custom-class" />
+      <SideGrid
+        className="custom-class"
+        containerClassName="container-custom-class"
+        rowClassName="row-custom-class"
+      />,
     )
 
     it('has the right classes', () => {
@@ -50,7 +52,7 @@ describe('<SideGridContent />', () => {
   const component = shallow(
     <SideGridContent>
       <p>Test</p>
-    </SideGridContent>
+    </SideGridContent>,
   )
 
   it('renders a <div class="k-SideGrid__content" />', () => {
@@ -66,7 +68,7 @@ describe('<SideGridAside />', () => {
   const component = shallow(
     <SideGridAside>
       <p>Test</p>
-    </SideGridAside>
+    </SideGridAside>,
   )
 
   it('renders a <div class="k-SideGrid__content" />', () => {

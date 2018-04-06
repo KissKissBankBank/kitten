@@ -1,12 +1,9 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { createMatchMediaMax } from 'kitten/helpers/utils/media-queries'
-import {
-  SCREEN_SIZE_XS,
-  SCREEN_SIZE_M,
-} from 'kitten/constants/screen-config'
+import { SCREEN_SIZE_XS, SCREEN_SIZE_M } from 'kitten/constants/screen-config'
 
-export const mediaQueries = (WrappedComponent, hocProps = {}) => (
+export const mediaQueries = (WrappedComponent, hocProps = {}) =>
   class extends Component {
     constructor(props) {
       super(props)
@@ -24,17 +21,15 @@ export const mediaQueries = (WrappedComponent, hocProps = {}) => (
       }
     }
 
-    mobileMediaQueryEnabled = () => (
-      typeof(hocProps.viewportIsMobile) !== 'undefined'
+    mobileMediaQueryEnabled = () =>
+      typeof hocProps.viewportIsMobile !== 'undefined'
         ? hocProps.viewportIsMobile
         : false
-    )
 
-    tabletOrLessMediaQueryEnabled = () => (
-      typeof(hocProps.viewportIsTabletOrLess) !== 'undefined'
+    tabletOrLessMediaQueryEnabled = () =>
+      typeof hocProps.viewportIsTabletOrLess !== 'undefined'
         ? hocProps.viewportIsTabletOrLess
         : false
-    )
 
     componentDidMount() {
       if (this.mqMobile) {
@@ -69,11 +64,10 @@ export const mediaQueries = (WrappedComponent, hocProps = {}) => (
     render() {
       return (
         <WrappedComponent
-          { ...this.props }
-          viewportIsMobile={ this.state.viewportIsMobile }
-          viewportIsTabletOrLess={ this.state.viewportIsTabletOrLess }
+          {...this.props}
+          viewportIsMobile={this.state.viewportIsMobile}
+          viewportIsTabletOrLess={this.state.viewportIsTabletOrLess}
         />
       )
     }
   }
-)

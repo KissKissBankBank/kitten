@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { TextInput } from 'kitten/components/form/text-input'
-import { TextInputWithButton }
-  from 'kitten/components/form/text-input-with-button'
+import { TextInputWithButton } from 'kitten/components/form/text-input-with-button'
 
 describe('<TextInputWithButton />', () => {
   describe('by default', () => {
@@ -19,7 +18,9 @@ describe('<TextInputWithButton />', () => {
       const textInput = component.find('TextInput')
 
       expect(textInput.dive().is('input')).toBe(true)
-      expect(textInput.dive().hasClass('k-TextInputWithButton__input')).toBe(true)
+      expect(textInput.dive().hasClass('k-TextInputWithButton__input')).toBe(
+        true,
+      )
     })
 
     it('renders a button.k-TextInputWithButton__button', () => {
@@ -36,9 +37,7 @@ describe('<TextInputWithButton />', () => {
       className: 'custom-class',
     }
     const component = mount(
-      <TextInputWithButton
-        textInputProps={ textInputProps }
-      />
+      <TextInputWithButton textInputProps={textInputProps} />,
     )
     const textInput = component.find(TextInput)
 
@@ -105,7 +104,7 @@ describe('<TextInputWithButton />', () => {
         buttonProps={{
           type: 'submit',
         }}
-      />
+      />,
     )
     const button = component.find('.k-TextInputWithButton__button')
 

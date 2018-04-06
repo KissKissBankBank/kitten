@@ -7,9 +7,10 @@ const Circle = ({ color, ...others }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      viewBox={ `0 0 ${ size * 2 } ${ size * 2 }` }
-      { ...others }>
-      <circle fill={ color } cx={ size } cy={ size } r={ size } />
+      viewBox={`0 0 ${size * 2} ${size * 2}`}
+      {...others}
+    >
+      <circle fill={color} cx={size} cy={size} r={size} />
     </svg>
   )
 }
@@ -20,18 +21,15 @@ export class Loader extends Component {
 
     const Tag = tag
 
-    const loaderClassName = classNames(
-      'k-Loader',
-      className,
-    )
+    const loaderClassName = classNames('k-Loader', className)
 
-    const circle = <Circle className="k-Loader__circle" color={ color } />
+    const circle = <Circle className="k-Loader__circle" color={color} />
 
     return (
-      <Tag className={ loaderClassName } { ...others }>
-        { circle }
-        { circle }
-        { circle }
+      <Tag className={loaderClassName} {...others}>
+        {circle}
+        {circle}
+        {circle}
       </Tag>
     )
   }

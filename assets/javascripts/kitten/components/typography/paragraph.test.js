@@ -2,9 +2,7 @@ import React from 'react'
 import { Paragraph } from 'kitten/components/typography/paragraph'
 
 describe('Paragraph with default props', () => {
-  const defaultComponent = shallow(
-    <Paragraph />
-  )
+  const defaultComponent = shallow(<Paragraph />)
 
   it('has a default paragraph attribute', () => {
     expect(defaultComponent.find('.k-Paragraph')).toHaveLength(1)
@@ -20,7 +18,7 @@ describe('Paragraph with default props', () => {
 
   describe('<Paragraph />', () => {
     const component = shallow(
-      <Paragraph className='k-Paragraph--custom'>Loren ipsum…</Paragraph>
+      <Paragraph className="k-Paragraph--custom">Loren ipsum…</Paragraph>,
     )
 
     it('renders a <p class="k-Paragraph" />', () => {
@@ -32,16 +30,14 @@ describe('Paragraph with default props', () => {
 
     describe('modifier', () => {
       it('accepts secondary', () => {
-        const component = shallow(
-          <Paragraph modifier="secondary" />
-        )
+        const component = shallow(<Paragraph modifier="secondary" />)
         expect(component.hasClass('k-Paragraph--secondary')).toBe(true)
       })
     })
   })
 
   describe('with margin prop', () => {
-    const component = shallow(<Paragraph margin={ false } />)
+    const component = shallow(<Paragraph margin={false} />)
 
     it('has a good class', () => {
       expect(component.hasClass('k-Paragraph--withoutMargin')).toBe(true)

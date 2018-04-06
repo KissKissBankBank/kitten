@@ -15,10 +15,7 @@ export class InfoLines extends Component {
   renderInfo(element) {
     const { key, value, id, className, style, ...others } = element
 
-    const infoClassName = classNames(
-      'k-InfoLines__line',
-      className,
-    )
+    const infoClassName = classNames('k-InfoLines__line', className)
 
     const infoStyle = {
       ...style,
@@ -26,18 +23,10 @@ export class InfoLines extends Component {
     }
 
     return (
-      <div
-        { ...others }
-        key={ id }
-        className={ infoClassName }
-        style={ infoStyle }>
-        <div className="k-InfoLines__line__key">
-          { key }
-        </div>
+      <div {...others} key={id} className={infoClassName} style={infoStyle}>
+        <div className="k-InfoLines__line__key">{key}</div>
 
-        <div className="k-InfoLines__line__value">
-          { value }
-        </div>
+        <div className="k-InfoLines__line__value">{value}</div>
       </div>
     )
   }
@@ -52,7 +41,7 @@ export class InfoLines extends Component {
       withoutResponsive,
       withoutTopBottomBorder,
       style,
-      ...others,
+      ...others
     } = this.props
 
     const infoLinesClassName = classNames(
@@ -72,11 +61,8 @@ export class InfoLines extends Component {
     }
 
     return (
-      <div
-        { ...others }
-        className={ infoLinesClassName }
-        style={ infoLinesStyle }>
-        { this.renderInfos() }
+      <div {...others} className={infoLinesClassName} style={infoLinesStyle}>
+        {this.renderInfos()}
       </div>
     )
   }

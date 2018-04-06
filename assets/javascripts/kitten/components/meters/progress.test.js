@@ -11,14 +11,12 @@ describe('<Progress />', () => {
   })
 
   it('renders a <Progress class="k-Progress" />', () => {
-    const component = shallow(
-      <Progress className="k-Progress--custom" />
-    )
+    const component = shallow(<Progress className="k-Progress--custom" />)
     expect(component.hasClass('k-Progress--custom')).toBe(true)
   })
 
   it('renders a value', () => {
-    const component = shallow(<Progress value={ 42 } />)
+    const component = shallow(<Progress value={42} />)
     const slider = component.find('.k-Progress__slider')
 
     expect(component.props()['aria-valuenow']).toBe(42)
@@ -35,7 +33,7 @@ describe('<Progress />', () => {
   })
 
   describe('with a superior value of maximum limit', () => {
-    const component = shallow(<Progress value={ 120 } />)
+    const component = shallow(<Progress value={120} />)
     const slider = component.find('.k-Progress__slider')
 
     expect(component.props()['aria-valuenow']).toBe(100)

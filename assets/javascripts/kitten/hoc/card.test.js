@@ -3,14 +3,9 @@ import classNames from 'classnames'
 import { card } from 'kitten/hoc/card'
 
 const ExampleCardComponent = props => {
-  const exampleClassName = classNames(
-    'test-ExampleCard',
-    props.className,
-  )
+  const exampleClassName = classNames('test-ExampleCard', props.className)
 
-  return (
-    <div { ...props } className={ exampleClassName } />
-  )
+  return <div {...props} className={exampleClassName} />
 }
 
 const ExampleCard = card(ExampleCardComponent)
@@ -113,7 +108,7 @@ describe('card()', () => {
   })
 
   describe('with custom prop', () => {
-    const ExampleCard = card(ExampleCardComponent, { 'title': 'Foo' })
+    const ExampleCard = card(ExampleCardComponent, { title: 'Foo' })
     const component = shallow(<ExampleCard title="Bar" />)
 
     it('has a component custom prop', () => {

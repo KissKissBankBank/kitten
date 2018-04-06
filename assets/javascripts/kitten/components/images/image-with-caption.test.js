@@ -1,11 +1,9 @@
 import React from 'react'
 import { ImageWithCaption } from 'kitten/components/images/image-with-caption'
 
-describe ('<ImageWithCaption />', () => {
+describe('<ImageWithCaption />', () => {
   describe('by default', () => {
-    const component = shallow(
-      <ImageWithCaption />
-    )
+    const component = shallow(<ImageWithCaption />)
     const figure = component.find('figure')
     const image = figure.find('img')
     const figcaption = figure.find('figcaption')
@@ -28,9 +26,7 @@ describe ('<ImageWithCaption />', () => {
 
   describe('children prop', () => {
     const component = mount(
-      <ImageWithCaption>
-        Example content
-      </ImageWithCaption>
+      <ImageWithCaption>Example content</ImageWithCaption>,
     )
 
     it('adds a children element', () => {
@@ -45,7 +41,7 @@ describe ('<ImageWithCaption />', () => {
         imageAlt="FooBar"
         imageWidth="42"
         imageHeight="42"
-      />
+      />,
     )
     const image = component.find('.k-ImageWithCaption__img')
 
@@ -60,9 +56,7 @@ describe ('<ImageWithCaption />', () => {
 
   describe('with captionProps prop', () => {
     const component = mount(
-      <ImageWithCaption
-        captionProps={{ title: 'custom' }}
-      />
+      <ImageWithCaption captionProps={{ title: 'custom' }} />,
     )
 
     const caption = component.find('.k-ImageWithCaption__caption')

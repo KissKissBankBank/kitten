@@ -1,6 +1,5 @@
 import React from 'react'
-import { LoaderWithParagraph }
-  from 'kitten/components/loaders/loader-with-paragraph'
+import { LoaderWithParagraph } from 'kitten/components/loaders/loader-with-paragraph'
 import { Loader } from 'kitten/components/loaders/loader'
 import { Paragraph } from 'kitten/components/typography/paragraph'
 
@@ -39,7 +38,7 @@ describe('<LoaderWithParagraph />', () => {
 
   describe('with a children', () => {
     const loader = mount(
-      <LoaderWithParagraph>Lorem ipsum…</LoaderWithParagraph>
+      <LoaderWithParagraph>Lorem ipsum…</LoaderWithParagraph>,
     )
 
     it('has a good text', () => {
@@ -79,7 +78,9 @@ describe('<LoaderWithParagraph />', () => {
     })
 
     it('has a class to manage columns version', () => {
-      expect(loader.render().hasClass('k-LoaderWithParagraph--column')).toBe(true)
+      expect(loader.render().hasClass('k-LoaderWithParagraph--column')).toBe(
+        true,
+      )
     })
   })
 
@@ -95,13 +96,15 @@ describe('<LoaderWithParagraph />', () => {
     })
 
     it('has a class to manage columns version', () => {
-      expect(loader.render().hasClass('k-LoaderWithParagraph--column')).toBe(true)
+      expect(loader.render().hasClass('k-LoaderWithParagraph--column')).toBe(
+        true,
+      )
     })
   })
 
   describe('with loaderProps prop', () => {
     const loader = mount(
-      <LoaderWithParagraph loaderProps={ { className: 'custom__class' } } />
+      <LoaderWithParagraph loaderProps={{ className: 'custom__class' }} />,
     )
 
     it('has a custom class on Loader component', () => {
@@ -111,7 +114,7 @@ describe('<LoaderWithParagraph />', () => {
 
   describe('with paragraphProps prop', () => {
     const loader = mount(
-      <LoaderWithParagraph paragraphProps={ { className: 'custom__class' } } />
+      <LoaderWithParagraph paragraphProps={{ className: 'custom__class' }} />,
     )
 
     it('has a custom class on Paragraph component', () => {

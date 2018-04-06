@@ -3,9 +3,7 @@ import { SupTitle } from 'kitten/components/typography/sup-title'
 
 describe('<SupTitle />', () => {
   describe('by default', () => {
-    const component = shallow(
-      <SupTitle />
-    )
+    const component = shallow(<SupTitle />)
 
     it('renders a <div class="k-SupTitle" />', () => {
       expect(component.hasClass('k-SupTitle')).toBe(true)
@@ -17,9 +15,7 @@ describe('<SupTitle />', () => {
   })
 
   describe('className prop', () => {
-    const component = mount(
-      <SupTitle className='customClass' />
-    )
+    const component = mount(<SupTitle className="customClass" />)
 
     it('adds the customClass to the component', () => {
       expect(component.hasClass('customClass')).toBe(true)
@@ -27,9 +23,7 @@ describe('<SupTitle />', () => {
   })
 
   describe('tag prop', () => {
-    const component = mount(
-      <SupTitle tag='h1' />
-    )
+    const component = mount(<SupTitle tag="h1" />)
 
     it('changes the tag of the component', () => {
       expect(component.render().is('h1')).toBe(true)
@@ -37,11 +31,7 @@ describe('<SupTitle />', () => {
   })
 
   describe('with children', () => {
-    const component = mount(
-      <SupTitle>
-        Lorem ipsum…
-      </SupTitle>
-    )
+    const component = mount(<SupTitle>Lorem ipsum…</SupTitle>)
 
     it('has a content', () => {
       expect(component.text()).toBe('Lorem ipsum…')

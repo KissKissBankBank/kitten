@@ -45,7 +45,7 @@ describe('<Checkbox />', () => {
     const component = shallow(
       <Checkbox>
         <svg />
-      </Checkbox>
+      </Checkbox>,
     )
     const labelChildren = component.find(Text).children()
 
@@ -56,9 +56,7 @@ describe('<Checkbox />', () => {
 
   describe('textProps prop', () => {
     const component = shallow(
-      <Checkbox textProps={ { weight: 'regular' } }>
-        Lorem ipsum…
-      </Checkbox>
+      <Checkbox textProps={{ weight: 'regular' }}>Lorem ipsum…</Checkbox>,
     )
     const labelText = component.find(Text)
 

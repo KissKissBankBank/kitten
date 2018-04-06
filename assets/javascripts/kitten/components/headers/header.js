@@ -11,13 +11,9 @@ export class Header extends React.Component {
     )
 
     return (
-      <header className={ headerClassName }
-              role="banner"
-              { ...other }>
+      <header className={headerClassName} role="banner" {...other}>
         <div className="k-Header__container">
-          <div className="k-Header__row">
-            { children }
-          </div>
+          <div className="k-Header__row">{children}</div>
         </div>
       </header>
     )
@@ -33,9 +29,7 @@ export class HeaderItems extends React.Component {
       className,
     )
 
-    return (
-      <div className={ itemsClassName } { ...other } />
-    )
+    return <div className={itemsClassName} {...other} />
   }
 }
 
@@ -52,9 +46,7 @@ export class HeaderItem extends React.Component {
       className,
     )
 
-    return (
-      <Tag className={ itemClassName } { ...other } />
-    )
+    return <Tag className={itemClassName} {...other} />
   }
 }
 

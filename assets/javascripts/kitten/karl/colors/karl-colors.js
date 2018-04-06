@@ -26,14 +26,11 @@ export class KarlColors extends Component {
     }
 
     return (
-      <div
-        className="karl-Colors__container"
-        style={ backgroundHexaStyles }
-      >
+      <div className="karl-Colors__container" style={backgroundHexaStyles}>
         <Marger
           bottom="3"
           className="k-u-margin-left-double"
-          style={ nameHexaStyles }
+          style={nameHexaStyles}
         >
           <Text
             tag="p"
@@ -41,16 +38,11 @@ export class KarlColors extends Component {
             weight="bold"
             className="k-u-margin-none"
           >
-            { name }
+            {name}
           </Text>
 
-          <Text
-            tag="p"
-            size="micro"
-            weight="bold"
-            className="k-u-margin-none"
-          >
-            { backgroundHexa }
+          <Text tag="p" size="micro" weight="bold" className="k-u-margin-none">
+            {backgroundHexa}
           </Text>
         </Marger>
       </div>
@@ -61,9 +53,7 @@ export class KarlColors extends Component {
     return (
       <Grid>
         <GridCol>
-          <div className="karl-Colors">
-            { this.renderColors() }
-          </div>
+          <div className="karl-Colors">{this.renderColors()}</div>
         </GridCol>
       </Grid>
     )
