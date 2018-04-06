@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Update `:hover` and `:focus` state on `azote` button.
 - Feature: Add `subTitleTruncate` prop for `CrowdfundingCard`.
 - Feature: Add `horizontalStroke` prop for `SimpleCard`.
 
