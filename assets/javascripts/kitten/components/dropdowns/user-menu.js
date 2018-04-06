@@ -2,8 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import { Dropdown } from 'kitten/components/dropdowns/dropdown'
-import { ButtonImageWithTextAndBadge } from
-  'kitten/components/buttons/button-image-with-text-and-badge'
+import { ButtonImageWithTextAndBadge } from 'kitten/components/buttons/button-image-with-text-and-badge'
 import { NavList } from 'kitten/components/lists/nav-list'
 import domElementHelper from 'kitten/helpers/dom/element-helper'
 import emitter from 'kitten/helpers/utils/emitter'
@@ -20,10 +19,10 @@ export class UserMenu extends Component {
     }
 
     this.handleButtonClick = this.handleButtonClick.bind(this)
-    this.handlePositionUpdate =
-      this.handlePositionUpdate.bind(this)
-    this.handleOtherDropdownsOpening =
-      this.handleOtherDropdownsOpening.bind(this)
+    this.handlePositionUpdate = this.handlePositionUpdate.bind(this)
+    this.handleOtherDropdownsOpening = this.handleOtherDropdownsOpening.bind(
+      this,
+    )
   }
 
   componentDidMount() {
@@ -32,7 +31,7 @@ export class UserMenu extends Component {
     emitter.on('dropdown:opening:trigger', this.handleOtherDropdownsOpening)
 
     if (this.props.closeEvents) {
-      this.props.closeEvents.forEach((ev) => {
+      this.props.closeEvents.forEach(ev => {
         window.addEventListener(ev, this.handleOtherDropdownsOpening)
       })
     }
@@ -40,7 +39,7 @@ export class UserMenu extends Component {
 
   componentWillUnmount() {
     if (this.props.closeEvents) {
-      this.props.closeEvents.forEach((ev) => {
+      this.props.closeEvents.forEach(ev => {
         window.removeEventListener(ev, this.handleOtherDropdownsOpening)
       })
     }
@@ -64,8 +63,7 @@ export class UserMenu extends Component {
 
   canComputeSize() {
     return (
-      domElementHelper.canUseDom() &&
-      typeof this.refs.dropdown != 'undefined'
+      domElementHelper.canUseDom() && typeof this.refs.dropdown != 'undefined'
     )
   }
 
@@ -90,15 +88,18 @@ export class UserMenu extends Component {
   }
 
   getDropdownContentElementHalfWidth() {
-    return domElementHelper.getComputedWidth(this.getDropdownContentElement()) / 2
+    return (
+      domElementHelper.getComputedWidth(this.getDropdownContentElement()) / 2
+    )
   }
 
   getContentHorizontalPosition() {
     // Compute dropdown position depending on the button image position.
-    let space = this.getDropdownContainerWidth()
-                + this.props.spaceAroundGrid
-                - this.getButtonImageElementHalfWidth()
-                - this.getDropdownContentElementHalfWidth()
+    let space =
+      this.getDropdownContainerWidth() +
+      this.props.spaceAroundGrid -
+      this.getButtonImageElementHalfWidth() -
+      this.getDropdownContentElementHalfWidth()
 
     // If the interval is negative, just stick the dropdown to the reference
     // element border.
@@ -110,14 +111,15 @@ export class UserMenu extends Component {
   getArrowHorizontalPosition() {
     const contentHorizontalPositionValue = parseInt(
       this.getContentHorizontalPosition().right,
-      10
+      10,
     )
 
     // Compute arrow position depending on the button image position.
-    const space = this.getDropdownContainerWidth()
-                  + this.props.spaceAroundGrid
-                  - this.getButtonImageElementHalfWidth()
-                  - contentHorizontalPositionValue
+    const space =
+      this.getDropdownContainerWidth() +
+      this.props.spaceAroundGrid -
+      this.getButtonImageElementHalfWidth() -
+      contentHorizontalPositionValue
 
     return { right: space + 'px' }
   }
@@ -125,10 +127,9 @@ export class UserMenu extends Component {
   getDropdownContent() {
     return (
       <NavList
-        className={ classNames('k-UserMenu',
-                               'k-UserMenu--withoutBorderTop') }
+        className={classNames('k-UserMenu', 'k-UserMenu--withoutBorderTop')}
         role="menubar"
-        list={ this.props.dropdownList }
+        list={this.props.dropdownList}
       />
     )
   }
@@ -137,34 +138,35 @@ export class UserMenu extends Component {
     return (
       <ButtonImageWithTextAndBadge
         ref="dropdownButton"
-        className={ this.props.buttonClassName }
-        id={ this.getButtonId() }
-        isExpanded={ this.state.isExpanded }
-        onClick={ this.handleButtonClick }
-        srcImg={ this.props.buttonImgSrc }
-        widthImg={ this.props.buttonImgWidth }
-        heightImg={ this.props.buttonImgHeight }
-        altImg={ this.props.buttonImgAlt }
-        text={ this.props.buttonText }
-        title={ this.props.buttonTitle }
-        notifications={ this.props.buttonNotifications }
-        textClassName="k-Header__userMenuText--withEllipsis" />
+        className={this.props.buttonClassName}
+        id={this.getButtonId()}
+        isExpanded={this.state.isExpanded}
+        onClick={this.handleButtonClick}
+        srcImg={this.props.buttonImgSrc}
+        widthImg={this.props.buttonImgWidth}
+        heightImg={this.props.buttonImgHeight}
+        altImg={this.props.buttonImgAlt}
+        text={this.props.buttonText}
+        title={this.props.buttonTitle}
+        notifications={this.props.buttonNotifications}
+        textClassName="k-Header__userMenuText--withEllipsis"
+      />
     )
   }
 
   getDropdownArrow() {
-    return (<span className="k-UserMenu__arrow" />)
+    return <span className="k-UserMenu__arrow" />
   }
 
   updateDropdownContentPosition() {
     this.setState({
-      contentHorizontalPosition: this.getContentHorizontalPosition()
+      contentHorizontalPosition: this.getContentHorizontalPosition(),
     })
   }
 
   updateDropdownArrowPosition() {
     this.setState({
-      arrowHorizontalPosition: this.getArrowHorizontalPosition()
+      arrowHorizontalPosition: this.getArrowHorizontalPosition(),
     })
   }
 
@@ -198,21 +200,15 @@ export class UserMenu extends Component {
     return (
       <Dropdown
         ref="dropdown"
-        button={ this.getDropdownButton() }
-        dropdownContent={ this.getDropdownContent() }
-        dropdownListArrow={ this.getDropdownArrow() }
-        contentHorizontalPosition={
-          this.state.contentHorizontalPosition
-        }
-        arrowHorizontalPosition={
-          this.state.arrowHorizontalPosition
-        }
-        isExpanded={ this.state.isExpanded }
-        buttonId={ this.getButtonId() }
-        onPositionUpdate={
-          this.handlePositionUpdate
-        }
-        { ...otherProps }
+        button={this.getDropdownButton()}
+        dropdownContent={this.getDropdownContent()}
+        dropdownListArrow={this.getDropdownArrow()}
+        contentHorizontalPosition={this.state.contentHorizontalPosition}
+        arrowHorizontalPosition={this.state.arrowHorizontalPosition}
+        isExpanded={this.state.isExpanded}
+        buttonId={this.getButtonId()}
+        onPositionUpdate={this.handlePositionUpdate}
+        {...otherProps}
       />
     )
   }

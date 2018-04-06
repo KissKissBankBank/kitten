@@ -7,9 +7,7 @@ const SimpleComponent = ({
   viewportIsTabletOrLess,
   ...props
 }) => {
-  return (
-    <div title="Test me!" { ...props } />
-  )
+  return <div title="Test me!" {...props} />
 }
 
 const mockAddListener = jest.fn()
@@ -39,13 +37,10 @@ describe('mediaQueries()', () => {
 
   describe('by default', () => {
     beforeEach(() => {
-      SimpleComponentWithMediaQueries = mediaQueries(
-        SimpleComponent,
-        {
-          viewportIsMobile: true,
-          viewportIsTabletOrLess: true,
-        },
-      )
+      SimpleComponentWithMediaQueries = mediaQueries(SimpleComponent, {
+        viewportIsMobile: true,
+        viewportIsTabletOrLess: true,
+      })
       component = mount(<SimpleComponentWithMediaQueries />)
       componentSnapshot = renderer
         .create(<SimpleComponentWithMediaQueries />)
@@ -76,12 +71,9 @@ describe('mediaQueries()', () => {
   describe('with tablet or less version', () => {
     beforeEach(() => {
       window.matchMedia = createMockMediaMatcher(true)
-      SimpleComponentWithMediaQueries = mediaQueries(
-        SimpleComponent,
-        {
-          viewportIsTabletOrLess: true,
-        },
-      )
+      SimpleComponentWithMediaQueries = mediaQueries(SimpleComponent, {
+        viewportIsTabletOrLess: true,
+      })
       component = mount(<SimpleComponentWithMediaQueries />)
     })
 

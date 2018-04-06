@@ -11,9 +11,7 @@ import { LinkedinIcon } from 'kitten/components/icons/linkedin-icon'
 
 describe('<FacebookButtonIconWords />', () => {
   describe('by default', () => {
-    const button = shallow(
-      <FacebookButtonIconWords />
-    )
+    const button = shallow(<FacebookButtonIconWords />)
 
     it('is a <Button modifier="facebook" />', () => {
       expect(button.find(Button).exists()).toBe(true)
@@ -27,9 +25,7 @@ describe('<FacebookButtonIconWords />', () => {
 
   describe('children prop', () => {
     const component = mount(
-      <FacebookButtonIconWords>
-        Lorem ipsum…
-      </FacebookButtonIconWords>
+      <FacebookButtonIconWords>Lorem ipsum…</FacebookButtonIconWords>,
     )
 
     it('renders the right children', () => {
@@ -40,9 +36,7 @@ describe('<FacebookButtonIconWords />', () => {
 
 describe('<TwitterButtonIconWords />', () => {
   describe('by default', () => {
-    const button = shallow(
-      <TwitterButtonIconWords />
-    )
+    const button = shallow(<TwitterButtonIconWords />)
 
     it('is a <Button modifier="twitter" />', () => {
       expect(button.find(Button).exists()).toBe(true)
@@ -56,9 +50,7 @@ describe('<TwitterButtonIconWords />', () => {
 
   describe('children prop', () => {
     const component = mount(
-      <TwitterButtonIconWords>
-        Lorem ipsum…
-      </TwitterButtonIconWords>
+      <TwitterButtonIconWords>Lorem ipsum…</TwitterButtonIconWords>,
     )
 
     it('renders the right children', () => {
@@ -69,9 +61,7 @@ describe('<TwitterButtonIconWords />', () => {
 
 describe('<LinkedinButtonIconWords />', () => {
   describe('by default', () => {
-    const button = shallow(
-      <LinkedinButtonIconWords />
-    )
+    const button = shallow(<LinkedinButtonIconWords />)
 
     it('is a <Button modifier="linkedin" />', () => {
       expect(button.find(Button).exists()).toBe(true)
@@ -85,9 +75,7 @@ describe('<LinkedinButtonIconWords />', () => {
 
   describe('children prop', () => {
     const component = mount(
-      <LinkedinButtonIconWords>
-        Lorem ipsum…
-      </LinkedinButtonIconWords>
+      <LinkedinButtonIconWords>Lorem ipsum…</LinkedinButtonIconWords>,
     )
 
     it('renders the right children', () => {

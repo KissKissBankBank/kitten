@@ -12,9 +12,7 @@ describe('<CloseButton />', () => {
     })
 
     it('has a default classes', () => {
-      const className = classNames(
-        'k-ButtonIcon--cross',
-      )
+      const className = classNames('k-ButtonIcon--cross')
 
       expect(closeButton.hasClass(className)).toBe(true)
     })
@@ -38,7 +36,7 @@ describe('<CloseButton />', () => {
 
   describe('with closeButtonLabel prop', () => {
     const closeButton = shallow(
-      <CloseButton closeButtonLabel='Close this alert' />
+      <CloseButton closeButtonLabel="Close this alert" />,
     )
 
     it('has a title', () => {
@@ -51,7 +49,7 @@ describe('<CloseButton />', () => {
   })
 
   describe('with modifier prop', () => {
-    const closeButton = shallow(<CloseButton modifier='carbon' />)
+    const closeButton = shallow(<CloseButton modifier="carbon" />)
 
     it('has a class', () => {
       expect(closeButton.render().hasClass('k-ButtonIcon--carbon')).toBe(true)
@@ -59,7 +57,7 @@ describe('<CloseButton />', () => {
   })
 
   describe('with other button props', () => {
-    const closeButton = shallow(<CloseButton disabled name='CustomName' />)
+    const closeButton = shallow(<CloseButton disabled name="CustomName" />)
 
     it('has custom props', () => {
       expect(closeButton.props().disabled).toBe(true)

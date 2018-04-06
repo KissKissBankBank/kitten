@@ -21,17 +21,18 @@ export const KarlHeader = () => {
   return (
     <Header id="header">
       <HeaderItems>
-
         <HeaderItem fixedSize="true" id="k-Header__platformSwitchDropdown">
           <KarlUnloggedHeaderPlatformSwitch />
         </HeaderItem>
 
         <HeaderItem tag="p" fixedSize="true">
-          <HeaderLogo href="pages/header"
-                      src="https://placeholdit.imgix.net/~text?txt=LOGO&amp;w=180&amp;h=40"
-                      alt="LOGO"
-                      lightOnM={ true }
-                      lightOnXxs={ true } />
+          <HeaderLogo
+            href="pages/header"
+            src="https://placeholdit.imgix.net/~text?txt=LOGO&amp;w=180&amp;h=40"
+            alt="LOGO"
+            lightOnM={true}
+            lightOnXxs={true}
+          />
         </HeaderItem>
 
         <HeaderItem tag="nav" className="k-Header__nav">
@@ -52,39 +53,51 @@ export const KarlHeader = () => {
               </a>
             </li>
             <li className="k-HorizontalNav__element" role="menuitem">
-              <a className="k-HorizontalNav__item k-Header__nav__item is-selected"
-                 href="#">
+              <a
+                className="k-HorizontalNav__item k-Header__nav__item is-selected"
+                href="#"
+              >
                 Nav link 4
               </a>
             </li>
           </ul>
         </HeaderItem>
-
       </HeaderItems>
 
       <HeaderItems fixedSize="true">
-
         <HeaderItem id="k-PhoneDropdown">
           <button className="k-ButtonIcon k-ButtonIcon--hydrogen">
-            <svg className="k-ButtonIcon__svg"
-                 viewBox="-0.7 -0.7 18 18"
-                 xmlns="http://www.w3.org/2000/svg">
-              <circle cx="7" cy="7" r="7" stroke="#333" strokeWidth="1.1"
-                      className="k-ButtonIcon__svg__stroke" fill="none" />
+            <svg
+              className="k-ButtonIcon__svg"
+              viewBox="-0.7 -0.7 18 18"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="7"
+                cy="7"
+                r="7"
+                stroke="#333"
+                strokeWidth="1.1"
+                className="k-ButtonIcon__svg__stroke"
+                fill="none"
+              />
               <path d="M13 11 L17 15 L15.5 16.5 L11.5 12.7z" />
             </svg>
           </button>
         </HeaderItem>
 
         <HeaderItem className="k-Header__signup">
-          <a href="#"
-             className={ classNames('k-Button',
-                                    'k-Button--hydrogen',
-                                    'k-Header__button') }>
+          <a
+            href="#"
+            className={classNames(
+              'k-Button',
+              'k-Button--hydrogen',
+              'k-Header__button',
+            )}
+          >
             S'identifier
           </a>
         </HeaderItem>
-
       </HeaderItems>
     </Header>
   )
@@ -94,17 +107,18 @@ export const KarlHeaderWithSearchInput = () => {
   return (
     <Header id="header-search">
       <HeaderItems>
-
         <HeaderItem id="k-Header__platformSwitchDropdown">
           <KarlLoggedHeaderPlatformSwitch />
         </HeaderItem>
 
         <HeaderItem tag="p" fixedSize="true">
-          <HeaderLogo href="pages/header"
-                      src="https://placeholdit.imgix.net/~text?txt=LOGO&amp;w=180&amp;h=40"
-                      alt="LOGO"
-                      lightOnM={ true }
-                      lightOnXxs={ true } />
+          <HeaderLogo
+            href="pages/header"
+            src="https://placeholdit.imgix.net/~text?txt=LOGO&amp;w=180&amp;h=40"
+            alt="LOGO"
+            lightOnM={true}
+            lightOnXxs={true}
+          />
         </HeaderItem>
 
         <HeaderItem tag="nav" className="k-Header__nav">
@@ -125,35 +139,40 @@ export const KarlHeaderWithSearchInput = () => {
               </a>
             </li>
             <li className="k-HorizontalNav__element" role="menuitem">
-              <a className="k-HorizontalNav__item k-Header__nav__item is-selected"
-                 href="#">
+              <a
+                className="k-HorizontalNav__item k-Header__nav__item is-selected"
+                href="#"
+              >
                 Nav link 4
               </a>
             </li>
           </ul>
         </HeaderItem>
-
       </HeaderItems>
 
       <HeaderItems fixedSize="true">
-
         <HeaderItem className="k-Header__search">
-          <Search inputId='q'
-                  inputName='q'
-                  inputPlaceholder='Rechercher…'
-                  submitLabel='Search'
-                  actionUrl='#' />
+          <Search
+            inputId="q"
+            inputName="q"
+            inputPlaceholder="Rechercher…"
+            submitLabel="Search"
+            actionUrl="#"
+          />
         </HeaderItem>
 
         <HeaderItem className="k-Header__signup">
-          <a href="#"
-             className={ classNames('k-Button',
-                                    'k-Button--hydrogen',
-                                    'k-Header__button') }>
+          <a
+            href="#"
+            className={classNames(
+              'k-Button',
+              'k-Button--hydrogen',
+              'k-Header__button',
+            )}
+          >
             S'identifier
           </a>
         </HeaderItem>
-
       </HeaderItems>
     </Header>
   )
@@ -163,17 +182,18 @@ export const KarlHeaderWhenLogged = () => {
   return (
     <Header id="header-logged">
       <HeaderItems>
-
         <HeaderItem id="k-Header__platformSwitchDropdown">
           <KarlLoggedHeaderPlatformSwitch />
         </HeaderItem>
 
         <HeaderItem tag="p" fixedSize="true">
-          <HeaderLogo href="pages/header"
-                      src="https://placeholdit.imgix.net/~text?txt=LOGO&amp;w=180&amp;h=40"
-                      alt="LOGO"
-                      lightOnM={ true }
-                      lightOnXxs={ true } />
+          <HeaderLogo
+            href="pages/header"
+            src="https://placeholdit.imgix.net/~text?txt=LOGO&amp;w=180&amp;h=40"
+            alt="LOGO"
+            lightOnM={true}
+            lightOnXxs={true}
+          />
         </HeaderItem>
 
         <HeaderItem tag="nav" className="k-Header__nav">
@@ -194,25 +214,34 @@ export const KarlHeaderWhenLogged = () => {
               </a>
             </li>
             <li className="k-HorizontalNav__element" role="menuitem">
-              <a className="k-HorizontalNav__item k-Header__nav__item is-selected"
-                 href="#">
+              <a
+                className="k-HorizontalNav__item k-Header__nav__item is-selected"
+                href="#"
+              >
                 Nav link 4
               </a>
             </li>
           </ul>
         </HeaderItem>
-
       </HeaderItems>
 
       <HeaderItems fixedSize="true">
-
         <HeaderItem>
           <button className="k-ButtonIcon k-ButtonIcon--hydrogen">
-            <svg className="k-ButtonIcon__svg"
-                 viewBox="-0.7 -0.7 18 18"
-                 xmlns="http://www.w3.org/2000/svg">
-              <circle cx="7" cy="7" r="7" stroke="#333" strokeWidth="1.1"
-                      className="k-ButtonIcon__svg__stroke" fill="none" />
+            <svg
+              className="k-ButtonIcon__svg"
+              viewBox="-0.7 -0.7 18 18"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="7"
+                cy="7"
+                r="7"
+                stroke="#333"
+                strokeWidth="1.1"
+                className="k-ButtonIcon__svg__stroke"
+                fill="none"
+              />
               <path d="M13 11 L17 15 L15.5 16.5 L11.5 12.7z" />
             </svg>
           </button>
@@ -221,7 +250,6 @@ export const KarlHeaderWhenLogged = () => {
         <HeaderItem id="k-UserMenuDropdownLogged">
           <KarlLoggedHeaderUserMenu />
         </HeaderItem>
-
       </HeaderItems>
     </Header>
   )
@@ -231,32 +259,38 @@ export const KarlHeaderWithTitles = () => {
   return (
     <Header id="header-with-titles">
       <HeaderItems>
-
         <HeaderItem tag="p" fixedSize="true">
-          <a className={ classNames('k-Header__logo',
-                                    'k-Header__logo--lightOnM',
-                                    'k-Header__logo--lightOnXxs') }
-             href="pages/header">
-            <img src="https://placeholdit.imgix.net/~text?txt=LOGO&amp;w=180&amp;h=40"
-                 alt="LOGO" />
+          <a
+            className={classNames(
+              'k-Header__logo',
+              'k-Header__logo--lightOnM',
+              'k-Header__logo--lightOnXxs',
+            )}
+            href="pages/header"
+          >
+            <img
+              src="https://placeholdit.imgix.net/~text?txt=LOGO&amp;w=180&amp;h=40"
+              alt="LOGO"
+            />
           </a>
         </HeaderItem>
 
         <HeaderTitles title="Title" subtitle="Lorem ipsum…" />
-
       </HeaderItems>
 
       <HeaderItems fixedSize="true">
-
         <HeaderItem className="k-Header__signup">
-          <a href="#"
-             className={ classNames('k-Button',
-                                    'k-Button--hydrogen',
-                                    'k-Header__button') }>
+          <a
+            href="#"
+            className={classNames(
+              'k-Button',
+              'k-Button--hydrogen',
+              'k-Header__button',
+            )}
+          >
             S'identifier
           </a>
         </HeaderItem>
-
       </HeaderItems>
     </Header>
   )
@@ -266,92 +300,122 @@ export const KarlHeaderWithTitles = () => {
 const platformSwitchDropdownList = [
   <ExternalRichLink
     className="k-PlatformSwitch__item"
-    title="Se rendre sur le site de KissKissBankBank">
-    <img className="k-ExternalRichLink__image"
-         src="/assets/brand/kisskissbankbank.svg"
-         alt="Logo de KissKissBankBank" />
+    title="Se rendre sur le site de KissKissBankBank"
+  >
+    <img
+      className="k-ExternalRichLink__image"
+      src="/assets/brand/kisskissbankbank.svg"
+      alt="Logo de KissKissBankBank"
+    />
   </ExternalRichLink>,
   <ExternalRichLink
     className="k-PlatformSwitch__item"
-    title="Se rendre sur le site de hellomerci">
-    <img className="k-ExternalRichLink__image"
-         src="/assets/brand/hellomerci.svg"
-         alt="Logo de hellomerci" />
+    title="Se rendre sur le site de hellomerci"
+  >
+    <img
+      className="k-ExternalRichLink__image"
+      src="/assets/brand/hellomerci.svg"
+      alt="Logo de hellomerci"
+    />
   </ExternalRichLink>,
   <ExternalRichLink
     className="k-PlatformSwitch__item"
-    title="Se rendre sur le site de LENDOPOLIS">
-    <img className="k-ExternalRichLink__image"
-         src="/assets/brand/lendopolis.svg"
-         alt="Logo de LENDOPOLIS" />
+    title="Se rendre sur le site de LENDOPOLIS"
+  >
+    <img
+      className="k-ExternalRichLink__image"
+      src="/assets/brand/lendopolis.svg"
+      alt="Logo de LENDOPOLIS"
+    />
   </ExternalRichLink>,
 ]
 
-const unloggedHeaderPlatformSwitchButton = (<svg
+const unloggedHeaderPlatformSwitchButton = (
+  <svg
     className="k-ButtonIcon__svg"
     viewBox="0 0 10 7"
-    xmlns="http://www.w3.org/2000/svg">
-  <path className="k-Dropdown__button__svgPath"
-        d="M5 6.243L.757 2 2.172.586l4.242 4.242z"/>
-  <path className="k-Dropdown__button__svgPath k-Dropdown__button__svgPathRight"
-        d="M5 6.243L3.586 4.828 7.828.586 9.243 2z"/>
-</svg>)
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      className="k-Dropdown__button__svgPath"
+      d="M5 6.243L.757 2 2.172.586l4.242 4.242z"
+    />
+    <path
+      className="k-Dropdown__button__svgPath k-Dropdown__button__svgPathRight"
+      d="M5 6.243L3.586 4.828 7.828.586 9.243 2z"
+    />
+  </svg>
+)
 
 const platformSwitchProps = {
   positionedWithBorder: true,
 
   buttonId: 'k-PlatformSwitch',
-  buttonClassName: 'k-ButtonIcon k-ButtonIcon--hydrogen k-ButtonIcon--dropdown ' +
-                   'k-Dropdown__button--rotationOnExpanded',
+  buttonClassName:
+    'k-ButtonIcon k-ButtonIcon--hydrogen k-ButtonIcon--dropdown ' +
+    'k-Dropdown__button--rotationOnExpanded',
   buttonContentOnExpanded: unloggedHeaderPlatformSwitchButton,
   buttonContentOnCollapsed: unloggedHeaderPlatformSwitchButton,
 
   refreshEvents: ['resize', 'karl:element#header:classToggled'],
   dropdownListClassName: 'k-PlatformSwitch k-PlatformSwitch--withoutBorderTop',
-  dropdownContent:
+  dropdownContent: (
     <NavList
-      className={ classNames('k-PlatformSwitch',
-                             'k-PlatformSwitch--withoutBorderTop') }
+      className={classNames(
+        'k-PlatformSwitch',
+        'k-PlatformSwitch--withoutBorderTop',
+      )}
       role="menubar"
-      list={ platformSwitchDropdownList }
-    />,
+      list={platformSwitchDropdownList}
+    />
+  ),
   onToggle: function() {
     // Example event to trigger
     const event = document.createEvent('Event')
     event.initEvent('karl:platformSwitch:toggle', true, true)
     window.dispatchEvent(event)
-  }
+  },
 }
 
 // Unlogged header dropdown
 const unloggedPlatformSwitchProps = objectAssign(
   { positionedWith: () => document.getElementById('header') },
-  platformSwitchProps
+  platformSwitchProps,
 )
 export const KarlUnloggedHeaderPlatformSwitch = defaultProps(
   Dropdown,
-  unloggedPlatformSwitchProps
+  unloggedPlatformSwitchProps,
 )
 
 // Logged header dropdowns
 const loggedPlatformSwitchProps = objectAssign(
   { positionedWith: () => document.getElementById('header-logged') },
-  platformSwitchProps
+  platformSwitchProps,
 )
 export const KarlLoggedHeaderPlatformSwitch = defaultProps(
   Dropdown,
-  loggedPlatformSwitchProps
+  loggedPlatformSwitchProps,
 )
 
 const userMenuDropdownList = [
-  <a className="k-UserMenu__item" href="#">Mon profil</a>,
-  <a className="k-UserMenu__item" href="#">Mes projets</a>,
-  <a className="k-UserMenu__item" href="#">Mes contributions</a>,
-  <a className="k-UserMenu__item" href="#">Mes messages</a>,
-  <a className="k-UserMenu__item
+  <a className="k-UserMenu__item" href="#">
+    Mon profil
+  </a>,
+  <a className="k-UserMenu__item" href="#">
+    Mes projets
+  </a>,
+  <a className="k-UserMenu__item" href="#">
+    Mes contributions
+  </a>,
+  <a className="k-UserMenu__item" href="#">
+    Mes messages
+  </a>,
+  <a
+    className="k-UserMenu__item
                 k-UserMenu__item--secondary
                 k-UserMenu__borderTop"
-     href="#">
+    href="#"
+  >
     Admin
   </a>,
   <a className="k-UserMenu__item k-UserMenu__item--secondary" href="#">
@@ -360,8 +424,12 @@ const userMenuDropdownList = [
   <a className="k-UserMenu__item k-UserMenu__borderTop" href="#">
     Profil
   </a>,
-  <a className="k-UserMenu__item" href="#">Réglages</a>,
-  <a className="k-UserMenu__item" href="#">Déconnexion</a>,
+  <a className="k-UserMenu__item" href="#">
+    Réglages
+  </a>,
+  <a className="k-UserMenu__item" href="#">
+    Déconnexion
+  </a>,
 ]
 
 export const KarlLoggedHeaderUserMenu = defaultProps(UserMenu, {
@@ -383,14 +451,24 @@ export const KarlLoggedHeaderUserMenu = defaultProps(UserMenu, {
 
   // Dropdown content
   dropdownList: [
-    <a className="k-UserMenu__item" href="#">Mon profil</a>,
-    <a className="k-UserMenu__item" href="#">Mes projets</a>,
-    <a className="k-UserMenu__item" href="#">Mes contributions</a>,
-    <a className="k-UserMenu__item" href="#">Mes messages</a>,
-    <a className="k-UserMenu__item
+    <a className="k-UserMenu__item" href="#">
+      Mon profil
+    </a>,
+    <a className="k-UserMenu__item" href="#">
+      Mes projets
+    </a>,
+    <a className="k-UserMenu__item" href="#">
+      Mes contributions
+    </a>,
+    <a className="k-UserMenu__item" href="#">
+      Mes messages
+    </a>,
+    <a
+      className="k-UserMenu__item
                   k-UserMenu__item--secondary
                   k-UserMenu__borderTop"
-       href="#">
+      href="#"
+    >
       Admin
     </a>,
     <a className="k-UserMenu__item k-UserMenu__item--secondary" href="#">
@@ -399,8 +477,12 @@ export const KarlLoggedHeaderUserMenu = defaultProps(UserMenu, {
     <a className="k-UserMenu__item k-UserMenu__borderTop" href="#">
       Profil
     </a>,
-    <a className="k-UserMenu__item" href="#">Réglages</a>,
-    <a className="k-UserMenu__item" href="#">Déconnexion</a>
+    <a className="k-UserMenu__item" href="#">
+      Réglages
+    </a>,
+    <a className="k-UserMenu__item" href="#">
+      Déconnexion
+    </a>,
   ],
 
   // Settings
@@ -416,20 +498,26 @@ export const KarlPhoneDropdown = defaultProps(PhoneDropdown, {
   // Content
   dropdownContent: (
     <div className="k-PhoneDropdown k-Dropdown__content--large">
-      <p className={ classNames('k-PhoneDropdown__text',
-                                'k-u-size-micro',
-                                'k-u-weight-regular') }>
+      <p
+        className={classNames(
+          'k-PhoneDropdown__text',
+          'k-u-size-micro',
+          'k-u-weight-regular',
+        )}
+      >
         Vous avez une question&nbsp;?
       </p>
       <p className="k-PhoneDropdown__text">
-        Notre équipe vous répond au&nbsp;: <br/>
+        Notre équipe vous répond au&nbsp;: <br />
         <strong className="k-u-weight-regular">
-          <a className="k-PhoneDropdown__link" href="tel:+33972324942">09 72 32 49 42</a>
+          <a className="k-PhoneDropdown__link" href="tel:+33972324942">
+            09 72 32 49 42
+          </a>
         </strong>
       </p>
     </div>
   ),
 
   // Settings
-  refreshEvents: ['resize', 'karl:element#header:classToggled']
+  refreshEvents: ['resize', 'karl:element#header:classToggled'],
 })

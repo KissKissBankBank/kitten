@@ -1,6 +1,5 @@
 import React from 'react'
-import { TextInputAndSelect } from
-  'kitten/components/form/text-input-and-select'
+import { TextInputAndSelect } from 'kitten/components/form/text-input-and-select'
 import { SelectWithState } from 'kitten/components/form/select-with-state'
 import { TextInput } from 'kitten/components/form/text-input'
 
@@ -20,14 +19,12 @@ describe('<TextInputWithSelect />', () => {
       expect(wrapper).toHaveLength(1)
     })
 
-
     it('renders a <TextInput /> component', () => {
       const component = shallow(<TextInputAndSelect />)
       const textInput = component.find(TextInput)
 
       expect(textInput).toHaveLength(1)
     })
-
 
     it('renders a <Select /> component', () => {
       const component = shallow(<TextInputAndSelect />)
@@ -63,7 +60,6 @@ describe('<TextInputWithSelect />', () => {
 
       expect(selectWithState.props()).toMatchObject(expectedProps)
     })
-
   })
 
   describe('with error prop', () => {
@@ -99,7 +95,7 @@ describe('<TextInputWithSelect />', () => {
   describe('with selectName prop', () => {
     it('pass the selectName prop to <SelectWithState />', () => {
       const selectName = 'custom-select-name'
-      const component = shallow(<TextInputAndSelect selectName={ selectName } />)
+      const component = shallow(<TextInputAndSelect selectName={selectName} />)
       const selectWithState = component.find(SelectWithState)
       const expectedProps = { name: selectName }
 
@@ -110,7 +106,9 @@ describe('<TextInputWithSelect />', () => {
   describe('with selectValue prop', () => {
     it('pass the selectName prop to <SelectWithState />', () => {
       const selectValue = 'custom-select-value'
-      const component = shallow(<TextInputAndSelect selectValue={ selectValue } />)
+      const component = shallow(
+        <TextInputAndSelect selectValue={selectValue} />,
+      )
       const selectWithState = component.find(SelectWithState)
       const expectedProps = { value: selectValue }
 
@@ -119,23 +117,20 @@ describe('<TextInputWithSelect />', () => {
   })
 
   describe('with digits prop', () => {
-    it(
-      'removes k-FormComposer__element--main class from the input wrapper',
-      () => {
-        const component = shallow(<TextInputAndSelect digits="2" />)
-        const input = component.find('.k-FormComposer__element--main')
+    it('removes k-FormComposer__element--main class from the input wrapper', () => {
+      const component = shallow(<TextInputAndSelect digits="2" />)
+      const input = component.find('.k-FormComposer__element--main')
 
-        expect(input).toHaveLength(0)
-      }
-    )
+      expect(input).toHaveLength(0)
+    })
   })
 
   describe('with onSelectChange prop', () => {
     it('pass the selectName prop to <SelectWithState />', () => {
       const handleSelectChange = () => {}
-      const component = shallow(<TextInputAndSelect
-        onSelectChange={ handleSelectChange }
-      />)
+      const component = shallow(
+        <TextInputAndSelect onSelectChange={handleSelectChange} />,
+      )
       const selectWithState = component.find(SelectWithState)
       const expectedProps = { onInputChange: handleSelectChange }
 
@@ -153,10 +148,10 @@ describe('<TextInputWithSelect />', () => {
     })
   })
 
-  describe ('with a custom class', () => {
+  describe('with a custom class', () => {
     it('pass the class name to the input wrapper', () => {
       const component = shallow(
-        <TextInputAndSelect className="k-TextInput--custom" />
+        <TextInputAndSelect className="k-TextInput--custom" />,
       )
       const inputWrapper = component.find('.k-TextInput--custom')
 

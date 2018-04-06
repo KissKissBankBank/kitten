@@ -7,9 +7,7 @@ export const KarlLocationInput = () => {
   return (
     <Marger bottom="1">
       <Marger bottom="1">
-        <Label size="tiny">
-          Localisation
-        </Label>
+        <Label size="tiny">Localisation</Label>
       </Marger>
       <Marger top="1">
         <LocationInput />

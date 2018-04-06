@@ -22,8 +22,6 @@ export class KarlRandomProgress extends React.Component {
   }
 
   render() {
-    return (
-      <Progress value={ this.state.value } />
-    )
+    return <Progress value={this.state.value} />
   }
 }

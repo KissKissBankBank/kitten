@@ -33,9 +33,11 @@ export class RichTextInput extends React.Component {
 
   render() {
     return (
-      <CKEditor value={ this.state.content }
-                config={ this.config() }
-                onChange={ this.handleChange } />
+      <CKEditor
+        value={this.state.content}
+        config={this.config()}
+        onChange={this.handleChange}
+      />
     )
   }
 }
@@ -51,14 +53,11 @@ RichTextInput.defaultProps = {
   toolbar: [
     {
       name: 'basicstyles',
-      items: [
-        'Bold', 'Italic', 'Underline', 'Link', 'Image',
-      ],
-    }, {
+      items: ['Bold', 'Italic', 'Underline', 'Link', 'Image'],
+    },
+    {
       name: 'clipboard',
-      items: [
-        'Undo', 'Redo',
-      ],
+      items: ['Undo', 'Redo'],
     },
   ],
 }

@@ -11,43 +11,29 @@ export const LegoGrid = props => {
       const mediaQuery = size.toLowerCase()
       const items = props[`items-${mediaQuery}-up`]
 
-      return classNames(
-        classNamesByMediaQuery,
-        {
-          [`k-LegoGrid--${NUM_COLUMNS/items}col@${mediaQuery}`]: items,
-        },
-      )
+      return classNames(classNamesByMediaQuery, {
+        [`k-LegoGrid--${NUM_COLUMNS / items}col@${mediaQuery}`]: items,
+      })
     })
 
     return classNamesByMediaQuery
   }
 
-  const gridClassName = classNames(
-    'k-LegoGrid',
-    classByMediaQuery(),
-    className,
-  )
+  const gridClassName = classNames('k-LegoGrid', classByMediaQuery(), className)
 
   return (
-    <div className={ gridClassName } { ...others }>
-      <Masonry { ...masonryProps }>
-        { children }
-      </Masonry>
+    <div className={gridClassName} {...others}>
+      <Masonry {...masonryProps}>{children}</Masonry>
     </div>
   )
 }
 
 LegoGrid.Item = ({ children, ...props }) => {
-  const itemClassName = classNames(
-    'k-LegoGrid__item',
-    props.className,
-  )
+  const itemClassName = classNames('k-LegoGrid__item', props.className)
 
   return (
-    <div { ...props } className={ itemClassName }>
-      <div className="k-LegoGrid__item__content">
-        { children }
-      </div>
+    <div {...props} className={itemClassName}>
+      <div className="k-LegoGrid__item__content">{children}</div>
     </div>
   )
 }

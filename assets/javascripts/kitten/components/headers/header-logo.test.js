@@ -15,12 +15,14 @@ describe('<HeaderLogo />', () => {
 
   describe('with props', () => {
     const logo = shallow(
-      <HeaderLogo href="http://…"
-                  className="test-Header__logo"
-                  src="http://…/assets/…"
-                  alt="Logo"
-                  width="420"
-                  height="42" />
+      <HeaderLogo
+        href="http://…"
+        className="test-Header__logo"
+        src="http://…/assets/…"
+        alt="Logo"
+        width="420"
+        height="42"
+      />,
     )
 
     it('has a href', () => {
