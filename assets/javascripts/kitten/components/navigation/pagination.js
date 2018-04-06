@@ -99,10 +99,13 @@ class PaginationBase extends Component {
       isActive && styles.group.list.buttonIcon.isActive,
     ]
 
+    const href =
+      !isActive ? this.props.goToPageHref(number) : null
+
     return (
       <li style={styles.group.list} key={`page-${number}`}>
         <Text
-          tag="a"
+          tag={ isActive ? 'span' : 'a' }
           weight="regular"
           size="tiny"
           href={this.props.goToPageHref(number)}
