@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: You can now use the build files present in `dist` directory.
+  Add `jsDistPaths` export method.
 - Fix: Update `:hover` and `:focus` state on `azote` button.
 - Feature: Add `subTitleTruncate` prop for `CrowdfundingCard`.
 - Feature: Add `horizontalStroke` prop for `SimpleCard`.
