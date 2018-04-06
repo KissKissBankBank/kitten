@@ -65,7 +65,7 @@ describe('<ButtonImage />', () => {
       className: 'custom__class',
       width: '140',
     }
-    const button = shallow(<ButtonImage img={ imgProps } />)
+    const button = shallow(<ButtonImage img={imgProps} />)
     const image = button.find('img')
 
     it('renders an image with src', () => {

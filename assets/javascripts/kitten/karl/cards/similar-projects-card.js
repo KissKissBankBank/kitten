@@ -1,15 +1,15 @@
 import React, { Component } from 'react'
-import { SimilarProjectsCard } from
-  'kitten/components/cards/similar-projects-card'
+import { SimilarProjectsCard } from 'kitten/components/cards/similar-projects-card'
 
 const projectsWithImage = [
   {
     imageSrc: 'https://placehold.it/400x200/caf4fe/caf4fe',
     title: 'Title 1',
-    description: 'Intellectum est enim mihi quidem in multis, et maxime in me ipso',
+    description:
+      'Intellectum est enim mihi quidem in multis, et maxime in me ipso',
     link: {
       href: 'http://www.kisskissbankbank.com',
-    }
+    },
   },
   {
     imageSrc: 'https://placehold.it/400x200/3b75f0/3b75f0',
@@ -22,31 +22,23 @@ const projectsWithImage = [
   {
     imageSrc: 'https://placehold.it/400x200/2c66e1/2c66e1',
     title: 'Title 3',
-    description: 'Ille quidem fructum omnis ante actae vitae hodierno die maximum cepit',
+    description:
+      'Ille quidem fructum omnis ante actae vitae hodierno die maximum cepit',
     link: {
       href: 'http://www.lendopolis.com',
-    }
+    },
   },
 ]
 
-const tags = [
-  { key: 'tag-1', item: 'Tag 1' },
-  { key: 'tag-2', item: 'Tag 2' },
-]
+const tags = [{ key: 'tag-1', item: 'Tag 1' }, { key: 'tag-2', item: 'Tag 2' }]
 
 const tagLists = [
   {
-    items: [
-      { key: 'tag-1', item: 'Tag 1' },
-      { key: 'tag-2', item: 'Tag 2' },
-    ],
+    items: [{ key: 'tag-1', item: 'Tag 1' }, { key: 'tag-2', item: 'Tag 2' }],
   },
   {
-    items: [
-      { key: 'tag-3', item: 'Tag 3' },
-      { key: 'tag-4', item: 'Tag 4' },
-    ],
-  }
+    items: [{ key: 'tag-3', item: 'Tag 3' }, { key: 'tag-4', item: 'Tag 4' }],
+  },
 ]
 
 const infos = [
@@ -58,7 +50,8 @@ const infos = [
 const projectsWithInfos = [
   {
     title: 'Title 1',
-    description: 'Excogitatum est super his, ut homines quidam ignoti, vilitate ipsa parum cavendi ad colligendos rumores per Antiochiae latera cuncta destinarentur ',
+    description:
+      'Excogitatum est super his, ut homines quidam ignoti, vilitate ipsa parum cavendi ad colligendos rumores per Antiochiae latera cuncta destinarentur ',
     link: {
       href: 'http://www.kisskissbankbank.com',
     },
@@ -67,7 +60,8 @@ const projectsWithInfos = [
   },
   {
     title: 'Title 2',
-    description: 'Relaturi quae audirent. hi peragranter et dissimulanter honoratorum circulis adsistendo pervadendoque divites domus egentium habitu quicquid ',
+    description:
+      'Relaturi quae audirent. hi peragranter et dissimulanter honoratorum circulis adsistendo pervadendoque divites domus egentium habitu quicquid ',
     link: {
       href: 'http://www.hellomerci.com',
     },
@@ -76,7 +70,8 @@ const projectsWithInfos = [
   },
   {
     title: 'Title 3',
-    description: 'Noscere poterant vel audire latenter intromissi per posticas in regiam nuntiabant, id observantes conspiratione concordi, ut fingerent quaedam',
+    description:
+      'Noscere poterant vel audire latenter intromissi per posticas in regiam nuntiabant, id observantes conspiratione concordi, ut fingerent quaedam',
     link: {
       href: 'http://www.lendopolis.com',
     },
@@ -109,17 +104,17 @@ class KarlSimilarProjectsCardBase extends React.Component {
   render() {
     return (
       <SimilarProjectsCard
-        onRefreshClick={ this.handleOnRefreshClick }
-        projects={ this.state.projects }
+        onRefreshClick={this.handleOnRefreshClick}
+        projects={this.state.projects}
       />
     )
   }
 }
 
 export const KarlSimilarProjectsCard = () => (
-  <KarlSimilarProjectsCardBase projects={ projectsWithImage } />
+  <KarlSimilarProjectsCardBase projects={projectsWithImage} />
 )
 
 export const KarlSimilarProjectsWithInfosCard = () => (
-  <KarlSimilarProjectsCardBase projects={ projectsWithInfos } />
+  <KarlSimilarProjectsCardBase projects={projectsWithInfos} />
 )

@@ -15,7 +15,7 @@ export const domEvents = {
     pageDown: 34,
     end: 36,
     home: 36,
-  }
+  },
 }
 
 // DEPRECATED: do not use default export.

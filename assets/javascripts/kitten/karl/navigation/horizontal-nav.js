@@ -10,9 +10,7 @@ export const KarlHorizontalNav = props => {
     { key: 'key4', text: 'Nav link 4', href: '#' },
   ]
 
-  return (
-    <HorizontalNav items={ horizontalNavItems } />
-  )
+  return <HorizontalNav items={horizontalNavItems} />
 }
 
 export const KarlTouchHorizontalNav = props => {
@@ -27,12 +25,8 @@ export const KarlTouchHorizontalNav = props => {
   ]
 
   return (
-    <Row style={ rowStyles }>
-      <HorizontalNav
-        items={ horizontalNavItems }
-        height="96px"
-        center
-      />
+    <Row style={rowStyles}>
+      <HorizontalNav items={horizontalNavItems} height="96px" center />
     </Row>
   )
 }

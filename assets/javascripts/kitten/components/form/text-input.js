@@ -23,41 +23,39 @@ export class TextInput extends Component {
       ...others
     } = this.props
 
-    const textInputClassName = classNames(
-      'k-TextInput',
-      className,
-      {
-        'k-TextInput--tiny': tiny,
-        'k-TextAreaWrapper__input': tag == 'textarea',
-        'is-valid': valid,
-        'is-error': error,
-        'is-disabled': disabled,
-        'k-TextInput--twoDigits': digits == 2,
-        'k-TextInput--twelveDigits': digits == 12,
-      },
-    )
+    const textInputClassName = classNames('k-TextInput', className, {
+      'k-TextInput--tiny': tiny,
+      'k-TextAreaWrapper__input': tag == 'textarea',
+      'is-valid': valid,
+      'is-error': error,
+      'is-disabled': disabled,
+      'k-TextInput--twoDigits': digits == 2,
+      'k-TextInput--twelveDigits': digits == 12,
+    })
 
     if (tag == 'textarea') {
       return (
         <div className="k-TextAreaWrapper">
           <textarea
-            className={ textInputClassName }
-            ref={ input => this.input = input }
-            disabled={ disabled }
-            { ...others }
+            className={textInputClassName}
+            ref={input => (this.input = input)}
+            disabled={disabled}
+            {...others}
           />
           <div className="k-TextAreaWrapper__gradient" />
         </div>
       )
     } else {
-      return <input
-               className={ textInputClassName }
-               ref={ input => this.input = input }
-               disabled={ disabled }
-               type="text"
-               name={ name }
-               { ...others }
-             />
+      return (
+        <input
+          className={textInputClassName}
+          ref={input => (this.input = input)}
+          disabled={disabled}
+          type="text"
+          name={name}
+          {...others}
+        />
+      )
     }
   }
 }

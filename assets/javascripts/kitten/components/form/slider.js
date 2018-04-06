@@ -3,8 +3,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { SliderBar } from 'kitten/components/sliders/slider-bar'
-import { sliderKeyDownHandler }
-  from 'kitten/handlers/sliders/slider-key-down-handler'
+import { sliderKeyDownHandler } from 'kitten/handlers/sliders/slider-key-down-handler'
 
 // Slider input to choose an integer value between two bounds
 export class Slider extends React.Component {
@@ -43,39 +42,38 @@ export class Slider extends React.Component {
   }
 
   ratioInBounds(ratio) {
-    return ratio > 1 ? 1 : (ratio < 0 ? 0 : ratio)
+    return ratio > 1 ? 1 : ratio < 0 ? 0 : ratio
   }
 
   valueInBounds(value) {
     const { min, max, step } = this.props
 
-    if (value === null)
-      return min < max ? min : max
+    if (value === null) return min < max ? min : max
 
     if (min < max) {
-      if (value < min)
-        return min
-      else if (value > max)
-        return max
+      if (value < min) return min
+      else if (value > max) return max
     } else {
-      if (value > min)
-        return min
-      else if (value < max)
-        return max
+      if (value > min) return min
+      else if (value < max) return max
     }
 
     return Math.round(value / step) * step
   }
 
   render() {
-    return <SliderBar ref="contents"
-                      { ...this.props }
-                      { ...this.state }
-                      onMove={ this.handleMove }
-                      onStart={ this.handleStart }
-                      onClick={ this.handleClick }
-                      onAction={ this.props.onAction }
-                      ratio={ this.ratio() } />
+    return (
+      <SliderBar
+        ref="contents"
+        {...this.props}
+        {...this.state}
+        onMove={this.handleMove}
+        onStart={this.handleStart}
+        onClick={this.handleClick}
+        onAction={this.props.onAction}
+        ratio={this.ratio()}
+      />
+    )
   }
 }
 

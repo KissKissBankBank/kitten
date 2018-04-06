@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Fix: Rename `KarlBrowsingHorizontalNav` to `KarlTouchHorizontalNav`.
 - Feature: Add `KarlTouchHorizontalNavWithNotification` example.
+- Add `SimpleCard` without horizontal stroke example.
 
 ## [20.5.0] - 2018-04-03
 

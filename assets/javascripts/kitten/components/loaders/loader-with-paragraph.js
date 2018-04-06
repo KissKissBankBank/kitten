@@ -11,7 +11,7 @@ export class LoaderWithParagraph extends Component {
       loaderPosition,
       loaderProps,
       paragraphProps,
-      ...others,
+      ...others
     } = this.props
 
     const containerClassName = classNames(
@@ -33,22 +33,19 @@ export class LoaderWithParagraph extends Component {
       loaderProps.className,
     )
 
-    const loader = <Loader { ...loaderProps } className={ loaderClassName } />
+    const loader = <Loader {...loaderProps} className={loaderClassName} />
 
     const loaderBefore = loaderPosition == 'top' || loaderPosition == 'left'
 
     return (
-      <div className={ containerClassName } { ...others }>
-        { loaderBefore ? loader : null }
+      <div className={containerClassName} {...others}>
+        {loaderBefore ? loader : null}
 
-        <Paragraph
-          modifier="secondary"
-          margin={ false }
-          { ...paragraphProps }>
-          { this.props.children }
+        <Paragraph modifier="secondary" margin={false} {...paragraphProps}>
+          {this.props.children}
         </Paragraph>
 
-        { loaderBefore ? null : loader }
+        {loaderBefore ? null : loader}
       </div>
     )
   }

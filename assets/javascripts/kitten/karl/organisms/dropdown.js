@@ -6,28 +6,41 @@ import { NavList } from 'kitten/components/lists/nav-list'
 import { UserMenu } from 'kitten/components/dropdowns/user-menu'
 
 // KarlPlatformSwitch
-const karlPlatformSwitchButtonContent = (<svg
+const karlPlatformSwitchButtonContent = (
+  <svg
     className="k-ButtonIcon__svg"
     viewBox="0 0 10 7"
-    xmlns="http://www.w3.org/2000/svg">
-  <path className="k-Dropdown__button__svgPath"
-        d="M5 6.243L.757 2 2.172.586l4.242 4.242z"/>
-  <path className="k-Dropdown__button__svgPath k-Dropdown__button__svgPathRight"
-        d="M5 6.243L3.586 4.828 7.828.586 9.243 2z"/>
-</svg>)
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      className="k-Dropdown__button__svgPath"
+      d="M5 6.243L.757 2 2.172.586l4.242 4.242z"
+    />
+    <path
+      className="k-Dropdown__button__svgPath k-Dropdown__button__svgPathRight"
+      d="M5 6.243L3.586 4.828 7.828.586 9.243 2z"
+    />
+  </svg>
+)
 
 const platformSwitchDropdownList = [
   <ExternalRichLink className="k-PlatformSwitch__item">
-    <img src="https://placeholdit.imgix.net/~text?txt=LOGO&amp;w=180&amp;h=44"
-         alt="LOGO" />
+    <img
+      src="https://placeholdit.imgix.net/~text?txt=LOGO&amp;w=180&amp;h=44"
+      alt="LOGO"
+    />
   </ExternalRichLink>,
   <ExternalRichLink className="k-PlatformSwitch__item">
-    <img src="https://placeholdit.imgix.net/~text?txt=LOGO&amp;w=180&amp;h=44"
-         alt="LOGO" />
+    <img
+      src="https://placeholdit.imgix.net/~text?txt=LOGO&amp;w=180&amp;h=44"
+      alt="LOGO"
+    />
   </ExternalRichLink>,
   <ExternalRichLink className="k-PlatformSwitch__item">
-    <img src="https://placeholdit.imgix.net/~text?txt=LOGO&amp;w=180&amp;h=44"
-         alt="LOGO" />
+    <img
+      src="https://placeholdit.imgix.net/~text?txt=LOGO&amp;w=180&amp;h=44"
+      alt="LOGO"
+    />
   </ExternalRichLink>,
 ]
 
@@ -40,9 +53,13 @@ const KarlPlatformSwitch = defaultProps(Dropdown, {
   buttonContentOnExpanded: karlPlatformSwitchButtonContent,
   buttonContentOnCollapsed: karlPlatformSwitchButtonContent,
 
-  dropdownContent: <NavList className="k-PlatformSwitch"
-                               role="menubar"
-                               list={ platformSwitchDropdownList } />
+  dropdownContent: (
+    <NavList
+      className="k-PlatformSwitch"
+      role="menubar"
+      list={platformSwitchDropdownList}
+    />
+  ),
 })
 
 const KarlUserMenuDropdown = defaultProps(UserMenu, {
@@ -63,14 +80,24 @@ const KarlUserMenuDropdown = defaultProps(UserMenu, {
 
   // Dropdown content
   dropdownList: [
-    <a className="k-UserMenu__item" href="#">Mon profil</a>,
-    <a className="k-UserMenu__item" href="#">Mes projets</a>,
-    <a className="k-UserMenu__item" href="#">Mes contributions</a>,
-    <a className="k-UserMenu__item" href="#">Mes messages</a>,
-    <a className="k-UserMenu__item
+    <a className="k-UserMenu__item" href="#">
+      Mon profil
+    </a>,
+    <a className="k-UserMenu__item" href="#">
+      Mes projets
+    </a>,
+    <a className="k-UserMenu__item" href="#">
+      Mes contributions
+    </a>,
+    <a className="k-UserMenu__item" href="#">
+      Mes messages
+    </a>,
+    <a
+      className="k-UserMenu__item
                   k-UserMenu__item--secondary
                   k-UserMenu__borderTop"
-       href="#">
+      href="#"
+    >
       Admin
     </a>,
     <a className="k-UserMenu__item k-UserMenu__item--secondary" href="#">
@@ -79,8 +106,12 @@ const KarlUserMenuDropdown = defaultProps(UserMenu, {
     <a className="k-UserMenu__item k-UserMenu__borderTop" href="#">
       Profil
     </a>,
-    <a className="k-UserMenu__item" href="#">Réglages</a>,
-    <a className="k-UserMenu__item" href="#">Déconnexion</a>,
+    <a className="k-UserMenu__item" href="#">
+      Réglages
+    </a>,
+    <a className="k-UserMenu__item" href="#">
+      Déconnexion
+    </a>,
   ],
 })
 

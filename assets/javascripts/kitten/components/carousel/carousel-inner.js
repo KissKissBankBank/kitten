@@ -33,7 +33,7 @@ const scrollStop = callback => {
       },
       // wait more for scrollStop if browser support snap
       // because of the momentum on ios
-      supportScrollSnap ? 132 : 66
+      supportScrollSnap ? 132 : 66,
     )
   }
 }
@@ -41,9 +41,7 @@ const scrollStop = callback => {
 const getClosest = (counts, goal) => {
   return counts.reduce(
     (prev, curr) =>
-      Math.abs(curr - goal) < Math.abs(prev - goal)
-        ? curr
-        : prev
+      Math.abs(curr - goal) < Math.abs(prev - goal) ? curr : prev,
   )
 }
 
@@ -53,17 +51,22 @@ const getDataForPage = (data, indexPage, numColumns) => {
   return data.slice(startIndex, startIndex + numColumns)
 }
 
-const getRangePageScrollLeft =
-  (targetClientWidth, numPages, siblingPageVisible, itemMarginBetween) => {
-    const partSiblingItemExceedWidth = itemMarginBetween
-    const marginForSibling = siblingPageVisible
-      ? (itemMarginBetween + partSiblingItemExceedWidth) * 2
-      : 0
-    const innerWidth = targetClientWidth - marginForSibling
+const getRangePageScrollLeft = (
+  targetClientWidth,
+  numPages,
+  siblingPageVisible,
+  itemMarginBetween,
+) => {
+  const partSiblingItemExceedWidth = itemMarginBetween
+  const marginForSibling = siblingPageVisible
+    ? (itemMarginBetween + partSiblingItemExceedWidth) * 2
+    : 0
+  const innerWidth = targetClientWidth - marginForSibling
 
-    return createRangeFromZeroTo(numPages)
-      .map((numPage) => numPage * (innerWidth + itemMarginBetween))
-  }
+  return createRangeFromZeroTo(numPages).map(
+    numPage => numPage * (innerWidth + itemMarginBetween),
+  )
+}
 
 class CarouselInnerBase extends React.Component {
   state = {
@@ -75,12 +78,12 @@ class CarouselInnerBase extends React.Component {
     this.props.onResizeInner(widthInner)
   }
 
-  componentDidMount () {
+  componentDidMount() {
     this.observer = new ResizeObserver(this.onResizeObserve)
     this.observer.observe(this.carouselInner)
   }
 
-  componentWillUnmount () {
+  componentWillUnmount() {
     this.observer.disconnect()
   }
 
@@ -91,14 +94,14 @@ class CarouselInnerBase extends React.Component {
   }
 
   handleInnerScroll = scrollStop(target => {
-    if(this.state.isTouched) return
+    if (this.state.isTouched) return
 
     const {
       numPages,
       siblingPageVisible,
       itemMarginBetween,
       indexPageVisible,
-      goToPage
+      goToPage,
     } = this.props
     const { scrollLeft, clientWidth } = target
 
@@ -106,7 +109,7 @@ class CarouselInnerBase extends React.Component {
       clientWidth,
       numPages,
       siblingPageVisible,
-      itemMarginBetween
+      itemMarginBetween,
     )
 
     const closest = getClosest(rangePageScrollLeft, scrollLeft)
@@ -121,7 +124,6 @@ class CarouselInnerBase extends React.Component {
         target.scrollTo({ top: 0, left: closest, behavior: 'smooth' })
       }
     }
-
   })
 
   scrollToPage = indexPageToScroll => {
@@ -134,7 +136,7 @@ class CarouselInnerBase extends React.Component {
       clientWidth,
       numPages,
       siblingPageVisible,
-      itemMarginBetween
+      itemMarginBetween,
     )
 
     const closest = rangePageScrollLeft[indexPageToScroll]
@@ -163,46 +165,45 @@ class CarouselInnerBase extends React.Component {
 
     return (
       <div
-        ref={ div => { this.carouselInner = div } }
-        className='k-CarouselInner'
+        ref={div => {
+          this.carouselInner = div
+        }}
+        className="k-CarouselInner"
         style={[
           styles.carouselInner,
           {
-            paddingLeft: siblingPageVisible ? (itemMarginBetween * 2) : 0,
-            paddingRight: siblingPageVisible ? (itemMarginBetween * 2) : 0,
-          }
+            paddingLeft: siblingPageVisible ? itemMarginBetween * 2 : 0,
+            paddingRight: siblingPageVisible ? itemMarginBetween * 2 : 0,
+          },
         ]}
-        onScroll={ this.handleInnerScroll }
-        onTouchStart={ this.handleTouchStart }
-        onTouchEnd={ this.handleTouchEnd }
+        onScroll={this.handleInnerScroll}
+        onTouchStart={this.handleTouchStart}
+        onTouchEnd={this.handleTouchEnd}
       >
-        {
-          rangePage.map(index =>
-            <div
-              key={ index }
-              style={[
-                styles.carouselPageContainer,
-                {
-                  marginLeft: index ? itemMarginBetween : 0,
-                }
-              ]}
-            >
-              <CarouselPage
-                data={ getDataForPage(data, index, numColumns) }
-                numColumns={ numColumns }
-                itemMinWidth={ itemMinWidth }
-                itemMarginBetween={ itemMarginBetween }
-                renderItem={ renderItem }
-              />
-            </div>
-          )
-        }
-        {
-          siblingPageVisible &&
-            <div style={{ minWidth: (itemMarginBetween * 2) }} />
-        }
+        {rangePage.map(index => (
+          <div
+            key={index}
+            style={[
+              styles.carouselPageContainer,
+              {
+                marginLeft: index ? itemMarginBetween : 0,
+              },
+            ]}
+          >
+            <CarouselPage
+              data={getDataForPage(data, index, numColumns)}
+              numColumns={numColumns}
+              itemMinWidth={itemMinWidth}
+              itemMarginBetween={itemMarginBetween}
+              renderItem={renderItem}
+            />
+          </div>
+        ))}
+        {siblingPageVisible && (
+          <div style={{ minWidth: itemMarginBetween * 2 }} />
+        )}
 
-        { /* hide scrollbar on Chrome and Safari */ }
+        {/* hide scrollbar on Chrome and Safari */}
         <Style
           scopeSelector=".k-CarouselInner::-webkit-scrollbar"
           rules={{ display: 'none' }}

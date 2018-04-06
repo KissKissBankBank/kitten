@@ -56,12 +56,12 @@ export class Uploader extends React.Component {
 
     return (
       <Theme
-        buttonLabel={ this.props.buttonLabel }
-        fileName={ this.state.fileName }
-        onClick={ this.handleClick }
-        onCancel={ this.handleCancel }
-        disabled={ this.props.disabled }
-        deletable={ this.props.deletable }
+        buttonLabel={this.props.buttonLabel}
+        fileName={this.state.fileName}
+        onClick={this.handleClick}
+        onCancel={this.handleCancel}
+        disabled={this.props.disabled}
+        deletable={this.props.deletable}
       />
     )
   }
@@ -69,16 +69,19 @@ export class Uploader extends React.Component {
   render() {
     return (
       <Dropzone
-        ref={ node => { this.dropzoneRef = node } }
-        name={ this.props.name }
-        accept={ this.props.acceptedFiles }
-        maxSize={ this.props.maxSize }
-        onDropAccepted={ this.handleChangeAcceptedFiles }
-        onDropRejected={ this.handleChangeRejectedFiles }
+        ref={node => {
+          this.dropzoneRef = node
+        }}
+        name={this.props.name}
+        accept={this.props.acceptedFiles}
+        maxSize={this.props.maxSize}
+        onDropAccepted={this.handleChangeAcceptedFiles}
+        onDropRejected={this.handleChangeRejectedFiles}
         disableClick
-        multiple={ false }
-        style={ {} }>
-        { this.renderTheme() }
+        multiple={false}
+        style={{}}
+      >
+        {this.renderTheme()}
       </Dropzone>
     )
   }

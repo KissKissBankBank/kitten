@@ -37,13 +37,13 @@ export class Dropdown extends React.Component {
     emitter.on('dropdown:opening:trigger', this.close)
 
     if (this.props.refreshEvents) {
-      this.props.refreshEvents.forEach((ev) => {
+      this.props.refreshEvents.forEach(ev => {
         window.addEventListener(ev, this.handleDropdownPosition)
       })
     }
 
     if (this.props.closeEvents) {
-      this.props.closeEvents.forEach((ev) => {
+      this.props.closeEvents.forEach(ev => {
         window.addEventListener(ev, this.close)
       })
     }
@@ -53,13 +53,13 @@ export class Dropdown extends React.Component {
     this.revertHandleClickOnLinks()
 
     if (this.props.refreshEvents) {
-      this.props.refreshEvents.forEach((ev) => {
-        window.removeEventListener(ev, this.handleDropdownPosition);
+      this.props.refreshEvents.forEach(ev => {
+        window.removeEventListener(ev, this.handleDropdownPosition)
       })
     }
 
     if (this.props.closeEvents) {
-      this.props.closeEvents.forEach((ev) => {
+      this.props.closeEvents.forEach(ev => {
         window.removeEventListener(ev, this.close)
       })
     }
@@ -88,7 +88,7 @@ export class Dropdown extends React.Component {
     this.props.onToggle()
 
     this.setState({
-      isExpanded: nextExpandedState
+      isExpanded: nextExpandedState,
     })
   }
 
@@ -111,7 +111,7 @@ export class Dropdown extends React.Component {
 
     return domElementHelper.getComputedHeight(
       referenceElement,
-      this.props.positionedWithBorder
+      this.props.positionedWithBorder,
     )
   }
 
@@ -174,12 +174,14 @@ export class Dropdown extends React.Component {
     if (this.props.button) return this.props.button
 
     return (
-      <DropdownButton ref="dropdownButton"
-                      className={ this.props.buttonClassName }
-                      id={ this.props.buttonId }
-                      isExpanded={ this.state.isExpanded }
-                      onClick={ this.handleButtonClick.bind(this) }>
-        { this.renderButtonContentElement() }
+      <DropdownButton
+        ref="dropdownButton"
+        className={this.props.buttonClassName}
+        id={this.props.buttonId}
+        isExpanded={this.state.isExpanded}
+        onClick={this.handleButtonClick.bind(this)}
+      >
+        {this.renderButtonContentElement()}
       </DropdownButton>
     )
   }
@@ -190,9 +192,8 @@ export class Dropdown extends React.Component {
     const style = this.getArrowPosition()
 
     return (
-      <span ref="arrow"
-            style={ style }>
-        { this.props.dropdownListArrow }
+      <span ref="arrow" style={style}>
+        {this.props.dropdownListArrow}
       </span>
     )
   }
@@ -205,22 +206,24 @@ export class Dropdown extends React.Component {
         'is-expanded': this.state.isExpanded,
         'k-Dropdown--asReference': this.isSelfReference(),
       },
-      this.props.className
+      this.props.className,
     )
 
-    return(
-      <div ref="dropdown" className={ dropdownClassName }>
-        { button }
-        <div ref="dropdownContent"
-             className="k-Dropdown__content"
-             style={ this.getContentPosition() }
-             aria-hidden="true"
-             aria-labelledby={ this.props.buttonId }>
-          { this.props.dropdownContent }
-          { this.renderArrow() }
+    return (
+      <div ref="dropdown" className={dropdownClassName}>
+        {button}
+        <div
+          ref="dropdownContent"
+          className="k-Dropdown__content"
+          style={this.getContentPosition()}
+          aria-hidden="true"
+          aria-labelledby={this.props.buttonId}
+        >
+          {this.props.dropdownContent}
+          {this.renderArrow()}
         </div>
       </div>
-    );
+    )
   }
 }
 

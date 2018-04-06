@@ -3,10 +3,12 @@ import { Switch } from 'kitten/components/form/switch'
 
 describe('<Switch />', () => {
   const component = shallow(
-    <Switch id="switch-input-1"
-            isChecked="true"
-            disabled="true"
-            label="label" />
+    <Switch
+      id="switch-input-1"
+      isChecked="true"
+      disabled="true"
+      label="label"
+    />,
   )
 
   it('has a <div class="k-Switch" />', () => {
@@ -33,9 +35,7 @@ describe('<Switch />', () => {
   })
 
   describe('big', () => {
-    const componentBig = shallow(
-      <Switch big="true" />
-    )
+    const componentBig = shallow(<Switch big="true" />)
 
     it('has a big class', () => {
       const label = componentBig.find('label')

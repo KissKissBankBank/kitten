@@ -4,7 +4,7 @@
 SCRIPT_NAME=`basename $0`
 DAEMON_BIN="foreman"
 DAEMON=`which $DAEMON_BIN`
-DAEMON_RUN_DIR="spec/dummy"
+DAEMON_RUN_DIR=$PWD/"spec/dummy"
 DAEMON_PID_FILE="${SCRIPT_NAME}.run"
 DAEMON_LOG_FILE="${SCRIPT_NAME}.log"
 DAEMON_CMD="$DAEMON start -f Procfile.static"
@@ -95,7 +95,9 @@ start(){
     echo "    ./bin/$SCRIPT_NAME install"
     exit 1
   fi
+
   cd $DAEMON_RUN_DIR
+
   if [ ! -f  $DAEMON_PID_FILE ];then
     echo "Starting $SCRIPT_NAME"
     $DAEMON_CMD 1>$DAEMON_LOG_FILE 2>&1 &
@@ -187,7 +189,7 @@ case "$1" in
 		echo Waiting for $SCRIPT_NAME to be fully launched
     sleep 50
     echo Launching crawler
-    /usr/bin/perl ./bin/fashionista.pl
+    /usr/bin/perl $DAEMON_RUN_DIR/bin/fashionista.pl
     if [ ! -d "../../build" ]; then
       echo Something went wrong while building static $SCRIPT_NAME
       exit 1

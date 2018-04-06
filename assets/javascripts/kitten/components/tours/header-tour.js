@@ -21,8 +21,9 @@ export class HeaderTour extends React.Component {
   platformSwitchStep() {
     const content = this.props.platformSwitchStep
     const illustration = {
-      illustration: <MixIllustration
-                         className="k-Tour__popover__svg--primary"/>
+      illustration: (
+        <MixIllustration className="k-Tour__popover__svg--primary" />
+      ),
     }
 
     return objectAssign(content, illustration)
@@ -31,27 +32,23 @@ export class HeaderTour extends React.Component {
   crowdStep() {
     const content = this.props.crowdStep
     const illustration = {
-      illustration: <LoudspeakerIllustration
-                         className="k-Tour__popover__svg--primary" />
+      illustration: (
+        <LoudspeakerIllustration className="k-Tour__popover__svg--primary" />
+      ),
     }
 
     return objectAssign(content, illustration)
   }
 
   steps() {
-    return [
-      this.platformSwitchStep(),
-      this.crowdStep(),
-    ]
+    return [this.platformSwitchStep(), this.crowdStep()]
   }
 
   render() {
     const { platformSwitchStep, crowdStep, ...otherProps } = this.props
 
     return (
-      <Tour className="k-HeaderTour"
-            steps={ this.steps() }
-            { ...otherProps } />
+      <Tour className="k-HeaderTour" steps={this.steps()} {...otherProps} />
     )
   }
 }

@@ -2,9 +2,7 @@ import React from 'react'
 import { Label } from 'kitten/components/form/label'
 
 describe('<Label />', () => {
-  const component = shallow(
-    <Label />
-  )
+  const component = shallow(<Label />)
 
   it('renders a <label class="k-Label" />', () => {
     expect(component.is('label')).toBe(true)
@@ -17,12 +15,14 @@ describe('<Label />', () => {
 
   describe('with custom props', () => {
     const component = shallow(
-      <Label tag="span"
-             className="custom-class"
-             focusId="custom-id"
-             size="tiny">
+      <Label
+        tag="span"
+        className="custom-class"
+        focusId="custom-id"
+        size="tiny"
+      >
         <span>Custom label</span>
-      </Label>
+      </Label>,
     )
 
     it('renders a span with options', () => {
@@ -37,9 +37,9 @@ describe('<Label />', () => {
     const wrapper = mount(
       <div>
         <Label tag="span" focusId="focus" children="Label" />
-        <input type="text" id="focus" onFocus={ jest.fn() } />
+        <input type="text" id="focus" onFocus={jest.fn()} />
       </div>,
-      { attachTo: document.body }
+      { attachTo: document.body },
     )
 
     it('simulates click event on label', () => {
@@ -53,9 +53,7 @@ describe('<Label />', () => {
   })
 
   describe('with false `focusId` prop', () => {
-    const wrapper = mount(
-      <Label focusId={ false } />
-    )
+    const wrapper = mount(<Label focusId={false} />)
 
     it('do not render for attribute', () => {
       expect(wrapper.props().htmlFor).toBeFalsy()

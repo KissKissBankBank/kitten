@@ -6,7 +6,7 @@ export class DevGrid extends React.Component {
     super(props)
 
     this.state = {
-      visible: !!props.visible
+      visible: !!props.visible,
     }
 
     this.handleKeyDown = this.handleKeyDown.bind(this)
@@ -25,13 +25,10 @@ export class DevGrid extends React.Component {
 
   handleKeyDown(e) {
     const char = String.fromCharCode(e.keyCode).toLowerCase()
-    if (!e.ctrlKey || char != 'g')
-      return
+    if (!e.ctrlKey || char != 'g') return
 
-    if (this.state.visible)
-      this.hide()
-    else
-      this.show()
+    if (this.state.visible) this.hide()
+    else this.show()
   }
 
   show() {
@@ -45,49 +42,49 @@ export class DevGrid extends React.Component {
   }
 
   render() {
-    const style = this.state.visible ? null : { display: "none" }
+    const style = this.state.visible ? null : { display: 'none' }
     return (
-      <div style={ style }>
-        <div className="k-DevBreakpoint"></div>
+      <div style={style}>
+        <div className="k-DevBreakpoint" />
 
         <div className="k-DevGrid">
           <div className="k-DevGrid__container">
             <div className="k-DevGrid__row">
               <div className="k-DevGrid__col">
-                <div className="k-DevGrid__inner"></div>
+                <div className="k-DevGrid__inner" />
               </div>
               <div className="k-DevGrid__col">
-                <div className="k-DevGrid__inner"></div>
+                <div className="k-DevGrid__inner" />
               </div>
               <div className="k-DevGrid__col">
-                <div className="k-DevGrid__inner"></div>
+                <div className="k-DevGrid__inner" />
               </div>
               <div className="k-DevGrid__col">
-                <div className="k-DevGrid__inner"></div>
+                <div className="k-DevGrid__inner" />
               </div>
               <div className="k-DevGrid__col">
-                <div className="k-DevGrid__inner"></div>
+                <div className="k-DevGrid__inner" />
               </div>
               <div className="k-DevGrid__col">
-                <div className="k-DevGrid__inner"></div>
+                <div className="k-DevGrid__inner" />
               </div>
               <div className="k-DevGrid__col">
-                <div className="k-DevGrid__inner"></div>
+                <div className="k-DevGrid__inner" />
               </div>
               <div className="k-DevGrid__col">
-                <div className="k-DevGrid__inner"></div>
+                <div className="k-DevGrid__inner" />
               </div>
               <div className="k-DevGrid__col">
-                <div className="k-DevGrid__inner"></div>
+                <div className="k-DevGrid__inner" />
               </div>
               <div className="k-DevGrid__col">
-                <div className="k-DevGrid__inner"></div>
+                <div className="k-DevGrid__inner" />
               </div>
               <div className="k-DevGrid__col">
-                <div className="k-DevGrid__inner"></div>
+                <div className="k-DevGrid__inner" />
               </div>
               <div className="k-DevGrid__col">
-                <div className="k-DevGrid__inner"></div>
+                <div className="k-DevGrid__inner" />
               </div>
             </div>
           </div>
