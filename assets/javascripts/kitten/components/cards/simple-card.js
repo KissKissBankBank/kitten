@@ -16,6 +16,7 @@ class SimpleCardComponent extends Component {
       title,
       subtitle,
       paragraph,
+      horizontalStroke,
       ...others
     } = this.props
 
@@ -63,9 +64,11 @@ class SimpleCardComponent extends Component {
           </Marger>
         )}
 
-        <Marger top="1.5">
-          <HorizontalStroke size="tiny" />
-        </Marger>
+        { horizontalStroke &&
+          <Marger top="1.5">
+            <HorizontalStroke size="tiny" />
+          </Marger>
+        }
       </Tag>
     )
   }
@@ -87,6 +90,7 @@ SimpleCardComponent.defaultProps = {
   title: null,
   subtitle: null,
   paragraph: null,
+  horizontalStroke: true,
 }
 
 export const SimpleCard = card(SimpleCardComponent, {

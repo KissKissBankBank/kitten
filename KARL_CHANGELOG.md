@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Add `SimpleCard` without horizontal stroke example.
+
 ## [20.5.0] - 2018-04-03
 
 No changes.
