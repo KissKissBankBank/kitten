@@ -198,7 +198,7 @@ class CrowdfundingCardComponent extends Component {
     if (!this.props.info1 && !this.props.info2 && !this.props.info3) return
 
     return (
-      <Marger top="1.5" bottom="1.5" style={styles.informations}>
+      <Marger top="1.5" bottom=".5" style={styles.informations}>
         {this.renderInfo(this.props.info1)}
         {this.renderInfo(this.props.info2)}
         {this.renderInfo(this.props.info3, true)}
@@ -241,7 +241,7 @@ class CrowdfundingCardComponent extends Component {
     const progressValue = this.props.loading ? 65 : this.props.progress
 
     return (
-      <Marger top="1.5" bottom="2" style={styles.progress}>
+      <Marger top=".5" bottom="2" style={styles.progress}>
         <Progress
           value={progressValue}
           className={this.props.loading && 'is-disabled'}
