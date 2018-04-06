@@ -18,7 +18,7 @@ export class HorizontalNav extends Component {
       badge,
       key,
       href,
-      ...others,
+      ...others
     } = item
 
     const itemClassName = classNames('k-HorizontalNav__item', className, {
@@ -34,9 +34,9 @@ export class HorizontalNav extends Component {
       </Fragment>
 
     const renderMarkdown =
-     <Markdown softBreak="br" source={ text } />
+      <Markdown softBreak="br" source={ text } />
 
-    const renderTextAndBadge = badge ? renderBadge : renderMarkdown
+    const renderText = badge ? renderBadge : renderMarkdown
 
     return (
       <li
@@ -55,7 +55,7 @@ export class HorizontalNav extends Component {
             height: this.props.height,
           }}
         >
-          { renderTextAndBadge }
+          { renderText }
         </a>
       </li>
     )

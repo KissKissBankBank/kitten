@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { HorizontalNav } from 'kitten/components/navigation/horizontal-nav'
 import { Row } from 'kitten/components/grid/row'
+import COLORS from 'kitten/constants/colors-config'
 
 export const KarlHorizontalNav = props => {
   const horizontalNavItems = [
@@ -15,7 +16,7 @@ export const KarlHorizontalNav = props => {
 
 export const KarlTouchHorizontalNav = props => {
   const rowStyles = {
-    backgroundColor: '#f6f6f6',
+    backgroundColor: COLOR.background3,
   }
 
   const horizontalNavItems = [
@@ -33,7 +34,7 @@ export const KarlTouchHorizontalNav = props => {
 
 export const KarlTouchHorizontalNavWithNotification = props => {
   const rowStyles = {
-    backgroundColor: '#f6f6f6',
+    backgroundColor: COLOR.background3,
   }
 
   const horizontalNavItems = [
@@ -44,8 +45,8 @@ export const KarlTouchHorizontalNavWithNotification = props => {
       selected: true,
       badge: 3,
     },
-    { key: 'key2', text: 'Énergies renouvelables', href: '#', badge: '2' },
-    { key: 'key3', text: 'Immobilier', href: '#', badge: '10' },
+    { key: 'key2', text: 'Énergies renouvelables', href: '#', badge: 2 },
+    { key: 'key3', text: 'Immobilier', href: '#', badge: 10 },
   ]
 
   return (
