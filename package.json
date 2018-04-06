@@ -90,7 +90,7 @@
     "hot-assets": "(cd spec/dummy/client && yarn hot-assets)",
     "test": "jest",
     "precommit": "lint-staged",
-    "dist": "cd assets && babel ./**/*.js --out-dir ../dist -q"
+    "dist": "cd assets && babel ./**/*.js --ignore ./**/*.test.js,./javascripts/kitten/config/**/*.js --out-dir ../dist -q"
   },
   "lint-staged": {
     "assets/**/*.js": [
