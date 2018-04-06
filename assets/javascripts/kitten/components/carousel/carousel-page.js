@@ -9,32 +9,27 @@ class CarouselPageBase extends React.Component {
       numColumns,
       itemMinWidth,
       itemMarginBetween,
-      renderItem
+      renderItem,
     } = this.props
     const rangeCard = createRangeFromZeroTo(numColumns)
 
     return (
-      <div style={ styles.page }>
-        {
-          rangeCard.map(index =>
-            <div
-              key={ index }
-              style={[
-                styles.item,
-                {
-                  minWidth: itemMinWidth,
-                  flexBasis: itemMinWidth,
-                  marginLeft: index ? itemMarginBetween : 0,
-                }
-              ]}
-            >
+      <div style={styles.page}>
+        {rangeCard.map(index => (
+          <div
+            key={index}
+            style={[
+              styles.item,
               {
-                data[index] &&
-                  renderItem({ item: data[index] })
-              }
-            </div>
-          )
-        }
+                minWidth: itemMinWidth,
+                flexBasis: itemMinWidth,
+                marginLeft: index ? itemMarginBetween : 0,
+              },
+            ]}
+          >
+            {data[index] && renderItem({ item: data[index] })}
+          </div>
+        ))}
       </div>
     )
   }

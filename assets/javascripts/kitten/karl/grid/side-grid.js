@@ -19,10 +19,11 @@ export const KarlSideGridWithRightAside = () => {
 
       <SideGridAside>
         <p>
-          Et eodem impetu Domitianum praecipitem per scalas itidem funibus constrinxerunt,
-          eosque coniunctos per ampla spatia civitatis acri raptavere discursu.
-          iamque artuum et membrorum divulsa conpage superscandentes corpora
-          mortuorum ad ultimam truncata deformitatem velut exsaturati.
+          Et eodem impetu Domitianum praecipitem per scalas itidem funibus
+          constrinxerunt, eosque coniunctos per ampla spatia civitatis acri
+          raptavere discursu. iamque artuum et membrorum divulsa conpage
+          superscandentes corpora mortuorum ad ultimam truncata deformitatem
+          velut exsaturati.
         </p>
       </SideGridAside>
     </SideGrid>
@@ -35,16 +36,18 @@ export const KarlSideGridWithLeftAsideAndSmallSize = () => {
       <SideGridAside>
         <p>
           Nec vox accusatoris ulla licet subditicii in his malorum quaerebatur
-          acervis ut saltem specie tenus crimina praescriptis legum committerentur,
-          quod aliquotiens fecere principes saevi: sed quicquid Caesaris.
+          acervis ut saltem specie tenus crimina praescriptis legum
+          committerentur, quod aliquotiens fecere principes saevi: sed quicquid
+          Caesaris.
         </p>
       </SideGridAside>
 
       <SideGridContent>
         <p>
-          Haec igitur prima lex amicitiae sanciatur, ut ab amicis honesta petamus,
-          amicorum causa honesta faciamus, ne exspectemus quidem, dum rogemur;
-          studium semper adsit, cunctatio absit; consilium vero dare audeamus libere.
+          Haec igitur prima lex amicitiae sanciatur, ut ab amicis honesta
+          petamus, amicorum causa honesta faciamus, ne exspectemus quidem, dum
+          rogemur; studium semper adsit, cunctatio absit; consilium vero dare
+          audeamus libere.
         </p>
       </SideGridContent>
     </SideGrid>

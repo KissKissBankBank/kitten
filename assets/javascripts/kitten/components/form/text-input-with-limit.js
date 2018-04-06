@@ -7,7 +7,7 @@ export class TextInputWithLimit extends Component {
     super(props)
 
     this.state = {
-      value: this.props.defaultValue
+      value: this.props.defaultValue,
     }
 
     this.handleChange = this.handleChange.bind(this)
@@ -19,40 +19,28 @@ export class TextInputWithLimit extends Component {
   }
 
   render() {
-    const { limit,
-            defaultValue,
-            onChange,
-            disabled,
-            ...others } = this.props
+    const { limit, defaultValue, onChange, disabled, ...others } = this.props
 
     const length = this.state.value ? this.state.value.length : 0
 
-    const textInputLimitClassName = classNames(
-      'k-TextInputLimit',
-      {
-        'is-disabled': disabled,
-      }
-    )
+    const textInputLimitClassName = classNames('k-TextInputLimit', {
+      'is-disabled': disabled,
+    })
 
-    const counterClassName = classNames(
-      'k-TextInputLimit__counter',
-      {
-        'is-error': length > limit,
-      }
-    )
+    const counterClassName = classNames('k-TextInputLimit__counter', {
+      'is-error': length > limit,
+    })
 
     return (
-      <div className={ textInputLimitClassName }>
+      <div className={textInputLimitClassName}>
         <TextInput
           className="k-TextInputLimit__input"
-          value={ this.state.value }
-          onChange={ this.handleChange }
-          disabled={ disabled }
-          { ...others }
+          value={this.state.value}
+          onChange={this.handleChange}
+          disabled={disabled}
+          {...others}
         />
-        <div className={ counterClassName }>
-          { limit - length }
-        </div>
+        <div className={counterClassName}>{limit - length}</div>
       </div>
     )
   }

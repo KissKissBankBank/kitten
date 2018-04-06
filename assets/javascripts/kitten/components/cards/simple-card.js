@@ -16,69 +16,59 @@ class SimpleCardComponent extends Component {
       title,
       subtitle,
       paragraph,
-      ...others,
+      horizontalStroke,
+      ...others
     } = this.props
 
     const Tag = this.props.href ? 'a' : 'div'
 
-    const titleClassName = classNames(
-      'k-Card__title',
-      titleProps.className,
-    )
+    const titleClassName = classNames('k-Card__title', titleProps.className)
 
     return (
-      <Tag { ...others }>
-        <Marger
-          bottom="2"
-          className="k-Card__imageContainer"
-        >
+      <Tag {...others}>
+        <Marger bottom="2" className="k-Card__imageContainer">
           <img
-            { ...imageProps }
+            {...imageProps}
             className="k-Card__image"
-            style={ { ...imageProps.style, ...styles.image } }
+            style={{ ...imageProps.style, ...styles.image }}
           />
         </Marger>
 
-        { title &&
+        {title && (
           <Marger top="2" bottom=".5">
             <Title
               tag="p"
-              { ...titleProps }
-              className={ titleClassName }
-              margin={ false }
+              {...titleProps}
+              className={titleClassName}
+              margin={false}
               modifier="senary"
             >
-              { parseHtml(title) }
+              {parseHtml(title)}
             </Title>
           </Marger>
-        }
+        )}
 
-        { subtitle &&
+        {subtitle && (
           <Marger top=".5" bottom=".5">
-            <Text
-              size="micro"
-              weight="regular"
-            >
-              { parseHtml(subtitle) }
+            <Text size="micro" weight="regular">
+              {parseHtml(subtitle)}
             </Text>
           </Marger>
-        }
+        )}
 
-        { paragraph &&
+        {paragraph && (
           <Marger top="1" bottom=".5">
-            <Text
-              lineHeight="normal"
-              size="micro"
-              weight="light"
-            >
-              { parseHtml(paragraph) }
+            <Text lineHeight="normal" size="micro" weight="light">
+              {parseHtml(paragraph)}
             </Text>
           </Marger>
-        }
+        )}
 
-        <Marger top="1.5">
-          <HorizontalStroke size="tiny" />
-        </Marger>
+        { horizontalStroke &&
+          <Marger top="1.5">
+            <HorizontalStroke size="tiny" />
+          </Marger>
+        }
       </Tag>
     )
   }
@@ -100,6 +90,7 @@ SimpleCardComponent.defaultProps = {
   title: null,
   subtitle: null,
   paragraph: null,
+  horizontalStroke: true,
 }
 
 export const SimpleCard = card(SimpleCardComponent, {

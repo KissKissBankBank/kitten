@@ -14,7 +14,7 @@ export class Text extends Component {
       tag,
       transform,
       weight,
-      ...others,
+      ...others
     } = this.props
 
     const Tag = tag
@@ -58,9 +58,7 @@ export class Text extends Component {
       className,
     )
 
-    return (
-      <Tag { ...others } className={ textClassName } />
-    )
+    return <Tag {...others} className={textClassName} />
   }
 }
 

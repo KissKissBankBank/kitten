@@ -9,20 +9,13 @@ import { Line } from 'kitten/components/layout/line'
 const paymentButtonWrapper = (WrappedComponent, props) => {
   return class PaymentButtonWrapper extends Component {
     render() {
-      const text = <TagButton
-                     icon
-                     big
-                     tag="span"
-                   >
-                     <WrappedComponent className="k-TagButton__icon" />
-                   </TagButton>
-
-      return (
-        <RadioButton
-          text={ text }
-          { ...props }
-        />
+      const text = (
+        <TagButton icon big tag="span">
+          <WrappedComponent className="k-TagButton__icon" />
+        </TagButton>
       )
+
+      return <RadioButton text={text} {...props} />
     }
   }
 }
@@ -53,17 +46,11 @@ const KarlPaymentButtonCb = paymentButtonWrapper(CbIcon, {
 })
 
 const KarlPaymentButtonBankTransfer = props => {
-  const text = <TagButton
-                 big
-                 tag="span"
-               >
-                 Virement
-               </TagButton>
-
-  return (
-    <RadioButton
-      text={ text }
-      name="payment-button-1"
-    />
+  const text = (
+    <TagButton big tag="span">
+      Virement
+    </TagButton>
   )
+
+  return <RadioButton text={text} name="payment-button-1" />
 }

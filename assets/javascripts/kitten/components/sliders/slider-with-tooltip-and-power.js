@@ -1,7 +1,6 @@
 import React from 'react'
 import { SliderBar } from 'kitten/components/sliders/slider-bar'
-import { sliderKeyDownHandler }
-  from 'kitten/handlers/sliders/slider-key-down-handler'
+import { sliderKeyDownHandler } from 'kitten/handlers/sliders/slider-key-down-handler'
 import { SliderTooltip } from 'kitten/components/sliders/slider-tooltip'
 
 export class SliderWithTooltipAndPower extends React.Component {
@@ -60,33 +59,27 @@ export class SliderWithTooltipAndPower extends React.Component {
   ratioForValue(value) {
     const { min, max } = this.props
 
-    if (value === null || isNaN(value))
-      return 0
+    if (value === null || isNaN(value)) return 0
 
     const powerRatio = (value - min) / (max - min)
     return this.ratioInBounds(this.computeRatio(powerRatio))
   }
 
   ratioInBounds(ratio) {
-    return ratio > 1 ? 1 : (ratio < 0 ? 0 : ratio)
+    return ratio > 1 ? 1 : ratio < 0 ? 0 : ratio
   }
 
   valueInBounds(value) {
     const { min, max, step } = this.props
 
-    if (value === null)
-      return min < max ? min : max
+    if (value === null) return min < max ? min : max
 
     if (min < max) {
-      if (value < min)
-        return min
-      else if (value > max)
-        return max
+      if (value < min) return min
+      else if (value > max) return max
     } else {
-      if (value > min)
-        return min
-      else if (value < max)
-        return max
+      if (value > min) return min
+      else if (value < max) return max
     }
 
     return Math.round(value / step) * step
@@ -95,22 +88,26 @@ export class SliderWithTooltipAndPower extends React.Component {
   render() {
     return (
       <div>
-        <SliderTooltip className={ this.props.tooltipClass }
-                       percentage={ this.ratio() * 100 + '%' }>
-          { this.props.tooltipText }
+        <SliderTooltip
+          className={this.props.tooltipClass}
+          percentage={this.ratio() * 100 + '%'}
+        >
+          {this.props.tooltipText}
         </SliderTooltip>
-        <SliderBar onAction={ this.props.onAction }
-                   onMove={ this.props.onMove }
-                   name={ this.props.name }
-                   value={ this.props.value }
-                   min={ this.props.min }
-                   max={ this.props.max }
-                   ratio={ this.ratio() }
-                   onMove={ this.handleMove }
-                   onStart={ this.handleStart }
-                   onClick={ this.handleClick }
-                   onAction={ this.props.onAction }
-                   onKeyDown={ this.handleKeyDown } />
+        <SliderBar
+          onAction={this.props.onAction}
+          onMove={this.props.onMove}
+          name={this.props.name}
+          value={this.props.value}
+          min={this.props.min}
+          max={this.props.max}
+          ratio={this.ratio()}
+          onMove={this.handleMove}
+          onStart={this.handleStart}
+          onClick={this.handleClick}
+          onAction={this.props.onAction}
+          onKeyDown={this.handleKeyDown}
+        />
       </div>
     )
   }

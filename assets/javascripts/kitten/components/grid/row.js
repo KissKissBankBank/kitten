@@ -11,7 +11,7 @@ export const Row = ({
   lightBottomBorder,
   padded,
   children,
-  ...others,
+  ...others
 }) => {
   const rowClassName = classNames(
     'k-Row',
@@ -26,19 +26,11 @@ export const Row = ({
     className,
   )
 
-  const rowContentClassName = classNames(
-    'k-Row__content',
-    contentClassName,
-  )
+  const rowContentClassName = classNames('k-Row__content', contentClassName)
 
   return (
-    <div
-      className={ rowClassName }
-      { ...others }
-    >
-      <div className={ rowContentClassName }>
-        { children }
-      </div>
+    <div className={rowClassName} {...others}>
+      <div className={rowContentClassName}>{children}</div>
     </div>
   )
 }

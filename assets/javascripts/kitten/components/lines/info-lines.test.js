@@ -8,7 +8,7 @@ describe('<InfoLines />', () => {
   ]
 
   describe('by default', () => {
-    const infoLines = shallow(<InfoLines infos={ infos } />)
+    const infoLines = shallow(<InfoLines infos={infos} />)
 
     it('has a default class', () => {
       expect(infoLines.hasClass('k-InfoLines')).toBe(true)
@@ -47,7 +47,9 @@ describe('<InfoLines />', () => {
     const infoLines = shallow(<InfoLines withoutTopBottomBorder />)
 
     it('has a good class', () => {
-      expect(infoLines.hasClass('k-InfoLines--withoutTopBottomBorder')).toBe(true)
+      expect(infoLines.hasClass('k-InfoLines--withoutTopBottomBorder')).toBe(
+        true,
+      )
     })
   })
 
@@ -71,17 +73,17 @@ describe('<InfoLines />', () => {
 
   describe('with custom props for an element', () => {
     const infoLines = shallow(
-      <InfoLines infos={
-        [
+      <InfoLines
+        infos={[
           {
             id: '1',
             key: 'Foo',
             value: 'Bar',
-            className:'custom__class',
+            className: 'custom__class',
             'aria-hidden': true,
           },
-        ]
-      } />
+        ]}
+      />,
     )
 
     const element = infoLines.children().first()

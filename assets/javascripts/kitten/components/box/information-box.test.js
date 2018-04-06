@@ -12,9 +12,7 @@ describe('<InformationBox />', () => {
   })
 
   describe('title prop', () => {
-    const component = shallow(
-      <InformationBox title="Lorem ipsum" />
-    )
+    const component = shallow(<InformationBox title="Lorem ipsum" />)
 
     it('renders a <Title />', () => {
       expect(component.find(Title)).toHaveLength(1)
@@ -22,9 +20,7 @@ describe('<InformationBox />', () => {
   })
 
   describe('children prop', () => {
-    const component = mount(
-      <InformationBox>Example content</InformationBox>
-    )
+    const component = mount(<InformationBox>Example content</InformationBox>)
 
     it('adds a children element', () => {
       expect(component.text()).toBe('Example content')
