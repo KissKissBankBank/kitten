@@ -26,7 +26,7 @@ describe('<SimpleUploader />', () => {
       expect(button.text()).toBe('Choose a file')
     })
 
-    it('doesn\'t have a delete button', () => {
+    it("doesn't have a delete button", () => {
       expect(component.find('.k-SimpleUploader__buttonIcon')).toHaveLength(0)
     })
   })
@@ -35,8 +35,12 @@ describe('<SimpleUploader />', () => {
     const component = mount(<SimpleUploader buttonLabel="Custom label" />)
 
     it('has a custom label', () => {
-      expect(component.render().find('.k-SimpleUploader__button').text())
-        .toBe('Custom label')
+      expect(
+        component
+          .render()
+          .find('.k-SimpleUploader__button')
+          .text(),
+      ).toBe('Custom label')
     })
   })
 
@@ -45,8 +49,9 @@ describe('<SimpleUploader />', () => {
     const deleteButton = component.find(ButtonIcon)
 
     it('has a custom filename', () => {
-      expect(component.find('.k-SimpleUploader__text').text())
-        .toBe('custom-filename.png')
+      expect(component.find('.k-SimpleUploader__text').text()).toBe(
+        'custom-filename.png',
+      )
     })
 
     it('has a delete button', () => {
@@ -66,9 +71,8 @@ describe('<SimpleUploader />', () => {
 
   describe('with disabled prop', () => {
     describe('with a fileName prop', () => {
-      const component = mount(<SimpleUploader
-        fileName="custom-filename.png"
-        disabled />
+      const component = mount(
+        <SimpleUploader fileName="custom-filename.png" disabled />,
       )
       const buttonIcon = component.find(ButtonIcon)
       const uploadButton = component.find('.k-SimpleUploader__button')
@@ -77,7 +81,7 @@ describe('<SimpleUploader />', () => {
         expect(buttonIcon.props().disabled).toBeTruthy()
       })
 
-      it('doesn\'t pass a onClick prop to the delete button', () => {
+      it("doesn't pass a onClick prop to the delete button", () => {
         expect(buttonIcon.props().onClick).toBeNull()
       })
 
@@ -97,10 +101,9 @@ describe('<SimpleUploader />', () => {
   })
 
   describe('with deletable prop at false', () => {
-    const component = mount(<SimpleUploader
-      fileName="custom-filename.png"
-      deletable={ false }
-    />)
+    const component = mount(
+      <SimpleUploader fileName="custom-filename.png" deletable={false} />,
+    )
     const deleteButton = component.find(ButtonIcon)
 
     it('does not have a delete button', () => {

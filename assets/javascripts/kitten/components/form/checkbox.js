@@ -12,7 +12,7 @@ export class Checkbox extends Component {
       inputClassName,
       error,
       textProps,
-      ...inputProps,
+      ...inputProps
     } = this.props
 
     const checkboxInputClassNames = classNames(
@@ -22,21 +22,16 @@ export class Checkbox extends Component {
     )
 
     return (
-      <div className={ classNames('k-Checkbox', className) }>
+      <div className={classNames('k-Checkbox', className)}>
         <input
-          id={ id }
+          id={id}
           type="checkbox"
-          className={ checkboxInputClassNames }
-          { ...inputProps }
+          className={checkboxInputClassNames}
+          {...inputProps}
         />
 
-        <label
-          htmlFor={ id }
-          className="k-Checkbox__label"
-        >
-          <Text { ...textProps }>
-            { children }
-          </Text>
+        <label htmlFor={id} className="k-Checkbox__label">
+          <Text {...textProps}>{children}</Text>
         </label>
       </div>
     )

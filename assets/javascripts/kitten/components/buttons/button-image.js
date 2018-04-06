@@ -5,14 +5,9 @@ export class ButtonImage extends React.Component {
   renderImage(props) {
     const { className, ...others } = props
 
-    const imgClassName = classNames(
-      'k-ButtonImage__img',
-      className,
-    )
+    const imgClassName = classNames('k-ButtonImage__img', className)
 
-    return (
-      <img className={ imgClassName } { ...others } />
-    )
+    return <img className={imgClassName} {...others} />
   }
 
   render() {
@@ -24,7 +19,7 @@ export class ButtonImage extends React.Component {
       withoutPointerEvents,
       withBorder,
       img,
-      ...others,
+      ...others
     } = this.props
 
     const buttonClassName = classNames(
@@ -39,13 +34,13 @@ export class ButtonImage extends React.Component {
     )
 
     // Adds keyboard accessibility to `<a>`
-    const tabindex = (tag == "a" && !this.props.href) ? 0 : null
+    const tabindex = tag == 'a' && !this.props.href ? 0 : null
 
     const Tag = tag
 
     return (
-      <Tag className={ buttonClassName } tabIndex={ tabindex } { ...others }>
-        { this.renderImage(img) }
+      <Tag className={buttonClassName} tabIndex={tabindex} {...others}>
+        {this.renderImage(img)}
       </Tag>
     )
   }

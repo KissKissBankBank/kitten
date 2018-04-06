@@ -27,9 +27,7 @@ export class SelectWithState extends Component {
   }
 
   handleChange(val) {
-    const value = val && val.value
-      ? val
-      : { value: null, label: null }
+    const value = val && val.value ? val : { value: null, label: null }
 
     this.setState({ value: value })
     this.props.onChange(value)
@@ -51,11 +49,8 @@ export class SelectWithState extends Component {
     if (!this.props.labelText) return
 
     return (
-      <label
-        className="k-Select__label"
-        id={ this.props.id }
-      >
-        { this.props.labelText }
+      <label className="k-Select__label" id={this.props.id}>
+        {this.props.labelText}
       </label>
     )
   }
@@ -69,29 +64,25 @@ export class SelectWithState extends Component {
       error,
       valid,
       disabled,
-      ...other,
+      ...other
     } = this.props
 
-    const selectClassName = classNames(
-      'k-Select',
-      className,
-      {
-        'k-Select--tiny': tiny,
-        'is-error': error,
-        'is-valid': valid,
-        'is-disabled': disabled,
-      }
-    )
+    const selectClassName = classNames('k-Select', className, {
+      'k-Select--tiny': tiny,
+      'is-error': error,
+      'is-valid': valid,
+      'is-disabled': disabled,
+    })
 
     return (
-      <div className={ selectClassName }>
-        { this.renderLabel() }
+      <div className={selectClassName}>
+        {this.renderLabel()}
         <SelectWithMultiLevel
-          value={ this.state.value }
-          onKeyDown={ this.onKeyDown }
-          onChange={ this.handleChange }
-          disabled={ disabled }
-          { ...other }
+          value={this.state.value}
+          onKeyDown={this.onKeyDown}
+          onChange={this.handleChange}
+          disabled={disabled}
+          {...other}
         />
       </div>
     )
@@ -124,11 +115,7 @@ class SelectWithMultiLevel extends Component {
   optionRenderer({ level, label }) {
     if (!level) return label
 
-    return (
-      <span className={ 'k-Select__option--level' + level }>
-        { label }
-      </span>
-    )
+    return <span className={'k-Select__option--level' + level}>{label}</span>
   }
 
   render() {
@@ -137,12 +124,14 @@ class SelectWithMultiLevel extends Component {
     if (this.props.labelText && !inputProps['aria-labelledby'])
       inputProps['aria-labelledby'] = this.props.id
 
-    return <Select
-      optionRenderer={ this.optionRenderer }
-      { ...this.props }
-      inputProps={ inputProps }
-      options={ this.flattenedOptions() }
-    />
+    return (
+      <Select
+        optionRenderer={this.optionRenderer}
+        {...this.props}
+        inputProps={inputProps}
+        options={this.flattenedOptions()}
+      />
+    )
   }
 }
 

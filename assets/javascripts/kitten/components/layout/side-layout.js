@@ -21,35 +21,33 @@ export class SideLayout extends React.Component {
 
   componentDidMount() {
     this.setState({
-      needsFullHeight: this.needsFullHeight()
+      needsFullHeight: this.needsFullHeight(),
     })
   }
 
   render() {
     const { className, ...sideGridProps } = this.props
-    const hasFluidLayout = (className || '').search('k-VerticalGrid__fluid') != -1
+    const hasFluidLayout =
+      (className || '').search('k-VerticalGrid__fluid') != -1
     const hasFullHeightLayout = hasFluidLayout && this.state.needsFullHeight
-    const sideLayoutClassName = classNames(
-      className,
-      {
-        'k-VerticalGrid__fullHeight': hasFullHeightLayout,
-      }
-    )
+    const sideLayoutClassName = classNames(className, {
+      'k-VerticalGrid__fullHeight': hasFullHeightLayout,
+    })
 
     return (
-      <SideGrid className={ sideLayoutClassName }
-                containerClassName="k-VerticalGrid__container"
-                rowClassName="k-VerticalGrid__element">
+      <SideGrid
+        className={sideLayoutClassName}
+        containerClassName="k-VerticalGrid__container"
+        rowClassName="k-VerticalGrid__element"
+      >
         <SideGridContent>
           <Grid>
-            <GridCol col-s="12">
-              { this.props.children }
-            </GridCol>
+            <GridCol col-s="12">{this.props.children}</GridCol>
           </Grid>
         </SideGridContent>
 
         <SideGridAside className="k-VerticalGrid__element">
-          { this.props.sidebar }
+          {this.props.sidebar}
         </SideGridAside>
       </SideGrid>
     )

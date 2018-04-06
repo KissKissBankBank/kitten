@@ -25,7 +25,7 @@ class PasswordInputBase extends Component {
     super(props)
 
     this.state = {
-      isHidden: true
+      isHidden: true,
     }
   }
 
@@ -33,7 +33,7 @@ class PasswordInputBase extends Component {
     this.setState({ isHidden: !this.state.isHidden })
   }
 
-  handleKeyDown = (event) => {
+  handleKeyDown = event => {
     const enterKeyCode = 13
 
     if (event.keyCode == enterKeyCode) {
@@ -42,12 +42,7 @@ class PasswordInputBase extends Component {
   }
 
   render() {
-    const {
-      name,
-      textInputProps,
-      iconLabel,
-      hiddenIconLabel,
-    } = this.props
+    const { name, textInputProps, iconLabel, hiddenIconLabel } = this.props
 
     const type = this.state.isHidden ? 'password' : 'text'
 
@@ -56,28 +51,23 @@ class PasswordInputBase extends Component {
       !this.state.isHidden && styles.icon.svg.active,
     ]
 
-    const iconTitle = this.state.isHidden
-      ? iconLabel
-      : hiddenIconLabel
+    const iconTitle = this.state.isHidden ? iconLabel : hiddenIconLabel
 
     return (
-      <div style={ styles.textInput }>
+      <div style={styles.textInput}>
         <TextInput
-          { ...textInputProps }
-          style={ styles.input }
-          name={ name }
-          type={ type }
+          {...textInputProps}
+          style={styles.input}
+          name={name}
+          type={type}
         />
-        <span
-          style={ styles.icon }
-          title={ iconTitle }
-        >
+        <span style={styles.icon} title={iconTitle}>
           <PasswordIcon
             tabIndex="0"
-            style={ iconStyle }
-            onClick={ this.handleClick }
-            onKeyDown={ this.handleKeyDown }
-            title={ iconTitle }
+            style={iconStyle}
+            onClick={this.handleClick}
+            onKeyDown={this.handleKeyDown}
+            title={iconTitle}
           />
         </span>
       </div>

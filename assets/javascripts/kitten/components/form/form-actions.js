@@ -4,24 +4,18 @@ import classNames from 'classnames'
 
 export const FormActions = props => {
   const { className, spreadOutAt, ...others } = props
-  const formActionsClassName = classNames(
-    'k-FormActions',
-    className,
-    {
-      [`k-FormActions--spreadOut@${spreadOutAt}`]: spreadOutAt,
-    },
-  )
+  const formActionsClassName = classNames('k-FormActions', className, {
+    [`k-FormActions--spreadOut@${spreadOutAt}`]: spreadOutAt,
+  })
 
-  return (
-    <div className={ formActionsClassName } { ...others } />
-  )
+  return <div className={formActionsClassName} {...others} />
 }
 
 FormActions.Item = props => {
   return (
     <div
-      { ...props }
-      className={ classNames('k-FormActions__item', props.className) }
+      {...props}
+      className={classNames('k-FormActions__item', props.className)}
     />
   )
 }

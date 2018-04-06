@@ -62,7 +62,7 @@ export class SimilarProjectsCard extends Component {
   currentStep() {
     if (!this.hasProjects()) return
 
-    return `${this.state.currentIndex + 1 }/${ this.props.projects.length }`
+    return `${this.state.currentIndex + 1}/${this.props.projects.length}`
   }
 
   render() {
@@ -70,7 +70,7 @@ export class SimilarProjectsCard extends Component {
       projects,
       onLeftArrowClick,
       onRightArrowClick,
-      ...others,
+      ...others
     } = this.props
 
     const nextIndex = this.state.currentIndex + 1
@@ -78,17 +78,19 @@ export class SimilarProjectsCard extends Component {
 
     return (
       <SimilarProjectCard
-        { ...others }
-        { ...this.currentProjectProps() }
-        step={ this.currentStep() }
-        onLeftArrowClick={
-          this.curryHandleArrowClick(previousIndex, this.props.onLeftArrowClick)
-        }
-        onRightArrowClick={
-          this.curryHandleArrowClick(nextIndex, this.props.onRightArrowClick)
-        }
-        leftArrowDisabled={ this.isAtStart() }
-        rightArrowDisabled={ this.isAtEnd() }
+        {...others}
+        {...this.currentProjectProps()}
+        step={this.currentStep()}
+        onLeftArrowClick={this.curryHandleArrowClick(
+          previousIndex,
+          this.props.onLeftArrowClick,
+        )}
+        onRightArrowClick={this.curryHandleArrowClick(
+          nextIndex,
+          this.props.onRightArrowClick,
+        )}
+        leftArrowDisabled={this.isAtStart()}
+        rightArrowDisabled={this.isAtEnd()}
       />
     )
   }
