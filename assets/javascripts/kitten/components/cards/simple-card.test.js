@@ -1,4 +1,5 @@
 import React from 'react'
+import renderer from 'react-test-renderer'
 import { SimpleCard } from 'kitten/components/cards/simple-card'
 import { Title } from 'kitten/components/typography/title'
 import { Text } from 'kitten/components/typography/text'
@@ -8,33 +9,12 @@ describe('<SimpleCard />', () => {
   let component
 
   describe('by default', () => {
-    beforeEach(() => {
-      component = mount(<SimpleCard />)
+    beforeAll(() => {
+      component = renderer.create(<SimpleCard />).toJSON()
     })
 
-    it('is a <div />', () => {
-      expect(component.render().is('div')).toBe(true)
-    })
-
-    it('has an image container', () => {
-      expect(component.render().find('.k-Card__imageContainer')).toHaveLength(1)
-    })
-
-    it('has a <img /> with good class', () => {
-      expect(component.find('img')).toHaveLength(1)
-      expect(component.find('img').hasClass('k-Card__image')).toBe(true)
-    })
-
-    it('has not a <Title /> component', () => {
-      expect(component.find(Title).exists()).toBeFalsy()
-    })
-
-    it('has not <Text /> component', () => {
-      expect(component.find(Text).exists()).toBeFalsy()
-    })
-
-    it('has <HorizontalStroke /> component', () => {
-      expect(component.find(HorizontalStroke).exists()).toBeTruthy()
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
     })
   })
 
@@ -128,6 +108,16 @@ describe('<SimpleCard />', () => {
         size: 'micro',
         lineHeight: 'normal',
       })
+    })
+  })
+
+  describe('without horizontalStroke prop', () => {
+    it('matches snapshot', () => {
+      component = renderer
+        .create(<SimpleCard horizontalStroke={false} />)
+        .toJSON()
+
+      expect(component).toMatchSnapshot()
     })
   })
 
