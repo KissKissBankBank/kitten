@@ -291,7 +291,7 @@ const loadingKeyframes = Radium.keyframes({
 const styles = {
   card: {
     position: 'relative',
-    paddingBottom: '10px',
+    paddingBottom: '5px',
   },
   imageContainer: {
     overflow: 'hidden',
