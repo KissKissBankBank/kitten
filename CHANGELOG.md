@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Add `Badge` prop on `HorizontalNav` component.
 - Fix: Update `:hover` and `:focus` state on `azote` button.
+- Fix: Fix `CrowdfundingCard` spacing.
 - Feature: Add `subTitleTruncate` prop for `CrowdfundingCard`.
 - Feature: Add `horizontalStroke` prop for `SimpleCard`.
 
