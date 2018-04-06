@@ -94,11 +94,6 @@ class PaginationBase extends Component {
 
     const isActive = number === this.props.currentPage
 
-    // const styleButtonIcon = [
-    //   styles.group.list.buttonIcon,
-    //   isActive && styles.group.list.buttonIcon.isActive,
-    // ]
-
     const renderPageIsActive = (
       <Text
         tag="span"
