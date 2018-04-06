@@ -82,14 +82,15 @@
     "webpack": "^2.5.1"
   },
   "scripts": {
-    "postinstall": "cd vendor/assets/stylesheets/kitten/sassy-maps && npm install",
+    "postinstall": "bin/postinstall",
     "sassdoc": "sassdoc -d public/sassdoc assets/stylesheets",
     "stylelint": "stylelint --syntax scss 'assets/stylesheets/**/*.scss'",
     "build:dev": "(cd spec/dummy/client && yarn build:dev)",
     "build": "(cd spec/dummy/client && yarn build --silent)",
     "hot-assets": "(cd spec/dummy/client && yarn hot-assets)",
     "test": "jest",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "dist": "cd assets && babel ./**/*.js --out-dir ../dist -q"
   },
   "lint-staged": {
     "assets/**/*.js": [
