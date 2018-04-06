@@ -94,31 +94,45 @@ class PaginationBase extends Component {
 
     const isActive = number === this.props.currentPage
 
-    const styleButtonIcon = [
-      styles.group.list.buttonIcon,
-      isActive && styles.group.list.buttonIcon.isActive,
-    ]
+    // const styleButtonIcon = [
+    //   styles.group.list.buttonIcon,
+    //   isActive && styles.group.list.buttonIcon.isActive,
+    // ]
 
-    const href =
-      !isActive ? this.props.goToPageHref(number) : null
+    const renderPageIsActive = (
+      <Text
+        tag="span"
+        weight="regular"
+        size="tiny"
+        key={`link-${number}`}
+        style={styles.group.list.buttonIconIsActive}
+        aria-label={this.props.goToPageLabel(number)}
+        onClick={this.pageClickHandler(number)}
+        tabIndex="null"
+      >
+        {number}
+      </Text>
+    )
+
+    const renderPageNormal = (
+      <Text
+        tag="a"
+        weight="regular"
+        size="tiny"
+        href={this.props.goToPageHref(number)}
+        key={`link-${number}`}
+        style={styles.group.list.buttonIcon}
+        aria-label={this.props.goToPageLabel(number)}
+        onClick={this.preventClickDefault}
+        tabIndex="-1"
+      >
+        {number}
+      </Text>
+    )
 
     return (
       <li style={styles.group.list} key={`page-${number}`}>
-        <Text
-          tag={ isActive ? 'span' : 'a' }
-          weight="regular"
-          size="tiny"
-          href={this.props.goToPageHref(number)}
-          key={`link-${number}`}
-          style={styleButtonIcon}
-          aria-label={this.props.goToPageLabel(number)}
-          onClick={
-            isActive ? this.preventClickDefault : this.pageClickHandler(number)
-          }
-          tabIndex={isActive ? -1 : null}
-        >
-          {number}
-        </Text>
+        {isActive ? renderPageIsActive : renderPageNormal}
       </li>
     )
   }
@@ -266,6 +280,28 @@ const styles = {
           marginLeft: '8px',
           marginRight: '8px',
           width: '50px',
+        },
+      },
+
+      buttonIconIsActive: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        boxSizing: 'border-box',
+        width: '40px',
+        height: '40px',
+        borderRadius: 0,
+        borderWidth: 0,
+        borderStyle: 'solid',
+        textDecoration: 'none',
+        outline: 'none',
+        backgroundColor: `${COLORS.primary1}`,
+        borderColor: `${COLORS.primary1}`,
+        color: `${COLORS.background1}`,
+        [`@media (min-width: ${ScreenConfig['S'].min}px)`]: {
+          width: '50px',
+          height: '50px',
+          borderWidth: '2px',
         },
       },
 
