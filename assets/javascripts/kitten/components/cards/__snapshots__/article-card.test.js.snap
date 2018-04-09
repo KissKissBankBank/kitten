@@ -11,7 +11,7 @@ exports[`<ArticleCard /> by default matches with snapshot 1`] = `
     onClick={[Function]}
     style={
       Object {
-        "paddingBottom": "10px",
+        "paddingBottom": "5px",
         "position": "relative",
       }
     }
@@ -181,7 +181,7 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
     onClick={[Function]}
     style={
       Object {
-        "paddingBottom": "10px",
+        "paddingBottom": "5px",
         "position": "relative",
       }
     }
@@ -388,7 +388,7 @@ exports[`<ArticleCard /> with ignored props matches with snapshot 1`] = `
     onClick={[Function]}
     style={
       Object {
-        "paddingBottom": "10px",
+        "paddingBottom": "5px",
         "position": "relative",
       }
     }
@@ -558,7 +558,7 @@ exports[`<ArticleCard /> with some props matches with snapshot 1`] = `
     onClick={[Function]}
     style={
       Object {
-        "paddingBottom": "10px",
+        "paddingBottom": "5px",
         "position": "relative",
       }
     }
