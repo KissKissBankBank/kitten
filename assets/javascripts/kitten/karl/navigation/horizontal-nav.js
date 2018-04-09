@@ -50,7 +50,7 @@ export const KarlTouchHorizontalNavWithNotification = props => {
   ]
 
   return (
-    <Row style={ rowStyles }>
+    <Row style={rowStyles}>
       <HorizontalNav
         items={ horizontalNavItems }
         height="96px"
