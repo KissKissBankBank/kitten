@@ -5,7 +5,7 @@ import Markdown from 'react-markdown'
 
 export class HorizontalNav extends Component {
   renderItems() {
-    const { items } = this.props
+    const {items} = this.props
 
     return items.map(item => this.renderItem(item))
   }
@@ -27,14 +27,14 @@ export class HorizontalNav extends Component {
 
     const renderBadge =
       <Fragment>
-        { text }
+        {text}
         <Badge className="k-HorizontalNav__badge">
-          { badge }
+          {badge}
         </Badge>
       </Fragment>
 
     const renderMarkdown =
-      <Markdown softBreak="br" source={ text } />
+      <Markdown softBreak="br" source={text} />
 
     const renderText = badge ? renderBadge : renderMarkdown
 
@@ -55,14 +55,14 @@ export class HorizontalNav extends Component {
             height: this.props.height,
           }}
         >
-          { renderText }
+          {renderText}
         </a>
       </li>
     )
   }
 
   render() {
-    const { className, center, ...others } = this.props
+    const {className, center, ...others} = this.props
 
     const navClassNames = classNames('k-HorizontalNav', className, {
       'k-HorizontalNav--center': center,
