@@ -97,7 +97,10 @@ class PaginationBase extends Component {
     const href = isActive ? null : this.props.goToPageHref(number)
     const tabIndex = isActive ? null : -1
 
-    const textStyle = isActive ? styles.group.list.buttonIcon.isActive : styles.group.list.buttonIcon
+    const textStyle = [
+      styles.group.list.buttonIcon,
+      isActive && styles.group.list.buttonIcon.isActive,
+    ]
 
     return (
       <li style={styles.group.list} key={`page-${number}`}>
@@ -207,15 +210,21 @@ class PaginationBase extends Component {
 }
 
 const linkHoveredAndFocused = {
-  borderColor: `${COLORS.primary1}`,
-  color: `${COLORS.primary1}`,
-  backgroundColor: `${COLORS.background1}`,
+  borderColor: COLORS.primary1,
+  color: COLORS.primary1,
+  backgroundColor: COLORS.background1,
 }
 
 const disabledPseudoClass = {
-  borderColor: `${COLORS.line2}`,
-  color: `${COLORS.background1}`,
-  backgroundColor: `${COLORS.line2}`,
+  borderColor: COLORS.line2,
+  color: COLORS.background1,
+  backgroundColor: COLORS.line2,
+}
+
+const isActivedPseudoClass = {
+  backgroundColor: COLORS.primary1,
+  borderColor: COLORS.primary1,
+  color: COLORS.background1,
 }
 
 const styles = {
@@ -264,28 +273,6 @@ const styles = {
         },
       },
 
-      buttonIconIsActive: {
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        boxSizing: 'border-box',
-        width: '40px',
-        height: '40px',
-        borderRadius: 0,
-        borderWidth: 0,
-        borderStyle: 'solid',
-        textDecoration: 'none',
-        outline: 'none',
-        backgroundColor: `${COLORS.primary1}`,
-        borderColor: `${COLORS.primary1}`,
-        color: `${COLORS.background1}`,
-        [`@media (min-width: ${ScreenConfig['S'].min}px)`]: {
-          width: '50px',
-          height: '50px',
-          borderWidth: '2px',
-        },
-      },
-
       buttonIcon: {
         display: 'flex',
         justifyContent: 'center',
@@ -299,15 +286,15 @@ const styles = {
         borderStyle: 'solid',
         textDecoration: 'none',
         outline: 'none',
-        backgroundColor: `${COLORS.background1}`,
-        borderColor: `${COLORS.line1}`,
-        color: `${COLORS.font1}`,
+        backgroundColor: COLORS.background1,
+        borderColor: COLORS.line1,
+        color: COLORS.font1,
         ':hover': linkHoveredAndFocused,
         ':focus': linkHoveredAndFocused,
         ':active': {
-          backgroundColor: `${COLORS.primary1}`,
-          borderColor: `${COLORS.primary1}`,
-          color: `${COLORS.background1}`,
+          backgroundColor: COLORS.primary1,
+          borderColor: COLORS.primary1,
+          color: COLORS.background1,
         },
         [`@media (min-width: ${ScreenConfig['S'].min}px)`]: {
           width: '50px',
@@ -316,15 +303,19 @@ const styles = {
         },
 
         isActive: {
-          backgroundColor: `${COLORS.primary1}`,
-          borderColor: `${COLORS.primary1}`,
-          color: `${COLORS.background1}`,
+          cursor: 'default',
+          backgroundColor: COLORS.primary1,
+          borderColor: COLORS.primary1,
+          color: COLORS.background1,
+          ':hover': isActivedPseudoClass,
+          ':focus': isActivedPseudoClass,
+          ':active': isActivedPseudoClass,
         },
 
         isDisabled: {
-          color: `${COLORS.background1}`,
-          backgroundColor: `${COLORS.line2}`,
-          borderColor: `${COLORS.line2}`,
+          color: COLORS.background1,
+          backgroundColor: COLORS.line2,
+          borderColor: COLORS.line2,
           cursor: 'not-allowed',
           ':hover': disabledPseudoClass,
           ':focus': disabledPseudoClass,
@@ -339,16 +330,16 @@ const styles = {
           height: '10px',
           pointerEvents: 'none',
           hover: {
-            fill: `${COLORS.primary1}`,
+            fill: COLORS.primary1,
           },
           focus: {
-            fill: `${COLORS.primary1}`,
+            fill: COLORS.primary1,
           },
           active: {
-            fill: `${COLORS.background1}`,
+            fill: COLORS.background1,
           },
           isDisabled: {
-            fill: `${COLORS.background1}`,
+            fill: COLORS.background1,
           },
         },
       },
