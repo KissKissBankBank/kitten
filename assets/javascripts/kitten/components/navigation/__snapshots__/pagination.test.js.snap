@@ -212,15 +212,34 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
       >
         <span
           aria-label="Go to page 10"
-          className="k-u-size-tiny k-u-weight-regular"
+          className="rmq-e4506d25 k-u-size-tiny k-u-weight-regular"
           data-radium={true}
           href={null}
+          onBlur={[Function]}
           onClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
           style={
             Object {
+              "alignItems": "center",
               "backgroundColor": "#19b4fa",
               "borderColor": "#19b4fa",
+              "borderRadius": 0,
+              "borderStyle": "solid",
+              "borderWidth": 0,
+              "boxSizing": "border-box",
               "color": "#fff",
+              "cursor": "default",
+              "display": "flex",
+              "height": "40px",
+              "justifyContent": "center",
+              "outline": "none",
+              "textDecoration": "none",
+              "width": "40px",
             }
           }
           tabIndex={null}
