@@ -19,6 +19,7 @@
   "homepage": "https://github.com/KissKissBankBank/kitten#readme",
   "devDependencies": {
     "@storybook/addon-actions": "3.4.0",
+    "@storybook/addon-info": "3.4.0",
     "@storybook/addon-knobs": "3.4.0",
     "@storybook/addon-links": "3.4.0",
     "@storybook/addons": "3.4.0",
@@ -32,6 +33,7 @@
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "enzyme-to-json": "^3.3.0",
+    "file-loader": "1.1.11",
     "husky": "0.14.3",
     "jest": "^22.0.4",
     "jsdom": "^11.5.1",
