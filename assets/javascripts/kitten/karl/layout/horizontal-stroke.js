@@ -31,3 +31,14 @@ export const KarlHorizontalStrokes = () => (
     </GridCol>
   </Grid>
 )
+
+export const KarlHorizontalStrokesWithChildren = () => {
+  ;<Grid>
+    <GridCol col="6">
+      <KarlExampleTitle>Default</KarlExampleTitle>
+      <Marger top="2" bottom="3">
+        <HorizontalStroke>Hello</HorizontalStroke>
+      </Marger>
+    </GridCol>
+  </Grid>
+}
