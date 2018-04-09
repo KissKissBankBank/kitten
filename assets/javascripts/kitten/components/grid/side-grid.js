@@ -18,11 +18,12 @@ export class SideGrid extends Component {
     )
 
     return (
-      <div className={ sideGridClassName }>
-        <div className={ classNames('k-SideGrid__container',
-                                    containerClassName) }>
-          <div className={ classNames('k-SideGrid__row', rowClassName) }>
-            { this.props.children }
+      <div className={sideGridClassName}>
+        <div
+          className={classNames('k-SideGrid__container', containerClassName)}
+        >
+          <div className={classNames('k-SideGrid__row', rowClassName)}>
+            {this.props.children}
           </div>
         </div>
       </div>
@@ -33,9 +34,8 @@ export class SideGrid extends Component {
 export class SideGridContent extends Component {
   render() {
     return (
-      <div className={ classNames('k-SideGrid__content',
-                                  this.props.className) }>
-        { this.props.children }
+      <div className={classNames('k-SideGrid__content', this.props.className)}>
+        {this.props.children}
       </div>
     )
   }
@@ -44,10 +44,14 @@ export class SideGridContent extends Component {
 export class SideGridAside extends Component {
   render() {
     return (
-      <div className={ classNames('k-SideGrid__aside', this.props.className) }>
-        <div className={ classNames('k-SideGrid__asideContent',
-                                    this.props.contentClassName) }>
-          { this.props.children }
+      <div className={classNames('k-SideGrid__aside', this.props.className)}>
+        <div
+          className={classNames(
+            'k-SideGrid__asideContent',
+            this.props.contentClassName,
+          )}
+        >
+          {this.props.children}
         </div>
       </div>
     )

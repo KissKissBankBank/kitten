@@ -27,58 +27,45 @@ class ProjectCardComponent extends React.Component {
   }
 
   renderDescription() {
-    const {
-      ownerAvatarSrc,
-      ownerName,
-      ownerLocation,
-      title,
-    } = this.props
+    const { ownerAvatarSrc, ownerName, ownerLocation, title } = this.props
 
     return (
       <div className="k-ProjectCard__grid">
-        <Marger
-          top="2"
-          bottom="1"
-          className="k-ProjectCard__grid--flex"
-        >
+        <Marger top="2" bottom="1" className="k-ProjectCard__grid--flex">
           <ButtonImage
             tag="span"
-            img={ { src: ownerAvatarSrc } }
+            img={{ src: ownerAvatarSrc }}
             withoutPointerEvents
           />
           <Paragraph
-            className={ classNames('k-ProjectCard__grid--flex__item-fluid',
-                                   'k-u-margin-left-single',
-                                   'k-u-margin-right-single') }
-            margin={ false }
+            className={classNames(
+              'k-ProjectCard__grid--flex__item-fluid',
+              'k-u-margin-left-single',
+              'k-u-margin-right-single',
+            )}
+            margin={false}
             normalLineHeight
             modifier="quaternary"
           >
-            <span className="k-u-weight-regular">
-              { ownerName }
-            </span>
+            <span className="k-u-weight-regular">{ownerName}</span>
             <br />
-            { ownerLocation }
+            {ownerLocation}
           </Paragraph>
 
-          { this.renderTooltip() }
+          {this.renderTooltip()}
         </Marger>
 
-        <Marger
-          top="1"
-          bottom="1.5"
-          className="k-ProjectCard__grid--flex"
-        >
+        <Marger top="1" bottom="1.5" className="k-ProjectCard__grid--flex">
           <Title
             className="k-ProjectCard__grid--flex__item-fluid k-Card__title"
-            margin={ false }
+            margin={false}
             modifier="senary"
             tag="p"
           >
-            { title }
+            {title}
           </Title>
 
-          { this.renderScore() }
+          {this.renderScore()}
         </Marger>
       </div>
     )
@@ -90,11 +77,11 @@ class ProjectCardComponent extends React.Component {
     return (
       <div className="k-ProjectCard__tooltip">
         <span className="k-ProjectCard__tooltip__content">
-          { this.props.tooltipText }
+          {this.props.tooltipText}
         </span>
         <CheckedCircleIcon
-          style={ { width: '20px', height: '20px' } }
-          circleColor={ this.props.tooltipIconColor }
+          style={{ width: '20px', height: '20px' }}
+          circleColor={this.props.tooltipIconColor}
           checkedColor="#fff"
         />
       </div>
@@ -109,11 +96,8 @@ class ProjectCardComponent extends React.Component {
     }
 
     return (
-      <IconBadge
-        style={ scoreStyles }
-        className="k-u-margin-left-single"
-      >
-        { this.props.scoreValue }
+      <IconBadge style={scoreStyles} className="k-u-margin-left-single">
+        {this.props.scoreValue}
       </IconBadge>
     )
   }
@@ -127,12 +111,12 @@ class ProjectCardComponent extends React.Component {
           top="1.5"
           bottom="1.3"
           className="k-Card__imageContainer"
-          style={ styles.imageContainer }
+          style={styles.imageContainer}
         >
           <img
             className="k-ProjectCard__img k-Card__image"
-            style={ styles.image }
-            src={ this.props.imageSrc }
+            style={styles.image}
+            src={this.props.imageSrc}
             alt=""
           />
         </Marger>
@@ -144,26 +128,27 @@ class ProjectCardComponent extends React.Component {
     if (this.props.progress === false) return null
 
     return (
-      <div className={ classNames('k-ProjectCard__grid',
-                                  'k-ProjectCard__grid--withBorderTop') }
+      <div
+        className={classNames(
+          'k-ProjectCard__grid',
+          'k-ProjectCard__grid--withBorderTop',
+        )}
       >
-        <Marger
-          top="1.3"
-          bottom="1.5"
-          className="k-ProjectCard__grid--flex"
-        >
+        <Marger top="1.3" bottom="1.5" className="k-ProjectCard__grid--flex">
           <Progress
             className="k-ProjectCard__grid--flex__item-fluid"
-            value={ this.props.progress }
+            value={this.props.progress}
           />
           <Paragraph
-            margin={ false }
+            margin={false}
             modifier="quaternary"
-            className={ classNames('k-u-margin-left-double',
-                                   'k-u-color-primary1',
-                                   'k-u-weight-regular') }
+            className={classNames(
+              'k-u-margin-left-double',
+              'k-u-color-primary1',
+              'k-u-weight-regular',
+            )}
           >
-            { this.props.progress }&nbsp;%
+            {this.props.progress}&nbsp;%
           </Paragraph>
         </Marger>
       </div>
@@ -172,16 +157,9 @@ class ProjectCardComponent extends React.Component {
 
   renderTags() {
     return (
-      <div
-        key={ `tag-list-${Math.random(1)}` }
-        className="k-ProjectCard__grid"
-      >
+      <div key={`tag-list-${Math.random(1)}`} className="k-ProjectCard__grid">
         <Marger top="1.3" bottom="1.3">
-          <TagList
-            icon={ TypologyTagIcon }
-            items={ this.props.tags }
-            tiny
-          />
+          <TagList icon={TypologyTagIcon} items={this.props.tags} tiny />
         </Marger>
       </div>
     )
@@ -189,48 +167,46 @@ class ProjectCardComponent extends React.Component {
 
   renderTagsInList(tagList, index) {
     const icon = this.convertToClass(tagList.icon)
-    const list = <TagList icon={ icon } items={ tagList.items } tiny />
+    const list = <TagList icon={icon} items={tagList.items} tiny />
 
-    const separator =
+    const separator = (
       <div className="k-u-margin-left-single">
-        <hr className={classNames ('k-VerticalSeparator',
-                                   'k-VerticalSeparator--darker') }
+        <hr
+          className={classNames(
+            'k-VerticalSeparator',
+            'k-VerticalSeparator--darker',
+          )}
         />
       </div>
+    )
 
-    const tagListWithMargin =
-      <div className="k-u-margin-left-single">
-        { list }
-      </div>
+    const tagListWithMargin = (
+      <div className="k-u-margin-left-single">{list}</div>
+    )
 
     return (
-      <div
-        key={ `tag-list-${index}` }
-        className="k-ProjectCard__grid--flex"
-      >
-        { index != 0 && separator }
-        { index != 0 && tagListWithMargin }
-        { index == 0 && list }
+      <div key={`tag-list-${index}`} className="k-ProjectCard__grid--flex">
+        {index != 0 && separator}
+        {index != 0 && tagListWithMargin}
+        {index == 0 && list}
       </div>
     )
   }
 
   convertToClass(stringClassName) {
     switch (stringClassName) {
-      case 'InstrumentTagIcon': return InstrumentTagIcon
-      default: return TypologyTagIcon
+      case 'InstrumentTagIcon':
+        return InstrumentTagIcon
+      default:
+        return TypologyTagIcon
     }
   }
 
   renderTagLists() {
     return (
       <div className="k-ProjectCard__grid">
-        <Marger
-          top="1.3"
-          bottom="1.3"
-          className="k-ProjectCard__grid--flex"
-        >
-          { this.props.tagLists.map(this.renderTagsInList) }
+        <Marger top="1.3" bottom="1.3" className="k-ProjectCard__grid--flex">
+          {this.props.tagLists.map(this.renderTagsInList)}
         </Marger>
       </div>
     )
@@ -245,37 +221,33 @@ class ProjectCardComponent extends React.Component {
   renderInfos() {
     return (
       <div className="k-ProjectCard__grid--withBorderTop">
-        <Marger
-          top="1.5"
-          bottom="1.5"
-          className="k-ProjectCard__grid--flex"
-        >
-          { this.renderInfo(this.props.info1) }
-          { this.renderInfo(this.props.info2) }
-          { this.renderInfo(this.props.info3) }
+        <Marger top="1.5" bottom="1.5" className="k-ProjectCard__grid--flex">
+          {this.renderInfo(this.props.info1)}
+          {this.renderInfo(this.props.info2)}
+          {this.renderInfo(this.props.info3)}
         </Marger>
       </div>
     )
   }
 
   renderInfo(info) {
-    const valueClassName = classNames(
-      'k-ProjectCard__info__value',
-      { 'k-u-color-primary1': this.props.coloredInfosValues },
-    )
+    const valueClassName = classNames('k-ProjectCard__info__value', {
+      'k-u-color-primary1': this.props.coloredInfosValues,
+    })
 
-    const renderValue =
-      <span className={ valueClassName }>
-        { info.locked ? <LockIcon width="12" /> : info.value }
+    const renderValue = (
+      <span className={valueClassName}>
+        {info.locked ? <LockIcon width="12" /> : info.value}
       </span>
+    )
 
     const renderLabel = info.text
 
     return (
       <div className="k-u-align-center k-ProjectCard__info">
-        { info.reverse ? renderValue : renderLabel }
+        {info.reverse ? renderValue : renderLabel}
         <br />
-        { info.reverse ? renderLabel : renderValue }
+        {info.reverse ? renderLabel : renderValue}
       </div>
     )
   }
@@ -304,19 +276,14 @@ class ProjectCardComponent extends React.Component {
         'k-ProjectCard__status--tertiaryBackground': statusTertiaryBackground,
         'k-ProjectCard__status--greyBackground': statusGreyBackground,
         'k-ProjectCard__status--errorBackground': statusErrorBackground,
-        'k-ProjectCard__status--errorReverseBackground':
-          statusErrorReverseBackground,
+        'k-ProjectCard__status--errorReverseBackground': statusErrorReverseBackground,
       },
     )
 
     return (
-      <div className={ statusClassName }>
-        <Marger
-          top="1"
-          bottom="1"
-          className="k-ProjectCard__status__content"
-        >
-          { statusContent }
+      <div className={statusClassName}>
+        <Marger top="1" bottom="1" className="k-ProjectCard__status__content">
+          {statusContent}
         </Marger>
       </div>
     )
@@ -334,16 +301,18 @@ class ProjectCardComponent extends React.Component {
     const title = this.props.disabled ? null : this.props.linkTitle
 
     return (
-      <Tag key={ this.props.id }
-           href={ href }
-           title={ title }
-           className={ projectCardClassName }>
-        { this.renderDescription() }
-        { this.renderImage() }
-        { this.renderTagsArea() }
-        { this.renderProgress() }
-        { this.renderInfos() }
-        { this.renderStatus() }
+      <Tag
+        key={this.props.id}
+        href={href}
+        title={title}
+        className={projectCardClassName}
+      >
+        {this.renderDescription()}
+        {this.renderImage()}
+        {this.renderTagsArea()}
+        {this.renderProgress()}
+        {this.renderInfos()}
+        {this.renderStatus()}
       </Tag>
     )
   }
@@ -397,7 +366,7 @@ ProjectCardComponent.defaultProps = {
 // Deprecated props
 
 ProjectCardComponent.propTypes = {
-  tags: deprecated(PropTypes.array, 'Use `tagLists` prop instead')
+  tags: deprecated(PropTypes.array, 'Use `tagLists` prop instead'),
 }
 
 // Add card generic styles.

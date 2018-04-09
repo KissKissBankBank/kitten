@@ -8,7 +8,7 @@ describe('<LinkBox />', () => {
       title="Your history"
       text="Download your history (pdf - 8Mo)"
       isExternal="true"
-    />
+    />,
   )
 
   it('renders a <a class="k-LinkBox" />', () => {
@@ -36,7 +36,7 @@ describe('<LinkBox />', () => {
     const componentWithIcon = shallow(
       <LinkBox displayIcon="true">
         <span>My icon</span>
-      </LinkBox>
+      </LinkBox>,
     )
 
     it('has an icon class', () => {
@@ -69,7 +69,7 @@ describe('<LinkBox />', () => {
 
   describe('with linkProps props', () => {
     const linkPropsComponent = shallow(
-      <LinkBox linkProps={ { title: "Lorem ipsum" } } />
+      <LinkBox linkProps={{ title: 'Lorem ipsum' }} />,
     )
 
     it('has a linkProps prop', () => {

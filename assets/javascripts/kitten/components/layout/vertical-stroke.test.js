@@ -15,9 +15,7 @@ describe('<VerticalStroke />', () => {
   })
 
   describe('with className prop', () => {
-    const verticalStroke = shallow(
-      <VerticalStroke className="custom__class" />
-    )
+    const verticalStroke = shallow(<VerticalStroke className="custom__class" />)
 
     it('has a good class', () => {
       expect(verticalStroke.hasClass('custom__class')).toBe(true)
@@ -25,9 +23,7 @@ describe('<VerticalStroke />', () => {
   })
 
   describe('with size="tiny" prop', () => {
-    const verticalStroke = shallow(
-      <VerticalStroke size="tiny" />
-    )
+    const verticalStroke = shallow(<VerticalStroke size="tiny" />)
 
     it('has a good class', () => {
       expect(verticalStroke.hasClass('k-VerticalStroke--tiny')).toBe(true)
@@ -35,9 +31,7 @@ describe('<VerticalStroke />', () => {
   })
 
   describe('with size="default" prop', () => {
-    const verticalStroke = shallow(
-      <VerticalStroke size="default" />
-    )
+    const verticalStroke = shallow(<VerticalStroke size="default" />)
 
     it('has a good class', () => {
       expect(verticalStroke.hasClass('k-VerticalStroke--default')).toBe(true)
@@ -45,9 +39,7 @@ describe('<VerticalStroke />', () => {
   })
 
   describe('with size="big" prop', () => {
-    const verticalStroke = shallow(
-      <VerticalStroke size="big" />
-    )
+    const verticalStroke = shallow(<VerticalStroke size="big" />)
 
     it('has a good class', () => {
       expect(verticalStroke.hasClass('k-VerticalStroke--big')).toBe(true)
@@ -55,9 +47,7 @@ describe('<VerticalStroke />', () => {
   })
 
   describe('with size="huge" prop', () => {
-    const verticalStroke = shallow(
-      <VerticalStroke size="huge" />
-    )
+    const verticalStroke = shallow(<VerticalStroke size="huge" />)
 
     it('has a good class', () => {
       expect(verticalStroke.hasClass('k-VerticalStroke--huge')).toBe(true)

@@ -6,7 +6,8 @@ export class Container extends React.PureComponent {
   constructor(props, context) {
     super(props, context)
 
-    this.mqBelowScreenSize = props.fullWidthBelowScreenSize &&
+    this.mqBelowScreenSize =
+      props.fullWidthBelowScreenSize &&
       createMatchMediaMax(props.fullWidthBelowScreenSize)
 
     this.state = {
@@ -38,9 +39,7 @@ export class Container extends React.PureComponent {
       'k-Container--no-padding': isBelowScreenSize,
     })
 
-    return (
-      <div className={ containerClassName } { ...props } />
-    )
+    return <div className={containerClassName} {...props} />
   }
 }
 

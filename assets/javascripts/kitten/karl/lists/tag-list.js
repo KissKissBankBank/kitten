@@ -18,9 +18,9 @@ export const KarlTagList = props => {
 
   return (
     <div>
-      <TagList items={ typologyItems } />
-      <TagList icon={ TypologyTagIcon } items={ typologyItems } />
-      <TagList icon={ InstrumentTagIcon } items={ instrumentItems } />
+      <TagList items={typologyItems} />
+      <TagList icon={TypologyTagIcon} items={typologyItems} />
+      <TagList icon={InstrumentTagIcon} items={instrumentItems} />
     </div>
   )
 }

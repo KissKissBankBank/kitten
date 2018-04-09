@@ -12,7 +12,7 @@ import { SCREEN_SIZE_S, SCREEN_SIZE_M } from 'kitten/constants/screen-config'
 const createMockMediaMatcher = matches => () => ({
   matches,
   addListener: () => {},
-  removeListener: () => {}
+  removeListener: () => {},
 })
 
 describe('utils MediaQueries', () => {
@@ -36,9 +36,10 @@ describe('utils MediaQueries', () => {
     })
 
     describe('return joined queries strings', () => {
-      const query = getJoinedQueries(
-        ['(min-width: 800px)', '(max-width: 1280px)']
-      )
+      const query = getJoinedQueries([
+        '(min-width: 800px)',
+        '(max-width: 1280px)',
+      ])
 
       it('by passing two queries', () => {
         expect(query).toBe('(min-width: 800px) and (max-width: 1280px)')
@@ -61,7 +62,6 @@ describe('utils MediaQueries', () => {
       })
     })
   })
-
 
   describe('createMatchMedia', () => {
     describe('return an object', () => {
@@ -92,7 +92,6 @@ describe('utils MediaQueries', () => {
     })
   })
 
-
   describe('createMatchMediaMin', () => {
     describe('return an object', () => {
       window.matchMedia = createMockMediaMatcher(true)
@@ -122,7 +121,6 @@ describe('utils MediaQueries', () => {
     })
   })
 
-
   describe('createMatchMediaMax', () => {
     describe('return an object', () => {
       window.matchMedia = createMockMediaMatcher(true)
@@ -151,7 +149,6 @@ describe('utils MediaQueries', () => {
       })
     })
   })
-
 
   describe('createMatchMediaWithin', () => {
     describe('return an object', () => {

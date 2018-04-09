@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SimpleCard /> by default matches with snapshot 1`] = `
+<div
+  className="k-Card k-Card--withoutBoxShadowOnHover"
+>
+  <div
+    className="k-Card__imageContainer"
+    style={
+      Object {
+        "marginBottom": "1.25rem",
+        "marginTop": null,
+      }
+    }
+  >
+    <img
+      alt=""
+      className="k-Card__image"
+      src="https://placehold.it/200x200/caf4fe/caf4fe"
+      style={
+        Object {
+          "display": "block",
+          "width": "100%",
+        }
+      }
+    />
+  </div>
+  <div
+    style={
+      Object {
+        "marginBottom": null,
+        "marginTop": "0.9375rem",
+      }
+    }
+  >
+    <span
+      className="k-HorizontalStroke k-HorizontalStroke--tiny"
+    />
+  </div>
+</div>
+`;
+
+exports[`<SimpleCard /> without horizontalStroke prop matches snapshot 1`] = `
+<div
+  className="k-Card k-Card--withoutBoxShadowOnHover"
+>
+  <div
+    className="k-Card__imageContainer"
+    style={
+      Object {
+        "marginBottom": "1.25rem",
+        "marginTop": null,
+      }
+    }
+  >
+    <img
+      alt=""
+      className="k-Card__image"
+      src="https://placehold.it/200x200/caf4fe/caf4fe"
+      style={
+        Object {
+          "display": "block",
+          "width": "100%",
+        }
+      }
+    />
+  </div>
+</div>
+`;

@@ -9,7 +9,7 @@ describe('<Header />', () => {
   const header = shallow(
     <Header>
       <p>Test</p>
-    </Header>
+    </Header>,
   )
 
   it('renders a <header class="k-Header" />', () => {
@@ -33,7 +33,7 @@ describe('<Header />', () => {
   })
 
   describe('with fixed version', () => {
-    const header = shallow(<Header fixed={ true } />)
+    const header = shallow(<Header fixed={true} />)
 
     it('has `.is-fixed` class', () => {
       expect(header.hasClass('is-fixed')).toBe(true)
@@ -45,7 +45,7 @@ describe('<HeaderItems />', () => {
   const headerItems = shallow(
     <HeaderItems>
       <p>Test</p>
-    </HeaderItems>
+    </HeaderItems>,
   )
 
   it('renders a <div class="k-Header__items" />', () => {
@@ -57,7 +57,7 @@ describe('<HeaderItems />', () => {
   })
 
   describe('with fixed size version', () => {
-    const headerItems = shallow(<HeaderItems fixedSize={ true } />)
+    const headerItems = shallow(<HeaderItems fixedSize={true} />)
 
     it('has a custom class', () => {
       expect(headerItems.hasClass('k-Header__items--fixedSize')).toBe(true)
@@ -69,7 +69,7 @@ describe('<HeaderItem />', () => {
   const headerItem = shallow(
     <HeaderItem>
       <p>Test</p>
-    </HeaderItem>
+    </HeaderItem>,
   )
 
   it('renders a <div class="k-Header__item" />', () => {
@@ -81,7 +81,7 @@ describe('<HeaderItem />', () => {
   })
 
   describe('with fixed size version', () => {
-    const headerItem = shallow(<HeaderItem fixedSize={ true } />)
+    const headerItem = shallow(<HeaderItem fixedSize={true} />)
 
     it('has a custom class', () => {
       expect(headerItem.hasClass('k-Header__item--fixedSize')).toBe(true)
@@ -89,7 +89,7 @@ describe('<HeaderItem />', () => {
   })
 
   describe('with centered version', () => {
-    const headerItem = shallow(<HeaderItem centered={ true } />)
+    const headerItem = shallow(<HeaderItem centered={true} />)
 
     it('has a custom class', () => {
       expect(headerItem.hasClass('k-Header__item--centered')).toBe(true)

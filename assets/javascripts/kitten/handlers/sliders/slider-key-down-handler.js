@@ -9,12 +9,9 @@ export function sliderKeyDownHandler(e) {
   // make larger steps if alt or shift is entered,
   // change direction if we go to high to low
   let step = this.props.step
-  if (e.altKey)
-    step *= 10
-  if (e.shiftKey)
-    step *= 10
-  if (min > max)
-    step *= -1
+  if (e.altKey) step *= 10
+  if (e.shiftKey) step *= 10
+  if (min > max) step *= -1
 
   switch (e.keyCode) {
     case domEvents.keyboard.right:

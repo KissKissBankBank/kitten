@@ -91,7 +91,7 @@ describe('<TextInputWithUnit />', () => {
   })
 
   describe('digits prop', () => {
-    const component = mount(<TextInputWithUnit digits={ 2 } />)
+    const component = mount(<TextInputWithUnit digits={2} />)
 
     it('does not have "k-TextInputWithUnit--fullWidth" class', () => {
       expect(component.hasClass('k-TextInputWithUnit--fullWidth')).toBe(false)

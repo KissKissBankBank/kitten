@@ -3,13 +3,10 @@ import { Checkbox } from 'kitten/components/form/checkbox'
 
 export const KarlCheckboxError = () => (
   <div className="k-TextInputWithInfo">
-    <Checkbox error
-              id="input-error">
+    <Checkbox error id="input-error">
       Error default
     </Checkbox>
-    <Checkbox error
-              id="input-error-checked"
-              defaultChecked>
+    <Checkbox error id="input-error-checked" defaultChecked>
       Error default checked
     </Checkbox>
   </div>
