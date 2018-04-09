@@ -11,7 +11,7 @@ module.exports = {
   resolve: {
     extensions: ['.js', 'jsx'],
     modules:[
-      path.resolve(__dirname, "src"), "node_modules",
+      path.resolve(__dirname, 'src'), 'node_modules',
       path.join(__dirname, '../assets/images')
     ],
     alias: {
@@ -30,11 +30,11 @@ module.exports = {
       {
         test: /\.scss$/,
         use: [{
-          loader: "style-loader"
+          loader: 'style-loader'
         }, {
-          loader: "css-loader"
+          loader: 'css-loader'
         }, {
-          loader: "sass-loader",
+          loader: 'sass-loader',
           options: {
             includePaths: [
               path.join(__dirname, '../assets/stylesheets'),
