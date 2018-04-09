@@ -93,41 +93,27 @@ class PaginationBase extends Component {
     if (!number) return this.renderSpacer(index)
 
     const isActive = number === this.props.currentPage
+    const tag = isActive ? 'span' : 'a'
+    const href = isActive ? null : this.props.goToPageHref(number)
+    const tabIndex = isActive ? null : -1
 
-    const renderPageIsActive = (
-      <Text
-        tag="span"
-        weight="regular"
-        size="tiny"
-        key={`link-${number}`}
-        style={styles.group.list.buttonIconIsActive}
-        aria-label={this.props.goToPageLabel(number)}
-        onClick={this.pageClickHandler(number)}
-        tabIndex="null"
-      >
-        {number}
-      </Text>
-    )
-
-    const renderPageNormal = (
-      <Text
-        tag="a"
-        weight="regular"
-        size="tiny"
-        href={this.props.goToPageHref(number)}
-        key={`link-${number}`}
-        style={styles.group.list.buttonIcon}
-        aria-label={this.props.goToPageLabel(number)}
-        onClick={this.preventClickDefault}
-        tabIndex="-1"
-      >
-        {number}
-      </Text>
-    )
+    const textStyle = isActive ? styles.group.list.buttonIcon.isActive : styles.group.list.buttonIcon
 
     return (
       <li style={styles.group.list} key={`page-${number}`}>
-        {isActive ? renderPageIsActive : renderPageNormal}
+        <Text
+          tag={tag}
+          weight="regular"
+          size="tiny"
+          href={href}
+          key={`link-${number}`}
+          style={textStyle}
+          aria-label={this.props.goToPageLabel(number)}
+          onClick={this.pageClickHandler(number)}
+          tabIndex={tabIndex}
+        >
+          {number}
+        </Text>
       </li>
     )
   }

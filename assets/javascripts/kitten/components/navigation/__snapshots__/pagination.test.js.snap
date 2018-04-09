@@ -133,7 +133,7 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
               "width": "40px",
             }
           }
-          tabIndex={null}
+          tabIndex={-1}
         >
           1
         </a>
@@ -195,7 +195,7 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
               "width": "40px",
             }
           }
-          tabIndex={null}
+          tabIndex={-1}
         >
           9
         </a>
@@ -210,42 +210,23 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
           }
         }
       >
-        <a
+        <span
           aria-label="Go to page 10"
-          className="rmq-e4506d25 k-u-size-tiny k-u-weight-regular"
+          className="k-u-size-tiny k-u-weight-regular"
           data-radium={true}
-          href="#10"
-          onBlur={[Function]}
+          href={null}
           onClick={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
           style={
             Object {
-              "alignItems": "center",
               "backgroundColor": "#19b4fa",
               "borderColor": "#19b4fa",
-              "borderRadius": 0,
-              "borderStyle": "solid",
-              "borderWidth": 0,
-              "boxSizing": "border-box",
               "color": "#fff",
-              "cursor": "pointer",
-              "display": "flex",
-              "height": "40px",
-              "justifyContent": "center",
-              "outline": "none",
-              "textDecoration": "none",
-              "width": "40px",
             }
           }
-          tabIndex={-1}
+          tabIndex={null}
         >
           10
-        </a>
+        </span>
       </li>
       <li
         className="rmq-51af0236"
@@ -289,7 +270,7 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
               "width": "40px",
             }
           }
-          tabIndex={null}
+          tabIndex={-1}
         >
           11
         </a>
@@ -351,7 +332,7 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
               "width": "40px",
             }
           }
-          tabIndex={null}
+          tabIndex={-1}
         >
           42
         </a>
