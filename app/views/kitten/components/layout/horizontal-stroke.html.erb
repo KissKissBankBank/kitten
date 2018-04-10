@@ -1,2 +1,9 @@
 <%= react_component 'KarlHorizontalStrokes' %>
-<%= react_component 'KarlHorizontalStrokesWithChildren' %>
+
+<div class="k-Grid">
+  <div class="k-Grid__col k-Grid__col--6">
+    <%= example 'with content' do %>
+      <%= react_component 'KarlHorizontalStrokesWithContent' %>
+    <% end %>
+  </div>
+</div>

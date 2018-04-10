@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+Feature: Add `KarlHorizontalStrokesWithContent` example.
+
 ## [20.6.0] - 2018-04-06
 
 - Add `SimpleCard` without horizontal stroke example.
