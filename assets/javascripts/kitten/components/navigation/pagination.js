@@ -96,7 +96,7 @@ class PaginationBase extends Component {
     const tag = isActive ? 'span' : 'a'
     const href = isActive ? false : this.props.goToPageHref(number)
 
-    const textStyle = [
+    const styleButtonIcon = [
       styles.group.list.buttonIcon,
       isActive && styles.group.list.buttonIcon.isActive,
     ]
@@ -109,7 +109,7 @@ class PaginationBase extends Component {
           size="tiny"
           href={href}
           key={`link-${number}`}
-          style={textStyle}
+          style={styleButtonIcon}
           aria-label={this.props.goToPageLabel(number)}
           onClick={isActive ? null : this.pageClickHandler(number)}
         >
@@ -208,21 +208,21 @@ class PaginationBase extends Component {
 }
 
 const linkHoveredAndFocused = {
-  borderColor: COLORS.primary1,
   color: COLORS.primary1,
+  borderColor: COLORS.primary1,
   backgroundColor: COLORS.background1,
 }
 
 const disabledPseudoClass = {
-  borderColor: COLORS.line2,
   color: COLORS.background1,
+  borderColor: COLORS.line2,
   backgroundColor: COLORS.line2,
 }
 
 const isActivedPseudoClass = {
-  backgroundColor: COLORS.primary1,
-  borderColor: COLORS.primary1,
   color: COLORS.background1,
+  borderColor: COLORS.primary1,
+  backgroundColor: COLORS.primary1,
 }
 
 const styles = {
@@ -284,15 +284,15 @@ const styles = {
         borderStyle: 'solid',
         textDecoration: 'none',
         outline: 'none',
-        backgroundColor: COLORS.background1,
-        borderColor: COLORS.line1,
         color: COLORS.font1,
+        borderColor: COLORS.line1,
+        backgroundColor: COLORS.background1,
         ':hover': linkHoveredAndFocused,
         ':focus': linkHoveredAndFocused,
         ':active': {
-          backgroundColor: COLORS.primary1,
-          borderColor: COLORS.primary1,
           color: COLORS.background1,
+          borderColor: COLORS.primary1,
+          backgroundColor: COLORS.primary1,
         },
         [`@media (min-width: ${ScreenConfig['S'].min}px)`]: {
           width: '50px',
@@ -302,9 +302,9 @@ const styles = {
 
         isActive: {
           cursor: 'auto',
-          backgroundColor: COLORS.primary1,
-          borderColor: COLORS.primary1,
           color: COLORS.background1,
+          borderColor: COLORS.primary1,
+          backgroundColor: COLORS.primary1,
           ':hover': isActivedPseudoClass,
           ':focus': isActivedPseudoClass,
           ':active': isActivedPseudoClass,
@@ -312,8 +312,8 @@ const styles = {
 
         isDisabled: {
           color: COLORS.background1,
-          backgroundColor: COLORS.line2,
           borderColor: COLORS.line2,
+          backgroundColor: COLORS.line2,
           cursor: 'not-allowed',
           ':hover': disabledPseudoClass,
           ':focus': disabledPseudoClass,
