@@ -133,7 +133,6 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
               "width": "40px",
             }
           }
-          tabIndex={-1}
         >
           1
         </a>
@@ -195,7 +194,6 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
               "width": "40px",
             }
           }
-          tabIndex={-1}
         >
           9
         </a>
@@ -214,9 +212,9 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
           aria-label="Go to page 10"
           className="rmq-e4506d25 k-u-size-tiny k-u-weight-regular"
           data-radium={true}
-          href={null}
+          href={false}
           onBlur={[Function]}
-          onClick={[Function]}
+          onClick={null}
           onFocus={[Function]}
           onKeyDown={[Function]}
           onKeyUp={[Function]}
@@ -233,7 +231,7 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
               "borderWidth": 0,
               "boxSizing": "border-box",
               "color": "#fff",
-              "cursor": "default",
+              "cursor": "auto",
               "display": "flex",
               "height": "40px",
               "justifyContent": "center",
@@ -242,7 +240,6 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
               "width": "40px",
             }
           }
-          tabIndex={null}
         >
           10
         </span>
@@ -289,7 +286,6 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
               "width": "40px",
             }
           }
-          tabIndex={-1}
         >
           11
         </a>
@@ -351,7 +347,6 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
               "width": "40px",
             }
           }
-          tabIndex={-1}
         >
           42
         </a>
