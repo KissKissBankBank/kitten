@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Grid, GridCol } from 'kitten/components/grid/grid'
-import Radium, { StyleRoot } from 'radium'
+import Radium from 'radium'
 import { Marger } from 'kitten/components/layout/marger'
 import { HorizontalStroke } from 'kitten/components/layout/horizontal-stroke'
 import { Text as TextBase } from 'kitten/components/typography/text'
@@ -11,12 +11,17 @@ const Text = Radium(TextBase)
 class KarlHorizontalStrokesWithContentBase extends Component {
   render() {
     return (
-      <StyleRoot style={styles.content}>
+      <div style={styles.content}>
         <HorizontalStroke size="tiny" />
-        <Text size="tiny" weight="regular" style={styles.content.text}>
+        <Text
+          size="tiny"
+          weight="regular"
+          style={styles.content.text}
+          color="font1"
+        >
           Lorem
         </Text>
-      </StyleRoot>
+      </div>
     )
   }
 }
