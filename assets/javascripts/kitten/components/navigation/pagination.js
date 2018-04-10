@@ -94,8 +94,7 @@ class PaginationBase extends Component {
 
     const isActive = number === this.props.currentPage
     const tag = isActive ? 'span' : 'a'
-    const href = isActive ? null : this.props.goToPageHref(number)
-    const tabIndex = isActive ? null : -1
+    const href = isActive ? false : this.props.goToPageHref(number)
 
     const textStyle = [
       styles.group.list.buttonIcon,
@@ -112,8 +111,7 @@ class PaginationBase extends Component {
           key={`link-${number}`}
           style={textStyle}
           aria-label={this.props.goToPageLabel(number)}
-          onClick={this.pageClickHandler(number)}
-          tabIndex={tabIndex}
+          onClick={isActive ? null : this.pageClickHandler(number)}
         >
           {number}
         </Text>
@@ -303,7 +301,7 @@ const styles = {
         },
 
         isActive: {
-          cursor: 'default',
+          cursor: 'auto',
           backgroundColor: COLORS.primary1,
           borderColor: COLORS.primary1,
           color: COLORS.background1,
