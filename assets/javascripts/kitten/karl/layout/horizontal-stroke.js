@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Grid, GridCol } from 'kitten/components/grid/grid'
 import Radium from 'radium'
 import { Marger } from 'kitten/components/layout/marger'
@@ -8,23 +8,19 @@ import { KarlExampleTitle } from 'kitten/karl/examples/title'
 
 const Text = Radium(TextBase)
 
-class KarlHorizontalStrokesWithContentBase extends Component {
-  render() {
-    return (
-      <div style={styles.content}>
-        <HorizontalStroke size="tiny" />
-        <Text
-          size="tiny"
-          weight="regular"
-          style={styles.content.text}
-          color="font1"
-        >
-          Lorem
-        </Text>
-      </div>
-    )
-  }
-}
+const KarlHorizontalStrokesWithContentBase = () => (
+  <div style={styles.content}>
+    <HorizontalStroke size="tiny" />
+    <Text
+      size="tiny"
+      weight="regular"
+      style={styles.content.text}
+      color="font1"
+    >
+      Lorem
+    </Text>
+  </div>
+)
 
 const styles = {
   content: {
