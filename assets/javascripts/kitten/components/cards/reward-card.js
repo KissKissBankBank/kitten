@@ -13,8 +13,7 @@ import { Title as TitleBase } from 'kitten/components/typography/title'
 import { Text as TextBase } from 'kitten/components/typography/text'
 import { Paragraph as ParagraphBase } from 'kitten/components/typography/paragraph'
 import { IconBadge as IconBadgeBase } from 'kitten/components/notifications/icon-badge'
-import { HorizontalStroke as HorizontalStrokeBase }
-  from 'kitten/components/layout/horizontal-stroke'
+import { HorizontalStroke as HorizontalStrokeBase } from 'kitten/components/layout/horizontal-stroke'
 import { ScreenConfig } from 'kitten/constants/screen-config'
 import {
   NUM_COLUMNS,
@@ -39,53 +38,57 @@ class RewardCardBase extends Component {
     titleDescription: PropTypes.string.isRequired,
     textDescription: PropTypes.string.isRequired,
 
-    titleKissbanker: PropTypes.string.isRequired,
+    titleContributors: PropTypes.string.isRequired,
     titleDelivery: PropTypes.string.isRequired,
     titleAvailability: PropTypes.string.isRequired,
-    textKissbanker: PropTypes.string.isRequired,
-    textDelivery: PropTypes.string.isRequired,
-    textAvailability: PropTypes.string.isRequired,
+    valueContributors: PropTypes.string.isRequired,
+    valueDelivery: PropTypes.string.isRequired,
+    valueAvailability: PropTypes.string.isRequired,
 
     button: PropTypes.string.isRequired,
   }
 
   render() {
     return (
-      <StyleRoot style={ styles.card }>
+      <StyleRoot style={styles.card}>
         <Grid>
-          { this.renderDescription() }
-          { this.renderImage() }
+          {this.renderDescription()}
+          {this.renderImage()}
         </Grid>
       </StyleRoot>
     )
   }
 
   renderDescription() {
-    const {
-      titleMount,
-      titleDescription,
-      textDescription,
-    } = this.props
+    const { titleMount, titleDescription, textDescription } = this.props
 
     return (
-      <Marger top="5" bottom="5">
-        <GridCol
-          col-l="8"
-        >
+      <Marger bottom="5">
+        <GridCol col-l="8">
           <Marger top="5" bottom="2">
-            <Title modifier="secondary" tag="h1">
-              { titleMount }
-            </Title>
-            <HorizontalStroke size="big" />
-            <Title modifier="senary" tag="h2">
-              { titleDescription }
-            </Title>
-            <Paragraph modifier="tertiary">
-              { textDescription }
-            </Paragraph>
+            <Marger bottom="2">
+              <Title modifier="secondary" tag="h1" margin={false}>
+                {titleMount}
+              </Title>
+            </Marger>
+            <Marger top="2" bottom="4">
+              <HorizontalStroke size="big" />
+            </Marger>
+            <Marger top="4" bottom="1">
+              <Title modifier="senary" tag="h2" margin={false}>
+                {titleDescription}
+              </Title>
+            </Marger>
+            <Marger top="1" bottom="2">
+              <Paragraph modifier="tertiary" margin={false}>
+                {textDescription}
+              </Paragraph>
+            </Marger>
           </Marger>
-          { this.renderInfos() }
-          { this.renderButton() }
+          <Marger top="2" bottom="4">
+            {this.renderInfos()}
+          </Marger>
+          <Marger top="4">{this.renderButton()}</Marger>
         </GridCol>
       </Marger>
     )
@@ -93,81 +96,62 @@ class RewardCardBase extends Component {
 
   renderInfos() {
     const {
-      titleKissbanker,
+      titleContributors,
       titleDelivery,
       titleAvailability,
-      textKissbanker,
-      textDelivery,
-      textAvailability,
+      valueContributors,
+      valueDelivery,
+      valueAvailability,
     } = this.props
 
     return (
-      <Marger top="2" bottom="4">
-        <Grid>
-          <GridCol
-            col-l="3"
-            style={ styles.infos }
-          >
-            <Text weight="bold">
-              { titleKissbanker }
-            </Text>
-            <Text>
-              { textKissbanker }
-            </Text>
-          </GridCol>
+      <Grid>
+        {this.renderInfo(titleContributors, valueContributors)}
+        {this.renderInfo(titleDelivery, valueDelivery)}
+        {this.renderInfo(titleAvailability, valueAvailability)}
+      </Grid>
+    )
+  }
 
-          <GridCol
-            col-l="3"
-            style={ styles.infos }
-          >
-            <Text weight="bold">
-              { titleDelivery }
-            </Text>
-            <Text>
-              { textDelivery }
-            </Text>
-          </GridCol>
+  renderInfo(title, value) {
+    if (!title && !value) return
 
-          <GridCol
-            col-l="3"
-            style={ styles.infos }
-          >
-            <Text weight="bold">
-              { titleAvailability }
-            </Text>
-            <Text>
-              { textAvailability }
-            </Text>
-          </GridCol>
-        </Grid>
-      </Marger>
+    return (
+      <GridCol col-l="3" style={styles.infos}>
+        <Text weight="bold">{title}</Text>
+        <Text>{value}</Text>
+      </GridCol>
+    )
+  }
+
+  renderMyContribution() {
+    const { myContribution } = this.props
+
+    return (
+      <div>
+        <IconBadge />
+        <Paragraph>{myContribution}</Paragraph>
+      </div>
     )
   }
 
   renderButton() {
     return (
-      <Marger top="4" bottom="5">
-        <Button
-          size="big"
-          modifier="helium"
-        >
-          { this.props.button }
-        </Button>
-      </Marger>
+      <Button size="big" modifier="helium">
+        {this.props.button}
+      </Button>
     )
   }
 
   renderImage() {
     const imageStyles = [
       styles.image,
-      { backgroundImage: `url(${ this.props.imageSrc })` },
+      { backgroundImage: `url(${this.props.imageSrc})` },
     ]
 
     return (
-      <GridCol
-        col-l="2"
-      >
-        <div style={ imageStyles } />
+      <GridCol col-l="2">
+        <div style={imageStyles} />
       </GridCol>
     )
   }
