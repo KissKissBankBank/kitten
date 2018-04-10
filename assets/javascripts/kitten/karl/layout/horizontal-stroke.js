@@ -1,12 +1,44 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { Grid, GridCol } from 'kitten/components/grid/grid'
+import Radium, { StyleRoot } from 'radium'
 import { Marger } from 'kitten/components/layout/marger'
 import { HorizontalStroke } from 'kitten/components/layout/horizontal-stroke'
+import { Text as TextBase } from 'kitten/components/typography/text'
 import { KarlExampleTitle } from 'kitten/karl/examples/title'
+
+const Text = Radium(TextBase)
+
+class KarlHorizontalStrokesWithContentBase extends Component {
+  render() {
+    return (
+      <StyleRoot style={styles.content}>
+        <HorizontalStroke size="tiny" />
+        <Text size="tiny" weight="regular" style={styles.content.text}>
+          Lorem
+        </Text>
+      </StyleRoot>
+    )
+  }
+}
+
+const styles = {
+  content: {
+    display: 'flex',
+    alignItems: 'center',
+
+    text: {
+      marginLeft: '10px',
+    },
+  },
+}
+
+export const KarlHorizontalStrokesWithContent = Radium(
+  KarlHorizontalStrokesWithContentBase,
+)
 
 export const KarlHorizontalStrokes = () => (
   <Grid>
-    <GridCol col="6">
+    <GridCol col="4">
       <KarlExampleTitle>Default</KarlExampleTitle>
       <Marger top="2" bottom="3">
         <HorizontalStroke />
@@ -18,7 +50,7 @@ export const KarlHorizontalStrokes = () => (
       </Marger>
     </GridCol>
 
-    <GridCol col="6">
+    <GridCol col="4">
       <KarlExampleTitle>Big</KarlExampleTitle>
       <Marger top="2" bottom="3">
         <HorizontalStroke size="big" />
@@ -29,14 +61,12 @@ export const KarlHorizontalStrokes = () => (
         <HorizontalStroke size="huge" />
       </Marger>
     </GridCol>
-  </Grid>
-)
 
-export const KarlHorizontalStrokesWithContent = () => (
-  <Marger top="2" bottom="3">
-    <div className="k-HorizontalStroke--content">
-      <HorizontalStroke />
-      <span className="k-u-margin-left-single">Lorem</span>
-    </div>
-  </Marger>
+    <GridCol col="4">
+      <KarlExampleTitle>With content</KarlExampleTitle>
+      <Marger top="2" bottom="3">
+        <KarlHorizontalStrokesWithContent />
+      </Marger>
+    </GridCol>
+  </Grid>
 )

@@ -17,11 +17,6 @@
     background: map-get($k-colors, 'font-1');
   }
 
-  .k-HorizontalStroke--content {
-    display: flex;
-    align-items: center;
-  }
-
   .k-HorizontalStroke--tiny {
     height: k-px-to-rem(2px);
     width: k-px-to-rem(20px);
