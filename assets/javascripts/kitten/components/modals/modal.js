@@ -63,11 +63,8 @@ export class Modal extends Component {
     const triggerClassNames = classNames('k-Modal', className)
 
     return (
-      <div
-        className={ triggerClassNames }
-        { ...others }
-      >
-        { this.renderTriggerAction() }
+      <div className={triggerClassNames} {...others}>
+        {this.renderTriggerAction()}
 
         <ReactModal
           role="dialog"
@@ -81,16 +78,15 @@ export class Modal extends Component {
             afterOpen: 'k-Modal__overlay--afterOpen',
             beforeClose: 'k-Modal__overlay--beforeClose',
           }}
-          isOpen={ this.state.showModal }
+          isOpen={this.state.showModal}
           aria={{
             labelledby,
             describedby,
           }}
-          onRequestClose={ this.close }
-          contentLabel={ label }
+          onRequestClose={this.close}
+          contentLabel={label}
         >
-
-          { content }
+          {content}
 
           {this.renderCloseModal()}
         </ReactModal>
