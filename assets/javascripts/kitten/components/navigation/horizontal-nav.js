@@ -1,40 +1,30 @@
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
 import { Badge } from 'kitten/components/notifications/badge'
 import classNames from 'classnames'
 import Markdown from 'react-markdown'
 
 export class HorizontalNav extends Component {
   renderItems() {
-    const {items} = this.props
+    const { items } = this.props
 
     return items.map(item => this.renderItem(item))
   }
 
   renderItem(item) {
-    const {
-      className,
-      selected,
-      text,
-      badge,
-      key,
-      href,
-      ...others
-    } = item
+    const { className, selected, text, badge, key, href, ...others } = item
 
     const itemClassName = classNames('k-HorizontalNav__item', className, {
       'is-selected': selected,
     })
 
-    const renderBadge =
-      <Fragment>
+    const renderBadge = (
+      <div>
         {text}
-        <Badge className="k-HorizontalNav__badge">
-          {badge}
-        </Badge>
-      </Fragment>
+        <Badge className="k-HorizontalNav__badge">{badge}</Badge>
+      </div>
+    )
 
-    const renderMarkdown =
-      <Markdown softBreak="br" source={text} />
+    const renderMarkdown = <Markdown softBreak="br" source={text} />
 
     const renderText = badge ? renderBadge : renderMarkdown
 
@@ -62,7 +52,7 @@ export class HorizontalNav extends Component {
   }
 
   render() {
-    const {className, center, ...others} = this.props
+    const { className, center, ...others } = this.props
 
     const navClassNames = classNames('k-HorizontalNav', className, {
       'k-HorizontalNav--center': center,
