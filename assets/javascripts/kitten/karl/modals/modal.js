@@ -40,12 +40,7 @@ class KarlModalComponent extends Component {
         bottom={this.state.viewportIsMobile ? 8 : 10}
       >
         <Marger bottom="1">
-          <Title
-            id="heading"
-            modifier="tertiary"
-            margin={ false }
-            tag="p"
-          >
+          <Title id="heading" modifier="tertiary" margin={false} tag="p">
             Lorem ipsum dolor sit consectetuer
           </Title>
         </Marger>
@@ -54,7 +49,7 @@ class KarlModalComponent extends Component {
           <Paragraph
             id="full-description"
             modifier="tertiary"
-            margin={ false }
+            margin={false}
             tag="p"
           >
             Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu,
@@ -78,8 +73,8 @@ const KarlModalButton = () => <Button modifier="helium">Open</Button>
 
 export const KarlModal = props => (
   <Modal
-    trigger={ <KarlModalButton /> }
-    content={ <KarlModalComponent /> }
+    trigger={<KarlModalButton />}
+    content={<KarlModalComponent />}
     labelledby="heading"
     describedby="full-description"
   />
