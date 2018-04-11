@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Fix bad truncated `subTitle` in `CrowdfundingCard` component
+  and remove unexpected `subTitleTruncate` prop warning.
+
 ## [20.7.0] - 2018-04-11
 
 Feature:
