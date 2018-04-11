@@ -16,7 +16,7 @@ export const KarlHorizontalNav = props => {
 
 export const KarlTouchHorizontalNav = props => {
   const rowStyles = {
-    backgroundColor: COLOR.background3,
+    backgroundColor: COLORS.background3,
   }
 
   const horizontalNavItems = [
@@ -34,7 +34,7 @@ export const KarlTouchHorizontalNav = props => {
 
 export const KarlTouchHorizontalNavWithNotification = props => {
   const rowStyles = {
-    backgroundColor: COLOR.background3,
+    backgroundColor: COLORS.background3,
   }
 
   const horizontalNavItems = [
