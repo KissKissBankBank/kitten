@@ -4,7 +4,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Update `KarlHorizontalStrokes` example.
+- Feature: Update A11Y on `KarlModal` example.
+
+## [20.7.1] - 2018-04-11
+
+Feature:
+- Update `KarlHorizontalStrokes` example.
 
 ## [20.7.0] - 2018-04-11
 
