@@ -32,6 +32,7 @@ class CrowdfundingCardComponent extends Component {
       cardSubTitle,
       titlesMinHeight,
       titleTruncate,
+      subTitleTruncate,
       info1,
       info2,
       info3,
@@ -170,7 +171,10 @@ class CrowdfundingCardComponent extends Component {
       this.props.loading && styles.stroke.loading,
     ]
 
-    const truncateStyle = this.props.subTitleTruncate && styles.subtitle.text
+    const textStyle = [
+      styles.subtitle.text,
+      this.props.subTitleTruncate && styles.subtitle.text.truncated,
+    ]
 
     return (
       <Marger top="1" style={styles.subtitle}>
@@ -178,7 +182,7 @@ class CrowdfundingCardComponent extends Component {
 
         {this.props.cardSubTitle &&
           !this.props.loading && (
-            <Text size="micro" weight="regular" tag="p" style={truncateStyle}>
+            <Text size="micro" weight="regular" tag="p" style={textStyle}>
               {this.props.subTitleTruncate && (
                 <Truncate style={styles.truncate}>
                   {this.props.cardSubTitle}
@@ -379,8 +383,12 @@ const styles = {
     },
 
     text: {
-      whiteSpace: 'nowrap',
-      overflow: 'hidden',
+      lineHeight: '1rem',
+      flex: 1,
+      truncated: {
+        whiteSpace: 'nowrap',
+        overflow: 'hidden',
+      },
     },
   },
   stroke: {
