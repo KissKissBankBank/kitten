@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add `Badge` prop on `HorizontalNav` component.
+- Fix: Fix bad truncated `subTitle` in `CrowdfundingCard` component
+  and remove unexpected `subTitleTruncate` prop warning.
 
 ## [20.7.0] - 2018-04-11
 
