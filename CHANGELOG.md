@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add `Badge` prop on `HorizontalNav` component.
+- Feature: Update A11Y on `Modal` component.
 
 ## [20.7.1] - 2018-04-11
 
