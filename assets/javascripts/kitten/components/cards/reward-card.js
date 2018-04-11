@@ -50,9 +50,18 @@ class RewardCardBase extends Component {
     imageSrc: PropTypes.string,
   }
 
+  removeCurrentFocus = () => {
+    document.activeElement.blur()
+  }
+
   render() {
+    const Tag = this.props.href ? 'a' : 'div'
+    const href = this.props.disabled ? null : this.props.href
+
+    const styleHref = [styles.card, this.props.href && styles.card.href]
+
     return (
-      <Container style={styles.card}>
+      <Tag style={styleHref} href={href} onClick={this.removeCurrentFocus}>
         <Marger bottom="5">
           <Grid>
             <GridCol col-l="12">
@@ -63,7 +72,7 @@ class RewardCardBase extends Component {
             </GridCol>
           </Grid>
         </Marger>
-      </Container>
+      </Tag>
     )
   }
 
@@ -182,6 +191,11 @@ const styles = {
     paddingLeft: '115px',
     paddingRight: 0,
     display: 'flex',
+
+    href: {
+      textDecoration: 'inherit',
+      color: 'inherit',
+    },
   },
 
   infos: {
