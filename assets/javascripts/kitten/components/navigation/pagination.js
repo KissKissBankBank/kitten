@@ -289,11 +289,8 @@ const styles = {
         backgroundColor: COLORS.background1,
         ':hover': linkHoveredAndFocused,
         ':focus': linkHoveredAndFocused,
-        ':active': {
-          color: COLORS.background1,
-          borderColor: COLORS.primary1,
-          backgroundColor: COLORS.primary1,
-        },
+        ':active': isActivedPseudoClass,
+
         [`@media (min-width: ${ScreenConfig['S'].min}px)`]: {
           width: '50px',
           height: '50px',
