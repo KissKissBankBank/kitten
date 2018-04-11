@@ -4,7 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `k-FormInfo__error__link` class and all states.
+## [20.7.0] - 2018-04-11
+
+Feature:
+- Add `k-FormInfo__error__link` class with all link states.
 
 ## [20.6.0] - 2018-04-06
 
