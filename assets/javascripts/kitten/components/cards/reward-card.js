@@ -1,7 +1,8 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import classNames from 'classnames'
 import Radium, { StyleRoot } from 'radium'
 import PropTypes from 'prop-types'
+import { Container } from 'kitten/components/grid/container'
 import { Marger } from 'kitten/components/layout/marger'
 import { Row as RowBase } from 'kitten/components/grid/row'
 import {
@@ -13,13 +14,9 @@ import { Title as TitleBase } from 'kitten/components/typography/title'
 import { Text as TextBase } from 'kitten/components/typography/text'
 import { Paragraph as ParagraphBase } from 'kitten/components/typography/paragraph'
 import { IconBadge as IconBadgeBase } from 'kitten/components/notifications/icon-badge'
+import { CheckedIcon } from 'kitten/components/icons/checked-icon'
 import { HorizontalStroke as HorizontalStrokeBase } from 'kitten/components/layout/horizontal-stroke'
 import { ScreenConfig } from 'kitten/constants/screen-config'
-import {
-  NUM_COLUMNS,
-  CONTAINER_PADDING,
-  CONTAINER_PADDING_MOBILE,
-} from 'kitten/constants/grid-config'
 import COLORS from 'kitten/constants/colors-config'
 
 const Row = Radium(RowBase)
@@ -46,16 +43,27 @@ class RewardCardBase extends Component {
     valueAvailability: PropTypes.string.isRequired,
 
     button: PropTypes.string.isRequired,
+
+    myContribution: PropTypes.string.isRequired,
+    manageContribution: PropTypes.string.isRequired,
+
+    imageSrc: PropTypes.string,
   }
 
   render() {
     return (
-      <StyleRoot style={styles.card}>
-        <Grid>
-          {this.renderDescription()}
-          {this.renderImage()}
-        </Grid>
-      </StyleRoot>
+      <Container style={styles.card}>
+        <Marger bottom="5">
+          <Grid>
+            <GridCol col-l="12">
+              <Grid>
+                <GridCol col-l="8">{this.renderDescription()}</GridCol>
+                <GridCol col-l="4">{this.renderImage()}</GridCol>
+              </Grid>
+            </GridCol>
+          </Grid>
+        </Marger>
+      </Container>
     )
   }
 
@@ -63,34 +71,32 @@ class RewardCardBase extends Component {
     const { titleMount, titleDescription, textDescription } = this.props
 
     return (
-      <Marger bottom="5">
-        <GridCol col-l="8">
-          <Marger top="5" bottom="2">
-            <Marger bottom="2">
-              <Title modifier="secondary" tag="h1" margin={false}>
-                {titleMount}
-              </Title>
-            </Marger>
-            <Marger top="2" bottom="4">
-              <HorizontalStroke size="big" />
-            </Marger>
-            <Marger top="4" bottom="1">
-              <Title modifier="senary" tag="h2" margin={false}>
-                {titleDescription}
-              </Title>
-            </Marger>
-            <Marger top="1" bottom="2">
-              <Paragraph modifier="tertiary" margin={false}>
-                {textDescription}
-              </Paragraph>
-            </Marger>
+      <Fragment>
+        <Marger top="5" bottom="2">
+          <Marger bottom="2">
+            <Title modifier="secondary" tag="h1" margin={false}>
+              {titleMount}
+            </Title>
           </Marger>
           <Marger top="2" bottom="4">
-            {this.renderInfos()}
+            <HorizontalStroke size="big" />
           </Marger>
-          <Marger top="4">{this.renderButton()}</Marger>
-        </GridCol>
-      </Marger>
+          <Marger top="4" bottom="1">
+            <Title modifier="senary" tag="h2" margin={false}>
+              {titleDescription}
+            </Title>
+          </Marger>
+          <Marger top="1" bottom="2">
+            <Paragraph modifier="tertiary" margin={false}>
+              {textDescription}
+            </Paragraph>
+          </Marger>
+        </Marger>
+        <Marger top="2" bottom="4">
+          {this.renderInfos()}
+        </Marger>
+        <Marger top="4">{this.renderChoiceButton()}</Marger>
+      </Fragment>
     )
   }
 
@@ -124,22 +130,35 @@ class RewardCardBase extends Component {
     )
   }
 
-  renderMyContribution() {
-    const { myContribution } = this.props
-
+  renderChoiceButton() {
     return (
-      <div>
-        <IconBadge />
-        <Paragraph>{myContribution}</Paragraph>
+      <div style={styles.choiceButton}>
+        <Button size="big" modifier="helium" style={styles.choiceButton.button}>
+          {this.props.button}
+        </Button>
+        {this.renderMyContribution()}
       </div>
     )
   }
 
-  renderButton() {
+  renderMyContribution() {
+    const { myContribution, manageContribution } = this.props
+
     return (
-      <Button size="big" modifier="helium">
-        {this.props.button}
-      </Button>
+      <div style={styles.myContribution}>
+        <IconBadge style={styles.iconBadge}>
+          <CheckedIcon className="k-IconBadge__svg" />
+        </IconBadge>
+        <div style={styles.myContribution.text}>
+          <Text size="tiny" weight="bold">
+            {myContribution}
+            <br />
+            <a href="#" style={styles.myContribution.text.link}>
+              {manageContribution}
+            </a>
+          </Text>
+        </div>
+      </div>
     )
   }
 
@@ -149,11 +168,7 @@ class RewardCardBase extends Component {
       { backgroundImage: `url(${this.props.imageSrc})` },
     ]
 
-    return (
-      <GridCol col-l="2">
-        <div style={imageStyles} />
-      </GridCol>
-    )
+    return <div style={imageStyles} />
   }
 }
 
@@ -165,6 +180,8 @@ const styles = {
     borderStyle: 'solid',
     borderColor: COLORS.line1,
     paddingLeft: '115px',
+    paddingRight: 0,
+    display: 'flex',
   },
 
   infos: {
@@ -173,22 +190,40 @@ const styles = {
     padding: `0 ${COMPONENT_GUTTER}px`,
   },
 
+  choiceButton: {
+    display: 'flex',
+
+    button: {
+      marginRight: '20px',
+    },
+  },
+
+  myContribution: {
+    display: 'flex',
+    alignItems: 'center',
+
+    text: {
+      display: 'flex',
+      flexWrap: 'wrap',
+
+      link: {
+        textDecoration: 'none',
+        color: COLORS.primary1,
+      },
+    },
+  },
+
+  iconBadge: {
+    backgroundColor: COLORS.valid,
+    marginRight: '10px',
+  },
+
   image: {
-    width: `calc(100% + ${CONTAINER_PADDING}px)`,
-    height: '80%',
+    width: '100%',
+    height: '488px',
+    display: 'flex',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
-
-    [`@media (max-width: ${ScreenConfig['M'].max}px)`]: {
-      width: `calc(100% + ${CONTAINER_PADDING * 2}px)`,
-      height: '100vw',
-      marginLeft: `-${CONTAINER_PADDING}px`,
-    },
-
-    [`@media (max-width: ${ScreenConfig['XS'].max}px)`]: {
-      width: `calc(100% + ${CONTAINER_PADDING_MOBILE * 2}px)`,
-      marginLeft: `-${CONTAINER_PADDING_MOBILE}px`,
-    },
   },
 }
 
