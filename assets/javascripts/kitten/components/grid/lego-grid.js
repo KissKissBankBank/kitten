@@ -19,10 +19,8 @@ class LegoGridBase extends Component {
     }
   }
 
-  handleLayoutComplete = () => {
-    if (!this.state.show) {
-      this.setState({ show: true })
-    }
+  componentDidMount() {
+    this.setState({ show: true })
   }
 
   render() {
@@ -53,14 +51,7 @@ class LegoGridBase extends Component {
 
     return (
       <div className={gridClassName} {...others} style={masonryStyle}>
-        <Masonry
-          onLayoutComplete={() => {
-            this.handleLayoutComplete()
-          }}
-          {...masonryProps}
-        >
-          {children}
-        </Masonry>
+        <Masonry {...masonryProps}>{children}</Masonry>
       </div>
     )
   }
