@@ -1,0 +1,69 @@
+<header id="header-logged" class="k-Header" role="banner">
+
+  <div class="k-Header__container">
+    <div class="k-Header__row">
+
+      <div class="k-Header__items">
+
+        <div class="k-Header__item k-Header__item--fixedSize" id="k-Header__platformSwitchDropdown">
+          <%= react_component 'KarlLoggedHeaderPlatformSwitch' %>
+        </div>
+
+        <p class="k-Header__item k-Header__item--fixedSize k-Header__item__logo">
+          <a class="k-Header__logo k-Header__logo--lightOnM" href="header">
+            <%= image_tag 'brand/kisskissbankbank.svg', alt: 'kisskissbankbank' %>
+          </a>
+        </p>
+      </div>
+
+      <div class="k-Header__items k-Header__items--fixedSize">
+
+        <div class="k-Header__item k-Header__search">
+          <%= react_component('Search', props: {
+                inputId: 'q',
+                inputName: 'q',
+                inputPlaceholder: 'Rechercher…',
+                submitLabel: 'Search',
+                actionUrl: '#',
+          }) %>
+        </div>
+
+        <% if params.key?(:logged) %>
+          <div id="k-UserMenuDropdownLogged" class="k-Header__item">
+            <%= react_component 'KarlLoggedHeaderUserMenu' %>
+          </div>
+        <% else %>
+          <div class="k-Header__item k-Header__signup">
+            <%= link_to "S'identifier",
+                        { logged: true },
+                        class: 'k-Button k-Button--hydrogen k-Header__button' %>
+          </div>
+          <div class="k-Header__item k-Header__signupIcon">
+            <a href="?logged=true">
+              <button class="k-ButtonIcon
+                             k-ButtonIcon--hydrogen
+                             k-ButtonIcon--signup">
+                <svg class="k-ButtonIcon__svg" viewBox="0 0 14 18"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13.984 14.244c-.404-2.563-2.527-4.502-4.95-5.22
+                    1.042-1.158 1.595-3.05 1.597-4.33C10.636 2.73 9.024.688
+                    6.97.688c-2.055 0-3.667 2.04-3.664 4.006.002 1.287.56 3.188
+                    1.61 4.346-2.4.73-4.497 2.658-4.9 5.204C-.15 15.3 1.075 16
+                    1.865 16.357c1.554.703 3.33.943 5.02.955 1.71.012 3.5-.21
+                    5.086-.883.832-.354 2.19-1.07 2.014-2.186z" />
+                </svg>
+              </button>
+            </a>
+          </div>
+        <% end %>
+
+      </div>
+
+    </div>
+  </div>
+
+</header>
+
+<div class="k-VerticalGrid__element" style="background-color: #fff">
+  <%= react_component 'KarlProject' %>
+</div>
