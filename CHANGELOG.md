@@ -5,6 +5,18 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Create `RewardCard` component.
+- Feature: Update A11Y on `Modal` component.
+
+## [20.7.1] - 2018-04-11
+
+Fix:
+- Fix bad truncated `subTitle` in `CrowdfundingCard` component
+  and remove unexpected `subTitleTruncate` prop warning.
+
+## [20.7.0] - 2018-04-11
+
+Feature:
+- Add `k-FormInfo__error__link` class with all link states.
 
 ## [20.6.0] - 2018-04-06
 

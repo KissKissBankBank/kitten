@@ -50,4 +50,15 @@
 
     color: $color-error;
   }
+
+  .k-FormInfo__error__link,
+  .k-FormInfo__error__link:link,
+  .k-FormInfo__error__link:visited,
+  .k-FormInfo__error__link:hover,
+  .k-FormInfo__error__link:active {
+    @include k-typographyFont($font);
+
+    color: inherit;
+    text-decoration: underline;
+  }
 }
