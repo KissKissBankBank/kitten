@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Show `LegoGrid` only when `Masonry` layout is completed.
+- Feature: Show `LegoGrid` only when DOM is loaded.
 - Feature: Update A11Y on `Modal` component.
 
 ## [20.7.1] - 2018-04-11
