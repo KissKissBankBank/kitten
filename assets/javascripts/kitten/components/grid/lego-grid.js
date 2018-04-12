@@ -25,18 +25,6 @@ class LegoGridBase extends Component {
     }
   }
 
-  componentDidMount() {
-    if (this.masonry) {
-      this.masonry.on('layoutComplete', this.handleLayoutComplete)
-    }
-  }
-
-  componentWillUnmount() {
-    if (this.masonry) {
-      this.masonry.off('layoutComplete', this.handleLayoutComplete)
-    }
-  }
-
   render() {
     const { className, masonryProps, children, ...others } = this.props
     const classByMediaQuery = () => {
@@ -66,8 +54,8 @@ class LegoGridBase extends Component {
     return (
       <div className={gridClassName} {...others} style={masonryStyle}>
         <Masonry
-          ref={c => {
-            this.masonry = this.masonry || c.masonry
+          onLayoutComplete={() => {
+            this.handleLayoutComplete()
           }}
           {...masonryProps}
         >
