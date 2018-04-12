@@ -18,6 +18,7 @@ import { CheckedIcon } from 'kitten/components/icons/checked-icon'
 import { HorizontalStroke as HorizontalStrokeBase } from 'kitten/components/layout/horizontal-stroke'
 import { ScreenConfig } from 'kitten/constants/screen-config'
 import COLORS from 'kitten/constants/colors-config'
+import { parseHtml } from 'kitten/helpers/utils/parser'
 
 const Row = Radium(RowBase)
 const Grid = Radium(GridBase)
@@ -93,7 +94,7 @@ class RewardCardBase extends Component {
         <Marger top="5" bottom="2">
           <Marger bottom="2">
             <Title modifier="secondary" tag="h1" margin={false}>
-              {titleMount}
+              {parseHtml(titleMount)}
             </Title>
           </Marger>
           <Marger top="2" bottom="4">
@@ -101,12 +102,12 @@ class RewardCardBase extends Component {
           </Marger>
           <Marger top="4" bottom="1">
             <Title modifier="senary" tag="h2" margin={false}>
-              {titleDescription}
+              {parseHtml(titleDescription)}
             </Title>
           </Marger>
           <Marger top="1" bottom="2">
             <Paragraph modifier="tertiary" margin={false}>
-              {textDescription}
+              {parseHtml(textDescription)}
             </Paragraph>
           </Marger>
         </Marger>
@@ -142,8 +143,8 @@ class RewardCardBase extends Component {
 
     return (
       <GridCol col-l="3" style={styles.infos}>
-        <Text weight="bold">{title}</Text>
-        <Text>{value}</Text>
+        <Text weight="bold">{parseHtml(title)}</Text>
+        <Text>{parseHtml(value)}</Text>
       </GridCol>
     )
   }
@@ -177,10 +178,10 @@ class RewardCardBase extends Component {
         </IconBadge>
         <div style={styles.myContribution.text}>
           <Text size="tiny" weight="bold">
-            {myContribution}
+            {parseHtml(myContribution)}
             <br />
             <a href="#" style={styles.myContribution.text.link}>
-              {manageContribution}
+              {parseHtml(manageContribution)}
             </a>
           </Text>
         </div>
