@@ -1,32 +1,84 @@
-import React from 'react'
+import React, { Component } from 'react'
 import classNames from 'classnames'
 import Masonry from 'react-masonry-component'
 import { ScreenConfig } from 'kitten/constants/screen-config'
 import { NUM_COLUMNS } from 'kitten/constants/grid-config'
+import Radium from 'radium'
 
-export const LegoGrid = props => {
-  const { className, masonryProps, children, ...others } = props
-  const classByMediaQuery = () => {
-    const classNamesByMediaQuery = Object.keys(ScreenConfig).map(size => {
-      const mediaQuery = size.toLowerCase()
-      const items = props[`items-${mediaQuery}-up`]
-
-      return classNames(classNamesByMediaQuery, {
-        [`k-LegoGrid--${NUM_COLUMNS / items}col@${mediaQuery}`]: items,
-      })
-    })
-
-    return classNamesByMediaQuery
+class LegoGridBase extends Component {
+  static defaultProps = {
+    className: null,
+    masonryProps: {},
   }
 
-  const gridClassName = classNames('k-LegoGrid', classByMediaQuery(), className)
+  constructor(props) {
+    super(props)
 
-  return (
-    <div className={gridClassName} {...others}>
-      <Masonry {...masonryProps}>{children}</Masonry>
-    </div>
-  )
+    this.state = {
+      show: false,
+    }
+  }
+
+  handleLayoutComplete = () => {
+    if (!this.state.show) {
+      this.setState({ show: true })
+    }
+  }
+
+  componentDidMount() {
+    if (this.masonry) {
+      this.masonry.on('layoutComplete', this.handleLayoutComplete)
+    }
+  }
+
+  componentWillUnmount() {
+    if (this.masonry) {
+      this.masonry.off('layoutComplete', this.handleLayoutComplete)
+    }
+  }
+
+  render() {
+    const { className, masonryProps, children, ...others } = this.props
+    const classByMediaQuery = () => {
+      const classNamesByMediaQuery = Object.keys(ScreenConfig).map(size => {
+        const mediaQuery = size.toLowerCase()
+        const items = this.props[`items-${mediaQuery}-up`]
+
+        return classNames(classNamesByMediaQuery, {
+          [`k-LegoGrid--${NUM_COLUMNS / items}col@${mediaQuery}`]: items,
+        })
+      })
+
+      return classNamesByMediaQuery
+    }
+
+    const gridClassName = classNames(
+      'k-LegoGrid',
+      classByMediaQuery(),
+      className,
+    )
+    const masonryStyle = [
+      styles.masonry,
+      !this.state.show && styles.masonry.hidden,
+      others.style,
+    ]
+
+    return (
+      <div className={gridClassName} {...others} style={masonryStyle}>
+        <Masonry
+          ref={c => {
+            this.masonry = this.masonry || c.masonry
+          }}
+          {...masonryProps}
+        >
+          {children}
+        </Masonry>
+      </div>
+    )
+  }
 }
+
+export const LegoGrid = Radium(LegoGridBase)
 
 LegoGrid.Item = ({ children, ...props }) => {
   const itemClassName = classNames('k-LegoGrid__item', props.className)
@@ -38,11 +90,19 @@ LegoGrid.Item = ({ children, ...props }) => {
   )
 }
 
-LegoGrid.defaultProps = {
-  className: null,
-  masonryProps: {},
-}
-
 LegoGrid.Item.defaultProps = {
   className: null,
+}
+
+const styles = {
+  masonry: {
+    opacity: 1,
+    visibility: 'visible',
+    transition: 'opacity .5s, visibility .5s',
+
+    hidden: {
+      visibility: 'hidden',
+      opacity: 0,
+    },
+  },
 }
