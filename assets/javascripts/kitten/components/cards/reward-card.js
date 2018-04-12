@@ -56,12 +56,21 @@ class RewardCardBase extends Component {
 
   render() {
     const Tag = this.props.href ? 'a' : 'div'
-    const href = this.props.disabled ? null : this.props.href
+    const href = this.props.isDisabled ? null : this.props.href
 
-    const styleHref = [styles.card, this.props.href && styles.card.href]
+    const styleCard = [
+      styles.card,
+      this.props.href && styles.card.href,
+      this.props.isDisabled && styles.card.isDisabled,
+    ]
 
     return (
-      <Tag style={styleHref} href={href} onClick={this.removeCurrentFocus}>
+      <Tag
+        style={styleCard}
+        href={href}
+        onClick={this.removeCurrentFocus}
+        disabled={this.props.isDisabled}
+      >
         <Marger bottom="5">
           <Grid>
             <GridCol col-l="12">
@@ -142,11 +151,19 @@ class RewardCardBase extends Component {
   renderChoiceButton() {
     return (
       <div style={styles.choiceButton}>
-        <Button size="big" modifier="helium" style={styles.choiceButton.button}>
-          {this.props.button}
-        </Button>
+        {this.renderButton()}
         {this.renderMyContribution()}
       </div>
+    )
+  }
+
+  renderButton() {
+    if (!this.props.button) return
+
+    return (
+      <Button size="big" modifier="helium" style={styles.choiceButton.button}>
+        {this.props.button}
+      </Button>
     )
   }
 
@@ -195,6 +212,10 @@ const styles = {
     href: {
       textDecoration: 'inherit',
       color: 'inherit',
+    },
+
+    isDisabled: {
+      filter: 'grayscale(1) opacity(0.4)',
     },
   },
 
