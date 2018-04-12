@@ -69,10 +69,13 @@
     flex-shrink: 0;
   }
 
+ .k-HorizontalNav__item__badge {
+    display: flex;
+    align-items: center;
+  }
+
   .k-HorizontalNav__item {
     display: flex;
-    justify-content: center;
-    flex-direction: column;
 
     margin: 0 $margin;
     border-bottom: $border-width solid transparent;

@@ -20,7 +20,7 @@
     border-radius: k-px-to-rem(10px);
     color: $color;
     @include k-typographyFont('regular');
-    @include k-typographyFontSize(-4, 1);
+    @include k-typographyFontSize(-4, 1.2);
   }
 
   .k-Badge--spaced {

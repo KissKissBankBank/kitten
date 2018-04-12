@@ -18,7 +18,7 @@ export class HorizontalNav extends Component {
     })
 
     const renderBadge = (
-      <div>
+      <div className="k-HorizontalNav__item__badge">
         {text}
         <Badge className="k-HorizontalNav__badge">{badge}</Badge>
       </div>
