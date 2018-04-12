@@ -6,6 +6,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Fix: Update `ArrowIcon` size on `Pagination` component.
 - Fix: Remove `hover` state when `ButtonIcon` is `active` state on `Pagination.
+- Feature: Add `Badge` prop on `HorizontalNav` component.
+- Feature: Add `k-HorizontalNav__badge` and
+  `k-HorizontalNav__item__badge` classes.
 - Feature: Update A11Y on `Modal` component.
 
 ## [20.7.1] - 2018-04-11
