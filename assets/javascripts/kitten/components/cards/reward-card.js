@@ -16,9 +16,10 @@ import { Paragraph as ParagraphBase } from 'kitten/components/typography/paragra
 import { IconBadge as IconBadgeBase } from 'kitten/components/notifications/icon-badge'
 import { CheckedIcon } from 'kitten/components/icons/checked-icon'
 import { HorizontalStroke as HorizontalStrokeBase } from 'kitten/components/layout/horizontal-stroke'
-import { ScreenConfig } from 'kitten/constants/screen-config'
 import COLORS from 'kitten/constants/colors-config'
 import { parseHtml } from 'kitten/helpers/utils/parser'
+import { ScreenConfig } from 'kitten/constants/screen-config'
+import { mediaQueries } from 'kitten/hoc/media-queries'
 
 const Row = Radium(RowBase)
 const Grid = Radium(GridBase)
@@ -66,23 +67,27 @@ class RewardCardBase extends Component {
     ]
 
     return (
-      <Tag
-        style={styleCard}
-        href={href}
-        onClick={this.removeCurrentFocus}
-        disabled={this.props.isDisabled}
-      >
-        <Marger bottom="5">
-          <Grid>
-            <GridCol col-l="12">
-              <Grid>
-                <GridCol col-l="8">{this.renderDescription()}</GridCol>
-                <GridCol col-l="4">{this.renderImage()}</GridCol>
-              </Grid>
-            </GridCol>
-          </Grid>
-        </Marger>
-      </Tag>
+      <StyleRoot>
+        <Grid>
+          <GridCol>
+            <Tag
+              style={styleCard}
+              href={href}
+              onClick={this.removeCurrentFocus}
+              disabled={this.props.isDisabled}
+            >
+              <Marger bottom="5">
+                <Grid>
+                  <GridCol col-m="8" style={styles.description}>
+                    {this.renderDescription()}
+                  </GridCol>
+                  <GridCol col-m="4">{this.renderImage()}</GridCol>
+                </Grid>
+              </Marger>
+            </Tag>
+          </GridCol>
+        </Grid>
+      </StyleRoot>
     )
   }
 
@@ -91,7 +96,7 @@ class RewardCardBase extends Component {
 
     return (
       <Fragment>
-        <Marger top="5" bottom="2">
+        <Marger top={this.props.viewportIsMobile ? 4 : 5} bottom="2">
           <Marger bottom="2">
             <Title modifier="secondary" tag="h1" margin={false}>
               {parseHtml(titleMount)}
@@ -122,8 +127,11 @@ class RewardCardBase extends Component {
   renderInfos() {
     const {
       titleContributors,
+      titleSmallContributors,
       titleDelivery,
+      titleSmallDelivery,
       titleAvailability,
+      titleSmallAvailability,
       valueContributors,
       valueDelivery,
       valueAvailability,
@@ -131,20 +139,37 @@ class RewardCardBase extends Component {
 
     return (
       <Grid>
-        {this.renderInfo(titleContributors, valueContributors)}
-        {this.renderInfo(titleDelivery, valueDelivery)}
-        {this.renderInfo(titleAvailability, valueAvailability)}
+        {this.renderInfo(
+          titleContributors,
+          titleSmallContributors,
+          valueContributors,
+        )}
+        {this.renderInfo(titleDelivery, titleSmallDelivery, valueDelivery)}
+        {this.renderInfo(
+          titleAvailability,
+          titleSmallAvailability,
+          valueAvailability,
+        )}
       </Grid>
     )
   }
 
-  renderInfo(title, value) {
-    if (!title && !value) return
-
+  renderInfo(title, titleSmall, value) {
     return (
-      <GridCol col-l="3" style={styles.infos}>
-        <Text weight="bold">{parseHtml(title)}</Text>
-        <Text>{parseHtml(value)}</Text>
+      <GridCol style={styles.infos} col-m="3" col-s="12">
+        {this.props.viewportIsMobile && (
+          <Text size="tiny" weight="regular">
+            {parseHtml(titleSmall)}
+            <Text weight="light">{parseHtml(value)}</Text>
+          </Text>
+        )}
+
+        {!this.props.viewportIsMobile && (
+          <Fragment>
+            <Text weight="bold">{parseHtml(title)}</Text>
+            <Text>{parseHtml(value)}</Text>
+          </Fragment>
+        )}
       </GridCol>
     )
   }
@@ -206,9 +231,12 @@ const styles = {
     borderWidth: '2px',
     borderStyle: 'solid',
     borderColor: COLORS.line1,
-    paddingLeft: '115px',
-    paddingRight: 0,
     display: 'flex',
+
+    [`@media (max-width: ${ScreenConfig['S'].max}px)`]: {
+      paddingLeft: '20px',
+      paddingRight: '20px',
+    },
 
     href: {
       textDecoration: 'inherit',
@@ -220,10 +248,19 @@ const styles = {
     },
   },
 
+  description: {
+    [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
+      paddingLeft: '115px',
+    },
+    [`@media (min-width: ${ScreenConfig['M'].min}px)`]: {
+      paddingLeft: '50px',
+    },
+  },
+
   infos: {
     display: 'flex',
     flexDirection: 'column',
-    padding: `0 ${COMPONENT_GUTTER}px`,
+    padding: '0 ${COMPONENT_GUTTER}px',
   },
 
   choiceButton: {
@@ -263,4 +300,6 @@ const styles = {
   },
 }
 
-export const RewardCard = Radium(RewardCardBase)
+export const RewardCard = mediaQueries(Radium(RewardCardBase), {
+  viewportIsMobile: true,
+})
