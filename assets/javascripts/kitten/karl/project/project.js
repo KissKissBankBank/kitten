@@ -1,18 +1,17 @@
 import React, { Fragment } from 'react'
+import { StyleRoot } from 'radium'
 import { ProjectHeader } from 'kitten/karl/project/header'
 import { ProjectInformations } from 'kitten/karl/project/informations'
 import { ProjectNavigation } from 'kitten/karl/project/navigation'
 import { ProjectDescription } from 'kitten/karl/project/description'
 import { KarlFooterKisskiss } from 'kitten/karl/footer/footer-kisskiss'
 
-import { Marger } from 'kitten/components/layout/marger'
-
 export const KarlProject = () => (
-  <Fragment>
+  <StyleRoot>
     <ProjectHeader />
-    <ProjectInformations />
+    {/* <ProjectInformations />
     <ProjectNavigation />
     <ProjectDescription />
-    <KarlFooterKisskiss />
-  </Fragment>
+    <KarlFooterKisskiss /> */}
+  </StyleRoot>
 )
