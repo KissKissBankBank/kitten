@@ -409,7 +409,7 @@ ProjectHeaderBase.defaultProps = {
   ownerImage: 'https://placeimg.com/50/50/any',
   ownerName: 'Philharmonie de Paris',
   ownerLocation: 'Paris (75)',
-  state: 'failed',
+  state: 'started',
   contributed: false,
 }
 
