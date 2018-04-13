@@ -6,9 +6,9 @@ import { ProjectNavigation } from 'kitten/karl/project/navigation'
 import { ProjectDescription } from 'kitten/karl/project/description'
 import { KarlFooterKisskiss } from 'kitten/karl/footer/footer-kisskiss'
 
-export const KarlProject = () => (
+export const KarlProject = props => (
   <StyleRoot>
-    <ProjectHeader />
+    <ProjectHeader {...props} />
     {/* <ProjectInformations />
     <ProjectNavigation />
     <ProjectDescription />

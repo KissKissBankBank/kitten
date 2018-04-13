@@ -47,14 +47,14 @@ const ProjectHeaderBase = ({
             >
               <Marger bottom="2">
                 <Title tag="h1" modifier="secondary" margin={false}>
-                  Donnons pour Démos !
+                  {others.name}
                 </Title>
               </Marger>
 
               <Marger top="2" style={styles.categories}>
                 <HorizontalStroke style={styles.stroke} />
                 <Text color="font1" weight="regular" lineHeight="normal">
-                  Musique, Santé & Éducation, Solidarité
+                  {others.categories}
                 </Text>
               </Marger>
             </Marger>
@@ -64,7 +64,7 @@ const ProjectHeaderBase = ({
             <div style={styles.imgContainer}>
               <img
                 style={styles.img}
-                src="https://placeimg.com/850/480/any"
+                src={others.image}
                 alt="Visuel du projet Donnons pour Démos !"
               />
 
@@ -119,7 +119,7 @@ const ProjectHeaderBase = ({
           >
             <ButtonImage
               tag="span"
-              img={{ src: 'https://placeimg.com/50/50/any' }}
+              img={{ src: others.ownerImage }}
               withoutPointerEvents
               big={!viewportIsMobile}
               style={styles.ownerGrid.buttonImage}
@@ -131,7 +131,7 @@ const ProjectHeaderBase = ({
                 size={viewportIsMobile ? 'micro' : 'tiny'}
                 weight="regular"
               >
-                Philharmonie de Paris
+                {others.ownerName}
               </Text>
 
               <Text
@@ -139,7 +139,7 @@ const ProjectHeaderBase = ({
                 size={viewportIsMobile ? 'micro' : 'tiny'}
                 weight="light"
               >
-                Paris (75)
+                {others.ownerLocation}
               </Text>
             </div>
           </Marger>
@@ -159,7 +159,7 @@ const ProjectHeaderBase = ({
               </div>
             )}
 
-            {others.contribution && (
+            {others.contributed && (
               <Fragment>
                 <CheckedCircleIcon
                   circleColor={COLORS.valid}
@@ -258,6 +258,7 @@ const styles = {
 
   stroke: {
     marginRight: '10px',
+    flexShrink: 0,
   },
 
   imgGrid: {
@@ -365,12 +366,8 @@ const styles = {
   buttonGrid: {
     height: '100%',
 
-    [`@media (max-width: ${ScreenConfig.M.max}px)`]: {
-      background: `${COLORS.background3}`,
-    },
-
     [`@media (max-width: ${ScreenConfig.XS.max}px)`]: {
-      marginRight: `-${CONTAINER_PADDING_MOBILE}px`,
+      width: '100%',
     },
   },
 
@@ -394,6 +391,10 @@ const styles = {
       background: `${COLORS.background3}`,
     },
 
+    [`@media (max-width: ${ScreenConfig.XS.max}px)`]: {
+      marginRight: `-${CONTAINER_PADDING_MOBILE}px`,
+    },
+
     spacing: {
       marginLeft: '30px',
     },
@@ -406,9 +407,16 @@ const styles = {
   },
 }
 
+// TODO: Remove on KissKiss.
 ProjectHeaderBase.defaultProps = {
-  state: 'started',
-  contribution: false,
+  name: 'Donnons pour Démos !',
+  categories: 'Musique, Santé & Éducation, Solidarité',
+  image: 'https://placeimg.com/850/480/any',
+  ownerImage: 'https://placeimg.com/50/50/any',
+  ownerName: 'Philharmonie de Paris',
+  ownerLocation: 'Paris (75)',
+  state: 'failed',
+  contributed: false,
 }
 
 export const ProjectHeader = mediaQueries(Radium(ProjectHeaderBase), {
