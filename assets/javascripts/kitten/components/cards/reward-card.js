@@ -76,13 +76,14 @@ class RewardCardBase extends Component {
               onClick={this.removeCurrentFocus}
               disabled={this.props.isDisabled}
             >
-              <Marger bottom="5">
+              <Marger bottom={this.props.viewportIsMobile ? 0 : 5}>
                 <Grid>
-                  <GridCol col-m="8" style={styles.description}>
-                    {this.renderDescription()}
-                  </GridCol>
-                  <GridCol col-m="4">{this.renderImage()}</GridCol>
+                  <GridCol col-s="8">{this.renderDescription()}</GridCol>
+                  <GridCol col-s="4">{this.renderImage()}</GridCol>
                 </Grid>
+                {this.props.viewportIsMobile && (
+                  <Grid>{this.renderChoiceButton()}</Grid>
+                )}
               </Marger>
             </Tag>
           </GridCol>
@@ -102,7 +103,7 @@ class RewardCardBase extends Component {
               {parseHtml(titleMount)}
             </Title>
           </Marger>
-          <Marger top="2" bottom="4">
+          <Marger top="2" bottom={this.props.viewportIsMobile ? 3 : 4}>
             <HorizontalStroke size="big" />
           </Marger>
           <Marger top="4" bottom="1">
@@ -116,10 +117,12 @@ class RewardCardBase extends Component {
             </Paragraph>
           </Marger>
         </Marger>
-        <Marger top="2" bottom="4">
+        <Marger top="2" bottom={this.props.viewportIsMobile ? 3 : 4}>
           {this.renderInfos()}
         </Marger>
-        <Marger top="4">{this.renderChoiceButton()}</Marger>
+        {!this.props.viewportIsMobile && (
+          <Marger top="4">{this.renderChoiceButton()}</Marger>
+        )}
       </Fragment>
     )
   }
@@ -156,7 +159,7 @@ class RewardCardBase extends Component {
 
   renderInfo(title, titleSmall, value) {
     return (
-      <GridCol style={styles.infos} col-m="3" col-s="12">
+      <GridCol style={styles.infos} col-s="4" col-l="3">
         {this.props.viewportIsMobile && (
           <Text size="tiny" weight="regular">
             {parseHtml(titleSmall)}
@@ -176,10 +179,27 @@ class RewardCardBase extends Component {
 
   renderChoiceButton() {
     return (
-      <div style={styles.choiceButton}>
-        {this.renderButton()}
-        {this.renderMyContribution()}
-      </div>
+      <Fragment>
+        {this.props.viewportIsMobile && (
+          <Fragment>
+            <GridCol>
+              <Marger bottom="0">{this.renderButton()}</Marger>
+            </GridCol>
+            <GridCol style={styles.choiceButton.order}>
+              <Marger top="2" bottom="2">
+                {this.renderMyContribution()}
+              </Marger>
+            </GridCol>
+          </Fragment>
+        )}
+
+        {!this.props.viewportIsMobile && (
+          <div style={styles.choiceButton}>
+            <Marger bottom="2">{this.renderButton()}</Marger>
+            <Marger top="2">{this.renderMyContribution()}</Marger>
+          </div>
+        )}
+      </Fragment>
     )
   }
 
@@ -232,10 +252,16 @@ const styles = {
     borderStyle: 'solid',
     borderColor: COLORS.line1,
     display: 'flex',
+    paddingLeft: '20px',
+    paddingRight: '20px',
 
-    [`@media (max-width: ${ScreenConfig['S'].max}px)`]: {
-      paddingLeft: '20px',
-      paddingRight: '20px',
+    [`@media (min-width: ${ScreenConfig['S'].min}px)`]: {
+      paddingLeft: '50px',
+      paddingRight: 0,
+    },
+    [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
+      paddingLeft: '115px',
+      paddingRight: 0,
     },
 
     href: {
@@ -248,15 +274,6 @@ const styles = {
     },
   },
 
-  description: {
-    [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
-      paddingLeft: '115px',
-    },
-    [`@media (min-width: ${ScreenConfig['M'].min}px)`]: {
-      paddingLeft: '50px',
-    },
-  },
-
   infos: {
     display: 'flex',
     flexDirection: 'column',
@@ -264,10 +281,17 @@ const styles = {
   },
 
   choiceButton: {
-    display: 'flex',
-
+    order: {
+      [`@media (max-width: ${ScreenConfig['XS'].max}px)`]: {
+        order: '-1',
+      },
+    },
     button: {
       marginRight: '20px',
+      [`@media (max-width: ${ScreenConfig['XS'].max}px)`]: {
+        width: '100%',
+        marginRight: 0,
+      },
     },
   },
 
@@ -293,7 +317,7 @@ const styles = {
 
   image: {
     width: '100%',
-    height: '488px',
+    height: '500px',
     display: 'flex',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
