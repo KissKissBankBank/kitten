@@ -93,6 +93,8 @@ class PaginationBase extends Component {
     if (!number) return this.renderSpacer(index)
 
     const isActive = number === this.props.currentPage
+    const tag = isActive ? 'span' : 'a'
+    const href = isActive ? undefined : this.props.goToPageHref(number)
 
     const styleButtonIcon = [
       styles.group.list.buttonIcon,
@@ -102,17 +104,14 @@ class PaginationBase extends Component {
     return (
       <li style={styles.group.list} key={`page-${number}`}>
         <Text
-          tag="a"
+          tag={tag}
           weight="regular"
           size="tiny"
-          href={this.props.goToPageHref(number)}
+          href={href}
           key={`link-${number}`}
           style={styleButtonIcon}
           aria-label={this.props.goToPageLabel(number)}
-          onClick={
-            isActive ? this.preventClickDefault : this.pageClickHandler(number)
-          }
-          tabIndex={isActive ? -1 : null}
+          onClick={isActive ? null : this.pageClickHandler(number)}
         >
           {number}
         </Text>
@@ -209,15 +208,21 @@ class PaginationBase extends Component {
 }
 
 const linkHoveredAndFocused = {
-  borderColor: `${COLORS.primary1}`,
-  color: `${COLORS.primary1}`,
-  backgroundColor: `${COLORS.background1}`,
+  color: COLORS.primary1,
+  borderColor: COLORS.primary1,
+  backgroundColor: COLORS.background1,
 }
 
 const disabledPseudoClass = {
-  borderColor: `${COLORS.line2}`,
-  color: `${COLORS.background1}`,
-  backgroundColor: `${COLORS.line2}`,
+  color: COLORS.background1,
+  borderColor: COLORS.line2,
+  backgroundColor: COLORS.line2,
+}
+
+const isActivedPseudoClass = {
+  color: COLORS.background1,
+  borderColor: COLORS.primary1,
+  backgroundColor: COLORS.primary1,
 }
 
 const styles = {
@@ -279,16 +284,13 @@ const styles = {
         borderStyle: 'solid',
         textDecoration: 'none',
         outline: 'none',
-        backgroundColor: `${COLORS.background1}`,
-        borderColor: `${COLORS.line1}`,
-        color: `${COLORS.font1}`,
+        color: COLORS.font1,
+        borderColor: COLORS.line1,
+        backgroundColor: COLORS.background1,
         ':hover': linkHoveredAndFocused,
         ':focus': linkHoveredAndFocused,
-        ':active': {
-          backgroundColor: `${COLORS.primary1}`,
-          borderColor: `${COLORS.primary1}`,
-          color: `${COLORS.background1}`,
-        },
+        ':active': isActivedPseudoClass,
+
         [`@media (min-width: ${ScreenConfig['S'].min}px)`]: {
           width: '50px',
           height: '50px',
@@ -296,15 +298,19 @@ const styles = {
         },
 
         isActive: {
-          backgroundColor: `${COLORS.primary1}`,
-          borderColor: `${COLORS.primary1}`,
-          color: `${COLORS.background1}`,
+          cursor: 'auto',
+          color: COLORS.background1,
+          borderColor: COLORS.primary1,
+          backgroundColor: COLORS.primary1,
+          ':hover': isActivedPseudoClass,
+          ':focus': isActivedPseudoClass,
+          ':active': isActivedPseudoClass,
         },
 
         isDisabled: {
-          color: `${COLORS.background1}`,
-          backgroundColor: `${COLORS.line2}`,
-          borderColor: `${COLORS.line2}`,
+          color: COLORS.background1,
+          borderColor: COLORS.line2,
+          backgroundColor: COLORS.line2,
           cursor: 'not-allowed',
           ':hover': disabledPseudoClass,
           ':focus': disabledPseudoClass,
@@ -315,20 +321,20 @@ const styles = {
           alignSelf: 'center',
           margin: '0',
           padding: '0',
-          width: '12px',
-          height: '14px',
+          width: '10px',
+          height: '10px',
           pointerEvents: 'none',
           hover: {
-            fill: `${COLORS.primary1}`,
+            fill: COLORS.primary1,
           },
           focus: {
-            fill: `${COLORS.primary1}`,
+            fill: COLORS.primary1,
           },
           active: {
-            fill: `${COLORS.background1}`,
+            fill: COLORS.background1,
           },
           isDisabled: {
-            fill: `${COLORS.background1}`,
+            fill: COLORS.background1,
           },
         },
       },
