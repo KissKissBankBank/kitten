@@ -1,13 +1,16 @@
 import React, { Fragment } from 'react'
+import Radium from 'radium'
 import {
   NUM_COLUMNS,
   CONTAINER_PADDING,
   CONTAINER_PADDING_MOBILE,
 } from 'kitten/constants/grid-config'
 import COLORS from 'kitten/constants/colors-config'
+import { ScreenConfig } from 'kitten/constants/screen-config'
+import { mediaQueries } from 'kitten/hoc/media-queries'
 import { Container } from 'kitten/components/grid/container'
 import { Grid, GridCol } from 'kitten/components/grid/grid'
-import { Marger } from 'kitten/components/layout/marger'
+import { Marger as MargerBase } from 'kitten/components/layout/marger'
 import { Title } from 'kitten/components/typography/title'
 import { Paragraph } from 'kitten/components/typography/paragraph'
 import { HorizontalStroke } from 'kitten/components/layout/horizontal-stroke'
@@ -21,6 +24,8 @@ import {
   TwitterButtonIcon,
   LinkedinButtonIcon,
 } from 'kitten/components/buttons/social-button-icon'
+
+const Marger = Radium(MargerBase)
 
 const ProjectContribution = () => (
   <Marger top="2" bottom="2" style={styles.contribution}>
@@ -46,10 +51,14 @@ const ProjectContribution = () => (
   </Marger>
 )
 
-export const ProjectInformations = () => (
+const ProjectInformationsBase = ({
+  viewportIsTabletOrLess,
+  viewportIsMobile,
+  ...others
+}) => (
   <Container>
     <Grid>
-      <GridCol col="4">
+      <GridCol col="4" className="k-u-hidden@m-down">
         <Marger top="5" bottom="10" style={styles.contributions}>
           <Marger top="8" bottom="2">
             <Title modifier="senary" margin={false}>
@@ -69,54 +78,95 @@ export const ProjectInformations = () => (
         </Marger>
       </GridCol>
 
-      <GridCol col="6" offset="1">
-        <Marger top="5" bottom="0.5" style={styles.informations}>
+      <GridCol col="12" col-l="6" offset-l="1">
+        <Marger
+          top={viewportIsMobile ? 3 : 5}
+          bottom={viewportIsMobile ? 0 : 0.5}
+          style={styles.informations}
+        >
           <Marger top="1" bottom="1" style={styles.informations.info}>
-            <Text tag="div" color="font1" weight="regular">
-              517
+            <Text
+              tag="div"
+              color="font1"
+              weight="regular"
+              size={viewportIsMobile ? 'tiny' : 'default'}
+            >
+              {others.info1}
             </Text>
-            <Text tag="div" color="font1" weight="light" size="tiny">
-              Contributeurs
+            <Text
+              tag="div"
+              color="font1"
+              weight="light"
+              size={viewportIsMobile ? 'micro' : 'tiny'}
+            >
+              {others.info1Text}
             </Text>
           </Marger>
 
           <Marger top="1" bottom="1" style={styles.informations.info}>
-            <Text tag="div" color="font1" weight="regular">
-              8 jours
+            <Text
+              tag="div"
+              color="font1"
+              weight="regular"
+              size={viewportIsMobile ? 'tiny' : 'default'}
+            >
+              {others.info2}
             </Text>
-            <Text tag="div" color="font1" weight="light" size="tiny">
-              Restants
+            <Text
+              tag="div"
+              color="font1"
+              weight="light"
+              size={viewportIsMobile ? 'micro' : 'tiny'}
+            >
+              {others.info2Text}
             </Text>
           </Marger>
 
           <Marger top="1" bottom="1" style={styles.informations.info}>
-            <Text tag="div" color="font1" weight="regular">
-              70 658 €
+            <Text
+              tag="div"
+              color="font1"
+              weight="regular"
+              size={viewportIsMobile ? 'tiny' : 'default'}
+            >
+              {others.info3}
             </Text>
-            <Text tag="div" color="font1" weight="light" size="tiny">
-              Sur 150 000 €
+            <Text
+              tag="div"
+              color="font1"
+              weight="light"
+              size={viewportIsMobile ? 'micro' : 'tiny'}
+            >
+              {others.info3Text}
             </Text>
           </Marger>
         </Marger>
 
-        <Marger top="0.5" bottom="3.5" style={styles.flex}>
+        <Marger
+          top={viewportIsMobile ? 0 : 0.5}
+          bottom="3.5"
+          style={styles.flex}
+        >
           <div style={styles.progress}>
-            <Progress value="72" rampProps={{ style: { height: '6px' } }} />
+            <Progress
+              value={others.progress}
+              rampProps={{ style: { height: '6px' } }}
+            />
           </div>
 
-          <Text tag="div" color="font1" weight="regular" lineHeight="normal">
-            72 %
+          <Text
+            tag="div"
+            color="font1"
+            weight="regular"
+            lineHeight="normal"
+            style={styles.unflexible}
+          >
+            {others.progress} %
           </Text>
         </Marger>
 
         <Marger top="3.5" bottom="2">
-          <Paragraph margin={false}>
-            Initié par la Philharmonie de Paris et parrainé par Lilian Thuram,
-            le projet Démos (Dispositif d’éducation musicale et orchestrale à
-            vocation sociale) s’adresse depuis 2010 à des jeunes de 7 à 12 ans
-            qui n’ont jamais eu l’occasion d’apprendre ou de pratiquer la
-            musique.
-          </Paragraph>
+          <Paragraph margin={false}>{others.description}</Paragraph>
         </Marger>
 
         <Marger>
@@ -124,7 +174,7 @@ export const ProjectInformations = () => (
             tag="a"
             href="#"
             color="primary1"
-            size="normal"
+            size="default"
             weight="regular"
             style={{ textDecoration: 'none' }}
           >
@@ -132,67 +182,77 @@ export const ProjectInformations = () => (
           </Text>
         </Marger>
 
-        <Marger top="3" bottom="5" style={styles.flexSpaceBetween}>
+        <Marger
+          top="3"
+          bottom={viewportIsMobile ? 1 : 3}
+          style={styles.flexSpaceBetween}
+        >
           <Button icon>
             <HeartIcon className="k-Button__icon" />
             Suivre le projet
           </Button>
 
-          <div>
-            <Text
-              color="font1"
-              size="tiny"
-              weight="regular"
-              style={styles.social}
-            >
-              Partager
-            </Text>
-            <FacebookButtonIcon style={styles.social} />
-            <TwitterButtonIcon style={styles.social} />
-            <LinkedinButtonIcon style={styles.social} />
-          </div>
+          {(others.facebook || others.twitter || others.linkedin) && (
+            <div>
+              <Text
+                color="font1"
+                size="tiny"
+                weight="regular"
+                style={styles.social}
+                className="k-u-hidden@m-down"
+              >
+                Partager
+              </Text>
+
+              {others.facebook && <FacebookButtonIcon style={styles.social} />}
+              {others.twitter && <TwitterButtonIcon style={styles.social} />}
+              {others.linkedin && <LinkedinButtonIcon style={styles.social} />}
+            </div>
+          )}
         </Marger>
 
-        <Marger top="5" bottom="10" style={styles.flexSpaceBetween}>
-          <div>
-            <Marger bottom="1.5">
-              <Text color="font1" size="tiny" weight="regular">
-                Projet coup de coeur
-              </Text>
-            </Marger>
+        <Marger
+          top={viewportIsMobile ? 1 : 3}
+          bottom={viewportIsMobile ? 4.5 : 8}
+          style={styles.flexSpaceBetween}
+        >
+          {others.coupDeCoeur && (
+            <div style={styles.coupDeCoeur}>
+              <Marger top="2" bottom="1.5">
+                <Text color="font1" size="tiny" weight="regular">
+                  Projet coup de coeur
+                </Text>
+              </Marger>
 
-            <Marger top="1.5">
-              <img
-                src="https://placeimg.com/220/120/any"
-                style={{ display: 'block' }}
-              />
-            </Marger>
-          </div>
+              <Marger top="1.5">
+                <img
+                  src={others.coupDeCoeurImg}
+                  style={styles.coupDeCoeur.img}
+                />
+              </Marger>
+            </div>
+          )}
 
-          <div>
-            <Marger bottom="1.5">
-              <Text color="font1" size="tiny" weight="regular">
-                Mentors de ce projet
-              </Text>
-            </Marger>
+          {others.mentorsSize && (
+            <div>
+              <Marger top="2" bottom="1.5">
+                <Text color="font1" size="tiny" weight="regular">
+                  Mentors de ce projet
+                </Text>
+              </Marger>
 
-            <Marger top="1.5">
-              <div style={styles.flex}>
-                <img
-                  src="https://placeimg.com/120/120/any"
-                  style={styles.mentor}
-                />
-                <img
-                  src="https://placeimg.com/120/120/any"
-                  style={styles.mentor}
-                />
-                <img
-                  src="https://placeimg.com/120/120/any"
-                  style={{ ...styles.mentor, ...styles.mentor.last }}
-                />
-              </div>
-            </Marger>
-          </div>
+              <Marger top="1.5">
+                <div style={[styles.flex, styles.flexWrap]}>
+                  {Array.apply(null, { length: others.mentorsSize }).map(() => (
+                    <img
+                      src="https://placeimg.com/120/120/any"
+                      style={styles.mentor}
+                    />
+                  ))}
+                </div>
+              </Marger>
+            </div>
+          )}
         </Marger>
       </GridCol>
     </Grid>
@@ -205,10 +265,23 @@ const styles = {
     alignItems: 'center',
   },
 
+  flexWrap: {
+    flexWrap: 'wrap',
+  },
+
   flexSpaceBetween: {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
+    flexWrap: 'wrap',
+
+    [`@media (max-width: ${ScreenConfig.M.max}px)`]: {
+      justifyContent: 'initial',
+    },
+  },
+
+  unflexible: {
+    flexShrink: 0,
   },
 
   contributions: {
@@ -234,6 +307,7 @@ const styles = {
   informations: {
     display: 'flex',
     alignItems: 'center',
+    flexWrap: 'wrap',
 
     info: {
       marginRight: '40px',
@@ -244,18 +318,75 @@ const styles = {
   progress: {
     width: '500px',
     marginRight: '20px',
+
+    [`@media (max-width: ${ScreenConfig.XS.max}px)`]: {
+      width: 'auto',
+      flex: '1',
+    },
   },
 
   social: {
     marginLeft: '15px',
   },
 
+  coupDeCoeur: {
+    marginRight: '20px',
+    marginBottom: '20px',
+
+    img: {
+      display: 'block',
+      height: '120px',
+
+      [`@media (max-width: ${ScreenConfig.M.max}px)`]: {
+        height: '80px',
+      },
+    },
+  },
+
   mentor: {
     display: 'block',
     marginRight: '20px',
+    marginBottom: '20px',
+    height: '120px',
+
+    [`@media (max-width: ${ScreenConfig.M.max}px)`]: {
+      height: '80px',
+    },
+
+    [`@media (max-width: ${ScreenConfig.XS.max}px)`]: {
+      marginRight: '15px',
+      marginBottom: '15px',
+    },
 
     last: {
       marginRight: 0,
     },
   },
 }
+
+// TODO: Remove on KissKiss.
+ProjectInformationsBase.defaultProps = {
+  info1: '517',
+  info1Text: 'Contributeurs',
+  info2: '8 jours',
+  info2Text: 'Restants',
+  info3: '70 658 €',
+  info3Text: 'Sur 150 000 €',
+  progress: 72,
+  description:
+    'Initié par la Philharmonie de Paris et parrainé par Lilian Thuram, le projet Démos (Dispositif d’éducation musicale et orchestrale à vocation sociale) s’adresse depuis 2010 à des jeunes de 7 à 12 ans qui n’ont jamais eu l’occasion d’apprendre ou de pratiquer la musique.',
+  facebook: true,
+  twitter: true,
+  linkedin: true,
+  coupDeCoeur: true,
+  coupDeCoeurImg: 'https://placeimg.com/220/120/any',
+  mentorsSize: 3,
+}
+
+export const ProjectInformations = mediaQueries(
+  Radium(ProjectInformationsBase),
+  {
+    viewportIsTabletOrLess: true,
+    viewportIsMobile: true,
+  },
+)

@@ -9,9 +9,9 @@ import { KarlFooterKisskiss } from 'kitten/karl/footer/footer-kisskiss'
 export const KarlProject = props => (
   <StyleRoot>
     <ProjectHeader {...props} />
-    {/* <ProjectInformations />
+    <ProjectInformations />
     <ProjectNavigation />
     <ProjectDescription />
-    <KarlFooterKisskiss /> */}
+    <KarlFooterKisskiss />
   </StyleRoot>
 )
