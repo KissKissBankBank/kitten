@@ -52,6 +52,19 @@ const ProjectContribution = () => (
   </Marger>
 )
 
+const colorByState = state => {
+  switch (state) {
+    case 'successful':
+      return COLORS.valid
+      break
+    case 'failed':
+      return COLORS.line2
+      break
+    default:
+      return COLORS.primary1
+  }
+}
+
 const ProjectInformationsBase = ({
   viewportIsTabletOrLess,
   viewportIsMobile,
@@ -152,6 +165,7 @@ const ProjectInformationsBase = ({
             <Progress
               value={others.progress}
               rampProps={{ style: { height: '6px' } }}
+              color={colorByState(others.state)}
             />
           </div>
 
@@ -390,6 +404,7 @@ ProjectInformationsBase.defaultProps = {
   coupDeCoeur: true,
   coupDeCoeurImg: 'https://placeimg.com/220/120/any',
   mentorsSize: 3,
+  state: 'started',
 }
 
 export const ProjectInformations = mediaQueries(

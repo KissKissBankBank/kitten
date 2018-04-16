@@ -36,6 +36,7 @@ storiesOf('ProjectPage', module)
   .add('Informations', () => (
     <StyleRoot>
       <ProjectInformations
+        state={select('State', states, 'started')}
         info1={text('Info 1', '518')}
         info1Text={text('Info 1 - Text', 'Contributeurs')}
         info2={text('Info 2', '8 jours')}
