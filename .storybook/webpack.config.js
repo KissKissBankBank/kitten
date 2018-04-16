@@ -7,7 +7,7 @@
 // to "React Create App". This only has babel loader to load JavaScript.
 const path = require('path')
 const kittenPaths = require('../src')
-const modulesPath = ['node_modules']
+const modulesPath = ['node_modules', '.storybook']
 
 module.exports = {
   resolve: {
