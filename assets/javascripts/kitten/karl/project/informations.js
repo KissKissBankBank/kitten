@@ -17,6 +17,7 @@ import { HorizontalStroke } from 'kitten/components/layout/horizontal-stroke'
 import { Text } from 'kitten/components/typography/text'
 import { ButtonImage } from 'kitten/components/buttons/button-image'
 import { Button } from 'kitten/components/buttons/button'
+import { ButtonIcon } from 'kitten/components/buttons/button-icon'
 import { Progress } from 'kitten/components/meters/progress'
 import { HeartIcon } from 'kitten/components/icons/heart-icon'
 import {
@@ -187,10 +188,18 @@ const ProjectInformationsBase = ({
           bottom={viewportIsMobile ? 1 : 3}
           style={styles.flexSpaceBetween}
         >
-          <Button icon>
-            <HeartIcon className="k-Button__icon" />
-            Suivre le projet
-          </Button>
+          {viewportIsTabletOrLess && (
+            <ButtonIcon>
+              <HeartIcon className="k-ButtonIcon__svg" />
+            </ButtonIcon>
+          )}
+
+          {!viewportIsTabletOrLess && (
+            <Button icon>
+              <HeartIcon className="k-Button__icon" />
+              Suivre le projet
+            </Button>
+          )}
 
           {(others.facebook || others.twitter || others.linkedin) && (
             <div>
