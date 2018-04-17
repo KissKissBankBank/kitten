@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Update svg size and color on `IconBadge` component.
 - Feature: Show `LegoGrid` only when DOM is loaded.
 - Fix: Update `ArrowIcon` size on `Pagination` component.
 - Fix: Remove `hover` state when `ButtonIcon` is `active` state on `Pagination.
