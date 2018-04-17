@@ -1,20 +1,10 @@
-import React, { Fragment } from 'react'
-import {
-  NUM_COLUMNS,
-  CONTAINER_PADDING,
-  CONTAINER_PADDING_MOBILE,
-} from 'kitten/constants/grid-config'
-import COLORS from 'kitten/constants/colors-config'
+import React from 'react'
 import { Container } from 'kitten/components/grid/container'
 import { Grid, GridCol } from 'kitten/components/grid/grid'
 import { Marger } from 'kitten/components/layout/marger'
 import { Title } from 'kitten/components/typography/title'
 import { Paragraph } from 'kitten/components/typography/paragraph'
 import { HorizontalStroke } from 'kitten/components/layout/horizontal-stroke'
-import { Text } from 'kitten/components/typography/text'
-import { ButtonImage } from 'kitten/components/buttons/button-image'
-import { Button } from 'kitten/components/buttons/button'
-import { Progress } from 'kitten/components/meters/progress'
 
 export const ProjectDescription = () => (
   <Container>
@@ -105,5 +95,3 @@ export const ProjectDescription = () => (
     </Grid>
   </Container>
 )
-
-const styles = {}

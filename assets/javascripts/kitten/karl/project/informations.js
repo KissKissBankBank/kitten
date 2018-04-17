@@ -1,10 +1,6 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import Radium from 'radium'
-import {
-  NUM_COLUMNS,
-  CONTAINER_PADDING,
-  CONTAINER_PADDING_MOBILE,
-} from 'kitten/constants/grid-config'
+import { CONTAINER_PADDING } from 'kitten/constants/grid-config'
 import COLORS from 'kitten/constants/colors-config'
 import { ScreenConfig } from 'kitten/constants/screen-config'
 import { mediaQueries } from 'kitten/hoc/media-queries'
@@ -37,7 +33,7 @@ const ProjectContribution = () => (
       withoutPointerEvents
     />
 
-    <Marger style={styles.contribution.text}>
+    <div style={styles.contribution.text}>
       <Text tag="div" size="micro" weight="light">
         <Text size="micro" weight="regular">
           Solène
@@ -48,7 +44,7 @@ const ProjectContribution = () => (
       <Text tag="div" size="micro" weight="regular" color="primary1">
         50 €
       </Text>
-    </Marger>
+    </div>
   </Marger>
 )
 
@@ -174,6 +170,7 @@ const ProjectInformationsBase = ({
             color="font1"
             weight="regular"
             lineHeight="normal"
+            size={viewportIsMobile ? 'tiny' : 'default'}
             style={styles.unflexible}
           >
             {others.progress} %

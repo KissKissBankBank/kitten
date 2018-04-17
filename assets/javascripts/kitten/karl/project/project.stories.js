@@ -1,6 +1,5 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { withInfo } from '@storybook/addon-info'
 import { withKnobs, text, select, boolean } from '@storybook/addon-knobs/react'
 import { KarlProject } from './project'
 import { ProjectHeader } from './header'
@@ -18,6 +17,7 @@ storiesOf('ProjectPage', module)
   .add('Page', () => <KarlProject />)
   .add('Header', () => (
     <StyleRoot>
+      <DevGrid />
       <ProjectHeader
         name={text('Title', 'Donnons pour Démos !')}
         categories={text(
