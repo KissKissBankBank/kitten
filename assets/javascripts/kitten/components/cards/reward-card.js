@@ -2,7 +2,6 @@ import React, { Component, Fragment } from 'react'
 import classNames from 'classnames'
 import Radium, { StyleRoot } from 'radium'
 import PropTypes from 'prop-types'
-import { Container } from 'kitten/components/grid/container'
 import { Marger } from 'kitten/components/layout/marger'
 import { Row as RowBase } from 'kitten/components/grid/row'
 import {
@@ -49,7 +48,7 @@ class RewardCardBase extends Component {
     myContribution: PropTypes.string.isRequired,
     manageContribution: PropTypes.string.isRequired,
 
-    imageSrc: PropTypes.string,
+    imageSrc: PropTypes.string.isRequired,
   }
 
   removeCurrentFocus = () => {
