@@ -78,6 +78,15 @@
     global "^4.3.2"
     prop-types "^15.6.1"
 
+"@storybook/addon-viewport@3.4.2":
+  version "3.4.2"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-viewport/-/addon-viewport-3.4.2.tgz#5212c8ccd10bf95149e7e4714780c36d78cb0d3f"
+  dependencies:
+    "@storybook/components" "3.4.2"
+    babel-runtime "^6.26.0"
+    global "^4.3.2"
+    prop-types "^15.6.1"
+
 "@storybook/addons@3.4.0":
   version "3.4.0"
   resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-3.4.0.tgz#c1a96d32759df0117b7b9e50e33ff6c7f98b34c9"
@@ -106,9 +115,9 @@
     glamorous "^4.12.1"
     prop-types "^15.6.1"
 
-"@storybook/components@3.4.1":
-  version "3.4.1"
-  resolved "https://registry.yarnpkg.com/@storybook/components/-/components-3.4.1.tgz#74e3bcf9590cb314a4845d2f3264aada79856c1f"
+"@storybook/components@3.4.2":
+  version "3.4.2"
+  resolved "https://registry.yarnpkg.com/@storybook/components/-/components-3.4.2.tgz#1124cf22a54e36aa07c291608c652746919cf375"
   dependencies:
     glamor "^2.20.40"
     glamorous "^4.12.1"
