@@ -1,4 +1,5 @@
 import { configure } from '@storybook/react'
+import './decorators/grid'
 import './stylesheets/app-kitten.scss'
 
 // automatically import all files ending in *.stories.js
