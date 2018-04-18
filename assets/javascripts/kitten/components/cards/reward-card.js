@@ -3,7 +3,6 @@ import classNames from 'classnames'
 import Radium, { StyleRoot } from 'radium'
 import PropTypes from 'prop-types'
 import { Marger } from 'kitten/components/layout/marger'
-import { Row as RowBase } from 'kitten/components/grid/row'
 import {
   Grid as GridBase,
   GridCol as GridColBase,
@@ -20,7 +19,6 @@ import { parseHtml } from 'kitten/helpers/utils/parser'
 import { ScreenConfig } from 'kitten/constants/screen-config'
 import { mediaQueries } from 'kitten/hoc/media-queries'
 
-const Row = Radium(RowBase)
 const Grid = Radium(GridBase)
 const GridCol = Radium(GridColBase)
 const Button = Radium(ButtonBase)
@@ -80,8 +78,8 @@ class RewardCardBase extends Component {
             >
               <Marger bottom={this.props.viewportIsMobile ? 0 : 5}>
                 <Grid>
-                  <GridCol col-s="8">{this.renderDescription()}</GridCol>
-                  <GridCol col-s="4">{this.renderImage()}</GridCol>
+                  <GridCol col-m="8">{this.renderDescription()}</GridCol>
+                  <GridCol col-m="4">{this.renderImage()}</GridCol>
                 </Grid>
                 {this.props.viewportIsMobile && (
                   <Grid>{this.renderChoiceButton()}</Grid>
@@ -161,7 +159,7 @@ class RewardCardBase extends Component {
 
   renderInfo(title, titleSmall, value) {
     return (
-      <GridCol style={styles.infos} col-s="4" col-l="3">
+      <GridCol style={styles.infos} col-m="4" col-l="3">
         {this.props.viewportIsMobile && (
           <Text size="tiny" weight="regular">
             {parseHtml(titleSmall)}
@@ -206,7 +204,7 @@ class RewardCardBase extends Component {
   }
 
   renderButton() {
-    if (!this.props.button) return
+    if (!this.props.button || this.props.isCompleted) return
 
     return (
       <Button size="big" modifier="helium" style={styles.choiceButton.button}>
@@ -217,6 +215,8 @@ class RewardCardBase extends Component {
 
   renderMyContribution() {
     const { myContribution, manageContribution } = this.props
+
+    if (this.props.viewportIsMobile && this.props.isDisabled) return
 
     return (
       <div style={styles.myContribution}>
@@ -258,6 +258,10 @@ const styles = {
     paddingRight: '20px',
 
     [`@media (min-width: ${ScreenConfig['S'].min}px)`]: {
+      paddingLeft: '50px',
+      paddingRight: '50px',
+    },
+    [`@media (min-width: ${ScreenConfig['M'].min}px)`]: {
       paddingLeft: '50px',
       paddingRight: 0,
     },
