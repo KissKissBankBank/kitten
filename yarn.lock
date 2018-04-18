@@ -10,7 +10,7 @@
     esutils "^2.0.2"
     js-tokens "^3.0.0"
 
-"@storybook/addon-a11y@^3.4.1":
+"@storybook/addon-a11y@3.4.1":
   version "3.4.1"
   resolved "https://registry.yarnpkg.com/@storybook/addon-a11y/-/addon-a11y-3.4.1.tgz#e047ccf7110778bd0055a019d3c2f7c7b1c7c220"
   dependencies:
