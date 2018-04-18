@@ -10,6 +10,17 @@
     esutils "^2.0.2"
     js-tokens "^3.0.0"
 
+"@storybook/addon-a11y@3.4.1":
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-a11y/-/addon-a11y-3.4.1.tgz#e047ccf7110778bd0055a019d3c2f7c7b1c7c220"
+  dependencies:
+    "@storybook/components" "3.4.1"
+    axe-core "^2.6.1"
+    babel-runtime "^6.26.0"
+    glamor "^2.20.40"
+    glamorous "^4.12.1"
+    prop-types "^15.6.1"
+
 "@storybook/addon-actions@3.4.0":
   version "3.4.0"
   resolved "https://registry.yarnpkg.com/@storybook/addon-actions/-/addon-actions-3.4.0.tgz#8f6f869f708856845dff210af9340e54b443f346"
@@ -695,6 +706,10 @@ aws-sign2@~0.7.0:
 aws4@^1.2.1, aws4@^1.6.0:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/aws4/-/aws4-1.6.0.tgz#83ef5ca860b2b32e4a0deedee8c771b9db57471e"
+
+axe-core@^2.6.1:
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/axe-core/-/axe-core-2.6.1.tgz#28772c4f76966d373acda35b9a409299dc00d1b5"
 
 babel-cli@^6.14.0:
   version "6.26.0"

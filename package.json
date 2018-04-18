@@ -18,6 +18,7 @@
   "author": "KissKissBankBank & Co",
   "homepage": "https://github.com/KissKissBankBank/kitten#readme",
   "devDependencies": {
+    "@storybook/addon-a11y": "3.4.1",
     "@storybook/addon-actions": "3.4.0",
     "@storybook/addon-info": "3.4.0",
     "@storybook/addon-knobs": "3.4.0",
