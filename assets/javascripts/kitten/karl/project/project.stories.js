@@ -17,7 +17,6 @@ storiesOf('ProjectPage', module)
   .add('Page', () => <KarlProject />)
   .add('Header', () => (
     <StyleRoot>
-      <DevGrid />
       <ProjectHeader
         name={text('Title', 'Donnons pour Démos !')}
         categories={text(
