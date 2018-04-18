@@ -1,7 +1,11 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { createMatchMediaMax } from 'kitten/helpers/utils/media-queries'
-import { SCREEN_SIZE_XS, SCREEN_SIZE_M } from 'kitten/constants/screen-config'
+import {
+  SCREEN_SIZE_S,
+  SCREEN_SIZE_XS,
+  SCREEN_SIZE_M,
+} from 'kitten/constants/screen-config'
 
 export const mediaQueries = (WrappedComponent, hocProps = {}) =>
   class extends Component {
@@ -9,6 +13,11 @@ export const mediaQueries = (WrappedComponent, hocProps = {}) =>
       super(props)
 
       this.state = {}
+
+      if (this.sMediaQueryEnabled()) {
+        this.mqSOrLess = createMatchMediaMax(SCREEN_SIZE_S)
+        this.state = { ...this.state, viewportIsSOrLess: false }
+      }
 
       if (this.mobileMediaQueryEnabled()) {
         this.mqMobile = createMatchMediaMax(SCREEN_SIZE_XS)
@@ -21,6 +30,11 @@ export const mediaQueries = (WrappedComponent, hocProps = {}) =>
       }
     }
 
+    sMediaQueryEnabled = () =>
+      typeof hocProps.viewportIsSOrLess !== 'undefined'
+        ? hocProps.viewportIsSOrLess
+        : false
+
     mobileMediaQueryEnabled = () =>
       typeof hocProps.viewportIsMobile !== 'undefined'
         ? hocProps.viewportIsMobile
@@ -32,6 +46,11 @@ export const mediaQueries = (WrappedComponent, hocProps = {}) =>
         : false
 
     componentDidMount() {
+      if (this.mqSOrLess) {
+        this.mqSOrLess.addListener(this.onSMQ)
+        this.onSMQ(this.mqSOrLess)
+      }
+
       if (this.mqMobile) {
         this.mqMobile.addListener(this.onMobileMQ)
         this.onMobileMQ(this.mqMobile)
@@ -44,6 +63,10 @@ export const mediaQueries = (WrappedComponent, hocProps = {}) =>
     }
 
     componentWillUnmount() {
+      if (this.mqSOrLess) {
+        this.mqS.removeListener(this.onSMQ)
+      }
+
       if (this.mqMobile) {
         this.mqMobile.removeListener(this.onMobileMQ)
       }
@@ -51,6 +74,10 @@ export const mediaQueries = (WrappedComponent, hocProps = {}) =>
       if (this.mqTabletOrLess) {
         this.mqTabletOrLess.removeListener(this.onTabletMQ)
       }
+    }
+
+    onSMQ = event => {
+      this.setState({ viewportIsSOrLess: event.matches })
     }
 
     onMobileMQ = event => {
@@ -67,6 +94,7 @@ export const mediaQueries = (WrappedComponent, hocProps = {}) =>
           {...this.props}
           viewportIsMobile={this.state.viewportIsMobile}
           viewportIsTabletOrLess={this.state.viewportIsTabletOrLess}
+          viewportIsSOrLess={this.state.viewportIsSOrLess}
         />
       )
     }
