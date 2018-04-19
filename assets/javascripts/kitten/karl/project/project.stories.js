@@ -1,5 +1,6 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
+import { checkA11y } from '@storybook/addon-a11y'
 import { withKnobs, text, select, boolean } from '@storybook/addon-knobs/react'
 import { KarlProject } from './project'
 import { ProjectHero } from './hero'
@@ -13,6 +14,7 @@ const states = {
 }
 
 storiesOf('ProjectPage', module)
+  .addDecorator(checkA11y)
   .addDecorator(withKnobs)
   .add('Page', () => <KarlProject />)
   .add('Hero', () => (
