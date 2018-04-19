@@ -7,3 +7,8 @@
 // Components instanciation
 @import 'kitten/components';
 @import 'kitten/utilities';
+
+// Custom styles for StoryBook iFrame.
+body {
+  margin: 0;
+}
