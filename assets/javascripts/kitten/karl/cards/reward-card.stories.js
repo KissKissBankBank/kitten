@@ -15,6 +15,10 @@ storiesOf('RewardCard', module)
             titleMount={text('Title Mount', 'Pour 15€')}
             titleDescription={text(
               'Title Description',
+              'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',
+            )}
+            textDescription={text(
+              'Text Description',
               'In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi.',
             )}
             titleContributors={text('Title Contributors', 'Contributeurs')}
