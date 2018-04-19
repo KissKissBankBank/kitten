@@ -18,12 +18,15 @@
   "author": "KissKissBankBank & Co",
   "homepage": "https://github.com/KissKissBankBank/kitten#readme",
   "devDependencies": {
+    "@storybook/addon-a11y": "3.4.1",
     "@storybook/addon-actions": "3.4.0",
     "@storybook/addon-info": "3.4.0",
     "@storybook/addon-knobs": "3.4.0",
     "@storybook/addon-links": "3.4.0",
+    "@storybook/addon-viewport": "3.4.2",
     "@storybook/addons": "3.4.0",
     "@storybook/react": "3.4.0",
+    "@storybook/storybook-deployer": "2.3.0",
     "babel-jest": "^22.0.4",
     "babel-preset-env": "^1.6.1",
     "babel-preset-es2015": "^6.24.1",
@@ -101,7 +104,8 @@
     "test": "jest",
     "precommit": "lint-staged",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "deploy-storybook": "storybook-to-ghpages"
   },
   "lint-staged": {
     "assets/**/*.js": [
