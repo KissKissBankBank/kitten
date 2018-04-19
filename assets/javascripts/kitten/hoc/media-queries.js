@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { createMatchMediaMax } from 'kitten/helpers/utils/media-queries'
 import {
-  SCREEN_SIZE_S,
   SCREEN_SIZE_XS,
+  SCREEN_SIZE_S,
   SCREEN_SIZE_M,
 } from 'kitten/constants/screen-config'
 

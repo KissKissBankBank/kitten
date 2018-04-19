@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `viewportIsSOrLess` on `mediaQueries` HOC.
 - Feature: Show `LegoGrid` only when DOM is loaded.
 - Fix: Update `ArrowIcon` size on `Pagination` component.
 - Fix: Remove `hover` state when `ButtonIcon` is `active` state on `Pagination.
