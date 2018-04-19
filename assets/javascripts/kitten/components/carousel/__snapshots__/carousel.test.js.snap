@@ -82,6 +82,7 @@ exports[`<Carousel /> by default on desktop is a <Grid /> 1`] = `
                     tabIndex={null}
                   >
                     <img
+                      alt=""
                       className="k-ButtonImage__img"
                       src={null}
                     />
@@ -283,6 +284,7 @@ exports[`<Carousel /> by default on mobile is not a <Grid /> 1`] = `
                   tabIndex={null}
                 >
                   <img
+                    alt=""
                     className="k-ButtonImage__img"
                     src={null}
                   />
@@ -491,6 +493,7 @@ exports[`<Carousel /> with withoutLeftOffset on desktop is a <Grid /> 1`] = `
                     tabIndex={null}
                   >
                     <img
+                      alt=""
                       className="k-ButtonImage__img"
                       src={null}
                     />
