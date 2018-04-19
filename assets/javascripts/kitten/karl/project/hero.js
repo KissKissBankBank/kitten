@@ -31,15 +31,15 @@ const Button = Radium(ButtonBase)
 const CheckedCircleIcon = Radium(CheckedCircleIconBase)
 const CrossCircleIcon = Radium(CrossCircleIconBase)
 
-const ProjectHeaderBase = ({
+const ProjectHeroBase = ({
   viewportIsTabletOrLess,
   viewportIsMobile,
   ...others
 }) => (
   <Fragment>
-    <div style={styles.headerBackground}>
+    <div style={styles.heroBackground}>
       <Container>
-        <Grid style={styles.headerBackground.grid}>
+        <Grid style={styles.heroBackground.grid}>
           <GridCol col-s="8" col-l="4" offset-l="1" style={styles.titles}>
             <Marger
               top={viewportIsTabletOrLess ? 5 : 2}
@@ -197,7 +197,7 @@ const ProjectHeaderBase = ({
 )
 
 const styles = {
-  headerBackground: {
+  heroBackground: {
     background: `linear-gradient(
       to right,
       ${COLORS.background1} 0%,
@@ -402,7 +402,7 @@ const styles = {
 }
 
 // TODO: Remove on KissKiss.
-ProjectHeaderBase.defaultProps = {
+ProjectHeroBase.defaultProps = {
   name: 'Donnons pour Démos !',
   categories: 'Musique, Santé & Éducation, Solidarité',
   image: 'https://placeimg.com/850/480/any',
@@ -413,7 +413,7 @@ ProjectHeaderBase.defaultProps = {
   contributed: false,
 }
 
-export const ProjectHeader = mediaQueries(Radium(ProjectHeaderBase), {
+export const ProjectHero = mediaQueries(Radium(ProjectHeroBase), {
   viewportIsTabletOrLess: true,
   viewportIsMobile: true,
 })

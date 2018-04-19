@@ -2,7 +2,7 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { withKnobs, text, select, boolean } from '@storybook/addon-knobs/react'
 import { KarlProject } from './project'
-import { ProjectHeader } from './header'
+import { ProjectHero } from './hero'
 import { ProjectInformations } from './informations'
 import { StyleRoot } from 'radium'
 
@@ -15,9 +15,9 @@ const states = {
 storiesOf('ProjectPage', module)
   .addDecorator(withKnobs)
   .add('Page', () => <KarlProject />)
-  .add('Header', () => (
+  .add('Hero', () => (
     <StyleRoot>
-      <ProjectHeader
+      <ProjectHero
         name={text('Title', 'Donnons pour Démos !')}
         categories={text(
           'Categories',
