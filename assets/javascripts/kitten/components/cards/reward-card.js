@@ -3,6 +3,7 @@ import classNames from 'classnames'
 import Radium, { StyleRoot } from 'radium'
 import PropTypes from 'prop-types'
 import { Marger } from 'kitten/components/layout/marger'
+import { Row as RowBase } from 'kitten/components/grid/row'
 import {
   Grid as GridBase,
   GridCol as GridColBase,
@@ -19,6 +20,7 @@ import { parseHtml } from 'kitten/helpers/utils/parser'
 import { ScreenConfig } from 'kitten/constants/screen-config'
 import { mediaQueries } from 'kitten/hoc/media-queries'
 
+const Row = Radium(RowBase)
 const Grid = Radium(GridBase)
 const GridCol = Radium(GridColBase)
 const Button = Radium(ButtonBase)
@@ -68,26 +70,28 @@ class RewardCardBase extends Component {
 
     return (
       <StyleRoot>
-        <Grid>
-          <GridCol>
-            <Tag
-              style={styleCard}
-              href={href}
-              onClick={this.removeCurrentFocus}
-              disabled={this.props.isDisabled}
-            >
-              <Marger bottom={this.props.viewportIsMobile ? 0 : 5}>
-                <Grid>
-                  <GridCol col-m="8">{this.renderDescription()}</GridCol>
-                  <GridCol col-m="4">{this.renderImage()}</GridCol>
-                </Grid>
-                {this.props.viewportIsMobile && (
-                  <Grid>{this.renderChoiceButton()}</Grid>
-                )}
-              </Marger>
-            </Tag>
-          </GridCol>
-        </Grid>
+        <Row>
+          <Grid>
+            <GridCol>
+              <Tag
+                style={styleCard}
+                href={href}
+                onClick={this.removeCurrentFocus}
+                disabled={this.props.isDisabled}
+              >
+                <Marger bottom={this.props.viewportIsSOrLess ? 0 : 5}>
+                  <Grid style={styles.card.addPadding}>
+                    <GridCol col-m="8">{this.renderDescription()}</GridCol>
+                    <GridCol col-m="4">{this.renderImage()}</GridCol>
+                  </Grid>
+                  {this.props.viewportIsSOrLess && (
+                    <Fragment>{this.renderChoiceButton()}</Fragment>
+                  )}
+                </Marger>
+              </Tag>
+            </GridCol>
+          </Grid>
+        </Row>
       </StyleRoot>
     )
   }
@@ -97,7 +101,7 @@ class RewardCardBase extends Component {
 
     return (
       <Fragment>
-        <Marger top={this.props.viewportIsMobile ? 4 : 5} bottom="2">
+        <Marger top={this.props.viewportIsSOrLess ? 4 : 5} bottom="2">
           <Marger bottom="2">
             <Title modifier="secondary" tag="h1" margin={false}>
               {parseHtml(titleMount)}
@@ -120,7 +124,7 @@ class RewardCardBase extends Component {
         <Marger top="2" bottom={this.props.viewportIsMobile ? 3 : 4}>
           {this.renderInfos()}
         </Marger>
-        {!this.props.viewportIsMobile && (
+        {!this.props.viewportIsSOrLess && (
           <Marger top="4">{this.renderChoiceButton()}</Marger>
         )}
       </Fragment>
@@ -160,14 +164,14 @@ class RewardCardBase extends Component {
   renderInfo(title, titleSmall, value) {
     return (
       <GridCol style={styles.infos} col-m="4" col-l="3">
-        {this.props.viewportIsMobile && (
+        {this.props.viewportIsSOrLess && (
           <Text size="tiny" weight="regular">
             {parseHtml(titleSmall)}
             <Text weight="light">{parseHtml(value)}</Text>
           </Text>
         )}
 
-        {!this.props.viewportIsMobile && (
+        {!this.props.viewportIsSOrLess && (
           <Fragment>
             <Text weight="bold">{parseHtml(title)}</Text>
             <Text>{parseHtml(value)}</Text>
@@ -180,21 +184,17 @@ class RewardCardBase extends Component {
   renderChoiceButton() {
     return (
       <Fragment>
-        {this.props.viewportIsMobile && (
-          <Fragment>
-            <GridCol>
-              <Marger bottom="0">{this.renderButton()}</Marger>
-            </GridCol>
-            <GridCol style={styles.choiceButton.order}>
-              <Marger top="2" bottom="2">
-                {this.renderMyContribution()}
-              </Marger>
-            </GridCol>
-          </Fragment>
+        {this.props.viewportIsSOrLess && (
+          <div>
+            <Marger top="2" bottom="2">
+              {this.renderMyContribution()}
+            </Marger>
+            <Marger bottom="0">{this.renderButton()}</Marger>
+          </div>
         )}
 
-        {!this.props.viewportIsMobile && (
-          <div style={styles.choiceButton}>
+        {!this.props.viewportIsSOrLess && (
+          <div>
             <Marger bottom="2">{this.renderButton()}</Marger>
             <Marger top="2">{this.renderMyContribution()}</Marger>
           </div>
@@ -207,7 +207,7 @@ class RewardCardBase extends Component {
     if (!this.props.button || this.props.isCompleted) return
 
     return (
-      <Button size="big" modifier="helium" style={styles.choiceButton.button}>
+      <Button size="big" modifier="helium" style={styles.button}>
         {this.props.button}
       </Button>
     )
@@ -216,23 +216,48 @@ class RewardCardBase extends Component {
   renderMyContribution() {
     const { myContribution, manageContribution } = this.props
 
-    if (this.props.viewportIsMobile && this.props.isDisabled) return
+    if (this.props.viewportIsSOrLess && this.props.isDisabled) return
 
     return (
-      <div style={styles.myContribution}>
-        <IconBadge style={styles.iconBadge}>
-          <CheckedIcon className="k-IconBadge__svg" />
-        </IconBadge>
-        <div style={styles.myContribution.text}>
-          <Text size="tiny" weight="bold">
-            {parseHtml(myContribution)}
-            <br />
-            <a href="#" style={styles.myContribution.text.link}>
-              {parseHtml(manageContribution)}
-            </a>
-          </Text>
-        </div>
-      </div>
+      <Fragment>
+        {this.props.viewportIsSOrLess && (
+          <Grid style={styles.choiceButton.addPadding}>
+            <GridCol>
+              <div style={styles.myContribution}>
+                <IconBadge style={styles.iconBadge}>
+                  <CheckedIcon className="k-IconBadge__svg" />
+                </IconBadge>
+                <div style={styles.myContribution.text}>
+                  <Text size="tiny" weight="bold">
+                    {parseHtml(myContribution)}
+                    <br />
+                    <a href="#" style={styles.myContribution.text.link}>
+                      {parseHtml(manageContribution)}
+                    </a>
+                  </Text>
+                </div>
+              </div>
+            </GridCol>
+          </Grid>
+        )}
+
+        {!this.props.viewportIsSOrLess && (
+          <div style={styles.myContribution}>
+            <IconBadge style={styles.iconBadge}>
+              <CheckedIcon className="k-IconBadge__svg" />
+            </IconBadge>
+            <div style={styles.myContribution.text}>
+              <Text size="tiny" weight="bold">
+                {parseHtml(myContribution)}
+                <br />
+                <a href="#" style={styles.myContribution.text.link}>
+                  {parseHtml(manageContribution)}
+                </a>
+              </Text>
+            </div>
+          </div>
+        )}
+      </Fragment>
     )
   }
 
@@ -254,20 +279,23 @@ const styles = {
     borderStyle: 'solid',
     borderColor: COLORS.line1,
     display: 'flex',
-    paddingLeft: '20px',
-    paddingRight: '20px',
 
-    [`@media (min-width: ${ScreenConfig['S'].min}px)`]: {
-      paddingLeft: '50px',
-      paddingRight: '50px',
-    },
-    [`@media (min-width: ${ScreenConfig['M'].min}px)`]: {
-      paddingLeft: '50px',
-      paddingRight: 0,
-    },
-    [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
-      paddingLeft: '115px',
-      paddingRight: 0,
+    addPadding: {
+      paddingLeft: '20px',
+      paddingRight: '20px',
+
+      [`@media (min-width: ${ScreenConfig['S'].min}px)`]: {
+        paddingLeft: '50px',
+        paddingRight: '50px',
+      },
+      [`@media (min-width: ${ScreenConfig['M'].min}px)`]: {
+        paddingLeft: '50px',
+        paddingRight: 0,
+      },
+      [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
+        paddingLeft: '115px',
+        paddingRight: 0,
+      },
     },
 
     href: {
@@ -287,16 +315,14 @@ const styles = {
   },
 
   choiceButton: {
-    order: {
-      [`@media (max-width: ${ScreenConfig['XS'].max}px)`]: {
-        order: '-1',
+    addPadding: {
+      [`@media (min-width: ${ScreenConfig['S'].min}px)`]: {
+        paddingLeft: '50px',
+        paddingRight: '50px',
       },
-    },
-    button: {
-      marginRight: '20px',
       [`@media (max-width: ${ScreenConfig['XS'].max}px)`]: {
-        width: '100%',
-        marginRight: 0,
+        paddingLeft: '20px',
+        paddingRight: '20px',
       },
     },
   },
@@ -316,6 +342,16 @@ const styles = {
     },
   },
 
+  button: {
+    // width: '0%',
+    [`@media (max-width: ${ScreenConfig['S'].max}px)`]: {
+      width: '100%',
+    },
+    // [`@media (max-width: ${ScreenConfig['XS'].max}px)`]: {
+    //   width: '100%',
+    // },
+  },
+
   iconBadge: {
     backgroundColor: COLORS.valid,
     marginRight: '10px',
@@ -332,4 +368,5 @@ const styles = {
 
 export const RewardCard = mediaQueries(Radium(RewardCardBase), {
   viewportIsMobile: true,
+  viewportIsSOrLess: true,
 })
