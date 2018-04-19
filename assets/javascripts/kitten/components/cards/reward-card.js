@@ -3,7 +3,6 @@ import classNames from 'classnames'
 import Radium, { StyleRoot } from 'radium'
 import PropTypes from 'prop-types'
 import { Marger } from 'kitten/components/layout/marger'
-import { Row as RowBase } from 'kitten/components/grid/row'
 import {
   Grid as GridBase,
   GridCol as GridColBase,
@@ -20,7 +19,6 @@ import { parseHtml } from 'kitten/helpers/utils/parser'
 import { ScreenConfig } from 'kitten/constants/screen-config'
 import { mediaQueries } from 'kitten/hoc/media-queries'
 
-const Row = Radium(RowBase)
 const Grid = Radium(GridBase)
 const GridCol = Radium(GridColBase)
 const Button = Radium(ButtonBase)
@@ -64,34 +62,33 @@ class RewardCardBase extends Component {
 
     const styleCard = [
       styles.card,
-      this.props.href && styles.card.href,
       this.props.isDisabled && styles.card.isDisabled,
     ]
 
     return (
       <StyleRoot>
-        <Row>
-          <Grid>
-            <GridCol>
-              <Tag
-                style={styleCard}
-                href={href}
-                onClick={this.removeCurrentFocus}
-                disabled={this.props.isDisabled}
-              >
-                <Marger bottom={this.props.viewportIsSOrLess ? 0 : 5}>
-                  <Grid style={styles.card.addPadding}>
-                    <GridCol col-m="8">{this.renderDescription()}</GridCol>
-                    <GridCol col-m="4">{this.renderImage()}</GridCol>
-                  </Grid>
-                  {this.props.viewportIsSOrLess && (
-                    <Fragment>{this.renderChoiceButton()}</Fragment>
-                  )}
-                </Marger>
-              </Tag>
-            </GridCol>
-          </Grid>
-        </Row>
+        <Grid>
+          <GridCol>
+            <Tag
+              style={styleCard}
+              href={href}
+              onClick={this.removeCurrentFocus}
+              disabled={this.props.isDisabled}
+            >
+              <Marger bottom={this.props.viewportIsSOrLess ? 0 : 5}>
+                <Grid style={styles.card.addPadding}>
+                  <GridCol col-m="7">{this.renderDescription()}</GridCol>
+                  <GridCol col-m="4" offset-m="1">
+                    {this.renderImage()}
+                  </GridCol>
+                </Grid>
+                {this.props.viewportIsSOrLess && (
+                  <Fragment>{this.renderChoiceButton()}</Fragment>
+                )}
+              </Marger>
+            </Tag>
+          </GridCol>
+        </Grid>
       </StyleRoot>
     )
   }
@@ -189,7 +186,7 @@ class RewardCardBase extends Component {
             <Marger top="2" bottom="2">
               {this.renderMyContribution()}
             </Marger>
-            <Marger bottom="0">{this.renderButton()}</Marger>
+            {this.renderButton()}
           </div>
         )}
 
@@ -279,6 +276,8 @@ const styles = {
     borderStyle: 'solid',
     borderColor: COLORS.line1,
     display: 'flex',
+    textDecoration: 'inherit',
+    color: 'inherit',
 
     addPadding: {
       paddingLeft: '20px',
@@ -296,11 +295,6 @@ const styles = {
         paddingLeft: '115px',
         paddingRight: 0,
       },
-    },
-
-    href: {
-      textDecoration: 'inherit',
-      color: 'inherit',
     },
 
     isDisabled: {
@@ -333,7 +327,6 @@ const styles = {
 
     text: {
       display: 'flex',
-      flexWrap: 'wrap',
 
       link: {
         textDecoration: 'none',
@@ -343,13 +336,9 @@ const styles = {
   },
 
   button: {
-    // width: '0%',
     [`@media (max-width: ${ScreenConfig['S'].max}px)`]: {
       width: '100%',
     },
-    // [`@media (max-width: ${ScreenConfig['XS'].max}px)`]: {
-    //   width: '100%',
-    // },
   },
 
   iconBadge: {
