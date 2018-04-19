@@ -14,14 +14,14 @@ export const mediaQueries = (WrappedComponent, hocProps = {}) =>
 
       this.state = {}
 
-      if (this.sMediaQueryEnabled()) {
-        this.mqSOrLess = createMatchMediaMax(SCREEN_SIZE_S)
-        this.state = { ...this.state, viewportIsSOrLess: false }
-      }
-
       if (this.mobileMediaQueryEnabled()) {
         this.mqMobile = createMatchMediaMax(SCREEN_SIZE_XS)
         this.state = { ...this.state, viewportIsMobile: false }
+      }
+
+      if (this.sMediaQueryEnabled()) {
+        this.mqSOrLess = createMatchMediaMax(SCREEN_SIZE_S)
+        this.state = { ...this.state, viewportIsSOrLess: false }
       }
 
       if (this.tabletOrLessMediaQueryEnabled()) {
@@ -30,14 +30,14 @@ export const mediaQueries = (WrappedComponent, hocProps = {}) =>
       }
     }
 
-    sMediaQueryEnabled = () =>
-      typeof hocProps.viewportIsSOrLess !== 'undefined'
-        ? hocProps.viewportIsSOrLess
-        : false
-
     mobileMediaQueryEnabled = () =>
       typeof hocProps.viewportIsMobile !== 'undefined'
         ? hocProps.viewportIsMobile
+        : false
+
+    sMediaQueryEnabled = () =>
+      typeof hocProps.viewportIsSOrLess !== 'undefined'
+        ? hocProps.viewportIsSOrLess
         : false
 
     tabletOrLessMediaQueryEnabled = () =>
@@ -46,14 +46,14 @@ export const mediaQueries = (WrappedComponent, hocProps = {}) =>
         : false
 
     componentDidMount() {
-      if (this.mqSOrLess) {
-        this.mqSOrLess.addListener(this.onSMQ)
-        this.onSMQ(this.mqSOrLess)
-      }
-
       if (this.mqMobile) {
         this.mqMobile.addListener(this.onMobileMQ)
         this.onMobileMQ(this.mqMobile)
+      }
+
+      if (this.mqSOrLess) {
+        this.mqSOrLess.addListener(this.onSMQ)
+        this.onSMQ(this.mqSOrLess)
       }
 
       if (this.mqTabletOrLess) {
@@ -63,12 +63,12 @@ export const mediaQueries = (WrappedComponent, hocProps = {}) =>
     }
 
     componentWillUnmount() {
-      if (this.mqSOrLess) {
-        this.mqS.removeListener(this.onSMQ)
-      }
-
       if (this.mqMobile) {
         this.mqMobile.removeListener(this.onMobileMQ)
+      }
+
+      if (this.mqSOrLess) {
+        this.mqS.removeListener(this.onSMQ)
       }
 
       if (this.mqTabletOrLess) {
@@ -76,12 +76,12 @@ export const mediaQueries = (WrappedComponent, hocProps = {}) =>
       }
     }
 
-    onSMQ = event => {
-      this.setState({ viewportIsSOrLess: event.matches })
-    }
-
     onMobileMQ = event => {
       this.setState({ viewportIsMobile: event.matches })
+    }
+
+    onSMQ = event => {
+      this.setState({ viewportIsSOrLess: event.matches })
     }
 
     onTabletMQ = event => {
@@ -93,8 +93,8 @@ export const mediaQueries = (WrappedComponent, hocProps = {}) =>
         <WrappedComponent
           {...this.props}
           viewportIsMobile={this.state.viewportIsMobile}
-          viewportIsTabletOrLess={this.state.viewportIsTabletOrLess}
           viewportIsSOrLess={this.state.viewportIsSOrLess}
+          viewportIsTabletOrLess={this.state.viewportIsTabletOrLess}
         />
       )
     }
