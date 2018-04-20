@@ -96,5 +96,20 @@ describe('<HorizontalNav />', () => {
         expect(component.find('.item-1').html()).toMatch(/Nav<br\/>1/)
       })
     })
+
+    describe('with markdown prop to false', () => {
+      const component = shallow(
+        <HorizontalNav
+          markdown={false}
+          items={[{ key: 'item-1', text: '**Nav**', className: 'item-1' }]}
+        />,
+      )
+
+      it("don't transform ** with <strong />", () => {
+        expect(component.find('.item-1').html()).not.toMatch(
+          /<strong>Nav<\/strong>/,
+        )
+      })
+    })
   })
 })
