@@ -105,7 +105,7 @@ describe('<HorizontalNav />', () => {
         />,
       )
 
-      it("don't transform ** with <strong />", () => {
+      it("doesn't transform ** with <strong />", () => {
         expect(component.find('.item-1').html()).not.toMatch(
           /<strong>Nav<\/strong>/,
         )
