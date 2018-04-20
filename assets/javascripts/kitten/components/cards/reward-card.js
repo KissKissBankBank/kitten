@@ -100,7 +100,11 @@ class RewardCardBase extends Component {
       <Fragment>
         <Marger top={this.props.viewportIsSOrLess ? 4 : 5} bottom="2">
           <Marger bottom="2">
-            <Title modifier="secondary" tag="h1" margin={false}>
+            <Title
+              modifier={this.props.viewportIsSOrLess ? 'tertiary' : 'secondary'}
+              tag="h1"
+              margin={false}
+            >
               {parseHtml(titleMount)}
             </Title>
           </Marger>
@@ -108,12 +112,19 @@ class RewardCardBase extends Component {
             <HorizontalStroke size="big" />
           </Marger>
           <Marger top="4" bottom="1">
-            <Title modifier="senary" tag="h2" margin={false}>
+            <Text
+              size={this.viewportIsSOrLess ? 'big' : 'huge'}
+              tag="h2"
+              weight="bold"
+            >
               {parseHtml(titleDescription)}
-            </Title>
+            </Text>
           </Marger>
           <Marger top="1" bottom="2">
-            <Paragraph modifier="tertiary" margin={false}>
+            <Paragraph
+              modifier={this.props.viewportIsMobile ? 'quaternary' : 'tertiary'}
+              margin={false}
+            >
               {parseHtml(textDescription)}
             </Paragraph>
           </Marger>
