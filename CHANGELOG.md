@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Create `RewardCard` component.
+- Feature: Create `RewardCard` component and his story.
 - Feature: Add `Italic` props on `Title` component.
 - Fix: Fix size on `IconBadge` component.
 - Feature: Update svg size and color on `IconBadge` component.
