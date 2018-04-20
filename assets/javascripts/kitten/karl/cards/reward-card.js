@@ -50,7 +50,6 @@ export const KarlRewardCard = () => (
           button="Choisir"
           myContribution="Vous avez contribué à ce projet"
           manageContribution="Gérer ma contribution"
-          href="#"
           imageSrc="https://placehold.it/40x40/caf4fe/caf4fe"
           isDisabled="true"
         />

@@ -299,6 +299,7 @@ const styles = {
 
     isDisabled: {
       filter: 'grayscale(1) opacity(0.4)',
+      cursor: 'not-allowed',
     },
   },
 
