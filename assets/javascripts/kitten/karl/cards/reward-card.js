@@ -79,5 +79,77 @@ export const KarlRewardCard = () => (
         />
       </Container>
     </Marger>
+
+    <KarlExampleTitle>Without Image Reward card</KarlExampleTitle>
+    <Marger top="2" bottom="2">
+      <Container>
+        <RewardCard
+          titleMount="Pour 15€"
+          titleDescription="Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
+          textDescription="In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi."
+          titleContributors="Contributeurs"
+          titleSmallContributors="Contributeurs : "
+          valueContributors="35"
+          titleDelivery="Livraison"
+          titleSmallDelivery="Livraison : "
+          valueDelivery="Janvier 2018"
+          titleAvailability="Disponibilité"
+          titleSmallAvailability="Disponibilité : "
+          valueAvailability="200"
+          myContribution="Vous avez contribué à ce projet"
+          manageContribution="Gérer ma contribution"
+          href="#"
+        />
+      </Container>
+    </Marger>
+
+    <KarlExampleTitle>Without Image Reward card</KarlExampleTitle>
+    <Marger top="2" bottom="2">
+      <Container>
+        <RewardCard
+          titleMount="Pour 15€"
+          titleDescription="Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
+          textDescription="In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi."
+          titleContributors="Contributeurs"
+          titleSmallContributors="Contributeurs : "
+          valueContributors="35"
+          titleDelivery="Livraison"
+          titleSmallDelivery="Livraison : "
+          valueDelivery="Janvier 2018"
+          titleAvailability="Disponibilité"
+          titleSmallAvailability="Disponibilité : "
+          valueAvailability="200"
+          myContribution="Vous avez contribué à ce projet"
+          manageContribution="Gérer ma contribution"
+          href="#"
+          button="Choisir"
+          withoutImage
+        />
+      </Container>
+    </Marger>
+
+    <KarlExampleTitle>Small Image Reward card</KarlExampleTitle>
+    <Marger top="2" bottom="2">
+      <Container>
+        <RewardCard
+          titleMount="Pour 15€"
+          titleDescription="Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
+          textDescription="In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi."
+          titleContributors="Contributeurs"
+          titleSmallContributors="Contributeurs : "
+          valueContributors="35"
+          titleDelivery="Livraison"
+          titleSmallDelivery="Livraison : "
+          valueDelivery="Janvier 2018"
+          titleAvailability="Disponibilité"
+          titleSmallAvailability="Disponibilité : "
+          valueAvailability="200"
+          myContribution="Vous avez contribué à ce projet"
+          manageContribution="Gérer ma contribution"
+          href="#"
+          imageSrcSmall="https://placehold.it/40x40/caf4fe/caf4fe"
+        />
+      </Container>
+    </Marger>
   </Fragment>
 )

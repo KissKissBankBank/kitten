@@ -40,16 +40,19 @@ class RewardCardBase extends Component {
     titleSmallDelivery: PropTypes.string,
     titleAvailability: PropTypes.string,
     titleSmallAvailability: PropTypes.string,
-    valueContributors: PropTypes.string.isRequired,
-    valueDelivery: PropTypes.string.isRequired,
-    valueAvailability: PropTypes.string.isRequired,
+    valueContributors: PropTypes.string,
+    valueDelivery: PropTypes.string,
+    valueAvailability: PropTypes.string,
 
-    button: PropTypes.string.isRequired,
+    button: PropTypes.string,
 
-    myContribution: PropTypes.string.isRequired,
-    manageContribution: PropTypes.string.isRequired,
+    myContribution: PropTypes.string,
+    manageContribution: PropTypes.string,
 
-    imageSrc: PropTypes.string.isRequired,
+    href: PropTypes.string,
+
+    imageSrc: PropTypes.string,
+    imageSrcSmall: PropTypes.string,
   }
 
   removeCurrentFocus = () => {
@@ -103,6 +106,7 @@ class RewardCardBase extends Component {
             <Title
               modifier={this.props.viewportIsSOrLess ? 'tertiary' : 'secondary'}
               tag="h1"
+              italic
               margin={false}
             >
               {parseHtml(titleMount)}
@@ -129,11 +133,13 @@ class RewardCardBase extends Component {
             </Paragraph>
           </Marger>
         </Marger>
-        <Marger top="2" bottom={this.props.viewportIsMobile ? 3 : 4}>
+        <Marger top="2" bottom={this.props.viewportIsSOrLess ? 3 : 4}>
           {this.renderInfos()}
         </Marger>
         {!this.props.viewportIsSOrLess && (
-          <Marger top="4">{this.renderChoiceButton()}</Marger>
+          <Marger top={this.props.viewportIsSOrLess ? 3 : 4}>
+            {this.renderChoiceButton()}
+          </Marger>
         )}
       </Fragment>
     )
@@ -181,7 +187,7 @@ class RewardCardBase extends Component {
 
         {!this.props.viewportIsSOrLess && (
           <Fragment>
-            <Text weight="bold">{parseHtml(title)}</Text>
+            <Text weight="regular">{parseHtml(title)}</Text>
             <Text>{parseHtml(value)}</Text>
           </Fragment>
         )}
@@ -194,7 +200,10 @@ class RewardCardBase extends Component {
       <Fragment>
         {this.props.viewportIsSOrLess && (
           <div>
-            <Marger top="2" bottom="2">
+            <Marger
+              top={!this.props.imageSrc || !this.props.imageSrcSmall ? 0 : 2}
+              bottom="2"
+            >
               {this.renderMyContribution()}
             </Marger>
             {this.renderButton()}
@@ -221,6 +230,16 @@ class RewardCardBase extends Component {
     )
   }
 
+  renderIconBadge() {
+    if (this.props.isDisabled) return
+
+    return (
+      <IconBadge style={styles.iconBadge}>
+        <CheckedIcon className="k-IconBadge__svg" />
+      </IconBadge>
+    )
+  }
+
   renderMyContribution() {
     const { myContribution, manageContribution } = this.props
 
@@ -232,11 +251,9 @@ class RewardCardBase extends Component {
           <Grid style={styles.choiceButton.addPadding}>
             <GridCol>
               <div style={styles.myContribution}>
-                <IconBadge style={styles.iconBadge}>
-                  <CheckedIcon className="k-IconBadge__svg" />
-                </IconBadge>
+                {this.renderIconBadge()}
                 <div style={styles.myContribution.text}>
-                  <Text size="tiny" weight="bold">
+                  <Text size="tiny" weight="regular">
                     {parseHtml(myContribution)}
                     <br />
                     <a href="#" style={styles.myContribution.text.link}>
@@ -251,11 +268,9 @@ class RewardCardBase extends Component {
 
         {!this.props.viewportIsSOrLess && (
           <div style={styles.myContribution}>
-            <IconBadge style={styles.iconBadge}>
-              <CheckedIcon className="k-IconBadge__svg" />
-            </IconBadge>
+            {this.renderIconBadge()}
             <div style={styles.myContribution.text}>
-              <Text size="tiny" weight="bold">
+              <Text size="tiny" weight="regular">
                 {parseHtml(myContribution)}
                 <br />
                 <a href="#" style={styles.myContribution.text.link}>
@@ -272,8 +287,11 @@ class RewardCardBase extends Component {
   renderImage() {
     const imageStyles = [
       styles.image,
+      this.props.imageSrcSmall && styles.image.small,
       { backgroundImage: `url(${this.props.imageSrc})` },
     ]
+
+    if (!this.props.imageSrc || this.props.withoutImage) return
 
     return <div style={imageStyles} />
   }
@@ -364,6 +382,9 @@ const styles = {
     display: 'flex',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
+    small: {
+      height: '325px',
+    },
   },
 }
 

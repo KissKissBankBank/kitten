@@ -51,6 +51,8 @@ storiesOf('RewardCard', module)
             )}
             isDisabled={boolean('Is Disabled', false)}
             isCompleted={boolean('Is Completed', false)}
+            withoutImage={boolean('Without Image', false)}
+            imageSrcSmall={boolean('Small image', false)}
           />
         </GridCol>
       </Grid>
