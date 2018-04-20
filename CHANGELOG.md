@@ -3,6 +3,8 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
+- Feature: Add `cropperData` values on the return of `onChange` handler of 
+`ImageCropper` component.
 
 ## [20.8.0] - 2018-04-27
 
