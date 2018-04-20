@@ -131,7 +131,7 @@ export class ImageCropper extends React.Component {
       this.props.onChange({
         value: imageCropSrc,
         name: this.state.fileName,
-        canvasData: this.refs.cropper.getCanvasData(),
+        cropperData: this.refs.cropper.getData(),
       })
     }
   }
