@@ -1,10 +1,17 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { checkA11y } from '@storybook/addon-a11y'
-import { withKnobs, text, select, boolean } from '@storybook/addon-knobs/react'
+import {
+  withKnobs,
+  text,
+  select,
+  boolean,
+  object,
+} from '@storybook/addon-knobs/react'
 import { KarlProject } from './project'
 import { ProjectHero } from './hero'
 import { ProjectInformations } from './informations'
+import { ProjectNavigation } from './navigation'
 import { StyleRoot } from 'radium'
 
 const states = {
@@ -12,6 +19,14 @@ const states = {
   successful: 'Successful',
   failed: 'Failed',
 }
+
+const navigationItems = [
+  { key: 'key1', text: 'Contreparties', href: '#', selected: true },
+  { key: 'key2', text: 'Description', href: '#' },
+  { key: 'key3', text: 'Actualités', href: '#', badge: 2 },
+  { key: 'key4', text: 'Commentaires', href: '#' },
+  { key: 'key5', text: 'Contributeurs', href: '#' },
+]
 
 storiesOf('ProjectPage', module)
   .addDecorator(checkA11y)
@@ -58,6 +73,14 @@ storiesOf('ProjectPage', module)
           'https://placeimg.com/220/120/any',
         )}
         mentorsSize={text('Mentors size', '3')}
+      />
+    </StyleRoot>
+  ))
+  .add('Navigation', () => (
+    <StyleRoot>
+      <ProjectNavigation
+        showContributeButton={boolean('Show button', true)}
+        items={object('Items', navigationItems)}
       />
     </StyleRoot>
   ))
