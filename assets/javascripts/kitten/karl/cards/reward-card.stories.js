@@ -10,7 +10,7 @@ storiesOf('RewardCard', module)
   .add('RewardCard', () => (
     <StyleRoot>
       <Grid>
-        <GridCol col="10">
+        <GridCol offset="1" col="10">
           <RewardCard
             titleMount={text('Title Mount', 'Pour 15€')}
             titleDescription={text(

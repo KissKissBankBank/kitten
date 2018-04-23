@@ -53,6 +53,8 @@ class RewardCardBase extends Component {
 
     imageSrc: PropTypes.string,
     imageSrcSmall: PropTypes.string,
+
+    withoutImage: PropTypes.boolean,
   }
 
   removeCurrentFocus = () => {
@@ -126,7 +128,9 @@ class RewardCardBase extends Component {
           </Marger>
           <Marger top="1" bottom="2">
             <Paragraph
-              modifier={this.props.viewportIsMobile ? 'quaternary' : 'tertiary'}
+              modifier={
+                this.props.viewportIsSOrLess ? 'quaternary' : 'tertiary'
+              }
               margin={false}
             >
               {parseHtml(textDescription)}
@@ -137,9 +141,7 @@ class RewardCardBase extends Component {
           {this.renderInfos()}
         </Marger>
         {!this.props.viewportIsSOrLess && (
-          <Marger top={this.props.viewportIsSOrLess ? 3 : 4}>
-            {this.renderChoiceButton()}
-          </Marger>
+          <Marger top="4">{this.renderChoiceButton()}</Marger>
         )}
       </Fragment>
     )
@@ -177,15 +179,15 @@ class RewardCardBase extends Component {
 
   renderInfo(title, titleSmall, value) {
     return (
-      <GridCol style={styles.infos} col-m="4" col-l="3">
-        {this.props.viewportIsSOrLess && (
-          <Text size="tiny" weight="regular">
+      <GridCol style={styles.infos} col-l="4" col-xl="3">
+        {this.props.viewportIsTabletOrLess && (
+          <Text weight="regular" style={styles.infos.lists}>
             {parseHtml(titleSmall)}
             <Text weight="light">{parseHtml(value)}</Text>
           </Text>
         )}
 
-        {!this.props.viewportIsSOrLess && (
+        {!this.props.viewportIsTabletOrLess && (
           <Fragment>
             <Text weight="regular">{parseHtml(title)}</Text>
             <Text>{parseHtml(value)}</Text>
@@ -200,10 +202,7 @@ class RewardCardBase extends Component {
       <Fragment>
         {this.props.viewportIsSOrLess && (
           <div>
-            <Marger
-              top={!this.props.imageSrc || !this.props.imageSrcSmall ? 0 : 2}
-              bottom="2"
-            >
+            <Marger top={this.props.withoutImage ? 0 : 2} bottom="2">
               {this.renderMyContribution()}
             </Marger>
             {this.renderButton()}
@@ -336,6 +335,13 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     padding: '0 ${COMPONENT_GUTTER}px',
+
+    lists: {
+      fontSize: '14px',
+      [`@media (min-width: ${ScreenConfig['M'].min}px)`]: {
+        fontSize: '16px',
+      },
+    },
   },
 
   choiceButton: {
@@ -357,6 +363,7 @@ const styles = {
 
     text: {
       display: 'flex',
+      lineHeight: 'normal',
 
       link: {
         textDecoration: 'none',
@@ -390,5 +397,6 @@ const styles = {
 
 export const RewardCard = mediaQueries(Radium(RewardCardBase), {
   viewportIsMobile: true,
+  viewportIsTabletOrLess: true,
   viewportIsSOrLess: true,
 })

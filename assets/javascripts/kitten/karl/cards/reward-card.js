@@ -26,14 +26,14 @@ export const KarlRewardCard = () => (
           myContribution="Vous avez contribué à ce projet"
           manageContribution="Gérer ma contribution"
           href="#"
-          imageSrc="https://placehold.it/40x40/caf4fe/caf4fe"
+          imageSrcSmall="https://placehold.it/40x40/caf4fe/caf4fe"
         />
       </Marger>
     </Container>
 
     <KarlExampleTitle>Disabled Reward card</KarlExampleTitle>
-    <Marger top="2" bottom="2">
-      <Container>
+    <Container>
+      <Marger top="2" bottom="2">
         <RewardCard
           titleMount="Pour 15€"
           titleDescription="Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
@@ -53,12 +53,12 @@ export const KarlRewardCard = () => (
           imageSrc="https://placehold.it/40x40/caf4fe/caf4fe"
           isDisabled="true"
         />
-      </Container>
-    </Marger>
+      </Marger>
+    </Container>
 
     <KarlExampleTitle>Completed Reward card</KarlExampleTitle>
-    <Marger top="2" bottom="2">
-      <Container>
+    <Container>
+      <Marger top="2" bottom="2">
         <RewardCard
           titleMount="Pour 15€"
           titleDescription="Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
@@ -77,12 +77,12 @@ export const KarlRewardCard = () => (
           href="#"
           imageSrc="https://placehold.it/40x40/caf4fe/caf4fe"
         />
-      </Container>
-    </Marger>
+      </Marger>
+    </Container>
 
     <KarlExampleTitle>Without Image Reward card</KarlExampleTitle>
-    <Marger top="2" bottom="2">
-      <Container>
+    <Container>
+      <Marger top="2" bottom="2">
         <RewardCard
           titleMount="Pour 15€"
           titleDescription="Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
@@ -99,13 +99,14 @@ export const KarlRewardCard = () => (
           myContribution="Vous avez contribué à ce projet"
           manageContribution="Gérer ma contribution"
           href="#"
+          withoutImage
         />
-      </Container>
-    </Marger>
+      </Marger>
+    </Container>
 
     <KarlExampleTitle>Without Image Reward card</KarlExampleTitle>
-    <Marger top="2" bottom="2">
-      <Container>
+    <Container>
+      <Marger top="2" bottom="2">
         <RewardCard
           titleMount="Pour 15€"
           titleDescription="Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
@@ -125,12 +126,12 @@ export const KarlRewardCard = () => (
           button="Choisir"
           withoutImage
         />
-      </Container>
-    </Marger>
+      </Marger>
+    </Container>
 
     <KarlExampleTitle>Small Image Reward card</KarlExampleTitle>
-    <Marger top="2" bottom="2">
-      <Container>
+    <Container>
+      <Marger top="2" bottom="2">
         <RewardCard
           titleMount="Pour 15€"
           titleDescription="Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
@@ -147,9 +148,10 @@ export const KarlRewardCard = () => (
           myContribution="Vous avez contribué à ce projet"
           manageContribution="Gérer ma contribution"
           href="#"
-          imageSrcSmall="https://placehold.it/40x40/caf4fe/caf4fe"
+          button="Choisir"
+          imageSrcSmall
         />
-      </Container>
-    </Marger>
+      </Marger>
+    </Container>
   </Fragment>
 )
