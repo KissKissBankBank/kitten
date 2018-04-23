@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import { Badge } from 'kitten/components/notifications/badge'
 import classNames from 'classnames'
 import Markdown from 'react-markdown'
@@ -11,6 +11,7 @@ export class HorizontalNav extends Component {
   }
 
   renderItem(item) {
+    const { markdown } = this.props
     const { className, selected, text, badge, key, href, ...others } = item
 
     const itemClassName = classNames('k-HorizontalNav__item', className, {
@@ -18,13 +19,17 @@ export class HorizontalNav extends Component {
     })
 
     const renderBadge = (
-      <div className="k-HorizontalNav__item__badge">
+      <Fragment>
         {text}
         <Badge className="k-HorizontalNav__badge">{badge}</Badge>
-      </div>
+      </Fragment>
     )
 
-    const renderMarkdown = <Markdown softBreak="br" source={text} />
+    const renderMarkdown = markdown ? (
+      <Markdown softBreak="br" source={text} />
+    ) : (
+      text
+    )
 
     const renderText = badge ? renderBadge : renderMarkdown
 
@@ -73,4 +78,5 @@ HorizontalNav.defaultProps = {
   center: false,
   elementClassName: null,
   items: [], // Eg: [{ key: …, text: …, href: …, selected: …, badge: … }]
+  markdown: true,
 }
