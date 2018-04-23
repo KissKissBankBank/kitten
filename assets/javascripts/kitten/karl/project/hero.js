@@ -15,7 +15,7 @@ import {
   GridCol as GridColBase,
 } from 'kitten/components/grid/grid'
 import { Marger as MargerBase } from 'kitten/components/layout/marger'
-import { Title } from 'kitten/components/typography/title'
+import { Title as TitleBase } from 'kitten/components/typography/title'
 import { HorizontalStroke } from 'kitten/components/layout/horizontal-stroke'
 import { Text } from 'kitten/components/typography/text'
 import { ButtonImage } from 'kitten/components/buttons/button-image'
@@ -27,6 +27,7 @@ const Container = Radium(ContainerBase)
 const Grid = Radium(GridBase)
 const GridCol = Radium(GridColBase)
 const Marger = Radium(MargerBase)
+const Title = Radium(TitleBase)
 const Button = Radium(ButtonBase)
 const CheckedCircleIcon = Radium(CheckedCircleIconBase)
 const CrossCircleIcon = Radium(CrossCircleIconBase)
@@ -46,7 +47,12 @@ const ProjectHeroBase = ({
               bottom={viewportIsTabletOrLess ? 5 : 2}
             >
               <Marger bottom="2">
-                <Title tag="h1" modifier="secondary" margin={false}>
+                <Title
+                  tag="h1"
+                  modifier="secondary"
+                  margin={false}
+                  style={styles.title}
+                >
                   {others.name}
                 </Title>
               </Marger>
@@ -243,6 +249,11 @@ const styles = {
     [`@media (max-width: ${ScreenConfig.M.max}px)`]: {
       order: 2,
     },
+  },
+
+  title: {
+    wordBreak: 'break-word',
+    hyphens: 'auto',
   },
 
   categories: {
