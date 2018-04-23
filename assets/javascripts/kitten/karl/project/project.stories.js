@@ -12,6 +12,7 @@ import { KarlProject } from './project'
 import { ProjectHero } from './hero'
 import { ProjectInformations } from './informations'
 import { ProjectNavigation } from './navigation'
+import { ProjectDescription } from './description'
 import { StyleRoot } from 'radium'
 
 const states = {
@@ -21,8 +22,8 @@ const states = {
 }
 
 const navigationItems = [
-  { key: 'key1', text: 'Contreparties', href: '#', selected: true },
-  { key: 'key2', text: 'Description', href: '#' },
+  { key: 'key1', text: 'Contreparties', href: '#' },
+  { key: 'key2', text: 'Description', href: '#', selected: true },
   { key: 'key3', text: 'Actualités', href: '#', badge: 2 },
   { key: 'key4', text: 'Commentaires', href: '#' },
   { key: 'key5', text: 'Contributeurs', href: '#' },
@@ -82,5 +83,10 @@ storiesOf('ProjectPage', module)
         showContributeButton={boolean('Show button', true)}
         items={object('Items', navigationItems)}
       />
+    </StyleRoot>
+  ))
+  .add('Description', () => (
+    <StyleRoot>
+      <ProjectDescription />
     </StyleRoot>
   ))

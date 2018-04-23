@@ -73,8 +73,8 @@ const styles = {
 ProjectNavigationBase.defaultProps = {
   showContributeButton: true,
   items: [
-    { key: 'key1', text: 'Contreparties', href: '#', selected: true },
-    { key: 'key2', text: 'Description', href: '#' },
+    { key: 'key1', text: 'Contreparties', href: '#' },
+    { key: 'key2', text: 'Description', href: '#', selected: true },
     { key: 'key3', text: 'Actualités', href: '#', badge: 2 },
     { key: 'key4', text: 'Commentaires', href: '#' },
     { key: 'key5', text: 'Contributeurs', href: '#' },

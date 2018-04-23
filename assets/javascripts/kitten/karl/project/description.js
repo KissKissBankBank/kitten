@@ -1,4 +1,5 @@
 import React from 'react'
+import { mediaQueries } from 'kitten/hoc/media-queries'
 import { Container } from 'kitten/components/grid/container'
 import { Grid, GridCol } from 'kitten/components/grid/grid'
 import { Marger } from 'kitten/components/layout/marger'
@@ -6,11 +7,11 @@ import { Title } from 'kitten/components/typography/title'
 import { Paragraph } from 'kitten/components/typography/paragraph'
 import { HorizontalStroke } from 'kitten/components/layout/horizontal-stroke'
 
-export const ProjectDescription = () => (
+const ProjectDescriptionBase = ({ viewportIsMobile, ...others }) => (
   <Container>
     <Grid>
-      <GridCol col="6" offset="3">
-        <Marger top="8" bottom="8">
+      <GridCol col-l="6" offset-l="3">
+        <Marger top={viewportIsMobile ? 5 : 8} bottom="8">
           <Marger top="2" bottom="2">
             <Title modifier="secondary" margin={false}>
               Donnons pour Démos !
@@ -21,7 +22,7 @@ export const ProjectDescription = () => (
             <HorizontalStroke size="big" />
           </Marger>
 
-          <Marger top="4" bottom="1">
+          <Marger top={viewportIsMobile ? 3 : 4} bottom="1">
             <Title modifier="quaternary" margin={false}>
               Démos, qu’est-ce que c’est ?
             </Title>
@@ -68,7 +69,7 @@ export const ProjectDescription = () => (
             </Paragraph>
           </Marger>
 
-          <Marger top="4" bottom="1">
+          <Marger top={viewportIsMobile ? 3 : 4} bottom="1">
             <Title modifier="quaternary" margin={false}>
               Démos, une pédagogie innovante
             </Title>
@@ -95,3 +96,7 @@ export const ProjectDescription = () => (
     </Grid>
   </Container>
 )
+
+export const ProjectDescription = mediaQueries(ProjectDescriptionBase, {
+  viewportIsMobile: true,
+})
