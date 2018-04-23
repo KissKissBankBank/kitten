@@ -29,10 +29,19 @@ const navigationItems = [
   { key: 'key5', text: 'Contributeurs', href: '#' },
 ]
 
+const navigations = {
+  rewards: 'Rewards',
+  description: 'Description',
+}
+
 storiesOf('ProjectPage', module)
   .addDecorator(checkA11y)
   .addDecorator(withKnobs)
-  .add('Page', () => <KarlProject />)
+  .add('Page', () => (
+    <KarlProject
+      navigation={select('Navigation', navigations, 'description')}
+    />
+  ))
   .add('Hero', () => (
     <StyleRoot>
       <ProjectHero
