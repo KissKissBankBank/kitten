@@ -6,6 +6,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Fix: Fix `HorizontalNav` vertical alignment.
 - Feature: Add `markdown` prop to ignore `Markdown` transformation.
+- Feature: Add `Italic` props on `Title` component.
+- Fix: Fix size on `IconBadge` component.
 - Feature: Update svg size and color on `IconBadge` component.
 - Feature: Add `viewportIsSOrLess` on `mediaQueries` HOC.
 - Feature: Show `LegoGrid` only when DOM is loaded.
