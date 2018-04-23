@@ -4,9 +4,15 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Fix `HorizontalNav` vertical alignment.
+- Feature: Add `markdown` prop to ignore `Markdown` transformation.
+- Feature: Add `Italic` props on `Title` component.
+- Fix: Fix size on `IconBadge` component.
+- Feature: Update svg size and color on `IconBadge` component.
+- Feature: Add `viewportIsSOrLess` on `mediaQueries` HOC.
 - Feature: Show `LegoGrid` only when DOM is loaded.
 - Fix: Update `ArrowIcon` size on `Pagination` component.
-- Fix: Remove `hover` state when `ButtonIcon` is `active` state on `Pagination.
+- Fix: Remove `hover` state when `ButtonIcon` is `active` state on `Pagination`.
 - Feature: Add `Badge` prop on `HorizontalNav` component.
 - Feature: Add `k-HorizontalNav__badge` and
   `k-HorizontalNav__item__badge` classes.

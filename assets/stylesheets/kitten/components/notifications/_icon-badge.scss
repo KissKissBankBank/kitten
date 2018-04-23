@@ -18,15 +18,15 @@
   $color: map-get($k-colors, 'background-1');
   $background-color: map-get($k-colors, 'primary-1');
   $size: k-px-to-rem(30px);
-  $content-size: k-px-to-rem(15px);
+  $content-size: k-px-to-rem(11px);
 
   .k-IconBadge {
     display: flex;
     justify-content: center;
     align-items: center;
 
-    width: $size;
-    height: $size;
+    min-width: $size;
+    min-height: $size;
     padding: 0;
     border-radius: $size;
     background-color: $background-color;

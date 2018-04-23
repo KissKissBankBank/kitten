@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { Component } from 'react'
 import classNames from 'classnames'
 
-export class Paragraph extends React.Component {
+export class Paragraph extends Component {
   render() {
     const {
       className,
