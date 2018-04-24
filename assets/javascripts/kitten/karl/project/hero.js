@@ -213,16 +213,6 @@ const styles = {
     )`,
 
     [`@media (max-width: ${ScreenConfig.M.max}px)`]: {
-      background: `linear-gradient(
-        to bottom,
-        ${COLORS.background1} 0%,
-        ${COLORS.background1} 50%,
-        ${COLORS.background3} 50%,
-        ${COLORS.background3} 100%
-      )`,
-    },
-
-    [`@media (max-width: ${ScreenConfig.XS.max}px)`]: {
       background: `${COLORS.background3}`,
     },
 
