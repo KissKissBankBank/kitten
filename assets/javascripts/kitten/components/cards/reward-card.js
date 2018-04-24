@@ -49,12 +49,17 @@ class RewardCardBase extends Component {
     myContribution: PropTypes.string,
     manageContribution: PropTypes.string,
 
-    href: PropTypes.string,
-
     imageSrc: PropTypes.string.isRequired,
     imageSrcSmall: PropTypes.string,
 
     withoutImage: PropTypes.boolean,
+  }
+
+  static defaultProps = {
+    imageProps: {
+      src: 'https://placehold.it/350x200/caf4fe/caf4fe',
+      alt: '',
+    },
   }
 
   removeCurrentFocus = () => {
@@ -62,9 +67,6 @@ class RewardCardBase extends Component {
   }
 
   render() {
-    const Tag = this.props.href ? 'a' : 'div'
-    const href = this.props.isDisabled ? null : this.props.href
-
     const styleCard = [
       styles.card,
       this.props.isDisabled && styles.card.isDisabled,
@@ -74,12 +76,7 @@ class RewardCardBase extends Component {
       <StyleRoot>
         <Grid>
           <GridCol>
-            <Tag
-              style={styleCard}
-              href={href}
-              onClick={this.removeCurrentFocus}
-              disabled={this.props.isDisabled}
-            >
+            <div style={styleCard} disabled={this.props.isDisabled}>
               <Marger bottom={this.props.viewportIsSOrLess ? 0 : 5}>
                 <Grid style={styles.card.addPadding}>
                   <GridCol col-m="7">{this.renderDescription()}</GridCol>
@@ -91,7 +88,7 @@ class RewardCardBase extends Component {
                   <Fragment>{this.renderChoiceButton()}</Fragment>
                 )}
               </Marger>
-            </Tag>
+            </div>
           </GridCol>
         </Grid>
       </StyleRoot>
@@ -288,12 +285,17 @@ class RewardCardBase extends Component {
     const imageStyles = [
       styles.image,
       this.props.imageSrcSmall && styles.image.small,
-      { backgroundImage: `url(${this.props.imageSrc})` },
     ]
 
     if (!this.props.imageSrc || this.props.withoutImage) return
 
-    return <img alt={this.props.alt || ''} style={imageStyles} />
+    return (
+      <img
+        {...this.props.imageProps}
+        alt={this.props.alt || ''}
+        style={imageStyles}
+      />
+    )
   }
 }
 
@@ -387,8 +389,6 @@ const styles = {
   image: {
     width: '100%',
     height: '500px',
-    backgroundSize: 'cover',
-    backgroundRepeat: 'no-repeat',
     small: {
       height: '325px',
     },
