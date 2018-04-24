@@ -287,13 +287,15 @@ class RewardCardBase extends Component {
       this.props.imageSrcSmall && styles.image.small,
     ]
 
+    const imageSrcSmall = [this.props.imageSrc && this.props.imageSrcSmall]
+
     if (!this.props.imageSrc || this.props.withoutImage) return
 
     return (
       <img
         {...this.props.imageProps}
-        alt={this.props.alt || ''}
         style={imageStyles}
+        imageSrcSmall={imageSrcSmall}
       />
     )
   }
@@ -307,8 +309,6 @@ const styles = {
     borderStyle: 'solid',
     borderColor: COLORS.line1,
     display: 'flex',
-    textDecoration: 'inherit',
-    color: 'inherit',
 
     addPadding: {
       paddingLeft: '20px',

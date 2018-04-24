@@ -45,14 +45,11 @@ storiesOf('RewardCard', module)
               'Manage Contribution',
               'Gérer ma contribution',
             )}
-            imageSrc={text(
-              'Image Src',
-              'https://placehold.it/40x40/caf4fe/caf4fe',
-            )}
             isDisabled={boolean('Is Disabled', false)}
             isCompleted={boolean('Is Completed', false)}
             withoutImage={boolean('Without Image', false)}
             imageSrcSmall={boolean('Small image', false)}
+            imageSrc={boolean('Image', false)}
           />
         </GridCol>
       </Grid>
