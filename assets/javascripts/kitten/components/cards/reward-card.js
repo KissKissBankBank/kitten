@@ -51,7 +51,7 @@ class RewardCardBase extends Component {
 
     href: PropTypes.string,
 
-    imageSrc: PropTypes.string,
+    imageSrc: PropTypes.string.isRequired,
     imageSrcSmall: PropTypes.string,
 
     withoutImage: PropTypes.boolean,

@@ -26,7 +26,7 @@ export const KarlRewardCard = () => (
           myContribution="Vous avez contribué à ce projet"
           manageContribution="Gérer ma contribution"
           href="#"
-          imageSrcSmall="https://placehold.it/40x40/caf4fe/caf4fe"
+          imageSrc="https://placehold.it/40x40/caf4fe/caf4fe"
         />
       </Marger>
     </Container>
@@ -51,7 +51,7 @@ export const KarlRewardCard = () => (
           myContribution="Vous avez contribué à ce projet"
           manageContribution="Gérer ma contribution"
           imageSrc="https://placehold.it/40x40/caf4fe/caf4fe"
-          isDisabled="true"
+          isDisabled
         />
       </Marger>
     </Container>
@@ -149,6 +149,7 @@ export const KarlRewardCard = () => (
           manageContribution="Gérer ma contribution"
           href="#"
           button="Choisir"
+          imageSrc="https://placehold.it/40x40/caf4fe/caf4fe"
           imageSrcSmall
         />
       </Marger>
