@@ -98,7 +98,7 @@ const ProjectInformationsBase = ({
             <Text
               tag="div"
               color="font1"
-              weight="regular"
+              weight="bold"
               size={viewportIsMobile ? 'tiny' : 'default'}
             >
               {others.info1}
@@ -117,7 +117,7 @@ const ProjectInformationsBase = ({
             <Text
               tag="div"
               color="font1"
-              weight="regular"
+              weight="bold"
               size={viewportIsMobile ? 'tiny' : 'default'}
             >
               {others.info2}
@@ -136,7 +136,7 @@ const ProjectInformationsBase = ({
             <Text
               tag="div"
               color="font1"
-              weight="regular"
+              weight="bold"
               size={viewportIsMobile ? 'tiny' : 'default'}
             >
               {others.info3}
