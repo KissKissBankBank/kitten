@@ -20,8 +20,9 @@ import { HorizontalStroke } from 'kitten/components/layout/horizontal-stroke'
 import { Text } from 'kitten/components/typography/text'
 import { ButtonImage } from 'kitten/components/buttons/button-image'
 import { Button as ButtonBase } from 'kitten/components/buttons/button'
-import { CheckedCircleIcon as CheckedCircleIconBase } from 'kitten/components/icons/checked-circle-icon'
-import { CrossCircleIcon as CrossCircleIconBase } from 'kitten/components/icons/cross-circle-icon'
+import { IconBadge as IconBadgeBase } from 'kitten/components/notifications/icon-badge'
+import { CheckedIcon } from 'kitten/components/icons/checked-icon'
+import { CrossIcon } from 'kitten/components/icons/cross-icon'
 
 const Container = Radium(ContainerBase)
 const Grid = Radium(GridBase)
@@ -29,8 +30,42 @@ const GridCol = Radium(GridColBase)
 const Marger = Radium(MargerBase)
 const Title = Radium(TitleBase)
 const Button = Radium(ButtonBase)
-const CheckedCircleIcon = Radium(CheckedCircleIconBase)
-const CrossCircleIcon = Radium(CrossCircleIconBase)
+const IconBadge = Radium(IconBadgeBase)
+
+const RewardsManagment = ({ viewportIsMobile }) => (
+  <Fragment>
+    <IconBadge
+      style={[
+        styles.state.icon,
+        styles.contribution.spacing,
+        { backgroundColor: COLORS.valid },
+      ]}
+    >
+      <CheckedIcon className="k-IconBadge__svg" />
+    </IconBadge>
+
+    <div style={styles.contributionText}>
+      <Text
+        color="font1"
+        size={viewportIsMobile ? 'micro' : 'tiny'}
+        weight="regular"
+      >
+        Vous avez contribué à ce projet
+      </Text>
+
+      <Text
+        tag="a"
+        href="#"
+        color="primary1"
+        size={viewportIsMobile ? 'micro' : 'tiny'}
+        weight="regular"
+        style={{ textDecoration: 'none' }}
+      >
+        Gérer ma contribution
+      </Text>
+    </div>
+  </Fragment>
+)
 
 const ProjectHeroBase = ({
   viewportIsTabletOrLess,
@@ -76,11 +111,14 @@ const ProjectHeroBase = ({
 
               {others.state == 'successful' && (
                 <div style={styles.state}>
-                  <CheckedCircleIcon
-                    circleColor={COLORS.valid}
-                    checkedColor={COLORS.background1}
-                    style={styles.state.icon}
-                  />
+                  <IconBadge
+                    style={[
+                      styles.state.icon,
+                      { backgroundColor: COLORS.valid },
+                    ]}
+                  >
+                    <CheckedIcon className="k-IconBadge__svg" />
+                  </IconBadge>
 
                   <Text
                     color="font1"
@@ -94,11 +132,14 @@ const ProjectHeroBase = ({
 
               {others.state == 'failed' && (
                 <div style={styles.state}>
-                  <CrossCircleIcon
-                    circleColor={COLORS.line2}
-                    crossColor={COLORS.background1}
-                    style={styles.state.icon}
-                  />
+                  <IconBadge
+                    style={[
+                      styles.state.icon,
+                      { backgroundColor: COLORS.line2 },
+                    ]}
+                  >
+                    <CrossIcon className="k-IconBadge__svg" />
+                  </IconBadge>
 
                   <Text
                     color="font1"
@@ -165,40 +206,27 @@ const ProjectHeroBase = ({
               </div>
             )}
 
-            {others.contributed && (
-              <Fragment>
-                <CheckedCircleIcon
-                  circleColor={COLORS.valid}
-                  checkedColor={COLORS.background1}
-                  style={[styles.state.icon, styles.contribution.spacing]}
-                />
-
-                <div style={styles.contributionText}>
-                  <Text
-                    color="font1"
-                    size={viewportIsMobile ? 'micro' : 'tiny'}
-                    weight="regular"
-                  >
-                    Vous avez contribué à ce projet
-                  </Text>
-
-                  <Text
-                    tag="a"
-                    href="#"
-                    color="primary1"
-                    size={viewportIsMobile ? 'micro' : 'tiny'}
-                    weight="regular"
-                    style={{ textDecoration: 'none' }}
-                  >
-                    Gérer ma contribution
-                  </Text>
-                </div>
-              </Fragment>
-            )}
+            {others.contributed &&
+              !viewportIsTabletOrLess && (
+                <RewardsManagment viewportIsMobile={viewportIsMobile} />
+              )}
           </div>
         </GridCol>
       </Grid>
     </Container>
+
+    {others.contributed &&
+      viewportIsTabletOrLess && (
+        <Container>
+          <GridCol>
+            <Grid>
+              <Marger top="2" bottom="2" style={styles.contribution}>
+                <RewardsManagment viewportIsMobile={viewportIsMobile} />
+              </Marger>
+            </Grid>
+          </GridCol>
+        </Container>
+      )}
   </Fragment>
 )
 
@@ -382,16 +410,14 @@ const styles = {
     alignItems: 'center',
     height: '100%',
 
-    [`@media (max-width: ${ScreenConfig.M.max}px)`]: {
-      background: `${COLORS.background3}`,
-    },
-
     [`@media (max-width: ${ScreenConfig.XS.max}px)`]: {
       marginRight: `-${CONTAINER_PADDING_MOBILE}px`,
     },
 
     spacing: {
-      marginLeft: '30px',
+      [`@media (min-width: ${ScreenConfig.L.min}px)`]: {
+        marginLeft: '30px',
+      },
     },
   },
 
