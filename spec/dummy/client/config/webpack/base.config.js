@@ -16,6 +16,7 @@ const baseConfig = {
     // Entry name will determine the name of the output bundle.
     'app-kitten': [
       'babel-polyfill',
+      'whatwg-fetch',
       './entries/app-kitten',
     ],
     'app-dummy': [
