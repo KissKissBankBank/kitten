@@ -107,7 +107,7 @@ class RewardCardBase extends Component {
           <Marger bottom="2">
             <Title
               modifier={this.props.viewportIsSOrLess ? 'tertiary' : 'secondary'}
-              tag="h1"
+              {...this.props.titleProps}
               italic
               margin={false}
             >
@@ -131,6 +131,7 @@ class RewardCardBase extends Component {
               modifier={
                 this.props.viewportIsSOrLess ? 'quaternary' : 'tertiary'
               }
+              tag="p"
               margin={false}
             >
               {parseHtml(textDescription)}
@@ -252,7 +253,7 @@ class RewardCardBase extends Component {
               <div style={styles.myContribution}>
                 {this.renderIconBadge()}
                 <div style={styles.myContribution.text}>
-                  <Text size="tiny" weight="regular">
+                  <Text tag="p" size="tiny" weight="regular">
                     {parseHtml(myContribution)}
                     <br />
                     <a href="#" style={styles.myContribution.text.link}>
@@ -269,7 +270,7 @@ class RewardCardBase extends Component {
           <div style={styles.myContribution}>
             {this.renderIconBadge()}
             <div style={styles.myContribution.text}>
-              <Text size="tiny" weight="regular">
+              <Text tag="p" size="tiny" weight="regular">
                 {parseHtml(myContribution)}
                 <br />
                 <a href="#" style={styles.myContribution.text.link}>
@@ -292,7 +293,7 @@ class RewardCardBase extends Component {
 
     if (!this.props.imageSrc || this.props.withoutImage) return
 
-    return <div style={imageStyles} />
+    return <img alt={this.props.alt || ''} style={imageStyles} />
   }
 }
 
@@ -386,7 +387,6 @@ const styles = {
   image: {
     width: '100%',
     height: '500px',
-    display: 'flex',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     small: {
