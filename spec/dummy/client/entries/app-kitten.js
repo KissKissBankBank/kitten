@@ -16,6 +16,7 @@ import { ButtonImageWithTextAndBadge }
   from 'kitten/components/buttons/button-image-with-text-and-badge'
 import { ButtonQuestionMarkIcon }
   from 'kitten/components/buttons/button-question-mark-icon'
+import { ButtonSwitch } from 'kitten/components/buttons/button-switch'
 import {
   FacebookButtonIcon,
   InstagramButtonIcon,
@@ -333,6 +334,7 @@ ReactOnRails.register({
   ButtonImage,
   ButtonImageWithTextAndBadge,
   ButtonQuestionMarkIcon,
+  ButtonSwitch,
   FacebookButtonIcon,
   InstagramButtonIcon,
   LinkedinButtonIcon,

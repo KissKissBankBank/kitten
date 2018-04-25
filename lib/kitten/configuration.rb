@@ -73,6 +73,7 @@ module Kitten
               path: 'components/buttons/social-icon-button-with-words',
               name: 'Social icon button with words',
             },
+            { path: 'components/buttons/button-switch', name: 'Button switch'},
             { path: 'components/buttons/image-button', name: 'Image button' },
             {
               path: 'components/buttons/image-button-with-text',
