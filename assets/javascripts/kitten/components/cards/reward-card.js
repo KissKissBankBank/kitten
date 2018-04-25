@@ -28,7 +28,7 @@ const Paragraph = Radium(ParagraphBase)
 const IconBadge = Radium(IconBadgeBase)
 const HorizontalStroke = Radium(HorizontalStrokeBase)
 
-class RewardCardBase extends Component {
+class RewardCardComponent extends Component {
   static propTypes = {
     titleMount: PropTypes.string.isRequired,
     titleDescription: PropTypes.string.isRequired,
@@ -49,7 +49,7 @@ class RewardCardBase extends Component {
     myContribution: PropTypes.string,
     manageContribution: PropTypes.string,
 
-    imageSrc: PropTypes.string.isRequired,
+    imageSrc: PropTypes.string,
     imageSrcSmall: PropTypes.string,
   }
 
@@ -102,7 +102,6 @@ class RewardCardBase extends Component {
           <Marger bottom="2">
             <Title
               modifier={this.props.viewportIsSOrLess ? 'tertiary' : 'secondary'}
-              {...this.props.titleProps}
               italic
               margin={false}
             >
@@ -393,7 +392,7 @@ const styles = {
   },
 }
 
-export const RewardCard = mediaQueries(Radium(RewardCardBase), {
+export const RewardCard = mediaQueries(Radium(RewardCardComponent), {
   viewportIsMobile: true,
   viewportIsTabletOrLess: true,
   viewportIsSOrLess: true,
