@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Create `RewardCard` component and his story.
+- Feature: Create `RewardCard` component and his stories.
 - Fix: Fix `HorizontalNav` vertical alignment.
 - Feature: Add `markdown` prop to ignore `Markdown` transformation.
 - Feature: Add `Italic` props on `Title` component.
