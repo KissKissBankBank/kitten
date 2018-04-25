@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `KarlRewardCard` example.
 - Feature: Update `Title` example.
 - Fix: Remove useless js file `displayShortcut`.
 - Fix: Rename `KarlBrowsingHorizontalNav` to `KarlTouchHorizontalNav`.
