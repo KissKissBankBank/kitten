@@ -30,9 +30,9 @@ const HorizontalStroke = Radium(HorizontalStrokeBase)
 
 class RewardCardComponent extends Component {
   static propTypes = {
-    titleMount: PropTypes.string.isRequired,
-    titleDescription: PropTypes.string.isRequired,
-    textDescription: PropTypes.string.isRequired,
+    titleMount: PropTypes.string,
+    titleDescription: PropTypes.string,
+    textDescription: PropTypes.string,
 
     titleContributors: PropTypes.string,
     titleSmallContributors: PropTypes.string,
@@ -207,10 +207,10 @@ class RewardCardComponent extends Component {
         )}
 
         {!this.props.viewportIsSOrLess && (
-          <div>
+          <Fragment>
             <Marger bottom="2">{this.renderButton()}</Marger>
             <Marger top="2">{this.renderMyContribution()}</Marger>
-          </div>
+          </Fragment>
         )}
       </Fragment>
     )
@@ -284,8 +284,8 @@ class RewardCardComponent extends Component {
     const imageStyles = [
       styles.image.default,
       this.props.imageSrcSmall && styles.image.small,
-      size == 'default' && styles.image.default,
-      size == 'small' && styles.image.small,
+      size === 'default' && styles.image.default,
+      size === 'small' && styles.image.small,
     ]
 
     if (!this.props.imageSrc && !this.props.imageSrcSmall) return
@@ -322,7 +322,7 @@ const styles = {
     },
 
     isDisabled: {
-      filter: 'grayscale(1) opacity(0.4)',
+      filter: 'grayscale(1) opacity(.4)',
       cursor: 'not-allowed',
     },
   },
