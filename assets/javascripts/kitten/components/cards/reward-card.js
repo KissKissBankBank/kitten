@@ -51,8 +51,6 @@ class RewardCardBase extends Component {
 
     imageSrc: PropTypes.string.isRequired,
     imageSrcSmall: PropTypes.string,
-
-    withoutImage: PropTypes.boolean,
   }
 
   static defaultProps = {
@@ -128,7 +126,6 @@ class RewardCardBase extends Component {
               modifier={
                 this.props.viewportIsSOrLess ? 'quaternary' : 'tertiary'
               }
-              tag="p"
               margin={false}
             >
               {parseHtml(textDescription)}
@@ -200,7 +197,10 @@ class RewardCardBase extends Component {
       <Fragment>
         {this.props.viewportIsSOrLess && (
           <div>
-            <Marger top={this.props.withoutImage ? 0 : 2} bottom="2">
+            <Marger
+              top={!this.props.imageSrc && !this.props.imageSrcSmall ? 0 : 2}
+              bottom="2"
+            >
               {this.renderMyContribution()}
             </Marger>
             {this.renderButton()}
@@ -250,7 +250,7 @@ class RewardCardBase extends Component {
               <div style={styles.myContribution}>
                 {this.renderIconBadge()}
                 <div style={styles.myContribution.text}>
-                  <Text tag="p" size="tiny" weight="regular">
+                  <Text size="tiny" weight="regular">
                     {parseHtml(myContribution)}
                     <br />
                     <a href="#" style={styles.myContribution.text.link}>
@@ -267,7 +267,7 @@ class RewardCardBase extends Component {
           <div style={styles.myContribution}>
             {this.renderIconBadge()}
             <div style={styles.myContribution.text}>
-              <Text tag="p" size="tiny" weight="regular">
+              <Text size="tiny" weight="regular">
                 {parseHtml(myContribution)}
                 <br />
                 <a href="#" style={styles.myContribution.text.link}>
@@ -281,23 +281,17 @@ class RewardCardBase extends Component {
     )
   }
 
-  renderImage() {
+  renderImage(size) {
     const imageStyles = [
-      styles.image,
+      styles.image.default,
       this.props.imageSrcSmall && styles.image.small,
+      size == 'default' && styles.image.default,
+      size == 'small' && styles.image.small,
     ]
 
-    const imageSrcSmall = [this.props.imageSrc && this.props.imageSrcSmall]
+    if (!this.props.imageSrc && !this.props.imageSrcSmall) return
 
-    if (!this.props.imageSrc || this.props.withoutImage) return
-
-    return (
-      <img
-        {...this.props.imageProps}
-        style={imageStyles}
-        imageSrcSmall={imageSrcSmall}
-      />
-    )
+    return <img {...this.props.imageProps} style={imageStyles} />
   }
 }
 
@@ -387,9 +381,13 @@ const styles = {
   },
 
   image: {
-    width: '100%',
-    height: '500px',
+    default: {
+      width: '100%',
+      height: '500px',
+    },
+
     small: {
+      width: '100%',
       height: '325px',
     },
   },

@@ -120,7 +120,6 @@ export const KarlRewardCard = () => (
           myContribution="Vous avez contribué à ce projet"
           manageContribution="Gérer ma contribution"
           button="Choisir"
-          withoutImage
         />
       </Marger>
     </Container>
@@ -144,7 +143,6 @@ export const KarlRewardCard = () => (
           myContribution="Vous avez contribué à ce projet"
           manageContribution="Gérer ma contribution"
           button="Choisir"
-          // imageSrc
           imageSrcSmall
         />
       </Marger>
