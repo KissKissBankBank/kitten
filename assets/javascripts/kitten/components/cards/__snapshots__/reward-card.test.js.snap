@@ -197,92 +197,88 @@ exports[`<RewardCard /> by default matches with snapshot 1`] = `
                 }
               >
                 <div
-                  data-radium={true}
+                  style={
+                    Object {
+                      "marginBottom": "1.25rem",
+                      "marginTop": null,
+                    }
+                  }
+                />
+                <div
+                  style={
+                    Object {
+                      "marginBottom": null,
+                      "marginTop": "1.25rem",
+                    }
+                  }
                 >
                   <div
+                    data-radium={true}
                     style={
                       Object {
-                        "marginBottom": "1.25rem",
-                        "marginTop": null,
-                      }
-                    }
-                  />
-                  <div
-                    style={
-                      Object {
-                        "marginBottom": null,
-                        "marginTop": "1.25rem",
+                        "alignItems": "center",
+                        "display": "flex",
                       }
                     }
                   >
-                    <div
+                    <span
+                      className="k-IconBadge"
                       data-radium={true}
                       style={
                         Object {
-                          "alignItems": "center",
-                          "display": "flex",
+                          "backgroundColor": "#61d079",
+                          "marginRight": "10px",
                         }
                       }
                     >
                       <span
-                        className="k-IconBadge"
-                        data-radium={true}
-                        style={
-                          Object {
-                            "backgroundColor": "#61d079",
-                            "marginRight": "10px",
-                          }
-                        }
+                        className="k-IconBadge__content"
                       >
-                        <span
-                          className="k-IconBadge__content"
+                        <svg
+                          className="k-IconBadge__svg"
+                          viewBox="0 0 11 8"
+                          xmlns="http://www.w3.org/2000/svg"
                         >
-                          <svg
-                            className="k-IconBadge__svg"
-                            viewBox="0 0 11 8"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <title>
-                              Checked
-                            </title>
-                            <path
-                              d="M4.44 7.596L3.024 6.182 8.682.525l1.414 1.414z"
-                            />
-                            <path
-                              d="M4.44 7.596L.903 4.06l1.414-1.414 3.536 3.536z"
-                            />
-                          </svg>
-                        </span>
+                          <title>
+                            Checked
+                          </title>
+                          <path
+                            d="M4.44 7.596L3.024 6.182 8.682.525l1.414 1.414z"
+                          />
+                          <path
+                            d="M4.44 7.596L.903 4.06l1.414-1.414 3.536 3.536z"
+                          />
+                        </svg>
                       </span>
-                      <div
-                        data-radium={true}
-                        style={
-                          Object {
-                            "display": "flex",
-                            "lineHeight": "normal",
-                          }
+                    </span>
+                    <div
+                      data-radium={true}
+                      style={
+                        Object {
+                          "display": "flex",
+                          "lineHeight": "normal",
                         }
+                      }
+                    >
+                      <span
+                        className="k-u-size-tiny k-u-weight-regular"
+                        data-radium={true}
                       >
-                        <span
-                          className="k-u-size-tiny k-u-weight-regular"
+                        undefined
+                        <br />
+                        <a
                           data-radium={true}
+                          href="#"
+                          style={
+                            Object {
+                              "color": "#19b4fa",
+                              "textDecoration": "none",
+                            }
+                          }
                         >
                           undefined
-                          <br />
-                          <a
-                            data-radium={true}
-                            href="#"
-                            style={
-                              Object {
-                                "color": "#19b4fa",
-                                "textDecoration": "none",
-                              }
-                            }
-                          >
-                            undefined
-                          </a>
-                        </span>
-                      </div>
+                        </a>
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -305,6 +301,323 @@ padding-right: 50px !important;}}
 padding-right: 0 !important;}}
 @media (min-width: 1080px){ .rmq-ce79a9e0{padding-left: 115px !important;
 padding-right: 0 !important;}}",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`<RewardCard /> with some props matches with snapshot 1`] = `
+<div
+  data-radium={true}
+>
+  <div
+    className="k-Grid"
+  >
+    <div
+      className="k-Grid__col--12 "
+      data-radium={true}
+    >
+      <div
+        data-radium={true}
+        disabled={undefined}
+        style={
+          Object {
+            "borderColor": "#eee",
+            "borderStyle": "solid",
+            "borderWidth": "2px",
+            "display": "flex",
+          }
+        }
+      >
+        <div
+          style={
+            Object {
+              "marginBottom": "3.125rem",
+              "marginTop": null,
+            }
+          }
+        >
+          <div
+            className="rmq-5aa2f196 rmq-e60873c0 rmq-ce79a9e0 k-Grid"
+            data-radium={true}
+            style={
+              Object {
+                "paddingLeft": "20px",
+                "paddingRight": "20px",
+              }
+            }
+          >
+            <div
+              className="k-Grid__col--12 k-Grid__col--7@m"
+              data-radium={true}
+            >
+              <div
+                style={
+                  Object {
+                    "marginBottom": "1.25rem",
+                    "marginTop": "3.125rem",
+                  }
+                }
+              >
+                <div
+                  style={
+                    Object {
+                      "marginBottom": "1.25rem",
+                      "marginTop": null,
+                    }
+                  }
+                >
+                  <h1
+                    className="k-Title k-Title--secondary k-Title--withoutMargin k-Title--italic"
+                  >
+                    Custom title mount
+                  </h1>
+                </div>
+                <div
+                  style={
+                    Object {
+                      "marginBottom": "2.5rem",
+                      "marginTop": "1.25rem",
+                    }
+                  }
+                >
+                  <span
+                    className="k-HorizontalStroke k-HorizontalStroke--big"
+                  />
+                </div>
+                <div
+                  style={
+                    Object {
+                      "marginBottom": "0.625rem",
+                      "marginTop": "2.5rem",
+                    }
+                  }
+                >
+                  <h2
+                    className="k-u-size-huge k-u-weight-bold"
+                  >
+                    Custom title description
+                  </h2>
+                </div>
+                <div
+                  style={
+                    Object {
+                      "marginBottom": "1.25rem",
+                      "marginTop": "0.625rem",
+                    }
+                  }
+                >
+                  <p
+                    className="k-Paragraph k-Paragraph--tertiary k-Paragraph--withoutMargin"
+                  >
+                    Custom text description
+                  </p>
+                </div>
+              </div>
+              <div
+                style={
+                  Object {
+                    "marginBottom": "2.5rem",
+                    "marginTop": "1.25rem",
+                  }
+                }
+              >
+                <div
+                  className="k-Grid"
+                  data-radium={true}
+                >
+                  <div
+                    className="k-Grid__col--12 k-Grid__col--4@l k-Grid__col--3@xl"
+                    data-radium={true}
+                    style={
+                      Object {
+                        "display": "flex",
+                        "flexDirection": "column",
+                        "padding": "0 \${COMPONENT_GUTTER}px",
+                      }
+                    }
+                  >
+                    <span
+                      className="k-u-weight-regular"
+                    >
+                      Custom title contributors
+                    </span>
+                    <span
+                      className=""
+                    >
+                      Custom value contributors
+                    </span>
+                  </div>
+                  <div
+                    className="k-Grid__col--12 k-Grid__col--4@l k-Grid__col--3@xl"
+                    data-radium={true}
+                    style={
+                      Object {
+                        "display": "flex",
+                        "flexDirection": "column",
+                        "padding": "0 \${COMPONENT_GUTTER}px",
+                      }
+                    }
+                  >
+                    <span
+                      className="k-u-weight-regular"
+                    >
+                      Custom title delivery
+                    </span>
+                    <span
+                      className=""
+                    >
+                      Custom value delivery
+                    </span>
+                  </div>
+                  <div
+                    className="k-Grid__col--12 k-Grid__col--4@l k-Grid__col--3@xl"
+                    data-radium={true}
+                    style={
+                      Object {
+                        "display": "flex",
+                        "flexDirection": "column",
+                        "padding": "0 \${COMPONENT_GUTTER}px",
+                      }
+                    }
+                  >
+                    <span
+                      className="k-u-weight-regular"
+                    >
+                      Custom title availability
+                    </span>
+                    <span
+                      className=""
+                    >
+                      Custom value availability
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div
+                style={
+                  Object {
+                    "marginBottom": null,
+                    "marginTop": "2.5rem",
+                  }
+                }
+              >
+                <div
+                  style={
+                    Object {
+                      "marginBottom": "1.25rem",
+                      "marginTop": null,
+                    }
+                  }
+                >
+                  <button
+                    className="rmq-2c87bfe9 k-Button k-Button--helium k-Button--big"
+                    data-radium={true}
+                    style={Object {}}
+                    tabIndex={null}
+                  >
+                    Custom text button
+                  </button>
+                </div>
+                <div
+                  style={
+                    Object {
+                      "marginBottom": null,
+                      "marginTop": "1.25rem",
+                    }
+                  }
+                >
+                  <div
+                    data-radium={true}
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "display": "flex",
+                      }
+                    }
+                  >
+                    <span
+                      className="k-IconBadge"
+                      data-radium={true}
+                      style={
+                        Object {
+                          "backgroundColor": "#61d079",
+                          "marginRight": "10px",
+                        }
+                      }
+                    >
+                      <span
+                        className="k-IconBadge__content"
+                      >
+                        <svg
+                          className="k-IconBadge__svg"
+                          viewBox="0 0 11 8"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <title>
+                            Checked
+                          </title>
+                          <path
+                            d="M4.44 7.596L3.024 6.182 8.682.525l1.414 1.414z"
+                          />
+                          <path
+                            d="M4.44 7.596L.903 4.06l1.414-1.414 3.536 3.536z"
+                          />
+                        </svg>
+                      </span>
+                    </span>
+                    <div
+                      data-radium={true}
+                      style={
+                        Object {
+                          "display": "flex",
+                          "lineHeight": "normal",
+                        }
+                      }
+                    >
+                      <span
+                        className="k-u-size-tiny k-u-weight-regular"
+                        data-radium={true}
+                      >
+                        Custom my contribution
+                        <br />
+                        <a
+                          data-radium={true}
+                          href="#"
+                          style={
+                            Object {
+                              "color": "#19b4fa",
+                              "textDecoration": "none",
+                            }
+                          }
+                        >
+                          Custom mange contribution
+                        </a>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className="k-Grid__col--12 k-Grid__col--4@m k-Grid__col--offset-1@m"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "@media (min-width: 640px){ .rmq-5aa2f196{padding-left: 50px !important;
+padding-right: 50px !important;}}
+@media (min-width: 768px){ .rmq-e60873c0{padding-left: 50px !important;
+padding-right: 0 !important;}}
+@media (min-width: 1080px){ .rmq-ce79a9e0{padding-left: 115px !important;
+padding-right: 0 !important;}}
+@media (max-width: 767px){ .rmq-2c87bfe9{width: 100% !important;}}",
       }
     }
   />
