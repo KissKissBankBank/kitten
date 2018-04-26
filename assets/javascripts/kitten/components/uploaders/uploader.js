@@ -15,6 +15,22 @@ export class Uploader extends React.Component {
     this.handleCancel = this.handleCancel.bind(this)
   }
 
+  handleBase64Return = file => {
+    const reader = new FileReader()
+    fetch(file.preview)
+      .then(result => result.blob())
+      .then(blob => {
+        reader.readAsDataURL(blob)
+        reader.onloadend = () => {
+          this.props.onSuccess({
+            file: file,
+            preview: reader.result,
+            name: file.name,
+          })
+        }
+      })
+  }
+
   handleChangeAcceptedFiles(acceptedFiles) {
     const file = acceptedFiles[0]
 
@@ -22,16 +38,20 @@ export class Uploader extends React.Component {
       fileName: file.name,
     })
 
-    this.props.onSuccess({
-      file: file,
-      preview: file.preview,
-      name: file.name,
-    })
+    if (this.props.base64) {
+      this.handleBase64Return(file)
+    } else {
+      this.props.onSuccess({
+        file: file,
+        preview: file.preview,
+        name: file.name,
+      })
+    }
 
     this.props.onError(false)
   }
 
-  handleChangeRejectedFiles(rejectedFiles) {
+  handleChangeRejectedFiles() {
     this.props.onError(true)
 
     this.handleCancel()
@@ -98,4 +118,5 @@ Uploader.defaultProps = {
   onError: () => {},
   onReset: () => {},
   disabled: false,
+  base64: false,
 }

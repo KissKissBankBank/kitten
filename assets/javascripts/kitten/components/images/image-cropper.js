@@ -59,23 +59,15 @@ export class ImageCropper extends React.Component {
   }
 
   handleUploaderSuccess(data) {
-    const reader = new FileReader()
-    fetch(data.preview)
-      .then(result => result.blob())
-      .then(blob => {
-        reader.readAsDataURL(blob)
-        reader.onloadend = () => {
-          this.setState(
-            {
-              imageSrc: reader.result,
-              imageCropSrc: null,
-              fileName: data.name,
-              sliderValue: 0,
-            },
-            this.setCropperHeight,
-          )
-        }
-      })
+    this.setState(
+      {
+        imageSrc: data.preview,
+        imageCropSrc: null,
+        fileName: data.name,
+        sliderValue: 0,
+      },
+      this.setCropperHeight,
+    )
   }
 
   handleUploaderError(hasError) {
@@ -286,6 +278,7 @@ export class ImageCropper extends React.Component {
         fileName={this.props.fileName}
         disabled={this.props.disabled}
         deletable={this.props.deletable}
+        base64={this.props.base64}
       />
     )
   }
@@ -336,6 +329,7 @@ ImageCropper.defaultProps = {
   description: 'Lorem ipsum…',
   disabled: false,
   isCropEnabled: true,
+  base64: true,
 
   onChange: _fileData => {},
 }
