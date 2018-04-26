@@ -220,7 +220,12 @@ class RewardCardComponent extends Component {
     if (!this.props.button || this.props.isCompleted) return
 
     return (
-      <Button size="big" modifier="helium" style={styles.button}>
+      <Button
+        size="big"
+        modifier="helium"
+        aria-label={this.props.button}
+        style={styles.button}
+      >
         {this.props.button}
       </Button>
     )
