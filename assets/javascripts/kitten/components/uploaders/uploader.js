@@ -17,18 +17,14 @@ export class Uploader extends React.Component {
 
   handleBase64Return = file => {
     const reader = new FileReader()
-    fetch(file.preview)
-      .then(result => result.blob())
-      .then(blob => {
-        reader.readAsDataURL(blob)
-        reader.onloadend = () => {
-          this.props.onSuccess({
-            file: file,
-            preview: reader.result,
-            name: file.name,
-          })
-        }
+    reader.onload = event => {
+      this.props.onSuccess({
+        file: file,
+        preview: event.target.result,
+        name: file.name,
       })
+    }
+    reader.readAsDataURL(file)
   }
 
   handleChangeAcceptedFiles(acceptedFiles) {
