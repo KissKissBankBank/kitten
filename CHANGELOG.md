@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 - Feature: Add `cropperData` values on the return of `onChange` handler of 
 `ImageCropper` component.
+- Feature: Add 'isCropEnabled' prop on `ImageCropper` component. If false, the 
+cropper feature is turned off (true by default).
 
 ## [20.8.0] - 2018-04-27
 
