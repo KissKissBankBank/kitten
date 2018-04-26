@@ -25,7 +25,7 @@ class ButtonSwithComponent extends Component {
 
     return (
       <StyleRoot>
-        <span key="button-switch">
+        <span key="button-switch" style={styles.switch}>
           <Button
             icon
             title={buttonChildren}
@@ -40,6 +40,15 @@ class ButtonSwithComponent extends Component {
       </StyleRoot>
     )
   }
+}
+
+const styles = {
+  switch: {
+    ':hover': {},
+    ':focus': {},
+    ':active': {},
+    ':disabled': {},
+  },
 }
 
 export const ButtonSwitch = Radium(ButtonSwithComponent)
