@@ -14,26 +14,27 @@ class ButtonSwithComponent extends Component {
     secondText: PropTypes.string.isRequired,
   }
 
-  render() {
+  render(active) {
     const { firstText, secondText } = this.props
 
     const isActived = Radium.getState(this.state, 'button-switch', ':active')
 
     const buttonChildren = [
-      isActived ? parseHtml(firstText) : parseHtml(secondText),
+      active == true ? parseHtml(firstText) : parseHtml(secondText),
     ]
 
     return (
       <StyleRoot>
         <span key="button-switch">
           <Button
-            title="Switch button"
-            aria-label="Switch button"
             icon
+            title={buttonChildren}
+            aria-label={buttonChildren}
             modifier="azote"
             active={isActived}
           >
             <HeartIcon className="k-Button__icon" />
+            {buttonChildren}
           </Button>
         </span>
       </StyleRoot>
