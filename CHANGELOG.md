@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Add `name` value on `TextInput` textarea version.
 - Fix: Fix `HorizontalNav` vertical alignment.
 - Feature: Add `markdown` prop to ignore `Markdown` transformation.
 - Feature: Add `Italic` props on `Title` component.
