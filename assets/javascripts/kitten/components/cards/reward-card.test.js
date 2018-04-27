@@ -35,7 +35,7 @@ describe('<RewardCard />', () => {
       component = renderer
         .create(
           <RewardCard
-            titleMount="Custom title mount"
+            titleAmount="Custom title mount"
             imageProps={{
               src: '#image',
               alt: 'Image alt',
@@ -53,7 +53,7 @@ describe('<RewardCard />', () => {
             valueAvailability="Custom value availability"
             button="Custom text button"
             myContribution="Custom my contribution"
-            manageContribution="Custom mange contribution"
+            manageContribution="Custom manage contribution"
           />,
         )
         .toJSON()

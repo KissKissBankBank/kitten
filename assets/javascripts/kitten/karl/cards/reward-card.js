@@ -10,21 +10,21 @@ export const KarlRewardCard = () => (
     <Container>
       <Marger bottom="2">
         <RewardCard
-          titleMount="Pour 15€"
+          titleAmount="For 00€"
           titleDescription="Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
           textDescription="In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi."
-          titleContributors="Contributeurs"
-          titleSmallContributors="Contributeurs : "
+          titleContributors="Contributors"
+          titleSmallContributors="Contributors : "
           valueContributors="35"
-          titleDelivery="Livraison"
-          titleSmallDelivery="Livraison : "
-          valueDelivery="Janvier 2018"
-          titleAvailability="Disponibilité"
-          titleSmallAvailability="Disponibilité : "
+          titleDelivery="Delivery"
+          titleSmallDelivery="Delivery : "
+          valueDelivery="January 2018"
+          titleAvailability="Availability"
+          titleSmallAvailability="Availability : "
           valueAvailability="200"
-          button="Choisir"
-          myContribution="Vous avez contribué à ce projet"
-          manageContribution="Gérer ma contribution"
+          button="Choose"
+          myContribution="You contributed to this project"
+          manageContribution="Manage my contribution"
           imageSrc
         />
       </Marger>
@@ -34,22 +34,22 @@ export const KarlRewardCard = () => (
     <Container>
       <Marger top="2" bottom="2">
         <RewardCard
-          titleMount="Pour 15€"
+          titleAmount="For 00€"
           titleDescription="Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
           textDescription="In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi."
-          titleContributors="Contributeurs"
-          titleSmallContributors="Contributeurs : "
+          titleContributors="Contributors"
+          titleSmallContributors="Contributors : "
           valueContributors="35"
-          titleDelivery="Livraison"
-          titleSmallDelivery="Livraison : "
-          valueDelivery="Janvier 2018"
-          titleAvailability="Disponibilité"
-          titleSmallAvailability="Disponibilité : "
+          titleDelivery="Delivery"
+          titleSmallDelivery="Delivery : "
+          valueDelivery="January 2018"
+          titleAvailability="Availability"
+          titleSmallAvailability="Availability : "
           valueAvailability="200"
-          button="Choisir"
-          myContribution="Vous avez contribué à ce projet"
-          manageContribution="Gérer ma contribution"
-          imageSrc="https://placehold.it/40x40/caf4fe/caf4fe"
+          button="Choose"
+          myContribution="You contributed to this project"
+          manageContribution="Manage my contribution"
+          imageSrc
           isDisabled
         />
       </Marger>
@@ -59,20 +59,20 @@ export const KarlRewardCard = () => (
     <Container>
       <Marger top="2" bottom="2">
         <RewardCard
-          titleMount="Pour 15€"
+          titleAmount="For 00€"
           titleDescription="Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
           textDescription="In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi."
-          titleContributors="Contributeurs"
-          titleSmallContributors="Contributeurs : "
+          titleContributors="Contributors"
+          titleSmallContributors="Contributors : "
           valueContributors="35"
-          titleDelivery="Livraison"
-          titleSmallDelivery="Livraison : "
-          valueDelivery="Janvier 2018"
-          titleAvailability="Disponibilité"
-          titleSmallAvailability="Disponibilité : "
+          titleDelivery="Delivery"
+          titleSmallDelivery="Delivery : "
+          valueDelivery="January 2018"
+          titleAvailability="Availability"
+          titleSmallAvailability="Availability : "
           valueAvailability="200"
-          myContribution="Vous avez contribué à ce projet"
-          manageContribution="Gérer ma contribution"
+          myContribution="You contributed to this project"
+          manageContribution="Manage my contribution"
           imageSrc
         />
       </Marger>
@@ -82,20 +82,20 @@ export const KarlRewardCard = () => (
     <Container>
       <Marger top="2" bottom="2">
         <RewardCard
-          titleMount="Pour 15€"
+          titleAmount="For 00€"
           titleDescription="Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
           textDescription="In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi."
-          titleContributors="Contributeurs"
-          titleSmallContributors="Contributeurs : "
+          titleContributors="Contributors"
+          titleSmallContributors="Contributors : "
           valueContributors="35"
-          titleDelivery="Livraison"
-          titleSmallDelivery="Livraison : "
-          valueDelivery="Janvier 2018"
-          titleAvailability="Disponibilité"
-          titleSmallAvailability="Disponibilité : "
+          titleDelivery="Delivery"
+          titleSmallDelivery="Delivery : "
+          valueDelivery="January 2018"
+          titleAvailability="Availability"
+          titleSmallAvailability="Availability : "
           valueAvailability="200"
-          myContribution="Vous avez contribué à ce projet"
-          manageContribution="Gérer ma contribution"
+          myContribution="You contributed to this project"
+          manageContribution="Manage my contribution"
           withoutImage
         />
       </Marger>
@@ -105,21 +105,21 @@ export const KarlRewardCard = () => (
     <Container>
       <Marger top="2" bottom="2">
         <RewardCard
-          titleMount="Pour 15€"
+          titleAmount="For 00€"
           titleDescription="Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
           textDescription="In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi."
-          titleContributors="Contributeurs"
-          titleSmallContributors="Contributeurs : "
+          titleContributors="Contributors"
+          titleSmallContributors="Contributors : "
           valueContributors="35"
-          titleDelivery="Livraison"
-          titleSmallDelivery="Livraison : "
-          valueDelivery="Janvier 2018"
-          titleAvailability="Disponibilité"
-          titleSmallAvailability="Disponibilité : "
+          titleDelivery="Delivery"
+          titleSmallDelivery="Delivery : "
+          valueDelivery="January 2018"
+          titleAvailability="Availability"
+          titleSmallAvailability="Availability : "
           valueAvailability="200"
-          myContribution="Vous avez contribué à ce projet"
-          manageContribution="Gérer ma contribution"
-          button="Choisir"
+          myContribution="You contributed to this project"
+          manageContribution="Manage my contribution"
+          button="Choose"
         />
       </Marger>
     </Container>
@@ -128,21 +128,21 @@ export const KarlRewardCard = () => (
     <Container>
       <Marger top="2" bottom="2">
         <RewardCard
-          titleMount="Pour 15€"
+          titleAmount="For 00€"
           titleDescription="Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
           textDescription="In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi."
-          titleContributors="Contributeurs"
-          titleSmallContributors="Contributeurs : "
+          titleContributors="Contributors"
+          titleSmallContributors="Contributors : "
           valueContributors="35"
-          titleDelivery="Livraison"
-          titleSmallDelivery="Livraison : "
-          valueDelivery="Janvier 2018"
-          titleAvailability="Disponibilité"
-          titleSmallAvailability="Disponibilité : "
+          titleDelivery="Delivery"
+          titleSmallDelivery="Delivery : "
+          valueDelivery="January 2018"
+          titleAvailability="Availability"
+          titleSmallAvailability="Availability : "
           valueAvailability="200"
-          myContribution="Vous avez contribué à ce projet"
-          manageContribution="Gérer ma contribution"
-          button="Choisir"
+          myContribution="You contributed to this project"
+          manageContribution="Manage my contribution"
+          button="Choose"
           imageSrcSmall
         />
       </Marger>

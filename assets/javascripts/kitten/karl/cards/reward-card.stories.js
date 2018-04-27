@@ -12,7 +12,7 @@ storiesOf('RewardCard', module)
       <Grid>
         <GridCol offset="1" col="10">
           <RewardCard
-            titleMount={text('Title Mount', 'Pour 15€')}
+            titleAmount={text('Title Amount', 'Pour 15€')}
             titleDescription={text(
               'Title Description',
               'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',

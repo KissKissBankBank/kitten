@@ -30,9 +30,9 @@ const HorizontalStroke = Radium(HorizontalStrokeBase)
 
 class RewardCardComponent extends Component {
   static propTypes = {
-    titleMount: PropTypes.string,
-    titleDescription: PropTypes.string,
-    textDescription: PropTypes.string,
+    titleAmount: PropTypes.string.isRequired,
+    titleDescription: PropTypes.string.isRequired,
+    textDescription: PropTypes.string.isRequired,
 
     titleContributors: PropTypes.string,
     titleSmallContributors: PropTypes.string,
@@ -94,7 +94,7 @@ class RewardCardComponent extends Component {
   }
 
   renderDescription() {
-    const { titleMount, titleDescription, textDescription } = this.props
+    const { titleAmount, titleDescription, textDescription } = this.props
 
     return (
       <Fragment>
@@ -105,7 +105,7 @@ class RewardCardComponent extends Component {
               italic
               margin={false}
             >
-              {parseHtml(titleMount)}
+              {parseHtml(titleAmount)}
             </Title>
           </Marger>
           <Marger top="2" bottom={this.props.viewportIsMobile ? 3 : 4}>
