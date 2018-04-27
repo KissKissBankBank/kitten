@@ -307,6 +307,11 @@ const styles = {
     borderStyle: 'solid',
     borderColor: COLORS.line1,
     display: 'flex',
+    transition: 'all .4s ease-in-out',
+
+    ':hover': {
+      transform: 'scale(1.02)',
+    },
 
     addPadding: {
       paddingLeft: '20px',
