@@ -12,6 +12,7 @@ exports[`<RewardCard /> by default matches with snapshot 1`] = `
       data-radium={true}
     >
       <div
+        className="rmq-476923d6"
         data-radium={true}
         disabled={undefined}
         style={
@@ -295,7 +296,8 @@ exports[`<RewardCard /> by default matches with snapshot 1`] = `
   <style
     dangerouslySetInnerHTML={
       Object {
-        "__html": "@media (min-width: 640px){ .rmq-5aa2f196{padding-left: 50px !important;
+        "__html": "@media (min-width: 768px){ .rmq-476923d6{transition: all .4s ease-in-out !important;}}
+@media (min-width: 640px){ .rmq-5aa2f196{padding-left: 50px !important;
 padding-right: 50px !important;}}
 @media (min-width: 768px){ .rmq-e60873c0{padding-left: 50px !important;
 padding-right: 0 !important;}}
@@ -319,6 +321,7 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
       data-radium={true}
     >
       <div
+        className="rmq-476923d6"
         data-radium={true}
         disabled={undefined}
         style={
@@ -593,7 +596,7 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
                             }
                           }
                         >
-                          Custom mange contribution
+                          Custom manage contribution
                         </a>
                       </span>
                     </div>
@@ -612,7 +615,8 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
   <style
     dangerouslySetInnerHTML={
       Object {
-        "__html": "@media (min-width: 640px){ .rmq-5aa2f196{padding-left: 50px !important;
+        "__html": "@media (min-width: 768px){ .rmq-476923d6{transition: all .4s ease-in-out !important;}}
+@media (min-width: 640px){ .rmq-5aa2f196{padding-left: 50px !important;
 padding-right: 50px !important;}}
 @media (min-width: 768px){ .rmq-e60873c0{padding-left: 50px !important;
 padding-right: 0 !important;}}

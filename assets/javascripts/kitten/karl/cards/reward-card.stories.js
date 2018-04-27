@@ -12,7 +12,7 @@ storiesOf('RewardCard', module)
       <Grid>
         <GridCol offset="1" col="10">
           <RewardCard
-            titleAmount={text('Title Amount', 'Pour 15€')}
+            titleAmount={text('Title Amount', 'For 00€')}
             titleDescription={text(
               'Title Description',
               'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',
@@ -21,29 +21,29 @@ storiesOf('RewardCard', module)
               'Text Description',
               'In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi.',
             )}
-            titleContributors={text('Title Contributors', 'Contributeurs')}
+            titleContributors={text('Title Contributors', 'Contributors')}
             titleSmallContributors={text(
               'Title Small Contributors',
-              'Contributeurs : ',
+              'Contributors : ',
             )}
             valueContributors={text('Value Contributors', '35')}
-            titleDelivery={text('Title Delivery', 'Livraison')}
-            titleSmallDelivery={text('Title Small Delivery', 'Livraison : ')}
-            valueDelivery={text('Value Delivery', 'Janvier 2018')}
-            titleAvailability={text('Title Availability', 'Disponibilité')}
+            titleDelivery={text('Title Delivery', 'Delivery')}
+            titleSmallDelivery={text('Title Small Delivery', 'Delivery : ')}
+            valueDelivery={text('Value Delivery', 'January 2018')}
+            titleAvailability={text('Title Availability', 'Availability')}
             titleSmallAvailability={text(
               'Title Small Availability',
-              'Disponibilité : ',
+              'Availability : ',
             )}
             valueAvailability={text('Value Availability', '200')}
-            button={text('Button', 'Choisir')}
+            button={text('Button', 'Choose')}
             myContribution={text(
               'My Contribution',
-              'Vous avez contribué à ce projet',
+              'You contributed to this project',
             )}
             manageContribution={text(
               'Manage Contribution',
-              'Gérer ma contribution',
+              'Manage my contribution',
             )}
             isDisabled={boolean('Is Disabled', false)}
             isCompleted={boolean('Is Completed', false)}

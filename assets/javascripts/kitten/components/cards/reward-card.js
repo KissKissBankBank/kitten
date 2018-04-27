@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import classNames from 'classnames'
-import Radium, { StyleRoot } from 'radium'
+import Radium from 'radium'
 import PropTypes from 'prop-types'
 import { Marger } from 'kitten/components/layout/marger'
 import {
@@ -60,10 +60,6 @@ class RewardCardComponent extends Component {
     },
   }
 
-  removeCurrentFocus = () => {
-    document.activeElement.blur()
-  }
-
   render() {
     const styleCard = [
       styles.card,
@@ -71,30 +67,22 @@ class RewardCardComponent extends Component {
     ]
 
     return (
-      <StyleRoot>
-        <Grid>
-          <GridCol>
-            <div style={styleCard} disabled={this.props.isDisabled}>
-              <Marger bottom={this.props.viewportIsSOrLess ? 0 : 5}>
-                <Grid style={styles.card.addPadding}>
-                  <GridCol col-m="7">{this.renderDescription()}</GridCol>
-                  <GridCol col-m="4" offset-m="1">
-                    {this.renderImage()}
-                  </GridCol>
-                </Grid>
-                {this.props.viewportIsSOrLess && (
-                  <Fragment>{this.renderChoiceButton()}</Fragment>
-                )}
-              </Marger>
-            </div>
-          </GridCol>
-        </Grid>
-      </StyleRoot>
+      <div style={styleCard} disabled={this.props.isDisabled}>
+        <Marger bottom={this.props.viewportIsSOrLess ? 0 : 5}>
+          <Grid style={styles.card.addPadding}>
+            <GridCol col-m="7">{this.renderDescription()}</GridCol>
+            <GridCol col-m="4" offset-m="1">
+              {this.renderImage()}
+            </GridCol>
+          </Grid>
+          {this.props.viewportIsSOrLess && this.renderChoiceButton()}
+        </Marger>
+      </div>
     )
   }
 
   renderDescription() {
-    const { titleAmount, titleDescription, textDescription } = this.props
+    const Tag = this.props.tag
 
     return (
       <Fragment>
@@ -104,8 +92,9 @@ class RewardCardComponent extends Component {
               modifier={this.props.viewportIsSOrLess ? 'tertiary' : 'secondary'}
               italic
               margin={false}
+              tag={this.props.tag}
             >
-              {parseHtml(titleAmount)}
+              {this.props.titleAmount}
             </Title>
           </Marger>
           <Marger top="2" bottom={this.props.viewportIsMobile ? 3 : 4}>
@@ -114,10 +103,10 @@ class RewardCardComponent extends Component {
           <Marger top="4" bottom="1">
             <Text
               size={this.viewportIsSOrLess ? 'big' : 'huge'}
-              tag="h2"
+              tag={this.props.tag}
               weight="bold"
             >
-              {parseHtml(titleDescription)}
+              {this.props.titleDescription}
             </Text>
           </Marger>
           <Marger top="1" bottom="2">
@@ -127,7 +116,7 @@ class RewardCardComponent extends Component {
               }
               margin={false}
             >
-              {parseHtml(textDescription)}
+              {this.props.textDescription}
             </Paragraph>
           </Marger>
         </Marger>
@@ -184,7 +173,7 @@ class RewardCardComponent extends Component {
         {!this.props.viewportIsTabletOrLess && (
           <Fragment>
             <Text weight="regular">{parseHtml(title)}</Text>
-            <Text>{parseHtml(value)}</Text>
+            <span>{parseHtml(value)}</span>
           </Fragment>
         )}
       </GridCol>
@@ -208,7 +197,7 @@ class RewardCardComponent extends Component {
 
         {!this.props.viewportIsSOrLess && (
           <Fragment>
-            <Marger bottom="2">{this.renderButton()}</Marger>
+            {this.renderButton()}
             <Marger top="2">{this.renderMyContribution()}</Marger>
           </Fragment>
         )}
@@ -220,14 +209,16 @@ class RewardCardComponent extends Component {
     if (!this.props.button || this.props.isCompleted) return
 
     return (
-      <Button
-        size="big"
-        modifier="helium"
-        aria-label={this.props.button}
-        style={styles.button}
-      >
-        {this.props.button}
-      </Button>
+      <Marger bottom={this.props.viewportIsSOrLess ? null : 2}>
+        <Button
+          size="big"
+          modifier="helium"
+          aria-label={this.props.button}
+          style={styles.button}
+        >
+          {this.props.button}
+        </Button>
+      </Marger>
     )
   }
 
@@ -242,8 +233,6 @@ class RewardCardComponent extends Component {
   }
 
   renderMyContribution() {
-    const { myContribution, manageContribution } = this.props
-
     if (this.props.viewportIsSOrLess && this.props.isDisabled) return
 
     return (
@@ -255,10 +244,10 @@ class RewardCardComponent extends Component {
                 {this.renderIconBadge()}
                 <div style={styles.myContribution.text}>
                   <Text size="tiny" weight="regular">
-                    {parseHtml(myContribution)}
+                    {this.props.myContribution}
                     <br />
                     <a href="#" style={styles.myContribution.text.link}>
-                      {parseHtml(manageContribution)}
+                      {this.props.manageContribution}
                     </a>
                   </Text>
                 </div>
@@ -272,10 +261,10 @@ class RewardCardComponent extends Component {
             {this.renderIconBadge()}
             <div style={styles.myContribution.text}>
               <Text size="tiny" weight="regular">
-                {parseHtml(myContribution)}
+                {this.props.myContribution}
                 <br />
                 <a href="#" style={styles.myContribution.text.link}>
-                  {parseHtml(manageContribution)}
+                  {this.props.manageContribution}
                 </a>
               </Text>
             </div>
@@ -307,10 +296,11 @@ const styles = {
     borderStyle: 'solid',
     borderColor: COLORS.line1,
     display: 'flex',
-    transition: 'all .4s ease-in-out',
-
-    ':hover': {
-      transform: 'scale(1.02)',
+    [`@media (min-width: ${ScreenConfig['M'].min}px)`]: {
+      transition: 'all .4s ease-in-out',
+      ':hover': {
+        transform: 'scale(1.02)',
+      },
     },
 
     addPadding: {
