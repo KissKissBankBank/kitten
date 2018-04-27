@@ -4,11 +4,16 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Update `Title` example.
-- Fix: Remove useless js file `displayShortcut`.
-- Fix: Rename `KarlBrowsingHorizontalNav` to `KarlTouchHorizontalNav`.
-- Feature: Add `KarlTouchHorizontalNavWithNotification` example.
-- Feature: Update A11Y on `KarlModal` example.
+## [20.8.0] - 2018-04-27
+
+Features:
+- Update `Title` example.
+- Add `KarlTouchHorizontalNavWithNotification` example.
+- Update A11Y on `KarlModal` example.
+
+Fixes:
+- Remove useless js file `displayShortcut`.
+- Rename `KarlBrowsingHorizontalNav` to `KarlTouchHorizontalNav`.
 
 ## [20.7.1] - 2018-04-11
 
