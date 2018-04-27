@@ -124,6 +124,7 @@ const ProjectHeroBase = ({
                     color="font1"
                     size={viewportIsMobile ? 'micro' : 'tiny'}
                     weight="regular"
+                    className="k-u-hidden@s-down"
                   >
                     Réussie
                   </Text>
@@ -145,6 +146,7 @@ const ProjectHeroBase = ({
                     color="font1"
                     size={viewportIsMobile ? 'micro' : 'tiny'}
                     weight="regular"
+                    className="k-u-hidden@s-down"
                   >
                     Échoué
                   </Text>
@@ -343,6 +345,10 @@ const styles = {
     alignItems: 'center',
     background: `${COLORS.background1}`,
     padding: '10px 20px 10px 10px',
+
+    [`@media (max-width: ${ScreenConfig.XS.max}px)`]: {
+      paddingRight: 0,
+    },
 
     icon: {
       width: '30px',
