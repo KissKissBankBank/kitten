@@ -56,10 +56,18 @@ describe('Text-input with default props', () => {
       })
     })
 
+    describe('text-input with name prop', () => {
+      const componentWithTinyClass = shallow(<TextInput name="foobar" />)
+
+      it('has a name prop', () => {
+        expect(componentWithTinyClass.props().name).toBe('foobar')
+      })
+    })
+
     describe('text-input with textarea tag', () => {
-      const textArea = shallow(<TextInput tag="textarea" rows="7" />).find(
-        'textarea',
-      )
+      const textArea = shallow(
+        <TextInput tag="textarea" rows="7" name="foobar" />,
+      ).find('textarea')
 
       it('has a textarea tag', () => {
         expect(textArea.is('textarea')).toBe(true)
@@ -67,6 +75,10 @@ describe('Text-input with default props', () => {
 
       it('has 7 rows', () => {
         expect(textArea.props().rows).toBe('7')
+      })
+
+      it('has a name prop', () => {
+        expect(textArea.props().name).toBe('foobar')
       })
     })
 
