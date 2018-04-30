@@ -65,7 +65,7 @@ exports[`<RewardCard /> by default matches with snapshot 1`] = `
                   <h1
                     className="k-Title k-Title--secondary k-Title--withoutMargin k-Title--italic"
                   >
-                    undefined
+                    Custom title mount
                   </h1>
                 </div>
                 <div
@@ -88,11 +88,11 @@ exports[`<RewardCard /> by default matches with snapshot 1`] = `
                     }
                   }
                 >
-                  <h2
+                  <span
                     className="k-u-size-huge k-u-weight-bold"
                   >
-                    undefined
-                  </h2>
+                    Custom title description
+                  </span>
                 </div>
                 <div
                   style={
@@ -105,7 +105,7 @@ exports[`<RewardCard /> by default matches with snapshot 1`] = `
                   <p
                     className="k-Paragraph k-Paragraph--tertiary k-Paragraph--withoutMargin"
                   >
-                    undefined
+                    Custom text description
                   </p>
                 </div>
               </div>
@@ -137,9 +137,7 @@ exports[`<RewardCard /> by default matches with snapshot 1`] = `
                     >
                       undefined
                     </span>
-                    <span
-                      className=""
-                    >
+                    <span>
                       undefined
                     </span>
                   </div>
@@ -159,9 +157,7 @@ exports[`<RewardCard /> by default matches with snapshot 1`] = `
                     >
                       undefined
                     </span>
-                    <span
-                      className=""
-                    >
+                    <span>
                       undefined
                     </span>
                   </div>
@@ -181,9 +177,7 @@ exports[`<RewardCard /> by default matches with snapshot 1`] = `
                     >
                       undefined
                     </span>
-                    <span
-                      className=""
-                    >
+                    <span>
                       undefined
                     </span>
                   </div>
@@ -197,14 +191,6 @@ exports[`<RewardCard /> by default matches with snapshot 1`] = `
                   }
                 }
               >
-                <div
-                  style={
-                    Object {
-                      "marginBottom": "1.25rem",
-                      "marginTop": null,
-                    }
-                  }
-                />
                 <div
                   style={
                     Object {
@@ -265,7 +251,6 @@ exports[`<RewardCard /> by default matches with snapshot 1`] = `
                         className="k-u-size-tiny k-u-weight-regular"
                         data-radium={true}
                       >
-                        undefined
                         <br />
                         <a
                           data-radium={true}
@@ -276,9 +261,7 @@ exports[`<RewardCard /> by default matches with snapshot 1`] = `
                               "textDecoration": "none",
                             }
                           }
-                        >
-                          undefined
-                        </a>
+                        />
                       </span>
                     </div>
                   </div>
@@ -397,11 +380,11 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
                     }
                   }
                 >
-                  <h2
+                  <span
                     className="k-u-size-huge k-u-weight-bold"
                   >
                     Custom title description
-                  </h2>
+                  </span>
                 </div>
                 <div
                   style={
@@ -446,9 +429,7 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
                     >
                       Custom title contributors
                     </span>
-                    <span
-                      className=""
-                    >
+                    <span>
                       Custom value contributors
                     </span>
                   </div>
@@ -468,9 +449,7 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
                     >
                       Custom title delivery
                     </span>
-                    <span
-                      className=""
-                    >
+                    <span>
                       Custom value delivery
                     </span>
                   </div>
@@ -490,9 +469,7 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
                     >
                       Custom title availability
                     </span>
-                    <span
-                      className=""
-                    >
+                    <span>
                       Custom value availability
                     </span>
                   </div>
