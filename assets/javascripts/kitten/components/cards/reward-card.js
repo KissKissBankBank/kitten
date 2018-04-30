@@ -49,8 +49,8 @@ class RewardCardComponent extends Component {
     myContribution: PropTypes.string,
     manageContribution: PropTypes.string,
 
-    imageSrc: PropTypes.string,
-    imageSrcSmall: PropTypes.string,
+    imageSrc: PropTypes.bool,
+    imageSrcSmall: PropTypes.bool,
   }
 
   static defaultProps = {
@@ -58,24 +58,43 @@ class RewardCardComponent extends Component {
       src: 'https://placehold.it/350x200/caf4fe/caf4fe',
       alt: '',
     },
-    titleAmount: 'Custom title mount',
-    titleDescription: 'Custom title description',
-    textDescription: 'Custom text description',
+    titleAmount: '',
+    titleDescription: '',
+    textDescription: '',
   }
 
   render() {
     const { isDisabled, viewportIsSOrLess } = this.props
 
+    const animateIsHovered = Radium.getState(
+      this.state,
+      'animate-button',
+      ':hover',
+    )
+
+    const animateIsFocused = Radium.getState(
+      this.state,
+      'animate-button',
+      ':focus',
+    )
+
     const styleCard = [
       styles.card,
-      this.props.isDisabled && styles.card.isDisabled,
+      isDisabled && styles.card.isDisabled,
+      animateIsHovered && !isDisabled && styles.card.hover,
+      animateIsFocused && !isDisabled && styles.card.focus,
     ]
 
+    console.log(animateIsHovered)
     return (
       <StyleRoot>
         <Grid>
           <GridCol>
-            <div style={styleCard} disabled={isDisabled}>
+            <div
+              style={styleCard}
+              disabled={isDisabled}
+              key={`animate-${animateIsHovered}`}
+            >
               <Marger bottom={viewportIsSOrLess ? 0 : 5}>
                 <Grid style={styles.card.addPadding}>
                   <GridCol col-m="7">{this.renderDescription()}</GridCol>
@@ -230,6 +249,7 @@ class RewardCardComponent extends Component {
     return (
       <Marger bottom={viewportIsSOrLess ? null : 2}>
         <Button
+          key="animate-button"
           size="big"
           modifier="helium"
           aria-label={button}
@@ -324,11 +344,13 @@ const styles = {
     borderStyle: 'solid',
     borderColor: COLORS.line1,
     display: 'flex',
-    [`@media (min-width: ${ScreenConfig['M'].min}px)`]: {
-      transition: 'all .4s ease-in-out',
-      ':hover': {
-        transform: 'scale(1.02)',
-      },
+    transition: 'all .4s ease-in-out',
+
+    hover: {
+      transform: 'scale(1.02)',
+    },
+    focus: {
+      transform: 'scale(1.02)',
     },
 
     addPadding: {

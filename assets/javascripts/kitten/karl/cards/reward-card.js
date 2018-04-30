@@ -1,12 +1,12 @@
-import React, { Fragment } from 'react'
-import Radium from 'radium'
+import React from 'react'
+import Radium, { StyleRoot } from 'radium'
 import { RewardCard } from 'kitten/components/cards/reward-card'
 import { Container } from 'kitten/components/grid/container'
 import { Marger } from 'kitten/components/layout/marger'
 import { KarlExampleTitle } from 'kitten/karl/examples/title'
 
 export const KarlRewardCard = () => (
-  <Fragment>
+  <StyleRoot>
     <KarlExampleTitle>Reward card</KarlExampleTitle>
     <Container>
       <Marger bottom="2">
@@ -148,5 +148,5 @@ export const KarlRewardCard = () => (
         />
       </Marger>
     </Container>
-  </Fragment>
+  </StyleRoot>
 )
