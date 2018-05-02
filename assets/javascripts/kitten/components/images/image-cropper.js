@@ -130,7 +130,9 @@ export class ImageCropper extends React.Component {
 
       this.props.onChange({
         value: imageCropSrc,
+        base: this.state.imageSrc,
         name: this.state.fileName,
+        cropperData: this.refs.cropper.getData(),
       })
     }
   }
@@ -152,7 +154,8 @@ export class ImageCropper extends React.Component {
       width: this.state.cropperWidth,
       height: this.state.cropperHeight,
     }
-    const dragMode = this.props.disabled ? 'none' : 'move'
+    const dragMode =
+      this.props.disabled || !this.props.isCropEnabled ? 'none' : 'move'
 
     return (
       <Marger top="2" key="cropper">
@@ -245,7 +248,7 @@ export class ImageCropper extends React.Component {
           {this.renderCropper()}
         </GridCol>
 
-        {this.renderSliderAndCropperInfo()}
+        {this.props.isCropEnabled && this.renderSliderAndCropperInfo()}
       </Grid>
     )
   }
@@ -275,6 +278,7 @@ export class ImageCropper extends React.Component {
         fileName={this.props.fileName}
         disabled={this.props.disabled}
         deletable={this.props.deletable}
+        base64={this.props.base64}
       />
     )
   }
@@ -324,6 +328,8 @@ ImageCropper.defaultProps = {
   buttonLabel: 'Choose a file…',
   description: 'Lorem ipsum…',
   disabled: false,
+  isCropEnabled: true,
+  base64: true,
 
   onChange: _fileData => {},
 }
