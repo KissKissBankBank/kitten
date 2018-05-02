@@ -3,11 +3,15 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
-- Feature: Add `cropperData` values on the return of `onChange` handler of 
+
+## [20.9.0] - 2018-05-02
+
+Features: 
+- Add `cropperData` values on the return of `onChange` handler of 
 `ImageCropper` component.
-- Feature: Add 'isCropEnabled' prop on `ImageCropper` component. If false, the 
+- Add 'isCropEnabled' prop on `ImageCropper` component. If false, the 
 cropper feature is turned off (true by default).
-- Feature: Add `base64` option to `Uploader` to return base64 image if true.
+- Add `base64` option to `Uploader` to return base64 image if true.
 (false by default)
 
 ## [20.8.0] - 2018-04-27
