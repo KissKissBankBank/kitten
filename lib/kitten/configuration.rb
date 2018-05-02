@@ -239,6 +239,10 @@ module Kitten
               name: 'Tooltip',
             },
             {
+              path: 'components/tooltips/button-tooltip',
+              name: 'Button tooltip',
+            },
+            {
               path: 'components/cards/project-creator-card',
               name: 'Project creator card',
             },

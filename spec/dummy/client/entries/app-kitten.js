@@ -290,6 +290,7 @@ import { QuestionMarkWithTooltip }
 import { StaticTooltip } from 'kitten/components/tooltips/static-tooltip'
 import { Tooltip } from 'kitten/components/tooltips/tooltip'
 import { TooltipNew } from 'kitten/components/tooltips/tooltip-new'
+import { KarlButtonIconTooltip } from 'kitten/karl/tooltips/button-tooltip'
 import { KarlStaticTooltip } from 'kitten/karl/tooltips/static-tooltip'
 
 // Tours
@@ -554,6 +555,7 @@ ReactOnRails.register({
   StaticTooltip,
   Tooltip,
   TooltipNew,
+  KarlButtonIconTooltip,
   KarlStaticTooltip,
 
   // Tours
