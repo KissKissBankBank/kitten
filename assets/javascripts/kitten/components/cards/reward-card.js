@@ -1,5 +1,4 @@
 import React, { Component, Fragment } from 'react'
-import classNames from 'classnames'
 import Radium, { StyleRoot } from 'radium'
 import PropTypes from 'prop-types'
 import { Marger } from 'kitten/components/layout/marger'
@@ -345,7 +344,7 @@ const styles = {
   infos: {
     display: 'flex',
     flexDirection: 'column',
-    padding: '0 ${COMPONENT_GUTTER}px',
+    padding: '0${COMPONENT_GUTTER}px',
 
     lists: {
       fontSize: '14px',
