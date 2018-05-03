@@ -3,6 +3,5 @@
 exports[`mediaQueries() by default renders the wrapped component 1`] = `
 <div
   title="Test me!"
-  viewportIsSOrLess={undefined}
 />
 `;
