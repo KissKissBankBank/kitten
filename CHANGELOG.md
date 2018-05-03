@@ -5,19 +5,35 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Create `RewardCard` component and its stories.
-- Fix: Fix `HorizontalNav` vertical alignment.
-- Feature: Add `markdown` prop to ignore `Markdown` transformation.
-- Feature: Add `Italic` props on `Title` component.
-- Fix: Fix size on `IconBadge` component.
-- Feature: Update svg size and color on `IconBadge` component.
-- Feature: Add `viewportIsSOrLess` on `mediaQueries` HOC.
-- Feature: Show `LegoGrid` only when DOM is loaded.
-- Fix: Update `ArrowIcon` size on `Pagination` component.
-- Fix: Remove `hover` state when `ButtonIcon` is `active` state on `Pagination`.
-- Feature: Add `Badge` prop on `HorizontalNav` component.
-- Feature: Add `k-HorizontalNav__badge` and
-  `k-HorizontalNav__item__badge` classes.
-- Feature: Update A11Y on `Modal` component.
+
+## [20.9.0] - 2018-05-02
+
+Features: 
+- Add `cropperData` values on the return of `onChange` handler of 
+`ImageCropper` component.
+- Add 'isCropEnabled' prop on `ImageCropper` component. If false, the 
+cropper feature is turned off (true by default).
+- Add `base64` option to `Uploader` to return base64 image if true.
+(false by default)
+
+## [20.8.0] - 2018-04-27
+
+Features:
+- Add `markdown` prop to ignore `Markdown` transformation.
+- Add `Italic` props on `Title` component.
+- Update svg size and color on `IconBadge` component.
+- Add `viewportIsSOrLess` on `mediaQueries` HOC.
+- Show `LegoGrid` only when DOM is loaded.
+- Add `Badge` prop on `HorizontalNav` component.
+- Add `k-HorizontalNav__badge` and `k-HorizontalNav__item__badge` classes.
+- Update A11Y on `Modal` component.
+
+Fixes:
+- Add `name` value on `TextInput` textarea version.
+- Fix `HorizontalNav` vertical alignment.
+- Fix size on `IconBadge` component.
+- Update `ArrowIcon` size on `Pagination` component.
+- Remove `hover` state when `ButtonIcon` is `active` state on `Pagination`.
 
 ## [20.7.1] - 2018-04-11
 

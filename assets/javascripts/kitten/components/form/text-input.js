@@ -40,6 +40,7 @@ export class TextInput extends Component {
             className={textInputClassName}
             ref={input => (this.input = input)}
             disabled={disabled}
+            name={name}
             {...others}
           />
           <div className="k-TextAreaWrapper__gradient" />
