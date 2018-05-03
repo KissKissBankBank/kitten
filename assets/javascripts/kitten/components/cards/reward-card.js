@@ -308,8 +308,6 @@ class RewardCardComponent extends Component {
   }
 }
 
-const COMPONENT_GUTTER = 10
-
 const styles = {
   card: {
     borderWidth: '2px',
@@ -344,7 +342,6 @@ const styles = {
   infos: {
     display: 'flex',
     flexDirection: 'column',
-    padding: '0${COMPONENT_GUTTER}px',
 
     lists: {
       fontSize: '14px',
