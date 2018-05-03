@@ -157,6 +157,14 @@ describe('<ProjectCard />', () => {
     })
   })
 
+  describe('with paragraph', () => {
+    const projectCard = shallow(<ProjectCard paragraph="Custom paragraph" />)
+
+    it('renders a good paragraph', () => {
+      expect(projectCard.props().paragraph).toBe('Custom paragraph')
+    })
+  })
+
   describe('with infos props', () => {
     const projectCard = mount(
       <ProjectCard

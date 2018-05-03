@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import classNames from 'classnames'
 import PropTypes from 'prop-types'
 import deprecated from 'prop-types-extra/lib/deprecated'
@@ -19,7 +19,7 @@ import { InstrumentTagIcon } from 'kitten/components/icons/instrument-tag-icon'
 export const MIN_WIDTH = 280
 export const MARGIN_BETWEEN = 40
 
-class ProjectCardComponent extends React.Component {
+class ProjectCardComponent extends Component {
   constructor() {
     super()
 
@@ -72,7 +72,7 @@ class ProjectCardComponent extends React.Component {
   }
 
   renderTooltip() {
-    if (!this.props.tooltipText) return null
+    if (!this.props.tooltipText) return
 
     return (
       <div className="k-ProjectCard__tooltip">
@@ -89,7 +89,7 @@ class ProjectCardComponent extends React.Component {
   }
 
   renderScore() {
-    if (!this.props.scoreValue) return null
+    if (!this.props.scoreValue) return
 
     const scoreStyles = {
       backgroundColor: this.props.scoreBackgroundColor,
@@ -103,7 +103,7 @@ class ProjectCardComponent extends React.Component {
   }
 
   renderImage() {
-    if (!this.props.imageSrc) return null
+    if (!this.props.imageSrc) return
 
     return (
       <div className="k-ProjectCard__grid">
@@ -125,7 +125,7 @@ class ProjectCardComponent extends React.Component {
   }
 
   renderProgress() {
-    if (this.props.progress === false) return null
+    if (this.props.progress === false) return
 
     return (
       <div
@@ -219,6 +219,8 @@ class ProjectCardComponent extends React.Component {
   }
 
   renderInfos() {
+    if (!this.props.info1 && !this.props.info2 && !this.props.info3) return
+
     return (
       <div className="k-ProjectCard__grid--withBorderTop">
         <Marger top="1.5" bottom="1.5" className="k-ProjectCard__grid--flex">
@@ -230,7 +232,26 @@ class ProjectCardComponent extends React.Component {
     )
   }
 
+  renderParagraph() {
+    if (!this.props.paragraph) return
+
+    return (
+      <div
+        className={classNames(
+          'k-ProjectCard__paragraph',
+          'k-ProjectCard__grid--withBorderTop',
+        )}
+      >
+        <Marger top="2" bottom="2">
+          <Paragraph modifier="quaternary">{this.props.paragraph}</Paragraph>
+        </Marger>
+      </div>
+    )
+  }
+
   renderInfo(info) {
+    if (!info) return
+
     const valueClassName = classNames('k-ProjectCard__info__value', {
       'k-u-color-primary1': this.props.coloredInfosValues,
     })
@@ -311,6 +332,7 @@ class ProjectCardComponent extends React.Component {
         {this.renderImage()}
         {this.renderTagsArea()}
         {this.renderProgress()}
+        {this.renderParagraph()}
         {this.renderInfos()}
         {this.renderStatus()}
       </Tag>
@@ -341,6 +363,7 @@ ProjectCardComponent.defaultProps = {
   ownerLocation: 'Location',
   tagLists: null,
   tags: null,
+  paragraph: null,
   tooltipText: null,
   tooltipIconColor: '#19b4fa',
   scoreValue: null,
@@ -349,9 +372,9 @@ ProjectCardComponent.defaultProps = {
   imageSrc: null,
   progress: false,
   coloredInfosValues: false,
-  info1: { value: 'xx', text: 'Info 1', locked: false, reverse: false },
-  info2: { value: 'xx', text: 'Info 2', locked: false, reverse: false },
-  info3: { value: 'xx', text: 'Info 3', locked: false, reverse: false },
+  info1: null,
+  info2: null,
+  info3: null,
   disabled: false,
   statusContent: null,
   statusPrimaryBackground: false,
