@@ -5,282 +5,271 @@ exports[`<RewardCard /> by default matches with snapshot 1`] = `
   data-radium={true}
 >
   <div
-    className="k-Grid"
+    data-radium={true}
+    disabled={undefined}
+    style={
+      Object {
+        "borderColor": "#eee",
+        "borderStyle": "solid",
+        "borderWidth": "2px",
+        "display": "flex",
+      }
+    }
   >
     <div
-      className="k-Grid__col--12 "
-      data-radium={true}
+      style={
+        Object {
+          "marginBottom": "3.125rem",
+          "marginTop": null,
+        }
+      }
     >
       <div
-        className="rmq-476923d6"
+        className="rmq-5aa2f196 rmq-e60873c0 rmq-ce79a9e0 k-Grid"
         data-radium={true}
-        disabled={undefined}
         style={
           Object {
-            "borderColor": "#eee",
-            "borderStyle": "solid",
-            "borderWidth": "2px",
-            "display": "flex",
+            "paddingLeft": "20px",
+            "paddingRight": "20px",
           }
         }
       >
         <div
-          style={
-            Object {
-              "marginBottom": "3.125rem",
-              "marginTop": null,
-            }
-          }
+          className="k-Grid__col--12 k-Grid__col--7@m"
+          data-radium={true}
         >
           <div
-            className="rmq-5aa2f196 rmq-e60873c0 rmq-ce79a9e0 k-Grid"
-            data-radium={true}
             style={
               Object {
-                "paddingLeft": "20px",
-                "paddingRight": "20px",
+                "marginBottom": "1.25rem",
+                "marginTop": "3.125rem",
               }
             }
           >
             <div
-              className="k-Grid__col--12 k-Grid__col--7@m"
+              style={
+                Object {
+                  "marginBottom": "1.25rem",
+                  "marginTop": null,
+                }
+              }
+            >
+              <h1
+                className="k-Title k-Title--secondary k-Title--withoutMargin k-Title--italic"
+              >
+                
+              </h1>
+            </div>
+            <div
+              style={
+                Object {
+                  "marginBottom": "2.5rem",
+                  "marginTop": "1.25rem",
+                }
+              }
+            >
+              <span
+                className="k-HorizontalStroke k-HorizontalStroke--big"
+              />
+            </div>
+            <div
+              style={
+                Object {
+                  "marginBottom": "0.625rem",
+                  "marginTop": "2.5rem",
+                }
+              }
+            >
+              <span
+                className="k-u-size-huge k-u-weight-bold"
+              >
+                
+              </span>
+            </div>
+            <div
+              style={
+                Object {
+                  "marginBottom": "1.25rem",
+                  "marginTop": "0.625rem",
+                }
+              }
+            >
+              <p
+                className="k-Paragraph k-Paragraph--tertiary k-Paragraph--withoutMargin"
+              >
+                
+              </p>
+            </div>
+          </div>
+          <div
+            style={
+              Object {
+                "marginBottom": "2.5rem",
+                "marginTop": "1.25rem",
+              }
+            }
+          >
+            <div
+              className="k-Grid"
               data-radium={true}
             >
               <div
+                className="k-Grid__col--12 k-Grid__col--4@l k-Grid__col--3@xl"
+                data-radium={true}
                 style={
                   Object {
-                    "marginBottom": "1.25rem",
-                    "marginTop": "3.125rem",
+                    "display": "flex",
+                    "flexDirection": "column",
+                    "padding": "0 \${COMPONENT_GUTTER}px",
                   }
                 }
               >
-                <div
-                  style={
-                    Object {
-                      "marginBottom": "1.25rem",
-                      "marginTop": null,
-                    }
-                  }
+                <span
+                  className="k-u-weight-regular"
                 >
-                  <h1
-                    className="k-Title k-Title--secondary k-Title--withoutMargin k-Title--italic"
-                  >
-                    Custom title mount
-                  </h1>
-                </div>
-                <div
-                  style={
-                    Object {
-                      "marginBottom": "2.5rem",
-                      "marginTop": "1.25rem",
-                    }
-                  }
-                >
-                  <span
-                    className="k-HorizontalStroke k-HorizontalStroke--big"
-                  />
-                </div>
-                <div
-                  style={
-                    Object {
-                      "marginBottom": "0.625rem",
-                      "marginTop": "2.5rem",
-                    }
-                  }
-                >
-                  <span
-                    className="k-u-size-huge k-u-weight-bold"
-                  >
-                    Custom title description
-                  </span>
-                </div>
-                <div
-                  style={
-                    Object {
-                      "marginBottom": "1.25rem",
-                      "marginTop": "0.625rem",
-                    }
-                  }
-                >
-                  <p
-                    className="k-Paragraph k-Paragraph--tertiary k-Paragraph--withoutMargin"
-                  >
-                    Custom text description
-                  </p>
-                </div>
+                  undefined
+                </span>
+                <span>
+                  undefined
+                </span>
               </div>
               <div
+                className="k-Grid__col--12 k-Grid__col--4@l k-Grid__col--3@xl"
+                data-radium={true}
                 style={
                   Object {
-                    "marginBottom": "2.5rem",
-                    "marginTop": "1.25rem",
+                    "display": "flex",
+                    "flexDirection": "column",
+                    "padding": "0 \${COMPONENT_GUTTER}px",
                   }
                 }
               >
-                <div
-                  className="k-Grid"
+                <span
+                  className="k-u-weight-regular"
+                >
+                  undefined
+                </span>
+                <span>
+                  undefined
+                </span>
+              </div>
+              <div
+                className="k-Grid__col--12 k-Grid__col--4@l k-Grid__col--3@xl"
+                data-radium={true}
+                style={
+                  Object {
+                    "display": "flex",
+                    "flexDirection": "column",
+                    "padding": "0 \${COMPONENT_GUTTER}px",
+                  }
+                }
+              >
+                <span
+                  className="k-u-weight-regular"
+                >
+                  undefined
+                </span>
+                <span>
+                  undefined
+                </span>
+              </div>
+            </div>
+          </div>
+          <div
+            style={
+              Object {
+                "marginBottom": null,
+                "marginTop": "2.5rem",
+              }
+            }
+          >
+            <div
+              style={
+                Object {
+                  "marginBottom": null,
+                  "marginTop": "1.25rem",
+                }
+              }
+            >
+              <div
+                data-radium={true}
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "display": "flex",
+                  }
+                }
+              >
+                <span
+                  className="k-IconBadge"
                   data-radium={true}
-                >
-                  <div
-                    className="k-Grid__col--12 k-Grid__col--4@l k-Grid__col--3@xl"
-                    data-radium={true}
-                    style={
-                      Object {
-                        "display": "flex",
-                        "flexDirection": "column",
-                        "padding": "0 \${COMPONENT_GUTTER}px",
-                      }
-                    }
-                  >
-                    <span
-                      className="k-u-weight-regular"
-                    >
-                      undefined
-                    </span>
-                    <span>
-                      undefined
-                    </span>
-                  </div>
-                  <div
-                    className="k-Grid__col--12 k-Grid__col--4@l k-Grid__col--3@xl"
-                    data-radium={true}
-                    style={
-                      Object {
-                        "display": "flex",
-                        "flexDirection": "column",
-                        "padding": "0 \${COMPONENT_GUTTER}px",
-                      }
-                    }
-                  >
-                    <span
-                      className="k-u-weight-regular"
-                    >
-                      undefined
-                    </span>
-                    <span>
-                      undefined
-                    </span>
-                  </div>
-                  <div
-                    className="k-Grid__col--12 k-Grid__col--4@l k-Grid__col--3@xl"
-                    data-radium={true}
-                    style={
-                      Object {
-                        "display": "flex",
-                        "flexDirection": "column",
-                        "padding": "0 \${COMPONENT_GUTTER}px",
-                      }
-                    }
-                  >
-                    <span
-                      className="k-u-weight-regular"
-                    >
-                      undefined
-                    </span>
-                    <span>
-                      undefined
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <div
-                style={
-                  Object {
-                    "marginBottom": null,
-                    "marginTop": "2.5rem",
-                  }
-                }
-              >
-                <div
                   style={
                     Object {
-                      "marginBottom": null,
-                      "marginTop": "1.25rem",
+                      "backgroundColor": "#61d079",
+                      "marginRight": "10px",
                     }
                   }
                 >
-                  <div
-                    data-radium={true}
-                    style={
-                      Object {
-                        "alignItems": "center",
-                        "display": "flex",
-                      }
-                    }
+                  <span
+                    className="k-IconBadge__content"
                   >
-                    <span
-                      className="k-IconBadge"
+                    <svg
+                      className="k-IconBadge__svg"
+                      viewBox="0 0 11 8"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <title>
+                        Checked
+                      </title>
+                      <path
+                        d="M4.44 7.596L3.024 6.182 8.682.525l1.414 1.414z"
+                      />
+                      <path
+                        d="M4.44 7.596L.903 4.06l1.414-1.414 3.536 3.536z"
+                      />
+                    </svg>
+                  </span>
+                </span>
+                <div
+                  data-radium={true}
+                  style={
+                    Object {
+                      "display": "flex",
+                      "lineHeight": "normal",
+                    }
+                  }
+                >
+                  <span
+                    className="k-u-size-tiny k-u-weight-regular"
+                    data-radium={true}
+                  >
+                    <br />
+                    <a
                       data-radium={true}
+                      href="#"
                       style={
                         Object {
-                          "backgroundColor": "#61d079",
-                          "marginRight": "10px",
+                          "color": "#19b4fa",
+                          "textDecoration": "none",
                         }
                       }
-                    >
-                      <span
-                        className="k-IconBadge__content"
-                      >
-                        <svg
-                          className="k-IconBadge__svg"
-                          viewBox="0 0 11 8"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <title>
-                            Checked
-                          </title>
-                          <path
-                            d="M4.44 7.596L3.024 6.182 8.682.525l1.414 1.414z"
-                          />
-                          <path
-                            d="M4.44 7.596L.903 4.06l1.414-1.414 3.536 3.536z"
-                          />
-                        </svg>
-                      </span>
-                    </span>
-                    <div
-                      data-radium={true}
-                      style={
-                        Object {
-                          "display": "flex",
-                          "lineHeight": "normal",
-                        }
-                      }
-                    >
-                      <span
-                        className="k-u-size-tiny k-u-weight-regular"
-                        data-radium={true}
-                      >
-                        <br />
-                        <a
-                          data-radium={true}
-                          href="#"
-                          style={
-                            Object {
-                              "color": "#19b4fa",
-                              "textDecoration": "none",
-                            }
-                          }
-                        />
-                      </span>
-                    </div>
-                  </div>
+                    />
+                  </span>
                 </div>
               </div>
             </div>
-            <div
-              className="k-Grid__col--12 k-Grid__col--4@m k-Grid__col--offset-1@m"
-            />
           </div>
         </div>
+        <div
+          className="k-Grid__col--12 k-Grid__col--4@m k-Grid__col--offset-1@m"
+        />
       </div>
     </div>
   </div>
   <style
     dangerouslySetInnerHTML={
       Object {
-        "__html": "@media (min-width: 768px){ .rmq-476923d6{transition: all .4s ease-in-out !important;}}
-@media (min-width: 640px){ .rmq-5aa2f196{padding-left: 50px !important;
+        "__html": "@media (min-width: 640px){ .rmq-5aa2f196{padding-left: 50px !important;
 padding-right: 50px !important;}}
 @media (min-width: 768px){ .rmq-e60873c0{padding-left: 50px !important;
 padding-right: 0 !important;}}
@@ -297,303 +286,292 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
   data-radium={true}
 >
   <div
-    className="k-Grid"
+    data-radium={true}
+    disabled={undefined}
+    style={
+      Object {
+        "borderColor": "#eee",
+        "borderStyle": "solid",
+        "borderWidth": "2px",
+        "display": "flex",
+      }
+    }
   >
     <div
-      className="k-Grid__col--12 "
-      data-radium={true}
+      style={
+        Object {
+          "marginBottom": "3.125rem",
+          "marginTop": null,
+        }
+      }
     >
       <div
-        className="rmq-476923d6"
+        className="rmq-5aa2f196 rmq-e60873c0 rmq-ce79a9e0 k-Grid"
         data-radium={true}
-        disabled={undefined}
         style={
           Object {
-            "borderColor": "#eee",
-            "borderStyle": "solid",
-            "borderWidth": "2px",
-            "display": "flex",
+            "paddingLeft": "20px",
+            "paddingRight": "20px",
           }
         }
       >
         <div
-          style={
-            Object {
-              "marginBottom": "3.125rem",
-              "marginTop": null,
-            }
-          }
+          className="k-Grid__col--12 k-Grid__col--7@m"
+          data-radium={true}
         >
           <div
-            className="rmq-5aa2f196 rmq-e60873c0 rmq-ce79a9e0 k-Grid"
-            data-radium={true}
             style={
               Object {
-                "paddingLeft": "20px",
-                "paddingRight": "20px",
+                "marginBottom": "1.25rem",
+                "marginTop": "3.125rem",
               }
             }
           >
             <div
-              className="k-Grid__col--12 k-Grid__col--7@m"
+              style={
+                Object {
+                  "marginBottom": "1.25rem",
+                  "marginTop": null,
+                }
+              }
+            >
+              <h1
+                className="k-Title k-Title--secondary k-Title--withoutMargin k-Title--italic"
+              >
+                Custom title mount
+              </h1>
+            </div>
+            <div
+              style={
+                Object {
+                  "marginBottom": "2.5rem",
+                  "marginTop": "1.25rem",
+                }
+              }
+            >
+              <span
+                className="k-HorizontalStroke k-HorizontalStroke--big"
+              />
+            </div>
+            <div
+              style={
+                Object {
+                  "marginBottom": "0.625rem",
+                  "marginTop": "2.5rem",
+                }
+              }
+            >
+              <span
+                className="k-u-size-huge k-u-weight-bold"
+              >
+                Custom title description
+              </span>
+            </div>
+            <div
+              style={
+                Object {
+                  "marginBottom": "1.25rem",
+                  "marginTop": "0.625rem",
+                }
+              }
+            >
+              <p
+                className="k-Paragraph k-Paragraph--tertiary k-Paragraph--withoutMargin"
+              >
+                Custom text description
+              </p>
+            </div>
+          </div>
+          <div
+            style={
+              Object {
+                "marginBottom": "2.5rem",
+                "marginTop": "1.25rem",
+              }
+            }
+          >
+            <div
+              className="k-Grid"
               data-radium={true}
             >
               <div
+                className="k-Grid__col--12 k-Grid__col--4@l k-Grid__col--3@xl"
+                data-radium={true}
                 style={
                   Object {
-                    "marginBottom": "1.25rem",
-                    "marginTop": "3.125rem",
+                    "display": "flex",
+                    "flexDirection": "column",
+                    "padding": "0 \${COMPONENT_GUTTER}px",
                   }
                 }
               >
-                <div
-                  style={
-                    Object {
-                      "marginBottom": "1.25rem",
-                      "marginTop": null,
-                    }
-                  }
+                <span
+                  className="k-u-weight-regular"
                 >
-                  <h1
-                    className="k-Title k-Title--secondary k-Title--withoutMargin k-Title--italic"
-                  >
-                    Custom title mount
-                  </h1>
-                </div>
-                <div
-                  style={
-                    Object {
-                      "marginBottom": "2.5rem",
-                      "marginTop": "1.25rem",
-                    }
-                  }
-                >
-                  <span
-                    className="k-HorizontalStroke k-HorizontalStroke--big"
-                  />
-                </div>
-                <div
-                  style={
-                    Object {
-                      "marginBottom": "0.625rem",
-                      "marginTop": "2.5rem",
-                    }
-                  }
-                >
-                  <span
-                    className="k-u-size-huge k-u-weight-bold"
-                  >
-                    Custom title description
-                  </span>
-                </div>
-                <div
-                  style={
-                    Object {
-                      "marginBottom": "1.25rem",
-                      "marginTop": "0.625rem",
-                    }
-                  }
-                >
-                  <p
-                    className="k-Paragraph k-Paragraph--tertiary k-Paragraph--withoutMargin"
-                  >
-                    Custom text description
-                  </p>
-                </div>
+                  Custom title contributors
+                </span>
+                <span>
+                  Custom value contributors
+                </span>
               </div>
               <div
+                className="k-Grid__col--12 k-Grid__col--4@l k-Grid__col--3@xl"
+                data-radium={true}
                 style={
                   Object {
-                    "marginBottom": "2.5rem",
-                    "marginTop": "1.25rem",
+                    "display": "flex",
+                    "flexDirection": "column",
+                    "padding": "0 \${COMPONENT_GUTTER}px",
                   }
                 }
               >
-                <div
-                  className="k-Grid"
+                <span
+                  className="k-u-weight-regular"
+                >
+                  Custom title delivery
+                </span>
+                <span>
+                  Custom value delivery
+                </span>
+              </div>
+              <div
+                className="k-Grid__col--12 k-Grid__col--4@l k-Grid__col--3@xl"
+                data-radium={true}
+                style={
+                  Object {
+                    "display": "flex",
+                    "flexDirection": "column",
+                    "padding": "0 \${COMPONENT_GUTTER}px",
+                  }
+                }
+              >
+                <span
+                  className="k-u-weight-regular"
+                >
+                  Custom title availability
+                </span>
+                <span>
+                  Custom value availability
+                </span>
+              </div>
+            </div>
+          </div>
+          <div
+            style={
+              Object {
+                "marginBottom": null,
+                "marginTop": "2.5rem",
+              }
+            }
+          >
+            <div
+              style={
+                Object {
+                  "marginBottom": "1.25rem",
+                  "marginTop": null,
+                }
+              }
+            >
+              <button
+                aria-label="Custom text button"
+                className="rmq-2c87bfe9 k-Button k-Button--helium k-Button--big"
+                data-radium={true}
+                style={Object {}}
+                tabIndex={null}
+              >
+                Custom text button
+              </button>
+            </div>
+            <div
+              style={
+                Object {
+                  "marginBottom": null,
+                  "marginTop": "1.25rem",
+                }
+              }
+            >
+              <div
+                data-radium={true}
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "display": "flex",
+                  }
+                }
+              >
+                <span
+                  className="k-IconBadge"
                   data-radium={true}
-                >
-                  <div
-                    className="k-Grid__col--12 k-Grid__col--4@l k-Grid__col--3@xl"
-                    data-radium={true}
-                    style={
-                      Object {
-                        "display": "flex",
-                        "flexDirection": "column",
-                        "padding": "0 \${COMPONENT_GUTTER}px",
-                      }
-                    }
-                  >
-                    <span
-                      className="k-u-weight-regular"
-                    >
-                      Custom title contributors
-                    </span>
-                    <span>
-                      Custom value contributors
-                    </span>
-                  </div>
-                  <div
-                    className="k-Grid__col--12 k-Grid__col--4@l k-Grid__col--3@xl"
-                    data-radium={true}
-                    style={
-                      Object {
-                        "display": "flex",
-                        "flexDirection": "column",
-                        "padding": "0 \${COMPONENT_GUTTER}px",
-                      }
-                    }
-                  >
-                    <span
-                      className="k-u-weight-regular"
-                    >
-                      Custom title delivery
-                    </span>
-                    <span>
-                      Custom value delivery
-                    </span>
-                  </div>
-                  <div
-                    className="k-Grid__col--12 k-Grid__col--4@l k-Grid__col--3@xl"
-                    data-radium={true}
-                    style={
-                      Object {
-                        "display": "flex",
-                        "flexDirection": "column",
-                        "padding": "0 \${COMPONENT_GUTTER}px",
-                      }
-                    }
-                  >
-                    <span
-                      className="k-u-weight-regular"
-                    >
-                      Custom title availability
-                    </span>
-                    <span>
-                      Custom value availability
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <div
-                style={
-                  Object {
-                    "marginBottom": null,
-                    "marginTop": "2.5rem",
-                  }
-                }
-              >
-                <div
                   style={
                     Object {
-                      "marginBottom": "1.25rem",
-                      "marginTop": null,
+                      "backgroundColor": "#61d079",
+                      "marginRight": "10px",
                     }
                   }
                 >
-                  <button
-                    aria-label="Custom text button"
-                    className="rmq-2c87bfe9 k-Button k-Button--helium k-Button--big"
-                    data-radium={true}
-                    style={Object {}}
-                    tabIndex={null}
+                  <span
+                    className="k-IconBadge__content"
                   >
-                    Custom text button
-                  </button>
-                </div>
+                    <svg
+                      className="k-IconBadge__svg"
+                      viewBox="0 0 11 8"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <title>
+                        Checked
+                      </title>
+                      <path
+                        d="M4.44 7.596L3.024 6.182 8.682.525l1.414 1.414z"
+                      />
+                      <path
+                        d="M4.44 7.596L.903 4.06l1.414-1.414 3.536 3.536z"
+                      />
+                    </svg>
+                  </span>
+                </span>
                 <div
+                  data-radium={true}
                   style={
                     Object {
-                      "marginBottom": null,
-                      "marginTop": "1.25rem",
+                      "display": "flex",
+                      "lineHeight": "normal",
                     }
                   }
                 >
-                  <div
+                  <span
+                    className="k-u-size-tiny k-u-weight-regular"
                     data-radium={true}
-                    style={
-                      Object {
-                        "alignItems": "center",
-                        "display": "flex",
-                      }
-                    }
                   >
-                    <span
-                      className="k-IconBadge"
+                    Custom my contribution
+                    <br />
+                    <a
                       data-radium={true}
+                      href="#"
                       style={
                         Object {
-                          "backgroundColor": "#61d079",
-                          "marginRight": "10px",
+                          "color": "#19b4fa",
+                          "textDecoration": "none",
                         }
                       }
                     >
-                      <span
-                        className="k-IconBadge__content"
-                      >
-                        <svg
-                          className="k-IconBadge__svg"
-                          viewBox="0 0 11 8"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <title>
-                            Checked
-                          </title>
-                          <path
-                            d="M4.44 7.596L3.024 6.182 8.682.525l1.414 1.414z"
-                          />
-                          <path
-                            d="M4.44 7.596L.903 4.06l1.414-1.414 3.536 3.536z"
-                          />
-                        </svg>
-                      </span>
-                    </span>
-                    <div
-                      data-radium={true}
-                      style={
-                        Object {
-                          "display": "flex",
-                          "lineHeight": "normal",
-                        }
-                      }
-                    >
-                      <span
-                        className="k-u-size-tiny k-u-weight-regular"
-                        data-radium={true}
-                      >
-                        Custom my contribution
-                        <br />
-                        <a
-                          data-radium={true}
-                          href="#"
-                          style={
-                            Object {
-                              "color": "#19b4fa",
-                              "textDecoration": "none",
-                            }
-                          }
-                        >
-                          Custom manage contribution
-                        </a>
-                      </span>
-                    </div>
-                  </div>
+                      Custom manage contribution
+                    </a>
+                  </span>
                 </div>
               </div>
             </div>
-            <div
-              className="k-Grid__col--12 k-Grid__col--4@m k-Grid__col--offset-1@m"
-            />
           </div>
         </div>
+        <div
+          className="k-Grid__col--12 k-Grid__col--4@m k-Grid__col--offset-1@m"
+        />
       </div>
     </div>
   </div>
   <style
     dangerouslySetInnerHTML={
       Object {
-        "__html": "@media (min-width: 768px){ .rmq-476923d6{transition: all .4s ease-in-out !important;}}
-@media (min-width: 640px){ .rmq-5aa2f196{padding-left: 50px !important;
+        "__html": "@media (min-width: 640px){ .rmq-5aa2f196{padding-left: 50px !important;
 padding-right: 50px !important;}}
 @media (min-width: 768px){ .rmq-e60873c0{padding-left: 50px !important;
 padding-right: 0 !important;}}

@@ -66,47 +66,21 @@ class RewardCardComponent extends Component {
   render() {
     const { isDisabled, viewportIsSOrLess } = this.props
 
-    const animateIsHovered = Radium.getState(
-      this.state,
-      'animate-button',
-      ':hover',
-    )
+    const styleCard = [styles.card, isDisabled && styles.card.isDisabled]
 
-    const animateIsFocused = Radium.getState(
-      this.state,
-      'animate-button',
-      ':focus',
-    )
-
-    const styleCard = [
-      styles.card,
-      isDisabled && styles.card.isDisabled,
-      animateIsHovered && !isDisabled && styles.card.hover,
-      animateIsFocused && !isDisabled && styles.card.focus,
-    ]
-
-    console.log(animateIsHovered)
     return (
       <StyleRoot>
-        <Grid>
-          <GridCol>
-            <div
-              style={styleCard}
-              disabled={isDisabled}
-              key={`animate-${animateIsHovered}`}
-            >
-              <Marger bottom={viewportIsSOrLess ? 0 : 5}>
-                <Grid style={styles.card.addPadding}>
-                  <GridCol col-m="7">{this.renderDescription()}</GridCol>
-                  <GridCol col-m="4" offset-m="1">
-                    {this.renderImage()}
-                  </GridCol>
-                </Grid>
-                {viewportIsSOrLess && this.renderChoiceButton()}
-              </Marger>
-            </div>
-          </GridCol>
-        </Grid>
+        <div style={styleCard} disabled={isDisabled}>
+          <Marger bottom={viewportIsSOrLess ? 0 : 5}>
+            <Grid style={styles.card.addPadding}>
+              <GridCol col-m="7">{this.renderDescription()}</GridCol>
+              <GridCol col-m="4" offset-m="1">
+                {this.renderImage()}
+              </GridCol>
+            </Grid>
+            {viewportIsSOrLess && this.renderChoiceButton()}
+          </Marger>
+        </div>
       </StyleRoot>
     )
   }
@@ -249,7 +223,6 @@ class RewardCardComponent extends Component {
     return (
       <Marger bottom={viewportIsSOrLess ? null : 2}>
         <Button
-          key="animate-button"
           size="big"
           modifier="helium"
           aria-label={button}
@@ -344,14 +317,6 @@ const styles = {
     borderStyle: 'solid',
     borderColor: COLORS.line1,
     display: 'flex',
-    transition: 'all .4s ease-in-out',
-
-    hover: {
-      transform: 'scale(1.02)',
-    },
-    focus: {
-      transform: 'scale(1.02)',
-    },
 
     addPadding: {
       paddingLeft: '20px',
