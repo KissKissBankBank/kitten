@@ -120,7 +120,7 @@ exports[`<RewardCard /> by default matches with snapshot 1`] = `
                   Object {
                     "display": "flex",
                     "flexDirection": "column",
-                    "padding": "0 \${COMPONENT_GUTTER}px",
+                    "padding": "0\${COMPONENT_GUTTER}px",
                   }
                 }
               >
@@ -140,7 +140,7 @@ exports[`<RewardCard /> by default matches with snapshot 1`] = `
                   Object {
                     "display": "flex",
                     "flexDirection": "column",
-                    "padding": "0 \${COMPONENT_GUTTER}px",
+                    "padding": "0\${COMPONENT_GUTTER}px",
                   }
                 }
               >
@@ -160,7 +160,7 @@ exports[`<RewardCard /> by default matches with snapshot 1`] = `
                   Object {
                     "display": "flex",
                     "flexDirection": "column",
-                    "padding": "0 \${COMPONENT_GUTTER}px",
+                    "padding": "0\${COMPONENT_GUTTER}px",
                   }
                 }
               >
@@ -401,7 +401,7 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
                   Object {
                     "display": "flex",
                     "flexDirection": "column",
-                    "padding": "0 \${COMPONENT_GUTTER}px",
+                    "padding": "0\${COMPONENT_GUTTER}px",
                   }
                 }
               >
@@ -421,7 +421,7 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
                   Object {
                     "display": "flex",
                     "flexDirection": "column",
-                    "padding": "0 \${COMPONENT_GUTTER}px",
+                    "padding": "0\${COMPONENT_GUTTER}px",
                   }
                 }
               >
@@ -441,7 +441,7 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
                   Object {
                     "display": "flex",
                     "flexDirection": "column",
-                    "padding": "0 \${COMPONENT_GUTTER}px",
+                    "padding": "0\${COMPONENT_GUTTER}px",
                   }
                 }
               >
