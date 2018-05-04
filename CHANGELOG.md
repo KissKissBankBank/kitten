@@ -4,8 +4,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Create `RewardCard` component and its stories.
-- Fix: Fix `RemoveListener` on media-query `viewportIsSOrLess`.
+## [20.10.0] - 2018-05-04
+
+Feature:
+- Create `RewardCard` component and its stories.
+
+Fix:
+- Fix `RemoveListener` on media-query `viewportIsSOrLess`.
 
 ## [20.9.0] - 2018-05-02
 
