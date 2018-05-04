@@ -4,7 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `KarlRewardCard` example.
+## [20.10.0] - 2018-05-04
+
+Feature:
+- Add `KarlRewardCard` example.
 
 ## [20.9.0] - 2018-05-02
 
