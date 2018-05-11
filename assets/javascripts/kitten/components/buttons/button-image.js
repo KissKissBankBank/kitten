@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { Component } from 'react'
 import classNames from 'classnames'
 
-export class ButtonImage extends React.Component {
+export class ButtonImage extends Component {
   renderImage(props) {
     const { className, ...others } = props
 
