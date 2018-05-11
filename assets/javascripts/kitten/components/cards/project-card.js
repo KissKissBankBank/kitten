@@ -243,7 +243,9 @@ class ProjectCardComponent extends Component {
         )}
       >
         <Marger top="2" bottom="2">
-          <Paragraph modifier="quaternary">{this.props.paragraph}</Paragraph>
+          <Paragraph margin={false} modifier="quaternary">
+            {this.props.paragraph}
+          </Paragraph>
         </Marger>
       </div>
     )
