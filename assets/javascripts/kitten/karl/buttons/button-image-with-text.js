@@ -7,7 +7,7 @@ import { KarlExampleTitle } from 'kitten/karl/examples/title'
 export const KarlButtonImageWithText = () => (
   <Grid>
     <GridCol col="3">
-      <KarlExampleTitle>Button image with text - small</KarlExampleTitle>
+      <KarlExampleTitle>With paragraph - small</KarlExampleTitle>
       <ButtonImageWithText
         titleProps={{
           size: 'micro',
@@ -23,7 +23,7 @@ export const KarlButtonImageWithText = () => (
     </GridCol>
 
     <GridCol col="3">
-      <KarlExampleTitle>Button image with text</KarlExampleTitle>
+      <KarlExampleTitle>With paragraph - normal</KarlExampleTitle>
       <ButtonImageWithText
         titleProps={{
           weight: 'regular',

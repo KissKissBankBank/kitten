@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ButtonImageWithText /> should match its empty snapshot 1`] = `
+<div
+  data-radium={true}
+  style={
+    Object {
+      "alignItems": "center",
+      "display": "flex",
+    }
+  }
+>
+  <span
+    className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
+    tabIndex={null}
+  >
+    <img
+      alt=""
+      className="k-ButtonImage__img"
+      src="https://placehold.it/100x100/caf4fe/caf4fe"
+    />
+  </span>
+  <div
+    data-radium={true}
+    style={
+      Object {
+        "lineHeight": "1.2",
+        "marginLeft": "10px",
+        "marginRight": "20px",
+      }
+    }
+  >
+    <div
+      className=""
+    >
+      
+    </div>
+    <div
+      className=""
+    >
+      
+    </div>
+  </div>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "",
+      }
+    }
+  />
+</div>
+`;
