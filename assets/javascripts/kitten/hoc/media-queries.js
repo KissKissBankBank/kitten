@@ -68,7 +68,7 @@ export const mediaQueries = (WrappedComponent, hocProps = {}) =>
       }
 
       if (this.mqSOrLess) {
-        this.mqS.removeListener(this.onSMQ)
+        this.mqSOrLess.removeListener(this.onSMQ)
       }
 
       if (this.mqTabletOrLess) {

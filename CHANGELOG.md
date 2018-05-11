@@ -4,12 +4,20 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [20.10.0] - 2018-05-04
+
+Feature:
+- Create `RewardCard` component and its stories.
+
+Fix:
+- Fix `RemoveListener` on media-query `viewportIsSOrLess`.
+
 ## [20.9.0] - 2018-05-02
 
-Features: 
-- Add `cropperData` values on the return of `onChange` handler of 
+Features:
+- Add `cropperData` values on the return of `onChange` handler of
 `ImageCropper` component.
-- Add 'isCropEnabled' prop on `ImageCropper` component. If false, the 
+- Add 'isCropEnabled' prop on `ImageCropper` component. If false, the
 cropper feature is turned off (true by default).
 - Add `base64` option to `Uploader` to return base64 image if true.
 (false by default)
