@@ -64,11 +64,11 @@ class SimpleCardComponent extends Component {
           </Marger>
         )}
 
-        { horizontalStroke &&
+        {horizontalStroke && (
           <Marger top="1.5">
             <HorizontalStroke size="tiny" />
           </Marger>
-        }
+        )}
       </Tag>
     )
   }
