@@ -1,20 +1,19 @@
 import React, { Component } from 'react'
-import Radium, { StyleRoot } from 'radium'
+import Radium from 'radium'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import { ButtonImage as ButtonImageBase } from 'kitten/components/buttons/button-image'
 import { Text as TextBase } from 'kitten/components/typography/text'
-import { parseHtml } from 'kitten/helpers/utils/parser'
 
 const ButtonImage = Radium(ButtonImageBase)
 const Text = Radium(TextBase)
 
 class ButtonImageWithTextComponent extends Component {
-  static PropTypes = {
+  static propTypes = {
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
-    isNormal: PropTypes.bool,
-    outsideCard: PropTypes.bool,
+    micro: PropTypes.bool,
+    largeGutter: PropTypes.bool,
   }
 
   static defaultProps = {
@@ -22,16 +21,14 @@ class ButtonImageWithTextComponent extends Component {
       src: 'https://placehold.it/100x100/caf4fe/caf4fe',
       alt: '',
     },
-    title: '',
-    description: '',
   }
 
   render() {
     return (
-      <StyleRoot style={styles}>
+      <div style={styles}>
         {this.renderButtonImage()}
         {this.renderDescription()}
-      </StyleRoot>
+      </div>
     )
   }
 
@@ -46,20 +43,24 @@ class ButtonImageWithTextComponent extends Component {
   }
 
   renderDescription() {
-    const { title, description, isNormal, outsideCard } = this.props
+    const { title, description, micro, tag, largeGutter } = this.props
 
-    const size = isNormal ? 'tiny' : 'micro'
+    const size = micro ? 'micro' : 'tiny'
 
-    const styleText = [styles.text, outsideCard && styles.text.outsideCard]
+    const Tag = tag
+
+    const tagStyle = [styles, tag == 'p' && styles.paragraph]
+
+    const textStyle = [styles.text, largeGutter && styles.text.largeGutter]
 
     return (
-      <div style={styleText} outsideCard>
-        <Text tag="div" size={size} weight="regular">
-          {parseHtml(title)}
+      <div style={textStyle}>
+        <Text tag={Tag} size={size} weight="regular" style={tagStyle}>
+          {title}
         </Text>
 
-        <Text tag="div" size={size}>
-          {parseHtml(description)}
+        <Text tag={Tag} size={size} style={tagStyle}>
+          {description}
         </Text>
       </div>
     )
@@ -71,12 +72,17 @@ const styles = {
   alignItems: 'center',
 
   text: {
+    flex: '1',
     marginLeft: '10px',
     lineHeight: '1.2',
 
-    outsideCard: {
+    largeGutter: {
       marginLeft: '15px',
     },
+  },
+
+  paragraph: {
+    margin: 0,
   },
 }
 
