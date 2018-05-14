@@ -22,6 +22,7 @@ exports[`<ButtonImageWithText /> should match its empty snapshot 1`] = `
   </span>
   <div
     data-radium={true}
+    outsideCard={true}
     style={
       Object {
         "lineHeight": "1.2",

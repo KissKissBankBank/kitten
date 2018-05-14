@@ -42,12 +42,14 @@ class ButtonImageWithTextComponent extends Component {
   }
 
   renderDescription() {
-    const { title, description, isNormal } = this.props
+    const { title, description, isNormal, outsideCard } = this.props
 
     const size = isNormal ? 'tiny' : 'micro'
 
+    const styleText = [styles.text, outsideCard && styles.text.outsideCard]
+
     return (
-      <div style={styles.description}>
+      <div style={styleText} outsideCard>
         <Text tag="div" size={size} weight="regular">
           {parseHtml(title)}
         </Text>
@@ -64,9 +66,13 @@ const styles = {
   display: 'flex',
   alignItems: 'center',
 
-  description: {
+  text: {
     marginLeft: '10px',
     lineHeight: '1.2',
+
+    outsideCard: {
+      marginLeft: '15px',
+    },
   },
 }
 

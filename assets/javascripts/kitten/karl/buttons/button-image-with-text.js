@@ -15,5 +15,15 @@ export const KarlButtonImageWithText = () => (
       <KarlExampleTitle>With paragraph - normal</KarlExampleTitle>
       <ButtonImageWithText isNormal title="Title" description="Description" />
     </GridCol>
+
+    <GridCol col="3">
+      <KarlExampleTitle>With paragraph - outside card</KarlExampleTitle>
+      <ButtonImageWithText
+        isNormal
+        outsideCard
+        title="Title"
+        description="Description"
+      />
+    </GridCol>
   </Grid>
 )
