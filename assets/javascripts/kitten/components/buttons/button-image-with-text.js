@@ -5,16 +5,17 @@ import classNames from 'classnames'
 import { ButtonImage as ButtonImageBase } from 'kitten/components/buttons/button-image'
 import { Marger as MargerBase } from 'kitten/components/layout/marger'
 import { Text as TextBase } from 'kitten/components/typography/text'
+import { parseHtml } from 'kitten/helpers/utils/parser'
 
 const ButtonImage = Radium(ButtonImageBase)
 const Marger = Radium(MargerBase)
 const Text = Radium(TextBase)
 
 class ButtonImageWithTextComponent extends Component {
-  // static PropTypes = {
-  //   title = PropTypes.string.isRequired,
-  //   description = PropTypes.string,
-  // }
+  static PropTypes = {
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string,
+  }
 
   static defaultProps = {
     avatarProps: {
@@ -23,8 +24,6 @@ class ButtonImageWithTextComponent extends Component {
     },
     title: '',
     description: '',
-    titleProps: {},
-    descriptionProps: {},
   }
 
   render() {
@@ -47,16 +46,18 @@ class ButtonImageWithTextComponent extends Component {
   }
 
   renderDescription() {
-    const { title, description, descriptionProps, titleProps } = this.props
+    const { title, description, isNormal } = this.props
+
+    const size = isNormal ? 'tiny' : 'micro'
 
     return (
       <div style={styles.description}>
-        <Text tag="div" {...titleProps}>
-          {title}
+        <Text tag="div" size={size} weight="regular">
+          {parseHtml(title)}
         </Text>
 
-        <Text tag="div" {...descriptionProps}>
-          {description}
+        <Text tag="div" size={size}>
+          {parseHtml(description)}
         </Text>
       </div>
     )

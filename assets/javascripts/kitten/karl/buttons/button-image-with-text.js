@@ -9,14 +9,6 @@ export const KarlButtonImageWithText = () => (
     <GridCol col="3">
       <KarlExampleTitle>With paragraph - small</KarlExampleTitle>
       <ButtonImageWithText
-        titleProps={{
-          size: 'micro',
-          weight: 'regular',
-        }}
-        descriptionProps={{
-          size: 'micro',
-          weight: 'light',
-        }}
         title="Owner title"
         description="Owner description"
       />
@@ -25,9 +17,7 @@ export const KarlButtonImageWithText = () => (
     <GridCol col="3">
       <KarlExampleTitle>With paragraph - normal</KarlExampleTitle>
       <ButtonImageWithText
-        titleProps={{
-          weight: 'regular',
-        }}
+        isNormal
         title="Owner title"
         description="Owner description"
       />

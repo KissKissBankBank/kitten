@@ -14,6 +14,7 @@ storiesOf('Buttons', module)
           <ButtonImageWithText
             title={text('Title', 'Owner title')}
             description={text('Description', 'description')}
+            isNormal={boolean('Is Regular', false)}
           />
         </GridCol>
       </Grid>
