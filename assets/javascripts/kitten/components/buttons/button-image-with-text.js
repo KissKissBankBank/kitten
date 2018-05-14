@@ -13,6 +13,8 @@ class ButtonImageWithTextComponent extends Component {
   static PropTypes = {
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
+    isNormal: PropTypes.bool,
+    outsideCard: PropTypes.bool,
   }
 
   static defaultProps = {
@@ -20,6 +22,8 @@ class ButtonImageWithTextComponent extends Component {
       src: 'https://placehold.it/100x100/caf4fe/caf4fe',
       alt: '',
     },
+    title: '',
+    description: '',
   }
 
   render() {

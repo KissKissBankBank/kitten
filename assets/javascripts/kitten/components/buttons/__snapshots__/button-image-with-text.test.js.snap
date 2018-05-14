@@ -32,14 +32,10 @@ exports[`<ButtonImageWithText /> should match its empty snapshot 1`] = `
   >
     <div
       className="k-u-size-micro k-u-weight-regular"
-    >
-      undefined
-    </div>
+    />
     <div
       className="k-u-size-micro"
-    >
-      undefined
-    </div>
+    />
   </div>
   <style
     dangerouslySetInnerHTML={
