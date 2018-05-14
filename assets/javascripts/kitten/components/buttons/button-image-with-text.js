@@ -3,12 +3,10 @@ import Radium, { StyleRoot } from 'radium'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import { ButtonImage as ButtonImageBase } from 'kitten/components/buttons/button-image'
-import { Marger as MargerBase } from 'kitten/components/layout/marger'
 import { Text as TextBase } from 'kitten/components/typography/text'
 import { parseHtml } from 'kitten/helpers/utils/parser'
 
 const ButtonImage = Radium(ButtonImageBase)
-const Marger = Radium(MargerBase)
 const Text = Radium(TextBase)
 
 class ButtonImageWithTextComponent extends Component {

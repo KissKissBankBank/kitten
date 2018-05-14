@@ -10,7 +10,7 @@ storiesOf('Buttons', module)
   .add('ButtonImageWithText', () => (
     <StyleRoot>
       <Grid>
-        <GridCol offset="2" col="6">
+        <GridCol offset="1" col="6">
           <ButtonImageWithText
             title={text('Title', 'Owner title')}
             description={text('Description', 'description')}
