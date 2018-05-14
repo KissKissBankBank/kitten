@@ -26,16 +26,19 @@ exports[`<ButtonImageWithText /> should match its empty snapshot 1`] = `
       Object {
         "lineHeight": "1.2",
         "marginLeft": "10px",
-        "marginRight": "20px",
       }
     }
   >
     <div
       className="k-u-size-micro k-u-weight-regular"
-    />
+    >
+      undefined
+    </div>
     <div
       className="k-u-size-micro"
-    />
+    >
+      undefined
+    </div>
   </div>
   <style
     dangerouslySetInnerHTML={
