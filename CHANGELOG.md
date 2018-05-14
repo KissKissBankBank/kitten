@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Update `ButtonImageWithText` component.
+- Feature: Update `ButtonImageWithText` component and storie.
 
 ## [20.10.0] - 2018-05-04
 

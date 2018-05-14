@@ -14,7 +14,7 @@ const Text = Radium(TextBase)
 class ButtonImageWithTextComponent extends Component {
   static PropTypes = {
     title: PropTypes.string.isRequired,
-    description: PropTypes.string,
+    description: PropTypes.string.isRequired,
   }
 
   static defaultProps = {
@@ -22,8 +22,6 @@ class ButtonImageWithTextComponent extends Component {
       src: 'https://placehold.it/100x100/caf4fe/caf4fe',
       alt: '',
     },
-    title: '',
-    description: '',
   }
 
   render() {
@@ -70,7 +68,6 @@ const styles = {
 
   description: {
     marginLeft: '10px',
-    marginRight: '20px',
     lineHeight: '1.2',
   },
 }

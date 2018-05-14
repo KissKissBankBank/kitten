@@ -8,19 +8,12 @@ export const KarlButtonImageWithText = () => (
   <Grid>
     <GridCol col="3">
       <KarlExampleTitle>With paragraph - small</KarlExampleTitle>
-      <ButtonImageWithText
-        title="Owner title"
-        description="Owner description"
-      />
+      <ButtonImageWithText title="Title" description="Description" />
     </GridCol>
 
     <GridCol col="3">
       <KarlExampleTitle>With paragraph - normal</KarlExampleTitle>
-      <ButtonImageWithText
-        isNormal
-        title="Owner title"
-        description="Owner description"
-      />
+      <ButtonImageWithText isNormal title="Title" description="Description" />
     </GridCol>
   </Grid>
 )
