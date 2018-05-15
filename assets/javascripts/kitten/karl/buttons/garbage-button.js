@@ -1,35 +1,45 @@
 import React, { Component } from 'react'
 import Radium, { StyleRoot } from 'radium'
-import classNames from 'classnames'
+import PropTypes from 'prop-types'
 import { GarbageIcon as GarbageIconBase } from 'kitten/components/icons/garbage-icon'
 import { ButtonIcon as ButtonIconBase } from 'kitten/components/buttons/button-icon'
-import COLORS from 'kitten/constants/colors-config'
 
 const ButtonIcon = Radium(ButtonIconBase)
 const GarbageIcon = Radium(GarbageIconBase)
 
 class KarlGarbageButtonComponent extends Component {
+  static propTypes = {
+    size: PropTypes.string,
+    modifier: PropTypes.string,
+    isDisabled: PropTypes.bool,
+  }
+
+  static defaultProps = {
+    size: 'tiny',
+    modifier: 'beryllium',
+    isDisabled: null,
+  }
+
   render() {
-    const animateIsHovered = Radium.getState(
+    const buttonIsHovered = Radium.getState(
       this.state,
       'button-garbage',
       ':hover',
     )
-    const animateIsFocused = Radium.getState(
+    const buttonIsFocused = Radium.getState(
       this.state,
       'button-garbage',
       ':focus',
     )
-    const animateIsActived = Radium.getState(
+    const buttonIsActived = Radium.getState(
       this.state,
       'button-garbage',
       ':active',
     )
 
+    const size = this.props.size
+    const modifier = this.props.modifier
     const isDisabled = this.props.disabled
-
-    const isAnimated =
-      !isDisabled && (animateIsHovered || animateIsFocused || animateIsActived)
 
     return (
       <StyleRoot>
@@ -38,12 +48,12 @@ class KarlGarbageButtonComponent extends Component {
             type="button"
             title="Garbage Button"
             aria-label="Garbage Button"
-            modifier="beryllium"
-            size="tiny"
+            modifier={modifier}
+            size={size}
             disabled={isDisabled}
           >
             <GarbageIcon
-              key={`icon-${animateIsHovered}`}
+              key={`icon-${buttonIsHovered}`}
               className="k-ButtonIcon__svg"
             />
           </ButtonIcon>
