@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add `ButtonImageWithText` component and storie.
+- Feature: Add `paragraph` props on `ProjectCard` component.
 
 ## [20.10.0] - 2018-05-04
 
