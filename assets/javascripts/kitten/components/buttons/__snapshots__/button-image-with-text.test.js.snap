@@ -7,6 +7,7 @@ exports[`<ButtonImageWithText /> should match its empty snapshot 1`] = `
     Object {
       "alignItems": "center",
       "display": "flex",
+      "flex": "1",
     }
   }
 >
@@ -22,7 +23,6 @@ exports[`<ButtonImageWithText /> should match its empty snapshot 1`] = `
   </span>
   <div
     data-radium={true}
-    outsideCard={true}
     style={
       Object {
         "lineHeight": "1.2",
@@ -30,19 +30,32 @@ exports[`<ButtonImageWithText /> should match its empty snapshot 1`] = `
       }
     }
   >
-    <div
-      className="k-u-size-micro k-u-weight-regular"
-    />
-    <div
-      className="k-u-size-micro"
-    />
-  </div>
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "",
+    <span
+      className="k-u-size-tiny k-u-weight-regular"
+      data-radium={true}
+      style={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "flex": "1",
+        }
       }
-    }
-  />
+    >
+      
+    </span>
+    <span
+      className="k-u-size-tiny"
+      data-radium={true}
+      style={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "flex": "1",
+        }
+      }
+    >
+      
+    </span>
+  </div>
 </div>
 `;

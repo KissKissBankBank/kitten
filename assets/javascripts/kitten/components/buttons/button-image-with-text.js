@@ -21,6 +21,8 @@ class ButtonImageWithTextComponent extends Component {
       src: 'https://placehold.it/100x100/caf4fe/caf4fe',
       alt: '',
     },
+    title: '',
+    description: '',
   }
 
   render() {
@@ -70,9 +72,9 @@ class ButtonImageWithTextComponent extends Component {
 const styles = {
   display: 'flex',
   alignItems: 'center',
+  flex: '1',
 
   text: {
-    flex: '1',
     marginLeft: '10px',
     lineHeight: '1.2',
 
