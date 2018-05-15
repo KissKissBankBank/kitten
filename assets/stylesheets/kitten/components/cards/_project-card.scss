@@ -162,6 +162,10 @@
     width: 100%;
   }
 
+  .k-ProjectCard__paragraph {
+    padding: 0 k-px-to-rem(25px);
+  }
+
   .k-ProjectCard__status {
     overflow: auto;
     @include k-typographyFont($status-font);
