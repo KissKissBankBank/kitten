@@ -20,9 +20,6 @@ export const KarlRewardCard = () => (
           titleDelivery="Delivery"
           titleSmallDelivery="Delivery : "
           valueDelivery="January 2018"
-          titleAvailability="Availability"
-          titleSmallAvailability="Availability : "
-          valueAvailability="200"
           button="Choose"
           imageSrc
         />

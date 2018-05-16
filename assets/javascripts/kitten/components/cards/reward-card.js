@@ -170,6 +170,8 @@ class RewardCardComponent extends Component {
   renderInfo(title, titleSmall, value) {
     const { viewportIsTabletOrLess } = this.props
 
+    if (!title) return
+
     return (
       <GridCol style={styles.infos} col-l="4" col-xl="3">
         {viewportIsTabletOrLess && (
@@ -206,7 +208,9 @@ class RewardCardComponent extends Component {
         {!viewportIsSOrLess && (
           <Fragment>
             {this.renderButton()}
-            <Marger top="2">{this.renderMyContribution()}</Marger>
+            <Marger top={!this.props.myContribution ? 0 : 2}>
+              {this.renderMyContribution()}
+            </Marger>
           </Fragment>
         )}
       </Fragment>
@@ -251,7 +255,7 @@ class RewardCardComponent extends Component {
       viewportIsSOrLess,
     } = this.props
 
-    if (!myContribution && viewportIsSOrLess && isDisabled) return
+    if (!myContribution || (viewportIsSOrLess && isDisabled)) return
 
     return (
       <Fragment>
