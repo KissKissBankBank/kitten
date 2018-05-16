@@ -21,55 +21,23 @@ class KarlGarbageButtonComponent extends Component {
   }
 
   render() {
-    const buttonIsHovered = Radium.getState(
-      this.state,
-      'button-garbage',
-      ':hover',
-    )
-    const buttonIsFocused = Radium.getState(
-      this.state,
-      'button-garbage',
-      ':focus',
-    )
-    const buttonIsActived = Radium.getState(
-      this.state,
-      'button-garbage',
-      ':active',
-    )
-
     const size = this.props.size
     const modifier = this.props.modifier
     const isDisabled = this.props.disabled
 
     return (
-      <StyleRoot>
-        <div key="button-garbage" style={styles.garbage}>
-          <ButtonIcon
-            type="button"
-            title="Garbage Button"
-            aria-label="Garbage Button"
-            modifier={modifier}
-            size={size}
-            disabled={isDisabled}
-          >
-            <GarbageIcon
-              key={`icon-${buttonIsHovered}`}
-              className="k-ButtonIcon__svg"
-            />
-          </ButtonIcon>
-        </div>
-      </StyleRoot>
+      <ButtonIcon
+        type="button"
+        title="Garbage Button"
+        aria-label="Garbage Button"
+        modifier={modifier}
+        size={size}
+        disabled={isDisabled}
+      >
+        <GarbageIcon className="k-ButtonIcon__svg" />
+      </ButtonIcon>
     )
   }
-}
-
-const styles = {
-  garbage: {
-    ':hover': {},
-    ':focus': {},
-    ':active': {},
-    ':disabled': {},
-  },
 }
 
 export const KarlGarbageButton = Radium(KarlGarbageButtonComponent)
