@@ -47,6 +47,7 @@ class RewardCardComponent extends Component {
 
     myContribution: PropTypes.string,
     manageContribution: PropTypes.string,
+    manageContributionLink: PropTypes.string,
 
     imageSrc: PropTypes.bool,
     imageSrcSmall: PropTypes.bool,
@@ -68,18 +69,16 @@ class RewardCardComponent extends Component {
     const styleCard = [styles.card, isDisabled && styles.card.isDisabled]
 
     return (
-      <StyleRoot>
-        <div style={styleCard} disabled={isDisabled}>
-          <Marger bottom={viewportIsSOrLess ? 0 : 5}>
-            <Grid style={styles.card.addPadding}>
-              <GridCol col-m="7">{this.renderDescription()}</GridCol>
-              <GridCol col-m="4" offset-m="1">
-                {this.renderImage()}
-              </GridCol>
-            </Grid>
-            {viewportIsSOrLess && this.renderChoiceButton()}
-          </Marger>
-        </div>
+      <StyleRoot style={styleCard}>
+        <Marger bottom={viewportIsSOrLess ? 0 : 5}>
+          <Grid style={styles.card.addPadding} disabled={isDisabled}>
+            <GridCol col-m="7">{this.renderDescription()}</GridCol>
+            <GridCol col-m="4" offset-m="1" style={styles.image}>
+              {this.renderImage()}
+            </GridCol>
+          </Grid>
+          {viewportIsSOrLess && this.renderChoiceButton()}
+        </Marger>
       </StyleRoot>
     )
   }
@@ -248,10 +247,11 @@ class RewardCardComponent extends Component {
       isDisabled,
       myContribution,
       manageContribution,
+      manageContributionLink,
       viewportIsSOrLess,
     } = this.props
 
-    if (viewportIsSOrLess && isDisabled) return
+    if (!myContribution && viewportIsSOrLess && isDisabled) return
 
     return (
       <Fragment>
@@ -264,7 +264,10 @@ class RewardCardComponent extends Component {
                   <Text size="tiny" weight="regular">
                     {myContribution}
                     <br />
-                    <a href="#" style={styles.myContribution.text.link}>
+                    <a
+                      href={manageContributionLink}
+                      style={styles.myContribution.text.link}
+                    >
                       {manageContribution}
                     </a>
                   </Text>
@@ -313,7 +316,6 @@ const styles = {
     borderWidth: '2px',
     borderStyle: 'solid',
     borderColor: COLORS.line1,
-    display: 'flex',
 
     addPadding: {
       paddingLeft: '20px',

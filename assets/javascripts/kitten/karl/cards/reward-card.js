@@ -12,8 +12,8 @@ export const KarlRewardCard = () => (
       <Marger bottom="2">
         <RewardCard
           titleAmount="For 00€"
-          titleDescription="Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
-          textDescription="In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi."
+          titleDescription="Lorem ipsumn, consectetuer adipiscing elit."
+          textDescription="In enim justo."
           titleContributors="Contributors"
           titleSmallContributors="Contributors : "
           valueContributors="35"
@@ -24,8 +24,6 @@ export const KarlRewardCard = () => (
           titleSmallAvailability="Availability : "
           valueAvailability="200"
           button="Choose"
-          myContribution="You contributed to this project"
-          manageContribution="Manage my contribution"
           imageSrc
         />
       </Marger>
