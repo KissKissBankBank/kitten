@@ -130,8 +130,6 @@ exports[`<RewardCard /> by default matches with snapshot 1`] = `
       </div>
       <div
         className="k-Grid__col--12 k-Grid__col--4@m k-Grid__col--offset-1@m"
-        data-radium={true}
-        style={Object {}}
       />
     </div>
   </div>
@@ -426,8 +424,6 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
       </div>
       <div
         className="k-Grid__col--12 k-Grid__col--4@m k-Grid__col--offset-1@m"
-        data-radium={true}
-        style={Object {}}
       />
     </div>
   </div>
