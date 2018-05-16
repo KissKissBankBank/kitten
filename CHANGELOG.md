@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Add `title` and `myContribution` early return and fix bug with the grid.
 - Feature: Add `paragraph` props on `ProjectCard` component.
 
 ## [20.10.0] - 2018-05-04
