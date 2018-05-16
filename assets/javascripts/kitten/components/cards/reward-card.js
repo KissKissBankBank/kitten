@@ -73,7 +73,7 @@ class RewardCardComponent extends Component {
         <Marger bottom={viewportIsSOrLess ? 0 : 5}>
           <Grid style={styles.card.addPadding} disabled={isDisabled}>
             <GridCol col-m="7">{this.renderDescription()}</GridCol>
-            <GridCol col-m="4" offset-m="1" style={styles.image}>
+            <GridCol col-m="4" offset-m="1">
               {this.renderImage()}
             </GridCol>
           </Grid>
