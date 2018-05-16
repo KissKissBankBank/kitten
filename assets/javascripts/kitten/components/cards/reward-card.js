@@ -13,6 +13,7 @@ import { Paragraph as ParagraphBase } from 'kitten/components/typography/paragra
 import { IconBadge as IconBadgeBase } from 'kitten/components/notifications/icon-badge'
 import { CheckedIcon } from 'kitten/components/icons/checked-icon'
 import { HorizontalStroke as HorizontalStrokeBase } from 'kitten/components/layout/horizontal-stroke'
+import { TextInputWithUnit as TextInputWithUnitBase } from 'kitten/components/form/text-input-with-unit'
 import COLORS from 'kitten/constants/colors-config'
 import { parseHtml } from 'kitten/helpers/utils/parser'
 import { ScreenConfig } from 'kitten/constants/screen-config'
@@ -26,6 +27,7 @@ const Text = Radium(TextBase)
 const Paragraph = Radium(ParagraphBase)
 const IconBadge = Radium(IconBadgeBase)
 const HorizontalStroke = Radium(HorizontalStrokeBase)
+const TextInputWithUnit = Radium(TextInputWithUnitBase)
 
 class RewardCardComponent extends Component {
   static propTypes = {
@@ -127,6 +129,7 @@ class RewardCardComponent extends Component {
             </Paragraph>
           </Marger>
         </Marger>
+        <Marger top="2">{this.renderDonation()}</Marger>
         <Marger top="2" bottom={viewportIsSOrLess ? 3 : 4}>
           {this.renderInfos()}
         </Marger>
@@ -313,6 +316,49 @@ class RewardCardComponent extends Component {
 
     return <img {...this.props.imageProps} style={imageStyles} />
   }
+
+  renderDonation() {
+    const {
+      error,
+      errorTag,
+      amountName,
+      amountLabel,
+      amountMin,
+      amountMax,
+      initialAmount,
+      onFocus,
+      onAmountChange,
+      onAmountKeyDown,
+      amountPlaceholder,
+      currencySymbol,
+    } = this.props
+
+    return (
+      <div style={styles.donation}>
+        <div>
+          <label style={styles.donation.label} htmlFor="loan-simulator-amount">
+            {amountLabel}
+          </label>
+          <TextInputWithUnit
+            ref={input => (this.amount = input)}
+            error={error}
+            id="loan-simulator-amount"
+            name={amountName}
+            type="number"
+            min={amountMin}
+            max={amountMax}
+            defaultValue={initialAmount}
+            onFocus={onFocus}
+            onChange={onAmountChange}
+            onKeyDown={onAmountKeyDown}
+            placeholder={amountPlaceholder}
+            unit={currencySymbol}
+          />
+          {errorTag}
+        </div>
+      </div>
+    )
+  }
 }
 
 const styles = {
@@ -405,6 +451,13 @@ const styles = {
     small: {
       width: '100%',
       height: '325px',
+    },
+  },
+
+  donation: {
+    label: {
+      marginBottom: '10px',
+      fontSize: '14px',
     },
   },
 }

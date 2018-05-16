@@ -143,5 +143,18 @@ export const KarlRewardCard = () => (
         />
       </Marger>
     </Container>
+
+    <KarlExampleTitle>Donation card</KarlExampleTitle>
+    <Container>
+      <Marger top="2" bottom="2">
+        <RewardCard
+          titleAmount="Don libre"
+          textDescription="In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi."
+          myContribution="You contributed to this project"
+          manageContribution="Manage my contribution"
+          button="Choose"
+        />
+      </Marger>
+    </Container>
   </StyleRoot>
 )
