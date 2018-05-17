@@ -130,10 +130,8 @@ class RewardCardComponent extends Component {
             </Paragraph>
           </Marger>
         </Marger>
-        <Marger top="2">{this.renderDonation()}</Marger>
-        <Marger top="2" bottom={viewportIsSOrLess ? 3 : 4}>
-          {this.renderInfos()}
-        </Marger>
+        {this.renderDonation()}
+        {this.renderInfos()}
         {!viewportIsSOrLess && (
           <Marger top="4">{this.renderChoiceButton()}</Marger>
         )}
@@ -152,29 +150,32 @@ class RewardCardComponent extends Component {
       valueContributors,
       valueDelivery,
       valueAvailability,
+      viewportIsSOrLess,
     } = this.props
 
     return (
-      <Grid>
-        {this.renderInfo(
-          titleContributors,
-          titleSmallContributors,
-          valueContributors,
-        )}
-        {this.renderInfo(titleDelivery, titleSmallDelivery, valueDelivery)}
-        {this.renderInfo(
-          titleAvailability,
-          titleSmallAvailability,
-          valueAvailability,
-        )}
-      </Grid>
+      <Marger top="2" bottom={viewportIsSOrLess ? 3 : 4}>
+        <Grid>
+          {this.renderInfo(
+            titleContributors,
+            titleSmallContributors,
+            valueContributors,
+          )}
+          {this.renderInfo(titleDelivery, titleSmallDelivery, valueDelivery)}
+          {this.renderInfo(
+            titleAvailability,
+            titleSmallAvailability,
+            valueAvailability,
+          )}
+        </Grid>
+      </Marger>
     )
   }
 
   renderInfo(title, titleSmall, value) {
-    const { viewportIsTabletOrLess } = this.props
+    const { viewportIsTabletOrLess, infos } = this.props
 
-    if (!title) return
+    if (!infos || !title) return
 
     return (
       <GridCol style={styles.infos} col-l="4" col-xl="3">
@@ -252,6 +253,7 @@ class RewardCardComponent extends Component {
 
   renderMyContribution() {
     const {
+      activedContribution,
       isDisabled,
       myContribution,
       manageContribution,
@@ -259,7 +261,12 @@ class RewardCardComponent extends Component {
       viewportIsSOrLess,
     } = this.props
 
-    if (!myContribution || (viewportIsSOrLess && isDisabled)) return
+    if (
+      !activedContribution ||
+      !myContribution ||
+      (viewportIsSOrLess && isDisabled)
+    )
+      return
 
     return (
       <Fragment>
@@ -338,33 +345,39 @@ class RewardCardComponent extends Component {
     if (!donation) return
 
     return (
-      <Grid style={styles.donation}>
-        <GridCol col-xs="7" col-m="5">
-          <Marger top="3" bottom="1.5">
-            <Label size="tiny" style={styles.donation.label} htmlFor={donation}>
-              {amountLabel}
-            </Label>
-          </Marger>
-          <Marger top="1.5">
-            <TextInputWithUnit
-              ref={input => (this.amount = input)}
-              error={error}
-              id={donation}
-              name={amountName}
-              type="number"
-              min={amountMin}
-              max={amountMax}
-              defaultValue={initialAmount}
-              onFocus={onFocus}
-              onChange={onAmountChange}
-              onKeyDown={onAmountKeyDown}
-              placeholder={amountPlaceholder}
-              unit={currencySymbol}
-            />
-          </Marger>
-          {errorTag}
-        </GridCol>
-      </Grid>
+      <Marger top="2" bottom="0">
+        <Grid style={styles.donation}>
+          <GridCol col-xs="7" col-m="5">
+            <Marger top="3" bottom="1.5">
+              <Label
+                size="micro"
+                style={styles.donation.label}
+                htmlFor={donation}
+              >
+                {amountLabel}
+              </Label>
+            </Marger>
+            <Marger top="1.5">
+              <TextInputWithUnit
+                ref={input => (this.amount = input)}
+                error={error}
+                id={donation}
+                name={amountName}
+                type="number"
+                min={amountMin}
+                max={amountMax}
+                defaultValue={initialAmount}
+                onFocus={onFocus}
+                onChange={onAmountChange}
+                onKeyDown={onAmountKeyDown}
+                placeholder={amountPlaceholder}
+                unit={currencySymbol}
+              />
+            </Marger>
+            {errorTag}
+          </GridCol>
+        </Grid>
+      </Marger>
     )
   }
 }
@@ -462,11 +475,7 @@ const styles = {
     },
   },
 
-  donation: {
-    label: {
-      // fontSize: "14px",
-    },
-  },
+  donation: {},
 }
 
 export const RewardCard = mediaQueries(Radium(RewardCardComponent), {
