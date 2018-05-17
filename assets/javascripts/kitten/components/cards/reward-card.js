@@ -14,6 +14,7 @@ import { IconBadge as IconBadgeBase } from 'kitten/components/notifications/icon
 import { CheckedIcon } from 'kitten/components/icons/checked-icon'
 import { HorizontalStroke as HorizontalStrokeBase } from 'kitten/components/layout/horizontal-stroke'
 import { TextInputWithUnit as TextInputWithUnitBase } from 'kitten/components/form/text-input-with-unit'
+import { Label } from 'kitten/components/form/label'
 import COLORS from 'kitten/constants/colors-config'
 import { parseHtml } from 'kitten/helpers/utils/parser'
 import { ScreenConfig } from 'kitten/constants/screen-config'
@@ -319,6 +320,7 @@ class RewardCardComponent extends Component {
 
   renderDonation() {
     const {
+      donation,
       error,
       errorTag,
       amountName,
@@ -333,30 +335,36 @@ class RewardCardComponent extends Component {
       currencySymbol,
     } = this.props
 
+    if (!donation) return
+
     return (
-      <div style={styles.donation}>
-        <div>
-          <label style={styles.donation.label} htmlFor="loan-simulator-amount">
-            {amountLabel}
-          </label>
-          <TextInputWithUnit
-            ref={input => (this.amount = input)}
-            error={error}
-            id="loan-simulator-amount"
-            name={amountName}
-            type="number"
-            min={amountMin}
-            max={amountMax}
-            defaultValue={initialAmount}
-            onFocus={onFocus}
-            onChange={onAmountChange}
-            onKeyDown={onAmountKeyDown}
-            placeholder={amountPlaceholder}
-            unit={currencySymbol}
-          />
+      <Grid style={styles.donation}>
+        <GridCol col-xs="7" col-m="5">
+          <Marger top="3" bottom="1.5">
+            <Label size="tiny" style={styles.donation.label} htmlFor={donation}>
+              {amountLabel}
+            </Label>
+          </Marger>
+          <Marger top="1.5">
+            <TextInputWithUnit
+              ref={input => (this.amount = input)}
+              error={error}
+              id={donation}
+              name={amountName}
+              type="number"
+              min={amountMin}
+              max={amountMax}
+              defaultValue={initialAmount}
+              onFocus={onFocus}
+              onChange={onAmountChange}
+              onKeyDown={onAmountKeyDown}
+              placeholder={amountPlaceholder}
+              unit={currencySymbol}
+            />
+          </Marger>
           {errorTag}
-        </div>
-      </div>
+        </GridCol>
+      </Grid>
     )
   }
 }
@@ -456,8 +464,7 @@ const styles = {
 
   donation: {
     label: {
-      marginBottom: '10px',
-      fontSize: '14px',
+      // fontSize: "14px",
     },
   },
 }
