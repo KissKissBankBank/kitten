@@ -47,6 +47,9 @@ class RewardCardComponent extends Component {
     valueAvailability: PropTypes.string,
 
     button: PropTypes.string,
+    buttonOnMouseEnter: PropTypes.func,
+    buttonOnMouseLeave: PropTypes.func,
+    buttonOnClick: PropTypes.func,
 
     myContribution: PropTypes.string,
     manageContribution: PropTypes.string,
@@ -67,12 +70,43 @@ class RewardCardComponent extends Component {
   }
 
   render() {
-    const { isDisabled, viewportIsSOrLess } = this.props
+    const {
+      isDisabled,
+      viewportIsSOrLess,
+      viewportIsMobile,
+      viewportIsTabletOrLess,
+      titleAmount,
+      titleDescription,
+      textDescription,
+      titleContributors,
+      titleSmallContributors,
+      titleDelivery,
+      titleSmallDelivery,
+      titleAvailability,
+      titleSmallAvailability,
+      valueContributors,
+      valueDelivery,
+      valueAvailability,
+      button,
+      buttonOnMouseEnter,
+      buttonOnMouseLeave,
+      buttonOnClick,
+      myContribution,
+      manageContribution,
+      manageContributionLink,
+      textAvailability,
+      textContributors,
+      textDelivery,
+      imageSrc,
+      imageSrcSmall,
+      imageProps,
+      ...others
+    } = this.props
 
     const styleCard = [styles.card, isDisabled && styles.card.isDisabled]
 
     return (
-      <StyleRoot style={styleCard}>
+      <StyleRoot {...others} style={styleCard}>
         <Marger bottom={viewportIsSOrLess ? 0 : 5}>
           <Grid style={styles.card.addPadding} disabled={isDisabled}>
             <GridCol col-m="7">{this.renderDescription()}</GridCol>
@@ -223,7 +257,14 @@ class RewardCardComponent extends Component {
   }
 
   renderButton() {
-    const { button, isCompleted, viewportIsSOrLess } = this.props
+    const {
+      button,
+      isCompleted,
+      viewportIsSOrLess,
+      buttonOnMouseEnter,
+      buttonOnMouseLeave,
+      buttonOnClick,
+    } = this.props
 
     if (!button || isCompleted) return
 
@@ -234,6 +275,9 @@ class RewardCardComponent extends Component {
           modifier="helium"
           aria-label={button}
           style={styles.button}
+          onMouseEnter={buttonOnMouseEnter}
+          onMouseLeave={buttonOnMouseLeave}
+          onClick={buttonOnClick}
         >
           {button}
         </Button>

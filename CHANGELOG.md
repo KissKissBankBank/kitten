@@ -4,8 +4,19 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Add `title` and `myContribution` early return and fix bug with the grid.
-- Feature: Add `paragraph` props on `ProjectCard` component.
+## [20.12.0] - 2018-05-17
+
+Feature:
+- Add `buttonOnMouseEnter`, `buttonOnMouseLeave`, `buttonOnClick` and custom
+  props on `RewardCard` component.
+
+## [20.11.0] - 2018-05-16
+
+Feature:
+- Add `paragraph` props on `ProjectCard` component.
+
+Fix:
+- Add `title` and `myContribution` early return and fix bug with the grid.
 
 ## [20.10.0] - 2018-05-04
 
