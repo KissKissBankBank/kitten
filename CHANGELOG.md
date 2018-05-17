@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [20.12.0] - 2018-05-17
+
 Feature:
 - Add `buttonOnMouseEnter`, `buttonOnMouseLeave`, `buttonOnClick` and custom
   props on `RewardCard` component.
