@@ -100,7 +100,11 @@ class RewardCardComponent extends Component {
       ...others
     } = this.props
 
-    const styleCard = [styles.card, isDisabled && styles.card.isDisabled]
+    const styleCard = [
+      others.style,
+      styles.card,
+      isDisabled && styles.card.isDisabled,
+    ]
 
     return (
       <StyleRoot {...others} style={styleCard}>
