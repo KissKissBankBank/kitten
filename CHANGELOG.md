@@ -4,7 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: fix `RewardCard` custom style.
+## [20.12.1] - 2018-05-17
+
+Fix:
+- Fix `RewardCard` custom style.
 
 ## [20.12.0] - 2018-05-17
 
