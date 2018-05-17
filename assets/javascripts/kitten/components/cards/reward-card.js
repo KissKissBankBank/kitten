@@ -100,7 +100,7 @@ class RewardCardComponent extends Component {
     const styleCard = [styles.card, isDisabled && styles.card.isDisabled]
 
     return (
-      <StyleRoot style={styleCard} {...others}>
+      <StyleRoot {...others} style={styleCard}>
         <Marger bottom={viewportIsSOrLess ? 0 : 5}>
           <Grid style={styles.card.addPadding} disabled={isDisabled}>
             <GridCol col-m="7">{this.renderDescription()}</GridCol>
