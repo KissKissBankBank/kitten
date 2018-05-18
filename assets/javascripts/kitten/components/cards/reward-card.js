@@ -222,7 +222,7 @@ class RewardCardComponent extends Component {
         {!viewportIsTabletOrLess && (
           <Fragment>
             <Text weight="regular">{parseHtml(title)}</Text>
-            <span>{parseHtml(value)}</span>
+            <Text weight="light">{parseHtml(value)}</Text>
           </Fragment>
         )}
       </GridCol>
@@ -336,7 +336,10 @@ class RewardCardComponent extends Component {
               <Text size="tiny" weight="regular">
                 {myContribution}
                 <br />
-                <a href="#" style={styles.myContribution.text.link}>
+                <a
+                  href={manageContributionLink}
+                  style={styles.myContribution.text.link}
+                >
                   {manageContribution}
                 </a>
               </Text>
