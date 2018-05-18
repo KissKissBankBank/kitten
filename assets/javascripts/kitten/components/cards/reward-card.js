@@ -57,6 +57,31 @@ class RewardCardComponent extends Component {
 
     imageSrc: PropTypes.bool,
     imageSrcSmall: PropTypes.bool,
+
+    // Name attribute for the amount input (if needed)
+    amountName: PropTypes.string,
+
+    // Bounds for accepted amount
+    amountMin: PropTypes.number,
+    amountMax: PropTypes.number,
+
+    // Placeholder for amount input
+    amountPlaceholder: PropTypes.string,
+
+    // Default amount
+    initialAmount: PropTypes.number,
+
+    // Set this to true to show errors on first use
+    initialTouched: PropTypes.bool,
+
+    // Error text when the amount is empty or non-numerical
+    amountEmptyError: PropTypes.string,
+
+    // Error text when the amount is over or under the min and max
+    amountOutOfBoundsError: PropTypes.string,
+
+    // Currency
+    currencySymbol: PropTypes.string,
   }
 
   static defaultProps = {
@@ -67,6 +92,81 @@ class RewardCardComponent extends Component {
     titleAmount: '',
     titleDescription: '',
     textDescription: '',
+
+    amountEmptyError: 'Amount cannot be empty',
+    amountOutOfBoundsError: 'Amount is either too big or too small',
+    initialAmount: null,
+    initialTouched: false,
+
+    amountPlaceholder: '',
+    amountLabel: 'I need',
+
+    amountMin: 1,
+    amountMax: 10000,
+
+    currencySymbol: '$',
+  }
+
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      touched: props.initialTouched,
+      amount: props.initialAmount * 1,
+    }
+
+    // this.handleFocus = this.handleFocus.bind(this)
+    // this.handleAmountChange = this.handleAmountChange.bind(this)
+    // this.handleEnter = this.handleEnter.bind(this)
+    // this.handleInstallmentLabelClick = this.handleInstallmentLabelClick.bind(
+    //   this,
+    // )
+    // this.handleInstallmentChange = this.handleInstallmentChange.bind(this)
+    // this.handleInstallmentAction = this.handleInstallmentAction.bind(this)
+  }
+
+  handleFocus(e) {
+    this.setState({
+      touched: false,
+      installmentAmount: null,
+    })
+  }
+
+  handleAmountChange(e) {
+    this.setState({ amount: e.target.value })
+  }
+
+  handleEnter(e) {
+    this.setState({ touched: true })
+  }
+
+  handleInstallmentLabelClick() {
+    this.refs.content.focusSlider()
+  }
+
+  // on slider click or on grab change
+  handleInstallmentChange(value) {
+    this.setState({
+      installmentAmount: value,
+      dragged: true,
+    })
+  }
+
+  error() {
+    if (!this.state.touched) return null
+
+    return this.amountError()
+  }
+
+  amountError() {
+    if (!this.state.amount) return this.props.amountEmptyError
+
+    if (
+      !numberUtils.isNumber(this.state.amount) ||
+      this.state.amount < this.props.amountMin ||
+      this.state.amount > this.props.amountMax
+    )
+      return this.props.amountOutOfBoundsError
   }
 
   render() {
@@ -103,7 +203,11 @@ class RewardCardComponent extends Component {
       ...others
     } = this.props
 
-    const styleCard = [styles.card, isDisabled && styles.card.isDisabled]
+    const styleCard = [
+      others.style,
+      styles.card,
+      isDisabled && styles.card.isDisabled,
+    ]
 
     return (
       <StyleRoot {...others} style={styleCard}>
@@ -188,42 +292,42 @@ class RewardCardComponent extends Component {
     } = this.props
 
     return (
-      <Marger top="2" bottom={viewportIsSOrLess ? 3 : 4}>
-        <Grid>
-          {this.renderInfo(
-            titleContributors,
-            titleSmallContributors,
-            valueContributors,
-          )}
-          {this.renderInfo(titleDelivery, titleSmallDelivery, valueDelivery)}
-          {this.renderInfo(
-            titleAvailability,
-            titleSmallAvailability,
-            valueAvailability,
-          )}
-        </Grid>
-      </Marger>
+      <Grid>
+        {this.renderInfo(
+          titleContributors,
+          titleSmallContributors,
+          valueContributors,
+        )}
+        {this.renderInfo(titleDelivery, titleSmallDelivery, valueDelivery)}
+        {this.renderInfo(
+          titleAvailability,
+          titleSmallAvailability,
+          valueAvailability,
+        )}
+      </Grid>
     )
   }
 
   renderInfo(title, titleSmall, value) {
     const { viewportIsTabletOrLess, infos } = this.props
 
-    if (!infos || !title) return
+    if (!infos || !title || !titleSmall) return
 
     return (
       <GridCol style={styles.infos} col-l="4" col-xl="3">
-        {viewportIsTabletOrLess && (
-          <Text weight="regular" style={styles.infos.lists}>
-            {parseHtml(titleSmall)}
-            <Text weight="light">{parseHtml(value)}</Text>
-          </Text>
-        )}
+        <Marger top="2" bottom={viewportIsSOrLess ? 3 : 4}>
+          {viewportIsTabletOrLess && (
+            <Text weight="regular" style={styles.infos.lists}>
+              {titleSmall}
+              <Text weight="light">{value}</Text>
+            </Text>
+          )}
+        </Marger>
 
         {!viewportIsTabletOrLess && (
           <Fragment>
             <Text weight="regular">{parseHtml(title)}</Text>
-            <span>{parseHtml(value)}</span>
+            <Text weight="light">{parseHtml(value)}</Text>
           </Fragment>
         )}
       </GridCol>
@@ -343,7 +447,10 @@ class RewardCardComponent extends Component {
               <Text size="tiny" weight="regular">
                 {myContribution}
                 <br />
-                <a href="#" style={styles.myContribution.text.link}>
+                <a
+                  href={manageContributionLink}
+                  style={styles.myContribution.text.link}
+                >
                   {manageContribution}
                 </a>
               </Text>
@@ -372,7 +479,7 @@ class RewardCardComponent extends Component {
   renderDonation() {
     const {
       donation,
-      error,
+      isError,
       errorTag,
       amountName,
       amountLabel,
@@ -389,7 +496,7 @@ class RewardCardComponent extends Component {
     if (!donation) return
 
     return (
-      <Marger top="2" bottom="0">
+      <Marger top="2">
         <Grid style={styles.donation}>
           <GridCol col-xs="7" col-m="5">
             <Marger top="3" bottom="1.5">
@@ -404,7 +511,7 @@ class RewardCardComponent extends Component {
             <Marger top="1.5">
               <TextInputWithUnit
                 ref={input => (this.amount = input)}
-                error={error}
+                error={isError}
                 id={donation}
                 name={amountName}
                 type="number"
@@ -418,7 +525,11 @@ class RewardCardComponent extends Component {
                 unit={currencySymbol}
               />
             </Marger>
-            {errorTag}
+            <Marger top="1" bottom="1">
+              <Text size="micro" style={styles.donation.isError}>
+                {errorTag}
+              </Text>
+            </Marger>
           </GridCol>
         </Grid>
       </Marger>
@@ -519,7 +630,13 @@ const styles = {
     },
   },
 
-  donation: {},
+  donation: {
+    isError: {
+      color: COLORS.error,
+      marginLeft: '10px',
+      marginRight: '10px',
+    },
+  },
 }
 
 export const RewardCard = mediaQueries(Radium(RewardCardComponent), {
