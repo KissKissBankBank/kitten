@@ -272,7 +272,9 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
               >
                 Custom title contributors
               </span>
-              <span>
+              <span
+                className="k-u-weight-light"
+              >
                 Custom value contributors
               </span>
             </div>
@@ -291,7 +293,9 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
               >
                 Custom title delivery
               </span>
-              <span>
+              <span
+                className="k-u-weight-light"
+              >
                 Custom value delivery
               </span>
             </div>
@@ -310,7 +314,9 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
               >
                 Custom title availability
               </span>
-              <span>
+              <span
+                className="k-u-weight-light"
+              >
                 Custom value availability
               </span>
             </div>
@@ -409,7 +415,7 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
                   <br />
                   <a
                     data-radium={true}
-                    href="#"
+                    href={undefined}
                     style={
                       Object {
                         "color": "#19b4fa",

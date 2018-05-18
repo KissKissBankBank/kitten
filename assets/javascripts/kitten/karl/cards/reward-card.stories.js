@@ -45,6 +45,10 @@ storiesOf('RewardCard', module)
               'Manage Contribution',
               'Manage my contribution',
             )}
+            manageContributionLink={text(
+              'Manage Contribution link',
+              'https://www.google.com',
+            )}
             isDisabled={boolean('Is Disabled', false)}
             isCompleted={boolean('Is Completed', false)}
             imageSrcSmall={boolean('Small image', false)}

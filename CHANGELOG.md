@@ -4,6 +4,16 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [20.12.2] - 2018-05-18
+
+Fix:
+- Fix font & missing prop in `RewardCard` component.
+
+## [20.12.1] - 2018-05-17
+
+Fix:
+- Fix `RewardCard` custom style.
+
 ## [20.12.0] - 2018-05-17
 
 Feature:
