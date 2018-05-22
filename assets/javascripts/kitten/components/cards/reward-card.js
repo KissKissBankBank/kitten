@@ -100,8 +100,6 @@ class RewardCardComponent extends Component {
       textAvailability,
       textContributors,
       textDelivery,
-      imageSrc,
-      imageSrcSmall,
       imageProps,
       ...others
     } = this.props
@@ -116,7 +114,7 @@ class RewardCardComponent extends Component {
       <StyleRoot {...others} style={styleCard}>
         <Marger bottom={viewportIsSOrLess ? 0 : 5}>
           <Grid style={styles.card.addPadding} disabled={isDisabled}>
-            <GridCol col-l="7" col-m={!imageSrc && !imageSrcSmall ? 10 : 7}>
+            <GridCol col-l="7" col-m={!this.props.imageProps.src ? 10 : 7}>
               {this.renderDescription()}
             </GridCol>
             <GridCol col-m="4" offset-m="1">
