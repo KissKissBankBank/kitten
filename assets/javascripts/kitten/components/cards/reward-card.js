@@ -64,7 +64,7 @@ class RewardCardComponent extends Component {
 
   static defaultProps = {
     imageProps: {
-      src: 'https://placehold.it/350x200/caf4fe/caf4fe',
+      src: '',
       alt: '',
     },
     titleAmount: '',
@@ -376,19 +376,10 @@ class RewardCardComponent extends Component {
     )
   }
 
-  renderImage(size) {
-    const { imageSrcSmall, imageSrc } = this.props
+  renderImage() {
+    if (!this.props.imageProps.src) return
 
-    const imageStyles = [
-      styles.image.default,
-      imageSrcSmall && styles.image.small,
-      size === 'default' && styles.image.default,
-      size === 'small' && styles.image.small,
-    ]
-
-    if (!imageSrc && !imageSrcSmall) return
-
-    return <img {...this.props.imageProps} style={imageStyles} />
+    return <img {...this.props.imageProps} style={styles.image} />
   }
 
   renderDonation() {
@@ -536,15 +527,7 @@ const styles = {
   },
 
   image: {
-    default: {
-      width: '100%',
-      height: '500px',
-    },
-
-    small: {
-      width: '100%',
-      height: '325px',
-    },
+    width: '100%',
   },
 }
 

@@ -1,6 +1,12 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { withKnobs, text, select, boolean } from '@storybook/addon-knobs/react'
+import {
+  withKnobs,
+  text,
+  select,
+  boolean,
+  object,
+} from '@storybook/addon-knobs/react'
 import { StyleRoot } from 'radium'
 import { RewardCard } from 'kitten/components/cards/reward-card'
 import { Grid, GridCol } from 'kitten/components/grid/grid'
@@ -51,12 +57,14 @@ storiesOf('RewardCard', module)
             )}
             isDisabled={boolean('Is Disabled', false)}
             isCompleted={boolean('Is Completed', false)}
-            imageSrcSmall={boolean('Small image', false)}
-            imageSrc={boolean('Default image', false)}
             donation={boolean('Donation', false)}
             valueContributors={boolean('Value contributor', false)}
             valueDelivery={boolean('Value delivery', false)}
             valueAvailability={boolean('Value availability', false)}
+            imageProps={object('Src/Alt', {
+              src: 'http://via.placeholder.com/200x240/caf4fe/caf4fe',
+              alt: '',
+            })}
           />
         </GridCol>
       </Grid>

@@ -6,6 +6,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Add `renderDonation` on `RewardCard` component.
 
+## [20.12.3] - 2018-05-22
+
+- Fix: Remove useless props on `RewardCard` component which ones
+  are: `imageSrcSmall`, `imageSrc` and fix image height to keep original ratio.
+
 ## [20.12.2] - 2018-05-18
 
 Fix:
