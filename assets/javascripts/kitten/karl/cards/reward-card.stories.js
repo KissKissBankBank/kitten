@@ -53,9 +53,10 @@ storiesOf('RewardCard', module)
             isCompleted={boolean('Is Completed', false)}
             imageSrcSmall={boolean('Small image', false)}
             imageSrc={boolean('Default image', false)}
-            activedContribution={boolean('Actived contibution', false)}
             donation={boolean('Donation', false)}
-            infos={boolean('Infos', false)}
+            valueContributors={boolean('Value contributor', false)}
+            valueDelivery={boolean('Value delivery', false)}
+            valueAvailability={boolean('Value availability', false)}
           />
         </GridCol>
       </Grid>

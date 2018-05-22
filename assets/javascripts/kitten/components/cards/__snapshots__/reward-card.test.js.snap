@@ -31,7 +31,7 @@ exports[`<RewardCard /> by default matches with snapshot 1`] = `
       }
     >
       <div
-        className="k-Grid__col--12 k-Grid__col--7@m"
+        className="k-Grid__col--12 k-Grid__col--10@m k-Grid__col--7@l"
         data-radium={true}
       >
         <div
@@ -96,19 +96,6 @@ exports[`<RewardCard /> by default matches with snapshot 1`] = `
               
             </p>
           </div>
-        </div>
-        <div
-          style={
-            Object {
-              "marginBottom": "2.5rem",
-              "marginTop": "1.25rem",
-            }
-          }
-        >
-          <div
-            className="k-Grid"
-            data-radium={true}
-          />
         </div>
         <div
           style={
@@ -179,7 +166,7 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
       }
     >
       <div
-        className="k-Grid__col--12 k-Grid__col--7@m"
+        className="k-Grid__col--12 k-Grid__col--10@m k-Grid__col--7@l"
         data-radium={true}
       >
         <div
@@ -256,71 +243,7 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
           <div
             className="k-Grid"
             data-radium={true}
-          >
-            <div
-              className="k-Grid__col--12 k-Grid__col--4@l k-Grid__col--3@xl"
-              data-radium={true}
-              style={
-                Object {
-                  "display": "flex",
-                  "flexDirection": "column",
-                }
-              }
-            >
-              <span
-                className="k-u-weight-regular"
-              >
-                Custom title contributors
-              </span>
-              <span
-                className="k-u-weight-light"
-              >
-                Custom value contributors
-              </span>
-            </div>
-            <div
-              className="k-Grid__col--12 k-Grid__col--4@l k-Grid__col--3@xl"
-              data-radium={true}
-              style={
-                Object {
-                  "display": "flex",
-                  "flexDirection": "column",
-                }
-              }
-            >
-              <span
-                className="k-u-weight-regular"
-              >
-                Custom title delivery
-              </span>
-              <span
-                className="k-u-weight-light"
-              >
-                Custom value delivery
-              </span>
-            </div>
-            <div
-              className="k-Grid__col--12 k-Grid__col--4@l k-Grid__col--3@xl"
-              data-radium={true}
-              style={
-                Object {
-                  "display": "flex",
-                  "flexDirection": "column",
-                }
-              }
-            >
-              <span
-                className="k-u-weight-regular"
-              >
-                Custom title availability
-              </span>
-              <span
-                className="k-u-weight-light"
-              >
-                Custom value availability
-              </span>
-            </div>
-          </div>
+          />
         </div>
         <div
           style={
@@ -342,6 +265,7 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
               aria-label="Custom text button"
               className="rmq-2c87bfe9 k-Button k-Button--helium k-Button--big"
               data-radium={true}
+              disabled={undefined}
               onClick={undefined}
               onMouseEnter={undefined}
               onMouseLeave={undefined}

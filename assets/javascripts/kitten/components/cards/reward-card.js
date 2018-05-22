@@ -16,7 +16,6 @@ import { HorizontalStroke as HorizontalStrokeBase } from 'kitten/components/layo
 import { TextInputWithUnit as TextInputWithUnitBase } from 'kitten/components/form/text-input-with-unit'
 import { Label } from 'kitten/components/form/label'
 import COLORS from 'kitten/constants/colors-config'
-import { parseHtml } from 'kitten/helpers/utils/parser'
 import { ScreenConfig } from 'kitten/constants/screen-config'
 import { mediaQueries } from 'kitten/hoc/media-queries'
 
@@ -58,29 +57,8 @@ class RewardCardComponent extends Component {
     imageSrc: PropTypes.bool,
     imageSrcSmall: PropTypes.bool,
 
-    // Name attribute for the amount input (if needed)
-    amountName: PropTypes.string,
-
-    // Bounds for accepted amount
-    amountMin: PropTypes.number,
-    amountMax: PropTypes.number,
-
-    // Placeholder for amount input
     amountPlaceholder: PropTypes.string,
-
-    // Default amount
-    initialAmount: PropTypes.number,
-
-    // Set this to true to show errors on first use
-    initialTouched: PropTypes.bool,
-
-    // Error text when the amount is empty or non-numerical
-    amountEmptyError: PropTypes.string,
-
-    // Error text when the amount is over or under the min and max
-    amountOutOfBoundsError: PropTypes.string,
-
-    // Currency
+    amountLabel: PropTypes.string,
     currencySymbol: PropTypes.string,
   }
 
@@ -92,81 +70,6 @@ class RewardCardComponent extends Component {
     titleAmount: '',
     titleDescription: '',
     textDescription: '',
-
-    amountEmptyError: 'Amount cannot be empty',
-    amountOutOfBoundsError: 'Amount is either too big or too small',
-    initialAmount: null,
-    initialTouched: false,
-
-    amountPlaceholder: '',
-    amountLabel: 'I need',
-
-    amountMin: 1,
-    amountMax: 10000,
-
-    currencySymbol: '$',
-  }
-
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      touched: props.initialTouched,
-      amount: props.initialAmount * 1,
-    }
-
-    // this.handleFocus = this.handleFocus.bind(this)
-    // this.handleAmountChange = this.handleAmountChange.bind(this)
-    // this.handleEnter = this.handleEnter.bind(this)
-    // this.handleInstallmentLabelClick = this.handleInstallmentLabelClick.bind(
-    //   this,
-    // )
-    // this.handleInstallmentChange = this.handleInstallmentChange.bind(this)
-    // this.handleInstallmentAction = this.handleInstallmentAction.bind(this)
-  }
-
-  handleFocus(e) {
-    this.setState({
-      touched: false,
-      installmentAmount: null,
-    })
-  }
-
-  handleAmountChange(e) {
-    this.setState({ amount: e.target.value })
-  }
-
-  handleEnter(e) {
-    this.setState({ touched: true })
-  }
-
-  handleInstallmentLabelClick() {
-    this.refs.content.focusSlider()
-  }
-
-  // on slider click or on grab change
-  handleInstallmentChange(value) {
-    this.setState({
-      installmentAmount: value,
-      dragged: true,
-    })
-  }
-
-  error() {
-    if (!this.state.touched) return null
-
-    return this.amountError()
-  }
-
-  amountError() {
-    if (!this.state.amount) return this.props.amountEmptyError
-
-    if (
-      !numberUtils.isNumber(this.state.amount) ||
-      this.state.amount < this.props.amountMin ||
-      this.state.amount > this.props.amountMax
-    )
-      return this.props.amountOutOfBoundsError
   }
 
   render() {
@@ -213,7 +116,9 @@ class RewardCardComponent extends Component {
       <StyleRoot {...others} style={styleCard}>
         <Marger bottom={viewportIsSOrLess ? 0 : 5}>
           <Grid style={styles.card.addPadding} disabled={isDisabled}>
-            <GridCol col-m="7">{this.renderDescription()}</GridCol>
+            <GridCol col-l="7" col-m={!imageSrc && !imageSrcSmall ? 10 : 7}>
+              {this.renderDescription()}
+            </GridCol>
             <GridCol col-m="4" offset-m="1">
               {this.renderImage()}
             </GridCol>
@@ -226,6 +131,7 @@ class RewardCardComponent extends Component {
 
   renderDescription() {
     const {
+      donation,
       titleAmount,
       titleDescription,
       textDescription,
@@ -236,7 +142,7 @@ class RewardCardComponent extends Component {
 
     return (
       <Fragment>
-        <Marger top={viewportIsSOrLess ? 4 : 5} bottom="2">
+        <Marger top={viewportIsSOrLess ? 4 : 5} bottom={donation ? 3 : 2}>
           <Marger bottom="2">
             <Title
               modifier={viewportIsSOrLess ? 'tertiary' : 'secondary'}
@@ -259,7 +165,7 @@ class RewardCardComponent extends Component {
               {titleDescription}
             </Text>
           </Marger>
-          <Marger top="1" bottom="2">
+          <Marger top="1" bottom={donation ? 3 : 2}>
             <Paragraph
               modifier={viewportIsSOrLess ? 'quaternary' : 'tertiary'}
               margin={false}
@@ -337,13 +243,21 @@ class RewardCardComponent extends Component {
   }
 
   renderChoiceButton() {
-    const { imageSrc, imageSrcSmall, viewportIsSOrLess } = this.props
+    const {
+      imageSrc,
+      imageSrcSmall,
+      viewportIsSOrLess,
+      myContribution,
+    } = this.props
 
     return (
       <Fragment>
         {viewportIsSOrLess && (
           <div>
-            <Marger top={!imageSrc && !imageSrcSmall ? 0 : 2} bottom="2">
+            <Marger
+              top={!imageSrc && !imageSrcSmall ? 0 : 2}
+              bottom={!myContribution ? 0 : 2}
+            >
               {this.renderMyContribution()}
             </Marger>
             {this.renderButton()}
@@ -353,7 +267,7 @@ class RewardCardComponent extends Component {
         {!viewportIsSOrLess && (
           <Fragment>
             {this.renderButton()}
-            <Marger top={!this.props.myContribution ? 0 : 2}>
+            <Marger top={!myContribution ? 0 : 2}>
               {this.renderMyContribution()}
             </Marger>
           </Fragment>
@@ -371,6 +285,7 @@ class RewardCardComponent extends Component {
       buttonOnMouseLeave,
       buttonOnClick,
       myContribution,
+      isDisabled,
     } = this.props
 
     const buttonMargin = viewportIsSOrLess || !myContribution ? null : 2
@@ -387,6 +302,7 @@ class RewardCardComponent extends Component {
           onMouseEnter={buttonOnMouseEnter}
           onMouseLeave={buttonOnMouseLeave}
           onClick={buttonOnClick}
+          disabled={isDisabled}
         >
           {button}
         </Button>
@@ -479,6 +395,7 @@ class RewardCardComponent extends Component {
     const {
       donation,
       isError,
+      isDisabled,
       errorTag,
       amountName,
       amountLabel,
@@ -490,20 +407,20 @@ class RewardCardComponent extends Component {
       onAmountKeyDown,
       amountPlaceholder,
       currencySymbol,
+      viewportIsSOrLess,
     } = this.props
+
+    const donationIsError = !isError ? 4 : 1
+    const donationViewport = !viewportIsSOrLess ? 4 : 3
 
     if (!donation) return
 
     return (
-      <Marger top="2" bottom={!isError ? 4 : 1}>
-        <Grid style={styles.donation}>
+      <Marger top="3" bottom={donationIsError && donationViewport}>
+        <Grid>
           <GridCol col-xs="7" col-m="5">
-            <Marger top="3" bottom="1.5">
-              <Label
-                size="micro"
-                style={styles.donation.label}
-                htmlFor={donation}
-              >
+            <Marger bottom="1.5">
+              <Label size="micro" htmlFor={donation}>
                 {amountLabel}
               </Label>
             </Marger>
@@ -522,13 +439,12 @@ class RewardCardComponent extends Component {
                 onKeyDown={onAmountKeyDown}
                 placeholder={amountPlaceholder}
                 unit={currencySymbol}
+                disabled={isDisabled}
               />
             </Marger>
             {isError && (
               <Marger top="1">
-                <Text size="micro" style={styles.donation.isError}>
-                  {errorTag}
-                </Text>
+                <Text size="micro">{errorTag}</Text>
               </Marger>
             )}
           </GridCol>
@@ -628,14 +544,6 @@ const styles = {
     small: {
       width: '100%',
       height: '325px',
-    },
-  },
-
-  donation: {
-    isError: {
-      color: COLORS.error,
-      marginLeft: '10px',
-      marginRight: '10px',
     },
   },
 }
