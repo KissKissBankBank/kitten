@@ -291,43 +291,45 @@ class RewardCardComponent extends Component {
       viewportIsSOrLess,
     } = this.props
 
+    if (!valueContributors && !valueDelivery && !valueAvailability) return
+
     return (
-      <Grid>
-        {this.renderInfo(
-          titleContributors,
-          titleSmallContributors,
-          valueContributors,
-        )}
-        {this.renderInfo(titleDelivery, titleSmallDelivery, valueDelivery)}
-        {this.renderInfo(
-          titleAvailability,
-          titleSmallAvailability,
-          valueAvailability,
-        )}
-      </Grid>
+      <Marger top="2" bottom={viewportIsSOrLess ? 3 : 4}>
+        <Grid>
+          {this.renderInfo(
+            titleContributors,
+            titleSmallContributors,
+            valueContributors,
+          )}
+          {this.renderInfo(titleDelivery, titleSmallDelivery, valueDelivery)}
+          {this.renderInfo(
+            titleAvailability,
+            titleSmallAvailability,
+            valueAvailability,
+          )}
+        </Grid>
+      </Marger>
     )
   }
 
   renderInfo(title, titleSmall, value) {
-    const { viewportIsTabletOrLess, infos } = this.props
+    const { viewportIsTabletOrLess, viewportIsSOrLess } = this.props
 
-    if (!infos || !title || !titleSmall) return
+    if (!title || !titleSmall) return
 
     return (
       <GridCol style={styles.infos} col-l="4" col-xl="3">
-        <Marger top="2" bottom={viewportIsSOrLess ? 3 : 4}>
-          {viewportIsTabletOrLess && (
-            <Text weight="regular" style={styles.infos.lists}>
-              {titleSmall}
-              <Text weight="light">{value}</Text>
-            </Text>
-          )}
-        </Marger>
+        {viewportIsTabletOrLess && (
+          <Text weight="regular" style={styles.infos.lists}>
+            {titleSmall}
+            <Text weight="light">{value}</Text>
+          </Text>
+        )}
 
         {!viewportIsTabletOrLess && (
           <Fragment>
-            <Text weight="regular">{parseHtml(title)}</Text>
-            <Text weight="light">{parseHtml(value)}</Text>
+            <Text weight="regular">{title}</Text>
+            <Text weight="light">{value}</Text>
           </Fragment>
         )}
       </GridCol>
@@ -368,12 +370,15 @@ class RewardCardComponent extends Component {
       buttonOnMouseEnter,
       buttonOnMouseLeave,
       buttonOnClick,
+      myContribution,
     } = this.props
+
+    const buttonMargin = viewportIsSOrLess || !myContribution ? null : 2
 
     if (!button || isCompleted) return
 
     return (
-      <Marger bottom={viewportIsSOrLess ? null : 2}>
+      <Marger bottom={buttonMargin}>
         <Button
           size="big"
           modifier="helium"
@@ -401,7 +406,6 @@ class RewardCardComponent extends Component {
 
   renderMyContribution() {
     const {
-      activedContribution,
       isDisabled,
       myContribution,
       manageContribution,
@@ -409,12 +413,7 @@ class RewardCardComponent extends Component {
       viewportIsSOrLess,
     } = this.props
 
-    if (
-      !activedContribution ||
-      !myContribution ||
-      (viewportIsSOrLess && isDisabled)
-    )
-      return
+    if (!myContribution || (viewportIsSOrLess && isDisabled)) return
 
     return (
       <Fragment>
@@ -496,7 +495,7 @@ class RewardCardComponent extends Component {
     if (!donation) return
 
     return (
-      <Marger top="2">
+      <Marger top="2" bottom={!isError ? 4 : 1}>
         <Grid style={styles.donation}>
           <GridCol col-xs="7" col-m="5">
             <Marger top="3" bottom="1.5">
@@ -525,11 +524,13 @@ class RewardCardComponent extends Component {
                 unit={currencySymbol}
               />
             </Marger>
-            <Marger top="1" bottom="1">
-              <Text size="micro" style={styles.donation.isError}>
-                {errorTag}
-              </Text>
-            </Marger>
+            {isError && (
+              <Marger top="1">
+                <Text size="micro" style={styles.donation.isError}>
+                  {errorTag}
+                </Text>
+              </Marger>
+            )}
           </GridCol>
         </Grid>
       </Marger>
