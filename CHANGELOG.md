@@ -4,8 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Breaking change: Remove useless props on `RewardCard` component which ones
-  are: `imageSrcSmall`, `imageSrc`.
+- Fix: Remove useless props on `RewardCard` component which ones
+  are: `imageSrcSmall`, `imageSrc` and fix image height to keep original ratio.
 
 ## [20.12.2] - 2018-05-18
 
