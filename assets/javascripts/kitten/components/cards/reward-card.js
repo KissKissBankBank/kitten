@@ -351,7 +351,7 @@ class RewardCardComponent extends Component {
   }
 
   renderImage() {
-    if (!this.props.imageProps) return
+    if (!this.props.imageProps.src) return
 
     return <img {...this.props.imageProps} style={styles.image} />
   }
