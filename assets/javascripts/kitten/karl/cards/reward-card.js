@@ -21,7 +21,6 @@ export const KarlRewardCard = () => (
           titleSmallDelivery="Delivery : "
           valueDelivery="January 2018"
           button="Choose"
-          imageSrc
         />
       </Marger>
     </Container>
@@ -45,7 +44,6 @@ export const KarlRewardCard = () => (
           button="Choose"
           myContribution="You contributed to this project"
           manageContribution="Manage my contribution"
-          imageSrc
           isDisabled
         />
       </Marger>
@@ -69,7 +67,10 @@ export const KarlRewardCard = () => (
           valueAvailability="200"
           myContribution="You contributed to this project"
           manageContribution="Manage my contribution"
-          imageSrc
+          imageProps={{
+            src: 'http://via.placeholder.com/200x350/caf4fe/caf4fe',
+            alt: '',
+          }}
         />
       </Marger>
     </Container>
@@ -92,7 +93,6 @@ export const KarlRewardCard = () => (
           valueAvailability="200"
           myContribution="You contributed to this project"
           manageContribution="Manage my contribution"
-          withoutImage
         />
       </Marger>
     </Container>
@@ -139,7 +139,10 @@ export const KarlRewardCard = () => (
           myContribution="You contributed to this project"
           manageContribution="Manage my contribution"
           button="Choose"
-          imageSrcSmall
+          imageProps={{
+            src: 'http://via.placeholder.com/200x200/caf4fe/caf4fe',
+            alt: '',
+          }}
         />
       </Marger>
     </Container>
