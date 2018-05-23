@@ -155,7 +155,7 @@ export const KarlRewardCard = () => (
           amountLabel="Enter your amount"
           amountPlaceholder="Your amount"
           currencySymbol="€"
-          titleAmount="Don libre"
+          titleAmount="Free gift"
           textDescription="In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi."
           button="To contribute"
         />
@@ -170,7 +170,7 @@ export const KarlRewardCard = () => (
           amountLabel="Enter your amount"
           amountPlaceholder="Your amount"
           currencySymbol="€"
-          titleAmount="Don libre"
+          titleAmount="Free gift"
           textDescription="In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi."
           button="To contribute"
           myContribution="You contributed to this project"

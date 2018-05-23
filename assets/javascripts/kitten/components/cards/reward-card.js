@@ -54,9 +54,6 @@ class RewardCardComponent extends Component {
     manageContribution: PropTypes.string,
     manageContributionLink: PropTypes.string,
 
-    imageSrc: PropTypes.bool,
-    imageSrcSmall: PropTypes.bool,
-
     amountPlaceholder: PropTypes.string,
     amountLabel: PropTypes.string,
     currencySymbol: PropTypes.string,
@@ -241,19 +238,14 @@ class RewardCardComponent extends Component {
   }
 
   renderChoiceButton() {
-    const {
-      imageSrc,
-      imageSrcSmall,
-      viewportIsSOrLess,
-      myContribution,
-    } = this.props
+    const { viewportIsSOrLess, myContribution } = this.props
 
     return (
       <Fragment>
         {viewportIsSOrLess && (
           <div>
             <Marger
-              top={!imageSrc && !imageSrcSmall ? 0 : 2}
+              top={!this.props.imageProps.src ? 0 : 2}
               bottom={!myContribution ? 0 : 2}
             >
               {this.renderMyContribution()}

@@ -166,7 +166,7 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
       }
     >
       <div
-        className="k-Grid__col--12 k-Grid__col--10@m k-Grid__col--7@l"
+        className="k-Grid__col--12 k-Grid__col--7@m k-Grid__col--7@l"
         data-radium={true}
       >
         <div
