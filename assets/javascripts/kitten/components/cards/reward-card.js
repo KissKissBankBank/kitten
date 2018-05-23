@@ -168,7 +168,7 @@ class RewardCardComponent extends Component {
               </Text>
             </Marger>
           )}
-          <Marger top="1" bottom={donation ? 3 : 2}>
+          <Marger top={!titleDescription ? 4 : 1} bottom={!donation ? 2 : 3}>
             <Paragraph
               modifier={viewportIsSOrLess ? 'quaternary' : 'tertiary'}
               margin={false}
