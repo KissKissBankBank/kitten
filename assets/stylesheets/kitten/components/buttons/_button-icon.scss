@@ -174,19 +174,24 @@
   .k-ButtonIcon--instagram {
     @include k-buttonPadding(
       $button-size-with-border,
-      $youtube-size,
-      $youtube-size
+      $icon-width,
+      $icon-height
     );
     @include k-buttonColors('instagram');
   }
 
   .k-ButtonIcon--youtube {
-    @include k-buttonPadding(
-      $button-size-with-border,
-      $icon-width,
-      $icon-height
-    );
     @include k-buttonColors('youtube');
+    @include k-buttonPadding(
+      $button-size,
+      $youtube-size,
+      $youtube-size
+    );
+
+    .k-ButtonIcon__svg {
+      width: $youtube-size;
+      height: $youtube-size;
+    }
   }
 
   // Sizes modifiers.

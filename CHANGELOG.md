@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add social button icon component `YoutubeButtonIcon` and add `YoutubeIcon` component.
+
 ## [20.12.3] - 2018-05-22
 
 - Fix: Remove useless props on `RewardCard` component which ones
