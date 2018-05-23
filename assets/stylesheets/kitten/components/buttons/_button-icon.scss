@@ -17,6 +17,7 @@
 /// - `.k-ButtonIcon--twitter`
 /// - `.k-ButtonIcon--linkedin`
 /// - `.k-ButtonIcon--instagram`
+/// - `.k-ButtonIcon--youtube`
 ///
 /// Available size modifiers:
 /// - `k-ButtonIcon--nano`
@@ -66,6 +67,7 @@
   $checked-nano-size: k-px-to-rem(10px);
   $heart-size: k-px-to-rem(14px);
   $signup-size: k-px-to-rem(18px);
+  $youtube-size: k-px-to-rem(16px);
 
   // Arrow sizes
   $horizontalArrow-width: k-px-to-rem(10px);
@@ -172,10 +174,19 @@
   .k-ButtonIcon--instagram {
     @include k-buttonPadding(
       $button-size-with-border,
+      $youtube-size,
+      $youtube-size
+    );
+    @include k-buttonColors('instagram');
+  }
+
+  .k-ButtonIcon--youtube {
+    @include k-buttonPadding(
+      $button-size-with-border,
       $icon-width,
       $icon-height
     );
-    @include k-buttonColors('instagram');
+    @include k-buttonColors('youtube');
   }
 
   // Sizes modifiers.
