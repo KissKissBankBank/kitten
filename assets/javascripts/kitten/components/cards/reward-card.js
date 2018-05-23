@@ -57,6 +57,9 @@ class RewardCardComponent extends Component {
     amountPlaceholder: PropTypes.string,
     amountLabel: PropTypes.string,
     currencySymbol: PropTypes.string,
+    donation: PropTypes.bool,
+
+    isDisabled: PropTypes.bool,
   }
 
   static defaultProps = {
@@ -114,9 +117,11 @@ class RewardCardComponent extends Component {
             <GridCol col-l="7" col-m={!this.props.imageProps.src ? 10 : 7}>
               {this.renderDescription()}
             </GridCol>
-            <GridCol col-m="4" offset-m="1">
-              {this.renderImage()}
-            </GridCol>
+            {this.props.imageProps.src && (
+              <GridCol col-m="4" offset-m="1">
+                {this.renderImage()}
+              </GridCol>
+            )}
           </Grid>
           {viewportIsSOrLess && this.renderChoiceButton()}
         </Marger>
@@ -127,6 +132,7 @@ class RewardCardComponent extends Component {
   renderDescription() {
     const {
       donation,
+      button,
       titleAmount,
       titleDescription,
       textDescription,
@@ -151,15 +157,17 @@ class RewardCardComponent extends Component {
           <Marger top="2" bottom={viewportIsMobile ? 3 : 4}>
             <HorizontalStroke size="big" />
           </Marger>
-          <Marger top="4" bottom="1">
-            <Text
-              size={viewportIsSOrLess ? 'big' : 'huge'}
-              tag={tag}
-              weight="bold"
-            >
-              {titleDescription}
-            </Text>
-          </Marger>
+          {titleDescription && (
+            <Marger top="4" bottom="1">
+              <Text
+                size={viewportIsSOrLess ? 'big' : 'huge'}
+                tag={tag}
+                weight="bold"
+              >
+                {titleDescription}
+              </Text>
+            </Marger>
+          )}
           <Marger top="1" bottom={donation ? 3 : 2}>
             <Paragraph
               modifier={viewportIsSOrLess ? 'quaternary' : 'tertiary'}
@@ -244,12 +252,14 @@ class RewardCardComponent extends Component {
       <Fragment>
         {viewportIsSOrLess && (
           <div>
-            <Marger
-              top={!this.props.imageProps.src ? 0 : 2}
-              bottom={!myContribution ? 0 : 2}
-            >
-              {this.renderMyContribution()}
-            </Marger>
+            {myContribution && (
+              <Marger
+                top={!this.props.imageProps.src ? 0 : 2}
+                bottom={!myContribution ? 0 : 2}
+              >
+                {this.renderMyContribution()}
+              </Marger>
+            )}
             {this.renderButton()}
           </div>
         )}
@@ -257,9 +267,11 @@ class RewardCardComponent extends Component {
         {!viewportIsSOrLess && (
           <Fragment>
             {this.renderButton()}
-            <Marger top={!myContribution ? 0 : 2}>
-              {this.renderMyContribution()}
-            </Marger>
+            {myContribution && (
+              <Marger top={!myContribution ? 0 : 2}>
+                {this.renderMyContribution()}
+              </Marger>
+            )}
           </Fragment>
         )}
       </Fragment>
@@ -374,6 +386,7 @@ class RewardCardComponent extends Component {
 
   renderDonation() {
     const {
+      idDonation,
       donation,
       isError,
       isDisabled,
@@ -392,7 +405,7 @@ class RewardCardComponent extends Component {
     } = this.props
 
     const donationIsError = !isError ? 4 : 1
-    const donationViewport = !viewportIsSOrLess ? 4 : 3
+    const donationViewport = !viewportIsSOrLess ? 4 : 2
 
     if (!donation) return
 
@@ -401,15 +414,15 @@ class RewardCardComponent extends Component {
         <Grid>
           <GridCol col-xs="7" col-m="5">
             <Marger bottom="1.5">
-              <Label size="micro" htmlFor={donation}>
+              <Label size="micro" htmlFor={idDonation}>
                 {amountLabel}
               </Label>
             </Marger>
-            <Marger top="1.5">
+            <Marger top="1.5" bottom={isError ? 1 : null}>
               <TextInputWithUnit
                 ref={input => (this.amount = input)}
                 error={isError}
-                id={donation}
+                id={idDonation}
                 name={amountName}
                 type="number"
                 min={amountMin}

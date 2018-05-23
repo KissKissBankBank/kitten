@@ -68,20 +68,7 @@ exports[`<RewardCard /> by default matches with snapshot 1`] = `
               className="k-HorizontalStroke k-HorizontalStroke--big"
             />
           </div>
-          <div
-            style={
-              Object {
-                "marginBottom": "0.625rem",
-                "marginTop": "2.5rem",
-              }
-            }
-          >
-            <span
-              className="k-u-size-huge k-u-weight-bold"
-            >
-              
-            </span>
-          </div>
+          
           <div
             style={
               Object {
@@ -104,20 +91,9 @@ exports[`<RewardCard /> by default matches with snapshot 1`] = `
               "marginTop": "2.5rem",
             }
           }
-        >
-          <div
-            style={
-              Object {
-                "marginBottom": null,
-                "marginTop": null,
-              }
-            }
-          />
-        </div>
+        />
       </div>
-      <div
-        className="k-Grid__col--12 k-Grid__col--4@m k-Grid__col--offset-1@m"
-      />
+      
     </div>
   </div>
   <style
