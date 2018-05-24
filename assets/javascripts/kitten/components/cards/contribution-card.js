@@ -54,8 +54,6 @@ class ContributionCardComponent extends Component {
     titleAmount: '',
     titleDescription: '',
     textDescription: '',
-
-    descriptionMarginBottom: 2,
   }
 
   render() {
@@ -122,15 +120,11 @@ class ContributionCardComponent extends Component {
       tag,
       viewportIsSOrLess,
       viewportIsMobile,
-      descriptionMarginBottom,
     } = this.props
 
     return (
       <Fragment>
-        <Marger
-          top={viewportIsSOrLess ? 4 : 5}
-          bottom={descriptionMarginBottom}
-        >
+        <Marger top={viewportIsSOrLess ? 4 : 5}>
           <Marger bottom="2">
             <Title
               modifier={viewportIsSOrLess ? 'tertiary' : 'secondary'}

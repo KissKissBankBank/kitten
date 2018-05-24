@@ -1,9 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<RewardCard /> by default matches with snapshot 1`] = `
+exports[`<ContributionCard /> by default matches with snapshot 1`] = `
 <div
   data-radium={true}
-  descriptionMarginBottom={2}
   style={
     Object {
       "borderColor": "#eee",
@@ -38,7 +37,7 @@ exports[`<RewardCard /> by default matches with snapshot 1`] = `
         <div
           style={
             Object {
-              "marginBottom": "1.25rem",
+              "marginBottom": null,
               "marginTop": "3.125rem",
             }
           }
@@ -112,10 +111,9 @@ padding-right: 0 !important;}}",
 </div>
 `;
 
-exports[`<RewardCard /> with some props matches with snapshot 1`] = `
+exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
 <div
   data-radium={true}
-  descriptionMarginBottom={2}
   style={
     Object {
       "borderColor": "#eee",
@@ -153,7 +151,7 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
         <div
           style={
             Object {
-              "marginBottom": "1.25rem",
+              "marginBottom": null,
               "marginTop": "3.125rem",
             }
           }

@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<RewardCard /> by default matches with snapshot 1`] = `
+exports[`<DonationCard /> by default matches with snapshot 1`] = `
 <div
   data-radium={true}
-  descriptionMarginBottom={2}
+  render={undefined}
   style={
     Object {
       "borderColor": "#eee",
@@ -38,7 +38,7 @@ exports[`<RewardCard /> by default matches with snapshot 1`] = `
         <div
           style={
             Object {
-              "marginBottom": "1.25rem",
+              "marginBottom": null,
               "marginTop": "3.125rem",
             }
           }
@@ -112,10 +112,10 @@ padding-right: 0 !important;}}",
 </div>
 `;
 
-exports[`<RewardCard /> with some props matches with snapshot 1`] = `
+exports[`<DonationCard /> with some props matches with snapshot 1`] = `
 <div
   data-radium={true}
-  descriptionMarginBottom={2}
+  render={[Function]}
   style={
     Object {
       "borderColor": "#eee",
@@ -123,9 +123,6 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
       "borderWidth": "2px",
     }
   }
-  textAvailability="Custom text availability"
-  textContributors="Custom text contributors"
-  textDelivery="Custom text delivery"
 >
   <div
     style={
@@ -153,7 +150,7 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
         <div
           style={
             Object {
-              "marginBottom": "1.25rem",
+              "marginBottom": null,
               "marginTop": "3.125rem",
             }
           }
@@ -213,18 +210,8 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
             </p>
           </div>
         </div>
-        <div
-          style={
-            Object {
-              "marginBottom": "2.5rem",
-              "marginTop": "1.25rem",
-            }
-          }
-        >
-          <div
-            className="k-Grid"
-            data-radium={true}
-          />
+        <div>
+          Custom function
         </div>
         <div
           style={
