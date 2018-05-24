@@ -262,7 +262,6 @@ class ContributionCardComponent extends Component {
   renderButton() {
     const {
       button,
-      isCompleted,
       viewportIsSOrLess,
       buttonOnMouseEnter,
       buttonOnMouseLeave,
@@ -273,7 +272,7 @@ class ContributionCardComponent extends Component {
 
     const buttonMargin = viewportIsSOrLess || !myContribution ? null : 2
 
-    if (!button || isCompleted) return
+    if (!button) return
 
     return (
       <Marger bottom={buttonMargin}>

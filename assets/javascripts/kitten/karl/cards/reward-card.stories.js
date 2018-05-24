@@ -56,7 +56,6 @@ storiesOf('RewardCard', module)
               'https://www.google.com',
             )}
             isDisabled={boolean('Is Disabled', false)}
-            isCompleted={boolean('Is Completed', false)}
             donation={boolean('Donation', false)}
             valueContributors={boolean('Value contributor', false)}
             valueDelivery={boolean('Value delivery', false)}
