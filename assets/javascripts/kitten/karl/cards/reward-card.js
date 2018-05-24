@@ -12,21 +12,15 @@ export const KarlRewardCard = () => (
       <Marger bottom="2">
         <RewardCard
           titleAmount="For 00€"
-          titleDescription="Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
-          textDescription="In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi."
+          titleDescription="Lorem ipsumn, consectetuer adipiscing elit."
+          textDescription="In enim justo."
           titleContributors="Contributors"
           titleSmallContributors="Contributors : "
           valueContributors="35"
           titleDelivery="Delivery"
           titleSmallDelivery="Delivery : "
           valueDelivery="January 2018"
-          titleAvailability="Availability"
-          titleSmallAvailability="Availability : "
-          valueAvailability="200"
           button="Choose"
-          myContribution="You contributed to this project"
-          manageContribution="Manage my contribution"
-          imageSrc
         />
       </Marger>
     </Container>
@@ -50,7 +44,6 @@ export const KarlRewardCard = () => (
           button="Choose"
           myContribution="You contributed to this project"
           manageContribution="Manage my contribution"
-          imageSrc
           isDisabled
         />
       </Marger>
@@ -74,7 +67,10 @@ export const KarlRewardCard = () => (
           valueAvailability="200"
           myContribution="You contributed to this project"
           manageContribution="Manage my contribution"
-          imageSrc
+          imageProps={{
+            src: 'http://via.placeholder.com/200x350/caf4fe/caf4fe',
+            alt: '',
+          }}
         />
       </Marger>
     </Container>
@@ -97,7 +93,6 @@ export const KarlRewardCard = () => (
           valueAvailability="200"
           myContribution="You contributed to this project"
           manageContribution="Manage my contribution"
-          withoutImage
         />
       </Marger>
     </Container>
@@ -144,7 +139,58 @@ export const KarlRewardCard = () => (
           myContribution="You contributed to this project"
           manageContribution="Manage my contribution"
           button="Choose"
-          imageSrcSmall
+          imageProps={{
+            src: 'http://via.placeholder.com/200x200/caf4fe/caf4fe',
+            alt: '',
+          }}
+        />
+      </Marger>
+    </Container>
+
+    <KarlExampleTitle>Donation card</KarlExampleTitle>
+    <Container>
+      <Marger top="2" bottom="2">
+        <RewardCard
+          donation
+          amountLabel="Enter your amount"
+          amountPlaceholder="Your amount"
+          currencySymbol="€"
+          titleAmount="Free gift"
+          textDescription="In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi."
+          button="To contribute"
+        />
+      </Marger>
+    </Container>
+
+    <KarlExampleTitle>Already contributes donation card</KarlExampleTitle>
+    <Container>
+      <Marger top="2" bottom="2">
+        <RewardCard
+          donation
+          amountLabel="Enter your amount"
+          amountPlaceholder="Your amount"
+          currencySymbol="€"
+          titleAmount="Free gift"
+          textDescription="In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi."
+          button="To contribute"
+          myContribution="You contributed to this project"
+          manageContribution="Manage my contribution"
+        />
+      </Marger>
+    </Container>
+
+    <KarlExampleTitle>Disabled donation card</KarlExampleTitle>
+    <Container>
+      <Marger top="2" bottom="2">
+        <RewardCard
+          donation
+          amountLabel="Enter your amount"
+          amountPlaceholder="Your amount"
+          currencySymbol="€"
+          titleAmount="Free gift"
+          textDescription="In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi."
+          button="To contribute"
+          isDisabled
         />
       </Marger>
     </Container>
