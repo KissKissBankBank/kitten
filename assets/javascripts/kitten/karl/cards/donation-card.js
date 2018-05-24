@@ -118,7 +118,7 @@ export const KarlDonationCard = () => (
               amountPlaceholder="Your amount"
               currencySymbol="€"
               isError
-              errorTag="Fanny veut un meilleur message !"
+              errorTag="lorem ipsum dolor sit amet consectetur."
             />
           )}
         />
