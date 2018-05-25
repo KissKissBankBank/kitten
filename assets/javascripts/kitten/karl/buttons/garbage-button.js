@@ -14,13 +14,11 @@ class KarlGarbageButtonComponent extends Component {
   static defaultProps = {
     size: 'tiny',
     modifier: 'beryllium',
-    isDisabled: null,
+    isDisabled: false,
   }
 
   render() {
-    const size = this.props.size
-    const modifier = this.props.modifier
-    const isDisabled = this.props.disabled
+    const { size, modifier, isDisabled } = this.props
 
     return (
       <ButtonIcon
