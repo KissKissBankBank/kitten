@@ -57,6 +57,10 @@ storiesOf('RewardCard', module)
             )}
             isDisabled={boolean('Is Disabled', false)}
             isCompleted={boolean('Is Completed', false)}
+            donation={boolean('Donation', false)}
+            valueContributors={boolean('Value contributor', false)}
+            valueDelivery={boolean('Value delivery', false)}
+            valueAvailability={boolean('Value availability', false)}
             imageProps={object('Src/Alt', {
               src: 'http://via.placeholder.com/200x240/caf4fe/caf4fe',
               alt: '',

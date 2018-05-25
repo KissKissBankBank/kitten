@@ -6,6 +6,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Add social button icon component `YoutubeButtonIcon` and add `YoutubeIcon` component.
 - Fix: Update sizes on all social `buttonIcon`.
+- Feature: Add `renderDonation` on `RewardCard` component.
+- Feature: Add `k-Label--micro` class.
 
 ## [20.12.3] - 2018-05-22
 
