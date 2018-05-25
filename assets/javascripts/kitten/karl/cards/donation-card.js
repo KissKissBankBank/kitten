@@ -54,7 +54,7 @@ const KarlDonationInputBase = props => {
           </Marger>
           {isError && (
             <Marger top="1">
-              <Text size="micro" color="error">
+              <Text size="micro" color="error" weight="regular">
                 {errorTag}
               </Text>
             </Marger>
