@@ -41,7 +41,7 @@ storiesOf('Cards/DonationCard', module)
                   amountPlaceholder={text('Placeholder input', 'Your amount')}
                   isDisabled={boolean('Is Disabled', false)}
                   isError={boolean('Is error', false)}
-                  errorTag={text('error', 'lorem ipsum dolor sit amet')}
+                  errorTag={text('Error tag', 'lorem ipsum dolor sit amet')}
                 />
               )}
             />

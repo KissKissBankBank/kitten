@@ -31,6 +31,7 @@ export class Text extends Component {
 
         // Decoration.
         'k-u-decoration-underline': decoration == 'underline',
+        'k-u-decoration-none': decoration == 'none',
 
         // Line height.
         'k-u-line-height-normal': lineHeight == 'normal',
@@ -71,7 +72,7 @@ Text.propTypes = {
     'error',
     'valid',
   ]),
-  decoration: PropTypes.oneOf(['underline']),
+  decoration: PropTypes.oneOf(['underline', 'none']),
   lineHeight: PropTypes.oneOf(['normal']),
   size: PropTypes.oneOf(['huge', 'big', 'default', 'tiny', 'micro', 'nano']),
   fontStyle: PropTypes.oneOf(['normal', 'italic']),

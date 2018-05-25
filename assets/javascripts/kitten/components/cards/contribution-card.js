@@ -51,9 +51,18 @@ class ContributionCardComponent extends Component {
       src: '',
       alt: '',
     },
-    titleAmount: '',
-    titleDescription: '',
-    textDescription: '',
+    button: '',
+    buttonOnMouseEnter: () => {},
+    buttonOnMouseLeave: () => {},
+    buttonOnClick: () => {},
+
+    myContribution: '',
+    manageContribution: '',
+    manageContributionLink: '',
+
+    isDisabled: false,
+    descriptionMarginBottom: null,
+    render: () => {},
   }
 
   render() {
@@ -83,6 +92,8 @@ class ContributionCardComponent extends Component {
       manageContribution,
       manageContributionLink,
       imageProps,
+      titleTag,
+      textTag,
       ...others
     } = this.props
 
@@ -117,7 +128,8 @@ class ContributionCardComponent extends Component {
       titleAmount,
       titleDescription,
       textDescription,
-      tag,
+      titleTag,
+      textTag,
       viewportIsSOrLess,
       viewportIsMobile,
     } = this.props
@@ -130,7 +142,7 @@ class ContributionCardComponent extends Component {
               modifier={viewportIsSOrLess ? 'tertiary' : 'secondary'}
               italic
               margin={false}
-              tag={tag}
+              tag={titleTag}
             >
               {titleAmount}
             </Title>
@@ -142,7 +154,7 @@ class ContributionCardComponent extends Component {
             <Marger top="4" bottom="1">
               <Text
                 size={viewportIsSOrLess ? 'big' : 'huge'}
-                tag={tag}
+                tag={textTag}
                 weight="bold"
               >
                 {titleDescription}
@@ -158,7 +170,7 @@ class ContributionCardComponent extends Component {
             </Paragraph>
           </Marger>
         </Marger>
-        {this.props.render ? this.props.render() : null}
+        {!!this.props.render && this.props.render()}
         {this.renderInfos()}
         {!viewportIsSOrLess && (
           <Marger top="4">{this.renderChoiceButton()}</Marger>
@@ -232,7 +244,7 @@ class ContributionCardComponent extends Component {
     return (
       <Fragment>
         {viewportIsSOrLess && (
-          <div>
+          <Fragment>
             {myContribution && (
               <Marger
                 top={!this.props.imageProps.src ? 0 : 2}
@@ -242,7 +254,7 @@ class ContributionCardComponent extends Component {
               </Marger>
             )}
             {this.renderButton()}
-          </div>
+          </Fragment>
         )}
 
         {!viewportIsSOrLess && (
@@ -324,12 +336,15 @@ class ContributionCardComponent extends Component {
                   <Text size="tiny" weight="regular">
                     {myContribution}
                     <br />
-                    <a
+                    <Text
+                      tag="a"
                       href={manageContributionLink}
-                      style={styles.myContribution.text.link}
+                      color="primary1"
+                      weight="regular"
+                      decoration="none"
                     >
                       {manageContribution}
-                    </a>
+                    </Text>
                   </Text>
                 </div>
               </div>
@@ -344,12 +359,15 @@ class ContributionCardComponent extends Component {
               <Text size="tiny" weight="regular">
                 {myContribution}
                 <br />
-                <a
+                <Text
+                  tag="a"
                   href={manageContributionLink}
-                  style={styles.myContribution.text.link}
+                  color="primary1"
+                  weight="regular"
+                  decoration="none"
                 >
                   {manageContribution}
-                </a>
+                </Text>
               </Text>
             </div>
           </div>
@@ -427,11 +445,6 @@ const styles = {
     text: {
       display: 'flex',
       lineHeight: 'normal',
-
-      link: {
-        textDecoration: 'none',
-        color: COLORS.primary1,
-      },
     },
   },
 

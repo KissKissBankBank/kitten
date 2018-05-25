@@ -76,6 +76,7 @@ export const KarlDonationCard = () => (
           button="To contribute"
           renderAmountInput={() => (
             <KarlDonationInput
+              donationId="donation-amount"
               amountLabel="Enter your amount"
               amountPlaceholder="Your amount"
               currencySymbol="€"
