@@ -30,8 +30,8 @@ exports[`<ButtonImageWithText /> should match its empty snapshot 1`] = `
       }
     }
   >
-    <span
-      className="k-u-size-tiny k-u-weight-regular"
+    <Custom tag
+      className="k-u-size-tiny k-u-weight-light"
       data-radium={true}
       style={
         Object {
@@ -41,10 +41,10 @@ exports[`<ButtonImageWithText /> should match its empty snapshot 1`] = `
         }
       }
     >
-      
-    </span>
-    <span
-      className="k-u-size-tiny"
+      Custom title
+    </Custom tag>
+    <Custom tag
+      className="k-u-size-tiny k-u-weight-light"
       data-radium={true}
       style={
         Object {
@@ -54,8 +54,8 @@ exports[`<ButtonImageWithText /> should match its empty snapshot 1`] = `
         }
       }
     >
-      
-    </span>
+      Custom description
+    </Custom tag>
   </div>
 </div>
 `;

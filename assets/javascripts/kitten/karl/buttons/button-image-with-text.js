@@ -6,26 +6,33 @@ import { KarlExampleTitle } from 'kitten/karl/examples/title'
 
 export const KarlButtonImageWithText = () => (
   <Grid>
-    <GridCol col="3">
+    <GridCol col-m="3">
       <KarlExampleTitle>With paragraph - micro</KarlExampleTitle>
       <ButtonImageWithText
         tag="div"
         micro
+        regularTitle
         title="Title"
         description="Description"
       />
     </GridCol>
 
-    <GridCol col="3">
+    <GridCol col-m="3">
       <KarlExampleTitle>With paragraph - tiny</KarlExampleTitle>
-      <ButtonImageWithText tag="p" title="Title" description="Description" />
+      <ButtonImageWithText
+        tag="p"
+        title="Title"
+        description="Description"
+        regularTitle
+      />
     </GridCol>
 
-    <GridCol col="3">
+    <GridCol col-m="3">
       <KarlExampleTitle>With paragraph - large gutter</KarlExampleTitle>
       <ButtonImageWithText
         tag="div"
         largeGutter
+        regularTitle
         title="Title"
         description="Description"
       />

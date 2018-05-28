@@ -13,7 +13,10 @@ class ButtonImageWithTextComponent extends Component {
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     micro: PropTypes.bool,
+    tag: PropTypes.string,
     largeGutter: PropTypes.bool,
+    regularTitle: PropTypes.bool,
+    regularText: PropTypes.bool,
   }
 
   static defaultProps = {
@@ -21,8 +24,11 @@ class ButtonImageWithTextComponent extends Component {
       src: 'https://placehold.it/100x100/caf4fe/caf4fe',
       alt: '',
     },
-    title: '',
-    description: '',
+    micro: false,
+    tag: '',
+    largeGutter: false,
+    regularTitle: false,
+    regularText: false,
   }
 
   render() {
@@ -45,11 +51,23 @@ class ButtonImageWithTextComponent extends Component {
   }
 
   renderDescription() {
-    const { title, description, micro, tag, largeGutter } = this.props
+    const {
+      title,
+      description,
+      micro,
+      tag,
+      regularTitle,
+      regularText,
+      largeGutter,
+    } = this.props
 
     const size = micro ? 'micro' : 'tiny'
 
     const Tag = tag
+
+    const weightTitle = regularTitle ? 'regular' : 'light'
+
+    const weightText = regularText ? 'regular' : 'light'
 
     const tagStyle = [styles, tag == 'p' && styles.paragraph]
 
@@ -57,11 +75,11 @@ class ButtonImageWithTextComponent extends Component {
 
     return (
       <div style={textStyle}>
-        <Text tag={Tag} size={size} weight="regular" style={tagStyle}>
+        <Text tag={Tag} size={size} weight={weightTitle} style={tagStyle}>
           {title}
         </Text>
 
-        <Text tag={Tag} size={size} style={tagStyle}>
+        <Text tag={Tag} size={size} weight={weightText} style={tagStyle}>
           {description}
         </Text>
       </div>

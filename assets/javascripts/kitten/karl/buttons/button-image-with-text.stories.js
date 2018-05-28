@@ -1,11 +1,11 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { withKnobs, text, select, boolean } from '@storybook/addon-knobs/react'
+import { withKnobs, text, boolean } from '@storybook/addon-knobs/react'
+import { Grid, GridCol } from 'kitten/components/grid/grid'
 import { StyleRoot } from 'radium'
 import { ButtonImageWithText } from 'kitten/components/buttons/button-image-with-text'
-import { Grid, GridCol } from 'kitten/components/grid/grid'
 
-storiesOf('Buttons', module)
+storiesOf('ButtonImageWithText', module)
   .addDecorator(withKnobs)
   .add('ButtonImageWithText', () => (
     <StyleRoot>
@@ -16,6 +16,8 @@ storiesOf('Buttons', module)
             description={text('Description', 'description')}
             micro={boolean('Micro', false)}
             largeGutter={boolean('Large gutter', false)}
+            regularTitle={boolean('Regular title', false)}
+            regularText={boolean('Regular text', false)}
           />
         </GridCol>
       </Grid>

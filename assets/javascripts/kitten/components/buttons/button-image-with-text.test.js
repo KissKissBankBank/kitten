@@ -4,7 +4,19 @@ import { ButtonImageWithText } from 'kitten/components/buttons/button-image-with
 
 describe('<ButtonImageWithText />', () => {
   it('should match its empty snapshot', () => {
-    const tree = renderer.create(<ButtonImageWithText />).toJSON()
+    const tree = renderer
+      .create(
+        <ButtonImageWithText
+          title="Custom title"
+          description="Custom description"
+          tag="Custom tag"
+          micro={false}
+          largeGutter={false}
+          regularTitle={false}
+          regularText={false}
+        />,
+      )
+      .toJSON()
 
     expect(tree).toMatchSnapshot()
   })
