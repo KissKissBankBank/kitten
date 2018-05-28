@@ -51,6 +51,7 @@ describe('<DonationCard />', () => {
             button="Custom text button"
             myContribution="Custom my contribution"
             manageContribution="Custom manage contribution"
+            manageContributionLink="Custom manage link contribution"
             renderAmountInput={() => <div>Custom function</div>}
           />,
         )

@@ -298,7 +298,7 @@ exports[`<DonationCard /> with some props matches with snapshot 1`] = `
                   <br />
                   <a
                     className="k-u-color-primary1 k-u-decoration-none k-u-weight-regular"
-                    href=""
+                    href="Custom manage link contribution"
                   >
                     Custom manage contribution
                   </a>
