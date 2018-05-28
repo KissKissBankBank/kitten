@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `BackerCard` example.
+
 ## [20.12.3] - 2018-05-22
 
 No changes.
