@@ -6,8 +6,16 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Add `BackerCard` component.
 - Feature: Add `huge` size to `ButtonImage`.
-- Feature: Add `renderDonation` on `RewardCard` component.
-- Feature: Add `k-Label--micro` class.
+
+## [20.13.0] - 2018-05-28
+
+Features:
+- Update `RewardCard` component.
+- Add `none` decoration option to `Text`.
+- Add `k-u-decoration-none` class.
+- Add `ContributionCard` and `DonationCard` components.
+- Add `renderDonation` on `RewardCard` component.
+- Add `k-Label--micro` class.
 
 ## [20.12.3] - 2018-05-22
 

@@ -87,6 +87,10 @@ module Kitten
               path: 'components/icons/filter-icon',
               name: 'Filter',
             },
+            {
+              path: 'components/buttons/garbage-button',
+              name: 'Garbage button',
+            },
           ],
         },
         {
