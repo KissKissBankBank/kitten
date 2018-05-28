@@ -23,7 +23,14 @@ describe('<DonationCard />', () => {
   describe('by default', () => {
     window.matchMedia = createMockMediaMatcher(false)
 
-    const component = renderer.create(<DonationCard />).toJSON()
+    const component = renderer
+      .create(
+        <DonationCard
+          titleAmount="Custom title mount"
+          textDescription="Custom text description"
+        />,
+      )
+      .toJSON()
 
     it('matches with snapshot', () => {
       expect(component).toMatchSnapshot()
@@ -40,7 +47,6 @@ describe('<DonationCard />', () => {
               src: '#image',
               alt: 'Image alt',
             }}
-            titleDescription="Custom title description"
             textDescription="Custom text description"
             button="Custom text button"
             myContribution="Custom my contribution"

@@ -3,6 +3,8 @@
 exports[`<ContributionCard /> by default matches with snapshot 1`] = `
 <div
   data-radium={true}
+  descriptionMarginBottom={null}
+  render={[Function]}
   style={
     Object {
       "borderColor": "#eee",
@@ -22,7 +24,7 @@ exports[`<ContributionCard /> by default matches with snapshot 1`] = `
     <div
       className="rmq-5aa2f196 rmq-e60873c0 rmq-ce79a9e0 k-Grid"
       data-radium={true}
-      disabled={undefined}
+      disabled={false}
       style={
         Object {
           "paddingLeft": "20px",
@@ -53,7 +55,7 @@ exports[`<ContributionCard /> by default matches with snapshot 1`] = `
             <h1
               className="k-Title k-Title--secondary k-Title--withoutMargin k-Title--italic"
             >
-              
+              Custom title mount
             </h1>
           </div>
           <div
@@ -80,7 +82,7 @@ exports[`<ContributionCard /> by default matches with snapshot 1`] = `
             <p
               className="k-Paragraph k-Paragraph--tertiary k-Paragraph--withoutMargin"
             >
-              
+              Custom text description
             </p>
           </div>
         </div>
@@ -91,7 +93,9 @@ exports[`<ContributionCard /> by default matches with snapshot 1`] = `
               "marginTop": "2.5rem",
             }
           }
-        />
+        >
+          
+        </div>
       </div>
       
     </div>
@@ -114,6 +118,8 @@ padding-right: 0 !important;}}",
 exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
 <div
   data-radium={true}
+  descriptionMarginBottom={null}
+  render={[Function]}
   style={
     Object {
       "borderColor": "#eee",
@@ -121,9 +127,6 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
       "borderWidth": "2px",
     }
   }
-  textAvailability="Custom text availability"
-  textContributors="Custom text contributors"
-  textDelivery="Custom text delivery"
 >
   <div
     style={
@@ -136,7 +139,7 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
     <div
       className="rmq-5aa2f196 rmq-e60873c0 rmq-ce79a9e0 k-Grid"
       data-radium={true}
-      disabled={undefined}
+      disabled={false}
       style={
         Object {
           "paddingLeft": "20px",
@@ -222,7 +225,71 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
           <div
             className="k-Grid"
             data-radium={true}
-          />
+          >
+            <div
+              className="k-Grid__col--12 k-Grid__col--4@l k-Grid__col--3@xl"
+              data-radium={true}
+              style={
+                Object {
+                  "display": "flex",
+                  "flexDirection": "column",
+                }
+              }
+            >
+              <span
+                className="k-u-weight-regular"
+              >
+                Custom title contributors
+              </span>
+              <span
+                className="k-u-weight-light"
+              >
+                Custom value contributors
+              </span>
+            </div>
+            <div
+              className="k-Grid__col--12 k-Grid__col--4@l k-Grid__col--3@xl"
+              data-radium={true}
+              style={
+                Object {
+                  "display": "flex",
+                  "flexDirection": "column",
+                }
+              }
+            >
+              <span
+                className="k-u-weight-regular"
+              >
+                Custom title delivery
+              </span>
+              <span
+                className="k-u-weight-light"
+              >
+                Custom value delivery
+              </span>
+            </div>
+            <div
+              className="k-Grid__col--12 k-Grid__col--4@l k-Grid__col--3@xl"
+              data-radium={true}
+              style={
+                Object {
+                  "display": "flex",
+                  "flexDirection": "column",
+                }
+              }
+            >
+              <span
+                className="k-u-weight-regular"
+              >
+                Custom title availability
+              </span>
+              <span
+                className="k-u-weight-light"
+              >
+                Custom value availability
+              </span>
+            </div>
+          </div>
         </div>
         <div
           style={
@@ -244,10 +311,10 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
               aria-label="Custom text button"
               className="rmq-2c87bfe9 k-Button k-Button--helium k-Button--big"
               data-radium={true}
-              disabled={undefined}
-              onClick={undefined}
-              onMouseEnter={undefined}
-              onMouseLeave={undefined}
+              disabled={false}
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
               style={Object {}}
               tabIndex={null}
             >
@@ -317,14 +384,8 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
                   Custom my contribution
                   <br />
                   <a
-                    data-radium={true}
-                    href={undefined}
-                    style={
-                      Object {
-                        "color": "#19b4fa",
-                        "textDecoration": "none",
-                      }
-                    }
+                    className="k-u-color-primary1 k-u-decoration-none k-u-weight-regular"
+                    href="Custom manage link contribution"
                   >
                     Custom manage contribution
                   </a>

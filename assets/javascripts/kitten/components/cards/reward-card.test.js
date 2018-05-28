@@ -23,7 +23,14 @@ describe('<RewardCard />', () => {
   describe('by default', () => {
     window.matchMedia = createMockMediaMatcher(false)
 
-    const component = renderer.create(<RewardCard />).toJSON()
+    const component = renderer
+      .create(
+        <RewardCard
+          titleAmount="Custom title mount"
+          textDescription="Custom text description"
+        />,
+      )
+      .toJSON()
 
     it('matches with snapshot', () => {
       expect(component).toMatchSnapshot()

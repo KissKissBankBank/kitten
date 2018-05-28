@@ -29,7 +29,7 @@ const HorizontalStroke = Radium(HorizontalStrokeBase)
 class ContributionCardComponent extends Component {
   static propTypes = {
     titleAmount: PropTypes.string.isRequired,
-    titleDescription: PropTypes.string.isRequired,
+    titleDescription: PropTypes.string,
     textDescription: PropTypes.string.isRequired,
 
     button: PropTypes.string,
@@ -47,6 +47,7 @@ class ContributionCardComponent extends Component {
   }
 
   static defaultProps = {
+    titleDescription: '',
     imageProps: {
       src: '',
       alt: '',

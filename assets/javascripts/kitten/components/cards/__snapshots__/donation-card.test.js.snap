@@ -3,7 +3,8 @@
 exports[`<DonationCard /> by default matches with snapshot 1`] = `
 <div
   data-radium={true}
-  render={undefined}
+  descriptionMarginBottom={null}
+  render={[Function]}
   style={
     Object {
       "borderColor": "#eee",
@@ -23,7 +24,7 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
     <div
       className="rmq-5aa2f196 rmq-e60873c0 rmq-ce79a9e0 k-Grid"
       data-radium={true}
-      disabled={undefined}
+      disabled={false}
       style={
         Object {
           "paddingLeft": "20px",
@@ -54,7 +55,7 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
             <h1
               className="k-Title k-Title--secondary k-Title--withoutMargin k-Title--italic"
             >
-              
+              Custom title mount
             </h1>
           </div>
           <div
@@ -81,7 +82,7 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
             <p
               className="k-Paragraph k-Paragraph--tertiary k-Paragraph--withoutMargin"
             >
-              
+              Custom text description
             </p>
           </div>
         </div>
@@ -92,7 +93,9 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
               "marginTop": "2.5rem",
             }
           }
-        />
+        >
+          
+        </div>
       </div>
       
     </div>
@@ -115,6 +118,7 @@ padding-right: 0 !important;}}",
 exports[`<DonationCard /> with some props matches with snapshot 1`] = `
 <div
   data-radium={true}
+  descriptionMarginBottom={null}
   render={[Function]}
   style={
     Object {
@@ -135,7 +139,7 @@ exports[`<DonationCard /> with some props matches with snapshot 1`] = `
     <div
       className="rmq-5aa2f196 rmq-e60873c0 rmq-ce79a9e0 k-Grid"
       data-radium={true}
-      disabled={undefined}
+      disabled={false}
       style={
         Object {
           "paddingLeft": "20px",
@@ -181,25 +185,12 @@ exports[`<DonationCard /> with some props matches with snapshot 1`] = `
               className="k-HorizontalStroke k-HorizontalStroke--big"
             />
           </div>
-          <div
-            style={
-              Object {
-                "marginBottom": "0.625rem",
-                "marginTop": "2.5rem",
-              }
-            }
-          >
-            <span
-              className="k-u-size-huge k-u-weight-bold"
-            >
-              Custom title description
-            </span>
-          </div>
+          
           <div
             style={
               Object {
                 "marginBottom": null,
-                "marginTop": "0.625rem",
+                "marginTop": "2.5rem",
               }
             }
           >
@@ -233,10 +224,10 @@ exports[`<DonationCard /> with some props matches with snapshot 1`] = `
               aria-label="Custom text button"
               className="rmq-2c87bfe9 k-Button k-Button--helium k-Button--big"
               data-radium={true}
-              disabled={undefined}
-              onClick={undefined}
-              onMouseEnter={undefined}
-              onMouseLeave={undefined}
+              disabled={false}
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
               style={Object {}}
               tabIndex={null}
             >
@@ -306,14 +297,8 @@ exports[`<DonationCard /> with some props matches with snapshot 1`] = `
                   Custom my contribution
                   <br />
                   <a
-                    data-radium={true}
-                    href={undefined}
-                    style={
-                      Object {
-                        "color": "#19b4fa",
-                        "textDecoration": "none",
-                      }
-                    }
+                    className="k-u-color-primary1 k-u-decoration-none k-u-weight-regular"
+                    href=""
                   >
                     Custom manage contribution
                   </a>
