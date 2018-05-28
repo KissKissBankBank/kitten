@@ -225,7 +225,71 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
           <div
             className="k-Grid"
             data-radium={true}
-          />
+          >
+            <div
+              className="k-Grid__col--12 k-Grid__col--4@l k-Grid__col--3@xl"
+              data-radium={true}
+              style={
+                Object {
+                  "display": "flex",
+                  "flexDirection": "column",
+                }
+              }
+            >
+              <span
+                className="k-u-weight-regular"
+              >
+                Custom title contributors
+              </span>
+              <span
+                className="k-u-weight-light"
+              >
+                Custom value contributors
+              </span>
+            </div>
+            <div
+              className="k-Grid__col--12 k-Grid__col--4@l k-Grid__col--3@xl"
+              data-radium={true}
+              style={
+                Object {
+                  "display": "flex",
+                  "flexDirection": "column",
+                }
+              }
+            >
+              <span
+                className="k-u-weight-regular"
+              >
+                Custom title delivery
+              </span>
+              <span
+                className="k-u-weight-light"
+              >
+                Custom value delivery
+              </span>
+            </div>
+            <div
+              className="k-Grid__col--12 k-Grid__col--4@l k-Grid__col--3@xl"
+              data-radium={true}
+              style={
+                Object {
+                  "display": "flex",
+                  "flexDirection": "column",
+                }
+              }
+            >
+              <span
+                className="k-u-weight-regular"
+              >
+                Custom title availability
+              </span>
+              <span
+                className="k-u-weight-light"
+              >
+                Custom value availability
+              </span>
+            </div>
+          </div>
         </div>
         <div
           style={
@@ -321,7 +385,7 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
                   <br />
                   <a
                     className="k-u-color-primary1 k-u-decoration-none k-u-weight-regular"
-                    href=""
+                    href="Custom manage link contribution"
                   >
                     Custom manage contribution
                   </a>
