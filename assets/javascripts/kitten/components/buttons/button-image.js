@@ -28,7 +28,7 @@ export class ButtonImage extends React.Component {
       {
         'k-ButtonImage--tiny': tiny,
         'k-ButtonImage--big': big,
-        'k-ButtonImage--huge': big,
+        'k-ButtonImage--huge': huge,
         'k-ButtonImage--withoutPointerEvents': withoutPointerEvents,
         'k-ButtonImage--withBorder': withBorder,
       },

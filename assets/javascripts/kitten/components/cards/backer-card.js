@@ -36,7 +36,7 @@ export const BackerCard = ({
         img={imgProps}
         style={styles.buttonImage}
         withoutPointerEvents
-        big
+        huge
       />
     </Marger>
 
