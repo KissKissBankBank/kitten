@@ -131,6 +131,7 @@ class ContributionCardComponent extends Component {
       textDescription,
       titleTag,
       textTag,
+      myContribution,
       viewportIsSOrLess,
       viewportIsMobile,
     } = this.props
@@ -173,9 +174,7 @@ class ContributionCardComponent extends Component {
         </Marger>
         {!!this.props.render && this.props.render()}
         {this.renderInfos()}
-        {!viewportIsSOrLess && (
-          <Marger top="4">{this.renderChoiceButton()}</Marger>
-        )}
+        {!viewportIsSOrLess && this.renderChoiceButton()}
       </Fragment>
     )
   }
@@ -240,7 +239,9 @@ class ContributionCardComponent extends Component {
   }
 
   renderChoiceButton() {
-    const { viewportIsSOrLess, myContribution } = this.props
+    const { viewportIsSOrLess, myContribution, button } = this.props
+
+    if (!button && !myContribution) return
 
     return (
       <Fragment>
@@ -259,14 +260,14 @@ class ContributionCardComponent extends Component {
         )}
 
         {!viewportIsSOrLess && (
-          <Fragment>
+          <Marger top="4">
             {this.renderButton()}
             {myContribution && (
               <Marger top={!myContribution ? 0 : 2}>
                 {this.renderMyContribution()}
               </Marger>
             )}
-          </Fragment>
+          </Marger>
         )}
       </Fragment>
     )

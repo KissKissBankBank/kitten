@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Update `RewardCard` component.
 - Feature: Add `k-u-decoration-none` class.
 - Feature: Add `ContributionCard` and `DonationCard` components.
 - Feature: Add `renderDonation` on `RewardCard` component.
