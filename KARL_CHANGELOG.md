@@ -4,8 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `KarlDonationCard` and `KarlDonationInput` examples.
-- Feature: Add `KarlGarbageButton` example.
+## [20.13.0] - 2018-05-28
+
+Features:
+- Add `KarlDonationCard` and `KarlDonationInput` examples.
+- Add `KarlGarbageButton` example.
 
 ## [20.12.3] - 2018-05-22
 
