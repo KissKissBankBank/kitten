@@ -127,9 +127,6 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
       "borderWidth": "2px",
     }
   }
-  textAvailability="Custom text availability"
-  textContributors="Custom text contributors"
-  textDelivery="Custom text delivery"
 >
   <div
     style={
