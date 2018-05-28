@@ -44,7 +44,6 @@ class ContributionCardComponent extends Component {
     manageContributionLink: PropTypes.string,
 
     isDisabled: PropTypes.bool,
-    descriptionMarginBottom: PropTypes.number,
     render: PropTypes.func,
   }
 
@@ -66,7 +65,6 @@ class ContributionCardComponent extends Component {
     manageContributionLink: '',
 
     isDisabled: false,
-    descriptionMarginBottom: null,
     render: () => {},
   }
 
@@ -99,6 +97,7 @@ class ContributionCardComponent extends Component {
       imageProps,
       titleTag,
       textTag,
+      render,
       ...others
     } = this.props
 
@@ -297,6 +296,7 @@ class ContributionCardComponent extends Component {
         <Button
           size="big"
           modifier="helium"
+          type="button"
           aria-label={button}
           style={styles.button}
           onMouseEnter={buttonOnMouseEnter}
@@ -343,8 +343,8 @@ class ContributionCardComponent extends Component {
                     {myContribution}
                     <br />
                     <Text
-                      tag="a"
-                      href={manageContributionLink}
+                      tag={!isDisabled ? 'a' : 'span'}
+                      href={!isDisabled ? manageContributionLink : null}
                       color="primary1"
                       weight="regular"
                       decoration="none"
@@ -366,8 +366,8 @@ class ContributionCardComponent extends Component {
                 {myContribution}
                 <br />
                 <Text
-                  tag="a"
-                  href={manageContributionLink}
+                  tag={!isDisabled ? 'a' : 'span'}
+                  href={!isDisabled ? manageContributionLink : null}
                   color="primary1"
                   weight="regular"
                   decoration="none"
