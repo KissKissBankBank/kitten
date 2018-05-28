@@ -4,6 +4,7 @@
 ///
 /// Available size modifiers:
 /// - `.k-Label--tiny`
+/// - `.k-Label--micro`
 ///
 /// @group form
 ///
@@ -24,6 +25,7 @@
 @mixin k-Label {
   $font: 'regular';
   $font-step-tiny: 0; // 16px
+  $font-step-micro: -1; // 14px
   $line-height-tiny: 1.3;
 
   .k-Label {
@@ -36,6 +38,10 @@
 
   .k-Label--tiny {
     @include k-typographyFontSize($font-step-tiny, $line-height-tiny);
+  }
+
+  .k-Label--micro {
+    @include k-typographyFontSize($font-step-micro, $line-height-tiny);
   }
 
   .k-Label--withoutPointerEvents {

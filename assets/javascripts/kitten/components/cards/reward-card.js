@@ -13,8 +13,9 @@ import { Paragraph as ParagraphBase } from 'kitten/components/typography/paragra
 import { IconBadge as IconBadgeBase } from 'kitten/components/notifications/icon-badge'
 import { CheckedIcon } from 'kitten/components/icons/checked-icon'
 import { HorizontalStroke as HorizontalStrokeBase } from 'kitten/components/layout/horizontal-stroke'
+import { TextInputWithUnit as TextInputWithUnitBase } from 'kitten/components/form/text-input-with-unit'
+import { Label } from 'kitten/components/form/label'
 import COLORS from 'kitten/constants/colors-config'
-import { parseHtml } from 'kitten/helpers/utils/parser'
 import { ScreenConfig } from 'kitten/constants/screen-config'
 import { mediaQueries } from 'kitten/hoc/media-queries'
 
@@ -26,6 +27,7 @@ const Text = Radium(TextBase)
 const Paragraph = Radium(ParagraphBase)
 const IconBadge = Radium(IconBadgeBase)
 const HorizontalStroke = Radium(HorizontalStrokeBase)
+const TextInputWithUnit = Radium(TextInputWithUnitBase)
 
 class RewardCardComponent extends Component {
   static propTypes = {
@@ -44,17 +46,25 @@ class RewardCardComponent extends Component {
     valueAvailability: PropTypes.string,
 
     button: PropTypes.string,
+    buttonOnMouseEnter: PropTypes.func,
+    buttonOnMouseLeave: PropTypes.func,
+    buttonOnClick: PropTypes.func,
 
     myContribution: PropTypes.string,
     manageContribution: PropTypes.string,
+    manageContributionLink: PropTypes.string,
 
-    imageSrc: PropTypes.bool,
-    imageSrcSmall: PropTypes.bool,
+    amountPlaceholder: PropTypes.string,
+    amountLabel: PropTypes.string,
+    currencySymbol: PropTypes.string,
+    donation: PropTypes.bool,
+
+    isDisabled: PropTypes.bool,
   }
 
   static defaultProps = {
     imageProps: {
-      src: 'https://placehold.it/350x200/caf4fe/caf4fe',
+      src: '',
       alt: '',
     },
     titleAmount: '',
@@ -63,29 +73,66 @@ class RewardCardComponent extends Component {
   }
 
   render() {
-    const { isDisabled, viewportIsSOrLess } = this.props
+    const {
+      isDisabled,
+      viewportIsSOrLess,
+      viewportIsMobile,
+      viewportIsTabletOrLess,
+      titleAmount,
+      titleDescription,
+      textDescription,
+      titleContributors,
+      titleSmallContributors,
+      titleDelivery,
+      titleSmallDelivery,
+      titleAvailability,
+      titleSmallAvailability,
+      valueContributors,
+      valueDelivery,
+      valueAvailability,
+      button,
+      buttonOnMouseEnter,
+      buttonOnMouseLeave,
+      buttonOnClick,
+      myContribution,
+      manageContribution,
+      manageContributionLink,
+      textAvailability,
+      textContributors,
+      textDelivery,
+      imageProps,
+      ...others
+    } = this.props
 
-    const styleCard = [styles.card, isDisabled && styles.card.isDisabled]
+    const styleCard = [
+      others.style,
+      styles.card,
+      isDisabled && styles.card.isDisabled,
+    ]
 
     return (
-      <StyleRoot>
-        <div style={styleCard} disabled={isDisabled}>
-          <Marger bottom={viewportIsSOrLess ? 0 : 5}>
-            <Grid style={styles.card.addPadding}>
-              <GridCol col-m="7">{this.renderDescription()}</GridCol>
+      <StyleRoot {...others} style={styleCard}>
+        <Marger bottom={viewportIsSOrLess ? 0 : 5}>
+          <Grid style={styles.card.addPadding} disabled={isDisabled}>
+            <GridCol col-l="7" col-m={!this.props.imageProps.src ? 10 : 7}>
+              {this.renderDescription()}
+            </GridCol>
+            {this.props.imageProps.src && (
               <GridCol col-m="4" offset-m="1">
                 {this.renderImage()}
               </GridCol>
-            </Grid>
-            {viewportIsSOrLess && this.renderChoiceButton()}
-          </Marger>
-        </div>
+            )}
+          </Grid>
+          {viewportIsSOrLess && this.renderChoiceButton()}
+        </Marger>
       </StyleRoot>
     )
   }
 
   renderDescription() {
     const {
+      donation,
+      button,
       titleAmount,
       titleDescription,
       textDescription,
@@ -96,7 +143,7 @@ class RewardCardComponent extends Component {
 
     return (
       <Fragment>
-        <Marger top={viewportIsSOrLess ? 4 : 5} bottom="2">
+        <Marger top={viewportIsSOrLess ? 4 : 5} bottom={donation ? 3 : 2}>
           <Marger bottom="2">
             <Title
               modifier={viewportIsSOrLess ? 'tertiary' : 'secondary'}
@@ -110,16 +157,18 @@ class RewardCardComponent extends Component {
           <Marger top="2" bottom={viewportIsMobile ? 3 : 4}>
             <HorizontalStroke size="big" />
           </Marger>
-          <Marger top="4" bottom="1">
-            <Text
-              size={viewportIsSOrLess ? 'big' : 'huge'}
-              tag={tag}
-              weight="bold"
-            >
-              {titleDescription}
-            </Text>
-          </Marger>
-          <Marger top="1" bottom="2">
+          {titleDescription && (
+            <Marger top="4" bottom="1">
+              <Text
+                size={viewportIsSOrLess ? 'big' : 'huge'}
+                tag={tag}
+                weight="bold"
+              >
+                {titleDescription}
+              </Text>
+            </Marger>
+          )}
+          <Marger top={!titleDescription ? 4 : 1} bottom={!donation ? 2 : 3}>
             <Paragraph
               modifier={viewportIsSOrLess ? 'quaternary' : 'tertiary'}
               margin={false}
@@ -128,9 +177,8 @@ class RewardCardComponent extends Component {
             </Paragraph>
           </Marger>
         </Marger>
-        <Marger top="2" bottom={viewportIsSOrLess ? 3 : 4}>
-          {this.renderInfos()}
-        </Marger>
+        {this.renderDonation()}
+        {this.renderInfos()}
         {!viewportIsSOrLess && (
           <Marger top="4">{this.renderChoiceButton()}</Marger>
         )}
@@ -149,41 +197,48 @@ class RewardCardComponent extends Component {
       valueContributors,
       valueDelivery,
       valueAvailability,
+      viewportIsSOrLess,
     } = this.props
 
+    if (!valueContributors && !valueDelivery && !valueAvailability) return
+
     return (
-      <Grid>
-        {this.renderInfo(
-          titleContributors,
-          titleSmallContributors,
-          valueContributors,
-        )}
-        {this.renderInfo(titleDelivery, titleSmallDelivery, valueDelivery)}
-        {this.renderInfo(
-          titleAvailability,
-          titleSmallAvailability,
-          valueAvailability,
-        )}
-      </Grid>
+      <Marger top="2" bottom={viewportIsSOrLess ? 3 : 4}>
+        <Grid>
+          {this.renderInfo(
+            titleContributors,
+            titleSmallContributors,
+            valueContributors,
+          )}
+          {this.renderInfo(titleDelivery, titleSmallDelivery, valueDelivery)}
+          {this.renderInfo(
+            titleAvailability,
+            titleSmallAvailability,
+            valueAvailability,
+          )}
+        </Grid>
+      </Marger>
     )
   }
 
   renderInfo(title, titleSmall, value) {
-    const { viewportIsTabletOrLess } = this.props
+    const { viewportIsTabletOrLess, viewportIsSOrLess } = this.props
+
+    if (!title || !titleSmall) return
 
     return (
       <GridCol style={styles.infos} col-l="4" col-xl="3">
         {viewportIsTabletOrLess && (
           <Text weight="regular" style={styles.infos.lists}>
-            {parseHtml(titleSmall)}
-            <Text weight="light">{parseHtml(value)}</Text>
+            {titleSmall}
+            <Text weight="light">{value}</Text>
           </Text>
         )}
 
         {!viewportIsTabletOrLess && (
           <Fragment>
-            <Text weight="regular">{parseHtml(title)}</Text>
-            <span>{parseHtml(value)}</span>
+            <Text weight="regular">{title}</Text>
+            <Text weight="light">{value}</Text>
           </Fragment>
         )}
       </GridCol>
@@ -191,15 +246,20 @@ class RewardCardComponent extends Component {
   }
 
   renderChoiceButton() {
-    const { imageSrc, imageSrcSmall, viewportIsSOrLess } = this.props
+    const { viewportIsSOrLess, myContribution } = this.props
 
     return (
       <Fragment>
         {viewportIsSOrLess && (
           <div>
-            <Marger top={!imageSrc && !imageSrcSmall ? 0 : 2} bottom="2">
-              {this.renderMyContribution()}
-            </Marger>
+            {myContribution && (
+              <Marger
+                top={!this.props.imageProps.src ? 0 : 2}
+                bottom={!myContribution ? 0 : 2}
+              >
+                {this.renderMyContribution()}
+              </Marger>
+            )}
             {this.renderButton()}
           </div>
         )}
@@ -207,7 +267,11 @@ class RewardCardComponent extends Component {
         {!viewportIsSOrLess && (
           <Fragment>
             {this.renderButton()}
-            <Marger top="2">{this.renderMyContribution()}</Marger>
+            {myContribution && (
+              <Marger top={!myContribution ? 0 : 2}>
+                {this.renderMyContribution()}
+              </Marger>
+            )}
           </Fragment>
         )}
       </Fragment>
@@ -215,17 +279,32 @@ class RewardCardComponent extends Component {
   }
 
   renderButton() {
-    const { button, isCompleted, viewportIsSOrLess } = this.props
+    const {
+      button,
+      isCompleted,
+      viewportIsSOrLess,
+      buttonOnMouseEnter,
+      buttonOnMouseLeave,
+      buttonOnClick,
+      myContribution,
+      isDisabled,
+    } = this.props
+
+    const buttonMargin = viewportIsSOrLess || !myContribution ? null : 2
 
     if (!button || isCompleted) return
 
     return (
-      <Marger bottom={viewportIsSOrLess ? null : 2}>
+      <Marger bottom={buttonMargin}>
         <Button
           size="big"
           modifier="helium"
           aria-label={button}
           style={styles.button}
+          onMouseEnter={buttonOnMouseEnter}
+          onMouseLeave={buttonOnMouseLeave}
+          onClick={buttonOnClick}
+          disabled={isDisabled}
         >
           {button}
         </Button>
@@ -248,10 +327,11 @@ class RewardCardComponent extends Component {
       isDisabled,
       myContribution,
       manageContribution,
+      manageContributionLink,
       viewportIsSOrLess,
     } = this.props
 
-    if (viewportIsSOrLess && isDisabled) return
+    if (!myContribution || (viewportIsSOrLess && isDisabled)) return
 
     return (
       <Fragment>
@@ -264,7 +344,10 @@ class RewardCardComponent extends Component {
                   <Text size="tiny" weight="regular">
                     {myContribution}
                     <br />
-                    <a href="#" style={styles.myContribution.text.link}>
+                    <a
+                      href={manageContributionLink}
+                      style={styles.myContribution.text.link}
+                    >
                       {manageContribution}
                     </a>
                   </Text>
@@ -281,7 +364,10 @@ class RewardCardComponent extends Component {
               <Text size="tiny" weight="regular">
                 {myContribution}
                 <br />
-                <a href="#" style={styles.myContribution.text.link}>
+                <a
+                  href={manageContributionLink}
+                  style={styles.myContribution.text.link}
+                >
                   {manageContribution}
                 </a>
               </Text>
@@ -292,19 +378,73 @@ class RewardCardComponent extends Component {
     )
   }
 
-  renderImage(size) {
-    const { imageSrcSmall, imageSrc } = this.props
+  renderImage() {
+    if (!this.props.imageProps.src) return
 
-    const imageStyles = [
-      styles.image.default,
-      imageSrcSmall && styles.image.small,
-      size === 'default' && styles.image.default,
-      size === 'small' && styles.image.small,
-    ]
+    return <img {...this.props.imageProps} style={styles.image} />
+  }
 
-    if (!imageSrc && !imageSrcSmall) return
+  renderDonation() {
+    const {
+      idDonation,
+      donation,
+      isError,
+      isDisabled,
+      errorTag,
+      amountName,
+      amountLabel,
+      amountMin,
+      amountMax,
+      initialAmount,
+      onFocus,
+      onAmountChange,
+      onAmountKeyDown,
+      amountPlaceholder,
+      currencySymbol,
+      viewportIsSOrLess,
+    } = this.props
 
-    return <img {...this.props.imageProps} style={imageStyles} />
+    const donationIsError = !isError ? 4 : 1
+    const donationViewport = !viewportIsSOrLess ? 4 : 2
+
+    if (!donation) return
+
+    return (
+      <Marger top="3" bottom={donationIsError && donationViewport}>
+        <Grid>
+          <GridCol col-xs="7" col-m="5">
+            <Marger bottom="1.5">
+              <Label size="micro" htmlFor={idDonation}>
+                {amountLabel}
+              </Label>
+            </Marger>
+            <Marger top="1.5" bottom={isError ? 1 : null}>
+              <TextInputWithUnit
+                ref={input => (this.amount = input)}
+                error={isError}
+                id={idDonation}
+                name={amountName}
+                type="number"
+                min={amountMin}
+                max={amountMax}
+                defaultValue={initialAmount}
+                onFocus={onFocus}
+                onChange={onAmountChange}
+                onKeyDown={onAmountKeyDown}
+                placeholder={amountPlaceholder}
+                unit={currencySymbol}
+                disabled={isDisabled}
+              />
+            </Marger>
+            {isError && (
+              <Marger top="1">
+                <Text size="micro">{errorTag}</Text>
+              </Marger>
+            )}
+          </GridCol>
+        </Grid>
+      </Marger>
+    )
   }
 }
 
@@ -313,7 +453,6 @@ const styles = {
     borderWidth: '2px',
     borderStyle: 'solid',
     borderColor: COLORS.line1,
-    display: 'flex',
 
     addPadding: {
       paddingLeft: '20px',
@@ -391,15 +530,7 @@ const styles = {
   },
 
   image: {
-    default: {
-      width: '100%',
-      height: '500px',
-    },
-
-    small: {
-      width: '100%',
-      height: '325px',
-    },
+    width: '100%',
   },
 }
 
