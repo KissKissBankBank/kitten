@@ -3,8 +3,6 @@
 exports[`<ContributionCard /> by default matches with snapshot 1`] = `
 <div
   data-radium={true}
-  descriptionMarginBottom={null}
-  render={[Function]}
   style={
     Object {
       "borderColor": "#eee",
@@ -108,8 +106,6 @@ padding-right: 0 !important;}}",
 exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
 <div
   data-radium={true}
-  descriptionMarginBottom={null}
-  render={[Function]}
   style={
     Object {
       "borderColor": "#eee",
@@ -307,6 +303,7 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
               onMouseLeave={[Function]}
               style={Object {}}
               tabIndex={null}
+              type="button"
             >
               Custom text button
             </button>
