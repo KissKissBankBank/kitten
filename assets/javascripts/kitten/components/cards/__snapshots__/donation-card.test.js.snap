@@ -86,16 +86,6 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
             </p>
           </div>
         </div>
-        <div
-          style={
-            Object {
-              "marginBottom": null,
-              "marginTop": "2.5rem",
-            }
-          }
-        >
-          
-        </div>
       </div>
       
     </div>

@@ -86,16 +86,6 @@ exports[`<RewardCard /> by default matches with snapshot 1`] = `
             </p>
           </div>
         </div>
-        <div
-          style={
-            Object {
-              "marginBottom": null,
-              "marginTop": "2.5rem",
-            }
-          }
-        >
-          
-        </div>
       </div>
       
     </div>
@@ -193,11 +183,11 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
               }
             }
           >
-            <span
+            <p
               className="k-u-size-huge k-u-weight-bold"
             >
               Custom title description
-            </span>
+            </p>
           </div>
           <div
             style={
