@@ -10,12 +10,12 @@ import { Text } from 'kitten/components/typography/text'
 
 const Description = () => (
   <Fragment>
-    A investi{' '}
+    Lorem{' '}
     <Text color="primary1" weight="regular">
-      50 €
+      ipsum
     </Text>{' '}
-    dans ce projet, <br />
-    <Text weight="regular">le 14 mars 2018</Text>.
+    dolor sit amet, <br />
+    <Text weight="regular">consectetur adipiscing elit</Text>…
   </Fragment>
 )
 
