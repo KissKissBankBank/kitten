@@ -23,13 +23,13 @@ describe('<BackerCard />', () => {
     })
   })
 
-  describe('with subTitle prop', () => {
+  describe('with subtitle prop', () => {
     beforeEach(() => {
       component = renderer
         .create(
           <BackerCard
             title="Backer name"
-            subTitle="SubTitle"
+            subtitle="Subtitle"
             imgProps={{ src: '#custom-src' }}
             description="Description"
           />,

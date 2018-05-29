@@ -30,7 +30,7 @@ storiesOf('Cards/BackerCard', module)
             <GridCol col="3">
               <BackerCard
                 title={text('Backer title', 'Backer name')}
-                subTitle={text('Backer subtitle', 'Backer subtitle')}
+                subtitle={text('Backer subtitle', 'Backer subtitle')}
                 imgProps={{ src: 'https://placeimg.com/80/80/any' }}
                 description={<Description />}
               />

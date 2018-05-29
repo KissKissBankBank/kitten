@@ -7,7 +7,7 @@ import { ButtonImage } from 'kitten/components/buttons/button-image'
 
 export const BackerCard = ({
   title,
-  subTitle,
+  subtitle,
   imgProps,
   description,
   ...others
@@ -17,14 +17,14 @@ export const BackerCard = ({
       <Text color="primary1" weight="regular" lineHeight="normal">
         {title}
 
-        {subTitle && (
+        {subtitle && (
           <Text
             color="font1"
             weight="light"
             size="micro"
             style={{ display: 'block' }}
           >
-            {subTitle}
+            {subtitle}
           </Text>
         )}
       </Text>
@@ -57,13 +57,13 @@ export const BackerCard = ({
 
 BackerCard.propTypes = {
   title: PropTypes.string.isRequired,
-  subTitle: PropTypes.string,
+  subtitle: PropTypes.string,
   imgProps: PropTypes.object.isRequired,
   description: PropTypes.node.isRequired,
 }
 
 BackerCard.defaultProps = {
-  subTitle: null,
+  subtitle: null,
 }
 
 const styles = {
