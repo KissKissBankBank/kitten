@@ -69,7 +69,7 @@ exports[`<BackerCard /> by default matches with snapshot 1`] = `
 </div>
 `;
 
-exports[`<BackerCard /> with subTitle prop matches with snapshot 1`] = `
+exports[`<BackerCard /> with subtitle prop matches with snapshot 1`] = `
 <div
   style={
     Object {
@@ -99,7 +99,7 @@ exports[`<BackerCard /> with subTitle prop matches with snapshot 1`] = `
           }
         }
       >
-        SubTitle
+        Subtitle
       </span>
     </span>
   </div>
