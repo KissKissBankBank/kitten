@@ -33,7 +33,7 @@ exports[`<BackerCard /> by default matches with snapshot 1`] = `
     }
   >
     <span
-      className="k-ButtonImage k-ButtonImage--big k-ButtonImage--huge k-ButtonImage--withoutPointerEvents"
+      className="k-ButtonImage k-ButtonImage--huge k-ButtonImage--withoutPointerEvents"
       style={
         Object {
           "margin": "0 auto",
@@ -112,7 +112,7 @@ exports[`<BackerCard /> with subTitle prop matches with snapshot 1`] = `
     }
   >
     <span
-      className="k-ButtonImage k-ButtonImage--big k-ButtonImage--huge k-ButtonImage--withoutPointerEvents"
+      className="k-ButtonImage k-ButtonImage--huge k-ButtonImage--withoutPointerEvents"
       style={
         Object {
           "margin": "0 auto",
