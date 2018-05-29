@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `BackerCard` component.
+- Feature: Add `huge` size to `ButtonImage`.
+
 ## [20.13.0] - 2018-05-28
 
 Features:
