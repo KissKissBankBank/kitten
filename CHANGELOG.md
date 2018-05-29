@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `ButtonImageWithText` component and storie.
+- Feature: Add `ButtonImageWithText` component and story.
 - Feature: Add `renderDonation` on `RewardCard` component.
 - Feature: Add `k-Label--micro` class.
 

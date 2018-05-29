@@ -9,7 +9,6 @@ describe('<ButtonImageWithText />', () => {
         <ButtonImageWithText
           title="Custom title"
           description="Custom description"
-          tag="Custom tag"
           micro={false}
           largeGutter={false}
           regularTitle={false}

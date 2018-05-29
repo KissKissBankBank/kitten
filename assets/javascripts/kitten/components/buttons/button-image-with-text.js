@@ -25,7 +25,7 @@ class ButtonImageWithTextComponent extends Component {
       alt: '',
     },
     micro: false,
-    tag: '',
+    tag: 'p',
     largeGutter: false,
     regularTitle: false,
     regularText: false,
