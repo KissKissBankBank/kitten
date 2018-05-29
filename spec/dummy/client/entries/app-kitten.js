@@ -40,9 +40,11 @@ import {
 } from 'kitten/karl/buttons/button-with-icon-words'
 import { KarlPaymentButtons } from 'kitten/karl/buttons/payment-button'
 import { KarlButtonIconFilter } from 'kitten/karl/buttons/button-filter'
+import { KarlGarbageButton } from 'kitten/karl/buttons/garbage-button'
 
 // Cards
 import { ArticleCard } from 'kitten/components/cards/article-card'
+import { BackerCard } from 'kitten/components/cards/backer-card'
 import { CrowdfundingCard } from 'kitten/components/cards/crowdfunding-card'
 import { ProjectCard } from 'kitten/components/cards/project-card'
 import { ProjectCreatorCard }
@@ -51,6 +53,7 @@ import { ProjectSimilarCard }
   from 'kitten/components/cards/project-similar-card'
 import { SimpleCard } from 'kitten/components/cards/simple-card'
 import { KarlCard } from 'kitten/karl/cards/card'
+import { KarlDonationCard } from 'kitten/karl/cards/donation-card'
 import { KarlRewardCard } from 'kitten/karl/cards/reward-card'
 import {
   KarlSimilarProjectsCard,
@@ -351,18 +354,21 @@ ReactOnRails.register({
   KarlLinkedinButtonIconWords,
   KarlTwitterButtonIconWords,
   KarlButtonIconFilter,
+  KarlGarbageButton,
 
   // Colors
   KarlColors,
 
   // Cards
   ArticleCard,
+  BackerCard,
   CrowdfundingCard,
   ProjectCard,
   ProjectCreatorCard,
   ProjectSimilarCard,
   SimpleCard,
   KarlCard,
+  KarlDonationCard,
   KarlRewardCard,
   KarlSimilarProjectsCard,
   KarlSimilarProjectsWithInfosCard,

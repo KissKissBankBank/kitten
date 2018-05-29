@@ -4,8 +4,24 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add social button icon component `YoutubeButtonIcon` and add `YoutubeIcon` component.
-- Fix: Update sizes on all social `buttonIcon`.
+- Feature: Add `YoutubeButtonIcon` and `YoutubeIcon` components.
+- Fix: Update on all social `buttonIcon` size.
+
+## [20.14.0] - 2018-05-29
+
+Features:
+- Add `BackerCard` component.
+- Add `huge` size to `ButtonImage`.
+
+## [20.13.0] - 2018-05-28
+
+Features:
+- Update `RewardCard` component.
+- Add `none` decoration option to `Text`.
+- Add `k-u-decoration-none` class.
+- Add `ContributionCard` and `DonationCard` components.
+- Add `renderDonation` on `RewardCard` component.
+- Add `k-Label--micro` class.
 
 ## [20.12.3] - 2018-05-22
 

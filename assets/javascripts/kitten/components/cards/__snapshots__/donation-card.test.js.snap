@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<RewardCard /> by default matches with snapshot 1`] = `
+exports[`<DonationCard /> by default matches with snapshot 1`] = `
 <div
   data-radium={true}
   style={
@@ -103,7 +103,7 @@ padding-right: 0 !important;}}",
 </div>
 `;
 
-exports[`<RewardCard /> with some props matches with snapshot 1`] = `
+exports[`<DonationCard /> with some props matches with snapshot 1`] = `
 <div
   data-radium={true}
   style={
@@ -171,25 +171,12 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
               className="k-HorizontalStroke k-HorizontalStroke--big"
             />
           </div>
-          <div
-            style={
-              Object {
-                "marginBottom": "0.625rem",
-                "marginTop": "2.5rem",
-              }
-            }
-          >
-            <p
-              className="k-u-size-huge k-u-weight-bold"
-            >
-              Custom title description
-            </p>
-          </div>
+          
           <div
             style={
               Object {
                 "marginBottom": null,
-                "marginTop": "0.625rem",
+                "marginTop": "2.5rem",
               }
             }
           >
@@ -200,82 +187,8 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
             </p>
           </div>
         </div>
-        <div
-          style={
-            Object {
-              "marginBottom": "2.5rem",
-              "marginTop": "1.25rem",
-            }
-          }
-        >
-          <div
-            className="k-Grid"
-            data-radium={true}
-          >
-            <div
-              className="k-Grid__col--12 k-Grid__col--4@l k-Grid__col--3@xl"
-              data-radium={true}
-              style={
-                Object {
-                  "display": "flex",
-                  "flexDirection": "column",
-                }
-              }
-            >
-              <span
-                className="k-u-weight-regular"
-              >
-                Custom title contributors
-              </span>
-              <span
-                className="k-u-weight-light"
-              >
-                Custom value contributors
-              </span>
-            </div>
-            <div
-              className="k-Grid__col--12 k-Grid__col--4@l k-Grid__col--3@xl"
-              data-radium={true}
-              style={
-                Object {
-                  "display": "flex",
-                  "flexDirection": "column",
-                }
-              }
-            >
-              <span
-                className="k-u-weight-regular"
-              >
-                Custom title delivery
-              </span>
-              <span
-                className="k-u-weight-light"
-              >
-                Custom value delivery
-              </span>
-            </div>
-            <div
-              className="k-Grid__col--12 k-Grid__col--4@l k-Grid__col--3@xl"
-              data-radium={true}
-              style={
-                Object {
-                  "display": "flex",
-                  "flexDirection": "column",
-                }
-              }
-            >
-              <span
-                className="k-u-weight-regular"
-              >
-                Custom title availability
-              </span>
-              <span
-                className="k-u-weight-light"
-              >
-                Custom value availability
-              </span>
-            </div>
-          </div>
+        <div>
+          Custom function
         </div>
         <div
           style={

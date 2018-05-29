@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<RewardCard /> by default matches with snapshot 1`] = `
+exports[`<ContributionCard /> by default matches with snapshot 1`] = `
 <div
   data-radium={true}
   style={
@@ -103,7 +103,7 @@ padding-right: 0 !important;}}",
 </div>
 `;
 
-exports[`<RewardCard /> with some props matches with snapshot 1`] = `
+exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
 <div
   data-radium={true}
   style={

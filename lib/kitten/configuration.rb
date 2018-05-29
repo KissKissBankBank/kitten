@@ -87,6 +87,10 @@ module Kitten
               path: 'components/icons/filter-icon',
               name: 'Filter',
             },
+            {
+              path: 'components/buttons/garbage-button',
+              name: 'Garbage button',
+            },
           ],
         },
         {
@@ -188,6 +192,7 @@ module Kitten
             { path: 'components/cards/simple-card', name: 'Simple card' },
             { path: 'components/cards/project-card', name: 'Project card' },
             { path: 'components/cards/article-card', name: 'Article card' },
+            { path: 'components/cards/backer-card', name: 'Backer card' },
             {
               path: 'components/cards/crowdfunding-card',
               name: 'Crowdfunding card',

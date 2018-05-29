@@ -1,6 +1,6 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { RewardCard } from 'kitten/components/cards/reward-card'
+import { DonationCard } from 'kitten/components/cards/donation-card'
 
 const createMockMediaMatcher = matches => () => ({
   matches,
@@ -8,7 +8,7 @@ const createMockMediaMatcher = matches => () => ({
   removeListener: () => {},
 })
 
-describe('<RewardCard />', () => {
+describe('<DonationCard />', () => {
   let originalMatchMedia
   let component
 
@@ -25,7 +25,7 @@ describe('<RewardCard />', () => {
 
     const component = renderer
       .create(
-        <RewardCard
+        <DonationCard
           titleAmount="Custom title mount"
           textDescription="Custom text description"
         />,
@@ -41,27 +41,18 @@ describe('<RewardCard />', () => {
     beforeEach(() => {
       component = renderer
         .create(
-          <RewardCard
+          <DonationCard
             titleAmount="Custom title mount"
             imageProps={{
               src: '#image',
               alt: 'Image alt',
             }}
-            titleDescription="Custom title description"
             textDescription="Custom text description"
-            titleContributors="Custom title contributors"
-            titleSmallContributors="Custom title small contributors"
-            titleDelivery="Custom title delivery"
-            titleSmallDelivery="Custom title small delivery"
-            titleAvailability="Custom title availability"
-            titleSmallAvailability="Custom title small availability"
-            valueContributors="Custom value contributors"
-            valueDelivery="Custom value delivery"
-            valueAvailability="Custom value availability"
             button="Custom text button"
             myContribution="Custom my contribution"
             manageContribution="Custom manage contribution"
             manageContributionLink="Custom manage link contribution"
+            renderAmountInput={() => <div>Custom function</div>}
           />,
         )
         .toJSON()

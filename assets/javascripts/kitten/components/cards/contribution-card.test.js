@@ -1,6 +1,6 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { RewardCard } from 'kitten/components/cards/reward-card'
+import { ContributionCard } from 'kitten/components/cards/contribution-card'
 
 const createMockMediaMatcher = matches => () => ({
   matches,
@@ -8,7 +8,7 @@ const createMockMediaMatcher = matches => () => ({
   removeListener: () => {},
 })
 
-describe('<RewardCard />', () => {
+describe('<ContributionCard />', () => {
   let originalMatchMedia
   let component
 
@@ -25,7 +25,7 @@ describe('<RewardCard />', () => {
 
     const component = renderer
       .create(
-        <RewardCard
+        <ContributionCard
           titleAmount="Custom title mount"
           textDescription="Custom text description"
         />,
@@ -41,7 +41,7 @@ describe('<RewardCard />', () => {
     beforeEach(() => {
       component = renderer
         .create(
-          <RewardCard
+          <ContributionCard
             titleAmount="Custom title mount"
             imageProps={{
               src: '#image',
