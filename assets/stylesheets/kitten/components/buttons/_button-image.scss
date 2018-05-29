@@ -19,6 +19,7 @@
   $button-size-tiny: 30px;
   $button-size: 40px;
   $button-size-big: 50px;
+  $button-size-huge: 80px;
 
   $border-size: k-px-to-rem(2px);
   $border-color: map-get($k-colors, 'line-1');
@@ -47,6 +48,10 @@
 
   .k-ButtonImage--big {
     @include k-buttonRoundedImage($button-size-big);
+  }
+
+  .k-ButtonImage--huge {
+    @include k-buttonRoundedImage($button-size-huge);
   }
 
   .k-ButtonImage--withoutPointerEvents {

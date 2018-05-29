@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    kitten (20.12.3)
+    kitten (20.14.0)
       railties (> 3.0.0, < 5.0.0)
       react_on_rails (~> 6.10.1)
       therubyracer

@@ -1,0 +1,149 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<BackerCard /> by default matches with snapshot 1`] = `
+<div
+  style={
+    Object {
+      "border": "2px solid #eee",
+      "padding": "0 20px",
+      "textAlign": "center",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "marginBottom": "0.625rem",
+        "marginTop": "2.5rem",
+      }
+    }
+  >
+    <span
+      className="k-u-color-primary1 k-u-line-height-normal k-u-weight-regular"
+    >
+      Backer name
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "marginBottom": "0.625rem",
+        "marginTop": "0.625rem",
+      }
+    }
+  >
+    <span
+      className="k-ButtonImage k-ButtonImage--huge k-ButtonImage--withoutPointerEvents"
+      style={
+        Object {
+          "margin": "0 auto",
+        }
+      }
+      tabIndex={null}
+    >
+      <img
+        className="k-ButtonImage__img"
+        src="#custom-src"
+      />
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "marginBottom": "2.5rem",
+        "marginTop": "0.625rem",
+      }
+    }
+  >
+    <p
+      className="k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-light"
+      style={
+        Object {
+          "margin": 0,
+        }
+      }
+    >
+      Description
+    </p>
+  </div>
+</div>
+`;
+
+exports[`<BackerCard /> with subtitle prop matches with snapshot 1`] = `
+<div
+  style={
+    Object {
+      "border": "2px solid #eee",
+      "padding": "0 20px",
+      "textAlign": "center",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "marginBottom": "0.625rem",
+        "marginTop": "2.5rem",
+      }
+    }
+  >
+    <span
+      className="k-u-color-primary1 k-u-line-height-normal k-u-weight-regular"
+    >
+      Backer name
+      <span
+        className="k-u-color-font1 k-u-size-micro k-u-weight-light"
+        style={
+          Object {
+            "display": "block",
+          }
+        }
+      >
+        Subtitle
+      </span>
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "marginBottom": "0.625rem",
+        "marginTop": "0.625rem",
+      }
+    }
+  >
+    <span
+      className="k-ButtonImage k-ButtonImage--huge k-ButtonImage--withoutPointerEvents"
+      style={
+        Object {
+          "margin": "0 auto",
+        }
+      }
+      tabIndex={null}
+    >
+      <img
+        className="k-ButtonImage__img"
+        src="#custom-src"
+      />
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "marginBottom": "2.5rem",
+        "marginTop": "0.625rem",
+      }
+    }
+  >
+    <p
+      className="k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-light"
+      style={
+        Object {
+          "margin": 0,
+        }
+      }
+    >
+      Description
+    </p>
+  </div>
+</div>
+`;
