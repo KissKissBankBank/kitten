@@ -1,19 +1,21 @@
 import React, { Component, Fragment } from 'react'
 import Radium, { StyleRoot } from 'radium'
 import PropTypes from 'prop-types'
-import { Marger } from 'kitten/components/layout/marger'
+import { Marger as MargerBase } from 'kitten/components/layout/marger'
 import {
   Grid as GridBase,
   GridCol as GridColBase,
 } from 'kitten/components/grid/grid'
 import { ButtonImage } from 'kitten/components/buttons/button-image'
-import { Button } from 'kitten/components/buttons/button'
+import { Button as ButtonBase } from 'kitten/components/buttons/button'
 import { Text } from 'kitten/components/typography/text'
 import { mediaQueries } from 'kitten/hoc/media-queries'
 import COLORS from 'kitten/constants/colors-config'
 
 const Grid = Radium(GridBase)
 const GridCol = Radium(GridColBase)
+const Marger = Radium(MargerBase)
+const Button = Radium(ButtonBase)
 
 class CommentComponent extends Component {
   static PropTypes = {
@@ -24,10 +26,18 @@ class CommentComponent extends Component {
     inputName: PropTypes.string.isRequired,
     isDisabled: PropTypes.bool,
     placeholder: PropTypes.string.isRequired,
+    isValid: PropTypes.bool,
+
+    cancelButton: PropTypes.string,
+    commentButton: PropTypes.string,
   }
 
   static defaultProps = {
     isDisabled: false,
+    isValid: false,
+
+    cancelButton: '',
+    commentButton: '',
   }
 
   render() {
@@ -39,6 +49,8 @@ class CommentComponent extends Component {
       isDisabled,
       isValid,
       placeholder,
+      cancelButton,
+      commentButton,
       viewportIsMobile,
       viewportIsTabletOrLess,
       ...others
@@ -48,7 +60,10 @@ class CommentComponent extends Component {
       <StyleRoot>
         <Grid>
           <GridCol col="2">{this.renderOwner()}</GridCol>
-          <GridCol col="10">{this.renderInput()}</GridCol>
+          <GridCol col="10">
+            {this.renderInput()}
+            {this.renderButton()}
+          </GridCol>
         </Grid>
       </StyleRoot>
     )
@@ -99,7 +114,7 @@ class CommentComponent extends Component {
     ]
 
     return (
-      <div style={styles.input}>
+      <Marger bottom="2" style={styles.input}>
         <textarea
           style={styleInput}
           name={inputName}
@@ -107,7 +122,22 @@ class CommentComponent extends Component {
           placeholder={placeholder}
           isValid={isValid}
         />
-      </div>
+      </Marger>
+    )
+  }
+
+  renderButton() {
+    const { commentButton, cancelButton, isValid } = this.props
+
+    if (isValid) return
+
+    return (
+      <Marger top="2">
+        <Button modifier="helium" style={styles.button.left}>
+          {commentButton}
+        </Button>
+        <Button modifier="lithium">{cancelButton}</Button>
+      </Marger>
     )
   }
 }
@@ -153,6 +183,12 @@ const styles = {
     },
     // ':-moz-placeholder': placeholderPseudoClass,
     // '::-moz-placeholder': placeholderPseudoClass,
+  },
+
+  button: {
+    left: {
+      marginRight: '10px',
+    },
   },
 }
 
