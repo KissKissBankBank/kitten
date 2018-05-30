@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+Fix:
+- Add a key on `CarouselBase`.
+
 ## [20.14.0] - 2018-05-29
 
 Features:
