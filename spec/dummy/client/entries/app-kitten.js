@@ -82,6 +82,7 @@ import { KarlFooterKisskiss } from 'kitten/karl/footer/footer-kisskiss'
 // Form
 import { Checkbox } from 'kitten/components/form/checkbox'
 import { CheckboxSet } from 'kitten/components/form/checkbox-set'
+import { Comment } from 'kitten/components/form/comment'
 import { FormAmountAndCurrency }
   from 'kitten/components/form/form-amount-and-currency'
 import { FormPhoneNumber } from 'kitten/components/form/form-phone-number'
@@ -388,6 +389,7 @@ ReactOnRails.register({
   // Form
   Checkbox,
   CheckboxSet,
+  Comment,
   FormAmountAndCurrency,
   FormPhoneNumber,
   Label,

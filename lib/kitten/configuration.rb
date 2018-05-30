@@ -134,6 +134,7 @@ module Kitten
               path: 'components/form/form-phone-number',
               name: 'Form phone number',
             },
+            { path: 'components/form/comment', name: 'Comment' },
             { path: 'components/images/image-cropper', name: 'Image cropper' },
             { path: 'components/images/image-with-caption', name: 'Image with caption' },
           ],
