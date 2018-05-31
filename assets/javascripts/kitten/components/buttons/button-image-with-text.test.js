@@ -11,8 +11,8 @@ describe('<ButtonImageWithText />', () => {
           description="Custom description"
           micro={false}
           largeGutter={false}
-          regularTitle={false}
-          regularText={false}
+          titleRegular={false}
+          textRegular={false}
         />,
       )
       .toJSON()

@@ -15,8 +15,9 @@ class ButtonImageWithTextComponent extends Component {
     micro: PropTypes.bool,
     tag: PropTypes.string,
     largeGutter: PropTypes.bool,
-    regularTitle: PropTypes.bool,
-    regularText: PropTypes.bool,
+    titleRegular: PropTypes.bool,
+    textRegular: PropTypes.bool,
+    avatarProps: PropTypes.func,
   }
 
   static defaultProps = {
@@ -27,8 +28,8 @@ class ButtonImageWithTextComponent extends Component {
     micro: false,
     tag: 'p',
     largeGutter: false,
-    regularTitle: false,
-    regularText: false,
+    titleRegular: false,
+    textRegular: false,
   }
 
   render() {
@@ -56,8 +57,8 @@ class ButtonImageWithTextComponent extends Component {
       description,
       micro,
       tag,
-      regularTitle,
-      regularText,
+      titleRegular,
+      textRegular,
       largeGutter,
     } = this.props
 
@@ -65,21 +66,21 @@ class ButtonImageWithTextComponent extends Component {
 
     const Tag = tag
 
-    const weightTitle = regularTitle ? 'regular' : 'light'
+    const titleWeight = titleRegular ? 'regular' : 'light'
 
-    const weightText = regularText ? 'regular' : 'light'
+    const textWeight = textRegular ? 'regular' : 'light'
 
-    const tagStyle = [styles, tag == 'p' && styles.paragraph]
+    const styleTag = [styles, tag == 'p' && styles.paragraph]
 
-    const textStyle = [styles.text, largeGutter && styles.text.largeGutter]
+    const styleText = [styles.text, largeGutter && styles.text.largeGutter]
 
     return (
-      <div style={textStyle}>
-        <Text tag={Tag} size={size} weight={weightTitle} style={tagStyle}>
+      <div style={styleText}>
+        <Text tag={Tag} size={size} weight={titleWeight} style={styleTag}>
           {title}
         </Text>
 
-        <Text tag={Tag} size={size} weight={weightText} style={tagStyle}>
+        <Text tag={Tag} size={size} weight={textWeight} style={styleTag}>
           {description}
         </Text>
       </div>

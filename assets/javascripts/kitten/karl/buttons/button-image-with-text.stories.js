@@ -16,8 +16,8 @@ storiesOf('ButtonImageWithText', module)
             description={text('Description', 'description')}
             micro={boolean('Micro', false)}
             largeGutter={boolean('Large gutter', false)}
-            regularTitle={boolean('Regular title', false)}
-            regularText={boolean('Regular text', false)}
+            titleRegular={boolean('Regular title', false)}
+            textRegular={boolean('Regular text', false)}
           />
         </GridCol>
       </Grid>

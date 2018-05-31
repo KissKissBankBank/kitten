@@ -11,7 +11,7 @@ export const KarlButtonImageWithText = () => (
       <ButtonImageWithText
         tag="div"
         micro
-        regularTitle
+        titleRegular
         title="Title"
         description="Description"
       />
@@ -23,7 +23,7 @@ export const KarlButtonImageWithText = () => (
         tag="p"
         title="Title"
         description="Description"
-        regularTitle
+        titleRegular
       />
     </GridCol>
 
@@ -32,7 +32,7 @@ export const KarlButtonImageWithText = () => (
       <ButtonImageWithText
         tag="div"
         largeGutter
-        regularTitle
+        titleRegular
         title="Title"
         description="Description"
       />
