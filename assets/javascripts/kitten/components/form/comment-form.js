@@ -66,42 +66,7 @@ class CommentFormComponent extends Component {
     )
   }
 
-  renderOwner() {
-    const {
-      ownerImgProps,
-      ownerName,
-      ownerTime,
-      viewportIsTabletOrLess,
-      viewportIsMobile,
-    } = this.props
-
-    return (
-      <Fragment>
-        <Marger bottom="1">
-          <ButtonImage
-            tag="span"
-            huge
-            withoutPointerEvents
-            img={ownerImgProps}
-          />
-        </Marger>
-
-        {!viewportIsTabletOrLess && (
-          <Marger top="1">
-            <Text size="tiny" weight="regular">
-              {ownerName}
-            </Text>
-          </Marger>
-        )}
-
-        <Text size="nano" weight="light">
-          {ownerTime}
-        </Text>
-      </Fragment>
-    )
-  }
-
-  renderInput() {
+  renderInput(value) {
     const { inputName, isDisabled, placeholder } = this.props
 
     const styleInput = [
@@ -109,7 +74,13 @@ class CommentFormComponent extends Component {
       isDisabled && styles.input.textarea.isDisabled,
     ]
 
-    const buttonIsFocused = Radium.getState(this.state, 'button-form', ':focus')
+    const inputIsFocused = Radium.getState(
+      this.state,
+      `input-${value}`,
+      ':focus',
+    )
+
+    // const length = value ? valueLenght : 0
 
     // We are forced to duplicate <Style />, to avoid having space between the class and the pseudo-element.
     // https://github.com/FormidableLabs/radium/issues/243
@@ -136,6 +107,8 @@ class CommentFormComponent extends Component {
             key="button-form"
             className="k-Comment__input"
             style={styleInput}
+            key={`input-${value}`}
+            value={value}
             name={inputName}
             disabled={isDisabled}
             placeholder={placeholder}

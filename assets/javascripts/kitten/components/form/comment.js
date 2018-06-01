@@ -16,8 +16,19 @@ const Marger = Radium(MargerBase)
 const Text = Radium(TextBase)
 
 class CommentComponent extends Component {
+  static PropTypes = {
+    text: PropTypes.string.isRequired,
+  }
+
+  static defaultProps = {
+    text:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris',
+  }
+
   render() {
-    return <span style={styles.input} />
+    const { text } = this.props
+
+    return <div style={styles.input}>{text}</div>
   }
 }
 
@@ -25,16 +36,18 @@ const styles = {
   input: {
     position: 'relative',
     display: 'flex',
+    width: '100%',
+    borderWidth: '2px',
+    backgroundColor: COLORS.background3,
+    borderColor: COLORS.background3,
 
-    textarea: {
-      width: '100%',
-      borderWidth: '2px',
-      backgroundColor: COLORS.background3,
-      borderColor: COLORS.background3,
-
-      color: COLORS.font1,
-      padding: '30px',
-      fontSize: '16px',
-    },
+    color: COLORS.font1,
+    padding: '30px',
+    fontSize: '16px',
   },
 }
+
+export const Comment = mediaQueries(Radium(CommentComponent), {
+  viewportIsMobile: true,
+  viewportIsTabletOrLess: true,
+})
