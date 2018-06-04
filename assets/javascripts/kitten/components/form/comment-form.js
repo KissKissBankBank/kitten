@@ -10,7 +10,7 @@ import { CommentAvatar } from 'kitten/components/form/comment-avatar'
 import { ButtonImage } from 'kitten/components/buttons/button-image'
 import { Button as ButtonBase } from 'kitten/components/buttons/button'
 import { Text as TextBase } from 'kitten/components/typography/text'
-import { mediaQueries } from 'kitten/hoc/media-queries'
+import { ScreenConfig } from 'kitten/constants/screen-config'
 import COLORS from 'kitten/constants/colors-config'
 
 const Grid = Radium(GridBase)
@@ -21,9 +21,7 @@ const Text = Radium(TextBase)
 
 class CommentFormComponent extends Component {
   static PropTypes = {
-    ownerName: PropTypes.string.isRequired,
-    ownerImgProps: PropTypes.object.isRequired,
-    ownerTime: PropTypes.string.isRequired,
+    avatarImgProps: PropTypes.object.isRequired,
 
     inputName: PropTypes.string.isRequired,
     isDisabled: PropTypes.bool,
@@ -70,9 +68,7 @@ class CommentFormComponent extends Component {
 
   render() {
     const {
-      ownerImgProps,
-      ownerName,
-      ownerTime,
+      avatarProps,
       inputName,
       isDisabled,
       placeholder,
@@ -85,10 +81,12 @@ class CommentFormComponent extends Component {
     } = this.props
 
     return (
-      <div>
-        <CommentAvatar />
-        {this.renderInput()}
-      </div>
+      <StyleRoot>
+        <div style={styles.grid}>
+          <CommentAvatar avatarImgProps={avatarProps} />
+          {this.renderInput()}
+        </div>
+      </StyleRoot>
     )
   }
 
@@ -136,27 +134,29 @@ class CommentFormComponent extends Component {
           rules={{ color: COLORS.font2 }}
         />
 
-        <Marger bottom=".5" style={styles.input}>
-          <textarea
-            className="k-CommentForm__input"
-            style={styleInput}
-            key="comment-form"
-            name={inputName}
-            disabled={isDisabled}
-            placeholder={placeholder}
-            onFocus={this.handleFocus}
-            onBlur={this.handleBlur}
-            onChange={this.handleChange}
-            rows="3"
-          >
-            {defaultValue}
-          </textarea>
-          <span style={styleArrow}>
-            <span style={styles.input.arrow.before} />
-          </span>
-        </Marger>
-        {this.renderError()}
-        {this.renderButton()}
+        <div style={styles.grid.col}>
+          <Marger bottom=".5" style={styles.input}>
+            <textarea
+              className="k-CommentForm__input"
+              style={styleInput}
+              key="comment-form"
+              name={inputName}
+              disabled={isDisabled}
+              placeholder={placeholder}
+              onFocus={this.handleFocus}
+              onBlur={this.handleBlur}
+              onChange={this.handleChange}
+              rows="3"
+            >
+              {defaultValue}
+            </textarea>
+            <span style={styleArrow}>
+              <span style={styles.input.arrow.before} />
+            </span>
+          </Marger>
+          {this.renderError()}
+          {this.renderButton()}
+        </div>
       </Fragment>
     )
   }
@@ -204,9 +204,20 @@ const notificationHoveredAndFocused = {
 }
 
 const styles = {
-  input: {
-    position: 'relative',
+  grid: {
     display: 'flex',
+    col: {
+      flex: 1,
+      marginLeft: 20,
+      [`@media (min-width: ${ScreenConfig['S'].min}px)`]: {
+        marginLeft: 35,
+      },
+    },
+  },
+
+  input: {
+    display: 'flex',
+    position: 'relative',
 
     textarea: {
       ':focus': {},
@@ -268,7 +279,4 @@ const styles = {
   },
 }
 
-export const CommentForm = mediaQueries(Radium(CommentFormComponent), {
-  viewportIsMobile: true,
-  viewportIsTabletOrLess: true,
-})
+export const CommentForm = CommentFormComponent
