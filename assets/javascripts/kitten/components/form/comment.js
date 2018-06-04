@@ -65,15 +65,15 @@ const styles = {
 
     arrow: {
       position: 'absolute',
-      top: '2rem',
+      top: '30px',
       display: 'block',
       width: 0,
       height: 0,
-      borderWidth: '8px',
+      borderWidth: '10px',
       borderStyle: 'solid',
       borderColor: 'transparent',
       borderRightColor: COLORS.background3,
-      left: '-1rem',
+      left: '-20px',
     },
   },
 }
