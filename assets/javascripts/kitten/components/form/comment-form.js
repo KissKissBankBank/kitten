@@ -6,6 +6,7 @@ import {
   Grid as GridBase,
   GridCol as GridColBase,
 } from 'kitten/components/grid/grid'
+import { CommentAvatar } from 'kitten/components/form/comment-avatar'
 import { ButtonImage } from 'kitten/components/buttons/button-image'
 import { Button as ButtonBase } from 'kitten/components/buttons/button'
 import { Text as TextBase } from 'kitten/components/typography/text'
@@ -39,6 +40,22 @@ class CommentFormComponent extends Component {
     commentButton: '',
   }
 
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      isFocused: false,
+    }
+  }
+
+  handleFocus = () => {
+    this.setState({ isFocused: true })
+  }
+
+  handleBlur = () => {
+    this.setState({ isFocused: false })
+  }
+
   render() {
     const {
       ownerImgProps,
@@ -59,26 +76,28 @@ class CommentFormComponent extends Component {
     return (
       <StyleRoot>
         <Grid>
-          <GridCol col="2">{this.renderOwner()}</GridCol>
+          <GridCol col="2">
+            <CommentAvatar />
+          </GridCol>
           <GridCol col="10">{this.renderInput()}</GridCol>
         </Grid>
       </StyleRoot>
     )
   }
 
-  renderInput(value) {
-    const { inputName, isDisabled, placeholder } = this.props
+  renderInput() {
+    const { inputName, isDisabled, placeholder, defaultValue } = this.props
 
     const styleInput = [
       styles.input.textarea,
+      this.state.isFocused && styles.input.textarea.focus,
       isDisabled && styles.input.textarea.isDisabled,
     ]
 
-    const inputIsFocused = Radium.getState(
-      this.state,
-      `input-${value}`,
-      ':focus',
-    )
+    const styleArrow = [
+      styles.input.arrow,
+      this.state.isFocused && styles.input.arrow.focus,
+    ]
 
     // const length = value ? valueLenght : 0
 
@@ -87,33 +106,38 @@ class CommentFormComponent extends Component {
     return (
       <Fragment>
         <Style
-          scopeSelector=".k-Comment__input::-webkit-input-placeholder"
+          scopeSelector=".k-CommentForm__input::-webkit-input-placeholder"
           rules={{ color: COLORS.font2 }}
         />
         <Style
-          scopeSelector=".k-Comment__input:-moz-placeholder"
+          scopeSelector=".k-CommentForm__input:-moz-placeholder"
           rules={{ color: COLORS.font2 }}
         />
         <Style
-          scopeSelector=".k-Comment__input::-moz-placeholder"
+          scopeSelector=".k-CommentForm__input::-moz-placeholder"
           rules={{ color: COLORS.font2 }}
         />
         <Style
-          scopeSelector=".k-Comment__input:-ms-input-placeholder"
+          scopeSelector=".k-CommentForm__input:-ms-input-placeholder"
           rules={{ color: COLORS.font2 }}
         />
+
         <Marger bottom="2" style={styles.input}>
           <textarea
-            key="button-form"
-            className="k-Comment__input"
+            className="k-CommentForm__input"
             style={styleInput}
-            key={`input-${value}`}
-            value={value}
+            key="comment-form"
             name={inputName}
             disabled={isDisabled}
             placeholder={placeholder}
-          />
-          <span style={styles.input.textarea.arrow} />
+            onFocus={this.handleFocus}
+            onBlur={this.handleBlur}
+          >
+            {defaultValue}
+          </textarea>
+          <span style={styleArrow}>
+            <span style={styles.input.arrow.before} />
+          </span>
         </Marger>
       </Fragment>
     )
@@ -147,6 +171,7 @@ const styles = {
     display: 'flex',
 
     textarea: {
+      ':focus': {},
       width: '100%',
       borderWidth: '2px',
       borderStyle: 'solid',
@@ -154,20 +179,7 @@ const styles = {
       color: COLORS.font1,
       padding: '30px',
       fontSize: '16px',
-      ':hover': inputHoveredAndFocused,
-      ':focus': inputHoveredAndFocused,
-
-      arrow: {
-        position: 'absolute',
-        left: '8rem',
-        display: 'block',
-        width: 0,
-        height: 0,
-        borderWidth: '2px',
-        borderStyle: 'solid',
-        borderColor: COLORS.line1,
-        top: '-1rem',
-      },
+      focus: inputHoveredAndFocused,
 
       isDisabled: {
         borderColor: COLORS.line1,
@@ -175,28 +187,38 @@ const styles = {
         backgroundColor: COLORS.line1,
       },
     },
+
+    arrow: {
+      position: 'absolute',
+      top: '2rem',
+      display: 'block',
+      width: 0,
+      height: 0,
+      borderWidth: '8px',
+      borderStyle: 'solid',
+      borderColor: 'transparent',
+      borderRightColor: COLORS.line1,
+      left: '-1rem',
+      focus: {
+        borderRightColor: COLORS.line2,
+      },
+      before: {
+        position: 'absolute',
+        width: 0,
+        height: 0,
+        marginTop: '-8px',
+        borderWidth: '8px',
+        borderStyle: 'solid',
+        borderColor: 'transparent',
+        borderRightColor: 'white',
+        left: '-5px',
+      },
+    },
   },
 
   button: {
     left: {
       marginRight: '10px',
-    },
-  },
-
-  notification: {
-    marginLeft: '30px',
-    link: {
-      color: COLORS.font1,
-
-      ':hover': notificationHoveredAndFocused,
-      ':focus': notificationHoveredAndFocused,
-      ':active': {
-        color: COLORS.primary3,
-      },
-
-      left: {
-        marginRight: '15px',
-      },
     },
   },
 }

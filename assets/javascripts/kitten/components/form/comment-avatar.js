@@ -39,7 +39,7 @@ class CommentAvatarComponent extends Component {
     } = this.props
 
     return (
-      <StyleRoot>
+      <StyleRoot style={styles.avatar}>
         <Marger bottom="1">
           <ButtonImage
             tag="span"
@@ -50,11 +50,9 @@ class CommentAvatarComponent extends Component {
         </Marger>
 
         {!viewportIsTabletOrLess && (
-          <Marger top="1">
-            <Text size="tiny" weight="regular">
-              {ownerName}
-            </Text>
-          </Marger>
+          <Text size="tiny" weight="regular">
+            {ownerName}
+          </Text>
         )}
 
         <Text size="nano" weight="light">
@@ -63,6 +61,14 @@ class CommentAvatarComponent extends Component {
       </StyleRoot>
     )
   }
+}
+
+const styles = {
+  avatar: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+  },
 }
 
 export const CommentAvatar = mediaQueries(Radium(CommentAvatarComponent), {
