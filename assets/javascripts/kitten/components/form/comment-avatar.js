@@ -8,7 +8,6 @@ import {
 } from 'kitten/components/grid/grid'
 import { ButtonImage } from 'kitten/components/buttons/button-image'
 import { Text as TextBase } from 'kitten/components/typography/text'
-import { mediaQueries } from 'kitten/hoc/media-queries'
 import COLORS from 'kitten/constants/colors-config'
 
 const Grid = Radium(GridBase)
@@ -18,25 +17,17 @@ const Text = Radium(TextBase)
 
 class CommentAvatarComponent extends Component {
   static PropTypes = {
-    ownerName: PropTypes.string,
-    ownerImgProps: PropTypes.object,
-    ownerTime: PropTypes.string,
+    avatarImgProps: PropTypes.object.isRequired,
+    commentDate: PropTypes.string,
   }
 
   static defaultProps = {
-    ownerImgProps: { src: 'https://placehold.it/80x80/caf4fe/caf4fe' },
-    ownerName: 'Camille',
-    ownerTime: '2 min',
+    avatarImgProps: { src: 'https://placehold.it/80x80/caf4fe/caf4fe' },
+    commentDate: '2 min',
   }
 
   render() {
-    const {
-      ownerImgProps,
-      ownerName,
-      ownerTime,
-      viewportIsTabletOrLess,
-      viewportIsMobile,
-    } = this.props
+    const { avatarImgProps, commentDate } = this.props
 
     return (
       <StyleRoot style={styles.avatar}>
@@ -45,12 +36,12 @@ class CommentAvatarComponent extends Component {
             tag="span"
             huge
             withoutPointerEvents
-            img={ownerImgProps}
+            img={avatarImgProps}
           />
         </Marger>
 
-        <Text size="nano" weight="light">
-          {ownerTime}
+        <Text size="nano" weight="light" color="font1">
+          {commentDate}
         </Text>
       </StyleRoot>
     )
@@ -65,7 +56,4 @@ const styles = {
   },
 }
 
-export const CommentAvatar = mediaQueries(Radium(CommentAvatarComponent), {
-  viewportIsMobile: true,
-  viewportIsTabletOrLess: true,
-})
+export const CommentAvatar = CommentAvatarComponent

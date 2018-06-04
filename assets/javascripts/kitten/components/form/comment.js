@@ -20,13 +20,20 @@ class CommentComponent extends Component {
   static PropTypes = {
     text: PropTypes.string.isRequired,
     ownerName: PropTypes.string.isRequired,
+    avatarImgProps: PropTypes.object.isRequired,
+    commentDate: PropTypes.string.isRequired,
   }
 
   render() {
+    const { avatarProps, commentDate } = this.props
+
     return (
       <StyleRoot>
         <div style={styles.grid}>
-          <CommentAvatar />
+          <CommentAvatar
+            avatarImgProps={avatarProps}
+            commentDate={commentDate}
+          />
           {this.renderComment()}
         </div>
       </StyleRoot>
