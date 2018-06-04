@@ -49,12 +49,6 @@ class CommentAvatarComponent extends Component {
           />
         </Marger>
 
-        {!viewportIsTabletOrLess && (
-          <Text size="tiny" weight="regular">
-            {ownerName}
-          </Text>
-        )}
-
         <Text size="nano" weight="light">
           {ownerTime}
         </Text>

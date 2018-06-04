@@ -29,14 +29,16 @@ class CommentFormComponent extends Component {
     isDisabled: PropTypes.bool,
     placeholder: PropTypes.string.isRequired,
 
-    cancelButton: PropTypes.string,
     commentButton: PropTypes.string,
+    error: PropTypes.bool,
+    errorMessage: PropTypes.string,
   }
 
   static defaultProps = {
+    onSubmit: () => {},
+    error: false,
+    errorMessage: '',
     isDisabled: false,
-
-    cancelButton: '',
     commentButton: '',
   }
 
@@ -45,6 +47,7 @@ class CommentFormComponent extends Component {
 
     this.state = {
       isFocused: false,
+      value: this.props.defaultValue,
     }
   }
 
@@ -56,6 +59,15 @@ class CommentFormComponent extends Component {
     this.setState({ isFocused: false })
   }
 
+  handleChange = e => {
+    this.setState({ value: e.target.value })
+  }
+
+  handleSubmit = () => {
+    this.props.onSubmit(this.state.value)
+    console.log(this.state.value)
+  }
+
   render() {
     const {
       ownerImgProps,
@@ -64,42 +76,44 @@ class CommentFormComponent extends Component {
       inputName,
       isDisabled,
       placeholder,
-      cancelButton,
       commentButton,
-      deleteButton,
-      signalButton,
+      error,
+      errorMessage,
       viewportIsMobile,
       viewportIsTabletOrLess,
       ...others
     } = this.props
 
     return (
-      <StyleRoot>
-        <Grid>
-          <GridCol col="2">
-            <CommentAvatar />
-          </GridCol>
-          <GridCol col="10">{this.renderInput()}</GridCol>
-        </Grid>
-      </StyleRoot>
+      <div>
+        <CommentAvatar />
+        {this.renderInput()}
+      </div>
     )
   }
 
   renderInput() {
-    const { inputName, isDisabled, placeholder, defaultValue } = this.props
+    const {
+      inputName,
+      isDisabled,
+      placeholder,
+      defaultValue,
+      error,
+      errorMessage,
+    } = this.props
 
     const styleInput = [
       styles.input.textarea,
+      error && styles.input.textarea.error,
       this.state.isFocused && styles.input.textarea.focus,
       isDisabled && styles.input.textarea.isDisabled,
     ]
 
     const styleArrow = [
       styles.input.arrow,
+      error && styles.input.arrow.error,
       this.state.isFocused && styles.input.arrow.focus,
     ]
-
-    // const length = value ? valueLenght : 0
 
     // We are forced to duplicate <Style />, to avoid having space between the class and the pseudo-element.
     // https://github.com/FormidableLabs/radium/issues/243
@@ -122,7 +136,7 @@ class CommentFormComponent extends Component {
           rules={{ color: COLORS.font2 }}
         />
 
-        <Marger bottom="2" style={styles.input}>
+        <Marger bottom=".5" style={styles.input}>
           <textarea
             className="k-CommentForm__input"
             style={styleInput}
@@ -132,6 +146,8 @@ class CommentFormComponent extends Component {
             placeholder={placeholder}
             onFocus={this.handleFocus}
             onBlur={this.handleBlur}
+            onChange={this.handleChange}
+            rows="3"
           >
             {defaultValue}
           </textarea>
@@ -139,19 +155,40 @@ class CommentFormComponent extends Component {
             <span style={styles.input.arrow.before} />
           </span>
         </Marger>
+        {this.renderError()}
+        {this.renderButton()}
       </Fragment>
     )
   }
 
   renderButton() {
-    const { commentButton, cancelButton } = this.props
+    if (!this.state.value) return
+
+    const { commentButton } = this.props
 
     return (
       <Marger top="2">
-        <Button modifier="helium" style={styles.button.left}>
+        <Button
+          modifier="helium"
+          onClick={this.handleSubmit}
+          style={styles.button.left}
+        >
           {commentButton}
         </Button>
-        <Button modifier="lithium">{cancelButton}</Button>
+      </Marger>
+    )
+  }
+
+  renderError() {
+    const { error, errorMessage } = this.props
+
+    if (!error) return
+
+    return (
+      <Marger top=".5">
+        <Text color="error" size="micro" weight="regular">
+          {errorMessage}
+        </Text>
       </Marger>
     )
   }
@@ -160,6 +197,7 @@ class CommentFormComponent extends Component {
 const inputHoveredAndFocused = {
   outline: 'none',
   borderColor: COLORS.line2,
+  color: COLORS.font1,
 }
 const notificationHoveredAndFocused = {
   color: COLORS.primary1,
@@ -186,6 +224,10 @@ const styles = {
         color: COLORS.font2,
         backgroundColor: COLORS.line1,
       },
+      error: {
+        borderColor: COLORS.error3,
+        color: COLORS.error3,
+      },
     },
 
     arrow: {
@@ -201,6 +243,9 @@ const styles = {
       left: '-20px',
       focus: {
         borderRightColor: COLORS.line2,
+      },
+      error: {
+        borderRightColor: COLORS.error3,
       },
       before: {
         position: 'absolute',

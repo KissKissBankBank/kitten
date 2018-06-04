@@ -1,7 +1,19 @@
 <div class="k-Grid">
   <div class="k-Grid__col k-Grid__col--10">
     <%= example 'Comment' do %>
-      <%= react_component 'Comment' %>
+      <%= react_component 'Comment', props: {
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris',
+        ownerName: 'Hello',
+      } %>
+    <% end %>
+  </div>
+
+  <div class="k-Grid__col k-Grid__col--10">
+    <%= example 'Comment' do %>
+      <%= react_component 'Comment', props: {
+        text: 'Foo Bar',
+        ownerName: 'Hello',
+      } %>
     <% end %>
   </div>
 </div>
