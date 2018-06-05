@@ -2,21 +2,14 @@ import React, { Component, Fragment } from 'react'
 import Radium, { StyleRoot } from 'radium'
 import PropTypes from 'prop-types'
 import { Marger as MargerBase } from 'kitten/components/layout/marger'
-import {
-  Grid as GridBase,
-  GridCol as GridColBase,
-} from 'kitten/components/grid/grid'
 import { CommentAvatar } from 'kitten/components/form/comment-avatar'
-import { Text as TextBase } from 'kitten/components/typography/text'
+import { Text } from 'kitten/components/typography/text'
 import { ScreenConfig } from 'kitten/constants/screen-config'
 import COLORS from 'kitten/constants/colors-config'
 
-const Grid = Radium(GridBase)
-const GridCol = Radium(GridColBase)
 const Marger = Radium(MargerBase)
-const Text = Radium(TextBase)
 
-class CommentComponent extends Component {
+export class Comment extends Component {
   static PropTypes = {
     text: PropTypes.string.isRequired,
     ownerName: PropTypes.string.isRequired,
@@ -89,5 +82,3 @@ const styles = {
     },
   },
 }
-
-export const Comment = CommentComponent

@@ -19,17 +19,18 @@ const Marger = Radium(MargerBase)
 const Button = Radium(ButtonBase)
 const Text = Radium(TextBase)
 
-class CommentFormComponent extends Component {
+export class CommentForm extends Component {
   static PropTypes = {
     avatarImgProps: PropTypes.object.isRequired,
 
-    inputName: PropTypes.string.isRequired,
     isDisabled: PropTypes.bool,
     placeholder: PropTypes.string.isRequired,
 
     commentButton: PropTypes.string,
     error: PropTypes.bool,
     errorMessage: PropTypes.string,
+    onSubmit: PropTypes.object,
+    defaultValue: PropTypes.string,
   }
 
   static defaultProps = {
@@ -63,22 +64,10 @@ class CommentFormComponent extends Component {
 
   handleSubmit = () => {
     this.props.onSubmit(this.state.value)
-    console.log(this.state.value)
   }
 
   render() {
-    const {
-      avatarProps,
-      inputName,
-      isDisabled,
-      placeholder,
-      commentButton,
-      error,
-      errorMessage,
-      viewportIsMobile,
-      viewportIsTabletOrLess,
-      ...others
-    } = this.props
+    const { avatarProps } = this.props
 
     return (
       <StyleRoot>
@@ -92,7 +81,6 @@ class CommentFormComponent extends Component {
 
   renderInput() {
     const {
-      inputName,
       isDisabled,
       placeholder,
       defaultValue,
@@ -140,7 +128,6 @@ class CommentFormComponent extends Component {
               className="k-CommentForm__input"
               style={styleInput}
               key="comment-form"
-              name={inputName}
               disabled={isDisabled}
               placeholder={placeholder}
               onFocus={this.handleFocus}
@@ -169,6 +156,7 @@ class CommentFormComponent extends Component {
     return (
       <Marger top="2">
         <Button
+          type="button"
           modifier="helium"
           onClick={this.handleSubmit}
           style={styles.button.left}
@@ -194,15 +182,6 @@ class CommentFormComponent extends Component {
   }
 }
 
-const inputHoveredAndFocused = {
-  outline: 'none',
-  borderColor: COLORS.line2,
-  color: COLORS.font1,
-}
-const notificationHoveredAndFocused = {
-  color: COLORS.primary1,
-}
-
 const styles = {
   grid: {
     display: 'flex',
@@ -220,7 +199,6 @@ const styles = {
     position: 'relative',
 
     textarea: {
-      ':focus': {},
       width: '100%',
       borderWidth: '2px',
       borderStyle: 'solid',
@@ -228,7 +206,11 @@ const styles = {
       color: COLORS.font1,
       padding: '30px',
       fontSize: '16px',
-      focus: inputHoveredAndFocused,
+      focus: {
+        outline: 'none',
+        borderColor: COLORS.line2,
+        color: COLORS.font1,
+      },
 
       isDisabled: {
         borderColor: COLORS.line1,
@@ -278,5 +260,3 @@ const styles = {
     },
   },
 }
-
-export const CommentForm = CommentFormComponent

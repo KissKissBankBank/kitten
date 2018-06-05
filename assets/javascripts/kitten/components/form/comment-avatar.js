@@ -15,7 +15,7 @@ const GridCol = Radium(GridColBase)
 const Marger = Radium(MargerBase)
 const Text = Radium(TextBase)
 
-class CommentAvatarComponent extends Component {
+export class CommentAvatar extends Component {
   static PropTypes = {
     avatarImgProps: PropTypes.object.isRequired,
     commentDate: PropTypes.string,
@@ -55,5 +55,3 @@ const styles = {
     alignItems: 'center',
   },
 }
-
-export const CommentAvatar = CommentAvatarComponent
