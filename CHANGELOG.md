@@ -4,12 +4,17 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Create `Comment`, `CommentForm` and `CommentAvatar` components.
-- Feature: Add `YoutubeButtonIcon` and `YoutubeIcon` components.
-- Feature: Add `ButtonImageWithText` component and story.
-- Fix: Update all social `buttonIcon` sizes.
-- Fix: Merge styles with `style` prop in `BackerCard`.
-- Fix: `BackerCard` text layout when text is too long.
+## [20.15.0] - 2018-06-05
+
+Features:
+- Create `Comment`, `CommentForm` and `CommentAvatar` components.
+- Add `YoutubeButtonIcon` and `YoutubeIcon` components.
+- Add `ButtonImageWithText` component and story.
+
+Fixes:
+- Update all social `buttonIcon` sizes.
+- Merge styles with `style` prop in `BackerCard`.
+- `BackerCard` text layout when text is too long.
 
 ## [20.14.0] - 2018-05-29
 
