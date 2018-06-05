@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Create `Comment`, `CommentForm` and `CommentAvatar` components.
 - Feature: Add `YoutubeButtonIcon` and `YoutubeIcon` components.
 - Feature: Add `ButtonImageWithText` component and story.
 - Fix: Update all social `buttonIcon` sizes.
