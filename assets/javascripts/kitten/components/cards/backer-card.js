@@ -71,6 +71,7 @@ const styles = {
     padding: '0 20px',
     border: `2px solid ${COLORS.line1}`,
     textAlign: 'center',
+    wordBreak: 'break-word',
   },
 
   buttonImage: {
