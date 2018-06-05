@@ -9,13 +9,14 @@ import {
 import { ButtonImage } from 'kitten/components/buttons/button-image'
 import { Text as TextBase } from 'kitten/components/typography/text'
 import COLORS from 'kitten/constants/colors-config'
+import { mediaQueries } from 'kitten/hoc/media-queries'
 
 const Grid = Radium(GridBase)
 const GridCol = Radium(GridColBase)
 const Marger = Radium(MargerBase)
 const Text = Radium(TextBase)
 
-export class CommentAvatar extends Component {
+class CommentAvatarComponent extends Component {
   static PropTypes = {
     avatarImgProps: PropTypes.object.isRequired,
     commentDate: PropTypes.string,
@@ -27,14 +28,15 @@ export class CommentAvatar extends Component {
   }
 
   render() {
-    const { avatarImgProps, commentDate } = this.props
+    const { avatarImgProps, commentDate, viewportIsMobile } = this.props
 
     return (
       <StyleRoot style={styles.avatar}>
         <Marger bottom="1">
           <ButtonImage
             tag="span"
-            huge
+            huge={!viewportIsMobile}
+            big={viewportIsMobile}
             withoutPointerEvents
             img={avatarImgProps}
           />
@@ -55,3 +57,7 @@ const styles = {
     alignItems: 'center',
   },
 }
+
+export const CommentAvatar = mediaQueries(Radium(CommentAvatarComponent), {
+  viewportIsMobile: true,
+})
