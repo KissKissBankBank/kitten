@@ -380,7 +380,40 @@
         background-color: map-get($k-colors, 'line-2'),
         background-image: none,
       ),
-    )
+    ),
+
+    'youtube': (
+      base: (
+        color: map-get($k-colors, 'background-1'),
+        border-color: #ff0000,
+        background-color: #ff0000,
+      ),
+      hover: (
+        color: map-get($k-colors, 'background-1'),
+        border-color: #f00000,
+        background-color: #f00000,
+      ),
+      focus: (
+        color: map-get($k-colors, 'background-1'),
+        border-color: #f00000,
+        background-color: #f00000,
+      ),
+      active: (
+        color: map-get($k-colors, 'background-1'),
+        border-color: #e10000,
+        background-color: #e10000,
+      ),
+      is-selected: (
+        color: map-get($k-colors, 'background-1'),
+        border-color: #e10000,
+        background-color: #e10000,
+      ),
+      disabled: (
+        color: map-get($k-colors, 'background-1'),
+        border-color: map-get($k-colors, 'line-2'),
+        background-color: map-get($k-colors, 'line-2'),
+      ),
+    ),
   );
 
   $colorByModifier: map-get($colors, $modifier);

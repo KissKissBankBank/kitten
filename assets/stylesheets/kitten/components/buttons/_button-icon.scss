@@ -17,6 +17,7 @@
 /// - `.k-ButtonIcon--twitter`
 /// - `.k-ButtonIcon--linkedin`
 /// - `.k-ButtonIcon--instagram`
+/// - `.k-ButtonIcon--youtube`
 ///
 /// Available size modifiers:
 /// - `k-ButtonIcon--nano`
@@ -66,6 +67,13 @@
   $checked-nano-size: k-px-to-rem(10px);
   $heart-size: k-px-to-rem(14px);
   $signup-size: k-px-to-rem(18px);
+
+  // Social sizes
+  $facebook-size: k-px-to-rem(14px);
+  $twitter-size: k-px-to-rem(12px);
+  $linkedin-size: k-px-to-rem(14px);
+  $instagram-size: k-px-to-rem(16px);
+  $youtube-size: k-px-to-rem(16px);
 
   // Arrow sizes
   $horizontalArrow-width: k-px-to-rem(10px);
@@ -159,23 +167,72 @@
 
   .k-ButtonIcon--facebook {
     @include k-buttonColors('facebook');
+    @include k-buttonPadding(
+      $button-size,
+      $facebook-size,
+      $facebook-size
+    );
+
+    .k-ButtonIcon__svg {
+      width: $facebook-size;
+      height: $facebook-size;
+    }
   }
 
   .k-ButtonIcon--twitter {
     @include k-buttonColors('twitter');
+    @include k-buttonPadding(
+      $button-size,
+      $twitter-size,
+      $twitter-size
+    );
+
+    .k-ButtonIcon__svg {
+      width: $twitter-size;
+      height: $twitter-size;
+    }
   }
 
   .k-ButtonIcon--linkedin {
     @include k-buttonColors('linkedin');
+    @include k-buttonPadding(
+      $button-size,
+      $linkedin-size,
+      $linkedin-size
+    );
+
+    .k-ButtonIcon__svg {
+      width: $linkedin-size;
+      height: $linkedin-size;
+    }
   }
 
   .k-ButtonIcon--instagram {
+    @include k-buttonColors('instagram');
     @include k-buttonPadding(
       $button-size-with-border,
-      $icon-width,
-      $icon-height
+      $instagram-size,
+      $instagram-size
     );
-    @include k-buttonColors('instagram');
+
+    .k-ButtonIcon__svg {
+      width: $instagram-size;
+      height: $instagram-size;
+    }
+  }
+
+  .k-ButtonIcon--youtube {
+    @include k-buttonColors('youtube');
+    @include k-buttonPadding(
+      $button-size,
+      $youtube-size,
+      $youtube-size
+    );
+
+    .k-ButtonIcon__svg {
+      width: $youtube-size;
+      height: $youtube-size;
+    }
   }
 
   // Sizes modifiers.
