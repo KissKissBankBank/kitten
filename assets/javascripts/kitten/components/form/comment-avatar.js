@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Radium, { StyleRoot } from 'radium'
+import Radium from 'radium'
 import PropTypes from 'prop-types'
 import { Marger as MargerBase } from 'kitten/components/layout/marger'
 import { ButtonImage } from 'kitten/components/buttons/button-image'
@@ -25,7 +25,7 @@ class CommentAvatarComponent extends Component {
     const { avatarImgProps, commentDate, viewportIsMobile } = this.props
 
     return (
-      <StyleRoot style={styles.avatar}>
+      <div style={styles.avatar}>
         <Marger bottom="1">
           <ButtonImage
             tag="span"
@@ -39,7 +39,7 @@ class CommentAvatarComponent extends Component {
         <Text size="nano" weight="light" color="font1">
           {commentDate}
         </Text>
-      </StyleRoot>
+      </div>
     )
   }
 }

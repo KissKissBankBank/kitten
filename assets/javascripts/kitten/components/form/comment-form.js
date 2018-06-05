@@ -33,6 +33,7 @@ export class CommentForm extends Component {
     errorMessage: '',
     isDisabled: false,
     commentButton: '',
+    defaultValue: '',
   }
 
   constructor(props) {
