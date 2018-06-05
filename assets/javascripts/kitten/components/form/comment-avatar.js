@@ -11,14 +11,13 @@ const Marger = Radium(MargerBase)
 const Text = Radium(TextBase)
 
 class CommentAvatarComponent extends Component {
-  static PropTypes = {
+  static propTypes = {
     avatarImgProps: PropTypes.object.isRequired,
     commentDate: PropTypes.string,
   }
 
   static defaultProps = {
-    avatarImgProps: { src: 'https://placehold.it/80x80/caf4fe/caf4fe' },
-    commentDate: '2 min',
+    commentDate: '',
   }
 
   render() {
@@ -36,7 +35,7 @@ class CommentAvatarComponent extends Component {
           />
         </Marger>
 
-        <Text size="nano" weight="light" color="font1">
+        <Text size="micro" weight="light" color="font1">
           {commentDate}
         </Text>
       </div>

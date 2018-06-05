@@ -1,0 +1,184 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CommentForm /> should match its empty snapshot 1`] = `
+<div
+  data-radium={true}
+>
+  <div
+    data-radium={true}
+    style={
+      Object {
+        "display": "flex",
+      }
+    }
+  >
+    <div
+      data-radium={true}
+      style={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "column",
+        }
+      }
+    >
+      <div
+        data-radium={true}
+        style={
+          Object {
+            "marginBottom": "0.625rem",
+            "marginTop": null,
+          }
+        }
+      >
+        <span
+          className="k-ButtonImage k-ButtonImage--huge k-ButtonImage--withoutPointerEvents"
+          tabIndex={null}
+        >
+          <img
+            className="k-ButtonImage__img"
+          />
+        </span>
+      </div>
+      <span
+        className="k-u-color-font1 k-u-size-micro k-u-weight-light"
+      >
+        
+      </span>
+    </div>
+    <style
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": ".k-CommentForm__input::-webkit-input-placeholder{color: #b8b8b8;}",
+        }
+      }
+    />
+    <style
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": ".k-CommentForm__input:-moz-placeholder{color: #b8b8b8;}",
+        }
+      }
+    />
+    <style
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": ".k-CommentForm__input::-moz-placeholder{color: #b8b8b8;}",
+        }
+      }
+    />
+    <style
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": ".k-CommentForm__input:-ms-input-placeholder{color: #b8b8b8;}",
+        }
+      }
+    />
+    <div
+      className="rmq-993edb07"
+      data-radium={true}
+      style={
+        Object {
+          "flex": 1,
+          "marginLeft": 20,
+        }
+      }
+    >
+      <div
+        data-radium={true}
+        style={
+          Object {
+            "display": "flex",
+            "marginBottom": "0.3125rem",
+            "marginTop": null,
+            "position": "relative",
+          }
+        }
+      >
+        <textarea
+          className="k-CommentForm__input"
+          data-radium={true}
+          disabled={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          placeholder="Leave a comment on the project"
+          rows="3"
+          style={
+            Object {
+              "borderColor": "#ffb2c7",
+              "borderStyle": "solid",
+              "borderWidth": "2px",
+              "color": "#ffb2c7",
+              "fontFamily": "Maax, Helvetica, Arial, sans-serif",
+              "fontSize": "16px",
+              "padding": "30px",
+              "width": "100%",
+            }
+          }
+        >
+          
+        </textarea>
+        <span
+          className="rmq-e4f3f344"
+          data-radium={true}
+          style={
+            Object {
+              "borderColor": "transparent",
+              "borderRightColor": "#ffb2c7",
+              "borderStyle": "solid",
+              "borderWidth": "10px",
+              "display": "block",
+              "height": 0,
+              "left": "-20px",
+              "position": "absolute",
+              "top": "20px",
+              "width": 0,
+            }
+          }
+        >
+          <span
+            data-radium={true}
+            style={
+              Object {
+                "borderColor": "transparent",
+                "borderRightColor": "white",
+                "borderStyle": "solid",
+                "borderWidth": "10px",
+                "height": 0,
+                "left": "-7px",
+                "marginTop": "-10px",
+                "position": "absolute",
+                "width": 0,
+              }
+            }
+          />
+        </span>
+      </div>
+      <div
+        data-radium={true}
+        style={
+          Object {
+            "marginBottom": null,
+            "marginTop": "0.3125rem",
+          }
+        }
+      >
+        <span
+          className="k-u-color-error k-u-size-micro k-u-weight-regular"
+        >
+          Cum sociis natoque penatibus et magnis
+        </span>
+      </div>
+    </div>
+  </div>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "@media (min-width: 640px){ .rmq-993edb07{margin-left: 35px !important;}}
+@media (min-width: 640px){ .rmq-e4f3f344{top: 35px !important;}}",
+      }
+    }
+  />
+</div>
+`;

@@ -10,7 +10,7 @@ import COLORS from 'kitten/constants/colors-config'
 const Marger = Radium(MargerBase)
 
 export class Comment extends Component {
-  static PropTypes = {
+  static propTypes = {
     text: PropTypes.string.isRequired,
     ownerName: PropTypes.string.isRequired,
     avatarImgProps: PropTypes.object.isRequired,
@@ -18,13 +18,13 @@ export class Comment extends Component {
   }
 
   render() {
-    const { avatarProps, commentDate } = this.props
+    const { avatarImgProps, commentDate } = this.props
 
     return (
       <StyleRoot>
         <div style={styles.grid}>
           <CommentAvatar
-            avatarImgProps={avatarProps}
+            avatarImgProps={avatarImgProps}
             commentDate={commentDate}
           />
           {this.renderComment()}
@@ -43,7 +43,11 @@ export class Comment extends Component {
             {ownerName}
           </Text>
         </Marger>
-        <Marger top="1">{text}</Marger>
+        <Marger top="1">
+          <Text color="font1" size="tiny" weight="light">
+            {text}
+          </Text>
+        </Marger>
         <span style={styles.comment.arrow} />
       </div>
     )
@@ -63,14 +67,13 @@ const styles = {
     padding: '30px',
     fontSize: '16px',
     marginLeft: 20,
-
     [`@media (min-width: ${ScreenConfig['S'].min}px)`]: {
       marginLeft: 35,
     },
 
     arrow: {
       position: 'absolute',
-      top: '30px',
+      top: '20px',
       display: 'block',
       width: 0,
       height: 0,
@@ -79,6 +82,9 @@ const styles = {
       borderColor: 'transparent',
       borderRightColor: COLORS.background3,
       left: '-20px',
+      [`@media (min-width: ${ScreenConfig['S'].min}px)`]: {
+        top: '35px',
+      },
     },
   },
 }

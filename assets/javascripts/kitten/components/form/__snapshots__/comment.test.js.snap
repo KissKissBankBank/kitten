@@ -1,0 +1,124 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Comment /> should match its empty snapshot 1`] = `
+<div
+  data-radium={true}
+>
+  <div
+    data-radium={true}
+    style={
+      Object {
+        "display": "flex",
+      }
+    }
+  >
+    <div
+      data-radium={true}
+      style={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "column",
+        }
+      }
+    >
+      <div
+        data-radium={true}
+        style={
+          Object {
+            "marginBottom": "0.625rem",
+            "marginTop": null,
+          }
+        }
+      >
+        <span
+          className="k-ButtonImage k-ButtonImage--huge k-ButtonImage--withoutPointerEvents"
+          tabIndex={null}
+        >
+          <img
+            className="k-ButtonImage__img"
+          />
+        </span>
+      </div>
+      <span
+        className="k-u-color-font1 k-u-size-micro k-u-weight-light"
+      >
+        Custom date
+      </span>
+    </div>
+    <div
+      className="rmq-993edb07"
+      data-radium={true}
+      style={
+        Object {
+          "backgroundColor": "#f6f6f6",
+          "borderColor": "#f6f6f6",
+          "borderWidth": "2px",
+          "color": "#222",
+          "fontSize": "16px",
+          "marginLeft": 20,
+          "padding": "30px",
+          "position": "relative",
+        }
+      }
+    >
+      <div
+        data-radium={true}
+        style={
+          Object {
+            "marginBottom": "0.625rem",
+            "marginTop": null,
+          }
+        }
+      >
+        <span
+          className="k-u-color-font1 k-u-size-tiny k-u-weight-regular"
+        >
+          Custom name
+        </span>
+      </div>
+      <div
+        data-radium={true}
+        style={
+          Object {
+            "marginBottom": null,
+            "marginTop": "0.625rem",
+          }
+        }
+      >
+        <span
+          className="k-u-color-font1 k-u-size-tiny k-u-weight-light"
+        >
+          Custom text
+        </span>
+      </div>
+      <span
+        className="rmq-e4f3f344"
+        data-radium={true}
+        style={
+          Object {
+            "borderColor": "transparent",
+            "borderRightColor": "#f6f6f6",
+            "borderStyle": "solid",
+            "borderWidth": "10px",
+            "display": "block",
+            "height": 0,
+            "left": "-20px",
+            "position": "absolute",
+            "top": "20px",
+            "width": 0,
+          }
+        }
+      />
+    </div>
+  </div>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "@media (min-width: 640px){ .rmq-e4f3f344{top: 35px !important;}}
+@media (min-width: 640px){ .rmq-993edb07{margin-left: 35px !important;}}",
+      }
+    }
+  />
+</div>
+`;

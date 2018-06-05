@@ -14,7 +14,7 @@ const Button = Radium(ButtonBase)
 const Text = Radium(TextBase)
 
 export class CommentForm extends Component {
-  static PropTypes = {
+  static propTypes = {
     avatarImgProps: PropTypes.object.isRequired,
 
     isDisabled: PropTypes.bool,
@@ -23,7 +23,7 @@ export class CommentForm extends Component {
     commentButton: PropTypes.string,
     error: PropTypes.bool,
     errorMessage: PropTypes.string,
-    onSubmit: PropTypes.object,
+    onSubmit: PropTypes.func,
     defaultValue: PropTypes.string,
   }
 
@@ -62,12 +62,12 @@ export class CommentForm extends Component {
   }
 
   render() {
-    const { avatarProps } = this.props
+    const { avatarImgProps } = this.props
 
     return (
       <StyleRoot>
         <div style={styles.grid}>
-          <CommentAvatar avatarImgProps={avatarProps} />
+          <CommentAvatar avatarImgProps={avatarImgProps} />
           {this.renderInput()}
         </div>
       </StyleRoot>
@@ -194,6 +194,7 @@ const styles = {
     position: 'relative',
 
     textarea: {
+      fontFamily: 'Maax, Helvetica, Arial, sans-serif',
       width: '100%',
       borderWidth: '2px',
       borderStyle: 'solid',
@@ -220,7 +221,7 @@ const styles = {
 
     arrow: {
       position: 'absolute',
-      top: '30px',
+      top: '20px',
       display: 'block',
       width: 0,
       height: 0,
@@ -229,6 +230,10 @@ const styles = {
       borderColor: 'transparent',
       borderRightColor: COLORS.line1,
       left: '-20px',
+      [`@media (min-width: ${ScreenConfig['S'].min}px)`]: {
+        top: '35px',
+      },
+
       focus: {
         borderRightColor: COLORS.line2,
       },
