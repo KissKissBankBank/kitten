@@ -12,7 +12,7 @@ export const BackerCard = ({
   description,
   ...others
 }) => (
-  <div style={{ ...styles.card, ...others.style }} {...others}>
+  <div {...others} style={{ ...styles.card, ...others.style }}>
     <Marger top="4" bottom="1">
       <Text color="primary1" weight="regular" lineHeight="normal">
         {title}
@@ -71,6 +71,7 @@ const styles = {
     padding: '0 20px',
     border: `2px solid ${COLORS.line1}`,
     textAlign: 'center',
+    wordBreak: 'break-word',
   },
 
   buttonImage: {
