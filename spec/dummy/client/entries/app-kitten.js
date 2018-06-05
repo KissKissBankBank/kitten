@@ -84,8 +84,6 @@ import { KarlFooterKisskiss } from 'kitten/karl/footer/footer-kisskiss'
 // Form
 import { Checkbox } from 'kitten/components/form/checkbox'
 import { CheckboxSet } from 'kitten/components/form/checkbox-set'
-import { Comment } from 'kitten/components/form/comment'
-import { CommentForm } from 'kitten/components/form/comment-form'
 import { FormAmountAndCurrency }
   from 'kitten/components/form/form-amount-and-currency'
 import { FormPhoneNumber } from 'kitten/components/form/form-phone-number'
@@ -107,6 +105,7 @@ import { TextInputWithLimit }
   from 'kitten/components/form/text-input-with-limit'
 import { TextInputWithUnit } from 'kitten/components/form/text-input-with-unit'
 import { KarlCheckboxError } from 'kitten/karl/form/checkbox'
+import { KarlComment, KarlCommentForm } from 'kitten/karl/form/comment'
 import { KarlFormActions } from 'kitten/karl/form/form-actions'
 import { KarlFormRow } from 'kitten/karl/form/form-row'
 import { KarlLocationInput } from 'kitten/karl/form/location-input'
@@ -394,8 +393,6 @@ ReactOnRails.register({
   // Form
   Checkbox,
   CheckboxSet,
-  Comment,
-  CommentForm,
   FormAmountAndCurrency,
   FormPhoneNumber,
   Label,
@@ -414,6 +411,8 @@ ReactOnRails.register({
   TextInputWithLimit,
   TextInputWithUnit,
   KarlCheckboxError,
+  KarlComment,
+  KarlCommentForm,
   KarlFormActions,
   KarlFormRow,
   KarlLocationInput,
