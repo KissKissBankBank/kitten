@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Merge styles with `style` prop in `BackerCard`.
 - Feature: Add `YoutubeButtonIcon` and `YoutubeIcon` components.
 - Fix: Update all social `buttonIcon` sizes.
 - Feature: Add `ButtonImageWithText` component and story.
