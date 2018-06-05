@@ -2,10 +2,6 @@ import React, { Component, Fragment } from 'react'
 import Radium, { StyleRoot, Style } from 'radium'
 import PropTypes from 'prop-types'
 import { Marger as MargerBase } from 'kitten/components/layout/marger'
-import {
-  Grid as GridBase,
-  GridCol as GridColBase,
-} from 'kitten/components/grid/grid'
 import { CommentAvatar } from 'kitten/components/form/comment-avatar'
 import { ButtonImage } from 'kitten/components/buttons/button-image'
 import { Button as ButtonBase } from 'kitten/components/buttons/button'
@@ -13,8 +9,6 @@ import { Text as TextBase } from 'kitten/components/typography/text'
 import { ScreenConfig } from 'kitten/constants/screen-config'
 import COLORS from 'kitten/constants/colors-config'
 
-const Grid = Radium(GridBase)
-const GridCol = Radium(GridColBase)
 const Marger = Radium(MargerBase)
 const Button = Radium(ButtonBase)
 const Text = Radium(TextBase)
