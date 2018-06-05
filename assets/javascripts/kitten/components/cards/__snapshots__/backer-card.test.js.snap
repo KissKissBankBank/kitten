@@ -7,6 +7,7 @@ exports[`<BackerCard /> by default matches with snapshot 1`] = `
       "border": "2px solid #eee",
       "padding": "0 20px",
       "textAlign": "center",
+      "wordBreak": "break-word",
     }
   }
 >
@@ -76,6 +77,7 @@ exports[`<BackerCard /> with subtitle prop matches with snapshot 1`] = `
       "border": "2px solid #eee",
       "padding": "0 20px",
       "textAlign": "center",
+      "wordBreak": "break-word",
     }
   }
 >
