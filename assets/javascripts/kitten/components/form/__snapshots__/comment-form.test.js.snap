@@ -23,7 +23,6 @@ exports[`<CommentForm /> should match its empty snapshot 1`] = `
       }
     >
       <div
-        data-radium={true}
         style={
           Object {
             "marginBottom": "0.625rem",
@@ -36,9 +35,9 @@ exports[`<CommentForm /> should match its empty snapshot 1`] = `
           tabIndex={null}
         >
           <img
-            alt=""
+            alt="Image alt"
             className="k-ButtonImage__img"
-            src="https://placehold.it/80x80/caf4fe/caf4fe"
+            src="#image"
           />
         </span>
       </div>
@@ -100,27 +99,29 @@ exports[`<CommentForm /> should match its empty snapshot 1`] = `
         <textarea
           className="k-CommentForm__input"
           data-radium={true}
+          defaultValue=""
           disabled={false}
           onBlur={[Function]}
           onChange={[Function]}
           onFocus={[Function]}
           placeholder="Leave a comment on the project"
-          rows="3"
+          rows="1"
           style={
             Object {
               "borderColor": "#ffb2c7",
               "borderStyle": "solid",
-              "borderWidth": "2px",
+              "borderWidth": 2,
+              "boxSizing": "border-box",
               "color": "#ffb2c7",
               "fontFamily": "Maax, Helvetica, Arial, sans-serif",
-              "fontSize": "16px",
-              "padding": "30px",
+              "fontSize": 16,
+              "height": "auto",
+              "overflowY": "hidden",
+              "padding": 30,
               "width": "100%",
             }
           }
-        >
-          
-        </textarea>
+        />
         <span
           className="rmq-e4f3f344"
           data-radium={true}
@@ -129,12 +130,12 @@ exports[`<CommentForm /> should match its empty snapshot 1`] = `
               "borderColor": "transparent",
               "borderRightColor": "#ffb2c7",
               "borderStyle": "solid",
-              "borderWidth": "10px",
+              "borderWidth": 10,
               "display": "block",
               "height": 0,
-              "left": "-20px",
+              "left": -20,
               "position": "absolute",
-              "top": "20px",
+              "top": 20,
               "width": 0,
             }
           }
@@ -146,10 +147,10 @@ exports[`<CommentForm /> should match its empty snapshot 1`] = `
                 "borderColor": "transparent",
                 "borderRightColor": "white",
                 "borderStyle": "solid",
-                "borderWidth": "10px",
+                "borderWidth": 10,
                 "height": 0,
-                "left": "-7px",
-                "marginTop": "-10px",
+                "left": -7,
+                "marginTop": -10,
                 "position": "absolute",
                 "width": 0,
               }
