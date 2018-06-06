@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: Fix `ButtonImage` A11Y.
+- Fix: fix `parseHtml` helper when no value is passed as parameter.
 
 ## [20.15.0] - 2018-06-05
 
