@@ -5,19 +5,100 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: Fix `ButtonImage` A11Y.
-- Fix: Fix `HorizontalNav` vertical alignment.
-- Feature: Add `markdown` prop to ignore `Markdown` transformation.
-- Feature: Add `Italic` props on `Title` component.
-- Fix: Fix size on `IconBadge` component.
-- Feature: Update svg size and color on `IconBadge` component.
-- Feature: Add `viewportIsSOrLess` on `mediaQueries` HOC.
-- Feature: Show `LegoGrid` only when DOM is loaded.
-- Fix: Update `ArrowIcon` size on `Pagination` component.
-- Fix: Remove `hover` state when `ButtonIcon` is `active` state on `Pagination`.
-- Feature: Add `Badge` prop on `HorizontalNav` component.
-- Feature: Add `k-HorizontalNav__badge` and
-  `k-HorizontalNav__item__badge` classes.
-- Feature: Update A11Y on `Modal` component.
+
+## [20.15.0] - 2018-06-05
+
+Features:
+- Create `Comment`, `CommentForm` and `CommentAvatar` components.
+- Add `YoutubeButtonIcon` and `YoutubeIcon` components.
+- Add `ButtonImageWithText` component and story.
+
+Fixes:
+- Update all social `buttonIcon` sizes.
+- Merge styles with `style` prop in `BackerCard`.
+- `BackerCard` text layout when text is too long.
+
+## [20.14.0] - 2018-05-29
+
+Features:
+- Add `BackerCard` component.
+- Add `huge` size to `ButtonImage`.
+
+## [20.13.0] - 2018-05-28
+
+Features:
+- Update `RewardCard` component.
+- Add `none` decoration option to `Text`.
+- Add `k-u-decoration-none` class.
+- Add `ContributionCard` and `DonationCard` components.
+- Add `renderDonation` on `RewardCard` component.
+- Add `k-Label--micro` class.
+
+## [20.12.3] - 2018-05-22
+
+- Fix: Remove useless props on `RewardCard` component which ones
+  are: `imageSrcSmall`, `imageSrc` and fix image height to keep original ratio.
+
+## [20.12.2] - 2018-05-18
+
+Fix:
+- Fix font & missing prop in `RewardCard` component.
+
+## [20.12.1] - 2018-05-17
+
+Fix:
+- Fix `RewardCard` custom style.
+
+## [20.12.0] - 2018-05-17
+
+Feature:
+- Add `buttonOnMouseEnter`, `buttonOnMouseLeave`, `buttonOnClick` and custom
+  props on `RewardCard` component.
+
+## [20.11.0] - 2018-05-16
+
+Feature:
+- Add `paragraph` props on `ProjectCard` component.
+
+Fix:
+- Add `title` and `myContribution` early return and fix bug with the grid.
+
+## [20.10.0] - 2018-05-04
+
+Feature:
+- Create `RewardCard` component and its stories.
+
+Fix:
+- Fix `RemoveListener` on media-query `viewportIsSOrLess`.
+
+## [20.9.0] - 2018-05-02
+
+Features:
+- Add `cropperData` values on the return of `onChange` handler of
+`ImageCropper` component.
+- Add 'isCropEnabled' prop on `ImageCropper` component. If false, the
+cropper feature is turned off (true by default).
+- Add `base64` option to `Uploader` to return base64 image if true.
+(false by default)
+
+## [20.8.0] - 2018-04-27
+
+Features:
+- Add `markdown` prop to ignore `Markdown` transformation.
+- Add `Italic` props on `Title` component.
+- Update svg size and color on `IconBadge` component.
+- Add `viewportIsSOrLess` on `mediaQueries` HOC.
+- Show `LegoGrid` only when DOM is loaded.
+- Add `Badge` prop on `HorizontalNav` component.
+- Add `k-HorizontalNav__badge` and `k-HorizontalNav__item__badge` classes.
+- Update A11Y on `Modal` component.
+
+Fixes:
+- Add `name` value on `TextInput` textarea version.
+- Fix `HorizontalNav` vertical alignment.
+- Fix size on `IconBadge` component.
+- Update `ArrowIcon` size on `Pagination` component.
+- Remove `hover` state when `ButtonIcon` is `active` state on `Pagination`.
 
 ## [20.7.1] - 2018-04-11
 

@@ -21,6 +21,7 @@ import {
   InstagramButtonIcon,
   LinkedinButtonIcon,
   TwitterButtonIcon,
+  YoutubeButtonIcon,
 } from 'kitten/components/buttons/social-button-icon'
 import {
   KarlFacebookButtonIconWords,
@@ -39,9 +40,12 @@ import {
 } from 'kitten/karl/buttons/button-with-icon-words'
 import { KarlPaymentButtons } from 'kitten/karl/buttons/payment-button'
 import { KarlButtonIconFilter } from 'kitten/karl/buttons/button-filter'
+import { KarlButtonImageWithText } from 'kitten/karl/buttons/button-image-with-text'
+import { KarlGarbageButton } from 'kitten/karl/buttons/garbage-button'
 
 // Cards
 import { ArticleCard } from 'kitten/components/cards/article-card'
+import { BackerCard } from 'kitten/components/cards/backer-card'
 import { CrowdfundingCard } from 'kitten/components/cards/crowdfunding-card'
 import { ProjectCard } from 'kitten/components/cards/project-card'
 import { ProjectCreatorCard }
@@ -50,6 +54,8 @@ import { ProjectSimilarCard }
   from 'kitten/components/cards/project-similar-card'
 import { SimpleCard } from 'kitten/components/cards/simple-card'
 import { KarlCard } from 'kitten/karl/cards/card'
+import { KarlDonationCard } from 'kitten/karl/cards/donation-card'
+import { KarlRewardCard } from 'kitten/karl/cards/reward-card'
 import {
   KarlSimilarProjectsCard,
   KarlSimilarProjectsWithInfosCard,
@@ -78,6 +84,8 @@ import { KarlFooterKisskiss } from 'kitten/karl/footer/footer-kisskiss'
 // Form
 import { Checkbox } from 'kitten/components/form/checkbox'
 import { CheckboxSet } from 'kitten/components/form/checkbox-set'
+import { Comment } from 'kitten/components/form/comment'
+import { CommentForm } from 'kitten/components/form/comment-form'
 import { FormAmountAndCurrency }
   from 'kitten/components/form/form-amount-and-currency'
 import { FormPhoneNumber } from 'kitten/components/form/form-phone-number'
@@ -336,6 +344,7 @@ ReactOnRails.register({
   FacebookButtonIcon,
   InstagramButtonIcon,
   LinkedinButtonIcon,
+  YoutubeButtonIcon,
   TagButton,
   TwitterButtonIcon,
   KarlButtonAndText,
@@ -348,18 +357,23 @@ ReactOnRails.register({
   KarlLinkedinButtonIconWords,
   KarlTwitterButtonIconWords,
   KarlButtonIconFilter,
+  KarlButtonImageWithText,
+  KarlGarbageButton,
 
   // Colors
   KarlColors,
 
   // Cards
   ArticleCard,
+  BackerCard,
   CrowdfundingCard,
   ProjectCard,
   ProjectCreatorCard,
   ProjectSimilarCard,
   SimpleCard,
   KarlCard,
+  KarlDonationCard,
+  KarlRewardCard,
   KarlSimilarProjectsCard,
   KarlSimilarProjectsWithInfosCard,
   KarlProjectSimilarLoader,
@@ -380,6 +394,8 @@ ReactOnRails.register({
   // Form
   Checkbox,
   CheckboxSet,
+  Comment,
+  CommentForm,
   FormAmountAndCurrency,
   FormPhoneNumber,
   Label,

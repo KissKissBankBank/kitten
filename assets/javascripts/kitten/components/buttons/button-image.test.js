@@ -51,6 +51,14 @@ describe('<ButtonImage />', () => {
     })
   })
 
+  describe('with huge prop', () => {
+    const button = shallow(<ButtonImage huge />)
+
+    it('has a huge class', () => {
+      expect(button.hasClass('k-ButtonImage--huge')).toBe(true)
+    })
+  })
+
   describe('with other prop', () => {
     const button = shallow(<ButtonImage aria-hidden="true" />)
 

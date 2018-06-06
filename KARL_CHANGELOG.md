@@ -4,11 +4,61 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Update `Title` example.
-- Fix: Remove useless js file `displayShortcut`.
-- Fix: Rename `KarlBrowsingHorizontalNav` to `KarlTouchHorizontalNav`.
-- Feature: Add `KarlTouchHorizontalNavWithNotification` example.
-- Feature: Update A11Y on `KarlModal` example.
+## [20.15.0] - 2018-06-05
+
+Feature:
+- Add `KarlButtonImageWithText` example.
+
+## [20.14.0] - 2018-05-29
+
+Feature:
+- Add `BackerCard` example.
+
+## [20.13.0] - 2018-05-28
+
+Features:
+- Add `KarlDonationCard` and `KarlDonationInput` examples.
+- Add `KarlGarbageButton` example.
+
+## [20.12.3] - 2018-05-22
+
+No changes.
+
+## [20.12.2] - 2018-05-18
+
+No changes.
+
+## [20.12.1] - 2018-05-17
+
+No changes.
+
+## [20.12.0] - 2018-05-17
+
+No changes.
+
+## [20.11.0] - 2018-05-16
+
+No changes.
+
+## [20.10.0] - 2018-05-04
+
+Feature:
+- Add `KarlRewardCard` example.
+
+## [20.9.0] - 2018-05-02
+
+No changes.
+
+## [20.8.0] - 2018-04-27
+
+Features:
+- Update `Title` example.
+- Add `KarlTouchHorizontalNavWithNotification` example.
+- Update A11Y on `KarlModal` example.
+
+Fixes:
+- Remove useless js file `displayShortcut`.
+- Rename `KarlBrowsingHorizontalNav` to `KarlTouchHorizontalNav`.
 
 ## [20.7.1] - 2018-04-11
 

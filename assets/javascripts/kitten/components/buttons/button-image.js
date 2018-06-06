@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { Component } from 'react'
 import classNames from 'classnames'
 
-export class ButtonImage extends React.Component {
+export class ButtonImage extends Component {
   renderImage(props) {
     const { className, alt, ...others } = props
 
@@ -16,6 +16,7 @@ export class ButtonImage extends React.Component {
       className,
       tiny,
       big,
+      huge,
       withoutPointerEvents,
       withBorder,
       img,
@@ -27,6 +28,7 @@ export class ButtonImage extends React.Component {
       {
         'k-ButtonImage--tiny': tiny,
         'k-ButtonImage--big': big,
+        'k-ButtonImage--huge': huge,
         'k-ButtonImage--withoutPointerEvents': withoutPointerEvents,
         'k-ButtonImage--withBorder': withBorder,
       },
@@ -51,6 +53,7 @@ ButtonImage.defaultProps = {
   className: null,
   tiny: false,
   big: false,
+  huge: false,
   withoutPointerEvents: false,
   withBorder: false,
   img: {
