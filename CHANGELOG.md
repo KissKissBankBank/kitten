@@ -9,7 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 Feature:
 - Update `Comment`, `CommentForm` and `CommentAvatar` components and its stories.
 
-Fixes
+Fixes:
 - Fix `ButtonImage` A11Y.
 - Add a key on `CarouselBase`.
 - Fix `parseHtml` helper when no value is passed as parameter.
