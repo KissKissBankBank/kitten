@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react'
+import classNames from 'classnames'
 import Radium, { StyleRoot, Style } from 'radium'
 import PropTypes from 'prop-types'
 import { Marger as MargerBase } from 'kitten/components/layout/marger'
@@ -109,6 +110,11 @@ export class CommentForm extends Component {
       this.state.isFocused && styles.input.arrow.focus,
     ]
 
+    const textareaClassNames = classNames(
+      'k-CommentForm__input',
+      'k-u-weight-light',
+    )
+
     // We are forced to duplicate <Style />, to avoid having space between the class and the pseudo-element.
     // https://github.com/FormidableLabs/radium/issues/243
     return (
@@ -133,7 +139,7 @@ export class CommentForm extends Component {
         <div style={styles.grid.col}>
           <Marger bottom=".5" style={styles.input}>
             <textarea
-              className="k-CommentForm__input"
+              className={textareaClassNames}
               style={styleInput}
               defaultValue={defaultValue}
               key="comment-form"
@@ -206,11 +212,9 @@ const styles = {
     position: 'relative',
 
     textarea: {
-      fontFamily: 'Maax, Helvetica, Arial, sans-serif',
       width: '100%',
       overflowY: 'hidden',
       boxSizing: 'border-box',
-      height: 'auto',
       borderWidth: 2,
       borderStyle: 'solid',
       borderColor: COLORS.line1,

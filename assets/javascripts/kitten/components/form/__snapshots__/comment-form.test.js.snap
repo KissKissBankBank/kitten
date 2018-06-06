@@ -41,11 +41,6 @@ exports[`<CommentForm /> should match its empty snapshot 1`] = `
           />
         </span>
       </div>
-      <span
-        className="k-u-color-font1 k-u-size-micro k-u-weight-light"
-      >
-        
-      </span>
     </div>
     <style
       dangerouslySetInnerHTML={
@@ -97,7 +92,7 @@ exports[`<CommentForm /> should match its empty snapshot 1`] = `
         }
       >
         <textarea
-          className="k-CommentForm__input"
+          className="k-CommentForm__input k-u-weight-light"
           data-radium={true}
           defaultValue=""
           disabled={false}
@@ -113,7 +108,6 @@ exports[`<CommentForm /> should match its empty snapshot 1`] = `
               "borderWidth": 2,
               "boxSizing": "border-box",
               "color": "#ffb2c7",
-              "fontFamily": "Maax, Helvetica, Arial, sans-serif",
               "fontSize": 16,
               "height": "auto",
               "overflowY": "hidden",

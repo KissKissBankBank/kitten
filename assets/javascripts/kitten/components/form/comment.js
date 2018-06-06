@@ -42,7 +42,7 @@ export class Comment extends Component {
           </Text>
         </Marger>
         <Marger top="1">
-          <Text color="font1" size="tiny" weight="light">
+          <Text color="font1" size="default" weight="light">
             {text}
           </Text>
         </Marger>

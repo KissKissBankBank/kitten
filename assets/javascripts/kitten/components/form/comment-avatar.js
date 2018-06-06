@@ -18,7 +18,7 @@ class CommentAvatarComponent extends Component {
   }
 
   render() {
-    const { avatarImgProps, commentDate, viewportIsMobile } = this.props
+    const { avatarImgProps, viewportIsMobile } = this.props
 
     return (
       <div style={styles.avatar}>
@@ -32,10 +32,20 @@ class CommentAvatarComponent extends Component {
           />
         </Marger>
 
-        <Text size="micro" weight="light" color="font1">
-          {commentDate}
-        </Text>
+        {this.renderDate()}
       </div>
+    )
+  }
+
+  renderDate() {
+    const { commentDate } = this.props
+
+    if (!commentDate) return
+
+    return (
+      <Text size="micro" weight="light" color="font1">
+        {commentDate}
+      </Text>
     )
   }
 }
