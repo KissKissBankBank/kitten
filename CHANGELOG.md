@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Fix `ButtonImage` A11Y.
 - Fix: Add a key on `CarouselBase`.
 - Fix: Fix `parseHtml` helper when no value is passed as parameter.
 
