@@ -1,20 +1,20 @@
 import React, { Component, Fragment } from 'react'
+import classNames from 'classnames'
 import Radium, { StyleRoot, Style } from 'radium'
 import PropTypes from 'prop-types'
 import { Marger as MargerBase } from 'kitten/components/layout/marger'
 import { CommentAvatar } from 'kitten/components/form/comment-avatar'
 import { ButtonImage } from 'kitten/components/buttons/button-image'
 import { Button as ButtonBase } from 'kitten/components/buttons/button'
-import { Text as TextBase } from 'kitten/components/typography/text'
+import { Text } from 'kitten/components/typography/text'
 import { ScreenConfig } from 'kitten/constants/screen-config'
 import COLORS from 'kitten/constants/colors-config'
 
 const Marger = Radium(MargerBase)
 const Button = Radium(ButtonBase)
-const Text = Radium(TextBase)
 
 export class CommentForm extends Component {
-  static PropTypes = {
+  static propTypes = {
     avatarImgProps: PropTypes.object.isRequired,
 
     isDisabled: PropTypes.bool,
@@ -23,7 +23,7 @@ export class CommentForm extends Component {
     commentButton: PropTypes.string,
     error: PropTypes.bool,
     errorMessage: PropTypes.string,
-    onSubmit: PropTypes.object,
+    onSubmit: PropTypes.func,
     defaultValue: PropTypes.string,
   }
 
@@ -42,6 +42,7 @@ export class CommentForm extends Component {
     this.state = {
       isFocused: false,
       value: this.props.defaultValue,
+      height: 'auto',
     }
   }
 
@@ -54,7 +55,19 @@ export class CommentForm extends Component {
   }
 
   handleChange = e => {
-    this.setState({ value: e.target.value })
+    const element = e.target
+
+    this.setState(
+      {
+        value: element.value,
+        height: 'auto',
+      },
+      () => {
+        this.setState({
+          height: element.scrollHeight,
+        })
+      },
+    )
   }
 
   handleSubmit = () => {
@@ -62,12 +75,12 @@ export class CommentForm extends Component {
   }
 
   render() {
-    const { avatarProps } = this.props
+    const { avatarImgProps } = this.props
 
     return (
       <StyleRoot>
         <div style={styles.grid}>
-          <CommentAvatar avatarImgProps={avatarProps} />
+          <CommentAvatar avatarImgProps={avatarImgProps} />
           {this.renderInput()}
         </div>
       </StyleRoot>
@@ -88,6 +101,7 @@ export class CommentForm extends Component {
       error && styles.input.textarea.error,
       this.state.isFocused && styles.input.textarea.focus,
       isDisabled && styles.input.textarea.isDisabled,
+      { height: this.state.height },
     ]
 
     const styleArrow = [
@@ -95,6 +109,11 @@ export class CommentForm extends Component {
       error && styles.input.arrow.error,
       this.state.isFocused && styles.input.arrow.focus,
     ]
+
+    const textareaClassNames = classNames(
+      'k-CommentForm__input',
+      'k-u-weight-light',
+    )
 
     // We are forced to duplicate <Style />, to avoid having space between the class and the pseudo-element.
     // https://github.com/FormidableLabs/radium/issues/243
@@ -120,18 +139,17 @@ export class CommentForm extends Component {
         <div style={styles.grid.col}>
           <Marger bottom=".5" style={styles.input}>
             <textarea
-              className="k-CommentForm__input"
+              className={textareaClassNames}
               style={styleInput}
+              defaultValue={defaultValue}
               key="comment-form"
               disabled={isDisabled}
               placeholder={placeholder}
               onFocus={this.handleFocus}
               onBlur={this.handleBlur}
               onChange={this.handleChange}
-              rows="3"
-            >
-              {defaultValue}
-            </textarea>
+              rows="1"
+            />
             <span style={styleArrow}>
               <span style={styles.input.arrow.before} />
             </span>
@@ -195,12 +213,17 @@ const styles = {
 
     textarea: {
       width: '100%',
-      borderWidth: '2px',
+      overflowY: 'hidden',
+      boxSizing: 'border-box',
+      borderWidth: 2,
       borderStyle: 'solid',
       borderColor: COLORS.line1,
       color: COLORS.font1,
-      padding: '30px',
-      fontSize: '16px',
+      padding: 30,
+      fontSize: 14,
+      [`@media (min-width: ${ScreenConfig['S'].min}px)`]: {
+        fontSize: 16,
+      },
       focus: {
         outline: 'none',
         borderColor: COLORS.line2,
@@ -220,15 +243,19 @@ const styles = {
 
     arrow: {
       position: 'absolute',
-      top: '30px',
+      top: 20,
       display: 'block',
       width: 0,
       height: 0,
-      borderWidth: '10px',
+      borderWidth: 10,
       borderStyle: 'solid',
       borderColor: 'transparent',
       borderRightColor: COLORS.line1,
-      left: '-20px',
+      left: -20,
+      [`@media (min-width: ${ScreenConfig['S'].min}px)`]: {
+        top: 35,
+      },
+
       focus: {
         borderRightColor: COLORS.line2,
       },
@@ -239,19 +266,19 @@ const styles = {
         position: 'absolute',
         width: 0,
         height: 0,
-        marginTop: '-10px',
-        borderWidth: '10px',
+        marginTop: -10,
+        borderWidth: 10,
         borderStyle: 'solid',
         borderColor: 'transparent',
         borderRightColor: 'white',
-        left: '-7px',
+        left: -7,
       },
     },
   },
 
   button: {
     left: {
-      marginRight: '10px',
+      marginRight: 10,
     },
   },
 }

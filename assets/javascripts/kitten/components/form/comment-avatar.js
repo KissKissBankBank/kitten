@@ -1,28 +1,24 @@
 import React, { Component } from 'react'
 import Radium from 'radium'
 import PropTypes from 'prop-types'
-import { Marger as MargerBase } from 'kitten/components/layout/marger'
+import { Marger } from 'kitten/components/layout/marger'
 import { ButtonImage } from 'kitten/components/buttons/button-image'
-import { Text as TextBase } from 'kitten/components/typography/text'
+import { Text } from 'kitten/components/typography/text'
 import COLORS from 'kitten/constants/colors-config'
 import { mediaQueries } from 'kitten/hoc/media-queries'
 
-const Marger = Radium(MargerBase)
-const Text = Radium(TextBase)
-
 class CommentAvatarComponent extends Component {
-  static PropTypes = {
+  static propTypes = {
     avatarImgProps: PropTypes.object.isRequired,
     commentDate: PropTypes.string,
   }
 
   static defaultProps = {
-    avatarImgProps: { src: 'https://placehold.it/80x80/caf4fe/caf4fe' },
-    commentDate: '2 min',
+    commentDate: '',
   }
 
   render() {
-    const { avatarImgProps, commentDate, viewportIsMobile } = this.props
+    const { avatarImgProps, viewportIsMobile } = this.props
 
     return (
       <div style={styles.avatar}>
@@ -36,10 +32,20 @@ class CommentAvatarComponent extends Component {
           />
         </Marger>
 
-        <Text size="nano" weight="light" color="font1">
-          {commentDate}
-        </Text>
+        {this.renderDate()}
       </div>
+    )
+  }
+
+  renderDate() {
+    const { commentDate } = this.props
+
+    if (!commentDate) return
+
+    return (
+      <Text size="micro" weight="light" color="font1">
+        {commentDate}
+      </Text>
     )
   }
 }

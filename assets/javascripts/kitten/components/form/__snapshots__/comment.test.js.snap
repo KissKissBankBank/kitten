@@ -1,0 +1,119 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Comment /> should match its empty snapshot 1`] = `
+<div
+  data-radium={true}
+  style={
+    Object {
+      "display": "flex",
+    }
+  }
+>
+  <div
+    data-radium={true}
+    style={
+      Object {
+        "alignItems": "center",
+        "display": "flex",
+        "flexDirection": "column",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "marginBottom": "0.625rem",
+          "marginTop": null,
+        }
+      }
+    >
+      <span
+        className="k-ButtonImage k-ButtonImage--huge k-ButtonImage--withoutPointerEvents"
+        tabIndex={null}
+      >
+        <img
+          alt="Image alt"
+          className="k-ButtonImage__img"
+          src="#image"
+        />
+      </span>
+    </div>
+    <span
+      className="k-u-color-font1 k-u-size-micro k-u-weight-light"
+    >
+      Custom date
+    </span>
+  </div>
+  <div
+    className="rmq-993edb07"
+    data-radium={true}
+    style={
+      Object {
+        "backgroundColor": "#f6f6f6",
+        "borderColor": "#f6f6f6",
+        "borderWidth": 2,
+        "color": "#222",
+        "fontSize": 16,
+        "marginLeft": 20,
+        "padding": 30,
+        "position": "relative",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "marginBottom": "0.625rem",
+          "marginTop": null,
+        }
+      }
+    >
+      <span
+        className="k-u-color-font1 k-u-size-tiny k-u-weight-regular"
+      >
+        Custom name
+      </span>
+    </div>
+    <div
+      style={
+        Object {
+          "marginBottom": null,
+          "marginTop": "0.625rem",
+        }
+      }
+    >
+      <span
+        className="k-u-color-font1 k-u-size-default k-u-weight-light"
+      >
+        Custom text
+      </span>
+    </div>
+    <span
+      className="rmq-e4f3f344"
+      data-radium={true}
+      style={
+        Object {
+          "borderColor": "transparent",
+          "borderRightColor": "#f6f6f6",
+          "borderStyle": "solid",
+          "borderWidth": 10,
+          "display": "block",
+          "height": 0,
+          "left": -20,
+          "position": "absolute",
+          "top": 20,
+          "width": 0,
+        }
+      }
+    />
+    <style
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "@media (min-width: 640px){ .rmq-e4f3f344{top: 35px !important;}}
+@media (min-width: 640px){ .rmq-993edb07{margin-left: 35px !important;}}",
+        }
+      }
+    />
+  </div>
+</div>
+`;
