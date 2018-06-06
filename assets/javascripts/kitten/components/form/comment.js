@@ -1,13 +1,16 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import Radium, { StyleRoot } from 'radium'
 import PropTypes from 'prop-types'
 import { Marger } from 'kitten/components/layout/marger'
 import { CommentAvatar } from 'kitten/components/form/comment-avatar'
-import { Text } from 'kitten/components/typography/text'
+import { Text as TextBase } from 'kitten/components/typography/text'
 import { ScreenConfig } from 'kitten/constants/screen-config'
+import { mediaQueries } from 'kitten/hoc/media-queries'
 import COLORS from 'kitten/constants/colors-config'
 
-export class Comment extends Component {
+const Text = Radium(TextBase)
+
+class CommentComponent extends Component {
   static propTypes = {
     text: PropTypes.string.isRequired,
     ownerName: PropTypes.string.isRequired,
@@ -19,7 +22,7 @@ export class Comment extends Component {
     const { avatarImgProps, commentDate } = this.props
 
     return (
-      <StyleRoot>
+      <Fragment>
         <div style={styles.grid}>
           <CommentAvatar
             avatarImgProps={avatarImgProps}
@@ -27,27 +30,31 @@ export class Comment extends Component {
           />
           {this.renderComment()}
         </div>
-      </StyleRoot>
+      </Fragment>
     )
   }
 
   renderComment() {
-    const { text, ownerName } = this.props
+    const { text, ownerName, viewportIsMobile } = this.props
 
     return (
-      <div style={styles.comment}>
+      <StyleRoot style={styles.comment}>
         <Marger bottom="1">
           <Text color="font1" size="tiny" weight="regular">
             {ownerName}
           </Text>
         </Marger>
         <Marger top="1">
-          <Text color="font1" size="default" weight="light">
+          <Text
+            color="font1"
+            size={viewportIsMobile ? 'tiny' : 'default'}
+            weight="light"
+          >
             {text}
           </Text>
         </Marger>
         <span style={styles.comment.arrow} />
-      </div>
+      </StyleRoot>
     )
   }
 }
@@ -86,3 +93,7 @@ const styles = {
     },
   },
 }
+
+export const Comment = mediaQueries(Radium(CommentComponent), {
+  viewportIsMobile: true,
+})

@@ -220,7 +220,10 @@ const styles = {
       borderColor: COLORS.line1,
       color: COLORS.font1,
       padding: 30,
-      fontSize: 16,
+      fontSize: 14,
+      [`@media (min-width: ${ScreenConfig['S'].min}px)`]: {
+        fontSize: 16,
+      },
       focus: {
         outline: 'none',
         borderColor: COLORS.line2,

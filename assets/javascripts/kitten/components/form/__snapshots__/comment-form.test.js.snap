@@ -92,7 +92,7 @@ exports[`<CommentForm /> should match its empty snapshot 1`] = `
         }
       >
         <textarea
-          className="k-CommentForm__input k-u-weight-light"
+          className="rmq-2904dc95 k-CommentForm__input k-u-weight-light"
           data-radium={true}
           defaultValue=""
           disabled={false}
@@ -108,7 +108,7 @@ exports[`<CommentForm /> should match its empty snapshot 1`] = `
               "borderWidth": 2,
               "boxSizing": "border-box",
               "color": "#ffb2c7",
-              "fontSize": 16,
+              "fontSize": 14,
               "height": "auto",
               "overflowY": "hidden",
               "padding": 30,
@@ -173,6 +173,7 @@ exports[`<CommentForm /> should match its empty snapshot 1`] = `
     dangerouslySetInnerHTML={
       Object {
         "__html": "@media (min-width: 640px){ .rmq-993edb07{margin-left: 35px !important;}}
+@media (min-width: 640px){ .rmq-2904dc95{font-size: 16px !important;}}
 @media (min-width: 640px){ .rmq-e4f3f344{top: 35px !important;}}",
       }
     }
