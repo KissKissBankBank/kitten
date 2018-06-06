@@ -256,6 +256,7 @@ exports[`<CrowdfundingCard /> with loading prop matches with snapshot 1`] = `
           tabIndex={null}
         >
           <img
+            alt=""
             className="k-ButtonImage__img"
           />
         </span>

@@ -3,11 +3,11 @@ import classNames from 'classnames'
 
 export class ButtonImage extends Component {
   renderImage(props) {
-    const { className, ...others } = props
+    const { className, alt, ...others } = props
 
     const imgClassName = classNames('k-ButtonImage__img', className)
 
-    return <img className={imgClassName} {...others} />
+    return <img className={imgClassName} alt={alt || ''} {...others} />
   }
 
   render() {
