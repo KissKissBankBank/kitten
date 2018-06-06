@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Update `Comment`, `CommentForm` and `CommentAvatar` components and its stories.
+
 ## [20.15.0] - 2018-06-05
 
 Features:
