@@ -184,6 +184,7 @@ class CarouselBase extends React.Component {
         <div style={styles.pageControl}>
           {rangePage.map(index => (
             <div
+              key={index}
               style={[
                 styles.pageDot,
                 indexPageVisible === index && styles.pageDotActive,

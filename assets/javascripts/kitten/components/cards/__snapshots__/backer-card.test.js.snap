@@ -43,6 +43,7 @@ exports[`<BackerCard /> by default matches with snapshot 1`] = `
       tabIndex={null}
     >
       <img
+        alt=""
         className="k-ButtonImage__img"
         src="#custom-src"
       />
@@ -123,6 +124,7 @@ exports[`<BackerCard /> with subtitle prop matches with snapshot 1`] = `
       tabIndex={null}
     >
       <img
+        alt=""
         className="k-ButtonImage__img"
         src="#custom-src"
       />
