@@ -26,7 +26,7 @@ describe('<CommentForm />', () => {
     const tree = renderer
       .create(
         <CommentForm
-          avatatImgProps={{
+          avatarImgProps={{
             src: 'https://placehold.it/80x80/caf4fe/caf4fe',
             alt: '',
           }}
