@@ -5,13 +5,12 @@ import { Marger as MargerBase } from 'kitten/components/layout/marger'
 import { CommentAvatar } from 'kitten/components/form/comment-avatar'
 import { ButtonImage } from 'kitten/components/buttons/button-image'
 import { Button as ButtonBase } from 'kitten/components/buttons/button'
-import { Text as TextBase } from 'kitten/components/typography/text'
+import { Text } from 'kitten/components/typography/text'
 import { ScreenConfig } from 'kitten/constants/screen-config'
 import COLORS from 'kitten/constants/colors-config'
 
 const Marger = Radium(MargerBase)
 const Button = Radium(ButtonBase)
-const Text = Radium(TextBase)
 
 export class CommentForm extends Component {
   static propTypes = {
@@ -212,12 +211,12 @@ const styles = {
       overflowY: 'hidden',
       boxSizing: 'border-box',
       height: 'auto',
-      borderWidth: '2px',
+      borderWidth: 2,
       borderStyle: 'solid',
       borderColor: COLORS.line1,
       color: COLORS.font1,
-      padding: '30px',
-      fontSize: '16px',
+      padding: 30,
+      fontSize: 16,
       focus: {
         outline: 'none',
         borderColor: COLORS.line2,
@@ -237,17 +236,17 @@ const styles = {
 
     arrow: {
       position: 'absolute',
-      top: '20px',
+      top: 20,
       display: 'block',
       width: 0,
       height: 0,
-      borderWidth: '10px',
+      borderWidth: 10,
       borderStyle: 'solid',
       borderColor: 'transparent',
       borderRightColor: COLORS.line1,
-      left: '-20px',
+      left: -20,
       [`@media (min-width: ${ScreenConfig['S'].min}px)`]: {
-        top: '35px',
+        top: 35,
       },
 
       focus: {
@@ -260,19 +259,19 @@ const styles = {
         position: 'absolute',
         width: 0,
         height: 0,
-        marginTop: '-10px',
-        borderWidth: '10px',
+        marginTop: -10,
+        borderWidth: 10,
         borderStyle: 'solid',
         borderColor: 'transparent',
         borderRightColor: 'white',
-        left: '-7px',
+        left: -7,
       },
     },
   },
 
   button: {
     left: {
-      marginRight: '10px',
+      marginRight: 10,
     },
   },
 }

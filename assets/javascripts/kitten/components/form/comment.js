@@ -1,13 +1,11 @@
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
 import Radium, { StyleRoot } from 'radium'
 import PropTypes from 'prop-types'
-import { Marger as MargerBase } from 'kitten/components/layout/marger'
+import { Marger } from 'kitten/components/layout/marger'
 import { CommentAvatar } from 'kitten/components/form/comment-avatar'
 import { Text } from 'kitten/components/typography/text'
 import { ScreenConfig } from 'kitten/constants/screen-config'
 import COLORS from 'kitten/constants/colors-config'
-
-const Marger = Radium(MargerBase)
 
 export class Comment extends Component {
   static propTypes = {
@@ -60,12 +58,12 @@ const styles = {
   },
   comment: {
     position: 'relative',
-    borderWidth: '2px',
+    borderWidth: 2,
     backgroundColor: COLORS.background3,
     borderColor: COLORS.background3,
     color: COLORS.font1,
-    padding: '30px',
-    fontSize: '16px',
+    padding: 30,
+    fontSize: 16,
     marginLeft: 20,
     [`@media (min-width: ${ScreenConfig['S'].min}px)`]: {
       marginLeft: 35,
@@ -73,17 +71,17 @@ const styles = {
 
     arrow: {
       position: 'absolute',
-      top: '20px',
+      top: 20,
       display: 'block',
       width: 0,
       height: 0,
-      borderWidth: '10px',
+      borderWidth: 10,
       borderStyle: 'solid',
       borderColor: 'transparent',
       borderRightColor: COLORS.background3,
-      left: '-20px',
+      left: -20,
       [`@media (min-width: ${ScreenConfig['S'].min}px)`]: {
-        top: '35px',
+        top: 35,
       },
     },
   },

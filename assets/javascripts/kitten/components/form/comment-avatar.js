@@ -1,14 +1,11 @@
 import React, { Component } from 'react'
 import Radium from 'radium'
 import PropTypes from 'prop-types'
-import { Marger as MargerBase } from 'kitten/components/layout/marger'
+import { Marger } from 'kitten/components/layout/marger'
 import { ButtonImage } from 'kitten/components/buttons/button-image'
-import { Text as TextBase } from 'kitten/components/typography/text'
+import { Text } from 'kitten/components/typography/text'
 import COLORS from 'kitten/constants/colors-config'
 import { mediaQueries } from 'kitten/hoc/media-queries'
-
-const Marger = Radium(MargerBase)
-const Text = Radium(TextBase)
 
 class CommentAvatarComponent extends Component {
   static propTypes = {

@@ -27,8 +27,8 @@ describe('<CommentForm />', () => {
       .create(
         <CommentForm
           avatarImgProps={{
-            src: 'https://placehold.it/80x80/caf4fe/caf4fe',
-            alt: '',
+            src: '#image',
+            alt: 'Image alt',
           }}
           placeholder="Leave a comment on the project"
           commentButton="Comment"
