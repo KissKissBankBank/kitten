@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import Radium, { StyleRoot } from 'radium'
+import Radium from 'radium'
 import { Comment } from 'kitten/components/form/comment'
 import { CommentForm } from 'kitten/components/form/comment-form'
 import { Container } from 'kitten/components/grid/container'
