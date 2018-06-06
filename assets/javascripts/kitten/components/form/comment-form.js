@@ -42,6 +42,7 @@ export class CommentForm extends Component {
     this.state = {
       isFocused: false,
       value: this.props.defaultValue,
+      height: 'auto',
     }
   }
 
@@ -54,7 +55,19 @@ export class CommentForm extends Component {
   }
 
   handleChange = e => {
-    this.setState({ value: e.target.value })
+    const element = e.target
+
+    this.setState(
+      {
+        value: element.value,
+        height: 'auto',
+      },
+      () => {
+        this.setState({
+          height: element.scrollHeight,
+        })
+      },
+    )
   }
 
   handleSubmit = () => {
@@ -88,6 +101,7 @@ export class CommentForm extends Component {
       error && styles.input.textarea.error,
       this.state.isFocused && styles.input.textarea.focus,
       isDisabled && styles.input.textarea.isDisabled,
+      { height: this.state.height },
     ]
 
     const styleArrow = [
@@ -122,16 +136,15 @@ export class CommentForm extends Component {
             <textarea
               className="k-CommentForm__input"
               style={styleInput}
+              defaultValue={defaultValue}
               key="comment-form"
               disabled={isDisabled}
               placeholder={placeholder}
               onFocus={this.handleFocus}
               onBlur={this.handleBlur}
               onChange={this.handleChange}
-              rows="3"
-            >
-              {defaultValue}
-            </textarea>
+              rows="1"
+            />
             <span style={styleArrow}>
               <span style={styles.input.arrow.before} />
             </span>
@@ -196,6 +209,9 @@ const styles = {
     textarea: {
       fontFamily: 'Maax, Helvetica, Arial, sans-serif',
       width: '100%',
+      overflowY: 'hidden',
+      boxSizing: 'border-box',
+      height: 'auto',
       borderWidth: '2px',
       borderStyle: 'solid',
       borderColor: COLORS.line1,
