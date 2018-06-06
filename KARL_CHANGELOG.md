@@ -4,7 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `KarlComment` and `KarlCommentForm` examples.
+## [20.16.0] - 2018-06-06
+
+Feature:
+- Add `KarlComment` and `KarlCommentForm` examples.
 
 ## [20.15.0] - 2018-06-05
 
