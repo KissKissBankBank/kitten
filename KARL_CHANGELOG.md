@@ -4,6 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [20.15.0] - 2018-06-05
+
+Feature:
+- Add `KarlButtonImageWithText` example.
+
 ## [20.14.0] - 2018-05-29
 
 Feature:

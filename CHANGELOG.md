@@ -4,8 +4,20 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-Fix:
-- Add a key on `CarouselBase`.
+- Fix: Add a key on `CarouselBase`.
+- Fix: Fix `parseHtml` helper when no value is passed as parameter.
+
+## [20.15.0] - 2018-06-05
+
+Features:
+- Create `Comment`, `CommentForm` and `CommentAvatar` components.
+- Add `YoutubeButtonIcon` and `YoutubeIcon` components.
+- Add `ButtonImageWithText` component and story.
+
+Fixes:
+- Update all social `buttonIcon` sizes.
+- Merge styles with `style` prop in `BackerCard`.
+- `BackerCard` text layout when text is too long.
 
 ## [20.14.0] - 2018-05-29
 

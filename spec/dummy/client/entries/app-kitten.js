@@ -21,6 +21,7 @@ import {
   InstagramButtonIcon,
   LinkedinButtonIcon,
   TwitterButtonIcon,
+  YoutubeButtonIcon,
 } from 'kitten/components/buttons/social-button-icon'
 import {
   KarlFacebookButtonIconWords,
@@ -39,6 +40,7 @@ import {
 } from 'kitten/karl/buttons/button-with-icon-words'
 import { KarlPaymentButtons } from 'kitten/karl/buttons/payment-button'
 import { KarlButtonIconFilter } from 'kitten/karl/buttons/button-filter'
+import { KarlButtonImageWithText } from 'kitten/karl/buttons/button-image-with-text'
 import { KarlGarbageButton } from 'kitten/karl/buttons/garbage-button'
 
 // Cards
@@ -82,6 +84,8 @@ import { KarlFooterKisskiss } from 'kitten/karl/footer/footer-kisskiss'
 // Form
 import { Checkbox } from 'kitten/components/form/checkbox'
 import { CheckboxSet } from 'kitten/components/form/checkbox-set'
+import { Comment } from 'kitten/components/form/comment'
+import { CommentForm } from 'kitten/components/form/comment-form'
 import { FormAmountAndCurrency }
   from 'kitten/components/form/form-amount-and-currency'
 import { FormPhoneNumber } from 'kitten/components/form/form-phone-number'
@@ -340,6 +344,7 @@ ReactOnRails.register({
   FacebookButtonIcon,
   InstagramButtonIcon,
   LinkedinButtonIcon,
+  YoutubeButtonIcon,
   TagButton,
   TwitterButtonIcon,
   KarlButtonAndText,
@@ -352,6 +357,7 @@ ReactOnRails.register({
   KarlLinkedinButtonIconWords,
   KarlTwitterButtonIconWords,
   KarlButtonIconFilter,
+  KarlButtonImageWithText,
   KarlGarbageButton,
 
   // Colors
@@ -388,6 +394,8 @@ ReactOnRails.register({
   // Form
   Checkbox,
   CheckboxSet,
+  Comment,
+  CommentForm,
   FormAmountAndCurrency,
   FormPhoneNumber,
   Label,
