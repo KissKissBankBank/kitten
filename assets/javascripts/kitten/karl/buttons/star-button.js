@@ -11,7 +11,7 @@ export class KarlStarButton extends Component {
   }
 
   static defaultProps = {
-    size: 'default',
+    size: '',
   }
 
   render() {
@@ -20,8 +20,8 @@ export class KarlStarButton extends Component {
     return (
       <ButtonIcon
         style={styles.buttonIcon}
-        size={size}
         className="k-ButtonIcon--star"
+        size={size}
       >
         <StarIcon className="k-ButtonIcon__svg" />
       </ButtonIcon>
@@ -33,6 +33,7 @@ const styles = {
   buttonIcon: {
     backgroundColor: COLORS.font1,
     borderColor: COLORS.font1,
+    color: COLORS.background1,
     cursor: 'auto',
   },
 }
