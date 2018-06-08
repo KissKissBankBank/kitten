@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Create `KarlIconBadge` example to replace `KarlIconBadgeWithSvg` and all examples.
+
 ## [20.16.0] - 2018-06-06
 
 Feature:
