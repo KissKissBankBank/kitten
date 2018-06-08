@@ -44,7 +44,6 @@ class BasketCardComponent extends Component {
 
   handleDelete() {
     this.props.onDelete()
-    console.log(this.props.onDelete())
   }
 
   render() {
@@ -69,7 +68,7 @@ class BasketCardComponent extends Component {
             {subtitle}
           </Text>
         </Marger>
-        <Marger top=".5">
+        <Marger top=".5" bottom="2">
           <Paragraph margin={false} modifier="quaternary">
             {textDescription}
           </Paragraph>
@@ -138,7 +137,10 @@ const styles = {
     borderWidth: '2px',
     borderStyle: 'solid',
     borderColor: COLORS.line1,
-    paddingLeft: 40,
+    paddingLeft: 20,
+    [`@media (min-width: ${ScreenConfig['S'].min}px)`]: {
+      paddingLeft: 40,
+    },
   },
 }
 
