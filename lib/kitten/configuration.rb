@@ -194,6 +194,7 @@ module Kitten
             { path: 'components/cards/project-card', name: 'Project card' },
             { path: 'components/cards/article-card', name: 'Article card' },
             { path: 'components/cards/backer-card', name: 'Backer card' },
+            { path: 'components/cards/basket-card', name: 'Basket card' },
             {
               path: 'components/cards/crowdfunding-card',
               name: 'Crowdfunding card',

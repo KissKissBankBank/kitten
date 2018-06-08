@@ -46,6 +46,7 @@ import { KarlGarbageButton } from 'kitten/karl/buttons/garbage-button'
 // Cards
 import { ArticleCard } from 'kitten/components/cards/article-card'
 import { BackerCard } from 'kitten/components/cards/backer-card'
+import { BasketCard } from 'kitten/components/cards/basket-card'
 import { CrowdfundingCard } from 'kitten/components/cards/crowdfunding-card'
 import { ProjectCard } from 'kitten/components/cards/project-card'
 import { ProjectCreatorCard }
@@ -365,6 +366,7 @@ ReactOnRails.register({
   // Cards
   ArticleCard,
   BackerCard,
+  BasketCard,
   CrowdfundingCard,
   ProjectCard,
   ProjectCreatorCard,
