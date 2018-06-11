@@ -246,26 +246,7 @@ exports[`<BasketCard /> with some props matches with snapshot 1`] = `
           }
         }
       >
-        <div
-          data-radium={true}
-          style={
-            Object {
-              "marginBottom": null,
-              "marginTop": null,
-            }
-          }
-        >
-          <span
-            className="k-u-size-tiny k-u-weight-regular"
-          >
-            Custom title bottom
-            <span
-              className="k-u-size-tiny k-u-weight-light"
-            >
-              Custom value bottom
-            </span>
-          </span>
-        </div>
+        Custom title bottom
         <div
           data-radium={true}
           style={

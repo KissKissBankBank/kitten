@@ -125,16 +125,17 @@ class BasketCardComponent extends Component {
 
     return (
       <Fragment>
-        {titleBottom && (
-          <Marger>
-            <Text weight="regular" size="tiny">
-              {titleBottom}
-              <Text weight="light" size="tiny">
-                {valueBottom}
+        {titleBottom ||
+          (valueBottom && (
+            <Marger>
+              <Text weight="regular" size="tiny">
+                {titleBottom}
+                <Text weight="light" size="tiny">
+                  {valueBottom}
+                </Text>
               </Text>
-            </Text>
-          </Marger>
-        )}
+            </Marger>
+          ))}
 
         {manageLinkBottom && (
           <Marger>
