@@ -1,19 +1,5 @@
 <div class="k-Grid">
-  <div class="k-Grid__col k-Grid__col--6">
-    <%= react_component 'BasketCard', props: {
-      titleAmount: "100€",
-      subtitle: "Don libre",
-      textDescription: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient mont",
-      manageLinkBottom: "Modifier le montant"
-    } %>
-  </div>
-
-  <div class="k-Grid__col k-Grid__col--6">
-    <%= react_component 'BasketCard', props: {
-      titleAmount: "Pour 60€",
-      textDescription: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient mont",
-      titleBottom: "Livraison : ",
-      valueBottom: "Janvier 2018"
-    } %>
+  <div class="k-Grid__col k-Grid__col--10">
+    <%= react_component 'KarlBasketCard'%>
   </div>
 </div>

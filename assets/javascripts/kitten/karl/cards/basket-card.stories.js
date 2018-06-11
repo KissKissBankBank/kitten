@@ -18,8 +18,11 @@ storiesOf('Cards/BasketCard', module)
             <BasketCard
               titleAmount={text('Title Amount', 'For 00€')}
               subtitle={text('Subtitle', 'Don libre')}
-              textDescription={text('')}
-              titleBottom={text('Title bottom', 'Livraison')}
+              textDescription={text(
+                'Text description',
+                'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient mont',
+              )}
+              titleBottom={text('Title bottom', 'Livraison : ')}
               valueBottom={text('Value bottom', 'Janvier 2018')}
               manageLinkBottom={text(
                 'Manage link bottom',

@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react'
 import Radium, { StyleRoot } from 'radium'
 import PropTypes from 'prop-types'
-import { Marger } from 'kitten/components/layout/marger'
+import { Marger as MargerBase } from 'kitten/components/layout/marger'
 import {
   Grid as GridBase,
   GridCol as GridColBase,
@@ -15,23 +15,26 @@ import { Paragraph as ParagraphBase } from 'kitten/components/typography/paragra
 import COLORS from 'kitten/constants/colors-config'
 import { ScreenConfig } from 'kitten/constants/screen-config'
 import { mediaQueries } from 'kitten/hoc/media-queries'
+// import { domElementHelper } from 'kitten/helpers/dom/element-helper'
 
 const Grid = Radium(GridBase)
 const GridCol = Radium(GridColBase)
 const Title = Radium(TitleBase)
 const Text = Radium(TextBase)
+const Marger = Radium(MargerBase)
 const Paragraph = Radium(ParagraphBase)
 
 class BasketCardComponent extends Component {
   static propTypes = {
-    titleTag: PropTypes.string,
     titleAmount: PropTypes.string.isRequired,
-    subtitle: PropTypes.string,
     textDescription: PropTypes.string.isRequired,
+    titleTag: PropTypes.string,
+    subtitle: PropTypes.string,
     titleBottom: PropTypes.string,
     valueBottom: PropTypes.string,
     manageLinkBottom: PropTypes.string,
-    onDelete: PropTypes.func.isRequired,
+    isHidden: PropTypes.bool,
+    onClose: () => {},
   }
 
   static defaultProps = {
@@ -40,17 +43,44 @@ class BasketCardComponent extends Component {
     titleBottom: '',
     valueBottom: '',
     manageLinkBottom: '',
+    isHidden: false,
   }
 
-  handleDelete() {
-    this.props.onDelete()
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      isHidden: false,
+      // height: 'auto',
+    }
+  }
+
+  handleCloseClick() {
+    console.log(handleCloseClick)
+    this.setState({
+      isHidden: this.state.isHidden,
+
+      // The css animation on the garbage button requires a fixed height.
+      // height: domElementHelper.getComputedHeight(this.container),
+    })
+  }
+
+  handleAnimationEnd() {
+    this.props.onClose()
   }
 
   render() {
+    const basketStyles = [
+      styles.card,
+      this.state.isHidden && styles.card.hidden,
+    ]
+
+    if (this.props.isHidden) return
+
     return (
-      <StyleRoot style={styles.card}>
-        {this.renderDescription()}
+      <StyleRoot style={basketStyles} onAnimationEnd={this.handleAnimationEnd}>
         {this.renderGarbage()}
+        {this.renderDescription()}
       </StyleRoot>
     )
   }
@@ -59,10 +89,12 @@ class BasketCardComponent extends Component {
     const { titleTag, titleAmount, subtitle, textDescription } = this.props
 
     return (
-      <Marger top="4" bottom="4">
-        <Title italic modifier="quinary" margin={false} tag={titleTag}>
-          {titleAmount}
-        </Title>
+      <Marger bottom="4" style={styles.description}>
+        <Marger bottom="1">
+          <Title italic modifier="quinary" margin={false} tag={titleTag}>
+            {titleAmount}
+          </Title>
+        </Marger>
         <Marger top="1" bottom=".5">
           <Text weight="bold" size="default">
             {subtitle}
@@ -79,8 +111,6 @@ class BasketCardComponent extends Component {
   }
 
   renderGarbage() {
-    const { onDelete } = this.props
-
     return (
       <div style={styles.basket}>
         <ButtonIcon
@@ -89,10 +119,7 @@ class BasketCardComponent extends Component {
           aria-label="Garbage Button"
           modifier="beryllium"
           size="tiny"
-          onDelete={() => {
-            alert('toto')
-          }}
-          onClick={this.handleDelete}
+          onClick={this.handleCloseClick}
         >
           <GarbageIcon className="k-ButtonIcon__svg" />
         </ButtonIcon>
@@ -131,16 +158,40 @@ class BasketCardComponent extends Component {
   }
 }
 
+const garbageButtonKeyframes = Radium.keyframes({
+  '0%': { opacity: 1 },
+  '100%': { opacity: 0, height: 0 },
+})
+
+const basketAnimationClass = {
+  animationName: garbageButtonKeyframes,
+  animation: '.4s cubicBezier(.895, .03, .685, .22) forwards',
+  pointerEvents: 'none',
+}
+
 const styles = {
   card: {
-    display: 'flex',
     borderWidth: '2px',
     borderStyle: 'solid',
     borderColor: COLORS.line1,
-    paddingLeft: 20,
+    overflow: 'hidden',
+
+    hidden: basketAnimationClass,
+  },
+
+  description: {
+    marginLeft: 20,
+    marginRight: 20,
     [`@media (min-width: ${ScreenConfig['S'].min}px)`]: {
-      paddingLeft: 40,
+      marginLeft: 40,
+      marginRight: 100,
     },
+  },
+
+  basket: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'flex-end',
   },
 }
 
