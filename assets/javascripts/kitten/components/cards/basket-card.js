@@ -83,7 +83,7 @@ class BasketCardComponent extends Component {
 
     return (
       <Marger bottom="4" style={styles.description}>
-        <Marger bottom="1" top="4">
+        <Marger bottom="1">
           <Title italic modifier="quinary" margin={false} tag={titleTag}>
             {titleAmount}
           </Title>

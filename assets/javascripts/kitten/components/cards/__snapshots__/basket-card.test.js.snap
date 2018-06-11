@@ -66,7 +66,7 @@ exports[`<BasketCard /> by default matches with snapshot 1`] = `
         style={
           Object {
             "marginBottom": "0.625rem",
-            "marginTop": "2.5rem",
+            "marginTop": null,
           }
         }
       >
@@ -197,7 +197,7 @@ exports[`<BasketCard /> with some props matches with snapshot 1`] = `
         style={
           Object {
             "marginBottom": "0.625rem",
-            "marginTop": "2.5rem",
+            "marginTop": null,
           }
         }
       >
