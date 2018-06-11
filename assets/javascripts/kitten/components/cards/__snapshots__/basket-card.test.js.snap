@@ -3,57 +3,17 @@
 exports[`<BasketCard /> by default matches with snapshot 1`] = `
 <div
   data-radium={true}
-  onAnimationEnd={[Function]}
-  style={
-    Object {
-      "borderColor": "#eee",
-      "borderStyle": "solid",
-      "borderWidth": "2px",
-      "overflow": "hidden",
-    }
-  }
 >
   <div
     data-radium={true}
+    onAnimationEnd={[Function]}
     style={
       Object {
-        "display": "flex",
-        "flexDirection": "row",
-        "justifyContent": "flex-end",
-      }
-    }
-  >
-    <button
-      aria-label="Garbage Button"
-      className="k-ButtonIcon k-ButtonIcon--beryllium k-ButtonIcon--tiny"
-      onClick={[Function]}
-      tabIndex={null}
-      title="Garbage Button"
-      type="button"
-    >
-      <svg
-        className="k-ButtonIcon__svg"
-        viewBox="0 0 12 14"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <title>
-          Garbage
-        </title>
-        <path
-          d="M4.3 0h3v2h-3zM0 2h12v1H0zm1 2l1 10h8l1-10H1zm3.5 8h-1V6h1v6zm2 0h-1V6h1v6zm2 0h-1V6h1v6z"
-        />
-      </svg>
-    </button>
-  </div>
-  <div
-    className="rmq-b83f03a3"
-    data-radium={true}
-    style={
-      Object {
-        "marginBottom": "2.5rem",
-        "marginLeft": 20,
-        "marginRight": 20,
-        "marginTop": null,
+        "borderColor": "#eee",
+        "borderStyle": "solid",
+        "borderWidth": "2px",
+        "height": "auto",
+        "overflow": "hidden",
       }
     }
   >
@@ -61,58 +21,103 @@ exports[`<BasketCard /> by default matches with snapshot 1`] = `
       data-radium={true}
       style={
         Object {
-          "marginBottom": "0.625rem",
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "flex-end",
+        }
+      }
+    >
+      <button
+        aria-label="Garbage Button"
+        className="k-ButtonIcon k-ButtonIcon--beryllium k-ButtonIcon--tiny"
+        onClick={[Function]}
+        tabIndex={null}
+        title="Garbage Button"
+        type="button"
+      >
+        <svg
+          className="k-ButtonIcon__svg"
+          viewBox="0 0 12 14"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>
+            Garbage
+          </title>
+          <path
+            d="M4.3 0h3v2h-3zM0 2h12v1H0zm1 2l1 10h8l1-10H1zm3.5 8h-1V6h1v6zm2 0h-1V6h1v6zm2 0h-1V6h1v6z"
+          />
+        </svg>
+      </button>
+    </div>
+    <div
+      className="rmq-b83f03a3"
+      data-radium={true}
+      style={
+        Object {
+          "marginBottom": "2.5rem",
+          "marginLeft": 20,
+          "marginRight": 20,
           "marginTop": null,
         }
       }
     >
-      <h1
-        className="k-Title k-Title--quinary k-Title--withoutMargin k-Title--italic"
-      >
-        Custom title amount
-      </h1>
-    </div>
-    <div
-      data-radium={true}
-      style={
-        Object {
-          "marginBottom": "0.3125rem",
-          "marginTop": "0.625rem",
+      <div
+        data-radium={true}
+        style={
+          Object {
+            "marginBottom": "0.625rem",
+            "marginTop": "2.5rem",
+          }
         }
-      }
-    >
-      <span
-        className="k-u-size-default k-u-weight-bold"
+      >
+        <h1
+          className="k-Title k-Title--quinary k-Title--withoutMargin k-Title--italic"
+        >
+          Custom title amount
+        </h1>
+      </div>
+      <div
+        data-radium={true}
+        style={
+          Object {
+            "marginBottom": "0.3125rem",
+            "marginTop": "0.625rem",
+          }
+        }
+      >
+        <span
+          className="k-u-size-default k-u-weight-bold"
+        >
+          
+        </span>
+      </div>
+      <div
+        data-radium={true}
+        style={
+          Object {
+            "marginBottom": "1.25rem",
+            "marginTop": "0.3125rem",
+          }
+        }
+      >
+        <p
+          className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
+        >
+          Custom text description
+        </p>
+      </div>
+      <div
+        data-radium={true}
+        style={
+          Object {
+            "marginBottom": null,
+            "marginTop": "1.25rem",
+          }
+        }
       >
         
-      </span>
-    </div>
-    <div
-      data-radium={true}
-      style={
-        Object {
-          "marginBottom": "1.25rem",
-          "marginTop": "0.3125rem",
-        }
-      }
-    >
-      <p
-        className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
-      >
-        Custom text description
-      </p>
-    </div>
-    <div
-      data-radium={true}
-      style={
-        Object {
-          "marginBottom": null,
-          "marginTop": "1.25rem",
-        }
-      }
-    >
-      
-      
+        
+      </div>
     </div>
   </div>
   <style
@@ -129,57 +134,17 @@ margin-right: 100px !important;}}",
 exports[`<BasketCard /> with some props matches with snapshot 1`] = `
 <div
   data-radium={true}
-  onAnimationEnd={[Function]}
-  style={
-    Object {
-      "borderColor": "#eee",
-      "borderStyle": "solid",
-      "borderWidth": "2px",
-      "overflow": "hidden",
-    }
-  }
 >
   <div
     data-radium={true}
+    onAnimationEnd={[Function]}
     style={
       Object {
-        "display": "flex",
-        "flexDirection": "row",
-        "justifyContent": "flex-end",
-      }
-    }
-  >
-    <button
-      aria-label="Garbage Button"
-      className="k-ButtonIcon k-ButtonIcon--beryllium k-ButtonIcon--tiny"
-      onClick={[Function]}
-      tabIndex={null}
-      title="Garbage Button"
-      type="button"
-    >
-      <svg
-        className="k-ButtonIcon__svg"
-        viewBox="0 0 12 14"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <title>
-          Garbage
-        </title>
-        <path
-          d="M4.3 0h3v2h-3zM0 2h12v1H0zm1 2l1 10h8l1-10H1zm3.5 8h-1V6h1v6zm2 0h-1V6h1v6zm2 0h-1V6h1v6z"
-        />
-      </svg>
-    </button>
-  </div>
-  <div
-    className="rmq-b83f03a3"
-    data-radium={true}
-    style={
-      Object {
-        "marginBottom": "2.5rem",
-        "marginLeft": 20,
-        "marginRight": 20,
-        "marginTop": null,
+        "borderColor": "#eee",
+        "borderStyle": "solid",
+        "borderWidth": "2px",
+        "height": "auto",
+        "overflow": "hidden",
       }
     }
   >
@@ -187,73 +152,137 @@ exports[`<BasketCard /> with some props matches with snapshot 1`] = `
       data-radium={true}
       style={
         Object {
-          "marginBottom": "0.625rem",
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "flex-end",
+        }
+      }
+    >
+      <button
+        aria-label="Garbage Button"
+        className="k-ButtonIcon k-ButtonIcon--beryllium k-ButtonIcon--tiny"
+        onClick={[Function]}
+        tabIndex={null}
+        title="Garbage Button"
+        type="button"
+      >
+        <svg
+          className="k-ButtonIcon__svg"
+          viewBox="0 0 12 14"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>
+            Garbage
+          </title>
+          <path
+            d="M4.3 0h3v2h-3zM0 2h12v1H0zm1 2l1 10h8l1-10H1zm3.5 8h-1V6h1v6zm2 0h-1V6h1v6zm2 0h-1V6h1v6z"
+          />
+        </svg>
+      </button>
+    </div>
+    <div
+      className="rmq-b83f03a3"
+      data-radium={true}
+      style={
+        Object {
+          "marginBottom": "2.5rem",
+          "marginLeft": 20,
+          "marginRight": 20,
           "marginTop": null,
         }
       }
     >
-      <Custom title tag
-        className="k-Title k-Title--quinary k-Title--withoutMargin k-Title--italic"
-      >
-        Custom title amount
-      </Custom title tag>
-    </div>
-    <div
-      data-radium={true}
-      style={
-        Object {
-          "marginBottom": "0.3125rem",
-          "marginTop": "0.625rem",
-        }
-      }
-    >
-      <span
-        className="k-u-size-default k-u-weight-bold"
-      >
-        Custom subtitle
-      </span>
-    </div>
-    <div
-      data-radium={true}
-      style={
-        Object {
-          "marginBottom": "1.25rem",
-          "marginTop": "0.3125rem",
-        }
-      }
-    >
-      <p
-        className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
-      >
-        Custom text description
-      </p>
-    </div>
-    <div
-      data-radium={true}
-      style={
-        Object {
-          "marginBottom": null,
-          "marginTop": "1.25rem",
-        }
-      }
-    >
-      <span
-        className="k-u-size-tiny k-u-weight-regular"
+      <div
         data-radium={true}
+        style={
+          Object {
+            "marginBottom": "0.625rem",
+            "marginTop": "2.5rem",
+          }
+        }
       >
-        Custom title bottom
-        <span
-          className="k-u-size-tiny k-u-weight-light"
+        <Custom title tag
+          className="k-Title k-Title--quinary k-Title--withoutMargin k-Title--italic"
         >
-          Custom value bottom
-        </span>
-      </span>
-      <a
-        className="k-u-color-primary1 k-u-decoration-none k-u-size-tiny k-u-weight-regular"
-        href="#"
+          Custom title amount
+        </Custom title tag>
+      </div>
+      <div
+        data-radium={true}
+        style={
+          Object {
+            "marginBottom": "0.3125rem",
+            "marginTop": "0.625rem",
+          }
+        }
       >
-        Custom manage link bottom
-      </a>
+        <span
+          className="k-u-size-default k-u-weight-bold"
+        >
+          Custom subtitle
+        </span>
+      </div>
+      <div
+        data-radium={true}
+        style={
+          Object {
+            "marginBottom": "1.25rem",
+            "marginTop": "0.3125rem",
+          }
+        }
+      >
+        <p
+          className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
+        >
+          Custom text description
+        </p>
+      </div>
+      <div
+        data-radium={true}
+        style={
+          Object {
+            "marginBottom": null,
+            "marginTop": "1.25rem",
+          }
+        }
+      >
+        <div
+          data-radium={true}
+          style={
+            Object {
+              "marginBottom": null,
+              "marginTop": null,
+            }
+          }
+        >
+          <span
+            className="k-u-size-tiny k-u-weight-regular"
+          >
+            Custom title bottom
+            <span
+              className="k-u-size-tiny k-u-weight-light"
+            >
+              Custom value bottom
+            </span>
+          </span>
+        </div>
+        <div
+          data-radium={true}
+          style={
+            Object {
+              "marginBottom": null,
+              "marginTop": null,
+            }
+          }
+        >
+          <a
+            className="k-u-color-primary1 k-u-decoration-none k-u-size-tiny k-u-weight-regular"
+            href="#"
+          >
+            Custom manage link bottom
+          </a>
+        </div>
+      </div>
     </div>
   </div>
   <style

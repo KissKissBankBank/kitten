@@ -2,27 +2,17 @@ import React, { Component, Fragment } from 'react'
 import Radium, { StyleRoot } from 'radium'
 import PropTypes from 'prop-types'
 import { Marger as MargerBase } from 'kitten/components/layout/marger'
-import {
-  Grid as GridBase,
-  GridCol as GridColBase,
-} from 'kitten/components/grid/grid'
-import { Button as ButtonBase } from 'kitten/components/buttons/button'
 import { GarbageIcon } from 'kitten/components/icons/garbage-icon'
 import { ButtonIcon } from 'kitten/components/buttons/button-icon'
-import { Title as TitleBase } from 'kitten/components/typography/title'
-import { Text as TextBase } from 'kitten/components/typography/text'
-import { Paragraph as ParagraphBase } from 'kitten/components/typography/paragraph'
+import { Title } from 'kitten/components/typography/title'
+import { Text } from 'kitten/components/typography/text'
+import { Paragraph } from 'kitten/components/typography/paragraph'
 import COLORS from 'kitten/constants/colors-config'
 import { ScreenConfig } from 'kitten/constants/screen-config'
 import { mediaQueries } from 'kitten/hoc/media-queries'
-// import { domElementHelper } from 'kitten/helpers/dom/element-helper'
+import { domElementHelper } from 'kitten/helpers/dom/element-helper'
 
-const Grid = Radium(GridBase)
-const GridCol = Radium(GridColBase)
-const Title = Radium(TitleBase)
-const Text = Radium(TextBase)
 const Marger = Radium(MargerBase)
-const Paragraph = Radium(ParagraphBase)
 
 class BasketCardComponent extends Component {
   static propTypes = {
@@ -33,8 +23,7 @@ class BasketCardComponent extends Component {
     titleBottom: PropTypes.string,
     valueBottom: PropTypes.string,
     manageLinkBottom: PropTypes.string,
-    isHidden: PropTypes.bool,
-    onClose: () => {},
+    onClose: PropTypes.func,
   }
 
   static defaultProps = {
@@ -43,7 +32,7 @@ class BasketCardComponent extends Component {
     titleBottom: '',
     valueBottom: '',
     manageLinkBottom: '',
-    isHidden: false,
+    onClose: () => {},
   }
 
   constructor(props) {
@@ -51,21 +40,20 @@ class BasketCardComponent extends Component {
 
     this.state = {
       isHidden: false,
-      // height: 'auto',
+      height: 'auto',
     }
   }
 
-  handleCloseClick() {
-    console.log(handleCloseClick)
+  handleCloseClick = () => {
     this.setState({
-      isHidden: this.state.isHidden,
+      isHidden: true,
 
       // The css animation on the garbage button requires a fixed height.
-      // height: domElementHelper.getComputedHeight(this.container),
+      height: domElementHelper.getComputedHeight(this.container),
     })
   }
 
-  handleAnimationEnd() {
+  handleAnimationEnd = () => {
     this.props.onClose()
   }
 
@@ -73,14 +61,19 @@ class BasketCardComponent extends Component {
     const basketStyles = [
       styles.card,
       this.state.isHidden && styles.card.hidden,
+      { height: this.state.height },
     ]
 
-    if (this.props.isHidden) return
-
     return (
-      <StyleRoot style={basketStyles} onAnimationEnd={this.handleAnimationEnd}>
-        {this.renderGarbage()}
-        {this.renderDescription()}
+      <StyleRoot>
+        <div
+          ref={div => (this.container = div)}
+          style={basketStyles}
+          onAnimationEnd={this.handleAnimationEnd}
+        >
+          {this.renderGarbage()}
+          {this.renderDescription()}
+        </div>
       </StyleRoot>
     )
   }
@@ -90,7 +83,7 @@ class BasketCardComponent extends Component {
 
     return (
       <Marger bottom="4" style={styles.description}>
-        <Marger bottom="1">
+        <Marger bottom="1" top="4">
           <Title italic modifier="quinary" margin={false} tag={titleTag}>
             {titleAmount}
           </Title>
@@ -133,40 +126,48 @@ class BasketCardComponent extends Component {
     return (
       <Fragment>
         {titleBottom && (
-          <Text weight="regular" size="tiny">
-            {titleBottom}
-            <Text weight="light" size="tiny">
-              {valueBottom}
+          <Marger>
+            <Text weight="regular" size="tiny">
+              {titleBottom}
+              <Text weight="light" size="tiny">
+                {valueBottom}
+              </Text>
             </Text>
-          </Text>
+          </Marger>
         )}
 
         {manageLinkBottom && (
-          <Text
-            tag="a"
-            href="#"
-            color="primary1"
-            decoration="none"
-            weight="regular"
-            size="tiny"
-          >
-            {manageLinkBottom}
-          </Text>
+          <Marger>
+            <Text
+              tag="a"
+              href="#"
+              color="primary1"
+              decoration="none"
+              weight="regular"
+              size="tiny"
+            >
+              {manageLinkBottom}
+            </Text>
+          </Marger>
         )}
       </Fragment>
     )
   }
 }
 
-const garbageButtonKeyframes = Radium.keyframes({
-  '0%': { opacity: 1 },
-  '100%': { opacity: 0, height: 0 },
-})
+const garbageButtonKeyframes = Radium.keyframes(
+  {
+    '0%': { opacity: 1 },
+    '100%': { opacity: 0, height: 0 },
+  },
+  'foobar',
+)
 
 const basketAnimationClass = {
+  animation: 'x .4s cubic-bezier(.895, .03, .685, .22) forwards',
   animationName: garbageButtonKeyframes,
-  animation: '.4s cubicBezier(.895, .03, .685, .22) forwards',
   pointerEvents: 'none',
+  opacity: 1,
 }
 
 const styles = {
@@ -195,4 +196,4 @@ const styles = {
   },
 }
 
-export const BasketCard = Radium(BasketCardComponent)
+export const BasketCard = BasketCardComponent
