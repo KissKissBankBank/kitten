@@ -42,7 +42,7 @@ describe('<BasketCard />', () => {
       component = renderer
         .create(
           <BasketCard
-            itleAmount="Custom title amount"
+            titleAmount="Custom title amount"
             textDescription="Custom text description"
             titleTag="Custom title tag"
             subtitle="Custom subtitle"
