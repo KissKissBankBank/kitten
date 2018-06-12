@@ -8,21 +8,21 @@ import { KarlExampleTitle } from 'kitten/karl/examples/title'
 
 export const KarlIconBadge = props => (
   <Grid>
-    <GridCol col-m="2">
+    <GridCol col-s="4">
       <KarlExampleTitle>With on character</KarlExampleTitle>
       <div style={styles.badge}>
         <IconBadge {...props}>C</IconBadge>
       </div>
     </GridCol>
 
-    <GridCol col-m="2">
+    <GridCol col-s="4">
       <KarlExampleTitle>With two characters</KarlExampleTitle>
       <div style={styles.badge}>
         <IconBadge {...props}>A+</IconBadge>
       </div>
     </GridCol>
 
-    <GridCol col-m="2">
+    <GridCol col-s="4">
       <KarlExampleTitle>With big badge</KarlExampleTitle>
       <div style={styles.badge.big}>
         <IconBadge big {...props}>
@@ -31,7 +31,7 @@ export const KarlIconBadge = props => (
       </div>
     </GridCol>
 
-    <GridCol col-m="2">
+    <GridCol col-s="4">
       <KarlExampleTitle>With svg</KarlExampleTitle>
       <div style={styles.badge}>
         <IconBadge valid {...props}>
