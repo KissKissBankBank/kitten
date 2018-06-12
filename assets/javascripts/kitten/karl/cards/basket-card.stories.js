@@ -14,7 +14,7 @@ storiesOf('Cards/BasketCard', module)
     withInfo('common info')(() => (
       <StyleRoot>
         <Grid>
-          <GridCol offset="1" col="10">
+          <GridCol offset="1" col="8">
             <BasketCard
               titleAmount={text('Title Amount', 'For 00€')}
               subtitle={text('Subtitle', 'Don libre')}
