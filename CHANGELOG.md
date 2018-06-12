@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add `big` props on `IconBadge` component.
+- Fix: Fix `Comment` propType warning.
 
 ## [20.16.0] - 2018-06-06
 
