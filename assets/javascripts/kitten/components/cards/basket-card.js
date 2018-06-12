@@ -79,21 +79,30 @@ class BasketCardComponent extends Component {
   }
 
   renderDescription() {
-    const { titleTag, titleAmount, subtitle, textDescription } = this.props
+    const {
+      titleTag,
+      titleAmount,
+      subtitle,
+      textDescription,
+      viewportIsMobile,
+    } = this.props
 
     return (
       <Marger bottom="4" style={styles.description}>
-        <Marger bottom="1">
+        <Marger bottom={viewportIsMobile ? 1 : 2}>
           <Title italic modifier="quinary" margin={false} tag={titleTag}>
             {titleAmount}
           </Title>
         </Marger>
-        <Marger top="1" bottom=".5">
+        <Marger
+          top={viewportIsMobile ? 1 : 2}
+          bottom={viewportIsMobile ? 0.5 : 1}
+        >
           <Text weight="bold" size="default">
             {subtitle}
           </Text>
         </Marger>
-        <Marger top=".5" bottom="2">
+        <Marger top={viewportIsMobile ? 0.5 : 1} bottom="2">
           <Paragraph margin={false} modifier="quaternary">
             {textDescription}
           </Paragraph>
@@ -184,9 +193,11 @@ const styles = {
   description: {
     marginLeft: 20,
     marginRight: 20,
+    maxWidth: 500,
+
     [`@media (min-width: ${ScreenConfig['S'].min}px)`]: {
       marginLeft: 40,
-      marginRight: 100,
+      marginRight: 40,
     },
   },
 
@@ -197,4 +208,6 @@ const styles = {
   },
 }
 
-export const BasketCard = BasketCardComponent
+export const BasketCard = mediaQueries(BasketCardComponent, {
+  viewportIsMobile: true,
+})

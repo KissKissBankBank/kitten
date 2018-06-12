@@ -50,7 +50,7 @@ exports[`<BasketCard /> by default matches with snapshot 1`] = `
       </button>
     </div>
     <div
-      className="rmq-b83f03a3"
+      className="rmq-b86f8336"
       data-radium={true}
       style={
         Object {
@@ -58,6 +58,7 @@ exports[`<BasketCard /> by default matches with snapshot 1`] = `
           "marginLeft": 20,
           "marginRight": 20,
           "marginTop": null,
+          "maxWidth": 500,
         }
       }
     >
@@ -65,7 +66,7 @@ exports[`<BasketCard /> by default matches with snapshot 1`] = `
         data-radium={true}
         style={
           Object {
-            "marginBottom": "0.625rem",
+            "marginBottom": "1.25rem",
             "marginTop": null,
           }
         }
@@ -80,8 +81,8 @@ exports[`<BasketCard /> by default matches with snapshot 1`] = `
         data-radium={true}
         style={
           Object {
-            "marginBottom": "0.3125rem",
-            "marginTop": "0.625rem",
+            "marginBottom": "0.625rem",
+            "marginTop": "1.25rem",
           }
         }
       >
@@ -96,7 +97,7 @@ exports[`<BasketCard /> by default matches with snapshot 1`] = `
         style={
           Object {
             "marginBottom": "1.25rem",
-            "marginTop": "0.3125rem",
+            "marginTop": "0.625rem",
           }
         }
       >
@@ -123,8 +124,8 @@ exports[`<BasketCard /> by default matches with snapshot 1`] = `
   <style
     dangerouslySetInnerHTML={
       Object {
-        "__html": "@media (min-width: 640px){ .rmq-b83f03a3{margin-left: 40px !important;
-margin-right: 100px !important;}}",
+        "__html": "@media (min-width: 640px){ .rmq-b86f8336{margin-left: 40px !important;
+margin-right: 40px !important;}}",
       }
     }
   />
@@ -181,7 +182,7 @@ exports[`<BasketCard /> with some props matches with snapshot 1`] = `
       </button>
     </div>
     <div
-      className="rmq-b83f03a3"
+      className="rmq-b86f8336"
       data-radium={true}
       style={
         Object {
@@ -189,6 +190,7 @@ exports[`<BasketCard /> with some props matches with snapshot 1`] = `
           "marginLeft": 20,
           "marginRight": 20,
           "marginTop": null,
+          "maxWidth": 500,
         }
       }
     >
@@ -196,7 +198,7 @@ exports[`<BasketCard /> with some props matches with snapshot 1`] = `
         data-radium={true}
         style={
           Object {
-            "marginBottom": "0.625rem",
+            "marginBottom": "1.25rem",
             "marginTop": null,
           }
         }
@@ -211,8 +213,8 @@ exports[`<BasketCard /> with some props matches with snapshot 1`] = `
         data-radium={true}
         style={
           Object {
-            "marginBottom": "0.3125rem",
-            "marginTop": "0.625rem",
+            "marginBottom": "0.625rem",
+            "marginTop": "1.25rem",
           }
         }
       >
@@ -227,7 +229,7 @@ exports[`<BasketCard /> with some props matches with snapshot 1`] = `
         style={
           Object {
             "marginBottom": "1.25rem",
-            "marginTop": "0.3125rem",
+            "marginTop": "0.625rem",
           }
         }
       >
@@ -288,8 +290,8 @@ exports[`<BasketCard /> with some props matches with snapshot 1`] = `
   <style
     dangerouslySetInnerHTML={
       Object {
-        "__html": "@media (min-width: 640px){ .rmq-b83f03a3{margin-left: 40px !important;
-margin-right: 100px !important;}}",
+        "__html": "@media (min-width: 640px){ .rmq-b86f8336{margin-left: 40px !important;
+margin-right: 40px !important;}}",
       }
     }
   />
