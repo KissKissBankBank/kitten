@@ -165,13 +165,10 @@ class BasketCardComponent extends Component {
   }
 }
 
-const garbageButtonKeyframes = Radium.keyframes(
-  {
-    '0%': { opacity: 1 },
-    '100%': { opacity: 0, height: 0 },
-  },
-  'foobar',
-)
+const garbageButtonKeyframes = Radium.keyframes({
+  '0%': { opacity: 1 },
+  '100%': { opacity: 0, height: 0 },
+})
 
 const basketAnimationClass = {
   animation: 'x .4s cubic-bezier(.895, .03, .685, .22) forwards',

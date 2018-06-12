@@ -24,7 +24,6 @@ export const KarlBasketCard = () => (
       <Marger bottom="2">
         <BasketCard
           titleAmount="100€"
-          subtitle="Don libre"
           textDescription="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient mont"
           titleBottom="Livraison : "
           valueBottom="Janvier 2018"
