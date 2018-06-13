@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: Update margin on `ContributionCard` component.
+- Fix: Disable textarea resize in `CommentForm`.
 - Fix: Fix `Comment` propType warning.
 
 ## [20.16.0] - 2018-06-06
