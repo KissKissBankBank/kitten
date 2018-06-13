@@ -84,7 +84,6 @@ export const mediaQueries = (WrappedComponent, hocProps = {}) =>
       }
 
       Object.keys(this.customProps).forEach(prop => {
-        this.setState({ [prop]: false })
         this.custom[prop] = createMatchMedia(this.customProps[prop])
         this.custom[prop].cb = event => this.setState({ [prop]: event.matches })
         this.custom[prop].addListener(this.custom[prop].cb)
