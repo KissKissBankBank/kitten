@@ -214,6 +214,7 @@ const styles = {
     textarea: {
       width: '100%',
       overflowY: 'hidden',
+      resize: 'none',
       boxSizing: 'border-box',
       borderWidth: 2,
       borderStyle: 'solid',
