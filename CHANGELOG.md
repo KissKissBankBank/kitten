@@ -6,6 +6,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Fix: Disable textarea resize in `CommentForm`.
 - Fix: Fix `Comment` propType warning.
+- Add composable `withMediaQueries` hoc to `media-queries`
+- Add custom `media-query` to `mediaQueries` hoc: 
+  `mediaQueries(Component, { myCustomViewport: '(min-width: 1440px)'})`
 
 ## [20.16.0] - 2018-06-06
 
