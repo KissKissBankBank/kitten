@@ -1,5 +1,5 @@
 <div class="k-Grid">
-  <div class="k-Grid__col k-Grid__col--12 k-Grid__col--4@m k-Grid__col--4@l">
+  <div class="k-Grid__col k-Grid__col--12 k-Grid__col--3@m k-Grid__col--3@l">
     <%= example 'Default' do %>
       <%= react_component 'BulletList', props: {
         items: [
@@ -11,7 +11,7 @@
     <% end %>
   </div>
 
-  <div class="k-Grid__col k-Grid__col--12 k-Grid__col--4@m k-Grid__col--4@l">
+  <div class="k-Grid__col k-Grid__col--12 k-Grid__col--3@m k-Grid__col--3@l">
     <%= example 'Large items' do %>
       <%= react_component 'BulletList', props: {
         large: true,
@@ -24,10 +24,23 @@
     <% end %>
   </div>
 
-  <div class="k-Grid__col k-Grid__col--12 k-Grid__col--4@m k-Grid__col--4@l">
+  <div class="k-Grid__col k-Grid__col--12 k-Grid__col--3@m k-Grid__col--3@l">
     <%= example 'Big items' do %>
       <%= react_component 'BulletList', props: {
         big: true,
+        items: [
+          { key: '1', item: 'Dis Manibus' },
+          { key: '2', item: 'Calpurnia Felicla' },
+          { key: '3', item: 'Germulio coniugi' },
+        ]
+      } %>
+    <% end %>
+  </div>
+
+  <div class="k-Grid__col k-Grid__col--12 k-Grid__col--3@m k-Grid__col--3@l">
+    <%= example 'Huge items' do %>
+      <%= react_component 'BulletList', props: {
+        huge: true,
         items: [
           { key: '1', item: 'Dis Manibus' },
           { key: '2', item: 'Calpurnia Felicla' },
