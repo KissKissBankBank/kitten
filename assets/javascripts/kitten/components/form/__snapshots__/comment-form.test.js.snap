@@ -112,6 +112,7 @@ exports[`<CommentForm /> should match its empty snapshot 1`] = `
               "height": "auto",
               "overflowY": "hidden",
               "padding": 30,
+              "resize": "none",
               "width": "100%",
             }
           }
