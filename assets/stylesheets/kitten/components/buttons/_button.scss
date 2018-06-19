@@ -179,6 +179,26 @@
     }
   }
 
+  // Arrow size
+  .k-Button--tiny {
+    @include k-typographyFontSize(
+      $button-step,
+      $button-tiny-line-height
+    );
+
+    min-width: $button-tiny-min-width;
+
+    &.k-Button--icon {
+      .k-Button__icon--arrow {
+        @include k-buttonPadding(
+          $button-size-tiny,
+          $arrow-width,
+          $arrow-height
+        );
+      }
+    }
+  }
+
   .k-Button--big {
     @include k-buttonBig($buttonBigOptions);
   }
