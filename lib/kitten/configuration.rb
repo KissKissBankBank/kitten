@@ -63,7 +63,6 @@ module Kitten
           id: 'buttons',
           label: 'Buttons',
           components: [
-            { path: 'components/icons/arrow-icon', name: 'Arrow' },
             { path: 'components/buttons/button', name: 'Button' },
             { path: 'components/buttons/icon-button', name: 'Icon button' },
             {
