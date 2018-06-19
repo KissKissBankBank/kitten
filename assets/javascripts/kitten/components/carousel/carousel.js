@@ -283,7 +283,8 @@ const styles = {
   },
 
   pageControl: {
-    display: 'flex',
+    display: 'none',
+    // display: 'flex',
     flexDirection: 'row',
     justifyContent: 'center',
     position: 'relative',
