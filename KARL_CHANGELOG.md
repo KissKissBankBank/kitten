@@ -6,6 +6,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Create `KarlCartRewardCard` example.
 
+## [20.17.0] - 2018-06-14
+
+No changes.
+
 ## [20.16.0] - 2018-06-06
 
 Feature:
