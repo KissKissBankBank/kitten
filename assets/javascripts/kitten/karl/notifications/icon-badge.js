@@ -8,36 +8,53 @@ import { KarlExampleTitle } from 'kitten/karl/examples/title'
 
 export const KarlIconBadge = props => (
   <Grid>
-    <GridCol col-s="3">
-      <KarlExampleTitle>With on character</KarlExampleTitle>
-      <div style={styles.badge}>
-        <IconBadge {...props}>C</IconBadge>
-      </div>
+    <GridCol>
+      <Grid>
+        <GridCol col-s="3">
+          <KarlExampleTitle>With on character</KarlExampleTitle>
+          <div style={styles.badge}>
+            <IconBadge {...props}>C</IconBadge>
+          </div>
+        </GridCol>
+
+        <GridCol col-s="3">
+          <KarlExampleTitle>With two characters</KarlExampleTitle>
+          <div style={styles.badge}>
+            <IconBadge {...props}>A+</IconBadge>
+          </div>
+        </GridCol>
+
+        <GridCol col-s="3">
+          <KarlExampleTitle>With svg</KarlExampleTitle>
+          <div style={styles.badge}>
+            <IconBadge valid {...props}>
+              <CheckedIcon style={styles.iconSvg} />
+            </IconBadge>
+          </div>
+        </GridCol>
+      </Grid>
     </GridCol>
 
-    <GridCol col-s="3">
-      <KarlExampleTitle>With two characters</KarlExampleTitle>
-      <div style={styles.badge}>
-        <IconBadge {...props}>A+</IconBadge>
-      </div>
-    </GridCol>
+    <GridCol>
+      <Grid>
+        <GridCol col-s="3">
+          <KarlExampleTitle>With big badge</KarlExampleTitle>
+          <div style={styles.badge.big}>
+            <IconBadge big {...props}>
+              A+
+            </IconBadge>
+          </div>
+        </GridCol>
 
-    <GridCol col-s="3">
-      <KarlExampleTitle>With big badge</KarlExampleTitle>
-      <div style={styles.badge.big}>
-        <IconBadge big {...props}>
-          A+
-        </IconBadge>
-      </div>
-    </GridCol>
-
-    <GridCol col-s="3">
-      <KarlExampleTitle>With svg</KarlExampleTitle>
-      <div style={styles.badge}>
-        <IconBadge valid {...props}>
-          <CheckedIcon style={styles.iconSvg} />
-        </IconBadge>
-      </div>
+        <GridCol col-s="3">
+          <KarlExampleTitle>With huge badge</KarlExampleTitle>
+          <div style={styles.badge.huge}>
+            <IconBadge huge {...props}>
+              A+
+            </IconBadge>
+          </div>
+        </GridCol>
+      </Grid>
     </GridCol>
   </Grid>
 )
@@ -49,6 +66,10 @@ const styles = {
     big: {
       width: 40,
       height: 40,
+    },
+    huge: {
+      width: 50,
+      height: 50,
     },
   },
   iconSvg: {

@@ -5,15 +5,20 @@ import COLORS from 'kitten/constants/colors-config'
 
 export class IconBadge extends Component {
   render() {
-    const { children, valid, big, ...others } = this.props
+    const { children, valid, big, huge, ...others } = this.props
 
     const styleBadge = [
       styles.badge,
       valid && styles.badge.isValid,
       big && styles.badge.big,
+      huge && styles.badge.huge,
     ]
 
-    const styleContent = [styles.content, big && styles.content.big]
+    const styleContent = [
+      styles.content,
+      big && styles.content.big,
+      huge && styles.content.huge,
+    ]
 
     return (
       <StyleRoot>
@@ -40,6 +45,11 @@ const styles = {
       minHeight: 40,
       borderRadius: 40,
     },
+    huge: {
+      minWidth: 50,
+      minHeight: 50,
+      borderRadius: 50,
+    },
     isValid: {
       backgroundColor: COLORS.valid,
     },
@@ -54,6 +64,9 @@ const styles = {
     fontSize: 12,
     lineHeight: 0,
     big: {
+      fontSize: 14,
+    },
+    huge: {
       fontSize: 14,
     },
   },
