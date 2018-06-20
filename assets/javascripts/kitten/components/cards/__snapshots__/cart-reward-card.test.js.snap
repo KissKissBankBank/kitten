@@ -93,18 +93,8 @@ exports[`<CartRewardCard /> by default matches with snapshot 1`] = `
           Custom text description
         </p>
       </div>
-      <div
-        data-radium={true}
-        style={
-          Object {
-            "marginBottom": null,
-            "marginTop": "1.25rem",
-          }
-        }
-      >
-        
-        
-      </div>
+      
+      
     </div>
   </div>
   <style
@@ -234,42 +224,32 @@ exports[`<CartRewardCard /> with some props matches with snapshot 1`] = `
           }
         }
       >
-        <div
-          data-radium={true}
-          style={
-            Object {
-              "marginBottom": null,
-              "marginTop": null,
-            }
-          }
+        <span
+          className="k-u-size-tiny k-u-weight-regular"
         >
+          Custom title bottom
           <span
-            className="k-u-size-tiny k-u-weight-regular"
+            className="k-u-size-tiny k-u-weight-light"
           >
-            Custom title bottom
-            <span
-              className="k-u-size-tiny k-u-weight-light"
-            >
-              Custom value bottom
-            </span>
+            Custom value bottom
           </span>
-        </div>
-        <div
-          data-radium={true}
-          style={
-            Object {
-              "marginBottom": null,
-              "marginTop": null,
-            }
+        </span>
+      </div>
+      <div
+        data-radium={true}
+        style={
+          Object {
+            "marginBottom": null,
+            "marginTop": "1.25rem",
           }
+        }
+      >
+        <a
+          className="k-u-color-primary1 k-u-decoration-none k-u-size-tiny k-u-weight-regular"
+          href="#"
         >
-          <a
-            className="k-u-color-primary1 k-u-decoration-none k-u-size-tiny k-u-weight-regular"
-            href="#"
-          >
-            Custom manage link bottom
-          </a>
-        </div>
+          Custom manage link bottom
+        </a>
       </div>
     </div>
   </div>

@@ -109,7 +109,7 @@ class CartRewardCardComponent extends Component {
             {textDescription}
           </Paragraph>
         </Marger>
-        <Marger top="2">{this.renderBottomContent()}</Marger>
+        {this.renderBottomContent()}
       </Marger>
     )
   }
@@ -138,7 +138,7 @@ class CartRewardCardComponent extends Component {
       <Fragment>
         {titleBottom &&
           valueBottom && (
-            <Marger>
+            <Marger top="2">
               <Text weight="regular" size="tiny">
                 {titleBottom}
                 <Text weight="light" size="tiny">
@@ -149,7 +149,7 @@ class CartRewardCardComponent extends Component {
           )}
 
         {manageLinkBottom && (
-          <Marger>
+          <Marger top="2">
             <Text
               tag="a"
               href="#"
