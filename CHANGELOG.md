@@ -4,23 +4,18 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-<<<<<<< HEAD
 - Feature: Create `CartRewardCard` component.
-- Fix: Fix `Comment` propType warning.
-=======
-- Feature: Create `BasketCard` component.
 
 ## [20.17.0] - 2018-06-14
 
 Features:
 - Create composable `withMediaQueries` hoc to `media-queries`.
-- Add custom `media-query` to `mediaQueries` hoc: 
+- Add custom `media-query` to `mediaQueries` hoc:
   `mediaQueries(Component, { myCustomViewport: '(min-width: 1440px)'})`.
-  
+
 Fixes:
 - Disable textarea resize in `CommentForm`.
 - Fix `Comment` propType warning.
->>>>>>> 4f9fdbe1542a570afb84692fb7a9ccc2aa95b842
 
 ## [20.16.0] - 2018-06-06
 
