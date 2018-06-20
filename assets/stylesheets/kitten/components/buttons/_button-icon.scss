@@ -18,6 +18,7 @@
 /// - `.k-ButtonIcon--linkedin`
 /// - `.k-ButtonIcon--instagram`
 /// - `.k-ButtonIcon--youtube`
+/// - `.k-ButtonIcon--pinterest`
 ///
 /// Available size modifiers:
 /// - `k-ButtonIcon--nano`
@@ -223,6 +224,20 @@
 
   .k-ButtonIcon--youtube {
     @include k-buttonColors('youtube');
+    @include k-buttonPadding(
+      $button-size,
+      $youtube-size,
+      $youtube-size
+    );
+
+    .k-ButtonIcon__svg {
+      width: $youtube-size;
+      height: $youtube-size;
+    }
+  }
+
+  .k-ButtonIcon--pinterest {
+    @include k-buttonColors('pinterest');
     @include k-buttonPadding(
       $button-size,
       $youtube-size,

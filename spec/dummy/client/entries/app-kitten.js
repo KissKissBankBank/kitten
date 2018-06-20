@@ -22,6 +22,7 @@ import {
   LinkedinButtonIcon,
   TwitterButtonIcon,
   YoutubeButtonIcon,
+  PinterestButtonIcon,
 } from 'kitten/components/buttons/social-button-icon'
 import {
   KarlFacebookButtonIconWords,
@@ -344,6 +345,7 @@ ReactOnRails.register({
   InstagramButtonIcon,
   LinkedinButtonIcon,
   YoutubeButtonIcon,
+  PinterestButtonIcon,
   TagButton,
   TwitterButtonIcon,
   KarlButtonAndText,
