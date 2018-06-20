@@ -6,6 +6,7 @@ const SimpleComponent = ({
   viewportIsMobile,
   viewportIsTabletOrLess,
   viewportIsSOrLess,
+  myCustomMediaQuery,
   ...props
 }) => {
   return <div title="Test me!" {...props} />
@@ -104,6 +105,25 @@ describe('mediaQueries()', () => {
       expect(wrappedComponent.prop('viewportIsMobile')).toBeFalsy()
       expect(wrappedComponent.prop('viewportIsTabletOrLess')).toBeFalsy()
       expect(wrappedComponent.prop('viewportIsSOrLess')).toBeTruthy()
+    })
+  })
+
+  describe('with custom media query', () => {
+    beforeEach(() => {
+      window.matchMedia = createMockMediaMatcher(true)
+      SimpleComponentWithMediaQueries = mediaQueries(SimpleComponent, {
+        myCustomMediaQuery: '(min-width: 1140px)',
+      })
+      component = mount(<SimpleComponentWithMediaQueries />)
+    })
+
+    it('pushes media queries props to wrapped component', () => {
+      const wrappedComponent = component.find(SimpleComponent).first()
+
+      expect(wrappedComponent.prop('myCustomMediaQuery')).toBeDefined()
+      expect(wrappedComponent.prop('viewportIsMobile')).toBeFalsy()
+      expect(wrappedComponent.prop('viewportIsTabletOrLess')).toBeFalsy()
+      expect(wrappedComponent.prop('viewportIsSOrLess')).toBeFalsy()
     })
   })
 })
