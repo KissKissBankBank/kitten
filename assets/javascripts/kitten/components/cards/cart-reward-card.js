@@ -94,14 +94,16 @@ class CartRewardCardComponent extends Component {
             {titleAmount}
           </Title>
         </Marger>
-        <Marger
-          top={viewportIsMobile ? 1 : 2}
-          bottom={viewportIsMobile ? 0.5 : 1}
-        >
-          <Text weight="bold" size="default">
-            {subtitle}
-          </Text>
-        </Marger>
+        {subtitle && (
+          <Marger
+            top={viewportIsMobile ? 1 : 2}
+            bottom={viewportIsMobile ? 0.5 : 1}
+          >
+            <Text weight="bold" size="default">
+              {subtitle}
+            </Text>
+          </Marger>
+        )}
         <Marger top={viewportIsMobile ? 0.5 : 1} bottom="2">
           <Paragraph margin={false} modifier="quaternary">
             {textDescription}

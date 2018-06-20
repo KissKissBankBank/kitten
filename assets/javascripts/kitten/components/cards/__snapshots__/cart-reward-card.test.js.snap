@@ -77,21 +77,7 @@ exports[`<CartRewardCard /> by default matches with snapshot 1`] = `
           Custom title amount
         </h1>
       </div>
-      <div
-        data-radium={true}
-        style={
-          Object {
-            "marginBottom": "0.625rem",
-            "marginTop": "1.25rem",
-          }
-        }
-      >
-        <span
-          className="k-u-size-default k-u-weight-bold"
-        >
-          
-        </span>
-      </div>
+      
       <div
         data-radium={true}
         style={
