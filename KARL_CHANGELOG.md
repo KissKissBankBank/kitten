@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Create `KarlBasketCard` example.
+- Feature: Create `KarlCartRewardCard` example.
 
 ## [20.16.0] - 2018-06-06
 

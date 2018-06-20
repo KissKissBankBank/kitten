@@ -1,16 +1,16 @@
 import React, { Fragment } from 'react'
 import Radium from 'radium'
-import { BasketCard } from 'kitten/components/cards/basket-card'
+import { CartRewardCard } from 'kitten/components/cards/cart-reward-card'
 import { Container } from 'kitten/components/grid/container'
 import { Marger } from 'kitten/components/layout/marger'
 import { KarlExampleTitle } from 'kitten/karl/examples/title'
 
-export const KarlBasketCard = () => (
+export const KarlCartRewardCard = () => (
   <Fragment>
-    <KarlExampleTitle>Basket Card custom amount</KarlExampleTitle>
+    <KarlExampleTitle>Cart Reward Card custom amount</KarlExampleTitle>
     <Container>
       <Marger bottom="2">
-        <BasketCard
+        <CartRewardCard
           titleAmount="100€"
           subtitle="Don libre"
           textDescription="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient mont"
@@ -19,10 +19,10 @@ export const KarlBasketCard = () => (
       </Marger>
     </Container>
 
-    <KarlExampleTitle>Basket Card</KarlExampleTitle>
+    <KarlExampleTitle>Cart Reward Card</KarlExampleTitle>
     <Container>
       <Marger bottom="2">
-        <BasketCard
+        <CartRewardCard
           titleAmount="100€"
           textDescription="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient mont"
           titleBottom="Livraison : "

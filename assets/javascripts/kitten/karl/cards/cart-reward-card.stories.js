@@ -3,11 +3,11 @@ import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
 import { withKnobs, text, boolean } from '@storybook/addon-knobs/react'
 import { StyleRoot } from 'radium'
-import { BasketCard } from 'kitten/components/cards/basket-card'
+import { CartRewardCard } from 'kitten/components/cards/cart-reward-card'
 import { KarlDonationInput } from 'kitten/karl/cards/donation-card'
 import { Grid, GridCol } from 'kitten/components/grid/grid'
 
-storiesOf('Cards/BasketCard', module)
+storiesOf('Cards/CartRewardCard', module)
   .addDecorator(withKnobs)
   .add(
     'default',
@@ -15,7 +15,7 @@ storiesOf('Cards/BasketCard', module)
       <StyleRoot>
         <Grid>
           <GridCol offset="1" col="8">
-            <BasketCard
+            <CartRewardCard
               titleAmount={text('Title Amount', 'For 00€')}
               subtitle={text('Subtitle', 'Don libre')}
               textDescription={text(

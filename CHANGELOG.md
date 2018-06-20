@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Create `BasketCard` component.
+- Feature: Create `CartRewardCard` component.
 - Fix: Fix `Comment` propType warning.
 
 ## [20.16.0] - 2018-06-06

@@ -14,7 +14,7 @@ import { domElementHelper } from 'kitten/helpers/dom/element-helper'
 
 const Marger = Radium(MargerBase)
 
-class BasketCardComponent extends Component {
+class CartRewardCardComponent extends Component {
   static propTypes = {
     titleAmount: PropTypes.string.isRequired,
     textDescription: PropTypes.string.isRequired,
@@ -58,7 +58,7 @@ class BasketCardComponent extends Component {
   }
 
   render() {
-    const basketStyles = [
+    const cartRewardStyles = [
       styles.card,
       this.state.isHidden && styles.card.hidden,
       { height: this.state.height },
@@ -68,7 +68,7 @@ class BasketCardComponent extends Component {
       <StyleRoot>
         <div
           ref={div => (this.container = div)}
-          style={basketStyles}
+          style={cartRewardStyles}
           onAnimationEnd={this.handleAnimationEnd}
         >
           {this.renderGarbage()}
@@ -114,7 +114,7 @@ class BasketCardComponent extends Component {
 
   renderGarbage() {
     return (
-      <div style={styles.basket}>
+      <div style={styles.cart}>
         <ButtonIcon
           type="button"
           title="Garbage Button"
@@ -170,7 +170,7 @@ const garbageButtonKeyframes = Radium.keyframes({
   '100%': { opacity: 0, height: 0 },
 })
 
-const basketAnimationClass = {
+const cartRewardAnimationClass = {
   animation: 'x .4s cubic-bezier(.895, .03, .685, .22) forwards',
   animationName: garbageButtonKeyframes,
   pointerEvents: 'none',
@@ -184,7 +184,7 @@ const styles = {
     borderColor: COLORS.line1,
     overflow: 'hidden',
 
-    hidden: basketAnimationClass,
+    hidden: cartRewardAnimationClass,
   },
 
   description: {
@@ -198,13 +198,13 @@ const styles = {
     },
   },
 
-  basket: {
+  cart: {
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'flex-end',
   },
 }
 
-export const BasketCard = mediaQueries(BasketCardComponent, {
+export const CartRewardCard = mediaQueries(CartRewardCardComponent, {
   viewportIsMobile: true,
 })
