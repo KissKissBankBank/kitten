@@ -75,6 +75,7 @@
   $linkedin-size: k-px-to-rem(14px);
   $instagram-size: k-px-to-rem(16px);
   $youtube-size: k-px-to-rem(16px);
+  $pinterest-size: k-px-to-rem(16px);
 
   // Arrow sizes
   $horizontalArrow-width: k-px-to-rem(10px);
@@ -240,13 +241,13 @@
     @include k-buttonColors('pinterest');
     @include k-buttonPadding(
       $button-size,
-      $youtube-size,
-      $youtube-size
+      $pinterest-size,
+      $pinterest-size
     );
 
     .k-ButtonIcon__svg {
-      width: $youtube-size;
-      height: $youtube-size;
+      width: $pinterest-size;
+      height: $pinterest-size;
     }
   }
 
