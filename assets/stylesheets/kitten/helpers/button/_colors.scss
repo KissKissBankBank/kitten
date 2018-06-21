@@ -418,28 +418,28 @@
     'pinterest': (
       base: (
         color: map-get($k-colors, 'background-1'),
-        border-color: #c92228,
-        background-color: #c92228,
+        border-color: #bd081c,
+        background-color: #bd081c,
       ),
       hover: (
         color: map-get($k-colors, 'background-1'),
-        border-color: #ba1319,
-        background-color: #ba1319,
+        border-color: #ae000d,
+        background-color: #ae000d,
       ),
       focus: (
         color: map-get($k-colors, 'background-1'),
-        border-color: #ba1319,
-        background-color: #ba1319,
+        border-color: #ae000d,
+        background-color: #ae000d,
       ),
       active: (
         color: map-get($k-colors, 'background-1'),
-        border-color: #ab040a,
-        background-color: #ab040a,
+        border-color: #9f0000,
+        background-color: #9f0000,
       ),
       is-selected: (
         color: map-get($k-colors, 'background-1'),
-        border-color: #ab040a,
-        background-color: #ab040a,
+        border-color: #9f0000,
+        background-color: #9f0000,
       ),
       disabled: (
         color: map-get($k-colors, 'background-1'),
