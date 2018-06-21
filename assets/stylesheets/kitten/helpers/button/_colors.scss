@@ -318,62 +318,22 @@
       base: (
         color: map-get($k-colors, 'background-1'),
         background-color: map-get($k-colors, 'font-1'),
-        background-image: radial-gradient(
-          circle at 30% 100%,
-          #fed373 9%,
-          #f15245 30%,
-          #d92e7f 62%,
-          #515ecf 85%,
-          #9b36b7
-        ),
       ),
       hover: (
         color: map-get($k-colors, 'background-1'),
         background-color: map-get($k-colors, 'font-1'),
-        background-image: radial-gradient(
-          circle at 30% 100%,
-          #efc464 9%,
-          #e24336 30%,
-          #ca1f70 62%,
-          #4c4fc0 85%,
-          #8c27a8
-        ),
       ),
       focus: (
         color: map-get($k-colors, 'background-1'),
         background-color: map-get($k-colors, 'font-1'),
-        background-image: radial-gradient(
-          circle at 30% 100%,
-          #efc464 9%,
-          #e24336 30%,
-          #ca1f70 62%,
-          #4c4fc0 85%,
-          #8c27a8
-        ),
       ),
       active: (
         color: map-get($k-colors, 'background-1'),
         background-color: map-get($k-colors, 'font-1'),
-        background-image: radial-gradient(
-          circle at 30% 100%,
-          #d1a646 9%,
-          #c42518 30%,
-          #ac0152 62%,
-          #2e31a2 85%,
-          #6e098a
-        ),
       ),
       is-selected: (
         color: map-get($k-colors, 'background-1'),
         background-color: map-get($k-colors, 'font-1'),
-        background-image: radial-gradient(
-          circle at 30% 100%,
-          #d1a646 9%,
-          #c42518 30%,
-          #ac0152 62%,
-          #2e31a2 85%,
-          #6e098a
-        ),
       ),
       disabled: (
         color: map-get($k-colors, 'background-1'),
@@ -424,5 +384,22 @@
 
   @if map-get($options, 'svg') {
     @include k-buttonSvg($colorByModifier);
+  }
+
+// Force background instagram button
+  @if $modifier == 'instagram' {
+    background: radial-gradient(
+      circle at 32% 100%,
+      #ffe17d 0%,
+      #ffcd69 10%,
+      #fa9137 28%,
+      #eb4141 42%,
+      transparent 82%
+    ),
+    linear-gradient(
+      135deg,
+      #234bd7 12%,
+      #c33cbe 58%
+    )
   }
 }
