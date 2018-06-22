@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Update margin on `ContributionCard` component.
+
 ## [20.17.0] - 2018-06-14
 
 Features:
