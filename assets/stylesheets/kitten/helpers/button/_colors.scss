@@ -402,4 +402,38 @@
       #c33cbe 58%
     )
   }
+  @if $modifier == 'instagram' {
+    &:hover,
+    &:focus {
+      background: radial-gradient(
+        circle at 32% 100%,
+        #f0d26e 0%,
+        #f0be5a 10%,
+        #eb8228 28%,
+        #dc3232 42%,
+        transparent 82%
+      ),
+      linear-gradient(
+        135deg,
+        #143cc8 12%,
+        #b42daf 58%
+      )
+    }
+    &:active,
+    &.is-selected {
+      background: radial-gradient(
+        circle at 32% 100%,
+        #e1c35f 0%,
+        #e1af4b 10%,
+        #dc7319 28%,
+        #cd2323 42%,
+        transparent 82%
+      ),
+      linear-gradient(
+        135deg,
+        #052db9 12%,
+        #a51ea0 58%
+      )
+    }
+  }
 }
