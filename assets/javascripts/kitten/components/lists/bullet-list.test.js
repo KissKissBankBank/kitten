@@ -52,4 +52,13 @@ describe('<BulletList />', () => {
       expect(item.hasClass('k-BulletList__item--big')).toBe(true)
     })
   })
+
+  describe('with huge prop', () => {
+    const bulletList = shallow(<BulletList items={items} huge />)
+
+    it('has a good class', () => {
+      const item = bulletList.children().first()
+      expect(item.hasClass('k-BulletList__item--huge')).toBe(true)
+    })
+  })
 })
