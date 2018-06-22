@@ -59,18 +59,22 @@ export const KarlIconBadge = props => (
   </Grid>
 )
 
+const bigSize = {
+  width: 40,
+  height: 40,
+}
+
+const hugeSize = {
+  width: 50,
+  height: 50,
+}
+
 const styles = {
   badge: {
     width: 30,
     height: 30,
-    big: {
-      width: 40,
-      height: 40,
-    },
-    huge: {
-      width: 50,
-      height: 50,
-    },
+    big: bigSize,
+    huge: hugeSize,
   },
   iconSvg: {
     display: 'block',

@@ -22,7 +22,7 @@ export class IconBadge extends Component {
 
     return (
       <StyleRoot>
-        <span style={styleBadge}>
+        <span style={styleBadge} {...others}>
           <span style={styleContent}>{children}</span>
         </span>
       </StyleRoot>
@@ -30,26 +30,30 @@ export class IconBadge extends Component {
   }
 }
 
+const bigSize = {
+  minWidth: 40,
+  minHeight: 40,
+  borderRadius: 40,
+}
+
+const hugeSize = {
+  minWidth: 50,
+  minHeight: 50,
+  borderRadius: 50,
+}
+
 const styles = {
   badge: {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
+    padding: 0,
     minWidth: 30,
     minHeight: 30,
-    padding: 0,
     borderRadius: 30,
     backgroundColor: COLORS.primary1,
-    big: {
-      minWidth: 40,
-      minHeight: 40,
-      borderRadius: 40,
-    },
-    huge: {
-      minWidth: 50,
-      minHeight: 50,
-      borderRadius: 50,
-    },
+    big: bigSize,
+    huge: hugeSize,
     isValid: {
       backgroundColor: COLORS.valid,
     },
