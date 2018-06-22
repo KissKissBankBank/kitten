@@ -7,7 +7,7 @@ exports[`<ContributionCard /> by default matches with snapshot 1`] = `
     Object {
       "borderColor": "#eee",
       "borderStyle": "solid",
-      "borderWidth": "2px",
+      "borderWidth": 2,
     }
   }
 >
@@ -15,18 +15,18 @@ exports[`<ContributionCard /> by default matches with snapshot 1`] = `
     style={
       Object {
         "marginBottom": "3.125rem",
-        "marginTop": null,
+        "marginTop": "3.125rem",
       }
     }
   >
     <div
-      className="rmq-5aa2f196 rmq-e60873c0 rmq-ce79a9e0 k-Grid"
+      className="rmq-5aa2f196 rmq-5b3da7a1 rmq-ce79a9e0 k-Grid"
       data-radium={true}
       disabled={false}
       style={
         Object {
-          "paddingLeft": "20px",
-          "paddingRight": "20px",
+          "paddingLeft": 20,
+          "paddingRight": 20,
         }
       }
     >
@@ -37,52 +37,43 @@ exports[`<ContributionCard /> by default matches with snapshot 1`] = `
         <div
           style={
             Object {
-              "marginBottom": null,
-              "marginTop": "3.125rem",
+              "marginBottom": "1.25rem",
+              "marginTop": null,
             }
           }
         >
-          <div
-            style={
-              Object {
-                "marginBottom": "1.25rem",
-                "marginTop": null,
-              }
-            }
+          <h1
+            className="k-Title k-Title--secondary k-Title--withoutMargin k-Title--italic"
           >
-            <h1
-              className="k-Title k-Title--secondary k-Title--withoutMargin k-Title--italic"
-            >
-              Custom title mount
-            </h1>
-          </div>
-          <div
-            style={
-              Object {
-                "marginBottom": "2.5rem",
-                "marginTop": "1.25rem",
-              }
+            Custom title mount
+          </h1>
+        </div>
+        <div
+          style={
+            Object {
+              "marginBottom": "2.5rem",
+              "marginTop": "1.25rem",
             }
-          >
-            <span
-              className="k-HorizontalStroke k-HorizontalStroke--big"
-            />
-          </div>
-          
-          <div
-            style={
-              Object {
-                "marginBottom": null,
-                "marginTop": "2.5rem",
-              }
+          }
+        >
+          <span
+            className="k-HorizontalStroke k-HorizontalStroke--big"
+          />
+        </div>
+        
+        <div
+          style={
+            Object {
+              "marginBottom": null,
+              "marginTop": "2.5rem",
             }
+          }
+        >
+          <p
+            className="k-Paragraph k-Paragraph--tertiary k-Paragraph--withoutMargin"
           >
-            <p
-              className="k-Paragraph k-Paragraph--tertiary k-Paragraph--withoutMargin"
-            >
-              Custom text description
-            </p>
-          </div>
+            Custom text description
+          </p>
         </div>
       </div>
       
@@ -93,7 +84,7 @@ exports[`<ContributionCard /> by default matches with snapshot 1`] = `
       Object {
         "__html": "@media (min-width: 640px){ .rmq-5aa2f196{padding-left: 50px !important;
 padding-right: 50px !important;}}
-@media (min-width: 768px){ .rmq-e60873c0{padding-left: 50px !important;
+@media (min-width: 768px){ .rmq-5b3da7a1{padding-left: 40px !important;
 padding-right: 0 !important;}}
 @media (min-width: 1080px){ .rmq-ce79a9e0{padding-left: 115px !important;
 padding-right: 0 !important;}}",
@@ -110,7 +101,7 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
     Object {
       "borderColor": "#eee",
       "borderStyle": "solid",
-      "borderWidth": "2px",
+      "borderWidth": 2,
     }
   }
 >
@@ -118,18 +109,18 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
     style={
       Object {
         "marginBottom": "3.125rem",
-        "marginTop": null,
+        "marginTop": "3.125rem",
       }
     }
   >
     <div
-      className="rmq-5aa2f196 rmq-e60873c0 rmq-ce79a9e0 k-Grid"
+      className="rmq-5aa2f196 rmq-5b3da7a1 rmq-ce79a9e0 k-Grid"
       data-radium={true}
       disabled={false}
       style={
         Object {
-          "paddingLeft": "20px",
-          "paddingRight": "20px",
+          "paddingLeft": 20,
+          "paddingRight": 20,
         }
       }
     >
@@ -140,65 +131,56 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
         <div
           style={
             Object {
-              "marginBottom": null,
-              "marginTop": "3.125rem",
+              "marginBottom": "1.25rem",
+              "marginTop": null,
             }
           }
         >
-          <div
-            style={
-              Object {
-                "marginBottom": "1.25rem",
-                "marginTop": null,
-              }
-            }
+          <h1
+            className="k-Title k-Title--secondary k-Title--withoutMargin k-Title--italic"
           >
-            <h1
-              className="k-Title k-Title--secondary k-Title--withoutMargin k-Title--italic"
-            >
-              Custom title mount
-            </h1>
-          </div>
-          <div
-            style={
-              Object {
-                "marginBottom": "2.5rem",
-                "marginTop": "1.25rem",
-              }
+            Custom title mount
+          </h1>
+        </div>
+        <div
+          style={
+            Object {
+              "marginBottom": "2.5rem",
+              "marginTop": "1.25rem",
             }
-          >
-            <span
-              className="k-HorizontalStroke k-HorizontalStroke--big"
-            />
-          </div>
-          <div
-            style={
-              Object {
-                "marginBottom": "0.625rem",
-                "marginTop": "2.5rem",
-              }
+          }
+        >
+          <span
+            className="k-HorizontalStroke k-HorizontalStroke--big"
+          />
+        </div>
+        <div
+          style={
+            Object {
+              "marginBottom": "0.625rem",
+              "marginTop": "2.5rem",
             }
+          }
+        >
+          <p
+            className="k-u-size-huge k-u-weight-bold"
           >
-            <p
-              className="k-u-size-huge k-u-weight-bold"
-            >
-              Custom title description
-            </p>
-          </div>
-          <div
-            style={
-              Object {
-                "marginBottom": null,
-                "marginTop": "0.625rem",
-              }
+            Custom title description
+          </p>
+        </div>
+        <div
+          style={
+            Object {
+              "marginBottom": null,
+              "marginTop": "0.625rem",
             }
+          }
+        >
+          <p
+            className="k-Paragraph k-Paragraph--tertiary k-Paragraph--withoutMargin"
           >
-            <p
-              className="k-Paragraph k-Paragraph--tertiary k-Paragraph--withoutMargin"
-            >
-              Custom text description
-            </p>
-          </div>
+            Custom text description
+          </p>
         </div>
         <div
           style={
@@ -331,7 +313,7 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
                 style={
                   Object {
                     "backgroundColor": "#61d079",
-                    "marginRight": "10px",
+                    "marginRight": 10,
                   }
                 }
               >
@@ -383,8 +365,9 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
         </div>
       </div>
       <div
-        className="k-Grid__col--12 k-Grid__col--4@m k-Grid__col--offset-1@m"
+        className="rmq-cb55d35a rmq-fb3d6d8b k-Grid__col--12 k-Grid__col--4@m k-Grid__col--offset-1@m"
         data-radium={true}
+        style={Object {}}
       >
         <img
           alt="Image alt"
@@ -404,11 +387,13 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
       Object {
         "__html": "@media (min-width: 640px){ .rmq-5aa2f196{padding-left: 50px !important;
 padding-right: 50px !important;}}
-@media (min-width: 768px){ .rmq-e60873c0{padding-left: 50px !important;
+@media (min-width: 768px){ .rmq-5b3da7a1{padding-left: 40px !important;
 padding-right: 0 !important;}}
 @media (min-width: 1080px){ .rmq-ce79a9e0{padding-left: 115px !important;
 padding-right: 0 !important;}}
-@media (max-width: 767px){ .rmq-2c87bfe9{width: 100% !important;}}",
+@media (max-width: 767px){ .rmq-2c87bfe9{width: 100% !important;}}
+@media (min-width: 768px){ .rmq-cb55d35a{padding-right: 40px !important;}}
+@media (min-width: 1080px){ .rmq-fb3d6d8b{padding-right: 50px !important;}}",
       }
     }
   />
