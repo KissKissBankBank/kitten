@@ -11,7 +11,7 @@ exports[`<CartRewardCard /> by default matches with snapshot 1`] = `
       Object {
         "borderColor": "#eee",
         "borderStyle": "solid",
-        "borderWidth": "2px",
+        "borderWidth": 2,
         "height": "auto",
         "overflow": "hidden",
       }
@@ -119,7 +119,7 @@ exports[`<CartRewardCard /> with some props matches with snapshot 1`] = `
       Object {
         "borderColor": "#eee",
         "borderStyle": "solid",
-        "borderWidth": "2px",
+        "borderWidth": 2,
         "height": "auto",
         "overflow": "hidden",
       }
@@ -227,11 +227,11 @@ exports[`<CartRewardCard /> with some props matches with snapshot 1`] = `
         <span
           className="k-u-size-tiny k-u-weight-regular"
         >
-          Custom title bottom
+          Custom shipping title
           <span
             className="k-u-size-tiny k-u-weight-light"
           >
-            Custom value bottom
+            Custom shipping value
           </span>
         </span>
       </div>
@@ -248,7 +248,7 @@ exports[`<CartRewardCard /> with some props matches with snapshot 1`] = `
           className="k-u-color-primary1 k-u-decoration-none k-u-size-tiny k-u-weight-regular"
           href="#"
         >
-          Custom manage link bottom
+          Custom shipping manage link
         </a>
       </div>
     </div>
