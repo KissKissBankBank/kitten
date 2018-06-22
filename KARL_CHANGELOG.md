@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Create `KarlStarButton` example.
+- Fix: Update `KarlHeaderTour1`and `KarlHeaderTour2` with new `ArrowIcon` component.
 
 ## [20.17.0] - 2018-06-14
 

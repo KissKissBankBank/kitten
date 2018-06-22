@@ -5,14 +5,18 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Create `StarIcon` component.
+- Fix: Update svg `ArrowIcon` component.
+- Fix: Update `ArrowIcon`on `Pagination` component.
+- Breaking changes: Add `huge` size and replace `big` by `huge` size on `BulletList`.
+- Fix: Update margin on `ContributionCard` component.
 
 ## [20.17.0] - 2018-06-14
 
 Features:
 - Create composable `withMediaQueries` hoc to `media-queries`.
-- Add custom `media-query` to `mediaQueries` hoc: 
+- Add custom `media-query` to `mediaQueries` hoc:
   `mediaQueries(Component, { myCustomViewport: '(min-width: 1440px)'})`.
-  
+
 Fixes:
 - Disable textarea resize in `CommentForm`.
 - Fix `Comment` propType warning.
