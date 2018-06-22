@@ -14,7 +14,7 @@ export const KarlCartRewardCard = () => (
           titleAmount="100€"
           subtitle="Don libre"
           textDescription="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient mont"
-          manageLinkBottom="Modifier le montant"
+          shippingManageLink="Modifier le montant"
         />
       </Marger>
     </Container>
@@ -25,8 +25,8 @@ export const KarlCartRewardCard = () => (
         <CartRewardCard
           titleAmount="100€"
           textDescription="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient mont"
-          titleBottom="Livraison : "
-          valueBottom="Janvier 2018"
+          shippingTitle="Livraison : "
+          shippingValue="Janvier 2018"
         />
       </Marger>
     </Container>

@@ -20,18 +20,18 @@ class CartRewardCardComponent extends Component {
     textDescription: PropTypes.string.isRequired,
     titleTag: PropTypes.string,
     subtitle: PropTypes.string,
-    titleBottom: PropTypes.string,
-    valueBottom: PropTypes.string,
-    manageLinkBottom: PropTypes.string,
+    shippingTitle: PropTypes.string,
+    shippingValue: PropTypes.string,
+    shippingManageLink: PropTypes.string,
     onClose: PropTypes.func,
   }
 
   static defaultProps = {
     titleTag: 'h1',
     subtitle: '',
-    titleBottom: '',
-    valueBottom: '',
-    manageLinkBottom: '',
+    shippingTitle: '',
+    shippingValue: '',
+    shippingManageLink: '',
     onClose: () => {},
   }
 
@@ -67,7 +67,9 @@ class CartRewardCardComponent extends Component {
     return (
       <StyleRoot>
         <div
-          ref={div => (this.container = div)}
+          ref={div => {
+            this.container = div
+          }}
           style={cartRewardStyles}
           onAnimationEnd={this.handleAnimationEnd}
         >
@@ -132,23 +134,23 @@ class CartRewardCardComponent extends Component {
   }
 
   renderBottomContent() {
-    const { titleBottom, valueBottom, manageLinkBottom } = this.props
+    const { shippingTitle, shippingValue, shippingManageLink } = this.props
 
     return (
       <Fragment>
-        {titleBottom &&
-          valueBottom && (
+        {shippingTitle &&
+          shippingValue && (
             <Marger top="2">
               <Text weight="regular" size="tiny">
-                {titleBottom}
+                {shippingTitle}
                 <Text weight="light" size="tiny">
-                  {valueBottom}
+                  {shippingValue}
                 </Text>
               </Text>
             </Marger>
           )}
 
-        {manageLinkBottom && (
+        {shippingManageLink && (
           <Marger top="2">
             <Text
               tag="a"
@@ -158,7 +160,7 @@ class CartRewardCardComponent extends Component {
               weight="regular"
               size="tiny"
             >
-              {manageLinkBottom}
+              {shippingManageLink}
             </Text>
           </Marger>
         )}
@@ -181,7 +183,7 @@ const cartRewardAnimationClass = {
 
 const styles = {
   card: {
-    borderWidth: '2px',
+    borderWidth: 2,
     borderStyle: 'solid',
     borderColor: COLORS.line1,
     overflow: 'hidden',

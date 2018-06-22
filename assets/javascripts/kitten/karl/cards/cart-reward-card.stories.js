@@ -22,10 +22,10 @@ storiesOf('Cards/CartRewardCard', module)
                 'Text description',
                 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient mont',
               )}
-              titleBottom={text('Title bottom', 'Livraison : ')}
-              valueBottom={text('Value bottom', 'Janvier 2018')}
-              manageLinkBottom={text(
-                'Manage link bottom',
+              shippingTitle={text('Shipping Title', 'Livraison : ')}
+              shippingValue={text('Shipping Value', 'Janvier 2018')}
+              shippingManageLink={text(
+                'Shipping manage link',
                 'Modifier le montant',
               )}
             />
