@@ -317,23 +317,18 @@
     'instagram': (
       base: (
         color: map-get($k-colors, 'background-1'),
-        background-color: map-get($k-colors, 'font-1'),
       ),
       hover: (
         color: map-get($k-colors, 'background-1'),
-        background-color: map-get($k-colors, 'font-1'),
       ),
       focus: (
         color: map-get($k-colors, 'background-1'),
-        background-color: map-get($k-colors, 'font-1'),
       ),
       active: (
         color: map-get($k-colors, 'background-1'),
-        background-color: map-get($k-colors, 'font-1'),
       ),
       is-selected: (
         color: map-get($k-colors, 'background-1'),
-        background-color: map-get($k-colors, 'font-1'),
       ),
       disabled: (
         color: map-get($k-colors, 'background-1'),
