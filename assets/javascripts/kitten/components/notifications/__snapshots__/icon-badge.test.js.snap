@@ -9,12 +9,12 @@ exports[`<IconBadge /> by default matches with snapshot 1`] = `
     style={
       Object {
         "alignItems": "center",
-        "backgroundColor": "#19b4fa",
-        "borderRadius": 30,
+        "backgroundColor": "#61d079",
+        "borderRadius": 50,
         "display": "flex",
         "justifyContent": "center",
-        "minHeight": 30,
-        "minWidth": 30,
+        "minHeight": 50,
+        "minWidth": 50,
         "padding": 0,
       }
     }
@@ -26,7 +26,7 @@ exports[`<IconBadge /> by default matches with snapshot 1`] = `
           "color": "#fff",
           "fill": "#fff",
           "flexBasis": 11,
-          "fontSize": 12,
+          "fontSize": 14,
           "fontWeight": "bold",
           "lineHeight": 0,
           "textAlign": "center",

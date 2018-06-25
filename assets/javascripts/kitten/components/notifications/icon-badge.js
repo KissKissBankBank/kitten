@@ -22,7 +22,7 @@ export class IconBadge extends Component {
 
     return (
       <StyleRoot>
-        <span style={styleBadge}>
+        <span {...others} style={styleBadge}>
           <span style={styleContent}>{children}</span>
         </span>
       </StyleRoot>

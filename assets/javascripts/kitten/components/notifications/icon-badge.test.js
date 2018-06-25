@@ -8,7 +8,7 @@ describe('<IconBadge />', () => {
   describe('by default', () => {
     beforeEach(() => {
       component = renderer
-        .create(<IconBadge children="Custom children" />)
+        .create(<IconBadge children="Custom children" valid big huge />)
         .toJSON()
     })
 
