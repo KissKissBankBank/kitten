@@ -321,8 +321,8 @@ const styles = {
           alignSelf: 'center',
           margin: '0',
           padding: '0',
-          width: '10px',
-          height: '10px',
+          width: '6px',
+          height: '6px',
           pointerEvents: 'none',
           hover: {
             fill: COLORS.primary1,
