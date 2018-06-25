@@ -322,3 +322,9 @@ $ bundle exec rake kitten_release
 - Update
   [our private project kanban](https://github.com/orgs/KissKissBankBank/projects/5):
   move cards that are released from `done` column to `released` column.
+
+### Storybook
+- To release `Storybook` simply run this command:
+```sh
+yarn deploy-storybook
+```
