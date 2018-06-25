@@ -64,29 +64,26 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
           title="Previous page"
         >
           <svg
-            className="k-ArrowIcon--left"
+            className="k-ArrowIcon k-ArrowIcon--left"
             data-radium={true}
             style={
               Object {
                 "alignSelf": "center",
-                "height": "10px",
+                "height": "6px",
                 "margin": "0",
                 "padding": "0",
                 "pointerEvents": "none",
-                "width": "10px",
+                "width": "6px",
               }
             }
-            viewBox="0 0 10 10"
+            viewBox="0 0 6 6"
             xmlns="http://www.w3.org/2000/svg"
           >
             <title>
               Arrow
             </title>
             <path
-              d="M7.828,5L6.414,6.413L2.172,2.172l1.414-1.415L7.828,5z"
-            />
-            <path
-              d="M7.828,5L3.586,9.243L2.172,7.827l4.242-4.241L7.828,5z"
+              d="M6 0H0v6h2V2h4z"
             />
           </svg>
         </a>
@@ -397,29 +394,26 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
           title="Next page"
         >
           <svg
-            className="k-ArrowIcon--right"
+            className="k-ArrowIcon k-ArrowIcon--right"
             data-radium={true}
             style={
               Object {
                 "alignSelf": "center",
-                "height": "10px",
+                "height": "6px",
                 "margin": "0",
                 "padding": "0",
                 "pointerEvents": "none",
-                "width": "10px",
+                "width": "6px",
               }
             }
-            viewBox="0 0 10 10"
+            viewBox="0 0 6 6"
             xmlns="http://www.w3.org/2000/svg"
           >
             <title>
               Arrow
             </title>
             <path
-              d="M7.828,5L6.414,6.413L2.172,2.172l1.414-1.415L7.828,5z"
-            />
-            <path
-              d="M7.828,5L3.586,9.243L2.172,7.827l4.242-4.241L7.828,5z"
+              d="M6 0H0v6h2V2h4z"
             />
           </svg>
         </a>

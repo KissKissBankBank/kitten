@@ -64,7 +64,7 @@
 
   // Sizes
   $cross-size: k-px-to-rem(8px);
-  $nano-size: k-px-to-rem(9px);
+  $nano-size: k-px-to-rem(6px);
   $checked-nano-size: k-px-to-rem(10px);
   $heart-size: k-px-to-rem(14px);
   $signup-size: k-px-to-rem(18px);
@@ -78,10 +78,10 @@
   $pinterest-size: k-px-to-rem(16px);
 
   // Arrow sizes
-  $horizontalArrow-width: k-px-to-rem(10px);
-  $horizontalArrow-height: k-px-to-rem(7px);
-  $verticalArrow-width: k-px-to-rem(9px);
-  $verticalArrow-height: k-px-to-rem(12px);
+  $horizontalArrow-width: k-px-to-rem(6px);
+  $horizontalArrow-height: k-px-to-rem(6px);
+  $verticalArrow-width: k-px-to-rem(6px);
+  $verticalArrow-height: k-px-to-rem(6px);
 
   // Button radius
   // Chrome forced a default `border-radius: 4px`, we have to set it to 0px.

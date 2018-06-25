@@ -73,6 +73,12 @@
   .k-BulletList__item--big {
     margin-top: k-px-to-rem(10px);
     margin-bottom: k-px-to-rem(10px);
+    @include k-typographyFontSize(1);
+  }
+
+  .k-BulletList__item--huge {
+    margin-top: k-px-to-rem(10px);
+    margin-bottom: k-px-to-rem(10px);
     @include k-typographyFontSize(2);
   }
 
