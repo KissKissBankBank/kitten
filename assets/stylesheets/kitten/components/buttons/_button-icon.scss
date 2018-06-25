@@ -68,6 +68,7 @@
   $checked-nano-size: k-px-to-rem(10px);
   $heart-size: k-px-to-rem(14px);
   $signup-size: k-px-to-rem(18px);
+  $star-size: k-px-to-rem(17px);
 
   // Social sizes
   $facebook-size: k-px-to-rem(14px);
@@ -341,6 +342,15 @@
     .k-ButtonIcon__svg {
       width: $cross-size;
       height: $cross-size;
+    }
+  }
+
+  .k-ButtonIcon--star {
+    @include k-buttonPadding($button-size, $star-size, $star-size);
+
+    .k-ButtonIcon__svg {
+      width: $star-size;
+      height: $star-size;
     }
   }
 
