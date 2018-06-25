@@ -134,7 +134,12 @@ class CartRewardCardComponent extends Component {
   }
 
   renderBottomContent() {
-    const { shippingTitle, shippingValue, shippingManageLink } = this.props
+    const {
+      shippingTitle,
+      shippingValue,
+      shippingManageLink,
+      href,
+    } = this.props
 
     return (
       <Fragment>
@@ -154,7 +159,7 @@ class CartRewardCardComponent extends Component {
           <Marger top="2">
             <Text
               tag="a"
-              href="#"
+              href={href}
               color="primary1"
               decoration="none"
               weight="regular"
