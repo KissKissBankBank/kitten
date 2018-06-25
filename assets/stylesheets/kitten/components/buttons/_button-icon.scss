@@ -386,11 +386,7 @@
   }
 
   .k-ButtonIcon--star {
-    @include k-buttonPadding(
-      $button-size,
-      $star-size,
-      $star-size
-    );
+    @include k-buttonPadding($button-size, $star-size, $star-size);
 
     .k-ButtonIcon__svg {
       width: $star-size;
