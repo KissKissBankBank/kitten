@@ -381,23 +381,23 @@
     @include k-buttonSvg($colorByModifier);
   }
 
-// Force background instagram button
+  // Force background instagram button
   @if $modifier == 'instagram' {
-    background: radial-gradient(
-      circle at 32% 100%,
-      #ffe17d 0%,
-      #ffcd69 10%,
-      #fa9137 28%,
-      #eb4141 42%,
-      transparent 82%
-    ),
-    linear-gradient(
-      135deg,
-      #234bd7 12%,
-      #c33cbe 58%
-    )
-  }
-  @if $modifier == 'instagram' {
+    & {
+      background: radial-gradient(
+        circle at 32% 100%,
+        #ffe17d 0%,
+        #ffcd69 10%,
+        #fa9137 28%,
+        #eb4141 42%,
+        transparent 82%
+      ),
+      linear-gradient(
+        135deg,
+        #234bd7 12%,
+        #c33cbe 58%
+      )
+    }
     &:hover,
     &:focus {
       background: radial-gradient(
