@@ -196,7 +196,9 @@
   .k-ButtonIcon--instagram {
     @include k-buttonColors('instagram');
     @include k-buttonPadding(
-      $button-size-with-border, $instagram-size, $instagram-size
+      $button-size-with-border,
+      $instagram-size,
+      $instagram-size,
     );
 
     .k-ButtonIcon__svg {
@@ -287,7 +289,9 @@
   .k-ButtonIcon--dropdown,
   .k-ButtonIcon--horizontalArrow {
     @include k-buttonPadding(
-      $button-size-tiny, $horizontalArrow-width, $horizontalArrow-height
+      $button-size-tiny,
+      $horizontalArrow-width,
+      $horizontalArrow-height,
     );
 
     .k-ButtonIcon__svg {
@@ -298,7 +302,9 @@
 
   .k-ButtonIcon--verticalArrow {
     @include k-buttonPadding(
-      $button-size-tiny, $verticalArrow-width, $verticalArrow-height
+      $button-size-tiny,
+      $verticalArrow-width,
+      $verticalArrow-height,
     );
 
     .k-ButtonIcon__svg {
@@ -309,7 +315,9 @@
 
   .k-ButtonIcon--checked--nano {
     @include k-buttonPadding(
-      $button-size-nano, $checked-nano-size, $checked-nano-size
+      $button-size-nano,
+      $checked-nano-size,
+      $checked-nano-size,
     );
 
     .k-ButtonIcon__svg {
