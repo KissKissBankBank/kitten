@@ -65,10 +65,9 @@ export class TourPopover extends React.Component {
         <svg
           className="k-Button__icon"
           xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 10 10"
+          viewBox="0 0 6 6"
         >
-          <path d="M7.828,5L6.414,6.413L2.172,2.172l1.414-1.415L7.828,5z" />
-          <path d="M7.828,5L3.586,9.243L2.172,7.827l4.242-4.241L7.828,5z" />
+          <path d="M6 0H0v6h2V2h4z" />
         </svg>
       </button>
     )
@@ -97,10 +96,10 @@ export class TourPopover extends React.Component {
         <svg
           className="k-Button__icon--tiny"
           xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 10 10"
+          viewBox="0 0 6 6"
+          fill="#fff"
         >
-          <path d="M2.2,5l1.4-1.4l4.2,4.2L6.4,9.2L2.2,5z" />
-          <path d="M2.2,5l4.2-4.2l1.4,1.4L3.6,6.4L2.2,5z" />
+          <path d="M6 0H0v6h2V2h4z" />
         </svg>
         {this.props.buttons.prev.label}
       </button>

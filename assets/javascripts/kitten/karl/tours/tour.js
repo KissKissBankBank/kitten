@@ -51,7 +51,10 @@ export const KarlHeaderTour1 = props => (
               icon
               disabled
             >
-              <ArrowIcon direction="left" className="k-Button__icon" />
+              <ArrowIcon
+                direction="left"
+                className="k-Button__icon k-Button__icon--arrow"
+              />
               Back
             </Button>
             <Button
@@ -66,7 +69,7 @@ export const KarlHeaderTour1 = props => (
               iconOnRight
             >
               Next
-              <ArrowIcon className="k-Button__icon" />
+              <ArrowIcon className="k-Button__icon k-Button__icon--arrow" />
             </Button>
           </div>
         </div>
@@ -118,7 +121,10 @@ export const KarlHeaderTour2 = props => (
               size="tiny"
               icon
             >
-              <ArrowIcon direction="left" className="k-Button__icon" />
+              <ArrowIcon
+                direction="left"
+                className="k-Button__icon k-Button__icon--arrow"
+              />
               Back
             </Button>
             <Button
@@ -134,7 +140,7 @@ export const KarlHeaderTour2 = props => (
               iconOnRight
             >
               Next
-              <ArrowIcon className="k-Button__icon" />
+              <ArrowIcon className="k-Button__icon k-Button__icon--arrow" />
             </Button>
           </div>
         </div>
