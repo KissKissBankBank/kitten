@@ -22,7 +22,8 @@ class CartRewardCardComponent extends Component {
     subtitle: PropTypes.string,
     shippingTitle: PropTypes.string,
     shippingValue: PropTypes.string,
-    shippingManageLink: PropTypes.string,
+    updateAmount: PropTypes.string,
+    updateAmountLink: PropTypes.string,
     onClose: PropTypes.func,
   }
 
@@ -31,7 +32,8 @@ class CartRewardCardComponent extends Component {
     subtitle: '',
     shippingTitle: '',
     shippingValue: '',
-    shippingManageLink: '',
+    updateAmount: '',
+    updateAmountLink: '',
     onClose: () => {},
   }
 
@@ -137,8 +139,8 @@ class CartRewardCardComponent extends Component {
     const {
       shippingTitle,
       shippingValue,
-      shippingManageLink,
-      href,
+      updateAmount,
+      updateAmountLink,
     } = this.props
 
     return (
@@ -155,17 +157,17 @@ class CartRewardCardComponent extends Component {
             </Marger>
           )}
 
-        {shippingManageLink && (
+        {updateAmount && (
           <Marger top="2">
             <Text
               tag="a"
-              href={href}
+              href={updateAmountLink}
               color="primary1"
               decoration="none"
               weight="regular"
               size="tiny"
             >
-              {shippingManageLink}
+              {updateAmount}
             </Text>
           </Marger>
         )}

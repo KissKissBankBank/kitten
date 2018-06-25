@@ -24,10 +24,7 @@ storiesOf('Cards/CartRewardCard', module)
               )}
               shippingTitle={text('Shipping Title', 'Livraison : ')}
               shippingValue={text('Shipping Value', 'Janvier 2018')}
-              shippingManageLink={text(
-                'Shipping manage link',
-                'Modifier le montant',
-              )}
+              updateAmount={text('Update amount', 'Modifier le montant')}
             />
           </GridCol>
         </Grid>

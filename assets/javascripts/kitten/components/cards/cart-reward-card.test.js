@@ -48,7 +48,8 @@ describe('<CartRewardCard />', () => {
             subtitle="Custom subtitle"
             shippingTitle="Custom shipping title"
             shippingValue="Custom shipping value"
-            shippingManageLink="Custom shipping manage link"
+            updateAmount="Custom amount"
+            updateAmountLink="Custom amount link"
           />,
         )
         .toJSON()
