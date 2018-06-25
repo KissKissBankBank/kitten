@@ -246,7 +246,7 @@ exports[`<CartRewardCard /> with some props matches with snapshot 1`] = `
       >
         <a
           className="k-u-color-primary1 k-u-decoration-none k-u-size-tiny k-u-weight-regular"
-          href="#"
+          href={undefined}
         >
           Custom shipping manage link
         </a>
