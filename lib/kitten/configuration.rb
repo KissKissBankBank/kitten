@@ -91,6 +91,10 @@ module Kitten
               path: 'components/buttons/garbage-button',
               name: 'Garbage button',
             },
+            {
+              path: 'components/buttons/star-button',
+              name: 'Star button',
+            },
           ],
         },
         {
