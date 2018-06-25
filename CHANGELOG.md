@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Create `StarIcon` component.
 - Fix: Update `renderImage` margin on `ContributionCard` component.
 - Fix: Update svg `ArrowIcon` component.
 - Fix: Update `ArrowIcon`on `Pagination` component.
