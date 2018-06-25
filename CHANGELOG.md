@@ -5,10 +5,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add `big` and `huge` props on `IconBadge` component.
+- Feature: Add `PinterestButtonIcon` and `PinterestIcon` components.
+- Feature: Create `StarIcon` component.
+- Fix: Update `renderImage` margin on `ContributionCard` component.
 - Fix: Update svg `ArrowIcon` component.
 - Fix: Update `ArrowIcon`on `Pagination` component.
 - Breaking changes: Add `huge` size and replace `big` by `huge` size on `BulletList`.
 - Fix: Update margin on `ContributionCard` component.
+- Fix: Update `Instagram ButtonIcon` gradient.
 
 ## [20.17.0] - 2018-06-14
 

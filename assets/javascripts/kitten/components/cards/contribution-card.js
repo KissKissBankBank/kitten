@@ -119,7 +119,9 @@ class ContributionCardComponent extends Component {
             </GridCol>
             {imageProps.src && (
               <GridCol col-m="4" offset-m="1" style={styles.card.image}>
-                {this.renderImage()}
+                <Marger bottom={!myContribution ? 2 : null}>
+                  {this.renderImage()}
+                </Marger>
               </GridCol>
             )}
           </Grid>
