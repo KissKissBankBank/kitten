@@ -12,7 +12,7 @@ const Text = Radium(TextBase)
 
 class CommentComponent extends Component {
   static propTypes = {
-    text: PropTypes.string.isRequired,
+    text: PropTypes.node.isRequired,
     ownerName: PropTypes.string.isRequired,
     avatarImgProps: PropTypes.object.isRequired,
     commentDate: PropTypes.string.isRequired,
