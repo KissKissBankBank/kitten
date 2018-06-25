@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Update `renderImage` margin on `ContributionCard` component.
 - Fix: Update svg `ArrowIcon` component.
 - Fix: Update `ArrowIcon`on `Pagination` component.
 - Breaking changes: Add `huge` size and replace `big` by `huge` size on `BulletList`.
