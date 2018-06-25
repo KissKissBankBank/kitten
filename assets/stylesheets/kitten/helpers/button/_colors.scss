@@ -369,6 +369,39 @@
         background-color: map-get($k-colors, 'line-2'),
       ),
     ),
+
+    'pinterest': (
+      base: (
+        color: map-get($k-colors, 'background-1'),
+        border-color: #bd081c,
+        background-color: #bd081c,
+      ),
+      hover: (
+        color: map-get($k-colors, 'background-1'),
+        border-color: #ae000d,
+        background-color: #ae000d,
+      ),
+      focus: (
+        color: map-get($k-colors, 'background-1'),
+        border-color: #ae000d,
+        background-color: #ae000d,
+      ),
+      active: (
+        color: map-get($k-colors, 'background-1'),
+        border-color: #9f0000,
+        background-color: #9f0000,
+      ),
+      is-selected: (
+        color: map-get($k-colors, 'background-1'),
+        border-color: #9f0000,
+        background-color: #9f0000,
+      ),
+      disabled: (
+        color: map-get($k-colors, 'background-1'),
+        border-color: map-get($k-colors, 'line-2'),
+        background-color: map-get($k-colors, 'line-2'),
+      ),
+    ),
   );
 
   $colorByModifier: map-get($colors, $modifier);
