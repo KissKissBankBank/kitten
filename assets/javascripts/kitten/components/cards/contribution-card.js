@@ -109,14 +109,19 @@ class ContributionCardComponent extends Component {
 
     return (
       <StyleRoot {...others} style={styleCard}>
-        <Marger bottom={viewportIsSOrLess ? 0 : 5}>
+        <Marger
+          bottom={viewportIsSOrLess ? 0 : 5}
+          top={viewportIsTabletOrLess ? 4 : 5}
+        >
           <Grid style={styles.card.addPadding} disabled={isDisabled}>
             <GridCol col-l="7" col-m={!imageProps.src ? 10 : 7}>
               {this.renderDescription()}
             </GridCol>
             {imageProps.src && (
-              <GridCol col-m="4" offset-m="1">
-                {this.renderImage()}
+              <GridCol col-m="4" offset-m="1" style={styles.card.image}>
+                <Marger bottom={!myContribution ? 2 : null}>
+                  {this.renderImage()}
+                </Marger>
               </GridCol>
             )}
           </Grid>
@@ -141,39 +146,37 @@ class ContributionCardComponent extends Component {
 
     return (
       <Fragment>
-        <Marger top={viewportIsSOrLess ? 4 : 5}>
-          <Marger bottom="2">
-            <Title
-              modifier={viewportIsSOrLess ? 'tertiary' : 'secondary'}
-              italic
-              margin={false}
-              tag={titleTag}
+        <Marger bottom="2">
+          <Title
+            modifier={viewportIsSOrLess ? 'tertiary' : 'secondary'}
+            italic
+            margin={false}
+            tag={titleTag}
+          >
+            {titleAmount}
+          </Title>
+        </Marger>
+        <Marger top="2" bottom={viewportIsMobile ? 3 : 4}>
+          <HorizontalStroke size="big" />
+        </Marger>
+        {titleDescription && (
+          <Marger top="4" bottom="1">
+            <Text
+              size={viewportIsSOrLess ? 'big' : 'huge'}
+              tag={textTag}
+              weight="bold"
             >
-              {titleAmount}
-            </Title>
+              {titleDescription}
+            </Text>
           </Marger>
-          <Marger top="2" bottom={viewportIsMobile ? 3 : 4}>
-            <HorizontalStroke size="big" />
-          </Marger>
-          {titleDescription && (
-            <Marger top="4" bottom="1">
-              <Text
-                size={viewportIsSOrLess ? 'big' : 'huge'}
-                tag={textTag}
-                weight="bold"
-              >
-                {titleDescription}
-              </Text>
-            </Marger>
-          )}
-          <Marger top={!titleDescription ? 4 : 1}>
-            <Paragraph
-              modifier={viewportIsSOrLess ? 'quaternary' : 'tertiary'}
-              margin={false}
-            >
-              {textDescription}
-            </Paragraph>
-          </Marger>
+        )}
+        <Marger top={!titleDescription ? 4 : 1}>
+          <Paragraph
+            modifier={viewportIsSOrLess ? 'quaternary' : 'tertiary'}
+            margin={false}
+          >
+            {textDescription}
+          </Paragraph>
         </Marger>
         {!!this.props.render && this.props.render()}
         {this.renderInfos()}
@@ -391,25 +394,34 @@ class ContributionCardComponent extends Component {
 
 const styles = {
   card: {
-    borderWidth: '2px',
+    borderWidth: 2,
     borderStyle: 'solid',
     borderColor: COLORS.line1,
 
     addPadding: {
-      paddingLeft: '20px',
-      paddingRight: '20px',
+      paddingLeft: 20,
+      paddingRight: 20,
 
       [`@media (min-width: ${ScreenConfig['S'].min}px)`]: {
-        paddingLeft: '50px',
-        paddingRight: '50px',
+        paddingLeft: 50,
+        paddingRight: 50,
       },
       [`@media (min-width: ${ScreenConfig['M'].min}px)`]: {
-        paddingLeft: '50px',
+        paddingLeft: 40,
         paddingRight: 0,
       },
       [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
-        paddingLeft: '115px',
+        paddingLeft: 115,
         paddingRight: 0,
+      },
+    },
+
+    image: {
+      [`@media (min-width: ${ScreenConfig['M'].min}px)`]: {
+        paddingRight: 40,
+      },
+      [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
+        paddingRight: 50,
       },
     },
 
@@ -424,9 +436,9 @@ const styles = {
     flexDirection: 'column',
 
     lists: {
-      fontSize: '14px',
+      fontSize: 14,
       [`@media (min-width: ${ScreenConfig['M'].min}px)`]: {
-        fontSize: '16px',
+        fontSize: 16,
       },
     },
   },
@@ -434,12 +446,12 @@ const styles = {
   choiceButton: {
     addPadding: {
       [`@media (min-width: ${ScreenConfig['S'].min}px)`]: {
-        paddingLeft: '50px',
-        paddingRight: '50px',
+        paddingLeft: 50,
+        paddingRight: 50,
       },
       [`@media (max-width: ${ScreenConfig['XS'].max}px)`]: {
-        paddingLeft: '20px',
-        paddingRight: '20px',
+        paddingLeft: 20,
+        paddingRight: 20,
       },
     },
   },
@@ -462,7 +474,7 @@ const styles = {
 
   iconBadge: {
     backgroundColor: COLORS.valid,
-    marginRight: '10px',
+    marginRight: 10,
   },
 
   image: {
