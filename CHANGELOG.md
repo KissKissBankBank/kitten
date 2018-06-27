@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Create `CartRewardCard` component.
 - Feature: Add `big` and `huge` props on `IconBadge` component.
 - Feature: Add `PinterestButtonIcon` and `PinterestIcon` components.
 - Feature: Create `StarIcon` component.

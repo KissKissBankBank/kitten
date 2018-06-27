@@ -1,0 +1,265 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CartRewardCard /> by default matches with snapshot 1`] = `
+<div
+  data-radium={true}
+>
+  <div
+    data-radium={true}
+    onAnimationEnd={[Function]}
+    style={
+      Object {
+        "borderColor": "#eee",
+        "borderStyle": "solid",
+        "borderWidth": 2,
+        "height": "auto",
+        "overflow": "hidden",
+      }
+    }
+  >
+    <div
+      data-radium={true}
+      style={
+        Object {
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "flex-end",
+        }
+      }
+    >
+      <button
+        aria-label="Garbage Button"
+        className="k-ButtonIcon k-ButtonIcon--beryllium k-ButtonIcon--tiny"
+        onClick={[Function]}
+        tabIndex={null}
+        title="Garbage Button"
+        type="button"
+      >
+        <svg
+          className="k-ButtonIcon__svg"
+          viewBox="0 0 12 14"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>
+            Garbage
+          </title>
+          <path
+            d="M4.3 0h3v2h-3zM0 2h12v1H0zm1 2l1 10h8l1-10H1zm3.5 8h-1V6h1v6zm2 0h-1V6h1v6zm2 0h-1V6h1v6z"
+          />
+        </svg>
+      </button>
+    </div>
+    <div
+      className="rmq-b86f8336"
+      data-radium={true}
+      style={
+        Object {
+          "marginBottom": "2.5rem",
+          "marginLeft": 20,
+          "marginRight": 20,
+          "marginTop": null,
+          "maxWidth": 500,
+        }
+      }
+    >
+      <div
+        data-radium={true}
+        style={
+          Object {
+            "marginBottom": "1.25rem",
+            "marginTop": null,
+          }
+        }
+      >
+        <h1
+          className="k-Title k-Title--quinary k-Title--withoutMargin k-Title--italic"
+        >
+          Custom title amount
+        </h1>
+      </div>
+      
+      <div
+        data-radium={true}
+        style={
+          Object {
+            "marginBottom": "1.25rem",
+            "marginTop": "0.625rem",
+          }
+        }
+      >
+        <p
+          className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
+        >
+          Custom text description
+        </p>
+      </div>
+      
+      
+    </div>
+  </div>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "@media (min-width: 640px){ .rmq-b86f8336{margin-left: 40px !important;
+margin-right: 40px !important;}}",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`<CartRewardCard /> with some props matches with snapshot 1`] = `
+<div
+  data-radium={true}
+>
+  <div
+    data-radium={true}
+    onAnimationEnd={[Function]}
+    style={
+      Object {
+        "borderColor": "#eee",
+        "borderStyle": "solid",
+        "borderWidth": 2,
+        "height": "auto",
+        "overflow": "hidden",
+      }
+    }
+  >
+    <div
+      data-radium={true}
+      style={
+        Object {
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "flex-end",
+        }
+      }
+    >
+      <button
+        aria-label="Garbage Button"
+        className="k-ButtonIcon k-ButtonIcon--beryllium k-ButtonIcon--tiny"
+        onClick={[Function]}
+        tabIndex={null}
+        title="Garbage Button"
+        type="button"
+      >
+        <svg
+          className="k-ButtonIcon__svg"
+          viewBox="0 0 12 14"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>
+            Garbage
+          </title>
+          <path
+            d="M4.3 0h3v2h-3zM0 2h12v1H0zm1 2l1 10h8l1-10H1zm3.5 8h-1V6h1v6zm2 0h-1V6h1v6zm2 0h-1V6h1v6z"
+          />
+        </svg>
+      </button>
+    </div>
+    <div
+      className="rmq-b86f8336"
+      data-radium={true}
+      style={
+        Object {
+          "marginBottom": "2.5rem",
+          "marginLeft": 20,
+          "marginRight": 20,
+          "marginTop": null,
+          "maxWidth": 500,
+        }
+      }
+    >
+      <div
+        data-radium={true}
+        style={
+          Object {
+            "marginBottom": "1.25rem",
+            "marginTop": null,
+          }
+        }
+      >
+        <Custom title tag
+          className="k-Title k-Title--quinary k-Title--withoutMargin k-Title--italic"
+        >
+          Custom title amount
+        </Custom title tag>
+      </div>
+      <div
+        data-radium={true}
+        style={
+          Object {
+            "marginBottom": "0.625rem",
+            "marginTop": "1.25rem",
+          }
+        }
+      >
+        <span
+          className="k-u-size-default k-u-weight-bold"
+        >
+          Custom subtitle
+        </span>
+      </div>
+      <div
+        data-radium={true}
+        style={
+          Object {
+            "marginBottom": "1.25rem",
+            "marginTop": "0.625rem",
+          }
+        }
+      >
+        <p
+          className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
+        >
+          Custom text description
+        </p>
+      </div>
+      <div
+        data-radium={true}
+        style={
+          Object {
+            "marginBottom": null,
+            "marginTop": "1.25rem",
+          }
+        }
+      >
+        <span
+          className="k-u-size-tiny k-u-weight-regular"
+        >
+          Custom shipping title
+          <span
+            className="k-u-size-tiny k-u-weight-light"
+          >
+            Custom shipping value
+          </span>
+        </span>
+      </div>
+      <div
+        data-radium={true}
+        style={
+          Object {
+            "marginBottom": null,
+            "marginTop": "1.25rem",
+          }
+        }
+      >
+        <a
+          className="k-u-color-primary1 k-u-decoration-none k-u-size-tiny k-u-weight-regular"
+          href="Custom amount link"
+        >
+          Custom amount
+        </a>
+      </div>
+    </div>
+  </div>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "@media (min-width: 640px){ .rmq-b86f8336{margin-left: 40px !important;
+margin-right: 40px !important;}}",
+      }
+    }
+  />
+</div>
+`;
