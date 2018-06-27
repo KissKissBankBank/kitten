@@ -48,7 +48,7 @@ describe('<CartRewardCard />', () => {
             subtitle="Custom subtitle"
             shippingTitle="Custom shipping title"
             shippingValue="Custom shipping value"
-            updateAmount="Custom amount"
+            updateAmountTitle="Custom amount"
             updateAmountLink="Custom amount link"
           />,
         )
