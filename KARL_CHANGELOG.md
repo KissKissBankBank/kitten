@@ -4,10 +4,15 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Create `KarlCartRewardCard` example.
-- Feature: Create `KarlIconBadge` example to replace `KarlIconBadgeWithSvg` and all examples.
-- Feature: Create `KarlStarButton` example.
-- Fix: Update `KarlHeaderTour1`and `KarlHeaderTour2` with new `ArrowIcon` component.
+## [21.0.0] - 2018-06-27
+
+Features:
+- Create `KarlCartRewardCard` example.
+- Create `KarlIconBadge` example to replace `KarlIconBadgeWithSvg` and all examples.
+- Create `KarlStarButton` example.
+
+Fixes:
+- Update `KarlHeaderTour1`and `KarlHeaderTour2` with new `ArrowIcon` component.
 
 ## [20.17.0] - 2018-06-14
 
