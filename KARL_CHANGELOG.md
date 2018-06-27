@@ -11,7 +11,7 @@ Features:
 - Create `KarlIconBadge` example to replace `KarlIconBadgeWithSvg` and all examples.
 - Create `KarlStarButton` example.
 
-Fixes:
+Fix:
 - Update `KarlHeaderTour1`and `KarlHeaderTour2` with new `ArrowIcon` component.
 
 ## [20.17.0] - 2018-06-14
