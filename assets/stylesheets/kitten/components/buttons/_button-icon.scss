@@ -199,7 +199,7 @@
     @include k-buttonPadding(
       $button-size-with-border,
       $instagram-size,
-      $instagram-size,
+      $instagram-size
     );
 
     .k-ButtonIcon__svg {
@@ -292,7 +292,7 @@
     @include k-buttonPadding(
       $button-size-tiny,
       $horizontalArrow-width,
-      $horizontalArrow-height,
+      $horizontalArrow-height
     );
 
     .k-ButtonIcon__svg {
@@ -305,7 +305,7 @@
     @include k-buttonPadding(
       $button-size-tiny,
       $verticalArrow-width,
-      $verticalArrow-height,
+      $verticalArrow-height
     );
 
     .k-ButtonIcon__svg {
@@ -318,7 +318,7 @@
     @include k-buttonPadding(
       $button-size-nano,
       $checked-nano-size,
-      $checked-nano-size,
+      $checked-nano-size
     );
 
     .k-ButtonIcon__svg {

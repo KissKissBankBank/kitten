@@ -255,13 +255,12 @@ import { KarlPaginationExamples } from 'kitten/karl/navigation/pagination'
 // Notifications
 import { Alert } from 'kitten/components/notifications/alert'
 import { Badge } from 'kitten/components/notifications/badge'
-import { IconBadge } from 'kitten/components/notifications/icon-badge'
 import {
   KarlAlert,
   KarlAlertWithButton,
   KarlAlertWithMarkdown,
 } from 'kitten/karl/notifications/alert'
-import { KarlIconBadgeWithSvg } from 'kitten/karl/notifications/icon-badge'
+import { KarlIconBadge } from 'kitten/karl/notifications/icon-badge'
 
 // Popovers
 import { CallToActionPopover }
@@ -541,11 +540,10 @@ ReactOnRails.register({
   // Notifications
   Alert,
   Badge,
-  IconBadge,
   KarlAlert,
   KarlAlertWithButton,
   KarlAlertWithMarkdown,
-  KarlIconBadgeWithSvg,
+  KarlIconBadge,
 
   // Popovers
   CallToActionPopover,
