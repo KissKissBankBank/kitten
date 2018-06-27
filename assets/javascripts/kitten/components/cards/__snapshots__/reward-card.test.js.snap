@@ -307,36 +307,63 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
                 }
               }
             >
-              <span
-                className="k-IconBadge"
+              <div
                 data-radium={true}
-                style={
-                  Object {
-                    "backgroundColor": "#61d079",
-                    "marginRight": 10,
-                  }
-                }
               >
                 <span
-                  className="k-IconBadge__content"
+                  data-radium={true}
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "backgroundColor": "#19b4fa",
+                      "borderRadius": 30,
+                      "display": "flex",
+                      "justifyContent": "center",
+                      "minHeight": 30,
+                      "minWidth": 30,
+                      "padding": 0,
+                    }
+                  }
                 >
-                  <svg
-                    className="k-IconBadge__svg"
-                    viewBox="0 0 11 8"
-                    xmlns="http://www.w3.org/2000/svg"
+                  <span
+                    data-radium={true}
+                    style={
+                      Object {
+                        "color": "#fff",
+                        "fill": "#fff",
+                        "flexBasis": 11,
+                        "fontSize": 12,
+                        "fontWeight": "bold",
+                        "lineHeight": 0,
+                        "textAlign": "center",
+                      }
+                    }
                   >
-                    <title>
-                      Checked
-                    </title>
-                    <path
-                      d="M4.44 7.596L3.024 6.182 8.682.525l1.414 1.414z"
-                    />
-                    <path
-                      d="M4.44 7.596L.903 4.06l1.414-1.414 3.536 3.536z"
-                    />
-                  </svg>
+                    <svg
+                      className="k-IconBadge__svg"
+                      viewBox="0 0 11 8"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <title>
+                        Checked
+                      </title>
+                      <path
+                        d="M4.44 7.596L3.024 6.182 8.682.525l1.414 1.414z"
+                      />
+                      <path
+                        d="M4.44 7.596L.903 4.06l1.414-1.414 3.536 3.536z"
+                      />
+                    </svg>
+                  </span>
                 </span>
-              </span>
+                <style
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": "",
+                    }
+                  }
+                />
+              </div>
               <div
                 data-radium={true}
                 style={
