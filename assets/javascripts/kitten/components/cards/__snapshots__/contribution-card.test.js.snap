@@ -369,16 +369,25 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
         data-radium={true}
         style={Object {}}
       >
-        <img
-          alt="Image alt"
-          data-radium={true}
-          src="#image"
+        <div
           style={
             Object {
-              "width": "100%",
+              "marginBottom": null,
+              "marginTop": null,
             }
           }
-        />
+        >
+          <img
+            alt="Image alt"
+            data-radium={true}
+            src="#image"
+            style={
+              Object {
+                "width": "100%",
+              }
+            }
+          />
+        </div>
       </div>
     </div>
   </div>
