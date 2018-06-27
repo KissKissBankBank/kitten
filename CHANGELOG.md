@@ -6,7 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [21.0.0] - 2018-06-27
 
-Breaking changes:
+Breaking change:
 - Add `huge` size and replace `big` by `huge` size on `BulletList`.
 
 Features:
