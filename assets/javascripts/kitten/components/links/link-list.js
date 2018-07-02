@@ -14,11 +14,11 @@ export class LinkList extends Component {
   }
 
   renderItem(element) {
-    const { key, item, href, active, ...others } = element
+    const { key, item, href, active, className, ...others } = element
 
     const { color, lineHeight, itemMargin } = this.props
 
-    const linkListClassName = classNames('k-LinkList__link', {
+    const linkListClassName = classNames('k-LinkList__link', className, {
       'is-active': active,
       'k-LinkList__link--light': color == 'light',
       'k-LinkList__link--dark': color == 'dark',
@@ -31,7 +31,7 @@ export class LinkList extends Component {
 
     return (
       <li className={linkListItemClassName} key={key}>
-        <a href={href} className={linkListClassName} {...others}>
+        <a {...others} href={href} className={linkListClassName}>
           {item}
         </a>
       </li>
@@ -53,7 +53,7 @@ export class LinkList extends Component {
     })
 
     return (
-      <ul className={listClassName} {...others}>
+      <ul {...others} className={listClassName}>
         {this.renderItems()}
       </ul>
     )
