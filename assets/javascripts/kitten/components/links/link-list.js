@@ -14,7 +14,7 @@ export class LinkList extends Component {
   }
 
   renderItem(element) {
-    const { key, item, href, active } = element
+    const { key, item, href, active, ...others } = element
 
     const { color, lineHeight, itemMargin } = this.props
 
@@ -31,7 +31,7 @@ export class LinkList extends Component {
 
     return (
       <li className={linkListItemClassName} key={key}>
-        <a href={href} className={linkListClassName}>
+        <a href={href} className={linkListClassName} {...others}>
           {item}
         </a>
       </li>
