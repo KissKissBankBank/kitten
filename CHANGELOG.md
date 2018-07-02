@@ -4,7 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Add `others` props on `LinkList` component.
+## [21.0.1] - 2018-07-02
+
+Fix:
+- Add `others` props on `LinkList` component.
 
 ## [21.0.0] - 2018-06-27
 
