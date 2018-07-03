@@ -219,6 +219,7 @@ class CarouselBase extends React.Component {
         <ButtonIcon
           modifier="beryllium"
           onClick={this.goPrevPage}
+          key={`left-${indexPageVisible}`}
           disabled={indexPageVisible < 1 || numPages < 1}
           style={styles.carouselButtonPagination}
         >
@@ -228,6 +229,7 @@ class CarouselBase extends React.Component {
         <ButtonIcon
           modifier="beryllium"
           onClick={this.goNextPage}
+          key={`right-${indexPageVisible}`}
           disabled={indexPageVisible >= numPages - 1}
           style={styles.carouselButtonPagination}
         >
