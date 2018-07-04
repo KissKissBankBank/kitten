@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Fix `title` `min-height` on `CrowdfundingCard` component.  
+
 ## [21.0.1] - 2018-07-02
 
 Fix:
