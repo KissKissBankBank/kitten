@@ -4,7 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Fix `title` `min-height` on `CrowdfundingCard` component.  
+- Fix: Fix `title` `min-height` on `CrowdfundingCard` component.
+- Fix: Fix re-render `ButtonIcon` state on `Carousel`.
 
 ## [21.0.1] - 2018-07-02
 
