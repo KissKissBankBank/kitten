@@ -114,7 +114,7 @@ exports[`<CrowdfundingCard /> by default matches with snapshot 1`] = `
         Object {
           "marginBottom": "1.25rem",
           "marginTop": null,
-          "minHeight": "70px",
+          "minHeight": "75px",
         }
       }
     >
@@ -303,7 +303,7 @@ exports[`<CrowdfundingCard /> with loading prop matches with snapshot 1`] = `
         Object {
           "marginBottom": "1.25rem",
           "marginTop": null,
-          "minHeight": "70px",
+          "minHeight": "75px",
         }
       }
     >
@@ -533,7 +533,7 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
         Object {
           "marginBottom": "1.25rem",
           "marginTop": null,
-          "minHeight": "70px",
+          "minHeight": "75px",
         }
       }
     >
