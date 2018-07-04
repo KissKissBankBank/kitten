@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Fix re-render `ButtonIcon` state on `Carousel`.
+
 ## [21.0.1] - 2018-07-02
 
 Fix:
