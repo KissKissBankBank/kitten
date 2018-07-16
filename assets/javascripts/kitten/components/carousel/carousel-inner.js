@@ -149,7 +149,9 @@ class CarouselInnerBase extends React.Component {
   handleTouchStart = () => this.setState({ isTouched: true })
   handleTouchEnd = () => this.setState({ isTouched: false })
 
-  handlePageClick = index => {
+  handlePageClick = index => e => {
+    e.preventDefault()
+
     if (index !== this.props.indexPageVisible) {
       this.scrollToPage(index)
       document.activeElement.blur()
@@ -198,10 +200,7 @@ class CarouselInnerBase extends React.Component {
                 marginLeft: index ? itemMarginBetween : 0,
               },
             ]}
-            onClick={e => {
-              e.preventDefault()
-              this.handlePageClick(index)
-            }}
+            onClick={this.handlePageClick(index)}
           >
             <CarouselPage
               data={getDataForPage(data, index, numColumns)}
