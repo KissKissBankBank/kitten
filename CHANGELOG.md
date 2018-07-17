@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Update svg `locationIcon` component.
 - Fix: Fix `title` `min-height` on `CrowdfundingCard` component.
 - Fix: Fix re-render `ButtonIcon` state on `Carousel`.
 - Fix: Update [Sprockets Rails](https://github.com/rails/sprockets-rails)
