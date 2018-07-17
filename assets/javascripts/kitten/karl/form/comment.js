@@ -57,6 +57,22 @@ export const KarlComment = () => (
       </Marger>
     </Container>
 
+    <KarlExampleTitle>Comment with bottom notes</KarlExampleTitle>
+    <Container>
+      <Marger top="2" bottom="2">
+        <Comment
+          avatarImgProps={{
+            src: 'https://placehold.it/80x80/caf4fe/caf4fe',
+            alt: '',
+          }}
+          commentDate="2 min"
+          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris"
+          ownerName="Lorem ipsum"
+          bottomNotes="incididunt ut labore et dolore magna aliqua"
+        />
+      </Marger>
+    </Container>
+
     <KarlExampleTitle>Comment small text</KarlExampleTitle>
     <Container>
       <Marger top="2" bottom="2">
