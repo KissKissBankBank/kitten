@@ -39,4 +39,35 @@ describe('<Comment />', () => {
 
     expect(tree).toMatchSnapshot()
   })
+
+  it('should match a snapshot with a complex bottom notes', () => {
+    window.matchMedia = createMockMediaMatcher(false)
+    const BottomNotes = () => (
+      <div>
+        <a href="#" style={{ color: '#000' }}>
+          Delete this comment
+        </a>
+        <a href="#" style={{ color: '#000' }}>
+          Notify abuse
+        </a>
+      </div>
+    )
+
+    const tree = renderer
+      .create(
+        <Comment
+          avatarImgProps={{
+            src: '#image',
+            alt: 'Image alt',
+          }}
+          commentDate="Custom date"
+          text="Custom text"
+          ownerName="Custom name"
+          bottomNotes={<BottomNotes />}
+        />,
+      )
+      .toJSON()
+
+    expect(tree).toMatchSnapshot()
+  })
 })
