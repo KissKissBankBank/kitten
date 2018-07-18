@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: add `bottomNotes` prop on `Comment` component.
+- Feature: Add `bottomNotes` prop on `Comment` component.
 - Fix: Fix `title` `min-height` on `CrowdfundingCard` component.
 - Fix: Fix re-render `ButtonIcon` state on `Carousel`.
 - Fix: Update [Sprockets Rails](https://github.com/rails/sprockets-rails)
