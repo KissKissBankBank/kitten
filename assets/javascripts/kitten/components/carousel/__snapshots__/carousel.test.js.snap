@@ -30,6 +30,7 @@ exports[`<Carousel /> by default on desktop is a <Grid /> 1`] = `
     >
       <div
         data-radium={true}
+        onClick={[Function]}
         style={
           Object {
             "flexShrink": 0,
@@ -185,6 +186,7 @@ exports[`<Carousel /> by default on mobile is not a <Grid /> 1`] = `
   >
     <div
       data-radium={true}
+      onClick={[Function]}
       style={
         Object {
           "flexShrink": 0,
@@ -347,6 +349,7 @@ exports[`<Carousel /> with withoutLeftOffset on desktop is a <Grid /> 1`] = `
     >
       <div
         data-radium={true}
+        onClick={[Function]}
         style={
           Object {
             "flexShrink": 0,
