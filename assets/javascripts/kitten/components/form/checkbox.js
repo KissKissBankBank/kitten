@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import { Text } from 'kitten/components/typography/text'
 
@@ -12,6 +11,7 @@ export class Checkbox extends Component {
       inputClassName,
       error,
       textProps,
+      onLabelClick,
       ...inputProps
     } = this.props
 
@@ -30,7 +30,11 @@ export class Checkbox extends Component {
           {...inputProps}
         />
 
-        <label htmlFor={id} className="k-Checkbox__label">
+        <label
+          htmlFor={id}
+          className="k-Checkbox__label"
+          onClick={onLabelClick}
+        >
           <Text {...textProps}>{children}</Text>
         </label>
       </div>

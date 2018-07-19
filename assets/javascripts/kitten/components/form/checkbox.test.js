@@ -1,6 +1,9 @@
 import React from 'react'
+import sinon from 'sinon'
 import { Checkbox } from 'kitten/components/form/checkbox'
 import { Text } from 'kitten/components/typography/text'
+
+const sinonTest = require('sinon-test')(sinon)
 
 describe('<Checkbox />', () => {
   describe('By default', () => {
@@ -63,5 +66,19 @@ describe('<Checkbox />', () => {
     it('passes the right props to the `Text` component', () => {
       expect(labelText.prop('weight')).toBe('regular')
     })
+  })
+
+  describe('onLabelClick', () => {
+    it(
+      'should handle click callback on click label',
+      sinonTest(function() {
+        const clickSpy = this.spy()
+        const wrapper = shallow(
+          <Checkbox onLabelClick={clickSpy}>CLICK</Checkbox>,
+        )
+        wrapper.find('label').simulate('click')
+        expect(clickSpy.calledOnce).toBe(true)
+      }),
+    )
   })
 })
