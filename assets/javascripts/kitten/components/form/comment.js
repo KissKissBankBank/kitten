@@ -51,15 +51,17 @@ export const CommentComponent = ({
           viewportIsMobile={viewportIsMobile}
           bottomNotes={bottomNotes}
         />
-        <Text
-          style={styles.bottomNotes}
-          tag="p"
-          color="font1"
-          size="micro"
-          weight="bold"
-        >
-          {bottomNotes}
-        </Text>
+        {bottomNotes && (
+          <Text
+            style={styles.bottomNotes}
+            tag="p"
+            color="font1"
+            size="micro"
+            weight="bold"
+          >
+            {bottomNotes}
+          </Text>
+        )}
       </StyleRoot>
     </div>
   </Fragment>
@@ -71,7 +73,7 @@ CommentComponent.propTypes = {
   avatarImgProps: PropTypes.object.isRequired,
   commentDate: PropTypes.string.isRequired,
   viewportIsMobile: PropTypes.bool.isRequired,
-  bottomNotes: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+  bottomNotes: PropTypes.node,
 }
 
 CommentComponent.defaultProps = {
