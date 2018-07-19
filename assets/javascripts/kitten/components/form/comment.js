@@ -49,7 +49,6 @@ export const CommentComponent = ({
           text={text}
           ownerName={ownerName}
           viewportIsMobile={viewportIsMobile}
-          bottomNotes={bottomNotes}
         />
         {bottomNotes && (
           <Text
