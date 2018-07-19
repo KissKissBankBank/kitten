@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `bottomNotes` prop on `Comment` component.
 - Feature: In `Carousel`, we can now change page by clicking prev/next page.
 - Fix: Fix `title` `min-height` on `CrowdfundingCard` component.
 - Fix: Fix re-render `ButtonIcon` state on `Carousel`.
