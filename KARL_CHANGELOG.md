@@ -3,6 +3,7 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
+- Feature: Update `KarlComment` examples.
 
 ## [21.0.1] - 2018-07-02
 
