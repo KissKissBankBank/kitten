@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Update svg `locationIcon` component.
+- Fix: Update `locationIcon` svg.
 
 ## [21.1.0] - 2018-07-19
 
