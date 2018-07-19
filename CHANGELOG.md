@@ -5,9 +5,17 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: Update svg `locationIcon` component.
-- Fix: Fix `title` `min-height` on `CrowdfundingCard` component.
-- Fix: Fix re-render `ButtonIcon` state on `Carousel`.
-- Fix: Update [Sprockets Rails](https://github.com/rails/sprockets-rails)
+
+## [21.1.0] - 2018-07-19
+
+Features:
+- Add `bottomNotes` prop on `Comment` component.
+- In `Carousel`, we can now change page by clicking prev/next page.
+
+Fixes:
+- Fix `title` `min-height` on `CrowdfundingCard` component.
+- Fix re-render `ButtonIcon` state on `Carousel`.
+- Update [Sprockets Rails](https://github.com/rails/sprockets-rails)
   version.
 
 ## [21.0.1] - 2018-07-02
