@@ -325,9 +325,8 @@ import {
 } from 'kitten/karl/typography/paragraph'
 
 // Carousel
-import {
-  KarlCarouselProjectCard,
-} from 'kitten/karl/carousel/carousel'
+import { KarlCarouselProjectCard } from 'kitten/karl/carousel/carousel'
+import { KarlCarouselFlex } from 'kitten/karl/carousel/carousel-flex'
 
 ReactOnRails.register({
   // Box
@@ -596,4 +595,5 @@ ReactOnRails.register({
 
   // Carousel
   KarlCarouselProjectCard,
+  KarlCarouselFlex,
 })
