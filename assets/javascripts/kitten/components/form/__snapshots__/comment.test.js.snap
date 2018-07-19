@@ -301,17 +301,7 @@ exports[`<Comment /> should match its empty snapshot 1`] = `
         }
       />
     </div>
-    <p
-      className="k-u-color-font1 k-u-size-micro k-u-weight-bold"
-      data-radium={true}
-      style={
-        Object {
-          "paddingLeft": 30,
-        }
-      }
-    >
-      
-    </p>
+    
     <style
       dangerouslySetInnerHTML={
         Object {
