@@ -3,6 +3,7 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
+- Feature: Add `onLabelClick` prop action on `Checkbox` component.
 
 ## [22.0.0] - 2018-08-08
 
