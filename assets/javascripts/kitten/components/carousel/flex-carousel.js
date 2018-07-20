@@ -14,7 +14,7 @@ import { Paragraph } from 'kitten/components/typography/paragraph'
 
 const Grid = Radium(GridBase)
 
-class CarouselFlexComponent extends Component {
+class FlexCarouselComponent extends Component {
   constructor(props) {
     super(props)
 
@@ -207,6 +207,6 @@ const styles = {
   },
 }
 
-export const CarouselFlexComponent = mediaQueries(Radium(CarouselFlex), {
+export const FlexCarouselComponent = mediaQueries(Radium(FlexCarousel), {
   viewportIsMobile: true,
 })

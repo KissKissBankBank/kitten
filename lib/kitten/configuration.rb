@@ -276,7 +276,7 @@ module Kitten
           label: 'Carousel',
           components: [
             { path: 'components/carousel/carousel', name: 'Carousel with ProjectCard' },
-            { path: 'components/carousel:carousel-flex', name: 'Carousel flex'},
+            { path: 'components/carousel/flex-carousel', name: 'Flex Carousel'},
           ],
         },
       ]
