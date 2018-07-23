@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Update size on `ButtonQuestionMarkIcon` component React.
+- Fix: Update size on `ButtonQuestionMarkIcon` component.
 
 ## [21.1.0] - 2018-07-19
 
