@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Update `locationIcon` svg.
 - Fix: Use `StyleRoot` properly in `Comment` component in order to use
   media-queries.
 
