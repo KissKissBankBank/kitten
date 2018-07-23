@@ -10,7 +10,7 @@ import COLORS from 'kitten/constants/colors-config'
 
 const Text = Radium(TextBase)
 const CommentContent = ({ text, ownerName, viewportIsMobile, style }) => (
-  <div style={style}>
+  <StyleRoot style={style}>
     <Marger bottom="1">
       <Text color="font1" size="tiny" weight="regular">
         {ownerName}
@@ -26,7 +26,7 @@ const CommentContent = ({ text, ownerName, viewportIsMobile, style }) => (
       </Text>
     </Marger>
     <span style={styles.comment.arrow} />
-  </div>
+  </StyleRoot>
 )
 
 export const CommentComponent = ({
