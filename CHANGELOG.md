@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Use `StyleRoot` properly in `Comment` component in order to use
+  media-queries.
+
 ## [21.1.0] - 2018-07-19
 
 Features:
