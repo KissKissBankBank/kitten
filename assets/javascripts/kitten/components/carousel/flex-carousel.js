@@ -52,112 +52,19 @@ class FlexCarouselComponent extends Component {
     clearInterval(this.state.intervalId)
   }
 
-  selectors() {
+  renderSelectors() {
     const { viewportIsMobile, slideContent } = this.props
 
     return (
       <Marger
         bottom={viewportIsMobile ? 5 : 10}
         style={styles.selectorsContainer}
-      >
-        {slideContent.map(content => {
-          const activeStyle =
-            content.index === this.state.activeIndex
-              ? styles.selector.active
-              : null
-
-          return (
-            <div
-              key={`slider-${content.index}`}
-              style={{ ...styles.selector, ...activeStyle }}
-              onClick={this.handleClick(content.index)}
-            />
-          )
-        })}
-      </Marger>
+      />
     )
   }
 
-  // slider = content => {
-  //   const {
-  //     viewportIsMobile,
-  //     title,
-  //     titleLineBreak,
-  //     paragraph,
-  //     paragraphLineBreak,
-  //     button,
-  //   } = this.props
-
-  //   const cssDisplay =
-  //     this.state.activeIndex === content.index
-  //       ? styles.slide.show
-  //       : styles.slide.hide
-  //   const sliderStyle = { ...styles.slide.base, ...cssDisplay }
-  //   const titleMargin = viewportIsMobile ? 5 : 10
-  //   const breakline = viewportIsMobile ? ' ' : <br />
-  //   const titleSize = viewportIsMobile ? 'senary' : 'quinary'
-
-  // return (
-  //   <div key={content.index} style={sliderStyle}>
-  //     <Marger top={titleMargin}>
-  //       <Title
-  //         modifier={titleSize}
-  //         tag="h3"
-  //         margin={false}
-  //         style={styles.title}
-  //       >
-  //         {title}
-  //         {breakline}
-  //         {titleLineBreak}
-  //       </Title>
-  //     </Marger>
-
-  //     <Marger top="2" bottom="3">
-  //       <HorizontalStroke size="big" style={styles.stroke} />
-  //     </Marger>
-
-  //     <Marger top="3" bottom="3">
-  //       <Paragraph modifier="quaternary" margin={false}>
-  //         {paragraph}
-  //         {breakline}
-  //         {paragraphLineBreak}
-  //       </Paragraph>
-  //     </Marger>
-
-  //     <Marger top="3" bottom="4">
-  //       <Button
-  //         tag="a"
-  //         modifier="helium"
-  //         href="#"
-  //         aria-label={button}
-  //       >
-  //         {button}
-  //       </Button>
-  //     </Marger>
-  //   </div>
-  // )
-  // }
-
-  // goPrev = () => {
-  //   const { slideContent } = this.props
-
-  //   this.state.activeIndex === 1
-  //     ? this.setState({ activeIndex: slideContent.length })
-  //     : this.setState({ activeIndex: --this.state.activeIndex })
-  // }
-
-  // goNext = () => {
-  //   const { slideContent } = this.props
-
-  //   this.state.activeIndex === slideContent.length
-  //     ? this.setState({ activeIndex: 1 })
-  //     : this.setState({ activeIndex: ++this.state.activeIndex })
-  // }
-
-  render() {
+  renderSlider = content => {
     const {
-      content,
-      slideContent,
       viewportIsMobile,
       title,
       titleLineBreak,
@@ -166,14 +73,70 @@ class FlexCarouselComponent extends Component {
       button,
     } = this.props
 
-    // const cssDisplay =
-    //   this.state.activeIndex === content.index
-    //     ? styles.slide.show
-    //    : styles.slide.hide
-    const sliderStyle = { ...styles.slide.base }
+    const cssDisplay =
+      this.state.activeIndex === content.index
+        ? styles.slide.show
+        : styles.slide.hide
+    const sliderStyle = { ...styles.slide.base, ...cssDisplay }
     const titleMargin = viewportIsMobile ? 5 : 10
     const breakline = viewportIsMobile ? ' ' : <br />
     const titleSize = viewportIsMobile ? 'senary' : 'quinary'
+
+    return (
+      <div key={content.index} style={sliderStyle}>
+        <Marger top={titleMargin}>
+          <Title
+            modifier={titleSize}
+            tag="h3"
+            margin={false}
+            style={styles.title}
+          >
+            {title}
+            {breakline}
+            {titleLineBreak}
+          </Title>
+        </Marger>
+
+        <Marger top="2" bottom="3">
+          <HorizontalStroke size="big" style={styles.stroke} />
+        </Marger>
+
+        <Marger top="3" bottom="3">
+          <Paragraph modifier="quaternary" margin={false}>
+            {paragraph}
+            {breakline}
+            {paragraphLineBreak}
+          </Paragraph>
+        </Marger>
+
+        <Marger top="3" bottom="4">
+          <Button tag="a" modifier="helium" href="#" aria-label={button}>
+            {button}
+          </Button>
+        </Marger>
+      </div>
+    )
+  }
+
+  goPrev = () => {
+    const { slideContent } = this.props
+
+    this.state.activeIndex === 1
+      ? this.setState({ activeIndex: slideContent.length })
+      : this.setState({ activeIndex: --this.state.activeIndex })
+  }
+
+  goNext = () => {
+    const { slideContent } = this.props
+
+    this.state.activeIndex === slideContent.length
+      ? this.setState({ activeIndex: 1 })
+      : this.setState({ activeIndex: ++this.state.activeIndex })
+  }
+
+  render() {
+    const { slideContent } = this.props
+
     return (
       <StyleRoot>
         <div style={styles.container}>
@@ -181,45 +144,9 @@ class FlexCarouselComponent extends Component {
             <Grid>
               <GridCol col-l="6" offset-l="3" className="k-u-align-center">
                 <div style={styles.slide.grid}>
-                  <div style={sliderStyle}>
-                    <Marger top={titleMargin}>
-                      <Title
-                        modifier={titleSize}
-                        tag="h3"
-                        margin={false}
-                        style={styles.title}
-                      >
-                        {title}
-                        {breakline}
-                        {titleLineBreak}
-                      </Title>
-                    </Marger>
-
-                    <Marger top="2" bottom="3">
-                      <HorizontalStroke size="big" style={styles.stroke} />
-                    </Marger>
-
-                    <Marger top="3" bottom="3">
-                      <Paragraph modifier="quaternary" margin={false}>
-                        {paragraph}
-                        {breakline}
-                        {paragraphLineBreak}
-                      </Paragraph>
-                    </Marger>
-
-                    <Marger top="3" bottom="4">
-                      <Button
-                        tag="a"
-                        modifier="helium"
-                        href="#"
-                        aria-label={button}
-                      >
-                        {button}
-                      </Button>
-                    </Marger>
-                  </div>
+                  {slideContent.map(this.renderSlider)}
                 </div>
-                {this.selectors()}
+                {this.renderSelectors()}
               </GridCol>
             </Grid>
           </Container>
