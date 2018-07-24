@@ -167,6 +167,7 @@ class CarouselBase extends React.Component {
       baseItemMarginBetween,
       viewportIsTabletOrLess,
       viewportIsMobile,
+      showPagination,
     } = this.props
     const { indexPageVisible, numPages } = this.state
     const itemMarginBetween = getMarginBetweenAccordingToViewport(
@@ -177,7 +178,7 @@ class CarouselBase extends React.Component {
 
     if (numPages <= 1) return
 
-    if (viewportIsMobile) {
+    if (viewportIsMobile && showPagination) {
       const rangePage = createRangeFromZeroTo(numPages)
 
       return (
@@ -205,38 +206,40 @@ class CarouselBase extends React.Component {
       )
     }
 
-    return (
-      <div
-        style={[
-          styles.carouselPagination,
-          viewportIsTabletOrLess && styles.carouselPaginationTablet,
-          {
-            marginTop: viewportIsTabletOrLess ? itemMarginBetween : 0,
-            marginLeft: viewportIsTabletOrLess ? itemMarginBetween * 2 : 0,
-          },
-        ]}
-      >
-        <ButtonIcon
-          modifier="beryllium"
-          onClick={this.goPrevPage}
-          key={`left-${indexPageVisible}`}
-          disabled={indexPageVisible < 1 || numPages < 1}
-          style={styles.carouselButtonPagination}
+    if (!viewportIsMobile) {
+      return (
+        <div
+          style={[
+            styles.carouselPagination,
+            viewportIsTabletOrLess && styles.carouselPaginationTablet,
+            {
+              marginTop: viewportIsTabletOrLess ? itemMarginBetween : 0,
+              marginLeft: viewportIsTabletOrLess ? itemMarginBetween * 2 : 0,
+            },
+          ]}
         >
-          <ArrowIcon className="k-ButtonIcon__svg" direction="left" />
-        </ButtonIcon>
+          <ButtonIcon
+            modifier="beryllium"
+            onClick={this.goPrevPage}
+            key={`left-${indexPageVisible}`}
+            disabled={indexPageVisible < 1 || numPages < 1}
+            style={styles.carouselButtonPagination}
+          >
+            <ArrowIcon className="k-ButtonIcon__svg" direction="left" />
+          </ButtonIcon>
 
-        <ButtonIcon
-          modifier="beryllium"
-          onClick={this.goNextPage}
-          key={`right-${indexPageVisible}`}
-          disabled={indexPageVisible >= numPages - 1}
-          style={styles.carouselButtonPagination}
-        >
-          <ArrowIcon className="k-ButtonIcon__svg" direction="right" />
-        </ButtonIcon>
-      </div>
-    )
+          <ButtonIcon
+            modifier="beryllium"
+            onClick={this.goNextPage}
+            key={`right-${indexPageVisible}`}
+            disabled={indexPageVisible >= numPages - 1}
+            style={styles.carouselButtonPagination}
+          >
+            <ArrowIcon className="k-ButtonIcon__svg" direction="right" />
+          </ButtonIcon>
+        </div>
+      )
+    }
   }
 
   render() {
@@ -285,8 +288,7 @@ const styles = {
   },
 
   pageControl: {
-    display: 'none',
-    // display: 'flex',
+    display: 'flex',
     flexDirection: 'row',
     justifyContent: 'center',
     position: 'relative',
