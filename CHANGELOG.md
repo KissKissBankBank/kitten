@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Create `CarouselFlex` component.
+
 ## [21.1.0] - 2018-07-19
 
 Features:
