@@ -54,7 +54,7 @@ export class LocationInput extends Component {
 
     const autocompleteItem = ({ formattedSuggestion }) => (
       <div>
-        <LocationIcon width="10px" height="16px" />
+        <LocationIcon width="12px" height="15px" />
         <span className="k-LocationInput__autocompleteItem__mainText">
           {formattedSuggestion.mainText}
         </span>{' '}

@@ -65,6 +65,7 @@
   // Sizes
   $cross-size: k-px-to-rem(8px);
   $nano-size: k-px-to-rem(6px);
+  $tooltip-nano-size: k-px-to-rem(10px);
   $checked-nano-size: k-px-to-rem(10px);
   $heart-size: k-px-to-rem(14px);
   $signup-size: k-px-to-rem(18px);
@@ -324,6 +325,19 @@
     .k-ButtonIcon__svg {
       width: $checked-nano-size;
       height: $checked-nano-size;
+    }
+  }
+
+  .k-ButtonIcon--tooltip--nano {
+    @include k-buttonPadding(
+      $button-size-nano,
+      $tooltip-nano-size,
+      $tooltip-nano-size
+    );
+
+    .k-ButtonIcon__svg {
+      width: $tooltip-nano-size;
+      height: $tooltip-nano-size;
     }
   }
 
