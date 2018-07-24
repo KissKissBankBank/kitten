@@ -51,15 +51,17 @@ export const CommentComponent = ({
           viewportIsMobile={viewportIsMobile}
         />
         {bottomNotes && (
-          <Text
-            style={styles.bottomNotes}
-            tag="p"
-            color="font1"
-            size="micro"
-            weight="bold"
-          >
-            {bottomNotes}
-          </Text>
+          <Marger top=".5">
+            <Text
+              style={styles.bottomNotes}
+              tag="p"
+              color="font1"
+              size="micro"
+              weight="bold"
+            >
+              {bottomNotes}
+            </Text>
+          </Marger>
         )}
       </StyleRoot>
     </div>
@@ -91,7 +93,7 @@ const styles = {
     },
   },
   bottomNotes: {
-    padding: '10px 30px',
+    paddingLeft: 30,
   },
   comment: {
     borderWidth: 2,

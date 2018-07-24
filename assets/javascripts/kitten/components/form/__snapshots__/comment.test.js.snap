@@ -121,38 +121,47 @@ exports[`<Comment /> should match a snapshot with a complex bottom notes 1`] = `
         }
       />
     </div>
-    <p
-      className="k-u-color-font1 k-u-size-micro k-u-weight-bold"
-      data-radium={true}
+    <div
       style={
         Object {
-          "padding": "10px 30px",
+          "marginBottom": null,
+          "marginTop": "0.3125rem",
         }
       }
     >
-      <div>
-        <a
-          href="#"
-          style={
-            Object {
-              "color": "#000",
-            }
+      <p
+        className="k-u-color-font1 k-u-size-micro k-u-weight-bold"
+        data-radium={true}
+        style={
+          Object {
+            "paddingLeft": 30,
           }
-        >
-          Delete this comment
-        </a>
-        <a
-          href="#"
-          style={
-            Object {
-              "color": "#000",
+        }
+      >
+        <div>
+          <a
+            href="#"
+            style={
+              Object {
+                "color": "#000",
+              }
             }
-          }
-        >
-          Notify abuse
-        </a>
-      </div>
-    </p>
+          >
+            Delete this comment
+          </a>
+          <a
+            href="#"
+            style={
+              Object {
+                "color": "#000",
+              }
+            }
+          >
+            Notify abuse
+          </a>
+        </div>
+      </p>
+    </div>
     <style
       dangerouslySetInnerHTML={
         Object {
