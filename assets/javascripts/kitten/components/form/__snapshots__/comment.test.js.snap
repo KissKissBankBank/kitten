@@ -126,7 +126,7 @@ exports[`<Comment /> should match a snapshot with a complex bottom notes 1`] = `
       data-radium={true}
       style={
         Object {
-          "paddingLeft": 30,
+          "padding": "10px 30px",
         }
       }
     >

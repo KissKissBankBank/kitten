@@ -91,7 +91,7 @@ const styles = {
     },
   },
   bottomNotes: {
-    paddingLeft: 30,
+    padding: '10px 30px',
   },
   comment: {
     borderWidth: 2,

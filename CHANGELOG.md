@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Update `Comment` component bottom notes padding.
 - Fix: Remove `hover` state on `Select-control` class.
 - Fix: Update size on `ButtonQuestionMarkIcon` component.
 - Fix: Update `locationIcon` svg.
