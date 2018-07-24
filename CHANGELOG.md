@@ -5,6 +5,45 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: Remove only for viewport mobile the `pageControl` on `Caroussel` component.
+- Fix: Remove `hover` state on `Select-control` class.
+- Fix: Update size on `ButtonQuestionMarkIcon` component.
+- Fix: Update `locationIcon` svg.
+- Fix: Use `StyleRoot` properly in `Comment` component in order to use
+
+## [21.1.0] - 2018-07-19
+
+Features:
+- Add `bottomNotes` prop on `Comment` component.
+- In `Carousel`, we can now change page by clicking prev/next page.
+
+Fixes:
+- Fix `title` `min-height` on `CrowdfundingCard` component.
+- Fix re-render `ButtonIcon` state on `Carousel`.
+- Update [Sprockets Rails](https://github.com/rails/sprockets-rails)
+  version.
+
+## [21.0.1] - 2018-07-02
+
+Fix:
+- Add `others` props on `LinkList` component.
+
+## [21.0.0] - 2018-06-27
+
+Breaking change:
+- Add `huge` size and replace `big` by `huge` size on `BulletList`.
+
+Features:
+- Create `CartRewardCard` component.
+- Add `big` and `huge` props on `IconBadge` component.
+- Add `PinterestButtonIcon` and `PinterestIcon` components.
+- Create `StarIcon` component.
+
+Fixes:
+- Update `renderImage` margin on `ContributionCard` component.
+- Update svg `ArrowIcon` component.
+- Update `ArrowIcon`on `Pagination` component.
+- Update margin on `ContributionCard` component.
+- Update `Instagram ButtonIcon` gradient.
 
 ## [20.17.0] - 2018-06-14
 

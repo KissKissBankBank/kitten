@@ -91,6 +91,10 @@ module Kitten
               path: 'components/buttons/garbage-button',
               name: 'Garbage button',
             },
+            {
+              path: 'components/buttons/star-button',
+              name: 'Star button',
+            },
           ],
         },
         {
@@ -194,6 +198,7 @@ module Kitten
             { path: 'components/cards/project-card', name: 'Project card' },
             { path: 'components/cards/article-card', name: 'Article card' },
             { path: 'components/cards/backer-card', name: 'Backer card' },
+            { path: 'components/cards/cart-reward-card', name: 'Cart reward card' },
             {
               path: 'components/cards/crowdfunding-card',
               name: 'Crowdfunding card',

@@ -18,6 +18,7 @@ export class BulletList extends React.Component {
       'k-BulletList__item',
       { 'k-BulletList__item--large': this.props.large },
       { 'k-BulletList__item--big': this.props.big },
+      { 'k-BulletList__item--huge': this.props.huge },
     )
 
     return (
@@ -28,7 +29,7 @@ export class BulletList extends React.Component {
   }
 
   render() {
-    const { className, large, big, items, ...others } = this.props
+    const { className, large, big, huge, items, ...others } = this.props
     const listClassName = classNames('k-BulletList', className)
 
     return (
@@ -43,5 +44,6 @@ BulletList.defaultProps = {
   className: null,
   large: false,
   big: false,
+  huge: false,
   items: [], // Eg: [{ key: …, item: … }]
 }

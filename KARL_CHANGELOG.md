@@ -4,6 +4,25 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [21.1.0] - 2018-07-19
+
+Feature:
+- Update `KarlComment` examples.
+
+## [21.0.1] - 2018-07-02
+
+No changes.
+
+## [21.0.0] - 2018-06-27
+
+Features:
+- Create `KarlCartRewardCard` example.
+- Create `KarlIconBadge` example to replace `KarlIconBadgeWithSvg` and all examples.
+- Create `KarlStarButton` example.
+
+Fix:
+- Update `KarlHeaderTour1`and `KarlHeaderTour2` with new `ArrowIcon` component.
+
 ## [20.17.0] - 2018-06-14
 
 No changes.

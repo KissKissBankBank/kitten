@@ -22,6 +22,7 @@ import {
   LinkedinButtonIcon,
   TwitterButtonIcon,
   YoutubeButtonIcon,
+  PinterestButtonIcon,
 } from 'kitten/components/buttons/social-button-icon'
 import {
   KarlFacebookButtonIconWords,
@@ -42,6 +43,7 @@ import { KarlPaymentButtons } from 'kitten/karl/buttons/payment-button'
 import { KarlButtonIconFilter } from 'kitten/karl/buttons/button-filter'
 import { KarlButtonImageWithText } from 'kitten/karl/buttons/button-image-with-text'
 import { KarlGarbageButton } from 'kitten/karl/buttons/garbage-button'
+import { KarlStarButton } from 'kitten/karl/buttons/star-button'
 
 // Cards
 import { ArticleCard } from 'kitten/components/cards/article-card'
@@ -53,6 +55,7 @@ import { ProjectCreatorCard }
 import { ProjectSimilarCard }
   from 'kitten/components/cards/project-similar-card'
 import { SimpleCard } from 'kitten/components/cards/simple-card'
+import { KarlCartRewardCard } from 'kitten/karl/cards/cart-reward-card'
 import { KarlCard } from 'kitten/karl/cards/card'
 import { KarlDonationCard } from 'kitten/karl/cards/donation-card'
 import { KarlRewardCard } from 'kitten/karl/cards/reward-card'
@@ -252,13 +255,12 @@ import { KarlPaginationExamples } from 'kitten/karl/navigation/pagination'
 // Notifications
 import { Alert } from 'kitten/components/notifications/alert'
 import { Badge } from 'kitten/components/notifications/badge'
-import { IconBadge } from 'kitten/components/notifications/icon-badge'
 import {
   KarlAlert,
   KarlAlertWithButton,
   KarlAlertWithMarkdown,
 } from 'kitten/karl/notifications/alert'
-import { KarlIconBadgeWithSvg } from 'kitten/karl/notifications/icon-badge'
+import { KarlIconBadge } from 'kitten/karl/notifications/icon-badge'
 
 // Popovers
 import { CallToActionPopover }
@@ -344,6 +346,7 @@ ReactOnRails.register({
   InstagramButtonIcon,
   LinkedinButtonIcon,
   YoutubeButtonIcon,
+  PinterestButtonIcon,
   TagButton,
   TwitterButtonIcon,
   KarlButtonAndText,
@@ -358,6 +361,7 @@ ReactOnRails.register({
   KarlButtonIconFilter,
   KarlButtonImageWithText,
   KarlGarbageButton,
+  KarlStarButton,
 
   // Colors
   KarlColors,
@@ -370,6 +374,7 @@ ReactOnRails.register({
   ProjectCreatorCard,
   ProjectSimilarCard,
   SimpleCard,
+  KarlCartRewardCard,
   KarlCard,
   KarlDonationCard,
   KarlRewardCard,
@@ -535,11 +540,10 @@ ReactOnRails.register({
   // Notifications
   Alert,
   Badge,
-  IconBadge,
   KarlAlert,
   KarlAlertWithButton,
   KarlAlertWithMarkdown,
-  KarlIconBadgeWithSvg,
+  KarlIconBadge,
 
   // Popovers
   CallToActionPopover,

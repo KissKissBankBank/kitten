@@ -350,7 +350,7 @@ const styles = {
     whiteSpace: 'nowrap',
   },
   titles: {
-    minHeight: '70px',
+    minHeight: '75px',
   },
   title: {
     padding: `0 ${COMPONENT_GUTTER}px`,

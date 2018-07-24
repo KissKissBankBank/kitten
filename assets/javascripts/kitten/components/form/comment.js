@@ -9,72 +9,97 @@ import { mediaQueries } from 'kitten/hoc/media-queries'
 import COLORS from 'kitten/constants/colors-config'
 
 const Text = Radium(TextBase)
+const CommentContent = ({ text, ownerName, viewportIsMobile, style }) => (
+  <StyleRoot style={style}>
+    <Marger bottom="1">
+      <Text color="font1" size="tiny" weight="regular">
+        {ownerName}
+      </Text>
+    </Marger>
+    <Marger top="1">
+      <Text
+        color="font1"
+        size={viewportIsMobile ? 'tiny' : 'default'}
+        weight="light"
+      >
+        {text}
+      </Text>
+    </Marger>
+    <span style={styles.comment.arrow} />
+  </StyleRoot>
+)
 
-class CommentComponent extends Component {
-  static propTypes = {
-    text: PropTypes.node.isRequired,
-    ownerName: PropTypes.string.isRequired,
-    avatarImgProps: PropTypes.object.isRequired,
-    commentDate: PropTypes.string.isRequired,
-  }
-
-  render() {
-    const { avatarImgProps, commentDate } = this.props
-
-    return (
-      <Fragment>
-        <div style={styles.grid}>
-          <CommentAvatar
-            avatarImgProps={avatarImgProps}
-            commentDate={commentDate}
-          />
-          {this.renderComment()}
-        </div>
-      </Fragment>
-    )
-  }
-
-  renderComment() {
-    const { text, ownerName, viewportIsMobile } = this.props
-
-    return (
-      <StyleRoot style={styles.comment}>
-        <Marger bottom="1">
-          <Text color="font1" size="tiny" weight="regular">
-            {ownerName}
-          </Text>
-        </Marger>
-        <Marger top="1">
+export const CommentComponent = ({
+  text,
+  ownerName,
+  avatarImgProps,
+  commentDate,
+  viewportIsMobile,
+  bottomNotes,
+}) => (
+  <Fragment>
+    <div style={styles.grid}>
+      <CommentAvatar
+        avatarImgProps={avatarImgProps}
+        commentDate={commentDate}
+      />
+      <StyleRoot style={styles.commentContent}>
+        <CommentContent
+          style={styles.comment}
+          text={text}
+          ownerName={ownerName}
+          viewportIsMobile={viewportIsMobile}
+        />
+        {bottomNotes && (
           <Text
+            style={styles.bottomNotes}
+            tag="p"
             color="font1"
-            size={viewportIsMobile ? 'tiny' : 'default'}
-            weight="light"
+            size="micro"
+            weight="bold"
           >
-            {text}
+            {bottomNotes}
           </Text>
-        </Marger>
-        <span style={styles.comment.arrow} />
+        )}
       </StyleRoot>
-    )
-  }
+    </div>
+  </Fragment>
+)
+
+CommentComponent.propTypes = {
+  text: PropTypes.node.isRequired,
+  ownerName: PropTypes.string.isRequired,
+  avatarImgProps: PropTypes.object.isRequired,
+  commentDate: PropTypes.string.isRequired,
+  viewportIsMobile: PropTypes.bool.isRequired,
+  bottomNotes: PropTypes.node,
+}
+
+CommentComponent.defaultProps = {
+  bottomNotes: '',
 }
 
 const styles = {
   grid: {
     display: 'flex',
   },
-  comment: {
+  commentContent: {
     position: 'relative',
+    marginLeft: 20,
+    [`@media (min-width: ${ScreenConfig['S'].min}px)`]: {
+      marginLeft: 35,
+    },
+  },
+  bottomNotes: {
+    paddingLeft: 30,
+  },
+  comment: {
     borderWidth: 2,
     backgroundColor: COLORS.background3,
     borderColor: COLORS.background3,
     color: COLORS.font1,
     padding: 30,
     fontSize: 16,
-    marginLeft: 20,
-    [`@media (min-width: ${ScreenConfig['S'].min}px)`]: {
-      marginLeft: 35,
-    },
 
     arrow: {
       position: 'absolute',
