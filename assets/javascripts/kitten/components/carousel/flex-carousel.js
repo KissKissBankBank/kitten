@@ -28,6 +28,7 @@ class FlexCarouselComponent extends Component {
     titleLineBreak: '',
     paragraphLineBreak: '',
   }
+
   constructor(props) {
     super(props)
 
@@ -55,25 +56,14 @@ class FlexCarouselComponent extends Component {
   renderSelectors() {
     const { viewportIsMobile, slideContent } = this.props
 
+    const styleSelector = [styles.selector.active]
+
     return (
       <Marger
         bottom={viewportIsMobile ? 5 : 10}
         style={styles.selectorsContainer}
       >
-        {slideContent.map(content => {
-          const activeStyle =
-            content.index === this.state.activeIndex
-              ? styles.selector.active
-              : null
-
-          return (
-            <div
-              key={`slider-${content.index}`}
-              style={{ ...styles.selector, ...activeStyle }}
-              onClick={this.handleClick(content.index)}
-            />
-          )
-        })}
+        <div style={{ ...styles.selector }} />
       </Marger>
     )
   }
@@ -88,17 +78,17 @@ class FlexCarouselComponent extends Component {
       button,
     } = this.props
 
-    const cssDisplay =
-      this.state.activeIndex === content.index
-        ? styles.slide.show
-        : styles.slide.hide
-    const sliderStyle = { ...styles.slide.base, ...cssDisplay }
+    // const cssDisplay =
+    //   this.state.activeIndex === content.index
+    //     ? styles.slide.show
+    //     : styles.slide.hide
+    const sliderStyle = { ...styles.slide.base }
     const titleMargin = viewportIsMobile ? 5 : 10
     const breakline = viewportIsMobile ? ' ' : <br />
     const titleSize = viewportIsMobile ? 'senary' : 'quinary'
 
     return (
-      <div key={content.index} style={sliderStyle}>
+      <div style={sliderStyle}>
         <Marger top={titleMargin}>
           <Title
             modifier={titleSize}
@@ -158,7 +148,9 @@ class FlexCarouselComponent extends Component {
           <Container>
             <Grid>
               <GridCol col-l="6" offset-l="3" className="k-u-align-center">
-                <div style={styles.slide.grid}>{slideContent}</div>
+                <div style={styles.slide.grid}>
+                  {slideContent.map(this.renderSlider)}
+                </div>
                 {this.renderSelectors()}
               </GridCol>
             </Grid>

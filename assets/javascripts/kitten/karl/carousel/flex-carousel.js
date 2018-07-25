@@ -10,11 +10,17 @@ export const KarlFlexCarousel = () => (
     <KarlExampleTitle>Flex Carousel</KarlExampleTitle>
     <Container>
       <FlexCarousel
-        title="Profitez de nos conseils en investissement"
-        titleLineBreak="grâce au Mode Complet"
-        paragraph="Nous vous conseillons de façon personnalisée en fonction de votre situation"
-        paragraphLineBreak="et de vos préférences d'investissements"
-        button="En savoir plus"
+        slideContent={({ content }) => {
+          return (
+            <FlexCarouselContent
+              title={content.title}
+              titleLineBreak={content.titleLineBreak}
+              paragraph={content.paragraph}
+              paragraphLineBreak={content.paragraphLineBreak}
+              button={content.button}
+            />
+          )
+        }}
       />
     </Container>
   </StyleRoot>
