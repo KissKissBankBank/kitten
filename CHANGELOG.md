@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Create `CarouselFlex` component.
+- Feature: Create `FlexCarousel` component.
 - Fix: Remove `hover` state on `Select-control` class.
 - Fix: Update size on `ButtonQuestionMarkIcon` component.
 - Fix: Update `locationIcon` svg.

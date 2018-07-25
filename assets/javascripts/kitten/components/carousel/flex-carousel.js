@@ -59,7 +59,22 @@ class FlexCarouselComponent extends Component {
       <Marger
         bottom={viewportIsMobile ? 5 : 10}
         style={styles.selectorsContainer}
-      />
+      >
+        {slideContent.map(content => {
+          const activeStyle =
+            content.index === this.state.activeIndex
+              ? styles.selector.active
+              : null
+
+          return (
+            <div
+              key={`slider-${content.index}`}
+              style={{ ...styles.selector, ...activeStyle }}
+              onClick={this.handleClick(content.index)}
+            />
+          )
+        })}
+      </Marger>
     )
   }
 
@@ -143,9 +158,7 @@ class FlexCarouselComponent extends Component {
           <Container>
             <Grid>
               <GridCol col-l="6" offset-l="3" className="k-u-align-center">
-                <div style={styles.slide.grid}>
-                  {slideContent.map(this.renderSlider)}
-                </div>
+                <div style={styles.slide.grid}>{slideContent}</div>
                 {this.renderSelectors()}
               </GridCol>
             </Grid>
