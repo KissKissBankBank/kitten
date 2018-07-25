@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `showPaginationOnMobile` prop to `Carousel`.
+- Feature: Add `hidePaginationOnMobile` prop to `Carousel`.
 - Fix: Remove `hover` state on `Select-control` class.
 - Fix: Update size on `ButtonQuestionMarkIcon` component.
 - Fix: Update `locationIcon` svg.

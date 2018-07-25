@@ -176,7 +176,7 @@ class CarouselBase extends React.Component {
       viewportIsTabletOrLess,
     )
 
-    if (viewportIsMobile && !hidePaginationOnMobile) return
+    if (viewportIsMobile && hidePaginationOnMobile) return
 
     if (numPages <= 1) return
 
@@ -326,7 +326,7 @@ const styles = {
 
 CarouselBase.defaultProps = {
   withoutLeftOffset: false,
-  hidePaginationOnMobile: true,
+  hidePaginationOnMobile: false,
 }
 
 CarouselBase.propTypes = {
