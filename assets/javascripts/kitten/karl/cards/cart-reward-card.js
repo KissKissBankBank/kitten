@@ -19,7 +19,9 @@ export const KarlCartRewardCard = () => (
       </Marger>
     </Container>
 
-    <KarlExampleTitle>Cart Reward Card</KarlExampleTitle>
+    <KarlExampleTitle>
+      Cart Reward Card (without close animation)
+    </KarlExampleTitle>
     <Container>
       <Marger bottom="2">
         <CartRewardCard
@@ -27,6 +29,10 @@ export const KarlCartRewardCard = () => (
           textDescription="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient mont"
           shippingTitle="Livraison : "
           shippingValue="Janvier 2018"
+          closeAnimation={false}
+          onClose={() => {
+            alert('Card remove!')
+          }}
         />
       </Marger>
     </Container>

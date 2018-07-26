@@ -25,6 +25,7 @@ class CartRewardCardComponent extends Component {
     updateAmountTitle: PropTypes.string,
     updateAmountLink: PropTypes.string,
     onClose: PropTypes.func,
+    closeAnimation: PropTypes.bool,
   }
 
   static defaultProps = {
@@ -35,6 +36,7 @@ class CartRewardCardComponent extends Component {
     updateAmountTitle: '',
     updateAmountLink: '',
     onClose: () => {},
+    closeAnimation: true,
   }
 
   constructor(props) {
@@ -47,15 +49,21 @@ class CartRewardCardComponent extends Component {
   }
 
   handleCloseClick = () => {
-    this.setState({
-      isHidden: true,
+    if (this.props.closeAnimation) {
+      this.setState({
+        isHidden: true,
 
-      // The css animation on the garbage button requires a fixed height.
-      height: domElementHelper.getComputedHeight(this.container),
-    })
+        // The css animation on the garbage button requires a fixed height.
+        height: domElementHelper.getComputedHeight(this.container),
+      })
+    } else {
+      this.props.onClose()
+    }
   }
 
   handleAnimationEnd = () => {
+    if (!this.props.closeAnimation) return
+
     this.props.onClose()
   }
 
