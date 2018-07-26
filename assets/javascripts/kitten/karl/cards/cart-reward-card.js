@@ -31,7 +31,7 @@ export const KarlCartRewardCard = () => (
           shippingValue="Janvier 2018"
           closeAnimation={false}
           onClose={() => {
-            alert('Card remove!')
+            alert('Card removed!')
           }}
         />
       </Marger>
