@@ -4,7 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `closeAnimation` prop to `CartRewardCard`.
+- Feature: Clone wrapped component methods on `mediaQueries` HOC.
+- Feature: Add `onCloseClick` prop to `CartRewardCard`.
 - Feature: Add `hidePaginationOnMobile` prop to `Carousel`.
 - Fix: Remove `hover` state on `Select-control` class.
 - Fix: Update size on `ButtonQuestionMarkIcon` component.
