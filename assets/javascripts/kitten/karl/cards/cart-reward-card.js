@@ -10,7 +10,7 @@ export class KarlCartRewardCard extends Component {
   }
 
   handleCloseClick = () => {
-    if (confirm('Can you remove this card?')) {
+    if (confirm('Want you remove this card?')) {
       this.card.close()
     }
   }
