@@ -50,7 +50,6 @@ describe('<CartRewardCard />', () => {
             shippingValue="Custom shipping value"
             updateAmountTitle="Custom amount"
             updateAmountLink="Custom amount link"
-            closeAnimation={false}
           />,
         )
         .toJSON()
