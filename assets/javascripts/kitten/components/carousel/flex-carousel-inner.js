@@ -6,10 +6,9 @@ import { Button } from 'kitten/components/buttons/button'
 import { HorizontalStroke } from 'kitten/components/layout/horizontal-stroke'
 import { Title } from 'kitten/components/typography/title'
 import COLORS from 'kitten/constants/colors-config'
-import { mediaQueries } from 'kitten/hoc/media-queries'
 import { Paragraph } from 'kitten/components/typography/paragraph'
 
-class FlexCarouselInnerComponent extends Component {
+export class FlexCarouselInner extends Component {
   static propTypes = {
     title: PropTypes.string.isRequired,
     titleLineBreak: PropTypes.string,
@@ -48,11 +47,11 @@ class FlexCarouselInnerComponent extends Component {
       button,
     } = this.props
 
-    const cssDisplay =
-      this.state.activeIndex === content.index
-        ? styles.slide.show
-        : styles.slide.hide
-    const sliderStyle = { ...styles.slide.base, ...cssDisplay }
+    // const cssDisplay =
+    //   this.state.activeIndex === content.index
+    //     ? styles.slide.show
+    //     : styles.slide.hide
+    const sliderStyle = { ...styles.slide.base }
     const titleMargin = viewportIsMobile ? 5 : 10
     const breakline = viewportIsMobile ? ' ' : <br />
     const titleSize = viewportIsMobile ? 'senary' : 'quinary'
@@ -169,10 +168,3 @@ const styles = {
     color: `${COLORS.background1}`,
   },
 }
-
-export const FlexCarouselInner = mediaQueries(
-  Radium(FlexCarouselInnerComponent),
-  {
-    viewportIsMobile: true,
-  },
-)

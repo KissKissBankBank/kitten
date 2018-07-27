@@ -10,6 +10,26 @@ import { FlexCarouselInner } from 'kitten/components/carousel/flex-carousel-inne
 const Grid = Radium(GridBase)
 
 class FlexCarouselComponent extends Component {
+  static propTypes = {
+    title: PropTypes.string.isRequired,
+    titleLineBreak: PropTypes.string,
+    paragraph: PropTypes.string.isRequired,
+    paragraphLineBreak: PropTypes.string,
+    button: PropTypes.string.isRequired,
+    currentPage: PropTypes.number,
+  }
+
+  static defaultProps = {
+    titleLineBreak: '',
+    paragraphLineBreak: '',
+    currentPage: 1,
+  }
+
+  constructor(props) {
+    super(props)
+    this.renderContent = this.renderContent.bind(this)
+  }
+
   // constructor(props) {
   //   super(props)
 
@@ -36,12 +56,14 @@ class FlexCarouselComponent extends Component {
 
   render() {
     const {
-      slideContent,
       title,
       titleLineBreak,
       paragraph,
       paragraphLineBreak,
       button,
+      slideContent,
+      content,
+      currentPage,
     } = this.props
 
     return (
@@ -50,18 +72,38 @@ class FlexCarouselComponent extends Component {
           <Container>
             <Grid>
               <GridCol col-l="6" offset-l="3" className="k-u-align-center">
-                <FlexCarouselInner
-                  title={title}
-                  titleLineBreak={titleLineBreak}
-                  paragraph={paragraph}
-                  paragraphLineBreak={paragraphLineBreak}
-                  button={button}
-                />
+                {this.renderContent()}
               </GridCol>
             </Grid>
           </Container>
         </div>
       </StyleRoot>
+    )
+  }
+
+  renderContent(content) {
+    const {
+      title,
+      titleLineBreak,
+      paragraph,
+      paragraphLineBreak,
+      button,
+      slideContent,
+      currentPage,
+    } = this.props
+
+    const isCurrentPage = content == currentPage
+
+    return (
+      <FlexCarouselInner
+        currentPage={currentPage}
+        key={`page-${content}`}
+        title={title}
+        titleLineBreak={titleLineBreak}
+        paragraph={paragraph}
+        paragraphLineBreak={paragraphLineBreak}
+        button={button}
+      />
     )
   }
 }
