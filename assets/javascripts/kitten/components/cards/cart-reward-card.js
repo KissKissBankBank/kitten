@@ -49,10 +49,10 @@ class CartRewardCardComponent extends Component {
   }
 
   handleCloseClick = () => {
-    if (!this.props.onCloseClick) {
-      this.close()
-    } else {
+    if (this.props.onCloseClick) {
       this.props.onCloseClick()
+    } else {
+      this.close()
     }
   }
 
