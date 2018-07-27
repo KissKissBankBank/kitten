@@ -22,10 +22,10 @@ export class KarlCartRewardCard extends Component {
         <Container>
           <Marger bottom="2">
             <CartRewardCard
-              titleAmount="100€"
-              subtitle="Don libre"
+              titleAmount="100 €"
+              subtitle="Reward"
               textDescription="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient mont"
-              updateAmountTitle="Modifier le montant"
+              updateAmountTitle="Update amount"
             />
           </Marger>
         </Container>
@@ -39,10 +39,10 @@ export class KarlCartRewardCard extends Component {
               ref={node => {
                 this.card = node
               }}
-              titleAmount="100€"
+              titleAmount="100 €"
               textDescription="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient mont"
-              shippingTitle="Livraison : "
-              shippingValue="Janvier 2018"
+              shippingTitle="Shipping: "
+              shippingValue="January 2018"
               onClose={this.handleClose}
               onCloseClick={this.handleCloseClick}
             />
