@@ -93,7 +93,7 @@ class CartRewardCardComponent extends Component {
 
     return (
       <Marger bottom="4" style={styles.description}>
-        <Marger bottom={viewportIsMobile || subtitle ? 1 : 2}>
+        <Marger bottom={viewportIsMobile && !subtitle ? 1 : 2}>
           <Title italic modifier="quinary" margin={false} tag={titleTag}>
             {titleAmount}
           </Title>
@@ -105,7 +105,7 @@ class CartRewardCardComponent extends Component {
             </Text>
           </Marger>
         )}
-        <Marger top={viewportIsMobile || subtitle ? 1 : 2} bottom="2">
+        <Marger top={viewportIsMobile && !subtitle ? 1 : 2} bottom="2">
           <Paragraph margin={false} modifier="quaternary">
             {textDescription}
           </Paragraph>
