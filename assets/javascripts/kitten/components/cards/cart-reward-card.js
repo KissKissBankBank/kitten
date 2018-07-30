@@ -91,6 +91,9 @@ class CartRewardCardComponent extends Component {
       viewportIsMobile,
     } = this.props
 
+    const paragraphViewport = viewportIsMobile ? 0.5 : 1
+    const paragraphWithoutParagraph = !subtitle ? 2 : 1
+
     return (
       <Marger bottom="4" style={styles.description}>
         <Marger bottom={viewportIsMobile ? 1 : 2}>
@@ -108,7 +111,7 @@ class CartRewardCardComponent extends Component {
             </Text>
           </Marger>
         )}
-        <Marger top={viewportIsMobile ? 0.5 : 1} bottom="2">
+        <Marger top={paragraphViewport && paragraphWithoutParagraph} bottom="2">
           <Paragraph margin={false} modifier="quaternary">
             {textDescription}
           </Paragraph>
