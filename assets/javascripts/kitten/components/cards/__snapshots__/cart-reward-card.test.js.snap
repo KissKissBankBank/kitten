@@ -174,7 +174,7 @@ exports[`<CartRewardCard /> with some props matches with snapshot 1`] = `
         data-radium={true}
         style={
           Object {
-            "marginBottom": "0.625rem",
+            "marginBottom": "1.25rem",
             "marginTop": null,
           }
         }
@@ -205,7 +205,7 @@ exports[`<CartRewardCard /> with some props matches with snapshot 1`] = `
         style={
           Object {
             "marginBottom": "1.25rem",
-            "marginTop": "0.625rem",
+            "marginTop": "1.25rem",
           }
         }
       >
