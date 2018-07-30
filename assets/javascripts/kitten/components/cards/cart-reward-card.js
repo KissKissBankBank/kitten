@@ -91,26 +91,21 @@ class CartRewardCardComponent extends Component {
       viewportIsMobile,
     } = this.props
 
-    const paragraphWithoutSubtitle = !subtitle ? 2 : 1
-
     return (
       <Marger bottom="4" style={styles.description}>
-        <Marger bottom={viewportIsMobile ? 1 : 2}>
+        <Marger bottom={viewportIsMobile || subtitle ? 1 : 2}>
           <Title italic modifier="quinary" margin={false} tag={titleTag}>
             {titleAmount}
           </Title>
         </Marger>
         {subtitle && (
-          <Marger
-            top={viewportIsMobile ? 1 : 2}
-            bottom={viewportIsMobile ? 0.5 : 1}
-          >
+          <Marger top="2" bottom="1">
             <Text weight="bold" size="default">
               {subtitle}
             </Text>
           </Marger>
         )}
-        <Marger top={paragraphWithoutSubtitle} bottom="2">
+        <Marger top={viewportIsMobile || subtitle ? 1 : 2} bottom="2">
           <Paragraph margin={false} modifier="quaternary">
             {textDescription}
           </Paragraph>
