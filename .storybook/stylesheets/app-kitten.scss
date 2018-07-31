@@ -11,4 +11,6 @@
 // Custom styles for StoryBook iFrame.
 body {
   margin: 0;
+
+  @extend .k-u-anti-aliasing;
 }

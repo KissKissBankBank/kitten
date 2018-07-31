@@ -329,6 +329,9 @@ import {
   KarlCarouselProjectCard,
 } from 'kitten/karl/carousel/carousel'
 
+// Project.
+import { KarlProject } from 'kitten/karl/project/project'
+
 ReactOnRails.register({
   // Box
   DocLinkBox,
@@ -557,6 +560,9 @@ ReactOnRails.register({
   KarlMakerWhoAmIStep,
   KarlMenu,
   KarlMenuContent,
+
+  // Project.
+  KarlProject,
 
   // Simulators
   LoanSimulator,
