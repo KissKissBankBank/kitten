@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add a `CartRewardCard` example with all close events.
+
 ## [21.1.0] - 2018-07-19
 
 Feature:

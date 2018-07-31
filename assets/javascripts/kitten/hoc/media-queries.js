@@ -29,6 +29,16 @@ export const mediaQueries = (WrappedComponent, hocProps = {}) =>
       }, {})
     }
 
+    cloneMethods = wrappedComponentInstance => {
+      if (!wrappedComponentInstance) return
+
+      Object.keys(wrappedComponentInstance).forEach(property => {
+        if (typeof wrappedComponentInstance[property] === 'function') {
+          this[property] = wrappedComponentInstance[property]
+        }
+      })
+    }
+
     isInvalidProp(prop) {
       return (
         (typeof hocProps[prop] === 'boolean' && !viewPortTable[prop]) ||
@@ -60,6 +70,12 @@ export const mediaQueries = (WrappedComponent, hocProps = {}) =>
     }
 
     render() {
-      return <WrappedComponent {...this.props} {...this.state} />
+      return (
+        <WrappedComponent
+          ref={this.cloneMethods}
+          {...this.props}
+          {...this.state}
+        />
+      )
     }
   }
