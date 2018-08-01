@@ -86,7 +86,7 @@
   $arrow-width: k-px-to-rem(6px);
   $arrow-height: k-px-to-rem(6px);
 
-  //Facebook With Background SVG
+  // Facebook With Background SVG
   $facebook-width: k-px-to-rem(25px);
   $facebook-height: k-px-to-rem(25px);
 
@@ -288,10 +288,6 @@
       height: $facebook-height;
       vertical-align: middle;
       transition: fill $transition-speed;
-
-      .k-Button__facebook--big__stroke {
-        transition: stroke $transition-speed;
-      }
     }
   }
 
