@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [21.3.0] - 2018-08-01
+
 - Feature: Create `FacebookIconWithBackground` component.
 
 ## [21.2.0] - 2018-07-31
