@@ -86,6 +86,10 @@
   $arrow-width: k-px-to-rem(6px);
   $arrow-height: k-px-to-rem(6px);
 
+  //Facebook With Background SVG
+  $facebook-width: k-px-to-rem(25px);
+  $facebook-height: k-px-to-rem(25px);
+
   $transition-speed: .2s;
 
   // Big size options button.
@@ -267,6 +271,25 @@
       transition: fill $transition-speed;
 
       .k-Button__arrow--tiny__stroke {
+        transition: stroke $transition-speed;
+      }
+    }
+
+    .k-Button__icon--facebook {
+      @include k-buttonPadding(
+        $button-size-big,
+        $facebook-width,
+        $facebook-height
+      );
+
+      box-sizing: content-box;
+      display: inline-block;
+      width: $facebook-width;
+      height: $facebook-height;
+      vertical-align: middle;
+      transition: fill $transition-speed;
+
+      .k-Button__facebook--big__stroke {
         transition: stroke $transition-speed;
       }
     }
