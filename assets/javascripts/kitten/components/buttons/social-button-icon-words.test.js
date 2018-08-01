@@ -5,7 +5,7 @@ import {
   LinkedinButtonIconWords,
 } from 'kitten/components/buttons/social-button-icon-words'
 import { Button } from 'kitten/components/buttons/button'
-import { FacebookIcon } from 'kitten/components/icons/facebook-icon'
+import { FacebookIconWithBackground } from 'kitten/components/icons/facebook-icon-with-background'
 import { TwitterIcon } from 'kitten/components/icons/twitter-icon'
 import { LinkedinIcon } from 'kitten/components/icons/linkedin-icon'
 
@@ -18,8 +18,8 @@ describe('<FacebookButtonIconWords />', () => {
       expect(button.props().modifier).toBe('facebook')
     })
 
-    it('has a <FacebookIcon />', () => {
-      expect(button.find(FacebookIcon).exists()).toBe(true)
+    it('has a <FacebookIconWithBackground />', () => {
+      expect(button.find(FacebookIconWithBackground).exists()).toBe(true)
     })
   })
 
