@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Don't cancel click on current page of `Carousel`.
+
 ## [21.3.0] - 2018-08-01
 
 Feature:
