@@ -4,6 +4,20 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [21.3.1] - 2018-08-02
+
+Fix:
+- Update an `Carousel` example with links.
+
+## [21.3.0] - 2018-08-01
+
+No changes.
+
+## [21.2.0] - 2018-07-31
+
+Feature:
+- Add a `CartRewardCard` example with all close events.
+
 ## [21.1.0] - 2018-07-19
 
 Feature:

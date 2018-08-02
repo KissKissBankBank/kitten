@@ -167,6 +167,7 @@ class CarouselBase extends React.Component {
       baseItemMarginBetween,
       viewportIsTabletOrLess,
       viewportIsMobile,
+      hidePaginationOnMobile,
     } = this.props
     const { indexPageVisible, numPages } = this.state
     const itemMarginBetween = getMarginBetweenAccordingToViewport(
@@ -174,6 +175,8 @@ class CarouselBase extends React.Component {
       viewportIsMobile,
       viewportIsTabletOrLess,
     )
+
+    if (viewportIsMobile && hidePaginationOnMobile) return
 
     if (numPages <= 1) return
 
@@ -323,6 +326,7 @@ const styles = {
 
 CarouselBase.defaultProps = {
   withoutLeftOffset: false,
+  hidePaginationOnMobile: false,
 }
 
 CarouselBase.propTypes = {
@@ -331,6 +335,7 @@ CarouselBase.propTypes = {
   renderItem: PropTypes.func.isRequired,
   viewportIsTabletOrLess: PropTypes.bool.isRequired,
   viewportIsMobile: PropTypes.bool.isRequired,
+  hidePaginationOnMobile: PropTypes.bool,
 }
 
 export const Carousel = mediaQueries(Radium(CarouselBase), {

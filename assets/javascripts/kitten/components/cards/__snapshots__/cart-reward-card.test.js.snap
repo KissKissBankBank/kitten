@@ -83,7 +83,7 @@ exports[`<CartRewardCard /> by default matches with snapshot 1`] = `
         style={
           Object {
             "marginBottom": "1.25rem",
-            "marginTop": "0.625rem",
+            "marginTop": "1.25rem",
           }
         }
       >
@@ -205,7 +205,7 @@ exports[`<CartRewardCard /> with some props matches with snapshot 1`] = `
         style={
           Object {
             "marginBottom": "1.25rem",
-            "marginTop": "0.625rem",
+            "marginTop": "1.25rem",
           }
         }
       >

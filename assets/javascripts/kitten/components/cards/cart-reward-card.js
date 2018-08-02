@@ -25,6 +25,7 @@ class CartRewardCardComponent extends Component {
     updateAmountTitle: PropTypes.string,
     updateAmountLink: PropTypes.string,
     onClose: PropTypes.func,
+    onCloseClick: PropTypes.func,
   }
 
   static defaultProps = {
@@ -35,6 +36,7 @@ class CartRewardCardComponent extends Component {
     updateAmountTitle: '',
     updateAmountLink: '',
     onClose: () => {},
+    onCloseClick: null,
   }
 
   constructor(props) {
@@ -47,16 +49,24 @@ class CartRewardCardComponent extends Component {
   }
 
   handleCloseClick = () => {
+    if (this.props.onCloseClick) {
+      this.props.onCloseClick()
+    } else {
+      this.close()
+    }
+  }
+
+  handleAnimationEnd = () => {
+    this.props.onClose()
+  }
+
+  close = () => {
     this.setState({
       isHidden: true,
 
       // The css animation on the garbage button requires a fixed height.
       height: domElementHelper.getComputedHeight(this.container),
     })
-  }
-
-  handleAnimationEnd = () => {
-    this.props.onClose()
   }
 
   render() {
@@ -93,22 +103,19 @@ class CartRewardCardComponent extends Component {
 
     return (
       <Marger bottom="4" style={styles.description}>
-        <Marger bottom={viewportIsMobile ? 1 : 2}>
+        <Marger bottom={viewportIsMobile && !subtitle ? 1 : 2}>
           <Title italic modifier="quinary" margin={false} tag={titleTag}>
             {titleAmount}
           </Title>
         </Marger>
         {subtitle && (
-          <Marger
-            top={viewportIsMobile ? 1 : 2}
-            bottom={viewportIsMobile ? 0.5 : 1}
-          >
+          <Marger top="2" bottom="1">
             <Text weight="bold" size="default">
               {subtitle}
             </Text>
           </Marger>
         )}
-        <Marger top={viewportIsMobile ? 0.5 : 1} bottom="2">
+        <Marger top={viewportIsMobile && !subtitle ? 1 : 2} bottom="2">
           <Paragraph margin={false} modifier="quaternary">
             {textDescription}
           </Paragraph>

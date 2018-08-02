@@ -5,10 +5,30 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: Update `Comment` component bottom notes padding.
-- Fix: Remove `hover` state on `Select-control` class.
-- Fix: Update size on `ButtonQuestionMarkIcon` component.
-- Fix: Update `locationIcon` svg.
-- Fix: Use `StyleRoot` properly in `Comment` component in order to use
+
+## [21.3.1] - 2018-08-02
+
+Fix:
+- Don't cancel click on current page of `Carousel`.
+
+## [21.3.0] - 2018-08-01
+
+Feature:
+- Create `FacebookIconWithBackground` component.
+
+## [21.2.0] - 2018-07-31
+
+Features:
+- Clone wrapped component methods on `mediaQueries` HOC.
+- Add `onCloseClick` prop to `CartRewardCard`.
+- Add `hidePaginationOnMobile` prop to `Carousel`.
+
+Fixes:
+- Update margin on `CartRewardCard` component.
+- Remove `hover` state on `Select-control` class.
+- Update size on `ButtonQuestionMarkIcon` component.
+- Update `locationIcon` svg.
+- Use `StyleRoot` properly in `Comment` component in order to use.
 
 ## [21.1.0] - 2018-07-19
 
