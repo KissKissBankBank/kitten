@@ -150,9 +150,8 @@ class CarouselInnerBase extends React.Component {
   handleTouchEnd = () => this.setState({ isTouched: false })
 
   handlePageClick = index => e => {
-    e.preventDefault()
-
     if (index !== this.props.indexPageVisible) {
+      e.preventDefault()
       this.scrollToPage(index)
       document.activeElement.blur()
     }
