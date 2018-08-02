@@ -79,11 +79,8 @@ class ContributionCardComponent extends Component {
       titleDescription,
       textDescription,
       titleContributors,
-      titleSmallContributors,
       titleDelivery,
-      titleSmallDelivery,
       titleAvailability,
-      titleSmallAvailability,
       valueContributors,
       valueDelivery,
       valueAvailability,
@@ -110,8 +107,8 @@ class ContributionCardComponent extends Component {
     return (
       <StyleRoot {...others} style={styleCard}>
         <Marger
-          bottom={viewportIsSOrLess ? 0 : 5}
-          top={viewportIsTabletOrLess ? 4 : 5}
+          bottom={viewportIsSOrLess ? 0 : 4}
+          top={viewportIsTabletOrLess ? 4 : 4}
         >
           <Grid style={styles.card.addPadding} disabled={isDisabled}>
             <GridCol col-l="7" col-m={!imageProps.src ? 10 : 7}>
@@ -148,7 +145,7 @@ class ContributionCardComponent extends Component {
       <Fragment>
         <Marger bottom="2">
           <Title
-            modifier={viewportIsSOrLess ? 'tertiary' : 'secondary'}
+            modifier={viewportIsSOrLess ? 'quaternary' : 'tertiary'}
             italic
             margin={false}
             tag={titleTag}
@@ -156,7 +153,7 @@ class ContributionCardComponent extends Component {
             {titleAmount}
           </Title>
         </Marger>
-        <Marger top="2" bottom={viewportIsMobile ? 3 : 4}>
+        <Marger top="2" bottom={viewportIsMobile ? 3 : 3}>
           <HorizontalStroke size="big" />
         </Marger>
         {titleDescription && (
@@ -165,6 +162,7 @@ class ContributionCardComponent extends Component {
               size={viewportIsSOrLess ? 'big' : 'huge'}
               tag={textTag}
               weight="bold"
+              style={styles.textMargin}
             >
               {titleDescription}
             </Text>
@@ -188,11 +186,8 @@ class ContributionCardComponent extends Component {
   renderInfos() {
     const {
       titleContributors,
-      titleSmallContributors,
       titleDelivery,
-      titleSmallDelivery,
       titleAvailability,
-      titleSmallAvailability,
       valueContributors,
       valueDelivery,
       valueAvailability,
@@ -202,44 +197,27 @@ class ContributionCardComponent extends Component {
     if (!valueContributors && !valueDelivery && !valueAvailability) return
 
     return (
-      <Marger top="2" bottom={viewportIsSOrLess ? 3 : 4}>
+      <Marger top="3" bottom={viewportIsSOrLess ? 3 : 4}>
         <Grid>
-          {this.renderInfo(
-            titleContributors,
-            titleSmallContributors,
-            valueContributors,
-          )}
-          {this.renderInfo(titleDelivery, titleSmallDelivery, valueDelivery)}
-          {this.renderInfo(
-            titleAvailability,
-            titleSmallAvailability,
-            valueAvailability,
-          )}
+          {this.renderInfo(titleContributors, valueContributors)}
+          {this.renderInfo(titleDelivery, valueDelivery)}
+          {this.renderInfo(titleAvailability, valueAvailability)}
         </Grid>
       </Marger>
     )
   }
 
-  renderInfo(title, titleSmall, value) {
+  renderInfo(title, value) {
     const { viewportIsTabletOrLess, viewportIsSOrLess } = this.props
 
-    if (!title || !titleSmall) return
+    if (!title) return
 
     return (
       <GridCol style={styles.infos} col-l="4" col-xl="3">
-        {viewportIsTabletOrLess && (
-          <Text weight="regular" style={styles.infos.lists}>
-            {titleSmall}
-            <Text weight="light">{value}</Text>
-          </Text>
-        )}
-
-        {!viewportIsTabletOrLess && (
-          <Fragment>
-            <Text weight="regular">{title}</Text>
-            <Text weight="light">{value}</Text>
-          </Fragment>
-        )}
+        <Fragment>
+          <Text weight="regular">{title}</Text>
+          <Text weight="light">{value}</Text>
+        </Fragment>
       </GridCol>
     )
   }
@@ -429,6 +407,10 @@ const styles = {
       filter: 'grayscale(1) opacity(.4)',
       cursor: 'not-allowed',
     },
+  },
+
+  textMargin: {
+    margin: 0,
   },
 
   infos: {
