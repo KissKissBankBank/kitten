@@ -145,6 +145,7 @@ class ContributionCardComponent extends Component {
             italic
             margin={false}
             tag={titleTag}
+            style={styles.textColor}
           >
             {titleAmount}
           </Title>
@@ -155,6 +156,7 @@ class ContributionCardComponent extends Component {
         {titleDescription && (
           <Marger top="3" bottom="1">
             <Text
+              color="font1"
               size={viewportIsSOrLess ? 'big' : 'huge'}
               tag={textTag}
               weight="bold"
@@ -166,6 +168,7 @@ class ContributionCardComponent extends Component {
         )}
         <Marger top={!titleDescription ? 3 : 1}>
           <Paragraph
+            style={styles.textColor}
             modifier={viewportIsSOrLess ? 'quaternary' : 'tertiary'}
             margin={false}
           >
@@ -213,17 +216,21 @@ class ContributionCardComponent extends Component {
       <Fragment>
         {viewportIsTabletOrLess && (
           <div>
-            <Text weight="regular" style={styles.infos.lists}>
+            <Text color="font1" weight="regular" style={styles.infos.lists}>
               {title}
-              <Text weight="light">{value}</Text>
+              <Text color="font1" weight="light">
+                {value}
+              </Text>
             </Text>
           </div>
         )}
 
         {!viewportIsTabletOrLess && (
-          <Text weight="regular" style={styles.infos.lists}>
+          <Text color="font1" weight="regular" style={styles.infos.lists}>
             {title}
-            <Text weight="light">{value}</Text>
+            <Text color="font1" weight="light">
+              {value}
+            </Text>
           </Text>
         )}
       </Fragment>
@@ -328,7 +335,7 @@ class ContributionCardComponent extends Component {
               <div style={styles.myContribution}>
                 {this.renderIconBadge()}
                 <div style={styles.myContribution.text}>
-                  <Text size="tiny" weight="regular">
+                  <Text color="font1" size="tiny" weight="regular">
                     {myContribution}
                     <br />
                     <Text
@@ -351,7 +358,7 @@ class ContributionCardComponent extends Component {
           <div style={styles.myContribution}>
             {this.renderIconBadge()}
             <div style={styles.myContribution.text}>
-              <Text size="tiny" weight="regular">
+              <Text color="font1" size="tiny" weight="regular">
                 {myContribution}
                 <br />
                 <Text
@@ -379,6 +386,10 @@ class ContributionCardComponent extends Component {
 }
 
 const styles = {
+  textColor: {
+    color: '#222',
+  },
+
   card: {
     borderWidth: 2,
     borderStyle: 'solid',

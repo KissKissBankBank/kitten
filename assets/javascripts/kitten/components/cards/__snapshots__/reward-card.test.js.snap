@@ -44,6 +44,12 @@ exports[`<RewardCard /> by default matches with snapshot 1`] = `
         >
           <h1
             className="k-Title k-Title--tertiary k-Title--withoutMargin k-Title--italic"
+            data-radium={true}
+            style={
+              Object {
+                "color": "#222",
+              }
+            }
           >
             Custom title mount
           </h1>
@@ -71,6 +77,12 @@ exports[`<RewardCard /> by default matches with snapshot 1`] = `
         >
           <p
             className="k-Paragraph k-Paragraph--tertiary k-Paragraph--withoutMargin"
+            data-radium={true}
+            style={
+              Object {
+                "color": "#222",
+              }
+            }
           >
             Custom text description
           </p>
@@ -138,6 +150,12 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
         >
           <h1
             className="k-Title k-Title--tertiary k-Title--withoutMargin k-Title--italic"
+            data-radium={true}
+            style={
+              Object {
+                "color": "#222",
+              }
+            }
           >
             Custom title mount
           </h1>
@@ -163,7 +181,7 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
           }
         >
           <p
-            className="k-u-size-huge k-u-weight-bold"
+            className="k-u-color-font1 k-u-size-huge k-u-weight-bold"
             data-radium={true}
             style={
               Object {
@@ -184,6 +202,12 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
         >
           <p
             className="k-Paragraph k-Paragraph--tertiary k-Paragraph--withoutMargin"
+            data-radium={true}
+            style={
+              Object {
+                "color": "#222",
+              }
+            }
           >
             Custom text description
           </p>
@@ -197,7 +221,7 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
           }
         >
           <span
-            className="rmq-ef57b76a k-u-weight-regular"
+            className="rmq-ef57b76a k-u-color-font1 k-u-weight-regular"
             data-radium={true}
             style={
               Object {
@@ -207,13 +231,13 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
           >
             Custom title contributors
             <span
-              className="k-u-weight-light"
+              className="k-u-color-font1 k-u-weight-light"
             >
               Custom value contributors
             </span>
           </span>
           <span
-            className="rmq-ef57b76a k-u-weight-regular"
+            className="rmq-ef57b76a k-u-color-font1 k-u-weight-regular"
             data-radium={true}
             style={
               Object {
@@ -223,13 +247,13 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
           >
             Custom title delivery
             <span
-              className="k-u-weight-light"
+              className="k-u-color-font1 k-u-weight-light"
             >
               Custom value delivery
             </span>
           </span>
           <span
-            className="rmq-ef57b76a k-u-weight-regular"
+            className="rmq-ef57b76a k-u-color-font1 k-u-weight-regular"
             data-radium={true}
             style={
               Object {
@@ -239,7 +263,7 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
           >
             Custom title availability
             <span
-              className="k-u-weight-light"
+              className="k-u-color-font1 k-u-weight-light"
             >
               Custom value availability
             </span>
@@ -361,7 +385,7 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
                 }
               >
                 <span
-                  className="k-u-size-tiny k-u-weight-regular"
+                  className="k-u-color-font1 k-u-size-tiny k-u-weight-regular"
                   data-radium={true}
                 >
                   Custom my contribution
