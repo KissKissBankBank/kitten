@@ -108,7 +108,7 @@ class ContributionCardComponent extends Component {
       <StyleRoot {...others} style={styleCard}>
         <Marger
           bottom={viewportIsSOrLess ? 0 : 4}
-          top={viewportIsTabletOrLess ? 4 : 4}
+          top={viewportIsSOrLess ? 3 : 4}
         >
           <Grid style={styles.card.addPadding} disabled={isDisabled}>
             <GridCol col-l="7" col-m={!imageProps.src ? 10 : 7}>
@@ -153,11 +153,11 @@ class ContributionCardComponent extends Component {
             {titleAmount}
           </Title>
         </Marger>
-        <Marger top="2" bottom={viewportIsMobile ? 3 : 3}>
+        <Marger top="2" bottom="3">
           <HorizontalStroke size="big" />
         </Marger>
         {titleDescription && (
-          <Marger top="4" bottom="1">
+          <Marger top="3" bottom="1">
             <Text
               size={viewportIsSOrLess ? 'big' : 'huge'}
               tag={textTag}
@@ -168,7 +168,7 @@ class ContributionCardComponent extends Component {
             </Text>
           </Marger>
         )}
-        <Marger top={!titleDescription ? 4 : 1}>
+        <Marger top={!titleDescription ? 3 : 1}>
           <Paragraph
             modifier={viewportIsSOrLess ? 'quaternary' : 'tertiary'}
             margin={false}
@@ -197,28 +197,40 @@ class ContributionCardComponent extends Component {
     if (!valueContributors && !valueDelivery && !valueAvailability) return
 
     return (
-      <Marger top="3" bottom={viewportIsSOrLess ? 3 : 4}>
-        <Grid>
-          {this.renderInfo(titleContributors, valueContributors)}
-          {this.renderInfo(titleDelivery, valueDelivery)}
-          {this.renderInfo(titleAvailability, valueAvailability)}
-        </Grid>
+      <Marger
+        top={viewportIsSOrLess ? 2 : 3}
+        bottom={viewportIsSOrLess ? 3 : 4}
+      >
+        {this.renderInfo(titleContributors, valueContributors)}
+        {this.renderInfo(titleDelivery, valueDelivery)}
+        {this.renderInfo(titleAvailability, valueAvailability)}
       </Marger>
     )
   }
 
   renderInfo(title, value) {
-    const { viewportIsTabletOrLess, viewportIsSOrLess } = this.props
+    const { viewportIsTabletOrLess } = this.props
 
     if (!title) return
 
     return (
-      <GridCol style={styles.infos} col-l="4" col-xl="3">
-        <Fragment>
-          <Text weight="regular">{title}</Text>
-          <Text weight="light">{value}</Text>
-        </Fragment>
-      </GridCol>
+      <Fragment>
+        {viewportIsTabletOrLess && (
+          <div style={styles.infos}>
+            <Text weight="regular" style={styles.infos.lists}>
+              {title}
+              <Text weight="light">{value}</Text>
+            </Text>
+          </div>
+        )}
+
+        {!viewportIsTabletOrLess && (
+          <Text weight="regular" style={styles.infos.lists}>
+            {title}
+            <Text weight="light">{value}</Text>
+          </Text>
+        )}
+      </Fragment>
     )
   }
 
@@ -295,7 +307,7 @@ class ContributionCardComponent extends Component {
     if (this.props.isDisabled) return
 
     return (
-      <IconBadge style={styles.iconBadge}>
+      <IconBadge valid style={styles.iconBadge}>
         <CheckedIcon className="k-IconBadge__svg" />
       </IconBadge>
     )
@@ -396,10 +408,10 @@ const styles = {
 
     image: {
       [`@media (min-width: ${ScreenConfig['M'].min}px)`]: {
-        paddingRight: 40,
+        paddingRight: 30,
       },
       [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
-        paddingRight: 50,
+        paddingRight: 40,
       },
     },
 
@@ -414,13 +426,17 @@ const styles = {
   },
 
   infos: {
-    display: 'flex',
-    flexDirection: 'column',
+    // display: 'flex',
+    // flexDirection: 'column',
+    // [`@media (min-width: ${ScreenConfig['M'].min}px)`]: {
+    //   flexDirection: 'row',
 
+    // },
     lists: {
       fontSize: 14,
       [`@media (min-width: ${ScreenConfig['M'].min}px)`]: {
         fontSize: 16,
+        marginRight: 30,
       },
     },
   },
@@ -455,7 +471,6 @@ const styles = {
   },
 
   iconBadge: {
-    backgroundColor: COLORS.valid,
     marginRight: 10,
   },
 
