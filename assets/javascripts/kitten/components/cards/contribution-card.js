@@ -73,7 +73,6 @@ class ContributionCardComponent extends Component {
     const {
       isDisabled,
       viewportIsSOrLess,
-      viewportIsMobile,
       viewportIsTabletOrLess,
       titleAmount,
       titleDescription,
@@ -130,15 +129,12 @@ class ContributionCardComponent extends Component {
 
   renderDescription() {
     const {
-      button,
       titleAmount,
       titleDescription,
       textDescription,
       titleTag,
       textTag,
-      myContribution,
       viewportIsSOrLess,
-      viewportIsMobile,
     } = this.props
 
     return (
@@ -482,7 +478,6 @@ const styles = {
 export const ContributionCard = mediaQueries(
   Radium(ContributionCardComponent),
   {
-    viewportIsMobile: true,
     viewportIsTabletOrLess: true,
     viewportIsSOrLess: true,
   },
