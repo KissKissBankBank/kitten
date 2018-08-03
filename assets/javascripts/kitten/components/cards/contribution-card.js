@@ -212,7 +212,7 @@ class ContributionCardComponent extends Component {
     return (
       <Fragment>
         {viewportIsTabletOrLess && (
-          <div style={styles.infos}>
+          <div>
             <Text weight="regular" style={styles.infos.lists}>
               {title}
               <Text weight="light">{value}</Text>
@@ -422,12 +422,6 @@ const styles = {
   },
 
   infos: {
-    // display: 'flex',
-    // flexDirection: 'column',
-    // [`@media (min-width: ${ScreenConfig['M'].min}px)`]: {
-    //   flexDirection: 'row',
-
-    // },
     lists: {
       fontSize: 14,
       [`@media (min-width: ${ScreenConfig['M'].min}px)`]: {
