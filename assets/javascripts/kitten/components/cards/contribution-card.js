@@ -387,7 +387,7 @@ class ContributionCardComponent extends Component {
 
 const styles = {
   textColor: {
-    color: '#222',
+    color: COLORS.font1,
   },
 
   card: {
