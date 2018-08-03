@@ -2,7 +2,17 @@
 
 exports[`<DonationCard /> by default matches with snapshot 1`] = `
 <div
+  button="Custom text button"
+  buttonOnClick={[Function]}
+  buttonOnMouseEnter={[Function]}
+  buttonOnMouseLeave={[Function]}
   data-radium={true}
+  imageProps={
+    Object {
+      "alt": "",
+      "src": "",
+    }
+  }
   style={
     Object {
       "borderColor": "#eee",
@@ -10,17 +20,20 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
       "borderWidth": 2,
     }
   }
+  textTag="p"
+  title="Custom title mount"
+  titleTag="h1"
 >
   <div
     style={
       Object {
-        "marginBottom": "3.125rem",
-        "marginTop": "3.125rem",
+        "marginBottom": "2.5rem",
+        "marginTop": "2.5rem",
       }
     }
   >
     <div
-      className="rmq-5aa2f196 rmq-5b3da7a1 rmq-ce79a9e0 k-Grid"
+      className="k-Grid"
       data-radium={true}
       disabled={false}
       style={
@@ -31,7 +44,7 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
       }
     >
       <div
-        className="k-Grid__col--12 k-Grid__col--10@m k-Grid__col--7@l"
+        className="k-Grid__col--12 k-Grid__col--10@m k-Grid__col--offset-1@m k-Grid__col--8@l k-Grid__col--offset-2@l"
         data-radium={true}
       >
         <div
@@ -43,290 +56,132 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
           }
         >
           <h1
-            className="k-Title k-Title--secondary k-Title--withoutMargin k-Title--italic"
-          >
-            Custom title mount
-          </h1>
-        </div>
-        <div
-          style={
-            Object {
-              "marginBottom": "2.5rem",
-              "marginTop": "1.25rem",
-            }
-          }
-        >
-          <span
-            className="k-HorizontalStroke k-HorizontalStroke--big"
-          />
-        </div>
-        
-        <div
-          style={
-            Object {
-              "marginBottom": null,
-              "marginTop": "2.5rem",
-            }
-          }
-        >
-          <p
-            className="k-Paragraph k-Paragraph--tertiary k-Paragraph--withoutMargin"
-          >
-            Custom text description
-          </p>
-        </div>
-      </div>
-      
-    </div>
-  </div>
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "@media (min-width: 640px){ .rmq-5aa2f196{padding-left: 50px !important;
-padding-right: 50px !important;}}
-@media (min-width: 768px){ .rmq-5b3da7a1{padding-left: 40px !important;
-padding-right: 0 !important;}}
-@media (min-width: 1080px){ .rmq-ce79a9e0{padding-left: 115px !important;
-padding-right: 0 !important;}}",
-      }
-    }
-  />
-</div>
-`;
-
-exports[`<DonationCard /> with some props matches with snapshot 1`] = `
-<div
-  data-radium={true}
-  style={
-    Object {
-      "borderColor": "#eee",
-      "borderStyle": "solid",
-      "borderWidth": 2,
-    }
-  }
->
-  <div
-    style={
-      Object {
-        "marginBottom": "3.125rem",
-        "marginTop": "3.125rem",
-      }
-    }
-  >
-    <div
-      className="rmq-5aa2f196 rmq-5b3da7a1 rmq-ce79a9e0 k-Grid"
-      data-radium={true}
-      disabled={false}
-      style={
-        Object {
-          "paddingLeft": 20,
-          "paddingRight": 20,
-        }
-      }
-    >
-      <div
-        className="k-Grid__col--12 k-Grid__col--7@m k-Grid__col--7@l"
-        data-radium={true}
-      >
-        <div
-          style={
-            Object {
-              "marginBottom": "1.25rem",
-              "marginTop": null,
-            }
-          }
-        >
-          <h1
-            className="k-Title k-Title--secondary k-Title--withoutMargin k-Title--italic"
-          >
-            Custom title mount
-          </h1>
-        </div>
-        <div
-          style={
-            Object {
-              "marginBottom": "2.5rem",
-              "marginTop": "1.25rem",
-            }
-          }
-        >
-          <span
-            className="k-HorizontalStroke k-HorizontalStroke--big"
-          />
-        </div>
-        
-        <div
-          style={
-            Object {
-              "marginBottom": null,
-              "marginTop": "2.5rem",
-            }
-          }
-        >
-          <p
-            className="k-Paragraph k-Paragraph--tertiary k-Paragraph--withoutMargin"
-          >
-            Custom text description
-          </p>
-        </div>
-        <div>
-          Custom function
-        </div>
-        <div
-          style={
-            Object {
-              "marginBottom": null,
-              "marginTop": "2.5rem",
-            }
-          }
-        >
-          <div
+            className="k-Title k-Title--quaternary k-Title--withoutMargin"
+            data-radium={true}
             style={
               Object {
-                "marginBottom": "1.25rem",
-                "marginTop": null,
+                "color": "#222",
+                "textAlign": "center",
               }
             }
           >
-            <button
-              aria-label="Custom text button"
-              className="rmq-2c87bfe9 k-Button k-Button--helium k-Button--big"
-              data-radium={true}
-              disabled={false}
-              onClick={[Function]}
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              style={Object {}}
-              tabIndex={null}
-              type="button"
-            >
-              Custom text button
-            </button>
-          </div>
-          <div
+            Custom title mount
+          </h1>
+        </div>
+        <div
+          style={
+            Object {
+              "marginBottom": "1.875rem",
+              "marginTop": "1.25rem",
+            }
+          }
+        >
+          <span
+            className="k-HorizontalStroke k-HorizontalStroke--big"
+            data-radium={true}
             style={
               Object {
-                "marginBottom": null,
-                "marginTop": "1.25rem",
+                "margin": "0 auto",
+              }
+            }
+          />
+        </div>
+        <div
+          style={
+            Object {
+              "marginBottom": "1.875rem",
+              "marginTop": "1.875rem",
+            }
+          }
+        >
+          <div
+            className="k-Grid"
+            data-radium={true}
+            style={
+              Object {
+                "display": "flex",
+                "justifyContent": "center",
               }
             }
           >
             <div
+              className="k-Grid__col--12 k-Grid__col--7@xs k-Grid__col--5@m"
               data-radium={true}
-              style={
-                Object {
-                  "alignItems": "center",
-                  "display": "flex",
-                }
-              }
             >
               <div
-                data-radium={true}
-              >
-                <span
-                  data-radium={true}
-                  style={
-                    Object {
-                      "alignItems": "center",
-                      "backgroundColor": "#19b4fa",
-                      "borderRadius": 30,
-                      "display": "flex",
-                      "justifyContent": "center",
-                      "minHeight": 30,
-                      "minWidth": 30,
-                      "padding": 0,
-                    }
-                  }
-                >
-                  <span
-                    data-radium={true}
-                    style={
-                      Object {
-                        "color": "#fff",
-                        "fill": "#fff",
-                        "flexBasis": 11,
-                        "fontSize": 12,
-                        "fontWeight": "bold",
-                        "lineHeight": 0,
-                        "textAlign": "center",
-                      }
-                    }
-                  >
-                    <svg
-                      className="k-IconBadge__svg"
-                      viewBox="0 0 11 8"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <title>
-                        Checked
-                      </title>
-                      <path
-                        d="M4.44 7.596L3.024 6.182 8.682.525l1.414 1.414z"
-                      />
-                      <path
-                        d="M4.44 7.596L.903 4.06l1.414-1.414 3.536 3.536z"
-                      />
-                    </svg>
-                  </span>
-                </span>
-                <style
-                  dangerouslySetInnerHTML={
-                    Object {
-                      "__html": "",
-                    }
-                  }
-                />
-              </div>
-              <div
-                data-radium={true}
                 style={
                   Object {
-                    "display": "flex",
-                    "lineHeight": "normal",
+                    "marginBottom": "0.9375rem",
+                    "marginTop": null,
                   }
                 }
               >
-                <span
-                  className="k-u-size-tiny k-u-weight-regular"
-                  data-radium={true}
+                <label
+                  className="k-Label k-Label--micro"
+                  htmlFor={undefined}
+                  onClick={[Function]}
+                  style={
+                    Object {
+                      "textAlign": "center",
+                    }
+                  }
                 >
-                  Custom my contribution
-                  <br />
-                  <a
-                    className="k-u-color-primary1 k-u-decoration-none k-u-weight-regular"
-                    href="Custom manage link contribution"
+                  Label
+                </label>
+              </div>
+              <div
+                style={
+                  Object {
+                    "marginBottom": null,
+                    "marginTop": "0.9375rem",
+                  }
+                }
+              >
+                <div
+                  className="k-TextInputWithUnit k-TextInputWithUnit--fullWidth"
+                >
+                  <input
+                    className="k-TextInput k-TextInputWithUnit__input"
+                    disabled={false}
+                    id={undefined}
+                    name="text"
+                    placeholder={null}
+                    type="number"
+                  />
+                  <span
+                    className="k-TextInputWithUnit__unit"
                   >
-                    Custom manage contribution
-                  </a>
-                </span>
+                    λ
+                  </span>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div
-        className="rmq-cb55d35a rmq-fb3d6d8b k-Grid__col--12 k-Grid__col--4@m k-Grid__col--offset-1@m"
-        data-radium={true}
-        style={Object {}}
-      >
         <div
           style={
             Object {
+              "display": "flex",
+              "justifyContent": "center",
               "marginBottom": null,
               "marginTop": null,
             }
           }
         >
-          <img
-            alt="Image alt"
+          <button
+            aria-label="Custom text button"
+            className="rmq-2001d403 k-Button k-Button--helium k-Button--big"
             data-radium={true}
-            src="#image"
-            style={
-              Object {
-                "width": "100%",
-              }
-            }
-          />
+            disabled={false}
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            style={Object {}}
+            tabIndex={null}
+            type="button"
+          >
+            Custom text button
+          </button>
         </div>
       </div>
     </div>
@@ -334,15 +189,7 @@ exports[`<DonationCard /> with some props matches with snapshot 1`] = `
   <style
     dangerouslySetInnerHTML={
       Object {
-        "__html": "@media (min-width: 640px){ .rmq-5aa2f196{padding-left: 50px !important;
-padding-right: 50px !important;}}
-@media (min-width: 768px){ .rmq-5b3da7a1{padding-left: 40px !important;
-padding-right: 0 !important;}}
-@media (min-width: 1080px){ .rmq-ce79a9e0{padding-left: 115px !important;
-padding-right: 0 !important;}}
-@media (max-width: 767px){ .rmq-2c87bfe9{width: 100% !important;}}
-@media (min-width: 768px){ .rmq-cb55d35a{padding-right: 40px !important;}}
-@media (min-width: 1080px){ .rmq-fb3d6d8b{padding-right: 50px !important;}}",
+        "__html": "@media (max-width: 639px){ .rmq-2001d403{width: 100% !important;}}",
       }
     }
   />

@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking change: Update style on `DonationCard` component.
+
 ## [21.3.2] - 2018-08-02
 
 Fix:
