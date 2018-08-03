@@ -14,8 +14,8 @@ exports[`<RewardCard /> by default matches with snapshot 1`] = `
   <div
     style={
       Object {
-        "marginBottom": "3.125rem",
-        "marginTop": "3.125rem",
+        "marginBottom": "2.5rem",
+        "marginTop": "2.5rem",
       }
     }
   >
@@ -43,7 +43,7 @@ exports[`<RewardCard /> by default matches with snapshot 1`] = `
           }
         >
           <h1
-            className="k-Title k-Title--secondary k-Title--withoutMargin k-Title--italic"
+            className="k-Title k-Title--tertiary k-Title--withoutMargin k-Title--italic"
           >
             Custom title mount
           </h1>
@@ -51,7 +51,7 @@ exports[`<RewardCard /> by default matches with snapshot 1`] = `
         <div
           style={
             Object {
-              "marginBottom": "2.5rem",
+              "marginBottom": "1.875rem",
               "marginTop": "1.25rem",
             }
           }
@@ -65,7 +65,7 @@ exports[`<RewardCard /> by default matches with snapshot 1`] = `
           style={
             Object {
               "marginBottom": null,
-              "marginTop": "2.5rem",
+              "marginTop": "1.875rem",
             }
           }
         >
@@ -104,12 +104,15 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
       "borderWidth": 2,
     }
   }
+  titleSmallAvailability="Custom title small availability"
+  titleSmallContributors="Custom title small contributors"
+  titleSmallDelivery="Custom title small delivery"
 >
   <div
     style={
       Object {
-        "marginBottom": "3.125rem",
-        "marginTop": "3.125rem",
+        "marginBottom": "2.5rem",
+        "marginTop": "2.5rem",
       }
     }
   >
@@ -137,7 +140,7 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
           }
         >
           <h1
-            className="k-Title k-Title--secondary k-Title--withoutMargin k-Title--italic"
+            className="k-Title k-Title--tertiary k-Title--withoutMargin k-Title--italic"
           >
             Custom title mount
           </h1>
@@ -145,7 +148,7 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
         <div
           style={
             Object {
-              "marginBottom": "2.5rem",
+              "marginBottom": "1.875rem",
               "marginTop": "1.25rem",
             }
           }
@@ -158,12 +161,18 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
           style={
             Object {
               "marginBottom": "0.625rem",
-              "marginTop": "2.5rem",
+              "marginTop": "1.875rem",
             }
           }
         >
           <p
             className="k-u-size-huge k-u-weight-bold"
+            data-radium={true}
+            style={
+              Object {
+                "margin": 0,
+              }
+            }
           >
             Custom title description
           </p>
@@ -186,78 +195,58 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
           style={
             Object {
               "marginBottom": "2.5rem",
-              "marginTop": "1.25rem",
+              "marginTop": "1.875rem",
             }
           }
         >
-          <div
-            className="k-Grid"
+          <span
+            className="rmq-ef57b76a k-u-weight-regular"
             data-radium={true}
+            style={
+              Object {
+                "fontSize": 14,
+              }
+            }
           >
-            <div
-              className="k-Grid__col--12 k-Grid__col--4@l k-Grid__col--3@xl"
-              data-radium={true}
-              style={
-                Object {
-                  "display": "flex",
-                  "flexDirection": "column",
-                }
-              }
+            Custom title contributors
+            <span
+              className="k-u-weight-light"
             >
-              <span
-                className="k-u-weight-regular"
-              >
-                Custom title contributors
-              </span>
-              <span
-                className="k-u-weight-light"
-              >
-                Custom value contributors
-              </span>
-            </div>
-            <div
-              className="k-Grid__col--12 k-Grid__col--4@l k-Grid__col--3@xl"
-              data-radium={true}
-              style={
-                Object {
-                  "display": "flex",
-                  "flexDirection": "column",
-                }
+              Custom value contributors
+            </span>
+          </span>
+          <span
+            className="rmq-ef57b76a k-u-weight-regular"
+            data-radium={true}
+            style={
+              Object {
+                "fontSize": 14,
               }
+            }
+          >
+            Custom title delivery
+            <span
+              className="k-u-weight-light"
             >
-              <span
-                className="k-u-weight-regular"
-              >
-                Custom title delivery
-              </span>
-              <span
-                className="k-u-weight-light"
-              >
-                Custom value delivery
-              </span>
-            </div>
-            <div
-              className="k-Grid__col--12 k-Grid__col--4@l k-Grid__col--3@xl"
-              data-radium={true}
-              style={
-                Object {
-                  "display": "flex",
-                  "flexDirection": "column",
-                }
+              Custom value delivery
+            </span>
+          </span>
+          <span
+            className="rmq-ef57b76a k-u-weight-regular"
+            data-radium={true}
+            style={
+              Object {
+                "fontSize": 14,
               }
+            }
+          >
+            Custom title availability
+            <span
+              className="k-u-weight-light"
             >
-              <span
-                className="k-u-weight-regular"
-              >
-                Custom title availability
-              </span>
-              <span
-                className="k-u-weight-light"
-              >
-                Custom value availability
-              </span>
-            </div>
-          </div>
+              Custom value availability
+            </span>
+          </span>
         </div>
         <div
           style={
@@ -315,10 +304,11 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
                   style={
                     Object {
                       "alignItems": "center",
-                      "backgroundColor": "#19b4fa",
+                      "backgroundColor": "#61d079",
                       "borderRadius": 30,
                       "display": "flex",
                       "justifyContent": "center",
+                      "marginRight": 10,
                       "minHeight": 30,
                       "minWidth": 30,
                       "padding": 0,
@@ -392,7 +382,7 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
         </div>
       </div>
       <div
-        className="rmq-cb55d35a rmq-fb3d6d8b k-Grid__col--12 k-Grid__col--4@m k-Grid__col--offset-1@m"
+        className="rmq-787a3add rmq-a7d79daa k-Grid__col--12 k-Grid__col--4@m k-Grid__col--offset-1@m"
         data-radium={true}
         style={Object {}}
       >
@@ -427,9 +417,11 @@ padding-right: 50px !important;}}
 padding-right: 0 !important;}}
 @media (min-width: 1080px){ .rmq-ce79a9e0{padding-left: 115px !important;
 padding-right: 0 !important;}}
+@media (min-width: 768px){ .rmq-ef57b76a{font-size: 16px !important;
+margin-right: 30px !important;}}
 @media (max-width: 767px){ .rmq-2c87bfe9{width: 100% !important;}}
-@media (min-width: 768px){ .rmq-cb55d35a{padding-right: 40px !important;}}
-@media (min-width: 1080px){ .rmq-fb3d6d8b{padding-right: 50px !important;}}",
+@media (min-width: 768px){ .rmq-787a3add{padding-right: 30px !important;}}
+@media (min-width: 1080px){ .rmq-a7d79daa{padding-right: 40px !important;}}",
       }
     }
   />
