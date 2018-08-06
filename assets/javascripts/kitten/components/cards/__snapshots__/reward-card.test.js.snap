@@ -403,7 +403,7 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
         </div>
       </div>
       <div
-        className="rmq-69fe4e73 k-Grid__col--12 k-Grid__col--4@m k-Grid__col--offset-1@m"
+        className="rmq-c7c1445b k-Grid__col--12 k-Grid__col--4@m k-Grid__col--offset-1@m"
         data-radium={true}
         style={Object {}}
       >
@@ -441,7 +441,7 @@ padding-right: 0 !important;}}
 @media (min-width: 768px){ .rmq-ef57b76a{font-size: 16px !important;
 margin-right: 30px !important;}}
 @media (max-width: 767px){ .rmq-2c87bfe9{width: 100% !important;}}
-@media (max-width: 1079px){ .rmq-69fe4e73{padding-right: 50px !important;}}",
+@media (min-width: 768px){ .rmq-c7c1445b{padding-right: 50px !important;}}",
       }
     }
   />
