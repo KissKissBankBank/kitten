@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Breaking change: Update style on `DonationCard` component.
+  `DonationCard` don’t use `ContributionCard` anymore.
+  You must update props with the new specific props.
 
 ## [21.3.2] - 2018-08-02
 
