@@ -29,13 +29,12 @@ export const mediaQueries = (WrappedComponent, hocProps = {}) =>
       }, {})
     }
 
-    cloneMethods = wrappedComponentInstance => {
+    setExposedMethods = wrappedComponentInstance => {
       if (!wrappedComponentInstance) return
+      if (!hocProps.exposedMethods) return
 
-      Object.keys(wrappedComponentInstance).forEach(property => {
-        if (typeof wrappedComponentInstance[property] === 'function') {
-          this[property] = wrappedComponentInstance[property]
-        }
+      hocProps.exposedMethods.forEach(method => {
+        this[method] = wrappedComponentInstance[method]
       })
     }
 
@@ -72,7 +71,7 @@ export const mediaQueries = (WrappedComponent, hocProps = {}) =>
     render() {
       return (
         <WrappedComponent
-          ref={this.cloneMethods}
+          ref={this.setExposedMethods}
           {...this.props}
           {...this.state}
         />
