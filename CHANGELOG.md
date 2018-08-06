@@ -8,6 +8,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   `DonationCard` don’t use `ContributionCard` anymore.
   You must update props with the new specific props.
 
+## [21.4.0] - 2018-08-06
+
+Feature:
+- Update `ReactModal` version.
+
 ## [21.3.2] - 2018-08-02
 
 Fix:
