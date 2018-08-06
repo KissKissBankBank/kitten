@@ -414,11 +414,8 @@ const styles = {
     },
 
     image: {
-      [`@media (min-width: ${ScreenConfig['M'].min}px)`]: {
-        paddingRight: 30,
-      },
-      [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
-        paddingRight: 40,
+      [`@media (max-width: ${ScreenConfig['M'].max}px)`]: {
+        paddingRight: 50,
       },
     },
 
