@@ -6,7 +6,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Breaking change: Rename `onClose` to `onAfterClose` in `CartRewardCard`.
 - Breaking change: `mediaQueries` don't exposed all methods.
-  You must use `exposedMethods` prop to list methods who must be exposed.
+  You have to use `exposedMethods` prop to list the methods you want to expose
+  on the mediaQueries HOC.
 
 ```js
 mediaQueries(Component, {
