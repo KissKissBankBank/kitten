@@ -5,7 +5,7 @@ import { Marger } from 'kitten/components/layout/marger'
 import { KarlExampleTitle } from 'kitten/karl/examples/title'
 
 export class KarlCartRewardCard extends Component {
-  handleClose = () => {
+  handleAfterClose = () => {
     alert('Card removed!')
   }
 
@@ -43,7 +43,7 @@ export class KarlCartRewardCard extends Component {
               textDescription="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient mont"
               shippingTitle="Shipping: "
               shippingValue="January 2018"
-              onClose={this.handleClose}
+              onAfterClose={this.handleAfterClose}
               onCloseClick={this.handleCloseClick}
             />
           </Marger>

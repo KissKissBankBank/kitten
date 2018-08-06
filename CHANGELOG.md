@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking change: Rename `onClose` to `onAfterClose` in `CartRewardCard`.
 ## [21.3.1] - 2018-08-02
 
 Fix:
