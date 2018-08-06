@@ -12,16 +12,13 @@ export class Modal extends Component {
     this.state = {
       showModal: false,
     }
-
-    this.open = this.open.bind(this)
-    this.close = this.close.bind(this)
   }
 
-  open() {
+  open = () => {
     this.setState({ showModal: true })
   }
 
-  close() {
+  close = () => {
     this.setState({ showModal: false })
     if (this.props.onClose) {
       this.props.onClose()
@@ -83,6 +80,7 @@ export class Modal extends Component {
             labelledby,
             describedby,
           }}
+          ariaHideApp={false}
           onRequestClose={this.close}
           contentLabel={label}
         >
