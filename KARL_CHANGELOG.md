@@ -4,7 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-## [21.3.1] - 2018-08-02
+## [21.4.0] - 2018-08-06
+
+No changes.
+
+## [21.3.2] - 2018-08-02
 
 No changes.
 
