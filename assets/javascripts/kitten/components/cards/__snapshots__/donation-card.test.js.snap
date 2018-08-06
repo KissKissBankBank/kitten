@@ -2,17 +2,18 @@
 
 exports[`<DonationCard /> by default matches with snapshot 1`] = `
 <div
+  amountLabel="Label"
+  amountPlaceholder=""
   button="Custom text button"
   buttonOnClick={[Function]}
   buttonOnMouseEnter={[Function]}
   buttonOnMouseLeave={[Function]}
+  currencySymbol="€"
   data-radium={true}
-  imageProps={
-    Object {
-      "alt": "",
-      "src": "",
-    }
-  }
+  donationId=""
+  errorTag=""
+  isError=""
+  myContribution=""
   style={
     Object {
       "borderColor": "#eee",
@@ -45,7 +46,6 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
     >
       <div
         className="k-Grid__col--12 k-Grid__col--10@m k-Grid__col--offset-1@m k-Grid__col--8@l k-Grid__col--offset-2@l"
-        data-radium={true}
       >
         <div
           style={
@@ -78,7 +78,6 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
         >
           <span
             className="k-HorizontalStroke k-HorizontalStroke--big"
-            data-radium={true}
             style={
               Object {
                 "margin": "0 auto",
@@ -106,7 +105,6 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
           >
             <div
               className="k-Grid__col--12 k-Grid__col--7@xs k-Grid__col--5@m"
-              data-radium={true}
             >
               <div
                 style={
@@ -118,13 +116,8 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
               >
                 <label
                   className="k-Label k-Label--micro"
-                  htmlFor={undefined}
+                  htmlFor=""
                   onClick={[Function]}
-                  style={
-                    Object {
-                      "textAlign": "center",
-                    }
-                  }
                 >
                   Label
                 </label>
@@ -143,18 +136,19 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
                   <input
                     className="k-TextInput k-TextInputWithUnit__input"
                     disabled={false}
-                    id={undefined}
+                    id=""
                     name="text"
-                    placeholder={null}
+                    placeholder=""
                     type="number"
                   />
                   <span
                     className="k-TextInputWithUnit__unit"
                   >
-                    λ
+                    €
                   </span>
                 </div>
               </div>
+              
             </div>
           </div>
         </div>

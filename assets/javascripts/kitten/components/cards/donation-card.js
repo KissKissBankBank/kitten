@@ -48,8 +48,8 @@ class DonationCardComponent extends Component {
     isError: '',
     errorTag: '',
     amountPlaceholder: '',
-    currencySymbol: '',
-    amountLabel: '',
+    currencySymbol: '€',
+    amountLabel: 'Label',
 
     button: '',
     buttonOnMouseEnter: () => {},
