@@ -4,7 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Update `ReactModal` version.
+## [21.4.0] - 2018-08-06
+
+Feature:
+- Update `ReactModal` version.
 
 ## [21.3.2] - 2018-08-02
 
