@@ -14,10 +14,6 @@ No changes.
 
 ## [21.3.1] - 2018-08-02
 
-No changes.
-
-## [21.3.1] - 2018-08-02
-
 Fix:
 - Update an `Carousel` example with links.
 
