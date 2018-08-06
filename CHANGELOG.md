@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Update style on `ContributionCard` component.
+
 ## [21.4.0] - 2018-08-06
 
 Feature:

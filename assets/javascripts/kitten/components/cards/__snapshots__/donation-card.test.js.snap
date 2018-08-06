@@ -14,8 +14,8 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
   <div
     style={
       Object {
-        "marginBottom": "3.125rem",
-        "marginTop": "3.125rem",
+        "marginBottom": "2.5rem",
+        "marginTop": "2.5rem",
       }
     }
   >
@@ -43,7 +43,13 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
           }
         >
           <h1
-            className="k-Title k-Title--secondary k-Title--withoutMargin k-Title--italic"
+            className="k-Title k-Title--tertiary k-Title--withoutMargin k-Title--italic"
+            data-radium={true}
+            style={
+              Object {
+                "color": "#222",
+              }
+            }
           >
             Custom title mount
           </h1>
@@ -51,7 +57,7 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
         <div
           style={
             Object {
-              "marginBottom": "2.5rem",
+              "marginBottom": "1.875rem",
               "marginTop": "1.25rem",
             }
           }
@@ -65,12 +71,18 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
           style={
             Object {
               "marginBottom": null,
-              "marginTop": "2.5rem",
+              "marginTop": "1.875rem",
             }
           }
         >
           <p
             className="k-Paragraph k-Paragraph--tertiary k-Paragraph--withoutMargin"
+            data-radium={true}
+            style={
+              Object {
+                "color": "#222",
+              }
+            }
           >
             Custom text description
           </p>
@@ -108,8 +120,8 @@ exports[`<DonationCard /> with some props matches with snapshot 1`] = `
   <div
     style={
       Object {
-        "marginBottom": "3.125rem",
-        "marginTop": "3.125rem",
+        "marginBottom": "2.5rem",
+        "marginTop": "2.5rem",
       }
     }
   >
@@ -137,7 +149,13 @@ exports[`<DonationCard /> with some props matches with snapshot 1`] = `
           }
         >
           <h1
-            className="k-Title k-Title--secondary k-Title--withoutMargin k-Title--italic"
+            className="k-Title k-Title--tertiary k-Title--withoutMargin k-Title--italic"
+            data-radium={true}
+            style={
+              Object {
+                "color": "#222",
+              }
+            }
           >
             Custom title mount
           </h1>
@@ -145,7 +163,7 @@ exports[`<DonationCard /> with some props matches with snapshot 1`] = `
         <div
           style={
             Object {
-              "marginBottom": "2.5rem",
+              "marginBottom": "1.875rem",
               "marginTop": "1.25rem",
             }
           }
@@ -159,12 +177,18 @@ exports[`<DonationCard /> with some props matches with snapshot 1`] = `
           style={
             Object {
               "marginBottom": null,
-              "marginTop": "2.5rem",
+              "marginTop": "1.875rem",
             }
           }
         >
           <p
             className="k-Paragraph k-Paragraph--tertiary k-Paragraph--withoutMargin"
+            data-radium={true}
+            style={
+              Object {
+                "color": "#222",
+              }
+            }
           >
             Custom text description
           </p>
@@ -228,10 +252,11 @@ exports[`<DonationCard /> with some props matches with snapshot 1`] = `
                   style={
                     Object {
                       "alignItems": "center",
-                      "backgroundColor": "#19b4fa",
+                      "backgroundColor": "#61d079",
                       "borderRadius": 30,
                       "display": "flex",
                       "justifyContent": "center",
+                      "marginRight": 10,
                       "minHeight": 30,
                       "minWidth": 30,
                       "padding": 0,
@@ -287,7 +312,7 @@ exports[`<DonationCard /> with some props matches with snapshot 1`] = `
                 }
               >
                 <span
-                  className="k-u-size-tiny k-u-weight-regular"
+                  className="k-u-color-font1 k-u-size-tiny k-u-weight-regular"
                   data-radium={true}
                 >
                   Custom my contribution
@@ -305,7 +330,7 @@ exports[`<DonationCard /> with some props matches with snapshot 1`] = `
         </div>
       </div>
       <div
-        className="rmq-cb55d35a rmq-fb3d6d8b k-Grid__col--12 k-Grid__col--4@m k-Grid__col--offset-1@m"
+        className="rmq-c7c1445b k-Grid__col--12 k-Grid__col--4@m k-Grid__col--offset-1@m"
         data-radium={true}
         style={Object {}}
       >
@@ -341,8 +366,7 @@ padding-right: 0 !important;}}
 @media (min-width: 1080px){ .rmq-ce79a9e0{padding-left: 115px !important;
 padding-right: 0 !important;}}
 @media (max-width: 767px){ .rmq-2c87bfe9{width: 100% !important;}}
-@media (min-width: 768px){ .rmq-cb55d35a{padding-right: 40px !important;}}
-@media (min-width: 1080px){ .rmq-fb3d6d8b{padding-right: 50px !important;}}",
+@media (min-width: 768px){ .rmq-c7c1445b{padding-right: 50px !important;}}",
       }
     }
   />

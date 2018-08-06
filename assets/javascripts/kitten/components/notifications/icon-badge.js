@@ -5,13 +5,14 @@ import COLORS from 'kitten/constants/colors-config'
 
 export class IconBadge extends Component {
   render() {
-    const { children, valid, big, huge, ...others } = this.props
+    const { children, valid, big, huge, style, ...others } = this.props
 
     const styleBadge = [
       styles.badge,
       valid && styles.badge.isValid,
       big && styles.badge.big,
       huge && styles.badge.huge,
+      style,
     ]
 
     const styleContent = [
