@@ -15,6 +15,11 @@ mediaQueries(Component, {
 })
 ```
 
+## [21.3.2] - 2018-08-02
+
+Fix:
+- Update `Comment` component bottom notes padding.
+
 ## [21.3.1] - 2018-08-02
 
 Fix:
