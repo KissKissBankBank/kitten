@@ -2,15 +2,12 @@ import React, { Component, Fragment } from 'react'
 import Radium, { StyleRoot } from 'radium'
 import PropTypes from 'prop-types'
 import { Marger } from 'kitten/components/layout/marger'
-import {
-  Grid as GridBase,
-  GridCol as GridColBase,
-} from 'kitten/components/grid/grid'
+import { Grid as GridBase, GridCol } from 'kitten/components/grid/grid'
 import { TextInputWithUnit } from 'kitten/components/form/text-input-with-unit'
 import { Title as TitleBase } from 'kitten/components/typography/title'
 import { Text } from 'kitten/components/typography/text'
 import { Button as ButtonBase } from 'kitten/components/buttons/button'
-import { HorizontalStroke as HorizontalStrokeBase } from 'kitten/components/layout/horizontal-stroke'
+import { HorizontalStroke } from 'kitten/components/layout/horizontal-stroke'
 import { Container } from 'kitten/components/grid/container'
 import { Label } from 'kitten/components/form/label'
 import COLORS from 'kitten/constants/colors-config'
@@ -18,10 +15,8 @@ import { mediaQueries } from 'kitten/hoc/media-queries'
 import { ScreenConfig } from 'kitten/constants/screen-config'
 
 const Grid = Radium(GridBase)
-const GridCol = Radium(GridColBase)
 const Button = Radium(ButtonBase)
 const Title = Radium(TitleBase)
-const HorizontalStroke = Radium(HorizontalStrokeBase)
 
 class DonationCardComponent extends Component {
   static propTypes = {
@@ -29,10 +24,18 @@ class DonationCardComponent extends Component {
     titleTag: PropTypes.string,
     textTag: PropTypes.string,
 
+    donationId: PropTypes.string,
+    isError: PropTypes.string,
+    errorTag: PropTypes.string,
+    amountPlaceholder: PropTypes.string,
+    currencySymbol: PropTypes.string,
+    amountLabel: PropTypes.string,
+
     button: PropTypes.string,
     buttonOnMouseEnter: PropTypes.func,
     buttonOnMouseLeave: PropTypes.func,
     buttonOnClick: PropTypes.func,
+    myContribution: PropTypes.string,
 
     isDisabled: PropTypes.bool,
   }
@@ -40,14 +43,19 @@ class DonationCardComponent extends Component {
   static defaultProps = {
     titleTag: 'h1',
     textTag: 'p',
-    imageProps: {
-      src: '',
-      alt: '',
-    },
+
+    donationId: '',
+    isError: '',
+    errorTag: '',
+    amountPlaceholder: '',
+    currencySymbol: '',
+    amountLabel: '',
+
     button: '',
     buttonOnMouseEnter: () => {},
     buttonOnMouseLeave: () => {},
     buttonOnClick: () => {},
+    myContribution: '',
 
     isDisabled: false,
   }
@@ -121,7 +129,7 @@ class DonationCardComponent extends Component {
         <Grid style={styles.center}>
           <GridCol col-xs="7" col-m="5">
             <Marger bottom="1.5">
-              <Label size="micro" htmlFor={donationId} style={styles.label}>
+              <Label size="micro" htmlFor={donationId}>
                 {amountLabel}
               </Label>
             </Marger>
@@ -193,6 +201,10 @@ const styles = {
       paddingLeft: 20,
       paddingRight: 20,
     },
+    isDisabled: {
+      filter: 'grayscale(1) opacity(.4)',
+      cursor: 'not-allowed',
+    },
   },
   text: {
     color: COLORS.font1,
@@ -200,9 +212,6 @@ const styles = {
   },
   horizontalStroke: {
     margin: '0 auto',
-  },
-  label: {
-    textAlign: 'center',
   },
   center: {
     display: 'flex',
