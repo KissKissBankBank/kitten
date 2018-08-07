@@ -97,11 +97,7 @@ class ContributionCardComponent extends Component {
       ...others
     } = this.props
 
-    const styleCard = [
-      others.style,
-      styles.card,
-      isDisabled && styles.card.isDisabled,
-    ]
+    const styleCard = [others.style, styles.card]
 
     return (
       <StyleRoot {...others} style={styleCard}>
@@ -109,7 +105,7 @@ class ContributionCardComponent extends Component {
           bottom={viewportIsSOrLess ? 0 : 4}
           top={viewportIsSOrLess ? 3 : 4}
         >
-          <Grid style={styles.card.addPadding} disabled={isDisabled}>
+          <Grid style={styles.card.addPadding}>
             <GridCol col-l="7" col-m={!imageProps.src ? 10 : 7}>
               {this.renderDescription()}
             </GridCol>
@@ -135,46 +131,51 @@ class ContributionCardComponent extends Component {
       titleTag,
       textTag,
       viewportIsSOrLess,
+      isDisabled,
     } = this.props
+
+    const styleDescription = [isDisabled && styles.disabled]
 
     return (
       <Fragment>
-        <Marger bottom="2">
-          <Title
-            modifier={viewportIsSOrLess ? 'quaternary' : 'tertiary'}
-            italic
-            margin={false}
-            tag={titleTag}
-            style={styles.textColor}
-          >
-            {titleAmount}
-          </Title>
-        </Marger>
-        <Marger top="2" bottom="3">
-          <HorizontalStroke size="big" />
-        </Marger>
-        {titleDescription && (
-          <Marger top="3" bottom="1">
-            <Text
-              color="font1"
-              size={viewportIsSOrLess ? 'big' : 'huge'}
-              tag={textTag}
-              weight="bold"
-              style={styles.textMargin}
+        <StyleRoot style={styleDescription} disabled={isDisabled}>
+          <Marger bottom="2">
+            <Title
+              modifier={viewportIsSOrLess ? 'quaternary' : 'tertiary'}
+              italic
+              margin={false}
+              tag={titleTag}
+              style={styles.textColor}
             >
-              {titleDescription}
-            </Text>
+              {titleAmount}
+            </Title>
           </Marger>
-        )}
-        <Marger top={!titleDescription ? 3 : 1}>
-          <Paragraph
-            style={styles.textColor}
-            modifier={viewportIsSOrLess ? 'quaternary' : 'tertiary'}
-            margin={false}
-          >
-            {textDescription}
-          </Paragraph>
-        </Marger>
+          <Marger top="2" bottom="3">
+            <HorizontalStroke size="big" />
+          </Marger>
+          {titleDescription && (
+            <Marger top="3" bottom="1">
+              <Text
+                color="font1"
+                size={viewportIsSOrLess ? 'big' : 'huge'}
+                tag={textTag}
+                weight="bold"
+                style={styles.textMargin}
+              >
+                {titleDescription}
+              </Text>
+            </Marger>
+          )}
+          <Marger top={!titleDescription ? 3 : 1}>
+            <Paragraph
+              style={styles.textColor}
+              modifier={viewportIsSOrLess ? 'quaternary' : 'tertiary'}
+              margin={false}
+            >
+              {textDescription}
+            </Paragraph>
+          </Marger>
+        </StyleRoot>
         {!!this.props.render && this.props.render()}
         {this.renderInfos()}
         {!viewportIsSOrLess && this.renderChoiceButton()}
@@ -191,19 +192,24 @@ class ContributionCardComponent extends Component {
       valueDelivery,
       valueAvailability,
       viewportIsSOrLess,
+      isDisabled,
     } = this.props
+
+    const styleInfos = [isDisabled && styles.disabled]
 
     if (!valueContributors && !valueDelivery && !valueAvailability) return
 
     return (
-      <Marger
-        top={viewportIsSOrLess ? 2 : 3}
-        bottom={viewportIsSOrLess ? 3 : 4}
-      >
-        {this.renderInfo(titleContributors, valueContributors)}
-        {this.renderInfo(titleDelivery, valueDelivery)}
-        {this.renderInfo(titleAvailability, valueAvailability)}
-      </Marger>
+      <StyleRoot style={styleInfos} disabled={isDisabled}>
+        <Marger
+          top={viewportIsSOrLess ? 2 : 3}
+          bottom={viewportIsSOrLess ? 3 : 4}
+        >
+          {this.renderInfo(titleContributors, valueContributors)}
+          {this.renderInfo(titleDelivery, valueDelivery)}
+          {this.renderInfo(titleAvailability, valueAvailability)}
+        </Marger>
+      </StyleRoot>
     )
   }
 
@@ -307,8 +313,6 @@ class ContributionCardComponent extends Component {
   }
 
   renderIconBadge() {
-    if (this.props.isDisabled) return
-
     return (
       <IconBadge valid style={styles.iconBadge}>
         <CheckedIcon className="k-IconBadge__svg" />
@@ -339,8 +343,8 @@ class ContributionCardComponent extends Component {
                     {myContribution}
                     <br />
                     <Text
-                      tag={!isDisabled ? 'a' : 'span'}
-                      href={!isDisabled ? manageContributionLink : null}
+                      tag="a"
+                      href={manageContributionLink}
                       color="primary1"
                       weight="regular"
                       decoration="none"
@@ -362,8 +366,8 @@ class ContributionCardComponent extends Component {
                 {myContribution}
                 <br />
                 <Text
-                  tag={!isDisabled ? 'a' : 'span'}
-                  href={!isDisabled ? manageContributionLink : null}
+                  tag="a"
+                  href={manageContributionLink}
                   color="primary1"
                   weight="regular"
                   decoration="none"
@@ -379,13 +383,26 @@ class ContributionCardComponent extends Component {
   }
 
   renderImage() {
+    const { isDisabled } = this.props
+
+    const styleImage = [isDisabled && styles.disabled]
+
     if (!this.props.imageProps.src) return
 
-    return <img {...this.props.imageProps} style={styles.image} />
+    return (
+      <StyleRoot style={styleImage} disabled={isDisabled}>
+        <img {...this.props.imageProps} style={styles.image} />
+      </StyleRoot>
+    )
   }
 }
 
 const styles = {
+  disabled: {
+    filter: 'grayscale(1) opacity(.4)',
+    cursor: 'not-allowed',
+  },
+
   textColor: {
     color: COLORS.font1,
   },
@@ -417,11 +434,11 @@ const styles = {
       [`@media (min-width: ${ScreenConfig['M'].min}px)`]: {
         paddingRight: 50,
       },
-    },
 
-    isDisabled: {
-      filter: 'grayscale(1) opacity(.4)',
-      cursor: 'not-allowed',
+      isDisabled: {
+        filter: 'grayscale(1) opacity(.4)',
+        cursor: 'not-allowed',
+      },
     },
   },
 
