@@ -434,11 +434,6 @@ const styles = {
       [`@media (min-width: ${ScreenConfig['M'].min}px)`]: {
         paddingRight: 50,
       },
-
-      isDisabled: {
-        filter: 'grayscale(1) opacity(.4)',
-        cursor: 'not-allowed',
-      },
     },
   },
 
