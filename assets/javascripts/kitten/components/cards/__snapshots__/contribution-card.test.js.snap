@@ -22,7 +22,6 @@ exports[`<ContributionCard /> by default matches with snapshot 1`] = `
     <div
       className="rmq-5aa2f196 rmq-5b3da7a1 rmq-ce79a9e0 k-Grid"
       data-radium={true}
-      disabled={false}
       style={
         Object {
           "paddingLeft": 20,
@@ -35,57 +34,70 @@ exports[`<ContributionCard /> by default matches with snapshot 1`] = `
         data-radium={true}
       >
         <div
-          style={
-            Object {
-              "marginBottom": "1.25rem",
-              "marginTop": null,
-            }
-          }
+          data-radium={true}
+          disabled={false}
+          style={Object {}}
         >
-          <h1
-            className="k-Title k-Title--tertiary k-Title--withoutMargin k-Title--italic"
-            data-radium={true}
+          <div
             style={
               Object {
-                "color": "#222",
+                "marginBottom": "1.25rem",
+                "marginTop": null,
               }
             }
           >
-            Custom title mount
-          </h1>
-        </div>
-        <div
-          style={
-            Object {
-              "marginBottom": "1.875rem",
-              "marginTop": "1.25rem",
+            <h1
+              className="k-Title k-Title--tertiary k-Title--withoutMargin k-Title--italic"
+              data-radium={true}
+              style={
+                Object {
+                  "color": "#222",
+                }
+              }
+            >
+              Custom title mount
+            </h1>
+          </div>
+          <div
+            style={
+              Object {
+                "marginBottom": "1.875rem",
+                "marginTop": "1.25rem",
+              }
             }
-          }
-        >
-          <span
-            className="k-HorizontalStroke k-HorizontalStroke--big"
+          >
+            <span
+              className="k-HorizontalStroke k-HorizontalStroke--big"
+            />
+          </div>
+          
+          <div
+            style={
+              Object {
+                "marginBottom": null,
+                "marginTop": "1.875rem",
+              }
+            }
+          >
+            <p
+              className="k-Paragraph k-Paragraph--tertiary k-Paragraph--withoutMargin"
+              data-radium={true}
+              style={
+                Object {
+                  "color": "#222",
+                }
+              }
+            >
+              Custom text description
+            </p>
+          </div>
+          <style
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "",
+              }
+            }
           />
-        </div>
-        
-        <div
-          style={
-            Object {
-              "marginBottom": null,
-              "marginTop": "1.875rem",
-            }
-          }
-        >
-          <p
-            className="k-Paragraph k-Paragraph--tertiary k-Paragraph--withoutMargin"
-            data-radium={true}
-            style={
-              Object {
-                "color": "#222",
-              }
-            }
-          >
-            Custom text description
-          </p>
         </div>
       </div>
       
@@ -128,7 +140,6 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
     <div
       className="rmq-5aa2f196 rmq-5b3da7a1 rmq-ce79a9e0 k-Grid"
       data-radium={true}
-      disabled={false}
       style={
         Object {
           "paddingLeft": 20,
@@ -141,133 +152,160 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
         data-radium={true}
       >
         <div
-          style={
-            Object {
-              "marginBottom": "1.25rem",
-              "marginTop": null,
-            }
-          }
+          data-radium={true}
+          disabled={false}
+          style={Object {}}
         >
-          <h1
-            className="k-Title k-Title--tertiary k-Title--withoutMargin k-Title--italic"
-            data-radium={true}
+          <div
             style={
               Object {
-                "color": "#222",
+                "marginBottom": "1.25rem",
+                "marginTop": null,
               }
             }
           >
-            Custom title mount
-          </h1>
-        </div>
-        <div
-          style={
-            Object {
-              "marginBottom": "1.875rem",
-              "marginTop": "1.25rem",
+            <h1
+              className="k-Title k-Title--tertiary k-Title--withoutMargin k-Title--italic"
+              data-radium={true}
+              style={
+                Object {
+                  "color": "#222",
+                }
+              }
+            >
+              Custom title mount
+            </h1>
+          </div>
+          <div
+            style={
+              Object {
+                "marginBottom": "1.875rem",
+                "marginTop": "1.25rem",
+              }
             }
-          }
-        >
-          <span
-            className="k-HorizontalStroke k-HorizontalStroke--big"
+          >
+            <span
+              className="k-HorizontalStroke k-HorizontalStroke--big"
+            />
+          </div>
+          <div
+            style={
+              Object {
+                "marginBottom": "0.625rem",
+                "marginTop": "1.875rem",
+              }
+            }
+          >
+            <p
+              className="k-u-color-font1 k-u-size-huge k-u-weight-bold"
+              data-radium={true}
+              style={
+                Object {
+                  "margin": 0,
+                }
+              }
+            >
+              Custom title description
+            </p>
+          </div>
+          <div
+            style={
+              Object {
+                "marginBottom": null,
+                "marginTop": "0.625rem",
+              }
+            }
+          >
+            <p
+              className="k-Paragraph k-Paragraph--tertiary k-Paragraph--withoutMargin"
+              data-radium={true}
+              style={
+                Object {
+                  "color": "#222",
+                }
+              }
+            >
+              Custom text description
+            </p>
+          </div>
+          <style
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "",
+              }
+            }
           />
         </div>
         <div
-          style={
-            Object {
-              "marginBottom": "0.625rem",
-              "marginTop": "1.875rem",
-            }
-          }
+          data-radium={true}
+          disabled={false}
+          style={Object {}}
         >
-          <p
-            className="k-u-color-font1 k-u-size-huge k-u-weight-bold"
-            data-radium={true}
+          <div
             style={
               Object {
-                "margin": 0,
+                "marginBottom": "2.5rem",
+                "marginTop": "1.875rem",
               }
             }
           >
-            Custom title description
-          </p>
-        </div>
-        <div
-          style={
-            Object {
-              "marginBottom": null,
-              "marginTop": "0.625rem",
-            }
-          }
-        >
-          <p
-            className="k-Paragraph k-Paragraph--tertiary k-Paragraph--withoutMargin"
-            data-radium={true}
-            style={
-              Object {
-                "color": "#222",
-              }
-            }
-          >
-            Custom text description
-          </p>
-        </div>
-        <div
-          style={
-            Object {
-              "marginBottom": "2.5rem",
-              "marginTop": "1.875rem",
-            }
-          }
-        >
-          <span
-            className="rmq-ef57b76a k-u-color-font1 k-u-weight-regular"
-            data-radium={true}
-            style={
-              Object {
-                "fontSize": 14,
-              }
-            }
-          >
-            Custom title contributors
             <span
-              className="k-u-color-font1 k-u-weight-light"
+              className="rmq-ef57b76a k-u-color-font1 k-u-weight-regular"
+              data-radium={true}
+              style={
+                Object {
+                  "fontSize": 14,
+                }
+              }
             >
-              Custom value contributors
+              Custom title contributors
+              <span
+                className="k-u-color-font1 k-u-weight-light"
+              >
+                Custom value contributors
+              </span>
             </span>
-          </span>
-          <span
-            className="rmq-ef57b76a k-u-color-font1 k-u-weight-regular"
-            data-radium={true}
-            style={
+            <span
+              className="rmq-ef57b76a k-u-color-font1 k-u-weight-regular"
+              data-radium={true}
+              style={
+                Object {
+                  "fontSize": 14,
+                }
+              }
+            >
+              Custom title delivery
+              <span
+                className="k-u-color-font1 k-u-weight-light"
+              >
+                Custom value delivery
+              </span>
+            </span>
+            <span
+              className="rmq-ef57b76a k-u-color-font1 k-u-weight-regular"
+              data-radium={true}
+              style={
+                Object {
+                  "fontSize": 14,
+                }
+              }
+            >
+              Custom title availability
+              <span
+                className="k-u-color-font1 k-u-weight-light"
+              >
+                Custom value availability
+              </span>
+            </span>
+          </div>
+          <style
+            dangerouslySetInnerHTML={
               Object {
-                "fontSize": 14,
+                "__html": "@media (min-width: 768px){ .rmq-ef57b76a{font-size: 16px !important;
+margin-right: 30px !important;}}",
               }
             }
-          >
-            Custom title delivery
-            <span
-              className="k-u-color-font1 k-u-weight-light"
-            >
-              Custom value delivery
-            </span>
-          </span>
-          <span
-            className="rmq-ef57b76a k-u-color-font1 k-u-weight-regular"
-            data-radium={true}
-            style={
-              Object {
-                "fontSize": 14,
-              }
-            }
-          >
-            Custom title availability
-            <span
-              className="k-u-color-font1 k-u-weight-light"
-            >
-              Custom value availability
-            </span>
-          </span>
+          />
         </div>
         <div
           style={
@@ -415,16 +453,29 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
             }
           }
         >
-          <img
-            alt="Image alt"
+          <div
             data-radium={true}
-            src="#image"
-            style={
-              Object {
-                "width": "100%",
+            disabled={false}
+            style={Object {}}
+          >
+            <img
+              alt="Image alt"
+              data-radium={true}
+              src="#image"
+              style={
+                Object {
+                  "width": "100%",
+                }
               }
-            }
-          />
+            />
+            <style
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "",
+                }
+              }
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -438,8 +489,6 @@ padding-right: 50px !important;}}
 padding-right: 0 !important;}}
 @media (min-width: 1080px){ .rmq-ce79a9e0{padding-left: 115px !important;
 padding-right: 0 !important;}}
-@media (min-width: 768px){ .rmq-ef57b76a{font-size: 16px !important;
-margin-right: 30px !important;}}
 @media (max-width: 767px){ .rmq-2c87bfe9{width: 100% !important;}}
 @media (min-width: 768px){ .rmq-c7c1445b{padding-right: 50px !important;}}",
       }

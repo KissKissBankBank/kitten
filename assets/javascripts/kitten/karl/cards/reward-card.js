@@ -63,7 +63,6 @@ export const KarlRewardCard = () => (
             src: 'http://via.placeholder.com/200x350/caf4fe/caf4fe',
             alt: '',
           }}
-          isDisabled
         />
       </Marger>
     </Container>
