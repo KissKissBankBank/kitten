@@ -26,7 +26,7 @@ export class Alert extends Component {
   }
 
   handleAnimationEnd() {
-    this.props.onClose()
+    this.props.onAfterClose()
   }
 
   renderCloseButton() {
@@ -53,7 +53,7 @@ export class Alert extends Component {
       closeButton,
       closeButtonLabel,
       children,
-      onClose,
+      onAfterClose,
       ...others
     } = this.props
 
@@ -95,5 +95,5 @@ Alert.defaultProps = {
   success: false,
   closeButton: false,
   closeButtonLabel: 'Close',
-  onClose: () => {},
+  onAfterClose: () => {},
 }
