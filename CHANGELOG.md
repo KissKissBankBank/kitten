@@ -4,6 +4,17 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking change: Rename `onClose` to `onAfterClose` in `CartRewardCard`.
+- Breaking change: `mediaQueries` don't expose all methods.
+  You have to use `exposedMethods` prop to list the methods you want to expose
+  on the mediaQueries HOC.
+
+```js
+mediaQueries(Component, {
+  viewportIsMobile: true,
+  exposedMethods: ['close'],
+})
+```
 - Breaking change: Remove `sassy-maps` dependency.
 - Feature: Add `map-get-deep` utility.
 - Feature: Update style on `ContributionCard` component.
