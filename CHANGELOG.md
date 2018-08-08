@@ -17,6 +17,11 @@ mediaQueries(Component, {
 ```
 
 - Feature: Update style on `ContributionCard` component.
+- Breaking change: Change `onClose` prop to `onAfterClose` prop in `Alert`
+  component:
+  ```js
+  <Alert onAfterClose={ () -> {} }>
+  ```
 
 ## [21.4.0] - 2018-08-06
 
