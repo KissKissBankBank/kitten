@@ -4,12 +4,31 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Update style on `ContributionCard` component.
-- Breaking change: Change `onClose` prop to `onAfterClose` prop in `Alert`
+## [22.0.0] - 2018-08-08
+
+Breaking changes:
+- Remove `sassy-maps` dependency.
+- `mediaQueries` HOC don't expose all methods.
+  You have to use `exposedMethods` prop to list the methods you want to expose
+  on the mediaQueries HOC.
+
+```js
+mediaQueries(Component, {
+  viewportIsMobile: true,
+  exposedMethods: ['close'],
+})
+```
+
+- Rename `onClose` prop to `onAfterClose` in `CartRewardCard` component.
+- Rename `onClose` prop to `onAfterClose` in `Alert`
   component:
   ```js
   <Alert onAfterClose={ () -> {} }>
   ```
+
+Features:
+- Add `map-get-deep` utility.
+- Update style on `ContributionCard` component.
 
 ## [21.4.0] - 2018-08-06
 
