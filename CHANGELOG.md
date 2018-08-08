@@ -16,6 +16,13 @@ mediaQueries(Component, {
 })
 ```
 
+- Feature: Update style on `ContributionCard` component.
+
+## [21.4.0] - 2018-08-06
+
+Feature:
+- Update `ReactModal` version.
+
 ## [21.3.2] - 2018-08-02
 
 Fix:

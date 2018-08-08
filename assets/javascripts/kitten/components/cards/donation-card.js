@@ -4,11 +4,8 @@ import { ContributionCard } from 'kitten/components/cards/contribution-card'
 export const DonationCard = props => {
   const {
     titleContributors,
-    titleSmallContributors,
     titleDelivery,
-    titleSmallDelivery,
     titleAvailability,
-    titleSmallAvailability,
     valueContributors,
     valueDelivery,
     valueAvailability,

@@ -73,17 +73,13 @@ class ContributionCardComponent extends Component {
     const {
       isDisabled,
       viewportIsSOrLess,
-      viewportIsMobile,
       viewportIsTabletOrLess,
       titleAmount,
       titleDescription,
       textDescription,
       titleContributors,
-      titleSmallContributors,
       titleDelivery,
-      titleSmallDelivery,
       titleAvailability,
-      titleSmallAvailability,
       valueContributors,
       valueDelivery,
       valueAvailability,
@@ -110,8 +106,8 @@ class ContributionCardComponent extends Component {
     return (
       <StyleRoot {...others} style={styleCard}>
         <Marger
-          bottom={viewportIsSOrLess ? 0 : 5}
-          top={viewportIsTabletOrLess ? 4 : 5}
+          bottom={viewportIsSOrLess ? 0 : 4}
+          top={viewportIsSOrLess ? 3 : 4}
         >
           <Grid style={styles.card.addPadding} disabled={isDisabled}>
             <GridCol col-l="7" col-m={!imageProps.src ? 10 : 7}>
@@ -133,45 +129,46 @@ class ContributionCardComponent extends Component {
 
   renderDescription() {
     const {
-      button,
       titleAmount,
       titleDescription,
       textDescription,
       titleTag,
       textTag,
-      myContribution,
       viewportIsSOrLess,
-      viewportIsMobile,
     } = this.props
 
     return (
       <Fragment>
         <Marger bottom="2">
           <Title
-            modifier={viewportIsSOrLess ? 'tertiary' : 'secondary'}
+            modifier={viewportIsSOrLess ? 'quaternary' : 'tertiary'}
             italic
             margin={false}
             tag={titleTag}
+            style={styles.textColor}
           >
             {titleAmount}
           </Title>
         </Marger>
-        <Marger top="2" bottom={viewportIsMobile ? 3 : 4}>
+        <Marger top="2" bottom="3">
           <HorizontalStroke size="big" />
         </Marger>
         {titleDescription && (
-          <Marger top="4" bottom="1">
+          <Marger top="3" bottom="1">
             <Text
+              color="font1"
               size={viewportIsSOrLess ? 'big' : 'huge'}
               tag={textTag}
               weight="bold"
+              style={styles.textMargin}
             >
               {titleDescription}
             </Text>
           </Marger>
         )}
-        <Marger top={!titleDescription ? 4 : 1}>
+        <Marger top={!titleDescription ? 3 : 1}>
           <Paragraph
+            style={styles.textColor}
             modifier={viewportIsSOrLess ? 'quaternary' : 'tertiary'}
             margin={false}
           >
@@ -188,11 +185,8 @@ class ContributionCardComponent extends Component {
   renderInfos() {
     const {
       titleContributors,
-      titleSmallContributors,
       titleDelivery,
-      titleSmallDelivery,
       titleAvailability,
-      titleSmallAvailability,
       valueContributors,
       valueDelivery,
       valueAvailability,
@@ -202,45 +196,44 @@ class ContributionCardComponent extends Component {
     if (!valueContributors && !valueDelivery && !valueAvailability) return
 
     return (
-      <Marger top="2" bottom={viewportIsSOrLess ? 3 : 4}>
-        <Grid>
-          {this.renderInfo(
-            titleContributors,
-            titleSmallContributors,
-            valueContributors,
-          )}
-          {this.renderInfo(titleDelivery, titleSmallDelivery, valueDelivery)}
-          {this.renderInfo(
-            titleAvailability,
-            titleSmallAvailability,
-            valueAvailability,
-          )}
-        </Grid>
+      <Marger
+        top={viewportIsSOrLess ? 2 : 3}
+        bottom={viewportIsSOrLess ? 3 : 4}
+      >
+        {this.renderInfo(titleContributors, valueContributors)}
+        {this.renderInfo(titleDelivery, valueDelivery)}
+        {this.renderInfo(titleAvailability, valueAvailability)}
       </Marger>
     )
   }
 
-  renderInfo(title, titleSmall, value) {
-    const { viewportIsTabletOrLess, viewportIsSOrLess } = this.props
+  renderInfo(title, value) {
+    const { viewportIsTabletOrLess } = this.props
 
-    if (!title || !titleSmall) return
+    if (!title) return
 
     return (
-      <GridCol style={styles.infos} col-l="4" col-xl="3">
+      <Fragment>
         {viewportIsTabletOrLess && (
-          <Text weight="regular" style={styles.infos.lists}>
-            {titleSmall}
-            <Text weight="light">{value}</Text>
-          </Text>
+          <div>
+            <Text color="font1" weight="regular" style={styles.infos.lists}>
+              {title}
+              <Text color="font1" weight="light">
+                {value}
+              </Text>
+            </Text>
+          </div>
         )}
 
         {!viewportIsTabletOrLess && (
-          <Fragment>
-            <Text weight="regular">{title}</Text>
-            <Text weight="light">{value}</Text>
-          </Fragment>
+          <Text color="font1" weight="regular" style={styles.infos.lists}>
+            {title}
+            <Text color="font1" weight="light">
+              {value}
+            </Text>
+          </Text>
         )}
-      </GridCol>
+      </Fragment>
     )
   }
 
@@ -317,7 +310,7 @@ class ContributionCardComponent extends Component {
     if (this.props.isDisabled) return
 
     return (
-      <IconBadge style={styles.iconBadge}>
+      <IconBadge valid style={styles.iconBadge}>
         <CheckedIcon className="k-IconBadge__svg" />
       </IconBadge>
     )
@@ -342,7 +335,7 @@ class ContributionCardComponent extends Component {
               <div style={styles.myContribution}>
                 {this.renderIconBadge()}
                 <div style={styles.myContribution.text}>
-                  <Text size="tiny" weight="regular">
+                  <Text color="font1" size="tiny" weight="regular">
                     {myContribution}
                     <br />
                     <Text
@@ -365,7 +358,7 @@ class ContributionCardComponent extends Component {
           <div style={styles.myContribution}>
             {this.renderIconBadge()}
             <div style={styles.myContribution.text}>
-              <Text size="tiny" weight="regular">
+              <Text color="font1" size="tiny" weight="regular">
                 {myContribution}
                 <br />
                 <Text
@@ -393,6 +386,10 @@ class ContributionCardComponent extends Component {
 }
 
 const styles = {
+  textColor: {
+    color: COLORS.font1,
+  },
+
   card: {
     borderWidth: 2,
     borderStyle: 'solid',
@@ -418,9 +415,6 @@ const styles = {
 
     image: {
       [`@media (min-width: ${ScreenConfig['M'].min}px)`]: {
-        paddingRight: 40,
-      },
-      [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
         paddingRight: 50,
       },
     },
@@ -431,14 +425,16 @@ const styles = {
     },
   },
 
-  infos: {
-    display: 'flex',
-    flexDirection: 'column',
+  textMargin: {
+    margin: 0,
+  },
 
+  infos: {
     lists: {
       fontSize: 14,
       [`@media (min-width: ${ScreenConfig['M'].min}px)`]: {
         fontSize: 16,
+        marginRight: 30,
       },
     },
   },
@@ -473,7 +469,6 @@ const styles = {
   },
 
   iconBadge: {
-    backgroundColor: COLORS.valid,
     marginRight: 10,
   },
 
@@ -485,7 +480,6 @@ const styles = {
 export const ContributionCard = mediaQueries(
   Radium(ContributionCardComponent),
   {
-    viewportIsMobile: true,
     viewportIsTabletOrLess: true,
     viewportIsSOrLess: true,
   },
