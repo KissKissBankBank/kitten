@@ -24,7 +24,7 @@ class CartRewardCardComponent extends Component {
     shippingValue: PropTypes.string,
     updateAmountTitle: PropTypes.string,
     updateAmountLink: PropTypes.string,
-    onClose: PropTypes.func,
+    onAfterClose: PropTypes.func,
     onCloseClick: PropTypes.func,
   }
 
@@ -35,7 +35,7 @@ class CartRewardCardComponent extends Component {
     shippingValue: '',
     updateAmountTitle: '',
     updateAmountLink: '',
-    onClose: () => {},
+    onAfterClose: () => {},
     onCloseClick: null,
   }
 
@@ -57,7 +57,7 @@ class CartRewardCardComponent extends Component {
   }
 
   handleAnimationEnd = () => {
-    this.props.onClose()
+    this.props.onAfterClose()
   }
 
   close = () => {
@@ -225,4 +225,5 @@ const styles = {
 
 export const CartRewardCard = mediaQueries(CartRewardCardComponent, {
   viewportIsMobile: true,
+  exposedMethods: ['close'],
 })
