@@ -7,7 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Update style on `ContributionCard` component.
 - Breaking change: Change `onClose` prop to `onAfterClose` prop in `Alert`
   component:
-  ```
+  ```js
   <Alert onAfterClose={ () -> {} }>
   ```
 
