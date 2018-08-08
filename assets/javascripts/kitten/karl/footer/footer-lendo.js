@@ -1,22 +1,46 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
+import Radium, { StyleRoot } from 'radium'
 import classNames from 'classnames'
+import PropTypes from 'prop-types'
 import { Marger } from 'kitten/components/layout/marger'
 import { Row } from 'kitten/components/grid/row'
-import { Grid, GridCol } from 'kitten/components/grid/grid'
+import { Grid, GridCol as GridColBase } from 'kitten/components/grid/grid'
 import { TextInputWithButton } from 'kitten/components/form/text-input-with-button'
-import { Paragraph } from 'kitten/components/typography/paragraph'
+import { Paragraph as ParagraphBase } from 'kitten/components/typography/paragraph'
 import { Title } from 'kitten/components/typography/title'
 import { ButtonIcon } from 'kitten/components/buttons/button-icon'
 import {
-  FacebookButtonIcon,
-  TwitterButtonIcon,
+  FacebookButtonIcon as FacebookButtonIconBase,
+  TwitterButtonIcon as TwitterButtonIconBase,
   LinkedinButtonIcon,
 } from 'kitten/components/buttons/social-button-icon'
 import { Separator } from 'kitten/components/layout/separator'
 import { LinkList } from 'kitten/components/links/link-list'
 import { Line } from 'kitten/components/layout/line'
+import COLORS from 'kitten/constants/colors-config'
+import { ScreenConfig } from 'kitten/constants/screen-config'
+import { mediaQueries } from 'kitten/hoc/media-queries'
 
-export class KarlFooterLendo extends Component {
+const GridCol = Radium(GridColBase)
+const Paragraph = Radium(ParagraphBase)
+const FacebookButtonIcon = Radium(FacebookButtonIconBase)
+const TwitterButtonIcon = Radium(TwitterButtonIconBase)
+
+class KarlFooterLendoBase extends Component {
+  static propTypes = {}
+
+  static defaultProps = {}
+
+  render() {
+    return (
+      <Fragment>
+        {this.renderNetwork()}
+        {this.renderList()}
+        {this.renderNotice()}
+      </Fragment>
+    )
+  }
+
   renderNetwork() {
     return (
       <Row lightTopBorder>
@@ -26,17 +50,11 @@ export class KarlFooterLendo extends Component {
               <Grid>
                 <GridCol col-m="12" col-l="5">
                   <Paragraph
-                    className={classNames(
-                      'k-u-align-center@l-down',
-                      'k-u-align-left@l-up',
-                    )}
+                    style={styles.newsletterText}
                     modifier="tertiary"
                     margin={false}
                   >
-                    Inscrivez-vous à notre Newsletter{' '}
-                    <span className="k-u-hidden@m-down">
-                      et à l’alerte nouveau projet
-                    </span>
+                    Inscrivez-vous à notre Newsletter
                   </Paragraph>
                 </GridCol>
 
@@ -56,21 +74,13 @@ export class KarlFooterLendo extends Component {
               </Grid>
             </GridCol>
 
-            <GridCol
-              col-m="6"
-              col-l="5"
-              className="k-u-margin-top-triple@s-down"
-            >
-              <div className="karl-FooterLendo__network__logo">
+            <GridCol col-m="6" col-l="5" style={styles.network}>
+              <div style={styles.network.follow}>
                 <div className="k-u-blockAlign-center">
                   <Paragraph
                     modifier="tertiary"
                     margin={false}
-                    className={classNames(
-                      'k-u-align-center@l-down',
-                      'k-u-align-right@l-up',
-                      'karl-FooterLendo__network__followText',
-                    )}
+                    style={styles.network.follow.text}
                   >
                     Suivez-nous
                   </Paragraph>
@@ -82,29 +92,15 @@ export class KarlFooterLendo extends Component {
                     'k-u-margin-top-single@m-down',
                   )}
                 >
-                  <FacebookButtonIcon className="k-u-margin-right-single" />
+                  <FacebookButtonIcon style={styles.network.follow.logo} />
 
-                  <TwitterButtonIcon className="k-u-margin-right-single" />
+                  <TwitterButtonIcon style={styles.network.follow.logo} />
 
                   <LinkedinButtonIcon />
                 </div>
               </div>
             </GridCol>
           </Grid>
-        </Marger>
-      </Row>
-    )
-  }
-
-  renderQuote() {
-    return (
-      <Row lightTopBorder>
-        <Marger top="2" bottom="2">
-          <Paragraph italic modifier="tertiary" className="k-u-align-center">
-            Attention&nbsp;: Investir présente un risque d’illiquidité et de
-            perte partielle ou totale en capital.<br />
-            Vérifiez vos capacités financières avant d’investir.
-          </Paragraph>
         </Marger>
       </Row>
     )
@@ -322,15 +318,41 @@ export class KarlFooterLendo extends Component {
       </Row>
     )
   }
-
-  render() {
-    return (
-      <div className="karl-FooterLendo">
-        {this.renderNetwork()}
-        {this.renderQuote()}
-        {this.renderList()}
-        {this.renderNotice()}
-      </div>
-    )
-  }
 }
+
+const styles = {
+  newsletterText: {
+    textAlign: 'left',
+    [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
+      textAlign: 'center',
+    },
+  },
+
+  network: {
+    [`@media (max-width: ${ScreenConfig['S'].max}px)`]: {
+      marginTop: 30,
+    },
+    follow: {
+      [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
+        display: 'flex',
+        justifyContent: 'flex-end',
+
+        text: {
+          textAlign: 'center',
+          [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
+            marginRight: 15,
+            textAlign: 'right',
+          },
+        },
+        logo: {
+          marginRight: 10,
+        },
+      },
+    },
+  },
+}
+
+export const KarlFooterLendo = mediaQueries(Radium(KarlFooterLendoBase), {
+  viewportIsTabletOrLess: true,
+  viewportIsSOrLess: true,
+})

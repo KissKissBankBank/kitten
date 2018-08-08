@@ -4,12 +4,12 @@
   }
 }
 
-.karl-FooterLendo__network__logo {
-  @include k-media-min('l') {
-    display: flex;
-    justify-content: flex-end;
-  }
-}
+// .karl-FooterLendo__network__logo {
+//   @include k-media-min('l') {
+//     display: flex;
+//     justify-content: flex-end;
+//   }
+// }
 
 .karl-FooterLendo__notice__copyright {
   @include k-media-min('l') {
