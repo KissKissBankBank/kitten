@@ -74,7 +74,7 @@ class DonationCardComponent extends Component {
           bottom={viewportIsSOrLess ? 3 : 4}
           top={viewportIsSOrLess ? 3 : 4}
         >
-          <Grid style={styles.card.addPadding} disabled={isDisabled}>
+          <Grid style={styles.card.addPadding}>
             <GridCol col-l="8" offset-l="2" col-m="10" offset-m="1">
               {this.renderDescription()}
               {this.renderInputBase()}
