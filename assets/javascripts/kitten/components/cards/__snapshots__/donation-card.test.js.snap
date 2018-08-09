@@ -36,7 +36,6 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
     <div
       className="k-Grid"
       data-radium={true}
-      disabled={false}
       style={
         Object {
           "paddingLeft": 20,
