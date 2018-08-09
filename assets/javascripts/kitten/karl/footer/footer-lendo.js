@@ -237,12 +237,12 @@ class KarlFooterLendoBase extends Component {
             <Marger top="3" bottom="3">
               <Grid>
                 <GridCol
-                  col-l="12"
-                  col-m="6"
                   col-s="10"
-                  offset-l="0"
-                  offset-m="3"
+                  col-m="6"
+                  col-l="12"
                   offset-s="1"
+                  offset-m="3"
+                  offset-l="0"
                   style={styles.network.subscribe}
                 >
                   <Marger
@@ -503,7 +503,7 @@ class KarlFooterLendoBase extends Component {
           </GridCol>
 
           <GridCol col-l="4" style={styles.notice.block.copyright}>
-            <Marger top={this.state.viewportIsTabletOrLess ? 5 : 0}>
+            <Marger top={viewportIsTabletOrLess ? 5 : 0}>
               <Text size="tiny" weight="regular" color="background1">
                 {parseHtml(noticeCopyright)}
               </Text>
@@ -517,7 +517,7 @@ class KarlFooterLendoBase extends Component {
 
 const styles = {
   darkBackground: {
-    backgroundColor: `${COLORS.font1}`,
+    backgroundColor: COLORS.font1,
   },
 
   network: {
@@ -549,7 +549,7 @@ const styles = {
         [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
           alignSelf: 'center',
           pointerEvents: 'auto',
-          marginRight: '15px',
+          marginRight: 15,
         },
       },
 
@@ -559,7 +559,7 @@ const styles = {
 
         textInput: {
           [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
-            maxWidth: '450px',
+            maxWidth: 450,
           },
         },
       },
@@ -582,28 +582,29 @@ const styles = {
         textAlign: 'center',
         [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
           textAlign: 'right',
-          marginRight: '15px',
+          marginRight: 15,
           alignSelf: 'center',
         },
       },
 
       buttons: {
         textAlign: 'center',
+
         buttonIcon: {
-          marginRight: '15px',
+          marginRight: 15,
         },
       },
     },
   },
 
   list: {
-    paddingTop: '40px',
-    paddingBottom: '50px',
+    paddingTop: 40,
+    paddingBottom: 50,
     [`@media (min-width: ${ScreenConfig['M'].min}px)`]: {
-      paddingTop: '100px',
+      paddingTop: 100,
     },
     [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
-      paddingTop: '100px',
+      paddingTop: 100,
       paddingBottom: 0,
     },
 
@@ -622,16 +623,16 @@ const styles = {
     linkList: {
       paddingBottom: 0,
       [`@media (min-width: ${ScreenConfig['M'].min}px)`]: {
-        paddingBottom: '50px',
+        paddingBottom: 50,
       },
       [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
-        paddingBottom: '80px',
+        paddingBottom: 80,
       },
     },
   },
 
   notice: {
-    paddingBottom: '100px',
+    paddingBottom: 100,
 
     block: {
       [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
@@ -643,7 +644,7 @@ const styles = {
         textAlign: 'center',
         lineHeight: 0,
         [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
-          marginRight: '14px',
+          marginRight: 14,
         },
 
         img: {
@@ -654,10 +655,10 @@ const styles = {
           },
 
           mangopay: {
-            width: '130px',
-            marginTop: '30px',
+            width: 130,
+            marginTop: 30,
             [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
-              width: '100px',
+              width: 100,
               marginTop: 0,
             },
           },
@@ -665,22 +666,23 @@ const styles = {
       },
 
       paragraph: {
-        color: `${COLORS.background1}`,
+        color: COLORS.background1,
         [`@media (max-width: ${ScreenConfig['M'].max}px)`]: {
           textAlign: 'center',
         },
 
         link: {
-          color: `${COLORS.background1}`,
+          color: COLORS.background1,
           textDecoration: 'underline',
           ':active': {
-            color: `${COLORS.primary3}`,
+            color: COLORS.primary3,
           },
           ':hover': {
-            color: `${COLORS.primary1}`,
+            color: COLORS.primary1,
           },
         },
       },
+
       copyright: {
         textAlign: 'center',
         [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {

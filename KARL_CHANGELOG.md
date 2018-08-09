@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `KarlFooterLendopolis` example.
+
 ## [22.0.0] - 2018-08-08
 
 No changes.
