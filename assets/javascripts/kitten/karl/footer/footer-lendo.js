@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Radium, { StyleRoot } from 'radium'
 import { Row as RowBase } from 'kitten/components/grid/row'
-import { Marger } from 'kitten/components/layout/marger'
+import { Marger as MargerBase } from 'kitten/components/layout/marger'
 import {
   Grid as GridBase,
   GridCol as GridColBase,
@@ -16,45 +16,193 @@ import {
 } from 'kitten/components/buttons/social-button-icon'
 import { LinkList } from 'kitten/components/links/link-list'
 import { SelectWithState } from 'kitten/components/form/select-with-state'
-import { KissKissBankBankLogo as KissKissBankBankLogoBase } from 'kitten/karl/logos/kisskissbankbanklogo'
-import { createMatchMediaMax } from 'kitten/helpers/utils/media-queries'
-import { ScreenConfig, SCREEN_SIZE_M } from 'kitten/constants/screen-config'
+import { LendopolisLogo as LendopolisLogoBase } from 'kitten/karl/logos/Lendopolis-logo'
+import { ScreenConfig } from 'kitten/constants/screen-config'
+import { mediaQueries } from 'kitten/hoc/media-queries'
 import COLORS from 'kitten/constants/colors-config'
 import { parseHtml } from 'kitten/helpers/utils/parser'
 
 const Grid = Radium(GridBase)
 const GridCol = Radium(GridColBase)
 const Row = Radium(RowBase)
+const Marger = Radium(MargerBase)
 const Paragraph = Radium(ParagraphBase)
 const FacebookButtonIcon = Radium(FacebookButtonIconBase)
 const TwitterButtonIcon = Radium(TwitterButtonIconBase)
-const KissKissBankBankLogo = Radium(KissKissBankBankLogoBase)
+const LendopolisLogo = Radium(LendopolisLogoBase)
 const TextInputWithButton = Radium(TextInputWithButtonBase)
 
-export class KarlFooterLendo extends Component {
-  constructor(props, context) {
-    super(props, context)
+class KarlFooterLendoBase extends Component {
+  static defaultProps = {
+    // Network
+    subscribeLabel: 'Inscrivez-vous à notre Newsletter',
+    textInputProps: {
+      placeholder: 'Entrez votre e-mail',
+    },
+    newsletterSubmitValue: 'Envoyer',
+    socialText: 'Suivez-nous',
+    hrefFacebook: '#',
+    hrefTwitter: '#',
+    hrefInstagram: '#',
 
-    this.mqTabletOrLess = createMatchMediaMax(SCREEN_SIZE_M)
+    // List
+    items1: [
+      {
+        key: 'key1',
+        item: 'Emprunter',
+        href: '#',
+      },
+      {
+        key: 'key2',
+        item: 'Comment emprunter',
+        href: '#',
+      },
+      {
+        key: 'key3',
+        item: 'FAQ Emprunteur',
+        href: '#',
+      },
+      {
+        key: 'key4',
+        item: 'Déposer un projet',
+        href: '#',
+      },
+      {
+        key: 'key5',
+        item: "S'inscrire",
+        href: '#',
+      },
+    ],
+    items2: [
+      {
+        key: 'key1',
+        item: 'Prêter',
+        href: '#',
+      },
+      {
+        key: 'key2',
+        item: 'Comment prêter',
+        href: '#',
+      },
+      {
+        key: 'key3',
+        item: 'FAQ Prêteur',
+        href: '#',
+      },
+      {
+        key: 'key4',
+        item: 'Prêter à un projet',
+        href: '#',
+      },
+      {
+        key: 'key5',
+        item: "S'inscrire",
+        href: '#',
+      },
+      {
+        key: 'key6',
+        item: 'Simulateur',
+        href: '#',
+      },
+    ],
+    items3: [
+      {
+        key: 'key1',
+        item: 'A Propos',
+        href: '#',
+      },
+      {
+        key: 'key2',
+        item: 'Nos valeurs',
+        href: '#',
+      },
+      {
+        key: 'key3',
+        item: 'Manifeste',
+        href: '#',
+      },
+      {
+        key: 'key4',
+        item: 'Statistiques',
+        href: '#',
+      },
+      {
+        key: 'key5',
+        item: 'Indicateurs de performance',
+        href: '#',
+      },
+      {
+        key: 'key6',
+        item: "L'équipe",
+        href: '#',
+      },
+      {
+        key: 'key7',
+        item: 'Mentors',
+        href: '#',
+      },
+    ],
+    items4: [
+      {
+        key: 'key1',
+        item: 'Contact',
+        href: '#',
+      },
+      {
+        key: 'key2',
+        item: "Apporteurs d'affaires",
+        href: '#',
+      },
+      {
+        key: 'key3',
+        item: 'Mentions légales',
+        href: '#',
+      },
+      {
+        key: 'key4',
+        item: 'CGU',
+        href: '#',
+      },
+      {
+        key: 'key5',
+        item: 'Confidentialité',
+        href: '#',
+      },
+      {
+        key: 'key6',
+        item: 'Presse',
+        href: '#',
+      },
+      {
+        key: 'key7',
+        item: 'Le blog',
+        href: '#',
+      },
+    ],
 
-    this.state = {
-      viewportIsTabletOrLess: false,
-    }
-  }
+    // LanguageSelect
+    options: [
+      { value: 'fr', label: 'Français' },
+      { value: 'en', label: 'English' },
+      { value: 'nl', label: 'Nederlands' },
+    ],
+    initialLanguage: 'fr',
 
-  onTabletMQ = event => {
-    this.setState({ viewportIsTabletOrLess: event.matches })
-  }
-
-  componentDidMount() {
-    if (this.mqTabletOrLess) {
-      this.mqTabletOrLess.addListener(this.onTabletMQ)
-      this.onTabletMQ(this.mqTabletOrLess)
-    }
-  }
-
-  componentWillUnmount() {
-    if (this.mqTabletOrLess) this.mqTabletOrLess.removeListener(this.onTabletMQ)
+    // Notice
+    noticeAltAutorite: 'Autorités françaises',
+    noticeParagraphAutorite:
+      'KissKissBankBank est une plateforme de financement \
+      participatif régulée par les autorités françaises.\
+      Immatriculation&nbsp; : 14007218',
+    noticeAltMangopay: 'Mangopay',
+    noticeParagraphMangopayText1:
+      'KissKissBankBank &amp; Co est agent de \
+    l’institution financière',
+    noticeParagraphMangopayLink: 'Mangopay',
+    noticeParagraphMangopayLinkAcronym: 'SA.',
+    noticeParagraphMangopayText2:
+      'Paiements sécurisés avec Mangopay Payment Services',
+    noticeCopyright: '&copy; 2018 KissKissBankBank &amp; Co',
   }
 
   render() {
@@ -78,6 +226,7 @@ export class KarlFooterLendo extends Component {
       hrefFacebook,
       hrefTwitter,
       hrefInstagram,
+      viewportIsTabletOrLess,
       ...others
     } = this.props
 
@@ -89,14 +238,17 @@ export class KarlFooterLendo extends Component {
               <Grid>
                 <GridCol
                   col-l="12"
-                  offset-l="0"
                   col-m="6"
-                  offset-m="3"
                   col-s="10"
+                  offset-l="0"
+                  offset-m="3"
                   offset-s="1"
                   style={styles.network.subscribe}
                 >
-                  <div style={styles.network.subscribe.label}>
+                  <Marger
+                    bottom={viewportIsTabletOrLess ? 1 : 0}
+                    style={styles.network.subscribe.label}
+                  >
                     <Text
                       size="tiny"
                       weight="regular"
@@ -105,40 +257,51 @@ export class KarlFooterLendo extends Component {
                     >
                       {parseHtml(subscribeLabel)}
                     </Text>
-                  </div>
+                  </Marger>
 
-                  <div style={styles.network.subscribe.form}>
+                  <Marger
+                    top={viewportIsTabletOrLess ? 1 : 0}
+                    style={styles.network.subscribe.form}
+                  >
                     <TextInputWithButton
                       textInputProps={{ ...textInputProps, id: 'subscribe' }}
                       value={newsletterSubmitValue}
                       style={styles.network.subscribe.form.textInput}
                     />
-                  </div>
+                  </Marger>
                 </GridCol>
               </Grid>
             </Marger>
           </GridCol>
 
           <GridCol col-m="12" col-l="4" style={styles.network.social}>
-            <div style={styles.network.social.text}>
-              <Text size="tiny" weight="regular">
-                {parseHtml(socialText)}
-              </Text>
-            </div>
+            <Marger top="3" bottom="3" style={styles.network.social.list}>
+              <Marger
+                bottom={viewportIsTabletOrLess ? 1 : 0}
+                style={styles.network.social.text}
+              >
+                <Text size="tiny" weight="regular">
+                  {parseHtml(socialText)}
+                </Text>
+              </Marger>
 
-            <div style={styles.network.social.buttons}>
-              <FacebookButtonIcon
-                tag="a"
-                style={styles.network.social.buttons.buttonIcon}
-                href={hrefFacebook}
-              />
-              <TwitterButtonIcon
-                tag="a"
-                style={styles.network.social.buttons.buttonIcon}
-                href={hrefTwitter}
-              />
-              <InstagramButtonIcon tag="a" href={hrefInstagram} />
-            </div>
+              <Marger
+                top={viewportIsTabletOrLess ? 1 : 0}
+                style={styles.network.social.buttons}
+              >
+                <FacebookButtonIcon
+                  tag="a"
+                  style={styles.network.social.buttons.buttonIcon}
+                  href={hrefFacebook}
+                />
+                <TwitterButtonIcon
+                  tag="a"
+                  style={styles.network.social.buttons.buttonIcon}
+                  href={hrefTwitter}
+                />
+                <InstagramButtonIcon tag="a" href={hrefInstagram} />
+              </Marger>
+            </Marger>
           </GridCol>
         </Grid>
       </Row>
@@ -160,57 +323,79 @@ export class KarlFooterLendo extends Component {
   }
 
   renderList() {
-    const { items1, items2, items3, items4 } = this.props
+    const {
+      items1,
+      items2,
+      items3,
+      items4,
+      viewportIsTabletOrLess,
+      viewportIsMobile,
+    } = this.props
 
     return (
       <Row role="navigation">
         <Grid style={styles.list}>
           <GridCol col-l="2">
-            <Marger bottom="4" style={styles.list.logo}>
-              <KissKissBankBankLogo color="#fff" style={styles.list.logo.img} />
+            <Marger
+              bottom={viewportIsTabletOrLess ? 5 : 0}
+              style={styles.list.logo}
+            >
+              <LendopolisLogo
+                primaryColor="#fff"
+                secondaryColor="#caf4fe"
+                style={styles.list.logo.img}
+              />
             </Marger>
           </GridCol>
 
           <GridCol col-l="7" style={styles.list.linkList}>
             <Grid>
-              <GridCol col-m="3" style={styles.list.linkList.items}>
-                <LinkList
-                  margin={false}
-                  items={items1}
-                  color="light"
-                  itemMargin="double"
-                  lineHeight="normal"
-                />
+              <GridCol col-m="3">
+                <Marger bottom={viewportIsMobile ? 3 : 0}>
+                  <LinkList
+                    margin={false}
+                    items={items1}
+                    color="light"
+                    itemMargin="double"
+                    lineHeight="normal"
+                  />
+                </Marger>
               </GridCol>
 
-              <GridCol col-m="3" style={styles.list.linkList.items}>
-                <LinkList
-                  margin={false}
-                  items={items2}
-                  color="light"
-                  itemMargin="double"
-                  lineHeight="normal"
-                />
+              <GridCol col-m="3">
+                <Marger bottom={viewportIsMobile ? 3 : 0}>
+                  <LinkList
+                    margin={false}
+                    items={items2}
+                    color="light"
+                    itemMargin="double"
+                    lineHeight="normal"
+                  />
+                </Marger>
               </GridCol>
 
-              <GridCol col-m="3" style={styles.list.linkList.items}>
-                <LinkList
-                  margin={false}
-                  items={items3}
-                  color="light"
-                  itemMargin="double"
-                  lineHeight="normal"
-                />
+              <GridCol col-m="3">
+                <Marger bottom={viewportIsMobile ? 3 : 0}>
+                  <LinkList
+                    margin={false}
+                    items={items3}
+                    color="light"
+                    itemMargin="double"
+                    lineHeight="normal"
+                  />
+                </Marger>
               </GridCol>
 
-              <GridCol col-m="3" style={styles.list.linkList.items}>
-                <LinkList
-                  margin={false}
-                  items={items4}
-                  color="light"
-                  itemMargin="double"
-                  lineHeight="normal"
-                />
+              <GridCol col-m="3">
+                <Marger bottom={viewportIsMobile ? 3 : 0}>
+                  <LinkList
+                    margin={false}
+                    items={items4}
+                    color="light"
+                    itemMargin="double"
+                    lineHeight="normal"
+                  />
+                </Marger>
               </GridCol>
             </Grid>
           </GridCol>
@@ -231,6 +416,7 @@ export class KarlFooterLendo extends Component {
       noticeParagraphMangopayLinkAcronym,
       noticeParagraphMangopayText2,
       noticeCopyright,
+      viewportIsTabletOrLess,
     } = this.props
 
     return (
@@ -247,21 +433,26 @@ export class KarlFooterLendo extends Component {
             offset-l="0"
           >
             <div style={styles.notice.block}>
-              <div style={styles.notice.block.logo}>
+              <Marger
+                bottom={viewportIsTabletOrLess ? 1 : 0}
+                style={styles.notice.block.logo}
+              >
                 <img
                   src="/assets/partners/french-authorities.svg"
                   alt={noticeAltAutorite}
                   style={styles.notice.block.logo.img}
                 />
-              </div>
+              </Marger>
 
-              <Paragraph
-                modifier="quaternary"
-                margin={false}
-                style={styles.notice.block.paragraph}
-              >
-                {parseHtml(noticeParagraphAutorite)}
-              </Paragraph>
+              <Marger top={viewportIsTabletOrLess ? 1 : 0}>
+                <Paragraph
+                  modifier="quaternary"
+                  margin={false}
+                  style={styles.notice.block.paragraph}
+                >
+                  {parseHtml(noticeParagraphAutorite)}
+                </Paragraph>
+              </Marger>
             </div>
           </GridCol>
 
@@ -276,30 +467,38 @@ export class KarlFooterLendo extends Component {
             offset-l="0"
           >
             <div style={styles.notice.block}>
-              <div style={styles.notice.block.logo}>
+              <Marger
+                bottom={viewportIsTabletOrLess ? 1 : 0}
+                style={styles.notice.block.logo}
+              >
                 <img
                   src="/assets/partners/mangopay.svg"
                   alt={noticeAltMangopay}
                   style={styles.notice.block.logo.img.mangopay}
                 />
-              </div>
+              </Marger>
 
-              <Paragraph
-                modifier="quaternary"
-                margin={false}
-                style={styles.notice.block.paragraph}
-              >
-                {parseHtml(noticeParagraphMangopayText1)}{' '}
-                <a
-                  href="https://www.mangopay.com/fr/"
-                  target="_blank"
-                  style={styles.notice.block.paragraph.link}
+              <Marger top={viewportIsTabletOrLess ? 1 : 0}>
+                <Paragraph
+                  modifier="quaternary"
+                  margin={false}
+                  style={styles.notice.block.paragraph}
                 >
-                  {parseHtml(noticeParagraphMangopayLink)}
-                  <abbr> {parseHtml(noticeParagraphMangopayLinkAcronym)}</abbr>
-                </a>{' '}
-                {parseHtml(noticeParagraphMangopayText2)}
-              </Paragraph>
+                  {parseHtml(noticeParagraphMangopayText1)}{' '}
+                  <a
+                    href="https://www.mangopay.com/fr/"
+                    target="_blank"
+                    style={styles.notice.block.paragraph.link}
+                  >
+                    {parseHtml(noticeParagraphMangopayLink)}
+                    <abbr>
+                      {' '}
+                      {parseHtml(noticeParagraphMangopayLinkAcronym)}
+                    </abbr>
+                  </a>{' '}
+                  {parseHtml(noticeParagraphMangopayText2)}
+                </Paragraph>
+              </Marger>
             </div>
           </GridCol>
 
@@ -357,9 +556,6 @@ const styles = {
       form: {
         textAlign: 'center',
         flex: '1',
-        [`@media (max-width: ${ScreenConfig['M'].max}px)`]: {
-          marginTop: '10px',
-        },
 
         textInput: {
           [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
@@ -370,15 +566,16 @@ const styles = {
     },
 
     social: {
-      alignSelf: 'center',
       [`@media (max-width: ${ScreenConfig['M'].max}px)`]: {
-        marginTop: '30px',
-        marginBottom: '30px',
         order: '-1',
       },
-      [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
-        display: 'flex',
-        justifyContent: 'flex-end',
+
+      list: {
+        alignSelf: 'center',
+        [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
+          display: 'flex',
+          justifyContent: 'flex-end',
+        },
       },
 
       text: {
@@ -392,10 +589,6 @@ const styles = {
 
       buttons: {
         textAlign: 'center',
-        [`@media (max-width: ${ScreenConfig['M'].max}px)`]: {
-          marginTop: '10px',
-        },
-
         buttonIcon: {
           marginRight: '15px',
         },
@@ -404,7 +597,7 @@ const styles = {
   },
 
   list: {
-    paddingTop: '80px',
+    paddingTop: '40px',
     paddingBottom: '50px',
     [`@media (min-width: ${ScreenConfig['M'].min}px)`]: {
       paddingTop: '100px',
@@ -434,12 +627,6 @@ const styles = {
       [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
         paddingBottom: '80px',
       },
-
-      items: {
-        [`@media (max-width: ${ScreenConfig['S'].max}px)`]: {
-          marginBottom: '30px',
-        },
-      },
     },
   },
 
@@ -454,7 +641,6 @@ const styles = {
 
       logo: {
         textAlign: 'center',
-        marginBottom: '10px',
         lineHeight: 0,
         [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
           marginRight: '14px',
@@ -465,7 +651,6 @@ const styles = {
           [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
             display: 'block',
             verticalAlign: 'top',
-            marginBottom: '10px',
           },
 
           mangopay: {
@@ -506,3 +691,8 @@ const styles = {
     },
   },
 }
+
+export const KarlFooterLendo = mediaQueries(Radium(KarlFooterLendoBase), {
+  viewportIsTabletOrLess: true,
+  viewportIsMobile: true,
+})
