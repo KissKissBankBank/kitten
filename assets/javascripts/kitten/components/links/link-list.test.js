@@ -81,6 +81,15 @@ describe('<LinkList />', () => {
     })
   })
 
+  describe('with weight item', () => {
+    const linkList = shallow(<LinkList items={items} weight="regular" />)
+    const item = linkList.find('.k-LinkList__link').at(0)
+
+    it('has a good class', () => {
+      expect(item.hasClass('k-LinkList__link--regularWeight')).toBe(true)
+    })
+  })
+
   describe('with lineHeight', () => {
     const linkList = shallow(<LinkList items={items} lineHeight="normal" />)
     const item = linkList.find('.k-LinkList__link').at(0)
