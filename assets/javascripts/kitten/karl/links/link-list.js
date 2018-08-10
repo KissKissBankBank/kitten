@@ -10,6 +10,7 @@ export const KarlLinkList = () => {
   ]
 
   return <LinkList items={linkListItems} />
+  return <LinkList items={linkListItems} />
 }
 
 export const KarlLinkListSelectedItem = () => {
