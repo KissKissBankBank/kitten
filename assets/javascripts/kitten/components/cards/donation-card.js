@@ -24,17 +24,20 @@ class DonationCardComponent extends Component {
     textTag: PropTypes.string,
 
     donationId: PropTypes.string,
-    isError: PropTypes.string,
+    isError: PropTypes.bool,
     errorTag: PropTypes.string,
     amountPlaceholder: PropTypes.string,
     currencySymbol: PropTypes.string,
     amountLabel: PropTypes.string,
+    onInputBlur: PropTypes.func,
+    onInputChange: PropTypes.func,
+    onInputFocus: PropTypes.func,
 
-    button: PropTypes.string,
-    buttonOnMouseEnter: PropTypes.func,
-    buttonOnMouseLeave: PropTypes.func,
-    buttonOnClick: PropTypes.func,
-    myContribution: PropTypes.string,
+    buttonLabel: PropTypes.string.isRequired,
+    onButtonMouseEnter: PropTypes.func,
+    onButtonMouseLeave: PropTypes.func,
+    onButtonClick: PropTypes.func,
+    onFormSubmit: PropTypes.func,
 
     isDisabled: PropTypes.bool,
   }
@@ -44,23 +47,30 @@ class DonationCardComponent extends Component {
     textTag: 'p',
 
     donationId: '',
-    isError: '',
+    isError: false,
     errorTag: '',
     amountPlaceholder: '',
     currencySymbol: '€',
     amountLabel: 'Label',
+    onInputBlur: () => {},
+    onInputChange: () => {},
+    onInputFocus: () => {},
 
-    button: '',
-    buttonOnMouseEnter: () => {},
-    buttonOnMouseLeave: () => {},
-    buttonOnClick: () => {},
-    myContribution: '',
+    onButtonMouseEnter: () => {},
+    onButtonMouseLeave: () => {},
+    onButtonClick: () => {},
+    onFormSubmit: () => {},
 
     isDisabled: false,
   }
 
   render() {
-    const { viewportIsSOrLess, isDisabled, ...others } = this.props
+    const {
+      viewportIsSOrLess,
+      isDisabled,
+      onFormSubmit,
+      ...others
+    } = this.props
 
     const styleCard = [
       others.style,
@@ -77,8 +87,10 @@ class DonationCardComponent extends Component {
           <Grid style={styles.card.addPadding}>
             <GridCol col-l="8" offset-l="2" col-m="10" offset-m="1">
               {this.renderDescription()}
-              {this.renderInputBase()}
-              {this.renderButton()}
+              <form onSubmit={onFormSubmit}>
+                {this.renderInputBase()}
+                {this.renderButton()}
+              </form>
             </GridCol>
           </Grid>
         </Marger>
@@ -118,6 +130,9 @@ class DonationCardComponent extends Component {
       amountLabel,
       isDisabled,
       viewportIsSOrLess,
+      onInputBlur,
+      onInputChange,
+      onInputFocus,
     } = this.props
 
     const donationIsError = !isError ? 3 : 1
@@ -140,6 +155,9 @@ class DonationCardComponent extends Component {
                 placeholder={amountPlaceholder}
                 unit={currencySymbol}
                 disabled={isDisabled}
+                onBlur={onInputBlur}
+                onChange={onInputChange}
+                onFocus={onInputFocus}
               />
             </Marger>
             {isError && (
@@ -157,33 +175,29 @@ class DonationCardComponent extends Component {
 
   renderButton() {
     const {
-      button,
+      buttonLabel,
       viewportIsSOrLess,
-      buttonOnMouseEnter,
-      buttonOnMouseLeave,
-      buttonOnClick,
-      myContribution,
+      onButtonMouseEnter,
+      onButtonMouseLeave,
+      onButtonClick,
+      onFormSubmit,
       isDisabled,
     } = this.props
 
-    const buttonMargin = viewportIsSOrLess || !myContribution ? null : 2
-
-    if (!button) return
-
     return (
-      <Marger bottom={buttonMargin} style={styles.center}>
+      <Marger style={styles.center}>
         <Button
           size="big"
           modifier="helium"
-          type="button"
-          aria-label={button}
+          type="submit"
+          aria-label={buttonLabel}
           style={styles.button}
-          onMouseEnter={buttonOnMouseEnter}
-          onMouseLeave={buttonOnMouseLeave}
-          onClick={buttonOnClick}
+          onMouseEnter={onButtonMouseEnter}
+          onMouseLeave={onButtonMouseLeave}
+          onClick={onButtonClick}
           disabled={isDisabled}
         >
-          {button}
+          {buttonLabel}
         </Button>
       </Marger>
     )
@@ -205,17 +219,21 @@ const styles = {
       cursor: 'not-allowed',
     },
   },
+
   text: {
     color: COLORS.font1,
     textAlign: 'center',
   },
+
   horizontalStroke: {
     margin: '0 auto',
   },
+
   center: {
     display: 'flex',
     justifyContent: 'center',
   },
+
   button: {
     [`@media (max-width: ${ScreenConfig['XS'].max}px)`]: {
       width: '100%',

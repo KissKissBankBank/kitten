@@ -11,7 +11,7 @@ export const KarlDonationCard = () => (
       <Marger top="2" bottom="2">
         <DonationCard
           title="In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo."
-          button="To contribute"
+          buttonLabel="To contribute"
           donationId="donation-amount"
           amountLabel="Enter your amount"
           amountPlaceholder="Your amount"
@@ -25,7 +25,7 @@ export const KarlDonationCard = () => (
       <Marger top="2" bottom="2">
         <DonationCard
           title="In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo."
-          button="To contribute"
+          buttonLabel="To contribute"
           amountLabel="Enter your amount"
           amountPlaceholder="Your amount"
           currencySymbol="€"
@@ -39,7 +39,7 @@ export const KarlDonationCard = () => (
       <Marger top="2" bottom="2">
         <DonationCard
           title="In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo."
-          button="To contribute"
+          buttonLabel="To contribute"
           amountLabel="Enter your amount"
           amountPlaceholder="Your amount"
           currencySymbol="€"
