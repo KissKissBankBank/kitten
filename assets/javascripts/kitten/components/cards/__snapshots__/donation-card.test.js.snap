@@ -5,15 +5,17 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
   amountLabel="Label"
   amountPlaceholder=""
   button="Custom text button"
-  buttonOnClick={[Function]}
-  buttonOnMouseEnter={[Function]}
-  buttonOnMouseLeave={[Function]}
   currencySymbol="€"
   data-radium={true}
   donationId=""
   errorTag=""
-  isError=""
-  myContribution=""
+  isError={false}
+  onButtonClick={[Function]}
+  onButtonMouseEnter={[Function]}
+  onButtonMouseLeave={[Function]}
+  onInputBlur={[Function]}
+  onInputChange={[Function]}
+  onInputFocus={[Function]}
   style={
     Object {
       "borderColor": "#eee",
@@ -84,98 +86,103 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
             }
           />
         </div>
-        <div
-          style={
-            Object {
-              "marginBottom": "1.875rem",
-              "marginTop": "1.875rem",
-            }
-          }
+        <form
+          data-radium={true}
+          onSubmit={[Function]}
         >
           <div
-            className="k-Grid"
-            data-radium={true}
             style={
               Object {
-                "display": "flex",
-                "justifyContent": "center",
+                "marginBottom": "1.875rem",
+                "marginTop": "1.875rem",
               }
             }
           >
             <div
-              className="k-Grid__col--12 k-Grid__col--7@xs k-Grid__col--5@m"
+              className="k-Grid"
+              data-radium={true}
+              style={
+                Object {
+                  "display": "flex",
+                  "justifyContent": "center",
+                }
+              }
             >
               <div
-                style={
-                  Object {
-                    "marginBottom": "0.9375rem",
-                    "marginTop": null,
-                  }
-                }
-              >
-                <label
-                  className="k-Label k-Label--micro"
-                  htmlFor=""
-                  onClick={[Function]}
-                >
-                  Label
-                </label>
-              </div>
-              <div
-                style={
-                  Object {
-                    "marginBottom": null,
-                    "marginTop": "0.9375rem",
-                  }
-                }
+                className="k-Grid__col--12 k-Grid__col--7@xs k-Grid__col--5@m"
               >
                 <div
-                  className="k-TextInputWithUnit k-TextInputWithUnit--fullWidth"
+                  style={
+                    Object {
+                      "marginBottom": "0.9375rem",
+                      "marginTop": null,
+                    }
+                  }
                 >
-                  <input
-                    className="k-TextInput k-TextInputWithUnit__input"
-                    disabled={false}
-                    id=""
-                    name="text"
-                    placeholder=""
-                    type="number"
-                  />
-                  <span
-                    className="k-TextInputWithUnit__unit"
+                  <label
+                    className="k-Label k-Label--micro"
+                    htmlFor=""
+                    onClick={[Function]}
                   >
-                    €
-                  </span>
+                    Label
+                  </label>
+                </div>
+                <div
+                  style={
+                    Object {
+                      "marginBottom": null,
+                      "marginTop": "0.9375rem",
+                    }
+                  }
+                >
+                  <div
+                    className="k-TextInputWithUnit k-TextInputWithUnit--fullWidth"
+                  >
+                    <input
+                      className="k-TextInput k-TextInputWithUnit__input"
+                      disabled={false}
+                      id=""
+                      name="text"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      onFocus={[Function]}
+                      placeholder=""
+                      type="number"
+                    />
+                    <span
+                      className="k-TextInputWithUnit__unit"
+                    >
+                      €
+                    </span>
+                  </div>
                 </div>
               </div>
-              
             </div>
           </div>
-        </div>
-        <div
-          style={
-            Object {
-              "display": "flex",
-              "justifyContent": "center",
-              "marginBottom": null,
-              "marginTop": null,
+          <div
+            style={
+              Object {
+                "display": "flex",
+                "justifyContent": "center",
+                "marginBottom": null,
+                "marginTop": null,
+              }
             }
-          }
-        >
-          <button
-            aria-label="Custom text button"
-            className="rmq-2001d403 k-Button k-Button--helium k-Button--big"
-            data-radium={true}
-            disabled={false}
-            onClick={[Function]}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-            style={Object {}}
-            tabIndex={null}
-            type="button"
           >
-            Custom text button
-          </button>
-        </div>
+            <button
+              aria-label={undefined}
+              className="rmq-2001d403 k-Button k-Button--helium k-Button--big"
+              data-radium={true}
+              disabled={false}
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              style={Object {}}
+              tabIndex={null}
+              type="submit"
+            />
+          </div>
+        </form>
       </div>
     </div>
   </div>

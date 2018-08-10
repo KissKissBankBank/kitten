@@ -19,7 +19,7 @@ storiesOf('Cards/DonationCard', module)
                 'Title Amount',
                 'In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.',
               )}
-              button={text('Button', 'Choose')}
+              buttonLabel={text('Button', 'Choose')}
               isDisabled={boolean('Is Disabled', false)}
               amountLabel={text('Label Input', 'Enter your amount')}
               amountPlaceholder={text('Placeholder input', 'Your amount')}
