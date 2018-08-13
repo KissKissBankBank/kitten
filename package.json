@@ -100,7 +100,7 @@
     "build:dev": "(cd spec/dummy/client && yarn build:dev)",
     "build": "(cd spec/dummy/client && yarn build --silent)",
     "hot-assets": "(cd spec/dummy/client && yarn hot-assets)",
-    "test": "jest",
+    "test": "jest --maxWorkers=2",
     "precommit": "lint-staged",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
