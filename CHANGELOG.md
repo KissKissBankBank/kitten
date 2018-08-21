@@ -2,6 +2,8 @@
 
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [unreleased]
+
 ## [22.1.1]
 
 Fix:
