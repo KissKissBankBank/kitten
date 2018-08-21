@@ -5,7 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [22.1.1]
 
 Fix:
-- dependencies strategy
+- Dependencies strategy.
 
 ## [22.1.0] - 2018-08-21 
 
