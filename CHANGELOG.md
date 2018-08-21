@@ -4,8 +4,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `onLabelClick` prop action on `Checkbox` component.
-- Fix: Fix garbage button styles on `CartRewardCard`.
+## [22.1.0] - 2018-08-21
+
+Feature:
+- Add `onLabelClick` prop action on `Checkbox` component.
+
+Fix: 
+- Fix garbage button styles on `CartRewardCard`.
 
 ## [22.0.0] - 2018-08-08
 
