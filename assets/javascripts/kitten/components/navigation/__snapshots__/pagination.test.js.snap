@@ -209,6 +209,7 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
           aria-label="Go to page 10"
           className="rmq-e4506d25 k-u-size-tiny k-u-weight-regular"
           data-radium={true}
+          href={undefined}
           onBlur={[Function]}
           onClick={null}
           onFocus={[Function]}
