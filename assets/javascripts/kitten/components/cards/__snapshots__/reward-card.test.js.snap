@@ -230,6 +230,7 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
             }
           >
             Custom title contributors
+             
             <span
               className="k-u-color-font1 k-u-weight-light"
             >
@@ -246,6 +247,7 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
             }
           >
             Custom title delivery
+             
             <span
               className="k-u-color-font1 k-u-weight-light"
             >
@@ -262,6 +264,7 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
             }
           >
             Custom title availability
+             
             <span
               className="k-u-color-font1 k-u-weight-light"
             >
