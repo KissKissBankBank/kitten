@@ -217,7 +217,7 @@ class ContributionCardComponent extends Component {
         {viewportIsTabletOrLess && (
           <div>
             <Text color="font1" weight="regular" style={styles.infos.lists}>
-              {title}
+              {title}{' '}
               <Text color="font1" weight="light">
                 {value}
               </Text>
@@ -227,7 +227,7 @@ class ContributionCardComponent extends Component {
 
         {!viewportIsTabletOrLess && (
           <Text color="font1" weight="regular" style={styles.infos.lists}>
-            {title}
+            {title}{' '}
             <Text color="font1" weight="light">
               {value}
             </Text>

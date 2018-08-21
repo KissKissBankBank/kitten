@@ -4,17 +4,20 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Add a space between title and value informations
+  on `CartRewardCard` and `ContributionCard`.
+
 ## [22.1.1] - 2018-08-21
 
 Fix:
 - Dependencies strategy.
 
-## [22.1.0] - 2018-08-21 
+## [22.1.0] - 2018-08-21
 
 Feature:
 - Add `onLabelClick` prop action on `Checkbox` component.
 
-Fix: 
+Fix:
 - Fix garbage button styles on `CartRewardCard`.
 
 ## [22.0.0] - 2018-08-08
