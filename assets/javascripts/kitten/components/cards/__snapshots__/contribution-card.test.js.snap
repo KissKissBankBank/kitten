@@ -38,7 +38,7 @@ exports[`<ContributionCard /> by default matches with snapshot 1`] = `
           style={
             Object {
               "marginBottom": "1.25rem",
-              "marginTop": "1.25rem",
+              "marginTop": null,
             }
           }
         >
@@ -144,7 +144,7 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
           style={
             Object {
               "marginBottom": "1.25rem",
-              "marginTop": "1.25rem",
+              "marginTop": null,
             }
           }
         >
