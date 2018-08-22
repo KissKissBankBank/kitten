@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: add `readonly` flag on `Button`
+- Feature: add `starred` flag and `starLabel` option to `RewardCard`
+
 ## [22.1.1] - 2018-08-21
 
 Fix:
