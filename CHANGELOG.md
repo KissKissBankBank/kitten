@@ -6,7 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [22.2.0] - 2018-08-22
 
-Feature: 
+Features: 
 - Add `readonly` prop on `Button`.
 - Add `starred` prop and `starLabel` option to `RewardCard`.
 
