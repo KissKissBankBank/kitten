@@ -21,7 +21,7 @@ export class Button extends Component {
         [`k-Button--${modifier}`]: modifier,
         [`k-Button--${size}`]: size,
         'k-Button--icon': icon,
-        'k-Button--readonly': readonly,
+        'is-readonly': readonly,
         'k-Button--iconRight': iconOnRight,
         'k-Button--iconWithMinWidth': iconWithMinWidth,
         'k-Button--icon--tiny': size == 'tiny' && icon,

@@ -60,24 +60,24 @@
     }
   }
 
-  &:hover:not(.k-Button--readonly) .k-Button__icon,
-  &:hover:not(.k-Button--readonly) .k-ButtonIcon__svg, {
+  &:hover:not(.is-readonly) .k-Button__icon,
+  &:hover:not(.is-readonly) .k-ButtonIcon__svg, {
     fill: $hover-color;
     .k-Button__svg__stroke {
       stroke: $hover-color;
     }
   }
 
-  &:focus:not(.k-Button--readonly) .k-Button__icon,
-  &:focus:not(.k-Button--readonly) .k-ButtonIcon__svg {
+  &:focus:not(.is-readonly) .k-Button__icon,
+  &:focus:not(.is-readonly) .k-ButtonIcon__svg {
     fill: $focus-color;
     .k-Button__svg__stroke {
       stroke: $focus-color;
     }
   }
 
-  &:active:not(.k-Button--readonly) .k-Button__icon,
-  &:active:not(.k-Button--readonly) .k-ButtonIcon__svg {
+  &:active:not(.is-readonly) .k-Button__icon,
+  &:active:not(.is-readonly) .k-ButtonIcon__svg {
     fill: $active-color;
     .k-Button__svg__stroke {
       stroke: $active-color;
@@ -92,8 +92,8 @@
     }
   }
 
-  &.is-selected:not(.k-Button--readonly) .k-Button__icon,
-  &.is-selected:not(.k-Button--readonly) .k-ButtonIcon__svg {
+  &.is-selected:not(.is-readonly) .k-Button__icon,
+  &.is-selected:not(.is-readonly) .k-ButtonIcon__svg {
     fill: $is-selected-color;
     .k-Button__svg__stroke {
       stroke: $is-selected-color;

@@ -158,7 +158,7 @@ class ContributionCardComponent extends Component {
               modifier="lithium"
               style={{ borderRadius: '5px' }}
             >
-              <StarIcon className="k-Button__icon k-Button--readonly" />
+              <StarIcon className="k-Button__icon is-readonly" />
               {starLabel}
             </Button>
           </Marger>
