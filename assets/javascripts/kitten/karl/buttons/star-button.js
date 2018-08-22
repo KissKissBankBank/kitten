@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Radium from 'radium'
 import PropTypes from 'prop-types'
 import { StarIcon } from 'kitten/components/icons/star-icon'
 import { ButtonIcon } from 'kitten/components/buttons/button-icon'
