@@ -99,6 +99,8 @@ class ContributionCardComponent extends Component {
       titleTag,
       textTag,
       render,
+      starred,
+      starLabel,
       ...others
     } = this.props
 
