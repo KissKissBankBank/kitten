@@ -163,7 +163,7 @@ class ContributionCardComponent extends Component {
             </Button>
           </Marger>
         )}
-        <Marger top="2" bottom="2">
+        <Marger top={starred ? 2 : 0} bottom="2">
           <Title
             modifier={viewportIsSOrLess ? 'quaternary' : 'tertiary'}
             italic

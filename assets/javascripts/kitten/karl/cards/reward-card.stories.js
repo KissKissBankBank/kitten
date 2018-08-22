@@ -51,7 +51,7 @@ storiesOf('Cards/RewardCard', module)
               )}
               isDisabled={boolean('Is Disabled', false)}
               starred={boolean('Is Starred', false)}
-              starLabel={text('Label for reward featured', 'Reward featured')}
+              starLabel={text('Label for featured reward', 'Featured reward')}
               valueContributors={boolean('Value contributor', false)}
               valueDelivery={boolean('Value delivery', false)}
               valueAvailability={boolean('Value availability', false)}
