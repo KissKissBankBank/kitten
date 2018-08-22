@@ -156,7 +156,7 @@ class ContributionCardComponent extends Component {
               tag="span"
               size="tiny"
               modifier="lithium"
-              style={{ borderRadius: '5px' }}
+              style={{ borderRadius: 5 }}
             >
               <StarIcon className="k-Button__icon is-readonly" />
               {starLabel}
