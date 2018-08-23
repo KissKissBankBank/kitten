@@ -11,11 +11,13 @@ export const KarlDonationCard = () => (
       <Marger top="2" bottom="2">
         <DonationCard
           title="In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo."
-          buttonLabel="To contribute"
-          donationId="donation-amount"
-          amountLabel="Enter your amount"
-          amountPlaceholder="Your amount"
-          currencySymbol="€"
+          donationForm={{
+            buttonLabel: 'To contribute',
+            inputId: 'donation-amount',
+            inputLabel: 'Enter your amount',
+            inputPlaceholder: 'Your amount',
+            inputUnit: '€',
+          }}
         />
       </Marger>
     </Container>
@@ -25,10 +27,13 @@ export const KarlDonationCard = () => (
       <Marger top="2" bottom="2">
         <DonationCard
           title="In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo."
-          buttonLabel="To contribute"
-          amountLabel="Enter your amount"
-          amountPlaceholder="Your amount"
-          currencySymbol="€"
+          donationForm={{
+            buttonLabel: 'To contribute',
+            inputId: 'donation-amount',
+            inputLabel: 'Enter your amount',
+            inputPlaceholder: 'Your amount',
+            inputUnit: '€',
+          }}
           isDisabled
         />
       </Marger>
@@ -39,12 +44,15 @@ export const KarlDonationCard = () => (
       <Marger top="2" bottom="2">
         <DonationCard
           title="In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo."
-          buttonLabel="To contribute"
-          amountLabel="Enter your amount"
-          amountPlaceholder="Your amount"
-          currencySymbol="€"
-          isError
-          errorTag="lorem ipsum dolor sit amet consectetur."
+          donationForm={{
+            buttonLabel: 'To contribute',
+            inputId: 'donation-amount',
+            inputLabel: 'Enter your amount',
+            inputPlaceholder: 'Your amount',
+            inputUnit: '€',
+            inputIsOnError: true,
+            errorMessage: 'lorem ipsum dolor sit amet consectetur.',
+          }}
         />
       </Marger>
     </Container>
