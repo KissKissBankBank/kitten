@@ -13,6 +13,7 @@ const Button = Radium(ButtonBase)
 const Grid = Radium(GridBase)
 
 export const TextInputWithUnitForm = ({
+  align,
   formIsDisabled,
   viewportIsSOrLess,
   inputId,
@@ -30,10 +31,12 @@ export const TextInputWithUnitForm = ({
   onInputChange,
   onInputFocus,
 }) => {
+  const formStyle = align == 'center' ? styles.form.centered : null
+
   return (
     <form onSubmit={onFormSubmit}>
       <Marger top="3" bottom={!inputIsOnError ? 3 : 1}>
-        <Grid style={styles.form}>
+        <Grid style={formStyle}>
           <GridCol col-xs="7" col-m="5">
             <Marger bottom="1.5">
               <Label size="micro" htmlFor={inputId}>
@@ -63,7 +66,7 @@ export const TextInputWithUnitForm = ({
           </GridCol>
         </Grid>
       </Marger>
-      <Marger style={styles.form}>
+      <Marger style={formStyle}>
         <StyleRoot>
           <Button
             size="big"
@@ -117,8 +120,10 @@ TextInputWithUnitForm.defaultProps = {
 
 const styles = {
   form: {
-    display: 'flex',
-    justifyContent: 'center',
+    centered: {
+      display: 'flex',
+      justifyContent: 'center',
+    },
   },
 
   button: {

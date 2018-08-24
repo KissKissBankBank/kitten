@@ -50,6 +50,7 @@ const DonationCardComponent = ({
             </Marger>
             <TextInputWithUnitForm
               {...donationForm}
+              align="center"
               formIsDisabled={isDisabled}
             />
           </GridCol>
