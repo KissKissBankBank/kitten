@@ -21,7 +21,6 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
   >
     <div
       className="k-Grid"
-      data-radium={true}
       style={
         Object {
           "paddingLeft": 20,
@@ -42,7 +41,6 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
         >
           <h2
             className="k-Title k-Title--quaternary k-Title--withoutMargin"
-            data-radium={true}
             style={
               Object {
                 "color": "#222",
@@ -74,6 +72,7 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
           onSubmit={[Function]}
         >
           <div
+            data-radium={true}
             style={
               Object {
                 "marginBottom": "1.875rem",
@@ -95,6 +94,7 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
                 className="k-Grid__col--12 k-Grid__col--7@xs k-Grid__col--5@m"
               >
                 <div
+                  data-radium={true}
                   style={
                     Object {
                       "marginBottom": "0.9375rem",
@@ -111,6 +111,7 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
                   </label>
                 </div>
                 <div
+                  data-radium={true}
                   style={
                     Object {
                       "marginBottom": null,
@@ -144,10 +145,9 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
             </div>
           </div>
           <div
+            data-radium={true}
             style={
               Object {
-                "display": "flex",
-                "justifyContent": "center",
                 "marginBottom": null,
                 "marginTop": null,
               }

@@ -5,6 +5,7 @@ exports[`<TextInputWithUnitForm /> by default matches with snapshot 1`] = `
   onSubmit={[Function]}
 >
   <div
+    data-radium={true}
     style={
       Object {
         "marginBottom": "1.875rem",
@@ -26,6 +27,7 @@ exports[`<TextInputWithUnitForm /> by default matches with snapshot 1`] = `
         className="k-Grid__col--12 k-Grid__col--7@xs k-Grid__col--5@m"
       >
         <div
+          data-radium={true}
           style={
             Object {
               "marginBottom": "0.9375rem",
@@ -42,6 +44,7 @@ exports[`<TextInputWithUnitForm /> by default matches with snapshot 1`] = `
           </label>
         </div>
         <div
+          data-radium={true}
           style={
             Object {
               "marginBottom": null,
@@ -75,10 +78,9 @@ exports[`<TextInputWithUnitForm /> by default matches with snapshot 1`] = `
     </div>
   </div>
   <div
+    data-radium={true}
     style={
       Object {
-        "display": "flex",
-        "justifyContent": "center",
         "marginBottom": null,
         "marginTop": null,
       }
@@ -117,6 +119,7 @@ exports[`<TextInputWithUnitForm /> disabled matches with snapshot 1`] = `
   onSubmit={[Function]}
 >
   <div
+    data-radium={true}
     style={
       Object {
         "marginBottom": "1.875rem",
@@ -138,6 +141,7 @@ exports[`<TextInputWithUnitForm /> disabled matches with snapshot 1`] = `
         className="k-Grid__col--12 k-Grid__col--7@xs k-Grid__col--5@m"
       >
         <div
+          data-radium={true}
           style={
             Object {
               "marginBottom": "0.9375rem",
@@ -154,6 +158,7 @@ exports[`<TextInputWithUnitForm /> disabled matches with snapshot 1`] = `
           </label>
         </div>
         <div
+          data-radium={true}
           style={
             Object {
               "marginBottom": null,
@@ -187,10 +192,9 @@ exports[`<TextInputWithUnitForm /> disabled matches with snapshot 1`] = `
     </div>
   </div>
   <div
+    data-radium={true}
     style={
       Object {
-        "display": "flex",
-        "justifyContent": "center",
         "marginBottom": null,
         "marginTop": null,
       }
@@ -229,6 +233,7 @@ exports[`<TextInputWithUnitForm /> on error matches with snapshot 1`] = `
   onSubmit={[Function]}
 >
   <div
+    data-radium={true}
     style={
       Object {
         "marginBottom": "0.625rem",
@@ -250,6 +255,7 @@ exports[`<TextInputWithUnitForm /> on error matches with snapshot 1`] = `
         className="k-Grid__col--12 k-Grid__col--7@xs k-Grid__col--5@m"
       >
         <div
+          data-radium={true}
           style={
             Object {
               "marginBottom": "0.9375rem",
@@ -266,6 +272,7 @@ exports[`<TextInputWithUnitForm /> on error matches with snapshot 1`] = `
           </label>
         </div>
         <div
+          data-radium={true}
           style={
             Object {
               "marginBottom": "0.625rem",
@@ -296,6 +303,7 @@ exports[`<TextInputWithUnitForm /> on error matches with snapshot 1`] = `
           </div>
         </div>
         <div
+          data-radium={true}
           style={
             Object {
               "marginBottom": null,
@@ -313,10 +321,9 @@ exports[`<TextInputWithUnitForm /> on error matches with snapshot 1`] = `
     </div>
   </div>
   <div
+    data-radium={true}
     style={
       Object {
-        "display": "flex",
-        "justifyContent": "center",
         "marginBottom": null,
         "marginTop": null,
       }
