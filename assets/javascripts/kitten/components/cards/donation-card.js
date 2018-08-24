@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
 import Radium from 'radium'
 import PropTypes from 'prop-types'
 import { Marger } from 'kitten/components/layout/marger'
@@ -28,7 +28,7 @@ const DonationCardComponent = ({
   ]
 
   return (
-    <Fragment style={cardStyles}>
+    <div style={cardStyles}>
       <Marger
         bottom={viewportIsSOrLess ? 3 : 4}
         top={viewportIsSOrLess ? 3 : 4}
@@ -56,7 +56,7 @@ const DonationCardComponent = ({
           </GridCol>
         </Grid>
       </Marger>
-    </Fragment>
+    </div>
   )
 }
 

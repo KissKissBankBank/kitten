@@ -25,7 +25,16 @@ describe('<DonationCard />', () => {
 
     const component = renderer
       .create(
-        <DonationCard title="Custom title mount" button="Custom text button" />,
+        <DonationCard
+          title="Custom title mount"
+          donationForm={{
+            buttonLabel: 'To contribute',
+            inputId: 'donation-amount',
+            inputLabel: 'Enter your amount',
+            inputPlaceholder: 'Your amount',
+            inputUnit: '€',
+          }}
+        />,
       )
       .toJSON()
 

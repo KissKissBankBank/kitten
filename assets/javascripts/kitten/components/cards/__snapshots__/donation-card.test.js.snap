@@ -2,20 +2,7 @@
 
 exports[`<DonationCard /> by default matches with snapshot 1`] = `
 <div
-  amountLabel="Label"
-  amountPlaceholder=""
-  button="Custom text button"
-  currencySymbol="€"
   data-radium={true}
-  donationId=""
-  errorTag=""
-  isError={false}
-  onButtonClick={[Function]}
-  onButtonMouseEnter={[Function]}
-  onButtonMouseLeave={[Function]}
-  onInputBlur={[Function]}
-  onInputChange={[Function]}
-  onInputFocus={[Function]}
   style={
     Object {
       "borderColor": "#eee",
@@ -23,9 +10,6 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
       "borderWidth": 2,
     }
   }
-  textTag="p"
-  title="Custom title mount"
-  titleTag="h1"
 >
   <div
     style={
@@ -56,7 +40,7 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
             }
           }
         >
-          <h1
+          <h2
             className="k-Title k-Title--quaternary k-Title--withoutMargin"
             data-radium={true}
             style={
@@ -67,7 +51,7 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
             }
           >
             Custom title mount
-          </h1>
+          </h2>
         </div>
         <div
           style={
@@ -87,7 +71,6 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
           />
         </div>
         <form
-          data-radium={true}
           onSubmit={[Function]}
         >
           <div
@@ -121,10 +104,10 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
                 >
                   <label
                     className="k-Label k-Label--micro"
-                    htmlFor=""
+                    htmlFor="donation-amount"
                     onClick={[Function]}
                   >
-                    Label
+                    Enter your amount
                   </label>
                 </div>
                 <div
@@ -141,12 +124,12 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
                     <input
                       className="k-TextInput k-TextInputWithUnit__input"
                       disabled={false}
-                      id=""
+                      id="donation-amount"
                       name="text"
                       onBlur={[Function]}
                       onChange={[Function]}
                       onFocus={[Function]}
-                      placeholder=""
+                      placeholder="Your amount"
                       type="number"
                     />
                     <span
@@ -169,29 +152,34 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
               }
             }
           >
-            <button
-              aria-label={undefined}
-              className="rmq-2001d403 k-Button k-Button--helium k-Button--big"
+            <div
               data-radium={true}
-              disabled={false}
-              onClick={[Function]}
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              style={Object {}}
-              tabIndex={null}
-              type="submit"
-            />
+            >
+              <button
+                aria-label="To contribute"
+                className="rmq-2001d403 k-Button k-Button--helium k-Button--big"
+                data-radium={true}
+                disabled={false}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                style={Object {}}
+                tabIndex={null}
+                type="submit"
+              >
+                To contribute
+              </button>
+              <style
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "@media (max-width: 639px){ .rmq-2001d403{width: 100% !important;}}",
+                  }
+                }
+              />
+            </div>
           </div>
         </form>
       </div>
     </div>
   </div>
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "@media (max-width: 639px){ .rmq-2001d403{width: 100% !important;}}",
-      }
-    }
-  />
 </div>
 `;
