@@ -33,7 +33,7 @@ export const TextInputWithUnitForm = ({
   onInputChange,
   onInputFocus,
 }) => {
-  const formStyle = [align === 'center' && styles.form.centered]
+  const formStyle = align === 'center' && styles.form.centered
 
   return (
     <form onSubmit={onFormSubmit}>
