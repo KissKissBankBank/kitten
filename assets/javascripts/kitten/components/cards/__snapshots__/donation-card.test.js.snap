@@ -123,6 +123,7 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
                   >
                     <input
                       className="k-TextInput k-TextInputWithUnit__input"
+                      defaultValue=""
                       disabled={false}
                       id="donation-amount"
                       name="text"

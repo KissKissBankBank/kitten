@@ -54,6 +54,7 @@ exports[`<TextInputWithUnitForm /> by default matches with snapshot 1`] = `
           >
             <input
               className="k-TextInput k-TextInputWithUnit__input"
+              defaultValue=""
               disabled={false}
               id="donation-amount"
               name="text"
@@ -165,6 +166,7 @@ exports[`<TextInputWithUnitForm /> disabled matches with snapshot 1`] = `
           >
             <input
               className="k-TextInput k-TextInputWithUnit__input is-disabled"
+              defaultValue=""
               disabled={true}
               id="donation-amount"
               name="text"
@@ -276,6 +278,7 @@ exports[`<TextInputWithUnitForm /> on error matches with snapshot 1`] = `
           >
             <input
               className="k-TextInput k-TextInputWithUnit__input is-error"
+              defaultValue=""
               disabled={false}
               id="donation-amount"
               name="text"

@@ -20,6 +20,7 @@ export const TextInputWithUnitForm = ({
   inputPlaceholder,
   inputUnit,
   inputLabel,
+  inputDefaultValue,
   inputIsOnError,
   errorMessage,
   buttonLabel,
@@ -54,6 +55,7 @@ export const TextInputWithUnitForm = ({
                 onBlur={onInputBlur}
                 onChange={onInputChange}
                 onFocus={onInputFocus}
+                defaultValue={inputDefaultValue}
               />
             </Marger>
             {inputIsOnError && (
@@ -91,6 +93,7 @@ TextInputWithUnitForm.propTypes = {
   inputPlaceholder: PropTypes.string,
   inputLabel: PropTypes.string.isRequired,
   inputUnit: PropTypes.string.isRequired,
+  inputDefaultValue: PropTypes.string,
   onInputBlur: PropTypes.func,
   onInputChange: PropTypes.func,
   onInputFocus: PropTypes.func,
@@ -108,6 +111,7 @@ TextInputWithUnitForm.propTypes = {
 
 TextInputWithUnitForm.defaultProps = {
   inputPlaceholder: '',
+  inputDefaultValue: '',
   onInputBlur: () => {},
   onInputChange: () => {},
   onInputFocus: () => {},

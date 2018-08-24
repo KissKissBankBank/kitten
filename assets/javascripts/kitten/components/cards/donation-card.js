@@ -70,6 +70,7 @@ DonationCardComponent.propTypes = {
     inputPlaceholder: PropTypes.string,
     inputLabel: PropTypes.string.isRequired,
     inputUnit: PropTypes.string.isRequired,
+    inputDefaultValue: PropTypes.string,
     onInputBlur: PropTypes.func,
     onInputChange: PropTypes.func,
     onInputFocus: PropTypes.func,
