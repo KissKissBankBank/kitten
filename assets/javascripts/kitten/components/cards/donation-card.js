@@ -80,6 +80,8 @@ DonationCardComponent.propTypes = {
     onButtonMouseEnter: PropTypes.func,
     onButtonMouseLeave: PropTypes.func,
 
+    align: PropTypes.string,
+    formIsDisabled: PropTypes.bool,
     onFormSubmit: PropTypes.func,
   }),
 }

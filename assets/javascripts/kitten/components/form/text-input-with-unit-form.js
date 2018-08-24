@@ -101,6 +101,7 @@ TextInputWithUnitForm.propTypes = {
   onButtonMouseEnter: PropTypes.func,
   onButtonMouseLeave: PropTypes.func,
 
+  align: PropTypes.string,
   formIsDisabled: PropTypes.bool,
   onFormSubmit: PropTypes.func,
 }
@@ -116,6 +117,7 @@ TextInputWithUnitForm.defaultProps = {
   onButtonMouseLeave: () => {},
   formIsDisabled: false,
   onFormSubmit: () => {},
+  align: 'center',
 }
 
 const styles = {
