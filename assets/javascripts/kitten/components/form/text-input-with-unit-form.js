@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react'
 import Radium, { StyleRoot } from 'radium'
 import PropTypes from 'prop-types'
-import { Marger } from 'kitten/components/layout/marger'
+import { Marger as MargerBase } from 'kitten/components/layout/marger'
 import { Grid as GridBase, GridCol } from 'kitten/components/grid/grid'
 import { TextInputWithUnit } from 'kitten/components/form/text-input-with-unit'
 import { Text } from 'kitten/components/typography/text'
@@ -11,6 +11,7 @@ import { ScreenConfig } from 'kitten/constants/screen-config'
 
 const Button = Radium(ButtonBase)
 const Grid = Radium(GridBase)
+const Marger = Radium(MargerBase)
 
 export const TextInputWithUnitForm = ({
   align,
@@ -32,7 +33,7 @@ export const TextInputWithUnitForm = ({
   onInputChange,
   onInputFocus,
 }) => {
-  const formStyle = align == 'center' ? styles.form.centered : null
+  const formStyle = [align === 'center' && styles.form.centered]
 
   return (
     <form onSubmit={onFormSubmit}>
