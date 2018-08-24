@@ -2,16 +2,13 @@ import React, { Component } from 'react'
 import Radium from 'radium'
 import PropTypes from 'prop-types'
 import { Marger } from 'kitten/components/layout/marger'
-import { Grid as GridBase, GridCol } from 'kitten/components/grid/grid'
-import { Title as TitleBase } from 'kitten/components/typography/title'
+import { Grid, GridCol } from 'kitten/components/grid/grid'
+import { Title } from 'kitten/components/typography/title'
 import { HorizontalStroke } from 'kitten/components/layout/horizontal-stroke'
 import COLORS from 'kitten/constants/colors-config'
 import { mediaQueries } from 'kitten/hoc/media-queries'
 import { TextInputWithUnitForm } from 'kitten/components/form/text-input-with-unit-form'
 import { ScreenConfig } from 'kitten/constants/screen-config'
-
-const Grid = Radium(GridBase)
-const Title = Radium(TitleBase)
 
 const DonationCardComponent = ({
   viewportIsSOrLess,
@@ -65,26 +62,7 @@ DonationCardComponent.propTypes = {
   title: PropTypes.string.isRequired,
   titleTag: PropTypes.string,
   isDisabled: PropTypes.bool,
-  donationForm: PropTypes.shape({
-    inputId: PropTypes.string.isRequired,
-    inputPlaceholder: PropTypes.string,
-    inputLabel: PropTypes.string.isRequired,
-    inputUnit: PropTypes.string.isRequired,
-    inputDefaultValue: PropTypes.string,
-    onInputBlur: PropTypes.func,
-    onInputChange: PropTypes.func,
-    onInputFocus: PropTypes.func,
-    inputIsOnError: PropTypes.bool,
-    errorMessage: PropTypes.string,
-
-    buttonLabel: PropTypes.string.isRequired,
-    onButtonMouseEnter: PropTypes.func,
-    onButtonMouseLeave: PropTypes.func,
-
-    align: PropTypes.string,
-    formIsDisabled: PropTypes.bool,
-    onFormSubmit: PropTypes.func,
-  }),
+  donationForm: PropTypes.object.isRequired,
 }
 
 DonationCardComponent.defaultProps = {
