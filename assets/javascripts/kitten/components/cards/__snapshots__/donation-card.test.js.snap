@@ -148,6 +148,8 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
             data-radium={true}
             style={
               Object {
+                "display": "flex",
+                "justifyContent": "center",
                 "marginBottom": null,
                 "marginTop": null,
               }
