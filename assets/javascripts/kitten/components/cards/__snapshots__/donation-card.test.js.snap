@@ -123,6 +123,7 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
                     className="k-TextInputWithUnit k-TextInputWithUnit--fullWidth"
                   >
                     <input
+                      autoComplete="off"
                       className="k-TextInput k-TextInputWithUnit__input"
                       defaultValue=""
                       disabled={false}

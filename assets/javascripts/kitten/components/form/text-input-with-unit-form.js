@@ -57,6 +57,7 @@ export const TextInputWithUnitForm = ({
                 onChange={onInputChange}
                 onFocus={onInputFocus}
                 defaultValue={inputDefaultValue}
+                autoComplete="off"
               />
             </Marger>
             {inputIsOnError && (
