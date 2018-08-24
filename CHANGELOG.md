@@ -4,9 +4,24 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Breaking change: Update style on `DonationCard` component.
-  `DonationCard` don’t use `ContributionCard` anymore.
-  You must update props with the new specific props.
+- Breaking change: Update `DonationCard` component. Exposed props are now
+  totally different. You cannot inject a render prop anymore. `DonationCard` is
+  now a form. You have to update your component as follow:
+  ```js
+  <DonationCard
+    title="In enim justo, rhoncus ut"
+    donationForm={
+      buttonLabel: 'To contribute',
+      inputId: 'donation-amount',
+      inputLabel: 'Enter your amount',
+      inputPlaceholder: 'Your amount',
+      inputUnit: '€',
+      onFormSubmit: () => { … },
+      onInputBlur: () => { … },
+    }
+  />
+  ```
+- Feature: Add `TextInputWithUnitForm` component.
 
 ## [22.0.0] - 2018-08-08
 
