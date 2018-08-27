@@ -160,47 +160,42 @@ class KarlFooterLendoBase extends Component {
     items4: [
       {
         key: 'key1',
-        item: ' ',
-        href: '',
-      },
-      {
-        key: 'key2',
         item: 'Contact',
         href: '#',
         weight: 'light',
       },
       {
-        key: 'key3',
+        key: 'key2',
         item: "Apporteurs d'affaires",
         href: '#',
         weight: 'light',
       },
       {
-        key: 'key4',
+        key: 'key3',
         item: 'Mentions légales',
         href: '#',
         weight: 'light',
       },
       {
-        key: 'key5',
+        key: 'key4',
         item: 'CGU',
         href: '#',
         weight: 'light',
       },
       {
-        key: 'key6',
+        key: 'key5',
         item: 'Confidentialité',
         href: '#',
         weight: 'light',
       },
       {
-        key: 'key7',
+        key: 'key6',
         item: 'Presse',
         href: '#',
         weight: 'light',
       },
       {
-        key: 'key8',
+        key: 'key7',
         item: 'Le blog',
         href: '#',
         weight: 'light',
