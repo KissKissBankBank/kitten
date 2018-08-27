@@ -135,6 +135,7 @@ class CartRewardCardComponent extends Component {
           modifier="beryllium"
           size="tiny"
           onClick={this.handleCloseClick}
+          style={styles.garbage}
         >
           <GarbageIcon className="k-ButtonIcon__svg" />
         </ButtonIcon>
@@ -195,12 +196,13 @@ const cartRewardAnimationClass = {
   opacity: 1,
 }
 
+const borderWidth = 2
+
 const styles = {
   card: {
-    borderWidth: 2,
+    borderWidth: borderWidth,
     borderStyle: 'solid',
     borderColor: COLORS.line1,
-    overflow: 'hidden',
 
     hidden: cartRewardAnimationClass,
   },
@@ -220,6 +222,12 @@ const styles = {
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'flex-end',
+  },
+
+  garbage: {
+    position: 'relative',
+    top: `-${borderWidth}px`,
+    right: `-${borderWidth}px`,
   },
 }
 

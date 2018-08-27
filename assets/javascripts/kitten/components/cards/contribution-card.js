@@ -7,6 +7,7 @@ import {
   GridCol as GridColBase,
 } from 'kitten/components/grid/grid'
 import { Button as ButtonBase } from 'kitten/components/buttons/button'
+import { StarIcon } from 'kitten/components/icons/star-icon'
 import { Title as TitleBase } from 'kitten/components/typography/title'
 import { Text as TextBase } from 'kitten/components/typography/text'
 import { Paragraph as ParagraphBase } from 'kitten/components/typography/paragraph'
@@ -44,6 +45,8 @@ class ContributionCardComponent extends Component {
     manageContributionLink: PropTypes.string,
 
     isDisabled: PropTypes.bool,
+    starred: PropTypes.bool,
+    starLabel: PropTypes.string,
     render: PropTypes.func,
   }
 
@@ -65,6 +68,8 @@ class ContributionCardComponent extends Component {
     manageContributionLink: '',
 
     isDisabled: false,
+    starred: false,
+    starLabel: '',
     render: () => {},
   }
 
@@ -94,6 +99,8 @@ class ContributionCardComponent extends Component {
       titleTag,
       textTag,
       render,
+      starred,
+      starLabel,
       ...others
     } = this.props
 
@@ -134,12 +141,29 @@ class ContributionCardComponent extends Component {
       textDescription,
       titleTag,
       textTag,
+      starred,
+      starLabel,
       viewportIsSOrLess,
     } = this.props
 
     return (
       <Fragment>
-        <Marger bottom="2">
+        {starred && (
+          <Marger bottom="2">
+            <Button
+              icon
+              readonly
+              tag="span"
+              size="tiny"
+              modifier="lithium"
+              style={{ borderRadius: 5 }}
+            >
+              <StarIcon className="k-Button__icon is-readonly" />
+              {starLabel}
+            </Button>
+          </Marger>
+        )}
+        <Marger top={starred ? 2 : 0} bottom="2">
           <Title
             modifier={viewportIsSOrLess ? 'quaternary' : 'tertiary'}
             italic

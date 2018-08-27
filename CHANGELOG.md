@@ -6,6 +6,25 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Add `weight` props on `LinkList` component.
 
+## [22.2.0] - 2018-08-22
+
+Features: 
+- Add `readonly` prop on `Button`.
+- Add `starred` prop and `starLabel` option to `RewardCard`.
+
+## [22.1.1] - 2018-08-21
+
+Fix:
+- Dependencies strategy.
+
+## [22.1.0] - 2018-08-21 
+
+Feature:
+- Add `onLabelClick` prop action on `Checkbox` component.
+
+Fix: 
+- Fix garbage button styles on `CartRewardCard`.
+
 ## [22.0.0] - 2018-08-08
 
 Breaking changes:

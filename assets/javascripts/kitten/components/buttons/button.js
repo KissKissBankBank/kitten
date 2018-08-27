@@ -9,6 +9,7 @@ export class Button extends Component {
       modifier,
       size,
       icon,
+      readonly,
       iconOnRight,
       iconWithMinWidth,
       ...others
@@ -20,6 +21,7 @@ export class Button extends Component {
         [`k-Button--${modifier}`]: modifier,
         [`k-Button--${size}`]: size,
         'k-Button--icon': icon,
+        'is-readonly': readonly,
         'k-Button--iconRight': iconOnRight,
         'k-Button--iconWithMinWidth': iconWithMinWidth,
         'k-Button--icon--tiny': size == 'tiny' && icon,
@@ -41,6 +43,7 @@ Button.defaultProps = {
   tag: 'button',
   modifier: 'hydrogen',
   icon: false,
+  readonly: false,
   iconOnRight: false,
   iconWithMinWidth: false,
 }

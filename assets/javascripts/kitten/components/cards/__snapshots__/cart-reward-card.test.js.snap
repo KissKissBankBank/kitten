@@ -13,7 +13,6 @@ exports[`<CartRewardCard /> by default matches with snapshot 1`] = `
         "borderStyle": "solid",
         "borderWidth": 2,
         "height": "auto",
-        "overflow": "hidden",
       }
     }
   >
@@ -31,6 +30,13 @@ exports[`<CartRewardCard /> by default matches with snapshot 1`] = `
         aria-label="Garbage Button"
         className="k-ButtonIcon k-ButtonIcon--beryllium k-ButtonIcon--tiny"
         onClick={[Function]}
+        style={
+          Object {
+            "position": "relative",
+            "right": "-2px",
+            "top": "-2px",
+          }
+        }
         tabIndex={null}
         title="Garbage Button"
         type="button"
@@ -121,7 +127,6 @@ exports[`<CartRewardCard /> with some props matches with snapshot 1`] = `
         "borderStyle": "solid",
         "borderWidth": 2,
         "height": "auto",
-        "overflow": "hidden",
       }
     }
   >
@@ -139,6 +144,13 @@ exports[`<CartRewardCard /> with some props matches with snapshot 1`] = `
         aria-label="Garbage Button"
         className="k-ButtonIcon k-ButtonIcon--beryllium k-ButtonIcon--tiny"
         onClick={[Function]}
+        style={
+          Object {
+            "position": "relative",
+            "right": "-2px",
+            "top": "-2px",
+          }
+        }
         tabIndex={null}
         title="Garbage Button"
         type="button"
