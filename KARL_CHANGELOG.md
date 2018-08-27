@@ -4,6 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [23.0.0] - 2018-08-27
+
+Fix:
+- Update `DonationCard` examples.
+
 ## [22.2.0] - 2018-08-22
 
 No changes.

@@ -4,7 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Breaking change: Update `DonationCard` component. Exposed props are now
+## [23.0.0] - 2018-08-27
+
+Breaking change:
+- Update `DonationCard` component. Exposed props are now
   totally different. You cannot inject a render prop anymore. `DonationCard` is
   now a form. You have to update your component as follow:
   ```js
@@ -21,7 +24,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
     }
   />
   ```
-- Feature: Add `TextInputWithUnitForm` component.
+
+Feature:
+- Add `TextInputWithUnitForm` component.
 
 ## [22.2.0] - 2018-08-22
 
