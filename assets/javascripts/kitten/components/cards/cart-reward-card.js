@@ -24,7 +24,7 @@ class CartRewardCardComponent extends Component {
     shippingValue: PropTypes.string,
     updateAmountTitle: PropTypes.string,
     updateAmountLink: PropTypes.string,
-    onClose: PropTypes.func,
+    onAfterClose: PropTypes.func,
     onCloseClick: PropTypes.func,
   }
 
@@ -35,7 +35,7 @@ class CartRewardCardComponent extends Component {
     shippingValue: '',
     updateAmountTitle: '',
     updateAmountLink: '',
-    onClose: () => {},
+    onAfterClose: () => {},
     onCloseClick: null,
   }
 
@@ -57,7 +57,7 @@ class CartRewardCardComponent extends Component {
   }
 
   handleAnimationEnd = () => {
-    this.props.onClose()
+    this.props.onAfterClose()
   }
 
   close = () => {
@@ -135,6 +135,7 @@ class CartRewardCardComponent extends Component {
           modifier="beryllium"
           size="tiny"
           onClick={this.handleCloseClick}
+          style={styles.garbage}
         >
           <GarbageIcon className="k-ButtonIcon__svg" />
         </ButtonIcon>
@@ -195,12 +196,13 @@ const cartRewardAnimationClass = {
   opacity: 1,
 }
 
+const borderWidth = 2
+
 const styles = {
   card: {
-    borderWidth: 2,
+    borderWidth: borderWidth,
     borderStyle: 'solid',
     borderColor: COLORS.line1,
-    overflow: 'hidden',
 
     hidden: cartRewardAnimationClass,
   },
@@ -221,8 +223,15 @@ const styles = {
     flexDirection: 'row',
     justifyContent: 'flex-end',
   },
+
+  garbage: {
+    position: 'relative',
+    top: `-${borderWidth}px`,
+    right: `-${borderWidth}px`,
+  },
 }
 
 export const CartRewardCard = mediaQueries(CartRewardCardComponent, {
   viewportIsMobile: true,
+  exposedMethods: ['close'],
 })

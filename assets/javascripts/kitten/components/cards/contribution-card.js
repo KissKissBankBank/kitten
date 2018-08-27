@@ -7,6 +7,7 @@ import {
   GridCol as GridColBase,
 } from 'kitten/components/grid/grid'
 import { Button as ButtonBase } from 'kitten/components/buttons/button'
+import { StarIcon } from 'kitten/components/icons/star-icon'
 import { Title as TitleBase } from 'kitten/components/typography/title'
 import { Text as TextBase } from 'kitten/components/typography/text'
 import { Paragraph as ParagraphBase } from 'kitten/components/typography/paragraph'
@@ -44,6 +45,8 @@ class ContributionCardComponent extends Component {
     manageContributionLink: PropTypes.string,
 
     isDisabled: PropTypes.bool,
+    starred: PropTypes.bool,
+    starLabel: PropTypes.string,
     render: PropTypes.func,
   }
 
@@ -65,6 +68,8 @@ class ContributionCardComponent extends Component {
     manageContributionLink: '',
 
     isDisabled: false,
+    starred: false,
+    starLabel: '',
     render: () => {},
   }
 
@@ -94,6 +99,8 @@ class ContributionCardComponent extends Component {
       titleTag,
       textTag,
       render,
+      starred,
+      starLabel,
       ...others
     } = this.props
 
@@ -130,6 +137,8 @@ class ContributionCardComponent extends Component {
       textDescription,
       titleTag,
       textTag,
+      starred,
+      starLabel,
       viewportIsSOrLess,
       isDisabled,
     } = this.props
@@ -138,44 +147,57 @@ class ContributionCardComponent extends Component {
 
     return (
       <Fragment>
-        <StyleRoot style={styleDescription} disabled={isDisabled}>
+        {starred && (
           <Marger bottom="2">
-            <Title
-              modifier={viewportIsSOrLess ? 'quaternary' : 'tertiary'}
-              italic
-              margin={false}
-              tag={titleTag}
-              style={styles.textColor}
+            <Button
+              icon
+              readonly
+              tag="span"
+              size="tiny"
+              modifier="lithium"
+              style={{ borderRadius: 5 }}
             >
-              {titleAmount}
-            </Title>
+              <StarIcon className="k-Button__icon is-readonly" />
+              {starLabel}
+            </Button>
           </Marger>
-          <Marger top="2" bottom="3">
-            <HorizontalStroke size="big" />
-          </Marger>
-          {titleDescription && (
-            <Marger top="3" bottom="1">
-              <Text
-                color="font1"
-                size={viewportIsSOrLess ? 'big' : 'huge'}
-                tag={textTag}
-                weight="bold"
-                style={styles.textMargin}
-              >
-                {titleDescription}
-              </Text>
-            </Marger>
-          )}
-          <Marger top={!titleDescription ? 3 : 1}>
-            <Paragraph
-              style={styles.textColor}
-              modifier={viewportIsSOrLess ? 'quaternary' : 'tertiary'}
-              margin={false}
+        )}
+        <Marger top={starred ? 2 : 0} bottom="2">
+          <Title
+            modifier={viewportIsSOrLess ? 'quaternary' : 'tertiary'}
+            italic
+            margin={false}
+            tag={titleTag}
+            style={styles.textColor}
+          >
+            {titleAmount}
+          </Title>
+        </Marger>
+        <Marger top="2" bottom="3">
+          <HorizontalStroke size="big" />
+        </Marger>
+        {titleDescription && (
+          <Marger top="3" bottom="1">
+            <Text
+              color="font1"
+              size={viewportIsSOrLess ? 'big' : 'huge'}
+              tag={textTag}
+              weight="bold"
+              style={styles.textMargin}
             >
-              {textDescription}
-            </Paragraph>
+              {titleDescription}
+            </Text>
           </Marger>
-        </StyleRoot>
+        )}
+        <Marger top={!titleDescription ? 3 : 1}>
+          <Paragraph
+            style={styles.textColor}
+            modifier={viewportIsSOrLess ? 'quaternary' : 'tertiary'}
+            margin={false}
+          >
+            {textDescription}
+          </Paragraph>
+        </Marger>
         {!!this.props.render && this.props.render()}
         {this.renderInfos()}
         {!viewportIsSOrLess && this.renderChoiceButton()}
