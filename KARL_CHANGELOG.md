@@ -4,14 +4,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-<<<<<<< HEAD
 - Feature: Add `KarlLinkListItemsLight` example.
-=======
+
 ## [23.0.0] - 2018-08-27
 
 Fix:
 - Update `DonationCard` examples.
->>>>>>> 58f5e26f6ef55f02494700b18f8ae00744eed635
 
 ## [22.2.0] - 2018-08-22
 
