@@ -73,20 +73,20 @@ describe('<LinkList />', () => {
   })
 
   describe('with color item', () => {
-    const linkList = shallow(<LinkList items={items} color="dark" />)
+    const linkList = shallow(<LinkList items={items} color="light" />)
     const item = linkList.find('.k-LinkList__link').at(0)
 
     it('has a good class', () => {
-      expect(item.hasClass('k-LinkList__link--dark')).toBe(true)
+      expect(item.hasClass('k-LinkList__link--light')).toBe(true)
     })
   })
 
   describe('with weight item', () => {
-    const linkList = shallow(<LinkList items={items} weight="regular" />)
+    const linkList = shallow(<LinkList items={items} weight="light" />)
     const item = linkList.find('.k-LinkList__link').at(0)
 
     it('has a good class', () => {
-      expect(item.hasClass('k-LinkList__link--regularWeight')).toBe(true)
+      expect(item.hasClass('k-LinkList__link--lightWeight')).toBe(true)
     })
   })
 

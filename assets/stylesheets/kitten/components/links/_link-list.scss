@@ -17,7 +17,7 @@
 
 @mixin k-LinkList {
   $font: 'regular';
-  $fontLight: 'light';
+  $font-light: 'light';
   $font-size: -1;
 
   // Items margin
@@ -54,6 +54,7 @@
   }
 
   .k-LinkList__link {
+    @include k-typographyFont($font);
     @include k-typographyFontSize($font-size);
 
     text-decoration: none;
@@ -75,7 +76,7 @@
   }
 
   .k-LinkList__link--lightWeight {
-    @include k-typographyFont($fontLight);
+    @include k-typographyFont($font-light);
   }
 
   .k-LinkList__link--normalLineHeight {
