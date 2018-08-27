@@ -6,9 +6,33 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Add `weight` props on `LinkList` component.
 
+## [23.0.0] - 2018-08-27
+
+Breaking change:
+- Update `DonationCard` component. Exposed props are now
+  totally different. You cannot inject a render prop anymore. `DonationCard` is
+  now a form. You have to update your component as follow:
+  ```js
+  <DonationCard
+    title="In enim justo, rhoncus ut"
+    donationForm={
+      buttonLabel: 'To contribute',
+      inputId: 'donation-amount',
+      inputLabel: 'Enter your amount',
+      inputPlaceholder: 'Your amount',
+      inputUnit: '€',
+      onFormSubmit: () => { … },
+      onInputBlur: () => { … },
+    }
+  />
+  ```
+
+Feature:
+- Add `TextInputWithUnitForm` component.
+
 ## [22.2.0] - 2018-08-22
 
-Features: 
+Features:
 - Add `readonly` prop on `Button`.
 - Add `starred` prop and `starLabel` option to `RewardCard`.
 
@@ -17,12 +41,12 @@ Features:
 Fix:
 - Dependencies strategy.
 
-## [22.1.0] - 2018-08-21 
+## [22.1.0] - 2018-08-21
 
 Feature:
 - Add `onLabelClick` prop action on `Checkbox` component.
 
-Fix: 
+Fix:
 - Fix garbage button styles on `CartRewardCard`.
 
 ## [22.0.0] - 2018-08-08
