@@ -34,70 +34,57 @@ exports[`<ContributionCard /> by default matches with snapshot 1`] = `
         data-radium={true}
       >
         <div
-          data-radium={true}
-          disabled={false}
-          style={Object {}}
+          style={
+            Object {
+              "marginBottom": "1.25rem",
+              "marginTop": null,
+            }
+          }
         >
-          <div
+          <h1
+            className="k-Title k-Title--tertiary k-Title--withoutMargin k-Title--italic"
+            data-radium={true}
             style={
               Object {
-                "marginBottom": "1.25rem",
-                "marginTop": null,
+                "color": "#222",
               }
             }
           >
-            <h1
-              className="k-Title k-Title--tertiary k-Title--withoutMargin k-Title--italic"
-              data-radium={true}
-              style={
-                Object {
-                  "color": "#222",
-                }
-              }
-            >
-              Custom title mount
-            </h1>
-          </div>
-          <div
-            style={
-              Object {
-                "marginBottom": "1.875rem",
-                "marginTop": "1.25rem",
-              }
+            Custom title mount
+          </h1>
+        </div>
+        <div
+          style={
+            Object {
+              "marginBottom": "1.875rem",
+              "marginTop": "1.25rem",
             }
-          >
-            <span
-              className="k-HorizontalStroke k-HorizontalStroke--big"
-            />
-          </div>
-          
-          <div
-            style={
-              Object {
-                "marginBottom": null,
-                "marginTop": "1.875rem",
-              }
-            }
-          >
-            <p
-              className="k-Paragraph k-Paragraph--tertiary k-Paragraph--withoutMargin"
-              data-radium={true}
-              style={
-                Object {
-                  "color": "#222",
-                }
-              }
-            >
-              Custom text description
-            </p>
-          </div>
-          <style
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": "",
-              }
-            }
+          }
+        >
+          <span
+            className="k-HorizontalStroke k-HorizontalStroke--big"
           />
+        </div>
+        
+        <div
+          style={
+            Object {
+              "marginBottom": null,
+              "marginTop": "1.875rem",
+            }
+          }
+        >
+          <p
+            className="k-Paragraph k-Paragraph--tertiary k-Paragraph--withoutMargin"
+            data-radium={true}
+            style={
+              Object {
+                "color": "#222",
+              }
+            }
+          >
+            Custom text description
+          </p>
         </div>
       </div>
       
@@ -152,89 +139,76 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
         data-radium={true}
       >
         <div
-          data-radium={true}
-          disabled={false}
-          style={Object {}}
+          style={
+            Object {
+              "marginBottom": "1.25rem",
+              "marginTop": null,
+            }
+          }
         >
-          <div
+          <h1
+            className="k-Title k-Title--tertiary k-Title--withoutMargin k-Title--italic"
+            data-radium={true}
             style={
               Object {
-                "marginBottom": "1.25rem",
-                "marginTop": null,
+                "color": "#222",
               }
             }
           >
-            <h1
-              className="k-Title k-Title--tertiary k-Title--withoutMargin k-Title--italic"
-              data-radium={true}
-              style={
-                Object {
-                  "color": "#222",
-                }
-              }
-            >
-              Custom title mount
-            </h1>
-          </div>
-          <div
-            style={
-              Object {
-                "marginBottom": "1.875rem",
-                "marginTop": "1.25rem",
-              }
+            Custom title mount
+          </h1>
+        </div>
+        <div
+          style={
+            Object {
+              "marginBottom": "1.875rem",
+              "marginTop": "1.25rem",
             }
-          >
-            <span
-              className="k-HorizontalStroke k-HorizontalStroke--big"
-            />
-          </div>
-          <div
-            style={
-              Object {
-                "marginBottom": "0.625rem",
-                "marginTop": "1.875rem",
-              }
-            }
-          >
-            <p
-              className="k-u-color-font1 k-u-size-huge k-u-weight-bold"
-              data-radium={true}
-              style={
-                Object {
-                  "margin": 0,
-                }
-              }
-            >
-              Custom title description
-            </p>
-          </div>
-          <div
-            style={
-              Object {
-                "marginBottom": null,
-                "marginTop": "0.625rem",
-              }
-            }
-          >
-            <p
-              className="k-Paragraph k-Paragraph--tertiary k-Paragraph--withoutMargin"
-              data-radium={true}
-              style={
-                Object {
-                  "color": "#222",
-                }
-              }
-            >
-              Custom text description
-            </p>
-          </div>
-          <style
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": "",
-              }
-            }
+          }
+        >
+          <span
+            className="k-HorizontalStroke k-HorizontalStroke--big"
           />
+        </div>
+        <div
+          style={
+            Object {
+              "marginBottom": "0.625rem",
+              "marginTop": "1.875rem",
+            }
+          }
+        >
+          <p
+            className="k-u-color-font1 k-u-size-huge k-u-weight-bold"
+            data-radium={true}
+            style={
+              Object {
+                "margin": 0,
+              }
+            }
+          >
+            Custom title description
+          </p>
+        </div>
+        <div
+          style={
+            Object {
+              "marginBottom": null,
+              "marginTop": "0.625rem",
+            }
+          }
+        >
+          <p
+            className="k-Paragraph k-Paragraph--tertiary k-Paragraph--withoutMargin"
+            data-radium={true}
+            style={
+              Object {
+                "color": "#222",
+              }
+            }
+          >
+            Custom text description
+          </p>
         </div>
         <div
           data-radium={true}
