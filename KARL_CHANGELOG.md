@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `KarlLinkListItemsLight` example.
+
 ## [22.2.0] - 2018-08-22
 
 No changes.
