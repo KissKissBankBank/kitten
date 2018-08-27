@@ -14,9 +14,9 @@ export class LinkList extends Component {
   }
 
   renderItem(element) {
-    const { key, item, href, active, className, ...others } = element
+    const { key, item, href, active, weight, className, ...others } = element
 
-    const { color, lineHeight, itemMargin, weight } = this.props
+    const { color, lineHeight, itemMargin } = this.props
 
     const linkListClassName = classNames('k-LinkList__link', className, {
       'is-active': active,
