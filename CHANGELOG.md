@@ -5,7 +5,6 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: Update `disabled` state on `Contribution` component.
-- Feature: Update style on `ContributionCard` component.
 
 ## [23.0.0] - 2018-08-27
 
