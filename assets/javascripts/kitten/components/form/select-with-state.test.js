@@ -5,7 +5,7 @@ import Select from 'react-select'
 
 describe('<SelectWithState />', () => {
   let select
-  const sandbox = sinon.sandbox.create()
+  const sandbox = sinon.createSandbox()
   const options = [
     { value: 'foo', label: 'Foo' },
     { value: 'bar', label: 'Bar' },

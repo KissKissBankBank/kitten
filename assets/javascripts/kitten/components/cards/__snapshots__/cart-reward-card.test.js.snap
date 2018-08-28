@@ -240,6 +240,7 @@ exports[`<CartRewardCard /> with some props matches with snapshot 1`] = `
           className="k-u-size-tiny k-u-weight-regular"
         >
           Custom shipping title
+           
           <span
             className="k-u-size-tiny k-u-weight-light"
           >

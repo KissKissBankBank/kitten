@@ -4,7 +4,7 @@ import { TextInput } from 'kitten/components/form/text-input'
 import { TextInputWithLimit } from 'kitten/components/form/text-input-with-limit'
 
 describe('<TextInputWithLimit />', () => {
-  const sandbox = sinon.sandbox.create()
+  const sandbox = sinon.createSandbox()
 
   afterEach(() => {
     sandbox.restore()
