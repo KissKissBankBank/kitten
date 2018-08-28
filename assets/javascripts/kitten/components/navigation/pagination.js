@@ -94,7 +94,7 @@ class PaginationBase extends Component {
 
     const isActive = number === this.props.currentPage
     const tag = isActive ? 'span' : 'a'
-    const href = isActive ? undefined : this.props.goToPageHref(number)
+    const href = isActive ? null : this.props.goToPageHref(number)
 
     const styleButtonIcon = [
       styles.group.list.buttonIcon,

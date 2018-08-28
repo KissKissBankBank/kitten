@@ -157,7 +157,7 @@ class CartRewardCardComponent extends Component {
           shippingValue && (
             <Marger top="2">
               <Text weight="regular" size="tiny">
-                {shippingTitle}
+                {shippingTitle}{' '}
                 <Text weight="light" size="tiny">
                   {shippingValue}
                 </Text>
