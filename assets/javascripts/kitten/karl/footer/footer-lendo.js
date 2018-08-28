@@ -39,7 +39,7 @@ class KarlFooterLendoBase extends Component {
     textInputProps: {
       placeholder: 'Entrez votre e-mail',
     },
-    newsletterSubmitValue: 'Envoyer',
+    newsletterSubmitValue: "Je m'inscris",
     socialText: 'Suivez-nous',
     hrefFacebook: '#',
     hrefTwitter: '#',
@@ -56,25 +56,25 @@ class KarlFooterLendoBase extends Component {
         key: 'key2',
         item: 'Comment emprunter',
         href: '#',
-        weightItem: 'light',
+        weight: 'light',
       },
       {
         key: 'key3',
         item: 'FAQ Emprunteur',
         href: '#',
-        weightItem: 'light',
+        weight: 'light',
       },
       {
         key: 'key4',
         item: 'Déposer un projet',
         href: '#',
-        weightItem: 'light',
+        weight: 'light',
       },
       {
         key: 'key5',
         item: "S'inscrire",
         href: '#',
-        weightItem: 'light',
+        weight: 'light',
       },
     ],
     items2: [
@@ -87,31 +87,31 @@ class KarlFooterLendoBase extends Component {
         key: 'key2',
         item: 'Comment investir',
         href: '#',
-        weightItem: 'light',
+        weight: 'light',
       },
       {
         key: 'key3',
         item: 'FAQ Prêteur',
         href: '#',
-        weightItem: 'light',
+        weight: 'light',
       },
       {
         key: 'key4',
         item: 'Prêter à un projet',
         href: '#',
-        weightItem: 'light',
+        weight: 'light',
       },
       {
         key: 'key5',
         item: "S'inscrire",
         href: '#',
-        weightItem: 'light',
+        weight: 'light',
       },
       {
         key: 'key6',
         item: 'Simulateur',
         href: '#',
-        weightItem: 'light',
+        weight: 'light',
       },
     ],
     items3: [
@@ -124,37 +124,37 @@ class KarlFooterLendoBase extends Component {
         key: 'key2',
         item: 'Nos valeurs',
         href: '#',
-        weightItem: 'light',
+        weight: 'light',
       },
       {
         key: 'key3',
         item: 'Manifeste',
         href: '#',
-        weightItem: 'light',
+        weight: 'light',
       },
       {
         key: 'key4',
         item: 'Statistiques',
         href: '#',
-        weightItem: 'light',
+        weight: 'light',
       },
       {
         key: 'key5',
         item: 'Indicateurs de performance',
         href: '#',
-        weightItem: 'light',
+        weight: 'light',
       },
       {
         key: 'key6',
         item: "L'équipe",
         href: '#',
-        weightItem: 'light',
+        weight: 'light',
       },
       {
         key: 'key7',
         item: 'Mentors',
         href: '#',
-        weightItem: 'light',
+        weight: 'light',
       },
     ],
     items4: [
@@ -162,43 +162,43 @@ class KarlFooterLendoBase extends Component {
         key: 'key1',
         item: 'Contact',
         href: '#',
-        weightItem: 'light',
+        weight: 'light',
       },
       {
         key: 'key2',
         item: "Apporteurs d'affaires",
         href: '#',
-        weightItem: 'light',
+        weight: 'light',
       },
       {
         key: 'key3',
         item: 'Mentions légales',
         href: '#',
-        weightItem: 'light',
+        weight: 'light',
       },
       {
         key: 'key4',
         item: 'CGU',
         href: '#',
-        weightItem: 'light',
+        weight: 'light',
       },
       {
         key: 'key5',
         item: 'Confidentialité',
         href: '#',
-        weightItem: 'light',
+        weight: 'light',
       },
       {
         key: 'key6',
         item: 'Presse',
         href: '#',
-        weightItem: 'light',
+        weight: 'light',
       },
       {
         key: 'key7',
         item: 'Le blog',
         href: '#',
-        weightItem: 'light',
+        weight: 'light',
       },
     ],
 
@@ -213,17 +213,16 @@ class KarlFooterLendoBase extends Component {
     // Notice
     noticeAltAutorite: 'Autorités françaises',
     noticeParagraphAutorite:
-      'KissKissBankBank est une plateforme de financement \
+      'Lendopolis est une plateforme de financement \
       participatif régulée par les autorités françaises.\
-      Immatriculation&nbsp; : 14007218',
+      Immatriculation : 14006007',
     noticeAltMangopay: 'Mangopay',
     noticeParagraphMangopayText1:
-      'KissKissBankBank &amp; Co est agent de \
-    l’institution financière',
-    noticeParagraphMangopayLink: 'Mangopay',
+      "Lendopolis est agent de l'institution financière",
+    noticeParagraphMangopayLink: 'MANGOPAY',
     noticeParagraphMangopayLinkAcronym: 'SA.',
     noticeParagraphMangopayText2:
-      'Paiements sécurisés avec Mangopay Payment Services',
+      'Paiements sécurisés avec MANGOPAY Payment Services.',
     noticeCopyright: '&copy; 2018 KissKissBankBank &amp; Co',
   }
 
