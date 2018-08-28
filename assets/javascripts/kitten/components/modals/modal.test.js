@@ -4,7 +4,7 @@ import sinon from 'sinon'
 import { Modal } from 'kitten/components/modals/modal'
 
 describe('<Modal />', () => {
-  const sandbox = sinon.sandbox.create()
+  const sandbox = sinon.createSandbox()
 
   describe('with trigger', () => {
     const component = mount(

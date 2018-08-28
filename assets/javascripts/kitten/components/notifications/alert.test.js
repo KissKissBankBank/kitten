@@ -4,7 +4,7 @@ import sinon from 'sinon'
 import { Alert } from 'kitten/components/notifications/alert'
 
 describe('<Alert />', () => {
-  const sandbox = sinon.sandbox.create()
+  const sandbox = sinon.createSandbox()
 
   afterEach(() => {
     sandbox.restore()

@@ -41,7 +41,7 @@ export class KarlCartRewardCard extends Component {
               }}
               titleAmount="100 €"
               textDescription="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient mont"
-              shippingTitle="Shipping: "
+              shippingTitle="Shipping:"
               shippingValue="January 2018"
               onAfterClose={this.handleAfterClose}
               onCloseClick={this.handleCloseClick}
