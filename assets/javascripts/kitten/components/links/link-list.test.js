@@ -5,6 +5,7 @@ describe('<LinkList />', () => {
   const items = [
     { key: 'foo', item: 'Foo', href: '#' },
     { key: 'bar', item: 'Bar', href: '#', active: true },
+    { key: 'ipsum', item: 'Ipsum', href: '#', weight: 'light' },
   ]
 
   describe('by default', () => {
@@ -18,8 +19,8 @@ describe('<LinkList />', () => {
       expect(linkList.hasClass('k-LinkList')).toBe(true)
     })
 
-    it('renders 2 items', () => {
-      expect(linkList.children()).toHaveLength(2)
+    it('renders 3 items', () => {
+      expect(linkList.children()).toHaveLength(3)
     })
 
     it('has a good class on item', () => {
@@ -69,6 +70,13 @@ describe('<LinkList />', () => {
 
       expect(secondItem.hasClass('is-active')).toBe(true)
       expect(secondItem.text()).toBe('Bar')
+    })
+
+    it('has third block with weight light', () => {
+      const thirdItem = linkList.find('.k-LinkList__link').at(2)
+
+      expect(thirdItem.hasClass('k-LinkList__item--lightWeight')).toBe(true)
+      expect(thirdItem.text()).toBe('Ipsum')
     })
   })
 

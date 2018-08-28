@@ -4,9 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `weight` props and `weight` attribut on each elements of
+  `LinkList` component.
 - Fix: Add a space between title and value informations
   on `CartRewardCard` and `ContributionCard`.
-- Feature: Add `weight` props on `LinkList` component.
 
 ## [23.0.0] - 2018-08-27
 
