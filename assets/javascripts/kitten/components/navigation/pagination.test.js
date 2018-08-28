@@ -37,7 +37,7 @@ describe('<Pagination />', () => {
 
   describe('onPageClick', () => {
     it('calls the given function when clicking on links', () => {
-      const sandbox = sinon.sandbox.create()
+      const sandbox = sinon.createSandbox()
       const onClickSpy = sandbox.spy()
       const pagination = mount(
         <StyleRoot>
