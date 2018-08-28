@@ -30,11 +30,11 @@ storiesOf('Cards/RewardCard', module)
                 'Text Description',
                 'In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi.',
               )}
-              titleContributors={text('Title Contributors', 'Contributors : ')}
+              titleContributors={text('Title Contributors', 'Contributors:')}
               valueContributors={text('Value Contributors', '35')}
-              titleDelivery={text('Title Delivery', 'Delivery : ')}
+              titleDelivery={text('Title Delivery', 'Delivery:')}
               valueDelivery={text('Value Delivery', 'January 2018')}
-              titleAvailability={text('Title Availability', 'Availability : ')}
+              titleAvailability={text('Title Availability', 'Availability:')}
               valueAvailability={text('Value Availability', '200')}
               button={text('Button', 'Choose')}
               myContribution={text(
