@@ -117,7 +117,7 @@ class KarlFooterLendoBase extends Component {
     items3: [
       {
         key: 'key1',
-        item: 'A Propos',
+        item: 'À Propos',
         href: '#',
       },
       {
@@ -371,7 +371,7 @@ class KarlFooterLendoBase extends Component {
 
           <GridCol col-l="7" style={styles.list.linkList}>
             <Grid>
-              <GridCol col-m="3">
+              <GridCol col-m="3" style={styles.list.linkList.items}>
                 <Marger bottom={viewportIsMobile ? 3 : 0}>
                   <LinkList
                     margin={false}
@@ -383,7 +383,7 @@ class KarlFooterLendoBase extends Component {
                 </Marger>
               </GridCol>
 
-              <GridCol col-m="3">
+              <GridCol col-m="3" style={styles.list.linkList.items}>
                 <Marger bottom={viewportIsMobile ? 3 : 0}>
                   <LinkList
                     margin={false}
@@ -395,7 +395,7 @@ class KarlFooterLendoBase extends Component {
                 </Marger>
               </GridCol>
 
-              <GridCol col-m="3">
+              <GridCol col-m="3" style={styles.list.linkList.items}>
                 <Marger bottom={viewportIsMobile ? 3 : 0}>
                   <LinkList
                     margin={false}
@@ -407,7 +407,7 @@ class KarlFooterLendoBase extends Component {
                 </Marger>
               </GridCol>
 
-              <GridCol col-m="3">
+              <GridCol col-m="3" style={styles.list.linkList.items}>
                 <Marger bottom={viewportIsMobile ? 3 : 0}>
                   <LinkList
                     margin={false}
@@ -648,6 +648,12 @@ const styles = {
       },
       [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
         paddingBottom: 80,
+      },
+
+      items: {
+        [`@media (max-width: ${ScreenConfig['S'].max}px)`]: {
+          marginBottom: 30,
+        },
       },
     },
   },
