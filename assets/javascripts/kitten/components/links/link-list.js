@@ -88,5 +88,5 @@ LinkList.defaultProps = {
   lineHeight: null,
   itemMargin: null,
   weight: 'regular',
-  weightItem: 'regular',
+  weightItem: null,
 }
