@@ -77,7 +77,6 @@ LinkList.defaultProps = {
   lineHeight: PropTypes.oneOf(['normal']),
   itemMargin: PropTypes.oneOf(['double']),
   weight: PropTypes.oneOf(['regular', 'light']),
-  weightItem: PropTypes.oneOf(['regular', 'light']),
 }
 
 LinkList.defaultProps = {
@@ -88,5 +87,4 @@ LinkList.defaultProps = {
   lineHeight: null,
   itemMargin: null,
   weight: 'regular',
-  weightItem: null,
 }
