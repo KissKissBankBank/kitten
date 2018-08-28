@@ -42,8 +42,8 @@ export const KarlLinkListDark = () => {
 
 export const KarlLinkListItemsLight = () => {
   const linkListItemsLight = [
-    { key: 'key1', item: 'Litterae', href: '#', weightItem: 'light' },
-    { key: 'key2', item: 'Notae', href: '#', weightItem: 'light' },
+    { key: 'key1', item: 'Litterae', href: '#', weight: 'light' },
+    { key: 'key2', item: 'Notae', href: '#', weight: 'light' },
     { key: 'key3', item: 'Bibliographia', href: '#', active: true },
     { key: 'key4', item: 'Nexus', href: '#' },
   ]

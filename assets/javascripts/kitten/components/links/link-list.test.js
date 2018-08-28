@@ -5,7 +5,7 @@ describe('<LinkList />', () => {
   const items = [
     { key: 'foo', item: 'Foo', href: '#' },
     { key: 'bar', item: 'Bar', href: '#', active: true },
-    { key: 'ipsum', item: 'Ipsum', href: '#', weightItem: 'light' },
+    { key: 'ipsum', item: 'Ipsum', href: '#', weight: 'light' },
   ]
 
   describe('by default', () => {
@@ -72,7 +72,7 @@ describe('<LinkList />', () => {
       expect(secondItem.text()).toBe('Bar')
     })
 
-    it('has third block with weightItem light', () => {
+    it('has third block with weight light', () => {
       const thirdItem = linkList.find('.k-LinkList__link').at(2)
 
       expect(thirdItem.hasClass('k-LinkList__item--lightWeight')).toBe(true)

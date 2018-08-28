@@ -4,8 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Manage `weight` props on each elements of `linkList` component.
-- Feature: Add `weight` props on `LinkList` component.
+- Feature: Add `weight` props and `weight` attribut on each elements of
+  `LinkList` component.
 
 ## [23.0.0] - 2018-08-27
 
