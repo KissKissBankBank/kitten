@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: Update `disabled` state on `Contribution` component.
+- Feature: Add `weight` props on `LinkList` component.
 
 ## [23.0.0] - 2018-08-27
 
