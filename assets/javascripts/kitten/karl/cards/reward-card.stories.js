@@ -50,6 +50,8 @@ storiesOf('Cards/RewardCard', module)
                 'https://www.google.com',
               )}
               isDisabled={boolean('Is Disabled', false)}
+              starred={boolean('Is Starred', false)}
+              starLabel={text('Label for featured reward', 'Featured reward')}
               valueContributors={boolean('Value contributor', false)}
               valueDelivery={boolean('Value delivery', false)}
               valueAvailability={boolean('Value availability', false)}

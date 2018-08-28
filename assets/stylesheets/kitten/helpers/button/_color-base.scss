@@ -114,7 +114,7 @@
     background-image: $base-background-image;
   }
 
-  &:hover {
+  &:hover:not(.is-readonly) {
     @if $hover-border-color {
       @include k-buttonBorder($hover-border-color);
     }
@@ -130,7 +130,7 @@
     color: $hover-color;
   }
 
-  &:focus {
+  &:focus:not(.is-readonly) {
     @if map-has-key($colors, 'focus') {
 
       @if $focus-border-color {
@@ -158,7 +158,7 @@
     outline: none;
   }
 
-  &:active {
+  &:active:not(.is-readonly) {
     @if $active-border-color {
       @include k-buttonBorder($active-border-color);
     }
@@ -193,7 +193,7 @@
   }
 
   @if map-has-key($colors, 'is-selected') {
-    &.is-selected {
+    &.is-selected:not(.is-readonly) {
       @if $is-selected-border-color {
         @include k-buttonBorder($is-selected-border-color);
       }

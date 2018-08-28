@@ -204,6 +204,7 @@ module Kitten
               name: 'Crowdfunding card',
             },
             { path: 'components/cards/reward-card', name: 'Reward card' },
+            { path: 'components/cards/donation-card', name: 'Donation card' },
             {
               path: 'components/cards/project-similar-card',
               name: 'Project similar card',

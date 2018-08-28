@@ -220,6 +220,7 @@ import {
   KarlLinkList,
   KarlLinkListDark,
   KarlLinkListSelectedItem,
+  KarlLinkListItemsLight,
 } from 'kitten/karl/links/link-list'
 
 // Lists
@@ -511,6 +512,7 @@ ReactOnRails.register({
   KarlLinkList,
   KarlLinkListDark,
   KarlLinkListSelectedItem,
+  KarlLinkListItemsLight,
 
   // Lists
   BulletList,
