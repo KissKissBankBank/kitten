@@ -34,6 +34,9 @@
   $button-is-valid: map-get($k-colors, 'valid');
   $button-is-error: map-get($k-colors, 'error');
 
+  // Padding button
+  $padding-button: k-px-to-rem(30px);
+
   // Border radius Text - input
   $border-text-input: 0px;
 
@@ -59,7 +62,7 @@
     right: 0;
 
     height: 100%;
-    width: k-px-to-rem(104px);
+    padding: 0 $padding-button;
 
     border-radius: $border-text-input;
 
