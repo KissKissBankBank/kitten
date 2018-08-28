@@ -14,9 +14,17 @@ export class LinkList extends Component {
   }
 
   renderItem(element) {
-    const { key, item, href, active, weight, className, ...others } = element
+    const {
+      key,
+      item,
+      href,
+      active,
+      weightItem,
+      className,
+      ...others
+    } = element
 
-    const { color, lineHeight, itemMargin } = this.props
+    const { color, lineHeight, itemMargin, weight } = this.props
 
     const linkListClassName = classNames('k-LinkList__link', className, {
       'is-active': active,
@@ -25,6 +33,8 @@ export class LinkList extends Component {
       'k-LinkList__link--normalLineHeight': lineHeight == 'normal',
       'k-LinkList__link--regularWeight': weight == 'regular',
       'k-LinkList__link--lightWeight': weight == 'light',
+      'k-LinkList__item--regularWeight': weightItem == 'regular',
+      'k-LinkList__item--lightWeight': weightItem == 'light',
     })
 
     const linkListItemClassName = classNames('k-LinkList__item', {
@@ -67,6 +77,7 @@ LinkList.defaultProps = {
   lineHeight: PropTypes.oneOf(['normal']),
   itemMargin: PropTypes.oneOf(['double']),
   weight: PropTypes.oneOf(['regular', 'light']),
+  weightItem: PropTypes.oneOf(['regular', 'light']),
 }
 
 LinkList.defaultProps = {
@@ -77,4 +88,5 @@ LinkList.defaultProps = {
   lineHeight: null,
   itemMargin: null,
   weight: 'regular',
+  weightItem: 'regular',
 }

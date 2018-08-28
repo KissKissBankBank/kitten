@@ -71,10 +71,12 @@
     transition: color .2s;
   }
 
+  .k-LinkList__item--regularWeight,
   .k-LinkList__link--regularWeight {
     @include k-typographyFont($font);
   }
 
+  .k-LinkList__item--lightWeight,
   .k-LinkList__link--lightWeight {
     @include k-typographyFont($font-light);
   }
