@@ -107,7 +107,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "deploy-storybook": "storybook-to-ghpages",
-    "dist": "cd assets && babel ./**/*.js --ignore ./**/*.test.js,./javascripts/kitten/config/**/*.js --out-dir ../dist -q"
+    "dist": "cd assets && babel ./**/*.js --ignore ./**/*.test.js,./javascripts/kitten/config/*,./javascripts/kitten/karl/* --out-dir ../dist -q"
   },
   "lint-staged": {
     "assets/**/*.js": [
