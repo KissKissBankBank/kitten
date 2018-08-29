@@ -96,6 +96,7 @@
     "webpack": "^2.5.1"
   },
   "scripts": {
+    "postinstall": "bin/postinstall",
     "sassdoc": "sassdoc -d public/sassdoc assets/stylesheets",
     "stylelint": "stylelint --syntax scss 'assets/stylesheets/**/*.scss'",
     "build:dev": "(cd spec/dummy/client && yarn build:dev)",
@@ -105,7 +106,8 @@
     "precommit": "lint-staged",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "deploy-storybook": "storybook-to-ghpages"
+    "deploy-storybook": "storybook-to-ghpages",
+    "dist": "cd assets && babel ./**/*.js --ignore ./**/*.test.js,./javascripts/kitten/config/*,./javascripts/kitten/karl/* --out-dir ../dist -q"
   },
   "lint-staged": {
     "assets/**/*.js": [

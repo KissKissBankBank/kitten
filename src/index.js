@@ -30,6 +30,12 @@ var getJsPaths = function () {
   ]
 }
 
+var getJsDistPaths = function () {
+  return [
+    path.join(__dirname, '../dist/javascripts'),
+  ]
+}
+
 var getImagesPaths = function () {
   return [
     path.join(__dirname, '../assets/images'),
@@ -39,5 +45,6 @@ var getImagesPaths = function () {
 module.exports = {
   scssPaths: getScssPaths(),
   jsPaths: getJsPaths(),
+  jsDistPaths: getJsDistPaths(),
   imagesPaths: getImagesPaths(),
 }
