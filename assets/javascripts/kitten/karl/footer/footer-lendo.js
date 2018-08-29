@@ -50,7 +50,6 @@ class KarlFooterLendoBase extends Component {
       {
         key: 'key1',
         item: 'Emprunter',
-        href: '#',
       },
       {
         key: 'key2',
@@ -81,7 +80,6 @@ class KarlFooterLendoBase extends Component {
       {
         key: 'key1',
         item: 'Prêter',
-        href: '#',
       },
       {
         key: 'key2',
@@ -118,7 +116,6 @@ class KarlFooterLendoBase extends Component {
       {
         key: 'key1',
         item: 'À Propos',
-        href: '#',
       },
       {
         key: 'key2',
@@ -512,7 +509,7 @@ class KarlFooterLendoBase extends Component {
                     style={styles.notice.block.paragraph.link}
                   >
                     {parseHtml(noticeParagraphMangopayLink)}
-                    <abbr>
+                    <abbr title={parseHtml(noticeParagraphMangopayLinkAcronym)}>
                       {' '}
                       {parseHtml(noticeParagraphMangopayLinkAcronym)}
                     </abbr>
