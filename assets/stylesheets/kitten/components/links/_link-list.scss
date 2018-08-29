@@ -22,6 +22,7 @@
 
   // Items margin
   $double-margin: k-px-to-rem(10px);
+  $triple-margin: k-px-to-rem(15px);
 
   // Links line-height
   $normal-line-height: normal;
@@ -51,6 +52,10 @@
 
   .k-LinkList__item--doubleMargin {
     margin-bottom: $double-margin;
+  }
+
+  .k-LinkList__item--tripleMargin {
+    margin-bottom: $triple-margin;
   }
 
   .k-LinkList__link {
