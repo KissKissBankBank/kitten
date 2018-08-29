@@ -1,0 +1,62 @@
+/// Rich text
+///
+/// @group typography
+///
+/// @example scss - usage
+///
+///   @include k-RichText;
+///
+/// @example html
+///
+///   <div class='k-RichText'>…</div>
+
+@mixin k-RichText {
+  .k-RichText {
+    h2 {
+      @extend .k-Title, .k-Title--secondary;
+
+      margin-top: 50px;
+      margin-bottom: 20px;
+    }
+
+    h3 {
+      @extend .k-Title, .k-Title--tertiary;
+
+      margin-top: 50px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      @extend .k-Paragraph, .k-Paragraph--primary;
+
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    b,
+    strong {
+      @extend .k-u-strong;
+    }
+
+    i {
+      font-style: italic; // TODO: extend utility.
+    }
+
+    ul {
+      @extend .k-BulletList, .k-BulletList__item--large;
+      margin-top: 20px;
+      margin-bottom: 20px;
+
+      li {
+        @extend .k-BulletList__item;
+      }
+    }
+
+    img {
+      @extend .k-u-image-responsive;
+
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+  }
+}

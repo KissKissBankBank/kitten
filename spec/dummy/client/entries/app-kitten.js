@@ -314,6 +314,7 @@ import {
 
 // Typography
 import { Paragraph } from 'kitten/components/typography/paragraph'
+import { KarlRichText } from 'kitten/karl/typography/rich-text'
 import { SupTitle } from 'kitten/components/typography/sup-title'
 import { Text } from 'kitten/components/typography/text'
 import { Title } from 'kitten/components/typography/title'
@@ -587,6 +588,7 @@ ReactOnRails.register({
 
   // Typography
   Paragraph,
+  KarlRichText,
   SupTitle,
   Text,
   Title,

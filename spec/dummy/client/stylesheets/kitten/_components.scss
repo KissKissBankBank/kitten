@@ -230,10 +230,11 @@
 
 // Typography
 
-@include k-SupTitle;
-@include k-TypographyBodyCopy;
-@include k-Title;
 @include k-Paragraph;
+@include k-RichText;
+@include k-SupTitle;
+@include k-Title;
+@include k-TypographyBodyCopy;
 
 // Uploaders
 
