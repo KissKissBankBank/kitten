@@ -46,31 +46,30 @@ class KarlFooterLendoBase extends Component {
     hrefInstagram: '#',
 
     // List
+    listLabel1: 'Emprunter',
+    listLabel2: 'Prêter',
+    listLabel3: 'À Propos',
     items1: [
       {
         key: 'key1',
-        item: 'Emprunter',
-      },
-      {
-        key: 'key2',
         item: 'Comment emprunter',
         href: '#',
         weight: 'light',
       },
       {
-        key: 'key3',
+        key: 'key2',
         item: 'FAQ Emprunteur',
         href: '#',
         weight: 'light',
       },
       {
-        key: 'key4',
+        key: 'key3',
         item: 'Déposer un projet',
         href: '#',
         weight: 'light',
       },
       {
-        key: 'key5',
+        key: 'key4',
         item: "S'inscrire",
         href: '#',
         weight: 'light',
@@ -79,34 +78,30 @@ class KarlFooterLendoBase extends Component {
     items2: [
       {
         key: 'key1',
-        item: 'Prêter',
-      },
-      {
-        key: 'key2',
         item: 'Comment investir',
         href: '#',
         weight: 'light',
       },
       {
-        key: 'key3',
+        key: 'key2',
         item: 'FAQ Prêteur',
         href: '#',
         weight: 'light',
       },
       {
-        key: 'key4',
+        key: 'key3',
         item: 'Prêter à un projet',
         href: '#',
         weight: 'light',
       },
       {
-        key: 'key5',
+        key: 'key4',
         item: "S'inscrire",
         href: '#',
         weight: 'light',
       },
       {
-        key: 'key6',
+        key: 'key5',
         item: 'Simulateur',
         href: '#',
         weight: 'light',
@@ -115,40 +110,36 @@ class KarlFooterLendoBase extends Component {
     items3: [
       {
         key: 'key1',
-        item: 'À Propos',
-      },
-      {
-        key: 'key2',
         item: 'Nos valeurs',
         href: '#',
         weight: 'light',
       },
       {
-        key: 'key3',
+        key: 'key2',
         item: 'Manifeste',
         href: '#',
         weight: 'light',
       },
       {
-        key: 'key4',
+        key: 'key3',
         item: 'Statistiques',
         href: '#',
         weight: 'light',
       },
       {
-        key: 'key5',
+        key: 'key4',
         item: 'Indicateurs de performance',
         href: '#',
         weight: 'light',
       },
       {
-        key: 'key6',
+        key: 'key5',
         item: "L'équipe",
         href: '#',
         weight: 'light',
       },
       {
-        key: 'key7',
+        key: 'key6',
         item: 'Mentors',
         href: '#',
         weight: 'light',
@@ -346,6 +337,9 @@ class KarlFooterLendoBase extends Component {
       items2,
       items3,
       items4,
+      listLabel1,
+      listLabel2,
+      listLabel3,
       viewportIsTabletOrLess,
       viewportIsMobile,
     } = this.props
@@ -369,36 +363,51 @@ class KarlFooterLendoBase extends Component {
           <GridCol col-l="7" style={styles.list.linkList}>
             <Grid>
               <GridCol col-m="3" style={styles.list.linkList.items}>
+                <Marger bottom="1.5" style={styles.list.linkList.items.label}>
+                  <Text color="background1" weight="regular" size="tiny">
+                    {parseHtml(listLabel1)}
+                  </Text>
+                </Marger>
                 <Marger bottom={viewportIsMobile ? 3 : 0}>
                   <LinkList
                     margin={false}
                     items={items1}
                     color="light"
-                    itemMargin="double"
+                    itemMargin="triple"
                     lineHeight="normal"
                   />
                 </Marger>
               </GridCol>
 
               <GridCol col-m="3" style={styles.list.linkList.items}>
+                <Marger bottom="1.5" style={styles.list.linkList.items.label}>
+                  <Text color="background1" weight="regular" size="tiny">
+                    {parseHtml(listLabel2)}
+                  </Text>
+                </Marger>
                 <Marger bottom={viewportIsMobile ? 3 : 0}>
                   <LinkList
                     margin={false}
                     items={items2}
                     color="light"
-                    itemMargin="double"
+                    itemMargin="triple"
                     lineHeight="normal"
                   />
                 </Marger>
               </GridCol>
 
               <GridCol col-m="3" style={styles.list.linkList.items}>
+                <Marger bottom="1.5" style={styles.list.linkList.items.label}>
+                  <Text color="background1" weight="regular" size="tiny">
+                    {parseHtml(listLabel3)}
+                  </Text>
+                </Marger>
                 <Marger bottom={viewportIsMobile ? 3 : 0}>
                   <LinkList
                     margin={false}
                     items={items3}
                     color="light"
-                    itemMargin="double"
+                    itemMargin="triple"
                     lineHeight="normal"
                   />
                 </Marger>
@@ -650,6 +659,11 @@ const styles = {
       items: {
         [`@media (max-width: ${ScreenConfig['S'].max}px)`]: {
           marginBottom: 30,
+        },
+        label: {
+          [`@media (max-width: ${ScreenConfig['M'].max}px)`]: {
+            textAlign: 'center',
+          },
         },
       },
     },
