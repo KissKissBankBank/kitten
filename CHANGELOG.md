@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Add `k-TextInputWithButton__button` padding.
 - Feature: You can now use the build files present in `dist` directory.
   Add `jsDistPaths` export method.
 - Feature: Add `weight` props and `weight` attribut on each elements of
