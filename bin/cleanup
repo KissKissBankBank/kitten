@@ -2,6 +2,7 @@
 set -e
 
 rm -fr node_modules
+rm -fr dist
 
 cd spec/dummy
 bash bin/cleanup
