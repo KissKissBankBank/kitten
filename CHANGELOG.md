@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: You can now use the build files present in `dist` directory.
+  Add `jsDistPaths` export method.
 - Feature: Add `weight` props and `weight` attribut on each elements of
   `LinkList` component.
 - Fix: Add a space between title and value informations
