@@ -6,9 +6,284 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: You can now use the build files present in `dist` directory.
   Add `jsDistPaths` export method.
-- Fix: Update `:hover` and `:focus` state on `azote` button.
-- Feature: Add `subTitleTruncate` prop for `CrowdfundingCard`.
-- Feature: Add `horizontalStroke` prop for `SimpleCard`.
+- Feature: Add `weight` props and `weight` attribut on each elements of
+  `LinkList` component.
+- Fix: Add a space between title and value informations
+  on `CartRewardCard` and `ContributionCard`.
+
+## [23.0.0] - 2018-08-27
+
+Breaking change:
+- Update `DonationCard` component. Exposed props are now
+  totally different. You cannot inject a render prop anymore. `DonationCard` is
+  now a form. You have to update your component as follow:
+  ```js
+  <DonationCard
+    title="In enim justo, rhoncus ut"
+    donationForm={
+      buttonLabel: 'To contribute',
+      inputId: 'donation-amount',
+      inputLabel: 'Enter your amount',
+      inputPlaceholder: 'Your amount',
+      inputUnit: '€',
+      onFormSubmit: () => { … },
+      onInputBlur: () => { … },
+    }
+  />
+  ```
+
+Feature:
+- Add `TextInputWithUnitForm` component.
+
+## [22.2.0] - 2018-08-22
+
+Features:
+- Add `readonly` prop on `Button`.
+- Add `starred` prop and `starLabel` option to `RewardCard`.
+
+## [22.1.1] - 2018-08-21
+
+Fix:
+- Dependencies strategy.
+
+## [22.1.0] - 2018-08-21
+
+Feature:
+- Add `onLabelClick` prop action on `Checkbox` component.
+
+Fix:
+- Fix garbage button styles on `CartRewardCard`.
+
+## [22.0.0] - 2018-08-08
+
+Breaking changes:
+- Remove `sassy-maps` dependency.
+- `mediaQueries` HOC don't expose all methods.
+  You have to use `exposedMethods` prop to list the methods you want to expose
+  on the mediaQueries HOC.
+
+```js
+mediaQueries(Component, {
+  viewportIsMobile: true,
+  exposedMethods: ['close'],
+})
+```
+
+- Rename `onClose` prop to `onAfterClose` in `CartRewardCard` component.
+- Rename `onClose` prop to `onAfterClose` in `Alert`
+  component:
+  ```js
+  <Alert onAfterClose={ () -> {} }>
+  ```
+
+Features:
+- Add `map-get-deep` utility.
+- Update style on `ContributionCard` component.
+
+## [21.4.0] - 2018-08-06
+
+Feature:
+- Update `ReactModal` version.
+
+## [21.3.2] - 2018-08-02
+
+Fix:
+- Update `Comment` component bottom notes padding.
+
+## [21.3.1] - 2018-08-02
+
+Fix:
+- Don't cancel click on current page of `Carousel`.
+
+## [21.3.0] - 2018-08-01
+
+Feature:
+- Create `FacebookIconWithBackground` component.
+
+## [21.2.0] - 2018-07-31
+
+Features:
+- Clone wrapped component methods on `mediaQueries` HOC.
+- Add `onCloseClick` prop to `CartRewardCard`.
+- Add `hidePaginationOnMobile` prop to `Carousel`.
+
+Fixes:
+- Update margin on `CartRewardCard` component.
+- Remove `hover` state on `Select-control` class.
+- Update size on `ButtonQuestionMarkIcon` component.
+- Update `locationIcon` svg.
+- Use `StyleRoot` properly in `Comment` component in order to use.
+
+## [21.1.0] - 2018-07-19
+
+Features:
+- Add `bottomNotes` prop on `Comment` component.
+- In `Carousel`, we can now change page by clicking prev/next page.
+
+Fixes:
+- Fix `title` `min-height` on `CrowdfundingCard` component.
+- Fix re-render `ButtonIcon` state on `Carousel`.
+- Update [Sprockets Rails](https://github.com/rails/sprockets-rails)
+  version.
+
+## [21.0.1] - 2018-07-02
+
+Fix:
+- Add `others` props on `LinkList` component.
+
+## [21.0.0] - 2018-06-27
+
+Breaking change:
+- Add `huge` size and replace `big` by `huge` size on `BulletList`.
+
+Features:
+- Create `CartRewardCard` component.
+- Add `big` and `huge` props on `IconBadge` component.
+- Add `PinterestButtonIcon` and `PinterestIcon` components.
+- Create `StarIcon` component.
+
+Fixes:
+- Update `renderImage` margin on `ContributionCard` component.
+- Update svg `ArrowIcon` component.
+- Update `ArrowIcon`on `Pagination` component.
+- Update margin on `ContributionCard` component.
+- Update `Instagram ButtonIcon` gradient.
+
+## [20.17.0] - 2018-06-14
+
+Features:
+- Create composable `withMediaQueries` hoc to `media-queries`.
+- Add custom `media-query` to `mediaQueries` hoc:
+  `mediaQueries(Component, { myCustomViewport: '(min-width: 1440px)'})`.
+
+Fixes:
+- Disable textarea resize in `CommentForm`.
+- Fix `Comment` propType warning.
+
+## [20.16.0] - 2018-06-06
+
+Feature:
+- Update `Comment`, `CommentForm` and `CommentAvatar` components and its stories.
+
+Fixes:
+- Fix `ButtonImage` A11Y.
+- Add a key on `CarouselBase`.
+- Fix `parseHtml` helper when no value is passed as parameter.
+
+## [20.15.0] - 2018-06-05
+
+Features:
+- Create `Comment`, `CommentForm` and `CommentAvatar` components.
+- Add `YoutubeButtonIcon` and `YoutubeIcon` components.
+- Add `ButtonImageWithText` component and story.
+
+Fixes:
+- Update all social `buttonIcon` sizes.
+- Merge styles with `style` prop in `BackerCard`.
+- `BackerCard` text layout when text is too long.
+
+## [20.14.0] - 2018-05-29
+
+Features:
+- Add `BackerCard` component.
+- Add `huge` size to `ButtonImage`.
+
+## [20.13.0] - 2018-05-28
+
+Features:
+- Update `RewardCard` component.
+- Add `none` decoration option to `Text`.
+- Add `k-u-decoration-none` class.
+- Add `ContributionCard` and `DonationCard` components.
+- Add `renderDonation` on `RewardCard` component.
+- Add `k-Label--micro` class.
+
+## [20.12.3] - 2018-05-22
+
+- Fix: Remove useless props on `RewardCard` component which ones
+  are: `imageSrcSmall`, `imageSrc` and fix image height to keep original ratio.
+
+## [20.12.2] - 2018-05-18
+
+Fix:
+- Fix font & missing prop in `RewardCard` component.
+
+## [20.12.1] - 2018-05-17
+
+Fix:
+- Fix `RewardCard` custom style.
+
+## [20.12.0] - 2018-05-17
+
+Feature:
+- Add `buttonOnMouseEnter`, `buttonOnMouseLeave`, `buttonOnClick` and custom
+  props on `RewardCard` component.
+
+## [20.11.0] - 2018-05-16
+
+Feature:
+- Add `paragraph` props on `ProjectCard` component.
+
+Fix:
+- Add `title` and `myContribution` early return and fix bug with the grid.
+
+## [20.10.0] - 2018-05-04
+
+Feature:
+- Create `RewardCard` component and its stories.
+
+Fix:
+- Fix `RemoveListener` on media-query `viewportIsSOrLess`.
+
+## [20.9.0] - 2018-05-02
+
+Features:
+- Add `cropperData` values on the return of `onChange` handler of
+`ImageCropper` component.
+- Add 'isCropEnabled' prop on `ImageCropper` component. If false, the
+cropper feature is turned off (true by default).
+- Add `base64` option to `Uploader` to return base64 image if true.
+(false by default)
+
+## [20.8.0] - 2018-04-27
+
+Features:
+- Add `markdown` prop to ignore `Markdown` transformation.
+- Add `Italic` props on `Title` component.
+- Update svg size and color on `IconBadge` component.
+- Add `viewportIsSOrLess` on `mediaQueries` HOC.
+- Show `LegoGrid` only when DOM is loaded.
+- Add `Badge` prop on `HorizontalNav` component.
+- Add `k-HorizontalNav__badge` and `k-HorizontalNav__item__badge` classes.
+- Update A11Y on `Modal` component.
+
+Fixes:
+- Add `name` value on `TextInput` textarea version.
+- Fix `HorizontalNav` vertical alignment.
+- Fix size on `IconBadge` component.
+- Update `ArrowIcon` size on `Pagination` component.
+- Remove `hover` state when `ButtonIcon` is `active` state on `Pagination`.
+
+## [20.7.1] - 2018-04-11
+
+Fix:
+- Fix bad truncated `subTitle` in `CrowdfundingCard` component
+  and remove unexpected `subTitleTruncate` prop warning.
+
+## [20.7.0] - 2018-04-11
+
+Feature:
+- Add `k-FormInfo__error__link` class with all link states.
+
+## [20.6.0] - 2018-04-06
+
+Features:
+- Add `subTitleTruncate` prop for `CrowdfundingCard`.
+- Add `horizontalStroke` prop for `SimpleCard`.
+
+Fixes:
+- Update `:hover` and `:focus` state on `azote` button.
+- Fix `CrowdfundingCard` spacing.
 
 ## [20.5.0] - 2018-04-03
 

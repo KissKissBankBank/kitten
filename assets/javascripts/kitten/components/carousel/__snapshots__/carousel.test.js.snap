@@ -30,6 +30,7 @@ exports[`<Carousel /> by default on desktop is a <Grid /> 1`] = `
     >
       <div
         data-radium={true}
+        onClick={[Function]}
         style={
           Object {
             "flexShrink": 0,
@@ -82,6 +83,7 @@ exports[`<Carousel /> by default on desktop is a <Grid /> 1`] = `
                     tabIndex={null}
                   >
                     <img
+                      alt=""
                       className="k-ButtonImage__img"
                       src={null}
                     />
@@ -112,53 +114,6 @@ exports[`<Carousel /> by default on desktop is a <Grid /> 1`] = `
                   >
                     A
                   </p>
-                </div>
-              </div>
-              <div
-                className="k-ProjectCard__grid--withBorderTop"
-              >
-                <div
-                  className="k-ProjectCard__grid--flex"
-                  style={
-                    Object {
-                      "marginBottom": "0.9375rem",
-                      "marginTop": "0.9375rem",
-                    }
-                  }
-                >
-                  <div
-                    className="k-u-align-center k-ProjectCard__info"
-                  >
-                    Info 1
-                    <br />
-                    <span
-                      className="k-ProjectCard__info__value"
-                    >
-                      xx
-                    </span>
-                  </div>
-                  <div
-                    className="k-u-align-center k-ProjectCard__info"
-                  >
-                    Info 2
-                    <br />
-                    <span
-                      className="k-ProjectCard__info__value"
-                    >
-                      xx
-                    </span>
-                  </div>
-                  <div
-                    className="k-u-align-center k-ProjectCard__info"
-                  >
-                    Info 3
-                    <br />
-                    <span
-                      className="k-ProjectCard__info__value"
-                    >
-                      xx
-                    </span>
-                  </div>
                 </div>
               </div>
             </div>
@@ -231,6 +186,7 @@ exports[`<Carousel /> by default on mobile is not a <Grid /> 1`] = `
   >
     <div
       data-radium={true}
+      onClick={[Function]}
       style={
         Object {
           "flexShrink": 0,
@@ -283,6 +239,7 @@ exports[`<Carousel /> by default on mobile is not a <Grid /> 1`] = `
                   tabIndex={null}
                 >
                   <img
+                    alt=""
                     className="k-ButtonImage__img"
                     src={null}
                   />
@@ -313,53 +270,6 @@ exports[`<Carousel /> by default on mobile is not a <Grid /> 1`] = `
                 >
                   A
                 </p>
-              </div>
-            </div>
-            <div
-              className="k-ProjectCard__grid--withBorderTop"
-            >
-              <div
-                className="k-ProjectCard__grid--flex"
-                style={
-                  Object {
-                    "marginBottom": "0.9375rem",
-                    "marginTop": "0.9375rem",
-                  }
-                }
-              >
-                <div
-                  className="k-u-align-center k-ProjectCard__info"
-                >
-                  Info 1
-                  <br />
-                  <span
-                    className="k-ProjectCard__info__value"
-                  >
-                    xx
-                  </span>
-                </div>
-                <div
-                  className="k-u-align-center k-ProjectCard__info"
-                >
-                  Info 2
-                  <br />
-                  <span
-                    className="k-ProjectCard__info__value"
-                  >
-                    xx
-                  </span>
-                </div>
-                <div
-                  className="k-u-align-center k-ProjectCard__info"
-                >
-                  Info 3
-                  <br />
-                  <span
-                    className="k-ProjectCard__info__value"
-                  >
-                    xx
-                  </span>
-                </div>
               </div>
             </div>
           </div>
@@ -439,6 +349,7 @@ exports[`<Carousel /> with withoutLeftOffset on desktop is a <Grid /> 1`] = `
     >
       <div
         data-radium={true}
+        onClick={[Function]}
         style={
           Object {
             "flexShrink": 0,
@@ -491,6 +402,7 @@ exports[`<Carousel /> with withoutLeftOffset on desktop is a <Grid /> 1`] = `
                     tabIndex={null}
                   >
                     <img
+                      alt=""
                       className="k-ButtonImage__img"
                       src={null}
                     />
@@ -521,53 +433,6 @@ exports[`<Carousel /> with withoutLeftOffset on desktop is a <Grid /> 1`] = `
                   >
                     A
                   </p>
-                </div>
-              </div>
-              <div
-                className="k-ProjectCard__grid--withBorderTop"
-              >
-                <div
-                  className="k-ProjectCard__grid--flex"
-                  style={
-                    Object {
-                      "marginBottom": "0.9375rem",
-                      "marginTop": "0.9375rem",
-                    }
-                  }
-                >
-                  <div
-                    className="k-u-align-center k-ProjectCard__info"
-                  >
-                    Info 1
-                    <br />
-                    <span
-                      className="k-ProjectCard__info__value"
-                    >
-                      xx
-                    </span>
-                  </div>
-                  <div
-                    className="k-u-align-center k-ProjectCard__info"
-                  >
-                    Info 2
-                    <br />
-                    <span
-                      className="k-ProjectCard__info__value"
-                    >
-                      xx
-                    </span>
-                  </div>
-                  <div
-                    className="k-u-align-center k-ProjectCard__info"
-                  >
-                    Info 3
-                    <br />
-                    <span
-                      className="k-ProjectCard__info__value"
-                    >
-                      xx
-                    </span>
-                  </div>
                 </div>
               </div>
             </div>

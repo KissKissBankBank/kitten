@@ -5,12 +5,16 @@ import {
   TwitterButtonIcon,
   LinkedinButtonIcon,
   InstagramButtonIcon,
+  YoutubeButtonIcon,
+  PinterestButtonIcon,
 } from 'kitten/components/buttons/social-button-icon'
 import { ButtonIcon } from 'kitten/components/buttons/button-icon'
 import { FacebookIcon } from 'kitten/components/icons/facebook-icon'
 import { TwitterIcon } from 'kitten/components/icons/twitter-icon'
 import { LinkedinIcon } from 'kitten/components/icons/linkedin-icon'
 import { InstagramIcon } from 'kitten/components/icons/instagram-icon'
+import { YoutubeIcon } from 'kitten/components/icons/youtube-icon'
+import { PinterestIcon } from 'kitten/components/icons/pinterest-icon'
 
 describe('<FacebookButtonIcon />', () => {
   describe('by default', () => {
@@ -113,6 +117,62 @@ describe('<InstagramButtonIcon />', () => {
   describe('with other props', () => {
     const button = shallow(
       <InstagramButtonIcon
+        className={classNames('k-ButtonIcon__svg', 'custom__class')}
+      />,
+    )
+
+    it('has a default classes', () => {
+      expect(button.hasClass('k-ButtonIcon__svg')).toBe(true)
+      expect(button.hasClass('custom__class')).toBe(true)
+    })
+  })
+})
+
+describe('<YoutubeButtonIcon />', () => {
+  describe('by default', () => {
+    const button = shallow(<YoutubeButtonIcon />)
+
+    it('is a <ButtonIcon modifier="youtube" />', () => {
+      expect(button.find(ButtonIcon).exists()).toBe(true)
+      expect(button.props().modifier).toBe('youtube')
+    })
+
+    it('has a <YoutubeIcon />', () => {
+      expect(button.find(YoutubeIcon).exists()).toBe(true)
+    })
+  })
+
+  describe('with other props', () => {
+    const button = shallow(
+      <YoutubeButtonIcon
+        className={classNames('k-ButtonIcon__svg', 'custom__class')}
+      />,
+    )
+
+    it('has a default classes', () => {
+      expect(button.hasClass('k-ButtonIcon__svg')).toBe(true)
+      expect(button.hasClass('custom__class')).toBe(true)
+    })
+  })
+})
+
+describe('<PinterestButtonIcon />', () => {
+  describe('by default', () => {
+    const button = shallow(<PinterestButtonIcon />)
+
+    it('is a <ButtonIcon modifier="pinterest" />', () => {
+      expect(button.find(ButtonIcon).exists()).toBe(true)
+      expect(button.props().modifier).toBe('pinterest')
+    })
+
+    it('has a <PinterestIcon />', () => {
+      expect(button.find(PinterestIcon).exists()).toBe(true)
+    })
+  })
+
+  describe('with other props', () => {
+    const button = shallow(
+      <PinterestButtonIcon
         className={classNames('k-ButtonIcon__svg', 'custom__class')}
       />,
     )

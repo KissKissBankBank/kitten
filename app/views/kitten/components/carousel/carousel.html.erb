@@ -26,6 +26,7 @@
       { id: 2, title: "B" },
       { id: 3, title: "C" }
     ],
+    hidePaginationOnMobile: true,
   }) %>
 <% end %>
 
@@ -43,11 +44,11 @@
 <%= example 'Five' do %>
   <%= react_component('KarlCarouselProjectCard', props: {
     data: [
-      { id: 1, title: "A" },
-      { id: 2, title: "B" },
-      { id: 3, title: "C" },
-      { id: 4, title: "D" },
-      { id: 5, title: "E" }
+      { id: 1, title: "A", linkHref: "#A" },
+      { id: 2, title: "B", linkHref: "#B" },
+      { id: 3, title: "C", linkHref: "#C" },
+      { id: 4, title: "D", linkHref: "#D" },
+      { id: 5, title: "E", linkHref: "#E" }
     ],
   }) %>
 <% end %>

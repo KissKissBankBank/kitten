@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { Component } from 'react'
 import classNames from 'classnames'
 
-export class Title extends React.Component {
+export class Title extends Component {
   render() {
-    const { className, modifier, tag, margin, ...other } = this.props
+    const { className, modifier, tag, margin, italic, ...other } = this.props
 
     const titleClassNames = classNames(
       'k-Title',
@@ -11,6 +11,7 @@ export class Title extends React.Component {
       `k-Title--${modifier}`,
       {
         'k-Title--withoutMargin': !margin,
+        'k-Title--italic': italic,
       },
     )
 
@@ -25,4 +26,5 @@ Title.defaultProps = {
   modifier: 'primary',
   children: 'Lorem ipsum dolor sit amet…',
   margin: true,
+  italic: false,
 }

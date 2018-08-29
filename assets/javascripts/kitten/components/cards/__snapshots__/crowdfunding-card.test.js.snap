@@ -11,11 +11,10 @@ exports[`<CrowdfundingCard /> by default matches with snapshot 1`] = `
     onClick={[Function]}
     style={
       Object {
-        "paddingBottom": "10px",
+        "paddingBottom": "5px",
         "position": "relative",
       }
     }
-    subTitleTruncate={true}
   >
     <div
       className="k-Card__imageContainer"
@@ -115,7 +114,7 @@ exports[`<CrowdfundingCard /> by default matches with snapshot 1`] = `
         Object {
           "marginBottom": "1.25rem",
           "marginTop": null,
-          "minHeight": "70px",
+          "minHeight": "75px",
         }
       }
     >
@@ -205,11 +204,10 @@ exports[`<CrowdfundingCard /> with loading prop matches with snapshot 1`] = `
     onClick={[Function]}
     style={
       Object {
-        "paddingBottom": "10px",
+        "paddingBottom": "5px",
         "position": "relative",
       }
     }
-    subTitleTruncate={true}
   >
     <div
       className="k-Card__imageContainer"
@@ -258,6 +256,7 @@ exports[`<CrowdfundingCard /> with loading prop matches with snapshot 1`] = `
           tabIndex={null}
         >
           <img
+            alt=""
             className="k-ButtonImage__img"
           />
         </span>
@@ -304,7 +303,7 @@ exports[`<CrowdfundingCard /> with loading prop matches with snapshot 1`] = `
         Object {
           "marginBottom": "1.25rem",
           "marginTop": null,
-          "minHeight": "70px",
+          "minHeight": "75px",
         }
       }
     >
@@ -427,11 +426,10 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
     onClick={[Function]}
     style={
       Object {
-        "paddingBottom": "10px",
+        "paddingBottom": "5px",
         "position": "relative",
       }
     }
-    subTitleTruncate={true}
   >
     <div
       className="k-Card__imageContainer"
@@ -535,7 +533,7 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
         Object {
           "marginBottom": "1.25rem",
           "marginTop": null,
-          "minHeight": "70px",
+          "minHeight": "75px",
         }
       }
     >
@@ -608,6 +606,8 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
           data-radium={true}
           style={
             Object {
+              "flex": 1,
+              "lineHeight": "1rem",
               "overflow": "hidden",
               "whiteSpace": "nowrap",
             }
@@ -647,7 +647,7 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
           "display": "flex",
           "flexWrap": "wrap",
           "lineHeight": "1",
-          "marginBottom": "0.9375rem",
+          "marginBottom": "0.3125rem",
           "marginTop": "0.9375rem",
           "padding": "0 10px",
         }
@@ -710,7 +710,7 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
           "display": "flex",
           "flexDirection": "row",
           "marginBottom": "1.25rem",
-          "marginTop": "0.9375rem",
+          "marginTop": "0.3125rem",
           "padding": "0 10px",
         }
       }

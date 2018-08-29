@@ -167,6 +167,7 @@ class CarouselBase extends React.Component {
       baseItemMarginBetween,
       viewportIsTabletOrLess,
       viewportIsMobile,
+      hidePaginationOnMobile,
     } = this.props
     const { indexPageVisible, numPages } = this.state
     const itemMarginBetween = getMarginBetweenAccordingToViewport(
@@ -174,6 +175,8 @@ class CarouselBase extends React.Component {
       viewportIsMobile,
       viewportIsTabletOrLess,
     )
+
+    if (viewportIsMobile && hidePaginationOnMobile) return
 
     if (numPages <= 1) return
 
@@ -184,6 +187,7 @@ class CarouselBase extends React.Component {
         <div style={styles.pageControl}>
           {rangePage.map(index => (
             <div
+              key={index}
               style={[
                 styles.pageDot,
                 indexPageVisible === index && styles.pageDotActive,
@@ -218,6 +222,7 @@ class CarouselBase extends React.Component {
         <ButtonIcon
           modifier="beryllium"
           onClick={this.goPrevPage}
+          key={`left-${indexPageVisible}`}
           disabled={indexPageVisible < 1 || numPages < 1}
           style={styles.carouselButtonPagination}
         >
@@ -227,6 +232,7 @@ class CarouselBase extends React.Component {
         <ButtonIcon
           modifier="beryllium"
           onClick={this.goNextPage}
+          key={`right-${indexPageVisible}`}
           disabled={indexPageVisible >= numPages - 1}
           style={styles.carouselButtonPagination}
         >
@@ -320,6 +326,7 @@ const styles = {
 
 CarouselBase.defaultProps = {
   withoutLeftOffset: false,
+  hidePaginationOnMobile: false,
 }
 
 CarouselBase.propTypes = {
@@ -328,6 +335,7 @@ CarouselBase.propTypes = {
   renderItem: PropTypes.func.isRequired,
   viewportIsTabletOrLess: PropTypes.bool.isRequired,
   viewportIsMobile: PropTypes.bool.isRequired,
+  hidePaginationOnMobile: PropTypes.bool,
 }
 
 export const Carousel = mediaQueries(Radium(CarouselBase), {

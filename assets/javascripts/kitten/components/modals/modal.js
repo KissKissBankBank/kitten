@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import classNames from 'classnames'
 // Via "https://github.com/reactjs/react-modal"
 import ReactModal from 'react-modal'
@@ -11,16 +12,13 @@ export class Modal extends Component {
     this.state = {
       showModal: false,
     }
-
-    this.open = this.open.bind(this)
-    this.close = this.close.bind(this)
   }
 
-  open() {
+  open = () => {
     this.setState({ showModal: true })
   }
 
-  close() {
+  close = () => {
     this.setState({ showModal: false })
     if (this.props.onClose) {
       this.props.onClose()
@@ -52,6 +50,8 @@ export class Modal extends Component {
       trigger,
       content,
       label,
+      labelledby,
+      describedby,
       className,
       onClose,
       ...others
@@ -64,6 +64,7 @@ export class Modal extends Component {
         {this.renderTriggerAction()}
 
         <ReactModal
+          role="dialog"
           className={{
             base: 'k-Modal__content',
             afterOpen: 'k-Modal--afterOpen',
@@ -75,6 +76,11 @@ export class Modal extends Component {
             beforeClose: 'k-Modal__overlay--beforeClose',
           }}
           isOpen={this.state.showModal}
+          aria={{
+            labelledby,
+            describedby,
+          }}
+          ariaHideApp={false}
           onRequestClose={this.close}
           contentLabel={label}
         >
@@ -87,6 +93,14 @@ export class Modal extends Component {
   }
 }
 
+Modal.propTypes = {
+  label: PropTypes.string,
+  labelledby: PropTypes.string,
+  describedby: PropTypes.string,
+}
+
 Modal.defaultProps = {
   label: 'Modal',
+  labelledby: '',
+  describedby: '',
 }

@@ -11,11 +11,10 @@ exports[`<ArticleCard /> by default matches with snapshot 1`] = `
     onClick={[Function]}
     style={
       Object {
-        "paddingBottom": "10px",
+        "paddingBottom": "5px",
         "position": "relative",
       }
     }
-    subTitleTruncate={true}
   >
     <div
       className="k-Card__imageContainer"
@@ -181,11 +180,10 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
     onClick={[Function]}
     style={
       Object {
-        "paddingBottom": "10px",
+        "paddingBottom": "5px",
         "position": "relative",
       }
     }
-    subTitleTruncate={true}
   >
     <div
       className="k-Card__imageContainer"
@@ -334,6 +332,8 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
           data-radium={true}
           style={
             Object {
+              "flex": 1,
+              "lineHeight": "1rem",
               "overflow": "hidden",
               "whiteSpace": "nowrap",
             }
@@ -388,11 +388,10 @@ exports[`<ArticleCard /> with ignored props matches with snapshot 1`] = `
     onClick={[Function]}
     style={
       Object {
-        "paddingBottom": "10px",
+        "paddingBottom": "5px",
         "position": "relative",
       }
     }
-    subTitleTruncate={true}
   >
     <div
       className="k-Card__imageContainer"
@@ -558,11 +557,10 @@ exports[`<ArticleCard /> with some props matches with snapshot 1`] = `
     onClick={[Function]}
     style={
       Object {
-        "paddingBottom": "10px",
+        "paddingBottom": "5px",
         "position": "relative",
       }
     }
-    subTitleTruncate={true}
   >
     <div
       className="k-Card__imageContainer"
@@ -715,6 +713,8 @@ exports[`<ArticleCard /> with some props matches with snapshot 1`] = `
           data-radium={true}
           style={
             Object {
+              "flex": 1,
+              "lineHeight": "1rem",
               "overflow": "hidden",
               "whiteSpace": "nowrap",
             }

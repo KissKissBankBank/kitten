@@ -14,6 +14,7 @@ spec/dummy/public
 .sass-cache
 npm-debug.log*
 node_modules/
+storybook-static/
 spec/dummy/kitten.log
 spec/dummy/kitten.run
 dist/

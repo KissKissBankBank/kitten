@@ -13,16 +13,25 @@
 ///   <svg class="k-ArrowIcon--top" … />
 
 @mixin k-ArrowIcon {
+  .k-ArrowIcon {
+    width: k-px-to-rem(6px);
+    height: k-px-to-rem(6px);
+  }
+
   .k-ArrowIcon--top {
-    transform: rotate(270deg);
+    transform: rotate(45deg);
   }
 
   .k-ArrowIcon--bottom {
-    transform: rotate(90deg);
+    transform: rotate(225deg);
   }
 
   .k-ArrowIcon--left {
-    transform: rotate(180deg);
+    transform: rotate(315deg);
+  }
+
+  .k-ArrowIcon--right {
+    transform: rotate(135deg);
   }
 
   .k-ArrowIcon--disabled {

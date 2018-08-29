@@ -317,70 +317,91 @@
     'instagram': (
       base: (
         color: map-get($k-colors, 'background-1'),
-        background-color: map-get($k-colors, 'font-1'),
-        background-image: radial-gradient(
-          circle at 30% 100%,
-          #fed373 9%,
-          #f15245 30%,
-          #d92e7f 62%,
-          #515ecf 85%,
-          #9b36b7
-        ),
       ),
       hover: (
         color: map-get($k-colors, 'background-1'),
-        background-color: map-get($k-colors, 'font-1'),
-        background-image: radial-gradient(
-          circle at 30% 100%,
-          #efc464 9%,
-          #e24336 30%,
-          #ca1f70 62%,
-          #4c4fc0 85%,
-          #8c27a8
-        ),
       ),
       focus: (
         color: map-get($k-colors, 'background-1'),
-        background-color: map-get($k-colors, 'font-1'),
-        background-image: radial-gradient(
-          circle at 30% 100%,
-          #efc464 9%,
-          #e24336 30%,
-          #ca1f70 62%,
-          #4c4fc0 85%,
-          #8c27a8
-        ),
       ),
       active: (
         color: map-get($k-colors, 'background-1'),
-        background-color: map-get($k-colors, 'font-1'),
-        background-image: radial-gradient(
-          circle at 30% 100%,
-          #d1a646 9%,
-          #c42518 30%,
-          #ac0152 62%,
-          #2e31a2 85%,
-          #6e098a
-        ),
       ),
       is-selected: (
         color: map-get($k-colors, 'background-1'),
-        background-color: map-get($k-colors, 'font-1'),
-        background-image: radial-gradient(
-          circle at 30% 100%,
-          #d1a646 9%,
-          #c42518 30%,
-          #ac0152 62%,
-          #2e31a2 85%,
-          #6e098a
-        ),
       ),
       disabled: (
         color: map-get($k-colors, 'background-1'),
         background-color: map-get($k-colors, 'line-2'),
         background-image: none,
       ),
-    )
+    ),
+
+    'youtube': (
+      base: (
+        color: map-get($k-colors, 'background-1'),
+        border-color: #ff0000,
+        background-color: #ff0000,
+      ),
+      hover: (
+        color: map-get($k-colors, 'background-1'),
+        border-color: #f00000,
+        background-color: #f00000,
+      ),
+      focus: (
+        color: map-get($k-colors, 'background-1'),
+        border-color: #f00000,
+        background-color: #f00000,
+      ),
+      active: (
+        color: map-get($k-colors, 'background-1'),
+        border-color: #e10000,
+        background-color: #e10000,
+      ),
+      is-selected: (
+        color: map-get($k-colors, 'background-1'),
+        border-color: #e10000,
+        background-color: #e10000,
+      ),
+      disabled: (
+        color: map-get($k-colors, 'background-1'),
+        border-color: map-get($k-colors, 'line-2'),
+        background-color: map-get($k-colors, 'line-2'),
+      ),
+    ),
+
+    'pinterest': (
+      base: (
+        color: map-get($k-colors, 'background-1'),
+        border-color: #bd081c,
+        background-color: #bd081c,
+      ),
+      hover: (
+        color: map-get($k-colors, 'background-1'),
+        border-color: #ae000d,
+        background-color: #ae000d,
+      ),
+      focus: (
+        color: map-get($k-colors, 'background-1'),
+        border-color: #ae000d,
+        background-color: #ae000d,
+      ),
+      active: (
+        color: map-get($k-colors, 'background-1'),
+        border-color: #9f0000,
+        background-color: #9f0000,
+      ),
+      is-selected: (
+        color: map-get($k-colors, 'background-1'),
+        border-color: #9f0000,
+        background-color: #9f0000,
+      ),
+      disabled: (
+        color: map-get($k-colors, 'background-1'),
+        border-color: map-get($k-colors, 'line-2'),
+        background-color: map-get($k-colors, 'line-2'),
+      ),
+    ),
   );
 
   $colorByModifier: map-get($colors, $modifier);
@@ -391,5 +412,56 @@
 
   @if map-get($options, 'svg') {
     @include k-buttonSvg($colorByModifier);
+  }
+
+  // Force background instagram button
+  @if $modifier == 'instagram' {
+    & {
+      background: radial-gradient(
+        circle at 32% 100%,
+        #ffe17d 0%,
+        #ffcd69 10%,
+        #fa9137 28%,
+        #eb4141 42%,
+        transparent 82%
+      ),
+      linear-gradient(
+        135deg,
+        #234bd7 12%,
+        #c33cbe 58%
+      );
+    }
+    &:hover,
+    &:focus {
+      background: radial-gradient(
+        circle at 32% 100%,
+        #f0d26e 0%,
+        #f0be5a 10%,
+        #eb8228 28%,
+        #dc3232 42%,
+        transparent 82%
+      ),
+      linear-gradient(
+        135deg,
+        #143cc8 12%,
+        #b42daf 58%
+      );
+    }
+    &:active,
+    &.is-selected {
+      background: radial-gradient(
+        circle at 32% 100%,
+        #e1c35f 0%,
+        #e1af4b 10%,
+        #dc7319 28%,
+        #cd2323 42%,
+        transparent 82%
+      ),
+      linear-gradient(
+        135deg,
+        #052db9 12%,
+        #a51ea0 58%
+      );
+    }
   }
 }

@@ -5,6 +5,8 @@ import { mediaQueries } from 'kitten/hoc/media-queries'
 const SimpleComponent = ({
   viewportIsMobile,
   viewportIsTabletOrLess,
+  viewportIsSOrLess,
+  myCustomMediaQuery,
   ...props
 }) => {
   return <div title="Test me!" {...props} />
@@ -40,6 +42,7 @@ describe('mediaQueries()', () => {
       SimpleComponentWithMediaQueries = mediaQueries(SimpleComponent, {
         viewportIsMobile: true,
         viewportIsTabletOrLess: true,
+        viewportIsSOrLess: true,
       })
       component = mount(<SimpleComponentWithMediaQueries />)
       componentSnapshot = renderer
@@ -56,6 +59,7 @@ describe('mediaQueries()', () => {
 
       expect(wrappedComponent.prop('viewportIsMobile')).toBeFalsy()
       expect(wrappedComponent.prop('viewportIsTabletOrLess')).toBeFalsy()
+      expect(wrappedComponent.prop('viewportIsSOrLess')).toBeFalsy()
     })
 
     it('attaches listeners', () => {
@@ -82,6 +86,44 @@ describe('mediaQueries()', () => {
 
       expect(wrappedComponent.prop('viewportIsMobile')).toBeFalsy()
       expect(wrappedComponent.prop('viewportIsTabletOrLess')).toBeTruthy()
+      expect(wrappedComponent.prop('viewportIsSOrLess')).toBeFalsy()
+    })
+  })
+
+  describe('with S or less version', () => {
+    beforeEach(() => {
+      window.matchMedia = createMockMediaMatcher(true)
+      SimpleComponentWithMediaQueries = mediaQueries(SimpleComponent, {
+        viewportIsSOrLess: true,
+      })
+      component = mount(<SimpleComponentWithMediaQueries />)
+    })
+
+    it('pushes media queries props to wrapped component', () => {
+      const wrappedComponent = component.find(SimpleComponent).first()
+
+      expect(wrappedComponent.prop('viewportIsMobile')).toBeFalsy()
+      expect(wrappedComponent.prop('viewportIsTabletOrLess')).toBeFalsy()
+      expect(wrappedComponent.prop('viewportIsSOrLess')).toBeTruthy()
+    })
+  })
+
+  describe('with custom media query', () => {
+    beforeEach(() => {
+      window.matchMedia = createMockMediaMatcher(true)
+      SimpleComponentWithMediaQueries = mediaQueries(SimpleComponent, {
+        myCustomMediaQuery: '(min-width: 1140px)',
+      })
+      component = mount(<SimpleComponentWithMediaQueries />)
+    })
+
+    it('pushes media queries props to wrapped component', () => {
+      const wrappedComponent = component.find(SimpleComponent).first()
+
+      expect(wrappedComponent.prop('myCustomMediaQuery')).toBeDefined()
+      expect(wrappedComponent.prop('viewportIsMobile')).toBeFalsy()
+      expect(wrappedComponent.prop('viewportIsTabletOrLess')).toBeFalsy()
+      expect(wrappedComponent.prop('viewportIsSOrLess')).toBeFalsy()
     })
   })
 })

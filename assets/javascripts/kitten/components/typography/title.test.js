@@ -47,5 +47,13 @@ describe('Title with default props', () => {
         expect(component.hasClass('k-Title--withoutMargin')).toBe(true)
       })
     })
+
+    describe('with italic prop', () => {
+      const component = shallow(<Title italic={true} />)
+
+      it('has a good class', () => {
+        expect(component.hasClass('k-Title--italic')).toBe(true)
+      })
+    })
   })
 })

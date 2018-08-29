@@ -4,6 +4,146 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `KarlLinkListItemsLight` example.
+
+## [23.0.0] - 2018-08-27
+
+Fix:
+- Update `DonationCard` examples.
+
+## [22.2.0] - 2018-08-22
+
+No changes.
+
+## [22.1.1] - 2018-08-21
+
+No changes.
+
+## [22.1.0] - 2018-08-21
+
+No changes.
+
+## [22.0.0] - 2018-08-08
+
+No changes.
+
+## [21.4.0] - 2018-08-06
+
+No changes.
+
+## [21.3.2] - 2018-08-02
+
+No changes.
+
+## [21.3.1] - 2018-08-02
+
+Fix:
+- Update an `Carousel` example with links.
+
+## [21.3.0] - 2018-08-01
+
+No changes.
+
+## [21.2.0] - 2018-07-31
+
+Feature:
+- Add a `CartRewardCard` example with all close events.
+
+## [21.1.0] - 2018-07-19
+
+Feature:
+- Update `KarlComment` examples.
+
+## [21.0.1] - 2018-07-02
+
+No changes.
+
+## [21.0.0] - 2018-06-27
+
+Features:
+- Create `KarlCartRewardCard` example.
+- Create `KarlIconBadge` example to replace `KarlIconBadgeWithSvg` and all examples.
+- Create `KarlStarButton` example.
+
+Fix:
+- Update `KarlHeaderTour1`and `KarlHeaderTour2` with new `ArrowIcon` component.
+
+## [20.17.0] - 2018-06-14
+
+No changes.
+
+## [20.16.0] - 2018-06-06
+
+Feature:
+- Add `KarlComment` and `KarlCommentForm` examples.
+
+## [20.15.0] - 2018-06-05
+
+Feature:
+- Add `KarlButtonImageWithText` example.
+
+## [20.14.0] - 2018-05-29
+
+Feature:
+- Add `BackerCard` example.
+
+## [20.13.0] - 2018-05-28
+
+Features:
+- Add `KarlDonationCard` and `KarlDonationInput` examples.
+- Add `KarlGarbageButton` example.
+
+## [20.12.3] - 2018-05-22
+
+No changes.
+
+## [20.12.2] - 2018-05-18
+
+No changes.
+
+## [20.12.1] - 2018-05-17
+
+No changes.
+
+## [20.12.0] - 2018-05-17
+
+No changes.
+
+## [20.11.0] - 2018-05-16
+
+No changes.
+
+## [20.10.0] - 2018-05-04
+
+Feature:
+- Add `KarlRewardCard` example.
+
+## [20.9.0] - 2018-05-02
+
+No changes.
+
+## [20.8.0] - 2018-04-27
+
+Features:
+- Update `Title` example.
+- Add `KarlTouchHorizontalNavWithNotification` example.
+- Update A11Y on `KarlModal` example.
+
+Fixes:
+- Remove useless js file `displayShortcut`.
+- Rename `KarlBrowsingHorizontalNav` to `KarlTouchHorizontalNav`.
+
+## [20.7.1] - 2018-04-11
+
+Feature:
+- Update `KarlHorizontalStrokes` example.
+
+## [20.7.0] - 2018-04-11
+
+No changes.
+
+## [20.6.0] - 2018-04-06
+
 - Add `SimpleCard` without horizontal stroke example.
 
 ## [20.5.0] - 2018-04-03

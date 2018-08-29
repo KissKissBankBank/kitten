@@ -4,7 +4,7 @@ import sinon from 'sinon'
 import { Alert } from 'kitten/components/notifications/alert'
 
 describe('<Alert />', () => {
-  const sandbox = sinon.sandbox.create()
+  const sandbox = sinon.createSandbox()
 
   afterEach(() => {
     sandbox.restore()
@@ -106,13 +106,13 @@ describe('<Alert />', () => {
     })
   })
 
-  describe('with onClose prop', () => {
+  describe('with onAfterClose prop', () => {
     let onCloseSpy
     let alertComponent
 
     beforeAll(() => {
       onCloseSpy = sandbox.spy()
-      alertComponent = mount(<Alert closeButton onClose={onCloseSpy} />)
+      alertComponent = mount(<Alert closeButton onAfterClose={onCloseSpy} />)
 
       alertComponent.instance().handleAnimationEnd()
     })
@@ -128,7 +128,7 @@ describe('<Alert />', () => {
 
     beforeAll(() => {
       onCloseSpy = sandbox.spy()
-      alertComponent = mount(<Alert onClose={onCloseSpy} />)
+      alertComponent = mount(<Alert onAfterClose={onCloseSpy} />)
 
       alertComponent.simulate('animationEnd')
     })

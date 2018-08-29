@@ -82,6 +82,14 @@
   $icon-width: k-px-to-rem(12px);
   $icon-height: k-px-to-rem(14px);
 
+  // Arrow SVG
+  $arrow-width: k-px-to-rem(6px);
+  $arrow-height: k-px-to-rem(6px);
+
+  // Facebook With Background SVG
+  $facebook-width: k-px-to-rem(25px);
+  $facebook-height: k-px-to-rem(25px);
+
   $transition-speed: .2s;
 
   // Big size options button.
@@ -175,6 +183,26 @@
     }
   }
 
+  // Arrow size
+  .k-Button--tiny {
+    @include k-typographyFontSize(
+      $button-step,
+      $button-tiny-line-height
+    );
+
+    min-width: $button-tiny-min-width;
+
+    &.k-Button--icon {
+      .k-Button__icon--arrow {
+        @include k-buttonPadding(
+          $button-size-tiny,
+          $arrow-width,
+          $arrow-height
+        );
+      }
+    }
+  }
+
   .k-Button--big {
     @include k-buttonBig($buttonBigOptions);
   }
@@ -227,6 +255,40 @@
         transition: stroke $transition-speed;
       }
     }
+
+    .k-Button__icon--arrow {
+      @include k-buttonPadding(
+        $button-size,
+        $arrow-width,
+        $arrow-height
+      );
+
+      box-sizing: content-box;
+      display: inline-block;
+      width: $arrow-width;
+      height: $arrow-height;
+      vertical-align: bottom;
+      transition: fill $transition-speed;
+
+      .k-Button__arrow--tiny__stroke {
+        transition: stroke $transition-speed;
+      }
+    }
+
+    .k-Button__icon--facebook {
+      @include k-buttonPadding(
+        $button-size-big,
+        $facebook-width,
+        $facebook-height
+      );
+
+      box-sizing: content-box;
+      display: inline-block;
+      width: $facebook-width;
+      height: $facebook-height;
+      vertical-align: middle;
+      transition: fill $transition-speed;
+    }
   }
 
   // Padding size
@@ -249,5 +311,9 @@
     .k-Button__icon {
       width: auto;
     }
+  }
+
+  .k-Button.is-readonly {
+    cursor: auto;
   }
 }

@@ -87,6 +87,14 @@ module Kitten
               path: 'components/icons/filter-icon',
               name: 'Filter',
             },
+            {
+              path: 'components/buttons/garbage-button',
+              name: 'Garbage button',
+            },
+            {
+              path: 'components/buttons/star-button',
+              name: 'Star button',
+            },
           ],
         },
         {
@@ -130,6 +138,7 @@ module Kitten
               path: 'components/form/form-phone-number',
               name: 'Form phone number',
             },
+            { path: 'components/form/comment', name: 'Comment' },
             { path: 'components/images/image-cropper', name: 'Image cropper' },
             { path: 'components/images/image-with-caption', name: 'Image with caption' },
           ],
@@ -188,10 +197,14 @@ module Kitten
             { path: 'components/cards/simple-card', name: 'Simple card' },
             { path: 'components/cards/project-card', name: 'Project card' },
             { path: 'components/cards/article-card', name: 'Article card' },
+            { path: 'components/cards/backer-card', name: 'Backer card' },
+            { path: 'components/cards/cart-reward-card', name: 'Cart reward card' },
             {
               path: 'components/cards/crowdfunding-card',
               name: 'Crowdfunding card',
             },
+            { path: 'components/cards/reward-card', name: 'Reward card' },
+            { path: 'components/cards/donation-card', name: 'Donation card' },
             {
               path: 'components/cards/project-similar-card',
               name: 'Project similar card',

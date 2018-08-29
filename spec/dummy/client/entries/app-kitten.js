@@ -21,6 +21,8 @@ import {
   InstagramButtonIcon,
   LinkedinButtonIcon,
   TwitterButtonIcon,
+  YoutubeButtonIcon,
+  PinterestButtonIcon,
 } from 'kitten/components/buttons/social-button-icon'
 import {
   KarlFacebookButtonIconWords,
@@ -39,9 +41,13 @@ import {
 } from 'kitten/karl/buttons/button-with-icon-words'
 import { KarlPaymentButtons } from 'kitten/karl/buttons/payment-button'
 import { KarlButtonIconFilter } from 'kitten/karl/buttons/button-filter'
+import { KarlButtonImageWithText } from 'kitten/karl/buttons/button-image-with-text'
+import { KarlGarbageButton } from 'kitten/karl/buttons/garbage-button'
+import { KarlStarButton } from 'kitten/karl/buttons/star-button'
 
 // Cards
 import { ArticleCard } from 'kitten/components/cards/article-card'
+import { BackerCard } from 'kitten/components/cards/backer-card'
 import { CrowdfundingCard } from 'kitten/components/cards/crowdfunding-card'
 import { ProjectCard } from 'kitten/components/cards/project-card'
 import { ProjectCreatorCard }
@@ -49,7 +55,10 @@ import { ProjectCreatorCard }
 import { ProjectSimilarCard }
   from 'kitten/components/cards/project-similar-card'
 import { SimpleCard } from 'kitten/components/cards/simple-card'
+import { KarlCartRewardCard } from 'kitten/karl/cards/cart-reward-card'
 import { KarlCard } from 'kitten/karl/cards/card'
+import { KarlDonationCard } from 'kitten/karl/cards/donation-card'
+import { KarlRewardCard } from 'kitten/karl/cards/reward-card'
 import {
   KarlSimilarProjectsCard,
   KarlSimilarProjectsWithInfosCard,
@@ -99,6 +108,7 @@ import { TextInputWithLimit }
   from 'kitten/components/form/text-input-with-limit'
 import { TextInputWithUnit } from 'kitten/components/form/text-input-with-unit'
 import { KarlCheckboxError } from 'kitten/karl/form/checkbox'
+import { KarlComment, KarlCommentForm } from 'kitten/karl/form/comment'
 import { KarlFormActions } from 'kitten/karl/form/form-actions'
 import { KarlFormRow } from 'kitten/karl/form/form-row'
 import { KarlLocationInput } from 'kitten/karl/form/location-input'
@@ -210,6 +220,7 @@ import {
   KarlLinkList,
   KarlLinkListDark,
   KarlLinkListSelectedItem,
+  KarlLinkListItemsLight,
 } from 'kitten/karl/links/link-list'
 
 // Lists
@@ -237,20 +248,20 @@ import {
 import { TabBar } from 'kitten/components/navigation/tab-bar'
 import {
   KarlHorizontalNav,
-  KarlBrowsingHorizontalNav,
+  KarlTouchHorizontalNav,
+  KarlTouchHorizontalNavWithNotification,
 } from 'kitten/karl/navigation/horizontal-nav'
 import { KarlPaginationExamples } from 'kitten/karl/navigation/pagination'
 
 // Notifications
 import { Alert } from 'kitten/components/notifications/alert'
 import { Badge } from 'kitten/components/notifications/badge'
-import { IconBadge } from 'kitten/components/notifications/icon-badge'
 import {
   KarlAlert,
   KarlAlertWithButton,
   KarlAlertWithMarkdown,
 } from 'kitten/karl/notifications/alert'
-import { KarlIconBadgeWithSvg } from 'kitten/karl/notifications/icon-badge'
+import { KarlIconBadge } from 'kitten/karl/notifications/icon-badge'
 
 // Popovers
 import { CallToActionPopover }
@@ -335,6 +346,8 @@ ReactOnRails.register({
   FacebookButtonIcon,
   InstagramButtonIcon,
   LinkedinButtonIcon,
+  YoutubeButtonIcon,
+  PinterestButtonIcon,
   TagButton,
   TwitterButtonIcon,
   KarlButtonAndText,
@@ -347,18 +360,25 @@ ReactOnRails.register({
   KarlLinkedinButtonIconWords,
   KarlTwitterButtonIconWords,
   KarlButtonIconFilter,
+  KarlButtonImageWithText,
+  KarlGarbageButton,
+  KarlStarButton,
 
   // Colors
   KarlColors,
 
   // Cards
   ArticleCard,
+  BackerCard,
   CrowdfundingCard,
   ProjectCard,
   ProjectCreatorCard,
   ProjectSimilarCard,
   SimpleCard,
+  KarlCartRewardCard,
   KarlCard,
+  KarlDonationCard,
+  KarlRewardCard,
   KarlSimilarProjectsCard,
   KarlSimilarProjectsWithInfosCard,
   KarlProjectSimilarLoader,
@@ -397,6 +417,8 @@ ReactOnRails.register({
   TextInputWithLimit,
   TextInputWithUnit,
   KarlCheckboxError,
+  KarlComment,
+  KarlCommentForm,
   KarlFormActions,
   KarlFormRow,
   KarlLocationInput,
@@ -490,6 +512,7 @@ ReactOnRails.register({
   KarlLinkList,
   KarlLinkListDark,
   KarlLinkListSelectedItem,
+  KarlLinkListItemsLight,
 
   // Lists
   BulletList,
@@ -512,17 +535,17 @@ ReactOnRails.register({
   // Navigation
   TabBar,
   KarlHorizontalNav,
-  KarlBrowsingHorizontalNav,
+  KarlTouchHorizontalNav,
+  KarlTouchHorizontalNavWithNotification,
   KarlPaginationExamples,
 
   // Notifications
   Alert,
   Badge,
-  IconBadge,
   KarlAlert,
   KarlAlertWithButton,
   KarlAlertWithMarkdown,
-  KarlIconBadgeWithSvg,
+  KarlIconBadge,
 
   // Popovers
   CallToActionPopover,

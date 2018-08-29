@@ -3,7 +3,3 @@ set -e
 
 echo "Build files generation 🚀"
 yarn run dist
-
-# Sassy-map installation.
-cd vendor/assets/stylesheets/kitten/sassy-maps
-npm install

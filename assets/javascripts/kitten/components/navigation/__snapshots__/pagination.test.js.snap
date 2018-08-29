@@ -64,29 +64,26 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
           title="Previous page"
         >
           <svg
-            className="k-ArrowIcon--left"
+            className="k-ArrowIcon k-ArrowIcon--left"
             data-radium={true}
             style={
               Object {
                 "alignSelf": "center",
-                "height": "14px",
+                "height": "6px",
                 "margin": "0",
                 "padding": "0",
                 "pointerEvents": "none",
-                "width": "12px",
+                "width": "6px",
               }
             }
-            viewBox="0 0 10 10"
+            viewBox="0 0 6 6"
             xmlns="http://www.w3.org/2000/svg"
           >
             <title>
               Arrow
             </title>
             <path
-              d="M7.828,5L6.414,6.413L2.172,2.172l1.414-1.415L7.828,5z"
-            />
-            <path
-              d="M7.828,5L3.586,9.243L2.172,7.827l4.242-4.241L7.828,5z"
+              d="M6 0H0v6h2V2h4z"
             />
           </svg>
         </a>
@@ -133,7 +130,6 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
               "width": "40px",
             }
           }
-          tabIndex={null}
         >
           1
         </a>
@@ -195,7 +191,6 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
               "width": "40px",
             }
           }
-          tabIndex={null}
         >
           9
         </a>
@@ -210,13 +205,13 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
           }
         }
       >
-        <a
+        <span
           aria-label="Go to page 10"
           className="rmq-e4506d25 k-u-size-tiny k-u-weight-regular"
           data-radium={true}
-          href="#10"
+          href={null}
           onBlur={[Function]}
-          onClick={[Function]}
+          onClick={null}
           onFocus={[Function]}
           onKeyDown={[Function]}
           onKeyUp={[Function]}
@@ -233,7 +228,7 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
               "borderWidth": 0,
               "boxSizing": "border-box",
               "color": "#fff",
-              "cursor": "pointer",
+              "cursor": "auto",
               "display": "flex",
               "height": "40px",
               "justifyContent": "center",
@@ -242,10 +237,9 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
               "width": "40px",
             }
           }
-          tabIndex={-1}
         >
           10
-        </a>
+        </span>
       </li>
       <li
         className="rmq-51af0236"
@@ -289,7 +283,6 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
               "width": "40px",
             }
           }
-          tabIndex={null}
         >
           11
         </a>
@@ -351,7 +344,6 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
               "width": "40px",
             }
           }
-          tabIndex={null}
         >
           42
         </a>
@@ -402,29 +394,26 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
           title="Next page"
         >
           <svg
-            className="k-ArrowIcon--right"
+            className="k-ArrowIcon k-ArrowIcon--right"
             data-radium={true}
             style={
               Object {
                 "alignSelf": "center",
-                "height": "14px",
+                "height": "6px",
                 "margin": "0",
                 "padding": "0",
                 "pointerEvents": "none",
-                "width": "12px",
+                "width": "6px",
               }
             }
-            viewBox="0 0 10 10"
+            viewBox="0 0 6 6"
             xmlns="http://www.w3.org/2000/svg"
           >
             <title>
               Arrow
             </title>
             <path
-              d="M7.828,5L6.414,6.413L2.172,2.172l1.414-1.415L7.828,5z"
-            />
-            <path
-              d="M7.828,5L3.586,9.243L2.172,7.827l4.242-4.241L7.828,5z"
+              d="M6 0H0v6h2V2h4z"
             />
           </svg>
         </a>
