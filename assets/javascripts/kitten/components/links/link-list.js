@@ -32,6 +32,7 @@ export class LinkList extends Component {
 
     const linkListItemClassName = classNames('k-LinkList__item', {
       'k-LinkList__item--doubleMargin': itemMargin == 'double',
+      'k-LinkList__item--tripleMargin': itemMargin == 'triple',
     })
 
     return (
@@ -68,7 +69,7 @@ export class LinkList extends Component {
 LinkList.defaultProps = {
   color: PropTypes.oneOf(['light', 'dark']),
   lineHeight: PropTypes.oneOf(['normal']),
-  itemMargin: PropTypes.oneOf(['double']),
+  itemMargin: PropTypes.oneOf(['double', 'triple']),
   weight: PropTypes.oneOf(['regular', 'light']),
 }
 
