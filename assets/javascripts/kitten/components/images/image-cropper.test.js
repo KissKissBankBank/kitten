@@ -5,7 +5,7 @@ import Cropper from 'react-cropper'
 import { SimpleUploader } from 'kitten/components/uploaders/simple-uploader'
 
 describe('<ImageCropper />', () => {
-  const sandbox = sinon.sandbox.create()
+  const sandbox = sinon.createSandbox()
 
   afterEach(() => {
     sandbox.restore()

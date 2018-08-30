@@ -22,6 +22,7 @@
 
   // Items margin
   $double-margin: k-px-to-rem(10px);
+  $triple-margin: k-px-to-rem(15px);
 
   // Links line-height
   $normal-line-height: normal;
@@ -53,6 +54,10 @@
     margin-bottom: $double-margin;
   }
 
+  .k-LinkList__item--tripleMargin {
+    margin-bottom: $triple-margin;
+  }
+
   .k-LinkList__link {
     @include k-typographyFont($font);
     @include k-typographyFontSize($font-size);
@@ -71,10 +76,12 @@
     transition: color .2s;
   }
 
+  .k-LinkList__item--regularWeight,
   .k-LinkList__link--regularWeight {
     @include k-typographyFont($font);
   }
 
+  .k-LinkList__item--lightWeight,
   .k-LinkList__link--lightWeight {
     @include k-typographyFont($font-light);
   }

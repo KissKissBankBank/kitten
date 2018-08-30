@@ -5,7 +5,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: Update `disabled` state on `Contribution` component.
-- Feature: Add `weight` props on `LinkList` component.
+- Fix: Add `k-LinkList__item--tripleMargin` marginBottom.
+- Fix: Add `k-TextInputWithButton__button` padding.
+- Feature: You can now use the build files present in `dist` directory.
+  Add `jsDistPaths` export method.
+- Feature: Add `weight` props and `weight` attribut on each elements of
+  `LinkList` component.
+- Fix: Add a space between title and value informations
+  on `CartRewardCard` and `ContributionCard`.
 
 ## [23.0.0] - 2018-08-27
 

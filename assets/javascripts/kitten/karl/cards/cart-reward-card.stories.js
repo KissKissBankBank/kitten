@@ -22,9 +22,12 @@ storiesOf('Cards/CartRewardCard', module)
                 'Text description',
                 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient mont',
               )}
-              shippingTitle={text('Shipping Title', 'Livraison : ')}
-              shippingValue={text('Shipping Value', 'Janvier 2018')}
-              updateAmountTitle={text('Update amount', 'Modifier le montant')}
+              shippingTitle={text('Shipping Title', 'Shipping:')}
+              shippingValue={text('Shipping Value', 'January 2018')}
+              updateAmountTitle={text(
+                'Update amount',
+                'Change donation amount',
+              )}
             />
           </GridCol>
         </Grid>
