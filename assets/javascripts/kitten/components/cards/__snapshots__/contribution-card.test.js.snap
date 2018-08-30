@@ -65,7 +65,7 @@ exports[`<ContributionCard /> by default matches with snapshot 1`] = `
             className="k-HorizontalStroke k-HorizontalStroke--big"
           />
         </div>
-        
+
         <div
           style={
             Object {
@@ -87,7 +87,7 @@ exports[`<ContributionCard /> by default matches with snapshot 1`] = `
           </p>
         </div>
       </div>
-      
+
     </div>
   </div>
   <style

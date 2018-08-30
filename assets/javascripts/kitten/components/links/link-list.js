@@ -14,7 +14,7 @@ export class LinkList extends Component {
   }
 
   renderItem(element) {
-    const { key, item, href, active, className, ...others } = element
+    const { key, item, href, active, weight, className, ...others } = element
 
     const { color, lineHeight, itemMargin } = this.props
 
@@ -23,10 +23,16 @@ export class LinkList extends Component {
       'k-LinkList__link--light': color == 'light',
       'k-LinkList__link--dark': color == 'dark',
       'k-LinkList__link--normalLineHeight': lineHeight == 'normal',
+      'k-LinkList__link--regularWeight':
+        this.props.weight == 'regular' && !weight,
+      'k-LinkList__link--lightWeight': this.props.weight == 'light' && !weight,
+      'k-LinkList__item--regularWeight': weight == 'regular',
+      'k-LinkList__item--lightWeight': weight == 'light',
     })
 
     const linkListItemClassName = classNames('k-LinkList__item', {
       'k-LinkList__item--doubleMargin': itemMargin == 'double',
+      'k-LinkList__item--tripleMargin': itemMargin == 'triple',
     })
 
     return (
@@ -63,14 +69,16 @@ export class LinkList extends Component {
 LinkList.defaultProps = {
   color: PropTypes.oneOf(['light', 'dark']),
   lineHeight: PropTypes.oneOf(['normal']),
-  itemMargin: PropTypes.oneOf(['double']),
+  itemMargin: PropTypes.oneOf(['double', 'triple']),
+  weight: PropTypes.oneOf(['regular', 'light']),
 }
 
 LinkList.defaultProps = {
   className: null,
   margin: true,
-  items: [], // Eg: [{ key: …, item: …, href: … }]
+  items: [], // Eg: [{ key: …, item: …, href: …, weight: …, }]
   color: 'dark',
   lineHeight: null,
   itemMargin: null,
+  weight: 'regular',
 }
