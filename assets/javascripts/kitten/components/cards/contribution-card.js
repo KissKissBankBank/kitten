@@ -222,7 +222,7 @@ class ContributionCardComponent extends Component {
     if (!valueContributors && !valueDelivery && !valueAvailability) return
 
     return (
-      <StyleRoot style={styleInfos} disabled={isDisabled}>
+      <div style={styleInfos} disabled={isDisabled}>
         <Marger
           top={viewportIsSOrLess ? 2 : 3}
           bottom={viewportIsSOrLess ? 3 : 4}
@@ -231,7 +231,7 @@ class ContributionCardComponent extends Component {
           {this.renderInfo(titleDelivery, valueDelivery)}
           {this.renderInfo(titleAvailability, valueAvailability)}
         </Marger>
-      </StyleRoot>
+      </div>
     )
   }
 
@@ -412,9 +412,9 @@ class ContributionCardComponent extends Component {
     if (!this.props.imageProps.src) return
 
     return (
-      <StyleRoot style={styleImage} disabled={isDisabled}>
+      <div style={styleImage} disabled={isDisabled}>
         <img {...this.props.imageProps} style={styles.image} />
-      </StyleRoot>
+      </div>
     )
   }
 }
