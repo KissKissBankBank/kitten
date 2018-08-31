@@ -275,14 +275,6 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
               </span>
             </span>
           </div>
-          <style
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": "@media (min-width: 768px){ .rmq-ef57b76a{font-size: 16px !important;
-margin-right: 30px !important;}}",
-              }
-            }
-          />
         </div>
         <div
           style={
@@ -445,13 +437,6 @@ margin-right: 30px !important;}}",
                 }
               }
             />
-            <style
-              dangerouslySetInnerHTML={
-                Object {
-                  "__html": "",
-                }
-              }
-            />
           </div>
         </div>
       </div>
@@ -466,6 +451,8 @@ padding-right: 50px !important;}}
 padding-right: 0 !important;}}
 @media (min-width: 1080px){ .rmq-ce79a9e0{padding-left: 115px !important;
 padding-right: 0 !important;}}
+@media (min-width: 768px){ .rmq-ef57b76a{font-size: 16px !important;
+margin-right: 30px !important;}}
 @media (max-width: 767px){ .rmq-2c87bfe9{width: 100% !important;}}
 @media (min-width: 768px){ .rmq-c7c1445b{padding-right: 50px !important;}}",
       }
