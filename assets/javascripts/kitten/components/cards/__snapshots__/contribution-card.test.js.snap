@@ -483,7 +483,6 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
     <div
       className="k-Grid"
       data-radium={true}
-      disabled={false}
       style={
         Object {
           "paddingLeft": 20,
@@ -568,72 +567,78 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
           </p>
         </div>
         <div
-          style={
-            Object {
-              "marginBottom": "1.875rem",
-              "marginTop": "1.25rem",
-            }
-          }
+          data-radium={true}
+          disabled={false}
+          style={Object {}}
         >
-          <div>
-            <span
-              className="k-u-color-font1 k-u-weight-regular"
-              data-radium={true}
-              style={
-                Object {
-                  "fontSize": 14,
-                  "marginRight": 0,
-                }
+          <div
+            style={
+              Object {
+                "marginBottom": "1.875rem",
+                "marginTop": "1.25rem",
               }
-            >
-              Custom title contributors
-               
+            }
+          >
+            <div>
               <span
-                className="k-u-color-font1 k-u-weight-light"
-              >
-                Custom value contributors
-              </span>
-            </span>
-          </div>
-          <div>
-            <span
-              className="k-u-color-font1 k-u-weight-regular"
-              data-radium={true}
-              style={
-                Object {
-                  "fontSize": 14,
-                  "marginRight": 0,
+                className="k-u-color-font1 k-u-weight-regular"
+                data-radium={true}
+                style={
+                  Object {
+                    "fontSize": 14,
+                    "marginRight": 0,
+                  }
                 }
-              }
-            >
-              Custom title delivery
-               
-              <span
-                className="k-u-color-font1 k-u-weight-light"
               >
-                Custom value delivery
+                Custom title contributors
+                 
+                <span
+                  className="k-u-color-font1 k-u-weight-light"
+                >
+                  Custom value contributors
+                </span>
               </span>
-            </span>
-          </div>
-          <div>
-            <span
-              className="k-u-color-font1 k-u-weight-regular"
-              data-radium={true}
-              style={
-                Object {
-                  "fontSize": 14,
-                  "marginRight": 0,
+            </div>
+            <div>
+              <span
+                className="k-u-color-font1 k-u-weight-regular"
+                data-radium={true}
+                style={
+                  Object {
+                    "fontSize": 14,
+                    "marginRight": 0,
+                  }
                 }
-              }
-            >
-              Custom title availability
-               
-              <span
-                className="k-u-color-font1 k-u-weight-light"
               >
-                Custom value availability
+                Custom title delivery
+                 
+                <span
+                  className="k-u-color-font1 k-u-weight-light"
+                >
+                  Custom value delivery
+                </span>
               </span>
-            </span>
+            </div>
+            <div>
+              <span
+                className="k-u-color-font1 k-u-weight-regular"
+                data-radium={true}
+                style={
+                  Object {
+                    "fontSize": 14,
+                    "marginRight": 0,
+                  }
+                }
+              >
+                Custom title availability
+                 
+                <span
+                  className="k-u-color-font1 k-u-weight-light"
+                >
+                  Custom value availability
+                </span>
+              </span>
+            </div>
           </div>
         </div>
       </div>
@@ -654,16 +659,22 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
             }
           }
         >
-          <img
-            alt="Image alt"
+          <div
             data-radium={true}
-            src="#image"
-            style={
-              Object {
-                "width": "100%",
+            disabled={false}
+            style={Object {}}
+          >
+            <img
+              alt="Image alt"
+              data-radium={true}
+              src="#image"
+              style={
+                Object {
+                  "width": "100%",
+                }
               }
-            }
-          />
+            />
+          </div>
         </div>
       </div>
     </div>
