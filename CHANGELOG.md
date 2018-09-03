@@ -9,7 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 Features:
 - Add `version` prop to `ContributionCard`.
 - You can now use the build files present in `dist` directory.
-  on `CartRewardCard` and `ContributionCard`.
+  Add `jsDistPaths` export method.
 - Add `weight` props and `weight` attribut on each elements of
   `LinkList` component.
 
@@ -18,8 +18,8 @@ Fixes:
 - Update `disabled` state on `Contribution` component.
 - Add `k-LinkList__item--tripleMargin` marginBottom.
 - Add `k-TextInputWithButton__button` padding.
-  Add `jsDistPaths` export method.
 - Add a space between title and value informations
+  on `CartRewardCard` and `ContributionCard`.
 
 ## [23.0.0] - 2018-08-27
 
