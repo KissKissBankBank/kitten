@@ -169,61 +169,67 @@ class ContributionCardComponent extends Component {
       textTag,
       starred,
       starLabel,
+      isDisabled,
     } = this.props
+
+    const styleDescription = [isDisabled && styles.disabled]
 
     return (
       <Fragment>
-        {starred && (
-          <Marger bottom="2">
-            <Button
-              icon
-              readonly
-              tag="span"
-              size="tiny"
-              modifier="lithium"
-              style={{ borderRadius: 5 }}
+        <div style={styleDescription} disabled={isDisabled}>
+          {starred && (
+            <Marger bottom="2">
+              <Button
+                icon
+                readonly
+                tag="span"
+                size="tiny"
+                modifier="lithium"
+                style={{ borderRadius: 5 }}
+              >
+                <StarIcon className="k-Button__icon is-readonly" />
+                {starLabel}
+              </Button>
+            </Marger>
+          )}
+          <Marger top={starred ? 2 : 0} bottom="2">
+            <Title
+              modifier={this.isTinyVersion() ? 'quaternary' : 'tertiary'}
+              italic
+              margin={false}
+              tag={titleTag}
+              style={styles.textColor}
             >
-              <StarIcon className="k-Button__icon is-readonly" />
-              {starLabel}
-            </Button>
+              {titleAmount}
+            </Title>
           </Marger>
-        )}
-        <Marger top={starred ? 2 : 0} bottom="2">
-          <Title
-            modifier={this.isTinyVersion() ? 'quaternary' : 'tertiary'}
-            italic
-            margin={false}
-            tag={titleTag}
-            style={styles.textColor}
-          >
-            {titleAmount}
-          </Title>
-        </Marger>
-        <Marger top="2" bottom="3">
-          <HorizontalStroke size="big" />
-        </Marger>
-        {titleDescription && (
-          <Marger top="3" bottom="1">
-            <Text
-              color="font1"
-              size={this.isTinyVersion() ? 'big' : 'huge'}
-              tag={textTag}
-              weight="bold"
-              style={styles.textMargin}
+          <Marger top="2" bottom="3">
+            <HorizontalStroke size="big" />
+          </Marger>
+          {titleDescription && (
+            <Marger top="3" bottom="1">
+              <Text
+                color="font1"
+                size={this.isTinyVersion() ? 'big' : 'huge'}
+                tag={textTag}
+                weight="bold"
+                style={styles.textMargin}
+              >
+                {titleDescription}
+              </Text>
+            </Marger>
+          )}
+          <Marger top={!titleDescription ? 3 : 1}>
+            <Paragraph
+              style={styles.textColor}
+              modifier={this.isTinyVersion() ? 'quaternary' : 'tertiary'}
+              margin={false}
             >
-              {titleDescription}
-            </Text>
+              {textDescription}
+            </Paragraph>
           </Marger>
-        )}
-        <Marger top={!titleDescription ? 3 : 1}>
-          <Paragraph
-            style={styles.textColor}
-            modifier={this.isTinyVersion() ? 'quaternary' : 'tertiary'}
-            margin={false}
-          >
-            {textDescription}
-          </Paragraph>
-        </Marger>
+        </div>
+
         {!!this.props.render && this.props.render()}
         {this.renderInfos()}
         {!this.isTinyVersion() && this.renderChoiceButton()}
