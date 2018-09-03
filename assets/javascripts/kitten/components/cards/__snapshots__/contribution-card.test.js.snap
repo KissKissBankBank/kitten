@@ -22,7 +22,6 @@ exports[`<ContributionCard /> by default matches with snapshot 1`] = `
     <div
       className="rmq-5aa2f196 rmq-5b3da7a1 rmq-ce79a9e0 k-Grid"
       data-radium={true}
-      disabled={false}
       style={
         Object {
           "paddingLeft": 20,
@@ -128,7 +127,6 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
     <div
       className="rmq-5aa2f196 rmq-5b3da7a1 rmq-ce79a9e0 k-Grid"
       data-radium={true}
-      disabled={false}
       style={
         Object {
           "paddingLeft": 20,
@@ -213,64 +211,70 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
           </p>
         </div>
         <div
-          style={
-            Object {
-              "marginBottom": "2.5rem",
-              "marginTop": "1.875rem",
-            }
-          }
+          data-radium={true}
+          disabled={false}
+          style={Object {}}
         >
-          <span
-            className="rmq-ef57b76a k-u-color-font1 k-u-weight-regular"
-            data-radium={true}
+          <div
             style={
               Object {
-                "fontSize": 14,
+                "marginBottom": "2.5rem",
+                "marginTop": "1.875rem",
               }
             }
           >
-            Custom title contributors
-             
             <span
-              className="k-u-color-font1 k-u-weight-light"
-            >
-              Custom value contributors
-            </span>
-          </span>
-          <span
-            className="rmq-ef57b76a k-u-color-font1 k-u-weight-regular"
-            data-radium={true}
-            style={
-              Object {
-                "fontSize": 14,
+              className="rmq-ef57b76a k-u-color-font1 k-u-weight-regular"
+              data-radium={true}
+              style={
+                Object {
+                  "fontSize": 14,
+                }
               }
-            }
-          >
-            Custom title delivery
-             
-            <span
-              className="k-u-color-font1 k-u-weight-light"
             >
-              Custom value delivery
+              Custom title contributors
+               
+              <span
+                className="k-u-color-font1 k-u-weight-light"
+              >
+                Custom value contributors
+              </span>
             </span>
-          </span>
-          <span
-            className="rmq-ef57b76a k-u-color-font1 k-u-weight-regular"
-            data-radium={true}
-            style={
-              Object {
-                "fontSize": 14,
+            <span
+              className="rmq-ef57b76a k-u-color-font1 k-u-weight-regular"
+              data-radium={true}
+              style={
+                Object {
+                  "fontSize": 14,
+                }
               }
-            }
-          >
-            Custom title availability
-             
-            <span
-              className="k-u-color-font1 k-u-weight-light"
             >
-              Custom value availability
+              Custom title delivery
+               
+              <span
+                className="k-u-color-font1 k-u-weight-light"
+              >
+                Custom value delivery
+              </span>
             </span>
-          </span>
+            <span
+              className="rmq-ef57b76a k-u-color-font1 k-u-weight-regular"
+              data-radium={true}
+              style={
+                Object {
+                  "fontSize": 14,
+                }
+              }
+            >
+              Custom title availability
+               
+              <span
+                className="k-u-color-font1 k-u-weight-light"
+              >
+                Custom value availability
+              </span>
+            </span>
+          </div>
         </div>
         <div
           style={
@@ -418,16 +422,22 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
             }
           }
         >
-          <img
-            alt="Image alt"
+          <div
             data-radium={true}
-            src="#image"
-            style={
-              Object {
-                "width": "100%",
+            disabled={false}
+            style={Object {}}
+          >
+            <img
+              alt="Image alt"
+              data-radium={true}
+              src="#image"
+              style={
+                Object {
+                  "width": "100%",
+                }
               }
-            }
-          />
+            />
+          </div>
         </div>
       </div>
     </div>

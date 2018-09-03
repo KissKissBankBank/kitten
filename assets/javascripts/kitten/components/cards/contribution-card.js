@@ -104,11 +104,7 @@ class ContributionCardComponent extends Component {
       ...others
     } = this.props
 
-    const styleCard = [
-      others.style,
-      styles.card,
-      isDisabled && styles.card.isDisabled,
-    ]
+    const styleCard = [others.style, styles.card]
 
     return (
       <StyleRoot {...others} style={styleCard}>
@@ -116,7 +112,7 @@ class ContributionCardComponent extends Component {
           bottom={viewportIsSOrLess ? 0 : 4}
           top={viewportIsSOrLess ? 3 : 4}
         >
-          <Grid style={styles.card.addPadding} disabled={isDisabled}>
+          <Grid style={styles.card.addPadding}>
             <GridCol col-l="7" col-m={!imageProps.src ? 10 : 7}>
               {this.renderDescription()}
             </GridCol>
@@ -144,7 +140,10 @@ class ContributionCardComponent extends Component {
       starred,
       starLabel,
       viewportIsSOrLess,
+      isDisabled,
     } = this.props
+
+    const styleDescription = [isDisabled && styles.disabled]
 
     return (
       <Fragment>
@@ -215,19 +214,24 @@ class ContributionCardComponent extends Component {
       valueDelivery,
       valueAvailability,
       viewportIsSOrLess,
+      isDisabled,
     } = this.props
+
+    const styleInfos = [isDisabled && styles.disabled]
 
     if (!valueContributors && !valueDelivery && !valueAvailability) return
 
     return (
-      <Marger
-        top={viewportIsSOrLess ? 2 : 3}
-        bottom={viewportIsSOrLess ? 3 : 4}
-      >
-        {this.renderInfo(titleContributors, valueContributors)}
-        {this.renderInfo(titleDelivery, valueDelivery)}
-        {this.renderInfo(titleAvailability, valueAvailability)}
-      </Marger>
+      <div style={styleInfos} disabled={isDisabled}>
+        <Marger
+          top={viewportIsSOrLess ? 2 : 3}
+          bottom={viewportIsSOrLess ? 3 : 4}
+        >
+          {this.renderInfo(titleContributors, valueContributors)}
+          {this.renderInfo(titleDelivery, valueDelivery)}
+          {this.renderInfo(titleAvailability, valueAvailability)}
+        </Marger>
+      </div>
     )
   }
 
@@ -331,8 +335,6 @@ class ContributionCardComponent extends Component {
   }
 
   renderIconBadge() {
-    if (this.props.isDisabled) return
-
     return (
       <IconBadge valid style={styles.iconBadge}>
         <CheckedIcon className="k-IconBadge__svg" />
@@ -363,8 +365,8 @@ class ContributionCardComponent extends Component {
                     {myContribution}
                     <br />
                     <Text
-                      tag={!isDisabled ? 'a' : 'span'}
-                      href={!isDisabled ? manageContributionLink : null}
+                      tag="a"
+                      href={manageContributionLink}
                       color="primary1"
                       weight="regular"
                       decoration="none"
@@ -386,8 +388,8 @@ class ContributionCardComponent extends Component {
                 {myContribution}
                 <br />
                 <Text
-                  tag={!isDisabled ? 'a' : 'span'}
-                  href={!isDisabled ? manageContributionLink : null}
+                  tag="a"
+                  href={manageContributionLink}
                   color="primary1"
                   weight="regular"
                   decoration="none"
@@ -403,13 +405,26 @@ class ContributionCardComponent extends Component {
   }
 
   renderImage() {
+    const { isDisabled } = this.props
+
+    const styleImage = [isDisabled && styles.disabled]
+
     if (!this.props.imageProps.src) return
 
-    return <img {...this.props.imageProps} style={styles.image} />
+    return (
+      <div style={styleImage} disabled={isDisabled}>
+        <img {...this.props.imageProps} style={styles.image} />
+      </div>
+    )
   }
 }
 
 const styles = {
+  disabled: {
+    filter: 'grayscale(1) opacity(.4)',
+    cursor: 'not-allowed',
+  },
+
   textColor: {
     color: COLORS.font1,
   },
@@ -441,11 +456,6 @@ const styles = {
       [`@media (min-width: ${ScreenConfig['M'].min}px)`]: {
         paddingRight: 50,
       },
-    },
-
-    isDisabled: {
-      filter: 'grayscale(1) opacity(.4)',
-      cursor: 'not-allowed',
     },
   },
 
