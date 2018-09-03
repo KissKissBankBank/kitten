@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `version` prop to `DonationCard` and `TextInputWithUnitForm`.
+
 ## [23.1.0] - 2018-09-03
 
 Features:
