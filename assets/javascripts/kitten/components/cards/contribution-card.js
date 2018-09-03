@@ -48,6 +48,8 @@ class ContributionCardComponent extends Component {
     starred: PropTypes.bool,
     starLabel: PropTypes.string,
     render: PropTypes.func,
+
+    version: PropTypes.oneOf(['default', 'tiny']),
   }
 
   static defaultProps = {
@@ -71,7 +73,12 @@ class ContributionCardComponent extends Component {
     starred: false,
     starLabel: '',
     render: () => {},
+
+    version: 'default',
   }
+
+  isTinyVersion = () =>
+    this.props.version === 'tiny' || this.props.viewportIsSOrLess
 
   render() {
     // We need to destructure the props to prevent them to hydrate children components.
@@ -101,6 +108,7 @@ class ContributionCardComponent extends Component {
       render,
       starred,
       starLabel,
+      version,
       ...others
     } = this.props
 
@@ -110,25 +118,47 @@ class ContributionCardComponent extends Component {
       isDisabled && styles.card.isDisabled,
     ]
 
+    const cardAddPadding = this.isTinyVersion()
+      ? styles.card.addPadding.tinyVersion
+      : styles.card.addPadding
+
+    const cardImage = this.isTinyVersion()
+      ? styles.card.image.tinyVersion
+      : styles.card.image
+
+    const leftColumnProps = this.isTinyVersion()
+      ? null
+      : {
+          'col-m': !imageProps.src ? 10 : 7,
+          'col-l': 7,
+        }
+
+    const rightColumnProps = this.isTinyVersion()
+      ? null
+      : {
+          'col-m': 4,
+          'offset-m': 1,
+        }
+
     return (
       <StyleRoot {...others} style={styleCard}>
         <Marger
-          bottom={viewportIsSOrLess ? 0 : 4}
-          top={viewportIsSOrLess ? 3 : 4}
+          bottom={this.isTinyVersion() ? 0 : 4}
+          top={this.isTinyVersion() ? 3 : 4}
         >
-          <Grid style={styles.card.addPadding} disabled={isDisabled}>
-            <GridCol col-l="7" col-m={!imageProps.src ? 10 : 7}>
-              {this.renderDescription()}
-            </GridCol>
+          <Grid style={cardAddPadding} disabled={isDisabled}>
+            <GridCol {...leftColumnProps}>{this.renderDescription()}</GridCol>
+
             {imageProps.src && (
-              <GridCol col-m="4" offset-m="1" style={styles.card.image}>
+              <GridCol {...rightColumnProps} style={cardImage}>
                 <Marger bottom={!myContribution ? 2 : null}>
                   {this.renderImage()}
                 </Marger>
               </GridCol>
             )}
           </Grid>
-          {viewportIsSOrLess && this.renderChoiceButton()}
+
+          {this.isTinyVersion() && this.renderChoiceButton()}
         </Marger>
       </StyleRoot>
     )
@@ -143,7 +173,6 @@ class ContributionCardComponent extends Component {
       textTag,
       starred,
       starLabel,
-      viewportIsSOrLess,
     } = this.props
 
     return (
@@ -165,7 +194,7 @@ class ContributionCardComponent extends Component {
         )}
         <Marger top={starred ? 2 : 0} bottom="2">
           <Title
-            modifier={viewportIsSOrLess ? 'quaternary' : 'tertiary'}
+            modifier={this.isTinyVersion() ? 'quaternary' : 'tertiary'}
             italic
             margin={false}
             tag={titleTag}
@@ -181,7 +210,7 @@ class ContributionCardComponent extends Component {
           <Marger top="3" bottom="1">
             <Text
               color="font1"
-              size={viewportIsSOrLess ? 'big' : 'huge'}
+              size={this.isTinyVersion() ? 'big' : 'huge'}
               tag={textTag}
               weight="bold"
               style={styles.textMargin}
@@ -193,7 +222,7 @@ class ContributionCardComponent extends Component {
         <Marger top={!titleDescription ? 3 : 1}>
           <Paragraph
             style={styles.textColor}
-            modifier={viewportIsSOrLess ? 'quaternary' : 'tertiary'}
+            modifier={this.isTinyVersion() ? 'quaternary' : 'tertiary'}
             margin={false}
           >
             {textDescription}
@@ -201,7 +230,7 @@ class ContributionCardComponent extends Component {
         </Marger>
         {!!this.props.render && this.props.render()}
         {this.renderInfos()}
-        {!viewportIsSOrLess && this.renderChoiceButton()}
+        {!this.isTinyVersion() && this.renderChoiceButton()}
       </Fragment>
     )
   }
@@ -214,15 +243,14 @@ class ContributionCardComponent extends Component {
       valueContributors,
       valueDelivery,
       valueAvailability,
-      viewportIsSOrLess,
     } = this.props
 
     if (!valueContributors && !valueDelivery && !valueAvailability) return
 
     return (
       <Marger
-        top={viewportIsSOrLess ? 2 : 3}
-        bottom={viewportIsSOrLess ? 3 : 4}
+        top={this.isTinyVersion() ? 2 : 3}
+        bottom={this.isTinyVersion() ? 3 : 4}
       >
         {this.renderInfo(titleContributors, valueContributors)}
         {this.renderInfo(titleDelivery, valueDelivery)}
@@ -236,39 +264,45 @@ class ContributionCardComponent extends Component {
 
     if (!title) return
 
+    const infosLists = this.isTinyVersion()
+      ? styles.infos.lists.tinyVersion
+      : styles.infos.lists
+
     return (
       <Fragment>
-        {viewportIsTabletOrLess && (
-          <div>
-            <Text color="font1" weight="regular" style={styles.infos.lists}>
+        {viewportIsTabletOrLess ||
+          (this.isTinyVersion() && (
+            <div>
+              <Text color="font1" weight="regular" style={infosLists}>
+                {title}{' '}
+                <Text color="font1" weight="light">
+                  {value}
+                </Text>
+              </Text>
+            </div>
+          ))}
+
+        {!viewportIsTabletOrLess &&
+          !this.isTinyVersion() && (
+            <Text color="font1" weight="regular" style={infosLists}>
               {title}{' '}
               <Text color="font1" weight="light">
                 {value}
               </Text>
             </Text>
-          </div>
-        )}
-
-        {!viewportIsTabletOrLess && (
-          <Text color="font1" weight="regular" style={styles.infos.lists}>
-            {title}{' '}
-            <Text color="font1" weight="light">
-              {value}
-            </Text>
-          </Text>
-        )}
+          )}
       </Fragment>
     )
   }
 
   renderChoiceButton() {
-    const { viewportIsSOrLess, myContribution, button } = this.props
+    const { myContribution, button } = this.props
 
     if (!button && !myContribution) return
 
     return (
       <Fragment>
-        {viewportIsSOrLess && (
+        {this.isTinyVersion() && (
           <Fragment>
             {myContribution && (
               <Marger
@@ -282,7 +316,7 @@ class ContributionCardComponent extends Component {
           </Fragment>
         )}
 
-        {!viewportIsSOrLess && (
+        {!this.isTinyVersion() && (
           <Marger top="4">
             {this.renderButton()}
             {myContribution && (
@@ -299,7 +333,6 @@ class ContributionCardComponent extends Component {
   renderButton() {
     const {
       button,
-      viewportIsSOrLess,
       buttonOnMouseEnter,
       buttonOnMouseLeave,
       buttonOnClick,
@@ -307,7 +340,10 @@ class ContributionCardComponent extends Component {
       isDisabled,
     } = this.props
 
-    const buttonMargin = viewportIsSOrLess || !myContribution ? null : 2
+    const buttonMargin = this.isTinyVersion() || !myContribution ? null : 2
+    const buttonStyles = this.isTinyVersion()
+      ? styles.button.tinyVersion
+      : styles.button
 
     if (!button) return
 
@@ -318,7 +354,7 @@ class ContributionCardComponent extends Component {
           modifier="helium"
           type="button"
           aria-label={button}
-          style={styles.button}
+          style={buttonStyles}
           onMouseEnter={buttonOnMouseEnter}
           onMouseLeave={buttonOnMouseLeave}
           onClick={buttonOnClick}
@@ -346,15 +382,18 @@ class ContributionCardComponent extends Component {
       myContribution,
       manageContribution,
       manageContributionLink,
-      viewportIsSOrLess,
     } = this.props
 
-    if (!myContribution || (viewportIsSOrLess && isDisabled)) return
+    if (!myContribution || (this.isTinyVersion() && isDisabled)) return
+
+    const choiceButtonAddPadding = this.isTinyVersion()
+      ? styles.choiceButton.addPadding.tinyVersion
+      : styles.choiceButton.addPadding
 
     return (
       <Fragment>
-        {viewportIsSOrLess && (
-          <Grid style={styles.choiceButton.addPadding}>
+        {this.isTinyVersion() && (
+          <Grid style={choiceButtonAddPadding}>
             <GridCol>
               <div style={styles.myContribution}>
                 {this.renderIconBadge()}
@@ -378,7 +417,7 @@ class ContributionCardComponent extends Component {
           </Grid>
         )}
 
-        {!viewportIsSOrLess && (
+        {!this.isTinyVersion() && (
           <div style={styles.myContribution}>
             {this.renderIconBadge()}
             <div style={styles.myContribution.text}>
@@ -435,11 +474,20 @@ const styles = {
         paddingLeft: 115,
         paddingRight: 0,
       },
+
+      tinyVersion: {
+        paddingLeft: 20,
+        paddingRight: 20,
+      },
     },
 
     image: {
       [`@media (min-width: ${ScreenConfig['M'].min}px)`]: {
         paddingRight: 50,
+      },
+
+      tinyVersion: {
+        paddingRight: 0,
       },
     },
 
@@ -456,20 +504,30 @@ const styles = {
   infos: {
     lists: {
       fontSize: 14,
+
       [`@media (min-width: ${ScreenConfig['M'].min}px)`]: {
         fontSize: 16,
         marginRight: 30,
+      },
+
+      tinyVersion: {
+        fontSize: 14,
+        marginRight: 0,
       },
     },
   },
 
   choiceButton: {
+    paddingLeft: 20,
+    paddingRight: 20,
+
     addPadding: {
       [`@media (min-width: ${ScreenConfig['S'].min}px)`]: {
         paddingLeft: 50,
         paddingRight: 50,
       },
-      [`@media (max-width: ${ScreenConfig['XS'].max}px)`]: {
+
+      tinyVersion: {
         paddingLeft: 20,
         paddingRight: 20,
       },
@@ -488,6 +546,10 @@ const styles = {
 
   button: {
     [`@media (max-width: ${ScreenConfig['S'].max}px)`]: {
+      width: '100%',
+    },
+
+    tinyVersion: {
       width: '100%',
     },
   },

@@ -68,4 +68,37 @@ describe('<ContributionCard />', () => {
       expect(component).toMatchSnapshot()
     })
   })
+
+  describe('with tiny version', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(
+          <ContributionCard
+            titleAmount="Custom title mount"
+            imageProps={{
+              src: '#image',
+              alt: 'Image alt',
+            }}
+            titleDescription="Custom title description"
+            textDescription="Custom text description"
+            titleContributors="Custom title contributors"
+            titleDelivery="Custom title delivery"
+            titleAvailability="Custom title availability"
+            valueContributors="Custom value contributors"
+            valueDelivery="Custom value delivery"
+            valueAvailability="Custom value availability"
+            button="Custom text button"
+            myContribution="Custom my contribution"
+            manageContribution="Custom manage contribution"
+            manageContributionLink="Custom manage link contribution"
+            version="tiny"
+          />,
+        )
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
 })

@@ -129,5 +129,30 @@ export const KarlRewardCard = () => (
         />
       </Marger>
     </Container>
+
+    <KarlExampleTitle>Small Image Reward card (tiny version)</KarlExampleTitle>
+    <Container>
+      <Marger top="2" bottom="2">
+        <RewardCard
+          titleAmount="For 00€"
+          titleDescription="Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
+          textDescription="In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi."
+          titleContributors="Contributors:"
+          valueContributors="35"
+          titleDelivery="Delivery:"
+          valueDelivery="January 2018"
+          titleAvailability="Availability:"
+          valueAvailability="200"
+          myContribution="You contributed to this project"
+          manageContribution="Manage my contribution"
+          button="Choose"
+          imageProps={{
+            src: 'http://via.placeholder.com/200x200/caf4fe/caf4fe',
+            alt: '',
+          }}
+          version="tiny"
+        />
+      </Marger>
+    </Container>
   </StyleRoot>
 )
