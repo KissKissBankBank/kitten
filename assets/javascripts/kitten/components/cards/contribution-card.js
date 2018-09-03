@@ -112,11 +112,7 @@ class ContributionCardComponent extends Component {
       ...others
     } = this.props
 
-    const styleCard = [
-      others.style,
-      styles.card,
-      isDisabled && styles.card.isDisabled,
-    ]
+    const styleCard = [others.style, styles.card]
 
     const cardAddPadding = this.isTinyVersion()
       ? styles.card.addPadding.tinyVersion
@@ -146,7 +142,7 @@ class ContributionCardComponent extends Component {
           bottom={this.isTinyVersion() ? 0 : 4}
           top={this.isTinyVersion() ? 3 : 4}
         >
-          <Grid style={cardAddPadding} disabled={isDisabled}>
+          <Grid style={cardAddPadding}>
             <GridCol {...leftColumnProps}>{this.renderDescription()}</GridCol>
 
             {imageProps.src && (
@@ -243,19 +239,24 @@ class ContributionCardComponent extends Component {
       valueContributors,
       valueDelivery,
       valueAvailability,
+      isDisabled,
     } = this.props
+
+    const styleInfos = [isDisabled && styles.disabled]
 
     if (!valueContributors && !valueDelivery && !valueAvailability) return
 
     return (
-      <Marger
-        top={this.isTinyVersion() ? 2 : 3}
-        bottom={this.isTinyVersion() ? 3 : 4}
-      >
-        {this.renderInfo(titleContributors, valueContributors)}
-        {this.renderInfo(titleDelivery, valueDelivery)}
-        {this.renderInfo(titleAvailability, valueAvailability)}
-      </Marger>
+      <div style={styleInfos} disabled={isDisabled}>
+        <Marger
+          top={this.isTinyVersion() ? 2 : 3}
+          bottom={this.isTinyVersion() ? 3 : 4}
+        >
+          {this.renderInfo(titleContributors, valueContributors)}
+          {this.renderInfo(titleDelivery, valueDelivery)}
+          {this.renderInfo(titleAvailability, valueAvailability)}
+        </Marger>
+      </div>
     )
   }
 
@@ -367,8 +368,6 @@ class ContributionCardComponent extends Component {
   }
 
   renderIconBadge() {
-    if (this.props.isDisabled) return
-
     return (
       <IconBadge valid style={styles.iconBadge}>
         <CheckedIcon className="k-IconBadge__svg" />
@@ -402,8 +401,8 @@ class ContributionCardComponent extends Component {
                     {myContribution}
                     <br />
                     <Text
-                      tag={!isDisabled ? 'a' : 'span'}
-                      href={!isDisabled ? manageContributionLink : null}
+                      tag="a"
+                      href={manageContributionLink}
                       color="primary1"
                       weight="regular"
                       decoration="none"
@@ -425,8 +424,8 @@ class ContributionCardComponent extends Component {
                 {myContribution}
                 <br />
                 <Text
-                  tag={!isDisabled ? 'a' : 'span'}
-                  href={!isDisabled ? manageContributionLink : null}
+                  tag="a"
+                  href={manageContributionLink}
                   color="primary1"
                   weight="regular"
                   decoration="none"
@@ -442,13 +441,26 @@ class ContributionCardComponent extends Component {
   }
 
   renderImage() {
+    const { isDisabled } = this.props
+
+    const styleImage = [isDisabled && styles.disabled]
+
     if (!this.props.imageProps.src) return
 
-    return <img {...this.props.imageProps} style={styles.image} />
+    return (
+      <div style={styleImage} disabled={isDisabled}>
+        <img {...this.props.imageProps} style={styles.image} />
+      </div>
+    )
   }
 }
 
 const styles = {
+  disabled: {
+    filter: 'grayscale(1) opacity(.4)',
+    cursor: 'not-allowed',
+  },
+
   textColor: {
     color: COLORS.font1,
   },
@@ -489,11 +501,6 @@ const styles = {
       tinyVersion: {
         paddingRight: 0,
       },
-    },
-
-    isDisabled: {
-      filter: 'grayscale(1) opacity(.4)',
-      cursor: 'not-allowed',
     },
   },
 

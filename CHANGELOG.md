@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add `version` prop to `ContributionCard`.
+- Fix: Update `disabled` state on `Contribution` component.
 - Fix: Add `k-LinkList__item--tripleMargin` marginBottom.
 - Fix: Add `k-TextInputWithButton__button` padding.
 - Feature: You can now use the build files present in `dist` directory.
