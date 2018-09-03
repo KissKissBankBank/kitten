@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add an `RewardCard` example with tiny version.
 - Feature: Create new `LendopolisLogo` component.
 - Feature: Add `KarlFooterLendopolis` example.
 - Feature: Add `KarlLinkListItemsLight` example.
