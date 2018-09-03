@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Add `disabled` with `readonly` props on `Button`.
 - Fix: Update `disabled` state on `Contribution` component.
 - Fix: Add `k-LinkList__item--tripleMargin` marginBottom.
 - Fix: Add `k-TextInputWithButton__button` padding.
