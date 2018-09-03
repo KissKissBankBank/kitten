@@ -34,9 +34,7 @@ export const TextInputWithUnitForm = ({
 }) => {
   const formStyle = align === 'center' && styles.form.centered
   const isTinyVersion = version === 'tiny'
-
   const gridColProps = isTinyVersion ? {} : { 'col-xs': 7, 'col-m': 5 }
-
   const buttonStyles = isTinyVersion ? styles.button.tinyVersion : styles.button
 
   return (
