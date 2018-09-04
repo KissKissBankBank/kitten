@@ -2,15 +2,9 @@ import React, { Component, Fragment } from 'react'
 import Radium, { StyleRoot } from 'radium'
 import PropTypes from 'prop-types'
 import { Marger } from 'kitten/components/layout/marger'
-import { Title as TitleBase } from 'kitten/components/typography/title'
+import { Title } from 'kitten/components/typography/title'
 import { Text } from 'kitten/components/typography/text'
-import { Button as ButtonBase } from 'kitten/components/buttons/button'
-import COLORS from 'kitten/constants/colors-config'
-import { ScreenConfig } from 'kitten/constants/screen-config'
-import { mediaQueries } from 'kitten/hoc/media-queries'
-
-const Title = Radium(TitleBase)
-const Button = Radium(ButtonBase)
+import { Button } from 'kitten/components/buttons/button'
 
 export class VerticalCardWithAction extends Component {
   static propTypes = {
