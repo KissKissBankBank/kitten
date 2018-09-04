@@ -19,6 +19,9 @@ const DonationCardComponent = ({
   ...others
 }) => {
   const isTinyVersion = version === 'tiny' || viewportIsSOrLess
+  const gridColProps = isTinyVersion
+    ? {}
+    : { 'col-m': 10, 'offset-m': 1, 'col-l': 8, 'offset-l': 2 }
 
   const cardStyles = [
     others.style,
@@ -30,7 +33,7 @@ const DonationCardComponent = ({
     <div style={cardStyles}>
       <Marger bottom={isTinyVersion ? 3 : 4} top={isTinyVersion ? 3 : 4}>
         <Grid style={styles.card.content}>
-          <GridCol col-l="8" offset-l="2" col-m="10" offset-m="1">
+          <GridCol {...gridColProps}>
             <Marger bottom="2">
               <Title
                 modifier={isTinyVersion ? 'quinary' : 'quaternary'}
@@ -41,9 +44,11 @@ const DonationCardComponent = ({
                 {title}
               </Title>
             </Marger>
+
             <Marger top="2" bottom="3">
               <HorizontalStroke size="big" style={styles.horizontalStroke} />
             </Marger>
+
             <TextInputWithUnitForm
               {...donationForm}
               align="center"
