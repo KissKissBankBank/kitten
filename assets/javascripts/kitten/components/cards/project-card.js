@@ -17,7 +17,9 @@ import { TypologyTagIcon } from 'kitten/components/icons/typology-tag-icon'
 import { InstrumentTagIcon } from 'kitten/components/icons/instrument-tag-icon'
 
 export const MIN_WIDTH = 280
+export const MOBILE_MIN_WIDTH = 170
 export const MARGIN_BETWEEN = 40
+export const MOBILE_MARGIN_BETWEEN = 10
 
 class ProjectCardComponent extends Component {
   constructor() {

@@ -8,11 +8,9 @@ import {
   CONTAINER_PADDING_MOBILE,
 } from 'kitten/constants/grid-config'
 import ColorsConfig from 'kitten/constants/colors-config'
-
 import { Grid, GridCol } from 'kitten/components/grid/grid'
 import { ButtonIcon } from 'kitten/components/buttons/button-icon'
 import { ArrowIcon } from 'kitten/components/icons/arrow-icon'
-
 import { CarouselInner } from 'kitten/components/carousel/carousel-inner'
 
 export const getNumColumnsForWidth = (
