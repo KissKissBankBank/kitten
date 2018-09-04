@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Fix `GridCol` size for `tiny` version to `DonationCard`.
+
 ## [23.2.0] - 2018-09-04
 
 Feature:
