@@ -163,7 +163,9 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
             }
           >
             <div
+              className="rmq-2001d403"
               data-radium={true}
+              style={Object {}}
             >
               <button
                 aria-label="To contribute"
