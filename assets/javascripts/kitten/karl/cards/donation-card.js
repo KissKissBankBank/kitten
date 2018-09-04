@@ -56,5 +56,22 @@ export const KarlDonationCard = () => (
         />
       </Marger>
     </Container>
+
+    <KarlExampleTitle>Donation card tiny version</KarlExampleTitle>
+    <Container>
+      <Marger top="2" bottom="2">
+        <DonationCard
+          title="In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo."
+          donationForm={{
+            buttonLabel: 'To contribute',
+            inputId: 'donation-amount',
+            inputLabel: 'Enter your amount',
+            inputPlaceholder: 'Your amount',
+            inputUnit: '€',
+          }}
+          version="tiny"
+        />
+      </Marger>
+    </Container>
   </Fragment>
 )

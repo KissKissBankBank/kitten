@@ -8,7 +8,6 @@ import { HorizontalStroke } from 'kitten/components/layout/horizontal-stroke'
 import COLORS from 'kitten/constants/colors-config'
 import { mediaQueries } from 'kitten/hoc/media-queries'
 import { TextInputWithUnitForm } from 'kitten/components/form/text-input-with-unit-form'
-import { ScreenConfig } from 'kitten/constants/screen-config'
 
 const DonationCardComponent = ({
   viewportIsSOrLess,
@@ -16,8 +15,11 @@ const DonationCardComponent = ({
   title,
   titleTag,
   donationForm,
+  version,
   ...others
 }) => {
+  const isTinyVersion = version === 'tiny' || viewportIsSOrLess
+
   const cardStyles = [
     others.style,
     styles.card,
@@ -26,15 +28,12 @@ const DonationCardComponent = ({
 
   return (
     <div style={cardStyles}>
-      <Marger
-        bottom={viewportIsSOrLess ? 3 : 4}
-        top={viewportIsSOrLess ? 3 : 4}
-      >
+      <Marger bottom={isTinyVersion ? 3 : 4} top={isTinyVersion ? 3 : 4}>
         <Grid style={styles.card.content}>
           <GridCol col-l="8" offset-l="2" col-m="10" offset-m="1">
             <Marger bottom="2">
               <Title
-                modifier={viewportIsSOrLess ? 'quinary' : 'quaternary'}
+                modifier={isTinyVersion ? 'quinary' : 'quaternary'}
                 margin={false}
                 tag={titleTag}
                 style={styles.text}
@@ -49,6 +48,7 @@ const DonationCardComponent = ({
               {...donationForm}
               align="center"
               formIsDisabled={isDisabled}
+              version={version}
             />
           </GridCol>
         </Grid>
@@ -63,11 +63,13 @@ DonationCardComponent.propTypes = {
   titleTag: PropTypes.string,
   isDisabled: PropTypes.bool,
   donationForm: PropTypes.object.isRequired,
+  version: PropTypes.oneOf(['default', 'tiny']),
 }
 
 DonationCardComponent.defaultProps = {
   titleTag: 'h2',
   isDisabled: false,
+  version: 'default',
 }
 
 const styles = {

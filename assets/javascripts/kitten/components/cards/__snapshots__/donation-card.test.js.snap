@@ -70,6 +70,12 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
         </div>
         <form
           onSubmit={[Function]}
+          style={
+            Object {
+              "margin": 0,
+              "padding": 0,
+            }
+          }
         >
           <div
             data-radium={true}
