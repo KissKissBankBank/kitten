@@ -4,7 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add a `DonationCard` example with tiny version.
+## [23.2.0] - 2018-09-04
+
+Feature:
+- Add a `DonationCard` example with tiny version.
 
 ## [23.1.0] - 2018-09-03
 
