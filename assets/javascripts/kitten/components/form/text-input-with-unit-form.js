@@ -76,7 +76,7 @@ export const TextInputWithUnitForm = ({
       </Marger>
 
       <Marger style={formStyle}>
-        <StyleRoot>
+        <StyleRoot style={buttonStyles}>
           <Button
             size="big"
             modifier="helium"
