@@ -27,7 +27,7 @@ export const KarlVerticalCardWithAction = () => (
       </GridCol>
 
       <GridCol col-s="4">
-        <KarlExampleTitle>Vertical card with aaction and text</KarlExampleTitle>
+        <KarlExampleTitle>Vertical card with action and text</KarlExampleTitle>
         <Container>
           <Marger bottom="2">
             <VerticalCardWithAction
