@@ -559,7 +559,10 @@ const styles = {
     },
 
     tinyVersion: {
-      width: '100%',
+      width: 'calc(100% + 4px)',
+      position: 'relative',
+      left: -2,
+      bottom: -2,
     },
   },
 
