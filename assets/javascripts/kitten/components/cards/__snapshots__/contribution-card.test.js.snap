@@ -445,6 +445,7 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
               src="#image"
               style={
                 Object {
+                  "display": "block",
                   "width": "100%",
                 }
               }
@@ -663,11 +664,7 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
       <div
         className="k-Grid__col--12 "
         data-radium={true}
-        style={
-          Object {
-            "paddingRight": 0,
-          }
-        }
+        style={undefined}
       >
         <div
           style={
@@ -688,6 +685,7 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
               src="#image"
               style={
                 Object {
+                  "display": "block",
                   "width": "100%",
                 }
               }
@@ -830,7 +828,10 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
         onMouseLeave={[Function]}
         style={
           Object {
-            "width": "100%",
+            "bottom": -2,
+            "left": -2,
+            "position": "relative",
+            "width": "calc(100% + 4px)",
           }
         }
         tabIndex={null}

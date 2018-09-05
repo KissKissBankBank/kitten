@@ -445,6 +445,7 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
               src="#image"
               style={
                 Object {
+                  "display": "block",
                   "width": "100%",
                 }
               }
