@@ -11,7 +11,23 @@ exports[`<VerticalCardWithAction /> by default matches with snapshot 1`] = `
         "marginTop": null,
       }
     }
-  />
+  >
+    <div
+      data-radium={true}
+    >
+      <img
+        alt=""
+        data-radium={true}
+        src=""
+        style={
+          Object {
+            "display": "block",
+            "width": "100%",
+          }
+        }
+      />
+    </div>
+  </div>
   <div
     style={
       Object {
@@ -53,7 +69,7 @@ exports[`<VerticalCardWithAction /> by default matches with snapshot 1`] = `
   >
     <button
       aria-label="button"
-      className="k-Button k-Button--hydrogen"
+      className="k-Button k-Button--helium"
       tabIndex={null}
       type="button"
     >
@@ -158,7 +174,7 @@ exports[`<VerticalCardWithAction /> with some props matches with snapshot 1`] = 
   >
     <button
       aria-label="button"
-      className="k-Button k-Button--hydrogen"
+      className="k-Button k-Button--helium"
       tabIndex={null}
       type="button"
     >
