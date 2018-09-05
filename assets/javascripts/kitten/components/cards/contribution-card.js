@@ -503,10 +503,6 @@ const styles = {
       [`@media (min-width: ${ScreenConfig['M'].min}px)`]: {
         paddingRight: 50,
       },
-
-      tinyVersion: {
-        paddingRight: 0,
-      },
     },
   },
 
@@ -573,6 +569,7 @@ const styles = {
 
   image: {
     width: '100%',
+    display: 'block',
   },
 }
 
