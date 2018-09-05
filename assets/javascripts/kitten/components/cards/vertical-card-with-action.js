@@ -3,17 +3,19 @@ import Radium, { StyleRoot } from 'radium'
 import PropTypes from 'prop-types'
 import { Marger } from 'kitten/components/layout/marger'
 import { Title } from 'kitten/components/typography/title'
-import { Text } from 'kitten/components/typography/text'
+import { Paragraph } from 'kitten/components/typography/paragraph'
 import { Button } from 'kitten/components/buttons/button'
+import COLORS from 'kitten/constants/colors-config'
 
 export class VerticalCardWithAction extends Component {
   static propTypes = {
+    imageProps: PropTypes.object,
     titleDescription: PropTypes.string.isRequired,
     titleTag: PropTypes.string,
     textDescription: PropTypes.string,
     textTag: PropTypes.string,
     button: PropTypes.string.isRequired,
-    buttonModifier: PropTypes.string.isRequired,
+    buttonModifier: PropTypes.string,
   }
 
   static defaultProps = {
@@ -24,6 +26,7 @@ export class VerticalCardWithAction extends Component {
     titleTag: 'h1',
     textDescription: '',
     textTag: 'p',
+    buttonModifier: 'helium',
   }
 
   render() {
@@ -66,24 +69,26 @@ export class VerticalCardWithAction extends Component {
 
     return (
       <Fragment>
-        <Title
-          color="font1"
-          modifier="senary"
-          tag={titleTag}
-          style={styles.textCenter}
-        >
-          {titleDescription}
-        </Title>
+        <Marger bottom={textDescription ? 1.5 : 0}>
+          <Title
+            modifier="senary"
+            tag={titleTag}
+            margin={false}
+            style={styles.text}
+          >
+            {titleDescription}
+          </Title>
+        </Marger>
         {textDescription && (
           <Marger top="1.5">
-            <Text
-              color="font1"
-              size="tiny"
+            <Paragraph
+              modifier="quaternary"
               tag={textTag}
-              style={styles.textCenter}
+              margin={false}
+              style={styles.text}
             >
               {textDescription}
-            </Text>
+            </Paragraph>
           </Marger>
         )}
       </Fragment>
@@ -104,11 +109,12 @@ export class VerticalCardWithAction extends Component {
 const styles = {
   image: {
     width: '100%',
-    height: 450,
+    display: 'block',
   },
 
-  textCenter: {
+  text: {
     textAlign: 'center',
+    color: COLORS.font1,
   },
 
   button: {

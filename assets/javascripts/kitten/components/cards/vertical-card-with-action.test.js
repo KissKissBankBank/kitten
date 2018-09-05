@@ -7,7 +7,14 @@ describe('<VerticalCardWithAction />', () => {
 
   describe('by default', () => {
     beforeEach(() => {
-      component = renderer.create(<VerticalCardWithAction />).toJSON()
+      component = renderer
+        .create(
+          <VerticalCardWithAction
+            titleDescription="Custom title"
+            button="button"
+          />,
+        )
+        .toJSON()
     })
 
     it('matches with snapshot', () => {
@@ -27,6 +34,7 @@ describe('<VerticalCardWithAction />', () => {
             titleDescription="Custom title"
             textDescription="Custom text"
             button="button"
+            buttonModifier="helium"
           />,
         )
         .toJSON()
