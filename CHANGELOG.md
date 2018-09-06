@@ -5,14 +5,32 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Create `Triptych` component.
-- Feature: You can now use the build files present in `dist` directory.
+
+## [23.2.1] - 2018-09-04
+
+Fix:
+- Fix `GridCol` size for `tiny` version to `DonationCard`.
+
+## [23.2.0] - 2018-09-04
+
+Feature:
+- Add `version` prop to `DonationCard` and `TextInputWithUnitForm`.
+
+## [23.1.0] - 2018-09-03
+
+Features:
+- Add `version` prop to `ContributionCard`.
+- You can now use the build files present in `dist` directory.
   Add `jsDistPaths` export method.
-- Feature: Add `weight` props and `weight` attribut on each elements of
+- Add `weight` props and `weight` attribut on each elements of
   `LinkList` component.
-- Fix: Update `disabled` state on `Contribution` component.
-- Fix: Add `k-LinkList__item--tripleMargin` marginBottom.
-- Fix: Add `k-TextInputWithButton__button` padding.
-- Fix: Add a space between title and value informations
+
+Fixes:
+- Remove pseudo-class styles on a ':disabled' button.
+- Update `disabled` state on `Contribution` component.
+- Add `k-LinkList__item--tripleMargin` marginBottom.
+- Add `k-TextInputWithButton__button` padding.
+- Add a space between title and value informations
   on `CartRewardCard` and `ContributionCard`.
 
 ## [23.0.0] - 2018-08-27

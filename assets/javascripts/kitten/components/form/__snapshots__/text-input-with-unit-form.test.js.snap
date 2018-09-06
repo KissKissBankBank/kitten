@@ -3,6 +3,12 @@
 exports[`<TextInputWithUnitForm /> by default matches with snapshot 1`] = `
 <form
   onSubmit={[Function]}
+  style={
+    Object {
+      "margin": 0,
+      "padding": 0,
+    }
+  }
 >
   <div
     data-radium={true}
@@ -90,7 +96,9 @@ exports[`<TextInputWithUnitForm /> by default matches with snapshot 1`] = `
     }
   >
     <div
+      className="rmq-2001d403"
       data-radium={true}
+      style={Object {}}
     >
       <button
         aria-label="To contribute"
@@ -120,6 +128,12 @@ exports[`<TextInputWithUnitForm /> by default matches with snapshot 1`] = `
 exports[`<TextInputWithUnitForm /> disabled matches with snapshot 1`] = `
 <form
   onSubmit={[Function]}
+  style={
+    Object {
+      "margin": 0,
+      "padding": 0,
+    }
+  }
 >
   <div
     data-radium={true}
@@ -207,7 +221,9 @@ exports[`<TextInputWithUnitForm /> disabled matches with snapshot 1`] = `
     }
   >
     <div
+      className="rmq-2001d403"
       data-radium={true}
+      style={Object {}}
     >
       <button
         aria-label="To contribute"
@@ -237,6 +253,12 @@ exports[`<TextInputWithUnitForm /> disabled matches with snapshot 1`] = `
 exports[`<TextInputWithUnitForm /> on error matches with snapshot 1`] = `
 <form
   onSubmit={[Function]}
+  style={
+    Object {
+      "margin": 0,
+      "padding": 0,
+    }
+  }
 >
   <div
     data-radium={true}
@@ -339,7 +361,9 @@ exports[`<TextInputWithUnitForm /> on error matches with snapshot 1`] = `
     }
   >
     <div
+      className="rmq-2001d403"
       data-radium={true}
+      style={Object {}}
     >
       <button
         aria-label="To contribute"
