@@ -150,11 +150,6 @@ const styles = {
   },
 
   secondCard: { transition: 'margin 500ms' },
-
-  gridContainer: {
-    display: 'grid',
-    gridGap: 55,
-  },
 }
 
 export const Triptych = mediaQueries(Radium(TriptychBase), {
