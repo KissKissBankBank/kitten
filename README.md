@@ -324,6 +324,14 @@ $ bundle exec rake kitten_release
   move cards that are released from `done` column to `released` column.
 
 ### Storybook
+
+- To launch storybook in local
+```sh
+npm run storybook
+```
+
+Then visit http://localhost:6006
+
 - To release `Storybook` simply run this command:
 ```sh
 yarn deploy-storybook
