@@ -78,12 +78,15 @@ class ContributionCardComponent extends Component {
   }
 
   isTinyVersion = () =>
-    this.props.version === 'tiny' || this.props.viewportIsSOrLess
+    this.props.version === 'tiny' || this.props.viewportIsMobile
+
+  isSorLessVersion = () => this.isTinyVersion() || this.props.viewportIsSOrLess
 
   render() {
     // We need to destructure the props to prevent them to hydrate children components.
     const {
       isDisabled,
+      viewportIsMobile,
       viewportIsSOrLess,
       viewportIsTabletOrLess,
       titleAmount,
@@ -125,22 +128,22 @@ class ContributionCardComponent extends Component {
     const leftColumnProps = this.isTinyVersion()
       ? null
       : {
-          'col-m': !imageProps.src ? 10 : 7,
-          'col-l': 7,
+          'col-l': !imageProps.src ? 10 : 7,
+          'col-s': 7,
         }
 
     const rightColumnProps = this.isTinyVersion()
       ? null
       : {
-          'col-m': 4,
-          'offset-m': 1,
+          'col-s': 4,
+          'offset-s': 1,
         }
 
     return (
       <StyleRoot {...others} style={styleCard}>
         <Marger
-          bottom={this.isTinyVersion() ? 0 : 4}
-          top={this.isTinyVersion() ? 3 : 4}
+          bottom={this.isSorLessVersion() ? 0 : 4}
+          top={this.isSorLessVersion() ? 3 : 4}
         >
           <Grid style={cardAddPadding}>
             <GridCol {...leftColumnProps}>{this.renderDescription()}</GridCol>
@@ -154,7 +157,7 @@ class ContributionCardComponent extends Component {
             )}
           </Grid>
 
-          {this.isTinyVersion() && this.renderChoiceButton()}
+          {this.isSorLessVersion() && this.renderChoiceButton()}
         </Marger>
       </StyleRoot>
     )
@@ -170,6 +173,7 @@ class ContributionCardComponent extends Component {
       starred,
       starLabel,
       isDisabled,
+      viewportIsSOrLess,
     } = this.props
 
     const styleDescription = [isDisabled && styles.disabled]
@@ -232,7 +236,7 @@ class ContributionCardComponent extends Component {
 
         {!!this.props.render && this.props.render()}
         {this.renderInfos()}
-        {!this.isTinyVersion() && this.renderChoiceButton()}
+        {!this.isSorLessVersion() && this.renderChoiceButton()}
       </Fragment>
     )
   }
@@ -277,17 +281,16 @@ class ContributionCardComponent extends Component {
 
     return (
       <Fragment>
-        {viewportIsTabletOrLess ||
-          (this.isTinyVersion() && (
-            <div>
-              <Text color="font1" weight="regular" style={infosLists}>
-                {title}{' '}
-                <Text color="font1" weight="light">
-                  {value}
-                </Text>
+        {(viewportIsTabletOrLess || this.isTinyVersion()) && (
+          <div>
+            <Text color="font1" weight="regular" style={infosLists}>
+              {title}{' '}
+              <Text color="font1" weight="light">
+                {value}
               </Text>
-            </div>
-          ))}
+            </Text>
+          </div>
+        )}
 
         {!viewportIsTabletOrLess &&
           !this.isTinyVersion() && (
@@ -303,13 +306,13 @@ class ContributionCardComponent extends Component {
   }
 
   renderChoiceButton() {
-    const { myContribution, button } = this.props
+    const { myContribution, button, viewportIsSOrLess } = this.props
 
     if (!button && !myContribution) return
 
     return (
       <Fragment>
-        {this.isTinyVersion() && (
+        {this.isSorLessVersion() && (
           <Fragment>
             {myContribution && (
               <Marger
@@ -323,7 +326,7 @@ class ContributionCardComponent extends Component {
           </Fragment>
         )}
 
-        {!this.isTinyVersion() && (
+        {!this.isSorLessVersion() && (
           <Marger top="4">
             {this.renderButton()}
             {myContribution && (
@@ -397,7 +400,7 @@ class ContributionCardComponent extends Component {
 
     return (
       <Fragment>
-        {this.isTinyVersion() && (
+        {this.isSorLessVersion() && (
           <Grid style={choiceButtonAddPadding}>
             <GridCol>
               <div style={styles.myContribution}>
@@ -422,7 +425,7 @@ class ContributionCardComponent extends Component {
           </Grid>
         )}
 
-        {!this.isTinyVersion() && (
+        {!this.isSorLessVersion() && (
           <div style={styles.myContribution}>
             {this.renderIconBadge()}
             <div style={styles.myContribution.text}>
@@ -558,7 +561,7 @@ const styles = {
   },
 
   button: {
-    [`@media (max-width: ${ScreenConfig['S'].max}px)`]: {
+    [`@media (max-width: ${ScreenConfig['M'].max}px)`]: {
       width: '100%',
     },
 
@@ -581,5 +584,6 @@ export const ContributionCard = mediaQueries(
   {
     viewportIsTabletOrLess: true,
     viewportIsSOrLess: true,
+    viewportIsMobile: true,
   },
 )
