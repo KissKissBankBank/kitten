@@ -65,6 +65,8 @@ import {
 } from 'kitten/karl/cards/similar-projects-card'
 import { KarlProjectSimilarLoader }
   from 'kitten/karl/cards/project-similar-card'
+import { Triptych }
+  from 'kitten/components/cards/triptych'
 
 // Colors
 import { KarlColors } from 'kitten/karl/colors/karl-colors'
@@ -382,6 +384,7 @@ ReactOnRails.register({
   KarlSimilarProjectsCard,
   KarlSimilarProjectsWithInfosCard,
   KarlProjectSimilarLoader,
+  Triptych,
 
   // Dev
   DevGrid,

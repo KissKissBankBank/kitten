@@ -209,6 +209,7 @@ module Kitten
               path: 'components/cards/project-similar-card',
               name: 'Project similar card',
             },
+            { path: 'components/cards/triptych', name: 'Triptych' },
             { path: 'components/heroes/hero', name: 'Hero' },
             { path: 'components/press/press-quotes', name: 'Press quotes' },
             { path: 'components/testimonies/testimony', name: 'Testimony' },
