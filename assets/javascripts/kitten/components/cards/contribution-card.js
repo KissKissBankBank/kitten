@@ -558,7 +558,6 @@ const styles = {
 
   button: {
     [`@media (max-width: ${ScreenConfig['S'].max}px)`]: {
-      width: '100%',
       width: 'calc(100% + 4px)',
       position: 'relative',
       left: -2,
