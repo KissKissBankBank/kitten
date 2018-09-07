@@ -258,10 +258,7 @@ class ContributionCardComponent extends Component {
 
     return (
       <div style={styleInfos} disabled={isDisabled}>
-        <Marger
-          top={this.isTinyVersion() ? 2 : 3}
-          bottom={this.isTinyVersion() ? 3 : 4}
-        >
+        <Marger top="2" bottom="3">
           {this.renderInfo(titleContributors, valueContributors)}
           {this.renderInfo(titleDelivery, valueDelivery)}
           {this.renderInfo(titleAvailability, valueAvailability)}
@@ -327,7 +324,7 @@ class ContributionCardComponent extends Component {
         )}
 
         {!this.isSorLessVersion() && (
-          <Marger top="4">
+          <Marger top="3">
             {this.renderButton()}
             {myContribution && (
               <Marger top={!myContribution ? 0 : 2}>
@@ -484,8 +481,8 @@ const styles = {
       paddingRight: 20,
 
       [`@media (min-width: ${ScreenConfig['S'].min}px)`]: {
-        paddingLeft: 50,
-        paddingRight: 50,
+        paddingLeft: 30,
+        paddingRight: 30,
       },
       [`@media (min-width: ${ScreenConfig['M'].min}px)`]: {
         paddingLeft: 40,
@@ -539,8 +536,8 @@ const styles = {
 
     addPadding: {
       [`@media (min-width: ${ScreenConfig['S'].min}px)`]: {
-        paddingLeft: 50,
-        paddingRight: 50,
+        paddingLeft: 30,
+        paddingRight: 30,
       },
 
       tinyVersion: {
@@ -561,7 +558,7 @@ const styles = {
   },
 
   button: {
-    [`@media (max-width: ${ScreenConfig['M'].max}px)`]: {
+    [`@media (max-width: ${ScreenConfig['S'].max}px)`]: {
       width: '100%',
     },
 
