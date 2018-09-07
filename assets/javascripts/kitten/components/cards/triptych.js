@@ -22,15 +22,17 @@ class FakeCard extends Component {
       ...others
     } = this.props
 
+    const picUrl = `https://picsum.photos/${width}/${height}?${index}`
+
     return (
       <div {...others}>
         <img
-          src={`https://picsum.photos/${width}/${height}`}
+          src={picUrl}
           style={{
             width: '100%',
             height: 0,
             paddingBottom: `${height / width * 100}%`,
-            background: `transparent url(https://picsum.photos/${width}/${height}) no-repeat`,
+            background: `transparent url(${picUrl}) no-repeat`,
             backgroundSize: 'cover',
           }}
           alt={`picture ${index}`}
