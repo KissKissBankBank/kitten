@@ -355,21 +355,19 @@ class ContributionCardComponent extends Component {
     if (!button) return
 
     return (
-      <Marger>
-        <Button
-          size="big"
-          modifier="helium"
-          type="button"
-          aria-label={button}
-          style={buttonStyles}
-          onMouseEnter={buttonOnMouseEnter}
-          onMouseLeave={buttonOnMouseLeave}
-          onClick={buttonOnClick}
-          disabled={isDisabled}
-        >
-          {button}
-        </Button>
-      </Marger>
+      <Button
+        size="big"
+        modifier="helium"
+        type="button"
+        aria-label={button}
+        style={buttonStyles}
+        onMouseEnter={buttonOnMouseEnter}
+        onMouseLeave={buttonOnMouseLeave}
+        onClick={buttonOnClick}
+        disabled={isDisabled}
+      >
+        {button}
+      </Button>
     )
   }
 
