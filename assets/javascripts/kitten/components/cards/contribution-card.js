@@ -313,7 +313,9 @@ class ContributionCardComponent extends Component {
           <Fragment>
             {myContribution && (
               <Marger
-                top={!this.props.imageProps.src ? 0 : 2}
+                top={
+                  !this.props.imageProps.src || !this.isTinyVersion() ? 0 : 2
+                }
                 bottom={!myContribution ? 0 : 2}
               >
                 {this.renderMyContribution()}
@@ -347,7 +349,7 @@ class ContributionCardComponent extends Component {
       isDisabled,
     } = this.props
 
-    const buttonMargin = this.isTinyVersion() || !myContribution ? null : 2
+    const buttonMargin = this.isTinyVersion() || myContribution ? null : 2
     const buttonStyles = this.isTinyVersion()
       ? styles.button.tinyVersion
       : styles.button

@@ -299,7 +299,7 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
           <div
             style={
               Object {
-                "marginBottom": "1.25rem",
+                "marginBottom": null,
                 "marginTop": null,
               }
             }
