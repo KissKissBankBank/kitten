@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Fix `button` and `image` position on `ContributionCard` component.
+
 ## [23.2.1] - 2018-09-04
 
 Fix:
