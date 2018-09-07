@@ -19,11 +19,8 @@ storiesOf('Cards/VerticalCardWithAction', module)
                 src: 'http://via.placeholder.com/500x500/caf4fe/caf4fe',
                 alt: '',
               })}
-              titleDescription={text(
-                'Title description',
-                'Lorem ipsum dolor sit amet',
-              )}
-              textDescription={text(
+              title={text('Title description', 'Lorem ipsum dolor sit amet')}
+              description={text(
                 'Text description',
                 'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem',
               )}

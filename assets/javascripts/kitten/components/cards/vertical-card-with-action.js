@@ -10,10 +10,10 @@ import COLORS from 'kitten/constants/colors-config'
 export class VerticalCardWithAction extends Component {
   static propTypes = {
     imageProps: PropTypes.object,
-    titleDescription: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
     titleTag: PropTypes.string,
-    textDescription: PropTypes.string,
-    textTag: PropTypes.string,
+    description: PropTypes.string,
+    descriptionTag: PropTypes.string,
     button: PropTypes.string.isRequired,
     buttonModifier: PropTypes.string,
   }
@@ -24,18 +24,18 @@ export class VerticalCardWithAction extends Component {
       alt: '',
     },
     titleTag: 'h1',
-    textDescription: '',
-    textTag: 'p',
+    description: '',
+    descriptionTag: 'p',
     buttonModifier: 'helium',
   }
 
   render() {
     const {
       imageProps,
-      titleDescription,
+      title,
       titleTag,
-      textDescription,
-      textTag,
+      description,
+      descriptionTag,
       button,
       buttonModifier,
       ...others
@@ -55,37 +55,33 @@ export class VerticalCardWithAction extends Component {
   }
 
   renderImage() {
-    return (
-      <div>
-        <img {...this.props.imageProps} style={styles.image} />
-      </div>
-    )
+    return <img {...this.props.imageProps} style={styles.image} />
   }
 
   renderDescription() {
-    const { titleDescription, titleTag, textDescription, textTag } = this.props
+    const { title, titleTag, description, descriptionTag } = this.props
 
     return (
       <Fragment>
-        <Marger bottom={textDescription ? 1.5 : 0}>
+        <Marger bottom={description ? 1.5 : 0}>
           <Title
             modifier="senary"
             tag={titleTag}
             margin={false}
             style={styles.text}
           >
-            {titleDescription}
+            {title}
           </Title>
         </Marger>
-        {textDescription && (
+        {description && (
           <Marger top="1.5">
             <Paragraph
               modifier="quaternary"
-              tag={textTag}
+              tag={descriptionTag}
               margin={false}
               style={styles.text}
             >
-              {textDescription}
+              {description}
             </Paragraph>
           </Marger>
         )}

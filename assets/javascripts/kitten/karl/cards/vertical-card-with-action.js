@@ -18,7 +18,7 @@ export const KarlVerticalCardWithAction = () => (
                 src: 'http://via.placeholder.com/500x500/caf4fe/caf4fe',
                 alt: '',
               }}
-              titleDescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
+              title="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
               button="Lorem ipsum"
               buttonModifier="helium"
             />
@@ -35,8 +35,8 @@ export const KarlVerticalCardWithAction = () => (
                 src: 'http://via.placeholder.com/500x500/caf4fe/caf4fe',
                 alt: '',
               }}
-              titleDescription="Lorem ipsum dolor sit amet, consectetur adipiscing"
-              textDescription="Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat"
+              title="Lorem ipsum dolor sit amet, consectetur adipiscing"
+              description="Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat"
               button="Lorem ipsum"
               buttonModifier="helium"
             />

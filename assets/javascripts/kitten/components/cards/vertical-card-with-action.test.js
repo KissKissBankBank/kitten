@@ -8,12 +8,7 @@ describe('<VerticalCardWithAction />', () => {
   describe('by default', () => {
     beforeEach(() => {
       component = renderer
-        .create(
-          <VerticalCardWithAction
-            titleDescription="Custom title"
-            button="button"
-          />,
-        )
+        .create(<VerticalCardWithAction title="Custom title" button="button" />)
         .toJSON()
     })
 
@@ -31,8 +26,8 @@ describe('<VerticalCardWithAction />', () => {
               src: '#image',
               alt: 'Image alt',
             }}
-            titleDescription="Custom title"
-            textDescription="Custom text"
+            title="Custom title"
+            description="Custom text"
             button="button"
             buttonModifier="helium"
           />,
