@@ -18,7 +18,7 @@ class FakeCard extends Component {
     const {
       index,
       viewportIsTabletOrLess,
-      viewportIsMobile,
+      viewportIsSOrLess,
       ...others
     } = this.props
 
@@ -51,8 +51,8 @@ class TriptychBase extends Component {
 
   manageCardPosition = () => {
     this.setState((state, props) => {
-      const { viewportIsTabletOrLess, viewportIsMobile } = props
-      const isTablet = viewportIsTabletOrLess && !viewportIsMobile
+      const { viewportIsTabletOrLess, viewportIsSOrLess } = props
+      const isTablet = viewportIsTabletOrLess && !viewportIsSOrLess
 
       if (!isTablet) return { addEvenMargin: null }
 
@@ -154,5 +154,5 @@ const styles = {
 
 export const Triptych = mediaQueries(Radium(TriptychBase), {
   viewportIsTabletOrLess: true,
-  viewportIsMobile: true,
+  viewportIsSOrLess: true,
 })
