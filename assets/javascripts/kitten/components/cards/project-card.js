@@ -126,7 +126,6 @@ class ProjectCardComponent extends Component {
 
   renderProgress() {
     const { progress, progressProps } = this.props
-
     const { color, rampProps, ...others } = progressProps || {}
 
     if (progress === false) return
