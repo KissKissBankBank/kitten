@@ -73,6 +73,10 @@ class TriptychBase extends Component {
     window.removeEventListener('resize', debounce(this.manageCardPosition, 250))
   }
 
+  setRef = name => node => {
+    this[name] = node
+  }
+
   render() {
     return (
       <StyleRoot>
@@ -85,11 +89,7 @@ class TriptychBase extends Component {
             col-s="12"
             offset-s="0"
           >
-            <div
-              ref={node => {
-                this.title = node
-              }}
-            >
+            <div ref={this.setRef('title')}>
               <Marger bottom="2">
                 <Title tag="h2" modifier="secondary" margin={false}>
                   Main title goes here
@@ -104,11 +104,7 @@ class TriptychBase extends Component {
 
           <GridCol col-l="4" col-m="6" col-s="12" style={styles.oddMargin}>
             <Marger>
-              <div
-                ref={node => {
-                  this.card = node
-                }}
-              >
+              <div ref={this.setRef('card')}>
                 <FakeCard index={1} />
               </div>
             </Marger>
