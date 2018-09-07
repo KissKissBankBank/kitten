@@ -173,7 +173,6 @@ class ContributionCardComponent extends Component {
       starred,
       starLabel,
       isDisabled,
-      viewportIsSOrLess,
     } = this.props
 
     const styleDescription = [isDisabled && styles.disabled]
@@ -303,7 +302,7 @@ class ContributionCardComponent extends Component {
   }
 
   renderChoiceButton() {
-    const { myContribution, button, viewportIsSOrLess } = this.props
+    const { myContribution, button } = this.props
 
     if (!button && !myContribution) return
 
