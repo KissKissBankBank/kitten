@@ -296,29 +296,20 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
             }
           }
         >
-          <div
-            style={
-              Object {
-                "marginBottom": null,
-                "marginTop": null,
-              }
-            }
+          <button
+            aria-label="Custom text button"
+            className="rmq-2c87bfe9 k-Button k-Button--helium k-Button--big"
+            data-radium={true}
+            disabled={false}
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            style={Object {}}
+            tabIndex={null}
+            type="button"
           >
-            <button
-              aria-label="Custom text button"
-              className="rmq-2c87bfe9 k-Button k-Button--helium k-Button--big"
-              data-radium={true}
-              disabled={false}
-              onClick={[Function]}
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              style={Object {}}
-              tabIndex={null}
-              type="button"
-            >
-              Custom text button
-            </button>
-          </div>
+            Custom text button
+          </button>
           <div
             style={
               Object {
@@ -812,33 +803,24 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
         </div>
       </div>
     </div>
-    <div
+    <button
+      aria-label="Custom text button"
+      className="k-Button k-Button--helium k-Button--big"
+      data-radium={true}
+      disabled={false}
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
       style={
         Object {
-          "marginBottom": null,
-          "marginTop": null,
+          "width": "100%",
         }
       }
+      tabIndex={null}
+      type="button"
     >
-      <button
-        aria-label="Custom text button"
-        className="k-Button k-Button--helium k-Button--big"
-        data-radium={true}
-        disabled={false}
-        onClick={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        style={
-          Object {
-            "width": "100%",
-          }
-        }
-        tabIndex={null}
-        type="button"
-      >
-        Custom text button
-      </button>
-    </div>
+      Custom text button
+    </button>
   </div>
   <style
     dangerouslySetInnerHTML={
