@@ -349,7 +349,6 @@ class ContributionCardComponent extends Component {
       isDisabled,
     } = this.props
 
-    const buttonMargin = this.isTinyVersion() || myContribution ? null : 2
     const buttonStyles = this.isTinyVersion()
       ? styles.button.tinyVersion
       : styles.button
@@ -357,7 +356,7 @@ class ContributionCardComponent extends Component {
     if (!button) return
 
     return (
-      <Marger bottom={buttonMargin}>
+      <Marger>
         <Button
           size="big"
           modifier="helium"
