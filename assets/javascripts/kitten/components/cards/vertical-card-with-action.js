@@ -55,7 +55,9 @@ export class VerticalCardWithAction extends Component {
   }
 
   renderImage() {
-    return <img {...this.props.imageProps} style={styles.image} />
+    const { style, ...imageProps } = this.props.imageProps
+
+    return <img {...imageProps} style={{ ...style, ...styles.image }} />
   }
 
   renderDescription() {
