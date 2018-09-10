@@ -7,6 +7,7 @@ import { VerticalStroke } from 'kitten/components/layout/vertical-stroke'
 import { ScreenConfig } from 'kitten/constants/screen-config'
 import { mediaQueries } from 'kitten/hoc/media-queries'
 import { debounce } from 'kitten/helpers/utils/debounce'
+import { GUTTER } from 'kitten/constants/grid-config'
 
 const Marger = Radium(MargerBase)
 const GridCol = Radium(GridColBase)
@@ -80,6 +81,37 @@ class TriptychBase extends Component {
   }
 
   render() {
+    const { viewportIsTabletOrLess, viewportIsSOrLess } = this.props
+    const isTablet = viewportIsTabletOrLess && !viewportIsSOrLess
+    let gutter
+
+    if (viewportIsTabletOrLess) {
+      // Tablet
+      if (isTablet) {
+        gutter = 50 / 2 - GUTTER / 2
+        styles.gutter = {
+          firstItem: { marginLeft: gutter },
+          secondItem: { marginRight: gutter },
+          thirdItem: { marginLeft: gutter },
+        }
+        // Mobile
+      } else {
+        styles.gutter = {
+          firstItem: null,
+          secondItem: null,
+          thirdItem: null,
+        }
+      }
+      // Desktop
+    } else {
+      gutter = 40 / 2 - GUTTER / 2
+      styles.gutter = {
+        firstItem: { marginRight: gutter },
+        secondItem: { marginRight: gutter, marginLeft: gutter },
+        thirdItem: { marginLeft: gutter },
+      }
+    }
+
     return (
       <StyleRoot>
         <Grid className="k-u-align-center">
@@ -105,7 +137,7 @@ class TriptychBase extends Component {
           </GridCol>
 
           <GridCol col-l="4" col-m="6" col-s="12" style={styles.oddMargin}>
-            <Marger>
+            <Marger style={styles.gutter.firstItem}>
               <div ref={this.setRef('card')}>
                 <FakeCard index={1} />
               </div>
@@ -114,7 +146,7 @@ class TriptychBase extends Component {
 
           <GridCol col-l="4" col-m="6" col-s="12">
             <Marger
-              style={styles.secondCard}
+              style={{ ...styles.secondCard, ...styles.gutter.secondItem }}
               top={this.state.addEvenMargin / 10}
             >
               <FakeCard index={2} />
@@ -122,7 +154,7 @@ class TriptychBase extends Component {
           </GridCol>
 
           <GridCol col-l="4" col-m="6" col-s="12" style={styles.oddMargin}>
-            <Marger>
+            <Marger style={styles.gutter.thirdItem}>
               <FakeCard index={3} />
             </Marger>
           </GridCol>
