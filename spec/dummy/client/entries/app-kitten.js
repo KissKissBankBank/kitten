@@ -69,6 +69,9 @@ import { KarlProjectSimilarLoader }
 // Colors
 import { KarlColors } from 'kitten/karl/colors/karl-colors'
 
+// Detectors
+import { DocumentUnfocusDetector } from 'kitten/components/detectors/document-unfocus-detector'
+
 // Dev
 import { DevGrid } from 'kitten/components/dev/dev-grid'
 
@@ -382,6 +385,9 @@ ReactOnRails.register({
   KarlSimilarProjectsCard,
   KarlSimilarProjectsWithInfosCard,
   KarlProjectSimilarLoader,
+
+  // Detectors
+  DocumentUnfocusDetector,
 
   // Dev
   DevGrid,
