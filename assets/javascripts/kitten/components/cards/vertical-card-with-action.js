@@ -9,7 +9,11 @@ import COLORS from 'kitten/constants/colors-config'
 
 export class VerticalCardWithAction extends Component {
   static propTypes = {
-    imageProps: PropTypes.object,
+    imageProps: PropTypes.shape({
+      src: PropTypes.string.isRequired,
+      alt: PropTypes.string.isRequired,
+      style: PropTypes.shape({}),
+    }).isRequired,
     title: PropTypes.string.isRequired,
     titleTag: PropTypes.string,
     description: PropTypes.string,
@@ -20,8 +24,7 @@ export class VerticalCardWithAction extends Component {
 
   static defaultProps = {
     imageProps: {
-      src: '',
-      alt: '',
+      style: {},
     },
     titleTag: 'h1',
     description: '',

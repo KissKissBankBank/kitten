@@ -13,9 +13,7 @@ exports[`<VerticalCardWithAction /> by default matches with snapshot 1`] = `
     }
   >
     <img
-      alt=""
       data-radium={true}
-      src=""
       style={
         Object {
           "display": "block",
