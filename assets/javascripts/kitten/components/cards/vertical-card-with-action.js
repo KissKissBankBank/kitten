@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
 import Radium, { StyleRoot } from 'radium'
 import PropTypes from 'prop-types'
 import { Marger } from 'kitten/components/layout/marger'
@@ -67,7 +67,7 @@ export class VerticalCardWithAction extends Component {
     const { title, titleTag, description, descriptionTag } = this.props
 
     return (
-      <Fragment>
+      <div>
         <Marger bottom={description ? 1.5 : 0}>
           <Title
             modifier="senary"
@@ -90,7 +90,7 @@ export class VerticalCardWithAction extends Component {
             </Paragraph>
           </Marger>
         )}
-      </Fragment>
+      </div>
     )
   }
 
