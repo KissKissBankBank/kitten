@@ -117,9 +117,29 @@ class EmbedPlayerBase extends Component {
   }
 }
 
-EmbedPlayerBase.propTypes = {}
+EmbedPlayerBase.propTypes = {
+  previewProps: PropTypes.shape({
+    thumbnail: PropTypes.shape({
+      src: PropTypes.string.isRequired,
+      alt: PropTypes.string.isRequired,
+      style: PropTypes.string,
+    }).isRequired,
+  }).isRequired,
+  badgeComponent: PropTypes.node,
+  playButtonLabel: PropTypes.string.isRequired,
+  ratio: PropTypes.number.isRequired,
+  iframeVideo: PropTypes.string,
+}
 
-EmbedPlayerBase.defaultProps = {}
+EmbedPlayerBase.defaultProps = {
+  previewProps: {
+    thumbnail: {
+      style: {},
+    },
+  },
+  badgeComponent: null,
+  iframeVideo: null,
+}
 
 const playerButtonSize = 90
 const playerButtonXSSize = playerButtonSize / 2
