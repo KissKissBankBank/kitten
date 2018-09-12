@@ -278,7 +278,17 @@ module Kitten
           components: [
             {
               path: 'components/carousel/carousel',
-              name: 'Carousel with ProjectCard'
+              name: 'Carousel with ProjectCard',
+            },
+          ],
+        },
+        {
+          id: 'player',
+          label: 'Media',
+          components: [
+            {
+              path: 'components/media/embed-player',
+              name: 'Embed Player',
             },
           ],
         },
