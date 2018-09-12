@@ -75,6 +75,7 @@ class EmbedPlayerBase extends Component {
       t,
     } = this.props
 
+    const validRatio = parseInt(ratio, 10)
     const { thumbnail, badgeComponent, style } = previewProps
     const isVideoPlaying = iframeVideo && this.state.showPlayer
     const playerPreviewStyle = [
@@ -106,7 +107,7 @@ class EmbedPlayerBase extends Component {
 
           {iframeVideo && (
             <div style={styles.embedPlayer}>
-              <ResponsiveIframeContainer ratio={ratio}>
+              <ResponsiveIframeContainer ratio={validRatio}>
                 {parseHtml(iframeVideo)}
               </ResponsiveIframeContainer>
             </div>
@@ -127,7 +128,7 @@ EmbedPlayerBase.propTypes = {
   }).isRequired,
   badgeComponent: PropTypes.node,
   playButtonLabel: PropTypes.string.isRequired,
-  ratio: PropTypes.number.isRequired,
+  ratio: PropTypes.oneOf([PropTypes.number, PropTypes.string]).isRequired,
   iframeVideo: PropTypes.string,
 }
 
