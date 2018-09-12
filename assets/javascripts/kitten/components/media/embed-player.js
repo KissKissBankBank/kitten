@@ -142,7 +142,7 @@ EmbedPlayerBase.defaultProps = {
 }
 
 const playerButtonSize = 90
-const playerButtonXSSize = playerButtonSize / 2
+const playerButtonXSSize = 50
 
 const styles = {
   container: {
