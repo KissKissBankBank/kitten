@@ -196,6 +196,9 @@ import { PhoneIllustration }
 import { KarlImageCropper } from 'kitten/karl/images/image-cropper'
 import { KarlImageWithCaption } from 'kitten/karl/images/image-with-caption'
 
+// Media
+import { EmbedPlayer } from 'kitten/components/media/embed-player'
+
 // Layout
 import { Separator } from 'kitten/components/layout/separator'
 import { KarlHorizontalStrokes } from 'kitten/karl/layout/horizontal-stroke'
@@ -493,6 +496,9 @@ ReactOnRails.register({
   // Images
   KarlImageCropper,
   KarlImageWithCaption,
+
+  //Media
+  EmbedPlayer,
 
   // Layout
   Separator,
