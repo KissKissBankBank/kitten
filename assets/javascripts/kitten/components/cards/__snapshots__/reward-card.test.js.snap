@@ -436,6 +436,7 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
               src="#image"
               style={
                 Object {
+                  "display": "block",
                   "width": "100%",
                 }
               }
@@ -456,7 +457,10 @@ padding-right: 0 !important;}}
 padding-right: 0 !important;}}
 @media (min-width: 768px){ .rmq-ef57b76a{font-size: 16px !important;
 margin-right: 30px !important;}}
-@media (max-width: 767px){ .rmq-2c87bfe9{width: 100% !important;}}
+@media (max-width: 767px){ .rmq-b016fca7{width: calc(100% + 4px) !important;
+position: relative !important;
+left: -2px !important;
+bottom: -2px !important;}}
 @media (min-width: 768px){ .rmq-c7c1445b{padding-right: 50px !important;}}",
       }
     }

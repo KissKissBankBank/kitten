@@ -501,9 +501,8 @@ const styles = {
       [`@media (min-width: ${ScreenConfig['M'].min}px)`]: {
         paddingRight: 50,
       },
-
       tinyVersion: {
-        paddingRight: 0,
+        paddingRight: 10,
       },
     },
   },
@@ -557,11 +556,17 @@ const styles = {
 
   button: {
     [`@media (max-width: ${ScreenConfig['S'].max}px)`]: {
-      width: '100%',
+      width: 'calc(100% + 4px)',
+      position: 'relative',
+      left: -2,
+      bottom: -2,
     },
 
     tinyVersion: {
-      width: '100%',
+      width: 'calc(100% + 4px)',
+      position: 'relative',
+      left: -2,
+      bottom: -2,
     },
   },
 
@@ -571,6 +576,7 @@ const styles = {
 
   image: {
     width: '100%',
+    display: 'block',
   },
 }
 
