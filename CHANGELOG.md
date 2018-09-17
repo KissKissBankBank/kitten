@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Create `VerticalCardWithAction` component.
 - Feature: Create `EmbedPlayer` component.
 - Fix: Fix `button` and `image` position on `ContributionCard` component.
 

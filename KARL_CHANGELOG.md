@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Create `KarlVerticalCardWithAction` example.
 - Feature: Add `EmbedPlayer` example.
 - Fix: Remove undefined `displayShortcut` function.
 
