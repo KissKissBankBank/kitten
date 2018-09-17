@@ -17,23 +17,23 @@ class SimpleCarouselBase extends Component {
     super(props)
 
     this.state = {
-      numPageActive: 0,
-      numPages: this.props.items.length,
+      currentPageNumber: 0,
+      totalPagesCount: this.props.items.length,
     }
 
     this.elements = []
   }
 
-  showPagination = () => this.state.numPages > 1
+  showPagination = () => this.state.totalPagesCount > 1
 
   handlePageClick = numPage => () => {
-    this.setState({ numPageActive: numPage })
+    this.setState({ currentPageNumber: numPage })
   }
 
   render() {
     const { items } = this.props
-    const { numPages, numPageActive } = this.state
-    const rangePage = createRangeFromZeroTo(numPages)
+    const { totalPagesCount, currentPageNumber } = this.state
+    const rangePage = createRangeFromZeroTo(totalPagesCount)
 
     return (
       <Fragment>
@@ -41,7 +41,7 @@ class SimpleCarouselBase extends Component {
           {items.map((item, index) => {
             const itemStyle = [
               styles.item,
-              index !== numPageActive && styles.item.hide,
+              index !== currentPageNumber && styles.item.hide,
             ]
 
             return (
@@ -63,7 +63,7 @@ class SimpleCarouselBase extends Component {
             {rangePage.map(numPage => {
               const pageStyle = [
                 styles.page,
-                numPage === numPageActive && styles.page.active,
+                numPage === currentPageNumber && styles.page.active,
               ]
 
               return (
