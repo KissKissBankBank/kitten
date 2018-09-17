@@ -80,7 +80,7 @@ class ContributionCardComponent extends Component {
   isTinyVersion = () =>
     this.props.version === 'tiny' || this.props.viewportIsMobile
 
-  isSorLessVersion = () => this.isTinyVersion() || this.props.viewportIsSOrLess
+  isSOrLessVersion = () => this.isTinyVersion() || this.props.viewportIsSOrLess
 
   render() {
     // We need to destructure the props to prevent them to hydrate children components.
@@ -142,8 +142,8 @@ class ContributionCardComponent extends Component {
     return (
       <StyleRoot {...others} style={styleCard}>
         <Marger
-          bottom={this.isSorLessVersion() ? 0 : 4}
-          top={this.isSorLessVersion() ? 3 : 4}
+          bottom={this.isSOrLessVersion() ? 0 : 4}
+          top={this.isSOrLessVersion() ? 3 : 4}
         >
           <Grid style={cardAddPadding}>
             <GridCol {...leftColumnProps}>{this.renderDescription()}</GridCol>
@@ -157,7 +157,7 @@ class ContributionCardComponent extends Component {
             )}
           </Grid>
 
-          {this.isSorLessVersion() && this.renderChoiceButton()}
+          {this.isSOrLessVersion() && this.renderChoiceButton()}
         </Marger>
       </StyleRoot>
     )
@@ -235,7 +235,7 @@ class ContributionCardComponent extends Component {
 
         {!!this.props.render && this.props.render()}
         {this.renderInfos()}
-        {!this.isSorLessVersion() && this.renderChoiceButton()}
+        {!this.isSOrLessVersion() && this.renderChoiceButton()}
       </Fragment>
     )
   }
@@ -308,7 +308,7 @@ class ContributionCardComponent extends Component {
 
     return (
       <Fragment>
-        {this.isSorLessVersion() && (
+        {this.isSOrLessVersion() && (
           <Fragment>
             {myContribution && (
               <Marger
@@ -324,7 +324,7 @@ class ContributionCardComponent extends Component {
           </Fragment>
         )}
 
-        {!this.isSorLessVersion() && (
+        {!this.isSOrLessVersion() && (
           <Marger top="3">
             {this.renderButton()}
             {myContribution && (
@@ -395,7 +395,7 @@ class ContributionCardComponent extends Component {
 
     return (
       <Fragment>
-        {this.isSorLessVersion() && (
+        {this.isSOrLessVersion() && (
           <Grid style={choiceButtonAddPadding}>
             <GridCol>
               <div style={styles.myContribution}>
@@ -420,7 +420,7 @@ class ContributionCardComponent extends Component {
           </Grid>
         )}
 
-        {!this.isSorLessVersion() && (
+        {!this.isSOrLessVersion() && (
           <div style={styles.myContribution}>
             {this.renderIconBadge()}
             <div style={styles.myContribution.text}>
