@@ -98,7 +98,7 @@ export class VerticalCardWithAction extends Component {
     const { button, buttonModifier } = this.props
 
     return (
-      <Button modifier={buttonModifier} type="button" aria-label={button}>
+      <Button modifier={buttonModifier} type="button">
         {button}
       </Button>
     )
