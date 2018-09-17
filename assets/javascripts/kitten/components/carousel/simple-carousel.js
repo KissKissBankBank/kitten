@@ -19,7 +19,6 @@ class SimpleCarouselBase extends Component {
     this.state = {
       numPageActive: 0,
       numPages: this.props.items.length,
-      containerHeight: 0,
     }
 
     this.elements = []
@@ -27,43 +26,18 @@ class SimpleCarouselBase extends Component {
 
   showPagination = () => this.state.numPages > 1
 
-  updateContainerHeight = () => {
-    if (!domElementHelper.canUseDom()) return
-
-    let maxElementHeight = 0
-
-    this.elements.forEach(element => {
-      if (!element) return
-
-      const elementHeight = domElementHelper.getComputedHeight(element)
-
-      if (elementHeight > maxElementHeight) {
-        maxElementHeight = elementHeight
-      }
-    })
-
-    this.setState({ containerHeight: maxElementHeight })
-  }
-
-  componentDidMount() {
-    this.updateContainerHeight()
-  }
-
   handlePageClick = numPage => () => {
     this.setState({ numPageActive: numPage })
   }
 
   render() {
     const { items } = this.props
-    const { numPages, numPageActive, containerHeight } = this.state
+    const { numPages, numPageActive } = this.state
     const rangePage = createRangeFromZeroTo(numPages)
 
     return (
       <Fragment>
-        <Marger
-          bottom={this.showPagination() ? 4 : 0}
-          style={{ ...styles.container, height: containerHeight }}
-        >
+        <Marger bottom={this.showPagination() ? 4 : 0} style={styles.container}>
           {items.map((item, index) => {
             const itemStyle = [
               styles.item,
@@ -109,13 +83,13 @@ class SimpleCarouselBase extends Component {
 
 const styles = {
   container: {
-    position: 'relative',
+    display: 'grid',
+    gap: 0,
   },
 
   item: {
-    position: 'absolute',
-    top: 0,
-    left: 0,
+    gridColumn: 1,
+    gridRow: 1,
     visibility: 'visible',
     opacity: 1,
     transition: `all .8s ease-in-out`,

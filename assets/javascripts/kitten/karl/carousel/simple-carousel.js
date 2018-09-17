@@ -16,9 +16,6 @@ const Item = ({ numItem }) => (
         src={`https://placeimg.com/40${numItem}/540/nature`}
         alt=""
         style={{ display: 'block', width: '100%' }}
-        onLoad={() => {
-          carouselNode.updateContainerHeight()
-        }}
       />
     </Marger>
 
