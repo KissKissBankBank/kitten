@@ -298,7 +298,7 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
         >
           <button
             aria-label="Custom text button"
-            className="rmq-2c87bfe9 k-Button k-Button--helium k-Button--big"
+            className="rmq-b016fca7 k-Button k-Button--helium k-Button--big"
             data-radium={true}
             disabled={false}
             onClick={[Function]}
