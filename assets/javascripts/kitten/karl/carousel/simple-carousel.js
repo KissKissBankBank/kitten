@@ -54,7 +54,7 @@ const items = [
 
 export const KarlSimpleCarousel = props => (
   <Grid>
-    <GridCol offset="1" col="4">
+    <GridCol col="4">
       <div
         style={{
           paddingLeft: 75,

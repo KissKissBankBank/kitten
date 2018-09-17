@@ -280,6 +280,10 @@ module Kitten
               path: 'components/carousel/carousel',
               name: 'Carousel with ProjectCard'
             },
+            {
+              path: 'components/carousel/simple-carousel',
+              name: 'Simple carousel'
+            },
           ],
         },
       ]

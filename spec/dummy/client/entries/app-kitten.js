@@ -329,6 +329,7 @@ import {
 import {
   KarlCarouselProjectCard,
 } from 'kitten/karl/carousel/carousel'
+import { KarlSimpleCarousel } from 'kitten/karl/carousel/simple-carousel'
 
 ReactOnRails.register({
   // Box
@@ -598,4 +599,5 @@ ReactOnRails.register({
 
   // Carousel
   KarlCarouselProjectCard,
+  KarlSimpleCarousel,
 })

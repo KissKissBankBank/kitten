@@ -72,6 +72,7 @@ class SimpleCarouselBase extends Component {
 
             return (
               <div
+                key={item.key}
                 ref={node => {
                   this.elements[index] = node
                 }}
