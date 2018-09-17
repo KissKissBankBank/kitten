@@ -31,8 +31,6 @@ class SimpleCarouselBase extends Component {
     let maxElementHeight = 0
 
     this.elements.forEach(element => {
-      if (!element) return
-
       const elementHeight = domElementHelper.getComputedHeight(element)
 
       if (elementHeight > maxElementHeight) {
