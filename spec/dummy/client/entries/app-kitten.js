@@ -67,6 +67,7 @@ import { KarlProjectSimilarLoader }
   from 'kitten/karl/cards/project-similar-card'
 import { Triptych }
   from 'kitten/components/cards/triptych'
+import { KarlVerticalCardWithAction } from 'kitten/karl/cards/vertical-card-with-action'
 
 // Colors
 import { KarlColors } from 'kitten/karl/colors/karl-colors'
@@ -196,6 +197,9 @@ import { PhoneIllustration }
 // Images
 import { KarlImageCropper } from 'kitten/karl/images/image-cropper'
 import { KarlImageWithCaption } from 'kitten/karl/images/image-with-caption'
+
+// Media
+import { EmbedPlayer } from 'kitten/components/media/embed-player'
 
 // Layout
 import { Separator } from 'kitten/components/layout/separator'
@@ -385,6 +389,7 @@ ReactOnRails.register({
   KarlSimilarProjectsWithInfosCard,
   KarlProjectSimilarLoader,
   Triptych,
+  KarlVerticalCardWithAction,
 
   // Dev
   DevGrid,
@@ -494,6 +499,9 @@ ReactOnRails.register({
   // Images
   KarlImageCropper,
   KarlImageWithCaption,
+
+  //Media
+  EmbedPlayer,
 
   // Layout
   Separator,
