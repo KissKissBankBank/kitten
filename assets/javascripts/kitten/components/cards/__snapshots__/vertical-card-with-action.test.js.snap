@@ -66,7 +66,6 @@ exports[`<VerticalCardWithAction /> by default matches with snapshot 1`] = `
     }
   >
     <button
-      aria-label="button"
       className="k-Button k-Button--helium"
       tabIndex={null}
       type="button"
@@ -171,7 +170,6 @@ exports[`<VerticalCardWithAction /> with some props matches with snapshot 1`] = 
     }
   >
     <button
-      aria-label="button"
       className="k-Button k-Button--helium"
       tabIndex={null}
       type="button"
