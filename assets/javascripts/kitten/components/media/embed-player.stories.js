@@ -34,7 +34,7 @@ storiesOf('Media/EmbedPlayer', module)
                   'Play',
                 )}
                 ratio={text('Video ratio', 376.0 / 620 * 100)}
-                iframeVideo={text(
+                iframeHtml={text(
                   'Iframe video',
                   `<iframe
                     width="620"

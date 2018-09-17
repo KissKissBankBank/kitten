@@ -54,7 +54,7 @@ class EmbedPlayerBase extends Component {
   }
 
   a11yOnClickProps = () => {
-    if (!this.props.iframeVideo) return
+    if (!this.props.iframeHtml) return
 
     return {
       onClick: this.handleClick,
@@ -69,7 +69,7 @@ class EmbedPlayerBase extends Component {
     const {
       ratio,
       previewProps,
-      iframeVideo,
+      iframeHtml,
       playButtonLabel,
       style: mainStyle = void 0,
       t,
@@ -77,11 +77,11 @@ class EmbedPlayerBase extends Component {
 
     const validRatio = parseInt(ratio, 10)
     const { thumbnail, badgeComponent, style } = previewProps
-    const isVideoPlaying = iframeVideo && this.state.showPlayer
+    const isVideoPlaying = iframeHtml && this.state.showPlayer
     const playerPreviewStyle = [
-      styles.projectPlayer.base,
-      iframeVideo ? { cursor: 'pointer' } : null,
-      isVideoPlaying ? styles.projectPlayer.hide : styles.projectPlayer.show,
+      styles.player.base,
+      iframeHtml ? { cursor: 'pointer' } : null,
+      isVideoPlaying ? styles.player.hide : styles.player.show,
     ]
 
     return (
@@ -94,7 +94,7 @@ class EmbedPlayerBase extends Component {
           {...this.a11yOnClickProps()}
         >
           <div style={playerPreviewStyle}>
-            {iframeVideo && <PlayerButton playButtonLabel={playButtonLabel} />}
+            {iframeHtml && <PlayerButton playButtonLabel={playButtonLabel} />}
 
             <img
               style={styles.thumbnail}
@@ -105,10 +105,10 @@ class EmbedPlayerBase extends Component {
             {badgeComponent}
           </div>
 
-          {iframeVideo && (
+          {iframeHtml && (
             <div style={styles.embedPlayer}>
               <ResponsiveIframeContainer ratio={validRatio}>
-                {parseHtml(iframeVideo)}
+                {parseHtml(iframeHtml)}
               </ResponsiveIframeContainer>
             </div>
           )}
@@ -129,7 +129,7 @@ EmbedPlayerBase.propTypes = {
   badgeComponent: PropTypes.node,
   playButtonLabel: PropTypes.string.isRequired,
   ratio: PropTypes.oneOf([PropTypes.number, PropTypes.string]).isRequired,
-  iframeVideo: PropTypes.string,
+  iframeHtml: PropTypes.string,
 }
 
 EmbedPlayerBase.defaultProps = {
@@ -139,7 +139,7 @@ EmbedPlayerBase.defaultProps = {
     },
   },
   badgeComponent: null,
-  iframeVideo: null,
+  iframeHtml: null,
 }
 
 const playerButtonSize = 90
@@ -183,7 +183,7 @@ const styles = {
     },
   },
 
-  projectPlayer: {
+  player: {
     base: {
       position: 'relative',
       transition: 'opacity ease 600ms, z-index ease 600ms',

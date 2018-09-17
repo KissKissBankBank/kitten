@@ -28,7 +28,7 @@ describe('<EmbedPlayer />', () => {
             }}
             playButtonLabel="Play"
             ratio={376 / 620 * 100}
-            iframeVideo="<iframe
+            iframeHtml="<iframe
                 width='620'
                 height='376'
                 src='https://www.youtube.com/embed/30wT8ZJOeDA'
