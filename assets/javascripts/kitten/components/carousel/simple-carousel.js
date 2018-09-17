@@ -28,9 +28,13 @@ class SimpleCarouselBase extends Component {
   showPagination = () => this.state.numPages > 0
 
   updateContainerHeight = () => {
+    if (!domElementHelper.canUseDom()) return
+
     let maxElementHeight = 0
 
     this.elements.forEach(element => {
+      if (!element) return
+
       const elementHeight = domElementHelper.getComputedHeight(element)
 
       if (elementHeight > maxElementHeight) {
