@@ -45,7 +45,7 @@ class SimpleCarouselBase extends Component {
     this.updateContainerHeight()
   }
 
-  handlePageClick = numPage => {
+  handlePageClick = numPage => () => {
     this.setState({ numPageActive: numPage })
   }
 
@@ -91,9 +91,7 @@ class SimpleCarouselBase extends Component {
                 <div
                   key={numPage}
                   style={pageStyle}
-                  onClick={() => {
-                    this.handlePageClick(numPage)
-                  }}
+                  onClick={this.handlePageClick(numPage)}
                 />
               )
             })}
