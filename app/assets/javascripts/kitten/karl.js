@@ -2,5 +2,4 @@
 
 $(document).ready(function() {
   window.karl.initToggleClassListener()
-  window.karl.displayShortcut()
 })
