@@ -92,61 +92,33 @@ Array [
 `;
 
 exports[`<SimpleCarousel /> with only one item matches with snapshot 1`] = `
-Array [
+<div
+  data-radium={true}
+  style={
+    Object {
+      "height": 0,
+      "marginBottom": null,
+      "marginTop": null,
+      "position": "relative",
+    }
+  }
+>
   <div
     data-radium={true}
     style={
       Object {
-        "height": 0,
-        "marginBottom": "2.5rem",
-        "marginTop": null,
-        "position": "relative",
+        "left": 0,
+        "opacity": 1,
+        "position": "absolute",
+        "top": 0,
+        "transition": "all .8s ease-in-out",
+        "visibility": "visible",
       }
     }
   >
-    <div
-      data-radium={true}
-      style={
-        Object {
-          "left": 0,
-          "opacity": 1,
-          "position": "absolute",
-          "top": 0,
-          "transition": "all .8s ease-in-out",
-          "visibility": "visible",
-        }
-      }
-    >
-      <p>
-        Foo
-      </p>
-    </div>
-  </div>,
-  <div
-    data-radium={true}
-    style={
-      Object {
-        "display": "flex",
-        "justifyContent": "center",
-        "marginBottom": "2.5rem",
-        "marginTop": "2.5rem",
-      }
-    }
-  >
-    <div
-      data-radium={true}
-      onClick={[Function]}
-      style={
-        Object {
-          "background": "#19b4fa",
-          "cursor": "pointer",
-          "height": 6,
-          "marginRight": 5,
-          "transition": "background .4s ease-in-out",
-          "width": 6,
-        }
-      }
-    />
-  </div>,
-]
+    <p>
+      Foo
+    </p>
+  </div>
+</div>
 `;
