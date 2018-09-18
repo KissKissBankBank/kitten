@@ -1,14 +1,13 @@
 import React, { Component } from 'react'
 import Radium, { StyleRoot } from 'radium'
+import PropTypes from 'prop-types'
 import { Grid, GridCol as GridColBase } from 'kitten/components/grid/grid'
 import { Marger as MargerBase } from 'kitten/components/layout/marger'
-import { Title } from 'kitten/components/typography/title'
 import { VerticalStroke } from 'kitten/components/layout/vertical-stroke'
 import { ScreenConfig } from 'kitten/constants/screen-config'
 import { mediaQueries } from 'kitten/hoc/media-queries'
 import { debounce } from 'kitten/helpers/utils/debounce'
 import { GUTTER } from 'kitten/constants/grid-config'
-import { VerticalCardWithAction } from 'kitten/components/cards/vertical-card-with-action'
 
 const Marger = Radium(MargerBase)
 const GridCol = Radium(GridColBase)
@@ -19,7 +18,7 @@ class TriptychBase extends Component {
   constructor(props) {
     super(props)
 
-    this.state = { addEvenMargin: 0 }
+    this.state = { addEvenMargin: null }
   }
 
   manageCardPosition = () => {
@@ -50,21 +49,18 @@ class TriptychBase extends Component {
     this[name] = node
   }
 
-  render() {
+  setGutter = () => {
     const { viewportIsTabletOrLess, viewportIsSOrLess } = this.props
     const isTablet = viewportIsTabletOrLess && !viewportIsSOrLess
-    let gutter
 
     if (viewportIsTabletOrLess) {
-      // Tablet
       if (isTablet) {
-        gutter = 50 / 2 - GUTTER / 2
+        const tabletGutter = 50 / 2 - GUTTER / 2
         styles.gutter = {
-          firstItem: { marginLeft: gutter },
-          secondItem: { marginRight: gutter },
-          thirdItem: { marginLeft: gutter },
+          firstItem: { marginLeft: tabletGutter },
+          secondItem: { marginRight: tabletGutter },
+          thirdItem: { marginLeft: tabletGutter },
         }
-        // Mobile
       } else {
         styles.gutter = {
           firstItem: null,
@@ -72,15 +68,20 @@ class TriptychBase extends Component {
           thirdItem: null,
         }
       }
-      // Desktop
     } else {
-      gutter = 40 / 2 - GUTTER / 2
+      const desktopGutter = 40 / 2 - GUTTER / 2
       styles.gutter = {
-        firstItem: { marginRight: gutter },
-        secondItem: { marginRight: gutter, marginLeft: gutter },
-        thirdItem: { marginLeft: gutter },
+        firstItem: { marginRight: desktopGutter },
+        secondItem: { marginRight: desktopGutter, marginLeft: desktopGutter },
+        thirdItem: { marginLeft: desktopGutter },
       }
     }
+  }
+
+  render() {
+    const { viewportIsTabletOrLess, title, item1, item2, item3 } = this.props
+
+    this.setGutter()
 
     return (
       <StyleRoot>
@@ -94,11 +95,7 @@ class TriptychBase extends Component {
             offset-s="0"
           >
             <div ref={this.setRef('title')}>
-              <Marger bottom="2">
-                <Title tag="h2" modifier="secondary" margin={false}>
-                  Main title goes here
-                </Title>
-              </Marger>
+              <Marger bottom="2">{title}</Marger>
 
               <Marger bottom="2">
                 <VerticalStroke size="huge" style={styles.verticalStroke} />
@@ -109,21 +106,7 @@ class TriptychBase extends Component {
           <GridCol col-l="4" col-m="6" col-s="12" style={styles.oddMargin}>
             <Marger style={styles.gutter.firstItem}>
               <div ref={this.setRef('card')}>
-                <Marger bottom={viewportIsTabletOrLess ? 5 : 0}>
-                  <VerticalCardWithAction
-                    imageProps={{
-                      src: `http://via.placeholder.com/${width}x${height}/19b4fa/19b4fa`,
-                      alt: '',
-                      style: {
-                        ...styles.verticalCard,
-                        backgroundImage: `url("http://via.placeholder.com/${width}x${height}/19b4fa/19b4fa")`,
-                      },
-                    }}
-                    title="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
-                    button="Lorem ipsum"
-                    buttonModifier="helium"
-                  />
-                </Marger>
+                <Marger bottom={viewportIsTabletOrLess ? 5 : 0}>{item1}</Marger>
               </div>
             </Marger>
           </GridCol>
@@ -134,43 +117,24 @@ class TriptychBase extends Component {
               top={this.state.addEvenMargin / 10}
               bottom={viewportIsTabletOrLess ? 5 : 0}
             >
-              <VerticalCardWithAction
-                imageProps={{
-                  src: `http://via.placeholder.com/${width}x${height}/ff0046/ff0046`,
-                  alt: '',
-                  style: {
-                    ...styles.verticalCard,
-                    backgroundImage: `url("http://via.placeholder.com/${width}x${height}/ff0046/ff0046")`,
-                  },
-                }}
-                title="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
-                button="Lorem ipsum"
-                buttonModifier="helium"
-              />
+              {item2}
             </Marger>
           </GridCol>
 
           <GridCol col-l="4" col-m="6" col-s="12" style={styles.oddMargin}>
-            <Marger style={styles.gutter.thirdItem}>
-              <VerticalCardWithAction
-                imageProps={{
-                  src: `http://via.placeholder.com/${width}x${height}/61d079/61d079`,
-                  alt: '',
-                  style: {
-                    ...styles.verticalCard,
-                    backgroundImage: `url("http://via.placeholder.com/${width}x${height}/61d079/61d079")`,
-                  },
-                }}
-                title="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
-                button="Lorem ipsum"
-                buttonModifier="helium"
-              />
-            </Marger>
+            <Marger style={styles.gutter.thirdItem}>{item3}</Marger>
           </GridCol>
         </Grid>
       </StyleRoot>
     )
   }
+}
+
+TriptychBase.propTypes = {
+  title: PropTypes.node.isRequired,
+  items1: PropTypes.node.isRequired,
+  items2: PropTypes.node.isRequired,
+  items3: PropTypes.node.isRequired,
 }
 
 const strokeHeight = 80
@@ -180,15 +144,6 @@ const styles = {
   verticalStroke: {
     height: strokeHeight,
     margin: '0 auto',
-  },
-
-  verticalCard: {
-    width: '100%',
-    height: 0,
-    paddingBottom: `${height / width * 100}%`,
-    backgroundColor: 'transparent',
-    backgroundRepeat: 'no-repeat',
-    backgroundSize: 'cover',
   },
 
   oddMargin: {
