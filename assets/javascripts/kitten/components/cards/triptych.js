@@ -8,42 +8,12 @@ import { ScreenConfig } from 'kitten/constants/screen-config'
 import { mediaQueries } from 'kitten/hoc/media-queries'
 import { debounce } from 'kitten/helpers/utils/debounce'
 import { GUTTER } from 'kitten/constants/grid-config'
+import { VerticalCardWithAction } from 'kitten/components/cards/vertical-card-with-action'
 
 const Marger = Radium(MargerBase)
 const GridCol = Radium(GridColBase)
 const width = 349
 const height = 465
-
-class FakeCard extends Component {
-  render() {
-    const {
-      index,
-      viewportIsTabletOrLess,
-      viewportIsSOrLess,
-      ...others
-    } = this.props
-
-    const picUrl = `https://picsum.photos/${width}/${height}?${index}`
-
-    return (
-      <div {...others}>
-        <img
-          src={picUrl}
-          style={{
-            width: '100%',
-            height: 0,
-            paddingBottom: `${height / width * 100}%`,
-            background: `transparent url(${picUrl}) no-repeat`,
-            backgroundSize: 'cover',
-          }}
-          alt={`picture ${index}`}
-        />
-        <h3>{index} / title goes here</h3>
-        <p>some lorem ipsum</p>
-      </div>
-    )
-  }
-}
 
 class TriptychBase extends Component {
   constructor(props) {
@@ -139,7 +109,21 @@ class TriptychBase extends Component {
           <GridCol col-l="4" col-m="6" col-s="12" style={styles.oddMargin}>
             <Marger style={styles.gutter.firstItem}>
               <div ref={this.setRef('card')}>
-                <FakeCard index={1} />
+                <Marger bottom={viewportIsTabletOrLess ? 5 : 0}>
+                  <VerticalCardWithAction
+                    imageProps={{
+                      src: `http://via.placeholder.com/${width}x${height}/19b4fa/19b4fa`,
+                      alt: '',
+                      style: {
+                        ...styles.verticalCard,
+                        backgroundImage: `url("http://via.placeholder.com/${width}x${height}/19b4fa/19b4fa")`,
+                      },
+                    }}
+                    title="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
+                    button="Lorem ipsum"
+                    buttonModifier="helium"
+                  />
+                </Marger>
               </div>
             </Marger>
           </GridCol>
@@ -148,14 +132,39 @@ class TriptychBase extends Component {
             <Marger
               style={{ ...styles.secondCard, ...styles.gutter.secondItem }}
               top={this.state.addEvenMargin / 10}
+              bottom={viewportIsTabletOrLess ? 5 : 0}
             >
-              <FakeCard index={2} />
+              <VerticalCardWithAction
+                imageProps={{
+                  src: `http://via.placeholder.com/${width}x${height}/ff0046/ff0046`,
+                  alt: '',
+                  style: {
+                    ...styles.verticalCard,
+                    backgroundImage: `url("http://via.placeholder.com/${width}x${height}/ff0046/ff0046")`,
+                  },
+                }}
+                title="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
+                button="Lorem ipsum"
+                buttonModifier="helium"
+              />
             </Marger>
           </GridCol>
 
           <GridCol col-l="4" col-m="6" col-s="12" style={styles.oddMargin}>
             <Marger style={styles.gutter.thirdItem}>
-              <FakeCard index={3} />
+              <VerticalCardWithAction
+                imageProps={{
+                  src: `http://via.placeholder.com/${width}x${height}/61d079/61d079`,
+                  alt: '',
+                  style: {
+                    ...styles.verticalCard,
+                    backgroundImage: `url("http://via.placeholder.com/${width}x${height}/61d079/61d079")`,
+                  },
+                }}
+                title="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
+                button="Lorem ipsum"
+                buttonModifier="helium"
+              />
             </Marger>
           </GridCol>
         </Grid>
@@ -171,6 +180,15 @@ const styles = {
   verticalStroke: {
     height: strokeHeight,
     margin: '0 auto',
+  },
+
+  verticalCard: {
+    width: '100%',
+    height: 0,
+    paddingBottom: `${height / width * 100}%`,
+    backgroundColor: 'transparent',
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover',
   },
 
   oddMargin: {
