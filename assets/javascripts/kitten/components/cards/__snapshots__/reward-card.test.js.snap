@@ -20,7 +20,7 @@ exports[`<RewardCard /> by default matches with snapshot 1`] = `
     }
   >
     <div
-      className="rmq-5aa2f196 rmq-5b3da7a1 rmq-ce79a9e0 k-Grid"
+      className="rmq-ac5e1496 rmq-5b3da7a1 rmq-ce79a9e0 k-Grid"
       data-radium={true}
       style={
         Object {
@@ -30,7 +30,7 @@ exports[`<RewardCard /> by default matches with snapshot 1`] = `
       }
     >
       <div
-        className="k-Grid__col--12 k-Grid__col--10@m k-Grid__col--7@l"
+        className="k-Grid__col--12 k-Grid__col--7@s k-Grid__col--10@l"
         data-radium={true}
       >
         <div
@@ -99,8 +99,8 @@ exports[`<RewardCard /> by default matches with snapshot 1`] = `
   <style
     dangerouslySetInnerHTML={
       Object {
-        "__html": "@media (min-width: 640px){ .rmq-5aa2f196{padding-left: 50px !important;
-padding-right: 50px !important;}}
+        "__html": "@media (min-width: 640px){ .rmq-ac5e1496{padding-left: 30px !important;
+padding-right: 30px !important;}}
 @media (min-width: 768px){ .rmq-5b3da7a1{padding-left: 40px !important;
 padding-right: 0 !important;}}
 @media (min-width: 1080px){ .rmq-ce79a9e0{padding-left: 115px !important;
@@ -131,7 +131,7 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
     }
   >
     <div
-      className="rmq-5aa2f196 rmq-5b3da7a1 rmq-ce79a9e0 k-Grid"
+      className="rmq-ac5e1496 rmq-5b3da7a1 rmq-ce79a9e0 k-Grid"
       data-radium={true}
       style={
         Object {
@@ -141,7 +141,7 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
       }
     >
       <div
-        className="k-Grid__col--12 k-Grid__col--7@m k-Grid__col--7@l"
+        className="k-Grid__col--12 k-Grid__col--7@s k-Grid__col--7@l"
         data-radium={true}
       >
         <div
@@ -230,8 +230,8 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
           <div
             style={
               Object {
-                "marginBottom": "2.5rem",
-                "marginTop": "1.875rem",
+                "marginBottom": "1.875rem",
+                "marginTop": "1.25rem",
               }
             }
           >
@@ -292,33 +292,24 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
           style={
             Object {
               "marginBottom": null,
-              "marginTop": "2.5rem",
+              "marginTop": "1.875rem",
             }
           }
         >
-          <div
-            style={
-              Object {
-                "marginBottom": "1.25rem",
-                "marginTop": null,
-              }
-            }
+          <button
+            aria-labelledby="Custom text button"
+            className="rmq-b016fca7 k-Button k-Button--helium k-Button--big"
+            data-radium={true}
+            disabled={false}
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            style={Object {}}
+            tabIndex={null}
+            type="button"
           >
-            <button
-              aria-label="Custom text button"
-              className="rmq-2c87bfe9 k-Button k-Button--helium k-Button--big"
-              data-radium={true}
-              disabled={false}
-              onClick={[Function]}
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              style={Object {}}
-              tabIndex={null}
-              type="button"
-            >
-              Custom text button
-            </button>
-          </div>
+            Custom text button
+          </button>
           <div
             style={
               Object {
@@ -422,7 +413,7 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
         </div>
       </div>
       <div
-        className="rmq-c7c1445b k-Grid__col--12 k-Grid__col--4@m k-Grid__col--offset-1@m"
+        className="rmq-c7c1445b k-Grid__col--12 k-Grid__col--4@s k-Grid__col--offset-1@s"
         data-radium={true}
         style={Object {}}
       >
@@ -445,6 +436,7 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
               src="#image"
               style={
                 Object {
+                  "display": "block",
                   "width": "100%",
                 }
               }
@@ -457,15 +449,18 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
   <style
     dangerouslySetInnerHTML={
       Object {
-        "__html": "@media (min-width: 640px){ .rmq-5aa2f196{padding-left: 50px !important;
-padding-right: 50px !important;}}
+        "__html": "@media (min-width: 640px){ .rmq-ac5e1496{padding-left: 30px !important;
+padding-right: 30px !important;}}
 @media (min-width: 768px){ .rmq-5b3da7a1{padding-left: 40px !important;
 padding-right: 0 !important;}}
 @media (min-width: 1080px){ .rmq-ce79a9e0{padding-left: 115px !important;
 padding-right: 0 !important;}}
 @media (min-width: 768px){ .rmq-ef57b76a{font-size: 16px !important;
 margin-right: 30px !important;}}
-@media (max-width: 767px){ .rmq-2c87bfe9{width: 100% !important;}}
+@media (max-width: 767px){ .rmq-b016fca7{width: calc(100% + 4px) !important;
+position: relative !important;
+left: -2px !important;
+bottom: -2px !important;}}
 @media (min-width: 768px){ .rmq-c7c1445b{padding-right: 50px !important;}}",
       }
     }
