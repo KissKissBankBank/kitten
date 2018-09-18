@@ -4,7 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add props on `ProjectCard` and `CrowdfundingCard` components.
+- Feature: Add `progressColor` props on `ProjectCard` and `CrowdfundingCard`
+  components.
 
 ## [23.3.0] - 2018-09-18
 
