@@ -4,6 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [23.4.0] - 2018-09-18
+
+Feature:
+- Add `success status` example on `ProjectCard`.
+
 ## [23.3.0] - 2018-09-18
 
 Features:
