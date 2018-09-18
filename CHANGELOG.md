@@ -4,10 +4,15 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Update style on `SOrLess` version on `ContributionCard` component.
-- Feature: Create `VerticalCardWithAction` component.
-- Feature: Create `EmbedPlayer` component.
-- Fix: Fix `button` and `image` position on `ContributionCard` component.
+## [23.3.0] - 2018-09-18
+
+Features:
+- Update style on `SOrLess` version on `ContributionCard` component.
+- Create `VerticalCardWithAction` component.
+- Create `EmbedPlayer` component.
+
+Fix:
+- Fix `button` and `image` position on `ContributionCard` component.
 
 ## [23.2.1] - 2018-09-04
 
