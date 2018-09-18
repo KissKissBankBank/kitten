@@ -297,7 +297,7 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
           }
         >
           <button
-            aria-label="Custom text button"
+            aria-labelledby="Custom text button"
             className="rmq-b016fca7 k-Button k-Button--helium k-Button--big"
             data-radium={true}
             disabled={false}
@@ -809,7 +809,7 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
       </div>
     </div>
     <button
-      aria-label="Custom text button"
+      aria-labelledby="Custom text button"
       className="k-Button k-Button--helium k-Button--big"
       data-radium={true}
       disabled={false}
