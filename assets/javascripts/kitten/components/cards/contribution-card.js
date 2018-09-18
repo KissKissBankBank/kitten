@@ -359,7 +359,7 @@ class ContributionCardComponent extends Component {
         size="big"
         modifier="helium"
         type="button"
-        aria-label={button}
+        aria-labelledby={button}
         style={buttonStyles}
         onMouseEnter={buttonOnMouseEnter}
         onMouseLeave={buttonOnMouseLeave}
