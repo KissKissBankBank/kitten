@@ -132,9 +132,9 @@ class TriptychBase extends Component {
 
 TriptychBase.propTypes = {
   title: PropTypes.node.isRequired,
-  items1: PropTypes.node.isRequired,
-  items2: PropTypes.node.isRequired,
-  items3: PropTypes.node.isRequired,
+  item1: PropTypes.node.isRequired,
+  item2: PropTypes.node.isRequired,
+  item3: PropTypes.node.isRequired,
 }
 
 const strokeHeight = 80
