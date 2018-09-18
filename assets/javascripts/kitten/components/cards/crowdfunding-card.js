@@ -240,9 +240,7 @@ class CrowdfundingCardComponent extends Component {
   }
 
   renderProgress() {
-    const { progress, progressProps, loading } = this.props
-
-    const { color, rampProps, ...others } = progressProps || {}
+    const { progress, progressColor, loading } = this.props
 
     if (progress === false) return
 
@@ -251,10 +249,9 @@ class CrowdfundingCardComponent extends Component {
     return (
       <Marger top=".5" bottom="2" style={styles.progress}>
         <Progress
-          {...others}
           value={progressValue}
           className={loading && 'is-disabled'}
-          color={color}
+          color={progressColor}
           rampProps={{
             style: { height: '4px' },
           }}

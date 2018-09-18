@@ -125,8 +125,7 @@ class ProjectCardComponent extends Component {
   }
 
   renderProgress() {
-    const { progress, progressProps } = this.props
-    const { color, rampProps, ...others } = progressProps || {}
+    const { progress, progressColor } = this.props
 
     if (progress === false) return
 
@@ -139,11 +138,9 @@ class ProjectCardComponent extends Component {
       >
         <Marger top="1.3" bottom="1.5" className="k-ProjectCard__grid--flex">
           <Progress
-            {...others}
             className="k-ProjectCard__grid--flex__item-fluid"
             value={progress}
-            color={color}
-            rampProps={rampProps}
+            color={progressColor}
           />
           <Paragraph
             margin={false}
