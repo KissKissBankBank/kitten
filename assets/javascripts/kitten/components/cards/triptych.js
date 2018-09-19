@@ -164,7 +164,7 @@ const styles = {
   secondCard: { transition: 'margin 500ms' },
 }
 
-export const Triptych = mediaQueries(Radium(TriptychBase), {
+export const Triptych = mediaQueries(TriptychBase, {
   viewportIsTabletOrLess: true,
   viewportIsSOrLess: true,
 })
