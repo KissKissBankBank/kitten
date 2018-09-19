@@ -86,14 +86,7 @@ class TriptychBase extends Component {
     return (
       <StyleRoot>
         <Grid className="k-u-align-center">
-          <GridCol
-            col-l="6"
-            offset-l="3"
-            col-m="6"
-            offset-m="0"
-            col-s="12"
-            offset-s="0"
-          >
+          <GridCol col-l="6" offset-l="3" col-m="6" offset-m="0">
             <div ref={this.setRef('title')}>
               <Marger bottom="2">{title}</Marger>
 
@@ -103,7 +96,7 @@ class TriptychBase extends Component {
             </div>
           </GridCol>
 
-          <GridCol col-l="4" col-m="6" col-s="12" style={styles.oddMargin}>
+          <GridCol col-l="4" col-m="6" style={styles.oddMargin}>
             <Marger style={styles.gutter.firstItem}>
               <div ref={this.setRef('card')}>
                 <Marger bottom={viewportIsTabletOrLess ? 5 : 0}>{item1}</Marger>
@@ -111,7 +104,7 @@ class TriptychBase extends Component {
             </Marger>
           </GridCol>
 
-          <GridCol col-l="4" col-m="6" col-s="12">
+          <GridCol col-l="4" col-m="6">
             <Marger
               style={{ ...styles.secondCard, ...styles.gutter.secondItem }}
               top={this.state.addEvenMargin / 10}
@@ -121,7 +114,7 @@ class TriptychBase extends Component {
             </Marger>
           </GridCol>
 
-          <GridCol col-l="4" col-m="6" col-s="12" style={styles.oddMargin}>
+          <GridCol col-l="4" col-m="6" style={styles.oddMargin}>
             <Marger style={styles.gutter.thirdItem}>{item3}</Marger>
           </GridCol>
         </Grid>
