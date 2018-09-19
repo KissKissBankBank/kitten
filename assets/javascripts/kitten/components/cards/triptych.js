@@ -11,8 +11,6 @@ import { GUTTER } from 'kitten/constants/grid-config'
 
 const Marger = Radium(MargerBase)
 const GridCol = Radium(GridColBase)
-const width = 349
-const height = 465
 
 class TriptychBase extends Component {
   constructor(props) {
