@@ -240,15 +240,18 @@ class CrowdfundingCardComponent extends Component {
   }
 
   renderProgress() {
-    if (this.props.progress === false) return
+    const { progress, progressColor, loading } = this.props
 
-    const progressValue = this.props.loading ? 65 : this.props.progress
+    if (progress === false) return
+
+    const progressValue = loading ? 65 : progress
 
     return (
       <Marger top=".5" bottom="2" style={styles.progress}>
         <Progress
           value={progressValue}
-          className={this.props.loading && 'is-disabled'}
+          className={loading && 'is-disabled'}
+          color={progressColor}
           rampProps={{
             style: { height: '4px' },
           }}
@@ -256,11 +259,9 @@ class CrowdfundingCardComponent extends Component {
         />
 
         <Text weight="regular" size="micro" style={styles.progress.percent}>
-          {this.props.loading && (
-            <span style={styles.informations.info.loading} />
-          )}
+          {loading && <span style={styles.informations.info.loading} />}
 
-          {!this.props.loading && `${this.props.progress} %`}
+          {!loading && `${progress} %`}
         </Text>
       </Marger>
     )

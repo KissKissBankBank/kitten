@@ -195,6 +195,9 @@ module Kitten
           components: [
             { path: 'components/cards/card', name: 'Card' },
             { path: 'components/cards/simple-card', name: 'Simple card' },
+            { path: 'components/cards/vertical-card-with-action',
+              name: 'Vertical card with action',
+            },
             { path: 'components/cards/project-card', name: 'Project card' },
             { path: 'components/cards/article-card', name: 'Article card' },
             { path: 'components/cards/backer-card', name: 'Backer card' },
@@ -278,7 +281,17 @@ module Kitten
           components: [
             {
               path: 'components/carousel/carousel',
-              name: 'Carousel with ProjectCard'
+              name: 'Carousel with ProjectCard',
+            },
+          ],
+        },
+        {
+          id: 'player',
+          label: 'Media',
+          components: [
+            {
+              path: 'components/media/embed-player',
+              name: 'Embed Player',
             },
             {
               path: 'components/carousel/simple-carousel',
