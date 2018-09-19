@@ -7,8 +7,6 @@ import { Paragraph } from 'kitten/components/typography/paragraph'
 import { HorizontalStroke } from 'kitten/components/layout/horizontal-stroke'
 import { Button } from 'kitten/components/buttons/button'
 
-let carouselNode
-
 const Item = ({ numItem }) => (
   <Fragment>
     <Marger bottom="3">
@@ -43,12 +41,6 @@ const Item = ({ numItem }) => (
   </Fragment>
 )
 
-const items = [
-  <Item key="1" numItem="1" />,
-  <Item key="2" numItem="2" />,
-  <Item key="3" numItem="3" />,
-]
-
 export const KarlSimpleCarousel = props => (
   <Grid>
     <GridCol col="4">
@@ -59,12 +51,11 @@ export const KarlSimpleCarousel = props => (
           overflow: 'auto',
         }}
       >
-        <SimpleCarousel
-          ref={node => {
-            carouselNode = node
-          }}
-          items={items}
-        />
+        <SimpleCarousel>
+          <Item key="1" numItem="1" />
+          <Item key="2" numItem="2" />
+          <Item key="3" numItem="3" />
+        </SimpleCarousel>
       </div>
     </GridCol>
   </Grid>

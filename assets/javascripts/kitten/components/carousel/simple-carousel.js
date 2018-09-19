@@ -4,24 +4,17 @@ import Radium from 'radium'
 import { Marger as MargerBase } from 'kitten/components/layout/marger'
 import COLORS from 'kitten/constants/colors-config'
 import { createRangeFromZeroTo } from 'kitten/helpers/utils/range'
-import domElementHelper from 'kitten/helpers/dom/element-helper'
 
 const Marger = Radium(MargerBase)
 
 class SimpleCarouselBase extends Component {
-  static propTypes = {
-    items: PropTypes.arrayOf(PropTypes.node).isRequired,
-  }
-
   constructor(props) {
     super(props)
 
     this.state = {
       currentPageNumber: 0,
-      totalPagesCount: this.props.items.length,
+      totalPagesCount: React.Children.toArray(props.children).length,
     }
-
-    this.elements = []
   }
 
   showPagination = () => this.state.totalPagesCount > 1
@@ -31,27 +24,21 @@ class SimpleCarouselBase extends Component {
   }
 
   render() {
-    const { items } = this.props
+    const { children } = this.props
     const { totalPagesCount, currentPageNumber } = this.state
     const rangePage = createRangeFromZeroTo(totalPagesCount)
 
     return (
       <Fragment>
         <Marger bottom={this.showPagination() ? 4 : 0} style={styles.container}>
-          {items.map((item, index) => {
+          {React.Children.toArray(children).map((item, index) => {
             const itemStyle = [
               styles.item,
               index !== currentPageNumber && styles.item.hide,
             ]
 
             return (
-              <div
-                key={item.key}
-                ref={node => {
-                  this.elements[index] = node
-                }}
-                style={itemStyle}
-              >
+              <div key={item.key} style={itemStyle}>
                 {item}
               </div>
             )
