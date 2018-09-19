@@ -8,7 +8,7 @@ exports[`<Triptych /> by default matches with snapshot 1`] = `
     className="k-Grid k-u-align-center"
   >
     <div
-      className="k-Grid__col--12 k-Grid__col--12@s k-Grid__col--offset-0@s k-Grid__col--6@m k-Grid__col--offset-0@m k-Grid__col--6@l k-Grid__col--offset-3@l"
+      className="k-Grid__col--12 k-Grid__col--6@m k-Grid__col--offset-0@m k-Grid__col--6@l k-Grid__col--offset-3@l"
       data-radium={true}
     >
       <div
@@ -47,7 +47,7 @@ exports[`<Triptych /> by default matches with snapshot 1`] = `
       </div>
     </div>
     <div
-      className="rmq-3e3f42ca k-Grid__col--12 k-Grid__col--12@s k-Grid__col--6@m k-Grid__col--4@l"
+      className="rmq-3e3f42ca k-Grid__col--12 k-Grid__col--6@m k-Grid__col--4@l"
       data-radium={true}
       style={Object {}}
     >
@@ -75,7 +75,7 @@ exports[`<Triptych /> by default matches with snapshot 1`] = `
       </div>
     </div>
     <div
-      className="k-Grid__col--12 k-Grid__col--12@s k-Grid__col--6@m k-Grid__col--4@l"
+      className="k-Grid__col--12 k-Grid__col--6@m k-Grid__col--4@l"
     >
       <div
         data-radium={true}
@@ -91,7 +91,7 @@ exports[`<Triptych /> by default matches with snapshot 1`] = `
       />
     </div>
     <div
-      className="rmq-3e3f42ca k-Grid__col--12 k-Grid__col--12@s k-Grid__col--6@m k-Grid__col--4@l"
+      className="rmq-3e3f42ca k-Grid__col--12 k-Grid__col--6@m k-Grid__col--4@l"
       data-radium={true}
       style={Object {}}
     >
@@ -125,7 +125,7 @@ exports[`<Triptych /> with some props matches with snapshot 1`] = `
     className="k-Grid k-u-align-center"
   >
     <div
-      className="k-Grid__col--12 k-Grid__col--12@s k-Grid__col--offset-0@s k-Grid__col--6@m k-Grid__col--offset-0@m k-Grid__col--6@l k-Grid__col--offset-3@l"
+      className="k-Grid__col--12 k-Grid__col--6@m k-Grid__col--offset-0@m k-Grid__col--6@l k-Grid__col--offset-3@l"
       data-radium={true}
     >
       <div
@@ -168,7 +168,7 @@ exports[`<Triptych /> with some props matches with snapshot 1`] = `
       </div>
     </div>
     <div
-      className="rmq-3e3f42ca k-Grid__col--12 k-Grid__col--12@s k-Grid__col--6@m k-Grid__col--4@l"
+      className="rmq-3e3f42ca k-Grid__col--12 k-Grid__col--6@m k-Grid__col--4@l"
       data-radium={true}
       style={Object {}}
     >
@@ -279,7 +279,7 @@ exports[`<Triptych /> with some props matches with snapshot 1`] = `
       </div>
     </div>
     <div
-      className="k-Grid__col--12 k-Grid__col--12@s k-Grid__col--6@m k-Grid__col--4@l"
+      className="k-Grid__col--12 k-Grid__col--6@m k-Grid__col--4@l"
     >
       <div
         data-radium={true}
@@ -397,7 +397,7 @@ exports[`<Triptych /> with some props matches with snapshot 1`] = `
       </div>
     </div>
     <div
-      className="rmq-3e3f42ca k-Grid__col--12 k-Grid__col--12@s k-Grid__col--6@m k-Grid__col--4@l"
+      className="rmq-3e3f42ca k-Grid__col--12 k-Grid__col--6@m k-Grid__col--4@l"
       data-radium={true}
       style={Object {}}
     >
