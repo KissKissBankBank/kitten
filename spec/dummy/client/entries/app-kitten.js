@@ -65,6 +65,8 @@ import {
 } from 'kitten/karl/cards/similar-projects-card'
 import { KarlProjectSimilarLoader }
   from 'kitten/karl/cards/project-similar-card'
+import { KarlTriptych }
+  from 'kitten/karl/cards/triptych'
 import { KarlVerticalCardWithAction } from 'kitten/karl/cards/vertical-card-with-action'
 
 // Colors
@@ -386,6 +388,7 @@ ReactOnRails.register({
   KarlSimilarProjectsCard,
   KarlSimilarProjectsWithInfosCard,
   KarlProjectSimilarLoader,
+  KarlTriptych,
   KarlVerticalCardWithAction,
 
   // Dev
