@@ -22,19 +22,7 @@ describe('<Triptych />', () => {
     window.matchMedia = originalMatchMedia
   })
 
-  describe('by default', () => {
-    beforeEach(() => {
-      window.matchMedia = createMockMediaMatcher(false)
-
-      component = renderer.create(<Triptych title="Custom title" />).toJSON()
-    })
-
-    it('matches with snapshot', () => {
-      expect(component).toMatchSnapshot()
-    })
-  })
-
-  describe('with some props', () => {
+  describe('with default props', () => {
     beforeEach(() => {
       window.matchMedia = createMockMediaMatcher(false)
 
