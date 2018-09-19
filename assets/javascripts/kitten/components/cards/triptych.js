@@ -16,31 +16,37 @@ class TriptychBase extends Component {
   constructor(props) {
     super(props)
 
-    this.state = { addEvenMargin: null }
+    this.state = { secondCardComputedTopMargin: null }
   }
 
-  manageCardPosition = () => {
+  updateSecondCardMargin = () => {
     this.setState((state, props) => {
       const { viewportIsTabletOrLess, viewportIsSOrLess } = props
       const isTablet = viewportIsTabletOrLess && !viewportIsSOrLess
 
-      if (!isTablet) return { addEvenMargin: null }
+      if (!isTablet) return { secondCardComputedTopMargin: null }
 
       const titleHeight = this.title.clientHeight
-      const cardHeight = this.card.clientHeight
+      const cardHeight = this.firstCard.clientHeight
 
-      return { addEvenMargin: -(cardHeight - titleHeight) }
+      return { secondCardComputedTopMargin: -(cardHeight - titleHeight) }
     })
   }
 
   componentDidMount() {
-    this.manageCardPosition()
+    this.updateSecondCardMargin()
 
-    window.addEventListener('resize', debounce(this.manageCardPosition, 250))
+    window.addEventListener(
+      'resize',
+      debounce(this.updateSecondCardMargin, 250),
+    )
   }
 
   componentWillUnmount() {
-    window.removeEventListener('resize', debounce(this.manageCardPosition, 250))
+    window.removeEventListener(
+      'resize',
+      debounce(this.updateSecondCardMargin, 250),
+    )
   }
 
   setRef = name => node => {
@@ -96,7 +102,7 @@ class TriptychBase extends Component {
 
           <GridCol col-l="4" col-m="6" style={styles.oddMargin}>
             <Marger style={styles.gutter.firstItem}>
-              <div ref={this.setRef('card')}>
+              <div ref={this.setRef('firstCard')}>
                 <Marger bottom={viewportIsTabletOrLess ? 5 : 0}>{item1}</Marger>
               </div>
             </Marger>
@@ -105,7 +111,7 @@ class TriptychBase extends Component {
           <GridCol col-l="4" col-m="6">
             <Marger
               style={{ ...styles.secondCard, ...styles.gutter.secondItem }}
-              top={this.state.addEvenMargin / 10}
+              top={this.state.secondCardComputedTopMargin / 10}
               bottom={viewportIsTabletOrLess ? 5 : 0}
             >
               {item2}
