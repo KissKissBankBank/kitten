@@ -95,10 +95,18 @@ export class VerticalCardWithAction extends Component {
   }
 
   renderAction() {
-    const { button, buttonModifier } = this.props
+    const { button, buttonModifier, buttonProps } = this.props
+    const { tag, onClick, href, ...others } = buttonProps
 
     return (
-      <Button modifier={buttonModifier} type="button">
+      <Button
+        {...others}
+        modifier={buttonModifier}
+        type="button"
+        tag={tag}
+        onClick={onClick}
+        href={href}
+      >
         {button}
       </Button>
     )
