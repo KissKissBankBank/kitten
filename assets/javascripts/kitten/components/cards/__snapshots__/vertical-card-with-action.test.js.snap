@@ -2,12 +2,6 @@
 
 exports[`<VerticalCardWithAction /> by default matches with snapshot 1`] = `
 <div
-  buttonProps={
-    Object {
-      "href": null,
-      "onClick": null,
-    }
-  }
   data-radium={true}
 >
   <div
@@ -93,12 +87,6 @@ exports[`<VerticalCardWithAction /> by default matches with snapshot 1`] = `
 
 exports[`<VerticalCardWithAction /> with some props matches with snapshot 1`] = `
 <div
-  buttonProps={
-    Object {
-      "href": null,
-      "onClick": null,
-    }
-  }
   data-radium={true}
 >
   <div

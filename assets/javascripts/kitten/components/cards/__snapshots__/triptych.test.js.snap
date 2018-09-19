@@ -147,6 +147,8 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
                 >
                   <button
                     className="k-Button k-Button--helium"
+                    href={null}
+                    onClick={null}
                     tabIndex={null}
                     type="button"
                   >
@@ -268,6 +270,8 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
             >
               <button
                 className="k-Button k-Button--helium"
+                href={null}
+                onClick={null}
                 tabIndex={null}
                 type="button"
               >
@@ -368,6 +372,8 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
             >
               <button
                 className="k-Button k-Button--helium"
+                href={null}
+                onClick={null}
                 tabIndex={null}
                 type="button"
               >

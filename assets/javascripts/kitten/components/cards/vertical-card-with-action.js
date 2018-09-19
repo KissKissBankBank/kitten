@@ -49,6 +49,7 @@ export class VerticalCardWithAction extends Component {
       descriptionTag,
       button,
       buttonModifier,
+      buttonProps,
       ...others
     } = this.props
 
