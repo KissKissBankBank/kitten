@@ -20,7 +20,7 @@ class TriptychBase extends Component {
   }
 
   updateSecondCardMargin = () => {
-    this.setState((state, props) => {
+    this.setState((_state, props) => {
       const { viewportIsTabletOrLess, viewportIsSOrLess } = props
       const isTablet = viewportIsTabletOrLess && !viewportIsSOrLess
 
@@ -53,39 +53,8 @@ class TriptychBase extends Component {
     this[name] = node
   }
 
-  setGutter = () => {
-    const { viewportIsTabletOrLess, viewportIsSOrLess } = this.props
-    const isTablet = viewportIsTabletOrLess && !viewportIsSOrLess
-
-    if (viewportIsTabletOrLess) {
-      if (isTablet) {
-        const tabletGutter = 50 / 2 - GUTTER / 2
-        styles.gutter = {
-          firstItem: { marginLeft: tabletGutter },
-          secondItem: { marginRight: tabletGutter },
-          thirdItem: { marginLeft: tabletGutter },
-        }
-      } else {
-        styles.gutter = {
-          firstItem: null,
-          secondItem: null,
-          thirdItem: null,
-        }
-      }
-    } else {
-      const desktopGutter = 40 / 2 - GUTTER / 2
-      styles.gutter = {
-        firstItem: { marginRight: desktopGutter },
-        secondItem: { marginRight: desktopGutter, marginLeft: desktopGutter },
-        thirdItem: { marginLeft: desktopGutter },
-      }
-    }
-  }
-
   render() {
     const { viewportIsTabletOrLess, title, item1, item2, item3 } = this.props
-
-    this.setGutter()
 
     return (
       <StyleRoot>
@@ -136,6 +105,8 @@ TriptychBase.propTypes = {
 
 const strokeHeight = 80
 const marginStroke = 2
+const tabletGutter = 50 / 2 - GUTTER / 2
+const desktopGutter = 40 / 2 - GUTTER / 2
 
 const styles = {
   verticalStroke: {
@@ -146,6 +117,47 @@ const styles = {
   oddMargin: {
     [`@media (min-width: ${ScreenConfig.L.min}px)`]: {
       marginTop: -(strokeHeight * 2 / 3 + marginStroke * 10),
+    },
+  },
+
+  gutter: {
+    firstItem: {
+      marginRight: desktopGutter,
+
+      [`@media (max-width: ${ScreenConfig.M.max}px)`]: {
+        marginRight: 'inherit',
+        marginLeft: tabletGutter,
+      },
+
+      [`@media (max-width: ${ScreenConfig.S.max}px)`]: {
+        marginRight: 'inherit',
+        marginLeft: 'inherit',
+      },
+    },
+    secondItem: {
+      marginRight: desktopGutter,
+      marginLeft: desktopGutter,
+
+      [`@media (max-width: ${ScreenConfig.M.max}px)`]: {
+        marginRight: tabletGutter,
+        marginLeft: 'inherit',
+      },
+
+      [`@media (max-width: ${ScreenConfig.S.max}px)`]: {
+        marginRight: 'inherit',
+        marginLeft: 'inherit',
+      },
+    },
+    thirdItem: {
+      marginLeft: desktopGutter,
+
+      [`@media (max-width: ${ScreenConfig.M.max}px)`]: {
+        marginLeft: tabletGutter,
+      },
+
+      [`@media (max-width: ${ScreenConfig.S.max}px)`]: {
+        marginLeft: 'inherit',
+      },
     },
   },
 
