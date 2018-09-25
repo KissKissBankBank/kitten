@@ -4,8 +4,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Create `Triptych` component.
-- Fix: Fix missing actions in `VerticalCardWithAction` component.
+## [23.5.0] - 2018-09-25
+
+Feature:
+- Create `Triptych` component.
+
+Fix:
+- Fix missing actions in `VerticalCardWithAction` component.
 
 ## [23.4.0] - 2018-09-18
 

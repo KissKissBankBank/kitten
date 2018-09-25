@@ -4,7 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Create `KarlTriptych` example.
+## [23.5.0] - 2018-09-25
+
+Feature:
+- Create `KarlTriptych` example.
 
 ## [23.4.0] - 2018-09-18
 
