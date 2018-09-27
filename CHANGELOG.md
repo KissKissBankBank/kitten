@@ -4,7 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Fix `EmbedPlayer` proptype.
+## [23.5.1] - 2018-09-27
+
+Fix:
+- Fix `EmbedPlayer` proptype.
 
 ## [23.5.0] - 2018-09-25
 
