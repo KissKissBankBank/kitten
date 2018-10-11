@@ -26,7 +26,11 @@ export class KarlColors extends Component {
     }
 
     return (
-      <div className="karl-Colors__container" style={backgroundHexaStyles}>
+      <div
+        className="karl-Colors__container"
+        style={backgroundHexaStyles}
+        key={name}
+      >
         <Marger
           bottom="3"
           className="k-u-margin-left-double"
