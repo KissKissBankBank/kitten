@@ -30,5 +30,4 @@ WORKDIR /usr/src/app
 ADD . /usr/src/app
 # modify client package.json for docker path modification
 RUN perl -pi.bak -e "s/(\.\.\/)/\/usr\/src\/app\//" spec/dummy/client/package.json
-RUN chmod +x spec/dummy/bin/rails
 RUN gem install foreman

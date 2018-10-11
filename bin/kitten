@@ -97,6 +97,7 @@ start(){
   fi
 
   cd $DAEMON_RUN_DIR
+  chmod +x bin/rails
 
   if [ ! -f  $DAEMON_PID_FILE ];then
     echo "Starting $SCRIPT_NAME"
