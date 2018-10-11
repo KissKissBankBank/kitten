@@ -96,7 +96,7 @@
     "webpack": "^2.5.1"
   },
   "scripts": {
-    "postinstall": "bin/postinstall",
+    "postinstall": "bash bin/postinstall",
     "sassdoc": "sassdoc -d public/sassdoc assets/stylesheets",
     "stylelint": "stylelint --syntax scss 'assets/stylesheets/**/*.scss'",
     "build:dev": "(cd spec/dummy/client && yarn build:dev)",
