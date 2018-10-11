@@ -187,7 +187,7 @@ case "$1" in
     cd -
     start
 		echo Waiting for $SCRIPT_NAME to be fully launched
-    sleep 50
+    sleep 100
     echo Launching crawler
     /usr/bin/perl $DAEMON_RUN_DIR/bin/fashionista.pl
     if [ ! -d "../../build" ]; then
