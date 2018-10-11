@@ -16,7 +16,7 @@ import {
 } from 'kitten/components/buttons/social-button-icon'
 import { LinkList } from 'kitten/components/links/link-list'
 import { SelectWithState } from 'kitten/components/form/select-with-state'
-import { LendopolisLogo as LendopolisLogoBase } from 'kitten/karl/logos/Lendopolis-logo'
+import { LendopolisLogo as LendopolisLogoBase } from 'kitten/karl/logos/lendopolis-logo'
 import { ScreenConfig } from 'kitten/constants/screen-config'
 import { mediaQueries } from 'kitten/hoc/media-queries'
 import COLORS from 'kitten/constants/colors-config'
