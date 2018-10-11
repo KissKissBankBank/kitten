@@ -189,6 +189,8 @@ case "$1" in
 		echo Waiting for $SCRIPT_NAME to be fully launched
     sleep 100
     echo Launching crawler
+    curl http://127.0.0.1:3000
+    tail -f $DAEMON_LOG_FILE
     /usr/bin/perl $DAEMON_RUN_DIR/bin/fashionista.pl
     if [ ! -d "../../build" ]; then
       echo Something went wrong while building static $SCRIPT_NAME
