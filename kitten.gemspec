@@ -23,7 +23,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'railties', ['> 3.0.0', '< 5.0.0']
 
   # Render react components easily on client and server side.
-  s.add_dependency 'react_on_rails', '~> 11.1.6'
+  s.add_dependency 'react_on_rails', '11.1.8'
 
   # Render react components with execjs on server side by react_on_rails.
   s.add_dependency 'therubyracer'
