@@ -2,6 +2,7 @@ FROM ruby:2.3
 
 # Throw errors if Gemfile has been modified since Gemfile.lock
 RUN bundle config --global frozen 1
+ENV BUNDLE_DEPLOYMENT 1
 
 # Update system
 RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
