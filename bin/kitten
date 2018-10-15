@@ -98,6 +98,8 @@ start(){
 
   cd $DAEMON_RUN_DIR
 
+  chmod +x bin/rails
+
   if [ ! -f  $DAEMON_PID_FILE ];then
     echo "Starting $SCRIPT_NAME"
     $DAEMON_CMD 1>$DAEMON_LOG_FILE 2>&1 &
