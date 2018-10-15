@@ -13,7 +13,7 @@ fi
 
 # Install dependencies
 gem install --no-document bundler
-bundle install --quiet --deployment
+bundle install --quiet
 yarn -sf install
 
 cd spec/dummy
