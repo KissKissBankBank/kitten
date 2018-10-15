@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+Feature:
+- Create `CounterBlock` component.
+
 ## [23.5.1] - 2018-09-27
 
 Fix:

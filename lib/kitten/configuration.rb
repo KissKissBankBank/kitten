@@ -178,6 +178,7 @@ module Kitten
           label: 'Crowdfunding',
           components: [
             { path: 'components/meters/progress', name: 'Progress' },
+            { path: 'components/meters/counter-block', name: 'CounterBlock' },
             {
               path: 'components/simulators/loan-simulator',
               name: 'Loan simulator',
