@@ -13,6 +13,7 @@ import { ScreenConfig } from 'kitten/constants/screen-config'
 import { mediaQueries } from 'kitten/hoc/media-queries'
 import { RewardCardContent } from 'kitten/components/cards/reward-card/content'
 import { RewardCardInfos } from 'kitten/components/cards/reward-card/infos'
+import { RewardCardImage } from 'kitten/components/cards/reward-card/image'
 import {
   RewardCardAction,
   RewardCardActionOnMOrMore,
@@ -37,6 +38,8 @@ class RewardCardComponent extends Component {
     buttonOnMouseEnter: PropTypes.func,
     buttonOnMouseLeave: PropTypes.func,
     buttonOnClick: PropTypes.func,
+
+    imageProps: PropTypes.object,
 
     isDisabled: PropTypes.bool,
     starred: PropTypes.bool,
@@ -220,7 +223,7 @@ class RewardCardComponent extends Component {
             {shouldDisplayImage && (
               <GridCol {...rightColumnProps} style={cardImageStyles}>
                 <Marger bottom={!myContribution ? 2 : null}>
-                  {this.renderImage()}
+                  <RewardCardImage {...this.props} />
                 </Marger>
               </GridCol>
             )}
@@ -246,20 +249,6 @@ class RewardCardComponent extends Component {
           )}
         </Marger>
       </StyleRoot>
-    )
-  }
-
-  renderImage() {
-    const { isDisabled } = this.props
-
-    const styleImage = [isDisabled && styles.disabled]
-
-    if (!this.props.imageProps.src) return
-
-    return (
-      <div style={styleImage} disabled={isDisabled}>
-        <img {...this.props.imageProps} style={styles.image} />
-      </div>
     )
   }
 }
