@@ -12,9 +12,9 @@ const Title = Radium(TitleBase)
 
 class CounterBlockBase extends Component {
   render() {
-    const { title, subTitle, counter, viewportIsMobile } = this.props
-    const titleSize = viewportIsMobile ? 'senary' : 'tertiary'
-    const margin = viewportIsMobile ? 2 : 4
+    const { title, subTitle, counter, viewportIsSOrLess } = this.props
+    const titleSize = viewportIsSOrLess ? 'senary' : 'tertiary'
+    const margin = viewportIsSOrLess ? 2 : 4
 
     return (
       <StyleRoot style={styles.counterBlock}>
@@ -80,5 +80,5 @@ const styles = {
 }
 
 export const CounterBlock = withMediaQueries({
-  viewportIsMobile: true,
+  viewportIsSOrLess: true,
 })(CounterBlockBase)
