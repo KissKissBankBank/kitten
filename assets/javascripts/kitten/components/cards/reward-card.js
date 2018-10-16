@@ -36,7 +36,7 @@ class RewardCardComponent extends Component {
     manageContributionLinkLabel: PropTypes.string,
     manageContributionLinkHref: PropTypes.string,
 
-    button: PropTypes.string,
+    buttonLabel: PropTypes.string,
     buttonOnMouseEnter: PropTypes.func,
     buttonOnMouseLeave: PropTypes.func,
     buttonOnClick: PropTypes.func,
@@ -67,6 +67,7 @@ class RewardCardComponent extends Component {
       PropTypes.string,
       'Use `manageContributionLinkLabel` prop instead',
     ),
+    button: deprecated(PropTypes.string, 'Use `buttonLabel` prop instead'),
   }
 
   isTinyVersion = () =>
@@ -76,36 +77,19 @@ class RewardCardComponent extends Component {
 
   render() {
     const {
-      isDisabled,
-      viewportIsMobile,
-      viewportIsSOrLess,
       viewportIsTabletOrLess,
-      titleAmount,
       titleDescription,
       textDescription,
+      titleTag,
+      textTag,
       description,
       subtitle,
       subtitleTag,
-      titleContributors,
-      titleDelivery,
-      titleAvailability,
-      valueContributors,
-      valueDelivery,
-      valueAvailability,
       button,
-      buttonOnMouseEnter,
-      buttonOnMouseLeave,
-      buttonOnClick,
       myContribution,
       manageContribution,
       manageContributionLink,
       imageProps,
-      titleTag,
-      textTag,
-      render,
-      starred,
-      starLabel,
-      version,
       ...others
     } = this.props
 
@@ -167,6 +151,7 @@ class RewardCardComponent extends Component {
                   manageContributionLinkHref={
                     manageContributionLinkHref || manageContributionLink
                   }
+                  buttonLabel={buttonLabel || button}
                   isTinyVersion={this.isTinyVersion()}
                 />
               )}
@@ -193,6 +178,7 @@ class RewardCardComponent extends Component {
               manageContributionLinkHref={
                 manageContributionLinkHref || manageContributionLink
               }
+              buttonLabel={buttonLabel || button}
               isTinyVersion={this.isTinyVersion()}
             />
           )}
