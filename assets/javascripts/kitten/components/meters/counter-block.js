@@ -46,7 +46,7 @@ class CounterBlockBase extends Component {
 CounterBlockBase.defaultProps = {
   title: null,
   subTitle: null,
-  countUpProps: {},
+  counter: 0,
 }
 
 const styles = {
