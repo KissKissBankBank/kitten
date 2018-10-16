@@ -39,7 +39,7 @@ exports[`<CounterBlock /> with default props matches with snapshot 1`] = `
         }
       }
     >
-      1000
+      13 106
     </span>
   </p>
   <div

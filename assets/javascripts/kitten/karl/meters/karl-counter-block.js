@@ -9,7 +9,7 @@ export class KarlCounterBlock extends Component {
       <CounterBlock
         title="A counter title"
         subTitle="A counter sub title"
-        counter={13865890}
+        counter="13 106 700"
       />
     )
   }
