@@ -8,8 +8,6 @@ import {
   GridCol as GridColBase,
 } from 'kitten/components/grid/grid'
 import { StarIcon } from 'kitten/components/icons/star-icon'
-import { IconBadge as IconBadgeBase } from 'kitten/components/notifications/icon-badge'
-import { CheckedIcon } from 'kitten/components/icons/checked-icon'
 import COLORS from 'kitten/constants/colors-config'
 import { ScreenConfig } from 'kitten/constants/screen-config'
 import { mediaQueries } from 'kitten/hoc/media-queries'
@@ -22,7 +20,6 @@ import {
 
 const Grid = Radium(GridBase)
 const GridCol = Radium(GridColBase)
-const IconBadge = Radium(IconBadgeBase)
 
 class RewardCardComponent extends Component {
   static propTypes = {
@@ -195,14 +192,6 @@ class RewardCardComponent extends Component {
           )}
         </Marger>
       </StyleRoot>
-    )
-  }
-
-  renderIconBadge() {
-    return (
-      <IconBadge valid style={styles.iconBadge}>
-        <CheckedIcon className="k-IconBadge__svg" />
-      </IconBadge>
     )
   }
 
