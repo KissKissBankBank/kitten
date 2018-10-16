@@ -115,7 +115,7 @@ class RewardCardComponent extends Component {
       ? styles.card.paddings.tinyVersion
       : styles.card.paddings
 
-    const cardImage = this.isTinyVersion()
+    const cardImageStyles = this.isTinyVersion()
       ? styles.card.image.tinyVersion
       : styles.card.image
 
@@ -173,7 +173,7 @@ class RewardCardComponent extends Component {
             </GridCol>
 
             {imageProps.src && (
-              <GridCol {...rightColumnProps} style={cardImage}>
+              <GridCol {...rightColumnProps} style={cardImageStyles}>
                 <Marger bottom={!myContribution ? 2 : null}>
                   {this.renderImage()}
                 </Marger>
