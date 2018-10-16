@@ -1,7 +1,6 @@
 import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { styles } from 'kitten/components/cards/reward-card'
-import deprecated from 'prop-types-extra/lib/deprecated'
 import { Marger } from 'kitten/components/layout/marger'
 import { Title } from 'kitten/components/typography/title'
 import { Button } from 'kitten/components/buttons/button'
@@ -86,11 +85,12 @@ RewardCardContent.propTypes = {
   titleTag: PropTypes.string,
   subtitle: PropTypes.string,
   subtitleTag: PropTypes.string,
-  description: PropTypes.string.isRequired,
+  description: PropTypes.string,
 }
 
 RewardCardContent.defaultProps = {
   titleTag: 'h1',
   subtitle: '',
   subtitleTag: 'p',
+  description: '',
 }

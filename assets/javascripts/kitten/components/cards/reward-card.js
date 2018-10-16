@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react'
 import Radium, { StyleRoot } from 'radium'
 import PropTypes from 'prop-types'
+import deprecated from 'prop-types-extra/lib/deprecated'
 import { Marger } from 'kitten/components/layout/marger'
 import {
   Grid as GridBase,
@@ -17,6 +18,10 @@ import { ScreenConfig } from 'kitten/constants/screen-config'
 import { mediaQueries } from 'kitten/hoc/media-queries'
 import { RewardCardContent } from 'kitten/components/cards/reward-card/content'
 import { RewardCardInfos } from 'kitten/components/cards/reward-card/infos'
+import {
+  RewardCardAction,
+  RewardCardActionOnMOrMore,
+} from 'kitten/components/cards/reward-card/action'
 
 const Grid = Radium(GridBase)
 const GridCol = Radium(GridColBase)
@@ -27,15 +32,16 @@ const IconBadge = Radium(IconBadgeBase)
 
 class RewardCardComponent extends Component {
   static propTypes = {
-    titleDescription: deprecated(
-      PropTypes.string,
-      'Use `subtitle` prop instead',
-    ),
-    textDescription: deprecated(
-      PropTypes.string,
-      'Use `description` prop instead',
-    ),
-    textTag: deprecated(PropTypes.string, 'Use `subtitleTag` prop instead'),
+    titleAmount: PropTypes.string.isRequired,
+    titleTag: PropTypes.string,
+    subtitle: PropTypes.string,
+    subtitleTag: PropTypes.string,
+    description: PropTypes.string,
+
+    manageContributionDescription: PropTypes.string,
+    manageContributionLinkLabel: PropTypes.string,
+    manageContributionLinkHref: PropTypes.string,
+
     button: PropTypes.string,
     buttonOnMouseEnter: PropTypes.func,
     buttonOnMouseLeave: PropTypes.func,
@@ -46,27 +52,25 @@ class RewardCardComponent extends Component {
     starLabel: PropTypes.string,
 
     version: PropTypes.oneOf(['default', 'tiny']),
-  }
 
-  static defaultProps = {
-    imageProps: {
-      src: '',
-      alt: '',
-    },
-    button: '',
-    buttonOnMouseEnter: () => {},
-    buttonOnMouseLeave: () => {},
-    buttonOnClick: () => {},
-
-    myContribution: '',
-    manageContribution: '',
-    manageContributionLink: '',
-
-    isDisabled: false,
-    starred: false,
-    starLabel: '',
-
-    version: 'default',
+    // Deprecated props
+    titleDescription: deprecated(
+      PropTypes.string,
+      'Use `subtitle` prop instead',
+    ),
+    textDescription: deprecated(
+      PropTypes.string,
+      'Use `description` prop instead',
+    ),
+    textTag: deprecated(PropTypes.string, 'Use `subtitleTag` prop instead'),
+    myContribution: deprecated(
+      PropTypes.string,
+      'Use `manageContributionDescription` prop instead',
+    ),
+    manageContribution: deprecated(
+      PropTypes.string,
+      'Use `manageContributionLinkLabel` prop instead',
+    ),
   }
 
   isTinyVersion = () =>
@@ -156,7 +160,21 @@ class RewardCardComponent extends Component {
                 viewportIsTabletOrLess={viewportIsTabletOrLess}
               />
 
-              {!this.isSOrLessVersion() && this.renderChoiceButton()}
+              {!this.isSOrLessVersion() && (
+                <RewardCardActionOnMOrMore
+                  {...this.props}
+                  manageContributionDescription={
+                    manageContributionDescription || myContribution
+                  }
+                  manageContributionLinkLabel={
+                    manageContributionLinkLabel || manageContribution
+                  }
+                  manageContributionLinkHref={
+                    manageContributionLinkHref || manageContributionLink
+                  }
+                  isTinyVersion={this.isTinyVersion()}
+                />
+              )}
             </GridCol>
 
             {imageProps.src && (
@@ -168,48 +186,28 @@ class RewardCardComponent extends Component {
             )}
           </Grid>
 
-          {this.isSOrLessVersion() && this.renderChoiceButton()}
+          {this.isSOrLessVersion() && (
+            <RewardCardAction
+              {...this.props}
+              manageContributionDescription={
+                manageContributionDescription || myContribution
+              }
+              manageContributionLinkLabel={
+                manageContributionLinkLabel || manageContribution
+              }
+              manageContributionLinkHref={
+                manageContributionLinkHref || manageContributionLink
+              }
+              isTinyVersion={this.isTinyVersion()}
+              withTopMargin={!imageProps.src || !this.isTinyVersion()}
+            />
+          )}
         </Marger>
       </StyleRoot>
     )
   }
 
-  renderChoiceButton() {
-    const { myContribution, button } = this.props
-  }
-
-  renderButton() {
-    const {
-      button,
-      buttonOnMouseEnter,
-      buttonOnMouseLeave,
-      buttonOnClick,
-      myContribution,
-      isDisabled,
-    } = this.props
-
-    const buttonStyles = this.isTinyVersion()
-      ? styles.button.tinyVersion
-      : styles.button
-
-    if (!button) return
-
-    return (
-      <Button
-        size="big"
-        modifier="helium"
-        type="button"
-        aria-labelledby={button}
-        style={buttonStyles}
-        onMouseEnter={buttonOnMouseEnter}
-        onMouseLeave={buttonOnMouseLeave}
-        onClick={buttonOnClick}
-        disabled={isDisabled}
-      >
-        {button}
-      </Button>
-    )
-  }
+  renderButton() {}
 
   renderIconBadge() {
     return (
