@@ -65,12 +65,45 @@ class RewardCardComponent extends Component {
       'Use `manageContributionLinkLabel` prop instead',
     ),
     button: deprecated(PropTypes.string, 'Use `buttonLabel` prop instead'),
+    titleContributors: deprecated(PropTypes.string, 'Use `infos` prop instead'),
+    titleDelivery: deprecated(PropTypes.string, 'Use `infos` prop instead'),
+    titleAvailability: deprecated(PropTypes.string, 'Use `infos` prop instead'),
+    valueContributors: deprecated(PropTypes.string, 'Use `infos` prop instead'),
+    valueDelivery: deprecated(PropTypes.string, 'Use `infos` prop instead'),
+    valueAvailability: deprecated(PropTypes.string, 'Use `infos` prop instead'),
   }
 
   isTinyVersion = () =>
     this.props.version === 'tiny' || this.props.viewportIsMobile
 
   isSOrLessVersion = () => this.isTinyVersion() || this.props.viewportIsSOrLess
+
+  legacyInfos = () => {
+    const {
+      titleContributors,
+      titleDelivery,
+      titleAvailability,
+      valueContributors,
+      valueDelivery,
+      valueAvailability,
+    } = this.props
+
+    const infos = []
+
+    if (titleContributors) {
+      infos.push({ label: titleContributors, value: valueContributors })
+    }
+
+    if (titleDelivery) {
+      infos.push({ label: titleDelivery, value: valueDelivery })
+    }
+
+    if (titleAvailability) {
+      infos.push({ label: titleAvailability, value: valueAvailability })
+    }
+
+    return infos
+  }
 
   render() {
     // Part of destructuration is needed to handle retro-compatibility with
@@ -92,6 +125,12 @@ class RewardCardComponent extends Component {
       manageContributionDescription,
       manageContributionLinkLabel,
       manageContributionLinkHref,
+      titleContributors,
+      titleDelivery,
+      titleAvailability,
+      valueContributors,
+      valueDelivery,
+      valueAvailability,
       imageProps,
       ...others
     } = this.props
@@ -132,14 +171,15 @@ class RewardCardComponent extends Component {
             <GridCol {...leftColumnProps}>
               <RewardCardContent
                 {...this.props}
+                subtitle={subtitle || titleDescription}
+                subtitleTag={subtitleTag || textTag}
+                description={description || textDescription}
                 isTinyVersion={this.isTinyVersion()}
               />
 
               <RewardCardInfos
+                infos={this.legacyInfos()}
                 {...this.props}
-                subtitle={subtitle || titleDescription}
-                subtitleTag={subtitleTag || textTag}
-                description={description || textDescription}
                 isTinyVersion={this.isTinyVersion()}
                 viewportIsTabletOrLess={viewportIsTabletOrLess}
               />

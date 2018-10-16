@@ -12,7 +12,7 @@ export const Info = ({
   viewportIsTabletOrLess,
   isTinyVersion,
 }) => {
-  if (!label) return
+  if (!label) return null
 
   const infosLists = isTinyVersion
     ? styles.infos.lists.tinyVersion
@@ -31,7 +31,7 @@ export const Info = ({
     <Fragment>
       {(viewportIsTabletOrLess || isTinyVersion) && <div>{InfoBase}</div>}
 
-      {!viewportIsTabletOrLess && !this.isTinyVersion() && InfoBase}
+      {!viewportIsTabletOrLess && !isTinyVersion && InfoBase}
     </Fragment>
   )
 }
