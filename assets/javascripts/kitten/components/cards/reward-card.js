@@ -45,6 +45,7 @@ class RewardCardComponent extends Component {
     version: PropTypes.oneOf(['default', 'tiny']),
     viewportIsMobile: PropTypes.bool,
     viewportIsSOrLess: PropTypes.bool,
+    viewportIsTabletOrLess: PropTypes.bool,
 
     // Deprecated props
     titleDescription: deprecated(
@@ -63,6 +64,10 @@ class RewardCardComponent extends Component {
     manageContribution: deprecated(
       PropTypes.string,
       'Use `manageContributionLinkLabel` prop instead',
+    ),
+    manageContributionLink: deprecated(
+      PropTypes.string,
+      'Use `manageContributionLinkHref` prop instead',
     ),
     button: deprecated(PropTypes.string, 'Use `buttonLabel` prop instead'),
     titleContributors: deprecated(PropTypes.string, 'Use `infos` prop instead'),
@@ -106,25 +111,34 @@ class RewardCardComponent extends Component {
   }
 
   render() {
-    // Part of destructuration is needed to handle retro-compatibility with
-    // deprecated props.
+    // We need to destructure the props to prevent them to hydrate children components.
     const {
-      viewportIsTabletOrLess,
-      titleDescription,
-      textDescription,
+      titleAmount,
       titleTag,
-      textTag,
-      description,
       subtitle,
       subtitleTag,
-      button,
-      buttonLabel,
-      myContribution,
-      manageContribution,
-      manageContributionLink,
+      description,
       manageContributionDescription,
       manageContributionLinkLabel,
       manageContributionLinkHref,
+      buttonLabel,
+      buttonOnMouseEnter,
+      buttonOnMouseLeave,
+      buttonOnClick,
+      isDisabled,
+      starred,
+      starLabel,
+      version,
+      viewportIsMobile,
+      viewportIsSOrLess,
+      viewportIsTabletOrLess,
+      titleDescription,
+      textDescription,
+      textTag,
+      myContribution,
+      manageContribution,
+      manageContributionLink,
+      button,
       titleContributors,
       titleDelivery,
       titleAvailability,
