@@ -27,14 +27,19 @@ const IconBadge = Radium(IconBadgeBase)
 
 class RewardCardComponent extends Component {
   static propTypes = {
+    titleDescription: deprecated(
+      PropTypes.string,
+      'Use `subtitle` prop instead',
+    ),
+    textDescription: deprecated(
+      PropTypes.string,
+      'Use `description` prop instead',
+    ),
+    textTag: deprecated(PropTypes.string, 'Use `subtitleTag` prop instead'),
     button: PropTypes.string,
     buttonOnMouseEnter: PropTypes.func,
     buttonOnMouseLeave: PropTypes.func,
     buttonOnClick: PropTypes.func,
-
-    myContribution: PropTypes.string,
-    manageContribution: PropTypes.string,
-    manageContributionLink: PropTypes.string,
 
     isDisabled: PropTypes.bool,
     starred: PropTypes.bool,
@@ -79,6 +84,9 @@ class RewardCardComponent extends Component {
       titleAmount,
       titleDescription,
       textDescription,
+      description,
+      subtitle,
+      subtitleTag,
       titleContributors,
       titleDelivery,
       titleAvailability,
@@ -126,6 +134,11 @@ class RewardCardComponent extends Component {
           'offset-s': 1,
         }
 
+    // Retro-compatibility for deprecated props
+    const subtitleText = subtitle || titleDescription
+    const subtitleTagname = subtitleTag || textTag
+    const descriptionText = description || textDescription
+
     return (
       <StyleRoot {...others} style={styleCard}>
         <Marger
@@ -141,6 +154,9 @@ class RewardCardComponent extends Component {
 
               <RewardCardInfos
                 {...this.props}
+                subtitle={subtitleText}
+                subtitleTag={subtitleTagname}
+                description={descriptionText}
                 isTinyVersion={this.isTinyVersion()}
                 viewportIsTabletOrLess={viewportIsTabletOrLess}
               />
@@ -165,39 +181,6 @@ class RewardCardComponent extends Component {
 
   renderChoiceButton() {
     const { myContribution, button } = this.props
-
-    if (!button && !myContribution) return
-
-    return (
-      <Fragment>
-        {this.isSOrLessVersion() && (
-          <Fragment>
-            {myContribution && (
-              <Marger
-                top={
-                  !this.props.imageProps.src || !this.isTinyVersion() ? 0 : 2
-                }
-                bottom={!myContribution ? 0 : 2}
-              >
-                {this.renderMyContribution()}
-              </Marger>
-            )}
-            {this.renderButton()}
-          </Fragment>
-        )}
-
-        {!this.isSOrLessVersion() && (
-          <Marger top="3">
-            {this.renderButton()}
-            {myContribution && (
-              <Marger top={!myContribution ? 0 : 2}>
-                {this.renderMyContribution()}
-              </Marger>
-            )}
-          </Marger>
-        )}
-      </Fragment>
-    )
   }
 
   renderButton() {
@@ -241,70 +224,7 @@ class RewardCardComponent extends Component {
     )
   }
 
-  renderMyContribution() {
-    const {
-      isDisabled,
-      myContribution,
-      manageContribution,
-      manageContributionLink,
-    } = this.props
-
-    if (!myContribution || (this.isTinyVersion() && isDisabled)) return
-
-    const choiceButtonAddPadding = this.isTinyVersion()
-      ? styles.choiceButton.addPadding.tinyVersion
-      : styles.choiceButton.addPadding
-
-    return (
-      <Fragment>
-        {this.isSOrLessVersion() && (
-          <Grid style={choiceButtonAddPadding}>
-            <GridCol>
-              <div style={styles.myContribution}>
-                {this.renderIconBadge()}
-                <div style={styles.myContribution.text}>
-                  <Text color="font1" size="tiny" weight="regular">
-                    {myContribution}
-                    <br />
-                    <Text
-                      tag="a"
-                      href={manageContributionLink}
-                      color="primary1"
-                      weight="regular"
-                      decoration="none"
-                    >
-                      {manageContribution}
-                    </Text>
-                  </Text>
-                </div>
-              </div>
-            </GridCol>
-          </Grid>
-        )}
-
-        {!this.isSOrLessVersion() && (
-          <div style={styles.myContribution}>
-            {this.renderIconBadge()}
-            <div style={styles.myContribution.text}>
-              <Text color="font1" size="tiny" weight="regular">
-                {myContribution}
-                <br />
-                <Text
-                  tag="a"
-                  href={manageContributionLink}
-                  color="primary1"
-                  weight="regular"
-                  decoration="none"
-                >
-                  {manageContribution}
-                </Text>
-              </Text>
-            </div>
-          </div>
-        )}
-      </Fragment>
-    )
-  }
+  renderMyContribution() {}
 
   renderImage() {
     const { isDisabled } = this.props

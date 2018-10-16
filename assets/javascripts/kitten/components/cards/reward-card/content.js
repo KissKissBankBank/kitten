@@ -19,14 +19,8 @@ export const RewardCardContent = ({
   starLabel,
   isDisabled,
   isTinyVersion,
-  titleDescription,
-  textDescription,
-  textTag,
 }) => {
   const descriptionStyle = [isDisabled && styles.disabled]
-  const subtitleText = subtitle || titleDescription
-  const subtitleTagname = subtitleTag || textTag
-  const descriptionText = description || textDescription
 
   return (
     <Fragment>
@@ -93,20 +87,10 @@ RewardCardContent.propTypes = {
   subtitle: PropTypes.string,
   subtitleTag: PropTypes.string,
   description: PropTypes.string.isRequired,
-
-  titleDescription: deprecated(PropTypes.string, 'Use `subtitle` prop instead'),
-  textDescription: deprecated(
-    PropTypes.string,
-    'Use `description` prop instead',
-  ),
-  textTag: deprecated(PropTypes.string, 'Use `subtitleTag` prop instead'),
 }
 
 RewardCardContent.defaultProps = {
   titleTag: 'h1',
   subtitle: '',
   subtitleTag: 'p',
-
-  titleDescription: '',
-  textTag: 'p',
 }
