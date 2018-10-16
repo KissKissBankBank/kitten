@@ -14,23 +14,22 @@ export const RewardCardAction = ({
   buttonOnClick,
   isDisabled,
   isTinyVersion,
-  withTopMargin,
+  isSOrLessVersion,
+  topMargin,
 }) => {
-  if (!button && !manageContributionDescription) return
+  if (!buttonLabel && !manageContributionDescription) return
 
   return (
     <Fragment>
       {manageContributionDescription && (
-        <Marger
-          top={withTopMargin ? 0 : 2}
-          bottom={!manageContributionDescription ? 0 : 2}
-        >
+        <Marger top={topMargin} bottom={!manageContributionDescription ? 0 : 2}>
           <ManageContribution
             description={manageContributionDescription}
             linkLabel={manageContributionLinkLabel}
             linkHref={manageContributionLinkHref}
             isDisabled={isDisabled}
             isTinyVersion={isTinyVersion}
+            isSOrLessVersion={isSOrLessVersion}
           />
         </Marger>
       )}
@@ -50,11 +49,15 @@ export const RewardCardActionOnMOrMore = ({
   manageContributionDescription,
   manageContributionLinkLabel,
   manageContributionLinkHref,
+  buttonLabel,
+  buttonOnMouseEnter,
+  buttonOnMouseLeave,
+  buttonOnClick,
   isDisabled,
   isTinyVersion,
-  button,
+  isSOrLessVersion,
 }) => {
-  if (!button && !manageContributionDescription) return
+  if (!buttonLabel && !manageContributionDescription) return
 
   return (
     <Fragment>
@@ -75,6 +78,7 @@ export const RewardCardActionOnMOrMore = ({
               linkHref={manageContributionLinkHref}
               isDisabled={isDisabled}
               isTinyVersion={isTinyVersion}
+              isSOrLessVersion={isSOrLessVersion}
             />
           </Marger>
         )}
@@ -93,6 +97,7 @@ const commonPropTypes = {
   buttonOnClick: PropTypes.func,
   isDisabled: PropTypes.bool.required,
   isTinyVersion: PropTypes.bool.required,
+  isSOrLessVersion: PropTypes.bool.required,
 }
 
 const commonDefaultProps = {
@@ -103,12 +108,12 @@ const commonDefaultProps = {
   buttonOnMouseEnter: () => {},
   buttonOnMouseLeave: () => {},
   buttonOnClick: () => {},
-  withTopMargin: false,
+  topMargin: 0,
 }
 
 RewardCardAction.propTypes = {
   ...commonPropTypes,
-  withTopMargin: PropTypes.bool,
+  topMargin: PropTypes.number,
 }
 
 RewardCardAction.defaultProps = { ...commonDefaultProps }

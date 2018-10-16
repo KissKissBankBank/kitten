@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import Radium from 'radium'
 import { Grid as GridBase, GridCol } from 'kitten/components/grid/grid'
 import { Text } from 'kitten/components/typography/text'
+import { styles } from 'kitten/components/cards/reward-card'
 
 const Grid = Radium(GridBase)
 
@@ -12,6 +13,7 @@ export const ManageContribution = ({
   linkHref,
   isDisabled,
   isTinyVersion,
+  isSOrLessVersion,
 }) => {
   if (!description || (isTinyVersion && isDisabled)) return
 
@@ -21,7 +23,7 @@ export const ManageContribution = ({
 
   return (
     <Fragment>
-      {this.isSOrLessVersion() && (
+      {isSOrLessVersion && (
         <Grid style={choiceButtonPaddings}>
           <GridCol>
             <div style={styles.myContribution}>
@@ -46,7 +48,7 @@ export const ManageContribution = ({
         </Grid>
       )}
 
-      {!this.isSOrLessVersion() && (
+      {!isSOrLessVersion && (
         <div style={styles.myContribution}>
           {this.renderIconBadge()}
           <div style={styles.myContribution.text}>
@@ -75,6 +77,8 @@ ManageContribution.propTypes = {
   linkLabel: PropTypes.string,
   linkHref: PropTypes.string,
   isDisabled: PropTypes.bool.required,
+  isTinyVersion: PropTypes.bool.required,
+  isSOrLessVersion: PropTypes.bool.required,
 }
 
 ManageContribution.defaultProps = {

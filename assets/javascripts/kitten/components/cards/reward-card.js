@@ -76,6 +76,8 @@ class RewardCardComponent extends Component {
   isSOrLessVersion = () => this.isTinyVersion() || this.props.viewportIsSOrLess
 
   render() {
+    // Part of destructuration is needed to handle retro-compatibility with
+    // deprecated props.
     const {
       viewportIsTabletOrLess,
       titleDescription,
@@ -86,12 +88,18 @@ class RewardCardComponent extends Component {
       subtitle,
       subtitleTag,
       button,
+      buttonLabel,
       myContribution,
       manageContribution,
       manageContributionLink,
+      manageContributionDescription,
+      manageContributionLinkLabel,
+      manageContributionLinkHref,
       imageProps,
       ...others
     } = this.props
+
+    const shouldDisplayImage = imageProps && imageProps.src
 
     const cardStyles = [others.style, styles.card]
 
@@ -106,7 +114,7 @@ class RewardCardComponent extends Component {
     const leftColumnProps = this.isTinyVersion()
       ? null
       : {
-          'col-l': !imageProps.src ? 10 : 7,
+          'col-l': shouldDisplayImage ? 7 : 10,
           'col-s': 7,
         }
 
@@ -153,11 +161,12 @@ class RewardCardComponent extends Component {
                   }
                   buttonLabel={buttonLabel || button}
                   isTinyVersion={this.isTinyVersion()}
+                  isSOrLessVersion={this.isSOrLessVersion()}
                 />
               )}
             </GridCol>
 
-            {imageProps.src && (
+            {shouldDisplayImage && (
               <GridCol {...rightColumnProps} style={cardImageStyles}>
                 <Marger bottom={!myContribution ? 2 : null}>
                   {this.renderImage()}
@@ -180,6 +189,8 @@ class RewardCardComponent extends Component {
               }
               buttonLabel={buttonLabel || button}
               isTinyVersion={this.isTinyVersion()}
+              isSOrLessVersion={this.isSOrLessVersion()}
+              topMargin={shouldDisplayImage || this.isTinyVersion() ? 2 : 0}
             />
           )}
         </Marger>

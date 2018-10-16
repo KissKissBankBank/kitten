@@ -53,26 +53,26 @@ export const RewardCardContent = ({
         <Marger top="2" bottom="3">
           <HorizontalStroke size="big" />
         </Marger>
-        {subtitleText && (
+        {subtitle && (
           <Marger top="3" bottom="1">
             <Text
               color="font1"
               size={isTinyVersion ? 'big' : 'huge'}
-              tag={subtitleTagname}
+              tag={subtitleTag}
               weight="bold"
               style={styles.textMargin}
             >
-              {subtitleText}
+              {subtitle}
             </Text>
           </Marger>
         )}
-        <Marger top={!subtitleText ? 3 : 1}>
+        <Marger top={!subtitle ? 3 : 1}>
           <Paragraph
             style={styles.textColor}
             modifier={isTinyVersion ? 'quaternary' : 'tertiary'}
             margin={false}
           >
-            {descriptionText}
+            {description}
           </Paragraph>
         </Marger>
       </div>

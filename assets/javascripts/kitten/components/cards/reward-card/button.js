@@ -14,9 +14,9 @@ export const RewardCardButton = ({
   isDisabled,
   isTinyVersion,
 }) => {
-  const buttonStyles = isTinyVersion ? styles.button.tinyVersion : styles.button
+  if (!label) return null
 
-  if (!button) return
+  const buttonStyles = isTinyVersion ? styles.button.tinyVersion : styles.button
 
   return (
     <Button
