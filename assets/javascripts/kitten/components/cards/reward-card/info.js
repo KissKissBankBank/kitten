@@ -39,8 +39,8 @@ export const Info = ({
 Info.propTypes = {
   label: PropTypes.string,
   value: PropTypes.string,
-  viewportIsTabletOrLess: PropTypes.bool.required,
-  isTinyVersion: PropTypes.bool.required,
+  viewportIsTabletOrLess: PropTypes.bool.isRequired,
+  isTinyVersion: PropTypes.bool.isRequired,
 }
 
 Info.defaultProps = {

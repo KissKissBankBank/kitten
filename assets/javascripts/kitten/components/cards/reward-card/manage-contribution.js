@@ -77,13 +77,14 @@ ManageContribution.propTypes = {
   description: PropTypes.string,
   linkLabel: PropTypes.string,
   linkHref: PropTypes.string,
-  isDisabled: PropTypes.bool.required,
-  isTinyVersion: PropTypes.bool.required,
-  isSOrLessVersion: PropTypes.bool.required,
+  isDisabled: PropTypes.bool,
+  isTinyVersion: PropTypes.bool.isRequired,
+  isSOrLessVersion: PropTypes.bool.isRequired,
 }
 
 ManageContribution.defaultProps = {
   description: '',
   linkLabel: '',
   linkHref: '',
+  isDisabled: false,
 }

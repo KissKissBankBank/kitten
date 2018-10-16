@@ -34,11 +34,12 @@ export const RewardCardInfos = ({
 
 RewardCardInfos.propTypes = {
   infos: PropTypes.array,
-  isDisabled: PropTypes.bool.required,
-  viewportIsTabletOrLess: PropTypes.bool.required,
-  isTinyVersion: PropTypes.bool.required,
+  isDisabled: PropTypes.bool,
+  viewportIsTabletOrLess: PropTypes.bool.isRequired,
+  isTinyVersion: PropTypes.bool.isRequired,
 }
 
 RewardCardInfos.defaultProps = {
   infos: [],
+  isDisabled: false,
 }

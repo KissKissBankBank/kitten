@@ -40,8 +40,8 @@ RewardCardButton.propTypes = {
   onMouseEnter: PropTypes.func,
   onMouseLeave: PropTypes.func,
   onClick: PropTypes.func,
-  isDisabled: PropTypes.bool.required,
-  isTinyVersion: PropTypes.bool.required,
+  isDisabled: PropTypes.bool,
+  isTinyVersion: PropTypes.bool.isRequired,
 }
 
 RewardCardButton.defaultProps = {
@@ -49,4 +49,5 @@ RewardCardButton.defaultProps = {
   onMouseEnter: () => {},
   onMouseLeave: () => {},
   onClick: () => {},
+  disabled: false,
 }

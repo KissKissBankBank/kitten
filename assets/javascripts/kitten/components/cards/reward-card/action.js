@@ -95,9 +95,9 @@ const commonPropTypes = {
   buttonOnMouseEnter: PropTypes.func,
   buttonOnMouseLeave: PropTypes.func,
   buttonOnClick: PropTypes.func,
-  isDisabled: PropTypes.bool.required,
-  isTinyVersion: PropTypes.bool.required,
-  isSOrLessVersion: PropTypes.bool.required,
+  isDisabled: PropTypes.bool,
+  isTinyVersion: PropTypes.bool.isRequired,
+  isSOrLessVersion: PropTypes.bool.isRequired,
 }
 
 const commonDefaultProps = {
@@ -108,6 +108,7 @@ const commonDefaultProps = {
   buttonOnMouseEnter: () => {},
   buttonOnMouseLeave: () => {},
   buttonOnClick: () => {},
+  isDisabled: false,
   topMargin: 0,
 }
 
