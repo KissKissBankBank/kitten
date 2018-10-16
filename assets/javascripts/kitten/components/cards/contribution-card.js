@@ -7,7 +7,7 @@ export const ContributionCard = props => {
     For more information: https://github.com/KissKissBankBank/kitten/blob/master/assets/javascripts/kitten/components/cards/reward-card.js`
 
   return (
-    <Deprecated warningMessasge={message}>
+    <Deprecated warningMessage={message}>
       <RewardCard {...props} />
     </Deprecated>
   )

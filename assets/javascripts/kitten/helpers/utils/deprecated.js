@@ -8,7 +8,7 @@ export class Deprecated extends Component {
 
       console.warn(
         `Warning: ${componentName} is deprecated.`,
-        this.props.warningMessasge,
+        this.props.warningMessage,
       )
     }
   }
