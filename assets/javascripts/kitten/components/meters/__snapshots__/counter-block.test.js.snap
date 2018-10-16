@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CounterBlock /> with default props matches with snapshot 1`] = `
+<div
+  data-radium={true}
+  style={
+    Object {
+      "textAlign": "center",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "marginBottom": "2.5rem",
+        "marginTop": null,
+      }
+    }
+  >
+    <p
+      className="k-Title k-Title--tertiary k-Title--withoutMargin"
+    >
+      foo
+    </p>
+  </div>
+  <p
+    className="k-Paragraph k-Paragraph--primary k-Paragraph--withoutMargin k-Paragraph--normalLineHeight"
+  >
+    <span
+      className="rmq-482bbfda rmq-650fa8a3 k-u-style-italic k-u-weight-bold"
+      data-radium={true}
+      style={
+        Object {
+          "display": "block",
+          "fontSize": "4.125rem",
+          "lineHeight": 0.7,
+          "paddingBottom": 4,
+          "whiteSpace": "nowrap",
+        }
+      }
+    >
+      1000
+    </span>
+  </p>
+  <div
+    style={
+      Object {
+        "marginBottom": null,
+        "marginTop": "2.5rem",
+      }
+    }
+  >
+    <p
+      className="rmq-ef1ce72e k-Title k-Title--senary k-Title--withoutMargin"
+      data-radium={true}
+      style={Object {}}
+    >
+      bar
+    </p>
+  </div>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "@media (min-width: 768px){ .rmq-482bbfda{font-size: 8.25rem !important;
+padding-bottom: 7px !important;}}
+@media (min-width: 1080px){ .rmq-650fa8a3{font-size: 9.9rem !important;
+padding-bottom: 10px !important;}}
+@media (max-width: 767px){ .rmq-ef1ce72e{font-size: .875rem !important;}}",
+      }
+    }
+  />
+</div>
+`;
