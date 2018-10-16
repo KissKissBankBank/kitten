@@ -42,7 +42,8 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
             }
           >
             <span
-              className="k-VerticalStroke k-VerticalStroke--huge"
+              className="rmq-f8208d89 k-VerticalStroke k-VerticalStroke--huge"
+              data-radium={true}
               style={
                 Object {
                   "height": 80,
@@ -395,7 +396,8 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
   <style
     dangerouslySetInnerHTML={
       Object {
-        "__html": "@media (min-width: 1080px){ .rmq-3e3f42ca{margin-top: -73.33333333333334px !important;}}
+        "__html": "@media (max-width: 767px){ .rmq-f8208d89{height: 50px !important;}}
+@media (min-width: 1080px){ .rmq-3e3f42ca{margin-top: -73.33333333333334px !important;}}
 @media (max-width: 1079px){ .rmq-ee34cb9c{margin-right: inherit !important;
 margin-left: 15px !important;}}
 @media (max-width: 767px){ .rmq-50ef1ccc{margin-right: inherit !important;
