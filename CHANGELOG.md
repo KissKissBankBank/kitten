@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 Fix:
 - Fix `Triptych` stroke height in small device.
+- Fix: Update `ffi` gem.
 
 ## [23.5.1] - 2018-09-27
 
