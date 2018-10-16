@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+Fix:
+- Fix `Triptych` stroke height in small device.
+
 ## [23.5.1] - 2018-09-27
 
 Fix:
