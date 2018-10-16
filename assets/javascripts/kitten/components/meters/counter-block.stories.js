@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
-import { withKnobs, text, number } from '@storybook/addon-knobs/react'
+import { withKnobs, text } from '@storybook/addon-knobs/react'
 import { CounterBlock } from 'kitten/components/meters/counter-block'
 import { Grid, GridCol } from 'kitten/components/grid/grid'
 import { Marger } from 'kitten/components/layout/marger'
@@ -26,7 +26,7 @@ storiesOf('metrics/CounterBlock', module)
                 'Sub Title',
                 'euro collected since Novembre 19th 2014',
               )}
-              counter={number('Counter', 13106700)}
+              counter={text('Counter', '13 106 700')}
             />
           </GridCol>
         </Grid>
