@@ -15,14 +15,14 @@ export const ManageContribution = ({
 }) => {
   if (!description || (isTinyVersion && isDisabled)) return
 
-  const choiceButtonAddPadding = isTinyVersion
-    ? styles.choiceButton.addPadding.tinyVersion
-    : styles.choiceButton.addPadding
+  const choiceButtonPaddings = isTinyVersion
+    ? styles.choiceButton.paddings.tinyVersion
+    : styles.choiceButton.paddings
 
   return (
     <Fragment>
       {this.isSOrLessVersion() && (
-        <Grid style={choiceButtonAddPadding}>
+        <Grid style={choiceButtonPaddings}>
           <GridCol>
             <div style={styles.myContribution}>
               {this.renderIconBadge()}
