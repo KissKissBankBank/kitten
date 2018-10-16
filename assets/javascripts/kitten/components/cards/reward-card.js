@@ -134,11 +134,6 @@ class RewardCardComponent extends Component {
           'offset-s': 1,
         }
 
-    // Retro-compatibility for deprecated props
-    const subtitleText = subtitle || titleDescription
-    const subtitleTagname = subtitleTag || textTag
-    const descriptionText = description || textDescription
-
     return (
       <StyleRoot {...others} style={styleCard}>
         <Marger
@@ -154,9 +149,9 @@ class RewardCardComponent extends Component {
 
               <RewardCardInfos
                 {...this.props}
-                subtitle={subtitleText}
-                subtitleTag={subtitleTagname}
-                description={descriptionText}
+                subtitle={subtitle || titleDescription}
+                subtitleTag={subtitleTag || textTag}
+                description={description || textDescription}
                 isTinyVersion={this.isTinyVersion()}
                 viewportIsTabletOrLess={viewportIsTabletOrLess}
               />
