@@ -13,8 +13,6 @@ const Title = Radium(TitleBase)
 class CounterBlockBase extends Component {
   render() {
     const { title, subTitle, counter, viewportIsMobile } = this.props
-
-    console.warn('this.props', this.props)
     const titleSize = viewportIsMobile ? 'senary' : 'tertiary'
     const margin = viewportIsMobile ? 2 : 4
 
