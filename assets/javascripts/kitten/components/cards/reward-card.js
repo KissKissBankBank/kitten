@@ -7,10 +7,7 @@ import {
   Grid as GridBase,
   GridCol as GridColBase,
 } from 'kitten/components/grid/grid'
-import { Button as ButtonBase } from 'kitten/components/buttons/button'
 import { StarIcon } from 'kitten/components/icons/star-icon'
-import { Text as TextBase } from 'kitten/components/typography/text'
-import { Paragraph as ParagraphBase } from 'kitten/components/typography/paragraph'
 import { IconBadge as IconBadgeBase } from 'kitten/components/notifications/icon-badge'
 import { CheckedIcon } from 'kitten/components/icons/checked-icon'
 import COLORS from 'kitten/constants/colors-config'
@@ -25,9 +22,6 @@ import {
 
 const Grid = Radium(GridBase)
 const GridCol = Radium(GridColBase)
-const Button = Radium(ButtonBase)
-const Text = Radium(TextBase)
-const Paragraph = Radium(ParagraphBase)
 const IconBadge = Radium(IconBadgeBase)
 
 class RewardCardComponent extends Component {
@@ -52,6 +46,8 @@ class RewardCardComponent extends Component {
     starLabel: PropTypes.string,
 
     version: PropTypes.oneOf(['default', 'tiny']),
+    viewportIsMobile: PropTypes.bool,
+    viewportIsSOrLess: PropTypes.bool,
 
     // Deprecated props
     titleDescription: deprecated(
@@ -79,7 +75,6 @@ class RewardCardComponent extends Component {
   isSOrLessVersion = () => this.isTinyVersion() || this.props.viewportIsSOrLess
 
   render() {
-    // We need to destructure the props to prevent them to hydrate children components.
     const {
       isDisabled,
       viewportIsMobile,
@@ -114,11 +109,11 @@ class RewardCardComponent extends Component {
       ...others
     } = this.props
 
-    const styleCard = [others.style, styles.card]
+    const cardStyles = [others.style, styles.card]
 
-    const cardAddPadding = this.isTinyVersion()
-      ? styles.card.addPadding.tinyVersion
-      : styles.card.addPadding
+    const cardPaddings = this.isTinyVersion()
+      ? styles.card.paddings.tinyVersion
+      : styles.card.paddings
 
     const cardImage = this.isTinyVersion()
       ? styles.card.image.tinyVersion
@@ -139,12 +134,12 @@ class RewardCardComponent extends Component {
         }
 
     return (
-      <StyleRoot {...others} style={styleCard}>
+      <StyleRoot {...others} style={cardStyles}>
         <Marger
           bottom={this.isSOrLessVersion() ? 0 : 4}
           top={this.isSOrLessVersion() ? 3 : 4}
         >
-          <Grid style={cardAddPadding}>
+          <Grid style={cardPaddings}>
             <GridCol {...leftColumnProps}>
               <RewardCardContent
                 {...this.props}
@@ -199,15 +194,12 @@ class RewardCardComponent extends Component {
                 manageContributionLinkHref || manageContributionLink
               }
               isTinyVersion={this.isTinyVersion()}
-              withTopMargin={!imageProps.src || !this.isTinyVersion()}
             />
           )}
         </Marger>
       </StyleRoot>
     )
   }
-
-  renderButton() {}
 
   renderIconBadge() {
     return (
@@ -216,8 +208,6 @@ class RewardCardComponent extends Component {
       </IconBadge>
     )
   }
-
-  renderMyContribution() {}
 
   renderImage() {
     const { isDisabled } = this.props
@@ -249,7 +239,7 @@ export const styles = {
     borderStyle: 'solid',
     borderColor: COLORS.line1,
 
-    addPadding: {
+    paddings: {
       paddingLeft: 20,
       paddingRight: 20,
 
@@ -306,7 +296,7 @@ export const styles = {
     paddingLeft: 20,
     paddingRight: 20,
 
-    addPadding: {
+    paddings: {
       [`@media (min-width: ${ScreenConfig['S'].min}px)`]: {
         paddingLeft: 30,
         paddingRight: 30,
