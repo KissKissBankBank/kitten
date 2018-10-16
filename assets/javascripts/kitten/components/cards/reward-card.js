@@ -8,33 +8,25 @@ import {
 } from 'kitten/components/grid/grid'
 import { Button as ButtonBase } from 'kitten/components/buttons/button'
 import { StarIcon } from 'kitten/components/icons/star-icon'
-import { Title as TitleBase } from 'kitten/components/typography/title'
 import { Text as TextBase } from 'kitten/components/typography/text'
 import { Paragraph as ParagraphBase } from 'kitten/components/typography/paragraph'
 import { IconBadge as IconBadgeBase } from 'kitten/components/notifications/icon-badge'
 import { CheckedIcon } from 'kitten/components/icons/checked-icon'
-import { HorizontalStroke as HorizontalStrokeBase } from 'kitten/components/layout/horizontal-stroke'
 import COLORS from 'kitten/constants/colors-config'
 import { ScreenConfig } from 'kitten/constants/screen-config'
 import { mediaQueries } from 'kitten/hoc/media-queries'
+import { RewardCardContent } from 'kitten/components/cards/reward-card/content'
+import { RewardCardInfos } from 'kitten/components/cards/reward-card/infos'
 
 const Grid = Radium(GridBase)
 const GridCol = Radium(GridColBase)
 const Button = Radium(ButtonBase)
-const Title = Radium(TitleBase)
 const Text = Radium(TextBase)
 const Paragraph = Radium(ParagraphBase)
 const IconBadge = Radium(IconBadgeBase)
-const HorizontalStroke = Radium(HorizontalStrokeBase)
 
 class RewardCardComponent extends Component {
   static propTypes = {
-    titleAmount: PropTypes.string.isRequired,
-    titleTag: PropTypes.string,
-    titleDescription: PropTypes.string,
-    textDescription: PropTypes.string.isRequired,
-    textTag: PropTypes.string,
-
     button: PropTypes.string,
     buttonOnMouseEnter: PropTypes.func,
     buttonOnMouseLeave: PropTypes.func,
@@ -52,9 +44,6 @@ class RewardCardComponent extends Component {
   }
 
   static defaultProps = {
-    titleDescription: '',
-    titleTag: 'h1',
-    textTag: 'p',
     imageProps: {
       src: '',
       alt: '',
@@ -71,7 +60,6 @@ class RewardCardComponent extends Component {
     isDisabled: false,
     starred: false,
     starLabel: '',
-    render: () => {},
 
     version: 'default',
   }
@@ -145,7 +133,20 @@ class RewardCardComponent extends Component {
           top={this.isSOrLessVersion() ? 3 : 4}
         >
           <Grid style={cardAddPadding}>
-            <GridCol {...leftColumnProps}>{this.renderDescription()}</GridCol>
+            <GridCol {...leftColumnProps}>
+              <RewardCardContent
+                {...this.props}
+                isTinyVersion={this.isTinyVersion()}
+              />
+
+              <RewardCardInfos
+                {...this.props}
+                isTinyVersion={this.isTinyVersion()}
+                viewportIsTabletOrLess={viewportIsTabletOrLess}
+              />
+
+              {!this.isSOrLessVersion() && this.renderChoiceButton()}
+            </GridCol>
 
             {imageProps.src && (
               <GridCol {...rightColumnProps} style={cardImage}>
@@ -159,144 +160,6 @@ class RewardCardComponent extends Component {
           {this.isSOrLessVersion() && this.renderChoiceButton()}
         </Marger>
       </StyleRoot>
-    )
-  }
-
-  renderDescription() {
-    const {
-      titleAmount,
-      titleDescription,
-      textDescription,
-      titleTag,
-      textTag,
-      starred,
-      starLabel,
-      isDisabled,
-    } = this.props
-
-    const styleDescription = [isDisabled && styles.disabled]
-
-    return (
-      <Fragment>
-        <div style={styleDescription} disabled={isDisabled}>
-          {starred && (
-            <Marger bottom="2">
-              <Button
-                icon
-                readonly
-                tag="span"
-                size="tiny"
-                modifier="lithium"
-                style={{ borderRadius: 5 }}
-              >
-                <StarIcon className="k-Button__icon is-readonly" />
-                {starLabel}
-              </Button>
-            </Marger>
-          )}
-          <Marger top={starred ? 2 : 0} bottom="2">
-            <Title
-              modifier={this.isTinyVersion() ? 'quaternary' : 'tertiary'}
-              italic
-              margin={false}
-              tag={titleTag}
-              style={styles.textColor}
-            >
-              {titleAmount}
-            </Title>
-          </Marger>
-          <Marger top="2" bottom="3">
-            <HorizontalStroke size="big" />
-          </Marger>
-          {titleDescription && (
-            <Marger top="3" bottom="1">
-              <Text
-                color="font1"
-                size={this.isTinyVersion() ? 'big' : 'huge'}
-                tag={textTag}
-                weight="bold"
-                style={styles.textMargin}
-              >
-                {titleDescription}
-              </Text>
-            </Marger>
-          )}
-          <Marger top={!titleDescription ? 3 : 1}>
-            <Paragraph
-              style={styles.textColor}
-              modifier={this.isTinyVersion() ? 'quaternary' : 'tertiary'}
-              margin={false}
-            >
-              {textDescription}
-            </Paragraph>
-          </Marger>
-        </div>
-
-        {!!this.props.render && this.props.render()}
-        {this.renderInfos()}
-        {!this.isSOrLessVersion() && this.renderChoiceButton()}
-      </Fragment>
-    )
-  }
-
-  renderInfos() {
-    const {
-      titleContributors,
-      titleDelivery,
-      titleAvailability,
-      valueContributors,
-      valueDelivery,
-      valueAvailability,
-      isDisabled,
-    } = this.props
-
-    const styleInfos = [isDisabled && styles.disabled]
-
-    if (!valueContributors && !valueDelivery && !valueAvailability) return
-
-    return (
-      <div style={styleInfos} disabled={isDisabled}>
-        <Marger top="2" bottom="3">
-          {this.renderInfo(titleContributors, valueContributors)}
-          {this.renderInfo(titleDelivery, valueDelivery)}
-          {this.renderInfo(titleAvailability, valueAvailability)}
-        </Marger>
-      </div>
-    )
-  }
-
-  renderInfo(title, value) {
-    const { viewportIsTabletOrLess } = this.props
-
-    if (!title) return
-
-    const infosLists = this.isTinyVersion()
-      ? styles.infos.lists.tinyVersion
-      : styles.infos.lists
-
-    return (
-      <Fragment>
-        {(viewportIsTabletOrLess || this.isTinyVersion()) && (
-          <div>
-            <Text color="font1" weight="regular" style={infosLists}>
-              {title}{' '}
-              <Text color="font1" weight="light">
-                {value}
-              </Text>
-            </Text>
-          </div>
-        )}
-
-        {!viewportIsTabletOrLess &&
-          !this.isTinyVersion() && (
-            <Text color="font1" weight="regular" style={infosLists}>
-              {title}{' '}
-              <Text color="font1" weight="light">
-                {value}
-              </Text>
-            </Text>
-          )}
-      </Fragment>
     )
   }
 
@@ -458,7 +321,7 @@ class RewardCardComponent extends Component {
   }
 }
 
-const styles = {
+export const styles = {
   disabled: {
     filter: 'grayscale(1) opacity(.4)',
     cursor: 'not-allowed',
