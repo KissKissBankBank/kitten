@@ -35,7 +35,7 @@ class SimpleCardComponent extends Component {
         </Marger>
 
         {title && (
-          <Marger top="2" bottom=".5">
+          <Marger top="2" bottom={subtitle ? 0.5 : 1}>
             <Title
               tag="p"
               {...titleProps}
@@ -49,7 +49,7 @@ class SimpleCardComponent extends Component {
         )}
 
         {subtitle && (
-          <Marger top=".5" bottom=".5">
+          <Marger top=".5" bottom="1.5">
             <Text size="micro" weight="regular">
               {parseHtml(subtitle)}
             </Text>
@@ -57,7 +57,7 @@ class SimpleCardComponent extends Component {
         )}
 
         {paragraph && (
-          <Marger top="1" bottom=".5">
+          <Marger top="1" bottom="1.5">
             <Text lineHeight="normal" size="micro" weight="light">
               {parseHtml(paragraph)}
             </Text>

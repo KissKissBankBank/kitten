@@ -66,7 +66,7 @@ export class LinkList extends Component {
   }
 }
 
-LinkList.defaultProps = {
+LinkList.propTypes = {
   color: PropTypes.oneOf(['light', 'dark']),
   lineHeight: PropTypes.oneOf(['normal']),
   itemMargin: PropTypes.oneOf(['double', 'triple']),
