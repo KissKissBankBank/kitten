@@ -54,6 +54,7 @@ const styles = {
   customList: {
     listStyleType: 'none',
     padding: 0,
+    margin: 0,
     // [`@media (max-width: ${ScreenConfig.XS.max}px)`]: {
     //   paddingLeft: 40,
     // },
