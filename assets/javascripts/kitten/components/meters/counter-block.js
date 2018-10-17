@@ -17,16 +17,16 @@ class CounterBlockBase extends Component {
       subTitle,
       subTitleTag,
       counter,
-      viewportIsSOrLess,
-      titleProps,
+      viewportIsMobile,
     } = this.props
-    const titleSize = viewportIsSOrLess ? 'senary' : 'tertiary'
-    const margin = viewportIsSOrLess ? 2 : 4
+    const titleSize = viewportIsMobile ? 'quinary' : 'tertiary'
+    const subTitleSize = viewportIsMobile ? 'tiny' : 'huge'
+    const margin = viewportIsMobile ? 2 : 4
 
     return (
       <StyleRoot style={styles.counterBlock}>
         <Marger bottom={margin}>
-          <Title modifier={titleSize} {...titleProps}>
+          <Title modifier={titleSize} margin={false} tag={titleTag}>
             {title}
           </Title>
         </Marger>
@@ -39,15 +39,17 @@ class CounterBlockBase extends Component {
           {counter}
         </Text>
         <Marger top={margin}>
-          <Title
+          <Text
             style={styles.subTitle}
-            modifier="senary"
-            margin={false}
+            size={subTitleSize}
             tag={subTitleTag}
-            italic
+            margin={false}
+            fontStyle="italic"
+            weight="bold"
+            tag="p"
           >
             {subTitle}
-          </Title>
+          </Text>
         </Marger>
       </StyleRoot>
     )
@@ -75,7 +77,7 @@ const styles = {
     paddingBottom: 4,
     margin: 0,
 
-    [`@media (min-width: ${ScreenConfig.M.min}px)`]: {
+    [`@media (min-width: ${ScreenConfig.S.min}px)`]: {
       fontSize: '8.25rem',
       paddingBottom: 7,
     },
@@ -87,12 +89,10 @@ const styles = {
   },
 
   subTitle: {
-    [`@media (max-width: ${ScreenConfig.S.max}px)`]: {
-      fontSize: '.875rem',
-    },
+    margin: 0,
   },
 }
 
 export const CounterBlock = withMediaQueries({
-  viewportIsSOrLess: true,
+  viewportIsMobile: true,
 })(CounterBlockBase)
