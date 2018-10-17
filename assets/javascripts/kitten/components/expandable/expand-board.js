@@ -9,6 +9,7 @@ const ExpandBoardButton = ({
   children,
   expandChildren,
   expanded,
+  disabled,
   style,
   onClick,
   ariaId,
@@ -24,6 +25,7 @@ const ExpandBoardButton = ({
       iconOnRight
       size="big"
       modifier="helium"
+      disabled={disabled}
       aria-expanded={expanded}
       aria-controls={ariaId}
       style={buttonStyles}
