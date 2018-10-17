@@ -4,13 +4,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-Fix:
 - Fix: Update marger on `SimpleCard` component.
 - Fix: `Triptych` stroke height on small devices.
+- Feature: Create `CounterBlock` component.
+- Feature: Add `Deprecated` component.
 - Fix: Update `ffi` gem.
 - Fix: Deprecate `ContributionCard` component. You should use `RewardCard`
   component instead. It will be deleted in further versions.
-- Feature: Add `Deprecated` component.
 
 ## [23.5.1] - 2018-09-27
 
