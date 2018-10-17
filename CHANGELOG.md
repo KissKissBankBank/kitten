@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 Fix:
+- Fix: Corrige `propTypes` definition on `LinkList`.
 - Fix `Triptych` stroke height in small device.
 - Fix: Update `ffi` gem.
 - Fix: Deprecate `ContributionCard` component. You should use `RewardCard`
