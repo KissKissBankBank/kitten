@@ -29,8 +29,9 @@ const ExpandBoardButton = ({
       {expanded ? defaultExpandChildren : children}
       <ArrowIcon
         direction={expanded ? 'top' : 'bottom'}
-        className="k-ButtonIcon"
+        className="k-Button__icon"
         fill={COLORS.background1}
+        style={style.arrow}
       />
     </Button>
   )
@@ -60,7 +61,7 @@ class ExpandBoardBase extends Component {
     }
   }
 
-  isButtonComponent = component => component.type.name == 'ExpandBoardButton'
+  isButtonComponent = component => component.type.name === 'ExpandBoardButton'
 
   handleClick = () => {
     const newState = { expanded: !this.state.expanded }
@@ -105,6 +106,11 @@ const styles = {
     },
     expanded: {
       backgroundColor: COLORS.font1,
+      borderColor: COLORS.font1,
+    },
+    arrow: {
+      width: '0.375rem',
+      height: '0.375rem',
     },
   },
 }
