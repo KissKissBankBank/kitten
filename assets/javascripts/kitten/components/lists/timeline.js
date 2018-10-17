@@ -5,6 +5,7 @@ import Radium from 'radium'
 import { Text as TextBase } from 'kitten/components/typography/text'
 import { withMediaQueries } from 'kitten/hoc/media-queries'
 import { Marger as MargerBase } from 'kitten/components/layout/marger'
+import COLORS from 'kitten/constants/colors-config'
 
 const Marger = Radium(MargerBase)
 const Text = Radium(TextBase)
@@ -43,8 +44,8 @@ const styles = {
     },
   },
   verticalDashedLine: {
-    border: '1px dashed #EEE',
-    backgroundColor: '#FFF',
+    border: `1px dashed ${COLORS.line1}`,
+    backgroundColor: COLORS.background1,
     position: 'absolute',
     height: '100%',
     top: 0,
@@ -61,8 +62,8 @@ const styles = {
     boxSizing: 'border-box',
     height: circleSize,
     width: circleSize,
-    border: `2px solid #EEE`,
-    backgroundColor: '#FFF',
+    border: `2px solid ${COLORS.line1}`,
+    backgroundColor: COLORS.background1,
     borderRadius: '50%',
     display: 'flex',
     justifyContent: 'center',
