@@ -4,7 +4,7 @@ import Radium, { StyleRoot } from 'radium'
 import { ArrowIcon } from 'kitten/components/icons/arrow-icon'
 import COLORS from 'kitten/constants/colors-config'
 
-const ButtonListItem = ({
+const ListButtonItem = ({
   children,
   disabled,
   style,
@@ -12,10 +12,10 @@ const ButtonListItem = ({
   onKeyPress,
   ...others
 }) => {
-  let linkStyles = { ...styles.item.base, ...style }
+  let linkStyles = { ...styles.buttonItem.base, ...style }
 
   if (disabled) {
-    linkStyles = { ...linkStyles, ...styles.item.disabled }
+    linkStyles = { ...linkStyles, ...styles.buttonItem.disabled }
   }
 
   return (
@@ -27,8 +27,8 @@ const ButtonListItem = ({
         onKeyPress={disabled ? null : onKeyPress}
         {...others}
       >
-        <div style={styles.item.content}>{children}</div>
-        <div style={styles.item.arrow}>
+        <div style={styles.buttonItem.content}>{children}</div>
+        <div style={styles.buttonItem.arrow}>
           <ArrowIcon className="k-Button__icon" />
         </div>
       </div>
@@ -36,18 +36,16 @@ const ButtonListItem = ({
   )
 }
 
-ButtonListItem.propTypes = {
+ListButtonItem.propTypes = {
   disabled: PropTypes.bool,
 }
 
-ButtonListItem.defaultProps = {
+ListButtonItem.defaultProps = {
   disabled: false,
 }
 
-export class ButtonListBase extends Component {
-  static Item = ButtonListItem
-
-  isButtonListItem = component => component.type.name === ButtonListItem
+export class ListBase extends Component {
+  static ButtonItem = ListButtonItem
 
   render() {
     const { children } = this.props
@@ -64,7 +62,7 @@ export class ButtonListBase extends Component {
   }
 }
 
-ButtonListBase.propTypes = {
+ListBase.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
@@ -74,7 +72,7 @@ const styles = {
     margin: 0,
     padding: 0,
   },
-  item: {
+  buttonItem: {
     base: {
       display: 'flex',
       borderLeft: `${COLORS.line1} 0.125rem solid`,
@@ -105,4 +103,4 @@ const styles = {
   },
 }
 
-export const ButtonList = Radium(ButtonListBase)
+export const List = Radium(ListBase)

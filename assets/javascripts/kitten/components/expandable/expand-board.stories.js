@@ -10,7 +10,7 @@ import {
 } from '@storybook/addon-knobs/react'
 import { StyleRoot } from 'radium'
 import { ExpandBoard } from 'kitten/components/expandable/expand-board'
-import { ButtonList } from 'kitten/components/lists/button-list'
+import { List } from 'kitten/components/lists/list'
 import { Grid, GridCol } from 'kitten/components/grid/grid'
 import { Text } from 'kitten/components/typography/text'
 
@@ -49,8 +49,8 @@ storiesOf('Expand/ExpandBoard', module)
                 Je soutiens
               </ExpandBoard.Button>
               <ExpandBoard.Content>
-                <ButtonList>
-                  <ButtonList.Item>
+                <List>
+                  <List.ButtonItem>
                     <dl>
                       <dt style={styles.buttonListItem.base}>
                         <Text weight="regular" color="font-1" size="tiny">
@@ -63,8 +63,8 @@ storiesOf('Expand/ExpandBoard', module)
                         </Text>
                       </dd>
                     </dl>
-                  </ButtonList.Item>
-                  <ButtonList.Item disabled>
+                  </List.ButtonItem>
+                  <List.ButtonItem disabled>
                     <dl>
                       <dt style={styles.buttonListItem.base}>
                         <Text weight="regular" color="font-1" size="tiny">
@@ -77,8 +77,8 @@ storiesOf('Expand/ExpandBoard', module)
                         </Text>
                       </dd>
                     </dl>
-                  </ButtonList.Item>
-                  <ButtonList.Item>
+                  </List.ButtonItem>
+                  <List.ButtonItem>
                     <dl>
                       <dt style={styles.buttonListItem.base}>
                         <Text weight="regular" color="font-1" size="tiny">
@@ -91,8 +91,8 @@ storiesOf('Expand/ExpandBoard', module)
                         </Text>
                       </dd>
                     </dl>
-                  </ButtonList.Item>
-                </ButtonList>
+                  </List.ButtonItem>
+                </List>
               </ExpandBoard.Content>
             </ExpandBoard>
           </GridCol>

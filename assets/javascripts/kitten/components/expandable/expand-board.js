@@ -77,7 +77,7 @@ class ExpandBoardBase extends Component {
   render() {
     const { children, style, disabled, ariaId } = this.props
 
-    let button
+    let button = null
 
     const content = React.Children.map(children, child => {
       if (!React.isValidElement(child)) return null
