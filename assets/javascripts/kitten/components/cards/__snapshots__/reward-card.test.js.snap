@@ -48,7 +48,6 @@ exports[`<RewardCard /> by default matches with snapshot 1`] = `
           >
             <h1
               className="k-Title k-Title--tertiary k-Title--withoutMargin k-Title--italic"
-              data-radium={true}
               style={
                 Object {
                   "color": "#222",
@@ -81,7 +80,6 @@ exports[`<RewardCard /> by default matches with snapshot 1`] = `
           >
             <p
               className="k-Paragraph k-Paragraph--tertiary k-Paragraph--withoutMargin"
-              data-radium={true}
               style={
                 Object {
                   "color": "#222",
@@ -93,7 +91,6 @@ exports[`<RewardCard /> by default matches with snapshot 1`] = `
           </div>
         </div>
       </div>
-      
     </div>
   </div>
   <style
@@ -159,7 +156,6 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
           >
             <h1
               className="k-Title k-Title--tertiary k-Title--withoutMargin k-Title--italic"
-              data-radium={true}
               style={
                 Object {
                   "color": "#222",
@@ -191,7 +187,6 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
           >
             <p
               className="k-u-color-font1 k-u-size-huge k-u-weight-bold"
-              data-radium={true}
               style={
                 Object {
                   "margin": 0,
@@ -211,7 +206,6 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
           >
             <p
               className="k-Paragraph k-Paragraph--tertiary k-Paragraph--withoutMargin"
-              data-radium={true}
               style={
                 Object {
                   "color": "#222",
@@ -244,8 +238,7 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
                 }
               }
             >
-              Custom title contributors
-               
+              Custom title contributors 
               <span
                 className="k-u-color-font1 k-u-weight-light"
               >
@@ -261,8 +254,7 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
                 }
               }
             >
-              Custom title delivery
-               
+              Custom title delivery 
               <span
                 className="k-u-color-font1 k-u-weight-light"
               >
@@ -278,8 +270,7 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
                 }
               }
             >
-              Custom title availability
-               
+              Custom title availability 
               <span
                 className="k-u-color-font1 k-u-weight-light"
               >
@@ -396,7 +387,6 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
               >
                 <span
                   className="k-u-color-font1 k-u-size-tiny k-u-weight-regular"
-                  data-radium={true}
                 >
                   Custom my contribution
                   <br />
