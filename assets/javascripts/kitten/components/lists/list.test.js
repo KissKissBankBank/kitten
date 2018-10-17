@@ -24,7 +24,7 @@ describe('<List>', () => {
       const component = renderer
         .create(
           <List>
-            <List.ButtonItem>Alice</List.ButtonItem>
+            <List.ButtonItem withTopBorder>Alice</List.ButtonItem>
             <List.ButtonItem>Cheshire Cat</List.ButtonItem>
             <List.ButtonItem>Mad Hatter</List.ButtonItem>
           </List>,

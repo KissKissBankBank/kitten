@@ -46,8 +46,8 @@ exports[`<List> with <ListButtonItem> matches with snapshot 1`] = `
     >
       <div
         data-radium={true}
-        onClick={undefined}
-        onKeyPress={undefined}
+        onClick={[Function]}
+        onKeyPress={[Function]}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
         role="button"
@@ -56,6 +56,7 @@ exports[`<List> with <ListButtonItem> matches with snapshot 1`] = `
             "borderBottom": "#eee 0.125rem solid",
             "borderLeft": "#eee 0.125rem solid",
             "borderRight": "#eee 0.125rem solid",
+            "borderTop": "#eee 0.125rem solid",
             "cursor": "pointer",
             "display": "flex",
             "paddingLeft": "1.25rem",
@@ -111,8 +112,8 @@ exports[`<List> with <ListButtonItem> matches with snapshot 1`] = `
     >
       <div
         data-radium={true}
-        onClick={undefined}
-        onKeyPress={undefined}
+        onClick={[Function]}
+        onKeyPress={[Function]}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
         role="button"
@@ -176,8 +177,8 @@ exports[`<List> with <ListButtonItem> matches with snapshot 1`] = `
     >
       <div
         data-radium={true}
-        onClick={undefined}
-        onKeyPress={undefined}
+        onClick={[Function]}
+        onKeyPress={[Function]}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
         role="button"
