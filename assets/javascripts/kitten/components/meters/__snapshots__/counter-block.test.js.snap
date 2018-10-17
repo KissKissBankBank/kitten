@@ -50,7 +50,6 @@ exports[`<CounterBlock /> with default props matches with snapshot 1`] = `
     <p
       className="k-u-size-huge k-u-style-italic k-u-weight-bold"
       data-radium={true}
-      margin={false}
       style={
         Object {
           "margin": 0,
