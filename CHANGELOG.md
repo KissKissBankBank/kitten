@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Fix: Update marger on `SimpleCard` component.
 - Fix: `Triptych` stroke height on small devices.
+- Fix: Corrige `propTypes` definition on `LinkList`.
 - Feature: Create `CounterBlock` component.
 - Feature: Add `Deprecated` component.
 - Fix: Update `ffi` gem.
