@@ -244,7 +244,7 @@ class RewardCardComponent extends Component {
               buttonLabel={buttonLabel || button}
               isTinyVersion={this.isTinyVersion()}
               isSOrLessVersion={this.isSOrLessVersion()}
-              topMargin={shouldDisplayImage || this.isTinyVersion() ? 2 : 0}
+              topMargin={!shouldDisplayImage || !this.isTinyVersion() ? 0 : 2}
             />
           )}
         </Marger>
