@@ -242,6 +242,7 @@ import { KarlLoaderInButton } from 'kitten/karl/loaders/karl-loaders'
 
 // Meters
 import { Progress } from 'kitten/components/meters/progress'
+import { KarlCounterBlock } from 'kitten/karl/meters/karl-counter-block'
 import { KarlRandomProgress } from 'kitten/karl/meters/random-progress'
 
 // Modals
@@ -537,6 +538,7 @@ ReactOnRails.register({
 
   // Meters
   Progress,
+  KarlCounterBlock,
   KarlRandomProgress,
 
   // Modals
