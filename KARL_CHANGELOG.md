@@ -5,7 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: Fix `ids` error on `DonationCard`.
-- Fix: Update `KarlFooterLendopolis` example.
+- Feature: Update `KarlFooterLendopolis` example.
+- Feature: Create `KarlCounterBlock` example.
 - Feature: Update `react-on-rails` gem and npm module to 11.1.6.
 
 ## [23.5.0] - 2018-09-25
