@@ -24,7 +24,7 @@ describe('<CounterBlock />', () => {
     beforeEach(() => {
       window.matchMedia = createMockMediaMatcher(false)
       component = renderer
-        .create(<CounterBlock title="foo" subTitle="bar" counter={'13 106'} />)
+        .create(<CounterBlock title="foo" subTitle="bar" counter="13 106" />)
         .toJSON()
     })
 

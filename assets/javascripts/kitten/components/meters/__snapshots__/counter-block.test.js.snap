@@ -48,7 +48,7 @@ exports[`<CounterBlock /> with default props matches with snapshot 1`] = `
     }
   >
     <p
-      className="rmq-ef1ce72e k-Title k-Title--senary k-Title--withoutMargin"
+      className="rmq-ef1ce72e k-Title k-Title--senary k-Title--withoutMargin k-Title--italic"
       data-radium={true}
       style={Object {}}
     >
