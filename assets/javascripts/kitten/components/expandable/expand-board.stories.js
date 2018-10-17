@@ -19,7 +19,9 @@ storiesOf('Expandable', module)
   .addDecorator(withKnobs)
   .add(
     'ExpandBoard',
-    withInfo('common info')(() => (
+    withInfo(
+      'The ExpandBoard is a container that can expand on click. It can accept any content.',
+    )(() => (
       <StyleRoot>
         <Grid>
           <GridCol offset="1" col="10">
@@ -43,7 +45,9 @@ storiesOf('Expandable', module)
   )
   .add(
     'ActionPicker',
-    withInfo('common info')(() => (
+    withInfo(
+      'The ActionPicker is an example of ExpandBoard composition with a list of buttons as content.',
+    )(() => (
       <StyleRoot>
         <Grid>
           <GridCol offset="1" col="10">
