@@ -43,7 +43,6 @@ class CounterBlockBase extends Component {
             style={styles.subTitle}
             size={subTitleSize}
             tag={subTitleTag}
-            margin={false}
             fontStyle="italic"
             weight="bold"
             tag="p"
