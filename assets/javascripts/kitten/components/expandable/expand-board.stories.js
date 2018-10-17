@@ -13,24 +13,27 @@ import { ExpandBoard } from 'kitten/components/expandable/expand-board'
 import { List } from 'kitten/components/lists/list'
 import { Grid, GridCol } from 'kitten/components/grid/grid'
 import { Text } from 'kitten/components/typography/text'
+import COLORS from 'kitten/constants/colors-config'
 
-storiesOf('Expand/ExpandBoard', module)
+storiesOf('Expandable', module)
   .addDecorator(withKnobs)
   .add(
-    'default',
+    'ExpandBoard',
     withInfo('common info')(() => (
       <StyleRoot>
         <Grid>
           <GridCol offset="1" col="10">
             <ExpandBoard>
-              <ExpandBoard.Button expandChildren="I am opened">
+              <ExpandBoard.Button expandChildren="Lancez votre projet">
                 KissKissBankBank & Co
               </ExpandBoard.Button>
               <ExpandBoard.Content>
-                <ul>
-                  <li>KissKissBankBank</li>
-                  <li>LENDOPOLIS</li>
-                </ul>
+                <div style={styles.expandBoard.defaultContent}>
+                  KissKissBankBank et 1 483 037 KissBankers vous aident à
+                  réaliser vos projets créatifs, associatifs et
+                  entrepreneuriaux. Participez à la naissance de projets
+                  inspirants.
+                </div>
               </ExpandBoard.Content>
             </ExpandBoard>
           </GridCol>
@@ -39,7 +42,7 @@ storiesOf('Expand/ExpandBoard', module)
     )),
   )
   .add(
-    'with BlockList',
+    'ActionPicker',
     withInfo('common info')(() => (
       <StyleRoot>
         <Grid>
@@ -102,6 +105,14 @@ storiesOf('Expand/ExpandBoard', module)
   )
 
 const styles = {
+  expandBoard: {
+    defaultContent: {
+      padding: '1.5em',
+      borderLeft: `${COLORS.line1} 0.125rem solid`,
+      borderRight: `${COLORS.line1} 0.125rem solid`,
+      borderBottom: `${COLORS.line1} 0.125rem solid`,
+    },
+  },
   buttonListItem: {
     base: {
       margin: 0,
