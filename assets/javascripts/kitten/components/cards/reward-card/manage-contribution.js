@@ -16,7 +16,8 @@ const ManageContributionBase = ({
   isTinyVersion,
   isSOrLessVersion,
 }) => {
-  if (!description || (isTinyVersion && isDisabled)) return null
+  if (!description) return null
+  if (isTinyVersion && isDisabled) return null
 
   const choiceButtonPaddings = isTinyVersion
     ? styles.choiceButton.paddings.tinyVersion
