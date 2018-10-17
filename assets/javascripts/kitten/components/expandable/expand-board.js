@@ -11,6 +11,7 @@ const ExpandBoardButton = ({
   expanded,
   style,
   onClick,
+  ariaId,
 }) => {
   const defaultExpandChildren = expandChildren ? expandChildren : children
   const buttonStyles = expanded
@@ -23,6 +24,8 @@ const ExpandBoardButton = ({
       iconOnRight
       size="big"
       modifier="helium"
+      aria-expanded={expanded}
+      aria-controls={ariaId}
       style={buttonStyles}
       onClick={onClick}
     >
@@ -41,11 +44,13 @@ ExpandBoardButton.propTypes = {
   children: PropTypes.node.isRequired,
   expandChildren: PropTypes.node,
   expanded: PropTypes.bool,
+  ariaId: PropTypes.string,
 }
 
 ExpandBoardButton.defaultProps = {
   expandChildren: null,
   expanded: false,
+  ariaId: 'k-ExpandBoard',
 }
 
 const ExpandBoardContent = ({ children }) => children
@@ -70,7 +75,7 @@ class ExpandBoardBase extends Component {
   }
 
   render() {
-    const { children, style, disabled } = this.props
+    const { children, style, disabled, ariaId } = this.props
 
     let button
 
@@ -83,6 +88,7 @@ class ExpandBoardBase extends Component {
           expanded: this.state.expanded,
           onClick: this.handleClick,
           style: styles.button,
+          ariaId,
         })
         return null
       }
@@ -93,7 +99,7 @@ class ExpandBoardBase extends Component {
     return (
       <div style={style}>
         {button}
-        {this.state.expanded && <div>{content}</div>}
+        {this.state.expanded && <div id={ariaId}>{content}</div>}
       </div>
     )
   }
@@ -120,12 +126,14 @@ ExpandBoardBase.propTypes = {
   disabled: PropTypes.bool,
   style: PropTypes.object,
   onClick: PropTypes.func,
+  ariaId: PropTypes.string,
 }
 
 ExpandBoardBase.defaultProps = {
   disabled: false,
   style: {},
   onClick: () => {},
+  ariaId: 'k-ExpandBoard',
 }
 
 export const ExpandBoard = Radium(ExpandBoardBase)
