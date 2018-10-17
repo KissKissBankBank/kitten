@@ -178,6 +178,8 @@ class RewardCardComponent extends Component {
           'offset-s': 1,
         }
 
+    const withImageOnTinyVersion = shouldDisplayImage && this.isTinyVersion()
+
     return (
       <StyleRoot {...others} style={cardStyles}>
         <Marger
@@ -244,7 +246,7 @@ class RewardCardComponent extends Component {
               buttonLabel={buttonLabel || button}
               isTinyVersion={this.isTinyVersion()}
               isSOrLessVersion={this.isSOrLessVersion()}
-              topMargin={!shouldDisplayImage || !this.isTinyVersion() ? 0 : 2}
+              topMargin={withImageOnTinyVersion ? 2 : 0}
             />
           )}
         </Marger>

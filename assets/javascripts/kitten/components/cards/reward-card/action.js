@@ -17,7 +17,9 @@ export const RewardCardAction = ({
   isSOrLessVersion,
   topMargin,
 }) => {
-  if (!buttonLabel && !manageContributionDescription) return
+  const hasActionContent = buttonLabel || manageContributionDescription
+
+  if (!hasActionContent) return null
 
   return (
     <Fragment>
@@ -57,7 +59,9 @@ export const RewardCardActionOnMOrMore = ({
   isTinyVersion,
   isSOrLessVersion,
 }) => {
-  if (!buttonLabel && !manageContributionDescription) return
+  const hasActionContent = buttonLabel || manageContributionDescription
+
+  if (!hasActionContent) return null
 
   return (
     <Fragment>
