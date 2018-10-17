@@ -29,7 +29,8 @@ const ExpandBoardButton = ({
       {expanded ? defaultExpandChildren : children}
       <ArrowIcon
         direction={expanded ? 'top' : 'bottom'}
-        className="k-ButtonIcon__svg"
+        className="k-ButtonIcon"
+        fill={COLORS.background1}
       />
     </Button>
   )
