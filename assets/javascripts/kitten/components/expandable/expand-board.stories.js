@@ -44,9 +44,9 @@ storiesOf('Expandable', module)
     )),
   )
   .add(
-    'ActionPicker',
+    'ExpandBoard with list of ButtonItem',
     withInfo(
-      'The ActionPicker is an example of ExpandBoard composition with a list of buttons as content.',
+      'This is an example of ExpandBoard composition with a list of buttons as content.',
     )(() => (
       <StyleRoot>
         <Grid>
