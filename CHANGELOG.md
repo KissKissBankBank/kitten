@@ -6,7 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 Fix:
 - Fix: Update marger on `SimpleCard` component.
-- Fix: `Triptych` stroke height in small device.
+- Fix: `Triptych` stroke height on small devices.
 - Fix: Update `ffi` gem.
 - Fix: Deprecate `ContributionCard` component. You should use `RewardCard`
   component instead. It will be deleted in further versions.
