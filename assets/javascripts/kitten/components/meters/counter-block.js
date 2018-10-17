@@ -44,6 +44,7 @@ class CounterBlockBase extends Component {
             modifier="senary"
             margin={false}
             tag={subTitleTag}
+            italic
           >
             {subTitle}
           </Title>
