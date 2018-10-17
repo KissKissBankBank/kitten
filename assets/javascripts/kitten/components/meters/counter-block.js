@@ -2,7 +2,6 @@ import React, { Component, Fragment } from 'react'
 import Radium, { StyleRoot } from 'radium'
 import { Title as TitleBase } from 'kitten/components/typography/title'
 import { Text as TextBase } from 'kitten/components/typography/text'
-import { Paragraph } from 'kitten/components/typography/paragraph'
 import { Marger } from 'kitten/components/layout/marger'
 import { ScreenConfig } from 'kitten/constants/screen-config'
 import { withMediaQueries } from 'kitten/hoc/media-queries'
@@ -12,28 +11,39 @@ const Title = Radium(TitleBase)
 
 class CounterBlockBase extends Component {
   render() {
-    const { title, subTitle, counter, viewportIsSOrLess } = this.props
+    const {
+      title,
+      titleTag,
+      subTitle,
+      subTitleTag,
+      counter,
+      viewportIsSOrLess,
+      titleProps,
+    } = this.props
     const titleSize = viewportIsSOrLess ? 'senary' : 'tertiary'
     const margin = viewportIsSOrLess ? 2 : 4
 
     return (
       <StyleRoot style={styles.counterBlock}>
         <Marger bottom={margin}>
-          <Title modifier={titleSize} margin={false} tag="p">
+          <Title modifier={titleSize} {...titleProps}>
             {title}
           </Title>
         </Marger>
-        <Paragraph margin={false} normalLineHeight>
-          <Text style={styles.counterText} fontStyle="italic" weight="bold">
-            {counter}
-          </Text>
-        </Paragraph>
+        <Text
+          style={styles.counterText}
+          fontStyle="italic"
+          weight="bold"
+          tag={titleTag}
+        >
+          {counter}
+        </Text>
         <Marger top={margin}>
           <Title
             style={styles.subTitle}
             modifier="senary"
             margin={false}
-            tag="p"
+            tag={subTitleTag}
           >
             {subTitle}
           </Title>
@@ -45,7 +55,9 @@ class CounterBlockBase extends Component {
 
 CounterBlockBase.defaultProps = {
   title: null,
+  titleTag: 'p',
   subTitle: null,
+  subTitleTag: 'p',
   counter: '0',
 }
 
@@ -60,6 +72,7 @@ const styles = {
     whiteSpace: 'nowrap',
     display: 'block',
     paddingBottom: 4,
+    margin: 0,
 
     [`@media (min-width: ${ScreenConfig.M.min}px)`]: {
       fontSize: '8.25rem',

@@ -17,30 +17,27 @@ exports[`<CounterBlock /> with default props matches with snapshot 1`] = `
       }
     }
   >
-    <p
-      className="k-Title k-Title--tertiary k-Title--withoutMargin"
+    <h1
+      className="k-Title k-Title--tertiary"
     >
       foo
-    </p>
+    </h1>
   </div>
   <p
-    className="k-Paragraph k-Paragraph--primary k-Paragraph--withoutMargin k-Paragraph--normalLineHeight"
-  >
-    <span
-      className="rmq-482bbfda rmq-650fa8a3 k-u-style-italic k-u-weight-bold"
-      data-radium={true}
-      style={
-        Object {
-          "display": "block",
-          "fontSize": "4.125rem",
-          "lineHeight": 0.7,
-          "paddingBottom": 4,
-          "whiteSpace": "nowrap",
-        }
+    className="rmq-482bbfda rmq-650fa8a3 k-u-style-italic k-u-weight-bold"
+    data-radium={true}
+    style={
+      Object {
+        "display": "block",
+        "fontSize": "4.125rem",
+        "lineHeight": 0.7,
+        "margin": 0,
+        "paddingBottom": 4,
+        "whiteSpace": "nowrap",
       }
-    >
-      13 106
-    </span>
+    }
+  >
+    13 106
   </p>
   <div
     style={
