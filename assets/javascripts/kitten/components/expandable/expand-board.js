@@ -13,6 +13,9 @@ const ExpandBoardButton = ({
   onClick,
 }) => {
   const defaultExpandChildren = expandChildren ? expandChildren : children
+  const buttonStyles = expanded
+    ? { ...style.base, ...style.expanded }
+    : style.base
 
   return (
     <Button
@@ -20,7 +23,7 @@ const ExpandBoardButton = ({
       iconOnRight
       size="big"
       modifier="helium"
-      style={style}
+      style={buttonStyles}
       onClick={onClick}
     >
       {expanded ? defaultExpandChildren : children}
@@ -96,7 +99,12 @@ class ExpandBoardBase extends Component {
 
 const styles = {
   button: {
-    width: '100%',
+    base: {
+      width: '100%',
+    },
+    expanded: {
+      backgroundColor: COLORS.font1,
+    },
   },
 }
 

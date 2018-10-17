@@ -21,7 +21,9 @@ storiesOf('Expand/ExpandBoard', module)
         <Grid>
           <GridCol offset="1" col="10">
             <ExpandBoard>
-              <ExpandBoard.Button>KissKissBankBank & Co</ExpandBoard.Button>
+              <ExpandBoard.Button expandChildren="I am opened">
+                KissKissBankBank & Co
+              </ExpandBoard.Button>
               <ExpandBoard.Content>
                 <ul>
                   <li>KissKissBankBank</li>
