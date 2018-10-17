@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CounterBlock /> with default props matches with snapshot 1`] = `
+<div
+  data-radium={true}
+  style={
+    Object {
+      "textAlign": "center",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "marginBottom": "2.5rem",
+        "marginTop": null,
+      }
+    }
+  >
+    <p
+      className="k-Title k-Title--tertiary k-Title--withoutMargin"
+    >
+      foo
+    </p>
+  </div>
+  <p
+    className="rmq-9e4ea591 rmq-650fa8a3 k-u-style-italic k-u-weight-bold"
+    data-radium={true}
+    style={
+      Object {
+        "display": "block",
+        "fontSize": "4.125rem",
+        "lineHeight": 0.7,
+        "margin": 0,
+        "paddingBottom": 4,
+        "whiteSpace": "nowrap",
+      }
+    }
+  >
+    13 106
+  </p>
+  <div
+    style={
+      Object {
+        "marginBottom": null,
+        "marginTop": "2.5rem",
+      }
+    }
+  >
+    <p
+      className="k-u-size-huge k-u-style-italic k-u-weight-bold"
+      data-radium={true}
+      style={
+        Object {
+          "margin": 0,
+        }
+      }
+    >
+      bar
+    </p>
+  </div>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "@media (min-width: 640px){ .rmq-9e4ea591{font-size: 8.25rem !important;
+padding-bottom: 7px !important;}}
+@media (min-width: 1080px){ .rmq-650fa8a3{font-size: 9.9rem !important;
+padding-bottom: 10px !important;}}",
+      }
+    }
+  />
+</div>
+`;
