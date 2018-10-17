@@ -8,7 +8,7 @@ import { styles } from 'kitten/components/cards/reward-card'
 
 const Grid = Radium(GridBase)
 
-export const ManageContribution = ({
+const ManageContributionBase = ({
   description,
   linkLabel,
   linkHref,
@@ -73,7 +73,7 @@ export const ManageContribution = ({
   )
 }
 
-ManageContribution.propTypes = {
+ManageContributionBase.propTypes = {
   description: PropTypes.string,
   linkLabel: PropTypes.string,
   linkHref: PropTypes.string,
@@ -82,9 +82,11 @@ ManageContribution.propTypes = {
   isSOrLessVersion: PropTypes.bool.isRequired,
 }
 
-ManageContribution.defaultProps = {
+ManageContributionBase.defaultProps = {
   description: '',
   linkLabel: '',
   linkHref: '',
   isDisabled: false,
 }
+
+export const ManageContribution = Radium(ManageContributionBase)

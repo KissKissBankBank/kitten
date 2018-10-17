@@ -1,8 +1,9 @@
 import React, { Component, Fragment } from 'react'
+import Radium from 'radium'
 import PropTypes from 'prop-types'
 import { styles } from 'kitten/components/cards/reward-card'
 
-export const RewardCardImage = ({ isDisabled, imageProps }) => {
+const RewardCardImageBase = ({ isDisabled, imageProps }) => {
   const imageStyles = [isDisabled && styles.disabled]
   const shouldDisplayImage = imageProps && imageProps.src
 
@@ -15,12 +16,14 @@ export const RewardCardImage = ({ isDisabled, imageProps }) => {
   )
 }
 
-RewardCardImage.propTypes = {
+RewardCardImageBase.propTypes = {
   isDisabled: PropTypes.bool,
   imageProps: PropTypes.object,
 }
 
-RewardCardImage.defaultProps = {
+RewardCardImageBase.defaultProps = {
   isDisabled: false,
   imageProps: {},
 }
+
+export const RewardCardImage = Radium(RewardCardImageBase)

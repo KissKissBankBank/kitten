@@ -1,10 +1,11 @@
 import React, { Fragment } from 'react'
+import Radium from 'radium'
 import PropTypes from 'prop-types'
 import { styles } from 'kitten/components/cards/reward-card'
 import { Info } from 'kitten/components/cards/reward-card/info'
 import { Marger } from 'kitten/components/layout/marger'
 
-export const RewardCardInfos = ({
+const RewardCardInfosBase = ({
   infos,
   isDisabled,
   viewportIsTabletOrLess,
@@ -32,14 +33,16 @@ export const RewardCardInfos = ({
   )
 }
 
-RewardCardInfos.propTypes = {
+RewardCardInfosBase.propTypes = {
   infos: PropTypes.array,
   isDisabled: PropTypes.bool,
   viewportIsTabletOrLess: PropTypes.bool.isRequired,
   isTinyVersion: PropTypes.bool.isRequired,
 }
 
-RewardCardInfos.defaultProps = {
+RewardCardInfosBase.defaultProps = {
   infos: [],
   isDisabled: false,
 }
+
+export const RewardCardInfos = Radium(RewardCardInfosBase)

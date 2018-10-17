@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react'
+import Radium from 'radium'
 import PropTypes from 'prop-types'
 import { styles } from 'kitten/components/cards/reward-card'
 import { Marger } from 'kitten/components/layout/marger'
@@ -8,7 +9,7 @@ import { HorizontalStroke } from 'kitten/components/layout/horizontal-stroke'
 import { Paragraph } from 'kitten/components/typography/paragraph'
 import { Text } from 'kitten/components/typography/text'
 
-export const RewardCardContent = ({
+const RewardCardContentBase = ({
   titleAmount,
   titleTag,
   subtitle,
@@ -80,17 +81,26 @@ export const RewardCardContent = ({
   )
 }
 
-RewardCardContent.propTypes = {
+RewardCardContentBase.propTypes = {
   titleAmount: PropTypes.string.isRequired,
   titleTag: PropTypes.string,
   subtitle: PropTypes.string,
   subtitleTag: PropTypes.string,
   description: PropTypes.string,
+  starred: PropTypes.bool,
+  starLabel: PropTypes.string,
+  isDisabled: PropTypes.bool,
+  isTinyVersion: PropTypes.bool.isRequired,
 }
 
-RewardCardContent.defaultProps = {
+RewardCardContentBase.defaultProps = {
   titleTag: 'h1',
   subtitle: '',
   subtitleTag: 'p',
   description: '',
+  starred: false,
+  starLabel: '',
+  isDisabled: false,
 }
+
+export const RewardCardContent = Radium(RewardCardContentBase)
