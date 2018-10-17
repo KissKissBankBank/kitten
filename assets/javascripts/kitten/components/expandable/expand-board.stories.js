@@ -12,6 +12,7 @@ import { StyleRoot } from 'radium'
 import { ExpandBoard } from 'kitten/components/expandable/expand-board'
 import { ButtonList } from 'kitten/components/lists/button-list'
 import { Grid, GridCol } from 'kitten/components/grid/grid'
+import { Text } from 'kitten/components/typography/text'
 
 storiesOf('Expand/ExpandBoard', module)
   .addDecorator(withKnobs)
@@ -49,9 +50,48 @@ storiesOf('Expand/ExpandBoard', module)
               </ExpandBoard.Button>
               <ExpandBoard.Content>
                 <ButtonList>
-                  <ButtonList.Item>Contrepartie 1</ButtonList.Item>
-                  <ButtonList.Item disabled>Contrepartie 2</ButtonList.Item>
-                  <ButtonList.Item>Contrepartie 3</ButtonList.Item>
+                  <ButtonList.Item>
+                    <dl>
+                      <dt style={styles.buttonListItem.base}>
+                        <Text weight="regular" color="font-1" size="tiny">
+                          Taille XS
+                        </Text>
+                      </dt>
+                      <dd style={styles.buttonListItem.base}>
+                        <Text color="font-1" size="micro">
+                          Disponibilité: 10/30
+                        </Text>
+                      </dd>
+                    </dl>
+                  </ButtonList.Item>
+                  <ButtonList.Item disabled>
+                    <dl>
+                      <dt style={styles.buttonListItem.base}>
+                        <Text weight="regular" color="font-1" size="tiny">
+                          Taille S
+                        </Text>
+                      </dt>
+                      <dd style={styles.buttonListItem.base}>
+                        <Text color="font-1" size="micro">
+                          Disponibilité: 10/30
+                        </Text>
+                      </dd>
+                    </dl>
+                  </ButtonList.Item>
+                  <ButtonList.Item>
+                    <dl>
+                      <dt style={styles.buttonListItem.base}>
+                        <Text weight="regular" color="font-1" size="tiny">
+                          Taille M
+                        </Text>
+                      </dt>
+                      <dd style={styles.buttonListItem.base}>
+                        <Text color="font-1" size="micro">
+                          Disponibilité: 10/30
+                        </Text>
+                      </dd>
+                    </dl>
+                  </ButtonList.Item>
                 </ButtonList>
               </ExpandBoard.Content>
             </ExpandBoard>
@@ -60,3 +100,17 @@ storiesOf('Expand/ExpandBoard', module)
       </StyleRoot>
     )),
   )
+
+const styles = {
+  buttonListItem: {
+    base: {
+      margin: 0,
+      padding: 0,
+      lineHeight: '1.2em',
+    },
+    wrapper: {
+      margin: '1em 0',
+      padding: 0,
+    },
+  },
+}

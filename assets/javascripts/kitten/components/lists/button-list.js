@@ -96,7 +96,6 @@ const styles = {
       },
     },
     content: {
-      display: 'flex',
       flexGrow: 1,
     },
     arrow: {
