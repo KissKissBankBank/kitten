@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-Fix:
+- Fix: Fix `ids` error on `DonationCard`.
 - Fix `Triptych` stroke height in small device.
 - Fix: Update `ffi` gem.
 - Fix: Deprecate `ContributionCard` component. You should use `RewardCard`
