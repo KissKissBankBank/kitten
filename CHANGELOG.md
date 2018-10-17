@@ -4,11 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-Feature:
-- Create `CounterBlock` component.
-- Fix: Update `ffi` gem.
-- Fix: Deprecate `ContributionCard` component. You should use `RewardCard`
-  component instead. It will be deleted in further versions.
+- Feature: Create `CounterBlock` component.
+- Feature: Fix: Update `ffi` gem.
+- Feature: Fix: Deprecate `ContributionCard` component. You should
+  use `RewardCard` component instead. It will be deleted in further versions.
 
 ## [23.5.1] - 2018-09-27
 
