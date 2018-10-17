@@ -26,7 +26,7 @@ are deprecated and can be replaced:
     const infos = [
       {
         label: 'Your previous titleContributors content',
-        value: 'Your previous titleContributors value',
+        value: 'Your previous valueContributors content',
       },
       …
     ]
