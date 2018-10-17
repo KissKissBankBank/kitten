@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<ExpandBoard /> with <ExpandBoard.Button> and <ExpandBoard.Content> matches with snapshot 1`] = `
+exports[`<ExpandBoard /> with <ExpandBoard.Button> and <ExpandBoard.Content> by default matches with snapshot 1`] = `
 <div
   data-radium={true}
   style={Object {}}
@@ -46,7 +46,7 @@ exports[`<ExpandBoard /> with <ExpandBoard.Button> and <ExpandBoard.Content> mat
 </div>
 `;
 
-exports[`<ExpandBoard /> with <ExpandBoard.Button> and random content matches with snapshot 1`] = `
+exports[`<ExpandBoard /> with <ExpandBoard.Button> and <ExpandBoard.Content> disabled matches with snapshot 1`] = `
 <div
   data-radium={true}
   style={Object {}}
@@ -55,7 +55,7 @@ exports[`<ExpandBoard /> with <ExpandBoard.Button> and random content matches wi
     aria-controls="k-ExpandBoard"
     aria-expanded={false}
     className="k-Button k-Button--helium k-Button--big k-Button--icon k-Button--iconRight"
-    disabled={false}
+    disabled={true}
     onClick={[Function]}
     style={
       Object {
@@ -90,4 +90,11 @@ exports[`<ExpandBoard /> with <ExpandBoard.Button> and random content matches wi
     </svg>
   </button>
 </div>
+`;
+
+exports[`<ExpandBoard /> with random content matches with snapshot 1`] = `
+<div
+  data-radium={true}
+  style={Object {}}
+/>
 `;

@@ -5,25 +5,44 @@ import { ExpandBoard } from 'kitten/components/expandable/expand-board'
 import { Button } from 'kitten/components/buttons/button'
 
 describe('<ExpandBoard />', () => {
-  describe('with <ExpandBoard.Button> and random content', () => {
-    it('matches with snapshot', () => {
-      const component = renderer
-        .create(
-          <ExpandBoard>
-            <ExpandBoard.Button>Alice</ExpandBoard.Button>
-            <div>We are all mad here!</div>
-          </ExpandBoard>,
-        )
-        .toJSON()
-
-      expect(component).toMatchSnapshot()
-    })
-  })
-
   describe('with <ExpandBoard.Button> and <ExpandBoard.Content>', () => {
-    it('matches with snapshot', () => {
-      const component = renderer
-        .create(
+    describe('by default', () => {
+      it('matches with snapshot', () => {
+        const component = renderer
+          .create(
+            <ExpandBoard>
+              <ExpandBoard.Button>Alice</ExpandBoard.Button>
+              <ExpandBoard.Content>
+                <div>Curioser and curioser</div>
+              </ExpandBoard.Content>
+            </ExpandBoard>,
+          )
+          .toJSON()
+
+        expect(component).toMatchSnapshot()
+      })
+    })
+
+    describe('disabled', () => {
+      it('matches with snapshot', () => {
+        const component = renderer
+          .create(
+            <ExpandBoard disabled>
+              <ExpandBoard.Button>Alice</ExpandBoard.Button>
+              <ExpandBoard.Content>
+                <div>Curioser and curioser</div>
+              </ExpandBoard.Content>
+            </ExpandBoard>,
+          )
+          .toJSON()
+
+        expect(component).toMatchSnapshot()
+      })
+    })
+
+    describe('onClick', () => {
+      it('expands the content', () => {
+        const component = shallow(
           <ExpandBoard>
             <ExpandBoard.Button>Alice</ExpandBoard.Button>
             <ExpandBoard.Content>
@@ -31,33 +50,32 @@ describe('<ExpandBoard />', () => {
             </ExpandBoard.Content>
           </ExpandBoard>,
         )
-        .toJSON()
 
-      expect(component).toMatchSnapshot()
+        const button = component.find(ExpandBoard.Button)
+        const content = component.find(ExpandBoard.Content)
+
+        expect(content.exists()).toBe(false)
+
+        button.simulate('click')
+
+        const updatedContent = component.update().find(ExpandBoard.Content)
+
+        expect(updatedContent.exists()).toBe(true)
+      })
     })
   })
 
-  describe('onClick', () => {
-    it('expands the content', () => {
-      const component = shallow(
-        <ExpandBoard>
-          <ExpandBoard.Button>Alice</ExpandBoard.Button>
-          <ExpandBoard.Content>
-            <div>Curioser and curioser</div>
-          </ExpandBoard.Content>
-        </ExpandBoard>,
-      )
+  describe('with random content', () => {
+    it('matches with snapshot', () => {
+      const component = renderer
+        .create(
+          <ExpandBoard>
+            <div>Alice</div>
+          </ExpandBoard>,
+        )
+        .toJSON()
 
-      const button = component.find(ExpandBoard.Button)
-      const content = component.find(ExpandBoard.Content)
-
-      expect(content.exists()).toBe(false)
-
-      button.simulate('click')
-
-      const updatedContent = component.update().find(ExpandBoard.Content)
-
-      expect(updatedContent.exists()).toBe(true)
+      expect(component).toMatchSnapshot()
     })
   })
 })

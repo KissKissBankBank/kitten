@@ -46,16 +46,33 @@ ExpandBoardButton.propTypes = {
   children: PropTypes.node.isRequired,
   expandChildren: PropTypes.node,
   expanded: PropTypes.bool,
+  disabled: PropTypes.bool,
+  style: PropTypes.object,
+  onClick: PropTypes.func,
   ariaId: PropTypes.string,
 }
 
 ExpandBoardButton.defaultProps = {
   expandChildren: null,
   expanded: false,
+  disabled: false,
+  style: {},
+  onClick: () => {},
   ariaId: 'k-ExpandBoard',
 }
 
-const ExpandBoardContent = ({ children }) => children
+const ExpandBoardContent = ({ children, ariaId }) => (
+  <div id={ariaId}>{children}</div>
+)
+
+ExpandBoardContent.propTypes = {
+  children: PropTypes.node.isRequired,
+  ariaId: PropTypes.string,
+}
+
+ExpandBoardContent.defaultProps = {
+  ariaId: 'k-ExpandBoard',
+}
 
 class ExpandBoardBase extends Component {
   static Button = ExpandBoardButton
@@ -69,6 +86,7 @@ class ExpandBoardBase extends Component {
   }
 
   isButtonComponent = component => component.type.name === 'ExpandBoardButton'
+  isContentComponent = component => component.type.name === 'ExpandBoardContent'
 
   handleClick = () => {
     const newState = { expanded: !this.state.expanded }
@@ -80,8 +98,9 @@ class ExpandBoardBase extends Component {
     const { children, style, disabled, ariaId } = this.props
 
     let button = null
+    let content = null
 
-    const content = React.Children.map(children, child => {
+    React.Children.forEach(children, child => {
       if (!React.isValidElement(child)) return null
 
       if (this.isButtonComponent(child)) {
@@ -92,16 +111,19 @@ class ExpandBoardBase extends Component {
           style: styles.button,
           ariaId,
         })
-        return null
       }
 
-      return child
+      if (this.isContentComponent(child)) {
+        content = React.cloneElement(child, {
+          ariaId,
+        })
+      }
     })
 
     return (
       <div style={style}>
         {button}
-        {this.state.expanded && <div id={ariaId}>{content}</div>}
+        {this.state.expanded && content}
       </div>
     )
   }
