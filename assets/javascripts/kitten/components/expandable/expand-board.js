@@ -63,7 +63,7 @@ class ExpandBoardBase extends Component {
 
   handleClick = () => {
     const newState = { expanded: !this.state.expanded }
-    this.setState(newState)
+    this.setState(newState, () => document.activeElement.blur())
     this.props.onClick(newState)
   }
 
