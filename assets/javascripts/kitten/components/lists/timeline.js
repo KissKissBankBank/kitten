@@ -2,70 +2,47 @@ import React, { Component } from 'react'
 import { ScreenConfig } from 'kitten/constants/screen-config'
 import { mediaQueries } from 'kitten/hoc/media-queries'
 import Radium from 'radium'
-import { Paragraph } from 'kitten/components/typography/paragraph'
+import { Text as TextBase } from 'kitten/components/typography/text'
 import { withMediaQueries } from 'kitten/hoc/media-queries'
 import { Marger as MargerBase } from 'kitten/components/layout/marger'
 
 const Marger = Radium(MargerBase)
+const Text = Radium(TextBase)
 
 class TimelineBase extends Component {
   render() {
-    const { viewportIsTabletOrLess, viewportIsMobile } = this.props
-
-    const marginTop = viewportIsTabletOrLess ? (viewportIsMobile ? 4 : 3) : 10
-
-    const marginBottom = viewportIsTabletOrLess
-      ? viewportIsMobile ? 4 : 5
-      : 10
-
-    const lastBulletMarginTop = viewportIsTabletOrLess
-      ? viewportIsMobile ? 6 : 7
-      : 8
-
-    const textSize = viewportIsMobile ? 'quaternary' : 'tertiary'
-
-    console.warn(this.props)
     return (
-      <div style={styles.parent}>
-        <span style={styles.verticalLine} />
+      <div style={styles.timelineContainer}>
+        <span style={styles.verticalDashedLine} />
 
-        {this.props.children.map(({ props }, index) => {
-          console.warn('props', props)
-          console.warn('index', index)
-          return (
-            <ol style={styles.customList}>
-              <Marger bottom={viewportIsTabletOrLess ? 4 : 5}>
-                <li>
-                  <Paragraph
-                    margin={false}
-                    modifier="quaternary"
-                    style={{ ...styles.circle, ...styles.noLigneHeight }}
-                  >
-                    {++index}
-                  </Paragraph>
-                  <Paragraph margin={false} modifier={textSize}>
-                    {props.children}
-                  </Paragraph>
-                </li>
-              </Marger>
-            </ol>
-          )
-        })}
+        <ol style={styles.customList}>
+          {this.props.children.map(({ props }, index) => {
+            return (
+              <li style={styles.list}>
+                <Text size="tiny" style={styles.circle}>
+                  {++index}
+                </Text>
+                <div style={styles.textList}>{props.children}</div>
+              </li>
+            )
+          })}
+        </ol>
       </div>
     )
   }
 }
 
+const circleSize = 50
+
 const styles = {
-  parent: {
+  timelineContainer: {
     position: 'relative',
-    padding: '40px 0',
 
     [`@media (max-width: ${ScreenConfig.XS.max}px)`]: {
       marginLeft: 20,
     },
   },
-  verticalLine: {
+  verticalDashedLine: {
     border: '1px dashed #EEE',
     backgroundColor: '#FFF',
     position: 'absolute',
@@ -75,27 +52,39 @@ const styles = {
   },
   customList: {
     listStyleType: 'none',
-    paddingLeft: 60,
-
-    [`@media (max-width: ${ScreenConfig.XS.max}px)`]: {
-      paddingLeft: 40,
-    },
+    padding: 0,
+    // [`@media (max-width: ${ScreenConfig.XS.max}px)`]: {
+    //   paddingLeft: 40,
+    // },
   },
   circle: {
-    height: 50,
-    width: 50,
-    border: '2px solid #EEE',
+    boxSizing: 'border-box',
+    height: circleSize,
+    width: circleSize,
+    border: `2px solid #EEE`,
     backgroundColor: '#FFF',
     borderRadius: '50%',
-    position: 'absolute',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    left: -25,
     fontWeight: 'bold',
-  },
-  noLigneHeight: {
+    margin: `80px 40px 80px`,
     lineHeight: 0,
+    flex: `0 0 ${circleSize}px`,
+    marginLeft: -circleSize / 2,
+    position: 'relative',
+  },
+  list: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+  innerList: {
+    alignItems: 'center',
+  },
+  textList: {
+    flexGrow: 1,
+    alignItems: 'center',
   },
 }
 
