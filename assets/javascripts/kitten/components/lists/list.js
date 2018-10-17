@@ -12,17 +12,17 @@ const ListButtonItem = ({
   onKeyPress,
   ...others
 }) => {
-  let linkStyles = { ...styles.buttonItem.base, ...style }
+  let buttonStyles = { ...styles.buttonItem.base, ...style }
 
   if (disabled) {
-    linkStyles = { ...linkStyles, ...styles.buttonItem.disabled }
+    buttonStyles = { ...buttonStyles, ...styles.buttonItem.disabled }
   }
 
   return (
     <StyleRoot>
       <div
         role="button"
-        style={linkStyles}
+        style={buttonStyles}
         onClick={disabled ? null : onClick}
         onKeyPress={disabled ? null : onKeyPress}
         {...others}
