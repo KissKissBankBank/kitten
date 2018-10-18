@@ -3,14 +3,13 @@ import { ScreenConfig } from 'kitten/constants/screen-config'
 import { mediaQueries } from 'kitten/hoc/media-queries'
 import Radium, { StyleRoot } from 'radium'
 import { Text as TextBase } from 'kitten/components/typography/text'
-import { withMediaQueries } from 'kitten/hoc/media-queries'
 import { Marger as MargerBase } from 'kitten/components/layout/marger'
 import COLORS from 'kitten/constants/colors-config'
 
 const Marger = Radium(MargerBase)
 const Text = Radium(TextBase)
 
-class TimelineBase extends Component {
+export class Timeline extends Component {
   render() {
     const { children } = this.props
 
@@ -71,14 +70,18 @@ const styles = {
     justifyContent: 'center',
     alignItems: 'center',
     fontWeight: 'bold',
-    margin: `80px 40px 80px`,
+    margin: `80px 40px 80px ${-circleSize / 2}px`,
     lineHeight: 0,
     flex: `0 0 ${circleSize}px`,
-    marginLeft: -circleSize / 2,
     position: 'relative',
 
     [`@media (max-width: ${ScreenConfig.XS.max}px)`]: {
       marginRight: 20,
+    },
+
+    [`@media (min-width: ${ScreenConfig.S.min}px) and
+      (max-width: ${ScreenConfig.M.max}px)`]: {
+      margin: `60px 40px 60px ${-circleSize / 2}px`,
     },
   },
   list: {
@@ -94,8 +97,3 @@ const styles = {
     alignItems: 'center',
   },
 }
-
-export const Timeline = withMediaQueries({
-  viewportIsTabletOrLess: true,
-  viewportIsMobile: true,
-})(TimelineBase)
