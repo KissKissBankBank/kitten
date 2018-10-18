@@ -11,7 +11,7 @@ const RewardCardImageBase = ({ isDisabled, imageProps }) => {
 
   return (
     <div style={imageStyles} disabled={isDisabled}>
-      <img {...imageProps} style={styles.image} />
+      <img {...imageProps} alt={ imageProps.alt || '' } style={styles.image} />
     </div>
   )
 }
