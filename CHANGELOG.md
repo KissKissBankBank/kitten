@@ -12,6 +12,30 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fix: Update `ffi` gem.
 - Fix: Deprecate `ContributionCard` component. You should use `RewardCard`
   component instead. It will be deleted in further versions.
+- Feature: Add `Deprecated` component.
+- Feature: Update `RewardCard` component composition. The following props
+are deprecated and can be replaced:
+  - `titleDescription` => `subtitle`
+  - `textDescription` => `description`
+  - `textTag` => `subtitleTag`
+  - `myContribution` => `manageContributionDescription`
+  - `manageContribution` => `manageContributionLinkLabel`
+  - `manageContributionLink` => `manageContributionLinkHref`
+  - `button` => `buttonLabel`
+  - `titleContributors`, `titleDelivery`, `titleAvailability`,
+    `valueContributors`, `valueDelivery`, `valueAvailability` can be replaced by
+    an array formatted as follow:
+    ```js
+    const infos = [
+      {
+        label: 'Your previous titleContributors content',
+        value: 'Your previous valueContributors content',
+      },
+      …
+    ]
+
+    <RewardCard {...otherProps} infos={infos} >
+    ```
 
 ## [23.5.1] - 2018-09-27
 
