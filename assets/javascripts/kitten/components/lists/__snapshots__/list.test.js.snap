@@ -63,6 +63,7 @@ exports[`<List> with <ListButtonItem> by default matches with snapshot 1`] = `
             "paddingRight": "1.25rem",
           }
         }
+        tabIndex="0"
       >
         <div
           data-radium={true}
@@ -128,6 +129,7 @@ exports[`<List> with <ListButtonItem> by default matches with snapshot 1`] = `
             "paddingRight": "1.25rem",
           }
         }
+        tabIndex="0"
       >
         <div
           data-radium={true}
@@ -193,6 +195,7 @@ exports[`<List> with <ListButtonItem> by default matches with snapshot 1`] = `
             "paddingRight": "1.25rem",
           }
         }
+        tabIndex="0"
       >
         <div
           data-radium={true}
@@ -273,6 +276,7 @@ exports[`<List> with <ListButtonItem> with a disabled button matches with snapsh
             "paddingRight": "1.25rem",
           }
         }
+        tabIndex="0"
       >
         <div
           data-radium={true}
@@ -340,6 +344,7 @@ exports[`<List> with <ListButtonItem> with a disabled button matches with snapsh
             "paddingRight": "1.25rem",
           }
         }
+        tabIndex="0"
       >
         <div
           data-radium={true}
@@ -405,6 +410,7 @@ exports[`<List> with <ListButtonItem> with a disabled button matches with snapsh
             "paddingRight": "1.25rem",
           }
         }
+        tabIndex="0"
       >
         <div
           data-radium={true}

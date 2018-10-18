@@ -9,7 +9,6 @@ const ListButtonItem = ({
   disabled,
   style,
   onClick,
-  onKeyPress,
   withTopBorder,
   ...others
 }) => {
@@ -23,7 +22,20 @@ const ListButtonItem = ({
     buttonStyles = { ...buttonStyles, ...styles.buttonItem.disabled }
   }
 
-  const handleKeyPress = onKeyPress || onClick
+  const handleKeyPress = event => {
+    const KEY_ENTER = 13
+    const KEY_SPACE = 32
+
+    switch (event.which) {
+      case KEY_ENTER:
+      case KEY_SPACE:
+        event.preventDefault
+        onClick()
+        break
+    }
+
+    return true
+  }
 
   return (
     <StyleRoot>
@@ -31,6 +43,7 @@ const ListButtonItem = ({
         {...others}
         role="button"
         style={buttonStyles}
+        tabIndex="0"
         onClick={disabled ? null : onClick}
         onKeyPress={disabled ? null : handleKeyPress}
       >
@@ -48,7 +61,6 @@ ListButtonItem.propTypes = {
   disabled: PropTypes.bool,
   style: PropTypes.object,
   onClick: PropTypes.func,
-  onKeyPress: PropTypes.func,
   withTopBorder: PropTypes.bool,
 }
 
@@ -56,7 +68,6 @@ ListButtonItem.defaultProps = {
   disabled: false,
   style: {},
   onClick: () => {},
-  onKeyPress: () => {},
   withTopBorder: false,
 }
 
