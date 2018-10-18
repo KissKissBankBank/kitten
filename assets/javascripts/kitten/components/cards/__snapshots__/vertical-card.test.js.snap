@@ -25,7 +25,7 @@ exports[`<VerticalCard /> by default matches with snapshot 1`] = `
   <div
     style={
       Object {
-        "marginBottom": "1.875rem",
+        "marginBottom": null,
         "marginTop": "1.875rem",
       }
     }
@@ -93,7 +93,7 @@ exports[`<VerticalCard /> with some props matches with snapshot 1`] = `
   <div
     style={
       Object {
-        "marginBottom": "1.875rem",
+        "marginBottom": null,
         "marginTop": "1.875rem",
       }
     }
