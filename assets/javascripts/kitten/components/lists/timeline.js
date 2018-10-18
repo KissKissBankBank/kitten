@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { ScreenConfig } from 'kitten/constants/screen-config'
 import { mediaQueries } from 'kitten/hoc/media-queries'
-import Radium from 'radium'
+import Radium, { StyleRoot } from 'radium'
 import { Text as TextBase } from 'kitten/components/typography/text'
 import { withMediaQueries } from 'kitten/hoc/media-queries'
 import { Marger as MargerBase } from 'kitten/components/layout/marger'
@@ -13,7 +13,7 @@ const Text = Radium(TextBase)
 class TimelineBase extends Component {
   render() {
     return (
-      <div style={styles.timelineContainer}>
+      <StyleRoot style={styles.timelineContainer}>
         <span style={styles.verticalDashedLine} />
 
         <ol style={styles.customList}>
@@ -23,12 +23,14 @@ class TimelineBase extends Component {
                 <Text size="tiny" style={styles.circle}>
                   {++index}
                 </Text>
-                <div style={styles.textList}>{props.children}</div>
+                <Marger bottom="2.5" top="2.5" style={styles.textList}>
+                  {props.children}
+                </Marger>
               </li>
             )
           })}
         </ol>
-      </div>
+      </StyleRoot>
     )
   }
 }
@@ -55,9 +57,6 @@ const styles = {
     listStyleType: 'none',
     padding: 0,
     margin: 0,
-    // [`@media (max-width: ${ScreenConfig.XS.max}px)`]: {
-    //   paddingLeft: 40,
-    // },
   },
   circle: {
     boxSizing: 'border-box',
@@ -75,6 +74,10 @@ const styles = {
     flex: `0 0 ${circleSize}px`,
     marginLeft: -circleSize / 2,
     position: 'relative',
+
+    [`@media (max-width: ${ScreenConfig.XS.max}px)`]: {
+      marginRight: 20,
+    },
   },
   list: {
     display: 'flex',
