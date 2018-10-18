@@ -154,7 +154,7 @@ ExpandBoardBase.propTypes = {
   disabled: PropTypes.bool,
   style: PropTypes.object,
   onClick: PropTypes.func,
-  ariaId: PropTypes.string,
+  ariaId: PropTypes.string.isRequired,
 }
 
 ExpandBoardBase.defaultProps = {
