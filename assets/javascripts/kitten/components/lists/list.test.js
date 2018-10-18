@@ -1,6 +1,7 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
 import { List } from 'kitten/components/lists/list'
+import { shallow } from 'enzyme'
 
 describe('<List>', () => {
   describe('by default', () => {
@@ -20,18 +21,85 @@ describe('<List>', () => {
   })
 
   describe('with <ListButtonItem>', () => {
-    it('matches with snapshot', () => {
-      const component = renderer
-        .create(
+    describe('by default', () => {
+      it('matches with snapshot', () => {
+        const component = renderer
+          .create(
+            <List>
+              <List.ButtonItem withTopBorder>Alice</List.ButtonItem>
+              <List.ButtonItem>Cheshire Cat</List.ButtonItem>
+              <List.ButtonItem>Mad Hatter</List.ButtonItem>
+            </List>,
+          )
+          .toJSON()
+
+        expect(component).toMatchSnapshot()
+      })
+
+      it('trigger the onClick prop', () => {
+        const handleClick = jest.fn()
+        const component = shallow(
           <List>
             <List.ButtonItem withTopBorder>Alice</List.ButtonItem>
-            <List.ButtonItem>Cheshire Cat</List.ButtonItem>
+            <List.ButtonItem onClick={handleClick}>
+              Cheshire Cat
+            </List.ButtonItem>
             <List.ButtonItem>Mad Hatter</List.ButtonItem>
           </List>,
         )
-        .toJSON()
 
-      expect(component).toMatchSnapshot()
+        const button = component
+          .find(List.ButtonItem)
+          .at(1)
+          .dive()
+          .find('div')
+          .at(0)
+
+        button.simulate('click')
+
+        expect(handleClick).toHaveBeenCalled()
+        handleClick.mockRestore()
+      })
+    })
+
+    describe('with a disabled button', () => {
+      it('matches with snapshot', () => {
+        const component = renderer
+          .create(
+            <List>
+              <List.ButtonItem withTopBorder>Alice</List.ButtonItem>
+              <List.ButtonItem disabled>Cheshire Cat</List.ButtonItem>
+              <List.ButtonItem>Mad Hatter</List.ButtonItem>
+            </List>,
+          )
+          .toJSON()
+
+        expect(component).toMatchSnapshot()
+      })
+
+      it('does not trigger the onClick prop', () => {
+        const handleClick = jest.fn()
+        const component = shallow(
+          <List>
+            <List.ButtonItem withTopBorder>Alice</List.ButtonItem>
+            <List.ButtonItem disabled onClick={handleClick}>
+              Cheshire Cat
+            </List.ButtonItem>
+            <List.ButtonItem>Mad Hatter</List.ButtonItem>
+          </List>,
+        )
+
+        const button = component
+          .find(List.ButtonItem)
+          .at(1)
+          .dive()
+          .find('div')
+          .at(0)
+
+        button.simulate('click')
+
+        expect(handleClick).not.toHaveBeenCalled()
+      })
     })
   })
 })
