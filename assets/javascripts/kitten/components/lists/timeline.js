@@ -5,6 +5,7 @@ import Radium, { StyleRoot } from 'radium'
 import { Text as TextBase } from 'kitten/components/typography/text'
 import { Marger as MargerBase } from 'kitten/components/layout/marger'
 import COLORS from 'kitten/constants/colors-config'
+import pathOr from 'ramda/src/pathOr'
 
 const Marger = Radium(MargerBase)
 const Text = Radium(TextBase)
@@ -12,20 +13,21 @@ const Text = Radium(TextBase)
 export class Timeline extends Component {
   render() {
     const { children } = this.props
+    const arrayOfChildren = React.Children.toArray(children)
 
     return (
       <StyleRoot style={styles.timelineContainer}>
         <span style={styles.verticalDashedLine} />
 
         <ol style={styles.customList}>
-          {React.Children.map(children, (child, index) => {
+          {React.Children.map(arrayOfChildren, (child, index) => {
             return (
               <li style={styles.list}>
                 <Text size="tiny" style={styles.circle}>
                   {++index}
                 </Text>
                 <Marger top="2.5" bottom="2.5" style={styles.textList}>
-                  {child.props.children}
+                  {pathOr(child, ['props', 'children'], child)}
                 </Marger>
               </li>
             )
