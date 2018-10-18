@@ -41,9 +41,7 @@ export class VerticalCard extends Component {
     return (
       <StyleRoot {...others}>
         <Marger bottom="3">{this.renderImage()}</Marger>
-        <Marger top="3" bottom="3">
-          {this.renderDescription()}
-        </Marger>
+        <Marger top="3">{this.renderDescription()}</Marger>
       </StyleRoot>
     )
   }
