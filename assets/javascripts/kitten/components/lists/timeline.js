@@ -12,19 +12,21 @@ const Text = Radium(TextBase)
 
 class TimelineBase extends Component {
   render() {
+    const { children } = this.props
+
     return (
       <StyleRoot style={styles.timelineContainer}>
         <span style={styles.verticalDashedLine} />
 
         <ol style={styles.customList}>
-          {this.props.children.map(({ props }, index) => {
+          {React.Children.map(children, (child, index) => {
             return (
               <li style={styles.list}>
                 <Text size="tiny" style={styles.circle}>
                   {++index}
                 </Text>
-                <Marger bottom="2.5" top="2.5" style={styles.textList}>
-                  {props.children}
+                <Marger top="2.5" bottom="2.5" style={styles.textList}>
+                  {child.props.children}
                 </Marger>
               </li>
             )
