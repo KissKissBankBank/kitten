@@ -58,46 +58,52 @@ storiesOf('Expandable', module)
               <ExpandBoard.Content>
                 <List>
                   <List.ButtonItem>
-                    <dl>
-                      <dt style={styles.buttonListItem.base}>
-                        <Text weight="regular" color="font-1" size="tiny">
-                          Taille XS
-                        </Text>
-                      </dt>
-                      <dd style={styles.buttonListItem.base}>
-                        <Text color="font-1" size="micro">
-                          Disponibilité: 10/30
-                        </Text>
-                      </dd>
-                    </dl>
+                    <div style={styles.buttonListItem.wrapper}>
+                      <Text
+                        tag="p"
+                        weight="regular"
+                        color="font-1"
+                        size="tiny"
+                        style={styles.buttonListItem.base}
+                      >
+                        Taille XS
+                      </Text>
+                      <Text tag="small" color="font1" size="micro">
+                        Disponibilité: 10/30
+                      </Text>
+                    </div>
                   </List.ButtonItem>
                   <List.ButtonItem disabled>
-                    <dl>
-                      <dt style={styles.buttonListItem.base}>
-                        <Text weight="regular" color="font-1" size="tiny">
-                          Taille S
-                        </Text>
-                      </dt>
-                      <dd style={styles.buttonListItem.base}>
-                        <Text color="font-1" size="micro">
-                          Disponibilité: 10/30
-                        </Text>
-                      </dd>
-                    </dl>
+                    <div style={styles.buttonListItem.wrapper}>
+                      <Text
+                        tag="p"
+                        weight="regular"
+                        color="font-1"
+                        size="tiny"
+                        style={styles.buttonListItem.base}
+                      >
+                        Taille M
+                      </Text>
+                      <Text tag="small" color="font1" size="micro">
+                        Disponibilité: 10/30
+                      </Text>
+                    </div>
                   </List.ButtonItem>
                   <List.ButtonItem>
-                    <dl>
-                      <dt style={styles.buttonListItem.base}>
-                        <Text weight="regular" color="font-1" size="tiny">
-                          Taille M
-                        </Text>
-                      </dt>
-                      <dd style={styles.buttonListItem.base}>
-                        <Text color="font-1" size="micro">
-                          Disponibilité: 10/30
-                        </Text>
-                      </dd>
-                    </dl>
+                    <div style={styles.buttonListItem.wrapper}>
+                      <Text
+                        tag="p"
+                        weight="regular"
+                        color="font-1"
+                        size="tiny"
+                        style={styles.buttonListItem.base}
+                      >
+                        Taille XXL
+                      </Text>
+                      <Text tag="small" color="font1" size="micro">
+                        Disponibilité: 10/30
+                      </Text>
+                    </div>
                   </List.ButtonItem>
                 </List>
               </ExpandBoard.Content>
