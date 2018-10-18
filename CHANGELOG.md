@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Create `VerticalCard` component.
 - Fix: Update marger on `SimpleCard` component.
 - Fix: `Triptych` stroke height on small devices.
 - Fix: Corrige `propTypes` definition on `LinkList`.

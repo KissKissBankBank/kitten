@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Create `KarlVerticalCard` example.
 - Feature: Update `KarlFooterLendopolis` example.
 - Feature: Create `KarlCounterBlock` example.
 - Feature: Update `react-on-rails` gem and npm module to 11.1.6.
