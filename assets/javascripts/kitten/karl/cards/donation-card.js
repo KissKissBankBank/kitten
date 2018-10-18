@@ -13,7 +13,7 @@ export const KarlDonationCard = () => (
           title="In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo."
           donationForm={{
             buttonLabel: 'To contribute',
-            inputId: 'donation-amount',
+            inputId: 'donation-amount-1',
             inputLabel: 'Enter your amount',
             inputPlaceholder: 'Your amount',
             inputUnit: '€',
@@ -29,7 +29,7 @@ export const KarlDonationCard = () => (
           title="In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo."
           donationForm={{
             buttonLabel: 'To contribute',
-            inputId: 'donation-amount',
+            inputId: 'donation-amount-2',
             inputLabel: 'Enter your amount',
             inputPlaceholder: 'Your amount',
             inputUnit: '€',
@@ -46,7 +46,7 @@ export const KarlDonationCard = () => (
           title="In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo."
           donationForm={{
             buttonLabel: 'To contribute',
-            inputId: 'donation-amount',
+            inputId: 'donation-amount-3',
             inputLabel: 'Enter your amount',
             inputPlaceholder: 'Your amount',
             inputUnit: '€',
@@ -64,7 +64,7 @@ export const KarlDonationCard = () => (
           title="In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo."
           donationForm={{
             buttonLabel: 'To contribute',
-            inputId: 'donation-amount',
+            inputId: 'donation-amount-4',
             inputLabel: 'Enter your amount',
             inputPlaceholder: 'Your amount',
             inputUnit: '€',
