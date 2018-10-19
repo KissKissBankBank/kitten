@@ -14,7 +14,8 @@ export const ResponsiveIframeContainer = ({
 
   const styles = {
     ...style,
-    paddingBottom: `${ratio}%`,
+    height: '100%',
+    paddingBottom: 0,
   }
 
   return <div className={componentClassName} style={styles} {...props} />
