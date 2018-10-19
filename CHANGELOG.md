@@ -7,7 +7,6 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Create `Timeline` component.
 - Feature: Create `CounterBlock` component.
 - Feature: Add `Deprecated` component.
-- Feature: Add `Deprecated` component.
 - Feature: Update `RewardCard` component composition. The following props
   are deprecated and can be replaced:
   - `titleDescription` => `subtitle`
