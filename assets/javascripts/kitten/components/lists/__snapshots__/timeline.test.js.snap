@@ -15,7 +15,7 @@ exports[`<Timeline /> with default props matches with snapshot 1`] = `
     style={
       Object {
         "backgroundImage": "linear-gradient(#eee 50%,
-      rgba(255,255,255,0) 0%)",
+      rgba(255, 255, 255, 0) 0%)",
         "backgroundPosition": "right",
         "backgroundRepeat": "repeat-y",
         "backgroundSize": "2px 8px",
