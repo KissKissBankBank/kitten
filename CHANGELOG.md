@@ -4,10 +4,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Create `Timeline` component.
-- Feature: Create `CounterBlock` component.
-- Feature: Add `Deprecated` component.
-- Feature: Update `RewardCard` component composition. The following props
+## [23.6.0] - 2018-10-19
+
+Features:
+- Create `Timeline` component.
+- Create `CounterBlock` component.
+- Add `Deprecated` component.
+- Update `RewardCard` component composition. The following props
   are deprecated and can be replaced:
   - `titleDescription` => `subtitle`
   - `textDescription` => `description`
@@ -30,11 +33,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
     <RewardCard {...otherProps} infos={infos} >
     ```
-- Fix: Update marger on `SimpleCard` component.
-- Fix: `Triptych` stroke height on small devices.
-- Fix: Corrige `propTypes` definition on `LinkList`.
-- Fix: Update `ffi` gem.
-- Fix: Deprecate `ContributionCard` component. You should use `RewardCard`
+Fixes:
+- Update marger on `SimpleCard` component.
+- `Triptych` stroke height on small devices.
+- Corrige `propTypes` definition on `LinkList`.
+- Update `ffi` gem.
+- Deprecate `ContributionCard` component. You should use `RewardCard`
   component instead. It will be deleted in further versions.
 
 ## [23.5.1] - 2018-09-27
