@@ -95,9 +95,6 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'space-between',
   },
-  innerList: {
-    alignItems: 'center',
-  },
   textList: {
     flexGrow: 1,
     alignItems: 'center',
