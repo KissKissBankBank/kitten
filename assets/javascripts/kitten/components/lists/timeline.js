@@ -20,18 +20,16 @@ export class Timeline extends Component {
         <span style={styles.verticalDashedLine} />
 
         <ol style={styles.customList}>
-          {React.Children.map(arrayOfChildren, (child, index) => {
-            return (
-              <li style={styles.list}>
-                <Text size="tiny" style={styles.circle}>
-                  {++index}
-                </Text>
-                <Marger top="2.5" bottom="2.5" style={styles.textList}>
-                  {pathOr(child, ['props', 'children'], child)}
-                </Marger>
-              </li>
-            )
-          })}
+          {React.Children.map(arrayOfChildren, (child, index) => (
+            <li style={styles.list}>
+              <Text size="tiny" style={styles.circle}>
+                {++index}
+              </Text>
+              <Marger top="2.5" bottom="2.5" style={styles.textList}>
+                {pathOr(child, ['props', 'children'], child)}
+              </Marger>
+            </li>
+          ))}
         </ol>
       </StyleRoot>
     )
@@ -50,7 +48,7 @@ const styles = {
   },
   verticalDashedLine: {
     backgroundImage: `linear-gradient(${COLORS.line1} 50%,
-      rgba(255,255,255,0) 0%)`,
+      rgba(255, 255, 255, 0) 0%)`,
     backgroundPosition: 'right',
     backgroundSize: '2px 8px',
     backgroundRepeat: 'repeat-y',

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { Timeline } from 'kitten/components/lists/timeline'
 import { Text } from 'kitten/components/typography/text'
 import { Marger } from 'kitten/components/layout/marger'
@@ -29,9 +29,9 @@ export const KarlTimeline = props => (
       Aliquam in luctus libero. Phasellus pretium posuere leo, in semper odio
       ullamcorper at. Suspendisse placerat tincidunt tincidunt.
     </span>
-    <span>
+    <Fragment>
       Ut ut arcu maximus, condimentum metus nec, luctus odio. Aliquam maximus
       lacus et mauris convallis varius. Vivamus volutpat et metus at consequat.
-    </span>
+    </Fragment>
   </Timeline>
 )
