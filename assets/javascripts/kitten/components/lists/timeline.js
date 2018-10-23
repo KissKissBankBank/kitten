@@ -44,7 +44,7 @@ Timeline.propTypes = {
 }
 
 Timeline.defaultProps = {
-  itemHeight: 'large',
+  itemHeight: 'large', // Possible values : `thin` or `large`
 }
 
 const circleSize = 50
