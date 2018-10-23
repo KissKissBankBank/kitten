@@ -38,6 +38,11 @@ export class Timeline extends Component {
   }
 }
 
+Timeline.propTypes = {
+  children: PropTypes.node.isRequired,
+  itemHeight: PropTypes.string,
+}
+
 Timeline.defaultProps = {
   itemHeight: 'large',
 }
