@@ -6,14 +6,16 @@ import { Text as TextBase } from 'kitten/components/typography/text'
 import { Marger as MargerBase } from 'kitten/components/layout/marger'
 import COLORS from 'kitten/constants/colors-config'
 import pathOr from 'ramda/src/pathOr'
+import PropTypes from 'prop-types'
 
 const Marger = Radium(MargerBase)
 const Text = Radium(TextBase)
 
 export class Timeline extends Component {
   render() {
-    const { children } = this.props
+    const { children, itemHeight } = this.props
     const arrayOfChildren = React.Children.toArray(children)
+    const bulletStyle = [styles.circle, styles.circleMarger[itemHeight]]
 
     return (
       <StyleRoot style={styles.timelineContainer}>
@@ -22,7 +24,7 @@ export class Timeline extends Component {
         <ol style={styles.customList}>
           {React.Children.map(arrayOfChildren, (child, index) => (
             <li style={styles.list}>
-              <Text size="tiny" style={styles.circle}>
+              <Text size="tiny" style={bulletStyle}>
                 {++index}
               </Text>
               <Marger top="2.5" bottom="2.5" style={styles.textList}>
@@ -34,6 +36,10 @@ export class Timeline extends Component {
       </StyleRoot>
     )
   }
+}
+
+Timeline.defaultProps = {
+  itemHeight: 'large',
 }
 
 const circleSize = 50
@@ -74,7 +80,8 @@ const styles = {
     justifyContent: 'center',
     alignItems: 'center',
     fontWeight: 'bold',
-    margin: `80px 40px 80px ${-circleSize / 2}px`,
+    marginRight: 40,
+    marginLeft: -circleSize / 2,
     lineHeight: 0,
     flex: `0 0 ${circleSize}px`,
     position: 'relative',
@@ -82,10 +89,27 @@ const styles = {
     [`@media (max-width: ${ScreenConfig.XS.max}px)`]: {
       marginRight: 20,
     },
+  },
+  circleMarger: {
+    large: {
+      marginTop: 80,
+      marginBottom: 80,
 
-    [`@media (min-width: ${ScreenConfig.S.min}px) and
-      (max-width: ${ScreenConfig.M.max}px)`]: {
-      margin: `60px 40px 60px ${-circleSize / 2}px`,
+      [`@media (min-width: ${ScreenConfig.S.min}px) and
+        (max-width: ${ScreenConfig.M.max}px)`]: {
+        marginTop: 60,
+        marginBottom: 60,
+      },
+    },
+    thin: {
+      marginTop: 40,
+      marginBottom: 40,
+
+      [`@media (min-width: ${ScreenConfig.S.min}px) and
+        (max-width: ${ScreenConfig.M.max}px)`]: {
+        marginTop: 20,
+        marginBottom: 20,
+      },
     },
   },
   list: {

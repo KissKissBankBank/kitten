@@ -233,7 +233,7 @@ import {
 import { BulletList } from 'kitten/components/lists/bullet-list'
 import { NavList } from 'kitten/components/lists/nav-list'
 import { KarlTagList } from 'kitten/karl/lists/tag-list'
-import { KarlTimeline } from 'kitten/karl/lists/timeline'
+import { KarlLargeTimeline, KarlThinTimeline } from 'kitten/karl/lists/timeline'
 
 // Loaders
 import { Loader } from 'kitten/components/loaders/loader'
@@ -531,7 +531,8 @@ ReactOnRails.register({
   BulletList,
   NavList,
   KarlTagList,
-  KarlTimeline,
+  KarlLargeTimeline,
+  KarlThinTimeline,
 
   // Loader
   Loader,

@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+Fix: Remove `KarlTimeline` example and use `KarlLargeTimeline` and
+  `KarlThinTimeline` instead.
+
 ## [23.6.0] - 2018-10-19
 
 Features:

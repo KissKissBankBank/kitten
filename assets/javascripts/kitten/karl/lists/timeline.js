@@ -3,7 +3,7 @@ import { Timeline } from 'kitten/components/lists/timeline'
 import { Text } from 'kitten/components/typography/text'
 import { Marger } from 'kitten/components/layout/marger'
 
-export const KarlTimeline = props => (
+export const KarlLargeTimeline = props => (
   <Timeline>
     <div>
       <Marger bottom="1">
@@ -32,6 +32,22 @@ export const KarlTimeline = props => (
     <Fragment>
       Ut ut arcu maximus, condimentum metus nec, luctus odio. Aliquam maximus
       lacus et mauris convallis varius. Vivamus volutpat et metus at consequat.
+    </Fragment>
+  </Timeline>
+)
+
+export const KarlThinTimeline = props => (
+  <Timeline itemHeight="thin">
+    <Fragment>
+      Ut porta blandit est in tincidunt. Aenean et orci pellentesque, iaculis
+      turpis id, elementum nisl.
+    </Fragment>
+    <Fragment>
+      Maecenas vestibulum purus vitae nulla aliquet, nec faucibus ex semper.
+    </Fragment>
+    <Fragment>
+      Aliquam in luctus libero. Phasellus pretium posuere leo, in semper odio
+      ullamcorper at. Suspendisse placerat tincidunt tincidunt.
     </Fragment>
   </Timeline>
 )
