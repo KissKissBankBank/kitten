@@ -24,12 +24,12 @@ exports[`<CounterBlock /> with default props matches with snapshot 1`] = `
     </p>
   </div>
   <p
-    className="rmq-9e4ea591 rmq-650fa8a3 k-u-style-italic k-u-weight-bold"
+    className="rmq-2bf6e1a2 rmq-ca40c6f7 rmq-1103da81 rmq-650fa8a3 k-u-style-italic k-u-weight-bold"
     data-radium={true}
     style={
       Object {
         "display": "block",
-        "fontSize": "4.125rem",
+        "fontSize": "3rem",
         "lineHeight": 0.7,
         "margin": 0,
         "paddingBottom": 4,
@@ -62,7 +62,10 @@ exports[`<CounterBlock /> with default props matches with snapshot 1`] = `
   <style
     dangerouslySetInnerHTML={
       Object {
-        "__html": "@media (min-width: 640px){ .rmq-9e4ea591{font-size: 8.25rem !important;
+        "__html": "@media (min-width: 480px){ .rmq-2bf6e1a2{font-size: 4.125rem !important;}}
+@media (min-width: 640px){ .rmq-ca40c6f7{font-size: 6rem !important;
+padding-bottom: 6px !important;}}
+@media (min-width: 768px){ .rmq-1103da81{font-size: 7.3rem !important;
 padding-bottom: 7px !important;}}
 @media (min-width: 1080px){ .rmq-650fa8a3{font-size: 9.9rem !important;
 padding-bottom: 10px !important;}}",

@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Fix reponsive font-size for `CounterBlock` component.
+
 ## [23.6.0] - 2018-10-19
 
 Features:
