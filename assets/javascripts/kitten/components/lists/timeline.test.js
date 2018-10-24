@@ -30,4 +30,17 @@ describe('<Timeline />', () => {
       expect(component).toMatchSnapshot()
     })
   })
+
+  describe('with itemHeight props', () => {
+    beforeEach(() => {
+      window.matchMedia = createMockMediaMatcher(false)
+      component = renderer
+        .create(<Timeline itemHeight="thin">foobar</Timeline>)
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
 })
