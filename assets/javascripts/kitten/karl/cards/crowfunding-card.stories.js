@@ -6,7 +6,7 @@ import { StyleRoot } from 'radium'
 import { CrowdfundingCard } from 'kitten/components/cards/crowdfunding-card'
 import { Grid, GridCol } from 'kitten/components/grid/grid'
 
-storiesOf('Cards/Crowfunding Card', module)
+storiesOf('Cards/CrowfundingCard', module)
   .addDecorator(withKnobs)
   .add(
     'default',
