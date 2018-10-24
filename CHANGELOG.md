@@ -5,7 +5,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Update `CrowdfundingCard` props and create its stories.
-- Fix: Fix reponsive font-size for `CounterBlock` component.
+
+## [23.7.0] - 2018-10-24
+
+Feature:
+- Add `itemHeight` props to `Timeline` component.
+
+Fix:
+- Fix reponsive font-size for `CounterBlock` component.
 
 ## [23.6.0] - 2018-10-19
 
