@@ -40,11 +40,11 @@ export class Timeline extends Component {
 
 Timeline.propTypes = {
   children: PropTypes.node.isRequired,
-  itemHeight: PropTypes.string,
+  itemHeight: PropTypes.oneOf(['thin', 'large']),
 }
 
 Timeline.defaultProps = {
-  itemHeight: 'large', // Possible values : `thin` or `large`
+  itemHeight: 'large',
 }
 
 const circleSize = 50
