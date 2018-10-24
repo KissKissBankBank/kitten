@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Update `CrowdfundingCard` props and create its stories.
+- Fix: Update `CrowdfundingCard` props.
 - Fix: Fix reponsive font-size for `CounterBlock` component.
 
 ## [23.6.0] - 2018-10-19
