@@ -1,13 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
-import {
-  withKnobs,
-  text,
-  select,
-  boolean,
-  object,
-} from '@storybook/addon-knobs/react'
+import { withKnobs, text, boolean } from '@storybook/addon-knobs/react'
 import { StyleRoot } from 'radium'
 import { CrowdfundingCard } from 'kitten/components/cards/crowdfunding-card'
 import { Grid, GridCol } from 'kitten/components/grid/grid'
