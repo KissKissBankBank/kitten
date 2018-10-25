@@ -48,7 +48,7 @@ storiesOf('List', module)
                     <Text
                       tag="p"
                       weight="regular"
-                      color="font-1"
+                      color="font1"
                       size="tiny"
                       style={styles.buttonListItem.base}
                     >
