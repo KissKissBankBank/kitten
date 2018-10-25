@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Radium from 'radium'
 import { Button as ButtonBase } from 'kitten/components/buttons/button'
-import { styles } from 'kitten/components/cards/reward-card'
+import { ScreenConfig } from 'kitten/constants/screen-config'
 
 const Button = Radium(ButtonBase)
 
@@ -16,7 +16,7 @@ export const RewardCardButton = ({
 }) => {
   if (!label) return null
 
-  const buttonStyles = isTinyVersion ? styles.button.tinyVersion : styles.button
+  const buttonStyles = isTinyVersion ? styles.tinyVersion : styles.base
 
   return (
     <Button
@@ -33,6 +33,27 @@ export const RewardCardButton = ({
       {label}
     </Button>
   )
+}
+
+const styles = {
+  base: {
+    width: '100%',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    [`@media (max-width: ${ScreenConfig['S'].max}px)`]: {
+      width: 'calc(100% + 4px)',
+      position: 'relative',
+      left: -2,
+      bottom: -2,
+    },
+  },
+  tinyVersion: {
+    width: 'calc(100% + 4px)',
+    position: 'relative',
+    left: -2,
+    bottom: -2,
+  },
 }
 
 RewardCardButton.propTypes = {

@@ -692,7 +692,14 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
             onClick={[Function]}
             onMouseEnter={[Function]}
             onMouseLeave={[Function]}
-            style={Object {}}
+            style={
+              Object {
+                "alignItems": "center",
+                "display": "flex",
+                "justifyContent": "center",
+                "width": "100%",
+              }
+            }
             tabIndex={null}
             type="button"
           >
@@ -1042,7 +1049,14 @@ exports[`<RewardCard /> with legacy props matches with snapshot 1`] = `
             onClick={[Function]}
             onMouseEnter={[Function]}
             onMouseLeave={[Function]}
-            style={Object {}}
+            style={
+              Object {
+                "alignItems": "center",
+                "display": "flex",
+                "justifyContent": "center",
+                "width": "100%",
+              }
+            }
             tabIndex={null}
             type="button"
           >
