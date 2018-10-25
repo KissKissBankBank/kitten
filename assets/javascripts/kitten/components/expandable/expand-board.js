@@ -24,7 +24,7 @@ class ExpandBoardButton extends Component {
     disabled: false,
     style: {},
     onClick: () => {},
-    ariaId: 'ExpandBoard',
+    ariaId: '',
   }
 
   render() {
@@ -73,7 +73,7 @@ class ExpandBoardContent extends Component {
   }
 
   static defaultProps = {
-    ariaId: 'ExpandBoard',
+    ariaId: '',
   }
 
   render() {
