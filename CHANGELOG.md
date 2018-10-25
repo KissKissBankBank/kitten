@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: Update `CrowdfundingCard` props.
+- Feature: Update `RewardCard` button width.
 
 ## [23.7.0] - 2018-10-24
 
