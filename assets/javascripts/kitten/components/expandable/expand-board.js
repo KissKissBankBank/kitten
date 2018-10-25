@@ -10,7 +10,7 @@ const Button = Radium(ButtonBase)
 class ExpandBoardButton extends Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
-    ariaId: PropTypes.string.isRequired,
+    ariaId: PropTypes.string,
     expandChildren: PropTypes.node,
     expanded: PropTypes.bool,
     disabled: PropTypes.bool,
@@ -24,6 +24,7 @@ class ExpandBoardButton extends Component {
     disabled: false,
     style: {},
     onClick: () => {},
+    ariaId: 'ExpandBoard',
   }
 
   render() {
@@ -68,7 +69,11 @@ class ExpandBoardButton extends Component {
 class ExpandBoardContent extends Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
-    ariaId: PropTypes.string.isRequired,
+    ariaId: PropTypes.string,
+  }
+
+  static defaultProps = {
+    ariaId: 'ExpandBoard',
   }
 
   render() {

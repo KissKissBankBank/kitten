@@ -10,7 +10,7 @@ describe('<ExpandBoard />', () => {
       it('matches with snapshot', () => {
         const component = renderer
           .create(
-            <ExpandBoard>
+            <ExpandBoard aria-id="ExpandBoard">
               <ExpandBoard.Button>Alice</ExpandBoard.Button>
               <ExpandBoard.Content>
                 <div>Curioser and curioser</div>
@@ -27,7 +27,7 @@ describe('<ExpandBoard />', () => {
       it('matches with snapshot', () => {
         const component = renderer
           .create(
-            <ExpandBoard disabled>
+            <ExpandBoard aria-id="ExpandBoard" disabled>
               <ExpandBoard.Button>Alice</ExpandBoard.Button>
               <ExpandBoard.Content>
                 <div>Curioser and curioser</div>
@@ -43,7 +43,7 @@ describe('<ExpandBoard />', () => {
     describe('onClick', () => {
       it('expands the content', () => {
         const component = shallow(
-          <ExpandBoard>
+          <ExpandBoard aria-id="ExpandBoard">
             <ExpandBoard.Button>Alice</ExpandBoard.Button>
             <ExpandBoard.Content>
               <div>Curioser and curioser</div>
@@ -69,7 +69,7 @@ describe('<ExpandBoard />', () => {
     it('matches with snapshot', () => {
       const component = renderer
         .create(
-          <ExpandBoard>
+          <ExpandBoard aria-id="ExpandBoard">
             <div>Alice</div>
           </ExpandBoard>,
         )

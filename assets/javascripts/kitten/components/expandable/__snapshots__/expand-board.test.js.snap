@@ -9,6 +9,7 @@ exports[`<ExpandBoard /> with <ExpandBoard.Button> and <ExpandBoard.Content> by 
     aria-controls="k-ExpandBoard"
     aria-expanded={false}
     className="k-Button k-Button--helium k-Button--big k-Button--icon k-Button--iconRight"
+    data-radium={true}
     disabled={false}
     onClick={[Function]}
     style={
@@ -55,6 +56,7 @@ exports[`<ExpandBoard /> with <ExpandBoard.Button> and <ExpandBoard.Content> dis
     aria-controls="k-ExpandBoard"
     aria-expanded={false}
     className="k-Button k-Button--helium k-Button--big k-Button--icon k-Button--iconRight"
+    data-radium={true}
     disabled={true}
     onClick={[Function]}
     style={
