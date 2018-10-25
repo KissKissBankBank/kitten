@@ -697,6 +697,8 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
                 "alignItems": "center",
                 "display": "flex",
                 "justifyContent": "center",
+                "lineHeight": "1.3rem",
+                "padding": "1.375rem 1.875rem",
                 "width": "100%",
               }
             }
@@ -1054,6 +1056,8 @@ exports[`<RewardCard /> with legacy props matches with snapshot 1`] = `
                 "alignItems": "center",
                 "display": "flex",
                 "justifyContent": "center",
+                "lineHeight": "1.3rem",
+                "padding": "1.375rem 1.875rem",
                 "width": "100%",
               }
             }

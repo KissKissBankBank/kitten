@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import Radium from 'radium'
 import { Button as ButtonBase } from 'kitten/components/buttons/button'
 import { ScreenConfig } from 'kitten/constants/screen-config'
+import { pxToRem } from 'kitten/helpers/utils/typography'
 
 const Button = Radium(ButtonBase)
 
@@ -41,6 +42,8 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
+    lineHeight: '1.3rem',
+    padding: `${pxToRem(22)} ${pxToRem(30)}`,
     [`@media (max-width: ${ScreenConfig['S'].max}px)`]: {
       width: 'calc(100% + 4px)',
       position: 'relative',
