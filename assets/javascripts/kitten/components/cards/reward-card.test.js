@@ -91,7 +91,7 @@ describe('<RewardCard />', () => {
             ]}
             starred
             starLabel="Youpi"
-            tiny
+            version="tiny"
           />,
         )
         .toJSON()
