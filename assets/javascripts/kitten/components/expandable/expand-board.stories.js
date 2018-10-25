@@ -127,10 +127,10 @@ const styles = {
     base: {
       margin: 0,
       padding: 0,
-      lineHeight: '1.2em',
+      lineHeight: '1.2rem',
     },
     wrapper: {
-      margin: '1em 0',
+      margin: '1rem 0',
       padding: 0,
     },
   },
