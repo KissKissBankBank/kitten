@@ -1,6 +1,6 @@
 {
   "name": "kitten-components",
-  "version": "23.5.1",
+  "version": "23.7.0",
   "license": "MIT",
   "description": "Front-end components library",
   "main": "src/index.js",
@@ -103,6 +103,7 @@
     "build": "(cd spec/dummy/client && yarn build --silent)",
     "hot-assets": "(cd spec/dummy/client && yarn hot-assets)",
     "test": "jest --maxWorkers=2",
+    "test:update:snapshots": "jest --updateSnapshot",
     "precommit": "lint-staged",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",

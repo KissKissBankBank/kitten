@@ -37,6 +37,7 @@ class CrowdfundingCardComponent extends Component {
       info2,
       info3,
       progress,
+      progressColor,
       state,
       loading,
       ...others
