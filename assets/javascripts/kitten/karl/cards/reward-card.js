@@ -12,13 +12,13 @@ export const KarlRewardCard = () => (
       <Marger bottom="2">
         <RewardCard
           titleAmount="For 00€"
-          titleDescription="Lorem ipsumn, consectetuer adipiscing elit."
-          textDescription="In enim justo."
-          titleContributors="Contributors:"
-          valueContributors="35"
-          titleDelivery="Delivery:"
-          valueDelivery="January 2018"
-          button="Choose"
+          subtitle="Lorem ipsumn, consectetuer adipiscing elit."
+          description="In enim justo."
+          infos={[
+            { label: 'Contributors:', value: '35' },
+            { label: 'Delivery:', value: 'January 2018' },
+          ]}
+          buttonLabel="Choose"
         />
       </Marger>
     </Container>
@@ -28,17 +28,16 @@ export const KarlRewardCard = () => (
       <Marger top="2" bottom="2">
         <RewardCard
           titleAmount="For 00€"
-          titleDescription="Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
-          textDescription="In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi."
-          titleContributors="Contributors:"
-          valueContributors="35"
-          titleDelivery="Delivery:"
-          valueDelivery="January 2018"
-          titleAvailability="Availability:"
-          valueAvailability="200"
-          button="Choose"
-          myContribution="You contributed to this project"
-          manageContribution="Manage my contribution"
+          subtitle="Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
+          description="In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi."
+          infos={[
+            { label: 'Contributors:', value: '35' },
+            { label: 'Delivery:', value: 'January 2018' },
+            { label: 'Availability:', value: '200' },
+          ]}
+          buttonLabel="Choose"
+          manageContributionDescription="You contributed to this project"
+          manageContributionLinkLabel="Manage my contribution"
           isDisabled
         />
       </Marger>
@@ -49,16 +48,15 @@ export const KarlRewardCard = () => (
       <Marger top="2" bottom="2">
         <RewardCard
           titleAmount="For 00€"
-          titleDescription="Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
-          textDescription="In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi."
-          titleContributors="Contributors:"
-          valueContributors="35"
-          titleDelivery="Delivery:"
-          valueDelivery="January 2018"
-          titleAvailability="Availability:"
-          valueAvailability="200"
-          myContribution="You contributed to this project"
-          manageContribution="Manage my contribution"
+          subtitle="Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
+          description="In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi."
+          infos={[
+            { label: 'Contributors:', value: '35' },
+            { label: 'Delivery:', value: 'January 2018' },
+            { label: 'Availability:', value: '200' },
+          ]}
+          manageContributionDescription="You contributed to this project"
+          manageContributionLinkLabel="Manage my contribution"
           imageProps={{
             src: 'http://via.placeholder.com/200x350/caf4fe/caf4fe',
             alt: '',
@@ -72,16 +70,15 @@ export const KarlRewardCard = () => (
       <Marger top="2" bottom="2">
         <RewardCard
           titleAmount="For 00€"
-          titleDescription="Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
-          textDescription="In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi."
-          titleContributors="Contributors:"
-          valueContributors="35"
-          titleDelivery="Delivery:"
-          valueDelivery="January 2018"
-          titleAvailability="Availability:"
-          valueAvailability="200"
-          myContribution="You contributed to this project"
-          manageContribution="Manage my contribution"
+          subtitle="Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
+          description="In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi."
+          infos={[
+            { label: 'Contributors:', value: '35' },
+            { label: 'Delivery:', value: 'January 2018' },
+            { label: 'Availability:', value: '200' },
+          ]}
+          manageContributionDescription="You contributed to this project"
+          manageContributionLinkLabel="Manage my contribution"
         />
       </Marger>
     </Container>
@@ -91,17 +88,16 @@ export const KarlRewardCard = () => (
       <Marger top="2" bottom="2">
         <RewardCard
           titleAmount="For 00€"
-          titleDescription="Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
-          textDescription="In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi."
-          titleContributors="Contributors:"
-          valueContributors="35"
-          titleDelivery="Delivery:"
-          valueDelivery="January 2018"
-          titleAvailability="Availability:"
-          valueAvailability="200"
-          myContribution="You contributed to this project"
-          manageContribution="Manage my contribution"
-          button="Choose"
+          subtitle="Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
+          description="In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi."
+          infos={[
+            { label: 'Contributors:', value: '35' },
+            { label: 'Delivery:', value: 'January 2018' },
+            { label: 'Availability:', value: '200' },
+          ]}
+          manageContributionDescription="You contributed to this project"
+          manageContributionLinkLabel="Manage my contribution"
+          buttonLabel="Choose"
         />
       </Marger>
     </Container>
@@ -111,17 +107,16 @@ export const KarlRewardCard = () => (
       <Marger top="2" bottom="2">
         <RewardCard
           titleAmount="For 00€"
-          titleDescription="Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
-          textDescription="In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi."
-          titleContributors="Contributors:"
-          valueContributors="35"
-          titleDelivery="Delivery:"
-          valueDelivery="January 2018"
-          titleAvailability="Availability:"
-          valueAvailability="200"
-          myContribution="You contributed to this project"
-          manageContribution="Manage my contribution"
-          button="Choose"
+          subtitle="Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
+          description="In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi."
+          infos={[
+            { label: 'Contributors:', value: '35' },
+            { label: 'Delivery:', value: 'January 2018' },
+            { label: 'Availability:', value: '200' },
+          ]}
+          manageContributionDescription="You contributed to this project"
+          manageContributionLinkLabel="Manage my contribution"
+          buttonLabel="Choose"
           imageProps={{
             src: 'http://via.placeholder.com/200x200/caf4fe/caf4fe',
             alt: '',
@@ -135,17 +130,16 @@ export const KarlRewardCard = () => (
       <Marger top="2" bottom="2">
         <RewardCard
           titleAmount="For 00€"
-          titleDescription="Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
-          textDescription="In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi."
-          titleContributors="Contributors:"
-          valueContributors="35"
-          titleDelivery="Delivery:"
-          valueDelivery="January 2018"
-          titleAvailability="Availability:"
-          valueAvailability="200"
-          myContribution="You contributed to this project"
-          manageContribution="Manage my contribution"
-          button="Choose"
+          subtitle="Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
+          description="In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi."
+          infos={[
+            { label: 'Contributors:', value: '35' },
+            { label: 'Delivery:', value: 'January 2018' },
+            { label: 'Availability:', value: '200' },
+          ]}
+          manageContributionDescription="You contributed to this project"
+          manageContributionLinkLabel="Manage my contribution"
+          buttonLabel="Choose"
           imageProps={{
             src: 'http://via.placeholder.com/200x200/caf4fe/caf4fe',
             alt: '',

@@ -4,10 +4,22 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Fix duplicated `id` warnings on `DonationCard`.
-- Feature: Update `KarlFooterLendopolis` example.
-- Feature: Create `KarlCounterBlock` example.
-- Feature: Update `react-on-rails` gem and npm module to 11.1.6.
+## [23.7.0] - 2018-10-24
+
+Feature:
+  Update `KarlTimeline` example to add large `Timeline` and
+  thin `Timeline` examples.
+
+## [23.6.0] - 2018-10-19
+
+Features:
+- Create `KarlTimeline` example.
+- Update `KarlFooterLendopolis` example.
+- Create `KarlCounterBlock` example.
+- Update `react-on-rails` gem and npm module to 11.1.6.
+
+Fix:
+- Fix duplicated `id` warnings on `DonationCard`.
 
 ## [23.5.0] - 2018-09-25
 
