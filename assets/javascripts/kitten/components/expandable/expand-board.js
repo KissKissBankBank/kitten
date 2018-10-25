@@ -66,7 +66,7 @@ const ExpandBoardContent = ({ children, ariaId }) => (
 
 ExpandBoardContent.propTypes = {
   children: PropTypes.node.isRequired,
-  ariaId: PropTypes.string,
+  ariaId: PropTypes.string.isRequired,
 }
 
 ExpandBoardContent.defaultProps = {
