@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
 import Radium from 'radium'
 import PropTypes from 'prop-types'
-import { Button } from 'kitten/components/buttons/button'
+import { Button as ButtonBase } from 'kitten/components/buttons/button'
 import { ArrowIcon } from 'kitten/components/icons/arrow-icon'
 import COLORS from 'kitten/constants/colors-config'
+
+const Button = Radium(ButtonBase)
 
 class ExpandBoardButton extends Component {
   static propTypes = {
