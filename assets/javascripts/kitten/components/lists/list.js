@@ -12,15 +12,12 @@ const ListButtonItem = ({
   withTopBorder,
   ...others
 }) => {
-  let buttonStyles = { ...styles.buttonItem.base, ...style }
-
-  if (withTopBorder) {
-    buttonStyles = { ...buttonStyles, ...styles.buttonItem.topBorder }
-  }
-
-  if (disabled) {
-    buttonStyles = { ...buttonStyles, ...styles.buttonItem.disabled }
-  }
+  const buttonStyles = [
+    styles.buttonItem.base,
+    style,
+    withTopBorder && styles.buttonItem.topBorder,
+    disabled && styles.buttonItem.disabled,
+  ]
 
   const handleKeyPress = event => {
     const KEY_ENTER = 13
