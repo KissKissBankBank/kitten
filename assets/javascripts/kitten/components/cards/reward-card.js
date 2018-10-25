@@ -7,7 +7,6 @@ import {
   Grid as GridBase,
   GridCol as GridColBase,
 } from 'kitten/components/grid/grid'
-import { StarIcon } from 'kitten/components/icons/star-icon'
 import COLORS from 'kitten/constants/colors-config'
 import { ScreenConfig } from 'kitten/constants/screen-config'
 import { mediaQueries } from 'kitten/hoc/media-queries'
@@ -121,6 +120,7 @@ class RewardCardComponent extends Component {
       subtitle,
       subtitleTag,
       description,
+      infos,
       manageContributionDescription,
       manageContributionLinkLabel,
       manageContributionLinkHref,
