@@ -4,6 +4,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [23.7.0] - 2018-10-24
+
+Feature:
+  Update `KarlTimeline` example to add large `Timeline` and
+  thin `Timeline` examples.
+
 ## [23.6.0] - 2018-10-19
 
 Features:
