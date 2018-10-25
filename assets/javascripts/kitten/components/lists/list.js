@@ -20,18 +20,16 @@ const ListButtonItem = ({
   ]
 
   const handleKeyPress = event => {
-    const KEY_ENTER = 13
-    const KEY_SPACE = 32
+    const enterKey = 13
+    const spaceKey = 32
 
     switch (event.which) {
-      case KEY_ENTER:
-      case KEY_SPACE:
+      case enterKey:
+      case spaceKey:
         event.preventDefault
         onClick()
         break
     }
-
-    return true
   }
 
   return (
