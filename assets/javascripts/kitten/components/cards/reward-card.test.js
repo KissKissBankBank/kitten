@@ -51,7 +51,6 @@ describe('<RewardCard />', () => {
             buttonLabel="Custom text button"
             imageProps={{
               src: '#image',
-              alt: 'Image alt',
             }}
             infos={[
               { label: 'Delivery', value: '03/18' },
