@@ -106,9 +106,15 @@ class ExpandBoardBase extends Component {
   isContentComponent = component => component.type.name === 'ExpandBoardContent'
 
   handleClick = () => {
-    const newState = { expanded: !this.state.expanded }
-    this.setState(newState, () => document.activeElement.blur())
-    this.props.onClick(newState)
+    this.setState(
+      prevState => ({
+        expanded: !prevState.expanded,
+      }),
+      () => {
+        document.activeElement.blur()
+        this.props.onClick({ expanded: this.state.expanded })
+      },
+    )
   }
 
   render() {
