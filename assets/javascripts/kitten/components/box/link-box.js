@@ -2,47 +2,114 @@ import React, { Component } from 'react'
 import classNames from 'classnames'
 import Radium, { StyleRoot } from 'radium'
 import { ArrowIcon } from 'kitten/components/icons/arrow-icon'
+import { Text } from 'kitten/components/typography/text'
+import COLORS from 'kitten/constants/colors-config'
+import { ScreenConfig } from 'kitten/constants/screen-config'
+import { mediaQueries } from 'kitten/hoc/media-queries'
 
 export class LinkBox extends Component {
   renderIcon() {
-    if (this.props.displayIcon) {
-      return <div className="k-LinkBox__icon">{this.props.children}</div>
+    const { displayIcon, children, viewportIsTabletOrLess } = this.props
+
+    if (displayIcon && viewportIsTabletOrLess) {
+      return <div style={styles.linkBox.icon}>{children}</div>
     }
   }
 
   render() {
-    const {
-      className,
-      displayIcon,
-      isExternal,
-      href,
-      title,
-      text,
-      linkProps,
-    } = this.props
+    const { displayIcon, isExternal, href, title, text, linkProps } = this.props
 
-    let linkBoxClassNames = classNames('k-LinkBox', className, {
-      'k-LinkBox--withIcon': displayIcon,
-    })
+    // const linkBoxStyles = [
+    //  styles.linkBox,
+    //  // displayIcon && styles.linkBox.withIcon,
+    // ]
 
     const target = isExternal ? { target: '_blank' } : {}
 
     return (
-      <a {...linkProps} className={linkBoxClassNames} href={href} {...target}>
-        <div className="k-LinkBox__container">
+      <a style={styles.linkBox} href={href} {...target}>
+        <div style={styles.linkBox.container}>
           {this.renderIcon()}
-          <div className="k-LinkBox__paragraph">
-            <p className="k-LinkBox__title">{title}</p>
-            <p className="k-LinkBox__text">{text}</p>
+
+          <div style={styles.linkBox.paragraph}>
+            <Text weight="regular" size="default">
+              {title}
+            </Text>
+            <Text weight="light" size="tiny" className={{ lineHeight: 1.3 }}>
+              {text}
+            </Text>
           </div>
 
-          <div className="k-LinkBox__navigation">
+          <div style={styles.linkBox.navigation}>
             <ArrowIcon className="k-ButtonIcon__svg" />
           </div>
         </div>
       </a>
     )
   }
+}
+
+const styles = {
+  linkBox: {
+    display: 'inline-block',
+    color: COLORS.font1,
+    textDecoration: 'none',
+
+    [`@media (min-width: ${ScreenConfig.S.min}px)`]: {
+      display: 'none',
+    },
+
+    container: {
+      display: 'flex',
+      justifyContent: 'space-between',
+      minHeight: 90,
+      boxSizing: 'border-box',
+      color: COLORS.font1,
+      backgroundColor: COLORS.background1,
+      borderWidth: 2,
+      borderStyle: 'solid',
+      borderColor: COLORS.line1,
+      transition: 'background .2s',
+      // ':active': {
+      //   backgroundColor: COLORS.line1,
+      // },
+      // 'hover': {
+      //   backgroundColor: COLORS.background2,
+      // },
+    },
+
+    icon: {
+      display: 'flex',
+      marginTop: -2,
+      marginLeft: -2,
+      marginBottom: -2,
+      alignItems: 'center',
+      justifyContent: 'center',
+      minWidth: 90,
+      backgroundColor: COLORS.primary4,
+    },
+
+    paragraph: {
+      display: 'flex',
+      flexDirection: 'column',
+      flexGrow: 1,
+      justifyContent: 'center',
+      paddingTop: 10,
+      paddingLeft: 10,
+      paddingBottom: 15,
+      paddingRight: 20,
+    },
+
+    navigation: {
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      paddingTop: 15,
+      paddingRight: 20,
+      paddingBottom: 15,
+      paddingLeft: 10,
+    },
+  },
 }
 
 LinkBox.defaultProps = {
