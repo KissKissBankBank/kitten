@@ -111,18 +111,6 @@ padding-right: 0 !important;}}",
 exports[`<RewardCard /> on tiny version matches with snapshot 1`] = `
 <div
   data-radium={true}
-  infos={
-    Array [
-      Object {
-        "label": "Delivery",
-        "value": "03/18",
-      },
-      Object {
-        "label": "Alice",
-        "value": "Wonderland",
-      },
-    ]
-  }
   style={
     Object {
       "borderColor": "#eee",
@@ -492,18 +480,6 @@ bottom: -2px !important;}}
 exports[`<RewardCard /> with all props matches with snapshot 1`] = `
 <div
   data-radium={true}
-  infos={
-    Array [
-      Object {
-        "label": "Delivery",
-        "value": "03/18",
-      },
-      Object {
-        "label": "Alice",
-        "value": "Wonderland",
-      },
-    ]
-  }
   style={
     Object {
       "borderColor": "#eee",

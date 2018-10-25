@@ -120,6 +120,7 @@ class RewardCardComponent extends Component {
       subtitle,
       subtitleTag,
       description,
+      infos,
       manageContributionDescription,
       manageContributionLinkLabel,
       manageContributionLinkHref,
