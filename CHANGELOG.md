@@ -50,6 +50,9 @@ Fixes:
 - Update `ffi` gem.
 - Deprecate `ContributionCard` component. You should use `RewardCard`
   component instead. It will be deleted in further versions.
+- Feature: Add `ExpandBoard`, `ExpandBoard.Button` and `ExpandBoard.Content`
+  components.
+- Feature: Add `List` and `List.ButtonItem` components.
 
 ## [23.5.1] - 2018-09-27
 
