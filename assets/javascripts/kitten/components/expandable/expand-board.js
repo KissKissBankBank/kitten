@@ -58,7 +58,6 @@ ExpandBoardButton.defaultProps = {
   disabled: false,
   style: {},
   onClick: () => {},
-  ariaId: 'k-ExpandBoard',
 }
 
 const ExpandBoardContent = ({ children, ariaId }) => (
