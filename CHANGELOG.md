@@ -4,13 +4,51 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Update marger on `SimpleCard` component.
-- Fix: `Triptych` stroke height on small devices.
-- Fix: Corrige `propTypes` definition on `LinkList`.
-- Feature: Create `CounterBlock` component.
-- Feature: Add `Deprecated` component.
-- Fix: Update `ffi` gem.
-- Fix: Deprecate `ContributionCard` component. You should use `RewardCard`
+- Fix: Update `CrowdfundingCard` props.
+
+## [23.7.0] - 2018-10-24
+
+Feature:
+- Add `itemHeight` props to `Timeline` component.
+
+Fix:
+- Fix reponsive font-size for `CounterBlock` component.
+
+## [23.6.0] - 2018-10-19
+
+Features:
+- Create `Timeline` component.
+- Create `CounterBlock` component.
+- Add `Deprecated` component.
+- Update `RewardCard` component composition. The following props
+  are deprecated and can be replaced:
+  - `titleDescription` => `subtitle`
+  - `textDescription` => `description`
+  - `textTag` => `subtitleTag`
+  - `myContribution` => `manageContributionDescription`
+  - `manageContribution` => `manageContributionLinkLabel`
+  - `manageContributionLink` => `manageContributionLinkHref`
+  - `button` => `buttonLabel`
+  - `titleContributors`, `titleDelivery`, `titleAvailability`,
+    `valueContributors`, `valueDelivery`, `valueAvailability` can be replaced by
+    an array formatted as follow:
+    ```js
+    const infos = [
+      {
+        label: 'Your previous titleContributors content',
+        value: 'Your previous valueContributors content',
+      },
+      …
+    ]
+
+    <RewardCard {...otherProps} infos={infos} >
+    ```
+Fixes:
+- Update marger on `SimpleCard` component.
+- `Triptych` stroke height on small devices.
+- Corrige `propTypes` definition on `LinkList`.
+- Update `ffi` gem.
+- Deprecate `ContributionCard` component. You should use `RewardCard`
   component instead. It will be deleted in further versions.
 - Feature: Add `ExpandBoard`, `ExpandBoard.Button` and `ExpandBoard.Content`
   components.
