@@ -53,6 +53,7 @@ class ExpandBoardButton extends Component {
         aria-controls={ariaId}
         style={buttonStyles}
         onClick={onClick}
+        type="button"
       >
         {expanded ? defaultExpandChildren : children}
         <ArrowIcon
