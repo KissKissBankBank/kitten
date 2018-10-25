@@ -44,7 +44,7 @@ const styles = {
     justifyContent: 'center',
     lineHeight: '1.3rem',
     padding: `${pxToRem(22)} ${pxToRem(30)}`,
-    [`@media (max-width: ${ScreenConfig['S'].max}px)`]: {
+    [`@media (max-width: ${ScreenConfig.S.max}px)`]: {
       width: 'calc(100% + 4px)',
       position: 'relative',
       left: -2,
