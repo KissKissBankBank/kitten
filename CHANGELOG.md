@@ -4,9 +4,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `CartRewardCard.Information`. `shippingTitle` and `shippingValue`
-  are deprecated.
-- Fix: Update `CrowdfundingCard` props.
+## [23.8.0] - 2018-10-26
+
+Feature:
+- Add `CartRewardCard.Information`.
+  `shippingTitle` and `shippingValue` are deprecated.
+
+Fix:
+- Update `CrowdfundingCard` props.
 
 ## [23.7.0] - 2018-10-24
 
