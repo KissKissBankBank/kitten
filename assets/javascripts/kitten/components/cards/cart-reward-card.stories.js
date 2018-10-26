@@ -23,13 +23,15 @@ storiesOf('Cards/CartRewardCard', module)
                   'Text description',
                   'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient mont',
                 )}
-                shippingTitle={text('Shipping Title', 'Shipping:')}
-                shippingValue={text('Shipping Value', 'January 2018')}
                 updateAmountTitle={text(
                   'Update amount',
                   'Change donation amount',
                 )}
               >
+                <CartRewardCard.Information
+                  title={text('Shipping Title', 'Shipping:')}
+                  value={text('Shipping Value', 'January 2018')}
+                />
                 <CartRewardCard.Information
                   title={text('Other information title', 'Variation:')}
                   value={text('Other information value', 'Size L')}

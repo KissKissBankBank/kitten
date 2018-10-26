@@ -11,6 +11,7 @@ import COLORS from 'kitten/constants/colors-config'
 import { ScreenConfig } from 'kitten/constants/screen-config'
 import { mediaQueries } from 'kitten/hoc/media-queries'
 import { domElementHelper } from 'kitten/helpers/dom/element-helper'
+import deprecated from 'prop-types-extra/lib/deprecated'
 
 const Marger = Radium(MargerBase)
 
@@ -20,8 +21,14 @@ class CartRewardCardComponent extends Component {
     textDescription: PropTypes.string.isRequired,
     titleTag: PropTypes.string,
     subtitle: PropTypes.string,
-    shippingTitle: PropTypes.string,
-    shippingValue: PropTypes.string,
+    shippingTitle: deprecated(
+      PropTypes.string,
+      'Prefer use <CartRewardCard.Information />',
+    ),
+    shippingValue: deprecated(
+      PropTypes.string,
+      'Prefer use <CartRewardCard.Information />',
+    ),
     updateAmountTitle: PropTypes.string,
     updateAmountLink: PropTypes.string,
     onAfterClose: PropTypes.func,
@@ -244,10 +251,7 @@ export const CartRewardCard = mediaQueries(CartRewardCardComponent, {
 CartRewardCard.Information = ({ title, value }) => (
   <div>
     <Text weight="regular" size="tiny">
-      {title}{' '}
-      <Text weight="light" size="tiny">
-        {value}
-      </Text>
+      {title} <Text weight="light">{value}</Text>
     </Text>
   </div>
 )
