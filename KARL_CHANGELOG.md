@@ -6,6 +6,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Add `KarlLinkBox` example.
 
+## [23.8.0] - 2018-10-26
+
+No changes.
+
 ## [23.7.0] - 2018-10-24
 
 Feature:

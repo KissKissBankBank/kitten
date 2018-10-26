@@ -68,6 +68,9 @@ task kitten_release: [:sassdoc, :build] do
   sh 'bin/install'
   sh 'npm publish'
 
+  # Deploy storybook
+  sh 'yarn deploy-storybook'
+
   # Move the styleguide branch to the latest version
   sh 'git checkout styleguide'
   sh 'git merge --ff-only master'

@@ -41,11 +41,14 @@ export class KarlCartRewardCard extends Component {
               }}
               titleAmount="100 €"
               textDescription="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient mont"
-              shippingTitle="Shipping:"
-              shippingValue="January 2018"
               onAfterClose={this.handleAfterClose}
               onCloseClick={this.handleCloseClick}
-            />
+            >
+              <CartRewardCard.Information
+                title="Shipping:"
+                value="January 2018"
+              />
+            </CartRewardCard>
           </Marger>
         </Container>
       </Fragment>
