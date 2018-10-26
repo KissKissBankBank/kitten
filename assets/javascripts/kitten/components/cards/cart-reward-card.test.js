@@ -46,31 +46,12 @@ describe('<CartRewardCard />', () => {
             textDescription="Custom text description"
             titleTag="Custom title tag"
             subtitle="Custom subtitle"
-            shippingTitle="Custom shipping title"
-            shippingValue="Custom shipping value"
             updateAmountTitle="Custom amount"
             updateAmountLink="Custom amount link"
-          />,
-        )
-        .toJSON()
-    })
-
-    it('matches with snapshot', () => {
-      expect(component).toMatchSnapshot()
-    })
-  })
-
-  describe('with an information', () => {
-    beforeEach(() => {
-      component = renderer
-        .create(
-          <CartRewardCard
-            titleAmount="Custom title amount"
-            textDescription="Custom text description"
           >
             <CartRewardCard.Information
-              title="Information title"
-              value="Information value"
+              title="Custom shipping title"
+              value="Custom shipping value"
             />
           </CartRewardCard>,
         )
