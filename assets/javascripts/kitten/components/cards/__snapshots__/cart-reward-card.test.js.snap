@@ -214,17 +214,19 @@ exports[`<CartRewardCard /> with an information matches with snapshot 1`] = `
         </p>
       </div>
       
-      <span
-        className="k-u-size-tiny k-u-weight-regular"
-      >
-        Information title
-         
+      <div>
         <span
-          className="k-u-size-tiny k-u-weight-light"
+          className="k-u-size-tiny k-u-weight-regular"
         >
-          Information value
+          Information title
+           
+          <span
+            className="k-u-size-tiny k-u-weight-light"
+          >
+            Information value
+          </span>
         </span>
-      </span>
+      </div>
       
     </div>
   </div>
