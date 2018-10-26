@@ -244,12 +244,14 @@ export const CartRewardCard = mediaQueries(CartRewardCardComponent, {
 })
 
 CartRewardCard.Information = ({ title, value }) => (
-  <Text weight="regular" size="tiny">
-    {title}{' '}
-    <Text weight="light" size="tiny">
-      {value}
+  <div>
+    <Text weight="regular" size="tiny">
+      {title}{' '}
+      <Text weight="light" size="tiny">
+        {value}
+      </Text>
     </Text>
-  </Text>
+  </div>
 )
 
 CartRewardCard.Information.propTypes = {
