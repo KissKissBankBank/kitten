@@ -8,6 +8,7 @@ import { Button } from 'kitten/components/buttons/button'
 import { HorizontalStroke } from 'kitten/components/layout/horizontal-stroke'
 import { Paragraph } from 'kitten/components/typography/paragraph'
 import { Text } from 'kitten/components/typography/text'
+import { StarIcon } from 'kitten/components/icons/star-icon'
 
 const RewardCardContentBase = ({
   titleAmount,
