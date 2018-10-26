@@ -20,6 +20,8 @@ exports[`<LinkBox /> by default matches with snapshot 1`] = `
       onKeyDown={[Function]}
       onKeyUp={[Function]}
       onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
       style={
         Object {
           "backgroundColor": "#fff",
@@ -52,11 +54,25 @@ exports[`<LinkBox /> by default matches with snapshot 1`] = `
           }
         }
       >
+        <div
+          style={
+            Object {
+              "marginBottom": "0.3125rem",
+              "marginTop": null,
+            }
+          }
+        >
+          <span
+            className="k-u-color-font1 k-u-line-height-normal k-u-size-tiny k-u-weight-regular"
+          />
+        </div>
         <span
-          className="k-u-color-font1 k-u-line-height-normal k-u-size-tiny k-u-weight-regular"
-        />
-        <span
-          className="k-u-color-font1 k-u-size-tiny k-u-weight-light lineHeight"
+          className="k-u-color-font1 k-u-size-tiny k-u-weight-light"
+          style={
+            Object {
+              "lineHeight": 1.3,
+            }
+          }
         />
       </div>
       <div
@@ -121,6 +137,8 @@ exports[`<LinkBox /> with some props matches with snapshot 1`] = `
       onKeyDown={[Function]}
       onKeyUp={[Function]}
       onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
       style={
         Object {
           "backgroundColor": "#fff",
@@ -169,13 +187,27 @@ exports[`<LinkBox /> with some props matches with snapshot 1`] = `
           }
         }
       >
-        <span
-          className="k-u-color-font1 k-u-line-height-normal k-u-size-tiny k-u-weight-regular"
+        <div
+          style={
+            Object {
+              "marginBottom": "0.3125rem",
+              "marginTop": null,
+            }
+          }
         >
-          Lorem ipsum
-        </span>
+          <span
+            className="k-u-color-font1 k-u-line-height-normal k-u-size-tiny k-u-weight-regular"
+          >
+            Lorem ipsum
+          </span>
+        </div>
         <span
-          className="k-u-color-font1 k-u-size-tiny k-u-weight-light lineHeight"
+          className="k-u-color-font1 k-u-size-tiny k-u-weight-light"
+          style={
+            Object {
+              "lineHeight": 1.3,
+            }
+          }
         >
           In enim justo, rhoncus ut,
         </span>
