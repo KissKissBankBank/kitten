@@ -161,12 +161,10 @@ class CartRewardCardComponent extends Component {
         {shippingTitle &&
           shippingValue && (
             <Marger top="2">
-              <Text weight="regular" size="tiny">
-                {shippingTitle}{' '}
-                <Text weight="light" size="tiny">
-                  {shippingValue}
-                </Text>
-              </Text>
+              <CartRewardCard.Information
+                title={shippingTitle}
+                value={shippingValue}
+              />
             </Marger>
           )}
 
