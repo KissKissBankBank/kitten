@@ -1,0 +1,223 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LinkBox /> by default matches with snapshot 1`] = `
+<div
+  data-radium={true}
+>
+  <a
+    data-radium={true}
+    href="#"
+    style={
+      Object {
+        "color": "#222",
+        "display": "inline-block",
+        "textDecoration": "none",
+      }
+    }
+  >
+    <div
+      data-radium={true}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#fff",
+          "borderColor": "#eee",
+          "borderStyle": "solid",
+          "borderWidth": 2,
+          "boxSizing": "border-box",
+          "color": "#222",
+          "display": "flex",
+          "justifyContent": "space-between",
+          "maxWidth": 440,
+          "minHeight": 90,
+          "transition": "background .2s",
+        }
+      }
+    >
+      <div
+        className="rmq-ff0ea6f7"
+        data-radium={true}
+        style={
+          Object {
+            "display": "flex",
+            "flexDirection": "column",
+            "flexGrow": 1,
+            "justifyContent": "center",
+            "paddingBottom": 15,
+            "paddingLeft": 20,
+            "paddingRight": 18,
+            "paddingTop": 10,
+          }
+        }
+      >
+        <span
+          className="k-u-color-font1 k-u-line-height-normal k-u-size-tiny k-u-weight-regular"
+        />
+        <span
+          className="k-u-color-font1 k-u-size-tiny k-u-weight-light lineHeight"
+        />
+      </div>
+      <div
+        className="rmq-d9248954"
+        data-radium={true}
+        style={
+          Object {
+            "alignItems": "center",
+            "display": "flex",
+            "justifyContent": "center",
+            "paddingBottom": 15,
+            "paddingRight": 22,
+            "paddingTop": 15,
+          }
+        }
+      >
+        <svg
+          className="k-ArrowIcon k-ArrowIcon--right k-ButtonIcon__svg"
+          viewBox="0 0 6 6"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>
+            Arrow
+          </title>
+          <path
+            d="M6 0H0v6h2V2h4z"
+          />
+        </svg>
+      </div>
+    </div>
+  </a>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "@media (min-width: 640px){ .rmq-ff0ea6f7{padding-left: 30px !important;
+padding-right: 20px !important;}}
+@media (min-width: 640px){ .rmq-d9248954{padding-right: 32px !important;}}",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`<LinkBox /> with some props matches with snapshot 1`] = `
+<div
+  data-radium={true}
+>
+  <a
+    data-radium={true}
+    href="#foobar"
+    style={
+      Object {
+        "color": "#222",
+        "display": "inline-block",
+        "textDecoration": "none",
+      }
+    }
+    target="_blank"
+  >
+    <div
+      data-radium={true}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#fff",
+          "borderColor": "#eee",
+          "borderStyle": "solid",
+          "borderWidth": 2,
+          "boxSizing": "border-box",
+          "color": "#222",
+          "display": "flex",
+          "justifyContent": "space-between",
+          "maxWidth": 440,
+          "minHeight": 90,
+          "transition": "background .2s",
+        }
+      }
+    >
+      <div
+        className="rmq-d68686c"
+        data-radium={true}
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#bae8fd",
+            "display": "none",
+            "justifyContent": "center",
+            "marginBottom": -2,
+            "marginLeft": -2,
+            "marginTop": -2,
+            "minWidth": 90,
+          }
+        }
+      />
+      <div
+        className="rmq-ff0ea6f7"
+        data-radium={true}
+        style={
+          Object {
+            "display": "flex",
+            "flexDirection": "column",
+            "flexGrow": 1,
+            "justifyContent": "center",
+            "paddingBottom": 15,
+            "paddingLeft": 20,
+            "paddingRight": 18,
+            "paddingTop": 10,
+          }
+        }
+      >
+        <span
+          className="k-u-color-font1 k-u-line-height-normal k-u-size-tiny k-u-weight-regular"
+        >
+          Lorem ipsum
+        </span>
+        <span
+          className="k-u-color-font1 k-u-size-tiny k-u-weight-light lineHeight"
+        >
+          In enim justo, rhoncus ut,
+        </span>
+      </div>
+      <div
+        className="rmq-d9248954"
+        data-radium={true}
+        style={
+          Object {
+            "alignItems": "center",
+            "display": "flex",
+            "justifyContent": "center",
+            "paddingBottom": 15,
+            "paddingRight": 22,
+            "paddingTop": 15,
+          }
+        }
+      >
+        <svg
+          className="k-ArrowIcon k-ArrowIcon--right k-ButtonIcon__svg"
+          viewBox="0 0 6 6"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>
+            Arrow
+          </title>
+          <path
+            d="M6 0H0v6h2V2h4z"
+          />
+        </svg>
+      </div>
+    </div>
+  </a>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "@media (min-width: 640px){ .rmq-d68686c{display: flex !important;}}
+@media (min-width: 640px){ .rmq-ff0ea6f7{padding-left: 30px !important;
+padding-right: 20px !important;}}
+@media (min-width: 640px){ .rmq-d9248954{padding-right: 32px !important;}}",
+      }
+    }
+  />
+</div>
+`;

@@ -35,7 +35,12 @@ export class LinkBox extends Component {
             {this.renderIcon()}
 
             <div style={styles.paragraph}>
-              <Text weight="regular" size="tiny" color="font1">
+              <Text
+                weight="regular"
+                size="tiny"
+                color="font1"
+                lineHeight="normal"
+              >
                 {title}
               </Text>
               <Text
