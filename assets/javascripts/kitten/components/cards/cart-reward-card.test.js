@@ -59,4 +59,26 @@ describe('<CartRewardCard />', () => {
       expect(component).toMatchSnapshot()
     })
   })
+
+  describe('with an information', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(
+          <CartRewardCard
+            titleAmount="Custom title amount"
+            textDescription="Custom text description"
+          >
+            <CartRewardCard.Information
+              title="Information title"
+              value="Information value"
+            />
+          </CartRewardCard>,
+        )
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
 })

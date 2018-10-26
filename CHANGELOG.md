@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `CartRewardCard.Information`.
 - Fix: Update `CrowdfundingCard` props.
 
 ## [23.7.0] - 2018-10-24

@@ -149,7 +149,12 @@ class CartRewardCardComponent extends Component {
       shippingValue,
       updateAmountTitle,
       updateAmountLink,
+      children,
     } = this.props
+
+    const informationElements = React.Children.toArray(children).filter(
+      child => child.type === CartRewardCard.Information,
+    )
 
     return (
       <Fragment>
@@ -164,6 +169,8 @@ class CartRewardCardComponent extends Component {
               </Text>
             </Marger>
           )}
+
+        {informationElements}
 
         {updateAmountTitle && (
           <Marger top="2">
@@ -235,3 +242,17 @@ export const CartRewardCard = mediaQueries(CartRewardCardComponent, {
   viewportIsMobile: true,
   exposedMethods: ['close'],
 })
+
+CartRewardCard.Information = ({ title, value }) => (
+  <Text weight="regular" size="tiny">
+    {title}{' '}
+    <Text weight="light" size="tiny">
+      {value}
+    </Text>
+  </Text>
+)
+
+CartRewardCard.Information.propTypes = {
+  title: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
+}
