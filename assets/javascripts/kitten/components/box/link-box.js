@@ -1,8 +1,8 @@
 import React, { Component, Fragment } from 'react'
 import Radium, { StyleRoot } from 'radium'
-import classNames from 'classnames'
 import { ArrowIcon } from 'kitten/components/icons/arrow-icon'
 import { Text } from 'kitten/components/typography/text'
+import { Marger } from 'kitten/components/layout/marger'
 import COLORS from 'kitten/constants/colors-config'
 import { ScreenConfig } from 'kitten/constants/screen-config'
 import { mediaQueries } from 'kitten/hoc/media-queries'
@@ -35,19 +35,21 @@ export class LinkBox extends Component {
             {this.renderIcon()}
 
             <div style={styles.paragraph}>
-              <Text
-                weight="regular"
-                size="tiny"
-                color="font1"
-                lineHeight="normal"
-              >
-                {title}
-              </Text>
+              <Marger bottom=".5">
+                <Text
+                  weight="regular"
+                  size="tiny"
+                  color="font1"
+                  lineHeight="normal"
+                >
+                  {title}
+                </Text>
+              </Marger>
               <Text
                 weight="light"
                 size="tiny"
                 color="font1"
-                className={{ lineHeight: 1.3 }}
+                style={{ lineHeight: 1.3 }}
               >
                 {text}
               </Text>
@@ -85,7 +87,7 @@ const styles = {
     ':active': {
       backgroundColor: COLORS.line1,
     },
-    hover: {
+    ':hover': {
       backgroundColor: COLORS.background2,
     },
   },
