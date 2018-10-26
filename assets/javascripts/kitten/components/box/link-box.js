@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
-import classNames from 'classnames'
+import React, { Component, Fragment } from 'react'
 import Radium, { StyleRoot } from 'radium'
+import classNames from 'classnames'
 import { ArrowIcon } from 'kitten/components/icons/arrow-icon'
 import { Text } from 'kitten/components/typography/text'
 import COLORS from 'kitten/constants/colors-config'
@@ -9,42 +9,51 @@ import { mediaQueries } from 'kitten/hoc/media-queries'
 
 export class LinkBox extends Component {
   renderIcon() {
-    const { displayIcon, children, viewportIsTabletOrLess } = this.props
+    const { displayIcon, children } = this.props
 
-    if (displayIcon && viewportIsTabletOrLess) {
-      return <div style={styles.linkBox.icon}>{children}</div>
-    }
+    return (
+      <Fragment>
+        {displayIcon && <div style={styles.icon}>{children}</div>}
+      </Fragment>
+    )
   }
 
   render() {
     const { displayIcon, isExternal, href, title, text, linkProps } = this.props
 
-    // const linkBoxStyles = [
-    //  styles.linkBox,
-    //  // displayIcon && styles.linkBox.withIcon,
-    // ]
+    const linkBoxStyles = [
+      styles.linkBox,
+      displayIcon && styles.linkBox.withIcon,
+    ]
 
     const target = isExternal ? { target: '_blank' } : {}
 
     return (
-      <a style={styles.linkBox} href={href} {...target}>
-        <div style={styles.linkBox.container}>
-          {this.renderIcon()}
+      <StyleRoot>
+        <a {...linkProps} style={linkBoxStyles} href={href} {...target}>
+          <div style={styles.container}>
+            {this.renderIcon()}
 
-          <div style={styles.linkBox.paragraph}>
-            <Text weight="regular" size="default">
-              {title}
-            </Text>
-            <Text weight="light" size="tiny" className={{ lineHeight: 1.3 }}>
-              {text}
-            </Text>
-          </div>
+            <div style={styles.paragraph}>
+              <Text weight="regular" size="tiny" color="font1">
+                {title}
+              </Text>
+              <Text
+                weight="light"
+                size="tiny"
+                color="font1"
+                className={{ lineHeight: 1.3 }}
+              >
+                {text}
+              </Text>
+            </div>
 
-          <div style={styles.linkBox.navigation}>
-            <ArrowIcon className="k-ButtonIcon__svg" />
+            <div style={styles.navigation}>
+              <ArrowIcon className="k-ButtonIcon__svg" />
+            </div>
           </div>
-        </div>
-      </a>
+        </a>
+      </StyleRoot>
     )
   }
 }
@@ -54,60 +63,67 @@ const styles = {
     display: 'inline-block',
     color: COLORS.font1,
     textDecoration: 'none',
+  },
+
+  container: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    minHeight: 90,
+    maxWidth: 440,
+    boxSizing: 'border-box',
+    color: COLORS.font1,
+    backgroundColor: COLORS.background1,
+    borderWidth: 2,
+    borderStyle: 'solid',
+    borderColor: COLORS.line1,
+    transition: 'background .2s',
+    ':active': {
+      backgroundColor: COLORS.line1,
+    },
+    hover: {
+      backgroundColor: COLORS.background2,
+    },
+  },
+
+  icon: {
+    display: 'none',
+    marginTop: -2,
+    marginLeft: -2,
+    marginBottom: -2,
+    alignItems: 'center',
+    justifyContent: 'center',
+    minWidth: 90,
+    backgroundColor: COLORS.primary4,
 
     [`@media (min-width: ${ScreenConfig.S.min}px)`]: {
-      display: 'none',
-    },
-
-    container: {
       display: 'flex',
-      justifyContent: 'space-between',
-      minHeight: 90,
-      boxSizing: 'border-box',
-      color: COLORS.font1,
-      backgroundColor: COLORS.background1,
-      borderWidth: 2,
-      borderStyle: 'solid',
-      borderColor: COLORS.line1,
-      transition: 'background .2s',
-      // ':active': {
-      //   backgroundColor: COLORS.line1,
-      // },
-      // 'hover': {
-      //   backgroundColor: COLORS.background2,
-      // },
     },
+  },
 
-    icon: {
-      display: 'flex',
-      marginTop: -2,
-      marginLeft: -2,
-      marginBottom: -2,
-      alignItems: 'center',
-      justifyContent: 'center',
-      minWidth: 90,
-      backgroundColor: COLORS.primary4,
-    },
-
-    paragraph: {
-      display: 'flex',
-      flexDirection: 'column',
-      flexGrow: 1,
-      justifyContent: 'center',
-      paddingTop: 10,
-      paddingLeft: 10,
-      paddingBottom: 15,
+  paragraph: {
+    display: 'flex',
+    flexDirection: 'column',
+    flexGrow: 1,
+    justifyContent: 'center',
+    paddingLeft: 20,
+    paddingRight: 18,
+    paddingTop: 10,
+    paddingBottom: 15,
+    [`@media (min-width: ${ScreenConfig.S.min}px)`]: {
+      paddingLeft: 30,
       paddingRight: 20,
     },
+  },
 
-    navigation: {
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      paddingTop: 15,
-      paddingRight: 20,
-      paddingBottom: 15,
-      paddingLeft: 10,
+  navigation: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingRight: 22,
+    paddingTop: 15,
+    paddingBottom: 15,
+    [`@media (min-width: ${ScreenConfig.S.min}px)`]: {
+      paddingRight: 32,
     },
   },
 }
