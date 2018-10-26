@@ -21,6 +21,12 @@ class CartRewardCardComponent extends Component {
     textDescription: PropTypes.string.isRequired,
     titleTag: PropTypes.string,
     subtitle: PropTypes.string,
+    updateAmountTitle: PropTypes.string,
+    updateAmountLink: PropTypes.string,
+    onAfterClose: PropTypes.func,
+    onCloseClick: PropTypes.func,
+
+    // Deprecated.
     shippingTitle: deprecated(
       PropTypes.string,
       'Prefer use <CartRewardCard.Information />',
@@ -29,17 +35,11 @@ class CartRewardCardComponent extends Component {
       PropTypes.string,
       'Prefer use <CartRewardCard.Information />',
     ),
-    updateAmountTitle: PropTypes.string,
-    updateAmountLink: PropTypes.string,
-    onAfterClose: PropTypes.func,
-    onCloseClick: PropTypes.func,
   }
 
   static defaultProps = {
     titleTag: 'h1',
     subtitle: '',
-    shippingTitle: '',
-    shippingValue: '',
     updateAmountTitle: '',
     updateAmountLink: '',
     onAfterClose: () => {},

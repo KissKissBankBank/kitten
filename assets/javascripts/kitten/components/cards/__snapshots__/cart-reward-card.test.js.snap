@@ -100,7 +100,6 @@ exports[`<CartRewardCard /> by default matches with snapshot 1`] = `
         </p>
       </div>
       
-      
     </div>
   </div>
   <style
@@ -227,7 +226,6 @@ exports[`<CartRewardCard /> with some props matches with snapshot 1`] = `
           Custom text description
         </p>
       </div>
-      
       <div>
         <span
           className="k-u-size-tiny k-u-weight-regular"
