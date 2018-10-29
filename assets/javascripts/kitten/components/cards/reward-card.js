@@ -2,28 +2,44 @@ import React, { Component, Fragment } from 'react'
 import Radium, { StyleRoot } from 'radium'
 import PropTypes from 'prop-types'
 import deprecated from 'prop-types-extra/lib/deprecated'
-import { Marger } from 'kitten/components/layout/marger'
-import {
-  Grid as GridBase,
-  GridCol as GridColBase,
-} from 'kitten/components/grid/grid'
 import COLORS from 'kitten/constants/colors-config'
-import { ScreenConfig } from 'kitten/constants/screen-config'
 import { mediaQueries } from 'kitten/hoc/media-queries'
-import { RewardCardContent } from 'kitten/components/cards/reward-card/content'
-import { RewardCardInfos } from 'kitten/components/cards/reward-card/infos'
-import { RewardCardImage } from 'kitten/components/cards/reward-card/image'
 import {
-  RewardCardAction,
-  RewardCardActionOnMOrMore,
-} from 'kitten/components/cards/reward-card/action'
+  LegacyRewardCardContainer,
+  styles as legacyStyles,
+} from 'kitten/components/cards/reward-card/legacy-reward-card-container'
+import { pxToRem } from 'kitten/helpers/utils/typography'
+import { RewardCardTitle } from 'kitten/components/cards/reward-card/title'
+import { RewardCardRow } from 'kitten/components/cards/reward-card/row'
+import { RewardCardRowContent } from 'kitten/components/cards/reward-card/row-content'
+import { RewardCardRowSide } from 'kitten/components/cards/reward-card/row-side'
 
-const Grid = Radium(GridBase)
-const GridCol = Radium(GridColBase)
+// TODO: Move this class to a separate file after deprecated component with the
+// same name will be deleted.
+class RewardCardAction extends Component {
+  render() {
+    const { children } = this.props
+
+    return (
+      <RewardCard.Row>
+        <RewardCard.RowContent>{children}</RewardCard.RowContent>
+        <RewardCard.RowSide style={style.row.emptySide} />
+      </RewardCard.Row>
+    )
+  }
+}
+
+// TODO: Move this class to a separate file after deprecated component with the
+// same name will be deleted.
+class RewardCardImage extends Component {
+  render() {
+    return <img {...this.props} style={{ width: '100%' }} />
+  }
+}
 
 class RewardCardComponent extends Component {
   static propTypes = {
-    titleAmount: PropTypes.string.isRequired,
+    titleAmount: PropTypes.string,
     titleTag: PropTypes.string,
     subtitle: PropTypes.string,
     subtitleTag: PropTypes.string,
@@ -80,288 +96,55 @@ class RewardCardComponent extends Component {
     valueAvailability: deprecated(PropTypes.string, 'Use `infos` prop instead'),
   }
 
-  isTinyVersion = () =>
-    this.props.version === 'tiny' || this.props.viewportIsMobile
-
-  isSOrLessVersion = () => this.isTinyVersion() || this.props.viewportIsSOrLess
-
-  legacyInfos = () => {
-    const {
-      titleContributors,
-      titleDelivery,
-      titleAvailability,
-      valueContributors,
-      valueDelivery,
-      valueAvailability,
-    } = this.props
-
-    const infos = []
-
-    if (titleContributors) {
-      infos.push({ label: titleContributors, value: valueContributors })
-    }
-
-    if (titleDelivery) {
-      infos.push({ label: titleDelivery, value: valueDelivery })
-    }
-
-    if (titleAvailability) {
-      infos.push({ label: titleAvailability, value: valueAvailability })
-    }
-
-    return infos
-  }
+  isImageComponent = component => component.type.name === 'RewardCardImage'
+  isContentComponent = component => component.type.name === 'RewardCardContent'
 
   render() {
-    // We need to destructure the props to prevent them to hydrate children components.
-    const {
-      titleAmount,
-      titleTag,
-      subtitle,
-      subtitleTag,
-      description,
-      infos,
-      manageContributionDescription,
-      manageContributionLinkLabel,
-      manageContributionLinkHref,
-      buttonLabel,
-      buttonOnMouseEnter,
-      buttonOnMouseLeave,
-      buttonOnClick,
-      isDisabled,
-      starred,
-      starLabel,
-      version,
-      viewportIsMobile,
-      viewportIsSOrLess,
-      viewportIsTabletOrLess,
-      titleDescription,
-      textDescription,
-      textTag,
-      myContribution,
-      manageContribution,
-      manageContributionLink,
-      button,
-      titleContributors,
-      titleDelivery,
-      titleAvailability,
-      valueContributors,
-      valueDelivery,
-      valueAvailability,
-      imageProps,
-      ...others
-    } = this.props
-
-    const shouldDisplayImage = imageProps && imageProps.src
-
-    const cardStyles = [others.style, styles.card]
-
-    const cardPaddings = this.isTinyVersion()
-      ? styles.card.paddings.tinyVersion
-      : styles.card.paddings
-
-    const cardImageStyles = this.isTinyVersion()
-      ? styles.card.image.tinyVersion
-      : styles.card.image
-
-    const leftColumnProps = this.isTinyVersion()
-      ? null
-      : {
-          'col-l': shouldDisplayImage ? 7 : 10,
-          'col-s': 7,
-        }
-
-    const rightColumnProps = this.isTinyVersion()
-      ? null
-      : {
-          'col-s': 4,
-          'offset-s': 1,
-        }
-
-    const withImageOnTinyVersion = shouldDisplayImage && this.isTinyVersion()
+    const { children } = this.props
 
     return (
-      <StyleRoot {...others} style={cardStyles}>
-        <Marger
-          bottom={this.isSOrLessVersion() ? 0 : 4}
-          top={this.isSOrLessVersion() ? 3 : 4}
-        >
-          <Grid style={cardPaddings}>
-            <GridCol {...leftColumnProps}>
-              <RewardCardContent
-                {...this.props}
-                subtitle={subtitle || titleDescription}
-                subtitleTag={subtitleTag || textTag}
-                description={description || textDescription}
-                isTinyVersion={this.isTinyVersion()}
-              />
-
-              <RewardCardInfos
-                infos={this.legacyInfos()}
-                {...this.props}
-                isTinyVersion={this.isTinyVersion()}
-                viewportIsTabletOrLess={viewportIsTabletOrLess}
-              />
-
-              {!this.isSOrLessVersion() && (
-                <RewardCardActionOnMOrMore
-                  {...this.props}
-                  manageContributionDescription={
-                    manageContributionDescription || myContribution
-                  }
-                  manageContributionLinkLabel={
-                    manageContributionLinkLabel || manageContribution
-                  }
-                  manageContributionLinkHref={
-                    manageContributionLinkHref || manageContributionLink
-                  }
-                  buttonLabel={buttonLabel || button}
-                  isTinyVersion={this.isTinyVersion()}
-                  isSOrLessVersion={this.isSOrLessVersion()}
-                />
-              )}
-            </GridCol>
-
-            {shouldDisplayImage && (
-              <GridCol {...rightColumnProps} style={cardImageStyles}>
-                <Marger bottom={!myContribution ? 2 : null}>
-                  <RewardCardImage {...this.props} />
-                </Marger>
-              </GridCol>
-            )}
-          </Grid>
-
-          {this.isSOrLessVersion() && (
-            <RewardCardAction
-              {...this.props}
-              manageContributionDescription={
-                manageContributionDescription || myContribution
-              }
-              manageContributionLinkLabel={
-                manageContributionLinkLabel || manageContribution
-              }
-              manageContributionLinkHref={
-                manageContributionLinkHref || manageContributionLink
-              }
-              buttonLabel={buttonLabel || button}
-              isTinyVersion={this.isTinyVersion()}
-              isSOrLessVersion={this.isSOrLessVersion()}
-              topMargin={withImageOnTinyVersion ? 2 : 0}
-            />
-          )}
-        </Marger>
-      </StyleRoot>
+      <Fragment>
+        <LegacyRewardCardContainer {...this.props} />
+        {children && <div style={style.card}>{children}</div>}
+      </Fragment>
     )
   }
 }
 
-export const styles = {
-  disabled: {
-    filter: 'grayscale(1) opacity(.4)',
-    cursor: 'not-allowed',
-  },
-
-  textColor: {
-    color: COLORS.font1,
-  },
-
+const style = {
   card: {
+    backgroundColor: COLORS.background1,
     borderWidth: 2,
     borderStyle: 'solid',
     borderColor: COLORS.line1,
-
-    paddings: {
-      paddingLeft: 20,
-      paddingRight: 20,
-
-      [`@media (min-width: ${ScreenConfig['S'].min}px)`]: {
-        paddingLeft: 30,
-        paddingRight: 30,
-      },
-      [`@media (min-width: ${ScreenConfig['M'].min}px)`]: {
-        paddingLeft: 40,
-        paddingRight: 0,
-      },
-      [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
-        paddingLeft: 115,
-        paddingRight: 0,
-      },
-
-      tinyVersion: {
-        paddingLeft: 20,
-        paddingRight: 20,
-      },
-    },
-
-    image: {
-      [`@media (min-width: ${ScreenConfig['M'].min}px)`]: {
-        paddingRight: 50,
-      },
-      tinyVersion: {
-        paddingRight: 10,
-      },
+    padding: pxToRem(15),
+    width: '100%',
+  },
+  row: {
+    emptySide: {
+      margin: `0 ${pxToRem(15)}`,
     },
   },
-
-  textMargin: {
-    margin: 0,
-  },
-
-  infos: {
-    lists: {
-      fontSize: 14,
-
-      [`@media (min-width: ${ScreenConfig['M'].min}px)`]: {
-        fontSize: 16,
-        marginRight: 30,
-      },
-
-      tinyVersion: {
-        fontSize: 14,
-        marginRight: 0,
-      },
-    },
-  },
-
-  choiceButton: {
-    paddingLeft: 20,
-    paddingRight: 20,
-
-    paddings: {
-      [`@media (min-width: ${ScreenConfig['S'].min}px)`]: {
-        paddingLeft: 30,
-        paddingRight: 30,
-      },
-
-      tinyVersion: {
-        paddingLeft: 20,
-        paddingRight: 20,
-      },
-    },
-  },
-
-  myContribution: {
-    display: 'flex',
-    alignItems: 'center',
-
-    text: {
-      display: 'flex',
-      lineHeight: 'normal',
-    },
-  },
-
-  iconBadge: {
-    marginRight: 10,
-  },
-
   image: {
     width: '100%',
-    display: 'block',
   },
 }
 
-export const RewardCard = mediaQueries(Radium(RewardCardComponent), {
+// This export handles retro-compatibility.
+// TODO: remove this export when deleting all deprecated components.
+export const styles = legacyStyles
+
+const RewardCardBase = mediaQueries(Radium(RewardCardComponent), {
   viewportIsTabletOrLess: true,
   viewportIsSOrLess: true,
   viewportIsMobile: true,
 })
+
+RewardCardBase.Row = RewardCardRow
+RewardCardBase.RowContent = RewardCardRowContent
+RewardCardBase.RowSide = RewardCardRowSide
+RewardCardBase.Title = RewardCardTitle
+RewardCardBase.Image = Radium(RewardCardImage)
+RewardCardBase.Action = Radium(RewardCardAction)
+
+export const RewardCard = RewardCardBase
