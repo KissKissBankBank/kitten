@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import Radium, { StyleRoot } from 'radium'
+import PropTypes from 'prop-types'
 import { ArrowIcon } from 'kitten/components/icons/arrow-icon'
 import { Text } from 'kitten/components/typography/text'
 import { Marger } from 'kitten/components/layout/marger'
@@ -8,6 +9,27 @@ import { ScreenConfig } from 'kitten/constants/screen-config'
 import { mediaQueries } from 'kitten/hoc/media-queries'
 
 export class LinkBox extends Component {
+  static propTypes = {
+    displayIcon: PropTypes.bool,
+    href: PropTypes.string,
+    isExternal: PropTypes.bool,
+
+    title: PropTypes.string.isRequired,
+    titeltag: PropTypes.string,
+    text: PropTypes.string,
+    textTag: PropTypes.string,
+    linkProps: PropTypes.shape({}),
+  }
+
+  static defaultProps = {
+    displayIcon: false,
+    href: '#',
+    isExternal: false,
+    titleTag: 'span',
+    text: '',
+    textTag: 'span',
+  }
+
   renderIcon() {
     const { displayIcon, children } = this.props
 
@@ -19,24 +41,27 @@ export class LinkBox extends Component {
   }
 
   render() {
-    const { displayIcon, isExternal, href, title, text, linkProps } = this.props
-
-    const linkBoxStyles = [
-      styles.linkBox,
-      displayIcon && styles.linkBox.withIcon,
-    ]
+    const {
+      isExternal,
+      href,
+      title,
+      text,
+      linkProps,
+      titleTag,
+      textTag,
+    } = this.props
 
     const target = isExternal ? { target: '_blank' } : {}
 
     return (
       <StyleRoot>
-        <a {...linkProps} style={linkBoxStyles} href={href} {...target}>
+        <a {...linkProps} style={styles.linkBox} href={href} {...target}>
           <div style={styles.container}>
             {this.renderIcon()}
-
             <div style={styles.paragraph}>
-              <Marger bottom=".5">
+              <Marger bottom={text ? 0.5 : 0}>
                 <Text
+                  tag={titleTag}
                   weight="regular"
                   size="tiny"
                   color="font1"
@@ -45,16 +70,19 @@ export class LinkBox extends Component {
                   {title}
                 </Text>
               </Marger>
-              <Text
-                weight="light"
-                size="tiny"
-                color="font1"
-                style={{ lineHeight: 1.3 }}
-              >
-                {text}
-              </Text>
-            </div>
 
+              {text && (
+                <Text
+                  tag={textTag}
+                  weight="light"
+                  size="tiny"
+                  color="font1"
+                  style={{ lineHeight: 1.3 }}
+                >
+                  {text}
+                </Text>
+              )}
+            </div>
             <div style={styles.navigation}>
               <ArrowIcon className="k-ButtonIcon__svg" />
             </div>
@@ -133,12 +161,6 @@ const styles = {
       paddingRight: 32,
     },
   },
-}
-
-LinkBox.defaultProps = {
-  displayIcon: false,
-  href: '#',
-  isExternal: false,
 }
 
 // DEPRECATED: do not use default export.
