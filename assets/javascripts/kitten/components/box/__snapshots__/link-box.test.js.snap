@@ -34,7 +34,7 @@ exports[`<LinkBox /> by default matches with snapshot 1`] = `
           "justifyContent": "space-between",
           "maxWidth": 440,
           "minHeight": 90,
-          "transition": "background .2s",
+          "transition": "backgroundColor .2s",
         }
       }
     >
@@ -144,7 +144,7 @@ exports[`<LinkBox /> with some props matches with snapshot 1`] = `
           "justifyContent": "space-between",
           "maxWidth": 440,
           "minHeight": 90,
-          "transition": "background .2s",
+          "transition": "backgroundColor .2s",
         }
       }
     >

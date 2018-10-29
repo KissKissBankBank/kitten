@@ -111,9 +111,11 @@ const styles = {
     borderWidth: 2,
     borderStyle: 'solid',
     borderColor: COLORS.line1,
-    transition: 'background .2s',
+    transition: 'backgroundColor .2s',
     ':active': {
-      backgroundColor: COLORS.line1,
+      position: 'relative',
+      left: 5,
+      transition: 'left .5s',
     },
     ':hover': {
       backgroundColor: COLORS.background2,
@@ -129,7 +131,6 @@ const styles = {
     justifyContent: 'center',
     minWidth: 90,
     backgroundColor: COLORS.primary4,
-
     [`@media (min-width: ${ScreenConfig.S.min}px)`]: {
       display: 'flex',
     },
