@@ -69,15 +69,24 @@ const styles = {
   },
 
   counterText: {
-    fontSize: '4.125rem',
+    fontSize: '3rem',
     lineHeight: 0.7,
     whiteSpace: 'nowrap',
     display: 'block',
     paddingBottom: 4,
     margin: 0,
 
+    [`@media (min-width: ${ScreenConfig.XS.min}px)`]: {
+      fontSize: '4.125rem',
+    },
+
     [`@media (min-width: ${ScreenConfig.S.min}px)`]: {
-      fontSize: '8.25rem',
+      fontSize: '6rem',
+      paddingBottom: 6,
+    },
+
+    [`@media (min-width: ${ScreenConfig.M.min}px)`]: {
+      fontSize: '7.3rem',
       paddingBottom: 7,
     },
 
