@@ -26,51 +26,53 @@ const ManageContributionBase = ({
 
   return (
     <Deprecated warningMessage="Please use RewardCard sub-component to make your composition. You can check some examples on https://kisskissbankbank.github.io/kitten/">
-      {isSOrLessVersion && (
-        <Grid style={choiceButtonPaddings}>
-          <GridCol>
-            <div style={styles.myContribution}>
-              <RewardCardCheckedIcon />
-              <div style={styles.myContribution.text}>
-                <Text color="font1" size="tiny" weight="regular">
-                  {description}
-                  <br />
-                  <Text
-                    tag="a"
-                    href={linkHref}
-                    color="primary1"
-                    weight="regular"
-                    decoration="none"
-                  >
-                    {linkLabel}
+      <Fragment>
+        {isSOrLessVersion && (
+          <Grid style={choiceButtonPaddings}>
+            <GridCol>
+              <div style={styles.myContribution}>
+                <RewardCardCheckedIcon />
+                <div style={styles.myContribution.text}>
+                  <Text color="font1" size="tiny" weight="regular">
+                    {description}
+                    <br />
+                    <Text
+                      tag="a"
+                      href={linkHref}
+                      color="primary1"
+                      weight="regular"
+                      decoration="none"
+                    >
+                      {linkLabel}
+                    </Text>
                   </Text>
-                </Text>
+                </div>
               </div>
-            </div>
-          </GridCol>
-        </Grid>
-      )}
+            </GridCol>
+          </Grid>
+        )}
 
-      {!isSOrLessVersion && (
-        <div style={styles.myContribution}>
-          <RewardCardCheckedIcon />
-          <div style={styles.myContribution.text}>
-            <Text color="font1" size="tiny" weight="regular">
-              {description}
-              <br />
-              <Text
-                tag="a"
-                href={linkHref}
-                color="primary1"
-                weight="regular"
-                decoration="none"
-              >
-                {linkLabel}
+        {!isSOrLessVersion && (
+          <div style={styles.myContribution}>
+            <RewardCardCheckedIcon />
+            <div style={styles.myContribution.text}>
+              <Text color="font1" size="tiny" weight="regular">
+                {description}
+                <br />
+                <Text
+                  tag="a"
+                  href={linkHref}
+                  color="primary1"
+                  weight="regular"
+                  decoration="none"
+                >
+                  {linkLabel}
+                </Text>
               </Text>
-            </Text>
+            </div>
           </div>
-        </div>
-      )}
+        )}
+      </Fragment>
     </Deprecated>
   )
 }
