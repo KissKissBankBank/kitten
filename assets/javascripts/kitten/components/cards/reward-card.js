@@ -81,42 +81,97 @@ class RewardCardImage extends Component {
 
 class RewardCardComponent extends Component {
   static propTypes = {
-    titleAmount: PropTypes.string,
-    titleTag: PropTypes.string,
-    subtitle: PropTypes.string,
-    subtitleTag: PropTypes.string,
-    description: PropTypes.string,
+    titleAmount: deprecated(PropTypes.string, 'Use `RewardCard.Title` instead'),
+    titleTag: deprecated(PropTypes.string, 'Use `RewardCard.Title` instead'),
+    subtitle: deprecated(
+      PropTypes.string,
+      'Use `RewardCard.Row`, `RewardCard.RowContent` and ``RewardCard.RowSide` to compose your card content instead',
+    ),
+    subtitleTag: deprecated(
+      PropTypes.string,
+      'Use `RewardCard.Row`, `RewardCard.RowContent` and ``RewardCard.RowSide` to compose your card content instead',
+    ),
+    description: deprecated(
+      PropTypes.string,
+      'Use `RewardCard.Row`, `RewardCard.RowContent` and ``RewardCard.RowSide` to compose your card content instead',
+    ),
 
-    manageContributionDescription: PropTypes.string,
-    manageContributionLinkLabel: PropTypes.string,
-    manageContributionLinkHref: PropTypes.string,
+    manageContributionDescription: deprecated(
+      PropTypes.string,
+      'Use `RewardCard` sub-component instead',
+    ),
+    manageContributionLinkLabel: deprecated(
+      PropTypes.string,
+      'Use `RewardCard` sub-component instead',
+    ),
+    manageContributionLinkHref: deprecated(
+      PropTypes.string,
+      'Use `RewardCard` sub-component instead',
+    ),
 
-    buttonLabel: PropTypes.string,
-    buttonOnMouseEnter: PropTypes.func,
-    buttonOnMouseLeave: PropTypes.func,
-    buttonOnClick: PropTypes.func,
+    buttonLabel: deprecated(
+      PropTypes.string,
+      'Use `RewardCard.Action` to insert your button and its callbacks instead',
+    ),
+    buttonOnMouseEnter: deprecated(
+      PropTypes.func,
+      'Use `RewardCard.Action` to insert your button and its callbacks instead',
+    ),
+    buttonOnMouseLeave: deprecated(
+      PropTypes.func,
+      'Use `RewardCard.Action` to insert your button and its callbacks instead',
+    ),
+    buttonOnClick: deprecated(
+      PropTypes.func,
+      'Use `RewardCard.Action` to insert your button and its callbacks instead',
+    ),
 
-    imageProps: PropTypes.object,
+    imageProps: deprecated(PropTypes.object, 'Use `RewardCard.Image` instead'),
 
-    isDisabled: PropTypes.bool,
-    starred: PropTypes.bool,
-    starLabel: PropTypes.string,
+    isDisabled: deprecated(
+      PropTypes.bool,
+      'You should handle the disabled state direcly on your component',
+    ),
+    starred: deprecated(
+      PropTypes.bool,
+      'Use `RewardCard` sub-component instead',
+    ),
+    starLabel: deprecated(
+      PropTypes.string,
+      'Use `RewardCard` sub-component instead',
+    ),
 
-    version: PropTypes.oneOf(['default', 'tiny']),
-    viewportIsMobile: PropTypes.bool,
-    viewportIsSOrLess: PropTypes.bool,
-    viewportIsTabletOrLess: PropTypes.bool,
+    version: deprecated(
+      PropTypes.oneOf(['default', 'tiny']),
+      '`RewardCard` is no longer handle with media-queries. The version of the component now is handled by the size of the parent container.',
+    ),
+
+    viewportIsMobile: deprecated(
+      PropTypes.bool,
+      '`RewardCard` is no longer handle with media-queries. The version of the component now is handled by the size of the parent container.',
+    ),
+    viewportIsSOrLess: deprecated(
+      PropTypes.bool,
+      '`RewardCard` is no longer handle with media-queries. The version of the component now is handled by the size of the parent container.',
+    ),
+    viewportIsTabletOrLess: deprecated(
+      PropTypes.bool,
+      '`RewardCard` is no longer handle with media-queries. The version of the component now is handled by the size of the parent container.',
+    ),
 
     // Deprecated props
     titleDescription: deprecated(
       PropTypes.string,
-      'Use `subtitle` prop instead',
+      'Use `RewardCard.Row`, `RewardCard.RowContent` and ``RewardCard.RowSide` to compose your card content instead',
     ),
     textDescription: deprecated(
       PropTypes.string,
-      'Use `description` prop instead',
+      'Use `RewardCard.Row`, `RewardCard.RowContent` and ``RewardCard.RowSide` to compose your card content instead',
     ),
-    textTag: deprecated(PropTypes.string, 'Use `subtitleTag` prop instead'),
+    textTag: deprecated(
+      PropTypes.string,
+      'Use `RewardCard.Row`, `RewardCard.RowContent` and ``RewardCard.RowSide` to compose your card content instead',
+    ),
     myContribution: deprecated(
       PropTypes.string,
       'Use `manageContributionDescription` prop instead',
@@ -129,13 +184,34 @@ class RewardCardComponent extends Component {
       PropTypes.string,
       'Use `manageContributionLinkHref` prop instead',
     ),
-    button: deprecated(PropTypes.string, 'Use `buttonLabel` prop instead'),
-    titleContributors: deprecated(PropTypes.string, 'Use `infos` prop instead'),
-    titleDelivery: deprecated(PropTypes.string, 'Use `infos` prop instead'),
-    titleAvailability: deprecated(PropTypes.string, 'Use `infos` prop instead'),
-    valueContributors: deprecated(PropTypes.string, 'Use `infos` prop instead'),
-    valueDelivery: deprecated(PropTypes.string, 'Use `infos` prop instead'),
-    valueAvailability: deprecated(PropTypes.string, 'Use `infos` prop instead'),
+    button: deprecated(
+      PropTypes.string,
+      'Use `RewardCard.Action` to insert your button and its callbacks instead',
+    ),
+    titleContributors: deprecated(
+      PropTypes.string,
+      'Use `Reward.Info` to compose your card content now.',
+    ),
+    titleDelivery: deprecated(
+      PropTypes.string,
+      'Use `Reward.Info` to compose your card content now.',
+    ),
+    titleAvailability: deprecated(
+      PropTypes.string,
+      'Use `Reward.Info` to compose your card content now.',
+    ),
+    valueContributors: deprecated(
+      PropTypes.string,
+      'Use `Reward.Info` to compose your card content now.',
+    ),
+    valueDelivery: deprecated(
+      PropTypes.string,
+      'Use `Reward.Info` to compose your card content now.',
+    ),
+    valueAvailability: deprecated(
+      PropTypes.string,
+      'Use `Reward.Info` to compose your card content now.',
+    ),
   }
 
   isImageComponent = component => component.type.name === 'RewardCardImage'
