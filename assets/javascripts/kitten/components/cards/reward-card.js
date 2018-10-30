@@ -26,30 +26,21 @@ class RewardCardInfo extends Component {
     value: PropTypes.string,
     withMarginBottom: PropTypes.bool,
     disabled: PropTypes.bool,
-    style: PropTypes.object,
   }
 
   static defaultProps = {
     value: null,
     withMarginBottom: true,
     disabled: false,
-    style: {},
   }
 
   render() {
-    const {
-      label,
-      value,
-      withMarginBottom,
-      disabled,
-      style: customStyle,
-    } = this.props
+    const { label, value, withMarginBottom, disabled } = this.props
 
     const infoStyles = [
       style.info,
       withMarginBottom && style.infoWithMargin,
       disabled && style.disabled,
-      customStyle,
     ]
 
     return (
@@ -66,17 +57,15 @@ class RewardCardInfo extends Component {
 class RewardCardImage extends Component {
   static propTypes = {
     disabled: PropTypes.bool,
-    style: PropTypes.object,
   }
 
   static defaultProps = {
     disabled: false,
-    style: {},
   }
 
   render() {
     const { alt, disabled, ...others } = this.props
-    const imageStyles = [{ width: '100%' }, disabled && styles.disabled, style]
+    const imageStyles = [{ width: '100%' }, disabled && styles.disabled]
 
     return <img {...others} alt={alt || ''} style={imageStyles} />
   }

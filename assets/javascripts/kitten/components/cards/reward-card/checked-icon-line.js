@@ -6,7 +6,7 @@ import { CheckedIcon } from 'kitten/components/icons/checked-icon'
 import { pxToRem } from 'kitten/helpers/utils/typography'
 import COLORS from 'kitten/constants/colors-config'
 
-class RewardCardCheckedIconLineBase extends Component {
+export class RewardCardCheckedIconLine extends Component {
   render() {
     return (
       <div style={styles.base}>
@@ -29,5 +29,3 @@ const styles = {
     marginTop: `-${pxToRem(15)}`,
   },
 }
-
-export const RewardCardCheckedIconLine = Radium(RewardCardCheckedIconLineBase)

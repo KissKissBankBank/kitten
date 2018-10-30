@@ -15,19 +15,17 @@ class RewardCardTitleBase extends Component {
     children: PropTypes.string,
     tagName: PropTypes.string,
     disabled: PropTypes.bool,
-    style: PropTypes.object,
   }
 
   static defaultProps = {
     children: '',
     tagName: 'h6',
     disabled: false,
-    style: {},
   }
 
   render() {
-    const { children, tagName, disabled, style } = this.props
-    const titleStyles = [styles.base, disabled && styles.disabled, style]
+    const { children, tagName, disabled } = this.props
+    const titleStyles = [styles.base, disabled && styles.disabled]
     const strokeStyles = [styles.stroke, disabled && styles.disabled]
 
     return (
