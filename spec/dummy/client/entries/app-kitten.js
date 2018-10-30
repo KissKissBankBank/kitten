@@ -5,8 +5,8 @@ import ReactOnRails from 'react-on-rails'
 // Box
 import { DocLinkBox } from 'kitten/components/box/doc-link-box'
 import { InformationBox } from 'kitten/components/box/information-box'
-import { LinkBox } from 'kitten/components/box/link-box'
 import { KarlInformationBox } from 'kitten/karl/box/information-box'
+import { KarlLinkBox } from 'kitten/karl/box/link-box'
 
 // Buttons
 import { Button } from 'kitten/components/buttons/button'
@@ -67,6 +67,7 @@ import { KarlProjectSimilarLoader }
   from 'kitten/karl/cards/project-similar-card'
 import { KarlTriptych }
   from 'kitten/karl/cards/triptych'
+import { KarlVerticalCard } from 'kitten/karl/cards/vertical-card'
 import { KarlVerticalCardWithAction } from 'kitten/karl/cards/vertical-card-with-action'
 
 // Colors
@@ -342,8 +343,8 @@ ReactOnRails.register({
   // Box
   DocLinkBox,
   InformationBox,
-  LinkBox,
   KarlInformationBox,
+  KarlLinkBox,
 
   // Buttons
   Button,
@@ -391,6 +392,7 @@ ReactOnRails.register({
   KarlSimilarProjectsWithInfosCard,
   KarlProjectSimilarLoader,
   KarlTriptych,
+  KarlVerticalCard,
   KarlVerticalCardWithAction,
 
   // Dev

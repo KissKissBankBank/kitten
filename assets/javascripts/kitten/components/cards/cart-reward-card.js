@@ -11,6 +11,7 @@ import COLORS from 'kitten/constants/colors-config'
 import { ScreenConfig } from 'kitten/constants/screen-config'
 import { mediaQueries } from 'kitten/hoc/media-queries'
 import { domElementHelper } from 'kitten/helpers/dom/element-helper'
+import deprecated from 'prop-types-extra/lib/deprecated'
 
 const Marger = Radium(MargerBase)
 
@@ -20,19 +21,25 @@ class CartRewardCardComponent extends Component {
     textDescription: PropTypes.string.isRequired,
     titleTag: PropTypes.string,
     subtitle: PropTypes.string,
-    shippingTitle: PropTypes.string,
-    shippingValue: PropTypes.string,
     updateAmountTitle: PropTypes.string,
     updateAmountLink: PropTypes.string,
     onAfterClose: PropTypes.func,
     onCloseClick: PropTypes.func,
+
+    // Deprecated.
+    shippingTitle: deprecated(
+      PropTypes.string,
+      'Prefer use <CartRewardCard.Information />',
+    ),
+    shippingValue: deprecated(
+      PropTypes.string,
+      'Prefer use <CartRewardCard.Information />',
+    ),
   }
 
   static defaultProps = {
     titleTag: 'h1',
     subtitle: '',
-    shippingTitle: '',
-    shippingValue: '',
     updateAmountTitle: '',
     updateAmountLink: '',
     onAfterClose: () => {},
@@ -149,21 +156,26 @@ class CartRewardCardComponent extends Component {
       shippingValue,
       updateAmountTitle,
       updateAmountLink,
+      children,
     } = this.props
+
+    const informationElements = React.Children.toArray(children).filter(
+      child => child.type === CartRewardCard.Information,
+    )
 
     return (
       <Fragment>
         {shippingTitle &&
           shippingValue && (
             <Marger top="2">
-              <Text weight="regular" size="tiny">
-                {shippingTitle}{' '}
-                <Text weight="light" size="tiny">
-                  {shippingValue}
-                </Text>
-              </Text>
+              <CartRewardCard.Information
+                title={shippingTitle}
+                value={shippingValue}
+              />
             </Marger>
           )}
+
+        {informationElements}
 
         {updateAmountTitle && (
           <Marger top="2">
@@ -235,3 +247,16 @@ export const CartRewardCard = mediaQueries(CartRewardCardComponent, {
   viewportIsMobile: true,
   exposedMethods: ['close'],
 })
+
+CartRewardCard.Information = ({ title, value }) => (
+  <div>
+    <Text weight="regular" size="tiny">
+      {title} <Text weight="light">{value}</Text>
+    </Text>
+  </div>
+)
+
+CartRewardCard.Information.propTypes = {
+  title: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
+}

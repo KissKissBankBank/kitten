@@ -100,7 +100,6 @@ exports[`<CartRewardCard /> by default matches with snapshot 1`] = `
         </p>
       </div>
       
-      
     </div>
   </div>
   <style
@@ -227,22 +226,14 @@ exports[`<CartRewardCard /> with some props matches with snapshot 1`] = `
           Custom text description
         </p>
       </div>
-      <div
-        data-radium={true}
-        style={
-          Object {
-            "marginBottom": null,
-            "marginTop": "1.25rem",
-          }
-        }
-      >
+      <div>
         <span
           className="k-u-size-tiny k-u-weight-regular"
         >
           Custom shipping title
            
           <span
-            className="k-u-size-tiny k-u-weight-light"
+            className="k-u-weight-light"
           >
             Custom shipping value
           </span>
