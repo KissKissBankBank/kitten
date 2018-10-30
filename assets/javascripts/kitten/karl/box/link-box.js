@@ -12,7 +12,7 @@ export const KarlLinkBox = () => (
         <KarlExampleTitle>Link box</KarlExampleTitle>
         <Container>
           <Marger top="2" bottom="2">
-            <LinkBox title="In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo." />
+            <LinkBox title="In enim justo, rhoncus ut, imperdiet a." />
           </Marger>
         </Container>
       </GridCol>

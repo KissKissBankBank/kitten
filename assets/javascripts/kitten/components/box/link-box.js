@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
 import Radium, { StyleRoot } from 'radium'
 import PropTypes from 'prop-types'
 import { ArrowIcon } from 'kitten/components/icons/arrow-icon'
@@ -13,12 +13,11 @@ export class LinkBox extends Component {
     displayIcon: PropTypes.bool,
     href: PropTypes.string,
     isExternal: PropTypes.bool,
-
     title: PropTypes.string.isRequired,
     titeltag: PropTypes.string,
     text: PropTypes.string,
     textTag: PropTypes.string,
-    linkProps: PropTypes.shape({}),
+    linkProps: PropTypes.object,
   }
 
   static defaultProps = {
@@ -33,11 +32,9 @@ export class LinkBox extends Component {
   renderIcon() {
     const { displayIcon, children } = this.props
 
-    return (
-      <Fragment>
-        {displayIcon && <div style={styles.icon}>{children}</div>}
-      </Fragment>
-    )
+    if (!displayIcon) return null
+
+    return <div style={styles.icon}>{children}</div>
   }
 
   render() {
@@ -51,7 +48,7 @@ export class LinkBox extends Component {
       textTag,
     } = this.props
 
-    const target = isExternal ? { target: '_blank' } : {}
+    const target = isExternal ? { target: '_blank', rel: 'noopener' } : {}
 
     return (
       <StyleRoot>
