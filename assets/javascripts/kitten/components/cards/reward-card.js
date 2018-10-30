@@ -85,111 +85,114 @@ class RewardCardImage extends Component {
 
 class RewardCardComponent extends Component {
   static propTypes = {
-    titleAmount: deprecated(PropTypes.string, 'Use `RewardCard.Title` instead'),
-    titleTag: deprecated(PropTypes.string, 'Use `RewardCard.Title` instead'),
+    titleAmount: deprecated(
+      PropTypes.string,
+      'Use `RewardCard.Title` instead.',
+    ),
+    titleTag: deprecated(PropTypes.string, 'Use `RewardCard.Title` instead.'),
     subtitle: deprecated(
       PropTypes.string,
-      'Use `RewardCard.Row`, `RewardCard.RowContent` and `RewardCard.RowSide` to compose your card content instead',
+      'Use `RewardCard.Row`, `RewardCard.RowContent` and `RewardCard.RowSide` to compose your card content instead.',
     ),
     subtitleTag: deprecated(
       PropTypes.string,
-      'Use `RewardCard.Row`, `RewardCard.RowContent` and `RewardCard.RowSide` to compose your card content instead',
+      'Use `RewardCard.Row`, `RewardCard.RowContent` and `RewardCard.RowSide` to compose your card content instead.',
     ),
     description: deprecated(
       PropTypes.string,
-      'Use `RewardCard.Row`, `RewardCard.RowContent` and `RewardCard.RowSide` to compose your card content instead',
+      'Use `RewardCard.Row`, `RewardCard.RowContent` and `RewardCard.RowSide` to compose your card content instead.',
     ),
     manageContributionDescription: deprecated(
       PropTypes.string,
-      'Use `RewardCard` sub-component instead',
+      'Use `RewardCard` sub-component instead.',
     ),
     manageContributionLinkLabel: deprecated(
       PropTypes.string,
-      'Use `RewardCard` sub-component instead',
+      'Use `RewardCard` sub-component instead.',
     ),
     manageContributionLinkHref: deprecated(
       PropTypes.string,
-      'Use `RewardCard` sub-component instead',
+      'Use `RewardCard` sub-component instead.',
     ),
 
     buttonLabel: deprecated(
       PropTypes.string,
-      'Use `RewardCard.Action` to insert your button and its callbacks instead',
+      'Use `RewardCard.Action` to insert your button and its callbacks instead.',
     ),
     buttonOnMouseEnter: deprecated(
       PropTypes.func,
-      'Use `RewardCard.Action` to insert your button and its callbacks instead',
+      'Use `RewardCard.Action` to insert your button and its callbacks instead.',
     ),
     buttonOnMouseLeave: deprecated(
       PropTypes.func,
-      'Use `RewardCard.Action` to insert your button and its callbacks instead',
+      'Use `RewardCard.Action` to insert your button and its callbacks instead.',
     ),
     buttonOnClick: deprecated(
       PropTypes.func,
-      'Use `RewardCard.Action` to insert your button and its callbacks instead',
+      'Use `RewardCard.Action` to insert your button and its callbacks instead.',
     ),
 
-    imageProps: deprecated(PropTypes.object, 'Use `RewardCard.Image` instead'),
+    imageProps: deprecated(PropTypes.object, 'Use `RewardCard.Image` instead.'),
 
     isDisabled: deprecated(
       PropTypes.bool,
-      'You should handle the disabled state direcly on your component',
+      'You should handle the disabled state direcly on your component.',
     ),
     starred: deprecated(
       PropTypes.bool,
-      'Use `RewardCard` sub-component instead',
+      'Use `RewardCard` sub-component instead.',
     ),
     starLabel: deprecated(
       PropTypes.string,
-      'Use `RewardCard` sub-component instead',
+      'Use `RewardCard` sub-component instead.',
     ),
 
     version: deprecated(
       PropTypes.oneOf(['default', 'tiny']),
-      '`RewardCard` is no longer handle with media-queries. The version of the component now is handled by the size of the parent container.',
+      '`RewardCard` is no longer handled with media-queries. The version of the component now is handled by the size of the parent container.',
     ),
 
     viewportIsMobile: deprecated(
       PropTypes.bool,
-      '`RewardCard` is no longer handle with media-queries. The version of the component now is handled by the size of the parent container.',
+      '`RewardCard` is no longer handled with media-queries. The version of the component now is handled by the size of the parent container.',
     ),
     viewportIsSOrLess: deprecated(
       PropTypes.bool,
-      '`RewardCard` is no longer handle with media-queries. The version of the component now is handled by the size of the parent container.',
+      '`RewardCard` is no longer handled with media-queries. The version of the component now is handled by the size of the parent container.',
     ),
     viewportIsTabletOrLess: deprecated(
       PropTypes.bool,
-      '`RewardCard` is no longer handle with media-queries. The version of the component now is handled by the size of the parent container.',
+      '`RewardCard` is no longer handled with media-queries. The version of the component now is handled by the size of the parent container.',
     ),
 
     // Deprecated props
     titleDescription: deprecated(
       PropTypes.string,
-      'Use `RewardCard.Row`, `RewardCard.RowContent` and `RewardCard.RowSide` to compose your card content instead',
+      'Use `RewardCard.Row`, `RewardCard.RowContent` and `RewardCard.RowSide` to compose your card content instead.',
     ),
     textDescription: deprecated(
       PropTypes.string,
-      'Use `RewardCard.Row`, `RewardCard.RowContent` and `RewardCard.RowSide` to compose your card content instead',
+      'Use `RewardCard.Row`, `RewardCard.RowContent` and `RewardCard.RowSide` to compose your card content instead.',
     ),
     textTag: deprecated(
       PropTypes.string,
-      'Use `RewardCard.Row`, `RewardCard.RowContent` and `RewardCard.RowSide` to compose your card content instead',
+      'Use `RewardCard.Row`, `RewardCard.RowContent` and `RewardCard.RowSide` to compose your card content instead.',
     ),
     myContribution: deprecated(
       PropTypes.string,
-      'Use `manageContributionDescription` prop instead',
+      'Use `manageContributionDescription` prop instead.',
     ),
     manageContribution: deprecated(
       PropTypes.string,
-      'Use `manageContributionLinkLabel` prop instead',
+      'Use `manageContributionLinkLabel` prop instead.',
     ),
     manageContributionLink: deprecated(
       PropTypes.string,
-      'Use `manageContributionLinkHref` prop instead',
+      'Use `manageContributionLinkHref` prop instead.',
     ),
     button: deprecated(
       PropTypes.string,
-      'Use `RewardCard.Action` to insert your button and its callbacks instead',
+      'Use `RewardCard.Action` to insert your button and its callbacks instead.',
     ),
     titleContributors: deprecated(
       PropTypes.string,
