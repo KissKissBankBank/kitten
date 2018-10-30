@@ -25,9 +25,7 @@ exports[`<LinkBox /> by default matches with snapshot 1`] = `
       style={
         Object {
           "backgroundColor": "#fff",
-          "borderColor": "#eee",
-          "borderStyle": "solid",
-          "borderWidth": 2,
+          "border": "2px solid #eee",
           "boxSizing": "border-box",
           "color": "#222",
           "display": "flex",
@@ -47,10 +45,7 @@ exports[`<LinkBox /> by default matches with snapshot 1`] = `
             "flexDirection": "column",
             "flexGrow": 1,
             "justifyContent": "center",
-            "paddingBottom": 15,
-            "paddingLeft": 20,
-            "paddingRight": 18,
-            "paddingTop": 10,
+            "padding": "10px 18px 15px 20px",
           }
         }
       >
@@ -116,6 +111,7 @@ exports[`<LinkBox /> with some props matches with snapshot 1`] = `
   <a
     data-radium={true}
     href="#foobar"
+    rel="noopener"
     style={
       Object {
         "color": "#222",
@@ -135,9 +131,7 @@ exports[`<LinkBox /> with some props matches with snapshot 1`] = `
       style={
         Object {
           "backgroundColor": "#fff",
-          "borderColor": "#eee",
-          "borderStyle": "solid",
-          "borderWidth": 2,
+          "border": "2px solid #eee",
           "boxSizing": "border-box",
           "color": "#222",
           "display": "flex",
@@ -173,10 +167,7 @@ exports[`<LinkBox /> with some props matches with snapshot 1`] = `
             "flexDirection": "column",
             "flexGrow": 1,
             "justifyContent": "center",
-            "paddingBottom": 15,
-            "paddingLeft": 20,
-            "paddingRight": 18,
-            "paddingTop": 10,
+            "padding": "10px 18px 15px 20px",
           }
         }
       >

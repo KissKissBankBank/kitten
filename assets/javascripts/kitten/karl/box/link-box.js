@@ -24,7 +24,7 @@ export const KarlLinkBox = () => (
             <LinkBox
               title="In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo."
               text="Aenean leo ligula, porttitor eu, vitae eleifend
-                  ac, enimiquam ante."
+                   ac, enimiquam ante."
             />
           </Marger>
         </Container>

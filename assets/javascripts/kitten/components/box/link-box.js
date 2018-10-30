@@ -105,9 +105,7 @@ const styles = {
     boxSizing: 'border-box',
     color: COLORS.font1,
     backgroundColor: COLORS.background1,
-    borderWidth: 2,
-    borderStyle: 'solid',
-    borderColor: COLORS.line1,
+    border: `2px solid ${COLORS.line1}`,
     transition: 'backgroundColor .2s',
     ':active': {
       position: 'relative',
@@ -138,10 +136,7 @@ const styles = {
     flexDirection: 'column',
     flexGrow: 1,
     justifyContent: 'center',
-    paddingLeft: 20,
-    paddingRight: 18,
-    paddingTop: 10,
-    paddingBottom: 15,
+    padding: '10px 18px 15px 20px',
     [`@media (min-width: ${ScreenConfig.S.min}px)`]: {
       paddingLeft: 30,
       paddingRight: 20,
