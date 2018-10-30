@@ -5,20 +5,16 @@ import { pxToRem } from 'kitten/helpers/utils/typography'
 
 class RewardCardRowBase extends Component {
   static propTypes = {
+    children: PropTypes.node.isRequired,
     style: PropTypes.object,
-    children: PropTypes.node,
   }
 
   static defaultProps = {
     style: {},
-    children: '',
   }
 
   render() {
     const { children, style } = this.props
-
-    if (!children) return null
-
     const rowStyles = [styles, style]
 
     return <div style={rowStyles}>{children}</div>

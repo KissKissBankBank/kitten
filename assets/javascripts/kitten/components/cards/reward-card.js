@@ -23,7 +23,7 @@ const Text = Radium(TextBase)
 // same name will be deleted.
 class RewardCardInfo extends Component {
   static propTypes = {
-    label: PropTypes.string,
+    label: PropTypes.string.isRequired,
     value: PropTypes.string,
     withMarginBottom: PropTypes.bool,
     disabled: PropTypes.bool,
@@ -31,7 +31,6 @@ class RewardCardInfo extends Component {
   }
 
   static defaultProps = {
-    label: null,
     value: null,
     withMarginBottom: true,
     disabled: false,
@@ -46,8 +45,6 @@ class RewardCardInfo extends Component {
       disabled,
       style: customStyle,
     } = this.props
-
-    if (!label) return null
 
     const infoStyles = [
       style.info,
