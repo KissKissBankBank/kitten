@@ -30,9 +30,9 @@ exports[`<LinkBox /> by default matches with snapshot 1`] = `
           "color": "#222",
           "display": "flex",
           "justifyContent": "space-between",
-          "maxWidth": 440,
           "minHeight": 90,
           "transition": "backgroundColor .2s",
+          "width": "100%",
         }
       }
     >
@@ -58,7 +58,7 @@ exports[`<LinkBox /> by default matches with snapshot 1`] = `
           }
         >
           <span
-            className="k-u-color-font1 k-u-line-height-normal k-u-size-tiny k-u-weight-regular"
+            className="k-u-color-font1 k-u-line-height-normal k-u-size-default k-u-weight-regular"
           />
         </div>
         
@@ -136,9 +136,9 @@ exports[`<LinkBox /> with some props matches with snapshot 1`] = `
           "color": "#222",
           "display": "flex",
           "justifyContent": "space-between",
-          "maxWidth": 440,
           "minHeight": 90,
           "transition": "backgroundColor .2s",
+          "width": "100%",
         }
       }
     >
@@ -180,7 +180,7 @@ exports[`<LinkBox /> with some props matches with snapshot 1`] = `
           }
         >
           <span
-            className="k-u-color-font1 k-u-line-height-normal k-u-size-tiny k-u-weight-regular"
+            className="k-u-color-font1 k-u-line-height-normal k-u-size-default k-u-weight-regular"
           >
             Lorem ipsum
           </span>

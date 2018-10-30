@@ -46,6 +46,7 @@ export class LinkBox extends Component {
       linkProps,
       titleTag,
       textTag,
+      viewportIsMobile,
     } = this.props
 
     const target = isExternal ? { target: '_blank', rel: 'noopener' } : {}
@@ -60,7 +61,7 @@ export class LinkBox extends Component {
                 <Text
                   tag={titleTag}
                   weight="regular"
-                  size="tiny"
+                  size={viewportIsMobile ? 'tiny' : 'default'}
                   color="font1"
                   lineHeight="normal"
                 >
@@ -101,7 +102,7 @@ const styles = {
     display: 'flex',
     justifyContent: 'space-between',
     minHeight: 90,
-    maxWidth: 440,
+    width: '100%',
     boxSizing: 'border-box',
     color: COLORS.font1,
     backgroundColor: COLORS.background1,
