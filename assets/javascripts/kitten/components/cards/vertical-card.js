@@ -11,7 +11,7 @@ export class VerticalCard extends Component {
     imageProps: PropTypes.shape({
       src: PropTypes.string.isRequired,
       alt: PropTypes.string.isRequired,
-      style: PropTypes.shape({}),
+      style: PropTypes.object,
     }).isRequired,
     title: PropTypes.string.isRequired,
     titleTag: PropTypes.string,
