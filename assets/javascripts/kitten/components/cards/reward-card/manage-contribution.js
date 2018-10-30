@@ -5,6 +5,7 @@ import { Grid as GridBase, GridCol } from 'kitten/components/grid/grid'
 import { Text } from 'kitten/components/typography/text'
 import { RewardCardCheckedIcon } from 'kitten/components/cards/reward-card/checked-icon'
 import { styles } from 'kitten/components/cards/reward-card'
+import { Deprecated } from 'kitten/helpers/utils/deprecated'
 
 const Grid = Radium(GridBase)
 
@@ -24,7 +25,7 @@ const ManageContributionBase = ({
     : styles.choiceButton.paddings
 
   return (
-    <Fragment>
+    <Deprecated warningMessage="Please use RewardCard sub-component to make your composition. You can check some examples on https://kisskissbankbank.github.io/kitten/">
       {isSOrLessVersion && (
         <Grid style={choiceButtonPaddings}>
           <GridCol>
@@ -70,7 +71,7 @@ const ManageContributionBase = ({
           </div>
         </div>
       )}
-    </Fragment>
+    </Deprecated>
   )
 }
 

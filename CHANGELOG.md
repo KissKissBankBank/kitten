@@ -6,6 +6,17 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Fix: Update `CrowdfundingCard` props.
 - Feature: Update `RewardCard` button width.
+- Feature: Deprecate the following components in
+  `kitten/components/cards/reward-card`:
+  - `RewardCardAction`
+  - `RewardCardActionOnMOrMore`
+  - `RewardCardButton`
+  - `RewardCardContent`
+  - `RewardCardImage`
+  - `RewardCardInfos`
+  - `Info`
+  - `LegacyRewardCardContainer`
+  - `ManageContribution`
 
 ## [23.7.0] - 2018-10-24
 

@@ -15,6 +15,7 @@ import {
   RewardCardAction,
   RewardCardActionOnMOrMore,
 } from 'kitten/components/cards/reward-card/action'
+import { Deprecated } from 'kitten/helpers/utils/deprecated'
 
 const Grid = Radium(GridBase)
 const GridCol = Radium(GridColBase)
@@ -123,78 +124,80 @@ export class LegacyRewardCardContainer extends Component {
     if (!titleAmount) return null
 
     return (
-      <StyleRoot {...others} style={cardStyles}>
-        <Marger
-          bottom={this.isSOrLessVersion() ? 0 : 4}
-          top={this.isSOrLessVersion() ? 3 : 4}
-        >
-          <Grid style={cardPaddings}>
-            <GridCol {...leftColumnProps}>
-              {titleAmount && (
-                <LegacyRewardCardContent
+      <Deprecated warningMessage="Please use RewardCard sub-component to make your composition. You can check some examples on https://kisskissbankbank.github.io/kitten/">
+        <StyleRoot {...others} style={cardStyles}>
+          <Marger
+            bottom={this.isSOrLessVersion() ? 0 : 4}
+            top={this.isSOrLessVersion() ? 3 : 4}
+          >
+            <Grid style={cardPaddings}>
+              <GridCol {...leftColumnProps}>
+                {titleAmount && (
+                  <LegacyRewardCardContent
+                    {...this.props}
+                    subtitle={subtitle || titleDescription}
+                    subtitleTag={subtitleTag || textTag}
+                    description={description || textDescription}
+                    isTinyVersion={this.isTinyVersion()}
+                  />
+                )}
+
+                <RewardCardInfos
+                  infos={this.legacyInfos()}
                   {...this.props}
-                  subtitle={subtitle || titleDescription}
-                  subtitleTag={subtitleTag || textTag}
-                  description={description || textDescription}
                   isTinyVersion={this.isTinyVersion()}
+                  viewportIsTabletOrLess={viewportIsTabletOrLess}
                 />
-              )}
 
-              <RewardCardInfos
-                infos={this.legacyInfos()}
-                {...this.props}
-                isTinyVersion={this.isTinyVersion()}
-                viewportIsTabletOrLess={viewportIsTabletOrLess}
-              />
-
-              {!this.isSOrLessVersion() && (
-                <RewardCardActionOnMOrMore
-                  {...this.props}
-                  manageContributionDescription={
-                    manageContributionDescription || myContribution
-                  }
-                  manageContributionLinkLabel={
-                    manageContributionLinkLabel || manageContribution
-                  }
-                  manageContributionLinkHref={
-                    manageContributionLinkHref || manageContributionLink
-                  }
-                  buttonLabel={buttonLabel || button}
-                  isTinyVersion={this.isTinyVersion()}
-                  isSOrLessVersion={this.isSOrLessVersion()}
-                />
-              )}
-            </GridCol>
-
-            {shouldDisplayImage && (
-              <GridCol {...rightColumnProps} style={cardImageStyles}>
-                <Marger bottom={!myContribution ? 2 : null}>
-                  <RewardCardImage {...this.props} />
-                </Marger>
+                {!this.isSOrLessVersion() && (
+                  <RewardCardActionOnMOrMore
+                    {...this.props}
+                    manageContributionDescription={
+                      manageContributionDescription || myContribution
+                    }
+                    manageContributionLinkLabel={
+                      manageContributionLinkLabel || manageContribution
+                    }
+                    manageContributionLinkHref={
+                      manageContributionLinkHref || manageContributionLink
+                    }
+                    buttonLabel={buttonLabel || button}
+                    isTinyVersion={this.isTinyVersion()}
+                    isSOrLessVersion={this.isSOrLessVersion()}
+                  />
+                )}
               </GridCol>
-            )}
-          </Grid>
 
-          {this.isSOrLessVersion() && (
-            <RewardCardAction
-              {...this.props}
-              manageContributionDescription={
-                manageContributionDescription || myContribution
-              }
-              manageContributionLinkLabel={
-                manageContributionLinkLabel || manageContribution
-              }
-              manageContributionLinkHref={
-                manageContributionLinkHref || manageContributionLink
-              }
-              buttonLabel={buttonLabel || button}
-              isTinyVersion={this.isTinyVersion()}
-              isSOrLessVersion={this.isSOrLessVersion()}
-              topMargin={withImageOnTinyVersion ? 2 : 0}
-            />
-          )}
-        </Marger>
-      </StyleRoot>
+              {shouldDisplayImage && (
+                <GridCol {...rightColumnProps} style={cardImageStyles}>
+                  <Marger bottom={!myContribution ? 2 : null}>
+                    <RewardCardImage {...this.props} />
+                  </Marger>
+                </GridCol>
+              )}
+            </Grid>
+
+            {this.isSOrLessVersion() && (
+              <RewardCardAction
+                {...this.props}
+                manageContributionDescription={
+                  manageContributionDescription || myContribution
+                }
+                manageContributionLinkLabel={
+                  manageContributionLinkLabel || manageContribution
+                }
+                manageContributionLinkHref={
+                  manageContributionLinkHref || manageContributionLink
+                }
+                buttonLabel={buttonLabel || button}
+                isTinyVersion={this.isTinyVersion()}
+                isSOrLessVersion={this.isSOrLessVersion()}
+                topMargin={withImageOnTinyVersion ? 2 : 0}
+              />
+            )}
+          </Marger>
+        </StyleRoot>
+      </Deprecated>
     )
   }
 }

@@ -3,6 +3,7 @@ import Radium from 'radium'
 import PropTypes from 'prop-types'
 import { Text as TextBase } from 'kitten/components/typography/text'
 import { styles } from 'kitten/components/cards/reward-card'
+import { Deprecated } from 'kitten/helpers/utils/deprecated'
 
 const Text = Radium(TextBase)
 
@@ -19,12 +20,14 @@ export const Info = ({
     : styles.infos.lists
 
   const InfoBase = (
-    <Text color="font1" weight="regular" style={infosLists}>
-      {`${label} `}
-      <Text color="font1" weight="light">
-        {value}
+    <Deprecated warningMessage="Please use RewardCard sub-component to make your composition. You can check some examples on https://kisskissbankbank.github.io/kitten/">
+      <Text color="font1" weight="regular" style={infosLists}>
+        {`${label} `}
+        <Text color="font1" weight="light">
+          {value}
+        </Text>
       </Text>
-    </Text>
+    </Deprecated>
   )
 
   return (
