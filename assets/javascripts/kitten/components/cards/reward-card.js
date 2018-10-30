@@ -102,7 +102,7 @@ class RewardCardComponent extends Component {
     ),
     description: deprecated(
       PropTypes.string,
-      'Use `RewardCard.Row`, `RewardCard.RowContent` and ``RewardCard.RowSide` to compose your card content instead',
+      'Use `RewardCard.Row`, `RewardCard.RowContent` and `RewardCard.RowSide` to compose your card content instead',
     ),
 
     manageContributionDescription: deprecated(
