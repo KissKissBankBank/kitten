@@ -56,9 +56,7 @@ class RewardCardInfo extends Component {
     return (
       <Text size="tiny" color="font1" weight="regular" style={infoStyles}>
         {`${label} `}
-        <Text color="font1" weight="light">
-          {value}
-        </Text>
+        <Text weight="light">{value}</Text>
       </Text>
     )
   }

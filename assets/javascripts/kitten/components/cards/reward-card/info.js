@@ -23,9 +23,7 @@ export const Info = ({
     <Deprecated warningMessage="Please use RewardCard sub-component to make your composition. You can check some examples on https://kisskissbankbank.github.io/kitten/">
       <Text color="font1" weight="regular" style={infosLists}>
         {`${label} `}
-        <Text color="font1" weight="light">
-          {value}
-        </Text>
+        <Text weight="light">{value}</Text>
       </Text>
     </Deprecated>
   )
