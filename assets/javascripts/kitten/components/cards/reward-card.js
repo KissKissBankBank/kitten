@@ -13,8 +13,8 @@ import { RewardCardTitle } from 'kitten/components/cards/reward-card/title'
 import { RewardCardRow } from 'kitten/components/cards/reward-card/row'
 import { RewardCardRowContent } from 'kitten/components/cards/reward-card/row-content'
 import { RewardCardRowSide } from 'kitten/components/cards/reward-card/row-side'
-import { RewardCardCheckedIconLine } from 'kitten/components/cards/reward-card/checked-icon-line'
 import { RewardCardStarredBadge } from 'kitten/components/cards/reward-card/starred-badge'
+import { RewardCardCheckedSection } from 'kitten/components/cards/reward-card/checked-section'
 
 const Text = Radium(TextBase)
 
@@ -78,7 +78,7 @@ export class RewardCard extends Component {
   static Title = RewardCardTitle
   static Image = Radium(RewardCardImage)
   static Info = RewardCardInfo
-  static CheckedIconLine = RewardCardCheckedIconLine
+  static CheckedSection = RewardCardCheckedSection
   static StarredBadge = RewardCardStarredBadge
 
   static propTypes = {

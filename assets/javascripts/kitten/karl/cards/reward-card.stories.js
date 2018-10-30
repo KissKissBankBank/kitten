@@ -173,42 +173,39 @@ storiesOf('Cards/RewardCard', module)
                       </Button>
                     </RewardCard.RowContent>
                     {withImage && (
-                      <RewardCard.RowSide style={styles.row.emptySide} />
+                      <RewardCard.RowSide withVerticalMargins={false} />
                     )}
                   </RewardCard.Row>
                 )}
                 {alreadyContributed && (
-                  <Fragment>
-                    <RewardCard.CheckedIconLine />
-                    <RewardCard.Row style={styles.contributedSection.base}>
-                      <Text
-                        color="font1"
-                        size="tiny"
-                        tag="p"
-                        style={styles.contributedSection.items}
-                      >
-                        {text(
-                          'Manage contribution description',
-                          'You contributed to this project.',
-                          contentGroupId,
-                        )}
-                      </Text>
-                      <Text
-                        color="primary1"
-                        size="tiny"
-                        weight="regular"
-                        tag="a"
-                        href="#"
-                        style={styles.contributedSection.items}
-                      >
-                        {text(
-                          'Manage contribution description',
-                          'Manage my contribution',
-                          contentGroupId,
-                        )}
-                      </Text>
-                    </RewardCard.Row>
-                  </Fragment>
+                  <RewardCard.CheckedSection>
+                    <Text
+                      color="font1"
+                      size="tiny"
+                      tag="p"
+                      style={styles.checkedSectionItems}
+                    >
+                      {text(
+                        'Manage contribution description',
+                        'You contributed to this project.',
+                        contentGroupId,
+                      )}
+                    </Text>
+                    <Text
+                      color="primary1"
+                      size="tiny"
+                      weight="regular"
+                      tag="a"
+                      href="#"
+                      style={styles.checkedSectionItems}
+                    >
+                      {text(
+                        'Manage contribution description',
+                        'Manage my contribution',
+                        contentGroupId,
+                      )}
+                    </Text>
+                  </RewardCard.CheckedSection>
                 )}
               </RewardCard>
             </GridCol>
@@ -295,23 +292,14 @@ const styles = {
       margin: `0 ${pxToRem(15)}`,
     },
   },
+  checkedSectionItems: {
+    lineHeight: pxToRem(20),
+    display: 'flex',
+    margin: 0,
+    padding: 0,
+  },
   disabled: {
     filter: 'grayscale(1) opacity(.4)',
     cursor: 'not-allowed',
-  },
-  contributedSection: {
-    base: {
-      marginTop: pxToRem(10),
-      marginBottom: pxToRem(5),
-      justifyContent: 'center',
-      alignItems: 'center',
-      flexDirection: 'column',
-    },
-    items: {
-      lineHeight: pxToRem(20),
-      display: 'flex',
-      margin: 0,
-      padding: 0,
-    },
   },
 }
