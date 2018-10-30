@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react'
+import deprecated from 'prop-types-extra/lib/deprecated'
 import Radium, { StyleRoot } from 'radium'
 import PropTypes from 'prop-types'
 import { Marger } from 'kitten/components/layout/marger'
@@ -16,11 +17,27 @@ import {
   RewardCardActionOnMOrMore,
 } from 'kitten/components/cards/reward-card/action'
 import { Deprecated } from 'kitten/helpers/utils/deprecated'
+import { mediaQueries } from 'kitten/hoc/media-queries'
 
 const Grid = Radium(GridBase)
 const GridCol = Radium(GridColBase)
 
-export class LegacyRewardCardContainer extends Component {
+class LegacyRewardCardContainerBase extends Component {
+  static propTypes = {
+    viewportIsMobile: deprecated(
+      PropTypes.bool,
+      '`RewardCard` is no longer handled with media-queries. The version of the component now is handled by the size of the parent container.',
+    ),
+    viewportIsSOrLess: deprecated(
+      PropTypes.bool,
+      '`RewardCard` is no longer handled with media-queries. The version of the component now is handled by the size of the parent container.',
+    ),
+    viewportIsTabletOrLess: deprecated(
+      PropTypes.bool,
+      '`RewardCard` is no longer handled with media-queries. The version of the component now is handled by the size of the parent container.',
+    ),
+  }
+
   isTinyVersion = () =>
     this.props.version === 'tiny' || this.props.viewportIsMobile
 
@@ -306,3 +323,12 @@ export const styles = {
     display: 'block',
   },
 }
+
+export const LegacyRewardCardContainer = mediaQueries(
+  Radium(LegacyRewardCardContainerBase),
+  {
+    viewportIsTabletOrLess: true,
+    viewportIsSOrLess: true,
+    viewportIsMobile: true,
+  },
+)

@@ -3,7 +3,6 @@ import Radium, { StyleRoot } from 'radium'
 import PropTypes from 'prop-types'
 import deprecated from 'prop-types-extra/lib/deprecated'
 import COLORS from 'kitten/constants/colors-config'
-import { mediaQueries } from 'kitten/hoc/media-queries'
 import {
   LegacyRewardCardContainer,
   styles as legacyStyles,
@@ -83,7 +82,16 @@ class RewardCardImage extends Component {
   }
 }
 
-class RewardCardComponent extends Component {
+export class RewardCard extends Component {
+  static Row = RewardCardRow
+  static RowContent = RewardCardRowContent
+  static RowSide = RewardCardRowSide
+  static Title = RewardCardTitle
+  static Image = Radium(RewardCardImage)
+  static Info = RewardCardInfo
+  static CheckedIconLine = RewardCardCheckedIconLine
+  static StarredBadge = RewardCardStarredBadge
+
   static propTypes = {
     titleAmount: deprecated(
       PropTypes.string,
@@ -149,19 +157,6 @@ class RewardCardComponent extends Component {
 
     version: deprecated(
       PropTypes.oneOf(['default', 'tiny']),
-      '`RewardCard` is no longer handled with media-queries. The version of the component now is handled by the size of the parent container.',
-    ),
-
-    viewportIsMobile: deprecated(
-      PropTypes.bool,
-      '`RewardCard` is no longer handled with media-queries. The version of the component now is handled by the size of the parent container.',
-    ),
-    viewportIsSOrLess: deprecated(
-      PropTypes.bool,
-      '`RewardCard` is no longer handled with media-queries. The version of the component now is handled by the size of the parent container.',
-    ),
-    viewportIsTabletOrLess: deprecated(
-      PropTypes.bool,
       '`RewardCard` is no longer handled with media-queries. The version of the component now is handled by the size of the parent container.',
     ),
 
@@ -260,20 +255,3 @@ const style = {
 // This export handles retro-compatibility.
 // TODO: remove this export when deleting all deprecated components.
 export const styles = legacyStyles
-
-const RewardCardBase = mediaQueries(Radium(RewardCardComponent), {
-  viewportIsTabletOrLess: true,
-  viewportIsSOrLess: true,
-  viewportIsMobile: true,
-})
-
-RewardCardBase.Row = RewardCardRow
-RewardCardBase.RowContent = RewardCardRowContent
-RewardCardBase.RowSide = RewardCardRowSide
-RewardCardBase.Title = RewardCardTitle
-RewardCardBase.Image = Radium(RewardCardImage)
-RewardCardBase.Info = RewardCardInfo
-RewardCardBase.CheckedIconLine = RewardCardCheckedIconLine
-RewardCardBase.StarredBadge = RewardCardStarredBadge
-
-export const RewardCard = RewardCardBase
