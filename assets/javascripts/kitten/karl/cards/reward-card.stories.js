@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
 import {
@@ -12,7 +12,7 @@ import { StyleRoot } from 'radium'
 import { RewardCard } from 'kitten/components/cards/reward-card'
 import { Grid, GridCol } from 'kitten/components/grid/grid'
 import { Marger } from 'kitten/components/layout/marger'
-import { Text } from 'kitten/components/typography/text'
+import { Text as TextBase } from 'kitten/components/typography/text'
 import { pxToRem } from 'kitten/helpers/utils/typography'
 import Radium from 'radium'
 import { Button as ButtonBase } from 'kitten/components/buttons/button'
@@ -22,291 +22,205 @@ import { List } from 'kitten/components/lists/list'
 
 const Button = Radium(ButtonBase)
 const Paragraph = Radium(ParagraphBase)
+const Text = Radium(TextBase)
 
 storiesOf('Cards/RewardCard', module)
   .addDecorator(withKnobs)
   .add(
-    'Basic RewardCard',
+    'RewardCard',
     withInfo(
       'The RewardCard is a card with two versions depending on the parent container width. It can be composed with many sub-components.',
-    )(() => (
-      <StyleRoot>
-        <Grid>
-          <GridCol offset="1" col="10">
-            <RewardCard>
-              <RewardCard.Row>
-                <RewardCard.RowContent>
-                  <RewardCard.Title>100$</RewardCard.Title>
-                  <Marger top="3" bottom="1">
-                    <Text color="font1" tag="p" weight="bold">
-                      Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                    </Text>
-                  </Marger>
-                  <Marger top="1" bottom="2">
+    )(() => {
+      const versionGroupId = 'Versions'
+      const contentGroupId = 'Content'
+
+      const starred = boolean('Starred', true, versionGroupId)
+      const alreadyContributed = boolean(
+        'Has user contributed?',
+        true,
+        versionGroupId,
+      )
+      const hasRewardLabel = boolean('Has reward label?', true, versionGroupId)
+      const withImage = boolean('With image', true, versionGroupId)
+      const disabled = boolean('Disabled', false, versionGroupId)
+      const completed = boolean('Completed', false, versionGroupId)
+
+      return (
+        <div style={styles.storyContainer}>
+          <Grid>
+            <GridCol offset="1" col="10">
+              <RewardCard>
+                <RewardCard.Row>
+                  <RewardCard.RowContent>
+                    {starred && (
+                      <RewardCard.StarredBadge disabled={disabled}>
+                        <Text size="nano" color="font1" weight="bold">
+                          {text(
+                            'Starred label',
+                            'Starred reward',
+                            contentGroupId,
+                          )}
+                        </Text>
+                        <Text size="nano" color="font1">
+                          {text(
+                            'Starred description',
+                            'Lorem ipsum',
+                            contentGroupId,
+                          )}
+                        </Text>
+                      </RewardCard.StarredBadge>
+                    )}
+                    <RewardCard.Title disabled={disabled}>
+                      {text('Title', '100$', contentGroupId)}
+                    </RewardCard.Title>
+                    {hasRewardLabel && (
+                      <Text
+                        color="font1"
+                        tag="p"
+                        weight="bold"
+                        style={[styles.label.base, disabled && styles.disabled]}
+                      >
+                        {text(
+                          'Reward label',
+                          'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',
+                          contentGroupId,
+                        )}
+                      </Text>
+                    )}
                     <Paragraph
-                      style={styles.description}
+                      style={[styles.description, disabled && styles.disabled]}
                       modifier="quaternary"
                       margin={false}
                     >
-                      Quaestione igitur per multiplices dilatata fortunas cum
-                      ambigerentur quaedam, non nulla levius actitata constaret,
-                      post multorum clades Apollinares ambo pater et filius in
-                      exilium acti cum ad locum Crateras nomine pervenissent,
-                      villam scilicet suam quae ab Antiochia vicensimo et quarto
-                      disiungitur lapide, ut mandatum est, fractis cruribus
-                      occiduntur.
+                      {text(
+                        'Reward description',
+                        `Superatis Tauri montis verticibus qui ad solis ortum sublimius attolluntur, Cilicia spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro adnexa Isauria, pari sorte uberi palmite viget et frugibus minutis, quam mediam navigabile flumen Calycadnus interscindit.`,
+                        contentGroupId,
+                      )}
                     </Paragraph>
-                  </Marger>
-                  <List>
-                    <RewardCard.Info
-                      key="Contributors"
-                      label="Contributors:"
-                      value="35"
-                    />
-                    <RewardCard.Info
-                      key="Availability"
-                      label="Availability:"
-                      value="23/100"
-                    />
-                    <RewardCard.Info
-                      key="Delivery"
-                      label="Delivery:"
-                      value="January 2019"
-                      withMarginBottom={false}
-                    />
-                  </List>
-                </RewardCard.RowContent>
-                <RewardCard.RowSide>
-                  <RewardCard.Image
-                    src="http://via.placeholder.com/200x240/caf4fe/caf4fe"
-                    alt="My reward"
-                  />
-                </RewardCard.RowSide>
-              </RewardCard.Row>
-              <RewardCard.Row>
-                <RewardCard.Action>
-                  <Button
-                    size="big"
-                    modifier="helium"
-                    type="button"
-                    aria-labelledby="Contribute"
-                    style={styles.button}
-                  >
-                    Contribute
-                  </Button>
-                </RewardCard.Action>
-              </RewardCard.Row>
-            </RewardCard>
-          </GridCol>
-        </Grid>
-      </StyleRoot>
-    )),
-  )
-  .add(
-    'Complex RewardCard',
-    withInfo(
-      'This version of RewardCard adds a badge to indicate that the reward is starred and  a section to display if the user already took to a reward.',
-    )(() => (
-      <StyleRoot>
-        <Grid>
-          <GridCol offset="1" col="10">
-            <RewardCard>
-              <RewardCard.Row>
-                <RewardCard.RowContent>
-                  <RewardCard.StarredBadge>
-                    <Text size="nano" color="font1" weight="bold">
-                      Starred reward
-                    </Text>
-                    <Text size="nano" color="font1">
-                      Lorem ipsum
-                    </Text>
-                  </RewardCard.StarredBadge>
-                  <RewardCard.Title>100$</RewardCard.Title>
-                  <Marger top="3" bottom="1">
-                    <Text color="font1" tag="p" weight="bold">
-                      Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                    </Text>
-                  </Marger>
-                  <Marger top="1" bottom="2">
-                    <Paragraph
-                      style={styles.description}
-                      modifier="quaternary"
-                      margin={false}
-                    >
-                      Quaestione igitur per multiplices dilatata fortunas cum
-                      ambigerentur quaedam, non nulla levius actitata constaret,
-                      post multorum clades Apollinares ambo pater et filius in
-                      exilium acti cum ad locum Crateras nomine pervenissent,
-                      villam scilicet suam quae ab Antiochia vicensimo et quarto
-                      disiungitur lapide, ut mandatum est, fractis cruribus
-                      occiduntur.
-                    </Paragraph>
-                  </Marger>
-                  <List>
-                    <RewardCard.Info
-                      key="Contributors"
-                      label="Contributors:"
-                      value="35"
-                    />
-                    <RewardCard.Info
-                      key="Availability"
-                      label="Availability:"
-                      value="23/100"
-                    />
-                    <RewardCard.Info
-                      key="Delivery"
-                      label="Delivery:"
-                      value="January 2019"
-                      withMarginBottom={false}
-                    />
-                  </List>
-                </RewardCard.RowContent>
-                <RewardCard.RowSide>
-                  <RewardCard.Image
-                    src="http://via.placeholder.com/200x240/caf4fe/caf4fe"
-                    alt="My reward"
-                  />
-                </RewardCard.RowSide>
-              </RewardCard.Row>
-              <RewardCard.Row>
-                <RewardCard.Action>
-                  <Button
-                    size="big"
-                    modifier="helium"
-                    type="button"
-                    aria-labelledby="Contribute"
-                    style={styles.button}
-                  >
-                    Contribute
-                  </Button>
-                </RewardCard.Action>
-              </RewardCard.Row>
-              <RewardCard.CheckedIconLine />
-              <RewardCard.Row style={styles.contributedSection.base}>
-                <Text
-                  color="font1"
-                  size="tiny"
-                  tag="p"
-                  style={styles.contributedSection.items}
-                >
-                  You contributed to this project.
-                </Text>
-                <Text
-                  color="primary1"
-                  size="tiny"
-                  weight="regular"
-                  tag="a"
-                  href="#"
-                  style={styles.contributedSection.items}
-                >
-                  Manage my contribution
-                </Text>
-              </RewardCard.Row>
-            </RewardCard>
-          </GridCol>
-        </Grid>
-      </StyleRoot>
-    )),
-  )
-  .add(
-    'Disabled RewardCard',
-    withInfo(
-      'This a version of the disabled RewardCard. `RewardCard.Title`, `RewardCard.Info` and `RewardCard.Image accepts a `disabled` prop to easily implement this state.',
-    )(() => (
-      <StyleRoot>
-        <Grid>
-          <GridCol offset="1" col="10">
-            <RewardCard>
-              <RewardCard.Row>
-                <RewardCard.RowContent>
-                  <RewardCard.StarredBadge disabled>
-                    <Text size="nano" color="font1" weight="bold">
-                      Starred reward
-                    </Text>
-                    <Text size="nano" color="font1">
-                      Lorem ipsum
-                    </Text>
-                  </RewardCard.StarredBadge>
-                  <RewardCard.Title disabled>100$</RewardCard.Title>
-                  <Marger top="3" bottom="1">
-                    <Text
-                      color="font1"
-                      tag="p"
-                      weight="bold"
-                      style={styles.disabled}
-                    >
-                      Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                    </Text>
-                  </Marger>
-                  <Marger top="1" bottom="2">
-                    <Paragraph
-                      style={[styles.description, styles.disabled]}
-                      modifier="quaternary"
-                      margin={false}
-                    >
-                      Quaestione igitur per multiplices dilatata fortunas cum
-                      ambigerentur quaedam, non nulla levius actitata constaret,
-                      post multorum clades Apollinares ambo pater et filius in
-                      exilium acti cum ad locum Crateras nomine pervenissent,
-                      villam scilicet suam quae ab Antiochia vicensimo et quarto
-                      disiungitur lapide, ut mandatum est, fractis cruribus
-                      occiduntur.
-                    </Paragraph>
-                  </Marger>
-                  <List>
-                    <RewardCard.Info
-                      key="Contributors"
-                      label="Contributors:"
-                      value="35"
-                      disabled
-                    />
-                    <RewardCard.Info
-                      key="Availability"
-                      label="Availability:"
-                      value="23/100"
-                      disabled
-                    />
-                    <RewardCard.Info
-                      key="Delivery"
-                      label="Delivery:"
-                      value="January 2019"
-                      withMarginBottom={false}
-                      disabled
-                    />
-                  </List>
-                </RewardCard.RowContent>
-                <RewardCard.RowSide>
-                  <RewardCard.Image
-                    src="http://via.placeholder.com/200x240/caf4fe/caf4fe"
-                    alt="My reward"
-                    disabled
-                  />
-                </RewardCard.RowSide>
-              </RewardCard.Row>
-              <RewardCard.Row>
-                <RewardCard.Action>
-                  <Button
-                    size="big"
-                    modifier="helium"
-                    type="button"
-                    aria-labelledby="Sold out"
-                    style={styles.button}
-                    disabled
-                  >
-                    Sold out
-                  </Button>
-                </RewardCard.Action>
-              </RewardCard.Row>
-            </RewardCard>
-          </GridCol>
-        </Grid>
-      </StyleRoot>
-    )),
+                    <List>
+                      <RewardCard.Info
+                        key="Contributors"
+                        label={text(
+                          'Info 1 label:',
+                          'Contributors',
+                          contentGroupId,
+                        )}
+                        value={text('Info 1 value:', '35', contentGroupId)}
+                        disabled={disabled}
+                      />
+                      <RewardCard.Info
+                        key="Availability"
+                        label={text(
+                          'Info 2 label:',
+                          'Availability:',
+                          contentGroupId,
+                        )}
+                        value={text('Info 2 value:', '42/1000', contentGroupId)}
+                        disabled={disabled}
+                      />
+                      <RewardCard.Info
+                        key="Delivery"
+                        label={text(
+                          'Info 3 label:',
+                          'Delivery:',
+                          contentGroupId,
+                        )}
+                        value={text(
+                          'Info 3 value:',
+                          'January 2019',
+                          contentGroupId,
+                        )}
+                        withMarginBottom={false}
+                        disabled={disabled}
+                      />
+                    </List>
+                  </RewardCard.RowContent>
+                  {withImage && (
+                    <RewardCard.RowSide>
+                      <RewardCard.Image
+                        src={text(
+                          'Reward image src',
+                          'http://via.placeholder.com/200x240/caf4fe/caf4fe',
+                          contentGroupId,
+                        )}
+                        alt={text(
+                          'Reward image alt',
+                          'My reward',
+                          contentGroupId,
+                        )}
+                        disabled={disabled}
+                      />
+                    </RewardCard.RowSide>
+                  )}
+                </RewardCard.Row>
+                {!completed && (
+                  <RewardCard.Row>
+                    <RewardCard.RowContent>
+                      <Button
+                        size="big"
+                        modifier="helium"
+                        type="button"
+                        aria-labelledby={disabled ? 'Sold out' : 'Contribute'}
+                        style={[styles.button]}
+                        disabled={disabled}
+                      >
+                        {text(
+                          'Button label',
+                          disabled ? 'Sold out' : 'Contribute',
+                          contentGroupId,
+                        )}
+                      </Button>
+                    </RewardCard.RowContent>
+                    {withImage && (
+                      <RewardCard.RowSide style={styles.row.emptySide} />
+                    )}
+                  </RewardCard.Row>
+                )}
+                {alreadyContributed && (
+                  <Fragment>
+                    <RewardCard.CheckedIconLine />
+                    <RewardCard.Row style={styles.contributedSection.base}>
+                      <Text
+                        color="font1"
+                        size="tiny"
+                        tag="p"
+                        style={styles.contributedSection.items}
+                      >
+                        {text(
+                          'Manage contribution description',
+                          'You contributed to this project.',
+                          contentGroupId,
+                        )}
+                      </Text>
+                      <Text
+                        color="primary1"
+                        size="tiny"
+                        weight="regular"
+                        tag="a"
+                        href="#"
+                        style={styles.contributedSection.items}
+                      >
+                        {text(
+                          'Manage contribution description',
+                          'Manage my contribution',
+                          contentGroupId,
+                        )}
+                      </Text>
+                    </RewardCard.Row>
+                  </Fragment>
+                )}
+              </RewardCard>
+            </GridCol>
+          </Grid>
+        </div>
+      )
+    }),
   )
   .add(
     'Legacy RewardCard',
     withInfo('common info')(() => (
-      <StyleRoot>
+      <div style={styles.storyContainer}>
         <Grid>
           <GridCol offset="1" col="10">
             <RewardCard
@@ -350,11 +264,14 @@ storiesOf('Cards/RewardCard', module)
             />
           </GridCol>
         </Grid>
-      </StyleRoot>
+      </div>
     )),
   )
 
 const styles = {
+  storyContainer: {
+    margin: `${pxToRem(20)} 0`,
+  },
   button: {
     width: '100%',
     display: 'flex',
@@ -366,8 +283,17 @@ const styles = {
   buttonContainer: {
     marginRight: pxToRem(30),
   },
+  label: {
+    margin: `0 0 ${pxToRem(15)} 0`,
+  },
   description: {
     color: COLORS.font1,
+    margin: `0 0 ${pxToRem(20)} 0`,
+  },
+  row: {
+    emptySide: {
+      margin: `0 ${pxToRem(15)}`,
+    },
   },
   disabled: {
     filter: 'grayscale(1) opacity(.4)',

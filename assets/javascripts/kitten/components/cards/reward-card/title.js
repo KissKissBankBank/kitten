@@ -28,22 +28,20 @@ class RewardCardTitleBase extends Component {
   render() {
     const { children, tagName, disabled, style } = this.props
     const titleStyles = [styles.base, disabled && styles.disabled, style]
-    const strokeStyles = [disabled && styles.disabled]
+    const strokeStyles = [styles.stroke, disabled && styles.disabled]
 
     return (
       <Fragment>
-        <Marger bottom="2">
-          <Text
-            fontStyle="italic"
-            weight="bold"
-            margin={false}
-            tag={tagName}
-            color="font1"
-            style={titleStyles}
-          >
-            {children}
-          </Text>
-        </Marger>
+        <Text
+          fontStyle="italic"
+          weight="bold"
+          margin={false}
+          tag={tagName}
+          color="font1"
+          style={titleStyles}
+        >
+          {children}
+        </Text>
         <HorizontalStroke size="default" style={strokeStyles} />
       </Fragment>
     )
@@ -54,7 +52,10 @@ const styles = {
   base: {
     fontSize: pxToRem(24),
     lineHeight: pxToRem(34),
-    margin: 0,
+    margin: `0 0 ${pxToRem(15)} 0`,
+  },
+  stroke: {
+    marginBottom: pxToRem(30),
   },
   disabled: {
     filter: 'grayscale(1) opacity(.4)',

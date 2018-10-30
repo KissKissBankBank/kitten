@@ -69,29 +69,6 @@ class RewardCardInfo extends Component {
 
 // TODO: Move this class to a separate file after deprecated component with the
 // same name will be deleted.
-class RewardCardAction extends Component {
-  static propTypes = {
-    children: PropTypes.node,
-  }
-
-  static defaultProps = {
-    children: null,
-  }
-
-  render() {
-    const { children } = this.props
-
-    return (
-      <Fragment>
-        <RewardCard.RowContent>{children}</RewardCard.RowContent>
-        <RewardCard.RowSide style={style.row.emptySide} />
-      </Fragment>
-    )
-  }
-}
-
-// TODO: Move this class to a separate file after deprecated component with the
-// same name will be deleted.
 class RewardCardImage extends Component {
   static propTypes = {
     disabled: PropTypes.bool,
@@ -267,11 +244,6 @@ const style = {
     width: '100%',
     padding: `${pxToRem(15)} 0`,
   },
-  row: {
-    emptySide: {
-      margin: `0 ${pxToRem(15)}`,
-    },
-  },
   image: {
     width: '100%',
   },
@@ -303,7 +275,6 @@ RewardCardBase.RowContent = RewardCardRowContent
 RewardCardBase.RowSide = RewardCardRowSide
 RewardCardBase.Title = RewardCardTitle
 RewardCardBase.Image = Radium(RewardCardImage)
-RewardCardBase.Action = Radium(RewardCardAction)
 RewardCardBase.Info = RewardCardInfo
 RewardCardBase.CheckedIconLine = RewardCardCheckedIconLine
 RewardCardBase.StarredBadge = RewardCardStarredBadge
