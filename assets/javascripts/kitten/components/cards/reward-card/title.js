@@ -53,6 +53,7 @@ class RewardCardTitleBase extends Component {
 const styles = {
   base: {
     fontSize: pxToRem(24),
+    lineHeight: pxToRem(34),
     margin: 0,
   },
   disabled: {

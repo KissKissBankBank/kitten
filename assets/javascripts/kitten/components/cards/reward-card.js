@@ -15,6 +15,7 @@ import { RewardCardRow } from 'kitten/components/cards/reward-card/row'
 import { RewardCardRowContent } from 'kitten/components/cards/reward-card/row-content'
 import { RewardCardRowSide } from 'kitten/components/cards/reward-card/row-side'
 import { RewardCardCheckedIconLine } from 'kitten/components/cards/reward-card/checked-icon-line'
+import { RewardCardStarredBadge } from 'kitten/components/cards/reward-card/starred-badge'
 
 const Text = Radium(TextBase)
 
@@ -81,10 +82,10 @@ class RewardCardAction extends Component {
     const { children } = this.props
 
     return (
-      <RewardCard.Row>
+      <Fragment>
         <RewardCard.RowContent>{children}</RewardCard.RowContent>
         <RewardCard.RowSide style={style.row.emptySide} />
-      </RewardCard.Row>
+      </Fragment>
     )
   }
 }
@@ -305,5 +306,6 @@ RewardCardBase.Image = Radium(RewardCardImage)
 RewardCardBase.Action = Radium(RewardCardAction)
 RewardCardBase.Info = RewardCardInfo
 RewardCardBase.CheckedIconLine = RewardCardCheckedIconLine
+RewardCardBase.StarredBadge = RewardCardStarredBadge
 
 export const RewardCard = RewardCardBase

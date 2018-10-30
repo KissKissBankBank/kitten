@@ -83,17 +83,19 @@ storiesOf('Cards/RewardCard', module)
                   />
                 </RewardCard.RowSide>
               </RewardCard.Row>
-              <RewardCard.Action>
-                <Button
-                  size="big"
-                  modifier="helium"
-                  type="button"
-                  aria-labelledby="Contribute"
-                  style={styles.button}
-                >
-                  Contribute
-                </Button>
-              </RewardCard.Action>
+              <RewardCard.Row>
+                <RewardCard.Action>
+                  <Button
+                    size="big"
+                    modifier="helium"
+                    type="button"
+                    aria-labelledby="Contribute"
+                    style={styles.button}
+                  >
+                    Contribute
+                  </Button>
+                </RewardCard.Action>
+              </RewardCard.Row>
             </RewardCard>
           </GridCol>
         </Grid>
@@ -101,9 +103,9 @@ storiesOf('Cards/RewardCard', module)
     )),
   )
   .add(
-    'Already contributed RewardCard',
+    'Complex RewardCard',
     withInfo(
-      'This version of RewardCard adds a section to display if the user already took to a reward.',
+      'This version of RewardCard adds a badge to indicate that the reward is starred and  a section to display if the user already took to a reward.',
     )(() => (
       <StyleRoot>
         <Grid>
@@ -111,6 +113,14 @@ storiesOf('Cards/RewardCard', module)
             <RewardCard>
               <RewardCard.Row>
                 <RewardCard.RowContent>
+                  <RewardCard.StarredBadge>
+                    <Text size="nano" color="font1" weight="bold">
+                      Starred reward
+                    </Text>
+                    <Text size="nano" color="font1">
+                      Lorem ipsum
+                    </Text>
+                  </RewardCard.StarredBadge>
                   <RewardCard.Title>100$</RewardCard.Title>
                   <Marger top="3" bottom="1">
                     <Text color="font1" tag="p" weight="bold">
@@ -158,17 +168,19 @@ storiesOf('Cards/RewardCard', module)
                   />
                 </RewardCard.RowSide>
               </RewardCard.Row>
-              <RewardCard.Action>
-                <Button
-                  size="big"
-                  modifier="helium"
-                  type="button"
-                  aria-labelledby="Contribute"
-                  style={styles.button}
-                >
-                  Contribute
-                </Button>
-              </RewardCard.Action>
+              <RewardCard.Row>
+                <RewardCard.Action>
+                  <Button
+                    size="big"
+                    modifier="helium"
+                    type="button"
+                    aria-labelledby="Contribute"
+                    style={styles.button}
+                  >
+                    Contribute
+                  </Button>
+                </RewardCard.Action>
+              </RewardCard.Row>
               <RewardCard.CheckedIconLine />
               <RewardCard.Row style={styles.contributedSection.base}>
                 <Text
@@ -207,6 +219,14 @@ storiesOf('Cards/RewardCard', module)
             <RewardCard>
               <RewardCard.Row>
                 <RewardCard.RowContent>
+                  <RewardCard.StarredBadge disabled>
+                    <Text size="nano" color="font1" weight="bold">
+                      Starred reward
+                    </Text>
+                    <Text size="nano" color="font1">
+                      Lorem ipsum
+                    </Text>
+                  </RewardCard.StarredBadge>
                   <RewardCard.Title disabled>100$</RewardCard.Title>
                   <Marger top="3" bottom="1">
                     <Text
@@ -263,18 +283,20 @@ storiesOf('Cards/RewardCard', module)
                   />
                 </RewardCard.RowSide>
               </RewardCard.Row>
-              <RewardCard.Action>
-                <Button
-                  size="big"
-                  modifier="helium"
-                  type="button"
-                  aria-labelledby="Sold out"
-                  style={styles.button}
-                  disabled
-                >
-                  Sold out
-                </Button>
-              </RewardCard.Action>
+              <RewardCard.Row>
+                <RewardCard.Action>
+                  <Button
+                    size="big"
+                    modifier="helium"
+                    type="button"
+                    aria-labelledby="Sold out"
+                    style={styles.button}
+                    disabled
+                  >
+                    Sold out
+                  </Button>
+                </RewardCard.Action>
+              </RewardCard.Row>
             </RewardCard>
           </GridCol>
         </Grid>
