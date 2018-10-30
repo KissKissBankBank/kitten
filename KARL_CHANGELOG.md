@@ -6,7 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [23.9.0] - 2018-10-30
 
-- Features:
+Features:
 - Add `KarlLinkBox` example.
 - Create `KarlVerticalCard` example.
 
