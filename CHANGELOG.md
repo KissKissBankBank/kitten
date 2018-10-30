@@ -29,6 +29,24 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   - `Info`
   - `LegacyRewardCardContainer`
   - `ManageContribution`
+- Feature: Update `RewardCard` button width.
+- Feature: Add `pxToRem` helper method for inline CSS styling.
+- Feature: Add `TYPOGRAPHY` configuration file.
+
+## [23.9.0] - 2018-10-30
+
+Features:
+- Update `LinkBox` component.
+- Create `VerticalCard` component.
+
+## [23.8.0] - 2018-10-26
+
+Feature:
+- Add `CartRewardCard.Information`.
+  `shippingTitle` and `shippingValue` are deprecated.
+
+Fix:
+- Update `CrowdfundingCard` props.
 
 ## [23.7.0] - 2018-10-24
 

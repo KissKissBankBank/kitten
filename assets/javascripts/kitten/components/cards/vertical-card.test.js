@@ -1,15 +1,15 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { LinkBox } from 'kitten/components/box/link-box'
-import { ArrowIcon } from 'kitten/components/icons/arrow-icon'
-import { Text } from 'kitten/components/typography/text'
+import { VerticalCard } from 'kitten/components/cards/vertical-card'
 
-describe('<LinkBox />', () => {
+describe('<VerticalCard />', () => {
   let component
 
   describe('by default', () => {
     beforeEach(() => {
-      component = renderer.create(<LinkBox />).toJSON()
+      component = renderer
+        .create(<VerticalCard title="Custom title" />)
+        .toJSON()
     })
 
     it('matches with snapshot', () => {
@@ -21,12 +21,13 @@ describe('<LinkBox />', () => {
     beforeEach(() => {
       component = renderer
         .create(
-          <LinkBox
-            title="Lorem ipsum"
-            text="In enim justo, rhoncus ut,"
-            displayIcon
-            href="#foobar"
-            isExternal
+          <VerticalCard
+            imageProps={{
+              src: '#image',
+              alt: 'Image alt',
+            }}
+            title="Custom title"
+            description="Custom text"
           />,
         )
         .toJSON()
