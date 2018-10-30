@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Update `RewardCard` button width.
+- Feature: Add `pxToRem` helper method for inline CSS styling.
+- Feature: Add `TYPOGRAPHY` configuration file.
 
 ## [23.9.0] - 2018-10-30
 
