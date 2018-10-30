@@ -17,6 +17,16 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   - `Info`
   - `LegacyRewardCardContainer`
   - `ManageContribution`
+- Feature: Deprecate all `RewardCard` props. Please use the following components
+  to compose your card now:
+  - `RewardCard.Row`
+  - `RewardCard.RowContent`
+  - `RewardCard.RowSide`
+  - `RewardCard.Title`
+  - `RewardCard.Image`
+  - `RewardCard.Action`
+  - `RewardCard.Info`
+  You can check some examples on https://kisskissbankbank.github.io/kitten.
 
 ## [23.7.0] - 2018-10-24
 
