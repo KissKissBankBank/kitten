@@ -23,7 +23,7 @@ class RewardCardCheckedIconLineBase extends Component {
 const styles = {
   base: {
     borderTop: `2px ${COLORS.line1} solid`,
-    marginTop: pxToRem(a0),
+    marginTop: pxToRem(20),
     display: 'flex',
     justifyContent: 'center',
   },
