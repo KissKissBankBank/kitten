@@ -14,7 +14,7 @@ export class LinkBox extends Component {
     href: PropTypes.string,
     isExternal: PropTypes.bool,
     title: PropTypes.string.isRequired,
-    titelTag: PropTypes.string,
+    titleTag: PropTypes.string,
     text: PropTypes.string,
     textTag: PropTypes.string,
     linkProps: PropTypes.object,
