@@ -5,7 +5,7 @@ import { pxToRem } from 'kitten/helpers/utils/typography'
 
 class RewardCardRowBase extends Component {
   static propTypes = {
-    style: PropTypes.node,
+    style: PropTypes.object,
     children: PropTypes.node,
   }
 
