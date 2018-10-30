@@ -14,6 +14,7 @@ import { RewardCardTitle } from 'kitten/components/cards/reward-card/title'
 import { RewardCardRow } from 'kitten/components/cards/reward-card/row'
 import { RewardCardRowContent } from 'kitten/components/cards/reward-card/row-content'
 import { RewardCardRowSide } from 'kitten/components/cards/reward-card/row-side'
+import { RewardCardCheckedIconLine } from 'kitten/components/cards/reward-card/checked-icon-line'
 
 const Text = Radium(TextBase)
 
@@ -265,8 +266,8 @@ const style = {
     borderWidth: 2,
     borderStyle: 'solid',
     borderColor: COLORS.line1,
-    padding: pxToRem(15),
     width: '100%',
+    padding: `${pxToRem(15)} 0`,
   },
   row: {
     emptySide: {
@@ -306,5 +307,6 @@ RewardCardBase.Title = RewardCardTitle
 RewardCardBase.Image = Radium(RewardCardImage)
 RewardCardBase.Action = Radium(RewardCardAction)
 RewardCardBase.Info = RewardCardInfo
+RewardCardBase.CheckedIconLine = RewardCardCheckedIconLine
 
 export const RewardCard = RewardCardBase
