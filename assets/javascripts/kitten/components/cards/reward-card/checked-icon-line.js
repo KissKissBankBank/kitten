@@ -1,12 +1,10 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Radium from 'radium'
-import { IconBadge as IconBadgeBase } from 'kitten/components/notifications/icon-badge'
+import { IconBadge } from 'kitten/components/notifications/icon-badge'
 import { CheckedIcon } from 'kitten/components/icons/checked-icon'
 import { pxToRem } from 'kitten/helpers/utils/typography'
 import COLORS from 'kitten/constants/colors-config'
-
-const IconBadge = Radium(IconBadgeBase)
 
 class RewardCardCheckedIconLineBase extends Component {
   render() {

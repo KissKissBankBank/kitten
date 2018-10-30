@@ -1,11 +1,9 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Radium from 'radium'
-import { IconBadge as IconBadgeBase } from 'kitten/components/notifications/icon-badge'
+import { IconBadge } from 'kitten/components/notifications/icon-badge'
 import { StarIcon } from 'kitten/components/icons/star-icon'
 import { pxToRem } from 'kitten/helpers/utils/typography'
-
-const IconBadge = Radium(IconBadgeBase)
 
 class RewardCardStarredBadgeBase extends Component {
   static propTypes = {
