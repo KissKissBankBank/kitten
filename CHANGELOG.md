@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Create `VerticalCard` component.
+
 ## [23.8.0] - 2018-10-26
 
 Feature:

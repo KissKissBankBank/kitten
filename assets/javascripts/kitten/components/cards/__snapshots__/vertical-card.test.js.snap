@@ -1,0 +1,154 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<VerticalCard /> by default matches with snapshot 1`] = `
+<div
+  data-radium={true}
+>
+  <div
+    style={
+      Object {
+        "marginBottom": "1.875rem",
+        "marginTop": null,
+      }
+    }
+  >
+    <img
+      data-radium={true}
+      style={
+        Object {
+          "display": "block",
+          "width": "100%",
+        }
+      }
+    />
+  </div>
+  <div
+    style={
+      Object {
+        "marginBottom": null,
+        "marginTop": "1.875rem",
+      }
+    }
+  >
+    <div
+      data-radium={true}
+    >
+      <div
+        style={
+          Object {
+            "marginBottom": null,
+            "marginTop": null,
+          }
+        }
+      >
+        <h1
+          className="k-Title k-Title--senary k-Title--withoutMargin"
+          style={
+            Object {
+              "color": "#222",
+              "textAlign": "center",
+            }
+          }
+        >
+          Custom title
+        </h1>
+      </div>
+      
+    </div>
+  </div>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`<VerticalCard /> with some props matches with snapshot 1`] = `
+<div
+  data-radium={true}
+>
+  <div
+    style={
+      Object {
+        "marginBottom": "1.875rem",
+        "marginTop": null,
+      }
+    }
+  >
+    <img
+      alt="Image alt"
+      data-radium={true}
+      src="#image"
+      style={
+        Object {
+          "display": "block",
+          "width": "100%",
+        }
+      }
+    />
+  </div>
+  <div
+    style={
+      Object {
+        "marginBottom": null,
+        "marginTop": "1.875rem",
+      }
+    }
+  >
+    <div
+      data-radium={true}
+    >
+      <div
+        style={
+          Object {
+            "marginBottom": "0.625rem",
+            "marginTop": null,
+          }
+        }
+      >
+        <h1
+          className="k-Title k-Title--senary k-Title--withoutMargin"
+          style={
+            Object {
+              "color": "#222",
+              "textAlign": "center",
+            }
+          }
+        >
+          Custom title
+        </h1>
+      </div>
+      <div
+        style={
+          Object {
+            "marginBottom": null,
+            "marginTop": "0.625rem",
+          }
+        }
+      >
+        <p
+          className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
+          style={
+            Object {
+              "color": "#222",
+              "textAlign": "center",
+            }
+          }
+        >
+          Custom text
+        </p>
+      </div>
+    </div>
+  </div>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "",
+      }
+    }
+  />
+</div>
+`;
