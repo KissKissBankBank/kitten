@@ -8,11 +8,53 @@ import {
   LegacyRewardCardContainer,
   styles as legacyStyles,
 } from 'kitten/components/cards/reward-card/legacy-reward-card-container'
+import { Text as TextBase } from 'kitten/components/typography/text'
 import { pxToRem } from 'kitten/helpers/utils/typography'
 import { RewardCardTitle } from 'kitten/components/cards/reward-card/title'
 import { RewardCardRow } from 'kitten/components/cards/reward-card/row'
 import { RewardCardRowContent } from 'kitten/components/cards/reward-card/row-content'
 import { RewardCardRowSide } from 'kitten/components/cards/reward-card/row-side'
+
+const Text = Radium(TextBase)
+
+// TODO: Move this class to a separate file after deprecated component with the
+// same name will be deleted.
+class RewardCardInfo extends Component {
+  static propTypes = {
+    label: PropTypes.string,
+    value: PropTypes.string,
+    withMarginBottom: PropTypes.bool,
+    style: PropTypes.object,
+  }
+
+  static defaultProps = {
+    label: null,
+    value: null,
+    withMarginBottom: true,
+    style: {},
+  }
+
+  render() {
+    const { label, value, withMarginBottom, style: customStyle } = this.props
+
+    if (!label) return null
+
+    const infoStyles = [
+      style.info,
+      withMarginBottom && style.infoWithMargin,
+      customStyle,
+    ]
+
+    return (
+      <Text size="tiny" color="font1" weight="regular" style={infoStyles}>
+        {`${label} `}
+        <Text color="font1" weight="light">
+          {value}
+        </Text>
+      </Text>
+    )
+  }
+}
 
 // TODO: Move this class to a separate file after deprecated component with the
 // same name will be deleted.
@@ -128,6 +170,13 @@ const style = {
   image: {
     width: '100%',
   },
+  info: {
+    display: 'block',
+    lineHeight: pxToRem(20),
+  },
+  infoWithMargin: {
+    marginBottom: pxToRem(10),
+  },
 }
 
 // This export handles retro-compatibility.
@@ -146,5 +195,6 @@ RewardCardBase.RowSide = RewardCardRowSide
 RewardCardBase.Title = RewardCardTitle
 RewardCardBase.Image = Radium(RewardCardImage)
 RewardCardBase.Action = Radium(RewardCardAction)
+RewardCardBase.Info = RewardCardInfo
 
 export const RewardCard = RewardCardBase

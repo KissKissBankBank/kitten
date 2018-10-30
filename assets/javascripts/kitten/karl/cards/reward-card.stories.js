@@ -18,6 +18,7 @@ import Radium from 'radium'
 import { Button as ButtonBase } from 'kitten/components/buttons/button'
 import { Paragraph } from 'kitten/components/typography/paragraph'
 import COLORS from 'kitten/constants/colors-config'
+import { List } from 'kitten/components/lists/list'
 
 const Button = Radium(ButtonBase)
 
@@ -88,10 +89,10 @@ storiesOf('Cards/RewardCard', module)
                       Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
                     </Text>
                   </Marger>
-                  <Marger top="1">
+                  <Marger top="1" bottom="2">
                     <Paragraph
                       style={styles.description}
-                      modifier="tertiary"
+                      modifier="quaternary"
                       margin={false}
                     >
                       Quaestione igitur per multiplices dilatata fortunas cum
@@ -103,6 +104,24 @@ storiesOf('Cards/RewardCard', module)
                       occiduntur.
                     </Paragraph>
                   </Marger>
+                  <List>
+                    <RewardCard.Info
+                      key="Contributors"
+                      label="Contributors:"
+                      value="35"
+                    />
+                    <RewardCard.Info
+                      key="Availability"
+                      label="Availability:"
+                      value="23/100"
+                    />
+                    <RewardCard.Info
+                      key="Delivery"
+                      label="Delivery:"
+                      value="January 2019"
+                      withMarginBottom={false}
+                    />
+                  </List>
                 </RewardCard.RowContent>
                 <RewardCard.RowSide>
                   <RewardCard.Image
