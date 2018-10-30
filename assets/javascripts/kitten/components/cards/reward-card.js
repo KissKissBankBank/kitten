@@ -24,6 +24,7 @@ class RewardCardInfo extends Component {
     label: PropTypes.string,
     value: PropTypes.string,
     withMarginBottom: PropTypes.bool,
+    disabled: PropTypes.bool,
     style: PropTypes.object,
   }
 
@@ -31,17 +32,25 @@ class RewardCardInfo extends Component {
     label: null,
     value: null,
     withMarginBottom: true,
+    disabled: false,
     style: {},
   }
 
   render() {
-    const { label, value, withMarginBottom, style: customStyle } = this.props
+    const {
+      label,
+      value,
+      withMarginBottom,
+      disabled,
+      style: customStyle,
+    } = this.props
 
     if (!label) return null
 
     const infoStyles = [
       style.info,
       withMarginBottom && style.infoWithMargin,
+      disabled && style.disabled,
       customStyle,
     ]
 
@@ -59,6 +68,14 @@ class RewardCardInfo extends Component {
 // TODO: Move this class to a separate file after deprecated component with the
 // same name will be deleted.
 class RewardCardAction extends Component {
+  static propTypes = {
+    children: PropTypes.node,
+  }
+
+  static defaultProps = {
+    children: null,
+  }
+
   render() {
     const { children } = this.props
 
@@ -74,8 +91,21 @@ class RewardCardAction extends Component {
 // TODO: Move this class to a separate file after deprecated component with the
 // same name will be deleted.
 class RewardCardImage extends Component {
+  static propTypes = {
+    disabled: PropTypes.bool,
+    style: PropTypes.object,
+  }
+
+  static defaultProps = {
+    disabled: false,
+    style: {},
+  }
+
   render() {
-    return <img {...this.props} style={{ width: '100%' }} />
+    const { alt, disabled, ...others } = this.props
+    const imageStyles = [{ width: '100%' }, disabled && styles.disabled, style]
+
+    return <img {...others} alt={alt || ''} style={imageStyles} />
   }
 }
 
@@ -252,6 +282,10 @@ const style = {
   },
   infoWithMargin: {
     marginBottom: pxToRem(10),
+  },
+  disabled: {
+    filter: 'grayscale(1) opacity(.4)',
+    cursor: 'not-allowed',
   },
 }
 
