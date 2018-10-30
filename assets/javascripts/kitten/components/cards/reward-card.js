@@ -245,9 +245,6 @@ class RewardCardComponent extends Component {
     ),
   }
 
-  isImageComponent = component => component.type.name === 'RewardCardImage'
-  isContentComponent = component => component.type.name === 'RewardCardContent'
-
   render() {
     const { children } = this.props
 
