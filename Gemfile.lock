@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    kitten (23.8.0)
+    kitten (23.9.0)
       railties (> 3.0.0, < 5.0.0)
       react_on_rails (= 11.1.8)
       therubyracer
@@ -83,7 +83,7 @@ GEM
     i18n (0.9.5)
       concurrent-ruby (~> 1.0)
     jaro_winkler (1.5.1)
-    libv8 (3.16.14.19)
+    libv8 (3.16.14.19-x86_64-darwin-17)
     loofah (2.2.2)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)

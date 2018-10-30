@@ -4,8 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Update `LinkBox` component.
-- Feature: Create `VerticalCard` component.
+## [23.9.0] - 2018-10-30
+
+Features:
+- Update `LinkBox` component.
+- Create `VerticalCard` component.
 
 ## [23.8.0] - 2018-10-26
 

@@ -4,8 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `KarlLinkBox` example.
-- Feature: Create `KarlVerticalCard` example.
+## [23.9.0] - 2018-10-30
+
+- Features:
+- Add `KarlLinkBox` example.
+- Create `KarlVerticalCard` example.
 
 ## [23.8.0] - 2018-10-26
 
