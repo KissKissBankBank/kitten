@@ -6,6 +6,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Update `RewardCard` button width.
 
+## [23.9.0] - 2018-10-30
+
+Features:
+- Update `LinkBox` component.
+- Create `VerticalCard` component.
+
 ## [23.8.0] - 2018-10-26
 
 Feature:
