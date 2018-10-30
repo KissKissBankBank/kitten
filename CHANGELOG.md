@@ -6,6 +6,18 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Fix: Update `CrowdfundingCard` props.
 - Feature: Update `RewardCard` button width.
+- Feature: Add the following components to compose a `RewardCard`:
+  - `RewardCardBase.Row`,
+  - `RewardCardBase.RowContent`,
+  - `RewardCardBase.RowSide`,
+  - `RewardCardBase.Title`,
+  - `RewardCardBase.Image`,
+  - `RewardCardBase.Info`,
+  - `RewardCardBase.CheckedIconLine`,
+  - `RewardCardBase.StarredBadge`
+  All `RewardCard` previous props are deprecated. If you still used them, you
+  cannot use the new components related to `RewardCard`.
+  You can check some examples on https://kisskissbankbank.github.io/kitten.
 - Feature: Deprecate the following components in
   `kitten/components/cards/reward-card`:
   - `RewardCardAction`
@@ -17,16 +29,6 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   - `Info`
   - `LegacyRewardCardContainer`
   - `ManageContribution`
-- Feature: Deprecate all `RewardCard` props. Please use the following components
-  to compose your card now:
-  - `RewardCard.Row`
-  - `RewardCard.RowContent`
-  - `RewardCard.RowSide`
-  - `RewardCard.Title`
-  - `RewardCard.Image`
-  - `RewardCard.Action`
-  - `RewardCard.Info`
-  You can check some examples on https://kisskissbankbank.github.io/kitten.
 
 ## [23.7.0] - 2018-10-24
 
