@@ -26,8 +26,10 @@ const Paragraph = Radium(ParagraphBase)
 storiesOf('Cards/RewardCard', module)
   .addDecorator(withKnobs)
   .add(
-    'RewardCard',
-    withInfo('common info')(() => (
+    'Basic RewardCard',
+    withInfo(
+      'The RewardCard is a card with two versions depending on the parent container width. It can be composed with many sub-components.',
+    )(() => (
       <StyleRoot>
         <Grid>
           <GridCol offset="1" col="10">
@@ -86,10 +88,10 @@ storiesOf('Cards/RewardCard', module)
                   size="big"
                   modifier="helium"
                   type="button"
-                  aria-labelledby="Soutenir"
+                  aria-labelledby="Contribute"
                   style={styles.button}
                 >
-                  Soutenir
+                  Contribute
                 </Button>
               </RewardCard.Action>
             </RewardCard>
@@ -99,8 +101,106 @@ storiesOf('Cards/RewardCard', module)
     )),
   )
   .add(
+    'Already contributed RewardCard',
+    withInfo(
+      'This version of RewardCard adds a section to display if the user already took to a reward.',
+    )(() => (
+      <StyleRoot>
+        <Grid>
+          <GridCol offset="1" col="10">
+            <RewardCard>
+              <RewardCard.Row>
+                <RewardCard.RowContent>
+                  <RewardCard.Title>100$</RewardCard.Title>
+                  <Marger top="3" bottom="1">
+                    <Text color="font1" tag="p" weight="bold">
+                      Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                    </Text>
+                  </Marger>
+                  <Marger top="1" bottom="2">
+                    <Paragraph
+                      style={styles.description}
+                      modifier="quaternary"
+                      margin={false}
+                    >
+                      Quaestione igitur per multiplices dilatata fortunas cum
+                      ambigerentur quaedam, non nulla levius actitata constaret,
+                      post multorum clades Apollinares ambo pater et filius in
+                      exilium acti cum ad locum Crateras nomine pervenissent,
+                      villam scilicet suam quae ab Antiochia vicensimo et quarto
+                      disiungitur lapide, ut mandatum est, fractis cruribus
+                      occiduntur.
+                    </Paragraph>
+                  </Marger>
+                  <List>
+                    <RewardCard.Info
+                      key="Contributors"
+                      label="Contributors:"
+                      value="35"
+                    />
+                    <RewardCard.Info
+                      key="Availability"
+                      label="Availability:"
+                      value="23/100"
+                    />
+                    <RewardCard.Info
+                      key="Delivery"
+                      label="Delivery:"
+                      value="January 2019"
+                      withMarginBottom={false}
+                    />
+                  </List>
+                </RewardCard.RowContent>
+                <RewardCard.RowSide>
+                  <RewardCard.Image
+                    src="http://via.placeholder.com/200x240/caf4fe/caf4fe"
+                    alt="My reward"
+                  />
+                </RewardCard.RowSide>
+              </RewardCard.Row>
+              <RewardCard.Action>
+                <Button
+                  size="big"
+                  modifier="helium"
+                  type="button"
+                  aria-labelledby="Contribute"
+                  style={styles.button}
+                >
+                  Contribute
+                </Button>
+              </RewardCard.Action>
+              <RewardCard.CheckedIconLine />
+              <RewardCard.Row style={styles.contributedSection.base}>
+                <Text
+                  color="font1"
+                  size="tiny"
+                  tag="p"
+                  style={styles.contributedSection.items}
+                >
+                  You contributed to this project.
+                </Text>
+                <Text
+                  color="primary1"
+                  size="tiny"
+                  weight="regular"
+                  tag="a"
+                  href="#"
+                  style={styles.contributedSection.items}
+                >
+                  Manage my contribution
+                </Text>
+              </RewardCard.Row>
+            </RewardCard>
+          </GridCol>
+        </Grid>
+      </StyleRoot>
+    )),
+  )
+  .add(
     'Disabled RewardCard',
-    withInfo('common info')(() => (
+    withInfo(
+      'This a version of the disabled RewardCard. `RewardCard.Title`, `RewardCard.Info` and `RewardCard.Image accepts a `disabled` prop to easily implement this state.',
+    )(() => (
       <StyleRoot>
         <Grid>
           <GridCol offset="1" col="10">
@@ -168,11 +268,11 @@ storiesOf('Cards/RewardCard', module)
                   size="big"
                   modifier="helium"
                   type="button"
-                  aria-labelledby="Soutenir"
+                  aria-labelledby="Sold out"
                   style={styles.button}
                   disabled
                 >
-                  Soutenir
+                  Sold out
                 </Button>
               </RewardCard.Action>
             </RewardCard>
@@ -250,5 +350,20 @@ const styles = {
   disabled: {
     filter: 'grayscale(1) opacity(.4)',
     cursor: 'not-allowed',
+  },
+  contributedSection: {
+    base: {
+      marginTop: pxToRem(10),
+      marginBottom: pxToRem(5),
+      justifyContent: 'center',
+      alignItems: 'center',
+      flexDirection: 'column',
+    },
+    items: {
+      lineHeight: pxToRem(20),
+      display: 'flex',
+      margin: 0,
+      padding: 0,
+    },
   },
 }
