@@ -35,7 +35,6 @@ class RewardCardTitleBase extends Component {
         <Text
           fontStyle="italic"
           weight="bold"
-          margin={false}
           tag={tagName}
           color="font1"
           style={titleStyles}
