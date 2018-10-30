@@ -350,22 +350,6 @@ export const styles = {
     },
   },
 
-  button: {
-    [`@media (max-width: ${ScreenConfig['S'].max}px)`]: {
-      width: 'calc(100% + 4px)',
-      position: 'relative',
-      left: -2,
-      bottom: -2,
-    },
-
-    tinyVersion: {
-      width: 'calc(100% + 4px)',
-      position: 'relative',
-      left: -2,
-      bottom: -2,
-    },
-  },
-
   iconBadge: {
     marginRight: 10,
   },
