@@ -4,8 +4,6 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Update `CrowdfundingCard` props.
-- Feature: Update `RewardCard` button width.
 - Feature: Add the following components to compose a `RewardCard`:
   - `RewardCardBase.Row`,
   - `RewardCardBase.RowContent`,

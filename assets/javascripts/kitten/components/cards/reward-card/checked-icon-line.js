@@ -31,4 +31,5 @@ const styles = {
     marginTop: `-${pxToRem(15)}`,
   },
 }
+
 export const RewardCardCheckedIconLine = Radium(RewardCardCheckedIconLineBase)
