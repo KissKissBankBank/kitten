@@ -196,6 +196,9 @@ module Kitten
           components: [
             { path: 'components/cards/card', name: 'Card' },
             { path: 'components/cards/simple-card', name: 'Simple card' },
+            { path: 'components/cards/vertical-card',
+              name: 'Vertical card',
+            },
             { path: 'components/cards/vertical-card-with-action',
               name: 'Vertical card with action',
             },
