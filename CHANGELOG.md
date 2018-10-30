@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Update `LinkBox` styles.
+
 ## [23.9.0] - 2018-10-30
 
 Features:
