@@ -94,7 +94,7 @@ class RewardCardComponent extends Component {
     titleTag: deprecated(PropTypes.string, 'Use `RewardCard.Title` instead'),
     subtitle: deprecated(
       PropTypes.string,
-      'Use `RewardCard.Row`, `RewardCard.RowContent` and ``RewardCard.RowSide` to compose your card content instead',
+      'Use `RewardCard.Row`, `RewardCard.RowContent` and `RewardCard.RowSide` to compose your card content instead',
     ),
     subtitleTag: deprecated(
       PropTypes.string,
