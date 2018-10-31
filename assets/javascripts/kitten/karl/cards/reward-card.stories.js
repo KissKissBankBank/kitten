@@ -54,14 +54,23 @@ storiesOf('Cards/RewardCard', module)
                   <RewardCard.RowContent>
                     {starred && (
                       <RewardCard.StarredBadge disabled={disabled}>
-                        <Text size="nano" color="font1" weight="bold">
+                        <Text
+                          size="nano"
+                          color="font1"
+                          weight="bold"
+                          style={[disabled && styles.disabled]}
+                        >
                           {text(
                             'Starred label',
                             'Starred reward',
                             contentGroupId,
                           )}
                         </Text>
-                        <Text size="nano" color="font1">
+                        <Text
+                          size="nano"
+                          color="font1"
+                          style={[disabled && styles.disabled]}
+                        >
                           {text(
                             'Starred description',
                             'Lorem ipsum',
@@ -300,7 +309,7 @@ const styles = {
     padding: 0,
   },
   disabled: {
-    filter: 'grayscale(1) opacity(.4)',
+    color: COLORS.font2,
     cursor: 'not-allowed',
   },
 }

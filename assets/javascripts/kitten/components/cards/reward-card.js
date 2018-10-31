@@ -236,7 +236,7 @@ const style = {
     marginBottom: pxToRem(10),
   },
   disabled: {
-    filter: 'grayscale(1) opacity(.4)',
+    color: COLORS.font2,
     cursor: 'not-allowed',
   },
 }

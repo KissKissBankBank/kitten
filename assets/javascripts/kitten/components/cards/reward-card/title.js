@@ -26,7 +26,10 @@ class RewardCardTitleBase extends Component {
   render() {
     const { children, tagName, disabled } = this.props
     const titleStyles = [styles.base, disabled && styles.disabled]
-    const strokeStyles = [styles.stroke, disabled && styles.disabled]
+    const strokeStyles = [
+      styles.stroke.base,
+      disabled && styles.stroke.disabled,
+    ]
 
     return (
       <Fragment>
@@ -52,10 +55,15 @@ const styles = {
     margin: `0 0 ${pxToRem(15)} 0`,
   },
   stroke: {
-    marginBottom: pxToRem(30),
+    base: {
+      marginBottom: pxToRem(30),
+    },
+    disabled: {
+      backgroundColor: COLORS.font2,
+    },
   },
   disabled: {
-    filter: 'grayscale(1) opacity(.4)',
+    color: COLORS.font2,
     cursor: 'not-allowed',
   },
 }
