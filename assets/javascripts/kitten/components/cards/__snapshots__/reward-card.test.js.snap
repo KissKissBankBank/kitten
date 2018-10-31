@@ -276,7 +276,7 @@ exports[`<RewardCard /> on tiny version matches with snapshot 1`] = `
               >
                 Delivery 
                 <span
-                  className="k-u-color-font1 k-u-weight-light"
+                  className="k-u-weight-light"
                 >
                   03/18
                 </span>
@@ -295,7 +295,7 @@ exports[`<RewardCard /> on tiny version matches with snapshot 1`] = `
               >
                 Alice 
                 <span
-                  className="k-u-color-font1 k-u-weight-light"
+                  className="k-u-weight-light"
                 >
                   Wonderland
                 </span>
@@ -653,7 +653,7 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
             >
               Delivery 
               <span
-                className="k-u-color-font1 k-u-weight-light"
+                className="k-u-weight-light"
               >
                 03/18
               </span>
@@ -669,7 +669,7 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
             >
               Alice 
               <span
-                className="k-u-color-font1 k-u-weight-light"
+                className="k-u-weight-light"
               >
                 Wonderland
               </span>
@@ -996,7 +996,7 @@ exports[`<RewardCard /> with legacy props matches with snapshot 1`] = `
             >
               Custom title contributors 
               <span
-                className="k-u-color-font1 k-u-weight-light"
+                className="k-u-weight-light"
               >
                 Custom value contributors
               </span>
@@ -1012,7 +1012,7 @@ exports[`<RewardCard /> with legacy props matches with snapshot 1`] = `
             >
               Custom title delivery 
               <span
-                className="k-u-color-font1 k-u-weight-light"
+                className="k-u-weight-light"
               >
                 Custom value delivery
               </span>
@@ -1028,7 +1028,7 @@ exports[`<RewardCard /> with legacy props matches with snapshot 1`] = `
             >
               Custom title availability 
               <span
-                className="k-u-color-font1 k-u-weight-light"
+                className="k-u-weight-light"
               >
                 Custom value availability
               </span>

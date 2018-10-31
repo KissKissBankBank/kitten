@@ -18,6 +18,8 @@ exports[`<ExpandBoard /> with <ExpandBoard.Button> and <ExpandBoard.Content> by 
         "display": "flex",
         "justifyContent": "center",
         "lineHeight": "1.3em",
+        "paddingBottom": "0.1875rem",
+        "paddingTop": "0.1875rem",
         "width": "100%",
       }
     }
@@ -66,6 +68,8 @@ exports[`<ExpandBoard /> with <ExpandBoard.Button> and <ExpandBoard.Content> dis
         "display": "flex",
         "justifyContent": "center",
         "lineHeight": "1.3em",
+        "paddingBottom": "0.1875rem",
+        "paddingTop": "0.1875rem",
         "width": "100%",
       }
     }
