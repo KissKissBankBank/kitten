@@ -103,7 +103,7 @@ storiesOf('Cards/RewardCard', module)
                         key="Contributors"
                         label={text(
                           'Info 1 label:',
-                          'Contributors',
+                          'Contributors:',
                           contentGroupId,
                         )}
                         value={text('Info 1 value:', '35', contentGroupId)}
@@ -192,6 +192,7 @@ storiesOf('Cards/RewardCard', module)
                       )}
                     </Text>
                     <Text
+                      decoration="none"
                       color="primary1"
                       size="tiny"
                       weight="regular"
