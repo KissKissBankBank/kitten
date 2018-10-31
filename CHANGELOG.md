@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Update `LinkBox` styles.
 - Feature: Add the following components to compose a `RewardCard`:
   - `RewardCardBase.Row`,
   - `RewardCardBase.RowContent`,
