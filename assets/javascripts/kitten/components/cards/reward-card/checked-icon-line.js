@@ -1,0 +1,31 @@
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import Radium from 'radium'
+import { IconBadge } from 'kitten/components/notifications/icon-badge'
+import { CheckedIcon } from 'kitten/components/icons/checked-icon'
+import { pxToRem } from 'kitten/helpers/utils/typography'
+import COLORS from 'kitten/constants/colors-config'
+
+export class RewardCardCheckedIconLine extends Component {
+  render() {
+    return (
+      <div style={styles.base}>
+        <IconBadge valid style={styles.iconBadge}>
+          <CheckedIcon className="k-IconBadge__svg" />
+        </IconBadge>
+      </div>
+    )
+  }
+}
+
+const styles = {
+  base: {
+    borderTop: `2px ${COLORS.line1} solid`,
+    marginTop: pxToRem(20),
+    display: 'flex',
+    justifyContent: 'center',
+  },
+  iconBadge: {
+    marginTop: `-${pxToRem(15)}`,
+  },
+}

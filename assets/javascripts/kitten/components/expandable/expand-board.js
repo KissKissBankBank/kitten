@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import { Button as ButtonBase } from 'kitten/components/buttons/button'
 import { ArrowIcon } from 'kitten/components/icons/arrow-icon'
 import COLORS from 'kitten/constants/colors-config'
+import { pxToRem } from 'kitten/helpers/utils/typography'
 
 const Button = Radium(ButtonBase)
 
@@ -168,6 +169,11 @@ const styles = {
       alignItems: 'center',
       justifyContent: 'center',
       lineHeight: '1.3em',
+      // As the arrow takes a huge space because of its rotation, we cannot
+      // apply the same paddings as on the basic big button. These values ajust
+      // the paddings so it fits the same as the basic big button.
+      paddingTop: pxToRem(3),
+      paddingBottom: pxToRem(3),
     },
     expanded: {
       backgroundColor: COLORS.font1,

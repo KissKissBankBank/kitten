@@ -2,366 +2,245 @@ import React, { Component, Fragment } from 'react'
 import Radium, { StyleRoot } from 'radium'
 import PropTypes from 'prop-types'
 import deprecated from 'prop-types-extra/lib/deprecated'
-import { Marger } from 'kitten/components/layout/marger'
-import {
-  Grid as GridBase,
-  GridCol as GridColBase,
-} from 'kitten/components/grid/grid'
 import COLORS from 'kitten/constants/colors-config'
-import { ScreenConfig } from 'kitten/constants/screen-config'
-import { mediaQueries } from 'kitten/hoc/media-queries'
-import { RewardCardContent } from 'kitten/components/cards/reward-card/content'
-import { RewardCardInfos } from 'kitten/components/cards/reward-card/infos'
-import { RewardCardImage } from 'kitten/components/cards/reward-card/image'
 import {
-  RewardCardAction,
-  RewardCardActionOnMOrMore,
-} from 'kitten/components/cards/reward-card/action'
+  LegacyRewardCardContainer,
+  styles as legacyStyles,
+} from 'kitten/components/cards/reward-card/legacy-reward-card-container'
+import { Text as TextBase } from 'kitten/components/typography/text'
+import { pxToRem } from 'kitten/helpers/utils/typography'
+import { RewardCardTitle } from 'kitten/components/cards/reward-card/title'
+import { RewardCardRow } from 'kitten/components/cards/reward-card/row'
+import { RewardCardRowContent } from 'kitten/components/cards/reward-card/row-content'
+import { RewardCardRowSide } from 'kitten/components/cards/reward-card/row-side'
+import { RewardCardStarredBadge } from 'kitten/components/cards/reward-card/starred-badge'
+import { RewardCardCheckedSection } from 'kitten/components/cards/reward-card/checked-section'
 
-const Grid = Radium(GridBase)
-const GridCol = Radium(GridColBase)
+const Text = Radium(TextBase)
 
-class RewardCardComponent extends Component {
+// TODO: Move this class to a separate file after deprecated component with the
+// same name will be deleted.
+class RewardCardInfo extends Component {
   static propTypes = {
-    titleAmount: PropTypes.string.isRequired,
-    titleTag: PropTypes.string,
-    subtitle: PropTypes.string,
-    subtitleTag: PropTypes.string,
-    description: PropTypes.string,
-
-    manageContributionDescription: PropTypes.string,
-    manageContributionLinkLabel: PropTypes.string,
-    manageContributionLinkHref: PropTypes.string,
-
-    buttonLabel: PropTypes.string,
-    buttonOnMouseEnter: PropTypes.func,
-    buttonOnMouseLeave: PropTypes.func,
-    buttonOnClick: PropTypes.func,
-
-    imageProps: PropTypes.object,
-
-    isDisabled: PropTypes.bool,
-    starred: PropTypes.bool,
-    starLabel: PropTypes.string,
-
-    version: PropTypes.oneOf(['default', 'tiny']),
-    viewportIsMobile: PropTypes.bool,
-    viewportIsSOrLess: PropTypes.bool,
-    viewportIsTabletOrLess: PropTypes.bool,
-
-    // Deprecated props
-    titleDescription: deprecated(
-      PropTypes.string,
-      'Use `subtitle` prop instead',
-    ),
-    textDescription: deprecated(
-      PropTypes.string,
-      'Use `description` prop instead',
-    ),
-    textTag: deprecated(PropTypes.string, 'Use `subtitleTag` prop instead'),
-    myContribution: deprecated(
-      PropTypes.string,
-      'Use `manageContributionDescription` prop instead',
-    ),
-    manageContribution: deprecated(
-      PropTypes.string,
-      'Use `manageContributionLinkLabel` prop instead',
-    ),
-    manageContributionLink: deprecated(
-      PropTypes.string,
-      'Use `manageContributionLinkHref` prop instead',
-    ),
-    button: deprecated(PropTypes.string, 'Use `buttonLabel` prop instead'),
-    titleContributors: deprecated(PropTypes.string, 'Use `infos` prop instead'),
-    titleDelivery: deprecated(PropTypes.string, 'Use `infos` prop instead'),
-    titleAvailability: deprecated(PropTypes.string, 'Use `infos` prop instead'),
-    valueContributors: deprecated(PropTypes.string, 'Use `infos` prop instead'),
-    valueDelivery: deprecated(PropTypes.string, 'Use `infos` prop instead'),
-    valueAvailability: deprecated(PropTypes.string, 'Use `infos` prop instead'),
+    label: PropTypes.string.isRequired,
+    value: PropTypes.string,
+    withMarginBottom: PropTypes.bool,
+    disabled: PropTypes.bool,
   }
 
-  isTinyVersion = () =>
-    this.props.version === 'tiny' || this.props.viewportIsMobile
-
-  isSOrLessVersion = () => this.isTinyVersion() || this.props.viewportIsSOrLess
-
-  legacyInfos = () => {
-    const {
-      titleContributors,
-      titleDelivery,
-      titleAvailability,
-      valueContributors,
-      valueDelivery,
-      valueAvailability,
-    } = this.props
-
-    const infos = []
-
-    if (titleContributors) {
-      infos.push({ label: titleContributors, value: valueContributors })
-    }
-
-    if (titleDelivery) {
-      infos.push({ label: titleDelivery, value: valueDelivery })
-    }
-
-    if (titleAvailability) {
-      infos.push({ label: titleAvailability, value: valueAvailability })
-    }
-
-    return infos
+  static defaultProps = {
+    value: null,
+    withMarginBottom: true,
+    disabled: false,
   }
 
   render() {
-    // We need to destructure the props to prevent them to hydrate children components.
-    const {
-      titleAmount,
-      titleTag,
-      subtitle,
-      subtitleTag,
-      description,
-      infos,
-      manageContributionDescription,
-      manageContributionLinkLabel,
-      manageContributionLinkHref,
-      buttonLabel,
-      buttonOnMouseEnter,
-      buttonOnMouseLeave,
-      buttonOnClick,
-      isDisabled,
-      starred,
-      starLabel,
-      version,
-      viewportIsMobile,
-      viewportIsSOrLess,
-      viewportIsTabletOrLess,
-      titleDescription,
-      textDescription,
-      textTag,
-      myContribution,
-      manageContribution,
-      manageContributionLink,
-      button,
-      titleContributors,
-      titleDelivery,
-      titleAvailability,
-      valueContributors,
-      valueDelivery,
-      valueAvailability,
-      imageProps,
-      ...others
-    } = this.props
+    const { label, value, withMarginBottom, disabled } = this.props
 
-    const shouldDisplayImage = imageProps && imageProps.src
-
-    const cardStyles = [others.style, styles.card]
-
-    const cardPaddings = this.isTinyVersion()
-      ? styles.card.paddings.tinyVersion
-      : styles.card.paddings
-
-    const cardImageStyles = this.isTinyVersion()
-      ? styles.card.image.tinyVersion
-      : styles.card.image
-
-    const leftColumnProps = this.isTinyVersion()
-      ? null
-      : {
-          'col-l': shouldDisplayImage ? 7 : 10,
-          'col-s': 7,
-        }
-
-    const rightColumnProps = this.isTinyVersion()
-      ? null
-      : {
-          'col-s': 4,
-          'offset-s': 1,
-        }
-
-    const withImageOnTinyVersion = shouldDisplayImage && this.isTinyVersion()
+    const infoStyles = [
+      style.info,
+      withMarginBottom && style.infoWithMargin,
+      disabled && style.disabled,
+    ]
 
     return (
-      <StyleRoot {...others} style={cardStyles}>
-        <Marger
-          bottom={this.isSOrLessVersion() ? 0 : 4}
-          top={this.isSOrLessVersion() ? 3 : 4}
-        >
-          <Grid style={cardPaddings}>
-            <GridCol {...leftColumnProps}>
-              <RewardCardContent
-                {...this.props}
-                subtitle={subtitle || titleDescription}
-                subtitleTag={subtitleTag || textTag}
-                description={description || textDescription}
-                isTinyVersion={this.isTinyVersion()}
-              />
-
-              <RewardCardInfos
-                infos={this.legacyInfos()}
-                {...this.props}
-                isTinyVersion={this.isTinyVersion()}
-                viewportIsTabletOrLess={viewportIsTabletOrLess}
-              />
-
-              {!this.isSOrLessVersion() && (
-                <RewardCardActionOnMOrMore
-                  {...this.props}
-                  manageContributionDescription={
-                    manageContributionDescription || myContribution
-                  }
-                  manageContributionLinkLabel={
-                    manageContributionLinkLabel || manageContribution
-                  }
-                  manageContributionLinkHref={
-                    manageContributionLinkHref || manageContributionLink
-                  }
-                  buttonLabel={buttonLabel || button}
-                  isTinyVersion={this.isTinyVersion()}
-                  isSOrLessVersion={this.isSOrLessVersion()}
-                />
-              )}
-            </GridCol>
-
-            {shouldDisplayImage && (
-              <GridCol {...rightColumnProps} style={cardImageStyles}>
-                <Marger bottom={!myContribution ? 2 : null}>
-                  <RewardCardImage {...this.props} />
-                </Marger>
-              </GridCol>
-            )}
-          </Grid>
-
-          {this.isSOrLessVersion() && (
-            <RewardCardAction
-              {...this.props}
-              manageContributionDescription={
-                manageContributionDescription || myContribution
-              }
-              manageContributionLinkLabel={
-                manageContributionLinkLabel || manageContribution
-              }
-              manageContributionLinkHref={
-                manageContributionLinkHref || manageContributionLink
-              }
-              buttonLabel={buttonLabel || button}
-              isTinyVersion={this.isTinyVersion()}
-              isSOrLessVersion={this.isSOrLessVersion()}
-              topMargin={withImageOnTinyVersion ? 2 : 0}
-            />
-          )}
-        </Marger>
-      </StyleRoot>
+      <Text size="tiny" color="font1" weight="regular" style={infoStyles}>
+        {`${label} `}
+        <Text weight="light">{value}</Text>
+      </Text>
     )
   }
 }
 
-export const styles = {
-  disabled: {
-    filter: 'grayscale(1) opacity(.4)',
-    cursor: 'not-allowed',
-  },
+// TODO: Move this class to a separate file after deprecated component with the
+// same name will be deleted.
+class RewardCardImage extends Component {
+  static propTypes = {
+    disabled: PropTypes.bool,
+  }
 
-  textColor: {
-    color: COLORS.font1,
-  },
+  static defaultProps = {
+    disabled: false,
+  }
 
+  render() {
+    const { alt, disabled, ...others } = this.props
+    const imageStyles = [{ width: '100%' }, disabled && styles.disabled]
+
+    return <img {...others} alt={alt || ''} style={imageStyles} />
+  }
+}
+
+export class RewardCard extends Component {
+  static Row = RewardCardRow
+  static RowContent = RewardCardRowContent
+  static RowSide = RewardCardRowSide
+  static Title = RewardCardTitle
+  static Image = Radium(RewardCardImage)
+  static Info = RewardCardInfo
+  static CheckedSection = RewardCardCheckedSection
+  static StarredBadge = RewardCardStarredBadge
+
+  static propTypes = {
+    titleAmount: deprecated(
+      PropTypes.string,
+      'Use `RewardCard.Title` instead.',
+    ),
+    titleTag: deprecated(PropTypes.string, 'Use `RewardCard.Title` instead.'),
+    subtitle: deprecated(
+      PropTypes.string,
+      'Use `RewardCard.Row`, `RewardCard.RowContent` and `RewardCard.RowSide` to compose your card content instead.',
+    ),
+    subtitleTag: deprecated(
+      PropTypes.string,
+      'Use `RewardCard.Row`, `RewardCard.RowContent` and `RewardCard.RowSide` to compose your card content instead.',
+    ),
+    description: deprecated(
+      PropTypes.string,
+      'Use `RewardCard.Row`, `RewardCard.RowContent` and `RewardCard.RowSide` to compose your card content instead.',
+    ),
+    manageContributionDescription: deprecated(
+      PropTypes.string,
+      'Use `RewardCard` sub-component instead.',
+    ),
+    manageContributionLinkLabel: deprecated(
+      PropTypes.string,
+      'Use `RewardCard` sub-component instead.',
+    ),
+    manageContributionLinkHref: deprecated(
+      PropTypes.string,
+      'Use `RewardCard` sub-component instead.',
+    ),
+
+    buttonLabel: deprecated(
+      PropTypes.string,
+      'Use `RewardCard.Action` to insert your button and its callbacks instead.',
+    ),
+    buttonOnMouseEnter: deprecated(
+      PropTypes.func,
+      'Use `RewardCard.Action` to insert your button and its callbacks instead.',
+    ),
+    buttonOnMouseLeave: deprecated(
+      PropTypes.func,
+      'Use `RewardCard.Action` to insert your button and its callbacks instead.',
+    ),
+    buttonOnClick: deprecated(
+      PropTypes.func,
+      'Use `RewardCard.Action` to insert your button and its callbacks instead.',
+    ),
+
+    imageProps: deprecated(PropTypes.object, 'Use `RewardCard.Image` instead.'),
+
+    isDisabled: deprecated(
+      PropTypes.bool,
+      'You should handle the disabled state direcly on your component.',
+    ),
+    starred: deprecated(
+      PropTypes.bool,
+      'Use `RewardCard` sub-component instead.',
+    ),
+    starLabel: deprecated(
+      PropTypes.string,
+      'Use `RewardCard` sub-component instead.',
+    ),
+
+    version: deprecated(
+      PropTypes.oneOf(['default', 'tiny']),
+      '`RewardCard` is no longer handled with media-queries. The version of the component now is handled by the size of the parent container.',
+    ),
+
+    // Deprecated props
+    titleDescription: deprecated(
+      PropTypes.string,
+      'Use `RewardCard.Row`, `RewardCard.RowContent` and `RewardCard.RowSide` to compose your card content instead.',
+    ),
+    textDescription: deprecated(
+      PropTypes.string,
+      'Use `RewardCard.Row`, `RewardCard.RowContent` and `RewardCard.RowSide` to compose your card content instead.',
+    ),
+    textTag: deprecated(
+      PropTypes.string,
+      'Use `RewardCard.Row`, `RewardCard.RowContent` and `RewardCard.RowSide` to compose your card content instead.',
+    ),
+    myContribution: deprecated(
+      PropTypes.string,
+      'Use `manageContributionDescription` prop instead.',
+    ),
+    manageContribution: deprecated(
+      PropTypes.string,
+      'Use `manageContributionLinkLabel` prop instead.',
+    ),
+    manageContributionLink: deprecated(
+      PropTypes.string,
+      'Use `manageContributionLinkHref` prop instead.',
+    ),
+    button: deprecated(
+      PropTypes.string,
+      'Use `RewardCard.Action` to insert your button and its callbacks instead.',
+    ),
+    titleContributors: deprecated(
+      PropTypes.string,
+      'Use `Reward.Info` to compose your card content now.',
+    ),
+    titleDelivery: deprecated(
+      PropTypes.string,
+      'Use `Reward.Info` to compose your card content now.',
+    ),
+    titleAvailability: deprecated(
+      PropTypes.string,
+      'Use `Reward.Info` to compose your card content now.',
+    ),
+    valueContributors: deprecated(
+      PropTypes.string,
+      'Use `Reward.Info` to compose your card content now.',
+    ),
+    valueDelivery: deprecated(
+      PropTypes.string,
+      'Use `Reward.Info` to compose your card content now.',
+    ),
+    valueAvailability: deprecated(
+      PropTypes.string,
+      'Use `Reward.Info` to compose your card content now.',
+    ),
+  }
+
+  render() {
+    const { children } = this.props
+
+    return (
+      <Fragment>
+        <LegacyRewardCardContainer {...this.props} />
+        {children && <div style={style.card}>{children}</div>}
+      </Fragment>
+    )
+  }
+}
+
+const style = {
   card: {
+    backgroundColor: COLORS.background1,
     borderWidth: 2,
     borderStyle: 'solid',
     borderColor: COLORS.line1,
-
-    paddings: {
-      paddingLeft: 20,
-      paddingRight: 20,
-
-      [`@media (min-width: ${ScreenConfig['S'].min}px)`]: {
-        paddingLeft: 30,
-        paddingRight: 30,
-      },
-      [`@media (min-width: ${ScreenConfig['M'].min}px)`]: {
-        paddingLeft: 40,
-        paddingRight: 0,
-      },
-      [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
-        paddingLeft: 115,
-        paddingRight: 0,
-      },
-
-      tinyVersion: {
-        paddingLeft: 20,
-        paddingRight: 20,
-      },
-    },
-
-    image: {
-      [`@media (min-width: ${ScreenConfig['M'].min}px)`]: {
-        paddingRight: 50,
-      },
-      tinyVersion: {
-        paddingRight: 10,
-      },
-    },
+    width: '100%',
+    padding: `${pxToRem(15)} 0`,
   },
-
-  textMargin: {
-    margin: 0,
-  },
-
-  infos: {
-    lists: {
-      fontSize: 14,
-
-      [`@media (min-width: ${ScreenConfig['M'].min}px)`]: {
-        fontSize: 16,
-        marginRight: 30,
-      },
-
-      tinyVersion: {
-        fontSize: 14,
-        marginRight: 0,
-      },
-    },
-  },
-
-  choiceButton: {
-    paddingLeft: 20,
-    paddingRight: 20,
-
-    paddings: {
-      [`@media (min-width: ${ScreenConfig['S'].min}px)`]: {
-        paddingLeft: 30,
-        paddingRight: 30,
-      },
-
-      tinyVersion: {
-        paddingLeft: 20,
-        paddingRight: 20,
-      },
-    },
-  },
-
-  myContribution: {
-    display: 'flex',
-    alignItems: 'center',
-
-    text: {
-      display: 'flex',
-      lineHeight: 'normal',
-    },
-  },
-
-  iconBadge: {
-    marginRight: 10,
-  },
-
   image: {
     width: '100%',
+  },
+  info: {
     display: 'block',
+    lineHeight: pxToRem(20),
+  },
+  infoWithMargin: {
+    marginBottom: pxToRem(10),
+  },
+  disabled: {
+    color: COLORS.font2,
+    cursor: 'not-allowed',
   },
 }
 
-export const RewardCard = mediaQueries(Radium(RewardCardComponent), {
-  viewportIsTabletOrLess: true,
-  viewportIsSOrLess: true,
-  viewportIsMobile: true,
-})
+// This export handles retro-compatibility.
+// TODO: remove this export when deleting all deprecated components.
+export const styles = legacyStyles

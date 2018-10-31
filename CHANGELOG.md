@@ -4,6 +4,30 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add the following components to compose a `RewardCard`:
+  - `RewardCardBase.Row`,
+  - `RewardCardBase.RowContent`,
+  - `RewardCardBase.RowSide`,
+  - `RewardCardBase.Title`,
+  - `RewardCardBase.Image`,
+  - `RewardCardBase.Info`,
+  - `RewardCardBase.CheckedIconLine`,
+  - `RewardCardBase.CheckedSection`
+  - `RewardCardBase.StarredBadge`
+  All `RewardCard` previous props are deprecated. If you still used them, you
+  cannot use the new components related to `RewardCard`.
+  You can check some examples on https://kisskissbankbank.github.io/kitten.
+- Feature: Deprecate the following components in
+  `kitten/components/cards/reward-card`:
+  - `RewardCardAction`
+  - `RewardCardActionOnMOrMore`
+  - `RewardCardButton`
+  - `RewardCardContent`
+  - `RewardCardImage`
+  - `RewardCardInfos`
+  - `Info`
+  - `LegacyRewardCardContainer`
+  - `ManageContribution`
 - Feature: Update `RewardCard` button width.
 - Feature: Add `pxToRem` helper method for inline CSS styling.
 - Feature: Add `TYPOGRAPHY` configuration file.

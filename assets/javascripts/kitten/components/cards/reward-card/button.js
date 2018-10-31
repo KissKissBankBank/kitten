@@ -4,6 +4,7 @@ import Radium from 'radium'
 import { Button as ButtonBase } from 'kitten/components/buttons/button'
 import { ScreenConfig } from 'kitten/constants/screen-config'
 import { pxToRem } from 'kitten/helpers/utils/typography'
+import { Deprecated } from 'kitten/helpers/utils/deprecated'
 
 const Button = Radium(ButtonBase)
 
@@ -20,19 +21,21 @@ export const RewardCardButton = ({
   const buttonStyles = isTinyVersion ? styles.tinyVersion : styles.base
 
   return (
-    <Button
-      size="big"
-      modifier="helium"
-      type="button"
-      aria-labelledby={label}
-      style={buttonStyles}
-      onMouseEnter={onMouseEnter}
-      onMouseLeave={onMouseLeave}
-      onClick={onClick}
-      disabled={isDisabled}
-    >
-      {label}
-    </Button>
+    <Deprecated warningMessage="Please use RewardCard sub-component to make your composition. You can check some examples on https://kisskissbankbank.github.io/kitten/">
+      <Button
+        size="big"
+        modifier="helium"
+        type="button"
+        aria-labelledby={label}
+        style={buttonStyles}
+        onMouseEnter={onMouseEnter}
+        onMouseLeave={onMouseLeave}
+        onClick={onClick}
+        disabled={isDisabled}
+      >
+        {label}
+      </Button>
+    </Deprecated>
   )
 }
 

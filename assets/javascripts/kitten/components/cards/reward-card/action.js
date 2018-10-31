@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { Marger } from 'kitten/components/layout/marger'
 import { ManageContribution } from 'kitten/components/cards/reward-card/manage-contribution'
 import { RewardCardButton } from 'kitten/components/cards/reward-card/button'
+import { Deprecated } from 'kitten/helpers/utils/deprecated'
 
 export const RewardCardAction = ({
   manageContributionDescription,
@@ -22,7 +23,7 @@ export const RewardCardAction = ({
   if (!hasActionContent) return null
 
   return (
-    <Fragment>
+    <Deprecated warningMessage="Please use RewardCard sub-component to make your composition. You can check some examples on https://kisskissbankbank.github.io/kitten/">
       {manageContributionDescription && (
         <Marger top={topMargin} bottom={!manageContributionDescription ? 0 : 2}>
           <ManageContribution
@@ -43,7 +44,7 @@ export const RewardCardAction = ({
         isDisabled={isDisabled}
         isTinyVersion={isTinyVersion}
       />
-    </Fragment>
+    </Deprecated>
   )
 }
 
@@ -64,7 +65,7 @@ export const RewardCardActionOnMOrMore = ({
   if (!hasActionContent) return null
 
   return (
-    <Fragment>
+    <Deprecated warningMessage="Please use RewardCard sub-component to make your composition. You can check some examples on https://kisskissbankbank.github.io/kitten/">
       <Marger top="3">
         <RewardCardButton
           label={buttonLabel}
@@ -87,7 +88,7 @@ export const RewardCardActionOnMOrMore = ({
           </Marger>
         )}
       </Marger>
-    </Fragment>
+    </Deprecated>
   )
 }
 

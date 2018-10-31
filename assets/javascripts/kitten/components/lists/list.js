@@ -44,7 +44,10 @@ const ListButtonItem = ({
       >
         <div style={styles.buttonItem.content}>{children}</div>
         <div style={styles.buttonItem.arrow}>
-          <ArrowIcon className="k-Button__icon" />
+          <ArrowIcon
+            className="k-Button__icon"
+            style={disabled ? styles.buttonItem.icon.disabled : null}
+          />
         </div>
       </div>
     </StyleRoot>
@@ -124,6 +127,11 @@ const styles = {
     arrow: {
       display: 'flex',
       alignItems: 'center',
+    },
+    icon: {
+      disabled: {
+        fill: COLORS.line2,
+      },
     },
   },
 }

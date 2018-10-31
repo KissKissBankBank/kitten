@@ -9,6 +9,7 @@ import { HorizontalStroke } from 'kitten/components/layout/horizontal-stroke'
 import { Paragraph } from 'kitten/components/typography/paragraph'
 import { Text } from 'kitten/components/typography/text'
 import { StarIcon } from 'kitten/components/icons/star-icon'
+import { Deprecated } from 'kitten/helpers/utils/deprecated'
 
 const RewardCardContentBase = ({
   titleAmount,
@@ -24,7 +25,7 @@ const RewardCardContentBase = ({
   const descriptionStyle = [isDisabled && styles.disabled]
 
   return (
-    <Fragment>
+    <Deprecated warningMessage="Please use RewardCard sub-component to make your composition. You can check some examples on https://kisskissbankbank.github.io/kitten/">
       <div style={descriptionStyle} disabled={isDisabled}>
         {starred && (
           <Marger bottom="2">
@@ -78,7 +79,7 @@ const RewardCardContentBase = ({
           </Paragraph>
         </Marger>
       </div>
-    </Fragment>
+    </Deprecated>
   )
 }
 
