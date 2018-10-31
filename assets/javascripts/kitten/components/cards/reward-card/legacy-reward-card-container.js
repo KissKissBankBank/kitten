@@ -1,5 +1,4 @@
 import React, { Component, Fragment } from 'react'
-import deprecated from 'prop-types-extra/lib/deprecated'
 import Radium, { StyleRoot } from 'radium'
 import PropTypes from 'prop-types'
 import { Marger } from 'kitten/components/layout/marger'
@@ -24,18 +23,9 @@ const GridCol = Radium(GridColBase)
 
 class LegacyRewardCardContainerBase extends Component {
   static propTypes = {
-    viewportIsMobile: deprecated(
-      PropTypes.bool,
-      '`RewardCard` is no longer handled with media-queries. The version of the component now is handled by the size of the parent container.',
-    ),
-    viewportIsSOrLess: deprecated(
-      PropTypes.bool,
-      '`RewardCard` is no longer handled with media-queries. The version of the component now is handled by the size of the parent container.',
-    ),
-    viewportIsTabletOrLess: deprecated(
-      PropTypes.bool,
-      '`RewardCard` is no longer handled with media-queries. The version of the component now is handled by the size of the parent container.',
-    ),
+    viewportIsMobile: PropTypes.bool,
+    viewportIsSOrLess: PropTypes.bool,
+    viewportIsTabletOrLess: PropTypes.bool,
   }
 
   isTinyVersion = () =>
