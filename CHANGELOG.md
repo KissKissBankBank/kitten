@@ -12,6 +12,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   - `RewardCardBase.Image`,
   - `RewardCardBase.Info`,
   - `RewardCardBase.CheckedIconLine`,
+  - `RewardCardBase.CheckedSection`
   - `RewardCardBase.StarredBadge`
   All `RewardCard` previous props are deprecated. If you still used them, you
   cannot use the new components related to `RewardCard`.
