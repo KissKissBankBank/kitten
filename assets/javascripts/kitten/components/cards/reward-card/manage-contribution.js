@@ -5,6 +5,7 @@ import { Grid as GridBase, GridCol } from 'kitten/components/grid/grid'
 import { Text } from 'kitten/components/typography/text'
 import { RewardCardCheckedIcon } from 'kitten/components/cards/reward-card/checked-icon'
 import { styles } from 'kitten/components/cards/reward-card'
+import { Deprecated } from 'kitten/helpers/utils/deprecated'
 
 const Grid = Radium(GridBase)
 
@@ -24,53 +25,55 @@ const ManageContributionBase = ({
     : styles.choiceButton.paddings
 
   return (
-    <Fragment>
-      {isSOrLessVersion && (
-        <Grid style={choiceButtonPaddings}>
-          <GridCol>
-            <div style={styles.myContribution}>
-              <RewardCardCheckedIcon />
-              <div style={styles.myContribution.text}>
-                <Text color="font1" size="tiny" weight="regular">
-                  {description}
-                  <br />
-                  <Text
-                    tag="a"
-                    href={linkHref}
-                    color="primary1"
-                    weight="regular"
-                    decoration="none"
-                  >
-                    {linkLabel}
+    <Deprecated warningMessage="Please use RewardCard sub-component to make your composition. You can check some examples on https://kisskissbankbank.github.io/kitten/">
+      <Fragment>
+        {isSOrLessVersion && (
+          <Grid style={choiceButtonPaddings}>
+            <GridCol>
+              <div style={styles.myContribution}>
+                <RewardCardCheckedIcon />
+                <div style={styles.myContribution.text}>
+                  <Text color="font1" size="tiny" weight="regular">
+                    {description}
+                    <br />
+                    <Text
+                      tag="a"
+                      href={linkHref}
+                      color="primary1"
+                      weight="regular"
+                      decoration="none"
+                    >
+                      {linkLabel}
+                    </Text>
                   </Text>
-                </Text>
+                </div>
               </div>
-            </div>
-          </GridCol>
-        </Grid>
-      )}
+            </GridCol>
+          </Grid>
+        )}
 
-      {!isSOrLessVersion && (
-        <div style={styles.myContribution}>
-          <RewardCardCheckedIcon />
-          <div style={styles.myContribution.text}>
-            <Text color="font1" size="tiny" weight="regular">
-              {description}
-              <br />
-              <Text
-                tag="a"
-                href={linkHref}
-                color="primary1"
-                weight="regular"
-                decoration="none"
-              >
-                {linkLabel}
+        {!isSOrLessVersion && (
+          <div style={styles.myContribution}>
+            <RewardCardCheckedIcon />
+            <div style={styles.myContribution.text}>
+              <Text color="font1" size="tiny" weight="regular">
+                {description}
+                <br />
+                <Text
+                  tag="a"
+                  href={linkHref}
+                  color="primary1"
+                  weight="regular"
+                  decoration="none"
+                >
+                  {linkLabel}
+                </Text>
               </Text>
-            </Text>
+            </div>
           </div>
-        </div>
-      )}
-    </Fragment>
+        )}
+      </Fragment>
+    </Deprecated>
   )
 }
 

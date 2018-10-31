@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import { styles } from 'kitten/components/cards/reward-card'
 import { Info } from 'kitten/components/cards/reward-card/info'
 import { Marger } from 'kitten/components/layout/marger'
+import { Deprecated } from 'kitten/helpers/utils/deprecated'
 
 const RewardCardInfosBase = ({
   infos,
@@ -16,20 +17,22 @@ const RewardCardInfosBase = ({
   if (infos.length === 0) return null
 
   return (
-    <div style={styleInfos} disabled={isDisabled}>
-      <Marger top="2" bottom="3">
-        {infos &&
-          infos.map(info => (
-            <Info
-              key={info.label}
-              label={info.label}
-              value={info.value}
-              viewportIsTabletOrLess={viewportIsTabletOrLess}
-              isTinyVersion={isTinyVersion}
-            />
-          ))}
-      </Marger>
-    </div>
+    <Deprecated warningMessage="Please use RewardCard sub-component to make your composition. You can check some examples on https://kisskissbankbank.github.io/kitten/">
+      <div style={styleInfos} disabled={isDisabled}>
+        <Marger top="2" bottom="3">
+          {infos &&
+            infos.map(info => (
+              <Info
+                key={info.label}
+                label={info.label}
+                value={info.value}
+                viewportIsTabletOrLess={viewportIsTabletOrLess}
+                isTinyVersion={isTinyVersion}
+              />
+            ))}
+        </Marger>
+      </div>
+    </Deprecated>
   )
 }
 

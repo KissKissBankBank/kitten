@@ -86,6 +86,7 @@ exports[`<List> with <ListButtonItem> by default matches with snapshot 1`] = `
         >
           <svg
             className="k-ArrowIcon k-ArrowIcon--right k-Button__icon"
+            style={null}
             viewBox="0 0 6 6"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -152,6 +153,7 @@ exports[`<List> with <ListButtonItem> by default matches with snapshot 1`] = `
         >
           <svg
             className="k-ArrowIcon k-ArrowIcon--right k-Button__icon"
+            style={null}
             viewBox="0 0 6 6"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -218,6 +220,7 @@ exports[`<List> with <ListButtonItem> by default matches with snapshot 1`] = `
         >
           <svg
             className="k-ArrowIcon k-ArrowIcon--right k-Button__icon"
+            style={null}
             viewBox="0 0 6 6"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -299,6 +302,7 @@ exports[`<List> with <ListButtonItem> with a disabled button matches with snapsh
         >
           <svg
             className="k-ArrowIcon k-ArrowIcon--right k-Button__icon"
+            style={null}
             viewBox="0 0 6 6"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -367,6 +371,11 @@ exports[`<List> with <ListButtonItem> with a disabled button matches with snapsh
         >
           <svg
             className="k-ArrowIcon k-ArrowIcon--right k-Button__icon"
+            style={
+              Object {
+                "fill": "#d8d8d8",
+              }
+            }
             viewBox="0 0 6 6"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -433,6 +442,7 @@ exports[`<List> with <ListButtonItem> with a disabled button matches with snapsh
         >
           <svg
             className="k-ArrowIcon k-ArrowIcon--right k-Button__icon"
+            style={null}
             viewBox="0 0 6 6"
             xmlns="http://www.w3.org/2000/svg"
           >

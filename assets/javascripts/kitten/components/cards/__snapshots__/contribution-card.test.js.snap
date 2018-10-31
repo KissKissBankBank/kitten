@@ -240,7 +240,7 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
             >
               Custom title contributors 
               <span
-                className="k-u-color-font1 k-u-weight-light"
+                className="k-u-weight-light"
               >
                 Custom value contributors
               </span>
@@ -256,7 +256,7 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
             >
               Custom title delivery 
               <span
-                className="k-u-color-font1 k-u-weight-light"
+                className="k-u-weight-light"
               >
                 Custom value delivery
               </span>
@@ -272,7 +272,7 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
             >
               Custom title availability 
               <span
-                className="k-u-color-font1 k-u-weight-light"
+                className="k-u-weight-light"
               >
                 Custom value availability
               </span>
@@ -295,7 +295,16 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
             onClick={[Function]}
             onMouseEnter={[Function]}
             onMouseLeave={[Function]}
-            style={Object {}}
+            style={
+              Object {
+                "alignItems": "center",
+                "display": "flex",
+                "justifyContent": "center",
+                "lineHeight": "1.3rem",
+                "padding": "1.375rem 1.875rem",
+                "width": "100%",
+              }
+            }
             tabIndex={null}
             type="button"
           >
@@ -592,7 +601,7 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
               >
                 Custom title contributors 
                 <span
-                  className="k-u-color-font1 k-u-weight-light"
+                  className="k-u-weight-light"
                 >
                   Custom value contributors
                 </span>
@@ -611,7 +620,7 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
               >
                 Custom title delivery 
                 <span
-                  className="k-u-color-font1 k-u-weight-light"
+                  className="k-u-weight-light"
                 >
                   Custom value delivery
                 </span>
@@ -630,7 +639,7 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
               >
                 Custom title availability 
                 <span
-                  className="k-u-color-font1 k-u-weight-light"
+                  className="k-u-weight-light"
                 >
                   Custom value availability
                 </span>
