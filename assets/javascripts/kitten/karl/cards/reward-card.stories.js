@@ -19,6 +19,7 @@ import { Button as ButtonBase } from 'kitten/components/buttons/button'
 import { Paragraph as ParagraphBase } from 'kitten/components/typography/paragraph'
 import COLORS from 'kitten/constants/colors-config'
 import { List } from 'kitten/components/lists/list'
+import { ExpandBoard } from 'kitten/components/expandable/expand-board'
 
 const Button = Radium(ButtonBase)
 const Paragraph = Radium(ParagraphBase)
@@ -40,10 +41,24 @@ storiesOf('Cards/RewardCard', module)
         true,
         versionGroupId,
       )
-      const hasRewardLabel = boolean('Has reward label?', true, versionGroupId)
+      const hasRewardLabel = boolean(
+        'Does the reward have a label?',
+        true,
+        versionGroupId,
+      )
       const withImage = boolean('With image', true, versionGroupId)
       const disabled = boolean('Disabled', false, versionGroupId)
       const completed = boolean('Completed', false, versionGroupId)
+      const withOptions = boolean(
+        'Does the reward have options?',
+        false,
+        versionGroupId,
+      )
+      const option2Disabled = boolean(
+        'Reward option 2 disabled',
+        true,
+        versionGroupId,
+      )
 
       return (
         <div style={styles.storyContainer}>
@@ -166,20 +181,120 @@ storiesOf('Cards/RewardCard', module)
                 {!completed && (
                   <RewardCard.Row>
                     <RewardCard.RowContent>
-                      <Button
-                        size="big"
-                        modifier="helium"
-                        type="button"
-                        aria-labelledby={disabled ? 'Sold out' : 'Contribute'}
-                        style={[styles.button]}
-                        disabled={disabled}
-                      >
-                        {text(
-                          'Button label',
-                          disabled ? 'Sold out' : 'Contribute',
-                          contentGroupId,
-                        )}
-                      </Button>
+                      {!withOptions && (
+                        <Button
+                          size="big"
+                          modifier="helium"
+                          type="button"
+                          aria-labelledby={disabled ? 'Sold out' : 'Contribute'}
+                          style={[styles.button]}
+                          disabled={disabled}
+                        >
+                          {text(
+                            'Button label',
+                            disabled ? 'Sold out' : 'Contribute',
+                            contentGroupId,
+                          )}
+                        </Button>
+                      )}
+                      {withOptions && (
+                        <ExpandBoard disabled={disabled}>
+                          <ExpandBoard.Button expandChildren="Précisez votre choix">
+                            {text(
+                              'Options button label',
+                              disabled ? 'Sold out' : 'Contribute',
+                              contentGroupId,
+                            )}
+                          </ExpandBoard.Button>
+                          <ExpandBoard.Content>
+                            <List>
+                              <List.ButtonItem>
+                                <div style={styles.buttonListItem.wrapper}>
+                                  <Text
+                                    tag="p"
+                                    weight="regular"
+                                    color="font1"
+                                    size="tiny"
+                                    style={styles.buttonListItem.base}
+                                  >
+                                    {text(
+                                      'Option 1 label',
+                                      'Taille S',
+                                      contentGroupId,
+                                    )}
+                                  </Text>
+                                  <Text tag="small" color="font1" size="micro">
+                                    {text(
+                                      'Option 1 description',
+                                      'Disponibilité: 10/30',
+                                      contentGroupId,
+                                    )}
+                                  </Text>
+                                </div>
+                              </List.ButtonItem>
+                              <List.ButtonItem disabled={option2Disabled}>
+                                <div style={styles.buttonListItem.wrapper}>
+                                  <Text
+                                    tag="p"
+                                    weight="regular"
+                                    color="font1"
+                                    size="tiny"
+                                    style={[
+                                      styles.buttonListItem.base,
+                                      option2Disabled && styles.disabled,
+                                    ]}
+                                  >
+                                    {text(
+                                      'Option 2 label',
+                                      'Taille M',
+                                      contentGroupId,
+                                    )}
+                                  </Text>
+                                  <Text
+                                    tag="small"
+                                    color="font1"
+                                    size="micro"
+                                    style={[
+                                      styles.buttonListItem.base,
+                                      option2Disabled && styles.disabled,
+                                    ]}
+                                  >
+                                    {text(
+                                      'Option 2 description',
+                                      'Disponibilité: 12/30',
+                                      contentGroupId,
+                                    )}
+                                  </Text>
+                                </div>
+                              </List.ButtonItem>
+                              <List.ButtonItem>
+                                <div style={styles.buttonListItem.wrapper}>
+                                  <Text
+                                    tag="p"
+                                    weight="regular"
+                                    color="font1"
+                                    size="tiny"
+                                    style={styles.buttonListItem.base}
+                                  >
+                                    {text(
+                                      'Option 3 label',
+                                      'Taille XXL',
+                                      contentGroupId,
+                                    )}
+                                  </Text>
+                                  <Text tag="small" color="font1" size="micro">
+                                    {text(
+                                      'Option 4 description',
+                                      'Disponibilité: 29/30',
+                                      contentGroupId,
+                                    )}
+                                  </Text>
+                                </div>
+                              </List.ButtonItem>
+                            </List>
+                          </ExpandBoard.Content>
+                        </ExpandBoard>
+                      )}
                     </RewardCard.RowContent>
                     {withImage && (
                       <RewardCard.RowSide withVerticalMargins={false} />
@@ -311,5 +426,24 @@ const styles = {
   disabled: {
     color: COLORS.font2,
     cursor: 'not-allowed',
+  },
+  expandBoard: {
+    defaultContent: {
+      padding: '1.5em',
+      borderLeft: `${COLORS.line1} 0.125rem solid`,
+      borderRight: `${COLORS.line1} 0.125rem solid`,
+      borderBottom: `${COLORS.line1} 0.125rem solid`,
+    },
+  },
+  buttonListItem: {
+    base: {
+      margin: 0,
+      padding: 0,
+      lineHeight: '1.2rem',
+    },
+    wrapper: {
+      margin: '1rem 0',
+      padding: 0,
+    },
   },
 }
