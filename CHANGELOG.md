@@ -6,9 +6,6 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [23.10.0] - 2018-11-02
 
-Fix:
-- Update `LinkBox` styles.
-
 Features:
 - Add the following components to compose a `RewardCard`:
   - `RewardCardBase.Row`,
@@ -37,6 +34,9 @@ Features:
 - Update `RewardCard` button width.
 - Add `pxToRem` helper method for inline CSS styling.
 - Add `TYPOGRAPHY` configuration file.
+
+Fix:
+- Update `LinkBox` styles.
 
 ## [23.9.0] - 2018-10-30
 
