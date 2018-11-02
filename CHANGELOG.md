@@ -4,8 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Update `LinkBox` styles.
-- Feature: Add the following components to compose a `RewardCard`:
+## [23.10.0] - 2018-11-02
+
+Features:
+- Add the following components to compose a `RewardCard`:
   - `RewardCardBase.Row`,
   - `RewardCardBase.RowContent`,
   - `RewardCardBase.RowSide`,
@@ -18,7 +20,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   All `RewardCard` previous props are deprecated. If you still used them, you
   cannot use the new components related to `RewardCard`.
   You can check some examples on https://kisskissbankbank.github.io/kitten.
-- Feature: Deprecate the following components in
+- Deprecate the following components in
   `kitten/components/cards/reward-card`:
   - `RewardCardAction`
   - `RewardCardActionOnMOrMore`
@@ -29,9 +31,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   - `Info`
   - `LegacyRewardCardContainer`
   - `ManageContribution`
-- Feature: Update `RewardCard` button width.
-- Feature: Add `pxToRem` helper method for inline CSS styling.
-- Feature: Add `TYPOGRAPHY` configuration file.
+- Update `RewardCard` button width.
+- Add `pxToRem` helper method for inline CSS styling.
+- Add `TYPOGRAPHY` configuration file.
+
+Fix:
+- Update `LinkBox` styles.
 
 ## [23.9.0] - 2018-10-30
 
@@ -62,6 +67,9 @@ Features:
 - Create `Timeline` component.
 - Create `CounterBlock` component.
 - Add `Deprecated` component.
+- Add `ExpandBoard`, `ExpandBoard.Button` and `ExpandBoard.Content`
+  components.
+- Add `List` and `List.ButtonItem` components.
 - Update `RewardCard` component composition. The following props
   are deprecated and can be replaced:
   - `titleDescription` => `subtitle`
@@ -92,9 +100,6 @@ Fixes:
 - Update `ffi` gem.
 - Deprecate `ContributionCard` component. You should use `RewardCard`
   component instead. It will be deleted in further versions.
-- Feature: Add `ExpandBoard`, `ExpandBoard.Button` and `ExpandBoard.Content`
-  components.
-- Feature: Add `List` and `List.ButtonItem` components.
 
 ## [23.5.1] - 2018-09-27
 
