@@ -205,12 +205,16 @@ export class RewardCard extends Component {
   }
 
   render() {
-    const { children } = this.props
+    const { children, ...others } = this.props
 
     return (
       <Fragment>
         <LegacyRewardCardContainer {...this.props} />
-        {children && <div style={style.card}>{children}</div>}
+        {children && (
+          <div {...others} style={style.card}>
+            {children}
+          </div>
+        )}
       </Fragment>
     )
   }
