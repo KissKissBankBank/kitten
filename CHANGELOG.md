@@ -17,9 +17,11 @@ Features:
   - `RewardCardBase.CheckedIconLine`,
   - `RewardCardBase.CheckedSection`
   - `RewardCardBase.StarredBadge`
+
   All `RewardCard` previous props are deprecated. If you still used them, you
   cannot use the new components related to `RewardCard`.
   You can check some examples on https://kisskissbankbank.github.io/kitten.
+
 - Deprecate the following components in
   `kitten/components/cards/reward-card`:
   - `RewardCardAction`
