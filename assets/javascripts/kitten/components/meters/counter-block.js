@@ -26,41 +26,39 @@ class CounterBlockBase extends Component {
 
     return (
       <StyleRoot style={styles.counterBlock}>
-        <div style={styles.counterContainer}>
-          <Marger bottom={margin}>
-            <Title modifier={titleSize} margin={false} tag={titleTag}>
-              {title}
-            </Title>
-          </Marger>
-          <div style={styles.flexGrid}>
-            <div style={styles.strokeContainer} className="k-u-hidden@m-down">
-              <HorizontalStroke style={styles.stroke} size="big" />
-            </div>
-            <Text
-              style={styles.counterText}
-              fontStyle="italic"
-              weight="bold"
-              tag={titleTag}
-            >
-              {counter}
-            </Text>
-            <div style={styles.strokeContainer} className="k-u-hidden@m-down">
-              <HorizontalStroke style={styles.stroke} size="big" />
-            </div>
+        <Marger bottom={margin}>
+          <Title modifier={titleSize} margin={false} tag={titleTag}>
+            {title}
+          </Title>
+        </Marger>
+        <div style={styles.flexGrid}>
+          <div style={styles.strokeContainer} className="k-u-hidden@m-down">
+            <HorizontalStroke style={styles.stroke} size="big" />
           </div>
-          <Marger top={margin}>
-            <Text
-              style={styles.subTitle}
-              size={subTitleSize}
-              tag={subTitleTag}
-              fontStyle="italic"
-              weight="bold"
-              tag="p"
-            >
-              {subTitle}
-            </Text>
-          </Marger>
+          <Text
+            style={styles.counterText}
+            fontStyle="italic"
+            weight="bold"
+            tag={titleTag}
+          >
+            {counter}
+          </Text>
+          <div style={styles.strokeContainer} className="k-u-hidden@m-down">
+            <HorizontalStroke style={styles.stroke} size="big" />
+          </div>
         </div>
+        <Marger top={margin}>
+          <Text
+            style={styles.subTitle}
+            size={subTitleSize}
+            tag={subTitleTag}
+            fontStyle="italic"
+            weight="bold"
+            tag="p"
+          >
+            {subTitle}
+          </Text>
+        </Marger>
       </StyleRoot>
     )
   }
