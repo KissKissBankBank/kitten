@@ -24,26 +24,31 @@ export const RewardCardAction = ({
 
   return (
     <Deprecated warningMessage="Please use RewardCard sub-component to make your composition. You can check some examples on https://kisskissbankbank.github.io/kitten/">
-      {manageContributionDescription && (
-        <Marger top={topMargin} bottom={!manageContributionDescription ? 0 : 2}>
-          <ManageContribution
-            description={manageContributionDescription}
-            linkLabel={manageContributionLinkLabel}
-            linkHref={manageContributionLinkHref}
-            isDisabled={isDisabled}
-            isTinyVersion={isTinyVersion}
-            isSOrLessVersion={isSOrLessVersion}
-          />
-        </Marger>
-      )}
-      <RewardCardButton
-        label={buttonLabel}
-        onMouseEnter={buttonOnMouseEnter}
-        onMouseLeave={buttonOnMouseLeave}
-        onClick={buttonOnClick}
-        isDisabled={isDisabled}
-        isTinyVersion={isTinyVersion}
-      />
+      <Fragment>
+        {manageContributionDescription && (
+          <Marger
+            top={topMargin}
+            bottom={!manageContributionDescription ? 0 : 2}
+          >
+            <ManageContribution
+              description={manageContributionDescription}
+              linkLabel={manageContributionLinkLabel}
+              linkHref={manageContributionLinkHref}
+              isDisabled={isDisabled}
+              isTinyVersion={isTinyVersion}
+              isSOrLessVersion={isSOrLessVersion}
+            />
+          </Marger>
+        )}
+        <RewardCardButton
+          label={buttonLabel}
+          onMouseEnter={buttonOnMouseEnter}
+          onMouseLeave={buttonOnMouseLeave}
+          onClick={buttonOnClick}
+          isDisabled={isDisabled}
+          isTinyVersion={isTinyVersion}
+        />
+      </Fragment>
     </Deprecated>
   )
 }
