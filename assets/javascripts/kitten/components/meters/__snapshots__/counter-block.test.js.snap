@@ -10,54 +10,111 @@ exports[`<CounterBlock /> with default props matches with snapshot 1`] = `
   }
 >
   <div
-    style={
-      Object {
-        "marginBottom": "2.5rem",
-        "marginTop": null,
-      }
-    }
-  >
-    <p
-      className="k-Title k-Title--tertiary k-Title--withoutMargin"
-    >
-      foo
-    </p>
-  </div>
-  <p
-    className="rmq-2bf6e1a2 rmq-ca40c6f7 rmq-1103da81 rmq-650fa8a3 k-u-style-italic k-u-weight-bold"
     data-radium={true}
-    style={
-      Object {
-        "display": "block",
-        "fontSize": "3rem",
-        "lineHeight": 0.7,
-        "margin": 0,
-        "paddingBottom": 4,
-        "whiteSpace": "nowrap",
-      }
-    }
+    style={undefined}
   >
-    13 106
-  </p>
-  <div
-    style={
-      Object {
-        "marginBottom": null,
-        "marginTop": "2.5rem",
-      }
-    }
-  >
-    <p
-      className="k-u-size-huge k-u-style-italic k-u-weight-bold"
-      data-radium={true}
+    <div
       style={
         Object {
-          "margin": 0,
+          "marginBottom": "2.5rem",
+          "marginTop": null,
         }
       }
     >
-      bar
-    </p>
+      <p
+        className="k-Title k-Title--tertiary k-Title--withoutMargin"
+      >
+        foo
+      </p>
+    </div>
+    <div
+      data-radium={true}
+      style={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <div
+        className="k-u-hidden@m-down"
+        data-radium={true}
+        style={
+          Object {
+            "flexGrow": 2,
+          }
+        }
+      >
+        <span
+          className="k-HorizontalStroke k-HorizontalStroke--big"
+          style={
+            Object {
+              "height": 6,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+      <p
+        className="rmq-2bf6e1a2 rmq-ca40c6f7 rmq-1103da81 rmq-650fa8a3 k-u-style-italic k-u-weight-bold"
+        data-radium={true}
+        style={
+          Object {
+            "display": "block",
+            "flexGrow": 1,
+            "fontSize": "3rem",
+            "lineHeight": 0.7,
+            "margin": 0,
+            "paddingBottom": 4,
+            "textIndent": "-1rem",
+            "whiteSpace": "nowrap",
+          }
+        }
+      >
+        13 106
+      </p>
+      <div
+        className="k-u-hidden@m-down"
+        data-radium={true}
+        style={
+          Object {
+            "flexGrow": 2,
+          }
+        }
+      >
+        <span
+          className="k-HorizontalStroke k-HorizontalStroke--big"
+          style={
+            Object {
+              "height": 6,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+    </div>
+    <div
+      style={
+        Object {
+          "marginBottom": null,
+          "marginTop": "2.5rem",
+        }
+      }
+    >
+      <p
+        className="k-u-size-huge k-u-style-italic k-u-weight-bold"
+        data-radium={true}
+        style={
+          Object {
+            "margin": 0,
+          }
+        }
+      >
+        bar
+      </p>
+    </div>
   </div>
   <style
     dangerouslySetInnerHTML={
