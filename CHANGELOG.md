@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: Update `Marger` with `TYPOGRAPHY.root` as gutter base ratio.
+- Fix: Fix an error to `Deprecated` usage in `RewardCardAction`.
 
 ## [23.10.0] - 2018-11-02
 
