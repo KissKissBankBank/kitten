@@ -103,7 +103,7 @@ const styles = {
     paddingBottom: 4,
     margin: 0,
     flexGrow: 1,
-    textIndent: '-1rem',
+    textIndent: '-1.5rem',
 
     [`@media (min-width: ${ScreenConfig.XS.min}px)`]: {
       fontSize: '4.125rem',
