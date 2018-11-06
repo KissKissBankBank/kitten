@@ -33,7 +33,6 @@ exports[`<CounterBlock /> with default props matches with snapshot 1`] = `
         Object {
           "alignItems": "center",
           "display": "flex",
-          "flexDirection": "row",
           "justifyContent": "center",
         }
       }
@@ -68,7 +67,7 @@ exports[`<CounterBlock /> with default props matches with snapshot 1`] = `
             "lineHeight": 0.7,
             "margin": 0,
             "paddingBottom": 4,
-            "textIndent": "-1rem",
+            "textIndent": "-1.5rem",
             "whiteSpace": "nowrap",
           }
         }
