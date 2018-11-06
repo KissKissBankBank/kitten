@@ -137,8 +137,8 @@ const styles = {
     justifyContent: 'center',
     flexGrow: 1,
     paddingTop: 10,
-    paddingLeft: 18,
     paddingBottom: 15,
+    paddingLeft: 20,
     [`@media (min-width: ${ScreenConfig.S.min}px)`]: {
       paddingLeft: 30,
     },
@@ -147,10 +147,7 @@ const styles = {
   navigation: {
     display: 'flex',
     alignItems: 'center',
-    paddingTop: 15,
-    paddingLeft: 20,
-    paddingRight: 22,
-    paddingBottom: 15,
+    padding: '15px 22px 15px 18px',
     [`@media (min-width: ${ScreenConfig.S.min}px)`]: {
       paddingLeft: 30,
       paddingRight: 32,
