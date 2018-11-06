@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add `HorizontalStroke` to `CounterBlock` component.
+- Fix: Update `LinkBox` styles.
 
 ## [23.10.1] - 2018-11-06
 

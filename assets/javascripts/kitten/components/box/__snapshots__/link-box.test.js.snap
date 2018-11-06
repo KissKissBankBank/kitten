@@ -10,7 +10,7 @@ exports[`<LinkBox /> by default matches with snapshot 1`] = `
     style={
       Object {
         "color": "#222",
-        "display": "inline-block",
+        "display": "flex",
         "textDecoration": "none",
       }
     }
@@ -29,7 +29,6 @@ exports[`<LinkBox /> by default matches with snapshot 1`] = `
           "boxSizing": "border-box",
           "color": "#222",
           "display": "flex",
-          "justifyContent": "space-between",
           "minHeight": 90,
           "transition": "backgroundColor .2s",
           "width": "100%",
@@ -37,7 +36,7 @@ exports[`<LinkBox /> by default matches with snapshot 1`] = `
       }
     >
       <div
-        className="rmq-ff0ea6f7"
+        className="rmq-18e9242d"
         data-radium={true}
         style={
           Object {
@@ -45,7 +44,9 @@ exports[`<LinkBox /> by default matches with snapshot 1`] = `
             "flexDirection": "column",
             "flexGrow": 1,
             "justifyContent": "center",
-            "padding": "10px 18px 15px 20px",
+            "paddingBottom": 15,
+            "paddingLeft": 20,
+            "paddingTop": 10,
           }
         }
       >
@@ -64,16 +65,13 @@ exports[`<LinkBox /> by default matches with snapshot 1`] = `
         
       </div>
       <div
-        className="rmq-d9248954"
+        className="rmq-a2159094"
         data-radium={true}
         style={
           Object {
             "alignItems": "center",
             "display": "flex",
-            "justifyContent": "center",
-            "paddingBottom": 15,
-            "paddingRight": 22,
-            "paddingTop": 15,
+            "padding": "15px 22px 15px 18px",
           }
         }
       >
@@ -95,9 +93,9 @@ exports[`<LinkBox /> by default matches with snapshot 1`] = `
   <style
     dangerouslySetInnerHTML={
       Object {
-        "__html": "@media (min-width: 640px){ .rmq-ff0ea6f7{padding-left: 30px !important;
-padding-right: 20px !important;}}
-@media (min-width: 640px){ .rmq-d9248954{padding-right: 32px !important;}}",
+        "__html": "@media (min-width: 640px){ .rmq-18e9242d{padding-left: 30px !important;}}
+@media (min-width: 640px){ .rmq-a2159094{padding-left: 30px !important;
+padding-right: 32px !important;}}",
       }
     }
   />
@@ -115,7 +113,7 @@ exports[`<LinkBox /> with some props matches with snapshot 1`] = `
     style={
       Object {
         "color": "#222",
-        "display": "inline-block",
+        "display": "flex",
         "textDecoration": "none",
       }
     }
@@ -135,7 +133,6 @@ exports[`<LinkBox /> with some props matches with snapshot 1`] = `
           "boxSizing": "border-box",
           "color": "#222",
           "display": "flex",
-          "justifyContent": "space-between",
           "minHeight": 90,
           "transition": "backgroundColor .2s",
           "width": "100%",
@@ -159,7 +156,7 @@ exports[`<LinkBox /> with some props matches with snapshot 1`] = `
         }
       />
       <div
-        className="rmq-ff0ea6f7"
+        className="rmq-18e9242d"
         data-radium={true}
         style={
           Object {
@@ -167,7 +164,9 @@ exports[`<LinkBox /> with some props matches with snapshot 1`] = `
             "flexDirection": "column",
             "flexGrow": 1,
             "justifyContent": "center",
-            "padding": "10px 18px 15px 20px",
+            "paddingBottom": 15,
+            "paddingLeft": 20,
+            "paddingTop": 10,
           }
         }
       >
@@ -197,16 +196,13 @@ exports[`<LinkBox /> with some props matches with snapshot 1`] = `
         </span>
       </div>
       <div
-        className="rmq-d9248954"
+        className="rmq-a2159094"
         data-radium={true}
         style={
           Object {
             "alignItems": "center",
             "display": "flex",
-            "justifyContent": "center",
-            "paddingBottom": 15,
-            "paddingRight": 22,
-            "paddingTop": 15,
+            "padding": "15px 22px 15px 18px",
           }
         }
       >
@@ -229,9 +225,9 @@ exports[`<LinkBox /> with some props matches with snapshot 1`] = `
     dangerouslySetInnerHTML={
       Object {
         "__html": "@media (min-width: 640px){ .rmq-d68686c{display: flex !important;}}
-@media (min-width: 640px){ .rmq-ff0ea6f7{padding-left: 30px !important;
-padding-right: 20px !important;}}
-@media (min-width: 640px){ .rmq-d9248954{padding-right: 32px !important;}}",
+@media (min-width: 640px){ .rmq-18e9242d{padding-left: 30px !important;}}
+@media (min-width: 640px){ .rmq-a2159094{padding-left: 30px !important;
+padding-right: 32px !important;}}",
       }
     }
   />
