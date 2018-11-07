@@ -3,6 +3,7 @@ import Radium, { StyleRoot } from 'radium'
 import { Title as TitleBase } from 'kitten/components/typography/title'
 import { Text as TextBase } from 'kitten/components/typography/text'
 import { Marger } from 'kitten/components/layout/marger'
+import { HorizontalStroke } from 'kitten/components/layout/horizontal-stroke'
 import { ScreenConfig } from 'kitten/constants/screen-config'
 import { withMediaQueries } from 'kitten/hoc/media-queries'
 
@@ -30,14 +31,22 @@ class CounterBlockBase extends Component {
             {title}
           </Title>
         </Marger>
-        <Text
-          style={styles.counterText}
-          fontStyle="italic"
-          weight="bold"
-          tag={titleTag}
-        >
-          {counter}
-        </Text>
+        <div style={styles.flexGrid}>
+          <div style={styles.strokeContainer} className="k-u-hidden@m-down">
+            <HorizontalStroke style={styles.stroke} size="big" />
+          </div>
+          <Text
+            style={styles.counterText}
+            fontStyle="italic"
+            weight="bold"
+            tag={titleTag}
+          >
+            {counter}
+          </Text>
+          <div style={styles.strokeContainer} className="k-u-hidden@m-down">
+            <HorizontalStroke style={styles.stroke} size="big" />
+          </div>
+        </div>
         <Marger top={margin}>
           <Text
             style={styles.subTitle}
@@ -68,6 +77,21 @@ const styles = {
     textAlign: 'center',
   },
 
+  flexGrid: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
+  stroke: {
+    width: '100%',
+    height: 6,
+  },
+
+  strokeContainer: {
+    flexGrow: 2,
+  },
+
   counterText: {
     fontSize: '3rem',
     lineHeight: 0.7,
@@ -75,6 +99,8 @@ const styles = {
     display: 'block',
     paddingBottom: 4,
     margin: 0,
+    flexGrow: 1,
+    textIndent: '-1.5rem',
 
     [`@media (min-width: ${ScreenConfig.XS.min}px)`]: {
       fontSize: '4.125rem',

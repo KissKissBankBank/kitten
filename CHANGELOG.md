@@ -4,10 +4,18 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-## [23.10.2] - 2018-11-07
+## [23.11.1] - 2018-11-07
 
 - Fix: Change string equality to function equality to check `ExpandBoard`
   children type.
+
+## [23.11.0] - 2018-11-07
+
+Feature:
+  - Add `HorizontalStroke` to `CounterBlock` component.
+
+Fix:
+  - Update `LinkBox` styles.
 
 ## [23.10.1] - 2018-11-06
 

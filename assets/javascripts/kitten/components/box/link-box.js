@@ -93,14 +93,13 @@ export class LinkBox extends Component {
 
 const styles = {
   linkBox: {
-    display: 'inline-block',
+    display: 'flex',
     color: COLORS.font1,
     textDecoration: 'none',
   },
 
   container: {
     display: 'flex',
-    justifyContent: 'space-between',
     minHeight: 90,
     width: '100%',
     boxSizing: 'border-box',
@@ -135,23 +134,22 @@ const styles = {
   paragraph: {
     display: 'flex',
     flexDirection: 'column',
-    flexGrow: 1,
     justifyContent: 'center',
-    padding: '10px 18px 15px 20px',
+    flexGrow: 1,
+    paddingTop: 10,
+    paddingBottom: 15,
+    paddingLeft: 20,
     [`@media (min-width: ${ScreenConfig.S.min}px)`]: {
       paddingLeft: 30,
-      paddingRight: 20,
     },
   },
 
   navigation: {
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'center',
-    paddingRight: 22,
-    paddingTop: 15,
-    paddingBottom: 15,
+    padding: '15px 22px 15px 18px',
     [`@media (min-width: ${ScreenConfig.S.min}px)`]: {
+      paddingLeft: 30,
       paddingRight: 32,
     },
   },
