@@ -4,6 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [23.10.2] - 2018-11-07
+
+- Fix: Change string equality to function equality to check `ExpandBoard`
+  children type.
+
 ## [23.10.1] - 2018-11-06
 
 Fixes:
