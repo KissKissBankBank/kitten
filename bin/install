@@ -2,12 +2,12 @@
 set -e
 
 # Force node version
-if hash nvm 2> /dev/null; then
+if command -v nvm 2> /dev/null; then
   nvm use 8.11
 fi
 
 # Install yarn with npm
-if ! hash yarn 2> /dev/null; then
+if ! command -v yarn 2> /dev/null; then
   npm install -g yarn
 fi
 
