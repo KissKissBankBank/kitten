@@ -111,8 +111,8 @@ class ExpandBoardBase extends Component {
     }
   }
 
-  isButtonComponent = component => component.type.name === 'ExpandBoardButton'
-  isContentComponent = component => component.type.name === 'ExpandBoardContent'
+  isButtonComponent = component => component.type === ExpandBoardButton
+  isContentComponent = component => component.type === ExpandBoardContent
 
   handleClick = () => {
     this.setState(
