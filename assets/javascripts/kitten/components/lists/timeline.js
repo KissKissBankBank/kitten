@@ -28,7 +28,7 @@ export class Timeline extends Component {
                 {++index}
               </Text>
               <Marger top="2.5" bottom="2.5" style={styles.textList}>
-                {pathOr(child, ['props', 'children'], child)}
+                {child}
               </Marger>
             </li>
           ))}
