@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react'
 import { Timeline } from 'kitten/components/lists/timeline'
 import { Text } from 'kitten/components/typography/text'
+import { Paragraph } from 'kitten/components/typography/paragraph'
 import { Marger } from 'kitten/components/layout/marger'
 import { KarlExampleTitle } from 'kitten/karl/examples/title'
 
@@ -20,11 +21,11 @@ export const KarlTimeline = props => (
           id, elementum nisl.
         </Text>
       </div>
-      <span>
+      <Paragraph margin={false} modifier="primary">
         Ut porta blandit est in tincidunt. Aenean et orci pellentesque, iaculis
         turpis id, elementum nisl. Donec ultrices turpis eget sem congue, eu
         fringilla sem hendrerit.
-      </span>
+      </Paragraph>
       <span>
         Maecenas vestibulum purus vitae nulla aliquet, nec faucibus ex semper.
       </span>

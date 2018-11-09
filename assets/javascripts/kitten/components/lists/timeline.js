@@ -7,6 +7,7 @@ import { Marger as MargerBase } from 'kitten/components/layout/marger'
 import COLORS from 'kitten/constants/colors-config'
 import pathOr from 'ramda/src/pathOr'
 import PropTypes from 'prop-types'
+import TYPOGRAPHY from 'kitten/constants/typography-config'
 
 const Marger = Radium(MargerBase)
 const Text = Radium(TextBase)
@@ -28,7 +29,7 @@ export class Timeline extends Component {
                 {++index}
               </Text>
               <Marger top="2.5" bottom="2.5" style={styles.textList}>
-                {pathOr(child, ['props', 'children'], child)}
+                {child}
               </Marger>
             </li>
           ))}
@@ -84,12 +85,12 @@ const styles = {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    fontWeight: 'bold',
     marginRight: 40,
     marginLeft: -circleSize / 2,
     lineHeight: 0,
     flex: `0 0 ${circleSize}px`,
     position: 'relative',
+    ...TYPOGRAPHY.fontStyles.bold,
 
     [`@media (max-width: ${ScreenConfig.XS.max}px)`]: {
       marginRight: 20,
