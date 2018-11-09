@@ -3,7 +3,7 @@ set -e
 
 # Force node version
 if command -v nvm 2> /dev/null; then
-  nvm use 8.11
+  nvm use
 fi
 
 # Install yarn with npm
