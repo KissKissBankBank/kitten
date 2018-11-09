@@ -90,7 +90,7 @@ const styles = {
     lineHeight: 0,
     flex: `0 0 ${circleSize}px`,
     position: 'relative',
-    ...TYPOGRAPHY.fonts.bold,
+    ...TYPOGRAPHY.fontStyles.bold,
 
     [`@media (max-width: ${ScreenConfig.XS.max}px)`]: {
       marginRight: 20,

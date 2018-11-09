@@ -4,7 +4,7 @@ const TYPOGRAPHY = {
   fontWeight: 400,
   lineHeight: 1.5, // rem
   scaleMultiplier: 1.125,
-  fonts: {
+  fontStyles: {
     light: {
       fontFamily: 'Maax, Helvetica, Arial, sans-serif',
       fontWeight: 400,
