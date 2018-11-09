@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Fix `Timeline` component by rendering his children as his.
+- Fix: Fix `Timeline` children rendering.
 
 ## [23.11.1] - 2018-11-07
 
