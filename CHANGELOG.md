@@ -4,7 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Fix `Timeline` children rendering.
+## [23.11.2] - 2018-11-09
+
+Fix:
+- Fix `Timeline` children rendering.
 
 ## [23.11.1] - 2018-11-07
 
