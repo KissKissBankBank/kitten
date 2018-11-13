@@ -8,10 +8,12 @@ import { Line } from 'kitten/components/layout/line'
 export class FieldLabel extends Component {
   static propTypes = {
     tooltip: PropTypes.string,
+    labelProps: PropTypes.object,
   }
 
   static defaultProps = {
     tooltip: null,
+    labelProps: {},
   }
 
   render() {
