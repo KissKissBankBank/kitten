@@ -30,7 +30,6 @@ exports[`<LinkBox /> by default matches with snapshot 1`] = `
           "color": "#222",
           "display": "flex",
           "minHeight": 90,
-          "transition": "left .2s, backgroundColor .2s",
           "width": "100%",
         }
       }
@@ -77,6 +76,7 @@ exports[`<LinkBox /> by default matches with snapshot 1`] = `
             "alignItems": "center",
             "display": "flex",
             "padding": "15px 22px 15px 18px",
+            "transition": "all 0.4s ease-in-out",
           }
         }
       >
@@ -139,7 +139,6 @@ exports[`<LinkBox /> with some props matches with snapshot 1`] = `
           "color": "#222",
           "display": "flex",
           "minHeight": 90,
-          "transition": "left .2s, backgroundColor .2s",
           "width": "100%",
         }
       }
@@ -213,6 +212,7 @@ exports[`<LinkBox /> with some props matches with snapshot 1`] = `
             "alignItems": "center",
             "display": "flex",
             "padding": "15px 22px 15px 18px",
+            "transition": "all 0.4s ease-in-out",
           }
         }
       >
