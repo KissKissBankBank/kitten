@@ -43,7 +43,9 @@ storiesOf('Form/Field', module)
     return (
       <FormGrid>
         <Field error={boolean('Error?', false)}>
-          <Field.Label htmlFor="option-a">{text('Label', 'Label')}</Field.Label>
+          <Field.Label htmlFor="label" tooltip={text('Tooltip', null)}>
+            {text('Label', 'Label')}
+          </Field.Label>
 
           <Field.RadioButtonSet
             name="option"
@@ -73,7 +75,9 @@ storiesOf('Form/Field', module)
     return (
       <FormGrid>
         <Field error={boolean('Error?', false)}>
-          <Field.Label htmlFor="select">{text('Label', 'Label')}</Field.Label>
+          <Field.Label htmlFor="label" tooltip={text('Tooltip', null)}>
+            {text('Label', 'Label')}
+          </Field.Label>
 
           <Field.Select
             id="select"
