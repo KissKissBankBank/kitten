@@ -3,10 +3,12 @@ import PropTypes from 'prop-types'
 import { FieldLabel } from 'kitten/components/form/field/label'
 import { FieldInput } from 'kitten/components/form/field/input'
 import { FieldError } from 'kitten/components/form/field/error'
+import { FieldRadioButtonSet } from 'kitten/components/form/field/radio-button-set'
 
 export class Field extends Component {
   static Label = FieldLabel
   static Input = FieldInput
+  static RadioButtonSet = FieldRadioButtonSet
   static Error = FieldError
 
   static propTypes = {
@@ -36,6 +38,7 @@ export class Field extends Component {
       <Fragment>
         {this.elementsOf(FieldLabel)}
         {this.elementsOf(FieldInput, { error })}
+        {this.elementsOf(FieldRadioButtonSet, { error })}
         {error && this.elementsOf(FieldError)}
       </Fragment>
     )

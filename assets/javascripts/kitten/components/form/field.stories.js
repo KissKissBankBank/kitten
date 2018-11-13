@@ -37,3 +37,33 @@ storiesOf('Form/Field', module)
       </FormGrid>
     )
   })
+  .add('with radio buttons', () => {
+    return (
+      <FormGrid>
+        <Field error={boolean('Error?', false)}>
+          <Field.Label htmlFor="option-a">{text('Label', 'Label')}</Field.Label>
+
+          <Field.RadioButtonSet
+            name="option"
+            items={[
+              {
+                text: text('Option A', 'Option A'),
+                id: 'option-a',
+                defaultChecked: true,
+              },
+              {
+                text: text('Option B', 'Option B'),
+                id: 'option-b',
+              },
+              {
+                text: text('Option C', 'Option C'),
+                id: 'option-c',
+              },
+            ]}
+          />
+
+          <Field.Error>{text('Error', 'Error message…')}</Field.Error>
+        </Field>
+      </FormGrid>
+    )
+  })
