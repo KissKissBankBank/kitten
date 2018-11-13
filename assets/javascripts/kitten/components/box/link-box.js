@@ -129,13 +129,11 @@ const styles = {
     color: COLORS.font1,
     backgroundColor: COLORS.background1,
     border: `2px solid ${COLORS.line1}`,
-    transition: 'left .2s, backgroundColor .2s',
-    ':active': {
-      position: 'relative',
-      left: 5,
-    },
     ':hover': {
       backgroundColor: COLORS.background2,
+    },
+    ':active': {
+      backgroundColor: COLORS.background3,
     },
   },
 
@@ -170,13 +168,13 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     padding: '15px 22px 15px 18px',
+    transition: 'all 0.4s ease-in-out',
     [`@media (min-width: ${ScreenConfig.S.min}px)`]: {
       paddingLeft: 30,
       paddingRight: 32,
     },
     hover: {
-      position: 'relative',
-      left: 2,
+      transform: 'translate(5px, 0px)',
     },
   },
 }
