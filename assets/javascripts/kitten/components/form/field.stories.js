@@ -67,3 +67,25 @@ storiesOf('Form/Field', module)
       </FormGrid>
     )
   })
+  .add('with select', () => {
+    return (
+      <FormGrid>
+        <Field error={boolean('Error?', false)}>
+          <Field.Label htmlFor="select">{text('Label', 'Label')}</Field.Label>
+
+          <Field.Select
+            id="select"
+            name="option"
+            placeholder={text('Placeholder', 'Select…')}
+            options={[
+              { value: 'a', label: text('Option A', 'Option A') },
+              { value: 'b', label: text('Option B', 'Option B') },
+              { value: 'c', label: text('Option C', 'Option C') },
+            ]}
+          />
+
+          <Field.Error>{text('Error', 'Error message…')}</Field.Error>
+        </Field>
+      </FormGrid>
+    )
+  })
