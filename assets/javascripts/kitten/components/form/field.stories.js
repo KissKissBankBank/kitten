@@ -12,7 +12,10 @@ const FieldBase = ({ children }) => (
       <GridCol col="3">
         <Marger top="5" bottom="5">
           <Field error={boolean('Error?', false)}>
-            <Field.Label htmlFor="label" tooltip={text('Tooltip', null)}>
+            <Field.Label
+              labelProps={{ htmlFor: 'label' }}
+              tooltip={text('Tooltip', null)}
+            >
               {text('Label', 'Label')}
             </Field.Label>
 
