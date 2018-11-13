@@ -24,7 +24,9 @@ storiesOf('Form/Field', module)
     return (
       <FormGrid>
         <Field error={boolean('Error?', false)}>
-          <Field.Label htmlFor="label">{text('Label', 'Label')}</Field.Label>
+          <Field.Label htmlFor="label" tooltip={text('Tooltip', null)}>
+            {text('Label', 'Label')}
+          </Field.Label>
 
           <Field.Input
             id="label"
