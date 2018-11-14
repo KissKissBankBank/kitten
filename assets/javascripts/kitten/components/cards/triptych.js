@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Radium, { StyleRoot } from 'radium'
 import PropTypes from 'prop-types'
-import { Container } from 'kitten/components/grid/container'
+import { Container as ContainerBase } from 'kitten/components/grid/container'
 import { Grid, GridCol as GridColBase } from 'kitten/components/grid/grid'
 import { Marger as MargerBase } from 'kitten/components/layout/marger'
 import { VerticalStroke as VerticalStrokeBase } from 'kitten/components/layout/vertical-stroke'
@@ -10,6 +10,7 @@ import { mediaQueries } from 'kitten/hoc/media-queries'
 import { debounce } from 'kitten/helpers/utils/debounce'
 import { GUTTER } from 'kitten/constants/grid-config'
 
+const Container = Radium(ContainerBase)
 const Marger = Radium(MargerBase)
 const GridCol = Radium(GridColBase)
 const VerticalStroke = Radium(VerticalStrokeBase)
@@ -60,7 +61,7 @@ class TriptychBase extends Component {
 
     return (
       <StyleRoot>
-        <Container>
+        <Container style={styles.mainContainer}>
           <Grid className="k-u-align-center">
             <GridCol col-l="6" offset-l="3" col-m="6" offset-m="0">
               <div ref={this.setRef('title')}>
@@ -115,6 +116,10 @@ const tabletGutter = 50 / 2 - GUTTER / 2
 const desktopGutter = 40 / 2 - GUTTER / 2
 
 const styles = {
+  mainContainer: {
+    padding: 0,
+  },
+
   verticalStroke: {
     height: strokeHeight,
     margin: '0 auto',

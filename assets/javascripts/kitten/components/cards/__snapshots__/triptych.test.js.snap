@@ -6,6 +6,12 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
 >
   <div
     className="k-Container"
+    data-radium={true}
+    style={
+      Object {
+        "padding": 0,
+      }
+    }
   >
     <div
       className="k-Grid k-u-align-center"
