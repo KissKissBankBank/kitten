@@ -12,6 +12,8 @@ const ButtonIcon = Radium(ButtonIconBase)
 
 export class TeamCard extends Component {
   static propTypes = {
+    image: PropTypes.string.isRequired,
+    imgTitle: PropTypes.string.isRequired,
     firstName: PropTypes.string.isRequired,
     lastName: PropTypes.string.isRequired,
     jobTilte: PropTypes.string.isRequired,
@@ -21,9 +23,9 @@ export class TeamCard extends Component {
   }
 
   static defaultProps = {
-    mail: 'example@kisskissbankbank.com',
-    phoneNumber: '00 00 00 00 00',
-    socialLink: ' ',
+    mail: '',
+    phoneNumber: '',
+    socialLink: '',
   }
 
   render() {
@@ -39,7 +41,7 @@ export class TeamCard extends Component {
   }
 
   renderImage() {
-    const { imgTitle, image } = this.props
+    const { image, imgTitle } = this.props
     return <div style={imgBackground(image)} title={imgTitle} />
   }
 

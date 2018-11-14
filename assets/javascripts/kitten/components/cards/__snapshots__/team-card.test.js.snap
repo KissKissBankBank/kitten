@@ -1,0 +1,212 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TeamCard /> by default matches with snapshot 1`] = `
+<div
+  data-radium={true}
+>
+  <div
+    style={
+      Object {
+        "marginBottom": "1.25rem",
+        "marginTop": null,
+      }
+    }
+  >
+    <div
+      data-radium={true}
+      style={
+        Object {
+          "backgroundColor": "#fff",
+          "backgroundImage": "url(undefined)",
+          "backgroundPosition": "center",
+          "backgroundRepeat": "no-repeat",
+          "backgroundSize": "cover",
+          "paddingBottom": "150%",
+          "width": "100%",
+        }
+      }
+      title={undefined}
+    />
+  </div>
+  <div
+    style={
+      Object {
+        "marginBottom": "0.875rem",
+        "marginTop": "1.25rem",
+      }
+    }
+  >
+    <span
+      className="k-u-color-font1 k-u-size-default k-u-weight-bold"
+    >
+       
+    </span>
+    <br />
+    <span
+      className="k-u-color-font1 k-u-size-micro k-u-weight-light"
+    />
+  </div>
+  <div
+    style={
+      Object {
+        "marginBottom": null,
+        "marginTop": "0.875rem",
+      }
+    }
+  >
+    <div
+      data-radium={true}
+    >
+      
+      
+      
+    </div>
+  </div>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`<TeamCard /> with some props matches with snapshot 1`] = `
+<div
+  data-radium={true}
+>
+  <div
+    style={
+      Object {
+        "marginBottom": "1.25rem",
+        "marginTop": null,
+      }
+    }
+  >
+    <div
+      data-radium={true}
+      style={
+        Object {
+          "backgroundColor": "#fff",
+          "backgroundImage": "url(Custom image)",
+          "backgroundPosition": "center",
+          "backgroundRepeat": "no-repeat",
+          "backgroundSize": "cover",
+          "paddingBottom": "150%",
+          "width": "100%",
+        }
+      }
+      title="Custom img title"
+    />
+  </div>
+  <div
+    style={
+      Object {
+        "marginBottom": "0.875rem",
+        "marginTop": "1.25rem",
+      }
+    }
+  >
+    <span
+      className="k-u-color-font1 k-u-size-default k-u-weight-bold"
+    >
+      Custom firstName
+       
+      Custom lastName
+    </span>
+    <br />
+    <span
+      className="k-u-color-font1 k-u-size-micro k-u-weight-light"
+    >
+      Custom jobTitle
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "marginBottom": null,
+        "marginTop": "0.875rem",
+      }
+    }
+  >
+    <div
+      data-radium={true}
+    >
+      <button
+        aria-label=""
+        className="k-ButtonIcon k-ButtonIcon--phone k-ButtonIcon--hydrogen"
+        data-radium={true}
+        style={
+          Object {
+            "marginRight": 14,
+          }
+        }
+        tabIndex={null}
+      >
+        <svg
+          className="k-ButtonIcon__svg"
+          viewBox="0 0 16 18"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>
+            Phone
+          </title>
+          <path
+            d="M3.354 0C2.238 0 .496.498.207 2.268-.2 4.764 1.533 9.09 4.047 12.202c2.49 3.084 6.305 5.63 8.86 5.792.06.004.12.006.177.006 2.39 0 3.002-3.158 2.694-3.548l-4.335-1.94c-.26-.15-.532-.225-.79-.225-.263 0-.51.08-.713.24l-.866.63c-.093.034-.194.05-.302.05-1.807 0-5.535-4.758-4.636-6.166.006-.008.79-.724.79-.724.387-.313.534-.882.347-1.444L4.275.206C4.18.088 3.823 0 3.355 0"
+          />
+        </svg>
+      </button>
+      <button
+        aria-label=""
+        className="k-ButtonIcon k-ButtonIcon--phone k-ButtonIcon--hydrogen"
+        data-radium={true}
+        style={
+          Object {
+            "marginRight": 14,
+          }
+        }
+        tabIndex={null}
+      >
+        <svg
+          className="k-ButtonIcon__svg"
+          viewBox="0 0 16 18"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>
+            Phone
+          </title>
+          <path
+            d="M3.354 0C2.238 0 .496.498.207 2.268-.2 4.764 1.533 9.09 4.047 12.202c2.49 3.084 6.305 5.63 8.86 5.792.06.004.12.006.177.006 2.39 0 3.002-3.158 2.694-3.548l-4.335-1.94c-.26-.15-.532-.225-.79-.225-.263 0-.51.08-.713.24l-.866.63c-.093.034-.194.05-.302.05-1.807 0-5.535-4.758-4.636-6.166.006-.008.79-.724.79-.724.387-.313.534-.882.347-1.444L4.275.206C4.18.088 3.823 0 3.355 0"
+          />
+        </svg>
+      </button>
+      <button
+        aria-label="LinkedIn"
+        className="k-ButtonIcon k-ButtonIcon--linkedin k-ButtonIcon--tiny"
+        tabIndex={null}
+      >
+        <svg
+          className="k-ButtonIcon__svg"
+          viewBox="0 0 14 14"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>
+            LinkedIn
+          </title>
+          <path
+            d="M1.622 0a1.62 1.62 0 1 1-.002 3.242A1.62 1.62 0 0 1 1.622 0zm-1.4 13.465H3.02V4.47H.222v8.995zM4.773 4.47h2.68V5.7h.038c.374-.707 1.286-1.452 2.646-1.452 2.83 0 3.353 1.862 3.353 4.284v4.933h-2.796V9.09c0-1.042-.018-2.384-1.452-2.384-1.455 0-1.677 1.137-1.677 2.31v4.45H4.773V4.47"
+          />
+        </svg>
+      </button>
+    </div>
+  </div>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "",
+      }
+    }
+  />
+</div>
+`;

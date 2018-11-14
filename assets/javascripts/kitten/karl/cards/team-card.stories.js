@@ -17,6 +17,13 @@ storiesOf('Cards', module).add(
             firstName={text('First name', 'Lorem')}
             lastName={text('Last name', 'Ipsum')}
             jobTitle={text('Job title', 'Remote')}
+            mail={text('Mail', 'example@kisskissbankbank.com')}
+            phoneNumber={text('Phone number', '00')}
+            socialLink={text('Social link', ' ')}
+            image={text(
+              'Url image',
+              'http://via.placeholder.com/500x500/caf4fe/caf4fe',
+            )}
           />
         </GridCol>
       </Grid>
