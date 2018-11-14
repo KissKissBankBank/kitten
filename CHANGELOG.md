@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Update `LinkBox` animation.
+
 ## [23.11.2] - 2018-11-09
 
 Fix:

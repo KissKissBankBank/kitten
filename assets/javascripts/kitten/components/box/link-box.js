@@ -29,6 +29,20 @@ export class LinkBox extends Component {
     textTag: 'span',
   }
 
+  constructor(props) {
+    super(props)
+
+    this.state = { hover: false }
+  }
+
+  handleOnMouseEnter = () => {
+    this.setState({ hover: true })
+  }
+
+  handleOnMouseLeave = () => {
+    this.setState({ hover: false })
+  }
+
   renderIcon() {
     const { displayIcon, children } = this.props
 
@@ -51,10 +65,19 @@ export class LinkBox extends Component {
 
     const target = isExternal ? { target: '_blank', rel: 'noopener' } : {}
 
+    const arrowStyle = [
+      styles.navigation,
+      this.state.hover && styles.navigation.hover,
+    ]
+
     return (
       <StyleRoot>
         <a {...linkProps} style={styles.linkBox} href={href} {...target}>
-          <div style={styles.container}>
+          <div
+            style={styles.container}
+            onMouseEnter={this.handleOnMouseEnter}
+            onMouseLeave={this.handleOnMouseLeave}
+          >
             {this.renderIcon()}
             <div style={styles.paragraph}>
               <Marger bottom={text ? 0.5 : 0}>
@@ -63,7 +86,7 @@ export class LinkBox extends Component {
                   weight="regular"
                   size={viewportIsMobile ? 'tiny' : 'default'}
                   color="font1"
-                  lineHeight="normal"
+                  style={{ lineHeight: 1 }}
                 >
                   {title}
                 </Text>
@@ -81,7 +104,7 @@ export class LinkBox extends Component {
                 </Text>
               )}
             </div>
-            <div style={styles.navigation}>
+            <div style={arrowStyle}>
               <ArrowIcon className="k-ButtonIcon__svg" />
             </div>
           </div>
@@ -106,14 +129,11 @@ const styles = {
     color: COLORS.font1,
     backgroundColor: COLORS.background1,
     border: `2px solid ${COLORS.line1}`,
-    transition: 'backgroundColor .2s',
-    ':active': {
-      position: 'relative',
-      left: 5,
-      transition: 'left .5s',
-    },
     ':hover': {
       backgroundColor: COLORS.background2,
+    },
+    ':active': {
+      backgroundColor: COLORS.background3,
     },
   },
 
@@ -148,9 +168,13 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     padding: '15px 22px 15px 18px',
+    transition: 'all 0.4s ease-in-out',
     [`@media (min-width: ${ScreenConfig.S.min}px)`]: {
       paddingLeft: 30,
       paddingRight: 32,
+    },
+    hover: {
+      transform: 'translate(5px, 0px)',
     },
   },
 }
