@@ -5,6 +5,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: Update `LinkBox` animation.
+- Feature: Update `ArrowIcon` component with a `version` prop to handle the icon
+  center of gravity properly. `ArrowIcon` used without this prop is now
+  deprecated. All others props are still available.
+  You should use it as follow now:
+  ```js
+  <ArrowIcon version="solid" />
+  ```
 
 ## [23.11.2] - 2018-11-09
 
