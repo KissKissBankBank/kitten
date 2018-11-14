@@ -75,10 +75,7 @@ class ArrowIconBase extends Component {
     }
 
     const arrowStyles = [
-      direction === 'right' && styles.right,
-      direction === 'left' && styles.left,
-      direction === 'top' && styles.top,
-      direction === 'bottom' && styles.bottom,
+      direction && styles[direction],
       disabled && styles.disabled,
     ]
 
