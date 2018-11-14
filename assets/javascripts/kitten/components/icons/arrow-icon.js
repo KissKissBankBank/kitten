@@ -99,7 +99,7 @@ class ArrowIconBase extends Component {
     }
 
     const arrowStyles = [
-      ...style,
+      style,
       direction && styles[direction],
       disabled && styles.disabled,
     ]
