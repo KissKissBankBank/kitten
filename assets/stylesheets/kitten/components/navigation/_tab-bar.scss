@@ -131,4 +131,10 @@
       display: none;
     }
   }
+
+  .k-TabBar--responsive--hidden\@m-down {
+    @include k-media-max('m') {
+      display: flex;
+    }
+  }
 }
