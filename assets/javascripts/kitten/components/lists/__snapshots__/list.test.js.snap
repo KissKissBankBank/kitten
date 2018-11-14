@@ -46,7 +46,9 @@ exports[`<List> with <ListButtonItem> by default matches with snapshot 1`] = `
     >
       <div
         data-radium={true}
+        onBlur={[Function]}
         onClick={[Function]}
+        onFocus={[Function]}
         onKeyPress={[Function]}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
@@ -86,7 +88,14 @@ exports[`<List> with <ListButtonItem> by default matches with snapshot 1`] = `
         >
           <svg
             className="k-ArrowIcon k-ArrowIcon--right k-Button__icon"
-            style={null}
+            data-radium={true}
+            style={
+              Object {
+                "left": 0,
+                "position": "relative",
+                "transition": "left .2s",
+              }
+            }
             viewBox="0 0 6 6"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -114,7 +123,9 @@ exports[`<List> with <ListButtonItem> by default matches with snapshot 1`] = `
     >
       <div
         data-radium={true}
+        onBlur={[Function]}
         onClick={[Function]}
+        onFocus={[Function]}
         onKeyPress={[Function]}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
@@ -153,7 +164,14 @@ exports[`<List> with <ListButtonItem> by default matches with snapshot 1`] = `
         >
           <svg
             className="k-ArrowIcon k-ArrowIcon--right k-Button__icon"
-            style={null}
+            data-radium={true}
+            style={
+              Object {
+                "left": 0,
+                "position": "relative",
+                "transition": "left .2s",
+              }
+            }
             viewBox="0 0 6 6"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -181,7 +199,9 @@ exports[`<List> with <ListButtonItem> by default matches with snapshot 1`] = `
     >
       <div
         data-radium={true}
+        onBlur={[Function]}
         onClick={[Function]}
+        onFocus={[Function]}
         onKeyPress={[Function]}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
@@ -220,7 +240,14 @@ exports[`<List> with <ListButtonItem> by default matches with snapshot 1`] = `
         >
           <svg
             className="k-ArrowIcon k-ArrowIcon--right k-Button__icon"
-            style={null}
+            data-radium={true}
+            style={
+              Object {
+                "left": 0,
+                "position": "relative",
+                "transition": "left .2s",
+              }
+            }
             viewBox="0 0 6 6"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -262,7 +289,9 @@ exports[`<List> with <ListButtonItem> with a disabled button matches with snapsh
     >
       <div
         data-radium={true}
+        onBlur={[Function]}
         onClick={[Function]}
+        onFocus={[Function]}
         onKeyPress={[Function]}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
@@ -302,7 +331,14 @@ exports[`<List> with <ListButtonItem> with a disabled button matches with snapsh
         >
           <svg
             className="k-ArrowIcon k-ArrowIcon--right k-Button__icon"
-            style={null}
+            data-radium={true}
+            style={
+              Object {
+                "left": 0,
+                "position": "relative",
+                "transition": "left .2s",
+              }
+            }
             viewBox="0 0 6 6"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -330,7 +366,9 @@ exports[`<List> with <ListButtonItem> with a disabled button matches with snapsh
     >
       <div
         data-radium={true}
+        onBlur={[Function]}
         onClick={null}
+        onFocus={[Function]}
         onKeyPress={null}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
@@ -371,9 +409,13 @@ exports[`<List> with <ListButtonItem> with a disabled button matches with snapsh
         >
           <svg
             className="k-ArrowIcon k-ArrowIcon--right k-Button__icon"
+            data-radium={true}
             style={
               Object {
                 "fill": "#d8d8d8",
+                "left": 0,
+                "position": "relative",
+                "transition": "left .2s",
               }
             }
             viewBox="0 0 6 6"
@@ -403,7 +445,9 @@ exports[`<List> with <ListButtonItem> with a disabled button matches with snapsh
     >
       <div
         data-radium={true}
+        onBlur={[Function]}
         onClick={[Function]}
+        onFocus={[Function]}
         onKeyPress={[Function]}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
@@ -442,7 +486,14 @@ exports[`<List> with <ListButtonItem> with a disabled button matches with snapsh
         >
           <svg
             className="k-ArrowIcon k-ArrowIcon--right k-Button__icon"
-            style={null}
+            data-radium={true}
+            style={
+              Object {
+                "left": 0,
+                "position": "relative",
+                "transition": "left .2s",
+              }
+            }
             viewBox="0 0 6 6"
             xmlns="http://www.w3.org/2000/svg"
           >
