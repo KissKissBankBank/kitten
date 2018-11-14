@@ -70,7 +70,7 @@ class ArrowIconBase extends Component {
   render() {
     const { version, direction, disabled, ...others } = this.props
 
-    if (version == 'deprecated-center-of-gravity') {
+    if (version === 'deprecated-center-of-gravity') {
       return <DeprecatedArrowIcon {...this.props} />
     }
 
