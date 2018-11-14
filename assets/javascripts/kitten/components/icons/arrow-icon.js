@@ -1,11 +1,11 @@
-import React, { Component } from 'react'
+import React, { Fragment, Component } from 'react'
 import Radium from 'radium'
 import classNames from 'classnames'
 import PropTypes from 'prop-types'
 import { Deprecated } from 'kitten/helpers/utils/deprecated'
 import COLORS from 'kitten/constants/colors-config'
 
-class DeprecatedArrowIcon extends Component {
+class DeprecatedArrowIconSvgBase extends Component {
   static propTypes = {
     direction: PropTypes.oneOf(['top', 'bottom', 'left', 'right']),
     disabled: PropTypes.bool,
@@ -30,6 +30,36 @@ class DeprecatedArrowIcon extends Component {
       className,
     )
 
+    return (
+      <svg
+        className={arrowIconClassNames}
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 6 6"
+        {...others}
+      >
+        <title>Arrow</title>
+        <path d="M6 0H0v6h2V2h4z" />
+      </svg>
+    )
+  }
+}
+
+const DeprecatedArrowIconSvg = Radium(DeprecatedArrowIconSvgBase)
+
+class DeprecatedArrowIcon extends Component {
+  static propTypes = {
+    direction: PropTypes.oneOf(['top', 'bottom', 'left', 'right']),
+    disabled: PropTypes.bool,
+    className: PropTypes.string,
+  }
+
+  static defaultProps = {
+    direction: 'right',
+    disabled: false,
+    className: '',
+  }
+
+  render() {
     const warningMessage =
       'The previous version of ArrowIcon does not handle ' +
       'correctly the center of gravity of the arrow. Please use now the prop ' +
@@ -38,15 +68,9 @@ class DeprecatedArrowIcon extends Component {
 
     return (
       <Deprecated warningMessage={warningMessage}>
-        <svg
-          className={arrowIconClassNames}
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 6 6"
-          {...others}
-        >
-          <title>Arrow</title>
-          <path d="M6 0H0v6h2V2h4z" />
-        </svg>
+        <Fragment>
+          <DeprecatedArrowIconSvg {...this.props} />
+        </Fragment>
       </Deprecated>
     )
   }
@@ -68,13 +92,14 @@ class ArrowIconBase extends Component {
   }
 
   render() {
-    const { version, direction, disabled, ...others } = this.props
+    const { version, direction, disabled, style, ...others } = this.props
 
     if (version === 'deprecated-center-of-gravity') {
       return <DeprecatedArrowIcon {...this.props} />
     }
 
     const arrowStyles = [
+      ...style,
       direction && styles[direction],
       disabled && styles.disabled,
     ]

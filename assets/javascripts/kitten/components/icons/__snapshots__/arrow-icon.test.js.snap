@@ -3,6 +3,7 @@
 exports[`<ArrowIcon /> by default (deprecated) matches the snapshot 1`] = `
 <svg
   className="k-ArrowIcon k-ArrowIcon--right"
+  data-radium={true}
   viewBox="0 0 6 6"
   xmlns="http://www.w3.org/2000/svg"
 >
