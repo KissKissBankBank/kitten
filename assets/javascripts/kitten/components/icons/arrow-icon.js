@@ -1,8 +1,23 @@
 import React, { Component } from 'react'
+import Radium from 'radium'
 import classNames from 'classnames'
 import PropTypes from 'prop-types'
+import { Deprecated } from 'kitten/helpers/utils/deprecated'
+import COLORS from 'kitten/constants/colors-config'
 
-export class ArrowIcon extends Component {
+class DeprecatedArrowIcon extends Component {
+  static propTypes = {
+    direction: PropTypes.oneOf(['top', 'bottom', 'left', 'right']),
+    disabled: PropTypes.bool,
+    className: PropTypes.string,
+  }
+
+  static defaultProps = {
+    direction: 'right',
+    disabled: false,
+    className: '',
+  }
+
   render() {
     const { className, direction, disabled, ...others } = this.props
 
@@ -15,25 +30,86 @@ export class ArrowIcon extends Component {
       className,
     )
 
+    const warningMessage =
+      'The previous version of ArrowIcon does not handle ' +
+      'correctly the center of gravity of the arrow. Please use now the prop ' +
+      '`version` with the value `solid` to display an arrow with the right ' +
+      'center of gravity.'
+
+    return (
+      <Deprecated warningMessage={warningMessage}>
+        <svg
+          className={arrowIconClassNames}
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 6 6"
+          {...others}
+        >
+          <title>Arrow</title>
+          <path d="M6 0H0v6h2V2h4z" />
+        </svg>
+      </Deprecated>
+    )
+  }
+}
+
+class ArrowIconBase extends Component {
+  static propTypes = {
+    version: PropTypes.oneOf(['solid', 'deprecated-center-of-gravity']),
+    direction: PropTypes.oneOf(['top', 'bottom', 'left', 'right']),
+    disabled: PropTypes.bool,
+    className: PropTypes.string,
+  }
+
+  static defaultProps = {
+    version: 'deprecated-center-of-gravity',
+    direction: 'right',
+    disabled: false,
+    className: '',
+  }
+
+  render() {
+    const { version, direction, disabled, ...others } = this.props
+
+    if (version == 'deprecated-center-of-gravity') {
+      return <DeprecatedArrowIcon {...this.props} />
+    }
+
+    const arrowStyles = [
+      direction === 'right' && styles.right,
+      direction === 'left' && styles.left,
+      direction === 'top' && styles.top,
+      direction === 'bottom' && styles.bottom,
+      disabled && styles.disabled,
+    ]
+
     return (
       <svg
-        className={arrowIconClassNames}
+        style={arrowStyles}
         xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 6 6"
+        viewBox="0 0 8.48 5.64"
+        height="5.64"
+        width="8.48"
         {...others}
       >
-        <title>Arrow</title>
-        <path d="M6 0H0v6h2V2h4z" />
+        <path d="M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z" />
       </svg>
     )
   }
 }
 
-ArrowIcon.propTypes = {
-  direction: PropTypes.oneOf(['top', 'bottom', 'left', 'right']),
+const styles = {
+  right: {
+    transform: 'rotate(90deg)',
+  },
+  left: {
+    transform: 'rotate(-90deg)',
+  },
+  bottom: {
+    transform: 'rotate(180deg)',
+  },
+  disabled: {
+    fill: COLORS.background1,
+  },
 }
 
-ArrowIcon.defaultProps = {
-  direction: 'right',
-  disabled: false,
-}
+export const ArrowIcon = Radium(ArrowIconBase)

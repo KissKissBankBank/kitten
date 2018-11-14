@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ArrowIcon /> by default matches the snapshot 1`] = `
+<svg
+  className="k-ArrowIcon k-ArrowIcon--right"
+  version="deprecated-center-of-gravity"
+  viewBox="0 0 6 6"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <title>
+    Arrow
+  </title>
+  <path
+    d="M6 0H0v6h2V2h4z"
+  />
+</svg>
+`;
+
+exports[`<ArrowIcon /> when disabled matches the snapshot 1`] = `
+<svg
+  className="k-ArrowIcon k-ArrowIcon--right k-ArrowIcon--disabled"
+  version="deprecated-center-of-gravity"
+  viewBox="0 0 6 6"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <title>
+    Arrow
+  </title>
+  <path
+    d="M6 0H0v6h2V2h4z"
+  />
+</svg>
+`;
+
+exports[`<ArrowIcon /> with the prop \`direction\` set to \`bottom\` matches the snapshot 1`] = `
+<svg
+  className="k-ArrowIcon k-ArrowIcon--bottom"
+  version="deprecated-center-of-gravity"
+  viewBox="0 0 6 6"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <title>
+    Arrow
+  </title>
+  <path
+    d="M6 0H0v6h2V2h4z"
+  />
+</svg>
+`;
+
+exports[`<ArrowIcon /> with the prop \`direction\` set to \`left\` matches the snapshot 1`] = `
+<svg
+  className="k-ArrowIcon k-ArrowIcon--left"
+  version="deprecated-center-of-gravity"
+  viewBox="0 0 6 6"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <title>
+    Arrow
+  </title>
+  <path
+    d="M6 0H0v6h2V2h4z"
+  />
+</svg>
+`;
+
+exports[`<ArrowIcon /> with the prop \`direction\` set to \`right\` matches the snapshot 1`] = `
+<svg
+  className="k-ArrowIcon k-ArrowIcon--right"
+  version="deprecated-center-of-gravity"
+  viewBox="0 0 6 6"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <title>
+    Arrow
+  </title>
+  <path
+    d="M6 0H0v6h2V2h4z"
+  />
+</svg>
+`;
