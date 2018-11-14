@@ -12,7 +12,7 @@ storiesOf('Cards', module).add(
   withInfo('common info')(() => (
     <Marger top="3">
       <Grid>
-        <GridCol col="3">
+        <GridCol offset="1" col="3">
           <TeamCard
             firstName={text('First name', 'Lorem')}
             lastName={text('Last name', 'Ipsum')}
