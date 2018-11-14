@@ -19,7 +19,7 @@ class DeprecatedArrowIcon extends Component {
   }
 
   render() {
-    const { className, direction, disabled, ...others } = this.props
+    const { className, direction, disabled, version, ...others } = this.props
 
     const arrowIconClassNames = classNames(
       'k-ArrowIcon',

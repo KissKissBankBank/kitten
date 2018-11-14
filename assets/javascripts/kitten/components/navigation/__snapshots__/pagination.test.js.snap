@@ -65,16 +65,32 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
         >
           <svg
             className="k-ArrowIcon k-ArrowIcon--left"
-            data-radium={true}
             style={
-              Object {
-                "alignSelf": "center",
-                "height": "6px",
-                "margin": "0",
-                "padding": "0",
-                "pointerEvents": "none",
-                "width": "6px",
-              }
+              Array [
+                Object {
+                  "active": Object {
+                    "fill": "#fff",
+                  },
+                  "alignSelf": "center",
+                  "focus": Object {
+                    "fill": "#19b4fa",
+                  },
+                  "height": "6px",
+                  "hover": Object {
+                    "fill": "#19b4fa",
+                  },
+                  "isDisabled": Object {
+                    "fill": "#fff",
+                  },
+                  "margin": "0",
+                  "padding": "0",
+                  "pointerEvents": "none",
+                  "width": "6px",
+                },
+                false,
+                false,
+                false,
+              ]
             }
             viewBox="0 0 6 6"
             xmlns="http://www.w3.org/2000/svg"
@@ -395,16 +411,32 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
         >
           <svg
             className="k-ArrowIcon k-ArrowIcon--right"
-            data-radium={true}
             style={
-              Object {
-                "alignSelf": "center",
-                "height": "6px",
-                "margin": "0",
-                "padding": "0",
-                "pointerEvents": "none",
-                "width": "6px",
-              }
+              Array [
+                Object {
+                  "active": Object {
+                    "fill": "#fff",
+                  },
+                  "alignSelf": "center",
+                  "focus": Object {
+                    "fill": "#19b4fa",
+                  },
+                  "height": "6px",
+                  "hover": Object {
+                    "fill": "#19b4fa",
+                  },
+                  "isDisabled": Object {
+                    "fill": "#fff",
+                  },
+                  "margin": "0",
+                  "padding": "0",
+                  "pointerEvents": "none",
+                  "width": "6px",
+                },
+                false,
+                false,
+                false,
+              ]
             }
             viewBox="0 0 6 6"
             xmlns="http://www.w3.org/2000/svg"

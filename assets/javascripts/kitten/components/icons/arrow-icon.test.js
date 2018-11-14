@@ -3,7 +3,7 @@ import renderer from 'react-test-renderer'
 import { ArrowIcon } from 'kitten/components/icons/arrow-icon'
 
 describe('<ArrowIcon />', () => {
-  describe('by default', () => {
+  describe('by default (deprecated)', () => {
     it('matches the snapshot', () => {
       const component = renderer.create(<ArrowIcon />).toJSON()
 
@@ -11,39 +11,55 @@ describe('<ArrowIcon />', () => {
     })
   })
 
-  describe('with the prop `direction` set to `right`', () => {
-    it('matches the snapshot', () => {
-      const component = renderer
-        .create(<ArrowIcon direction="right" />)
-        .toJSON()
+  describe('with the version prop', () => {
+    describe('by default', () => {
+      it('matches the snapshot', () => {
+        const component = renderer
+          .create(<ArrowIcon version="solid" />)
+          .toJSON()
 
-      expect(component).toMatchSnapshot()
+        expect(component).toMatchSnapshot()
+      })
     })
-  })
 
-  describe('with the prop `direction` set to `bottom`', () => {
-    it('matches the snapshot', () => {
-      const component = renderer
-        .create(<ArrowIcon direction="bottom" />)
-        .toJSON()
+    describe('with the prop `direction` set to `right`', () => {
+      it('matches the snapshot', () => {
+        const component = renderer
+          .create(<ArrowIcon direction="right" version="solid" />)
+          .toJSON()
 
-      expect(component).toMatchSnapshot()
+        expect(component).toMatchSnapshot()
+      })
     })
-  })
 
-  describe('with the prop `direction` set to `left`', () => {
-    it('matches the snapshot', () => {
-      const component = renderer.create(<ArrowIcon direction="left" />).toJSON()
+    describe('with the prop `direction` set to `bottom`', () => {
+      it('matches the snapshot', () => {
+        const component = renderer
+          .create(<ArrowIcon direction="bottom" version="solid" />)
+          .toJSON()
 
-      expect(component).toMatchSnapshot()
+        expect(component).toMatchSnapshot()
+      })
     })
-  })
 
-  describe('when disabled', () => {
-    it('matches the snapshot', () => {
-      const component = renderer.create(<ArrowIcon disabled />).toJSON()
+    describe('with the prop `direction` set to `left`', () => {
+      it('matches the snapshot', () => {
+        const component = renderer
+          .create(<ArrowIcon direction="left" version="solid" />)
+          .toJSON()
 
-      expect(component).toMatchSnapshot()
+        expect(component).toMatchSnapshot()
+      })
+    })
+
+    describe('when disabled', () => {
+      it('matches the snapshot', () => {
+        const component = renderer
+          .create(<ArrowIcon version="solid" disabled />)
+          .toJSON()
+
+        expect(component).toMatchSnapshot()
+      })
     })
   })
 })
