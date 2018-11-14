@@ -30,7 +30,7 @@ export class FieldLabel extends Component {
 
           {tooltip && (
             <Line.Item>
-              <Tooltip id="tooltip">Tooltip</Tooltip>
+              <Tooltip id="tooltip">{tooltip}</Tooltip>
             </Line.Item>
           )}
         </Line>
