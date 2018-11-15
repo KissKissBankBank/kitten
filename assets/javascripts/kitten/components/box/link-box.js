@@ -7,6 +7,7 @@ import { Marger } from 'kitten/components/layout/marger'
 import COLORS from 'kitten/constants/colors-config'
 import { ScreenConfig } from 'kitten/constants/screen-config'
 import { mediaQueries } from 'kitten/hoc/media-queries'
+import { pxToRem } from 'kitten/helpers/utils/typography'
 
 export class LinkBox extends Component {
   static propTypes = {
@@ -156,11 +157,11 @@ const styles = {
     flexDirection: 'column',
     justifyContent: 'center',
     flexGrow: 1,
-    paddingTop: 20,
-    paddingBottom: 20,
-    paddingLeft: 20,
+    paddingTop: pxToRem(20),
+    paddingBottom: pxToRem(20),
+    paddingLeft: pxToRem(20),
     [`@media (min-width: ${ScreenConfig.S.min}px)`]: {
-      paddingLeft: 30,
+      paddingLeft: pxToRem(30),
     },
   },
 
@@ -170,8 +171,8 @@ const styles = {
     padding: '15px 22px 15px 18px',
     transition: 'all 0.4s ease-in-out',
     [`@media (min-width: ${ScreenConfig.S.min}px)`]: {
-      paddingLeft: 30,
-      paddingRight: 32,
+      paddingLeft: pxToRem(30),
+      paddingRight: pxToRem(32),
     },
     hover: {
       transform: 'translate(5px, 0px)',
