@@ -11,6 +11,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   ```js
   <ArrowIcon version="solid" />
   ```
+- Fix: Fix `LinkBox` padding
 
 ## [23.11.4] - 2018-11-15
 
