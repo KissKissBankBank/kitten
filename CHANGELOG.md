@@ -6,6 +6,18 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Create `TeamCard` component.
 - Feature: Create `PhoneIcon` and `MailIcon` components.
+- Feature: Update `ArrowIcon` component with a `version` prop to handle the icon
+  center of gravity properly. `ArrowIcon` used without this prop is now
+  deprecated. All others props are still available.
+  You should use it as follow now:
+  ```js
+  <ArrowIcon version="solid" />
+  ```
+
+## [23.11.4] - 2018-11-15
+
+Fix:
+- Fix `Triptych` component margin.
 
 ## [23.11.3] - 2018-11-14
 
