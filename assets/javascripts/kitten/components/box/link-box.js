@@ -80,7 +80,7 @@ export class LinkBox extends Component {
             onMouseLeave={this.handleOnMouseLeave}
           >
             {this.renderIcon()}
-            <div style={styles.paragraph}>
+            <Marger top="2" bottom="2" style={styles.paragraph}>
               <Marger bottom={text ? 0.5 : 0}>
                 <Text
                   tag={titleTag}
@@ -104,7 +104,7 @@ export class LinkBox extends Component {
                   {text}
                 </Text>
               )}
-            </div>
+            </Marger>
             <div style={arrowStyle}>
               <ArrowIcon className="k-ButtonIcon__svg" />
             </div>
@@ -157,8 +157,6 @@ const styles = {
     flexDirection: 'column',
     justifyContent: 'center',
     flexGrow: 1,
-    paddingTop: pxToRem(20),
-    paddingBottom: pxToRem(20),
     paddingLeft: pxToRem(20),
     [`@media (min-width: ${ScreenConfig.S.min}px)`]: {
       paddingLeft: pxToRem(30),
