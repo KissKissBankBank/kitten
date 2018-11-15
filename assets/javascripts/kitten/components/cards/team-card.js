@@ -6,7 +6,9 @@ import { Text } from 'kitten/components/typography/text'
 import { LinkedinButtonIcon } from 'kitten/components/buttons/social-button-icon'
 import { ButtonIcon as ButtonIconBase } from 'kitten/components/buttons/button-icon'
 import { PhoneIcon } from 'kitten/components/icons/phone-icon'
+import { MailIcon } from 'kitten/components/icons/mail-icon'
 import COLORS from 'kitten/constants/colors-config'
+import { ScreenConfig } from 'kitten/constants/screen-config'
 
 const ButtonIcon = Radium(ButtonIconBase)
 
@@ -23,8 +25,8 @@ export class TeamCard extends Component {
   }
 
   static defaultProps = {
-    mail: '',
-    phoneNumber: '',
+    mail: 'example@kisskiss.fr',
+    phoneNumber: '06 00 00 00 00',
     socialLink: '',
   }
 
@@ -67,19 +69,22 @@ export class TeamCard extends Component {
       <div>
         {mail && (
           <ButtonIcon
+            tag="a"
+            href={`mailto:${mail}`}
             modifier="hydrogen"
-            aria-label=""
+            aria-label="Email"
             className="k-ButtonIcon--phone"
             style={styles.icons}
           >
-            <PhoneIcon className="k-ButtonIcon__svg" />
+            <MailIcon className="k-ButtonIcon__svg" />
           </ButtonIcon>
         )}
 
         {phoneNumber && (
           <ButtonIcon
+            href={`tel:${phoneNumber}`}
             modifier="hydrogen"
-            aria-label=""
+            aria-label="Phone"
             className="k-ButtonIcon--phone"
             style={styles.icons}
           >
@@ -87,7 +92,15 @@ export class TeamCard extends Component {
           </ButtonIcon>
         )}
 
-        {socialLink && <LinkedinButtonIcon size="tiny" />}
+        {socialLink && (
+          <LinkedinButtonIcon
+            tag="a"
+            href={socialLink}
+            size="tiny"
+            target="_blank"
+            rel="noopener"
+          />
+        )}
       </div>
     )
   }
@@ -108,6 +121,9 @@ const imgBackground = image => ({
 
 const styles = {
   icons: {
-    marginRight: 14,
+    marginRight: 9,
+    [`@media (min-width: ${ScreenConfig.M.min}px)`]: {
+      marginRight: 14,
+    },
   },
 }
