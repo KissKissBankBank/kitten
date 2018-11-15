@@ -12,11 +12,8 @@ import {
 
 const viewPortTable = {
   viewportIsMobile: SCREEN_SIZE_XS,
-  viewportIsTabletOrLess: SCREEN_SIZE_M,
-
-  viewportIsXSOrLess: SCREEN_SIZE_XS,
   viewportIsSOrLess: SCREEN_SIZE_S,
-  viewportIsMOrLess: SCREEN_SIZE_M,
+  viewportIsTabletOrLess: SCREEN_SIZE_M,
   viewportIsLOrLess: SCREEN_SIZE_L,
 }
 
