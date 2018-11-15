@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Update Lendo `Header` with new responsive classes on `header example`.
+
 ## [23.11.4] - 2018-11-15
 
 No changes.

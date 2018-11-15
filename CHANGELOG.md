@@ -11,6 +11,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   ```js
   <ArrowIcon version="solid" />
   ```
+- Add mediaqueries on `Header` and `Tabbar` to improve responsiveness on Lendo.
+  Update Lendopolis logo
 
 ## [23.11.4] - 2018-11-15
 
