@@ -5,7 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Create `TeamCard` component.
-- Feature: Create `PhoneIcon` and `MailIcon` component.
+- Feature: Create `PhoneIcon` and `MailIcon` components.
 
 ## [23.11.3] - 2018-11-14
 
