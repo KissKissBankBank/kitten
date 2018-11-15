@@ -14,7 +14,7 @@ const viewPortTable = {
   viewportIsMobile: SCREEN_SIZE_XS,
   viewportIsTabletOrLess: SCREEN_SIZE_M,
 
-  viewportIsXSOrLess: SCREEN_SIZE_XS,
+  viewportIsXS: SCREEN_SIZE_XS,
   viewportIsSOrLess: SCREEN_SIZE_S,
   viewportIsMOrLess: SCREEN_SIZE_M,
   viewportIsLOrLess: SCREEN_SIZE_L,
@@ -52,7 +52,7 @@ export const mediaQueries = (WrappedComponent, hocProps = {}) =>
 
     warnIfHocPropIsDeprecated(prop) {
       const deprecatedPropsToNewProps = {
-        viewportIsMobile: 'viewportIsXSOrLess',
+        viewportIsMobile: 'viewportIsXS',
         viewportIsTabletOrLess: 'viewportIsMOrLess',
       }
 
