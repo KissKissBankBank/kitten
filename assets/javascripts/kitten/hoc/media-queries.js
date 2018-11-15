@@ -13,6 +13,7 @@ const viewPortTable = {
   viewportIsMobile: SCREEN_SIZE_XS,
   viewportIsSOrLess: SCREEN_SIZE_S,
   viewportIsTabletOrLess: SCREEN_SIZE_M,
+  viewportIsLOrLess: SCREEN_SIZE_L,
 }
 
 export const withMediaQueries = hocProps => WrapperComponent =>
