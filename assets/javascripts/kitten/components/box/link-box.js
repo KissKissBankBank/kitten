@@ -156,8 +156,8 @@ const styles = {
     flexDirection: 'column',
     justifyContent: 'center',
     flexGrow: 1,
-    paddingTop: 10,
-    paddingBottom: 15,
+    paddingTop: 20,
+    paddingBottom: 20,
     paddingLeft: 20,
     [`@media (min-width: ${ScreenConfig.S.min}px)`]: {
       paddingLeft: 30,
