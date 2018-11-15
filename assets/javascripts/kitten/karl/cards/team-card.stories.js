@@ -18,7 +18,7 @@ storiesOf('Cards', module).add(
             lastName={text('Last name', 'Ipsum')}
             jobTitle={text('Job title', 'Remote')}
             mail={text('Mail', 'example@kisskissbankbank.com')}
-            phoneNumber={text('Phone number', '00')}
+            phoneNumber={text('Phone number', '06 00 00 00 00')}
             socialLink={text('Social link', ' ')}
             image={text(
               'Url image',

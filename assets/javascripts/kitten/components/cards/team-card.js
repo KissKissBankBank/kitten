@@ -25,8 +25,8 @@ export class TeamCard extends Component {
   }
 
   static defaultProps = {
-    mail: 'example@kisskiss.fr',
-    phoneNumber: '06 00 00 00 00',
+    mail: '',
+    phoneNumber: '',
     socialLink: '',
   }
 
