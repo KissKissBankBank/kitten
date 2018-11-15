@@ -4,7 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Fix `Triptych` component margin.
+## [23.11.4] - 2018-11-15
+
+Fix:
+- Fix `Triptych` component margin.
 
 ## [23.11.3] - 2018-11-14
 
