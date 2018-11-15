@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import Radium, { StyleRoot } from 'radium'
 import PropTypes from 'prop-types'
-import { Container } from 'kitten/components/grid/container'
 import { Grid, GridCol as GridColBase } from 'kitten/components/grid/grid'
 import { Marger as MargerBase } from 'kitten/components/layout/marger'
 import { VerticalStroke as VerticalStrokeBase } from 'kitten/components/layout/vertical-stroke'
@@ -60,43 +59,39 @@ class TriptychBase extends Component {
 
     return (
       <StyleRoot>
-        <Container>
-          <Grid className="k-u-align-center">
-            <GridCol col-l="6" offset-l="3" col-m="6" offset-m="0">
-              <div ref={this.setRef('title')}>
-                <Marger bottom="2">{title}</Marger>
+        <Grid className="k-u-align-center">
+          <GridCol col-l="6" offset-l="3" col-m="6" offset-m="0">
+            <div ref={this.setRef('title')}>
+              <Marger bottom="2">{title}</Marger>
 
-                <Marger bottom="2">
-                  <VerticalStroke size="huge" style={styles.verticalStroke} />
-                </Marger>
+              <Marger bottom="2">
+                <VerticalStroke size="huge" style={styles.verticalStroke} />
+              </Marger>
+            </div>
+          </GridCol>
+
+          <GridCol col-l="4" col-m="6" style={styles.oddMargin}>
+            <Marger style={styles.gutter.firstItem}>
+              <div ref={this.setRef('firstCard')}>
+                <Marger bottom={viewportIsTabletOrLess ? 5 : 0}>{item1}</Marger>
               </div>
-            </GridCol>
+            </Marger>
+          </GridCol>
 
-            <GridCol col-l="4" col-m="6" style={styles.oddMargin}>
-              <Marger style={styles.gutter.firstItem}>
-                <div ref={this.setRef('firstCard')}>
-                  <Marger bottom={viewportIsTabletOrLess ? 5 : 0}>
-                    {item1}
-                  </Marger>
-                </div>
-              </Marger>
-            </GridCol>
+          <GridCol col-l="4" col-m="6">
+            <Marger
+              style={{ ...styles.secondCard, ...styles.gutter.secondItem }}
+              top={this.state.secondCardComputedTopMargin / 10}
+              bottom={viewportIsTabletOrLess ? 5 : 0}
+            >
+              {item2}
+            </Marger>
+          </GridCol>
 
-            <GridCol col-l="4" col-m="6">
-              <Marger
-                style={{ ...styles.secondCard, ...styles.gutter.secondItem }}
-                top={this.state.secondCardComputedTopMargin / 10}
-                bottom={viewportIsTabletOrLess ? 5 : 0}
-              >
-                {item2}
-              </Marger>
-            </GridCol>
-
-            <GridCol col-l="4" col-m="6" style={styles.oddMargin}>
-              <Marger style={styles.gutter.thirdItem}>{item3}</Marger>
-            </GridCol>
-          </Grid>
-        </Container>
+          <GridCol col-l="4" col-m="6" style={styles.oddMargin}>
+            <Marger style={styles.gutter.thirdItem}>{item3}</Marger>
+          </GridCol>
+        </Grid>
       </StyleRoot>
     )
   }
