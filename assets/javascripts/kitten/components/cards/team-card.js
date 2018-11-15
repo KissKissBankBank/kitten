@@ -5,10 +5,12 @@ import { Marger } from 'kitten/components/layout/marger'
 import { Text } from 'kitten/components/typography/text'
 import { LinkedinButtonIcon } from 'kitten/components/buttons/social-button-icon'
 import { ButtonIcon as ButtonIconBase } from 'kitten/components/buttons/button-icon'
+import { withTooltip } from 'kitten/hoc/with-tooltip'
 import { PhoneIcon } from 'kitten/components/icons/phone-icon'
 import { MailIcon } from 'kitten/components/icons/mail-icon'
 import COLORS from 'kitten/constants/colors-config'
 import { ScreenConfig } from 'kitten/constants/screen-config'
+import { mediaQueries } from 'kitten/hoc/media-queries'
 
 const ButtonIcon = Radium(ButtonIconBase)
 
@@ -62,6 +64,39 @@ export class TeamCard extends Component {
     )
   }
 
+  renderPhoneIcon() {
+    const { phoneNumber, viewportIsMobile } = this.props
+    return (
+      <Fragment>
+        {viewportIsMobile && (
+          <ButtonIcon
+            href={`tel:${phoneNumber}`}
+            modifier="hydrogen"
+            aria-label="Phone"
+            className="k-ButtonIcon--phone"
+            style={styles.icons}
+          >
+            <PhoneIcon className="k-ButtonIcon__svg" />
+          </ButtonIcon>
+        )}
+
+        {!viewportIsMobile && (
+          <withTooltip>
+            <ButtonIcon
+              href={`tel:${phoneNumber}`}
+              modifier="hydrogen"
+              aria-label="Phone"
+              className="k-ButtonIcon--phone"
+              style={styles.icons}
+            >
+              <PhoneIcon className="k-ButtonIcon__svg" />
+            </ButtonIcon>
+          </withTooltip>
+        )}
+      </Fragment>
+    )
+  }
+
   renderIcons() {
     const { mail, phoneNumber, socialLink } = this.props
 
@@ -80,17 +115,7 @@ export class TeamCard extends Component {
           </ButtonIcon>
         )}
 
-        {phoneNumber && (
-          <ButtonIcon
-            href={`tel:${phoneNumber}`}
-            modifier="hydrogen"
-            aria-label="Phone"
-            className="k-ButtonIcon--phone"
-            style={styles.icons}
-          >
-            <PhoneIcon className="k-ButtonIcon__svg" />
-          </ButtonIcon>
-        )}
+        {phoneNumber && this.renderPhoneIcon()}
 
         {socialLink && (
           <LinkedinButtonIcon
