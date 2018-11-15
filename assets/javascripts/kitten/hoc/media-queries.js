@@ -12,8 +12,11 @@ import {
 
 const viewPortTable = {
   viewportIsMobile: SCREEN_SIZE_XS,
-  viewportIsSOrLess: SCREEN_SIZE_S,
   viewportIsTabletOrLess: SCREEN_SIZE_M,
+
+  viewportIsXSOrLess: SCREEN_SIZE_XS,
+  viewportIsSOrLess: SCREEN_SIZE_S,
+  viewportIsMOrLess: SCREEN_SIZE_M,
   viewportIsLOrLess: SCREEN_SIZE_L,
 }
 
@@ -47,12 +50,28 @@ export const mediaQueries = (WrappedComponent, hocProps = {}) =>
       )
     }
 
+    warnIfHocPropIsDeprecated(prop) {
+      const deprecatedPropsToNewProps = {
+        viewportIsMobile: 'viewportIsXSOrLess',
+        viewportIsTabletOrLess: 'viewportIsMOrLess',
+      }
+
+      if (Object.keys(deprecatedPropsToNewProps).includes(prop)) {
+        console.warn(
+          `${prop} is deprecated. Please use ${
+            deprecatedPropsToNewProps[prop]
+          } instead now.`,
+        )
+      }
+    }
+
     componentDidMount() {
       for (let prop in hocProps) {
         const propValue = hocProps[prop]
         if (this.isInvalidProp(prop)) {
           break
         }
+        this.warnIfHocPropIsDeprecated(prop)
         this.viewports[prop] =
           typeof propValue === 'boolean'
             ? createMatchMediaMax(viewPortTable[prop])
