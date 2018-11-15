@@ -51,17 +51,19 @@ export const mediaQueries = (WrappedComponent, hocProps = {}) =>
     }
 
     warnIfHocPropIsDeprecated(prop) {
-      const deprecatedPropsToNewProps = {
-        viewportIsMobile: 'viewportIsXS',
-        viewportIsTabletOrLess: 'viewportIsMOrLess',
-      }
+      if (process.env.NODE_ENV === 'development') {
+        const deprecatedPropsToNewProps = {
+          viewportIsMobile: 'viewportIsXS',
+          viewportIsTabletOrLess: 'viewportIsMOrLess',
+        }
 
-      if (Object.keys(deprecatedPropsToNewProps).includes(prop)) {
-        console.warn(
-          `${prop} is deprecated. Please use ${
-            deprecatedPropsToNewProps[prop]
-          } instead now.`,
-        )
+        if (Object.keys(deprecatedPropsToNewProps).includes(prop)) {
+          console.warn(
+            `${prop} is deprecated. Please use ${
+              deprecatedPropsToNewProps[prop]
+            } instead now.`,
+          )
+        }
       }
     }
 
