@@ -36,7 +36,7 @@ class ListButtonItem extends Component {
   }
 
   handleKeyPress = event => {
-    const { onKeyPress } = this.props
+    const { onKeyPress, onClick } = this.props
     const enterKey = 13
     const spaceKey = 32
 
@@ -55,31 +55,23 @@ class ListButtonItem extends Component {
   }
 
   handleFocus = event => {
-    const { onFocus } = this.props
-
     this.updateFocus(true)
-    onFocus()
+    this.props.onFocus()
   }
 
   handleBlur = () => {
-    const { onBlur } = this.props
-
     this.updateFocus(false)
-    onBlur()
+    this.props.onBlur()
   }
 
   handleMouseEnter = () => {
-    const { onMouseEnter } = this.props
-
     this.updateFocus(true)
-    onMouseEnter()
+    this.props.onMouseEnter()
   }
 
   handleMouseLeave = () => {
-    const { onMouseLeave } = this.props
-
     this.updateFocus(false)
-    onMouseLeave()
+    this.props.onMouseLeave()
   }
 
   render() {
