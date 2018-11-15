@@ -29,6 +29,7 @@ exports[`<ExpandBoard /> with <ExpandBoard.Button> and <ExpandBoard.Content> by 
     Alice
     <svg
       className="k-ArrowIcon k-ArrowIcon--bottom k-Button__icon"
+      data-radium={true}
       fill="#fff"
       style={
         Object {
@@ -79,6 +80,7 @@ exports[`<ExpandBoard /> with <ExpandBoard.Button> and <ExpandBoard.Content> dis
     Alice
     <svg
       className="k-ArrowIcon k-ArrowIcon--bottom k-Button__icon"
+      data-radium={true}
       fill="#fff"
       style={
         Object {
