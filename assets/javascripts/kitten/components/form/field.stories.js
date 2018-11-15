@@ -11,17 +11,20 @@ const FieldBase = ({ children }) => (
     <Grid>
       <GridCol col="3">
         <Marger top="5" bottom="5">
-          <Field error={boolean('Error?', false)}>
+          <Field>
             <Field.Label
               labelProps={{ htmlFor: 'label' }}
               tooltip={text('Tooltip', null)}
+              tooltipId={text('Tooltip ID', 'tooltip')}
             >
               {text('Label', 'Label')}
             </Field.Label>
 
             {children}
 
-            <Field.Error>{text('Error', 'Error message…')}</Field.Error>
+            {boolean('Error?', false) && (
+              <Field.Error>{text('Error', 'Error message…')}</Field.Error>
+            )}
           </Field>
         </Marger>
       </GridCol>
@@ -38,6 +41,7 @@ storiesOf('Form/Field', module)
           id="label"
           name="label"
           placeholder={text('Placeholder', 'Placeholder…')}
+          error={boolean('Error?', false)}
         />
       </FieldBase>
     )
@@ -62,6 +66,7 @@ storiesOf('Form/Field', module)
               id: 'option-c',
             },
           ]}
+          error={boolean('Error?', false)}
         />
       </FieldBase>
     )
@@ -78,6 +83,7 @@ storiesOf('Form/Field', module)
             { value: 'b', label: text('Option B', 'Option B') },
             { value: 'c', label: text('Option C', 'Option C') },
           ]}
+          error={boolean('Error?', false)}
         />
       </FieldBase>
     )

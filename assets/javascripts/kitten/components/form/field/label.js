@@ -17,20 +17,20 @@ export class FieldLabel extends Component {
   }
 
   render() {
-    const { children, tooltip, labelProps } = this.props
+    const { children, tooltip, tooltipId, labelProps } = this.props
 
     return (
       <Marger bottom="1.5">
         <Line style={{ lineHeight: 1 }}>
           <Line.Item>
-            <Label {...labelProps} margin={false} size="tiny">
+            <Label {...labelProps} size="tiny">
               {children}
             </Label>
           </Line.Item>
 
           {tooltip && (
             <Line.Item>
-              <Tooltip id="tooltip">{tooltip}</Tooltip>
+              <Tooltip id={tooltipId}>{tooltip}</Tooltip>
             </Line.Item>
           )}
         </Line>
