@@ -4,6 +4,7 @@ import {
   createMatchMedia,
 } from 'kitten/helpers/utils/media-queries'
 import {
+  SCREEN_SIZE_XXS,
   SCREEN_SIZE_XS,
   SCREEN_SIZE_S,
   SCREEN_SIZE_M,
@@ -14,7 +15,8 @@ const viewPortTable = {
   viewportIsMobile: SCREEN_SIZE_XS,
   viewportIsTabletOrLess: SCREEN_SIZE_M,
 
-  viewportIsXS: SCREEN_SIZE_XS,
+  viewportIsXXS: SCREEN_SIZE_XXS,
+  viewportIsXSOrLess: SCREEN_SIZE_XS,
   viewportIsSOrLess: SCREEN_SIZE_S,
   viewportIsMOrLess: SCREEN_SIZE_M,
   viewportIsLOrLess: SCREEN_SIZE_L,
@@ -53,7 +55,7 @@ export const mediaQueries = (WrappedComponent, hocProps = {}) =>
     warnIfHocPropIsDeprecated(prop) {
       if (process.env.NODE_ENV === 'development') {
         const deprecatedPropsToNewProps = {
-          viewportIsMobile: 'viewportIsXS',
+          viewportIsMobile: 'viewportIsXSOrLess',
           viewportIsTabletOrLess: 'viewportIsMOrLess',
         }
 
