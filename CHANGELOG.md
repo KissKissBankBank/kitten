@@ -5,13 +5,20 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add animation on `List.ButtonItem` hover.
-- Feature: Update `ArrowIcon` component with a `version` prop to handle the icon
+
+## [23.12.0] - 2018-11-15
+
+Feature:
+- Update `ArrowIcon` component with a `version` prop to handle the icon
   center of gravity properly. `ArrowIcon` used without this prop is now
   deprecated. All others props are still available.
   You should use it as follow now:
   ```js
   <ArrowIcon version="solid" />
   ```
+
+Fix:
+- Fix `LinkBox` padding.
 
 ## [23.11.4] - 2018-11-15
 
