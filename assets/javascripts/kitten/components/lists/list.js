@@ -8,6 +8,29 @@ import { pxToRem } from 'kitten/helpers/utils/typography'
 const ArrowIcon = Radium(ArrowIconBase)
 
 class ListButtonItem extends Component {
+  static propTypes = {
+    children: PropTypes.node.isRequired,
+    style: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+    disabled: PropTypes.bool,
+    withTopBorder: PropTypes.bool,
+    onClick: PropTypes.func,
+    onFocus: PropTypes.func,
+    onBlur: PropTypes.func,
+    onMouseEnter: PropTypes.func,
+    onMouseLeave: PropTypes.func,
+  }
+
+  static defaultProps = {
+    style: {},
+    disabled: false,
+    withTopBorder: false,
+    onClick: () => {},
+    onFocus: () => {},
+    onBlur: () => {},
+    onMouseEnter: () => {},
+    onMouseLeave: () => {},
+  }
+
   state = {
     focus: false,
   }
@@ -22,9 +45,7 @@ class ListButtonItem extends Component {
       case spaceKey:
         event.preventDefault
         onClick()
-        if (onKeyPress) {
-          onKeyPress()
-        }
+        onKeyPress()
         break
     }
   }
@@ -37,36 +58,28 @@ class ListButtonItem extends Component {
     const { onFocus } = this.props
 
     this.updateFocus(true)
-    if (onFocus) {
-      onFocus()
-    }
+    onFocus()
   }
 
   handleBlur = () => {
     const { onBlur } = this.props
 
     this.updateFocus(false)
-    if (onBlur) {
-      onBlur()
-    }
+    onBlur()
   }
 
   handleMouseEnter = () => {
     const { onMouseEnter } = this.props
 
     this.updateFocus(true)
-    if (onMouseEnter) {
-      onMouseEnter()
-    }
+    onMouseEnter()
   }
 
   handleMouseLeave = () => {
     const { onMouseLeave } = this.props
 
     this.updateFocus(false)
-    if (onMouseLeave) {
-      onMouseLeave()
-    }
+    onMouseLeave()
   }
 
   render() {
@@ -116,21 +129,6 @@ class ListButtonItem extends Component {
       </StyleRoot>
     )
   }
-}
-
-ListButtonItem.propTypes = {
-  children: PropTypes.node.isRequired,
-  disabled: PropTypes.bool,
-  style: PropTypes.object,
-  onClick: PropTypes.func,
-  withTopBorder: PropTypes.bool,
-}
-
-ListButtonItem.defaultProps = {
-  disabled: false,
-  style: {},
-  onClick: () => {},
-  withTopBorder: false,
 }
 
 export class ListBase extends Component {
