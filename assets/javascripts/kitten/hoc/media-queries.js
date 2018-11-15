@@ -7,12 +7,16 @@ import {
   SCREEN_SIZE_XS,
   SCREEN_SIZE_S,
   SCREEN_SIZE_M,
+  SCREEN_SIZE_L,
 } from 'kitten/constants/screen-config'
 
 const viewPortTable = {
   viewportIsMobile: SCREEN_SIZE_XS,
-  viewportIsSOrLess: SCREEN_SIZE_S,
   viewportIsTabletOrLess: SCREEN_SIZE_M,
+
+  viewportIsXSOrLess: SCREEN_SIZE_XS,
+  viewportIsSOrLess: SCREEN_SIZE_S,
+  viewportIsMOrLess: SCREEN_SIZE_M,
   viewportIsLOrLess: SCREEN_SIZE_L,
 }
 
