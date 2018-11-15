@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add animation on `List.ButtonItem` hover.
+
 ## [23.12.0] - 2018-11-15
 
 Feature:
