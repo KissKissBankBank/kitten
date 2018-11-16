@@ -128,7 +128,7 @@
   .k-Header__logo--smallOnXxs {
     svg, img {
       @include k-media-max('xxs') {
-        width: 120px;
+        width: k-px-to-rem(120px);
       }
     }
   }
