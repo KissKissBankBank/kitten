@@ -11,7 +11,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   ```js
   <ArrowIcon version="solid" />
   ```
-- Fix: Add classes `k-Header__logo--smallOnXxs` & `k-Header__nav--hidden@m-down`
+- Feature: Add classes `k-Header__logo--smallOnXxs` & `k-Header__nav--hidden@m-down`
   on `Header` and `k-TabBar--responsive--hidden@m-down` on `TabBar` to improve
   responsiveness possibilities.
 
