@@ -4,7 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Update Lendo `Header` with new responsive classes on `header example`.
+Fix:
+- Update Lendo `Header` and `TabBar` with new responsive classes on page:
+  `header example`.
+- Update with new borderless Lendo logo.
 
 ## [23.11.4] - 2018-11-15
 
