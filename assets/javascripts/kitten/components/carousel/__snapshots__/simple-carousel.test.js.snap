@@ -1,17 +1,92 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<SimpleCarousel /> by default matches with snapshot 1`] = `
-<div
-  data-radium={true}
-  style={
-    Object {
-      "display": "grid",
-      "gap": 0,
-      "marginBottom": null,
-      "marginTop": null,
+Array [
+  <div
+    data-radium={true}
+    style={
+      Object {
+        "display": "grid",
+        "gap": 0,
+        "marginBottom": "2.5rem",
+        "marginTop": null,
+      }
     }
-  }
-/>
+  >
+    <div
+      data-radium={true}
+      style={
+        Object {
+          "gridColumn": 1,
+          "gridRow": 1,
+          "opacity": 1,
+          "transition": "all .8s ease-in-out",
+          "visibility": "visible",
+        }
+      }
+    >
+      <p>
+        Foo
+      </p>
+    </div>
+    <div
+      data-radium={true}
+      style={
+        Object {
+          "gridColumn": 1,
+          "gridRow": 1,
+          "opacity": 0,
+          "pointerEvents": "none",
+          "transition": "all .8s ease-in-out",
+          "visibility": "hidden",
+        }
+      }
+    >
+      <p>
+        Bar
+      </p>
+    </div>
+  </div>,
+  <div
+    data-radium={true}
+    style={
+      Object {
+        "display": "flex",
+        "justifyContent": "center",
+        "marginBottom": "2.5rem",
+        "marginTop": "2.5rem",
+      }
+    }
+  >
+    <div
+      data-radium={true}
+      onClick={[Function]}
+      style={
+        Object {
+          "background": "#19b4fa",
+          "cursor": "pointer",
+          "height": 6,
+          "marginRight": 5,
+          "transition": "background .4s ease-in-out",
+          "width": 6,
+        }
+      }
+    />
+    <div
+      data-radium={true}
+      onClick={[Function]}
+      style={
+        Object {
+          "background": "#fff",
+          "cursor": "pointer",
+          "height": 6,
+          "marginRight": 5,
+          "width": 6,
+        }
+      }
+    />
+  </div>,
+]
 `;
 
 exports[`<SimpleCarousel /> with only one item matches with snapshot 1`] = `
@@ -25,5 +100,22 @@ exports[`<SimpleCarousel /> with only one item matches with snapshot 1`] = `
       "marginTop": null,
     }
   }
-/>
+>
+  <div
+    data-radium={true}
+    style={
+      Object {
+        "gridColumn": 1,
+        "gridRow": 1,
+        "opacity": 1,
+        "transition": "all .8s ease-in-out",
+        "visibility": "visible",
+      }
+    }
+  >
+    <p>
+      Foo
+    </p>
+  </div>
+</div>
 `;

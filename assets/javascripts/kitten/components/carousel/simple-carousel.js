@@ -31,7 +31,7 @@ class SimpleCarouselBase extends Component {
     return (
       <Fragment>
         <Marger bottom={this.showPagination() ? 4 : 0} style={styles.container}>
-          {React.Children.toArray(children).map((item, index) => {
+          {React.Children.map(children, (item, index) => {
             const itemStyle = [
               styles.item,
               index !== currentPageNumber && styles.item.hide,

@@ -18,7 +18,10 @@ describe('<SimpleCarousel />', () => {
     beforeEach(() => {
       component = renderer
         .create(
-          <SimpleCarousel items={[<p key="1">Foo</p>, <p key="2">Bar</p>]} />,
+          <SimpleCarousel>
+            <p key="1">Foo</p>
+            <p key="2">Bar</p>
+          </SimpleCarousel>,
         )
         .toJSON()
     })
@@ -31,7 +34,11 @@ describe('<SimpleCarousel />', () => {
   describe('with only one item', () => {
     beforeEach(() => {
       component = renderer
-        .create(<SimpleCarousel items={[<p key="1">Foo</p>]} />)
+        .create(
+          <SimpleCarousel>
+            <p key="1">Foo</p>
+          </SimpleCarousel>,
+        )
         .toJSON()
     })
 
