@@ -5,6 +5,169 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add `SimpleCarousel` component.
+- Feature: Add animation on `List.ButtonItem` hover.
+- Feature: Add new viewport range to MediaQueries HOC.
+
+## [23.12.0] - 2018-11-15
+
+Feature:
+- Update `ArrowIcon` component with a `version` prop to handle the icon
+  center of gravity properly. `ArrowIcon` used without this prop is now
+  deprecated. All others props are still available.
+  You should use it as follow now:
+  ```js
+  <ArrowIcon version="solid" />
+  ```
+
+Fix:
+- Fix `LinkBox` padding.
+
+## [23.11.4] - 2018-11-15
+
+Fix:
+- Fix `Triptych` component margin.
+
+## [23.11.3] - 2018-11-14
+
+Fix:
+- Update `LinkBox` animation.
+
+## [23.11.2] - 2018-11-09
+
+Fix:
+- Fix `Timeline` children rendering.
+
+## [23.11.1] - 2018-11-07
+
+Fix:
+- Change string equality to function equality to check `ExpandBoard` children
+type.
+
+## [23.11.0] - 2018-11-07
+
+Feature:
+  - Add `HorizontalStroke` to `CounterBlock` component.
+
+Fix:
+  - Update `LinkBox` styles.
+
+## [23.10.1] - 2018-11-06
+
+Fixes:
+- Update `Marger` with `TYPOGRAPHY.root` as gutter base ratio.
+- Fix an error to `Deprecated` usage in `RewardCardAction`.
+
+## [23.10.0] - 2018-11-02
+
+Features:
+- Add the following components to compose a `RewardCard`:
+  - `RewardCardBase.Row`,
+  - `RewardCardBase.RowContent`,
+  - `RewardCardBase.RowSide`,
+  - `RewardCardBase.Title`,
+  - `RewardCardBase.Image`,
+  - `RewardCardBase.Info`,
+  - `RewardCardBase.CheckedIconLine`,
+  - `RewardCardBase.CheckedSection`
+  - `RewardCardBase.StarredBadge`
+
+  All `RewardCard` previous props are deprecated. If you still used them, you
+  cannot use the new components related to `RewardCard`.
+  You can check some examples on https://kisskissbankbank.github.io/kitten.
+
+- Deprecate the following components in
+  `kitten/components/cards/reward-card`:
+  - `RewardCardAction`
+  - `RewardCardActionOnMOrMore`
+  - `RewardCardButton`
+  - `RewardCardContent`
+  - `RewardCardImage`
+  - `RewardCardInfos`
+  - `Info`
+  - `LegacyRewardCardContainer`
+  - `ManageContribution`
+- Update `RewardCard` button width.
+- Add `pxToRem` helper method for inline CSS styling.
+- Add `TYPOGRAPHY` configuration file.
+
+Fix:
+- Update `LinkBox` styles.
+
+## [23.9.0] - 2018-10-30
+
+Features:
+- Update `LinkBox` component.
+- Create `VerticalCard` component.
+
+## [23.8.0] - 2018-10-26
+
+Feature:
+- Add `CartRewardCard.Information`.
+  `shippingTitle` and `shippingValue` are deprecated.
+
+Fix:
+- Update `CrowdfundingCard` props.
+
+## [23.7.0] - 2018-10-24
+
+Feature:
+- Add `itemHeight` props to `Timeline` component.
+
+Fix:
+- Fix reponsive font-size for `CounterBlock` component.
+
+## [23.6.0] - 2018-10-19
+
+Features:
+- Create `Timeline` component.
+- Create `CounterBlock` component.
+- Add `Deprecated` component.
+- Add `ExpandBoard`, `ExpandBoard.Button` and `ExpandBoard.Content`
+  components.
+- Add `List` and `List.ButtonItem` components.
+- Update `RewardCard` component composition. The following props
+  are deprecated and can be replaced:
+  - `titleDescription` => `subtitle`
+  - `textDescription` => `description`
+  - `textTag` => `subtitleTag`
+  - `myContribution` => `manageContributionDescription`
+  - `manageContribution` => `manageContributionLinkLabel`
+  - `manageContributionLink` => `manageContributionLinkHref`
+  - `button` => `buttonLabel`
+  - `titleContributors`, `titleDelivery`, `titleAvailability`,
+    `valueContributors`, `valueDelivery`, `valueAvailability` can be replaced by
+    an array formatted as follow:
+    ```js
+    const infos = [
+      {
+        label: 'Your previous titleContributors content',
+        value: 'Your previous valueContributors content',
+      },
+      …
+    ]
+
+    <RewardCard {...otherProps} infos={infos} >
+    ```
+Fixes:
+- Update marger on `SimpleCard` component.
+- `Triptych` stroke height on small devices.
+- Corrige `propTypes` definition on `LinkList`.
+- Update `ffi` gem.
+- Deprecate `ContributionCard` component. You should use `RewardCard`
+  component instead. It will be deleted in further versions.
+
+## [23.5.1] - 2018-09-27
+
+Fix:
+- Fix `EmbedPlayer` proptype.
+
+## [23.5.0] - 2018-09-25
+
+Feature:
+- Create `Triptych` component.
+
+Fix:
+- Fix missing actions in `VerticalCardWithAction` component.
 
 ## [23.4.0] - 2018-09-18
 

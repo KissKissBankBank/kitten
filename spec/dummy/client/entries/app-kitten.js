@@ -5,8 +5,8 @@ import ReactOnRails from 'react-on-rails'
 // Box
 import { DocLinkBox } from 'kitten/components/box/doc-link-box'
 import { InformationBox } from 'kitten/components/box/information-box'
-import { LinkBox } from 'kitten/components/box/link-box'
 import { KarlInformationBox } from 'kitten/karl/box/information-box'
+import { KarlLinkBox } from 'kitten/karl/box/link-box'
 
 // Buttons
 import { Button } from 'kitten/components/buttons/button'
@@ -65,6 +65,9 @@ import {
 } from 'kitten/karl/cards/similar-projects-card'
 import { KarlProjectSimilarLoader }
   from 'kitten/karl/cards/project-similar-card'
+import { KarlTriptych }
+  from 'kitten/karl/cards/triptych'
+import { KarlVerticalCard } from 'kitten/karl/cards/vertical-card'
 import { KarlVerticalCardWithAction } from 'kitten/karl/cards/vertical-card-with-action'
 
 // Colors
@@ -231,6 +234,7 @@ import {
 import { BulletList } from 'kitten/components/lists/bullet-list'
 import { NavList } from 'kitten/components/lists/nav-list'
 import { KarlTagList } from 'kitten/karl/lists/tag-list'
+import { KarlTimeline } from 'kitten/karl/lists/timeline'
 
 // Loaders
 import { Loader } from 'kitten/components/loaders/loader'
@@ -240,6 +244,7 @@ import { KarlLoaderInButton } from 'kitten/karl/loaders/karl-loaders'
 
 // Meters
 import { Progress } from 'kitten/components/meters/progress'
+import { KarlCounterBlock } from 'kitten/karl/meters/karl-counter-block'
 import { KarlRandomProgress } from 'kitten/karl/meters/random-progress'
 
 // Modals
@@ -339,8 +344,8 @@ ReactOnRails.register({
   // Box
   DocLinkBox,
   InformationBox,
-  LinkBox,
   KarlInformationBox,
+  KarlLinkBox,
 
   // Buttons
   Button,
@@ -387,6 +392,8 @@ ReactOnRails.register({
   KarlSimilarProjectsCard,
   KarlSimilarProjectsWithInfosCard,
   KarlProjectSimilarLoader,
+  KarlTriptych,
+  KarlVerticalCard,
   KarlVerticalCardWithAction,
 
   // Dev
@@ -527,6 +534,7 @@ ReactOnRails.register({
   BulletList,
   NavList,
   KarlTagList,
+  KarlTimeline,
 
   // Loader
   Loader,
@@ -535,6 +543,7 @@ ReactOnRails.register({
 
   // Meters
   Progress,
+  KarlCounterBlock,
   KarlRandomProgress,
 
   // Modals

@@ -16,7 +16,7 @@ import {
 } from 'kitten/components/buttons/social-button-icon'
 import { LinkList } from 'kitten/components/links/link-list'
 import { SelectWithState } from 'kitten/components/form/select-with-state'
-import { LendopolisLogo as LendopolisLogoBase } from 'kitten/karl/logos/Lendopolis-logo'
+import { LendopolisLogo as LendopolisLogoBase } from 'kitten/karl/logos/lendopolis-logo'
 import { ScreenConfig } from 'kitten/constants/screen-config'
 import { mediaQueries } from 'kitten/hoc/media-queries'
 import COLORS from 'kitten/constants/colors-config'
@@ -58,7 +58,7 @@ class KarlFooterLendoBase extends Component {
       },
       {
         key: 'key2',
-        item: 'FAQ Emprunteur',
+        item: 'FAQ',
         href: '#',
         weight: 'light',
       },
@@ -84,7 +84,7 @@ class KarlFooterLendoBase extends Component {
       },
       {
         key: 'key2',
-        item: 'FAQ Prêteur',
+        item: 'FAQ',
         href: '#',
         weight: 'light',
       },
@@ -189,14 +189,6 @@ class KarlFooterLendoBase extends Component {
         weight: 'light',
       },
     ],
-
-    // LanguageSelect
-    options: [
-      { value: 'fr', label: 'Français' },
-      { value: 'en', label: 'English' },
-      { value: 'nl', label: 'Nederlands' },
-    ],
-    initialLanguage: 'fr',
 
     // Notice
     noticeAltAutorite: 'Autorités françaises',
@@ -317,20 +309,6 @@ class KarlFooterLendoBase extends Component {
     )
   }
 
-  renderLanguageSelect() {
-    const { options, initialLanguage } = this.props
-
-    return (
-      <GridCol col="8" col-m="4" col-l="2" offset="2" offset-m="4" offset-l="1">
-        <SelectWithState
-          name="language"
-          options={options}
-          value={initialLanguage}
-        />
-      </GridCol>
-    )
-  }
-
   renderList() {
     const {
       items1,
@@ -360,7 +338,7 @@ class KarlFooterLendoBase extends Component {
             </Marger>
           </GridCol>
 
-          <GridCol col-l="7" style={styles.list.linkList}>
+          <GridCol col-l="10" style={styles.list.linkList}>
             <Grid>
               <GridCol col-m="3" style={styles.list.linkList.items}>
                 <Marger bottom="1.5" style={styles.list.linkList.items.label}>
@@ -426,8 +404,6 @@ class KarlFooterLendoBase extends Component {
               </GridCol>
             </Grid>
           </GridCol>
-
-          {this.renderLanguageSelect()}
         </Grid>
       </Row>
     )

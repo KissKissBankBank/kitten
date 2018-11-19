@@ -11,6 +11,6 @@
   "dependencies": {
     "kitten-components": "file:../../..",
     "kitten-launcher": "^1.0.0",
-    "react-on-rails": "~6.10.1"
+    "react-on-rails": "11.1.8"
   }
 }

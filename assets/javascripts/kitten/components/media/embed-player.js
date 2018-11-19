@@ -128,7 +128,7 @@ EmbedPlayerBase.propTypes = {
   }).isRequired,
   badgeComponent: PropTypes.node,
   playButtonLabel: PropTypes.string.isRequired,
-  ratio: PropTypes.oneOf([PropTypes.number, PropTypes.string]).isRequired,
+  ratio: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
   iframeHtml: PropTypes.string,
 }
 

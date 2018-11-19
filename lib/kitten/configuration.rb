@@ -178,6 +178,7 @@ module Kitten
           label: 'Crowdfunding',
           components: [
             { path: 'components/meters/progress', name: 'Progress' },
+            { path: 'components/meters/counter-block', name: 'CounterBlock' },
             {
               path: 'components/simulators/loan-simulator',
               name: 'Loan simulator',
@@ -195,6 +196,9 @@ module Kitten
           components: [
             { path: 'components/cards/card', name: 'Card' },
             { path: 'components/cards/simple-card', name: 'Simple card' },
+            { path: 'components/cards/vertical-card',
+              name: 'Vertical card',
+            },
             { path: 'components/cards/vertical-card-with-action',
               name: 'Vertical card with action',
             },
@@ -212,6 +216,7 @@ module Kitten
               path: 'components/cards/project-similar-card',
               name: 'Project similar card',
             },
+            { path: 'components/cards/triptych', name: 'Triptych' },
             { path: 'components/heroes/hero', name: 'Hero' },
             { path: 'components/press/press-quotes', name: 'Press quotes' },
             { path: 'components/testimonies/testimony', name: 'Testimony' },
@@ -226,6 +231,7 @@ module Kitten
             { path: 'components/links/link-list', name: 'Link list' },
             { path: 'components/lists/bullet-list', name: 'Bullet list' },
             { path: 'components/lists/tag-list', name: 'Tag list' },
+            { path: 'components/lists/timeline', name: 'Timeline' },
             { path: 'components/lines/info-lines', name: 'Info lines' },
           ],
         },

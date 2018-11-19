@@ -2,19 +2,19 @@
 set -e
 
 # Force node version
-if hash nvm 2> /dev/null; then
-  nvm use 6.9.5
+if command -v nvm 2> /dev/null; then
+  nvm use
 fi
 
 # Install yarn with npm
-if ! hash yarn 2> /dev/null; then
-  npm install -g yarn@1.0.2
+if ! command -v yarn 2> /dev/null; then
+  npm install -g yarn
 fi
 
 # Install dependencies
 gem install --no-document bundler
-bundle install
-yarn install
+bundle install --quiet
+yarn -sf install
 
 cd spec/dummy
 bash bin/install

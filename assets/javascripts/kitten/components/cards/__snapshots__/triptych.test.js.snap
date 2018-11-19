@@ -1,0 +1,409 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Triptych /> with default props matches with snapshot 1`] = `
+<div
+  data-radium={true}
+>
+  <div
+    className="k-Grid k-u-align-center"
+  >
+    <div
+      className="k-Grid__col--12 k-Grid__col--6@m k-Grid__col--offset-0@m k-Grid__col--6@l k-Grid__col--offset-3@l"
+      data-radium={true}
+    >
+      <div
+        data-radium={true}
+      >
+        <div
+          data-radium={true}
+          style={
+            Object {
+              "marginBottom": "1.25rem",
+              "marginTop": null,
+            }
+          }
+        >
+          <h2
+            className="k-Title k-Title--secondary k-Title--withoutMargin"
+          >
+            Main title goes here !
+          </h2>
+        </div>
+        <div
+          data-radium={true}
+          style={
+            Object {
+              "marginBottom": "1.25rem",
+              "marginTop": null,
+            }
+          }
+        >
+          <span
+            className="rmq-f8208d89 k-VerticalStroke k-VerticalStroke--huge"
+            data-radium={true}
+            style={
+              Object {
+                "height": 80,
+                "margin": "0 auto",
+              }
+            }
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      className="rmq-3e3f42ca k-Grid__col--12 k-Grid__col--6@m k-Grid__col--4@l"
+      data-radium={true}
+      style={Object {}}
+    >
+      <div
+        className="rmq-ee34cb9c rmq-50ef1ccc"
+        data-radium={true}
+        style={
+          Object {
+            "marginBottom": null,
+            "marginRight": 10,
+            "marginTop": null,
+          }
+        }
+      >
+        <div>
+          <div
+            data-radium={true}
+            style={
+              Object {
+                "marginBottom": null,
+                "marginTop": null,
+              }
+            }
+          >
+            <div
+              data-radium={true}
+            >
+              <div
+                style={
+                  Object {
+                    "marginBottom": "1.875rem",
+                    "marginTop": null,
+                  }
+                }
+              >
+                <img
+                  alt=""
+                  data-radium={true}
+                  src="http://via.placeholder.com/349x465/19b4fa/19b4fa"
+                  style={
+                    Object {
+                      "display": "block",
+                      "width": "100%",
+                    }
+                  }
+                />
+              </div>
+              <div
+                style={
+                  Object {
+                    "marginBottom": "1.875rem",
+                    "marginTop": "1.875rem",
+                  }
+                }
+              >
+                <div
+                  data-radium={true}
+                >
+                  <div
+                    style={
+                      Object {
+                        "marginBottom": null,
+                        "marginTop": null,
+                      }
+                    }
+                  >
+                    <h1
+                      className="k-Title k-Title--senary k-Title--withoutMargin"
+                      style={
+                        Object {
+                          "color": "#222",
+                          "textAlign": "center",
+                        }
+                      }
+                    >
+                      Lorem ipsum dolor sit amet
+                    </h1>
+                  </div>
+                  
+                </div>
+              </div>
+              <div
+                style={
+                  Object {
+                    "marginBottom": null,
+                    "marginTop": "1.875rem",
+                    "textAlign": "center",
+                  }
+                }
+              >
+                <button
+                  className="k-Button k-Button--helium"
+                  href={null}
+                  onClick={null}
+                  tabIndex={null}
+                  type="button"
+                >
+                  Lorem
+                </button>
+              </div>
+              <style
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "",
+                  }
+                }
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="k-Grid__col--12 k-Grid__col--6@m k-Grid__col--4@l"
+    >
+      <div
+        className="rmq-6977215c rmq-50ef1ccc"
+        data-radium={true}
+        style={
+          Object {
+            "marginBottom": null,
+            "marginLeft": 10,
+            "marginRight": 10,
+            "marginTop": null,
+            "transition": "margin 500ms",
+          }
+        }
+      >
+        <div
+          data-radium={true}
+        >
+          <div
+            style={
+              Object {
+                "marginBottom": "1.875rem",
+                "marginTop": null,
+              }
+            }
+          >
+            <img
+              alt=""
+              data-radium={true}
+              src="http://via.placeholder.com/349x465/ff8846/ff8846"
+              style={
+                Object {
+                  "display": "block",
+                  "width": "100%",
+                }
+              }
+            />
+          </div>
+          <div
+            style={
+              Object {
+                "marginBottom": "1.875rem",
+                "marginTop": "1.875rem",
+              }
+            }
+          >
+            <div
+              data-radium={true}
+            >
+              <div
+                style={
+                  Object {
+                    "marginBottom": "0.9375rem",
+                    "marginTop": null,
+                  }
+                }
+              >
+                <h1
+                  className="k-Title k-Title--senary k-Title--withoutMargin"
+                  style={
+                    Object {
+                      "color": "#222",
+                      "textAlign": "center",
+                    }
+                  }
+                >
+                  Donsectetur adipiscing elit
+                </h1>
+              </div>
+              <div
+                style={
+                  Object {
+                    "marginBottom": null,
+                    "marginTop": "0.9375rem",
+                  }
+                }
+              >
+                <p
+                  className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
+                  style={
+                    Object {
+                      "color": "#222",
+                      "textAlign": "center",
+                    }
+                  }
+                >
+                  Nulla ut orci velit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            style={
+              Object {
+                "marginBottom": null,
+                "marginTop": "1.875rem",
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className="k-Button k-Button--helium"
+              href={null}
+              onClick={null}
+              tabIndex={null}
+              type="button"
+            >
+              Ipsum
+            </button>
+          </div>
+          <style
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "",
+              }
+            }
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      className="rmq-3e3f42ca k-Grid__col--12 k-Grid__col--6@m k-Grid__col--4@l"
+      data-radium={true}
+      style={Object {}}
+    >
+      <div
+        className="rmq-db4325c6 rmq-904a9196"
+        data-radium={true}
+        style={
+          Object {
+            "marginBottom": null,
+            "marginLeft": 10,
+            "marginTop": null,
+          }
+        }
+      >
+        <div
+          data-radium={true}
+        >
+          <div
+            style={
+              Object {
+                "marginBottom": "1.875rem",
+                "marginTop": null,
+              }
+            }
+          >
+            <img
+              alt=""
+              data-radium={true}
+              src="http://via.placeholder.com/349x465/61d079/61d079"
+              style={
+                Object {
+                  "display": "block",
+                  "width": "100%",
+                }
+              }
+            />
+          </div>
+          <div
+            style={
+              Object {
+                "marginBottom": "1.875rem",
+                "marginTop": "1.875rem",
+              }
+            }
+          >
+            <div
+              data-radium={true}
+            >
+              <div
+                style={
+                  Object {
+                    "marginBottom": null,
+                    "marginTop": null,
+                  }
+                }
+              >
+                <h1
+                  className="k-Title k-Title--senary k-Title--withoutMargin"
+                  style={
+                    Object {
+                      "color": "#222",
+                      "textAlign": "center",
+                    }
+                  }
+                >
+                  Praesent tincidunt ultrices sem
+                </h1>
+              </div>
+              
+            </div>
+          </div>
+          <div
+            style={
+              Object {
+                "marginBottom": null,
+                "marginTop": "1.875rem",
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className="k-Button k-Button--helium"
+              href={null}
+              onClick={null}
+              tabIndex={null}
+              type="button"
+            >
+              Dolor
+            </button>
+          </div>
+          <style
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "",
+              }
+            }
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "@media (max-width: 767px){ .rmq-f8208d89{height: 50px !important;}}
+@media (min-width: 1080px){ .rmq-3e3f42ca{margin-top: -73.33333333333334px !important;}}
+@media (max-width: 1079px){ .rmq-ee34cb9c{margin-right: inherit !important;
+margin-left: 15px !important;}}
+@media (max-width: 767px){ .rmq-50ef1ccc{margin-right: inherit !important;
+margin-left: inherit !important;}}
+@media (max-width: 1079px){ .rmq-6977215c{margin-right: 15px !important;
+margin-left: inherit !important;}}
+@media (max-width: 1079px){ .rmq-db4325c6{margin-left: 15px !important;}}
+@media (max-width: 767px){ .rmq-904a9196{margin-left: inherit !important;}}",
+      }
+    }
+  />
+</div>
+`;

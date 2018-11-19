@@ -6,6 +6,70 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Add `KarlSimpleCarousel` example.
 
+## [23.12.0] - 2018-11-15
+
+No changes.
+
+## [23.11.4] - 2018-11-15
+
+No changes.
+
+## [23.11.3] - 2018-11-14
+
+No changes.
+
+## [23.11.2] - 2018-11-09
+
+No changes.
+
+## [23.11.1] - 2018-11-07
+
+No changes.
+
+## [23.11.0] - 2018-11-07
+
+No changes.
+
+## [23.10.1] - 2018-11-06
+
+No changes.
+
+## [23.10.0] - 2018-11-02
+
+No changes.
+
+## [23.9.0] - 2018-10-30
+
+Features:
+- Add `KarlLinkBox` example.
+- Create `KarlVerticalCard` example.
+
+## [23.8.0] - 2018-10-26
+
+No changes.
+
+## [23.7.0] - 2018-10-24
+
+Feature:
+  Update `KarlTimeline` example to add large `Timeline` and
+  thin `Timeline` examples.
+
+## [23.6.0] - 2018-10-19
+
+Features:
+- Create `KarlTimeline` example.
+- Update `KarlFooterLendopolis` example.
+- Create `KarlCounterBlock` example.
+- Update `react-on-rails` gem and npm module to 11.1.6.
+
+Fix:
+- Fix duplicated `id` warnings on `DonationCard`.
+
+## [23.5.0] - 2018-09-25
+
+Feature:
+- Create `KarlTriptych` example.
+
 ## [23.4.0] - 2018-09-18
 
 Feature:

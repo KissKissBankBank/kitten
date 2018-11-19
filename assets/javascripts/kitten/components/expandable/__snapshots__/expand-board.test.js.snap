@@ -1,0 +1,110 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ExpandBoard /> with <ExpandBoard.Button> and <ExpandBoard.Content> by default matches with snapshot 1`] = `
+<div
+  data-radium={true}
+  style={Object {}}
+>
+  <button
+    aria-controls="k-ExpandBoard"
+    aria-expanded={false}
+    className="k-Button k-Button--helium k-Button--big k-Button--icon k-Button--iconRight"
+    data-radium={true}
+    disabled={false}
+    onClick={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "display": "flex",
+        "justifyContent": "center",
+        "lineHeight": "1.3em",
+        "paddingBottom": "0.1875rem",
+        "paddingTop": "0.1875rem",
+        "width": "100%",
+      }
+    }
+    tabIndex={null}
+    type="button"
+  >
+    Alice
+    <svg
+      className="k-ArrowIcon k-ArrowIcon--bottom k-Button__icon"
+      data-radium={true}
+      fill="#fff"
+      style={
+        Object {
+          "height": "0.375rem",
+          "width": "0.375rem",
+        }
+      }
+      viewBox="0 0 6 6"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title>
+        Arrow
+      </title>
+      <path
+        d="M6 0H0v6h2V2h4z"
+      />
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`<ExpandBoard /> with <ExpandBoard.Button> and <ExpandBoard.Content> disabled matches with snapshot 1`] = `
+<div
+  data-radium={true}
+  style={Object {}}
+>
+  <button
+    aria-controls="k-ExpandBoard"
+    aria-expanded={false}
+    className="k-Button k-Button--helium k-Button--big k-Button--icon k-Button--iconRight"
+    data-radium={true}
+    disabled={true}
+    onClick={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "display": "flex",
+        "justifyContent": "center",
+        "lineHeight": "1.3em",
+        "paddingBottom": "0.1875rem",
+        "paddingTop": "0.1875rem",
+        "width": "100%",
+      }
+    }
+    tabIndex={null}
+    type="button"
+  >
+    Alice
+    <svg
+      className="k-ArrowIcon k-ArrowIcon--bottom k-Button__icon"
+      data-radium={true}
+      fill="#fff"
+      style={
+        Object {
+          "height": "0.375rem",
+          "width": "0.375rem",
+        }
+      }
+      viewBox="0 0 6 6"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title>
+        Arrow
+      </title>
+      <path
+        d="M6 0H0v6h2V2h4z"
+      />
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`<ExpandBoard /> with random content matches with snapshot 1`] = `
+<div
+  data-radium={true}
+  style={Object {}}
+/>
+`;

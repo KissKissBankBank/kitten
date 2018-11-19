@@ -20,6 +20,10 @@ export class VerticalCardWithAction extends Component {
     descriptionTag: PropTypes.string,
     button: PropTypes.string.isRequired,
     buttonModifier: PropTypes.string,
+    buttonProps: PropTypes.shape({
+      onClick: PropTypes.func,
+      href: PropTypes.string,
+    }).isRequired,
   }
 
   static defaultProps = {
@@ -30,6 +34,10 @@ export class VerticalCardWithAction extends Component {
     description: '',
     descriptionTag: 'p',
     buttonModifier: 'helium',
+    buttonProps: {
+      onClick: null,
+      href: null,
+    },
   }
 
   render() {
@@ -41,6 +49,7 @@ export class VerticalCardWithAction extends Component {
       descriptionTag,
       button,
       buttonModifier,
+      buttonProps,
       ...others
     } = this.props
 
@@ -95,10 +104,17 @@ export class VerticalCardWithAction extends Component {
   }
 
   renderAction() {
-    const { button, buttonModifier } = this.props
+    const { button, buttonModifier, buttonProps } = this.props
+    const { onClick, href, ...others } = buttonProps
 
     return (
-      <Button modifier={buttonModifier} type="button">
+      <Button
+        {...others}
+        modifier={buttonModifier}
+        type="button"
+        onClick={onClick}
+        href={href}
+      >
         {button}
       </Button>
     )

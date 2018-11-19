@@ -50,7 +50,7 @@ sub get_conf {
           sprintf( '%s/../config/%s.yaml', $Bin, saymynamesaymyname() ),
         dump_dir => qq($Bin/../../../build),
         index    => q(main.html),
-        location => q(http://localhost:3000/),
+        location => q(http://127.0.0.1:3000/),
         log      => {
             log_level => q(INFO),
             file      => {
@@ -108,7 +108,7 @@ log4perl.appender.file=Log::Log4perl::Appender::File
 log4perl.appender.file.create_at_logtime = 1
 log4perl.appender.file.layout=PatternLayout
 log4perl.appender.file.layout.ConversionPattern=[% log.file.pattern %]
-log4perl.appender.file.filename=[% log.file.filename %] 
+log4perl.appender.file.filename=[% log.file.filename %]
 log4perl.appender.file.mode=[% log.file.mode %]
 log4perl.appender.file.autoflush=[% log.file.autoflush %]
 log4perl.appender.screen=Log::Log4perl::Appender::Screen
@@ -405,31 +405,31 @@ Fashionista - extract a static version of the Kitten styleguide
 
 =head1 SYNOPSIS
 
-perl fashionista.pl [ Options... ] 
+perl fashionista.pl [ Options... ]
 
 =head1 OPTIONS
 
---loglevel LOGLEVEL 
-# Change log minimum level 
+--loglevel LOGLEVEL
+# Change log minimum level
 
---conf FILE 
+--conf FILE
 # Specify the configuration file location
 
---url URL 
+--url URL
 # Specify the styleguide URL
 
---help (or --usage) 
+--help (or --usage)
 # Show this message
 
---dump-dir some/directory 
-# specify the site dump path 
- 
---doc 
+--dump-dir some/directory
+# specify the site dump path
+
+--doc
 # print full perldoc page
 
-Note: 
-all command line options override their 
-configuration file directives couterparts 
+Note:
+all command line options override their
+configuration file directives couterparts
 
 =head1 DESCRIPTION
 
@@ -441,20 +441,20 @@ This script looks for its default configuration file in $Bin/../$Bin.conf.
 Configuration is done in the apache conf style.
 see L<http://httpd.apache.org/docs/current/sections.html> for format
 
-Keys include: 
+Keys include:
 dir:
  Path to store the site mirror files
 base_url:
- URL of the main site page to crawl 
+ URL of the main site page to crawl
 <log><file> filename SOME_LOG_FILE </file></log>:
- log file path 
+ log file path
 <log> loglevel LOGLEVEL </log>:
  minimum level of events to log, relevant values are
-  -TRACE 
-  -DEBUG 
-  -NOTICE 
-  -INFO 
-  -ERROR 
+  -TRACE
+  -DEBUG
+  -NOTICE
+  -INFO
+  -ERROR
   -FATAL
 
 =head1 INCOMPATIBILITIES
