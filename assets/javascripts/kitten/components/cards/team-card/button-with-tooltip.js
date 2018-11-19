@@ -8,6 +8,16 @@ import { ScreenConfig } from 'kitten/constants/screen-config'
 const ButtonIcon = Radium(ButtonIconBase)
 
 class TeamCardButtonWithTooltipBase extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = { isHidden: true }
+  }
+
+  handleClick = () => {
+    this.setState({ isHidden: false })
+  }
+
   render() {
     const { phoneNumber } = this.props
 
@@ -19,6 +29,7 @@ class TeamCardButtonWithTooltipBase extends Component {
           aria-label="Phone"
           className="k-ButtonIcon--phone"
           style={styles.icons}
+          onClick={this.handleClick}
         >
           <PhoneIcon className="k-ButtonIcon__svg" />
         </ButtonIcon>
