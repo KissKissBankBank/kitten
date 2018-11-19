@@ -1,16 +1,3 @@
-/* eslint no-var: 0, no-console: 0 */
-
-// This file is used by the npm script:
-// "hot-assets": "babel-node server-rails-hot.js"
-//
-// This is what creates the hot assets so that you can edit assets, JavaScript and Sass,
-// referenced in your webpack config, and the page updated without you needing to reload
-// the page.
-//
-// You can read more about Hot Module Replacement:
-// https://medium.com/@rajaraodv/webpack-hot-module-replacement-hmr-e756a726a07
-
-// Import webpack modules.
 import webpack from 'webpack';
 import WebpackDevServer from 'webpack-dev-server';
 

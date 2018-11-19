@@ -345,6 +345,7 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
                 "whiteSpace": "nowrap",
               }
             }
+            width={0}
           >
             <span />
             <span>
@@ -726,6 +727,7 @@ exports[`<ArticleCard /> with some props matches with snapshot 1`] = `
                 "whiteSpace": "nowrap",
               }
             }
+            width={0}
           >
             <span />
             <span>
