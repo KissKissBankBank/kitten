@@ -5,7 +5,7 @@ exports[`<Carousel /> by default on desktop is a <Grid /> 1`] = `
   className="k-Grid"
 >
   <div
-    className="k-Grid__col--10 k-Grid__col--offset-1 "
+    className="k-Grid__col--10 k-Grid__col--offset-1"
   >
     <div
       className="k-CarouselInner"
@@ -200,7 +200,7 @@ exports[`<Carousel /> by default on desktop is a <Grid /> 1`] = `
     </div>
   </div>
   <div
-    className="k-Grid__col--1 "
+    className="k-Grid__col--1"
   />
 </div>
 `;
@@ -416,7 +416,7 @@ exports[`<Carousel /> with withoutLeftOffset on desktop is a <Grid /> 1`] = `
   className="k-Grid"
 >
   <div
-    className="k-Grid__col--11 k-Grid__col--offset-0 "
+    className="k-Grid__col--11 k-Grid__col--offset-0"
   >
     <div
       className="k-CarouselInner"
@@ -611,7 +611,7 @@ exports[`<Carousel /> with withoutLeftOffset on desktop is a <Grid /> 1`] = `
     </div>
   </div>
   <div
-    className="k-Grid__col--1 "
+    className="k-Grid__col--1"
   />
 </div>
 `;
