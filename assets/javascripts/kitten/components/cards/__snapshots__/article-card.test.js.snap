@@ -22,6 +22,8 @@ exports[`<ArticleCard /> by default matches with snapshot 1`] = `
       style={
         Object {
           "backgroundColor": "#d8d8d8",
+          "marginBottom": null,
+          "marginTop": null,
           "overflow": "hidden",
           "paddingTop": "56.25%",
           "position": "relative",
@@ -111,6 +113,7 @@ exports[`<ArticleCard /> by default matches with snapshot 1`] = `
       style={
         Object {
           "marginBottom": "1.25rem",
+          "marginTop": null,
         }
       }
     >
@@ -120,6 +123,7 @@ exports[`<ArticleCard /> by default matches with snapshot 1`] = `
           Object {
             "lineHeight": "1",
             "marginBottom": "0.625rem",
+            "marginTop": null,
             "padding": "0 10px",
           }
         }
@@ -136,6 +140,7 @@ exports[`<ArticleCard /> by default matches with snapshot 1`] = `
             "alignItems": "center",
             "display": "flex",
             "lineHeight": "1",
+            "marginBottom": null,
             "marginTop": "0.625rem",
             "padding": "0 10px",
           }
@@ -186,6 +191,8 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
       style={
         Object {
           "backgroundColor": "#d8d8d8",
+          "marginBottom": null,
+          "marginTop": null,
           "overflow": "hidden",
           "paddingTop": "56.25%",
           "position": "relative",
@@ -275,6 +282,7 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
       style={
         Object {
           "marginBottom": "1.25rem",
+          "marginTop": null,
         }
       }
     >
@@ -284,6 +292,7 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
           Object {
             "lineHeight": "1",
             "marginBottom": "0.625rem",
+            "marginTop": null,
             "padding": "0 10px",
           }
         }
@@ -302,6 +311,7 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
             "alignItems": "center",
             "display": "flex",
             "lineHeight": "1",
+            "marginBottom": null,
             "marginTop": "0.625rem",
             "padding": "0 10px",
           }
@@ -335,6 +345,7 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
                 "whiteSpace": "nowrap",
               }
             }
+            width={0}
           >
             <span />
             <span>
@@ -389,6 +400,8 @@ exports[`<ArticleCard /> with ignored props matches with snapshot 1`] = `
       style={
         Object {
           "backgroundColor": "#d8d8d8",
+          "marginBottom": null,
+          "marginTop": null,
           "overflow": "hidden",
           "paddingTop": "56.25%",
           "position": "relative",
@@ -478,6 +491,7 @@ exports[`<ArticleCard /> with ignored props matches with snapshot 1`] = `
       style={
         Object {
           "marginBottom": "1.25rem",
+          "marginTop": null,
         }
       }
     >
@@ -487,6 +501,7 @@ exports[`<ArticleCard /> with ignored props matches with snapshot 1`] = `
           Object {
             "lineHeight": "1",
             "marginBottom": "0.625rem",
+            "marginTop": null,
             "padding": "0 10px",
           }
         }
@@ -503,6 +518,7 @@ exports[`<ArticleCard /> with ignored props matches with snapshot 1`] = `
             "alignItems": "center",
             "display": "flex",
             "lineHeight": "1",
+            "marginBottom": null,
             "marginTop": "0.625rem",
             "padding": "0 10px",
           }
@@ -553,6 +569,8 @@ exports[`<ArticleCard /> with some props matches with snapshot 1`] = `
       style={
         Object {
           "backgroundColor": "#d8d8d8",
+          "marginBottom": null,
+          "marginTop": null,
           "overflow": "hidden",
           "paddingTop": "56.25%",
           "position": "relative",
@@ -646,6 +664,7 @@ exports[`<ArticleCard /> with some props matches with snapshot 1`] = `
       style={
         Object {
           "marginBottom": "1.25rem",
+          "marginTop": null,
         }
       }
     >
@@ -655,6 +674,7 @@ exports[`<ArticleCard /> with some props matches with snapshot 1`] = `
           Object {
             "lineHeight": "1",
             "marginBottom": "0.625rem",
+            "marginTop": null,
             "padding": "0 10px",
           }
         }
@@ -673,6 +693,7 @@ exports[`<ArticleCard /> with some props matches with snapshot 1`] = `
             "alignItems": "center",
             "display": "flex",
             "lineHeight": "1",
+            "marginBottom": null,
             "marginTop": "0.625rem",
             "padding": "0 10px",
           }
@@ -706,6 +727,7 @@ exports[`<ArticleCard /> with some props matches with snapshot 1`] = `
                 "whiteSpace": "nowrap",
               }
             }
+            width={0}
           >
             <span />
             <span>

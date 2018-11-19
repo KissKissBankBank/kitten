@@ -12,7 +12,6 @@ exports[`<RewardCard /> by default matches with snapshot 1`] = `
   }
 >
   <div
-    data-radium={true}
     style={
       Object {
         "marginBottom": "2.5rem",
@@ -40,11 +39,10 @@ exports[`<RewardCard /> by default matches with snapshot 1`] = `
           style={Object {}}
         >
           <div
-            data-radium={true}
             style={
               Object {
                 "marginBottom": "1.25rem",
-                "marginTop": "0rem",
+                "marginTop": null,
               }
             }
           >
@@ -60,7 +58,6 @@ exports[`<RewardCard /> by default matches with snapshot 1`] = `
             </h1>
           </div>
           <div
-            data-radium={true}
             style={
               Object {
                 "marginBottom": "1.875rem",
@@ -74,9 +71,9 @@ exports[`<RewardCard /> by default matches with snapshot 1`] = `
           </div>
           
           <div
-            data-radium={true}
             style={
               Object {
+                "marginBottom": null,
                 "marginTop": "1.875rem",
               }
             }
@@ -123,10 +120,9 @@ exports[`<RewardCard /> on tiny version matches with snapshot 1`] = `
   }
 >
   <div
-    data-radium={true}
     style={
       Object {
-        "marginBottom": "0rem",
+        "marginBottom": null,
         "marginTop": "1.875rem",
       }
     }
@@ -142,7 +138,7 @@ exports[`<RewardCard /> on tiny version matches with snapshot 1`] = `
       }
     >
       <div
-        className="k-Grid__col--12 "
+        className="k-Grid__col--12"
         data-radium={true}
       >
         <div
@@ -151,10 +147,10 @@ exports[`<RewardCard /> on tiny version matches with snapshot 1`] = `
           style={Object {}}
         >
           <div
-            data-radium={true}
             style={
               Object {
                 "marginBottom": "1.25rem",
+                "marginTop": null,
               }
             }
           >
@@ -185,7 +181,6 @@ exports[`<RewardCard /> on tiny version matches with snapshot 1`] = `
             </span>
           </div>
           <div
-            data-radium={true}
             style={
               Object {
                 "marginBottom": "1.25rem",
@@ -205,7 +200,6 @@ exports[`<RewardCard /> on tiny version matches with snapshot 1`] = `
             </h4>
           </div>
           <div
-            data-radium={true}
             style={
               Object {
                 "marginBottom": "1.875rem",
@@ -218,7 +212,6 @@ exports[`<RewardCard /> on tiny version matches with snapshot 1`] = `
             />
           </div>
           <div
-            data-radium={true}
             style={
               Object {
                 "marginBottom": "0.625rem",
@@ -238,9 +231,9 @@ exports[`<RewardCard /> on tiny version matches with snapshot 1`] = `
             </quote>
           </div>
           <div
-            data-radium={true}
             style={
               Object {
+                "marginBottom": null,
                 "marginTop": "0.625rem",
               }
             }
@@ -263,7 +256,6 @@ exports[`<RewardCard /> on tiny version matches with snapshot 1`] = `
           style={Object {}}
         >
           <div
-            data-radium={true}
             style={
               Object {
                 "marginBottom": "1.875rem",
@@ -313,7 +305,7 @@ exports[`<RewardCard /> on tiny version matches with snapshot 1`] = `
         </div>
       </div>
       <div
-        className="k-Grid__col--12 "
+        className="k-Grid__col--12"
         data-radium={true}
         style={
           Object {
@@ -322,10 +314,10 @@ exports[`<RewardCard /> on tiny version matches with snapshot 1`] = `
         }
       >
         <div
-          data-radium={true}
           style={
             Object {
               "marginBottom": "1.25rem",
+              "marginTop": null,
             }
           }
         >
@@ -350,7 +342,6 @@ exports[`<RewardCard /> on tiny version matches with snapshot 1`] = `
       </div>
     </div>
     <div
-      data-radium={true}
       style={
         Object {
           "marginBottom": "1.25rem",
@@ -369,7 +360,7 @@ exports[`<RewardCard /> on tiny version matches with snapshot 1`] = `
         }
       >
         <div
-          className="k-Grid__col--12 "
+          className="k-Grid__col--12"
         >
           <div
             data-radium={true}
@@ -508,7 +499,6 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
   }
 >
   <div
-    data-radium={true}
     style={
       Object {
         "marginBottom": "2.5rem",
@@ -536,10 +526,10 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
           style={Object {}}
         >
           <div
-            data-radium={true}
             style={
               Object {
                 "marginBottom": "1.25rem",
+                "marginTop": null,
               }
             }
           >
@@ -570,7 +560,6 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
             </span>
           </div>
           <div
-            data-radium={true}
             style={
               Object {
                 "marginBottom": "1.25rem",
@@ -590,7 +579,6 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
             </h4>
           </div>
           <div
-            data-radium={true}
             style={
               Object {
                 "marginBottom": "1.875rem",
@@ -603,7 +591,6 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
             />
           </div>
           <div
-            data-radium={true}
             style={
               Object {
                 "marginBottom": "0.625rem",
@@ -623,9 +610,9 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
             </quote>
           </div>
           <div
-            data-radium={true}
             style={
               Object {
+                "marginBottom": null,
                 "marginTop": "0.625rem",
               }
             }
@@ -648,7 +635,6 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
           style={Object {}}
         >
           <div
-            data-radium={true}
             style={
               Object {
                 "marginBottom": "1.875rem",
@@ -691,9 +677,9 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
           </div>
         </div>
         <div
-          data-radium={true}
           style={
             Object {
+              "marginBottom": null,
               "marginTop": "1.875rem",
             }
           }
@@ -722,9 +708,9 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
             Custom text button
           </button>
           <div
-            data-radium={true}
             style={
               Object {
+                "marginBottom": null,
                 "marginTop": "1.25rem",
               }
             }
@@ -828,10 +814,10 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
         style={Object {}}
       >
         <div
-          data-radium={true}
           style={
             Object {
               "marginBottom": "1.25rem",
+              "marginTop": null,
             }
           }
         >
@@ -890,7 +876,6 @@ exports[`<RewardCard /> with legacy props matches with snapshot 1`] = `
   }
 >
   <div
-    data-radium={true}
     style={
       Object {
         "marginBottom": "2.5rem",
@@ -918,11 +903,10 @@ exports[`<RewardCard /> with legacy props matches with snapshot 1`] = `
           style={Object {}}
         >
           <div
-            data-radium={true}
             style={
               Object {
                 "marginBottom": "1.25rem",
-                "marginTop": "0rem",
+                "marginTop": null,
               }
             }
           >
@@ -938,7 +922,6 @@ exports[`<RewardCard /> with legacy props matches with snapshot 1`] = `
             </h1>
           </div>
           <div
-            data-radium={true}
             style={
               Object {
                 "marginBottom": "1.875rem",
@@ -951,7 +934,6 @@ exports[`<RewardCard /> with legacy props matches with snapshot 1`] = `
             />
           </div>
           <div
-            data-radium={true}
             style={
               Object {
                 "marginBottom": "0.625rem",
@@ -971,9 +953,9 @@ exports[`<RewardCard /> with legacy props matches with snapshot 1`] = `
             </p>
           </div>
           <div
-            data-radium={true}
             style={
               Object {
+                "marginBottom": null,
                 "marginTop": "0.625rem",
               }
             }
@@ -996,7 +978,6 @@ exports[`<RewardCard /> with legacy props matches with snapshot 1`] = `
           style={Object {}}
         >
           <div
-            data-radium={true}
             style={
               Object {
                 "marginBottom": "1.875rem",
@@ -1055,9 +1036,9 @@ exports[`<RewardCard /> with legacy props matches with snapshot 1`] = `
           </div>
         </div>
         <div
-          data-radium={true}
           style={
             Object {
+              "marginBottom": null,
               "marginTop": "1.875rem",
             }
           }
@@ -1086,9 +1067,9 @@ exports[`<RewardCard /> with legacy props matches with snapshot 1`] = `
             Custom text button
           </button>
           <div
-            data-radium={true}
             style={
               Object {
+                "marginBottom": null,
                 "marginTop": "1.25rem",
               }
             }
@@ -1192,8 +1173,12 @@ exports[`<RewardCard /> with legacy props matches with snapshot 1`] = `
         style={Object {}}
       >
         <div
-          data-radium={true}
-          style={Object {}}
+          style={
+            Object {
+              "marginBottom": null,
+              "marginTop": null,
+            }
+          }
         >
           <div
             data-radium={true}

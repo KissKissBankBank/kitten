@@ -22,6 +22,8 @@ exports[`<CrowdfundingCard /> by default matches with snapshot 1`] = `
       style={
         Object {
           "backgroundColor": "#d8d8d8",
+          "marginBottom": null,
+          "marginTop": null,
           "overflow": "hidden",
           "paddingTop": "56.25%",
           "position": "relative",
@@ -111,6 +113,7 @@ exports[`<CrowdfundingCard /> by default matches with snapshot 1`] = `
       style={
         Object {
           "marginBottom": "1.25rem",
+          "marginTop": null,
           "minHeight": "75px",
         }
       }
@@ -121,6 +124,7 @@ exports[`<CrowdfundingCard /> by default matches with snapshot 1`] = `
           Object {
             "lineHeight": "1",
             "marginBottom": "0.625rem",
+            "marginTop": null,
             "padding": "0 10px",
           }
         }
@@ -135,6 +139,7 @@ exports[`<CrowdfundingCard /> by default matches with snapshot 1`] = `
                 "whiteSpace": "nowrap",
               }
             }
+            width={0}
           >
             <span />
             <span />
@@ -160,6 +165,7 @@ exports[`<CrowdfundingCard /> by default matches with snapshot 1`] = `
             "alignItems": "center",
             "display": "flex",
             "lineHeight": "1",
+            "marginBottom": null,
             "marginTop": "0.625rem",
             "padding": "0 10px",
           }
@@ -210,6 +216,8 @@ exports[`<CrowdfundingCard /> with loading prop matches with snapshot 1`] = `
       style={
         Object {
           "backgroundColor": "#d8d8d8",
+          "marginBottom": null,
+          "marginTop": null,
           "overflow": "hidden",
           "paddingTop": "56.25%",
           "position": "relative",
@@ -295,6 +303,7 @@ exports[`<CrowdfundingCard /> with loading prop matches with snapshot 1`] = `
       style={
         Object {
           "marginBottom": "1.25rem",
+          "marginTop": null,
           "minHeight": "75px",
         }
       }
@@ -305,6 +314,7 @@ exports[`<CrowdfundingCard /> with loading prop matches with snapshot 1`] = `
           Object {
             "lineHeight": "1",
             "marginBottom": "0.625rem",
+            "marginTop": null,
             "padding": "0 10px",
           }
         }
@@ -345,6 +355,7 @@ exports[`<CrowdfundingCard /> with loading prop matches with snapshot 1`] = `
             "alignItems": "center",
             "display": "flex",
             "lineHeight": "1",
+            "marginBottom": null,
             "marginTop": "0.625rem",
             "padding": "0 10px",
           }
@@ -427,6 +438,8 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
       style={
         Object {
           "backgroundColor": "#d8d8d8",
+          "marginBottom": null,
+          "marginTop": null,
           "overflow": "hidden",
           "paddingTop": "56.25%",
           "position": "relative",
@@ -520,6 +533,7 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
       style={
         Object {
           "marginBottom": "1.25rem",
+          "marginTop": null,
           "minHeight": "75px",
         }
       }
@@ -530,6 +544,7 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
           Object {
             "lineHeight": "1",
             "marginBottom": "0.625rem",
+            "marginTop": null,
             "padding": "0 10px",
           }
         }
@@ -544,6 +559,7 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
                 "whiteSpace": "nowrap",
               }
             }
+            width={0}
           >
             <span />
             <span>
@@ -571,6 +587,7 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
             "alignItems": "center",
             "display": "flex",
             "lineHeight": "1",
+            "marginBottom": null,
             "marginTop": "0.625rem",
             "padding": "0 10px",
           }
@@ -604,6 +621,7 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
                 "whiteSpace": "nowrap",
               }
             }
+            width={0}
           >
             <span />
             <span>
@@ -642,6 +660,7 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
         data-radium={true}
         style={
           Object {
+            "marginBottom": null,
             "marginRight": "30px",
             "marginTop": "0.3125rem",
           }
@@ -657,6 +676,7 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
         data-radium={true}
         style={
           Object {
+            "marginBottom": null,
             "marginRight": "30px",
             "marginTop": "0.3125rem",
           }
@@ -672,6 +692,7 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
         data-radium={true}
         style={
           Object {
+            "marginBottom": null,
             "marginRight": 0,
             "marginTop": "0.3125rem",
           }

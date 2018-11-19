@@ -304,7 +304,7 @@ const platformSwitchDropdownList = [
   >
     <img
       className="k-ExternalRichLink__image"
-      src="/assets/brand/kisskissbankbank.svg"
+      src="/assets/images/brand/kisskissbankbank.svg"
       alt="Logo de KissKissBankBank"
     />
   </ExternalRichLink>,
@@ -314,7 +314,7 @@ const platformSwitchDropdownList = [
   >
     <img
       className="k-ExternalRichLink__image"
-      src="/assets/brand/hellomerci.svg"
+      src="/assets/images/brand/hellomerci.svg"
       alt="Logo de hellomerci"
     />
   </ExternalRichLink>,
@@ -324,7 +324,7 @@ const platformSwitchDropdownList = [
   >
     <img
       className="k-ExternalRichLink__image"
-      src="/assets/brand/lendopolis.svg"
+      src="/assets/images/brand/lendopolis.svg"
       alt="Logo de LENDOPOLIS"
     />
   </ExternalRichLink>,

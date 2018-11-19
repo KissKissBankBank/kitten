@@ -18,6 +18,7 @@ storybook-static/
 spec/dummy/kitten.log
 spec/dummy/kitten.run
 dist/
+styleguide/build
 
 # Changes are ignored so that you can play in it.
 app/views/layouts/kitten/playground.html.erb

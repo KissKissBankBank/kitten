@@ -12,7 +12,6 @@ exports[`<ContributionCard /> by default matches with snapshot 1`] = `
   }
 >
   <div
-    data-radium={true}
     style={
       Object {
         "marginBottom": "2.5rem",
@@ -40,11 +39,10 @@ exports[`<ContributionCard /> by default matches with snapshot 1`] = `
           style={Object {}}
         >
           <div
-            data-radium={true}
             style={
               Object {
                 "marginBottom": "1.25rem",
-                "marginTop": "0rem",
+                "marginTop": null,
               }
             }
           >
@@ -60,7 +58,6 @@ exports[`<ContributionCard /> by default matches with snapshot 1`] = `
             </h1>
           </div>
           <div
-            data-radium={true}
             style={
               Object {
                 "marginBottom": "1.875rem",
@@ -74,9 +71,9 @@ exports[`<ContributionCard /> by default matches with snapshot 1`] = `
           </div>
           
           <div
-            data-radium={true}
             style={
               Object {
+                "marginBottom": null,
                 "marginTop": "1.875rem",
               }
             }
@@ -123,7 +120,6 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
   }
 >
   <div
-    data-radium={true}
     style={
       Object {
         "marginBottom": "2.5rem",
@@ -151,11 +147,10 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
           style={Object {}}
         >
           <div
-            data-radium={true}
             style={
               Object {
                 "marginBottom": "1.25rem",
-                "marginTop": "0rem",
+                "marginTop": null,
               }
             }
           >
@@ -171,7 +166,6 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
             </h1>
           </div>
           <div
-            data-radium={true}
             style={
               Object {
                 "marginBottom": "1.875rem",
@@ -184,7 +178,6 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
             />
           </div>
           <div
-            data-radium={true}
             style={
               Object {
                 "marginBottom": "0.625rem",
@@ -204,9 +197,9 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
             </p>
           </div>
           <div
-            data-radium={true}
             style={
               Object {
+                "marginBottom": null,
                 "marginTop": "0.625rem",
               }
             }
@@ -229,7 +222,6 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
           style={Object {}}
         >
           <div
-            data-radium={true}
             style={
               Object {
                 "marginBottom": "1.875rem",
@@ -288,9 +280,9 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
           </div>
         </div>
         <div
-          data-radium={true}
           style={
             Object {
+              "marginBottom": null,
               "marginTop": "1.875rem",
             }
           }
@@ -319,9 +311,9 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
             Custom text button
           </button>
           <div
-            data-radium={true}
             style={
               Object {
+                "marginBottom": null,
                 "marginTop": "1.25rem",
               }
             }
@@ -425,8 +417,12 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
         style={Object {}}
       >
         <div
-          data-radium={true}
-          style={Object {}}
+          style={
+            Object {
+              "marginBottom": null,
+              "marginTop": null,
+            }
+          }
         >
           <div
             data-radium={true}
@@ -483,10 +479,9 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
   }
 >
   <div
-    data-radium={true}
     style={
       Object {
-        "marginBottom": "0rem",
+        "marginBottom": null,
         "marginTop": "1.875rem",
       }
     }
@@ -502,7 +497,7 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
       }
     >
       <div
-        className="k-Grid__col--12 "
+        className="k-Grid__col--12"
         data-radium={true}
       >
         <div
@@ -511,11 +506,10 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
           style={Object {}}
         >
           <div
-            data-radium={true}
             style={
               Object {
                 "marginBottom": "1.25rem",
-                "marginTop": "0rem",
+                "marginTop": null,
               }
             }
           >
@@ -531,7 +525,6 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
             </h1>
           </div>
           <div
-            data-radium={true}
             style={
               Object {
                 "marginBottom": "1.875rem",
@@ -544,7 +537,6 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
             />
           </div>
           <div
-            data-radium={true}
             style={
               Object {
                 "marginBottom": "0.625rem",
@@ -564,9 +556,9 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
             </p>
           </div>
           <div
-            data-radium={true}
             style={
               Object {
+                "marginBottom": null,
                 "marginTop": "0.625rem",
               }
             }
@@ -589,7 +581,6 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
           style={Object {}}
         >
           <div
-            data-radium={true}
             style={
               Object {
                 "marginBottom": "1.875rem",
@@ -658,7 +649,7 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
         </div>
       </div>
       <div
-        className="k-Grid__col--12 "
+        className="k-Grid__col--12"
         data-radium={true}
         style={
           Object {
@@ -667,8 +658,12 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
         }
       >
         <div
-          data-radium={true}
-          style={Object {}}
+          style={
+            Object {
+              "marginBottom": null,
+              "marginTop": null,
+            }
+          }
         >
           <div
             data-radium={true}
@@ -691,7 +686,6 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
       </div>
     </div>
     <div
-      data-radium={true}
       style={
         Object {
           "marginBottom": "1.25rem",
@@ -710,7 +704,7 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
         }
       >
         <div
-          className="k-Grid__col--12 "
+          className="k-Grid__col--12"
         >
           <div
             data-radium={true}
