@@ -1,12 +1,12 @@
 $k-module: null;
 
 // Vendor dependencies
-@import 'modular-scale';
+@import '~modularscale-sass/stylesheets/modularscale';
 
 // Helpers
-@import 'kitten/schema';
-@import 'kitten/definitions';
-@import 'kitten/helpers';
+@import './kitten/schema';
+@import './kitten/definitions';
+@import './kitten/helpers';
 
 // Default config
 @import 'kitten/default-config';
@@ -15,7 +15,8 @@ $k-module: null;
 @import '~susy/sass/susy';
 
 // Components
-@import 'kitten/components';
+@import './kitten/components';
 
 // Utilities
-@import 'kitten/utilities';
+@import './kitten/utilities';
+
