@@ -74,17 +74,17 @@ const styles = {
 
     content: {
       position: 'absolute',
-      top: 60,
-      right: -90,
+      top: 55,
       padding: 20,
+      marginLeft: -55,
       backgroundColor: COLORS.primary1,
       border: '2px solid #19b4fa',
       fontSize: 14,
       fontWeight: 'regular',
       color: COLORS.background1,
       whiteSpace: 'nowrap',
-      opacity: 0,
-      visibility: 'hidden',
+      opacity: 1,
+      visibility: 'visible',
       transition: 'opacity .2s, visibility .2s',
       hover: {
         visibility: 'visible',
