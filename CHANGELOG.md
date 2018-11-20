@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `SimpleCarousel` component.
 - Feature: Add animation on `List.ButtonItem` hover.
 - Feature: Add new viewport range to MediaQueries HOC.
 - Fix: Fix `Deprecated` rendering error.
