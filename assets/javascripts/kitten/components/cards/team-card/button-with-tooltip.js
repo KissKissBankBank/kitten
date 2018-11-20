@@ -1,44 +1,109 @@
 import React, { Component } from 'react'
 import Radium, { StyleRoot } from 'radium'
-import { withTooltip } from 'kitten/hoc/with-tooltip'
+import PropTypes from 'prop-types'
 import { ButtonIcon as ButtonIconBase } from 'kitten/components/buttons/button-icon'
 import { PhoneIcon } from 'kitten/components/icons/phone-icon'
 import { ScreenConfig } from 'kitten/constants/screen-config'
+import COLORS from 'kitten/constants/colors-config'
 
 const ButtonIcon = Radium(ButtonIconBase)
 
-class TeamCardButtonWithTooltipBase extends Component {
+export class ButtonWithTooltip extends Component {
+  static propTypes = {
+    tooltipText: PropTypes.string.isRequired,
+    phoneNumber: PropTypes.string.isRequired,
+  }
+
+  static defaultProps = {
+    tooltipText: '06 44 42 57 89',
+  }
+
   constructor(props) {
     super(props)
 
-    this.state = { isHidden: true }
+    this.state = { hover: false }
   }
 
-  handleClick = () => {
-    this.setState({ isHidden: false })
+  handleOnMouseEnter = () => {
+    this.setState({ hover: true })
+  }
+
+  handleOnMouseLeave = () => {
+    this.setState({ hover: false })
   }
 
   render() {
-    const { phoneNumber } = this.props
+    const { tooltipText, phoneNumber } = this.props
+
+    const tooltipStyle = [
+      styles.tooltip.content,
+      this.state.hover && styles.tooltip.content.hover,
+    ]
 
     return (
       <StyleRoot>
-        <ButtonIcon
-          href={`tel:${phoneNumber}`}
-          modifier="hydrogen"
-          aria-label="Phone"
-          className="k-ButtonIcon--phone"
-          style={styles.icons}
-          onClick={this.handleClick}
-        >
-          <PhoneIcon className="k-ButtonIcon__svg" />
-        </ButtonIcon>
+        <a href={`tel:${phoneNumber}`}>
+          <div style={styles.tooltip}>
+            <span style={tooltipStyle}>
+              {tooltipText}
+              <span style={styles.tooltip.content.after} />
+            </span>
+
+            <ButtonIcon
+              onMouseEnter={this.handleOnMouseEnter}
+              onMouseLeave={this.handleOnMouseLeave}
+              modifier="hydrogen"
+              aria-label="Phone"
+              className="k-ButtonIcon--phone"
+              style={styles.icons}
+            >
+              <PhoneIcon className="k-ButtonIcon__svg" />
+            </ButtonIcon>
+          </div>
+        </a>
       </StyleRoot>
     )
   }
 }
 
 const styles = {
+  tooltip: {
+    position: 'relative',
+
+    content: {
+      position: 'absolute',
+      top: 60,
+      right: -90,
+      padding: 20,
+      backgroundColor: '#C98C1F',
+      border: '2px solid #C98C1F',
+      fontSize: 14,
+      fontWeight: 'regular',
+      color: COLORS.background1,
+      whiteSpace: 'nowrap',
+      opacity: 0,
+      visibility: 'hidden',
+      transition: 'opacity .2s, visibility .2s',
+      hover: {
+        visibility: 'visibility',
+        opacity: 1,
+      },
+
+      after: {
+        position: 'absolute',
+        left: '50%',
+        bottom: '102%',
+        height: 0,
+        width: 0,
+        marginLeft: -8,
+        border: '8px solid transparent',
+        borderBottomColor: '#C98C1F',
+        borderWidth: 10,
+        pointerEvents: 'none',
+      },
+    },
+  },
+
   icons: {
     marginRight: 9,
     [`@media (min-width: ${ScreenConfig.M.min}px)`]: {
@@ -46,10 +111,3 @@ const styles = {
     },
   },
 }
-
-export const TeamCardButtonWithTooltip = withTooltip(
-  TeamCardButtonWithTooltipBase,
-  {
-    children: '06 00 00 00 00',
-  },
-)

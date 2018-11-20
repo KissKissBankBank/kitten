@@ -7,7 +7,7 @@ import { LinkedinButtonIcon } from 'kitten/components/buttons/social-button-icon
 import { ButtonIcon as ButtonIconBase } from 'kitten/components/buttons/button-icon'
 import { PhoneIcon } from 'kitten/components/icons/phone-icon'
 import { MailIcon } from 'kitten/components/icons/mail-icon'
-import { TeamCardButtonWithTooltip } from 'kitten/components/cards/team-card/button-with-tooltip'
+import { ButtonWithTooltip } from 'kitten/components/cards/team-card/button-with-tooltip'
 import COLORS from 'kitten/constants/colors-config'
 import { ScreenConfig } from 'kitten/constants/screen-config'
 import { mediaQueries } from 'kitten/hoc/media-queries'
@@ -80,7 +80,7 @@ class TeamCardBase extends Component {
           </ButtonIcon>
         )}
 
-        {!viewportIsMobile && <TeamCardButtonWithTooltip />}
+        {!viewportIsMobile && <ButtonWithTooltip />}
       </Fragment>
     )
   }
@@ -89,7 +89,7 @@ class TeamCardBase extends Component {
     const { mail, phoneNumber, socialLink } = this.props
 
     return (
-      <div>
+      <div style={styles.iconsList}>
         {mail && (
           <ButtonIcon
             tag="a"
@@ -97,7 +97,7 @@ class TeamCardBase extends Component {
             modifier="hydrogen"
             aria-label="Email"
             className="k-ButtonIcon--phone"
-            style={styles.icons}
+            style={styles.iconsList.icon}
           >
             <MailIcon className="k-ButtonIcon__svg" />
           </ButtonIcon>
@@ -133,10 +133,14 @@ const imgBackground = image => ({
 })
 
 const styles = {
-  icons: {
-    marginRight: 9,
-    [`@media (min-width: ${ScreenConfig.M.min}px)`]: {
-      marginRight: 14,
+  iconsList: {
+    display: 'flex',
+
+    icon: {
+      marginRight: 9,
+      [`@media (min-width: ${ScreenConfig.M.min}px)`]: {
+        marginRight: 14,
+      },
     },
   },
 }
