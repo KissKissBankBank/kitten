@@ -42,7 +42,11 @@ export class ButtonWithTooltip extends Component {
 
     return (
       <StyleRoot>
-        <a href={`tel:${phoneNumber}`}>
+        <a
+          href={`tel:${phoneNumber}`}
+          onMouseEnter={this.handleOnMouseEnter}
+          onMouseLeave={this.handleOnMouseLeave}
+        >
           <div style={styles.tooltip}>
             <span style={tooltipStyle}>
               {tooltipText}
@@ -50,8 +54,6 @@ export class ButtonWithTooltip extends Component {
             </span>
 
             <ButtonIcon
-              onMouseEnter={this.handleOnMouseEnter}
-              onMouseLeave={this.handleOnMouseLeave}
               modifier="hydrogen"
               aria-label="Phone"
               className="k-ButtonIcon--phone"
@@ -75,8 +77,8 @@ const styles = {
       top: 60,
       right: -90,
       padding: 20,
-      backgroundColor: '#C98C1F',
-      border: '2px solid #C98C1F',
+      backgroundColor: COLORS.primary1,
+      border: '2px solid #19b4fa',
       fontSize: 14,
       fontWeight: 'regular',
       color: COLORS.background1,
@@ -85,7 +87,7 @@ const styles = {
       visibility: 'hidden',
       transition: 'opacity .2s, visibility .2s',
       hover: {
-        visibility: 'visibility',
+        visibility: 'visible',
         opacity: 1,
       },
 
@@ -97,7 +99,7 @@ const styles = {
         width: 0,
         marginLeft: -8,
         border: '8px solid transparent',
-        borderBottomColor: '#C98C1F',
+        borderBottomColor: COLORS.primary1,
         borderWidth: 10,
         pointerEvents: 'none',
       },
