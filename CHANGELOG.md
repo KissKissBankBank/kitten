@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Fix `ExpandBoard.Button` arrow styles.
+
 ## [23.13.0] - 2018-11-21
 
 Features:
