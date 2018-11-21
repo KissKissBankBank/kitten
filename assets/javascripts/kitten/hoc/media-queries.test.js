@@ -1,15 +1,23 @@
-import React from 'react'
+import React, { Component } from 'react'
 import renderer from 'react-test-renderer'
 import { mediaQueries } from 'kitten/hoc/media-queries'
 
-const SimpleComponent = ({
-  viewportIsMobile,
-  viewportIsTabletOrLess,
-  viewportIsSOrLess,
-  myCustomMediaQuery,
-  ...props
-}) => {
-  return <div title="Test me!" {...props} />
+class SimpleComponent extends Component {
+  render() {
+    const {
+      viewportIsMobile,
+      viewportIsTabletOrLess,
+      viewportIsXXS,
+      viewportIsXSOrLess,
+      viewportIsSOrLess,
+      viewportIsMOrLess,
+      viewportIsLOrLess,
+      myCustomMediaQuery,
+      ...props
+    } = this.props
+
+    return <div title="Test me!" {...props} />
+  }
 }
 
 const mockAddListener = jest.fn()
@@ -40,9 +48,10 @@ describe('mediaQueries()', () => {
   describe('by default', () => {
     beforeEach(() => {
       SimpleComponentWithMediaQueries = mediaQueries(SimpleComponent, {
-        viewportIsMobile: true,
-        viewportIsTabletOrLess: true,
+        viewportIsXSOrLess: true,
         viewportIsSOrLess: true,
+        viewportIsMOrLess: true,
+        viewportIsLOrLess: true,
       })
       component = mount(<SimpleComponentWithMediaQueries />)
       componentSnapshot = renderer
@@ -57,9 +66,11 @@ describe('mediaQueries()', () => {
     it('pushes media queries props to wrapped component', () => {
       const wrappedComponent = component.find(SimpleComponent).first()
 
-      expect(wrappedComponent.prop('viewportIsMobile')).toBeFalsy()
-      expect(wrappedComponent.prop('viewportIsTabletOrLess')).toBeFalsy()
+      expect(wrappedComponent.prop('viewportIsXXS')).toBeFalsy()
+      expect(wrappedComponent.prop('viewportIsXSOrLess')).toBeFalsy()
       expect(wrappedComponent.prop('viewportIsSOrLess')).toBeFalsy()
+      expect(wrappedComponent.prop('viewportIsMOrLess')).toBeFalsy()
+      expect(wrappedComponent.prop('viewportIsLOrLess')).toBeFalsy()
     })
 
     it('attaches listeners', () => {
@@ -72,11 +83,11 @@ describe('mediaQueries()', () => {
     })
   })
 
-  describe('with tablet or less version', () => {
+  describe('with M or less version', () => {
     beforeEach(() => {
       window.matchMedia = createMockMediaMatcher(true)
       SimpleComponentWithMediaQueries = mediaQueries(SimpleComponent, {
-        viewportIsTabletOrLess: true,
+        viewportIsMOrLess: true,
       })
       component = mount(<SimpleComponentWithMediaQueries />)
     })
@@ -84,9 +95,11 @@ describe('mediaQueries()', () => {
     it('pushes media queries props to wrapped component', () => {
       const wrappedComponent = component.find(SimpleComponent).first()
 
-      expect(wrappedComponent.prop('viewportIsMobile')).toBeFalsy()
-      expect(wrappedComponent.prop('viewportIsTabletOrLess')).toBeTruthy()
+      expect(wrappedComponent.prop('viewportIsXXS')).toBeFalsy()
+      expect(wrappedComponent.prop('viewportIsXSOrLess')).toBeFalsy()
       expect(wrappedComponent.prop('viewportIsSOrLess')).toBeFalsy()
+      expect(wrappedComponent.prop('viewportIsMOrLess')).toBeTruthy()
+      expect(wrappedComponent.prop('viewportIsLOrLess')).toBeFalsy()
     })
   })
 
@@ -102,9 +115,11 @@ describe('mediaQueries()', () => {
     it('pushes media queries props to wrapped component', () => {
       const wrappedComponent = component.find(SimpleComponent).first()
 
-      expect(wrappedComponent.prop('viewportIsMobile')).toBeFalsy()
-      expect(wrappedComponent.prop('viewportIsTabletOrLess')).toBeFalsy()
+      expect(wrappedComponent.prop('viewportIsXXS')).toBeFalsy()
+      expect(wrappedComponent.prop('viewportIsXSOrLess')).toBeFalsy()
       expect(wrappedComponent.prop('viewportIsSOrLess')).toBeTruthy()
+      expect(wrappedComponent.prop('viewportIsMOrLess')).toBeFalsy()
+      expect(wrappedComponent.prop('viewportIsLOrLess')).toBeFalsy()
     })
   })
 
@@ -121,9 +136,29 @@ describe('mediaQueries()', () => {
       const wrappedComponent = component.find(SimpleComponent).first()
 
       expect(wrappedComponent.prop('myCustomMediaQuery')).toBeDefined()
-      expect(wrappedComponent.prop('viewportIsMobile')).toBeFalsy()
-      expect(wrappedComponent.prop('viewportIsTabletOrLess')).toBeFalsy()
+      expect(wrappedComponent.prop('viewportIsXXS')).toBeFalsy()
+      expect(wrappedComponent.prop('viewportIsXSOrLess')).toBeFalsy()
       expect(wrappedComponent.prop('viewportIsSOrLess')).toBeFalsy()
+      expect(wrappedComponent.prop('viewportIsMOrLess')).toBeFalsy()
+      expect(wrappedComponent.prop('viewportIsLOrLess')).toBeFalsy()
+    })
+  })
+
+  describe('with deprecated versions', () => {
+    beforeEach(() => {
+      window.matchMedia = createMockMediaMatcher(true)
+      SimpleComponentWithMediaQueries = mediaQueries(SimpleComponent, {
+        viewportIsTabletOrLess: true,
+        viewportIsMobile: true,
+      })
+      component = mount(<SimpleComponentWithMediaQueries />)
+    })
+
+    it('pushes media queries props to wrapped component', () => {
+      const wrappedComponent = component.find(SimpleComponent).first()
+
+      expect(wrappedComponent.prop('viewportIsTabletOrLess')).toBeTruthy()
+      expect(wrappedComponent.prop('viewportIsMobile')).toBeTruthy()
     })
   })
 })

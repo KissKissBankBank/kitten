@@ -4,6 +4,7 @@ import {
   createMatchMedia,
 } from 'kitten/helpers/utils/media-queries'
 import {
+  SCREEN_SIZE_XXS,
   SCREEN_SIZE_XS,
   SCREEN_SIZE_S,
   SCREEN_SIZE_M,
@@ -12,8 +13,12 @@ import {
 
 const viewPortTable = {
   viewportIsMobile: SCREEN_SIZE_XS,
-  viewportIsSOrLess: SCREEN_SIZE_S,
   viewportIsTabletOrLess: SCREEN_SIZE_M,
+
+  viewportIsXXS: SCREEN_SIZE_XXS,
+  viewportIsXSOrLess: SCREEN_SIZE_XS,
+  viewportIsSOrLess: SCREEN_SIZE_S,
+  viewportIsMOrLess: SCREEN_SIZE_M,
   viewportIsLOrLess: SCREEN_SIZE_L,
 }
 
@@ -47,12 +52,30 @@ export const mediaQueries = (WrappedComponent, hocProps = {}) =>
       )
     }
 
+    warnIfHocPropIsDeprecated(prop) {
+      if (process.env.NODE_ENV === 'development') {
+        const deprecatedPropsToNewProps = {
+          viewportIsMobile: 'viewportIsXSOrLess',
+          viewportIsTabletOrLess: 'viewportIsMOrLess',
+        }
+
+        if (Object.keys(deprecatedPropsToNewProps).includes(prop)) {
+          console.warn(
+            `${prop} is deprecated. Please use ${
+              deprecatedPropsToNewProps[prop]
+            } instead now.`,
+          )
+        }
+      }
+    }
+
     componentDidMount() {
       for (let prop in hocProps) {
         const propValue = hocProps[prop]
         if (this.isInvalidProp(prop)) {
           break
         }
+        this.warnIfHocPropIsDeprecated(prop)
         this.viewports[prop] =
           typeof propValue === 'boolean'
             ? createMatchMediaMax(viewPortTable[prop])
