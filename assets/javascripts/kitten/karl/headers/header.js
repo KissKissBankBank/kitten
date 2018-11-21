@@ -1,8 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
 import { defaultProps } from 'kitten/hoc/default-props'
-import objectAssign from 'core-js/library/fn/object/assign'
-
 import { Dropdown } from 'kitten/components/dropdowns/dropdown'
 import { ExternalRichLink } from 'kitten/components/links/external-rich-link'
 import { NavList } from 'kitten/components/lists/nav-list'
@@ -378,20 +376,20 @@ const platformSwitchProps = {
 }
 
 // Unlogged header dropdown
-const unloggedPlatformSwitchProps = objectAssign(
-  { positionedWith: () => document.getElementById('header') },
-  platformSwitchProps,
-)
+const unloggedPlatformSwitchProps = {
+  positionedWith: () => document.getElementById('header'),
+  ...platformSwitchProps,
+}
 export const KarlUnloggedHeaderPlatformSwitch = defaultProps(
   Dropdown,
   unloggedPlatformSwitchProps,
 )
 
 // Logged header dropdowns
-const loggedPlatformSwitchProps = objectAssign(
-  { positionedWith: () => document.getElementById('header-logged') },
-  platformSwitchProps,
-)
+const loggedPlatformSwitchProps = {
+  positionedWith: () => document.getElementById('header-logged'),
+  ...platformSwitchProps,
+}
 export const KarlLoggedHeaderPlatformSwitch = defaultProps(
   Dropdown,
   loggedPlatformSwitchProps,
