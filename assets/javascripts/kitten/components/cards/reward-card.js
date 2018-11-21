@@ -228,6 +228,7 @@ const style = {
     borderColor: COLORS.line1,
     width: '100%',
     padding: `${pxToRem(15)} 0`,
+    boxSizing: 'border-box',
   },
   image: {
     width: '100%',
