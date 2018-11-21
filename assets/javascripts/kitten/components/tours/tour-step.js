@@ -1,5 +1,4 @@
 import React from 'react'
-import objectAssign from 'core-js/library/fn/object/assign'
 import { domElementHelper } from 'kitten/helpers/dom/element-helper'
 import { TourPopover } from 'kitten/components/tours/tour-popover'
 

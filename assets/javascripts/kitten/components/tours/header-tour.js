@@ -1,5 +1,4 @@
 import React from 'react'
-import objectAssign from 'core-js/library/fn/object/assign'
 import { Tour } from 'kitten/components/tours/tour'
 
 // We directly use svg-react loader for the moment.
@@ -26,7 +25,7 @@ export class HeaderTour extends React.Component {
       ),
     }
 
-    return objectAssign(content, illustration)
+    return { ...content, ...illustration }
   }
 
   crowdStep() {
@@ -37,7 +36,7 @@ export class HeaderTour extends React.Component {
       ),
     }
 
-    return objectAssign(content, illustration)
+    return { ...content, ...illustration }
   }
 
   steps() {
