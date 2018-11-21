@@ -109,7 +109,7 @@
     "build-storybook": "build-storybook",
     "deploy-storybook": "storybook-to-ghpages",
     "build": "build:js && build:css",
-    "build:js": "babel assets/javascripts/kitten/ -d src --ignore 'assets/**/*.test.js','assets/**/__mocks__/*.js'",
+    "build:js": "babel assets/javascripts/kitten/ -d src --ignore 'assets/**/*.test.js','assets/**/__mocks__/*.js','assets/javascripts/kitten/karl'",
     "build:css": "webpack --config webpack.config.sass.js"
   },
   "lint-staged": {

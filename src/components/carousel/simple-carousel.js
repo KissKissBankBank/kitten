@@ -3,17 +3,21 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.KarlCartRewardCard = void 0;
+exports.SimpleCarousel = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _cartRewardCard = require("kitten/components/cards/cart-reward-card");
+var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _container = require("kitten/components/grid/container");
+var _radium = _interopRequireDefault(require("radium"));
 
 var _marger = require("kitten/components/layout/marger");
 
-var _title = require("kitten/karl/examples/title");
+var _colorsConfig = _interopRequireDefault(require("kitten/constants/colors-config"));
+
+var _range = require("kitten/helpers/utils/range");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
 
@@ -37,67 +41,108 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-var KarlCartRewardCard =
+var Marger = (0, _radium.default)(_marger.Marger);
+
+var SimpleCarouselBase =
 /*#__PURE__*/
 function (_Component) {
-  _inherits(KarlCartRewardCard, _Component);
+  _inherits(SimpleCarouselBase, _Component);
 
-  function KarlCartRewardCard() {
-    var _getPrototypeOf2;
-
+  function SimpleCarouselBase(props) {
     var _this;
 
-    _classCallCheck(this, KarlCartRewardCard);
+    _classCallCheck(this, SimpleCarouselBase);
 
-    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(SimpleCarouselBase).call(this, props));
 
-    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(KarlCartRewardCard)).call.apply(_getPrototypeOf2, [this].concat(args)));
-
-    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "handleAfterClose", function () {
-      alert('Card removed!');
+    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "showPagination", function () {
+      return _this.state.totalPagesCount > 1;
     });
 
-    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "handleCloseClick", function () {
-      if (confirm('Want you remove this card?')) {
-        _this.card.close();
-      }
+    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "handlePageClick", function (numPage) {
+      return function () {
+        _this.setState({
+          currentPageNumber: numPage
+        });
+      };
     });
 
+    _this.state = {
+      currentPageNumber: 0,
+      totalPagesCount: _react.default.Children.toArray(props.children).length
+    };
     return _this;
   }
 
-  _createClass(KarlCartRewardCard, [{
+  _createClass(SimpleCarouselBase, [{
     key: "render",
     value: function render() {
       var _this2 = this;
 
-      return _react.default.createElement(_react.Fragment, null, _react.default.createElement(_title.KarlExampleTitle, null, "Cart Reward Card custom amount"), _react.default.createElement(_container.Container, null, _react.default.createElement(_marger.Marger, {
-        bottom: "2"
-      }, _react.default.createElement(_cartRewardCard.CartRewardCard, {
-        titleAmount: "100 \u20AC",
-        subtitle: "Reward",
-        textDescription: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient mont",
-        updateAmountTitle: "Update amount"
-      }))), _react.default.createElement(_title.KarlExampleTitle, null, "Cart Reward Card (without close animation)"), _react.default.createElement(_container.Container, null, _react.default.createElement(_marger.Marger, {
-        bottom: "2"
-      }, _react.default.createElement(_cartRewardCard.CartRewardCard, {
-        ref: function ref(node) {
-          _this2.card = node;
-        },
-        titleAmount: "100 \u20AC",
-        textDescription: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient mont",
-        onAfterClose: this.handleAfterClose,
-        onCloseClick: this.handleCloseClick
-      }, _react.default.createElement(_cartRewardCard.CartRewardCard.Information, {
-        title: "Shipping:",
-        value: "January 2018"
-      })))));
+      var children = this.props.children;
+      var _this$state = this.state,
+          totalPagesCount = _this$state.totalPagesCount,
+          currentPageNumber = _this$state.currentPageNumber;
+      var rangePage = (0, _range.createRangeFromZeroTo)(totalPagesCount);
+      return _react.default.createElement(_react.Fragment, null, _react.default.createElement(Marger, {
+        bottom: this.showPagination() ? 4 : 0,
+        style: styles.container
+      }, _react.default.Children.map(children, function (item, index) {
+        var itemStyle = [styles.item, index !== currentPageNumber && styles.item.hide];
+        return _react.default.createElement("div", {
+          key: item.key,
+          style: itemStyle
+        }, item);
+      })), this.showPagination() && _react.default.createElement(Marger, {
+        top: "4",
+        bottom: "4",
+        style: styles.pagination
+      }, rangePage.map(function (numPage) {
+        var pageStyle = [styles.page, numPage === currentPageNumber && styles.page.active];
+        return _react.default.createElement("div", {
+          key: numPage,
+          style: pageStyle,
+          onClick: _this2.handlePageClick(numPage)
+        });
+      })));
     }
   }]);
 
-  return KarlCartRewardCard;
+  return SimpleCarouselBase;
 }(_react.Component);
 
-exports.KarlCartRewardCard = KarlCartRewardCard;
+var styles = {
+  container: {
+    display: 'grid',
+    gap: 0
+  },
+  item: {
+    gridColumn: 1,
+    gridRow: 1,
+    visibility: 'visible',
+    opacity: 1,
+    transition: "all .8s ease-in-out",
+    hide: {
+      visibility: 'hidden',
+      opacity: 0,
+      pointerEvents: 'none'
+    }
+  },
+  pagination: {
+    display: 'flex',
+    justifyContent: 'center'
+  },
+  page: {
+    width: 6,
+    height: 6,
+    background: _colorsConfig.default.background1,
+    marginRight: 5,
+    cursor: 'pointer',
+    active: {
+      transition: "background .4s ease-in-out",
+      background: _colorsConfig.default.primary1
+    }
+  }
+};
+var SimpleCarousel = (0, _radium.default)(SimpleCarouselBase);
+exports.SimpleCarousel = SimpleCarousel;
