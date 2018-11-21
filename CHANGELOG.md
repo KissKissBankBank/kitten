@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Fix `ExpandBoard.Button` arrow styles.
 - Fix: Add `box-sizing` CSS rule to `RewardCard` component.
 
 ## [23.13.0] - 2018-11-21
