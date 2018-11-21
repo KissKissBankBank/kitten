@@ -1,6 +1,10 @@
-import arrayKeys from 'core-js/library/fn/array/keys'
-import arrayFrom from 'core-js/library/fn/array/from'
-import numberIsInteger from 'core-js/library/fn/number/is-integer'
-
-export const createRangeFromZeroTo = num =>
-  numberIsInteger(num) ? arrayFrom(arrayKeys(Array(num))) : []
+export const createRangeFromZeroTo = num => {
+  let array = []
+  if (!Number.isInteger(num)) {
+    return array
+  }
+  for (let i = 0; i < num; i++) {
+    array.push(i)
+  }
+  return array
+}

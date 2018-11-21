@@ -4,7 +4,6 @@ import classNames from 'classnames'
 import emitter from 'kitten/helpers/utils/emitter'
 import { DropdownButton } from 'kitten/components/dropdowns/dropdown-button'
 import domElementHelper from 'kitten/helpers/dom/element-helper'
-import objectAssign from 'core-js/library/fn/object/assign'
 
 export class Dropdown extends React.Component {
   constructor(props) {
@@ -119,14 +118,14 @@ export class Dropdown extends React.Component {
     const defaultPosition = { position: 'absolute', top: 0 }
     const arrowHorizontalPosition = this.props.arrowHorizontalPosition
 
-    return objectAssign(defaultPosition, arrowHorizontalPosition)
+    return { ...defaultPosition, ...arrowHorizontalPosition }
   }
 
   getContentPosition() {
     const defaultPosition = { top: this.state.referenceElementHeight }
     const horizontalPosition = this.props.contentHorizontalPosition
 
-    return objectAssign(defaultPosition, horizontalPosition)
+    return { ...defaultPosition, ...horizontalPosition }
   }
 
   // Component listener callbacks
