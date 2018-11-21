@@ -6,7 +6,6 @@ import { ButtonImageWithTextAndBadge } from 'kitten/components/buttons/button-im
 import { NavList } from 'kitten/components/lists/nav-list'
 import domElementHelper from 'kitten/helpers/dom/element-helper'
 import emitter from 'kitten/helpers/utils/emitter'
-import objectAssign from 'core-js/library/fn/object/assign'
 
 export class UserMenu extends Component {
   constructor(props) {
