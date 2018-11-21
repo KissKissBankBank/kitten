@@ -7,8 +7,6 @@ exports.default = exports.TourStep = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _assign = _interopRequireDefault(require("core-js/library/fn/object/assign"));
-
 var _elementHelper = require("kitten/helpers/dom/element-helper");
 
 var _tourPopover = require("kitten/components/tours/tour-popover");

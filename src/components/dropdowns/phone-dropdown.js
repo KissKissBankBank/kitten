@@ -15,8 +15,6 @@ var _dropdownButton = require("kitten/components/dropdowns/dropdown-button");
 
 var _elementHelper = _interopRequireDefault(require("kitten/helpers/dom/element-helper"));
 
-var _assign = _interopRequireDefault(require("core-js/library/fn/object/assign"));
-
 var _emitter = _interopRequireDefault(require("kitten/helpers/utils/emitter"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
