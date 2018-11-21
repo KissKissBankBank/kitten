@@ -17,11 +17,13 @@ var _dropdownButton = require("kitten/components/dropdowns/dropdown-button");
 
 var _elementHelper = _interopRequireDefault(require("kitten/helpers/dom/element-helper"));
 
-var _assign = _interopRequireDefault(require("core-js/library/fn/object/assign"));
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -171,7 +173,7 @@ function (_React$Component) {
         top: 0
       };
       var arrowHorizontalPosition = this.props.arrowHorizontalPosition;
-      return (0, _assign.default)(defaultPosition, arrowHorizontalPosition);
+      return _objectSpread({}, defaultPosition, arrowHorizontalPosition);
     }
   }, {
     key: "getContentPosition",
@@ -180,7 +182,7 @@ function (_React$Component) {
         top: this.state.referenceElementHeight
       };
       var horizontalPosition = this.props.contentHorizontalPosition;
-      return (0, _assign.default)(defaultPosition, horizontalPosition);
+      return _objectSpread({}, defaultPosition, horizontalPosition);
     } // Component listener callbacks
 
   }, {

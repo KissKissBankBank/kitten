@@ -44,9 +44,9 @@ function (_Component) {
       if (process.env.NODE_ENV === 'development') {
         var owner = _react.default.Children.only(this.props.children)._owner;
 
-        if (owner) {
-          console.warn("Warning: ".concat(owner.type.name, " is deprecated."), this.props.warningMessage);
-        }
+        if (!owner) return;
+        var componentName = owner.type.name;
+        console.warn("Warning: ".concat(componentName, " is deprecated."), this.props.warningMessage);
       }
     }
   }, {
