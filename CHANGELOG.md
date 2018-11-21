@@ -4,13 +4,18 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `SimpleCarousel` component.
-- Feature: Add animation on `List.ButtonItem` hover.
-- Feature: Add new viewport range to mediaQueries HOC.
-- Feature: Deprecated `viewportIsMobile` and `viewportIsTabletOrLess` on
+## [23.13.0] - 2018-11-21
+
+Features:
+- Add `SimpleCarousel` component.
+- Add animation on `List.ButtonItem` hover.
+- Add new viewport range to mediaQueries HOC.
+- Deprecated `viewportIsMobile` and `viewportIsTabletOrLess` on
   mediaQueries HOC. Please use `viewportIsXS` and `viewportIsMOrLess` instead
   now.
-- Fix: Fix `Deprecated` rendering error.
+
+Fix:
+- Fix `Deprecated` rendering error.
 
 ## [23.12.0] - 2018-11-15
 

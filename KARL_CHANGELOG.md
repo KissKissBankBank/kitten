@@ -4,7 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `KarlSimpleCarousel` example.
+## [23.13.0] - 2018-11-21
+
+Feature:
+- Add `KarlSimpleCarousel` example.
 
 ## [23.12.0] - 2018-11-15
 
