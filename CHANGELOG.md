@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Add `box-sizing` CSS rule to `RewardCard` component.
+
 ## [23.13.0] - 2018-11-21
 
 Features:
