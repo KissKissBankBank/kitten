@@ -227,12 +227,10 @@ exports[`<TeamCard /> with some props matches with snapshot 1`] = `
             </span>
             <button
               aria-label="Phone"
-              className="k-ButtonIcon k-ButtonIcon--phone k-ButtonIcon--hydrogen"
+              className="rmq-d1866375 k-ButtonIcon k-ButtonIcon--phone k-ButtonIcon--hydrogen"
+              data-radium={true}
               style={
                 Object {
-                  "@media (min-width: 768px)": Object {
-                    "marginRight": 15,
-                  },
                   "marginRight": 10,
                 }
               }
@@ -256,7 +254,7 @@ exports[`<TeamCard /> with some props matches with snapshot 1`] = `
         <style
           dangerouslySetInnerHTML={
             Object {
-              "__html": "",
+              "__html": "@media (min-width: 768px){ .rmq-d1866375{margin-right: 15px !important;}}",
             }
           }
         />
