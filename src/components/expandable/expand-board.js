@@ -82,12 +82,12 @@ function (_Component) {
         style: buttonStyles,
         onClick: onClick,
         type: "button"
-      }, expanded ? defaultExpandChildren : children, _react.default.createElement(_arrowIcon.ArrowIcon, {
+      }, _react.default.createElement("div", null, expanded ? defaultExpandChildren : children, _react.default.createElement(_arrowIcon.ArrowIcon, {
+        version: "solid",
         direction: expanded ? 'top' : 'bottom',
-        className: "k-Button__icon",
         fill: _colorsConfig.default.background1,
         style: style.arrow
-      }));
+      })));
     }
   }]);
 
@@ -256,20 +256,18 @@ var styles = {
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      lineHeight: '1.3em',
-      // As the arrow takes a huge space because of its rotation, we cannot
-      // apply the same paddings as on the basic big button. These values ajust
-      // the paddings so it fits the same as the basic big button.
-      paddingTop: (0, _typography.pxToRem)(3),
-      paddingBottom: (0, _typography.pxToRem)(3)
+      lineHeight: '1.3rem',
+      padding: "".concat((0, _typography.pxToRem)(22), " ").concat((0, _typography.pxToRem)(30))
     },
     expanded: {
       backgroundColor: _colorsConfig.default.font1,
       borderColor: _colorsConfig.default.font1
     },
     arrow: {
-      width: '0.375rem',
-      height: '0.375rem'
+      width: (0, _typography.pxToRem)(8),
+      height: '0.75rem',
+      // half of button base line-height
+      marginLeft: (0, _typography.pxToRem)(10)
     }
   }
 };
