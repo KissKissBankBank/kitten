@@ -39,8 +39,11 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 var viewPortTable = {
   viewportIsMobile: _screenConfig.SCREEN_SIZE_XS,
-  viewportIsSOrLess: _screenConfig.SCREEN_SIZE_S,
   viewportIsTabletOrLess: _screenConfig.SCREEN_SIZE_M,
+  viewportIsXXS: _screenConfig.SCREEN_SIZE_XXS,
+  viewportIsXSOrLess: _screenConfig.SCREEN_SIZE_XS,
+  viewportIsSOrLess: _screenConfig.SCREEN_SIZE_S,
+  viewportIsMOrLess: _screenConfig.SCREEN_SIZE_M,
   viewportIsLOrLess: _screenConfig.SCREEN_SIZE_L
 };
 
@@ -87,6 +90,20 @@ var mediaQueries = function mediaQueries(WrappedComponent) {
           return typeof hocProps[prop] === 'boolean' && !viewPortTable[prop] || !['boolean', 'string'].includes(_typeof(hocProps[prop]));
         }
       }, {
+        key: "warnIfHocPropIsDeprecated",
+        value: function warnIfHocPropIsDeprecated(prop) {
+          if (process.env.NODE_ENV === 'development') {
+            var deprecatedPropsToNewProps = {
+              viewportIsMobile: 'viewportIsXSOrLess',
+              viewportIsTabletOrLess: 'viewportIsMOrLess'
+            };
+
+            if (Object.keys(deprecatedPropsToNewProps).includes(prop)) {
+              console.warn("".concat(prop, " is deprecated. Please use ").concat(deprecatedPropsToNewProps[prop], " instead now."));
+            }
+          }
+        }
+      }, {
         key: "componentDidMount",
         value: function componentDidMount() {
           var _this2 = this;
@@ -97,6 +114,8 @@ var mediaQueries = function mediaQueries(WrappedComponent) {
             if (_this2.isInvalidProp(prop)) {
               return "break";
             }
+
+            _this2.warnIfHocPropIsDeprecated(prop);
 
             _this2.viewports[prop] = typeof propValue === 'boolean' ? (0, _mediaQueries.createMatchMediaMax)(viewPortTable[prop]) : (0, _mediaQueries.createMatchMedia)(propValue);
 
