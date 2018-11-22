@@ -7,7 +7,7 @@ import { LinkedinButtonIcon } from 'kitten/components/buttons/social-button-icon
 import { ButtonIcon as ButtonIconBase } from 'kitten/components/buttons/button-icon'
 import { PhoneIcon } from 'kitten/components/icons/phone-icon'
 import { MailIcon } from 'kitten/components/icons/mail-icon'
-import { ButtonWithTooltip } from 'kitten/components/cards/team-card/button-with-tooltip'
+import { TeamCardButtonWithTooltip } from 'kitten/components/cards/team-card/button-with-tooltip'
 import COLORS from 'kitten/constants/colors-config'
 import { ScreenConfig } from 'kitten/constants/screen-config'
 import { mediaQueries } from 'kitten/hoc/media-queries'
@@ -36,10 +36,10 @@ class TeamCardBase extends Component {
     return (
       <StyleRoot>
         <Marger bottom="2">{this.renderImage()}</Marger>
-        <Marger top="2" bottom="1.4">
+        <Marger top="2" bottom="1.5">
           {this.renderTitle()}
         </Marger>
-        <Marger top="1.4">{this.renderIcons()}</Marger>
+        <Marger top="1.5">{this.renderIcons()}</Marger>
       </StyleRoot>
     )
   }
@@ -66,6 +66,7 @@ class TeamCardBase extends Component {
 
   renderPhoneIcon() {
     const { phoneNumber, viewportIsMobile } = this.props
+
     return (
       <Fragment>
         {viewportIsMobile && (
@@ -74,13 +75,13 @@ class TeamCardBase extends Component {
             modifier="hydrogen"
             aria-label="Phone"
             className="k-ButtonIcon--phone"
-            style={styles.icons}
+            style={styles.iconsList.icon}
           >
             <PhoneIcon className="k-ButtonIcon__svg" />
           </ButtonIcon>
         )}
 
-        {!viewportIsMobile && <ButtonWithTooltip />}
+        {!viewportIsMobile && <TeamCardButtonWithTooltip {...this.props} />}
       </Fragment>
     )
   }
@@ -137,9 +138,9 @@ const styles = {
     display: 'flex',
 
     icon: {
-      marginRight: 9,
+      marginRight: 10,
       [`@media (min-width: ${ScreenConfig.M.min}px)`]: {
-        marginRight: 14,
+        marginRight: 15,
       },
     },
   },

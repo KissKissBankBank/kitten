@@ -1,21 +1,14 @@
 import React, { Component } from 'react'
 import Radium, { StyleRoot } from 'radium'
 import PropTypes from 'prop-types'
-import { ButtonIcon as ButtonIconBase } from 'kitten/components/buttons/button-icon'
+import { ButtonIcon } from 'kitten/components/buttons/button-icon'
 import { PhoneIcon } from 'kitten/components/icons/phone-icon'
 import { ScreenConfig } from 'kitten/constants/screen-config'
 import COLORS from 'kitten/constants/colors-config'
 
-const ButtonIcon = Radium(ButtonIconBase)
-
-export class ButtonWithTooltip extends Component {
+export class TeamCardButtonWithTooltip extends Component {
   static propTypes = {
-    tooltipText: PropTypes.string.isRequired,
     phoneNumber: PropTypes.string.isRequired,
-  }
-
-  static defaultProps = {
-    tooltipText: '06 44 42 57 89',
   }
 
   constructor(props) {
@@ -33,7 +26,7 @@ export class ButtonWithTooltip extends Component {
   }
 
   render() {
-    const { tooltipText, phoneNumber } = this.props
+    const { phoneNumber } = this.props
 
     const tooltipStyle = [
       styles.tooltip.content,
@@ -49,7 +42,7 @@ export class ButtonWithTooltip extends Component {
         >
           <div style={styles.tooltip}>
             <span style={tooltipStyle}>
-              {tooltipText}
+              {phoneNumber}
               <span style={styles.tooltip.content.after} />
             </span>
 
@@ -57,7 +50,7 @@ export class ButtonWithTooltip extends Component {
               modifier="hydrogen"
               aria-label="Phone"
               className="k-ButtonIcon--phone"
-              style={styles.icons}
+              style={styles.icon}
             >
               <PhoneIcon className="k-ButtonIcon__svg" />
             </ButtonIcon>
@@ -68,6 +61,8 @@ export class ButtonWithTooltip extends Component {
   }
 }
 
+const backgroundColor = COLORS.primary1
+
 const styles = {
   tooltip: {
     position: 'relative',
@@ -77,14 +72,14 @@ const styles = {
       top: 55,
       padding: 20,
       marginLeft: -55,
-      backgroundColor: COLORS.primary1,
+      backgroundColor: backgroundColor,
       border: '2px solid #19b4fa',
       fontSize: 14,
       fontWeight: 'regular',
       color: COLORS.background1,
       whiteSpace: 'nowrap',
-      opacity: 1,
-      visibility: 'visible',
+      opacity: 0,
+      visibility: 'hidden',
       transition: 'opacity .2s, visibility .2s',
       hover: {
         visibility: 'visible',
@@ -99,17 +94,16 @@ const styles = {
         width: 0,
         marginLeft: -8,
         border: '8px solid transparent',
-        borderBottomColor: COLORS.primary1,
+        borderBottomColor: backgroundColor,
         borderWidth: 10,
         pointerEvents: 'none',
       },
     },
   },
-
-  icons: {
-    marginRight: 9,
+  icon: {
+    marginRight: 10,
     [`@media (min-width: ${ScreenConfig.M.min}px)`]: {
-      marginRight: 14,
+      marginRight: 15,
     },
   },
 }
