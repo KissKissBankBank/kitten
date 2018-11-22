@@ -1,6 +1,6 @@
 {
-  "name": "kitten-components",
-  "version": "23.16.1",
+  "name": "@kisskissbankbank/kitten",
+  "version": "1.0.0-alpha0",
   "license": "MIT",
   "description": "Front-end components library",
   "main": "src",
@@ -133,5 +133,8 @@
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "./assets/javascripts/kitten/config/__mocks__/fileMock.js",
       "\\.(css|less)$": "./assets/javascripts/kitten/config/__mocks__/styleMock.js"
     }
+  },
+  "bugs": {
+    "url": "https://github.com/KissKissBankBank/kitten/issues"
   }
 }
