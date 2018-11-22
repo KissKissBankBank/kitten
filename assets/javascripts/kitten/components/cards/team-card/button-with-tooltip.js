@@ -75,6 +75,7 @@ const styles = {
       backgroundColor: backgroundColor,
       border: '2px solid #19b4fa',
       fontSize: 14,
+      lineHeight: 0,
       fontWeight: 'regular',
       color: COLORS.background1,
       whiteSpace: 'nowrap',

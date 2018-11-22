@@ -31,7 +31,7 @@ exports[`<TeamCard /> by default matches with snapshot 1`] = `
   <div
     style={
       Object {
-        "marginBottom": "0.875rem",
+        "marginBottom": "0.9375rem",
         "marginTop": "1.25rem",
       }
     }
@@ -50,70 +50,27 @@ exports[`<TeamCard /> by default matches with snapshot 1`] = `
     style={
       Object {
         "marginBottom": null,
-        "marginTop": "0.875rem",
+        "marginTop": "0.9375rem",
       }
     }
   >
     <div
       data-radium={true}
+      style={
+        Object {
+          "display": "flex",
+        }
+      }
     >
-      <a
-        aria-label="Email"
-        className="rmq-88c353f4 k-ButtonIcon k-ButtonIcon--phone k-ButtonIcon--hydrogen"
-        data-radium={true}
-        href="mailto:example@kisskiss.fr"
-        style={
-          Object {
-            "marginRight": 9,
-          }
-        }
-        tabIndex={null}
-      >
-        <svg
-          className="k-ButtonIcon__svg"
-          viewBox="0 0 19 12"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <title>
-            Mail
-          </title>
-          <path
-            d="M9.5 8l9-6v10H.5V2l9 6zm0-2l-9-6h18l-9 6z"
-          />
-        </svg>
-      </a>
-      <button
-        aria-label="Phone"
-        className="rmq-88c353f4 k-ButtonIcon k-ButtonIcon--phone k-ButtonIcon--hydrogen"
-        data-radium={true}
-        href="tel:06 00 00 00 00"
-        style={
-          Object {
-            "marginRight": 9,
-          }
-        }
-        tabIndex={null}
-      >
-        <svg
-          className="k-ButtonIcon__svg"
-          viewBox="0 0 16 18"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <title>
-            Phone
-          </title>
-          <path
-            d="M3.354 0C2.238 0 .496.498.207 2.268-.2 4.764 1.533 9.09 4.047 12.202c2.49 3.084 6.305 5.63 8.86 5.792.06.004.12.006.177.006 2.39 0 3.002-3.158 2.694-3.548l-4.335-1.94c-.26-.15-.532-.225-.79-.225-.263 0-.51.08-.713.24l-.866.63c-.093.034-.194.05-.302.05-1.807 0-5.535-4.758-4.636-6.166.006-.008.79-.724.79-.724.387-.313.534-.882.347-1.444L4.275.206C4.18.088 3.823 0 3.355 0"
-          />
-        </svg>
-      </button>
+      
+      
       
     </div>
   </div>
   <style
     dangerouslySetInnerHTML={
       Object {
-        "__html": "@media (min-width: 768px){ .rmq-88c353f4{margin-right: 14px !important;}}",
+        "__html": "",
       }
     }
   />
@@ -151,7 +108,7 @@ exports[`<TeamCard /> with some props matches with snapshot 1`] = `
   <div
     style={
       Object {
-        "marginBottom": "0.875rem",
+        "marginBottom": "0.9375rem",
         "marginTop": "1.25rem",
       }
     }
@@ -174,21 +131,26 @@ exports[`<TeamCard /> with some props matches with snapshot 1`] = `
     style={
       Object {
         "marginBottom": null,
-        "marginTop": "0.875rem",
+        "marginTop": "0.9375rem",
       }
     }
   >
     <div
       data-radium={true}
+      style={
+        Object {
+          "display": "flex",
+        }
+      }
     >
       <a
         aria-label="Email"
-        className="rmq-88c353f4 k-ButtonIcon k-ButtonIcon--phone k-ButtonIcon--hydrogen"
+        className="rmq-d1866375 k-ButtonIcon k-ButtonIcon--phone k-ButtonIcon--hydrogen"
         data-radium={true}
         href="mailto:Custom mail"
         style={
           Object {
-            "marginRight": 9,
+            "marginRight": 10,
           }
         }
         tabIndex={null}
@@ -206,31 +168,99 @@ exports[`<TeamCard /> with some props matches with snapshot 1`] = `
           />
         </svg>
       </a>
-      <button
-        aria-label="Phone"
-        className="rmq-88c353f4 k-ButtonIcon k-ButtonIcon--phone k-ButtonIcon--hydrogen"
+      <div
         data-radium={true}
-        href="tel:Custom phone number"
-        style={
-          Object {
-            "marginRight": 9,
-          }
-        }
-        tabIndex={null}
       >
-        <svg
-          className="k-ButtonIcon__svg"
-          viewBox="0 0 16 18"
-          xmlns="http://www.w3.org/2000/svg"
+        <a
+          data-radium={true}
+          href="tel:Custom phone number"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
         >
-          <title>
-            Phone
-          </title>
-          <path
-            d="M3.354 0C2.238 0 .496.498.207 2.268-.2 4.764 1.533 9.09 4.047 12.202c2.49 3.084 6.305 5.63 8.86 5.792.06.004.12.006.177.006 2.39 0 3.002-3.158 2.694-3.548l-4.335-1.94c-.26-.15-.532-.225-.79-.225-.263 0-.51.08-.713.24l-.866.63c-.093.034-.194.05-.302.05-1.807 0-5.535-4.758-4.636-6.166.006-.008.79-.724.79-.724.387-.313.534-.882.347-1.444L4.275.206C4.18.088 3.823 0 3.355 0"
-          />
-        </svg>
-      </button>
+          <div
+            data-radium={true}
+            style={
+              Object {
+                "position": "relative",
+              }
+            }
+          >
+            <span
+              data-radium={true}
+              style={
+                Object {
+                  "backgroundColor": "#19b4fa",
+                  "border": "2px solid #19b4fa",
+                  "color": "#fff",
+                  "fontSize": 14,
+                  "fontWeight": "regular",
+                  "lineHeight": 0,
+                  "marginLeft": -55,
+                  "opacity": 0,
+                  "padding": 20,
+                  "position": "absolute",
+                  "top": 55,
+                  "transition": "opacity .2s, visibility .2s",
+                  "visibility": "hidden",
+                  "whiteSpace": "nowrap",
+                }
+              }
+            >
+              Custom phone number
+              <span
+                data-radium={true}
+                style={
+                  Object {
+                    "border": "8px solid transparent",
+                    "borderBottomColor": "#19b4fa",
+                    "borderWidth": 10,
+                    "bottom": "102%",
+                    "height": 0,
+                    "left": "50%",
+                    "marginLeft": -8,
+                    "pointerEvents": "none",
+                    "position": "absolute",
+                    "width": 0,
+                  }
+                }
+              />
+            </span>
+            <button
+              aria-label="Phone"
+              className="k-ButtonIcon k-ButtonIcon--phone k-ButtonIcon--hydrogen"
+              style={
+                Object {
+                  "@media (min-width: 768px)": Object {
+                    "marginRight": 15,
+                  },
+                  "marginRight": 10,
+                }
+              }
+              tabIndex={null}
+            >
+              <svg
+                className="k-ButtonIcon__svg"
+                viewBox="0 0 16 18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>
+                  Phone
+                </title>
+                <path
+                  d="M3.354 0C2.238 0 .496.498.207 2.268-.2 4.764 1.533 9.09 4.047 12.202c2.49 3.084 6.305 5.63 8.86 5.792.06.004.12.006.177.006 2.39 0 3.002-3.158 2.694-3.548l-4.335-1.94c-.26-.15-.532-.225-.79-.225-.263 0-.51.08-.713.24l-.866.63c-.093.034-.194.05-.302.05-1.807 0-5.535-4.758-4.636-6.166.006-.008.79-.724.79-.724.387-.313.534-.882.347-1.444L4.275.206C4.18.088 3.823 0 3.355 0"
+                />
+              </svg>
+            </button>
+          </div>
+        </a>
+        <style
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "",
+            }
+          }
+        />
+      </div>
       <a
         aria-label="LinkedIn"
         className="k-ButtonIcon k-ButtonIcon--linkedin k-ButtonIcon--tiny"
@@ -257,7 +287,7 @@ exports[`<TeamCard /> with some props matches with snapshot 1`] = `
   <style
     dangerouslySetInnerHTML={
       Object {
-        "__html": "@media (min-width: 768px){ .rmq-88c353f4{margin-right: 14px !important;}}",
+        "__html": "@media (min-width: 768px){ .rmq-d1866375{margin-right: 15px !important;}}",
       }
     }
   />

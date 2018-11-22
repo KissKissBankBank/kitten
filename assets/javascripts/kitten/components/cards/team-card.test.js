@@ -2,22 +2,35 @@ import React from 'react'
 import renderer from 'react-test-renderer'
 import { TeamCard } from 'kitten/components/cards/team-card'
 
+const createMockMediaMatcher = matches => () => ({
+  matches,
+  addListener: () => {},
+  removeListener: () => {},
+})
+
 describe('<TeamCard />', () => {
-  let component
+  let originalMatchMedia
+
+  beforeEach(() => {
+    originalMatchMedia = window.matchMedia
+  })
+
+  afterEach(() => {
+    window.matchMedia = originalMatchMedia
+  })
 
   describe('by default', () => {
-    beforeEach(() => {
-      component = renderer.create(<TeamCard />).toJSON()
-    })
-
     it('matches with snapshot', () => {
+      window.matchMedia = createMockMediaMatcher(false)
+      const component = renderer.create(<TeamCard />).toJSON()
       expect(component).toMatchSnapshot()
     })
   })
 
   describe('with some props', () => {
-    beforeEach(() => {
-      component = renderer
+    it('matches with snapshot', () => {
+      window.matchMedia = createMockMediaMatcher(false)
+      const component = renderer
         .create(
           <TeamCard
             image="Custom image"
@@ -31,9 +44,6 @@ describe('<TeamCard />', () => {
           />,
         )
         .toJSON()
-    })
-
-    it('matches with snapshot', () => {
       expect(component).toMatchSnapshot()
     })
   })
