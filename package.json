@@ -97,6 +97,7 @@
     "stylelint": "stylelint --syntax scss 'assets/stylesheets/**/*.scss'",
     "test": "jest --maxWorkers=2",
     "test:update:snapshots": "jest --updateSnapshot",
+    "prepublish": "yarn test && yarn build:jsnpm",
     "precommit": "lint-staged",
     "styleguide:start": "webpack-dev-server",
     "styleguide:build": "rm -rf styleguide/build && webpack --config webpack.config.build.js --progress --colors && htmlprocessor styleguide/index.html -o styleguide/build/index.html && cp -R styleguide/assets styleguide/build",
