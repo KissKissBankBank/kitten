@@ -241,7 +241,8 @@ var style = {
     borderStyle: 'solid',
     borderColor: _colorsConfig.default.line1,
     width: '100%',
-    padding: "".concat((0, _typography.pxToRem)(15), " 0")
+    padding: "".concat((0, _typography.pxToRem)(15), " 0"),
+    boxSizing: 'border-box'
   },
   image: {
     width: '100%'
