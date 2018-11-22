@@ -299,6 +299,10 @@ module Kitten
               path: 'components/media/embed-player',
               name: 'Embed Player',
             },
+            {
+              path: 'components/carousel/simple-carousel',
+              name: 'Simple carousel'
+            },
           ],
         },
       ]

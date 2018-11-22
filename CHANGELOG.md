@@ -6,13 +6,35 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Create `TeamCard` component.
 - Feature: Create `PhoneIcon` and `MailIcon` components.
-- Feature: Update `ArrowIcon` component with a `version` prop to handle the icon
+- Fix: Fix `ExpandBoard.Button` arrow styles.
+- Fix: Add `box-sizing` CSS rule to `RewardCard` component.
+
+## [23.13.0] - 2018-11-21
+
+Features:
+- Add `SimpleCarousel` component.
+- Add animation on `List.ButtonItem` hover.
+- Add new viewport range to mediaQueries HOC.
+- Deprecated `viewportIsMobile` and `viewportIsTabletOrLess` on
+  mediaQueries HOC. Please use `viewportIsXS` and `viewportIsMOrLess` instead
+  now.
+
+Fix:
+- Fix `Deprecated` rendering error.
+
+## [23.12.0] - 2018-11-15
+
+Feature:
+- Update `ArrowIcon` component with a `version` prop to handle the icon
   center of gravity properly. `ArrowIcon` used without this prop is now
   deprecated. All others props are still available.
   You should use it as follow now:
   ```js
   <ArrowIcon version="solid" />
   ```
+
+Fix:
+- Fix `LinkBox` padding.
 
 ## [23.11.4] - 2018-11-15
 
