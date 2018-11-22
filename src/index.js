@@ -9,17 +9,12 @@ var getScssPaths = function () {
     __dirname,
     '../app/assets/stylesheets'
   )
-  var vendorStylesheetsPath = path.join(
-    __dirname,
-    '../vendor/assets/stylesheets'
-  )
 
   var modularscalePath = require.resolve('modularscale-sass')
 
   return [
     kittenStylesheetsPath,
     karlStylesheetsPath,
-    vendorStylesheetsPath,
     path.join(modularscalePath, '..'),
   ]
 }
