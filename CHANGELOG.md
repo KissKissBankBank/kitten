@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Update `ExpandBoard` component:
+  - Enable animation on expanding and shrinking with `withAnimation`,
+    `animationMaxHeight`, `animationShrinkingDuration` props.
+  - Authorize `style` prop on `ExpandBoard.Content`.
 - Fix: Fix `ExpandBoard.Button` arrow styles.
 - Fix: Add `box-sizing` CSS rule to `RewardCard` component.
 
