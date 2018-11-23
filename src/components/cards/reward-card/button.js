@@ -1,9 +1,13 @@
 "use strict";
 
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.RewardCardButton = void 0;
+
+var _defineProperty2 = _interopRequireDefault(require("@babel/runtime/helpers/defineProperty"));
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -18,10 +22,6 @@ var _screenConfig = require("kitten/constants/screen-config");
 var _typography = require("kitten/helpers/utils/typography");
 
 var _deprecated = require("kitten/helpers/utils/deprecated");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 var Button = (0, _radium.default)(_button.Button);
 
@@ -51,7 +51,7 @@ var RewardCardButton = function RewardCardButton(_ref) {
 
 exports.RewardCardButton = RewardCardButton;
 var styles = {
-  base: _defineProperty({
+  base: (0, _defineProperty2.default)({
     width: '100%',
     display: 'flex',
     alignItems: 'center',

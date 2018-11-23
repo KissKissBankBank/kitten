@@ -1,9 +1,25 @@
 "use strict";
 
+var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
+
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.ExpandBoard = void 0;
+
+var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
+
+var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
+
+var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
+
+var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
+
+var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
+
+var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -19,46 +35,19 @@ var _colorsConfig = _interopRequireDefault(require("kitten/constants/colors-conf
 
 var _typography = require("kitten/helpers/utils/typography");
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
-
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 var Button = (0, _radium.default)(_button.Button);
 
 var ExpandBoardButton =
 /*#__PURE__*/
 function (_Component) {
-  _inherits(ExpandBoardButton, _Component);
+  (0, _inherits2.default)(ExpandBoardButton, _Component);
 
   function ExpandBoardButton() {
-    _classCallCheck(this, ExpandBoardButton);
-
-    return _possibleConstructorReturn(this, _getPrototypeOf(ExpandBoardButton).apply(this, arguments));
+    (0, _classCallCheck2.default)(this, ExpandBoardButton);
+    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(ExpandBoardButton).apply(this, arguments));
   }
 
-  _createClass(ExpandBoardButton, [{
+  (0, _createClass2.default)(ExpandBoardButton, [{
     key: "render",
     value: function render() {
       var _this$props = this.props,
@@ -70,7 +59,7 @@ function (_Component) {
           onClick = _this$props.onClick,
           ariaId = _this$props.ariaId;
       var defaultExpandChildren = expandChildren ? expandChildren : children;
-      var buttonStyles = expanded ? _objectSpread({}, style.base, style.expanded) : style.base;
+      var buttonStyles = expanded ? (0, _extends2.default)({}, style.base, style.expanded) : style.base;
       return _react.default.createElement(Button, {
         icon: true,
         iconOnRight: true,
@@ -90,11 +79,10 @@ function (_Component) {
       })));
     }
   }]);
-
   return ExpandBoardButton;
 }(_react.Component);
 
-_defineProperty(ExpandBoardButton, "propTypes", {
+ExpandBoardButton.propTypes = {
   children: _propTypes.default.node.isRequired,
   ariaId: _propTypes.default.string,
   expandChildren: _propTypes.default.node,
@@ -102,29 +90,27 @@ _defineProperty(ExpandBoardButton, "propTypes", {
   disabled: _propTypes.default.bool,
   style: _propTypes.default.object,
   onClick: _propTypes.default.func
-});
-
-_defineProperty(ExpandBoardButton, "defaultProps", {
+};
+ExpandBoardButton.defaultProps = {
   expandChildren: null,
   expanded: false,
   disabled: false,
   style: {},
   onClick: function onClick() {},
   ariaId: ''
-});
+};
 
 var ExpandBoardContent =
 /*#__PURE__*/
 function (_Component2) {
-  _inherits(ExpandBoardContent, _Component2);
+  (0, _inherits2.default)(ExpandBoardContent, _Component2);
 
   function ExpandBoardContent() {
-    _classCallCheck(this, ExpandBoardContent);
-
-    return _possibleConstructorReturn(this, _getPrototypeOf(ExpandBoardContent).apply(this, arguments));
+    (0, _classCallCheck2.default)(this, ExpandBoardContent);
+    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(ExpandBoardContent).apply(this, arguments));
   }
 
-  _createClass(ExpandBoardContent, [{
+  (0, _createClass2.default)(ExpandBoardContent, [{
     key: "render",
     value: function render() {
       var _this$props2 = this.props,
@@ -135,40 +121,37 @@ function (_Component2) {
       }, children);
     }
   }]);
-
   return ExpandBoardContent;
 }(_react.Component);
 
-_defineProperty(ExpandBoardContent, "propTypes", {
+ExpandBoardContent.propTypes = {
   children: _propTypes.default.node.isRequired,
   ariaId: _propTypes.default.string
-});
-
-_defineProperty(ExpandBoardContent, "defaultProps", {
+};
+ExpandBoardContent.defaultProps = {
   ariaId: ''
-});
+};
 
 var ExpandBoardBase =
 /*#__PURE__*/
 function (_Component3) {
-  _inherits(ExpandBoardBase, _Component3);
+  (0, _inherits2.default)(ExpandBoardBase, _Component3);
 
   function ExpandBoardBase(props) {
     var _this;
 
-    _classCallCheck(this, ExpandBoardBase);
+    (0, _classCallCheck2.default)(this, ExpandBoardBase);
+    _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(ExpandBoardBase).call(this));
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(ExpandBoardBase).call(this));
-
-    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "isButtonComponent", function (component) {
+    _this.isButtonComponent = function (component) {
       return component.type === ExpandBoardButton;
-    });
+    };
 
-    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "isContentComponent", function (component) {
+    _this.isContentComponent = function (component) {
       return component.type === ExpandBoardContent;
-    });
+    };
 
-    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "handleClick", function () {
+    _this.handleClick = function () {
       _this.setState(function (prevState) {
         return {
           expanded: !prevState.expanded
@@ -180,7 +163,7 @@ function (_Component3) {
           expanded: _this.state.expanded
         });
       });
-    });
+    };
 
     _this.state = {
       expanded: false
@@ -188,7 +171,7 @@ function (_Component3) {
     return _this;
   }
 
-  _createClass(ExpandBoardBase, [{
+  (0, _createClass2.default)(ExpandBoardBase, [{
     key: "render",
     value: function render() {
       var _this2 = this;
@@ -226,29 +209,24 @@ function (_Component3) {
       }, button, this.state.expanded && content);
     }
   }]);
-
   return ExpandBoardBase;
 }(_react.Component);
 
-_defineProperty(ExpandBoardBase, "Button", ExpandBoardButton);
-
-_defineProperty(ExpandBoardBase, "Content", ExpandBoardContent);
-
-_defineProperty(ExpandBoardBase, "propTypes", {
+ExpandBoardBase.Button = ExpandBoardButton;
+ExpandBoardBase.Content = ExpandBoardContent;
+ExpandBoardBase.propTypes = {
   children: _propTypes.default.node.isRequired,
   disabled: _propTypes.default.bool,
   style: _propTypes.default.object,
   onClick: _propTypes.default.func,
   ariaId: _propTypes.default.string.isRequired
-});
-
-_defineProperty(ExpandBoardBase, "defaultProps", {
+};
+ExpandBoardBase.defaultProps = {
   disabled: false,
   style: {},
   onClick: function onClick() {},
   ariaId: 'k-ExpandBoard'
-});
-
+};
 var styles = {
   button: {
     base: {
