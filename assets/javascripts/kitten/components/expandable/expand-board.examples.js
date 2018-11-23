@@ -80,7 +80,7 @@ export class ExpandBoardWithButtonItemList extends Component {
         <div style={{ padding: '30px', borderBottom: '3px solid olive' }}>
           <Grid>
             <GridCol offset="1" col="10">
-              <ExpandBoard onClick={this.handleClick}>
+              <ExpandBoard onClick={this.handleClick} withAnimation>
                 <ExpandBoard.Button expandChildren="Précisez votre choix">
                   Je soutiens
                 </ExpandBoard.Button>

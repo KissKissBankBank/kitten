@@ -8,22 +8,6 @@ import { pxToRem } from 'kitten/helpers/utils/typography'
 
 const Button = Radium(ButtonBase)
 
-const growAnimation = Radium.keyframes(
-  {
-    '0%': { opacity: 0, maxHeight: 0 },
-    '100%': { opacity: 1, maxHeight: '1000px' },
-  },
-  'grow',
-)
-
-const shrinkAnimation = Radium.keyframes(
-  {
-    '0%': { opacity: 1, maxHeight: '1000px' },
-    '100%': { opacity: 0, maxHeight: 0 },
-  },
-  'schrink',
-)
-
 class ExpandBoardButton extends Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
@@ -119,6 +103,9 @@ class ExpandBoardBase extends Component {
     style: PropTypes.object,
     onClick: PropTypes.func,
     ariaId: PropTypes.string.isRequired,
+    withAnimation: PropTypes.bool,
+    animationMaxHeight: PropTypes.string,
+    animationShrinkingDuration: PropTypes.number,
   }
 
   static defaultProps = {
@@ -126,6 +113,9 @@ class ExpandBoardBase extends Component {
     style: {},
     onClick: () => {},
     ariaId: 'k-ExpandBoard',
+    withAnimation: false,
+    animationMaxHeight: '100vh',
+    animationShrinkingDuration: 0.5,
   }
 
   state = {
@@ -137,11 +127,26 @@ class ExpandBoardBase extends Component {
   isButtonComponent = component => component.type === ExpandBoardButton
   isContentComponent = component => component.type === ExpandBoardContent
 
-  handleAfterClick = () => {
-    document.activeElement.blur()
+  growAnimation = Radium.keyframes(
+    {
+      '0%': { opacity: 0, maxHeight: 0 },
+      '100%': { opacity: 1, maxHeight: '100vh' },
+    },
+    'grow',
+  )
 
+  shrinkAnimation = Radium.keyframes(
+    {
+      '0%': { opacity: 1, maxHeight: '100vh' },
+      '100%': { opacity: 0, maxHeight: 0 },
+    },
+    'schrink',
+  )
+
+  handleAfterClick = () => {
     const { expanded, isShrinking, isExpanding } = this.state
 
+    document.activeElement.blur()
     this.props.onClick({ expanded, isShrinking, isExpanding })
   }
 
@@ -157,7 +162,11 @@ class ExpandBoardBase extends Component {
   }
 
   handleClick = () => {
-    this.setState(
+    const { withAnimation, animationShrinkingDuration } = this.props
+
+    if (!withAnimation) return this.updateExpandState()
+
+    return this.setState(
       prevState => {
         if (prevState.expanded) {
           return { isShrinking: true }
@@ -167,7 +176,10 @@ class ExpandBoardBase extends Component {
       },
       () => {
         if (this.state.isShrinking) {
-          return setTimeout(this.updateExpandState, 500)
+          return setTimeout(
+            this.updateExpandState,
+            animationShrinkingDuration * 1000,
+          )
         }
 
         return this.updateExpandState()
@@ -176,15 +188,19 @@ class ExpandBoardBase extends Component {
   }
 
   contentStyle = () => {
+    const { withAnimation, animationShrinkingDuration } = this.props
+
+    if (!withAnimation) return null
+
     if (this.state.isShrinking) {
       return {
         maxHeight: '1000px',
         opacity: 1,
-        animationDuration: '.5s',
+        animationDuration: `${animationShrinkingDuration}s`,
         animationDelay: 0,
         animationIterationCount: 1,
         animationFillMode: 'forwards',
-        animationName: shrinkAnimation,
+        animationName: this.shrinkAnimation,
         animationTimingFunction: 'ease-in-out',
       }
     }
@@ -196,7 +212,7 @@ class ExpandBoardBase extends Component {
       animationDelay: 0,
       animationIterationCount: 1,
       animationFillMode: 'forwards',
-      animationName: growAnimation,
+      animationName: this.growAnimation,
       animationTimingFunction: 'ease-in-out',
     }
   }
