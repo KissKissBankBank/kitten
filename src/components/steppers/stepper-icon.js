@@ -1,5 +1,7 @@
 "use strict";
 
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -12,8 +14,6 @@ var _classnames = _interopRequireDefault(require("classnames"));
 var _arrowIcon = require("kitten/components/icons/arrow-icon");
 
 var _checkedIcon = require("kitten/components/icons/checked-icon");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var StepperIcon = function StepperIcon(_ref) {
   var className = _ref.className,

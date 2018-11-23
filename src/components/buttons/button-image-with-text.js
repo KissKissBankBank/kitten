@@ -1,9 +1,23 @@
 "use strict";
 
+var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
+
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.ButtonImageWithText = void 0;
+
+var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
+
+var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
+
+var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
+
+var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
+
+var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -17,45 +31,20 @@ var _buttonImage = require("kitten/components/buttons/button-image");
 
 var _text = require("kitten/components/typography/text");
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
-
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 var ButtonImage = (0, _radium.default)(_buttonImage.ButtonImage);
 var Text = (0, _radium.default)(_text.Text);
 
 var ButtonImageWithTextComponent =
 /*#__PURE__*/
 function (_Component) {
-  _inherits(ButtonImageWithTextComponent, _Component);
+  (0, _inherits2.default)(ButtonImageWithTextComponent, _Component);
 
   function ButtonImageWithTextComponent() {
-    _classCallCheck(this, ButtonImageWithTextComponent);
-
-    return _possibleConstructorReturn(this, _getPrototypeOf(ButtonImageWithTextComponent).apply(this, arguments));
+    (0, _classCallCheck2.default)(this, ButtonImageWithTextComponent);
+    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(ButtonImageWithTextComponent).apply(this, arguments));
   }
 
-  _createClass(ButtonImageWithTextComponent, [{
+  (0, _createClass2.default)(ButtonImageWithTextComponent, [{
     key: "render",
     value: function render() {
       return _react.default.createElement("div", {
@@ -103,11 +92,10 @@ function (_Component) {
       }, description));
     }
   }]);
-
   return ButtonImageWithTextComponent;
 }(_react.Component);
 
-_defineProperty(ButtonImageWithTextComponent, "propTypes", {
+ButtonImageWithTextComponent.propTypes = {
   title: _propTypes.default.string.isRequired,
   description: _propTypes.default.string.isRequired,
   micro: _propTypes.default.bool,
@@ -116,9 +104,8 @@ _defineProperty(ButtonImageWithTextComponent, "propTypes", {
   titleRegular: _propTypes.default.bool,
   textRegular: _propTypes.default.bool,
   avatarProps: _propTypes.default.func
-});
-
-_defineProperty(ButtonImageWithTextComponent, "defaultProps", {
+};
+ButtonImageWithTextComponent.defaultProps = {
   avatarProps: {
     src: 'https://placehold.it/100x100/caf4fe/caf4fe',
     alt: ''
@@ -128,8 +115,7 @@ _defineProperty(ButtonImageWithTextComponent, "defaultProps", {
   largeGutter: false,
   titleRegular: false,
   textRegular: false
-});
-
+};
 var styles = {
   display: 'flex',
   alignItems: 'center',

@@ -1,9 +1,13 @@
 "use strict";
 
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.PinterestButtonIcon = exports.YoutubeButtonIcon = exports.InstagramButtonIcon = exports.LinkedinButtonIcon = exports.TwitterButtonIcon = exports.FacebookButtonIcon = void 0;
+
+var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -21,12 +25,8 @@ var _youtubeIcon = require("kitten/components/icons/youtube-icon");
 
 var _pinterestIcon = require("kitten/components/icons/pinterest-icon");
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
-
 var FacebookButtonIcon = function FacebookButtonIcon(props) {
-  return _react.default.createElement(_buttonIcon.ButtonIcon, _extends({}, props, {
+  return _react.default.createElement(_buttonIcon.ButtonIcon, (0, _extends2.default)({}, props, {
     modifier: "facebook",
     "aria-label": "Facebook"
   }), _react.default.createElement(_facebookIcon.FacebookIcon, {
@@ -37,7 +37,7 @@ var FacebookButtonIcon = function FacebookButtonIcon(props) {
 exports.FacebookButtonIcon = FacebookButtonIcon;
 
 var TwitterButtonIcon = function TwitterButtonIcon(props) {
-  return _react.default.createElement(_buttonIcon.ButtonIcon, _extends({}, props, {
+  return _react.default.createElement(_buttonIcon.ButtonIcon, (0, _extends2.default)({}, props, {
     modifier: "twitter",
     "aria-label": "Twitter"
   }), _react.default.createElement(_twitterIcon.TwitterIcon, {
@@ -48,7 +48,7 @@ var TwitterButtonIcon = function TwitterButtonIcon(props) {
 exports.TwitterButtonIcon = TwitterButtonIcon;
 
 var LinkedinButtonIcon = function LinkedinButtonIcon(props) {
-  return _react.default.createElement(_buttonIcon.ButtonIcon, _extends({}, props, {
+  return _react.default.createElement(_buttonIcon.ButtonIcon, (0, _extends2.default)({}, props, {
     modifier: "linkedin",
     "aria-label": "LinkedIn"
   }), _react.default.createElement(_linkedinIcon.LinkedinIcon, {
@@ -59,7 +59,7 @@ var LinkedinButtonIcon = function LinkedinButtonIcon(props) {
 exports.LinkedinButtonIcon = LinkedinButtonIcon;
 
 var InstagramButtonIcon = function InstagramButtonIcon(props) {
-  return _react.default.createElement(_buttonIcon.ButtonIcon, _extends({}, props, {
+  return _react.default.createElement(_buttonIcon.ButtonIcon, (0, _extends2.default)({}, props, {
     modifier: "instagram",
     "aria-label": "Instagram"
   }), _react.default.createElement(_instagramIcon.InstagramIcon, {
@@ -70,7 +70,7 @@ var InstagramButtonIcon = function InstagramButtonIcon(props) {
 exports.InstagramButtonIcon = InstagramButtonIcon;
 
 var YoutubeButtonIcon = function YoutubeButtonIcon(props) {
-  return _react.default.createElement(_buttonIcon.ButtonIcon, _extends({}, props, {
+  return _react.default.createElement(_buttonIcon.ButtonIcon, (0, _extends2.default)({}, props, {
     modifier: "youtube",
     "aria-label": "Youtube"
   }), _react.default.createElement(_youtubeIcon.YoutubeIcon, {
@@ -81,7 +81,7 @@ var YoutubeButtonIcon = function YoutubeButtonIcon(props) {
 exports.YoutubeButtonIcon = YoutubeButtonIcon;
 
 var PinterestButtonIcon = function PinterestButtonIcon(props) {
-  return _react.default.createElement(_buttonIcon.ButtonIcon, _extends({}, props, {
+  return _react.default.createElement(_buttonIcon.ButtonIcon, (0, _extends2.default)({}, props, {
     modifier: "pinterest",
     "aria-label": "Pinterest"
   }), _react.default.createElement(_pinterestIcon.PinterestIcon, {

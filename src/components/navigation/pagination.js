@@ -1,10 +1,28 @@
 "use strict";
 
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.pages = pages;
 exports.Pagination = void 0;
+
+var _defineProperty2 = _interopRequireDefault(require("@babel/runtime/helpers/defineProperty"));
+
+var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
+
+var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
+
+var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
+
+var _getPrototypeOf3 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
+
+var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
+
+var _toConsumableArray2 = _interopRequireDefault(require("@babel/runtime/helpers/toConsumableArray"));
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -26,38 +44,6 @@ var _mediaQueries = require("kitten/hoc/media-queries");
 
 var _buttonIcon, _list;
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
-
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
-
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
-
-function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
-
-function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
-
 var Text = (0, _radium.default)(_text.Text);
 var ArrowIcon = (0, _radium.default)(_arrowIcon.ArrowIcon); // Returns an array with the given bounds
 
@@ -77,48 +63,48 @@ function pages(min, max, currentPage, availableSlots) {
 
 
   if (currentPage - min + 1 < availableSlots - 2) {
-    return _toConsumableArray(range(min, min - 1 + availableSlots - 2)).concat([null, max]);
+    return (0, _toConsumableArray2.default)(range(min, min - 1 + availableSlots - 2)).concat([null, max]);
   } // 1, …, 40, 41, 42
 
 
   if (max - currentPage < availableSlots - 2) {
-    return [min, null].concat(_toConsumableArray(range(max + 1 - (availableSlots - 2), max)));
+    return [min, null].concat((0, _toConsumableArray2.default)(range(max + 1 - (availableSlots - 2), max)));
   } // 1, …, 21, …, 42
 
 
   var sides = Math.floor((availableSlots - 4) / 2);
-  return [min, null].concat(_toConsumableArray(range(currentPage - sides, currentPage + sides)), [null, max]);
+  return [min, null].concat((0, _toConsumableArray2.default)(range(currentPage - sides, currentPage + sides)), [null, max]);
 }
 
 var PaginationBase =
 /*#__PURE__*/
 function (_Component) {
-  _inherits(PaginationBase, _Component);
+  (0, _inherits2.default)(PaginationBase, _Component);
 
   function PaginationBase() {
     var _getPrototypeOf2;
 
     var _this;
 
-    _classCallCheck(this, PaginationBase);
+    (0, _classCallCheck2.default)(this, PaginationBase);
 
     for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
       args[_key] = arguments[_key];
     }
 
-    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(PaginationBase)).call.apply(_getPrototypeOf2, [this].concat(args)));
+    _this = (0, _possibleConstructorReturn2.default)(this, (_getPrototypeOf2 = (0, _getPrototypeOf3.default)(PaginationBase)).call.apply(_getPrototypeOf2, [this].concat(args)));
 
-    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "preventClickDefault", function (e) {
+    _this.preventClickDefault = function (e) {
       return e.preventDefault();
-    });
+    };
 
-    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "pageClickHandler", function (number) {
+    _this.pageClickHandler = function (number) {
       return function (event) {
         return _this.props.onPageClick(number, event);
       };
-    });
+    };
 
-    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "renderPage", function (number, index) {
+    _this.renderPage = function (number, index) {
       if (!number) return _this.renderSpacer(index);
       var isActive = number === _this.props.currentPage;
       var tag = isActive ? 'span' : 'a';
@@ -137,12 +123,12 @@ function (_Component) {
         "aria-label": _this.props.goToPageLabel(number),
         onClick: isActive ? null : _this.pageClickHandler(number)
       }, number));
-    });
+    };
 
     return _this;
   }
 
-  _createClass(PaginationBase, [{
+  (0, _createClass2.default)(PaginationBase, [{
     key: "render",
     value: function render() {
       var _this$props = this.props,
@@ -203,11 +189,10 @@ function (_Component) {
       })));
     }
   }]);
-
   return PaginationBase;
 }(_react.Component);
 
-_defineProperty(PaginationBase, "propTypes", {
+PaginationBase.propTypes = {
   prevButtonLabel: _propTypes.default.string,
   nextButtonLabel: _propTypes.default.string,
   goToPageLabel: _propTypes.default.func,
@@ -216,9 +201,8 @@ _defineProperty(PaginationBase, "propTypes", {
   totalPages: _propTypes.default.number,
   currentPage: _propTypes.default.number,
   'aria-label': _propTypes.default.string
-});
-
-_defineProperty(PaginationBase, "defaultProps", {
+};
+PaginationBase.defaultProps = {
   prevButtonLabel: 'Previous page',
   nextButtonLabel: 'Next page',
   goToPageLabel: function goToPageLabel(n) {
@@ -231,8 +215,7 @@ _defineProperty(PaginationBase, "defaultProps", {
   currentPage: 1,
   totalPages: 1,
   'aria-label': 'Pagination navigation'
-});
-
+};
 var linkHoveredAndFocused = {
   color: _colorsConfig.default.primary1,
   borderColor: _colorsConfig.default.primary1,
@@ -255,22 +238,22 @@ var styles = {
     list: (_list = {
       listStyle: 'none',
       marginRight: 0
-    }, _defineProperty(_list, "@media (min-width: ".concat(_screenConfig.ScreenConfig['S'].min, "px)"), {
+    }, (0, _defineProperty2.default)(_list, "@media (min-width: ".concat(_screenConfig.ScreenConfig['S'].min, "px)"), {
       marginRight: '8px',
       marginLeft: '8px'
-    }), _defineProperty(_list, "lastChild", {
+    }), (0, _defineProperty2.default)(_list, "lastChild", {
       marginRight: 0
-    }), _defineProperty(_list, "left", _defineProperty({
+    }), (0, _defineProperty2.default)(_list, "left", (0, _defineProperty2.default)({
       marginRight: '30px',
       listStyle: 'none'
     }, "@media (min-width: ".concat(_screenConfig.ScreenConfig['S'].min, "px)"), {
       marginRight: '22px'
-    })), _defineProperty(_list, "right", _defineProperty({
+    })), (0, _defineProperty2.default)(_list, "right", (0, _defineProperty2.default)({
       marginLeft: '30px',
       listStyle: 'none'
     }, "@media (min-width: ".concat(_screenConfig.ScreenConfig['S'].min, "px)"), {
       marginLeft: '22px'
-    })), _defineProperty(_list, "points", _defineProperty({
+    })), (0, _defineProperty2.default)(_list, "points", (0, _defineProperty2.default)({
       listStyle: 'none',
       textDecoration: 'none',
       textAlign: 'center',
@@ -280,7 +263,7 @@ var styles = {
       marginLeft: '8px',
       marginRight: '8px',
       width: '50px'
-    })), _defineProperty(_list, "buttonIcon", (_buttonIcon = {
+    })), (0, _defineProperty2.default)(_list, "buttonIcon", (_buttonIcon = {
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
@@ -299,11 +282,11 @@ var styles = {
       ':hover': linkHoveredAndFocused,
       ':focus': linkHoveredAndFocused,
       ':active': isActivedPseudoClass
-    }, _defineProperty(_buttonIcon, "@media (min-width: ".concat(_screenConfig.ScreenConfig['S'].min, "px)"), {
+    }, (0, _defineProperty2.default)(_buttonIcon, "@media (min-width: ".concat(_screenConfig.ScreenConfig['S'].min, "px)"), {
       width: '50px',
       height: '50px',
       borderWidth: '2px'
-    }), _defineProperty(_buttonIcon, "isActive", {
+    }), (0, _defineProperty2.default)(_buttonIcon, "isActive", {
       cursor: 'auto',
       color: _colorsConfig.default.background1,
       borderColor: _colorsConfig.default.primary1,
@@ -311,7 +294,7 @@ var styles = {
       ':hover': isActivedPseudoClass,
       ':focus': isActivedPseudoClass,
       ':active': isActivedPseudoClass
-    }), _defineProperty(_buttonIcon, "isDisabled", {
+    }), (0, _defineProperty2.default)(_buttonIcon, "isDisabled", {
       color: _colorsConfig.default.background1,
       borderColor: _colorsConfig.default.line2,
       backgroundColor: _colorsConfig.default.line2,
@@ -319,7 +302,7 @@ var styles = {
       ':hover': disabledPseudoClass,
       ':focus': disabledPseudoClass,
       ':active': disabledPseudoClass
-    }), _defineProperty(_buttonIcon, "svg", {
+    }), (0, _defineProperty2.default)(_buttonIcon, "svg", {
       alignSelf: 'center',
       margin: '0',
       padding: '0',

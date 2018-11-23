@@ -1,13 +1,13 @@
 "use strict";
 
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.ConfiguredRadium = void 0;
 
 var _radium = _interopRequireDefault(require("radium"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // DEPRECATED: This configuration is the Radium default configuration.
 var config = {

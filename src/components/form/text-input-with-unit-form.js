@@ -1,9 +1,15 @@
 "use strict";
 
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.TextInputWithUnitForm = void 0;
+
+var _defineProperty2 = _interopRequireDefault(require("@babel/runtime/helpers/defineProperty"));
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -26,12 +32,6 @@ var _button2 = require("kitten/components/buttons/button");
 var _screenConfig = require("kitten/constants/screen-config");
 
 var _button;
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 var Button = (0, _radium.default)(_button2.Button);
 var Grid = (0, _radium.default)(_grid.Grid);
@@ -158,9 +158,9 @@ var styles = {
       justifyContent: 'center'
     }
   },
-  button: (_button = {}, _defineProperty(_button, "@media (max-width: ".concat(_screenConfig.ScreenConfig['XS'].max, "px)"), {
+  button: (_button = {}, (0, _defineProperty2.default)(_button, "@media (max-width: ".concat(_screenConfig.ScreenConfig['XS'].max, "px)"), {
     width: '100%'
-  }), _defineProperty(_button, "tinyVersion", {
+  }), (0, _defineProperty2.default)(_button, "tinyVersion", {
     width: '100%'
   }), _button)
 };

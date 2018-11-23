@@ -1,9 +1,17 @@
 "use strict";
 
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.TextInputAndSelect = void 0;
+
+var _defineProperty2 = _interopRequireDefault(require("@babel/runtime/helpers/defineProperty"));
+
+var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
+
+var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -14,16 +22,6 @@ var _selectWithState = require("kitten/components/form/select-with-state");
 var _textInput = require("kitten/components/form/text-input");
 
 var _TextInputAndSelect$d;
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
-
-function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
-
-function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 var TextInputAndSelect = function TextInputAndSelect(props) {
   var className = props.className,
@@ -36,9 +34,8 @@ var TextInputAndSelect = function TextInputAndSelect(props) {
       errorOnSelect = props.errorOnSelect,
       validOnSelect = props.validOnSelect,
       appendSelect = props.appendSelect,
-      textInputProps = _objectWithoutProperties(props, ["className", "tiny", "disabled", "selectOptions", "selectName", "selectValue", "onSelectChange", "errorOnSelect", "validOnSelect", "appendSelect"]); // TODO: use another prop that digits to handle
+      textInputProps = (0, _objectWithoutProperties2.default)(props, ["className", "tiny", "disabled", "selectOptions", "selectName", "selectValue", "onSelectChange", "errorOnSelect", "validOnSelect", "appendSelect"]); // TODO: use another prop that digits to handle
   // `k-FormComposer__element--main` class.
-
 
   var inputWrapperClassName = (0, _classnames.default)('k-FormComposer__element', {
     'k-FormComposer__element--main': !props.digits
@@ -48,7 +45,7 @@ var TextInputAndSelect = function TextInputAndSelect(props) {
     return _react.default.createElement("div", {
       className: inputWrapperClassName,
       key: "".concat(props.currencyName, "1")
-    }, _react.default.createElement(_textInput.TextInput, _extends({
+    }, _react.default.createElement(_textInput.TextInput, (0, _extends2.default)({
       tiny: tiny,
       disabled: disabled
     }, textInputProps)));
@@ -96,4 +93,4 @@ TextInputAndSelect.defaultProps = (_TextInputAndSelect$d = {
   onSelectChange: function onSelectChange() {},
   errorOnSelect: false,
   validOnSelect: false
-}, _defineProperty(_TextInputAndSelect$d, "disabled", false), _defineProperty(_TextInputAndSelect$d, "digits", null), _defineProperty(_TextInputAndSelect$d, "appendSelect", false), _TextInputAndSelect$d);
+}, (0, _defineProperty2.default)(_TextInputAndSelect$d, "disabled", false), (0, _defineProperty2.default)(_TextInputAndSelect$d, "digits", null), (0, _defineProperty2.default)(_TextInputAndSelect$d, "appendSelect", false), _TextInputAndSelect$d);
