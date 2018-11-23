@@ -1,9 +1,15 @@
 "use strict";
 
+var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
+
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.Comment = exports.CommentComponent = void 0;
+
+var _defineProperty2 = _interopRequireDefault(require("@babel/runtime/helpers/defineProperty"));
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -22,12 +28,6 @@ var _screenConfig = require("kitten/constants/screen-config");
 var _mediaQueries = require("kitten/hoc/media-queries");
 
 var _colorsConfig = _interopRequireDefault(require("kitten/constants/colors-config"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 var Text = (0, _radium.default)(_text.Text);
 
@@ -101,7 +101,7 @@ var styles = {
   grid: {
     display: 'flex'
   },
-  commentContent: _defineProperty({
+  commentContent: (0, _defineProperty2.default)({
     position: 'relative',
     marginLeft: 20
   }, "@media (min-width: ".concat(_screenConfig.ScreenConfig['S'].min, "px)"), {
@@ -117,7 +117,7 @@ var styles = {
     color: _colorsConfig.default.font1,
     padding: 30,
     fontSize: 16,
-    arrow: _defineProperty({
+    arrow: (0, _defineProperty2.default)({
       position: 'absolute',
       top: 20,
       display: 'block',

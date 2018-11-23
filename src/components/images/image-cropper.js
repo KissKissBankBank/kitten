@@ -1,9 +1,25 @@
 "use strict";
 
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.ImageCropper = void 0;
+
+var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
+
+var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
+
+var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
+
+var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
+
+var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
+
+var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
+
+var _assertThisInitialized2 = _interopRequireDefault(require("@babel/runtime/helpers/assertThisInitialized"));
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -25,61 +41,36 @@ var _slider = require("kitten/components/form/slider");
 
 var _elementHelper = require("kitten/helpers/dom/element-helper");
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
 var ImageCropper =
 /*#__PURE__*/
 function (_React$Component) {
-  _inherits(ImageCropper, _React$Component);
+  (0, _inherits2.default)(ImageCropper, _React$Component);
 
   function ImageCropper(props) {
     var _this;
 
-    _classCallCheck(this, ImageCropper);
-
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(ImageCropper).call(this, props));
-    _this.state = _objectSpread({}, _this.initialState(), {
+    (0, _classCallCheck2.default)(this, ImageCropper);
+    _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(ImageCropper).call(this, props));
+    _this.state = (0, _extends2.default)({}, _this.initialState(), {
       hasErrorOnUploader: false,
       cropperWidth: null,
       cropperHeight: null,
       imageSrc: _this.props.imageSrc,
       fileName: _this.props.fileName
     });
-    _this.handleUploaderSuccess = _this.handleUploaderSuccess.bind(_assertThisInitialized(_assertThisInitialized(_this)));
-    _this.handleUploaderError = _this.handleUploaderError.bind(_assertThisInitialized(_assertThisInitialized(_this)));
-    _this.handleUploaderReset = _this.handleUploaderReset.bind(_assertThisInitialized(_assertThisInitialized(_this)));
-    _this.handleSliderChange = _this.handleSliderChange.bind(_assertThisInitialized(_assertThisInitialized(_this)));
-    _this.handleSliderAction = _this.handleSliderAction.bind(_assertThisInitialized(_assertThisInitialized(_this)));
-    _this.handleReady = _this.handleReady.bind(_assertThisInitialized(_assertThisInitialized(_this)));
-    _this.handleCrop = _this.handleCrop.bind(_assertThisInitialized(_assertThisInitialized(_this)));
-    _this.renderError = _this.renderError.bind(_assertThisInitialized(_assertThisInitialized(_this)));
-    _this.setCropperHeight = _this.setCropperHeight.bind(_assertThisInitialized(_assertThisInitialized(_this)));
+    _this.handleUploaderSuccess = _this.handleUploaderSuccess.bind((0, _assertThisInitialized2.default)((0, _assertThisInitialized2.default)(_this)));
+    _this.handleUploaderError = _this.handleUploaderError.bind((0, _assertThisInitialized2.default)((0, _assertThisInitialized2.default)(_this)));
+    _this.handleUploaderReset = _this.handleUploaderReset.bind((0, _assertThisInitialized2.default)((0, _assertThisInitialized2.default)(_this)));
+    _this.handleSliderChange = _this.handleSliderChange.bind((0, _assertThisInitialized2.default)((0, _assertThisInitialized2.default)(_this)));
+    _this.handleSliderAction = _this.handleSliderAction.bind((0, _assertThisInitialized2.default)((0, _assertThisInitialized2.default)(_this)));
+    _this.handleReady = _this.handleReady.bind((0, _assertThisInitialized2.default)((0, _assertThisInitialized2.default)(_this)));
+    _this.handleCrop = _this.handleCrop.bind((0, _assertThisInitialized2.default)((0, _assertThisInitialized2.default)(_this)));
+    _this.renderError = _this.renderError.bind((0, _assertThisInitialized2.default)((0, _assertThisInitialized2.default)(_this)));
+    _this.setCropperHeight = _this.setCropperHeight.bind((0, _assertThisInitialized2.default)((0, _assertThisInitialized2.default)(_this)));
     return _this;
   }
 
-  _createClass(ImageCropper, [{
+  (0, _createClass2.default)(ImageCropper, [{
     key: "initialState",
     value: function initialState() {
       return {
@@ -117,7 +108,7 @@ function (_React$Component) {
     key: "handleUploaderError",
     value: function handleUploaderError(hasError) {
       var resetState = hasError ? this.initialState() : {};
-      this.setState(_objectSpread({
+      this.setState((0, _extends2.default)({
         hasErrorOnUploader: hasError
       }, resetState));
     }
@@ -336,7 +327,6 @@ function (_React$Component) {
       }, this.props.description)))), this.renderCroppingImage());
     }
   }]);
-
   return ImageCropper;
 }(_react.default.Component);
 

@@ -1,5 +1,7 @@
 "use strict";
 
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -14,8 +16,6 @@ var _iconBadge = require("kitten/components/notifications/icon-badge");
 var _checkedIcon = require("kitten/components/icons/checked-icon");
 
 var _rewardCard = require("kitten/components/cards/reward-card");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var IconBadge = (0, _radium.default)(_iconBadge.IconBadge);
 

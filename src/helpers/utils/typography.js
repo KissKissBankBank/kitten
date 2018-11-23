@@ -1,13 +1,13 @@
 "use strict";
 
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.pxToRem = void 0;
 
 var _typographyConfig = _interopRequireDefault(require("kitten/constants/typography-config"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var pxToRem = function pxToRem(sizeInPx) {
   if (sizeInPx === 0) return 0;

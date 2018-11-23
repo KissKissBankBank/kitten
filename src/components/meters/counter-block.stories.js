@@ -1,5 +1,7 @@
 "use strict";
 
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
 var _react = _interopRequireDefault(require("react"));
 
 var _react2 = require("@storybook/react");
@@ -13,8 +15,6 @@ var _counterBlock = require("kitten/components/meters/counter-block");
 var _grid = require("kitten/components/grid/grid");
 
 var _marger = require("kitten/components/layout/marger");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var createMockMediaMatcher = function createMockMediaMatcher(matches) {
   return function () {

@@ -1,9 +1,15 @@
 "use strict";
 
+var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
+
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.RewardCardActionOnMOrMore = exports.RewardCardAction = void 0;
+
+var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -16,14 +22,6 @@ var _manageContribution = require("kitten/components/cards/reward-card/manage-co
 var _button = require("kitten/components/cards/reward-card/button");
 
 var _deprecated = require("kitten/helpers/utils/deprecated");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 var RewardCardAction = function RewardCardAction(_ref) {
   var manageContributionDescription = _ref.manageContributionDescription,
@@ -123,9 +121,9 @@ var commonDefaultProps = {
   isDisabled: false,
   topMargin: 0
 };
-RewardCardAction.propTypes = _objectSpread({}, commonPropTypes, {
+RewardCardAction.propTypes = (0, _extends2.default)({}, commonPropTypes, {
   topMargin: _propTypes.default.number
 });
-RewardCardAction.defaultProps = _objectSpread({}, commonDefaultProps);
-RewardCardActionOnMOrMore.propTypes = _objectSpread({}, commonPropTypes);
-RewardCardActionOnMOrMore.defaultProps = _objectSpread({}, commonDefaultProps);
+RewardCardAction.defaultProps = (0, _extends2.default)({}, commonDefaultProps);
+RewardCardActionOnMOrMore.propTypes = (0, _extends2.default)({}, commonPropTypes);
+RewardCardActionOnMOrMore.defaultProps = (0, _extends2.default)({}, commonDefaultProps);

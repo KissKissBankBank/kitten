@@ -1,5 +1,7 @@
 "use strict";
 
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
 var _react = _interopRequireDefault(require("react"));
 
 var _react2 = require("@storybook/react");
@@ -19,8 +21,6 @@ var _text = require("kitten/components/typography/text");
 var _marger = require("kitten/components/layout/marger");
 
 var _colorsConfig = _interopRequireDefault(require("kitten/constants/colors-config"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (0, _react2.storiesOf)('List', module).addDecorator(_react3.withKnobs).add('Simple list', (0, _addonInfo.withInfo)('This is a simple list component')(function () {
   return _react.default.createElement(_radium.StyleRoot, null, _react.default.createElement(_grid.Grid, null, _react.default.createElement(_grid.GridCol, {

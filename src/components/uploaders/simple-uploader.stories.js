@@ -1,5 +1,7 @@
 "use strict";
 
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
 var _react = _interopRequireDefault(require("react"));
 
 var _react2 = require("@storybook/react");
@@ -11,8 +13,6 @@ var _addonActions = require("@storybook/addon-actions");
 var _react3 = require("@storybook/addon-knobs/react");
 
 var _simpleUploader = require("./simple-uploader");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (0, _react2.storiesOf)('Uploaders/SimpleUploader', module).addDecorator(_react3.withKnobs).add('default', (0, _addonInfo.withInfo)('common info')(function () {
   return _react.default.createElement(_simpleUploader.SimpleUploader, {
