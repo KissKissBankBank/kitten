@@ -5,7 +5,6 @@ import { ButtonIcon } from 'kitten/components/buttons/button-icon'
 import { PhoneIcon } from 'kitten/components/icons/phone-icon'
 import { TeamCardButtonWithTooltip } from 'kitten/components/cards/team-card/button-with-tooltip'
 import { mediaQueries } from 'kitten/hoc/media-queries'
-import { ScreenConfig } from 'kitten/constants/screen-config'
 
 class TeamCardPhoneIconBase extends Component {
   static propTypes = {

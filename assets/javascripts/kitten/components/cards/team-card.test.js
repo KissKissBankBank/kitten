@@ -32,16 +32,22 @@ describe('<TeamCard />', () => {
       window.matchMedia = createMockMediaMatcher(false)
       const component = renderer
         .create(
-          <TeamCard
-            image="Custom image"
-            firstName="Custom firstName"
-            lastName="Custom lastName"
-            jobTitle="Custom jobTitle"
-            mail="Custom mail"
-            phoneNumber="Custom phone number"
-            socialLink="Custom social link"
-            imgTitle="Custom img title"
-          />,
+          <TeamCard>
+            <TeamCard.Image
+              image="http://via.placeholder.com/500x500/caf4fe/caf4fe"
+              imageTitle="Title"
+            />
+            <TeamCard.Title
+              firstName="Lorem"
+              lastName="Ipsum"
+              jobTitle="Consectetur"
+            />
+            <TeamCard.Icons
+              mail="example@kisskissbankbank.com"
+              phoneNumber="06 00 00 00 00"
+              socialLink="https://www.linkedin.com"
+            />
+          </TeamCard>,
         )
         .toJSON()
       expect(component).toMatchSnapshot()

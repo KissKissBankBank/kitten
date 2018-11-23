@@ -3,7 +3,6 @@ import Radium, { StyleRoot } from 'radium'
 import PropTypes from 'prop-types'
 import { ButtonIcon as ButtonIconBase } from 'kitten/components/buttons/button-icon'
 import { PhoneIcon } from 'kitten/components/icons/phone-icon'
-import { ScreenConfig } from 'kitten/constants/screen-config'
 import COLORS from 'kitten/constants/colors-config'
 
 const ButtonIcon = Radium(ButtonIconBase)
