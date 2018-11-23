@@ -6,22 +6,6 @@ import { Grid, GridCol } from 'kitten/components/grid/grid'
 import { Text } from 'kitten/components/typography/text'
 import COLORS from 'kitten/constants/colors-config'
 
-const fadeInAnimation = Radium.keyframes(
-  {
-    '0%': { opacity: 0 },
-    '100%': { opacity: 1 },
-  },
-  'fadeIn',
-)
-
-const fadeOutAnimation = Radium.keyframes(
-  {
-    '0%': { opacity: 1, height: 'auto' },
-    '100%': { opacity: 0, height: 0 },
-  },
-  'fadeOut',
-)
-
 export class ExpandBoardWithButtonItemList extends Component {
   list = [
     {
@@ -41,6 +25,22 @@ export class ExpandBoardWithButtonItemList extends Component {
     },
   ]
 
+  fadeInAnimation = Radium.keyframes(
+    {
+      '0%': { opacity: 0 },
+      '100%': { opacity: 1 },
+    },
+    'fadeIn',
+  )
+
+  fadeOutAnimation = Radium.keyframes(
+    {
+      '0%': { opacity: 1, height: 'auto' },
+      '100%': { opacity: 0, height: 0 },
+    },
+    'fadeOut',
+  )
+
   state = {
     isShrinking: false,
     expanded: false,
@@ -51,6 +51,8 @@ export class ExpandBoardWithButtonItemList extends Component {
   }
 
   buttonListItemStyle = key => {
+    if (!this.props.withAnimation) return null
+
     if (this.state.expanded) {
       return {
         opacity: 0,
@@ -58,7 +60,7 @@ export class ExpandBoardWithButtonItemList extends Component {
         animationDelay: `${0.2 * key}s`,
         animationIterationCount: 1,
         animationFillMode: 'forwards',
-        animationName: fadeInAnimation,
+        animationName: this.fadeInAnimation,
         animationTimingFunction: 'ease-in-out',
       }
     }
@@ -69,7 +71,7 @@ export class ExpandBoardWithButtonItemList extends Component {
       animationDelay: `${0.1 * key}s`,
       animationIterationCount: 1,
       animationFillMode: 'forwards',
-      animationName: fadeOutAnimation,
+      animationName: this.fadeOutAnimation,
       animationTimingFunction: 'ease-in-out',
     }
   }
@@ -80,7 +82,10 @@ export class ExpandBoardWithButtonItemList extends Component {
         <div style={{ padding: '30px', borderBottom: '3px solid olive' }}>
           <Grid>
             <GridCol offset="1" col="10">
-              <ExpandBoard onClick={this.handleClick} withAnimation>
+              <ExpandBoard
+                onClick={this.handleClick}
+                withAnimation={this.props.withAnimation}
+              >
                 <ExpandBoard.Button expandChildren="Précisez votre choix">
                   Je soutiens
                 </ExpandBoard.Button>

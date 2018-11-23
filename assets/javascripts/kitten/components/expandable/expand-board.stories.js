@@ -24,16 +24,24 @@ storiesOf('Expandable', module)
       <StyleRoot>
         <Grid>
           <GridCol offset="1" col="10">
-            <ExpandBoard>
-              <ExpandBoard.Button expandChildren="Lancez votre projet">
-                KissKissBankBank & Co
+            <ExpandBoard withAnimation={boolean('withAnimation', true)}>
+              <ExpandBoard.Button
+                expandChildren={text(
+                  'Expanded button text',
+                  'Lancez votre projet',
+                )}
+              >
+                {text('Button text', 'KissKissBankBank & Co')}
               </ExpandBoard.Button>
               <ExpandBoard.Content>
                 <div style={styles.expandBoard.defaultContent}>
-                  KissKissBankBank et 1 483 037 KissBankers vous aident à
-                  réaliser vos projets créatifs, associatifs et
-                  entrepreneuriaux. Participez à la naissance de projets
-                  inspirants.
+                  {text(
+                    'Board content',
+                    `KissKissBankBank et 1 483 037 KissBankers vous aident à
+                      réaliser vos projets créatifs, associatifs et
+                      entrepreneuriaux. Participez à la naissance de projets
+                      inspirants.`,
+                  )}
                 </div>
               </ExpandBoard.Content>
             </ExpandBoard>
@@ -46,7 +54,11 @@ storiesOf('Expandable', module)
     'ExpandBoard with list of ButtonItem',
     withInfo(
       'This is an example of ExpandBoard composition with a list of buttons as content.',
-    )(() => <ExpandBoardWithButtonItemList />),
+    )(() => (
+      <ExpandBoardWithButtonItemList
+        withAnimation={boolean('With animation', true)}
+      />
+    )),
   )
 
 const styles = {
