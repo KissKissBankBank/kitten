@@ -130,14 +130,14 @@ class ExpandBoardBase extends Component {
   growAnimation = Radium.keyframes(
     {
       '0%': { opacity: 0, maxHeight: 0 },
-      '100%': { opacity: 1, maxHeight: '100vh' },
+      '100%': { opacity: 1, maxHeight: this.props.animationMaxHeight },
     },
     'grow',
   )
 
   shrinkAnimation = Radium.keyframes(
     {
-      '0%': { opacity: 1, maxHeight: '100vh' },
+      '0%': { opacity: 1, maxHeight: this.props.animationMaxHeight },
       '100%': { opacity: 0, maxHeight: 0 },
     },
     'schrink',
