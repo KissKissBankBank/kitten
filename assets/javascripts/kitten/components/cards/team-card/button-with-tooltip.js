@@ -52,7 +52,7 @@ export class TeamCardButtonWithTooltip extends Component {
               modifier="hydrogen"
               aria-label="Phone"
               className="k-ButtonIcon--phone"
-              style={styles.icon}
+              style={{ marginRight: 15 }}
             >
               <PhoneIcon className="k-ButtonIcon__svg" />
             </ButtonIcon>
@@ -73,7 +73,7 @@ const styles = {
       position: 'absolute',
       top: 55,
       padding: 15,
-      marginLeft: -55,
+      marginLeft: -50,
       backgroundColor: backgroundColor,
       border: '2px solid #19b4fa',
       fontSize: 14,
@@ -81,8 +81,8 @@ const styles = {
       fontWeight: 'regular',
       color: COLORS.background1,
       whiteSpace: 'nowrap',
-      opacity: 0,
-      visibility: 'hidden',
+      opacity: 1,
+      visibility: 'visible',
       transition: 'opacity .2s, visibility .2s',
       hover: {
         visibility: 'visible',
@@ -101,12 +101,6 @@ const styles = {
         borderWidth: 10,
         pointerEvents: 'none',
       },
-    },
-  },
-  icon: {
-    marginRight: 10,
-    [`@media (min-width: ${ScreenConfig.M.min}px)`]: {
-      marginRight: 15,
     },
   },
 }
