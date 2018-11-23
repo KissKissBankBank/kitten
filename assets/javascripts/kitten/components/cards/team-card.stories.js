@@ -18,7 +18,7 @@ storiesOf('Cards/TeamCard', module)
               <TeamCard>
                 <TeamCard.Image
                   image={text(
-                    'url image',
+                    'Url image',
                     'http://via.placeholder.com/500x500/caf4fe/caf4fe',
                   )}
                   imageTitle={text('Image title', 'Title')}

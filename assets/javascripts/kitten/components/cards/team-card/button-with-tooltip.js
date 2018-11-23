@@ -81,8 +81,8 @@ const styles = {
       fontWeight: 'regular',
       color: COLORS.background1,
       whiteSpace: 'nowrap',
-      opacity: 1,
-      visibility: 'visible',
+      opacity: 0,
+      visibility: 'hidden',
       transition: 'opacity .2s, visibility .2s',
       hover: {
         visibility: 'visible',

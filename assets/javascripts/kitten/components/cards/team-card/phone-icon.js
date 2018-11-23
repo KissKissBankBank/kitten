@@ -23,10 +23,12 @@ class TeamCardPhoneIconBase extends Component {
       <Fragment>
         {viewportIsMobile && (
           <ButtonIcon
+            tag="a"
             href={`tel:${phoneNumber}`}
             modifier="hydrogen"
             aria-label="Phone"
             className="k-ButtonIcon--phone"
+            style={{ marginRight: 15 }}
           >
             <PhoneIcon className="k-ButtonIcon__svg" />
           </ButtonIcon>
