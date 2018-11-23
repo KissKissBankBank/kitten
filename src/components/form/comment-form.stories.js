@@ -1,5 +1,7 @@
 "use strict";
 
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
 var _react = _interopRequireDefault(require("react"));
 
 var _radium = require("radium");
@@ -13,8 +15,6 @@ var _react3 = require("@storybook/addon-knobs/react");
 var _commentForm = require("./comment-form");
 
 var _grid = require("kitten/components/grid/grid");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (0, _react2.storiesOf)('Form/CommentForm', module).addDecorator(_react3.withKnobs).add('default', (0, _addonInfo.withInfo)('common info')(function () {
   return _react.default.createElement(_radium.StyleRoot, null, _react.default.createElement(_grid.Grid, null, _react.default.createElement(_grid.GridCol, {

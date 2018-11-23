@@ -1,9 +1,25 @@
 "use strict";
 
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.Hero = void 0;
+
+var _defineProperty2 = _interopRequireDefault(require("@babel/runtime/helpers/defineProperty"));
+
+var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
+
+var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
+
+var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
+
+var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
+
+var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -23,45 +39,20 @@ var _colorsConfig = _interopRequireDefault(require("kitten/constants/colors-conf
 
 var _right2, _content, _left3, _right3, _image;
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
-
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 var Grid = (0, _radium.default)(_grid.Grid);
 var GridCol = (0, _radium.default)(_grid.GridCol);
 
 var HeroBase =
 /*#__PURE__*/
 function (_Component) {
-  _inherits(HeroBase, _Component);
+  (0, _inherits2.default)(HeroBase, _Component);
 
   function HeroBase() {
-    _classCallCheck(this, HeroBase);
-
-    return _possibleConstructorReturn(this, _getPrototypeOf(HeroBase).apply(this, arguments));
+    (0, _classCallCheck2.default)(this, HeroBase);
+    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(HeroBase).apply(this, arguments));
   }
 
-  _createClass(HeroBase, [{
+  (0, _createClass2.default)(HeroBase, [{
     key: "render",
     value: function render() {
       return _react.default.createElement(_container.Container, null, _react.default.createElement(Grid, null, this.renderContent(), this.renderImage()));
@@ -99,55 +90,52 @@ function (_Component) {
       }));
     }
   }]);
-
   return HeroBase;
 }(_react.Component);
 
-_defineProperty(HeroBase, "propTypes", {
+HeroBase.propTypes = {
   direction: _propTypes.default.oneOf(['left', 'right']),
   tiny: _propTypes.default.bool,
   imageSrc: _propTypes.default.string,
   contentBackgroundColor: _propTypes.default.string,
   contentColor: _propTypes.default.string
-});
-
-_defineProperty(HeroBase, "defaultProps", {
+};
+HeroBase.defaultProps = {
   direction: 'left',
   tiny: false,
   imageSrc: '',
   contentBackgroundColor: _colorsConfig.default.font1,
   contentColor: _colorsConfig.default.background1
-});
-
+};
 var styles = {
   content: (_content = {
     padding: '100px 115px'
-  }, _defineProperty(_content, "@media (max-width: ".concat(_screenConfig.ScreenConfig['M'].max, "px)"), {
+  }, (0, _defineProperty2.default)(_content, "@media (max-width: ".concat(_screenConfig.ScreenConfig['M'].max, "px)"), {
     padding: '100px 85px'
-  }), _defineProperty(_content, "@media (max-width: ".concat(_screenConfig.ScreenConfig['XS'].max, "px)"), {
+  }), (0, _defineProperty2.default)(_content, "@media (max-width: ".concat(_screenConfig.ScreenConfig['XS'].max, "px)"), {
     padding: '50px 20px'
-  }), _defineProperty(_content, "left", _defineProperty({}, "@media (max-width: ".concat(_screenConfig.ScreenConfig['XS'].max, "px)"), {
+  }), (0, _defineProperty2.default)(_content, "left", (0, _defineProperty2.default)({}, "@media (max-width: ".concat(_screenConfig.ScreenConfig['XS'].max, "px)"), {
     marginLeft: "-".concat(_gridConfig.CONTAINER_PADDING_MOBILE, "px")
-  })), _defineProperty(_content, "right", _defineProperty({}, "@media (max-width: ".concat(_screenConfig.ScreenConfig['XS'].max, "px)"), {
+  })), (0, _defineProperty2.default)(_content, "right", (0, _defineProperty2.default)({}, "@media (max-width: ".concat(_screenConfig.ScreenConfig['XS'].max, "px)"), {
     marginRight: "-".concat(_gridConfig.CONTAINER_PADDING_MOBILE, "px")
-  })), _defineProperty(_content, "grid", {
+  })), (0, _defineProperty2.default)(_content, "grid", {
     position: 'relative',
     zIndex: 1,
     paddingTop: "".concat(1 / _gridConfig.NUM_COLUMNS * 100, "vw"),
     marginLeft: "".concat(1 / _gridConfig.NUM_COLUMNS * 100, "%"),
-    left: _defineProperty({}, "@media (max-width: ".concat(_screenConfig.ScreenConfig['M'].max, "px)"), {
+    left: (0, _defineProperty2.default)({}, "@media (max-width: ".concat(_screenConfig.ScreenConfig['M'].max, "px)"), {
       paddingTop: "".concat(8 / _gridConfig.NUM_COLUMNS * 100, "vw"),
       marginLeft: 0
     }),
     right: (_right2 = {
       marginLeft: "".concat(5 / _gridConfig.NUM_COLUMNS * 100, "%")
-    }, _defineProperty(_right2, "@media (max-width: ".concat(_screenConfig.ScreenConfig['M'].max, "px)"), {
+    }, (0, _defineProperty2.default)(_right2, "@media (max-width: ".concat(_screenConfig.ScreenConfig['M'].max, "px)"), {
       paddingTop: "".concat(8 / _gridConfig.NUM_COLUMNS * 100, "vw"),
       marginLeft: "".concat(2 / _gridConfig.NUM_COLUMNS * 100, "%")
-    }), _defineProperty(_right2, "@media (max-width: ".concat(_screenConfig.ScreenConfig['XS'].max, "px)"), {
+    }), (0, _defineProperty2.default)(_right2, "@media (max-width: ".concat(_screenConfig.ScreenConfig['XS'].max, "px)"), {
       marginLeft: 0
     }), _right2),
-    tiny: _defineProperty({}, "@media (min-width: ".concat(_screenConfig.ScreenConfig['L'].min, "px)"), {
+    tiny: (0, _defineProperty2.default)({}, "@media (min-width: ".concat(_screenConfig.ScreenConfig['L'].min, "px)"), {
       paddingBottom: "".concat(1 / 2 / _gridConfig.NUM_COLUMNS * 100, "vw")
     })
   }), _content),
@@ -156,32 +144,32 @@ var styles = {
     height: '100%',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat'
-  }, _defineProperty(_image, "@media (max-width: ".concat(_screenConfig.ScreenConfig['M'].max, "px)"), {
+  }, (0, _defineProperty2.default)(_image, "@media (max-width: ".concat(_screenConfig.ScreenConfig['M'].max, "px)"), {
     width: "calc(100% + ".concat(_gridConfig.CONTAINER_PADDING * 2, "px)"),
     height: '100vw',
     marginLeft: "-".concat(_gridConfig.CONTAINER_PADDING, "px")
-  }), _defineProperty(_image, "@media (max-width: ".concat(_screenConfig.ScreenConfig['XS'].max, "px)"), {
+  }), (0, _defineProperty2.default)(_image, "@media (max-width: ".concat(_screenConfig.ScreenConfig['XS'].max, "px)"), {
     width: "calc(100% + ".concat(_gridConfig.CONTAINER_PADDING_MOBILE * 2, "px)"),
     marginLeft: "-".concat(_gridConfig.CONTAINER_PADDING_MOBILE, "px")
-  }), _defineProperty(_image, "right", {
+  }), (0, _defineProperty2.default)(_image, "right", {
     marginLeft: "-".concat(_gridConfig.CONTAINER_PADDING, "px")
-  }), _defineProperty(_image, "grid", {
+  }), (0, _defineProperty2.default)(_image, "grid", {
     marginLeft: "-".concat(2 / _gridConfig.NUM_COLUMNS * 100, "%"),
     paddingBottom: "".concat(1 / 2 / _gridConfig.NUM_COLUMNS * 100, "vw"),
-    left: (_left3 = {}, _defineProperty(_left3, "@media (max-width: ".concat(_screenConfig.ScreenConfig['M'].max, "px)"), {
+    left: (_left3 = {}, (0, _defineProperty2.default)(_left3, "@media (max-width: ".concat(_screenConfig.ScreenConfig['M'].max, "px)"), {
       marginLeft: "-".concat(10 / _gridConfig.NUM_COLUMNS * 100, "%"),
       paddingBottom: 0
-    }), _defineProperty(_left3, "@media (max-width: ".concat(_screenConfig.ScreenConfig['XS'].max, "px)"), {
+    }), (0, _defineProperty2.default)(_left3, "@media (max-width: ".concat(_screenConfig.ScreenConfig['XS'].max, "px)"), {
       marginLeft: "-100%"
     }), _left3),
     right: (_right3 = {
       marginLeft: "-".concat(11 / _gridConfig.NUM_COLUMNS * 100, "%")
-    }, _defineProperty(_right3, "@media (max-width: ".concat(_screenConfig.ScreenConfig['M'].max, "px)"), {
+    }, (0, _defineProperty2.default)(_right3, "@media (max-width: ".concat(_screenConfig.ScreenConfig['M'].max, "px)"), {
       marginLeft: "-".concat(12 / _gridConfig.NUM_COLUMNS * 100, "%")
-    }), _defineProperty(_right3, "@media (max-width: ".concat(_screenConfig.ScreenConfig['XS'].max, "px)"), {
+    }), (0, _defineProperty2.default)(_right3, "@media (max-width: ".concat(_screenConfig.ScreenConfig['XS'].max, "px)"), {
       marginLeft: "-100%"
     }), _right3),
-    tiny: _defineProperty({}, "@media (min-width: ".concat(_screenConfig.ScreenConfig['L'].min, "px)"), {
+    tiny: (0, _defineProperty2.default)({}, "@media (min-width: ".concat(_screenConfig.ScreenConfig['L'].min, "px)"), {
       paddingBottom: 0
     })
   }), _image)
