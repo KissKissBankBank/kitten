@@ -78,67 +78,55 @@ export class ExpandBoardWithButtonItemList extends Component {
 
   render() {
     return (
-      <StyleRoot>
-        <div style={{ padding: '30px', borderBottom: '3px solid olive' }}>
-          <Grid>
-            <GridCol offset="1" col="10">
-              <ExpandBoard
-                onClick={this.handleClick}
-                withAnimation={this.props.withAnimation}
-              >
-                <ExpandBoard.Button expandChildren="Précisez votre choix">
-                  Je soutiens
-                </ExpandBoard.Button>
-                <ExpandBoard.Content>
-                  <List>
-                    {this.list.map((item, key) => {
-                      return (
-                        <List.ButtonItem
-                          key={item.size}
-                          disabled={item.disabled}
-                          style={this.buttonListItemStyle(key)}
+      <Grid>
+        <GridCol offset="1" col="10">
+          <ExpandBoard
+            onClick={this.handleClick}
+            withAnimation={this.props.withAnimation}
+          >
+            <ExpandBoard.Button expandChildren="Précisez votre choix">
+              Je soutiens
+            </ExpandBoard.Button>
+            <ExpandBoard.Content>
+              <List>
+                {this.list.map((item, key) => {
+                  return (
+                    <List.ButtonItem
+                      key={item.size}
+                      disabled={item.disabled}
+                      style={this.buttonListItemStyle(key)}
+                    >
+                      <div style={styles.buttonListItem.base}>
+                        <Text
+                          tag="p"
+                          weight="regular"
+                          color="font1"
+                          size="tiny"
+                          style={styles.buttonListItem.content}
                         >
-                          <div style={styles.buttonListItem.base}>
-                            <Text
-                              tag="p"
-                              weight="regular"
-                              color="font1"
-                              size="tiny"
-                              style={styles.buttonListItem.content}
-                            >
-                              {item.size}
-                            </Text>
-                            <Text
-                              tag="small"
-                              color={item.disabled ? 'font2' : 'font1'}
-                              size="micro"
-                            >
-                              {item.availability}
-                            </Text>
-                          </div>
-                        </List.ButtonItem>
-                      )
-                    })}
-                  </List>
-                </ExpandBoard.Content>
-              </ExpandBoard>
-            </GridCol>
-          </Grid>
-        </div>
-      </StyleRoot>
+                          {item.size}
+                        </Text>
+                        <Text
+                          tag="small"
+                          color={item.disabled ? 'font2' : 'font1'}
+                          size="micro"
+                        >
+                          {item.availability}
+                        </Text>
+                      </div>
+                    </List.ButtonItem>
+                  )
+                })}
+              </List>
+            </ExpandBoard.Content>
+          </ExpandBoard>
+        </GridCol>
+      </Grid>
     )
   }
 }
 
 const styles = {
-  expandBoard: {
-    defaultContent: {
-      padding: '1.5em',
-      borderLeft: `${COLORS.line1} 0.125rem solid`,
-      borderRight: `${COLORS.line1} 0.125rem solid`,
-      borderBottom: `${COLORS.line1} 0.125rem solid`,
-    },
-  },
   buttonListItem: {
     content: {
       margin: 0,

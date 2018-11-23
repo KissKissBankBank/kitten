@@ -13,6 +13,7 @@ import { ExpandBoard } from 'kitten/components/expandable/expand-board'
 import { Grid, GridCol } from 'kitten/components/grid/grid'
 import { ExpandBoardWithButtonItemList } from 'kitten/components/expandable/expand-board.examples'
 import COLORS from 'kitten/constants/colors-config'
+import { pxToRem } from 'kitten/helpers/utils/typography'
 
 storiesOf('Expandable', module)
   .addDecorator(withKnobs)
@@ -22,31 +23,33 @@ storiesOf('Expandable', module)
       'The ExpandBoard is a container that can expand on click. It can accept any content.',
     )(() => (
       <StyleRoot>
-        <Grid>
-          <GridCol offset="1" col="10">
-            <ExpandBoard withAnimation={boolean('withAnimation', true)}>
-              <ExpandBoard.Button
-                expandChildren={text(
-                  'Expanded button text',
-                  'Lancez votre projet',
-                )}
-              >
-                {text('Button text', 'KissKissBankBank & Co')}
-              </ExpandBoard.Button>
-              <ExpandBoard.Content>
-                <div style={styles.expandBoard.defaultContent}>
-                  {text(
-                    'Board content',
-                    `KissKissBankBank et 1 483 037 KissBankers vous aident à
-                      réaliser vos projets créatifs, associatifs et
-                      entrepreneuriaux. Participez à la naissance de projets
-                      inspirants.`,
+        <div style={styles.container}>
+          <Grid>
+            <GridCol offset="1" col="10">
+              <ExpandBoard withAnimation={boolean('withAnimation', true)}>
+                <ExpandBoard.Button
+                  expandChildren={text(
+                    'Expanded button text',
+                    'Lancez votre projet',
                   )}
-                </div>
-              </ExpandBoard.Content>
-            </ExpandBoard>
-          </GridCol>
-        </Grid>
+                >
+                  {text('Button text', 'KissKissBankBank & Co')}
+                </ExpandBoard.Button>
+                <ExpandBoard.Content>
+                  <div style={styles.expandBoard.defaultContent}>
+                    {text(
+                      'Board content',
+                      `KissKissBankBank et 1 483 037 KissBankers vous aident à
+                        réaliser vos projets créatifs, associatifs et
+                        entrepreneuriaux. Participez à la naissance de projets
+                        inspirants.`,
+                    )}
+                  </div>
+                </ExpandBoard.Content>
+              </ExpandBoard>
+            </GridCol>
+          </Grid>
+        </div>
       </StyleRoot>
     )),
   )
@@ -55,37 +58,28 @@ storiesOf('Expandable', module)
     withInfo(
       'This is an example of ExpandBoard composition with a list of buttons as content.',
     )(() => (
-      <ExpandBoardWithButtonItemList
-        withAnimation={boolean('With animation', true)}
-      />
+      <StyleRoot>
+        <div style={styles.container}>
+          <ExpandBoardWithButtonItemList
+            withAnimation={boolean('With animation', true)}
+          />
+        </div>
+      </StyleRoot>
     )),
   )
 
 const styles = {
+  container: {
+    margin: pxToRem(30),
+    paddingBottom: pxToRem(30),
+    borderBottom: `2px solid ${COLORS.line2}`,
+  },
   expandBoard: {
     defaultContent: {
       padding: '1.5em',
       borderLeft: `${COLORS.line1} 0.125rem solid`,
       borderRight: `${COLORS.line1} 0.125rem solid`,
       borderBottom: `${COLORS.line1} 0.125rem solid`,
-    },
-  },
-  buttonListItem: {
-    wrapper: {
-      opacity: 0,
-      transition: 'opacity .5s',
-    },
-    displayedWrapper: {
-      opacity: 1,
-    },
-    content: {
-      margin: 0,
-      padding: 0,
-      lineHeight: '1.2rem',
-    },
-    base: {
-      margin: '1rem 0',
-      padding: 0,
     },
   },
 }
