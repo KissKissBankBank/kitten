@@ -77,15 +77,13 @@ export class ExpandBoardWithButtonItemList extends Component {
   }
 
   render() {
+    const { withAnimation, expandedButtonText, buttonText } = this.props
     return (
       <Grid>
         <GridCol offset="1" col="10">
-          <ExpandBoard
-            onClick={this.handleClick}
-            withAnimation={this.props.withAnimation}
-          >
-            <ExpandBoard.Button expandChildren="Précisez votre choix">
-              Je soutiens
+          <ExpandBoard onClick={this.handleClick} withAnimation={withAnimation}>
+            <ExpandBoard.Button expandChildren={expandedButtonText}>
+              {buttonText}
             </ExpandBoard.Button>
             <ExpandBoard.Content>
               <List>

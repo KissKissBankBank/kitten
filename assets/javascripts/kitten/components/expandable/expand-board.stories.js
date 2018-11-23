@@ -54,13 +54,18 @@ storiesOf('Expandable', module)
     )),
   )
   .add(
-    'ExpandBoard with list of ButtonItem',
+    'ExpandBoard with a List of ButtonItem',
     withInfo(
       'This is an example of ExpandBoard composition with a list of buttons as content.',
     )(() => (
       <StyleRoot>
         <div style={styles.container}>
           <ExpandBoardWithButtonItemList
+            expandedButtonText={text(
+              'Expanded button text',
+              'Précisez votre choix',
+            )}
+            buttonText={text('Button text', 'Je soutiens')}
             withAnimation={boolean('With animation', true)}
           />
         </div>
