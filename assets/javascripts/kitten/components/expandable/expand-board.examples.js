@@ -9,18 +9,18 @@ import COLORS from 'kitten/constants/colors-config'
 export class ExpandBoardWithButtonItemList extends Component {
   list = [
     {
-      size: 'Taille XS',
-      availability: 'Disponibilité: 10/30',
+      size: 'Size XS',
+      availability: 'Availability: 10/30',
       disabled: false,
     },
     {
-      size: 'Taille M',
-      availability: 'Disponibilité: 10/30',
+      size: 'Size M',
+      availability: 'Availability: 10/30',
       disabled: true,
     },
     {
-      size: 'Taille XXL',
-      availability: 'Disponibilité: 10/30',
+      size: 'Size XXL',
+      availability: 'Availability: 10/30',
       disabled: false,
     },
   ]
