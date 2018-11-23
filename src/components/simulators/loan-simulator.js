@@ -1,9 +1,25 @@
 "use strict";
 
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = exports.LoanSimulator = void 0;
+
+var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
+
+var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
+
+var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
+
+var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
+
+var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
+
+var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
+
+var _assertThisInitialized2 = _interopRequireDefault(require("@babel/runtime/helpers/assertThisInitialized"));
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -17,55 +33,34 @@ var _sliderWithTooltipAndPower = require("kitten/components/sliders/slider-with-
 
 var _textInputWithUnit = require("kitten/components/form/text-input-with-unit");
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
+// Simulator that lets users select an amount and an installment, to start
+// simulating a loan.
 var LoanSimulator =
 /*#__PURE__*/
 function (_React$Component) {
-  _inherits(LoanSimulator, _React$Component);
+  (0, _inherits2.default)(LoanSimulator, _React$Component);
 
   function LoanSimulator(props) {
     var _this;
 
-    _classCallCheck(this, LoanSimulator);
-
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(LoanSimulator).call(this, props));
+    (0, _classCallCheck2.default)(this, LoanSimulator);
+    _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(LoanSimulator).call(this, props));
     _this.state = {
       amount: props.initialAmount * 1,
       installmentAmount: props.initialInstallment,
       dragged: !!props.initialInstallment,
       touched: props.initialTouched
     };
-    _this.handleFocus = _this.handleFocus.bind(_assertThisInitialized(_assertThisInitialized(_this)));
-    _this.handleAmountChange = _this.handleAmountChange.bind(_assertThisInitialized(_assertThisInitialized(_this)));
-    _this.handleEnter = _this.handleEnter.bind(_assertThisInitialized(_assertThisInitialized(_this)));
-    _this.handleInstallmentLabelClick = _this.handleInstallmentLabelClick.bind(_assertThisInitialized(_assertThisInitialized(_this)));
-    _this.handleInstallmentChange = _this.handleInstallmentChange.bind(_assertThisInitialized(_assertThisInitialized(_this)));
-    _this.handleInstallmentAction = _this.handleInstallmentAction.bind(_assertThisInitialized(_assertThisInitialized(_this)));
+    _this.handleFocus = _this.handleFocus.bind((0, _assertThisInitialized2.default)((0, _assertThisInitialized2.default)(_this)));
+    _this.handleAmountChange = _this.handleAmountChange.bind((0, _assertThisInitialized2.default)((0, _assertThisInitialized2.default)(_this)));
+    _this.handleEnter = _this.handleEnter.bind((0, _assertThisInitialized2.default)((0, _assertThisInitialized2.default)(_this)));
+    _this.handleInstallmentLabelClick = _this.handleInstallmentLabelClick.bind((0, _assertThisInitialized2.default)((0, _assertThisInitialized2.default)(_this)));
+    _this.handleInstallmentChange = _this.handleInstallmentChange.bind((0, _assertThisInitialized2.default)((0, _assertThisInitialized2.default)(_this)));
+    _this.handleInstallmentAction = _this.handleInstallmentAction.bind((0, _assertThisInitialized2.default)((0, _assertThisInitialized2.default)(_this)));
     return _this;
   }
 
-  _createClass(LoanSimulator, [{
+  (0, _createClass2.default)(LoanSimulator, [{
     key: "handleFocus",
     value: function handleFocus(e) {
       this.setState({
@@ -163,7 +158,7 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return _react.default.createElement(LoanSimulatorContent, _extends({
+      return _react.default.createElement(LoanSimulatorContent, (0, _extends2.default)({
         ref: "content"
       }, this.props, this.state, {
         onFocus: this.handleFocus,
@@ -183,7 +178,6 @@ function (_React$Component) {
       }));
     }
   }]);
-
   return LoanSimulator;
 }(_react.default.Component);
 
@@ -192,21 +186,20 @@ exports.LoanSimulator = LoanSimulator;
 var LoanSimulatorContent =
 /*#__PURE__*/
 function (_React$Component2) {
-  _inherits(LoanSimulatorContent, _React$Component2);
+  (0, _inherits2.default)(LoanSimulatorContent, _React$Component2);
 
   function LoanSimulatorContent(props) {
     var _this2;
 
-    _classCallCheck(this, LoanSimulatorContent);
-
-    _this2 = _possibleConstructorReturn(this, _getPrototypeOf(LoanSimulatorContent).call(this, props));
-    _this2.handleAmountKeyDown = _this2.handleAmountKeyDown.bind(_assertThisInitialized(_assertThisInitialized(_this2)));
-    _this2.handleInstallmentChange = _this2.handleInstallmentChange.bind(_assertThisInitialized(_assertThisInitialized(_this2)));
+    (0, _classCallCheck2.default)(this, LoanSimulatorContent);
+    _this2 = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(LoanSimulatorContent).call(this, props));
+    _this2.handleAmountKeyDown = _this2.handleAmountKeyDown.bind((0, _assertThisInitialized2.default)((0, _assertThisInitialized2.default)(_this2)));
+    _this2.handleInstallmentChange = _this2.handleInstallmentChange.bind((0, _assertThisInitialized2.default)((0, _assertThisInitialized2.default)(_this2)));
     return _this2;
   } // Allow parents to focus the slider
 
 
-  _createClass(LoanSimulatorContent, [{
+  (0, _createClass2.default)(LoanSimulatorContent, [{
     key: "focusSlider",
     value: function focusSlider() {
       this.slider.focus();
@@ -379,7 +372,6 @@ function (_React$Component2) {
       }), this.renderCommission(), durationInput, this.renderDurationError()), this.renderButton());
     }
   }]);
-
   return LoanSimulatorContent;
 }(_react.default.Component);
 

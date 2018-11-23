@@ -1,9 +1,13 @@
 "use strict";
 
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.SimpleUploader = void 0;
+
+var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -14,10 +18,6 @@ var _button = require("kitten/components/buttons/button");
 var _buttonIcon = require("kitten/components/buttons/button-icon");
 
 var _crossIcon = require("kitten/components/icons/cross-icon");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 var Theme = function Theme(props) {
   var handleClick = props.disabled ? null : props.onCancel;
@@ -54,7 +54,7 @@ Theme.defaultProps = {
 };
 
 var SimpleUploader = function SimpleUploader(props) {
-  return _react.default.createElement(_uploader.Uploader, _extends({}, props, {
+  return _react.default.createElement(_uploader.Uploader, (0, _extends2.default)({}, props, {
     theme: Theme
   }));
 };
