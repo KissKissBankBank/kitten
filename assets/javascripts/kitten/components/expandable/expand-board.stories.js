@@ -60,14 +60,18 @@ storiesOf('Expandable', module)
     )(() => (
       <StyleRoot>
         <div style={styles.container}>
-          <ExpandBoardWithButtonItemList
-            expandedButtonText={text(
-              'Expanded button text',
-              'Précisez votre choix',
-            )}
-            buttonText={text('Button text', 'Je soutiens')}
-            withAnimation={boolean('With animation', true)}
-          />
+          <Grid>
+            <GridCol offset="1" col="10">
+              <ExpandBoardWithButtonItemList
+                expandedButtonText={text(
+                  'Expanded button text',
+                  'Précisez votre choix',
+                )}
+                buttonText={text('Button text', 'Je soutiens')}
+                withAnimation={boolean('With animation', true)}
+              />
+            </GridCol>
+          </Grid>
         </div>
       </StyleRoot>
     )),

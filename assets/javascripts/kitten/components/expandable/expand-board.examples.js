@@ -25,22 +25,6 @@ export class ExpandBoardWithButtonItemList extends Component {
     },
   ]
 
-  fadeInAnimation = Radium.keyframes(
-    {
-      '0%': { opacity: 0 },
-      '100%': { opacity: 1 },
-    },
-    'fadeIn',
-  )
-
-  fadeOutAnimation = Radium.keyframes(
-    {
-      '0%': { opacity: 1, height: 'auto' },
-      '100%': { opacity: 0, height: 0 },
-    },
-    'fadeOut',
-  )
-
   state = {
     isShrinking: false,
     expanded: false,
@@ -54,75 +38,77 @@ export class ExpandBoardWithButtonItemList extends Component {
     if (!this.props.withAnimation) return null
 
     if (this.state.expanded) {
-      return {
-        opacity: 0,
-        animationDuration: '1s',
-        animationDelay: `${0.2 * key}s`,
-        animationIterationCount: 1,
-        animationFillMode: 'forwards',
-        animationName: this.fadeInAnimation,
-        animationTimingFunction: 'ease-in-out',
-      }
+      return [
+        styles.buttonListItem.expandAnimation,
+        { animationDelay: `${0.2 * key}s` },
+      ]
     }
 
-    return {
-      opacity: 1,
-      animationDuration: '.6s',
-      animationDelay: `${0.1 * key}s`,
-      animationIterationCount: 1,
-      animationFillMode: 'forwards',
-      animationName: this.fadeOutAnimation,
-      animationTimingFunction: 'ease-in-out',
-    }
+    return [
+      styles.buttonListItem.shrinkAnimation,
+      { animationDelay: `${0.1 * key}s` },
+    ]
   }
 
   render() {
     const { withAnimation, expandedButtonText, buttonText } = this.props
     return (
-      <Grid>
-        <GridCol offset="1" col="10">
-          <ExpandBoard onClick={this.handleClick} withAnimation={withAnimation}>
-            <ExpandBoard.Button expandChildren={expandedButtonText}>
-              {buttonText}
-            </ExpandBoard.Button>
-            <ExpandBoard.Content>
-              <List>
-                {this.list.map((item, key) => {
-                  return (
-                    <List.ButtonItem
-                      key={item.size}
-                      disabled={item.disabled}
-                      style={this.buttonListItemStyle(key)}
+      <ExpandBoard onClick={this.handleClick} withAnimation={withAnimation}>
+        <ExpandBoard.Button expandChildren={expandedButtonText}>
+          {buttonText}
+        </ExpandBoard.Button>
+        <ExpandBoard.Content>
+          <List>
+            {this.list.map((item, key) => {
+              return (
+                <List.ButtonItem
+                  key={item.size}
+                  disabled={item.disabled}
+                  style={this.buttonListItemStyle(key)}
+                >
+                  <div style={styles.buttonListItem.base}>
+                    <Text
+                      tag="p"
+                      weight="regular"
+                      color="font1"
+                      size="tiny"
+                      style={styles.buttonListItem.content}
                     >
-                      <div style={styles.buttonListItem.base}>
-                        <Text
-                          tag="p"
-                          weight="regular"
-                          color="font1"
-                          size="tiny"
-                          style={styles.buttonListItem.content}
-                        >
-                          {item.size}
-                        </Text>
-                        <Text
-                          tag="small"
-                          color={item.disabled ? 'font2' : 'font1'}
-                          size="micro"
-                        >
-                          {item.availability}
-                        </Text>
-                      </div>
-                    </List.ButtonItem>
-                  )
-                })}
-              </List>
-            </ExpandBoard.Content>
-          </ExpandBoard>
-        </GridCol>
-      </Grid>
+                      {item.size}
+                    </Text>
+                    <Text
+                      tag="small"
+                      color={item.disabled ? 'font2' : 'font1'}
+                      size="micro"
+                    >
+                      {item.availability}
+                    </Text>
+                  </div>
+                </List.ButtonItem>
+              )
+            })}
+          </List>
+        </ExpandBoard.Content>
+      </ExpandBoard>
     )
   }
 }
+
+const fadeInAnimation = Radium.keyframes(
+  {
+    '0%': { opacity: 0 },
+    '100%': { opacity: 1 },
+  },
+  'fadeIn',
+)
+
+const fadeOutAnimation = Radium.keyframes(
+  {
+    '0%': { opacity: 1, height: 'auto' },
+    '100%': { opacity: 0, height: 0 },
+  },
+  'fadeOut',
+)
 
 const styles = {
   buttonListItem: {
@@ -134,6 +120,22 @@ const styles = {
     base: {
       margin: '1rem 0',
       padding: 0,
+    },
+    expandAnimation: {
+      opacity: 0,
+      animationDuration: '1s',
+      animationIterationCount: 1,
+      animationFillMode: 'forwards',
+      animationName: fadeInAnimation,
+      animationTimingFunction: 'ease-in-out',
+    },
+    shrinkAnimation: {
+      opacity: 1,
+      animationDuration: '.6s',
+      animationIterationCount: 1,
+      animationFillMode: 'forwards',
+      animationName: fadeOutAnimation,
+      animationTimingFunction: 'ease-in-out',
     },
   },
 }
