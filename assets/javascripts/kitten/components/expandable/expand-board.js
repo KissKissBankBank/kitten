@@ -8,6 +8,22 @@ import { pxToRem } from 'kitten/helpers/utils/typography'
 
 const Button = Radium(ButtonBase)
 
+const growAnimation = Radium.keyframes(
+  {
+    '0%': { opacity: 0, maxHeight: 0 },
+    '100%': { opacity: 1, maxHeight: '1000px' },
+  },
+  'grow',
+)
+
+const shrinkAnimation = Radium.keyframes(
+  {
+    '0%': { opacity: 1, maxHeight: '1000px' },
+    '100%': { opacity: 0, maxHeight: 0 },
+  },
+  'schrink',
+)
+
 class ExpandBoardButton extends Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
@@ -70,7 +86,7 @@ class ExpandBoardButton extends Component {
   }
 }
 
-class ExpandBoardContent extends Component {
+class ExpandBoardContentBase extends Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
     ariaId: PropTypes.string,
@@ -81,11 +97,17 @@ class ExpandBoardContent extends Component {
   }
 
   render() {
-    const { children, ariaId } = this.props
+    const { children, ariaId, style } = this.props
 
-    return <div id={ariaId}>{children}</div>
+    return (
+      <div id={ariaId} style={style}>
+        {children}
+      </div>
+    )
   }
 }
+
+const ExpandBoardContent = Radium(ExpandBoardContentBase)
 
 class ExpandBoardBase extends Component {
   static Button = ExpandBoardButton
@@ -106,26 +128,77 @@ class ExpandBoardBase extends Component {
     ariaId: 'k-ExpandBoard',
   }
 
-  constructor(props) {
-    super()
-    this.state = {
-      expanded: false,
-    }
+  state = {
+    expanded: false,
+    isShrinking: false,
+    isExpanding: false,
   }
 
   isButtonComponent = component => component.type === ExpandBoardButton
   isContentComponent = component => component.type === ExpandBoardContent
 
-  handleClick = () => {
+  handleAfterClick = () => {
+    document.activeElement.blur()
+
+    const { expanded, isShrinking, isExpanding } = this.state
+
+    this.props.onClick({ expanded, isShrinking, isExpanding })
+  }
+
+  updateExpandState = () => {
     this.setState(
       prevState => ({
         expanded: !prevState.expanded,
+        isShrinking: false,
+        isExpanding: false,
       }),
+      this.handleAfterClick,
+    )
+  }
+
+  handleClick = () => {
+    this.setState(
+      prevState => {
+        if (prevState.expanded) {
+          return { isShrinking: true }
+        }
+
+        return { isExpanding: true }
+      },
       () => {
-        document.activeElement.blur()
-        this.props.onClick({ expanded: this.state.expanded })
+        if (this.state.isShrinking) {
+          return setTimeout(this.updateExpandState, 500)
+        }
+
+        return this.updateExpandState()
       },
     )
+  }
+
+  contentStyle = () => {
+    if (this.state.isShrinking) {
+      return {
+        maxHeight: '1000px',
+        opacity: 1,
+        animationDuration: '.5s',
+        animationDelay: 0,
+        animationIterationCount: 1,
+        animationFillMode: 'forwards',
+        animationName: shrinkAnimation,
+        animationTimingFunction: 'ease-in-out',
+      }
+    }
+
+    return {
+      maxHeight: 0,
+      opacity: 0,
+      animationDuration: '1s',
+      animationDelay: 0,
+      animationIterationCount: 1,
+      animationFillMode: 'forwards',
+      animationName: growAnimation,
+      animationTimingFunction: 'ease-in-out',
+    }
   }
 
   render() {
@@ -150,6 +223,7 @@ class ExpandBoardBase extends Component {
       if (this.isContentComponent(child)) {
         content = React.cloneElement(child, {
           ariaId,
+          style: this.contentStyle(),
         })
       }
     })
