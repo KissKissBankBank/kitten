@@ -9,5 +9,3 @@ dist/
 styleguide/build
 
 .DS_Store
-package-lock.json
-yarn-error.log
